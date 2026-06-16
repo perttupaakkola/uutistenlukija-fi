@@ -44,7 +44,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/kerrostaloasunto-paloi-yolla-oulussa-asukas-hyppasi-parvekkeelta-maahan/9354208"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
