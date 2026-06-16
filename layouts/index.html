@@ -100,6 +100,41 @@
   {{ end }}
 {{ end }}
 
+{{ $talousLatest := where $sorted ".Params.categories" "intersect" (slice "Talous") }}
+{{ $talousPulseExclude := slice }}
+{{ with $lead }}
+  {{ $talousPulseExclude = $talousPulseExclude | append .Permalink }}
+{{ end }}
+{{ range $followups }}
+  {{ $talousPulseExclude = $talousPulseExclude | append .Permalink }}
+{{ end }}
+{{ $talousPulse := first 3 (where $talousLatest "Permalink" "not in" $talousPulseExclude) }}
+{{ if lt (len $talousPulse) 3 }}
+  {{ $talousPulse = first 3 $talousLatest }}
+{{ end }}
+{{ if $talousPulse }}
+<section class="talous-pulse" aria-labelledby="talous-pulse-title">
+  <div class="talous-pulse__label">
+    <span>Talous tänään</span>
+    <a href="/categories/talous/">Avaa talous →</a>
+  </div>
+  <div class="talous-pulse__items">
+    {{ range $i, $p := $talousPulse }}
+      {{ $seen = $seen | append $p.Permalink }}
+      <article class="talous-pulse__item{{ if eq $i 0 }} talous-pulse__item--lead{{ end }}">
+        {{ if eq $i 0 }}<h2 id="talous-pulse-title" class="talous-pulse__title">{{ else }}<h3 class="talous-pulse__title">{{ end }}
+          <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
+        {{ if eq $i 0 }}</h2>{{ else }}</h3>{{ end }}
+        <p class="talous-pulse__meta">
+          <span>{{ partial "relative-date.html" $p }}</span>
+          {{ with $p.Params.source_name }}<span>{{ . }}</span>{{ end }}
+        </p>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
 {{ partial "hero-cluster.html" (dict "lead" $lead "followups" $followups) }}
 {{ with $lead }}
   {{ $seen = $seen | append .Permalink }}
@@ -131,7 +166,6 @@
 {{ end }}
 {{ partial "trending.html" (dict "items" $trending) }}
 
-{{ $talousLatest := where $sorted ".Params.categories" "intersect" (slice "Talous") }}
 {{ $talousRail := first 4 (where $talousLatest "Permalink" "not in" $seen) }}
 {{ if lt (len $talousRail) 4 }}
   {{ $talousRail = first 4 $talousLatest }}
