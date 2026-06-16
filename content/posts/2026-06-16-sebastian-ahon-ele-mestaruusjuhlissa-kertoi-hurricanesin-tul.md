@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Kolumni/Pieni-ele-mestaruusjuhlissa-%E2%80%93-Hurricanesin-seuraavasta-kapteenista-ei-ole-pienint%C3%A4k%C3%A4%C3%A4n-ep%C3%A4selvyytt%C3%A4/270806"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
