@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/jun/17/enraged-union-boss-defends-naming-and-shaming-victorian-labor-mps-who-had-zero-conversations-with-voters"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
