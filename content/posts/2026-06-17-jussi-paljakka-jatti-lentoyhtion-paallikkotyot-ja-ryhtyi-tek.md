@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/jussi-paljakka-vaihtoi-lentoyhtion-paallikkotyot-kenkien-valmistukseen-1-500-euron-hintaisia-jalkineita-jonotetaan-puoli-vuotta-hienoja-autoja-pyorii-valilla-pihalla/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
