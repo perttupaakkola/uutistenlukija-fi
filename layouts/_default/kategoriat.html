@@ -19,6 +19,14 @@
       <h2><a href="/categories/{{ $name | urlize }}/">{{ $title }}</a></h2>
       <p class="excerpt">{{ len $taxonomy.Pages }} artikkelia</p>
       {{ with $page.Params.description }}<p>{{ . }}</p>{{ end }}
+      {{ $latest := first 2 ($taxonomy.Pages.ByDate.Reverse) }}
+      {{ if gt (len $latest) 0 }}
+      <ul class="category-index-card__latest" aria-label="Tuoreimmat kategoriassa {{ $title }}">
+        {{ range $latest }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+      {{ end }}
       <a class="category-index-card__link" href="/categories/{{ $name | urlize }}/">Avaa {{ $title | lower }}</a>
     </article>
     {{ end }}
