@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/yrittajat-liikunta-ja-kulttuurietu-laajennettava-myos-toiminimiyrittajille-yhdenvertainen-asema-perusteltu/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 

@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/jun/17/pauline-hanson-national-press-club-address-speech-australia-ntwnfb"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
