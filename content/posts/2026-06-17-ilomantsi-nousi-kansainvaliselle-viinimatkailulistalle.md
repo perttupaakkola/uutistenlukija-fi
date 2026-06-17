@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/ilomantsi-paasi-maailmankuulujen-viinikohteiden-rinnalle-erikoinen-tornikahvila-kohoaa-yli-30-metrin-korkeuteen/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
