@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/woltin-kilpailija-swype-aloitti-paakaupunkiseudulla-lupaa-kaikille-laheteille-vakituisen-tyosuhteen/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
