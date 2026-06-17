@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/usa-n-iran-sopimus-julki/9355084"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
