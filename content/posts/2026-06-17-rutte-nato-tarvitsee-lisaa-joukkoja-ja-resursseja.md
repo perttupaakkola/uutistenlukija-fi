@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/live/2026/jun/17/g7-leaders-evian-donald-trump-ukraine-russia-war-iran-latest-news-updates"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 

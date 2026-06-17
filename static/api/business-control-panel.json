@@ -1,7 +1,7 @@
 {
   "analytics": {
     "freshness": {
-      "age_minutes": 0.0,
+      "age_minutes": 22.7,
       "blocked_by": null,
       "checked_at": "2026-06-17T13:51:25+00:00",
       "daily_report": {
@@ -53,14 +53,14 @@
         "site": "sc-domain:uutistenlukija.fi"
       },
       "daily_traffic_log": {
-        "age_minutes": 411.3,
+        "age_minutes": 434.1,
         "exists": true,
         "status": "log_present"
       },
       "reason": "fresh GA4 validation artifact present",
       "status": "fresh",
       "weekly_metrics_log": {
-        "age_minutes": 3291.3,
+        "age_minutes": 3314.1,
         "exists": true,
         "status": "error_seen",
         "superseded_by_freshness_status": true
@@ -68,14 +68,14 @@
     },
     "gsc": {
       "ctr_gap_report": {
-        "age_minutes": 2.3,
+        "age_minutes": 25.0,
         "data_source": "google_search_console",
         "generated_at": "2026-06-17T13:49:10.079988Z",
         "source": "static/api/ctr-gap-report.json",
         "total_gaps_found": 1
       },
       "fetch_log": {
-        "age_minutes": 441.4,
+        "age_minutes": 464.1,
         "exists": true,
         "status": "error_seen",
         "superseded_by_freshness_status": true
@@ -165,14 +165,14 @@
   },
   "content": {
     "article_count_local": 3200,
-    "last_publish_age_minutes": 23.3,
+    "last_publish_age_minutes": 46.0,
     "last_publish_at": "2026-06-17T13:28:07.518694Z",
     "latest_article": {
       "category": "Kotimaa",
       "slug": "2026-06-17-eduskunnan-hallintojohtaja-kansanedustaja-ei-voi-luopua-palk",
       "title": "Eduskunnan hallintojohtaja: Kansanedustaja ei voi luopua palkkiosta omalla ilmoituksella"
     },
-    "published_last_24h_local": 44,
+    "published_last_24h_local": 43,
     "source": "content/posts frontmatter"
   },
   "coordination": {
@@ -188,7 +188,7 @@
     "blocked_issue_ids": [],
     "items": {
       "agent_health": {
-        "age_minutes": 88.6,
+        "age_minutes": 111.3,
         "available": true,
         "path": "workspace:agent-health.json",
         "size_bytes": 25743,
@@ -357,7 +357,7 @@
         "available": false
       },
       "taskboard": {
-        "age_minutes": 88.6,
+        "age_minutes": 111.4,
         "available": true,
         "path": "workspace:TASKBOARD.md",
         "size_bytes": 3541,
@@ -401,7 +401,7 @@
     "source": "workspace Linear mirror/cache files; Linear API not queried by this public JSON generator",
     "workspace_path": "workspace:."
   },
-  "generated_at": "2026-06-17T13:51:25.136039Z",
+  "generated_at": "2026-06-17T14:14:08.135196Z",
   "monetization": {
     "ads_enabled": false,
     "adsense_configured": false,
@@ -432,19 +432,19 @@
   ],
   "pipeline": {
     "last_24h": {
-      "article_count": 44,
+      "article_count": 43,
       "article_count_source": "content/posts frontmatter",
       "failure": 0,
       "generated_article_count": 0,
-      "published_article_count_local": 44,
+      "published_article_count_local": 43,
       "runs_total": 144,
       "skipped": 0,
       "success": 144,
       "top_error_reasons": []
     },
-    "last_run_age_minutes": 1.3,
+    "last_run_age_minutes": 4.0,
     "last_run_article_count": 0,
-    "last_run_at": "2026-06-17T13:50:07.785401Z",
+    "last_run_at": "2026-06-17T14:10:08.228109Z",
     "last_run_success": true,
     "metrics_rows_total": 200,
     "published_status_snapshot": {
@@ -514,14 +514,14 @@
   "queues": {
     "queues": {
       "staged/failed": {
-        "count": 1767,
-        "newest_item_age_minutes": 8.1,
-        "oldest_item_age_minutes": 24728.2
+        "count": 1770,
+        "newest_item_age_minutes": 0.7,
+        "oldest_item_age_minutes": 24750.9
       },
       "staged/published": {
         "count": 1406,
-        "newest_item_age_minutes": 22.0,
-        "oldest_item_age_minutes": 67223.0
+        "newest_item_age_minutes": 44.7,
+        "oldest_item_age_minutes": 67245.7
       }
     },
     "source": "pipeline/queues/*.json file counts only"
