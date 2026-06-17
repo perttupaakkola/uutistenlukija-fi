@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/ex-puolisonsa-murhasta-ja-seksuaalirikoksista-syytetylle-tanaan-tuomio/9354674"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
