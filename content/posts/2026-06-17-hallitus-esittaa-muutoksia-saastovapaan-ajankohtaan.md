@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/saastovapaan-antamiseen-muutoksia-kieltaytymisoikeus-on-tarkea-jotta-tyopaikan-toiminta-voi-jatkua-hairiotta/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
