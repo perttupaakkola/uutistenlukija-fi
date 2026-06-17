@@ -41,7 +41,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/tekoaly-loytaa-asiakkaalle-oikean-tuotteen-jo-ennen-verkkokauppaan-menoa-asiantuntija-kertoo-mita-uusi-ilmio-tarkoittaa-kauppiaille/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
