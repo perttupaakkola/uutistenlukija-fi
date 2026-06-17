@@ -11,6 +11,7 @@
 {{ $relatedLinks := index $relatedByCategory $termSlug }}
 {{ $isTalous := eq $termSlug "talous" }}
 {{ $articleCount := len .RegularPages }}
+{{ $latestCategoryLinks := first 4 (.RegularPages.ByDate.Reverse) }}
 {{ $latestCategoryArticle := false }}
 {{ with first 1 (.RegularPages.ByDate.Reverse) }}
   {{ $latestCategoryArticle = index . 0 }}
@@ -53,6 +54,12 @@
         <span>Korot ja hinnat</span>
         <span>Julkinen talous</span>
       </div>
+      <nav class="category-focus-panel__latest" aria-label="Tuoreimmat talousuutiset">
+        <span class="category-focus-panel__latest-label">Tuoreimmat</span>
+        {{ range $latestCategoryLinks }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
+      </nav>
     </section>
     {{ end }}
   </header>
