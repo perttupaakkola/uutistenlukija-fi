@@ -32,6 +32,7 @@ This file adapts the DOX idea from `agent0ai/dox`: keep a small hierarchy of `AG
 - For UI/design/SEO work, read `DESIGN.md` and follow the editorial design system.
 - For content/editorial changes, preserve source sufficiency, attribution, Finnish quality, and no-hallucination standards.
 - For analytics/business-control work, prefer local safe artifacts and explicit `blocked/stale/fresh` states over stale `null` values.
+- GA4/Search Console auth is durable through the host-only service account `uutistenlukija-analytics-reade@leafy-star-490910-t5.iam.gserviceaccount.com`; do not ask Perttu for OAuth unless host verification fails. Team agents should use the safe snapshot at `/workspace/reports/uutistenlukija-analytics/` (or the same path under their host workspace) and must not copy `.secrets` or service-account keys into sandboxes.
 - After meaningful changes, do a DOX pass: update this file or the nearest child `AGENTS.md` only if a durable contract, path ownership, workflow, verification rule, or child index changed. Do not add diary/status notes.
 
 ## Verification
