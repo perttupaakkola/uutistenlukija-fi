@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-17T01:31:15.124028+00:00",
+  "digest": "741af61bfa",
+  "packet": {
+    "packet_id": "20260617T013115Z_741af61bfa",
+    "created_at": "2026-06-17T01:31:15Z",
+    "headline_seed": "74 miljoonan jättihankkeesta kilpaili 9 rakennusyhtiötä – Näin Skanska ja SRV päihitettiin loppumetreillä",
+    "description_seed": "Peijaksen sairaalan laajennus- ja peruskorjaushanke kiinnosti laajaa joukkoa rakentajia. Tekniikka&Talous kertoo, mitkä asiat ratkaisivat tarjouskilpailun voiton ja mikä yhtiö lopulta voitti.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/1241f19c-e862-4fa2-acd3-79a2d307483f?utm_source=rss",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/1241f19c-e862-4fa2-acd3-79a2d307483f?utm_source=rss"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "74 miljoonan jättihankkeesta kilpaili 9 rakennusyhtiötä – Näin Skanska ja SRV päihitettiin loppumetreillä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Peijaksen sairaalan laajennus- ja peruskorjaushanke kiinnosti laajaa joukkoa rakentajia. Tekniikka&Talous kertoo, mitkä asiat ratkaisivat tarjouskilpailun voiton ja mikä yhtiö lopulta voitti.",
+        "word_count": 21,
+        "keyword_overlap": 17,
+        "strong_overlap": 14
+      }
+    ],
+    "source_text": "Peijaksen sairaalan laajennus- ja peruskorjaushanke kiinnosti laajaa joukkoa rakentajia. Tekniikka&Talous kertoo, mitkä asiat ratkaisivat tarjouskilpailun voiton ja mikä yhtiö lopulta voitti.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 42,
+      "selected_blocks": 1,
+      "selected_source_words": 21,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "74 miljoonan jättihankkeesta kilpaili 9 rakennusyhtiötä – Näin Skanska ja SRV päihitettiin loppumetreillä",
+      "description": "Peijaksen sairaalan laajennus- ja peruskorjaushanke kiinnosti laajaa joukkoa rakentajia. Tekniikka&Talous kertoo, mitkä asiat ratkaisivat tarjouskilpailun voiton ja mikä yhtiö lopulta voitti.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "74 miljoonan jättihankkeesta kilpaili 9 rakennusyhtiötä – Näin Skanska ja SRV päihitettiin loppumetreillä",
+    "description": "Peijaksen sairaalan laajennus- ja peruskorjaushanke kiinnosti laajaa joukkoa rakentajia. Tekniikka&Talous kertoo, mitkä asiat ratkaisivat tarjouskilpailun voiton ja mikä yhtiö lopulta voitti.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/1241f19c-e862-4fa2-acd3-79a2d307483f?utm_source=rss",
+    "published": "2026-06-17T01:15:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "1f550a8afd7bda9fc6ee5fc0d25ee870",
+    "_url_hash": "6caebcc6d5459d168992ba3884a83c834466b391d55328a645848fd6001b1ae4",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Peijaksen sairaalan laajennus- ja peruskorjaushanke kiinnosti laajaa joukkoa rakentajia. Tekniikka&Talous kertoo, mitkä asiat ratkaisivat tarjouskilpailun voiton ja mikä yhtiö lopulta voitti.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-17T01:33:17.280443+00:00",
+  "failure": "Paketti sisältää vain lyhyen kuvauksen tarjouskilpailusta eikä kerro voittajaa, valintaperusteita tai muita riittäviä faktoja julkaistavaan artikkeliin.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260617T013115Z_741af61bfa\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti sisältää vain lyhyen kuvauksen tarjouskilpailusta eikä kerro voittajaa, valintaperusteita tai muita riittäviä faktoja julkaistavaan artikkeliin.\"}"
+}
