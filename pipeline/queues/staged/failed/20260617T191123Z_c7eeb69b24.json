@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-17T19:11:23.670563+00:00",
+  "digest": "c7eeb69b24",
+  "packet": {
+    "packet_id": "20260617T191123Z_c7eeb69b24",
+    "created_at": "2026-06-17T19:11:23Z",
+    "headline_seed": "15-vuotias poika ja nuori mies kiduttivat alaikäistä Iitissä: aseina rakennusnitoja ja samuraimiekka",
+    "description_seed": "Uhriksi joutui 17-vuotias poika. Molemmat alaikäiset olivat hatkassa lastensuojeluyksiköistä.",
+    "link": "https://www.ess.fi/paikalliset/9549223",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9549223"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "15-vuotias poika ja nuori mies kiduttivat alaikäistä Iitissä: aseina rakennusnitoja ja samuraimiekka"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 150,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Verkkouutiset",
+        "Verkkouutiset",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "15-vuotias poika ja nuori mies kiduttivat alaikäistä Iitissä: aseina rakennusnitoja ja samuraimiekka",
+      "description": "Uhriksi joutui 17-vuotias poika. Molemmat alaikäiset olivat hatkassa lastensuojeluyksiköistä.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "15-vuotias poika ja nuori mies kiduttivat alaikäistä Iitissä: aseina rakennusnitoja ja samuraimiekka",
+    "description": "Uhriksi joutui 17-vuotias poika. Molemmat alaikäiset olivat hatkassa lastensuojeluyksiköistä.",
+    "link": "https://www.ess.fi/paikalliset/9549223",
+    "published": "2026-06-17T21:57:03+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "25500a5a987759fcba91294b9f82ae99",
+    "_url_hash": "602e632efec6c6fe71bea2f38637c94c20abb230ff2a0e51fdde350733b19728",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Verkkouutiset]\nPuolustusministeriön rakennukseen kohdistuneen törkeän vahingonteon esitutkinta on valmistunut, Helsingin poliisi kertoo. Poliisi epäilee kahdeksaa henkilöä osallisuudesta vahingontekoihin, jotka kohdistuivat puolustusministeriön lisäksi Patrian, Allianzin ja Nammon rakennuksiin.\n\nPuolustusministeriön rakennus sotkettiin poliisin mukaan punaisella väriaineella 7. kesäkuuta 2025. Rakennus sijaitsee Eteläisellä Makasiinikadulla Helsingissä.\n\nPoliisi kertoo, että rakennus on suojeltu ja kulttuurihistoriallisesti merkittävä. Vahinkojen korjaaminen maksoi kymmeniä tuhansia euroja.\n\nPalestine Action Suomi -ryhmä otti epäillyn vahingonteon nimiinsä Instagramissa. Poliisin mukaan ryhmittymä ilmoitti samalla alustalla tehneensä useita muitakin vahingontekoja Helsingissä ja Vantaalla.\n\n– Nämä muut vahingonteot kohdistuivat Patrian, Allianzin ja Nammon rakennuksiin. Asiakokonaisuudessa on tutkittu yhteensä kolmea törkeää vahingontekoa ja kolmea vahingontekoa, joiden kaikkien esitutkinnat siirtyvät nyt syyteharkintaan, kertoo tutkinnanjohtaja, rikoskomisario Tommi Lehtonen tiedotteessa.\n\nPoliisi epäilee kahdeksaa henkilöä osallisuudesta ryhmittymän toimintaan ja syyteharkintaan siirtyviin vahingontekorikoksiin. Esitutkinnan aikana kolme henkilöä oli vangittuna. Heidät on sittemmin vapautettu.\n\nAsia siirtyy seuraavaksi syyttäjälle, joka arvioi, nostetaanko epäiltyjä vastaan syytteitä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-17T19:13:30.592567+00:00",
+  "failure": "Paketissa ei ole lähdetekstiä tai varmistettuja yksityiskohtia, joiden pohjalta voisi kirjoittaa vähintään 250 sanan julkaisukelpoisen artikkelin ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260617T191123Z_c7eeb69b24\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lähdetekstiä tai varmistettuja yksityiskohtia, joiden pohjalta voisi kirjoittaa vähintään 250 sanan julkaisukelpoisen artikkelin ilman keksittyjä tietoja.\"}"
+}
