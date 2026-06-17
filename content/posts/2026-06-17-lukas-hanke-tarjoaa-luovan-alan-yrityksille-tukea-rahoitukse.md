@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/luovan-alan-yrittaja-tukea-tarjolla-sijoituskunnon-hiomiseen-ja-kasvuun/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
