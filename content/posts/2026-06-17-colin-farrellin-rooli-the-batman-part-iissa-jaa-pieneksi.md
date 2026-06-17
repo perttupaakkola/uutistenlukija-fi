@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/colin-farrell-jakoi-ikavia-uutisia-batman-faneille/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
