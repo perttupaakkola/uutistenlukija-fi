@@ -20,6 +20,8 @@ import urllib.parse
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from google_access_token import service_account_access_token
+
 PROJECT_DIR = Path(__file__).parent.parent
 # Try multiple candidate paths (same pattern as weekly-metrics-digest.py)
 _SECRETS_CANDIDATES = [
@@ -53,6 +55,16 @@ load_env()
 
 
 def get_ga4_token() -> str:
+    try:
+        service_account_token = service_account_access_token(["https://www.googleapis.com/auth/analytics.readonly"])
+    except Exception as e:
+        print(f"GA4 service account token failed: {e}")
+        service_account_token = None
+    if service_account_token:
+        token, _path, email = service_account_token
+        print(f"Using GA4 service account: {email}")
+        return token
+
     if not ANALYTICS_TOKENS.exists():
         raise FileNotFoundError(f"Analytics tokens not found. Tried: {[str(p) for p in _SECRETS_CANDIDATES]}")
     data = json.loads(ANALYTICS_TOKENS.read_text())

@@ -6,6 +6,8 @@ import argparse, json, os, subprocess, sys, urllib.request, urllib.error, urllib
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from google_access_token import service_account_access_token
+
 SCRIPT_DIR  = Path(__file__).resolve().parent
 PROJECT_DIR = SCRIPT_DIR.parent
 _SC_SECRETS = [
@@ -26,6 +28,16 @@ def find_secrets():
 
 
 def refresh_token(f):
+    try:
+        service_account_token = service_account_access_token(["https://www.googleapis.com/auth/webmasters.readonly"])
+    except Exception as e:
+        print(f"[fetch_sc] service account token failed: {e}", file=sys.stderr)
+        service_account_token = None
+    if service_account_token:
+        token, _path, email = service_account_token
+        print(f"[fetch_sc] using service account: {email}")
+        return token
+
     creds = json.load(open(f))
     data = urllib.parse.urlencode({
         "client_id": creds["client_id"], "client_secret": creds["client_secret"],

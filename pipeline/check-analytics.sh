@@ -48,9 +48,42 @@ OAUTH_FAILED_SERVICES=()
 mkdir -p "$OUTPUT_DIR"
 
 # ── Token refresh helper ──────────────────────────────────────────────────────
+service_account_token() {
+    local scope="$1"
+    PROJECT_DIR="$PROJECT_DIR" python3 - "$scope" <<'PY'
+import os
+import sys
+from pathlib import Path
+project_dir = Path(os.environ.get("PROJECT_DIR", "/home/pertt/.openclaw/workspace/projects/uutistenlukija"))
+sys.path.insert(0, str(project_dir / "scripts"))
+from google_access_token import service_account_access_token
+scope = sys.argv[1]
+try:
+    result = service_account_access_token([scope])
+except Exception:
+    result = None
+if not result:
+    raise SystemExit(2)
+print(result[0])
+PY
+}
+
 refresh_token() {
     local token_file="$1"
+    local scope=""
+    local service_access=""
     local refresh_token client_id client_secret token_uri response new_access
+
+    case "$token_file" in
+        *analytics-tokens.json) scope="https://www.googleapis.com/auth/analytics.readonly" ;;
+        *search-console-tokens.json) scope="https://www.googleapis.com/auth/webmasters.readonly" ;;
+    esac
+    if [[ -n "$scope" ]]; then
+        if service_access=$(service_account_token "$scope" 2>/dev/null); then
+            echo "$service_access"
+            return 0
+        fi
+    fi
 
     refresh_token=$(jq -r '.refresh_token' "$token_file")
     client_id=$(jq -r '.client_id' "$token_file")

@@ -17,6 +17,9 @@ import urllib.request
 import urllib.parse
 from datetime import datetime, timezone, timedelta
 
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "scripts")))
+from google_access_token import service_account_access_token
+
 # ── Paths ─────────────────────────────────────────────────────────────────────
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SECRETS_DIR = os.path.join(SCRIPT_DIR, "..", "..", "secrets")
@@ -41,8 +44,19 @@ STATE_FILE     = os.path.join(LOG_DIR, "seo-dashboard-state.json")
 
 # ── Token helpers ──────────────────────────────────────────────────────────────
 
-def refresh_google_token(secrets_file: str) -> str:
-    """Refresh a Google OAuth2 access token and persist it. Returns access_token."""
+def refresh_google_token(secrets_file: str, scope: str | None = None) -> str:
+    """Refresh a Google OAuth2 access token or mint one from a service account."""
+    scopes = [scope] if scope else ["https://www.googleapis.com/auth/analytics.readonly"]
+    try:
+        service_account_token = service_account_access_token(scopes)
+    except Exception as e:
+        print(f"[google-auth] service account token failed: {e}", file=sys.stderr)
+        service_account_token = None
+    if service_account_token:
+        token, _path, email = service_account_token
+        print(f"[google-auth] using service account: {email}")
+        return token
+
     with open(secrets_file) as f:
         creds = json.load(f)
     data = urllib.parse.urlencode({
@@ -357,8 +371,8 @@ def main():
     date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     print(f"[seo_dashboard] Refreshing tokens...")
-    ga4_token = refresh_google_token(GA4_SECRETS)
-    sc_token  = refresh_google_token(SC_SECRETS)
+    ga4_token = refresh_google_token(GA4_SECRETS, "https://www.googleapis.com/auth/analytics.readonly")
+    sc_token  = refresh_google_token(SC_SECRETS, "https://www.googleapis.com/auth/webmasters.readonly")
 
     print("[seo_dashboard] Fetching GA4 data...")
     ga4 = fetch_ga4_data(ga4_token)

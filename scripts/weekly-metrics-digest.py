@@ -24,6 +24,8 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timezone, timedelta
 
+from google_access_token import service_account_access_token
+
 # ── Config ────────────────────────────────────────────────────────────────────
 GA4_PROPERTY   = "529369568"
 GA4_SECRETS_PATHS = [
@@ -45,7 +47,17 @@ DISCORD_METRICS_WEBHOOK = os.environ.get("DISCORD_METRICS_WEBHOOK", "")
 # ── Token refresh ─────────────────────────────────────────────────────────────
 
 def refresh_google_token(secrets_file: str) -> str | None:
-    """Refresh GA4 OAuth2 token. Returns access_token or None on failure."""
+    """Refresh GA4 OAuth2 token, or use service account when configured."""
+    try:
+        service_account_token = service_account_access_token(["https://www.googleapis.com/auth/analytics.readonly"])
+    except Exception as e:
+        print(f"[weekly-metrics] Service account token failed: {e}", file=sys.stderr)
+        service_account_token = None
+    if service_account_token:
+        token, _path, email = service_account_token
+        print(f"[weekly-metrics] Using service account: {email}")
+        return token
+
     if not os.path.exists(secrets_file):
         print(f"[weekly-metrics] Token file not found: {secrets_file}", file=sys.stderr)
         return None
