@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-18T04:31:25.641391+00:00",
+  "digest": "2e75b1eafa",
+  "packet": {
+    "packet_id": "20260618T043125Z_2e75b1eafa",
+    "created_at": "2026-06-18T04:31:25Z",
+    "headline_seed": "Kuhnureilta uupuvat tulokset – \"On kylmä fakta, että tarvitsemme pisteitä\"",
+    "description_seed": "Armend Kabashi ei onnistunut ryöstöretkiaikeissaan entisellä kotikentällään.",
+    "link": "https://www.ess.fi/urheilu/9549304",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9549304"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kuhnureilta uupuvat tulokset – \"On kylmä fakta, että tarvitsemme pisteitä\""
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 171,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Sportti",
+        "Sportti",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kuhnureilta uupuvat tulokset – \"On kylmä fakta, että tarvitsemme pisteitä\"",
+      "description": "Armend Kabashi ei onnistunut ryöstöretkiaikeissaan entisellä kotikentällään.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kuhnureilta uupuvat tulokset – \"On kylmä fakta, että tarvitsemme pisteitä\"",
+    "description": "Armend Kabashi ei onnistunut ryöstöretkiaikeissaan entisellä kotikentällään.",
+    "link": "https://www.ess.fi/urheilu/9549304",
+    "published": "2026-06-18T06:58:19+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "504de51becbcb3bbbb00e7ab8bb8c9d4",
+    "_url_hash": "e4514ab38c9bdc35861238ae67734773ebf1e40d651f2f813e0cef6859374cdc",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Sportti]\nJoka kevät toistuva kiekkokarnevaali, jääkiekon MM-kisat ovat jälleen täydessä käynnissä.\n\nMM-kisat keräävät Suomessa tv-ruutujen ääreen joka kevät miljoonia katsojia, mutta karnevaalin urheilullisesta mielekkyydestä voidaan toki olla montaa mieltä.\n\nMM-kisoissa pelaa joka kevät 16 maata, mitkä on jaettu kahteen kahdeksan joukkueen alkulohkoon. Alkulohkossa jokaiselle maalle kertyy seitsemän ottelua. On väistämätöntä, että väliin mahtuu myös läpsyttelyjä, jotka eivät kiinnosta oikein ketään.\n\nEilen perjantaina Suomi kohtasi Iso-Britannian ja voitti maalein 4-0. Paremmalla viimeistelyllä lukemat olisivat voineet olla 16-0.\n\nViaplayn asiantuntija ja Stanley Cup-voittaja Ville Nieminen teki ottelun jälkeen kantansa selväksi. Perjantai-illan näytöksestä ei hyötynyt kukaan.\n\n– Se nyt on kylmä fakta, ettei tällaisia pelejä pitäisi olla MM-kisoissa, Nieminen latasi suoraan Viaplayn studiossa.\n\n– NHL-pelaajat tulevat pitkän kauden jälkeen pelaamaan tällaisia pelejä. En usko, että he haluaisivat pelata tällaisia pelejä, Nieminen jatkoi.\n\nNieminen lienee oikeassa. Esimerkiksi Aleksander Barkov näytti ajoittain hyvin turhautuneelta kesken Britannia-ottelun.\n\nHenkilön ATLEETTI Kiekko (@atleettikiekko) jakama julkaisu\n\nJääkiekko    17.06.2026 - 15:25     Salttu Forsström\n\nJääkiekko    15.06.2026 - 16:32     Ville Hirvonen\n\nJääkiekko    15.06.2026 - 12:24     Salttu Forsström",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-18T04:33:20.880555+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä tai tarkistettavia perustietoja, eikä 250 sanan uutista voi kirjoittaa keksimättä faktoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260618T043125Z_2e75b1eafa\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä tai tarkistettavia perustietoja, eikä 250 sanan uutista voi kirjoittaa keksimättä faktoja.\"}"
+}
