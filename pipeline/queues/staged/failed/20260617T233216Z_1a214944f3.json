@@ -1,0 +1,101 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-17T23:32:16.626981+00:00",
+  "digest": "1a214944f3",
+  "packet": {
+    "packet_id": "20260617T233216Z_1a214944f3",
+    "created_at": "2026-06-17T23:32:16Z",
+    "headline_seed": "AI is hurting Apple in more ways than one: it may force iPhone price increases",
+    "description_seed": "CEO Tim Cook said in a recent interview that the situation is \"unsustainable.\"",
+    "link": "https://techcrunch.com/2026/06/17/ai-is-hurting-apple-in-more-ways-than-one-it-may-force-iphone-price-increases/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/17/ai-is-hurting-apple-in-more-ways-than-one-it-may-force-iphone-price-increases/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.7,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "AI is hurting Apple in more ways than one: it may force iPhone price increases"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "It’s been called RAMageddon: AI’s insatiable demand for hardware has caused a worldwide shortage of memory chips. Now outgoing Apple CEO Tim Cook is warning its customers that your next Mac, iPhone, or iPad could be more expensive thanks to surging memory and storage chips costs. In a recent interview, Cook told the WSJ that price increases are “unavoidable,” in spite of efforts to absorb chip costs that have increased fourfold since last year. He described the situation as “unsustainable.”",
+        "word_count": 80,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "CEO Tim Cook said in a recent interview that the situation is \"unsustainable.\"",
+        "word_count": 13,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "It’s been called RAMageddon: AI’s insatiable demand for hardware has caused a worldwide shortage of memory chips. Now outgoing Apple CEO Tim Cook is warning its customers that your next Mac, iPhone, or iPad could be more expensive thanks to surging memory and storage chips costs. In a recent interview, Cook told the WSJ that price increases are “unavoidable,” in spite of efforts to absorb chip costs that have increased fourfold since last year. He described the situation as “unsustainable.”\n\nCEO Tim Cook said in a recent interview that the situation is \"unsustainable.\"",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 93,
+      "selected_blocks": 2,
+      "selected_source_words": 93,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "AI is hurting Apple in more ways than one: it may force iPhone price increases",
+      "description": "CEO Tim Cook said in a recent interview that the situation is \"unsustainable.\"",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "AI is hurting Apple in more ways than one: it may force iPhone price increases",
+    "description": "CEO Tim Cook said in a recent interview that the situation is \"unsustainable.\"",
+    "link": "https://techcrunch.com/2026/06/17/ai-is-hurting-apple-in-more-ways-than-one-it-may-force-iphone-price-increases/",
+    "published": "2026-06-17T23:28:21+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "4d6cffa1943590d03c05dbc55580acd1",
+    "_url_hash": "406d21acd82f7a01861770584b059d9c358584338205abca8f74c9de3053880c",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nIt’s been called RAMageddon: AI’s insatiable demand for hardware has caused a worldwide shortage of memory chips. Now outgoing Apple CEO Tim Cook is warning its customers that your next Mac, iPhone, or iPad could be more expensive thanks to surging memory and storage chips costs.\n\nIn a recent interview, Cook told the WSJ that price increases are “unavoidable,” in spite of efforts to absorb chip costs that have increased fourfold since last year. He described the situation as “unsustainable.”",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-17T23:33:22.318333+00:00",
+  "failure": "Aineisto on liian niukka ja nojaa yhteen lyhyeen lähdekatkelmaan; 250 sanan julkaistavaa artikkelia ei voi kirjoittaa ilman täyteainetta tai lisäoletuksia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260617T233216Z_1a214944f3\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineisto on liian niukka ja nojaa yhteen lyhyeen lähdekatkelmaan; 250 sanan julkaistavaa artikkelia ei voi kirjoittaa ilman täyteainetta tai lisäoletuksia.\"}"
+}
