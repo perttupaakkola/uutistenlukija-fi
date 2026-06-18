@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-18T21:51:14.007535+00:00",
+  "digest": "1f875268ab",
+  "packet": {
+    "packet_id": "20260618T215114Z_1f875268ab",
+    "created_at": "2026-06-18T21:51:14Z",
+    "headline_seed": "Tuntematon mies teki hirveän teon: Heitti 3-vuotiaan lapsen krokotiili­aitaukseen Britanniassa",
+    "description_seed": "Britanniassa järkyttäneen teon motiivi ei ole tiedossa. Aikuinen mies heitti pienen pojan krokotiiliaitaukseen eläintarhassa Britanniassa. 3-vuotias poika vietiin sairaalaan, sillä hän sai vakavia vammoja. Hänen tilansa on kriittinen mutta vakaa, kertovat paikalliset viranomaiset.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/22d976f0-4121-4999-b64d-28377ff369a4",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/22d976f0-4121-4999-b64d-28377ff369a4"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tuntematon mies teki hirveän teon: Heitti 3-vuotiaan lapsen krokotiili­aitaukseen Britanniassa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Britanniassa järkyttäneen teon motiivi ei ole tiedossa. Aikuinen mies heitti pienen pojan krokotiiliaitaukseen eläintarhassa Britanniassa. 3-vuotias poika vietiin sairaalaan, sillä hän sai vakavia vammoja. Hänen tilansa on kriittinen mutta vakaa, kertovat paikalliset viranomaiset.",
+        "word_count": 33,
+        "keyword_overlap": 27,
+        "strong_overlap": 19
+      }
+    ],
+    "source_text": "Britanniassa järkyttäneen teon motiivi ei ole tiedossa. Aikuinen mies heitti pienen pojan krokotiiliaitaukseen eläintarhassa Britanniassa. 3-vuotias poika vietiin sairaalaan, sillä hän sai vakavia vammoja. Hänen tilansa on kriittinen mutta vakaa, kertovat paikalliset viranomaiset.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 66,
+      "selected_blocks": 1,
+      "selected_source_words": 33,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tuntematon mies teki hirveän teon: Heitti 3-vuotiaan lapsen krokotiili­aitaukseen Britanniassa",
+      "description": "Britanniassa järkyttäneen teon motiivi ei ole tiedossa. Aikuinen mies heitti pienen pojan krokotiiliaitaukseen eläintarhassa Britanniassa. 3-vuotias poika vietiin sairaalaan, sillä hän sai vakavia vammoja. Hänen tilansa on kriittinen mutta vakaa, kertovat paikalliset viranomaiset.",
+      "category_hint": "Ulkomaat",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Tuntematon mies teki hirveän teon: Heitti 3-vuotiaan lapsen krokotiili­aitaukseen Britanniassa",
+    "description": "Britanniassa järkyttäneen teon motiivi ei ole tiedossa. Aikuinen mies heitti pienen pojan krokotiiliaitaukseen eläintarhassa Britanniassa. 3-vuotias poika vietiin sairaalaan, sillä hän sai vakavia vammoja. Hänen tilansa on kriittinen mutta vakaa, kertovat paikalliset viranomaiset.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/22d976f0-4121-4999-b64d-28377ff369a4",
+    "published": "2026-06-19T00:43:48+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "4a918e59735b48d2e0738d8bab72ccfe",
+    "_url_hash": "2583b7ebfee4c5434ae09b0f1823d71df4efe3dd858d5f9195dbcfb229be643f",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Britanniassa järkyttäneen teon motiivi ei ole tiedossa. Aikuinen mies heitti pienen pojan krokotiiliaitaukseen eläintarhassa Britanniassa. 3-vuotias poika vietiin sairaalaan, sillä hän sai vakavia vammoja. Hänen tilansa on kriittinen mutta vakaa, kertovat paikalliset viranomaiset.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-06-18T21:53:21.462993+00:00",
+  "failure": "Lähdeaineisto on liian niukka: tapahtumapaikka, ajankohta, viranomaislähde ja tapauksen keskeiset yksityiskohdat puuttuvat.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260618T215114Z_1f875268ab\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka: tapahtumapaikka, ajankohta, viranomaislähde ja tapauksen keskeiset yksityiskohdat puuttuvat.\"}"
+}
