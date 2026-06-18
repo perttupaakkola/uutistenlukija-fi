@@ -1,0 +1,80 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-18T15:51:11.209621+00:00",
+  "digest": "de06a1143c",
+  "packet": {
+    "packet_id": "20260618T155111Z_de06a1143c",
+    "created_at": "2026-06-18T15:51:11Z",
+    "headline_seed": "Why Iran believes deal with US leaves it stronger than before",
+    "description_seed": "Iran has come out of the war's first chapter stronger than many expected, but its next challenge may be harder, the BBC Persian Service's Amir Azimi writes.",
+    "link": "https://www.bbc.com/news/articles/c932yqz8lggo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c932yqz8lggo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Why Iran believes deal with US leaves it stronger than before"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 418,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Why Iran believes deal with US leaves it stronger than before",
+      "description": "Iran has come out of the war's first chapter stronger than many expected, but its next challenge may be harder, the BBC Persian Service's Amir Azimi writes.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Why Iran believes deal with US leaves it stronger than before",
+    "description": "Iran has come out of the war's first chapter stronger than many expected, but its next challenge may be harder, the BBC Persian Service's Amir Azimi writes.",
+    "link": "https://www.bbc.com/news/articles/c932yqz8lggo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-18T15:38:18+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "45a4f0bfbdbd615f0df1fbbeea5cb17b",
+    "_url_hash": "3322019f9cd3aabe3751090380a57c64184a6a360f9bf87166c79c0a90feb921",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nFor Iran, the deal with the US offers something just as important as a ceasefire: a way to claim that it has not just survived the war without surrendering but has emerged from it stronger.\n\nFrom the start, Tehran's core objective was not necessarily to defeat the US and Israel in conventional military terms. It was to come out of the conflict with the Islamic Republic intact, its leadership still functioning and its negotiating position not completely broken.\n\nThe Memorandum of Understanding (MOU) – as the deal is known - allows Iran to say it has achieved that.\n\nThe document, signed separately by US President Donald Trump and Iranian President Masoud Pezeshkian, sets out a 60-day framework for negotiations over Iran's nuclear programme but it also confirms an immediate halt to military operations on all fronts, including Lebanon, mutual respect for sovereignty, the reopening of the Strait of Hormuz and the lifting of the US naval blockade on Iranian shipping.\n\nIran's immediate obligations are significant, but relatively limited. Tehran has agreed to help ensure safe commercial passage through Hormuz, something that had long been the status quo before the war, reaffirm that it will not pursue nuclear weapons, and enter talks on the future of its highly enriched uranium and enrichment programme.\n\nThe US commitments appear broader. According to the MoU, Washington will begin removing its naval blockade, issue waivers for Iranian oil exports, make frozen or restricted Iranian assets available, work towards easing sanctions and pursue with regional partners a reconstruction and economic development plan for Iran worth at least $300bn (£224bn).\n\nThat helps explain why the reaction from Iranian critics has so far been muted. The MoU gives the leadership enough to present the deal as a victory: Iran's sovereignty is recognised, the blockade is due to be lifted, sanctions relief is on the table and reconstruction funding is explicitly mentioned.\n\nThe most difficult issues have been deferred, not resolved. The future of Iran's highly enriched uranium, the scale of its enrichment industry and the rebuilding of damaged nuclear facilities will now be negotiated under intense pressure.\n\nThat creates a problem for Tehran's leadership. State media, the Revolutionary Guards, parliament and hardline figures have spent weeks telling their base that Iran defeated the US and Israel. Expectations are now high. Any compromise over enriched uranium or nuclear infrastructure cou",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-18T15:53:25.429864+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittävästi tarkistettavia faktoja vähintään 250 sanan julkaistavaan artikkeliin.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260618T155111Z_de06a1143c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittävästi tarkistettavia faktoja vähintään 250 sanan julkaistavaan artikkeliin.\"}"
+}
