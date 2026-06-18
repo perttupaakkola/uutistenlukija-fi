@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/zelenskyi-merkittava-muutos-voi-olla-tulossa/9355166"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
