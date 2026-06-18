@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/naton-puolustusministerit-koolla-brysselissa/9355204"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
