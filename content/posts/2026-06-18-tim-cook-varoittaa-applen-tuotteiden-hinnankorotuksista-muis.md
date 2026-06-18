@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/18/toimitusjohtaja-tim-cook-vahvisti-applen-tuotteisiin-luvassa-hinnankorotuksia-syyna-muistikustannusten-raju-nousu/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
