@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/mindy-hautalan-haave-omasta-kioskista-toteutui-9-vuotiaana-nyt-se-valloittaa-palvelullaan-olemme-ylpeana-seuranneet-miten-hyvin-han-parjaa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
