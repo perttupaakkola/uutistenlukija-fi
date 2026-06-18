@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-18T15:11:14.594650+00:00",
+  "digest": "b6f849d14b",
+  "packet": {
+    "packet_id": "20260618T151114Z_b6f849d14b",
+    "created_at": "2026-06-18T15:11:14Z",
+    "headline_seed": "Moskovan paloista leviää valtavasti kuvamateriaalia ja meemejä – katso kooste",
+    "description_seed": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9552891",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/uutissuomalainen/9552891"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Moskovan paloista leviää valtavasti kuvamateriaalia ja meemejä – katso kooste"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 160,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Kouvolan Sanomat",
+        "Kouvolan Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Moskovan paloista leviää valtavasti kuvamateriaalia ja meemejä – katso kooste",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Moskovan paloista leviää valtavasti kuvamateriaalia ja meemejä – katso kooste",
+    "description": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9552891",
+    "published": "2026-06-18T17:30:20+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "fbe13d2a2ba18a479ecb8fb1d25d5757",
+    "_url_hash": "cfe91560a6e92515724a97dd621c0a75a4d08ee482e159bd32d060d08b3c662d",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Kouvolan Sanomat]\nUkrainan drooni-iskut ovat peittäneet Venäjän pääkaupunki Moskovan taivaan synkkään savuun.\n\nUutistoimisto AFP:n mukaan tulipaloista on raportoitu eri puolilla kaupunkia torstain mittaan. Venäläismedioiden mukaan Ukrainan iskuja osui Moskovan alueella myös öljynjalostamoon, joka syttyi palamaan.\n\nVenäläiset Telegram-kanavat ovat koostaneet ja julkaisseet paikallisten kuvaamaa materiaalia iskujen tuhoista. Sosiaalisessa mediassa huomiota on erityisesti herättänyt hetki, jossa öljysäiliön kattorakenne singastaa räjähdyksen saattelemana taivaan tuuliin.\n\nThe moment a storage tank at the Moscow oil refinery was hit: the blast blew the tank's lid off. https://t.co/ibupq8ofJc pic.twitter.com/cptsVVywYP\n\nHelsingin Sanomien mukaan säiliö sijaitsee Kapotnjan öljynjalostamolla, jonne Ukraina iski nyt toista kertaa tällä viikolla. HS kertoo jalostamon olevan Moskovan alueen suurin ja se on tähän mennessä tuottanut huomattavan osan Moskovan polttoaineista.\n\nKuvankaappaus kattorakenteen lennosta on poikinut sosiaalisessa mediassa erilaisia pilailevia meemejä. Meemeissä kattorakennetta on verrattu muun muassa lentäviin lautasiin tai Venäjän presidentti Vladimir Putinin tapaamisissa suosimaan pitkään kokouspöytään.\n\nUFOS ARE REAL!!! https://t.co/GoeHzFnSZ4 pic.twitter.com/HO4LNNgVB0\n\nPaljon kuvia Moskovan paloista on jakanut myös turkkilainen uutistoimistot Anadolu ja AFP. Niitä on koostettu alle.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-18T15:13:24.244437+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260618T151114Z_b6f849d14b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja artikkelin kirjoittamiseen.\"}"
+}
