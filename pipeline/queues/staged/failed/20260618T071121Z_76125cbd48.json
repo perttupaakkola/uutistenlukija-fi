@@ -1,0 +1,193 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-18T07:11:21.441366+00:00",
+  "digest": "76125cbd48",
+  "packet": {
+    "packet_id": "20260618T071121Z_76125cbd48",
+    "created_at": "2026-06-18T07:11:21Z",
+    "headline_seed": "The Ring and Lilo & Stitch actress Daveigh Chase dies aged 35",
+    "description_seed": "Chase died from sepsis following a bout with meningitis in a Los Angeles hospital, her longtime manager told the BBC.",
+    "link": "https://www.bbc.com/news/articles/cd0m2mg949yo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "Los Angeles Daily News",
+      "AS USA"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cd0m2mg949yo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "The Ring and Lilo & Stitch actress Daveigh Chase dies aged 35"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Daveigh Chase, the horror actress who crawled out of a TV in The Ring and voiced Lilo in Disney's animated Lilo & Stitch, has died aged 35. Chase, who also starred in the cable drama Big Love, died from sepsis after suffering from meningitis in a Los Angeles hospital, her longtime manager John Ryan Jr confirmed to BBC News on Wednesday. Ryan said that Chase had been admitted to hospital for malnourishment before her death. The former child star began acting at 4 years old, booking her first Hollywood job when she was 7, but she retired from acting full time in 2015, he said.",
+        "word_count": 105,
+        "keyword_overlap": 15,
+        "strong_overlap": 9
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Chase died from sepsis following a bout with meningitis in a Los Angeles hospital, her longtime manager told the BBC.",
+        "word_count": 20,
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Los Angeles Daily News",
+        "source_type": "research",
+        "text": "Funeral services were pending Wednesday for Daveigh Chase, a former child actress who gained early fame as the voice of Lilo in Disney’s 2002 animated hit film “Lilo & Stitch” and also portrayed the nightmarish Samara Morgan in the horror film “The Ring” that same year. Chase died Tuesday at age 35 due to meningitis and a blood infection, her boyfriend Roy Hernandez told TMZ. Hernandez had created a GoFundMe page earlier this week, saying her medical condition had dramatically worsened.",
+        "word_count": 81,
+        "keyword_overlap": 9,
+        "strong_overlap": 4
+      },
+      {
+        "source": "AS USA",
+        "source_type": "research",
+        "text": "One of Hollywood’s rising stars has passed away. Sources at TMZ have confirmed the death of Daveigh Chase at age 35. The actress had been hospitalized recently due to meningitis. The infection spread to her bloodstream and caused sepsis, which ultimately claimed her life. Daveigh Chase’s career was shaped from a very young age by an unusual combination of commercial successes, iconic roles, and a gradual withdrawal from the media spotlight. Her career, which began in childhood, is one of the most recognizable examples of the phenomenon of child stars who emerged in the early 21st century.",
+        "word_count": 97,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Daveigh Chase, the horror actress who crawled out of a TV in The Ring and voiced Lilo in Disney's animated Lilo & Stitch, has died aged 35. Chase, who also starred in the cable drama Big Love, died from sepsis after suffering from meningitis in a Los Angeles hospital, her longtime manager John Ryan Jr confirmed to BBC News on Wednesday. Ryan said that Chase had been admitted to hospital for malnourishment before her death. The former child star began acting at 4 years old, booking her first Hollywood job when she was 7, but she retired from acting full time in 2015, he said.\n\nChase died from sepsis following a bout with meningitis in a Los Angeles hospital, her longtime manager told the BBC.\n\nFuneral services were pending Wednesday for Daveigh Chase, a former child actress who gained early fame as the voice of Lilo in Disney’s 2002 animated hit film “Lilo & Stitch” and also portrayed the nightmarish Samara Morgan in the horror film “The Ring” that same year. Chase died Tuesday at age 35 due to meningitis and a blood infection, her boyfriend Roy Hernandez told TMZ. Hernandez had created a GoFundMe page earlier this week, saying her medical condition had dramatically worsened.\n\nOne of Hollywood’s rising stars has passed away. Sources at TMZ have confirmed the death of Daveigh Chase at age 35. The actress had been hospitalized recently due to meningitis. The infection spread to her bloodstream and caused sepsis, which ultimately claimed her life. Daveigh Chase’s career was shaped from a very young age by an unusual combination of commercial successes, iconic roles, and a gradual withdrawal from the media spotlight. Her career, which began in childhood, is one of the most recognizable examples of the phenomenon of child stars who emerged in the early 21st century.",
+    "source_diagnostics": {
+      "candidate_blocks": 12,
+      "candidate_source_words": 1062,
+      "selected_blocks": 4,
+      "selected_source_words": 303,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Los Angeles Daily News",
+        "Los Angeles Daily News",
+        "Los Angeles Daily News",
+        "Los Angeles Daily News",
+        "AS USA",
+        "AS USA",
+        "AS USA",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "Los Angeles Daily News",
+        "AS USA"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "The Ring and Lilo & Stitch actress Daveigh Chase dies aged 35",
+      "description": "Chase died from sepsis following a bout with meningitis in a Los Angeles hospital, her longtime manager told the BBC.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "The Ring and Lilo & Stitch actress Daveigh Chase dies aged 35",
+    "description": "Chase died from sepsis following a bout with meningitis in a Los Angeles hospital, her longtime manager told the BBC.",
+    "link": "https://www.bbc.com/news/articles/cd0m2mg949yo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-17T22:55:46+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "5364c08ffb15d40e6ff6008c1ef08081",
+    "_url_hash": "aa1c8d2ccbd488c44ba93b1621223af24074e7161e74038b5990f124eb7adbb9",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nDaveigh Chase, the horror actress who crawled out of a TV in The Ring and voiced Lilo in Disney's animated Lilo & Stitch, has died aged 35.\n\nChase, who also starred in the cable drama Big Love, died from sepsis after suffering from meningitis in a Los Angeles hospital, her longtime manager John Ryan Jr confirmed to BBC News on Wednesday.\n\nRyan said that Chase had been admitted to hospital for malnourishment before her death.\n\nThe former child star began acting at 4 years old, booking her first Hollywood job when she was 7, but she retired from acting full time in 2015, he said.\n\n\"She was the greatest. She loved cats. She worked with cat rescues with us. She was very to herself, \" said Ryan, her friend and manager of 15 years, noting that Chase would often retreat to her home in Las Vegas for years at a time and turn down big studio films to do independent projects.\n\n\"She was not very Hollywood,\" he said. \"She'd rather eat at Bob's Big Boy and go home with the cats. She loved acting but wasn't into the fame scene.\"\n\nChase, who kept homes in Nevada and downtown Los Angeles, started acting in Las Vegas around age 4 doing voiceover work and theatre.\n\nShe landed her first TV role in Hollywood at age 7, booking a small part in the popular Melissa Joan Hart-led American sitcom Sabrina The Teenage Witch.\n\nHer Hollywood breakthrough came in 2001 when she appeared as Samantha Darko in  Donnie Darko and later played the titular character's sister in the 2009 film S Darko.\n\nChase was further immortalised in film in 2002 as Samara Morgan, the long-haired ghost that crawls out of the telly - in the horror film The Ring - an American remake of the Japanese classic about a videotape that makes people die after they watch it.\n\nShe earned a 2003 MTV Movie Award for best villain for her turn as the spooky demon-like character, that crawls on her hands and feet before killing victims.\n\nChase said she had fun playing such an evil character.\n\n\"It is not your typical character. Usually they are looking for a happy-go-lucky kid, but Samara was a pretty interesting character to play. I just kind of took my own voice and put this freaky twist on it,\" she told the Los Angeles Times in 2002.\n\nThat same year, she voiced the Elvis-adoring Hawaiian girl Lilo in the animated hit Lilo & Stitch. The part earned her an Annie Award for best voice acting in an animated feature production and she continued to voice the character in later spin-offs.\n\nHer resume also includes single-episode role\n\n---\n\n[Lähde: Los Angeles Daily News]\nFuneral services were pending Wednesday for Daveigh Chase, a former child actress who gained early fame as the voice of Lilo in Disney’s 2002 animated hit film “Lilo & Stitch” and also portrayed the nightmarish Samara Morgan in the horror film “The Ring” that same year.\n\nChase died Tuesday at age 35 due to meningitis and a blood infection, her boyfriend Roy Hernandez told TMZ.\n\nHernandez had created a GoFundMe page earlier this week, saying her medical condition had dramatically worsened.\n\n“Daveigh was diagnosed with meningitis and several serious blood infections,” Hernandez wrote on the page. “Her condition has become critical, and the doctors have told me she may not have much time left. All she ever wanted was a place where we could live together, feel safe, and be happy. Now, more than ever, I want to give her that sense of home and peace in her final days.”\n\nHe wrote on the page that despite her early success on screen, Chase “faced more than her share of hardship.”\n\n“After a difficult childhood and a painful falling out with her family, Daveigh was bullied and struggled to find safety and happiness in downtown LA,” Hernandez wrote. “When we met, I promised to protect her and give her the love and comfort she deserved. Together, we found moments of happiness and hope.”\n\nBorn in Las Vegas and raised in Oregon, Chase made guest appearances as a child in TV shows including “Charmed,” “ER,” and “Sabrina the Teenage Witch.” She also appeared in the film “Donnie Darko” in 2001, but gained fame as the voice of Lilo in Disney’s “Lilo & Stitch.” Her haunting performance in the horror film “The Ring” earned her an MTV Movie Award for best villain.\n\nShe also provided the voice of Chihiro Ogino in the English-language-dubbed version of the Japanese anime film “Spirited Away.” Chase also starred in the HBO drama series “Big Love,” opposite Bill Paxton.\n\n---\n\n[Lähde: AS USA]\nOne of Hollywood’s rising stars has passed away. Sources at TMZ have confirmed the death of Daveigh Chase at age 35. The actress had been hospitalized recently due to meningitis. The infection spread to her bloodstream and caused sepsis, which ultimately claimed her life.\n\nDaveigh Chase’s career was shaped from a very young age by an unusual combination of commercial successes, iconic roles, and a gradual withdrawal from the media spotlight. Her career, which began in childhood, is one of the most recognizable examples of the phenomenon of child stars who emerged in the early 21st century.\n\nChase began working in the entertainment industry in the late 1990s, initially in advertising and small television roles. In 2001, she played Samantha Darko in ‘Donnie Darko,’ one of the cult classics of modern horror cinema. Her big break came in 2002, a pivotal year in her career. On the one hand, she lent her voice to the title character in ‘Lilo & Stitch’ (2002), a Disney production in which she voiced Lilo herself. The film became a global hit and established the actress as one of the most promising child actors of her generation.\n\nThat same year, she brought Samara Morgan to life in ‘The Ring’ (2002), one of the most influential horror films of its time. Her unsettling portrayal of the girl linked to a viral curse heightened the character’s cultural impact and cemented her place in the genre’s collective imagination. The contrast between Lilo’s innocence and the unsettling Samara demonstrated her acting versatility at an unusually young age.\n\nAt the same time, Chase also worked as a voice actress in the ...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-18T07:15:00.911394+00:00",
+  "failure": "content too short: 241 words",
+  "payload": {
+    "packet_id": "20260618T071121Z_76125cbd48",
+    "title": "Näyttelijä Daveigh Chase on kuollut 35-vuotiaana",
+    "summary": "Lilo & Stitch -elokuvan Lilon äänenä ja The Ring -kauhuelokuvan Samara Morganina tunnettu Daveigh Chase on kuollut 35-vuotiaana. Managerin mukaan hän kuoli Los Angelesissa sepsikseen sairastettuaan aivokalvontulehduksen.",
+    "content": "Yhdysvaltalainen näyttelijä Daveigh Chase, joka tunnettiin Lilo & Stitch -animaation Lilon äänenä sekä The Ring -kauhuelokuvan Samara Morganina, on kuollut 35-vuotiaana. Hänen pitkäaikainen managerinsa John Ryan Jr. kertoi BBC:lle, että Chase kuoli Los Angelesissa sairaalassa sepsikseen sairastettuaan aivokalvontulehduksen.\n\n## Kuolema varmistui sairaalahoidon jälkeen\n\nRyanin mukaan Chase oli ennen kuolemaansa otettu sairaalahoitoon aliravitsemuksen vuoksi. Los Angeles Daily Newsin mukaan hautajaisjärjestelyt olivat keskiviikkona vielä kesken. Chasen poikaystävä Roy Hernandez kertoi TMZ:lle, että näyttelijä kuoli tiistaina ja että taustalla olivat aivokalvontulehdus sekä veren infektio.\n\nHernandez oli aiemmin samalla viikolla perustanut GoFundMe-keräyksen, jossa hän kertoi Chasen terveydentilan heikentyneen dramaattisesti. AS USA:n mukaan Chase oli ollut hiljattain sairaalahoidossa aivokalvontulehduksen vuoksi ja infektio levisi verenkiertoon. Lähteiden mukaan verenmyrkytys eli sepsis johti lopulta hänen kuolemaansa.\n\n## Lapsitähti tunnettiin kahdesta hyvin erilaisesta roolista\n\nChase aloitti näyttelemisen hyvin nuorena. Managerin mukaan hän alkoi esiintyä nelivuotiaana ja sai ensimmäisen Hollywood-työnsä seitsemänvuotiaana. Suurelle yleisölle hän nousi tutuksi vuonna 2002 kahdesta hyvin erilaisesta roolista, jotka tekivät hänestä tunnistettavan nimen sekä animaatioiden että kauhuelokuvien katsojille.\n\nDisney-animaatiossa Lilo & Stitch Chase antoi äänensä Lilo-hahmolle. Samana vuonna hän näytteli Samara Morgania The Ring -kauhuelokuvassa. Rooli muistetaan erityisesti hahmosta, joka ryömi televisiosta ulos, ja siitä tuli osa 2000-luvun alun kauhuelokuvien kuvastoa.\n\n## Ura jäi vähitellen taka-alalle\n\nChase esiintyi myös kaapelikanavan draamasarjassa Big Love. Hänen uransa alkoi lapsuudessa ja sisälsi nopeasti tunnistettavia rooleja sekä kaupallisesti menestyneissä että vahvasti mieleen jääneissä tuotannoissa. Lähteiden mukaan hän vetäytyi vähitellen pois julkisuudesta, ja manageri kertoi, että Chase lopetti täysipäiväisen näyttelemisen vuonna 2015.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Daveigh Chase",
+      "Lilo & Stitch",
+      "The Ring",
+      "elokuvat",
+      "näyttelijät"
+    ],
+    "summary_bullets": [
+      "Daveigh Chase on kuollut 35-vuotiaana Los Angelesissa.",
+      "Hänet tunnettiin Lilo & Stitch -elokuvan Lilon äänenä ja The Ring -elokuvan Samara Morganina.",
+      "Managerin mukaan kuolinsyy oli sepsis aivokalvontulehduksen jälkeen."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.88,
+    "journalist_note": "Artikkeli perustuu packetin lähteissä toistuviin tietoihin kuolemasta, sairaalahoidosta, tunnetuista rooleista ja uran pääpiirteistä. Kuolinajankohdasta käytettiin lähteissä mainittua tiistaita, mutta tarkkaa päivämäärää ei lisätty, koska sitä ei ollut packetissa eksplisiittisesti avattu."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260618T071121Z_76125cbd48\",\n  \"title\": \"Näyttelijä Daveigh Chase on kuollut 35-vuotiaana\",\n  \"summary\": \"Lilo & Stitch -elokuvan Lilon äänenä ja The Ring -kauhuelokuvan Samara Morganina tunnettu Daveigh Chase on kuollut 35-vuotiaana. Managerin mukaan hän kuoli Los Angelesissa sepsikseen sairastettuaan aivokalvontulehduksen.\",\n  \"content\": \"Yhdysvaltalainen näyttelijä Daveigh Chase, joka tunnettiin Lilo & Stitch -animaation Lilon äänenä sekä The Ring -kauhuelokuvan Samara Morganina, on kuollut 35-vuotiaana. Hänen pitkäaikainen managerinsa John Ryan Jr. kertoi BBC:lle, että Chase kuoli Los Angelesissa sairaalassa sepsikseen sairastettuaan aivokalvontulehduksen.\\n\\n## Kuolema varmistui sairaalahoidon jälkeen\\n\\nRyanin mukaan Chase oli ennen kuolemaansa otettu sairaalahoitoon aliravitsemuksen vuoksi. Los Angeles Daily Newsin mukaan hautajaisjärjestelyt olivat keskiviikkona vielä kesken. Chasen poikaystävä Roy Hernandez kertoi TMZ:lle, että näyttelijä kuoli tiistaina ja että taustalla olivat aivokalvontulehdus sekä veren infektio.\\n\\nHernandez oli aiemmin samalla viikolla perustanut GoFundMe-keräyksen, jossa hän kertoi Chasen terveydentilan heikentyneen dramaattisesti. AS USA:n mukaan Chase oli ollut hiljattain sairaalahoidossa aivokalvontulehduksen vuoksi ja infektio levisi verenkiertoon. Lähteiden mukaan verenmyrkytys eli sepsis johti lopulta hänen kuolemaansa.\\n\\n## Lapsitähti tunnettiin kahdesta hyvin erilaisesta roolista\\n\\nChase aloitti näyttelemisen hyvin nuorena. Managerin mukaan hän alkoi esiintyä nelivuotiaana ja sai ensimmäisen Hollywood-työnsä seitsemänvuotiaana. Suurelle yleisölle hän nousi tutuksi vuonna 2002 kahdesta hyvin erilaisesta roolista, jotka tekivät hänestä tunnistettavan nimen sekä animaatioiden että kauhuelokuvien katsojille.\\n\\nDisney-animaatiossa Lilo & Stitch Chase antoi äänensä Lilo-hahmolle. Samana vuonna hän näytteli Samara Morgania The Ring -kauhuelokuvassa. Rooli muistetaan erityisesti hahmosta, joka ryömi televisiosta ulos, ja siitä tuli osa 2000-luvun alun kauhuelokuvien kuvastoa.\\n\\n## Ura jäi vähitellen taka-alalle\\n\\nChase esiintyi myös kaapelikanavan draamasarjassa Big Love. Hänen uransa alkoi lapsuudessa ja sisälsi nopeasti tunnistettavia rooleja sekä kaupallisesti menestyneissä että vahvasti mieleen jääneissä tuotannoissa. Lähteiden mukaan hän vetäytyi vähitellen pois julkisuudesta, ja manageri kertoi, että Chase lopetti täysipäiväisen näyttelemisen vuonna 2015.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Daveigh Chase\",\n    \"Lilo & Stitch\",\n    \"The Ring\",\n    \"elokuvat\",\n    \"näyttelijät\"\n  ],\n  \"summary_bullets\": [\n    \"Daveigh Chase on kuollut 35-vuotiaana Los Angelesissa.\",\n    \"Hänet tunnettiin Lilo & Stitch -elokuvan Lilon äänenä ja The Ring -elokuvan Samara Morganina.\",\n    \"Managerin mukaan kuolinsyy oli sepsis aivokalvontulehduksen jälkeen.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.88,\n  \"journalist_note\": \"Artikkeli perustuu packetin lähteissä toistuviin tietoihin kuolemasta, sairaalahoidosta, tunnetuista rooleista ja uran pääpiirteistä. Kuolinajankohdasta käytettiin lähteissä mainittua tiistaita, mutta tarkkaa päivämäärää ei lisätty, koska sitä ei ollut packetissa eksplisiittisesti avattu.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260618T071121Z_76125cbd48",
+    "category": "Kotimaa",
+    "selected_source_words": 303,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 241,
+    "issues": [
+      "content too short: 241 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Näyttelijä Daveigh Chase on kuollut 35-vuotiaana",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-18T07:15:00.911132+00:00",
+    "repair_trigger": "pre_repair_word_count=235; selected_source_words=303; selected_source_blocks=4",
+    "pre_repair_word_count": 235,
+    "pre_repair_lead_word_count": 38,
+    "post_repair_word_count": 241,
+    "post_repair_lead_word_count": 38,
+    "selected_source_words_at_repair": 303,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 303,
+    "source_blocks": 4,
+    "repair_added_word_count": 6,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 241 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:697fdffcc5",
+      "2:BBC World:e161ccfbb3",
+      "3:Los Angeles Daily News:18e06983ae",
+      "4:AS USA:e29c380a0e"
+    ],
+    "final_issues": [
+      "content too short: 241 words"
+    ],
+    "recovered": false
+  }
+}
