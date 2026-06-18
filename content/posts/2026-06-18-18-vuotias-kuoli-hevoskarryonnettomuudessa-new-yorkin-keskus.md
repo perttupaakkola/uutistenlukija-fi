@@ -41,7 +41,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/hevonen-pillastui-teini-kuoli-karryajelulla-new-yorkissa/9355320"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 

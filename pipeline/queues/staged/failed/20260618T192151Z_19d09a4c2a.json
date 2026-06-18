@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-18T19:21:51.989555+00:00",
+  "digest": "19d09a4c2a",
+  "packet": {
+    "packet_id": "20260618T192151Z_19d09a4c2a",
+    "created_at": "2026-06-18T19:21:51Z",
+    "headline_seed": "Katkera tasapeli MM-kisoissa – hurjat asetelmat päätöskierrokselle",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9553293",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9553293"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Katkera tasapeli MM-kisoissa – hurjat asetelmat päätöskierrokselle"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 125,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Katkera tasapeli MM-kisoissa – hurjat asetelmat päätöskierrokselle",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Katkera tasapeli MM-kisoissa – hurjat asetelmat päätöskierrokselle",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9553293",
+    "published": "2026-06-18T21:06:20+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "4afd85d29eb199673cded98008a97cbd",
+    "_url_hash": "f566c1fa572967314c16a49b1e61905af5ac755bfe6896a7c687e4c250424d5d",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keskisuomalainen]\nJalkapallon MM-kisojen toisen kierroksen avausottelussa Tshekki ja Etelä-Afrikka päätyivät 1–1-tasapeliin.\n\nOttelun avausmaali nähtiin jo kuudennella minuutilla, kun Michal Sadilek pääsi sijoittamaan pallon avopaikasta verkkoon. Tilanne sai alkunsa Vladimir Coufalin nopeasta sivurajaheitosta, johon Etelä-Afrikan puolustus ei ehtinyt reagoida. Pallo pelattiin nopeasti Alexander Sojkan kautta Sadilekille, joka viimeisteli varmasti.\n\nToisella jaksolla Tshekki passivoitui, ja Etelä-Afrikka otti pelin hallintaansa. Tasoitus syntyi lopulta 83. peliminuutilla, kun Teboho Mokoena laukoi pallon maaliin rangaistuspotkusta.\n\nLoppuhetkillä Etelä-Afrikka haki vielä aktiivisesti voittomaalia, mutta aika loppui kesken ja pisteet jaettiin.\n\nOttelussa panokset olivat korkealla, sillä molemmat joukkueet lähtivät peliin tappio niskassaan. Tasapelin myötä kummankin pistetili kasvoi yhteen pisteeseen.\n\nTshekin ja Etelä-Afrikan pudotuspelimahdollisuudet säilyivät yhä elossa, mutta jatkopaikka edellyttää todennäköisesti voittoa päätöskierroksella. Tshekki kohtaa viimeisessä lohkovaiheen ottelussaan kisaisäntä Meksikon, kun taas Etelä-Afrikka saa vastaansa Etelä-Korean.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-18T19:23:30.743271+00:00",
+  "failure": "Paketissa ei ole lähdetekstiä tai varmistettuja perustietoja, joiden varaan vähintään 250 sanan uutinen voitaisiin kirjoittaa ilman keksittyjä faktoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260618T192151Z_19d09a4c2a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lähdetekstiä tai varmistettuja perustietoja, joiden varaan vähintään 250 sanan uutinen voitaisiin kirjoittaa ilman keksittyjä faktoja.\"}"
+}
