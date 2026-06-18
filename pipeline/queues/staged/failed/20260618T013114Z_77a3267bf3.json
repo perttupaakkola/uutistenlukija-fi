@@ -1,0 +1,101 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-18T01:31:14.595131+00:00",
+  "digest": "77a3267bf3",
+  "packet": {
+    "packet_id": "20260618T013114Z_77a3267bf3",
+    "created_at": "2026-06-18T01:31:14Z",
+    "headline_seed": "How to turn off AI in your Google Docs",
+    "description_seed": "Here's what you need to do to get those pesky \"write with Gemini\" pop-ups to go away.",
+    "link": "https://techcrunch.com/2026/06/17/how-to-turn-off-ai-in-your-google-docs/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/17/how-to-turn-off-ai-in-your-google-docs/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.74,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "How to turn off AI in your Google Docs"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "It happened to me: I opened a Google Doc to write an article, and I was immediately confronted with a text box inviting me to “write with Gemini.” I looked for some button to swipe away the garish AI display, but I could not find it. It made me mad. Now, instead of writing the article I’m supposed to be working on, I am writing about how to get the AI pop-ups off of your Google Docs screen, since it took me some time to figure out. You’re welcome. The first fix is pretty straightforward:",
+        "word_count": 95,
+        "keyword_overlap": 8,
+        "strong_overlap": 3
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "Here's what you need to do to get those pesky \"write with Gemini\" pop-ups to go away.",
+        "word_count": 17,
+        "keyword_overlap": 10,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "It happened to me: I opened a Google Doc to write an article, and I was immediately confronted with a text box inviting me to “write with Gemini.” I looked for some button to swipe away the garish AI display, but I could not find it. It made me mad. Now, instead of writing the article I’m supposed to be working on, I am writing about how to get the AI pop-ups off of your Google Docs screen, since it took me some time to figure out. You’re welcome. The first fix is pretty straightforward:\n\nHere's what you need to do to get those pesky \"write with Gemini\" pop-ups to go away.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 112,
+      "selected_blocks": 2,
+      "selected_source_words": 112,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "How to turn off AI in your Google Docs",
+      "description": "Here's what you need to do to get those pesky \"write with Gemini\" pop-ups to go away.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "How to turn off AI in your Google Docs",
+    "description": "Here's what you need to do to get those pesky \"write with Gemini\" pop-ups to go away.",
+    "link": "https://techcrunch.com/2026/06/17/how-to-turn-off-ai-in-your-google-docs/",
+    "published": "2026-06-18T01:23:51+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "93bb68c7f165ddfcd128e71e27a17fdd",
+    "_url_hash": "ac23df885be3c2f043cbdad6b9d71d7c396aa0f8609d6dc373d13f3c3e57a68f",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nIt happened to me: I opened a Google Doc to write an article, and I was immediately confronted with a text box inviting me to “write with Gemini.” I looked for some button to swipe away the garish AI display, but I could not find it. It made me mad.\n\nNow, instead of writing the article I’m supposed to be working on, I am writing about how to get the AI pop-ups off of your Google Docs screen, since it took me some time to figure out. You’re welcome.\n\nThe first fix is pretty straightforward:",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-18T01:33:19.790202+00:00",
+  "failure": "Lähdeaineisto kertoo vain aiheen ja kirjoittajan kokemuksen Gemini-kehotteesta, mutta ei sisällä riittäviä vahvistettuja ohjeita tai yksityiskohtia 250 sanan julkaistavaan uutiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260618T013114Z_77a3267bf3\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto kertoo vain aiheen ja kirjoittajan kokemuksen Gemini-kehotteesta, mutta ei sisällä riittäviä vahvistettuja ohjeita tai yksityiskohtia 250 sanan julkaistavaan uutiseen.\"}"
+}
