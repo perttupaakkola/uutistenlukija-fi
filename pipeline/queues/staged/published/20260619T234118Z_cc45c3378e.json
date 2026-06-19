@@ -1,0 +1,188 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-19T23:41:18.193919+00:00",
+  "digest": "cc45c3378e",
+  "packet": {
+    "packet_id": "20260619T234118Z_cc45c3378e",
+    "created_at": "2026-06-19T23:41:18Z",
+    "headline_seed": "Google workspace threatening to block Firefox access",
+    "description_seed": "Article URL: https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html Comments URL: https://news.ycombinator.com/item?id=48600345 Points: 379 # Comments: 124",
+    "link": "https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html",
+    "source": "Hacker News Best",
+    "source_names": [
+      "Hacker News Best",
+      "Hacker News Best"
+    ],
+    "source_urls": [
+      "https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.74,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Google workspace threatening to block Firefox access"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Hacker News Best",
+        "source_type": "description",
+        "text": "Article URL: https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html Comments URL: https://news.ycombinator.com/item?id=48600345 Points: 379 # Comments: 124",
+        "word_count": 11,
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Hacker News Best",
+        "source_type": "research",
+        "text": "At the time of writing (2026-06-18), Google Workspace appears to be starting to warn users from Firefox that they must use Chrome. This was for a Google Workspace Business Plus account and workspace, from an up to date browser and OS. At this time, Firefox access still seems to work but I’ve no idea for how long. | 📝 Update as of 15:31Z 2026-06-18 | Google support called and claim this will only happen for admins trying to access https://admin.google.com and that it isn’t blocking, it’s just a recommendation. They said they will not be documenting this publicly | | ——————————— | :———————————————————————————————————————————————————————————————————————- |",
+        "word_count": 104,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Article URL: https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html Comments URL: https://news.ycombinator.com/item?id=48600345 Points: 379 # Comments: 124\n\nAt the time of writing (2026-06-18), Google Workspace appears to be starting to warn users from Firefox that they must use Chrome. This was for a Google Workspace Business Plus account and workspace, from an up to date browser and OS. At this time, Firefox access still seems to work but I’ve no idea for how long. | 📝 Update as of 15:31Z 2026-06-18 | Google support called and claim this will only happen for admins trying to access https://admin.google.com and that it isn’t blocking, it’s just a recommendation. They said they will not be documenting this publicly | | ——————————— | :———————————————————————————————————————————————————————————————————————- |",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 115,
+      "selected_blocks": 2,
+      "selected_source_words": 115,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Hacker News Best",
+        "Hacker News Best"
+      ],
+      "selected_sources": [
+        "Hacker News Best",
+        "Hacker News Best"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Google workspace threatening to block Firefox access",
+      "description": "Article URL: https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html Comments URL: https://news.ycombinator.com/item?id=48600345 Points: 379 # Comments: 124",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Google workspace threatening to block Firefox access",
+    "description": "Article URL: https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html Comments URL: https://news.ycombinator.com/item?id=48600345 Points: 379 # Comments: 124",
+    "link": "https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html",
+    "published": "2026-06-19T16:30:49+00:00",
+    "source": "Hacker News Best",
+    "source_domain": "hnrss.org",
+    "language": "en",
+    "fingerprint": "3d7f1e62abc0e08926504cba6c987f98",
+    "_url_hash": "bfa007495dfa5a6d59e0428a0a0a5cdb82343a0f41cf69c67fb5ce355f1e4400",
+    "source_tier": 3,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Hacker News Best]\nAt the time of writing (2026-06-18), Google Workspace appears to be starting to warn users from Firefox that they must use Chrome. This was for a Google Workspace Business Plus account and workspace, from an up to date browser and OS.\n\nAt this time, Firefox access still seems to work but I’ve no idea for how long.\n\n| 📝 Update as of 15:31Z 2026-06-18 | Google support called and claim this will only happen for admins trying to access https://admin.google.com and that it isn’t blocking, it’s just a recommendation. They said they will not be documenting this publicly | | ——————————— | :———————————————————————————————————————————————————————————————————————- |",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-19T23:43:41.104148+00:00",
+  "payload": {
+    "packet_id": "20260619T234118Z_cc45c3378e",
+    "title": "Google Workspacein Firefox-varoitus herätti huolta selaintuesta",
+    "summary": "Google Workspace -käyttäjä kertoo nähneensä Firefoxissa varoituksen, jonka mukaan palvelun käyttö edellyttäisi Chrome-selainta. Myöhemmän tukiyhteydenoton mukaan kyse olisi vain järjestelmänvalvojille näkyvästä suosituksesta admin.google.com-sivulla, ei varsinaisesta estosta.",
+    "content": "Google Workspace -palvelun Firefox-käyttö on noussut keskusteluun, kun Workspace Business Plus -tilin käyttäjä kertoi 18. kesäkuuta 2026 nähneensä varoituksen, jonka mukaan palvelun käyttö edellyttäisi Chrome-selainta. Kuvauksen mukaan Firefox-yhteys toimi edelleen, mutta viesti herätti epävarmuutta siitä, olisiko Google rajoittamassa pääsyä Workspace-palveluihin muilla selaimilla.\n\n## Varoitus koski ainakin yhtä Workspace-ympäristöä\n\nTapauksesta julkaistun kuvauksen mukaan varoitus näkyi ajan tasalla olevalla Firefox-selaimella ja käyttöjärjestelmällä Google Workspace Business Plus -tilissä. Kirjoittaja arvioi tuolloin, että Google Workspace näyttäisi alkaneen varoittaa Firefox-käyttäjiä Chrome-vaatimuksesta.\n\nTärkeä yksityiskohta on, että kertomuksen mukaan palvelu ei ollut tuossa vaiheessa lakannut toimimasta Firefoxilla. Kyse oli siis käyttäjälle näytetystä ilmoituksesta, ei vahvistetusta teknisestä estosta. Tämä erottaa tapauksen tilanteesta, jossa selain olisi jo kokonaan suljettu palvelun ulkopuolelle.\n\n## Googlen tuen mukaan kyse olisi suosituksesta\n\nJulkaisua päivitettiin myöhemmin samana päivänä. Päivityksen mukaan Googlen tuki oli ollut yhteydessä ja kertonut, että ilmoitus koskisi vain järjestelmänvalvojia, jotka yrittävät käyttää admin.google.com-osoitetta. Tuen kerrotaan myös sanoneen, ettei kyse ole estosta vaan suosituksesta.\n\nSaman kuvauksen mukaan Google ei olisi aikeissa dokumentoida asiaa julkisesti. Tämä jättää tilanteeseen epäselvyyttä: yksittäisen käyttäjän havainto ja tuen suullinen selitys eivät vielä kerro, kuinka laajasti ilmoitusta näytetään tai miten pysyvä käytäntö on.\n\n## Selainvalinta on Workspace-käyttäjille käytännön kysymys\n\nWorkspace on monissa organisaatioissa päivittäinen työväline, ja järjestelmänvalvojien selainvalinnalla voi olla merkitystä sekä tietoturvakäytäntöjen että laitehallinnan kannalta. Jos hallintapaneeli suosittelee Chromea näkyvästi, se voi ohjata organisaatioita Googlen omaan selaimeen, vaikka teknistä pakkoa ei olisi.\n\nSaatavilla olevien tietojen perusteella Firefoxin käyttöä Google Workspacessa ei ole vahvistetusti estetty. Tapaus kertoo kuitenkin siitä, miten yksittäinenkin selainvaroitus voi herättää nopeasti huolta avoimen selainkilpailun ja yrityspalveluiden yhteensopivuuden kannalta.",
+    "category": "Teknologia",
+    "tags": [
+      "Google Workspace",
+      "Firefox",
+      "Chrome",
+      "selaimet",
+      "yritysohjelmistot"
+    ],
+    "summary_bullets": [
+      "Workspace Business Plus -käyttäjä kertoi nähneensä Firefoxissa Chromea edellyttävän varoituksen.",
+      "Kuvauksen mukaan Firefox-yhteys toimi edelleen, joten varsinaista estoa ei ole vahvistettu.",
+      "Googlen tuen kerrotaan sanoneen, että ilmoitus koskee admin.google.com-sivua ja on suositus järjestelmänvalvojille."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.74,
+    "journalist_note": "Artikkeli perustuu yhteen käyttäjäkuvaukseen ja sen päivitykseen Googlen tuen yhteydenotosta. Julkisesta Google-dokumentaatiosta tai laajemmasta käyttöönotosta ei ole packetissa vahvistusta, joten väitteet on rajattu havaintoon ja tuen kerrottuun selitykseen."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260619T234118Z_cc45c3378e\",\"title\":\"Google Workspacein Firefox-varoitus herätti huolta selaintuesta\",\"summary\":\"Google Workspace -käyttäjä kertoo nähneensä Firefoxissa varoituksen, jonka mukaan palvelun käyttö edellyttäisi Chrome-selainta. Myöhemmän tukiyhteydenoton mukaan kyse olisi vain järjestelmänvalvojille näkyvästä suosituksesta admin.google.com-sivulla, ei varsinaisesta estosta.\",\"content\":\"Google Workspace -palvelun Firefox-käyttö on noussut keskusteluun, kun Workspace Business Plus -tilin käyttäjä kertoi 18. kesäkuuta 2026 nähneensä varoituksen, jonka mukaan palvelun käyttö edellyttäisi Chrome-selainta. Kuvauksen mukaan Firefox-yhteys toimi edelleen, mutta viesti herätti epävarmuutta siitä, olisiko Google rajoittamassa pääsyä Workspace-palveluihin muilla selaimilla.\\n\\n## Varoitus koski ainakin yhtä Workspace-ympäristöä\\n\\nTapauksesta julkaistun kuvauksen mukaan varoitus näkyi ajan tasalla olevalla Firefox-selaimella ja käyttöjärjestelmällä Google Workspace Business Plus -tilissä. Kirjoittaja arvioi tuolloin, että Google Workspace näyttäisi alkaneen varoittaa Firefox-käyttäjiä Chrome-vaatimuksesta.\\n\\nTärkeä yksityiskohta on, että kertomuksen mukaan palvelu ei ollut tuossa vaiheessa lakannut toimimasta Firefoxilla. Kyse oli siis käyttäjälle näytetystä ilmoituksesta, ei vahvistetusta teknisestä estosta. Tämä erottaa tapauksen tilanteesta, jossa selain olisi jo kokonaan suljettu palvelun ulkopuolelle.\\n\\n## Googlen tuen mukaan kyse olisi suosituksesta\\n\\nJulkaisua päivitettiin myöhemmin samana päivänä. Päivityksen mukaan Googlen tuki oli ollut yhteydessä ja kertonut, että ilmoitus koskisi vain järjestelmänvalvojia, jotka yrittävät käyttää admin.google.com-osoitetta. Tuen kerrotaan myös sanoneen, ettei kyse ole estosta vaan suosituksesta.\\n\\nSaman kuvauksen mukaan Google ei olisi aikeissa dokumentoida asiaa julkisesti. Tämä jättää tilanteeseen epäselvyyttä: yksittäisen käyttäjän havainto ja tuen suullinen selitys eivät vielä kerro, kuinka laajasti ilmoitusta näytetään tai miten pysyvä käytäntö on.\\n\\n## Selainvalinta on Workspace-käyttäjille käytännön kysymys\\n\\nWorkspace on monissa organisaatioissa päivittäinen työväline, ja järjestelmänvalvojien selainvalinnalla voi olla merkitystä sekä tietoturvakäytäntöjen että laitehallinnan kannalta. Jos hallintapaneeli suosittelee Chromea näkyvästi, se voi ohjata organisaatioita Googlen omaan selaimeen, vaikka teknistä pakkoa ei olisi.\\n\\nSaatavilla olevien tietojen perusteella Firefoxin käyttöä Google Workspacessa ei ole vahvistetusti estetty. Tapaus kertoo kuitenkin siitä, miten yksittäinenkin selainvaroitus voi herättää nopeasti huolta avoimen selainkilpailun ja yrityspalveluiden yhteensopivuuden kannalta.\",\"category\":\"Teknologia\",\"tags\":[\"Google Workspace\",\"Firefox\",\"Chrome\",\"selaimet\",\"yritysohjelmistot\"],\"summary_bullets\":[\"Workspace Business Plus -käyttäjä kertoi nähneensä Firefoxissa Chromea edellyttävän varoituksen.\",\"Kuvauksen mukaan Firefox-yhteys toimi edelleen, joten varsinaista estoa ei ole vahvistettu.\",\"Googlen tuen kerrotaan sanoneen, että ilmoitus koskee admin.google.com-sivua ja on suositus järjestelmänvalvojille.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.74,\"journalist_note\":\"Artikkeli perustuu yhteen käyttäjäkuvaukseen ja sen päivitykseen Googlen tuen yhteydenotosta. Julkisesta Google-dokumentaatiosta tai laajemmasta käyttöönotosta ei ole packetissa vahvistusta, joten väitteet on rajattu havaintoon ja tuen kerrottuun selitykseen.\"}",
+  "article": {
+    "title": "Google Workspacein Firefox-varoitus herätti huolta selaintuesta",
+    "description": "Google Workspace -käyttäjä kertoo nähneensä Firefoxissa varoituksen, jonka mukaan palvelun käyttö edellyttäisi Chrome-selainta. Myöhemmän tukiyhteydenoton mukaan kyse olisi vain järjestelmänvalvojille näkyvästä suosituksesta admin.google.com-sivulla, ei varsinaisesta estosta.",
+    "link": "https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html",
+    "published": "2026-06-19T16:30:49+00:00",
+    "source": "Hacker News Best",
+    "source_domain": "hnrss.org",
+    "language": "en",
+    "fingerprint": "3d7f1e62abc0e08926504cba6c987f98",
+    "_url_hash": "bfa007495dfa5a6d59e0428a0a0a5cdb82343a0f41cf69c67fb5ce355f1e4400",
+    "source_tier": 3,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Hacker News Best]\nAt the time of writing (2026-06-18), Google Workspace appears to be starting to warn users from Firefox that they must use Chrome. This was for a Google Workspace Business Plus account and workspace, from an up to date browser and OS.\n\nAt this time, Firefox access still seems to work but I’ve no idea for how long.\n\n| 📝 Update as of 15:31Z 2026-06-18 | Google support called and claim this will only happen for admins trying to access https://admin.google.com and that it isn’t blocking, it’s just a recommendation. They said they will not be documenting this publicly | | ——————————— | :———————————————————————————————————————————————————————————————————————- |",
+    "research_source": "multi",
+    "summary": "Google Workspace -käyttäjä kertoo nähneensä Firefoxissa varoituksen, jonka mukaan palvelun käyttö edellyttäisi Chrome-selainta. Myöhemmän tukiyhteydenoton mukaan kyse olisi vain järjestelmänvalvojille näkyvästä suosituksesta admin.google.com-sivulla, ei varsinaisesta estosta.",
+    "content": "Google Workspace -palvelun Firefox-käyttö on noussut keskusteluun, kun Workspace Business Plus -tilin käyttäjä kertoi 18. kesäkuuta 2026 nähneensä varoituksen, jonka mukaan palvelun käyttö edellyttäisi Chrome-selainta. Kuvauksen mukaan Firefox-yhteys toimi edelleen, mutta viesti herätti epävarmuutta siitä, olisiko Google rajoittamassa pääsyä Workspace-palveluihin muilla selaimilla.\n\n## Varoitus koski ainakin yhtä Workspace-ympäristöä\n\nTapauksesta julkaistun kuvauksen mukaan varoitus näkyi ajan tasalla olevalla Firefox-selaimella ja käyttöjärjestelmällä Google Workspace Business Plus -tilissä. Kirjoittaja arvioi tuolloin, että Google Workspace näyttäisi alkaneen varoittaa Firefox-käyttäjiä Chrome-vaatimuksesta.\n\nTärkeä yksityiskohta on, että kertomuksen mukaan palvelu ei ollut tuossa vaiheessa lakannut toimimasta Firefoxilla. Kyse oli siis käyttäjälle näytetystä ilmoituksesta, ei vahvistetusta teknisestä estosta. Tämä erottaa tapauksen tilanteesta, jossa selain olisi jo kokonaan suljettu palvelun ulkopuolelle.\n\n## Googlen tuen mukaan kyse olisi suosituksesta\n\nJulkaisua päivitettiin myöhemmin samana päivänä. Päivityksen mukaan Googlen tuki oli ollut yhteydessä ja kertonut, että ilmoitus koskisi vain järjestelmänvalvojia, jotka yrittävät käyttää admin.google.com-osoitetta. Tuen kerrotaan myös sanoneen, ettei kyse ole estosta vaan suosituksesta.\n\nSaman kuvauksen mukaan Google ei olisi aikeissa dokumentoida asiaa julkisesti. Tämä jättää tilanteeseen epäselvyyttä: yksittäisen käyttäjän havainto ja tuen suullinen selitys eivät vielä kerro, kuinka laajasti ilmoitusta näytetään tai miten pysyvä käytäntö on.\n\n## Selainvalinta on Workspace-käyttäjille käytännön kysymys\n\nWorkspace on monissa organisaatioissa päivittäinen työväline, ja järjestelmänvalvojien selainvalinnalla voi olla merkitystä sekä tietoturvakäytäntöjen että laitehallinnan kannalta. Jos hallintapaneeli suosittelee Chromea näkyvästi, se voi ohjata organisaatioita Googlen omaan selaimeen, vaikka teknistä pakkoa ei olisi.\n\nSaatavilla olevien tietojen perusteella Firefoxin käyttöä Google Workspacessa ei ole vahvistetusti estetty. Tapaus kertoo kuitenkin siitä, miten yksittäinenkin selainvaroitus voi herättää nopeasti huolta avoimen selainkilpailun ja yrityspalveluiden yhteensopivuuden kannalta.",
+    "category": "Teknologia",
+    "tags": [
+      "google workspace",
+      "firefox",
+      "chrome",
+      "selaimet",
+      "yritysohjelmistot"
+    ],
+    "summary_bullets": [
+      "Workspace Business Plus -käyttäjä kertoi nähneensä Firefoxissa Chromea edellyttävän varoituksen.",
+      "Kuvauksen mukaan Firefox-yhteys toimi edelleen, joten varsinaista estoa ei ole vahvistettu.",
+      "Googlen tuen kerrotaan sanoneen, että ilmoitus koskee admin.google.com-sivua ja on suositus järjestelmänvalvojille."
+    ],
+    "key_points": [
+      "Workspace Business Plus -käyttäjä kertoi nähneensä Firefoxissa Chromea edellyttävän varoituksen.",
+      "Kuvauksen mukaan Firefox-yhteys toimi edelleen, joten varsinaista estoa ei ole vahvistettu.",
+      "Googlen tuen kerrotaan sanoneen, että ilmoitus koskee admin.google.com-sivua ja on suositus järjestelmänvalvojille."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu yhteen käyttäjäkuvaukseen ja sen päivitykseen Googlen tuen yhteydenotosta. Julkisesta Google-dokumentaatiosta tai laajemmasta käyttöönotosta ei ole packetissa vahvistusta, joten väitteet on rajattu havaintoon ja tuen kerrottuun selitykseen.",
+    "source_text": "Article URL: https://tales.fromprod.com/2026/169/google-workspace-threatening-to-block-firefox.html Comments URL: https://news.ycombinator.com/item?id=48600345 Points: 379 # Comments: 124\n\nAt the time of writing (2026-06-18), Google Workspace appears to be starting to warn users from Firefox that they must use Chrome. This was for a Google Workspace Business Plus account and workspace, from an up to date browser and OS. At this time, Firefox access still seems to work but I’ve no idea for how long. | 📝 Update as of 15:31Z 2026-06-18 | Google support called and claim this will only happen for admins trying to access https://admin.google.com and that it isn’t blocking, it’s just a recommendation. They said they will not be documenting this publicly | | ——————————— | :———————————————————————————————————————————————————————————————————————- |",
+    "writer_backend": "monica",
+    "writer_confidence": 0.74,
+    "degraded_mode": false,
+    "monica_packet_id": "20260619T234118Z_cc45c3378e",
+    "image": "https://images.unsplash.com/photo-1655196601100-8bfb26cf99e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxGaXJlZm94JTIwYnJvd3NlciUyMHRlY2hub2xvZ3klMjB3b3Jrc3BhY2V8ZW58MXwwfHx8MTc4MTkxMjg4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1655196601100-8bfb26cf99e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxGaXJlZm94JTIwYnJvd3NlciUyMHRlY2hub2xvZ3klMjB3b3Jrc3BhY2V8ZW58MXwwfHx8MTc4MTkxMjg4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Google Workspacein Firefox-varoitus herätti huolta selaintuesta",
+    "image_credit": "Photo by Denny Müller on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/logo-JySoEnr-eOg?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-06-19T23:48:06.233409+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1655196601100-8bfb26cf99e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxGaXJlZm94JTIwYnJvd3NlciUyMHRlY2hub2xvZ3klMjB3b3Jrc3BhY2V8ZW58MXwwfHx8MTc4MTkxMjg4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1655196601100-8bfb26cf99e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxGaXJlZm94JTIwYnJvd3NlciUyMHRlY2hub2xvZ3klMjB3b3Jrc3BhY2V8ZW58MXwwfHx8MTc4MTkxMjg4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-19T23:49:21.756949+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-19-google-workspacein-firefox-varoitus-heratti-huolta-selaintue.md"
+  ]
+}
