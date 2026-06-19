@@ -1,249 +1,203 @@
 {{ define "main" }}
 {{ $posts := where .Site.RegularPages "Section" "posts" }}
 {{ $sorted := $posts.ByDate.Reverse }}
-{{ $latestScratch := newScratch }}
-{{ $latestScratch.Set "unix" 0 }}
-{{ $latestScratch.Set "time" now }}
-{{ $latestScratch.Set "category" "uutiset" }}
-{{ range $posts }}
-  {{ $publishedAt := .Date }}
-  {{ if isset .Params "published_at" }}{{ $publishedAt = time.AsTime .Params.published_at }}{{ end }}
-  {{ if gt $publishedAt.Unix ($latestScratch.Get "unix") }}
-    {{ $latestScratch.Set "unix" $publishedAt.Unix }}
-    {{ $latestScratch.Set "time" $publishedAt }}
-    {{ $latestScratch.Set "category" (index .Params.categories 0 | default "uutiset") }}
-  {{ end }}
-{{ end }}
-{{ $latestPublishedAt := $latestScratch.Get "time" }}
-{{ $latestCategory := $latestScratch.Get "category" }}
-{{ $seen := slice }}
-{{ $nowUnix := now.Unix }}
-{{ $dayAgoUnix := math.Sub $nowUnix 86400 }}
-{{ $leadScratch := newScratch }}
-{{ $candidatePool := first 24 $sorted }}
-{{ $breakingPool := where $candidatePool ".Params.breaking" true }}
-
-{{/* Build lightweight frequency maps from the freshest story window. */}}
-{{ range $candidatePool }}
-  {{ $cat := lower (index .Params.categories 0 | default "kotimaa") }}
-  {{ $source := lower (.Params.source_domain | default .Params.source | default .Params.source_url | default .Site.BaseURL) }}
-  {{ $leadScratch.Add (printf "cat:%s" $cat) 1 }}
-  {{ $leadScratch.Add (printf "source:%s" $source) 1 }}
-{{ end }}
-
-{{/* Score hero candidates. Weights: recency 0.4, source diversity 0.2, category balance 0.2, image quality 0.2. */}}
-{{ $leadCandidates := slice }}
-{{ range $candidatePool }}
-  {{ $cat := lower (index .Params.categories 0 | default "kotimaa") }}
-  {{ $source := lower (.Params.source_domain | default .Params.source | default .Params.source_url | default .Site.BaseURL) }}
-  {{ $hoursAgo := math.Div (math.Sub $nowUnix .Date.Unix) 3600.0 }}
-  {{ $recencyScore := math.Max 0.0 (math.Sub 1.0 (math.Div $hoursAgo 48.0)) }}
-
-  {{ $sourceCount := $leadScratch.Get (printf "source:%s" $source) | default 1 }}
-  {{ $sourcePenalty := math.Mul (math.Sub $sourceCount 1) 0.2 }}
-  {{ $sourceDiversityScore := math.Max 0.2 (math.Sub 1.0 $sourcePenalty) }}
-
-  {{ $categoryCount := $leadScratch.Get (printf "cat:%s" $cat) | default 1 }}
-  {{ $categoryPenalty := math.Mul (math.Sub $categoryCount 1) 0.15 }}
-  {{ $categoryBalanceScore := math.Max 0.2 (math.Sub 1.0 $categoryPenalty) }}
-
-  {{ $imageScore := 0.15 }}
-  {{ if .Params.image }}
-    {{ $imageScore = 0.65 }}
-    {{ if .Params.image_thumb }}
-      {{ $imageScore = 0.85 }}
-    {{ end }}
-    {{ if and .Params.image_alt (or .Params.image_credit .Params.image_source_url) }}
-      {{ $imageScore = 1 }}
-    {{ end }}
-  {{ end }}
-
-  {{ $score := math.Add (math.Add (math.Mul $recencyScore 0.4) (math.Mul $sourceDiversityScore 0.2)) (math.Add (math.Mul $categoryBalanceScore 0.2) (math.Mul $imageScore 0.2)) }}
-  {{ $leadCandidates = $leadCandidates | append (dict "page" . "score" $score) }}
-{{ end }}
-
-{{ $leadRanked := sort $leadCandidates "score" "desc" }}
-{{ $lead := false }}
-{{ if gt (len $breakingPool) 0 }}
-  {{ $lead = index $breakingPool 0 }}
-{{ else if gt (len $leadRanked) 0 }}
-  {{ $lead = (index $leadRanked 0).page }}
-{{ end }}
-{{ $leadCategory := "kotimaa" }}
-{{ with $lead }}
-  {{ $leadCategory = lower (index .Params.categories 0 | default "kotimaa") }}
-{{ end }}
-
-{{/* Visually hidden H1 for SEO */}}
-{{/* H1 removed — brand is in the logo/header, no need for a separate tagline */}}
-
-<span id="uutiset" class="scroll-anchor" aria-hidden="true"></span>
-
-<div class="site-trust-cue" aria-label="Sivuston ajantasaisuus">
-  {{ partial "homepage-live-indicator.html" $latestPublishedAt }}
-  <span class="site-trust-cue__item">Uusin aihe: {{ $latestCategory }}</span>
-  <span class="site-trust-cue__item">Kategoriat päivittyvät julkaisuajan mukaan</span>
-</div>
-
-{{ $followups := slice }}
-{{ $followCats := slice $leadCategory }}
-{{ range $leadRanked }}
-  {{ $p := .page }}
-  {{ $pCat := lower (index $p.Params.categories 0 | default "kotimaa") }}
-  {{ if and $lead (ne $p.Permalink $lead.Permalink) (not (in $followCats $pCat)) (lt (len $followups) 2) }}
-    {{ $followups = $followups | append $p }}
-    {{ $followCats = $followCats | append $pCat }}
-  {{ end }}
-{{ end }}
-{{ $followSeen := slice }}
-{{ range $followups }}
-  {{ $followSeen = $followSeen | append .Permalink }}
-{{ end }}
-{{ if lt (len $followups) 2 }}
-  {{ range $leadRanked }}
-    {{ $p := .page }}
-    {{ if and $lead (ne $p.Permalink $lead.Permalink) (not (in $followSeen $p.Permalink)) (lt (len $followups) 2) }}
-      {{ $followups = $followups | append $p }}
-      {{ $followSeen = $followSeen | append $p.Permalink }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-
-{{ partial "hero-cluster.html" (dict "lead" $lead "followups" $followups) }}
-{{ with $lead }}
-  {{ $seen = $seen | append .Permalink }}
-{{ end }}
-{{ range $followups }}
-  {{ $seen = $seen | append .Permalink }}
-{{ end }}
-
-{{ $briefPool := where $sorted "Permalink" "not in" $seen }}
-{{ $briefingItems := first 5 $briefPool }}
-{{ partial "quick-briefing.html" (dict "items" $briefingItems) }}
-{{ range $briefingItems }}
-  {{ $seen = $seen | append .Permalink }}
-{{ end }}
-
-{{ $trending := slice }}
-{{ $trendingCats := slice }}
+{{ $visualPosts := slice }}
 {{ range $sorted }}
-  {{ $cat := lower (index .Params.categories 0 | default "uutiset") }}
-  {{ if and (not (in $seen .Permalink)) (lt (len $trending) 4) (not (in $trendingCats $cat)) }}
-    {{ $trending = $trending | append . }}
-    {{ $trendingCats = $trendingCats | append $cat }}
-  {{ end }}
+  {{ if .Params.image }}{{ $visualPosts = $visualPosts | append . }}{{ end }}
 {{ end }}
-{{ if $trending }}
-  {{ range $trending }}
-    {{ $seen = $seen | append .Permalink }}
-  {{ end }}
-{{ end }}
-{{ partial "trending.html" (dict "items" $trending) }}
+{{ $lead := index $sorted 0 }}
+{{ if gt (len $visualPosts) 0 }}{{ $lead = index $visualPosts 0 }}{{ end }}
+{{ $seen := slice }}
 
-{{ $lyhyetItems := first 5 (where $sorted "Permalink" "not in" $seen) }}
-{{ partial "lyhyet.html" (dict "Site" .Site "exclude" $seen "limit" 5) }}
-{{ range $lyhyetItems }}
-  {{ $seen = $seen | append .Permalink }}
-{{ end }}
+<div class="portal-front">
+  <h1 class="visually-hidden">Uutistenlukija</h1>
 
-{{ $talousLatest := where $sorted ".Params.categories" "intersect" (slice "Talous") }}
-{{ $talousRail := first 4 (where $talousLatest "Permalink" "not in" $seen) }}
-{{ if lt (len $talousRail) 4 }}
-  {{ $talousRail = first 4 $talousLatest }}
-{{ end }}
-{{ if $talousRail }}
-<section class="category-section category-section--talous-rail" id="talous-rail" aria-labelledby="talous-rail-title">
-  <div class="category-section-header talous-rail__header">
-    <div>
-      <p class="talous-rail__eyebrow">Talous</p>
-      <h2 id="talous-rail-title"><a href="/categories/talous/">Talous juuri nyt</a></h2>
-    </div>
-    <a href="/categories/talous/" class="see-all">Kaikki talous →</a>
-  </div>
-  <div class="category-articles talous-rail__items">
-    {{ range $talousRail }}
-    {{ $seen = $seen | append .Permalink }}
-    {{ $cardCat := index .Params.categories 0 | default "Talous" }}
-    {{ $cardImg := .Params.image | default "/images/categories/talous.jpg" }}
-    {{ $cardThumb := .Params.image_thumb | default $cardImg }}
-    <article class="category-article-card talous-rail__card">
-      {{ partial "card-image.html" (dict "img" $cardImg "thumb" $cardThumb "context" . "eager" false "hero" false "permalink" .Permalink "fallback" "/images/categories/talous.jpg") }}
-      {{ partial "category-badge.html" (dict "category" $cardCat "link" true) }}
-      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-      <p class="excerpt">{{ .Summary | truncate 120 }}</p>
-      <div class="meta">
-        <span>{{ partial "relative-date.html" . }}</span>
-        <span>{{ partial "reading-time.html" . }}</span>
+  {{ if gt (len $sorted) 1 }}
+  {{ $live := index $sorted 1 }}
+  <a class="portal-livebar" href="{{ $live.RelPermalink }}">
+    <span class="portal-livebar__badge">Live</span>
+    <time>{{ $live.Date.Format "15:04" }}</time>
+    <strong>{{ $live.Title }}</strong>
+    <span class="portal-livebar__all">Katso kaikki päivitykset</span>
+  </a>
+  {{ end }}
+
+  {{ if $lead }}
+  {{ $leadCat := index $lead.Params.categories 0 | default "Uutiset" }}
+  {{ $leadImg := $lead.Params.image | default (printf "/images/categories/%s.jpg" ($leadCat | lower)) }}
+  {{ $leadThumb := $lead.Params.image_thumb | default $leadImg }}
+  {{ $seen = $seen | append $lead.Permalink }}
+  <section class="portal-front-grid" aria-labelledby="front-lead-title">
+    <article class="portal-lead">
+      <div class="portal-lead__image">
+        {{ partial "card-image.html" (dict "img" $leadImg "thumb" $leadThumb "context" $lead "eager" true "hero" true "permalink" $lead.Permalink "fallback" (printf "/images/categories/%s.jpg" ($leadCat | lower))) }}
+      </div>
+      <div class="portal-lead__body">
+        <span class="portal-kicker">{{ $leadCat }}</span>
+        <span class="portal-lead__time">{{ partial "relative-date.html" $lead }}</span>
+        <h2 id="front-lead-title"><a href="{{ $lead.RelPermalink }}">{{ $lead.Title }}</a></h2>
+        {{ with $lead.Params.description }}<p>{{ . | truncate 185 }}</p>{{ else }}<p>{{ $lead.Summary | truncate 185 }}</p>{{ end }}
+        <div class="portal-meta-row">
+          <a class="portal-save-link" href="{{ $lead.RelPermalink }}" aria-label="Lue ja tallenna myöhemmin: {{ $lead.Title }}">Lue juttu</a>
+          <span>{{ partial "reading-time.html" $lead }}</span>
+        </div>
       </div>
     </article>
-    {{ end }}
-  </div>
-</section>
-{{ end }}
 
-{{/* Category sections ordered by freshest story in the last 24h. */}}
-{{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
-{{ $categoryRank := slice }}
-{{ range $cat := $categories }}
-  {{ $freshPool := slice }}
-  {{ range where $sorted ".Params.categories" "intersect" (slice $cat) }}
-    {{ if ge .Date.Unix $dayAgoUnix }}
-      {{ $freshPool = $freshPool | append . }}
-    {{ end }}
-  {{ end }}
-  {{ if gt (len $freshPool) 0 }}
-    {{ $categoryRank = $categoryRank | append (dict "name" $cat "latestUnix" ((index $freshPool 0).Date.Unix) "freshPool" $freshPool) }}
-  {{ end }}
-{{ end }}
-
-{{ $spotlights := first 3 (sort $categoryRank "latestUnix" "desc") }}
-{{ if $spotlights }}
-<section class="category-spotlights" aria-labelledby="category-spotlights-title">
-  <div class="category-spotlights__heading">
-    <h2 id="category-spotlights-title" class="category-spotlights__title">Kategoriat nyt</h2>
-  </div>
-  {{ range $spotlights }}
-    {{ $cat := .name }}
-    {{ $pool := .freshPool }}
-    {{ $catPosts := $pool }}
-    {{ if $catPosts }}
-    <section class="category-section category-section--spotlight" id="cat-{{ $cat | lower | urlize }}">
-      <div class="category-section-header">
-        <h2><a href="/categories/{{ $cat | urlize }}/">{{ $cat }}</a></h2>
-        {{ if gt (len $pool) 3 }}
-        <a href="/categories/{{ $cat | urlize }}/" class="see-all">Kaikki {{ $cat | lower }} →</a>
-        {{ end }}
+    <div class="portal-center-list" aria-labelledby="front-top-stories-title">
+      <div class="portal-mobile-section-head">
+        <span>Etusivu</span>
+        <h2 id="front-top-stories-title">Päivän pääuutiset</h2>
       </div>
-      <div class="category-articles">
-        {{ range first 3 $catPosts }}
+      {{ $teaserPool := where $visualPosts "Permalink" "not in" $seen }}
+      {{ if lt (len $teaserPool) 4 }}{{ $teaserPool = where $sorted "Permalink" "not in" $seen }}{{ end }}
+      {{ range first 4 $teaserPool }}
+      {{ $cat := index .Params.categories 0 | default "Uutiset" }}
+      {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
+      {{ $seen = $seen | append .Permalink }}
+      <article class="portal-teaser">
+        <a class="portal-teaser__thumb" href="{{ .RelPermalink }}">
+          <img src="{{ $img }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="180" height="120" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.src='{{ printf "/images/categories/%s.jpg" ($cat | lower) }}'">
+        </a>
+        <div>
+          <div class="portal-teaser__meta"><span class="portal-kicker">{{ $cat }}</span><span>{{ partial "relative-date.html" . }}</span></div>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+
+    <aside class="portal-right-rail" aria-label="Sivupalkki">
+      <section class="portal-newsletter">
+        <div class="portal-newsletter__icon" aria-hidden="true">✉</div>
+        <h2>Pysy kartalla.</h2>
+        <p>Tilaa Uutistenlukija-uutiskirje ja saat tärkeimmät uutiset joka aamu.</p>
+        <form class="portal-newsletter__form js-newsletter-form" action="/api/subscribe" method="post" data-location="homepage-rail">
+          <input type="email" name="email" placeholder="Sähköpostiosoite" aria-label="Sähköpostiosoite" required>
+          <input type="hidden" name="source" value="homepage-rail">
+          <button type="submit">Tilaa uutiskirje</button>
+        </form>
+        <p class="portal-newsletter__status" data-newsletter-status aria-live="polite"></p>
+      </section>
+
+      <section class="portal-market" data-market-widget>
+        <div class="portal-module-head">
+          <h2>Markkinat</h2>
+          <a href="/categories/talous/">Katso kaikki</a>
+        </div>
+        <div class="portal-tabs" role="tablist" aria-label="Markkinanäkymä">
+          <button type="button" class="is-active" role="tab" aria-selected="true" data-market-tab="crypto">Kryptot</button>
+          <button type="button" role="tab" aria-selected="false" data-market-tab="currencies">Valuutat</button>
+        </div>
+        <dl data-market-list aria-live="polite">
+          <div><dt>Bitcoin</dt><dd data-symbol="BTC">Päivitetään…</dd></div>
+          <div><dt>Ethereum</dt><dd data-symbol="ETH">Päivitetään…</dd></div>
+          <div><dt>Solana</dt><dd data-symbol="SOL">Päivitetään…</dd></div>
+          <div><dt>XRP</dt><dd data-symbol="XRP">Päivitetään…</dd></div>
+        </dl>
+        <p class="portal-market__note" data-market-note>Viivästetty krypto- ja valuuttadata, päivittyy selaimessa.</p>
+      </section>
+
+      <section class="portal-most-read">
+        <h2>Luetuimmat</h2>
+        <ol>
+          {{ range first 3 (where $sorted "Permalink" "not in" $seen) }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ol>
+      </section>
+    </aside>
+
+    {{ $digestPool := where $sorted "Permalink" "not in" $seen }}
+    {{ if gt (len $digestPool) 0 }}
+    <section class="portal-day-digest" aria-labelledby="front-digest-title">
+      <div class="portal-day-digest__intro">
+        <span class="portal-section-label">Päivän kooste</span>
+        <h2 id="front-digest-title">Mitä tänään kannattaa seurata</h2>
+        <p>Tiivis tilannekuva uusimmista aiheista ennen uutisvirtaa.</p>
+        <a href="/paivan-kooste/">Avaa päivän kooste</a>
+      </div>
+      <ol class="portal-day-digest__list">
+        {{ range first 4 $digestPool }}
+        {{ $cat := index .Params.categories 0 | default "Uutiset" }}
         {{ $seen = $seen | append .Permalink }}
-        {{ $cardCat := index .Params.categories 0 | default "kotimaa" }}
-        {{ $cardImg := .Params.image | default (printf "/images/categories/%s.jpg" ($cardCat | lower)) }}
-        {{ $cardThumb := .Params.image_thumb | default $cardImg }}
-        {{ $cardAlt := .Params.image_alt | default .Title }}
-        <article class="category-article-card">
-          {{ partial "card-image.html" (dict "img" $cardImg "thumb" $cardThumb "context" . "eager" false "hero" false "permalink" .Permalink "fallback" (printf "/images/categories/%s.jpg" ($cardCat | lower))) }}
-          {{ partial "category-badge.html" (dict "category" $cardCat "link" true) }}
-          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-          <p class="excerpt">{{ .Summary | truncate 135 }}</p>
-          <div class="meta">
-            <span>{{ partial "relative-date.html" . }}</span>
-            <span>{{ partial "reading-time.html" . }}</span>
-          </div>
-        </article>
+        <li>
+          <span>{{ $cat }}</span>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
         {{ end }}
-      </div>
+      </ol>
     </section>
     {{ end }}
+  </section>
   {{ end }}
-</section>
-{{ end }}
 
-{{ partial "advertiser-cta.html" (dict "placement" "homepage" "page" .) }}
+  {{ $topicCats := slice "Kotimaa" "Ulkomaat" "Talous" "Tiede" }}
+  <section class="portal-topic-strip" aria-labelledby="front-topics-title">
+    <div class="portal-module-head">
+      <h2 id="front-topics-title">Aiheet</h2>
+      <a href="/categories/">Kaikki kategoriat</a>
+    </div>
+    <div class="portal-topic-strip__grid">
+      {{ range $cat := $topicCats }}
+      {{ $catPosts := where $sorted ".Params.categories" "intersect" (slice $cat) }}
+      {{ with index $catPosts 0 }}
+      <article class="portal-topic-card">
+        <a href="/categories/{{ lower $cat | urlize }}/" class="portal-topic-card__label">{{ $cat }}</a>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <span class="portal-topic-card__time">{{ partial "relative-date.html" . }}</span>
+      </article>
+      {{ end }}
+      {{ end }}
+    </div>
+  </section>
 
-{{ partial "most-read.html" (dict "Site" .Site "exclude" $seen) }}
-{{/* Newsletter signup band kept below the primary news modules. */}}
-{{ partial "newsletter-band.html" (dict "variant" "homepage_digest") }}
-{{ partial "continue-reading.html" . }}
-{{ partial "tag-cloud.html" . }}
+  <section class="portal-editorials" aria-labelledby="editorials-title">
+    <div class="portal-module-head">
+      <h2 id="editorials-title">Nostot</h2>
+      <a href="/categories/kotimaa/">Näytä kaikki</a>
+    </div>
+    <div class="portal-editorials__grid">
+      {{ $opinionPool := where $visualPosts "Permalink" "not in" $seen }}
+      {{ if lt (len $opinionPool) 3 }}{{ $opinionPool = where $sorted "Permalink" "not in" $seen }}{{ end }}
+      {{ range first 3 $opinionPool }}
+      {{ $cat := index .Params.categories 0 | default "Uutiset" }}
+      {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
+      {{ $seen = $seen | append .Permalink }}
+      <article class="portal-opinion-card">
+        <img src="{{ $img }}" alt="" loading="lazy" decoding="async" width="96" height="96" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.src='{{ printf "/images/categories/%s.jpg" ($cat | lower) }}'">
+        <div>
+          <span class="portal-kicker">{{ $cat }}</span>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <span class="portal-opinion-card__time">{{ partial "relative-date.html" . }}</span>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="portal-river" aria-labelledby="river-title">
+    <div class="portal-module-head">
+      <h2 id="river-title">Tuoreimmat uutiset</h2>
+      <a href="/paivan-tarkeimmat-uutiset/">Kaikki uutiset</a>
+    </div>
+    <div class="portal-river__grid">
+      {{ range first 12 (where $sorted "Permalink" "not in" $seen) }}
+      {{ $cat := index .Params.categories 0 | default "Uutiset" }}
+      {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
+      <article class="portal-row-card">
+        <a class="portal-row-card__thumb" href="{{ .RelPermalink }}">
+          <img src="{{ $img }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="160" height="110" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.src='{{ printf "/images/categories/%s.jpg" ($cat | lower) }}'">
+        </a>
+        <div>
+          <span class="portal-kicker">{{ $cat }}</span>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p>{{ .Summary | truncate 120 }}</p>
+          <span class="portal-row-card__time">{{ partial "relative-date.html" . }}</span>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+</div>
 {{ end }}
