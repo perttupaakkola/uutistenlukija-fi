@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-19T16:11:30.065257+00:00",
+  "digest": "2bbe10ba40",
+  "packet": {
+    "packet_id": "20260619T161130Z_2bbe10ba40",
+    "created_at": "2026-06-19T16:11:30Z",
+    "headline_seed": "Kohu MM-kisoissa: Iran uhkaa virallisella valituksella",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9553873",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9553873"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kohu MM-kisoissa: Iran uhkaa virallisella valituksella"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 195,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kohu MM-kisoissa: Iran uhkaa virallisella valituksella",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kohu MM-kisoissa: Iran uhkaa virallisella valituksella",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9553873",
+    "published": "2026-06-19T18:59:58+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "163ec897080d9bcbc7f45cf75ac042b3",
+    "_url_hash": "ca410f9784ed5c11f7cd05214d75333f5eb4221bf2e3bb4d8e8cae44544b4dd5",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nPika-aituri Lotta Harala joutuu jättämään lauantaina järjestettävät yleisurheilun Kuortaneen GP-kisat väliin takareisivamman takia. Entinen SE-nainen kertoo Instagramissa loukanneensa takareittään Lahden GP-kisoissa.\n\n– Sitä ei ehditty saada juoksukuntoiseksi vielä huomiseen kisaan. Joudun siis jättämään kisan väliin ja se harmittaa sikana, Harala kirjoittaa.\n\n– Kuortaneella on nopea rata, huippuolosuhteet ja mahtava yleisö. Juostaan tunnetusti aina kovia aikoja. Halu itsellä kisata on iso. Hyödynnetään nyt muutama viikko fiksusti ja palaan kisaradoille heti, kun jalka sen mahdollistaa.\n\nHarala aloitti kautensa Paavo Nurmen kisoissa 3. kesäkuuta tuloksella 12,97 ja pinkoi Lahden GP-kisassa viikkoa myöhemmin 12,78. Saara Keskitalo alitti Lahdessa Haralan nimissä olleen Suomen ennätyksen 12,65 yhdellä sadasosalla.\n\nMyös 400 metrin aituri Antti Sainio ja 1500 metrin juoksija Santtu Heikkinen ovat osallistujalistan perusteella vetäytyneet tapahtumasta.\n\nSainio tyylitteli viime vuonna miesten 400 metrin aitojen Suomen ennätyksen 48,61, mutta 21-vuotiaan aituritähden alkukausi on ollut rikkonainen. Hän avasi kesän kilpailukautensa viime viikonloppuna Ruotsin Sollentunassa juoksemalla aidatun ratakierroksen aikaan 50,30.\n\nHeikkinen teki viime viikolla Lahden gp-kilpailussa hienon paluun kisakentille, sillä hän nousi miesten 1500 metrin kaikkien aikojen suomalaistilastossa neljänneksi tuloksellaan 3.36,51. Heikkinen kärsi kahden viime vuoden aikana useista rasitusvammoista, eikä hän kilpaillut viime kaudella lainkaan.\n\nPäivitys 19.6. kello 16.01: Lisätty tiedot Sainion ja Heikkisen vetäytymisistä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-19T16:13:22.597347+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260619T161130Z_2bbe10ba40\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-19T16:21:19.165487+00:00",
+  "digest": "5d5159b88a",
+  "packet": {
+    "packet_id": "20260619T162119Z_5d5159b88a",
+    "created_at": "2026-06-19T16:21:19Z",
+    "headline_seed": "Nainen kuoli veteen Lauttasaaressa",
+    "description_seed": "Uimaan lähtenyt nainen löytyi rantavedestä.",
+    "link": "https://www.is.fi/kotimaa/art-2000012091214.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012091214.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Nainen kuoli veteen Lauttasaaressa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 114,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "ksml.fi",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Nainen kuoli veteen Lauttasaaressa",
+      "description": "Uimaan lähtenyt nainen löytyi rantavedestä.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Nainen kuoli veteen Lauttasaaressa",
+    "description": "Uimaan lähtenyt nainen löytyi rantavedestä.",
+    "link": "https://www.is.fi/kotimaa/art-2000012091214.html",
+    "published": "2026-06-19T16:04:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "bc1aeba4ad08a0572f12f002f8080391",
+    "_url_hash": "d6c6e38824df9deb01ae7153db6d48ed93336f9cdaa99d5cd33642211da9d1c1",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: ksml.fi]\nNainen oli oikeuden mukaan miehen asunnossa tajuttomana ainakin puolitoista vuorokautta ennen kuin mies soitti hätäkeskukseen.\n\nOulun käräjäoikeus tuomitsi torstaina elinkautiseen vankeuteen miehen, joka ensin pahoinpiteli naisen tajuttomaksi ja sen jälkeen raiskasi tämän. Uhri kuoli saamiinsa vammoihin.\n\nOikeuden mukaan uhri oli miehen entinen seurustelukumppani. Parisuhteessa oli ollut väkivaltaa jo ennen eroa. Viime lokakuussa nainen meni oikeuden mukaan entisen seurustelukumppaninsa asunnolle, koska oli halunnut selvittää aiempaa pahoinpitelyä.\n\nAsunnossa mies aloitti naisen pahoinpitelyn ja muun muassa löi tätä nyrkeillä päähän. Tuomittu teki naiselle muunkinlaista väkivaltaa ja esimerkiksi kuristi tätä niin, että nainen lopulta menetti tajuntansa.\n\n– Kyseisen tilan aikana (tuomittu) on raiskannut tiedottoman (uhrin) olemalla tämän kanssa yhdynnässä, kirjoittaa oikeus tuomion perusteluissa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-19T16:23:22.262652+00:00",
+  "failure": "Paketti ei sisällä valittuja lähdekatkelmia eikä riittävästi varmistettuja yksityiskohtia julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260619T162119Z_5d5159b88a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä valittuja lähdekatkelmia eikä riittävästi varmistettuja yksityiskohtia julkaistavan artikkelin kirjoittamiseen.\"}"
+}
