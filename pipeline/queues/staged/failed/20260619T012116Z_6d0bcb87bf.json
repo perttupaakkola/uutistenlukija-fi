@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-19T01:21:16.283505+00:00",
+  "digest": "6d0bcb87bf",
+  "packet": {
+    "packet_id": "20260619T012116Z_6d0bcb87bf",
+    "created_at": "2026-06-19T01:21:16Z",
+    "headline_seed": "Kremliltä iso ratkaisu",
+    "description_seed": "Venäjän johto aikoo kasvattaa sotamenoja varoituksista huolimatta, kertovat lähteet. Venäjän hallitus aikoo kasvattaa sotamenoja rajusti, vaikka valtion budjettivaje on kasvanut suuresti. Näin sanovat asiaa tuntevat lähteet uutistoimisto Bloombergille. Asiasta kertoo myös The Moscow Times.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/99ea48bb-2543-44d1-9969-d1cafee8af17",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/99ea48bb-2543-44d1-9969-d1cafee8af17"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kremliltä iso ratkaisu"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Venäjän johto aikoo kasvattaa sotamenoja varoituksista huolimatta, kertovat lähteet. Venäjän hallitus aikoo kasvattaa sotamenoja rajusti, vaikka valtion budjettivaje on kasvanut suuresti. Näin sanovat asiaa tuntevat lähteet uutistoimisto Bloombergille. Asiasta kertoo myös The Moscow Times.",
+        "word_count": 34,
+        "keyword_overlap": 24,
+        "strong_overlap": 19
+      }
+    ],
+    "source_text": "Venäjän johto aikoo kasvattaa sotamenoja varoituksista huolimatta, kertovat lähteet. Venäjän hallitus aikoo kasvattaa sotamenoja rajusti, vaikka valtion budjettivaje on kasvanut suuresti. Näin sanovat asiaa tuntevat lähteet uutistoimisto Bloombergille. Asiasta kertoo myös The Moscow Times.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 68,
+      "selected_blocks": 1,
+      "selected_source_words": 34,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kremliltä iso ratkaisu",
+      "description": "Venäjän johto aikoo kasvattaa sotamenoja varoituksista huolimatta, kertovat lähteet. Venäjän hallitus aikoo kasvattaa sotamenoja rajusti, vaikka valtion budjettivaje on kasvanut suuresti. Näin sanovat asiaa tuntevat lähteet uutistoimisto Bloombergille. Asiasta kertoo myös The Moscow Times.",
+      "category_hint": "Ulkomaat",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Kremliltä iso ratkaisu",
+    "description": "Venäjän johto aikoo kasvattaa sotamenoja varoituksista huolimatta, kertovat lähteet. Venäjän hallitus aikoo kasvattaa sotamenoja rajusti, vaikka valtion budjettivaje on kasvanut suuresti. Näin sanovat asiaa tuntevat lähteet uutistoimisto Bloombergille. Asiasta kertoo myös The Moscow Times.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/99ea48bb-2543-44d1-9969-d1cafee8af17",
+    "published": "2026-06-19T04:10:09+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "3f17bac25fe872f6608ee3247e4f4787",
+    "_url_hash": "a35530a465a14a4400e6820a3f50a04d7023a38e013b8ead7fda156ecd66801c",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Venäjän johto aikoo kasvattaa sotamenoja varoituksista huolimatta, kertovat lähteet. Venäjän hallitus aikoo kasvattaa sotamenoja rajusti, vaikka valtion budjettivaje on kasvanut suuresti. Näin sanovat asiaa tuntevat lähteet uutistoimisto Bloombergille. Asiasta kertoo myös The Moscow Times.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-06-19T01:23:19.734297+00:00",
+  "failure": "Lähdeaineisto on liian niukka: packetissa on vain lyhyt, lähteisiin perustuva väite ilman tarkkoja lukuja, päivämääriä tai vahvistavia yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260619T012116Z_6d0bcb87bf\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka: packetissa on vain lyhyt, lähteisiin perustuva väite ilman tarkkoja lukuja, päivämääriä tai vahvistavia yksityiskohtia.\"}"
+}

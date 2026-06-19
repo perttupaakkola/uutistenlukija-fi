@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-19T01:11:15.327544+00:00",
+  "digest": "6016be250e",
+  "packet": {
+    "packet_id": "20260619T011115Z_6016be250e",
+    "created_at": "2026-06-19T01:11:15Z",
+    "headline_seed": "EU-huippukokous jatkuu, aiheena unionin tuleva budjetti",
+    "description_seed": "",
+    "link": "https://yle.fi/a/74-20232453?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://yle.fi/a/74-20232453?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "EU-huippukokous jatkuu, aiheena unionin tuleva budjetti"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 217,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Forssan Lehti",
+        "Forssan Lehti"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "EU-huippukokous jatkuu, aiheena unionin tuleva budjetti",
+      "description": "",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "EU-huippukokous jatkuu, aiheena unionin tuleva budjetti",
+    "description": "",
+    "link": "https://yle.fi/a/74-20232453?origin=rss",
+    "published": "2026-06-19T03:04:38+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "e42df6bb162711265d3efb15d393c843",
+    "_url_hash": "f885bed0d3dea34210c69464cc0e3041f2846406e98ee594ba35a661cea0423f",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Forssan Lehti]\nEU:n kaksipäiväinen huippukokous jatkuu tänään keskusteluilla unionin vuosien 2028–34 budjetista. EU-maiden johtajat neuvottelevat tulevasta monivuotisesta rahoituskehyksestä puheenjohtajamaa Kyproksen esityksen pohjalta.\n\nPääministeri Petteri Orpo (kok.) sanoi huippukokoukseen saapuessaan, että Kyproksen ehdottama rahoituksen kokonaistaso on Suomen mielestä liian korkea.\n\nOrpon mukaan budjettia laadittaessa on priorisoitava niin, että Euroopan puolustukseen ja kilpailukyvyn kehittämiseen löytyy kuitenkin riittävästi rahoitusta. Orpo sanoi nostavansa keskusteluissa esille myös Suomelle tärkeää pohjoisten harvaan asuttujen alueiden erityisrahoitusta sekä Suomen ainutlaatuista asemaa Venäjän rajanaapurina.\n\nEU:n tulevasta monivuotisesta budjetista on määrä sopia kuluvan vuoden loppuun mennessä.\n\nHuippukokouksen ensimmäisenä päivänä EU-maiden johtajat keskustelivat muun muassa Ukrainasta, Lähi-idästä sekä EU:n kilpailukyvystä ja globaaleista taloushaasteista. Viimemainitussa yhteydessä nousi esille erityisesti EU:n Kiinan kanssa käymän kaupan valtava alijäämä.\n\nEU-komission mukaan Kiinan-kaupan alijäämä on noussut jo kestämättömälle tasolle. Kiinan kanssa käydyn tavarakaupan alijäämä oli viime vuonna noin 360 miljardia euroa.\n\nAlijäämä ei näyttäisi olevan pienenemässä, sillä tämän vuoden ensimmäisellä neljänneksellä alijäämää kertyi EU:n tilastolaitoksen Eurostatin mukaan tavarakaupassa lähes 98 miljardia euroa.\n\nOrpo korosti huippukokoukseen saapuessaan, että paras keino alijäämään puuttumiseksi on EU:n oman kilpailukyvyn parantaminen.\n\n– Nämä kaikki Euroopan omaa kilpailukykyä koskevat uudistukset, joita on nyt paljon pöydällä, pitää viedä maaliin. Se on ainoa kestävä tapa suhteessa globaaleihin markkinoihin tai Kiinaan, että meidän oma kilpailukyky on kunnossa, Orpo sanoi saapuessaan huippukokoukseen.\n\n– Se tarkoittaa sisämarkkinoiden uudistusten loppuunvientiä, pääomamarkkinaunionin rakentamista ja byrokratian purkamista, Orpo jatkoi.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-19T01:13:21.544723+00:00",
+  "failure": "Paketti ei sisällä varsinaista lähdetekstiä tai varmistettuja yksityiskohtia, joiden varaan vähintään 250 sanan uutisen voisi kirjoittaa ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260619T011115Z_6016be250e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä varsinaista lähdetekstiä tai varmistettuja yksityiskohtia, joiden varaan vähintään 250 sanan uutisen voisi kirjoittaa ilman keksittyjä tietoja.\"}"
+}
