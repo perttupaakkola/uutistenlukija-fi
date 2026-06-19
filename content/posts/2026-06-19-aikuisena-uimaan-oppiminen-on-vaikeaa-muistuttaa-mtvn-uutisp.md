@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/kommentti-opettakaa-lapsenne-uimaan-nain-aikuisena-se-on-ihan-helvetin-vaikeaa/9355690"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
