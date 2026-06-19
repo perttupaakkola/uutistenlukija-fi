@@ -40,6 +40,18 @@
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+[data-theme="dark"] .category-hero {
+  background: var(--portal-card, var(--card-bg));
+  border-left-color: var(--accent);
+  color: var(--portal-ink, var(--text));
+}
+[data-theme="dark"] .category-hero .category-description,
+[data-theme="dark"] .category-stats {
+  color: var(--portal-muted, var(--text-secondary));
+}
+[data-theme="dark"] .category-stats a {
+  color: var(--portal-ink, var(--text));
+}
 @media (max-width: 768px) {
   .category-hero {
     padding: 1.1rem 1rem;
