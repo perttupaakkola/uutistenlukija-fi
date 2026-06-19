@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/19/trump-lipsautti-apple-ja-intel-tyoskentelevat-yhdessa-piirien-valmistamiseksi-yhdysvalloissa/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
