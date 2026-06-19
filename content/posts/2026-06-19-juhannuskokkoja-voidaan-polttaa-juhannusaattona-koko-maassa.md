@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/juhannuskokkoja-voi-polttaa-koko-maassa/9355698"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
