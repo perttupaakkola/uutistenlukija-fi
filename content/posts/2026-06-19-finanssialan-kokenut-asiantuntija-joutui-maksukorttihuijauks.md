@@ -43,7 +43,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/ammattitaitokaan-ei-valttamatta-suojaa-pitkaaikainen-finanssialan-asiantuntija-haksahti-maksukorttihuijaukseen/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
