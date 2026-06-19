@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-19T20:01:38.432600+00:00",
+  "digest": "ef5c90a09e",
+  "packet": {
+    "packet_id": "20260619T200138Z_ef5c90a09e",
+    "created_at": "2026-06-19T20:01:38Z",
+    "headline_seed": "Vain yhden kauden tarina – Susijengi-tähti jättää seuransa",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9554054",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9554054"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Vain yhden kauden tarina – Susijengi-tähti jättää seuransa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 132,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Helsingin Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Vain yhden kauden tarina – Susijengi-tähti jättää seuransa",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Vain yhden kauden tarina – Susijengi-tähti jättää seuransa",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9554054",
+    "published": "2026-06-19T22:11:26+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "a8dd0d87b170defeaeae9b572d40980a",
+    "_url_hash": "98cfbd6cae7243ce31978c5640ce977c6000f5a19607a50172db3865a86c3861",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Helsingin Uutiset]\nSuomen koripallomaajoukkueen kapteeni Sasu Salin ei jatka espanjalaisseura Movistar Estudiantesissa ensi kaudella. Madridilaisseura tiedotti asiasta perjantaina verkkosivuillaan ja kiitti suomalaispelaajaa tämän panoksesta kuluneella kaudella.\n\n35-vuotias Salin ehti pelata Estudiantesissa yhden kauden. Hän saapui seuraan kesällä 2025 ja teki samalla ensiesiintymisensä Espanjan toiseksi korkeimmalla sarjatasolla Primera FEB:issä. Kuluneella kaudella Salin pelasi 37 ottelua ja viimeisteli keskimäärin 9,3 pistettä ottelua kohden.\n\nSasu Salin no continuará en Movistar Estudiantes la próxima temporada.Gracias por tu compromiso, tu profesionalidad y por defender nuestros colores durante este curso.¡Te deseamos toda la suerte del mundo en tus próximos retos, @sasusalin10! 💙👇https://t.co/ySEcZoO3C9 pic.twitter.com/zVzbegakk6\n\nEspanjan toisella sarjatasolla pelaava seura oli viime kaudella sarjan kolmas ja voitti lisäksi Espanjan cupin.\n\nSeura kiitti tiedotteessaan Salinia hänen työstään, sitoutumisestaan ja esimerkillisestä ammattilaisuudestaan. Samalla Estudiantes toivotti suomalaiselle menestystä sekä uran jatkoon että elämään kenttien ulkopuolella.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-19T20:03:28.657758+00:00",
+  "failure": "Paketissa ei ole lähdetekstiä eikä varmistettuja perustietoja pelaajasta, seurasta tai lähdön ajankohdasta.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260619T200138Z_ef5c90a09e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lähdetekstiä eikä varmistettuja perustietoja pelaajasta, seurasta tai lähdön ajankohdasta.\"}"
+}

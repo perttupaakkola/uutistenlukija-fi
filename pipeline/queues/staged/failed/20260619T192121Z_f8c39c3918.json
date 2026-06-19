@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-19T19:21:21.569639+00:00",
+  "digest": "f8c39c3918",
+  "packet": {
+    "packet_id": "20260619T192121Z_f8c39c3918",
+    "created_at": "2026-06-19T19:21:21Z",
+    "headline_seed": "Trumpin hallinto lakkauttaa HIV-ohjelmia ja perusti valkoiselle vähemmistölle pakolais­ohjelman Yhdysvaltoihin",
+    "description_seed": "Trumpin hallinnon mukaan Etelä-Afrikka on ”keskiluokkainen maa, joka on enemmän kuin kyvykäs tukemaan omia terveysohjelmiaan”.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012091299.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012091299.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trumpin hallinto lakkauttaa HIV-ohjelmia ja perusti valkoiselle vähemmistölle pakolais­ohjelman Yhdysvaltoihin"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 97,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "yrittajat.fi",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trumpin hallinto lakkauttaa HIV-ohjelmia ja perusti valkoiselle vähemmistölle pakolais­ohjelman Yhdysvaltoihin",
+      "description": "Trumpin hallinnon mukaan Etelä-Afrikka on ”keskiluokkainen maa, joka on enemmän kuin kyvykäs tukemaan omia terveysohjelmiaan”.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Trumpin hallinto lakkauttaa HIV-ohjelmia ja perusti valkoiselle vähemmistölle pakolais­ohjelman Yhdysvaltoihin",
+    "description": "Trumpin hallinnon mukaan Etelä-Afrikka on ”keskiluokkainen maa, joka on enemmän kuin kyvykäs tukemaan omia terveysohjelmiaan”.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012091299.html",
+    "published": "2026-06-19T19:18:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "c7bf793e61a5ae8351e4399a5356f4f6",
+    "_url_hash": "fd3a8da4c25842e6a4279af7cad3f7ec006a349949fa667222993d5f4cc8535f",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: yrittajat.fi]\nYRITTÄJÄ, tule mukaan omiesi pariin! Liity Yrittäjiin.\n\nVaikutamme ja verkostoimme ympäri Suomea! Etsi täältä oma paikallisyhdistyksesi ja aluejärjestösi.\n\nHei sinä satakuntalainen yksinyrittäjä, lämpimästi tervetuloa hengähtämään hetkeksi toisten yksinyrittäjien kanssa Pizzaillaan & Glögi-pikkujouluiltaan tiistaina 9.12. klo 18.00 alkaen (-klo 20.00), ravintola Metro Kebab, os. Lauttaranta 6, Ulvila. Ilta sisältää pizza-ja salaattibuffetin , yhden valinnaisen juoman ja alkoholittoman glögin. Vietetään yhdessä kiva ja rento yksinyrittäjien verkostoitumisilta.Energisen illan avaa yrittäjä Maarit Severin, Hyvä tulee. Yhteistyössä illan mahdollistaa Lääkärikeskus Minerva. Ilta on maksuton Satakunnan Yrittäjien yksinyrittäjille.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-19T19:23:18.694169+00:00",
+  "failure": "Paketti ei sisällä lähdetekstiä tai varmennettuja yksityiskohtia, joten vähintään 250 sanan julkaistavaa artikkelia ei voi kirjoittaa ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260619T192121Z_f8c39c3918\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä lähdetekstiä tai varmennettuja yksityiskohtia, joten vähintään 250 sanan julkaistavaa artikkelia ei voi kirjoittaa ilman keksittyjä tietoja.\"}"
+}

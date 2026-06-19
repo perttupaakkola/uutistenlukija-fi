@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-19T20:32:03.366709+00:00",
+  "digest": "5569195ce5",
+  "packet": {
+    "packet_id": "20260619T203203Z_5569195ce5",
+    "created_at": "2026-06-19T20:32:03Z",
+    "headline_seed": "Kaupunkijuhannus | ”Eletään tässä hetkessä”: Näin vietettiin juhannusta eri puolilla Helsinkiä",
+    "description_seed": "HS seurasi juhannuksen viettoa kaupungissa koko aattoillan.",
+    "link": "https://www.hs.fi/helsinki/art-2000012089448.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.hs.fi/helsinki/art-2000012089448.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kaupunkijuhannus | ”Eletään tässä hetkessä”: Näin vietettiin juhannusta eri puolilla Helsinkiä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 112,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Suomenmaa",
+        "HS Tuoreimmat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kaupunkijuhannus | ”Eletään tässä hetkessä”: Näin vietettiin juhannusta eri puolilla Helsinkiä",
+      "description": "HS seurasi juhannuksen viettoa kaupungissa koko aattoillan.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kaupunkijuhannus | ”Eletään tässä hetkessä”: Näin vietettiin juhannusta eri puolilla Helsinkiä",
+    "description": "HS seurasi juhannuksen viettoa kaupungissa koko aattoillan.",
+    "link": "https://www.hs.fi/helsinki/art-2000012089448.html",
+    "published": "2026-06-19T20:23:00+00:00",
+    "source": "HS Tuoreimmat",
+    "source_domain": "hs.fi",
+    "language": "fi",
+    "fingerprint": "f1d984c4939c3d1ba78bbad5555d3143",
+    "_url_hash": "d955adcf52613ee9ba566b8f2aa1a8d79d2eef344f608ddedef1349e9543a145",
+    "source_tier": 1,
+    "category_hint": "Uutiset",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Suomenmaa]\nSosiaali- ja terveysministeri Wille Rydman (ps) ei aio perääntyä järjestöjen rahoituksen kiristyksistä, kertoo Helsingin Sanomat.\n\nRydman tyrmää hallituskumppanien eli kokoomuksen ja RKP:n vaatimukset kriteereiden käsittelemisestä yhteisesti. Hän asettu poikkiteloin myös pääministeri Petteri Orpon (kok) kanssa\n\n– Kriteerit ovat ja pysyvät eikä niitä käsitellä missään hallituksen yhteisissä kokoonpanoissa, Rydman viestitti tiistaina aamupäivällä HS:lle.\n\nSosiaali- ja terveysalan järjestöjen kattojärjestö Sosten pääsihteeri Vertti Kiukas kertoo järjestön saaneen Orpolta kirjallisen viestin, jonka mukaan avustuskriteereitä käsitellään vielä yhteisesti hallituksessa. Hän kertoi asiasta ensimmäisenä Uudelle Suomelle.\n\nRydman ilmoitti maanantaina aikovansa kiristää merkittävästi sote-järjestöjen niin kutsuttujen Stea-avustusten ehtoja. Syynä on se, että hallitus on päättänyt leikata avustusten rahoituksesta ensi vuonna noin kolmanneksen.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-19T20:34:09.312887+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä tai varmistettuja yksityiskohtia, joista voisi kirjoittaa vähintään 250 sanan uutisen ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260619T203203Z_5569195ce5\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä tai varmistettuja yksityiskohtia, joista voisi kirjoittaa vähintään 250 sanan uutisen ilman keksittyjä tietoja.\"}"
+}
