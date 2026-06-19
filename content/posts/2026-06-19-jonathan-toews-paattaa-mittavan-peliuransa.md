@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Jonathan-Toewsin-ura-tulee-p%C3%A4%C3%A4t%C3%B6kseen/270841"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
