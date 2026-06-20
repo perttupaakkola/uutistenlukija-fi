@@ -1,0 +1,187 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-20T11:31:02.342586+00:00",
+  "digest": "2bd6c3997c",
+  "packet": {
+    "packet_id": "20260620T113102Z_2bd6c3997c",
+    "created_at": "2026-06-20T11:31:02Z",
+    "headline_seed": "Israel and Hezbollah continue strikes despite ceasefire agreement",
+    "description_seed": "Several people are reported killed in southern Lebanon, with the IDF saying it hit \"Hezbollah terrorist targets\" after the group fired over 50 projectiles at Israeli forces.",
+    "link": "https://www.bbc.com/news/articles/cx240k9l112o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cx240k9l112o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Israel and Hezbollah continue strikes despite ceasefire agreement"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Several people are reported killed in southern Lebanon, with the IDF saying it hit \"Hezbollah terrorist targets\" after the group fired over 50 projectiles at Israeli forces.",
+        "word_count": 27,
+        "keyword_overlap": 18,
+        "strong_overlap": 13
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Several people have reportedly been killed by Israeli airstrikes on southern Lebanon, less than 24 hours after a new ceasefire between Israel and Hezbollah was announced. The Lebanese state news agency said at least 11 people have been killed after Israeli warplanes, drones, and artillery targeted more than a dozen areas, many around the city of Nabatieh. The Israeli military said it struck \"Hezbollah terrorist targets\" after the group fired over 50 projectiles at Israeli forces in southern Lebanon. Washington has criticised Israel's ongoing operations in Lebanon, which was drawn into the US-Iran war when Hezbollah launched rockets into Israel in March, in retaliation for a strike that killed Iran's supreme leader.",
+        "word_count": 112,
+        "keyword_overlap": 17,
+        "strong_overlap": 13
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Washington also fears that continued tensions between Israel and Lebanon could undermine the US peace deal with Iran, which includes a commitment to end fighting on \"all fronts\" including Lebanon. Tehran has insisted that Lebanon must be part of any broader agreement to end the conflict. US envoy, Steve Witkoff, is reported to be heading to Switzerland for initial talks with Iran to help cement the agreement. On Saturday morning, footage and photos from southern Lebanon showed several large grey clouds of smoke billowing into the sky, purportedly after Israeli strikes. Senior Hezbollah official Hassan Fadlallah said his group had the right to respond to Israeli attacks.",
+        "word_count": 107,
+        "keyword_overlap": 12,
+        "strong_overlap": 9
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "\"What concerns us is that the enemy fully and comprehensively respects the ceasefire, and doesn't attempt to attack our country and villages or seek to occupy any new position,\" he said, as quoted in Lebanon's state-run National News Agency (NNA). Israeli Prime Minister Benjamin Netanyahu has been under domestic pressure to continue military action against Hezbollah, an Iran-backed Shia Muslim political and military group in Lebanon. Hezbollah has said that if Israel's invasion of southern Lebanon persists, it will continue its attacks. Earlier this week, the White House criticised the Israeli government's military operation in Lebanon, saying it risks scuppering the peace deal. But speaking near Washington as he unveiled a new Air Force One jet, President Donald Trump praised Netanyahu, calling him a \"warrior\".",
+        "word_count": 125,
+        "keyword_overlap": 9,
+        "strong_overlap": 8
+      }
+    ],
+    "source_text": "Several people are reported killed in southern Lebanon, with the IDF saying it hit \"Hezbollah terrorist targets\" after the group fired over 50 projectiles at Israeli forces.\n\nSeveral people have reportedly been killed by Israeli airstrikes on southern Lebanon, less than 24 hours after a new ceasefire between Israel and Hezbollah was announced. The Lebanese state news agency said at least 11 people have been killed after Israeli warplanes, drones, and artillery targeted more than a dozen areas, many around the city of Nabatieh. The Israeli military said it struck \"Hezbollah terrorist targets\" after the group fired over 50 projectiles at Israeli forces in southern Lebanon. Washington has criticised Israel's ongoing operations in Lebanon, which was drawn into the US-Iran war when Hezbollah launched rockets into Israel in March, in retaliation for a strike that killed Iran's supreme leader.\n\nWashington also fears that continued tensions between Israel and Lebanon could undermine the US peace deal with Iran, which includes a commitment to end fighting on \"all fronts\" including Lebanon. Tehran has insisted that Lebanon must be part of any broader agreement to end the conflict. US envoy, Steve Witkoff, is reported to be heading to Switzerland for initial talks with Iran to help cement the agreement. On Saturday morning, footage and photos from southern Lebanon showed several large grey clouds of smoke billowing into the sky, purportedly after Israeli strikes. Senior Hezbollah official Hassan Fadlallah said his group had the right to respond to Israeli attacks.\n\n\"What concerns us is that the enemy fully and comprehensively respects the ceasefire, and doesn't attempt to attack our country and villages or seek to occupy any new position,\" he said, as quoted in Lebanon's state-run National News Agency (NNA). Israeli Prime Minister Benjamin Netanyahu has been under domestic pressure to continue military action against Hezbollah, an Iran-backed Shia Muslim political and military group in Lebanon. Hezbollah has said that if Israel's invasion of southern Lebanon persists, it will continue its attacks. Earlier this week, the White House criticised the Israeli government's military operation in Lebanon, saying it risks scuppering the peace deal. But speaking near Washington as he unveiled a new Air Force One jet, President Donald Trump praised Netanyahu, calling him a \"warrior\".",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 413,
+      "selected_blocks": 4,
+      "selected_source_words": 371,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Israel and Hezbollah continue strikes despite ceasefire agreement",
+      "description": "Several people are reported killed in southern Lebanon, with the IDF saying it hit \"Hezbollah terrorist targets\" after the group fired over 50 projectiles at Israeli forces.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Israel and Hezbollah continue strikes despite ceasefire agreement",
+    "description": "Several people are reported killed in southern Lebanon, with the IDF saying it hit \"Hezbollah terrorist targets\" after the group fired over 50 projectiles at Israeli forces.",
+    "link": "https://www.bbc.com/news/articles/cx240k9l112o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-20T08:53:53+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "874bb462a2cf17ddbef93e285b97a430",
+    "_url_hash": "e45ae9cc18c573ddbb5e5ab928c2fee39f091f1a0133f77ea3de5351470412e4",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nSeveral people have reportedly been killed by Israeli airstrikes on southern Lebanon, less than 24 hours after a new ceasefire between Israel and Hezbollah was announced.\n\nThe Lebanese state news agency said at least 11 people have been killed after Israeli warplanes, drones, and artillery targeted more than a dozen areas, many around the city of Nabatieh.\n\nThe Israeli military said it struck \"Hezbollah terrorist targets\" after the group fired over 50 projectiles at Israeli forces in southern Lebanon.\n\nWashington has criticised Israel's ongoing operations in Lebanon, which was drawn into the US-Iran war when Hezbollah launched rockets into Israel in March, in retaliation for a strike that killed Iran's supreme leader.\n\nWashington also fears that continued tensions between Israel and Lebanon could undermine the US peace deal with Iran, which includes a commitment to end fighting on \"all fronts\" including Lebanon. Tehran has insisted that Lebanon must be part of any broader agreement to end the conflict.\n\nUS envoy, Steve Witkoff, is reported to be heading to Switzerland for initial talks with Iran to help cement the agreement.\n\nOn Saturday morning, footage and photos from southern Lebanon showed several large grey clouds of smoke billowing into the sky, purportedly after Israeli strikes.\n\nSenior Hezbollah official Hassan Fadlallah said his group had the right to respond to Israeli attacks.\n\n\"What concerns us is that the enemy fully and comprehensively respects the ceasefire, and doesn't attempt to attack our country and villages or seek to occupy any new position,\" he said, as quoted in Lebanon's state-run National News Agency (NNA).\n\nIsraeli Prime Minister Benjamin Netanyahu has been under domestic pressure to continue military action against Hezbollah, an Iran-backed Shia Muslim political and military group in Lebanon.\n\nHezbollah has said that if Israel's invasion of southern Lebanon persists, it will continue its attacks.\n\nEarlier this week, the White House criticised the Israeli government's military operation in Lebanon, saying it risks scuppering the peace deal. But speaking near Washington as he unveiled a new Air Force One jet, President Donald Trump praised Netanyahu, calling him a \"warrior\".\n\nWhen Hezbollah launched its rockets and drones into Israel in early March, drawing Lebanon into the Iran conflict, Israel responded by launching a bombing campaign across Lebanon. It is occupying around 5% of the country's territory in the south, with the aim ",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-20T11:35:03.928711+00:00",
+  "failure": "content too short: 246 words",
+  "payload": {
+    "packet_id": "20260620T113102Z_2bd6c3997c",
+    "title": "Israel ja Hizbollah jatkavat iskuja tulitauosta huolimatta",
+    "summary": "Etelä-Libanonissa on raportoitu kuolonuhreja Israelin iskujen jälkeen alle vuorokausi Israelin ja Hizbollahin uuden tulitauon julkistamisesta. Israelin armeijan mukaan se iski Hizbollahin kohteisiin sen jälkeen, kun järjestö oli ampunut yli 50 projektiilia Israelin joukkoja kohti.",
+    "content": "Etelä-Libanonissa on raportoitu ainakin 11 kuollutta Israelin iskuissa, vaikka Israelin ja Hizbollahin uusi tulitauko oli julkistettu alle vuorokautta aiemmin. Libanonin valtiollisen uutistoimiston mukaan Israelin sotakoneet, droonit ja tykistö iskivät yli kymmeneen alueeseen, joista monet sijaitsevat Nabatiehin kaupungin ympäristössä.\n\n## Iskut kohdistuivat Etelä-Libanoniin\n\nIsraelin armeija sanoi iskeneensä Hizbollahin kohteisiin sen jälkeen, kun ryhmä oli ampunut yli 50 projektiilia Israelin joukkoja kohti Etelä-Libanonissa. Lauantaiaamuna alueelta julkaistuissa kuvissa ja videoissa näkyi suuria harmaita savupilviä, joiden kerrottiin nousseen Israelin iskujen jälkeen.\n\nHizbollahin korkea-arvoinen edustaja Hassan Fadlallah sanoi ryhmällä olevan oikeus vastata Israelin hyökkäyksiin. Libanonin valtiollisen uutistoimiston siteeraamassa lausunnossa hän sanoi ryhmän huolena olevan se, että Israel noudattaa tulitaukoa täysin, ei hyökkää Libanonin kyliin eikä pyri valtaamaan uusia asemia.\n\nHizbollah on Iranin tukema shiialainen poliittinen ja sotilaallinen liike Libanonissa. Ryhmä on sanonut jatkavansa iskujaan, jos Israelin hyökkäys Etelä-Libanoniin jatkuu.\n\n## Yhdysvallat varoittaa rauhansopimuksen vaarantumisesta\n\nWashington on arvostellut Israelin jatkuvia operaatioita Libanonissa. Yhdysvalloissa pelätään, että Israelin ja Libanonin välisen jännitteen jatkuminen voi horjuttaa Yhdysvaltain Iranin kanssa tekemää rauhansopimusta. Sopimukseen sisältyy sitoumus taistelujen lopettamisesta kaikilla rintamilla, myös Libanonissa.\n\nTeheran on puolestaan korostanut, että Libanonin on oltava osa laajempaa järjestelyä, jolla konflikti päätetään. Yhdysvaltain lähettilään Steve Witkoffin kerrotaan olevan matkalla Sveitsiin alustaviin neuvotteluihin Iranin kanssa sopimuksen vahvistamiseksi.\n\n## Netanyahu on paineen alla\n\nIsraelin pääministeri Benjamin Netanyahu on kotimaassaan paineen alla jatkaa sotilaallisia toimia Hizbollahia vastaan. Valkoinen talo kritisoi aiemmin tällä viikolla Israelin operaatiota Libanonissa ja varoitti sen voivan vaarantaa rauhansopimuksen. Presidentti Donald Trump kuitenkin kehui Netanyahua Washingtonin lähellä järjestetyssä tilaisuudessa ja kutsui tätä soturiksi.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Israel",
+      "Hizbollah",
+      "Libanon",
+      "tulitauko",
+      "Yhdysvallat",
+      "Iran"
+    ],
+    "summary_bullets": [
+      "Etelä-Libanonissa on raportoitu ainakin 11 kuollutta Israelin iskujen jälkeen.",
+      "Israelin armeijan mukaan iskut seurasivat Hizbollahin yli 50 projektiilin hyökkäystä Israelin joukkoja vastaan.",
+      "Yhdysvallat pelkää Libanonin jännitteiden vaarantavan Iranin kanssa tehdyn rauhansopimuksen."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu annettuun BBC:n lähdepakettiin. Kuolonuhrien määrä on muotoiltu Libanonin valtiollisen uutistoimiston ilmoittamaksi, ja iskujen sekä vastaiskujen väitteet on erotettu osapuolten omiksi kannoiksi."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260620T113102Z_2bd6c3997c\",\n  \"title\": \"Israel ja Hizbollah jatkavat iskuja tulitauosta huolimatta\",\n  \"summary\": \"Etelä-Libanonissa on raportoitu kuolonuhreja Israelin iskujen jälkeen alle vuorokausi Israelin ja Hizbollahin uuden tulitauon julkistamisesta. Israelin armeijan mukaan se iski Hizbollahin kohteisiin sen jälkeen, kun järjestö oli ampunut yli 50 projektiilia Israelin joukkoja kohti.\",\n  \"content\": \"Etelä-Libanonissa on raportoitu ainakin 11 kuollutta Israelin iskuissa, vaikka Israelin ja Hizbollahin uusi tulitauko oli julkistettu alle vuorokautta aiemmin. Libanonin valtiollisen uutistoimiston mukaan Israelin sotakoneet, droonit ja tykistö iskivät yli kymmeneen alueeseen, joista monet sijaitsevat Nabatiehin kaupungin ympäristössä.\\n\\n## Iskut kohdistuivat Etelä-Libanoniin\\n\\nIsraelin armeija sanoi iskeneensä Hizbollahin kohteisiin sen jälkeen, kun ryhmä oli ampunut yli 50 projektiilia Israelin joukkoja kohti Etelä-Libanonissa. Lauantaiaamuna alueelta julkaistuissa kuvissa ja videoissa näkyi suuria harmaita savupilviä, joiden kerrottiin nousseen Israelin iskujen jälkeen.\\n\\nHizbollahin korkea-arvoinen edustaja Hassan Fadlallah sanoi ryhmällä olevan oikeus vastata Israelin hyökkäyksiin. Libanonin valtiollisen uutistoimiston siteeraamassa lausunnossa hän sanoi ryhmän huolena olevan se, että Israel noudattaa tulitaukoa täysin, ei hyökkää Libanonin kyliin eikä pyri valtaamaan uusia asemia.\\n\\nHizbollah on Iranin tukema shiialainen poliittinen ja sotilaallinen liike Libanonissa. Ryhmä on sanonut jatkavansa iskujaan, jos Israelin hyökkäys Etelä-Libanoniin jatkuu.\\n\\n## Yhdysvallat varoittaa rauhansopimuksen vaarantumisesta\\n\\nWashington on arvostellut Israelin jatkuvia operaatioita Libanonissa. Yhdysvalloissa pelätään, että Israelin ja Libanonin välisen jännitteen jatkuminen voi horjuttaa Yhdysvaltain Iranin kanssa tekemää rauhansopimusta. Sopimukseen sisältyy sitoumus taistelujen lopettamisesta kaikilla rintamilla, myös Libanonissa.\\n\\nTeheran on puolestaan korostanut, että Libanonin on oltava osa laajempaa järjestelyä, jolla konflikti päätetään. Yhdysvaltain lähettilään Steve Witkoffin kerrotaan olevan matkalla Sveitsiin alustaviin neuvotteluihin Iranin kanssa sopimuksen vahvistamiseksi.\\n\\n## Netanyahu on paineen alla\\n\\nIsraelin pääministeri Benjamin Netanyahu on kotimaassaan paineen alla jatkaa sotilaallisia toimia Hizbollahia vastaan. Valkoinen talo kritisoi aiemmin tällä viikolla Israelin operaatiota Libanonissa ja varoitti sen voivan vaarantaa rauhansopimuksen. Presidentti Donald Trump kuitenkin kehui Netanyahua Washingtonin lähellä järjestetyssä tilaisuudessa ja kutsui tätä soturiksi.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Israel\",\n    \"Hizbollah\",\n    \"Libanon\",\n    \"tulitauko\",\n    \"Yhdysvallat\",\n    \"Iran\"\n  ],\n  \"summary_bullets\": [\n    \"Etelä-Libanonissa on raportoitu ainakin 11 kuollutta Israelin iskujen jälkeen.\",\n    \"Israelin armeijan mukaan iskut seurasivat Hizbollahin yli 50 projektiilin hyökkäystä Israelin joukkoja vastaan.\",\n    \"Yhdysvallat pelkää Libanonin jännitteiden vaarantavan Iranin kanssa tehdyn rauhansopimuksen.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Artikkeli perustuu annettuun BBC:n lähdepakettiin. Kuolonuhrien määrä on muotoiltu Libanonin valtiollisen uutistoimiston ilmoittamaksi, ja iskujen sekä vastaiskujen väitteet on erotettu osapuolten omiksi kannoiksi.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260620T113102Z_2bd6c3997c",
+    "category": "Ulkomaat",
+    "selected_source_words": 371,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 246,
+    "issues": [
+      "content too short: 246 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Israel ja Hizbollah jatkavat iskuja tulitauosta huolimatta",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-20T11:35:03.928455+00:00",
+    "repair_trigger": "pre_repair_word_count=246; selected_source_words=371; selected_source_blocks=4",
+    "pre_repair_word_count": 246,
+    "pre_repair_lead_word_count": 38,
+    "post_repair_word_count": 246,
+    "post_repair_lead_word_count": 38,
+    "selected_source_words_at_repair": 371,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 371,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 246 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:6220bf34c1",
+      "2:BBC World:4a2f19666e",
+      "3:BBC World:153b855294",
+      "4:BBC World:a4904406a7"
+    ],
+    "final_issues": [
+      "content too short: 246 words"
+    ],
+    "recovered": false
+  }
+}

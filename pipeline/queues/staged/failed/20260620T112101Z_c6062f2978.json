@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-20T11:21:01.705335+00:00",
+  "digest": "c6062f2978",
+  "packet": {
+    "packet_id": "20260620T112101Z_c6062f2978",
+    "created_at": "2026-06-20T11:21:01Z",
+    "headline_seed": "Maa järisi Kreikassa lähellä Kreetaa",
+    "description_seed": "Maa järisi Kreetalla voimakkaasti.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/maa-jarisi-kreikassa-lahella-kreetaa/9356012",
+    "source": "MTV Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/maa-jarisi-kreikassa-lahella-kreetaa/9356012"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Maa järisi Kreikassa lähellä Kreetaa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 124,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Stara",
+        "MTV Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Maa järisi Kreikassa lähellä Kreetaa",
+      "description": "Maa järisi Kreetalla voimakkaasti.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Maa järisi Kreikassa lähellä Kreetaa",
+    "description": "Maa järisi Kreetalla voimakkaasti.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/maa-jarisi-kreikassa-lahella-kreetaa/9356012",
+    "published": "2026-06-20T10:33:40+00:00",
+    "source": "MTV Uutiset",
+    "source_domain": "mtvuutiset.fi",
+    "language": "fi",
+    "fingerprint": "36e403cd33683ae5e53889c850f9e249",
+    "_url_hash": "e71aa1ce4c1f1d7f8c20b53b4946a98985e2ee4095c70dc4ad13d01785e286dc",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Stara]\nVälimerellä tapahtui tiistain ja keskiviikon välisenä yönä maanjäristys. Voimakkuudeltaan 5,9 magnitudin järistys tapahtui Kreikan suurimman saaren, Kreetan läheisyydessä. Maa järisi Egyptissä saakka.\n\nKreikan viranomaiset ovat antaneet maanjäristyksen vuoksi tsunamivaroitukset. Kásos-saarella olevia ihmisiä neuvottiin pysymään poissa rannikolta. Independent-lehden mukaan ihmisiä on kehotettu seuraamaan viranomaisten ohjeita.\n\nTuoreen maanjäristyksen ei tiedetä aiheuttaneen henkilövahinkoja tai aineellista vahinkoa. Kreikassa matkaileville turisteille ei ole toistaiseksi ole annettu matkustusvaroitusta. Matkailijoita suositellaan kuitenkin seuraamaan mahdollisia viranomaistiedotteita järistykseen liittyen.\n\nKreikka on yksi Euroopan seismisesti aktiivisimmista maista. Maa järisi useiden viikkojen ajan turistien suosimalla Santorínin saarella aikaisemmin tänä vuonna.\n\nVoit lisätä Staran Googlen ensisijaiseksi lähteeksi klikkaamalla tästä ja ruksittamalla laatikon. Voit myös lukea lisää tähän artikkeliin liittyvistä teemoista ja aiheista, kuten Kreikka, maanjäristys tai laajemmin samasta aihealueesta Matkailu, Viihdeuutiset -osioistamme.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-20T11:23:33.374350+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja tapahtuman ajasta, paikasta, voimakkuudesta tai seurauksista.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260620T112101Z_c6062f2978\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja tapahtuman ajasta, paikasta, voimakkuudesta tai seurauksista.\"}"
+}
