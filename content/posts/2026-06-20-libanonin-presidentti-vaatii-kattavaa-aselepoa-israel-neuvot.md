@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/libanonin-presidentti-soitti-rubiolle-ja-kertoi-ehtonsa-israel-neuvotteluille/9355878"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
