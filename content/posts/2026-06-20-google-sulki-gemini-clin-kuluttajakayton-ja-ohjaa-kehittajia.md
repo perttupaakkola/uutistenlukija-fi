@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/20/google-lopetti-gemini-clin-ja-gemini-code-assistin-kuluttajakayton-ja-siirtaa-kehittajia-antigravityyn/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
