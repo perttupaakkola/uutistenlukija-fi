@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-20T08:50:58.762918+00:00",
+  "digest": "482b726b35",
+  "packet": {
+    "packet_id": "20260620T085058Z_482b726b35",
+    "created_at": "2026-06-20T08:50:58Z",
+    "headline_seed": "90-vuotias Eero Paloheimo puhuu iän sijaan maailmanlopusta",
+    "description_seed": "Paloheimolle maailman pelastaminen ei ole ekotekoja. Hän ehdottaa ratkaisuja, jotka haastavat koko nykyisen järjestelmän.",
+    "link": "https://www.ess.fi/teemat/9554288",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/teemat/9554288"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "90-vuotias Eero Paloheimo puhuu iän sijaan maailmanlopusta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 131,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Aamuposti",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "90-vuotias Eero Paloheimo puhuu iän sijaan maailmanlopusta",
+      "description": "Paloheimolle maailman pelastaminen ei ole ekotekoja. Hän ehdottaa ratkaisuja, jotka haastavat koko nykyisen järjestelmän.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "90-vuotias Eero Paloheimo puhuu iän sijaan maailmanlopusta",
+    "description": "Paloheimolle maailman pelastaminen ei ole ekotekoja. Hän ehdottaa ratkaisuja, jotka haastavat koko nykyisen järjestelmän.",
+    "link": "https://www.ess.fi/teemat/9554288",
+    "published": "2026-06-20T11:30:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "a9924e04d4b208403b13b6dd8450e4df",
+    "_url_hash": "d466fb3464d7c7fbf65c563793d57662bcb17f05ec423ed3b654e8eb6841a419",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Aamuposti]\nLappeenrannassa 16-vuotiaan mopoilijan kuolemaan maanantai-illalla johtanut turma tapahtui ohitustilanteessa, kertoo poliisi.\n\nPoliisin mukaan mopoilija kuoli, kun takaa tullut henkilöauto törmäsi häneen Terminaalinkadulla. Autoilija oli lähtenyt ohittamaan mopoa vastaantulevien kaistalle, mitä mopoilija ei poliisin mukaan huomannut. Mopoilija kääntyi ajoradalta vasemmalle, jolloin auto törmäsi häneen, poliisi kertoo.\n\nOnnettomuus ei kuitenkaan tapahtunut risteyksessä, vaan poliisin tietojen mukaan mopoilijan tarkoituksena oli kulkea viheralueen ylitse pyörätielle. Mopoilija oli liikenteessä osana suurempaa kaveriseuruetta, joista osa oli liikkeellä polkupyörillä.\n\nAutoilijan epäillään ajaneen huomattavaa ylinopeutta alueella, jolla nopeusrajoitus on 50 kilometriä tunnissa. Auton kyydissä oli kaksi ihmistä, joista kumpikin selvisi ilman vammoja.\n\n18-vuotias autoilija on poliisin mukaan tunnustanut syyllistyneensä törkeään liikenneturvallisuuden vaarantamiseen ja törkeään kuolemantuottamukseen.\n\nPoliisi jatkaa vielä tutkintatoimia, minkä jälkeen tapaus siirtyy syyttäjälle syyteharkintaan.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-20T08:54:56.965989+00:00",
+  "failure": "Packetissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja 250 sanan julkaistavaan artikkeliin ilman keksimistä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260620T085058Z_482b726b35\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja 250 sanan julkaistavaan artikkeliin ilman keksimistä.\"}"
+}
