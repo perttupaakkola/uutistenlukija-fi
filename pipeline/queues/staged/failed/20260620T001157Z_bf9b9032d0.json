@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-20T00:11:57.208304+00:00",
+  "digest": "bf9b9032d0",
+  "packet": {
+    "packet_id": "20260620T001157Z_bf9b9032d0",
+    "created_at": "2026-06-20T00:11:57Z",
+    "headline_seed": "Mies kuoli pudottuaan parvekelasin läpi Tikkurilassa – Tämä tiedetään",
+    "description_seed": "Noin 30-vuotiasta miestä yritettiin elvyttää. Noin 30-vuotias mies kuoli pudottuaan parvekkeelta Vantaan Tikkurilassa, kerrotaan Itä-Uudenmaan poliisista. Traaginen tapaus sattui Tikkurilantiellä perjantai-iltana. Viranomaiset saivat tiedon tapauksesta noin kello 21.10 maissa.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/4bc5efad-b24c-4f54-a22d-09c7b70c8763",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/4bc5efad-b24c-4f54-a22d-09c7b70c8763"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Mies kuoli pudottuaan parvekelasin läpi Tikkurilassa – Tämä tiedetään"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Noin 30-vuotiasta miestä yritettiin elvyttää. Noin 30-vuotias mies kuoli pudottuaan parvekkeelta Vantaan Tikkurilassa, kerrotaan Itä-Uudenmaan poliisista. Traaginen tapaus sattui Tikkurilantiellä perjantai-iltana. Viranomaiset saivat tiedon tapauksesta noin kello 21.10 maissa.",
+        "word_count": 29,
+        "keyword_overlap": 26,
+        "strong_overlap": 22
+      }
+    ],
+    "source_text": "Noin 30-vuotiasta miestä yritettiin elvyttää. Noin 30-vuotias mies kuoli pudottuaan parvekkeelta Vantaan Tikkurilassa, kerrotaan Itä-Uudenmaan poliisista. Traaginen tapaus sattui Tikkurilantiellä perjantai-iltana. Viranomaiset saivat tiedon tapauksesta noin kello 21.10 maissa.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 58,
+      "selected_blocks": 1,
+      "selected_source_words": 29,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Mies kuoli pudottuaan parvekelasin läpi Tikkurilassa – Tämä tiedetään",
+      "description": "Noin 30-vuotiasta miestä yritettiin elvyttää. Noin 30-vuotias mies kuoli pudottuaan parvekkeelta Vantaan Tikkurilassa, kerrotaan Itä-Uudenmaan poliisista. Traaginen tapaus sattui Tikkurilantiellä perjantai-iltana. Viranomaiset saivat tiedon tapauksesta noin kello 21.10 maissa.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Mies kuoli pudottuaan parvekelasin läpi Tikkurilassa – Tämä tiedetään",
+    "description": "Noin 30-vuotiasta miestä yritettiin elvyttää. Noin 30-vuotias mies kuoli pudottuaan parvekkeelta Vantaan Tikkurilassa, kerrotaan Itä-Uudenmaan poliisista. Traaginen tapaus sattui Tikkurilantiellä perjantai-iltana. Viranomaiset saivat tiedon tapauksesta noin kello 21.10 maissa.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/4bc5efad-b24c-4f54-a22d-09c7b70c8763",
+    "published": "2026-06-20T02:07:11+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "e0bc0c24f4ac0edd2a14b1f01bebe297",
+    "_url_hash": "01048a781e6cf4eec263584c0a21cfd9550dcd51db2145e2d1d00de7543f1418",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Noin 30-vuotiasta miestä yritettiin elvyttää. Noin 30-vuotias mies kuoli pudottuaan parvekkeelta Vantaan Tikkurilassa, kerrotaan Itä-Uudenmaan poliisista. Traaginen tapaus sattui Tikkurilantiellä perjantai-iltana. Viranomaiset saivat tiedon tapauksesta noin kello 21.10 maissa.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-20T00:13:22.045868+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa, ja kategoriatieto on ristiriitainen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260620T001157Z_bf9b9032d0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa, ja kategoriatieto on ristiriitainen.\"}"
+}
