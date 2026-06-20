@@ -43,7 +43,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/tech-policy/2026/06/the-uk-will-scan-asylum-seekers-faces-for-age-checks-despite-knowing-the-tech-is-flawed/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
