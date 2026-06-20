@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-20T08:10:56.204694+00:00",
+  "digest": "8a6c0f2d1a",
+  "packet": {
+    "packet_id": "20260620T081056Z_8a6c0f2d1a",
+    "created_at": "2026-06-20T08:10:56Z",
+    "headline_seed": "Ihminen surmattu juhannuksena Varkaudessa",
+    "description_seed": "Poliisi tutkii asiaa tappona. Poliisi tutkii Varkaudessa tapahtunutta henkirikosta, selviää poliisin tiedotteesta. Hätäkeskus sai juhannusaattona 19.6. iltakahdeksalta ilmoituksen Varkaudessa epäselvissä olosuhteissa tapahtuneesta väkivallanteosta.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/ccea642d-f623-4a8c-9a62-4057c38b1a7e",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/ccea642d-f623-4a8c-9a62-4057c38b1a7e"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ihminen surmattu juhannuksena Varkaudessa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Poliisi tutkii asiaa tappona. Poliisi tutkii Varkaudessa tapahtunutta henkirikosta, selviää poliisin tiedotteesta. Hätäkeskus sai juhannusaattona 19.6. iltakahdeksalta ilmoituksen Varkaudessa epäselvissä olosuhteissa tapahtuneesta väkivallanteosta.",
+        "word_count": 23,
+        "keyword_overlap": 18,
+        "strong_overlap": 17
+      }
+    ],
+    "source_text": "Poliisi tutkii asiaa tappona. Poliisi tutkii Varkaudessa tapahtunutta henkirikosta, selviää poliisin tiedotteesta. Hätäkeskus sai juhannusaattona 19.6. iltakahdeksalta ilmoituksen Varkaudessa epäselvissä olosuhteissa tapahtuneesta väkivallanteosta.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 46,
+      "selected_blocks": 1,
+      "selected_source_words": 23,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ihminen surmattu juhannuksena Varkaudessa",
+      "description": "Poliisi tutkii asiaa tappona. Poliisi tutkii Varkaudessa tapahtunutta henkirikosta, selviää poliisin tiedotteesta. Hätäkeskus sai juhannusaattona 19.6. iltakahdeksalta ilmoituksen Varkaudessa epäselvissä olosuhteissa tapahtuneesta väkivallanteosta.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Ihminen surmattu juhannuksena Varkaudessa",
+    "description": "Poliisi tutkii asiaa tappona. Poliisi tutkii Varkaudessa tapahtunutta henkirikosta, selviää poliisin tiedotteesta. Hätäkeskus sai juhannusaattona 19.6. iltakahdeksalta ilmoituksen Varkaudessa epäselvissä olosuhteissa tapahtuneesta väkivallanteosta.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/ccea642d-f623-4a8c-9a62-4057c38b1a7e",
+    "published": "2026-06-20T10:51:59+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "b4d0f3b9db4fc871d2d1950c9d4a1f53",
+    "_url_hash": "e7cbb1e801f53edfd06c07763bc2b6a71d177ced8daf998668a0749b61d7314c",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Poliisi tutkii asiaa tappona. Poliisi tutkii Varkaudessa tapahtunutta henkirikosta, selviää poliisin tiedotteesta. Hätäkeskus sai juhannusaattona 19.6. iltakahdeksalta ilmoituksen Varkaudessa epäselvissä olosuhteissa tapahtuneesta väkivallanteosta.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-20T08:13:53.149410+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteainesta tai tarkentamattomien tietojen keksimistä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260620T081056Z_8a6c0f2d1a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteainesta tai tarkentamattomien tietojen keksimistä.\"}"
+}

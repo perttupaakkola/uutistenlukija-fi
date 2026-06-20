@@ -1,6 +1,6 @@
 ---
 title: "Talous"
-description: "Talousuutiset seuraavat yrityksiä, markkinoita, julkista taloutta ja arjen rahankäyttöä Uutistenlukijan ajankohtaisista uutisista."
+description: "Seuraa korkoja, hintoja, yrityksiä ja talouspolitiikkaa yhdessä näkymässä. Talousuutiset tiiviisti lukijalle, joka haluaa nopeasti ymmärtää päätösten vaikutukset."
 og_image: "/images/og-talous.png"
 keywords:
   - "talousuutiset"

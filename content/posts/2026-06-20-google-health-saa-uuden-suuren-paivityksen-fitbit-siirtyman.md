@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/20/google-jatkaa-fitbitin-korvanneen-google-health-sovelluksen-parannuksia-taas-tuli-iso-paivitys/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
