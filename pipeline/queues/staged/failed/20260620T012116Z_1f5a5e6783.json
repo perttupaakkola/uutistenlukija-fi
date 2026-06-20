@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-20T01:21:16.576029+00:00",
+  "digest": "1f5a5e6783",
+  "packet": {
+    "packet_id": "20260620T012116Z_1f5a5e6783",
+    "created_at": "2026-06-20T01:21:16Z",
+    "headline_seed": "Sodan keskellä 1943 Helsingin autiolle saarelle alettiin rakentaa historiallista autotehdasta – Näin sille on käynyt",
+    "description_seed": "Materiaalipula ja työvoiman saatavuus teki rakentamisesta haastavaa 1940-luvun Helsingissä. Nyt suojeltuun rakennukseen on tehty energiaremontti, ja sen energialuokka on kasvanut kohisten.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/bf83e60c-0b0e-4dfa-998e-573735c4bcaf?utm_source=rss",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/bf83e60c-0b0e-4dfa-998e-573735c4bcaf?utm_source=rss"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Sodan keskellä 1943 Helsingin autiolle saarelle alettiin rakentaa historiallista autotehdasta – Näin sille on käynyt"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Materiaalipula ja työvoiman saatavuus teki rakentamisesta haastavaa 1940-luvun Helsingissä. Nyt suojeltuun rakennukseen on tehty energiaremontti, ja sen energialuokka on kasvanut kohisten.",
+        "word_count": 21,
+        "keyword_overlap": 15,
+        "strong_overlap": 13
+      }
+    ],
+    "source_text": "Materiaalipula ja työvoiman saatavuus teki rakentamisesta haastavaa 1940-luvun Helsingissä. Nyt suojeltuun rakennukseen on tehty energiaremontti, ja sen energialuokka on kasvanut kohisten.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 42,
+      "selected_blocks": 1,
+      "selected_source_words": 21,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Sodan keskellä 1943 Helsingin autiolle saarelle alettiin rakentaa historiallista autotehdasta – Näin sille on käynyt",
+      "description": "Materiaalipula ja työvoiman saatavuus teki rakentamisesta haastavaa 1940-luvun Helsingissä. Nyt suojeltuun rakennukseen on tehty energiaremontti, ja sen energialuokka on kasvanut kohisten.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Sodan keskellä 1943 Helsingin autiolle saarelle alettiin rakentaa historiallista autotehdasta – Näin sille on käynyt",
+    "description": "Materiaalipula ja työvoiman saatavuus teki rakentamisesta haastavaa 1940-luvun Helsingissä. Nyt suojeltuun rakennukseen on tehty energiaremontti, ja sen energialuokka on kasvanut kohisten.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/bf83e60c-0b0e-4dfa-998e-573735c4bcaf?utm_source=rss",
+    "published": "2026-06-20T01:03:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "32854d660d0ffee68c828d97911b317c",
+    "_url_hash": "835daf5f9b83ba5af23d7898397dd1398a69230ee9f2c24098b18fec4b5771e9",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Materiaalipula ja työvoiman saatavuus teki rakentamisesta haastavaa 1940-luvun Helsingissä. Nyt suojeltuun rakennukseen on tehty energiaremontti, ja sen energialuokka on kasvanut kohisten.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-20T01:23:22.786625+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260620T012116Z_1f5a5e6783\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman keksittyjä yksityiskohtia.\"}"
+}
