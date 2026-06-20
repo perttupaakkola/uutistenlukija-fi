@@ -1,0 +1,186 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-20T10:51:04.683448+00:00",
+  "digest": "a4e347d99a",
+  "packet": {
+    "packet_id": "20260620T105104Z_a4e347d99a",
+    "created_at": "2026-06-20T10:51:04Z",
+    "headline_seed": "Tourist dies in Dominican Republic luxury resort fire",
+    "description_seed": "Nearly 1,700 people were evacuated from the huge blaze at Viva Wyndham Dominicus Beach in Bayahibe, a popular resort town on the Caribbean coast.",
+    "link": "https://www.bbc.com/news/articles/c932k8010j1o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "NBC New York",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c932k8010j1o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tourist dies in Dominican Republic luxury resort fire"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A huge fire at a luxury beach resort in the Dominican Republic killed one woman and forced nearly 1,700 guests to be evacuated on Friday. The woman was a 46-year old Italian tourist, the DAEH emergency services said in a statement to local media. It added that three people were taken to medical facilities and six others were treated on site. Drone footage shows how widespread the fire was, with buildings spanning the Viva Wyndham Dominicus Beach in the town of Bayahibe on fire, and thick black smoke billowing into the air. The cause of the early-morning blaze is not yet known, but an initial investigation found the flames spread quickly due to wind conditions and the flammable thatched roofs on some buildings.",
+        "word_count": 123,
+        "keyword_overlap": 18,
+        "strong_overlap": 11
+      },
+      {
+        "source": "NBC New York",
+        "source_type": "research",
+        "text": "A large fire almost completely destroyed a luxury resort in the Dominican Republic on Friday, forcing the evacuation of almost 1,700 tourists, authorities said. Local media reported an Italian tourist died in the fire and several other tourists required medical assistance. The Viva Dominicus Beach by Wyndham resort is located in Bayahibe, a popular destination for U.S. and international tourists on the Dominican Republic's southeastern coast. Authorities reported about 1,690 tourists had to be evacuated from the resort to other hotels and nearby housing facilities because of the massive blaze. The cause of the blaze was under investigation and the country’s Emergency Operations Center said it appeared the “fire spread rapidly” due to wind and because part of the resort’s roof was made of thatch.",
+        "word_count": 125,
+        "keyword_overlap": 16,
+        "strong_overlap": 10
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Nearly 1,700 people were evacuated from the huge blaze at Viva Wyndham Dominicus Beach in Bayahibe, a popular resort town on the Caribbean coast.",
+        "word_count": 24,
+        "keyword_overlap": 17,
+        "strong_overlap": 9
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The country's Emergency Operations Center (COE) said the fire had been brought under control and guests had been moved to other hotels. It added that tourist activities in the town and surrounding area were not affected. Italian news agency Ansa reported that the Italian ambassador to the Dominican Republic met the deceased woman's husband at the hospital. The embassy is helping around 285 Italian tourists who were staying at the resort or nearby, issuing emergency passports to those whose travel documents were destroyed in the fire and arranging flights home. Bayahibe, a popular resort town on the Caribbean coast, is known for its clear blue waters and sandy beaches. Wyndham Hotels & Resorts, which franchises about 8,400 hotels around the world, has been contacted for comment. ---",
+        "word_count": 127,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      }
+    ],
+    "source_text": "A huge fire at a luxury beach resort in the Dominican Republic killed one woman and forced nearly 1,700 guests to be evacuated on Friday. The woman was a 46-year old Italian tourist, the DAEH emergency services said in a statement to local media. It added that three people were taken to medical facilities and six others were treated on site. Drone footage shows how widespread the fire was, with buildings spanning the Viva Wyndham Dominicus Beach in the town of Bayahibe on fire, and thick black smoke billowing into the air. The cause of the early-morning blaze is not yet known, but an initial investigation found the flames spread quickly due to wind conditions and the flammable thatched roofs on some buildings.\n\nA large fire almost completely destroyed a luxury resort in the Dominican Republic on Friday, forcing the evacuation of almost 1,700 tourists, authorities said. Local media reported an Italian tourist died in the fire and several other tourists required medical assistance. The Viva Dominicus Beach by Wyndham resort is located in Bayahibe, a popular destination for U.S. and international tourists on the Dominican Republic's southeastern coast. Authorities reported about 1,690 tourists had to be evacuated from the resort to other hotels and nearby housing facilities because of the massive blaze. The cause of the blaze was under investigation and the country’s Emergency Operations Center said it appeared the “fire spread rapidly” due to wind and because part of the resort’s roof was made of thatch.\n\nNearly 1,700 people were evacuated from the huge blaze at Viva Wyndham Dominicus Beach in Bayahibe, a popular resort town on the Caribbean coast.\n\nThe country's Emergency Operations Center (COE) said the fire had been brought under control and guests had been moved to other hotels. It added that tourist activities in the town and surrounding area were not affected. Italian news agency Ansa reported that the Italian ambassador to the Dominican Republic met the deceased woman's husband at the hospital. The embassy is helping around 285 Italian tourists who were staying at the resort or nearby, issuing emergency passports to those whose travel documents were destroyed in the fire and arranging flights home. Bayahibe, a popular resort town on the Caribbean coast, is known for its clear blue waters and sandy beaches. Wyndham Hotels & Resorts, which franchises about 8,400 hotels around the world, has been contacted for comment. ---",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 421,
+      "selected_blocks": 4,
+      "selected_source_words": 399,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "NBC New York",
+        "NBC New York",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "NBC New York",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tourist dies in Dominican Republic luxury resort fire",
+      "description": "Nearly 1,700 people were evacuated from the huge blaze at Viva Wyndham Dominicus Beach in Bayahibe, a popular resort town on the Caribbean coast.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Tourist dies in Dominican Republic luxury resort fire",
+    "description": "Nearly 1,700 people were evacuated from the huge blaze at Viva Wyndham Dominicus Beach in Bayahibe, a popular resort town on the Caribbean coast.",
+    "link": "https://www.bbc.com/news/articles/c932k8010j1o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-20T07:40:20+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "c15996bd13b54b89b8ebef833a6fd78e",
+    "_url_hash": "77313016f8719a98095b7205e411c03ca7a74a1a8bb7e79aeb1c34c4b1d0c8c3",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nA huge fire at a luxury beach resort in the Dominican Republic killed one woman and forced nearly 1,700 guests to be evacuated on Friday.\n\nThe woman was a 46-year old Italian tourist, the DAEH emergency services said in a statement to local media. It added that three people were taken to medical facilities and six others were treated on site.\n\nDrone footage shows how widespread the fire was, with buildings spanning the Viva Wyndham Dominicus Beach in the town of Bayahibe on fire, and thick black smoke billowing into the air.\n\nThe cause of the early-morning blaze is not yet known, but an initial investigation found the flames spread quickly due to wind conditions and the flammable thatched roofs on some buildings.\n\nThe country's Emergency Operations Center (COE) said the fire had been brought under control and guests had been moved to other hotels.\n\nIt added that tourist activities in the town and surrounding area were not affected.\n\nItalian news agency Ansa reported that the Italian ambassador to the Dominican Republic met the deceased woman's husband at the hospital. The embassy is helping around 285 Italian tourists who were staying at the resort or nearby, issuing emergency passports to those whose travel documents were destroyed in the fire and arranging flights home.\n\nBayahibe, a popular resort town on the Caribbean coast, is known for its clear blue waters and sandy beaches.\n\nWyndham Hotels & Resorts, which franchises about 8,400 hotels around the world, has been contacted for comment.\n\n---\n\n[Lähde: NBC New York]\nA large fire almost completely destroyed a luxury resort in the Dominican Republic on Friday, forcing the evacuation of almost 1,700 tourists, authorities said.\n\nLocal media reported an Italian tourist died in the fire and several other tourists required medical assistance.\n\nThe Viva Dominicus Beach by Wyndham resort is located in Bayahibe, a popular destination for U.S. and international tourists on the Dominican Republic's southeastern coast.\n\nAuthorities reported about 1,690 tourists had to be evacuated from the resort to other hotels and nearby housing facilities because of the massive blaze.\n\nThe cause of the blaze was under investigation and the country’s Emergency Operations Center said it appeared the “fire spread rapidly” due to wind and because part of the resort’s roof was made of thatch.\n\nViva Wyndham’s other nearby resort, the Dominicus Palace, was not damaged by the fire and was operating as normal, the center said.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-20T10:54:54.654368+00:00",
+  "failure": "content too short: 229 words",
+  "payload": {
+    "packet_id": "20260620T105104Z_a4e347d99a",
+    "title": "Turisti kuoli lomakeskuksen tulipalossa Dominikaanisessa tasavallassa",
+    "summary": "Lähes 1 700 ihmistä evakuoitiin, kun suuri tulipalo levisi Viva Wyndham Dominicus Beach -lomakeskuksessa Bayahibessa. Kuollut oli viranomaisten mukaan 46-vuotias italialainen turisti.",
+    "content": "Suuri tulipalo Dominikaanisen tasavallan Bayahibessa sijaitsevassa Viva Wyndham Dominicus Beach -lomakeskuksessa on surmannut yhden turistin ja pakottanut lähes 1 700 ihmistä evakkoon. Viranomaistietojen mukaan kuollut oli 46-vuotias italialainen nainen. Palo syttyi perjantaina varhain aamulla, ja sen tarkkaa syytä selvitetään edelleen.\n\n## Palo levisi nopeasti\n\nPelastusviranomaisten mukaan kolme ihmistä vietiin hoitolaitoksiin ja kuutta muuta hoidettiin paikan päällä. Lomakeskuksen alueelta kuvatun ilmamateriaalin perusteella palo oli laaja: useita rakennuksia oli liekeissä, ja alueelta nousi paksua mustaa savua.\n\nDominikaanisen tasavallan hätätilakeskuksen alustavan arvion mukaan palon nopeaan leviämiseen vaikuttivat tuuliolosuhteet sekä se, että osassa rakennuksista oli helposti syttyviä olkikattoja. Viranomaiset kertoivat myöhemmin, että palo oli saatu hallintaan.\n\nEvakuoidut vieraat siirrettiin muihin hotelleihin sekä lähialueen majoitustiloihin. Viranomaisten ilmoittama evakuoitujen määrä oli noin 1 690 ihmistä, ja lähteissä sitä kuvattiin myös lähes 1 700 ihmiseksi.\n\n## Suurlähetystö auttaa matkailijoita\n\nItalian uutistoimisto Ansa kertoi, että Italian suurlähettiläs Dominikaanisessa tasavallassa tapasi kuolleen naisen aviomiehen sairaalassa. Italian suurlähetystö auttaa noin 285:tä italialaista turistia, jotka yöpyivät lomakeskuksessa tai sen lähistöllä.\n\nApua on annettu muun muassa hätäpassien järjestämisessä niille, joiden matkustusasiakirjat tuhoutuivat palossa. Lisäksi suurlähetystö on järjestellyt paluulentoja kotiin.\n\n## Matkailutoiminnan kerrotaan jatkuvan\n\nBayahibe on suosittu lomakohde Dominikaanisen tasavallan Karibianmeren rannikolla. Se tunnetaan kirkkaasta vedestä ja hiekkarannoista, ja alueella käy sekä yhdysvaltalaisia että muita kansainvälisiä matkailijoita.\n\nHätätilakeskuksen mukaan Bayahiben ja sen lähiseudun matkailutoiminta ei ole palon vuoksi keskeytynyt. Wyndham Hotels & Resortsilta, joka toimii hotellibrändin kansainvälisenä franchising-yhtiönä, on pyydetty kommenttia tapahtuneesta.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Dominikaaninen tasavalta",
+      "Bayahibe",
+      "tulipalo",
+      "matkailu",
+      "evakuointi"
+    ],
+    "summary_bullets": [
+      "Yksi 46-vuotias italialainen turisti kuoli lomakeskuksen tulipalossa Bayahibessa.",
+      "Lähes 1 700 ihmistä evakuoitiin muihin hotelleihin ja lähialueen majoituksiin.",
+      "Viranomaisten mukaan palon syytä tutkitaan, mutta tuuli ja olkikatot saattoivat nopeuttaa leviämistä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin viranomaistietoihin ja uutistoimistojen välittämiin tietoihin. Palon tarkka syy ei ole tiedossa, joten sitä ei väitetä varmaksi."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260620T105104Z_a4e347d99a\",\n  \"title\": \"Turisti kuoli lomakeskuksen tulipalossa Dominikaanisessa tasavallassa\",\n  \"summary\": \"Lähes 1 700 ihmistä evakuoitiin, kun suuri tulipalo levisi Viva Wyndham Dominicus Beach -lomakeskuksessa Bayahibessa. Kuollut oli viranomaisten mukaan 46-vuotias italialainen turisti.\",\n  \"content\": \"Suuri tulipalo Dominikaanisen tasavallan Bayahibessa sijaitsevassa Viva Wyndham Dominicus Beach -lomakeskuksessa on surmannut yhden turistin ja pakottanut lähes 1 700 ihmistä evakkoon. Viranomaistietojen mukaan kuollut oli 46-vuotias italialainen nainen. Palo syttyi perjantaina varhain aamulla, ja sen tarkkaa syytä selvitetään edelleen.\\n\\n## Palo levisi nopeasti\\n\\nPelastusviranomaisten mukaan kolme ihmistä vietiin hoitolaitoksiin ja kuutta muuta hoidettiin paikan päällä. Lomakeskuksen alueelta kuvatun ilmamateriaalin perusteella palo oli laaja: useita rakennuksia oli liekeissä, ja alueelta nousi paksua mustaa savua.\\n\\nDominikaanisen tasavallan hätätilakeskuksen alustavan arvion mukaan palon nopeaan leviämiseen vaikuttivat tuuliolosuhteet sekä se, että osassa rakennuksista oli helposti syttyviä olkikattoja. Viranomaiset kertoivat myöhemmin, että palo oli saatu hallintaan.\\n\\nEvakuoidut vieraat siirrettiin muihin hotelleihin sekä lähialueen majoitustiloihin. Viranomaisten ilmoittama evakuoitujen määrä oli noin 1 690 ihmistä, ja lähteissä sitä kuvattiin myös lähes 1 700 ihmiseksi.\\n\\n## Suurlähetystö auttaa matkailijoita\\n\\nItalian uutistoimisto Ansa kertoi, että Italian suurlähettiläs Dominikaanisessa tasavallassa tapasi kuolleen naisen aviomiehen sairaalassa. Italian suurlähetystö auttaa noin 285:tä italialaista turistia, jotka yöpyivät lomakeskuksessa tai sen lähistöllä.\\n\\nApua on annettu muun muassa hätäpassien järjestämisessä niille, joiden matkustusasiakirjat tuhoutuivat palossa. Lisäksi suurlähetystö on järjestellyt paluulentoja kotiin.\\n\\n## Matkailutoiminnan kerrotaan jatkuvan\\n\\nBayahibe on suosittu lomakohde Dominikaanisen tasavallan Karibianmeren rannikolla. Se tunnetaan kirkkaasta vedestä ja hiekkarannoista, ja alueella käy sekä yhdysvaltalaisia että muita kansainvälisiä matkailijoita.\\n\\nHätätilakeskuksen mukaan Bayahiben ja sen lähiseudun matkailutoiminta ei ole palon vuoksi keskeytynyt. Wyndham Hotels & Resortsilta, joka toimii hotellibrändin kansainvälisenä franchising-yhtiönä, on pyydetty kommenttia tapahtuneesta.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Dominikaaninen tasavalta\",\n    \"Bayahibe\",\n    \"tulipalo\",\n    \"matkailu\",\n    \"evakuointi\"\n  ],\n  \"summary_bullets\": [\n    \"Yksi 46-vuotias italialainen turisti kuoli lomakeskuksen tulipalossa Bayahibessa.\",\n    \"Lähes 1 700 ihmistä evakuoitiin muihin hotelleihin ja lähialueen majoituksiin.\",\n    \"Viranomaisten mukaan palon syytä tutkitaan, mutta tuuli ja olkikatot saattoivat nopeuttaa leviämistä.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu paketissa annettuihin viranomaistietoihin ja uutistoimistojen välittämiin tietoihin. Palon tarkka syy ei ole tiedossa, joten sitä ei väitetä varmaksi.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260620T105104Z_a4e347d99a",
+    "category": "Kotimaa",
+    "selected_source_words": 399,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 229,
+    "issues": [
+      "content too short: 229 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Turisti kuoli lomakeskuksen tulipalossa Dominikaanisessa tasavallassa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-20T10:54:54.654031+00:00",
+    "repair_trigger": "pre_repair_word_count=229; selected_source_words=399; selected_source_blocks=4",
+    "pre_repair_word_count": 229,
+    "pre_repair_lead_word_count": 40,
+    "post_repair_word_count": 229,
+    "post_repair_lead_word_count": 40,
+    "selected_source_words_at_repair": 399,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 399,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 229 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:0dae7d6af6",
+      "2:NBC New York:1a28bce174",
+      "3:BBC World:94cb494877",
+      "4:BBC World:95c4d53bf9"
+    ],
+    "final_issues": [
+      "content too short: 229 words"
+    ],
+    "recovered": false
+  }
+}
