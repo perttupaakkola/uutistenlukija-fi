@@ -1,0 +1,264 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-20T04:42:08.309537+00:00",
+  "digest": "deabf90e82",
+  "packet": {
+    "packet_id": "20260620T044208Z_deabf90e82",
+    "created_at": "2026-06-20T04:42:08Z",
+    "headline_seed": "James Burrows, legendary director of Cheers and Friends, dies aged 85",
+    "description_seed": "Best-known as co-creator of sitcom Cheers, Burrows directed more than 1,000 episodes of other classics including the Big Bang Theory and Will and Grace.",
+    "link": "https://www.bbc.com/news/articles/ce8k07x523eo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "Daily Jang",
+      "AOL"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/ce8k07x523eo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "James Burrows, legendary director of Cheers and Friends, dies aged 85"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "James Burrows, legendary director of some of America's most-loved sitcoms, has died aged 85. Best-known as co-creator of the sitcom Cheers, Burrows directed more than 1,000 episodes of other TV comedy classics including Friends, Big Bang Theory, and Will and Grace. Attorney Tom Hoberman confirmed Burrows' death \"with great sadness\" to CBS News, the BBC's US partner. In a career spanning more than 50 years, Burrows won 11 Emmy Awards and five Directors Guild of America Awards. In a statement shared with US outlet People, his family said: \"We celebrate the extraordinary life and enduring legacy of James 'Jimmy' Burrows, who passed away peacefully today surrounded by his loving family.",
+        "word_count": 110,
+        "keyword_overlap": 21,
+        "strong_overlap": 13
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Best-known as co-creator of sitcom Cheers, Burrows directed more than 1,000 episodes of other classics including the Big Bang Theory and Will and Grace.",
+        "word_count": 24,
+        "keyword_overlap": 16,
+        "strong_overlap": 10
+      },
+      {
+        "source": "Daily Jang",
+        "source_type": "research",
+        "text": "The late director’s family went on to note that James Burrows directed more than 1,000 TV episodes during his career and played a key role in creating hit shows such as The Mary Tyler Moore Show, Taxi, Cheers, Frasier, Friends, Will & Grace, and The Big Bang Theory. It...",
+        "word_count": 49,
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "AOL",
+        "source_type": "research",
+        "text": "James 'Jimmy' Burrows has passed away at the age of 85. The eleven-time Emmy-winning television director's career spanned several decades, beginning with The Mary Tyler Moore Show. James went on to co-create the series Cheers and was also at the helm of every episode of the hit sitcom Will & Grace during its original run. The prolific television director was also behind the camera on popular shows like Friends, The Big Bang Theory, and 3rd Rock From the Sun. James's family confirmed he \"passed away peacefully\" surrounded by loved ones in a statement shared with PEOPLE on Friday, June 19. This follows the news of Buffy and Ted Lasso star Anthony Head, who died at the age of 72, just months after losing his partner. • Fox News host sarcastically mocks Trump over Kid Rock and Vanilla Ice fandom",
+        "word_count": 139,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "James Burrows, legendary director of some of America's most-loved sitcoms, has died aged 85. Best-known as co-creator of the sitcom Cheers, Burrows directed more than 1,000 episodes of other TV comedy classics including Friends, Big Bang Theory, and Will and Grace. Attorney Tom Hoberman confirmed Burrows' death \"with great sadness\" to CBS News, the BBC's US partner. In a career spanning more than 50 years, Burrows won 11 Emmy Awards and five Directors Guild of America Awards. In a statement shared with US outlet People, his family said: \"We celebrate the extraordinary life and enduring legacy of James 'Jimmy' Burrows, who passed away peacefully today surrounded by his loving family.\n\nBest-known as co-creator of sitcom Cheers, Burrows directed more than 1,000 episodes of other classics including the Big Bang Theory and Will and Grace.\n\nThe late director’s family went on to note that James Burrows directed more than 1,000 TV episodes during his career and played a key role in creating hit shows such as The Mary Tyler Moore Show, Taxi, Cheers, Frasier, Friends, Will & Grace, and The Big Bang Theory. It...\n\nJames 'Jimmy' Burrows has passed away at the age of 85. The eleven-time Emmy-winning television director's career spanned several decades, beginning with The Mary Tyler Moore Show. James went on to co-create the series Cheers and was also at the helm of every episode of the hit sitcom Will & Grace during its original run. The prolific television director was also behind the camera on popular shows like Friends, The Big Bang Theory, and 3rd Rock From the Sun. James's family confirmed he \"passed away peacefully\" surrounded by loved ones in a statement shared with PEOPLE on Friday, June 19. This follows the news of Buffy and Ted Lasso star Anthony Head, who died at the age of 72, just months after losing his partner. • Fox News host sarcastically mocks Trump over Kid Rock and Vanilla Ice fandom",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1006,
+      "selected_blocks": 4,
+      "selected_source_words": 322,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "AOL",
+        "AOL",
+        "AOL",
+        "AOL",
+        "Daily Jang",
+        "Daily Jang",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "Daily Jang",
+        "AOL"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "James Burrows, legendary director of Cheers and Friends, dies aged 85",
+      "description": "Best-known as co-creator of sitcom Cheers, Burrows directed more than 1,000 episodes of other classics including the Big Bang Theory and Will and Grace.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "James Burrows, legendary director of Cheers and Friends, dies aged 85",
+    "description": "Best-known as co-creator of sitcom Cheers, Burrows directed more than 1,000 episodes of other classics including the Big Bang Theory and Will and Grace.",
+    "link": "https://www.bbc.com/news/articles/ce8k07x523eo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-20T00:23:46+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "67ef1c791867f041fea27c519dbdc658",
+    "_url_hash": "790fcec9f163f1b3e980e97683af8f5c06708891a502e575b8dd6234fb57a457",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nJames Burrows, legendary director of some of America's most-loved sitcoms, has died aged 85.\n\nBest-known as co-creator of the sitcom Cheers, Burrows directed more than 1,000 episodes of other TV comedy classics including Friends, Big Bang Theory, and Will and Grace.\n\nAttorney Tom Hoberman confirmed Burrows' death \"with great sadness\" to CBS News, the BBC's US partner.\n\nIn a career spanning more than 50 years, Burrows won 11 Emmy Awards and five Directors Guild of America Awards.\n\nIn a statement shared with US outlet People, his family said: \"We celebrate the extraordinary life and enduring legacy of James 'Jimmy' Burrows, who passed away peacefully today surrounded by his loving family.\n\n\"For more than five decades, Burrows was one of the most influential and beloved directors in television history. As a legendary director, mentor, and creative force, he helped shape generations of comedy and brought immeasurable joy to audiences around the world.\"\n\nBorn in Los Angeles in 1940, Burrows spent much of his childhood in New York.\n\nAs a young adult, he attended the graduate programme of the Yale School of Drama, where he got his first experience of directing.\n\nAfter several years behind the camera, he co-created the sitcom Cheers alongside the brothers Glen and Les Charles. The show quickly became a 1980s TV hit in both the US and UK.\n\nThe Directors Guild of America, which awarded Burrows with a lifetime achievement award in television direction in 2015, described him as \"an incredibly generous colleague\" who shared his \"wisdom, and warm humor with his fellow Guild members and all he worked with\".\n\nHe was also nominated 48 times for a Primetime Emmy across his decades-long Hollywood career.\n\nActor Eric McCormack, who played Will in Will and Grace, shared a tribute on social media, saying Burrows left \"an incredible legacy\".\n\n\"The 800 lb gorilla of television comedy for fifty years, he was beloved by everyone, and has left not a mark but a footprint,\" he wrote.\n\nActress Beth Behrs, who worked with Burrows on the show 2 Broke Girls, shared some memories on social media: \"Dear Jimmy, I'll never forget @katdenningsss and I becoming absolutely convinced you hated us during rehearsals for the pilot of 2 Broke Girls. We marched up to your podium like two fourth-graders called into the principal's office and asked you point-blank. I'll never forget the belly laugh. 'Oh girls, of course not.'\"\n\nLisa Kudrow - best-known as Phoebe from Friends - wrote on Instagram: \"Thank\n\n---\n\n[Lähde: AOL]\nJames 'Jimmy' Burrows has passed away at the age of 85.\n\nThe eleven-time Emmy-winning television director's career spanned several decades, beginning with The Mary Tyler Moore Show. James went on to co-create the series Cheers and was also at the helm of every episode of the hit sitcom Will & Grace during its original run. The prolific television director was also behind the camera on popular shows like Friends, The Big Bang Theory, and 3rd Rock From the Sun.\n\nJames's family confirmed he \"passed away peacefully\" surrounded by loved ones in a statement shared with PEOPLE on Friday, June 19. This follows the news of Buffy and Ted Lasso star Anthony Head, who died at the age of 72, just months after losing his partner.\n\n• Fox News host sarcastically mocks Trump over Kid Rock and Vanilla Ice fandom\n\n• Michael Jackson's harrowing autopsy reveals grim tattoo detail\n\nJames kicked off his prolific television career on the groundbreaking program The Mary Tyler Moore Show in 1974. He won his first Primetime Emmy Award in 1980 for directing episodes of the show Taxi and would go on to win 10 more times, including for directing the pilot episode of the Cheers spinoff Frasier in 1993.\n\nIn 2025, James served as executive producer and directed all 10 episodes of the sitcom Mid-Century Modern starring Nathan Lane before Hulu announced the show would not return for a second season.\n\nJames also famously played a fictionalized version of himself in the HBO comedy series The Comeback, alongside Friends star Lisa Kudrow, who once called him \"the pinnacle of TV comedy.\"\n\nIn their statement, James's family told PEOPLE, \"For more than five decades, Burrows was one of the most influential and beloved directors in television history. As a legendary director, mentor, and creative force, he helped shape generations of comedy and brought immeasurable joy to audiences around the world.\"\n\nThe statement continued, \"But beyond his remarkable achievements, Burrows will be remembered for something even greater: his kindness, generosity, and unwavering belief in the people around him. He possessed a rare ability to make everyone better and was known for remembering every person he met by name, making colleagues at every level feel seen, valued, and appreciated.\"\n\nHe was described by family as a \"devoted husband, father, and grandfather\" who will be \"profoundly missed and forever remembered\" by those who knew him.\n\nThe statement concluded, \"His influence will continue to be felt for generatio\n\n---\n\n[Lähde: Daily Jang]\nOn Friday, June 19, PEOPLE reported that the legendary American director, who helmed famous sitcom Cheers and Friends’ 2012 documentary short Friends: Friends from the Start, died at the age of 85 while surrounded by his loved one.\n\nIn a statement issued by Burrows family, they stated, \"We celebrate the extraordinary life and enduring legacy of James 'Jimmy' Burrows, who passed away peacefully today surrounded by his loving family.”\n\n\"For more than five decades, Burrows was one of the most influential and beloved directors in television history. As a legendary director, mentor, and creative force, he helped shape generations of comedy and brought immeasurable joy to audiences around the world,” the statement continued.\n\nThe late director’s family went on to note that James Burrows directed more than 1,000 TV episodes during his career and played a key role in creating hit shows such as The Mary Tyler Moore Show, Taxi, Cheers, Frasier, Friends, Will & Grace, and The Big Bang Theory.\n\nIt...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-20T04:45:26.698037+00:00",
+  "payload": {
+    "packet_id": "20260620T044208Z_deabf90e82",
+    "title": "Televisiokomedioiden ohjaajalegenda James Burrows on kuollut 85-vuotiaana",
+    "summary": "Cheers-sarjan toinen luoja ja yli tuhat televisiojaksoa ohjannut James Burrows on kuollut 85-vuotiaana. Hänen uransa ulottui yli viidelle vuosikymmenelle ja useisiin yhdysvaltalaisen komedian tunnetuimpiin sarjoihin.",
+    "content": "James ”Jimmy” Burrows, yhdysvaltalaisen televisiokomedian vaikutusvaltaisimpiin ohjaajiin kuulunut tekijä, on kuollut 85-vuotiaana. Burrows tunnettiin erityisesti Cheers-sarjan toisena luojana sekä ohjaajana, jonka uraan mahtui yli tuhat televisiojaksoa ja useita komediasarjojen klassikoita yli viiden vuosikymmenen ajalta.\n\n## Pitkä ura komedian ytimessä\n\nBurrowsin kuoleman vahvisti asianajaja Tom Hoberman CBS Newsille, joka on BBC:n yhdysvaltalainen kumppani. Perheen mukaan Burrows kuoli rauhallisesti läheistensä ympäröimänä. Lausunnossaan perhe kuvasi hänen elämäänsä poikkeukselliseksi ja korosti hänen jättämäänsä pysyvää perintöä.\n\nBurrowsin ura kesti yli 50 vuotta ja alkoi lähdeaineiston mukaan The Mary Tyler Moore Show -sarjan parissa. Myöhemmin hänen työnsä yhdistettiin useisiin yhdysvaltalaisen televisiokomedian tunnetuimpiin nimiin, kuten Taxi, Cheers, Frasier, Friends, Will & Grace, The Big Bang Theory ja 3rd Rock From the Sun.\n\n## Cheers, Friends ja Will & Grace\n\nErityisen vahvasti Burrowsin nimi liitetään Cheersiin, jonka hän oli mukana luomassa. Hän ohjasi myös Will & Grace -sarjan kaikki alkuperäisen esityskauden jaksot. Lisäksi hän työskenteli kameran takana Friendsissä ja The Big Bang Theoryssa, jotka kuuluivat hänen laajaan komediauraansa.\n\nLähdeaineiston mukaan Burrowsilla oli keskeinen rooli useiden hittisarjojen synnyssä tai toteutuksessa. Hänen työnsä ulottui sarjoihin, joita on pidetty yhdysvaltalaisen tilannekomedian tunnetuimpina esimerkkeinä eri vuosikymmeniltä.\n\n## Palkittu ja tuottelias tekijä\n\nBurrows voitti uransa aikana 11 Emmy-palkintoa ja viisi Directors Guild of America -palkintoa. Hänen poikkeuksellinen tuotteliaisuutensa näkyi erityisesti siinä, että hän ohjasi yli tuhat televisiojaksoa, mikä teki hänestä yhden alansa tunnetuimmista ohjaajista.\n\nBurrowsin kuolemasta kerrottiin perheen lausunnossa, joka jaettiin People-julkaisulle perjantaina 19. kesäkuuta. Lähdeaineistossa häntä kuvataan tekijäksi, jonka ura kattoi useita vuosikymmeniä ja jonka kädenjälki näkyi monessa amerikkalaisen televisiokomedian tunnetussa sarjassa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "James Burrows",
+      "televisio",
+      "komediasarjat",
+      "Cheers",
+      "Friends",
+      "Yhdysvallat"
+    ],
+    "summary_bullets": [
+      "James Burrows on kuollut 85-vuotiaana.",
+      "Hän oli mukana luomassa Cheers-sarjaa ja ohjasi yli tuhat televisiojaksoa.",
+      "Burrows voitti urallaan 11 Emmy-palkintoa ja viisi Directors Guild of America -palkintoa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu paketin lähdeaineistossa yhtenevästi esitettyihin tietoihin Burrowsin kuolemasta, urasta, palkinnoista ja keskeisistä sarjoista."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260620T044208Z_deabf90e82\",\n  \"title\": \"Televisiokomedioiden ohjaajalegenda James Burrows on kuollut 85-vuotiaana\",\n  \"summary\": \"Cheers-sarjan toinen luoja ja yli tuhat televisiojaksoa ohjannut James Burrows on kuollut 85-vuotiaana. Hänen uransa ulottui yli viidelle vuosikymmenelle ja useisiin yhdysvaltalaisen komedian tunnetuimpiin sarjoihin.\",\n  \"content\": \"James ”Jimmy” Burrows, yhdysvaltalaisen televisiokomedian vaikutusvaltaisimpiin ohjaajiin kuulunut tekijä, on kuollut 85-vuotiaana. Burrows tunnettiin erityisesti Cheers-sarjan toisena luojana sekä ohjaajana, jonka uraan mahtui yli tuhat televisiojaksoa ja useita komediasarjojen klassikoita yli viiden vuosikymmenen ajalta.\\n\\n## Pitkä ura komedian ytimessä\\n\\nBurrowsin kuoleman vahvisti asianajaja Tom Hoberman CBS Newsille, joka on BBC:n yhdysvaltalainen kumppani. Perheen mukaan Burrows kuoli rauhallisesti läheistensä ympäröimänä. Lausunnossaan perhe kuvasi hänen elämäänsä poikkeukselliseksi ja korosti hänen jättämäänsä pysyvää perintöä.\\n\\nBurrowsin ura kesti yli 50 vuotta ja alkoi lähdeaineiston mukaan The Mary Tyler Moore Show -sarjan parissa. Myöhemmin hänen työnsä yhdistettiin useisiin yhdysvaltalaisen televisiokomedian tunnetuimpiin nimiin, kuten Taxi, Cheers, Frasier, Friends, Will & Grace, The Big Bang Theory ja 3rd Rock From the Sun.\\n\\n## Cheers, Friends ja Will & Grace\\n\\nErityisen vahvasti Burrowsin nimi liitetään Cheersiin, jonka hän oli mukana luomassa. Hän ohjasi myös Will & Grace -sarjan kaikki alkuperäisen esityskauden jaksot. Lisäksi hän työskenteli kameran takana Friendsissä ja The Big Bang Theoryssa, jotka kuuluivat hänen laajaan komediauraansa.\\n\\nLähdeaineiston mukaan Burrowsilla oli keskeinen rooli useiden hittisarjojen synnyssä tai toteutuksessa. Hänen työnsä ulottui sarjoihin, joita on pidetty yhdysvaltalaisen tilannekomedian tunnetuimpina esimerkkeinä eri vuosikymmeniltä.\\n\\n## Palkittu ja tuottelias tekijä\\n\\nBurrows voitti uransa aikana 11 Emmy-palkintoa ja viisi Directors Guild of America -palkintoa. Hänen poikkeuksellinen tuotteliaisuutensa näkyi erityisesti siinä, että hän ohjasi yli tuhat televisiojaksoa, mikä teki hänestä yhden alansa tunnetuimmista ohjaajista.\\n\\nBurrowsin kuolemasta kerrottiin perheen lausunnossa, joka jaettiin People-julkaisulle perjantaina 19. kesäkuuta. Lähdeaineistossa häntä kuvataan tekijäksi, jonka ura kattoi useita vuosikymmeniä ja jonka kädenjälki näkyi monessa amerikkalaisen televisiokomedian tunnetussa sarjassa.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"James Burrows\",\n    \"televisio\",\n    \"komediasarjat\",\n    \"Cheers\",\n    \"Friends\",\n    \"Yhdysvallat\"\n  ],\n  \"summary_bullets\": [\n    \"James Burrows on kuollut 85-vuotiaana.\",\n    \"Hän oli mukana luomassa Cheers-sarjaa ja ohjasi yli tuhat televisiojaksoa.\",\n    \"Burrows voitti urallaan 11 Emmy-palkintoa ja viisi Directors Guild of America -palkintoa.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu paketin lähdeaineistossa yhtenevästi esitettyihin tietoihin Burrowsin kuolemasta, urasta, palkinnoista ja keskeisistä sarjoista.\"\n}",
+  "article": {
+    "title": "Televisiokomedioiden ohjaajalegenda James Burrows on kuollut 85-vuotiaana",
+    "description": "Cheers-sarjan toinen luoja ja yli tuhat televisiojaksoa ohjannut James Burrows on kuollut 85-vuotiaana. Hänen uransa ulottui yli viidelle vuosikymmenelle ja useisiin yhdysvaltalaisen komedian tunnetuimpiin sarjoihin.",
+    "link": "https://www.bbc.com/news/articles/ce8k07x523eo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-20T00:23:46+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "67ef1c791867f041fea27c519dbdc658",
+    "_url_hash": "790fcec9f163f1b3e980e97683af8f5c06708891a502e575b8dd6234fb57a457",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nJames Burrows, legendary director of some of America's most-loved sitcoms, has died aged 85.\n\nBest-known as co-creator of the sitcom Cheers, Burrows directed more than 1,000 episodes of other TV comedy classics including Friends, Big Bang Theory, and Will and Grace.\n\nAttorney Tom Hoberman confirmed Burrows' death \"with great sadness\" to CBS News, the BBC's US partner.\n\nIn a career spanning more than 50 years, Burrows won 11 Emmy Awards and five Directors Guild of America Awards.\n\nIn a statement shared with US outlet People, his family said: \"We celebrate the extraordinary life and enduring legacy of James 'Jimmy' Burrows, who passed away peacefully today surrounded by his loving family.\n\n\"For more than five decades, Burrows was one of the most influential and beloved directors in television history. As a legendary director, mentor, and creative force, he helped shape generations of comedy and brought immeasurable joy to audiences around the world.\"\n\nBorn in Los Angeles in 1940, Burrows spent much of his childhood in New York.\n\nAs a young adult, he attended the graduate programme of the Yale School of Drama, where he got his first experience of directing.\n\nAfter several years behind the camera, he co-created the sitcom Cheers alongside the brothers Glen and Les Charles. The show quickly became a 1980s TV hit in both the US and UK.\n\nThe Directors Guild of America, which awarded Burrows with a lifetime achievement award in television direction in 2015, described him as \"an incredibly generous colleague\" who shared his \"wisdom, and warm humor with his fellow Guild members and all he worked with\".\n\nHe was also nominated 48 times for a Primetime Emmy across his decades-long Hollywood career.\n\nActor Eric McCormack, who played Will in Will and Grace, shared a tribute on social media, saying Burrows left \"an incredible legacy\".\n\n\"The 800 lb gorilla of television comedy for fifty years, he was beloved by everyone, and has left not a mark but a footprint,\" he wrote.\n\nActress Beth Behrs, who worked with Burrows on the show 2 Broke Girls, shared some memories on social media: \"Dear Jimmy, I'll never forget @katdenningsss and I becoming absolutely convinced you hated us during rehearsals for the pilot of 2 Broke Girls. We marched up to your podium like two fourth-graders called into the principal's office and asked you point-blank. I'll never forget the belly laugh. 'Oh girls, of course not.'\"\n\nLisa Kudrow - best-known as Phoebe from Friends - wrote on Instagram: \"Thank\n\n---\n\n[Lähde: AOL]\nJames 'Jimmy' Burrows has passed away at the age of 85.\n\nThe eleven-time Emmy-winning television director's career spanned several decades, beginning with The Mary Tyler Moore Show. James went on to co-create the series Cheers and was also at the helm of every episode of the hit sitcom Will & Grace during its original run. The prolific television director was also behind the camera on popular shows like Friends, The Big Bang Theory, and 3rd Rock From the Sun.\n\nJames's family confirmed he \"passed away peacefully\" surrounded by loved ones in a statement shared with PEOPLE on Friday, June 19. This follows the news of Buffy and Ted Lasso star Anthony Head, who died at the age of 72, just months after losing his partner.\n\n• Fox News host sarcastically mocks Trump over Kid Rock and Vanilla Ice fandom\n\n• Michael Jackson's harrowing autopsy reveals grim tattoo detail\n\nJames kicked off his prolific television career on the groundbreaking program The Mary Tyler Moore Show in 1974. He won his first Primetime Emmy Award in 1980 for directing episodes of the show Taxi and would go on to win 10 more times, including for directing the pilot episode of the Cheers spinoff Frasier in 1993.\n\nIn 2025, James served as executive producer and directed all 10 episodes of the sitcom Mid-Century Modern starring Nathan Lane before Hulu announced the show would not return for a second season.\n\nJames also famously played a fictionalized version of himself in the HBO comedy series The Comeback, alongside Friends star Lisa Kudrow, who once called him \"the pinnacle of TV comedy.\"\n\nIn their statement, James's family told PEOPLE, \"For more than five decades, Burrows was one of the most influential and beloved directors in television history. As a legendary director, mentor, and creative force, he helped shape generations of comedy and brought immeasurable joy to audiences around the world.\"\n\nThe statement continued, \"But beyond his remarkable achievements, Burrows will be remembered for something even greater: his kindness, generosity, and unwavering belief in the people around him. He possessed a rare ability to make everyone better and was known for remembering every person he met by name, making colleagues at every level feel seen, valued, and appreciated.\"\n\nHe was described by family as a \"devoted husband, father, and grandfather\" who will be \"profoundly missed and forever remembered\" by those who knew him.\n\nThe statement concluded, \"His influence will continue to be felt for generatio\n\n---\n\n[Lähde: Daily Jang]\nOn Friday, June 19, PEOPLE reported that the legendary American director, who helmed famous sitcom Cheers and Friends’ 2012 documentary short Friends: Friends from the Start, died at the age of 85 while surrounded by his loved one.\n\nIn a statement issued by Burrows family, they stated, \"We celebrate the extraordinary life and enduring legacy of James 'Jimmy' Burrows, who passed away peacefully today surrounded by his loving family.”\n\n\"For more than five decades, Burrows was one of the most influential and beloved directors in television history. As a legendary director, mentor, and creative force, he helped shape generations of comedy and brought immeasurable joy to audiences around the world,” the statement continued.\n\nThe late director’s family went on to note that James Burrows directed more than 1,000 TV episodes during his career and played a key role in creating hit shows such as The Mary Tyler Moore Show, Taxi, Cheers, Frasier, Friends, Will & Grace, and The Big Bang Theory.\n\nIt...",
+    "research_source": "multi",
+    "summary": "Cheers-sarjan toinen luoja ja yli tuhat televisiojaksoa ohjannut James Burrows on kuollut 85-vuotiaana. Hänen uransa ulottui yli viidelle vuosikymmenelle ja useisiin yhdysvaltalaisen komedian tunnetuimpiin sarjoihin.",
+    "content": "James ”Jimmy” Burrows, yhdysvaltalaisen televisiokomedian vaikutusvaltaisimpiin ohjaajiin kuulunut tekijä, on kuollut 85-vuotiaana. Burrows tunnettiin erityisesti Cheers-sarjan toisena luojana sekä ohjaajana, jonka uraan mahtui yli tuhat televisiojaksoa ja useita komediasarjojen klassikoita yli viiden vuosikymmenen ajalta.\n\n## Pitkä ura komedian ytimessä\n\nBurrowsin kuoleman vahvisti asianajaja Tom Hoberman CBS Newsille, joka on BBC:n yhdysvaltalainen kumppani. Perheen mukaan Burrows kuoli rauhallisesti läheistensä ympäröimänä. Lausunnossaan perhe kuvasi hänen elämäänsä poikkeukselliseksi ja korosti hänen jättämäänsä pysyvää perintöä.\n\nBurrowsin ura kesti yli 50 vuotta ja alkoi lähdeaineiston mukaan The Mary Tyler Moore Show -sarjan parissa. Myöhemmin hänen työnsä yhdistettiin useisiin yhdysvaltalaisen televisiokomedian tunnetuimpiin nimiin, kuten Taxi, Cheers, Frasier, Friends, Will & Grace, The Big Bang Theory ja 3rd Rock From the Sun.\n\n## Cheers, Friends ja Will & Grace\n\nErityisen vahvasti Burrowsin nimi liitetään Cheersiin, jonka hän oli mukana luomassa. Hän ohjasi myös Will & Grace -sarjan kaikki alkuperäisen esityskauden jaksot. Lisäksi hän työskenteli kameran takana Friendsissä ja The Big Bang Theoryssa, jotka kuuluivat hänen laajaan komediauraansa.\n\nLähdeaineiston mukaan Burrowsilla oli keskeinen rooli useiden hittisarjojen synnyssä tai toteutuksessa. Hänen työnsä ulottui sarjoihin, joita on pidetty yhdysvaltalaisen tilannekomedian tunnetuimpina esimerkkeinä eri vuosikymmeniltä.\n\n## Palkittu ja tuottelias tekijä\n\nBurrows voitti uransa aikana 11 Emmy-palkintoa ja viisi Directors Guild of America -palkintoa. Hänen poikkeuksellinen tuotteliaisuutensa näkyi erityisesti siinä, että hän ohjasi yli tuhat televisiojaksoa, mikä teki hänestä yhden alansa tunnetuimmista ohjaajista.\n\nBurrowsin kuolemasta kerrottiin perheen lausunnossa, joka jaettiin People-julkaisulle perjantaina 19. kesäkuuta. Lähdeaineistossa häntä kuvataan tekijäksi, jonka ura kattoi useita vuosikymmeniä ja jonka kädenjälki näkyi monessa amerikkalaisen televisiokomedian tunnetussa sarjassa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "james burrows",
+      "televisio",
+      "komediasarjat",
+      "cheers",
+      "friends"
+    ],
+    "summary_bullets": [
+      "James Burrows on kuollut 85-vuotiaana.",
+      "Hän oli mukana luomassa Cheers-sarjaa ja ohjasi yli tuhat televisiojaksoa.",
+      "Burrows voitti urallaan 11 Emmy-palkintoa ja viisi Directors Guild of America -palkintoa."
+    ],
+    "key_points": [
+      "James Burrows on kuollut 85-vuotiaana.",
+      "Hän oli mukana luomassa Cheers-sarjaa ja ohjasi yli tuhat televisiojaksoa.",
+      "Burrows voitti urallaan 11 Emmy-palkintoa ja viisi Directors Guild of America -palkintoa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketin lähdeaineistossa yhtenevästi esitettyihin tietoihin Burrowsin kuolemasta, urasta, palkinnoista ja keskeisistä sarjoista.",
+    "source_text": "James Burrows, legendary director of some of America's most-loved sitcoms, has died aged 85. Best-known as co-creator of the sitcom Cheers, Burrows directed more than 1,000 episodes of other TV comedy classics including Friends, Big Bang Theory, and Will and Grace. Attorney Tom Hoberman confirmed Burrows' death \"with great sadness\" to CBS News, the BBC's US partner. In a career spanning more than 50 years, Burrows won 11 Emmy Awards and five Directors Guild of America Awards. In a statement shared with US outlet People, his family said: \"We celebrate the extraordinary life and enduring legacy of James 'Jimmy' Burrows, who passed away peacefully today surrounded by his loving family.\n\nBest-known as co-creator of sitcom Cheers, Burrows directed more than 1,000 episodes of other classics including the Big Bang Theory and Will and Grace.\n\nThe late director’s family went on to note that James Burrows directed more than 1,000 TV episodes during his career and played a key role in creating hit shows such as The Mary Tyler Moore Show, Taxi, Cheers, Frasier, Friends, Will & Grace, and The Big Bang Theory. It...\n\nJames 'Jimmy' Burrows has passed away at the age of 85. The eleven-time Emmy-winning television director's career spanned several decades, beginning with The Mary Tyler Moore Show. James went on to co-create the series Cheers and was also at the helm of every episode of the hit sitcom Will & Grace during its original run. The prolific television director was also behind the camera on popular shows like Friends, The Big Bang Theory, and 3rd Rock From the Sun. James's family confirmed he \"passed away peacefully\" surrounded by loved ones in a statement shared with PEOPLE on Friday, June 19. This follows the news of Buffy and Ted Lasso star Anthony Head, who died at the age of 72, just months after losing his partner. • Fox News host sarcastically mocks Trump over Kid Rock and Vanilla Ice fandom",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260620T044208Z_deabf90e82",
+    "monica_repair": {
+      "repair_attempt": "source_backed_near_short",
+      "repair_attempted_at": "2026-06-20T04:45:26.697598+00:00",
+      "repair_trigger": "pre_repair_word_count=214; selected_source_words=322; selected_source_blocks=4",
+      "pre_repair_word_count": 214,
+      "pre_repair_lead_word_count": 34,
+      "post_repair_word_count": 250,
+      "post_repair_lead_word_count": 34,
+      "selected_source_words_at_repair": 322,
+      "selected_source_blocks_at_repair": 4,
+      "source_words": 322,
+      "source_blocks": 4,
+      "repair_added_word_count": 36,
+      "repair_result": "published",
+      "repair_rejection_reason": "",
+      "source_block_ids_used_for_repair": [
+        "1:BBC World:6233e9e8c7",
+        "2:BBC World:3713e4c253",
+        "3:Daily Jang:1907e38028",
+        "4:AOL:822324e154"
+      ],
+      "final_issues": [],
+      "recovered": true
+    },
+    "image": "https://images.unsplash.com/photo-1581092802858-671713398c0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxKYW1lcyUyMEJ1cnJvd3MlMjB0ZWxldmlzaW9uJTIwZGlyZWN0b3J8ZW58MXwwfHx8MTc4MTkzMDg4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1581092802858-671713398c0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxKYW1lcyUyMEJ1cnJvd3MlMjB0ZWxldmlzaW9uJTIwZGlyZWN0b3J8ZW58MXwwfHx8MTc4MTkzMDg4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Televisiokomedioiden ohjaajalegenda James Burrows on kuollut 85-vuotiaana",
+    "image_credit": "Photo by ThisisEngineering on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/man-in-black-and-white-checkered-dress-shirt-sitting-on-chair-nU9n0DioLLc?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "repair": {
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-20T04:45:26.697598+00:00",
+    "repair_trigger": "pre_repair_word_count=214; selected_source_words=322; selected_source_blocks=4",
+    "pre_repair_word_count": 214,
+    "pre_repair_lead_word_count": 34,
+    "post_repair_word_count": 250,
+    "post_repair_lead_word_count": 34,
+    "selected_source_words_at_repair": 322,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 322,
+    "source_blocks": 4,
+    "repair_added_word_count": 36,
+    "repair_result": "published",
+    "repair_rejection_reason": "",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:6233e9e8c7",
+      "2:BBC World:3713e4c253",
+      "3:Daily Jang:1907e38028",
+      "4:AOL:822324e154"
+    ],
+    "final_issues": [],
+    "recovered": true
+  },
+  "image_enriched_at": "2026-06-20T04:48:06.148207+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1581092802858-671713398c0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxKYW1lcyUyMEJ1cnJvd3MlMjB0ZWxldmlzaW9uJTIwZGlyZWN0b3J8ZW58MXwwfHx8MTc4MTkzMDg4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1581092802858-671713398c0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxKYW1lcyUyMEJ1cnJvd3MlMjB0ZWxldmlzaW9uJTIwZGlyZWN0b3J8ZW58MXwwfHx8MTc4MTkzMDg4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-20T04:49:40.509203+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-20-televisiokomedioiden-ohjaajalegenda-james-burrows-on-kuollut.md"
+  ]
+}
