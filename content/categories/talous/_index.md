@@ -1,6 +1,6 @@
 ---
 title: "Talous"
-description: "Seuraa korkoja, hintoja, yrityksiä ja talouspolitiikkaa yhdessä näkymässä. Talousuutiset tiiviisti lukijalle, joka haluaa nopeasti ymmärtää päätösten vaikutukset."
+description: "Korot, hinnat, yritykset ja päätökset. Talousuutiset tiiviisti yhdessä näkymässä."
 og_image: "/images/og-talous.png"
 keywords:
   - "talousuutiset"

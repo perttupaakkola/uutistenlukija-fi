@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/environment/2026/jun/20/europe-backs-critical-minerals-mines-water-stressed-regions"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
