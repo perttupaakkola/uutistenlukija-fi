@@ -1,0 +1,101 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-20T19:51:01.311580+00:00",
+  "digest": "af08cad5eb",
+  "packet": {
+    "packet_id": "20260620T195101Z_af08cad5eb",
+    "created_at": "2026-06-20T19:51:01Z",
+    "headline_seed": "In the Weights is your new AI-centric vanity search",
+    "description_seed": "So ... what's your In the Weights score?",
+    "link": "https://techcrunch.com/2026/06/20/in-the-weights-is-your-new-ai-centric-vanity-search/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/20/in-the-weights-is-your-new-ai-centric-vanity-search/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.75,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "In the Weights is your new AI-centric vanity search"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "Anyone who’s Googled themselves recently knows that it doesn’t quite hit the way it used to. Sure, there’s everything going on with Google search itself, but there’s also an inescapable feeling that web search isn’t the canonical source of information that it used to be, with just as many people learning about you and me from chatbots. Thomas Dimson and Joey Flynn had a similar feeling, leading them to create In the Weights. The “weights” in question are the numerical parameters that shape an AI model’s training and output, so the website purports to measure how well “a model is able to recall someone without using tools like web search.”",
+        "word_count": 110,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "So ... what's your In the Weights score?",
+        "word_count": 8,
+        "keyword_overlap": 4,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Anyone who’s Googled themselves recently knows that it doesn’t quite hit the way it used to. Sure, there’s everything going on with Google search itself, but there’s also an inescapable feeling that web search isn’t the canonical source of information that it used to be, with just as many people learning about you and me from chatbots. Thomas Dimson and Joey Flynn had a similar feeling, leading them to create In the Weights. The “weights” in question are the numerical parameters that shape an AI model’s training and output, so the website purports to measure how well “a model is able to recall someone without using tools like web search.”\n\nSo ... what's your In the Weights score?",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 118,
+      "selected_blocks": 2,
+      "selected_source_words": 118,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "In the Weights is your new AI-centric vanity search",
+      "description": "So ... what's your In the Weights score?",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "In the Weights is your new AI-centric vanity search",
+    "description": "So ... what's your In the Weights score?",
+    "link": "https://techcrunch.com/2026/06/20/in-the-weights-is-your-new-ai-centric-vanity-search/",
+    "published": "2026-06-20T19:41:11+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "518982567c3c94fd1881091c4f02fe41",
+    "_url_hash": "d9f773276eb361a0e99c9d100f7f4da67dec746157df120fb2e554dd6d3214a8",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nAnyone who’s Googled themselves recently knows that it doesn’t quite hit the way it used to. Sure, there’s everything going on with Google search itself, but there’s also an inescapable feeling that web search isn’t the canonical source of information that it used to be, with just as many people learning about you and me from chatbots.\n\nThomas Dimson and Joey Flynn had a similar feeling, leading them to create In the Weights. The “weights” in question are the numerical parameters that shape an AI model’s training and output, so the website purports to measure how well “a model is able to recall someone without using tools like web search.”",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-20T19:53:22.125770+00:00",
+  "failure": "Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täytesisältöä tai lisäoletuksia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260620T195101Z_af08cad5eb\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täytesisältöä tai lisäoletuksia.\"}"
+}

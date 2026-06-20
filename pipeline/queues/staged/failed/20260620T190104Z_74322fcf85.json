@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-20T19:01:04.722919+00:00",
+  "digest": "74322fcf85",
+  "packet": {
+    "packet_id": "20260620T190104Z_74322fcf85",
+    "created_at": "2026-06-20T19:01:04Z",
+    "headline_seed": "MM-seuranta | Hollanti murskasi Ruotsin MM-kisoissa, kuninkaalliset katsomossa",
+    "description_seed": "HS seuraa kisapäivää.",
+    "link": "https://www.hs.fi/urheilu/art-2000012091715.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.hs.fi/urheilu/art-2000012091715.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "MM-seuranta | Hollanti murskasi Ruotsin MM-kisoissa, kuninkaalliset katsomossa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 119,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "ksml.fi",
+        "HS Tuoreimmat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "MM-seuranta | Hollanti murskasi Ruotsin MM-kisoissa, kuninkaalliset katsomossa",
+      "description": "HS seuraa kisapäivää.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "MM-seuranta | Hollanti murskasi Ruotsin MM-kisoissa, kuninkaalliset katsomossa",
+    "description": "HS seuraa kisapäivää.",
+    "link": "https://www.hs.fi/urheilu/art-2000012091715.html",
+    "published": "2026-06-20T18:57:00+00:00",
+    "source": "HS Tuoreimmat",
+    "source_domain": "hs.fi",
+    "language": "fi",
+    "fingerprint": "56b54b765157a428c0cc14d617a5edb8",
+    "_url_hash": "0401e8a30b8dc05588d48307d7206e92d8381abd87e9d1aed92f20c834b63cd4",
+    "source_tier": 1,
+    "category_hint": "Uutiset",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: ksml.fi]\nNorja näytti voimansa, kun se kukisti Oslossa pelatussa maaottelussa Ruotsin näytöstyyliin maanantaina. Jalkapallon MM-kisoihin valmistautuvien joukkueiden kohtaamisessa kotijoukkue Norja oli ylivoimainen ja voitti ottelun 3–1.\n\nKotijoukkue iski taululle 3–0-lukemat, kun ottelua oli pelattu 37 minuuttia. Maaleista vastasivat Englannin Valioliigan Crystal Palacen hyökkääjä Jorgen Strand Larsen kahdella osumallaan sekä Saksan Bundesliigan RB Leipzigin kärkipelaaja Antonio Nusa yhdellä osumallaan.\n\nRuotsin kavennuksen iski toisella puoliajalla 76. minuutilla Valioliigan Liverpoolin tähtihyökkääjä Alexander Isak. Saman liigan Manchester Cityn supertähti, Norjan Erling Haaland ei pelannut ottelussa.\n\nFlashscore-palvelun tilastojen mukaan Norja vei maalipaikat ottelussa 22–9. Maaliodottamaa kotijoukkue loi 2,43 maalin edestä, kun Ruotsi kykeni luomaan sitä vain 0,49 maalin edestä.\n\nJalkapallon MM-kisat 2026 pelataan 11. kesäkuuta – 19. heinäkuuta Yhdysvalloissa, Kanadassa ja Meksikossa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-20T19:03:15.768439+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja yksityiskohtia julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260620T190104Z_74322fcf85\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja yksityiskohtia julkaistavan artikkelin kirjoittamiseen.\"}"
+}

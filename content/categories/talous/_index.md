@@ -1,6 +1,6 @@
 ---
 title: "Talous"
-description: "Korot, hinnat, yritykset ja päätökset. Talousuutiset tiiviisti yhdessä näkymässä."
+description: "Korot, hinnat ja yritykset."
 og_image: "/images/og-talous.png"
 keywords:
   - "talousuutiset"
