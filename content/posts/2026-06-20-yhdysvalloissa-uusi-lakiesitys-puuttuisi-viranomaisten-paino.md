@@ -43,7 +43,6 @@ keywords:
 source_name: "Hacker News Best"
 source_url: "https://www.eff.org/deeplinks/2026/06/new-bill-takes-aim-government-pressure-silence-lawful-online-speech"
 source_domain: "hnrss.org"
-briefing: true
 draft: false
 ---
 
