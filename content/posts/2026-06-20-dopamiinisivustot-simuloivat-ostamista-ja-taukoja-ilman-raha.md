@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/tallaisia-ovat-verkon-dopamiinisivustot-voit-tehda-mielitekoja-maksamatta-penniakaan/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
