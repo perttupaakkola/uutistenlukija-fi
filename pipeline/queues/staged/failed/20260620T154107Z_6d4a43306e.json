@@ -1,0 +1,190 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-20T15:41:07.817880+00:00",
+  "digest": "6d4a43306e",
+  "packet": {
+    "packet_id": "20260620T154107Z_6d4a43306e",
+    "created_at": "2026-06-20T15:41:07Z",
+    "headline_seed": "Bolivian president declares state of emergency",
+    "description_seed": "The move comes after weeks of anti-government protests that have caused a shortage of basic goods in Bolivia.",
+    "link": "https://www.bbc.com/news/articles/cr47wn92zdgo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "Pakistan Today",
+      "BBC World",
+      "Pakistan Today"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cr47wn92zdgo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Bolivian president declares state of emergency"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Bolivian President Rodrigo Paz has declared a state of emergency after weeks of protests demanding his resignation. The move would give Paz broader powers to clear road blocks by demonstrators, which have caused serious shortages of basic goods and paralysed large parts of the nation. In a statement, the president said the state of emergency would \"free the country's roads\" and \"restore\" normalcy. Under law, Bolivia's Congress must approve or reject the measure within 72 hours of the declaration. The blockades, led by miners, farmers and indigenous groups, are part of protests which started at the end of April. Several people have died and hundreds have been arrested during the unrest. Protest groups are calling for fuel subsidies to be reinstated and a rollback of austerity measures, as well as demanding Paz's resignation.",
+        "word_count": 133,
+        "keyword_overlap": 13,
+        "strong_overlap": 6
+      },
+      {
+        "source": "Pakistan Today",
+        "source_type": "research",
+        "text": "The move came hours after Paz signed a deal with the Bolivian Workers’ Central, or COB, which had launched the protest campaign in early May in opposition to his economic plans. The protests were triggered by proposals put forward by Paz to address Bolivia’s worst economic crisis in 40 years. Demonstrators, including blue-collar workers, farmers, miners, truck drivers and teachers, had demanded that the centre-right president reverse his economic reforms and step down. In a televised address, Paz said the government had sought talks before resorting to emergency powers. Paz has been in office for seven months, ending two decades of socialist rule in Bolivia. Road blockades set up during the protests have disrupted transport across the country and caused shortages of fuel, food and medicine in major cities, including La Paz.",
+        "word_count": 132,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The move comes after weeks of anti-government protests that have caused a shortage of basic goods in Bolivia.",
+        "word_count": 18,
+        "keyword_overlap": 13,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Pakistan Today",
+        "source_type": "research",
+        "text": "Bolivian President Rodrigo Paz has imposed a state of emergency after weeks of road blockades and protests seeking his resignation. The move came despite a government deal with the main union federation, as some groups continued demonstrations. LA PAZ: Bolivian President Rodrigo Paz declared a nationwide state of emergency on Saturday after more than six weeks of road blockades and demonstrations calling for his resignation, even as the government secured an agreement with the country’s main trade union federation aimed at ending the unrest.",
+        "word_count": 84,
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Bolivian President Rodrigo Paz has declared a state of emergency after weeks of protests demanding his resignation. The move would give Paz broader powers to clear road blocks by demonstrators, which have caused serious shortages of basic goods and paralysed large parts of the nation. In a statement, the president said the state of emergency would \"free the country's roads\" and \"restore\" normalcy. Under law, Bolivia's Congress must approve or reject the measure within 72 hours of the declaration. The blockades, led by miners, farmers and indigenous groups, are part of protests which started at the end of April. Several people have died and hundreds have been arrested during the unrest. Protest groups are calling for fuel subsidies to be reinstated and a rollback of austerity measures, as well as demanding Paz's resignation.\n\nThe move came hours after Paz signed a deal with the Bolivian Workers’ Central, or COB, which had launched the protest campaign in early May in opposition to his economic plans. The protests were triggered by proposals put forward by Paz to address Bolivia’s worst economic crisis in 40 years. Demonstrators, including blue-collar workers, farmers, miners, truck drivers and teachers, had demanded that the centre-right president reverse his economic reforms and step down. In a televised address, Paz said the government had sought talks before resorting to emergency powers. Paz has been in office for seven months, ending two decades of socialist rule in Bolivia. Road blockades set up during the protests have disrupted transport across the country and caused shortages of fuel, food and medicine in major cities, including La Paz.\n\nThe move comes after weeks of anti-government protests that have caused a shortage of basic goods in Bolivia.\n\nBolivian President Rodrigo Paz has imposed a state of emergency after weeks of road blockades and protests seeking his resignation. The move came despite a government deal with the main union federation, as some groups continued demonstrations. LA PAZ: Bolivian President Rodrigo Paz declared a nationwide state of emergency on Saturday after more than six weeks of road blockades and demonstrations calling for his resignation, even as the government secured an agreement with the country’s main trade union federation aimed at ending the unrest.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 894,
+      "selected_blocks": 4,
+      "selected_source_words": 367,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "CBC.ca",
+        "Pakistan Today",
+        "Pakistan Today",
+        "Pakistan Today",
+        "Pakistan Today",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "Pakistan Today",
+        "BBC World",
+        "Pakistan Today"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Bolivian president declares state of emergency",
+      "description": "The move comes after weeks of anti-government protests that have caused a shortage of basic goods in Bolivia.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Bolivian president declares state of emergency",
+    "description": "The move comes after weeks of anti-government protests that have caused a shortage of basic goods in Bolivia.",
+    "link": "https://www.bbc.com/news/articles/cr47wn92zdgo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-20T15:27:09+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "0dce0e6599d96c7f7c9ade7c3518b521",
+    "_url_hash": "403ca756302702b91e8346acdd85943af5d398c98c5adcac69ff2c4256bf922d",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nBolivian President Rodrigo Paz has declared a state of emergency after weeks of protests demanding his resignation.\n\nThe move would give Paz broader powers to clear road blocks by demonstrators, which have caused serious shortages of basic goods and paralysed large parts of the nation.\n\nIn a statement, the president said the state of emergency would \"free the country's roads\" and \"restore\" normalcy.\n\nUnder law, Bolivia's Congress must approve or reject the measure within 72 hours of the declaration.\n\nThe blockades, led by miners, farmers and indigenous groups, are part of protests which started at the end of April.\n\nSeveral people have died and hundreds have been arrested during the unrest.\n\nProtest groups are calling for fuel subsidies to be reinstated and a rollback of austerity measures, as well as demanding Paz's resignation.\n\nThe president has said the crisis is an organised attempt to destabilise the country.\n\n\"Bolivians cannot continue to be hostages of blockades that prevent working, studying, receiving medical attention, supplying themselves, and bringing sustenance to their homes,\" he said in a social media post on Saturday.\n\nPaz's announcement came hours after he unveiled that a deal had been struck with the country's main union, the Bolivian Workers' Confederation.\n\nHowever, some Indigenous groups have said they will continue to protest, AFP reported, with roadblocks remaining in place.\n\nJournalists reported seeing police and military personnel in main squares on Saturday.\n\nProtests started at the end of April, triggered by a land reform proposed by Paz. Critics argued the proposals would make it easier for large landowners to buy up small properties.\n\nPaz has since scrapped the reform. But farmers have been joined by other groups venting grievances over other measures, like cuts to long-standing fuel subsidies.\n\nThere has also been backlash to proposed changes to Bolivia's constitution.\n\nThe president, a centre-right politician elected last October, says these are needed to open up the economy to private investment. But demonstrators argue the changes would undermine oversight of natural resources and other key economic areas.\n\nPaz has accused the left-wing former president, Evo Morales, of orchestrating the protests, which the ex-leader has denied.\n\nPaz has tried to defuse the widespread protests by reshuffling his cabinet, slashing his salary and that of his ministers in half, and announcing the creation of a council to negotiate with sector\n\n---\n\n[Lähde: CBC.ca]\nReuters | Posted: June 20, 2026 10:28 AM | Last Updated: 5 hours ago\n\nBlockades have cut off key roads, stranded trucks and choked essential supplies\n\nCaption: Police fire tear gas at anti-government protesters blocking a highway in Vinto, Bolivia, on June 8. (Dico Soliz/The Associated Press)\n\nCaption: Police detain demonstrators during an anti-government protest in Vinto, Bolivia, on June 8. (Dico Soliz/The Associated Press)\n\nCaption: A customer looks at the high price of meat in a supermarket, amid prolonged road blockades that have disrupted the supply of food, fuel and medicine, in La Paz, Bolivia, on Thursday. (Claudia Morales/Reuters)\n\n---\n\n[Lähde: Pakistan Today]\nBolivian President Rodrigo Paz has imposed a state of emergency after weeks of road blockades and protests seeking his resignation. The move came despite a government deal with the main union federation, as some groups continued demonstrations.\n\nLA PAZ: Bolivian President Rodrigo Paz declared a nationwide state of emergency on Saturday after more than six weeks of road blockades and demonstrations calling for his resignation, even as the government secured an agreement with the country’s main trade union federation aimed at ending the unrest.\n\nThe move came hours after Paz signed a deal with the Bolivian Workers’ Central, or COB, which had launched the protest campaign in early May in opposition to his economic plans. The protests were triggered by proposals put forward by Paz to address Bolivia’s worst economic crisis in 40 years. Demonstrators, including blue-collar workers, farmers, miners, truck drivers and teachers, had demanded that the centre-right president reverse his economic reforms and step down.\n\nIn a televised address, Paz said the government had sought talks before resorting to emergency powers.\n\nPaz has been in office for seven months, ending two decades of socialist rule in Bolivia. Road blockades set up during the protests have disrupted transport across the country and caused shortages of fuel, food and medicine in major cities, including La Paz.\n\nThe government reached its agreement with COB on Friday after negotiations that began last week. Mario Argollo, the federation’s leader, announced that protest action would end following the deal.\n\nPaz defended the accord by saying, dialogue is stronger than force itself.\n\nUnder the agreement, the government pledged not to privatise public companies, one of the unions’ central demands. It also agreed to form working groups made up of ministers and union leaders to address the protesters’ grievances. According to Argollo, the government has 90 days to show progress on several union demands.\n\nDespite the agreement with COB, not all sectors were covered by it, and some unions kept their protests in place. Labour groups and coca growers in the Chapare region, a political stronghold of former president Evo Morales, said they would continue agitation.\n\nAntonio Mallku, who leads one of the main workers’ unions, told Unitel that his group intended to intensify the campaign.\n\nHe added that Indigenous communities were unhappy with the settlement, saying:\n\nAlthough the number of blockades has fallen from ",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-20T15:44:54.459078+00:00",
+  "failure": "content too short: 242 words",
+  "payload": {
+    "packet_id": "20260620T154107Z_6d4a43306e",
+    "title": "Boliviaan julistettiin poikkeustila viikkoja jatkuneiden tiesulkujen jälkeen",
+    "summary": "Bolivian presidentti Rodrigo Paz on julistanut maahan poikkeustilan laajojen hallituksenvastaisten protestien ja tiesulkujen jälkeen. Levottomuudet ovat aiheuttaneet pulaa polttoaineesta, ruoasta ja lääkkeistä sekä lamauttaneet kuljetuksia eri puolilla maata.",
+    "content": "Bolivian presidentti Rodrigo Paz on julistanut maahan valtakunnallisen poikkeustilan viikkoja jatkuneiden hallituksenvastaisten mielenosoitusten ja tiesulkujen jälkeen. Protestit ovat kohdistuneet presidentin talousuudistuksiin ja vaatimuksiin hänen erostaan, ja ne ovat aiheuttaneet vakavia häiriöitä liikenteeseen sekä pulaa perushyödykkeistä eri puolilla Boliviaa.\n\n## Tiesulut ovat vaikeuttaneet arkea\n\nPoikkeustilan tarkoituksena on antaa hallitukselle laajemmat valtuudet purkaa mielenosoittajien asettamia tiesulkuja. Pazin mukaan toimilla pyritään vapauttamaan maan tiet ja palauttamaan normaali tilanne. Bolivian lain mukaan kongressin on hyväksyttävä tai hylättävä poikkeustilatoimi 72 tunnin kuluessa sen julistamisesta.\n\nTiesulut ovat häirinneet kuljetuksia eri puolilla maata ja halvaannuttaneet laajoja alueita. Suurissa kaupungeissa, kuten La Pazissa, on raportoitu pulaa polttoaineesta, ruoasta ja lääkkeistä. Mielenosoituksissa on ollut mukana muun muassa kaivostyöläisiä, maanviljelijöitä, alkuperäiskansojen ryhmiä, rekkakuljettajia, opettajia ja muita työntekijöitä.\n\nLevottomuuksissa on kuollut useita ihmisiä, ja satoja on pidätetty. Mielenosoittajat vaativat polttoainetukien palauttamista, säästötoimien perumista ja presidentin eroa.\n\n## Taustalla syvä talouskriisi\n\nProtestit alkoivat huhti-toukokuun vaihteessa vastalauseena Pazin taloussuunnitelmille. Niiden taustalla ovat ehdotukset, joilla presidentti on pyrkinyt vastaamaan Bolivian pahimmaksi kuvattuun talouskriisiin neljään vuosikymmeneen. Paz on ollut virassa seitsemän kuukautta, ja hänen kautensa päätti kaksi vuosikymmentä kestäneen sosialistihallinnon jakson maassa.\n\nPoikkeustila julistettiin vain tunteja sen jälkeen, kun hallitus oli tehnyt sopimuksen Bolivian työntekijöiden keskusjärjestön COB:n kanssa. Järjestö oli aloittanut protestikampanjan toukokuun alussa vastustaakseen presidentin talouslinjaa. Sopimuksen tarkoituksena oli rauhoittaa tilannetta, mutta osa ryhmistä jatkoi mielenosoituksia.\n\nPaz sanoi televisiopuheessaan, että hallitus oli pyrkinyt neuvottelemaan ennen turvautumistaan poikkeusvaltuuksiin. Hallituksen päätös vie tilanteen seuraavaksi kongressin käsiteltäväksi, samalla kun tiesulkujen purkaminen ja perushyödykkeiden saatavuuden palauttaminen ovat poikkeustilan keskeisiä tavoitteita.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Bolivia",
+      "Rodrigo Paz",
+      "poikkeustila",
+      "mielenosoitukset",
+      "talouskriisi"
+    ],
+    "summary_bullets": [
+      "Bolivian presidentti Rodrigo Paz julisti maahan poikkeustilan viikkoja jatkuneiden protestien jälkeen.",
+      "Tiesulut ovat aiheuttaneet pulaa polttoaineesta, ruoasta ja lääkkeistä muun muassa La Pazissa.",
+      "Mielenosoittajat vaativat talousuudistusten perumista, polttoainetukien palauttamista ja presidentin eroa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.96,
+    "journalist_note": "Artikkeli perustuu packetin lähdeaineistossa toistuviin tietoihin poikkeustilasta, protestien syistä, tiesulkujen vaikutuksista ja kongressin 72 tunnin käsittelyvaatimuksesta. Luokitus korjattu ulkomaanuutiseksi aiheen sijainnin perusteella."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260620T154107Z_6d4a43306e\",\n  \"title\": \"Boliviaan julistettiin poikkeustila viikkoja jatkuneiden tiesulkujen jälkeen\",\n  \"summary\": \"Bolivian presidentti Rodrigo Paz on julistanut maahan poikkeustilan laajojen hallituksenvastaisten protestien ja tiesulkujen jälkeen. Levottomuudet ovat aiheuttaneet pulaa polttoaineesta, ruoasta ja lääkkeistä sekä lamauttaneet kuljetuksia eri puolilla maata.\",\n  \"content\": \"Bolivian presidentti Rodrigo Paz on julistanut maahan valtakunnallisen poikkeustilan viikkoja jatkuneiden hallituksenvastaisten mielenosoitusten ja tiesulkujen jälkeen. Protestit ovat kohdistuneet presidentin talousuudistuksiin ja vaatimuksiin hänen erostaan, ja ne ovat aiheuttaneet vakavia häiriöitä liikenteeseen sekä pulaa perushyödykkeistä eri puolilla Boliviaa.\\n\\n## Tiesulut ovat vaikeuttaneet arkea\\n\\nPoikkeustilan tarkoituksena on antaa hallitukselle laajemmat valtuudet purkaa mielenosoittajien asettamia tiesulkuja. Pazin mukaan toimilla pyritään vapauttamaan maan tiet ja palauttamaan normaali tilanne. Bolivian lain mukaan kongressin on hyväksyttävä tai hylättävä poikkeustilatoimi 72 tunnin kuluessa sen julistamisesta.\\n\\nTiesulut ovat häirinneet kuljetuksia eri puolilla maata ja halvaannuttaneet laajoja alueita. Suurissa kaupungeissa, kuten La Pazissa, on raportoitu pulaa polttoaineesta, ruoasta ja lääkkeistä. Mielenosoituksissa on ollut mukana muun muassa kaivostyöläisiä, maanviljelijöitä, alkuperäiskansojen ryhmiä, rekkakuljettajia, opettajia ja muita työntekijöitä.\\n\\nLevottomuuksissa on kuollut useita ihmisiä, ja satoja on pidätetty. Mielenosoittajat vaativat polttoainetukien palauttamista, säästötoimien perumista ja presidentin eroa.\\n\\n## Taustalla syvä talouskriisi\\n\\nProtestit alkoivat huhti-toukokuun vaihteessa vastalauseena Pazin taloussuunnitelmille. Niiden taustalla ovat ehdotukset, joilla presidentti on pyrkinyt vastaamaan Bolivian pahimmaksi kuvattuun talouskriisiin neljään vuosikymmeneen. Paz on ollut virassa seitsemän kuukautta, ja hänen kautensa päätti kaksi vuosikymmentä kestäneen sosialistihallinnon jakson maassa.\\n\\nPoikkeustila julistettiin vain tunteja sen jälkeen, kun hallitus oli tehnyt sopimuksen Bolivian työntekijöiden keskusjärjestön COB:n kanssa. Järjestö oli aloittanut protestikampanjan toukokuun alussa vastustaakseen presidentin talouslinjaa. Sopimuksen tarkoituksena oli rauhoittaa tilannetta, mutta osa ryhmistä jatkoi mielenosoituksia.\\n\\nPaz sanoi televisiopuheessaan, että hallitus oli pyrkinyt neuvottelemaan ennen turvautumistaan poikkeusvaltuuksiin. Hallituksen päätös vie tilanteen seuraavaksi kongressin käsiteltäväksi, samalla kun tiesulkujen purkaminen ja perushyödykkeiden saatavuuden palauttaminen ovat poikkeustilan keskeisiä tavoitteita.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Bolivia\",\n    \"Rodrigo Paz\",\n    \"poikkeustila\",\n    \"mielenosoitukset\",\n    \"talouskriisi\"\n  ],\n  \"summary_bullets\": [\n    \"Bolivian presidentti Rodrigo Paz julisti maahan poikkeustilan viikkoja jatkuneiden protestien jälkeen.\",\n    \"Tiesulut ovat aiheuttaneet pulaa polttoaineesta, ruoasta ja lääkkeistä muun muassa La Pazissa.\",\n    \"Mielenosoittajat vaativat talousuudistusten perumista, polttoainetukien palauttamista ja presidentin eroa.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.96,\n  \"journalist_note\": \"Artikkeli perustuu packetin lähdeaineistossa toistuviin tietoihin poikkeustilasta, protestien syistä, tiesulkujen vaikutuksista ja kongressin 72 tunnin käsittelyvaatimuksesta. Luokitus korjattu ulkomaanuutiseksi aiheen sijainnin perusteella.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260620T154107Z_6d4a43306e",
+    "category": "Kotimaa",
+    "selected_source_words": 367,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 242,
+    "issues": [
+      "content too short: 242 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Boliviaan julistettiin poikkeustila viikkoja jatkuneiden tiesulkujen jälkeen",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-20T15:44:54.458810+00:00",
+    "repair_trigger": "pre_repair_word_count=242; selected_source_words=367; selected_source_blocks=4",
+    "pre_repair_word_count": 242,
+    "pre_repair_lead_word_count": 38,
+    "post_repair_word_count": 242,
+    "post_repair_lead_word_count": 38,
+    "selected_source_words_at_repair": 367,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 367,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 242 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:fa615a5402",
+      "2:Pakistan Today:d8ca6f90ff",
+      "3:BBC World:ed7005dac4",
+      "4:Pakistan Today:432ade6b35"
+    ],
+    "final_issues": [
+      "content too short: 242 words"
+    ],
+    "recovered": false
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-20T15:20:58.722132+00:00",
+  "digest": "46e80f9738",
+  "packet": {
+    "packet_id": "20260620T152058Z_46e80f9738",
+    "created_at": "2026-06-20T15:20:58Z",
+    "headline_seed": "Kettu, henkinen romahdus ja pornopaita – ilta pikkupaikkakunnan ainoassa yökerhossa on kuin outo elokuva",
+    "description_seed": "Pornaisissa on yökerho. Kahden tuusulalaistoimittajan korviin kaikki tämä kuulosti niin uskomattomalta, että heidän oli pakko ajaa paikalle. Seurasi henkinen romahdus ja iloinen yllätys. Ja selvisi, että paikallisella ryyppyremmillä on oma bussi ja Porn-ainen-paidat.",
+    "link": "https://www.ess.fi/paikalliset/9554350",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9554350"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kettu, henkinen romahdus ja pornopaita – ilta pikkupaikkakunnan ainoassa yökerhossa on kuin outo elokuva"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 125,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Aamuposti",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kettu, henkinen romahdus ja pornopaita – ilta pikkupaikkakunnan ainoassa yökerhossa on kuin outo elokuva",
+      "description": "Pornaisissa on yökerho. Kahden tuusulalaistoimittajan korviin kaikki tämä kuulosti niin uskomattomalta, että heidän oli pakko ajaa paikalle. Seurasi henkinen romahdus ja iloinen yllätys. Ja selvisi, että paikallisella ryyppyremmillä on oma bussi ja Porn-ainen-paidat.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kettu, henkinen romahdus ja pornopaita – ilta pikkupaikkakunnan ainoassa yökerhossa on kuin outo elokuva",
+    "description": "Pornaisissa on yökerho. Kahden tuusulalaistoimittajan korviin kaikki tämä kuulosti niin uskomattomalta, että heidän oli pakko ajaa paikalle. Seurasi henkinen romahdus ja iloinen yllätys. Ja selvisi, että paikallisella ryyppyremmillä on oma bussi ja Porn-ainen-paidat.",
+    "link": "https://www.ess.fi/paikalliset/9554350",
+    "published": "2026-06-20T18:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "c06bcae6fe2872838acbc3bc3d1e8064",
+    "_url_hash": "1df63027b37c4309335e60a30a73802ced01e8bd17f6681daccd02b15d1e077c",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Aamuposti]\nYhdysvaltain presidentti Donald Trump esitteli perjantaina paikallista aikaa uuden Air Force One -lentokoneen. Uusi lentokone on saatu lahjaksi Qatarilta.\n\nTrump esitteli koneen lentokonehallissa kutsuen sitä lentäväksi Valkoiseksi taloksi. Koneen kokoa hekumoinut Trump sanoi sen lentävän \"pidemmälle ja kauemmaksi kuin mikään Air Force One\".\n\nKoneen sisällä vierailleet journalistit kuvailivat sen sisältävän puisia seinäpaneeleita ja nahkaisia penkkejä sekä tummaksi maalattuja seiniä, joilla komeili Trumpin sisustuksessa suosimaa kultaista väriä.\n\nSatojen miljoonien eurojen arvoiseksi arvioitu lahja on herättänyt eettisiä, perustuslaillisia sekä turvallisuuteen liittyviä huolia Yhdysvalloissa. Trump on kuitannut huolet sanomalla, että olisi tyhmää olla hyväksymättä lahjaa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-20T15:23:19.098204+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja julkaistavan uutisartikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260620T152058Z_46e80f9738\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja julkaistavan uutisartikkelin kirjoittamiseen.\"}"
+}

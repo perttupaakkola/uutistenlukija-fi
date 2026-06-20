@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/lukijoiden-suosikki-yrittaja-varoittaa-pinnoitusaineiden-kotikaytosta-taman-takia-jarno-pajunen-ei-aja-autoaan-konepesuun/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
