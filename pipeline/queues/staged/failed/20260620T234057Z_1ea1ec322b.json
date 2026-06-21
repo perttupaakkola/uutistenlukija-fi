@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-20T23:40:57.906124+00:00",
+  "digest": "1ea1ec322b",
+  "packet": {
+    "packet_id": "20260620T234057Z_1ea1ec322b",
+    "created_at": "2026-06-20T23:40:57Z",
+    "headline_seed": "Suomenlahti | Meripelastus­seura löysi eksyneen suomalaisen purjeveneen Venäjän vastuualueelta",
+    "description_seed": "Meripelastusseura löysi purjeveneen, jossa oli vuoto.",
+    "link": "https://www.hs.fi/helsinki/art-2000012090890.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.hs.fi/helsinki/art-2000012090890.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suomenlahti | Meripelastus­seura löysi eksyneen suomalaisen purjeveneen Venäjän vastuualueelta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 111,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Suomenmaa",
+        "HS Tuoreimmat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suomenlahti | Meripelastus­seura löysi eksyneen suomalaisen purjeveneen Venäjän vastuualueelta",
+      "description": "Meripelastusseura löysi purjeveneen, jossa oli vuoto.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Suomenlahti | Meripelastus­seura löysi eksyneen suomalaisen purjeveneen Venäjän vastuualueelta",
+    "description": "Meripelastusseura löysi purjeveneen, jossa oli vuoto.",
+    "link": "https://www.hs.fi/helsinki/art-2000012090890.html",
+    "published": "2026-06-20T23:21:00+00:00",
+    "source": "HS Tuoreimmat",
+    "source_domain": "hs.fi",
+    "language": "fi",
+    "fingerprint": "93d4006acfb80863fd792bfb8b32637a",
+    "_url_hash": "3ac3b1f155ed6b5eb3926e682a223f9b0afaaa38d279b8249ce7531ae714fd48",
+    "source_tier": 1,
+    "category_hint": "Uutiset",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Suomenmaa]\nSosiaali- ja terveysministeri Wille Rydman (ps) ei aio perääntyä järjestöjen rahoituksen kiristyksistä, kertoo Helsingin Sanomat.\n\nRydman tyrmää hallituskumppanien eli kokoomuksen ja RKP:n vaatimukset kriteereiden käsittelemisestä yhteisesti. Hän asettu poikkiteloin myös pääministeri Petteri Orpon (kok) kanssa\n\n– Kriteerit ovat ja pysyvät eikä niitä käsitellä missään hallituksen yhteisissä kokoonpanoissa, Rydman viestitti tiistaina aamupäivällä HS:lle.\n\nSosiaali- ja terveysalan järjestöjen kattojärjestö Sosten pääsihteeri Vertti Kiukas kertoo järjestön saaneen Orpolta kirjallisen viestin, jonka mukaan avustuskriteereitä käsitellään vielä yhteisesti hallituksessa. Hän kertoi asiasta ensimmäisenä Uudelle Suomelle.\n\nRydman ilmoitti maanantaina aikovansa kiristää merkittävästi sote-järjestöjen niin kutsuttujen Stea-avustusten ehtoja. Syynä on se, että hallitus on päättänyt leikata avustusten rahoituksesta ensi vuonna noin kolmanneksen.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-20T23:43:16.842043+00:00",
+  "failure": "Paketti ei sisällä lähdetekstiä eikä riittäviä vahvistettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260620T234057Z_1ea1ec322b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä lähdetekstiä eikä riittäviä vahvistettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

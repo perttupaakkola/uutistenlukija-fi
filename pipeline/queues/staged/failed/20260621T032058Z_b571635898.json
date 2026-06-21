@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-21T03:20:58.019705+00:00",
+  "digest": "b571635898",
+  "packet": {
+    "packet_id": "20260621T032058Z_b571635898",
+    "created_at": "2026-06-21T03:20:58Z",
+    "headline_seed": "Sysimusta juhannus: Yhteensä seitsemän kuollut",
+    "description_seed": "Ihmisiä on kuollut tapaturmaisesti ja epäiltyjen henkirikosten uhreina. Valon ja keskikesän juhlalla on tänäkin vuonna synkkä reunus. Juhannusaattona ja -päivänä on kuollut ainakin seitsemän ihmistä. Todellinen uhriluku saattaa olla sitäkin suurempi.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/e63f0df2-1c90-45a1-8b4d-616bcd83be99",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/e63f0df2-1c90-45a1-8b4d-616bcd83be99"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Sysimusta juhannus: Yhteensä seitsemän kuollut"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Ihmisiä on kuollut tapaturmaisesti ja epäiltyjen henkirikosten uhreina. Valon ja keskikesän juhlalla on tänäkin vuonna synkkä reunus. Juhannusaattona ja -päivänä on kuollut ainakin seitsemän ihmistä. Todellinen uhriluku saattaa olla sitäkin suurempi.",
+        "word_count": 31,
+        "keyword_overlap": 24,
+        "strong_overlap": 22
+      }
+    ],
+    "source_text": "Ihmisiä on kuollut tapaturmaisesti ja epäiltyjen henkirikosten uhreina. Valon ja keskikesän juhlalla on tänäkin vuonna synkkä reunus. Juhannusaattona ja -päivänä on kuollut ainakin seitsemän ihmistä. Todellinen uhriluku saattaa olla sitäkin suurempi.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 62,
+      "selected_blocks": 1,
+      "selected_source_words": 31,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Sysimusta juhannus: Yhteensä seitsemän kuollut",
+      "description": "Ihmisiä on kuollut tapaturmaisesti ja epäiltyjen henkirikosten uhreina. Valon ja keskikesän juhlalla on tänäkin vuonna synkkä reunus. Juhannusaattona ja -päivänä on kuollut ainakin seitsemän ihmistä. Todellinen uhriluku saattaa olla sitäkin suurempi.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Sysimusta juhannus: Yhteensä seitsemän kuollut",
+    "description": "Ihmisiä on kuollut tapaturmaisesti ja epäiltyjen henkirikosten uhreina. Valon ja keskikesän juhlalla on tänäkin vuonna synkkä reunus. Juhannusaattona ja -päivänä on kuollut ainakin seitsemän ihmistä. Todellinen uhriluku saattaa olla sitäkin suurempi.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/e63f0df2-1c90-45a1-8b4d-616bcd83be99",
+    "published": "2026-06-21T06:01:15+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "19a5dc8f2aa7de9f6d6487636646af45",
+    "_url_hash": "d6d0e7e9a7c82526bfa214c0f276ddbdd4f4f0c72c97c2eac871653658af2904",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Ihmisiä on kuollut tapaturmaisesti ja epäiltyjen henkirikosten uhreina. Valon ja keskikesän juhlalla on tänäkin vuonna synkkä reunus. Juhannusaattona ja -päivänä on kuollut ainakin seitsemän ihmistä. Todellinen uhriluku saattaa olla sitäkin suurempi.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-06-21T03:23:20.509000+00:00",
+  "failure": "Aineisto on liian niukka: saatavilla on vain yksi lyhyt lähdekatkelma, eikä se yksilöi tapahtumapaikkoja, ajankohtia tai viranomaistietoja riittävästi julkaistavaan 250+ sanan artikkeliin ilman täyteaineistoa tai keksittyjä faktoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260621T032058Z_b571635898\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineisto on liian niukka: saatavilla on vain yksi lyhyt lähdekatkelma, eikä se yksilöi tapahtumapaikkoja, ajankohtia tai viranomaistietoja riittävästi julkaistavaan 250+ sanan artikkeliin ilman täyteaineistoa tai keksittyjä faktoja.\"}"
+}
