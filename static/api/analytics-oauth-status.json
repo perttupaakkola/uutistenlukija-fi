@@ -1,8 +1,8 @@
 {
   "status": "blocked_human_reauthorization_required",
-  "checked_at": "2026-06-21T06:15:02+00:00",
-  "source_command": "SECRETS_DIR=/home/pertt/.openclaw/workspace/.secrets bash pipeline/check-analytics.sh",
-  "source_log": "pipeline/logs/analytics.log",
+  "checked_at": "2026-06-21T06:30:01+00:00",
+  "source_command": "scripts/run_with_project_env.sh python3 scripts/fetch_search_console.py",
+  "source_log": "pipeline/logs/fetch-search-console.log",
   "safe_log_paths": [
     "pipeline/logs/analytics.log",
     "pipeline/logs/daily-traffic-card.log",
@@ -12,16 +12,6 @@
   "account_hint_required": true,
   "token_policy": "No credentials, token values, OAuth response bodies, or Authorization headers are stored in this sentinel.",
   "services": [
-    {
-      "service": "ga4",
-      "label": "Google Analytics 4",
-      "status": "blocked_human_reauthorization_required",
-      "error_class": "oauth_invalid_grant",
-      "error_summary": "OAuth refresh failed with invalid_grant; token values are intentionally omitted.",
-      "reauth_command": "cd /home/pertt/.openclaw/workspace && python3 scripts/reauth_ga4.py",
-      "validation_command": "cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && scripts/run_with_project_env.sh python3 scripts/daily_traffic_card.py --dry-run",
-      "property_id": "529369568"
-    },
     {
       "service": "search_console",
       "label": "Google Search Console",
