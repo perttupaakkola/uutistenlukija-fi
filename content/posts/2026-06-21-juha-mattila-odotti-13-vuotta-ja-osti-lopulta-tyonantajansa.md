@@ -41,7 +41,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/lukijoiden-suosikki-juha-mattila-odotti-13-vuotta-kunnes-sai-ostaa-tyonantajansa-yrityksen-olen-edelleen-se-sama-ihminen/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
