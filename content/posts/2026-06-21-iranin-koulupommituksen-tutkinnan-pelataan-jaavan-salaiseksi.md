@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/jun/21/iran-school-bombing-minab-fears-trump-hegseth-bury-truth-investigation-findings"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 

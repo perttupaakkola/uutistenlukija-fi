@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-21T13:11:26.885899+00:00",
+  "digest": "ed11d70a20",
+  "packet": {
+    "packet_id": "20260621T131126Z_ed11d70a20",
+    "created_at": "2026-06-21T13:11:26Z",
+    "headline_seed": "Saksa varmisti jatkopaikkansa – Katso MM-jalkapallon tulokset juhannukselta",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9555404",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9555404"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Saksa varmisti jatkopaikkansa – Katso MM-jalkapallon tulokset juhannukselta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 165,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen",
+        "Keskisuomalainen"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Saksa varmisti jatkopaikkansa – Katso MM-jalkapallon tulokset juhannukselta",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Saksa varmisti jatkopaikkansa – Katso MM-jalkapallon tulokset juhannukselta",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9555404",
+    "published": "2026-06-21T15:48:46+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "e7ecb5326c0d6c7d9d35a813c5ba939b",
+    "_url_hash": "9c84e5c6756d09c17ff8725e413dbcae837d95390a4facff364a4a988f1987c2",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keskisuomalainen]\nJalkapallon MM-kisojen lohkovaihe eteni ratkaisevaan vaiheeseen juhannuksena, kun alkulohkojen toinen ottelukierros käynnistyi Pohjois-Amerikassa. Turnaus pelataan ensi kertaa 48 joukkueen formaatilla, mikä tekee lohkovaiheesta aiempaa tiiviimmän ja pisteiden merkityksestä korostuneen jo varhaisessa vaiheessa.\n\nPerjantaina nähtiin selkeitä voimasuhteiden korostumisia. Yhdysvallat jatkoi vahvaa turnaustaan kaatamalla Australian 2–0 ja nousi lohkonsa kärkipaikalle. Samana päivänä Brasilia hoiti oman ottelunsa rutiinilla voittamalla Haitin 3–0, kun taas Marokko yllätti Skotlannin niukalla 1–0-voitolla. Paraguay puolestaan haki tärkeän 1–0-voiton Turkista, joka karsiutui tappion myötä jatkosta.\n\nLauantaina nähtiin runsasmaalisempia otteluita. Hollanti murskasi Ruotsin peräti 5–1 ja antoi vahvan näytön hyökkäysvoimastaan. Saksa puolestaan otti toisen voittonsa kaatamalla Norsunluurannikon 2–1 ja varmisti samalla paikkansa jatkopeleissä. Päivän tasaisin ottelu pelattiin Ecuadorin ja Curaçaon välillä, joka päättyi maalittomaan tasapeliin. Sunnuntain varhaisaamun ottelussa Japani puolestaan oli ylivoimainen ja voitti Tunisian 4–0.\n\nKolmen päivän perusteella useat ennakkosuosikit, kuten Brasilia, Saksa ja Hollanti, ovat ottaneet odotettuja askelia kohti jatkopelejä. Samalla yksittäiset yllätykset, kuten Marokon voitto Skotlannista, muistuttavat lohkovaiheen arvaamattomuudesta. Toisen kierroksen ottelut ovatkin ratkaisevassa roolissa, kun kamppailu jatkopaikoista kiristyy ennen lohkovaiheen päätöskierrosta.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-21T13:13:20.572264+00:00",
+  "failure": "Lähdeaineisto puuttuu käytännössä kokonaan, eikä otsikkotason tiedoista voi kirjoittaa luotettavaa vähintään 250 sanan uutista ilman keksittyjä faktoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260621T131126Z_ed11d70a20\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu käytännössä kokonaan, eikä otsikkotason tiedoista voi kirjoittaa luotettavaa vähintään 250 sanan uutista ilman keksittyjä faktoja.\"}"
+}
