@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-06-21T09:09:14+00:00",
+  "generated_at": "2026-06-21T09:49:15+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,17 +12,19 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 26,
-    "rejected": 1,
+    "published": 27,
+    "rejected": 2,
     "publish_rate": 0,
-    "last_published_ts": "2026-06-21T09:08:06.413659+00:00"
+    "last_published_ts": "2026-06-21T09:48:06.062525+00:00"
   },
   "reject_reasons": {
-    "language borderline Finnish si": 1,
+    "language borderline Finnish si": 2,
+    "missing: image": 2,
+    "unsourced numbers": 2,
     "length under target (264 words": 1,
-    "missing: image": 1,
-    "unsourced numbers": 1,
-    "keyword_stuffing": 1
+    "keyword_stuffing": 1,
+    "length under target (267 words": 1,
+    "central unsourced number in ti": 1
   },
   "feeds": {
     "total": 40,
@@ -45,7 +47,7 @@
     ],
     [
       "aikana",
-      21
+      22
     ],
     [
       "vuoden",
