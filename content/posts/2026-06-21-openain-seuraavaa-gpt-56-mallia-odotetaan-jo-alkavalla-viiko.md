@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/21/seuraava-suuri-chatgpt-paivitys-lahestyy-openai-voi-julkaista-gpt-5-6n-alkavalla-viikolla/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
