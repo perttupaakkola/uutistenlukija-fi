@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/arvostelu-world-of-tanks-heat-on-toimiva-arcade-versio-tankkisodasta/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
