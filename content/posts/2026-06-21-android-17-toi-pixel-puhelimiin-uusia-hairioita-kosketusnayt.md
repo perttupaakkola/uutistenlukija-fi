@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/21/googlen-pixel-puhelimissa-taas-monia-ongelmia-android-17-paivitys-voi-lamauttaa-kosketusnayton-tai-katkaista-yhteydet/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
