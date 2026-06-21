@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/kun-israel-ei-taivu-iran-ei-taivu-taman-takia-lahi-idan-kriisi-pysyy-sitkeasti-umpisolmussa/9356324"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
