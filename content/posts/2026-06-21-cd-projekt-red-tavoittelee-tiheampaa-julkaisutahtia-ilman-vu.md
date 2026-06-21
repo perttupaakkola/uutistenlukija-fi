@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/cd-projekt-red-haluaa-julkaista-peleja-usein-mutta-ei-joka-vuosi/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
