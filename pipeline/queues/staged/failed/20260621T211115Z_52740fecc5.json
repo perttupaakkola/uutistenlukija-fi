@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-21T21:11:15.760020+00:00",
+  "digest": "52740fecc5",
+  "packet": {
+    "packet_id": "20260621T211115Z_52740fecc5",
+    "created_at": "2026-06-21T21:11:15Z",
+    "headline_seed": "Video: Valkoinen hirvi tallentui kuviin",
+    "description_seed": "Iltalehden lukija ikuisti poikkeuksellisen näyn metsän siimeksessä. Asiantuntija kertoo, mistä on kyse. Varsinais-Suomen Kustavissa kuvattiin maanantai-iltapäivänä poikkeuksellinen näky. Kyseessä oli lähes täysin valkoinen hirvi.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/5e5d0741-f87c-4aa3-8bf2-14a02e3b5ebc",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/5e5d0741-f87c-4aa3-8bf2-14a02e3b5ebc"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Video: Valkoinen hirvi tallentui kuviin"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Iltalehden lukija ikuisti poikkeuksellisen näyn metsän siimeksessä. Asiantuntija kertoo, mistä on kyse. Varsinais-Suomen Kustavissa kuvattiin maanantai-iltapäivänä poikkeuksellinen näky. Kyseessä oli lähes täysin valkoinen hirvi.",
+        "word_count": 24,
+        "keyword_overlap": 21,
+        "strong_overlap": 15
+      }
+    ],
+    "source_text": "Iltalehden lukija ikuisti poikkeuksellisen näyn metsän siimeksessä. Asiantuntija kertoo, mistä on kyse. Varsinais-Suomen Kustavissa kuvattiin maanantai-iltapäivänä poikkeuksellinen näky. Kyseessä oli lähes täysin valkoinen hirvi.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 48,
+      "selected_blocks": 1,
+      "selected_source_words": 24,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Video: Valkoinen hirvi tallentui kuviin",
+      "description": "Iltalehden lukija ikuisti poikkeuksellisen näyn metsän siimeksessä. Asiantuntija kertoo, mistä on kyse. Varsinais-Suomen Kustavissa kuvattiin maanantai-iltapäivänä poikkeuksellinen näky. Kyseessä oli lähes täysin valkoinen hirvi.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Video: Valkoinen hirvi tallentui kuviin",
+    "description": "Iltalehden lukija ikuisti poikkeuksellisen näyn metsän siimeksessä. Asiantuntija kertoo, mistä on kyse. Varsinais-Suomen Kustavissa kuvattiin maanantai-iltapäivänä poikkeuksellinen näky. Kyseessä oli lähes täysin valkoinen hirvi.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/5e5d0741-f87c-4aa3-8bf2-14a02e3b5ebc",
+    "published": "2026-06-21T22:41:30+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "86fc57f5b3b64706ec7c0f1f3ab97f5e",
+    "_url_hash": "0d4b245552e2e238b6c329a207a9046815618b9b76fd069954a13230e83c7c79",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Iltalehden lukija ikuisti poikkeuksellisen näyn metsän siimeksessä. Asiantuntija kertoo, mistä on kyse. Varsinais-Suomen Kustavissa kuvattiin maanantai-iltapäivänä poikkeuksellinen näky. Kyseessä oli lähes täysin valkoinen hirvi.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-21T21:13:20.886686+00:00",
+  "failure": "Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä lisätietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260621T211115Z_52740fecc5\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä lisätietoja.\"}"
+}
