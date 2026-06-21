@@ -43,7 +43,6 @@ keywords:
 source_name: "BBC World"
 source_url: "https://www.bbc.com/news/articles/cm203gndx0lo?at_medium=RSS&at_campaign=rss"
 source_domain: "bbci.co.uk"
-briefing: true
 draft: false
 ---
 
