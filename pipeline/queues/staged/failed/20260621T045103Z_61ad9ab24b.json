@@ -1,0 +1,190 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-21T04:51:03.062067+00:00",
+  "digest": "61ad9ab24b",
+  "packet": {
+    "packet_id": "20260621T045103Z_61ad9ab24b",
+    "created_at": "2026-06-21T04:51:03Z",
+    "headline_seed": "France bans alcohol consumption at music festival events under red heatwave alert",
+    "description_seed": "The annual Fête de la Musique celebrations draw millions to the streets but the most serious heatwave warnings have been issued for 35 of the country's departments.",
+    "link": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "Le Monde",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "France bans alcohol consumption at music festival events under red heatwave alert"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "France has banned alcohol at some events at a massive national music festival as a heatwave pushes temperatures towards record levels. The annual Fête de la Musique celebrations draw millions to the streets but with the most serious heatwave warnings being issued for 35 of France's departments, the government has banned alcohol consumption in public places under the red alerts. \"For all events organised by the state and its agencies, instructions have been given not to offer alcohol,\" the office of Prime Minister Sébastien Lecornu said. On Sunday, temperatures of 39C-40C are expected from the southwest through the Paris region into Burgundy, with some areas possibly reaching 41C. Temperatures have been forecast to peak on Monday, and authorities have warned they could match historic highs.",
+        "word_count": 125,
+        "keyword_overlap": 21,
+        "strong_overlap": 15
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The annual Fête de la Musique celebrations draw millions to the streets but the most serious heatwave warnings have been issued for 35 of the country's departments.",
+        "word_count": 27,
+        "keyword_overlap": 15,
+        "strong_overlap": 11
+      },
+      {
+        "source": "Le Monde",
+        "source_type": "research",
+        "text": "France issued a red heatwave alert across more than a third of the country for Sunday, June 21, as a ferocious heatwave dug in and the government banned the consumption of alcohol in public spaces in departments under this alert during the annual Fête de la Musique festivities. The prolonged heatwave, which began earlier this week, has disrupted the country, forcing the cancellation of dozens of trains and the suspension of classes. Authorities are also concerned about how the annual Fête de la Musique celebrations will unfold across the country on Sunday when musicians take over the streets with free performances and revellers party into the night.",
+        "word_count": 107,
+        "keyword_overlap": 13,
+        "strong_overlap": 11
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The government has called for limits on alcohol consumption \"to preserve emergency and healthcare services and allow medical staff to focus on caring for the most vulnerable\". The heatwave has been going for days and has disrupted the country, forcing the cancellation of dozens of trains and the suspension of classes. France's weather service, Météo-France, said it was \"uncertain\" how long the heatwave, which has been estimated to affect about three quarters of the population, would last. To help Parisians and tourists cope with the heat, authorities are keeping parks and gardens in the French capital open through the night. Fête de la Musique has been going for more than 40 years, and is always held on the summer solstice. Last year, about two million people attended events in Paris. ---",
+        "word_count": 131,
+        "keyword_overlap": 9,
+        "strong_overlap": 7
+      }
+    ],
+    "source_text": "France has banned alcohol at some events at a massive national music festival as a heatwave pushes temperatures towards record levels. The annual Fête de la Musique celebrations draw millions to the streets but with the most serious heatwave warnings being issued for 35 of France's departments, the government has banned alcohol consumption in public places under the red alerts. \"For all events organised by the state and its agencies, instructions have been given not to offer alcohol,\" the office of Prime Minister Sébastien Lecornu said. On Sunday, temperatures of 39C-40C are expected from the southwest through the Paris region into Burgundy, with some areas possibly reaching 41C. Temperatures have been forecast to peak on Monday, and authorities have warned they could match historic highs.\n\nThe annual Fête de la Musique celebrations draw millions to the streets but the most serious heatwave warnings have been issued for 35 of the country's departments.\n\nFrance issued a red heatwave alert across more than a third of the country for Sunday, June 21, as a ferocious heatwave dug in and the government banned the consumption of alcohol in public spaces in departments under this alert during the annual Fête de la Musique festivities. The prolonged heatwave, which began earlier this week, has disrupted the country, forcing the cancellation of dozens of trains and the suspension of classes. Authorities are also concerned about how the annual Fête de la Musique celebrations will unfold across the country on Sunday when musicians take over the streets with free performances and revellers party into the night.\n\nThe government has called for limits on alcohol consumption \"to preserve emergency and healthcare services and allow medical staff to focus on caring for the most vulnerable\". The heatwave has been going for days and has disrupted the country, forcing the cancellation of dozens of trains and the suspension of classes. France's weather service, Météo-France, said it was \"uncertain\" how long the heatwave, which has been estimated to affect about three quarters of the population, would last. To help Parisians and tourists cope with the heat, authorities are keeping parks and gardens in the French capital open through the night. Fête de la Musique has been going for more than 40 years, and is always held on the summer solstice. Last year, about two million people attended events in Paris. ---",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 997,
+      "selected_blocks": 4,
+      "selected_source_words": 390,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "Le Monde",
+        "Le Monde",
+        "Le Monde",
+        "Sortiraparis.com",
+        "Sortiraparis.com",
+        "Sortiraparis.com",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "Le Monde",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "France bans alcohol consumption at music festival events under red heatwave alert",
+      "description": "The annual Fête de la Musique celebrations draw millions to the streets but the most serious heatwave warnings have been issued for 35 of the country's departments.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "France bans alcohol consumption at music festival events under red heatwave alert",
+    "description": "The annual Fête de la Musique celebrations draw millions to the streets but the most serious heatwave warnings have been issued for 35 of the country's departments.",
+    "link": "https://www.bbc.com/news/articles/cgmdw4vn7y2o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-21T00:29:51+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "24db1d6845bd88544b22c8ce0a8a13a1",
+    "_url_hash": "30ee34c83f43d5ead681e5add94a870dc7e8fbafbe68f14abe6bbbc16d485813",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kulttuuri",
+    "research": "[Lähde: BBC World]\nFrance has banned alcohol at some events at a massive national music festival as a heatwave pushes temperatures towards record levels.\n\nThe annual Fête de la Musique celebrations draw millions to the streets but with the most serious heatwave warnings being issued for 35 of France's departments, the government has banned alcohol consumption in public places under the red alerts.\n\n\"For all events organised by the state and its agencies, instructions have been given not to offer alcohol,\" the office of Prime Minister Sébastien Lecornu said.\n\nOn Sunday, temperatures of 39C-40C are expected from the southwest through the Paris region into Burgundy, with some areas possibly reaching 41C.\n\nTemperatures have been forecast to peak on Monday, and authorities have warned they could match historic highs.\n\nThe government has called for limits on alcohol consumption \"to preserve emergency and healthcare services and allow medical staff to focus on caring for the most vulnerable\".\n\nThe heatwave has been going for days and has disrupted the country, forcing the cancellation of dozens of trains and the suspension of classes.\n\nFrance's weather service, Météo-France, said it was \"uncertain\" how long the heatwave, which has been estimated to affect about three quarters of the population, would last.\n\nTo help Parisians and tourists cope with the heat, authorities are keeping parks and gardens in the French capital open through the night.\n\nFête de la Musique has been going for more than 40 years, and is always held on the summer solstice.\n\nLast year, about two million people attended events in Paris.\n\n---\n\n[Lähde: Le Monde]\nFrance issued a red heatwave alert across more than a third of the country for Sunday, June 21, as a ferocious heatwave dug in and the government banned the consumption of alcohol in public spaces in departments under this alert during the annual Fête de la Musique festivities.\n\nThe prolonged heatwave, which began earlier this week, has disrupted the country, forcing the cancellation of dozens of trains and the suspension of classes.\n\nAuthorities are also concerned about how the annual Fête de la Musique celebrations will unfold across the country on Sunday when musicians take over the streets with free performances and revellers party into the night.\n\n\"Very high temperatures are settling in for the long term across the country,\" Météo-France said as it announced the highest heatwave warning for 35 of France's departments, or administrative regions, for Sunday. Paris is one of the regions on the red-alert list.\n\nAccording to AFP's calculations, around 26 million people are to be affected by the alert. Another 45 departments will be under orange alert.\n\n\"The combination of alcohol, heat and proximity to water – those are three risk factors that don't mix well,\" Paris Mayor Emmanuel Grégoire said late Friday.\n\nOn Saturday, the government said that alcohol consumption in public spaces during the annual street festivals would be banned in departments under red heatwave alert.\n\n\"Prefects will issue decrees banning alcohol consumption in public spaces in the departments under red alert,\" the government said in a statement following a meeting chaired by Prime Minister Sébastien Lecornu. \"For all events organized by the state and its agencies, instructions have been given not to offer alcohol,\" added Lecornu's office.\n\nIn Paris, a prefectural decree was issued prior to the government meeting, stipulating that restaurants and bars holding the necessary permits are not subject to the ban.\n\nThe government has called for limits on alcohol consumption \"to preserve emergency and healthcare services and allow medical staff to focus on caring for the most vulnerable.\"\n\nTo help Parisians and tourists cope with the heat, authorities are keeping parks and gardens in the French capital open through the night.\n\n---\n\n[Lähde: Sortiraparis.com]\nThe Fête de la musique 2026 in Paris will unfold under tightened security this Sunday, 21 June 2026. As the capital and the Île-de-France enter red heatwave vigilance, the Police Prefecture has issued an order regulating the consumption, sale, possession and transport of certain alcoholic beverages on public space across several areas of Paris.\n\nDecree No. 2026-00773 concerns more precisely the alcoholic beverages for groups 3 to 5, on June 21, 2026. This measure arrives in a context marked by the Music Festival, the expected high turnout in the capital, and a spell of extreme heat.\n\nIn the 10th arrondissement of Paris, an order bans the consumption of alcoholic beverages by groups 3 through 5 on public space starting June 21, 2026 at 8:00 a.m., except in areas regularly occupied by restaurants and drinking establishments that hold the necessary permits.\n\nThe area in question includes the Valmy quay, from the Place de la Bataille-de-Stalingrad to Rue Léon Jouhaux, as well as the Jemmapes quay, from the Square Frédéric Lemaître to the Place de la Bataille-de-Stalingrad.\n\nWithin this same perimeter, the sale of alcoholic beverages by establishments in the 3rd to 5th categories is also prohibited on June 21, 2026, starting at 1:00 p.m., with the same exemptions for restaurants and licensed outlets.\n\nThe order also imposes a broader ban along the riverfront lanes, spanning the 1st, 4th, 5th, 6th, 7th, 8th, 12th, 13th, 15th and 16th arrondissements. Starting Sunday, June 21, 2026, from 8:00 a.m., the consumption, possession and transport of alcoholic beverages in categories 3 to 5, as well as any drinks packaged in a glass container, are prohibited there.\n\nOn the left bank, the perimeter runs along the low quays from the Garigliano Bridge to the Pont d’Iéna, as well as the low quays from the Pont Royal to the Pont de Tolbiac. On the right bank, it covers the low quays from the Pont de Bir-Hakeim to the Pont de Tolbiac. Also affected are Allée des Cygnes and the low quays surrounding Île de la Cité and Île Saint-Louis, including stairs and access ramps.\n\nAnother order from the Prefecture of Police, order no. 2026-00771, also lays out ...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-21T04:54:43.282458+00:00",
+  "failure": "content too short: 218 words",
+  "payload": {
+    "packet_id": "20260621T045103Z_61ad9ab24b",
+    "title": "Ranska rajoittaa alkoholia musiikkijuhlissa kovan helleaallon vuoksi",
+    "summary": "Ranska on kieltänyt alkoholin nauttimisen julkisilla paikoilla niissä departementeissa, joissa on voimassa korkein hellevaroitus Fête de la Musique -juhlien aikana.",
+    "content": "Ranska on rajoittanut alkoholin käyttöä Fête de la Musique -musiikkijuhlien yhteydessä, kun maata koetteleva helleaalto on nostamassa lämpötiloja lähelle ennätystasoja. Punainen hellevaroitus on annettu 35 departementtiin, ja näillä alueilla alkoholin nauttiminen julkisilla paikoilla on kielletty juhlien aikana.\n\n## Korkein varoitustaso koskee laajaa osaa maasta\n\nFête de la Musique järjestetään vuosittain kesäpäivänseisauksen aikaan. Tapahtuma tuo kaduille muusikoita, ilmaisia esiintymisiä ja suuria yleisömääriä eri puolilla Ranskaa. Juhlalla on yli 40 vuoden historia, ja viime vuonna pelkästään Pariisin tapahtumiin osallistui noin kaksi miljoonaa ihmistä.\n\nViranomaiset ovat tänä vuonna erityisen huolissaan siitä, miten juhlat sujuvat poikkeuksellisen kuumissa oloissa. Sunnuntaille on ennustettu 39–40 asteen lämpötiloja lounaasta Pariisin alueen kautta Burgundiin. Joillakin alueilla lämpötila voi nousta 41 asteeseen.\n\nLämpötilojen arvioidaan huipentuvan maanantaina. Viranomaiset ovat varoittaneet, että ne voivat yltää historiallisten huippujen tasolle. Ranskan sääpalvelu Météo-France on arvioinut helleaallon vaikuttavan noin kolmeen neljäsosaan maan väestöstä, mutta sen kestoa pidetään yhä epävarmana.\n\n## Rajoituksilla suojataan terveydenhuoltoa\n\nPääministeri Sébastien Lecornun kanslian mukaan valtion ja sen virastojen järjestämissä tapahtumissa on annettu ohje, ettei alkoholia tarjota. Hallitus on perustellut rajoituksia tarpeella säästää ensihoidon ja terveydenhuollon voimavaroja, jotta hoitohenkilöstö voi keskittyä kaikkein haavoittuvimpiin ihmisiin.\n\nHelleaalto on jatkunut useita päiviä ja häirinnyt jo arkea eri puolilla maata. Sen vuoksi on peruttu kymmeniä junavuoroja ja keskeytetty opetusta. Pariisissa viranomaiset pyrkivät helpottamaan asukkaiden ja matkailijoiden oloa pitämällä puistoja ja puutarhoja avoinna yön yli.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Ranska",
+      "helleaalto",
+      "Fête de la Musique",
+      "terveys",
+      "sää"
+    ],
+    "summary_bullets": [
+      "Ranska on kieltänyt alkoholin nauttimisen julkisilla paikoilla punaisen hellevaroituksen alueilla musiikkijuhlien aikana.",
+      "Sunnuntaille ennustetaan paikoin jopa 41 asteen lämpötiloja, ja helteen odotetaan huipentuvan maanantaina.",
+      "Helle on jo johtanut junavuorojen perumisiin ja opetuksen keskeytyksiin."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu paketin neljään lähdeblokkiin. Julkiseen tekstiin ei ole lisätty lähteistämättömiä tietoja; kategoriaksi valittu Ulkomaat, koska uutinen koskee Ranskaa."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260621T045103Z_61ad9ab24b\",\n  \"title\": \"Ranska rajoittaa alkoholia musiikkijuhlissa kovan helleaallon vuoksi\",\n  \"summary\": \"Ranska on kieltänyt alkoholin nauttimisen julkisilla paikoilla niissä departementeissa, joissa on voimassa korkein hellevaroitus Fête de la Musique -juhlien aikana.\",\n  \"content\": \"Ranska on rajoittanut alkoholin käyttöä Fête de la Musique -musiikkijuhlien yhteydessä, kun maata koetteleva helleaalto on nostamassa lämpötiloja lähelle ennätystasoja. Punainen hellevaroitus on annettu 35 departementtiin, ja näillä alueilla alkoholin nauttiminen julkisilla paikoilla on kielletty juhlien aikana.\\n\\n## Korkein varoitustaso koskee laajaa osaa maasta\\n\\nFête de la Musique järjestetään vuosittain kesäpäivänseisauksen aikaan. Tapahtuma tuo kaduille muusikoita, ilmaisia esiintymisiä ja suuria yleisömääriä eri puolilla Ranskaa. Juhlalla on yli 40 vuoden historia, ja viime vuonna pelkästään Pariisin tapahtumiin osallistui noin kaksi miljoonaa ihmistä.\\n\\nViranomaiset ovat tänä vuonna erityisen huolissaan siitä, miten juhlat sujuvat poikkeuksellisen kuumissa oloissa. Sunnuntaille on ennustettu 39–40 asteen lämpötiloja lounaasta Pariisin alueen kautta Burgundiin. Joillakin alueilla lämpötila voi nousta 41 asteeseen.\\n\\nLämpötilojen arvioidaan huipentuvan maanantaina. Viranomaiset ovat varoittaneet, että ne voivat yltää historiallisten huippujen tasolle. Ranskan sääpalvelu Météo-France on arvioinut helleaallon vaikuttavan noin kolmeen neljäsosaan maan väestöstä, mutta sen kestoa pidetään yhä epävarmana.\\n\\n## Rajoituksilla suojataan terveydenhuoltoa\\n\\nPääministeri Sébastien Lecornun kanslian mukaan valtion ja sen virastojen järjestämissä tapahtumissa on annettu ohje, ettei alkoholia tarjota. Hallitus on perustellut rajoituksia tarpeella säästää ensihoidon ja terveydenhuollon voimavaroja, jotta hoitohenkilöstö voi keskittyä kaikkein haavoittuvimpiin ihmisiin.\\n\\nHelleaalto on jatkunut useita päiviä ja häirinnyt jo arkea eri puolilla maata. Sen vuoksi on peruttu kymmeniä junavuoroja ja keskeytetty opetusta. Pariisissa viranomaiset pyrkivät helpottamaan asukkaiden ja matkailijoiden oloa pitämällä puistoja ja puutarhoja avoinna yön yli.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Ranska\",\n    \"helleaalto\",\n    \"Fête de la Musique\",\n    \"terveys\",\n    \"sää\"\n  ],\n  \"summary_bullets\": [\n    \"Ranska on kieltänyt alkoholin nauttimisen julkisilla paikoilla punaisen hellevaroituksen alueilla musiikkijuhlien aikana.\",\n    \"Sunnuntaille ennustetaan paikoin jopa 41 asteen lämpötiloja, ja helteen odotetaan huipentuvan maanantaina.\",\n    \"Helle on jo johtanut junavuorojen perumisiin ja opetuksen keskeytyksiin.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu paketin neljään lähdeblokkiin. Julkiseen tekstiin ei ole lisätty lähteistämättömiä tietoja; kategoriaksi valittu Ulkomaat, koska uutinen koskee Ranskaa.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260621T045103Z_61ad9ab24b",
+    "category": "Kotimaa",
+    "selected_source_words": 390,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 218,
+    "issues": [
+      "content too short: 218 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Ranska rajoittaa alkoholia musiikkijuhlissa kovan helleaallon vuoksi",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-21T04:54:43.282148+00:00",
+    "repair_trigger": "pre_repair_word_count=218; selected_source_words=390; selected_source_blocks=4",
+    "pre_repair_word_count": 218,
+    "pre_repair_lead_word_count": 37,
+    "post_repair_word_count": 218,
+    "post_repair_lead_word_count": 37,
+    "selected_source_words_at_repair": 390,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 390,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 218 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:4a7d150609",
+      "2:BBC World:1c69919a5f",
+      "3:Le Monde:68790fbabb",
+      "4:BBC World:c11398fb23"
+    ],
+    "final_issues": [
+      "content too short: 218 words"
+    ],
+    "recovered": false
+  }
+}

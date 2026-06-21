@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-21T05:01:02.449134+00:00",
+  "digest": "be1a4f6d22",
+  "packet": {
+    "packet_id": "20260621T050102Z_be1a4f6d22",
+    "created_at": "2026-06-21T05:01:02Z",
+    "headline_seed": "Neuvostoliiton kuolonkorinoissa idänkaupassa nähtiin toinen toistaan kummallisempia viritelmiä – \"Tehdas olisi tullut Tshernobylin alueelle, onneksi ei tehty sitä\"",
+    "description_seed": "Neuvostoliiton loppuaikoina itärajan takana kehiteltiin monenmoisia keinoja, jotta kauppa länteen säilyisi vilkkaana. Eräs erikoisimpia viritelmiä oli tuotannollinen yhteistyö.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/6534a0fb-6733-4183-a083-9fb08c38241c?utm_source=rss",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/6534a0fb-6733-4183-a083-9fb08c38241c?utm_source=rss"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Neuvostoliiton kuolonkorinoissa idänkaupassa nähtiin toinen toistaan kummallisempia viritelmiä – \"Tehdas olisi tullut Tshernobylin alueelle, onneksi ei tehty sitä\""
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Neuvostoliiton loppuaikoina itärajan takana kehiteltiin monenmoisia keinoja, jotta kauppa länteen säilyisi vilkkaana. Eräs erikoisimpia viritelmiä oli tuotannollinen yhteistyö.",
+        "word_count": 18,
+        "keyword_overlap": 17,
+        "strong_overlap": 15
+      }
+    ],
+    "source_text": "Neuvostoliiton loppuaikoina itärajan takana kehiteltiin monenmoisia keinoja, jotta kauppa länteen säilyisi vilkkaana. Eräs erikoisimpia viritelmiä oli tuotannollinen yhteistyö.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 36,
+      "selected_blocks": 1,
+      "selected_source_words": 18,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Neuvostoliiton kuolonkorinoissa idänkaupassa nähtiin toinen toistaan kummallisempia viritelmiä – \"Tehdas olisi tullut Tshernobylin alueelle, onneksi ei tehty sitä\"",
+      "description": "Neuvostoliiton loppuaikoina itärajan takana kehiteltiin monenmoisia keinoja, jotta kauppa länteen säilyisi vilkkaana. Eräs erikoisimpia viritelmiä oli tuotannollinen yhteistyö.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Neuvostoliiton kuolonkorinoissa idänkaupassa nähtiin toinen toistaan kummallisempia viritelmiä – \"Tehdas olisi tullut Tshernobylin alueelle, onneksi ei tehty sitä\"",
+    "description": "Neuvostoliiton loppuaikoina itärajan takana kehiteltiin monenmoisia keinoja, jotta kauppa länteen säilyisi vilkkaana. Eräs erikoisimpia viritelmiä oli tuotannollinen yhteistyö.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/6534a0fb-6733-4183-a083-9fb08c38241c?utm_source=rss",
+    "published": "2026-06-21T04:35:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "ded8cac1196542da18dc96ac8875a00a",
+    "_url_hash": "0e55ce5cc22cb4585a6680c9de9d74ea1778a1e3b18fa687289fbfe71e98cbea",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Neuvostoliiton loppuaikoina itärajan takana kehiteltiin monenmoisia keinoja, jotta kauppa länteen säilyisi vilkkaana. Eräs erikoisimpia viritelmiä oli tuotannollinen yhteistyö.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-21T05:03:18.686279+00:00",
+  "failure": "Lähdeaineisto on liian niukka: paketissa on vain yleinen kuvaus ilman tarkkoja henkilöitä, ajankohtia, paikkoja tai varmennettavia yksityiskohtia, eikä siitä voi kirjoittaa vähintään 250 sanan uutista ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260621T050102Z_be1a4f6d22\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka: paketissa on vain yleinen kuvaus ilman tarkkoja henkilöitä, ajankohtia, paikkoja tai varmennettavia yksityiskohtia, eikä siitä voi kirjoittaa vähintään 250 sanan uutista ilman keksittyjä tietoja.\"}"
+}
