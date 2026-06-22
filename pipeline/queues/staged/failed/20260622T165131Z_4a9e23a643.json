@@ -1,0 +1,197 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-22T16:51:31.943279+00:00",
+  "digest": "4a9e23a643",
+  "packet": {
+    "packet_id": "20260622T165131Z_4a9e23a643",
+    "created_at": "2026-06-22T16:51:31Z",
+    "headline_seed": "Red heat alerts issued in France, Italy and Spain as 40C temperatures forecast",
+    "description_seed": "The heatwave conditions are forecast to intensify in the coming days across central and western Europe.",
+    "link": "https://www.bbc.com/news/articles/c0jy9g96086o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "NBC News",
+      "The Mirror"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/c0jy9g96086o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Red heat alerts issued in France, Italy and Spain as 40C temperatures forecast"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Red heat alerts have been issued in France, Spain and other nations across western and central Europe as heatwave conditions are forecast to intensify in the coming days with highs of more than 40C. More than half of France's regions are currently under the harshest weather warning, with hundreds of schools ordered to close and highs of 42C predicted in Bordeaux on Monday, forecaster Météo-France said. Two children aged two and four have been found dead in their family car in the town of Carpentras in south of France, in an accident being linked to the weather. Similar red warnings have been issued by the authorities in Germany, Italy, Switzerland and Luxembourg.",
+        "word_count": 112,
+        "keyword_overlap": 16,
+        "strong_overlap": 12
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The heatwave conditions are forecast to intensify in the coming days across central and western Europe.",
+        "word_count": 16,
+        "keyword_overlap": 10,
+        "strong_overlap": 9
+      },
+      {
+        "source": "NBC News",
+        "source_type": "research",
+        "text": "⁠⁠Three people died in France from health issues caused by extreme heat and almost 2,700 of the country’s schools were set to close or modify timetables as authorities across Europe issued heatwave warnings for Monday. Temperatures in Bordeaux in southwestern France were forecast to exceed 42 degrees Celsius (107.6 degrees Fahrenheit) Monday and weather agency Meteo France said 49 regional administrative areas will be under a red heat wave warning. “We’re heading for, at the very least, ⁠several days of very, very hot weather. We don’t know when temperatures ​will ⁠start falling,” French Health Minister Stephanie Rist said on TV channel TF1.",
+        "word_count": 102,
+        "keyword_overlap": 9,
+        "strong_overlap": 7
+      },
+      {
+        "source": "The Mirror",
+        "source_type": "research",
+        "text": "Health warnings have been issued for people across Europe, including in France, Italy, Spain and Germany. France has been cancelling trains, concerts and sports events and cracking down on public drinking as an exceptional heat wave unfurled across parts of Europe. Multiple drownings were reported as people sought relief in whatever water they could find. About a third of France is under “red alert″ heat and temperatures reached 40C in some areas, in a country where air-conditioning is not widespread. The forecast for Monday is even hotter. The Eiffel Tower and other Paris venues set up misting stations to cool crowds, among a raft of measures introduced by authorities to minimise risks. Tourists in Rome dunked in fountains.",
+        "word_count": 118,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "Red heat alerts have been issued in France, Spain and other nations across western and central Europe as heatwave conditions are forecast to intensify in the coming days with highs of more than 40C. More than half of France's regions are currently under the harshest weather warning, with hundreds of schools ordered to close and highs of 42C predicted in Bordeaux on Monday, forecaster Météo-France said. Two children aged two and four have been found dead in their family car in the town of Carpentras in south of France, in an accident being linked to the weather. Similar red warnings have been issued by the authorities in Germany, Italy, Switzerland and Luxembourg.\n\nThe heatwave conditions are forecast to intensify in the coming days across central and western Europe.\n\n⁠⁠Three people died in France from health issues caused by extreme heat and almost 2,700 of the country’s schools were set to close or modify timetables as authorities across Europe issued heatwave warnings for Monday. Temperatures in Bordeaux in southwestern France were forecast to exceed 42 degrees Celsius (107.6 degrees Fahrenheit) Monday and weather agency Meteo France said 49 regional administrative areas will be under a red heat wave warning. “We’re heading for, at the very least, ⁠several days of very, very hot weather. We don’t know when temperatures ​will ⁠start falling,” French Health Minister Stephanie Rist said on TV channel TF1.\n\nHealth warnings have been issued for people across Europe, including in France, Italy, Spain and Germany. France has been cancelling trains, concerts and sports events and cracking down on public drinking as an exceptional heat wave unfurled across parts of Europe. Multiple drownings were reported as people sought relief in whatever water they could find. About a third of France is under “red alert″ heat and temperatures reached 40C in some areas, in a country where air-conditioning is not widespread. The forecast for Monday is even hotter. The Eiffel Tower and other Paris venues set up misting stations to cool crowds, among a raft of measures introduced by authorities to minimise risks. Tourists in Rome dunked in fountains.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1004,
+      "selected_blocks": 4,
+      "selected_source_words": 348,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "NBC News",
+        "NBC News",
+        "NBC News",
+        "NBC News",
+        "The Mirror",
+        "The Mirror",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "NBC News",
+        "The Mirror"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Red heat alerts issued in France, Italy and Spain as 40C temperatures forecast",
+      "description": "The heatwave conditions are forecast to intensify in the coming days across central and western Europe.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Red heat alerts issued in France, Italy and Spain as 40C temperatures forecast",
+    "description": "The heatwave conditions are forecast to intensify in the coming days across central and western Europe.",
+    "link": "https://www.bbc.com/news/articles/c0jy9g96086o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-22T16:42:23+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "5b38368098c4dcaefbaa7367156bc449",
+    "_url_hash": "f5449f250ee9f3b159e3cd10a5c209313eb3dba0f20be4a0b625145d0727286b",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nRed heat alerts have been issued in France, Spain and other nations across western and central Europe as heatwave conditions are forecast to intensify in the coming days with highs of more than 40C.\n\nMore than half of France's regions are currently under the harshest weather warning, with hundreds of schools ordered to close and highs of 42C predicted in Bordeaux on Monday, forecaster Météo-France said.\n\nTwo children aged two and four have been found dead in their family car in the town of Carpentras in south of France, in an accident being linked to the weather.\n\nSimilar red warnings have been issued by the authorities in Germany, Italy, Switzerland and Luxembourg.\n\nThe rising temperatures are being driven by hot air moving north from the Sahara desert, which is in turn trapping hot air over the affected areas, with forecasters suggesting the conditions could result in one of the longest heatwaves in recent years.\n\nScientists have said that recurring heatwaves are a marker of global warming, with Météo-France noting that of the  51 heatwaves recorded in France since 1947, 34 have taken place since 2000 and 26 since 2011.\n\nTemperatures are expected to peak in many parts of the continent on Wednesday, with 41C forecast for Paris.\n\nIn the capital on Monday, several train lines also reduced services. France's national railway operator SNCF urged \"vulnerable\" people to avoid or postpone train travel this week.\n\nSome 845 schools in France were shut, while a further 1,800 are allowing pupils to finish classes early, the education ministry said. But more than a million high school students were take their oral final exams for the baccalaureate amid the heat.\n\nA red heat alert is the highest of four warnings issued by Météo-France, and advises people to exercise extreme caution in conditions that are potentially life-threatening.\n\nDozens of other regions in France are under an orange alert - the second-highest warning - with an estimated 63 million people in total affected across the country.\n\nThe full circumstances of the deaths of the children found in their family car in the south of France are not yet clear but they had been returning from a shopping trip with their mother and reportedly found themselves stuck inside the family car with the windows shut, amid highs of 39C.\n\nAmbulance workers tried unsuccessfully to resuscitate the pair.\n\nThe local state prosecutor said the precise cause of death had yet to be determined, but \"it is probably linked to the heatw\n\n---\n\n[Lähde: NBC News]\n⁠⁠Three people died in France from health issues caused by extreme heat and almost 2,700 of the country’s schools were set to close or modify timetables as authorities across Europe issued heatwave warnings for Monday.\n\nTemperatures in Bordeaux in southwestern France were forecast to exceed 42 degrees Celsius (107.6 degrees Fahrenheit) Monday and weather agency Meteo France said 49 regional administrative areas will be under a red heat wave warning.\n\n“We’re heading for, at the very least, ⁠several days of very, very hot weather. We don’t know when temperatures ​will ⁠start falling,” French Health Minister Stephanie Rist said on TV channel TF1.\n\nThree people, aged between 80 and 95, died over the weekend in the Bordeaux region as a result of health issues caused by the current heat wave ⁠in France, local government official Sophie Brocas told France TV late Sunday.\n\nIn Spain, state weather agency Aemet issued ​a red ⁠alert for the Basque country, in the normally cooler ‌north of the country, with the mercury in San Sebastian set to rise to a high of 40 C, more than double its historic average for June 22, according to the Reuters Climate Monitor.\n\nSan Sebastian was set to be hotter than the ‌southern cities of Seville and Cordoba, which normally record the country’s most intense ‌summer heat.\n\n“We are seeing temperatures between 5 and 10 degrees above normal for this time of year, and in some northern areas even more than 10 degrees above average,” said Rubén del Campo, spokesperson for Aemet.\n\nThe night was providing little relief in some parts of Spain, with temperatures failing to drop ⁠below 25 C or even 30 C in places like the southwestern province of Almeria, Aemet said.\n\nEurope on Monday was the continent furthest from its historic norm, with an average high temperature of 24 C, which was 4.1 C above what was typical from 1961-1990, according to the climate monitor. By comparison, Asia and North America were 2 C and 1.3 C above the historic norm.\n\nWildlife shelters in northern Europe were struggling to cope with the number of animals being brought in suffering from the heat.\n\nBirds such as swifts, swallows, sparrows and starlings, which make their nests in the eaves of roofs, have been particularly affected by abnormally high temperatures, said Romaine de ‌Jaegere, a biologist and founder of the Centre for the Rehabilitation of Animals Living in the Wild (Creaves) wildlife ​refuge in Temploux in Belgium.\n\n“Temperatures on the roofs can sometimes reac\n\n---\n\n[Lähde: The Mirror]\nHealth warnings have been issued for people across Europe, including in France, Italy, Spain and Germany. France has been cancelling trains, concerts and sports events and cracking down on public drinking as an exceptional heat wave unfurled across parts of Europe.\n\nMultiple drownings were reported as people sought relief in whatever water they could find. About a third of France is under “red alert″ heat and temperatures reached 40C in some areas, in a country where air-conditioning is not widespread.\n\nThe forecast for Monday is even hotter. The Eiffel Tower and other Paris venues set up misting stations to cool crowds, among a raft of measures introduced by authorities to minimise risks. Tourists in Rome dunked in fountains.\n\nSpain’s Basque Country cancelled some sports and cultural events. More than 200,000 people across Europe died from heat-related causes over the last four years, and most of the fatalities were preventable, the World Health Organisation’s Europe office said this ...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-22T16:53:50.140025+00:00",
+  "payload": {
+    "packet_id": "20260622T165131Z_4a9e23a643",
+    "title": "Punaisia hellevaroituksia annettu eri puolilla Eurooppaa",
+    "summary": "Ranskassa, Espanjassa, Italiassa ja useissa muissa Euroopan maissa viranomaiset ovat antaneet ankaria hellevaroituksia, kun lämpötilojen ennustetaan nousevan paikoin yli 40 asteen.",
+    "content": "Ranskassa, Espanjassa, Italiassa ja muissa Länsi- ja Keski-Euroopan maissa on annettu vakavia hellevaroituksia, kun poikkeuksellisen kuuman sään ennustetaan voimistuvan lähipäivinä. Ranskassa viranomaiset ovat sulkeneet tai muuttaneet koulujen aikatauluja laajasti, ja Bordeaux’ssa lämpötilan ennustettiin nousevan maanantaina yli 42 asteeseen.\n\n## Ranskassa laajoja rajoituksia\n\nRanskassa ankarin säävaroitus koskee laajaa osaa maasta. Sääpalvelu Météo-France on kertonut, että 49 aluehallinnollista aluetta on punaisen hellevaroituksen piirissä. Joidenkin tietojen mukaan yli puolet Ranskan alueista on kovimman varoitustason alla.\n\nÄärimmäinen kuumuus on vaikuttanut myös arkeen. Lähes 2 700 koulua oli määrä sulkea tai muuttaa aikataulujaan, ja maassa on peruttu junia, konsertteja ja urheilutapahtumia. Viranomaiset ovat myös rajoittaneet julkista alkoholin käyttöä riskien vähentämiseksi.\n\nRanskassa on raportoitu kolme kuumuuden aiheuttamiin terveysongelmiin liittyvää kuolemaa. Lisäksi kaksi pientä lasta, iältään kaksi ja neljä vuotta, on löydetty kuolleina perheen autosta Carpentras’n kaupungissa Etelä-Ranskassa. Tapausta on liitetty sääoloihin.\n\n## Helle jatkuu useissa maissa\n\nHellevaroituksia on annettu Ranskan lisäksi muun muassa Espanjassa, Italiassa, Saksassa, Sveitsissä ja Luxemburgissa. Paikoin lämpötilat ovat jo nousseet 40 asteeseen, ja ennusteiden mukaan sää voi kuumentua entisestään.\n\nRanskan terveysministeri Stephanie Rist kuvasi TF1-kanavalla edessä olevan vähintään useita erittäin kuumia päiviä ja totesi, ettei lämpötilojen laskun ajankohdasta ole varmuutta.\n\nViranomaiset ovat pyrkineet lieventämään helteen vaikutuksia käytännön toimilla. Pariisissa Eiffel-tornilla ja muilla matkailukohteilla on otettu käyttöön sumutuspisteitä yleisön viilentämiseksi. Roomassa matkailijoiden kerrotaan hakeneen viilennystä suihkulähteistä. Ranskassa on myös raportoitu useista hukkumisista, kun ihmiset ovat hakeutuneet veteen kuumuutta paetakseen.\n\nTilannetta vaikeuttaa se, ettei ilmastointi ole Ranskassa yhtä yleistä kuin monissa kuumempiin kesiin tottuneissa maissa. Viranomaiset seuraavat helleaallon etenemistä, sillä varoitusten mukaan kuumat olosuhteet voivat jatkua ja voimistua lähipäivinä.",
+    "category": "Ulkomaat",
+    "tags": [
+      "helteet",
+      "Eurooppa",
+      "Ranska",
+      "säävaroitukset"
+    ],
+    "summary_bullets": [
+      "Länsi- ja Keski-Euroopassa on annettu ankaria hellevaroituksia.",
+      "Ranskassa kouluja on suljettu tai niiden aikatauluja muutettu laajasti.",
+      "Bordeaux’ssa lämpötilan ennustettiin nousevan yli 42 asteeseen."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.9,
+    "journalist_note": "Artikkeli perustuu paketin valittuihin lähdekatkelmiin. Kuolemantapaukset ja varoitusalueiden määrät on muotoiltu varoen, koska lähteissä on hieman eri rajauksia Ranskan varoitusalueista."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260622T165131Z_4a9e23a643\",\"title\":\"Punaisia hellevaroituksia annettu eri puolilla Eurooppaa\",\"summary\":\"Ranskassa, Espanjassa, Italiassa ja useissa muissa Euroopan maissa viranomaiset ovat antaneet ankaria hellevaroituksia, kun lämpötilojen ennustetaan nousevan paikoin yli 40 asteen.\",\"content\":\"Ranskassa, Espanjassa, Italiassa ja muissa Länsi- ja Keski-Euroopan maissa on annettu vakavia hellevaroituksia, kun poikkeuksellisen kuuman sään ennustetaan voimistuvan lähipäivinä. Ranskassa viranomaiset ovat sulkeneet tai muuttaneet koulujen aikatauluja laajasti, ja Bordeaux’ssa lämpötilan ennustettiin nousevan maanantaina yli 42 asteeseen.\\n\\n## Ranskassa laajoja rajoituksia\\n\\nRanskassa ankarin säävaroitus koskee laajaa osaa maasta. Sääpalvelu Météo-France on kertonut, että 49 aluehallinnollista aluetta on punaisen hellevaroituksen piirissä. Joidenkin tietojen mukaan yli puolet Ranskan alueista on kovimman varoitustason alla.\\n\\nÄärimmäinen kuumuus on vaikuttanut myös arkeen. Lähes 2 700 koulua oli määrä sulkea tai muuttaa aikataulujaan, ja maassa on peruttu junia, konsertteja ja urheilutapahtumia. Viranomaiset ovat myös rajoittaneet julkista alkoholin käyttöä riskien vähentämiseksi.\\n\\nRanskassa on raportoitu kolme kuumuuden aiheuttamiin terveysongelmiin liittyvää kuolemaa. Lisäksi kaksi pientä lasta, iältään kaksi ja neljä vuotta, on löydetty kuolleina perheen autosta Carpentras’n kaupungissa Etelä-Ranskassa. Tapausta on liitetty sääoloihin.\\n\\n## Helle jatkuu useissa maissa\\n\\nHellevaroituksia on annettu Ranskan lisäksi muun muassa Espanjassa, Italiassa, Saksassa, Sveitsissä ja Luxemburgissa. Paikoin lämpötilat ovat jo nousseet 40 asteeseen, ja ennusteiden mukaan sää voi kuumentua entisestään.\\n\\nRanskan terveysministeri Stephanie Rist kuvasi TF1-kanavalla edessä olevan vähintään useita erittäin kuumia päiviä ja totesi, ettei lämpötilojen laskun ajankohdasta ole varmuutta.\\n\\nViranomaiset ovat pyrkineet lieventämään helteen vaikutuksia käytännön toimilla. Pariisissa Eiffel-tornilla ja muilla matkailukohteilla on otettu käyttöön sumutuspisteitä yleisön viilentämiseksi. Roomassa matkailijoiden kerrotaan hakeneen viilennystä suihkulähteistä. Ranskassa on myös raportoitu useista hukkumisista, kun ihmiset ovat hakeutuneet veteen kuumuutta paetakseen.\\n\\nTilannetta vaikeuttaa se, ettei ilmastointi ole Ranskassa yhtä yleistä kuin monissa kuumempiin kesiin tottuneissa maissa. Viranomaiset seuraavat helleaallon etenemistä, sillä varoitusten mukaan kuumat olosuhteet voivat jatkua ja voimistua lähipäivinä.\",\"category\":\"Ulkomaat\",\"tags\":[\"helteet\",\"Eurooppa\",\"Ranska\",\"säävaroitukset\"],\"summary_bullets\":[\"Länsi- ja Keski-Euroopassa on annettu ankaria hellevaroituksia.\",\"Ranskassa kouluja on suljettu tai niiden aikatauluja muutettu laajasti.\",\"Bordeaux’ssa lämpötilan ennustettiin nousevan yli 42 asteeseen.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.9,\"journalist_note\":\"Artikkeli perustuu paketin valittuihin lähdekatkelmiin. Kuolemantapaukset ja varoitusalueiden määrät on muotoiltu varoen, koska lähteissä on hieman eri rajauksia Ranskan varoitusalueista.\"}",
+  "article": {
+    "title": "Punaisia hellevaroituksia annettu eri puolilla Eurooppaa",
+    "description": "Ranskassa, Espanjassa, Italiassa ja useissa muissa Euroopan maissa viranomaiset ovat antaneet ankaria hellevaroituksia, kun lämpötilojen ennustetaan nousevan paikoin yli 40 asteen.",
+    "link": "https://www.bbc.com/news/articles/c0jy9g96086o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-22T16:42:23+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "5b38368098c4dcaefbaa7367156bc449",
+    "_url_hash": "f5449f250ee9f3b159e3cd10a5c209313eb3dba0f20be4a0b625145d0727286b",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nRed heat alerts have been issued in France, Spain and other nations across western and central Europe as heatwave conditions are forecast to intensify in the coming days with highs of more than 40C.\n\nMore than half of France's regions are currently under the harshest weather warning, with hundreds of schools ordered to close and highs of 42C predicted in Bordeaux on Monday, forecaster Météo-France said.\n\nTwo children aged two and four have been found dead in their family car in the town of Carpentras in south of France, in an accident being linked to the weather.\n\nSimilar red warnings have been issued by the authorities in Germany, Italy, Switzerland and Luxembourg.\n\nThe rising temperatures are being driven by hot air moving north from the Sahara desert, which is in turn trapping hot air over the affected areas, with forecasters suggesting the conditions could result in one of the longest heatwaves in recent years.\n\nScientists have said that recurring heatwaves are a marker of global warming, with Météo-France noting that of the  51 heatwaves recorded in France since 1947, 34 have taken place since 2000 and 26 since 2011.\n\nTemperatures are expected to peak in many parts of the continent on Wednesday, with 41C forecast for Paris.\n\nIn the capital on Monday, several train lines also reduced services. France's national railway operator SNCF urged \"vulnerable\" people to avoid or postpone train travel this week.\n\nSome 845 schools in France were shut, while a further 1,800 are allowing pupils to finish classes early, the education ministry said. But more than a million high school students were take their oral final exams for the baccalaureate amid the heat.\n\nA red heat alert is the highest of four warnings issued by Météo-France, and advises people to exercise extreme caution in conditions that are potentially life-threatening.\n\nDozens of other regions in France are under an orange alert - the second-highest warning - with an estimated 63 million people in total affected across the country.\n\nThe full circumstances of the deaths of the children found in their family car in the south of France are not yet clear but they had been returning from a shopping trip with their mother and reportedly found themselves stuck inside the family car with the windows shut, amid highs of 39C.\n\nAmbulance workers tried unsuccessfully to resuscitate the pair.\n\nThe local state prosecutor said the precise cause of death had yet to be determined, but \"it is probably linked to the heatw\n\n---\n\n[Lähde: NBC News]\n⁠⁠Three people died in France from health issues caused by extreme heat and almost 2,700 of the country’s schools were set to close or modify timetables as authorities across Europe issued heatwave warnings for Monday.\n\nTemperatures in Bordeaux in southwestern France were forecast to exceed 42 degrees Celsius (107.6 degrees Fahrenheit) Monday and weather agency Meteo France said 49 regional administrative areas will be under a red heat wave warning.\n\n“We’re heading for, at the very least, ⁠several days of very, very hot weather. We don’t know when temperatures ​will ⁠start falling,” French Health Minister Stephanie Rist said on TV channel TF1.\n\nThree people, aged between 80 and 95, died over the weekend in the Bordeaux region as a result of health issues caused by the current heat wave ⁠in France, local government official Sophie Brocas told France TV late Sunday.\n\nIn Spain, state weather agency Aemet issued ​a red ⁠alert for the Basque country, in the normally cooler ‌north of the country, with the mercury in San Sebastian set to rise to a high of 40 C, more than double its historic average for June 22, according to the Reuters Climate Monitor.\n\nSan Sebastian was set to be hotter than the ‌southern cities of Seville and Cordoba, which normally record the country’s most intense ‌summer heat.\n\n“We are seeing temperatures between 5 and 10 degrees above normal for this time of year, and in some northern areas even more than 10 degrees above average,” said Rubén del Campo, spokesperson for Aemet.\n\nThe night was providing little relief in some parts of Spain, with temperatures failing to drop ⁠below 25 C or even 30 C in places like the southwestern province of Almeria, Aemet said.\n\nEurope on Monday was the continent furthest from its historic norm, with an average high temperature of 24 C, which was 4.1 C above what was typical from 1961-1990, according to the climate monitor. By comparison, Asia and North America were 2 C and 1.3 C above the historic norm.\n\nWildlife shelters in northern Europe were struggling to cope with the number of animals being brought in suffering from the heat.\n\nBirds such as swifts, swallows, sparrows and starlings, which make their nests in the eaves of roofs, have been particularly affected by abnormally high temperatures, said Romaine de ‌Jaegere, a biologist and founder of the Centre for the Rehabilitation of Animals Living in the Wild (Creaves) wildlife ​refuge in Temploux in Belgium.\n\n“Temperatures on the roofs can sometimes reac\n\n---\n\n[Lähde: The Mirror]\nHealth warnings have been issued for people across Europe, including in France, Italy, Spain and Germany. France has been cancelling trains, concerts and sports events and cracking down on public drinking as an exceptional heat wave unfurled across parts of Europe.\n\nMultiple drownings were reported as people sought relief in whatever water they could find. About a third of France is under “red alert″ heat and temperatures reached 40C in some areas, in a country where air-conditioning is not widespread.\n\nThe forecast for Monday is even hotter. The Eiffel Tower and other Paris venues set up misting stations to cool crowds, among a raft of measures introduced by authorities to minimise risks. Tourists in Rome dunked in fountains.\n\nSpain’s Basque Country cancelled some sports and cultural events. More than 200,000 people across Europe died from heat-related causes over the last four years, and most of the fatalities were preventable, the World Health Organisation’s Europe office said this ...",
+    "research_source": "multi",
+    "summary": "Ranskassa, Espanjassa, Italiassa ja useissa muissa Euroopan maissa viranomaiset ovat antaneet ankaria hellevaroituksia, kun lämpötilojen ennustetaan nousevan paikoin yli 40 asteen.",
+    "content": "Ranskassa, Espanjassa, Italiassa ja muissa Länsi- ja Keski-Euroopan maissa on annettu vakavia hellevaroituksia, kun poikkeuksellisen kuuman sään ennustetaan voimistuvan lähipäivinä. Ranskassa viranomaiset ovat sulkeneet tai muuttaneet koulujen aikatauluja laajasti, ja Bordeaux’ssa lämpötilan ennustettiin nousevan maanantaina yli 42 asteeseen.\n\n## Ranskassa laajoja rajoituksia\n\nRanskassa ankarin säävaroitus koskee laajaa osaa maasta. Sääpalvelu Météo-France on kertonut, että 49 aluehallinnollista aluetta on punaisen hellevaroituksen piirissä. Joidenkin tietojen mukaan yli puolet Ranskan alueista on kovimman varoitustason alla.\n\nÄärimmäinen kuumuus on vaikuttanut myös arkeen. Lähes 2 700 koulua oli määrä sulkea tai muuttaa aikataulujaan, ja maassa on peruttu junia, konsertteja ja urheilutapahtumia. Viranomaiset ovat myös rajoittaneet julkista alkoholin käyttöä riskien vähentämiseksi.\n\nRanskassa on raportoitu kolme kuumuuden aiheuttamiin terveysongelmiin liittyvää kuolemaa. Lisäksi kaksi pientä lasta, iältään kaksi ja neljä vuotta, on löydetty kuolleina perheen autosta Carpentras’n kaupungissa Etelä-Ranskassa. Tapausta on liitetty sääoloihin.\n\n## Helle jatkuu useissa maissa\n\nHellevaroituksia on annettu Ranskan lisäksi muun muassa Espanjassa, Italiassa, Saksassa, Sveitsissä ja Luxemburgissa. Paikoin lämpötilat ovat jo nousseet 40 asteeseen, ja ennusteiden mukaan sää voi kuumentua entisestään.\n\nRanskan terveysministeri Stephanie Rist kuvasi TF1-kanavalla edessä olevan vähintään useita erittäin kuumia päiviä ja totesi, ettei lämpötilojen laskun ajankohdasta ole varmuutta.\n\nViranomaiset ovat pyrkineet lieventämään helteen vaikutuksia käytännön toimilla. Pariisissa Eiffel-tornilla ja muilla matkailukohteilla on otettu käyttöön sumutuspisteitä yleisön viilentämiseksi. Roomassa matkailijoiden kerrotaan hakeneen viilennystä suihkulähteistä. Ranskassa on myös raportoitu useista hukkumisista, kun ihmiset ovat hakeutuneet veteen kuumuutta paetakseen.\n\nTilannetta vaikeuttaa se, ettei ilmastointi ole Ranskassa yhtä yleistä kuin monissa kuumempiin kesiin tottuneissa maissa. Viranomaiset seuraavat helleaallon etenemistä, sillä varoitusten mukaan kuumat olosuhteet voivat jatkua ja voimistua lähipäivinä.",
+    "category": "Kotimaa",
+    "tags": [
+      "helteet",
+      "eurooppa",
+      "ranska",
+      "säävaroitukset"
+    ],
+    "summary_bullets": [
+      "Länsi- ja Keski-Euroopassa on annettu ankaria hellevaroituksia.",
+      "Ranskassa kouluja on suljettu tai niiden aikatauluja muutettu laajasti.",
+      "Bordeaux’ssa lämpötilan ennustettiin nousevan yli 42 asteeseen."
+    ],
+    "key_points": [
+      "Länsi- ja Keski-Euroopassa on annettu ankaria hellevaroituksia.",
+      "Ranskassa kouluja on suljettu tai niiden aikatauluja muutettu laajasti.",
+      "Bordeaux’ssa lämpötilan ennustettiin nousevan yli 42 asteeseen."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketin valittuihin lähdekatkelmiin. Kuolemantapaukset ja varoitusalueiden määrät on muotoiltu varoen, koska lähteissä on hieman eri rajauksia Ranskan varoitusalueista.",
+    "source_text": "Red heat alerts have been issued in France, Spain and other nations across western and central Europe as heatwave conditions are forecast to intensify in the coming days with highs of more than 40C. More than half of France's regions are currently under the harshest weather warning, with hundreds of schools ordered to close and highs of 42C predicted in Bordeaux on Monday, forecaster Météo-France said. Two children aged two and four have been found dead in their family car in the town of Carpentras in south of France, in an accident being linked to the weather. Similar red warnings have been issued by the authorities in Germany, Italy, Switzerland and Luxembourg.\n\nThe heatwave conditions are forecast to intensify in the coming days across central and western Europe.\n\n⁠⁠Three people died in France from health issues caused by extreme heat and almost 2,700 of the country’s schools were set to close or modify timetables as authorities across Europe issued heatwave warnings for Monday. Temperatures in Bordeaux in southwestern France were forecast to exceed 42 degrees Celsius (107.6 degrees Fahrenheit) Monday and weather agency Meteo France said 49 regional administrative areas will be under a red heat wave warning. “We’re heading for, at the very least, ⁠several days of very, very hot weather. We don’t know when temperatures ​will ⁠start falling,” French Health Minister Stephanie Rist said on TV channel TF1.\n\nHealth warnings have been issued for people across Europe, including in France, Italy, Spain and Germany. France has been cancelling trains, concerts and sports events and cracking down on public drinking as an exceptional heat wave unfurled across parts of Europe. Multiple drownings were reported as people sought relief in whatever water they could find. About a third of France is under “red alert″ heat and temperatures reached 40C in some areas, in a country where air-conditioning is not widespread. The forecast for Monday is even hotter. The Eiffel Tower and other Paris venues set up misting stations to cool crowds, among a raft of measures introduced by authorities to minimise risks. Tourists in Rome dunked in fountains.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.9,
+    "degraded_mode": false,
+    "monica_packet_id": "20260622T165131Z_4a9e23a643"
+  },
+  "duplicate_rejected_at": "2026-06-22T16:58:01.423771+00:00",
+  "duplicate_rejected": true
+}

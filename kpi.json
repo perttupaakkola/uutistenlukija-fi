@@ -1,29 +1,29 @@
 {
   "description": "Uutistenlukija.fi KPIs — updated by Felix/Max on each flywheel cycle",
-  "lastUpdated": "2026-06-15T07:05:00Z",
+  "lastUpdated": "2026-06-22T07:05:00Z",
   "metrics": {
     "articles": {
-      "total": 3115,
-      "publishedToday": 24,
-      "publishedThisWeek": 247,
-      "lastPublishRun": "2026-06-15T07:00:08Z",
-      "note": "Weekly review 2026-06-15: publishedThisWeek is last 7 days by local post mtime since 2026-06-08 07:00 UTC; publishedToday uses last-24h local frontmatter count from business-control evidence."
+      "total": 3343,
+      "publishedToday": 34,
+      "publishedThisWeek": 430,
+      "lastPublishRun": "2026-06-22T07:00:08Z",
+      "note": "Weekly review 2026-06-22: publishedThisWeek is last 7 days by local post mtime since 2026-06-15 07:00 UTC. Public health reports 3,343 articles and 34 published today; business-control dry-run reports 31 local posts in the last 24h."
     },
     "pipeline": {
       "lastRunSuccess": true,
-      "lastRunTime": "2026-06-15T07:00:08+00:00",
+      "lastRunTime": "2026-06-22T07:00:08+00:00",
       "successRateRecent14": 100,
       "failuresLast24h": 0,
       "cronHealthyJobs": 16,
-      "note": "Weekly review 2026-06-15: project health OK, newest article 13 min old, no lock, last 14 metrics runs succeeded, business-control reports 144/144 successful runs in 24h, and disk is 73-77% used depending on source."
+      "note": "Weekly review 2026-06-22: live public health OK, homepage HTTP 200, last 14 metrics runs succeeded, business-control dry-run reports 144/144 successful runs in 24h, pipeline-status is OK, and root disk is 78% used after this week's cleanup."
     },
     "traffic": {
       "dailyVisitors": 2,
       "dailyPageviews": 2,
-      "searchConsoleClicks7d": null,
-      "searchConsoleImpressions7d": null,
+      "searchConsoleClicks7d": 28,
+      "searchConsoleImpressions7d": 1294,
       "source": "GA4 + Search Console daily-report.json",
-      "note": "Weekly review 2026-06-15: analytics freshness artifact is fresh; GA4 daily report has 2 pageview rows and Search Console 28d artifact is fresh with 500 rows. Keep public summaries focused on verified freshness and low visible traffic."
+      "note": "Weekly review 2026-06-22: analytics freshness is fresh; GA4 daily report has 2 users / 2 pageviews for 2026-06-21, Search Console 7d has 28 clicks / 1,294 impressions, and the 28d artifact has 500 rows."
     },
     "seo": {
       "indexedPages": null,
@@ -35,13 +35,13 @@
       "note": "Revenue remains 0 EUR/month. Monetization status is lead_capture_tracking_active; ads are disabled and AdSense is not configured. Public Buffer/X distribution remains approval-gated."
     },
     "team": {
-      "activeAgents": 6,
-      "tasksCompletedThisWeek": 14,
-      "activeLinearIssues": 4,
+      "activeAgents": 2,
+      "tasksCompletedThisWeek": 23,
+      "activeLinearIssues": 1,
       "flywheel_ideasPosted": 213,
       "flywheel_ideasExecuted": 50,
       "flywheelExecutionRate": 0.37,
-      "note": "Legacy flywheel is historical/guarded; Linear OPE is authoritative. Active OPE: OPE-9 Felix, OPE-191 Iris, OPE-192 Alex/Monica/Sara, OPE-194 Max. This week's notable movement includes OPE-183 Cloudflare file-budget guard, OPE-186 visible-site Talous/trust sprint, OPE-187/189 Buffer dry-run artifacts, OPE-190 approval-boundary audit, and OPE-193 retention preflight."
+      "note": "Legacy flywheel is historical/guarded; Linear OPE is authoritative. Active OPE at review time: OPE-9 Felix only; Max is ready/ops. This week's notable movement includes visible-site Talous/category work, Buffer/private growth packets, reversible disk cleanup, stale article /4 redirect and 404 layout fix, and OPE mirror hardening."
     }
   }
 }
