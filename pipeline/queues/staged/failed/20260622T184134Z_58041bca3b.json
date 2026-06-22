@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-22T18:41:34.749426+00:00",
+  "digest": "58041bca3b",
+  "packet": {
+    "packet_id": "20260622T184134Z_58041bca3b",
+    "created_at": "2026-06-22T18:41:34Z",
+    "headline_seed": "Vain 0,05 sekuntia! Tästä jäi kiinni suomalaisennätyksen kaato",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9558727",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9558727"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Vain 0,05 sekuntia! Tästä jäi kiinni suomalaisennätyksen kaato"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 115,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Itä-Savo"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Vain 0,05 sekuntia! Tästä jäi kiinni suomalaisennätyksen kaato",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Vain 0,05 sekuntia! Tästä jäi kiinni suomalaisennätyksen kaato",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9558727",
+    "published": "2026-06-22T21:19:30+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "631d6ae13c122a6ba657c5c28ca2ce5b",
+    "_url_hash": "4bc3e168669939f198ca92c510ddd38177da74f27bb7a83ebad699711b57de30",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Itä-Savo]\nSanttu Heikkinen sivusi suomalaisen mailijuoksun historiaa Kööpenhaminassa, kun hän kellotti ajan 3.55,70. Tulos jää vain viiden sadasosan päähän Ari Paunosen lähes puoli vuosisataa vanhasta Suomen ennätyksestä 3.55,65, joka on vuodelta 1977.\n\nHeikkinen paransi samalla omaa ennätystään merkittävästi. Vielä viime kaudella hänen kovin noteerauksensa oli 3.56,36. Lempäälän Kiriä edustava juoksija sijoittui kilpailussa toiseksi. Voiton vei Uruguayn Valentin Soca ajalla 3.55,52.\n\nMaililla (1 609 metrin mittainen juoksumatka) on vahva perinne yleisurheilussa. Matkan maailmanennätys, 3.43,13, on Marokon Hicham El Guerroujin nimissä vuodelta 1999.\n\nSuomalaisittain ilta tarjosi onnistumisia myös muilla matkoilla. Kuluvan vuoden alussa urheilu-uransa Ruotsista Suomeen vaihtanut Nora Lindahl juoksi 200 metrillä uuden henkilökohtaisen ennätyksensä 22,87, parantaen aiempaa parastaan sadasosalla. Tulos riitti kilpailun voittoon ennen Saksan Talea Prepensiä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-22T18:43:20.668005+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä vahvistettuja perustietoja uutisartikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260622T184134Z_58041bca3b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä vahvistettuja perustietoja uutisartikkelin kirjoittamiseen.\"}"
+}

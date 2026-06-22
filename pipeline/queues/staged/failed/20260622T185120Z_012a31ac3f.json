@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-22T18:51:20.198050+00:00",
+  "digest": "012a31ac3f",
+  "packet": {
+    "packet_id": "20260622T185120Z_012a31ac3f",
+    "created_at": "2026-06-22T18:51:20Z",
+    "headline_seed": "Ravituloksia | Kuopio",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9558755",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9558755"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ravituloksia | Kuopio"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 127,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ravituloksia | Kuopio",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Ravituloksia | Kuopio",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9558755",
+    "published": "2026-06-22T21:41:58+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "d9d37cd5fa431e254184c72c644b8396",
+    "_url_hash": "befa2a74d065d8a52a89f9b89add24e23a9ee3b906bcfc21370bb819154f11f0",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nNainen kuoli tulipalossa Kuopiossa, kertoo Itä-Suomen poliisilaitos.\n\nOmakotitalo paloi Vehmersalmen lähellä Kuopiossa juhannusaattona kello 13 aikaan.\n\nPoliisin saamien tietojen mukaan asunnossa asui mies ja nainen, jotka olivat sisällä talossa tulipalon syttyessä.\n\nPaikalla selvisi, että mies ja nainen olivat olleet sisällä talossa tulipalon syttyessä ja poistuneet talosta pihalle. Nainen oli kuitenkin mennyt takaisin sisälle taloon sammuttamaan paloa ja jäi palavaan taloon, poliisi kertoo tiedotteessaan.\n\nPelastuslaitos sai hälytyksen keskisuuresta rakennuspalosta Saitanjärventiellä perjantaina kello 13.11. Tehtävälle hälytettiin useita pelastuslaitoksen ja ensihoidon yksiköitä sekä poliisipartio.\n\nTalo oli täydenpalon vaiheessa, kun pelastuslaitos saapui kohteeseen.\n\nYksikerroksinen 80-luvulla rakennettu omakotitalo tuhoutui palossa täysin, pelastuslaitos kertoi tiedotteessaan.\n\nPelastuslaitoksen mukaan myös talon vieressä ollut henkilöauto syttyi palamaan säteilylämmön vaikutuksesta.\n\nPoliisi ja pelastuslaitos tutkivat palonsyyn syttymistä. Alustavien tietojen mukaan asiassa ei ole syytä epäillä rikosta, poliisi kertoo.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-22T18:53:20.480668+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä vahvistettuja tietoja tuloksista, ajankohdasta tai osallistujista.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260622T185120Z_012a31ac3f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä vahvistettuja tietoja tuloksista, ajankohdasta tai osallistujista.\"}"
+}
