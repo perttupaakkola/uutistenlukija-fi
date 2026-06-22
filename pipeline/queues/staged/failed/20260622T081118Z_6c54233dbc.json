@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-22T08:11:18.895572+00:00",
+  "digest": "6c54233dbc",
+  "packet": {
+    "packet_id": "20260622T081118Z_6c54233dbc",
+    "created_at": "2026-06-22T08:11:18Z",
+    "headline_seed": "Jalkapallotuloksia | Miesten MM",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9556448",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9556448"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Jalkapallotuloksia | Miesten MM"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 122,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Jalkapallotuloksia | Miesten MM",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Jalkapallotuloksia | Miesten MM",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9556448",
+    "published": "2026-06-22T11:02:13+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "7813d412a470e7db73b2306c6d409c98",
+    "_url_hash": "27e67c0657b9f63b37bbc525e4452c88e5bc52a943bc7f6e101b58ee7c5a2d34",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keskisuomalainen]\n10. Lamine Yamal 1–0, 21. Mikel Oyarzabal 2–0, 24. Oyarzabal 3–0, 49. Hassan Al-Tambakti oma maali 4–0.\n\n21. Kevin Pina 0–1, 44. Maxi Araujo 1–1, 45+6. Agustin Canobbio 2–1, 61. Helio Varela 2–2.\n\nSarjatilanne (2 ottelua): 1) Espanja 4 (maaliero 4–0), 2) Uruguay 2 (3–3), 3) Kap Verde 2 (2–2), 4) Saudi-Arabia 1 (1–5).\n\nLohkon päätösottelut (Suomen aikaa): 27. 6. Kap Verde–Saudi-Arabia, Uruguay–Espanja.\n\nVancouver: Uusi-Seelanti–Egypti 1–3 (1–0)\n\n15. Finn Surman 1–0, 58. Mostava Zico 1–1, 67. Mohamed Salah 1–2, 82. Trezeguet 1–3.\n\nSarjatilanne (2 ottelua): 1) Egypti 4 pistettä (maaliero 4–2), 2) Iran 2 (2–2), 3) Belgia 2 (1–1), 4) Uusi-Seelanti 1 (3–5).\n\nLohkon päätösottelut (Suomen aikaa): 27. 6. Egypti–Iran, Uusi-Seelanti–Belgia.\n\nLohkojen kaksi parasta ja kahdeksan parasta lohkokolmosta etenevät 32 parhaan pudotuspelivaiheeseen.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-22T08:13:18.568975+00:00",
+  "failure": "Packetissa ei ole valittua lähdetekstiä tai tarkistettavia tulostietoja, joten vähintään 250 sanan uutista ei voi kirjoittaa ilman keksittyjä faktoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260622T081118Z_6c54233dbc\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole valittua lähdetekstiä tai tarkistettavia tulostietoja, joten vähintään 250 sanan uutista ei voi kirjoittaa ilman keksittyjä faktoja.\"}"
+}
