@@ -180,12 +180,26 @@ async function handleSubscribe(request, env) {
   }
 }
 
+function redirectedArticleSubpage(requestUrl) {
+  const url = new URL(requestUrl);
+  const match = url.pathname.match(/^(\/posts\/.+?)\/\d+\/?$/);
+  if (!match) return null;
+
+  url.pathname = `${match[1]}/`;
+  return Response.redirect(url.toString(), 308);
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
     if (url.pathname === '/api/subscribe') {
       return handleSubscribe(request, env, ctx);
+    }
+
+    const articleSubpageRedirect = redirectedArticleSubpage(request.url);
+    if (articleSubpageRedirect) {
+      return articleSubpageRedirect;
     }
 
     return env.ASSETS.fetch(request);

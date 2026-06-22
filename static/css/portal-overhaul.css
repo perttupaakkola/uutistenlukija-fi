@@ -106,7 +106,7 @@ main, .container, .single-article, .article-card, .category-article-card { min-w
 .portal-logo__image { max-height: 46px !important; width: 184px !important; object-fit: contain; object-position: left center; }
 .site-date { display: block !important; align-self: center; margin: 0 !important; padding: 0; color: var(--portal-muted); font-size: .72rem !important; letter-spacing: .07em; }
 .hamburger-btn { grid-column: 5; grid-row: 1; }
-.main-nav { grid-column: 1 / -1; grid-row: 2; justify-content: flex-start !important; width: calc(100% + 2rem); margin: .65rem -1rem 0 !important; padding: .48rem 1rem .45rem !important; border-top: 2px solid var(--portal-ink) !important; background: #f8f3eb; }
+.main-nav { grid-column: 1 / -1; grid-row: 2; justify-content: flex-start !important; width: 100%; margin: .65rem 0 0 !important; padding: .48rem 1rem .45rem !important; border-top: 2px solid var(--portal-ink) !important; background: #f8f3eb; }
 .main-nav ul { gap: 1.05rem !important; flex-wrap: nowrap !important; overflow-x: auto; scrollbar-width: none; }
 .main-nav ul::-webkit-scrollbar { display: none; }
 .main-nav a { background: transparent !important; border: 0 !important; border-radius: 0 !important; padding: .24rem 0 .38rem !important; color: var(--portal-muted); font-size: .78rem !important; letter-spacing: .06em; box-shadow: inset 0 -2px transparent; }
