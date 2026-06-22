@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/nain-moni-yksinyrittaja-jatti-perhevapaan-valiin/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
