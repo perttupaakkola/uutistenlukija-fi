@@ -43,7 +43,6 @@ keywords:
 source_name: "Hacker News Best"
 source_url: "https://david.newgas.net/did-my-old-job-only-exist-because-of-fraud/"
 source_domain: "hnrss.org"
-briefing: true
 draft: false
 ---
 
