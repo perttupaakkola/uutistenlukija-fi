@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-22T02:11:19.496765+00:00",
+  "digest": "f7b247af4c",
+  "packet": {
+    "packet_id": "20260622T021119Z_f7b247af4c",
+    "created_at": "2026-06-22T02:11:19Z",
+    "headline_seed": "Suomalainen Metso on rakentanut 2 000 työntekijän keskuksen toiselle puolelle maailmaa – Siellä tehdään nyt rahaa uusin keinoin",
+    "description_seed": "Palvelut ja huolto ovat yhä enemmän konepajojen tasaisen kassavirran takana. Chile on Metson Etelä-Amerikan toimintojen keskus, työntekijöitä on noin 2 000.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/51edfe33-345a-448d-8399-21585b8c5be8?utm_source=rss",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/51edfe33-345a-448d-8399-21585b8c5be8?utm_source=rss"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suomalainen Metso on rakentanut 2 000 työntekijän keskuksen toiselle puolelle maailmaa – Siellä tehdään nyt rahaa uusin keinoin"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Palvelut ja huolto ovat yhä enemmän konepajojen tasaisen kassavirran takana. Chile on Metson Etelä-Amerikan toimintojen keskus, työntekijöitä on noin 2 000.",
+        "word_count": 21,
+        "keyword_overlap": 15,
+        "strong_overlap": 12
+      }
+    ],
+    "source_text": "Palvelut ja huolto ovat yhä enemmän konepajojen tasaisen kassavirran takana. Chile on Metson Etelä-Amerikan toimintojen keskus, työntekijöitä on noin 2 000.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 42,
+      "selected_blocks": 1,
+      "selected_source_words": 21,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suomalainen Metso on rakentanut 2 000 työntekijän keskuksen toiselle puolelle maailmaa – Siellä tehdään nyt rahaa uusin keinoin",
+      "description": "Palvelut ja huolto ovat yhä enemmän konepajojen tasaisen kassavirran takana. Chile on Metson Etelä-Amerikan toimintojen keskus, työntekijöitä on noin 2 000.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Suomalainen Metso on rakentanut 2 000 työntekijän keskuksen toiselle puolelle maailmaa – Siellä tehdään nyt rahaa uusin keinoin",
+    "description": "Palvelut ja huolto ovat yhä enemmän konepajojen tasaisen kassavirran takana. Chile on Metson Etelä-Amerikan toimintojen keskus, työntekijöitä on noin 2 000.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/51edfe33-345a-448d-8399-21585b8c5be8?utm_source=rss",
+    "published": "2026-06-22T02:00:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "9a54bb31b85436e25805f892c7b5ca01",
+    "_url_hash": "df9cce6bf0359bf30539f6286873824d116b9b71a91d93098dc45ca443fa0e69",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Palvelut ja huolto ovat yhä enemmän konepajojen tasaisen kassavirran takana. Chile on Metson Etelä-Amerikan toimintojen keskus, työntekijöitä on noin 2 000.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-22T02:13:36.109162+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyttöä tai keksittyjä lisätietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260622T021119Z_f7b247af4c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyttöä tai keksittyjä lisätietoja.\"}"
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-22T01:21:17.525245+00:00",
+  "digest": "f974a1a612",
+  "packet": {
+    "packet_id": "20260622T012117Z_f974a1a612",
+    "created_at": "2026-06-22T01:21:17Z",
+    "headline_seed": "Sattumaako? ABB:n ”uusi keksintö” muistuttaa erehdyttävästi 100 vuotta vanhaa teknologiaa",
+    "description_seed": "ABB:n uusi Dynafin-propulsio on herättänyt huomiota, koska se muistuttaa itävaltalaisen insinöörin Ernst Schneiderin kehittämää propulsiota, jota käytetään myös nykyaikaisissa aluksissa. Tekniikka&Talous kysyi ABB:ltä, miten propulsiot eroavat toisistaan.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/ac7416ed-657d-4907-a841-b01bca5a7822?utm_source=rss",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/ac7416ed-657d-4907-a841-b01bca5a7822?utm_source=rss"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Sattumaako? ABB:n ”uusi keksintö” muistuttaa erehdyttävästi 100 vuotta vanhaa teknologiaa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "ABB:n uusi Dynafin-propulsio on herättänyt huomiota, koska se muistuttaa itävaltalaisen insinöörin Ernst Schneiderin kehittämää propulsiota, jota käytetään myös nykyaikaisissa aluksissa. Tekniikka&Talous kysyi ABB:ltä, miten propulsiot eroavat toisistaan.",
+        "word_count": 27,
+        "keyword_overlap": 22,
+        "strong_overlap": 16
+      }
+    ],
+    "source_text": "ABB:n uusi Dynafin-propulsio on herättänyt huomiota, koska se muistuttaa itävaltalaisen insinöörin Ernst Schneiderin kehittämää propulsiota, jota käytetään myös nykyaikaisissa aluksissa. Tekniikka&Talous kysyi ABB:ltä, miten propulsiot eroavat toisistaan.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 54,
+      "selected_blocks": 1,
+      "selected_source_words": 27,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Sattumaako? ABB:n ”uusi keksintö” muistuttaa erehdyttävästi 100 vuotta vanhaa teknologiaa",
+      "description": "ABB:n uusi Dynafin-propulsio on herättänyt huomiota, koska se muistuttaa itävaltalaisen insinöörin Ernst Schneiderin kehittämää propulsiota, jota käytetään myös nykyaikaisissa aluksissa. Tekniikka&Talous kysyi ABB:ltä, miten propulsiot eroavat toisistaan.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Sattumaako? ABB:n ”uusi keksintö” muistuttaa erehdyttävästi 100 vuotta vanhaa teknologiaa",
+    "description": "ABB:n uusi Dynafin-propulsio on herättänyt huomiota, koska se muistuttaa itävaltalaisen insinöörin Ernst Schneiderin kehittämää propulsiota, jota käytetään myös nykyaikaisissa aluksissa. Tekniikka&Talous kysyi ABB:ltä, miten propulsiot eroavat toisistaan.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/ac7416ed-657d-4907-a841-b01bca5a7822?utm_source=rss",
+    "published": "2026-06-22T01:15:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "d6519591c98e2081b1fcee5cb62ce4cf",
+    "_url_hash": "c04e1d2f89d0a16860485183f8f4793d5c347e1dbf7c5812783be9f2b84f9c14",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "ABB:n uusi Dynafin-propulsio on herättänyt huomiota, koska se muistuttaa itävaltalaisen insinöörin Ernst Schneiderin kehittämää propulsiota, jota käytetään myös nykyaikaisissa aluksissa. Tekniikka&Talous kysyi ABB:ltä, miten propulsiot eroavat toisistaan.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-22T01:23:19.160942+00:00",
+  "failure": "Aineisto sisältää vain yhden lyhyen lähdekatkelman eikä kerro ABB:n vastausta tai teknisiä eroja, joten julkaistavaa vähintään 250 sanan artikkelia ei voi kirjoittaa ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260622T012117Z_f974a1a612\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineisto sisältää vain yhden lyhyen lähdekatkelman eikä kerro ABB:n vastausta tai teknisiä eroja, joten julkaistavaa vähintään 250 sanan artikkelia ei voi kirjoittaa ilman keksittyjä tietoja.\"}"
+}
