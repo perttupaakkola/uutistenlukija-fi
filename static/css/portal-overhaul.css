@@ -646,6 +646,7 @@ main, .container, .single-article, .article-card, .category-article-card { min-w
 .portal-teaser { display: grid; grid-template-columns: 92px minmax(0,1fr); gap: .75rem; padding-bottom: .85rem; border-bottom: var(--module-border); }
 .portal-teaser:last-child { border-bottom: 0; padding-bottom: 0; }
 .portal-teaser__thumb, .portal-teaser__thumb img { width: 92px; height: 66px; object-fit: cover; border-radius: var(--card-radius-sm); overflow: hidden; }
+.portal-teaser__meta { display: flex; flex-wrap: wrap; align-items: center; gap: .2rem .45rem; }
 .portal-right-rail { display: grid; grid-column: 3; grid-row: 1 / span 2; gap: var(--card-gap); }
 .portal-right-rail > * { padding: 18px; }
 .portal-newsletter h2, .portal-most-read h2, .portal-market h2 { color: var(--portal-ink); }
