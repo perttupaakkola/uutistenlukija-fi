@@ -306,6 +306,24 @@ def assert_404_and_stale_subpath_coverage(destination: Path) -> list[str]:
     return failures
 
 
+def assert_finnish_category_alias_coverage(destination: Path) -> list[str]:
+    failures: list[str] = []
+
+    if not (destination / "kategoriat" / "index.html").exists():
+        failures.append("/kategoriat/ index was not generated")
+
+    for slug in ("kotimaa", "talous"):
+        alias_path = destination / "kategoriat" / slug / "index.html"
+        if not alias_path.exists():
+            failures.append(f"/kategoriat/{slug}/ alias page was not generated")
+            continue
+        html = alias_path.read_text(encoding="utf-8", errors="replace")
+        if f"/categories/{slug}/" not in html:
+            failures.append(f"/kategoriat/{slug}/ alias does not point to /categories/{slug}/")
+
+    return failures
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run Hugo edge-case template tests against draft-only content.")
     parser.add_argument("--keep", action="store_true", help="Keep generated content/test files and build output for inspection.")
@@ -369,14 +387,16 @@ def main() -> int:
             return 1
 
         regression_failures = assert_404_and_stale_subpath_coverage(destination)
+        regression_failures.extend(assert_finnish_category_alias_coverage(destination))
         if regression_failures:
-            print("[templates] 404/stale-subpath regression checks failed")
+            print("[templates] template regression checks failed")
             for failure in regression_failures:
                 print(f"[templates]   FAIL {failure}")
             return 1
 
         print("[templates] Hugo build passed")
         print("[templates] 404/stale-subpath regression checks passed")
+        print("[templates] Finnish category alias regression checks passed")
         return 0
     finally:
         if args.keep:

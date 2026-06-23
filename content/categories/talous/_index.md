@@ -1,6 +1,8 @@
 ---
 title: "Talous"
 description: "Korot, hinnat ja yritykset."
+aliases:
+  - "/kategoriat/talous/"
 og_image: "/images/og-talous.png"
 keywords:
   - "talousuutiset"
