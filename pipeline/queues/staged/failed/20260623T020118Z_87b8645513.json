@@ -1,0 +1,190 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-23T02:01:18.600020+00:00",
+  "digest": "87b8645513",
+  "packet": {
+    "packet_id": "20260623T020118Z_87b8645513",
+    "created_at": "2026-06-23T02:01:18Z",
+    "headline_seed": "Ransom note claims Nancy Guthrie died after abduction",
+    "description_seed": "The note from the possible kidnappers reportedly stated that they did not mean for her to die and included an apology to the family.",
+    "link": "https://www.bbc.com/news/articles/cvgm0mgzl33o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "AOL",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.com/news/articles/cvgm0mgzl33o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ransom note claims Nancy Guthrie died after abduction"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A ransom note sent days after the 84-year-old mother of US presenter Savannah Guthrie was abducted from her home claimed she had died. The note was one of two addressed to Nancy Guthrie's family and sent to news media in the days after her January kidnapping. The first demanded millions in bitcoin for her release, but the second stated that she had died, according to sources cited by US media. The note from the possible kidnappers reportedly stated they did not mean for her to die and included an apology to the family. The Pima County Sheriff's Department declined to comment on the contents of the notes, but said the investigation \"remains active and ongoing\".",
+        "word_count": 115,
+        "keyword_overlap": 17,
+        "strong_overlap": 9
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The note from the possible kidnappers reportedly stated that they did not mean for her to die and included an apology to the family.",
+        "word_count": 24,
+        "keyword_overlap": 12,
+        "strong_overlap": 7
+      },
+      {
+        "source": "AOL",
+        "source_type": "research",
+        "text": "Investigators familiar with the disappearance of Nancy Guthrie believe that two ransom notes sent to her family were authored by the person or group responsible for her abduction. According to sources close to the case, digital forensics show that both messages were likely transmitted from the exact same computer IP address. The first message arrived on February 2, just one day after the 84-year-old was reported missing from her home in Tucson, Arizona. It was submitted through the online tip portals of TMZ and two local television stations. Addressed directly to TV journalist Savannah Guthrie, the note demanded millions of dollars in bitcoin in exchange for her mother's safe return.",
+        "word_count": 110,
+        "keyword_overlap": 9,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "An initial ransom note was sent the day after she went missing and demanded millions in bitcoin for her release. It gave specific details about her home, as well as details about her bedroom and the home's surroundings, investigators told CBS. The note was reportedly addressed to Savannah Guthrie, who is a co-anchor for the NBC's Today show. A second note - sent on 6 February - used language similar to that of the first one, but did not include any demands, instead apologising for her death and stating it was inadvertent. After the two notes, Savannah Guthrie and her siblings released a video appearing to respond. \"We received your message, and we understand,\" the NBC host said. \"We beg you now to return our mother to us.\" She said the family \"would pay\".",
+        "word_count": 134,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "A ransom note sent days after the 84-year-old mother of US presenter Savannah Guthrie was abducted from her home claimed she had died. The note was one of two addressed to Nancy Guthrie's family and sent to news media in the days after her January kidnapping. The first demanded millions in bitcoin for her release, but the second stated that she had died, according to sources cited by US media. The note from the possible kidnappers reportedly stated they did not mean for her to die and included an apology to the family. The Pima County Sheriff's Department declined to comment on the contents of the notes, but said the investigation \"remains active and ongoing\".\n\nThe note from the possible kidnappers reportedly stated that they did not mean for her to die and included an apology to the family.\n\nInvestigators familiar with the disappearance of Nancy Guthrie believe that two ransom notes sent to her family were authored by the person or group responsible for her abduction. According to sources close to the case, digital forensics show that both messages were likely transmitted from the exact same computer IP address. The first message arrived on February 2, just one day after the 84-year-old was reported missing from her home in Tucson, Arizona. It was submitted through the online tip portals of TMZ and two local television stations. Addressed directly to TV journalist Savannah Guthrie, the note demanded millions of dollars in bitcoin in exchange for her mother's safe return.\n\nAn initial ransom note was sent the day after she went missing and demanded millions in bitcoin for her release. It gave specific details about her home, as well as details about her bedroom and the home's surroundings, investigators told CBS. The note was reportedly addressed to Savannah Guthrie, who is a co-anchor for the NBC's Today show. A second note - sent on 6 February - used language similar to that of the first one, but did not include any demands, instead apologising for her death and stating it was inadvertent. After the two notes, Savannah Guthrie and her siblings released a video appearing to respond. \"We received your message, and we understand,\" the NBC host said. \"We beg you now to return our mother to us.\" She said the family \"would pay\".",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 858,
+      "selected_blocks": 4,
+      "selected_source_words": 383,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "AOL",
+        "AOL",
+        "AOL",
+        "AOL",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "AOL",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ransom note claims Nancy Guthrie died after abduction",
+      "description": "The note from the possible kidnappers reportedly stated that they did not mean for her to die and included an apology to the family.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Ransom note claims Nancy Guthrie died after abduction",
+    "description": "The note from the possible kidnappers reportedly stated that they did not mean for her to die and included an apology to the family.",
+    "link": "https://www.bbc.com/news/articles/cvgm0mgzl33o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-23T01:59:39+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "138c59b50abd23abb4cf17b06afedf0f",
+    "_url_hash": "ec3f7e0e2b7840c86486b332d03dee6b86b1a843a1adf0bb7ff880f1c288ea45",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nA ransom note sent days after the 84-year-old mother of US presenter Savannah Guthrie was abducted from her home claimed she had died.\n\nThe note was one of two addressed to Nancy Guthrie's family and sent to news media in the days after her January kidnapping.\n\nThe first demanded millions in bitcoin for her release, but the second stated that she had died, according to sources cited by US media.\n\nThe note from the possible kidnappers reportedly stated they did not mean for her to die and included an apology to the family. The Pima County Sheriff's Department declined to comment on the contents of the notes, but said the investigation \"remains active and ongoing\".\n\n\"The Pima County Sheriff's Department continues to work closely with the FBI as investigators follow up on leads, review information, and pursue the facts surrounding this case,\" a spokesperson for the sheriff's department said.\n\nThe BBC has contacted the FBI. The department, along with the FBI, has spent months investigating the elder Guthrie's mysterious abduction from her home near Tucson, Arizona.\n\nThe BBC's US partner CBS and other outlets reported on Monday that law enforcement had requested that media hold off publishing details of the notes while they investigated Guthrie's disappearance.\n\nNancy Guthrie vanished after being dropped off at her home by relatives on 31 January. Concern grew when she did not go to a friend's house to watch a virtual Sunday church service the next morning.\n\nAn initial ransom note was sent the day after she went missing and demanded millions in bitcoin for her release.\n\nIt gave specific details about her home, as well as details about her bedroom and the home's surroundings, investigators told CBS.\n\nThe note was reportedly addressed to Savannah Guthrie, who is a co-anchor for the NBC's Today show.\n\nA second note - sent on 6 February - used language similar to that of the first one, but did not include any demands, instead apologising for her death and stating it was inadvertent.\n\nAfter the two notes, Savannah Guthrie and her siblings released a video appearing to respond.\n\n\"We received your message, and we understand,\" the NBC host said. \"We beg you now to return our mother to us.\" She said the family \"would pay\".\n\nAuthorities and Guthrie's family repeatedly issued public warnings that the Nancy was in poor health and was without critical medication.\n\nAs the search continued, authorities released images of a masked person who was seen in security camera footage\n\n---\n\n[Lähde: AOL]\nInvestigators familiar with the disappearance of Nancy Guthrie believe that two ransom notes sent to her family were authored by the person or group responsible for her abduction. According to sources close to the case, digital forensics show that both messages were likely transmitted from the exact same computer IP address.\n\nThe first message arrived on February 2, just one day after the 84-year-old was reported missing from her home in Tucson, Arizona. It was submitted through the online tip portals of TMZ and two local television stations. Addressed directly to TV journalist Savannah Guthrie, the note demanded millions of dollars in bitcoin in exchange for her mother's safe return.\n\nTo prove authenticity, the sender included highly specific details about the interior of the Tucson residence that had not been made public. Investigators noted that the writer correctly identified a broken light on the back porch and pointed out that an Apple Watch with a white band was sitting on the floor of the bedroom.\n\nA second note was sent on February 6. While it featured a similar writing style and language, it contained no financial demands. Instead, the authors claimed that Nancy Guthrie had died, explicitly stating that they did not intend for her death to happen.\n\nDuring an NBC interview in March, Savannah Guthrie confirmed that her family views these two specific notes as authentic, despite receiving a flood of hoaxes.\n\n\"There are a lot of different notes, I think, that came, and I think most of them — it's my understanding — are not real, and I didn't see them,\" she said. \"But I believe the two notes that we received, that we responded to, I tend to believe those are real.\"\n\nFollowing the receipt of the second note in February, Savannah Guthrie and her siblings uploaded an appeal to the abductors on Instagram, acknowledging the message and offering to pay the ransom.\n\n\"We received your message, and we understand,\" Savannah Guthrie said in the video recording. \"We beg you now to return our mother to us so that we can celebrate with her. This is the only way we will have peace. … This is very valuable to us, and we will pay.\"\n\nA dedicated task force consisting of FBI agents and Pima County detectives is handling the ongoing investigation. They continue to actively search for Nancy Guthrie and trace the individuals behind her kidnapping.\n\nREAD: Florida Slams Immediate Ban On Ultra-Potent Gas Station Drug Linked To Hundreds Of Overdoses\n\nPlease make a small donati",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-23T02:14:45.651250+00:00",
+  "failure": "content too short: 220 words",
+  "payload": {
+    "packet_id": "20260623T020118Z_87b8645513",
+    "title": "Lunnasviesti väitti Savannah Guthrien äidin kuolleen sieppauksen jälkeen",
+    "summary": "Nancy Guthrien katoamista tutkivat viranomaiset selvittävät kahta lunnasviestiä, joista jälkimmäinen väitti 84-vuotiaan kuolleen sieppauksen jälkeen.",
+    "content": "Yhdysvaltalaisen televisiojuontajan Savannah Guthrien 84-vuotiaan äidin Nancy Guthrien sieppaukseen liittyvässä tutkinnassa on noussut esiin kaksi lunnasviestiä, joista toinen väitti hänen kuolleen. Viestit lähetettiin perheelle ja uutismedioille sen jälkeen, kun Guthrie oli kadonnut kodistaan Tucsonissa Arizonassa.\n\n## Kaksi viestiä perheelle\n\nEnsimmäinen viesti lähetettiin tietojen mukaan 2. helmikuuta, päivä sen jälkeen kun Nancy Guthrie oli ilmoitettu kadonneeksi. Viestissä vaadittiin miljoonia dollareita bitcoineina hänen vapauttamisestaan. Se oli osoitettu suoraan Savannah Guthrielle, joka tunnetaan NBC:n Today-ohjelman toisena ankkurina.\n\nTutkintaa tuntevien lähteiden mukaan viesti toimitettiin TMZ:n ja kahden paikallisen televisioaseman verkkovinkkikanavien kautta. Viestin kerrotaan sisältäneen yksityiskohtia Nancy Guthrien kodista, hänen makuuhuoneestaan ja talon ympäristöstä.\n\nToinen viesti lähetettiin 6. helmikuuta. Sen kerrotaan käyttäneen samankaltaista kieltä kuin ensimmäinen viesti, mutta siinä ei enää esitetty vaatimuksia. Sen sijaan viestissä väitettiin, että Nancy Guthrie oli kuollut, ja siinä pyydettiin anteeksi perheeltä. Mahdollisiksi sieppaajiksi kuvattujen lähettäjien kerrotaan kirjoittaneen, etteivät he tarkoittaneet hänen kuolevan.\n\n## Tutkinta jatkuu\n\nTapaukseen perehtyneiden tutkijoiden mukaan molempien viestien uskotaan olevan saman henkilön tai ryhmän lähettämiä. Digitaalisen tutkinnan perusteella viestit on lähteiden mukaan todennäköisesti välitetty samasta tietokoneen IP-osoitteesta.\n\nPima Countyn sheriffin toimisto ei ole kommentoinut viestien sisältöä. Virasto on kuitenkin kertonut tutkinnan olevan yhä aktiivinen ja kesken.\n\nViestien jälkeen Savannah Guthrie ja hänen sisaruksensa julkaisivat videon, joka vaikutti olevan vastaus lähettäjille. Guthrie sanoi perheen vastaanottaneen viestin ja ymmärtävän sen. Hän pyysi äidin palauttamista ja sanoi perheen maksavan.",
+    "category": "Kotimaa",
+    "tags": [
+      "Nancy Guthrie",
+      "Savannah Guthrie",
+      "Yhdysvallat",
+      "sieppaus",
+      "lunnasvaatimus"
+    ],
+    "summary_bullets": [
+      "Nancy Guthrien perheelle lähetettiin kaksi lunnasviestiä hänen katoamisensa jälkeen.",
+      "Ensimmäinen viesti vaati miljoonia dollareita bitcoineina, toinen väitti hänen kuolleen.",
+      "Pima Countyn sheriffin toimisto kertoo tutkinnan olevan edelleen kesken."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu lähdepaketin tietoihin kahdesta lunnasviestistä, niiden ajoituksesta ja viranomaisten rajatusta kommentista. Kuolemaa ei esitetä varmistettuna faktana, vaan viestin väitteenä."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260623T020118Z_87b8645513\",\n  \"title\": \"Lunnasviesti väitti Savannah Guthrien äidin kuolleen sieppauksen jälkeen\",\n  \"summary\": \"Nancy Guthrien katoamista tutkivat viranomaiset selvittävät kahta lunnasviestiä, joista jälkimmäinen väitti 84-vuotiaan kuolleen sieppauksen jälkeen.\",\n  \"content\": \"Yhdysvaltalaisen televisiojuontajan Savannah Guthrien 84-vuotiaan äidin Nancy Guthrien sieppaukseen liittyvässä tutkinnassa on noussut esiin kaksi lunnasviestiä, joista toinen väitti hänen kuolleen. Viestit lähetettiin perheelle ja uutismedioille sen jälkeen, kun Guthrie oli kadonnut kodistaan Tucsonissa Arizonassa.\\n\\n## Kaksi viestiä perheelle\\n\\nEnsimmäinen viesti lähetettiin tietojen mukaan 2. helmikuuta, päivä sen jälkeen kun Nancy Guthrie oli ilmoitettu kadonneeksi. Viestissä vaadittiin miljoonia dollareita bitcoineina hänen vapauttamisestaan. Se oli osoitettu suoraan Savannah Guthrielle, joka tunnetaan NBC:n Today-ohjelman toisena ankkurina.\\n\\nTutkintaa tuntevien lähteiden mukaan viesti toimitettiin TMZ:n ja kahden paikallisen televisioaseman verkkovinkkikanavien kautta. Viestin kerrotaan sisältäneen yksityiskohtia Nancy Guthrien kodista, hänen makuuhuoneestaan ja talon ympäristöstä.\\n\\nToinen viesti lähetettiin 6. helmikuuta. Sen kerrotaan käyttäneen samankaltaista kieltä kuin ensimmäinen viesti, mutta siinä ei enää esitetty vaatimuksia. Sen sijaan viestissä väitettiin, että Nancy Guthrie oli kuollut, ja siinä pyydettiin anteeksi perheeltä. Mahdollisiksi sieppaajiksi kuvattujen lähettäjien kerrotaan kirjoittaneen, etteivät he tarkoittaneet hänen kuolevan.\\n\\n## Tutkinta jatkuu\\n\\nTapaukseen perehtyneiden tutkijoiden mukaan molempien viestien uskotaan olevan saman henkilön tai ryhmän lähettämiä. Digitaalisen tutkinnan perusteella viestit on lähteiden mukaan todennäköisesti välitetty samasta tietokoneen IP-osoitteesta.\\n\\nPima Countyn sheriffin toimisto ei ole kommentoinut viestien sisältöä. Virasto on kuitenkin kertonut tutkinnan olevan yhä aktiivinen ja kesken.\\n\\nViestien jälkeen Savannah Guthrie ja hänen sisaruksensa julkaisivat videon, joka vaikutti olevan vastaus lähettäjille. Guthrie sanoi perheen vastaanottaneen viestin ja ymmärtävän sen. Hän pyysi äidin palauttamista ja sanoi perheen maksavan.\",\n  \"category\": \"Kotimaa\",\n  \"tags\": [\n    \"Nancy Guthrie\",\n    \"Savannah Guthrie\",\n    \"Yhdysvallat\",\n    \"sieppaus\",\n    \"lunnasvaatimus\"\n  ],\n  \"summary_bullets\": [\n    \"Nancy Guthrien perheelle lähetettiin kaksi lunnasviestiä hänen katoamisensa jälkeen.\",\n    \"Ensimmäinen viesti vaati miljoonia dollareita bitcoineina, toinen väitti hänen kuolleen.\",\n    \"Pima Countyn sheriffin toimisto kertoo tutkinnan olevan edelleen kesken.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Artikkeli perustuu lähdepaketin tietoihin kahdesta lunnasviestistä, niiden ajoituksesta ja viranomaisten rajatusta kommentista. Kuolemaa ei esitetä varmistettuna faktana, vaan viestin väitteenä.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260623T020118Z_87b8645513",
+    "category": "Kotimaa",
+    "selected_source_words": 383,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 220,
+    "issues": [
+      "content too short: 220 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Lunnasviesti väitti Savannah Guthrien äidin kuolleen sieppauksen jälkeen",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-23T02:14:45.650969+00:00",
+    "repair_trigger": "pre_repair_word_count=220; selected_source_words=383; selected_source_blocks=4",
+    "pre_repair_word_count": 220,
+    "pre_repair_lead_word_count": 35,
+    "post_repair_word_count": 220,
+    "post_repair_lead_word_count": 35,
+    "selected_source_words_at_repair": 383,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 383,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 220 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:12c36e0178",
+      "2:BBC World:4b6a526247",
+      "3:AOL:4ab523256d",
+      "4:BBC World:5f628bccd2"
+    ],
+    "final_issues": [
+      "content too short: 220 words"
+    ],
+    "recovered": false
+  }
+}

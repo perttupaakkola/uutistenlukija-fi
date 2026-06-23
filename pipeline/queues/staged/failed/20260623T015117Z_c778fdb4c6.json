@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-23T01:51:17.453530+00:00",
+  "digest": "c778fdb4c6",
+  "packet": {
+    "packet_id": "20260623T015117Z_c778fdb4c6",
+    "created_at": "2026-06-23T01:51:17Z",
+    "headline_seed": "Suomeen tulossa 2–3 miljardin tehdashanke sittenkin – Kuluttaa 7 TWh sähköä vuodessa",
+    "description_seed": "Toimitusjohtaja kertoo Tekniikka&Taloudelle historiallisen suuren tehdashankkeen muutosten taustoista, tilanteesta ja siitä miten kaikki jatkuu. Suomalaisittain ainutlaatuinen tuotanto alkaa vuonna 2031.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/76a8307f-290d-44b5-a51d-5d855a181bd5?utm_source=rss",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/76a8307f-290d-44b5-a51d-5d855a181bd5?utm_source=rss"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suomeen tulossa 2–3 miljardin tehdashanke sittenkin – Kuluttaa 7 TWh sähköä vuodessa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Toimitusjohtaja kertoo Tekniikka&Taloudelle historiallisen suuren tehdashankkeen muutosten taustoista, tilanteesta ja siitä miten kaikki jatkuu. Suomalaisittain ainutlaatuinen tuotanto alkaa vuonna 2031.",
+        "word_count": 20,
+        "keyword_overlap": 19,
+        "strong_overlap": 15
+      }
+    ],
+    "source_text": "Toimitusjohtaja kertoo Tekniikka&Taloudelle historiallisen suuren tehdashankkeen muutosten taustoista, tilanteesta ja siitä miten kaikki jatkuu. Suomalaisittain ainutlaatuinen tuotanto alkaa vuonna 2031.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 40,
+      "selected_blocks": 1,
+      "selected_source_words": 20,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suomeen tulossa 2–3 miljardin tehdashanke sittenkin – Kuluttaa 7 TWh sähköä vuodessa",
+      "description": "Toimitusjohtaja kertoo Tekniikka&Taloudelle historiallisen suuren tehdashankkeen muutosten taustoista, tilanteesta ja siitä miten kaikki jatkuu. Suomalaisittain ainutlaatuinen tuotanto alkaa vuonna 2031.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Suomeen tulossa 2–3 miljardin tehdashanke sittenkin – Kuluttaa 7 TWh sähköä vuodessa",
+    "description": "Toimitusjohtaja kertoo Tekniikka&Taloudelle historiallisen suuren tehdashankkeen muutosten taustoista, tilanteesta ja siitä miten kaikki jatkuu. Suomalaisittain ainutlaatuinen tuotanto alkaa vuonna 2031.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/76a8307f-290d-44b5-a51d-5d855a181bd5?utm_source=rss",
+    "published": "2026-06-23T01:34:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "044058dae427921e0440a847803f3970",
+    "_url_hash": "5f7b0b36c6128eff9edc9e8fe089dffeedfab13849f4f99c5af5858d49a21c8d",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Toimitusjohtaja kertoo Tekniikka&Taloudelle historiallisen suuren tehdashankkeen muutosten taustoista, tilanteesta ja siitä miten kaikki jatkuu. Suomalaisittain ainutlaatuinen tuotanto alkaa vuonna 2031.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-23T01:53:20.285597+00:00",
+  "failure": "Lähdeaineisto on liian niukka: paketissa ei kerrota yhtiötä, sijaintia, hankkeen tarkkaa tuotantoalaa, muutosten sisältöä tai toimitusjohtajan lausuntoja, joten 250+ sanan julkaistava artikkeli vaatisi olennaisten tietojen keksimistä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260623T015117Z_c778fdb4c6\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka: paketissa ei kerrota yhtiötä, sijaintia, hankkeen tarkkaa tuotantoalaa, muutosten sisältöä tai toimitusjohtajan lausuntoja, joten 250+ sanan julkaistava artikkeli vaatisi olennaisten tietojen keksimistä.\"}"
+}
