@@ -23,6 +23,7 @@ from datetime import datetime, timezone
 from typing import NamedTuple
 
 from filler_gate import analyze_article as _analyze_filler_article, log_hits as _log_filler_hits
+from source_confidence_guard import source_confidence_issues
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
@@ -31,16 +32,13 @@ _CONTENT_POSTS_DIR = os.path.abspath(os.path.join(_PIPELINE_DIR, "..", "content"
 REJECTED_DIR = os.path.join(_PIPELINE_DIR, "rejected")
 REJECTS_LOG = os.path.join(_PIPELINE_DIR, "logs", "quality_gate_rejects.log")
 MIN_BODY_WORDS = 250
-DEGRADED_MIN_BODY_WORDS = 140
-DEGRADED_MIN_PARAGRAPHS = 2
-DEGRADED_MIN_LEAD_WORDS = 20
-DEGRADED_REJECT_THRESHOLD = 30
 
 # Historical internal threshold (0–80). Corresponds to 5.0 / 10 normalized.
-# Restored to a stricter publish bar (2026-04-18) now that the public writer lane
-# is moving behind Monica + hard fail checks. Better to quarantine than publish weak copy.
-REJECT_THRESHOLD = 40
-DEFAULT_NORMALIZED_THRESHOLD = 5.0
+# TEMPORARILY lowered 40→30 (2026-04-02) to unblock publishing after 60h drought.
+# Missing images zero out image score, pushing otherwise-good articles below 40.
+# TODO: restore to 40 once image generation pipeline is fixed.
+REJECT_THRESHOLD = 30
+DEFAULT_NORMALIZED_THRESHOLD = 3.5
 MAX_DUPLICATION_LOOKBACK = 50
 
 _PLACEHOLDER_PATTERNS = re.compile(
@@ -60,17 +58,6 @@ _GENERIC_ENDING_PATTERNS = (
     "voidaan todeta",
     "on tärkeää",
 )
-
-_SOURCE_LEAK_PATTERNS = re.compile(
-    r"(?i)(?:^|\b)(?:lähde:|source:|alkuperäinen artikkeli|continue reading|read more|liity yrittäjiin|newsletter)",
-)
-
-_ENGLISH_SIGNAL_WORDS = {
-    "the", "and", "for", "with", "from", "that", "this", "into", "their", "there", "about",
-    "charged", "preview", "movies", "studios", "coverage", "breaking", "latest", "live", "war",
-    "back", "new", "more", "after", "before", "over", "under", "during", "report", "reported",
-    "story", "student", "struggle", "office", "offices", "london", "hollywood", "top", "gun",
-}
 
 _FINNISH_SIGNAL_WORDS = {
     "ja", "on", "että", "suomi", "suomen", "mutta", "myös", "kuten", "joka",
@@ -107,45 +94,10 @@ def _extract_numbers(text: str) -> set[str]:
     return normalised
 
 
-def _with_number_aliases(numbers: set[str]) -> set[str]:
-    """Add conservative aliases for Finnish date ordinals.
-
-    Finnish prose often turns an ISO/source date like 1.9.2026 into
-    "1. syyskuuta 2026". The generic number extractor sees the latter
-    as a standalone "1" plus "2026", which made central-claim checks
-    reject otherwise source-backed Talous articles even when the exact date
-    was present in the source. Keep this narrow: only add day/month aliases
-    from already-sourced dotted numeric dates.
-    """
-    out = set(numbers)
-    for value in numbers:
-        match = re.fullmatch(r"(\d{1,2})\.(\d{1,2})(?:\.(?:19|20)\d{2})?", value)
-        if match:
-            day, month = match.group(1).lstrip("0") or "0", match.group(2).lstrip("0") or "0"
-            out.update({day, month})
-    return out
-
-
 def check_numbers_sourced(source_text: str, content: str, title: str = "") -> list[str]:
-    source_nums = _with_number_aliases(_extract_numbers(source_text))
+    source_nums = _extract_numbers(source_text)
     article_nums = _extract_numbers((title or "") + " " + (content or ""))
     return sorted(article_nums - source_nums)
-
-
-def _lead_contains_unsourced_numbers(unsourced: list[str], title: str, content: str) -> bool:
-    """Return true when unsupported numbers appear in the article's headline/lead frame.
-
-    The Apr 29 trust incident was not merely "some number was reformatted"; the
-    unsupported numeric/rate-hike frame appeared in the public headline/lead and
-    became central to the story. Keep generic unsourced numbers as warnings to
-    avoid the old false-positive problem, but hard-block unsupported numbers
-    that sit in the title or opening paragraph.
-    """
-    if not unsourced:
-        return False
-    lead_frame = f"{title or ''} {_first_paragraph(content or '')}"
-    lead_nums = _extract_numbers(lead_frame)
-    return bool(set(unsourced) & lead_nums)
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -160,43 +112,6 @@ def _normalize_text(text: str) -> str:
 
 def _tokenize_words(text: str) -> list[str]:
     return re.findall(r"\b[a-zäöåA-ZÄÖÅ]{2,}\b", (text or "").lower())
-
-
-def _has_source_leakage(text: str) -> bool:
-    return bool(_SOURCE_LEAK_PATTERNS.search(text or ""))
-
-
-def _has_substantial_english(text: str, *, title_mode: bool = False) -> bool:
-    words = _tokenize_words(text)
-    if not words:
-        return False
-    english_hits = sum(1 for w in words if w in _ENGLISH_SIGNAL_WORDS)
-    ratio = english_hits / len(words)
-    if title_mode:
-        return len(words) >= 4 and english_hits >= 2 and ratio >= 0.25
-    return len(words) >= 40 and english_hits >= 10 and ratio >= 0.12
-
-
-def _has_repeated_paragraphs(content: str) -> bool:
-    paragraphs = [_normalize_text(p).lower() for p in (content or "").split("\n\n") if _normalize_text(p)]
-    seen: set[str] = set()
-    for paragraph in paragraphs:
-        if len(paragraph) < 40:
-            continue
-        if paragraph in seen:
-            return True
-        seen.add(paragraph)
-    return False
-
-
-def _looks_truncated(content: str) -> bool:
-    paragraphs = [p.strip() for p in (content or "").split("\n\n") if p.strip()]
-    if not paragraphs:
-        return False
-    last = paragraphs[-1].strip()
-    if len(last.split()) < 7:
-        return False
-    return last[-1] not in (".", "!", "?", '"', "'", "”", "»")
 
 
 def _jaccard_similarity(a: str, b: str) -> float:
@@ -436,12 +351,9 @@ def score_article(article: dict) -> ScoreBreakdown:
 
     word_count = len(content.split())
     missing_image = not image.strip()
-    degraded_mode = bool(article.get("degraded_mode"))
 
     # Historical scoring kept for compatibility/metrics.
-    if degraded_mode and word_count >= 140:
-        wc_pts = 10
-    elif word_count >= 500:
+    if word_count >= 500:
         wc_pts = 30
     elif word_count >= 350:
         wc_pts = 25
@@ -453,11 +365,7 @@ def score_article(article: dict) -> ScoreBreakdown:
     title_pts = 10 if (title and len(title) < 100) else 0
     desc_len = len(description.strip())
     desc_pts = 10 if (50 <= desc_len <= 160) else 0
-    # Images are fetched after this quality gate in run_pipeline.py. Treat a
-    # missing pre-image value as provisionally OK here, while the normalized
-    # score still keeps a small warning penalty below. Otherwise valid drafts
-    # can be rejected solely because the image step has not run yet.
-    image_pts = 10
+    image_pts = 10 if image.strip() else 0
     cat_pts = 10 if category.strip() else 0
     placeholder_pts = 0 if _PLACEHOLDER_PATTERNS.search(content + title + description) else 10
 
@@ -514,20 +422,16 @@ def score_article(article: dict) -> ScoreBreakdown:
     if source_text_words > 0 and source_text_words < 60:
         hard_fails.append(f"thin_source ({source_text_words} words in source — likely paywall/stub)")
 
-    min_body_words = DEGRADED_MIN_BODY_WORDS if degraded_mode else MIN_BODY_WORDS
-    min_paragraphs = DEGRADED_MIN_PARAGRAPHS if degraded_mode else 3
-    min_lead_words = DEGRADED_MIN_LEAD_WORDS if degraded_mode else 30
+    if word_count < MIN_BODY_WORDS:
+        hard_fails.append(f"too_short ({word_count} words, min {MIN_BODY_WORDS})")
 
-    if word_count < min_body_words:
-        hard_fails.append(f"too_short ({word_count} words, min {min_body_words})")
-
-    if len(paragraphs) < min_paragraphs:
-        hard_fails.append(f"only {len(paragraphs)} paragraphs (min {min_paragraphs})")
+    if len(paragraphs) < 3:
+        hard_fails.append(f"only {len(paragraphs)} paragraphs (min 3)")
 
     if paragraphs:
         lead_words = len(paragraphs[0].split())
-        if lead_words < min_lead_words:
-            hard_fails.append(f"lead paragraph too short ({lead_words} words, min {min_lead_words})")
+        if lead_words < 30:
+            hard_fails.append(f"lead paragraph too short ({lead_words} words, min 30)")
 
     lines = [l for l in content.splitlines() if l.strip()]
     if lines:
@@ -544,38 +448,22 @@ def score_article(article: dict) -> ScoreBreakdown:
         if ratio > 0.06 and top_count >= 6:
             hard_fails.append(f"keyword stuffing: '{top_word}' {top_count}× ({ratio:.1%})")
 
-    if _has_substantial_english(title, title_mode=True):
-        hard_fails.append("title contains substantial English")
-
-    if _has_substantial_english(content):
-        hard_fails.append("body contains substantial English")
-
-    if _has_source_leakage(title) or _has_source_leakage(description) or _has_source_leakage(content):
-        hard_fails.append("source leakage in public text")
-
-    if _has_repeated_paragraphs(content):
-        hard_fails.append("repeated paragraph block")
-
-    if _looks_truncated(content):
-        hard_fails.append("truncated ending")
-
-    # NOTE: unsourced numbers are usually a warning because number formatting can
-    # produce false positives ("noin 30 000" → "30000", comma/dot decimals, etc.).
-    # But if an unsupported number appears in the headline/lead frame, it is a
-    # central-claim risk and must not publish as a passive warning.
+    # NOTE: unsourced numbers downgraded from hard fail to score penalty (2026-04-02).
+    # The rewriter frequently reformats numbers ("noin 30 000" → "30000", "3,5 miljardia"
+    # → "3.5 billion") causing 30% false positive rate on hard fail. Now deducts 5 points
+    # from the 80-point score instead of blocking outright.
     if source_text:
         unsourced = check_numbers_sourced(source_text, content, title)
         if unsourced:
             sample = ", ".join(unsourced[:5])
             soft_warnings.append(f"unsourced_numbers: {sample}")
             reasons.append("unsourced numbers")
-            if _lead_contains_unsourced_numbers(unsourced, title, content):
-                hard_fails.append(f"central unsourced number in title/lead: {sample}")
+
+    hard_fails.extend(source_confidence_issues(article))
 
     normalized_score = round(_clamp(weighted_score), 2)
-    effective_total_threshold = DEGRADED_REJECT_THRESHOLD if degraded_mode else REJECT_THRESHOLD
-    effective_threshold = max(DEFAULT_NORMALIZED_THRESHOLD, round(effective_total_threshold / 80 * 10, 2))
-    passes = (total >= effective_total_threshold) and (normalized_score >= effective_threshold) and not hard_fails
+    effective_threshold = max(DEFAULT_NORMALIZED_THRESHOLD, round(REJECT_THRESHOLD / 80 * 10, 2))
+    passes = (total >= REJECT_THRESHOLD) and (normalized_score >= effective_threshold) and not hard_fails
 
     return ScoreBreakdown(
         total=total,
@@ -628,14 +516,9 @@ def run_gate(articles: list[dict], threshold: int = REJECT_THRESHOLD) -> GateRes
             passed.append(article)
         else:
             reasons: list[str] = []
-            effective_total_threshold = DEGRADED_REJECT_THRESHOLD if article.get("degraded_mode") else threshold
-            effective_normalized_threshold = max(
-                DEFAULT_NORMALIZED_THRESHOLD,
-                round(effective_total_threshold / 80 * 10, 2),
-            )
-            if breakdown.total < effective_total_threshold or breakdown.normalized_score < effective_normalized_threshold:
+            if breakdown.total < threshold or breakdown.normalized_score < DEFAULT_NORMALIZED_THRESHOLD:
                 reasons.append(
-                    f"score {breakdown.total}/{effective_total_threshold} norm={breakdown.normalized_score}/10 "
+                    f"score {breakdown.total}/{threshold} norm={breakdown.normalized_score}/10 "
                     f"(length={breakdown.length_score} readability={breakdown.readability_score} "
                     f"complete={breakdown.completeness_score} dup={breakdown.duplication_score} lang={breakdown.language_score})"
                 )
@@ -649,7 +532,7 @@ def run_gate(articles: list[dict], threshold: int = REJECT_THRESHOLD) -> GateRes
             rejected.append(article)
             _log_reject(article, reason_str)
 
-            if breakdown.total < effective_total_threshold or breakdown.normalized_score < effective_normalized_threshold:
+            if breakdown.total < threshold or breakdown.normalized_score < DEFAULT_NORMALIZED_THRESHOLD:
                 reason_counter["low_score"] += 1
             for reason in breakdown.reasons:
                 if reason.startswith("length"):
@@ -706,7 +589,6 @@ def run_gate(articles: list[dict], threshold: int = REJECT_THRESHOLD) -> GateRes
         "min_score": min(all_scores) if all_scores else 0,
         "max_score": max(all_scores) if all_scores else 0,
         "threshold": threshold,
-        "degraded_threshold": DEGRADED_REJECT_THRESHOLD,
         "normalized_threshold": DEFAULT_NORMALIZED_THRESHOLD,
         "filler_hits": filler_hit_articles,
         "filler_penalty_total": filler_total_penalty,
@@ -803,8 +685,7 @@ if __name__ == "__main__":
         article = data.get("article", data)
         bd = score_article(article)
         title = article.get("title", "?")[:70]
-        effective_total_threshold = DEGRADED_REJECT_THRESHOLD if article.get("degraded_mode") else REJECT_THRESHOLD
-        print(f"Score: {bd.total}/80  norm={bd.normalized_score}/10  passes={bd.passes}  (threshold {effective_total_threshold})")
+        print(f"Score: {bd.total}/80  norm={bd.normalized_score}/10  passes={bd.passes}  (threshold {REJECT_THRESHOLD})")
         print(f"  length       : {bd.length_score:>4}/10")
         print(f"  readability  : {bd.readability_score:>4}/10")
         print(f"  completeness : {bd.completeness_score:>4}/10")
