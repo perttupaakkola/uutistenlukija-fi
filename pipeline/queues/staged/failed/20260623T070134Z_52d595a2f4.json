@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-23T07:01:34.943153+00:00",
+  "digest": "52d595a2f4",
+  "packet": {
+    "packet_id": "20260623T070134Z_52d595a2f4",
+    "created_at": "2026-06-23T07:01:34Z",
+    "headline_seed": "HS: Tämä lääke lähtee jatkuvasti varkaiden matkaan",
+    "description_seed": "Espoolainen apteekki on joutunut piinan kohteeksi. Varastelu on nykyään jokaviikkoista. Kauppakeskus Lippulaivassa sijaitsevasta Espoonlahden apteekista varastellaan joka viikko, kertoo Helsingin Sanomat. Apteekkari Mika Vidgrén kertoo HS:lle, että varkaudet koskevat tuotteita, joita myydään ilman reseptiä. Apteekkivarkaat suosivat kalleimpia tuotteita.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/c0b8724b-2949-47e5-9acf-e64787a74d37",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/c0b8724b-2949-47e5-9acf-e64787a74d37"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "HS: Tämä lääke lähtee jatkuvasti varkaiden matkaan"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Espoolainen apteekki on joutunut piinan kohteeksi. Varastelu on nykyään jokaviikkoista. Kauppakeskus Lippulaivassa sijaitsevasta Espoonlahden apteekista varastellaan joka viikko, kertoo Helsingin Sanomat. Apteekkari Mika Vidgrén kertoo HS:lle, että varkaudet koskevat tuotteita, joita myydään ilman reseptiä. Apteekkivarkaat suosivat kalleimpia tuotteita.",
+        "word_count": 38,
+        "keyword_overlap": 31,
+        "strong_overlap": 26
+      }
+    ],
+    "source_text": "Espoolainen apteekki on joutunut piinan kohteeksi. Varastelu on nykyään jokaviikkoista. Kauppakeskus Lippulaivassa sijaitsevasta Espoonlahden apteekista varastellaan joka viikko, kertoo Helsingin Sanomat. Apteekkari Mika Vidgrén kertoo HS:lle, että varkaudet koskevat tuotteita, joita myydään ilman reseptiä. Apteekkivarkaat suosivat kalleimpia tuotteita.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 76,
+      "selected_blocks": 1,
+      "selected_source_words": 38,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "HS: Tämä lääke lähtee jatkuvasti varkaiden matkaan",
+      "description": "Espoolainen apteekki on joutunut piinan kohteeksi. Varastelu on nykyään jokaviikkoista. Kauppakeskus Lippulaivassa sijaitsevasta Espoonlahden apteekista varastellaan joka viikko, kertoo Helsingin Sanomat. Apteekkari Mika Vidgrén kertoo HS:lle, että varkaudet koskevat tuotteita, joita myydään ilman reseptiä. Apteekkivarkaat suosivat kalleimpia tuotteita.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "HS: Tämä lääke lähtee jatkuvasti varkaiden matkaan",
+    "description": "Espoolainen apteekki on joutunut piinan kohteeksi. Varastelu on nykyään jokaviikkoista. Kauppakeskus Lippulaivassa sijaitsevasta Espoonlahden apteekista varastellaan joka viikko, kertoo Helsingin Sanomat. Apteekkari Mika Vidgrén kertoo HS:lle, että varkaudet koskevat tuotteita, joita myydään ilman reseptiä. Apteekkivarkaat suosivat kalleimpia tuotteita.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/c0b8724b-2949-47e5-9acf-e64787a74d37",
+    "published": "2026-06-23T09:57:25+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "ed8f4af0200096974b83e54fcd5248e3",
+    "_url_hash": "ccf1200d655d1a32ec1f9a30faaad34b35cf6977bffcc657749cd5b1ab39e74b",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Espoolainen apteekki on joutunut piinan kohteeksi. Varastelu on nykyään jokaviikkoista. Kauppakeskus Lippulaivassa sijaitsevasta Espoonlahden apteekista varastellaan joka viikko, kertoo Helsingin Sanomat. Apteekkari Mika Vidgrén kertoo HS:lle, että varkaudet koskevat tuotteita, joita myydään ilman reseptiä. Apteekkivarkaat suosivat kalleimpia tuotteita.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-06-23T07:03:25.335623+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin, eikä lääkettä nimetä luotettavasti.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260623T070134Z_52d595a2f4\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin, eikä lääkettä nimetä luotettavasti.\"}"
+}
