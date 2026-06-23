@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Haastattelu/Nykyp%C3%A4iv%C3%A4n-valmennuskoulutus-haastaa-perinteisen-oppimisk%C3%A4sityksen-%E2%80%93-Tietotaito-siit%C3%A4-mit%C3%A4-valmentajan-olisi-hyv%C3%A4-tiet%C3%A4%C3%A4-on-mennyt-eteenp%C3%A4in/270805"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 

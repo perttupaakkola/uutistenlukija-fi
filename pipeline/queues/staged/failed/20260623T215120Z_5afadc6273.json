@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-23T21:51:20.492831+00:00",
+  "digest": "5afadc6273",
+  "packet": {
+    "packet_id": "20260623T215120Z_5afadc6273",
+    "created_at": "2026-06-23T21:51:20Z",
+    "headline_seed": "Junaliikenne pysähdyksissä koko Saksassa",
+    "description_seed": "Liikenne pysäytettiin myöhään tiistaina.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012098104.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012098104.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Junaliikenne pysähdyksissä koko Saksassa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 88,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Junaliikenne pysähdyksissä koko Saksassa",
+      "description": "Liikenne pysäytettiin myöhään tiistaina.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Junaliikenne pysähdyksissä koko Saksassa",
+    "description": "Liikenne pysäytettiin myöhään tiistaina.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012098104.html",
+    "published": "2026-06-23T21:49:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "ca98792c73ed202a673bc54e7d032190",
+    "_url_hash": "52f3e4d523b4b48dac1362c3f22d2cd41bca3c82f5d32ecb30767f78282d57be",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: Yle]\nJunaliikenne kulkee jälleen oikoradalla Keravan ja Lahden välillä.\n\nFinntraffic Rataliikennekeskus tiedottaa, että matkustajien kannattaa varautua myöhätysmisiin keskipäivään saakka.\n\nJunaliikenne pysähtyi oikoradalla noin kello 9.10. Syynä katkokseen oli Mäntsälän kohdalla havaittu vika liikenteenohjauksen tietojärjestelmässä. Vika saatiin korjattua kello 10.15.\n\nPysähdyksen aikana kaukoliikenteen junia ajettiin Lahden ja Keravan välillä poikkeuksellisesti Riihimäen kautta molempiin suuntiin. Z-junaliikenne oli keskeytetty Keravan ja Lahden välillä.\n\nYksittäinen oikoradalle katkoksen vuoksi jäänyt kaukojuna Helsingistä Ouluun myöhästyy aikataulustaan arviolta noin 1,5 tuntia.\n\nIlmennyt vika oli Fintraffic Rataliikennekeskuksen tilannepäällikkö Rauno Helanderin mukaan suhteellisen harvinainen.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-23T21:53:18.645436+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä vahvistettuja tietoja tapahtuman ajankohdasta, syystä, laajuudesta tai seurauksista.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260623T215120Z_5afadc6273\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä vahvistettuja tietoja tapahtuman ajankohdasta, syystä, laajuudesta tai seurauksista.\"}"
+}
