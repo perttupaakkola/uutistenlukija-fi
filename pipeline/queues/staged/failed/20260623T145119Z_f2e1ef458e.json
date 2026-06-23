@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-23T14:51:19.056782+00:00",
+  "digest": "f2e1ef458e",
+  "packet": {
+    "packet_id": "20260623T145119Z_f2e1ef458e",
+    "created_at": "2026-06-23T14:51:19Z",
+    "headline_seed": "17-vuotias raiskattiin hirveällä tavalla – Oikeus: Poikkeuk­sellista suunnitel­mallisuutta",
+    "description_seed": "Viisikymppinen mies tyrkytti uhreille huumeita ja raiskasi heidät eri tavoin. Tero Petteri Rasilahti, 50, on tuomittu yli neljän vuoden vankeusrangaistukseen järkyttävistä rikoksista. Rasilahti raiskasi kaksi naista Tampereella lokakuun 2023 ja tammikuun 2024 välillä.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/13e3a417-0282-49ef-937d-b070bdc850b6",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/13e3a417-0282-49ef-937d-b070bdc850b6"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "17-vuotias raiskattiin hirveällä tavalla – Oikeus: Poikkeuk­sellista suunnitel­mallisuutta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Viisikymppinen mies tyrkytti uhreille huumeita ja raiskasi heidät eri tavoin. Tero Petteri Rasilahti, 50, on tuomittu yli neljän vuoden vankeusrangaistukseen järkyttävistä rikoksista. Rasilahti raiskasi kaksi naista Tampereella lokakuun 2023 ja tammikuun 2024 välillä.",
+        "word_count": 33,
+        "keyword_overlap": 24,
+        "strong_overlap": 19
+      }
+    ],
+    "source_text": "Viisikymppinen mies tyrkytti uhreille huumeita ja raiskasi heidät eri tavoin. Tero Petteri Rasilahti, 50, on tuomittu yli neljän vuoden vankeusrangaistukseen järkyttävistä rikoksista. Rasilahti raiskasi kaksi naista Tampereella lokakuun 2023 ja tammikuun 2024 välillä.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 66,
+      "selected_blocks": 1,
+      "selected_source_words": 33,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "17-vuotias raiskattiin hirveällä tavalla – Oikeus: Poikkeuk­sellista suunnitel­mallisuutta",
+      "description": "Viisikymppinen mies tyrkytti uhreille huumeita ja raiskasi heidät eri tavoin. Tero Petteri Rasilahti, 50, on tuomittu yli neljän vuoden vankeusrangaistukseen järkyttävistä rikoksista. Rasilahti raiskasi kaksi naista Tampereella lokakuun 2023 ja tammikuun 2024 välillä.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "17-vuotias raiskattiin hirveällä tavalla – Oikeus: Poikkeuk­sellista suunnitel­mallisuutta",
+    "description": "Viisikymppinen mies tyrkytti uhreille huumeita ja raiskasi heidät eri tavoin. Tero Petteri Rasilahti, 50, on tuomittu yli neljän vuoden vankeusrangaistukseen järkyttävistä rikoksista. Rasilahti raiskasi kaksi naista Tampereella lokakuun 2023 ja tammikuun 2024 välillä.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/13e3a417-0282-49ef-937d-b070bdc850b6",
+    "published": "2026-06-23T16:55:55+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "c0f809ec3419a8370609a51c2b5ded06",
+    "_url_hash": "e1e128079c095d06ee51b26ef7ecc3494f23792dea668665033e2a7b01c46509",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Viisikymppinen mies tyrkytti uhreille huumeita ja raiskasi heidät eri tavoin. Tero Petteri Rasilahti, 50, on tuomittu yli neljän vuoden vankeusrangaistukseen järkyttävistä rikoksista. Rasilahti raiskasi kaksi naista Tampereella lokakuun 2023 ja tammikuun 2024 välillä.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-06-23T14:53:20.231576+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai varmistamattomia lisätietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260623T145119Z_f2e1ef458e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai varmistamattomia lisätietoja.\"}"
+}

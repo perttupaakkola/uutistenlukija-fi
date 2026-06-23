@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-23T15:01:25.331541+00:00",
+  "digest": "630f574579",
+  "packet": {
+    "packet_id": "20260623T150125Z_630f574579",
+    "created_at": "2026-06-23T15:01:25Z",
+    "headline_seed": "Seuraamme | FC Lahti kohtaa TPS:n kotikentällä – ESS seuraa ottelua hetki hetkeltä",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9560113",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9560113"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Seuraamme | FC Lahti kohtaa TPS:n kotikentällä – ESS seuraa ottelua hetki hetkeltä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 164,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Salon Seudun Sanomat",
+        "Salon Seudun Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Seuraamme | FC Lahti kohtaa TPS:n kotikentällä – ESS seuraa ottelua hetki hetkeltä",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Seuraamme | FC Lahti kohtaa TPS:n kotikentällä – ESS seuraa ottelua hetki hetkeltä",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9560113",
+    "published": "2026-06-23T17:50:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "0a7719c8cd5aa1c5a739d4218c549421",
+    "_url_hash": "b92358b95e39227a6fe2d47f77f0c4927313e8b721783d51d7da503d3777211c",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Salon Seudun Sanomat]\nTänään tulee kuluneeksi kymmenen vuotta brexitistä eli siitä, kun Britannia päätti erota EU:sta. Brexitistä järjestetyssä kansanäänestyksessä EU-jäsenyyttä vastaan äänesti noin 52 prosenttia ja puolesta noin 48 prosenttia.\n\nTuolloinen pääministeri ja konservatiivipuolueen johtaja David Cameron järjesti äänestyksen turvatakseen oman valta-asemansa.\n\nCameron oli luvannut kansanäänestyksen EU-jäsenyydestä, jos hän voittaa vaalit vuonna 2015. Vaalivoitto tuli, mutta Cameronin ja monen muun yllätykseksi EU-eroa kannattavat voittivatkin kesän 2016 kansanäänestyksen.\n\nCameron joutui eroamaan, ja hänen tilalleen nousi sisäministeri Theresa May.\n\nBritannian erosopimus syntyi Mayn johdolla marraskuussa 2018, mutta se ei kelvannut maan parlamentille, joka äänesti sopimuksen nurin kaikkiaan kolme kertaa. Samalla alkoivat kasaantua eroprosessin lukuisat viivästykset.\n\nMayn tilalle pääministeriksi noussut Boris Johnson määräsi uudet parlamenttivaalit, joissa hän joulukuussa 2019 voitti selvän enemmistön ja sai oman erosopimuksensa hyväksytyksi alahuoneessa.\n\nMonivuotisten neuvottelujen jälkeen Britannia jätti EU:n tammikuussa 2020.\n\nEroprosessi ei kuitenkaan ollut ohi. Eroa seurasi vuoden loppuun jatkunut siirtymäaika. Lopulta uusi, suunniteltua suppeampi kauppasopimus tuli väliaikaisesti voimaan 1. tammikuuta 2021 – tasan 48 vuotta sen jälkeen, kun Britannia liittyi Euroopan talousyhteisö EEC:hen.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-23T15:03:19.572276+00:00",
+  "failure": "Paketti ei sisällä varsinaista lähdetekstiä tai varmistettuja ottelutietoja, joiden pohjalta voisi kirjoittaa vähintään 250 sanan uutisen ilman keksittyjä faktoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260623T150125Z_630f574579\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä varsinaista lähdetekstiä tai varmistettuja ottelutietoja, joiden pohjalta voisi kirjoittaa vähintään 250 sanan uutisen ilman keksittyjä faktoja.\"}"
+}
