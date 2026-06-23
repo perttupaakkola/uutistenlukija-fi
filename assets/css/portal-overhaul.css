@@ -658,6 +658,53 @@ main, .container, .single-article, .article-card, .category-article-card { min-w
   }
 }
 
+/* Portal visual lock: keep navigation and front-page links editorial, not browser-default loud. */
+.site-header a,
+.site-header a:hover,
+.site-header a:focus-visible,
+.site-footer a,
+.site-footer a:hover,
+.site-footer a:focus-visible,
+.portal-front a,
+.portal-front a:hover,
+.portal-front a:focus-visible {
+  text-decoration: none !important;
+}
+.portal-livebar strong,
+.portal-livebar__all,
+.portal-trust-cue a,
+.portal-teaser h3 a,
+.portal-most-read a,
+.portal-day-digest a,
+.portal-row-card h3 a {
+  text-decoration: none !important;
+}
+.portal-lead h2 {
+  max-width: 100%;
+  font-size: clamp(1.75rem, 2.45vw, 2.45rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0 !important;
+}
+.portal-lead h2 a {
+  display: inline;
+  color: var(--portal-ink) !important;
+  text-decoration: none !important;
+}
+.portal-lead h2 a:hover,
+.portal-teaser h3 a:hover,
+.portal-most-read a:hover,
+.portal-day-digest a:hover {
+  color: #9a2e24 !important;
+}
+@media (max-width: 680px) {
+  .portal-lead h2 {
+    max-width: 100%;
+    font-size: clamp(1.55rem, 6vw, 1.95rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: 0 !important;
+  }
+}
+
 /* Mobile article overflow hardening: solve wrapping at the source, no clipping mask. */
 @media (max-width: 680px) {
   html, body, main, main.container, .container, .single-article, .single-article * { box-sizing: border-box !important; }
