@@ -73,6 +73,70 @@ class FeedHealthReportCanonicalTests(unittest.TestCase):
         self.assertEqual(report["summary"]["total"], 1)
         self.assertFalse(state_path.exists())
 
+    def test_rss_health_state_score_string_does_not_crash_report_build(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            state_path = Path(tmp) / "feed-health-state.json"
+            rss_state_path = Path(tmp) / "rss-health-state.json"
+            rss_state_path.write_text(json.dumps({"Yle Uutiset": "fresh", "yle_uutiset": "fresh"}), encoding="utf-8")
+            with mock.patch.object(feed_health_report, "RSS_HEALTH_API", Path(tmp) / "missing-api.json"), \
+                 mock.patch.object(feed_health_report, "RSS_HEALTH_LOG", Path(tmp) / "missing-log.json"), \
+                 mock.patch.object(feed_health_report, "STATE_FILE", state_path), \
+                 mock.patch.object(feed_health_report, "RSS_HEALTH_STATE", rss_state_path), \
+                 mock.patch.object(feed_health_report, "RSS_FEEDS", [{
+                     "name": "Yle Uutiset",
+                     "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET",
+                     "language": "fi",
+                 }]), \
+                 mock.patch.object(feed_health_report, "count_from_metrics_json", return_value=Counter()), \
+                 mock.patch.object(feed_health_report, "count_from_metrics_jsonl", return_value=Counter()), \
+                 mock.patch.object(feed_health_report, "count_from_scan_logs", return_value=Counter()), \
+                 mock.patch.object(feed_health_report, "count_from_content", return_value=Counter()):
+                report = feed_health_report.build_report(save_state=False)
+
+        self.assertEqual(report["summary"]["total"], 1)
+        self.assertEqual(report["feeds"][0]["consecutive_errors"], 0)
+
+    def test_canonical_stale_source_is_not_legacy_dead_feed_alert(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            api_path = Path(tmp) / "rss-feed-health.json"
+            api_path.write_text(json.dumps({
+                "generated_at": "2026-06-23T05:00:30+00:00",
+                "schema": "uutistenlukija.rss_feed_health.v1",
+                "counts": {"fresh": 0, "stale": 0, "dead": 1, "unreachable": 0},
+                "feeds": [{
+                    "name": "Teknavi",
+                    "url": "https://teknavi.fi/feed/",
+                    "score": "dead",
+                    "policy": "stale_source",
+                    "reason": "http_200_stale_48h_plus",
+                    "checked_at": "2026-06-23T05:00:02+00:00",
+                    "http_status": 200,
+                    "entries": 25,
+                    "newest_age_h": 359.7,
+                }],
+            }), encoding="utf-8")
+            state_path = Path(tmp) / "feed-health-state.json"
+            with mock.patch.object(feed_health_report, "RSS_HEALTH_API", api_path), \
+                 mock.patch.object(feed_health_report, "RSS_HEALTH_LOG", Path(tmp) / "missing-rss-health.json"), \
+                 mock.patch.object(feed_health_report, "STATE_FILE", state_path), \
+                 mock.patch.object(feed_health_report, "RSS_FEEDS", [{
+                     "name": "Teknavi",
+                     "url": "https://teknavi.fi/feed/",
+                     "language": "fi",
+                 }]), \
+                 mock.patch.object(feed_health_report, "count_from_metrics_json", return_value=Counter()), \
+                 mock.patch.object(feed_health_report, "count_from_metrics_jsonl", return_value=Counter()), \
+                 mock.patch.object(feed_health_report, "count_from_scan_logs", return_value=Counter()), \
+                 mock.patch.object(feed_health_report, "count_from_content", return_value=Counter()):
+                report = feed_health_report.build_report()
+
+        self.assertEqual(report["summary"], {"total": 1, "healthy": 0, "stale": 1, "dead": 0, "disabled": 0})
+        feed = report["feeds"][0]
+        self.assertEqual(feed["status"], "stale")
+        self.assertEqual(feed["rss_score"], "dead")
+        self.assertEqual(feed["rss_http_status"], 200)
+        self.assertEqual(feed["last_success"], "2026-06-23T05:00:02+00:00")
+
     def test_refresh_report_writes_static_facade_without_dead_alert_side_effect(self):
         with tempfile.TemporaryDirectory() as tmp:
             out_path = Path(tmp) / "feed-health.json"

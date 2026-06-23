@@ -273,6 +273,8 @@ def _canonical_feed_status(feed_name: str, canonical: dict) -> tuple[str | None,
     feed = canonical.get("feeds_by_name", {}).get(feed_name.lower())
     if not feed:
         return None, None
+    if feed.get("policy") == "stale_source":
+        return "stale", feed
     score = feed.get("score")
     status = RSS_SCORE_TO_LEGACY_STATUS.get(str(score or ""))
     return status, feed
@@ -281,7 +283,10 @@ def _canonical_feed_status(feed_name: str, canonical: dict) -> tuple[str | None,
 def _rss_last_success(canonical_feed: dict | None, fallback_last_success: str | None) -> str | None:
     if not canonical_feed:
         return fallback_last_success
-    if canonical_feed.get("checked_at") and str(canonical_feed.get("score")) in {"fresh", "stale"}:
+    if canonical_feed.get("checked_at") and (
+        str(canonical_feed.get("score")) in {"fresh", "stale"}
+        or canonical_feed.get("policy") == "stale_source"
+    ):
         return canonical_feed.get("checked_at")
     return fallback_last_success
 
@@ -311,6 +316,8 @@ def build_report(do_live: bool = False, save_state: bool = True) -> dict:
 
         # Get persisted state for this feed
         feed_state = state.get(feed_key, {})
+        if not isinstance(feed_state, dict):
+            feed_state = {}
         last_success = feed_state.get("last_success")
         consecutive_errors = feed_state.get("consecutive_errors", 0)
 
