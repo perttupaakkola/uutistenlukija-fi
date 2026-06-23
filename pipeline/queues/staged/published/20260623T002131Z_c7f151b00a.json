@@ -1,0 +1,216 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-23T00:21:31.542876+00:00",
+  "digest": "c7f151b00a",
+  "packet": {
+    "packet_id": "20260623T002131Z_c7f151b00a",
+    "created_at": "2026-06-23T00:21:31Z",
+    "headline_seed": "OpenAI launches new initiative to help find and patch open-source bugs",
+    "description_seed": "OpenAI is attempting to tackle the security issues of the open source software community.",
+    "link": "https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/",
+    "source": "TechCrunch",
+    "source_names": [
+      "Wired",
+      "MacRumors",
+      "CSOonline",
+      "Wired"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "OpenAI launches new initiative to help find and patch open-source bugs"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Wired",
+        "source_type": "research",
+        "text": "The project has already begun its work offering free security consulting services to open source maintainers to not only help them find and patch vulnerabilities, but also support them in strengthening their code bases and incorporating AI security tools into their development process. The idea is to give individualized support to as many open-source projects as possible to improve both their current security and long-term resilience in a way that will actually be sustainable. “Patch the Planet is an internet-scale effort to help open-source software get ahead of AI bug-hunting tools,” says Trail of Bits CEO and cofounder Dan Guido. “But it's also an effort to help the open-source community see the benefits and not just the downsides of AI coding tools.”",
+        "word_count": 122,
+        "keyword_overlap": 9,
+        "strong_overlap": 5
+      },
+      {
+        "source": "MacRumors",
+        "source_type": "research",
+        "text": "OpenAI today launched Daybreak, an answer to Anthropic's Project Glasswing initiative and Mythos AI model. Like Glasswing, Daybreak is a cyber defense effort that will help tech companies find security vulnerabilities in their platforms. OpenAI says Daybreak is aimed at building cyber defense into software from the start. It builds on OpenAI's April launch of GPT-5.4-Cyber, which the company says has contributed to fixing more than 3,000 vulnerabilities. Daybreak combines the intelligence of OpenAI models, the extensibility of Codex as an agentic harness, and our partners across the security flywheel to help make the world safer for everyone. Defenders can bring secure code review, threat modeling, patch validation, dependency risk analysis, detection, and remediation guidance into the everyday development loop so software becomes more resilient from the start.",
+        "word_count": 128,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "CSOonline",
+        "source_type": "research",
+        "text": "OpenAI has unveiled Daybreak, its answer to Anthropic’s Claude Mythos, amid a growing market for frontier AI-powered cyber defense platforms. The initiative combines OpenAI’s large language models, Codex’s agentic capabilities, and integrations with the broader enterprise security ecosystem. The company said Daybreak is focused on accelerating cyber defense operations and enabling organizations to secure software across the development lifecycle continuously. Announcing the initiative on X, Sam Altman, CEO at OpenAI, said, “OpenAI is launching Daybreak, our effort to accelerate cyber defense and continuously secure software. AI is already good and about to get super good at cybersecurity; we’d like to start working with as many companies as possible now to help them continuously secure themselves.”",
+        "word_count": 115,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Wired",
+        "source_type": "research",
+        "text": "Maintainers “do their work out of love of open source, and now they’re stuck reviewing slop CVEs,” says OpenAI's cyber tech lead, Fouad Matin. With Patch the Planet, he says, “what we’ve effectively done is make it as efficient from a token perspective as possible to reduce the burden for maintainers—code base assessments, validating potential reports, creating patches, and landing them. We want to offset costs, whether it's tokens or people power, to actually patch as much of the world of software as possible.” ---",
+        "word_count": 85,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "The project has already begun its work offering free security consulting services to open source maintainers to not only help them find and patch vulnerabilities, but also support them in strengthening their code bases and incorporating AI security tools into their development process. The idea is to give individualized support to as many open-source projects as possible to improve both their current security and long-term resilience in a way that will actually be sustainable. “Patch the Planet is an internet-scale effort to help open-source software get ahead of AI bug-hunting tools,” says Trail of Bits CEO and cofounder Dan Guido. “But it's also an effort to help the open-source community see the benefits and not just the downsides of AI coding tools.”\n\nOpenAI today launched Daybreak, an answer to Anthropic's Project Glasswing initiative and Mythos AI model. Like Glasswing, Daybreak is a cyber defense effort that will help tech companies find security vulnerabilities in their platforms. OpenAI says Daybreak is aimed at building cyber defense into software from the start. It builds on OpenAI's April launch of GPT-5.4-Cyber, which the company says has contributed to fixing more than 3,000 vulnerabilities. Daybreak combines the intelligence of OpenAI models, the extensibility of Codex as an agentic harness, and our partners across the security flywheel to help make the world safer for everyone. Defenders can bring secure code review, threat modeling, patch validation, dependency risk analysis, detection, and remediation guidance into the everyday development loop so software becomes more resilient from the start.\n\nOpenAI has unveiled Daybreak, its answer to Anthropic’s Claude Mythos, amid a growing market for frontier AI-powered cyber defense platforms. The initiative combines OpenAI’s large language models, Codex’s agentic capabilities, and integrations with the broader enterprise security ecosystem. The company said Daybreak is focused on accelerating cyber defense operations and enabling organizations to secure software across the development lifecycle continuously. Announcing the initiative on X, Sam Altman, CEO at OpenAI, said, “OpenAI is launching Daybreak, our effort to accelerate cyber defense and continuously secure software. AI is already good and about to get super good at cybersecurity; we’d like to start working with as many companies as possible now to help them continuously secure themselves.”\n\nMaintainers “do their work out of love of open source, and now they’re stuck reviewing slop CVEs,” says OpenAI's cyber tech lead, Fouad Matin. With Patch the Planet, he says, “what we’ve effectively done is make it as efficient from a token perspective as possible to reduce the burden for maintainers—code base assessments, validating potential reports, creating patches, and landing them. We want to offset costs, whether it's tokens or people power, to actually patch as much of the world of software as possible.” ---",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 888,
+      "selected_blocks": 4,
+      "selected_source_words": 450,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Wired",
+        "Wired",
+        "Wired",
+        "Wired",
+        "CSOonline",
+        "CSOonline",
+        "CSOonline",
+        "MacRumors",
+        "MacRumors",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "Wired",
+        "MacRumors",
+        "CSOonline",
+        "Wired"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "OpenAI launches new initiative to help find and patch open-source bugs",
+      "description": "OpenAI is attempting to tackle the security issues of the open source software community.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "OpenAI launches new initiative to help find and patch open-source bugs",
+    "description": "OpenAI is attempting to tackle the security issues of the open source software community.",
+    "link": "https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/",
+    "published": "2026-06-23T00:11:31+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "bd759d2aae21e18473c2f7f80c29d015",
+    "_url_hash": "539165a56ed15095ff9303869b9183a13aea92454b19fb01c9282cfbd629daee",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Wired]\nAs fears about AI hacking capabilities grow, OpenAI on Monday made a slew of cybersecurity-focused announcements, including an improved version of its limited-access security-specialized model GPT-5.5-Cyber, expanded international work with governments and other institutions to give them “trusted access” to the company's latest cybersecurity-focused models, and releasing its Codex Security scanner as an app plug-in.\n\nAs advances across the AI industry leave critical open-source projects at increasing risk of falling behind, though, the company also said on Monday that it is launching an effort known as Patch the Planet, founded with the prominent research-focused security firm Trail of Bits and in collaboration with vulnerability management firms HackerOne and Calif.\n\nThe project has already begun its work offering free security consulting services to open source maintainers to not only help them find and patch vulnerabilities, but also support them in strengthening their code bases and incorporating AI security tools into their development process. The idea is to give individualized support to as many open-source projects as possible to improve both their current security and long-term resilience in a way that will actually be sustainable.\n\n“Patch the Planet is an internet-scale effort to help open-source software get ahead of AI bug-hunting tools,” says Trail of Bits CEO and cofounder Dan Guido. “But it's also an effort to help the open-source community see the benefits and not just the downsides of AI coding tools.”\n\nOpen-source developers—typically volunteers keeping critical and widely used software afloat with few resources—are often already struggling to keep up with bug reports. The rise of AI vulnerability hunting in recent months has, for many maintainers, made that backlog feel insurmountable as AI-generated slop reports stack up, making it difficult to prioritize and pulling already limited time and attention away from critical flaws.\n\nMaintainers “do their work out of love of open source, and now they’re stuck reviewing slop CVEs,” says OpenAI's cyber tech lead, Fouad Matin. With Patch the Planet, he says, “what we’ve effectively done is make it as efficient from a token perspective as possible to reduce the burden for maintainers—code base assessments, validating potential reports, creating patches, and landing them. We want to offset costs, whether it's tokens or people power, to actually patch as much of the world of software as possible.”\n\n\n---\n\n[Lähde: CSOonline]\nOpenAI has unveiled Daybreak, its answer to Anthropic’s Claude Mythos, amid a growing market for frontier AI-powered cyber defense platforms. The initiative combines OpenAI’s large language models, Codex’s agentic capabilities, and integrations with the broader enterprise security ecosystem.\n\nThe company said Daybreak is focused on accelerating cyber defense operations and enabling organizations to secure software across the development lifecycle continuously.\n\nAnnouncing the initiative on X, Sam Altman, CEO at OpenAI, said, “OpenAI is launching Daybreak, our effort to accelerate cyber defense and continuously secure software. AI is already good and about to get super good at cybersecurity; we’d like to start working with as many companies as possible now to help them continuously secure themselves.”\n\nThe surge in AI-driven cyber threats has recently shifted the AI race toward AI cybersecurity models. In April this year, Anthropic unveiled Project Glasswing, built around Claude Mythos Preview. Anthropic described it as a cybersecurity-focused AI system capable of autonomously identifying software vulnerabilities at scale.\n\nWhile introducing Daybreak, OpenAI explained that deploying AI in modern cyber defense involves three core stages. The first is prioritizing high-impact threats and reducing hours of security analysis to minutes through more efficient AI reasoning and token usage. The second involves generating and testing patches directly within enterprise repositories using scoped access, monitoring, and review. The final stage focuses on sending results and audit-ready evidence back into enterprise systems to track, validate, and verify remediation efforts.\n\nIn Daybreak, Codex security is designed to identify and fix vulnerabilities by building an editable threat model from the enterprise’s repository and focusing analysis on realistic attack paths and high-impact code. The system would then validate likely vulnerabilities in an isolated environment. This would help teams to prioritise real, reproducible issues over noisy alerts. This will be followed by automated detection and response, where AI will be able to spot higher-risk vulnerabilities and enable end-to-end automated monitoring.\n\n“The divergence reflects fundamentally different approaches to security and commercialization. OpenAI is positioning Daybreak and GPT-5.5-Cyber as a controlled cyber-defense platform for vetted defenders, focused on operational workflows such as vulnerability detecti\n\n---\n\n[Lähde: MacRumors]\nOpenAI today launched Daybreak, an answer to Anthropic's Project Glasswing initiative and Mythos AI model. Like Glasswing, Daybreak is a cyber defense effort that will help tech companies find security vulnerabilities in their platforms.\n\nOpenAI says Daybreak is aimed at building cyber defense into software from the start. It builds on OpenAI's April launch of GPT-5.4-Cyber, which the company says has contributed to fixing more than 3,000 vulnerabilities.\n\nDaybreak combines the intelligence of OpenAI models, the extensibility of Codex as an agentic harness, and our partners across the security flywheel to help make the world safer for everyone. Defenders can bring secure code review, threat modeling, patch validation, dependency risk analysis, detection, and remediation guidance into the everyday development loop so software becomes more resilient from the start.\n\nOpenAI CEO Sam Altman said OpenAI would like to work with \"as many companies as possible\" to help them continuously secure ...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-23T00:24:30.689251+00:00",
+  "payload": {
+    "packet_id": "20260623T002131Z_c7f151b00a",
+    "title": "OpenAI käynnistää hankkeita avoimen lähdekoodin haavoittuvuuksien korjaamiseksi",
+    "summary": "OpenAI laajentaa kyberturvallisuustyötään Daybreak-hankkeella ja avoimen lähdekoodin ylläpitäjille suunnatulla Patch the Planet -työllä, jossa tarjotaan maksutonta apua haavoittuvuuksien löytämiseen ja korjaamiseen.",
+    "content": "OpenAI on käynnistänyt kyberpuolustukseen keskittyvän Daybreak-hankkeen sekä avoimen lähdekoodin ylläpitäjille suunnatun Patch the Planet -työn, joiden tavoitteena on auttaa ohjelmistojen haavoittuvuuksien löytämisessä, arvioinnissa ja korjaamisessa. Yhtiö pyrkii tuomaan tekoälypohjaiset tarkistukset, uhkamallinnuksen, riippuvuusriskien analyysin ja korjausten validoinnin lähemmäs normaalia ohjelmistokehitystä.\n\n## Maksutonta apua ylläpitäjille\n\nPatch the Planet on jo aloittanut työnsä tarjoamalla avoimen lähdekoodin ylläpitäjille maksuttomia tietoturvakonsultointipalveluja. Tavoitteena ei ole vain yksittäisten haavoittuvuuksien paikkaaminen, vaan myös koodipohjien vahvistaminen ja tekoälyä hyödyntävien tietoturvatyökalujen tuominen osaksi kehitysprosessia.\n\nTrail of Bitsin toimitusjohtaja ja toinen perustaja Dan Guido kuvasi Patch the Planetia internetin mittakaavan yritykseksi auttaa avointa lähdekoodia pysymään tekoälypohjaisten virheenetsintätyökalujen edellä. Hänen mukaansa hankkeen tarkoitus on myös näyttää avoimen lähdekoodin yhteisölle tekoälyä hyödyntävien koodaustyökalujen hyötyjä, ei pelkästään niiden haittoja.\n\nOpenAI:n kyberteknologiajohtaja Fouad Matin nosti esiin ylläpitäjien kuorman. Hänen mukaansa ylläpitäjät tekevät työtään rakkaudesta avoimeen lähdekoodiin, mutta joutuvat samalla tarkistamaan heikkolaatuisia haavoittuvuusilmoituksia. Patch the Planetin on tarkoitus keventää tätä työtä esimerkiksi koodipohjien arvioinnissa, mahdollisten ilmoitusten validoinnissa, korjausten laatimisessa ja niiden viemisessä käyttöön.\n\n## Daybreak tuo puolustusta kehityskaareen\n\nDaybreak on OpenAI:n laajempi kyberpuolustushanke, jonka yhtiö esittelee vastauksena Anthropic-yhtiön Project Glasswing -aloitteelle ja Claude Mythos -mallille. OpenAI:n mukaan Daybreak yhdistää sen kielimallit, Codexin agenttimaiset ominaisuudet ja kumppanit yritysten tietoturvaekosysteemissä.\n\nYhtiön mukaan Daybreakin tarkoitus on auttaa organisaatioita suojaamaan ohjelmistoja jatkuvasti koko kehityskaaren ajan. Käytännössä puolustajat voisivat tuoda turvallisen koodikatselmoinnin, uhkamallinnuksen, korjausten validoinnin, riippuvuusriskien analyysin, havaintojen tekemisen ja korjausohjeet osaksi päivittäistä kehitystyötä.\n\nOpenAI kertoo hankkeen rakentuvan myös huhtikuussa julkaistun GPT-5.4-Cyberin päälle. Yhtiön mukaan malli on auttanut korjaamaan yli 3 000 haavoittuvuutta. Toimitusjohtaja Sam Altman kuvasi Daybreakia pyrkimykseksi nopeuttaa kyberpuolustusta ja tehdä yhteistyötä mahdollisimman monen yrityksen kanssa, jotta nämä voisivat suojata järjestelmiään jatkuvasti.",
+    "category": "Teknologia",
+    "tags": [
+      "OpenAI",
+      "kyberturvallisuus",
+      "avoin lähdekoodi",
+      "tekoäly",
+      "ohjelmistokehitys"
+    ],
+    "summary_bullets": [
+      "OpenAI on esitellyt Daybreak-hankkeen ohjelmistojen jatkuvaan kyberpuolustukseen.",
+      "Patch the Planet tarjoaa avoimen lähdekoodin ylläpitäjille maksutonta apua haavoittuvuuksien löytämiseen ja korjaamiseen.",
+      "Yhtiö sanoo aiemman GPT-5.4-Cyber-mallin auttaneen yli 3 000 haavoittuvuuden korjaamisessa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu paketin neljään lähdekatkelmaan. Daybreakin ja Patch the Planetin suhde on kirjoitettu varovasti erillisinä OpenAI:n kyberturvallisuustöinä, koska lähdekatkelmat käyttävät molempia nimiä mutta eivät yksiselitteisesti määritä niiden keskinäistä rakennetta."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260623T002131Z_c7f151b00a\",\n  \"title\": \"OpenAI käynnistää hankkeita avoimen lähdekoodin haavoittuvuuksien korjaamiseksi\",\n  \"summary\": \"OpenAI laajentaa kyberturvallisuustyötään Daybreak-hankkeella ja avoimen lähdekoodin ylläpitäjille suunnatulla Patch the Planet -työllä, jossa tarjotaan maksutonta apua haavoittuvuuksien löytämiseen ja korjaamiseen.\",\n  \"content\": \"OpenAI on käynnistänyt kyberpuolustukseen keskittyvän Daybreak-hankkeen sekä avoimen lähdekoodin ylläpitäjille suunnatun Patch the Planet -työn, joiden tavoitteena on auttaa ohjelmistojen haavoittuvuuksien löytämisessä, arvioinnissa ja korjaamisessa. Yhtiö pyrkii tuomaan tekoälypohjaiset tarkistukset, uhkamallinnuksen, riippuvuusriskien analyysin ja korjausten validoinnin lähemmäs normaalia ohjelmistokehitystä.\\n\\n## Maksutonta apua ylläpitäjille\\n\\nPatch the Planet on jo aloittanut työnsä tarjoamalla avoimen lähdekoodin ylläpitäjille maksuttomia tietoturvakonsultointipalveluja. Tavoitteena ei ole vain yksittäisten haavoittuvuuksien paikkaaminen, vaan myös koodipohjien vahvistaminen ja tekoälyä hyödyntävien tietoturvatyökalujen tuominen osaksi kehitysprosessia.\\n\\nTrail of Bitsin toimitusjohtaja ja toinen perustaja Dan Guido kuvasi Patch the Planetia internetin mittakaavan yritykseksi auttaa avointa lähdekoodia pysymään tekoälypohjaisten virheenetsintätyökalujen edellä. Hänen mukaansa hankkeen tarkoitus on myös näyttää avoimen lähdekoodin yhteisölle tekoälyä hyödyntävien koodaustyökalujen hyötyjä, ei pelkästään niiden haittoja.\\n\\nOpenAI:n kyberteknologiajohtaja Fouad Matin nosti esiin ylläpitäjien kuorman. Hänen mukaansa ylläpitäjät tekevät työtään rakkaudesta avoimeen lähdekoodiin, mutta joutuvat samalla tarkistamaan heikkolaatuisia haavoittuvuusilmoituksia. Patch the Planetin on tarkoitus keventää tätä työtä esimerkiksi koodipohjien arvioinnissa, mahdollisten ilmoitusten validoinnissa, korjausten laatimisessa ja niiden viemisessä käyttöön.\\n\\n## Daybreak tuo puolustusta kehityskaareen\\n\\nDaybreak on OpenAI:n laajempi kyberpuolustushanke, jonka yhtiö esittelee vastauksena Anthropic-yhtiön Project Glasswing -aloitteelle ja Claude Mythos -mallille. OpenAI:n mukaan Daybreak yhdistää sen kielimallit, Codexin agenttimaiset ominaisuudet ja kumppanit yritysten tietoturvaekosysteemissä.\\n\\nYhtiön mukaan Daybreakin tarkoitus on auttaa organisaatioita suojaamaan ohjelmistoja jatkuvasti koko kehityskaaren ajan. Käytännössä puolustajat voisivat tuoda turvallisen koodikatselmoinnin, uhkamallinnuksen, korjausten validoinnin, riippuvuusriskien analyysin, havaintojen tekemisen ja korjausohjeet osaksi päivittäistä kehitystyötä.\\n\\nOpenAI kertoo hankkeen rakentuvan myös huhtikuussa julkaistun GPT-5.4-Cyberin päälle. Yhtiön mukaan malli on auttanut korjaamaan yli 3 000 haavoittuvuutta. Toimitusjohtaja Sam Altman kuvasi Daybreakia pyrkimykseksi nopeuttaa kyberpuolustusta ja tehdä yhteistyötä mahdollisimman monen yrityksen kanssa, jotta nämä voisivat suojata järjestelmiään jatkuvasti.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"OpenAI\",\n    \"kyberturvallisuus\",\n    \"avoin lähdekoodi\",\n    \"tekoäly\",\n    \"ohjelmistokehitys\"\n  ],\n  \"summary_bullets\": [\n    \"OpenAI on esitellyt Daybreak-hankkeen ohjelmistojen jatkuvaan kyberpuolustukseen.\",\n    \"Patch the Planet tarjoaa avoimen lähdekoodin ylläpitäjille maksutonta apua haavoittuvuuksien löytämiseen ja korjaamiseen.\",\n    \"Yhtiö sanoo aiemman GPT-5.4-Cyber-mallin auttaneen yli 3 000 haavoittuvuuden korjaamisessa.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Artikkeli perustuu paketin neljään lähdekatkelmaan. Daybreakin ja Patch the Planetin suhde on kirjoitettu varovasti erillisinä OpenAI:n kyberturvallisuustöinä, koska lähdekatkelmat käyttävät molempia nimiä mutta eivät yksiselitteisesti määritä niiden keskinäistä rakennetta.\"\n}",
+  "article": {
+    "title": "OpenAI käynnistää hankkeita avoimen lähdekoodin haavoittuvuuksien korjaamiseksi",
+    "description": "OpenAI laajentaa kyberturvallisuustyötään Daybreak-hankkeella ja avoimen lähdekoodin ylläpitäjille suunnatulla Patch the Planet -työllä, jossa tarjotaan maksutonta apua haavoittuvuuksien löytämiseen ja korjaamiseen.",
+    "link": "https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/",
+    "published": "2026-06-23T00:11:31+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "bd759d2aae21e18473c2f7f80c29d015",
+    "_url_hash": "539165a56ed15095ff9303869b9183a13aea92454b19fb01c9282cfbd629daee",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Wired]\nAs fears about AI hacking capabilities grow, OpenAI on Monday made a slew of cybersecurity-focused announcements, including an improved version of its limited-access security-specialized model GPT-5.5-Cyber, expanded international work with governments and other institutions to give them “trusted access” to the company's latest cybersecurity-focused models, and releasing its Codex Security scanner as an app plug-in.\n\nAs advances across the AI industry leave critical open-source projects at increasing risk of falling behind, though, the company also said on Monday that it is launching an effort known as Patch the Planet, founded with the prominent research-focused security firm Trail of Bits and in collaboration with vulnerability management firms HackerOne and Calif.\n\nThe project has already begun its work offering free security consulting services to open source maintainers to not only help them find and patch vulnerabilities, but also support them in strengthening their code bases and incorporating AI security tools into their development process. The idea is to give individualized support to as many open-source projects as possible to improve both their current security and long-term resilience in a way that will actually be sustainable.\n\n“Patch the Planet is an internet-scale effort to help open-source software get ahead of AI bug-hunting tools,” says Trail of Bits CEO and cofounder Dan Guido. “But it's also an effort to help the open-source community see the benefits and not just the downsides of AI coding tools.”\n\nOpen-source developers—typically volunteers keeping critical and widely used software afloat with few resources—are often already struggling to keep up with bug reports. The rise of AI vulnerability hunting in recent months has, for many maintainers, made that backlog feel insurmountable as AI-generated slop reports stack up, making it difficult to prioritize and pulling already limited time and attention away from critical flaws.\n\nMaintainers “do their work out of love of open source, and now they’re stuck reviewing slop CVEs,” says OpenAI's cyber tech lead, Fouad Matin. With Patch the Planet, he says, “what we’ve effectively done is make it as efficient from a token perspective as possible to reduce the burden for maintainers—code base assessments, validating potential reports, creating patches, and landing them. We want to offset costs, whether it's tokens or people power, to actually patch as much of the world of software as possible.”\n\n\n---\n\n[Lähde: CSOonline]\nOpenAI has unveiled Daybreak, its answer to Anthropic’s Claude Mythos, amid a growing market for frontier AI-powered cyber defense platforms. The initiative combines OpenAI’s large language models, Codex’s agentic capabilities, and integrations with the broader enterprise security ecosystem.\n\nThe company said Daybreak is focused on accelerating cyber defense operations and enabling organizations to secure software across the development lifecycle continuously.\n\nAnnouncing the initiative on X, Sam Altman, CEO at OpenAI, said, “OpenAI is launching Daybreak, our effort to accelerate cyber defense and continuously secure software. AI is already good and about to get super good at cybersecurity; we’d like to start working with as many companies as possible now to help them continuously secure themselves.”\n\nThe surge in AI-driven cyber threats has recently shifted the AI race toward AI cybersecurity models. In April this year, Anthropic unveiled Project Glasswing, built around Claude Mythos Preview. Anthropic described it as a cybersecurity-focused AI system capable of autonomously identifying software vulnerabilities at scale.\n\nWhile introducing Daybreak, OpenAI explained that deploying AI in modern cyber defense involves three core stages. The first is prioritizing high-impact threats and reducing hours of security analysis to minutes through more efficient AI reasoning and token usage. The second involves generating and testing patches directly within enterprise repositories using scoped access, monitoring, and review. The final stage focuses on sending results and audit-ready evidence back into enterprise systems to track, validate, and verify remediation efforts.\n\nIn Daybreak, Codex security is designed to identify and fix vulnerabilities by building an editable threat model from the enterprise’s repository and focusing analysis on realistic attack paths and high-impact code. The system would then validate likely vulnerabilities in an isolated environment. This would help teams to prioritise real, reproducible issues over noisy alerts. This will be followed by automated detection and response, where AI will be able to spot higher-risk vulnerabilities and enable end-to-end automated monitoring.\n\n“The divergence reflects fundamentally different approaches to security and commercialization. OpenAI is positioning Daybreak and GPT-5.5-Cyber as a controlled cyber-defense platform for vetted defenders, focused on operational workflows such as vulnerability detecti\n\n---\n\n[Lähde: MacRumors]\nOpenAI today launched Daybreak, an answer to Anthropic's Project Glasswing initiative and Mythos AI model. Like Glasswing, Daybreak is a cyber defense effort that will help tech companies find security vulnerabilities in their platforms.\n\nOpenAI says Daybreak is aimed at building cyber defense into software from the start. It builds on OpenAI's April launch of GPT-5.4-Cyber, which the company says has contributed to fixing more than 3,000 vulnerabilities.\n\nDaybreak combines the intelligence of OpenAI models, the extensibility of Codex as an agentic harness, and our partners across the security flywheel to help make the world safer for everyone. Defenders can bring secure code review, threat modeling, patch validation, dependency risk analysis, detection, and remediation guidance into the everyday development loop so software becomes more resilient from the start.\n\nOpenAI CEO Sam Altman said OpenAI would like to work with \"as many companies as possible\" to help them continuously secure ...",
+    "research_source": "multi",
+    "summary": "OpenAI laajentaa kyberturvallisuustyötään Daybreak-hankkeella ja avoimen lähdekoodin ylläpitäjille suunnatulla Patch the Planet -työllä, jossa tarjotaan maksutonta apua haavoittuvuuksien löytämiseen ja korjaamiseen.",
+    "content": "OpenAI on käynnistänyt kyberpuolustukseen keskittyvän Daybreak-hankkeen sekä avoimen lähdekoodin ylläpitäjille suunnatun Patch the Planet -työn, joiden tavoitteena on auttaa ohjelmistojen haavoittuvuuksien löytämisessä, arvioinnissa ja korjaamisessa. Yhtiö pyrkii tuomaan tekoälypohjaiset tarkistukset, uhkamallinnuksen, riippuvuusriskien analyysin ja korjausten validoinnin lähemmäs normaalia ohjelmistokehitystä.\n\n## Maksutonta apua ylläpitäjille\n\nPatch the Planet on jo aloittanut työnsä tarjoamalla avoimen lähdekoodin ylläpitäjille maksuttomia tietoturvakonsultointipalveluja. Tavoitteena ei ole vain yksittäisten haavoittuvuuksien paikkaaminen, vaan myös koodipohjien vahvistaminen ja tekoälyä hyödyntävien tietoturvatyökalujen tuominen osaksi kehitysprosessia.\n\nTrail of Bitsin toimitusjohtaja ja toinen perustaja Dan Guido kuvasi Patch the Planetia internetin mittakaavan yritykseksi auttaa avointa lähdekoodia pysymään tekoälypohjaisten virheenetsintätyökalujen edellä. Hänen mukaansa hankkeen tarkoitus on myös näyttää avoimen lähdekoodin yhteisölle tekoälyä hyödyntävien koodaustyökalujen hyötyjä, ei pelkästään niiden haittoja.\n\nOpenAI:n kyberteknologiajohtaja Fouad Matin nosti esiin ylläpitäjien kuorman. Hänen mukaansa ylläpitäjät tekevät työtään rakkaudesta avoimeen lähdekoodiin, mutta joutuvat samalla tarkistamaan heikkolaatuisia haavoittuvuusilmoituksia. Patch the Planetin on tarkoitus keventää tätä työtä esimerkiksi koodipohjien arvioinnissa, mahdollisten ilmoitusten validoinnissa, korjausten laatimisessa ja niiden viemisessä käyttöön.\n\n## Daybreak tuo puolustusta kehityskaareen\n\nDaybreak on OpenAI:n laajempi kyberpuolustushanke, jonka yhtiö esittelee vastauksena Anthropic-yhtiön Project Glasswing -aloitteelle ja Claude Mythos -mallille. OpenAI:n mukaan Daybreak yhdistää sen kielimallit, Codexin agenttimaiset ominaisuudet ja kumppanit yritysten tietoturvaekosysteemissä.\n\nYhtiön mukaan Daybreakin tarkoitus on auttaa organisaatioita suojaamaan ohjelmistoja jatkuvasti koko kehityskaaren ajan. Käytännössä puolustajat voisivat tuoda turvallisen koodikatselmoinnin, uhkamallinnuksen, korjausten validoinnin, riippuvuusriskien analyysin, havaintojen tekemisen ja korjausohjeet osaksi päivittäistä kehitystyötä.\n\nOpenAI kertoo hankkeen rakentuvan myös huhtikuussa julkaistun GPT-5.4-Cyberin päälle. Yhtiön mukaan malli on auttanut korjaamaan yli 3 000 haavoittuvuutta. Toimitusjohtaja Sam Altman kuvasi Daybreakia pyrkimykseksi nopeuttaa kyberpuolustusta ja tehdä yhteistyötä mahdollisimman monen yrityksen kanssa, jotta nämä voisivat suojata järjestelmiään jatkuvasti.",
+    "category": "Teknologia",
+    "tags": [
+      "openai",
+      "kyberturvallisuus",
+      "avoin lähdekoodi",
+      "tekoäly",
+      "ohjelmistokehitys"
+    ],
+    "summary_bullets": [
+      "OpenAI on esitellyt Daybreak-hankkeen ohjelmistojen jatkuvaan kyberpuolustukseen.",
+      "Patch the Planet tarjoaa avoimen lähdekoodin ylläpitäjille maksutonta apua haavoittuvuuksien löytämiseen ja korjaamiseen.",
+      "Yhtiö sanoo aiemman GPT-5.4-Cyber-mallin auttaneen yli 3 000 haavoittuvuuden korjaamisessa."
+    ],
+    "key_points": [
+      "OpenAI on esitellyt Daybreak-hankkeen ohjelmistojen jatkuvaan kyberpuolustukseen.",
+      "Patch the Planet tarjoaa avoimen lähdekoodin ylläpitäjille maksutonta apua haavoittuvuuksien löytämiseen ja korjaamiseen.",
+      "Yhtiö sanoo aiemman GPT-5.4-Cyber-mallin auttaneen yli 3 000 haavoittuvuuden korjaamisessa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketin neljään lähdekatkelmaan. Daybreakin ja Patch the Planetin suhde on kirjoitettu varovasti erillisinä OpenAI:n kyberturvallisuustöinä, koska lähdekatkelmat käyttävät molempia nimiä mutta eivät yksiselitteisesti määritä niiden keskinäistä rakennetta.",
+    "source_text": "The project has already begun its work offering free security consulting services to open source maintainers to not only help them find and patch vulnerabilities, but also support them in strengthening their code bases and incorporating AI security tools into their development process. The idea is to give individualized support to as many open-source projects as possible to improve both their current security and long-term resilience in a way that will actually be sustainable. “Patch the Planet is an internet-scale effort to help open-source software get ahead of AI bug-hunting tools,” says Trail of Bits CEO and cofounder Dan Guido. “But it's also an effort to help the open-source community see the benefits and not just the downsides of AI coding tools.”\n\nOpenAI today launched Daybreak, an answer to Anthropic's Project Glasswing initiative and Mythos AI model. Like Glasswing, Daybreak is a cyber defense effort that will help tech companies find security vulnerabilities in their platforms. OpenAI says Daybreak is aimed at building cyber defense into software from the start. It builds on OpenAI's April launch of GPT-5.4-Cyber, which the company says has contributed to fixing more than 3,000 vulnerabilities. Daybreak combines the intelligence of OpenAI models, the extensibility of Codex as an agentic harness, and our partners across the security flywheel to help make the world safer for everyone. Defenders can bring secure code review, threat modeling, patch validation, dependency risk analysis, detection, and remediation guidance into the everyday development loop so software becomes more resilient from the start.\n\nOpenAI has unveiled Daybreak, its answer to Anthropic’s Claude Mythos, amid a growing market for frontier AI-powered cyber defense platforms. The initiative combines OpenAI’s large language models, Codex’s agentic capabilities, and integrations with the broader enterprise security ecosystem. The company said Daybreak is focused on accelerating cyber defense operations and enabling organizations to secure software across the development lifecycle continuously. Announcing the initiative on X, Sam Altman, CEO at OpenAI, said, “OpenAI is launching Daybreak, our effort to accelerate cyber defense and continuously secure software. AI is already good and about to get super good at cybersecurity; we’d like to start working with as many companies as possible now to help them continuously secure themselves.”\n\nMaintainers “do their work out of love of open source, and now they’re stuck reviewing slop CVEs,” says OpenAI's cyber tech lead, Fouad Matin. With Patch the Planet, he says, “what we’ve effectively done is make it as efficient from a token perspective as possible to reduce the burden for maintainers—code base assessments, validating potential reports, creating patches, and landing them. We want to offset costs, whether it's tokens or people power, to actually patch as much of the world of software as possible.” ---",
+    "writer_backend": "monica",
+    "writer_confidence": 0.86,
+    "degraded_mode": false,
+    "monica_packet_id": "20260623T002131Z_c7f151b00a",
+    "image": "https://images.unsplash.com/photo-1620825937374-87fc7d6bddc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwdGVjaG5vbG9neSUyMHRlYW18ZW58MXwwfHx8MTc4MjE3NDQ4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1620825937374-87fc7d6bddc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwdGVjaG5vbG9neSUyMHRlYW18ZW58MXwwfHx8MTc4MjE3NDQ4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "OpenAI käynnistää hankkeita avoimen lähdekoodin haavoittuvuuksien korjaamiseksi",
+    "image_credit": "Photo by KeepCoding on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/man-in-black-jacket-using-computer-lVF2HLzjopw?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-06-23T00:28:06.387115+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1620825937374-87fc7d6bddc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwdGVjaG5vbG9neSUyMHRlYW18ZW58MXwwfHx8MTc4MjE3NDQ4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1620825937374-87fc7d6bddc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5JTIwdGVjaG5vbG9neSUyMHRlYW18ZW58MXwwfHx8MTc4MjE3NDQ4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-23T00:29:14.094321+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-23-openai-kaynnistaa-hankkeita-avoimen-lahdekoodin-haavoittuvuu.md"
+  ]
+}
