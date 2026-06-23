@@ -44,7 +44,6 @@ keywords:
 source_name: "Ilta-Sanomat"
 source_url: "https://www.is.fi/tampereen-seutu/art-2000012096755.html"
 source_domain: "is.fi"
-briefing: true
 draft: false
 ---
 
