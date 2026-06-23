@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-23T03:51:17.630662+00:00",
+  "digest": "27da5a8637",
+  "packet": {
+    "packet_id": "20260623T035117Z_27da5a8637",
+    "created_at": "2026-06-23T03:51:17Z",
+    "headline_seed": "Gazan siviiliväestön hätä jatkuu tulitauosta huolimatta – ”Turvallisuuden tunnetta ei ole”",
+    "description_seed": "Gazan kaupungissa asuva Iyad Manaa kertoo IS:lle arjesta, jossa jokainen päivä on taistelua selviytymisestä. Samaan aikaan hän yrittää pitää kiinni haaveestaan jatko-opinnoista Britanniassa.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012093162.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012093162.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Gazan siviiliväestön hätä jatkuu tulitauosta huolimatta – ”Turvallisuuden tunnetta ei ole”"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Gazan kaupungissa asuva Iyad Manaa kertoo IS:lle arjesta, jossa jokainen päivä on taistelua selviytymisestä. Samaan aikaan hän yrittää pitää kiinni haaveestaan jatko-opinnoista Britanniassa.",
+        "word_count": 23,
+        "keyword_overlap": 18,
+        "strong_overlap": 12
+      }
+    ],
+    "source_text": "Gazan kaupungissa asuva Iyad Manaa kertoo IS:lle arjesta, jossa jokainen päivä on taistelua selviytymisestä. Samaan aikaan hän yrittää pitää kiinni haaveestaan jatko-opinnoista Britanniassa.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 46,
+      "selected_blocks": 1,
+      "selected_source_words": 23,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Gazan siviiliväestön hätä jatkuu tulitauosta huolimatta – ”Turvallisuuden tunnetta ei ole”",
+      "description": "Gazan kaupungissa asuva Iyad Manaa kertoo IS:lle arjesta, jossa jokainen päivä on taistelua selviytymisestä. Samaan aikaan hän yrittää pitää kiinni haaveestaan jatko-opinnoista Britanniassa.",
+      "category_hint": "Ulkomaat",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Gazan siviiliväestön hätä jatkuu tulitauosta huolimatta – ”Turvallisuuden tunnetta ei ole”",
+    "description": "Gazan kaupungissa asuva Iyad Manaa kertoo IS:lle arjesta, jossa jokainen päivä on taistelua selviytymisestä. Samaan aikaan hän yrittää pitää kiinni haaveestaan jatko-opinnoista Britanniassa.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012093162.html",
+    "published": "2026-06-23T03:30:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "4d60dbed129f8d76f03e5ad43fecb696",
+    "_url_hash": "d2fbc8b17654c2d2f1d2eda92ddb5c3b48fd0ed98311b0a256ce0bbb43e7468f",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Gazan kaupungissa asuva Iyad Manaa kertoo IS:lle arjesta, jossa jokainen päivä on taistelua selviytymisestä. Samaan aikaan hän yrittää pitää kiinni haaveestaan jatko-opinnoista Britanniassa.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-23T03:53:18.723629+00:00",
+  "failure": "Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täydennysten keksimistä.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260623T035117Z_27da5a8637\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täydennysten keksimistä.\"}"
+}
