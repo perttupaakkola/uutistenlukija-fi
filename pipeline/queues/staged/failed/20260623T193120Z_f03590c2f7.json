@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-23T19:31:20.938853+00:00",
+  "digest": "f03590c2f7",
+  "packet": {
+    "packet_id": "20260623T193120Z_f03590c2f7",
+    "created_at": "2026-06-23T19:31:20Z",
+    "headline_seed": "Mojova voitto Suomeen Eurojack­potissa",
+    "description_seed": "Illan arvonnassa ei löytynyt täysosumia. Helsinkiläinen nettipelaaja voitti 5+1-tuloksella Eurojackpotin tiistai-illan arvonnassa 590 000 euron voittopotin. Myös Norjaan ja Saksaan menivät samansuuruiset voitot 5+1 tuloksella.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/7f5300f7-20cb-41d0-846e-b23dd456505e",
+    "source": "Iltalehti",
+    "source_names": [],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/7f5300f7-20cb-41d0-846e-b23dd456505e"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Mojova voitto Suomeen Eurojack­potissa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 111,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Aamuposti",
+        "Iltalehti"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Mojova voitto Suomeen Eurojack­potissa",
+      "description": "Illan arvonnassa ei löytynyt täysosumia. Helsinkiläinen nettipelaaja voitti 5+1-tuloksella Eurojackpotin tiistai-illan arvonnassa 590 000 euron voittopotin. Myös Norjaan ja Saksaan menivät samansuuruiset voitot 5+1 tuloksella.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Mojova voitto Suomeen Eurojack­potissa",
+    "description": "Illan arvonnassa ei löytynyt täysosumia. Helsinkiläinen nettipelaaja voitti 5+1-tuloksella Eurojackpotin tiistai-illan arvonnassa 590 000 euron voittopotin. Myös Norjaan ja Saksaan menivät samansuuruiset voitot 5+1 tuloksella.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/7f5300f7-20cb-41d0-846e-b23dd456505e",
+    "published": "2026-06-23T22:25:54+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "dc66b2fc795344832091793b34be019d",
+    "_url_hash": "7b9f2d1c867e66dcd2e440140e0a9e06a1ff30c0f79a87e34261430f483ca3d1",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Aamuposti]\nPerjantai-illan Eurojackpot-arvonnassa ei tullut yhtäkään täysosumaa. Arvonnan oikea rivi oli 2, 4, 14, 18 ja 28. Tähtinumeroiksi arvottiin 9 ja 11.\n\nSuurimmat tulokset pelattiin 5+1-oikein-riveillä, jotka pelanneet kuittasivat 502 977,70 euron arvoisen potin. Niitä tuli yhteensä neljä kappaletta, joista kaksi napsahti Suomeen.\n\nToinen hieman yli puolen miljoonan euron voitoista meni neljän osuuden porukkapeliin. Porukan pelaajat olivat Espoosta, Helsingistä, Riihimäeltä ja Lopelta.\n\n5+1-tuloksia osui Suomeen tulleiden voittojen lisäksi Norjaan ja Slovakiaan.\n\n5+0-tuloksia tuli 13 kappaletta, joista myös kaksi osui Suomeen. Mänttävilppulalainen pelaaja sai rivillään 87 278,70 euroa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-23T19:44:26.149072+00:00",
+  "failure": "Paketissa ei ole valittuja lähdekatkelmia eikä riittävästi varmistettua aineistoa vähintään 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260623T193120Z_f03590c2f7\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittuja lähdekatkelmia eikä riittävästi varmistettua aineistoa vähintään 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai keksittyjä tietoja.\"}"
+}
