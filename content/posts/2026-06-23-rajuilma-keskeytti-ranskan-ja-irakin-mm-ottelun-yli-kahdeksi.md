@@ -43,7 +43,6 @@ keywords:
 source_name: "Yle Urheilu"
 source_url: "https://yle.fi/a/74-20232822?origin=rss"
 source_domain: "yle.fi"
-briefing: true
 draft: false
 ---
 
