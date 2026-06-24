@@ -16,6 +16,12 @@ import sys
 from pathlib import Path
 
 PIPELINE_DIR = Path(__file__).parent
+PROJECT_DIR = PIPELINE_DIR.parent
+
+for import_root in (PROJECT_DIR, PIPELINE_DIR):
+    import_root_str = str(import_root)
+    if import_root_str not in sys.path:
+        sys.path.insert(0, import_root_str)
 
 # Modules that need external packages not always available in all environments.
 # We still try to import them — if they fail due to missing 3rd-party deps

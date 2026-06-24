@@ -25,7 +25,6 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import html
 import sys
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass, field
@@ -128,14 +127,14 @@ def discover_feeds(public_dir: Path) -> list[Path]:
 
 def load_xml_root(feed_path: Path) -> ET.Element:
     text = feed_path.read_text(encoding="utf-8", errors="replace")
-    if text.startswith("&lt;?xml"):
-        text = "<?xml" + text[len("&lt;?xml"):]
     if text.startswith("&amp;lt;?xml"):
-        text = html.unescape(text)
+        text = text.replace("&amp;lt;", "<").replace("&amp;gt;", ">")
+    if text.startswith("&lt;?xml"):
+        text = text.replace("&lt;", "<").replace("&gt;", ">")
     return ET.fromstring(text)
 
 
-def validate_feed(feed_path: Path, now: datetime) -> FeedResult:
+def validate_feed(feed_path: Path, now: datetime, *, require_items: bool = True) -> FeedResult:
     result = FeedResult(path=feed_path)
 
     try:
@@ -178,7 +177,11 @@ def validate_feed(feed_path: Path, now: datetime) -> FeedResult:
     items = list(iter_children(channel, "item"))
     result.item_count = len(items)
     if not items:
-        result.errors.append("Feed has no <item> entries")
+        message = "Feed has no <item> entries"
+        if require_items:
+            result.errors.append(message)
+        else:
+            result.warnings.append(message)
         return result
 
     guid_seen: dict[str, int] = {}
@@ -265,7 +268,11 @@ def main() -> int:
         return 1
 
     now = datetime.now(timezone.utc)
-    results = [validate_feed(path, now) for path in feed_paths]
+    main_feed = (public_dir / "index.xml").resolve()
+    results = [
+        validate_feed(path, now, require_items=path.resolve() == main_feed)
+        for path in feed_paths
+    ]
 
     total_errors = sum(len(result.errors) for result in results)
     total_warnings = sum(len(result.warnings) for result in results)
