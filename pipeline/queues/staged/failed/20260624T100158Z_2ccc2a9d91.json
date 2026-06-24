@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-24T10:01:58.759719+00:00",
+  "digest": "2ccc2a9d91",
+  "packet": {
+    "packet_id": "20260624T100158Z_2ccc2a9d91",
+    "created_at": "2026-06-24T10:01:58Z",
+    "headline_seed": "France confirms first Ebola case",
+    "description_seed": "More than 260 people in the Democratic Republic of Congo are known to have died during the current outbreak.",
+    "link": "https://www.bbc.co.uk/news/articles/cj9gzr9rdjlo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "The Mirror",
+      "BBC World",
+      "BBC"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/cj9gzr9rdjlo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "France confirms first Ebola case"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "More than 260 people in the Democratic Republic of Congo are known to have died during the current outbreak.",
+        "word_count": 19,
+        "keyword_overlap": 12,
+        "strong_overlap": 6
+      },
+      {
+        "source": "The Mirror",
+        "source_type": "research",
+        "text": "A first case of Ebola has been reported in France with a doctor returning from the Democratic Republic of Congo testing positive. The doctor had returned from a humanitarian mission, the French healthy ministry said, and has caught the virus during the latest outbreak. The patient is being isolated and ⁠authorities are contact tracing, ⁠the ministry said, adding that the risk for the general ‌European population was low. Congo's Ebola outbreak, which has infected more than ⁠1,000 people and killed 267, has had the largest number of confirmed cases within ⁠the first month of any episode ⁠of the disease, the World Health Organisation said. Tracing those who had been in contact with patients remains a major challenge.",
+        "word_count": 117,
+        "keyword_overlap": 12,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Healthcare workers are at high risk of contracting Ebola France has confirmed its first case of Ebola - a doctor who had returned from a humanitarian mission in the Democratic Republic of Congo. The doctor was \"immediately admitted to a specialised facility\" and is in a stable condition, the French health ministry said on Wednesday. DR Congo announced an Ebola outbreak last month, but experts believe the virus had been circulating for weeks previously. More than 260 people are confirmed to have died from the virus in the central African country, while 1,000 people have been infected. This is a breaking news story - more to follow What is Ebola and why is stopping the latest outbreak so difficult? 'I buried my parents one day after the other' - Ebola mourners learn how to grieve safely",
+        "word_count": 136,
+        "keyword_overlap": 13,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC",
+        "source_type": "research",
+        "text": "France has confirmed its first case of Ebola - a doctor who had returned from a humanitarian mission in the Democratic Republic of Congo. The doctor was \"immediately admitted to a specialised facility\" and is in a stable condition, the French health ministry said on Wednesday. DR Congo announced an Ebola outbreak last month, but experts believe the virus had been circulating for weeks previously. More than 260 people are confirmed to have died from the virus in the central African country, while 1,000 people have been infected. This is a breaking news story - more to follow ---",
+        "word_count": 99,
+        "keyword_overlap": 13,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "More than 260 people in the Democratic Republic of Congo are known to have died during the current outbreak.\n\nA first case of Ebola has been reported in France with a doctor returning from the Democratic Republic of Congo testing positive. The doctor had returned from a humanitarian mission, the French healthy ministry said, and has caught the virus during the latest outbreak. The patient is being isolated and ⁠authorities are contact tracing, ⁠the ministry said, adding that the risk for the general ‌European population was low. Congo's Ebola outbreak, which has infected more than ⁠1,000 people and killed 267, has had the largest number of confirmed cases within ⁠the first month of any episode ⁠of the disease, the World Health Organisation said. Tracing those who had been in contact with patients remains a major challenge.\n\nHealthcare workers are at high risk of contracting Ebola France has confirmed its first case of Ebola - a doctor who had returned from a humanitarian mission in the Democratic Republic of Congo. The doctor was \"immediately admitted to a specialised facility\" and is in a stable condition, the French health ministry said on Wednesday. DR Congo announced an Ebola outbreak last month, but experts believe the virus had been circulating for weeks previously. More than 260 people are confirmed to have died from the virus in the central African country, while 1,000 people have been infected. This is a breaking news story - more to follow What is Ebola and why is stopping the latest outbreak so difficult? 'I buried my parents one day after the other' - Ebola mourners learn how to grieve safely\n\nFrance has confirmed its first case of Ebola - a doctor who had returned from a humanitarian mission in the Democratic Republic of Congo. The doctor was \"immediately admitted to a specialised facility\" and is in a stable condition, the French health ministry said on Wednesday. DR Congo announced an Ebola outbreak last month, but experts believe the virus had been circulating for weeks previously. More than 260 people are confirmed to have died from the virus in the central African country, while 1,000 people have been infected. This is a breaking news story - more to follow ---",
+    "source_diagnostics": {
+      "candidate_blocks": 8,
+      "candidate_source_words": 680,
+      "selected_blocks": 4,
+      "selected_source_words": 371,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "The Mirror",
+        "The Mirror",
+        "The Mirror",
+        "The Mirror",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "The Mirror",
+        "BBC World",
+        "BBC"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "France confirms first Ebola case",
+      "description": "More than 260 people in the Democratic Republic of Congo are known to have died during the current outbreak.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "France confirms first Ebola case",
+    "description": "More than 260 people in the Democratic Republic of Congo are known to have died during the current outbreak.",
+    "link": "https://www.bbc.co.uk/news/articles/cj9gzr9rdjlo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-24T09:55:47+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "93780068e09d50f93c54820fb886e4a1",
+    "_url_hash": "56476bdaf740cef40895a714155b2c5b489d987eecaac82065783c22f9d78ea8",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nHealthcare workers are at high risk of contracting Ebola\n\nFrance has confirmed its first case of Ebola - a doctor who had returned from a humanitarian mission in the Democratic Republic of Congo.\n\nThe doctor was \"immediately admitted to a specialised facility\" and is in a stable condition, the French health ministry said on Wednesday.\n\nDR Congo announced an Ebola outbreak last month, but experts believe the virus had been circulating for weeks previously.\n\nMore than 260 people are confirmed to have died from the virus in the central African country, while 1,000 people have been infected.\n\nThis is a breaking news story - more to follow\n\nWhat is Ebola and why is stopping the latest outbreak so difficult?\n\n'I buried my parents one day after the other' - Ebola mourners learn how to grieve safely\n\nRecovery of Ebola patients offers rare moments of joy at epicentre of outbreak\n\n---\n\n[Lähde: BBC]\nFrance has confirmed its first case of Ebola - a doctor who had returned from a humanitarian mission in the Democratic Republic of Congo.\n\nThe doctor was \"immediately admitted to a specialised facility\" and is in a stable condition, the French health ministry said on Wednesday.\n\nDR Congo announced an Ebola outbreak last month, but experts believe the virus had been circulating for weeks previously.\n\nMore than 260 people are confirmed to have died from the virus in the central African country, while 1,000 people have been infected.\n\nThis is a breaking news story - more to follow\n\n---\n\n[Lähde: The Mirror]\nA first case of Ebola has been reported in France with a doctor returning from the Democratic Republic of Congo testing positive.\n\nThe doctor had returned from a humanitarian mission, the French healthy ministry said, and has caught the virus during the latest outbreak.\n\nThe patient is being isolated and ⁠authorities are contact tracing, ⁠the ministry said, adding that the risk for the general ‌European population was low.\n\nCongo's Ebola outbreak, which has infected more than ⁠1,000 people and killed 267, has had the largest number of confirmed cases within ⁠the first month of any episode ⁠of the disease, the World Health Organisation said.\n\nTracing those who had been in contact with patients remains a major challenge.\n\nA total of 100 people have recovered in the outbreak concentrated in the Ituri province since it was declared on May 15, Congo’s Ministry of Health said. At least 365 patients are in hospitals or in isolation.\n\nThe Ebola outbreak caused by the rare Bundibugyo virus, which has no vaccines or treatment, was the worst ever in its first month and officials admit there could be far more cases they still don’t know about with the peak of the outbreak is still ahead.\n\nContact tracing remains a key issue for local authorities, who have only achieved a 55% coverage rate, the ministry said.\n\n“If you want to control an outbreak, especially Ebola outbreak, you must know the index case. We don’t have confidence on when this outbreak started,” said the Africa Centers for Disease Control and Prevention Director-General Dr. Jean Kaseya.\n\nOfficials also are yet to identify the patient zero and trace more than 35,000 people who have come in contact with infected individuals as of last week, authorities said.\n\nThat’s partly because eastern Congo is also battling ongoing violence from rebels. In Ituri, attacks by the Islamic State group-backed Allied Democratic Force have cut off access to many villages and forced people to flee their homes, including those sheltering in overcrowded camps and others constantly on the move.\n\nMore than a month into the outbreak, officials believe the disease continues to outpace response efforts and no one knows its true scale.\n\nAt the Kigonze displacement camp in Bunia, the capital of Ituri province, camp officials said last Friday that 10 people had died over the past week in unusual circumstances, raising the fear of a possible outbreak in the camp of over 20,000 displaced people.\n\nThere had been no Ebola case confirmed at th",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-24T10:05:02.287635+00:00",
+  "failure": "content too short: 230 words; lead paragraph too short: 28 words",
+  "payload": {
+    "packet_id": "20260624T100158Z_2ccc2a9d91",
+    "title": "Ranska vahvisti ensimmäisen ebolatapauksensa",
+    "summary": "Ranska on vahvistanut ensimmäisen ebolatapauksensa. Tartunnan saanut lääkäri oli palannut humanitaariselta tehtävältä Kongon demokraattisesta tasavallasta, jossa nykyinen epidemia on tappanut yli 260 ihmistä.",
+    "content": "Ranska on vahvistanut maan ensimmäisen ebolatapauksen lääkärillä, joka oli palannut humanitaariselta tehtävältä Kongon demokraattisesta tasavallasta. Ranskan terveysministeriön mukaan potilas otettiin heti erikoistuneeseen hoitopaikkaan, ja hänen tilansa on vakaa.\n\n## Lääkäri eristettiin hoitoon\n\nRanskan terveysministeriö kertoi keskiviikkona, että tartunnan saanut lääkäri oli ollut humanitaarisella tehtävällä Kongon demokraattisessa tasavallassa. Ministeriön mukaan hän sai viruksen nykyisen ebolaepidemian aikana.\n\nPotilas on eristetty, ja viranomaiset ovat aloittaneet kontaktien jäljittämisen. Jäljityksessä selvitetään, ketkä ovat voineet olla tekemisissä potilaan kanssa. Ministeriön mukaan riski Euroopan väestölle yleisesti on pieni.\n\nTerveydenhuollon työntekijöillä on ebolan yhteydessä suuri tartuntariski. Siksi Kongon demokraattisessa tasavallassa tehtävä hoito- ja avustustyö on erityisen vaativaa, kun epidemia on samalla levinnyt laajalle.\n\n## Kongon epidemia on tappanut yli 260 ihmistä\n\nKongon demokraattinen tasavalta ilmoitti ebolaepidemiasta viime kuussa. Asiantuntijoiden mukaan virus oli todennäköisesti kiertänyt alueella jo useita viikkoja ennen epidemian virallista toteamista.\n\nNykyisessä epidemiassa yli 260 ihmisen on vahvistettu kuolleen. Lähdetietojen mukaan tartuntoja on ollut yli 1 000, ja yhdessä tarkemmassa luvussa kuolleita mainitaan 267.\n\nMaailman terveysjärjestön mukaan epidemian vahvistettujen tapausten määrä ensimmäisen kuukauden aikana on ollut suurempi kuin missään aiemmassa ebolaepidemiassa vastaavassa vaiheessa. Tämä kertoo taudin nopeasta etenemisestä Kongon demokraattisessa tasavallassa.\n\n## Kontaktien jäljittäminen jatkuu\n\nYksi epidemian suurista haasteista on niiden ihmisten jäljittäminen, jotka ovat olleet tekemisissä sairastuneiden kanssa. Sama työ on aloitettu myös Ranskassa vahvistetun tapauksen yhteydessä.\n\nRanskan viranomaiset ovat kertoneet potilaan olevan vakaassa tilassa erikoistuneessa hoidossa. Tapauksesta on ilmoitettu uutistilanteena, josta odotetaan lisää tietoja viranomaisilta.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Ranska",
+      "Ebola",
+      "Kongon demokraattinen tasavalta",
+      "terveys",
+      "epidemiat"
+    ],
+    "summary_bullets": [
+      "Ranska on vahvistanut ensimmäisen ebolatapauksensa.",
+      "Tartunnan saanut lääkäri oli palannut Kongon demokraattisesta tasavallasta humanitaariselta tehtävältä.",
+      "Kongon demokraattisessa tasavallassa nykyinen epidemia on tappanut yli 260 ihmistä."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.92,
+    "journalist_note": "Artikkeli perustuu paketin vahvistettuihin tietoihin. Category korjattu aiheeseen sopivaksi ulkomaanuutiseksi, koska tapaus koskee Ranskaa ja Kongon demokraattista tasavaltaa."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260624T100158Z_2ccc2a9d91\",\"title\":\"Ranska vahvisti ensimmäisen ebolatapauksensa\",\"summary\":\"Ranska on vahvistanut ensimmäisen ebolatapauksensa. Tartunnan saanut lääkäri oli palannut humanitaariselta tehtävältä Kongon demokraattisesta tasavallasta, jossa nykyinen epidemia on tappanut yli 260 ihmistä.\",\"content\":\"Ranska on vahvistanut maan ensimmäisen ebolatapauksen lääkärillä, joka oli palannut humanitaariselta tehtävältä Kongon demokraattisesta tasavallasta. Ranskan terveysministeriön mukaan potilas otettiin heti erikoistuneeseen hoitopaikkaan, ja hänen tilansa on vakaa.\\n\\n## Lääkäri eristettiin hoitoon\\n\\nRanskan terveysministeriö kertoi keskiviikkona, että tartunnan saanut lääkäri oli ollut humanitaarisella tehtävällä Kongon demokraattisessa tasavallassa. Ministeriön mukaan hän sai viruksen nykyisen ebolaepidemian aikana.\\n\\nPotilas on eristetty, ja viranomaiset ovat aloittaneet kontaktien jäljittämisen. Jäljityksessä selvitetään, ketkä ovat voineet olla tekemisissä potilaan kanssa. Ministeriön mukaan riski Euroopan väestölle yleisesti on pieni.\\n\\nTerveydenhuollon työntekijöillä on ebolan yhteydessä suuri tartuntariski. Siksi Kongon demokraattisessa tasavallassa tehtävä hoito- ja avustustyö on erityisen vaativaa, kun epidemia on samalla levinnyt laajalle.\\n\\n## Kongon epidemia on tappanut yli 260 ihmistä\\n\\nKongon demokraattinen tasavalta ilmoitti ebolaepidemiasta viime kuussa. Asiantuntijoiden mukaan virus oli todennäköisesti kiertänyt alueella jo useita viikkoja ennen epidemian virallista toteamista.\\n\\nNykyisessä epidemiassa yli 260 ihmisen on vahvistettu kuolleen. Lähdetietojen mukaan tartuntoja on ollut yli 1 000, ja yhdessä tarkemmassa luvussa kuolleita mainitaan 267.\\n\\nMaailman terveysjärjestön mukaan epidemian vahvistettujen tapausten määrä ensimmäisen kuukauden aikana on ollut suurempi kuin missään aiemmassa ebolaepidemiassa vastaavassa vaiheessa. Tämä kertoo taudin nopeasta etenemisestä Kongon demokraattisessa tasavallassa.\\n\\n## Kontaktien jäljittäminen jatkuu\\n\\nYksi epidemian suurista haasteista on niiden ihmisten jäljittäminen, jotka ovat olleet tekemisissä sairastuneiden kanssa. Sama työ on aloitettu myös Ranskassa vahvistetun tapauksen yhteydessä.\\n\\nRanskan viranomaiset ovat kertoneet potilaan olevan vakaassa tilassa erikoistuneessa hoidossa. Tapauksesta on ilmoitettu uutistilanteena, josta odotetaan lisää tietoja viranomaisilta.\",\"category\":\"Ulkomaat\",\"tags\":[\"Ranska\",\"Ebola\",\"Kongon demokraattinen tasavalta\",\"terveys\",\"epidemiat\"],\"summary_bullets\":[\"Ranska on vahvistanut ensimmäisen ebolatapauksensa.\",\"Tartunnan saanut lääkäri oli palannut Kongon demokraattisesta tasavallasta humanitaariselta tehtävältä.\",\"Kongon demokraattisessa tasavallassa nykyinen epidemia on tappanut yli 260 ihmistä.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.92,\"journalist_note\":\"Artikkeli perustuu paketin vahvistettuihin tietoihin. Category korjattu aiheeseen sopivaksi ulkomaanuutiseksi, koska tapaus koskee Ranskaa ja Kongon demokraattista tasavaltaa.\"}",
+  "writer_failure_feedback": {
+    "packet_id": "20260624T100158Z_2ccc2a9d91",
+    "category": "Kotimaa",
+    "selected_source_words": 371,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 230,
+    "issues": [
+      "content too short: 230 words",
+      "lead paragraph too short: 28 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Ranska vahvisti ensimmäisen ebolatapauksensa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-24T10:05:02.287364+00:00",
+    "repair_trigger": "pre_repair_word_count=246; selected_source_words=371; selected_source_blocks=4",
+    "pre_repair_word_count": 246,
+    "pre_repair_lead_word_count": 31,
+    "post_repair_word_count": 230,
+    "post_repair_lead_word_count": 28,
+    "selected_source_words_at_repair": 371,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 371,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 230 words; lead paragraph too short: 28 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:6cedd31d62",
+      "2:The Mirror:e03b63a939",
+      "3:BBC World:a7bb1ac57a",
+      "4:BBC:a09536c898"
+    ],
+    "final_issues": [
+      "content too short: 230 words",
+      "lead paragraph too short: 28 words"
+    ],
+    "recovered": false
+  }
+}
