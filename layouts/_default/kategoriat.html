@@ -7,27 +7,7 @@
 
 {{ if gt (len $terms) 0 }}
 <div class="articles-grid category-index-grid">
-  {{ with index $terms "talous" }}
-    {{ $page := site.GetPage "/categories/talous" }}
-    {{ $title := "Talous" }}
-    {{ with $page }}{{ $title = .Title }}{{ end }}
-    <article class="article-card category-index-card category-index-card--featured">
-      <p class="category-index-card__eyebrow">Nostettu kategoria</p>
-      <h2><a href="/categories/talous/">{{ $title }}</a></h2>
-      <p class="excerpt">{{ len .Pages }} artikkelia</p>
-      {{ with $page.Params.description }}<p>{{ . }}</p>{{ end }}
-      {{ with first 3 .Pages.ByDate.Reverse }}
-        <ul class="category-index-card__latest" aria-label="Uusimmat talousuutiset">
-          {{ range . }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-          {{ end }}
-        </ul>
-      {{ end }}
-      <a class="category-index-card__link" href="/categories/talous/">Avaa talousuutiset</a>
-    </article>
-  {{ end }}
   {{ range $name, $taxonomy := $terms }}
-    {{ if ne $name "talous" }}
     {{ $page := site.GetPage (printf "/categories/%s" $name) }}
     {{ $title := humanize $name | title }}
     {{ with $page }}{{ $title = .Title }}{{ end }}
@@ -35,16 +15,7 @@
       <h2><a href="/categories/{{ $name | urlize }}/">{{ $title }}</a></h2>
       <p class="excerpt">{{ len $taxonomy.Pages }} artikkelia</p>
       {{ with $page.Params.description }}<p>{{ . }}</p>{{ end }}
-      {{ with first 2 $taxonomy.Pages.ByDate.Reverse }}
-        <ul class="category-index-card__latest" aria-label="Uusimmat uutiset kategoriassa {{ $title }}">
-          {{ range . }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-          {{ end }}
-        </ul>
-      {{ end }}
-      <a class="category-index-card__link" href="/categories/{{ $name | urlize }}/">Avaa kategoria</a>
     </article>
-    {{ end }}
   {{ end }}
 </div>
 {{ else }}

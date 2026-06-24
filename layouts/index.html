@@ -22,17 +22,6 @@
   </a>
   {{ end }}
 
-  {{ if gt (len $sorted) 0 }}
-  {{ $freshest := index $sorted 0 }}
-  {{ $freshestCat := index $freshest.Params.categories 0 | default "Uutiset" }}
-  <div class="portal-trust-cue" aria-label="Sivuston tuoreustieto">
-    {{ partial "homepage-live-indicator.html" $freshest.Date }}
-    <span class="portal-trust-cue__sep" aria-hidden="true"></span>
-    <span>Uusin aihe: <a href="{{ $freshest.RelPermalink }}">{{ $freshestCat }}</a></span>
-    <span class="portal-trust-cue__note">Kategoriat päivittyvät julkaisuajan mukaan.</span>
-  </div>
-  {{ end }}
-
   {{ if $lead }}
   {{ $leadCat := index $lead.Params.categories 0 | default "Uutiset" }}
   {{ $leadImg := $lead.Params.image | default (printf "/images/categories/%s.jpg" ($leadCat | lower)) }}
@@ -143,7 +132,7 @@
   </section>
   {{ end }}
 
-  {{ $topicCats := slice "Talous" "Kotimaa" "Ulkomaat" "Tiede" }}
+  {{ $topicCats := slice "Kotimaa" "Ulkomaat" "Talous" "Tiede" }}
   <section class="portal-topic-strip" aria-labelledby="front-topics-title">
     <div class="portal-module-head">
       <h2 id="front-topics-title">Aiheet</h2>
