@@ -16,8 +16,14 @@ jobs:
       - name: Setup Hugo
         run: |
           HUGO_VERSION="0.147.0"
-          wget -q "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb" -O /tmp/hugo.deb
+          HUGO_DEB="/tmp/hugo.deb"
+          HUGO_SHA256="d2a308de005f87e2d5ffe76b6cab924509ccb59be542cd4ea5f9471c29176b1c"
+          HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          wget --quiet --tries=5 --waitretry=5 --retry-connrefused "$HUGO_URL" -O "$HUGO_DEB"
+          test -s "$HUGO_DEB"
+          echo "${HUGO_SHA256}  ${HUGO_DEB}" | sha256sum --check --strict
           sudo dpkg -i /tmp/hugo.deb
+          hugo version
 
       - name: Validate Hugo templates
         env:
