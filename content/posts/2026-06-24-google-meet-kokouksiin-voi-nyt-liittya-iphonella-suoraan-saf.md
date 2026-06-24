@@ -44,7 +44,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/24/google-meet-puheluihin-on-nyt-helpompi-liittya-iphonella/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
