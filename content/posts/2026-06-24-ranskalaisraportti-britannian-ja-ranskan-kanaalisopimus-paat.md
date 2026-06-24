@@ -44,7 +44,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/uk-news/2026/jun/24/one-in-one-out-deal-channel-crossings-to-end-reports"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
