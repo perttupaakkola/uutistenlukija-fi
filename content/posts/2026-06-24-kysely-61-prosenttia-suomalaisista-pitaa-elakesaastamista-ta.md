@@ -43,7 +43,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/61-prosenttia-suomalaisista-pitaa-tarpeellisena-taydentaa-elaketurvaa-saastoilla-omaisuuden-kaytto-hoivamaksuihin-jakaa-suomalaisia/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
