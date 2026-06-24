@@ -43,7 +43,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/security/2026/06/one-two-punch-delivered-in-global-operation-disrupts-cybercrime-assembly-line/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
