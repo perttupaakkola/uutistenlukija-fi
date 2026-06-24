@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/jun/24/australia-liberal-party-angus-taylor-multiculturalism-comments"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
