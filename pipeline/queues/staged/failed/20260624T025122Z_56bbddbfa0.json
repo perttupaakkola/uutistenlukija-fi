@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-24T02:51:22.451386+00:00",
+  "digest": "56bbddbfa0",
+  "packet": {
+    "packet_id": "20260624T025122Z_56bbddbfa0",
+    "created_at": "2026-06-24T02:51:22Z",
+    "headline_seed": "Lahdessa asunut 84-vuotias Heather pakotettiin lähtemään Suomesta",
+    "description_seed": "Lähdön taustalla oli tekoja, jotka Maahanmuuttoviraston mielestä olivat laittomia.",
+    "link": "https://www.ess.fi/paikalliset/9562058",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9562058"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lahdessa asunut 84-vuotias Heather pakotettiin lähtemään Suomesta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 102,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lahdessa asunut 84-vuotias Heather pakotettiin lähtemään Suomesta",
+      "description": "Lähdön taustalla oli tekoja, jotka Maahanmuuttoviraston mielestä olivat laittomia.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Lahdessa asunut 84-vuotias Heather pakotettiin lähtemään Suomesta",
+    "description": "Lähdön taustalla oli tekoja, jotka Maahanmuuttoviraston mielestä olivat laittomia.",
+    "link": "https://www.ess.fi/paikalliset/9562058",
+    "published": "2026-06-24T05:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "e67145183f28bbb5aa9eee61dfa33895",
+    "_url_hash": "ec2d0cf8ca54426c06c585e38e3d4cabc0b8985853ef636c9dff1a11cfc3a3de",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nIdols-laulukilpailusta tunnetuksi tullut laulaja Jani Wickholm on kuollut 48-vuotiaana. Hän menehtyi tiistaiaamuna.\n\nTiedon Wickholmin kuolemasta vahvistaa Digi- ja väestötietovirasto. Kuolemasta kertoi ensin Seiska-lehti.\n\nWickholm kertoi julkisesti kärsineensä terveysongelmista. Vuonna 2024 hän kertoi sairastaneensa maksakirroosia ja olleensa psykiatrisessa hoidossa.\n\nWickholm kertoi Ylen haastattelussa vuonna 2021 taloudellisista vaikeuksistaan. Koronaviruspandemia tyhjensi hänen keikkakalenterinsa ja ajoi hänet köyhyyteen.\n\nWickholm sijoittui Suomen ensimmäisessä Idols-laulukilpailussa toiseksi vuonna 2003. Ennen muusikonuraa hän työskenteli trukinkuljettajana. Hänen debyyttialbuminsa Kaikki muuttuu julkaistiin 2004.\n\nWickholm syntyi Keravalla vuonna 1977. Hänellä on kaksi lasta entisestä avioliitosta.\n\nWickholm kertoi Yle Pohjanmaan haastattelussa vuonna 2011 uudesta musiikistaan:",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-24T02:53:20.372072+00:00",
+  "failure": "Lähdeaineisto puuttuu lähes kokonaan, eikä paketti kerro riittävästi vahvistettuja tietoja tapahtumista, ajankohdasta, osapuolista tai viranomaispäätöksen perusteista.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260624T025122Z_56bbddbfa0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu lähes kokonaan, eikä paketti kerro riittävästi vahvistettuja tietoja tapahtumista, ajankohdasta, osapuolista tai viranomaispäätöksen perusteista.\"}"
+}
