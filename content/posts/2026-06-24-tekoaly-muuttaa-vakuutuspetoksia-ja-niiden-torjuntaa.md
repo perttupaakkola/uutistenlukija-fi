@@ -43,7 +43,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/haamupotilaita-ja-tekaistuja-kuitteja-tekoaly-auttaa-ihmista-bongaamaan-vakuutuspetoksia/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
