@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-24T12:31:20.730930+00:00",
+  "digest": "90c054798d",
+  "packet": {
+    "packet_id": "20260624T123120Z_90c054798d",
+    "created_at": "2026-06-24T12:31:20Z",
+    "headline_seed": "Nainen ja mies epäillään pahoin­pidelleen noin 30-vuotiaan miehen Espoossa – poliisi etsii uhria",
+    "description_seed": "Epäilty pahoinpitely tapahtui maanantaina Kivenlahdessa. Naisen hallussa epäillään olleen teräase.",
+    "link": "https://www.is.fi/kotimaa/art-2000012099843.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012099843.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Nainen ja mies epäillään pahoin­pidelleen noin 30-vuotiaan miehen Espoossa – poliisi etsii uhria"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 135,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Tamperelainen",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Nainen ja mies epäillään pahoin­pidelleen noin 30-vuotiaan miehen Espoossa – poliisi etsii uhria",
+      "description": "Epäilty pahoinpitely tapahtui maanantaina Kivenlahdessa. Naisen hallussa epäillään olleen teräase.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Nainen ja mies epäillään pahoin­pidelleen noin 30-vuotiaan miehen Espoossa – poliisi etsii uhria",
+    "description": "Epäilty pahoinpitely tapahtui maanantaina Kivenlahdessa. Naisen hallussa epäillään olleen teräase.",
+    "link": "https://www.is.fi/kotimaa/art-2000012099843.html",
+    "published": "2026-06-24T12:25:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "0687a6c39485d9f6661a21d1d2f7d18e",
+    "_url_hash": "c24a18869d01646fee44bea4515ba0b1dae011050be2e9f31493fd96a3483662",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Tamperelainen]\nNoin 50-vuotiasta naista ei enää epäillä tapon yrityksestä, vaan törkeästä pahoinpitelystä. Myös miestä epäillään pahoinpitelystä.\n\nSisä-Suomen poliisi on edennyt Nokian väkivaltatilanteen esitutkinnassa.\n\nSunnuntaina poliisi kertoi epäilevänsä noin 50-vuotiasta naista tapon yrityksestä. Silloisen tiedon mukaan nainen olisi juhannuspäivänä lyönyt aikuista miestä kirveellä päähän. Esitutkinnassa ilmi tulleiden seikkojen vuoksi poliisi epäilee naista nyt enää törkeästä pahoinpitelystä.\n\nPoliisi selvittää myös tekovälinettä ja pitää mahdollisena, että epäilty rikos on voitu tehdä jollakin muulla välineellä kuin kirveellä.\n\nPoliisi sai ilmoituksen epäillystä väkivallanteosta yksityisasunnossa Nokian Linnavuoressa lauantaina noin kello 15.\n\nOsapuolet tunsivat toisensa entuudestaan. Poliisi epäilee, että väkivallan kohteena ollut mies syyllistyi itsekin pahoinpitelyyn naista kohtaan. Mies on myös noin 50-vuotias.\n\nRikoksesta epäilty nainen on vapautettu kuulustelujen jälkeen. Poliisi on määrännyt osapuolet väliaikaiseen lähestymiskieltoon toisiaan kohtaan.\n\nEsitutkinta jatkuu muun muassa todistajankuulusteluilla.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-24T12:33:18.823066+00:00",
+  "failure": "Lähdeaineisto puuttuu lähes kokonaan, eikä paketissa ole riittävästi varmistettuja tietoja julkaistavaan uutiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260624T123120Z_90c054798d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu lähes kokonaan, eikä paketissa ole riittävästi varmistettuja tietoja julkaistavaan uutiseen.\"}"
+}

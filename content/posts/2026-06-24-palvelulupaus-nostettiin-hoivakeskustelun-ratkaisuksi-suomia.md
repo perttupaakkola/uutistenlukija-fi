@@ -43,7 +43,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/ei-joko-tai-vaan-seka-etta-palvelulupaus-selkeyttaisi-julkisen-ja-yksityisen-roolia-hoivassa/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
