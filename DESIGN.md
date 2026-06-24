@@ -4,7 +4,7 @@ version: 1.0.0
 status: active
 owner: Sara
 scope: projects/uutistenlukija
-updated: 2026-04-24
+updated: 2026-06-24
 
 colors:
   primary: "#C0392B"
@@ -131,6 +131,14 @@ components:
 ## Purpose
 
 `uutistenlukija.fi` should feel like a serious, modern Finnish digital newspaper: credible, fast, calm, readable, and slightly premium. It should not look like a generic SaaS landing page, a blog template, or an AI-generated demo site.
+
+## Protected portal template baseline
+
+The restored June portal template is the accepted production baseline. As of 2026-06-24, the reference restore is commit `0777ad27e`, based on the known-good June portal design from `d042e2594`.
+
+Sara and other design agents should work with this template when suggesting changes. Proposals should refine the existing portal structure, hierarchy, spacing, copy, accessibility, SEO presentation, and component behavior inside the current template instead of replacing the template, changing the site-wide colour system, or proposing a broad redesign.
+
+Changing the template architecture or site-wide colour direction requires an explicit Felix/Perttu-approved Linear issue. A design review that recommends changes must state how the recommendation preserves the current portal template baseline.
 
 The design goal is **editorial authority with modern restraint**:
 - strong typography
