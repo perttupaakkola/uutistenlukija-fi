@@ -43,7 +43,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/06/24/elon-suffers-another-day-short-of-trillionaire-status/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
