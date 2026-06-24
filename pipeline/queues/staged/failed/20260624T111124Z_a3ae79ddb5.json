@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-24T11:11:24.615102+00:00",
+  "digest": "a3ae79ddb5",
+  "packet": {
+    "packet_id": "20260624T111124Z_a3ae79ddb5",
+    "created_at": "2026-06-24T11:11:24Z",
+    "headline_seed": "11-vuotiaan Lionelin piirustus voitti Launeen perhepuiston liikennekaupungin piirustuskisan",
+    "description_seed": "Piirustuskilpailun tehtävänä oli kuvittaa mini-Lahti.",
+    "link": "https://www.ess.fi/paikalliset/9563976",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9563976"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "11-vuotiaan Lionelin piirustus voitti Launeen perhepuiston liikennekaupungin piirustuskisan"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 123,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "11-vuotiaan Lionelin piirustus voitti Launeen perhepuiston liikennekaupungin piirustuskisan",
+      "description": "Piirustuskilpailun tehtävänä oli kuvittaa mini-Lahti.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "11-vuotiaan Lionelin piirustus voitti Launeen perhepuiston liikennekaupungin piirustuskisan",
+    "description": "Piirustuskilpailun tehtävänä oli kuvittaa mini-Lahti.",
+    "link": "https://www.ess.fi/paikalliset/9563976",
+    "published": "2026-06-24T13:45:36+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "6f65987912216a1044d41fbe3b00c944",
+    "_url_hash": "e3a10ef446d8063cfadc600fe499892668e7b38fe7caa34e4b042c4b60f7eaf6",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nPoliisi kertoo löytäneensä Kuopion Nilsiässä Tahkolahdella juhannuspäivänä veden alle vajonneen nuoren miehen. Mies löydettiin hukkuneena.\n\nMies löytyi vedestä tiistaina poliisin suorittaman etsinnän perusteella.\n\nVainaja löytyi poliisin mukaan Tahkolahdesta noin 100 metrin etäisyydeltä oletetusta hukkumispaikasta. Hätäkeskus sai juhannuspäivänä kello 16 aikaan ilmoituksen Tahkolahdelta, että nuori aikuinen mies on vajonnut pinnan alle Tahkolahden uimarannan läheisyydessä.\n\nPoliisi ja pelastuslaitoksen sukeltajat etsivät miestä useiden tuntien ajan juhannuspäivänä. Etsintöjä jatkettiin seuraavina päivinä.\n\nEtsinnöissä hyödynnettiin muun muassa ruumiskoiraa, veneitä, lainattua vesijettiä, kaikuluotainta ja droonia.\n\nPoliisi jatkaa asian tutkintaa kuolemansyyn tutkintana.\n\nJuhannuksen aikaan hukkui ainakin viisi ihmistä Kuopion lisäksi Mikkelissä torstaina ja perjantaina, Kotkassa torstaina ja Salossa sunnuntaina. Lisäksi poliisi kertoi juhannusaattona Helsingissä vedestä löytyneestä noin 70-vuotiaasta naisesta, mutta hänen kuolinsyytään ei ole kerrottu julkisuuteen.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-24T11:13:27.341803+00:00",
+  "failure": "Lähdeaineisto puuttuu, eikä paketti sisällä riittävästi varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260624T111124Z_a3ae79ddb5\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu, eikä paketti sisällä riittävästi varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä yksityiskohtia.\"}"
+}
