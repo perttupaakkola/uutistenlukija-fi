@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-25T20:51:23.164449+00:00",
+  "digest": "fc6ef4345c",
+  "packet": {
+    "packet_id": "20260625T205123Z_fc6ef4345c",
+    "created_at": "2026-06-25T20:51:23Z",
+    "headline_seed": "Munien salmonellaepäily laajenee – Tarkasta paketti",
+    "description_seed": "Salmonellaepäily laajeni tiistaista.",
+    "link": "https://www.is.fi/kotimaa/art-2000012102977.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012102977.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Munien salmonellaepäily laajenee – Tarkasta paketti"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 85,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "yrittajat.fi",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Munien salmonellaepäily laajenee – Tarkasta paketti",
+      "description": "Salmonellaepäily laajeni tiistaista.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Munien salmonellaepäily laajenee – Tarkasta paketti",
+    "description": "Salmonellaepäily laajeni tiistaista.",
+    "link": "https://www.is.fi/kotimaa/art-2000012102977.html",
+    "published": "2026-06-25T20:47:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "e12410d91c6e76e5864e52adf9f3864f",
+    "_url_hash": "481b9c1c3f9d5558f2ba1b2c7f847a05eb16e27bb88089b5022d423f09ec5cbb",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: yrittajat.fi]\nYRITTÄJÄ, tule mukaan omiesi pariin! Liity Yrittäjiin.\n\nVaikutamme ja verkostoimme ympäri Suomea! Etsi täältä oma paikallisyhdistyksesi ja aluejärjestösi.\n\nHei sinä satakuntalainen yksinyrittäjä, lämpimästi tervetuloa hengähtämään hetkeksi toisten yksinyrittäjien kanssa Pizzaillaan & Glögi-pikkujouluiltaan tiistaina 9.12. klo 18.00 alkaen (-klo 20.00), ravintola Metro Kebab, os. Lauttaranta 6, Ulvila. Ilta sisältää pizza-ja salaattibuffetin , yhden valinnaisen juoman ja alkoholittoman glögin. Vietetään yhdessä kiva ja rento yksinyrittäjien verkostoitumisilta.Energisen illan avaa yrittäjä Maarit Severin, Hyvä tulee. Yhteistyössä illan mahdollistaa Lääkärikeskus Minerva. Ilta on maksuton Satakunnan Yrittäjien yksinyrittäjille.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-25T20:53:18.215690+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260625T205123Z_fc6ef4345c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja artikkelin kirjoittamiseen.\"}"
+}

@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/25/oppo-esitteli-reno16-sarjan-alypuhelimensa-euroopan-markkinoille-reno16-pro-reno16-reno-16-f-ja-reno16-fs/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
