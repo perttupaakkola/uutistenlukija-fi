@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/25/nothing-paljasti-tulevan-phone-4b-alypuhelimensa-muotoilun-sisaltaa-kaksi-takakameraa-ja-glyph-bar-valopalkin/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
