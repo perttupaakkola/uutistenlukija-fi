@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-25T16:01:17.526274+00:00",
+  "digest": "1b8710527a",
+  "packet": {
+    "packet_id": "20260625T160117Z_1b8710527a",
+    "created_at": "2026-06-25T16:01:17Z",
+    "headline_seed": "Lahdessa ajetaan romurallia lauantaina – gladiaattorit taistelevat sarjapisteistä",
+    "description_seed": "Kilpailut jatkuvat siihen asti, kunnes enää yksi auto liikkuu.",
+    "link": "https://www.ess.fi/paikalliset/9568750",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9568750"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lahdessa ajetaan romurallia lauantaina – gladiaattorit taistelevat sarjapisteistä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 176,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Aamuposti",
+        "Aamuposti",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lahdessa ajetaan romurallia lauantaina – gladiaattorit taistelevat sarjapisteistä",
+      "description": "Kilpailut jatkuvat siihen asti, kunnes enää yksi auto liikkuu.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Lahdessa ajetaan romurallia lauantaina – gladiaattorit taistelevat sarjapisteistä",
+    "description": "Kilpailut jatkuvat siihen asti, kunnes enää yksi auto liikkuu.",
+    "link": "https://www.ess.fi/paikalliset/9568750",
+    "published": "2026-06-25T18:30:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "59116f23fc77a8d471eea593e79c5edd",
+    "_url_hash": "f1501506fbc433d98b338363a70a834c409e972bf4a1d10860868e365540b3c0",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Aamuposti]\nHelsingin käräjäoikeus tuomitsi torstaina miehen Malminkartanossa maaliskuussa tehdystä iäkkään uhrin murhasta elinkautiseen vankeusrangaistukseen.\n\nOikeuden mukaan tuomittu juoksi Malminkartanon juna-asemalta tulleen, itselleen entuudestaan tuntemattoman 79-vuotiaan uhrin perään ja yllättäen puukotti tätä terältään noin 10 senttimetrin pituisella metsästysveitsellä kolmesti. Tuomittu myös löi ja potki uhria.\n\nOikeuden mukaan uhri onnistui pakenemaan lyhyen matkan mutta lyyhistyi maahan. Tuomittu seurasi uhria hetken kuluttua ja jatkoi väkivaltaa tätä kohtaan, oikeus katsoo.\n\nTuomittu poistui oikeuden mukaan uhrin luota muutamaksi minuutiksi mutta palasi vielä takaisin ja jatkoi voimakkaan väkivallan kohdistamista uhriin.\n\n– Vastaaja oli lisäksi teon aikana halventanut asianomistajaa sekä kuvannut käyttämästään väkivallasta matkapuhelimellaan kaksi videota, jotka hän oli lähettänyt teon aikana ja sen jälkeen kolmannelle henkilölle, oikeuden tiedotteessa kerrotaan.\n\nTuomittu mies tunnusti syyllistyneensä tappoon, mutta kiisti murhan.\n\nKäräjäoikeus katsoi, että tappo oli tehty sekä erityisen raa’alla että julmalla tavalla ja että rikos oli myös kokonaisuutena arvostellen törkeä. Näin ollen Samuel Jaakko Sarka, 26, tuomittiin murhasta elinkautiseen vankeusrangaistukseen.\n\nSarka tuomittiin lisäksi maksamaan uhrin oikeudenomistajille kärsimyskorvauksia yhteensä 40 000 euroa sekä muita korvauksia ja heidän oikeudenkäyntikulunsa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-25T16:03:22.389385+00:00",
+  "failure": "Paketissa ei ole varsinaista lähdetekstiä tai varmistettuja tietoja tapahtuman paikasta, ajasta, järjestäjästä tai kilpailun yksityiskohdista.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260625T160117Z_1b8710527a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole varsinaista lähdetekstiä tai varmistettuja tietoja tapahtuman paikasta, ajasta, järjestäjästä tai kilpailun yksityiskohdista.\"}"
+}
