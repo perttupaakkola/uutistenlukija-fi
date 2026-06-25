@@ -635,6 +635,7 @@ class MonicaWriterTests(unittest.TestCase):
             self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
             self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
             self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
+            self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
         ]
 
         with patch(f"{rewrite_articles.__module__}.build_story_packet", return_value=packet), \
@@ -642,7 +643,7 @@ class MonicaWriterTests(unittest.TestCase):
             rewritten = rewrite_articles([dict(SAMPLE_ARTICLE)])
 
         self.assertEqual(rewritten, [])
-        self.assertEqual(run_mock.call_count, 3)
+        self.assertEqual(run_mock.call_count, 4)
         self.assertTrue(quarantine_mock.called)
         self.assertEqual(quarantine_mock.call_args.args[1], "source_backed_writer_shortfall_unrepairable")
         extra = quarantine_mock.call_args.kwargs["extra"]
@@ -666,6 +667,7 @@ class MonicaWriterTests(unittest.TestCase):
             self._result(json.dumps(initial_payload, ensure_ascii=False)),
             self._result(json.dumps(still_short_payload, ensure_ascii=False)),
             self._result(json.dumps(still_short_payload, ensure_ascii=False)),
+            self._result(json.dumps(still_short_payload, ensure_ascii=False)),
         ]
 
         with patch(f"{rewrite_articles.__module__}.build_story_packet", return_value=packet), \
@@ -673,7 +675,7 @@ class MonicaWriterTests(unittest.TestCase):
             rewritten = rewrite_articles([dict(SAMPLE_ARTICLE)])
 
         self.assertEqual(rewritten, [])
-        self.assertEqual(run_mock.call_count, 3)
+        self.assertEqual(run_mock.call_count, 4)
         self.assertTrue(quarantine_mock.called)
         self.assertEqual(quarantine_mock.call_args.args[1], "source_backed_writer_shortfall_unrepairable")
         extra = quarantine_mock.call_args.kwargs["extra"]
@@ -682,6 +684,38 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(extra["source_blocks"], 3)
         self.assertEqual(extra["final_word_count"], 231)
         self.assertEqual(extra["repair_result"], "still_short")
+
+    @patch(PATCH_TARGET)
+    def test_rewrite_articles_retries_talous_zero_word_near_miss_repair(self, run_mock):
+        near_miss_payload = json.loads(_good_payload())
+        near_miss_payload["category"] = "Talous"
+        near_miss_payload["content"] = " ".join(["Sana"] * 244)
+        repaired_payload = json.loads(_good_payload())
+        repaired_payload["category"] = "Talous"
+        repaired_payload["content"] = _long_content()
+        packet = _source_packet(252, blocks=3)
+        packet["story_confidence"] = 0.98
+        packet["category"] = "Talous"
+
+        run_mock.side_effect = [
+            self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
+            self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
+            self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
+            self._result(json.dumps(repaired_payload, ensure_ascii=False)),
+        ]
+
+        with patch(f"{rewrite_articles.__module__}.build_story_packet", return_value=packet):
+            rewritten = rewrite_articles([dict(SAMPLE_ARTICLE, category_hint="Talous")])
+
+        self.assertEqual(len(rewritten), 1)
+        self.assertEqual(run_mock.call_count, 4)
+        retry_prompt = run_mock.call_args_list[3].args[0][-1]
+        self.assertIn("source_backed_talous_zero_word_retry", retry_prompt)
+        self.assertEqual(rewritten[0]["category"], "Talous")
+        self.assertEqual(rewritten[0]["monica_repair"]["repair_retry"], "talous_zero_word_short_retry")
+        self.assertEqual(rewritten[0]["monica_repair"]["pre_repair_word_count"], 244)
+        self.assertGreaterEqual(rewritten[0]["monica_repair"]["post_repair_word_count"], MIN_CONTENT_WORDS)
+        self.assertEqual(rewritten[0]["monica_repair"]["repair_result"], "published")
 
     @patch(PATCH_TARGET)
     def test_rewrite_articles_rejects_still_short_after_repair(self, run_mock):

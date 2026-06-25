@@ -879,6 +879,26 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
                     raw = repaired_raw
                     issues = _basic_payload_issues(payload)
                     repair_metadata = _near_miss_repair_metadata(packet, near_miss_payload, payload, issues)
+                    if (
+                        repair_metadata["repair_added_word_count"] == 0
+                        and _is_source_backed_talous_micro_near_miss(packet, payload, issues)
+                    ):
+                        retry_issues = list(issues) + [
+                            "source_backed_talous_zero_word_retry: previous repair added 0 words and article remains under final length floor"
+                        ]
+                        print(f"[monica]   Talous zero-word retry pass: {'; '.join(retry_issues)}")
+                        retry_raw = _run_monica(_build_repair_prompt(packet, payload, retry_issues))
+                        try:
+                            payload = _extract_json_object(retry_raw)
+                        except ValueError as e:
+                            save_writer_quarantine(packet, "dispatch_error", raw_response=retry_raw, extra={"reason_code": "json_parse_failed", "error": str(e), "stage": "talous_zero_word_retry_parse", "initial_payload": payload, "initial_issues": retry_issues})
+                            print(f"[monica]   quarantine: dispatch_error ({e})")
+                            continue
+                        raw = retry_raw
+                        issues = _basic_payload_issues(payload)
+                        repair_metadata = _near_miss_repair_metadata(packet, near_miss_payload, payload, issues)
+                        repair_metadata["repair_retry"] = "talous_zero_word_short_retry"
+                        repair_metadata["repair_retry_reason"] = "previous repair added 0 words and remained under final length floor"
 
             if issues:
                 reason = "schema_invalid"
