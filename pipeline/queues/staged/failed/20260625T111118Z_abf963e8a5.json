@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-25T11:11:18.671553+00:00",
+  "digest": "abf963e8a5",
+  "packet": {
+    "packet_id": "20260625T111118Z_abf963e8a5",
+    "created_at": "2026-06-25T11:11:18Z",
+    "headline_seed": "Heitä epäillään naisen, 28, kuolemasta",
+    "description_seed": "Poliisi vaatii kolmea ihmistä vangittavaksi epäiltynä 28-vuotiaan raisiolaisen naisen taposta. Poliisi epäilee yhtä naista ja kahta miestä 28-vuotiaan naisen taposta juhannuksena Mynämäellä. Poliisi vaatii vangittavaksi 31-vuotiasta naista sekä 35- ja 62-vuotiasta miestä. Uhrin isän mukaan nainen oli uhrin ystävä ja nuorempi miehistä on ystävän miesystävä.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/b7886382-13ec-417b-945c-9360de5c7226",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/b7886382-13ec-417b-945c-9360de5c7226"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.53,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Heitä epäillään naisen, 28, kuolemasta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Poliisi vaatii kolmea ihmistä vangittavaksi epäiltynä 28-vuotiaan raisiolaisen naisen taposta. Poliisi epäilee yhtä naista ja kahta miestä 28-vuotiaan naisen taposta juhannuksena Mynämäellä. Poliisi vaatii vangittavaksi 31-vuotiasta naista sekä 35- ja 62-vuotiasta miestä. Uhrin isän mukaan nainen oli uhrin ystävä ja nuorempi miehistä on ystävän miesystävä.",
+        "word_count": 45,
+        "keyword_overlap": 27,
+        "strong_overlap": 23
+      }
+    ],
+    "source_text": "Poliisi vaatii kolmea ihmistä vangittavaksi epäiltynä 28-vuotiaan raisiolaisen naisen taposta. Poliisi epäilee yhtä naista ja kahta miestä 28-vuotiaan naisen taposta juhannuksena Mynämäellä. Poliisi vaatii vangittavaksi 31-vuotiasta naista sekä 35- ja 62-vuotiasta miestä. Uhrin isän mukaan nainen oli uhrin ystävä ja nuorempi miehistä on ystävän miesystävä.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 90,
+      "selected_blocks": 1,
+      "selected_source_words": 45,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Heitä epäillään naisen, 28, kuolemasta",
+      "description": "Poliisi vaatii kolmea ihmistä vangittavaksi epäiltynä 28-vuotiaan raisiolaisen naisen taposta. Poliisi epäilee yhtä naista ja kahta miestä 28-vuotiaan naisen taposta juhannuksena Mynämäellä. Poliisi vaatii vangittavaksi 31-vuotiasta naista sekä 35- ja 62-vuotiasta miestä. Uhrin isän mukaan nainen oli uhrin ystävä ja nuorempi miehistä on ystävän miesystävä.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Heitä epäillään naisen, 28, kuolemasta",
+    "description": "Poliisi vaatii kolmea ihmistä vangittavaksi epäiltynä 28-vuotiaan raisiolaisen naisen taposta. Poliisi epäilee yhtä naista ja kahta miestä 28-vuotiaan naisen taposta juhannuksena Mynämäellä. Poliisi vaatii vangittavaksi 31-vuotiasta naista sekä 35- ja 62-vuotiasta miestä. Uhrin isän mukaan nainen oli uhrin ystävä ja nuorempi miehistä on ystävän miesystävä.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/b7886382-13ec-417b-945c-9360de5c7226",
+    "published": "2026-06-25T13:54:58+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "fa3e5d19f9d352123396e81d7c0a0a64",
+    "_url_hash": "70bed75966682ba5df08ee0f26e1c84dd0424d41a3a4008eccc6c95a9c8830c5",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Poliisi vaatii kolmea ihmistä vangittavaksi epäiltynä 28-vuotiaan raisiolaisen naisen taposta. Poliisi epäilee yhtä naista ja kahta miestä 28-vuotiaan naisen taposta juhannuksena Mynämäellä. Poliisi vaatii vangittavaksi 31-vuotiasta naista sekä 35- ja 62-vuotiasta miestä. Uhrin isän mukaan nainen oli uhrin ystävä ja nuorempi miehistä on ystävän miesystävä.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-06-25T11:23:42.186094+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman toistoa tai lisäoletuksia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260625T111118Z_abf963e8a5\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman toistoa tai lisäoletuksia.\"}"
+}
