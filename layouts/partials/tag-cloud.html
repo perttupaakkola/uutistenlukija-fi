@@ -17,7 +17,12 @@
 <aside class="tag-cloud" aria-label="Aihepilvi">
   <h3 class="tag-cloud__title">Aiheet</h3>
   <div class="tag-cloud__tags">
+    <a href="/kategoriat/talous/"
+       class="tag-cloud__tag"
+       style="font-size: 1.00rem"
+       title="Korot, hinnat ja yritykset">Talous</a>
     {{ range $top20 }}
+    {{ if ne (.name | lower) "talous" }}
     {{ $normalized := 0.0 }}
     {{ if gt $range 0 }}
       {{/* Force float division so we get a value between 0 and 1 */}}
@@ -29,6 +34,7 @@
        class="tag-cloud__tag"
        style="font-size: {{ printf "%.2f" $size }}rem"
        title="{{ .count }} artikkelia">{{ .name }}</a>
+    {{ end }}
     {{ end }}
   </div>
 </aside>
