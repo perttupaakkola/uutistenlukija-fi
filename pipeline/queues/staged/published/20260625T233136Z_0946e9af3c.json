@@ -1,0 +1,216 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-25T23:31:36.178229+00:00",
+  "digest": "0946e9af3c",
+  "packet": {
+    "packet_id": "20260625T233136Z_0946e9af3c",
+    "created_at": "2026-06-25T23:31:36Z",
+    "headline_seed": "New science on algae die-offs is too late for the Reflecting Pool",
+    "description_seed": "Iron and hydrogen peroxide trigger cell death via ferroptosis, which cascades killer molecules through the population, causing mass die-offs of algae.",
+    "link": "https://www.sciencenews.org/article/algae-die-offs-reflecting-pool",
+    "source": "Science News",
+    "source_names": [
+      "Science News",
+      "Science News",
+      "The Atlantic",
+      "NPR"
+    ],
+    "source_urls": [
+      "https://www.sciencenews.org/article/algae-die-offs-reflecting-pool"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "New science on algae die-offs is too late for the Reflecting Pool"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Science News",
+        "source_type": "description",
+        "text": "Iron and hydrogen peroxide trigger cell death via ferroptosis, which cascades killer molecules through the population, causing mass die-offs of algae.",
+        "word_count": 21,
+        "keyword_overlap": 17,
+        "strong_overlap": 11
+      },
+      {
+        "source": "Science News",
+        "source_type": "research",
+        "text": "The newly painted Lincoln Memorial Reflecting Pool in Washington, D.C. was supposed to be “American Flag blue.” Instead, on June 16, the water turned an un-American shade of sickly green as an algal bloom burst through the water. While experts keep trying to eradicate the unsightly bloom, a research team has revealed new insights into how mass algal demise might happen naturally. A sudden algal die-off could be caused by an interaction between iron and hydrogen peroxide, researchers report June 25 in Science. The chemical reaction produces reactive molecules that burst cell membranes apart. Death could spread from a single cell to collapse an algal bloom if conditions are right. While the results could explain why at least some algal blooms die off, the findings can’t turn the Reflecting Pool blue. The situation there may be too far gone ---",
+        "word_count": 140,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      },
+      {
+        "source": "The Atlantic",
+        "source_type": "research",
+        "text": "Donald Trump has a new nemesis, with a name worthy of a supervillain: Scenedesmus. The Reflecting Pool on the National Mall has become the country’s most high-profile science experiment, with workers battling against nature. After a week of combat, they have essentially killed off one type of algae infesting the pool, only to create the conditions for a new type to take over. And Scenedesmus, a genus of green algae nicknamed “Skinny Dead Mouse” by scientists, is now flourishing, according to testing that was run at the request of The Atlantic.",
+        "word_count": 91,
+        "keyword_overlap": 4,
+        "strong_overlap": 2
+      },
+      {
+        "source": "NPR",
+        "source_type": "research",
+        "text": "Rosalina Stancheva Christova, a professor of aquatic ecology at George Mason University in Virginia, took water samples from the pool on Tuesday. She confirmed the algae belongs to the genus Desmodesmus, which she said is \"growing in excessive amounts\" but is not toxic or harmful. Christova says this kind of common green algae is found all over the region, especially this time of year. The reflecting pool in particular provides \"excellent conditions\" for algae growth, she said: shallow, stagnant water, strong sunlight and no shade. \"It could happen every single summer,\" she added. \"But it seems that the disturbance of the pond during the renovations [is] accelerating this process.\" Christova said last month's renovations may have affected the balance of nutrients in the pool, potentially accelerating the algae blooms. Goodale similarly views the resurfacing as one of several contributing factors.",
+        "word_count": 140,
+        "keyword_overlap": 4,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Iron and hydrogen peroxide trigger cell death via ferroptosis, which cascades killer molecules through the population, causing mass die-offs of algae.\n\nThe newly painted Lincoln Memorial Reflecting Pool in Washington, D.C. was supposed to be “American Flag blue.” Instead, on June 16, the water turned an un-American shade of sickly green as an algal bloom burst through the water. While experts keep trying to eradicate the unsightly bloom, a research team has revealed new insights into how mass algal demise might happen naturally. A sudden algal die-off could be caused by an interaction between iron and hydrogen peroxide, researchers report June 25 in Science. The chemical reaction produces reactive molecules that burst cell membranes apart. Death could spread from a single cell to collapse an algal bloom if conditions are right. While the results could explain why at least some algal blooms die off, the findings can’t turn the Reflecting Pool blue. The situation there may be too far gone ---\n\nDonald Trump has a new nemesis, with a name worthy of a supervillain: Scenedesmus. The Reflecting Pool on the National Mall has become the country’s most high-profile science experiment, with workers battling against nature. After a week of combat, they have essentially killed off one type of algae infesting the pool, only to create the conditions for a new type to take over. And Scenedesmus, a genus of green algae nicknamed “Skinny Dead Mouse” by scientists, is now flourishing, according to testing that was run at the request of The Atlantic.\n\nRosalina Stancheva Christova, a professor of aquatic ecology at George Mason University in Virginia, took water samples from the pool on Tuesday. She confirmed the algae belongs to the genus Desmodesmus, which she said is \"growing in excessive amounts\" but is not toxic or harmful. Christova says this kind of common green algae is found all over the region, especially this time of year. The reflecting pool in particular provides \"excellent conditions\" for algae growth, she said: shallow, stagnant water, strong sunlight and no shade. \"It could happen every single summer,\" she added. \"But it seems that the disturbance of the pond during the renovations [is] accelerating this process.\" Christova said last month's renovations may have affected the balance of nutrients in the pool, potentially accelerating the algae blooms. Goodale similarly views the resurfacing as one of several contributing factors.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 976,
+      "selected_blocks": 4,
+      "selected_source_words": 392,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Science News",
+        "The Atlantic",
+        "The Atlantic",
+        "The Atlantic",
+        "The Atlantic",
+        "NPR",
+        "NPR",
+        "NPR",
+        "NPR",
+        "Science News"
+      ],
+      "selected_sources": [
+        "Science News",
+        "Science News",
+        "The Atlantic",
+        "NPR"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "New science on algae die-offs is too late for the Reflecting Pool",
+      "description": "Iron and hydrogen peroxide trigger cell death via ferroptosis, which cascades killer molecules through the population, causing mass die-offs of algae.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "New science on algae die-offs is too late for the Reflecting Pool",
+    "description": "Iron and hydrogen peroxide trigger cell death via ferroptosis, which cascades killer molecules through the population, causing mass die-offs of algae.",
+    "link": "https://www.sciencenews.org/article/algae-die-offs-reflecting-pool",
+    "published": "2026-06-25T20:22:27+00:00",
+    "source": "Science News",
+    "source_domain": "sciencenews.org",
+    "language": "en",
+    "fingerprint": "20e46bb518e99139bfbe96aa06f4ceb0",
+    "_url_hash": "2d7fc939ba440b3a5f6bf3a083f8dfbca4679971a19968e4a7a45f7ced037a0c",
+    "source_tier": 2,
+    "category_hint": "Tiede",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Tiede",
+    "research": "[Lähde: Science News]\nThe newly painted Lincoln Memorial Reflecting Pool in Washington, D.C. was supposed to be “American Flag blue.” Instead, on June 16, the water turned an un-American shade of sickly green as an algal bloom burst through the water. While experts keep trying to eradicate the unsightly bloom, a research team has revealed new insights into how mass algal demise might happen naturally.\n\nA sudden algal die-off could be caused by an interaction between iron and hydrogen peroxide, researchers report June 25 in Science. The chemical reaction produces reactive molecules that burst cell membranes apart. Death could spread from a single cell to collapse an algal bloom if conditions are right. While the results could explain why at least some algal blooms die off, the findings can’t turn the Reflecting Pool blue. The situation there may be too far gone\n\n---\n\n[Lähde: The Atlantic]\nDonald Trump has a new nemesis, with a name worthy of a supervillain: Scenedesmus.\n\nThe Reflecting Pool on the National Mall has become the country’s most high-profile science experiment, with workers battling against nature. After a week of combat, they have essentially killed off one type of algae infesting the pool, only to create the conditions for a new type to take over. And Scenedesmus, a genus of green algae nicknamed “Skinny Dead Mouse” by scientists, is now flourishing, according to testing that was run at the request of The Atlantic.\n\nThe pool, at the moment, looks like a strange bit of modern art. As workers treat different sections, the areas where they succeed in reducing the algae turn lighter shades of green. In some places, the water is relatively clear. In others, it’s an oily sludge. A quick glance, though, is enough to confirm that this is not the American-flag blue it was supposed to be.\n\nOver the past few days, I’ve seen baby ducks swim through the pool; National Park Service workers wading around as they try to clean it; small children bending over to touch it. But none of the NPS workers at the site have been able to definitively tell me whether despite all of the algae—some species of which can be toxic—the water remains safe.\n\nA spokesperson at the Department of Interior told me “there is ongoing water testing happening,” but would not disclose the results of those tests. Requests to spokespeople at the NPS have gone unanswered. I have been in touch with scientists who have applied for permits to get into the pool and conduct their own tests, but those permits have yet to be granted.\n\nWith the lack of transparency from the federal government and no clarity on what’s inside that murky water, I decided to dig—or dip—a little deeper myself. So late on Thursday morning, I filled several water bottles from different areas of the pool. Some were fairly clear, while other samples were dark green. My samples were delivered to two different scientists by that evening.\n\nWhen algae first began to flourish in the Reflecting Pool, it appeared to be a blue-green cyanobacterial bloom that had taken over. Photos showed the kind of greenish surface film that can be indicative of that algae, which in some instances may produce neurotoxins harmful to people and pets. When Hans W. Paerl, a professor of marine and environmental sciences at the University of North Carolina at Chapel Hill, opened the bottle of one of the samples I collected, he detected\n\n---\n\n[Lähde: NPR]\nAlgae turns the newly repainted Lincoln Memorial Reflecting Pool green on the National Mall on Tuesday in Washington, DC.\n                \n                    \n                    Chip Somodevilla/Getty Images\n                    \n                \n                hide caption\n\nWASHINGTON — The Lincoln Memorial reflecting pool is once again making headlines, this week for turning green.\n\nThe Washington, D.C. landmark was refilled with water earlier this month after President Trump had its neutral grey bottom repainted \"American flag blue.\" The multimillion-dollar project produced subtle results in the eyes of many observers, even as Trump and Secretary of the Interior Doug Burgum — whose agency managed the renovation — touted its success.\n\nIn recent days, however, the pool has taken on a verdant hue — the result of algae blooms that experts say are to be expected in these conditions.\n\n\"It's called 'New Pond Syndrome,'\" says Steve Goodale, a Canadian swimming pool specialist known online as \"Swimming Pool Steve.\" \"It's a known thing that happens when you take a natural, clear body of water like this that sits in an open air environment and you try to start it up, very often you end up with green water almost immediately.\"\n\nGoodale says the process took longer — a matter of days — to unfold in this case likely due to the sheer size of the pool, which measures 2,030 feet long and has a surface area of approximately 338,000 square feet.\n\nRosalina Stancheva Christova, a professor of aquatic ecology at George Mason University in Virginia, took water samples from the pool on Tuesday. She confirmed the algae belongs to the genus Desmodesmus, which she said is \"growing in excessive amounts\" but is not toxic or harmful.\n\nChristova says this kind of common green algae is found all over the region, especially this time of year. The reflecting pool in particular provides \"excellent conditions\" for algae growth, she said: shallow, stagnant water, strong sunlight and no shade.\n\n\"It could happen every single summer,\" she added. \"But it seems that the disturbance of the pond during the renovations [is] accelerating this process.\"\n\nChristova said last month's renovations may have affected the balance of nutrients in the pool, potentially accelerating the algae blooms. Goodale similarly views the resurfacing as one of several contributing factors.\n\n\"The new, darker interior surface is going to absorb more sunlight,\" Goodale says. \"It is going to result in water that's warmer,",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-25T23:33:48.699917+00:00",
+  "payload": {
+    "packet_id": "20260625T233136Z_0946e9af3c",
+    "title": "Uusi tutkimus selittää leväkukintojen äkkikuolemia, mutta ei pelasta Reflecting Poolia",
+    "summary": "Tuore tutkimus kuvaa mekanismin, jossa rauta ja vetyperoksidi voivat käynnistää leväsolujen kuoleman ja romahduttaa leväkukinnan. Washingtonin Reflecting Poolin vihertynyt vesi kertoo kuitenkin, että käytännön ongelma voi olla jo liian pitkällä.",
+    "content": "Washingtonissa Lincoln Memorialin edustalla sijaitsevan Reflecting Poolin piti hohtaa uuden maalauksen jälkeen sinisenä, mutta kesäkuun puolivälissä vesi muuttui vihertäväksi leväkukinnan vuoksi. Samaan aikaan julkaistu tutkimus antaa uuden selityksen sille, miten levämassa voi luonnossa romahtaa nopeasti, mutta havainto ei tarjoa välitöntä ratkaisua altaan ongelmaan.\n\n## Solukuolema voi levitä levämassassa\n\nTutkijoiden mukaan äkillinen leväkukinnan kuolema voi alkaa raudan ja vetyperoksidin vuorovaikutuksesta. Reaktio synnyttää erittäin reaktiivisia molekyylejä, jotka rikkovat solukalvoja. Prosessi liittyy ferroptoosiksi kutsuttuun solukuoleman muotoon.\n\nJos olosuhteet ovat sopivat, yhden solun kuolema voi käynnistää ketjureaktion. Tällöin vaurioittavat molekyylit leviävät leväpopulaatiossa ja voivat lopulta romahduttaa koko kukinnan. Tutkimus auttaa selittämään, miksi ainakin osa leväkukinnoista häviää luonnossa nopeasti.\n\nReflecting Poolin kohdalla tieto tulee kuitenkin myöhään. Allasta yritetään puhdistaa, mutta vihreä leväkasvu on jo päässyt näkyvästi valloilleen. Tutkimus ei siis tarkoita, että altaan vesi voitaisiin yksinkertaisesti palauttaa siniseksi samalla mekanismilla.\n\n## Allas tarjoaa levälle hyvät olosuhteet\n\nGeorge Mason Universityn vesiekologian professori Rosalina Stancheva Christova otti altaasta vesinäytteitä ja arvioi, että levä kuuluu Desmodesmus-sukuun. Hänen mukaansa sitä kasvaa altaassa liiallisia määriä, mutta se ei ole myrkyllistä eikä haitallista.\n\nChristovan mukaan tällainen vihreä levä on alueella tavallista etenkin tähän vuodenaikaan. Reflecting Pool on levälle erityisen suotuisa ympäristö, koska vesi on matalaa ja seisovaa, aurinko paistaa voimakkaasti eikä varjoa juuri ole.\n\nAltaan hiljattainen kunnostus on voinut vauhdittaa kehitystä. Christovan mukaan remontti on saattanut muuttaa ravinteiden tasapainoa vedessä, mikä puolestaan voi kiihdyttää leväkukintoja. Myös muut asiantuntijat pitävät pinnoituksen uusimista yhtenä mahdollisena taustatekijänä.\n\nPuhdistustyöt voivat lisäksi muuttaa altaan levälajistoa. Erään testauksen mukaan yhden levätyypin torjunta on voinut luoda tilaa toiselle vihreälle levälle. Tapaus näyttää, kuinka vaikeaa leväkukintaa on hallita, kun ympäristö tarjoaa sille jatkuvasti hyvät kasvuolosuhteet.",
+    "category": "Tiede",
+    "tags": [
+      "leväkukinta",
+      "Reflecting Pool",
+      "vesiekologia",
+      "ferroptoosi",
+      "ympäristötutkimus"
+    ],
+    "summary_bullets": [
+      "Rauta ja vetyperoksidi voivat käynnistää leväsolujen kuolemaan johtavan reaktion.",
+      "Mekanismi voi sopivissa oloissa levitä solusta toiseen ja romahduttaa leväkukinnan.",
+      "Washingtonin Reflecting Poolin vihertymistä selittävät myös matala seisova vesi, voimakas aurinko ja mahdolliset kunnostuksen vaikutukset."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu annettuihin lähdekatkelmiin. Scenedesmus- ja Desmodesmus-havainnot käsiteltiin varovasti levälajiston muutoksina, koska lähteet nimeävät eri vihreän levän suvun."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260625T233136Z_0946e9af3c\",\"title\":\"Uusi tutkimus selittää leväkukintojen äkkikuolemia, mutta ei pelasta Reflecting Poolia\",\"summary\":\"Tuore tutkimus kuvaa mekanismin, jossa rauta ja vetyperoksidi voivat käynnistää leväsolujen kuoleman ja romahduttaa leväkukinnan. Washingtonin Reflecting Poolin vihertynyt vesi kertoo kuitenkin, että käytännön ongelma voi olla jo liian pitkällä.\",\"content\":\"Washingtonissa Lincoln Memorialin edustalla sijaitsevan Reflecting Poolin piti hohtaa uuden maalauksen jälkeen sinisenä, mutta kesäkuun puolivälissä vesi muuttui vihertäväksi leväkukinnan vuoksi. Samaan aikaan julkaistu tutkimus antaa uuden selityksen sille, miten levämassa voi luonnossa romahtaa nopeasti, mutta havainto ei tarjoa välitöntä ratkaisua altaan ongelmaan.\\n\\n## Solukuolema voi levitä levämassassa\\n\\nTutkijoiden mukaan äkillinen leväkukinnan kuolema voi alkaa raudan ja vetyperoksidin vuorovaikutuksesta. Reaktio synnyttää erittäin reaktiivisia molekyylejä, jotka rikkovat solukalvoja. Prosessi liittyy ferroptoosiksi kutsuttuun solukuoleman muotoon.\\n\\nJos olosuhteet ovat sopivat, yhden solun kuolema voi käynnistää ketjureaktion. Tällöin vaurioittavat molekyylit leviävät leväpopulaatiossa ja voivat lopulta romahduttaa koko kukinnan. Tutkimus auttaa selittämään, miksi ainakin osa leväkukinnoista häviää luonnossa nopeasti.\\n\\nReflecting Poolin kohdalla tieto tulee kuitenkin myöhään. Allasta yritetään puhdistaa, mutta vihreä leväkasvu on jo päässyt näkyvästi valloilleen. Tutkimus ei siis tarkoita, että altaan vesi voitaisiin yksinkertaisesti palauttaa siniseksi samalla mekanismilla.\\n\\n## Allas tarjoaa levälle hyvät olosuhteet\\n\\nGeorge Mason Universityn vesiekologian professori Rosalina Stancheva Christova otti altaasta vesinäytteitä ja arvioi, että levä kuuluu Desmodesmus-sukuun. Hänen mukaansa sitä kasvaa altaassa liiallisia määriä, mutta se ei ole myrkyllistä eikä haitallista.\\n\\nChristovan mukaan tällainen vihreä levä on alueella tavallista etenkin tähän vuodenaikaan. Reflecting Pool on levälle erityisen suotuisa ympäristö, koska vesi on matalaa ja seisovaa, aurinko paistaa voimakkaasti eikä varjoa juuri ole.\\n\\nAltaan hiljattainen kunnostus on voinut vauhdittaa kehitystä. Christovan mukaan remontti on saattanut muuttaa ravinteiden tasapainoa vedessä, mikä puolestaan voi kiihdyttää leväkukintoja. Myös muut asiantuntijat pitävät pinnoituksen uusimista yhtenä mahdollisena taustatekijänä.\\n\\nPuhdistustyöt voivat lisäksi muuttaa altaan levälajistoa. Erään testauksen mukaan yhden levätyypin torjunta on voinut luoda tilaa toiselle vihreälle levälle. Tapaus näyttää, kuinka vaikeaa leväkukintaa on hallita, kun ympäristö tarjoaa sille jatkuvasti hyvät kasvuolosuhteet.\",\"category\":\"Tiede\",\"tags\":[\"leväkukinta\",\"Reflecting Pool\",\"vesiekologia\",\"ferroptoosi\",\"ympäristötutkimus\"],\"summary_bullets\":[\"Rauta ja vetyperoksidi voivat käynnistää leväsolujen kuolemaan johtavan reaktion.\",\"Mekanismi voi sopivissa oloissa levitä solusta toiseen ja romahduttaa leväkukinnan.\",\"Washingtonin Reflecting Poolin vihertymistä selittävät myös matala seisova vesi, voimakas aurinko ja mahdolliset kunnostuksen vaikutukset.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.86,\"journalist_note\":\"Artikkeli perustuu annettuihin lähdekatkelmiin. Scenedesmus- ja Desmodesmus-havainnot käsiteltiin varovasti levälajiston muutoksina, koska lähteet nimeävät eri vihreän levän suvun.\"}",
+  "article": {
+    "title": "Uusi tutkimus selittää leväkukintojen äkkikuolemia, mutta ei pelasta Reflecting Poolia",
+    "description": "Tuore tutkimus kuvaa mekanismin, jossa rauta ja vetyperoksidi voivat käynnistää leväsolujen kuoleman ja romahduttaa leväkukinnan. Washingtonin Reflecting Poolin vihertynyt vesi kertoo kuitenkin, että käytännön ongelma voi olla jo liian pitkällä.",
+    "link": "https://www.sciencenews.org/article/algae-die-offs-reflecting-pool",
+    "published": "2026-06-25T20:22:27+00:00",
+    "source": "Science News",
+    "source_domain": "sciencenews.org",
+    "language": "en",
+    "fingerprint": "20e46bb518e99139bfbe96aa06f4ceb0",
+    "_url_hash": "2d7fc939ba440b3a5f6bf3a083f8dfbca4679971a19968e4a7a45f7ced037a0c",
+    "source_tier": 2,
+    "category_hint": "Tiede",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Tiede",
+    "research": "[Lähde: Science News]\nThe newly painted Lincoln Memorial Reflecting Pool in Washington, D.C. was supposed to be “American Flag blue.” Instead, on June 16, the water turned an un-American shade of sickly green as an algal bloom burst through the water. While experts keep trying to eradicate the unsightly bloom, a research team has revealed new insights into how mass algal demise might happen naturally.\n\nA sudden algal die-off could be caused by an interaction between iron and hydrogen peroxide, researchers report June 25 in Science. The chemical reaction produces reactive molecules that burst cell membranes apart. Death could spread from a single cell to collapse an algal bloom if conditions are right. While the results could explain why at least some algal blooms die off, the findings can’t turn the Reflecting Pool blue. The situation there may be too far gone\n\n---\n\n[Lähde: The Atlantic]\nDonald Trump has a new nemesis, with a name worthy of a supervillain: Scenedesmus.\n\nThe Reflecting Pool on the National Mall has become the country’s most high-profile science experiment, with workers battling against nature. After a week of combat, they have essentially killed off one type of algae infesting the pool, only to create the conditions for a new type to take over. And Scenedesmus, a genus of green algae nicknamed “Skinny Dead Mouse” by scientists, is now flourishing, according to testing that was run at the request of The Atlantic.\n\nThe pool, at the moment, looks like a strange bit of modern art. As workers treat different sections, the areas where they succeed in reducing the algae turn lighter shades of green. In some places, the water is relatively clear. In others, it’s an oily sludge. A quick glance, though, is enough to confirm that this is not the American-flag blue it was supposed to be.\n\nOver the past few days, I’ve seen baby ducks swim through the pool; National Park Service workers wading around as they try to clean it; small children bending over to touch it. But none of the NPS workers at the site have been able to definitively tell me whether despite all of the algae—some species of which can be toxic—the water remains safe.\n\nA spokesperson at the Department of Interior told me “there is ongoing water testing happening,” but would not disclose the results of those tests. Requests to spokespeople at the NPS have gone unanswered. I have been in touch with scientists who have applied for permits to get into the pool and conduct their own tests, but those permits have yet to be granted.\n\nWith the lack of transparency from the federal government and no clarity on what’s inside that murky water, I decided to dig—or dip—a little deeper myself. So late on Thursday morning, I filled several water bottles from different areas of the pool. Some were fairly clear, while other samples were dark green. My samples were delivered to two different scientists by that evening.\n\nWhen algae first began to flourish in the Reflecting Pool, it appeared to be a blue-green cyanobacterial bloom that had taken over. Photos showed the kind of greenish surface film that can be indicative of that algae, which in some instances may produce neurotoxins harmful to people and pets. When Hans W. Paerl, a professor of marine and environmental sciences at the University of North Carolina at Chapel Hill, opened the bottle of one of the samples I collected, he detected\n\n---\n\n[Lähde: NPR]\nAlgae turns the newly repainted Lincoln Memorial Reflecting Pool green on the National Mall on Tuesday in Washington, DC.\n                \n                    \n                    Chip Somodevilla/Getty Images\n                    \n                \n                hide caption\n\nWASHINGTON — The Lincoln Memorial reflecting pool is once again making headlines, this week for turning green.\n\nThe Washington, D.C. landmark was refilled with water earlier this month after President Trump had its neutral grey bottom repainted \"American flag blue.\" The multimillion-dollar project produced subtle results in the eyes of many observers, even as Trump and Secretary of the Interior Doug Burgum — whose agency managed the renovation — touted its success.\n\nIn recent days, however, the pool has taken on a verdant hue — the result of algae blooms that experts say are to be expected in these conditions.\n\n\"It's called 'New Pond Syndrome,'\" says Steve Goodale, a Canadian swimming pool specialist known online as \"Swimming Pool Steve.\" \"It's a known thing that happens when you take a natural, clear body of water like this that sits in an open air environment and you try to start it up, very often you end up with green water almost immediately.\"\n\nGoodale says the process took longer — a matter of days — to unfold in this case likely due to the sheer size of the pool, which measures 2,030 feet long and has a surface area of approximately 338,000 square feet.\n\nRosalina Stancheva Christova, a professor of aquatic ecology at George Mason University in Virginia, took water samples from the pool on Tuesday. She confirmed the algae belongs to the genus Desmodesmus, which she said is \"growing in excessive amounts\" but is not toxic or harmful.\n\nChristova says this kind of common green algae is found all over the region, especially this time of year. The reflecting pool in particular provides \"excellent conditions\" for algae growth, she said: shallow, stagnant water, strong sunlight and no shade.\n\n\"It could happen every single summer,\" she added. \"But it seems that the disturbance of the pond during the renovations [is] accelerating this process.\"\n\nChristova said last month's renovations may have affected the balance of nutrients in the pool, potentially accelerating the algae blooms. Goodale similarly views the resurfacing as one of several contributing factors.\n\n\"The new, darker interior surface is going to absorb more sunlight,\" Goodale says. \"It is going to result in water that's warmer,",
+    "research_source": "multi",
+    "summary": "Tuore tutkimus kuvaa mekanismin, jossa rauta ja vetyperoksidi voivat käynnistää leväsolujen kuoleman ja romahduttaa leväkukinnan. Washingtonin Reflecting Poolin vihertynyt vesi kertoo kuitenkin, että käytännön ongelma voi olla jo liian pitkällä.",
+    "content": "Washingtonissa Lincoln Memorialin edustalla sijaitsevan Reflecting Poolin piti hohtaa uuden maalauksen jälkeen sinisenä, mutta kesäkuun puolivälissä vesi muuttui vihertäväksi leväkukinnan vuoksi. Samaan aikaan julkaistu tutkimus antaa uuden selityksen sille, miten levämassa voi luonnossa romahtaa nopeasti, mutta havainto ei tarjoa välitöntä ratkaisua altaan ongelmaan.\n\n## Solukuolema voi levitä levämassassa\n\nTutkijoiden mukaan äkillinen leväkukinnan kuolema voi alkaa raudan ja vetyperoksidin vuorovaikutuksesta. Reaktio synnyttää erittäin reaktiivisia molekyylejä, jotka rikkovat solukalvoja. Prosessi liittyy ferroptoosiksi kutsuttuun solukuoleman muotoon.\n\nJos olosuhteet ovat sopivat, yhden solun kuolema voi käynnistää ketjureaktion. Tällöin vaurioittavat molekyylit leviävät leväpopulaatiossa ja voivat lopulta romahduttaa koko kukinnan. Tutkimus auttaa selittämään, miksi ainakin osa leväkukinnoista häviää luonnossa nopeasti.\n\nReflecting Poolin kohdalla tieto tulee kuitenkin myöhään. Allasta yritetään puhdistaa, mutta vihreä leväkasvu on jo päässyt näkyvästi valloilleen. Tutkimus ei siis tarkoita, että altaan vesi voitaisiin yksinkertaisesti palauttaa siniseksi samalla mekanismilla.\n\n## Allas tarjoaa levälle hyvät olosuhteet\n\nGeorge Mason Universityn vesiekologian professori Rosalina Stancheva Christova otti altaasta vesinäytteitä ja arvioi, että levä kuuluu Desmodesmus-sukuun. Hänen mukaansa sitä kasvaa altaassa liiallisia määriä, mutta se ei ole myrkyllistä eikä haitallista.\n\nChristovan mukaan tällainen vihreä levä on alueella tavallista etenkin tähän vuodenaikaan. Reflecting Pool on levälle erityisen suotuisa ympäristö, koska vesi on matalaa ja seisovaa, aurinko paistaa voimakkaasti eikä varjoa juuri ole.\n\nAltaan hiljattainen kunnostus on voinut vauhdittaa kehitystä. Christovan mukaan remontti on saattanut muuttaa ravinteiden tasapainoa vedessä, mikä puolestaan voi kiihdyttää leväkukintoja. Myös muut asiantuntijat pitävät pinnoituksen uusimista yhtenä mahdollisena taustatekijänä.\n\nPuhdistustyöt voivat lisäksi muuttaa altaan levälajistoa. Erään testauksen mukaan yhden levätyypin torjunta on voinut luoda tilaa toiselle vihreälle levälle. Tapaus näyttää, kuinka vaikeaa leväkukintaa on hallita, kun ympäristö tarjoaa sille jatkuvasti hyvät kasvuolosuhteet.",
+    "category": "Tiede",
+    "tags": [
+      "leväkukinta",
+      "reflecting pool",
+      "vesiekologia",
+      "ferroptoosi",
+      "ympäristötutkimus"
+    ],
+    "summary_bullets": [
+      "Rauta ja vetyperoksidi voivat käynnistää leväsolujen kuolemaan johtavan reaktion.",
+      "Mekanismi voi sopivissa oloissa levitä solusta toiseen ja romahduttaa leväkukinnan.",
+      "Washingtonin Reflecting Poolin vihertymistä selittävät myös matala seisova vesi, voimakas aurinko ja mahdolliset kunnostuksen vaikutukset."
+    ],
+    "key_points": [
+      "Rauta ja vetyperoksidi voivat käynnistää leväsolujen kuolemaan johtavan reaktion.",
+      "Mekanismi voi sopivissa oloissa levitä solusta toiseen ja romahduttaa leväkukinnan.",
+      "Washingtonin Reflecting Poolin vihertymistä selittävät myös matala seisova vesi, voimakas aurinko ja mahdolliset kunnostuksen vaikutukset."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu annettuihin lähdekatkelmiin. Scenedesmus- ja Desmodesmus-havainnot käsiteltiin varovasti levälajiston muutoksina, koska lähteet nimeävät eri vihreän levän suvun.",
+    "source_text": "Iron and hydrogen peroxide trigger cell death via ferroptosis, which cascades killer molecules through the population, causing mass die-offs of algae.\n\nThe newly painted Lincoln Memorial Reflecting Pool in Washington, D.C. was supposed to be “American Flag blue.” Instead, on June 16, the water turned an un-American shade of sickly green as an algal bloom burst through the water. While experts keep trying to eradicate the unsightly bloom, a research team has revealed new insights into how mass algal demise might happen naturally. A sudden algal die-off could be caused by an interaction between iron and hydrogen peroxide, researchers report June 25 in Science. The chemical reaction produces reactive molecules that burst cell membranes apart. Death could spread from a single cell to collapse an algal bloom if conditions are right. While the results could explain why at least some algal blooms die off, the findings can’t turn the Reflecting Pool blue. The situation there may be too far gone ---\n\nDonald Trump has a new nemesis, with a name worthy of a supervillain: Scenedesmus. The Reflecting Pool on the National Mall has become the country’s most high-profile science experiment, with workers battling against nature. After a week of combat, they have essentially killed off one type of algae infesting the pool, only to create the conditions for a new type to take over. And Scenedesmus, a genus of green algae nicknamed “Skinny Dead Mouse” by scientists, is now flourishing, according to testing that was run at the request of The Atlantic.\n\nRosalina Stancheva Christova, a professor of aquatic ecology at George Mason University in Virginia, took water samples from the pool on Tuesday. She confirmed the algae belongs to the genus Desmodesmus, which she said is \"growing in excessive amounts\" but is not toxic or harmful. Christova says this kind of common green algae is found all over the region, especially this time of year. The reflecting pool in particular provides \"excellent conditions\" for algae growth, she said: shallow, stagnant water, strong sunlight and no shade. \"It could happen every single summer,\" she added. \"But it seems that the disturbance of the pond during the renovations [is] accelerating this process.\" Christova said last month's renovations may have affected the balance of nutrients in the pool, potentially accelerating the algae blooms. Goodale similarly views the resurfacing as one of several contributing factors.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.86,
+    "degraded_mode": false,
+    "monica_packet_id": "20260625T233136Z_0946e9af3c",
+    "image": "https://images.unsplash.com/photo-1625935417566-65b1c29224e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxncmVlbiUyMGFsZ2FlJTIwUmVmbGVjdGluZyUyMFBvb2x8ZW58MXwwfHx8MTc4MjQzMDY4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1625935417566-65b1c29224e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxncmVlbiUyMGFsZ2FlJTIwUmVmbGVjdGluZyUyMFBvb2x8ZW58MXwwfHx8MTc4MjQzMDY4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Uusi tutkimus selittää leväkukintojen äkkikuolemia, mutta ei pelasta Reflecting Poolia",
+    "image_credit": "Photo by Ricardo Gomez Angel on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/green-and-white-concrete-floor-m9nSy-jJ2tA?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-06-25T23:38:06.028426+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1625935417566-65b1c29224e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxncmVlbiUyMGFsZ2FlJTIwUmVmbGVjdGluZyUyMFBvb2x8ZW58MXwwfHx8MTc4MjQzMDY4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1625935417566-65b1c29224e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxncmVlbiUyMGFsZ2FlJTIwUmVmbGVjdGluZyUyMFBvb2x8ZW58MXwwfHx8MTc4MjQzMDY4NHww&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-25T23:39:17.494001+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-25-uusi-tutkimus-selittaa-levakukintojen-akkikuolemia-mutta-ei.md"
+  ]
+}
