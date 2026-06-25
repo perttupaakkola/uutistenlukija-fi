@@ -1,0 +1,190 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-25T06:11:20.258215+00:00",
+  "digest": "93e447252e",
+  "packet": {
+    "packet_id": "20260625T061120Z_93e447252e",
+    "created_at": "2026-06-25T06:11:20Z",
+    "headline_seed": "Philippines bans video game played by alleged high school shooter",
+    "description_seed": "The rare school shooting that left three students killed and 20 others injured has shocked the country.",
+    "link": "https://www.bbc.co.uk/news/articles/c14y7738nm8o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "The Guardian",
+      "BBC World",
+      "BBC World",
+      "AOL"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/c14y7738nm8o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Philippines bans video game played by alleged high school shooter"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "Investigators says one of two teenagers who allegedly opened fire on students at high school was regular player Philippine authorities have temporarily blocked the online gaming app GoreBox days after a rare school shooting in the south-east Asian country killed three students and injured 20 others. Investigators said that one of the two teenagers accused of opening fire on students at San Jose National high school in Tacloban city had regularly played the game, which allows players to use various weapons and depicts graphic violence. GoreBox is described on Google Play as allowing gamers to “engage in brutal combat with an extensive arsenal of weapons and explosives, and witness the raw effects of realistic rag-doll physics and an intense gore system that brings dismemberment to life”.",
+        "word_count": 126,
+        "keyword_overlap": 13,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The rare school shooting that left three students killed and 20 others injured has shocked the country.",
+        "word_count": 17,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Gorebox is a game where \"creativity meets unrestrained destruction\", according to its Google Play listing The Philippines has temporarily blocked gaming app Gorebox after an initial investigation found that a teenage suspect in a rare school shooting had been playing the game. Three students were killed and 20 others wounded after two suspects - aged 15 and 14 - allegedly fired handguns inside a classroom in Tacloban, south-east of Manila, on Monday. Police said the 14-year-old was a player of Gorebox, a game where players can \"obliterate anything [they] desire\" and \"engage in brutal combat with an extensive arsenal of weapons and explosives\", according to its Google Play listing. \"We cannot ignore possible online influences that may have contributed to this tragic incident,\" the country's cyber-security agency said.",
+        "word_count": 128,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "AOL",
+        "source_type": "research",
+        "text": "MANILA, Philippines — Philippine authorities said Tuesday they will temporarily block an online gaming app that one of two students blamed for a deadly school shooting has avidly used, to assess whether it played a role in fostering such violence. Three students were killed and 20 others were wounded when the two suspects, aged 14 and 15 and armed with a handgun each, opened fire Monday at the San Jose National High School in central Tacloban city. The Cybercrime Investigation and Coordinating Center said its decision to block Gorebox was prompted by an ongoing police investigation which showed that one suspect was an avid user of the app, adding that this will allow authorities to determine \"whether the platform played any role in the actions of the suspects.\"",
+        "word_count": 128,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      }
+    ],
+    "source_text": "Investigators says one of two teenagers who allegedly opened fire on students at high school was regular player Philippine authorities have temporarily blocked the online gaming app GoreBox days after a rare school shooting in the south-east Asian country killed three students and injured 20 others. Investigators said that one of the two teenagers accused of opening fire on students at San Jose National high school in Tacloban city had regularly played the game, which allows players to use various weapons and depicts graphic violence. GoreBox is described on Google Play as allowing gamers to “engage in brutal combat with an extensive arsenal of weapons and explosives, and witness the raw effects of realistic rag-doll physics and an intense gore system that brings dismemberment to life”.\n\nThe rare school shooting that left three students killed and 20 others injured has shocked the country.\n\nGorebox is a game where \"creativity meets unrestrained destruction\", according to its Google Play listing The Philippines has temporarily blocked gaming app Gorebox after an initial investigation found that a teenage suspect in a rare school shooting had been playing the game. Three students were killed and 20 others wounded after two suspects - aged 15 and 14 - allegedly fired handguns inside a classroom in Tacloban, south-east of Manila, on Monday. Police said the 14-year-old was a player of Gorebox, a game where players can \"obliterate anything [they] desire\" and \"engage in brutal combat with an extensive arsenal of weapons and explosives\", according to its Google Play listing. \"We cannot ignore possible online influences that may have contributed to this tragic incident,\" the country's cyber-security agency said.\n\nMANILA, Philippines — Philippine authorities said Tuesday they will temporarily block an online gaming app that one of two students blamed for a deadly school shooting has avidly used, to assess whether it played a role in fostering such violence. Three students were killed and 20 others were wounded when the two suspects, aged 14 and 15 and armed with a handgun each, opened fire Monday at the San Jose National High School in central Tacloban city. The Cybercrime Investigation and Coordinating Center said its decision to block Gorebox was prompted by an ongoing police investigation which showed that one suspect was an avid user of the app, adding that this will allow authorities to determine \"whether the platform played any role in the actions of the suspects.\"",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 946,
+      "selected_blocks": 4,
+      "selected_source_words": 399,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "AOL",
+        "AOL",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "The Guardian",
+        "BBC World",
+        "BBC World",
+        "AOL"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Philippines bans video game played by alleged high school shooter",
+      "description": "The rare school shooting that left three students killed and 20 others injured has shocked the country.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Philippines bans video game played by alleged high school shooter",
+    "description": "The rare school shooting that left three students killed and 20 others injured has shocked the country.",
+    "link": "https://www.bbc.co.uk/news/articles/c14y7738nm8o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-24T22:14:12+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "1837f93a509b7584343123ac10952062",
+    "_url_hash": "77306c73e563bf5ae3892fc6721c42b1b84f8bb4e3854a44b0737c735bb19374",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nGorebox is a game where \"creativity meets unrestrained destruction\", according to its Google Play listing\n\nThe Philippines has temporarily blocked gaming app Gorebox after an initial investigation found that a teenage suspect in a rare school shooting had been playing the game.\n\nThree students were killed and 20 others wounded after two suspects - aged 15 and 14 - allegedly fired handguns inside a classroom in Tacloban, south-east of Manila, on Monday.\n\nPolice said the 14-year-old was a player of Gorebox, a game where players can \"obliterate anything [they] desire\" and \"engage in brutal combat with an extensive arsenal of weapons and explosives\", according to its Google Play listing.\n\n\"We cannot ignore possible online influences that may have contributed to this tragic incident,\" the country's cyber-security agency said.\n\n\"Temporarily blocking the game will allow authorities to conduct a thorough assessment into whether the platform played any role in the actions of the suspects,\" said Aboy Paraiso, an undersecretary at the Cybercrime Investigation and Co-ordinating Centre.\n\nBBC News has contacted Gorebox's maker, Germany's F2Games, for comment. Scientific studies have not found a direct link between video games and violent behaviour.\n\nGorebox is a first-person shooter video game that can be played as solo or online multiplayer. The International Age Rating Coalition gave it an R18 rating due to extremely violent, explicit, and unrestrictive gameplay.\n\nMass shootings are rare in the Philippines, though gun-related crimes are not uncommon and the most sensational cases are staples of early evening newscasts.\n\nWhat was unusual this time round was that the suspects were minors.\n\nAkbayan party-list congressman Chel Diokno called for stiffer penalties for those who allow minors access to firearms.\n\nThe worst mass shooting in recent Philippine history happened in November 2009, when a town mayor in the southern province of Maguindanao shot dead 58 people, mostly journalists, who were travelling with the convoy of a political rival.\n\nGorebox is a game where \"creativity meets unrestrained destruction\", according to its Google Play listing\n\nLate on Tuesday, police filed murder charges against the 15-year-old suspect.\n\nThe 14-year-old suspect who allegedly played Gorebox is too young to be charged under Philippine law.\n\nHe appeared to have been \"heavily influenced\" by online content, said Allan Rae Co, spokesman of the Philippine National Police.\n\nThe boy had also b\n\n---\n\n[Lähde: The Guardian]\nInvestigators says one of two teenagers who allegedly opened fire on students at high school was regular player\n\nPhilippine authorities have temporarily blocked the online gaming app GoreBox days after a rare school shooting in the south-east Asian country killed three students and injured 20 others.\n\nInvestigators said that one of the two teenagers accused of opening fire on students at San Jose National high school in Tacloban city had regularly played the game, which allows players to use various weapons and depicts graphic violence.\n\nGoreBox is described on Google Play as allowing gamers to “engage in brutal combat with an extensive arsenal of weapons and explosives, and witness the raw effects of realistic rag-doll physics and an intense gore system that brings dismemberment to life”.\n\nLaunched in 2023 by F2 Games, GoreBox has more than 10m downloads on Google Play and carries an R18+ rating by the International Age Rating Coalition owing to its depictions of extreme violence.\n\nThe company did not immediately respond to questions from the Guardian. Scientific studies have repeatedly found there is no credible link between video games and real-life violence. A 2020 meta-analysis of several studies found the long-term impacts of violent games on youth aggression were “near zero”.\n\nThe Philippines’ Cybercrime Investigation and Coordinating Center (CICC) said it had issued a temporary ban against GoreBox as a precautionary measure pending investigation.\n\n“We cannot ignore possible online influences that may have contributed to this tragic incident,” the CICC undersecretary, Aboy Paraiso, said.\n\nTemporarily blocking the game will allow authorities to assess whether the platform played any role in the actions of the suspects, he added.\n\n“Beyond this temporary ban, we are reinforcing our monitoring efforts to identify online spaces that may pose risks to young users and to ensure that appropriate interventions are made immediately,” Paraiso said. “Our priority is the safety and wellbeing of Filipino children exposed to the internet.”\n\nCrimes involving the use of firearms are prevalent in the Philippines, partly because of the proliferation of unlicensed guns, but school shootings are relatively rare.\n\nPhilippine police told local media that initial interviews indicated the grade 9 suspects, aged 14 and 15, may have been bullied and the alleged attack carried out as retribution. The pair are in police custody.\n\nThe justice department said it was looking into \n\n---\n\n[Lähde: AOL]\nMANILA, Philippines — Philippine authorities said Tuesday they will temporarily block an online gaming app that one of two students blamed for a deadly school shooting has avidly used, to assess whether it played a role in fostering such violence.\n\nThree students were killed and 20 others were wounded when the two suspects, aged 14 and 15 and armed with a handgun each, opened fire Monday at the San Jose National High School in central Tacloban city.\n\nThe Cybercrime Investigation and Coordinating Center said its decision to block Gorebox was prompted by an ongoing police investigation which showed that one suspect was an avid user of the app, adding that this will allow authorities to determine \"whether the platform played any role in the actions of the suspects.\"\n\nThe decision would be enforced starting Tuesday, undersecretary Aboy Paraiso of the cybercrime center said in a statement.\n\n\"We cannot ignore possible online influences that may have contributed to this tragic incident,\" Para...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-25T06:15:02.398650+00:00",
+  "failure": "content too short: 231 words",
+  "payload": {
+    "packet_id": "20260625T061120Z_93e447252e",
+    "title": "Filippiinit estää Gorebox-pelin kouluampumisen tutkinnan ajaksi",
+    "summary": "Filippiinien viranomaiset ovat väliaikaisesti estäneet Gorebox-verkkopelin sen jälkeen, kun Taclobanin kaupungissa tapahtuneessa harvinaisessa kouluampumisessa kuoli kolme opiskelijaa ja 20 muuta haavoittui.",
+    "content": "Filippiinien viranomaiset ovat väliaikaisesti estäneet Gorebox-verkkopelisovelluksen käytön sen jälkeen, kun alustavassa tutkinnassa kävi ilmi, että yksi Taclobanin kaupungin kouluampumisesta epäillyistä teini-ikäisistä oli pelannut peliä säännöllisesti. San Jose National High Schoolissa maanantaina tapahtuneessa ampumisessa kuoli kolme opiskelijaa ja 20 muuta haavoittui.\n\n## Peli estettiin tutkinnan ajaksi\n\nViranomaisten mukaan päätös koskee Gorebox-sovellusta, jonka sisältöön kuuluu aseiden ja räjähteiden käyttöä sekä graafista väkivaltaa. Pelin Google Play -kuvauksessa pelaajille luvataan mahdollisuus käyttää laajaa ase- ja räjähdevalikoimaa, osallistua raakaan taisteluun ja tuhota kohteita vapaasti.\n\nFilippiinien kyberrikollisuuden tutkinta- ja koordinointikeskus kertoi, että esto liittyy käynnissä olevaan poliisitutkintaan. Sen mukaan toinen epäillyistä oli sovelluksen aktiivinen käyttäjä. Viranomaiset arvioivat nyt, oliko alustalla tai sen sisällöllä jokin rooli epäiltyjen toiminnassa.\n\nMaan kyberturvallisuusviranomaiset ovat todenneet, ettei mahdollisia verkossa tapahtuneita vaikutteita voida sivuuttaa näin vakavan tapauksen jälkeen. Lähteiden mukaan kyse on kuitenkin tutkinnan kohteesta, ei vahvistetusta syy-yhteydestä pelin ja ampumisen välillä.\n\n## Harvinainen ampuminen järkytti maata\n\nAmpuminen tapahtui San Jose National High Schoolissa Taclobanissa, joka sijaitsee Filippiinien keskiosassa Manilasta kaakkoon. Poliisin mukaan kaksi epäiltyä, iältään 14 ja 15 vuotta, avasi tulen luokkahuoneessa. Heillä kerrotaan olleen käsiaset.\n\nTapaus on järkyttänyt Filippiinejä, jossa kouluihin kohdistuvat ampumiset ovat harvinaisia. Tutkinnassa selvitetään sekä ampumisen kulkua että mahdollisia taustatekijöitä, jotka voivat auttaa viranomaisia ymmärtämään, mitä ennen hyökkäystä tapahtui.\n\nGoreboxin esto on tässä vaiheessa väliaikainen toimenpide. Sen tarkoituksena on antaa viranomaisille aikaa arvioida sovelluksen mahdollista merkitystä tapaukseen samalla, kun poliisi jatkaa epäiltyjen toiminnan ja ampumiseen johtaneiden tapahtumien selvittämistä.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Filippiinit",
+      "Tacloban",
+      "kouluampuminen",
+      "Gorebox",
+      "verkkopelit"
+    ],
+    "summary_bullets": [
+      "Filippiinit on väliaikaisesti estänyt Gorebox-pelisovelluksen käytön.",
+      "Taclobanin kouluampumisessa kuoli kolme opiskelijaa ja 20 muuta haavoittui.",
+      "Viranomaiset tutkivat, oliko pelillä mahdollinen yhteys epäiltyjen toimintaan."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu paketissa olleisiin useisiin lähdekatkelmiin. Syysuhdetta pelin ja ampumisen välillä ei esitetä varmana, koska lähteet kuvaavat asian tutkinnan kohteeksi."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260625T061120Z_93e447252e\",\n  \"title\": \"Filippiinit estää Gorebox-pelin kouluampumisen tutkinnan ajaksi\",\n  \"summary\": \"Filippiinien viranomaiset ovat väliaikaisesti estäneet Gorebox-verkkopelin sen jälkeen, kun Taclobanin kaupungissa tapahtuneessa harvinaisessa kouluampumisessa kuoli kolme opiskelijaa ja 20 muuta haavoittui.\",\n  \"content\": \"Filippiinien viranomaiset ovat väliaikaisesti estäneet Gorebox-verkkopelisovelluksen käytön sen jälkeen, kun alustavassa tutkinnassa kävi ilmi, että yksi Taclobanin kaupungin kouluampumisesta epäillyistä teini-ikäisistä oli pelannut peliä säännöllisesti. San Jose National High Schoolissa maanantaina tapahtuneessa ampumisessa kuoli kolme opiskelijaa ja 20 muuta haavoittui.\\n\\n## Peli estettiin tutkinnan ajaksi\\n\\nViranomaisten mukaan päätös koskee Gorebox-sovellusta, jonka sisältöön kuuluu aseiden ja räjähteiden käyttöä sekä graafista väkivaltaa. Pelin Google Play -kuvauksessa pelaajille luvataan mahdollisuus käyttää laajaa ase- ja räjähdevalikoimaa, osallistua raakaan taisteluun ja tuhota kohteita vapaasti.\\n\\nFilippiinien kyberrikollisuuden tutkinta- ja koordinointikeskus kertoi, että esto liittyy käynnissä olevaan poliisitutkintaan. Sen mukaan toinen epäillyistä oli sovelluksen aktiivinen käyttäjä. Viranomaiset arvioivat nyt, oliko alustalla tai sen sisällöllä jokin rooli epäiltyjen toiminnassa.\\n\\nMaan kyberturvallisuusviranomaiset ovat todenneet, ettei mahdollisia verkossa tapahtuneita vaikutteita voida sivuuttaa näin vakavan tapauksen jälkeen. Lähteiden mukaan kyse on kuitenkin tutkinnan kohteesta, ei vahvistetusta syy-yhteydestä pelin ja ampumisen välillä.\\n\\n## Harvinainen ampuminen järkytti maata\\n\\nAmpuminen tapahtui San Jose National High Schoolissa Taclobanissa, joka sijaitsee Filippiinien keskiosassa Manilasta kaakkoon. Poliisin mukaan kaksi epäiltyä, iältään 14 ja 15 vuotta, avasi tulen luokkahuoneessa. Heillä kerrotaan olleen käsiaset.\\n\\nTapaus on järkyttänyt Filippiinejä, jossa kouluihin kohdistuvat ampumiset ovat harvinaisia. Tutkinnassa selvitetään sekä ampumisen kulkua että mahdollisia taustatekijöitä, jotka voivat auttaa viranomaisia ymmärtämään, mitä ennen hyökkäystä tapahtui.\\n\\nGoreboxin esto on tässä vaiheessa väliaikainen toimenpide. Sen tarkoituksena on antaa viranomaisille aikaa arvioida sovelluksen mahdollista merkitystä tapaukseen samalla, kun poliisi jatkaa epäiltyjen toiminnan ja ampumiseen johtaneiden tapahtumien selvittämistä.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Filippiinit\",\n    \"Tacloban\",\n    \"kouluampuminen\",\n    \"Gorebox\",\n    \"verkkopelit\"\n  ],\n  \"summary_bullets\": [\n    \"Filippiinit on väliaikaisesti estänyt Gorebox-pelisovelluksen käytön.\",\n    \"Taclobanin kouluampumisessa kuoli kolme opiskelijaa ja 20 muuta haavoittui.\",\n    \"Viranomaiset tutkivat, oliko pelillä mahdollinen yhteys epäiltyjen toimintaan.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu paketissa olleisiin useisiin lähdekatkelmiin. Syysuhdetta pelin ja ampumisen välillä ei esitetä varmana, koska lähteet kuvaavat asian tutkinnan kohteeksi.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260625T061120Z_93e447252e",
+    "category": "Kotimaa",
+    "selected_source_words": 399,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 231,
+    "issues": [
+      "content too short: 231 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Filippiinit estää Gorebox-pelin kouluampumisen tutkinnan ajaksi",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-25T06:15:02.398383+00:00",
+    "repair_trigger": "pre_repair_word_count=228; selected_source_words=399; selected_source_blocks=4",
+    "pre_repair_word_count": 228,
+    "pre_repair_lead_word_count": 40,
+    "post_repair_word_count": 231,
+    "post_repair_lead_word_count": 40,
+    "selected_source_words_at_repair": 399,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 399,
+    "source_blocks": 4,
+    "repair_added_word_count": 3,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 231 words",
+    "source_block_ids_used_for_repair": [
+      "1:The Guardian:09036b02ee",
+      "2:BBC World:93713334e2",
+      "3:BBC World:62db3a85bc",
+      "4:AOL:ac8fa1ef2a"
+    ],
+    "final_issues": [
+      "content too short: 231 words"
+    ],
+    "recovered": false
+  }
+}
