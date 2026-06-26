@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Brent-Burns-jatkaa-uraansa-%E2%80%93-Colorado-Avalanche-solmi-jatkon-my%C3%B6s-toisen-puolustajan-kanssa/186245"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
