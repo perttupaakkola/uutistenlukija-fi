@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-26T06:01:29.229210+00:00",
+  "digest": "28b0cd7208",
+  "packet": {
+    "packet_id": "20260626T060129Z_28b0cd7208",
+    "created_at": "2026-06-26T06:01:29Z",
+    "headline_seed": "Lisää MM-kisojen pudotuspelipareja varmistui – Ruotsi vältti pahimman uhkakuvan",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9569375",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9569375"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lisää MM-kisojen pudotuspelipareja varmistui – Ruotsi vältti pahimman uhkakuvan"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 224,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lisää MM-kisojen pudotuspelipareja varmistui – Ruotsi vältti pahimman uhkakuvan",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Lisää MM-kisojen pudotuspelipareja varmistui – Ruotsi vältti pahimman uhkakuvan",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9569375",
+    "published": "2026-06-26T08:06:24+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "561a207fbc77543f7e97644e96622500",
+    "_url_hash": "1ced08b3a1fefaac3c1d76753e8be8ecbd87769b31887db4c7f31b2c5d6af210",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nMaanantaina huomio kohdistui Lionel Messiin, joka poistui kentältä tarttuen vasempaan takareiteensä Inter Miamin MLS-ottelussa.\n\nLamine Yamal, Espanjan nuori supertähti, jäi pois Barcelonan kauden viime viikoilta jalan lihasvamman vuoksi, mutta hänen uskotaan paranevan ajoissa MM-kisoihin.\n\nToiset eivät ole olleet yhtä onnekkaita.\n\nRanskan hyökkääjä Hugo Ekitike sai huhtikuussa akillesjännevamman, jonka paraneminen kestää yli kuusi kuukautta. Se sulki hänet pois turnauksesta ja myös ensi kauden alusta Liverpoolissa.\n\nBrasilian tähdet Rodrygo ja Éder Militão ovat varmasti poissa. Samoin on Bayern Münchenin ja Saksan hyökkääjä Serge Gnabry, joka satutti vatsalihaksensa harjoituksissa.\n\nPelaajat ja valmentajat ovat varoittaneet liian tiiviistä otteluohjelmasta. Laajennetut MM-kisat järjestetään vain vuosi sen jälkeen, kun uudistettu seurajoukkueiden MM-turnaus pelattiin. Myös Mestarien liigaa on laajennettu viime vuosina.\n\nArsenalin manageri Mikel Arteta kuvailee pelaajiin kohdistuvaa kuormitusta ”odottavaksi onnettomuudeksi”.\n\nMM-kisojen lähestyessä pelaajat yrittävät välttää loukkaantumisia.\n\nAlgeria: Maalivahti Luca Zidane, Ranskan Zinedine Zidanen poika, on epävarma kasvovammansa takia.\n\nArgentiina: Cristian Romerolla on polvivamma. Tottenham ei ole antanut aikataulua hänen toipumiseensa.\n\nKanada: Tähtipuolustaja Alphonso Davies loukkasi takareisilihaksensa yli kuukausi ennen turnauksen alkua Bayernin tappiossa PSG:lle Mestarien liigan välierässä.\n\nKroatia: Kokenut keskikenttäpelaaja Luka Modrić mursi poskipäänsä viime kuussa. Puolustaja Joško Gvardiol palasi Manchester Cityn harjoituksiin toukokuun alussa neljän kuukauden poissaolon jälkeen murtuneella jalalla.\n\nMarokko: PSG:n puolustaja Achraf Hakimi on ollut sivussa reisivamman vuoksi.\n\nUSA: Keskikenttäpelaaja Johnny Cardoso nyrjäytti oikean nilkkansa viisi viikkoa ennen MM-kisoja. Toppari Chris Richardsin nilkan nivelsiteet repeytyivät pelatessaan Crystal Palacelle.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-26T06:13:42.661819+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260626T060129Z_28b0cd7208\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja artikkelin kirjoittamiseen.\"}"
+}
