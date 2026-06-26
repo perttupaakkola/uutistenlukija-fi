@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/nain-tarkkaa-kuvaa-avaruudesta-ei-ole-ennen-koskaan-ennen-nahty-yli-60-miljoonaa-tahtea-kuvattiin-linnunradan-keskustassa/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
