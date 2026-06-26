@@ -43,7 +43,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/health/2026/06/doctors-suspected-man-had-brain-cancer-he-actually-had-worms/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
