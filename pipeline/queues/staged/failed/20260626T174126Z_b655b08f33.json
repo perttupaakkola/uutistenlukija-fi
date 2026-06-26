@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-26T17:41:26.235068+00:00",
+  "digest": "b655b08f33",
+  "packet": {
+    "packet_id": "20260626T174126Z_b655b08f33",
+    "created_at": "2026-06-26T17:41:26Z",
+    "headline_seed": "DR Congo takes Rwanda to international court over decades of conflict",
+    "description_seed": "Kinshasa accuses its neighbour of committing various violations since the 1994 Rwanda genocide.",
+    "link": "https://www.bbc.co.uk/news/articles/c8724zn3491o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "Devdiscourse"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/c8724zn3491o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "DR Congo takes Rwanda to international court over decades of conflict"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Kinshasa accuses its neighbour of committing various violations since the 1994 Rwanda genocide.",
+        "word_count": 13,
+        "keyword_overlap": 10,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The M23 rebels have captured huge tracts of DR Congo's east The Democratic Republic of Congo has filed a case against Rwanda at the International Court of Justice (ICJ), accusing its neighbour of breaching multiple international treaties. In a statement, DR Congo said Rwanda had dispatched forces and backed armed groups to carry out unlawful military operations on its territory following the 1994 Rwandan genocide. On Friday, Congolese Justice Minister Guillaume Andali said his country is seeking accountability for alleged breaches of conventions covering genocide prevention, racial discrimination, women's rights and torture. Rwanda has not yet responded to DR Congo's filing, but it has long-dismissed evidence that it backs rebel groups in the country. UN experts and Western governments are among various parties who say Rwanda is supporting the M23, a major armed group in DR Congo's east.",
+        "word_count": 138,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The country's application asks the ICJ, based in the Netherlands, to order Rwanda to cease its alleged crimes and award reparations to the Congolese authorities and its victims. This is not the first time DR Congo has filed a case against Rwanda at the ICJ. An initial case was dropped by the Congolese authorities in 2001. In 2006 the ICJ dismissed a second case, saying it could not proceed because Rwanda had not recognised its jurisdiction. The decades-long conflict in DR Congo is rooted in the 1994 Rwandan genocide. About 800,000 people – mostly from the Tutsi community - were slaughtered by ethnic Hutu extremists.",
+        "word_count": 105,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Devdiscourse",
+        "source_type": "research",
+        "text": "The Democratic Republic of Congo has officially filed a case against Rwanda at the International Court of Justice, accusing its neighbor of playing a role in the protracted conflict in eastern Congo. This legal move was confirmed by the Congolese government on Friday. The conflict in question has plagued the eastern part of Congo for years, with reports of violence and instability causing significant concerns both regionally and internationally. Congo's decision to take the matter to the International Court represents an attempt to seek justice and address the alleged involvement of Rwanda in the ongoing strife. This case at the International Court of Justice not only reflects the strained relations between the Democratic Republic of Congo and Rwanda but also highlights the complexities of achieving peace in a region beset by long-standing territorial and political disputes. ---",
+        "word_count": 137,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Kinshasa accuses its neighbour of committing various violations since the 1994 Rwanda genocide.\n\nThe M23 rebels have captured huge tracts of DR Congo's east The Democratic Republic of Congo has filed a case against Rwanda at the International Court of Justice (ICJ), accusing its neighbour of breaching multiple international treaties. In a statement, DR Congo said Rwanda had dispatched forces and backed armed groups to carry out unlawful military operations on its territory following the 1994 Rwandan genocide. On Friday, Congolese Justice Minister Guillaume Andali said his country is seeking accountability for alleged breaches of conventions covering genocide prevention, racial discrimination, women's rights and torture. Rwanda has not yet responded to DR Congo's filing, but it has long-dismissed evidence that it backs rebel groups in the country. UN experts and Western governments are among various parties who say Rwanda is supporting the M23, a major armed group in DR Congo's east.\n\nThe country's application asks the ICJ, based in the Netherlands, to order Rwanda to cease its alleged crimes and award reparations to the Congolese authorities and its victims. This is not the first time DR Congo has filed a case against Rwanda at the ICJ. An initial case was dropped by the Congolese authorities in 2001. In 2006 the ICJ dismissed a second case, saying it could not proceed because Rwanda had not recognised its jurisdiction. The decades-long conflict in DR Congo is rooted in the 1994 Rwandan genocide. About 800,000 people – mostly from the Tutsi community - were slaughtered by ethnic Hutu extremists.\n\nThe Democratic Republic of Congo has officially filed a case against Rwanda at the International Court of Justice, accusing its neighbor of playing a role in the protracted conflict in eastern Congo. This legal move was confirmed by the Congolese government on Friday. The conflict in question has plagued the eastern part of Congo for years, with reports of violence and instability causing significant concerns both regionally and internationally. Congo's decision to take the matter to the International Court represents an attempt to seek justice and address the alleged involvement of Rwanda in the ongoing strife. This case at the International Court of Justice not only reflects the strained relations between the Democratic Republic of Congo and Rwanda but also highlights the complexities of achieving peace in a region beset by long-standing territorial and political disputes. ---",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 916,
+      "selected_blocks": 4,
+      "selected_source_words": 393,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Devdiscourse",
+        "Human Rights Watch",
+        "Human Rights Watch",
+        "Human Rights Watch",
+        "Human Rights Watch",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Devdiscourse"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "DR Congo takes Rwanda to international court over decades of conflict",
+      "description": "Kinshasa accuses its neighbour of committing various violations since the 1994 Rwanda genocide.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "DR Congo takes Rwanda to international court over decades of conflict",
+    "description": "Kinshasa accuses its neighbour of committing various violations since the 1994 Rwanda genocide.",
+    "link": "https://www.bbc.co.uk/news/articles/c8724zn3491o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-26T17:05:22+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "365c6d989d634cbd434319fa630826e9",
+    "_url_hash": "bc8e28d53c24e3978a225afda14cd7c357312b76d02ad489ab37d42aecc25fec",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe M23 rebels have captured huge tracts of DR Congo's east\n\nThe Democratic Republic of Congo has filed a case against Rwanda at the International Court of Justice (ICJ), accusing its neighbour of breaching multiple international treaties.\n\nIn a statement, DR Congo said Rwanda had dispatched forces and backed armed groups to carry out unlawful military operations on its territory following the 1994 Rwandan genocide.\n\nOn Friday, Congolese Justice Minister Guillaume Andali said his country is seeking accountability for alleged breaches of conventions covering genocide prevention, racial discrimination, women's rights and torture.\n\nRwanda has not yet responded to DR Congo's filing, but it has long-dismissed evidence that it backs rebel groups in the country.\n\nUN experts and Western governments are among various parties who say Rwanda is supporting the M23, a major armed group in DR Congo's east.\n\nThe country's application asks the ICJ, based in the Netherlands, to order Rwanda to cease its alleged crimes and award reparations to the Congolese authorities and its victims.\n\nThis is not the first time DR Congo has filed a case against Rwanda at the ICJ.\n\nAn initial case was dropped by the Congolese authorities in 2001. In 2006 the ICJ dismissed a second case, saying it could not proceed because Rwanda had not recognised its jurisdiction.\n\nThe decades-long conflict in DR Congo is rooted in the 1994 Rwandan genocide.\n\nAbout 800,000 people – mostly from the Tutsi community - were slaughtered by ethnic Hutu extremists.\n\nFearing reprisals, an estimated one million Hutus then fled across the border to what is now DR Congo. This stoked ethnic tensions as a marginalised Tutsi group in the east – the Banyamulenge – felt increasingly under threat.\n\nRwanda's army twice invaded DR Congo, saying it was going after some of those responsible for the genocide, and worked with members of the Banyamulenge and other armed groups.\n\nOne of the Hutu groups, the Democratic Forces for the Liberation of Rwanda (FDLR), which includes some of those responsible for the Rwandan genocide, is still active in eastern DR Congo.\n\nRwanda describes the FDLR as a \"genocidal militia\" and says its continued existence in eastern DR Congo threatens its own territory.\n\nRwanda accuses the Congolese authorities of working with the FDLR - DR Congo denies this.\n\nThe conflict flared last January, when the M23 captured large parts of the mineral-rich east, including the regional capital Goma.\n\nThe fighting ha\n\n---\n\n[Lähde: Devdiscourse]\nThe Democratic Republic of Congo has officially filed a case against Rwanda at the International Court of Justice, accusing its neighbor of playing a role in the protracted conflict in eastern Congo. This legal move was confirmed by the Congolese government on Friday.\n\nThe conflict in question has plagued the eastern part of Congo for years, with reports of violence and instability causing significant concerns both regionally and internationally. Congo's decision to take the matter to the International Court represents an attempt to seek justice and address the alleged involvement of Rwanda in the ongoing strife.\n\nThis case at the International Court of Justice not only reflects the strained relations between the Democratic Republic of Congo and Rwanda but also highlights the complexities of achieving peace in a region beset by long-standing territorial and political disputes.\n\n---\n\n[Lähde: Human Rights Watch]\n(Nairobi) – Rwandan military forces and the M23 armed group carried out a campaign of forced recruitment and abusive detention of thousands of captured combatants and civilians in eastern Democratic Republic of Congo, Human Rights Watch said in a report released today.\n\nThe 78-page report, “‘Death Was Everywhere’: Arbitrary Detention, Killings, and Forced Recruitment by the M23 and the Rwanda Defence Force,” documents large-scale roundups and arrests in North and South Kivu provinces in eastern Congo, as well as grave abuses against detainees at the Rumangabo and Tshanzu training camps in North Kivu, between mid-2024 and December 2025. M23 fighters, backed by Rwandan military personnel, have committed murder, torture, corporal punishment, and used forced labor and child soldiers, researchers found. These abuses are war crimes and should be investigated as possible crimes against humanity.\n\n“The Rwandan-backed M23 is running so-called training camps in eastern Congo, where recruits have suffered abuse and torture, at times with deadly consequences,” said Clémentine de Montjoye, senior Great Lakes researcher at Human Rights Watch. “Regional bodies and partner governments should press Rwanda’s authorities to stop these grave abuses and support accountability for those responsible.”\n\nArbitrary Detention, Killings, and Forced Recruitment by the M23 and the Rwanda Defence Force\n\nHuman Rights Watch interviewed 102 former detainees who escaped the Rumangabo and Tshanzu camps, were deployed with the M23, or later surrendered to the Congolese army, witnesses to abuses, as well as United Nations, M23, military, intelligence, media, and diplomatic sources. Human Rights Watch interviewed former detainees in person in Uganda and several towns in Congo and by phone in M23-controlled areas. The report also draws on verified, geolocated videos and photographs, satellite imagery of Rumangabo and Tshanzu camps, and 3D reconstruction to estimate the number of people loaded onto trucks.\n\nSince 2024, the M23 has carried out forced recruitment drives among both civilians and captured combatants, Human Rights Watch found. After the armed group captured large swaths of territory and key eastern cities in 2025, these efforts increased in areas under their control. Thousands of Congolese soldiers, Wazalendo militia allied with national forces, police, and civilians—including children as young as 12—were recruited, sometimes voluntarily, although often forcibly.\n\nM23 fighters set up ",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-26T17:44:57.687007+00:00",
+  "failure": "content too short: 243 words",
+  "payload": {
+    "packet_id": "20260626T174126Z_b655b08f33",
+    "title": "Kongon demokraattinen tasavalta vei Ruandan kansainväliseen tuomioistuimeen",
+    "summary": "Kongon demokraattinen tasavalta syyttää Ruandaa useiden kansainvälisten sopimusten rikkomisesta ja aseellisten ryhmien tukemisesta maan itäosassa. Ruanda ei ole vielä vastannut uuteen kanteeseen.",
+    "content": "Kongon demokraattinen tasavalta on nostanut kanteen Ruandaa vastaan Kansainvälisessä tuomioistuimessa ja syyttää naapurimaataan osallisuudesta pitkään jatkuneeseen konfliktiin Kongon itäosassa. Kinshasan mukaan Ruanda on vuoden 1994 Ruandan kansanmurhan jälkeen lähettänyt joukkoja ja tukenut aseellisia ryhmiä, jotka ovat toteuttaneet laittomia sotilasoperaatioita Kongon alueella.\n\n## Kanne koskee useita sopimuksia\n\nKongon oikeusministeri Guillaume Andali sanoi perjantaina, että maa hakee vastuuseen saattamista väitetyistä rikkomuksista, jotka koskevat muun muassa kansanmurhan ehkäisemistä, rotusyrjintää, naisten oikeuksia ja kidutusta koskevia kansainvälisiä yleissopimuksia.\n\nKongon hakemuksessa pyydetään Alankomaissa toimivaa Kansainvälistä tuomioistuinta määräämään Ruanda lopettamaan väitetyt rikokset. Lisäksi Kongo hakee korvauksia Kongon viranomaisille ja uhreille.\n\nRuanda ei ole vielä vastannut Kongon uuteen kanteeseen. Maa on pitkään torjunut väitteet siitä, että se tukisi kapinallisryhmiä Kongossa. YK:n asiantuntijat ja länsimaiden hallitukset ovat kuitenkin lukeutuneet tahoihin, joiden mukaan Ruanda tukee M23-liikettä, joka on merkittävä aseellinen ryhmä Kongon itäosassa. M23 on vallannut laajoja alueita maan itäosassa.\n\n## Taustalla vuosikymmeniä jatkunut konflikti\n\nKyse ei ole ensimmäisestä kerrasta, kun Kongo vie Ruandaa koskevan asian Kansainväliseen tuomioistuimeen. Kongon viranomaiset luopuivat ensimmäisestä kanteesta vuonna 2001. Vuonna 2006 tuomioistuin hylkäsi toisen kanteen, koska se katsoi, ettei asia voinut edetä, kun Ruanda ei ollut tunnustanut sen toimivaltaa.\n\nKongon itäosan konflikti kytkeytyy vuoden 1994 Ruandan kansanmurhaan. Tuolloin noin 800 000 ihmistä, enimmäkseen tutseja, surmattiin hutuextremistien väkivallassa. Konflikti on jatkunut alueella vuosia ja aiheuttanut väkivaltaa, epävakautta ja vakavaa huolta sekä alueellisesti että kansainvälisesti.\n\nKongon uusi kanne korostaa maiden välisten suhteiden jännitteitä ja sitä, kuinka vaikeaa rauhan saavuttaminen on alueella, jossa turvallisuuskriisiin liittyy pitkäaikaisia alueellisia ja poliittisia kiistoja.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Kongon demokraattinen tasavalta",
+      "Ruanda",
+      "Kansainvälinen tuomioistuin",
+      "M23",
+      "Afrikka"
+    ],
+    "summary_bullets": [
+      "Kongon demokraattinen tasavalta on nostanut kanteen Ruandaa vastaan Kansainvälisessä tuomioistuimessa.",
+      "Kongo syyttää Ruandaa joukkojen lähettämisestä ja aseellisten ryhmien tukemisesta maan alueella.",
+      "Ruanda ei ole vielä vastannut kanteeseen, mutta on aiemmin kiistänyt tukevansa kapinallisryhmiä Kongossa."
+    ],
+    "content_type": "news_article",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu packetin BBC World- ja Devdiscourse-lähdeblokkeihin. Väitteet Ruandan toiminnasta on esitetty Kongon syytöksinä tai ulkopuolisten tahojen arvioina; Ruandan vastausta uuteen kanteeseen ei lähdeaineiston mukaan vielä ollut."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260626T174126Z_b655b08f33\",\n  \"title\": \"Kongon demokraattinen tasavalta vei Ruandan kansainväliseen tuomioistuimeen\",\n  \"summary\": \"Kongon demokraattinen tasavalta syyttää Ruandaa useiden kansainvälisten sopimusten rikkomisesta ja aseellisten ryhmien tukemisesta maan itäosassa. Ruanda ei ole vielä vastannut uuteen kanteeseen.\",\n  \"content\": \"Kongon demokraattinen tasavalta on nostanut kanteen Ruandaa vastaan Kansainvälisessä tuomioistuimessa ja syyttää naapurimaataan osallisuudesta pitkään jatkuneeseen konfliktiin Kongon itäosassa. Kinshasan mukaan Ruanda on vuoden 1994 Ruandan kansanmurhan jälkeen lähettänyt joukkoja ja tukenut aseellisia ryhmiä, jotka ovat toteuttaneet laittomia sotilasoperaatioita Kongon alueella.\\n\\n## Kanne koskee useita sopimuksia\\n\\nKongon oikeusministeri Guillaume Andali sanoi perjantaina, että maa hakee vastuuseen saattamista väitetyistä rikkomuksista, jotka koskevat muun muassa kansanmurhan ehkäisemistä, rotusyrjintää, naisten oikeuksia ja kidutusta koskevia kansainvälisiä yleissopimuksia.\\n\\nKongon hakemuksessa pyydetään Alankomaissa toimivaa Kansainvälistä tuomioistuinta määräämään Ruanda lopettamaan väitetyt rikokset. Lisäksi Kongo hakee korvauksia Kongon viranomaisille ja uhreille.\\n\\nRuanda ei ole vielä vastannut Kongon uuteen kanteeseen. Maa on pitkään torjunut väitteet siitä, että se tukisi kapinallisryhmiä Kongossa. YK:n asiantuntijat ja länsimaiden hallitukset ovat kuitenkin lukeutuneet tahoihin, joiden mukaan Ruanda tukee M23-liikettä, joka on merkittävä aseellinen ryhmä Kongon itäosassa. M23 on vallannut laajoja alueita maan itäosassa.\\n\\n## Taustalla vuosikymmeniä jatkunut konflikti\\n\\nKyse ei ole ensimmäisestä kerrasta, kun Kongo vie Ruandaa koskevan asian Kansainväliseen tuomioistuimeen. Kongon viranomaiset luopuivat ensimmäisestä kanteesta vuonna 2001. Vuonna 2006 tuomioistuin hylkäsi toisen kanteen, koska se katsoi, ettei asia voinut edetä, kun Ruanda ei ollut tunnustanut sen toimivaltaa.\\n\\nKongon itäosan konflikti kytkeytyy vuoden 1994 Ruandan kansanmurhaan. Tuolloin noin 800 000 ihmistä, enimmäkseen tutseja, surmattiin hutuextremistien väkivallassa. Konflikti on jatkunut alueella vuosia ja aiheuttanut väkivaltaa, epävakautta ja vakavaa huolta sekä alueellisesti että kansainvälisesti.\\n\\nKongon uusi kanne korostaa maiden välisten suhteiden jännitteitä ja sitä, kuinka vaikeaa rauhan saavuttaminen on alueella, jossa turvallisuuskriisiin liittyy pitkäaikaisia alueellisia ja poliittisia kiistoja.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Kongon demokraattinen tasavalta\",\n    \"Ruanda\",\n    \"Kansainvälinen tuomioistuin\",\n    \"M23\",\n    \"Afrikka\"\n  ],\n  \"summary_bullets\": [\n    \"Kongon demokraattinen tasavalta on nostanut kanteen Ruandaa vastaan Kansainvälisessä tuomioistuimessa.\",\n    \"Kongo syyttää Ruandaa joukkojen lähettämisestä ja aseellisten ryhmien tukemisesta maan alueella.\",\n    \"Ruanda ei ole vielä vastannut kanteeseen, mutta on aiemmin kiistänyt tukevansa kapinallisryhmiä Kongossa.\"\n  ],\n  \"content_type\": \"news_article\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu packetin BBC World- ja Devdiscourse-lähdeblokkeihin. Väitteet Ruandan toiminnasta on esitetty Kongon syytöksinä tai ulkopuolisten tahojen arvioina; Ruandan vastausta uuteen kanteeseen ei lähdeaineiston mukaan vielä ollut.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260626T174126Z_b655b08f33",
+    "category": "Kotimaa",
+    "selected_source_words": 393,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 243,
+    "issues": [
+      "content too short: 243 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Kongon demokraattinen tasavalta vei Ruandan kansainväliseen tuomioistuimeen",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-26T17:44:57.686346+00:00",
+    "repair_trigger": "pre_repair_word_count=242; selected_source_words=393; selected_source_blocks=4",
+    "pre_repair_word_count": 242,
+    "pre_repair_lead_word_count": 41,
+    "post_repair_word_count": 243,
+    "post_repair_lead_word_count": 41,
+    "selected_source_words_at_repair": 393,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 393,
+    "source_blocks": 4,
+    "repair_added_word_count": 1,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 243 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:e9d4f155a7",
+      "2:BBC World:cde267f2b7",
+      "3:BBC World:f69cd8b02c",
+      "4:Devdiscourse:64ee083422"
+    ],
+    "final_issues": [
+      "content too short: 243 words"
+    ],
+    "recovered": false
+  }
+}
