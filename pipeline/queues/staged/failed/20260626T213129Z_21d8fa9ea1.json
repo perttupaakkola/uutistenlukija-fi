@@ -1,0 +1,190 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-26T21:31:29.861820+00:00",
+  "digest": "21d8fa9ea1",
+  "packet": {
+    "packet_id": "20260626T213129Z_21d8fa9ea1",
+    "created_at": "2026-06-26T21:31:29Z",
+    "headline_seed": "US conducts strikes on Iran after attack on cargo ship",
+    "description_seed": "US Central Command says it has struck missile and drone storage facilities and coastal radar positions.",
+    "link": "https://www.bbc.co.uk/news/articles/ckg590wqxwpo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "ABC7 News",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/ckg590wqxwpo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "US conducts strikes on Iran after attack on cargo ship"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Stock photo of cargo ships near the Strait of Hormuz The US military has conducted strikes on Iranian targets after President Donald Trump accused Iran of a \"foolish violation\" of its truce following an attack on a cargo ship in the Strait of Hormuz. No casualties were reported when the ship was struck by a one-way attack drone on Thursday, an incident which prompted a planned evacuation of more than 11,000 sailors stuck in the region. In response, US Central Command said on Friday it had struck missile and drone storage facilities and coastal radar positions. There has been no comment yet from Iran. Just moments before the strikes were announced, President Trump said \"you'll see\" when asked if the US would respond to the Iranian attack.",
+        "word_count": 127,
+        "keyword_overlap": 16,
+        "strong_overlap": 10
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "US Central Command says it has struck missile and drone storage facilities and coastal radar positions.",
+        "word_count": 16,
+        "keyword_overlap": 11,
+        "strong_overlap": 8
+      },
+      {
+        "source": "ABC7 News",
+        "source_type": "research",
+        "text": "The U.S. struck Iran on Friday to respond to a drone attack a day earlier on a cargo ship in the Strait of Hormuz. It's the most significant test yet to an interim understanding reached a week ago by the two countries to begin working to end their months-long war and reopen the pivotal waterway. U.S. President Donald Trump said the drone attack violated the ceasefire. The strikes came shortly after Trump told reporters, \"You'll find out,\" whether the U.S. would respond. U.S. Central Command said the military struck missile and drone locations and coastal radar sites in Iran.",
+        "word_count": 99,
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "US Central Command - or Centcom - described the strikes as \"a powerful response\" to the drone attack. \"The unwarranted aggression against commercial shipping by Iranian forces clearly violated the ceasefire,\" it said in a statement. \"Furthermore, Iran's dangerous behavior undermined freedom of navigation as commerce increasingly flows through the vital international trade corridor.\" Centcom said the US military would \"continue to provide safe passage coordination and support to commercial vessels transiting the strait\". For the moment, it is unclear if the US attacks were isolated or form part of a larger, ongoing response. After US and Israeli attacks against Iran began at the end of February, Tehran effectively closed the strait - a critical waterway for oil and gas shipments - causing a spike in global oil prices and choking off shipments of other crucial commodities such as fertiliser.",
+        "word_count": 140,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Stock photo of cargo ships near the Strait of Hormuz The US military has conducted strikes on Iranian targets after President Donald Trump accused Iran of a \"foolish violation\" of its truce following an attack on a cargo ship in the Strait of Hormuz. No casualties were reported when the ship was struck by a one-way attack drone on Thursday, an incident which prompted a planned evacuation of more than 11,000 sailors stuck in the region. In response, US Central Command said on Friday it had struck missile and drone storage facilities and coastal radar positions. There has been no comment yet from Iran. Just moments before the strikes were announced, President Trump said \"you'll see\" when asked if the US would respond to the Iranian attack.\n\nUS Central Command says it has struck missile and drone storage facilities and coastal radar positions.\n\nThe U.S. struck Iran on Friday to respond to a drone attack a day earlier on a cargo ship in the Strait of Hormuz. It's the most significant test yet to an interim understanding reached a week ago by the two countries to begin working to end their months-long war and reopen the pivotal waterway. U.S. President Donald Trump said the drone attack violated the ceasefire. The strikes came shortly after Trump told reporters, \"You'll find out,\" whether the U.S. would respond. U.S. Central Command said the military struck missile and drone locations and coastal radar sites in Iran.\n\nUS Central Command - or Centcom - described the strikes as \"a powerful response\" to the drone attack. \"The unwarranted aggression against commercial shipping by Iranian forces clearly violated the ceasefire,\" it said in a statement. \"Furthermore, Iran's dangerous behavior undermined freedom of navigation as commerce increasingly flows through the vital international trade corridor.\" Centcom said the US military would \"continue to provide safe passage coordination and support to commercial vessels transiting the strait\". For the moment, it is unclear if the US attacks were isolated or form part of a larger, ongoing response. After US and Israeli attacks against Iran began at the end of February, Tehran effectively closed the strait - a critical waterway for oil and gas shipments - causing a spike in global oil prices and choking off shipments of other crucial commodities such as fertiliser.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 846,
+      "selected_blocks": 4,
+      "selected_source_words": 382,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "ABC7 News",
+        "ABC7 News",
+        "ABC7 News",
+        "ABC7 News",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "ABC7 News",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "US conducts strikes on Iran after attack on cargo ship",
+      "description": "US Central Command says it has struck missile and drone storage facilities and coastal radar positions.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "US conducts strikes on Iran after attack on cargo ship",
+    "description": "US Central Command says it has struck missile and drone storage facilities and coastal radar positions.",
+    "link": "https://www.bbc.co.uk/news/articles/ckg590wqxwpo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-26T21:05:16+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "14044066281451d0960bc3b31fc87c9f",
+    "_url_hash": "cbffcb6098ab14a902ab134ec7ebb1b1b7078fe4ca15999b3e8a150102a7e711",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nStock photo of cargo ships near the Strait of Hormuz\n\nThe US military has conducted strikes on Iranian targets after President Donald Trump accused Iran of a \"foolish violation\" of its truce following an attack on a cargo ship in the Strait of Hormuz.\n\nNo casualties were reported when the ship was struck by a one-way attack drone on Thursday, an incident which prompted a planned evacuation of more than 11,000 sailors stuck in the region.\n\nIn response, US Central Command said on Friday it had struck missile and drone storage facilities and coastal radar positions. There has been no comment yet from Iran.\n\nJust moments before the strikes were announced, President Trump said \"you'll see\" when asked if the US would respond to the Iranian attack.\n\nUS Central Command - or Centcom - described the strikes as \"a powerful response\" to the drone attack.\n\n\"The unwarranted aggression against commercial shipping by Iranian forces clearly violated the ceasefire,\" it said in a statement.\n\n\"Furthermore, Iran's dangerous behavior undermined freedom of navigation as commerce increasingly flows through the vital international trade corridor.\"\n\nCentcom said the US military would \"continue to provide safe passage coordination and support to commercial vessels transiting the strait\".\n\nFor the moment, it is unclear if the US attacks were isolated or form part of a larger, ongoing response.\n\nAfter US and Israeli attacks against Iran began at the end of February, Tehran effectively closed the strait - a critical waterway for oil and gas shipments - causing a spike in global oil prices and choking off shipments of other crucial commodities such as fertiliser.\n\nThe US and Iran agreed on 17 June to end hostilities under a 14-point memorandum of understanding, which had also called for Iran to use its \"best efforts for the safe passage of commercial vessels with no charge for 60 days\".\n\nSpeaking to reporters at the White House on Friday afternoon, Trump refused to be drawn into questions on how the US might respond to the drone attack, or whether he viewed the ceasefire as still intact.\n\n\"You'll find out,\" he said. \"I don't like the fact that they took a shot yesterday. They shouldn't be doing that.\"\n\nAsked why he believed Iran would conduct such an operation, Trump said only that \"they're a little bit different\".\n\nIn recent days, Trump and other US officials insisted negotiations with Iran were progressing well, saying Iran had given up any suggestion of tolling vessels transiting thr\n\n---\n\n[Lähde: ABC7 News]\nThe U.S. struck Iran on Friday to respond to a drone attack a day earlier on a cargo ship in the Strait of Hormuz. It's the most significant test yet to an interim understanding reached a week ago by the two countries to begin working to end their months-long war and reopen the pivotal waterway.\n\nU.S. President Donald Trump said the drone attack violated the ceasefire. The strikes came shortly after Trump told reporters, \"You'll find out,\" whether the U.S. would respond.\n\nU.S. Central Command said the military struck missile and drone locations and coastal radar sites in Iran.\n\n\"I don't like the fact that they took a shot yesterday, actually four of them,\" Trump said at the White House shortly before the U.S. struck back. When asked why there would be strikes when Trump has insisted talks with Tehran are going well, Trump said of Iran: \"They're a little bit different.\"\n\nHe then abruptly cut off questions and reporters were ushered out of his office.\n\nEbrahim Azizi, who heads the Iranian parliament's national security commission, responded to Trump on social media earlier Friday, saying, \"the Strait of Hormuz is governed by Iran, so: Respect the rules\" and to \"not mistake control for escalation.\"\n\n\"This is not a violation of the ceasefire; it is ceasefire management,\" Azizi wrote.\n\nThe strikes on Iran are still ongoing even as U.S. Central Command released a statement confirming the action, a U.S. official with knowledge of the situation told The Associated Press.\n\nThe official spoke on condition of anonymity in order to discuss an ongoing military operation.\n\nThe British military said on Thursday that a container ship was hit a projectile off the coast of Oman, coming hours after Iran threatened vessels to stop using the route. The United Kingdom Maritime Trade Operations center said no injuries were reported.\n\nThe development came during a fragile time for the U.S. and Iran as they work to negotiate a permanent end to the war. Iran has increasingly challenged the region and the U.S. over its control of the Strait of Hormuz, even with the current interim deal it reached with the U.S. last week.\n\nThe attack on the cargo ship happened while a United Nations maritime agency was beginning an operation to move stranded ships out of the strait this week, using an alternative route, hugging the shores of Oman rather than sailing through the central part of the strait.\n\nThe International Maritime Organization halted the evacuations after the attack and said on Fri",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-26T21:34:51.363199+00:00",
+  "failure": "content too short: 215 words",
+  "payload": {
+    "packet_id": "20260626T213129Z_21d8fa9ea1",
+    "title": "Yhdysvallat iski Iraniin rahtialukseen kohdistuneen lennokki-iskun jälkeen",
+    "summary": "Yhdysvaltain asevoimat kertoo iskeneensä Iranissa ohjus- ja lennokkivarastoihin sekä rannikon tutka-asemiin sen jälkeen, kun rahtialukseen oli osunut lennokki Hormuzinsalmessa.",
+    "content": "Yhdysvaltain asevoimat on tehnyt iskuja iranilaisiin kohteisiin sen jälkeen, kun rahtialukseen kohdistui lennokki-isku Hormuzinsalmessa torstaina. Yhdysvaltain keskinen johtoporras Centcom kertoi iskeneensä perjantaina ohjus- ja lennokkivarastoihin sekä rannikon tutka-asemiin Iranissa. Alusiskussa ei raportoitu kuolonuhreja, mutta tapaus johti suunniteltuun evakuointiin yli 11 000 alueelle jääneelle merimiehelle.\n\n## Iskut seurasivat väitettyä aseleporikkomusta\n\nYhdysvaltain presidentti Donald Trump syytti Irania aselevon rikkomisesta rahtialukseen kohdistuneen iskun jälkeen. Trumpilta kysyttiin juuri ennen Yhdysvaltain iskujen julkistamista, aikooko maa vastata Iranin toimintaan. Hän vastasi tuolloin lyhyesti, että asia nähtäisiin pian.\n\nCentcom kuvasi Yhdysvaltain iskuja voimakkaaksi vastaukseksi lennokki-iskuun. Sen mukaan kaupalliseen merenkulkuun kohdistunut hyökkäys rikkoi selvästi aselepoa ja heikensi merenkulun vapautta tärkeällä kansainvälisellä kauppareitillä. Iran ei ollut kommentoinut Yhdysvaltain iskuja välittömästi.\n\n## Hormuzinsalmi on keskeinen kauppareitti\n\nHormuzinsalmi on öljy- ja kaasukuljetusten kannalta kriittinen vesiväylä. Aiemmin Yhdysvaltain ja Israelin iskujen alettua Irania vastaan helmikuun lopussa Teheran sulki salmen käytännössä. Se nosti maailman öljyn hintaa ja vaikeutti myös muiden tärkeiden tuotteiden, kuten lannoitteiden, kuljetuksia.\n\n## Väliaikainen yhteisymmärrys koetuksella\n\nYhdysvaltain ja Iranin välinen tilanne on koetellut maiden viikkoa aiemmin saavuttamaa väliaikaista yhteisymmärrystä. Sen tarkoituksena on ollut edistää kuukausia jatkuneen sodan päättämistä ja keskeisen vesiväylän avaamista uudelleen.\n\nYhdysvaltain mukaan se jatkaa kaupallisten alusten turvallisen kulun koordinointia ja tukemista Hormuzinsalmen kautta. Tällä hetkellä ei ole selvää, jäivätkö Yhdysvaltain iskut yksittäiseksi vastaukseksi vai ovatko ne osa laajempaa ja jatkuvaa sotilaallista toimintaa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "Iran",
+      "Hormuzinsalmi",
+      "Donald Trump",
+      "merenkulku"
+    ],
+    "summary_bullets": [
+      "Yhdysvallat kertoo iskeneensä Iranissa ohjus- ja lennokkikohteisiin sekä rannikon tutka-asemiin.",
+      "Iskut seurasivat rahtialukseen kohdistunutta lennokki-iskua Hormuzinsalmessa.",
+      "Iran ei ollut kommentoinut iskuja välittömästi, eikä ole selvää, jatkuuko Yhdysvaltain vastaus laajempana operaationa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.9,
+    "journalist_note": "Artikkeli perustuu paketissa annettuihin tietoihin. Epävarmuus koskee erityisesti sitä, jäävätkö Yhdysvaltain iskut yksittäiseksi vastaukseksi vai jatkuvatko ne laajempana operaationa."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260626T213129Z_21d8fa9ea1\",\n  \"title\": \"Yhdysvallat iski Iraniin rahtialukseen kohdistuneen lennokki-iskun jälkeen\",\n  \"summary\": \"Yhdysvaltain asevoimat kertoo iskeneensä Iranissa ohjus- ja lennokkivarastoihin sekä rannikon tutka-asemiin sen jälkeen, kun rahtialukseen oli osunut lennokki Hormuzinsalmessa.\",\n  \"content\": \"Yhdysvaltain asevoimat on tehnyt iskuja iranilaisiin kohteisiin sen jälkeen, kun rahtialukseen kohdistui lennokki-isku Hormuzinsalmessa torstaina. Yhdysvaltain keskinen johtoporras Centcom kertoi iskeneensä perjantaina ohjus- ja lennokkivarastoihin sekä rannikon tutka-asemiin Iranissa. Alusiskussa ei raportoitu kuolonuhreja, mutta tapaus johti suunniteltuun evakuointiin yli 11 000 alueelle jääneelle merimiehelle.\\n\\n## Iskut seurasivat väitettyä aseleporikkomusta\\n\\nYhdysvaltain presidentti Donald Trump syytti Irania aselevon rikkomisesta rahtialukseen kohdistuneen iskun jälkeen. Trumpilta kysyttiin juuri ennen Yhdysvaltain iskujen julkistamista, aikooko maa vastata Iranin toimintaan. Hän vastasi tuolloin lyhyesti, että asia nähtäisiin pian.\\n\\nCentcom kuvasi Yhdysvaltain iskuja voimakkaaksi vastaukseksi lennokki-iskuun. Sen mukaan kaupalliseen merenkulkuun kohdistunut hyökkäys rikkoi selvästi aselepoa ja heikensi merenkulun vapautta tärkeällä kansainvälisellä kauppareitillä. Iran ei ollut kommentoinut Yhdysvaltain iskuja välittömästi.\\n\\n## Hormuzinsalmi on keskeinen kauppareitti\\n\\nHormuzinsalmi on öljy- ja kaasukuljetusten kannalta kriittinen vesiväylä. Aiemmin Yhdysvaltain ja Israelin iskujen alettua Irania vastaan helmikuun lopussa Teheran sulki salmen käytännössä. Se nosti maailman öljyn hintaa ja vaikeutti myös muiden tärkeiden tuotteiden, kuten lannoitteiden, kuljetuksia.\\n\\n## Väliaikainen yhteisymmärrys koetuksella\\n\\nYhdysvaltain ja Iranin välinen tilanne on koetellut maiden viikkoa aiemmin saavuttamaa väliaikaista yhteisymmärrystä. Sen tarkoituksena on ollut edistää kuukausia jatkuneen sodan päättämistä ja keskeisen vesiväylän avaamista uudelleen.\\n\\nYhdysvaltain mukaan se jatkaa kaupallisten alusten turvallisen kulun koordinointia ja tukemista Hormuzinsalmen kautta. Tällä hetkellä ei ole selvää, jäivätkö Yhdysvaltain iskut yksittäiseksi vastaukseksi vai ovatko ne osa laajempaa ja jatkuvaa sotilaallista toimintaa.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Yhdysvallat\",\n    \"Iran\",\n    \"Hormuzinsalmi\",\n    \"Donald Trump\",\n    \"merenkulku\"\n  ],\n  \"summary_bullets\": [\n    \"Yhdysvallat kertoo iskeneensä Iranissa ohjus- ja lennokkikohteisiin sekä rannikon tutka-asemiin.\",\n    \"Iskut seurasivat rahtialukseen kohdistunutta lennokki-iskua Hormuzinsalmessa.\",\n    \"Iran ei ollut kommentoinut iskuja välittömästi, eikä ole selvää, jatkuuko Yhdysvaltain vastaus laajempana operaationa.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.9,\n  \"journalist_note\": \"Artikkeli perustuu paketissa annettuihin tietoihin. Epävarmuus koskee erityisesti sitä, jäävätkö Yhdysvaltain iskut yksittäiseksi vastaukseksi vai jatkuvatko ne laajempana operaationa.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260626T213129Z_21d8fa9ea1",
+    "category": "Ulkomaat",
+    "selected_source_words": 382,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 215,
+    "issues": [
+      "content too short: 215 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Yhdysvallat iski Iraniin rahtialukseen kohdistuneen lennokki-iskun jälkeen",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-26T21:34:51.362935+00:00",
+    "repair_trigger": "pre_repair_word_count=219; selected_source_words=382; selected_source_blocks=4",
+    "pre_repair_word_count": 219,
+    "pre_repair_lead_word_count": 46,
+    "post_repair_word_count": 215,
+    "post_repair_lead_word_count": 44,
+    "selected_source_words_at_repair": 382,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 382,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 215 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:02bab15d2a",
+      "2:BBC World:b977591c93",
+      "3:ABC7 News:2526706409",
+      "4:BBC World:d7092e0250"
+    ],
+    "final_issues": [
+      "content too short: 215 words"
+    ],
+    "recovered": false
+  }
+}

@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Artikkeli/L%C3%A4tk%C3%A4biisit-Se-liukuu-sis%C3%A4%C3%A4n/135899"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
