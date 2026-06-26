@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Sanni-Aholalle-jatkosopimus-Ottawa-Chargeen/186241"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 

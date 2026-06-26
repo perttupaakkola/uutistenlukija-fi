@@ -1,8 +1,8 @@
 {
   "status": "fresh",
-  "checked_at": "2026-06-26T00:15:04+00:00",
+  "checked_at": "2026-06-26T05:25:21+00:00",
   "max_age_hours": 30.0,
-  "source_command": "SECRETS_DIR=/home/pertt/.openclaw/workspace/.secrets bash pipeline/check-analytics.sh",
+  "source_command": "post-reauth validation commands",
   "safe_source_commands": [
     "cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && SECRETS_DIR=/home/pertt/.openclaw/workspace/.secrets bash pipeline/check-analytics.sh",
     "cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && scripts/run_with_project_env.sh python3 scripts/daily_traffic_card.py --dry-run",
@@ -22,7 +22,7 @@
       "read_status": "ok",
       "generated_at": "2026-06-26",
       "file_mtime": "2026-06-26T00:15:04+00:00",
-      "age_hours": 0.0,
+      "age_hours": 5.17,
       "evidence_at": "2026-06-26T00:15:04+00:00",
       "fresh": true,
       "property_id": "529369568",
@@ -40,7 +40,7 @@
       "read_status": "ok",
       "generated_at": "2026-06-25T06:30:02.337772+00:00",
       "file_mtime": "2026-06-25T06:30:02+00:00",
-      "age_hours": 17.75,
+      "age_hours": 22.92,
       "evidence_at": "2026-06-25T06:30:02+00:00",
       "fresh": true,
       "site": "sc-domain:uutistenlukija.fi",
