@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/myyntivalmentaja-vauhdittaa-menestysta-ja-lisaa-hyvinvointia-ilman-somea-kun-heraan-aamulla-en-skrollaa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
