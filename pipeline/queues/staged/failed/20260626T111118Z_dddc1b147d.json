@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-26T11:11:18.839782+00:00",
+  "digest": "dddc1b147d",
+  "packet": {
+    "packet_id": "20260626T111118Z_dddc1b147d",
+    "created_at": "2026-06-26T11:11:18Z",
+    "headline_seed": "Iänikuisten karhujen veistäminen nyppii moottorisahataiteilijoita",
+    "description_seed": "Saha on ollut lahtelaiselle Kari Onniselle tuki ja turva elämän karikoissa. Myös naiset ovat löytämässä miehisenä pidetyn lajin pariin.",
+    "link": "https://www.ess.fi/paikalliset/9570772",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9570772"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Iänikuisten karhujen veistäminen nyppii moottorisahataiteilijoita"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 106,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Etelä-Saimaa",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Iänikuisten karhujen veistäminen nyppii moottorisahataiteilijoita",
+      "description": "Saha on ollut lahtelaiselle Kari Onniselle tuki ja turva elämän karikoissa. Myös naiset ovat löytämässä miehisenä pidetyn lajin pariin.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Iänikuisten karhujen veistäminen nyppii moottorisahataiteilijoita",
+    "description": "Saha on ollut lahtelaiselle Kari Onniselle tuki ja turva elämän karikoissa. Myös naiset ovat löytämässä miehisenä pidetyn lajin pariin.",
+    "link": "https://www.ess.fi/paikalliset/9570772",
+    "published": "2026-06-26T14:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "bf35d4e3b8de0fabd7f4a4f47cfced1b",
+    "_url_hash": "c8a88a962ac8b9337268060e8e6eb03b44d818718a43f285ee876abfd9a60a20",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Etelä-Saimaa]\nEuroopan unionin energiaministerit tapaavat tänään Luxemburgissa. Suomea kokouksessa edustaa ympäristö- ja ilmastoministeri Sari Multala (kok.).\n\nKokouksen pääaiheena on yhteisen näkemyksen saavuttaminen Euroopan laajuisten energiaverkkojen kehittämisestä. Tavoitteena on muun muassa edistää sähköistymistä ja parantaa rajat ylittävän infrastruktuurin turvallisuutta.\n\nTyö- ja elinkeinoministeriön tiedotteen mukaan Suomi pitää tärkeänä, että energiainfrastruktuureja käsittelevään asetukseen sisällytetään tahallisen vahingonteon aiheuttamien vaurioiden korjaaminen. Multala korostaa, että on tärkeää, että merenalaisen energiainfran rikkojen korjaamiseen on mahdollista saada myös rahallista tukea EU:lta.\n\nListalla ovat myös EU:n energiapolitiikka vuoden 2030 jälkeen ja Hormuzinsalmen tilanne ja sen vaikutukset energiaan.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-26T11:13:20.834280+00:00",
+  "failure": "Paketti ei sisällä varsinaista lähdetekstiä tai varmennettuja yksityiskohtia, joiden pohjalta voisi kirjoittaa vähintään 250 sanan julkaistavan artikkelin ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260626T111118Z_dddc1b147d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä varsinaista lähdetekstiä tai varmennettuja yksityiskohtia, joiden pohjalta voisi kirjoittaa vähintään 250 sanan julkaistavan artikkelin ilman keksittyjä tietoja.\"}"
+}

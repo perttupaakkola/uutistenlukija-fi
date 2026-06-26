@@ -43,7 +43,6 @@ keywords:
 source_name: "Lääkärilehti"
 source_url: "http://www.laakarilehti.fi/terveydenhuolto/suomessa-on-vahiten-laakareita-vakilukuun-nahden-pohjoismaissa/"
 source_domain: "laakarilehti.fi"
-briefing: true
 draft: false
 ---
 
