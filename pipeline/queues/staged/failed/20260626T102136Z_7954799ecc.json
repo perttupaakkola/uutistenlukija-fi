@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-26T10:21:36.998501+00:00",
+  "digest": "7954799ecc",
+  "packet": {
+    "packet_id": "20260626T102136Z_7954799ecc",
+    "created_at": "2026-06-26T10:21:36Z",
+    "headline_seed": "”Tuntuu täysin järjettömältä” – Lahdessa tyrmätään Migrin päätös sulkea toimipiste",
+    "description_seed": "Maahanmuuttovirasto on päättänyt sulkea Lahden toimipisteensä. Useat paikallisvaikuttajat näkee päätöksen olevan hyvin haitallinen alueen tulevaisuuden suunnitelmille.",
+    "link": "https://www.ess.fi/paikalliset/9570991",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9570991"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "”Tuntuu täysin järjettömältä” – Lahdessa tyrmätään Migrin päätös sulkea toimipiste"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 136,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Aamuposti",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "”Tuntuu täysin järjettömältä” – Lahdessa tyrmätään Migrin päätös sulkea toimipiste",
+      "description": "Maahanmuuttovirasto on päättänyt sulkea Lahden toimipisteensä. Useat paikallisvaikuttajat näkee päätöksen olevan hyvin haitallinen alueen tulevaisuuden suunnitelmille.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "”Tuntuu täysin järjettömältä” – Lahdessa tyrmätään Migrin päätös sulkea toimipiste",
+    "description": "Maahanmuuttovirasto on päättänyt sulkea Lahden toimipisteensä. Useat paikallisvaikuttajat näkee päätöksen olevan hyvin haitallinen alueen tulevaisuuden suunnitelmille.",
+    "link": "https://www.ess.fi/paikalliset/9570991",
+    "published": "2026-06-26T13:14:16+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "8dd5ba9f1c7a1de6b255bb2858095308",
+    "_url_hash": "6deaa34a03ef2aab67ad5510bddd0beb274a2dc141d18149503063f9a04515fc",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Aamuposti]\nBritannian kuningas Charles on maksanut yli 30 miljoonaa puntaa henkilökohtaisia veroja sen jälkeen, kun hänestä tuli kuningas vuoden 2022 syyskuussa. Euroissa summa asettuu 35 miljoonan paikkeille.\n\nKyseessä on ensimmäinen kerta, kun Britannian kuningashuone julkaisee hallitsevan monarkin henkilökohtaisia verotietoja.\n\nCharlesin perijä prinssi William julkisti niin ikään ensimmäistä kertaa henkilökohtaisia verotietojaan. William peri Walesin prinssin tittelin, kun hänen isästään tuli kuningas. Tuon jälkeen hän on maksanut veroja yli 20 miljoonan punnan eli yli 23 miljoonan euron edestä.\n\nHovin mukaan torstainen julkistus on osa kuningashuoneen sitoumusta läpinäkyvyydestä.\n\nKuninkaallisen perheen omaisuusjärjestelyistä on käyty Britanniassa paljon keskustelua, ja parlamentin tilintarkastusvaliokunnan on määrä käynnistää tänä vuonna tutkinta kuninkaallisista kiinteistöistä.\n\nCharles on pyrkinyt uudistamaan kuninkaallisen perheen taloutta sen jälkeen, kun hänen äitinsä kuningatar Elisabet kuoli vuonna 2022.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-26T10:23:19.171102+00:00",
+  "failure": "Paketissa ei ole lähdetekstiä eikä riittäviä varmistettuja yksityiskohtia julkaistavan artikkelin kirjoittamiseen ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260626T102136Z_7954799ecc\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lähdetekstiä eikä riittäviä varmistettuja yksityiskohtia julkaistavan artikkelin kirjoittamiseen ilman keksittyjä tietoja.\"}"
+}

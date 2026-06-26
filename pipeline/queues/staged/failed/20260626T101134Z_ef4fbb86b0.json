@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-26T10:11:34.244679+00:00",
+  "digest": "ef4fbb86b0",
+  "packet": {
+    "packet_id": "20260626T101134Z_ef4fbb86b0",
+    "created_at": "2026-06-26T10:11:34Z",
+    "headline_seed": "Housing board votes to freeze New York rents in victory for Mamdani",
+    "description_seed": "The decision was welcomed by many tenants - but landlords fear it will worsen housing conditions.",
+    "link": "https://www.bbc.co.uk/news/articles/cn947pxxz4yo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "Devdiscourse"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/cn947pxxz4yo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Housing board votes to freeze New York rents in victory for Mamdani"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The decision was welcomed by many tenants - but landlords fear it will worsen housing conditions.",
+        "word_count": 16,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Members of tenant rights groups celebrated after the New York City Rent Guidelines Board approved the rent freeze A New York City housing board has approved a key pledge made by Mayor Zohran Mamdani to freeze rents for about one million regulated apartments. The result of the vote on Thursday was greeted with cheers and whistles from hundreds of people in Manhattan as the Rent Guidelines Board (RGB) approved a freeze on both one and two year leases. Mamdani said in a statement that it was a \"historic victory for New York City tenants\". The board voted in favour of the policy 7-1, hours after the public resignation of one of its members Christina Smyth, who accused the panel of bias and of \"knowingly disregarding its own evidence\" that landlords face spiking operating costs.",
+        "word_count": 134,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Rent-stabilised buildings will be eligible for the rent freeze across all five of the city's boroughs between October 2026 and September 2027. They include buildings ranging from high-rise luxury apartments to affordable subsidised units. Tenants had argued in public hearings held ahead of the vote that incomes were not keeping up with inflation and that past rent increases hadn't gone towards building repairs or improvements. But groups representing landlords warned that it would be more difficult to keep up with rising taxes, utilities and repairs as a result of the freeze, leading to worse conditions for renters. \"Older rent-stabilized buildings are already struggling under rising operating costs, yet the Board chose to disregard those realities,\" said James Whelan, president of the Real Estate Board of New York.",
+        "word_count": 127,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Devdiscourse",
+        "source_type": "research",
+        "text": "The New York City Rent Guidelines Board voted on Thursday to freeze rents for about one million regulated apartments, fulfilling a campaign promise by Mayor Zohran Mamdani. The vote, with a 7-1 majority, set rent increases at zero for both one- and two-year leases starting in October, sparking celebrations among tenants who gathered to hear the decision. Despite tenant cheers, the decision was met with criticism from landlord representatives, with one member resigning over claims of bias within the board. ---",
+        "word_count": 81,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "The decision was welcomed by many tenants - but landlords fear it will worsen housing conditions.\n\nMembers of tenant rights groups celebrated after the New York City Rent Guidelines Board approved the rent freeze A New York City housing board has approved a key pledge made by Mayor Zohran Mamdani to freeze rents for about one million regulated apartments. The result of the vote on Thursday was greeted with cheers and whistles from hundreds of people in Manhattan as the Rent Guidelines Board (RGB) approved a freeze on both one and two year leases. Mamdani said in a statement that it was a \"historic victory for New York City tenants\". The board voted in favour of the policy 7-1, hours after the public resignation of one of its members Christina Smyth, who accused the panel of bias and of \"knowingly disregarding its own evidence\" that landlords face spiking operating costs.\n\nRent-stabilised buildings will be eligible for the rent freeze across all five of the city's boroughs between October 2026 and September 2027. They include buildings ranging from high-rise luxury apartments to affordable subsidised units. Tenants had argued in public hearings held ahead of the vote that incomes were not keeping up with inflation and that past rent increases hadn't gone towards building repairs or improvements. But groups representing landlords warned that it would be more difficult to keep up with rising taxes, utilities and repairs as a result of the freeze, leading to worse conditions for renters. \"Older rent-stabilized buildings are already struggling under rising operating costs, yet the Board chose to disregard those realities,\" said James Whelan, president of the Real Estate Board of New York.\n\nThe New York City Rent Guidelines Board voted on Thursday to freeze rents for about one million regulated apartments, fulfilling a campaign promise by Mayor Zohran Mamdani. The vote, with a 7-1 majority, set rent increases at zero for both one- and two-year leases starting in October, sparking celebrations among tenants who gathered to hear the decision. Despite tenant cheers, the decision was met with criticism from landlord representatives, with one member resigning over claims of bias within the board. ---",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 910,
+      "selected_blocks": 4,
+      "selected_source_words": 358,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Devdiscourse",
+        "The Real Deal",
+        "The Real Deal",
+        "The Real Deal",
+        "The Real Deal",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Devdiscourse"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Housing board votes to freeze New York rents in victory for Mamdani",
+      "description": "The decision was welcomed by many tenants - but landlords fear it will worsen housing conditions.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Housing board votes to freeze New York rents in victory for Mamdani",
+    "description": "The decision was welcomed by many tenants - but landlords fear it will worsen housing conditions.",
+    "link": "https://www.bbc.co.uk/news/articles/cn947pxxz4yo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-26T09:42:26+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "388dcb446b595433bbee4993cb0664fb",
+    "_url_hash": "d5dae7d3d80fecb0d40f6eb5c0e24d7952f4e8da1fe06fb32f0a610a1a8cffd4",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nMembers of tenant rights groups celebrated after the New York City Rent Guidelines Board approved the rent freeze\n\nA New York City housing board has approved a key pledge made by Mayor Zohran Mamdani to freeze rents for about one million regulated apartments.\n\nThe result of the vote on Thursday was greeted with cheers and whistles from hundreds of people in Manhattan as the Rent Guidelines Board (RGB) approved a freeze on both one and two year leases.\n\nMamdani said in a statement that it was a \"historic victory for New York City tenants\".\n\nThe board voted in favour of the policy 7-1, hours after the public resignation of one of its members Christina Smyth, who accused the panel of bias and of \"knowingly disregarding its own evidence\" that landlords face spiking operating costs.\n\nSmyth was one of three members appointed by former New York City Mayor Eric Adams. Mamdani appointed the other six members after taking office this year.\n\nSmyth, one of two landlord representatives on the board, said the outcome had been predetermined by the mayor.\n\n\"The rebuilt board was required to deliver a rent freeze,\" she said. \"Everything since has been theater,\" she said in a statement.\n\nChair of the board, Chantella Mitchell, said the board's members served with independence and integrity.\n\nIn a statement concerning the rent freeze, she said \"comprehensive data before the board this year reflect an economic environment in which most tenants in rent-stabilised housing struggle to meet basic affordability thresholds as housing costs continue to rise\".\n\nRent-stabilised buildings will be eligible for the rent freeze across all five of the city's boroughs between October 2026 and September 2027. They include buildings ranging from high-rise luxury apartments to affordable subsidised units.\n\nTenants had argued in public hearings held ahead of the vote that incomes were not keeping up with inflation and that past rent increases hadn't gone towards building repairs or improvements.\n\nBut groups representing landlords warned that it would be more difficult to keep up with rising taxes, utilities and repairs as a result of the freeze, leading to worse conditions for renters.\n\n\"Older rent-stabilized buildings are already struggling under rising operating costs, yet the Board chose to disregard those realities,\" said James Whelan, president of the Real Estate Board of New York.\n\n\"This decision will mean less investment in maintenance and repairs, accelerating the deterioration of the h\n\n---\n\n[Lähde: Devdiscourse]\nThe New York City Rent Guidelines Board voted on Thursday to freeze rents for about one million regulated apartments, fulfilling a campaign promise by Mayor Zohran Mamdani.\n\nThe vote, with a 7-1 majority, set rent increases at zero for both one- and two-year leases starting in October, sparking celebrations among tenants who gathered to hear the decision.\n\nDespite tenant cheers, the decision was met with criticism from landlord representatives, with one member resigning over claims of bias within the board.\n\n---\n\n[Lähde: The Real Deal]\nNew York City is freezing the rents of rent-stabilized apartments.\n\nThe city’s Rent Guidelines Board voted seven to one in favor of a freeze Thursday night, at El Museo del Barrio in Manhattan. The board approved rent increases of 0 percent on one-year leases and 0 percent on two-year leases\n\nThe result delivers on Mayor Zohran Mamdani’s campaign promise and is a show of strength for the tenant advocates who helped elect him. For landlord groups the vote was a difficult, if expected, blow. A freeze on two-year leases has never before been approved.\n\nThursday’s vote was colored by the resignation of landlord member Christina Smyth earlier in the day. Smyth, the board’s only member to vote in May against a preliminary range that included a freeze, decried the process as political theater and alluded to a possible legal challenge.\n\n“I am resigning because the process I was appointed to take part in is not administered the way the law requires,” she wrote in a statement following her resignation. “The Rent Guidelines Board has stopped being a fact-finding body. It has become a body that starts with an answer and vibe codes its way backward to justify it.”\n\nLandlord groups are likely to sue over the result.\n\n“It’s going to be very likely that there will be a challenge,” said Massimo D’Angelo, co-chair of the real estate industry team at law firm Blank Rome. “It could be as quick as Monday, but generally it will take a couple weeks to assess and to file a carefully tailored pleading.”\n\nThose voting in favor were Maksim Wynn, Lauren Melodia, Brandon Mancilla, Sina Sinai, Chantella Mitchell, Adán Soltren and Sagar Sharma. Arpit Gupta voted against a freeze.\n\nWynn, the remaining landlord member of the board, made a lengthy statement that was largely inaudible to the audience due to the chanting from the crowd.\n\nIn it he called for the city and state to invest in expense-side relief for landlords.\n\n“Taking a step back, there is a subset of the rent-stabilized stock that is in real distress, but the underlying causes are systemic ones,” Wynn said. “The city and state must follow up with much more support to ensure the stocks’ long-term viability.”\n\nLandlord groups called out potential impacts on landlords.\n\nThe Small Property Owners of New York referenced part of Mamdani’s housing plan that calls for searching for housing violations in distressed buildings and eventually transferring them to nonprofits or other owners.\n\n“Defunding rent-stabilized housing when the RGB",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-26T10:14:58.849919+00:00",
+  "failure": "content too short: 225 words",
+  "payload": {
+    "packet_id": "20260626T101134Z_ef4fbb86b0",
+    "title": "New York jäädyttää säänneltyjen asuntojen vuokrat vuodeksi",
+    "summary": "New Yorkin vuokrasääntelylautakunta hyväksyi vuokrien jäädyttämisen noin miljoonassa säännellyssä asunnossa. Päätös toteuttaa pormestari Zohran Mamdanin keskeisen lupauksen ja herätti sekä vuokralaisten juhlintaa että vuokranantajien arvostelua.",
+    "content": "New Yorkin kaupungin vuokrasääntelylautakunta on äänestänyt vuokrien jäädyttämisestä noin miljoonassa säännellyssä asunnossa. Päätös koskee sekä yhden että kahden vuoden vuokrasopimuksia, ja sitä pidetään pormestari Zohran Mamdanin keskeisen vaalilupauksen toteutumisena. Vuokralaisryhmät ottivat ratkaisun vastaan juhlimalla, mutta vuokranantajien edustajat varoittavat sen voivan vaikeuttaa rakennusten ylläpitoa.\n\n## Päätös koskee kaikkia kaupunginosia\n\nNew York City Rent Guidelines Board hyväksyi vuokrien jäädyttämisen torstaina äänin 7-1. Päätöstä seuranneet sadat ihmiset Manhattanilla reagoivat tulokseen suosionosoituksin ja vihellyksin.\n\nJäädytys koskee vuokrasäänneltyjä rakennuksia kaikissa viidessä New Yorkin kaupunginosassa lokakuusta 2026 syyskuuhun 2027. Sen piiriin kuuluu erilaisia kohteita korkeista luksustaloista kohtuuhintaisiin tuettuihin asuntoihin.\n\nMamdani kuvaili päätöstä lausunnossaan historialliseksi voitoksi New Yorkin vuokralaisille. Ratkaisu asettaa vuokrankorotukset nollaan sekä yhden että kahden vuoden vuokrasopimuksissa kyseisellä ajanjaksolla.\n\n## Vuokralaiset ja omistajat eri linjoilla\n\nVuokralaiset olivat ennen äänestystä järjestetyissä julkisissa kuulemisissa perustelleet jäädytystä sillä, etteivät tulot ole pysyneet inflaation mukana. Heidän mukaansa aiemmat vuokrankorotukset eivät myöskään ole näkyneet rakennusten korjauksina tai parannuksina.\n\nVuokranantajia edustavat ryhmät puolestaan varoittivat, että jäädytys vaikeuttaa nousevien verojen, käyttömenojen ja korjauskulujen kattamista. Niiden mukaan seurauksena voi olla vuokralaisten kannalta huonompia asumisoloja, jos kiinteistöjen ylläpito kärsii.\n\nReal Estate Board of New Yorkin puheenjohtaja James Whelan sanoi vanhempien vuokrasäänneltyjen rakennusten olevan jo valmiiksi vaikeuksissa kasvavien käyttökustannusten vuoksi. Hänen mukaansa lautakunta sivuutti nämä realiteetit.\n\nÄänestystä edelsi myös lautakunnan jäsenen Christina Smythin julkinen ero. Smyth syytti lautakuntaa puolueellisuudesta ja siitä, että se sivuutti tietoisesti oman näyttönsä vuokranantajien nousevista kustannuksista.",
+    "category": "Ulkomaat",
+    "tags": [
+      "New York",
+      "asuminen",
+      "vuokrat",
+      "Zohran Mamdani",
+      "Yhdysvallat"
+    ],
+    "summary_bullets": [
+      "New Yorkin vuokrasääntelylautakunta hyväksyi vuokrien jäädyttämisen noin miljoonassa säännellyssä asunnossa.",
+      "Päätös koskee sekä yhden että kahden vuoden vuokrasopimuksia lokakuusta 2026 syyskuuhun 2027.",
+      "Vuokralaisryhmät juhlivat ratkaisua, mutta vuokranantajien edustajat varoittavat ylläpitokulujen kasvusta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu packetin neljään lähdeblokkiin. Keskeiset tiedot äänestyksestä, ajanjaksosta, vaikutuspiiristä ja osapuolten reaktioista ovat yhtäpitäviä."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260626T101134Z_ef4fbb86b0\",\n  \"title\": \"New York jäädyttää säänneltyjen asuntojen vuokrat vuodeksi\",\n  \"summary\": \"New Yorkin vuokrasääntelylautakunta hyväksyi vuokrien jäädyttämisen noin miljoonassa säännellyssä asunnossa. Päätös toteuttaa pormestari Zohran Mamdanin keskeisen lupauksen ja herätti sekä vuokralaisten juhlintaa että vuokranantajien arvostelua.\",\n  \"content\": \"New Yorkin kaupungin vuokrasääntelylautakunta on äänestänyt vuokrien jäädyttämisestä noin miljoonassa säännellyssä asunnossa. Päätös koskee sekä yhden että kahden vuoden vuokrasopimuksia, ja sitä pidetään pormestari Zohran Mamdanin keskeisen vaalilupauksen toteutumisena. Vuokralaisryhmät ottivat ratkaisun vastaan juhlimalla, mutta vuokranantajien edustajat varoittavat sen voivan vaikeuttaa rakennusten ylläpitoa.\\n\\n## Päätös koskee kaikkia kaupunginosia\\n\\nNew York City Rent Guidelines Board hyväksyi vuokrien jäädyttämisen torstaina äänin 7-1. Päätöstä seuranneet sadat ihmiset Manhattanilla reagoivat tulokseen suosionosoituksin ja vihellyksin.\\n\\nJäädytys koskee vuokrasäänneltyjä rakennuksia kaikissa viidessä New Yorkin kaupunginosassa lokakuusta 2026 syyskuuhun 2027. Sen piiriin kuuluu erilaisia kohteita korkeista luksustaloista kohtuuhintaisiin tuettuihin asuntoihin.\\n\\nMamdani kuvaili päätöstä lausunnossaan historialliseksi voitoksi New Yorkin vuokralaisille. Ratkaisu asettaa vuokrankorotukset nollaan sekä yhden että kahden vuoden vuokrasopimuksissa kyseisellä ajanjaksolla.\\n\\n## Vuokralaiset ja omistajat eri linjoilla\\n\\nVuokralaiset olivat ennen äänestystä järjestetyissä julkisissa kuulemisissa perustelleet jäädytystä sillä, etteivät tulot ole pysyneet inflaation mukana. Heidän mukaansa aiemmat vuokrankorotukset eivät myöskään ole näkyneet rakennusten korjauksina tai parannuksina.\\n\\nVuokranantajia edustavat ryhmät puolestaan varoittivat, että jäädytys vaikeuttaa nousevien verojen, käyttömenojen ja korjauskulujen kattamista. Niiden mukaan seurauksena voi olla vuokralaisten kannalta huonompia asumisoloja, jos kiinteistöjen ylläpito kärsii.\\n\\nReal Estate Board of New Yorkin puheenjohtaja James Whelan sanoi vanhempien vuokrasäänneltyjen rakennusten olevan jo valmiiksi vaikeuksissa kasvavien käyttökustannusten vuoksi. Hänen mukaansa lautakunta sivuutti nämä realiteetit.\\n\\nÄänestystä edelsi myös lautakunnan jäsenen Christina Smythin julkinen ero. Smyth syytti lautakuntaa puolueellisuudesta ja siitä, että se sivuutti tietoisesti oman näyttönsä vuokranantajien nousevista kustannuksista.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"New York\",\n    \"asuminen\",\n    \"vuokrat\",\n    \"Zohran Mamdani\",\n    \"Yhdysvallat\"\n  ],\n  \"summary_bullets\": [\n    \"New Yorkin vuokrasääntelylautakunta hyväksyi vuokrien jäädyttämisen noin miljoonassa säännellyssä asunnossa.\",\n    \"Päätös koskee sekä yhden että kahden vuoden vuokrasopimuksia lokakuusta 2026 syyskuuhun 2027.\",\n    \"Vuokralaisryhmät juhlivat ratkaisua, mutta vuokranantajien edustajat varoittavat ylläpitokulujen kasvusta.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu packetin neljään lähdeblokkiin. Keskeiset tiedot äänestyksestä, ajanjaksosta, vaikutuspiiristä ja osapuolten reaktioista ovat yhtäpitäviä.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260626T101134Z_ef4fbb86b0",
+    "category": "Kotimaa",
+    "selected_source_words": 358,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 225,
+    "issues": [
+      "content too short: 225 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "New York jäädyttää säänneltyjen asuntojen vuokrat vuodeksi",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-26T10:14:58.849650+00:00",
+    "repair_trigger": "pre_repair_word_count=225; selected_source_words=358; selected_source_blocks=4",
+    "pre_repair_word_count": 225,
+    "pre_repair_lead_word_count": 43,
+    "post_repair_word_count": 225,
+    "post_repair_lead_word_count": 43,
+    "selected_source_words_at_repair": 358,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 358,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 225 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:8da7b2ef74",
+      "2:BBC World:af9e58704b",
+      "3:BBC World:2d0c90291e",
+      "4:Devdiscourse:73ea1c3a83"
+    ],
+    "final_issues": [
+      "content too short: 225 words"
+    ],
+    "recovered": false
+  }
+}
