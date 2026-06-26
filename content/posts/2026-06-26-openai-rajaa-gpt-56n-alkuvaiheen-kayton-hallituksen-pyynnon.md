@@ -43,7 +43,6 @@ keywords:
 source_name: "Hacker News Best"
 source_url: "https://www.washingtonpost.com/technology/2026/06/26/openai-says-us-government-will-vet-users-its-latest-ai-model/"
 source_domain: "hnrss.org"
-briefing: true
 draft: false
 ---
 
