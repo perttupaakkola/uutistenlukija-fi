@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/viikon-26-2026-10-uutista-yellowstone-mirrit-star-wars/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
