@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Kolme-suomalaista-varattiin-ensimm%C3%A4isell%C3%A4-kierroksella/186250"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
