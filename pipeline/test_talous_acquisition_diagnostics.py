@@ -45,7 +45,9 @@ class TalousAcquisitionDiagnosticsTests(unittest.TestCase):
 
         text = out.getvalue()
         self.assertIn("source_pass_to_queue_conversion=1/3 (33.3%)", text)
-        self.assertIn("conversion_gap_note=scan enqueue is capped", text)
+        self.assertIn("reserve_qualified_to_queue_conversion=1/1 (100.0%)", text)
+        self.assertIn("unique_dropped_talous_candidates=0", text)
+        self.assertIn("conversion_gap_note=min_source_words_pass uses broad total text", text)
 
     def test_report_surfaces_talous_enqueue_drop_details(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -66,6 +68,8 @@ class TalousAcquisitionDiagnosticsTests(unittest.TestCase):
 
         text = out.getvalue()
         self.assertIn("drop_reasons={'source_floor_one_block_too_short': 1}", text)
+        self.assertIn("reserve_qualified_to_queue_conversion=0/0 (0.0%)", text)
+        self.assertIn("unique_dropped_talous_candidates=1", text)
         self.assertIn("candidate_id=abc123def0", text)
         self.assertIn("source_words=44", text)
         self.assertIn("source_blocks=1", text)
@@ -91,6 +95,7 @@ class TalousAcquisitionDiagnosticsTests(unittest.TestCase):
 
         text = out.getvalue()
         self.assertIn("drop_reasons={'org_source_guardrail_penalty': 1}", text)
+        self.assertIn("unique_dropped_talous_candidates=1", text)
         self.assertIn("candidate_id=", text)
         self.assertIn("drop_reason=org_source_guardrail_penalty", text)
 

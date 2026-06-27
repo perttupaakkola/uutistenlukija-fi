@@ -159,6 +159,14 @@ def diagnostic_drop_reason(drop: dict) -> str:
     return "queue_cap_displaced_by_stronger_candidates"
 
 
+def diagnostic_reserve_pass_count(drops: list[dict]) -> int:
+    return sum(1 for drop in drops if bool(drop.get("reserve_pass")))
+
+
+def unique_dropped_candidate_count(drops: list[dict]) -> int:
+    return len({diagnostic_candidate_id(drop) for drop in drops})
+
+
 def queue_summary(hours: int) -> dict:
     cutoff = cutoff_for(hours)
     summary = {"ready": Counter(), "failed": Counter(), "published": Counter()}
@@ -197,6 +205,7 @@ def print_report(runs: list[dict], hours: int, log_path: Path) -> None:
     stage_names = ["discovered", "dedup", "cooldown", "research_candidates", "research_result", "min_source_words_pass", "queued_candidates"]
     totals = {stage: Counter() for stage in stage_names}
     research_buckets, original_buckets, result_buckets, drop_reasons = Counter(), Counter(), Counter(), Counter()
+    all_drops: list[dict] = []
     drop_examples: list[dict] = []
     for run in runs:
         for stage in stage_names:
@@ -212,6 +221,7 @@ def print_report(runs: list[dict], hours: int, log_path: Path) -> None:
             if any(token in title for token in ["osinko", "salk", "pörss", "tokmanni", "talous", "yrittäj", "sähköauto"]):
                 original_buckets[item.get("original") or "unknown"] += 1; result_buckets[item.get("result") or "unknown"] += 1
         for drop in run.get("talous_enqueue_drops", []):
+            all_drops.append(drop)
             drop_reasons[diagnostic_drop_reason(drop)] += 1
             if len(drop_examples) < 5:
                 drop_examples.append(drop)
@@ -233,8 +243,12 @@ def print_report(runs: list[dict], hours: int, log_path: Path) -> None:
     queued = totals["queued_candidates"]["Talous"]
     conversion = (queued / passed * 100.0) if passed else 0.0
     print(f"  source_pass_to_queue_conversion={queued}/{passed} ({conversion:.1f}%)")
+    reserve_passed = diagnostic_reserve_pass_count(all_drops) + queued
+    reserve_conversion = (queued / reserve_passed * 100.0) if reserve_passed else 0.0
+    print(f"  reserve_qualified_to_queue_conversion={queued}/{reserve_passed} ({reserve_conversion:.1f}%)")
+    print(f"  unique_dropped_talous_candidates={unique_dropped_candidate_count(all_drops)}")
     if passed and queued < passed:
-        print(f"  conversion_gap_note=scan enqueue is capped by --max-packets per run; excess source-passing Talous candidates are expected to wait behind queue caps/dedup/cooldown, not disappear at research acquisition")
+        print(f"  conversion_gap_note=min_source_words_pass uses broad total text; reserve_qualified_to_queue_conversion is the stricter Talous enqueue signal. Queueing still requires selected-source floor, org-source guardrail, reserve confidence, and --max-packets.")
     print("\ntalous_enqueue_drops:")
     print(f"  drop_reasons={dict(drop_reasons.most_common(8))}")
     for drop in drop_examples:
