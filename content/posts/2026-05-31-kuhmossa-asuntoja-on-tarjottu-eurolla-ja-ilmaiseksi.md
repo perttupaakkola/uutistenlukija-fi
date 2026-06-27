@@ -1,5 +1,6 @@
 ---
 title: "Kuhmossa asuntoja on tarjottu eurolla ja ilmaiseksi"
+seo_title: "Kuhmon euron asunnot: miksi asunto voi olla ilmainen?"
 date: 2026-05-31T15:48:07.154510+00:00
 categories:
   - Kotimaa
@@ -8,7 +9,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Kuhmossa on nähty poikkeuksellisia asuntoilmoituksia, joissa yksiötä on tarjottu eurolla ja kaksion hintapyyntö on ollut nolla euroa. Kiinteistöalan asi…"
+description: "Kuhmossa asuntoja on tarjottu eurolla ja jopa ilmaiseksi. Artikkeli kertoo, miksi nollahinta ei poista vastikkeita, lainoja ja remonttiriskejä."
 summary: "Kuhmossa on nähty poikkeuksellisia asuntoilmoituksia, joissa yksiötä on tarjottu eurolla ja kaksion hintapyyntö on ollut nolla euroa. Kiinteistöalan asiantuntijat muistuttavat, ettei ilmainen asunto välttämättä ole kuluton."
 summary_bullets:
   - "Kuhmossa asuntoja on tarjottu eurolla ja jopa ilman ostohintaa."

@@ -1,5 +1,6 @@
 ---
 title: "Isänmaan toivot -sarjan Toni Wahlström on jatkanut uraansa teatterissa ja ohjaajana"
+seo_title: "Toni Wahlström nyt: Isänmaan toivot -näyttelijän ura jatkui teatterissa"
 date: 2026-05-08T16:48:01.595344+00:00
 categories:
   - Kotimaa
@@ -8,7 +9,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Vuosituhannen vaihteen komediasarjasta tuttu Toni Wahlström on nähty viime vuosina harvemmin televisiossa, mutta hän on jatkanut uraansa erityisesti tea…"
+description: "Isänmaan toivot -sarjasta tuttu Toni Wahlström on ollut viime vuosina harvemmin televisiossa, mutta ura on jatkunut teatterissa ja ohjaajana."
 summary: "Vuosituhannen vaihteen komediasarjasta tuttu Toni Wahlström on nähty viime vuosina harvemmin televisiossa, mutta hän on jatkanut uraansa erityisesti teatterin puolella."
 summary_bullets:
   - "Toni Wahlström tunnetaan yhä Isänmaan toivot -komediasarjasta."

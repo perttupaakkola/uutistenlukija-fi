@@ -1,5 +1,6 @@
 ---
 title: "MM-kisoissa voidaan antaa punainen kortti myös suun peittämisestä"
+seo_title: "Fifan MM-linjaus: suun peittäminen vastustajan kanssa voi tuoda punaisen"
 date: 2026-04-30T06:53:22.625100+00:00
 categories:
   - Urheilu
@@ -8,7 +9,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Kansainvälinen jalkapalloliitto Fifa ottaa kesän MM-kisoissa käyttöön sääntölinjauksen, jonka mukaan pelaaja voi saada punaisen kortin, jos hän peittää…"
+description: "Fifan MM-linjauksessa pelaaja voi saada punaisen kortin, jos suun peittämisellä pyritään peittämään vastustajaan kohdistuvaa syrjivää käytöstä."
 summary: "Kansainvälinen jalkapalloliitto Fifa ottaa kesän MM-kisoissa käyttöön sääntölinjauksen, jonka mukaan pelaaja voi saada punaisen kortin, jos hän peittää suunsa kädellään puhuessaan. Taustalla on jalkapallosäännöistä päättävän Ifabin hyväksymä muutos."
 summary_bullets:
   - "Fifa ottaa kesän MM-kisoissa käyttöön uuden sääntölinjauksen."
