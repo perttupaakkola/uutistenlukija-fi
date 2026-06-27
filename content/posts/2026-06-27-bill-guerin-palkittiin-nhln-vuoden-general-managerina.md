@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Bill-Guerin-voitti-NHLn-vuoden-GMn-palkinnon/186255"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
