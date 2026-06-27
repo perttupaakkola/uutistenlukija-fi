@@ -43,7 +43,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Haastattelu/Arktisen-tutkimusty%C3%B6n-j%C3%A4lkeen-Raumalle-saapuva-Colby-Wilson-ei-malttanut-lopettaa-j%C3%A4%C3%A4kiekkoa-vaikka-valmistui-yliopistosta/186224"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 

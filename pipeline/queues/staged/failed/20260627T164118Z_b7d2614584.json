@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-27T16:41:18.173597+00:00",
+  "digest": "b7d2614584",
+  "packet": {
+    "packet_id": "20260627T164118Z_b7d2614584",
+    "created_at": "2026-06-27T16:41:18Z",
+    "headline_seed": "Lahdessa opiskellut Diandra Flores nousi televisiossa musiikin vakiokasvoksi",
+    "description_seed": "Diandra sanoo odottavansa erityisesti syksyllä alkavaa konserttikiertuetta. Kesällä hänellä on kymmeniä esiintymisiä festareilla ja puistokonserteissa.",
+    "link": "https://www.ess.fi/teemat/9574171",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/teemat/9574171"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lahdessa opiskellut Diandra Flores nousi televisiossa musiikin vakiokasvoksi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 101,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Aamuposti",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lahdessa opiskellut Diandra Flores nousi televisiossa musiikin vakiokasvoksi",
+      "description": "Diandra sanoo odottavansa erityisesti syksyllä alkavaa konserttikiertuetta. Kesällä hänellä on kymmeniä esiintymisiä festareilla ja puistokonserteissa.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Lahdessa opiskellut Diandra Flores nousi televisiossa musiikin vakiokasvoksi",
+    "description": "Diandra sanoo odottavansa erityisesti syksyllä alkavaa konserttikiertuetta. Kesällä hänellä on kymmeniä esiintymisiä festareilla ja puistokonserteissa.",
+    "link": "https://www.ess.fi/teemat/9574171",
+    "published": "2026-06-27T18:30:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "ce0f5bcd60cd9cf320f30adba6ef83a4",
+    "_url_hash": "701f5e8fcca0e46e22da0bbc21bfd10ed450f395d2c8c7b451f15761d492af04",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Aamuposti]\nYksi ihminen kuoli ja toistakymmentä loukkaantui pienkoneen törmättyä pilvenpiirtäjään Pekingissä, kiinalaisviranomaiset kertoivat lauantaina.\n\nPilvenpiirtäjä, johon kone perjantaina osui, on Kiinan pääkaupungin korkein rakennus. 109-kerroksinen China Zun -tornitalo on liki 530 metriä korkea.\n\nViranomaisten mukaan kaksipaikkaisen pienkoneen kyydissä oli ainoastaan koneen lentäjä, joka kuoli törmäyksessä. Selitystä harvinaisen onnettomuuden syylle ei kerrottu.\n\nSilminnäkijöiden mukaan koneen osia päätyi rakennuksen juurelle. Uutistoimisto AFP:n toimittajien mukaan yhdessä rakennuksen ylempien kerrosten ikkunoissa oli havaittavissa reikä.\n\nLentoliikenne Pekingin ilmatilassa on erittäin tarkasti säädeltyä. Droonien myynti Kiinan pääkaupungissa on kiellettyä ja niiden lennättäminenkin luvanvaraista.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-27T16:43:26.422607+00:00",
+  "failure": "Lähdeaineisto puuttuu: paketissa ei ole valittuja lähdekatkelmia eikä riittävästi varmistettuja tietoja 250 sanan uutiseen ilman keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260627T164118Z_b7d2614584\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu: paketissa ei ole valittuja lähdekatkelmia eikä riittävästi varmistettuja tietoja 250 sanan uutiseen ilman keksittyjä yksityiskohtia.\"}"
+}
