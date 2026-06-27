@@ -55,6 +55,7 @@ _FI_STOPWORDS = {
     "voitti", "hävis", "julkaisi", "ilmoitti", "kertoi", "totesi",
     "uutiset", "lehti", "media", "uutinen",
     "ovat", "olla", "oli", "saattavat", "takia", "lähellä", "tulokset", "asiantuntija", "pääministeri",
+    "kannattaako", "laskuri", "arvioi", "arvioidaan", "vertaamalla", "kertoo",
 }
 
 # Finnish → English translations for high-value content terms
@@ -119,6 +120,21 @@ _FI_TO_EN = {
     "ohjelmisto": "software",
     "kyber": "cybersecurity",
     "tietoturva": "cybersecurity",
+    "korkeakoulututkinto": "university degree",
+    "korkeakoulututkinnon": "university degree",
+    "tutkinto": "degree diploma",
+    "tutkinnon": "degree diploma",
+    "koulutus": "education",
+    "koulutuksen": "education",
+    "opintolaina": "student loan",
+    "opintolainaa": "student loan",
+    "palkkaero": "salary comparison",
+    "palkkaerosta": "salary comparison",
+    "palkkataso": "salary",
+    "tuotto": "return investment",
+    "tuoton": "return investment",
+    "takaisinmaksuaika": "payback calculation",
+    "takaisinmaksuajasta": "payback calculation",
 }
 
 # Category fallback queries — used when keyword extraction yields nothing useful
