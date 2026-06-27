@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-27T18:11:23.828433+00:00",
+  "digest": "9fa3cf1ef0",
+  "packet": {
+    "packet_id": "20260627T181123Z_9fa3cf1ef0",
+    "created_at": "2026-06-27T18:11:23Z",
+    "headline_seed": "Lahtelaisseuran puheenjohtaja taisteli itsensä pronssille Vierumäen Triathlonissa – edelle kiilasi hiihdon SM-mitalisti",
+    "description_seed": "Vierumäki Triathlonin matkoille osallistui 45 urheilijaa X-tri Lahti -seurasta.",
+    "link": "https://www.ess.fi/urheilu/9574359",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9574359"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lahtelaisseuran puheenjohtaja taisteli itsensä pronssille Vierumäen Triathlonissa – edelle kiilasi hiihdon SM-mitalisti"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 97,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lahtelaisseuran puheenjohtaja taisteli itsensä pronssille Vierumäen Triathlonissa – edelle kiilasi hiihdon SM-mitalisti",
+      "description": "Vierumäki Triathlonin matkoille osallistui 45 urheilijaa X-tri Lahti -seurasta.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Lahtelaisseuran puheenjohtaja taisteli itsensä pronssille Vierumäen Triathlonissa – edelle kiilasi hiihdon SM-mitalisti",
+    "description": "Vierumäki Triathlonin matkoille osallistui 45 urheilijaa X-tri Lahti -seurasta.",
+    "link": "https://www.ess.fi/urheilu/9574359",
+    "published": "2026-06-27T19:50:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "5bd973a31e1cccda2f23c3bc495ff2a9",
+    "_url_hash": "ca1b449dd46f45c87d9f3ac53aa20cf78c5beb1cc1db49f5536ce82b912dc9c5",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nFC Kemi taisteli itselleen SM-pronssia miesten Futsal-liigassa. Kemiläiset ottivat voiton kotiottelussaan luvuin 5–2.\n\nPeli alkoi vauhdilla, kun Boriz Cizmar siirsi FC Kemin johtoon jo toisella peliminuutilla. SoVo tasoitti ottelun mutta tauon jälkeen FC Kemi otti johtoaseman nopeasti takaisin. SoVo kuitenkin tasoitti pelin uudelleen heti seuraavalla peliminuutilla.\n\nFC Kemi otti jälleen johtoaseman takaisin itselleen ja loppujen lopuksi 3,5 minuuttia ennen loppua Mergim Bushi pääsi vielä viimeistelemään loppulukemiksi 5–2 FC Kemin hyväksi kymmenen metrin rangaistuspotkusta SoVo:n rikkeiden täytyttyä.\n\nFC Kemi menetti miesten Futsal-liigan finaalipaikan perjantaina hävittyään kotiottelussaan Valkeakosken Mad Maxille.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-27T18:13:20.196360+00:00",
+  "failure": "Lähdeaineisto puuttuu käytännössä kokonaan, eikä packet sisällä riittäviä varmistettuja tietoja julkaistavaan artikkeliin.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260627T181123Z_9fa3cf1ef0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu käytännössä kokonaan, eikä packet sisällä riittäviä varmistettuja tietoja julkaistavaan artikkeliin.\"}"
+}
