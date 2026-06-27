@@ -9,6 +9,13 @@
 }}
 {{ $termSlug := .Data.Term | default .Title | urlize }}
 {{ $relatedLinks := index $relatedByCategory $termSlug }}
+{{ $talousFocusLinks := slice
+  (dict "label" "Henkilöstöedut" "url" "/posts/2026-03-15-wolt-haastaa-epassin-ja-edenredin-henkilostoetumarkkinalla/")
+  (dict "label" "Yritysten luottoluokitus" "url" "/posts/2026-04-04-nama-yritykset-nousivat-aaa-luokkaan-katso-lista/")
+  (dict "label" "Kaupan ala" "url" "/posts/2026-05-06-r-kioski-hakee-kaannetta-uudella-arra-myymalabrandilla/")
+  (dict "label" "Konkurssit" "url" "/posts/2026-03-16-beyond-retro-vaatekaupan-suomalainen-taustayritys-hakeutui-k/")
+  (dict "label" "Arjen säästäminen" "url" "/posts/2026-05-09-luulitko-saastavasi-rahaa-isolla-maustepussilla-somessa-levi/")
+}}
 
 <section class="portal-list-page">
   <header class="portal-list-header">
@@ -22,6 +29,19 @@
       <a href="{{ .url }}">{{ .label }}</a>
       {{ end }}
     </nav>
+    {{ end }}
+    {{ if eq $termSlug "talous" }}
+    <section class="category-focus-links" aria-labelledby="talous-focus-title">
+      <div class="category-focus-links__intro">
+        <h2 id="talous-focus-title">Talous seurannassa</h2>
+        <p>Viisi ajankohtaista talousaihetta nykyisestä arkistosta.</p>
+      </div>
+      <nav class="category-focus-links__list" aria-label="Talous seurannassa">
+        {{ range $talousFocusLinks }}
+        <a href="{{ .url }}">{{ .label }}</a>
+        {{ end }}
+      </nav>
+    </section>
     {{ end }}
   </header>
 
@@ -96,5 +116,15 @@
 .category-related-links span { color: var(--portal-muted, var(--text-secondary)); font-weight: 700; }
 .category-related-links a { color: var(--accent, #c0392b); text-decoration: none; }
 .category-related-links a:hover { text-decoration: underline; text-underline-offset: 2px; }
+.category-focus-links { display: grid; gap: .65rem; margin-top: 1.15rem; padding-top: 1rem; border-top: 1px solid var(--border, #e0ddd8); }
+.category-focus-links__intro h2 { margin: 0; font-size: 1rem; line-height: 1.25; }
+.category-focus-links__intro p { margin: .2rem 0 0; color: var(--portal-muted, var(--text-secondary)); font-size: .9rem; }
+.category-focus-links__list { display: flex; flex-wrap: wrap; gap: .5rem .8rem; }
+.category-focus-links__list a { color: var(--accent, #c0392b); font-size: .9rem; font-weight: 700; text-decoration: none; }
+.category-focus-links__list a:hover { text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 640px) {
+  .category-focus-links { gap: .55rem; margin-top: 1rem; }
+  .category-focus-links__list { gap: .45rem .7rem; }
+}
 </style>
 {{ end }}
