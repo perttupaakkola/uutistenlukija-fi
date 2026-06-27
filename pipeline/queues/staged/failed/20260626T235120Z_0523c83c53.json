@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-26T23:51:20.916336+00:00",
+  "digest": "0523c83c53",
+  "packet": {
+    "packet_id": "20260626T235120Z_0523c83c53",
+    "created_at": "2026-06-26T23:51:20Z",
+    "headline_seed": "Tässä on NHL:n ykkösvaraus! Justin Bieber yllätti kesken varaustilaisuuden",
+    "description_seed": "Suomalaisia varataan erittäin todennäköisesti ensimmäisellä kierroksella.",
+    "link": "https://www.is.fi/nhl/art-2000012105866.html",
+    "source": "IS Urheilu",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/nhl/art-2000012105866.html"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tässä on NHL:n ykkösvaraus! Justin Bieber yllätti kesken varaustilaisuuden"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 175,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Sportti",
+        "Sportti",
+        "IS Urheilu"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tässä on NHL:n ykkösvaraus! Justin Bieber yllätti kesken varaustilaisuuden",
+      "description": "Suomalaisia varataan erittäin todennäköisesti ensimmäisellä kierroksella.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Tässä on NHL:n ykkösvaraus! Justin Bieber yllätti kesken varaustilaisuuden",
+    "description": "Suomalaisia varataan erittäin todennäköisesti ensimmäisellä kierroksella.",
+    "link": "https://www.is.fi/nhl/art-2000012105866.html",
+    "published": "2026-06-26T23:48:00+00:00",
+    "source": "IS Urheilu",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "ad02f928a32038ec1cd1de628837acfb",
+    "_url_hash": "433a7519e3a55b34abef31a1a306f147b514c1eef99c97a5ae65a5b26fe7dfc4",
+    "source_tier": 1,
+    "category_hint": "Urheilu",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Urheilu",
+    "research": "[Lähde: Sportti]\nRuotsin superlupaus Ivar Stenberg on noussut yhdeksi NHL-draftin suurimmista nimistä – ja nyt myös Peter Forsberg sekä Mats Sundin hehkuttavat nuorukaista vuolaasti.\n\n18-vuotias Frölundan hyökkääjä on noussut viimeisen vuoden aikana yhdeksi NHL:n varaustilaisuuden suurimmista puheenaiheista.\n\nPitkään kanadalainen Gavin McKenna nähtiin lähes varmana vuoden 2026 draftin ykkösvarauksena.\n\nNyt moni asiantuntija Pohjois-Amerikassa uskoo kuitenkin Stenbergin voivan nousta jopa hänen edelleen.\n\nNuorukaisen osakkeet ovat nousseet entisestään käynnissä olevien MM-kisojen aikana.\n\nStenberg on vakuuttanut kykynsä pelata huipputasolla jo ennen 19-vuotissyntymäpäiväänsä.\n\nRuotsin kiekkolegendat Peter Forsberg ja Mats Sundin eivät peitelleet ihailuaan Stenbergiä kohtaan tämän viimeisimmän huippuhetken jälkeen.\n\n– Häntä ei voi lakata ihailemasta. Se oli aivan huippuluokan maali Stenbergiltä, Forsberg sanoi Aftonbladetille Slovakia-ottelun jälkeen.\n\nMyös Sundin ylisti nuorukaisen kokonaisvaltaista osaamista.\n\nSundinin mukaan Stenbergin pelissä ei juuri näy heikkouksia.\n\n– Hän on käytännössä täydellinen pelaaja.\n\nErityisesti Stenbergin pelinlukutaito teki vaikutuksen Ruotsin entiseen supertähteen.\n\nLUE MYÖS: Silja Kosonen voitti kaikki – ei voinut käsittää miten pitkälle heitti (UrheiluAreena.fi)\n\nJääkiekko    26.06.2026 - 11:45     Joni Ahokas\n\nJääkiekko    25.06.2026 - 12:45     Joni Ahokas\n\nJääkiekko    25.06.2026 - 11:05     Joni Ahokas",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-26T23:53:17.005985+00:00",
+  "failure": "Paketissa ei ole lainkaan valittua lähdetekstiä tai varmistettuja yksityiskohtia, joiden perusteella voisi kirjoittaa vähintään 250 sanan uutisen ilman arvailua.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260626T235120Z_0523c83c53\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lainkaan valittua lähdetekstiä tai varmistettuja yksityiskohtia, joiden perusteella voisi kirjoittaa vähintään 250 sanan uutisen ilman arvailua.\"}"
+}

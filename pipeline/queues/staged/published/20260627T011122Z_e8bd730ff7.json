@@ -1,0 +1,212 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-27T01:11:22.455092+00:00",
+  "digest": "e8bd730ff7",
+  "packet": {
+    "packet_id": "20260627T011122Z_e8bd730ff7",
+    "created_at": "2026-06-27T01:11:22Z",
+    "headline_seed": "Trump Admin releases Anthropic Mythos to be used by more than 100 US companies, agencies",
+    "description_seed": "Over 100 companies and government agencies are reportedly authorized to use Mythos 5, including their non-American employees.",
+    "link": "https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch",
+      "Wired",
+      "Wired"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trump Admin releases Anthropic Mythos to be used by more than 100 US companies, agencies"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "Over 100 companies and government agencies are reportedly authorized to use Mythos 5, including their non-American employees.",
+        "word_count": 17,
+        "keyword_overlap": 11,
+        "strong_overlap": 9
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "Two weeks into the ban that caused Anthropic to pull its powerful cybersecurity-oriented models, Mythos 5 and Fable 5, from the market, the Trump administration is softening its stance. It is now allowing Anthropic to make Mythos 5 available to more than 100 specific U.S. government agencies and companies, including allowing the non-American employees at those organizations to access to the model, both Semafor and Reuters report. This list also includes Anthropic’s own non-American employees, who were included in the original ban that forbade non-Americans from accessing the models. ---",
+        "word_count": 90,
+        "keyword_overlap": 11,
+        "strong_overlap": 8
+      },
+      {
+        "source": "Wired",
+        "source_type": "research",
+        "text": "Anthropic is still in discussions with the White House about restoring access to Fable 5, and they are expected to continue over the weekend, according to a person familiar with the matter. Both parties are hopeful the resolution of this incident will help inform a lasting policy framework for future model releases, the person said. The partial reinstatement comes roughly two weeks after the White House sent an export control directive to Anthropic that required the company to limit foreign nationals from accessing Claude Mythos and Fable 5, including people working and living in the United States. In his latest letter, Lutnick wrote that organizations approved to use Mythos may now allow their foreign national employees to access the model, and Anthropic may do the same for its own foreign national employees. The Trump administration grew concerned about A",
+        "word_count": 139,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Wired",
+        "source_type": "research",
+        "text": "The US government has eased the restrictions it imposed on Anthropic’s most advanced AI model, Claude Mythos 5, allowing the company to grant access to more than 100 US organizations, including large corporations and government agencies. In a letter sent to Anthropic’s cofounder and chief compute officer Tom Brown obtained by WIRED, US Commerce Secretary Howard Lutnick told the AI lab it would permit certain trusted partners to access Mythos because he had “determined that appropriate safeguards are in place.” Semafor first reported the existence of the letter. “Anthropic has worked with the U.S. government to address risks associated with the Covered Models. These efforts have yielded significant progress,” Lutnick wrote.",
+        "word_count": 111,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "Over 100 companies and government agencies are reportedly authorized to use Mythos 5, including their non-American employees.\n\nTwo weeks into the ban that caused Anthropic to pull its powerful cybersecurity-oriented models, Mythos 5 and Fable 5, from the market, the Trump administration is softening its stance. It is now allowing Anthropic to make Mythos 5 available to more than 100 specific U.S. government agencies and companies, including allowing the non-American employees at those organizations to access to the model, both Semafor and Reuters report. This list also includes Anthropic’s own non-American employees, who were included in the original ban that forbade non-Americans from accessing the models. ---\n\nAnthropic is still in discussions with the White House about restoring access to Fable 5, and they are expected to continue over the weekend, according to a person familiar with the matter. Both parties are hopeful the resolution of this incident will help inform a lasting policy framework for future model releases, the person said. The partial reinstatement comes roughly two weeks after the White House sent an export control directive to Anthropic that required the company to limit foreign nationals from accessing Claude Mythos and Fable 5, including people working and living in the United States. In his latest letter, Lutnick wrote that organizations approved to use Mythos may now allow their foreign national employees to access the model, and Anthropic may do the same for its own foreign national employees. The Trump administration grew concerned about A\n\nThe US government has eased the restrictions it imposed on Anthropic’s most advanced AI model, Claude Mythos 5, allowing the company to grant access to more than 100 US organizations, including large corporations and government agencies. In a letter sent to Anthropic’s cofounder and chief compute officer Tom Brown obtained by WIRED, US Commerce Secretary Howard Lutnick told the AI lab it would permit certain trusted partners to access Mythos because he had “determined that appropriate safeguards are in place.” Semafor first reported the existence of the letter. “Anthropic has worked with the U.S. government to address risks associated with the Covered Models. These efforts have yielded significant progress,” Lutnick wrote.",
+    "source_diagnostics": {
+      "candidate_blocks": 6,
+      "candidate_source_words": 502,
+      "selected_blocks": 4,
+      "selected_source_words": 357,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "Wired",
+        "Wired",
+        "Wired",
+        "Wired",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch",
+        "Wired",
+        "Wired"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trump Admin releases Anthropic Mythos to be used by more than 100 US companies, agencies",
+      "description": "Over 100 companies and government agencies are reportedly authorized to use Mythos 5, including their non-American employees.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Trump Admin releases Anthropic Mythos to be used by more than 100 US companies, agencies",
+    "description": "Over 100 companies and government agencies are reportedly authorized to use Mythos 5, including their non-American employees.",
+    "link": "https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/",
+    "published": "2026-06-27T01:01:37+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "0c58f8509c799f7c4e36bdd2bfd822ec",
+    "_url_hash": "7c04713bfe410dd1ab90dd678d79740bfd4bc8bc7da699e9f9a2f35e5ed9d35f",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nTwo weeks into the ban that caused Anthropic to pull its powerful cybersecurity-oriented models, Mythos 5 and Fable 5, from the market, the Trump administration is softening its stance.\n\nIt is now allowing Anthropic to make Mythos 5 available to more than 100 specific U.S. government agencies and companies, including allowing the non-American employees at those organizations to access to the model, both Semafor and Reuters report. This list also includes Anthropic’s own non-American employees, who were included in the original ban that forbade non-Americans from accessing the models.\n\n---\n\n[Lähde: Wired]\nThe US government has eased the restrictions it imposed on Anthropic’s most advanced AI model, Claude Mythos 5, allowing the company to grant access to more than 100 US organizations, including large corporations and government agencies.\n\nIn a letter sent to Anthropic’s cofounder and chief compute officer Tom Brown obtained by WIRED, US Commerce Secretary Howard Lutnick told the AI lab it would permit certain trusted partners to access Mythos because he had “determined that appropriate safeguards are in place.” Semafor first reported the existence of the letter.\n\n“Anthropic has worked with the U.S. government to address risks associated with the Covered Models. These efforts have yielded significant progress,” Lutnick wrote.\n\nHowever, the government stopped short of permitting a broader rollout of the model, and said nothing about the fate of Claude Fable 5, the consumer-facing version of Mythos that Anthropic released with significant additional safeguards. Lutnick noted in his letter that the other requirements outlined in the initial directive he sent on June 12 remain in effect.\n\n“We received notice from the US government that Mythos 5, our strongest cybersecurity model, can be redeployed to a small group of cyber defenders and infrastructure providers,” Anthropic spokesperson Eduardo Maia Silva said in a statement to WIRED. “We are working to provision the approved set of providers and restore their access to Mythos 5 as quickly as possible. We are pleased to see this progress and continue to work with the government to expand access to Mythos 5 and make Fable 5 available for general use again.”\n\nAnthropic is still in discussions with the White House about restoring access to Fable 5, and they are expected to continue over the weekend, according to a person familiar with the matter. Both parties are hopeful the resolution of this incident will help inform a lasting policy framework for future model releases, the person said.\n\nThe partial reinstatement comes roughly two weeks after the White House sent an export control directive to Anthropic that required the company to limit foreign nationals from accessing Claude Mythos and Fable 5, including people working and living in the United States. In his latest letter, Lutnick wrote that organizations approved to use Mythos may now allow their foreign national employees to access the model, and Anthropic may do the same for its own foreign national employees.\n\nThe Trump administration grew concerned about A",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-06-27T01:13:54.014755+00:00",
+  "payload": {
+    "packet_id": "20260627T011122Z_e8bd730ff7",
+    "title": "Yhdysvallat höllentää rajoituksia Anthropicin Mythos 5 -mallin käytölle",
+    "summary": "Yhdysvaltain hallinto sallii Anthropicin tarjota Claude Mythos 5 -tekoälymallia yli sadalle hyväksytylle yhdysvaltalaiselle organisaatiolle. Päätös keventää kahden viikon takaista rajoitusta, joka koski myös ulkomaalaisia työntekijöitä.",
+    "content": "Yhdysvaltain hallinto on höllentänyt rajoituksia, jotka koskivat Anthropicin edistyneisiin tekoälymalleihin kuuluvaa Claude Mythos 5:tä. Yhtiö saa nyt antaa mallin käyttöön yli sadalle erikseen hyväksytylle yhdysvaltalaiselle organisaatiolle, mukaan lukien yrityksille ja viranomaisille, ja lupa kattaa myös näiden organisaatioiden ulkomaalaiset työntekijät.\n\n## Rajoitusta kevennettiin kahden viikon jälkeen\n\nPäätös tulee noin kaksi viikkoa sen jälkeen, kun Valkoinen talo oli määrännyt Anthropicille vientivalvontaan liittyvän rajoituksen. Sen seurauksena yhtiö veti markkinoilta kyberturvallisuuteen suuntautuneiksi kuvattuja mallejaan, Mythos 5:n ja Fable 5:n.\n\nAiempi linja kielsi ulkomaalaisilta pääsyn malleihin myös silloin, kun he työskentelivät tai asuivat Yhdysvalloissa. Nyt hyväksytyt organisaatiot voivat antaa Mythos 5:n käyttöoikeuden myös ulkomaalaisille työntekijöilleen. Sama koskee Anthropicin omia ulkomaalaisia työntekijöitä, jotka kuuluivat alkuperäisen kiellon piiriin.\n\nYhdysvaltain kauppaministeri Howard Lutnick perusteli päätöstä Anthropicille lähetetyssä kirjeessä sillä, että asianmukaiset suojatoimet ovat hänen arvionsa mukaan käytössä. Kirjeessä todettiin myös, että Anthropic on tehnyt Yhdysvaltain hallinnon kanssa työtä mallien riskeihin vastaamiseksi ja että työssä on saavutettu merkittävää edistystä.\n\n## Fable 5:n kohtalo on yhä auki\n\nMythos 5:n osittainen palauttaminen käyttöön ei vielä ratkaise Fable 5:n tilannetta. Anthropic käy edelleen keskusteluja Valkoisen talon kanssa siitä, voidaanko myös Fable 5:n käyttöoikeuksia palauttaa. Keskustelujen odotetaan jatkuvan viikonlopun aikana.\n\nTapauksen osapuolet toivovat, että ratkaisu auttaa muovaamaan pysyvämpää toimintamallia tulevia tekoälymallien julkaisuja varten. Kyse ei siis ole vain yhden mallin käyttöluvasta, vaan myös siitä, miten Yhdysvallat arvioi edistyneiden tekoälyjärjestelmien riskejä ja päättää, ketkä voivat käyttää niitä.\n\nPäätös merkitsee Anthropicin asiakkaille ja kumppaneille rajattua helpotusta. Käyttöoikeus ei avaudu yleisesti kaikille, vaan se koskee yli sataa erikseen hyväksyttyä yhdysvaltalaista organisaatiota, joiden katsotaan täyttävän hallinnon edellyttämät suojatoimet.",
+    "category": "Teknologia",
+    "tags": [
+      "tekoäly",
+      "Anthropic",
+      "Yhdysvallat",
+      "vientivalvonta",
+      "Claude Mythos 5"
+    ],
+    "summary_bullets": [
+      "Yhdysvallat sallii Claude Mythos 5:n käytön yli sadassa hyväksytyssä yhdysvaltalaisessa organisaatiossa.",
+      "Lupa kattaa myös hyväksyttyjen organisaatioiden ja Anthropicin omat ulkomaalaiset työntekijät.",
+      "Fable 5:n käyttöoikeuksista käydään edelleen keskusteluja Valkoisen talon kanssa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.9,
+    "journalist_note": "Artikkeli perustuu paketin lähteissä yhtenevästi kuvattuun rajoitusten osittaiseen höllentämiseen. Fable 5:n tilanteesta kerrotaan vain keskeneräisenä neuvotteluna, koska lopputulosta ei ole lähdeaineistossa vahvistettu."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260627T011122Z_e8bd730ff7\",\"title\":\"Yhdysvallat höllentää rajoituksia Anthropicin Mythos 5 -mallin käytölle\",\"summary\":\"Yhdysvaltain hallinto sallii Anthropicin tarjota Claude Mythos 5 -tekoälymallia yli sadalle hyväksytylle yhdysvaltalaiselle organisaatiolle. Päätös keventää kahden viikon takaista rajoitusta, joka koski myös ulkomaalaisia työntekijöitä.\",\"content\":\"Yhdysvaltain hallinto on höllentänyt rajoituksia, jotka koskivat Anthropicin edistyneisiin tekoälymalleihin kuuluvaa Claude Mythos 5:tä. Yhtiö saa nyt antaa mallin käyttöön yli sadalle erikseen hyväksytylle yhdysvaltalaiselle organisaatiolle, mukaan lukien yrityksille ja viranomaisille, ja lupa kattaa myös näiden organisaatioiden ulkomaalaiset työntekijät.\\n\\n## Rajoitusta kevennettiin kahden viikon jälkeen\\n\\nPäätös tulee noin kaksi viikkoa sen jälkeen, kun Valkoinen talo oli määrännyt Anthropicille vientivalvontaan liittyvän rajoituksen. Sen seurauksena yhtiö veti markkinoilta kyberturvallisuuteen suuntautuneiksi kuvattuja mallejaan, Mythos 5:n ja Fable 5:n.\\n\\nAiempi linja kielsi ulkomaalaisilta pääsyn malleihin myös silloin, kun he työskentelivät tai asuivat Yhdysvalloissa. Nyt hyväksytyt organisaatiot voivat antaa Mythos 5:n käyttöoikeuden myös ulkomaalaisille työntekijöilleen. Sama koskee Anthropicin omia ulkomaalaisia työntekijöitä, jotka kuuluivat alkuperäisen kiellon piiriin.\\n\\nYhdysvaltain kauppaministeri Howard Lutnick perusteli päätöstä Anthropicille lähetetyssä kirjeessä sillä, että asianmukaiset suojatoimet ovat hänen arvionsa mukaan käytössä. Kirjeessä todettiin myös, että Anthropic on tehnyt Yhdysvaltain hallinnon kanssa työtä mallien riskeihin vastaamiseksi ja että työssä on saavutettu merkittävää edistystä.\\n\\n## Fable 5:n kohtalo on yhä auki\\n\\nMythos 5:n osittainen palauttaminen käyttöön ei vielä ratkaise Fable 5:n tilannetta. Anthropic käy edelleen keskusteluja Valkoisen talon kanssa siitä, voidaanko myös Fable 5:n käyttöoikeuksia palauttaa. Keskustelujen odotetaan jatkuvan viikonlopun aikana.\\n\\nTapauksen osapuolet toivovat, että ratkaisu auttaa muovaamaan pysyvämpää toimintamallia tulevia tekoälymallien julkaisuja varten. Kyse ei siis ole vain yhden mallin käyttöluvasta, vaan myös siitä, miten Yhdysvallat arvioi edistyneiden tekoälyjärjestelmien riskejä ja päättää, ketkä voivat käyttää niitä.\\n\\nPäätös merkitsee Anthropicin asiakkaille ja kumppaneille rajattua helpotusta. Käyttöoikeus ei avaudu yleisesti kaikille, vaan se koskee yli sataa erikseen hyväksyttyä yhdysvaltalaista organisaatiota, joiden katsotaan täyttävän hallinnon edellyttämät suojatoimet.\",\"category\":\"Teknologia\",\"tags\":[\"tekoäly\",\"Anthropic\",\"Yhdysvallat\",\"vientivalvonta\",\"Claude Mythos 5\"],\"summary_bullets\":[\"Yhdysvallat sallii Claude Mythos 5:n käytön yli sadassa hyväksytyssä yhdysvaltalaisessa organisaatiossa.\",\"Lupa kattaa myös hyväksyttyjen organisaatioiden ja Anthropicin omat ulkomaalaiset työntekijät.\",\"Fable 5:n käyttöoikeuksista käydään edelleen keskusteluja Valkoisen talon kanssa.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.9,\"journalist_note\":\"Artikkeli perustuu paketin lähteissä yhtenevästi kuvattuun rajoitusten osittaiseen höllentämiseen. Fable 5:n tilanteesta kerrotaan vain keskeneräisenä neuvotteluna, koska lopputulosta ei ole lähdeaineistossa vahvistettu.\"}",
+  "article": {
+    "title": "Yhdysvallat höllentää rajoituksia Anthropicin Mythos 5 -mallin käytölle",
+    "description": "Yhdysvaltain hallinto sallii Anthropicin tarjota Claude Mythos 5 -tekoälymallia yli sadalle hyväksytylle yhdysvaltalaiselle organisaatiolle. Päätös keventää kahden viikon takaista rajoitusta, joka koski myös ulkomaalaisia työntekijöitä.",
+    "link": "https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/",
+    "published": "2026-06-27T01:01:37+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "0c58f8509c799f7c4e36bdd2bfd822ec",
+    "_url_hash": "7c04713bfe410dd1ab90dd678d79740bfd4bc8bc7da699e9f9a2f35e5ed9d35f",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nTwo weeks into the ban that caused Anthropic to pull its powerful cybersecurity-oriented models, Mythos 5 and Fable 5, from the market, the Trump administration is softening its stance.\n\nIt is now allowing Anthropic to make Mythos 5 available to more than 100 specific U.S. government agencies and companies, including allowing the non-American employees at those organizations to access to the model, both Semafor and Reuters report. This list also includes Anthropic’s own non-American employees, who were included in the original ban that forbade non-Americans from accessing the models.\n\n---\n\n[Lähde: Wired]\nThe US government has eased the restrictions it imposed on Anthropic’s most advanced AI model, Claude Mythos 5, allowing the company to grant access to more than 100 US organizations, including large corporations and government agencies.\n\nIn a letter sent to Anthropic’s cofounder and chief compute officer Tom Brown obtained by WIRED, US Commerce Secretary Howard Lutnick told the AI lab it would permit certain trusted partners to access Mythos because he had “determined that appropriate safeguards are in place.” Semafor first reported the existence of the letter.\n\n“Anthropic has worked with the U.S. government to address risks associated with the Covered Models. These efforts have yielded significant progress,” Lutnick wrote.\n\nHowever, the government stopped short of permitting a broader rollout of the model, and said nothing about the fate of Claude Fable 5, the consumer-facing version of Mythos that Anthropic released with significant additional safeguards. Lutnick noted in his letter that the other requirements outlined in the initial directive he sent on June 12 remain in effect.\n\n“We received notice from the US government that Mythos 5, our strongest cybersecurity model, can be redeployed to a small group of cyber defenders and infrastructure providers,” Anthropic spokesperson Eduardo Maia Silva said in a statement to WIRED. “We are working to provision the approved set of providers and restore their access to Mythos 5 as quickly as possible. We are pleased to see this progress and continue to work with the government to expand access to Mythos 5 and make Fable 5 available for general use again.”\n\nAnthropic is still in discussions with the White House about restoring access to Fable 5, and they are expected to continue over the weekend, according to a person familiar with the matter. Both parties are hopeful the resolution of this incident will help inform a lasting policy framework for future model releases, the person said.\n\nThe partial reinstatement comes roughly two weeks after the White House sent an export control directive to Anthropic that required the company to limit foreign nationals from accessing Claude Mythos and Fable 5, including people working and living in the United States. In his latest letter, Lutnick wrote that organizations approved to use Mythos may now allow their foreign national employees to access the model, and Anthropic may do the same for its own foreign national employees.\n\nThe Trump administration grew concerned about A",
+    "research_source": "multi",
+    "summary": "Yhdysvaltain hallinto sallii Anthropicin tarjota Claude Mythos 5 -tekoälymallia yli sadalle hyväksytylle yhdysvaltalaiselle organisaatiolle. Päätös keventää kahden viikon takaista rajoitusta, joka koski myös ulkomaalaisia työntekijöitä.",
+    "content": "Yhdysvaltain hallinto on höllentänyt rajoituksia, jotka koskivat Anthropicin edistyneisiin tekoälymalleihin kuuluvaa Claude Mythos 5:tä. Yhtiö saa nyt antaa mallin käyttöön yli sadalle erikseen hyväksytylle yhdysvaltalaiselle organisaatiolle, mukaan lukien yrityksille ja viranomaisille, ja lupa kattaa myös näiden organisaatioiden ulkomaalaiset työntekijät.\n\n## Rajoitusta kevennettiin kahden viikon jälkeen\n\nPäätös tulee noin kaksi viikkoa sen jälkeen, kun Valkoinen talo oli määrännyt Anthropicille vientivalvontaan liittyvän rajoituksen. Sen seurauksena yhtiö veti markkinoilta kyberturvallisuuteen suuntautuneiksi kuvattuja mallejaan, Mythos 5:n ja Fable 5:n.\n\nAiempi linja kielsi ulkomaalaisilta pääsyn malleihin myös silloin, kun he työskentelivät tai asuivat Yhdysvalloissa. Nyt hyväksytyt organisaatiot voivat antaa Mythos 5:n käyttöoikeuden myös ulkomaalaisille työntekijöilleen. Sama koskee Anthropicin omia ulkomaalaisia työntekijöitä, jotka kuuluivat alkuperäisen kiellon piiriin.\n\nYhdysvaltain kauppaministeri Howard Lutnick perusteli päätöstä Anthropicille lähetetyssä kirjeessä sillä, että asianmukaiset suojatoimet ovat hänen arvionsa mukaan käytössä. Kirjeessä todettiin myös, että Anthropic on tehnyt Yhdysvaltain hallinnon kanssa työtä mallien riskeihin vastaamiseksi ja että työssä on saavutettu merkittävää edistystä.\n\n## Fable 5:n kohtalo on yhä auki\n\nMythos 5:n osittainen palauttaminen käyttöön ei vielä ratkaise Fable 5:n tilannetta. Anthropic käy edelleen keskusteluja Valkoisen talon kanssa siitä, voidaanko myös Fable 5:n käyttöoikeuksia palauttaa. Keskustelujen odotetaan jatkuvan viikonlopun aikana.\n\nTapauksen osapuolet toivovat, että ratkaisu auttaa muovaamaan pysyvämpää toimintamallia tulevia tekoälymallien julkaisuja varten. Kyse ei siis ole vain yhden mallin käyttöluvasta, vaan myös siitä, miten Yhdysvallat arvioi edistyneiden tekoälyjärjestelmien riskejä ja päättää, ketkä voivat käyttää niitä.\n\nPäätös merkitsee Anthropicin asiakkaille ja kumppaneille rajattua helpotusta. Käyttöoikeus ei avaudu yleisesti kaikille, vaan se koskee yli sataa erikseen hyväksyttyä yhdysvaltalaista organisaatiota, joiden katsotaan täyttävän hallinnon edellyttämät suojatoimet.",
+    "category": "Teknologia",
+    "tags": [
+      "tekoäly",
+      "anthropic",
+      "yhdysvallat",
+      "vientivalvonta",
+      "claude mythos 5"
+    ],
+    "summary_bullets": [
+      "Yhdysvallat sallii Claude Mythos 5:n käytön yli sadassa hyväksytyssä yhdysvaltalaisessa organisaatiossa.",
+      "Lupa kattaa myös hyväksyttyjen organisaatioiden ja Anthropicin omat ulkomaalaiset työntekijät.",
+      "Fable 5:n käyttöoikeuksista käydään edelleen keskusteluja Valkoisen talon kanssa."
+    ],
+    "key_points": [
+      "Yhdysvallat sallii Claude Mythos 5:n käytön yli sadassa hyväksytyssä yhdysvaltalaisessa organisaatiossa.",
+      "Lupa kattaa myös hyväksyttyjen organisaatioiden ja Anthropicin omat ulkomaalaiset työntekijät.",
+      "Fable 5:n käyttöoikeuksista käydään edelleen keskusteluja Valkoisen talon kanssa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketin lähteissä yhtenevästi kuvattuun rajoitusten osittaiseen höllentämiseen. Fable 5:n tilanteesta kerrotaan vain keskeneräisenä neuvotteluna, koska lopputulosta ei ole lähdeaineistossa vahvistettu.",
+    "source_text": "Over 100 companies and government agencies are reportedly authorized to use Mythos 5, including their non-American employees.\n\nTwo weeks into the ban that caused Anthropic to pull its powerful cybersecurity-oriented models, Mythos 5 and Fable 5, from the market, the Trump administration is softening its stance. It is now allowing Anthropic to make Mythos 5 available to more than 100 specific U.S. government agencies and companies, including allowing the non-American employees at those organizations to access to the model, both Semafor and Reuters report. This list also includes Anthropic’s own non-American employees, who were included in the original ban that forbade non-Americans from accessing the models. ---\n\nAnthropic is still in discussions with the White House about restoring access to Fable 5, and they are expected to continue over the weekend, according to a person familiar with the matter. Both parties are hopeful the resolution of this incident will help inform a lasting policy framework for future model releases, the person said. The partial reinstatement comes roughly two weeks after the White House sent an export control directive to Anthropic that required the company to limit foreign nationals from accessing Claude Mythos and Fable 5, including people working and living in the United States. In his latest letter, Lutnick wrote that organizations approved to use Mythos may now allow their foreign national employees to access the model, and Anthropic may do the same for its own foreign national employees. The Trump administration grew concerned about A\n\nThe US government has eased the restrictions it imposed on Anthropic’s most advanced AI model, Claude Mythos 5, allowing the company to grant access to more than 100 US organizations, including large corporations and government agencies. In a letter sent to Anthropic’s cofounder and chief compute officer Tom Brown obtained by WIRED, US Commerce Secretary Howard Lutnick told the AI lab it would permit certain trusted partners to access Mythos because he had “determined that appropriate safeguards are in place.” Semafor first reported the existence of the letter. “Anthropic has worked with the U.S. government to address risks associated with the Covered Models. These efforts have yielded significant progress,” Lutnick wrote.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.9,
+    "degraded_mode": false,
+    "monica_packet_id": "20260627T011122Z_e8bd730ff7",
+    "image": "https://images.unsplash.com/photo-1758626104169-6835c0bd03e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxBSSUyMHRlY2hub2xvZ3klMjBvZmZpY2UlMjBtZWV0aW5nfGVufDF8MHx8fDE3ODI1MjMwODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1758626104169-6835c0bd03e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxBSSUyMHRlY2hub2xvZ3klMjBvZmZpY2UlMjBtZWV0aW5nfGVufDF8MHx8fDE3ODI1MjMwODR8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Yhdysvallat höllentää rajoituksia Anthropicin Mythos 5 -mallin käytölle",
+    "image_credit": "Photo by Jo Lin on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/laptop-displaying-ai-integration-logo-on-desk-qQrQcKqLhvs?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-06-27T01:18:06.192617+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1758626104169-6835c0bd03e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxBSSUyMHRlY2hub2xvZ3klMjBvZmZpY2UlMjBtZWV0aW5nfGVufDF8MHx8fDE3ODI1MjMwODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1758626104169-6835c0bd03e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxBSSUyMHRlY2hub2xvZ3klMjBvZmZpY2UlMjBtZWV0aW5nfGVufDF8MHx8fDE3ODI1MjMwODR8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false
+  },
+  "published_at": "2026-06-27T01:19:18.566165+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-06-27-yhdysvallat-hollentaa-rajoituksia-anthropicin-mythos-5-malli.md"
+  ]
+}

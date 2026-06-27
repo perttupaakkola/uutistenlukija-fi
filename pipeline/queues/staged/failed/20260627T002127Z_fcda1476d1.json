@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-27T00:21:27.100500+00:00",
+  "digest": "fcda1476d1",
+  "packet": {
+    "packet_id": "20260627T002127Z_fcda1476d1",
+    "created_at": "2026-06-27T00:21:27Z",
+    "headline_seed": "MM-kisojen pudotuspeleissä huima skenaario – Lionel Messille haetaan vastustajaa",
+    "description_seed": "IS seuraa MM-kisapäivää.",
+    "link": "https://www.is.fi/mm-futis/art-2000012105243.html",
+    "source": "IS Urheilu",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/mm-futis/art-2000012105243.html"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "MM-kisojen pudotuspeleissä huima skenaario – Lionel Messille haetaan vastustajaa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 121,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Sportti",
+        "IS Urheilu"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "MM-kisojen pudotuspeleissä huima skenaario – Lionel Messille haetaan vastustajaa",
+      "description": "IS seuraa MM-kisapäivää.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "MM-kisojen pudotuspeleissä huima skenaario – Lionel Messille haetaan vastustajaa",
+    "description": "IS seuraa MM-kisapäivää.",
+    "link": "https://www.is.fi/mm-futis/art-2000012105243.html",
+    "published": "2026-06-27T00:12:00+00:00",
+    "source": "IS Urheilu",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "dd7d9d31992620be034a61c7dda668b3",
+    "_url_hash": "ca11e6f93fc8a3662d3f4944b33120cdc3149c9c652378421c7956230cf609b2",
+    "source_tier": 1,
+    "category_hint": "Urheilu",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Urheilu",
+    "research": "[Lähde: Sportti]\nVuoden 2026 jalkapallon MM-kisat käynnistyvät hallitsevan maailmanmestarin Argentiinan osalta tiistaina Algeriaa vastaan.\n\nEnnakkoarvioiden perusteella Lionel Messin johtama joukkue ei kuitenkaan kuulu suurimpiin mestarisuosikkeihin.\n\nESPN:n asiantuntijaäänestyksessä Espanja ja Ranska keräsivät yhteensä 16 ääntä 19 mahdollisesta tulevaa maailmanmestaria valittaessa.\n\nEspanja nousi kaikkein vahvimmaksi suosikiksi, sillä se löytyi jokaisen vastaajan listalta.\n\nPeräti seitsemän toimittajaa uskoo joukkueen etenevän jälleen pitkälle turnauksessa, mutta yksikään ei valinnut sitä maailmanmestariksi.\n\nArgentiina voitti edelliset MM-kisat Qatarissa vuonna 2022 kaatamalla Ranskan ikimuistoisessa finaalissa.\n\nNyt joukkue tavoittelee harvinaista saavutusta, sillä peräkkäiset maailmanmestaruudet ovat jalkapallossa poikkeuksellisen vaikeita.\n\nLUE MYÖS: Silja Kosonen voitti kaikki – ei voinut käsittää miten pitkälle heitti (UrheiluAreena.fi)\n\nJalkapallo    27.06.2026 - 00:02     Salttu Forsström\n\nJalkapallo    26.06.2026 - 22:53     Salttu Forsström\n\nJalkapallo    26.06.2026 - 20:45     Salttu Forsström",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-27T00:23:19.078365+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja vähintään 250 sanan uutiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260627T002127Z_fcda1476d1\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja vähintään 250 sanan uutiseen.\"}"
+}
