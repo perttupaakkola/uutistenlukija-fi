@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-27T16:11:18.869388+00:00",
+  "digest": "0a25b27370",
+  "packet": {
+    "packet_id": "20260627T161118Z_0a25b27370",
+    "created_at": "2026-06-27T16:11:18Z",
+    "headline_seed": "Ketun käytös hämmästytti Turussa: ”Oltiin aika ihmeissään”",
+    "description_seed": "Asiantuntija arvelee, että ketun poikaset olivat lähistöllä. Iltalehden lukija oli koiransa kanssa iltalenkillä Turun Haritussa, kun hän huomasi tien toisella puolella lymyävän ketun. Lukija kiinnitti huomiota ketun huutamiseen. Kettu alkoi seurata lukijaa ja hänen koiraansa.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/d0e72cdc-7a87-40ad-be53-70caad747802",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/d0e72cdc-7a87-40ad-be53-70caad747802"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ketun käytös hämmästytti Turussa: ”Oltiin aika ihmeissään”"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Asiantuntija arvelee, että ketun poikaset olivat lähistöllä. Iltalehden lukija oli koiransa kanssa iltalenkillä Turun Haritussa, kun hän huomasi tien toisella puolella lymyävän ketun. Lukija kiinnitti huomiota ketun huutamiseen. Kettu alkoi seurata lukijaa ja hänen koiraansa.",
+        "word_count": 35,
+        "keyword_overlap": 28,
+        "strong_overlap": 21
+      }
+    ],
+    "source_text": "Asiantuntija arvelee, että ketun poikaset olivat lähistöllä. Iltalehden lukija oli koiransa kanssa iltalenkillä Turun Haritussa, kun hän huomasi tien toisella puolella lymyävän ketun. Lukija kiinnitti huomiota ketun huutamiseen. Kettu alkoi seurata lukijaa ja hänen koiraansa.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 70,
+      "selected_blocks": 1,
+      "selected_source_words": 35,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ketun käytös hämmästytti Turussa: ”Oltiin aika ihmeissään”",
+      "description": "Asiantuntija arvelee, että ketun poikaset olivat lähistöllä. Iltalehden lukija oli koiransa kanssa iltalenkillä Turun Haritussa, kun hän huomasi tien toisella puolella lymyävän ketun. Lukija kiinnitti huomiota ketun huutamiseen. Kettu alkoi seurata lukijaa ja hänen koiraansa.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Ketun käytös hämmästytti Turussa: ”Oltiin aika ihmeissään”",
+    "description": "Asiantuntija arvelee, että ketun poikaset olivat lähistöllä. Iltalehden lukija oli koiransa kanssa iltalenkillä Turun Haritussa, kun hän huomasi tien toisella puolella lymyävän ketun. Lukija kiinnitti huomiota ketun huutamiseen. Kettu alkoi seurata lukijaa ja hänen koiraansa.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/d0e72cdc-7a87-40ad-be53-70caad747802",
+    "published": "2026-06-27T18:32:41+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "e770bb07dd32fbe994d134aaa1027093",
+    "_url_hash": "2cc34368f4eebabeb44258f5cb5c9f6f5ba44b75324225ba6c82aa99cfca4060",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Asiantuntija arvelee, että ketun poikaset olivat lähistöllä. Iltalehden lukija oli koiransa kanssa iltalenkillä Turun Haritussa, kun hän huomasi tien toisella puolella lymyävän ketun. Lukija kiinnitti huomiota ketun huutamiseen. Kettu alkoi seurata lukijaa ja hänen koiraansa.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-06-27T16:13:21.016627+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täytesisältöä tai keksittyjä lisätietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260627T161118Z_0a25b27370\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman täytesisältöä tai keksittyjä lisätietoja.\"}"
+}

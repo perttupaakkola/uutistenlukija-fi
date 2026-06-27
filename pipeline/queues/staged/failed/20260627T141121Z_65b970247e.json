@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-27T14:11:21.154805+00:00",
+  "digest": "65b970247e",
+  "packet": {
+    "packet_id": "20260627T141121Z_65b970247e",
+    "created_at": "2026-06-27T14:11:21Z",
+    "headline_seed": "The fittest founder in the room got cancer. Here’s how he used AI to fight back.",
+    "description_seed": "When confronted with cancer, Connor Christou fed everything tied tied to his regime — blood results, scan data, wearable output, journal entries — into Claude.",
+    "link": "https://techcrunch.com/2026/06/27/the-fittest-founder-in-the-room-got-cancer-heres-how-he-used-ai-to-fight-back/",
+    "source": "TechCrunch",
+    "source_names": [],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/27/the-fittest-founder-in-the-room-got-cancer-heres-how-he-used-ai-to-fight-back/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "The fittest founder in the room got cancer. Here’s how he used AI to fight back."
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 128,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "TechCrunch"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "The fittest founder in the room got cancer. Here’s how he used AI to fight back.",
+      "description": "When confronted with cancer, Connor Christou fed everything tied tied to his regime — blood results, scan data, wearable output, journal entries — into Claude.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "The fittest founder in the room got cancer. Here’s how he used AI to fight back.",
+    "description": "When confronted with cancer, Connor Christou fed everything tied tied to his regime — blood results, scan data, wearable output, journal entries — into Claude.",
+    "link": "https://techcrunch.com/2026/06/27/the-fittest-founder-in-the-room-got-cancer-heres-how-he-used-ai-to-fight-back/",
+    "published": "2026-06-27T14:00:00+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "cd6b22d78df3fba4912e4f1cb88dafd6",
+    "_url_hash": "bb8596c30d2eb2b453c32900ebe8cac65c66e0fb087e2942ceb6a81787225b87",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nConno Christou doesn’t leave things to chance. He tracks his sleep with a Whoop band, cross-references it with an Oura ring, and gets nearly 100 biomarkers checked every year. He had been doing the annual bloodwork for four consecutive years, following the protocols of longevity researchers like Peter Attia and Rhonda Patrick. He was optimizing his supplements, his circadian rhythm, his protein intake.\n\nAt 35, building his second company, he was as dialed-in on the latest in health research as anyone he knew. His last checkup, in 2025, was green across the board. “It was the best I’d had in years,” he says.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-27T14:13:18.251319+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja yksityiskohtia julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260627T141121Z_65b970247e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja yksityiskohtia julkaistavan artikkelin kirjoittamiseen.\"}"
+}
