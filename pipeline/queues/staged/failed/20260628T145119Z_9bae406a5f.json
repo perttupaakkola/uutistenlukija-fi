@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-28T14:51:19.076586+00:00",
+  "digest": "9bae406a5f",
+  "packet": {
+    "packet_id": "20260628T145119Z_9bae406a5f",
+    "created_at": "2026-06-28T14:51:19Z",
+    "headline_seed": "Martti Puumalainen kamppaili pronssille Kiinan olympiakarsintaturnauksessa",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9575123",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9575123"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Martti Puumalainen kamppaili pronssille Kiinan olympiakarsintaturnauksessa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 210,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Martti Puumalainen kamppaili pronssille Kiinan olympiakarsintaturnauksessa",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Martti Puumalainen kamppaili pronssille Kiinan olympiakarsintaturnauksessa",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9575123",
+    "published": "2026-06-28T17:23:48+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "c36fbbd91f1c2fc2c0a75b581e1b9d69",
+    "_url_hash": "2622fd26a7f3659918da39a6e1aef02b76c9d3fc08648718c27fafddd5ce201e",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nYli 100 kilon sarjassa otellut Martti Puumalainen otti palkintokorokepaikan vahvoilla judosuorituksilla Kiinassa. Tämä oli Meidokania edustavalle Puumalaiselle uran kolmas GP-mitali.\n\n– Viikko sitten kilpailut menivät täysin pieleen, ja tänä viikonloppuna jäi Bad Omensin keikka näkemättä, koska olemme täällä Kiinassa. Siinä on enemmän kuin tarpeeksi motivaatiota ottaa näiden olympiakarsintojen ensimmäinen Grand Prix -mitali, kommentoi Puumalainen.\n\nPuumalainen aloitti turnauksen vahvasti kukistaen avauskierroksella Marokon Mohammed Lahboudin sidonnalla. Toisella kierroksella Romanian Darius Dobre joutui taipumaan suomalaisen nopeaan ja matalaan ippon-seoi-nage -käsiheittoon.\n\nPoolifinaalissa Puumalainen voitti Azerbaidžanin Dzhamal Gamzatkhanovin sidonnalla. Välierissä matka kuitenkin katkesi, kun sarjan voittanut Venäjän Tamerlan Bashaev osoittautui vahvemmaksi.\n\nPronssiottelu Venäjän Denis Batchaevia vastaan alkoi tiukasti. Vastustajan väkevä niskaote aiheutti Puumalaiselle kaksi varoitusta, mutta kokenut suomalainen säilytti malttinsa ja ratkaisi ottelun myöhemmin edukseen.\n\nPuumalainen nappasi jalkapyyhkäisyllä ensin waza-arin ja viimeisteli suorituksensa sidonnalla, josta tuomarit antoivat yukon.\n\nJudon olympiakarsinnat käynnistyivät juhannuksena Mongoliasta.\n\nKarsinnat kestävät kaksi vuotta, ja Qingdaon GP:ssä urheilijat keräsivät tärkeitä rankingpisteitä tulevia Los Angelesin olympialaisia varten.\n\nLauantaina otellut Eetu Ihanamäki (-81 kg) eteni poolifinaaliin ja lopulta keräilyihin, jossa Italian Manuel Parlati päätti suomalaisen urakan ipponin arvoisella jalkapyyhkäisyllä.\n\nSeitsemäs sija oli toinen peräkkäinen Ihanamäelle, joka sijoittui kevään EM-kisoissa viidenneksi. Suomalainen on aloittanut olympiakarsinnan vahvasti.\n\nIhanamäki on maailmanlistalla 11:s ja Puumalainen 15:s.\n\nSuomen ykkösjudoka, kolminkertainen arvokisamitalisti Luukas Saha jäi pois Kiinan kilpailusta sairastumisen vuoksi.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-28T14:53:20.017595+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan vähintään 250 sanan uutisen kirjoittamiseen.",
+  "raw_response": "│\n◇  Doctor warnings ────────────────────────────────────────────────────────╮\n│                                                                          │\n│  - Left migrated task registry sidecar in place because archive already  │\n│    exists: /home/pertt/.openclaw/tasks/runs.sqlite.migrated              │\n│                                                                          │\n├──────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260628T145119Z_9bae406a5f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan vähintään 250 sanan uutisen kirjoittamiseen.\"}"
+}
