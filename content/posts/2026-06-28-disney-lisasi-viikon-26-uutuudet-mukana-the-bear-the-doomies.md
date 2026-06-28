@@ -44,7 +44,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/disneyaan-lisattiin-viikolla-26-2026-nama-uutuudet/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
