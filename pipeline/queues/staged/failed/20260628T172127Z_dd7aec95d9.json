@@ -1,0 +1,192 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-28T17:21:27.768322+00:00",
+  "digest": "dd7aec95d9",
+  "packet": {
+    "packet_id": "20260628T172127Z_dd7aec95d9",
+    "created_at": "2026-06-28T17:21:27Z",
+    "headline_seed": "Three firefighters die battling huge wildfires on Colorado-Utah border",
+    "description_seed": "A number of blazes have been raging across Utah and Colorado, leading both governors to declare states of emergency.",
+    "link": "https://www.bbc.co.uk/news/articles/cp8l7mpmdggo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "FOX 13 Utah",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/cp8l7mpmdggo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Three firefighters die battling huge wildfires on Colorado-Utah border"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "A number of blazes have been raging across Utah and Colorado, leading both governors to declare states of emergency.",
+        "word_count": 19,
+        "keyword_overlap": 14,
+        "strong_overlap": 10
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A crew working to contain the Cottonwood Fire, one of several active blazes across Colorado and Utah Three firefighters were killed and two were injured while battling massive wildfires on the Colorado-Utah border on Saturday, officials say. The firefighters were part of a federal response team assigned to the Knowles and Gore fires. They were suddenly overwhelmed by flames and tried to take shelter, the Department of the Interior said. The two injured firefighters suffered burns and were taken to hospital for treatment. \"Our immediate focus is on supporting their families, friends, and fellow crewmates during this incredibly difficult time,\" the US Wildland Fire Service said of the firefighters, whose names have not been released.",
+        "word_count": 115,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "FOX 13 Utah",
+        "source_type": "research",
+        "text": "MESA COUNTY, Colorado — Three firefighters were killed Saturday while battling two wildfires near the Colorado-Utah border, the U.S. Wildland Fire Service announced. The agency said the federal firefighters died during an interagency response to the Knowles and Gore fires, which are among a number of fires burning near the Colorado-Utah Border. In a release, the department said the deaths occurred in a burnover incident resulting in shelter deployment. Two other firefighters were also injured, but their current condition remains unknown. \"Our immediate focus is on supporting their families, friends, and fellow crewmates during this incredibly difficult time,\" the agency wrote. \"The U.S. Wildland Fire Service stands united with the USDA Forest Service in grief and in our unwavering support for the loved ones left behind. Their bravery, dedication, and sacrifice will never be forgotten.\"",
+        "word_count": 135,
+        "keyword_overlap": 8,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The five firefighters were from two federal agencies that oversee the management of public lands, the US Wildland Fire Service and the US Forest Service. The wildland service, which is part of the US Department of the Interior, was established in January this year to streamline firefighting efforts across public lands. Why wildfires are becoming faster and more furious How climate change worsens heatwaves, droughts, wildfires and floods Governor Polis declared a state of emergency for Colorado on Saturday, authorising the state's National Guard to join the response efforts. \"I'm devastated about the loss of three heroic firefighters who died in the line of duty in Western Colorado,\" he said in a statement.",
+        "word_count": 113,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "A number of blazes have been raging across Utah and Colorado, leading both governors to declare states of emergency.\n\nA crew working to contain the Cottonwood Fire, one of several active blazes across Colorado and Utah Three firefighters were killed and two were injured while battling massive wildfires on the Colorado-Utah border on Saturday, officials say. The firefighters were part of a federal response team assigned to the Knowles and Gore fires. They were suddenly overwhelmed by flames and tried to take shelter, the Department of the Interior said. The two injured firefighters suffered burns and were taken to hospital for treatment. \"Our immediate focus is on supporting their families, friends, and fellow crewmates during this incredibly difficult time,\" the US Wildland Fire Service said of the firefighters, whose names have not been released.\n\nMESA COUNTY, Colorado — Three firefighters were killed Saturday while battling two wildfires near the Colorado-Utah border, the U.S. Wildland Fire Service announced. The agency said the federal firefighters died during an interagency response to the Knowles and Gore fires, which are among a number of fires burning near the Colorado-Utah Border. In a release, the department said the deaths occurred in a burnover incident resulting in shelter deployment. Two other firefighters were also injured, but their current condition remains unknown. \"Our immediate focus is on supporting their families, friends, and fellow crewmates during this incredibly difficult time,\" the agency wrote. \"The U.S. Wildland Fire Service stands united with the USDA Forest Service in grief and in our unwavering support for the loved ones left behind. Their bravery, dedication, and sacrifice will never be forgotten.\"\n\nThe five firefighters were from two federal agencies that oversee the management of public lands, the US Wildland Fire Service and the US Forest Service. The wildland service, which is part of the US Department of the Interior, was established in January this year to streamline firefighting efforts across public lands. Why wildfires are becoming faster and more furious How climate change worsens heatwaves, droughts, wildfires and floods Governor Polis declared a state of emergency for Colorado on Saturday, authorising the state's National Guard to join the response efforts. \"I'm devastated about the loss of three heroic firefighters who died in the line of duty in Western Colorado,\" he said in a statement.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 972,
+      "selected_blocks": 4,
+      "selected_source_words": 382,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "KYUK",
+        "KYUK",
+        "KYUK",
+        "KYUK",
+        "FOX 13 Utah",
+        "FOX 13 Utah",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "FOX 13 Utah",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Three firefighters die battling huge wildfires on Colorado-Utah border",
+      "description": "A number of blazes have been raging across Utah and Colorado, leading both governors to declare states of emergency.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Three firefighters die battling huge wildfires on Colorado-Utah border",
+    "description": "A number of blazes have been raging across Utah and Colorado, leading both governors to declare states of emergency.",
+    "link": "https://www.bbc.co.uk/news/articles/cp8l7mpmdggo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-28T16:33:50+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "416efc04a5f3c763a4297d1d7030a461",
+    "_url_hash": "357659932b885c7ec14e2ddefa280b720d7af9805ce3a0254ab9e1631ea48343",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nA crew working to contain the Cottonwood Fire, one of several active blazes across Colorado and Utah\n\nThree firefighters were killed and two were injured while battling massive wildfires on the Colorado-Utah border on Saturday, officials say.\n\nThe firefighters were part of a federal response team assigned to the Knowles and Gore fires. They were suddenly overwhelmed by flames and tried to take shelter, the Department of the Interior said.\n\nThe two injured firefighters suffered burns and were taken to hospital for treatment.\n\n\"Our immediate focus is on supporting their families, friends, and fellow crewmates during this incredibly difficult time,\" the US Wildland Fire Service said of the firefighters, whose names have not been released.\n\nThe Knowles and Gore fires have since spread and merged with other fires to form the Snyder Mesa fire, which as of Saturday had burnt around 28,000 acres of land, Colorado Governor Jared Polis's office said.\n\nThe deaths and injuries happened during a \"burnover incident\", the US Wildland Fire Service said. That is when a fire spreads so suddenly and rapidly that it overtakes personnel or equipment, cutting off escape routes and forcing trapped firefighters to deploy an emergency, last-resort shelter tent.\n\n\"The US Wildland Fire Service stands united with the USDA Forest Service in grief and in our unwavering support for the loved ones left behind,\" the service said. \"Their bravery, dedication, and sacrifice will never be forgotten.\"\n\nThe five firefighters were from two federal agencies that oversee the management of public lands, the US Wildland Fire Service and the US Forest Service.\n\nThe wildland service, which is part of the US Department of the Interior, was established in January this year to streamline firefighting efforts across public lands.\n\nWhy wildfires are becoming faster and more furious\n\nHow climate change worsens heatwaves, droughts, wildfires and floods\n\nGovernor Polis declared a state of emergency for Colorado on Saturday, authorising the state's National Guard to join the response efforts.\n\n\"I'm devastated about the loss of three heroic firefighters who died in the line of duty in Western Colorado,\" he said in a statement.\n\n\"To the loved ones of those lost, and to their fellow crew members - some who are still battling the flames – know that the State of Colorado mourns alongside you,\" the governor added.\n\nIn Utah, the largest of eleven active blazes is the Cottonwood Fire, which as of Sunday covered over 9\n\n---\n\n[Lähde: KYUK]\nThree firefighters have died and two others have been injured Saturday while they tackled blazes on the Colorado-Utah border, the U.S. Wildland Fire Service has announced. The agency said the crew members had been part of an interagency response to the Knowles and Gore fires.\n\n\"The U.S. Wildland Fire Service stands united with the USDA Forest Service in grief and in our unwavering support for the loved ones left behind,\" the service said in a statement on Facebook. \"Their bravery, dedication, and sacrifice will never be forgotten.\"\n\nIn a press release, the Department of the Interior said that the five firefighters were involved in a \"burnover incident\", which refers to when officials are unable to find an escape route, so have to shelter as best they can while a fire passes directly over them. The department said the two firefighters who survived were being treated for burn injuries.\n\nFires in Utah, Colorado and Arizona have been intensifying, thanks to days of low humidity, high temperatures and strong winds. The conditions have pushed fire behavior to extremes not commonly seen in the region, stretching resources and forcing the governors of both Utah and Colorado to declare emergencies.\n\nThe biggest blaze is the Cottonwood Fire, burning in rugged terrain in southern Utah's Beaver County, which has grown to more than 144 square miles and remains entirely uncontained. It is currently the largest wildfire burning anywhere in the United States.\n\nIt has already severely damaged the Eagle Point ski resort and destroyed summer cabins. Damage assessments were underway Saturday, though no final estimates of destroyed structures were yet available.\n\nOn Saturday, hundreds of residents in the towns of Marysvale, Junction and Circleville were placed on notice to leave as conditions worsened.\n\nAlso burning is the Snyder Fire, covering more than 28,000 acres. It began as the Snyder Mesa Fire on Saturday in east Utah's Grand County, but later combined with the smaller Jones and Knowles Fires in Colorado.\n\nAlyssa Mason, a spokesperson assigned to the Cottonwood Fire, told NPR that crews this weekend had been dealing with single-digit humidity and wind gusts of around 45 miles per hour, on top of fuel moisture readings between 2 and 8 percent.\n\nThose conditions grounded helicopters and other firefighting aircraft on Friday afternoon and again briefly on Saturday. The terrain has compounded an already difficult task, Morgan said, with the steep cliffs and canyon walls mak\n\n---\n\n[Lähde: FOX 13 Utah]\nMESA COUNTY, Colorado — Three firefighters were killed Saturday while battling two wildfires near the Colorado-Utah border, the U.S. Wildland Fire Service announced.\n\nThe agency said the federal firefighters died during an interagency response to the Knowles and Gore fires, which are among a number of fires burning near the Colorado-Utah Border.\n\nIn a release, the department said the deaths occurred in a burnover incident resulting in shelter deployment.\n\nTwo other firefighters were also injured, but their current condition remains unknown.\n\n\"Our immediate focus is on supporting their families, friends, and fellow crewmates during this incredibly difficult time,\" the agency wrote. \"The U.S. Wildland Fire Service stands united with the USDA Forest Service in grief and in our unwavering support for the loved ones left behind. Their bravery, dedication, and sacrifice will never be forgotten.\"\n\nThe exact details of the firefighters' deaths have not been released, but the U.S. Wildland Fire...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-28T17:25:02.200582+00:00",
+  "failure": "content too short: 236 words",
+  "payload": {
+    "packet_id": "20260628T172127Z_dd7aec95d9",
+    "title": "Kolme palomiestä kuoli maastopaloissa Coloradon ja Utahin rajalla",
+    "summary": "Kolme liittovaltion palomiestä on kuollut ja kaksi loukkaantunut sammutustöissä Yhdysvalloissa Coloradon ja Utahin rajaseudulla. Palomiehet olivat mukana Knowlesin ja Goren palojen torjunnassa, ja Colorado on julistanut hätätilan.",
+    "content": "Kolme liittovaltion palomiestä kuoli ja kaksi loukkaantui lauantaina sammutustöissä Yhdysvalloissa Coloradon ja Utahin rajaseudulla, missä useat maastopalot ovat kuormittaneet viranomaisten toimintaa. Palomiehet osallistuivat Knowlesin ja Goren palojen torjuntaan osana useiden viranomaisten yhteistä operaatiota, kun liekit yllättivät heidät nopeasti.\n\n## Palomiehet jäivät liekkien saartamiksi\n\nYhdysvaltain Wildland Fire Servicen mukaan kuolleet olivat liittovaltion palomiehiä. He menehtyivät tilanteessa, jota viranomaiset kuvasivat burnover-tapaukseksi: tuli eteni niin, että palomiehet joutuivat ottamaan käyttöön hätätilanteessa käytettävän suojautumisen. Sisäministeriön mukaan he yrittivät hakea suojaa liekkien yllätettyä heidät.\n\nKaksi muuta palomiestä loukkaantui samassa yhteydessä. Yhden lähdetiedon mukaan he saivat palovammoja ja heidät vietiin sairaalaan hoitoon. Loukkaantuneiden tämänhetkistä tilaa ei kerrottu julkisuuteen. Myöskään kuolleiden palomiesten nimiä ei ollut julkaistu.\n\n## Liittovaltion yksiköt mukana sammutustöissä\n\nViisi palomiestä kuului kahteen liittovaltion viranomaiseen, jotka vastaavat julkisten maa-alueiden hallinnasta ja niihin liittyvistä tehtävistä. Mukana olivat Yhdysvaltain Wildland Fire Service sekä Yhdysvaltain Forest Service. Wildland Fire Service toimii sisäministeriön alaisuudessa, ja se perustettiin tammikuussa yhtenäistämään julkisten maa-alueiden palontorjuntaa.\n\nKnowlesin ja Goren palot ovat osa laajempaa palotilannetta Coloradon ja Utahin alueella. Useita paloja on riehunut molemmissa osavaltioissa, ja tilanne on johtanut hätätoimiin. Lähdetietojen mukaan sekä Utahin että Coloradon kuvernöörit ovat julistaneet hätätilan palojen vuoksi.\n\n## Colorado kutsui kansalliskaartin tueksi\n\nColoradon kuvernööri Jared Polis julisti lauantaina osavaltioon hätätilan. Päätös mahdollistaa osavaltion kansalliskaartin käyttämisen sammutus- ja pelastustoimien tukena.\n\nPolis sanoi lausunnossaan olevansa järkyttynyt kolmen työtehtävissään Länsi-Coloradossa kuolleen palomiehen menetyksestä. Yhdysvaltain Wildland Fire Service kertoi keskittyvänsä kuolleiden palomiesten perheiden, ystävien ja työtovereiden tukemiseen vaikeassa tilanteessa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "maastopalot",
+      "Colorado",
+      "Utah",
+      "pelastustoimi"
+    ],
+    "summary_bullets": [
+      "Kolme liittovaltion palomiestä kuoli sammutustöissä Coloradon ja Utahin rajaseudulla.",
+      "Kaksi muuta palomiestä loukkaantui, ja ainakin palovammoista on kerrottu.",
+      "Colorado julisti hätätilan, jotta kansalliskaarti voidaan ottaa mukaan vastatoimiin."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu packetin neljään lähdeblokkiin. Tietoja on rajattu vahvistettuihin seikkoihin; loukkaantuneiden nykytilasta ei esitetä tarkempaa arviota."
+  },
+  "raw_response": "│\n◇  Doctor warnings ────────────────────────────────────────────────────────╮\n│                                                                          │\n│  - Left migrated task registry sidecar in place because archive already  │\n│    exists: /home/pertt/.openclaw/tasks/runs.sqlite.migrated              │\n│                                                                          │\n├──────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260628T172127Z_dd7aec95d9\",\"title\":\"Kolme palomiestä kuoli maastopaloissa Coloradon ja Utahin rajalla\",\"summary\":\"Kolme liittovaltion palomiestä on kuollut ja kaksi loukkaantunut sammutustöissä Yhdysvalloissa Coloradon ja Utahin rajaseudulla. Palomiehet olivat mukana Knowlesin ja Goren palojen torjunnassa, ja Colorado on julistanut hätätilan.\",\"content\":\"Kolme liittovaltion palomiestä kuoli ja kaksi loukkaantui lauantaina sammutustöissä Yhdysvalloissa Coloradon ja Utahin rajaseudulla, missä useat maastopalot ovat kuormittaneet viranomaisten toimintaa. Palomiehet osallistuivat Knowlesin ja Goren palojen torjuntaan osana useiden viranomaisten yhteistä operaatiota, kun liekit yllättivät heidät nopeasti.\\n\\n## Palomiehet jäivät liekkien saartamiksi\\n\\nYhdysvaltain Wildland Fire Servicen mukaan kuolleet olivat liittovaltion palomiehiä. He menehtyivät tilanteessa, jota viranomaiset kuvasivat burnover-tapaukseksi: tuli eteni niin, että palomiehet joutuivat ottamaan käyttöön hätätilanteessa käytettävän suojautumisen. Sisäministeriön mukaan he yrittivät hakea suojaa liekkien yllätettyä heidät.\\n\\nKaksi muuta palomiestä loukkaantui samassa yhteydessä. Yhden lähdetiedon mukaan he saivat palovammoja ja heidät vietiin sairaalaan hoitoon. Loukkaantuneiden tämänhetkistä tilaa ei kerrottu julkisuuteen. Myöskään kuolleiden palomiesten nimiä ei ollut julkaistu.\\n\\n## Liittovaltion yksiköt mukana sammutustöissä\\n\\nViisi palomiestä kuului kahteen liittovaltion viranomaiseen, jotka vastaavat julkisten maa-alueiden hallinnasta ja niihin liittyvistä tehtävistä. Mukana olivat Yhdysvaltain Wildland Fire Service sekä Yhdysvaltain Forest Service. Wildland Fire Service toimii sisäministeriön alaisuudessa, ja se perustettiin tammikuussa yhtenäistämään julkisten maa-alueiden palontorjuntaa.\\n\\nKnowlesin ja Goren palot ovat osa laajempaa palotilannetta Coloradon ja Utahin alueella. Useita paloja on riehunut molemmissa osavaltioissa, ja tilanne on johtanut hätätoimiin. Lähdetietojen mukaan sekä Utahin että Coloradon kuvernöörit ovat julistaneet hätätilan palojen vuoksi.\\n\\n## Colorado kutsui kansalliskaartin tueksi\\n\\nColoradon kuvernööri Jared Polis julisti lauantaina osavaltioon hätätilan. Päätös mahdollistaa osavaltion kansalliskaartin käyttämisen sammutus- ja pelastustoimien tukena.\\n\\nPolis sanoi lausunnossaan olevansa järkyttynyt kolmen työtehtävissään Länsi-Coloradossa kuolleen palomiehen menetyksestä. Yhdysvaltain Wildland Fire Service kertoi keskittyvänsä kuolleiden palomiesten perheiden, ystävien ja työtovereiden tukemiseen vaikeassa tilanteessa.\",\"category\":\"Ulkomaat\",\"tags\":[\"Yhdysvallat\",\"maastopalot\",\"Colorado\",\"Utah\",\"pelastustoimi\"],\"summary_bullets\":[\"Kolme liittovaltion palomiestä kuoli sammutustöissä Coloradon ja Utahin rajaseudulla.\",\"Kaksi muuta palomiestä loukkaantui, ja ainakin palovammoista on kerrottu.\",\"Colorado julisti hätätilan, jotta kansalliskaarti voidaan ottaa mukaan vastatoimiin.\"],\"content_type\":\"news\",\"editorial_reviewed\":true,\"confidence\":0.98,\"journalist_note\":\"Artikkeli perustuu packetin neljään lähdeblokkiin. Tietoja on rajattu vahvistettuihin seikkoihin; loukkaantuneiden nykytilasta ei esitetä tarkempaa arviota.\"}",
+  "writer_failure_feedback": {
+    "packet_id": "20260628T172127Z_dd7aec95d9",
+    "category": "Kotimaa",
+    "selected_source_words": 382,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 236,
+    "issues": [
+      "content too short: 236 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Kolme palomiestä kuoli maastopaloissa Coloradon ja Utahin rajalla",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-28T17:25:02.200031+00:00",
+    "repair_trigger": "pre_repair_word_count=236; selected_source_words=382; selected_source_blocks=4",
+    "pre_repair_word_count": 236,
+    "pre_repair_lead_word_count": 38,
+    "post_repair_word_count": 236,
+    "post_repair_lead_word_count": 38,
+    "selected_source_words_at_repair": 382,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 382,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 236 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:1b463f5035",
+      "2:BBC World:81a8c80fa8",
+      "3:FOX 13 Utah:12a4854be6",
+      "4:BBC World:e322ea1a2a"
+    ],
+    "final_issues": [
+      "content too short: 236 words"
+    ],
+    "recovered": false
+  }
+}
