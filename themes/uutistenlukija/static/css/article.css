@@ -57,67 +57,39 @@
 
 .single-article .content p { margin-bottom: 1.25rem; }
 
-.article-trust-note {
-  margin: 1.25rem 0 1.5rem;
-  padding: 0.85rem 1rem;
-  border-left: 3px solid var(--accent);
-  background: color-mix(in srgb, var(--accent) 6%, var(--card-bg));
-  color: var(--text-secondary);
-  font-family: var(--font-sans);
-  font-size: 0.86rem;
-  line-height: 1.55;
+.single-article .content a,
+.single-article .article-content a,
+.single-article .post-content a {
+  color: var(--accent);
+  font-weight: 650;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.09em;
+  text-underline-offset: 0.16em;
+  overflow-wrap: anywhere;
 }
 
-.article-trust-note strong {
-  color: var(--text);
-}
-
-@media (max-width: 600px) {
-  .article-trust-note {
-    margin: 1rem 0 1.25rem;
-    padding: 0.75rem 0.85rem;
-    font-size: 0.82rem;
-  }
-}
-
-[data-theme="dark"] .article-trust-note {
-  background: color-mix(in srgb, var(--accent) 9%, var(--card-bg));
+.single-article .content a:hover,
+.single-article .article-content a:hover,
+.single-article .post-content a:hover,
+.single-article .content a:focus-visible,
+.single-article .article-content a:focus-visible,
+.single-article .post-content a:focus-visible {
+  color: #a93226;
+  text-decoration-thickness: 0.14em;
 }
 
 .single-article .source-attribution {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.35rem 0.6rem;
-  margin: 0 0 1.25rem;
-  padding: 0.65rem 0.85rem;
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--accent);
-  border-radius: 4px;
-  background: color-mix(in srgb, var(--accent) 5%, var(--card-bg));
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
   font-family: var(--font-sans);
   font-size: 0.85rem;
-  line-height: 1.4;
   color: var(--text-secondary);
-}
-
-.single-article .source-attribution__label {
-  font-weight: 700;
-  color: var(--text);
 }
 
 .single-article .source-attribution a {
   color: var(--accent);
   text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-@media (max-width: 600px) {
-  .single-article .source-attribution {
-    margin-bottom: 1rem;
-    padding: 0.6rem 0.75rem;
-    font-size: 0.82rem;
-  }
 }
 .author-box {
   display: flex;
@@ -1104,7 +1076,7 @@
   padding: 1.25rem 1.5rem;
   border-left: 4px solid var(--accent, #3498db);
   background: var(--bg-secondary, #f8f9fa);
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 6px 6px 0;
 }
 .journalist-note__header {
   display: flex;
@@ -1124,10 +1096,10 @@
   align-items: center;
   gap: 0.25rem;
   margin-left: auto;
-  padding: 0.15em 0;
-  background: transparent;
-  color: #1f7a4d;
-  border-radius: 0;
+  padding: 0.2em 0.6em;
+  background: #27ae60;
+  color: #fff;
+  border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 600;
 }
