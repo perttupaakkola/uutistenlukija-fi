@@ -43,6 +43,11 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/tallainen-on-yrittajien-tyoelamaremontti-enemman-paikallista-sopimista-arkipyhiin-muutoksia-perhevapaiden-rahoitus-uudistettava/"
 source_domain: "yrittajat.fi"
+read_next: "2026-06-22-yrittajat-kannattaa-pisteytysta-tyoperaiseen-maahanmuuttoon"
+related_articles:
+  - 2026-06-22-yrittajat-kannattaa-pisteytysta-tyoperaiseen-maahanmuuttoon
+  - 2026-06-22-kolmasosa-lapsiperheiden-yksinyrittajista-jatti-perhevapaan
+  - 2026-06-23-pia-erlund-puhui-suomiareenassa-kohun-seurauksista-kiitoksia
 draft: false
 ---
 

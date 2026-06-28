@@ -43,6 +43,11 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/nain-moni-yksinyrittaja-jatti-perhevapaan-valiin/"
 source_domain: "yrittajat.fi"
+read_next: "2026-06-23-yrittajat-esittaa-tyoelaman-remonttia-lisaa-paikallista-sopi"
+related_articles:
+  - 2026-06-23-yrittajat-esittaa-tyoelaman-remonttia-lisaa-paikallista-sopi
+  - 2026-06-22-yrittajat-kannattaa-pisteytysta-tyoperaiseen-maahanmuuttoon
+  - 2026-06-23-pia-erlund-puhui-suomiareenassa-kohun-seurauksista-kiitoksia
 draft: false
 ---
 

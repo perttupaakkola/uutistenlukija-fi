@@ -43,6 +43,11 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/yrittajakaksikko-kunnostaa-retuperalla-ollutta-bunkkerimuseota-haluamme-etta-ihmiset-nakevat-mita-esi-isamme-ovat-tehneet/"
 source_domain: "yrittajat.fi"
+read_next: "2026-06-23-pia-erlund-puhui-suomiareenassa-kohun-seurauksista-kiitoksia"
+related_articles:
+  - 2026-06-23-pia-erlund-puhui-suomiareenassa-kohun-seurauksista-kiitoksia
+  - 2026-06-23-yrittajat-esittaa-tyoelaman-remonttia-lisaa-paikallista-sopi
+  - 2026-06-22-kolmasosa-lapsiperheiden-yksinyrittajista-jatti-perhevapaan
 briefing: true
 draft: false
 ---
