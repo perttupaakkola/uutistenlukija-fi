@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-28T03:51:20.561765+00:00",
+  "digest": "55d410842e",
+  "packet": {
+    "packet_id": "20260628T035120Z_55d410842e",
+    "created_at": "2026-06-28T03:51:20Z",
+    "headline_seed": "Koeajo: Nollasta sataan 3,9 s, toimintamatka 670 km – Polestar 5 on on sähköauto, joka ei jätä kylmäksi",
+    "description_seed": "Polestar pyrkii nyt haastamaan Saksan isoja valmistajia. Osaamistaan vakuutteleva ruotsalaisfirma toi markkinoille Ison Viitosen. Kävimme ajamassa sillä kolmessa maassa.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/b88ac9db-3a89-4fbe-a2ca-b701734131d0?utm_source=rss",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/b88ac9db-3a89-4fbe-a2ca-b701734131d0?utm_source=rss"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Koeajo: Nollasta sataan 3,9 s, toimintamatka 670 km – Polestar 5 on on sähköauto, joka ei jätä kylmäksi"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Polestar pyrkii nyt haastamaan Saksan isoja valmistajia. Osaamistaan vakuutteleva ruotsalaisfirma toi markkinoille Ison Viitosen. Kävimme ajamassa sillä kolmessa maassa.",
+        "word_count": 19,
+        "keyword_overlap": 17,
+        "strong_overlap": 14
+      }
+    ],
+    "source_text": "Polestar pyrkii nyt haastamaan Saksan isoja valmistajia. Osaamistaan vakuutteleva ruotsalaisfirma toi markkinoille Ison Viitosen. Kävimme ajamassa sillä kolmessa maassa.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 38,
+      "selected_blocks": 1,
+      "selected_source_words": 19,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Koeajo: Nollasta sataan 3,9 s, toimintamatka 670 km – Polestar 5 on on sähköauto, joka ei jätä kylmäksi",
+      "description": "Polestar pyrkii nyt haastamaan Saksan isoja valmistajia. Osaamistaan vakuutteleva ruotsalaisfirma toi markkinoille Ison Viitosen. Kävimme ajamassa sillä kolmessa maassa.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Koeajo: Nollasta sataan 3,9 s, toimintamatka 670 km – Polestar 5 on on sähköauto, joka ei jätä kylmäksi",
+    "description": "Polestar pyrkii nyt haastamaan Saksan isoja valmistajia. Osaamistaan vakuutteleva ruotsalaisfirma toi markkinoille Ison Viitosen. Kävimme ajamassa sillä kolmessa maassa.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/b88ac9db-3a89-4fbe-a2ca-b701734131d0?utm_source=rss",
+    "published": "2026-06-28T03:15:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "cb9b585ae986c0383c9d1327d323da86",
+    "_url_hash": "6a8b3598a05983346b18c491369cebf2b448146b927bf0ea613ddae6ef89304d",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Polestar pyrkii nyt haastamaan Saksan isoja valmistajia. Osaamistaan vakuutteleva ruotsalaisfirma toi markkinoille Ison Viitosen. Kävimme ajamassa sillä kolmessa maassa.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-28T03:53:31.170562+00:00",
+  "failure": "Lähdeaineisto on liian niukka: käytettävissä on vain lyhyt kuvaus ilman riittäviä tarkistettavia yksityiskohtia koeajosta, mallin tiedoista tai julkaisukontekstista.",
+  "raw_response": "│\n◇  Doctor warnings ────────────────────────────────────────────────────────╮\n│                                                                          │\n│  - Left migrated task registry sidecar in place because archive already  │\n│    exists: /home/pertt/.openclaw/tasks/runs.sqlite.migrated              │\n│                                                                          │\n├──────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260628T035120Z_55d410842e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka: käytettävissä on vain lyhyt kuvaus ilman riittäviä tarkistettavia yksityiskohtia koeajosta, mallin tiedoista tai julkaisukontekstista.\"}"
+}
