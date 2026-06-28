@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-28T21:01:27.232912+00:00",
+  "digest": "4b5c993bb7",
+  "packet": {
+    "packet_id": "20260628T210127Z_4b5c993bb7",
+    "created_at": "2026-06-28T21:01:27Z",
+    "headline_seed": "Tuska-festivaali teki kävijäennätyksen",
+    "description_seed": "",
+    "link": "https://yle.fi/a/74-20233831?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://yle.fi/a/74-20233831?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tuska-festivaali teki kävijäennätyksen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 174,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Stara",
+        "Stara"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tuska-festivaali teki kävijäennätyksen",
+      "description": "",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Tuska-festivaali teki kävijäennätyksen",
+    "description": "",
+    "link": "https://yle.fi/a/74-20233831?origin=rss",
+    "published": "2026-06-28T23:53:31+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "66cd83844f5b401490a3357e90b35038",
+    "_url_hash": "7ee8c7900e4614cb48077c99f8e8f766338f6a59d98361a133c86504f9e50337",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": true,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Stara]\nVaikka syksy on hädin tuskin vielä alkanut, odottaa moni jo innolla tulevan kesän festivaaleja. Helsingin Suvilahdessa kesäkuussa järjestettävä Tuska on julkistanut ensimmäiset ensi vuoden esiintyjänsä. Tänä vuonna festivaali teki yleisöennätyksensä.\n\nPääesiintyjien virkaa toimittavat brittiläinen Bring Me The Horizon ja yhdysvaltalainen Bad Omens. Vuonna 2004 Sheffieldissä perustettu Bring Me The Horizon kuuluu modernin metallin suurnimiin.\n\nYhtye on julkaissut seitsemän studioalbumia, joista viimeisin näki päivänvalon viime vuonna. Bring Me The Horizon esiintyi Tuskassa viimeksi vuonna 2024.\n\nBad Omens perustettiin Virginian osavaltiossa Yhdysvalloissa vuonna 2015. Modernia metalcorea soittavan yhtyeen oli niin ikään määrä esiintyä Tuskassa vuonna 2024. Yhtye kuitenkin joutui perumaan koko Euroopan-kiertueensa.\n\nMuita ulkomaisia Tuska-julkistuksia edustavat The Plot in You, Blood Incantation, Queensrÿche, Kublai Khan TX, Malevolence, Soilwork, Rivers of Nihil, Majestica, Melrose Avenue, The Callous Daoboys ja Neckbreakker.\n\nTuoreita suomalaisjulkistuksia ovat Ensiferum ja Bloodred Hourglass. Lisää esiintyjien julkistuksia on tiedossa myöhemmin.\n\nVoit lisätä Staran Googlen ensisijaiseksi lähteeksi klikkaamalla tästä ja ruksittamalla laatikon. Voit myös lukea lisää tähän artikkeliin liittyvistä teemoista ja aiheista, kuten Bring Me The Horizon, Tuska Festival tai laajemmin samasta aihealueesta Viihdeuutiset -osioistamme.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-28T21:03:19.861515+00:00",
+  "failure": "Paketissa ei ole valittuja lähdetekstejä eikä riittävästi varmistettuja tietoja vähintään 250 sanan uutisartikkeliin.",
+  "raw_response": "│\n◇  Doctor warnings ────────────────────────────────────────────────────────╮\n│                                                                          │\n│  - Left migrated task registry sidecar in place because archive already  │\n│    exists: /home/pertt/.openclaw/tasks/runs.sqlite.migrated              │\n│                                                                          │\n├──────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260628T210127Z_4b5c993bb7\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittuja lähdetekstejä eikä riittävästi varmistettuja tietoja vähintään 250 sanan uutisartikkeliin.\"}"
+}
