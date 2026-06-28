@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/jun/28/nsw-beaches-to-get-dawn-to-dusk-drone-patrols-in-34m-anti-shark-program"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
