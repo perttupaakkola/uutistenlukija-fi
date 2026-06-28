@@ -57,6 +57,27 @@
 
 .single-article .content p { margin-bottom: 1.25rem; }
 
+.single-article .content a,
+.single-article .article-content a,
+.single-article .post-content a {
+  color: var(--accent);
+  font-weight: 650;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.09em;
+  text-underline-offset: 0.16em;
+  overflow-wrap: anywhere;
+}
+
+.single-article .content a:hover,
+.single-article .article-content a:hover,
+.single-article .post-content a:hover,
+.single-article .content a:focus-visible,
+.single-article .article-content a:focus-visible,
+.single-article .post-content a:focus-visible {
+  color: #a93226;
+  text-decoration-thickness: 0.14em;
+}
+
 .article-trust-note {
   margin: 1.25rem 0 1.5rem;
   padding: 0.85rem 1rem;
