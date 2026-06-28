@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-28T06:31:44.760045+00:00",
+  "digest": "3767c2c00c",
+  "packet": {
+    "packet_id": "20260628T063144Z_3767c2c00c",
+    "created_at": "2026-06-28T06:31:44Z",
+    "headline_seed": "FC Lahden Momodou Sarrin kohtalo nauratti ja ihmetytti Oulun pienessä ryöstössä – \"Ei minulle noin ole ennen käynyt\"",
+    "description_seed": "FC Lahti haavoitti AC Oulun täydellistä kotisaldoa venymällä 1–1-tasapeliin. Lahti on kerännyt 13 pelistä 13 pinnaa.",
+    "link": "https://www.ess.fi/urheilu/9574718",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9574718"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "FC Lahden Momodou Sarrin kohtalo nauratti ja ihmetytti Oulun pienessä ryöstössä – \"Ei minulle noin ole ennen käynyt\""
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "FC Lahti haavoitti AC Oulun täydellistä kotisaldoa venymällä 1–1-tasapeliin. Lahti on kerännyt 13 pelistä 13 pinnaa.",
+        "word_count": 16,
+        "keyword_overlap": 10,
+        "strong_overlap": 8
+      }
+    ],
+    "source_text": "FC Lahti haavoitti AC Oulun täydellistä kotisaldoa venymällä 1–1-tasapeliin. Lahti on kerännyt 13 pelistä 13 pinnaa.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 32,
+      "selected_blocks": 1,
+      "selected_source_words": 16,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "FC Lahden Momodou Sarrin kohtalo nauratti ja ihmetytti Oulun pienessä ryöstössä – \"Ei minulle noin ole ennen käynyt\"",
+      "description": "FC Lahti haavoitti AC Oulun täydellistä kotisaldoa venymällä 1–1-tasapeliin. Lahti on kerännyt 13 pelistä 13 pinnaa.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "FC Lahden Momodou Sarrin kohtalo nauratti ja ihmetytti Oulun pienessä ryöstössä – \"Ei minulle noin ole ennen käynyt\"",
+    "description": "FC Lahti haavoitti AC Oulun täydellistä kotisaldoa venymällä 1–1-tasapeliin. Lahti on kerännyt 13 pelistä 13 pinnaa.",
+    "link": "https://www.ess.fi/urheilu/9574718",
+    "published": "2026-06-28T08:59:59+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "cf2ebaa140c3726d52f12537ddf0dc7a",
+    "_url_hash": "510720b056472d7c51d62651547e71cc2d6681f4e7b3dd194db5f4c7091f97c8",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "FC Lahti haavoitti AC Oulun täydellistä kotisaldoa venymällä 1–1-tasapeliin. Lahti on kerännyt 13 pelistä 13 pinnaa.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-28T06:33:24.696926+00:00",
+  "failure": "Lähdeaineisto on liian niukka julkaistavan vähintään 250 sanan artikkelin kirjoittamiseen ilman täyteainesta tai keksittyjä yksityiskohtia.",
+  "raw_response": "│\n◇  Doctor warnings ────────────────────────────────────────────────────────╮\n│                                                                          │\n│  - Left migrated task registry sidecar in place because archive already  │\n│    exists: /home/pertt/.openclaw/tasks/runs.sqlite.migrated              │\n│                                                                          │\n├──────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260628T063144Z_3767c2c00c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka julkaistavan vähintään 250 sanan artikkelin kirjoittamiseen ilman täyteainesta tai keksittyjä yksityiskohtia.\"}"
+}
