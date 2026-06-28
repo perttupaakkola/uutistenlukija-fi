@@ -43,7 +43,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/06/28/writer-ian-bogost-says-the-small-stuff-can-help-us-reclaim-our-lives-from-dematerialization/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
