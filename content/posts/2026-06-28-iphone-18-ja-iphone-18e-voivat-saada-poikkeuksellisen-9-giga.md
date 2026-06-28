@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/28/iphone-18e-ja-18e-saamassa-yllattavan-maaran-ram-kayttomuistia/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
