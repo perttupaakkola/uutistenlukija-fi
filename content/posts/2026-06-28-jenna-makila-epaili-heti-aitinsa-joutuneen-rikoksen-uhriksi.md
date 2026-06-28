@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/jennan-aiti-katosi-ja-kaikki-merkit-huusivat-halytysta-tiesin-heti/9358696"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
