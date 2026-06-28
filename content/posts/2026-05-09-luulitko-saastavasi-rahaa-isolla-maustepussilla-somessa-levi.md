@@ -1,5 +1,5 @@
 ---
-title: "Luulitko säästäväsi rahaa isolla maustepussilla? Somessa leviää video, joka saa katsomaan tuoteselostetta kahdesti"
+title: "Säästääkö iso maustepussi rahaa? Video nostaa esiin suolan ja sokerin"
 date: 2026-05-09T08:13:37.164554+00:00
 categories:
   - Talous
@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Instagram-video nostaa esiin, että iso maustepussi ei välttämättä ole paras diili, jos sisällössä on paljon suolaa ja sokeria."
+description: "Iso maustepussi voi näyttää halvalta, mutta suola ja sokeri muuttavat hintavertailua. Näin tarkistat, säästääkö pakkaus oikeasti rahaa."
 summary: "Instagramissa leviävä video väittää, että isot maustepussit voivat näyttää halvoilta kilohinnan perusteella, vaikka mukana voi olla paljon suolaa ja sokeria. Siksi pelkkä hintalappu ei aina kerro koko totuutta."
 journalist_note: |
   Juttu perustuu Instagram-reeliin ja siinä esitettyihin väitteisiin tuotteiden sisällöstä. Pakkausten ainesosat ja ravintosisällöt kannattaa tarkistaa aina suoraan tuoteselosteesta, koska vertailutuotteet eivät välttämättä ole täysin samoja.
@@ -36,7 +36,7 @@ source_url: "https://www.instagram.com/reel/DYCWeqstlCs/"
 draft: false
 ---
 
-Moni nappaa kaupasta ison maustepussin ajatellen tekevänsä fiksun ostoksen. Kilohinta näyttää usein pienempää purkkia tai pussia halvemmalta, mutta Instagramissa leviävä video muistuttaa, että säästö ei aina ole sitä miltä näyttää.
+Moni nappaa kaupasta ison maustepussin ajatellen tekevänsä fiksun ostoksen. Kilohinta näyttää usein pienempää purkkia tai pussia halvemmalta, mutta Instagramissa leviävä video muistuttaa, että arjen säästäminen vaatii myös tuoteselosteen lukemista.
 
 Treenipuro-tilin julkaisemassa reelissä nostetaan esiin ilmiö, jossa osa isoista mausteseoksista voi sisältää runsaasti lisättyä suolaa ja sokeria. Julkaisun viesti on, että kuluttaja voi maksaa mausteena tuotteesta, jossa merkittävä osa sisällöstä onkin jotain aivan muuta kuin itse maustetta.
 
