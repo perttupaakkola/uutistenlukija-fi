@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-28T11:31:21.549585+00:00",
+  "digest": "1e9c25cd4d",
+  "packet": {
+    "packet_id": "20260628T113121Z_1e9c25cd4d",
+    "created_at": "2026-06-28T11:31:21Z",
+    "headline_seed": "4-vuotiaat kaksos­tytöt kateissa Helsingissä",
+    "description_seed": "Kaikki havainnot tytöistä pitää ilmoittaa hätänumeroon.",
+    "link": "https://www.is.fi/kotimaa/art-2000012107312.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012107312.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "4-vuotiaat kaksos­tytöt kateissa Helsingissä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 99,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "yrittajat.fi",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "4-vuotiaat kaksos­tytöt kateissa Helsingissä",
+      "description": "Kaikki havainnot tytöistä pitää ilmoittaa hätänumeroon.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "4-vuotiaat kaksos­tytöt kateissa Helsingissä",
+    "description": "Kaikki havainnot tytöistä pitää ilmoittaa hätänumeroon.",
+    "link": "https://www.is.fi/kotimaa/art-2000012107312.html",
+    "published": "2026-06-28T11:29:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "2bd9d3d1eb24b1bfd334fe0476def810",
+    "_url_hash": "f53b61ca68fa46c5da61c73244bdc855e798259aed9a22260d1a388eb6d9cd3a",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: yrittajat.fi]\nYRITTÄJÄ, tule mukaan omiesi pariin! Liity Yrittäjiin.\n\nVaikutamme ja verkostoimme ympäri Suomea! Etsi täältä oma paikallisyhdistyksesi ja aluejärjestösi.\n\nTervetuloa Yrittäjien Padel-iltaan Lappeenrannan Padel-Zoneen!\n\nVoit tulla mukaan joko ensikertalaisena, kokemuksen omaavana tai jotain siltä väliltä, mahdollisuus on nimittäin tutustua lajiin, pelailla kevyesti tai kisailla turnauksessa vaihtuvin parein. Varustaudu urheiluvaattein ja -kengin, mailat ja pallot saamme hallilta.\n\nKoko halli on varattu käyttöömme. Pääsemme siis rennosti omalla porukalla pallottelemaan. Tarjolla pientä purtavaa K-Supermarket Piranasta.\n\nTapahtumaa toteuttamassa Etelä-Karjalan Yrittäjien lisäksi ovat myös vakuutusyhtiö LähiTapiola, Keskinäinen Työeläkevakuutusyhtiö Elo, OmaSP sekä Lappeenrannan Työterveys.\n\nOsallistuminen on maksutonta, mutta edellyttää ilmoittautumisen.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-28T11:33:26.151480+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "│\n◇  Doctor warnings ────────────────────────────────────────────────────────╮\n│                                                                          │\n│  - Left migrated task registry sidecar in place because archive already  │\n│    exists: /home/pertt/.openclaw/tasks/runs.sqlite.migrated              │\n│                                                                          │\n├──────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260628T113121Z_1e9c25cd4d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
