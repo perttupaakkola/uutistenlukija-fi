@@ -149,6 +149,14 @@ CATEGORY_QUERIES = {
     "Tiede":      "science research laboratory",
 }
 
+_ENTERTAINMENT_FALLBACK_TERMS = {
+    "netflix", "hbo", "hbo max", "disney", "disney+", "prime video",
+    "yle areena", "suoratoisto", "streaming", "elokuva", "elokuvat", "film",
+    "movie", "sarja", "sarjat", "sarjakausi", "series", "tv", "televisio",
+    "televisiosarja", "peli", "pelit", "game", "games", "actor", "näyttelijä",
+    "ohjaaja", "director",
+}
+
 
 def _normalize_category(category: str) -> str:
     category = (category or "").strip()
@@ -185,6 +193,18 @@ def _tokenize_terms(*parts: str) -> list[str]:
                 seen.add(cand)
                 tokens.append(cand)
     return tokens
+
+
+def blocks_broad_category_fallback(
+    title: str,
+    *,
+    summary: str = "",
+    key_points: list[str] | None = None,
+    content: str = "",
+) -> bool:
+    """Reject broad category fallback for entertainment/title-specific stories."""
+    haystack = " ".join([title or "", summary or "", " ".join(key_points or []), content or ""]).lower()
+    return any(term in haystack for term in _ENTERTAINMENT_FALLBACK_TERMS)
 
 
 def build_search_query(
@@ -397,6 +417,9 @@ def fetch_image_for_article(
         set_query_index = lambda x, y: _query_index.update({x: y})
 
     if not available_photos and category in CATEGORY_QUERIES:
+        if blocks_broad_category_fallback(title, summary=summary, key_points=key_points, content=content):
+            print(f"[unsplash] No fresh results for '{query}' — broad category fallback blocked")
+            return None
         fallback_query = CATEGORY_QUERIES[category]
         print(f"[unsplash] No fresh results for '{query}' → category fallback '{fallback_query}'")
         photos = _search(fallback_query)
@@ -450,12 +473,14 @@ def fetch_images_for_articles(articles: list, delay: float = 1.2) -> list:
 
         title = article.get("title", "")
         category = article.get("category", "Kotimaa")
+        key_points = list(article.get("key_points") or [])
+        key_points.extend(article.get("tags") or [])
 
         result = fetch_image_for_article(
             title,
             category,
             summary=article.get("summary", "") or "",
-            key_points=article.get("key_points") or [],
+            key_points=key_points,
             content=article.get("content", "") or "",
             inter_request_delay=delay,
         )
