@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/antti-kaikkonen-vaatii-helsinki-gardenin-asiakirjoja-julkisiksi-taytyyhan-joku-paperi-loytya/9359906"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
