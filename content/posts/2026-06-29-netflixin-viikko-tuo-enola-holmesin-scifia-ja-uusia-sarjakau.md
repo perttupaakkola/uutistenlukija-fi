@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/netflixin-uudet-sarjat-ja-elokuvat-viikolla-27-2026/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
