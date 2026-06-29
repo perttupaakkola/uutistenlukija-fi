@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-29T08:51:22.821221+00:00",
+  "digest": "156a87aaee",
+  "packet": {
+    "packet_id": "20260629T085122Z_156a87aaee",
+    "created_at": "2026-06-29T08:51:22Z",
+    "headline_seed": "Koripallovalintoja | MM-karsinnat",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9576281",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9576281"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Koripallovalintoja | MM-karsinnat"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 249,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Stara",
+        "Stara"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Koripallovalintoja | MM-karsinnat",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Koripallovalintoja | MM-karsinnat",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9576281",
+    "published": "2026-06-29T11:46:13+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "f320af97acd35ce58ba76926bc2088ce",
+    "_url_hash": "cdf7348744ada54582849da9e201aef9d9ddf2478ce4d2b7e61b4e60f37493e2",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Stara]\nRallikartturina ensimmäisen MM-voittonsa äskettäin upeasti ottanut Janni Hussi on nyt palannut Suomeen historiallisen voitokkaalta kisamatkaltaan.\n\nTeemu Suninen ja Janni Hussi voittivat WRC2-luokan Portugalin rallissa. He ajoivat maaliin voittajana Delta Rally Team -tallin Toyotalla, ja saivat kunnian nousta palkintokorokkeen keskelle.\n\nKisamatkaltaan kotiin päästyään Janni Hussi oli väsynyt, mutta onnellinen, kun hän kommentoi korkealla olevia tunnelmiaan tarinoissaan. Hän itsekin yrittää vielä saada selkoa siitä mitä on tapahtunut.\n\n– Kotona! Aika väsynyt muikkeli tässä kohtaa. Aikamoista, Janni yritti koota tuntemuksiaan.\n\n– Vähän joutuu itsekin pohtimaan, että mitähän tässä on tapahtunut viimeisen puolentoista viikon aikana. Lähdin vappuna. Aika hurjaa. Tosi mukava olla taas kotona. En mä osaa nyt oikein sanoa mitään, Janni kommentoi palattuaan voitokkaalta matkalta kotiin.\n\nHussi päätyi rallikartturiksi puolivahingossa erään suorassa radiolähetyksessä tapahtuneen keskustelun perusteella. Tuskin kovin moni kuulija tuolloin osasi odottaa, että Jannista tulisi vielä MM-osakilpailun voittaja. Nyt tämä tärkeä virstanpylväs on kuitenkin saavutettu.\n\nVähän joutuu itsekin pohtimaan, että mitähän tässä on tapahtunut viimeisen puolentoista viikon aikana.\n\nJannin kotona kaikki eivät kuitenkaan olleet pitäneet hänen pitkästä poissaolostaan.\n\n– Oli täällä kotona joku sentään antautunut. Hän antoi periksi, Hussi totesi ja esitteli yksinolosta uupunutta viherkasviaan.\n\nJanni Hussi on todellinen monitoimijulkkis, sillä menestyksekkään ralliuransa lisäksi hän on toiminut sekä yrittäjänä että juontajana niin radiossa kuin televisiossa. Taannoin hän juonsi esimerkiksi The Box -ohjelmaa televisiossa. Todennäköisesti Hussi nähdään tulevaisuudessa vielä monien muidenkin ohjelmien juontajana.\n\nVoit lisätä Staran Googlen ensisijaiseksi lähteeksi klikkaamalla tästä ja ruksittamalla laatikon. Voit myös lukea lisää tähän artikkeliin liittyvistä teemoista ja aiheista, kuten ralli tai laajemmin samasta aihealueesta Viihdeuutiset -osioistamme.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-29T08:55:01.105706+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260629T085122Z_156a87aaee\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

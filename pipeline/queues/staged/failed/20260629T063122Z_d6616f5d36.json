@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-29T06:31:22.747945+00:00",
+  "digest": "d6616f5d36",
+  "packet": {
+    "packet_id": "20260629T063122Z_d6616f5d36",
+    "created_at": "2026-06-29T06:31:22Z",
+    "headline_seed": "Sami Pajarin sijoitus koheni – kaksi kilpakumppania sai aikasakot Akropolis-rallin jälkeen",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9575752",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9575752"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Sami Pajarin sijoitus koheni – kaksi kilpakumppania sai aikasakot Akropolis-rallin jälkeen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 134,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Sportti.com"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Sami Pajarin sijoitus koheni – kaksi kilpakumppania sai aikasakot Akropolis-rallin jälkeen",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Sami Pajarin sijoitus koheni – kaksi kilpakumppania sai aikasakot Akropolis-rallin jälkeen",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9575752",
+    "published": "2026-06-29T09:26:18+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "e2f71b56200f092ac04be4650b273854",
+    "_url_hash": "4f22d48b4892052d0dba26505815edc967ea9a5b8446aa2598b3df58618445b0",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Sportti.com]\nKreikan MM-ralli päättyi sunnuntaipäivänä Sebastien Ogierin voittoon. Kilpailun jälkeen tulosluetteloon tuli kuitenkin muutoksia.\n\nWRC tiedotti antaneensa Fordin Josh McErleanille sekä Hyundain Adrien Fourmauxille minuutin aikasakot. Tuomion mukaan kumpikin lähti autollaan liikkeelle ilman, että heidän kartanlukijoillaan oli turvavyöt kiinnitettyinä.\n\nMcErlean ajoi kisassa neljänneksi, mutta putosi rangaistuksen myötä kuudenneksi. Fourmauxin loppusijoitus oli puolestaan seitsemäs.\n\nAikasakko oli etenkin McErleanille äärimmäisen kirvelevä, sillä neljäs sija olisi ollut hänen uran paras sijoitus MM-rallissa. Nyt neljänneksi nousi Sami Pajari.\n\nAikasakoilla oli myös vaikutus rallin MM-sarjaan, sillä alun perin kisassa seitsemänneksi ajanut MM-sarjan johtaja Elfyn Evans nousi viidenneksi. Samalla hän sai neljä pistettä lisää plakkariin ja ero Takamoto Katsutaan on nyt seitsemän pisteen sijasta 11.\n\nLUE MYÖS: Suomalainen moukarinainen laittoi bilevaihteen silmään (UrheiluAreena.fi)\n\nMoottoriurheilu    29.06.2026 - 09:10     Salttu Forsström\n\nMoottoriurheilu    28.06.2026 - 15:24     Salttu Forsström\n\nMoottoriurheilu    28.06.2026 - 13:15     Salttu Forsström",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-29T06:33:19.622427+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260629T063122Z_d6616f5d36\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmistettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

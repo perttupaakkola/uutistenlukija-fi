@@ -44,7 +44,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/tieyhteys-hailuodon-ja-mantereen-valilla-avautuu/9359538"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
