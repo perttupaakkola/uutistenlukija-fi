@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-28T22:41:14.891276+00:00",
+  "digest": "80cf95ce08",
+  "packet": {
+    "packet_id": "20260628T224114Z_80cf95ce08",
+    "created_at": "2026-06-28T22:41:14Z",
+    "headline_seed": "Venezuelan raunioista pelastettiin vauva ja äiti",
+    "description_seed": "Vauva ja äiti pelastuivat.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012107839.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012107839.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Venezuelan raunioista pelastettiin vauva ja äiti"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 198,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Venezuelan raunioista pelastettiin vauva ja äiti",
+      "description": "Vauva ja äiti pelastuivat.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Venezuelan raunioista pelastettiin vauva ja äiti",
+    "description": "Vauva ja äiti pelastuivat.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012107839.html",
+    "published": "2026-06-28T22:30:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "1892f4bbe6b77a8505fdfb4dae2e8716",
+    "_url_hash": "295795379ffd9604ceab8bda12b40bdff21dc080be4d627ba7821667483e0af5",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: Yle]\nPoliisi epäilee Ylen tietojen mukaan myös miestä Lohjan vauvamurhajutussa. Miestä alettiin epäillä pian äitiin kohdistuneen epäilyn jälkeen.\n\nEpäilyn tarkka rikosnimike ei ole tiedossa. Tiedossa ei myöskään ole se, onko epäilty mies vauvan isä. 19-vuotias nainen ja 23-vuotias mies asuvat yhdessä asunnossa, jossa henkirikoksen epäillään tapahtuneen.\n\nVauvan nuori äiti vangittiin eilen epäiltynä alle viikon ikäisen vauvansa murhasta. Miestä ei toistaiseksi ole esitetty vangittavaksi.\n\nKumpaakaan epäillyistä ei tiettävästi ole koskaan tuomittu rikoksesta.\n\nPoliisi vahvistaa, että murhasta epäiltyä 19-vuotiasta äitiä on kuultu. Mahdollisesta motiivista ja teon tarkemmista yksityiskohdista poliisi ei kuitenkaan vielä kerro.\n\nTutkinnanjohtaja, rikoskomisario Maria Hietajärvi sanoo Ylelle, että poliisi tiedottaa tutkinnan etenemisestä tällä tietoa ensi viikon alussa.\n\nLänsi-Uudenmaan poliisi epäilee, että äiti surmasi vastasyntyneen lapsensa viime viikon perjantaina Lohjalla.\n\nPoliisin mukaan yksityisasunnossa paikalla olleet henkilöt ilmoittivat tapahtumasta viranomaisille. Ensihoito elvytti lasta, mutta lapsi menehtyi tapahtumapaikalla.\n\nPoliisi kertoo, että se on kuulustellut tapahtuneeseen liittyen myös muita henkilöitä.\n\nPoliisin mukaan murhaa rikosnimikkeenä tukee esitutkinnan alussa esiin tulleet suunnitelmallisuuteen viittaavat seikat.\n\nMieheen kohdistuvasta epäilystä uutisoi ensimmäisenä Iltalehti.\n\nMuokattu 22. lokakuuta kello 11.20: Lisätty Iltalehden tiedot siitä, että myös miestä epäillään murhasta.\n\nMuokattu 22. lokakuuta kello 12.20. Muutettu Iltalehti-siteeraus Ylen omiksi tiedoiksi sen jälkeen, kun oma varmistus asiaan saatiin.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-28T22:43:25.493481+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja tapahtumapaikasta, ajasta tai olosuhteista julkaistavaa artikkelia varten.",
+  "raw_response": "│\n◇  Doctor warnings ────────────────────────────────────────────────────────╮\n│                                                                          │\n│  - Left migrated task registry sidecar in place because archive already  │\n│    exists: /home/pertt/.openclaw/tasks/runs.sqlite.migrated              │\n│                                                                          │\n├──────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260628T224114Z_80cf95ce08\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja tapahtumapaikasta, ajasta tai olosuhteista julkaistavaa artikkelia varten.\"}"
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-28T23:01:14.264579+00:00",
+  "digest": "e9f8a5b61a",
+  "packet": {
+    "packet_id": "20260628T230114Z_e9f8a5b61a",
+    "created_at": "2026-06-28T23:01:14Z",
+    "headline_seed": "Ennätykset | Kristiina Kangastalo-Hoda, 47, sai idean, ja nyt hän aikoo uida Suomesta Ruotsiin",
+    "description_seed": "Loimaalainen Kristiina Kangastalo-Hoda aikoo tehdä jotain, mihin yksikään nainen ei ole aiemmin ryhtynyt. Kylmä, nälkä, väsymys ja kipu kulkevat reissussa mukana.",
+    "link": "https://www.hs.fi/urheilu/art-2000012103765.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.hs.fi/urheilu/art-2000012103765.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ennätykset | Kristiina Kangastalo-Hoda, 47, sai idean, ja nyt hän aikoo uida Suomesta Ruotsiin"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Loimaalainen Kristiina Kangastalo-Hoda aikoo tehdä jotain, mihin yksikään nainen ei ole aiemmin ryhtynyt. Kylmä, nälkä, väsymys ja kipu kulkevat reissussa mukana.",
+        "word_count": 21,
+        "keyword_overlap": 18,
+        "strong_overlap": 12
+      }
+    ],
+    "source_text": "Loimaalainen Kristiina Kangastalo-Hoda aikoo tehdä jotain, mihin yksikään nainen ei ole aiemmin ryhtynyt. Kylmä, nälkä, väsymys ja kipu kulkevat reissussa mukana.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 42,
+      "selected_blocks": 1,
+      "selected_source_words": 21,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "HS Tuoreimmat"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ennätykset | Kristiina Kangastalo-Hoda, 47, sai idean, ja nyt hän aikoo uida Suomesta Ruotsiin",
+      "description": "Loimaalainen Kristiina Kangastalo-Hoda aikoo tehdä jotain, mihin yksikään nainen ei ole aiemmin ryhtynyt. Kylmä, nälkä, väsymys ja kipu kulkevat reissussa mukana.",
+      "category_hint": "Uutiset",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Ennätykset | Kristiina Kangastalo-Hoda, 47, sai idean, ja nyt hän aikoo uida Suomesta Ruotsiin",
+    "description": "Loimaalainen Kristiina Kangastalo-Hoda aikoo tehdä jotain, mihin yksikään nainen ei ole aiemmin ryhtynyt. Kylmä, nälkä, väsymys ja kipu kulkevat reissussa mukana.",
+    "link": "https://www.hs.fi/urheilu/art-2000012103765.html",
+    "published": "2026-06-28T23:00:00+00:00",
+    "source": "HS Tuoreimmat",
+    "source_domain": "hs.fi",
+    "language": "fi",
+    "fingerprint": "029d4e04bc11e682a86ff6365d4482da",
+    "_url_hash": "1a8610b8482d9c72112c41fd0b2855bb97dc92212fca8fd7aad09aeec04c241d",
+    "source_tier": 1,
+    "category_hint": "Uutiset",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Loimaalainen Kristiina Kangastalo-Hoda aikoo tehdä jotain, mihin yksikään nainen ei ole aiemmin ryhtynyt. Kylmä, nälkä, väsymys ja kipu kulkevat reissussa mukana.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-28T23:03:19.328043+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan artikkeliin ilman täydennyksiä tai keksittyjä yksityiskohtia.",
+  "raw_response": "│\n◇  Doctor warnings ────────────────────────────────────────────────────────╮\n│                                                                          │\n│  - Left migrated task registry sidecar in place because archive already  │\n│    exists: /home/pertt/.openclaw/tasks/runs.sqlite.migrated              │\n│                                                                          │\n├──────────────────────────────────────────────────────────────────────────╯\nplugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260628T230114Z_e9f8a5b61a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan artikkeliin ilman täydennyksiä tai keksittyjä yksityiskohtia.\"}"
+}
