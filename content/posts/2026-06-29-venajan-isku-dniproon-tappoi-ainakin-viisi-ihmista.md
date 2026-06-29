@@ -44,7 +44,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/venajalta-taas-tuhoisa-isku-dniproon-useita-kuollut/9359778"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
