@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/live/2026/jun/29/extreme-heat-europe-germany-poland-czechia-hungary-serbia-heatwave-nato-rutte-starmer-eu-latest-news-updates"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
