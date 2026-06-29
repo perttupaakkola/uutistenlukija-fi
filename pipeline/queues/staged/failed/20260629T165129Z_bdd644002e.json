@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-29T16:51:29.624945+00:00",
+  "digest": "bdd644002e",
+  "packet": {
+    "packet_id": "20260629T165129Z_bdd644002e",
+    "created_at": "2026-06-29T16:51:29Z",
+    "headline_seed": "Trumpin kyseen­alainen päätös torpattiin",
+    "description_seed": "Trump sanoo ryhtyvänsä välittömästi ”tarvittaviin toimenpiteisiin”.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012109947.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012109947.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trumpin kyseen­alainen päätös torpattiin"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 188,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Verkkouutiset",
+        "Verkkouutiset",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trumpin kyseen­alainen päätös torpattiin",
+      "description": "Trump sanoo ryhtyvänsä välittömästi ”tarvittaviin toimenpiteisiin”.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Trumpin kyseen­alainen päätös torpattiin",
+    "description": "Trump sanoo ryhtyvänsä välittömästi ”tarvittaviin toimenpiteisiin”.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012109947.html",
+    "published": "2026-06-29T16:44:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "7201a4bc08024a6a5fdd1085a10f2ef8",
+    "_url_hash": "d1cafeca145782435ef1ba8b91a3303e2162f9e0102a33d4b306c00fda90cc45",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: Verkkouutiset]\nUkrainan keskiviikkoöinen isku Moskovaan toteutettiin ainakin viidellä erilaisella droonityypillä, arvelee sodankäynnin asiantuntija H.I. Sutton Covert Shores -sivustollaan julkaisemassaan artikkelissa.\n\nIskun selkärangan muodostivat Antonov An-196 Ljutyi-droonit. Samanlainen drooni putosi maaliskuussa myös Kouvolan lähettyville Suomessa.\n\n50–75 kilogramman räjähdekuormalla varustettu drooni on verrattain suurikokoinen, ja sitä on käytetty laajasti iskuissa Venäjän öljyinfraan. Ljutyi-droonin tunnistaa erityisesti siitä, että droonin peräsin on kiinnitetty runkoon kahdella pitkällä, kapealla tangolla.\n\nSutton tekee myös uuden havainnon droonia koskien.\n\n– Havaituissa malleissa ei ollut laskeutumistelinettä. Tämä tarkoittaa, että ne laukaistiin käyttäen apuna katapulttia, tai ne oli varustettu tilapäisillä renkailla, jotka on suunniteltu putoamaan laukaisun jälkeen, Sutton pohtii.\n\nIskussa havaittiin myös FP-1 tai FP-2 Fire Point -drooneja. Nämä droonit tunnetaan siitä, että ne hyödyntävät Starlink-satelliitteja, joiden avulla videokuvaa droonista voidaan välittää ohjaajalle satojen tai jopa tuhansien kilometrien päähän.\n\nNäiden lisäksi Moskovan taivailla näkyi iranilaisperäistä Shahed-droonia muistuttava deltasiipinen Behemoth-drooni sekä samankaltainen Morok-drooni.\n\nKenties eriskummallisin kaupungin yllä lennellyt droonimalli oli kuitenkin BARS-drooni, joka on varustettu potkurin sijaan suihkuturbiinilla. Sitä on kutsuttu jopa risteilyohjukseksi, mutta käytännössä se on eräänlainen drooniohjus.\n\nYhdessä edellä mainittu droonikokoelma sai aikaan merkittävää vahinkoa muun muassa Moskovan laitamilla sijaitsevassa Kapotnjan öljynjalostamossa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-29T16:53:18.402922+00:00",
+  "failure": "Lähdepaketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260629T165129Z_bdd644002e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdepaketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja artikkelin kirjoittamiseen.\"}"
+}
