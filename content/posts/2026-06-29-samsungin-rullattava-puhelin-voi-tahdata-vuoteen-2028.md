@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/mobiili/mobiiliuutiset/samsungin-rullattavalla-naytolla-varustettu-puhelin-ei-liene-enaa-mahdottoman-kaukana/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
