@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-29T13:11:22.328659+00:00",
+  "digest": "ba3a18cdbc",
+  "packet": {
+    "packet_id": "20260629T131122Z_ba3a18cdbc",
+    "created_at": "2026-06-29T13:11:22Z",
+    "headline_seed": "Verottaja hakee padasjokelaista Niemisen Linjat oy:tä konkurssiin",
+    "description_seed": "Niemisen Linjat lopetti Padasjoen–Lahden välisen liikennöinnin jo elokuussa 2020.",
+    "link": "https://www.ess.fi/paikalliset/9577771",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9577771"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Verottaja hakee padasjokelaista Niemisen Linjat oy:tä konkurssiin"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 122,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Verottaja hakee padasjokelaista Niemisen Linjat oy:tä konkurssiin",
+      "description": "Niemisen Linjat lopetti Padasjoen–Lahden välisen liikennöinnin jo elokuussa 2020.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Verottaja hakee padasjokelaista Niemisen Linjat oy:tä konkurssiin",
+    "description": "Niemisen Linjat lopetti Padasjoen–Lahden välisen liikennöinnin jo elokuussa 2020.",
+    "link": "https://www.ess.fi/paikalliset/9577771",
+    "published": "2026-06-29T16:04:14+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "55fc0ac923e4a573daef9545b3eea5d7",
+    "_url_hash": "c418c2b29ac4fcc7beae398741692e75ebfb9275122549d705617312f089b757",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nVerohallinto on hakenut Wellbeing 365 oy:tä konkurssiin. Yritys on pyörittänyt Mikkelin Kyyhkylässä esimerkiksi vastaanottokeskustoimintaa vuosina 2022–2023.\n\nMaksukyvyttömyysrekisterin mukaan konkurssihakemus on jätetty Länsi-Uudenmaan käräjäoikeuteen torstaina 26. helmikuuta.\n\nWellbeing 365 hakeutui tammikuussa yrityssaneeraukseen.\n\nTammikuun lopulla päivitetyn yrityssaneeraushakemuksen liitteiden mukaan yrityksellä on Verohallinnolle velkaa 380 000 euroa. Muita velkoja on lisäksi lähes 140 000 euroa.\n\nVerohallinnon mukaan kyseessä on normaali käytäntö tämänkaltaisessa velkatilanteessa. Konkurssihakemus käsitellään siinä tapauksessa, että yrityssaneeraushakemus hylätään.\n\nSaneeraushakemuksen mukaan yhtiöllä ei ole tällä hetkellä lainkaan henkilöstö- tai vuokrakuluja.\n\nYrityksen tytäryhtiöt Kyyhkylä oy ja Kyyhkylän Kartano oy asetettiin viime kuukausina konkurssiin.\n\nYrityssaneeraushakemuksen mukaan talousvaikeudet johtuvat muun muassa tytäryhtiöiden talousvaikeuksista ja konkursseista sekä vastaanottokeskustoiminnan luultua aiemmasta päättymisestä.\n\nYhtiön toimitusjohtaja Leila Repo ei kommentoinut asiaa Ylelle.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-29T13:13:22.097269+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittävästi vahvistettuja yksityiskohtia julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260629T131122Z_ba3a18cdbc\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittävästi vahvistettuja yksityiskohtia julkaistavan artikkelin kirjoittamiseen.\"}"
+}
