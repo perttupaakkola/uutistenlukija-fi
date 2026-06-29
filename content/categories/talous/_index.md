@@ -5,7 +5,7 @@ hero_title: "Talous-uutiset"
 url: "/kategoriat/talous/"
 aliases:
   - "/categories/talous/"
-description: "Seuraa talousuutisia: korot, hinnat, työmarkkinat ja yritysten ratkaisut tiiviisti yhdellä sivulla."
+description: "Seuraa taloutta yritysten, hintojen, työmarkkinoiden ja arjen rahan näkökulmasta yhdessä päivittyvässä uutisvirrassa."
 og_image: "/images/og-talous.png"
 keywords:
   - "talousuutiset"
