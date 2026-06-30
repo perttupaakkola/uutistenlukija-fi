@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-30T11:41:20.784951+00:00",
+  "digest": "5f79a42303",
+  "packet": {
+    "packet_id": "20260630T114120Z_5f79a42303",
+    "created_at": "2026-06-30T11:41:20Z",
+    "headline_seed": "Orimattilan jättävä Kalle Larsson jäi finaalikaksikon ulkopuolelle Kustavissa",
+    "description_seed": "",
+    "link": "https://www.ess.fi/paikalliset/9580362",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9580362"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Orimattilan jättävä Kalle Larsson jäi finaalikaksikon ulkopuolelle Kustavissa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 169,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Orimattilan jättävä Kalle Larsson jäi finaalikaksikon ulkopuolelle Kustavissa",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Orimattilan jättävä Kalle Larsson jäi finaalikaksikon ulkopuolelle Kustavissa",
+    "description": "",
+    "link": "https://www.ess.fi/paikalliset/9580362",
+    "published": "2026-06-30T14:25:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "e83731b6e120a5f9bc49406762088477",
+    "_url_hash": "6a2b1e9355bc91c77c862b98e7c9187067955dc17e8a6dc194306368927b79e8",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nOrimattilan kaupunginvaltuusto sai maanantai-iltana päätettyä ensi vuoden talousarviosta.\n\nTalousarvio nojaa vahvasti terveyskeskuksen kiinteistön kauppaan, joka valtuuston maanantaisella päätöksellä toteutetaan vuoden 2026 aikana, kun kaupan ehdoista on sovittu tytäryhtiö Orimattilan Yrityskiinteistöt oy:n kanssa.\n\nValtuusto hyväksyi ensi vuoden talousarvion, joka on runsaat miljoona euroa ylijäämäinen.\n\nYlijäämään päästään terveyskeskuksen kiinteistön kaupalla. Valtuutetut merkitsivät talousarvioon kaupan hinta-arvioksi äänestyksen jälkeen 3,84 miljoonaa euroa.\n\nPerussuomalaisten valtuutettu Tero Rönkkö esitti 3,84 miljoonan euron hinta-arvion poistamista talousarviosta ja sen korvaamista nolla-arvolla, sillä kiinteistökauppoja ei vielä ole tehty, vaan kaupasta vasta neuvotellaan.\n\nOsa valtuutetuista kuitenkin katsoi, että nolla euroa ei ole realistinen luku, sillä kauppa on jollain hinnalla tarkoitus toteuttaa ensi vuonna.\n\nRönkön esitys kaatui äänestyksessä luvuin 9–22, joten hinta-arvio 3,84 miljoonaa euroa jäi voimaan.\n\nValtuusto myös lisäsi 20 000 euroa osallistuvaan budjetointiin.\n\nOrimattilan vuoden 2026 investointimenot ovat runsaat 6 miljoonaa euroa. Valtuutettujen päätöksellä vuosille 2027–2028 esitetty tenniskentän rakentaminen toteutetaan jo vuonna 2026.\n\nKiinteistöyhtiön kauppa on mutkistanut Orimattilan talousarvion valmistelua ja johtanut muun muassa kaupunginjohtaja Kalle Larssonin saamaan suulliseen huomautukseen. Maanantain kokouksessa myös jätettiin valtuustoaloite tilapäisen valiokunnan perustamiseksi.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-30T11:43:20.299228+00:00",
+  "failure": "Paketissa ei ole lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan uutisen kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260630T114120Z_5f79a42303\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan uutisen kirjoittamiseen.\"}"
+}
