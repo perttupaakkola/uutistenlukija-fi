@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-30T10:21:24.488776+00:00",
+  "digest": "b23d04f953",
+  "packet": {
+    "packet_id": "20260630T102124Z_b23d04f953",
+    "created_at": "2026-06-30T10:21:24Z",
+    "headline_seed": "Patrik Laineesta uusi huhu – näihin seuroihin hyökkääjän nimi on liitetty",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9579931",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9579931"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Patrik Laineesta uusi huhu – näihin seuroihin hyökkääjän nimi on liitetty"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 191,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Sportti",
+        "Sportti"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Patrik Laineesta uusi huhu – näihin seuroihin hyökkääjän nimi on liitetty",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Patrik Laineesta uusi huhu – näihin seuroihin hyökkääjän nimi on liitetty",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9579931",
+    "published": "2026-06-30T13:10:51+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "f943c1d1c4d7c31e4eb680909c59de8d",
+    "_url_hash": "94c30f1ad8ae3c555378fc5c4c5b182c95b7b4e16c5afeab7d889fec5fecb0b8",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Sportti]\nPatrik Laineen uran NHL:ssä on tällä hetkellä pahassa vastatuulessa. Laineen tilanteessa ei välttämättä ole muutosta positiiviseen luvassa.\n\nLaine ilmoittautui kesken viime kauden pelaajien hoito-ohjelmaan hoidattamaan mielenterveyttään. Laineella oli jo pitkään ollut vaikeaa Columbuksessa loukkaantumisten ja tehottomuuden kanssa.\n\nLaine ja Columbuksen seurajohto sopivat viime kuussa, että Laineelle pyritään etsimään uutta seuraa. Näin hän saisi tuoreen startin jossain uudessa ympäristössä.\n\nCarolina Hurricanesin tiedettiin olevan Laineesta kiinnostunut ja heillä olisi ollut palkkakatossa tilaa Laineen hankkimiseksi. Heillä on kuitenkin kolme rajoitettua vapaa agenttia vielä sopimatta, joten Laineen 8,7 miljoonan dollarin liksa olisi ollut liian korkea.\n\nThe Athleticin NHL-toimittaja Aaron Portzlinen mukaan tilanne alkaa Laineen osalta näyttää huolestuttavalta. Hän arvioi, että suurin osa Laineesta kiinnostuneista joukkkueista on jo tarpeensa pelaajamarkkinoilta täyttänyt ja Laine uhkaa jäädä ilman uutta osoitetta.\n\nLaineella on huomattavan korkea palkka hänen muutaman edelliskauden näyttöihin verrattuna ja sopimusta on jäljellä vielä kaksi kautta. Laine on kuitenkin osoittanut parhaimmillaan olevansa yksi NHL:n vaarallisimmista hyökkääjistä.\n\nLue myös: Konsta Helenius teki NHL-sopimuksen – ”Näemme voittavan jääkiekkoilijan”\n\nLue myös: NHL:ssä hierotaan jättisopimusta\n\nLUE MYÖS: Ella Junnilan ”kansalaisuus muuttui ranskalaiseksi” (UrheiluAreena.fi)\n\nJääkiekko    30.06.2026 - 11:14     Salttu Forsström\n\nJääkiekko    30.06.2026 - 10:21     Salttu Forsström\n\nJääkiekko    30.06.2026 - 09:18     Salttu Forsström",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-30T10:23:18.462057+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä tai tarkistettavia yksityiskohtia huhun sisällöstä, seuroista tai ajankohdasta.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260630T102124Z_b23d04f953\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä tai tarkistettavia yksityiskohtia huhun sisällöstä, seuroista tai ajankohdasta.\"}"
+}

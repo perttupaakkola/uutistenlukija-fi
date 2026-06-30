@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/oululaisyritys-kehittaa-isoja-ilmalampopumppuja-jotka-eivat-pelasty-paukkupakkasia-hyodyt-merkittavia/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
