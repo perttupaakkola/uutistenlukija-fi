@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/kysely-noin-joka-neljannella-yrityksella-ongelmia-yritystilin-kanssa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
