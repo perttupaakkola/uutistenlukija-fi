@@ -43,7 +43,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/hurjan-hintaisia-pehmoleluja-vintedissa-ihmiskauppavaitteita-tutkitaan-useissa-maissa-reagoitu/9359594"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
