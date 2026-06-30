@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-30T01:11:16.821143+00:00",
+  "digest": "671ebbcad9",
+  "packet": {
+    "packet_id": "20260630T011116Z_671ebbcad9",
+    "created_at": "2026-06-30T01:11:16Z",
+    "headline_seed": "Stubbille suora kysymys väleistä Trumpiin – Näin hän vastaa",
+    "description_seed": "Tasavallan presidentti Alexander Stubb oli Politicon haastateltavana. Tasavallan presidentti Alexander Stubb kommentoi muutoksia, joita on tapahtunut Yhdysvaltain presidentti Donald Trumpin toisella kaudella. Stubb puhuu asiasta Politicon haastattelussa, jossa toimittaja Dasha Burns nostaa esiin Stubbin saaman lempinimen.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/49a736db-71f8-41c2-8b6e-d6e0939012cf?utm_source=rss",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/49a736db-71f8-41c2-8b6e-d6e0939012cf?utm_source=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Stubbille suora kysymys väleistä Trumpiin – Näin hän vastaa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Tasavallan presidentti Alexander Stubb oli Politicon haastateltavana. Tasavallan presidentti Alexander Stubb kommentoi muutoksia, joita on tapahtunut Yhdysvaltain presidentti Donald Trumpin toisella kaudella. Stubb puhuu asiasta Politicon haastattelussa, jossa toimittaja Dasha Burns nostaa esiin Stubbin saaman lempinimen.",
+        "word_count": 36,
+        "keyword_overlap": 26,
+        "strong_overlap": 19
+      }
+    ],
+    "source_text": "Tasavallan presidentti Alexander Stubb oli Politicon haastateltavana. Tasavallan presidentti Alexander Stubb kommentoi muutoksia, joita on tapahtunut Yhdysvaltain presidentti Donald Trumpin toisella kaudella. Stubb puhuu asiasta Politicon haastattelussa, jossa toimittaja Dasha Burns nostaa esiin Stubbin saaman lempinimen.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 72,
+      "selected_blocks": 1,
+      "selected_source_words": 36,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Stubbille suora kysymys väleistä Trumpiin – Näin hän vastaa",
+      "description": "Tasavallan presidentti Alexander Stubb oli Politicon haastateltavana. Tasavallan presidentti Alexander Stubb kommentoi muutoksia, joita on tapahtunut Yhdysvaltain presidentti Donald Trumpin toisella kaudella. Stubb puhuu asiasta Politicon haastattelussa, jossa toimittaja Dasha Burns nostaa esiin Stubbin saaman lempinimen.",
+      "category_hint": "Ulkomaat",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Stubbille suora kysymys väleistä Trumpiin – Näin hän vastaa",
+    "description": "Tasavallan presidentti Alexander Stubb oli Politicon haastateltavana. Tasavallan presidentti Alexander Stubb kommentoi muutoksia, joita on tapahtunut Yhdysvaltain presidentti Donald Trumpin toisella kaudella. Stubb puhuu asiasta Politicon haastattelussa, jossa toimittaja Dasha Burns nostaa esiin Stubbin saaman lempinimen.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/49a736db-71f8-41c2-8b6e-d6e0939012cf?utm_source=rss",
+    "published": "2026-06-30T03:51:23+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "badfec3328e49a460bf4c675cbd1d7f0",
+    "_url_hash": "79c5ae07aedfa65bbad41f888a0d0032713cabb301f296d61eeca2115d499a55",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Tasavallan presidentti Alexander Stubb oli Politicon haastateltavana. Tasavallan presidentti Alexander Stubb kommentoi muutoksia, joita on tapahtunut Yhdysvaltain presidentti Donald Trumpin toisella kaudella. Stubb puhuu asiasta Politicon haastattelussa, jossa toimittaja Dasha Burns nostaa esiin Stubbin saaman lempinimen.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-06-30T01:13:21.264662+00:00",
+  "failure": "Lähdeaineisto on liian niukka: se ei kerro Stubbin varsinaista vastausta, haastattelun tarkkaa sisältöä tai riittäviä taustatietoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260630T011116Z_671ebbcad9\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka: se ei kerro Stubbin varsinaista vastausta, haastattelun tarkkaa sisältöä tai riittäviä taustatietoja julkaistavan artikkelin kirjoittamiseen ilman keksittyjä yksityiskohtia.\"}"
+}
