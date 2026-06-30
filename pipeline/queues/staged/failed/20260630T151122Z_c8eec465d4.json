@@ -1,0 +1,83 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-30T15:11:22.652035+00:00",
+  "digest": "c8eec465d4",
+  "packet": {
+    "packet_id": "20260630T151122Z_c8eec465d4",
+    "created_at": "2026-06-30T15:11:22Z",
+    "headline_seed": "X now offers an MCP server to make its platform easier for AI tools to use",
+    "description_seed": "X has launched a hosted MCP server, making it easier for developers to connect AI applications with the company’s API.",
+    "link": "https://techcrunch.com/2026/06/30/x-now-offers-an-mcp-server-to-make-its-platform-easier-for-ai-tools-to-use/",
+    "source": "TechCrunch",
+    "source_names": [],
+    "source_urls": [
+      "https://techcrunch.com/2026/06/30/x-now-offers-an-mcp-server-to-make-its-platform-easier-for-ai-tools-to-use/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "X now offers an MCP server to make its platform easier for AI tools to use"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 7,
+      "candidate_source_words": 738,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Morningstar",
+        "Morningstar",
+        "Morningstar",
+        "SiliconANGLE",
+        "SiliconANGLE",
+        "SiliconANGLE",
+        "TechCrunch"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "X now offers an MCP server to make its platform easier for AI tools to use",
+      "description": "X has launched a hosted MCP server, making it easier for developers to connect AI applications with the company’s API.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "X now offers an MCP server to make its platform easier for AI tools to use",
+    "description": "X has launched a hosted MCP server, making it easier for developers to connect AI applications with the company’s API.",
+    "link": "https://techcrunch.com/2026/06/30/x-now-offers-an-mcp-server-to-make-its-platform-easier-for-ai-tools-to-use/",
+    "published": "2026-06-30T15:08:42+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "dfff3fb3ef96eab6b0273794a96e48f7",
+    "_url_hash": "e87bcd787cee015f9d79255ea4a1ac175301803e5121f40fcf901d3c12606c6f",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Morningstar]\nBlend Launches Autopilot MCP Server, Opening Its Lending Platform to FI-Built AI Agents\n\nLenders and partners can now build and deploy custom AI agents across the full origination lifecycle through a single interface\n\nBlend Labs, Inc. (NYSE: BLND), a leading digital origination platform for banks, credit unions, and mortgage lenders, today announced the launch of Autopilot MCP, a server built on Model Context Protocol, the emerging open standard for AI agent connectivity, that gives authorized agents secure, programmatic access to the full Blend platform.\n\nFor lenders and partners, Autopilot MCP opens a new category of possibility: the ability to build and deploy AI agents tailored to their own workflows, guidelines, and borrower experiences, without rebuilding the infrastructure underneath.\n\nSolving the Orchestration Problem in Lending\n\nBefore MCP, deploying AI in lending required a separate integration for every system an agent needed to touch. And in mortgage, that's dozens of systems before a single loan closes: credit bureaus, pricing engines, underwriting platforms, title companies, compliance tools, disclosure systems, most of them built decades apart and never designed to work together. Each new connection brought its own engineering project, its own security review, its own compliance sign-off.\n\nThe Full Lending Platform, Now Accessible to Custom AI Agents\n\nWith Autopilot MCP, any agent, Blend-built, lender-built, or partner-built, can access Blend's full origination stack through a single interface, from credit and underwriting through compliance, disclosures, and closing.\n\nThe release introduces several core capabilities:\n\n\"Until now, the hardest problem in lending AI wasn't the intelligence of the models,” said Nima Ghamsari, Co-founder and Head of Blend. “It was getting them connected to the right systems, with the right controls, in a way a bank's compliance team could actually approve. Autopilot MCP solves that. The intelligence is customizable, the infrastructure is shared. Lenders aren't buying a specific AI feature. They're getting a surface they can program.\"\n\nAs Blend Autopilot continues to expand, lenders who build on Autopilot MCP today will be positioned to extend and complement those capabilities as they become available. Read here for more information.\n\nAutopilot MCP is built on Model Context Protocol, introduced by Anthropic in 2024 and now the open standard for AI agent connectivity across the enterprise software industry. With t\n\n---\n\n[Lähde: SiliconANGLE]\nCyber investigations platform provider Command Zero Inc. today released a set of application programming interface endpoints and a Model Context Protocol server for its autonomous security operations center platform that allows customers to drive threat hunts, investigations and remediation programmatically rather than through the vendor’s console.\n\nThe new endpoints let security operations teams wire Command Zero’s investigation engine into their existing security orchestration, automation and response playbooks, orchestration pipelines and internal tooling. The MCP server wraps the same APIs so that MCP-compatible artificial intelligence agents can query the platform directly, run health checks, triage open cases and build dashboards from a chat interface.\n\nThe release covers four core API surfaces. Investigation endpoints let teams list, start, extend, update and retrieve investigations against any investigation template, while business context endpoints pull data in from ServiceNow Inc., continuous threat exposure management platforms, human resources systems and other sources at large scale, removing the need for manual console entry.\n\nCatalog and schema endpoints query entity types, data sources and investigation templates and remediation endpoints list templates and execute actions from external systems.\n\nUse cases include security orchestration and automation and response playbooks that start an investigation the moment an alert fires. There are also custom threat hunting frameworks that generate hypotheses from threat intelligence and run autonomous hunts on a schedule. And managed security service providers can sync client business context across tenants automatically.\n\n“The best security platforms are the ones teams can build on,” said co-founder and Chief Executive Dov Yoran. “This release puts Command Zero’s investigation engine in the hands of our customers and our technical alliance partners.”\n\nThe launch lands as security providers race to add agentic capabilities to existing tools while a wave of new autonomous security operations center platforms competes for the same budget. “Security leaders and architects are at an architectural juncture,” said Dave Gruber, principal analyst for cybersecurity at Omdia. He added that opening up investigation capabilities through APIs and MCP lets customers weave autonomous investigations into existing tools and workflows rather than ripping and replacing them.\n\nThe release today covers the core surface ",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-30T15:13:19.701141+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja yksityiskohtia julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260630T151122Z_c8eec465d4\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja yksityiskohtia julkaistavan artikkelin kirjoittamiseen.\"}"
+}
