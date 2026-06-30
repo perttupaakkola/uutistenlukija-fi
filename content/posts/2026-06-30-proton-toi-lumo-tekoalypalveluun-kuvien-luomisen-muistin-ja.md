@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/06/30/proton-julkaisi-2-0-version-yksityisyytta-korostavasta-lumo-tekoalypalvelustaan-uutuutena-mukana-kuvien-luominen/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
