@@ -1,0 +1,177 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-30T19:01:34.446588+00:00",
+  "digest": "ede2aeb9c6",
+  "packet": {
+    "packet_id": "20260630T190134Z_ede2aeb9c6",
+    "created_at": "2026-06-30T19:01:34Z",
+    "headline_seed": "Firefighters struggle to contain deadly Greek wildfire",
+    "description_seed": "Over 100 firefighters are working to extinguish a fire near Thessaloniki which has claimed a life.",
+    "link": "https://www.bbc.co.uk/news/articles/c0qy3nkex0qo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/c0qy3nkex0qo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Firefighters struggle to contain deadly Greek wildfire"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Over 100 firefighters were dispatched to an area near Thessaloniki on Tuesday A man has been found dead as an out-of-control wildfire burns in northern Greece, forcing residents of a nearby village to evacuate. The man's body was found in a charred area near Liti, about 15km (nine miles) north-west of the city of Thessaloniki, where more than 100 firefighters are working to contain the blaze. A woman was also injured after reportedly trying to extinguish the flames, suffering burns to her hands, as hot and windy conditions hampered firefighting efforts. Dozens of fire engines and at least seven aircraft took part in a major operation to contain the fire late on Tuesday, reportedly faced by a wall of flame measuring some 5km long and still spreading.",
+        "word_count": 127,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Over 100 firefighters are working to extinguish a fire near Thessaloniki which has claimed a life.",
+        "word_count": 16,
+        "keyword_overlap": 10,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The cause of the blaze, which broke out at about 14:30 (11:30 GMT) and quickly spread to a nearby forest, has not yet been determined. The region was under a high wildfire risk warning on Tuesday, with dry conditions and high winds making it harder to contain the fire and causing repeated flare-ups. Residents in Liti were urged to flee their homes while Greek broadcaster ERT reported a small number of properties had been damaged by the fire, which was spreading towards the nearby village of Melissochori on Tuesday evening. It is Greece's latest forest fire in recent days as it heads towards its peak tourist season. Wildfires have become a common occurrence for the country during summers of regular droughts and heatwaves. ---",
+        "word_count": 124,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Over 100 firefighters were dispatched to an area near Thessaloniki on Tuesday A man has been found dead as an out-of-control wildfire burns in northern Greece, forcing residents of a nearby village to evacuate. The man's body was found in a charred area near Liti, about 15km (nine miles) north-west of the city of Thessaloniki, where more than 100 firefighters are working to contain the blaze. A woman was also injured after reportedly trying to extinguish the flames, suffering burns to her hands, as hot and windy conditions hampered firefighting efforts. Dozens of fire engines and at least seven aircraft took part in a major operation to contain the fire late on Tuesday, reportedly faced by a wall of flame measuring some 5km long and still spreading.\n\nOver 100 firefighters are working to extinguish a fire near Thessaloniki which has claimed a life.\n\nThe cause of the blaze, which broke out at about 14:30 (11:30 GMT) and quickly spread to a nearby forest, has not yet been determined. The region was under a high wildfire risk warning on Tuesday, with dry conditions and high winds making it harder to contain the fire and causing repeated flare-ups. Residents in Liti were urged to flee their homes while Greek broadcaster ERT reported a small number of properties had been damaged by the fire, which was spreading towards the nearby village of Melissochori on Tuesday evening. It is Greece's latest forest fire in recent days as it heads towards its peak tourist season. Wildfires have become a common occurrence for the country during summers of regular droughts and heatwaves. ---",
+    "source_diagnostics": {
+      "candidate_blocks": 7,
+      "candidate_source_words": 670,
+      "selected_blocks": 3,
+      "selected_source_words": 267,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "Boston Herald",
+        "Boston Herald",
+        "Boston Herald",
+        "Boston Herald",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Firefighters struggle to contain deadly Greek wildfire",
+      "description": "Over 100 firefighters are working to extinguish a fire near Thessaloniki which has claimed a life.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Firefighters struggle to contain deadly Greek wildfire",
+    "description": "Over 100 firefighters are working to extinguish a fire near Thessaloniki which has claimed a life.",
+    "link": "https://www.bbc.co.uk/news/articles/c0qy3nkex0qo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-30T18:43:07+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "636f6a8222fd21c49dc178ffada15316",
+    "_url_hash": "cd90377b668bb01e6d2de6277bfe4be82a8fb3735733fa8f44ce4e4ffefb6a44",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nOver 100 firefighters were dispatched to an area near Thessaloniki on Tuesday\n\nA man has been found dead as an out-of-control wildfire burns in northern Greece, forcing residents of a nearby village to evacuate.\n\nThe man's body was found in a charred area near Liti, about 15km (nine miles) north-west of the city of Thessaloniki, where more than 100 firefighters are working to contain the blaze.\n\nA woman was also injured after reportedly trying to extinguish the flames, suffering burns to her hands, as hot and windy conditions hampered firefighting efforts.\n\nDozens of fire engines and at least seven aircraft took part in a major operation to contain the fire late on Tuesday, reportedly faced by a wall of flame measuring some 5km long and still spreading.\n\nThe cause of the blaze, which broke out at about 14:30 (11:30 GMT) and quickly spread to a nearby forest, has not yet been determined.\n\nThe region was under a high wildfire risk warning on Tuesday, with dry conditions and high winds making it harder to contain the fire and causing repeated flare-ups.\n\nResidents in Liti were urged to flee their homes while Greek broadcaster ERT reported a small number of properties had been damaged by the fire, which was spreading towards the nearby village of Melissochori on Tuesday evening.\n\nIt is Greece's latest forest fire in recent days as it heads towards its peak tourist season. Wildfires have become a common occurrence for the country during summers of regular droughts and heatwaves.\n\n---\n\n[Lähde: Boston Herald]\nATHENS, Greece (AP) — In the searing Mediterranean summer, wildfires turn dangerous in minutes.\n\nGreece has learned that at a terrible cost. In 2018, a blaze east of Athens moved with ferocious speed, killing more than 100 people. Five years later, a massive fire tore through a remote nature reserve; it was the largest wildfire ever recorded in the European Union.\n\nGreece is looking to the heavens for help, with a dedicated satellite constellation that monitors for fires. It’s a model for the continent as Europe races toward broader independence in space technology.\n\nFour satellites, each smaller than a piece of carry-on luggage, were launched into low orbit in May. That made Greece the first nation in the world to integrate a dedicated satellite array into its national firefighting system.\n\nBuilt by German company OroraTech, the satellites carry thermal sensors designed to flag new blazes as small as four meters (13 feet) wide, beating traditional satellites that can only spot fires the size of a cruise ship.\n\nAs Europe struggles with its latest blistering heatwave, the high temperatures foreshadow the wildfire season. Fires pose a unique challenge in Greece with its tinder-dry mountainous mainland and over 100 inhabited islands.\n\nIf a fire ignites, AI-processed satellite data is sent as an alert to commanders with the location, size and intensity already calculated. If multiple fires are burning at once, real-time data is crucial to determining response.\n\n“For example, if you have 10 fires all over Greece and the fire radiative power is lower in some cases, you will not give priority to those ignitions; you will give priority to other ones,” Fire Service Col. Zisoula Ntasiou, vice president of the International Association of Fire and Rescue Services, told The Associated Press in an interview.\n\nThermal sensors also pick up solar panels, hot factory roofs and sunbaked rock faces, but AI models are built to filter out those false alarms before alerts reach emergency services, according to officials involved in the program.\n\nGreece recorded its hottest summer on record in 2024 and its third-hottest last year.\n\n“The global temperature is going up. That causes fires to change in intensity and ferocity,” Ioannis Lantouris, head of OroraTech’s Greek operations, told the AP. “Our models have to change and adjust to that. They have to be faster. They have to be more precise.”\n\nLantouris spoke in his office in Athens, while engineers worked on fire behavior models",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-30T19:05:04.506930+00:00",
+  "failure": "content too short: 229 words",
+  "payload": {
+    "packet_id": "20260630T190134Z_ede2aeb9c6",
+    "title": "Maastopalo surmasi miehen Pohjois-Kreikassa Thessalonikin lähellä",
+    "summary": "Yli sata palomiestä yrittää saada hallintaan Pohjois-Kreikassa Thessalonikin lähellä leviävää maastopaloa. Palo on vaatinut yhden kuolonuhrin, ja Lítin kylän asukkaita on kehotettu poistumaan kodeistaan.",
+    "content": "Yli sata palomiestä on lähetetty sammuttamaan Pohjois-Kreikassa Thessalonikin lähellä leviävää maastopaloa, joka on vaatinut yhden kuolonuhrin ja pakottanut Lítin kylän asukkaita poistumaan kodeistaan. Miehen ruumis löydettiin palaneelta alueelta Lítin läheltä, noin 15 kilometriä Thessalonikista luoteeseen, samalla kun kuivat ja tuuliset olosuhteet vaikeuttivat sammutustöitä.\n\n## Palo levisi nopeasti metsään\n\nPalo syttyi tiistaina noin kello 14.30 paikallista aikaa eli 11.30 GMT-aikaa ja levisi nopeasti läheiseen metsään. Palon syttymissyytä ei ole toistaiseksi selvitetty.\n\nAlueella oli tiistaina voimassa korkean maastopaloriskin varoitus. Kuivuus ja voimakas tuuli vaikeuttivat palon rajaamista ja aiheuttivat toistuvia uudelleen leimahtamisia. Sammutustöihin osallistui kymmeniä paloautoja sekä vähintään seitsemän ilma-alusta.\n\nTiistai-iltana pelastushenkilöstö joutui kohtaamaan noin viiden kilometrin mittaiseksi arvioidun liekkirintaman, jonka kerrottiin edelleen leviävän. Yli sata palomiestä työskenteli alueella saadakseen palon hallintaan.\n\n## Asukkaita evakuoitiin Lítissä\n\nLítin asukkaita kehotettiin poistumaan kodeistaan palon lähestyessä kylää. Kreikkalaisyleisradio ERT:n mukaan pieni määrä rakennuksia oli vaurioitunut. Palo eteni tiistai-iltana myös kohti läheistä Melissochorin kylää.\n\nYksi nainen loukkaantui tiettävästi yrittäessään sammuttaa liekkejä. Hän sai palovammoja käsiinsä, kun palo levisi alueella, jolla tuuli ja kuivuus vaikeuttivat sammutustöitä.\n\n## Kreikassa on ollut useita paloja\n\nKyseessä on Kreikan viime päivien tuorein metsä- ja maastopalo, kun maa lähestyy vilkkainta matkailukauttaan. Kesäiset palot ovat Kreikassa toistuva ongelma, ja niiden riskiä lisäävät säännölliset kuivuusjaksot ja helleaallot.\n\nViranomaiset jatkoivat tiistaina työtä palon hallintaan saamiseksi Thessalonikin pohjoispuolella. Lähdetietojen mukaan tilanne oli yhä vaikea, koska palo oli levinnyt nopeasti metsään ja jatkoi etenemistään kohti asuttuja alueita.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Kreikka",
+      "maastopalot",
+      "Thessaloniki",
+      "evakuointi",
+      "pelastustoimi"
+    ],
+    "summary_bullets": [
+      "Yli sata palomiestä taistelee maastopaloa vastaan Thessalonikin lähellä Pohjois-Kreikassa.",
+      "Yksi mies on löydetty kuolleena palaneelta alueelta Lítin kylän lähellä.",
+      "Kuivat ja tuuliset olosuhteet ovat vaikeuttaneet sammutustöitä ja aiheuttaneet uusia leimahduksia."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu packetin kolmeen lähdeblokkiin. Syttymissyy on jätetty avoimeksi, koska sitä ei ole vahvistettu."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260630T190134Z_ede2aeb9c6\",\n  \"title\": \"Maastopalo surmasi miehen Pohjois-Kreikassa Thessalonikin lähellä\",\n  \"summary\": \"Yli sata palomiestä yrittää saada hallintaan Pohjois-Kreikassa Thessalonikin lähellä leviävää maastopaloa. Palo on vaatinut yhden kuolonuhrin, ja Lítin kylän asukkaita on kehotettu poistumaan kodeistaan.\",\n  \"content\": \"Yli sata palomiestä on lähetetty sammuttamaan Pohjois-Kreikassa Thessalonikin lähellä leviävää maastopaloa, joka on vaatinut yhden kuolonuhrin ja pakottanut Lítin kylän asukkaita poistumaan kodeistaan. Miehen ruumis löydettiin palaneelta alueelta Lítin läheltä, noin 15 kilometriä Thessalonikista luoteeseen, samalla kun kuivat ja tuuliset olosuhteet vaikeuttivat sammutustöitä.\\n\\n## Palo levisi nopeasti metsään\\n\\nPalo syttyi tiistaina noin kello 14.30 paikallista aikaa eli 11.30 GMT-aikaa ja levisi nopeasti läheiseen metsään. Palon syttymissyytä ei ole toistaiseksi selvitetty.\\n\\nAlueella oli tiistaina voimassa korkean maastopaloriskin varoitus. Kuivuus ja voimakas tuuli vaikeuttivat palon rajaamista ja aiheuttivat toistuvia uudelleen leimahtamisia. Sammutustöihin osallistui kymmeniä paloautoja sekä vähintään seitsemän ilma-alusta.\\n\\nTiistai-iltana pelastushenkilöstö joutui kohtaamaan noin viiden kilometrin mittaiseksi arvioidun liekkirintaman, jonka kerrottiin edelleen leviävän. Yli sata palomiestä työskenteli alueella saadakseen palon hallintaan.\\n\\n## Asukkaita evakuoitiin Lítissä\\n\\nLítin asukkaita kehotettiin poistumaan kodeistaan palon lähestyessä kylää. Kreikkalaisyleisradio ERT:n mukaan pieni määrä rakennuksia oli vaurioitunut. Palo eteni tiistai-iltana myös kohti läheistä Melissochorin kylää.\\n\\nYksi nainen loukkaantui tiettävästi yrittäessään sammuttaa liekkejä. Hän sai palovammoja käsiinsä, kun palo levisi alueella, jolla tuuli ja kuivuus vaikeuttivat sammutustöitä.\\n\\n## Kreikassa on ollut useita paloja\\n\\nKyseessä on Kreikan viime päivien tuorein metsä- ja maastopalo, kun maa lähestyy vilkkainta matkailukauttaan. Kesäiset palot ovat Kreikassa toistuva ongelma, ja niiden riskiä lisäävät säännölliset kuivuusjaksot ja helleaallot.\\n\\nViranomaiset jatkoivat tiistaina työtä palon hallintaan saamiseksi Thessalonikin pohjoispuolella. Lähdetietojen mukaan tilanne oli yhä vaikea, koska palo oli levinnyt nopeasti metsään ja jatkoi etenemistään kohti asuttuja alueita.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Kreikka\",\n    \"maastopalot\",\n    \"Thessaloniki\",\n    \"evakuointi\",\n    \"pelastustoimi\"\n  ],\n  \"summary_bullets\": [\n    \"Yli sata palomiestä taistelee maastopaloa vastaan Thessalonikin lähellä Pohjois-Kreikassa.\",\n    \"Yksi mies on löydetty kuolleena palaneelta alueelta Lítin kylän lähellä.\",\n    \"Kuivat ja tuuliset olosuhteet ovat vaikeuttaneet sammutustöitä ja aiheuttaneet uusia leimahduksia.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu packetin kolmeen lähdeblokkiin. Syttymissyy on jätetty avoimeksi, koska sitä ei ole vahvistettu.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260630T190134Z_ede2aeb9c6",
+    "category": "Kotimaa",
+    "selected_source_words": 267,
+    "selected_source_blocks": 3,
+    "story_confidence": 0.98,
+    "final_word_count": 229,
+    "issues": [
+      "content too short: 229 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Maastopalo surmasi miehen Pohjois-Kreikassa Thessalonikin lähellä",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-30T19:05:04.506703+00:00",
+    "repair_trigger": "pre_repair_word_count=204; selected_source_words=267; selected_source_blocks=3",
+    "pre_repair_word_count": 204,
+    "pre_repair_lead_word_count": 43,
+    "post_repair_word_count": 229,
+    "post_repair_lead_word_count": 43,
+    "selected_source_words_at_repair": 267,
+    "selected_source_blocks_at_repair": 3,
+    "source_words": 267,
+    "source_blocks": 3,
+    "repair_added_word_count": 25,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 229 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:2e62ec0116",
+      "2:BBC World:84e2eaa21b",
+      "3:BBC World:0a7e4672e0"
+    ],
+    "final_issues": [
+      "content too short: 229 words"
+    ],
+    "recovered": false
+  }
+}
