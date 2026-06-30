@@ -75,6 +75,30 @@ class ImageQueryTokenTests(unittest.TestCase):
         self.assertEqual(pexels_search.call_count, 1)
         self.assertEqual(unsplash_search.call_count, 1)
 
+    def test_political_poll_query_sanitizes_named_person_portrait(self) -> None:
+        title = "Kysely: Orpon hallitus saa kansalaisilta hallituskautensa heikoimman arvion"
+        body = "Yli puolet vastaajista arvioi Petteri Orpon hallituksen onnistuneen huonosti."
+
+        self.assertEqual(
+            image_query.sanitize_generated_query("Petteri Orpo politician portrait", title, body, "Kotimaa"),
+            "public opinion survey ballot",
+        )
+
+    def test_fetch_uses_sanitized_political_poll_query(self) -> None:
+        title = "Kysely: Orpon hallitus saa kansalaisilta hallituskautensa heikoimman arvion"
+        body = "Yli puolet vastaajista arvioi Petteri Orpon hallituksen onnistuneen huonosti."
+
+        with patch.object(image_query, "generate_image_query", return_value="Petteri Orpo politician portrait"), \
+             patch.object(pexels, "_search_pexels", return_value=[]) as pexels_search:
+            self.assertIsNone(pexels.fetch_image_for_article(title, "Kotimaa", content=body, inter_request_delay=0))
+
+        with patch.object(image_query, "generate_image_query", return_value="Petteri Orpo politician portrait"), \
+             patch.object(unsplash, "_search", return_value=[]) as unsplash_search:
+            self.assertIsNone(unsplash.fetch_image_for_article(title, "Kotimaa", content=body, inter_request_delay=0))
+
+        pexels_search.assert_any_call("public opinion survey ballot")
+        unsplash_search.assert_any_call("public opinion survey ballot")
+
 
 if __name__ == "__main__":
     unittest.main()

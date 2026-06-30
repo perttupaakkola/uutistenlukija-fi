@@ -13,6 +13,7 @@ Environment:
 """
 
 import os
+import re
 from typing import Optional
 
 _client = None
@@ -39,11 +40,50 @@ Rules:
 - Never use abstract words like "crisis", "impact", "situation".
 - Prefer concrete visual subjects: people, places, objects, landscapes.
 - If the article mentions a specific location, include it.
-- If the article is about a specific person (e.g. Petteri Orpo, Sanna Marin), prioritize searching for them by name.
-- IMPORTANT: If you think a stock photo of that specific person is unlikely to exist, search for a generic high-quality representation of their ROLE (e.g. "politician in suit", "businesswoman professional", "footballer action", "police officer"). This is better than a generic landscape.
+- Do not search for a named person unless the story is specifically about a photo, appearance, or event where that person is visually essential.
+- For polls, approval ratings, elections, parties, governments, and institutions, prefer the visible event or institution: "public opinion survey", "parliament debate", "government meeting", "ballot box".
+- Do not use generic role portraits like "politician in suit" for named-person news. A random lookalike or unrelated person is worse than an institutional image.
 - If the article is about weather, match the ACTUAL weather described (rain ≠ snow).
 
 Return ONLY the search query, nothing else. No quotes, no explanation."""
+
+
+_POLL_OR_POLITICS_TERMS = {
+    "arvio", "arvioi", "gallup", "hallitus", "kannatus", "kysely", "mielipidekysely",
+    "ministeri", "puolue", "vaali", "vastaaja", "vastaajista", "äänestys",
+}
+
+_PORTRAIT_QUERY_TERMS = {
+    "businessman", "businesswoman", "leader", "minister", "politician", "portrait",
+    "prime minister", "professional", "statesman",
+}
+
+
+def _contains_person_like_name(text: str) -> bool:
+    words = re.findall(r"\b[A-ZÅÄÖ][a-zåäö]+(?:\s+[A-ZÅÄÖ][a-zåäö]+)+\b", text or "")
+    return bool(words)
+
+
+def sanitize_generated_query(query: str, title: str, body: str = "", category: str = "") -> str:
+    """Prevent named-person stock searches from becoming random portrait matches."""
+    cleaned = (query or "").strip()
+    if not cleaned:
+        return ""
+
+    q_lower = cleaned.lower()
+    haystack = " ".join([title or "", body or "", category or ""]).lower()
+    is_political_or_poll = any(term in haystack for term in _POLL_OR_POLITICS_TERMS)
+    is_portrait_query = any(term in q_lower for term in _PORTRAIT_QUERY_TERMS)
+    includes_named_person = _contains_person_like_name(cleaned)
+
+    if is_political_or_poll and (is_portrait_query or includes_named_person):
+        if any(term in haystack for term in {"kysely", "gallup", "mielipidekysely", "vastaaja", "vastaajista"}):
+            return "public opinion survey ballot"
+        if "eduskunta" in haystack or "parliament" in haystack:
+            return "parliament debate Finland"
+        return "government meeting parliament"
+
+    return cleaned
 
 
 def generate_image_query(title: str, body: str, category: str = "") -> str:
@@ -75,6 +115,7 @@ def generate_image_query(title: str, body: str, category: str = "") -> str:
             ],
         )
         query = response.choices[0].message.content.strip().strip('"').strip("'")
+        query = sanitize_generated_query(query, title, body_excerpt, category)
         if query and len(query) > 2:
             print(f"[image_query] LLM query: '{title[:50]}' → '{query}'")
             return query

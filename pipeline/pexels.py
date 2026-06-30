@@ -440,8 +440,13 @@ def fetch_image_for_article(
     # Try LLM-powered query first for better contextual matching
     query = ""
     try:
-        from image_query import generate_image_query
-        query = generate_image_query(title, content or summary or "", category)
+        from image_query import generate_image_query, sanitize_generated_query
+        query = sanitize_generated_query(
+            generate_image_query(title, content or summary or "", category),
+            title,
+            content or summary or "",
+            category,
+        )
     except Exception as e:
         print(f"[pexels] LLM query unavailable ({e}), using keyword extraction")
 

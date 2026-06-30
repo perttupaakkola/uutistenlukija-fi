@@ -2,7 +2,7 @@
 title: "Kysely: Orpon hallitus saa kansalaisilta hallituskautensa heikoimman arvion"
 date: 2026-06-30T04:58:06.569473+00:00
 categories:
-  - Tiede
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
@@ -22,11 +22,11 @@ journalist_note: |
   Artikkeli perustuu packetin tietoihin HS:n teettämästä kyselystä ja Ylen referoimaan lähdeaineistoon. Luvuissa ja arvioissa on pitäydytty annetuissa tiedoissa.
 content_type: "article"
 editorial_reviewed: true
-image: "https://images.unsplash.com/photo-1635769336141-86d1d941c5e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw0fHxQZXR0ZXJpJTIwT3JwbyUyMHBvbGl0aWNpYW4lMjBwb3J0cmFpdHxlbnwxfDB8fHwxNzgyNzk1NDg1fDA&ixlib=rb-4.1.0&q=80&w=1080"
-image_thumb: "https://images.unsplash.com/photo-1635769336141-86d1d941c5e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw0fHxQZXR0ZXJpJTIwT3JwbyUyMHBvbGl0aWNpYW4lMjBwb3J0cmFpdHxlbnwxfDB8fHwxNzgyNzk1NDg1fDA&ixlib=rb-4.1.0&q=80&w=400"
-image_alt: "Kuvituskuva uutiseen: Kysely: Orpon hallitus saa kansalaisilta hallituskautensa heikoimman arvion (petteri orpo, hallitus)"
-image_credit: "Photo by West Kenya Union Conference Adventist Media on Unsplash"
-image_source_url: "https://unsplash.com/photos/a-man-in-a-suit-pointing-at-something-3mj0HWMiQSA?utm_source=uutistenlukija&utm_medium=referral"
+image: "/images/categories/kotimaa.jpg"
+image_thumb: "/images/categories/kotimaa.jpg"
+image_alt: "Kotimaan uutiset"
+image_credit: ""
+image_source_url: ""
 reading_time: 1
 tags:
   - petteri orpo
