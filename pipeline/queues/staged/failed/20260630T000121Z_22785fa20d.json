@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-30T00:01:21.854972+00:00",
+  "digest": "22785fa20d",
+  "packet": {
+    "packet_id": "20260630T000121Z_22785fa20d",
+    "created_at": "2026-06-30T00:01:21Z",
+    "headline_seed": "Vakava onnettomuus Itäväylällä – Kaksi kuoli",
+    "description_seed": "Helsingin Kulosaaressa tapahtui vakava liikenneonnettomuus. Kaksi ihmistä kuoli vakavassa liikenneonnettomuudessa Helsingin Itäväylällä. Onnettomuus tapahtui Kulosaaressa. Poliisi sai tiedon tehtävästä kello 0.28 tiistaiyönä.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/21bdd9cc-9f2c-49f7-9cae-73daac6dc945?utm_source=rss",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/21bdd9cc-9f2c-49f7-9cae-73daac6dc945?utm_source=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Vakava onnettomuus Itäväylällä – Kaksi kuoli"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Helsingin Kulosaaressa tapahtui vakava liikenneonnettomuus. Kaksi ihmistä kuoli vakavassa liikenneonnettomuudessa Helsingin Itäväylällä. Onnettomuus tapahtui Kulosaaressa. Poliisi sai tiedon tehtävästä kello 0.28 tiistaiyönä.",
+        "word_count": 22,
+        "keyword_overlap": 17,
+        "strong_overlap": 14
+      }
+    ],
+    "source_text": "Helsingin Kulosaaressa tapahtui vakava liikenneonnettomuus. Kaksi ihmistä kuoli vakavassa liikenneonnettomuudessa Helsingin Itäväylällä. Onnettomuus tapahtui Kulosaaressa. Poliisi sai tiedon tehtävästä kello 0.28 tiistaiyönä.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 44,
+      "selected_blocks": 1,
+      "selected_source_words": 22,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Vakava onnettomuus Itäväylällä – Kaksi kuoli",
+      "description": "Helsingin Kulosaaressa tapahtui vakava liikenneonnettomuus. Kaksi ihmistä kuoli vakavassa liikenneonnettomuudessa Helsingin Itäväylällä. Onnettomuus tapahtui Kulosaaressa. Poliisi sai tiedon tehtävästä kello 0.28 tiistaiyönä.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Vakava onnettomuus Itäväylällä – Kaksi kuoli",
+    "description": "Helsingin Kulosaaressa tapahtui vakava liikenneonnettomuus. Kaksi ihmistä kuoli vakavassa liikenneonnettomuudessa Helsingin Itäväylällä. Onnettomuus tapahtui Kulosaaressa. Poliisi sai tiedon tehtävästä kello 0.28 tiistaiyönä.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/21bdd9cc-9f2c-49f7-9cae-73daac6dc945?utm_source=rss",
+    "published": "2026-06-30T01:26:26+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "1a107c2b54ffc4319bf5e23181168374",
+    "_url_hash": "4a9f686d731eeabc5f22ba3cd09274be1ba5cf6299f193acfff324a75e904aa0",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Helsingin Kulosaaressa tapahtui vakava liikenneonnettomuus. Kaksi ihmistä kuoli vakavassa liikenneonnettomuudessa Helsingin Itäväylällä. Onnettomuus tapahtui Kulosaaressa. Poliisi sai tiedon tehtävästä kello 0.28 tiistaiyönä.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-06-30T00:03:20.210779+00:00",
+  "failure": "Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täytesisältöä tai oletuksia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260630T000121Z_22785fa20d\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täytesisältöä tai oletuksia.\"}"
+}
