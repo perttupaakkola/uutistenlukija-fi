@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/uupunut-kauneusalan-yrittaja-oli-jo-myymassa-yritystaan-sitten-loytyi-puuttuva-palanen-nayttaa-silta-etta-saavutamme-ensimmaisen-miljoonan-euron-liikevaihdon/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
