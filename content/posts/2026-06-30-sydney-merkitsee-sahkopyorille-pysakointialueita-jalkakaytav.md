@@ -43,7 +43,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/jun/30/sydney-to-get-parking-zones-for-shared-ebikes-in-bid-to-stop-wild-west-scenes-of-blocked-footpaths"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
