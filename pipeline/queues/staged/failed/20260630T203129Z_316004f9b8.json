@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-30T20:31:29.260378+00:00",
+  "digest": "316004f9b8",
+  "packet": {
+    "packet_id": "20260630T203129Z_316004f9b8",
+    "created_at": "2026-06-30T20:31:29Z",
+    "headline_seed": "Venezuelassa pelastettu yli 6 000 – kuolleita vahvistettu lähes 2 000",
+    "description_seed": "Venezuelan maanjäristysten lopullisen uhriluvun selville saamiseen voi mennä viikkoja.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/venezuelassa-pelastettu-yli-6-000-kuolleita-vahvistettu-yli-1-900/9360494",
+    "source": "MTV Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://www.mtvuutiset.fi/artikkeli/venezuelassa-pelastettu-yli-6-000-kuolleita-vahvistettu-yli-1-900/9360494"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Venezuelassa pelastettu yli 6 000 – kuolleita vahvistettu lähes 2 000"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 100,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Satakunnan Kansa",
+        "MTV Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Venezuelassa pelastettu yli 6 000 – kuolleita vahvistettu lähes 2 000",
+      "description": "Venezuelan maanjäristysten lopullisen uhriluvun selville saamiseen voi mennä viikkoja.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Venezuelassa pelastettu yli 6 000 – kuolleita vahvistettu lähes 2 000",
+    "description": "Venezuelan maanjäristysten lopullisen uhriluvun selville saamiseen voi mennä viikkoja.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/venezuelassa-pelastettu-yli-6-000-kuolleita-vahvistettu-yli-1-900/9360494",
+    "published": "2026-06-30T20:15:45+00:00",
+    "source": "MTV Uutiset",
+    "source_domain": "mtvuutiset.fi",
+    "language": "fi",
+    "fingerprint": "eb6227a639cb941846ad4f8eff9c0367",
+    "_url_hash": "b6bfa7ba0ec3273f081535c41b49c4d82fc54dceec5facd77475ce3e7884b4f1",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Satakunnan Kansa]\nVenezuelassa on viikonlopun aikana onnistuttu pelastamaan ainakin 33 ihmistä raunioista.\n\nKolumbialainen pelastustyöntekijä ja rauniokoira etsivät ihmisiä Venezuelassa sunnuntaina 28. kesäkuuta. Kuva: Ronald Pena/EPA\n\nVenezuelassa on pelastettu ainakin 33 ihmistä maanjäristyksen raunioista viikonlopun aikana.\n\nPelastettujen joukossa on 9 kuukauden ikäinen vauva äiteineen sekä isä ja poika.\n\nKeskiviikon järistysten seurauksena on kuollut ainakin 1 450 ihmistä. Kateissa on huomattavasti enemmän.\n\nYhdeksän kuukauden ikäinen vauva ja tämän äiti on pelastettu Venezuelassa maanjäristyksen seurauksena romahtaneen rakennuksen raunioista.\n\nVauvan ja äidin pelasti yhdysvaltalainen etsintä- ja pelastusryhmä yhdessä paikallisten pelastus­viranomaisten kanssa. Asiasta kertoo muun muassa CBS News.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-30T20:33:19.049480+00:00",
+  "failure": "Paketissa ei ole varsinaista lähdetekstiä tai vahvistettuja yksityiskohtia, joten 250+ sanan artikkelia ei voi kirjoittaa ilman keksittyjä tietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260630T203129Z_316004f9b8\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole varsinaista lähdetekstiä tai vahvistettuja yksityiskohtia, joten 250+ sanan artikkelia ei voi kirjoittaa ilman keksittyjä tietoja.\"}"
+}
