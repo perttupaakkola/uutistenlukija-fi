@@ -1,0 +1,190 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-06-30T22:51:25.505258+00:00",
+  "digest": "aec65db9f1",
+  "packet": {
+    "packet_id": "20260630T225125Z_aec65db9f1",
+    "created_at": "2026-06-30T22:51:25Z",
+    "headline_seed": "US Supreme Court has dealt heavy defeats to Trump, while expanding his power",
+    "description_seed": "The birthright ruling brings to an end a Supreme Court term that has delivered the president some key victories.",
+    "link": "https://www.bbc.co.uk/news/articles/c4gyqeqe8xyo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/c4gyqeqe8xyo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "US Supreme Court has dealt heavy defeats to Trump, while expanding his power"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The birthright ruling brings to an end a Supreme Court term that has delivered the president some key victories.",
+        "word_count": 19,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Its conservative majority, cemented during his first term, has delivered a series of major victories for the president. It has methodically expanded executive power and shielded Trump, and all future presidents, from prosecution for official actions. A handful of conservatives, however, joined ranks with the court's three liberal justices to place clear limits on some of Trump's most ambitious immigration, trade and law enforcement polices - issues that have been central to his political identity for more than a decade. US Supreme Court upholds birthright citizenship in blow to Trump US Supreme Court upholds bans on transgender athletes in female school and college sports",
+        "word_count": 104,
+        "keyword_overlap": 11,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Watch: Supreme Court's birthright ruling is major blow to Trump, says BBC's Gary O'Donoghue By President Donald Trump's standards, his response to the Supreme Court ruling against him on birthright citizenship was rather tepid. He said Tuesday's decision was \"too bad for our country\", before going on to endorse legislation that would reinstate his proposed limits on the longstanding legal principle that anyone born in the country is a US citizen. The chances that Congress will act on that are slim, however. Democrats would almost certainly block any effort in the US Senate, and even if such a law were enacted it is unclear how it would pass constitutional muster. And while this decision was a blow to Trump, it brings to an end a Supreme Court term that has mostly continued a trend of recent years.",
+        "word_count": 137,
+        "keyword_overlap": 10,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "On Tuesday, the court rejected the president's attempt to end birthright citizenship for the children of temporary visitors and undocumented migrants. It was closely decided, however, with only five of the court's nine justices finding a constitutional guarantee for such a right. Back in February, by a slightly more solid six-to-three margin – including Trump appointees Amy Coney Barrett and Neil Gorsuch - the court also struck down the president's attempts to use existing federal law to enact sweeping new tariffs on America's trading partners. Trump responded to that decision with far more anger than he did on Tuesday, holding a hastily arranged press conference to state that he was \"absolutely ashamed\" of three \"lapdog\" conservative justices who joined the court's liberals.",
+        "word_count": 122,
+        "keyword_overlap": 5,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "The birthright ruling brings to an end a Supreme Court term that has delivered the president some key victories.\n\nIts conservative majority, cemented during his first term, has delivered a series of major victories for the president. It has methodically expanded executive power and shielded Trump, and all future presidents, from prosecution for official actions. A handful of conservatives, however, joined ranks with the court's three liberal justices to place clear limits on some of Trump's most ambitious immigration, trade and law enforcement polices - issues that have been central to his political identity for more than a decade. US Supreme Court upholds birthright citizenship in blow to Trump US Supreme Court upholds bans on transgender athletes in female school and college sports\n\nWatch: Supreme Court's birthright ruling is major blow to Trump, says BBC's Gary O'Donoghue By President Donald Trump's standards, his response to the Supreme Court ruling against him on birthright citizenship was rather tepid. He said Tuesday's decision was \"too bad for our country\", before going on to endorse legislation that would reinstate his proposed limits on the longstanding legal principle that anyone born in the country is a US citizen. The chances that Congress will act on that are slim, however. Democrats would almost certainly block any effort in the US Senate, and even if such a law were enacted it is unclear how it would pass constitutional muster. And while this decision was a blow to Trump, it brings to an end a Supreme Court term that has mostly continued a trend of recent years.\n\nOn Tuesday, the court rejected the president's attempt to end birthright citizenship for the children of temporary visitors and undocumented migrants. It was closely decided, however, with only five of the court's nine justices finding a constitutional guarantee for such a right. Back in February, by a slightly more solid six-to-three margin – including Trump appointees Amy Coney Barrett and Neil Gorsuch - the court also struck down the president's attempts to use existing federal law to enact sweeping new tariffs on America's trading partners. Trump responded to that decision with far more anger than he did on Tuesday, holding a hastily arranged press conference to state that he was \"absolutely ashamed\" of three \"lapdog\" conservative justices who joined the court's liberals.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 834,
+      "selected_blocks": 4,
+      "selected_source_words": 382,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "NBC News",
+        "NBC News",
+        "NBC News",
+        "NBC News",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "US Supreme Court has dealt heavy defeats to Trump, while expanding his power",
+      "description": "The birthright ruling brings to an end a Supreme Court term that has delivered the president some key victories.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "US Supreme Court has dealt heavy defeats to Trump, while expanding his power",
+    "description": "The birthright ruling brings to an end a Supreme Court term that has delivered the president some key victories.",
+    "link": "https://www.bbc.co.uk/news/articles/c4gyqeqe8xyo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-06-30T22:29:47+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "e8c1ff02814853a5a5f3661809ebebe7",
+    "_url_hash": "50b4b7cd3f4319d0e25fb7b853a13dcda161bafbeded67dc8735c94e63016e95",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nWatch: Supreme Court's birthright ruling is major blow to Trump, says BBC's Gary O'Donoghue\n\nBy President Donald Trump's standards, his response to the Supreme Court ruling against him on birthright citizenship was rather tepid.\n\nHe said Tuesday's decision was \"too bad for our country\", before going on to endorse legislation that would reinstate his proposed limits on the longstanding legal principle that anyone born in the country is a US citizen.\n\nThe chances that Congress will act on that are slim, however. Democrats would almost certainly block any effort in the US Senate, and even if such a law were enacted it is unclear how it would pass constitutional muster.\n\nAnd while this decision was a blow to Trump, it brings to an end a Supreme Court term that has mostly continued a trend of recent years.\n\nIts conservative majority, cemented during his first term, has delivered a series of major victories for the president. It has methodically expanded executive power and shielded Trump, and all future presidents, from prosecution for official actions.\n\nA handful of conservatives, however, joined ranks with the court's three liberal justices to place clear limits on some of Trump's most ambitious immigration, trade and law enforcement polices - issues that have been central to his political identity for more than a decade.\n\nUS Supreme Court upholds birthright citizenship in blow to Trump\n\nUS Supreme Court upholds bans on transgender athletes in female school and college sports\n\nOn Tuesday, the court rejected the president's attempt to end birthright citizenship for the children of temporary visitors and undocumented migrants. It was closely decided, however, with only five of the court's nine justices finding a constitutional guarantee for such a right.\n\nBack in February, by a slightly more solid six-to-three margin – including Trump appointees Amy Coney Barrett and Neil Gorsuch - the court also struck down the president's attempts to use existing federal law to enact sweeping new tariffs on America's trading partners.\n\nTrump responded to that decision with far more anger than he did on Tuesday, holding a hastily arranged press conference to state that he was \"absolutely ashamed\" of three \"lapdog\" conservative justices who joined the court's liberals.\n\nIn December, a different grouping of conservatives – Chief Justice John Roberts, Brett Kavanaugh (another Trump appointee) and Barrett – again sided with the liberals to block the president from deploying Nation\n\n---\n\n[Lähde: NBC News]\nA New York judge on Monday sentenced Chinese billionaire and prominent critic of the country’s Communist Party Guo Wengui to 30 years in jail for financial fraud.\n\nGuo — who was named in court papers as Ho Wan Kwok and also goes by Miles Guo and Miles Kwok — was convicted of nine out of 12 criminal charges that he pleaded not guilty to, including wire fraud, securities fraud, bank fraud and money laundering.\n\nU.S. District Judge Analisa Torres ordered Guo to forfeit $889 million in restitution.\n\nThe tycoon “preyed on those seeking to bring democracy to China,” taking their money so he could live lavishly and cost over 1,000 people worldwide hundreds of millions of dollars, Torres said in court, according to The Associated Press.\n\nHe was arrested in 2023 on charges that he had defrauded thousands of online followers out of over $1 billion. According to prosecutors, he had promised his followers “outsized financial returns” but instead used the money to fund his lavish lifestyle.\n\nGuo made his fortune in real estate and securities and was among China’s richest men when he arrived in the United States in around 2015.\n\nHe made brief remarks at the criminal hearing Monday, according to The Associated Press.\n\nWei Chen, a victim who testified at trial, told Torres that Guo’s crimes had “destroyed my life” and that of her family.\n\nGuo seemed to take no responsibility for his actions, Torres said, and instead insists “incredibly” that his conduct caused no loss and didn’t harm anyone.\n\nHe had “called upon supporters to harass and intimidate those who dare to speak out against him,” she added.\n\nProsecutors said in court papers that his riches had fueled “a lifestyle of extraordinary excess and indulgence, a gilded life of mansions, yachts, race cars, designer clothes and luxury furnishings.”\n\nGuo’s lawyers argued in a court filing that he was the victim of the Chinese Communist Party’s “grand, pervasive, and life threatening” pursuit of him.\n\n“The reason I came to the U.S. was to destroy the CCP,” he told a courtroom filled with his supporters Monday, referring to the Chinese Communist Party.\n\nGuo portrays himself in interviews and court records as an exiled whistleblower, proving an inside account of corruption at the heart of the Chinese system.\n\nHe is is also an associate of former Trump White House adviser Steve Bannon, who was arrested on Guo’s yacht in a fraud case in August 2020 — President Donald Trump pardoned Bannon in 2021.\n\nChina’s Ministry of Foreign Af",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-06-30T22:54:54.506873+00:00",
+  "failure": "content too short: 246 words",
+  "payload": {
+    "packet_id": "20260630T225125Z_aec65db9f1",
+    "title": "Yhdysvaltain korkein oikeus torjui Trumpin kansalaisuuslinjan mutta vahvisti presidentin valtaa",
+    "summary": "Yhdysvaltain korkein oikeus on päättänyt istuntokautensa ratkaisuun, joka torjui Donald Trumpin yrityksen rajoittaa syntymäpaikkaan perustuvaa kansalaisuutta. Samalla kausi on tuonut presidentille myös merkittäviä voittoja ja laajentanut toimeenpanovallan asemaa.",
+    "content": "Yhdysvaltain korkein oikeus on hylännyt presidentti Donald Trumpin yrityksen lopettaa syntymäpaikkaan perustuva kansalaisuus tilapäisten vierailijoiden ja maahan ilman lupaa tulleiden lasten osalta. Ratkaisu päättää istuntokauden, jolla tuomioistuin on sekä asettanut rajoja Trumpin keskeisille hankkeille että vahvistanut presidentin valta-asemaa.\n\n## Kansalaisuusratkaisu oli Trumpille tappio\n\nTuomioistuin katsoi tiistaina, että syntymäpaikkaan perustuva kansalaisuus säilyy perustuslaillisena oikeutena. Päätös oli tiukka: viisi tuomioistuimen yhdeksästä jäsenestä löysi perustuslaista tällaisen suojan.\n\nTrump kuvasi ratkaisua sanomalla, että se oli ”liian huono maallemme”. Hän ilmoitti myös tukevansa lainsäädäntöä, joka palauttaisi hänen esittämänsä rajoitukset pitkään voimassa olleeseen periaatteeseen, jonka mukaan maassa syntynyt henkilö on Yhdysvaltain kansalainen.\n\nTällaisen lain etenemistä pidetään kuitenkin epätodennäköisenä. Demokraatit estäisivät sen lähes varmasti senaatissa, ja vaikka laki hyväksyttäisiin, sen perustuslaillinen kestävyys olisi epäselvä.\n\n## Oikeus on myös laajentanut presidentin liikkumatilaa\n\nKansalaisuuspäätös ei muuta sitä, että korkein oikeus on viime vuosina kulkenut suuntaan, joka on monin osin suosinut presidentin valtaa. Tuomioistuimen konservatiivinen enemmistö vahvistui Trumpin ensimmäisellä kaudella, ja se on antanut presidentille useita merkittäviä voittoja.\n\nOikeus on laajentanut toimeenpanovallan alaa ja suojannut Trumpia sekä tulevia presidenttejä syytteiltä virallisten toimien osalta. Samalla osa konservatiivituomareista on kuitenkin liittynyt liberaalien tuomareiden kannalle, kun kyse on ollut Trumpin kunnianhimoisimmista maahanmuutto-, kauppa- ja lainvalvontapoliittisista toimista.\n\n## Tullipäätös toi toisen rajan\n\nHelmikuussa tuomioistuin kaatoi äänin 6–3 Trumpin yrityksen käyttää olemassa olevaa liittovaltion lakia laajojen uusien tullien määräämiseen Yhdysvaltain kauppakumppaneille. Ratkaisun mukana olivat myös Trumpin nimittämät Amy Coney Barrett ja Neil Gorsuch.\n\nTuolloin Trump reagoi paljon jyrkemmin kuin kansalaisuuspäätökseen. Hän sanoi olevansa ”äärimmäisen häpeissään” kolmesta konservatiivituomarista, jotka liittyivät liberaalien kannalle.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "korkein oikeus",
+      "Donald Trump",
+      "kansalaisuus",
+      "presidentin valta"
+    ],
+    "summary_bullets": [
+      "Korkein oikeus torjui Trumpin yrityksen rajoittaa syntymäpaikkaan perustuvaa kansalaisuutta.",
+      "Päätös syntyi niukasti, sillä viisi yhdeksästä tuomarista katsoi oikeuden olevan perustuslaillisesti suojattu.",
+      "Sama istuntokausi on kuitenkin tuonut Trumpille myös voittoja ja vahvistanut presidentin toimeenpanovaltaa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.91,
+    "journalist_note": "Artikkeli perustuu annettuihin lähdekatkelmiin. Mukaan on otettu vain niissä esiintyvät ratkaisut, äänestystulokset, reaktiot ja arviot oikeuden linjasta."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260630T225125Z_aec65db9f1\",\n  \"title\": \"Yhdysvaltain korkein oikeus torjui Trumpin kansalaisuuslinjan mutta vahvisti presidentin valtaa\",\n  \"summary\": \"Yhdysvaltain korkein oikeus on päättänyt istuntokautensa ratkaisuun, joka torjui Donald Trumpin yrityksen rajoittaa syntymäpaikkaan perustuvaa kansalaisuutta. Samalla kausi on tuonut presidentille myös merkittäviä voittoja ja laajentanut toimeenpanovallan asemaa.\",\n  \"content\": \"Yhdysvaltain korkein oikeus on hylännyt presidentti Donald Trumpin yrityksen lopettaa syntymäpaikkaan perustuva kansalaisuus tilapäisten vierailijoiden ja maahan ilman lupaa tulleiden lasten osalta. Ratkaisu päättää istuntokauden, jolla tuomioistuin on sekä asettanut rajoja Trumpin keskeisille hankkeille että vahvistanut presidentin valta-asemaa.\\n\\n## Kansalaisuusratkaisu oli Trumpille tappio\\n\\nTuomioistuin katsoi tiistaina, että syntymäpaikkaan perustuva kansalaisuus säilyy perustuslaillisena oikeutena. Päätös oli tiukka: viisi tuomioistuimen yhdeksästä jäsenestä löysi perustuslaista tällaisen suojan.\\n\\nTrump kuvasi ratkaisua sanomalla, että se oli ”liian huono maallemme”. Hän ilmoitti myös tukevansa lainsäädäntöä, joka palauttaisi hänen esittämänsä rajoitukset pitkään voimassa olleeseen periaatteeseen, jonka mukaan maassa syntynyt henkilö on Yhdysvaltain kansalainen.\\n\\nTällaisen lain etenemistä pidetään kuitenkin epätodennäköisenä. Demokraatit estäisivät sen lähes varmasti senaatissa, ja vaikka laki hyväksyttäisiin, sen perustuslaillinen kestävyys olisi epäselvä.\\n\\n## Oikeus on myös laajentanut presidentin liikkumatilaa\\n\\nKansalaisuuspäätös ei muuta sitä, että korkein oikeus on viime vuosina kulkenut suuntaan, joka on monin osin suosinut presidentin valtaa. Tuomioistuimen konservatiivinen enemmistö vahvistui Trumpin ensimmäisellä kaudella, ja se on antanut presidentille useita merkittäviä voittoja.\\n\\nOikeus on laajentanut toimeenpanovallan alaa ja suojannut Trumpia sekä tulevia presidenttejä syytteiltä virallisten toimien osalta. Samalla osa konservatiivituomareista on kuitenkin liittynyt liberaalien tuomareiden kannalle, kun kyse on ollut Trumpin kunnianhimoisimmista maahanmuutto-, kauppa- ja lainvalvontapoliittisista toimista.\\n\\n## Tullipäätös toi toisen rajan\\n\\nHelmikuussa tuomioistuin kaatoi äänin 6–3 Trumpin yrityksen käyttää olemassa olevaa liittovaltion lakia laajojen uusien tullien määräämiseen Yhdysvaltain kauppakumppaneille. Ratkaisun mukana olivat myös Trumpin nimittämät Amy Coney Barrett ja Neil Gorsuch.\\n\\nTuolloin Trump reagoi paljon jyrkemmin kuin kansalaisuuspäätökseen. Hän sanoi olevansa ”äärimmäisen häpeissään” kolmesta konservatiivituomarista, jotka liittyivät liberaalien kannalle.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Yhdysvallat\",\n    \"korkein oikeus\",\n    \"Donald Trump\",\n    \"kansalaisuus\",\n    \"presidentin valta\"\n  ],\n  \"summary_bullets\": [\n    \"Korkein oikeus torjui Trumpin yrityksen rajoittaa syntymäpaikkaan perustuvaa kansalaisuutta.\",\n    \"Päätös syntyi niukasti, sillä viisi yhdeksästä tuomarista katsoi oikeuden olevan perustuslaillisesti suojattu.\",\n    \"Sama istuntokausi on kuitenkin tuonut Trumpille myös voittoja ja vahvistanut presidentin toimeenpanovaltaa.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.91,\n  \"journalist_note\": \"Artikkeli perustuu annettuihin lähdekatkelmiin. Mukaan on otettu vain niissä esiintyvät ratkaisut, äänestystulokset, reaktiot ja arviot oikeuden linjasta.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260630T225125Z_aec65db9f1",
+    "category": "Ulkomaat",
+    "selected_source_words": 382,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 246,
+    "issues": [
+      "content too short: 246 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Yhdysvaltain korkein oikeus torjui Trumpin kansalaisuuslinjan mutta vahvisti presidentin valtaa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-06-30T22:54:54.506598+00:00",
+    "repair_trigger": "pre_repair_word_count=246; selected_source_words=382; selected_source_blocks=4",
+    "pre_repair_word_count": 246,
+    "pre_repair_lead_word_count": 38,
+    "post_repair_word_count": 246,
+    "post_repair_lead_word_count": 38,
+    "selected_source_words_at_repair": 382,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 382,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 246 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:9015439fcd",
+      "2:BBC World:e2c6245279",
+      "3:BBC World:79a72fc4ea",
+      "4:BBC World:db2fefd6e4"
+    ],
+    "final_issues": [
+      "content too short: 246 words"
+    ],
+    "recovered": false
+  }
+}
