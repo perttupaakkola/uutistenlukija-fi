@@ -10,6 +10,20 @@ function jsonResponse(body, status = 200) {
   });
 }
 
+function notFoundResponse() {
+  return new Response('Not found', {
+    status: 404,
+    headers: {
+      'content-type': 'text/plain; charset=UTF-8',
+      'cache-control': 'no-store',
+    },
+  });
+}
+
+function blockedPublicStatusPath(pathname) {
+  return pathname === '/tila' || pathname === '/tila/' || pathname.startsWith('/tila/');
+}
+
 function readEnv(env, key) {
   const value = env?.[key];
   return typeof value === 'string' ? value.trim() : '';
@@ -192,6 +206,10 @@ function redirectedArticleSubpage(requestUrl) {
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+
+    if (blockedPublicStatusPath(url.pathname)) {
+      return notFoundResponse();
+    }
 
     if (url.pathname === '/api/subscribe') {
       return handleSubscribe(request, env, ctx);
