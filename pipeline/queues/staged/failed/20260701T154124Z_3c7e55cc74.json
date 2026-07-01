@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-01T15:41:24.410512+00:00",
+  "digest": "3c7e55cc74",
+  "packet": {
+    "packet_id": "20260701T154124Z_3c7e55cc74",
+    "created_at": "2026-07-01T15:41:24Z",
+    "headline_seed": "Man guilty of attempted murder of three children in Dublin",
+    "description_seed": "Riad Bouchaker denied attempting to murder three children and assaulting four other people on 23 November 2023.",
+    "link": "https://www.bbc.co.uk/news/articles/c78yjgpr5j3o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "The Irish Times",
+      "Meath Chronicle"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/c78yjgpr5j3o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Man guilty of attempted murder of three children in Dublin"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Three children and an adult were injured in the attack outside a school in Dublin in 2023 A 52-year-old man has been found guilty of the attempted murder of three children and assaulting four other people in Dublin's Parnell Square in November 2023. Riad Bouchaker, of no fixed address, was also found guilty of assault causing serious harm to crèche worker Leanne Flynn, and of assaulting two other children and a teenager. The Central Criminal Court heard that a five-year-old girl has been left with a life-long brain injury after Bouchaker stabbed her in the heart. In total, he was found guilty of all eight charges, which he had had denied at the Central Criminal Court. The jury was sent out on Tuesday, they deliberated for around six hours and reached a verdict on Wednesday afternoon.",
+        "word_count": 136,
+        "keyword_overlap": 15,
+        "strong_overlap": 10
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Riad Bouchaker denied attempting to murder three children and assaulting four other people on 23 November 2023.",
+        "word_count": 17,
+        "keyword_overlap": 13,
+        "strong_overlap": 8
+      },
+      {
+        "source": "The Irish Times",
+        "source_type": "research",
+        "text": "Riad Bouchaker has been found guilty by unanimous jury verdict at the Central Criminal Court of the attempted murder of three young children at Dublin’s Parnell Square in November 2023. One child, then a five-year-old girl, suffered what doctors described as “life-long” and “life-limiting” severe brain and other injuries, requiring 24 hour care when she was stabbed in the heart on November 23rd , 2023. The two other children subject of the attempted murder charges were a five-year-old girl and six-year-old boy. The girl underwent surgery to repair a non-penetrative laceration to her scalp and dislodging of a skull fragment and was discharged the following day. The boy had a nick to his neck that was treated with paper stitches and three holes in the hood of his jacket.",
+        "word_count": 129,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Meath Chronicle",
+        "source_type": "research",
+        "text": "A 52-year-old man has been found guilty of eight charges in relation to the stabbing attack that occurred on Parnell Square in Dublin three years ago. As well as the attempted murder of three children, Riad Bouchaker was also found guilty of stabbing and causing life-changing injuries to childcare worker Leanne Flynn while she tried to protect the children. Along with assaulting two further children and a teenager. After weeks of hearing evidence, the court found that the most seriously injured child in the attacks was left with a life-long brain injury after Bouchaker stabbed her in the heart.",
+        "word_count": 99,
+        "keyword_overlap": 9,
+        "strong_overlap": 7
+      }
+    ],
+    "source_text": "Three children and an adult were injured in the attack outside a school in Dublin in 2023 A 52-year-old man has been found guilty of the attempted murder of three children and assaulting four other people in Dublin's Parnell Square in November 2023. Riad Bouchaker, of no fixed address, was also found guilty of assault causing serious harm to crèche worker Leanne Flynn, and of assaulting two other children and a teenager. The Central Criminal Court heard that a five-year-old girl has been left with a life-long brain injury after Bouchaker stabbed her in the heart. In total, he was found guilty of all eight charges, which he had had denied at the Central Criminal Court. The jury was sent out on Tuesday, they deliberated for around six hours and reached a verdict on Wednesday afternoon.\n\nRiad Bouchaker denied attempting to murder three children and assaulting four other people on 23 November 2023.\n\nRiad Bouchaker has been found guilty by unanimous jury verdict at the Central Criminal Court of the attempted murder of three young children at Dublin’s Parnell Square in November 2023. One child, then a five-year-old girl, suffered what doctors described as “life-long” and “life-limiting” severe brain and other injuries, requiring 24 hour care when she was stabbed in the heart on November 23rd , 2023. The two other children subject of the attempted murder charges were a five-year-old girl and six-year-old boy. The girl underwent surgery to repair a non-penetrative laceration to her scalp and dislodging of a skull fragment and was discharged the following day. The boy had a nick to his neck that was treated with paper stitches and three holes in the hood of his jacket.\n\nA 52-year-old man has been found guilty of eight charges in relation to the stabbing attack that occurred on Parnell Square in Dublin three years ago. As well as the attempted murder of three children, Riad Bouchaker was also found guilty of stabbing and causing life-changing injuries to childcare worker Leanne Flynn while she tried to protect the children. Along with assaulting two further children and a teenager. After weeks of hearing evidence, the court found that the most seriously injured child in the attacks was left with a life-long brain injury after Bouchaker stabbed her in the heart.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1011,
+      "selected_blocks": 4,
+      "selected_source_words": 381,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "The Irish Times",
+        "The Irish Times",
+        "The Irish Times",
+        "The Irish Times",
+        "Meath Chronicle",
+        "Meath Chronicle",
+        "Meath Chronicle",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "The Irish Times",
+        "Meath Chronicle"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Man guilty of attempted murder of three children in Dublin",
+      "description": "Riad Bouchaker denied attempting to murder three children and assaulting four other people on 23 November 2023.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Man guilty of attempted murder of three children in Dublin",
+    "description": "Riad Bouchaker denied attempting to murder three children and assaulting four other people on 23 November 2023.",
+    "link": "https://www.bbc.co.uk/news/articles/c78yjgpr5j3o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-01T15:34:10+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "b250aec62f6721ee36990999925cf895",
+    "_url_hash": "4cda32d3954a6020a4982c34fe63ba2eb94f3d69985561e8d01e91c653767bec",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThree children and an adult were injured in the attack outside a school in Dublin in 2023\n\nA 52-year-old man has been found guilty of the attempted murder of three children and assaulting four other people in Dublin's Parnell Square in November 2023.\n\nRiad Bouchaker, of no fixed address, was also found guilty of assault causing serious harm to crèche worker Leanne Flynn, and of assaulting two other children and a teenager.\n\nThe Central Criminal Court heard that a five-year-old girl has been left with a life-long brain injury after Bouchaker stabbed her in the heart.\n\nIn total, he was found guilty of all eight charges, which he had had denied at the Central Criminal Court.\n\nThe jury was sent out on Tuesday, they deliberated for around six hours and reached a verdict on Wednesday afternoon.\n\nThey found Bouchaker guilty on all counts.\n\nBouchaker was liaising with his interpreter upon hearing the verdict.\n\nJudge Tony Hunt thanked the jury for their \"hard work\" and he said \"having to listen by some of what you heard is very difficult\".\n\nHe also thanked the jury for their verdicts and said they are \"entirely in line with the evidence that you heard\".\n\nSentencing has been set for 12 October and Bouchaker will be remanded in custody until then.\n\nA tram was burnt out on O'Connell Street in central Dublin during rioting which followed the attack\n\nThe attack on 23 November 2023 sparked riots across much of Dublin.\n\nThe most riot police in Irish state history were deployed to deal with the unrest.\n\nWithin hours of the attack, rioters destroyed 11 police vehicles, while 13 shops were badly damaged and more were looted during clashes with riot police.\n\nThree buses and a tram were also destroyed and several police officers were injured during three hours of sustained violence.\n\nIreland's police chief at the time, Drew Harris blamed the rioting on a \"lunatic, hooligan faction driven by a far-right ideology\".\n\n---\n\n[Lähde: The Irish Times]\nRiad Bouchaker has been found guilty by unanimous jury verdict at the Central Criminal Court of the attempted murder of three young children at Dublin’s Parnell Square in November 2023.\n\nOne child, then a five-year-old girl, suffered what doctors described as “life-long” and “life-limiting” severe brain and other injuries, requiring 24 hour care when she was stabbed in the heart on November 23rd , 2023.\n\nThe two other children subject of the attempted murder charges were a five-year-old girl and six-year-old boy. The girl underwent surgery to repair a non-penetrative laceration to her scalp and dislodging of a skull fragment and was discharged the following day.\n\nThe boy had a nick to his neck that was treated with paper stitches and three holes in the hood of his jacket.\n\nThe nine men and three women on Wednesday found Bouchaker guilty of a total eight charges, including the attempted murder charges, connected with the attack at Parnell Square.\n\nJudge Tony Hunt, who will impose sentence on all charges in October, thanked the jury and told them the consequences of their decision were a matter for him. “No more needs to be said today,” he said.\n\nThe jury found Bouchaker guilty of intentionally inflicting serious harm on childcare worker Leanne Flynn who suffered serious injuries after being stabbed in the back when she tried to protect the children. She underwent life-saving surgery, including the removal of her spleen which was necessary to stop blood loss.\n\nBouchaker was found guilty of assault causing harm to two other children.\n\nOne, a six-year-old girl, had a bump on her head, a nick behind her ear, a clump of cut hair on her shoulder, her top and coat cut and she had wet herself. The second, a five-year-old boy, had a small cut near his nipple and a graze under his arm and minute slashes in his coat, tracksuit top and T-shirt.\n\nThe jury found him guilty of assault causing harm to a French teenage chef, Alan Lorena Guille who had minor scratches to his hand and face after wrenching the knife from Bouchaker’s hand.\n\nHe was also found guilty of producing a 36cm knife capable of inflicting serious injury.\n\nThe jury returned with its verdicts about 3.45pm after deliberating for more than four hours.\n\nThe judge asked that the verdicts be received in silence by the packed court, including Flynn and the parents and family members of the injured children. Bouchaker appeared to shake his head as the verdicts were read.\n\nThe jury had spent about one hour deliber\n\n---\n\n[Lähde: Meath Chronicle]\nA 52-year-old man has been found guilty of eight charges in relation to the stabbing attack that occurred on Parnell Square in Dublin three years ago.\n\nAs well as the attempted murder of three children, Riad Bouchaker was also found guilty of stabbing and causing life-changing injuries to childcare worker Leanne Flynn while she tried to protect the children. Along with assaulting two further children and a teenager.\n\nAfter weeks of hearing evidence, the court found that the most seriously injured child in the attacks was left with a life-long brain injury after Bouchaker stabbed her in the heart.\n\nThe court heard evidence that Bouchaker was angry after failing to get social welfare payments, and went to his hostel in Dublin City Centre, grabbed a carving knife and walked to Parnell Square. He then asked multiple people about the location of a school.\n\nBouchaker waited nearby for around an hour before seeing the primary school students lining up as they were to be taken to an after school creche. Upon  noticing that Leanne Flynn was the only adult nearby, and as she crouched down to zip up the jacket of one child, he began attacking the children, stabbing Ms Flynn in the back as she pulled him away.\n\nThe jury spent around five hours considering their verdicts, and were unanimous in relation to each count.\n\nMr Justice Tony Hunt is to set a date for the sentencing hearing this afternoon. More to follow…",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-01T15:44:45.570219+00:00",
+  "failure": "content too short: 207 words",
+  "payload": {
+    "packet_id": "20260701T154124Z_3c7e55cc74",
+    "title": "Mies todettiin syylliseksi kolmen lapsen murhan yritykseen Dublinissa",
+    "summary": "Riad Bouchaker todettiin syylliseksi kaikkiin kahdeksaan syytekohtaan Dublinin Parnell Squarella marraskuussa 2023 tapahtuneesta veitsi-iskusta.",
+    "content": "Riad Bouchaker, 52, on todettu syylliseksi kolmen lapsen murhan yritykseen ja neljän muun ihmisen pahoinpitelyyn Dublinin Parnell Squarella marraskuussa 2023. Irlannin keskusrikostuomioistuimen valamiehistö katsoi hänen syyllistyneen kaikkiin kahdeksaan syytekohtaan, jotka hän oli kiistänyt.\n\n## Valamiehistö päätyi ratkaisuun keskiviikkona\n\nTapaus koski 23. marraskuuta 2023 koulun ulkopuolella tapahtunutta iskua, jossa loukkaantui kolme lasta ja aikuinen. Bouchaker, jolla ei kerrottu olevan vakituista osoitetta, todettiin syylliseksi kolmen nuoren lapsen murhan yritykseen sekä muihin väkivaltarikoksiin.\n\nTuomioistuin kuuli, että vakavimmin loukkaantunut lapsi, tuolloin viisivuotias tyttö, sai pysyvän aivovamman sen jälkeen, kun Bouchaker oli puukottanut häntä sydämeen. Lääkäreiden mukaan vammat ovat elinikäisiä ja rajoittavat lapsen elämää. Hän tarvitsee ympärivuorokautista hoivaa.\n\nKaksi muuta murhan yrityksen kohteena ollutta lasta olivat viisivuotias tyttö ja kuusivuotias poika. Tytölle tehtiin leikkaus päänahan haavan ja kallon luunpalan irtoamisen vuoksi, ja hän pääsi sairaalasta seuraavana päivänä. Pojalla oli kaulassa pieni haava, joka hoidettiin haavateipillä, sekä kolme reikää takin hupussa.\n\n## Päiväkotityöntekijä yritti suojella lapsia\n\nBouchaker todettiin syylliseksi myös vakavaa haittaa aiheuttaneeseen pahoinpitelyyn, jonka uhrina oli lastenhoitotyöntekijä Leanne Flynn. Oikeudessa esitetyn mukaan Flynn sai elämää muuttavia vammoja yrittäessään suojella lapsia hyökkäyksen aikana.\n\nLisäksi Bouchaker todettiin syylliseksi kahden muun lapsen ja yhden teini-ikäisen pahoinpitelyyn. Valamiehistö vetäytyi harkitsemaan päätöstään tiistaina viikkoja kestäneen todistelun jälkeen ja päätyi yksimieliseen ratkaisuun noin kuuden tunnin harkinnan jälkeen keskiviikkoiltapäivänä.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Irlanti",
+      "Dublin",
+      "oikeus",
+      "väkivaltarikos"
+    ],
+    "summary_bullets": [
+      "Riad Bouchaker todettiin syylliseksi kolmen lapsen murhan yritykseen Dublinissa.",
+      "Hänet todettiin syylliseksi kaikkiin kahdeksaan syytekohtaan.",
+      "Vakavimmin loukkaantunut viisivuotias lapsi sai elinikäisen aivovamman."
+    ],
+    "content_type": "news_article",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu usean lähteen yhteneviin tietoihin oikeuden ratkaisusta, syytekohdista ja uhrien vammoista."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260701T154124Z_3c7e55cc74\",\n  \"title\": \"Mies todettiin syylliseksi kolmen lapsen murhan yritykseen Dublinissa\",\n  \"summary\": \"Riad Bouchaker todettiin syylliseksi kaikkiin kahdeksaan syytekohtaan Dublinin Parnell Squarella marraskuussa 2023 tapahtuneesta veitsi-iskusta.\",\n  \"content\": \"Riad Bouchaker, 52, on todettu syylliseksi kolmen lapsen murhan yritykseen ja neljän muun ihmisen pahoinpitelyyn Dublinin Parnell Squarella marraskuussa 2023. Irlannin keskusrikostuomioistuimen valamiehistö katsoi hänen syyllistyneen kaikkiin kahdeksaan syytekohtaan, jotka hän oli kiistänyt.\\n\\n## Valamiehistö päätyi ratkaisuun keskiviikkona\\n\\nTapaus koski 23. marraskuuta 2023 koulun ulkopuolella tapahtunutta iskua, jossa loukkaantui kolme lasta ja aikuinen. Bouchaker, jolla ei kerrottu olevan vakituista osoitetta, todettiin syylliseksi kolmen nuoren lapsen murhan yritykseen sekä muihin väkivaltarikoksiin.\\n\\nTuomioistuin kuuli, että vakavimmin loukkaantunut lapsi, tuolloin viisivuotias tyttö, sai pysyvän aivovamman sen jälkeen, kun Bouchaker oli puukottanut häntä sydämeen. Lääkäreiden mukaan vammat ovat elinikäisiä ja rajoittavat lapsen elämää. Hän tarvitsee ympärivuorokautista hoivaa.\\n\\nKaksi muuta murhan yrityksen kohteena ollutta lasta olivat viisivuotias tyttö ja kuusivuotias poika. Tytölle tehtiin leikkaus päänahan haavan ja kallon luunpalan irtoamisen vuoksi, ja hän pääsi sairaalasta seuraavana päivänä. Pojalla oli kaulassa pieni haava, joka hoidettiin haavateipillä, sekä kolme reikää takin hupussa.\\n\\n## Päiväkotityöntekijä yritti suojella lapsia\\n\\nBouchaker todettiin syylliseksi myös vakavaa haittaa aiheuttaneeseen pahoinpitelyyn, jonka uhrina oli lastenhoitotyöntekijä Leanne Flynn. Oikeudessa esitetyn mukaan Flynn sai elämää muuttavia vammoja yrittäessään suojella lapsia hyökkäyksen aikana.\\n\\nLisäksi Bouchaker todettiin syylliseksi kahden muun lapsen ja yhden teini-ikäisen pahoinpitelyyn. Valamiehistö vetäytyi harkitsemaan päätöstään tiistaina viikkoja kestäneen todistelun jälkeen ja päätyi yksimieliseen ratkaisuun noin kuuden tunnin harkinnan jälkeen keskiviikkoiltapäivänä.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Irlanti\",\n    \"Dublin\",\n    \"oikeus\",\n    \"väkivaltarikos\"\n  ],\n  \"summary_bullets\": [\n    \"Riad Bouchaker todettiin syylliseksi kolmen lapsen murhan yritykseen Dublinissa.\",\n    \"Hänet todettiin syylliseksi kaikkiin kahdeksaan syytekohtaan.\",\n    \"Vakavimmin loukkaantunut viisivuotias lapsi sai elinikäisen aivovamman.\"\n  ],\n  \"content_type\": \"news_article\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu usean lähteen yhteneviin tietoihin oikeuden ratkaisusta, syytekohdista ja uhrien vammoista.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260701T154124Z_3c7e55cc74",
+    "category": "Kotimaa",
+    "selected_source_words": 381,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 207,
+    "issues": [
+      "content too short: 207 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Mies todettiin syylliseksi kolmen lapsen murhan yritykseen Dublinissa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-07-01T15:44:45.569935+00:00",
+    "repair_trigger": "pre_repair_word_count=207; selected_source_words=381; selected_source_blocks=4",
+    "pre_repair_word_count": 207,
+    "pre_repair_lead_word_count": 33,
+    "post_repair_word_count": 207,
+    "post_repair_lead_word_count": 33,
+    "selected_source_words_at_repair": 381,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 381,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 207 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:bca6c64164",
+      "2:BBC World:7d2cd3f26b",
+      "3:The Irish Times:acae067c84",
+      "4:Meath Chronicle:8895c43ddd"
+    ],
+    "final_issues": [
+      "content too short: 207 words"
+    ],
+    "recovered": false
+  }
+}
