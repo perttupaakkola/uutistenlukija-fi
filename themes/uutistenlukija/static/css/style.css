@@ -3284,6 +3284,56 @@ body.is-home .highlights-row--top {
   line-height: 1.5;
 }
 
+.article-talous-link {
+  max-width: 680px;
+  margin: 2rem auto;
+  padding: 1rem 1.1rem;
+  border-block: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.35rem 1rem;
+  align-items: center;
+}
+
+.article-talous-link__label {
+  color: #9a6700;
+  font: 700 0.75rem/1.2 var(--font-sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.article-talous-link__text {
+  grid-column: 1;
+  margin: 0;
+  color: var(--text-secondary);
+  font: 400 0.95rem/1.5 var(--font-sans);
+}
+
+.article-talous-link__cta {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  color: var(--accent);
+  font: 700 0.9rem/1.2 var(--font-sans);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.article-talous-link__cta:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 620px) {
+  .article-talous-link {
+    grid-template-columns: 1fr;
+  }
+
+  .article-talous-link__cta {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
 .article-outro-topic-prompt {
   margin: 1.25rem 0 2.5rem;
   padding: 1rem 1.15rem;

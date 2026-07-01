@@ -49,6 +49,16 @@
   {{ $page.Content }}
 </div>
 
+{{- $primaryCategory := "" -}}
+{{- with $page.Params.categories -}}{{- $primaryCategory = index . 0 -}}{{- end -}}
+{{- if eq (lower $primaryCategory) "talous" }}
+<aside class="article-talous-link" aria-label="Lisää talousuutisia">
+  <span class="article-talous-link__label">Talous</span>
+  <p class="article-talous-link__text">Seuraa yrityksiä, hintoja ja markkinoita yhdessä paikassa.</p>
+  <a class="article-talous-link__cta" href="/kategoriat/talous/">Avaa Talous-osio</a>
+</aside>
+{{- end }}
+
 {{ partial "article-outro-topic-prompt.html" $page }}
 
 {{- if eq .showJournalistNote true }}{{ partial "journalist-note.html" $page }}{{ end }}
