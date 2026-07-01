@@ -8,7 +8,6 @@
 {{- if eq .showSummary true }}{{ partial "article-summary.html" $page }}{{ end }}
 {{- if eq .showKeyFacts true }}{{ partial "key-facts.html" $page }}{{ end }}
 {{- if eq .showToc true }}{{ partial "toc.html" $page }}{{ end }}
-{{- if eq .showSource true }}{{ partial "article-source-attribution.html" $page }}{{ end }}
 
 {{- if eq .metaVariant "single" }}
 <div class="article-meta">
@@ -33,11 +32,6 @@
   · <span class="article-reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>{{ $readingMinutes }} min lukuaika</span>
   {{- end }}
 </div>
-{{- if eq .showTrustNote true }}
-<div class="article-trust-note" role="note" aria-label="Toimituksen huomautus">
-  <strong>Toimituksen huomautus:</strong> Uutistenlukija tiivistää päivän uutisaiheita toimituksellisessa muodossa. Tarkistamme sisällön rakenteen automaattisesti ennen julkaisua ja korjaamme näkyvät virheet, kun niitä havaitaan.
-</div>
-{{- end }}
 {{- else if eq .metaVariant "page" }}
 <div class="article-meta">
   {{ $page.Date | time.Format "2.1.2006 klo 15:04" }}
@@ -45,6 +39,7 @@
   · {{ $page.ReadingTime }} min lukuaika
 </div>
 {{- end }}
+{{- if eq .showSource true }}{{ partial "source-article-link.html" $page }}{{ end }}
 <div class="{{ $contentClass }}">
   {{ $page.Content }}
 </div>
@@ -59,6 +54,13 @@
 </aside>
 {{- end }}
 
+{{- if and (eq .showSource true) (not $page.Params.source_url) (not $page.Params.journalist_note) }}
+{{- $fallbackSource := $page.Params.source_name | default $page.Params.source_domain -}}
+<div class="article-end-note">
+  <p>{{ with $fallbackSource }}Tämä juttu perustuu lähteeseen {{ . }} ja muuhun toimitukselliseen taustoitukseen.{{ else }}Tämä juttu perustuu useisiin uutislähteisiin ja on koottu tiiviiksi kokonaisuudeksi.{{ end }}</p>
+</div>
+{{- end }}
+
 {{ partial "article-outro-topic-prompt.html" $page }}
 
 {{- if eq .showJournalistNote true }}{{ partial "journalist-note.html" $page }}{{ end }}
@@ -67,23 +69,16 @@
 
 {{- if eq .showAuthorBox true }}
   {{ with $page.Params.author }}
-  {{- $authorName := . -}}
-  {{- $authorTitle := $page.Params.author_title -}}
-  {{- $authorBio := $page.Params.author_bio -}}
-  {{- if eq $authorName "Toimitus" -}}
-    {{- $authorTitle = "Uutistenlukija.fi" -}}
-    {{- $authorBio = "Suomen nopein tapa seurata päivän puheenaiheita." -}}
-  {{- end -}}
   <div class="{{ $authorBoxClass }}">
     {{ with $page.Params.author_image }}
     <img src="{{ . }}" alt="{{ $page.Params.author }}" class="author-photo" loading="lazy" decoding="async" width="{{ $authorImageSize }}" height="{{ $authorImageSize }}">
     {{ end }}
     <div class="author-info">
-      <span class="author-name">{{ $authorName }}</span>
-      {{ with $authorTitle }}
+      <span class="author-name">{{ $page.Params.author }}</span>
+      {{ with $page.Params.author_title }}
       <span class="author-role">{{ . }}</span>
       {{ end }}
-      {{ with $authorBio }}
+      {{ with $page.Params.author_bio }}
       <p class="author-bio">{{ . }}</p>
       {{ end }}
     </div>
