@@ -43,7 +43,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/lian-li-julkaisi-uuden-b4-matx-kotelon-yhteistyossa-dan-casesin-kanssa/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
