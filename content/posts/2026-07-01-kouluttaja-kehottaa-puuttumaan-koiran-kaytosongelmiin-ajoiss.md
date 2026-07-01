@@ -41,7 +41,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/kouluttaja-kertoo-milloin-koiran-kaytoksesta-tulisi-huolestua-joskus-yksinkertaisesti-vaarassa-paikassa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
