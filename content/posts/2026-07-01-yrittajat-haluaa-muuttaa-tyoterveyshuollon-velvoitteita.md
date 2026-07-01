@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/taman-takia-yrittajat-ajaa-muutosta-tyoterveyshuoltoon-tamperelaisyrittaja-samoilla-linjoilla-tuntuu-turhalta-jos-rahalla-ei-saa-mitaan/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
