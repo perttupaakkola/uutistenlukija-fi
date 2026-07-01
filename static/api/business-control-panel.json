@@ -1,19 +1,19 @@
 {
   "analytics": {
     "freshness": {
-      "age_minutes": 160.1,
+      "age_minutes": 124.4,
       "blocked_by": null,
-      "checked_at": "2026-06-27T18:15:05+00:00",
+      "checked_at": "2026-07-01T12:15:06+00:00",
       "daily_report": {
         "age_hours": 0.0,
         "artifact": "analytics/daily-report.json",
         "counts": {
-          "daily_pageview_rows": 2,
+          "daily_pageview_rows": 1,
           "search_console_top_queries": 0,
           "top_pages_7d": 10,
-          "traffic_sources_7d": 3
+          "traffic_sources_7d": 2
         },
-        "evidence_at": "2026-06-27T18:15:05+00:00",
+        "evidence_at": "2026-07-01T12:15:06+00:00",
         "fresh": true,
         "property_id": "529369568",
         "site": "sc-domain:uutistenlukija.fi"
@@ -25,10 +25,10 @@
         "superseded_by_fresh_validation": false
       },
       "search_console": {
-        "age_hours": 11.75,
+        "age_hours": 5.75,
         "artifact": "static/api/search-console-data.json",
         "days": 28,
-        "evidence_at": "2026-06-27T06:30:01+00:00",
+        "evidence_at": "2026-07-01T06:30:02+00:00",
         "fresh": true,
         "row_count": 500,
         "site": "sc-domain:uutistenlukija.fi"
@@ -42,26 +42,25 @@
         "age_hours": 0.0,
         "artifact": "analytics/daily-report.json",
         "counts": {
-          "daily_pageview_rows": 2,
+          "daily_pageview_rows": 1,
           "search_console_top_queries": 0,
           "top_pages_7d": 10,
-          "traffic_sources_7d": 3
+          "traffic_sources_7d": 2
         },
-        "evidence_at": "2026-06-27T18:15:05+00:00",
+        "evidence_at": "2026-07-01T12:15:06+00:00",
         "fresh": true,
         "property_id": "529369568",
         "site": "sc-domain:uutistenlukija.fi"
       },
       "daily_traffic_log": {
-        "age_minutes": 835.1,
+        "age_minutes": 439.4,
         "exists": true,
-        "status": "error_seen",
-        "superseded_by_freshness_status": true
+        "status": "log_present"
       },
       "reason": "fresh GA4 validation artifact present",
       "status": "fresh",
       "weekly_metrics_log": {
-        "age_minutes": 8035.1,
+        "age_minutes": 3319.4,
         "exists": true,
         "status": "error_seen",
         "superseded_by_freshness_status": true
@@ -69,24 +68,24 @@
     },
     "gsc": {
       "ctr_gap_report": {
-        "age_minutes": 7975.2,
+        "age_minutes": 3259.5,
         "data_source": "google_search_console",
-        "generated_at": "2026-06-22T08:00:01.465273Z",
+        "generated_at": "2026-06-29T08:00:01.731292Z",
         "source": "static/api/ctr-gap-report.json",
-        "total_gaps_found": 2
+        "total_gaps_found": 4
       },
       "fetch_log": {
-        "age_minutes": 865.2,
+        "age_minutes": 469.4,
         "exists": true,
         "status": "error_seen",
         "superseded_by_freshness_status": true
       },
       "reason": "fresh Search Console validation artifact present",
       "search_console_report": {
-        "age_hours": 11.75,
+        "age_hours": 5.75,
         "artifact": "static/api/search-console-data.json",
         "days": 28,
-        "evidence_at": "2026-06-27T06:30:01+00:00",
+        "evidence_at": "2026-07-01T06:30:02+00:00",
         "fresh": true,
         "row_count": 500,
         "site": "sc-domain:uutistenlukija.fi"
@@ -97,118 +96,127 @@
   },
   "category_drift": {
     "alerts": [
-      "Kotimaa: 31.9% (+6.9% over target 25%)",
-      "Talous: 10.1% (-9.9% under target 20%)",
-      "Ulkomaat: 26.4% (+6.4% over target 20%)"
+      "Kotimaa: 32.3% (+7.3% over target 25%)",
+      "Kulttuuri: 1.9% (-5.1% under target 7%)",
+      "Talous: 10.0% (-10.0% under target 20%)",
+      "Ulkomaat: 26.0% (+6.0% over target 20%)"
     ],
     "available": true,
     "categories": [
       {
         "category": "Kotimaa",
-        "count": 1117,
-        "delta": 6.9,
-        "pct": 31.9,
+        "count": 1170,
+        "delta": 7.3,
+        "pct": 32.3,
         "status": "over",
         "target_pct": 25
       },
       {
         "category": "Kulttuuri",
         "count": 69,
-        "delta": -5.0,
-        "pct": 2.0,
-        "status": "ok",
+        "delta": -5.1,
+        "pct": 1.9,
+        "status": "under",
         "target_pct": 7
       },
       {
         "category": "Talous",
-        "count": 354,
-        "delta": -9.9,
-        "pct": 10.1,
+        "count": 362,
+        "delta": -10.0,
+        "pct": 10.0,
         "status": "under",
         "target_pct": 20
       },
       {
         "category": "Teknologia",
-        "count": 566,
-        "delta": 1.2,
-        "pct": 16.2,
+        "count": 600,
+        "delta": 1.6,
+        "pct": 16.6,
         "status": "ok",
         "target_pct": 15
       },
       {
         "category": "Tiede",
-        "count": 213,
-        "delta": 3.1,
-        "pct": 6.1,
+        "count": 218,
+        "delta": 3.0,
+        "pct": 6.0,
         "status": "ok",
         "target_pct": 3
       },
       {
         "category": "Ulkomaat",
-        "count": 923,
-        "delta": 6.4,
-        "pct": 26.4,
+        "count": 944,
+        "delta": 6.0,
+        "pct": 26.0,
         "status": "over",
         "target_pct": 20
       },
       {
         "category": "Urheilu",
-        "count": 256,
-        "delta": -2.7,
-        "pct": 7.3,
+        "count": 262,
+        "delta": -2.8,
+        "pct": 7.2,
         "status": "ok",
         "target_pct": 10
       }
     ],
-    "generated_at": "2026-06-27T07:30:01.882569+00:00",
+    "generated_at": "2026-07-01T07:30:01.624077+00:00",
     "source": "static/api/category-stats.json",
-    "total_articles": 3498
+    "total_articles": 3625
   },
   "content": {
-    "article_count_local": 3515,
-    "last_publish_age_minutes": 17.1,
-    "last_publish_at": "2026-06-27T20:38:05.921775Z",
+    "article_count_local": 3632,
+    "last_publish_age_minutes": 11.4,
+    "last_publish_at": "2026-07-01T14:08:06.684125Z",
     "latest_article": {
-      "category": "Teknologia",
-      "slug": "2026-06-27-apple-hakee-lupaa-ostaa-muistipiireja-kiinalaiselta-cxmtlta",
-      "title": "Apple hakee lupaa ostaa muistipiirejä kiinalaiselta CXMT:ltä"
+      "category": "Talous",
+      "slug": "2026-07-01-kysely-suurin-osa-sijoittajista-ei-aio-myyda-sijoituksia-kes",
+      "title": "Kysely: Suurin osa sijoittajista ei aio myydä sijoituksia kesän menojen vuoksi"
     },
-    "published_last_24h_local": 38,
+    "published_last_24h_local": 31,
     "source": "content/posts frontmatter"
   },
   "coordination": {
     "active_issue_ids": [
-      "OPE-9"
+      "OPE-9",
+      "OPE-264",
+      "OPE-273"
     ],
     "assignment_coverage_ok": true,
-    "blocked_issue_ids": [],
+    "blocked_issue_ids": [
+      "OPE-264"
+    ],
     "items": {
       "agent_health": {
-        "age_minutes": 30.5,
+        "age_minutes": 89.4,
         "available": true,
         "path": "workspace:agent-health.json",
-        "size_bytes": 10790,
+        "size_bytes": 16994,
         "summary": {
           "active_issue_ids": [
-            "OPE-9"
+            "OPE-9",
+            "OPE-264",
+            "OPE-273"
           ],
           "agents": {
             "felix": {
               "current_task": "Keep OPE-9 open for pull-loop hardening.",
-              "last_check": "2026-06-27T20:24:38+00:00",
+              "last_check": "2026-07-01T12:50:05+00:00",
               "linear_issue": "OPE-9",
               "state": "coordinating",
               "status": "linear_reconciled"
             },
             "max": {
               "current_task": "Maintain watchdog-filtered Linear OPE mirrors.",
-              "last_check": "2026-06-27T20:24:38+00:00",
+              "last_check": "2026-07-01T12:50:05+00:00",
               "linear_issue": null,
               "state": "ops",
               "status": "ready"
             }
           },
-          "blocked_issue_ids": [],
+          "blocked_issue_ids": [
+            "OPE-264"
+          ],
           "issue_summaries": [
             {
               "blockers": [],
@@ -223,25 +231,67 @@
               "state": "In Progress",
               "state_type": "started",
               "title": "Prove and harden 24/7 Linear pull loop for all agents",
-              "updated_at": "2026-06-27T20:24:01.830Z"
+              "updated_at": "2026-07-01T12:20:46.186Z"
+            },
+            {
+              "blockers": [
+                "blocked"
+              ],
+              "identifier": "OPE-264",
+              "lanes": [
+                "lane:business-growth",
+                "lane:growth",
+                "lane:seo"
+              ],
+              "owners": [
+                "owner:iris"
+              ],
+              "state": "Todo",
+              "state_type": "unstarted",
+              "title": "Measure Talous package URL movement after OPE-257 ship window",
+              "updated_at": "2026-06-30T04:13:14.078Z"
+            },
+            {
+              "blockers": [],
+              "identifier": "OPE-273",
+              "lanes": [
+                "lane:business-growth",
+                "lane:coding",
+                "lane:design",
+                "lane:seo"
+              ],
+              "owners": [
+                "owner:alex"
+              ],
+              "state": "In Progress",
+              "state_type": "started",
+              "title": "Ship Talous article-page internal link improvement",
+              "updated_at": "2026-07-01T12:20:12.026Z"
             }
           ],
           "lane_issue_counts": {
             "lane:automation": 1,
-            "lane:coordination": 1
+            "lane:business-growth": 2,
+            "lane:coding": 1,
+            "lane:coordination": 1,
+            "lane:design": 1,
+            "lane:growth": 1,
+            "lane:seo": 2
           },
           "needs_approval_issue_ids": [],
-          "open_issue_count": 1,
+          "open_issue_count": 3,
           "owner_issue_counts": {
-            "owner:felix": 1
+            "owner:alex": 1,
+            "owner:felix": 1,
+            "owner:iris": 1
           },
           "owner_lane_label_audit": {
-            "checked_at": "2026-06-27T20:24:38+00:00",
-            "checked_count": 1,
+            "checked_at": "2026-07-01T12:50:06+00:00",
+            "checked_count": 3,
             "missing_label_count": 0,
             "ok": true
           },
-          "updated_at": "2026-06-27T20:24:38+00:00"
+          "updated_at": "2026-07-01T12:50:05+00:00"
         }
       },
       "autonomy_state": {
@@ -251,34 +301,43 @@
         "available": false
       },
       "taskboard": {
-        "age_minutes": 30.5,
+        "age_minutes": 89.4,
         "available": true,
         "path": "workspace:TASKBOARD.md",
-        "size_bytes": 1546,
+        "size_bytes": 2367,
         "summary": {
           "active_issue_ids": [
-            "OPE-9"
+            "OPE-9",
+            "OPE-264",
+            "OPE-273"
           ],
           "linear_authoritative": true,
           "readable": true,
-          "updated_at": "2026-06-27T20:24:38+00:00"
+          "updated_at": "2026-07-01T12:50:05+00:00"
         }
       }
     },
     "lane_issue_counts": {
       "lane:automation": 1,
-      "lane:coordination": 1
+      "lane:business-growth": 2,
+      "lane:coding": 1,
+      "lane:coordination": 1,
+      "lane:design": 1,
+      "lane:growth": 1,
+      "lane:seo": 2
     },
-    "linear_open_issue_count": 1,
+    "linear_open_issue_count": 3,
     "needs_approval_issue_ids": [],
     "owner_issue_counts": {
-      "owner:felix": 1
+      "owner:alex": 1,
+      "owner:felix": 1,
+      "owner:iris": 1
     },
     "safe_public": true,
     "source": "workspace Linear mirror/cache files; Linear API not queried by this public JSON generator",
     "workspace_path": "workspace:."
   },
-  "generated_at": "2026-06-27T20:55:11.117649Z",
+  "generated_at": "2026-07-01T14:19:29.160473Z",
   "monetization": {
     "ads_enabled": false,
     "adsense_configured": false,
@@ -309,28 +368,28 @@
   ],
   "pipeline": {
     "last_24h": {
-      "article_count": 38,
+      "article_count": 31,
       "article_count_source": "content/posts frontmatter",
       "failure": 0,
       "generated_article_count": 0,
-      "published_article_count_local": 38,
+      "published_article_count_local": 31,
       "runs_total": 144,
       "skipped": 0,
       "success": 144,
       "top_error_reasons": []
     },
-    "last_run_age_minutes": 5.1,
+    "last_run_age_minutes": 9.3,
     "last_run_article_count": 0,
-    "last_run_at": "2026-06-27T20:50:07.426221Z",
+    "last_run_at": "2026-07-01T14:10:08.441758Z",
     "last_run_success": true,
     "metrics_rows_total": 200,
     "published_status_snapshot": {
       "articles": {
         "attempted": 0,
-        "last_published_ts": "2026-06-27T20:38:05.921775+00:00",
+        "last_published_ts": "2026-07-01T14:08:06.684125+00:00",
         "publish_rate": 0,
-        "published": 38,
-        "rejected": 3
+        "published": 31,
+        "rejected": 6
       },
       "feeds": {
         "disabled": 0,
@@ -342,15 +401,18 @@
         ],
         "total": 40
       },
-      "generated_at": "2026-06-27T20:39:19+00:00",
+      "generated_at": "2026-07-01T14:09:22+00:00",
       "hours": 24,
       "is_stale": false,
       "reject_reasons": {
+        "keyword_stuffing": 1,
+        "language borderline Finnish si": 4,
         "length under target (251 words": 1,
-        "length under target (256 words": 1,
-        "length under target (285 words": 1,
-        "missing: image": 3,
-        "source_confidence_denial_conte": 3
+        "length under target (258 words": 1,
+        "length under target (267 words": 1,
+        "missing: image": 6,
+        "source_confidence_denial_conte": 4,
+        "unsourced numbers": 3
       },
       "runs": {
         "error": 0,
@@ -362,24 +424,24 @@
       "status": "ok",
       "trending": [
         [
-          "vuoden",
-          30
-        ],
-        [
           "mukaansa",
-          29
-        ],
-        [
-          "jälkeen",
           26
         ],
         [
-          "kanssa",
-          21
+          "yhtiön",
+          20
         ],
         [
-          "yhdysvaltain",
-          19
+          "jälkeen",
+          17
+        ],
+        [
+          "kertoo",
+          15
+        ],
+        [
+          "ennen",
+          14
         ]
       ]
     },
@@ -388,24 +450,19 @@
   "queues": {
     "queues": {
       "staged/failed": {
-        "count": 2791,
-        "newest_item_age_minutes": 11.9,
-        "oldest_item_age_minutes": 39551.9
-      },
-      "staged/outbox": {
-        "count": 1,
-        "newest_item_age_minutes": 0.8,
-        "oldest_item_age_minutes": 0.8
+        "count": 3171,
+        "newest_item_age_minutes": 5.3,
+        "oldest_item_age_minutes": 44916.2
       },
       "staged/published": {
-        "count": 1721,
-        "newest_item_age_minutes": 15.9,
-        "oldest_item_age_minutes": 82046.8
+        "count": 1837,
+        "newest_item_age_minutes": 10.1,
+        "oldest_item_age_minutes": 87411.1
       },
       "staged/writing_orphan_backups/20260623T053158Z": {
         "count": 1,
-        "newest_item_age_minutes": 10784.2,
-        "oldest_item_age_minutes": 10784.2
+        "newest_item_age_minutes": 16148.5,
+        "oldest_item_age_minutes": 16148.5
       }
     },
     "source": "pipeline/queues/*.json file counts only"

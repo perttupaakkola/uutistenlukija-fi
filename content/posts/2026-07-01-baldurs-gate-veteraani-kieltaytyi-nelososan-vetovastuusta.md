@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/baldurs-gate-veteraani-kieltaytyi-pelisarjan-seuraavasta-osasta-se-olisi-hulluutta/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
