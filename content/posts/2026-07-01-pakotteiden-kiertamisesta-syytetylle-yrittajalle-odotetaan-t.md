@@ -44,7 +44,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/venaja-pakotteiden-kiertamisesta-syytetylle-yrittajalle-tanaan-tuomio/9360518"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
