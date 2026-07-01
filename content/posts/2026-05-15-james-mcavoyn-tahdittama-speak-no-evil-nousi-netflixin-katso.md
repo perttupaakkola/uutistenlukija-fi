@@ -22,11 +22,7 @@ journalist_note: |
   Artikkeli perustuu lähdepaketin tietoihin Netflixin Suomen TOP 10 -listasta, vuoden 2024 Speak No Evil -uusioversion kriittisestä arviosta ja alkuperäisen elokuvan suoratoistosaatavuudesta. Staran Sisu 2 -osuus jätettiin pois, koska se ei liittynyt tähän juttuun.
 content_type: "article"
 editorial_reviewed: true
-image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbiUyMGRpZ2l0YWx8ZW58MXwwfHx8MTc3ODgwNDg4NHww&ixlib=rb-4.1.0&q=80&w=1080"
-image_thumb: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx0ZWNobm9sb2d5JTIwaW5ub3ZhdGlvbiUyMGRpZ2l0YWx8ZW58MXwwfHx8MTc3ODgwNDg4NHww&ixlib=rb-4.1.0&q=80&w=400"
 image_alt: "Kuvituskuva uutiseen: James McAvoyn tähdittämä Speak No Evil nousi Netflixin katsotuimmaksi elokuvaksi Suomessa (netflix, speak no evil)"
-image_credit: "Photo by Steve A Johnson on Unsplash"
-image_source_url: "https://unsplash.com/photos/a-computer-circuit-board-with-a-brain-on-it-_0iV9LmPDn0?utm_source=uutistenlukija&utm_medium=referral"
 reading_time: 2
 tags:
   - netflix

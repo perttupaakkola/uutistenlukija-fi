@@ -22,11 +22,7 @@ journalist_note: |
   Artikkeli perustuu packetin kolmeen yhtenevään lähdeblokkiin. Julkaisupäivien mahdollinen muuttuminen mainitaan, koska se sisältyi aineistoon.
 content_type: "article"
 editorial_reviewed: true
-image: "https://images.unsplash.com/photo-1760655487414-458e27965e89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyNXx8dGVjaG5vbG9neSUyMGlubm92YXRpb24lMjBkaWdpdGFsfGVufDF8MHx8fDE3ODI1OTI2ODV8MA&ixlib=rb-4.1.0&q=80&w=1080"
-image_thumb: "https://images.unsplash.com/photo-1760655487414-458e27965e89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyNXx8dGVjaG5vbG9neSUyMGlubm92YXRpb24lMjBkaWdpdGFsfGVufDF8MHx8fDE3ODI1OTI2ODV8MA&ixlib=rb-4.1.0&q=80&w=400"
 image_alt: "Kuvituskuva uutiseen: Netflixin viikko tuo Enola Holmesin, scifiä ja uusia sarjakausia (netflix, suoratoisto)"
-image_credit: "Photo by Gavin Phillips on Unsplash"
-image_source_url: "https://unsplash.com/photos/curved-smartphone-displayed-at-an-exhibition-JDx8mMpsLNc?utm_source=uutistenlukija&utm_medium=referral"
 reading_time: 2
 tags:
   - netflix
