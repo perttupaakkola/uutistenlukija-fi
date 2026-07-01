@@ -3263,11 +3263,20 @@ body.is-home .highlights-row--top {
 @media (max-width: 620px) {
   .article-talous-link {
     grid-template-columns: 1fr;
+    gap: 0.55rem;
   }
 
   .article-talous-link__cta {
     grid-column: 1;
     grid-row: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    width: 100%;
+    border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border) 72%);
+    border-radius: 4px;
+    background: color-mix(in srgb, var(--accent) 7%, var(--card-bg) 93%);
   }
 }
 
