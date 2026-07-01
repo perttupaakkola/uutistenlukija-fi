@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-01T10:21:22.382237+00:00",
+  "digest": "812f62b63e",
+  "packet": {
+    "packet_id": "20260701T102122Z_812f62b63e",
+    "created_at": "2026-07-01T10:21:22Z",
+    "headline_seed": "Tilastot julki: tällainen oli kesäkuu",
+    "description_seed": "Kesäkuu tarjoili pakkasta, hellettä ja rankkoja sateita.",
+    "link": "https://www.is.fi/kotimaa/art-2000012113690.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012113690.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tilastot julki: tällainen oli kesäkuu"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 99,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tilastot julki: tällainen oli kesäkuu",
+      "description": "Kesäkuu tarjoili pakkasta, hellettä ja rankkoja sateita.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Tilastot julki: tällainen oli kesäkuu",
+    "description": "Kesäkuu tarjoili pakkasta, hellettä ja rankkoja sateita.",
+    "link": "https://www.is.fi/kotimaa/art-2000012113690.html",
+    "published": "2026-07-01T10:10:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "efbbcce3c9799ec80aaf79005cf2850c",
+    "_url_hash": "8391c30c98853e8cd2795b004304bef3d4be3f80662289fd7aaa4c4fbd84e606",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nTaloudellisen yhteistyön ja kehityksen järjestön OECD:n torstaina julkaisemat tilastot paljastavat, että Suomi on pärjännyt järjestön maista toiseksi parhaiten, mitä tulee talouden kasvuun.\n\nBruttokansantuotteen (BKT) kasvu oli Suomessa kuluvan vuoden ensimmäisellä neljänneksellä 0,9 prosenttia. Tätä paremmin suoriutui vain Etelä-Korea, jonka talous kasvoi 1,7 prosenttia. Järjestön jäsenmaiden keskimääräinen talouskasvu vuoden 2026 ensimmäisellä neljänneksellä oli 0,4 prosenttia.\n\nVaikka talouskasvu oli verrattain hyvällä pohjalla, työttömyys on edelleen retuperällä. OECD:n tilastoissa Suomi on työttömyyden kärkimaa työttömyysprosentin ollessa maaliskuussa 10,5. Toiseksi eniten työttömiä OECD-maista oli Espanjassa, jossa työttömyysprosentti oli maaliskuussa 10,3. Työttömyyden osalta OECD-maiden keskiarvo oli viisi prosenttia.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-01T10:23:19.699217+00:00",
+  "failure": "Paketti ei sisällä valittua lähdetekstiä tai tarkistettavia faktatietoja, joiden varaan vähintään 250 sanan uutisen voisi kirjoittaa keksimättä yksityiskohtia.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260701T102122Z_812f62b63e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä valittua lähdetekstiä tai tarkistettavia faktatietoja, joiden varaan vähintään 250 sanan uutisen voisi kirjoittaa keksimättä yksityiskohtia.\"}"
+}

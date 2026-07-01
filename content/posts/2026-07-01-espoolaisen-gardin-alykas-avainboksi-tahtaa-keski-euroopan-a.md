@@ -43,7 +43,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/espoolaisen-startupin-alykas-avainboksi-suuntaa-pian-keski-euroopan-airbnb-markkinoille/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
