@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-01T01:09:38+00:00",
+  "generated_at": "2026-07-01T02:09:19+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,20 +12,20 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 33,
+    "published": 34,
     "rejected": 7,
     "publish_rate": 0,
-    "last_published_ts": "2026-07-01T01:08:05.982954+00:00"
+    "last_published_ts": "2026-07-01T02:08:05.556532+00:00"
   },
   "reject_reasons": {
     "missing: image": 7,
     "source_confidence_denial_conte": 5,
+    "unsourced numbers": 4,
     "language borderline Finnish si": 4,
-    "unsourced numbers": 3,
-    "length under target (253 words": 1,
     "length under target (280 words": 1,
     "length under target (258 words": 1,
-    "length under target (267 words": 1
+    "length under target (267 words": 1,
+    "keyword_stuffing": 1
   },
   "feeds": {
     "total": 40,
@@ -47,16 +47,16 @@
       20
     ],
     [
+      "prosenttia",
+      19
+    ],
+    [
       "jälkeen",
       19
     ],
     [
       "yhtiön",
       19
-    ],
-    [
-      "prosenttia",
-      18
     ]
   ]
 }
