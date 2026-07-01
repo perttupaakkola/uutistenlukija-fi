@@ -43,7 +43,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/finanssivalvonta-helpottaa-asuntolainan-saantia-oikea-paatos-uinuvalle-asuntomarkkinalle/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
