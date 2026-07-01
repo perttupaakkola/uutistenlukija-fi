@@ -43,7 +43,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/natriumioniakussa-potentiaalia-mullistamaan-sahkoautot/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
