@@ -22,11 +22,12 @@ journalist_note: |
   Artikkeli perustuu packetin sääennustetietoihin. Sisältö rajattu lähteissä mainittuihin sääilmiöihin, lämpötiloihin ja alueellisiin eroihin.
 content_type: "article"
 editorial_reviewed: true
-image: "https://images.unsplash.com/photo-1653820611133-ed4101a5097b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxzdW5ueSUyMHdlYXRoZXIlMjBGaW5sYW5kfGVufDF8MHx8fDE3ODI5MjI2ODR8MA&ixlib=rb-4.1.0&q=80&w=1080"
-image_thumb: "https://images.unsplash.com/photo-1653820611133-ed4101a5097b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxzdW5ueSUyMHdlYXRoZXIlMjBGaW5sYW5kfGVufDF8MHx8fDE3ODI5MjI2ODR8MA&ixlib=rb-4.1.0&q=80&w=400"
-image_alt: "Kuvituskuva uutiseen: Loppuviikon sää viilenee, mutta aurinkoa riittää monin paikoin (sää, viikonloppu)"
-image_credit: "Photo by Aiva Apsite on Unsplash"
-image_source_url: "https://unsplash.com/photos/the-sun-is-setting-over-a-snowy-forest-Ah_hBiz2-ao?utm_source=uutistenlukija&utm_medium=referral"
+image: "/images/categories/kotimaa.jpg"
+image_thumb: "/images/categories/kotimaa.jpg"
+image_alt: "Kotimaa-uutiset"
+image_credit: ""
+image_source_url: ""
+image_category_fallback: true
 reading_time: 2
 tags:
   - sää

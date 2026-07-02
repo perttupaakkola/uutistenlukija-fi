@@ -465,12 +465,24 @@ def fetch_image_for_article(
     # Filter out already used images
     try:
         from image_state import is_image_used, mark_image_used, get_query_index, set_query_index
+        from image_candidate_guard import filter_image_candidates
         available_photos = [p for p in photos if not is_image_used(p["id"])]
     except ImportError:
         available_photos = photos
         mark_image_used = lambda x: None
         get_query_index = lambda x: _query_index.get(x, 0)
         set_query_index = lambda x, y: _query_index.update({x: y})
+        from image_candidate_guard import filter_image_candidates
+
+    available_photos = filter_image_candidates(
+        available_photos,
+        query=query,
+        title=title,
+        summary=summary,
+        key_points=key_points,
+        content=content,
+        provider="pexels",
+    )
 
     # Fallback: try category query if specific search is empty or all used
     if not available_photos and category in CATEGORY_QUERIES:
@@ -481,6 +493,15 @@ def fetch_image_for_article(
         print(f"[pexels] No fresh results for '{query}' — trying category fallback '{fallback_query}'")
         photos = _search_pexels(fallback_query)
         available_photos = [p for p in photos if not is_image_used(p["id"])]
+        available_photos = filter_image_candidates(
+            available_photos,
+            query=fallback_query,
+            title=title,
+            summary=summary,
+            key_points=key_points,
+            content=content,
+            provider="pexels",
+        )
 
     if not available_photos:
         print(f"[pexels] No fresh image found for '{title[:50]}'")

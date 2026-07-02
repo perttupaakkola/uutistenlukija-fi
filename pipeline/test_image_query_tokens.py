@@ -7,10 +7,12 @@ from unittest.mock import patch
 try:
     from . import pexels, unsplash
     from . import image_query
+    from . import image_candidate_guard
 except ImportError:  # pragma: no cover
     import pexels
     import unsplash
     import image_query
+    import image_candidate_guard
 
 
 DEGREE_ROI_FIXTURE = {
@@ -98,6 +100,121 @@ class ImageQueryTokenTests(unittest.TestCase):
 
         pexels_search.assert_any_call("public opinion survey ballot")
         unsplash_search.assert_any_call("public opinion survey ballot")
+
+    def test_sunny_weather_finland_rejects_snowy_unsplash_candidate(self) -> None:
+        title = "Loppuviikon sää viilenee, mutta aurinkoa riittää monin paikoin"
+        summary = "Korkeapaine pitää sään monin paikoin poutaisena ja aurinkoisena."
+        candidate = {
+            "id": "Ah_hBiz2-ao",
+            "alt": "the sun is setting over a snowy forest",
+            "photo_page": "https://unsplash.com/photos/the-sun-is-setting-over-a-snowy-forest-Ah_hBiz2-ao",
+        }
+
+        accepted, reason = image_candidate_guard.vet_image_candidate(
+            candidate,
+            query="sunny weather Finland",
+            title=title,
+            summary=summary,
+        )
+
+        self.assertFalse(accepted)
+        self.assertIn("winter", reason)
+
+    def test_non_contradictory_sunny_weather_candidate_is_allowed(self) -> None:
+        candidate = {
+            "id": "sunny-field",
+            "alt": "sunny blue sky over green trees",
+            "photo_page": "https://example.com/photos/sunny-blue-sky-green-trees",
+        }
+
+        accepted, reason = image_candidate_guard.vet_image_candidate(
+            candidate,
+            query="sunny weather Finland",
+            title="Loppuviikon sää viilenee, mutta aurinkoa riittää monin paikoin",
+            summary="Sää on monin paikoin poutainen ja aurinkoinen.",
+        )
+
+        self.assertTrue(accepted, reason)
+
+    def test_unsplash_fetch_skips_snowy_candidate_and_uses_allowed_result(self) -> None:
+        title = "Loppuviikon sää viilenee, mutta aurinkoa riittää monin paikoin"
+        snowy = {
+            "id": "Ah_hBiz2-ao",
+            "url_regular": "https://images.unsplash.com/snowy",
+            "url_full": "https://images.unsplash.com/snowy-full",
+            "url_small": "https://images.unsplash.com/snowy-small",
+            "url_thumb": "https://images.unsplash.com/snowy-thumb",
+            "download_location": "https://api.unsplash.com/photos/Ah_hBiz2-ao/download",
+            "photographer": "Aiva Apsite",
+            "photographer_url": "https://unsplash.com/@aiva",
+            "photo_page": "https://unsplash.com/photos/the-sun-is-setting-over-a-snowy-forest-Ah_hBiz2-ao",
+            "alt": "the sun is setting over a snowy forest",
+        }
+        sunny = {
+            "id": "sunny-field",
+            "url_regular": "https://images.unsplash.com/sunny",
+            "url_full": "https://images.unsplash.com/sunny-full",
+            "url_small": "https://images.unsplash.com/sunny-small",
+            "url_thumb": "https://images.unsplash.com/sunny-thumb",
+            "download_location": "https://api.unsplash.com/photos/sunny-field/download",
+            "photographer": "Test Photographer",
+            "photographer_url": "https://unsplash.com/@test",
+            "photo_page": "https://unsplash.com/photos/sunny-blue-sky-green-trees",
+            "alt": "sunny blue sky over green trees",
+        }
+
+        with patch.object(image_query, "generate_image_query", return_value="sunny weather Finland"), \
+             patch.object(unsplash, "_search", return_value=[snowy, sunny]), \
+             patch.object(unsplash, "_trigger_download") as trigger_download, \
+             patch("image_state.is_image_used", return_value=False), \
+             patch("image_state.mark_image_used"), \
+             patch.object(unsplash, "time") as unsplash_time:
+            result = unsplash.fetch_image_for_article(
+                title,
+                "Kotimaa",
+                summary="Korkeapaine pitää sään monin paikoin poutaisena ja aurinkoisena.",
+                inter_request_delay=0,
+            )
+
+        self.assertIsNotNone(result)
+        self.assertEqual(result["url"], "https://images.unsplash.com/sunny")
+        trigger_download.assert_called_once()
+        self.assertEqual(trigger_download.call_args.args[0]["id"], "sunny-field")
+        unsplash_time.sleep.assert_called_once_with(0)
+
+    def test_pexels_fetch_uses_same_semantic_guard(self) -> None:
+        title = "Loppuviikon sää viilenee, mutta aurinkoa riittää monin paikoin"
+        snowy = {
+            "id": 1,
+            "url": "https://images.pexels.com/photos/snowy-forest.jpeg",
+            "thumb_url": "https://images.pexels.com/photos/snowy-forest-thumb.jpeg",
+            "photographer": "Winter Photo",
+            "photographer_url": "https://www.pexels.com/@winter",
+            "pexels_url": "https://www.pexels.com/photo/the-sun-is-setting-over-a-snowy-forest-1/",
+        }
+        sunny = {
+            "id": 2,
+            "url": "https://images.pexels.com/photos/sunny-sky.jpeg",
+            "thumb_url": "https://images.pexels.com/photos/sunny-sky-thumb.jpeg",
+            "photographer": "Sunny Photo",
+            "photographer_url": "https://www.pexels.com/@sunny",
+            "pexels_url": "https://www.pexels.com/photo/sunny-blue-sky-over-green-trees-2/",
+        }
+
+        with patch.object(image_query, "generate_image_query", return_value="sunny weather Finland"), \
+             patch.object(pexels, "_search_pexels", return_value=[snowy, sunny]), \
+             patch("image_state.is_image_used", return_value=False), \
+             patch("image_state.mark_image_used"):
+            result = pexels.fetch_image_for_article(
+                title,
+                "Kotimaa",
+                summary="Korkeapaine pitää sään monin paikoin poutaisena ja aurinkoisena.",
+                download=False,
+                inter_request_delay=0,
+            )
+
+        self.assertIsNotNone(result)
+        self.assertEqual(result["url"], "https://images.pexels.com/photos/sunny-sky.jpeg")
 
 
 if __name__ == "__main__":
