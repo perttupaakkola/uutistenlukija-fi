@@ -15,7 +15,7 @@ import urllib.request
 import urllib.error
 from typing import List, Dict, Optional
 
-KIE_API_KEY = os.environ.get("KIE_API_KEY", "bccd653c94693baab42985f14ec4a9dd")
+KIE_API_KEY = os.environ.get("KIE_API_KEY", "")
 KIE_BASE_URL = "https://api.kie.ai"
 IMAGE_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "static", "images", "articles")
 
