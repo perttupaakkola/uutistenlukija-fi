@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-02T16:51:17.847420+00:00",
+  "digest": "d2be58087b",
+  "packet": {
+    "packet_id": "20260702T165117Z_d2be58087b",
+    "created_at": "2026-07-02T16:51:17Z",
+    "headline_seed": "Yle: Poliisi epäilee Seiskan päätoimittajaa Ylen päätoimittajan kunnian loukkaamisesta",
+    "description_seed": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9588459",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/uutissuomalainen/9588459"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Yle: Poliisi epäilee Seiskan päätoimittajaa Ylen päätoimittajan kunnian loukkaamisesta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 180,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Yle: Poliisi epäilee Seiskan päätoimittajaa Ylen päätoimittajan kunnian loukkaamisesta",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Yle: Poliisi epäilee Seiskan päätoimittajaa Ylen päätoimittajan kunnian loukkaamisesta",
+    "description": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9588459",
+    "published": "2026-07-02T19:25:46+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "ebceeb5603471105d6f3845ac40b6068",
+    "_url_hash": "0b09956f13c7c6b165d81d4df18908e448af446fa386d3565b66850b065ab881",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nHelsingin poliisi on saanut valmiiksi esitutkinnan Seiska-lehden syyskuussa 2024 julkaisemasta juttukokonaisuudesta.\n\nSeiska-lehti käsitteli jutuissaan Ylen uutis- ja ajankohtaistoimituksen päätoimittaja Riikka Räisäsen parisuhdetta. Räisänen on nykyisin Ylen paikallisuutiset-osaston päätoimittaja.\n\nPoliisi epäilee Seiska-lehden entistä toimittajaa yksityiselämää loukkaavan tiedon levittämisestä ja kunnianloukkauksesta. Päätoimittaja Jyrki Huotaria poliisi epäilee kunnianloukkauksesta ja päätoimittajarikkomuksesta.\n\nLisäksi kolmatta henkilöä epäillään yksityiselämää loukkaavasta tiedon levittämisestä.\n\nRikosten epäillään kohdistuneen myös Räisäsen miesystävään.\n\nPäätoimittajarikkomuksesta on kyse silloin, jos vastaava toimittaja laiminlyö toimitustyön valvonnan ja johtamisen niin, että se myötävaikuttaa sen rikoksen toteutumiseen, joka tiedon julkaisemisesta on seurauksena. Päätoimittajarikkomuksesta tuomitaan sakkoa.\n\nYle ei tavoittanut Huotaria torstai-iltapäivän aikana kommentoimaan rikosepäilyjä.\n\nRikosepäilyt siirtyvät nyt syyteharkintaan.\n\nPoliisi sai jo aiemmin valmiiksi esitutkinnan samaan kokonaisuuteen liittyvässä tapauksessa, jossa yksityishenkilöä epäillään viestintäsalaisuuden loukkauksesta, kunnianloukkauksesta ja vainoamisesta.\n\nKirjoituksista tehtiin useita kanteluita Julkisen Sanan neuvostoon (JSN).\n\nJSN ei ottanut kanteluita käsittelyyn, koska asiassa aloitettiin rikostutkinta.\n\nJSN:n puheenjohtajan Eero Hyvönen arvioi tuolloin, että Seiskan uutisointi Räisäsestä on poikkeuksellista Suomessa.\n\nHyvönen totesi, että Räisänen on Ylen uutispäätoimittajana vallankäyttäjä, mutta hänen mukaansa olisi syytä pohtia, onko yksityiselämän asioiden kertomiselle riittäviä yhteiskunnallisia perusteita.\n\nJSN valvoo, että suomalainen media toimii eettisesti eli Journalistin ohjeiden mukaisesti.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-02T16:53:19.700543+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä vahvistettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "{\"packet_id\":\"20260702T165117Z_d2be58087b\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä vahvistettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

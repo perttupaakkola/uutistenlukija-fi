@@ -1,0 +1,188 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-02T02:11:16.562979+00:00",
+  "digest": "03ca13f062",
+  "packet": {
+    "packet_id": "20260702T021116Z_03ca13f062",
+    "created_at": "2026-07-02T02:11:16Z",
+    "headline_seed": "At least one killed in major airstrikes on Kyiv",
+    "description_seed": "At least one person was killed in the overnight airstrikes hours after President Zelensky said that Moscow was planning a \"massive\" attack.",
+    "link": "https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "At least one killed in major airstrikes on Kyiv"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "At least one person was killed in the overnight airstrikes hours after President Zelensky said that Moscow was planning a \"massive\" attack.",
+        "word_count": 22,
+        "keyword_overlap": 15,
+        "strong_overlap": 10
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Firefighters douse blaze at a Kyiv apartment bloc hit by airstrikes overnight. Russian forces have launched a major drone and missile air attack on the Ukrainian capital Kyiv overnight, killing at least one person. Several neighbourhoods were evacuated as airstrikes rocked buildings throughout the city, hours after President Volodymyr Zelenskyy warned Russia was preparing for a \"massive\" attack. Some people remain trapped under the rubble of a collapsed nine-storey building, Kyiv Mayor Vitali Klitschko said. Poland has also activated its fighter jets to protect its airspace, with the country's armed forces describing it as a \"preventative\" measure. \"These actions are of a preventive nature and are aimed at securing and protecting the airspace, especially in areas adjacent to the threatened regions,\" Poland's military wrote on X., external",
+        "word_count": 127,
+        "keyword_overlap": 12,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC",
+        "source_type": "research",
+        "text": "Russian forces have launched a major drone and missile air attack on the Ukrainian capital Kyiv overnight, killing at least one person. Several neighbourhoods were evacuated as airstrikes rocked buildings throughout the city, hours after President Volodymyr Zelenskyy warned Russia was preparing for a \"massive\" attack. Some people remain trapped under the rubble of a collapsed nine-storey building, Kyiv Mayor Vitali Klitschko said. Poland has also activated its fighter jets to protect its airspace, with the country's armed forces describing it as a \"preventative\" measure. \"These actions are of a preventive nature and are aimed at securing and protecting the airspace, especially in areas adjacent to the threatened regions,\" Poland's military wrote on X.",
+        "word_count": 114,
+        "keyword_overlap": 12,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Poland is a member of Nato, a signatory to the military alliance's Article 5 provision that states \"an armed attack against one Nato member shall be considered an attack against them all\", though there are no reports of attacks on Polish territory. In Kyiv, tracer fire from air defence systems could be spotted lighting up the night sky, and explosions from drones, cruise and ballistic missiles were heard. Multiple fires have broken out across the city and damage was reported at an ambulance station in the city, which left at least one person critically injured. He added the number of people injured had risen to 11 from an initial tally of six. The overnight air raid is the first major attack on the Ukrainian capital in more than two weeks.",
+        "word_count": 130,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "At least one person was killed in the overnight airstrikes hours after President Zelensky said that Moscow was planning a \"massive\" attack.\n\nFirefighters douse blaze at a Kyiv apartment bloc hit by airstrikes overnight. Russian forces have launched a major drone and missile air attack on the Ukrainian capital Kyiv overnight, killing at least one person. Several neighbourhoods were evacuated as airstrikes rocked buildings throughout the city, hours after President Volodymyr Zelenskyy warned Russia was preparing for a \"massive\" attack. Some people remain trapped under the rubble of a collapsed nine-storey building, Kyiv Mayor Vitali Klitschko said. Poland has also activated its fighter jets to protect its airspace, with the country's armed forces describing it as a \"preventative\" measure. \"These actions are of a preventive nature and are aimed at securing and protecting the airspace, especially in areas adjacent to the threatened regions,\" Poland's military wrote on X., external\n\nRussian forces have launched a major drone and missile air attack on the Ukrainian capital Kyiv overnight, killing at least one person. Several neighbourhoods were evacuated as airstrikes rocked buildings throughout the city, hours after President Volodymyr Zelenskyy warned Russia was preparing for a \"massive\" attack. Some people remain trapped under the rubble of a collapsed nine-storey building, Kyiv Mayor Vitali Klitschko said. Poland has also activated its fighter jets to protect its airspace, with the country's armed forces describing it as a \"preventative\" measure. \"These actions are of a preventive nature and are aimed at securing and protecting the airspace, especially in areas adjacent to the threatened regions,\" Poland's military wrote on X.\n\nPoland is a member of Nato, a signatory to the military alliance's Article 5 provision that states \"an armed attack against one Nato member shall be considered an attack against them all\", though there are no reports of attacks on Polish territory. In Kyiv, tracer fire from air defence systems could be spotted lighting up the night sky, and explosions from drones, cruise and ballistic missiles were heard. Multiple fires have broken out across the city and damage was reported at an ambulance station in the city, which left at least one person critically injured. He added the number of people injured had risen to 11 from an initial tally of six. The overnight air raid is the first major attack on the Ukrainian capital in more than two weeks.",
+    "source_diagnostics": {
+      "candidate_blocks": 7,
+      "candidate_source_words": 600,
+      "selected_blocks": 4,
+      "selected_source_words": 393,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "BBC",
+        "BBC",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "At least one killed in major airstrikes on Kyiv",
+      "description": "At least one person was killed in the overnight airstrikes hours after President Zelensky said that Moscow was planning a \"massive\" attack.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "At least one killed in major airstrikes on Kyiv",
+    "description": "At least one person was killed in the overnight airstrikes hours after President Zelensky said that Moscow was planning a \"massive\" attack.",
+    "link": "https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-02T01:55:18+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "a94e2ddeb2018dfc4ac981a7ad2c6a10",
+    "_url_hash": "efe3316bd61ddcbf0315e3571f7991675694dc1330c033b059f256e80c894200",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nFirefighters douse blaze at a Kyiv apartment bloc hit by airstrikes overnight.\n\nRussian forces have launched a major drone and missile air attack on the Ukrainian capital Kyiv overnight, killing at least one person.\n\nSeveral neighbourhoods were evacuated as airstrikes rocked buildings throughout the city, hours after President Volodymyr Zelenskyy warned Russia was preparing for a \"massive\" attack.\n\nSome people remain trapped under the rubble of a collapsed nine-storey building, Kyiv Mayor Vitali Klitschko said.\n\nPoland has also activated its fighter jets to protect its airspace, with the country's armed forces describing it as a \"preventative\" measure.\n\n\"These actions are of a preventive nature and are aimed at securing and protecting the airspace, especially in areas adjacent to the threatened regions,\" Poland's military wrote on X., external\n\nPoland is a member of Nato, a signatory to the military alliance's Article 5 provision that states \"an armed attack against one Nato member shall be considered an attack against them all\", though there are no reports of attacks on Polish territory.\n\nIn Kyiv, tracer fire from air defence systems could be spotted lighting up the night sky, and  explosions from drones, cruise and ballistic missiles were heard.\n\nMultiple fires have broken out across the city and damage was reported at an ambulance station in the city, which left at least one person critically injured.\n\nHe added the number of people injured had risen to 11 from an initial tally of six.\n\nThe overnight air raid is the first major attack on the Ukrainian capital in more than two weeks.\n\nEarlier, Zelensky cut short his visit to Dublin after he said fresh intelligence had emerged suggesting that Moscow was planning to strike Kyiv.\n\nRussian strikes kill 11 and set historic cathedral in Kyiv ablaze\n\nPutin makes rare admission of fuel shortages caused by Ukrainian strikes\n\nWill Putin change tactics after Ukrainian drone attacks?\n\n---\n\n[Lähde: BBC]\nRussian forces have launched a major drone and missile air attack on the Ukrainian capital Kyiv overnight, killing at least one person.\n\nSeveral neighbourhoods were evacuated as airstrikes rocked buildings throughout the city, hours after President Volodymyr Zelenskyy warned Russia was preparing for a \"massive\" attack.\n\nSome people remain trapped under the rubble of a collapsed nine-storey building, Kyiv Mayor Vitali Klitschko said.\n\nPoland has also activated its fighter jets to protect its airspace, with the country's armed forces describing it as a \"preventative\" measure.\n\n\"These actions are of a preventive nature and are aimed at securing and protecting the airspace, especially in areas adjacent to the threatened regions,\" Poland's military wrote on X.\n\nPoland is a member of Nato, a signatory to the military alliance's Article 5 provision that states \"an armed attack against one Nato member shall be considered an attack against them all\", though there are no reports of attacks on Polish territory.\n\nIn Kyiv, tracer fire from air defence systems could be spotted lighting up the night sky, and  explosions from drones, cruise and ballistic missiles were heard.\n\nMultiple fires have broken out across the city and damage was reported at an ambulance station in the city, which left at least one person critically injured.\n\nHe added the number of people injured had risen to 11 from an initial tally of six.\n\nThe overnight air raid is the first major attack on the Ukrainian capital in more than two weeks.\n\nEarlier, Zelensky cut short his visit to Dublin after he said fresh intelligence had emerged suggesting that Moscow was planning to strike Kyiv.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-02T02:14:57.939004+00:00",
+  "failure": "content too short: 225 words",
+  "payload": {
+    "packet_id": "20260702T021116Z_03ca13f062",
+    "title": "Ainakin yksi kuoli laajassa ilmaiskussa Kiovaan",
+    "summary": "Venäjän yön yli jatkunut drooni- ja ohjusisku Ukrainan pääkaupunkiin Kiovaan surmasi ainakin yhden ihmisen ja haavoitti useita. Isku tapahtui tunteja sen jälkeen, kun presidentti Volodymyr Zelenskyi oli varoittanut Venäjän valmistelevan laajaa hyökkäystä.",
+    "content": "Venäjä teki yön aikana laajan drooni- ja ohjusiskun Ukrainan pääkaupunkiin Kiovaan. Ainakin yksi ihminen kuoli, ja loukkaantuneiden määrän kerrottiin nousseen yhteentoista sen jälkeen, kun ensimmäinen arvio oli kuusi haavoittunutta. Useita kaupunginosia evakuoitiin, kun iskut ravistelivat rakennuksia eri puolilla kaupunkia vain tunteja sen jälkeen, kun presidentti Volodymyr Zelenskyi oli varoittanut Venäjän valmistelevan mittavaa hyökkäystä.\n\n## Ihmisiä loukussa raunioissa\n\nKiovan pormestari Vitali Klitško kertoi, että osa ihmisistä oli yhä loukussa romahtaneen yhdeksänkerroksisen rakennuksen raunioissa. Kaupungissa syttyi useita tulipaloja, ja pelastushenkilöstö sammutti paloa muun muassa ilmaiskun osumaan asuinkerrostaloon.\n\nIlmapuolustuksen jäljitysammusten kerrottiin valaisseet yötaivasta Kiovassa. Kaupungissa kuultiin räjähdyksiä, joita aiheuttivat droonit sekä risteily- ja ballistiset ohjukset. Vaurioita raportoitiin myös ambulanssiasemalla, missä ainakin yksi ihminen haavoittui kriittisesti.\n\nYön ilmaisku oli ensimmäinen suuri hyökkäys Ukrainan pääkaupunkiin yli kahteen viikkoon. Lähdeaineiston mukaan iskujen vaikutukset näkyivät eri puolilla kaupunkia rakennusvaurioina, tulipaloina ja evakuointeina.\n\n## Puola aktivoi hävittäjiään\n\nIskun aikana Puola aktivoi hävittäjiään suojatakseen ilmatilaansa. Puolan asevoimat kuvasi toimia ennaltaehkäiseviksi ja kertoi niiden tähtäävän ilmatilan turvaamiseen erityisesti uhattujen alueiden läheisyydessä.\n\nPuola kuuluu Natoon. Sotilasliiton viidennen artiklan mukaan aseellinen hyökkäys yhtä jäsenmaata vastaan katsotaan hyökkäykseksi kaikkia vastaan. Lähdeaineistossa kuitenkin todettiin, ettei Puolan alueelle kohdistuneista iskuista ollut tietoja.\n\n## Isku seurasi varoitusta\n\nHyökkäys tapahtui sen jälkeen, kun Zelenskyi oli varoittanut Moskovan suunnittelevan laajaa iskua. Kiovassa kuultiin yön aikana räjähdyksiä drooneista sekä risteily- ja ballistisista ohjuksista, ja viranomaiset raportoivat tilanteen edetessä sekä evakuoinneista että loukkaantuneiden määrän kasvusta.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Ukraina",
+      "Kiova",
+      "Venäjä",
+      "Puola",
+      "Nato"
+    ],
+    "summary_bullets": [
+      "Venäjän drooni- ja ohjusisku Kiovaan surmasi ainakin yhden ihmisen.",
+      "Kiovan pormestarin mukaan ihmisiä oli loukussa romahtaneen yhdeksänkerroksisen rakennuksen raunioissa.",
+      "Puola aktivoi hävittäjiään ennaltaehkäisevästi suojatakseen ilmatilaansa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu paketin BBC-aineistoon. Kategoria korjattu aiheen perusteella ulkomaihin."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260702T021116Z_03ca13f062\",\n  \"title\": \"Ainakin yksi kuoli laajassa ilmaiskussa Kiovaan\",\n  \"summary\": \"Venäjän yön yli jatkunut drooni- ja ohjusisku Ukrainan pääkaupunkiin Kiovaan surmasi ainakin yhden ihmisen ja haavoitti useita. Isku tapahtui tunteja sen jälkeen, kun presidentti Volodymyr Zelenskyi oli varoittanut Venäjän valmistelevan laajaa hyökkäystä.\",\n  \"content\": \"Venäjä teki yön aikana laajan drooni- ja ohjusiskun Ukrainan pääkaupunkiin Kiovaan. Ainakin yksi ihminen kuoli, ja loukkaantuneiden määrän kerrottiin nousseen yhteentoista sen jälkeen, kun ensimmäinen arvio oli kuusi haavoittunutta. Useita kaupunginosia evakuoitiin, kun iskut ravistelivat rakennuksia eri puolilla kaupunkia vain tunteja sen jälkeen, kun presidentti Volodymyr Zelenskyi oli varoittanut Venäjän valmistelevan mittavaa hyökkäystä.\\n\\n## Ihmisiä loukussa raunioissa\\n\\nKiovan pormestari Vitali Klitško kertoi, että osa ihmisistä oli yhä loukussa romahtaneen yhdeksänkerroksisen rakennuksen raunioissa. Kaupungissa syttyi useita tulipaloja, ja pelastushenkilöstö sammutti paloa muun muassa ilmaiskun osumaan asuinkerrostaloon.\\n\\nIlmapuolustuksen jäljitysammusten kerrottiin valaisseet yötaivasta Kiovassa. Kaupungissa kuultiin räjähdyksiä, joita aiheuttivat droonit sekä risteily- ja ballistiset ohjukset. Vaurioita raportoitiin myös ambulanssiasemalla, missä ainakin yksi ihminen haavoittui kriittisesti.\\n\\nYön ilmaisku oli ensimmäinen suuri hyökkäys Ukrainan pääkaupunkiin yli kahteen viikkoon. Lähdeaineiston mukaan iskujen vaikutukset näkyivät eri puolilla kaupunkia rakennusvaurioina, tulipaloina ja evakuointeina.\\n\\n## Puola aktivoi hävittäjiään\\n\\nIskun aikana Puola aktivoi hävittäjiään suojatakseen ilmatilaansa. Puolan asevoimat kuvasi toimia ennaltaehkäiseviksi ja kertoi niiden tähtäävän ilmatilan turvaamiseen erityisesti uhattujen alueiden läheisyydessä.\\n\\nPuola kuuluu Natoon. Sotilasliiton viidennen artiklan mukaan aseellinen hyökkäys yhtä jäsenmaata vastaan katsotaan hyökkäykseksi kaikkia vastaan. Lähdeaineistossa kuitenkin todettiin, ettei Puolan alueelle kohdistuneista iskuista ollut tietoja.\\n\\n## Isku seurasi varoitusta\\n\\nHyökkäys tapahtui sen jälkeen, kun Zelenskyi oli varoittanut Moskovan suunnittelevan laajaa iskua. Kiovassa kuultiin yön aikana räjähdyksiä drooneista sekä risteily- ja ballistisista ohjuksista, ja viranomaiset raportoivat tilanteen edetessä sekä evakuoinneista että loukkaantuneiden määrän kasvusta.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Ukraina\",\n    \"Kiova\",\n    \"Venäjä\",\n    \"Puola\",\n    \"Nato\"\n  ],\n  \"summary_bullets\": [\n    \"Venäjän drooni- ja ohjusisku Kiovaan surmasi ainakin yhden ihmisen.\",\n    \"Kiovan pormestarin mukaan ihmisiä oli loukussa romahtaneen yhdeksänkerroksisen rakennuksen raunioissa.\",\n    \"Puola aktivoi hävittäjiään ennaltaehkäisevästi suojatakseen ilmatilaansa.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu paketin BBC-aineistoon. Kategoria korjattu aiheen perusteella ulkomaihin.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260702T021116Z_03ca13f062",
+    "category": "Kotimaa",
+    "selected_source_words": 393,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 225,
+    "issues": [
+      "content too short: 225 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Ainakin yksi kuoli laajassa ilmaiskussa Kiovaan",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-07-02T02:14:57.938757+00:00",
+    "repair_trigger": "pre_repair_word_count=225; selected_source_words=393; selected_source_blocks=4",
+    "pre_repair_word_count": 225,
+    "pre_repair_lead_word_count": 53,
+    "post_repair_word_count": 225,
+    "post_repair_lead_word_count": 53,
+    "selected_source_words_at_repair": 393,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 393,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 225 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:8bcee4243b",
+      "2:BBC World:ff77cb0413",
+      "3:BBC:d8a879f670",
+      "4:BBC World:f355d921cd"
+    ],
+    "final_issues": [
+      "content too short: 225 words"
+    ],
+    "recovered": false
+  }
+}

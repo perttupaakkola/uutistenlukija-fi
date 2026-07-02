@@ -1,0 +1,201 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-01T21:51:22.361263+00:00",
+  "digest": "16da799aa5",
+  "packet": {
+    "packet_id": "20260701T215122Z_16da799aa5",
+    "created_at": "2026-07-01T21:51:22Z",
+    "headline_seed": "Apple’s Hide My Email feature has a bug that’s been exposing real email addresses, researcher claims",
+    "description_seed": "Research appears to reveal a bug that could render the feature effectively useless.",
+    "link": "https://techcrunch.com/2026/07/01/apples-hide-my-email-feature-has-a-bug-thats-been-exposing-real-email-addresses-researcher-claims/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch",
+      "Gizmodo",
+      "Mashable"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/07/01/apples-hide-my-email-feature-has-a-bug-thats-been-exposing-real-email-addresses-researcher-claims/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Apple’s Hide My Email feature has a bug that’s been exposing real email addresses, researcher claims"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "Research appears to reveal a bug that could render the feature effectively useless.",
+        "word_count": 13,
+        "keyword_overlap": 9,
+        "strong_overlap": 7
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "Apple’s Hide My Email feature is a convenient privacy tool that uses disposable addresses to hide a user’s true email for the sake of online anonymity. Unfortunately, new research appears to show that a bug in the feature allows users’ real email addresses to be unmasked. The bug was reported by 404 Media, which says that it has tested and verified that the vulnerability exists. Tyler Murphy, the researcher who found the bug, said that he warned Apple about the problem over a year ago and that it was unclear why the company had yet to remedy the problem. All of the attempts to exploit the bug have been successful, Murphy added. ---",
+        "word_count": 113,
+        "keyword_overlap": 11,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Gizmodo",
+        "source_type": "research",
+        "text": "It turns out one of Apple’s privacy features may not be as secure as users thought. Apple’s Hide My Email feature currently has a vulnerability that can reveal users’ real email addresses, 404 Media reports. Hide My Email is an iCloud+ feature that lets users create unique, random email addresses when signing up for apps, websites, and other online accounts. Messages sent to those addresses are then automatically forwarded to the user’s real inbox. On its support page, Apple says Hide My Email is designed to let users keep their “personal email address private.” But the privacy company EasyOptOuts told 404 Media that it discovered a vulnerability in the service that could let someone uncover the real email address tied to a Hide My Email alias.",
+        "word_count": 126,
+        "keyword_overlap": 9,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Mashable",
+        "source_type": "research",
+        "text": "A major vulnerability has been discovered in one of the core privacy features that Apple offers its customers. And according to the cybersecurity researchers who discovered the exploit, this issue appears to have been ongoing for more than a year. Apple's \"Hide My Email\" is a privacy feature that obscures a user's email address by generating a unique iCloud ema...",
+        "word_count": 60,
+        "keyword_overlap": 7,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Research appears to reveal a bug that could render the feature effectively useless.\n\nApple’s Hide My Email feature is a convenient privacy tool that uses disposable addresses to hide a user’s true email for the sake of online anonymity. Unfortunately, new research appears to show that a bug in the feature allows users’ real email addresses to be unmasked. The bug was reported by 404 Media, which says that it has tested and verified that the vulnerability exists. Tyler Murphy, the researcher who found the bug, said that he warned Apple about the problem over a year ago and that it was unclear why the company had yet to remedy the problem. All of the attempts to exploit the bug have been successful, Murphy added. ---\n\nIt turns out one of Apple’s privacy features may not be as secure as users thought. Apple’s Hide My Email feature currently has a vulnerability that can reveal users’ real email addresses, 404 Media reports. Hide My Email is an iCloud+ feature that lets users create unique, random email addresses when signing up for apps, websites, and other online accounts. Messages sent to those addresses are then automatically forwarded to the user’s real inbox. On its support page, Apple says Hide My Email is designed to let users keep their “personal email address private.” But the privacy company EasyOptOuts told 404 Media that it discovered a vulnerability in the service that could let someone uncover the real email address tied to a Hide My Email alias.\n\nA major vulnerability has been discovered in one of the core privacy features that Apple offers its customers. And according to the cybersecurity researchers who discovered the exploit, this issue appears to have been ongoing for more than a year. Apple's \"Hide My Email\" is a privacy feature that obscures a user's email address by generating a unique iCloud ema...",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1036,
+      "selected_blocks": 4,
+      "selected_source_words": 312,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "Gizmodo",
+        "Gizmodo",
+        "Gizmodo",
+        "Gizmodo",
+        "AppleInsider",
+        "AppleInsider",
+        "AppleInsider",
+        "AppleInsider",
+        "Mashable",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch",
+        "Gizmodo",
+        "Mashable"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Apple’s Hide My Email feature has a bug that’s been exposing real email addresses, researcher claims",
+      "description": "Research appears to reveal a bug that could render the feature effectively useless.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Apple’s Hide My Email feature has a bug that’s been exposing real email addresses, researcher claims",
+    "description": "Research appears to reveal a bug that could render the feature effectively useless.",
+    "link": "https://techcrunch.com/2026/07/01/apples-hide-my-email-feature-has-a-bug-thats-been-exposing-real-email-addresses-researcher-claims/",
+    "published": "2026-07-01T19:18:07+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "587ba7aa0eea8831d59fd51e95df362c",
+    "_url_hash": "97d595e24115ed48005038cb76d049e878c3b64446cffddd4c9d4226fc314131",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nApple’s Hide My Email feature is a convenient privacy tool that uses disposable addresses to hide a user’s true email for the sake of online anonymity. Unfortunately, new research appears to show that a bug in the feature allows users’ real email addresses to be unmasked.\n\nThe bug was reported by 404 Media, which says that it has tested and verified that the vulnerability exists. Tyler Murphy, the researcher who found the bug, said that he warned Apple about the problem over a year ago and that it was unclear why the company had yet to remedy the problem. All of the attempts to exploit the bug have been successful, Murphy added.\n\n---\n\n[Lähde: Gizmodo]\nIt turns out one of Apple’s privacy features may not be as secure as users thought.\n\nApple’s Hide My Email feature currently has a vulnerability that can reveal users’ real email addresses, 404 Media reports.\n\nHide My Email is an iCloud+ feature that lets users create unique, random email addresses when signing up for apps, websites, and other online accounts. Messages sent to those addresses are then automatically forwarded to the user’s real inbox.\n\nOn its support page, Apple says Hide My Email is designed to let users keep their “personal email address private.”\n\nBut the privacy company EasyOptOuts told 404 Media that it discovered a vulnerability in the service that could let someone uncover the real email address tied to a Hide My Email alias.\n\n404 Media did not disclose details of the exploit because the bug has not yet been fixed. However, the outlet verified the vulnerability by generating a Hide My Email address and sharing it with EasyOptOuts co-founder Tyler Murphy.  Murphy was then able to connect the anonymous email to the corresponding Apple account in about five minutes.\n\nThe most shocking part is that Apple has reportedly known about the issue for more than a year and still has not fixed it.\n\n“Apple Hide My Email is leaking email addresses that are supposed to be hidden,” Murphy told 404 Media. “We reported the issue and replication instructions to Apple over a year ago. We don’t know why it hasn’t been fixed, but we don’t feel comfortable waiting any longer. Hide My Email users deserve to know that it may be possible for attackers to discover their hidden email addresses.”\n\nMurphy added that publicly accessible people-search sites make it easy for potential attackers to connect the leaked email addresses to users’ other personal details.\n\nAccording to 404 Media, Murphy first notified Apple about the issue in June 2025. Apple responded a month later and said it was looking into the issue. Then, in March of this year, Apple reportedly told Murphy that the issue had been addressed in a recent system change. Murphy, however, found that the vulnerability was still not fixed.\n\nIn May, Apple reportedly asked Murphy not to disclose the exploit because it was still investigating. By the end of that month, Apple said it planned to fix the issue in a future update “in the coming weeks.”\n\nApple did not immediately respond to a request for comment.\n\nNews of the bug also comes shortly after Apple made a change to Hide My Email that could make the featur\n\n---\n\n[Lähde: AppleInsider]\nHide My Email has been a great help for Apple users who need to communicate with services and companies, but don't want to provide their real email address. Spam, as ever, continues to be a problem requiring solutions like this.\n\nHowever, while it is capable of thwarting your typical spammer or marketing-happy small business, it's not foolproof. As a report from 404Media reveals, it's a feature that can be beaten.\n\nThe exact nature of the vulnerability hasn't been detailed, due to the lack of action by Apple to fix it. Testing on Monday by the report verified that it is still a problem.\n\nEasyOptOuts co-founder Tyler Murphy discovered an issue with Hide My Email in June 2025, and responsibly reported it to Apple as well as the publication. Twelve months later, and the problem still exists.\n\nMurphy explains that the issue was reported and instructions to replicate it where provided to Apple. He doesn't know why it hasn't been fixed, but also didn't feel comfortable waiting to discuss the problem any longer.\n\n\"Hide My Email users deserve to know that it may be possible for attackers to discover their hidden email addresses,\" he declared.\n\nThere are free websites accessible to the public that link email addresses to other personal details, he adds. Anyone relying on Hide My Email may find themselves at risk of being identified on them.\n\nWhile Apple hasn't yet fixed the hole in Hide My Email, it is certainly aware of the problem. One month after Murphy contacted Apple, it confirmed it was looking into the issue.\n\nIn March 2026, Apple said it had \"addressed the reported issue in a recent system change.\" However, Murphy discovered the hole hadn't been plugged.\n\nAgain, more information was provided to Apple, which replied a month later saying it was doing more checks.\n\nApple updated Murphy in May, insisting it was \"still investigating\" the problem. It also wished for Murphy to hold off disclosing the problem until after the investigation concluded.\n\nMurphy wrote back, proposing that Apple could stop selling access to Hide My Email until a fix was available, as a means to limit the number of users at risk.\n\nBy the end of May, Apple said that it would be addressed in a security update \"expected in the coming weeks.\"\n\nAfter being alerted by Murphy, the publication contacted Apple multiple times, but did not get a response.\n\nWhile it is unknown exactly when and how the vulnerability will be fixed, it may end up accompanying other changes to the service. These are chan\n\n---\n\n[Lähde: Mashable]\nA major vulnerability has been discovered in one of the core privacy features that Apple offers its customers. And according to the cybersecurity researchers who discovered the exploit, this issue appears to have been ongoing for more than a year.\n\nApple's \"Hide My Email\" is a privacy feature that obscures a user's email address by generating a unique iCloud ema...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-01T21:54:13.235840+00:00",
+  "payload": {
+    "packet_id": "20260701T215122Z_16da799aa5",
+    "title": "Tutkija: Applen Hide My Email -toiminnon haavoittuvuus voi paljastaa oikean sähköpostiosoitteen",
+    "summary": "Applen iCloud+-palveluun kuuluvaa Hide My Email -toimintoa koskeva haavoittuvuus voi tutkijoiden mukaan paljastaa käyttäjän oikean sähköpostiosoitteen aliasosoitteen takaa.",
+    "content": "Applen Hide My Email -yksityisyystoiminnosta on löytynyt haavoittuvuus, jonka väitetään voivan paljastaa käyttäjän oikean sähköpostiosoitteen aliasosoitteen takaa. 404 Media kertoo testanneensa ja vahvistaneensa ongelman, ja haavoittuvuuden löytänyt tutkija Tyler Murphy sanoo ilmoittaneensa siitä Applelle jo yli vuosi sitten.\n\n## Aliasosoitteiden tarkoitus on suojata käyttäjää\n\nHide My Email on iCloud+-palveluun kuuluva ominaisuus, jonka tarkoituksena on vähentää käyttäjän varsinaisen sähköpostiosoitteen leviämistä verkossa. Toiminnon avulla käyttäjä voi luoda yksilöllisiä ja satunnaisia sähköpostiosoitteita esimerkiksi sovelluksiin, verkkosivuille ja muihin verkkopalveluihin rekisteröitymistä varten.\n\nNäihin aliasosoitteisiin lähetetyt viestit välitetään edelleen käyttäjän oikeaan sähköpostilaatikkoon. Applen omien tukisivujen mukaan Hide My Email on suunniteltu auttamaan käyttäjiä pitämään henkilökohtainen sähköpostiosoitteensa yksityisenä. Toiminnon hyöty perustuu siihen, ettei palvelulle annettu osoite paljasta suoraan käyttäjän varsinaista yhteystietoa.\n\n## Tutkijat kertovat haavoittuvuuden toimivan\n\nUuden raportoinnin mukaan haavoittuvuus voi kuitenkin murentaa tämän suojan. Yksityisyyspalveluja tarjoava EasyOptOuts kertoi 404 Medialle löytäneensä palvelusta ongelman, jonka avulla Hide My Email -aliasosoitteeseen liitetty oikea sähköpostiosoite voitaisiin saada selville. TechCrunchin mukaan tutkimus viittaa siihen, että virhe voi tehdä ominaisuudesta käytännössä hyödyttömän sen keskeisen yksityisyystarkoituksen kannalta.\n\nMurphyn mukaan hän varoitti Applea haavoittuvuudesta yli vuosi sitten. Hänen mukaansa on epäselvää, miksi yhtiö ei ole vielä korjannut ongelmaa. Murphy sanoi myös, että kaikki yritykset hyödyntää haavoittuvuutta ovat onnistuneet.\n\n## Korjauksen aikataulu on epäselvä\n\nSaatavilla olevissa tiedoissa ei kerrota, kuinka laajasti haavoittuvuutta olisi mahdollisesti hyödynnetty todellisissa tilanteissa. Raportoinnin ydin on kuitenkin selvä: tutkijoiden mukaan ongelma on olemassa, sitä on testattu, ja se on saattanut olla korjaamatta yli vuoden. Jos aliasosoite voidaan yhdistää oikeaan sähköpostiosoitteeseen, käyttäjän anonymiteetti heikkenee juuri siinä kohdassa, jota ominaisuuden on tarkoitus suojata.",
+    "category": "Teknologia",
+    "tags": [
+      "Apple",
+      "iCloud+",
+      "tietoturva",
+      "yksityisyys",
+      "sähköposti"
+    ],
+    "summary_bullets": [
+      "Tutkijoiden mukaan Applen Hide My Email -toiminnossa on haavoittuvuus, joka voi paljastaa käyttäjän oikean sähköpostiosoitteen.",
+      "404 Media kertoo testanneensa ja vahvistaneensa ongelman olemassaolon.",
+      "Haavoittuvuuden löytänyt Tyler Murphy sanoo ilmoittaneensa asiasta Applelle yli vuosi sitten."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.88,
+    "journalist_note": "Artikkeli perustuu lähdepaketin yhtäpitäviin tietoihin haavoittuvuudesta, sen väitetystä testauksesta ja ilmoittamisesta Applelle. Mahdollisen väärinkäytön laajuutta ei väitetä, koska sitä ei lähteissä vahvisteta."
+  },
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\n  \"packet_id\": \"20260701T215122Z_16da799aa5\",\n  \"title\": \"Tutkija: Applen Hide My Email -toiminnon haavoittuvuus voi paljastaa oikean sähköpostiosoitteen\",\n  \"summary\": \"Applen iCloud+-palveluun kuuluvaa Hide My Email -toimintoa koskeva haavoittuvuus voi tutkijoiden mukaan paljastaa käyttäjän oikean sähköpostiosoitteen aliasosoitteen takaa.\",\n  \"content\": \"Applen Hide My Email -yksityisyystoiminnosta on löytynyt haavoittuvuus, jonka väitetään voivan paljastaa käyttäjän oikean sähköpostiosoitteen aliasosoitteen takaa. 404 Media kertoo testanneensa ja vahvistaneensa ongelman, ja haavoittuvuuden löytänyt tutkija Tyler Murphy sanoo ilmoittaneensa siitä Applelle jo yli vuosi sitten.\\n\\n## Aliasosoitteiden tarkoitus on suojata käyttäjää\\n\\nHide My Email on iCloud+-palveluun kuuluva ominaisuus, jonka tarkoituksena on vähentää käyttäjän varsinaisen sähköpostiosoitteen leviämistä verkossa. Toiminnon avulla käyttäjä voi luoda yksilöllisiä ja satunnaisia sähköpostiosoitteita esimerkiksi sovelluksiin, verkkosivuille ja muihin verkkopalveluihin rekisteröitymistä varten.\\n\\nNäihin aliasosoitteisiin lähetetyt viestit välitetään edelleen käyttäjän oikeaan sähköpostilaatikkoon. Applen omien tukisivujen mukaan Hide My Email on suunniteltu auttamaan käyttäjiä pitämään henkilökohtainen sähköpostiosoitteensa yksityisenä. Toiminnon hyöty perustuu siihen, ettei palvelulle annettu osoite paljasta suoraan käyttäjän varsinaista yhteystietoa.\\n\\n## Tutkijat kertovat haavoittuvuuden toimivan\\n\\nUuden raportoinnin mukaan haavoittuvuus voi kuitenkin murentaa tämän suojan. Yksityisyyspalveluja tarjoava EasyOptOuts kertoi 404 Medialle löytäneensä palvelusta ongelman, jonka avulla Hide My Email -aliasosoitteeseen liitetty oikea sähköpostiosoite voitaisiin saada selville. TechCrunchin mukaan tutkimus viittaa siihen, että virhe voi tehdä ominaisuudesta käytännössä hyödyttömän sen keskeisen yksityisyystarkoituksen kannalta.\\n\\nMurphyn mukaan hän varoitti Applea haavoittuvuudesta yli vuosi sitten. Hänen mukaansa on epäselvää, miksi yhtiö ei ole vielä korjannut ongelmaa. Murphy sanoi myös, että kaikki yritykset hyödyntää haavoittuvuutta ovat onnistuneet.\\n\\n## Korjauksen aikataulu on epäselvä\\n\\nSaatavilla olevissa tiedoissa ei kerrota, kuinka laajasti haavoittuvuutta olisi mahdollisesti hyödynnetty todellisissa tilanteissa. Raportoinnin ydin on kuitenkin selvä: tutkijoiden mukaan ongelma on olemassa, sitä on testattu, ja se on saattanut olla korjaamatta yli vuoden. Jos aliasosoite voidaan yhdistää oikeaan sähköpostiosoitteeseen, käyttäjän anonymiteetti heikkenee juuri siinä kohdassa, jota ominaisuuden on tarkoitus suojata.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"Apple\",\n    \"iCloud+\",\n    \"tietoturva\",\n    \"yksityisyys\",\n    \"sähköposti\"\n  ],\n  \"summary_bullets\": [\n    \"Tutkijoiden mukaan Applen Hide My Email -toiminnossa on haavoittuvuus, joka voi paljastaa käyttäjän oikean sähköpostiosoitteen.\",\n    \"404 Media kertoo testanneensa ja vahvistaneensa ongelman olemassaolon.\",\n    \"Haavoittuvuuden löytänyt Tyler Murphy sanoo ilmoittaneensa asiasta Applelle yli vuosi sitten.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.88,\n  \"journalist_note\": \"Artikkeli perustuu lähdepaketin yhtäpitäviin tietoihin haavoittuvuudesta, sen väitetystä testauksesta ja ilmoittamisesta Applelle. Mahdollisen väärinkäytön laajuutta ei väitetä, koska sitä ei lähteissä vahvisteta.\"\n}",
+  "article": {
+    "title": "Tutkija: Applen Hide My Email -toiminnon haavoittuvuus voi paljastaa oikean sähköpostiosoitteen",
+    "description": "Applen iCloud+-palveluun kuuluvaa Hide My Email -toimintoa koskeva haavoittuvuus voi tutkijoiden mukaan paljastaa käyttäjän oikean sähköpostiosoitteen aliasosoitteen takaa.",
+    "link": "https://techcrunch.com/2026/07/01/apples-hide-my-email-feature-has-a-bug-thats-been-exposing-real-email-addresses-researcher-claims/",
+    "published": "2026-07-01T19:18:07+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "587ba7aa0eea8831d59fd51e95df362c",
+    "_url_hash": "97d595e24115ed48005038cb76d049e878c3b64446cffddd4c9d4226fc314131",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nApple’s Hide My Email feature is a convenient privacy tool that uses disposable addresses to hide a user’s true email for the sake of online anonymity. Unfortunately, new research appears to show that a bug in the feature allows users’ real email addresses to be unmasked.\n\nThe bug was reported by 404 Media, which says that it has tested and verified that the vulnerability exists. Tyler Murphy, the researcher who found the bug, said that he warned Apple about the problem over a year ago and that it was unclear why the company had yet to remedy the problem. All of the attempts to exploit the bug have been successful, Murphy added.\n\n---\n\n[Lähde: Gizmodo]\nIt turns out one of Apple’s privacy features may not be as secure as users thought.\n\nApple’s Hide My Email feature currently has a vulnerability that can reveal users’ real email addresses, 404 Media reports.\n\nHide My Email is an iCloud+ feature that lets users create unique, random email addresses when signing up for apps, websites, and other online accounts. Messages sent to those addresses are then automatically forwarded to the user’s real inbox.\n\nOn its support page, Apple says Hide My Email is designed to let users keep their “personal email address private.”\n\nBut the privacy company EasyOptOuts told 404 Media that it discovered a vulnerability in the service that could let someone uncover the real email address tied to a Hide My Email alias.\n\n404 Media did not disclose details of the exploit because the bug has not yet been fixed. However, the outlet verified the vulnerability by generating a Hide My Email address and sharing it with EasyOptOuts co-founder Tyler Murphy.  Murphy was then able to connect the anonymous email to the corresponding Apple account in about five minutes.\n\nThe most shocking part is that Apple has reportedly known about the issue for more than a year and still has not fixed it.\n\n“Apple Hide My Email is leaking email addresses that are supposed to be hidden,” Murphy told 404 Media. “We reported the issue and replication instructions to Apple over a year ago. We don’t know why it hasn’t been fixed, but we don’t feel comfortable waiting any longer. Hide My Email users deserve to know that it may be possible for attackers to discover their hidden email addresses.”\n\nMurphy added that publicly accessible people-search sites make it easy for potential attackers to connect the leaked email addresses to users’ other personal details.\n\nAccording to 404 Media, Murphy first notified Apple about the issue in June 2025. Apple responded a month later and said it was looking into the issue. Then, in March of this year, Apple reportedly told Murphy that the issue had been addressed in a recent system change. Murphy, however, found that the vulnerability was still not fixed.\n\nIn May, Apple reportedly asked Murphy not to disclose the exploit because it was still investigating. By the end of that month, Apple said it planned to fix the issue in a future update “in the coming weeks.”\n\nApple did not immediately respond to a request for comment.\n\nNews of the bug also comes shortly after Apple made a change to Hide My Email that could make the featur\n\n---\n\n[Lähde: AppleInsider]\nHide My Email has been a great help for Apple users who need to communicate with services and companies, but don't want to provide their real email address. Spam, as ever, continues to be a problem requiring solutions like this.\n\nHowever, while it is capable of thwarting your typical spammer or marketing-happy small business, it's not foolproof. As a report from 404Media reveals, it's a feature that can be beaten.\n\nThe exact nature of the vulnerability hasn't been detailed, due to the lack of action by Apple to fix it. Testing on Monday by the report verified that it is still a problem.\n\nEasyOptOuts co-founder Tyler Murphy discovered an issue with Hide My Email in June 2025, and responsibly reported it to Apple as well as the publication. Twelve months later, and the problem still exists.\n\nMurphy explains that the issue was reported and instructions to replicate it where provided to Apple. He doesn't know why it hasn't been fixed, but also didn't feel comfortable waiting to discuss the problem any longer.\n\n\"Hide My Email users deserve to know that it may be possible for attackers to discover their hidden email addresses,\" he declared.\n\nThere are free websites accessible to the public that link email addresses to other personal details, he adds. Anyone relying on Hide My Email may find themselves at risk of being identified on them.\n\nWhile Apple hasn't yet fixed the hole in Hide My Email, it is certainly aware of the problem. One month after Murphy contacted Apple, it confirmed it was looking into the issue.\n\nIn March 2026, Apple said it had \"addressed the reported issue in a recent system change.\" However, Murphy discovered the hole hadn't been plugged.\n\nAgain, more information was provided to Apple, which replied a month later saying it was doing more checks.\n\nApple updated Murphy in May, insisting it was \"still investigating\" the problem. It also wished for Murphy to hold off disclosing the problem until after the investigation concluded.\n\nMurphy wrote back, proposing that Apple could stop selling access to Hide My Email until a fix was available, as a means to limit the number of users at risk.\n\nBy the end of May, Apple said that it would be addressed in a security update \"expected in the coming weeks.\"\n\nAfter being alerted by Murphy, the publication contacted Apple multiple times, but did not get a response.\n\nWhile it is unknown exactly when and how the vulnerability will be fixed, it may end up accompanying other changes to the service. These are chan\n\n---\n\n[Lähde: Mashable]\nA major vulnerability has been discovered in one of the core privacy features that Apple offers its customers. And according to the cybersecurity researchers who discovered the exploit, this issue appears to have been ongoing for more than a year.\n\nApple's \"Hide My Email\" is a privacy feature that obscures a user's email address by generating a unique iCloud ema...",
+    "research_source": "multi",
+    "summary": "Applen iCloud+-palveluun kuuluvaa Hide My Email -toimintoa koskeva haavoittuvuus voi tutkijoiden mukaan paljastaa käyttäjän oikean sähköpostiosoitteen aliasosoitteen takaa.",
+    "content": "Applen Hide My Email -yksityisyystoiminnosta on löytynyt haavoittuvuus, jonka väitetään voivan paljastaa käyttäjän oikean sähköpostiosoitteen aliasosoitteen takaa. 404 Media kertoo testanneensa ja vahvistaneensa ongelman, ja haavoittuvuuden löytänyt tutkija Tyler Murphy sanoo ilmoittaneensa siitä Applelle jo yli vuosi sitten.\n\n## Aliasosoitteiden tarkoitus on suojata käyttäjää\n\nHide My Email on iCloud+-palveluun kuuluva ominaisuus, jonka tarkoituksena on vähentää käyttäjän varsinaisen sähköpostiosoitteen leviämistä verkossa. Toiminnon avulla käyttäjä voi luoda yksilöllisiä ja satunnaisia sähköpostiosoitteita esimerkiksi sovelluksiin, verkkosivuille ja muihin verkkopalveluihin rekisteröitymistä varten.\n\nNäihin aliasosoitteisiin lähetetyt viestit välitetään edelleen käyttäjän oikeaan sähköpostilaatikkoon. Applen omien tukisivujen mukaan Hide My Email on suunniteltu auttamaan käyttäjiä pitämään henkilökohtainen sähköpostiosoitteensa yksityisenä. Toiminnon hyöty perustuu siihen, ettei palvelulle annettu osoite paljasta suoraan käyttäjän varsinaista yhteystietoa.\n\n## Tutkijat kertovat haavoittuvuuden toimivan\n\nUuden raportoinnin mukaan haavoittuvuus voi kuitenkin murentaa tämän suojan. Yksityisyyspalveluja tarjoava EasyOptOuts kertoi 404 Medialle löytäneensä palvelusta ongelman, jonka avulla Hide My Email -aliasosoitteeseen liitetty oikea sähköpostiosoite voitaisiin saada selville. TechCrunchin mukaan tutkimus viittaa siihen, että virhe voi tehdä ominaisuudesta käytännössä hyödyttömän sen keskeisen yksityisyystarkoituksen kannalta.\n\nMurphyn mukaan hän varoitti Applea haavoittuvuudesta yli vuosi sitten. Hänen mukaansa on epäselvää, miksi yhtiö ei ole vielä korjannut ongelmaa. Murphy sanoi myös, että kaikki yritykset hyödyntää haavoittuvuutta ovat onnistuneet.\n\n## Korjauksen aikataulu on epäselvä\n\nSaatavilla olevissa tiedoissa ei kerrota, kuinka laajasti haavoittuvuutta olisi mahdollisesti hyödynnetty todellisissa tilanteissa. Raportoinnin ydin on kuitenkin selvä: tutkijoiden mukaan ongelma on olemassa, sitä on testattu, ja se on saattanut olla korjaamatta yli vuoden. Jos aliasosoite voidaan yhdistää oikeaan sähköpostiosoitteeseen, käyttäjän anonymiteetti heikkenee juuri siinä kohdassa, jota ominaisuuden on tarkoitus suojata.",
+    "category": "Teknologia",
+    "tags": [
+      "apple",
+      "icloud+",
+      "tietoturva",
+      "yksityisyys",
+      "sähköposti"
+    ],
+    "summary_bullets": [
+      "Tutkijoiden mukaan Applen Hide My Email -toiminnossa on haavoittuvuus, joka voi paljastaa käyttäjän oikean sähköpostiosoitteen.",
+      "404 Media kertoo testanneensa ja vahvistaneensa ongelman olemassaolon.",
+      "Haavoittuvuuden löytänyt Tyler Murphy sanoo ilmoittaneensa asiasta Applelle yli vuosi sitten."
+    ],
+    "key_points": [
+      "Tutkijoiden mukaan Applen Hide My Email -toiminnossa on haavoittuvuus, joka voi paljastaa käyttäjän oikean sähköpostiosoitteen.",
+      "404 Media kertoo testanneensa ja vahvistaneensa ongelman olemassaolon.",
+      "Haavoittuvuuden löytänyt Tyler Murphy sanoo ilmoittaneensa asiasta Applelle yli vuosi sitten."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu lähdepaketin yhtäpitäviin tietoihin haavoittuvuudesta, sen väitetystä testauksesta ja ilmoittamisesta Applelle. Mahdollisen väärinkäytön laajuutta ei väitetä, koska sitä ei lähteissä vahvisteta.",
+    "source_text": "Research appears to reveal a bug that could render the feature effectively useless.\n\nApple’s Hide My Email feature is a convenient privacy tool that uses disposable addresses to hide a user’s true email for the sake of online anonymity. Unfortunately, new research appears to show that a bug in the feature allows users’ real email addresses to be unmasked. The bug was reported by 404 Media, which says that it has tested and verified that the vulnerability exists. Tyler Murphy, the researcher who found the bug, said that he warned Apple about the problem over a year ago and that it was unclear why the company had yet to remedy the problem. All of the attempts to exploit the bug have been successful, Murphy added. ---\n\nIt turns out one of Apple’s privacy features may not be as secure as users thought. Apple’s Hide My Email feature currently has a vulnerability that can reveal users’ real email addresses, 404 Media reports. Hide My Email is an iCloud+ feature that lets users create unique, random email addresses when signing up for apps, websites, and other online accounts. Messages sent to those addresses are then automatically forwarded to the user’s real inbox. On its support page, Apple says Hide My Email is designed to let users keep their “personal email address private.” But the privacy company EasyOptOuts told 404 Media that it discovered a vulnerability in the service that could let someone uncover the real email address tied to a Hide My Email alias.\n\nA major vulnerability has been discovered in one of the core privacy features that Apple offers its customers. And according to the cybersecurity researchers who discovered the exploit, this issue appears to have been ongoing for more than a year. Apple's \"Hide My Email\" is a privacy feature that obscures a user's email address by generating a unique iCloud ema...",
+    "writer_backend": "monica",
+    "writer_confidence": 0.88,
+    "degraded_mode": false,
+    "monica_packet_id": "20260701T215122Z_16da799aa5"
+  },
+  "duplicate_rejected_at": "2026-07-01T22:08:03.540393+00:00",
+  "duplicate_rejected": true
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-01T19:51:18.780979+00:00",
+  "digest": "379908aa96",
+  "packet": {
+    "packet_id": "20260701T195118Z_379908aa96",
+    "created_at": "2026-07-01T19:51:18Z",
+    "headline_seed": "Hätätilanne Italiassa",
+    "description_seed": "Italian viranomaisten mukaan punainen hellevaroitus merkitsee jo hätätilannetta. Italiassa ja Balkanin alueella on annettu punaisia hellevaroituksia, SkyNews kertoo. Italiassa varoitus on annettu 25 kaupungille 27 kaupungista. Varoitukset kattavat laajan alueen aina Pohjois-Italian Bolzanosta Sisilian saarella sijaitsevaan Palermoon.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/d93fe667-176b-43d9-98b1-1e715d2b92a0?utm_source=rss",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/d93fe667-176b-43d9-98b1-1e715d2b92a0?utm_source=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Hätätilanne Italiassa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Italian viranomaisten mukaan punainen hellevaroitus merkitsee jo hätätilannetta. Italiassa ja Balkanin alueella on annettu punaisia hellevaroituksia, SkyNews kertoo. Italiassa varoitus on annettu 25 kaupungille 27 kaupungista. Varoitukset kattavat laajan alueen aina Pohjois-Italian Bolzanosta Sisilian saarella sijaitsevaan Palermoon.",
+        "word_count": 37,
+        "keyword_overlap": 27,
+        "strong_overlap": 26
+      }
+    ],
+    "source_text": "Italian viranomaisten mukaan punainen hellevaroitus merkitsee jo hätätilannetta. Italiassa ja Balkanin alueella on annettu punaisia hellevaroituksia, SkyNews kertoo. Italiassa varoitus on annettu 25 kaupungille 27 kaupungista. Varoitukset kattavat laajan alueen aina Pohjois-Italian Bolzanosta Sisilian saarella sijaitsevaan Palermoon.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 74,
+      "selected_blocks": 1,
+      "selected_source_words": 37,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Hätätilanne Italiassa",
+      "description": "Italian viranomaisten mukaan punainen hellevaroitus merkitsee jo hätätilannetta. Italiassa ja Balkanin alueella on annettu punaisia hellevaroituksia, SkyNews kertoo. Italiassa varoitus on annettu 25 kaupungille 27 kaupungista. Varoitukset kattavat laajan alueen aina Pohjois-Italian Bolzanosta Sisilian saarella sijaitsevaan Palermoon.",
+      "category_hint": "Ulkomaat",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Hätätilanne Italiassa",
+    "description": "Italian viranomaisten mukaan punainen hellevaroitus merkitsee jo hätätilannetta. Italiassa ja Balkanin alueella on annettu punaisia hellevaroituksia, SkyNews kertoo. Italiassa varoitus on annettu 25 kaupungille 27 kaupungista. Varoitukset kattavat laajan alueen aina Pohjois-Italian Bolzanosta Sisilian saarella sijaitsevaan Palermoon.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/d93fe667-176b-43d9-98b1-1e715d2b92a0?utm_source=rss",
+    "published": "2026-07-01T22:09:38+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "853d534779f33a5d819b464a65e20b2d",
+    "_url_hash": "b608a6515347110f173df7691b39d05560652d735656a168b1357c19847e10d0",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Italian viranomaisten mukaan punainen hellevaroitus merkitsee jo hätätilannetta. Italiassa ja Balkanin alueella on annettu punaisia hellevaroituksia, SkyNews kertoo. Italiassa varoitus on annettu 25 kaupungille 27 kaupungista. Varoitukset kattavat laajan alueen aina Pohjois-Italian Bolzanosta Sisilian saarella sijaitsevaan Palermoon.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-07-01T19:53:17.763254+00:00",
+  "failure": "Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täytesisältöä tai keksittyjä lisätietoja.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260701T195118Z_379908aa96\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täytesisältöä tai keksittyjä lisätietoja.\"}"
+}

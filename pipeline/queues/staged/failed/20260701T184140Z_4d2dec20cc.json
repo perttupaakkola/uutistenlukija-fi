@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-01T18:41:40.124408+00:00",
+  "digest": "4d2dec20cc",
+  "packet": {
+    "packet_id": "20260701T184140Z_4d2dec20cc",
+    "created_at": "2026-07-01T18:41:40Z",
+    "headline_seed": "Ravituloksia | Turku",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9585041",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9585041"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ravituloksia | Turku"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 170,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ravituloksia | Turku",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Ravituloksia | Turku",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9585041",
+    "published": "2026-07-01T21:32:13+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "72d1534fbdd67e0d6b30ba47ecf8ecbd",
+    "_url_hash": "3235faa4626e4de7c8b696a501474474c712b85e264a92a03641fc7dd6340413",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nTurun kaupunki nostaa vahingonkorvauskanteen Fölin bussiyhtiöiden kartellista, joka toimi kymmenisen vuotta sitten. Kaupunki vaatii kartelliin osallisilta yhtiöiltä yhteensä noin 11,8 miljoonaa euroa korkoineen.\n\nVahingonkorvaussummasta noin 6,2 miljoonaa euroa on kilpailuoikeudellista vahingonkorvausta ja noin 5,7 miljoonaa euroa sopimussakkoa viivästyskorkoineen.\n\nHaettavan vahingonkorvauksen suuruus perustuu laskelmiin vuosina 2013 ja 2014 olleen kartellin aiheuttamasta vahingosta. Haettavan sopimussakon suuruus puolestaan perustuu vuonna 2016 solmitun liikennöintisopimuksen nimenomaiseen sopimusehtoon.\n\nTurun kaupunki katsoo, että kartellista on aiheutunut taloudellista vahinkoa, sillä seudullisen linja-autoliikenteen hankintahinnat ovat kartellin vaikutuksesta nousseet.\n\nTurun kaupunki edustaa kanteessa kaikkia Turun seudun joukkoliikenteen kuntia, jotka ovat kärsineet kartellista vahinkoa. Näitä ovat Turun lisäksi Kaarina, Lieto, Naantali, Raisio ja Rusko.\n\nKaupunki jättää kanteen Varsinais-Suomen käräjäoikeuteen kesäkuun aikana.\n\nBussikartelli toimi vuosina 2013, 2014 ja 2016. Tuolloin kuusi Turun seudun joukkoliikenteessä toimivaa bussiyhtiötä teki Fölin tarjouskilpailuissa kilpailulain vastaisia yhteistarjouksia.\n\nKartellissa olivat mukana LS-Liikennelinjat, Jalon Liikenne, Kunnon Kuskit, Linjaliikenne Nyholm, No Wheels, Savonlinja ja Lehtisen Linja. Yhtiöt sopivat ennalta jakavansa voitetun liikennöinnin keskenään.\n\nVuonna 2023 markkinaoikeus määräsi yhtiöille yhteensä 1,5 miljoonan euron seuraamusmaksut. Korkein hallinto-oikeus päätyi samaan tuomioon vuonna 2025.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-01T18:43:19.152657+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä tai tarkistettavia faktoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260701T184140Z_4d2dec20cc\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä tai tarkistettavia faktoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

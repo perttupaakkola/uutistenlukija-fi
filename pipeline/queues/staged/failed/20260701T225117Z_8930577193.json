@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-01T22:51:17.406765+00:00",
+  "digest": "8930577193",
+  "packet": {
+    "packet_id": "20260701T225117Z_8930577193",
+    "created_at": "2026-07-01T22:51:17Z",
+    "headline_seed": "Nähdäänkö Patrik Laineen kauppa pian?",
+    "description_seed": "Kesän kenties kohutuimman suomalaispelaajan kohtalo voi ratketa hyvinkin pian.",
+    "link": "https://www.jatkoaika.com/Kolumni/N%C3%A4hd%C3%A4%C3%A4nk%C3%B6-Patrik-Laineen-kauppa-pian/186290",
+    "source": "Jatkoaika.com",
+    "source_names": [],
+    "source_urls": [
+      "https://www.jatkoaika.com/Kolumni/N%C3%A4hd%C3%A4%C3%A4nk%C3%B6-Patrik-Laineen-kauppa-pian/186290"
+    ],
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Nähdäänkö Patrik Laineen kauppa pian?"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 164,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Jatkoaika.com",
+        "Jatkoaika.com",
+        "Jatkoaika.com"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Nähdäänkö Patrik Laineen kauppa pian?",
+      "description": "Kesän kenties kohutuimman suomalaispelaajan kohtalo voi ratketa hyvinkin pian.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Nähdäänkö Patrik Laineen kauppa pian?",
+    "description": "Kesän kenties kohutuimman suomalaispelaajan kohtalo voi ratketa hyvinkin pian.",
+    "link": "https://www.jatkoaika.com/Kolumni/N%C3%A4hd%C3%A4%C3%A4nk%C3%B6-Patrik-Laineen-kauppa-pian/186290",
+    "published": "2026-07-02T01:32:38+03:00",
+    "source": "Jatkoaika.com",
+    "source_domain": "jatkoaika.com",
+    "language": "fi",
+    "fingerprint": "814cf726b1bdef28c72b8fa5e31edf7d",
+    "_url_hash": "fe6bc4af2eb5da3aebbab9a0e5d2442c5992f90d2113853becfcbad880097bfa",
+    "source_tier": 2,
+    "category_hint": "Urheilu",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Urheilu",
+    "research": "[Lähde: Jatkoaika.com]\nNHL:n jokakesäiset siirtohulinat alkoivat tuttuun tapaan keskiviikkoiltana Suomen aikaa klo 19.\n\nSuomalaispelaajista uuden osoitteen ovat löytäneet jo Joonas Korpisalo, Erik Haula ja Matias Maccelli. Joukosta puuttuu kuitenkin vielä heitäkin kuumempi nimi, ja se on Patrik Laine.\n\n28-vuotias suomalaishyökkääjä tulee varmuudella vaihtamaan osoitetta tänä kesänä, todennäköisesti aivan näinä päivinä. Montreal Canadiensista tie on vienyt mediassa ainakin Los Angeles Kingsiin, Chicago Blackhawksiin sekä New York Rangersiin.\n\nViimeisimpänä joukkueena spekulaatioihin nousi Calgary Flames. Ei lainkaan huono idea, sillä seura pysyi ensimmäisenä siirtoiltana melko hiljaa.\n\nMikä tahansa seura tulee olemaankaan, voi fiksulla diilillä Laineesta olla revittävissä irti paljon hyötyjä. Paljon vastuuta ja sen myötä myös tuloksia ylivoimalla, vaarallisia maalipaikkoja, kenties tulostakin.\n\nTamperelaistykillä on kuitenkin takanaan melkoisen vaikeat viime vuodet, eikä niskaan tule ladata liian suuria pelillisiä tai palkkakatollisia paineita. Lisäksi hänen yksipuolinen pelitapansa voi aiheuttaa joillekin valmentajille harmaita hiuksia.\n\nPatrik Laine kuitenkin kelpaa yhä NHL-seuroille sopivassa roolissa. Kun ylivoimaroolituksia käydään kulmahuoneissa läpi, viimeistään tuolloin olisi Laine hyvä pitää mielessä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-01T22:53:18.092723+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä vahvistettuja faktoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "plugin runtime config.loadConfig() is deprecated (runtime-config-load-write); use config.current().\n{\"packet_id\":\"20260701T225117Z_8930577193\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä vahvistettuja faktoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
