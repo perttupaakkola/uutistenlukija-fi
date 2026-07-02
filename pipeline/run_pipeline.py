@@ -31,6 +31,7 @@ from dedup import filter_new_articles, check_published_duplicates, dedup_within_
 from story_packet import queue_root
 from pexels import fetch_images_for_articles as pexels_fetch_images
 from unsplash import fetch_images_for_articles as unsplash_fetch_images
+from image_candidate_guard import category_fallback_fields
 
 
 def _article_seed_digest(article: dict) -> str:
@@ -774,8 +775,8 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
                 else:
                     record_failure("pexels")
 
-            # Pass 3: AI (with total step timeout guard + service health check)
-            no_image = [a for a in rewritten if not a.get("image")]
+            # Pass 3: AI generated fallback after stock is unavailable or rejected.
+            no_image = [a for a in rewritten if _needs_image(a)]
             elapsed = time.time() - image_step_start
             if no_image and elapsed >= IMAGE_STEP_TIMEOUT:
                 print(f"[image_gen] Skipping AI gen — image step budget exhausted ({elapsed:.0f}s)")
@@ -789,6 +790,7 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
                         print(f"[image_gen] Kie.ai skip window expired — sending probe request...")
                     remaining_budget = IMAGE_STEP_TIMEOUT - elapsed
                     print(f"[image_gen] AI gen for {len(no_image)} articles without image (budget: {remaining_budget:.0f}s)...")
+                    _clear_fallback(no_image)
                     no_image = generate_images_for_articles(no_image, max_total_sec=int(remaining_budget))
                     ai_count = sum(1 for a in no_image if a.get("image") and not a.get("image_category_fallback"))
                     print(f"[image_gen] {ai_count}/{len(no_image)} succeeded")
@@ -798,24 +800,13 @@ def run(quick: bool = False, build_only: bool = False, firehose_only: bool = Fal
                     else:
                         record_failure("kie_api")
 
-            # Pass 4: Rescue — stock photo fallback for any AI-gen failures
-            # Articles that failed AI gen (Kie.ai timeout/error) get a second Pexels attempt
+            # Pass 4: neutral fallback. Do not retry weaker stock after generation fails.
             still_no_image = [a for a in rewritten if not a.get("image") or a.get("image_category_fallback")]
-            if still_no_image and _pexels_key and (time.time() - image_step_start) < IMAGE_STEP_TIMEOUT:
-                print(f"[rescue] {len(still_no_image)} articles still without image — Pexels rescue pass...")
-                _clear_fallback(still_no_image)
-                still_no_image = pexels_fetch_images(still_no_image, delay=0.3)
-                rescue_count = sum(1 for a in still_no_image if a.get("image") and not a.get("image_category_fallback"))
-                if rescue_count:
-                    print(f"[rescue] {rescue_count}/{len(still_no_image)} rescued via Pexels")
-                    pexels_count += rescue_count
-            elif still_no_image and _unsplash_key and (time.time() - image_step_start) < IMAGE_STEP_TIMEOUT:
-                print(f"[rescue] {len(still_no_image)} articles still without image — Unsplash rescue pass...")
-                still_no_image = unsplash_fetch_images(still_no_image, delay=0.5)
-                rescue_count = sum(1 for a in still_no_image if a.get("image") and not a.get("image_category_fallback"))
-                if rescue_count:
-                    print(f"[rescue] {rescue_count}/{len(still_no_image)} rescued via Unsplash")
-                    unsplash_count += rescue_count
+            for article in still_no_image:
+                article.update(category_fallback_fields(
+                    article.get("category", "Kotimaa"),
+                    reason="generated fallback unavailable, unsafe, or failed after stock rejection",
+                ))
 
         except Exception as e:
             errors.append(f"images: {e}")

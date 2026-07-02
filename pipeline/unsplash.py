@@ -414,15 +414,23 @@ def fetch_image_for_article(
     # Filter out already used images
     try:
         from image_state import is_image_used, mark_image_used, get_query_index, set_query_index
-        from image_candidate_guard import filter_image_candidates
+        from image_candidate_guard import build_image_intent, filter_image_candidates, stock_decision_fields
         available_photos = [p for p in photos if not is_image_used(p["id"])]
     except ImportError:
         available_photos = photos
         mark_image_used = lambda x: None
         get_query_index = lambda x: _query_index.get(x, 0)
         set_query_index = lambda x, y: _query_index.update({x: y})
-        from image_candidate_guard import filter_image_candidates
+        from image_candidate_guard import build_image_intent, filter_image_candidates, stock_decision_fields
 
+    intent = build_image_intent(
+        title,
+        category,
+        summary=summary,
+        key_points=key_points,
+        content=content,
+        query=query,
+    )
     available_photos = filter_image_candidates(
         available_photos,
         query=query,
@@ -431,7 +439,9 @@ def fetch_image_for_article(
         key_points=key_points,
         content=content,
         provider="unsplash",
+        intent=intent,
     )
+    selected_query = query
 
     if not available_photos and category in CATEGORY_QUERIES:
         if blocks_broad_category_fallback(title, summary=summary, key_points=key_points, content=content):
@@ -449,7 +459,9 @@ def fetch_image_for_article(
             key_points=key_points,
             content=content,
             provider="unsplash",
+            intent=intent,
         )
+        selected_query = fallback_query
 
     if not available_photos:
         return None
@@ -466,7 +478,7 @@ def fetch_image_for_article(
     photographer = photo["photographer"]
     photo_page = photo["photo_page"]
 
-    return {
+    result = {
         "url": photo["url_regular"] or photo["url_full"],  # 1080px for performance, not full 2400px
         "thumb_url": photo["url_small"] or photo["url_thumb"],
         "photographer": photographer,
@@ -475,7 +487,11 @@ def fetch_image_for_article(
         "alt": title[:125],
         "credit": f"Photo by {photographer} on Unsplash",
         "hotlink": True,  # must NOT be downloaded/cached locally
+        "decision": photo.get("_image_decision", {}),
+        "intent": photo.get("_image_visual_intent", intent.to_dict()),
     }
+    result.update(stock_decision_fields("unsplash", result, selected_query))
+    return result
 
 
 def fetch_images_for_articles(articles: list, delay: float = 1.2) -> list:
@@ -519,16 +535,9 @@ def fetch_images_for_articles(articles: list, delay: float = 1.2) -> list:
             article["image_source_url"] = result["photo_page"]
             article["image_caption"] = ""
             article["image_hotlink"] = True
-            article["image_category_fallback"] = False
+            article.update({k: v for k, v in result.items() if k.startswith("image_")})
         else:
-            cat_slug = category.lower()
-            article["image"] = f"/images/categories/{cat_slug}.jpg"
-            article["image_thumb"] = f"/images/categories/{cat_slug}.jpg"
-            article["image_alt"] = f"{category}-uutiset"
-            article["image_credit"] = ""
-            article["image_source_url"] = ""
-            article["image_caption"] = ""
-            article["image_hotlink"] = False
-            article["image_category_fallback"] = True
+            from image_candidate_guard import category_fallback_fields
+            article.update(category_fallback_fields(category, reason="stock candidates unavailable or rejected"))
 
     return articles

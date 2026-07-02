@@ -13,7 +13,7 @@ import time
 import threading
 import urllib.request
 import urllib.error
-from typing import List, Dict, Optional
+from typing import Any, List, Dict, Optional
 
 KIE_API_KEY = os.environ.get("KIE_API_KEY", "")
 KIE_BASE_URL = "https://api.kie.ai"
@@ -112,7 +112,47 @@ def _build_alt_text(title: str, category: str) -> str:
     return title[:125]
 
 
-def generate_article_image(title: str, category: str, slug: str) -> Optional[str]:
+def _build_generation_prompt(title: str, category: str, intent: dict[str, Any] | None = None) -> str:
+    intent = intent or {}
+    style_hints = {
+        "Kotimaa": "Finnish landscape elements, blue and white tones, Nordic architecture",
+        "Ulkomaat": "global perspective, world map elements, international context",
+        "Talous": "financial charts, business district, economic graphs",
+        "Teknologia": "circuit boards, digital interfaces, futuristic tech",
+        "Urheilu": "dynamic sports action, stadium, athletic energy",
+        "Kulttuuri": "art gallery, musical instruments, theater, creative expression",
+        "Tiede": "laboratory, molecular structures, space, scientific instruments",
+    }
+    style = style_hints.get(category, "editorial newspaper illustration")
+    must_have = ", ".join(intent.get("must_have") or [])
+    must_not = ", ".join(intent.get("must_not") or [])
+    safety = intent.get("safety_mode") or "normal"
+    safety_clause = (
+        "Use a non-photorealistic editorial illustration. Do not depict a real person's likeness, "
+        "victims, crime scenes, attack scenes, disaster scenes, logos, brand marks, or readable text. "
+        if safety == "illustration_only"
+        else "Use an editorial illustration style, not a fake documentary photo. No text, logos, or watermarks. "
+    )
+    cue_clause = f"Required visual cues: {must_have}. " if must_have else ""
+    avoid_clause = f"Avoid: {must_not}. " if must_not else ""
+    return (
+        f"Editorial newspaper header illustration for a Finnish news article titled '{title}'. "
+        f"{safety_clause}"
+        f"Visual subject: {intent.get('subject') or title}. "
+        f"Setting: {intent.get('setting') or style}. "
+        f"{cue_clause}{avoid_clause}"
+        f"Style: modern, clean, professional, muted sophisticated palette. "
+        f"Widescreen 16:9 composition suitable as a news article banner."
+    )
+
+
+def generate_article_image(
+    title: str,
+    category: str,
+    slug: str,
+    *,
+    intent: dict[str, Any] | None = None,
+) -> Optional[str]:
     """Generate a header image for an article. Returns relative path or None."""
     os.makedirs(IMAGE_DIR, exist_ok=True)
 
@@ -122,23 +162,7 @@ def generate_article_image(title: str, category: str, slug: str) -> Optional[str
     if os.path.exists(filepath):
         return webpath
 
-    style_hints = {
-        "Kotimaa": "Finnish landscape elements, blue and white tones, Nordic architecture",
-        "Ulkomaat": "global perspective, world map elements, international flags",
-        "Talous": "financial charts, business district, economic graphs",
-        "Teknologia": "circuit boards, digital interfaces, futuristic tech",
-        "Urheilu": "dynamic sports action, stadium, athletic energy",
-        "Kulttuuri": "art gallery, musical instruments, theater, creative expression",
-        "Tiede": "laboratory, molecular structures, space, scientific instruments",
-    }
-
-    style = style_hints.get(category, "editorial newspaper illustration")
-    prompt = (
-        f"Editorial newspaper header illustration for a Finnish news article titled '{title}'. "
-        f"Style: modern editorial illustration, clean and professional, muted sophisticated color palette. "
-        f"Visual theme: {style}. No text in the image. "
-        f"Widescreen composition, suitable as a news article banner."
-    )
+    prompt = _build_generation_prompt(title, category, intent)
 
     try:
         result = _kie_request("/api/v1/jobs/createTask", {
@@ -210,10 +234,44 @@ def generate_images_for_articles(articles: List[Dict], max_total_sec: int = MAX_
             slug = re.sub(r'[^a-z0-9\s-]', '', slug)
             slug = re.sub(r'[\s-]+', '-', slug).strip('-')[:60].rstrip('-')
 
-        image_path = generate_article_image(title, category, slug)
+        try:
+            from image_candidate_guard import build_image_intent
+            key_points = list(article.get("key_points") or [])
+            key_points.extend(article.get("tags") or [])
+            intent = build_image_intent(
+                title,
+                category,
+                summary=article.get("summary", "") or "",
+                key_points=key_points,
+                content=article.get("content", "") or "",
+            ).to_dict()
+        except Exception:
+            intent = {}
+
+        if intent and not intent.get("generated_ok", True):
+            print(f"[image_gen] Generated fallback unsafe for '{title[:40]}'")
+            consecutive_failures += 1
+            continue
+
+        image_path = generate_article_image(title, category, slug, intent=intent)
         if image_path:
             article["image"] = image_path
             article["image_alt"] = _build_alt_text(title, category)
+            article["image_thumb"] = image_path
+            article["image_credit"] = ""
+            article["image_source_url"] = ""
+            article["image_caption"] = ""
+            article["image_hotlink"] = False
+            article["image_category_fallback"] = False
+            article["image_source"] = "generated"
+            article["image_generated_fallback"] = True
+            article["image_visual_intent"] = intent
+            article["image_decision"] = {
+                "source": "generated",
+                "accepted": True,
+                "reason": "stock candidates unavailable or rejected",
+                "safety_mode": intent.get("safety_mode") if intent else "normal",
+            }
             consecutive_failures = 0  # reset on success
         else:
             consecutive_failures += 1

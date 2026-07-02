@@ -465,15 +465,23 @@ def fetch_image_for_article(
     # Filter out already used images
     try:
         from image_state import is_image_used, mark_image_used, get_query_index, set_query_index
-        from image_candidate_guard import filter_image_candidates
+        from image_candidate_guard import build_image_intent, filter_image_candidates, stock_decision_fields
         available_photos = [p for p in photos if not is_image_used(p["id"])]
     except ImportError:
         available_photos = photos
         mark_image_used = lambda x: None
         get_query_index = lambda x: _query_index.get(x, 0)
         set_query_index = lambda x, y: _query_index.update({x: y})
-        from image_candidate_guard import filter_image_candidates
+        from image_candidate_guard import build_image_intent, filter_image_candidates, stock_decision_fields
 
+    intent = build_image_intent(
+        title,
+        category,
+        summary=summary,
+        key_points=key_points,
+        content=content,
+        query=query,
+    )
     available_photos = filter_image_candidates(
         available_photos,
         query=query,
@@ -482,7 +490,9 @@ def fetch_image_for_article(
         key_points=key_points,
         content=content,
         provider="pexels",
+        intent=intent,
     )
+    selected_query = query
 
     # Fallback: try category query if specific search is empty or all used
     if not available_photos and category in CATEGORY_QUERIES:
@@ -501,7 +511,9 @@ def fetch_image_for_article(
             key_points=key_points,
             content=content,
             provider="pexels",
+            intent=intent,
         )
+        selected_query = fallback_query
 
     if not available_photos:
         print(f"[pexels] No fresh image found for '{title[:50]}'")
@@ -527,7 +539,7 @@ def fetch_image_for_article(
     photographer = photo["photographer"]
     pexels_url = photo["pexels_url"]
 
-    return {
+    result = {
         "local_path": local_path,
         "thumb_path": thumb_local,
         "url": photo["url"],
@@ -537,7 +549,11 @@ def fetch_image_for_article(
         "pexels_url": pexels_url,
         "alt": title[:125],
         "credit": f"Photo by {photographer} on Pexels",
+        "decision": photo.get("_image_decision", {}),
+        "intent": photo.get("_image_visual_intent", intent.to_dict()),
     }
+    result.update(stock_decision_fields("pexels", result, selected_query))
+    return result
 
 
 def fetch_images_for_articles(articles: list, delay: float = 0.5) -> list:
@@ -596,20 +612,13 @@ def fetch_images_for_articles(articles: list, delay: float = 0.5) -> list:
             article["image_credit"] = result["credit"]
             article["image_source_url"] = result["pexels_url"]
             article["image_caption"] = ""
-            article["image_category_fallback"] = False
+            article.update({k: v for k, v in result.items() if k.startswith("image_")})
             # Generate blur-up placeholder
             b64 = _generate_blur_placeholder(result["local_path"])
             if b64:
                 article["image_placeholder"] = b64
         else:
-            # Category placeholder fallback
-            cat_slug = category.lower()
-            article["image"] = f"/images/categories/{cat_slug}.jpg"
-            article["image_thumb"] = f"/images/categories/{cat_slug}.jpg"
-            article["image_alt"] = f"{category}-uutiset"
-            article["image_credit"] = ""
-            article["image_source_url"] = ""
-            article["image_caption"] = ""
-            article["image_category_fallback"] = True
+            from image_candidate_guard import category_fallback_fields
+            article.update(category_fallback_fields(category, reason="stock candidates unavailable or rejected"))
 
     return articles

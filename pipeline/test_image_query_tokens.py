@@ -136,6 +136,23 @@ class ImageQueryTokenTests(unittest.TestCase):
 
         self.assertTrue(accepted, reason)
 
+    def test_named_person_story_rejects_generic_lookalike_stock_portrait(self) -> None:
+        candidate = {
+            "id": "generic-politician",
+            "alt": "portrait of a politician speaking at a podium",
+            "photo_page": "https://example.com/photos/generic-politician-portrait",
+        }
+
+        accepted, reason = image_candidate_guard.vet_image_candidate(
+            candidate,
+            query="politician portrait",
+            title="Petteri Orpo kommentoi hallituksen uutta kyselytulosta",
+            summary="Artikkeli käsittelee Petteri Orpon hallitusta ja kyselyä.",
+        )
+
+        self.assertFalse(accepted)
+        self.assertIn("lookalike", reason)
+
     def test_unsplash_fetch_skips_snowy_candidate_and_uses_allowed_result(self) -> None:
         title = "Loppuviikon sää viilenee, mutta aurinkoa riittää monin paikoin"
         snowy = {

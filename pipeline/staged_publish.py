@@ -43,6 +43,8 @@ from story_packet import build_story_packet  # noqa: E402
 from publisher import publish_articles, build_site  # noqa: E402
 from unsplash import fetch_images_for_articles as unsplash_fetch_images  # noqa: E402
 from pexels import fetch_images_for_articles as pexels_fetch_images  # noqa: E402
+from image_candidate_guard import category_fallback_fields  # noqa: E402
+from image_gen import generate_images_for_articles  # noqa: E402
 from service_health import should_skip, record_success, record_failure  # noqa: E402
 from monica_writer import (  # noqa: E402
     _build_prompt,
@@ -1326,7 +1328,11 @@ def article_needs_image(article: dict) -> bool:
 
 def clear_image_fallback(article: dict) -> None:
     if article.get("image_category_fallback"):
-        for key in ["image", "image_thumb", "image_alt", "image_credit", "image_source_url", "image_caption", "image_placeholder"]:
+        for key in [
+            "image", "image_thumb", "image_alt", "image_credit", "image_source_url",
+            "image_caption", "image_placeholder", "image_source", "image_decision",
+            "image_visual_intent", "image_quality_score", "image_generated_fallback",
+        ]:
             article.pop(key, None)
         article["image_category_fallback"] = False
 
@@ -1341,13 +1347,14 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
     """
     total = len(articles)
     if not total:
-        return {"total": 0, "images": 0, "unsplash": 0, "pexels": 0, "missing": 0}
+        return {"total": 0, "images": 0, "unsplash": 0, "pexels": 0, "generated": 0, "category_fallback": 0, "missing": 0}
 
     load_env_files()
     sync_image_provider_keys()
 
     unsplash_count = 0
     pexels_count = 0
+    generated_count = 0
 
     missing = [a for a in articles if article_needs_image(a)]
     if missing and os.environ.get("UNSPLASH_ACCESS_KEY", ""):
@@ -1383,13 +1390,40 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
             else:
                 record_failure("pexels")
 
+    missing = [a for a in articles if article_needs_image(a)]
+    if missing and os.environ.get("KIE_API_KEY", ""):
+        skip, reason = should_skip("kie_api")
+        if skip:
+            log(f"images: generated fallback skipped — Kie.ai {reason}")
+        else:
+            before = sum(1 for a in articles if a.get("image_source") == "generated" and not a.get("image_category_fallback"))
+            for article in missing:
+                clear_image_fallback(article)
+            generate_images_for_articles(missing, max_total_sec=180)
+            after = sum(1 for a in articles if a.get("image_source") == "generated" and not a.get("image_category_fallback"))
+            generated_count = max(0, after - before)
+            if generated_count:
+                record_success("kie_api")
+            else:
+                record_failure("kie_api")
+
+    for article in [a for a in articles if article_needs_image(a)]:
+        clear_image_fallback(article)
+        article.update(category_fallback_fields(
+            article.get("category", "Kotimaa"),
+            reason="generated fallback unavailable, unsafe, or failed after stock rejection",
+        ))
+
     image_count = sum(1 for a in articles if a.get("image") and not a.get("image_category_fallback"))
     missing_count = sum(1 for a in articles if article_needs_image(a))
+    category_fallback_count = sum(1 for a in articles if a.get("image_category_fallback"))
     return {
         "total": total,
         "images": image_count,
         "unsplash": unsplash_count,
         "pexels": pexels_count,
+        "generated": generated_count,
+        "category_fallback": category_fallback_count,
         "missing": missing_count,
     }
 

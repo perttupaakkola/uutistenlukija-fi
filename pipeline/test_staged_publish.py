@@ -424,6 +424,52 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(articles[0]["image"], "/images/articles/fallback-hero.jpg")
         self.assertFalse(articles[0]["image_category_fallback"])
 
+    def test_enrich_images_uses_generated_fallback_after_rejected_stock(self) -> None:
+        articles = [{"title": "Sääartikkeli", "category": "Kotimaa", "content": "aurinkoinen sää"}]
+
+        def rejected_stock(batch, delay=0):
+            batch[0].update(staged_publish.category_fallback_fields("Kotimaa", reason="stock rejected"))
+            return batch
+
+        def generated(batch, max_total_sec=180):
+            batch[0]["image"] = "/images/articles/generated.jpg"
+            batch[0]["image_thumb"] = "/images/articles/generated.jpg"
+            batch[0]["image_source"] = "generated"
+            batch[0]["image_category_fallback"] = False
+            batch[0]["image_decision"] = {"source": "generated", "accepted": True}
+            return batch
+
+        with patch.dict(staged_publish.os.environ, {"UNSPLASH_ACCESS_KEY": "key", "PEXELS_API_KEY": "key", "KIE_API_KEY": "key"}, clear=False), \
+             patch.object(staged_publish, "should_skip", return_value=(False, None)), \
+             patch.object(staged_publish, "unsplash_fetch_images", side_effect=rejected_stock), \
+             patch.object(staged_publish, "pexels_fetch_images", side_effect=rejected_stock), \
+             patch.object(staged_publish, "generate_images_for_articles", side_effect=generated):
+            summary = staged_publish.enrich_images_for_articles(articles, unsplash_delay=0, pexels_delay=0)
+
+        self.assertEqual(summary["generated"], 1)
+        self.assertEqual(summary["category_fallback"], 0)
+        self.assertEqual(articles[0]["image"], "/images/articles/generated.jpg")
+        self.assertEqual(articles[0]["image_source"], "generated")
+
+    def test_enrich_images_uses_neutral_fallback_when_generation_unavailable(self) -> None:
+        articles = [{"title": "Sääartikkeli", "category": "Kotimaa", "content": "aurinkoinen sää"}]
+
+        def rejected_stock(batch, delay=0):
+            batch[0].update(staged_publish.category_fallback_fields("Kotimaa", reason="stock rejected"))
+            return batch
+
+        with patch.dict(staged_publish.os.environ, {"UNSPLASH_ACCESS_KEY": "key", "PEXELS_API_KEY": "key", "KIE_API_KEY": ""}, clear=False), \
+             patch.object(staged_publish, "should_skip", return_value=(False, None)), \
+             patch.object(staged_publish, "unsplash_fetch_images", side_effect=rejected_stock), \
+             patch.object(staged_publish, "pexels_fetch_images", side_effect=rejected_stock), \
+             patch.object(staged_publish, "generate_images_for_articles") as generated:
+            summary = staged_publish.enrich_images_for_articles(articles, unsplash_delay=0, pexels_delay=0)
+
+        generated.assert_not_called()
+        self.assertEqual(summary["generated"], 0)
+        self.assertEqual(summary["category_fallback"], 1)
+        self.assertTrue(articles[0]["image_category_fallback"])
+        self.assertEqual(articles[0]["image_source"], "category_fallback")
 
     def test_enrich_images_loads_project_env_for_staged_publish(self) -> None:
         project_env = staged_publish.PROJECT_DIR / ".env"
