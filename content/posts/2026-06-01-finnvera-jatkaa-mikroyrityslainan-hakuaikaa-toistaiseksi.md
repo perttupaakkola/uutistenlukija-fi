@@ -67,3 +67,5 @@ Finnveran mukaan 65 prosenttia rahoitusta saaneista yrityksistä suunnittelee uu
 ## Hakemista ei tarvitse kiirehtiä
 
 Koska hakuaikaa jatketaan toistaiseksi, lainaa voi hakea normaalisti myös heinäkuun jälkeen. Finnveran viesti yrityksille on, että hakemus kannattaa tehdä silloin, kun yrityksellä on selkeä suunnitelma ja todellinen rahoitustarve kasvun vauhdittamiseksi.
+
+Yritysrahoitusta seuraavan lukijan kannattaa katsoa myös, miten [pk-yritysten kasvuhankkeille avattu valtakunnallinen rahoitushaku](/posts/2026-06-03-pk-yritysten-kasvuhankkeille-avattiin-uusi-valtakunnallinen/) täydentää kuvaa yritysten investointi- ja kasvurahoituksesta.
