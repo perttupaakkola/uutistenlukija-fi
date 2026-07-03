@@ -68,3 +68,5 @@ Qatarin ulkoministeriön mukaan neuvotteluja on määrä jatkaa mahdollisimman p
 Brent-raakaöljyfutuurin hinta oli katsaushetkellä noin 70,4 dollaria barrelilta ja yhdysvaltalaisen WTI-laadun futuurihinta 67,3 dollaria barrelilta. Öljylaatujen hinnat olivat alhaisimmillaan moneen kuukauteen.
 
 Wall Streetin odotettiin avautuvan nousuun. Dow Jonesin indeksifutuuri oli iltapäivän katsaushetkellä 0,4 prosentin nousussa, Nasdaq-futuuri 0,6 prosentin nousussa ja S&P 500 -futuuri 0,4 prosentin nousussa.
+
+Seuraa markkinoiden seuraavia käänteitä Uutistenlukijan [Talous-uutisista](/kategoriat/talous/).
