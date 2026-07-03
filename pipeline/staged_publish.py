@@ -1331,7 +1331,8 @@ def clear_image_fallback(article: dict) -> None:
         for key in [
             "image", "image_thumb", "image_alt", "image_credit", "image_source_url",
             "image_caption", "image_placeholder", "image_source", "image_decision",
-            "image_visual_intent", "image_quality_score", "image_generated_fallback",
+            "image_source_type", "image_decision_reason", "image_visual_intent",
+            "image_quality_score", "image_generated_fallback",
         ]:
             article.pop(key, None)
         article["image_category_fallback"] = False
@@ -1636,6 +1637,9 @@ def cmd_publish(args: argparse.Namespace) -> int:
                     "image": enriched.get("image"),
                     "image_thumb": enriched.get("image_thumb"),
                     "image_category_fallback": bool(enriched.get("image_category_fallback")),
+                    "image_source": enriched.get("image_source"),
+                    "image_source_type": enriched.get("image_source_type"),
+                    "image_decision_reason": enriched.get("image_decision_reason"),
                 }
     log(
         "publish: images "

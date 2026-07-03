@@ -25,12 +25,27 @@ def _frontmatter(path: Path) -> dict[str, str]:
     except IndexError:
         return {}
     data: dict[str, str] = {}
+    pending_key = ""
     for line in block.splitlines():
+        if pending_key == "categories" and line.strip().startswith("- "):
+            data["category"] = line.strip()[2:].strip().strip('"')
+            pending_key = ""
+            continue
         if ":" not in line or line.startswith(" "):
             continue
         key, value = line.split(":", 1)
         data[key.strip()] = value.strip().strip('"')
+        pending_key = key.strip() if key.strip() == "categories" else ""
     return data
+
+
+def _body(path: Path) -> str:
+    text = path.read_text(encoding="utf-8", errors="replace")
+    if text.startswith("---"):
+        parts = text.split("---", 2)
+        if len(parts) >= 3:
+            return parts[2]
+    return text
 
 
 def _post_sort_key(path: Path) -> tuple[str, str]:
@@ -43,7 +58,7 @@ def audit_recent(limit: int) -> list[dict[str, object]]:
     rows: list[dict[str, object]] = []
     for path in posts:
         fm = _frontmatter(path)
-        image_source = fm.get("image_source") or ("category_fallback" if fm.get("image_category_fallback") == "true" else "")
+        image_source = fm.get("image_source") or fm.get("image_source_type") or ("category_fallback" if fm.get("image_category_fallback") == "true" else "")
         image = fm.get("image", "")
         source_url = fm.get("image_source_url", "")
         status = "ok"
@@ -62,6 +77,7 @@ def audit_recent(limit: int) -> list[dict[str, object]]:
                 fm.get("category", ""),
                 summary=fm.get("description", ""),
                 query=fm.get("image_query", ""),
+                content=_body(path),
             )
             decision = score_image_candidate(
                 candidate,
@@ -69,6 +85,7 @@ def audit_recent(limit: int) -> list[dict[str, object]]:
                 query=fm.get("image_query", ""),
                 title=fm.get("title", ""),
                 summary=fm.get("description", ""),
+                content=_body(path),
                 provider=image_source or "stock",
             )
             if not decision.accepted:
@@ -80,8 +97,12 @@ def audit_recent(limit: int) -> list[dict[str, object]]:
             status = "missing"
             reason = "missing image"
 
+        try:
+            rel_path = str(path.relative_to(PROJECT_ROOT))
+        except ValueError:
+            rel_path = str(path)
         rows.append({
-            "file": str(path.relative_to(PROJECT_ROOT)),
+            "file": rel_path,
             "title": fm.get("title", ""),
             "date": fm.get("date", ""),
             "image": image,

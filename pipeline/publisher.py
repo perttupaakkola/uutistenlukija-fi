@@ -320,6 +320,10 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image_caption = article.get("image_caption", "")
     image_credit = article.get("image_credit", "")
     image_source_url = article.get("image_source_url", "")
+    image_source = article.get("image_source", "")
+    image_source_type = article.get("image_source_type", "")
+    image_decision_reason = article.get("image_decision_reason", "")
+    image_category_fallback = article.get("image_category_fallback")
     image_thumb = article.get("image_thumb", "")
     image_placeholder = article.get("image_placeholder", "")
     trending = article.get("trending", False)
@@ -362,6 +366,14 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image_caption_line = f'\nimage_caption: "{_esc(image_caption)}"' if image_caption else ""
     image_credit_line = f'\nimage_credit: "{_esc(image_credit)}"' if image_credit else ""
     image_source_url_line = f'\nimage_source_url: "{image_source_url}"' if image_source_url else ""
+    image_source_line = f'\nimage_source: "{_esc(str(image_source))}"' if image_source else ""
+    image_source_type_line = f'\nimage_source_type: "{_esc(str(image_source_type))}"' if image_source_type else ""
+    image_decision_reason_line = f'\nimage_decision_reason: "{_esc(str(image_decision_reason))}"' if image_decision_reason else ""
+    image_category_fallback_line = (
+        f"\nimage_category_fallback: {'true' if bool(image_category_fallback) else 'false'}"
+        if image_category_fallback is not None
+        else ""
+    )
     image_thumb_line = f'\nimage_thumb: "{image_thumb}"' if image_thumb else ""
     # base64 placeholder — use literal block scalar to avoid YAML line-length issues
     image_placeholder_line = f'\nimage_placeholder: "{image_placeholder}"' if image_placeholder else ""
@@ -427,7 +439,7 @@ author: "{writer['name']}"
 author_id: "{writer['id']}"
 author_title: "{writer['title']}"
 author_bio: "{writer['bio']}"
-author_image: "{writer['image']}"{description_line}{summary_line}{summary_bullets_yaml}{key_points_yaml}{journalist_note_line}{content_type_line}{type_line}{editorial_reviewed_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{trending_line}{reading_time_line}{tags_yaml}{keywords_yaml}{source_name_line}{source_url_line}{source_domain_line}
+author_image: "{writer['image']}"{description_line}{summary_line}{summary_bullets_yaml}{key_points_yaml}{journalist_note_line}{content_type_line}{type_line}{editorial_reviewed_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{image_source_line}{image_source_type_line}{image_decision_reason_line}{image_category_fallback_line}{trending_line}{reading_time_line}{tags_yaml}{keywords_yaml}{source_name_line}{source_url_line}{source_domain_line}
 draft: false
 ---
 

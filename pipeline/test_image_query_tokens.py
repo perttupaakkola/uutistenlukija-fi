@@ -2,17 +2,21 @@
 from __future__ import annotations
 
 import unittest
+import tempfile
+from pathlib import Path
 from unittest.mock import patch
 
 try:
     from . import pexels, unsplash
     from . import image_query
     from . import image_candidate_guard
+    from . import audit_image_flow
 except ImportError:  # pragma: no cover
     import pexels
     import unsplash
     import image_query
     import image_candidate_guard
+    import audit_image_flow
 
 
 DEGREE_ROI_FIXTURE = {
@@ -62,13 +66,13 @@ class ImageQueryTokenTests(unittest.TestCase):
     def test_entertainment_fetch_does_not_search_broad_category_fallback(self) -> None:
         title = "Atomfall-pelistä tehdään televisiosarja"
 
-        with patch.object(image_query, "generate_image_query", return_value="Atomfall television series"), \
+        with patch("image_query.generate_image_query", return_value="Atomfall television series"), \
              patch.object(pexels, "_search_pexels", return_value=[]) as pexels_search, \
              patch.object(pexels, "time") as pexels_time:
             self.assertIsNone(pexels.fetch_image_for_article(title, "Kulttuuri", inter_request_delay=0))
             pexels_time.sleep.assert_not_called()
 
-        with patch.object(image_query, "generate_image_query", return_value="Atomfall television series"), \
+        with patch("image_query.generate_image_query", return_value="Atomfall television series"), \
              patch.object(unsplash, "_search", return_value=[]) as unsplash_search, \
              patch.object(unsplash, "time") as unsplash_time:
             self.assertIsNone(unsplash.fetch_image_for_article(title, "Kulttuuri", inter_request_delay=0))
@@ -90,11 +94,11 @@ class ImageQueryTokenTests(unittest.TestCase):
         title = "Kysely: Orpon hallitus saa kansalaisilta hallituskautensa heikoimman arvion"
         body = "Yli puolet vastaajista arvioi Petteri Orpon hallituksen onnistuneen huonosti."
 
-        with patch.object(image_query, "generate_image_query", return_value="Petteri Orpo politician portrait"), \
+        with patch("image_query.generate_image_query", return_value="Petteri Orpo politician portrait"), \
              patch.object(pexels, "_search_pexels", return_value=[]) as pexels_search:
             self.assertIsNone(pexels.fetch_image_for_article(title, "Kotimaa", content=body, inter_request_delay=0))
 
-        with patch.object(image_query, "generate_image_query", return_value="Petteri Orpo politician portrait"), \
+        with patch("image_query.generate_image_query", return_value="Petteri Orpo politician portrait"), \
              patch.object(unsplash, "_search", return_value=[]) as unsplash_search:
             self.assertIsNone(unsplash.fetch_image_for_article(title, "Kotimaa", content=body, inter_request_delay=0))
 
@@ -153,6 +157,53 @@ class ImageQueryTokenTests(unittest.TestCase):
         self.assertFalse(accepted)
         self.assertIn("lookalike", reason)
 
+    def test_akseli_boat_repair_rejects_unsplash_skyscraper_candidate(self) -> None:
+        title = "16-vuotiaan Akseli Hinkkalan veneenkorjaus lähti kesätyön puutteesta"
+        summary = "16-vuotias kunnostaa romukuntoisia veneitä ja perusti 4H-yrityksen."
+        content = "Hän korjaa soutuveneitä ja moottoriveneitä vanhempiensa kotipihalla."
+        candidate = {
+            "id": "photo-1776333089082-e6d06c8b6910",
+            "alt": "modern glass skyscrapers against a clear sky",
+            "url": "https://images.unsplash.com/photo-1776333089082-e6d06c8b6910",
+            "photo_page": "https://unsplash.com/photos/modern-glass-skyscrapers-against-a-clear-sky",
+        }
+
+        accepted, reason = image_candidate_guard.vet_image_candidate(
+            candidate,
+            query="business entrepreneur",
+            title=title,
+            summary=summary,
+            content=content,
+        )
+
+        self.assertFalse(accepted)
+        self.assertIn("boat-repair", reason)
+
+    def test_audit_flags_boat_repair_article_with_skyscraper_stock_image(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            post_dir = Path(tmp)
+            post = post_dir / "2026-07-02-akseli.md"
+            post.write_text(
+                "---\n"
+                'title: "16-vuotiaan Akseli Hinkkalan veneenkorjaus lähti kesätyön puutteesta"\n'
+                "date: 2026-07-02T09:38:06+00:00\n"
+                "categories:\n"
+                "  - Talous\n"
+                'description: "16-vuotias kunnostaa romukuntoisia veneitä ja perusti 4H-yrityksen."\n'
+                'image: "https://images.unsplash.com/photo-1776333089082-e6d06c8b6910"\n'
+                'image_source_url: "https://unsplash.com/photos/modern-glass-skyscrapers-against-a-clear-sky"\n'
+                'image_source: "unsplash"\n'
+                'image_query: "business entrepreneur"\n'
+                "---\n\n"
+                "Hän korjaa soutuveneitä ja moottoriveneitä vanhempiensa kotipihalla.\n",
+                encoding="utf-8",
+            )
+            with patch.object(audit_image_flow, "POSTS_DIR", post_dir):
+                rows = audit_image_flow.audit_recent(1)
+
+        self.assertEqual(rows[0]["status"], "flag")
+        self.assertIn("boat-repair", rows[0]["reason"])
+
     def test_unsplash_fetch_skips_snowy_candidate_and_uses_allowed_result(self) -> None:
         title = "Loppuviikon sää viilenee, mutta aurinkoa riittää monin paikoin"
         snowy = {
@@ -180,7 +231,7 @@ class ImageQueryTokenTests(unittest.TestCase):
             "alt": "sunny blue sky over green trees",
         }
 
-        with patch.object(image_query, "generate_image_query", return_value="sunny weather Finland"), \
+        with patch("image_query.generate_image_query", return_value="sunny weather Finland"), \
              patch.object(unsplash, "_search", return_value=[snowy, sunny]), \
              patch.object(unsplash, "_trigger_download") as trigger_download, \
              patch("image_state.is_image_used", return_value=False), \
@@ -218,7 +269,7 @@ class ImageQueryTokenTests(unittest.TestCase):
             "pexels_url": "https://www.pexels.com/photo/sunny-blue-sky-over-green-trees-2/",
         }
 
-        with patch.object(image_query, "generate_image_query", return_value="sunny weather Finland"), \
+        with patch("image_query.generate_image_query", return_value="sunny weather Finland"), \
              patch.object(pexels, "_search_pexels", return_value=[snowy, sunny]), \
              patch("image_state.is_image_used", return_value=False), \
              patch("image_state.mark_image_used"):

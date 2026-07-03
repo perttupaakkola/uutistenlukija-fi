@@ -10,8 +10,12 @@ from unittest.mock import patch
 
 try:
     from . import staged_publish
+    from . import publisher
+    from .image_candidate_guard import category_fallback_fields, stock_decision_fields
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
     import staged_publish
+    import publisher
+    from image_candidate_guard import category_fallback_fields, stock_decision_fields
 
 
 def _record(title: str, source_words: int, blocks: int = 1) -> dict:
@@ -435,6 +439,8 @@ class StagedPublishMetricsTests(unittest.TestCase):
             batch[0]["image"] = "/images/articles/generated.jpg"
             batch[0]["image_thumb"] = "/images/articles/generated.jpg"
             batch[0]["image_source"] = "generated"
+            batch[0]["image_source_type"] = "generated_editorial"
+            batch[0]["image_decision_reason"] = "stock candidates unavailable or rejected"
             batch[0]["image_category_fallback"] = False
             batch[0]["image_decision"] = {"source": "generated", "accepted": True}
             return batch
@@ -450,6 +456,8 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(summary["category_fallback"], 0)
         self.assertEqual(articles[0]["image"], "/images/articles/generated.jpg")
         self.assertEqual(articles[0]["image_source"], "generated")
+        self.assertEqual(articles[0]["image_source_type"], "generated_editorial")
+        self.assertIn("stock candidates", articles[0]["image_decision_reason"])
 
     def test_enrich_images_uses_neutral_fallback_when_generation_unavailable(self) -> None:
         articles = [{"title": "Sääartikkeli", "category": "Kotimaa", "content": "aurinkoinen sää"}]
@@ -470,6 +478,30 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(summary["category_fallback"], 1)
         self.assertTrue(articles[0]["image_category_fallback"])
         self.assertEqual(articles[0]["image_source"], "category_fallback")
+        self.assertEqual(articles[0]["image_source_type"], "category_fallback")
+        self.assertEqual(articles[0]["image_decision_reason"], "generated fallback unavailable, unsafe, or failed after stock rejection")
+
+    def test_stock_decision_fields_emit_policy_metadata(self) -> None:
+        fields = stock_decision_fields("unsplash", {
+            "decision": {
+                "score": 80,
+                "candidate_id": "boat-1",
+                "source_url": "https://unsplash.com/photos/boat-1",
+                "reasons": ["metadata matches boat", "accepted"],
+            },
+            "intent": {"subject": "boat repair"},
+        }, "boat repair")
+
+        self.assertEqual(fields["image_source"], "unsplash")
+        self.assertEqual(fields["image_source_type"], "stock")
+        self.assertEqual(fields["image_decision_reason"], "metadata matches boat; accepted")
+
+    def test_category_fallback_fields_emit_policy_metadata(self) -> None:
+        fields = category_fallback_fields("Talous", reason="stock rejected")
+
+        self.assertEqual(fields["image_source"], "category_fallback")
+        self.assertEqual(fields["image_source_type"], "category_fallback")
+        self.assertEqual(fields["image_decision_reason"], "stock rejected")
 
     def test_enrich_images_loads_project_env_for_staged_publish(self) -> None:
         project_env = staged_publish.PROJECT_DIR / ".env"
@@ -507,7 +539,17 @@ class StagedPublishMetricsTests(unittest.TestCase):
                 staged_publish.os.environ.pop("UNSPLASH_ACCESS_KEY", None)
 
     def test_publish_persists_enriched_image_metadata_to_published_queue(self) -> None:
-        article = {"title": "Kuvallinen julkaisu", "content": "sana " * 260, "category": "Kotimaa", "image": "/images/articles/pub.jpg", "image_category_fallback": False, "monica_packet_id": "pkt-image"}
+        article = {
+            "title": "Kuvallinen julkaisu",
+            "content": "sana " * 260,
+            "category": "Kotimaa",
+            "image": "/images/articles/pub.jpg",
+            "image_category_fallback": False,
+            "image_source": "pexels",
+            "image_source_type": "stock",
+            "image_decision_reason": "metadata matches article",
+            "monica_packet_id": "pkt-image",
+        }
         data = {"article": article, "packet": {"packet_id": "pkt-image"}}
         path = self._write("outbox", "pkt-image", data, age_hours=1)
 
@@ -526,6 +568,26 @@ class StagedPublishMetricsTests(unittest.TestCase):
         published = json.loads((self.root / "published" / "pkt-image.json").read_text(encoding="utf-8"))
         self.assertEqual(published["article"]["image"], "/images/articles/pub.jpg")
         self.assertEqual(published["image_enrichment"]["image"], "/images/articles/pub.jpg")
+        self.assertEqual(published["image_enrichment"]["image_source"], "pexels")
+        self.assertEqual(published["image_enrichment"]["image_source_type"], "stock")
+        self.assertEqual(published["image_enrichment"]["image_decision_reason"], "metadata matches article")
+
+    def test_publisher_frontmatter_preserves_image_policy_metadata(self) -> None:
+        markdown = publisher._article_to_markdown({
+            "title": "Kuvallinen julkaisu",
+            "content": "sana " * 260,
+            "category": "Kotimaa",
+            "image": "/images/articles/pub.jpg",
+            "image_source": "pexels",
+            "image_source_type": "stock",
+            "image_decision_reason": "metadata matches article",
+            "image_category_fallback": False,
+        }, "2026-07-03T08:00:00+00:00")
+
+        self.assertIn('image_source: "pexels"', markdown)
+        self.assertIn('image_source_type: "stock"', markdown)
+        self.assertIn('image_decision_reason: "metadata matches article"', markdown)
+        self.assertIn("image_category_fallback: false", markdown)
 
     def test_git_deploy_includes_generated_article_images(self) -> None:
         commands: list[list[str]] = []

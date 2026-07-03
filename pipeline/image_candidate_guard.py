@@ -67,6 +67,29 @@ CATEGORY_SETTINGS = {
     "Tiede": "research, laboratory, nature, space, or scientific instruments",
 }
 
+BOAT_REPAIR_TERMS = {
+    "vene", "veneet", "veneen", "veneiden", "veneenkorjaus", "veneenkorjaustaidot",
+    "soutuvene", "soutuveneen", "moottorivene", "moottoriveneen", "pulpettivene",
+    "hyttivene", "taifunx", "boat", "boats", "rowboat", "motorboat", "boat repair",
+}
+
+REPAIR_WORK_TERMS = {
+    "korjaus", "korjaa", "korjattavaksi", "korjattavia", "korjattujen", "korjaamaansa",
+    "kunnostaa", "kunnostamisesta", "kunnostettu", "kunnostettuja", "romukuntoisia",
+    "repair", "repairs", "repairing", "restoration", "restoring",
+}
+
+YOUTH_ENTREPRENEUR_TERMS = {
+    "4h-yrittäjyys", "4h", "kesätyö", "kesätöitä", "nuoret", "nuorukainen",
+    "16-vuotias", "yrittäjä", "yrittäjyys", "youth", "teen", "entrepreneur",
+}
+
+URBAN_BUSINESS_IMAGE_TERMS = {
+    "skyscraper", "skyscrapers", "high-rise", "highrise", "city", "cityscape",
+    "skyline", "downtown", "office", "offices", "business district", "building",
+    "buildings", "architecture", "urban", "corporate", "tower", "towers",
+}
+
 
 @dataclass(frozen=True)
 class ImageIntent:
@@ -100,7 +123,12 @@ class CandidateDecision:
 def _tokens(*parts: str) -> set[str]:
     text = " ".join(part or "" for part in parts).lower()
     words = set(re.findall(r"[\wäöå+-]+", text, flags=re.IGNORECASE))
-    phrases = {phrase for phrase in ("clear sky",) if phrase in text}
+    words |= set(re.findall(r"[\wäöå+]+", text.replace("-", " "), flags=re.IGNORECASE))
+    phrases = {
+        phrase
+        for phrase in ("clear sky", "boat repair", "business district")
+        if phrase in text
+    }
     return words | phrases
 
 
@@ -146,6 +174,9 @@ def build_image_intent(
 
     if article_tokens & WEATHER_TERMS:
         must_have.append("weather")
+    if article_tokens & BOAT_REPAIR_TERMS and article_tokens & (REPAIR_WORK_TERMS | YOUTH_ENTREPRENEUR_TERMS):
+        must_have.append("boat repair or small craft restoration")
+        must_not.extend(["skyscraper", "office tower", "generic business district"])
     if article_tokens & SUN_TERMS:
         must_have.append("sunny or bright outdoor weather")
         must_not.extend(["snow", "winter", "rainstorm"])
@@ -253,6 +284,15 @@ def score_image_candidate(
         hard_rejects.append("winter metadata contradicts rain-only weather story")
     if intent.safety_mode == "illustration_only" and candidate_tokens & PERSON_IMAGE_TERMS:
         hard_rejects.append("generic person/lookalike metadata is unsafe for named-person or sensitive story")
+    concrete_boat_repair_story = bool(
+        article_tokens & BOAT_REPAIR_TERMS
+        and article_tokens & (REPAIR_WORK_TERMS | YOUTH_ENTREPRENEUR_TERMS)
+    )
+    if concrete_boat_repair_story and not candidate_tokens & BOAT_REPAIR_TERMS:
+        if candidate_tokens & URBAN_BUSINESS_IMAGE_TERMS:
+            hard_rejects.append("urban business/skyscraper metadata contradicts concrete boat-repair story")
+        elif query_tokens & URBAN_BUSINESS_IMAGE_TERMS:
+            hard_rejects.append("broad business query lacks required boat-repair subject")
 
     if hard_rejects:
         return CandidateDecision(provider, candidate_id, source_url, MISMATCH_SCORE, False, hard_rejects)
@@ -354,6 +394,8 @@ def category_fallback_fields(category: str, *, reason: str) -> dict[str, Any]:
         "image_hotlink": False,
         "image_category_fallback": True,
         "image_source": "category_fallback",
+        "image_source_type": "category_fallback",
+        "image_decision_reason": reason,
         "image_decision": {
             "source": "category_fallback",
             "accepted": True,
@@ -366,8 +408,11 @@ def stock_decision_fields(provider: str, result: dict[str, Any], query: str) -> 
     """Frontmatter-safe stock decision evidence."""
     decision = result.get("decision") or result.get("_image_decision") or {}
     intent = result.get("intent") or result.get("_image_visual_intent") or {}
+    reasons = [str(reason) for reason in decision.get("reasons", []) if str(reason).strip()]
     return {
         "image_source": provider,
+        "image_source_type": "stock",
+        "image_decision_reason": "; ".join(reasons) or f"{provider} accepted",
         "image_visual_intent": intent,
         "image_decision": {
             "source": provider,
@@ -376,7 +421,7 @@ def stock_decision_fields(provider: str, result: dict[str, Any], query: str) -> 
             "score": decision.get("score"),
             "candidate_id": decision.get("candidate_id"),
             "source_url": decision.get("source_url"),
-            "reasons": decision.get("reasons", []),
+            "reasons": reasons,
         },
         "image_quality_score": decision.get("score"),
         "image_category_fallback": False,
