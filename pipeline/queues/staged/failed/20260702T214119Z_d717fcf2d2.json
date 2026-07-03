@@ -1,0 +1,247 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-02T21:41:19.937551+00:00",
+  "digest": "d717fcf2d2",
+  "packet": {
+    "packet_id": "20260702T214119Z_d717fcf2d2",
+    "created_at": "2026-07-02T21:41:19Z",
+    "headline_seed": "Newly discovered PamStealer isn't your typical macOS malware",
+    "description_seed": "Researchers have found a never-before-seen piece of macOS malware that combines a series of clever tradecraft to infect Macs with stealthy, custom-developed credential-stealing code. The malware is delivered in two stages. The first is distributed in a disk image that masquerades as Maccy , a clipboard manager for Macs. It’s compiled as AppleScript that is notable for the way it delivers the second stage. The malware is named PamStealer because the Rust-written infostealer uses the Pluggable Authentication Modules interface built into macOS to validate the target’s login password before sending it to an attacker-controlled server. A quieter execution chain The use of both disk image and AppleScript is common in malware for Macs. More unusual is the way PamStealer combines them to gain stealth. When the AppleScript is double-clicked, it’s opened in the macOS Script Editor, where the malicious functionality is buried deep within the file. Read full article Comments",
+    "link": "https://arstechnica.com/security/2026/07/new-pamstealer-macos-malware-uses-clever-tradecraft-to-remain-stealthy/",
+    "source": "Ars Technica",
+    "source_names": [
+      "Ars Technica",
+      "Ars Technica",
+      "Ars Technica",
+      "AppleInsider"
+    ],
+    "source_urls": [
+      "https://arstechnica.com/security/2026/07/new-pamstealer-macos-malware-uses-clever-tradecraft-to-remain-stealthy/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Newly discovered PamStealer isn't your typical macOS malware"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Ars Technica",
+        "source_type": "description",
+        "text": "Researchers have found a never-before-seen piece of macOS malware that combines a series of clever tradecraft to infect Macs with stealthy, custom-developed credential-stealing code. The malware is delivered in two stages. The first is distributed in a disk image that masquerades as Maccy , a clipboard manager for Macs. It’s compiled as AppleScript that is notable for the way it delivers the second stage. The malware is named PamStealer because the Rust-written infostealer uses the Pluggable Authentication Modules interface built into macOS to validate the target’s login password before sending it to an attacker-controlled server. A quieter execution chain The use of both disk image and AppleScript is common in malware for Macs. More unusual is the way PamStealer combines them to gain stealth. When the AppleScript is double-clicked, it’s opened in the macOS Script Editor, where the malicious functionality is buried deep within the file. Read full article Comments",
+        "word_count": 150,
+        "keyword_overlap": 81,
+        "strong_overlap": 52
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "Researchers have found a never-before-seen piece of macOS malware that combines a series of clever tradecraft to infect Macs with stealthy, custom-developed credential-stealing code. The malware is delivered in two stages. The first is distributed in a disk image that masquerades as Maccy, a clipboard manager for Macs. It’s compiled as AppleScript that is notable for the way it delivers the second stage. The malware is named PamStealer because the Rust-written infostealer uses the Pluggable Authentication Modules interface built into macOS to validate the target’s login password before sending it to an attacker-controlled server.",
+        "word_count": 94,
+        "keyword_overlap": 55,
+        "strong_overlap": 37
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "The use of both disk image and AppleScript is common in malware for Macs. More unusual is the way PamStealer combines them to gain stealth. When the AppleScript is double-clicked, it’s opened in the macOS Script Editor, where the malicious functionality is buried deep within the file. “Rather than relying on shell commands such as curl or zsh, the AppleScript executes a self-contained JavaScript for Automation (JXA) downloader that retrieves and stages the payload using native Objective-C APIs,” researchers from Jamf, a security firm for macOS users, wrote. “Combined with a Rust-based second stage and a password capture workflow that validates credentials locally through PAM, the result is a quieter execution chain than we typically observe in commodity macOS stealers.”",
+        "word_count": 120,
+        "keyword_overlap": 37,
+        "strong_overlap": 21
+      },
+      {
+        "source": "AppleInsider",
+        "source_type": "research",
+        "text": "Researchers at Jamf Threat Labs have documented a new macOS malware campaign built around an infostealer called PamStealer. PamStealer disguises itself as the Maccy clipboard manager and uses AppleScript alongside a Rust payload to infect Macs. Jamf found that PamStealer verifies login passwords through Apple's Pluggable Authentication Modules before stealing additional data. Password verification sets PamStealer apart from most macOS infostealers, which typically capture whatever password a victim enters without confirming that it's valid. The campaign begins with a fake website that closely imitates the legitimate Maccy clipboard manager. Next, the fake website delivers a malicious AppleScript application disguised as Maccy. Once a victim opens the download, the malicious application checks the system and retrieves a second-stage Rust payload. PamStealer then establishes persistence before collecting data. Jamf also found that PamStealer checks system characteristics, keyboard la...",
+        "word_count": 136,
+        "keyword_overlap": 25,
+        "strong_overlap": 15
+      }
+    ],
+    "source_text": "Researchers have found a never-before-seen piece of macOS malware that combines a series of clever tradecraft to infect Macs with stealthy, custom-developed credential-stealing code. The malware is delivered in two stages. The first is distributed in a disk image that masquerades as Maccy , a clipboard manager for Macs. It’s compiled as AppleScript that is notable for the way it delivers the second stage. The malware is named PamStealer because the Rust-written infostealer uses the Pluggable Authentication Modules interface built into macOS to validate the target’s login password before sending it to an attacker-controlled server. A quieter execution chain The use of both disk image and AppleScript is common in malware for Macs. More unusual is the way PamStealer combines them to gain stealth. When the AppleScript is double-clicked, it’s opened in the macOS Script Editor, where the malicious functionality is buried deep within the file. Read full article Comments\n\nResearchers have found a never-before-seen piece of macOS malware that combines a series of clever tradecraft to infect Macs with stealthy, custom-developed credential-stealing code. The malware is delivered in two stages. The first is distributed in a disk image that masquerades as Maccy, a clipboard manager for Macs. It’s compiled as AppleScript that is notable for the way it delivers the second stage. The malware is named PamStealer because the Rust-written infostealer uses the Pluggable Authentication Modules interface built into macOS to validate the target’s login password before sending it to an attacker-controlled server.\n\nThe use of both disk image and AppleScript is common in malware for Macs. More unusual is the way PamStealer combines them to gain stealth. When the AppleScript is double-clicked, it’s opened in the macOS Script Editor, where the malicious functionality is buried deep within the file. “Rather than relying on shell commands such as curl or zsh, the AppleScript executes a self-contained JavaScript for Automation (JXA) downloader that retrieves and stages the payload using native Objective-C APIs,” researchers from Jamf, a security firm for macOS users, wrote. “Combined with a Rust-based second stage and a password capture workflow that validates credentials locally through PAM, the result is a quieter execution chain than we typically observe in commodity macOS stealers.”\n\nResearchers at Jamf Threat Labs have documented a new macOS malware campaign built around an infostealer called PamStealer. PamStealer disguises itself as the Maccy clipboard manager and uses AppleScript alongside a Rust payload to infect Macs. Jamf found that PamStealer verifies login passwords through Apple's Pluggable Authentication Modules before stealing additional data. Password verification sets PamStealer apart from most macOS infostealers, which typically capture whatever password a victim enters without confirming that it's valid. The campaign begins with a fake website that closely imitates the legitimate Maccy clipboard manager. Next, the fake website delivers a malicious AppleScript application disguised as Maccy. Once a victim opens the download, the malicious application checks the system and retrieves a second-stage Rust payload. PamStealer then establishes persistence before collecting data. Jamf also found that PamStealer checks system characteristics, keyboard la...",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 1016,
+      "selected_blocks": 4,
+      "selected_source_words": 500,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "iDrop News",
+        "iDrop News",
+        "iDrop News",
+        "AppleInsider",
+        "Ars Technica"
+      ],
+      "selected_sources": [
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "AppleInsider"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Newly discovered PamStealer isn't your typical macOS malware",
+      "description": "Researchers have found a never-before-seen piece of macOS malware that combines a series of clever tradecraft to infect Macs with stealthy, custom-developed credential-stealing code. The malware is delivered in two stages. The first is distributed in a disk image that masquerades as Maccy , a clipboard manager for Macs. It’s compiled as AppleScript that is notable for the way it delivers the second stage. The malware is named PamStealer because the Rust-written infostealer uses the Pluggable Authentication Modules interface built into macOS to validate the target’s login password before sending it to an attacker-controlled server. A quieter execution chain The use of both disk image and AppleScript is common in malware for Macs. More unusual is the way PamStealer combines them to gain stealth. When the AppleScript is double-clicked, it’s opened in the macOS Script Editor, where the malicious functionality is buried deep within the file. Read full article Comments",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Newly discovered PamStealer isn't your typical macOS malware",
+    "description": "Researchers have found a never-before-seen piece of macOS malware that combines a series of clever tradecraft to infect Macs with stealthy, custom-developed credential-stealing code. The malware is delivered in two stages. The first is distributed in a disk image that masquerades as Maccy , a clipboard manager for Macs. It’s compiled as AppleScript that is notable for the way it delivers the second stage. The malware is named PamStealer because the Rust-written infostealer uses the Pluggable Authentication Modules interface built into macOS to validate the target’s login password before sending it to an attacker-controlled server. A quieter execution chain The use of both disk image and AppleScript is common in malware for Macs. More unusual is the way PamStealer combines them to gain stealth. When the AppleScript is double-clicked, it’s opened in the macOS Script Editor, where the malicious functionality is buried deep within the file. Read full article Comments",
+    "link": "https://arstechnica.com/security/2026/07/new-pamstealer-macos-malware-uses-clever-tradecraft-to-remain-stealthy/",
+    "published": "2026-07-02T19:38:57+00:00",
+    "source": "Ars Technica",
+    "source_domain": "arstechnica.com",
+    "language": "en",
+    "fingerprint": "e9403a96bc12ca2a2152fcfee32d6aa9",
+    "_url_hash": "82e354df433ec96ed003294fdfd43fa0983b13172e6223ffb0fe37826fad0c80",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Ars Technica]\nResearchers have found a never-before-seen piece of macOS malware that combines a series of clever tradecraft to infect Macs with stealthy, custom-developed credential-stealing code.\n\nThe malware is delivered in two stages. The first is distributed in a disk image that masquerades as Maccy, a clipboard manager for Macs. It’s compiled as AppleScript that is notable for the way it delivers the second stage. The malware is named PamStealer because the Rust-written infostealer uses the Pluggable Authentication Modules interface built into macOS to validate the target’s login password before sending it to an attacker-controlled server.\n\nThe use of both disk image and AppleScript is common in malware for Macs. More unusual is the way PamStealer combines them to gain stealth. When the AppleScript is double-clicked, it’s opened in the macOS Script Editor, where the malicious functionality is buried deep within the file.\n\n“Rather than relying on shell commands such as curl or zsh, the AppleScript executes a self-contained JavaScript for Automation (JXA) downloader that retrieves and stages the payload using native Objective-C APIs,” researchers from Jamf, a security firm for macOS users, wrote. “Combined with a Rust-based second stage and a password capture workflow that validates credentials locally through PAM, the result is a quieter execution chain than we typically observe in commodity macOS stealers.”\n\nWhen a user, expecting to install a trustworthy clipboard manager, encounters the disk image, they’re prompted to press Command-R immediately after double-clicking it. This command executes malicious code inside the AppleScript directly. It also allows the execution to bypass com.apple.quarantine, a macOS attribute that provides warnings and restrictions when executable files have been downloaded from the Internet.\n\nPamStealer combines a recently emerging delivery surface with a less familiar payload. While the clickable .scpt and Script Editor lure build on tradecraft that is already gaining adoption across the macOS threat landscape, the malware distinguishes itself through a self-contained JXA dropper, a Rust-based second stage, and a password capture workflow that validates credentials locally through PAM before harvesting them. That second stage puts considerable effort into staying hidden, masquerading as Finder, encrypting its command-and-control traffic, and holding back prompts like the Full Disk Access request for as long as forty minutes so its activ\n\n---\n\n[Lähde: iDrop News]\nResearchers says a new macOS malware campaign has been built around an infostealer called PamStealer, which disguises itself as the legitimate Maccy clipboard manager, using AppleScript with a Rust payload to infect Macs.\n\nSick and tired of subscriptions? Get a lifetime license for Microsoft Office Home and Business 2021 at a great price!\n\nOnce login credentials are compromised, PamStealer then verifies login passwords through Apple’s Pluggable Authentication Modules before continuing to steal your data. The password verification feature is a bit unusual among other macOS infostealers, which traditionally just capture any password a target enters without the confirmation step.\n\nBad actors will set up a fake website that closely resembles the legitimate Maccy clipboard manager site. The fake website is designed to deliver a malicious AppleScript app disguised as Maccy. The malicious doppelganger site is hosted on the fake domain maccyapp[.]com.\n\nOnce the malicious download has been opened, it first checks the system characteristics, keyboard layout and regional settings to confirm that the machine is an intended target before running.\n\nIt then downloads a second Rust payload, the “Mach-O” infostealer, which is designed to handle the theft of credentials and browser data, establishing persistence and exfiltration.\n\nPamStealer captures login credentials by displaying what appears to be a legitimate macOS authorization prompt asking the user to enter a password so Maccy can make changes.\n\nWhile most malware then simply records and saves whatever the victim enters, PamStealer goes the extra mile, validating the password through Apple’s Pluggable Authentication Modules before continuing. This technique uses a legitimate macOS framework to validate the credentials, confirming it’s collected legitimate login information.\n\nOnce the password is validated, the second-stage Rust payload begins its dirty work, collecting a wide range of data from the infected system, including saved credentials, SQLite databases, browser cookies, browsing history, clipboard contents, and even cryptocurrency wallet data.\n\nThe stolen information is then encrypted before being sent back to the bad guys, making the illicit network traffic more difficult to inspect.\n\nPamStealer relaunches automatically after a user signs in, even impersonating Finder in an attempt to gain Full Disk Access, which greatly expands the amount of information that can be collected without additional authorization\n\n---\n\n[Lähde: AppleInsider]\nResearchers at Jamf Threat Labs have documented a new macOS malware campaign built around an infostealer called PamStealer. PamStealer disguises itself as the Maccy clipboard manager and uses AppleScript alongside a Rust payload to infect Macs.\n\nJamf found that PamStealer verifies login passwords through Apple's Pluggable Authentication Modules before stealing additional data. Password verification sets PamStealer apart from most macOS infostealers, which typically capture whatever password a victim enters without confirming that it's valid.\n\nThe campaign begins with a fake website that closely imitates the legitimate Maccy clipboard manager. Next, the fake website delivers a malicious AppleScript application disguised as Maccy.\n\nOnce a victim opens the download, the malicious application checks the system and retrieves a second-stage Rust payload. PamStealer then establishes persistence before collecting data.\n\nJamf also found that PamStealer checks system characteristics, keyboard la...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-02T21:45:00.716596+00:00",
+  "payload": {
+    "packet_id": "20260702T214119Z_d717fcf2d2",
+    "title": "Uusi PamStealer-haittaohjelma naamioituu Macin leikepöytäsovellukseksi",
+    "summary": "Tietoturvatutkijat ovat kuvanneet uuden macOS-haittaohjelman, joka varastaa tunnistetietoja poikkeuksellisen hiljaisella toteutustavalla.",
+    "content": "Tietoturvatutkijat ovat havainneet uuden macOS-haittaohjelmakampanjan, jossa PamStealer-niminen tietoja varastava ohjelma naamioituu Maccy-leikepöytäsovellukseksi. Haittaohjelma käyttää AppleScriptiä ja Rustilla toteutettua toista vaihetta. Sen erikoispiirre on kirjautumissalasanan paikallinen tarkistaminen macOS:n Pluggable Authentication Modules -rajapinnan kautta ennen tietojen lähettämistä hyökkääjän hallitsemalle palvelimelle.\n\n## Naamioitu lataus käynnistää kaksivaiheisen ketjun\n\nKampanja alkaa tutkijoiden mukaan väärennetyltä verkkosivustolta, joka jäljittelee Maccy-leikepöytäsovelluksen aitoa sivustoa. Sivusto jakaa haitallista AppleScript-sovellusta, joka esiintyy Maccyna. Ensimmäinen vaihe toimitetaan levykuvana, ja kun uhri avaa latauksen, sovellus tarkistaa järjestelmää ja hakee Rustilla kirjoitetun toisen vaiheen hyötykuorman.\n\nLevykuvan ja AppleScriptin käyttö ei sinänsä ole macOS-haittaohjelmissa poikkeuksellista. PamStealerin tapauksessa huomio kiinnittyy siihen, miten nämä osat on yhdistetty hiljaisemmaksi suoritusketjuksi. Kun AppleScript avataan, se näkyy macOS:n Script Editorissa, mutta haitallinen toiminta on lähdeaineiston mukaan piilotettu syvälle tiedostoon.\n\n## JXA-lataaja vähentää näkyviä komentorivijälkiä\n\nJamf Threat Labsin tutkijoiden mukaan AppleScript ei nojaa tavallisiin komentorivityökaluihin, kuten curliin tai zsh:hon. Sen sijaan se käyttää JavaScript for Automation -lataajaa, joka hakee ja valmistelee hyötykuorman macOS:n natiivien Objective-C-rajapintojen avulla. Tutkijat kuvaavat kokonaisuutta hiljaisemmaksi suoritusketjuksi kuin sellaisissa macOS-tietovarastajissa, joita he tavallisesti näkevät.\n\n## Salasanan tarkistus erottaa PamStealerin monista varastajista\n\nPamStealerin nimi viittaa macOS:n PAM-rajapintaan. Haittaohjelma tarkistaa syötetyn kirjautumissalasanan paikallisesti ennen kuin se lähettää sen hyökkääjän palvelimelle. Tämä erottaa sen monista macOS-tietovarastajista, jotka keräävät uhrin syöttämän salasanan riippumatta siitä, onko se oikea.\n\nKun toinen vaihe on haettu, PamStealer pyrkii säilymään järjestelmässä ja alkaa kerätä tietoja. Tutkijat havaitsivat myös järjestelmän ominaisuuksiin ja näppäimistöön liittyviä tarkistuksia, mutta käytettävissä oleva lähdeaineisto ei anna koko teknistä kuvaa näistä tarkistuksista. Tapaus osoittaa, että tuttua Mac-sovellusta jäljittelevä lataussivu voi olla osa monivaiheista haittaohjelmaketjua.",
+    "category": "Teknologia",
+    "tags": [
+      "macOS",
+      "haittaohjelmat",
+      "tietoturva",
+      "PamStealer",
+      "Maccy"
+    ],
+    "summary_bullets": [
+      "PamStealer naamioituu Maccy-leikepöytäsovellukseksi ja leviää väärennetyn verkkosivuston kautta.",
+      "Haittaohjelma käyttää AppleScriptiä, JXA-lataajaa ja Rustilla kirjoitettua toista vaihetta.",
+      "Se tarkistaa kirjautumissalasanan macOS:n PAM-rajapinnan avulla ennen tietojen varastamista."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.92,
+    "journalist_note": "Artikkeli perustuu packetin neljään lähdeblokkiin. Mukaan otettiin vain niissä kuvattu tekninen toiminta; katkaistun AppleInsider-tekstin loppuosasta ei tehty tarkkoja väitteitä."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260702T214119Z_d717fcf2d2\",\n  \"title\": \"Uusi PamStealer-haittaohjelma naamioituu Macin leikepöytäsovellukseksi\",\n  \"summary\": \"Tietoturvatutkijat ovat kuvanneet uuden macOS-haittaohjelman, joka varastaa tunnistetietoja poikkeuksellisen hiljaisella toteutustavalla.\",\n  \"content\": \"Tietoturvatutkijat ovat havainneet uuden macOS-haittaohjelmakampanjan, jossa PamStealer-niminen tietoja varastava ohjelma naamioituu Maccy-leikepöytäsovellukseksi. Haittaohjelma käyttää AppleScriptiä ja Rustilla toteutettua toista vaihetta. Sen erikoispiirre on kirjautumissalasanan paikallinen tarkistaminen macOS:n Pluggable Authentication Modules -rajapinnan kautta ennen tietojen lähettämistä hyökkääjän hallitsemalle palvelimelle.\\n\\n## Naamioitu lataus käynnistää kaksivaiheisen ketjun\\n\\nKampanja alkaa tutkijoiden mukaan väärennetyltä verkkosivustolta, joka jäljittelee Maccy-leikepöytäsovelluksen aitoa sivustoa. Sivusto jakaa haitallista AppleScript-sovellusta, joka esiintyy Maccyna. Ensimmäinen vaihe toimitetaan levykuvana, ja kun uhri avaa latauksen, sovellus tarkistaa järjestelmää ja hakee Rustilla kirjoitetun toisen vaiheen hyötykuorman.\\n\\nLevykuvan ja AppleScriptin käyttö ei sinänsä ole macOS-haittaohjelmissa poikkeuksellista. PamStealerin tapauksessa huomio kiinnittyy siihen, miten nämä osat on yhdistetty hiljaisemmaksi suoritusketjuksi. Kun AppleScript avataan, se näkyy macOS:n Script Editorissa, mutta haitallinen toiminta on lähdeaineiston mukaan piilotettu syvälle tiedostoon.\\n\\n## JXA-lataaja vähentää näkyviä komentorivijälkiä\\n\\nJamf Threat Labsin tutkijoiden mukaan AppleScript ei nojaa tavallisiin komentorivityökaluihin, kuten curliin tai zsh:hon. Sen sijaan se käyttää JavaScript for Automation -lataajaa, joka hakee ja valmistelee hyötykuorman macOS:n natiivien Objective-C-rajapintojen avulla. Tutkijat kuvaavat kokonaisuutta hiljaisemmaksi suoritusketjuksi kuin sellaisissa macOS-tietovarastajissa, joita he tavallisesti näkevät.\\n\\n## Salasanan tarkistus erottaa PamStealerin monista varastajista\\n\\nPamStealerin nimi viittaa macOS:n PAM-rajapintaan. Haittaohjelma tarkistaa syötetyn kirjautumissalasanan paikallisesti ennen kuin se lähettää sen hyökkääjän palvelimelle. Tämä erottaa sen monista macOS-tietovarastajista, jotka keräävät uhrin syöttämän salasanan riippumatta siitä, onko se oikea.\\n\\nKun toinen vaihe on haettu, PamStealer pyrkii säilymään järjestelmässä ja alkaa kerätä tietoja. Tutkijat havaitsivat myös järjestelmän ominaisuuksiin ja näppäimistöön liittyviä tarkistuksia, mutta käytettävissä oleva lähdeaineisto ei anna koko teknistä kuvaa näistä tarkistuksista. Tapaus osoittaa, että tuttua Mac-sovellusta jäljittelevä lataussivu voi olla osa monivaiheista haittaohjelmaketjua.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"macOS\",\n    \"haittaohjelmat\",\n    \"tietoturva\",\n    \"PamStealer\",\n    \"Maccy\"\n  ],\n  \"summary_bullets\": [\n    \"PamStealer naamioituu Maccy-leikepöytäsovellukseksi ja leviää väärennetyn verkkosivuston kautta.\",\n    \"Haittaohjelma käyttää AppleScriptiä, JXA-lataajaa ja Rustilla kirjoitettua toista vaihetta.\",\n    \"Se tarkistaa kirjautumissalasanan macOS:n PAM-rajapinnan avulla ennen tietojen varastamista.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.92,\n  \"journalist_note\": \"Artikkeli perustuu packetin neljään lähdeblokkiin. Mukaan otettiin vain niissä kuvattu tekninen toiminta; katkaistun AppleInsider-tekstin loppuosasta ei tehty tarkkoja väitteitä.\"\n}",
+  "article": {
+    "title": "Uusi PamStealer-haittaohjelma naamioituu Macin leikepöytäsovellukseksi",
+    "description": "Tietoturvatutkijat ovat kuvanneet uuden macOS-haittaohjelman, joka varastaa tunnistetietoja poikkeuksellisen hiljaisella toteutustavalla.",
+    "link": "https://arstechnica.com/security/2026/07/new-pamstealer-macos-malware-uses-clever-tradecraft-to-remain-stealthy/",
+    "published": "2026-07-02T19:38:57+00:00",
+    "source": "Ars Technica",
+    "source_domain": "arstechnica.com",
+    "language": "en",
+    "fingerprint": "e9403a96bc12ca2a2152fcfee32d6aa9",
+    "_url_hash": "82e354df433ec96ed003294fdfd43fa0983b13172e6223ffb0fe37826fad0c80",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Ars Technica]\nResearchers have found a never-before-seen piece of macOS malware that combines a series of clever tradecraft to infect Macs with stealthy, custom-developed credential-stealing code.\n\nThe malware is delivered in two stages. The first is distributed in a disk image that masquerades as Maccy, a clipboard manager for Macs. It’s compiled as AppleScript that is notable for the way it delivers the second stage. The malware is named PamStealer because the Rust-written infostealer uses the Pluggable Authentication Modules interface built into macOS to validate the target’s login password before sending it to an attacker-controlled server.\n\nThe use of both disk image and AppleScript is common in malware for Macs. More unusual is the way PamStealer combines them to gain stealth. When the AppleScript is double-clicked, it’s opened in the macOS Script Editor, where the malicious functionality is buried deep within the file.\n\n“Rather than relying on shell commands such as curl or zsh, the AppleScript executes a self-contained JavaScript for Automation (JXA) downloader that retrieves and stages the payload using native Objective-C APIs,” researchers from Jamf, a security firm for macOS users, wrote. “Combined with a Rust-based second stage and a password capture workflow that validates credentials locally through PAM, the result is a quieter execution chain than we typically observe in commodity macOS stealers.”\n\nWhen a user, expecting to install a trustworthy clipboard manager, encounters the disk image, they’re prompted to press Command-R immediately after double-clicking it. This command executes malicious code inside the AppleScript directly. It also allows the execution to bypass com.apple.quarantine, a macOS attribute that provides warnings and restrictions when executable files have been downloaded from the Internet.\n\nPamStealer combines a recently emerging delivery surface with a less familiar payload. While the clickable .scpt and Script Editor lure build on tradecraft that is already gaining adoption across the macOS threat landscape, the malware distinguishes itself through a self-contained JXA dropper, a Rust-based second stage, and a password capture workflow that validates credentials locally through PAM before harvesting them. That second stage puts considerable effort into staying hidden, masquerading as Finder, encrypting its command-and-control traffic, and holding back prompts like the Full Disk Access request for as long as forty minutes so its activ\n\n---\n\n[Lähde: iDrop News]\nResearchers says a new macOS malware campaign has been built around an infostealer called PamStealer, which disguises itself as the legitimate Maccy clipboard manager, using AppleScript with a Rust payload to infect Macs.\n\nSick and tired of subscriptions? Get a lifetime license for Microsoft Office Home and Business 2021 at a great price!\n\nOnce login credentials are compromised, PamStealer then verifies login passwords through Apple’s Pluggable Authentication Modules before continuing to steal your data. The password verification feature is a bit unusual among other macOS infostealers, which traditionally just capture any password a target enters without the confirmation step.\n\nBad actors will set up a fake website that closely resembles the legitimate Maccy clipboard manager site. The fake website is designed to deliver a malicious AppleScript app disguised as Maccy. The malicious doppelganger site is hosted on the fake domain maccyapp[.]com.\n\nOnce the malicious download has been opened, it first checks the system characteristics, keyboard layout and regional settings to confirm that the machine is an intended target before running.\n\nIt then downloads a second Rust payload, the “Mach-O” infostealer, which is designed to handle the theft of credentials and browser data, establishing persistence and exfiltration.\n\nPamStealer captures login credentials by displaying what appears to be a legitimate macOS authorization prompt asking the user to enter a password so Maccy can make changes.\n\nWhile most malware then simply records and saves whatever the victim enters, PamStealer goes the extra mile, validating the password through Apple’s Pluggable Authentication Modules before continuing. This technique uses a legitimate macOS framework to validate the credentials, confirming it’s collected legitimate login information.\n\nOnce the password is validated, the second-stage Rust payload begins its dirty work, collecting a wide range of data from the infected system, including saved credentials, SQLite databases, browser cookies, browsing history, clipboard contents, and even cryptocurrency wallet data.\n\nThe stolen information is then encrypted before being sent back to the bad guys, making the illicit network traffic more difficult to inspect.\n\nPamStealer relaunches automatically after a user signs in, even impersonating Finder in an attempt to gain Full Disk Access, which greatly expands the amount of information that can be collected without additional authorization\n\n---\n\n[Lähde: AppleInsider]\nResearchers at Jamf Threat Labs have documented a new macOS malware campaign built around an infostealer called PamStealer. PamStealer disguises itself as the Maccy clipboard manager and uses AppleScript alongside a Rust payload to infect Macs.\n\nJamf found that PamStealer verifies login passwords through Apple's Pluggable Authentication Modules before stealing additional data. Password verification sets PamStealer apart from most macOS infostealers, which typically capture whatever password a victim enters without confirming that it's valid.\n\nThe campaign begins with a fake website that closely imitates the legitimate Maccy clipboard manager. Next, the fake website delivers a malicious AppleScript application disguised as Maccy.\n\nOnce a victim opens the download, the malicious application checks the system and retrieves a second-stage Rust payload. PamStealer then establishes persistence before collecting data.\n\nJamf also found that PamStealer checks system characteristics, keyboard la...",
+    "research_source": "multi",
+    "summary": "Tietoturvatutkijat ovat kuvanneet uuden macOS-haittaohjelman, joka varastaa tunnistetietoja poikkeuksellisen hiljaisella toteutustavalla.",
+    "content": "Tietoturvatutkijat ovat havainneet uuden macOS-haittaohjelmakampanjan, jossa PamStealer-niminen tietoja varastava ohjelma naamioituu Maccy-leikepöytäsovellukseksi. Haittaohjelma käyttää AppleScriptiä ja Rustilla toteutettua toista vaihetta. Sen erikoispiirre on kirjautumissalasanan paikallinen tarkistaminen macOS:n Pluggable Authentication Modules -rajapinnan kautta ennen tietojen lähettämistä hyökkääjän hallitsemalle palvelimelle.\n\n## Naamioitu lataus käynnistää kaksivaiheisen ketjun\n\nKampanja alkaa tutkijoiden mukaan väärennetyltä verkkosivustolta, joka jäljittelee Maccy-leikepöytäsovelluksen aitoa sivustoa. Sivusto jakaa haitallista AppleScript-sovellusta, joka esiintyy Maccyna. Ensimmäinen vaihe toimitetaan levykuvana, ja kun uhri avaa latauksen, sovellus tarkistaa järjestelmää ja hakee Rustilla kirjoitetun toisen vaiheen hyötykuorman.\n\nLevykuvan ja AppleScriptin käyttö ei sinänsä ole macOS-haittaohjelmissa poikkeuksellista. PamStealerin tapauksessa huomio kiinnittyy siihen, miten nämä osat on yhdistetty hiljaisemmaksi suoritusketjuksi. Kun AppleScript avataan, se näkyy macOS:n Script Editorissa, mutta haitallinen toiminta on lähdeaineiston mukaan piilotettu syvälle tiedostoon.\n\n## JXA-lataaja vähentää näkyviä komentorivijälkiä\n\nJamf Threat Labsin tutkijoiden mukaan AppleScript ei nojaa tavallisiin komentorivityökaluihin, kuten curliin tai zsh:hon. Sen sijaan se käyttää JavaScript for Automation -lataajaa, joka hakee ja valmistelee hyötykuorman macOS:n natiivien Objective-C-rajapintojen avulla. Tutkijat kuvaavat kokonaisuutta hiljaisemmaksi suoritusketjuksi kuin sellaisissa macOS-tietovarastajissa, joita he tavallisesti näkevät.\n\n## Salasanan tarkistus erottaa PamStealerin monista varastajista\n\nPamStealerin nimi viittaa macOS:n PAM-rajapintaan. Haittaohjelma tarkistaa syötetyn kirjautumissalasanan paikallisesti ennen kuin se lähettää sen hyökkääjän palvelimelle. Tämä erottaa sen monista macOS-tietovarastajista, jotka keräävät uhrin syöttämän salasanan riippumatta siitä, onko se oikea.\n\nKun toinen vaihe on haettu, PamStealer pyrkii säilymään järjestelmässä ja alkaa kerätä tietoja. Tutkijat havaitsivat myös järjestelmän ominaisuuksiin ja näppäimistöön liittyviä tarkistuksia, mutta käytettävissä oleva lähdeaineisto ei anna koko teknistä kuvaa näistä tarkistuksista. Tapaus osoittaa, että tuttua Mac-sovellusta jäljittelevä lataussivu voi olla osa monivaiheista haittaohjelmaketjua.",
+    "category": "Teknologia",
+    "tags": [
+      "macos",
+      "haittaohjelmat",
+      "tietoturva",
+      "pamstealer",
+      "maccy"
+    ],
+    "summary_bullets": [
+      "PamStealer naamioituu Maccy-leikepöytäsovellukseksi ja leviää väärennetyn verkkosivuston kautta.",
+      "Haittaohjelma käyttää AppleScriptiä, JXA-lataajaa ja Rustilla kirjoitettua toista vaihetta.",
+      "Se tarkistaa kirjautumissalasanan macOS:n PAM-rajapinnan avulla ennen tietojen varastamista."
+    ],
+    "key_points": [
+      "PamStealer naamioituu Maccy-leikepöytäsovellukseksi ja leviää väärennetyn verkkosivuston kautta.",
+      "Haittaohjelma käyttää AppleScriptiä, JXA-lataajaa ja Rustilla kirjoitettua toista vaihetta.",
+      "Se tarkistaa kirjautumissalasanan macOS:n PAM-rajapinnan avulla ennen tietojen varastamista."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu packetin neljään lähdeblokkiin. Mukaan otettiin vain niissä kuvattu tekninen toiminta; katkaistun AppleInsider-tekstin loppuosasta ei tehty tarkkoja väitteitä.",
+    "source_text": "Researchers have found a never-before-seen piece of macOS malware that combines a series of clever tradecraft to infect Macs with stealthy, custom-developed credential-stealing code. The malware is delivered in two stages. The first is distributed in a disk image that masquerades as Maccy , a clipboard manager for Macs. It’s compiled as AppleScript that is notable for the way it delivers the second stage. The malware is named PamStealer because the Rust-written infostealer uses the Pluggable Authentication Modules interface built into macOS to validate the target’s login password before sending it to an attacker-controlled server. A quieter execution chain The use of both disk image and AppleScript is common in malware for Macs. More unusual is the way PamStealer combines them to gain stealth. When the AppleScript is double-clicked, it’s opened in the macOS Script Editor, where the malicious functionality is buried deep within the file. Read full article Comments\n\nResearchers have found a never-before-seen piece of macOS malware that combines a series of clever tradecraft to infect Macs with stealthy, custom-developed credential-stealing code. The malware is delivered in two stages. The first is distributed in a disk image that masquerades as Maccy, a clipboard manager for Macs. It’s compiled as AppleScript that is notable for the way it delivers the second stage. The malware is named PamStealer because the Rust-written infostealer uses the Pluggable Authentication Modules interface built into macOS to validate the target’s login password before sending it to an attacker-controlled server.\n\nThe use of both disk image and AppleScript is common in malware for Macs. More unusual is the way PamStealer combines them to gain stealth. When the AppleScript is double-clicked, it’s opened in the macOS Script Editor, where the malicious functionality is buried deep within the file. “Rather than relying on shell commands such as curl or zsh, the AppleScript executes a self-contained JavaScript for Automation (JXA) downloader that retrieves and stages the payload using native Objective-C APIs,” researchers from Jamf, a security firm for macOS users, wrote. “Combined with a Rust-based second stage and a password capture workflow that validates credentials locally through PAM, the result is a quieter execution chain than we typically observe in commodity macOS stealers.”\n\nResearchers at Jamf Threat Labs have documented a new macOS malware campaign built around an infostealer called PamStealer. PamStealer disguises itself as the Maccy clipboard manager and uses AppleScript alongside a Rust payload to infect Macs. Jamf found that PamStealer verifies login passwords through Apple's Pluggable Authentication Modules before stealing additional data. Password verification sets PamStealer apart from most macOS infostealers, which typically capture whatever password a victim enters without confirming that it's valid. The campaign begins with a fake website that closely imitates the legitimate Maccy clipboard manager. Next, the fake website delivers a malicious AppleScript application disguised as Maccy. Once a victim opens the download, the malicious application checks the system and retrieves a second-stage Rust payload. PamStealer then establishes persistence before collecting data. Jamf also found that PamStealer checks system characteristics, keyboard la...",
+    "writer_backend": "monica",
+    "writer_confidence": 0.92,
+    "degraded_mode": false,
+    "monica_packet_id": "20260702T214119Z_d717fcf2d2",
+    "monica_repair": {
+      "repair_attempt": "source_backed_near_short",
+      "repair_attempted_at": "2026-07-02T21:45:00.716303+00:00",
+      "repair_trigger": "pre_repair_word_count=247; selected_source_words=500; selected_source_blocks=4",
+      "pre_repair_word_count": 247,
+      "pre_repair_lead_word_count": 39,
+      "post_repair_word_count": 251,
+      "post_repair_lead_word_count": 38,
+      "selected_source_words_at_repair": 500,
+      "selected_source_blocks_at_repair": 4,
+      "source_words": 500,
+      "source_blocks": 4,
+      "repair_added_word_count": 4,
+      "repair_result": "published",
+      "repair_rejection_reason": "",
+      "source_block_ids_used_for_repair": [
+        "1:Ars Technica:8dc1080835",
+        "2:Ars Technica:3c1253042e",
+        "3:Ars Technica:0d0124132a",
+        "4:AppleInsider:2ccf5b5e95"
+      ],
+      "final_issues": [],
+      "recovered": true
+    }
+  },
+  "repair": {
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-07-02T21:45:00.716303+00:00",
+    "repair_trigger": "pre_repair_word_count=247; selected_source_words=500; selected_source_blocks=4",
+    "pre_repair_word_count": 247,
+    "pre_repair_lead_word_count": 39,
+    "post_repair_word_count": 251,
+    "post_repair_lead_word_count": 38,
+    "selected_source_words_at_repair": 500,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 500,
+    "source_blocks": 4,
+    "repair_added_word_count": 4,
+    "repair_result": "published",
+    "repair_rejection_reason": "",
+    "source_block_ids_used_for_repair": [
+      "1:Ars Technica:8dc1080835",
+      "2:Ars Technica:3c1253042e",
+      "3:Ars Technica:0d0124132a",
+      "4:AppleInsider:2ccf5b5e95"
+    ],
+    "final_issues": [],
+    "recovered": true
+  },
+  "duplicate_rejected_at": "2026-07-02T21:58:02.222787+00:00",
+  "duplicate_rejected": true
+}

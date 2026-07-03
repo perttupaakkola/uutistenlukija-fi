@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-03T09:51:18.432966+00:00",
+  "digest": "0c07336c73",
+  "packet": {
+    "packet_id": "20260703T095118Z_0c07336c73",
+    "created_at": "2026-07-03T09:51:18Z",
+    "headline_seed": "Muut lehdet | Toheltaminen kampittaa Töölön areenahanketta",
+    "description_seed": "Palstalle kootaan kiinnostavia näkemyksiä muusta mediasta.",
+    "link": "https://www.hs.fi/nakemys/art-2000012118930.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.hs.fi/nakemys/art-2000012118930.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Muut lehdet | Toheltaminen kampittaa Töölön areenahanketta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 138,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Helsingin Uutiset",
+        "HS Tuoreimmat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Muut lehdet | Toheltaminen kampittaa Töölön areenahanketta",
+      "description": "Palstalle kootaan kiinnostavia näkemyksiä muusta mediasta.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Muut lehdet | Toheltaminen kampittaa Töölön areenahanketta",
+    "description": "Palstalle kootaan kiinnostavia näkemyksiä muusta mediasta.",
+    "link": "https://www.hs.fi/nakemys/art-2000012118930.html",
+    "published": "2026-07-03T09:30:00+00:00",
+    "source": "HS Tuoreimmat",
+    "source_domain": "hs.fi",
+    "language": "fi",
+    "fingerprint": "b3ba27db1072de0acebe98fc80d30be3",
+    "_url_hash": "153d29cec39c6c547ab46b8a317c16401e41a5abcd1a37410ff50d23a2db372a",
+    "source_tier": 1,
+    "category_hint": "Uutiset",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Helsingin Uutiset]\nOrpon hallitus myönsi ohituskaistan kautta toisenkin suuren tuen, kertoo Helsingin Sanomat. 10 miljoonan tuki myönnettiin Urheiluliiton EM-kisahankkeelle huhtikuun kehysriihessä.\n\nLiitto tavoittelee yleisurheilun Euroopan-mestaruuskisoja Helsinkiin vuonna 2030.\n\nHelsingin Sanomien mukaan sekä hallituksen lupaama tuki että menettelytapa oli poikkeuksellinen verrattuna aiempiin arvokisojen valtiontukiin.\n\nUrheiluliiton EM-kisahankkeen projektipäällikkö Harri Halme on kokenut urheilumanageri, joka kuuluu kokoomuksen sisäpiiriin. Halme lobbasi EM-kisojen rahoituksen puolesta.\n\nEntinen kokoomusministeri Jan Vapaavuori sai viime vuonna Garden Helsinki -hankkeelle 35 miljoonan euron tuen samalla tavalla.\n\nTiivistettynä Orpon hallitus on jakanut budjetoimatonta rahaa hankkeille, joille on olemassa määrärahat ja määritellyt hakuprosessit.\n\nUrheiluministeri Mika Poutala (kd) kertoo Helsingin Sanomille tuoneensa kehysriiheen esityksen ministeriön urheilutapahtumien määrärahojen kasvattamisesta. Esitys olisi mahdollistanut myös muiden toimijoiden hakemukset EM-kisahankkeen rinnalla.\n\nPoutala kertoo uskovansa, että päätökseen tukea yksittäistä hanketta on voinut osaltaan vaikuttaa valtiovarainministeri Riikka Purran (ps) vastustus pysyvien määrärahojen lisäämiselle.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-03T09:53:23.152743+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä vahvistettuja perustietoja, joiden varaan vähintään 250 sanan uutisartikkelin voisi kirjoittaa ilman keksittyjä tietoja.",
+  "raw_response": "{\"packet_id\":\"20260703T095118Z_0c07336c73\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä vahvistettuja perustietoja, joiden varaan vähintään 250 sanan uutisartikkelin voisi kirjoittaa ilman keksittyjä tietoja.\"}"
+}

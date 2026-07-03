@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-02T23:31:25.043364+00:00",
+  "digest": "9e34a90058",
+  "packet": {
+    "packet_id": "20260702T233125Z_9e34a90058",
+    "created_at": "2026-07-02T23:31:25Z",
+    "headline_seed": "200 000 ihmistä saa tänään veronpalautuksia",
+    "description_seed": "",
+    "link": "https://yle.fi/a/74-20234651?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [],
+    "source_urls": [
+      "https://yle.fi/a/74-20234651?origin=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "200 000 ihmistä saa tänään veronpalautuksia"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 197,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Verkkouutiset",
+        "Verkkouutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "200 000 ihmistä saa tänään veronpalautuksia",
+      "description": "",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "200 000 ihmistä saa tänään veronpalautuksia",
+    "description": "",
+    "link": "https://yle.fi/a/74-20234651?origin=rss",
+    "published": "2026-07-03T01:50:20+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "b7e292e0a6999401ac4db28ca6bd2c68",
+    "_url_hash": "e8b74a911c498a53d23a2466de09a38bd8dc5043b0c142ad2b6d7bcaa7c7670d",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Verkkouutiset]\nVerottaja maksaa ensimmäiset veronpalautukset vuodelta 2025 tämän viikon perjantaina.\n\nJos odotettuja rahoja ei näy heti aamulla tilillä, ei aihetta hätään ole. Palautukset maksetaan päivän aikana, eli jos veronpalaus ei näy tilillä heti aamulla, kannattaa tarkistaa tilanne myöhemmin.\n\nEnsimmäisinä veronpalautuksia saavat toiminimiyrittäjät, maataloudenharjoittajat ja heidän puolisonsa. Heillä veroilmoittamisen määräpäivä oli 1. huhtikuuta. Palautuksia maksetaan perjantaina noin 200 000 asiakkaalle, yhteensä noin 217 miljoonaa euroa.\n\nVeronpalautuksia maksetaan heinäkuusta alkaen kuukausittain loppuvuoden ajan. Suurin osa suomalaisista saa palautuksensa elo- tai syyskuussa.\n\nValtaosa suomalaisista saa nykyisin verotuspäätökset ja tiedon mahdollisista veronpalautuksista vain sähköisesti OmaVeroon.\n\n– Moni odottaa kuumeisesti verotuspäätöstään postissa eikä välttämättä muista, että viranomaisposti muuttui suurimmalla osalla sähköiseksi huhtikuussa. Verotuspäätös on aina OmaVerossa, ja siitä on lähtenyt tieto Suomi.fi-viestillä. Jos Suomi.fi:ssä on ajantasainen sähköpostiosoite, ilmoitus on tullut myös sähköpostilla. Sähköpostiviestissä ei turvallisuussyistä ole linkkiä OmaVeroon, eli avatakseen päätöksen asiakkaan pitää kirjautua erikseen OmaVeroon, Ylitarkastaja Juha Villman Verohallinnosta sanoo tiedotteessa.\n\nVeronpalautusajan alkaessa myös huijarit saattavat aktivoitua. Verohallinnon nimissä liikkuu erilaisia huijausviestejä, joissa yritetään kalastella pankki- tai henkilötietoja.\n\nHuijausviestit voivat tulla tekstiviestillä, sähköpostilla tai puhelimitse.\n\n− Osa huijausviesteistä on hyvin uskottavan näköisiä, mutta niissä olevia linkkejä ei pidä avata. Verohallinto ei koskaan lähetä viesteissään linkkejä eikä pyydä asiakkailta pankkitietoja viestillä, muistuttaa Villman.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-02T23:33:18.153682+00:00",
+  "failure": "Packetissa ei ole lähdetekstiä eikä riittäviä varmennettuja tietoja vähintään 250 sanan uutisartikkeliin ilman keksittyjä yksityiskohtia.",
+  "raw_response": "{\"packet_id\":\"20260702T233125Z_9e34a90058\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole lähdetekstiä eikä riittäviä varmennettuja tietoja vähintään 250 sanan uutisartikkeliin ilman keksittyjä yksityiskohtia.\"}"
+}

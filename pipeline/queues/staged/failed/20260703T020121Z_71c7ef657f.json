@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-03T02:01:21.404262+00:00",
+  "digest": "71c7ef657f",
+  "packet": {
+    "packet_id": "20260703T020121Z_71c7ef657f",
+    "created_at": "2026-07-03T02:01:21Z",
+    "headline_seed": "Suomalainen fyysikko keksi näppärän työkalun mansikan perkaamisen ikiongelmaan – Näin se toimii",
+    "description_seed": "Mansikoiden perkaaminen on monelle ärsyttävä kesäaskare: sotkua syntyy ja marjaa menee hukkaan. Fysiikan tohtori Seppo Mäkinen kehitti ongelmaan uuden työkalun, jolle on myönnetty hyödyllisyysmalli ja joka lupaa ratkaista tutun pulman yksinkertaisella tavalla.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/2d071e2c-31df-4708-b59f-aebee60b3866?utm_source=rss",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.tekniikkatalous.fi/uutiset/a/2d071e2c-31df-4708-b59f-aebee60b3866?utm_source=rss"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suomalainen fyysikko keksi näppärän työkalun mansikan perkaamisen ikiongelmaan – Näin se toimii"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Mansikoiden perkaaminen on monelle ärsyttävä kesäaskare: sotkua syntyy ja marjaa menee hukkaan. Fysiikan tohtori Seppo Mäkinen kehitti ongelmaan uuden työkalun, jolle on myönnetty hyödyllisyysmalli ja joka lupaa ratkaista tutun pulman yksinkertaisella tavalla.",
+        "word_count": 32,
+        "keyword_overlap": 27,
+        "strong_overlap": 21
+      }
+    ],
+    "source_text": "Mansikoiden perkaaminen on monelle ärsyttävä kesäaskare: sotkua syntyy ja marjaa menee hukkaan. Fysiikan tohtori Seppo Mäkinen kehitti ongelmaan uuden työkalun, jolle on myönnetty hyödyllisyysmalli ja joka lupaa ratkaista tutun pulman yksinkertaisella tavalla.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 64,
+      "selected_blocks": 1,
+      "selected_source_words": 32,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suomalainen fyysikko keksi näppärän työkalun mansikan perkaamisen ikiongelmaan – Näin se toimii",
+      "description": "Mansikoiden perkaaminen on monelle ärsyttävä kesäaskare: sotkua syntyy ja marjaa menee hukkaan. Fysiikan tohtori Seppo Mäkinen kehitti ongelmaan uuden työkalun, jolle on myönnetty hyödyllisyysmalli ja joka lupaa ratkaista tutun pulman yksinkertaisella tavalla.",
+      "category_hint": "Teknologia",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Suomalainen fyysikko keksi näppärän työkalun mansikan perkaamisen ikiongelmaan – Näin se toimii",
+    "description": "Mansikoiden perkaaminen on monelle ärsyttävä kesäaskare: sotkua syntyy ja marjaa menee hukkaan. Fysiikan tohtori Seppo Mäkinen kehitti ongelmaan uuden työkalun, jolle on myönnetty hyödyllisyysmalli ja joka lupaa ratkaista tutun pulman yksinkertaisella tavalla.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/2d071e2c-31df-4708-b59f-aebee60b3866?utm_source=rss",
+    "published": "2026-07-03T01:35:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "eb8e16d79e4d75af9850b3ac6259ef05",
+    "_url_hash": "89771c5d72f506500f612e652a629376571e480e954d07e4ad490f5f6777dd0e",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Mansikoiden perkaaminen on monelle ärsyttävä kesäaskare: sotkua syntyy ja marjaa menee hukkaan. Fysiikan tohtori Seppo Mäkinen kehitti ongelmaan uuden työkalun, jolle on myönnetty hyödyllisyysmalli ja joka lupaa ratkaista tutun pulman yksinkertaisella tavalla.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-07-03T02:03:35.537668+00:00",
+  "failure": "Lähdeaineisto on liian niukka: se ei kerro työkalun toimintatapaa tai muita yksityiskohtia, joilla vähintään 250 sanan julkaistava artikkeli voitaisiin kirjoittaa ilman täytettä tai keksittyjä tietoja.",
+  "raw_response": "{\"packet_id\":\"20260703T020121Z_71c7ef657f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka: se ei kerro työkalun toimintatapaa tai muita yksityiskohtia, joilla vähintään 250 sanan julkaistava artikkeli voitaisiin kirjoittaa ilman täytettä tai keksittyjä tietoja.\"}"
+}

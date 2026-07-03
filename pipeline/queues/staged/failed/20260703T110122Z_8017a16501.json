@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-03T11:01:22.521000+00:00",
+  "digest": "8017a16501",
+  "packet": {
+    "packet_id": "20260703T110122Z_8017a16501",
+    "created_at": "2026-07-03T11:01:22Z",
+    "headline_seed": "Ylen Panu Pokkinen sai sairas­kohtauksen – tämä on tilanne nyt",
+    "description_seed": "Pokkinen jäi sairauslomalle kesäkuun alussa.",
+    "link": "https://www.is.fi/kotimaa/art-2000012118775.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012118775.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ylen Panu Pokkinen sai sairas­kohtauksen – tämä on tilanne nyt"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 87,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "ksml.fi",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ylen Panu Pokkinen sai sairas­kohtauksen – tämä on tilanne nyt",
+      "description": "Pokkinen jäi sairauslomalle kesäkuun alussa.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Ylen Panu Pokkinen sai sairas­kohtauksen – tämä on tilanne nyt",
+    "description": "Pokkinen jäi sairauslomalle kesäkuun alussa.",
+    "link": "https://www.is.fi/kotimaa/art-2000012118775.html",
+    "published": "2026-07-03T10:58:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "4a7875597f995fac5b0f80527db803c0",
+    "_url_hash": "bdc7083aff858deae093fea2ffd236b4f6d64c406f720f18f760ab0947e97dca",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: ksml.fi]\nYlen vastaava päätoimittaja Panu Pokkinen on saanut sairauskohtauksen, Ylen viestintä tiedottaa.\n\nYlen hallitus on nimittänyt Pokkisen tilalle Yle Uutiset ja urheilu -yksikön vastaavan päätoimittajan sijaiseksi ja johtoryhmän jäseneksi toistaiseksi Krista Taubertin. Taubert on työskennellyt Yle Uutiset ja urheilu -yksikössä päätoimittajana ja syventävän journalismin osastopäällikkönä.\n\nYlen mukaan Pokkinen sai sairauskohtauksen lomamatkalla lenkillä ollessaan viime viikon lopulla. Hän on sairaalahoidossa Lissabonissa.\n\n– Annamme kaiken mahdollisen tukemme Panulle ja hänelle läheisilleen tässä tilanteessa. Toivottavasti Panu toipuu mahdollisimman pian, Ylen toimitusjohtaja Marit af Björkesten sanoo tiedotteessa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-03T11:03:18.153342+00:00",
+  "failure": "Paketissa ei ole varsinaista lähdetekstiä tai vahvistettuja yksityiskohtia, joiden varaan vähintään 250 sanan julkaistavan uutisen voisi kirjoittaa ilman keksittyjä tietoja.",
+  "raw_response": "{\"packet_id\":\"20260703T110122Z_8017a16501\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole varsinaista lähdetekstiä tai vahvistettuja yksityiskohtia, joiden varaan vähintään 250 sanan julkaistavan uutisen voisi kirjoittaa ilman keksittyjä tietoja.\"}"
+}

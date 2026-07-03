@@ -1,0 +1,245 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-02T23:11:33.924365+00:00",
+  "digest": "91de7f5a47",
+  "packet": {
+    "packet_id": "20260702T231133Z_91de7f5a47",
+    "created_at": "2026-07-02T23:11:33Z",
+    "headline_seed": "Private space pilots are flying orbital missions for the US Space Force",
+    "description_seed": "True Anomaly and Rocket Lab are performing Top Gun-style satellite fly-bys for the US military.",
+    "link": "https://techcrunch.com/2026/07/02/private-space-pilots-are-flying-orbital-missions-for-the-us-space-force/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "Ars Technica",
+      "TechCrunch",
+      "Ars Technica"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/07/02/private-space-pilots-are-flying-orbital-missions-for-the-us-space-force/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Private space pilots are flying orbital missions for the US Space Force"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "True Anomaly and Rocket Lab are performing Top Gun-style satellite fly-bys for the US military.",
+        "word_count": 15,
+        "keyword_overlap": 8,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "Rocket Lab quietly launched a small satellite from New Zealand on Friday in a high-flying military exercise to test the US Space Force’s ability to rapidly respond to a crisis in low-Earth orbit. The launch was scarcely announced in advance. The only public indication of an impending launch was the release of a warning for pilots and sailors to steer clear of the rocket’s flight path. Rocket Lab did not provide a livestream of the launch, as it does for most of its missions. As of Monday morning, officials from Rocket Lab and the Space Force had not acknowledged the launch in any official public statements.",
+        "word_count": 106,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "Militaries routinely send satellites to fly by rival vehicles and suss out their capabilities, but scaling up this kind of reconnaissance is increasingly seen by the US military as a challenge best handled by the private sector. That’s why two space startups, True Anomaly and Rocket Lab, completed a rendezvous mission for the US Space Force last week so complex, it was like something out of Top Gun. Their two rival satellites met up in orbit, close enough for one to capture imagery of the other. ---",
+        "word_count": 87,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "Victus Haze is the US military’s latest responsive space mission. The Space Force announced plans for the mission in 2024 when it selected Rocket Lab and True Anomaly to build and launch two satellites into low-Earth orbit. At a high level, the idea was to launch a small satellite built by True Anomaly first, posing as a satellite from a potential adversary, like China or Russia. Rocket Lab was supposed to have a satellite on standby to go up and inspect True Anomaly’s spacecraft, ready to launch on short notice once military officials gave the order. The objective of the Victus Haze mission is to demonstrate how the military and its commercial partners might be able to quickly go up and assess a threat in orbit.",
+        "word_count": 126,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "True Anomaly and Rocket Lab are performing Top Gun-style satellite fly-bys for the US military.\n\nRocket Lab quietly launched a small satellite from New Zealand on Friday in a high-flying military exercise to test the US Space Force’s ability to rapidly respond to a crisis in low-Earth orbit. The launch was scarcely announced in advance. The only public indication of an impending launch was the release of a warning for pilots and sailors to steer clear of the rocket’s flight path. Rocket Lab did not provide a livestream of the launch, as it does for most of its missions. As of Monday morning, officials from Rocket Lab and the Space Force had not acknowledged the launch in any official public statements.\n\nMilitaries routinely send satellites to fly by rival vehicles and suss out their capabilities, but scaling up this kind of reconnaissance is increasingly seen by the US military as a challenge best handled by the private sector. That’s why two space startups, True Anomaly and Rocket Lab, completed a rendezvous mission for the US Space Force last week so complex, it was like something out of Top Gun. Their two rival satellites met up in orbit, close enough for one to capture imagery of the other. ---\n\nVictus Haze is the US military’s latest responsive space mission. The Space Force announced plans for the mission in 2024 when it selected Rocket Lab and True Anomaly to build and launch two satellites into low-Earth orbit. At a high level, the idea was to launch a small satellite built by True Anomaly first, posing as a satellite from a potential adversary, like China or Russia. Rocket Lab was supposed to have a satellite on standby to go up and inspect True Anomaly’s spacecraft, ready to launch on short notice once military officials gave the order. The objective of the Victus Haze mission is to demonstrate how the military and its commercial partners might be able to quickly go up and assess a threat in orbit.",
+    "source_diagnostics": {
+      "candidate_blocks": 6,
+      "candidate_source_words": 524,
+      "selected_blocks": 4,
+      "selected_source_words": 334,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "Ars Technica",
+        "TechCrunch",
+        "Ars Technica"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Private space pilots are flying orbital missions for the US Space Force",
+      "description": "True Anomaly and Rocket Lab are performing Top Gun-style satellite fly-bys for the US military.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Private space pilots are flying orbital missions for the US Space Force",
+    "description": "True Anomaly and Rocket Lab are performing Top Gun-style satellite fly-bys for the US military.",
+    "link": "https://techcrunch.com/2026/07/02/private-space-pilots-are-flying-orbital-missions-for-the-us-space-force/",
+    "published": "2026-07-02T23:01:06+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "69a59be53ab90905b2453118e64e7b13",
+    "_url_hash": "6ae3aa0fcd95cb2e5fb04efc1a238b248c32d337b7057557638b4b51aea4a8e3",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nMilitaries routinely send satellites to fly by rival vehicles and suss out their capabilities, but scaling up this kind of reconnaissance is increasingly seen by the US military as a challenge best handled by the private sector.\n\nThat’s why two space startups, True Anomaly and Rocket Lab, completed a rendezvous mission for the US Space Force last week so complex, it was like something out of Top Gun. Their two rival satellites met up in orbit, close enough for one to capture imagery of the other.\n\n---\n\n[Lähde: Ars Technica]\nRocket Lab quietly launched a small satellite from New Zealand on Friday in a high-flying military exercise to test the US Space Force’s ability to rapidly respond to a crisis in low-Earth orbit.\n\nThe launch was scarcely announced in advance. The only public indication of an impending launch was the release of a warning for pilots and sailors to steer clear of the rocket’s flight path. Rocket Lab did not provide a livestream of the launch, as it does for most of its missions. As of Monday morning, officials from Rocket Lab and the Space Force had not acknowledged the launch in any official public statements.\n\nBut the US military’s catalog of space objects was updated over the weekend to reflect the launch. A new satellite, designated Victus Haze Puma, showed up in the catalog with a launch date of Friday from Rocket Lab’s privately run spaceport at Māhia Peninsula in New Zealand. The Space Force cataloged the spacecraft in a polar orbit ranging between 215 miles and 286 miles (347-by-461 km), with an inclination of about 97.5 degrees from the equator.\n\nVictus Haze is the US military’s latest responsive space mission. The Space Force announced plans for the mission in 2024 when it selected Rocket Lab and True Anomaly to build and launch two satellites into low-Earth orbit. At a high level, the idea was to launch a small satellite built by True Anomaly first, posing as a satellite from a potential adversary, like China or Russia. Rocket Lab was supposed to have a satellite on standby to go up and inspect True Anomaly’s spacecraft, ready to launch on short notice once military officials gave the order. The objective of the Victus Haze mission is to demonstrate how the military and its commercial partners might be able to quickly go up and assess a threat in orbit.\n\nThat is apparently what happened last week. Rocket Lab had another launch on its schedule for a commercial customer last week, but the company announced a postponement last Tuesday “to conduct additional checkouts,” without offering any additional details. Safety notices began to appear on aviation and maritime websites a couple of days later, just hours before the launch window for Victus Haze opened on Friday.\n\nThe launch time, estimated to be approximately 6:20 am EDT (10:20 UTC) on Friday, was set to coincide with the passage of the orbit of one of True Anomaly’s satellites over New Zealand. True Anomaly’s Jackal-0004 satellite launched from California on May 3 on a SpaceX rideshare mission. Pu",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-02T23:15:09.131711+00:00",
+  "payload": {
+    "packet_id": "20260702T231133Z_91de7f5a47",
+    "title": "Yhdysvaltain avaruusjoukot testaavat yksityisten yhtiöiden satelliittitiedustelua kiertoradalla",
+    "summary": "True Anomaly ja Rocket Lab ovat toteuttaneet Yhdysvaltain avaruusjoukoille Victus Haze -harjoituksen, jossa testattiin kykyä lähettää satelliitteja nopeasti matalalle Maan kiertoradalle ja tarkastella mahdollista uhkaa avaruudessa.",
+    "content": "True Anomaly ja Rocket Lab ovat toteuttaneet Yhdysvaltain avaruusjoukoille kiertoradalla harjoituksen, jossa kaksi kaupallisten yhtiöiden satelliittia kohtasi matalalla Maan kiertoradalla. Victus Haze -mission tarkoituksena on osoittaa, miten armeija ja sen kaupalliset kumppanit voisivat nopeasti arvioida matalalla Maan kiertoradalla ilmenevää mahdollista uhkaa.\n\n## Harjoitus jäljitteli kiertoradan uhkatilannetta\n\nYhdysvaltain avaruusjoukot ilmoittivat Victus Haze -suunnitelmista vuonna 2024, jolloin ne valitsivat Rocket Labin ja True Anomalyn rakentamaan ja laukaisemaan kaksi satelliittia matalalle Maan kiertoradalle. Harjoituksen asetelmassa True Anomalyn rakentama pieni satelliitti oli määrä lähettää ensin avaruuteen esittämään mahdollisen vastustajan, kuten Kiinan tai Venäjän, satelliittia.\n\nRocket Labin tehtävänä oli pitää oma satelliittinsa valmiudessa ja laukaista se lyhyellä varoitusajalla tarkastamaan True Anomalyn alus, kun sotilasviranomaiset antaisivat käskyn. Tehtävän aikana satelliitit kohtasivat kiertoradalla niin läheltä, että toinen pystyi ottamaan kuvia toisesta. Lähteiden mukaan tehtävää kuvattiin monimutkaiseksi, Top Gun -tyyliseksi satelliittien ohilennoksi.\n\n## Rocket Labin laukaisu tehtiin vähin julkisin tiedoin\n\nRocket Lab laukaisi pienen satelliitin Uudesta-Seelannista perjantaina osana sotilaallista harjoitusta, jonka tarkoituksena oli testata avaruusjoukkojen kykyä reagoida nopeasti matalan kiertoradan kriisiin. Laukaisusta kerrottiin julkisesti hyvin niukasti etukäteen. Ainoa näkyvä merkki lähestyvästä laukaisusta oli varoitus, jossa lentäjiä ja merenkulkijoita kehotettiin pysymään poissa raketin lentoreitiltä.\n\nYhtiö ei tarjonnut laukaisusta suoraa lähetystä, vaikka se tekee niin useimmilla lennoillaan. Maanantaiaamuun mennessä Rocket Labin ja avaruusjoukkojen edustajat eivät olleet vahvistaneet laukaisua virallisissa julkisissa lausunnoissa.\n\n## Yksityinen sektori mukana avaruustiedustelussa\n\nAsevoimat ovat pitkään käyttäneet satelliitteja toisten avaruusalusten lähestymiseen ja niiden kykyjen arviointiin. Yhdysvaltain armeijan näkökulmasta tällaisen tiedustelun laajentaminen nähdään yhä useammin tehtävänä, jossa yksityinen sektori voi olla keskeinen kumppani. Victus Haze kokoaa tämän ajatuksen käytännön kokeeksi: yksi satelliitti esittää mahdollista uhkaa, toinen lähetetään lyhyellä varoitusajalla tutkimaan sitä.",
+    "category": "Teknologia",
+    "tags": [
+      "avaruus",
+      "satelliitit",
+      "Yhdysvallat",
+      "Rocket Lab",
+      "True Anomaly",
+      "puolustusteknologia"
+    ],
+    "summary_bullets": [
+      "Victus Haze testasi nopeaa reagointia mahdolliseen uhkaan matalalla Maan kiertoradalla.",
+      "True Anomalyn satelliitti esitti mahdollisen vastustajan alusta, jota Rocket Labin satelliitin oli määrä tarkastaa.",
+      "Rocket Labin laukaisu Uudesta-Seelannista tehtiin vähin julkisin ennakkotiedoin."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu packetin neljään lähdeblokkiin. Ei lisätty lähteiden ulkopuolisia teknisiä yksityiskohtia tai vahvistamattomia aikatauluja."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260702T231133Z_91de7f5a47\",\n  \"title\": \"Yhdysvaltain avaruusjoukot testaavat yksityisten yhtiöiden satelliittitiedustelua kiertoradalla\",\n  \"summary\": \"True Anomaly ja Rocket Lab ovat toteuttaneet Yhdysvaltain avaruusjoukoille Victus Haze -harjoituksen, jossa testattiin kykyä lähettää satelliitteja nopeasti matalalle Maan kiertoradalle ja tarkastella mahdollista uhkaa avaruudessa.\",\n  \"content\": \"True Anomaly ja Rocket Lab ovat toteuttaneet Yhdysvaltain avaruusjoukoille kiertoradalla harjoituksen, jossa kaksi kaupallisten yhtiöiden satelliittia kohtasi matalalla Maan kiertoradalla. Victus Haze -mission tarkoituksena on osoittaa, miten armeija ja sen kaupalliset kumppanit voisivat nopeasti arvioida matalalla Maan kiertoradalla ilmenevää mahdollista uhkaa.\\n\\n## Harjoitus jäljitteli kiertoradan uhkatilannetta\\n\\nYhdysvaltain avaruusjoukot ilmoittivat Victus Haze -suunnitelmista vuonna 2024, jolloin ne valitsivat Rocket Labin ja True Anomalyn rakentamaan ja laukaisemaan kaksi satelliittia matalalle Maan kiertoradalle. Harjoituksen asetelmassa True Anomalyn rakentama pieni satelliitti oli määrä lähettää ensin avaruuteen esittämään mahdollisen vastustajan, kuten Kiinan tai Venäjän, satelliittia.\\n\\nRocket Labin tehtävänä oli pitää oma satelliittinsa valmiudessa ja laukaista se lyhyellä varoitusajalla tarkastamaan True Anomalyn alus, kun sotilasviranomaiset antaisivat käskyn. Tehtävän aikana satelliitit kohtasivat kiertoradalla niin läheltä, että toinen pystyi ottamaan kuvia toisesta. Lähteiden mukaan tehtävää kuvattiin monimutkaiseksi, Top Gun -tyyliseksi satelliittien ohilennoksi.\\n\\n## Rocket Labin laukaisu tehtiin vähin julkisin tiedoin\\n\\nRocket Lab laukaisi pienen satelliitin Uudesta-Seelannista perjantaina osana sotilaallista harjoitusta, jonka tarkoituksena oli testata avaruusjoukkojen kykyä reagoida nopeasti matalan kiertoradan kriisiin. Laukaisusta kerrottiin julkisesti hyvin niukasti etukäteen. Ainoa näkyvä merkki lähestyvästä laukaisusta oli varoitus, jossa lentäjiä ja merenkulkijoita kehotettiin pysymään poissa raketin lentoreitiltä.\\n\\nYhtiö ei tarjonnut laukaisusta suoraa lähetystä, vaikka se tekee niin useimmilla lennoillaan. Maanantaiaamuun mennessä Rocket Labin ja avaruusjoukkojen edustajat eivät olleet vahvistaneet laukaisua virallisissa julkisissa lausunnoissa.\\n\\n## Yksityinen sektori mukana avaruustiedustelussa\\n\\nAsevoimat ovat pitkään käyttäneet satelliitteja toisten avaruusalusten lähestymiseen ja niiden kykyjen arviointiin. Yhdysvaltain armeijan näkökulmasta tällaisen tiedustelun laajentaminen nähdään yhä useammin tehtävänä, jossa yksityinen sektori voi olla keskeinen kumppani. Victus Haze kokoaa tämän ajatuksen käytännön kokeeksi: yksi satelliitti esittää mahdollista uhkaa, toinen lähetetään lyhyellä varoitusajalla tutkimaan sitä.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"avaruus\",\n    \"satelliitit\",\n    \"Yhdysvallat\",\n    \"Rocket Lab\",\n    \"True Anomaly\",\n    \"puolustusteknologia\"\n  ],\n  \"summary_bullets\": [\n    \"Victus Haze testasi nopeaa reagointia mahdolliseen uhkaan matalalla Maan kiertoradalla.\",\n    \"True Anomalyn satelliitti esitti mahdollisen vastustajan alusta, jota Rocket Labin satelliitin oli määrä tarkastaa.\",\n    \"Rocket Labin laukaisu Uudesta-Seelannista tehtiin vähin julkisin ennakkotiedoin.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu packetin neljään lähdeblokkiin. Ei lisätty lähteiden ulkopuolisia teknisiä yksityiskohtia tai vahvistamattomia aikatauluja.\"\n}",
+  "article": {
+    "title": "Yhdysvaltain avaruusjoukot testaavat yksityisten yhtiöiden satelliittitiedustelua kiertoradalla",
+    "description": "True Anomaly ja Rocket Lab ovat toteuttaneet Yhdysvaltain avaruusjoukoille Victus Haze -harjoituksen, jossa testattiin kykyä lähettää satelliitteja nopeasti matalalle Maan kiertoradalle ja tarkastella mahdollista uhkaa avaruudessa.",
+    "link": "https://techcrunch.com/2026/07/02/private-space-pilots-are-flying-orbital-missions-for-the-us-space-force/",
+    "published": "2026-07-02T23:01:06+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "69a59be53ab90905b2453118e64e7b13",
+    "_url_hash": "6ae3aa0fcd95cb2e5fb04efc1a238b248c32d337b7057557638b4b51aea4a8e3",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nMilitaries routinely send satellites to fly by rival vehicles and suss out their capabilities, but scaling up this kind of reconnaissance is increasingly seen by the US military as a challenge best handled by the private sector.\n\nThat’s why two space startups, True Anomaly and Rocket Lab, completed a rendezvous mission for the US Space Force last week so complex, it was like something out of Top Gun. Their two rival satellites met up in orbit, close enough for one to capture imagery of the other.\n\n---\n\n[Lähde: Ars Technica]\nRocket Lab quietly launched a small satellite from New Zealand on Friday in a high-flying military exercise to test the US Space Force’s ability to rapidly respond to a crisis in low-Earth orbit.\n\nThe launch was scarcely announced in advance. The only public indication of an impending launch was the release of a warning for pilots and sailors to steer clear of the rocket’s flight path. Rocket Lab did not provide a livestream of the launch, as it does for most of its missions. As of Monday morning, officials from Rocket Lab and the Space Force had not acknowledged the launch in any official public statements.\n\nBut the US military’s catalog of space objects was updated over the weekend to reflect the launch. A new satellite, designated Victus Haze Puma, showed up in the catalog with a launch date of Friday from Rocket Lab’s privately run spaceport at Māhia Peninsula in New Zealand. The Space Force cataloged the spacecraft in a polar orbit ranging between 215 miles and 286 miles (347-by-461 km), with an inclination of about 97.5 degrees from the equator.\n\nVictus Haze is the US military’s latest responsive space mission. The Space Force announced plans for the mission in 2024 when it selected Rocket Lab and True Anomaly to build and launch two satellites into low-Earth orbit. At a high level, the idea was to launch a small satellite built by True Anomaly first, posing as a satellite from a potential adversary, like China or Russia. Rocket Lab was supposed to have a satellite on standby to go up and inspect True Anomaly’s spacecraft, ready to launch on short notice once military officials gave the order. The objective of the Victus Haze mission is to demonstrate how the military and its commercial partners might be able to quickly go up and assess a threat in orbit.\n\nThat is apparently what happened last week. Rocket Lab had another launch on its schedule for a commercial customer last week, but the company announced a postponement last Tuesday “to conduct additional checkouts,” without offering any additional details. Safety notices began to appear on aviation and maritime websites a couple of days later, just hours before the launch window for Victus Haze opened on Friday.\n\nThe launch time, estimated to be approximately 6:20 am EDT (10:20 UTC) on Friday, was set to coincide with the passage of the orbit of one of True Anomaly’s satellites over New Zealand. True Anomaly’s Jackal-0004 satellite launched from California on May 3 on a SpaceX rideshare mission. Pu",
+    "research_source": "multi",
+    "summary": "True Anomaly ja Rocket Lab ovat toteuttaneet Yhdysvaltain avaruusjoukoille Victus Haze -harjoituksen, jossa testattiin kykyä lähettää satelliitteja nopeasti matalalle Maan kiertoradalle ja tarkastella mahdollista uhkaa avaruudessa.",
+    "content": "True Anomaly ja Rocket Lab ovat toteuttaneet Yhdysvaltain avaruusjoukoille kiertoradalla harjoituksen, jossa kaksi kaupallisten yhtiöiden satelliittia kohtasi matalalla Maan kiertoradalla. Victus Haze -mission tarkoituksena on osoittaa, miten armeija ja sen kaupalliset kumppanit voisivat nopeasti arvioida matalalla Maan kiertoradalla ilmenevää mahdollista uhkaa.\n\n## Harjoitus jäljitteli kiertoradan uhkatilannetta\n\nYhdysvaltain avaruusjoukot ilmoittivat Victus Haze -suunnitelmista vuonna 2024, jolloin ne valitsivat Rocket Labin ja True Anomalyn rakentamaan ja laukaisemaan kaksi satelliittia matalalle Maan kiertoradalle. Harjoituksen asetelmassa True Anomalyn rakentama pieni satelliitti oli määrä lähettää ensin avaruuteen esittämään mahdollisen vastustajan, kuten Kiinan tai Venäjän, satelliittia.\n\nRocket Labin tehtävänä oli pitää oma satelliittinsa valmiudessa ja laukaista se lyhyellä varoitusajalla tarkastamaan True Anomalyn alus, kun sotilasviranomaiset antaisivat käskyn. Tehtävän aikana satelliitit kohtasivat kiertoradalla niin läheltä, että toinen pystyi ottamaan kuvia toisesta. Lähteiden mukaan tehtävää kuvattiin monimutkaiseksi, Top Gun -tyyliseksi satelliittien ohilennoksi.\n\n## Rocket Labin laukaisu tehtiin vähin julkisin tiedoin\n\nRocket Lab laukaisi pienen satelliitin Uudesta-Seelannista perjantaina osana sotilaallista harjoitusta, jonka tarkoituksena oli testata avaruusjoukkojen kykyä reagoida nopeasti matalan kiertoradan kriisiin. Laukaisusta kerrottiin julkisesti hyvin niukasti etukäteen. Ainoa näkyvä merkki lähestyvästä laukaisusta oli varoitus, jossa lentäjiä ja merenkulkijoita kehotettiin pysymään poissa raketin lentoreitiltä.\n\nYhtiö ei tarjonnut laukaisusta suoraa lähetystä, vaikka se tekee niin useimmilla lennoillaan. Maanantaiaamuun mennessä Rocket Labin ja avaruusjoukkojen edustajat eivät olleet vahvistaneet laukaisua virallisissa julkisissa lausunnoissa.\n\n## Yksityinen sektori mukana avaruustiedustelussa\n\nAsevoimat ovat pitkään käyttäneet satelliitteja toisten avaruusalusten lähestymiseen ja niiden kykyjen arviointiin. Yhdysvaltain armeijan näkökulmasta tällaisen tiedustelun laajentaminen nähdään yhä useammin tehtävänä, jossa yksityinen sektori voi olla keskeinen kumppani. Victus Haze kokoaa tämän ajatuksen käytännön kokeeksi: yksi satelliitti esittää mahdollista uhkaa, toinen lähetetään lyhyellä varoitusajalla tutkimaan sitä.",
+    "category": "Teknologia",
+    "tags": [
+      "avaruus",
+      "satelliitit",
+      "yhdysvallat",
+      "rocket lab",
+      "true anomaly"
+    ],
+    "summary_bullets": [
+      "Victus Haze testasi nopeaa reagointia mahdolliseen uhkaan matalalla Maan kiertoradalla.",
+      "True Anomalyn satelliitti esitti mahdollisen vastustajan alusta, jota Rocket Labin satelliitin oli määrä tarkastaa.",
+      "Rocket Labin laukaisu Uudesta-Seelannista tehtiin vähin julkisin ennakkotiedoin."
+    ],
+    "key_points": [
+      "Victus Haze testasi nopeaa reagointia mahdolliseen uhkaan matalalla Maan kiertoradalla.",
+      "True Anomalyn satelliitti esitti mahdollisen vastustajan alusta, jota Rocket Labin satelliitin oli määrä tarkastaa.",
+      "Rocket Labin laukaisu Uudesta-Seelannista tehtiin vähin julkisin ennakkotiedoin."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu packetin neljään lähdeblokkiin. Ei lisätty lähteiden ulkopuolisia teknisiä yksityiskohtia tai vahvistamattomia aikatauluja.",
+    "source_text": "True Anomaly and Rocket Lab are performing Top Gun-style satellite fly-bys for the US military.\n\nRocket Lab quietly launched a small satellite from New Zealand on Friday in a high-flying military exercise to test the US Space Force’s ability to rapidly respond to a crisis in low-Earth orbit. The launch was scarcely announced in advance. The only public indication of an impending launch was the release of a warning for pilots and sailors to steer clear of the rocket’s flight path. Rocket Lab did not provide a livestream of the launch, as it does for most of its missions. As of Monday morning, officials from Rocket Lab and the Space Force had not acknowledged the launch in any official public statements.\n\nMilitaries routinely send satellites to fly by rival vehicles and suss out their capabilities, but scaling up this kind of reconnaissance is increasingly seen by the US military as a challenge best handled by the private sector. That’s why two space startups, True Anomaly and Rocket Lab, completed a rendezvous mission for the US Space Force last week so complex, it was like something out of Top Gun. Their two rival satellites met up in orbit, close enough for one to capture imagery of the other. ---\n\nVictus Haze is the US military’s latest responsive space mission. The Space Force announced plans for the mission in 2024 when it selected Rocket Lab and True Anomaly to build and launch two satellites into low-Earth orbit. At a high level, the idea was to launch a small satellite built by True Anomaly first, posing as a satellite from a potential adversary, like China or Russia. Rocket Lab was supposed to have a satellite on standby to go up and inspect True Anomaly’s spacecraft, ready to launch on short notice once military officials gave the order. The objective of the Victus Haze mission is to demonstrate how the military and its commercial partners might be able to quickly go up and assess a threat in orbit.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260702T231133Z_91de7f5a47",
+    "monica_repair": {
+      "repair_attempt": "source_backed_near_short",
+      "repair_attempted_at": "2026-07-02T23:15:09.131464+00:00",
+      "repair_trigger": "pre_repair_word_count=224; selected_source_words=334; selected_source_blocks=4",
+      "pre_repair_word_count": 224,
+      "pre_repair_lead_word_count": 38,
+      "post_repair_word_count": 263,
+      "post_repair_lead_word_count": 41,
+      "selected_source_words_at_repair": 334,
+      "selected_source_blocks_at_repair": 4,
+      "source_words": 334,
+      "source_blocks": 4,
+      "repair_added_word_count": 39,
+      "repair_result": "published",
+      "repair_rejection_reason": "",
+      "source_block_ids_used_for_repair": [
+        "1:TechCrunch:ae99723c20",
+        "2:Ars Technica:71d8742de3",
+        "3:TechCrunch:1e51dbc189",
+        "4:Ars Technica:213ae65bee"
+      ],
+      "final_issues": [],
+      "recovered": true
+    }
+  },
+  "repair": {
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-07-02T23:15:09.131464+00:00",
+    "repair_trigger": "pre_repair_word_count=224; selected_source_words=334; selected_source_blocks=4",
+    "pre_repair_word_count": 224,
+    "pre_repair_lead_word_count": 38,
+    "post_repair_word_count": 263,
+    "post_repair_lead_word_count": 41,
+    "selected_source_words_at_repair": 334,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 334,
+    "source_blocks": 4,
+    "repair_added_word_count": 39,
+    "repair_result": "published",
+    "repair_rejection_reason": "",
+    "source_block_ids_used_for_repair": [
+      "1:TechCrunch:ae99723c20",
+      "2:Ars Technica:71d8742de3",
+      "3:TechCrunch:1e51dbc189",
+      "4:Ars Technica:213ae65bee"
+    ],
+    "final_issues": [],
+    "recovered": true
+  },
+  "duplicate_rejected_at": "2026-07-02T23:28:01.479386+00:00",
+  "duplicate_rejected": true
+}

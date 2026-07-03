@@ -1,0 +1,244 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-03T05:41:26.301741+00:00",
+  "digest": "3771f7a15e",
+  "packet": {
+    "packet_id": "20260703T054126Z_3771f7a15e",
+    "created_at": "2026-07-03T05:41:26Z",
+    "headline_seed": "Politician who investigated spyware abuses had his phone hacked with Pegasus spyware",
+    "description_seed": "A government customer of NSO Group used the company's Pegasus spyware to hack into the phone of a European politician, who at the time was serving on an EU committee tasked with investigating the spyware industry.",
+    "link": "https://techcrunch.com/2026/07/02/politician-who-investigated-spyware-abuses-had-his-phone-hacked-with-pegasus-spyware/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch",
+      "The Guardian",
+      "The Guardian"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/07/02/politician-who-investigated-spyware-abuses-had-his-phone-hacked-with-pegasus-spyware/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Politician who investigated spyware abuses had his phone hacked with Pegasus spyware"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "A government customer of NSO Group used the company's Pegasus spyware to hack into the phone of a European politician, who at the time was serving on an EU committee tasked with investigating the spyware industry.",
+        "word_count": 36,
+        "keyword_overlap": 19,
+        "strong_overlap": 12
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "Security researchers have confirmed that a European politician had his phone hacked with the Pegasus spyware while serving on an investigatory committee probing abuses of the notorious surveillance tool. This has reigniting fresh controversy over governments abusing spyware to collect information about their critics. The researchers at the University of Toronto’s digital rights unit The Citizen Lab say the confirmed phone hacking of Greek journalist and former politician Stelios Kouloglou during 2022 and 2023 marks the first time that a member of the European Parliament’s PEGA committee, tasked with investigating phone spyware attacks by European governments, has been publicly identified as a victim of spyware. ---",
+        "word_count": 106,
+        "keyword_overlap": 13,
+        "strong_overlap": 10
+      },
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "Researchers say Stelios Kouloglou’s device was compromised after he joined European parliamentary committee NSO Group’s hacking software was repeatedly used against a member of the European parliament while he was conducting an investigation of spyware abuses in Europe, according to a new report. Researchers at the Citizen Lab at the University of Toronto said they could not attribute the attacks against Stelios Kouloglou to any particular government operator of Pegasus spyware. But their investigation found the attack against the Greek now-former MEP bore the hallmarks of a previous hacking campaign against exiled Russian and Belarusian journalists in Europe. “When you realise your private life is scrutinised by very bad people, you become angry,” Kouloglou, who is also a journalist and left parliament in 2024, said in an interview. “It’s a big issue having to do with corruption, justice and democracy.”",
+        "word_count": 140,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "At the heart of Citizen Lab’s new report lies Kouloglou’s work for a special European parliamentary committee known as Pega, which was established in March 2022 after the publication of the Pegasus Project by the Guardian and a consortium of media outlets. The Pegasus Project revealed how journalists, activists, politicians and other members of civil society were being targeted by governments using Pegasus, which is made by the Israel-based NSO Group and sold to governments around the world for the purposes of stopping serious crime and terror attacks. Pega’s mission in 2022 was to investigate the scope of how spyware was being used in contravention of EU law.",
+        "word_count": 108,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "A government customer of NSO Group used the company's Pegasus spyware to hack into the phone of a European politician, who at the time was serving on an EU committee tasked with investigating the spyware industry.\n\nSecurity researchers have confirmed that a European politician had his phone hacked with the Pegasus spyware while serving on an investigatory committee probing abuses of the notorious surveillance tool. This has reigniting fresh controversy over governments abusing spyware to collect information about their critics. The researchers at the University of Toronto’s digital rights unit The Citizen Lab say the confirmed phone hacking of Greek journalist and former politician Stelios Kouloglou during 2022 and 2023 marks the first time that a member of the European Parliament’s PEGA committee, tasked with investigating phone spyware attacks by European governments, has been publicly identified as a victim of spyware. ---\n\nResearchers say Stelios Kouloglou’s device was compromised after he joined European parliamentary committee NSO Group’s hacking software was repeatedly used against a member of the European parliament while he was conducting an investigation of spyware abuses in Europe, according to a new report. Researchers at the Citizen Lab at the University of Toronto said they could not attribute the attacks against Stelios Kouloglou to any particular government operator of Pegasus spyware. But their investigation found the attack against the Greek now-former MEP bore the hallmarks of a previous hacking campaign against exiled Russian and Belarusian journalists in Europe. “When you realise your private life is scrutinised by very bad people, you become angry,” Kouloglou, who is also a journalist and left parliament in 2024, said in an interview. “It’s a big issue having to do with corruption, justice and democracy.”\n\nAt the heart of Citizen Lab’s new report lies Kouloglou’s work for a special European parliamentary committee known as Pega, which was established in March 2022 after the publication of the Pegasus Project by the Guardian and a consortium of media outlets. The Pegasus Project revealed how journalists, activists, politicians and other members of civil society were being targeted by governments using Pegasus, which is made by the Israel-based NSO Group and sold to governments around the world for the purposes of stopping serious crime and terror attacks. Pega’s mission in 2022 was to investigate the scope of how spyware was being used in contravention of EU law.",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 530,
+      "selected_blocks": 4,
+      "selected_source_words": 390,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch",
+        "The Guardian",
+        "The Guardian"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Politician who investigated spyware abuses had his phone hacked with Pegasus spyware",
+      "description": "A government customer of NSO Group used the company's Pegasus spyware to hack into the phone of a European politician, who at the time was serving on an EU committee tasked with investigating the spyware industry.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Politician who investigated spyware abuses had his phone hacked with Pegasus spyware",
+    "description": "A government customer of NSO Group used the company's Pegasus spyware to hack into the phone of a European politician, who at the time was serving on an EU committee tasked with investigating the spyware industry.",
+    "link": "https://techcrunch.com/2026/07/02/politician-who-investigated-spyware-abuses-had-his-phone-hacked-with-pegasus-spyware/",
+    "published": "2026-07-03T05:05:00+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "449695a2c9316a075dea63bda0d44434",
+    "_url_hash": "69a093bb549fb68fb6e21ddfdf6af2fdd9c45efa006ef6e17b3397e38e323389",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nSecurity researchers have confirmed that a European politician had his phone hacked with the Pegasus spyware while serving on an investigatory committee probing abuses of the notorious surveillance tool. This has reigniting fresh controversy over governments abusing spyware to collect information about their critics.\n\nThe researchers at the University of Toronto’s digital rights unit The Citizen Lab say the confirmed phone hacking of Greek journalist and former politician Stelios Kouloglou during 2022 and 2023 marks the first time that a member of the European Parliament’s PEGA committee, tasked with investigating phone spyware attacks by European governments, has been publicly identified as a victim of spyware.\n\n---\n\n[Lähde: The Guardian]\nResearchers say Stelios Kouloglou’s device was compromised after he joined European parliamentary committee\n\nNSO Group’s hacking software was repeatedly used against a member of the European parliament while he was conducting an investigation of spyware abuses in Europe, according to a new report.\n\nResearchers at the Citizen Lab at the University of Toronto said they could not attribute the attacks against Stelios Kouloglou to any particular government operator of Pegasus spyware. But their investigation found the attack against the Greek now-former MEP bore the hallmarks of a previous hacking campaign against exiled Russian and Belarusian journalists in Europe.\n\n“When you realise your private life is scrutinised by very bad people, you become angry,” Kouloglou, who is also a journalist and left parliament in 2024, said in an interview. “It’s a big issue having to do with corruption, justice and democracy.”\n\nAt the heart of Citizen Lab’s new report lies Kouloglou’s work for a special European parliamentary committee known as Pega, which was established in March 2022 after the publication of the Pegasus Project by the Guardian and a consortium of media outlets.\n\nThe Pegasus Project revealed how journalists, activists, politicians and other members of civil society were being targeted by governments using Pegasus, which is made by the Israel-based NSO Group and sold to governments around the world for the purposes of stopping serious crime and terror attacks. Pega’s mission in 2022 was to investigate the scope of how spyware was being used in contravention of EU law.\n\nKouloglou, a journalist who was first elected to the European parliament as a member of the Syriza party, joined the Pega committee in March 2022. His mobile device was first infected, Citizen Lab said, about seven months later, on 21 October 2022, in what was described as a “particularly intense period of activity” in Pega’s deliberations and investigations, including the drafting of the committee’s first report.\n\nNSO did not respond to a request for comment.\n\nThe hacking coincided with Kouloglou’s admittance to a hospital for elective surgery, where he was visited by a Greek investigative journalist, Thanasis Koukakis.\n\nKoukakis was at the time working on mercenary spyware stories in Greece, following a major scandal known as the “Greek Watergate”, which involved the illegal targeting of more than 80 people in Greece, including politicians, journalists and military officials. Koukakis was amo",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-03T05:45:21.186080+00:00",
+  "payload": {
+    "packet_id": "20260703T054126Z_3771f7a15e",
+    "title": "Pegasus-vakoiluohjelmaa tutkinut europarlamentaarikko joutui itse hakkeroinnin kohteeksi",
+    "summary": "Citizen Labin tutkijoiden mukaan kreikkalaisen Stelios Koulogloun puhelin murrettiin Pegasus-vakoiluohjelmalla vuosina 2022 ja 2023, kun hän työskenteli Euroopan parlamentin Pega-komiteassa.",
+    "content": "Kreikkalaisen toimittajan ja entisen europarlamentaarikon Stelios Koulogloun puhelin joutui Pegasus-vakoiluohjelman kohteeksi samaan aikaan, kun hän osallistui Euroopan parlamentin erityiskomiteaan, joka selvitti vakoiluohjelmien väärinkäyttöä Euroopassa. Toronton yliopiston Citizen Labin tutkijoiden mukaan kyseessä on ensimmäinen julkisesti tunnistettu tapaus, jossa Pega-komitean jäsen on vahvistetusti joutunut vakoiluohjelman uhriksi.\n\n## Hyökkäykset ajoittuivat komiteatyöhön\n\nCitizen Labin mukaan Koulogloun laite vaarantui sen jälkeen, kun hän oli liittynyt Euroopan parlamentin Pega-komiteaan. Tutkijat arvioivat, että israelilaisen NSO Groupin Pegasus-ohjelmistoa käytettiin häntä vastaan toistuvasti vuosina 2022 ja 2023. Komitea oli tuolloin selvittämässä puhelimiin kohdistuneita vakoiluohjelmahyökkäyksiä ja sitä, olivatko Euroopan hallitukset käyttäneet tällaisia työkaluja EU-lainsäädännön vastaisesti.\n\nTutkijat eivät pystyneet nimeämään tiettyä hallitustoimijaa hyökkäysten tekijäksi. Heidän mukaansa Koulogloun tapaukseen liittyi kuitenkin piirteitä, jotka muistuttivat aiempaa kampanjaa Euroopassa toimineita maanpaossa olevia venäläisiä ja valkovenäläisiä toimittajia vastaan. TechCrunchin lähteistämässä kuvauksessa hyökkääjänä oli NSO Groupin hallitusasiakas.\n\nKouloglou jätti parlamentin vuonna 2024. Hän kuvasi haastattelussa yksityiselämänsä joutumista tarkkailun kohteeksi vakavaksi kokemukseksi ja sanoi tapauksen liittyvän laajemmin korruptioon, oikeuteen ja demokratiaan.\n\n## Pegasus on ollut EU:n tarkastelussa\n\nPega-komitea perustettiin maaliskuussa 2022 sen jälkeen, kun Guardianin ja muiden mediaorganisaatioiden Pegasus Project -tutkinta oli tuonut esiin tapauksia, joissa hallitukset olivat kohdistaneet vakoiluohjelmaa toimittajiin, aktivisteihin, poliitikkoihin ja muihin kansalaisyhteiskunnan toimijoihin. Komitean tehtäväksi tuli selvittää, missä laajuudessa vakoiluohjelmia oli käytetty EU-oikeuden vastaisesti.\n\nPegasus on NSO Groupin valmistama ohjelmisto, jota myydään hallituksille vakavan rikollisuuden ja terrorismiin liittyvien uhkien torjuntaa varten. Samalla ohjelmisto on noussut toistuvasti kiistojen keskelle, koska lähteiden mukaan sitä on käytetty myös hallitusten kriitikoita ja julkista valtaa tarkkailevia henkilöitä vastaan.\n\n## Tapaus lisää kiistaa valvontatyökaluista\n\nKoulogloun tapauksen vahvistuminen nostaa uudelleen esiin kysymyksen siitä, miten hallitusten hankkimia valvontatyökaluja käytetään ja miten niiden väärinkäyttöä voidaan tutkia. Tapauksen tekee poikkeukselliseksi se, että kohteena oli henkilö, joka osallistui juuri tällaisia väärinkäytösepäilyjä koskeneeseen Euroopan parlamentin selvitystyöhön.",
+    "category": "Teknologia",
+    "tags": [
+      "Pegasus",
+      "vakoiluohjelmat",
+      "Euroopan parlamentti",
+      "Citizen Lab",
+      "NSO Group",
+      "kyberturvallisuus"
+    ],
+    "summary_bullets": [
+      "Citizen Labin mukaan Stelios Koulogloun puhelin murrettiin Pegasus-ohjelmalla vuosina 2022 ja 2023.",
+      "Kouloglou työskenteli tuolloin Euroopan parlamentin Pega-komiteassa, joka tutki vakoiluohjelmien väärinkäyttöä.",
+      "Tutkijat eivät nimenneet hyökkäysten takana ollutta hallitustoimijaa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu paketissa olleisiin tietoihin Citizen Labin havainnoista, Koulogloun roolista Pega-komiteassa ja Pegasuksen taustasta. Tekijävaltiota ei nimetä, koska tutkijat eivät sitä vahvistaneet."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260703T054126Z_3771f7a15e\",\n  \"title\": \"Pegasus-vakoiluohjelmaa tutkinut europarlamentaarikko joutui itse hakkeroinnin kohteeksi\",\n  \"summary\": \"Citizen Labin tutkijoiden mukaan kreikkalaisen Stelios Koulogloun puhelin murrettiin Pegasus-vakoiluohjelmalla vuosina 2022 ja 2023, kun hän työskenteli Euroopan parlamentin Pega-komiteassa.\",\n  \"content\": \"Kreikkalaisen toimittajan ja entisen europarlamentaarikon Stelios Koulogloun puhelin joutui Pegasus-vakoiluohjelman kohteeksi samaan aikaan, kun hän osallistui Euroopan parlamentin erityiskomiteaan, joka selvitti vakoiluohjelmien väärinkäyttöä Euroopassa. Toronton yliopiston Citizen Labin tutkijoiden mukaan kyseessä on ensimmäinen julkisesti tunnistettu tapaus, jossa Pega-komitean jäsen on vahvistetusti joutunut vakoiluohjelman uhriksi.\\n\\n## Hyökkäykset ajoittuivat komiteatyöhön\\n\\nCitizen Labin mukaan Koulogloun laite vaarantui sen jälkeen, kun hän oli liittynyt Euroopan parlamentin Pega-komiteaan. Tutkijat arvioivat, että israelilaisen NSO Groupin Pegasus-ohjelmistoa käytettiin häntä vastaan toistuvasti vuosina 2022 ja 2023. Komitea oli tuolloin selvittämässä puhelimiin kohdistuneita vakoiluohjelmahyökkäyksiä ja sitä, olivatko Euroopan hallitukset käyttäneet tällaisia työkaluja EU-lainsäädännön vastaisesti.\\n\\nTutkijat eivät pystyneet nimeämään tiettyä hallitustoimijaa hyökkäysten tekijäksi. Heidän mukaansa Koulogloun tapaukseen liittyi kuitenkin piirteitä, jotka muistuttivat aiempaa kampanjaa Euroopassa toimineita maanpaossa olevia venäläisiä ja valkovenäläisiä toimittajia vastaan. TechCrunchin lähteistämässä kuvauksessa hyökkääjänä oli NSO Groupin hallitusasiakas.\\n\\nKouloglou jätti parlamentin vuonna 2024. Hän kuvasi haastattelussa yksityiselämänsä joutumista tarkkailun kohteeksi vakavaksi kokemukseksi ja sanoi tapauksen liittyvän laajemmin korruptioon, oikeuteen ja demokratiaan.\\n\\n## Pegasus on ollut EU:n tarkastelussa\\n\\nPega-komitea perustettiin maaliskuussa 2022 sen jälkeen, kun Guardianin ja muiden mediaorganisaatioiden Pegasus Project -tutkinta oli tuonut esiin tapauksia, joissa hallitukset olivat kohdistaneet vakoiluohjelmaa toimittajiin, aktivisteihin, poliitikkoihin ja muihin kansalaisyhteiskunnan toimijoihin. Komitean tehtäväksi tuli selvittää, missä laajuudessa vakoiluohjelmia oli käytetty EU-oikeuden vastaisesti.\\n\\nPegasus on NSO Groupin valmistama ohjelmisto, jota myydään hallituksille vakavan rikollisuuden ja terrorismiin liittyvien uhkien torjuntaa varten. Samalla ohjelmisto on noussut toistuvasti kiistojen keskelle, koska lähteiden mukaan sitä on käytetty myös hallitusten kriitikoita ja julkista valtaa tarkkailevia henkilöitä vastaan.\\n\\n## Tapaus lisää kiistaa valvontatyökaluista\\n\\nKoulogloun tapauksen vahvistuminen nostaa uudelleen esiin kysymyksen siitä, miten hallitusten hankkimia valvontatyökaluja käytetään ja miten niiden väärinkäyttöä voidaan tutkia. Tapauksen tekee poikkeukselliseksi se, että kohteena oli henkilö, joka osallistui juuri tällaisia väärinkäytösepäilyjä koskeneeseen Euroopan parlamentin selvitystyöhön.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"Pegasus\",\n    \"vakoiluohjelmat\",\n    \"Euroopan parlamentti\",\n    \"Citizen Lab\",\n    \"NSO Group\",\n    \"kyberturvallisuus\"\n  ],\n  \"summary_bullets\": [\n    \"Citizen Labin mukaan Stelios Koulogloun puhelin murrettiin Pegasus-ohjelmalla vuosina 2022 ja 2023.\",\n    \"Kouloglou työskenteli tuolloin Euroopan parlamentin Pega-komiteassa, joka tutki vakoiluohjelmien väärinkäyttöä.\",\n    \"Tutkijat eivät nimenneet hyökkäysten takana ollutta hallitustoimijaa.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu paketissa olleisiin tietoihin Citizen Labin havainnoista, Koulogloun roolista Pega-komiteassa ja Pegasuksen taustasta. Tekijävaltiota ei nimetä, koska tutkijat eivät sitä vahvistaneet.\"\n}",
+  "article": {
+    "title": "Pegasus-vakoiluohjelmaa tutkinut europarlamentaarikko joutui itse hakkeroinnin kohteeksi",
+    "description": "Citizen Labin tutkijoiden mukaan kreikkalaisen Stelios Koulogloun puhelin murrettiin Pegasus-vakoiluohjelmalla vuosina 2022 ja 2023, kun hän työskenteli Euroopan parlamentin Pega-komiteassa.",
+    "link": "https://techcrunch.com/2026/07/02/politician-who-investigated-spyware-abuses-had-his-phone-hacked-with-pegasus-spyware/",
+    "published": "2026-07-03T05:05:00+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "449695a2c9316a075dea63bda0d44434",
+    "_url_hash": "69a093bb549fb68fb6e21ddfdf6af2fdd9c45efa006ef6e17b3397e38e323389",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nSecurity researchers have confirmed that a European politician had his phone hacked with the Pegasus spyware while serving on an investigatory committee probing abuses of the notorious surveillance tool. This has reigniting fresh controversy over governments abusing spyware to collect information about their critics.\n\nThe researchers at the University of Toronto’s digital rights unit The Citizen Lab say the confirmed phone hacking of Greek journalist and former politician Stelios Kouloglou during 2022 and 2023 marks the first time that a member of the European Parliament’s PEGA committee, tasked with investigating phone spyware attacks by European governments, has been publicly identified as a victim of spyware.\n\n---\n\n[Lähde: The Guardian]\nResearchers say Stelios Kouloglou’s device was compromised after he joined European parliamentary committee\n\nNSO Group’s hacking software was repeatedly used against a member of the European parliament while he was conducting an investigation of spyware abuses in Europe, according to a new report.\n\nResearchers at the Citizen Lab at the University of Toronto said they could not attribute the attacks against Stelios Kouloglou to any particular government operator of Pegasus spyware. But their investigation found the attack against the Greek now-former MEP bore the hallmarks of a previous hacking campaign against exiled Russian and Belarusian journalists in Europe.\n\n“When you realise your private life is scrutinised by very bad people, you become angry,” Kouloglou, who is also a journalist and left parliament in 2024, said in an interview. “It’s a big issue having to do with corruption, justice and democracy.”\n\nAt the heart of Citizen Lab’s new report lies Kouloglou’s work for a special European parliamentary committee known as Pega, which was established in March 2022 after the publication of the Pegasus Project by the Guardian and a consortium of media outlets.\n\nThe Pegasus Project revealed how journalists, activists, politicians and other members of civil society were being targeted by governments using Pegasus, which is made by the Israel-based NSO Group and sold to governments around the world for the purposes of stopping serious crime and terror attacks. Pega’s mission in 2022 was to investigate the scope of how spyware was being used in contravention of EU law.\n\nKouloglou, a journalist who was first elected to the European parliament as a member of the Syriza party, joined the Pega committee in March 2022. His mobile device was first infected, Citizen Lab said, about seven months later, on 21 October 2022, in what was described as a “particularly intense period of activity” in Pega’s deliberations and investigations, including the drafting of the committee’s first report.\n\nNSO did not respond to a request for comment.\n\nThe hacking coincided with Kouloglou’s admittance to a hospital for elective surgery, where he was visited by a Greek investigative journalist, Thanasis Koukakis.\n\nKoukakis was at the time working on mercenary spyware stories in Greece, following a major scandal known as the “Greek Watergate”, which involved the illegal targeting of more than 80 people in Greece, including politicians, journalists and military officials. Koukakis was amo",
+    "research_source": "multi",
+    "summary": "Citizen Labin tutkijoiden mukaan kreikkalaisen Stelios Koulogloun puhelin murrettiin Pegasus-vakoiluohjelmalla vuosina 2022 ja 2023, kun hän työskenteli Euroopan parlamentin Pega-komiteassa.",
+    "content": "Kreikkalaisen toimittajan ja entisen europarlamentaarikon Stelios Koulogloun puhelin joutui Pegasus-vakoiluohjelman kohteeksi samaan aikaan, kun hän osallistui Euroopan parlamentin erityiskomiteaan, joka selvitti vakoiluohjelmien väärinkäyttöä Euroopassa. Toronton yliopiston Citizen Labin tutkijoiden mukaan kyseessä on ensimmäinen julkisesti tunnistettu tapaus, jossa Pega-komitean jäsen on vahvistetusti joutunut vakoiluohjelman uhriksi.\n\n## Hyökkäykset ajoittuivat komiteatyöhön\n\nCitizen Labin mukaan Koulogloun laite vaarantui sen jälkeen, kun hän oli liittynyt Euroopan parlamentin Pega-komiteaan. Tutkijat arvioivat, että israelilaisen NSO Groupin Pegasus-ohjelmistoa käytettiin häntä vastaan toistuvasti vuosina 2022 ja 2023. Komitea oli tuolloin selvittämässä puhelimiin kohdistuneita vakoiluohjelmahyökkäyksiä ja sitä, olivatko Euroopan hallitukset käyttäneet tällaisia työkaluja EU-lainsäädännön vastaisesti.\n\nTutkijat eivät pystyneet nimeämään tiettyä hallitustoimijaa hyökkäysten tekijäksi. Heidän mukaansa Koulogloun tapaukseen liittyi kuitenkin piirteitä, jotka muistuttivat aiempaa kampanjaa Euroopassa toimineita maanpaossa olevia venäläisiä ja valkovenäläisiä toimittajia vastaan. TechCrunchin lähteistämässä kuvauksessa hyökkääjänä oli NSO Groupin hallitusasiakas.\n\nKouloglou jätti parlamentin vuonna 2024. Hän kuvasi haastattelussa yksityiselämänsä joutumista tarkkailun kohteeksi vakavaksi kokemukseksi ja sanoi tapauksen liittyvän laajemmin korruptioon, oikeuteen ja demokratiaan.\n\n## Pegasus on ollut EU:n tarkastelussa\n\nPega-komitea perustettiin maaliskuussa 2022 sen jälkeen, kun Guardianin ja muiden mediaorganisaatioiden Pegasus Project -tutkinta oli tuonut esiin tapauksia, joissa hallitukset olivat kohdistaneet vakoiluohjelmaa toimittajiin, aktivisteihin, poliitikkoihin ja muihin kansalaisyhteiskunnan toimijoihin. Komitean tehtäväksi tuli selvittää, missä laajuudessa vakoiluohjelmia oli käytetty EU-oikeuden vastaisesti.\n\nPegasus on NSO Groupin valmistama ohjelmisto, jota myydään hallituksille vakavan rikollisuuden ja terrorismiin liittyvien uhkien torjuntaa varten. Samalla ohjelmisto on noussut toistuvasti kiistojen keskelle, koska lähteiden mukaan sitä on käytetty myös hallitusten kriitikoita ja julkista valtaa tarkkailevia henkilöitä vastaan.\n\n## Tapaus lisää kiistaa valvontatyökaluista\n\nKoulogloun tapauksen vahvistuminen nostaa uudelleen esiin kysymyksen siitä, miten hallitusten hankkimia valvontatyökaluja käytetään ja miten niiden väärinkäyttöä voidaan tutkia. Tapauksen tekee poikkeukselliseksi se, että kohteena oli henkilö, joka osallistui juuri tällaisia väärinkäytösepäilyjä koskeneeseen Euroopan parlamentin selvitystyöhön.",
+    "category": "Teknologia",
+    "tags": [
+      "pegasus",
+      "vakoiluohjelmat",
+      "euroopan parlamentti",
+      "citizen lab",
+      "nso group"
+    ],
+    "summary_bullets": [
+      "Citizen Labin mukaan Stelios Koulogloun puhelin murrettiin Pegasus-ohjelmalla vuosina 2022 ja 2023.",
+      "Kouloglou työskenteli tuolloin Euroopan parlamentin Pega-komiteassa, joka tutki vakoiluohjelmien väärinkäyttöä.",
+      "Tutkijat eivät nimenneet hyökkäysten takana ollutta hallitustoimijaa."
+    ],
+    "key_points": [
+      "Citizen Labin mukaan Stelios Koulogloun puhelin murrettiin Pegasus-ohjelmalla vuosina 2022 ja 2023.",
+      "Kouloglou työskenteli tuolloin Euroopan parlamentin Pega-komiteassa, joka tutki vakoiluohjelmien väärinkäyttöä.",
+      "Tutkijat eivät nimenneet hyökkäysten takana ollutta hallitustoimijaa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketissa olleisiin tietoihin Citizen Labin havainnoista, Koulogloun roolista Pega-komiteassa ja Pegasuksen taustasta. Tekijävaltiota ei nimetä, koska tutkijat eivät sitä vahvistaneet.",
+    "source_text": "A government customer of NSO Group used the company's Pegasus spyware to hack into the phone of a European politician, who at the time was serving on an EU committee tasked with investigating the spyware industry.\n\nSecurity researchers have confirmed that a European politician had his phone hacked with the Pegasus spyware while serving on an investigatory committee probing abuses of the notorious surveillance tool. This has reigniting fresh controversy over governments abusing spyware to collect information about their critics. The researchers at the University of Toronto’s digital rights unit The Citizen Lab say the confirmed phone hacking of Greek journalist and former politician Stelios Kouloglou during 2022 and 2023 marks the first time that a member of the European Parliament’s PEGA committee, tasked with investigating phone spyware attacks by European governments, has been publicly identified as a victim of spyware. ---\n\nResearchers say Stelios Kouloglou’s device was compromised after he joined European parliamentary committee NSO Group’s hacking software was repeatedly used against a member of the European parliament while he was conducting an investigation of spyware abuses in Europe, according to a new report. Researchers at the Citizen Lab at the University of Toronto said they could not attribute the attacks against Stelios Kouloglou to any particular government operator of Pegasus spyware. But their investigation found the attack against the Greek now-former MEP bore the hallmarks of a previous hacking campaign against exiled Russian and Belarusian journalists in Europe. “When you realise your private life is scrutinised by very bad people, you become angry,” Kouloglou, who is also a journalist and left parliament in 2024, said in an interview. “It’s a big issue having to do with corruption, justice and democracy.”\n\nAt the heart of Citizen Lab’s new report lies Kouloglou’s work for a special European parliamentary committee known as Pega, which was established in March 2022 after the publication of the Pegasus Project by the Guardian and a consortium of media outlets. The Pegasus Project revealed how journalists, activists, politicians and other members of civil society were being targeted by governments using Pegasus, which is made by the Israel-based NSO Group and sold to governments around the world for the purposes of stopping serious crime and terror attacks. Pega’s mission in 2022 was to investigate the scope of how spyware was being used in contravention of EU law.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260703T054126Z_3771f7a15e",
+    "monica_repair": {
+      "repair_attempt": "source_backed_near_short",
+      "repair_attempted_at": "2026-07-03T05:45:21.185609+00:00",
+      "repair_trigger": "pre_repair_word_count=233; selected_source_words=390; selected_source_blocks=4",
+      "pre_repair_word_count": 233,
+      "pre_repair_lead_word_count": 44,
+      "post_repair_word_count": 281,
+      "post_repair_lead_word_count": 44,
+      "selected_source_words_at_repair": 390,
+      "selected_source_blocks_at_repair": 4,
+      "source_words": 390,
+      "source_blocks": 4,
+      "repair_added_word_count": 48,
+      "repair_result": "published",
+      "repair_rejection_reason": "",
+      "source_block_ids_used_for_repair": [
+        "1:TechCrunch:4b7f52717f",
+        "2:TechCrunch:8593d4775d",
+        "3:The Guardian:22f7e6a5dc",
+        "4:The Guardian:b368548731"
+      ],
+      "final_issues": [],
+      "recovered": true
+    }
+  },
+  "repair": {
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-07-03T05:45:21.185609+00:00",
+    "repair_trigger": "pre_repair_word_count=233; selected_source_words=390; selected_source_blocks=4",
+    "pre_repair_word_count": 233,
+    "pre_repair_lead_word_count": 44,
+    "post_repair_word_count": 281,
+    "post_repair_lead_word_count": 44,
+    "selected_source_words_at_repair": 390,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 390,
+    "source_blocks": 4,
+    "repair_added_word_count": 48,
+    "repair_result": "published",
+    "repair_rejection_reason": "",
+    "source_block_ids_used_for_repair": [
+      "1:TechCrunch:4b7f52717f",
+      "2:TechCrunch:8593d4775d",
+      "3:The Guardian:22f7e6a5dc",
+      "4:The Guardian:b368548731"
+    ],
+    "final_issues": [],
+    "recovered": true
+  },
+  "duplicate_rejected_at": "2026-07-03T05:58:02.276353+00:00",
+  "duplicate_rejected": true
+}

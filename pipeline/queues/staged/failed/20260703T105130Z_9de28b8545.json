@@ -1,0 +1,245 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-03T10:51:30.287052+00:00",
+  "digest": "9de28b8545",
+  "packet": {
+    "packet_id": "20260703T105130Z_9de28b8545",
+    "created_at": "2026-07-03T10:51:30Z",
+    "headline_seed": "Nasa launches mission to save falling space telescope",
+    "description_seed": "A Nasa-funded robot has blasted off to catch a falling telescope in mid-orbit and blast it back to safety before it burns up.",
+    "link": "https://www.bbc.co.uk/news/articles/c0ry4xx7rk8o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "CBS News",
+      "CBS News"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/c0ry4xx7rk8o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Nasa launches mission to save falling space telescope"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "A Nasa-funded robot has blasted off to catch a falling telescope in mid-orbit and blast it back to safety before it burns up.",
+        "word_count": 23,
+        "keyword_overlap": 12,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Artist's impression of the Swift observatory which was built to study the cosmos A Nasa-funded spacecraft has been sent into space to catch a falling telescope. The Swift observatory detects some of the most powerful explosions in the Universe - but is at risk of crashing back to Earth in the coming months. The small space telescope will be intercepted by the LINK craft, which will attempt to grab it with three robotic arms, and try and lift it back to a safe orbit. The rescue mission, launched on Friday, has never been attempted before, and Dr Simeon Barber, a space scientist, has said it is \"high risk\".",
+        "word_count": 108,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "CBS News",
+        "source_type": "research",
+        "text": "NASA is racing to save an aging telescope from falling back to Earth with a daring rescue mission. The $30 million salvage operation gets underway as soon as this week with the planned launch of a robotic lifesaver. NASA hired startup Katalyst Space Technologies to boost the Swift Observatory to a higher orbit where it can continue hunting for some of the universe's biggest explosions. A three-armed spacecraft built by Katalyst will chase after Swift once it takes off from an atoll in the Pacific's Marshall Islands aboard an airplane-launched Pegasus rocket. Liftoff could occur as early as Tuesday. Scanning the cosmos since its launch in 2004, Swift has been sinking faster and faster because of recent intense solar activity. It needs to get to a higher, more stable orbit as soon as possible to survive.",
+        "word_count": 136,
+        "keyword_overlap": 7,
+        "strong_overlap": 3
+      },
+      {
+        "source": "CBS News",
+        "source_type": "research",
+        "text": "NASA's Hubble Space Telescope — also at risk — could be next. Like Swift, Hubble is losing altitude as the sun erupts with one flare after another. Katalyst Space CEO Ghonhee Lee said his company's next-generation robot, still in development, could save the day for the much bigger Hubble in a couple years. Only China has attempted a mission like the upcoming one, successfully boosting a satellite into a higher graveyard orbit four years ago. \"This is the first American space robot to go up and do anything like this,\" Lee told The Associated Press. \"NASA has all these big senior observatories … all of them can benefit from a service like this. So what we're proving with this mission is this is a new play in the playbook that's available.\"",
+        "word_count": 131,
+        "keyword_overlap": 6,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "A Nasa-funded robot has blasted off to catch a falling telescope in mid-orbit and blast it back to safety before it burns up.\n\nArtist's impression of the Swift observatory which was built to study the cosmos A Nasa-funded spacecraft has been sent into space to catch a falling telescope. The Swift observatory detects some of the most powerful explosions in the Universe - but is at risk of crashing back to Earth in the coming months. The small space telescope will be intercepted by the LINK craft, which will attempt to grab it with three robotic arms, and try and lift it back to a safe orbit. The rescue mission, launched on Friday, has never been attempted before, and Dr Simeon Barber, a space scientist, has said it is \"high risk\".\n\nNASA is racing to save an aging telescope from falling back to Earth with a daring rescue mission. The $30 million salvage operation gets underway as soon as this week with the planned launch of a robotic lifesaver. NASA hired startup Katalyst Space Technologies to boost the Swift Observatory to a higher orbit where it can continue hunting for some of the universe's biggest explosions. A three-armed spacecraft built by Katalyst will chase after Swift once it takes off from an atoll in the Pacific's Marshall Islands aboard an airplane-launched Pegasus rocket. Liftoff could occur as early as Tuesday. Scanning the cosmos since its launch in 2004, Swift has been sinking faster and faster because of recent intense solar activity. It needs to get to a higher, more stable orbit as soon as possible to survive.\n\nNASA's Hubble Space Telescope — also at risk — could be next. Like Swift, Hubble is losing altitude as the sun erupts with one flare after another. Katalyst Space CEO Ghonhee Lee said his company's next-generation robot, still in development, could save the day for the much bigger Hubble in a couple years. Only China has attempted a mission like the upcoming one, successfully boosting a satellite into a higher graveyard orbit four years ago. \"This is the first American space robot to go up and do anything like this,\" Lee told The Associated Press. \"NASA has all these big senior observatories … all of them can benefit from a service like this. So what we're proving with this mission is this is a new play in the playbook that's available.\"",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 887,
+      "selected_blocks": 4,
+      "selected_source_words": 398,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "CBS News",
+        "CBS News",
+        "CBS News",
+        "CBS News",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "CBS News",
+        "CBS News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Nasa launches mission to save falling space telescope",
+      "description": "A Nasa-funded robot has blasted off to catch a falling telescope in mid-orbit and blast it back to safety before it burns up.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Nasa launches mission to save falling space telescope",
+    "description": "A Nasa-funded robot has blasted off to catch a falling telescope in mid-orbit and blast it back to safety before it burns up.",
+    "link": "https://www.bbc.co.uk/news/articles/c0ry4xx7rk8o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-03T10:28:17+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "f68b1d4b89e0eb90f90be84e5ae43c17",
+    "_url_hash": "7a045f46b2d593edf5f40f4954c489a99b32347e58f71e78f03565df3895c5ed",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nArtist's impression of the Swift observatory which was built to study the cosmos\n\nA Nasa-funded spacecraft has been sent into space to catch a falling telescope.\n\nThe Swift observatory detects some of the most powerful explosions in the Universe - but is at risk of crashing back to Earth in the coming months.\n\nThe small space telescope will be intercepted by the LINK craft, which will attempt to grab it with three robotic arms, and try and lift it back to a safe orbit.\n\nThe rescue mission, launched on Friday, has never been attempted before, and Dr Simeon Barber, a space scientist, has said it is \"high risk\".\n\n\"But Nasa obviously thinks it's worth a go. And the science community is hopeful about this because it's an important telescope that enables us to study super high-energy phenomena that we have no other means to study,\" said Barber, a senior research fellow at the Open University.\n\nThe Swift observatory is falling because increased solar activity has pushed out the Earth's atmosphere such that it touches Swift. This drags on the observatory and slows it down as it orbits the Earth, lowering its altitude.\n\nWhen it was first launched it sat in an orbit at 373 miles (600 km) and has now lowered to around 220 miles (360 km), with most of that descent in the past two years.\n\nSatellites, fall to Earth and burn up on re-entry all the time. But Swift is scientifically special, beloved by the researchers who use it to peer into the very dawn of the cosmos.\n\nThe observatory, which is the size of a large car, was launched in 2004, with three telescopes aboard, to study the most powerful explosions in the Universe.\n\nThese are caused by the final, violent deaths of giant stars and by the collisions of the embers they leave behind.\n\nThey release in just a few seconds the same energy as the Sun will give out over its entire 10-billion-year lifetime. And because these precious cataclysmic moments are so brief the spacecraft has to be quick and nimble – hence its name.\n\nIn short, there is nothing like Swift, and Nasa deemed that it was a spacecraft worth saving.\n\nIn 2022, Swift captured this image of a gamma-ray burst from a massive star dying two billion light-years from Earth.\n\nThe engineers of a young company, Katalyst Space Technologies, from Flagstaff, Arizona, were given the task of saving the observatory.\n\nThey had less than a year to launch their mission before Swift fell below the altitude of 186 miles (300 km) where a rescue becomes impossible, according to\n\n---\n\n[Lähde: CBS News]\nNASA is racing to save an aging telescope from falling back to Earth with a daring rescue mission.\n\nThe $30 million salvage operation gets underway as soon as this week with the planned launch of a robotic lifesaver.\n\nNASA hired startup Katalyst Space Technologies to boost the Swift Observatory to a higher orbit where it can continue hunting for some of the universe's biggest explosions. A three-armed spacecraft built by Katalyst will chase after Swift once it takes off from an atoll in the Pacific's Marshall Islands aboard an airplane-launched Pegasus rocket. Liftoff could occur as early as Tuesday.\n\nScanning the cosmos since its launch in 2004, Swift has been sinking faster and faster because of recent intense solar activity. It needs to get to a higher, more stable orbit as soon as possible to survive.\n\nNASA's Hubble Space Telescope — also at risk — could be next.\n\nLike Swift, Hubble is losing altitude as the sun erupts with one flare after another. Katalyst Space CEO Ghonhee Lee said his company's next-generation robot, still in development, could save the day for the much bigger Hubble in a couple years.\n\nOnly China has attempted a mission like the upcoming one, successfully boosting a satellite into a higher graveyard orbit four years ago.\n\n\"This is the first American space robot to go up and do anything like this,\" Lee told The Associated Press. \"NASA has all these big senior observatories … all of them can benefit from a service like this. So what we're proving with this mission is this is a new play in the playbook that's available.\"\n\nIt will take Katalyst's autonomous spacecraft, named Lift, about a month to rendezvous with Swift and catch it, and another couple months to raise its orbit from the current 224 miles to the desired 373 miles.\n\nThe 1.6-ton gamma ray observatory must be above 185 miles for the rescue to work. It's expected to reach that point of no return in October, according to the latest estimates.\n\nRoughly the size of a small kitchen refrigerator with a 40-foot solar wingspan, Lift sports three arms with a reach of just over 3 feet. Each arm has two finger-like pinching grippers that resemble the hands of a Lego mini figure.\n\nIf all goes well, Swift could be back in business by September, according to Lee.\n\nWorth hundreds of millions of dollars, Swift was never designed to be repaired, let alone retrieved by hands — human or otherwise. That's what makes this so challenging, according to company officials, who stress there is no gu",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-03T10:54:56.728122+00:00",
+  "payload": {
+    "packet_id": "20260703T105130Z_9de28b8545",
+    "title": "Nasa yrittää pelastaa Maata kohti vajoavan Swift-avaruusteleskoopin",
+    "summary": "Nasan rahoittama pelastuslento yrittää nostaa Swift-avaruusteleskoopin turvallisemmalle kiertoradalle ennen kuin se putoaa takaisin Maahan.",
+    "content": "Nasan rahoittama robottialus on lähetetty avaruuteen ottamaan kiinni Swift-avaruusteleskooppia, joka on menettämässä korkeuttaan ja voi pudota takaisin Maahan tulevien kuukausien aikana. Tehtävän tavoitteena on tarttua teleskooppiin kolmella robottikäsivarrella ja nostaa se vakaammalle kiertoradalle, jotta se voisi jatkaa havaintojaan maailmankaikkeuden voimakkaista purkauksista.\n\n## Teleskooppi tarvitsee nopean noston\n\nSwift-observatorio on tutkinut avaruutta vuodesta 2004. Sen tehtäviin kuuluu havaita maailmankaikkeuden voimakkaimpiin kuuluvia räjähdyksiä. Nyt teleskooppi on kuitenkin vajonnut aiempaa nopeammin, mihin on liitetty viimeaikainen voimakas Auringon aktiivisuus. Lähteiden mukaan se tarvitsee korkeamman ja vakaamman kiertoradan mahdollisimman pian selviytyäkseen.\n\nNasa on palkannut Katalyst Space Technologies -yhtiön toteuttamaan noin 30 miljoonan dollarin pelastusoperaation. Katalystin rakentaman kolmivartisen aluksen on määrä ajaa Swiftin perään sen jälkeen, kun se on lähtenyt matkaan Tyynenmeren Marshallinsaarilta lentokoneesta laukaistavalla Pegasus-raketilla. Lähteiden mukaan laukaisu oli suunniteltu käynnistymään tällä viikolla, ja tehtävä laukaistiin perjantaina.\n\nPelastusyrityksen onnistuminen ei ole varmaa. Avaruustutkija Simeon Barber on kuvannut tehtävää riskialttiiksi. Tehtävän poikkeuksellisuutta korostaa se, että aluksen on määrä tavoittaa toimiva mutta vajoava avaruusteleskooppi, tarttua siihen mekaanisesti ja muuttaa sen rataa kesken lennon.\n\n## Onnistuminen voisi avata uuden huoltomallin\n\nKatalystin toimitusjohtaja Ghonhee Lee on kuvannut tehtävää ensimmäiseksi amerikkalaiseksi avaruusrobotiksi, joka yrittää tämänkaltaista operaatiota. Hänen mukaansa Nasan suuret observatoriot voisivat hyötyä vastaavasta huoltopalvelusta tulevaisuudessa. Aiemmin vain Kiina on toteuttanut samantyyppisen operaation, jossa satelliitti nostettiin korkeammalle hautausmaaradalle neljä vuotta sitten.\n\nMyös Hubble-avaruusteleskooppi menettää korkeuttaan Auringon purkausten vaikutuksesta. Leen mukaan Katalystin kehitteillä oleva seuraavan sukupolven robotti voisi mahdollisesti auttaa huomattavasti suurempaa Hubblea muutaman vuoden kuluessa. Swiftin pelastusyritys toimii siksi testinä sille, voisiko ikääntyviä avaruuslaitteita jatkossa pelastaa aktiivisella huollolla sen sijaan, että niiden annettaisiin pudota käyttöikänsä lopussa.",
+    "category": "Tiede",
+    "tags": [
+      "Nasa",
+      "Swift",
+      "avaruusteleskooppi",
+      "Katalyst Space Technologies",
+      "avaruus"
+    ],
+    "summary_bullets": [
+      "Nasa yrittää pelastaa Swift-avaruusteleskoopin putoamiselta takaisin Maahan.",
+      "Katalyst Space Technologiesin robottialus yrittää tarttua teleskooppiin kolmella käsivarrella ja nostaa sen turvallisemmalle radalle.",
+      "Onnistuminen voisi vahvistaa mallia, jossa ikääntyviä avaruuslaitteita huolletaan ja pelastetaan kiertoradalla."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.92,
+    "journalist_note": "Artikkeli perustuu neljään lähdeblokkiin. Pieni ajoitusero lähteissä on käsitelty varovaisesti: osa lähteistä kuvasi laukaisua suunnitelluksi tälle viikolle, ja toinen lähde kertoo tehtävän laukaistun perjantaina."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260703T105130Z_9de28b8545\",\n  \"title\": \"Nasa yrittää pelastaa Maata kohti vajoavan Swift-avaruusteleskoopin\",\n  \"summary\": \"Nasan rahoittama pelastuslento yrittää nostaa Swift-avaruusteleskoopin turvallisemmalle kiertoradalle ennen kuin se putoaa takaisin Maahan.\",\n  \"content\": \"Nasan rahoittama robottialus on lähetetty avaruuteen ottamaan kiinni Swift-avaruusteleskooppia, joka on menettämässä korkeuttaan ja voi pudota takaisin Maahan tulevien kuukausien aikana. Tehtävän tavoitteena on tarttua teleskooppiin kolmella robottikäsivarrella ja nostaa se vakaammalle kiertoradalle, jotta se voisi jatkaa havaintojaan maailmankaikkeuden voimakkaista purkauksista.\\n\\n## Teleskooppi tarvitsee nopean noston\\n\\nSwift-observatorio on tutkinut avaruutta vuodesta 2004. Sen tehtäviin kuuluu havaita maailmankaikkeuden voimakkaimpiin kuuluvia räjähdyksiä. Nyt teleskooppi on kuitenkin vajonnut aiempaa nopeammin, mihin on liitetty viimeaikainen voimakas Auringon aktiivisuus. Lähteiden mukaan se tarvitsee korkeamman ja vakaamman kiertoradan mahdollisimman pian selviytyäkseen.\\n\\nNasa on palkannut Katalyst Space Technologies -yhtiön toteuttamaan noin 30 miljoonan dollarin pelastusoperaation. Katalystin rakentaman kolmivartisen aluksen on määrä ajaa Swiftin perään sen jälkeen, kun se on lähtenyt matkaan Tyynenmeren Marshallinsaarilta lentokoneesta laukaistavalla Pegasus-raketilla. Lähteiden mukaan laukaisu oli suunniteltu käynnistymään tällä viikolla, ja tehtävä laukaistiin perjantaina.\\n\\nPelastusyrityksen onnistuminen ei ole varmaa. Avaruustutkija Simeon Barber on kuvannut tehtävää riskialttiiksi. Tehtävän poikkeuksellisuutta korostaa se, että aluksen on määrä tavoittaa toimiva mutta vajoava avaruusteleskooppi, tarttua siihen mekaanisesti ja muuttaa sen rataa kesken lennon.\\n\\n## Onnistuminen voisi avata uuden huoltomallin\\n\\nKatalystin toimitusjohtaja Ghonhee Lee on kuvannut tehtävää ensimmäiseksi amerikkalaiseksi avaruusrobotiksi, joka yrittää tämänkaltaista operaatiota. Hänen mukaansa Nasan suuret observatoriot voisivat hyötyä vastaavasta huoltopalvelusta tulevaisuudessa. Aiemmin vain Kiina on toteuttanut samantyyppisen operaation, jossa satelliitti nostettiin korkeammalle hautausmaaradalle neljä vuotta sitten.\\n\\nMyös Hubble-avaruusteleskooppi menettää korkeuttaan Auringon purkausten vaikutuksesta. Leen mukaan Katalystin kehitteillä oleva seuraavan sukupolven robotti voisi mahdollisesti auttaa huomattavasti suurempaa Hubblea muutaman vuoden kuluessa. Swiftin pelastusyritys toimii siksi testinä sille, voisiko ikääntyviä avaruuslaitteita jatkossa pelastaa aktiivisella huollolla sen sijaan, että niiden annettaisiin pudota käyttöikänsä lopussa.\",\n  \"category\": \"Tiede\",\n  \"tags\": [\n    \"Nasa\",\n    \"Swift\",\n    \"avaruusteleskooppi\",\n    \"Katalyst Space Technologies\",\n    \"avaruus\"\n  ],\n  \"summary_bullets\": [\n    \"Nasa yrittää pelastaa Swift-avaruusteleskoopin putoamiselta takaisin Maahan.\",\n    \"Katalyst Space Technologiesin robottialus yrittää tarttua teleskooppiin kolmella käsivarrella ja nostaa sen turvallisemmalle radalle.\",\n    \"Onnistuminen voisi vahvistaa mallia, jossa ikääntyviä avaruuslaitteita huolletaan ja pelastetaan kiertoradalla.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.92,\n  \"journalist_note\": \"Artikkeli perustuu neljään lähdeblokkiin. Pieni ajoitusero lähteissä on käsitelty varovaisesti: osa lähteistä kuvasi laukaisua suunnitelluksi tälle viikolle, ja toinen lähde kertoo tehtävän laukaistun perjantaina.\"\n}",
+  "article": {
+    "title": "Nasa yrittää pelastaa Maata kohti vajoavan Swift-avaruusteleskoopin",
+    "description": "Nasan rahoittama pelastuslento yrittää nostaa Swift-avaruusteleskoopin turvallisemmalle kiertoradalle ennen kuin se putoaa takaisin Maahan.",
+    "link": "https://www.bbc.co.uk/news/articles/c0ry4xx7rk8o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-03T10:28:17+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "f68b1d4b89e0eb90f90be84e5ae43c17",
+    "_url_hash": "7a045f46b2d593edf5f40f4954c489a99b32347e58f71e78f03565df3895c5ed",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nArtist's impression of the Swift observatory which was built to study the cosmos\n\nA Nasa-funded spacecraft has been sent into space to catch a falling telescope.\n\nThe Swift observatory detects some of the most powerful explosions in the Universe - but is at risk of crashing back to Earth in the coming months.\n\nThe small space telescope will be intercepted by the LINK craft, which will attempt to grab it with three robotic arms, and try and lift it back to a safe orbit.\n\nThe rescue mission, launched on Friday, has never been attempted before, and Dr Simeon Barber, a space scientist, has said it is \"high risk\".\n\n\"But Nasa obviously thinks it's worth a go. And the science community is hopeful about this because it's an important telescope that enables us to study super high-energy phenomena that we have no other means to study,\" said Barber, a senior research fellow at the Open University.\n\nThe Swift observatory is falling because increased solar activity has pushed out the Earth's atmosphere such that it touches Swift. This drags on the observatory and slows it down as it orbits the Earth, lowering its altitude.\n\nWhen it was first launched it sat in an orbit at 373 miles (600 km) and has now lowered to around 220 miles (360 km), with most of that descent in the past two years.\n\nSatellites, fall to Earth and burn up on re-entry all the time. But Swift is scientifically special, beloved by the researchers who use it to peer into the very dawn of the cosmos.\n\nThe observatory, which is the size of a large car, was launched in 2004, with three telescopes aboard, to study the most powerful explosions in the Universe.\n\nThese are caused by the final, violent deaths of giant stars and by the collisions of the embers they leave behind.\n\nThey release in just a few seconds the same energy as the Sun will give out over its entire 10-billion-year lifetime. And because these precious cataclysmic moments are so brief the spacecraft has to be quick and nimble – hence its name.\n\nIn short, there is nothing like Swift, and Nasa deemed that it was a spacecraft worth saving.\n\nIn 2022, Swift captured this image of a gamma-ray burst from a massive star dying two billion light-years from Earth.\n\nThe engineers of a young company, Katalyst Space Technologies, from Flagstaff, Arizona, were given the task of saving the observatory.\n\nThey had less than a year to launch their mission before Swift fell below the altitude of 186 miles (300 km) where a rescue becomes impossible, according to\n\n---\n\n[Lähde: CBS News]\nNASA is racing to save an aging telescope from falling back to Earth with a daring rescue mission.\n\nThe $30 million salvage operation gets underway as soon as this week with the planned launch of a robotic lifesaver.\n\nNASA hired startup Katalyst Space Technologies to boost the Swift Observatory to a higher orbit where it can continue hunting for some of the universe's biggest explosions. A three-armed spacecraft built by Katalyst will chase after Swift once it takes off from an atoll in the Pacific's Marshall Islands aboard an airplane-launched Pegasus rocket. Liftoff could occur as early as Tuesday.\n\nScanning the cosmos since its launch in 2004, Swift has been sinking faster and faster because of recent intense solar activity. It needs to get to a higher, more stable orbit as soon as possible to survive.\n\nNASA's Hubble Space Telescope — also at risk — could be next.\n\nLike Swift, Hubble is losing altitude as the sun erupts with one flare after another. Katalyst Space CEO Ghonhee Lee said his company's next-generation robot, still in development, could save the day for the much bigger Hubble in a couple years.\n\nOnly China has attempted a mission like the upcoming one, successfully boosting a satellite into a higher graveyard orbit four years ago.\n\n\"This is the first American space robot to go up and do anything like this,\" Lee told The Associated Press. \"NASA has all these big senior observatories … all of them can benefit from a service like this. So what we're proving with this mission is this is a new play in the playbook that's available.\"\n\nIt will take Katalyst's autonomous spacecraft, named Lift, about a month to rendezvous with Swift and catch it, and another couple months to raise its orbit from the current 224 miles to the desired 373 miles.\n\nThe 1.6-ton gamma ray observatory must be above 185 miles for the rescue to work. It's expected to reach that point of no return in October, according to the latest estimates.\n\nRoughly the size of a small kitchen refrigerator with a 40-foot solar wingspan, Lift sports three arms with a reach of just over 3 feet. Each arm has two finger-like pinching grippers that resemble the hands of a Lego mini figure.\n\nIf all goes well, Swift could be back in business by September, according to Lee.\n\nWorth hundreds of millions of dollars, Swift was never designed to be repaired, let alone retrieved by hands — human or otherwise. That's what makes this so challenging, according to company officials, who stress there is no gu",
+    "research_source": "multi",
+    "summary": "Nasan rahoittama pelastuslento yrittää nostaa Swift-avaruusteleskoopin turvallisemmalle kiertoradalle ennen kuin se putoaa takaisin Maahan.",
+    "content": "Nasan rahoittama robottialus on lähetetty avaruuteen ottamaan kiinni Swift-avaruusteleskooppia, joka on menettämässä korkeuttaan ja voi pudota takaisin Maahan tulevien kuukausien aikana. Tehtävän tavoitteena on tarttua teleskooppiin kolmella robottikäsivarrella ja nostaa se vakaammalle kiertoradalle, jotta se voisi jatkaa havaintojaan maailmankaikkeuden voimakkaista purkauksista.\n\n## Teleskooppi tarvitsee nopean noston\n\nSwift-observatorio on tutkinut avaruutta vuodesta 2004. Sen tehtäviin kuuluu havaita maailmankaikkeuden voimakkaimpiin kuuluvia räjähdyksiä. Nyt teleskooppi on kuitenkin vajonnut aiempaa nopeammin, mihin on liitetty viimeaikainen voimakas Auringon aktiivisuus. Lähteiden mukaan se tarvitsee korkeamman ja vakaamman kiertoradan mahdollisimman pian selviytyäkseen.\n\nNasa on palkannut Katalyst Space Technologies -yhtiön toteuttamaan noin 30 miljoonan dollarin pelastusoperaation. Katalystin rakentaman kolmivartisen aluksen on määrä ajaa Swiftin perään sen jälkeen, kun se on lähtenyt matkaan Tyynenmeren Marshallinsaarilta lentokoneesta laukaistavalla Pegasus-raketilla. Lähteiden mukaan laukaisu oli suunniteltu käynnistymään tällä viikolla, ja tehtävä laukaistiin perjantaina.\n\nPelastusyrityksen onnistuminen ei ole varmaa. Avaruustutkija Simeon Barber on kuvannut tehtävää riskialttiiksi. Tehtävän poikkeuksellisuutta korostaa se, että aluksen on määrä tavoittaa toimiva mutta vajoava avaruusteleskooppi, tarttua siihen mekaanisesti ja muuttaa sen rataa kesken lennon.\n\n## Onnistuminen voisi avata uuden huoltomallin\n\nKatalystin toimitusjohtaja Ghonhee Lee on kuvannut tehtävää ensimmäiseksi amerikkalaiseksi avaruusrobotiksi, joka yrittää tämänkaltaista operaatiota. Hänen mukaansa Nasan suuret observatoriot voisivat hyötyä vastaavasta huoltopalvelusta tulevaisuudessa. Aiemmin vain Kiina on toteuttanut samantyyppisen operaation, jossa satelliitti nostettiin korkeammalle hautausmaaradalle neljä vuotta sitten.\n\nMyös Hubble-avaruusteleskooppi menettää korkeuttaan Auringon purkausten vaikutuksesta. Leen mukaan Katalystin kehitteillä oleva seuraavan sukupolven robotti voisi mahdollisesti auttaa huomattavasti suurempaa Hubblea muutaman vuoden kuluessa. Swiftin pelastusyritys toimii siksi testinä sille, voisiko ikääntyviä avaruuslaitteita jatkossa pelastaa aktiivisella huollolla sen sijaan, että niiden annettaisiin pudota käyttöikänsä lopussa.",
+    "category": "Kotimaa",
+    "tags": [
+      "nasa",
+      "swift",
+      "avaruusteleskooppi",
+      "katalyst space technologies",
+      "avaruus"
+    ],
+    "summary_bullets": [
+      "Nasa yrittää pelastaa Swift-avaruusteleskoopin putoamiselta takaisin Maahan.",
+      "Katalyst Space Technologiesin robottialus yrittää tarttua teleskooppiin kolmella käsivarrella ja nostaa sen turvallisemmalle radalle.",
+      "Onnistuminen voisi vahvistaa mallia, jossa ikääntyviä avaruuslaitteita huolletaan ja pelastetaan kiertoradalla."
+    ],
+    "key_points": [
+      "Nasa yrittää pelastaa Swift-avaruusteleskoopin putoamiselta takaisin Maahan.",
+      "Katalyst Space Technologiesin robottialus yrittää tarttua teleskooppiin kolmella käsivarrella ja nostaa sen turvallisemmalle radalle.",
+      "Onnistuminen voisi vahvistaa mallia, jossa ikääntyviä avaruuslaitteita huolletaan ja pelastetaan kiertoradalla."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu neljään lähdeblokkiin. Pieni ajoitusero lähteissä on käsitelty varovaisesti: osa lähteistä kuvasi laukaisua suunnitelluksi tälle viikolle, ja toinen lähde kertoo tehtävän laukaistun perjantaina.",
+    "source_text": "A Nasa-funded robot has blasted off to catch a falling telescope in mid-orbit and blast it back to safety before it burns up.\n\nArtist's impression of the Swift observatory which was built to study the cosmos A Nasa-funded spacecraft has been sent into space to catch a falling telescope. The Swift observatory detects some of the most powerful explosions in the Universe - but is at risk of crashing back to Earth in the coming months. The small space telescope will be intercepted by the LINK craft, which will attempt to grab it with three robotic arms, and try and lift it back to a safe orbit. The rescue mission, launched on Friday, has never been attempted before, and Dr Simeon Barber, a space scientist, has said it is \"high risk\".\n\nNASA is racing to save an aging telescope from falling back to Earth with a daring rescue mission. The $30 million salvage operation gets underway as soon as this week with the planned launch of a robotic lifesaver. NASA hired startup Katalyst Space Technologies to boost the Swift Observatory to a higher orbit where it can continue hunting for some of the universe's biggest explosions. A three-armed spacecraft built by Katalyst will chase after Swift once it takes off from an atoll in the Pacific's Marshall Islands aboard an airplane-launched Pegasus rocket. Liftoff could occur as early as Tuesday. Scanning the cosmos since its launch in 2004, Swift has been sinking faster and faster because of recent intense solar activity. It needs to get to a higher, more stable orbit as soon as possible to survive.\n\nNASA's Hubble Space Telescope — also at risk — could be next. Like Swift, Hubble is losing altitude as the sun erupts with one flare after another. Katalyst Space CEO Ghonhee Lee said his company's next-generation robot, still in development, could save the day for the much bigger Hubble in a couple years. Only China has attempted a mission like the upcoming one, successfully boosting a satellite into a higher graveyard orbit four years ago. \"This is the first American space robot to go up and do anything like this,\" Lee told The Associated Press. \"NASA has all these big senior observatories … all of them can benefit from a service like this. So what we're proving with this mission is this is a new play in the playbook that's available.\"",
+    "writer_backend": "monica",
+    "writer_confidence": 0.92,
+    "degraded_mode": false,
+    "monica_packet_id": "20260703T105130Z_9de28b8545",
+    "monica_repair": {
+      "repair_attempt": "source_backed_near_short",
+      "repair_attempted_at": "2026-07-03T10:54:56.727868+00:00",
+      "repair_trigger": "pre_repair_word_count=234; selected_source_words=398; selected_source_blocks=4",
+      "pre_repair_word_count": 234,
+      "pre_repair_lead_word_count": 38,
+      "post_repair_word_count": 255,
+      "post_repair_lead_word_count": 41,
+      "selected_source_words_at_repair": 398,
+      "selected_source_blocks_at_repair": 4,
+      "source_words": 398,
+      "source_blocks": 4,
+      "repair_added_word_count": 21,
+      "repair_result": "published",
+      "repair_rejection_reason": "",
+      "source_block_ids_used_for_repair": [
+        "1:BBC World:54ff07e768",
+        "2:BBC World:1598e78f6b",
+        "3:CBS News:a90061a253",
+        "4:CBS News:c6415179bc"
+      ],
+      "final_issues": [],
+      "recovered": true
+    }
+  },
+  "repair": {
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-07-03T10:54:56.727868+00:00",
+    "repair_trigger": "pre_repair_word_count=234; selected_source_words=398; selected_source_blocks=4",
+    "pre_repair_word_count": 234,
+    "pre_repair_lead_word_count": 38,
+    "post_repair_word_count": 255,
+    "post_repair_lead_word_count": 41,
+    "selected_source_words_at_repair": 398,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 398,
+    "source_blocks": 4,
+    "repair_added_word_count": 21,
+    "repair_result": "published",
+    "repair_rejection_reason": "",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:54ff07e768",
+      "2:BBC World:1598e78f6b",
+      "3:CBS News:a90061a253",
+      "4:CBS News:c6415179bc"
+    ],
+    "final_issues": [],
+    "recovered": true
+  },
+  "duplicate_rejected_at": "2026-07-03T11:08:01.415886+00:00",
+  "duplicate_rejected": true
+}

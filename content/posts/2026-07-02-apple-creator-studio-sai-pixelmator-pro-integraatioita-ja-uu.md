@@ -43,7 +43,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/02/apple-creator-studio-paivittyi-pixelmator-pro-integraatioilla-seka-tekoalytyokaluilla-final-cut-prossa/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
