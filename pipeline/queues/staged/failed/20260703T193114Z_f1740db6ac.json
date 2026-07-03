@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-03T19:31:14.364086+00:00",
+  "digest": "f1740db6ac",
+  "packet": {
+    "packet_id": "20260703T193114Z_f1740db6ac",
+    "created_at": "2026-07-03T19:31:14Z",
+    "headline_seed": "Sotilaita kaatava uhka Ukrainan rintamalla",
+    "description_seed": "Helle tekee rintamalla kaikesta raskaampaa, sota-asiantuntija Emil Kastehelmi arvioi. – Kaikesta tulee todella paljon raskaampaa ja uuvuttavampaa. Näin sota-asiantuntija Emil Kastehelmi arvioi helteiden vaikutusta Ukrainan sotaan.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/670bce3b-82c9-4bc2-b2e0-fea976a48f82?utm_source=rss",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/670bce3b-82c9-4bc2-b2e0-fea976a48f82?utm_source=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Sotilaita kaatava uhka Ukrainan rintamalla"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Helle tekee rintamalla kaikesta raskaampaa, sota-asiantuntija Emil Kastehelmi arvioi. – Kaikesta tulee todella paljon raskaampaa ja uuvuttavampaa. Näin sota-asiantuntija Emil Kastehelmi arvioi helteiden vaikutusta Ukrainan sotaan.",
+        "word_count": 26,
+        "keyword_overlap": 18,
+        "strong_overlap": 13
+      }
+    ],
+    "source_text": "Helle tekee rintamalla kaikesta raskaampaa, sota-asiantuntija Emil Kastehelmi arvioi. – Kaikesta tulee todella paljon raskaampaa ja uuvuttavampaa. Näin sota-asiantuntija Emil Kastehelmi arvioi helteiden vaikutusta Ukrainan sotaan.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 52,
+      "selected_blocks": 1,
+      "selected_source_words": 26,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Sotilaita kaatava uhka Ukrainan rintamalla",
+      "description": "Helle tekee rintamalla kaikesta raskaampaa, sota-asiantuntija Emil Kastehelmi arvioi. – Kaikesta tulee todella paljon raskaampaa ja uuvuttavampaa. Näin sota-asiantuntija Emil Kastehelmi arvioi helteiden vaikutusta Ukrainan sotaan.",
+      "category_hint": "Ulkomaat",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Sotilaita kaatava uhka Ukrainan rintamalla",
+    "description": "Helle tekee rintamalla kaikesta raskaampaa, sota-asiantuntija Emil Kastehelmi arvioi. – Kaikesta tulee todella paljon raskaampaa ja uuvuttavampaa. Näin sota-asiantuntija Emil Kastehelmi arvioi helteiden vaikutusta Ukrainan sotaan.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/670bce3b-82c9-4bc2-b2e0-fea976a48f82?utm_source=rss",
+    "published": "2026-07-03T21:35:58+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "fd78590f95266792cf3083a6fd2ce7fc",
+    "_url_hash": "15fdb23415a2766fa02774375bd4fe6771e12e6bae461606291e1c1c763684af",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Helle tekee rintamalla kaikesta raskaampaa, sota-asiantuntija Emil Kastehelmi arvioi. – Kaikesta tulee todella paljon raskaampaa ja uuvuttavampaa. Näin sota-asiantuntija Emil Kastehelmi arvioi helteiden vaikutusta Ukrainan sotaan.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-07-03T19:33:24.012547+00:00",
+  "failure": "Lähdeaineisto on liian niukka: käytettävissä on vain lyhyt arvio helteen vaikutuksesta ilman riittäviä taustatietoja, paikkaa, ajankohtaa tai seurauksia.",
+  "raw_response": "{\"packet_id\":\"20260703T193114Z_f1740db6ac\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka: käytettävissä on vain lyhyt arvio helteen vaikutuksesta ilman riittäviä taustatietoja, paikkaa, ajankohtaa tai seurauksia.\"}"
+}

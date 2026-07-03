@@ -47,7 +47,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/03/samsung-julkistaa-pian-uudet-taittuvat-puhelimensa-ja-alykellonsa-nyt-paljastuivat-nousseet-hinnat/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
