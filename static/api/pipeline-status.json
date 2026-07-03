@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-03T19:59:24+00:00",
+  "generated_at": "2026-07-03T21:19:23+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,17 +12,19 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 42,
-    "rejected": 1,
+    "published": 40,
+    "rejected": 2,
     "publish_rate": 0,
-    "last_published_ts": "2026-07-03T19:58:05.074617+00:00"
+    "last_published_ts": "2026-07-03T21:18:05.780716+00:00"
   },
   "reject_reasons": {
+    "missing: image": 2,
     "language borderline Finnish si": 1,
     "length under target (251 words": 1,
-    "missing: image": 1,
     "unsourced numbers": 1,
-    "source_confidence_denial_conte": 1
+    "source_confidence_denial_conte": 1,
+    "length under target (288 words": 1,
+    "keyword_stuffing": 1
   },
   "feeds": {
     "total": 40,
@@ -35,23 +37,23 @@
   "trending": [
     [
       "mukaansa",
-      31
+      30
     ],
     [
       "jälkeen",
-      27
+      29
     ],
     [
       "ennen",
-      23
-    ],
-    [
-      "samalla",
-      18
+      22
     ],
     [
       "siihen",
       18
+    ],
+    [
+      "samalla",
+      17
     ]
   ]
 }

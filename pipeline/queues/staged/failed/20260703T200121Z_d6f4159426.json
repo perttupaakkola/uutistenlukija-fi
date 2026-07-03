@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-03T20:01:21.569929+00:00",
+  "digest": "d6f4159426",
+  "packet": {
+    "packet_id": "20260703T200121Z_d6f4159426",
+    "created_at": "2026-07-03T20:01:21Z",
+    "headline_seed": "Trumpille armotonta vinoilua",
+    "description_seed": "Hunter Biden irvailee istuvalle presidentille. Yhdysvaltain entisen presidentin Joe Bidenin poika Hunter Biden sanoo vitsillä ehdottavansa presidentti Donald Trumpille Nobelin rauhanpalkintoa Iranin sodan päättämisestä, kertovat People-lehti ja The Hill. – Kukaan presidentti historiassa ei ole päättänyt samaa sotaa yhtä monta kertaa, Hunter Biden veistelee X-viestipalvelussa.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/034a0936-0f03-4fdb-9b0c-ffef5cdd6d03?utm_source=rss",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/034a0936-0f03-4fdb-9b0c-ffef5cdd6d03?utm_source=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.53,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trumpille armotonta vinoilua"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Hunter Biden irvailee istuvalle presidentille. Yhdysvaltain entisen presidentin Joe Bidenin poika Hunter Biden sanoo vitsillä ehdottavansa presidentti Donald Trumpille Nobelin rauhanpalkintoa Iranin sodan päättämisestä, kertovat People-lehti ja The Hill. – Kukaan presidentti historiassa ei ole päättänyt samaa sotaa yhtä monta kertaa, Hunter Biden veistelee X-viestipalvelussa.",
+        "word_count": 45,
+        "keyword_overlap": 33,
+        "strong_overlap": 25
+      }
+    ],
+    "source_text": "Hunter Biden irvailee istuvalle presidentille. Yhdysvaltain entisen presidentin Joe Bidenin poika Hunter Biden sanoo vitsillä ehdottavansa presidentti Donald Trumpille Nobelin rauhanpalkintoa Iranin sodan päättämisestä, kertovat People-lehti ja The Hill. – Kukaan presidentti historiassa ei ole päättänyt samaa sotaa yhtä monta kertaa, Hunter Biden veistelee X-viestipalvelussa.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 90,
+      "selected_blocks": 1,
+      "selected_source_words": 45,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trumpille armotonta vinoilua",
+      "description": "Hunter Biden irvailee istuvalle presidentille. Yhdysvaltain entisen presidentin Joe Bidenin poika Hunter Biden sanoo vitsillä ehdottavansa presidentti Donald Trumpille Nobelin rauhanpalkintoa Iranin sodan päättämisestä, kertovat People-lehti ja The Hill. – Kukaan presidentti historiassa ei ole päättänyt samaa sotaa yhtä monta kertaa, Hunter Biden veistelee X-viestipalvelussa.",
+      "category_hint": "Ulkomaat",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Trumpille armotonta vinoilua",
+    "description": "Hunter Biden irvailee istuvalle presidentille. Yhdysvaltain entisen presidentin Joe Bidenin poika Hunter Biden sanoo vitsillä ehdottavansa presidentti Donald Trumpille Nobelin rauhanpalkintoa Iranin sodan päättämisestä, kertovat People-lehti ja The Hill. – Kukaan presidentti historiassa ei ole päättänyt samaa sotaa yhtä monta kertaa, Hunter Biden veistelee X-viestipalvelussa.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/034a0936-0f03-4fdb-9b0c-ffef5cdd6d03?utm_source=rss",
+    "published": "2026-07-03T22:39:29+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "a3ba97b0685e6e73431bac04bb526421",
+    "_url_hash": "fe85a91e53db1411cde63cf8e8f6e5fbc1a679549e5e75dc6f88092f4a7ee0e6",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Hunter Biden irvailee istuvalle presidentille. Yhdysvaltain entisen presidentin Joe Bidenin poika Hunter Biden sanoo vitsillä ehdottavansa presidentti Donald Trumpille Nobelin rauhanpalkintoa Iranin sodan päättämisestä, kertovat People-lehti ja The Hill. – Kukaan presidentti historiassa ei ole päättänyt samaa sotaa yhtä monta kertaa, Hunter Biden veistelee X-viestipalvelussa.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-07-03T20:03:19.578427+00:00",
+  "failure": "Lähdeaineisto on liian suppea vähintään 250 sanan julkaistavaan uutiseen ilman toistoa tai taustaoletuksia.",
+  "raw_response": "{\"packet_id\":\"20260703T200121Z_d6f4159426\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian suppea vähintään 250 sanan julkaistavaan uutiseen ilman toistoa tai taustaoletuksia.\"}"
+}
