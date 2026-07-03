@@ -6,5 +6,7 @@ date: 2026-03-27
 
 Pääsiäinen 2026 on **3.–6. huhtikuuta** (pitkäperjantai 3.4., pääsiäissunnuntai 5.4.). Tästä oppaasta löydät kaikki pääsiäiseen liittyvät uutiset, perinteet ja käytännön vinkit.
 
+Jos suunnittelet pyhien ostoksia, tarkista ensin [kauppojen aukioloajat pääsiäisenä](/paasiaisopas/kaupat-auki/).
+
 Seuraa uusimpia pääsiäisuutisia alta — päivitämme oppaan koko pyhäkauden ajan.
 ---

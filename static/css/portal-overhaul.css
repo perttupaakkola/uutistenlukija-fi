@@ -1153,3 +1153,34 @@ main.container { padding-top: 0; padding-bottom: 48px; }
     color: #ff5261;
   }
 }
+
+.paasiaisopas-utility .portal-article-header {
+  grid-template-columns: minmax(0, 720px);
+  justify-content: center;
+}
+
+.paasiaisopas-utility .portal-article-header__text {
+  min-width: 0;
+}
+
+.paasiaisopas-utility h1 {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+@media (max-width: 680px) {
+  .paasiaisopas-utility .portal-article-header {
+    padding-top: .75rem;
+  }
+
+  .paasiaisopas-utility h1 {
+    font-size: clamp(1.65rem, 8vw, 2.1rem);
+    line-height: 1.08;
+    letter-spacing: 0;
+  }
+
+  .paasiaisopas-utility .portal-article-deck {
+    font-size: .98rem;
+    line-height: 1.45;
+  }
+}

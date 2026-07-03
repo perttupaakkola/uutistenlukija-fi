@@ -1,0 +1,87 @@
+{{ define "main" }}
+{{ partial "reading-progress.html" . }}
+{{ $cat := index .Params.categories 0 | default "Uutiset" }}
+<article class="portal-article-page single-article paasiaisopas-utility">
+  <div class="portal-article-topbar">
+    <a href="/paasiaisopas/" aria-label="Takaisin pääsiäisoppaaseen">‹ Pääsiäisopas</a>
+    <span>{{ $cat }}</span>
+    <button type="button" aria-label="Jaa artikkeli">Jaa</button>
+  </div>
+
+  <header class="portal-article-header paasiaisopas-utility__header">
+    <div class="portal-article-header__text">
+      <span class="portal-kicker">{{ $cat }}</span>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.description }}<p class="portal-article-deck">{{ . }}</p>{{ end }}
+      <div class="portal-article-byline">
+        <strong>{{ .Params.author | default "Uutistenlukija" }}</strong>
+        <span>{{ .Date | time.Format "2.1.2006 15:04" }}</span>
+        {{ if gt .Lastmod.Unix .Date.Unix }}<span>Päivitetty {{ .Lastmod | time.Format "2.1.2006 15:04" }}</span>{{ end }}
+      </div>
+    </div>
+  </header>
+
+  <div class="portal-article-layout">
+    <aside class="portal-article-rail">
+      <div class="portal-article-rail__box">
+        <span>Lukuaika</span>
+        <strong>{{ partial "reading-time.html" . }}</strong>
+      </div>
+      {{ partial "share-buttons.html" . }}
+    </aside>
+    <div class="portal-article-main">
+      {{ partial "article-body.html" (dict
+        "page" .
+        "showSummaryBullets" true
+        "showSummary" false
+        "showKeyFacts" true
+        "showToc" false
+        "metaVariant" "none"
+        "showShareTop" false
+        "showSource" true
+        "splitParagraphs" true
+        "showInArticleAd" true
+        "showJournalistNote" true
+        "showTrustNote" false
+        "showAfterArticleAd" true
+        "showNewsletter" true
+        "showAuthorBox" true
+        "showBottomShare" true
+      ) }}
+    </div>
+  </div>
+
+  <div class="portal-article-below">
+    {{ partial "related-articles.html" . }}
+    {{ partial "more-from-category.html" . }}
+    {{ partial "most-read.html" (dict "Site" .Site "exclude" (slice .Permalink)) }}
+  </div>
+</article>
+
+{{ partial "read-next.html" . }}
+
+<nav class="article-nav" aria-label="Artikkelinavigointi">
+  {{ with .PrevInSection }}
+  <a href="{{ .Permalink }}" class="article-nav-prev" rel="prev">
+    <span class="article-nav-label">← Edellinen</span>
+    <span class="article-nav-title">{{ .Title }}</span>
+  </a>
+  {{ else }}<div class="article-nav-placeholder"></div>{{ end }}
+  {{ with .NextInSection }}
+  <a href="{{ .Permalink }}" class="article-nav-next" rel="next">
+    <span class="article-nav-label">Seuraava →</span>
+    <span class="article-nav-title">{{ .Title }}</span>
+  </a>
+  {{ else }}<div class="article-nav-placeholder"></div>{{ end }}
+</nav>
+
+{{ partial "scroll-to-top.html" . }}
+<script>
+(function () {
+  var btn = document.getElementById('back-to-top');
+  if (btn) btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+{{ end }}
