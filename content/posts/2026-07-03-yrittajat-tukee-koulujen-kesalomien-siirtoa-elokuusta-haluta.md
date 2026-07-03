@@ -64,3 +64,5 @@ Lempiäinen nostaa esiin myös logistiikan ja toimitusketjut. Hänen mukaansa el
 Järjestö katsoo, että muutos olisi mahdollinen nopeallakin aikataululla. Lempiäisen mukaan elokuu on jo nykyisin lomakuukausi, joten vuosilomalaki taipuisi muutokseen vaikka heti. Hänen mukaansa vientiteollisuudessa lomien painottuminen kesäkuuhun aiheuttaa tänäkin kesänä enemmän haasteita kuin elokuun lomat.
 
 Ministeriön perusteluissa esitystä kuvataan myös perheiden näkökulmasta. Kevätlukukausi pitenisi ja syyslukukausi lyhenisi viikolla, mutta kouluvuoden kokonaispituus ei muuttuisi. Pidentyvää kevätlukukautta kevennettäisiin uudella, vähintään viikon mittaisella kevätlomalla huhtikuun lopulla. Vastaava käytäntö on käytössä Ruotsissa.
+
+Seuraa yritysten ja talouden seuraavia käänteitä Uutistenlukijan [Talous-uutisista](/kategoriat/talous/).

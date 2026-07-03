@@ -7,8 +7,8 @@ set -euo pipefail
 PROJECT_ROOT="${PROJECT_ROOT:-/home/pertt/.openclaw/workspace/projects/uutistenlukija}"
 TMP_ROOT="${TMP_ROOT:-/tmp}"
 UV_CACHE="${UV_CACHE:-/home/pertt/.cache/uv}"
-QUARANTINE_ROOT="${DISK_ARTIFACT_QUARANTINE_ROOT:-$PROJECT_ROOT/data/disk_artifact_guardrail/quarantine}"
-MANIFEST_ROOT="${DISK_ARTIFACT_MANIFEST_ROOT:-$PROJECT_ROOT/data/disk_artifact_guardrail/manifests}"
+QUARANTINE_ROOT="${DISK_ARTIFACT_QUARANTINE_ROOT:-$PROJECT_ROOT/artifacts/disk_artifact_guardrail/quarantine}"
+MANIFEST_ROOT="${DISK_ARTIFACT_MANIFEST_ROOT:-$PROJECT_ROOT/artifacts/disk_artifact_guardrail/manifests}"
 MIN_TMP_AGE_MINUTES="${DISK_ARTIFACT_MIN_TMP_AGE_MINUTES:-30}"
 APPLY=0
 
@@ -20,7 +20,7 @@ Default mode is read-only and prints a compact evidence report.
 
 With --apply, the script moves only regenerated Uutistenlukija tmp build
 directories matching /tmp/uut* or /tmp/uutistenlukija-* into
-data/disk_artifact_guardrail/quarantine/ and writes a manifest. It does not
+artifacts/disk_artifact_guardrail/quarantine/ and writes a manifest. It does not
 delete uv cache, secrets, source, .git, browser profiles, backups, live queues,
 Hermes/OpenClaw DB/state, or project workspaces.
 EOF
