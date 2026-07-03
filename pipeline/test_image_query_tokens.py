@@ -179,6 +179,73 @@ class ImageQueryTokenTests(unittest.TestCase):
         self.assertFalse(accepted)
         self.assertIn("boat-repair", reason)
 
+    def test_visual_brief_lists_concepts_and_forbidden_implications(self) -> None:
+        brief = image_candidate_guard.build_visual_brief(
+            "16-vuotiaan Akseli Hinkkalan veneenkorjaus lähti kesätyön puutteesta",
+            "Talous",
+            summary="16-vuotias kunnostaa romukuntoisia veneitä ja perusti 4H-yrityksen.",
+            content="Hän korjaa soutuveneitä ja moottoriveneitä vanhempiensa kotipihalla.",
+        )
+
+        self.assertIn("boat repair workshop", brief.acceptable_concepts)
+        self.assertTrue(any("skyscrapers" in item for item in brief.hard_forbidden_implications))
+        self.assertEqual(brief.prompt_version, image_candidate_guard.PROMPT_VERSION)
+
+    def test_visual_judge_hard_fail_overrides_keyword_score(self) -> None:
+        brief = image_candidate_guard.build_visual_brief(
+            "16-vuotiaan Akseli Hinkkalan veneenkorjaus lähti kesätyön puutteesta",
+            "Talous",
+            summary="16-vuotias kunnostaa romukuntoisia veneitä ja perusti 4H-yrityksen.",
+            content="Hän korjaa soutuveneitä ja moottoriveneitä vanhempiensa kotipihalla.",
+        )
+
+        judge = image_candidate_guard.judge_visual_candidate(
+            {
+                "id": "photo-1776333089082-e6d06c8b6910",
+                "alt": "modern glass skyscrapers against a clear sky",
+                "url": "https://images.unsplash.com/photo-1776333089082-e6d06c8b6910",
+            },
+            brief=brief,
+        )
+
+        self.assertTrue(judge.hard_fail)
+        self.assertFalse(judge.accepted)
+        self.assertEqual(judge.score, 0)
+
+    def test_multi_concept_stock_rejection_records_all_candidate_failures(self) -> None:
+        brief = image_candidate_guard.build_visual_brief(
+            "16-vuotiaan Akseli Hinkkalan veneenkorjaus lähti kesätyön puutteesta",
+            "Talous",
+            summary="16-vuotias kunnostaa romukuntoisia veneitä ja perusti 4H-yrityksen.",
+            content="Hän korjaa soutuveneitä ja moottoriveneitä vanhempiensa kotipihalla.",
+        )
+        accepted, decisions = image_candidate_guard.filter_image_candidates(
+            [
+                {
+                    "id": "photo-1776333089082-e6d06c8b6910",
+                    "alt": "modern glass skyscrapers against a clear sky",
+                    "photo_page": "https://unsplash.com/photos/modern-glass-skyscrapers-against-a-clear-sky",
+                },
+                {
+                    "id": "generic-finance",
+                    "alt": "business district office towers and city skyline",
+                    "photo_page": "https://example.com/finance",
+                },
+            ],
+            query="business entrepreneur",
+            title="16-vuotiaan Akseli Hinkkalan veneenkorjaus lähti kesätyön puutteesta",
+            summary="16-vuotias kunnostaa romukuntoisia veneitä ja perusti 4H-yrityksen.",
+            content="Hän korjaa soutuveneitä ja moottoriveneitä vanhempiensa kotipihalla.",
+            provider="unsplash",
+            brief=brief,
+            concept="boat repair workshop",
+            return_decisions=True,
+        )
+
+        self.assertEqual(accepted, [])
+        self.assertEqual(len(decisions), 2)
+        self.assertTrue(all(not decision.accepted for decision in decisions))
+
     def test_audit_flags_boat_repair_article_with_skyscraper_stock_image(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             post_dir = Path(tmp)

@@ -3,6 +3,7 @@ Publisher — saves rewritten articles as Hugo content files and builds the site
 """
 
 import os
+import json
 import subprocess
 from datetime import datetime, timezone
 from typing import List, Dict
@@ -323,6 +324,16 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image_source = article.get("image_source", "")
     image_source_type = article.get("image_source_type", "")
     image_decision_reason = article.get("image_decision_reason", "")
+    image_concept = article.get("image_concept", "")
+    image_query = article.get("image_query", "")
+    image_candidate_id = article.get("image_candidate_id", "")
+    image_candidate_url = article.get("image_candidate_url", "")
+    image_visual_judge_score = article.get("image_visual_judge_score")
+    image_provider = article.get("image_provider", "")
+    image_model = article.get("image_model", "")
+    image_prompt_version = article.get("image_prompt_version", "")
+    image_accepted_reasons = article.get("image_accepted_reasons") or []
+    image_rejected_reasons = article.get("image_rejected_reasons") or []
     image_category_fallback = article.get("image_category_fallback")
     image_thumb = article.get("image_thumb", "")
     image_placeholder = article.get("image_placeholder", "")
@@ -369,6 +380,26 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image_source_line = f'\nimage_source: "{_esc(str(image_source))}"' if image_source else ""
     image_source_type_line = f'\nimage_source_type: "{_esc(str(image_source_type))}"' if image_source_type else ""
     image_decision_reason_line = f'\nimage_decision_reason: "{_esc(str(image_decision_reason))}"' if image_decision_reason else ""
+    image_concept_line = f'\nimage_concept: "{_esc(str(image_concept))}"' if image_concept else ""
+    image_query_line = f'\nimage_query: "{_esc(str(image_query))}"' if image_query else ""
+    image_candidate_id_line = f'\nimage_candidate_id: "{_esc(str(image_candidate_id))}"' if image_candidate_id else ""
+    image_candidate_url_line = f'\nimage_candidate_url: "{_esc(str(image_candidate_url))}"' if image_candidate_url else ""
+    image_visual_judge_score_line = (
+        f"\nimage_visual_judge_score: {int(image_visual_judge_score)}"
+        if image_visual_judge_score is not None and str(image_visual_judge_score).isdigit()
+        else ""
+    )
+    image_provider_line = f'\nimage_provider: "{_esc(str(image_provider))}"' if image_provider else ""
+    image_model_line = f'\nimage_model: "{_esc(str(image_model))}"' if image_model else ""
+    image_prompt_version_line = f'\nimage_prompt_version: "{_esc(str(image_prompt_version))}"' if image_prompt_version else ""
+    image_accepted_reasons_line = (
+        f"\nimage_accepted_reasons_json: '{json.dumps(image_accepted_reasons, ensure_ascii=False)}'"
+        if image_accepted_reasons else ""
+    )
+    image_rejected_reasons_line = (
+        f"\nimage_rejected_reasons_json: '{json.dumps(image_rejected_reasons, ensure_ascii=False)}'"
+        if image_rejected_reasons else ""
+    )
     image_category_fallback_line = (
         f"\nimage_category_fallback: {'true' if bool(image_category_fallback) else 'false'}"
         if image_category_fallback is not None
@@ -439,7 +470,7 @@ author: "{writer['name']}"
 author_id: "{writer['id']}"
 author_title: "{writer['title']}"
 author_bio: "{writer['bio']}"
-author_image: "{writer['image']}"{description_line}{summary_line}{summary_bullets_yaml}{key_points_yaml}{journalist_note_line}{content_type_line}{type_line}{editorial_reviewed_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{image_source_line}{image_source_type_line}{image_decision_reason_line}{image_category_fallback_line}{trending_line}{reading_time_line}{tags_yaml}{keywords_yaml}{source_name_line}{source_url_line}{source_domain_line}
+author_image: "{writer['image']}"{description_line}{summary_line}{summary_bullets_yaml}{key_points_yaml}{journalist_note_line}{content_type_line}{type_line}{editorial_reviewed_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{image_source_line}{image_source_type_line}{image_decision_reason_line}{image_concept_line}{image_query_line}{image_candidate_id_line}{image_candidate_url_line}{image_visual_judge_score_line}{image_provider_line}{image_model_line}{image_prompt_version_line}{image_accepted_reasons_line}{image_rejected_reasons_line}{image_category_fallback_line}{trending_line}{reading_time_line}{tags_yaml}{keywords_yaml}{source_name_line}{source_url_line}{source_domain_line}
 draft: false
 ---
 

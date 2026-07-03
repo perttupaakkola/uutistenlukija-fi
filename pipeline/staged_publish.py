@@ -1332,7 +1332,10 @@ def clear_image_fallback(article: dict) -> None:
             "image", "image_thumb", "image_alt", "image_credit", "image_source_url",
             "image_caption", "image_placeholder", "image_source", "image_decision",
             "image_source_type", "image_decision_reason", "image_visual_intent",
-            "image_quality_score", "image_generated_fallback",
+            "image_visual_brief", "image_quality_score", "image_generated_fallback",
+            "image_concept", "image_query", "image_candidate_id", "image_candidate_url",
+            "image_visual_judge_score", "image_accepted_reasons", "image_rejected_reasons",
+            "image_provider", "image_model", "image_prompt_version", "image_generation_prompt",
         ]:
             article.pop(key, None)
         article["image_category_fallback"] = False
@@ -1640,12 +1643,23 @@ def cmd_publish(args: argparse.Namespace) -> int:
                     "image_source": enriched.get("image_source"),
                     "image_source_type": enriched.get("image_source_type"),
                     "image_decision_reason": enriched.get("image_decision_reason"),
+                    "image_concept": enriched.get("image_concept"),
+                    "image_query": enriched.get("image_query"),
+                    "image_candidate_id": enriched.get("image_candidate_id"),
+                    "image_candidate_url": enriched.get("image_candidate_url"),
+                    "image_visual_judge_score": enriched.get("image_visual_judge_score"),
+                    "image_accepted_reasons": enriched.get("image_accepted_reasons"),
+                    "image_rejected_reasons": enriched.get("image_rejected_reasons"),
+                    "image_provider": enriched.get("image_provider"),
+                    "image_model": enriched.get("image_model"),
+                    "image_prompt_version": enriched.get("image_prompt_version"),
                 }
     log(
         "publish: images "
         f"{image_summary['images']}/{image_summary['total']} "
-        f"unsplash={image_summary['unsplash']} pexels={image_summary['pexels']} "
-        f"missing={image_summary['missing']}"
+        f"unsplash={image_summary.get('unsplash', 0)} pexels={image_summary.get('pexels', 0)} "
+        f"generated={image_summary.get('generated', 0)} category_fallback={image_summary.get('category_fallback', 0)} "
+        f"missing={image_summary.get('missing', 0)}"
     )
     if args.dry_run:
         log(f"publish: dry-run would publish {len(articles)} article(s)")

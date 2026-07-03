@@ -13,7 +13,9 @@ from typing import Any
 
 
 ACCEPT_THRESHOLD = 55
+VISUAL_JUDGE_ACCEPT_THRESHOLD = 45
 MISMATCH_SCORE = 0
+PROMPT_VERSION = "image-flow-v2-2026-07-03"
 
 WINTER_TERMS = {
     "snow", "snowy", "snowfall", "snowstorm", "winter", "ice", "icy",
@@ -108,6 +110,19 @@ class ImageIntent:
 
 
 @dataclass(frozen=True)
+class VisualBrief:
+    acceptable_concepts: list[str]
+    hard_forbidden_implications: list[str]
+    intent: ImageIntent
+    prompt_version: str = PROMPT_VERSION
+
+    def to_dict(self) -> dict[str, Any]:
+        data = asdict(self)
+        data["intent"] = self.intent.to_dict()
+        return data
+
+
+@dataclass(frozen=True)
 class CandidateDecision:
     provider: str
     candidate_id: str
@@ -115,6 +130,18 @@ class CandidateDecision:
     score: int
     accepted: bool
     reasons: list[str]
+
+    def to_dict(self) -> dict[str, Any]:
+        return asdict(self)
+
+
+@dataclass(frozen=True)
+class VisualJudgeDecision:
+    score: int
+    accepted: bool
+    reasons: list[str]
+    hard_fail: bool = False
+    prompt_version: str = PROMPT_VERSION
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -219,6 +246,89 @@ def build_image_intent(
     )
 
 
+def build_visual_brief(
+    title: str,
+    category: str = "",
+    *,
+    summary: str = "",
+    key_points: list[str] | None = None,
+    content: str = "",
+    query: str = "",
+) -> VisualBrief:
+    """Build the Image Flow v2 structured brief from article text."""
+    intent = build_image_intent(
+        title,
+        category,
+        summary=summary,
+        key_points=key_points,
+        content=content,
+        query=query,
+    )
+    article_tokens = _tokens(title, summary, " ".join(key_points or []), content, query)
+    concepts: list[str] = []
+    forbidden = list(intent.must_not)
+
+    if "boat repair or small craft restoration" in intent.must_have:
+        concepts.extend([
+            "boat repair workshop",
+            "small craft restoration",
+            "rowboat maintenance",
+        ])
+        forbidden.extend([
+            "skyscrapers or glass office towers",
+            "generic finance skyline",
+            "corporate city district",
+        ])
+    if article_tokens & WEATHER_TERMS:
+        if article_tokens & SUN_TERMS:
+            concepts.append("sunny Finnish weather")
+        elif article_tokens & RAIN_TERMS:
+            concepts.append("rainy Finnish weather")
+        elif article_tokens & WINTER_TERMS:
+            concepts.append("winter weather")
+        else:
+            concepts.append("weather forecast")
+    if not concepts:
+        concepts.extend([
+            intent.subject,
+            intent.setting,
+        ])
+
+    return VisualBrief(
+        acceptable_concepts=[c for c in dict.fromkeys(concepts) if c],
+        hard_forbidden_implications=[f for f in dict.fromkeys(forbidden) if f],
+        intent=intent,
+    )
+
+
+def build_stock_queries(
+    title: str,
+    category: str = "",
+    *,
+    summary: str = "",
+    key_points: list[str] | None = None,
+    content: str = "",
+    primary_query: str = "",
+) -> list[tuple[str, str, VisualBrief]]:
+    """Return bounded stock search concepts for Image Flow v2."""
+    brief = build_visual_brief(
+        title,
+        category,
+        summary=summary,
+        key_points=key_points,
+        content=content,
+        query=primary_query,
+    )
+    queries: list[tuple[str, str, VisualBrief]] = []
+    if primary_query and not brief.intent.must_have:
+        return [(primary_query, "primary_query", brief)]
+    for concept in brief.acceptable_concepts[:3]:
+        queries.append((concept, concept, brief))
+    if primary_query and primary_query not in {q for q, _, _ in queries}:
+        queries.append((primary_query, "primary_query", brief))
+    return queries[:4] or [(primary_query or brief.intent.subject, "primary_query", brief)]
+
+
 def _source_id(candidate: dict[str, Any]) -> tuple[str, str]:
     candidate_id = str(candidate.get("id") or "unknown")
     source_url = str(candidate.get("photo_page") or candidate.get("pexels_url") or candidate.get("url") or "")
@@ -310,6 +420,58 @@ def score_image_candidate(
     return CandidateDecision(provider, candidate_id, source_url, score, accepted, reasons)
 
 
+def judge_visual_candidate(
+    candidate: dict[str, Any],
+    *,
+    brief: VisualBrief,
+    provider: str = "image",
+) -> VisualJudgeDecision:
+    """Deterministic local visual judge over available image metadata.
+
+    Production can replace this with an actual vision-model call, but the gate is
+    already fail-closed: hard forbidden implications and uncertainty override the
+    keyword/category score.
+    """
+    candidate_tokens = _tokens(_candidate_text(candidate))
+    text = _candidate_text(candidate).lower()
+    reasons: list[str] = []
+    hard_fails: list[str] = []
+
+    for forbidden in brief.hard_forbidden_implications:
+        forbidden_tokens = _tokens(forbidden)
+        if forbidden_tokens and candidate_tokens & forbidden_tokens:
+            hard_fails.append(f"forbidden visual implication: {forbidden}")
+
+    if hard_fails:
+        return VisualJudgeDecision(MISMATCH_SCORE, False, hard_fails, hard_fail=True)
+
+    score = 25
+    for concept in brief.acceptable_concepts:
+        concept_tokens = _tokens(concept)
+        overlap = concept_tokens & candidate_tokens
+        if overlap:
+            score += min(35, 12 * len(overlap))
+            reasons.append(f"visual metadata supports concept '{concept}'")
+
+    for required in brief.intent.must_have:
+        required_tokens = _tokens(required)
+        overlap = required_tokens & candidate_tokens
+        if overlap:
+            score += min(25, 10 * len(overlap))
+            reasons.append(f"visual metadata supports required cue '{required}'")
+
+    if not text.strip():
+        score = min(score, 45)
+        reasons.append("visual judge uncertain: no image metadata")
+    if not reasons:
+        reasons.append("visual judge uncertain: no acceptable concept evidence")
+
+    accepted = score >= VISUAL_JUDGE_ACCEPT_THRESHOLD
+    if not accepted:
+        reasons.append(f"visual judge score below threshold {VISUAL_JUDGE_ACCEPT_THRESHOLD}")
+    return VisualJudgeDecision(min(score, 100), accepted, reasons, hard_fail=False)
+
+
 def vet_image_candidate(
     candidate: dict[str, Any],
     *,
@@ -343,16 +505,20 @@ def filter_image_candidates(
     content: str = "",
     provider: str = "image",
     intent: ImageIntent | None = None,
+    brief: VisualBrief | None = None,
+    concept: str = "",
     return_decisions: bool = False,
 ) -> list[dict[str, Any]] | tuple[list[dict[str, Any]], list[CandidateDecision]]:
     """Filter stock candidates, preserving scored decision evidence."""
-    intent = intent or build_image_intent(
+    brief = brief or build_visual_brief(
         title,
+        "",
         summary=summary,
         key_points=key_points,
         content=content,
         query=query,
     )
+    intent = intent or brief.intent
     accepted: list[dict[str, Any]] = []
     decisions: list[CandidateDecision] = []
     for candidate in candidates:
@@ -366,11 +532,24 @@ def filter_image_candidates(
             content=content,
             provider=provider,
         )
+        judge = judge_visual_candidate(candidate, brief=brief, provider=provider)
+        if decision.accepted and not judge.accepted:
+            decision = CandidateDecision(
+                provider,
+                decision.candidate_id,
+                decision.source_url,
+                decision.score,
+                False,
+                [*decision.reasons, *judge.reasons],
+            )
         decisions.append(decision)
         if decision.accepted:
             enriched = dict(candidate)
             enriched["_image_decision"] = decision.to_dict()
             enriched["_image_visual_intent"] = intent.to_dict()
+            enriched["_image_visual_brief"] = brief.to_dict()
+            enriched["_image_visual_judge"] = judge.to_dict()
+            enriched["_image_concept"] = concept or query
             accepted.append(enriched)
         else:
             print(f"[{provider}] Rejected image candidate {decision.candidate_id}: {'; '.join(decision.reasons)}")
@@ -396,10 +575,13 @@ def category_fallback_fields(category: str, *, reason: str) -> dict[str, Any]:
         "image_source": "category_fallback",
         "image_source_type": "category_fallback",
         "image_decision_reason": reason,
+        "image_prompt_version": PROMPT_VERSION,
+        "image_visual_judge_score": 0,
         "image_decision": {
             "source": "category_fallback",
             "accepted": True,
             "reason": reason,
+            "prompt_version": PROMPT_VERSION,
         },
     }
 
@@ -408,21 +590,81 @@ def stock_decision_fields(provider: str, result: dict[str, Any], query: str) -> 
     """Frontmatter-safe stock decision evidence."""
     decision = result.get("decision") or result.get("_image_decision") or {}
     intent = result.get("intent") or result.get("_image_visual_intent") or {}
+    brief = result.get("brief") or result.get("_image_visual_brief") or {}
+    judge = result.get("visual_judge") or result.get("_image_visual_judge") or {}
+    concept = result.get("concept") or result.get("_image_concept") or query
     reasons = [str(reason) for reason in decision.get("reasons", []) if str(reason).strip()]
     return {
         "image_source": provider,
         "image_source_type": "stock",
         "image_decision_reason": "; ".join(reasons) or f"{provider} accepted",
         "image_visual_intent": intent,
+        "image_visual_brief": brief,
+        "image_concept": concept,
+        "image_query": query,
+        "image_candidate_id": decision.get("candidate_id"),
+        "image_candidate_url": decision.get("source_url"),
+        "image_visual_judge_score": judge.get("score"),
+        "image_accepted_reasons": reasons,
+        "image_rejected_reasons": [],
+        "image_prompt_version": PROMPT_VERSION,
         "image_decision": {
             "source": provider,
             "query": query,
+            "concept": concept,
             "accepted": True,
             "score": decision.get("score"),
             "candidate_id": decision.get("candidate_id"),
             "source_url": decision.get("source_url"),
+            "visual_judge_score": judge.get("score"),
+            "visual_judge_reasons": judge.get("reasons", []),
             "reasons": reasons,
+            "prompt_version": PROMPT_VERSION,
         },
         "image_quality_score": decision.get("score"),
         "image_category_fallback": False,
+    }
+
+
+def generated_decision_fields(
+    *,
+    provider: str,
+    model: str,
+    prompt: str,
+    image_path: str,
+    brief: VisualBrief | dict[str, Any],
+    judge: VisualJudgeDecision | dict[str, Any],
+    reason: str,
+) -> dict[str, Any]:
+    brief_dict = brief.to_dict() if hasattr(brief, "to_dict") else dict(brief or {})
+    judge_dict = judge.to_dict() if hasattr(judge, "to_dict") else dict(judge or {})
+    accepted = bool(judge_dict.get("accepted"))
+    return {
+        "image_source": "generated",
+        "image_source_type": "generated_editorial",
+        "image_decision_reason": reason,
+        "image_generated_fallback": True,
+        "image_visual_brief": brief_dict,
+        "image_visual_intent": brief_dict.get("intent", {}),
+        "image_concept": (brief_dict.get("acceptable_concepts") or ["generated editorial"])[0],
+        "image_query": "",
+        "image_candidate_id": image_path,
+        "image_candidate_url": image_path,
+        "image_visual_judge_score": judge_dict.get("score"),
+        "image_accepted_reasons": judge_dict.get("reasons", []) if accepted else [],
+        "image_rejected_reasons": [] if accepted else judge_dict.get("reasons", []),
+        "image_provider": provider,
+        "image_model": model,
+        "image_prompt_version": PROMPT_VERSION,
+        "image_generation_prompt": prompt,
+        "image_decision": {
+            "source": "generated",
+            "accepted": accepted,
+            "reason": reason,
+            "provider": provider,
+            "model": model,
+            "prompt_version": PROMPT_VERSION,
+            "visual_judge_score": judge_dict.get("score"),
+            "visual_judge_reasons": judge_dict.get("reasons", []),
+        },
     }

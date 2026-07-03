@@ -152,15 +152,15 @@ def generate_article_image(
     slug: str,
     *,
     intent: dict[str, Any] | None = None,
-) -> Optional[str]:
-    """Generate a header image for an article. Returns relative path or None."""
+) -> Optional[tuple[str, str]]:
+    """Generate a header image for an article. Returns (relative path, prompt) or None."""
     os.makedirs(IMAGE_DIR, exist_ok=True)
 
     filepath = os.path.join(IMAGE_DIR, f"{slug}.jpg")
     webpath = f"/images/articles/{slug}.jpg"
 
     if os.path.exists(filepath):
-        return webpath
+        return webpath, _build_generation_prompt(title, category, intent)
 
     prompt = _build_generation_prompt(title, category, intent)
 
@@ -188,7 +188,7 @@ def generate_article_image(
         urllib.request.urlretrieve(image_url, filepath)
         size = os.path.getsize(filepath)
         print(f"[image_gen] Downloaded {slug}.jpg ({size} bytes)")
-        return webpath
+        return webpath, prompt
 
     except Exception as e:
         print(f"[image_gen] Error generating image for '{title[:40]}': {e}")
@@ -235,17 +235,23 @@ def generate_images_for_articles(articles: List[Dict], max_total_sec: int = MAX_
             slug = re.sub(r'[\s-]+', '-', slug).strip('-')[:60].rstrip('-')
 
         try:
-            from image_candidate_guard import build_image_intent
+            from image_candidate_guard import (
+                build_visual_brief,
+                generated_decision_fields,
+                judge_visual_candidate,
+            )
             key_points = list(article.get("key_points") or [])
             key_points.extend(article.get("tags") or [])
-            intent = build_image_intent(
+            brief = build_visual_brief(
                 title,
                 category,
                 summary=article.get("summary", "") or "",
                 key_points=key_points,
                 content=article.get("content", "") or "",
-            ).to_dict()
+            )
+            intent = brief.intent.to_dict()
         except Exception:
+            brief = {}
             intent = {}
 
         if intent and not intent.get("generated_ok", True):
@@ -253,8 +259,26 @@ def generate_images_for_articles(articles: List[Dict], max_total_sec: int = MAX_
             consecutive_failures += 1
             continue
 
-        image_path = generate_article_image(title, category, slug, intent=intent)
-        if image_path:
+        generated = generate_article_image(title, category, slug, intent=intent)
+        if generated:
+            image_path, prompt = generated
+            try:
+                judge = judge_visual_candidate(
+                    {
+                        "id": image_path,
+                        "alt": prompt,
+                        "description": " ".join((brief.acceptable_concepts if hasattr(brief, "acceptable_concepts") else []) or []),
+                        "url": image_path,
+                    },
+                    brief=brief,
+                    provider="generated",
+                )
+            except Exception:
+                judge = {"score": 0, "accepted": False, "reasons": ["visual judge unavailable"]}
+            if hasattr(judge, "accepted") and not judge.accepted:
+                consecutive_failures += 1
+                print(f"[image_gen] Generated image rejected by visual judge for '{title[:40]}'")
+                continue
             article["image"] = image_path
             article["image_alt"] = _build_alt_text(title, category)
             article["image_thumb"] = image_path
@@ -263,17 +287,15 @@ def generate_images_for_articles(articles: List[Dict], max_total_sec: int = MAX_
             article["image_caption"] = ""
             article["image_hotlink"] = False
             article["image_category_fallback"] = False
-            article["image_source"] = "generated"
-            article["image_source_type"] = "generated_editorial"
-            article["image_decision_reason"] = "stock candidates unavailable or rejected"
-            article["image_generated_fallback"] = True
-            article["image_visual_intent"] = intent
-            article["image_decision"] = {
-                "source": "generated",
-                "accepted": True,
-                "reason": "stock candidates unavailable or rejected",
-                "safety_mode": intent.get("safety_mode") if intent else "normal",
-            }
+            article.update(generated_decision_fields(
+                provider="kie.ai",
+                model="z-image",
+                prompt=prompt,
+                image_path=image_path,
+                brief=brief,
+                judge=judge,
+                reason="stock candidates unavailable or rejected; KIE generated editorial fallback accepted",
+            ))
             consecutive_failures = 0  # reset on success
         else:
             consecutive_failures += 1

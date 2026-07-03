@@ -66,7 +66,7 @@ def audit_recent(limit: int) -> list[dict[str, object]]:
 
         if image_source in {"unsplash", "pexels"} or source_url:
             candidate = {
-                "id": fm.get("image_id") or path.stem,
+                "id": fm.get("image_candidate_id") or fm.get("image_id") or path.stem,
                 "alt": fm.get("image_alt", ""),
                 "photo_page": source_url,
                 "pexels_url": source_url,
@@ -76,13 +76,13 @@ def audit_recent(limit: int) -> list[dict[str, object]]:
                 fm.get("title", ""),
                 fm.get("category", ""),
                 summary=fm.get("description", ""),
-                query=fm.get("image_query", ""),
+                query=fm.get("image_query", "") or fm.get("image_concept", ""),
                 content=_body(path),
             )
             decision = score_image_candidate(
                 candidate,
                 intent=intent,
-                query=fm.get("image_query", ""),
+                query=fm.get("image_query", "") or fm.get("image_concept", ""),
                 title=fm.get("title", ""),
                 summary=fm.get("description", ""),
                 content=_body(path),

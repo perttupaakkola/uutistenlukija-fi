@@ -409,39 +409,44 @@ def fetch_image_for_article(
         )
     print(f"[unsplash] '{title[:50]}' → '{query}'")
 
-    photos = _search(query)
-
     # Filter out already used images
     try:
         from image_state import is_image_used, mark_image_used, get_query_index, set_query_index
-        from image_candidate_guard import build_image_intent, filter_image_candidates, stock_decision_fields
-        available_photos = [p for p in photos if not is_image_used(p["id"])]
+        from image_candidate_guard import build_stock_queries, filter_image_candidates, stock_decision_fields
     except ImportError:
-        available_photos = photos
         mark_image_used = lambda x: None
         get_query_index = lambda x: _query_index.get(x, 0)
         set_query_index = lambda x, y: _query_index.update({x: y})
-        from image_candidate_guard import build_image_intent, filter_image_candidates, stock_decision_fields
+        from image_candidate_guard import build_stock_queries, filter_image_candidates, stock_decision_fields
 
-    intent = build_image_intent(
+    stock_queries = build_stock_queries(
         title,
         category,
         summary=summary,
         key_points=key_points,
         content=content,
-        query=query,
+        primary_query=query,
     )
-    available_photos = filter_image_candidates(
-        available_photos,
-        query=query,
-        title=title,
-        summary=summary,
-        key_points=key_points,
-        content=content,
-        provider="unsplash",
-        intent=intent,
-    )
+    available_photos = []
     selected_query = query
+    for candidate_query, concept, brief in stock_queries:
+        photos = _search(candidate_query)
+        fresh = [p for p in photos if not is_image_used(p["id"])]
+        available_photos = filter_image_candidates(
+            fresh,
+            query=candidate_query,
+            title=title,
+            summary=summary,
+            key_points=key_points,
+            content=content,
+            provider="unsplash",
+            intent=brief.intent,
+            brief=brief,
+            concept=concept,
+        )
+        selected_query = candidate_query
+        if available_photos:
+            break
 
     if not available_photos and category in CATEGORY_QUERIES:
         if blocks_broad_category_fallback(title, summary=summary, key_points=key_points, content=content):
@@ -459,7 +464,9 @@ def fetch_image_for_article(
             key_points=key_points,
             content=content,
             provider="unsplash",
-            intent=intent,
+            intent=stock_queries[0][2].intent,
+            brief=stock_queries[0][2],
+            concept=fallback_query,
         )
         selected_query = fallback_query
 
@@ -488,7 +495,10 @@ def fetch_image_for_article(
         "credit": f"Photo by {photographer} on Unsplash",
         "hotlink": True,  # must NOT be downloaded/cached locally
         "decision": photo.get("_image_decision", {}),
-        "intent": photo.get("_image_visual_intent", intent.to_dict()),
+        "intent": photo.get("_image_visual_intent", stock_queries[0][2].intent.to_dict()),
+        "brief": photo.get("_image_visual_brief", {}),
+        "visual_judge": photo.get("_image_visual_judge", {}),
+        "concept": photo.get("_image_concept", selected_query),
     }
     result.update(stock_decision_fields("unsplash", result, selected_query))
     return result

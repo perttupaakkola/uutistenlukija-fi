@@ -11,10 +11,12 @@ from unittest.mock import patch
 try:
     from . import staged_publish
     from . import publisher
+    from . import image_gen
     from .image_candidate_guard import category_fallback_fields, stock_decision_fields
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
     import staged_publish
     import publisher
+    import image_gen
     from image_candidate_guard import category_fallback_fields, stock_decision_fields
 
 
@@ -459,6 +461,28 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(articles[0]["image_source_type"], "generated_editorial")
         self.assertIn("stock candidates", articles[0]["image_decision_reason"])
 
+    def test_enrich_images_uses_category_fallback_when_generated_visual_judge_fails(self) -> None:
+        articles = [{"title": "Sääartikkeli", "category": "Kotimaa", "content": "aurinkoinen sää"}]
+
+        def rejected_stock(batch, delay=0):
+            batch[0].update(staged_publish.category_fallback_fields("Kotimaa", reason="stock rejected"))
+            return batch
+
+        def rejected_generated(batch, max_total_sec=180):
+            batch[0].update(staged_publish.category_fallback_fields("Kotimaa", reason="generated visual judge rejected"))
+            return batch
+
+        with patch.dict(staged_publish.os.environ, {"UNSPLASH_ACCESS_KEY": "key", "PEXELS_API_KEY": "key", "KIE_API_KEY": "key"}, clear=False), \
+             patch.object(staged_publish, "should_skip", return_value=(False, None)), \
+             patch.object(staged_publish, "unsplash_fetch_images", side_effect=rejected_stock), \
+             patch.object(staged_publish, "pexels_fetch_images", side_effect=rejected_stock), \
+             patch.object(staged_publish, "generate_images_for_articles", side_effect=rejected_generated):
+            summary = staged_publish.enrich_images_for_articles(articles, unsplash_delay=0, pexels_delay=0)
+
+        self.assertEqual(summary["generated"], 0)
+        self.assertEqual(summary["category_fallback"], 1)
+        self.assertEqual(articles[0]["image_source"], "category_fallback")
+
     def test_enrich_images_uses_neutral_fallback_when_generation_unavailable(self) -> None:
         articles = [{"title": "Sääartikkeli", "category": "Kotimaa", "content": "aurinkoinen sää"}]
 
@@ -480,6 +504,26 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(articles[0]["image_source"], "category_fallback")
         self.assertEqual(articles[0]["image_source_type"], "category_fallback")
         self.assertEqual(articles[0]["image_decision_reason"], "generated fallback unavailable, unsafe, or failed after stock rejection")
+
+    def test_kie_generated_fallback_is_one_attempt_and_persists_evidence(self) -> None:
+        articles = [{
+            "title": "Veneenkorjaus toi nuorelle kesätyön",
+            "category": "Talous",
+            "slug": "veneenkorjaus",
+            "summary": "Nuori korjaa soutuveneitä ja moottoriveneitä.",
+            "content": "4H-yrittäjyys, vene, korjaus ja kunnostaminen ovat jutun ydintä.",
+        }]
+
+        with patch.object(image_gen, "generate_article_image", return_value=("/images/articles/veneenkorjaus.jpg", "boat repair prompt")) as generated:
+            image_gen.generate_images_for_articles(articles, max_total_sec=180)
+
+        generated.assert_called_once()
+        self.assertEqual(articles[0]["image_source"], "generated")
+        self.assertEqual(articles[0]["image_source_type"], "generated_editorial")
+        self.assertEqual(articles[0]["image_provider"], "kie.ai")
+        self.assertEqual(articles[0]["image_model"], "z-image")
+        self.assertEqual(articles[0]["image_prompt_version"], "image-flow-v2-2026-07-03")
+        self.assertGreaterEqual(articles[0]["image_visual_judge_score"], 45)
 
     def test_stock_decision_fields_emit_policy_metadata(self) -> None:
         fields = stock_decision_fields("unsplash", {
