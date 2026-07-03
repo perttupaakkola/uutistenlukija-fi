@@ -69,3 +69,5 @@ Myös The Browser Company, joka tunnetaan Arc-selaimesta, on tuonut esiin Dia-ni
 Uusien selainten kenttä ei rajoitu tekoälyyn. Vaihtoehtoja etsiville käyttäjille on tarjolla myös avoimen lähdekoodin selaimia, jotka korostavat muokattavuutta ja yksityisyyttä. Lisäksi esiin on noussut niin sanottuja mindful browsers -tyyppisiä selaimia, joiden tavoitteena on tukea käyttäjän hyvinvointia.
 
 Kokonaisuutena selainten uusi kilpailuvaihe kertoo siitä, että verkkoselaimesta on tulossa aiempaa aktiivisempi osa käyttäjän arkea. Seuraava erottautumisen paikka ei välttämättä ole pelkkä nopeus tai hakutulos, vaan se, kuinka luotettavasti selain pystyy toimimaan käyttäjän apuna ilman että perinteiset selainominaisuudet jäävät taka-alalle.
+
+Lue seuraavaksi lisää [teknologiauutisia](/categories/teknologia/).
