@@ -67,3 +67,5 @@ Ensimmäisten pesukohteiden käynnistäminen on viivästynyt lupaprosessin vuoks
 Ikkunoiden peseminen droonilla edellyttää sääntöjen mukaan lentäjän lisäksi maahenkilöä. Hänen tehtävänään on varmistaa, että työalue on eristetty eikä ulkopuolisia pääse sen sisälle.
 
 Droonia lennetään maasta käsin. Laite kantaa mukanaan noin kuuden kilon kuormaa, joka koostuu vesiletkusta ja pesuvedestä. Pesuaineseos ohjataan seiniin ja ikkunoihin painepesurisuuttimen kautta. Yrityksen mukaan pesuveden ominaisuuksia voidaan säätää matalapaineesta korkeampaan paineeseen kohteen mukaan.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
