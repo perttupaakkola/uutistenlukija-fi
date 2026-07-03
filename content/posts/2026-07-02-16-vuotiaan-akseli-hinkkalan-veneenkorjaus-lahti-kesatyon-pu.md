@@ -22,11 +22,15 @@ journalist_note: |
   Artikkeli perustuu annettuun lähdepakettiin. Mukana on vain paketissa esiintyviä tietoja; katkennutta sitaattia ei käytetty julkaisukopiossa.
 content_type: "article"
 editorial_reviewed: true
-image: "https://images.unsplash.com/photo-1776333089082-e6d06c8b6910?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyNXx8YnVzaW5lc3MlMjBmaW5hbmNlJTIwZWNvbm9teXxlbnwxfDB8fHwxNzgyNzg3Njg1fDA&ixlib=rb-4.1.0&q=80&w=1080"
-image_thumb: "https://images.unsplash.com/photo-1776333089082-e6d06c8b6910?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyNXx8YnVzaW5lc3MlMjBmaW5hbmNlJTIwZWNvbm9teXxlbnwxfDB8fHwxNzgyNzg3Njg1fDA&ixlib=rb-4.1.0&q=80&w=400"
-image_alt: "Kuvituskuva uutiseen: 16-vuotiaan Akseli Hinkkalan veneenkorjaus lähti kesätyön puutteesta (4h-yrittäjyys, kesätyö)"
-image_credit: "Photo by Valiant Lambda on Unsplash"
-image_source_url: "https://unsplash.com/photos/modern-glass-skyscrapers-against-a-clear-sky-aNfLTcFml3Q?utm_source=uutistenlukija&utm_medium=referral"
+image: "/images/categories/talous.jpg"
+image_thumb: "/images/categories/talous.jpg"
+image_alt: "Talous-uutiset"
+image_credit: ""
+image_source_url: ""
+image_category_fallback: true
+image_source: "category_fallback"
+image_source_type: "category_fallback"
+image_decision_reason: "manual_subject_mismatch_backfill"
 reading_time: 1
 tags:
   - 4h-yrittäjyys
