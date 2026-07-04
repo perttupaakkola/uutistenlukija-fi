@@ -67,3 +67,5 @@ Taustalla oli erityisesti se, että syrjäseuduilla pakettiautomaatit voivat oll
 Postilaatikon kehityksen rinnalla yhtiössä alettiin ideoida laajemmin monilukkohallintaa. Sen tuloksena syntyivät kännykän sovelluksesta hallinnoitavat avainboksi ja riippulukko.
 
 Gardi valmistaa itse sekä fyysiset tuotteet että niiden taustalla toimivan ohjelmiston. Heimanin mukaan avainsäiliö vaikuttaa tällä hetkellä nousevan yhtiön päätuotteeksi, ja avainboksille sekä riippulukolle näyttää olevan voimakasta kysyntää.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
