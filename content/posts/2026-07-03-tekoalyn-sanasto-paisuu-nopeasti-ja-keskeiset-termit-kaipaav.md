@@ -70,3 +70,5 @@ Myös tekoälyagentin määritelmä vaihtelee. Ala on vielä varhaisessa vaihees
 ## Sanasto elää alan mukana
 
 Tekoälykeskustelun kieli muuttuu samalla kun teknologia kehittyy. Siksi termien selittäminen ei ole vain aloittelijoiden apuväline, vaan myös tapa pitää kiinni siitä, mistä teknologia-alan keskusteluissa todella puhutaan.
+
+Lue seuraavaksi lisää [teknologiauutisia](/categories/teknologia/).
