@@ -47,7 +47,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/kehutun-kyberpunk-pelin-jatko-ei-ole-poissuljettu-kehittajilla-on-jo-ideoita-jatkoa-varten/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
