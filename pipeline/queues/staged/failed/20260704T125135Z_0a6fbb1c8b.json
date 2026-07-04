@@ -1,0 +1,193 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-04T12:51:35.551565+00:00",
+  "digest": "0a6fbb1c8b",
+  "packet": {
+    "packet_id": "20260704T125135Z_0a6fbb1c8b",
+    "created_at": "2026-07-04T12:51:35Z",
+    "headline_seed": "Ukraine hits major oil terminal in Russia's St Petersburg",
+    "description_seed": "Ukrainian President Volodymyr Zelensky says the target is key infrastructure \"that generates revenue for Russia's war\".",
+    "link": "https://www.bbc.co.uk/news/articles/c8j2vmzxezro?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "CBC.ca",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/c8j2vmzxezro?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ukraine hits major oil terminal in Russia's St Petersburg"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Ukraine's military described St Petersburg's oil terminal as \"one of the largest\" in Russia Ukraine has struck a major oil terminal in Russia's second city of St Petersburg and other targets in the country's north-west. In a post on social media, President Volodymyr Zelensky wrote: \"Ukraine's defence forces struck port oil infrastructure that generates revenue for Russia's war.\" He also said an \"important military target\" was hit overnight in Kronstadt, a nearby naval base. St Petersburg Governor Aleksandr Beglov said the city was under a \"massive\" drone attack, admitting the oil terminal was hit. He reported no casualties. Ukraine has in recent months intensified its long-range drone attacks on Russia's critical energy infrastructure, causing fuel shortages in a number of regions.",
+        "word_count": 121,
+        "keyword_overlap": 13,
+        "strong_overlap": 11
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Ukrainian President Volodymyr Zelensky says the target is key infrastructure \"that generates revenue for Russia's war\".",
+        "word_count": 16,
+        "keyword_overlap": 11,
+        "strong_overlap": 9
+      },
+      {
+        "source": "CBC.ca",
+        "source_type": "research",
+        "text": "A Ukrainian drone attack struck an oil terminal in St. Petersburg on Saturday, Russian officials said, as Kyiv pressed on with the bombardment of Russia's oil infrastructure. Almost daily long-range attacks on Russian oil facilities have created a fuel crisis and heaped political pressure on the Kremlin as its all-out invasion of Ukraine stretches into its fifth year. St. Petersburg Gov. Alexander Beglov said the city's Kirovsky district on the Baltic Sea was hit. He also said that air defences shot down 72 Ukrainian drones across Russia's second-largest city and the surrounding region. Ukrainian President Volodymyr Zelenskyy described the attack as part of Ukraine's \"long-range sanctions\" against Russia. He said that Ukrainian forces also hit a military target on the island of Kronstadt, just off the coast of St. Petersburg.",
+        "word_count": 130,
+        "keyword_overlap": 10,
+        "strong_overlap": 9
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "In his post on Saturday morning, Zelensky said the targets hit in St Petersburg and the surrounding region were about 850km (528 miles) from Ukraine's border. The extent of the damage was not immediately clear, but a video posted by the Ukrainian president showed a drone flying towards a target and a huge column of black smoke billowing from the area after the strike. The BBC later verified that St Petersburg's oil terminal was hit. Ukraine's military described the terminal as \"one of the largest\" in Russia, capable of producing 12.5 million tonnes of petroleum products per year. The military also said a key naval base of the Russian Baltic Fleet in Kronstadt was hit. Russia has not publicly commented on the claim.",
+        "word_count": 123,
+        "keyword_overlap": 9,
+        "strong_overlap": 8
+      }
+    ],
+    "source_text": "Ukraine's military described St Petersburg's oil terminal as \"one of the largest\" in Russia Ukraine has struck a major oil terminal in Russia's second city of St Petersburg and other targets in the country's north-west. In a post on social media, President Volodymyr Zelensky wrote: \"Ukraine's defence forces struck port oil infrastructure that generates revenue for Russia's war.\" He also said an \"important military target\" was hit overnight in Kronstadt, a nearby naval base. St Petersburg Governor Aleksandr Beglov said the city was under a \"massive\" drone attack, admitting the oil terminal was hit. He reported no casualties. Ukraine has in recent months intensified its long-range drone attacks on Russia's critical energy infrastructure, causing fuel shortages in a number of regions.\n\nUkrainian President Volodymyr Zelensky says the target is key infrastructure \"that generates revenue for Russia's war\".\n\nA Ukrainian drone attack struck an oil terminal in St. Petersburg on Saturday, Russian officials said, as Kyiv pressed on with the bombardment of Russia's oil infrastructure. Almost daily long-range attacks on Russian oil facilities have created a fuel crisis and heaped political pressure on the Kremlin as its all-out invasion of Ukraine stretches into its fifth year. St. Petersburg Gov. Alexander Beglov said the city's Kirovsky district on the Baltic Sea was hit. He also said that air defences shot down 72 Ukrainian drones across Russia's second-largest city and the surrounding region. Ukrainian President Volodymyr Zelenskyy described the attack as part of Ukraine's \"long-range sanctions\" against Russia. He said that Ukrainian forces also hit a military target on the island of Kronstadt, just off the coast of St. Petersburg.\n\nIn his post on Saturday morning, Zelensky said the targets hit in St Petersburg and the surrounding region were about 850km (528 miles) from Ukraine's border. The extent of the damage was not immediately clear, but a video posted by the Ukrainian president showed a drone flying towards a target and a huge column of black smoke billowing from the area after the strike. The BBC later verified that St Petersburg's oil terminal was hit. Ukraine's military described the terminal as \"one of the largest\" in Russia, capable of producing 12.5 million tonnes of petroleum products per year. The military also said a key naval base of the Russian Baltic Fleet in Kronstadt was hit. Russia has not publicly commented on the claim.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 953,
+      "selected_blocks": 4,
+      "selected_source_words": 390,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "CBC.ca",
+        "CBC.ca",
+        "CBC.ca",
+        "CBC.ca",
+        "NBC News",
+        "NBC News",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "CBC.ca",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ukraine hits major oil terminal in Russia's St Petersburg",
+      "description": "Ukrainian President Volodymyr Zelensky says the target is key infrastructure \"that generates revenue for Russia's war\".",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Ukraine hits major oil terminal in Russia's St Petersburg",
+    "description": "Ukrainian President Volodymyr Zelensky says the target is key infrastructure \"that generates revenue for Russia's war\".",
+    "link": "https://www.bbc.co.uk/news/articles/c8j2vmzxezro?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-04T12:34:28+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "86a08806cf0d39857302d97f9b67e758",
+    "_url_hash": "bfc2211daf7f8e6249dfc2ab92b7ad7e06a7b851270fad41121a74d474656f31",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nUkraine's military described St Petersburg's oil terminal as \"one of the largest\" in Russia\n\nUkraine has struck a major oil terminal in Russia's second city of St Petersburg and other targets in the country's north-west.\n\nIn a post on social media, President Volodymyr Zelensky wrote: \"Ukraine's defence forces struck port oil infrastructure that generates revenue for Russia's war.\" He also said an \"important military target\" was hit overnight in Kronstadt, a nearby naval base.\n\nSt Petersburg Governor Aleksandr Beglov said the city was under a \"massive\" drone attack, admitting the oil terminal was hit. He reported no casualties.\n\nUkraine has in recent months intensified its long-range drone attacks on Russia's critical energy infrastructure, causing fuel shortages in a number of regions.\n\nIn his post on Saturday morning, Zelensky said the targets hit in St Petersburg and the surrounding region were about 850km (528 miles) from Ukraine's border.\n\nThe extent of the damage was not immediately clear, but a video posted by the Ukrainian president showed a drone flying towards a target and a huge column of black smoke billowing from the area after the strike.\n\nThe BBC later verified that St Petersburg's oil terminal was hit.\n\nUkraine's military described the terminal as \"one of the largest\" in Russia, capable of producing 12.5 million tonnes of petroleum products per year.\n\nThe military also said a key naval base of the Russian Baltic Fleet in Kronstadt was hit.\n\nRussia has not publicly commented on the claim.\n\nWriting on Telegram, Governor Beglov said that 72 Ukrainian drones were shot down over St Petersburg and the wider Leningrad region.\n\nHe urged city residents to stay indoors until the drone threat was lifted. Mobile internet services may also be disrupted, he warned.\n\nMore than five million people live in St Petersburg.\n\nIn a separate development on Saturday, Ukraine's military denied that the key eastern Ukrainian town of Kostyantynivka was now under full Russian control.\n\nMilitary spokesman Maj Andriy Kovalyov told the BBC that \"Kostyantynivka remains under the control of the Defence Forces of Ukraine\".\n\nHe admitted that there were \"cases of infiltration by small infantry groups deep into the combat formations of our forces\", but added that those groups were being identified and destroyed.\n\nHis comments came a day after Russian President Vladimir Putin said that Russian control had been established over the town of Kostyantynivka in June.\n\nPutin provided \n\n---\n\n[Lähde: CBC.ca]\nA Ukrainian drone attack struck an oil terminal in St. Petersburg on Saturday, Russian officials said, as Kyiv pressed on with the bombardment of Russia's oil infrastructure.\n\nAlmost daily long-range attacks on Russian oil facilities have created a fuel crisis and heaped political pressure on the Kremlin as its all-out invasion of Ukraine stretches into its fifth year.\n\nSt. Petersburg Gov. Alexander Beglov said the city's Kirovsky district on the Baltic Sea was hit. He also said that air defences shot down 72 Ukrainian drones across Russia's second-largest city and the surrounding region.\n\nUkrainian President Volodymyr Zelenskyy described the attack as part of Ukraine's \"long-range sanctions\" against Russia. He said that Ukrainian forces also hit a military target on the island of Kronstadt, just off the coast of St. Petersburg.\n\n\"The Ukrainian defense forces hit the port oil infrastructure, which earns money for the Russian war, and there were also hits on Kronstadt — an important military target,\" he said in a post on the messaging service Telegram.\n\nDeadly, large-scale Russian attack shakes Kyiv as Ukrainian strikes batter Moscow's oil sector\n\nSt. Petersburg's Kirovsky district was previously hit in June, ahead of Russia's flagship St. Petersburg International Economic Forum.\n\nThe Crimean peninsula, which Russia annexed in 2014 from Ukraine, has suffered particularly from heavy strikes, causing local authorities to suspend gasoline sales to civilians.\n\nA Ukrainian attack on Saturday killed one person and injured two more, including a 10-year-old child, Moscow-installed Gov. Sergei Aksyonov said.\n\nRussian President Vladimir Putin has shrugged off Ukraine's strikes on Russia's energy facilities as \"not critical\" and insisted the war will continue until his goals are met.\n\nHe has described the attacks on Russian energy as an effort by Ukraine to distract attention from its losses on the battlefield, although analysts say the advance of Russian forces has been stymied in recent months.\n\nOn Friday, Putin visited the Russian military headquarters directing the war in Ukraine and received a report on the capture of the city of Kostyantynivka after weeks of intense street battles.\n\nHe hailed it as a key step toward capturing the nearby cities of Sloviansk and Kramatorsk, the key remaining strongholds in the \"forest belt\" of heavily fortified cities in the Donetsk region that remain in Ukraine's hands.\n\nThe capture of Kostyantynivka, a big transport and industri\n\n---\n\n[Lähde: NBC News]\nMOSCOW — Russia’s second city of St Petersburg and the surrounding Leningrad region came under a large Ukrainian drone attack overnight on Saturday, with a local port and oil infrastructure struck, Russian and Ukrainian authorities said.\n\nSt Petersburg Governor Alexander ⁠Beglov said the city of 6 million ​had ⁠been subjected to a “large-scale” drone attack, with the city’s oil terminal struck. He said there were no casualties and that ⁠the aftermath of the attack had been dealt with.\n\nLeningrad region ​Governor ⁠Alexander Drozdenko said drones had struck ‌the port of Vysotsk, about 105 miles northwest of St Petersburg on the Baltic Sea. The port handles oil, grain, coal ‌and liquefied natural gas.\n\nDrozdenko said 72 ‌drones had been shot down over the Leningrad region.\n\nIn a post on Telegram, Ukrainian President Volodymyr Zelenskiy said: “Ukraine’s defence forces struck port oil infrastructure that generates revenue for ⁠Russia’s war, and also hit Kronstadt, an important military targ...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-04T12:54:55.939818+00:00",
+  "failure": "content too short: 216 words",
+  "payload": {
+    "packet_id": "20260704T125135Z_0a6fbb1c8b",
+    "title": "Ukraina iski suureen öljyterminaaliin Pietarissa",
+    "summary": "Ukrainan drooni-isku osui Pietarin öljyterminaaliin ja muihin kohteisiin Venäjän luoteisosassa. Presidentti Volodymyr Zelenskyin mukaan iskut kohdistuivat infrastruktuuriin, joka tuottaa tuloja Venäjän sodankäynnille.",
+    "content": "Ukraina on iskenyt suureen öljyterminaaliin Pietarissa sekä muihin kohteisiin Venäjän luoteisosassa. Pietarin kuvernööri Aleksandr Beglov sanoi kaupungin joutuneen laajan droonihyökkäyksen kohteeksi ja vahvisti öljyterminaalin osuman. Hänen mukaansa iskussa ei raportoitu henkilövahinkoja.\n\n## Isku osui Kirovskin alueelle\n\nBeglovin mukaan osuma tapahtui Pietarin Kirovskin alueella Itämeren rannalla. Hän sanoi myös, että ilmapuolustus ampui alas 72 ukrainalaista droonia Pietarin ja sitä ympäröivän alueen yllä.\n\nUkrainan presidentti Volodymyr Zelenskyi kuvasi iskua osaksi Ukrainan pitkän kantaman painostusta Venäjää vastaan. Hänen mukaansa Ukrainan puolustusvoimat iskivät sataman öljyinfrastruktuuriin, joka tuottaa tuloja Venäjän sotaan. Zelenskyin mukaan kohteet Pietarissa ja sen lähialueella sijaitsivat noin 850 kilometrin päässä Ukrainan rajalta.\n\nUkrainan armeija on kuvannut Pietarin öljyterminaalia yhdeksi Venäjän suurimmista. Sen mukaan terminaali pystyy tuottamaan 12,5 miljoonaa tonnia öljytuotteita vuodessa. Iskun aiheuttamien vahinkojen laajuus ei ollut heti selvillä, mutta Zelenskyin julkaisemalla videolla näkyi drooni lähestymässä kohdetta ja iskun jälkeen alueelta noussut suuri musta savupatsas.\n\n## Kronstadtin kohteesta ei Venäjän kommenttia\n\nZelenskyi kertoi myös, että Ukrainan joukot iskivät tärkeään sotilaskohteeseen Kronstadtissa, joka sijaitsee Pietarin edustalla. Ukrainan armeijan mukaan kohde liittyi Venäjän Itämeren laivaston keskeiseen tukikohtaan. Venäjä ei ole julkisesti kommentoinut väitettä Kronstadtin iskusta.\n\nUkraina on viime kuukausina lisännyt pitkän kantaman drooni-iskuja Venäjän energia- ja öljyinfrastruktuuria vastaan. Lähdetietojen mukaan lähes päivittäiset iskut Venäjän öljykohteisiin ovat aiheuttaneet polttoainepulaa useilla alueilla ja lisänneet poliittista painetta Kremlille sodan jatkuessa jo viidettä vuotta.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Ukraina",
+      "Venäjä",
+      "Pietari",
+      "drooni-isku",
+      "öljyinfrastruktuuri",
+      "Kronstadt"
+    ],
+    "summary_bullets": [
+      "Ukrainan drooni-isku osui suureen öljyterminaaliin Pietarissa.",
+      "Pietarin kuvernöörin mukaan henkilövahinkoja ei raportoitu.",
+      "Zelenskyin mukaan isku kohdistui Venäjän sotaa rahoittavaan infrastruktuuriin."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu useisiin lähdekatkelmiin, joissa ydintiedot Pietarin öljyterminaalin osumasta ovat yhtenevät. Kronstadtin sotilaskohdetta koskeva tieto on kerrottu väitteenä, koska Venäjä ei ole kommentoinut sitä julkisesti."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260704T125135Z_0a6fbb1c8b\",\n  \"title\": \"Ukraina iski suureen öljyterminaaliin Pietarissa\",\n  \"summary\": \"Ukrainan drooni-isku osui Pietarin öljyterminaaliin ja muihin kohteisiin Venäjän luoteisosassa. Presidentti Volodymyr Zelenskyin mukaan iskut kohdistuivat infrastruktuuriin, joka tuottaa tuloja Venäjän sodankäynnille.\",\n  \"content\": \"Ukraina on iskenyt suureen öljyterminaaliin Pietarissa sekä muihin kohteisiin Venäjän luoteisosassa. Pietarin kuvernööri Aleksandr Beglov sanoi kaupungin joutuneen laajan droonihyökkäyksen kohteeksi ja vahvisti öljyterminaalin osuman. Hänen mukaansa iskussa ei raportoitu henkilövahinkoja.\\n\\n## Isku osui Kirovskin alueelle\\n\\nBeglovin mukaan osuma tapahtui Pietarin Kirovskin alueella Itämeren rannalla. Hän sanoi myös, että ilmapuolustus ampui alas 72 ukrainalaista droonia Pietarin ja sitä ympäröivän alueen yllä.\\n\\nUkrainan presidentti Volodymyr Zelenskyi kuvasi iskua osaksi Ukrainan pitkän kantaman painostusta Venäjää vastaan. Hänen mukaansa Ukrainan puolustusvoimat iskivät sataman öljyinfrastruktuuriin, joka tuottaa tuloja Venäjän sotaan. Zelenskyin mukaan kohteet Pietarissa ja sen lähialueella sijaitsivat noin 850 kilometrin päässä Ukrainan rajalta.\\n\\nUkrainan armeija on kuvannut Pietarin öljyterminaalia yhdeksi Venäjän suurimmista. Sen mukaan terminaali pystyy tuottamaan 12,5 miljoonaa tonnia öljytuotteita vuodessa. Iskun aiheuttamien vahinkojen laajuus ei ollut heti selvillä, mutta Zelenskyin julkaisemalla videolla näkyi drooni lähestymässä kohdetta ja iskun jälkeen alueelta noussut suuri musta savupatsas.\\n\\n## Kronstadtin kohteesta ei Venäjän kommenttia\\n\\nZelenskyi kertoi myös, että Ukrainan joukot iskivät tärkeään sotilaskohteeseen Kronstadtissa, joka sijaitsee Pietarin edustalla. Ukrainan armeijan mukaan kohde liittyi Venäjän Itämeren laivaston keskeiseen tukikohtaan. Venäjä ei ole julkisesti kommentoinut väitettä Kronstadtin iskusta.\\n\\nUkraina on viime kuukausina lisännyt pitkän kantaman drooni-iskuja Venäjän energia- ja öljyinfrastruktuuria vastaan. Lähdetietojen mukaan lähes päivittäiset iskut Venäjän öljykohteisiin ovat aiheuttaneet polttoainepulaa useilla alueilla ja lisänneet poliittista painetta Kremlille sodan jatkuessa jo viidettä vuotta.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Ukraina\",\n    \"Venäjä\",\n    \"Pietari\",\n    \"drooni-isku\",\n    \"öljyinfrastruktuuri\",\n    \"Kronstadt\"\n  ],\n  \"summary_bullets\": [\n    \"Ukrainan drooni-isku osui suureen öljyterminaaliin Pietarissa.\",\n    \"Pietarin kuvernöörin mukaan henkilövahinkoja ei raportoitu.\",\n    \"Zelenskyin mukaan isku kohdistui Venäjän sotaa rahoittavaan infrastruktuuriin.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu useisiin lähdekatkelmiin, joissa ydintiedot Pietarin öljyterminaalin osumasta ovat yhtenevät. Kronstadtin sotilaskohdetta koskeva tieto on kerrottu väitteenä, koska Venäjä ei ole kommentoinut sitä julkisesti.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260704T125135Z_0a6fbb1c8b",
+    "category": "Kotimaa",
+    "selected_source_words": 390,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 216,
+    "issues": [
+      "content too short: 216 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Ukraina iski suureen öljyterminaaliin Pietarissa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-07-04T12:54:55.939566+00:00",
+    "repair_trigger": "pre_repair_word_count=216; selected_source_words=390; selected_source_blocks=4",
+    "pre_repair_word_count": 216,
+    "pre_repair_lead_word_count": 31,
+    "post_repair_word_count": 216,
+    "post_repair_lead_word_count": 31,
+    "selected_source_words_at_repair": 390,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 390,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 216 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:99296d1a20",
+      "2:BBC World:ebeff546af",
+      "3:CBC.ca:0a093d79c1",
+      "4:BBC World:faddbc716e"
+    ],
+    "final_issues": [
+      "content too short: 216 words"
+    ],
+    "recovered": false
+  }
+}
