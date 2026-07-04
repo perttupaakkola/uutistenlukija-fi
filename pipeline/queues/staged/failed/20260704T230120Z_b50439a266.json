@@ -1,0 +1,193 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-04T23:01:20.551674+00:00",
+  "digest": "b50439a266",
+  "packet": {
+    "packet_id": "20260704T230120Z_b50439a266",
+    "created_at": "2026-07-04T23:01:20Z",
+    "headline_seed": "Funeral of Iran's former supreme leader 'intensely political moment'",
+    "description_seed": "Authorities expect up to 20 million people to attend ceremonies across Iran and Iraq over the coming days.",
+    "link": "https://www.bbc.co.uk/news/videos/c23y22z4ppxo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "New York Post",
+      "New York Post"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/videos/c23y22z4ppxo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Funeral of Iran's former supreme leader 'intensely political moment'"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Authorities expect up to 20 million people to attend ceremonies across Iran and Iraq over the coming days.",
+        "word_count": 18,
+        "keyword_overlap": 12,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Vast crowds of Iranians loyal to the Islamic Republic have gathered in Tehran for the first day of funeral ceremonies for the country's former supreme leader. Ayatollah Ali Khamenei was killed in joint US-Israeli airstrikes at the start of the war. Iranian state media say six days of ceremonies will span several locations across Iran and neighbouring Iraq, before he is buried in his hometown of Mashhad on Thursday. The BBC's chief international correspondent Lyse Doucet is in Tehran as people prepare to head to the vast complex where the former supreme leader is lying in state. The BBC's chief international correspondent Lyse Doucet is reporting from Tehran on condition that none of her material is used on the BBC's Persian Service. These restrictions apply to all international media organisations operating in Iran. ---",
+        "word_count": 134,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      },
+      {
+        "source": "New York Post",
+        "source_type": "research",
+        "text": "See more of our coverage in your search results. Iran has finally scheduled state funeral proceedings for slain Supreme Leader Ali Khamenei to begin on July 4 — the same day the US throws its 250th birthday bash. The ayatollah was assassinated on Feb. 28, when the US and Israel slammed his Tehran compound with airstrike launching the Iran war. But the Islamic Republic dragged its feet on holding farewell ceremonies for more than three months since his death out of fear of being attacked again. Now, with a peace deal expected to be signed in the next 24 hours, Iranian state media has announced details of the burial for the 86-year-old cleric.",
+        "word_count": 113,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "New York Post",
+        "source_type": "research",
+        "text": "Three days of funeral ceremonies will be held in the capital Tehran starting on July 4, at the prayer hall of Imam Khomenei — the founder of the Islamic Republic — before a funeral procession will leave on July 6. Then on July 7, another funeral ceremony will be held in the holy city of ⁠Qom, south of Tehran. The proceedings will conclude with a burial in Khamenei’s hometown, the northeastern holy city of Mashhad, ‌on July 9. Khamenei, who was the leader of the Islamic Republic for 36 years, will be buried at the shrine of Imam Reza, a holy place for Shiite Muslims. Funerals for his daughter and son-in-law, who were also killed in the deadly Feb. 28 strike, will be held on the same day.",
+        "word_count": 128,
+        "keyword_overlap": 4,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Authorities expect up to 20 million people to attend ceremonies across Iran and Iraq over the coming days.\n\nVast crowds of Iranians loyal to the Islamic Republic have gathered in Tehran for the first day of funeral ceremonies for the country's former supreme leader. Ayatollah Ali Khamenei was killed in joint US-Israeli airstrikes at the start of the war. Iranian state media say six days of ceremonies will span several locations across Iran and neighbouring Iraq, before he is buried in his hometown of Mashhad on Thursday. The BBC's chief international correspondent Lyse Doucet is in Tehran as people prepare to head to the vast complex where the former supreme leader is lying in state. The BBC's chief international correspondent Lyse Doucet is reporting from Tehran on condition that none of her material is used on the BBC's Persian Service. These restrictions apply to all international media organisations operating in Iran. ---\n\nSee more of our coverage in your search results. Iran has finally scheduled state funeral proceedings for slain Supreme Leader Ali Khamenei to begin on July 4 — the same day the US throws its 250th birthday bash. The ayatollah was assassinated on Feb. 28, when the US and Israel slammed his Tehran compound with airstrike launching the Iran war. But the Islamic Republic dragged its feet on holding farewell ceremonies for more than three months since his death out of fear of being attacked again. Now, with a peace deal expected to be signed in the next 24 hours, Iranian state media has announced details of the burial for the 86-year-old cleric.\n\nThree days of funeral ceremonies will be held in the capital Tehran starting on July 4, at the prayer hall of Imam Khomenei — the founder of the Islamic Republic — before a funeral procession will leave on July 6. Then on July 7, another funeral ceremony will be held in the holy city of ⁠Qom, south of Tehran. The proceedings will conclude with a burial in Khamenei’s hometown, the northeastern holy city of Mashhad, ‌on July 9. Khamenei, who was the leader of the Islamic Republic for 36 years, will be buried at the shrine of Imam Reza, a holy place for Shiite Muslims. Funerals for his daughter and son-in-law, who were also killed in the deadly Feb. 28 strike, will be held on the same day.",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 508,
+      "selected_blocks": 4,
+      "selected_source_words": 393,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "New York Post",
+        "New York Post",
+        "New York Post",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "New York Post",
+        "New York Post"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Funeral of Iran's former supreme leader 'intensely political moment'",
+      "description": "Authorities expect up to 20 million people to attend ceremonies across Iran and Iraq over the coming days.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Funeral of Iran's former supreme leader 'intensely political moment'",
+    "description": "Authorities expect up to 20 million people to attend ceremonies across Iran and Iraq over the coming days.",
+    "link": "https://www.bbc.co.uk/news/videos/c23y22z4ppxo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-04T21:46:43+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "d5416de7e0349ccb0316c8d1dac0e867",
+    "_url_hash": "a6ea7bcd150508cc8518893a5a62f336931b40a2df5087ff76bc4c6eb01e77a7",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nVast crowds of Iranians loyal to the Islamic Republic have gathered in Tehran for the first day of funeral ceremonies for the country's former supreme leader.\n\nAyatollah Ali Khamenei was killed in joint US-Israeli airstrikes at the start of the war.\n\nIranian state media say six days of ceremonies will span several locations across Iran and neighbouring Iraq, before he is buried in his hometown of Mashhad on Thursday.\n\nThe BBC's chief international correspondent Lyse Doucet is in Tehran as people prepare to head to the vast complex where the former supreme leader is lying in state.\n\nThe BBC's chief international correspondent Lyse Doucet is reporting from Tehran on condition that none of her material is used on the BBC's Persian Service. These restrictions apply to all international media organisations operating in Iran.\n\n---\n\n[Lähde: New York Post]\nSee more of our coverage in your search results.\n\nIran has finally scheduled state funeral proceedings for slain Supreme Leader Ali Khamenei to begin on July 4 — the same day the US throws its 250th birthday bash.\n\nThe ayatollah was assassinated on Feb. 28, when the US and Israel slammed his Tehran compound with airstrike launching the Iran war. But the Islamic Republic dragged its feet on holding farewell ceremonies for more than three months since his death out of fear of being attacked again.\n\nNow, with a peace deal expected to be signed in the next 24 hours, Iranian state media has announced details of the burial for the 86-year-old cleric.\n\nThree days of funeral ceremonies will be held in the capital Tehran starting on July 4, at the prayer hall of Imam Khomenei — the founder of the Islamic Republic — before a funeral procession will leave on July 6.\n\nThen on July 7, another funeral ceremony will be held in the holy city of ⁠Qom, south of Tehran.\n\nThe proceedings will conclude with a burial in Khamenei’s hometown, the northeastern holy city of Mashhad, ‌on July 9.\n\nKhamenei, who was the leader of the Islamic Republic for 36 years, will be buried at the shrine of Imam Reza, a holy place for Shiite Muslims.\n\nFunerals for his daughter and son-in-law, who were also killed in the deadly Feb. 28 strike, will be held on the same day.\n\nDespite Islamic law requiring the dead be buried within 24 hours ideally, the Islamic Republic is believed to have avoided Khamenei’s funeral for so long for fear of potential airstrikes, nationalist counter-rallies similar to the nationwide uprisings earlier this year, and the regime’s need to explain the absence of his son Mojtaba Khamenei.\n\nThe younger Khamenei’s son was severely disfigured in the strikes that killed his father and has not been seen in public since his appointment. It is unclear whether he’ll be attending the ceremonies.\n\nThe Islamic Republic initially planned a three-day state funeral beginning on March 4, but it never materialized once the country was rocked by large-scale Israeli and US bombing campaigns.",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-04T23:04:17.841601+00:00",
+  "payload": {
+    "packet_id": "20260704T230120Z_b50439a266",
+    "title": "Iran aloitti Ali Khamenein hautajaisseremoniat Teheranissa",
+    "summary": "Iranissa ovat alkaneet entisen ylimmän johtajan ajatollah Ali Khamenein valtiolliset hautajaisseremoniat. Viranomaiset odottavat jopa 20 miljoonan ihmisen osallistuvan useita päiviä jatkuviin tilaisuuksiin Iranissa ja Irakissa.",
+    "content": "Iranissa suuret väkijoukot ovat kokoontuneet Teheraniin entisen ylimmän johtajan ajatollah Ali Khamenein hautajaisseremonioiden ensimmäisenä päivänä. Iranin valtiollisen median mukaan useita päiviä kestävät tilaisuudet järjestetään eri puolilla Irania ja naapurimaa Irakissa ennen hautausta Khamenein kotikaupungissa Mashhadissa.\n\n## Seremoniat alkoivat Teheranissa\n\nKhamenei kuoli helmikuun 28. päivänä Yhdysvaltain ja Israelin yhteisissä ilmaiskuissa, jotka kohdistuivat hänen rakennuskokonaisuuteensa Teheranissa sodan alkuvaiheessa. Hän oli 86-vuotias ja oli johtanut Iranin islamilaista tasavaltaa 36 vuoden ajan.\n\nHautajaisjärjestelyt alkoivat Teheranissa 4. heinäkuuta. Pääkaupungissa järjestetään kolmen päivän ajan seremonioita Imam Khomeinin rukoushallissa, minkä jälkeen hautajaissaattueen on määrä lähteä liikkeelle 6. heinäkuuta. Khomeini oli Iranin islamilaisen tasavallan perustaja.\n\nIranin viranomaiset varautuvat poikkeuksellisen suuriin osallistujamääriin. Arvioiden mukaan jopa 20 miljoonaa ihmistä voi osallistua eri puolilla Irania ja Irakissa järjestettäviin seremonioihin tulevien päivien aikana. BBC:n mukaan Teheraniin kokoontuneet ihmiset ovat valmistautuneet siirtymään suurelle alueelle, jossa Khamenein ruumis on nähtävillä.\n\n## Hautaus on määrä järjestää Mashhadissa\n\nTeheranin osuuden jälkeen seremonioiden on määrä jatkua 7. heinäkuuta Qomissa, joka sijaitsee pääkaupungin eteläpuolella ja on yksi Iranin merkittävistä uskonnollisista kaupungeista. Kokonaisuus päättyy Mashhadiin Koillis-Iranissa, missä Khamenei on määrä haudata 9. heinäkuuta.\n\nHautapaikaksi on ilmoitettu Imam Rezan pyhäkkö, joka on šiialaisille muslimeille tärkeä uskonnollinen kohde. Samana päivänä on määrä järjestää myös Khamenein tyttären ja vävyn hautajaiset. He kuolivat samassa helmikuun iskussa.\n\n## Järjestelyillä on poliittinen painoarvo\n\nHautajaisseremoniat ovat Iranissa myös poliittisesti latautunut hetki. Lähteiden mukaan islamilainen tasavalta viivästytti seremonioiden järjestämistä yli kolmen kuukauden ajan, koska se pelkäsi uusia iskuja. Iranin valtiollinen media kertoi hautausjärjestelyistä tilanteessa, jossa rauhansopimuksen odotettiin olevan lähellä.\n\nKansainvälisen median työskentelyyn Iranissa kohdistuu rajoituksia. BBC:n pääkirjeenvaihtaja Lyse Doucet raportoi Teheranista ehdolla, ettei hänen aineistoaan käytetä BBC:n persiankielisessä palvelussa. BBC:n mukaan vastaavat rajoitukset koskevat kaikkia Iranissa toimivia kansainvälisiä mediaorganisaatioita.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Iran",
+      "Ali Khamenei",
+      "Teheran",
+      "Mashhad",
+      "hautajaiset"
+    ],
+    "summary_bullets": [
+      "Iranissa alkoivat entisen ylimmän johtajan Ali Khamenein hautajaisseremoniat Teheranissa.",
+      "Viranomaiset odottavat jopa 20 miljoonan ihmisen osallistuvan tilaisuuksiin Iranissa ja Irakissa.",
+      "Khamenei on määrä haudata Mashhadiin Imam Rezan pyhäkköön 9. heinäkuuta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu paketissa oleviin tietoihin Iranin valtiollisen median ilmoittamista seremonioista, osallistuja-arvioista, hautausjärjestelyistä ja kansainvälisen median työskentelyrajoituksista."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260704T230120Z_b50439a266\",\n  \"title\": \"Iran aloitti Ali Khamenein hautajaisseremoniat Teheranissa\",\n  \"summary\": \"Iranissa ovat alkaneet entisen ylimmän johtajan ajatollah Ali Khamenein valtiolliset hautajaisseremoniat. Viranomaiset odottavat jopa 20 miljoonan ihmisen osallistuvan useita päiviä jatkuviin tilaisuuksiin Iranissa ja Irakissa.\",\n  \"content\": \"Iranissa suuret väkijoukot ovat kokoontuneet Teheraniin entisen ylimmän johtajan ajatollah Ali Khamenein hautajaisseremonioiden ensimmäisenä päivänä. Iranin valtiollisen median mukaan useita päiviä kestävät tilaisuudet järjestetään eri puolilla Irania ja naapurimaa Irakissa ennen hautausta Khamenein kotikaupungissa Mashhadissa.\\n\\n## Seremoniat alkoivat Teheranissa\\n\\nKhamenei kuoli helmikuun 28. päivänä Yhdysvaltain ja Israelin yhteisissä ilmaiskuissa, jotka kohdistuivat hänen rakennuskokonaisuuteensa Teheranissa sodan alkuvaiheessa. Hän oli 86-vuotias ja oli johtanut Iranin islamilaista tasavaltaa 36 vuoden ajan.\\n\\nHautajaisjärjestelyt alkoivat Teheranissa 4. heinäkuuta. Pääkaupungissa järjestetään kolmen päivän ajan seremonioita Imam Khomeinin rukoushallissa, minkä jälkeen hautajaissaattueen on määrä lähteä liikkeelle 6. heinäkuuta. Khomeini oli Iranin islamilaisen tasavallan perustaja.\\n\\nIranin viranomaiset varautuvat poikkeuksellisen suuriin osallistujamääriin. Arvioiden mukaan jopa 20 miljoonaa ihmistä voi osallistua eri puolilla Irania ja Irakissa järjestettäviin seremonioihin tulevien päivien aikana. BBC:n mukaan Teheraniin kokoontuneet ihmiset ovat valmistautuneet siirtymään suurelle alueelle, jossa Khamenein ruumis on nähtävillä.\\n\\n## Hautaus on määrä järjestää Mashhadissa\\n\\nTeheranin osuuden jälkeen seremonioiden on määrä jatkua 7. heinäkuuta Qomissa, joka sijaitsee pääkaupungin eteläpuolella ja on yksi Iranin merkittävistä uskonnollisista kaupungeista. Kokonaisuus päättyy Mashhadiin Koillis-Iranissa, missä Khamenei on määrä haudata 9. heinäkuuta.\\n\\nHautapaikaksi on ilmoitettu Imam Rezan pyhäkkö, joka on šiialaisille muslimeille tärkeä uskonnollinen kohde. Samana päivänä on määrä järjestää myös Khamenein tyttären ja vävyn hautajaiset. He kuolivat samassa helmikuun iskussa.\\n\\n## Järjestelyillä on poliittinen painoarvo\\n\\nHautajaisseremoniat ovat Iranissa myös poliittisesti latautunut hetki. Lähteiden mukaan islamilainen tasavalta viivästytti seremonioiden järjestämistä yli kolmen kuukauden ajan, koska se pelkäsi uusia iskuja. Iranin valtiollinen media kertoi hautausjärjestelyistä tilanteessa, jossa rauhansopimuksen odotettiin olevan lähellä.\\n\\nKansainvälisen median työskentelyyn Iranissa kohdistuu rajoituksia. BBC:n pääkirjeenvaihtaja Lyse Doucet raportoi Teheranista ehdolla, ettei hänen aineistoaan käytetä BBC:n persiankielisessä palvelussa. BBC:n mukaan vastaavat rajoitukset koskevat kaikkia Iranissa toimivia kansainvälisiä mediaorganisaatioita.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Iran\",\n    \"Ali Khamenei\",\n    \"Teheran\",\n    \"Mashhad\",\n    \"hautajaiset\"\n  ],\n  \"summary_bullets\": [\n    \"Iranissa alkoivat entisen ylimmän johtajan Ali Khamenein hautajaisseremoniat Teheranissa.\",\n    \"Viranomaiset odottavat jopa 20 miljoonan ihmisen osallistuvan tilaisuuksiin Iranissa ja Irakissa.\",\n    \"Khamenei on määrä haudata Mashhadiin Imam Rezan pyhäkköön 9. heinäkuuta.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Artikkeli perustuu paketissa oleviin tietoihin Iranin valtiollisen median ilmoittamista seremonioista, osallistuja-arvioista, hautausjärjestelyistä ja kansainvälisen median työskentelyrajoituksista.\"\n}",
+  "article": {
+    "title": "Iran aloitti Ali Khamenein hautajaisseremoniat Teheranissa",
+    "description": "Iranissa ovat alkaneet entisen ylimmän johtajan ajatollah Ali Khamenein valtiolliset hautajaisseremoniat. Viranomaiset odottavat jopa 20 miljoonan ihmisen osallistuvan useita päiviä jatkuviin tilaisuuksiin Iranissa ja Irakissa.",
+    "link": "https://www.bbc.co.uk/news/videos/c23y22z4ppxo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-04T21:46:43+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "d5416de7e0349ccb0316c8d1dac0e867",
+    "_url_hash": "a6ea7bcd150508cc8518893a5a62f336931b40a2df5087ff76bc4c6eb01e77a7",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nVast crowds of Iranians loyal to the Islamic Republic have gathered in Tehran for the first day of funeral ceremonies for the country's former supreme leader.\n\nAyatollah Ali Khamenei was killed in joint US-Israeli airstrikes at the start of the war.\n\nIranian state media say six days of ceremonies will span several locations across Iran and neighbouring Iraq, before he is buried in his hometown of Mashhad on Thursday.\n\nThe BBC's chief international correspondent Lyse Doucet is in Tehran as people prepare to head to the vast complex where the former supreme leader is lying in state.\n\nThe BBC's chief international correspondent Lyse Doucet is reporting from Tehran on condition that none of her material is used on the BBC's Persian Service. These restrictions apply to all international media organisations operating in Iran.\n\n---\n\n[Lähde: New York Post]\nSee more of our coverage in your search results.\n\nIran has finally scheduled state funeral proceedings for slain Supreme Leader Ali Khamenei to begin on July 4 — the same day the US throws its 250th birthday bash.\n\nThe ayatollah was assassinated on Feb. 28, when the US and Israel slammed his Tehran compound with airstrike launching the Iran war. But the Islamic Republic dragged its feet on holding farewell ceremonies for more than three months since his death out of fear of being attacked again.\n\nNow, with a peace deal expected to be signed in the next 24 hours, Iranian state media has announced details of the burial for the 86-year-old cleric.\n\nThree days of funeral ceremonies will be held in the capital Tehran starting on July 4, at the prayer hall of Imam Khomenei — the founder of the Islamic Republic — before a funeral procession will leave on July 6.\n\nThen on July 7, another funeral ceremony will be held in the holy city of ⁠Qom, south of Tehran.\n\nThe proceedings will conclude with a burial in Khamenei’s hometown, the northeastern holy city of Mashhad, ‌on July 9.\n\nKhamenei, who was the leader of the Islamic Republic for 36 years, will be buried at the shrine of Imam Reza, a holy place for Shiite Muslims.\n\nFunerals for his daughter and son-in-law, who were also killed in the deadly Feb. 28 strike, will be held on the same day.\n\nDespite Islamic law requiring the dead be buried within 24 hours ideally, the Islamic Republic is believed to have avoided Khamenei’s funeral for so long for fear of potential airstrikes, nationalist counter-rallies similar to the nationwide uprisings earlier this year, and the regime’s need to explain the absence of his son Mojtaba Khamenei.\n\nThe younger Khamenei’s son was severely disfigured in the strikes that killed his father and has not been seen in public since his appointment. It is unclear whether he’ll be attending the ceremonies.\n\nThe Islamic Republic initially planned a three-day state funeral beginning on March 4, but it never materialized once the country was rocked by large-scale Israeli and US bombing campaigns.",
+    "research_source": "multi",
+    "summary": "Iranissa ovat alkaneet entisen ylimmän johtajan ajatollah Ali Khamenein valtiolliset hautajaisseremoniat. Viranomaiset odottavat jopa 20 miljoonan ihmisen osallistuvan useita päiviä jatkuviin tilaisuuksiin Iranissa ja Irakissa.",
+    "content": "Iranissa suuret väkijoukot ovat kokoontuneet Teheraniin entisen ylimmän johtajan ajatollah Ali Khamenein hautajaisseremonioiden ensimmäisenä päivänä. Iranin valtiollisen median mukaan useita päiviä kestävät tilaisuudet järjestetään eri puolilla Irania ja naapurimaa Irakissa ennen hautausta Khamenein kotikaupungissa Mashhadissa.\n\n## Seremoniat alkoivat Teheranissa\n\nKhamenei kuoli helmikuun 28. päivänä Yhdysvaltain ja Israelin yhteisissä ilmaiskuissa, jotka kohdistuivat hänen rakennuskokonaisuuteensa Teheranissa sodan alkuvaiheessa. Hän oli 86-vuotias ja oli johtanut Iranin islamilaista tasavaltaa 36 vuoden ajan.\n\nHautajaisjärjestelyt alkoivat Teheranissa 4. heinäkuuta. Pääkaupungissa järjestetään kolmen päivän ajan seremonioita Imam Khomeinin rukoushallissa, minkä jälkeen hautajaissaattueen on määrä lähteä liikkeelle 6. heinäkuuta. Khomeini oli Iranin islamilaisen tasavallan perustaja.\n\nIranin viranomaiset varautuvat poikkeuksellisen suuriin osallistujamääriin. Arvioiden mukaan jopa 20 miljoonaa ihmistä voi osallistua eri puolilla Irania ja Irakissa järjestettäviin seremonioihin tulevien päivien aikana. BBC:n mukaan Teheraniin kokoontuneet ihmiset ovat valmistautuneet siirtymään suurelle alueelle, jossa Khamenein ruumis on nähtävillä.\n\n## Hautaus on määrä järjestää Mashhadissa\n\nTeheranin osuuden jälkeen seremonioiden on määrä jatkua 7. heinäkuuta Qomissa, joka sijaitsee pääkaupungin eteläpuolella ja on yksi Iranin merkittävistä uskonnollisista kaupungeista. Kokonaisuus päättyy Mashhadiin Koillis-Iranissa, missä Khamenei on määrä haudata 9. heinäkuuta.\n\nHautapaikaksi on ilmoitettu Imam Rezan pyhäkkö, joka on šiialaisille muslimeille tärkeä uskonnollinen kohde. Samana päivänä on määrä järjestää myös Khamenein tyttären ja vävyn hautajaiset. He kuolivat samassa helmikuun iskussa.\n\n## Järjestelyillä on poliittinen painoarvo\n\nHautajaisseremoniat ovat Iranissa myös poliittisesti latautunut hetki. Lähteiden mukaan islamilainen tasavalta viivästytti seremonioiden järjestämistä yli kolmen kuukauden ajan, koska se pelkäsi uusia iskuja. Iranin valtiollinen media kertoi hautausjärjestelyistä tilanteessa, jossa rauhansopimuksen odotettiin olevan lähellä.\n\nKansainvälisen median työskentelyyn Iranissa kohdistuu rajoituksia. BBC:n pääkirjeenvaihtaja Lyse Doucet raportoi Teheranista ehdolla, ettei hänen aineistoaan käytetä BBC:n persiankielisessä palvelussa. BBC:n mukaan vastaavat rajoitukset koskevat kaikkia Iranissa toimivia kansainvälisiä mediaorganisaatioita.",
+    "category": "Ulkomaat",
+    "tags": [
+      "iran",
+      "ali khamenei",
+      "teheran",
+      "mashhad",
+      "hautajaiset"
+    ],
+    "summary_bullets": [
+      "Iranissa alkoivat entisen ylimmän johtajan Ali Khamenein hautajaisseremoniat Teheranissa.",
+      "Viranomaiset odottavat jopa 20 miljoonan ihmisen osallistuvan tilaisuuksiin Iranissa ja Irakissa.",
+      "Khamenei on määrä haudata Mashhadiin Imam Rezan pyhäkköön 9. heinäkuuta."
+    ],
+    "key_points": [
+      "Iranissa alkoivat entisen ylimmän johtajan Ali Khamenein hautajaisseremoniat Teheranissa.",
+      "Viranomaiset odottavat jopa 20 miljoonan ihmisen osallistuvan tilaisuuksiin Iranissa ja Irakissa.",
+      "Khamenei on määrä haudata Mashhadiin Imam Rezan pyhäkköön 9. heinäkuuta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketissa oleviin tietoihin Iranin valtiollisen median ilmoittamista seremonioista, osallistuja-arvioista, hautausjärjestelyistä ja kansainvälisen median työskentelyrajoituksista.",
+    "source_text": "Authorities expect up to 20 million people to attend ceremonies across Iran and Iraq over the coming days.\n\nVast crowds of Iranians loyal to the Islamic Republic have gathered in Tehran for the first day of funeral ceremonies for the country's former supreme leader. Ayatollah Ali Khamenei was killed in joint US-Israeli airstrikes at the start of the war. Iranian state media say six days of ceremonies will span several locations across Iran and neighbouring Iraq, before he is buried in his hometown of Mashhad on Thursday. The BBC's chief international correspondent Lyse Doucet is in Tehran as people prepare to head to the vast complex where the former supreme leader is lying in state. The BBC's chief international correspondent Lyse Doucet is reporting from Tehran on condition that none of her material is used on the BBC's Persian Service. These restrictions apply to all international media organisations operating in Iran. ---\n\nSee more of our coverage in your search results. Iran has finally scheduled state funeral proceedings for slain Supreme Leader Ali Khamenei to begin on July 4 — the same day the US throws its 250th birthday bash. The ayatollah was assassinated on Feb. 28, when the US and Israel slammed his Tehran compound with airstrike launching the Iran war. But the Islamic Republic dragged its feet on holding farewell ceremonies for more than three months since his death out of fear of being attacked again. Now, with a peace deal expected to be signed in the next 24 hours, Iranian state media has announced details of the burial for the 86-year-old cleric.\n\nThree days of funeral ceremonies will be held in the capital Tehran starting on July 4, at the prayer hall of Imam Khomenei — the founder of the Islamic Republic — before a funeral procession will leave on July 6. Then on July 7, another funeral ceremony will be held in the holy city of ⁠Qom, south of Tehran. The proceedings will conclude with a burial in Khamenei’s hometown, the northeastern holy city of Mashhad, ‌on July 9. Khamenei, who was the leader of the Islamic Republic for 36 years, will be buried at the shrine of Imam Reza, a holy place for Shiite Muslims. Funerals for his daughter and son-in-law, who were also killed in the deadly Feb. 28 strike, will be held on the same day.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.86,
+    "degraded_mode": false,
+    "monica_packet_id": "20260704T230120Z_b50439a266"
+  },
+  "duplicate_rejected_at": "2026-07-04T23:08:01.893188+00:00",
+  "duplicate_rejected": true
+}
