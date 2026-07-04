@@ -71,3 +71,5 @@ Android-tabletit ovat jo aiemmin tukeneet ensisijaista rekisteröintiä, mutta u
 WhatsApp tukee vain yhtä ensisijaista laitetta tiliä kohti. Jos käyttäjä siirtää tilinsä tablettiin, aiempi ensisijainen puhelin kirjautuu automaattisesti ulos.
 
 Molemmat uudistukset ovat vielä rajatussa jakelussa. iPadin ensisijainen rekisteröinti on nähty osalla käyttäjistä iPadOS-version 26.25.74 ja uusimman TestFlight-koontiversion yhteydessä. Android-tablettien uusi käyttöönottonäkymä on saatavilla joillekin beetatestaajille, mutta WhatsApp ei ole kertonut, milloin se tulee vakaaseen sovellusversioon.
+
+Lue seuraavaksi lisää [teknologiauutisia](/categories/teknologia/).
