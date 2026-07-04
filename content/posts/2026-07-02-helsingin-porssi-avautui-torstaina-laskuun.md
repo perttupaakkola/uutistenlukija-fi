@@ -67,3 +67,5 @@ Duellin liikevaihto kasvoi 39,5 miljoonaan euroon edellisvuoden 38,2 miljoonasta
 Konecranes kertoi hankkineensa espanjalaisen nosturihuoltopalveluihin erikoistuneen Coapsa Control Sl:n ydinvoima- ja satamakunnossapitoliiketoiminnot. Kaupan arvoa ei julkaistu. Oston kerrottiin tukevan Konecranesin strategiaa laajentaa teollisuus- ja satamapalveluliiketoimintojaan, ja yrityskaupan myötä yhtiö laajentaa espanjalaista kunnossapidon verkostoaan Viladecavallsissa sijaitsevalla toimipisteellä.
 
 Vakuutusyhtiö Sampo nimitti Diane Michelbergerin uudeksi sijoittajasuhdejohtajakseen. Michelberger aloittaa tehtävässään vuoden 2026 viimeisen neljänneksen alkupuolella. OP laski Valmetin tavoitehinnan 28,50 euroon aiemmasta 29,00 eurosta ja toisti osta-suosituksen. Handelsbanken laski Tiedon tavoitehinnan 18,50 euroon aiemmasta 20 eurosta ja toisti pidä-suosituksen.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
