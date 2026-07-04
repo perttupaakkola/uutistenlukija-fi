@@ -1,0 +1,194 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-04T16:51:18.208761+00:00",
+  "digest": "7a350947a7",
+  "packet": {
+    "packet_id": "20260704T165118Z_7a350947a7",
+    "created_at": "2026-07-04T16:51:18Z",
+    "headline_seed": "Alibaba reportedly bans employees from using Claude Code",
+    "description_seed": "Alibaba has reportedly classified Claude Code as high-risk software.",
+    "link": "https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/",
+    "source": "TechCrunch",
+    "source_names": [
+      "ProPakistani",
+      "The Next Web",
+      "The American Bazaar",
+      "The Next Web"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Alibaba reportedly bans employees from using Claude Code"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "ProPakistani",
+        "source_type": "research",
+        "text": "Alibaba has reportedly banned its employees from using Anthropic’s Claude Code at work and instructed them to switch to the Chinese company’s own Qoder coding platform. The decision follows scrutiny of Claude Code features that can inspect user environments and potentially identify people connected to China. It also marks a further escalation in the dispute between Alibaba and Anthropic over the alleged use of Claude to improve competing Chinese AI models. Claude Code is Anthropic’s AI coding assistant for software developers. Despite Anthropic restricting access for users and companies in China, the service has become popular among Chinese programmers. A person familiar with Alibaba’s internal order told Reuters that employees were being directed to replace Claude Code with Qoder, Alibaba’s agentic coding platform. Qoder offers tools for code completion, autonomous development tasks and understanding large software projects.",
+        "word_count": 137,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "The Next Web",
+        "source_type": "research",
+        "text": "“As Claude Code was recently discovered to carry back-door risks, after comprehensive evaluation, Claude Code has now been added to a list of high-risk software with security vulnerabilities,” Alibaba said in an internal notice reported by the South China Morning Post. The company recommended employees use Qoder, its own coding agent platform, as a substitute. A Reddit user identified as LegitMichel777 reverse-engineered Claude Code on 30 June and found obfuscated code that had been silently present since version 2.1.91, released on 2 April, with no mention in the release notes. The code checked whether a user’s system timezone was set to Asia/Shanghai or Asia/Urumqi and scanned proxy URLs against a hardcoded list of Chinese domains and AI lab addresses.",
+        "word_count": 119,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      },
+      {
+        "source": "The American Bazaar",
+        "source_type": "research",
+        "text": "Alibaba, the Chinese tech giant, has banned employees from using Anthropic’s AI-powered coding assistant Claude Code in workplace environments, citing alleged security risks involving embedded “backdoors,” according to a person familiar with the matter. The restriction will take effect July 10 and comes amid escalating tensions between the two companies over artificial intelligence security and intellectual property. Alibaba has instructed employees to stop using Claude Code for work and instead adopt Qoder, Alibaba’s in-house AI coding platform, the source said. READ: Alibaba to pay $600 million to settle US probe into illegal drug sales (July 2, 2026)",
+        "word_count": 97,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      },
+      {
+        "source": "The Next Web",
+        "source_type": "research",
+        "text": "Alibaba banned Claude Code after security researchers found Anthropic had embedded steganographic tracking code to identify Chinese users. The ban follows Anthropic’s accusation that Alibaba ran the largest known distillation attack on its models. Alibaba has banned its employees from using Claude Code, Anthropic’s AI-powered coding agent, after security researchers discovered that the tool contained hidden code designed to identify Chinese users. The ban, effective 10 July, follows weeks of escalating conflict between the two companies over allegations that Alibaba stole Anthropic’s AI capabilities through industrial-scale distillation.",
+        "word_count": 87,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Alibaba has reportedly banned its employees from using Anthropic’s Claude Code at work and instructed them to switch to the Chinese company’s own Qoder coding platform. The decision follows scrutiny of Claude Code features that can inspect user environments and potentially identify people connected to China. It also marks a further escalation in the dispute between Alibaba and Anthropic over the alleged use of Claude to improve competing Chinese AI models. Claude Code is Anthropic’s AI coding assistant for software developers. Despite Anthropic restricting access for users and companies in China, the service has become popular among Chinese programmers. A person familiar with Alibaba’s internal order told Reuters that employees were being directed to replace Claude Code with Qoder, Alibaba’s agentic coding platform. Qoder offers tools for code completion, autonomous development tasks and understanding large software projects.\n\n“As Claude Code was recently discovered to carry back-door risks, after comprehensive evaluation, Claude Code has now been added to a list of high-risk software with security vulnerabilities,” Alibaba said in an internal notice reported by the South China Morning Post. The company recommended employees use Qoder, its own coding agent platform, as a substitute. A Reddit user identified as LegitMichel777 reverse-engineered Claude Code on 30 June and found obfuscated code that had been silently present since version 2.1.91, released on 2 April, with no mention in the release notes. The code checked whether a user’s system timezone was set to Asia/Shanghai or Asia/Urumqi and scanned proxy URLs against a hardcoded list of Chinese domains and AI lab addresses.\n\nAlibaba, the Chinese tech giant, has banned employees from using Anthropic’s AI-powered coding assistant Claude Code in workplace environments, citing alleged security risks involving embedded “backdoors,” according to a person familiar with the matter. The restriction will take effect July 10 and comes amid escalating tensions between the two companies over artificial intelligence security and intellectual property. Alibaba has instructed employees to stop using Claude Code for work and instead adopt Qoder, Alibaba’s in-house AI coding platform, the source said. READ: Alibaba to pay $600 million to settle US probe into illegal drug sales (July 2, 2026)\n\nAlibaba banned Claude Code after security researchers found Anthropic had embedded steganographic tracking code to identify Chinese users. The ban follows Anthropic’s accusation that Alibaba ran the largest known distillation attack on its models. Alibaba has banned its employees from using Claude Code, Anthropic’s AI-powered coding agent, after security researchers discovered that the tool contained hidden code designed to identify Chinese users. The ban, effective 10 July, follows weeks of escalating conflict between the two companies over allegations that Alibaba stole Anthropic’s AI capabilities through industrial-scale distillation.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 891,
+      "selected_blocks": 4,
+      "selected_source_words": 440,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "ProPakistani",
+        "ProPakistani",
+        "ProPakistani",
+        "The Next Web",
+        "The Next Web",
+        "The Next Web",
+        "The Next Web",
+        "The American Bazaar",
+        "The American Bazaar",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "ProPakistani",
+        "The Next Web",
+        "The American Bazaar",
+        "The Next Web"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Alibaba reportedly bans employees from using Claude Code",
+      "description": "Alibaba has reportedly classified Claude Code as high-risk software.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Alibaba reportedly bans employees from using Claude Code",
+    "description": "Alibaba has reportedly classified Claude Code as high-risk software.",
+    "link": "https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/",
+    "published": "2026-07-04T16:32:08+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "a5a28557f9d53a344be5b8f63dbc2e54",
+    "_url_hash": "f54c603277b40db565f85a9d141f3223f1faaad503d5534cab92cbe3d5c5922a",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: ProPakistani]\nAlibaba has reportedly banned its employees from using Anthropic’s Claude Code at work and instructed them to switch to the Chinese company’s own Qoder coding platform.\n\nThe decision follows scrutiny of Claude Code features that can inspect user environments and potentially identify people connected to China. It also marks a further escalation in the dispute between Alibaba and Anthropic over the alleged use of Claude to improve competing Chinese AI models.\n\nClaude Code is Anthropic’s AI coding assistant for software developers. Despite Anthropic restricting access for users and companies in China, the service has become popular among Chinese programmers.\n\nA person familiar with Alibaba’s internal order told Reuters that employees were being directed to replace Claude Code with Qoder, Alibaba’s agentic coding platform. Qoder offers tools for code completion, autonomous development tasks and understanding large software projects.\n\nNeither Alibaba nor Anthropic immediately commented on the reported ban. Alibaba has also not publicly responded to Anthropic’s earlier accusations against the company.\n\nThe ban emerged shortly after developers reported that Claude Code contained mechanisms capable of examining information from a user’s environment.\n\nThe tool reportedly checked details including timezone and proxy-related information. Developers also said it could insert subtle markers into prompts before sending them to Anthropic’s servers. These mechanisms could help Anthropic identify users attempting to access Claude from restricted locations or through intermediaries.\n\nAn Anthropic employee said on X that the feature was an experiment introduced in March. According to the employee, it was designed to combat account abuse by unauthorized resellers and protect Claude against model-distillation attempts.\n\nThe workplace ban comes amid a growing dispute between the two companies.\n\nAnthropic recently accused Alibaba of conducting a large-scale “distillation” effort against Claude. Model distillation involves training a smaller or less capable AI model using answers generated by a more advanced system.\n\nAnthropic claimed Alibaba had illicitly used Claude’s outputs to obtain its capabilities more quickly. It said the effort could accelerate the development of Chinese models toward the performance of its advanced Mythos Preview system. The accusation appeared in a letter sent to two US senators and reviewed by Reuters.\n\nAlibaba has not publicly responded to the allega\n\n---\n\n[Lähde: The Next Web]\nAlibaba banned Claude Code after security researchers found Anthropic had embedded steganographic tracking code to identify Chinese users. The ban follows Anthropic’s accusation that Alibaba ran the largest known distillation attack on its models.\n\nAlibaba has banned its employees from using Claude Code, Anthropic’s AI-powered coding agent, after security researchers discovered that the tool contained hidden code designed to identify Chinese users. The ban, effective 10 July, follows weeks of escalating conflict between the two companies over allegations that Alibaba stole Anthropic’s AI capabilities through industrial-scale distillation.\n\n“As Claude Code was recently discovered to carry back-door risks, after comprehensive evaluation, Claude Code has now been added to a list of high-risk software with security vulnerabilities,” Alibaba said in an internal notice reported by the South China Morning Post. The company recommended employees use Qoder, its own coding agent platform, as a substitute.\n\nA Reddit user identified as LegitMichel777 reverse-engineered Claude Code on 30 June and found obfuscated code that had been silently present since version 2.1.91, released on 2 April, with no mention in the release notes. The code checked whether a user’s system timezone was set to Asia/Shanghai or Asia/Urumqi and scanned proxy URLs against a hardcoded list of Chinese domains and AI lab addresses.\n\nRather than logging the results conventionally, the system used steganography to hide its signals in the system prompt sent back to Anthropic’s servers. If the timezone was Chinese, the date format changed from dashes to slashes, and the apostrophe in “Today’s date is” was swapped with one of three visually identical but technically distinct Unicode characters depending on which flags were triggered.\n\nThe alterations are invisible to human users and potentially even to the AI model itself, but they are machine-parseable by Anthropic’s servers. Portions of the detection code were XOR-obfuscated with the key 91, a technique used to prevent plain-text extraction during code analysis.\n\nThariq Shihipar, an Anthropic engineer on the Claude Code team, said on X that the tracking was “an experiment we launched in March that was meant to prevent account abuse from unauthorised resellers and protect against distillation.” He said the team had been “meaning to take this down for a while” and that the pull request to remove it was merged on 1 July.\n\nThe rollback coincided with the\n\n---\n\n[Lähde: The American Bazaar]\nAlibaba, the Chinese tech giant, has banned employees from using Anthropic’s AI-powered coding assistant Claude Code in workplace environments, citing alleged security risks involving embedded “backdoors,” according to a person familiar with the matter. The restriction will take effect July 10 and comes amid escalating tensions between the two companies over artificial intelligence security and intellectual property.\n\nAlibaba has instructed employees to stop using Claude Code for work and instead adopt Qoder, Alibaba’s in-house AI coding platform, the source said.\n\nREAD: Alibaba to pay $600 million to settle US probe into illegal drug sales (July 2, 2026)\n\nThe decision follows reports from developers who claimed Claude Code contained mechanisms capable of inspecting users’ computing environments, including time zone and proxy settings, to identify whether users were operating from China or associated with Chinese organizations. Some researchers described the functionality as a potentia...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-04T16:54:59.228055+00:00",
+  "failure": "content too short: 232 words",
+  "payload": {
+    "packet_id": "20260704T165118Z_7a350947a7",
+    "title": "Alibaba kieltää työntekijöiltään Claude Coden käytön työssä",
+    "summary": "Alibaba on tiettävästi luokitellut Anthropic-yhtiön Claude Code -ohjelmointiavustajan korkean riskin ohjelmistoksi ja ohjannut työntekijöitään käyttämään sen sijaan omaa Qoder-alustaansa.",
+    "content": "Alibaba on tiettävästi kieltänyt työntekijöitään käyttämästä Anthropic-yhtiön Claude Code -ohjelmointiavustajaa työympäristöissä ja ohjannut heitä siirtymään yhtiön omaan Qoder-alustaan. Kielto liittyy huoliin Claude Codeen sisältyneistä ominaisuuksista, joiden on kerrottu voivan tarkastella käyttäjän ympäristöä ja tunnistaa Kiinaan liittyviä käyttäjiä.\n\n## Claude Code lisättiin riskilistalle\n\nSisäisessä ilmoituksessa Alibaban kerrotaan kuvanneen Claude Codea ohjelmistoksi, jossa on havaittu takaporttiriskejä ja turvallisuushaavoittuvuuksia. Rajoituksen on kerrottu tulevan voimaan 10. heinäkuuta, ja työntekijöitä on lähteiden mukaan kehotettu lopettamaan työkalun käyttö työssä.\n\nClaude Code on Anthropicin ohjelmistokehittäjille suunnattu tekoälyavustaja. Vaikka Anthropic on rajoittanut palvelun saatavuutta Kiinassa oleville käyttäjille ja yrityksille, työkalun kerrotaan saavuttaneen suosiota kiinalaisten ohjelmoijien keskuudessa.\n\nTapauksen taustalla on myös havaintoja Claude Coden piilotetusta tai peitellystä koodista. Kesäkuun 30. päivänä Reddit-käyttäjä LegitMichel777 kertoi käänteismallintaneensa työkalua ja löytäneensä peiteltyä koodia, jonka kerrottiin olleen mukana versiosta 2.1.91 alkaen. Kyseinen versio oli julkaistu 2. huhtikuuta, eikä muutosta ollut lähteiden mukaan mainittu julkaisutiedoissa.\n\n## Työntekijöitä ohjataan Qoderiin\n\nLöydetyn koodin kerrotaan tarkistaneen, oliko käyttäjän järjestelmän aikavyöhyke asetettu Shanghaihin tai Urumqiin. Lisäksi sen kerrotaan verranneen välityspalvelinten osoitteita kovakoodattuun listaan, jossa oli kiinalaisia verkkotunnuksia ja tekoälylaboratorioiden osoitteita.\n\nAlibaban sisäisen ohjeen mukaan työntekijöiden tulisi korvata Claude Code Qoderilla, joka on yhtiön oma agenttimainen ohjelmointialusta. Qoderin kerrotaan tarjoavan koodintäydennystä, itsenäisten kehitystehtävien tukea ja suurten ohjelmistoprojektien ymmärtämiseen tarkoitettuja työkaluja.\n\nPäätös osuu keskelle Alibaban ja Anthropicin kiristyneitä välejä. Anthropicin on kerrottu syyttäneen Alibabaa sen mallien ominaisuuksien laajamittaisesta kopioinnista eli distillaatiosta kilpailevien kiinalaisten tekoälymallien kehittämiseksi. Alibaba puolestaan perustelee Claude Code -kiellon turvallisuusriskillä.",
+    "category": "Teknologia",
+    "tags": [
+      "Alibaba",
+      "Anthropic",
+      "Claude Code",
+      "Qoder",
+      "tekoäly",
+      "ohjelmistokehitys",
+      "tietoturva"
+    ],
+    "summary_bullets": [
+      "Alibaba on tiettävästi kieltänyt Claude Coden käytön työssä ja ohjannut työntekijöitä Qoderiin.",
+      "Yhtiö on luokitellut Claude Coden korkean riskin ohjelmistoksi väitettyjen turvallisuushuolien vuoksi.",
+      "Päätös liittyy laajempaan kiistaan Alibaban ja Anthropicin välillä tekoälymallien käytöstä ja turvallisuudesta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.9,
+    "journalist_note": "Artikkeli perustuu lähdepaketin yhteneviin tietoihin. Väitteet kiellosta ja teknisistä löydöksistä on muotoiltu varovaisesti, koska osa tiedoista perustuu sisäiseen ilmoitukseen ja nimettömään asiaa tuntevaan lähteeseen."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260704T165118Z_7a350947a7\",\n  \"title\": \"Alibaba kieltää työntekijöiltään Claude Coden käytön työssä\",\n  \"summary\": \"Alibaba on tiettävästi luokitellut Anthropic-yhtiön Claude Code -ohjelmointiavustajan korkean riskin ohjelmistoksi ja ohjannut työntekijöitään käyttämään sen sijaan omaa Qoder-alustaansa.\",\n  \"content\": \"Alibaba on tiettävästi kieltänyt työntekijöitään käyttämästä Anthropic-yhtiön Claude Code -ohjelmointiavustajaa työympäristöissä ja ohjannut heitä siirtymään yhtiön omaan Qoder-alustaan. Kielto liittyy huoliin Claude Codeen sisältyneistä ominaisuuksista, joiden on kerrottu voivan tarkastella käyttäjän ympäristöä ja tunnistaa Kiinaan liittyviä käyttäjiä.\\n\\n## Claude Code lisättiin riskilistalle\\n\\nSisäisessä ilmoituksessa Alibaban kerrotaan kuvanneen Claude Codea ohjelmistoksi, jossa on havaittu takaporttiriskejä ja turvallisuushaavoittuvuuksia. Rajoituksen on kerrottu tulevan voimaan 10. heinäkuuta, ja työntekijöitä on lähteiden mukaan kehotettu lopettamaan työkalun käyttö työssä.\\n\\nClaude Code on Anthropicin ohjelmistokehittäjille suunnattu tekoälyavustaja. Vaikka Anthropic on rajoittanut palvelun saatavuutta Kiinassa oleville käyttäjille ja yrityksille, työkalun kerrotaan saavuttaneen suosiota kiinalaisten ohjelmoijien keskuudessa.\\n\\nTapauksen taustalla on myös havaintoja Claude Coden piilotetusta tai peitellystä koodista. Kesäkuun 30. päivänä Reddit-käyttäjä LegitMichel777 kertoi käänteismallintaneensa työkalua ja löytäneensä peiteltyä koodia, jonka kerrottiin olleen mukana versiosta 2.1.91 alkaen. Kyseinen versio oli julkaistu 2. huhtikuuta, eikä muutosta ollut lähteiden mukaan mainittu julkaisutiedoissa.\\n\\n## Työntekijöitä ohjataan Qoderiin\\n\\nLöydetyn koodin kerrotaan tarkistaneen, oliko käyttäjän järjestelmän aikavyöhyke asetettu Shanghaihin tai Urumqiin. Lisäksi sen kerrotaan verranneen välityspalvelinten osoitteita kovakoodattuun listaan, jossa oli kiinalaisia verkkotunnuksia ja tekoälylaboratorioiden osoitteita.\\n\\nAlibaban sisäisen ohjeen mukaan työntekijöiden tulisi korvata Claude Code Qoderilla, joka on yhtiön oma agenttimainen ohjelmointialusta. Qoderin kerrotaan tarjoavan koodintäydennystä, itsenäisten kehitystehtävien tukea ja suurten ohjelmistoprojektien ymmärtämiseen tarkoitettuja työkaluja.\\n\\nPäätös osuu keskelle Alibaban ja Anthropicin kiristyneitä välejä. Anthropicin on kerrottu syyttäneen Alibabaa sen mallien ominaisuuksien laajamittaisesta kopioinnista eli distillaatiosta kilpailevien kiinalaisten tekoälymallien kehittämiseksi. Alibaba puolestaan perustelee Claude Code -kiellon turvallisuusriskillä.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"Alibaba\",\n    \"Anthropic\",\n    \"Claude Code\",\n    \"Qoder\",\n    \"tekoäly\",\n    \"ohjelmistokehitys\",\n    \"tietoturva\"\n  ],\n  \"summary_bullets\": [\n    \"Alibaba on tiettävästi kieltänyt Claude Coden käytön työssä ja ohjannut työntekijöitä Qoderiin.\",\n    \"Yhtiö on luokitellut Claude Coden korkean riskin ohjelmistoksi väitettyjen turvallisuushuolien vuoksi.\",\n    \"Päätös liittyy laajempaan kiistaan Alibaban ja Anthropicin välillä tekoälymallien käytöstä ja turvallisuudesta.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.9,\n  \"journalist_note\": \"Artikkeli perustuu lähdepaketin yhteneviin tietoihin. Väitteet kiellosta ja teknisistä löydöksistä on muotoiltu varovaisesti, koska osa tiedoista perustuu sisäiseen ilmoitukseen ja nimettömään asiaa tuntevaan lähteeseen.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260704T165118Z_7a350947a7",
+    "category": "Teknologia",
+    "selected_source_words": 440,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 232,
+    "issues": [
+      "content too short: 232 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Alibaba kieltää työntekijöiltään Claude Coden käytön työssä",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-07-04T16:54:59.227434+00:00",
+    "repair_trigger": "pre_repair_word_count=232; selected_source_words=440; selected_source_blocks=4",
+    "pre_repair_word_count": 232,
+    "pre_repair_lead_word_count": 37,
+    "post_repair_word_count": 232,
+    "post_repair_lead_word_count": 37,
+    "selected_source_words_at_repair": 440,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 440,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 232 words",
+    "source_block_ids_used_for_repair": [
+      "1:ProPakistani:194dce0f97",
+      "2:The Next Web:c698683997",
+      "3:The American Bazaar:7c1e56ed88",
+      "4:The Next Web:86ac3c3cd2"
+    ],
+    "final_issues": [
+      "content too short: 232 words"
+    ],
+    "recovered": false
+  }
+}
