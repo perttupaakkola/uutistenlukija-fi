@@ -67,3 +67,5 @@ Vuotaneet hinnat koskevat valittuja Euroopan maita, eivätkä ne välttämättä
 Samsungilta odotetaan samassa yhteydessä myös Galaxy Watch9- ja Galaxy Watch Ultra2 -älykelloja. Niistä on jo nähty tarkkoja virallisiksi kuvattuja tuotekuvia, ja myös taittuvista puhelimista on liikkunut virallisia kuvia suojakuorten kanssa. Älykellojenkin hinnoissa kerrotaan olevan luvassa nousua.
 
 Malliston sisällä Ultra-nimen kerrotaan korostavan Galaxy Z Fold8 Ultran asemaa huippumallina. Sen odotetaan erottuvan leveämmästä Fold8-mallista muun muassa kameroilla: Fold8:ssa olisi kaksi takakameraa, kun Ultrassa olisi kolme takakameraa telekamera mukaan lukien. Ultralle odotetaan myös hieman suurempaa akkua, 5 000 milliampeerituntia verrattuna Fold8:n 4 800 milliampeerituntiin.
+
+Lue seuraavaksi lisää [teknologiauutisia](/categories/teknologia/).
