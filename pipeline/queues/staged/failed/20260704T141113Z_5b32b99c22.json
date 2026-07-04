@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-04T14:11:13.038802+00:00",
+  "digest": "5b32b99c22",
+  "packet": {
+    "packet_id": "20260704T141113Z_5b32b99c22",
+    "created_at": "2026-07-04T14:11:13Z",
+    "headline_seed": "Ranskan tähtipelaajasta surkea uutinen, Englanti sai huojentavan tiedon",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9593595",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9593595"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ranskan tähtipelaajasta surkea uutinen, Englanti sai huojentavan tiedon"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 166,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen",
+        "Keskisuomalainen"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ranskan tähtipelaajasta surkea uutinen, Englanti sai huojentavan tiedon",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Ranskan tähtipelaajasta surkea uutinen, Englanti sai huojentavan tiedon",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9593595",
+    "published": "2026-07-04T16:59:27+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "23c45cda9fc1b009b1f79bc8d42ef0d8",
+    "_url_hash": "ac9958c4cbe64a776b859b62fa6b45f20fd021d8a1dcc5470a71ec8730052972",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keskisuomalainen]\nRanskan keskikentän tähtipelaaja Aurélien Tchouaméni joutuu jättämään väliin jalkapallon MM-kisojen neljännesvälieräottelun Paraguayta vastaan takareisivamman vuoksi, kertoo ranskalaislehti L'Equipe.\n\nTchouaméni on pelannut MM-kisoissa täydet minuutit kaikissa kamppailuissa Irak-ottelua lukuun ottamatta. L'Equipen mukaan vamma syntyi harjoituksissa.\n\nHänen korvaajakseen avauskokoonpanoon on nousemassa Manu Koné, jonka odotetaan muodostavan keskikentän keskustan yhdessä Adrien Rabiotin kanssa. Muutoin Ranskan kokoonpanon arvioidaan säilyvän ennallaan.\n\nRanska eteni neljännesvälieriin vakuuttavasti kaadettuaan Ruotsin ensimmäisellä pudotuspelikierroksella maalein 3–0.\n\nEnglannin leiristä kantautui puolestaan myönteisiä uutisia, sillä keskikenttäpelaaja Declan Ricen odotetaan olevan pelikunnossa maanantain vastaisena yönä pelattavassa Meksiko-ottelussa. Arsenalin tähtipelaajaa ovat pitkään vaivanneet hermokudokseen liittyvät ongelmat, jotka vaikuttavat takareisien lihaksiin, kertoo talkSport.\n\nKaksi ottelua sivussa ollut laitapuolustaja Reece James on myös lähellä paluuta. Hänen pelikuntoaan ei ole vielä vahvistettu, mutta talkSportin mukaan vamma ei kuitenkaan ole niin vakava kuin aiemmin pelättiin.\n\nJamesin poissaolo on näkynyt Englannin oikealla laidalla, jossa Djed Spence on ajoittain ollut vaikeuksissa puolustussuuntaan. Lisäksi puolustaja Jarell Quansah on edelleen loukkaantuneena.\n\nEnglanti oli vaikeuksissa pudotuspelien ensimmäisellä kierroksella, kun se kaatoi Kongon demokraattisen tasavallan vasta viime hetken maalilla 2–1.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-04T14:13:19.504069+00:00",
+  "failure": "Paketti ei sisällä lähdetekstiä tai vahvistettavia tietoja, joiden varaan vähintään 250 sanan uutisen voisi kirjoittaa ilman keksittyjä yksityiskohtia.",
+  "raw_response": "{\"packet_id\":\"20260704T141113Z_5b32b99c22\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä lähdetekstiä tai vahvistettavia tietoja, joiden varaan vähintään 250 sanan uutisen voisi kirjoittaa ilman keksittyjä yksityiskohtia.\"}"
+}
