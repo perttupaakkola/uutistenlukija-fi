@@ -71,3 +71,5 @@ Yhtiön mukaan kyseessä on yksi sen suurimmista murskainten kulutusosatilauksis
 Nurminen Logisticsin tytäryhtiö North Rail puolestaan käynnisti muutosneuvottelut. Neuvottelut koskevat koko yhtiön henkilöstöä, ja niihin liittyvillä tehostamistoimilla tavoitellaan noin 3 miljoonan euron vuotuisia säästöjä. Alustavan arvion mukaan neuvottelut voivat johtaa enintään 25 henkilön irtisanomiseen.
 
 Puolustuskonserni Summa Defence kertoi sopineensa aiemmin tiedottamansa 8,0 miljoonan euron siltarahoituslainan muuttamisesta vaihtovelkakirjalainaksi. Muutetun lainasopimuksen vastapuolena on Largus Holding AB. Vaihtovelkakirjalainan pääoma on noin 8,6 miljoonaa euroa, vuotuinen korko 14 prosenttia ja eräpäivä 31. maaliskuuta 2027.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
