@@ -67,3 +67,5 @@ Kalajaisen mukaan nuorten suurempi halukkuus myydä sijoituksia voi liittyä el�
 Sukupuolten välillä kyselyssä ei havaittu eroja. Kyselyn perusteella suomalaiset erottavat sijoittamisen ja kulutuksen toisistaan varsin selkeästi: sijoituksia ei käytetä ensisijaisena puskurina, vaan niiden annetaan kasvaa pitkällä aikavälillä.
 
 Säännöllisen säästämisen suosio näkyy OP:n mukaan myös rahastosäästämisessä. Pankin asiakkaat avasivat tammi–toukokuussa 107 000 uutta rahastojen kuukausisäästösopimusta, mikä kertoo kuukausittaisen säästämisen vahvasta asemasta sijoitustuotteiden kysynnässä.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
