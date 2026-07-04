@@ -65,4 +65,4 @@ Järjestö katsoo, että muutos olisi mahdollinen nopeallakin aikataululla. Lemp
 
 Ministeriön perusteluissa esitystä kuvataan myös perheiden näkökulmasta. Kevätlukukausi pitenisi ja syyslukukausi lyhenisi viikolla, mutta kouluvuoden kokonaispituus ei muuttuisi. Pidentyvää kevätlukukautta kevennettäisiin uudella, vähintään viikon mittaisella kevätlomalla huhtikuun lopulla. Vastaava käytäntö on käytössä Ruotsissa.
 
-Seuraa yritysten ja talouden seuraavia käänteitä Uutistenlukijan [Talous-uutisista](/kategoriat/talous/).
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
