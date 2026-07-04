@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-04T10:31:12.095344+00:00",
+  "digest": "48f60a1a40",
+  "packet": {
+    "packet_id": "20260704T103112Z_48f60a1a40",
+    "created_at": "2026-07-04T10:31:12Z",
+    "headline_seed": "Iso vesivahinko kirjastossa Helsingissä",
+    "description_seed": "Pelastuslaitokselta lähetettiin viisi pelastusyksikköä paikalle. Vettä tulvi Viikin kirjaston sisälle Helsingissä tänään lauantaina puolenpäivän aikaan. Vettä rakennuksen sisään tuli siellä sijaitsevan opiskelijaravintola Unicafen katosta, kertoo paikalla ollut Iltalehden lukija.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/28fb494c-1aae-445f-8ca5-2dcd7213acd3?utm_source=rss",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/28fb494c-1aae-445f-8ca5-2dcd7213acd3?utm_source=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Iso vesivahinko kirjastossa Helsingissä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Pelastuslaitokselta lähetettiin viisi pelastusyksikköä paikalle. Vettä tulvi Viikin kirjaston sisälle Helsingissä tänään lauantaina puolenpäivän aikaan. Vettä rakennuksen sisään tuli siellä sijaitsevan opiskelijaravintola Unicafen katosta, kertoo paikalla ollut Iltalehden lukija.",
+        "word_count": 29,
+        "keyword_overlap": 27,
+        "strong_overlap": 22
+      }
+    ],
+    "source_text": "Pelastuslaitokselta lähetettiin viisi pelastusyksikköä paikalle. Vettä tulvi Viikin kirjaston sisälle Helsingissä tänään lauantaina puolenpäivän aikaan. Vettä rakennuksen sisään tuli siellä sijaitsevan opiskelijaravintola Unicafen katosta, kertoo paikalla ollut Iltalehden lukija.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 58,
+      "selected_blocks": 1,
+      "selected_source_words": 29,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Iso vesivahinko kirjastossa Helsingissä",
+      "description": "Pelastuslaitokselta lähetettiin viisi pelastusyksikköä paikalle. Vettä tulvi Viikin kirjaston sisälle Helsingissä tänään lauantaina puolenpäivän aikaan. Vettä rakennuksen sisään tuli siellä sijaitsevan opiskelijaravintola Unicafen katosta, kertoo paikalla ollut Iltalehden lukija.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Iso vesivahinko kirjastossa Helsingissä",
+    "description": "Pelastuslaitokselta lähetettiin viisi pelastusyksikköä paikalle. Vettä tulvi Viikin kirjaston sisälle Helsingissä tänään lauantaina puolenpäivän aikaan. Vettä rakennuksen sisään tuli siellä sijaitsevan opiskelijaravintola Unicafen katosta, kertoo paikalla ollut Iltalehden lukija.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/28fb494c-1aae-445f-8ca5-2dcd7213acd3?utm_source=rss",
+    "published": "2026-07-04T13:03:38+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "1ff3c70e624b0489fe8b402a51ab68dc",
+    "_url_hash": "6aa5a8fe7a45c003357b5ee42dfb5963c485b09f2e7b06cee6c1d5d294859bf8",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Pelastuslaitokselta lähetettiin viisi pelastusyksikköä paikalle. Vettä tulvi Viikin kirjaston sisälle Helsingissä tänään lauantaina puolenpäivän aikaan. Vettä rakennuksen sisään tuli siellä sijaitsevan opiskelijaravintola Unicafen katosta, kertoo paikalla ollut Iltalehden lukija.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-07-04T10:33:22.109462+00:00",
+  "failure": "Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai varmistamattomia lisätietoja.",
+  "raw_response": "{\"packet_id\":\"20260704T103112Z_48f60a1a40\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka vähintään 250 sanan julkaistavaan artikkeliin ilman täyteaineistoa tai varmistamattomia lisätietoja.\"}"
+}

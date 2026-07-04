@@ -47,7 +47,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/04/7-700-milliampeeritunnin-jattiakulla-varustettu-honor-600-smart-5g-alypuhelin-myyntiin-suomessa-6-heinakuuta-299-euron-suositushinnalla/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
