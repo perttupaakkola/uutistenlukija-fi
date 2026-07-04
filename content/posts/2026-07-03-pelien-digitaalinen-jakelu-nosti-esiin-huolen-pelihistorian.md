@@ -63,3 +63,5 @@ Cifaldin mukaan hän on yrittänyt työskennellä pelialan organisaatioiden kans
 Väite ei tarkoita piratismin ihannointia, vaan tuo esiin arkistointiin liittyvän käytännön ongelman. Jos peli poistuu myynnistä, sen palvelimet suljetaan tai käyttöoikeudet lakkaavat toimimasta, tutkijoiden, museoiden ja harrastajien mahdollisuudet säilyttää teos voivat jäädä hyvin kapeiksi.
 
 Pelien asema kulttuurihistoriana on samalla vahvistunut. Kun suuri osa julkaisuista on saatavilla vain digitaalisesti, säilyttämisen kysymys ei koske pelkästään kuluttajien ostoksia, vaan myös sitä, millainen kuva nykyisestä pelikulttuurista jää tuleville pelaajille, tutkijoille ja arkistoille.
+
+Lue seuraavaksi lisää [teknologiauutisia](/categories/teknologia/).
