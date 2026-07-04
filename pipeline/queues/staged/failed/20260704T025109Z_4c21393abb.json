@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-04T02:51:09.701035+00:00",
+  "digest": "4c21393abb",
+  "packet": {
+    "packet_id": "20260704T025109Z_4c21393abb",
+    "created_at": "2026-07-04T02:51:09Z",
+    "headline_seed": "LUT:n professori: Tekoälymurros voi siirtää yritysten rahavirrat Suomesta Yhdysvaltoihin",
+    "description_seed": "Tekoälyn suurimmat kysymykset eivät välttämättä liity teknologiaan vaan ihmisiin. LUT-yliopiston tutkijoiden kansainväliseen huippujulkaisuun hyväksytty tutkimus tarkastelee, miten yritysjohtajat johtavat muutosta epävarmuuden keskellä.",
+    "link": "https://www.ess.fi/paikalliset/9592408",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9592408"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "LUT:n professori: Tekoälymurros voi siirtää yritysten rahavirrat Suomesta Yhdysvaltoihin"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Tekoälyn suurimmat kysymykset eivät välttämättä liity teknologiaan vaan ihmisiin. LUT-yliopiston tutkijoiden kansainväliseen huippujulkaisuun hyväksytty tutkimus tarkastelee, miten yritysjohtajat johtavat muutosta epävarmuuden keskellä.",
+        "word_count": 22,
+        "keyword_overlap": 22,
+        "strong_overlap": 18
+      }
+    ],
+    "source_text": "Tekoälyn suurimmat kysymykset eivät välttämättä liity teknologiaan vaan ihmisiin. LUT-yliopiston tutkijoiden kansainväliseen huippujulkaisuun hyväksytty tutkimus tarkastelee, miten yritysjohtajat johtavat muutosta epävarmuuden keskellä.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 44,
+      "selected_blocks": 1,
+      "selected_source_words": 22,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "LUT:n professori: Tekoälymurros voi siirtää yritysten rahavirrat Suomesta Yhdysvaltoihin",
+      "description": "Tekoälyn suurimmat kysymykset eivät välttämättä liity teknologiaan vaan ihmisiin. LUT-yliopiston tutkijoiden kansainväliseen huippujulkaisuun hyväksytty tutkimus tarkastelee, miten yritysjohtajat johtavat muutosta epävarmuuden keskellä.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "LUT:n professori: Tekoälymurros voi siirtää yritysten rahavirrat Suomesta Yhdysvaltoihin",
+    "description": "Tekoälyn suurimmat kysymykset eivät välttämättä liity teknologiaan vaan ihmisiin. LUT-yliopiston tutkijoiden kansainväliseen huippujulkaisuun hyväksytty tutkimus tarkastelee, miten yritysjohtajat johtavat muutosta epävarmuuden keskellä.",
+    "link": "https://www.ess.fi/paikalliset/9592408",
+    "published": "2026-07-04T05:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "229a4213b018dcf0b4027a2e58aa6b70",
+    "_url_hash": "16cf55e68b01851f27c199e6828233b37d56866e93c4fe9123c9d81aa1d0bf1f",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Tekoälyn suurimmat kysymykset eivät välttämättä liity teknologiaan vaan ihmisiin. LUT-yliopiston tutkijoiden kansainväliseen huippujulkaisuun hyväksytty tutkimus tarkastelee, miten yritysjohtajat johtavat muutosta epävarmuuden keskellä.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-07-04T02:53:19.286812+00:00",
+  "failure": "Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman lisäfaktojen keksimistä.",
+  "raw_response": "{\"packet_id\":\"20260704T025109Z_4c21393abb\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka 250 sanan julkaistavaan artikkeliin ilman lisäfaktojen keksimistä.\"}"
+}
