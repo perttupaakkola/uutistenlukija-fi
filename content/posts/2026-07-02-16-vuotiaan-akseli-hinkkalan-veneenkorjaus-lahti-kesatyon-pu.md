@@ -69,3 +69,5 @@ Parhaillaan isän pihassa on valmistumassa 4,5-metrinen Taifunx-moottorivene, jo
 Myynnissä hänellä on myös korjaamansa 5-metrinen Örnvik-hyttivene, josta hän pyytää 1 900 euroa ilman moottoria. Vene tuli hänelle ilmaiseksi Facebookin kautta, mutta materiaaleihin kului arviolta 400 euroa ja työhön 3,5 viikkoa.
 
 Hinkkala suhtautuu saamiinsa kehuihin rauhallisesti. Hänen mukaansa työ ei tunnu enää kovin haastavalta ensimmäisen veneen jälkeen, vaikka korjattavien kohteiden lähtökunto voi olla heikko. Parhaimmillaan myynnissä on ollut useita kunnostettuja soutuveneitä samaan aikaan, ja 4H-yrittäjä on tyytyväinen tienesteihinsä.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
