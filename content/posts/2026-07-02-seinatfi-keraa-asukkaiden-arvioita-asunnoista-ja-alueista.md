@@ -65,3 +65,5 @@ Seinät.fi:ssä käyttäjä voi tarkastella asuinalueiden saamia arvioita ja kir
 Palvelu on rajattu niin, ettei siellä ole tarkoitus arvostella yksittäisiä henkilöitä tai tahoja. Edgrenin ja Freudenthalin ajatuksena on, että arvioinnin kohteena ovat asunto ja alue sekä se, miten arki niissä toimii.
 
 Arvosteluja seurataan kriittisesti. Jos käyttäjä antaa kaikkiin kohtiin pelkkiä ykkösiä tai vitosia ilman perusteluja, arvio poistetaan, koska vahva mielipide pitää pystyä perustelemaan. Edgrenin ja Freudenthalin tavoitteena on, että palvelusta tulisi ajan myötä paikka, josta asumisvaihtoehtoja tarkistetaan ennen päätöstä.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
