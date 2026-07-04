@@ -47,7 +47,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/mobiili/mobiiliuutiset/apple-on-saattanut-keskeyttaa-kameroilla-varustettujen-airpods-ultra-kuulokkeiden-kehityksen/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
