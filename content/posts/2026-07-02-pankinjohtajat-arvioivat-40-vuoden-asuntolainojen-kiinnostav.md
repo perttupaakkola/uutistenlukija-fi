@@ -67,3 +67,5 @@ Finanssiala ry:n pääekonomisti Veli-Matti Mattila pitää eduskunnan päätös
 Mattilan mukaan pidempi laina-aika tuo kotitalouksille joustoa taloudenpitoon, koska kuukausierä voi jäädä pienemmäksi. Hän arvioi, että tämä voi myös luoda mahdollisuuksia sijoittamiseen ja varallisuuden kasvattamiseen.
 
 Pankkien lainapäätöksissä asiakkaiden maksukykyä arvioidaan silti edelleen stressitestillä. Finanssivalvonnan suosituksen mukaan lainanhoitokykyä testataan enintään 25 vuoden laina-ajalla ja vähintään 6 prosentin korkotasolla.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
