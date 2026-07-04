@@ -67,3 +67,5 @@ Yrittäjien mukaan sääntelyä pitäisi kehittää niin, että työterveyden tu
 Järjestö pitää ongelmana myös laskutuksen läpinäkymättömyyttä. Sen mukaan työnantajalla pitää olla mahdollisuus ymmärtää, mistä yritys maksaa. Hellsténin mukaan hyvä työterveysyhteistyö on koko työpaikan etu, mutta hänen mukaansa tavoite ei nykytilanteessa toteudu riittävän hyvin suomalaisessa työelämässä.
 
 Yrittäjien arvion mukaan pakottava sääntely ohjaa palveluntarjoajia tuottamaan palveluita, jotka sopivat lainsäädännössä korvattavaksi määriteltyyn kehikkoon. Järjestö katsoo, että tämä kaventaa palveluiden kehittämistä ja voi lisätä kustannuspaineita yrityksille.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
