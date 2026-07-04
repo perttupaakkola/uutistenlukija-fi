@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-04T11:41:13.388419+00:00",
+  "digest": "1b004f83f4",
+  "packet": {
+    "packet_id": "20260704T114113Z_1b004f83f4",
+    "created_at": "2026-07-04T11:41:13Z",
+    "headline_seed": "Suurimmalle osalle suomalaisista työ on vain keino rahoittaa muuta elämää, kertoo tutkimus",
+    "description_seed": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/uutiset/10f628ea-b0c8-43d7-a0be-823a59697ef7",
+    "source": "Maaseudun Tulevaisuus",
+    "source_names": [],
+    "source_urls": [
+      "https://www.maaseuduntulevaisuus.fi/uutiset/10f628ea-b0c8-43d7-a0be-823a59697ef7"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suurimmalle osalle suomalaisista työ on vain keino rahoittaa muuta elämää, kertoo tutkimus"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 132,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suurimmalle osalle suomalaisista työ on vain keino rahoittaa muuta elämää, kertoo tutkimus",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Suurimmalle osalle suomalaisista työ on vain keino rahoittaa muuta elämää, kertoo tutkimus",
+    "description": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/uutiset/10f628ea-b0c8-43d7-a0be-823a59697ef7",
+    "published": "2026-07-04T11:30:00+00:00",
+    "source": "Maaseudun Tulevaisuus",
+    "source_domain": "maaseuduntulevaisuus.fi",
+    "language": "fi",
+    "fingerprint": "df8d6dbe01c69ed4ba30776ce4adf569",
+    "_url_hash": "29b3540063864b5c926ee10a14aa00e77792c99fa02414f5b40e3d8a14fc55d6",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nSuomalaisten suhde työhön on muuttunut ansaintakeskeisemmäksi. Kuusi kymmenestä (61 %) pitää työtä lähinnä keinona rahoittaa muita, kiinnostavampia aktiviteetteja. Osuus on kasvanut vuodesta 2010 peräti 14 prosenttiyksikköä, selviää Elinkeinoelämän valtuuskunnan syksyn 2025 arvo- ja asennetutkimuksesta. Kyselyyn vastasi 2038 henkilöä.\n\nVain 14 prosenttia suomalaisista tekisi työtä, vaikka ei tarvitsisi rahaa.\n\n– Suomalaisten työmoraali ei ole romahtanut, mutta työn itseisarvo on heikentynyt, sanoo EVAn tutkimuspäällikkö Ilkka Haavisto tiedotteessa.\n\nIkäluokkien välillä on suuria eroja. Vain kolmasosa 26–35-vuotiaista pitää työtä tärkeimpänä elämänsisältönä, kun yli 65-vuotiaista näin ajattelee valtaosa eli 72 prosenttia.\n\nNuorimmat, 18–25-vuotiaat, eivät kuitenkaan vieroksu työelämää. Heistä 43 prosenttia pitää työtä tärkeimpänä elämänsisältönä, mikä vastaa väestön keskiarvoa.\n\nVapaa-ajan arvostus näkyy selvästi: reilu kolmasosa työssä olevista (35 %) haluaisi käyttää vähemmän aikaa ansiotyöhön, ja 43 prosenttia olisi valmis tinkimään palkasta lyhyemmän työajan vuoksi.\n\nKymmenesosa haluaisi työskennellä enemmän.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-04T11:43:18.878892+00:00",
+  "failure": "Paketti ei sisällä valittua lähdetekstiä tai tarkistettavia tietoja tutkimuksesta, joten artikkelia ei voi kirjoittaa luotettavasti ilman keksittyjä yksityiskohtia.",
+  "raw_response": "{\"packet_id\":\"20260704T114113Z_1b004f83f4\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketti ei sisällä valittua lähdetekstiä tai tarkistettavia tietoja tutkimuksesta, joten artikkelia ei voi kirjoittaa luotettavasti ilman keksittyjä yksityiskohtia.\"}"
+}
