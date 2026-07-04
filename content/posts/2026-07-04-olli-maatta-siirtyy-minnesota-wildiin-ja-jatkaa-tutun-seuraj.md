@@ -47,7 +47,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Haastattelu/J%C3%A4lleen-joukkuetta-vaihtava-Olli-M%C3%A4%C3%A4tt%C3%A4-innoissaan-p%C3%A4%C3%A4stess%C3%A4%C3%A4n-jatkamaan-yhteisty%C3%B6t%C3%A4-Bill-Guerinin-kanssa/186308"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
