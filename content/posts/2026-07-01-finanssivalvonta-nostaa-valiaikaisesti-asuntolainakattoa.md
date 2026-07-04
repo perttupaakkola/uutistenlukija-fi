@@ -65,3 +65,5 @@ Asuntomarkkinoiden tilannetta painavat edelleen runsas asuntotarjonta ja heikko 
 Finanssivalvonta päätti samalla pitää pankkien muuttuvan lisäpääomavaatimuksen edelleen nollassa prosentissa. Mattila on tyytyväinen myös tähän ratkaisuun ja yhtyy Finanssivalvonnan arvioon siitä, että rahoitussuhdanteen ylikuumenemiseen viittaavat riskit ovat edelleen vähäisiä.
 
 Lainakaton väliaikainen korotus voi siten lisätä ostajien liikkumavaraa markkinassa, jossa kysyntä on ollut heikkoa ja hintapaineet jatkuvat. Vaikutus riippuu kuitenkin siitä, kuinka moni ostaja täyttää pankkien ehdot ja lähtee tekemään asuntokauppoja muuttuneessa tilanteessa.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
