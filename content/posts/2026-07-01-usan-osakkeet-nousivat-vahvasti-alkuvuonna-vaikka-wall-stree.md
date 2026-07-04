@@ -66,3 +66,5 @@ World Liberty Financial -kryptoyhtiöstä Trump sai lähes 800 miljoonaa dollari
 Lisäksi Trump ilmoitti saaneensa 635 miljoonaa dollaria omien Trump-meemikolikoidensa myynnistä. Kryptotulojen kerrotaan kasvaneen vuodentakaisesta selvästi: aiemmassa ilmoituksessa Trump raportoi 57,35 miljoonan dollarin tokenmyynnit World Libertyssä, kun nyt vastaava summa oli noin yhdeksänkertainen.
 
 Reuters on arvioinut, että Trumpin perhe on ansainnut vähintään 2,3 miljardia dollaria kryptoon liittyvistä hankkeista sen jälkeen, kun Trump palasi Valkoiseen taloon vuonna 2025. Yhdysvalloista kerrottiin myös työpaikkatietoja, joiden mukaan kesäkuussa työpaikkoja oli 98 000, kun vertailukaudella määrä oli 122 000. Lisäksi keskuspankkijohtaja Kevin Warshin kerrottiin osallistuvan Euroopan keskuspankin foorumiin Portugalin Sintrassa.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
