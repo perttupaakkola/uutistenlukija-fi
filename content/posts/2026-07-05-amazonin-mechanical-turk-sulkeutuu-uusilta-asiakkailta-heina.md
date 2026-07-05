@@ -47,7 +47,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/05/amazon-sulkee-perinteisen-palvelun-uusilta-asiakkailta-joukkotyon-pioneerin-mechanical-turkin-loppu-haamottaa/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
