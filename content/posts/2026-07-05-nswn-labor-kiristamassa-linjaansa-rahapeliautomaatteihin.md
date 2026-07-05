@@ -47,7 +47,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/jul/05/nsw-labor-to-adopt-tougher-pokies-stance-as-sydney-inner-west-mayor-says-momentum-for-real-reform-unstoppable"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
