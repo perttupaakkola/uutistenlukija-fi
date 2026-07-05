@@ -47,7 +47,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/hbo-maxiin-lisattiin-viikolla-27-2026-nama-sarjat-ja-elokuvat/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
