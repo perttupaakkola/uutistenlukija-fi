@@ -65,3 +65,5 @@ Mistralin tuoreissa avauksissa korostuu laajojen kuluttajapalvelujen sijaan teol
 Yhtiö toimii samalla Euroopan tekoälymarkkinan kannalta merkittävässä vaiheessa. Sen kerrotaan keränneen vähintään 3,9 miljardia dollaria yhdeksällä rahoituskierroksella. Mukana on ollut syyskuussa 2025 toteutettu 1,7 miljardin euron C-sarjan kierros, jota johti hollantilainen puolijohdelaitteiden valmistaja ASML, sekä maaliskuussa 2026 järjestetty 830 miljoonan dollarin velkarahoitus seitsemän pankin konsortiolta datakeskusrakentamista varten.
 
 Mistral on siten kasvanut liian suureksi tullakseen sivuutetuksi tutkimuslaboratoriona, mutta se on edelleen selvästi pienempi kuin OpenAI, Google DeepMind ja Anthropic. Sen vastaukseksi on kuvattu syvällinen erikoistuminen: eteneminen toimiala kerrallaan, työnkulku kerrallaan ja infrastruktuurin rakentaminen niin, että ratkaisuja voidaan pitää asiakkaiden omissa ympäristöissä.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
