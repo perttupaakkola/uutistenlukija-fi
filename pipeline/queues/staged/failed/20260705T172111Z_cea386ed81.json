@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-05T17:21:11.045137+00:00",
+  "digest": "cea386ed81",
+  "packet": {
+    "packet_id": "20260705T172111Z_cea386ed81",
+    "created_at": "2026-07-05T17:21:11Z",
+    "headline_seed": "Mediat: Kiinan ja Venäjän salainen operaatio paljastui – Saksa ärähti",
+    "description_seed": "Raporttien mukaan Kiina järjesti salaista sotilaskoulutusta venäläissotilaille. Saksan ulkoministeriö ilmoittaa kutsuneensa Kiinan suurlähettilään puhuteltavaksi. Syynä ovat raportit, joiden mukaan venäläissotilaat saivat viime vuonna Kiinassa salaista sotilaskoulutusta Venäjän johdon luvalla.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/3cf37140-91f3-471c-aa49-77d965ead969?utm_source=rss",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/3cf37140-91f3-471c-aa49-77d965ead969?utm_source=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Mediat: Kiinan ja Venäjän salainen operaatio paljastui – Saksa ärähti"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Raporttien mukaan Kiina järjesti salaista sotilaskoulutusta venäläissotilaille. Saksan ulkoministeriö ilmoittaa kutsuneensa Kiinan suurlähettilään puhuteltavaksi. Syynä ovat raportit, joiden mukaan venäläissotilaat saivat viime vuonna Kiinassa salaista sotilaskoulutusta Venäjän johdon luvalla.",
+        "word_count": 29,
+        "keyword_overlap": 25,
+        "strong_overlap": 21
+      }
+    ],
+    "source_text": "Raporttien mukaan Kiina järjesti salaista sotilaskoulutusta venäläissotilaille. Saksan ulkoministeriö ilmoittaa kutsuneensa Kiinan suurlähettilään puhuteltavaksi. Syynä ovat raportit, joiden mukaan venäläissotilaat saivat viime vuonna Kiinassa salaista sotilaskoulutusta Venäjän johdon luvalla.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 58,
+      "selected_blocks": 1,
+      "selected_source_words": 29,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Mediat: Kiinan ja Venäjän salainen operaatio paljastui – Saksa ärähti",
+      "description": "Raporttien mukaan Kiina järjesti salaista sotilaskoulutusta venäläissotilaille. Saksan ulkoministeriö ilmoittaa kutsuneensa Kiinan suurlähettilään puhuteltavaksi. Syynä ovat raportit, joiden mukaan venäläissotilaat saivat viime vuonna Kiinassa salaista sotilaskoulutusta Venäjän johdon luvalla.",
+      "category_hint": "Ulkomaat",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Mediat: Kiinan ja Venäjän salainen operaatio paljastui – Saksa ärähti",
+    "description": "Raporttien mukaan Kiina järjesti salaista sotilaskoulutusta venäläissotilaille. Saksan ulkoministeriö ilmoittaa kutsuneensa Kiinan suurlähettilään puhuteltavaksi. Syynä ovat raportit, joiden mukaan venäläissotilaat saivat viime vuonna Kiinassa salaista sotilaskoulutusta Venäjän johdon luvalla.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/3cf37140-91f3-471c-aa49-77d965ead969?utm_source=rss",
+    "published": "2026-07-05T19:23:47+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "3924d8ff40f92f1ce4ac5252acafb322",
+    "_url_hash": "79475f71703fd0a5142752acd35a575e3acca0c817aab91418ac680749718a9c",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Raporttien mukaan Kiina järjesti salaista sotilaskoulutusta venäläissotilaille. Saksan ulkoministeriö ilmoittaa kutsuneensa Kiinan suurlähettilään puhuteltavaksi. Syynä ovat raportit, joiden mukaan venäläissotilaat saivat viime vuonna Kiinassa salaista sotilaskoulutusta Venäjän johdon luvalla.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-07-05T17:23:20.231651+00:00",
+  "failure": "Lähdeaineisto on liian niukka eikä sisällä riittävästi vahvistettuja yksityiskohtia vähintään 250 sanan julkaistavaan artikkeliin ilman täyteainesta tai oletuksia.",
+  "raw_response": "{\"packet_id\":\"20260705T172111Z_cea386ed81\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka eikä sisällä riittävästi vahvistettuja yksityiskohtia vähintään 250 sanan julkaistavaan artikkeliin ilman täyteainesta tai oletuksia.\"}"
+}

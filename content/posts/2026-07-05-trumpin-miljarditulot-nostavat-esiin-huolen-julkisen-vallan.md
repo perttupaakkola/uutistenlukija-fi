@@ -47,7 +47,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/us-news/2026/jul/05/trumps-2bn-bonanza-heralds-the-rise-of-political-grifters-across-the-west"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
