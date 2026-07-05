@@ -69,3 +69,5 @@ Australialainen populistipoliitikko Pauline Hanson mainitaan samassa yhteydessä
 Yhdysvalloissa toimiva ihmisoikeusjuristi ja kleptokratian asiantuntija Tutu Alicante arvioi, että aiempi pidäke on heikkenemässä. Hänen mukaansa julkisen viran käyttäminen omaan rikastumiseen nähtiin pitkään poliittisena ja maineeseen liittyvänä riskinä, mutta nykytilanteessa erona on toiminnan röyhkeys.
 
 Alicanten mukaan kehitys muistuttaa ilmiöitä, joissa korruptiosta tulee joillekin tavoiteltavaa ja näyttävää. Hän viittaa synnyinmaahansa Päiväntasaajan Guineaan, jossa nuoret voivat ihailla loistokasta elämäntapaa esitteleviä kleptokraatteja. Hänen huolensa on, että myös osissa länttä poliitikot, jotka rahastavat julkista asemaa avoimesti, sekä heidän ympärillään toimivat liikemiehet ja vaikuttajat nähdään varoittavien esimerkkien sijaan menestyksen symboleina.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
