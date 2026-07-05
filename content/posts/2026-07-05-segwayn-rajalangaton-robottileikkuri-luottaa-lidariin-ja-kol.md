@@ -47,7 +47,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkatestit/testi-segway-navimow-i210-lidar-pro-robottiruohonleikkuri/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
