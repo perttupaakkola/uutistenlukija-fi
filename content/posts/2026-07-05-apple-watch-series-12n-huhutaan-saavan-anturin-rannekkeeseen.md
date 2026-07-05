@@ -47,7 +47,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/05/huhu-apple-watch-series-12-voi-tuoda-uudella-tavalla-anturin-rannekkeeseen/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
