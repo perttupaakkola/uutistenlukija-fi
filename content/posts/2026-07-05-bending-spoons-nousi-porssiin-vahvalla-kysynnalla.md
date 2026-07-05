@@ -70,3 +70,5 @@ Ensimmäisenä kaupankäyntipäivänä osake avautui 31 dollarissa ja päätyi 4
 Listautumista on pidetty merkkinä Yhdysvaltain IPO-markkinan laajemmasta elpymisestä. Ohjelmistoyhtiöitä on nähty pörssissä tänä vuonna vähän, vaikka suuret listautumiset ja SpaceX:n listautuminen nostivat toisen neljänneksen tuotot yli 100 miljardiin dollariin. Taustalla on ollut myös huoli siitä, miten tekoäly voi muuttaa vakiintuneita ohjelmistoliiketoimintoja.
 
 Bending Spoonsin johto vihjaa myös uusiin yritysostoihin. Toimitusjohtaja ja yksi perustajista Luca Ferrari sanoi yhtiön löytäneen yli tuhat mahdollista ostokohdetta lähitulevaisuudessa, vaikka yksittäisistä suunnitelmista ei ole vielä kerrottavaa.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
