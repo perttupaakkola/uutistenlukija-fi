@@ -70,3 +70,5 @@ Kirjoituskestävyydessä malli jäisi kuitenkin alemmaksi kuin Samsungin 990 EVO
 Samsung ei ole vielä julkistanut SSD 990 -aseman hintaa tai virallista julkaisuajankohtaa. Siksi mallin lopullinen asema yhtiön SSD-valikoimassa selviää vasta myöhemmin, kun valmistaja vahvistaa tuotteen tekniset tiedot, saatavuuden ja hinnoittelun.
 
 Jos vuototiedot pitävät paikkansa, SSD 990 voisi tarjota nopean PCIe 4.0 x4 -vaihtoehdon käyttäjille, jotka hakevat Samsungin kuluttajamallistosta edullisempaa asemaa ja hyväksyvät 990 EVO Plus -mallia alemmat kirjoituskestävyyslukemat.
+
+Lue seuraavaksi lisää [teknologiauutisia](/categories/teknologia/).
