@@ -47,7 +47,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/matin-iakas-isa-murhattiin-taysin-yllattaen-kauppareissullaan-poika-uskoo-etta-yksi-seikka-olisi-voinut-pelastaa-isan/9360770"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
