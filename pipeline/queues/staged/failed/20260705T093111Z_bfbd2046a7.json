@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-05T09:31:11.801027+00:00",
+  "digest": "bfbd2046a7",
+  "packet": {
+    "packet_id": "20260705T093111Z_bfbd2046a7",
+    "created_at": "2026-07-05T09:31:11Z",
+    "headline_seed": "Minna Autere on korjannut hautakiviä toistakymmentä vuotta – nyt hän kunnostaa sankarihautoja Kouvolassa",
+    "description_seed": "Hautakivet kunnostetaan paikan päällä, mutta ulkotyötä voi tehdä vain hyvällä säällä.",
+    "link": "https://www.ess.fi/paikalliset/9594522",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9594522"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Minna Autere on korjannut hautakiviä toistakymmentä vuotta – nyt hän kunnostaa sankarihautoja Kouvolassa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 146,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Itä-Häme",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Minna Autere on korjannut hautakiviä toistakymmentä vuotta – nyt hän kunnostaa sankarihautoja Kouvolassa",
+      "description": "Hautakivet kunnostetaan paikan päällä, mutta ulkotyötä voi tehdä vain hyvällä säällä.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Minna Autere on korjannut hautakiviä toistakymmentä vuotta – nyt hän kunnostaa sankarihautoja Kouvolassa",
+    "description": "Hautakivet kunnostetaan paikan päällä, mutta ulkotyötä voi tehdä vain hyvällä säällä.",
+    "link": "https://www.ess.fi/paikalliset/9594522",
+    "published": "2026-07-05T11:20:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "4f50e53a3a1c86fd829cc1a3ded0ec3b",
+    "_url_hash": "0f60b14259f29a0161395a7ea42f3943446e604472fc403cb8e388cec289671b",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Itä-Häme]\nVarusmiespalveluksensa ensi viikon maanantaina aloittavat alokkaat majoittuvat parempikuntoisissa kasarmeissa kuin koskaan aiemmin, Puolustuskiinteistöt kertoo.\n\nPuolustusvoimien kasarmeista jo 76 prosenttia on kattavasti peruskorjattu tai uudisrakennettu 2000-luvulla.\n\nPuolustuskiinteistöjen mukaan uudistetut tilat vastaavat nykyaikaisen varusmieskoulutuksen tarpeita.\n\n– Tupien kalustuksessa huomioidaan käytännöllisyys ja viihtyisyys. Uusissa tupakalusteissa on esimerkiksi latauspistokkeet puhelimille. WC- ja pesutilat ovat aiempaa yksityisempiä, ja ne soveltuvat yhteiskäyttöön palvelustaan suorittaville miehille ja naisille, tiedotteessa esitellään.\n\nKasarmikannan uudistaminen jatkuu aktiivisesti eri puolilla Suomea. Tämän vuoden alussa Ilmavoimien Pirkkalan tukikohdassa otettiin käyttöön laajasti peruskorjattu kasarmi. Santahaminan varuskunnassa on parhaillaan käynnissä kasarmin kattava peruskorjaus, ja Sodankylässä on alkamassa uuden jättikasarmin rakennushanke. Syksyllä Dragsvikissä käynnistyy kasarmin peruskorjaus.\n\nNykyisin kasarmeissa sisäolosuhteet pysyvät jatkossakin parempina, kun varusteiden kuivaustilat on sijoitettu erilleen majoituskerroksista ja maastokäytössä olevat teltat ja muut varusteet säilytetään erillisissä kuivaamorakennuksissa.\n\nVuosien 2021–2026 aikana valmistuneisiin kasarmihankkeisiin on investoitu noin 116 miljoonaa euroa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-05T09:33:22.177238+00:00",
+  "failure": "Paketissa ei ole lähdetekstiä eikä riittävästi varmennettuja yksityiskohtia vähintään 250 sanan uutisartikkeliin ilman keksittyjä tietoja.",
+  "raw_response": "{\"packet_id\":\"20260705T093111Z_bfbd2046a7\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lähdetekstiä eikä riittävästi varmennettuja yksityiskohtia vähintään 250 sanan uutisartikkeliin ilman keksittyjä tietoja.\"}"
+}
