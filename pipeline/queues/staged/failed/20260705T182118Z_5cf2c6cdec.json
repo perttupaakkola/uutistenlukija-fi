@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-05T18:21:18.402267+00:00",
+  "digest": "5cf2c6cdec",
+  "packet": {
+    "packet_id": "20260705T182118Z_5cf2c6cdec",
+    "created_at": "2026-07-05T18:21:18Z",
+    "headline_seed": "Plane hit by firework while landing in Chicago",
+    "description_seed": "The plane had 52 passengers and six crew onboard. No injuries were reported.",
+    "link": "https://www.bbc.co.uk/news/articles/cj4gg89r9gdo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "AOL",
+      "Times Now"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/cj4gg89r9gdo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Plane hit by firework while landing in Chicago"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "The incident happened while the plane was preparing to land in Chicago (file image) A Delta Air Lines plane carrying 52 passengers and six crew members was hit by fireworks as it prepared to land at a Chicago airport on Saturday night. The flight from Atlanta's Hartsfield-Jackson Airport to Midway International Airport \"reportedly made contact with a firework while on descent,\" a spokesperson for the airline told the BBC. \"The flight safely landed and taxied to the gate,\" they added. There were no injuries and the incident was reported to aviation authorities. The aircraft was struck as millions across the United States celebrated the nation's 250th anniversary with fireworks - part of the annual tradition to commemorate independence. Delta flight 1076 took off from Atlanta at 19:51 EDT (00:51 BST) and landed in Chicago at 20:33 CDT (02:33 BST).",
+        "word_count": 139,
+        "keyword_overlap": 9,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The plane had 52 passengers and six crew onboard. No injuries were reported.",
+        "word_count": 13,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "AOL",
+        "source_type": "research",
+        "text": "A Delta Air Lines plane was hit by a firework as it was landing at Chicago's Midway Airport on Saturday. The plane landed safely, an airline spokesperson said. It was unclear where the firework came from. CHICAGO - A plane was hit by a firework as it was landing at Chicago’s Midway International Airport on Saturday night. The Delta plane was traveling from Atlanta and landing in Chicago around 8:38 p.m. when it \"made contact\" with a firework, according to a Delta spokesperson. \"The flight safely landed and taxied to the gate,\" the spokesperson said. The crew reported that the firework had hit the plane. The incident is under evaluation, Delta said. It was unclear where the firework came from or if any damage was sustained.",
+        "word_count": 126,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Times Now",
+        "source_type": "research",
+        "text": "Delta said the Airbus A319 departed Atlanta at 19:51 Eastern Time and landed safely in Chicago shortly after 20:30 Central Time. The airline said the flight did not declare an emergency. There were 52 passengers and six crew members on board, according to Delta. \"Delta flight 1076 from Atlanta (ATL) to Chicago (MDW) reportedly made contact with a firework while on descent. The flight safely landed and taxied to the gate,\" a Delta spokesperson said. The airline said no-one was injured. The aircraft was withdrawn from service for inspection, but mechanics found no damage. The FAA said it is investigating the incident. Get Latest News Live on Times Now along with Breaking News and Top Headlines from US News and around the World.",
+        "word_count": 123,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "The incident happened while the plane was preparing to land in Chicago (file image) A Delta Air Lines plane carrying 52 passengers and six crew members was hit by fireworks as it prepared to land at a Chicago airport on Saturday night. The flight from Atlanta's Hartsfield-Jackson Airport to Midway International Airport \"reportedly made contact with a firework while on descent,\" a spokesperson for the airline told the BBC. \"The flight safely landed and taxied to the gate,\" they added. There were no injuries and the incident was reported to aviation authorities. The aircraft was struck as millions across the United States celebrated the nation's 250th anniversary with fireworks - part of the annual tradition to commemorate independence. Delta flight 1076 took off from Atlanta at 19:51 EDT (00:51 BST) and landed in Chicago at 20:33 CDT (02:33 BST).\n\nThe plane had 52 passengers and six crew onboard. No injuries were reported.\n\nA Delta Air Lines plane was hit by a firework as it was landing at Chicago's Midway Airport on Saturday. The plane landed safely, an airline spokesperson said. It was unclear where the firework came from. CHICAGO - A plane was hit by a firework as it was landing at Chicago’s Midway International Airport on Saturday night. The Delta plane was traveling from Atlanta and landing in Chicago around 8:38 p.m. when it \"made contact\" with a firework, according to a Delta spokesperson. \"The flight safely landed and taxied to the gate,\" the spokesperson said. The crew reported that the firework had hit the plane. The incident is under evaluation, Delta said. It was unclear where the firework came from or if any damage was sustained.\n\nDelta said the Airbus A319 departed Atlanta at 19:51 Eastern Time and landed safely in Chicago shortly after 20:30 Central Time. The airline said the flight did not declare an emergency. There were 52 passengers and six crew members on board, according to Delta. \"Delta flight 1076 from Atlanta (ATL) to Chicago (MDW) reportedly made contact with a firework while on descent. The flight safely landed and taxied to the gate,\" a Delta spokesperson said. The airline said no-one was injured. The aircraft was withdrawn from service for inspection, but mechanics found no damage. The FAA said it is investigating the incident. Get Latest News Live on Times Now along with Breaking News and Top Headlines from US News and around the World.",
+    "source_diagnostics": {
+      "candidate_blocks": 8,
+      "candidate_source_words": 785,
+      "selected_blocks": 4,
+      "selected_source_words": 401,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Times Now",
+        "Times Now",
+        "Times Now",
+        "AOL",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "AOL",
+        "Times Now"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Plane hit by firework while landing in Chicago",
+      "description": "The plane had 52 passengers and six crew onboard. No injuries were reported.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Plane hit by firework while landing in Chicago",
+    "description": "The plane had 52 passengers and six crew onboard. No injuries were reported.",
+    "link": "https://www.bbc.co.uk/news/articles/cj4gg89r9gdo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-05T18:18:40+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "f018bdcebbbe9ed139eb848df39e0792",
+    "_url_hash": "0e0441679889f6d7757db394a1235edd4a32c7eccbb1f3f78ff96f39bed614c2",
+    "source_tier": 1,
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThe incident happened while the plane was preparing to land in Chicago (file image)\n\nA Delta Air Lines plane carrying 52 passengers and six crew members was hit by fireworks as it prepared to land at a Chicago airport on Saturday night.\n\nThe flight from Atlanta's Hartsfield-Jackson Airport to Midway International Airport \"reportedly made contact with a firework while on descent,\" a spokesperson for the airline told the BBC.\n\n\"The flight safely landed and taxied to the gate,\" they added. There were no injuries and the incident was reported to aviation authorities.\n\nThe aircraft was struck as millions across the United States celebrated the nation's 250th anniversary with fireworks - part of the annual tradition to commemorate independence.\n\nDelta flight 1076 took off from Atlanta at 19:51 EDT (00:51 BST) and landed in Chicago at 20:33 CDT (02:33 BST).\n\n\"We just had a firework hit our plane,\" a pilot told air traffic control, a recording of the incident shows. The pilot said it had occurred at about 200ft (61m).\n\n\"We're just hoping it was just a mortar that went off underneath but definitely felt a big bang.\"\n\nBefore the incident, controllers can be heard warning of the presence of fireworks.\n\n\"Delta 1076... use caution, there are multiple homes near the approach end shooting off fireworks,\" an air traffic control officer said.\n\n\"There have been multiple reports as you can imagine,\" the controller adds on the radio. \"The city is aware. They said they would notify the Chicago police, but you know, I don't know what they will do.\"\n\nThe Federal Aviation Administration said the incident happened around 20:30 CDT, according to CBS News, the BBC's US partner.\n\nThe Airbus A319 was inspected after landing with no damage found, according to the airline.\n\nThe largest displays of fireworks are often organised by state and local governments, but private and often unsupervised fireworks also are commonplace.\n\nIn Washington DC, the milestone anniversary was marked by a mammoth 40-minute fireworks display by the National Park Service at the Washington National Mall.\n\nFlights were suspended at nearby Ronald Reagan Washington National Airport from noon on Saturday to make way for military flyovers and the pyrotechnic show which began at midnight local time.\n\n---\n\n[Lähde: Times Now]\nA Delta Air Lines flight was struck by a firework while descending to land at Chicago Midway International Airport during Independence Day celebrations, US aviation authorities have said. The incident involved Delta Flight 1076, which was arriving from Hartsfield-Jackson Atlanta International Airport at about 20:30 local time on Saturday, according to the Federal Aviation Administration (FAA).\n\nAir traffic control audio captured the flight crew reporting that the aircraft had been hit. \"Tower, we just had a firework hit our plane, Delta 1076, we're continuing,\" the crew told controllers. \"We just heard a bang on the plane, so we'll have to look at it when we get to the gate. We're just hoping it was just a mortar that went off underneath, but definitely felt a big bang.\"\n\nDelta said the Airbus A319 departed Atlanta at 19:51 Eastern Time and landed safely in Chicago shortly after 20:30 Central Time. The airline said the flight did not declare an emergency.\n\nThere were 52 passengers and six crew members on board, according to Delta. \"Delta flight 1076 from Atlanta (ATL) to Chicago (MDW) reportedly made contact with a firework while on descent. The flight safely landed and taxied to the gate,\" a Delta spokesperson said.\n\nThe airline said no-one was injured. The aircraft was withdrawn from service for inspection, but mechanics found no damage.\n\nThe FAA said it is investigating the incident.\n\nGet Latest News Live on Times Now along with Breaking News and Top Headlines from US News and around the World.\n\nRounak is a journalist with over 7 years of experience covering geopolitical and international affairs. He has a keen interest in research and explain... View More\n\n---\n\n[Lähde: AOL]\nA Delta Air Lines plane was hit by a firework as it was landing at Chicago's Midway Airport on Saturday.\n\nThe plane landed safely, an airline spokesperson said.\n\nIt was unclear where the firework came from.\n\nCHICAGO - A plane was hit by a firework as it was landing at Chicago’s Midway International Airport on Saturday night.\n\nThe Delta plane was traveling from Atlanta and landing in Chicago around 8:38 p.m. when it \"made contact\" with a firework, according to a Delta spokesperson.\n\n\"The flight safely landed and taxied to the gate,\" the spokesperson said.\n\nThe crew reported that the firework had hit the plane.\n\nThe incident is under evaluation, Delta said. It was unclear where the firework came from or if any damage was sustained.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-05T18:34:53.536252+00:00",
+  "failure": "content too short: 239 words",
+  "payload": {
+    "packet_id": "20260705T182118Z_5cf2c6cdec",
+    "title": "Ilotulite osui matkustajakoneeseen laskeutumisen aikana Chicagossa",
+    "summary": "Delta Air Linesin koneeseen osui ilotulite sen lähestyessä Chicagon Midwayn lentoasemaa. Koneessa oli 52 matkustajaa ja kuusi miehistön jäsentä, eikä loukkaantumisista ilmoitettu.",
+    "content": "Delta Air Linesin matkustajakoneeseen osui ilotulite lauantai-iltana, kun lento oli laskeutumassa Chicagon Midwayn kansainväliselle lentoasemalle. Atlantasta lähteneessä koneessa oli 52 matkustajaa ja kuusi miehistön jäsentä, ja lentoyhtiön mukaan kone laskeutui turvallisesti, rullasi portille eikä kukaan loukkaantunut.\n\n## Kone pääsi portille omin voimin\n\nKyse oli Delta Air Linesin lennosta 1076, joka lensi Atlantan Hartsfield-Jacksonin lentoasemalta Chicagoon. Lentoyhtiön edustajan mukaan lento oli laskeutumassa, kun se tietojen mukaan osui ilotulitteeseen. Miehistö ilmoitti osumasta, ja tapaus vietiin ilmailuviranomaisten tietoon.\n\nDelta ilmoitti, ettei lennolla julistettu hätätilannetta. Lentoyhtiön mukaan Airbus A319 lähti Atlantasta kello 19.51 Yhdysvaltain itäistä aikaa ja laskeutui Chicagoon hieman kello 20.30 jälkeen paikallista keskistä aikaa. BBC:n mukaan laskeutumisaika oli kello 20.33 keskistä aikaa.\n\nLaskeutumisen jälkeen kone poistettiin liikenteestä tarkastusta varten. Times Now'n mukaan mekaanikot eivät löytäneet koneesta vaurioita. Aiemmin oli epäselvää, oliko osuma aiheuttanut vahinkoa.\n\n## Ilotulituksen alkuperä jäi epäselväksi\n\nTapaus sattui viikonloppuna, jolloin Yhdysvalloissa järjestettiin laajoja ilotulituksia maan itsenäisyyden juhlintaan liittyen. BBC:n mukaan ilotulitukset olivat osa vuosittaista perinnettä, jolla juhlistettiin maan itsenäisyyttä, ja tänä vuonna taustalla oli myös Yhdysvaltojen 250-vuotisjuhla.\n\nAOL:n mukaan ei ollut selvää, mistä ilotulite oli peräisin. Lähteiden mukaan kone oli jo laskeutumassa Midwayn lentoasemalle, kun se osui ilotulitteeseen tai teki siihen kontaktin. Lentoyhtiö kuvasi tilanteen päättyneen turvalliseen laskeutumiseen ja portille rullaamiseen.\n\n## Viranomaiset selvittävät tapausta\n\nYhdysvaltain ilmailuviranomainen FAA tutkii tapausta. Delta on kertonut asian olevan arvioitavana. Lähteiden mukaan keskeiset tiedot ovat yhteneviä: lento oli matkalla Atlantasta Chicagoon, ilotulite osui koneeseen laskeutumisen aikana, kone jatkoi portille ja henkilövahingoilta vältyttiin.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Delta Air Lines",
+      "Chicago",
+      "Midwayn lentoasema",
+      "lentoturvallisuus",
+      "ilotulitteet",
+      "Yhdysvallat"
+    ],
+    "summary_bullets": [
+      "Delta Air Linesin koneeseen osui ilotulite laskeutumisen aikana Chicagossa.",
+      "Koneessa oli 52 matkustajaa ja kuusi miehistön jäsentä, eikä loukkaantumisia raportoitu.",
+      "Kone tarkastettiin laskeutumisen jälkeen, eikä mekaanikkojen kerrottu löytäneen vaurioita.",
+      "Yhdysvaltain ilmailuviranomainen FAA tutkii tapausta."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu yhteneviin tietoihin lennosta, matkustajamäärästä, turvallisesta laskeutumisesta, henkilövahinkojen puuttumisesta ja FAA:n tutkinnasta. Ilotulitteen alkuperästä ei ollut vahvistettua tietoa."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260705T182118Z_5cf2c6cdec\",\n  \"title\": \"Ilotulite osui matkustajakoneeseen laskeutumisen aikana Chicagossa\",\n  \"summary\": \"Delta Air Linesin koneeseen osui ilotulite sen lähestyessä Chicagon Midwayn lentoasemaa. Koneessa oli 52 matkustajaa ja kuusi miehistön jäsentä, eikä loukkaantumisista ilmoitettu.\",\n  \"content\": \"Delta Air Linesin matkustajakoneeseen osui ilotulite lauantai-iltana, kun lento oli laskeutumassa Chicagon Midwayn kansainväliselle lentoasemalle. Atlantasta lähteneessä koneessa oli 52 matkustajaa ja kuusi miehistön jäsentä, ja lentoyhtiön mukaan kone laskeutui turvallisesti, rullasi portille eikä kukaan loukkaantunut.\\n\\n## Kone pääsi portille omin voimin\\n\\nKyse oli Delta Air Linesin lennosta 1076, joka lensi Atlantan Hartsfield-Jacksonin lentoasemalta Chicagoon. Lentoyhtiön edustajan mukaan lento oli laskeutumassa, kun se tietojen mukaan osui ilotulitteeseen. Miehistö ilmoitti osumasta, ja tapaus vietiin ilmailuviranomaisten tietoon.\\n\\nDelta ilmoitti, ettei lennolla julistettu hätätilannetta. Lentoyhtiön mukaan Airbus A319 lähti Atlantasta kello 19.51 Yhdysvaltain itäistä aikaa ja laskeutui Chicagoon hieman kello 20.30 jälkeen paikallista keskistä aikaa. BBC:n mukaan laskeutumisaika oli kello 20.33 keskistä aikaa.\\n\\nLaskeutumisen jälkeen kone poistettiin liikenteestä tarkastusta varten. Times Now'n mukaan mekaanikot eivät löytäneet koneesta vaurioita. Aiemmin oli epäselvää, oliko osuma aiheuttanut vahinkoa.\\n\\n## Ilotulituksen alkuperä jäi epäselväksi\\n\\nTapaus sattui viikonloppuna, jolloin Yhdysvalloissa järjestettiin laajoja ilotulituksia maan itsenäisyyden juhlintaan liittyen. BBC:n mukaan ilotulitukset olivat osa vuosittaista perinnettä, jolla juhlistettiin maan itsenäisyyttä, ja tänä vuonna taustalla oli myös Yhdysvaltojen 250-vuotisjuhla.\\n\\nAOL:n mukaan ei ollut selvää, mistä ilotulite oli peräisin. Lähteiden mukaan kone oli jo laskeutumassa Midwayn lentoasemalle, kun se osui ilotulitteeseen tai teki siihen kontaktin. Lentoyhtiö kuvasi tilanteen päättyneen turvalliseen laskeutumiseen ja portille rullaamiseen.\\n\\n## Viranomaiset selvittävät tapausta\\n\\nYhdysvaltain ilmailuviranomainen FAA tutkii tapausta. Delta on kertonut asian olevan arvioitavana. Lähteiden mukaan keskeiset tiedot ovat yhteneviä: lento oli matkalla Atlantasta Chicagoon, ilotulite osui koneeseen laskeutumisen aikana, kone jatkoi portille ja henkilövahingoilta vältyttiin.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Delta Air Lines\",\n    \"Chicago\",\n    \"Midwayn lentoasema\",\n    \"lentoturvallisuus\",\n    \"ilotulitteet\",\n    \"Yhdysvallat\"\n  ],\n  \"summary_bullets\": [\n    \"Delta Air Linesin koneeseen osui ilotulite laskeutumisen aikana Chicagossa.\",\n    \"Koneessa oli 52 matkustajaa ja kuusi miehistön jäsentä, eikä loukkaantumisia raportoitu.\",\n    \"Kone tarkastettiin laskeutumisen jälkeen, eikä mekaanikkojen kerrottu löytäneen vaurioita.\",\n    \"Yhdysvaltain ilmailuviranomainen FAA tutkii tapausta.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu yhteneviin tietoihin lennosta, matkustajamäärästä, turvallisesta laskeutumisesta, henkilövahinkojen puuttumisesta ja FAA:n tutkinnasta. Ilotulitteen alkuperästä ei ollut vahvistettua tietoa.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260705T182118Z_5cf2c6cdec",
+    "category": "Kotimaa",
+    "selected_source_words": 401,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 239,
+    "issues": [
+      "content too short: 239 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Ilotulite osui matkustajakoneeseen laskeutumisen aikana Chicagossa",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-07-05T18:34:53.535510+00:00",
+    "repair_trigger": "pre_repair_word_count=227; selected_source_words=401; selected_source_blocks=4",
+    "pre_repair_word_count": 227,
+    "pre_repair_lead_word_count": 35,
+    "post_repair_word_count": 239,
+    "post_repair_lead_word_count": 36,
+    "selected_source_words_at_repair": 401,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 401,
+    "source_blocks": 4,
+    "repair_added_word_count": 12,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 239 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:1740f6e501",
+      "2:BBC World:b722172301",
+      "3:AOL:98dba468c4",
+      "4:Times Now:001108c0bb"
+    ],
+    "final_issues": [
+      "content too short: 239 words"
+    ],
+    "recovered": false
+  }
+}
