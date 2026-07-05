@@ -72,3 +72,5 @@ Uber pyrkii edelleen ostamaan saksalaisen Delivery Heron ruokalähettiliiketoimi
 Delivery Hero omistaa muun muassa Foodoran, joka vetäytyi Suomesta helmikuun lopussa. Suomen markkina on siten muuttunut nopeasti, ja Uber Eatsin aseman vahvistuminen Suomessa liittyy laajempaan kilpailuasetelman muutokseen ruokalähettipalveluissa.
 
 Yhtiön toimintaan on liittynyt viime kuukausina myös teknisiä ongelmia. Joidenkin yhteistyöravintoloiden on kerrottu olleen ajoittain kykenemättömiä vastaanottamaan tilauksia. Uberin mukaan ongelmalla ei ole ollut olennaista vaikutusta kuljetuksiin.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
