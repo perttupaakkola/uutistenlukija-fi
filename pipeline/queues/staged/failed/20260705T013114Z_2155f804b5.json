@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-05T01:31:14.370113+00:00",
+  "digest": "2155f804b5",
+  "packet": {
+    "packet_id": "20260705T013114Z_2155f804b5",
+    "created_at": "2026-07-05T01:31:14Z",
+    "headline_seed": "Poliisi: Tappelu Ylöjärvellä, yhtä puukotettu",
+    "description_seed": "Poliisi tutkii tapausta tapon yrityksenä.",
+    "link": "https://www.is.fi/kotimaa/art-2000012121738.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/kotimaa/art-2000012121738.html"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Poliisi: Tappelu Ylöjärvellä, yhtä puukotettu"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 180,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Poliisi: Tappelu Ylöjärvellä, yhtä puukotettu",
+      "description": "Poliisi tutkii tapausta tapon yrityksenä.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Poliisi: Tappelu Ylöjärvellä, yhtä puukotettu",
+    "description": "Poliisi tutkii tapausta tapon yrityksenä.",
+    "link": "https://www.is.fi/kotimaa/art-2000012121738.html",
+    "published": "2026-07-05T01:11:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "da1958e936b8bb7a65b6cf3dd61ae0ff",
+    "_url_hash": "bc06e21938d3adbca48d71ade164184831b5db6de63985266276ad497c1ce0f1",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nHelsingin poliisi on tyhjentänyt Kaivopuiston lauanataina noin kello 23 mennessä, poliisi tiedottaa.\n\nTyhjentäminen aloitettiin kello 22 jälkeen. Poliisin mukaan puistossa oli paikalla runsaasti päihtyneitä alaikäisiä.\n\n– Nuoret saattavat siirtyä toiseen puistoon, mutta poliisi seuraa perässä, sanoo tilannejohtaja Michela Söderström Ylelle Kaivopuistossa.\n\nSöderströmin mukaan tyhjennys oli tehtävä, että kaikilla on turvallista olla.\n\n– Nuoret tietävät sen jo aiemmista vuosista, ettei tyhjennystä tehdä kiusalla vaan on jo niin paljon levottomuuksia.\n\nPoliisi epäilee yhden ihmisen saaneen teräaseesta viiltohaavan kasvoihinsa. Uhri vietiin jatkohoitoon ja epäilty on otettu kiinni törkeästä pahoinpitelystä epäiltynä, poliisi tiedottaa. Rikosnimike voi muuttua tutkinnan edetessä.\n\nSöderstömin mukaan uhrin vammat eivät ole hengenvaarallisia.\n\nEpäilty tekijä poistui paikalta, mutta poliisi tavoitti hänet nopeasti omien etsintätoimiensa ansiosta. Sekä uhri että epäilty ovat nuoria miehiä.\n\nAiemmin poliisi tiedotti koulujen päättymisen juhlinnan sujuneen rauhallisesti Helsingissä, mutta iltayhdeksän jälkeen järjestyshäiriöt lisääntyivät.\n\nPaikalla oli poliisin lisäksi SPR:n ja Helsingin kaupungin nuorisotyöntekijöitä auttamassa nuoria.\n\nNuorisoa kokoontui eniten Kaivopuistoon ja jonkin verran muihin puistoihin sekä Hietaniemen uimarannalle.\n\nPoliisin partioita on ollut eri puolilla kaupunkia seuraamassa päättäjäispäivän juhlintaa. Söderströmin mukaan Kaivopuisto on ollut pääpaikka, jonne keräännyttiin.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-05T01:33:19.274400+00:00",
+  "failure": "Lähdeaineisto puuttuu lähes kokonaan, eikä otsikon ja kuvauksen perusteella voi kirjoittaa vähintään 250 sanan julkaistavaa uutista ilman keksittyjä tietoja.",
+  "raw_response": "{\"packet_id\":\"20260705T013114Z_2155f804b5\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto puuttuu lähes kokonaan, eikä otsikon ja kuvauksen perusteella voi kirjoittaa vähintään 250 sanan julkaistavaa uutista ilman keksittyjä tietoja.\"}"
+}
