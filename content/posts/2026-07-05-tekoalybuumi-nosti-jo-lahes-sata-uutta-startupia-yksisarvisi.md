@@ -67,3 +67,5 @@ Merkittäviä rahoituskierroksia ovat keränneet myös muut kuin tekoäly-yhtiö
 Yksi uusista yksisarvisista on MainFunc, jonka arvostukseksi on ilmoitettu 2,6 miljardia dollaria. Vuonna 2023 perustettu yhtiö tarjoaa Genspark-nimistä tekoälytyötilaa. Se keräsi viimeksi 485 miljoonan dollarin B-sarjan rahoituskierroksen, jota johtivat Lg Technology Ventures, SBI Investment ja Emergency Equity Management. Yhtiö on kerännyt rahoitusta yhteensä 645 miljoonaa dollaria, ja sen sijoittajiin kuuluu myös AWS.
 
 Uusien yksisarvisten määrä kuvaa, kuinka nopeasti pääoma keskittyy kasvuyhtiöihin, joilta odotetaan suuria markkinoita ja skaalautuvaa teknologiaa. Tekoäly hallitsee tämän vuoden listaa, mutta miljardiluokan arvostuksia syntyy edelleen useilla teknologia-aloilla.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
