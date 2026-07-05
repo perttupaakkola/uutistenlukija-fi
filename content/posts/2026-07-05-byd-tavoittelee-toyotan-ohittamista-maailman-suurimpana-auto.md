@@ -71,3 +71,5 @@ BYD on nojannut pitkään litiumrautafosfaattiakkuihin eli LFP-akkuihin. Maalisk
 Jos tällainen latausteho saadaan laajasti tuotantoautoihin ja tavallisen latausverkon käyttöön, sillä voisi olla huomattava vaikutus sähköautojen arkeen. Pitkä latausaika on ollut yksi sähköautojen käytännön heikkouksista etenkin pitkillä matkoilla.
 
 BYDin tavoite ei siis perustu vain myyntimäärien kasvattamiseen, vaan myös siihen, että yhtiö pystyisi erottautumaan teknologialla ja rakentamaan vahvemman aseman Kiinan ulkopuolisilla markkinoilla. Toyotan ohittaminen vuoteen 2030 mennessä olisi silti erittäin suuri harppaus nykyisestä tilanteesta.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
