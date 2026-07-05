@@ -1,0 +1,139 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-05T07:41:12.642084+00:00",
+  "digest": "c910346519",
+  "packet": {
+    "packet_id": "20260705T074112Z_c910346519",
+    "created_at": "2026-07-05T07:41:12Z",
+    "headline_seed": "Scorching heat and delays: How Washington DC marked America 250",
+    "description_seed": "The United States of America marked its 250th birthday with fireworks, flyovers, some intense weather across the country.",
+    "link": "https://www.bbc.co.uk/news/videos/cwyk2ypj014o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/videos/cwyk2ypj014o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.77,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Scorching heat and delays: How Washington DC marked America 250"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The United States of America marked its 250th birthday with fireworks, flyovers, some intense weather across the country.",
+        "word_count": 18,
+        "keyword_overlap": 14,
+        "strong_overlap": 11
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Thousands of people gathered in the US capital to celebrate the country's 250th birthday in a day that was marked by extreme weather, delays, and a huge display of fireworks. The celebration, which included a flyover, a concert, as well as a speech by US President Donald Trump, was delayed by a thunderstorm that forced an evacuation of the National Mall in the early evening. The night ended with the skies being lit up by the reputed largest fireworks display ever in the US. The 4 July federal holiday commemorates the 13 US colonies signing the Declaration of Independence in 1776 to end British rule. BBC correspondent Richard Preston attended the celebrations.",
+        "word_count": 112,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      }
+    ],
+    "source_text": "The United States of America marked its 250th birthday with fireworks, flyovers, some intense weather across the country.\n\nThousands of people gathered in the US capital to celebrate the country's 250th birthday in a day that was marked by extreme weather, delays, and a huge display of fireworks. The celebration, which included a flyover, a concert, as well as a speech by US President Donald Trump, was delayed by a thunderstorm that forced an evacuation of the National Mall in the early evening. The night ended with the skies being lit up by the reputed largest fireworks display ever in the US. The 4 July federal holiday commemorates the 13 US colonies signing the Declaration of Independence in 1776 to end British rule. BBC correspondent Richard Preston attended the celebrations.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 130,
+      "selected_blocks": 2,
+      "selected_source_words": 130,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Scorching heat and delays: How Washington DC marked America 250",
+      "description": "The United States of America marked its 250th birthday with fireworks, flyovers, some intense weather across the country.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Scorching heat and delays: How Washington DC marked America 250",
+    "description": "The United States of America marked its 250th birthday with fireworks, flyovers, some intense weather across the country.",
+    "link": "https://www.bbc.co.uk/news/videos/cwyk2ypj014o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-05T07:19:08+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "e47ebcbf943fc2184016b0d03ddff5d8",
+    "_url_hash": "10a173a2a52af389287b39e3fd88e71a848e349dbbe783b6f4b9ccaa1dfedd1e",
+    "source_tier": 1,
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nThousands of people gathered in the US capital to celebrate the country's 250th birthday in a day that was marked by extreme weather, delays, and a huge display of fireworks.\n\nThe celebration, which included a flyover, a concert, as well as a speech by US President Donald Trump, was delayed by a thunderstorm that forced an evacuation of the National Mall in the early evening.\n\nThe night ended with the skies being lit up by the reputed largest fireworks display ever in the US.\n\nThe 4 July federal holiday commemorates the 13 US colonies signing the Declaration of Independence in 1776 to end British rule.\n\nBBC correspondent Richard Preston attended the celebrations.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-05T07:44:23.666170+00:00",
+  "failure": "content too short: 216 words",
+  "payload": {
+    "packet_id": "20260705T074112Z_c910346519",
+    "title": "Yhdysvaltain 250-vuotisjuhlaa varjostivat ukkonen ja viivästykset Washingtonissa",
+    "summary": "Yhdysvallat juhli 250-vuotista historiaansa Washingtonissa ilotulituksin, ylilennoin ja konsertilla, mutta ukkosmyrsky viivästytti ohjelmaa ja johti National Mallin evakuointiin.",
+    "content": "Yhdysvallat juhli 250-vuotista historiaansa Washingtonissa heinäkuun 4. päivän tapahtumissa, joihin kokoontui tuhansia ihmisiä. Pääkaupungin juhlapäivään kuului ilotulituksia, ylilento, konsertti ja presidentti Donald Trumpin puhe, mutta ohjelmaa leimasivat myös kova sää, ukkonen ja viivästykset.\n\n## Ukkosmyrsky keskeytti ohjelmaa\n\nWashingtonin juhlinta ei edennyt koko päivän ajan suunnitellussa rytmissä. Alkuillasta alueelle osunut ukkosmyrsky viivästytti tapahtumia ja pakotti evakuoimaan National Mallin, jonne yleisöä oli kokoontunut seuraamaan ohjelmaa.\n\nSää oli keskeinen osa päivän kulkua. Lähdetietojen mukaan Yhdysvaltojen 250-vuotisjuhlapäivää sävyttivät eri puolilla maata voimakas kuumuus ja vaikeat sääolot. Washingtonissa sää vaikutti konkreettisesti juhla-alueeseen ja aikatauluihin, sillä ukkonen keskeytti yleisötapahtuman alkuillasta.\n\n## Juhlaan kuului ylilento, konsertti ja puhe\n\nPäivän ohjelmaan oli koottu useita itsenäisyyspäivän juhlintaan liittyviä elementtejä. Washingtonissa nähtiin ylilento, järjestettiin konsertti ja kuultiin presidentti Donald Trumpin puhe. Tapahtumat liittyivät merkkivuoteen, jossa Yhdysvallat juhli 250 vuotta itsenäisyysjulistukseen johtaneesta historiallisesta hetkestä.\n\nHeinäkuun 4. päivä on Yhdysvalloissa liittovaltion vapaapäivä. Päivä muistuttaa vuodesta 1776, jolloin kolmetoista siirtokuntaa allekirjoitti itsenäisyysjulistuksen ja irtautui Britannian vallasta.\n\n## Ilta päättyi suureen ilotulitukseen\n\nViivästyksistä ja sääongelmista huolimatta juhla päättyi näyttävästi. Illan lopuksi Washingtonin taivas valaistiin suurella ilotulituksella, jota kuvailtiin lähdetietojen mukaan mahdollisesti Yhdysvaltain historian suurimmaksi.\n\nBBC:n kirjeenvaihtaja Richard Preston seurasi juhlintaa paikan päällä. Hänen raportoimansa tapahtumakulku korosti sekä juhlan mittakaavaa että sitä, miten sää vaikutti päivän etenemiseen: tuhansien ihmisten kokoontuminen, ukkosmyrskyn aiheuttama evakuointi ja lopulta suuri ilotulitus muodostivat Washingtonin 250-vuotisjuhlan pääpiirteet.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "Washington",
+      "itsenäisyyspäivä",
+      "Donald Trump",
+      "sää"
+    ],
+    "summary_bullets": [
+      "Yhdysvallat juhli 250-vuotista historiaansa Washingtonissa heinäkuun 4. päivänä.",
+      "Ukkosmyrsky viivästytti juhlaohjelmaa ja johti National Mallin evakuointiin alkuillasta.",
+      "Ohjelmaan kuului ylilento, konsertti, presidentti Donald Trumpin puhe ja suuri ilotulitus."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.77,
+    "journalist_note": "Artikkeli perustuu annettuun lähdepakettiin. Yksityiskohtia ei laajennettu lähteiden ulkopuolelle."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260705T074112Z_c910346519\",\n  \"title\": \"Yhdysvaltain 250-vuotisjuhlaa varjostivat ukkonen ja viivästykset Washingtonissa\",\n  \"summary\": \"Yhdysvallat juhli 250-vuotista historiaansa Washingtonissa ilotulituksin, ylilennoin ja konsertilla, mutta ukkosmyrsky viivästytti ohjelmaa ja johti National Mallin evakuointiin.\",\n  \"content\": \"Yhdysvallat juhli 250-vuotista historiaansa Washingtonissa heinäkuun 4. päivän tapahtumissa, joihin kokoontui tuhansia ihmisiä. Pääkaupungin juhlapäivään kuului ilotulituksia, ylilento, konsertti ja presidentti Donald Trumpin puhe, mutta ohjelmaa leimasivat myös kova sää, ukkonen ja viivästykset.\\n\\n## Ukkosmyrsky keskeytti ohjelmaa\\n\\nWashingtonin juhlinta ei edennyt koko päivän ajan suunnitellussa rytmissä. Alkuillasta alueelle osunut ukkosmyrsky viivästytti tapahtumia ja pakotti evakuoimaan National Mallin, jonne yleisöä oli kokoontunut seuraamaan ohjelmaa.\\n\\nSää oli keskeinen osa päivän kulkua. Lähdetietojen mukaan Yhdysvaltojen 250-vuotisjuhlapäivää sävyttivät eri puolilla maata voimakas kuumuus ja vaikeat sääolot. Washingtonissa sää vaikutti konkreettisesti juhla-alueeseen ja aikatauluihin, sillä ukkonen keskeytti yleisötapahtuman alkuillasta.\\n\\n## Juhlaan kuului ylilento, konsertti ja puhe\\n\\nPäivän ohjelmaan oli koottu useita itsenäisyyspäivän juhlintaan liittyviä elementtejä. Washingtonissa nähtiin ylilento, järjestettiin konsertti ja kuultiin presidentti Donald Trumpin puhe. Tapahtumat liittyivät merkkivuoteen, jossa Yhdysvallat juhli 250 vuotta itsenäisyysjulistukseen johtaneesta historiallisesta hetkestä.\\n\\nHeinäkuun 4. päivä on Yhdysvalloissa liittovaltion vapaapäivä. Päivä muistuttaa vuodesta 1776, jolloin kolmetoista siirtokuntaa allekirjoitti itsenäisyysjulistuksen ja irtautui Britannian vallasta.\\n\\n## Ilta päättyi suureen ilotulitukseen\\n\\nViivästyksistä ja sääongelmista huolimatta juhla päättyi näyttävästi. Illan lopuksi Washingtonin taivas valaistiin suurella ilotulituksella, jota kuvailtiin lähdetietojen mukaan mahdollisesti Yhdysvaltain historian suurimmaksi.\\n\\nBBC:n kirjeenvaihtaja Richard Preston seurasi juhlintaa paikan päällä. Hänen raportoimansa tapahtumakulku korosti sekä juhlan mittakaavaa että sitä, miten sää vaikutti päivän etenemiseen: tuhansien ihmisten kokoontuminen, ukkosmyrskyn aiheuttama evakuointi ja lopulta suuri ilotulitus muodostivat Washingtonin 250-vuotisjuhlan pääpiirteet.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Yhdysvallat\",\n    \"Washington\",\n    \"itsenäisyyspäivä\",\n    \"Donald Trump\",\n    \"sää\"\n  ],\n  \"summary_bullets\": [\n    \"Yhdysvallat juhli 250-vuotista historiaansa Washingtonissa heinäkuun 4. päivänä.\",\n    \"Ukkosmyrsky viivästytti juhlaohjelmaa ja johti National Mallin evakuointiin alkuillasta.\",\n    \"Ohjelmaan kuului ylilento, konsertti, presidentti Donald Trumpin puhe ja suuri ilotulitus.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.77,\n  \"journalist_note\": \"Artikkeli perustuu annettuun lähdepakettiin. Yksityiskohtia ei laajennettu lähteiden ulkopuolelle.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260705T074112Z_c910346519",
+    "category": "Ulkomaat",
+    "selected_source_words": 130,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.77,
+    "final_word_count": 216,
+    "issues": [
+      "content too short: 216 words"
+    ],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_short_after_repair",
+    "fail_closed": true,
+    "title": "Yhdysvaltain 250-vuotisjuhlaa varjostivat ukkonen ja viivästykset Washingtonissa"
+  }
+}
