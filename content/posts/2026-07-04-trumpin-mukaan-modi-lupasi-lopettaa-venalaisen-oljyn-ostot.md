@@ -72,3 +72,5 @@ Liuhton mukaan Venäjällä on edelleen varaa käydä sotaa Ukrainassa, mutta ta
 Trumpin mukaan neuvotteluissa sovittiin myös, että Intia ostaisi enemmän öljyä Yhdysvalloista ja mahdollisesti Venezuelasta. Yhdysvaltain ja Intian kauppasopimukseen kerrotaan liittyvän tullien alentamista. Trump on lisäksi väittänyt, että Modi olisi sitoutunut ostamaan yli 500 miljardin dollarin arvosta yhdysvaltalaisia tuotteita.
 
 Liuhto arvioi, että Yhdysvallat toimii asiassa oman etunsa mukaisesti, mutta mahdollinen sopu voisi samalla heikentää Venäjän kykyä rahoittaa sotaa taloudellisin keinoin.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
