@@ -1,0 +1,287 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-05T05:11:15.764622+00:00",
+  "digest": "dccc1580af",
+  "packet": {
+    "packet_id": "20260705T051115Z_dccc1580af",
+    "created_at": "2026-07-05T05:11:15Z",
+    "headline_seed": "US marks its 250th birthday with fireworks, flyovers and extreme weather",
+    "description_seed": "US President Donald Trump's speech included some of his political agenda but also honoured war veterans and American history.",
+    "link": "https://www.bbc.co.uk/news/articles/cp9lppvkmz5o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC",
+      "The Straits Times"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/cp9lppvkmz5o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "US marks its 250th birthday with fireworks, flyovers and extreme weather"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "US President Donald Trump's speech included some of his political agenda but also honoured war veterans and American history.",
+        "word_count": 19,
+        "keyword_overlap": 13,
+        "strong_overlap": 10
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "People watch a fireworks display at a Fourth of July rally featuring US President Donald Trump at the National Mall in Washington The United States of America marked its 250th birthday with fireworks, flyovers, some intense weather across the country, much of which has broiled under an unforgiving heat wave for days. \"The American dream is back,\" US President Donald Trump told a cheering crowd at a delayed rally on the National Mall in Washington before the reputed largest fireworks display ever in the US lit up the night. The 4 July federal holiday commemorates the 13 US colonies signing the Declaration of Independence in 1776 to end British rule.",
+        "word_count": 110,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC",
+        "source_type": "research",
+        "text": "The United States of America marked its 250th birthday with fireworks, flyovers, some intense weather across the country, much of which has broiled under an unforgiving heat wave for days. \"The American dream is back,\" US President Donald Trump told a cheering crowd at a delayed rally on the National Mall in Washington before the reputed largest fireworks display ever in the US lit up the night. The 4 July federal holiday commemorates the 13 US colonies signing the Declaration of Independence in 1776 to end British rule. The sharply divided country has seen Trump criticised for making himself central to the milestone and politicising it by launching Freedom 250 celebrations, which are separate from congressionally established America 250 events.",
+        "word_count": 120,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "The Straits Times",
+        "source_type": "research",
+        "text": "Sign up now: Get ST's newsletters delivered to your inbox WASHINGTON - Severe weather disrupted the marquee celebration of America’s 250th birthday on July 4, threatening a much-hyped rally and speech in Washington by President Donald Trump who has sought to stamp his mark on the anniversary. Tens of thousands who braved a suffocating heat wave to attend the event on the National Mall were ordered to evacuate several hours ahead of Trump’s address due to an approaching thunderstorm. Trump said he would deliver a speech “no matter what” . “Storms bring luck to whatever the occasion. They also make events a little bit more exciting! We will wait it out, I don’t care if it’s 2:00 O’Clock in the morning,” Trump said on his Truth Social account.",
+        "word_count": 128,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "US President Donald Trump's speech included some of his political agenda but also honoured war veterans and American history.\n\nPeople watch a fireworks display at a Fourth of July rally featuring US President Donald Trump at the National Mall in Washington The United States of America marked its 250th birthday with fireworks, flyovers, some intense weather across the country, much of which has broiled under an unforgiving heat wave for days. \"The American dream is back,\" US President Donald Trump told a cheering crowd at a delayed rally on the National Mall in Washington before the reputed largest fireworks display ever in the US lit up the night. The 4 July federal holiday commemorates the 13 US colonies signing the Declaration of Independence in 1776 to end British rule.\n\nThe United States of America marked its 250th birthday with fireworks, flyovers, some intense weather across the country, much of which has broiled under an unforgiving heat wave for days. \"The American dream is back,\" US President Donald Trump told a cheering crowd at a delayed rally on the National Mall in Washington before the reputed largest fireworks display ever in the US lit up the night. The 4 July federal holiday commemorates the 13 US colonies signing the Declaration of Independence in 1776 to end British rule. The sharply divided country has seen Trump criticised for making himself central to the milestone and politicising it by launching Freedom 250 celebrations, which are separate from congressionally established America 250 events.\n\nSign up now: Get ST's newsletters delivered to your inbox WASHINGTON - Severe weather disrupted the marquee celebration of America’s 250th birthday on July 4, threatening a much-hyped rally and speech in Washington by President Donald Trump who has sought to stamp his mark on the anniversary. Tens of thousands who braved a suffocating heat wave to attend the event on the National Mall were ordered to evacuate several hours ahead of Trump’s address due to an approaching thunderstorm. Trump said he would deliver a speech “no matter what” . “Storms bring luck to whatever the occasion. They also make events a little bit more exciting! We will wait it out, I don’t care if it’s 2:00 O’Clock in the morning,” Trump said on his Truth Social account.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1044,
+      "selected_blocks": 4,
+      "selected_source_words": 377,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "BBC",
+        "BBC",
+        "BBC",
+        "The Straits Times",
+        "The Straits Times",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "The Straits Times"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "US marks its 250th birthday with fireworks, flyovers and extreme weather",
+      "description": "US President Donald Trump's speech included some of his political agenda but also honoured war veterans and American history.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "US marks its 250th birthday with fireworks, flyovers and extreme weather",
+    "description": "US President Donald Trump's speech included some of his political agenda but also honoured war veterans and American history.",
+    "link": "https://www.bbc.co.uk/news/articles/cp9lppvkmz5o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-05T04:38:09+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "4ee01a37380278457c45b0fd83222765",
+    "_url_hash": "8018972b2335518b186b5664b0529239041039a3b6fa347b7b889c2fc187f9f7",
+    "source_tier": 1,
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nPeople watch a fireworks display at a Fourth of July rally featuring US President Donald Trump at the National Mall in Washington\n\nThe United States of America marked its 250th birthday with fireworks, flyovers, some intense weather across the country, much of which has broiled under an unforgiving heat wave for days.\n\n\"The American dream is back,\" US President Donald Trump told a cheering crowd at a delayed rally on the National Mall in Washington before the reputed largest fireworks display ever in the US lit up the night.\n\nThe 4 July federal holiday commemorates the 13 US colonies signing the Declaration of Independence in 1776 to end British rule.\n\nThe sharply divided country has seen Trump criticised for making himself central to the milestone and politicising it by launching Freedom 250 celebrations, which are separate from congressionally established America 250 events.\n\nPeople gather ahead of a Fourth of July rally featuring U.S. President Donald Trump  in Washington.\n\nTrump's remarks - where he hit on recent political themes of rejecting communism,  Save America Act legislation he favors and the right to bear arms - wrapped up just before midnight at the Freedom 250 event.\n\n\"Long live the cause of independence,\" he said. \"May it rain forever and ever and ever, we will always be on top, we will never let our country fall, we will always be the best.\"\n\nUpon closing, he told the crowd, \"this is only the dawn of the golden age of America\" with its destiny \"written by God\".\n\nThe grande finale of the fireworks show was marked by a massive flurry of blasts - reaching a much anticipated crescendo. As it concluded around 1am, the small crowd on Capitol Hill cheered and rapidly started heading for the exits in a light rain.\n\nThe celebration, which included a flyover - one featuring the new Air Force One jet - a concert - as well as the speech and fireworks was delayed by a thunderstorm that forced an evacuation of the National Mall in the early evening.\n\n'Separate in name and power': How America reinvented English\n\nTrump's new take on 250 years of American expansionism\n\nTrump presidency reignites its founding debate - how much power is too much?\n\nAmericans are celebrating their split from Britain - how is the UK marking it?\n\nFreedom 250 asked guests in the area attending Salute to America, the Great American State Fair and Fifa fan zone events to seek temporary shelter in a nearby buildings. Throughout the day, the capital had broiled under 100F (37C) tempe\n\n---\n\n[Lähde: BBC]\nThe United States of America marked its 250th birthday with fireworks, flyovers, some intense weather across the country, much of which has broiled under an unforgiving heat wave for days.\n\n\"The American dream is back,\" US President Donald Trump told a cheering crowd at a delayed rally on the National Mall in Washington before the reputed largest fireworks display ever in the US lit up the night.\n\nThe 4 July federal holiday commemorates the 13 US colonies signing the Declaration of Independence in 1776 to end British rule.\n\nThe sharply divided country has seen Trump criticised for making himself central to the milestone and politicising it by launching Freedom 250 celebrations, which are separate from congressionally established America 250 events.\n\nTrump's remarks - where he hit on recent political themes of rejecting communism,  Save America Act legislation he favors and the right to bear arms - wrapped up just before midnight at the Freedom 250 event.\n\n\"Long live the cause of independence,\" he said. \"May it rain forever and ever and ever, we will always be on top, we will never let our country fall, we will always be the best.\"\n\nUpon closing, he told the crowd, \"this is only the dawn of the golden age of America\" with its destiny \"written by God\".\n\nThe grande finale of the fireworks show was marked by a massive flurry of blasts - reaching a much anticipated crescendo. As it concluded around 1am, the small crowd on Capitol Hill cheered and rapidly started heading for the exits in a light rain.\n\nThe celebration, which included a flyover - one featuring the new Air Force One jet - a concert - as well as the speech and fireworks was delayed by a thunderstorm that forced an evacuation of the National Mall in the early evening.\n\nFreedom 250 asked guests in the area attending Salute to America, the Great American State Fair and Fifa fan zone events to seek temporary shelter in a nearby buildings. Throughout the day, the capital had broiled under 100F (37C) temperatures - part of a larger heat wave enveloping the eastern US.\n\nAlso in Washingon, about 400 members of the white nationalist group Patriot Front were seen carrying US flags while marching in unison through the streets of the capital.\n\nVideos posted to social media and the group's own Telegram channel showed the masked, uniformed members marching near the Capitol building and Union Station, the city's main passenger rail hub.\n\nThe group was founded in 2017 following violence at the \"Unite the Right\" ra\n\n---\n\n[Lähde: The Straits Times]\nSign up now: Get ST's newsletters delivered to your inbox\n\nWASHINGTON - Severe weather disrupted the marquee celebration of America’s 250th birthday on July 4, threatening a much-hyped rally and speech in Washington by President Donald Trump who has sought to stamp his mark on the anniversary.\n\nTens of thousands who braved a suffocating heat wave to attend the event on the National Mall were ordered to evacuate several hours ahead of Trump’s address due to an approaching thunderstorm.\n\nTrump said he would deliver a speech “no matter what” .\n\n“Storms bring luck to whatever the occasion. They also make events a little bit more exciting! We will wait it out, I don’t care if it’s 2:00 O’Clock in the morning,” Trump said on his Truth Social account.\n\n“I will be there no matter what, but the ‘what’ usually turns out to be a good thing. It’s Saturday night, LETS HAVE SOME FUN, even if we are out late tonight.”\n\nA White House official and the Freedom 250 organizing group both said that Trump w...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-05T05:14:48.574573+00:00",
+  "payload": {
+    "packet_id": "20260705T051115Z_dccc1580af",
+    "title": "Yhdysvallat juhli 250-vuotispäiväänsä helteessä ja ukkosuhan alla",
+    "summary": "Yhdysvaltain itsenäisyyspäivän 250-vuotisjuhlaa vietettiin Washingtonissa ilotulituksin, ylilennoin ja presidentti Donald Trumpin puheella, vaikka ankara sää häiritsi tapahtumia.",
+    "content": "Yhdysvallat juhli 4. heinäkuuta itsenäisyytensä 250-vuotispäivää ilotulituksilla, ylilennoilla ja suurilla yleisötapahtumilla, mutta juhlapäivää varjostivat eri puolilla maata tuntunut ankara helle ja Washingtoniin osunut ukkosuhka. National Mall -puistossa järjestetty päätapahtuma viivästyi sään vuoksi, mutta se huipentui presidentti Donald Trumpin puheeseen ja illan suureen ilotulitukseen.\n\n## Sää sotki juhlaohjelmaa\n\nWashingtonin tapahtumaan saapui kymmeniätuhansia ihmisiä, vaikka suuri osa maasta oli kärsinyt jo päiviä tukalasta helleaallosta. Lähestyvä ukkosmyrsky pakotti viranomaiset määräämään yleisön poistumaan National Mallilta useita tunteja ennen Trumpin suunniteltua puhetta.\n\nTrump ilmoitti Truth Social -palvelussa aikovansa pitää puheensa säästä huolimatta. Hän kirjoitti, että myrskyt tuovat tilaisuuksiin onnea ja tekevät tapahtumista jännittävämpiä, ja sanoi olevansa valmis odottamaan vaikka aamukahteen. Lopulta hän puhui hurraavalle yleisölle ennen ilotulitusta, jota kuvailtiin yhdeksi Yhdysvaltojen historian suurimmista.\n\n## Merkkipäivä ja poliittinen lataus\n\nItsenäisyyspäivä muistuttaa 13 siirtokunnan vuonna 1776 allekirjoittamasta itsenäisyysjulistuksesta, jolla ne irtautuivat Britannian vallasta. Tänä vuonna juhla sai erityistä painoa, koska kyse oli Yhdysvaltojen 250-vuotisesta merkkipäivästä.\n\nTrumpin puheessa oli mukana hänen poliittista agendaansa, mutta siinä kunnioitettiin myös sotaveteraaneja ja Yhdysvaltain historiaa. Hän sanoi yleisölle, että ”amerikkalainen unelma on palannut”. Puhe oli osa näyttävää juhlaa, jossa presidentti oli keskeisessä roolissa sekä tapahtuman puhujana että sen poliittisena hahmona.\n\n## Rinnakkaiset juhlallisuudet herättivät arvostelua\n\nMerkkivuotta on vietetty poliittisesti jakautuneessa maassa. Trumpia on arvosteltu siitä, että hän on tehnyt itsestään näkyvän osan merkkipäivää ja politisoinut juhlaa käynnistämällä Freedom 250 -juhlallisuudet.\n\nFreedom 250 -tapahtumat ovat erillisiä kongressin perustamista America 250 -tapahtumista. Washingtonin juhlat kuvasivat näin kahta yhtäaikaista teemaa: näyttävää kansallista historian juhlintaa sekä sääolojen ja poliittisen vastakkainasettelun aiheuttamia häiriöitä. Samalla tapahtuma kokosi yhteen perinteisiä itsenäisyyspäivän elementtejä, kuten ilotulituksen ja kansallisen historian muistamisen, sekä ajankohtaisen kiistan siitä, millä tavoin merkkivuotta käytetään poliittisessa viestinnässä.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "Donald Trump",
+      "itsenäisyyspäivä",
+      "Washington",
+      "sää"
+    ],
+    "summary_bullets": [
+      "Yhdysvallat juhli 250-vuotista itsenäisyyspäiväänsä 4. heinäkuuta.",
+      "Washingtonin National Mallilla järjestettyä tilaisuutta häiritsivät helle ja ukkosuhka.",
+      "Donald Trumpin puheessa yhdistyivät poliittinen viesti, veteraanien kunnioittaminen ja Yhdysvaltain historia."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.96,
+    "journalist_note": "Artikkeli perustuu annettuihin lähdekatkelmiin; yksityiskohtia ei ole laajennettu niiden ulkopuolelle."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260705T051115Z_dccc1580af\",\n  \"title\": \"Yhdysvallat juhli 250-vuotispäiväänsä helteessä ja ukkosuhan alla\",\n  \"summary\": \"Yhdysvaltain itsenäisyyspäivän 250-vuotisjuhlaa vietettiin Washingtonissa ilotulituksin, ylilennoin ja presidentti Donald Trumpin puheella, vaikka ankara sää häiritsi tapahtumia.\",\n  \"content\": \"Yhdysvallat juhli 4. heinäkuuta itsenäisyytensä 250-vuotispäivää ilotulituksilla, ylilennoilla ja suurilla yleisötapahtumilla, mutta juhlapäivää varjostivat eri puolilla maata tuntunut ankara helle ja Washingtoniin osunut ukkosuhka. National Mall -puistossa järjestetty päätapahtuma viivästyi sään vuoksi, mutta se huipentui presidentti Donald Trumpin puheeseen ja illan suureen ilotulitukseen.\\n\\n## Sää sotki juhlaohjelmaa\\n\\nWashingtonin tapahtumaan saapui kymmeniätuhansia ihmisiä, vaikka suuri osa maasta oli kärsinyt jo päiviä tukalasta helleaallosta. Lähestyvä ukkosmyrsky pakotti viranomaiset määräämään yleisön poistumaan National Mallilta useita tunteja ennen Trumpin suunniteltua puhetta.\\n\\nTrump ilmoitti Truth Social -palvelussa aikovansa pitää puheensa säästä huolimatta. Hän kirjoitti, että myrskyt tuovat tilaisuuksiin onnea ja tekevät tapahtumista jännittävämpiä, ja sanoi olevansa valmis odottamaan vaikka aamukahteen. Lopulta hän puhui hurraavalle yleisölle ennen ilotulitusta, jota kuvailtiin yhdeksi Yhdysvaltojen historian suurimmista.\\n\\n## Merkkipäivä ja poliittinen lataus\\n\\nItsenäisyyspäivä muistuttaa 13 siirtokunnan vuonna 1776 allekirjoittamasta itsenäisyysjulistuksesta, jolla ne irtautuivat Britannian vallasta. Tänä vuonna juhla sai erityistä painoa, koska kyse oli Yhdysvaltojen 250-vuotisesta merkkipäivästä.\\n\\nTrumpin puheessa oli mukana hänen poliittista agendaansa, mutta siinä kunnioitettiin myös sotaveteraaneja ja Yhdysvaltain historiaa. Hän sanoi yleisölle, että ”amerikkalainen unelma on palannut”. Puhe oli osa näyttävää juhlaa, jossa presidentti oli keskeisessä roolissa sekä tapahtuman puhujana että sen poliittisena hahmona.\\n\\n## Rinnakkaiset juhlallisuudet herättivät arvostelua\\n\\nMerkkivuotta on vietetty poliittisesti jakautuneessa maassa. Trumpia on arvosteltu siitä, että hän on tehnyt itsestään näkyvän osan merkkipäivää ja politisoinut juhlaa käynnistämällä Freedom 250 -juhlallisuudet.\\n\\nFreedom 250 -tapahtumat ovat erillisiä kongressin perustamista America 250 -tapahtumista. Washingtonin juhlat kuvasivat näin kahta yhtäaikaista teemaa: näyttävää kansallista historian juhlintaa sekä sääolojen ja poliittisen vastakkainasettelun aiheuttamia häiriöitä. Samalla tapahtuma kokosi yhteen perinteisiä itsenäisyyspäivän elementtejä, kuten ilotulituksen ja kansallisen historian muistamisen, sekä ajankohtaisen kiistan siitä, millä tavoin merkkivuotta käytetään poliittisessa viestinnässä.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Yhdysvallat\",\n    \"Donald Trump\",\n    \"itsenäisyyspäivä\",\n    \"Washington\",\n    \"sää\"\n  ],\n  \"summary_bullets\": [\n    \"Yhdysvallat juhli 250-vuotista itsenäisyyspäiväänsä 4. heinäkuuta.\",\n    \"Washingtonin National Mallilla järjestettyä tilaisuutta häiritsivät helle ja ukkosuhka.\",\n    \"Donald Trumpin puheessa yhdistyivät poliittinen viesti, veteraanien kunnioittaminen ja Yhdysvaltain historia.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.96,\n  \"journalist_note\": \"Artikkeli perustuu annettuihin lähdekatkelmiin; yksityiskohtia ei ole laajennettu niiden ulkopuolelle.\"\n}",
+  "article": {
+    "title": "Yhdysvallat juhli 250-vuotispäiväänsä helteessä ja ukkosuhan alla",
+    "description": "Yhdysvaltain itsenäisyyspäivän 250-vuotisjuhlaa vietettiin Washingtonissa ilotulituksin, ylilennoin ja presidentti Donald Trumpin puheella, vaikka ankara sää häiritsi tapahtumia.",
+    "link": "https://www.bbc.co.uk/news/articles/cp9lppvkmz5o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-05T04:38:09+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "4ee01a37380278457c45b0fd83222765",
+    "_url_hash": "8018972b2335518b186b5664b0529239041039a3b6fa347b7b889c2fc187f9f7",
+    "source_tier": 1,
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nPeople watch a fireworks display at a Fourth of July rally featuring US President Donald Trump at the National Mall in Washington\n\nThe United States of America marked its 250th birthday with fireworks, flyovers, some intense weather across the country, much of which has broiled under an unforgiving heat wave for days.\n\n\"The American dream is back,\" US President Donald Trump told a cheering crowd at a delayed rally on the National Mall in Washington before the reputed largest fireworks display ever in the US lit up the night.\n\nThe 4 July federal holiday commemorates the 13 US colonies signing the Declaration of Independence in 1776 to end British rule.\n\nThe sharply divided country has seen Trump criticised for making himself central to the milestone and politicising it by launching Freedom 250 celebrations, which are separate from congressionally established America 250 events.\n\nPeople gather ahead of a Fourth of July rally featuring U.S. President Donald Trump  in Washington.\n\nTrump's remarks - where he hit on recent political themes of rejecting communism,  Save America Act legislation he favors and the right to bear arms - wrapped up just before midnight at the Freedom 250 event.\n\n\"Long live the cause of independence,\" he said. \"May it rain forever and ever and ever, we will always be on top, we will never let our country fall, we will always be the best.\"\n\nUpon closing, he told the crowd, \"this is only the dawn of the golden age of America\" with its destiny \"written by God\".\n\nThe grande finale of the fireworks show was marked by a massive flurry of blasts - reaching a much anticipated crescendo. As it concluded around 1am, the small crowd on Capitol Hill cheered and rapidly started heading for the exits in a light rain.\n\nThe celebration, which included a flyover - one featuring the new Air Force One jet - a concert - as well as the speech and fireworks was delayed by a thunderstorm that forced an evacuation of the National Mall in the early evening.\n\n'Separate in name and power': How America reinvented English\n\nTrump's new take on 250 years of American expansionism\n\nTrump presidency reignites its founding debate - how much power is too much?\n\nAmericans are celebrating their split from Britain - how is the UK marking it?\n\nFreedom 250 asked guests in the area attending Salute to America, the Great American State Fair and Fifa fan zone events to seek temporary shelter in a nearby buildings. Throughout the day, the capital had broiled under 100F (37C) tempe\n\n---\n\n[Lähde: BBC]\nThe United States of America marked its 250th birthday with fireworks, flyovers, some intense weather across the country, much of which has broiled under an unforgiving heat wave for days.\n\n\"The American dream is back,\" US President Donald Trump told a cheering crowd at a delayed rally on the National Mall in Washington before the reputed largest fireworks display ever in the US lit up the night.\n\nThe 4 July federal holiday commemorates the 13 US colonies signing the Declaration of Independence in 1776 to end British rule.\n\nThe sharply divided country has seen Trump criticised for making himself central to the milestone and politicising it by launching Freedom 250 celebrations, which are separate from congressionally established America 250 events.\n\nTrump's remarks - where he hit on recent political themes of rejecting communism,  Save America Act legislation he favors and the right to bear arms - wrapped up just before midnight at the Freedom 250 event.\n\n\"Long live the cause of independence,\" he said. \"May it rain forever and ever and ever, we will always be on top, we will never let our country fall, we will always be the best.\"\n\nUpon closing, he told the crowd, \"this is only the dawn of the golden age of America\" with its destiny \"written by God\".\n\nThe grande finale of the fireworks show was marked by a massive flurry of blasts - reaching a much anticipated crescendo. As it concluded around 1am, the small crowd on Capitol Hill cheered and rapidly started heading for the exits in a light rain.\n\nThe celebration, which included a flyover - one featuring the new Air Force One jet - a concert - as well as the speech and fireworks was delayed by a thunderstorm that forced an evacuation of the National Mall in the early evening.\n\nFreedom 250 asked guests in the area attending Salute to America, the Great American State Fair and Fifa fan zone events to seek temporary shelter in a nearby buildings. Throughout the day, the capital had broiled under 100F (37C) temperatures - part of a larger heat wave enveloping the eastern US.\n\nAlso in Washingon, about 400 members of the white nationalist group Patriot Front were seen carrying US flags while marching in unison through the streets of the capital.\n\nVideos posted to social media and the group's own Telegram channel showed the masked, uniformed members marching near the Capitol building and Union Station, the city's main passenger rail hub.\n\nThe group was founded in 2017 following violence at the \"Unite the Right\" ra\n\n---\n\n[Lähde: The Straits Times]\nSign up now: Get ST's newsletters delivered to your inbox\n\nWASHINGTON - Severe weather disrupted the marquee celebration of America’s 250th birthday on July 4, threatening a much-hyped rally and speech in Washington by President Donald Trump who has sought to stamp his mark on the anniversary.\n\nTens of thousands who braved a suffocating heat wave to attend the event on the National Mall were ordered to evacuate several hours ahead of Trump’s address due to an approaching thunderstorm.\n\nTrump said he would deliver a speech “no matter what” .\n\n“Storms bring luck to whatever the occasion. They also make events a little bit more exciting! We will wait it out, I don’t care if it’s 2:00 O’Clock in the morning,” Trump said on his Truth Social account.\n\n“I will be there no matter what, but the ‘what’ usually turns out to be a good thing. It’s Saturday night, LETS HAVE SOME FUN, even if we are out late tonight.”\n\nA White House official and the Freedom 250 organizing group both said that Trump w...",
+    "research_source": "multi",
+    "summary": "Yhdysvaltain itsenäisyyspäivän 250-vuotisjuhlaa vietettiin Washingtonissa ilotulituksin, ylilennoin ja presidentti Donald Trumpin puheella, vaikka ankara sää häiritsi tapahtumia.",
+    "content": "Yhdysvallat juhli 4. heinäkuuta itsenäisyytensä 250-vuotispäivää ilotulituksilla, ylilennoilla ja suurilla yleisötapahtumilla, mutta juhlapäivää varjostivat eri puolilla maata tuntunut ankara helle ja Washingtoniin osunut ukkosuhka. National Mall -puistossa järjestetty päätapahtuma viivästyi sään vuoksi, mutta se huipentui presidentti Donald Trumpin puheeseen ja illan suureen ilotulitukseen.\n\n## Sää sotki juhlaohjelmaa\n\nWashingtonin tapahtumaan saapui kymmeniätuhansia ihmisiä, vaikka suuri osa maasta oli kärsinyt jo päiviä tukalasta helleaallosta. Lähestyvä ukkosmyrsky pakotti viranomaiset määräämään yleisön poistumaan National Mallilta useita tunteja ennen Trumpin suunniteltua puhetta.\n\nTrump ilmoitti Truth Social -palvelussa aikovansa pitää puheensa säästä huolimatta. Hän kirjoitti, että myrskyt tuovat tilaisuuksiin onnea ja tekevät tapahtumista jännittävämpiä, ja sanoi olevansa valmis odottamaan vaikka aamukahteen. Lopulta hän puhui hurraavalle yleisölle ennen ilotulitusta, jota kuvailtiin yhdeksi Yhdysvaltojen historian suurimmista.\n\n## Merkkipäivä ja poliittinen lataus\n\nItsenäisyyspäivä muistuttaa 13 siirtokunnan vuonna 1776 allekirjoittamasta itsenäisyysjulistuksesta, jolla ne irtautuivat Britannian vallasta. Tänä vuonna juhla sai erityistä painoa, koska kyse oli Yhdysvaltojen 250-vuotisesta merkkipäivästä.\n\nTrumpin puheessa oli mukana hänen poliittista agendaansa, mutta siinä kunnioitettiin myös sotaveteraaneja ja Yhdysvaltain historiaa. Hän sanoi yleisölle, että ”amerikkalainen unelma on palannut”. Puhe oli osa näyttävää juhlaa, jossa presidentti oli keskeisessä roolissa sekä tapahtuman puhujana että sen poliittisena hahmona.\n\n## Rinnakkaiset juhlallisuudet herättivät arvostelua\n\nMerkkivuotta on vietetty poliittisesti jakautuneessa maassa. Trumpia on arvosteltu siitä, että hän on tehnyt itsestään näkyvän osan merkkipäivää ja politisoinut juhlaa käynnistämällä Freedom 250 -juhlallisuudet.\n\nFreedom 250 -tapahtumat ovat erillisiä kongressin perustamista America 250 -tapahtumista. Washingtonin juhlat kuvasivat näin kahta yhtäaikaista teemaa: näyttävää kansallista historian juhlintaa sekä sääolojen ja poliittisen vastakkainasettelun aiheuttamia häiriöitä. Samalla tapahtuma kokosi yhteen perinteisiä itsenäisyyspäivän elementtejä, kuten ilotulituksen ja kansallisen historian muistamisen, sekä ajankohtaisen kiistan siitä, millä tavoin merkkivuotta käytetään poliittisessa viestinnässä.",
+    "category": "Ulkomaat",
+    "tags": [
+      "yhdysvallat",
+      "donald trump",
+      "itsenäisyyspäivä",
+      "washington",
+      "sää"
+    ],
+    "summary_bullets": [
+      "Yhdysvallat juhli 250-vuotista itsenäisyyspäiväänsä 4. heinäkuuta.",
+      "Washingtonin National Mallilla järjestettyä tilaisuutta häiritsivät helle ja ukkosuhka.",
+      "Donald Trumpin puheessa yhdistyivät poliittinen viesti, veteraanien kunnioittaminen ja Yhdysvaltain historia."
+    ],
+    "key_points": [
+      "Yhdysvallat juhli 250-vuotista itsenäisyyspäiväänsä 4. heinäkuuta.",
+      "Washingtonin National Mallilla järjestettyä tilaisuutta häiritsivät helle ja ukkosuhka.",
+      "Donald Trumpin puheessa yhdistyivät poliittinen viesti, veteraanien kunnioittaminen ja Yhdysvaltain historia."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu annettuihin lähdekatkelmiin; yksityiskohtia ei ole laajennettu niiden ulkopuolelle.",
+    "source_text": "US President Donald Trump's speech included some of his political agenda but also honoured war veterans and American history.\n\nPeople watch a fireworks display at a Fourth of July rally featuring US President Donald Trump at the National Mall in Washington The United States of America marked its 250th birthday with fireworks, flyovers, some intense weather across the country, much of which has broiled under an unforgiving heat wave for days. \"The American dream is back,\" US President Donald Trump told a cheering crowd at a delayed rally on the National Mall in Washington before the reputed largest fireworks display ever in the US lit up the night. The 4 July federal holiday commemorates the 13 US colonies signing the Declaration of Independence in 1776 to end British rule.\n\nThe United States of America marked its 250th birthday with fireworks, flyovers, some intense weather across the country, much of which has broiled under an unforgiving heat wave for days. \"The American dream is back,\" US President Donald Trump told a cheering crowd at a delayed rally on the National Mall in Washington before the reputed largest fireworks display ever in the US lit up the night. The 4 July federal holiday commemorates the 13 US colonies signing the Declaration of Independence in 1776 to end British rule. The sharply divided country has seen Trump criticised for making himself central to the milestone and politicising it by launching Freedom 250 celebrations, which are separate from congressionally established America 250 events.\n\nSign up now: Get ST's newsletters delivered to your inbox WASHINGTON - Severe weather disrupted the marquee celebration of America’s 250th birthday on July 4, threatening a much-hyped rally and speech in Washington by President Donald Trump who has sought to stamp his mark on the anniversary. Tens of thousands who braved a suffocating heat wave to attend the event on the National Mall were ordered to evacuate several hours ahead of Trump’s address due to an approaching thunderstorm. Trump said he would deliver a speech “no matter what” . “Storms bring luck to whatever the occasion. They also make events a little bit more exciting! We will wait it out, I don’t care if it’s 2:00 O’Clock in the morning,” Trump said on his Truth Social account.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.96,
+    "degraded_mode": false,
+    "monica_packet_id": "20260705T051115Z_dccc1580af",
+    "monica_repair": {
+      "repair_attempt": "source_backed_near_short",
+      "repair_attempted_at": "2026-07-05T05:14:48.574324+00:00",
+      "repair_trigger": "pre_repair_word_count=229; selected_source_words=377; selected_source_blocks=4",
+      "pre_repair_word_count": 229,
+      "pre_repair_lead_word_count": 43,
+      "post_repair_word_count": 269,
+      "post_repair_lead_word_count": 43,
+      "selected_source_words_at_repair": 377,
+      "selected_source_blocks_at_repair": 4,
+      "source_words": 377,
+      "source_blocks": 4,
+      "repair_added_word_count": 40,
+      "repair_result": "published",
+      "repair_rejection_reason": "",
+      "source_block_ids_used_for_repair": [
+        "1:BBC World:3cba1b0f35",
+        "2:BBC World:a2f796213c",
+        "3:BBC:4a6a27f683",
+        "4:The Straits Times:40a08f0b79"
+      ],
+      "final_issues": [],
+      "recovered": true
+    },
+    "image_hotlink": false,
+    "image_category_fallback": true,
+    "image": "/images/categories/ulkomaat.jpg",
+    "image_thumb": "/images/categories/ulkomaat.jpg",
+    "image_alt": "Ulkomaat-uutiset",
+    "image_credit": "",
+    "image_source_url": "",
+    "image_caption": "",
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_visual_judge_score": 0,
+    "image_decision": {
+      "source": "category_fallback",
+      "accepted": true,
+      "reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+      "prompt_version": "image-flow-v2-2026-07-03"
+    }
+  },
+  "repair": {
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-07-05T05:14:48.574324+00:00",
+    "repair_trigger": "pre_repair_word_count=229; selected_source_words=377; selected_source_blocks=4",
+    "pre_repair_word_count": 229,
+    "pre_repair_lead_word_count": 43,
+    "post_repair_word_count": 269,
+    "post_repair_lead_word_count": 43,
+    "selected_source_words_at_repair": 377,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 377,
+    "source_blocks": 4,
+    "repair_added_word_count": 40,
+    "repair_result": "published",
+    "repair_rejection_reason": "",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:3cba1b0f35",
+      "2:BBC World:a2f796213c",
+      "3:BBC:4a6a27f683",
+      "4:The Straits Times:40a08f0b79"
+    ],
+    "final_issues": [],
+    "recovered": true
+  },
+  "image_enriched_at": "2026-07-05T05:18:05.674024+00:00",
+  "image_enrichment": {
+    "image": "/images/categories/ulkomaat.jpg",
+    "image_thumb": "/images/categories/ulkomaat.jpg",
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+    "image_concept": null,
+    "image_query": null,
+    "image_candidate_id": null,
+    "image_candidate_url": null,
+    "image_visual_judge_score": 0,
+    "image_accepted_reasons": null,
+    "image_rejected_reasons": null,
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03"
+  },
+  "published_at": "2026-07-05T05:19:25.090423+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-07-05-yhdysvallat-juhli-250-vuotispaivaansa-helteessa-ja-ukkosuhan.md"
+  ]
+}
