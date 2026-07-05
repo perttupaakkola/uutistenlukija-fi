@@ -71,3 +71,5 @@ Schrey omisti Accountorista loppuvaiheessa 16 prosenttia. Tämän perusteella h�
 Viime vuonna Schreystä tuli Kontio-hirsitalovalmistajan pääosakas. Hän kertoo, että Kontion toimitusjohtaja on kiinnostunut oman avatarinsa luomisesta. Ajatuksena olisi, että kuka tahansa voisi keskustella hirsirakentamisesta toimitusjohtajan kopiota muistuttavan hahmon kanssa vuorokauden ympäri.
 
 Tällaiselle avatarille opetettaisiin yhtiön tietämys hirrestä. Schreyn näkemyksessä tekoäly ei siis ole vain tekninen kokeilu, vaan myös mahdollinen uusi tapa jakaa yritysten osaamista ja asiantuntemusta.
+
+Lue seuraavaksi lisää [talousuutisia](/categories/talous/).
