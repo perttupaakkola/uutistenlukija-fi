@@ -53,7 +53,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/space/2026/07/whats-the-oldest-americana-flown-in-space/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
