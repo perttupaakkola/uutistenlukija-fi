@@ -55,7 +55,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/06/ikavat-ongelmat-iskivat-jalleen-android-autoon/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
