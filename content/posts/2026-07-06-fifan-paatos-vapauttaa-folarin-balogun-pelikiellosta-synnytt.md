@@ -85,3 +85,5 @@ Belgian jalkapalloliitto reagoi päätökseen jyrkästi. Liitto kertoi olevansa 
 Belgian mukaan se harkitsee kaikkia mahdollisia vaihtoehtoja suojellakseen osallistuvien joukkueiden oikeuksia ja reilun pelin periaatteita sekä näissä että tulevissa MM-kisoissa.
 
 Belgian päävalmentaja Rudi Garcia ivaili ratkaisua sanomalla, että 5. heinäkuuta oli Fifan toimistolla verrattavissa Euroopan aprillipäivään. Uutistoimisto AP:n mukaan Garcia sanoi uskovansa, että tällainen päätös tehtiin ensimmäistä kertaa MM-kisojen historiassa.
+
+Lue seuraavaksi lisää [ulkomaanuutisia](/categories/ulkomaat/).
