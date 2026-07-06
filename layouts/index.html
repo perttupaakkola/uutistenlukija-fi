@@ -3,7 +3,9 @@
 {{ $sorted := $posts.ByDate.Reverse }}
 {{ $visualPosts := slice }}
 {{ range $sorted }}
-  {{ if .Params.image }}{{ $visualPosts = $visualPosts | append . }}{{ end }}
+  {{ $image := .Params.image | default "" }}
+  {{ $isCategoryFallback := or .Params.image_category_fallback (eq .Params.image_source "category_fallback") (hasPrefix $image "/images/categories/") }}
+  {{ if and $image (not $isCategoryFallback) }}{{ $visualPosts = $visualPosts | append . }}{{ end }}
 {{ end }}
 {{ $lead := index $sorted 0 }}
 {{ if gt (len $visualPosts) 0 }}{{ $lead = index $visualPosts 0 }}{{ end }}
@@ -50,7 +52,6 @@
         <h2 id="front-top-stories-title">Päivän pääuutiset</h2>
       </div>
       {{ $teaserPool := where $visualPosts "Permalink" "not in" $seen }}
-      {{ if lt (len $teaserPool) 4 }}{{ $teaserPool = where $sorted "Permalink" "not in" $seen }}{{ end }}
       {{ range first 4 $teaserPool }}
       {{ $cat := index .Params.categories 0 | default "Uutiset" }}
       {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
