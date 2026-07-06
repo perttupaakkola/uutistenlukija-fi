@@ -69,3 +69,5 @@ Jo vuonna 2017 Applelta nähtiin patentteja modulaarisista rannekelinkeistä, jo
 Nykyisten odotusten perusteella Apple Watch Series 12 ei muuten olisi saamassa suurta ulkoista uudistusta. Sen odotetaan jatkavan Series 10:n esittelemää muotoilua ja saavan todennäköisesti uuden piirin sekä pienempiä sisäisiä parannuksia.
 
 Kosutami on aiemmin jakanut joitakin oikeaan osuneita Apple-tietoja, mutta vuotajan osumatarkkuus ei ole täydellinen. Rannekeanturia koskeva tieto kannattaa siksi nähdä toistaiseksi huhuna eikä varmana ennakkotietona tulevasta tuotteesta.
+
+Lue seuraavaksi lisää [teknologiauutisia](/categories/teknologia/).
