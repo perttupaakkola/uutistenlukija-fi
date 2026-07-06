@@ -47,7 +47,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/kommentti-elina-valtonen-puhui-putin-haaveesta-jota-on-vaikea-uskoa-todeksi/9362632"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
