@@ -80,3 +80,5 @@ Yleisö otti jalkapalloteemaisen keikan innokkaasti vastaan. Fanit heiluttelivat
 Ruisrockissa MM-kisat eivät jääneet pelkästään pukeutumisen tai keikkateeman varaan. Festivaalilla on myös näytetty otteluita isolta screeniltä, jolloin kisat ovat olleet osa alueen yhteistä ohjelmaa.
 
 Perjantaina screeniltä nähtiin Australian ja Egyptin välinen pudotuspeli. Lauantaina näytettiin Kanadan ja Marokon neljännesvälieräottelu. Sunnuntaina pelejä ei enää näytetä, koska ne jouduttaisiin lopettamaan kesken festivaalialueen sulkeutuessa.
+
+Lue seuraavaksi lisää [ulkomaanuutisia](/categories/ulkomaat/).
