@@ -71,3 +71,5 @@ Myyntipakkaukseen kuuluvat robotin lisäksi latausasema neljällä kiinnitysruuv
 Latausasema on sijoitettava riittävän tasaiselle alustalle, ja paikka kannattaa valita niin, ettei latausaseman kaapeli ole vaarassa joutua leikkurin tielle. Lähdekatkelmien mukaan itse leikkuri ei paketista otettaessa vaatinut rakentelua.
 
 Mallista on saatavilla myös Navimow i220 Lidar Pro, jonka suositushinta on 2 099 euroa. Se on tarkoitettu 2 000 neliön pihoille, ja keskeiseksi eroksi kerrotaan suurempi akku.
+
+Lue seuraavaksi lisää [teknologiauutisia](/categories/teknologia/).
