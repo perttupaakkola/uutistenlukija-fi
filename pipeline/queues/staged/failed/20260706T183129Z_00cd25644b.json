@@ -1,0 +1,140 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-06T18:31:29.308854+00:00",
+  "digest": "00cd25644b",
+  "packet": {
+    "packet_id": "20260706T183129Z_00cd25644b",
+    "created_at": "2026-07-06T18:31:29Z",
+    "headline_seed": "Charlie Kirk's family attends hearing for suspect charged with his murder",
+    "description_seed": "Tyler Robinson, 23, is accused of murdering Kirk, a key Trump ally and founder of youth organisation Turning Point USA.",
+    "link": "https://www.bbc.co.uk/news/articles/c1myyyyjvx5o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "The Guardian",
+      "BBC World",
+      "The Guardian"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/c1myyyyjvx5o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Charlie Kirk's family attends hearing for suspect charged with his murder"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Charlie Kirk's parents, Robert W. Kirk and Kathryn Kirk, arrive at a Utah courthouse on 6 May 2026 The family of US conservative activist Charlie Kirk came face-to-face on Monday with his alleged killer as prosecutors laid out their evidence for the murder case against Tyler Robinson, 23, in a preliminary hearing. Kirk, a key Trump ally and founder of youth organisation Turning Point USA, was fatally shot on 10 September 2025 as he spoke on the campus of Utah Valley University in Orem, Utah, kicking off an intense manhunt. Authorities announced the arrest two days later of Robinson, who has been charged with aggravated murder, felony discharge of a firearm, obstructing justice and witness tampering. Robinson has not yet entered a plea. Utah County prosecutors are seeking the death penalty.",
+        "word_count": 131,
+        "keyword_overlap": 16,
+        "strong_overlap": 9
+      },
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "Hearing set to begin 6 July would mark the first time Kirk’s family has been in the courtroom with the suspect Charlie Kirk’s parents and his widow Erika Kirk are expected to attend a key hearing next week in Utah for the murder case against the man accused of slaying the conservative political activist, according to multiple news outlets. The preliminary hearing, set to begin on 6 July, would mark the first time Kirk’s family has been in the courtroom with Tyler James Robinson, the 23-year-old charged with aggravated murder related to Kirk’s death. The Utah county district attorney’s office did not immediately respond to a request for comment.",
+        "word_count": 109,
+        "keyword_overlap": 11,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Tyler Robinson, 23, is accused of murdering Kirk, a key Trump ally and founder of youth organisation Turning Point USA.",
+        "word_count": 20,
+        "keyword_overlap": 12,
+        "strong_overlap": 6
+      },
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "Erika Kirk took the helm of Turning Point USA, the conservative youth movement that her husband co-founded, after his death last fall. During her husband’s memorial service, she said she forgives the young man accused of assassinating her husband. Still, she has pushed to maintain public access to the court proceedings. She is expected to attend court proceedings throughout the week with Charlie Kirk’s parents, Robert and Kathryn Kirk, who have largely stayed out of the spotlight. Prosecutors have said that during the hearing they plan to introduce forensic analyses, surveillance video, recordings of witness statements, autopsy findings and alleged messages from Robinson admitting to the crime.",
+        "word_count": 107,
+        "keyword_overlap": 9,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "Charlie Kirk's parents, Robert W. Kirk and Kathryn Kirk, arrive at a Utah courthouse on 6 May 2026 The family of US conservative activist Charlie Kirk came face-to-face on Monday with his alleged killer as prosecutors laid out their evidence for the murder case against Tyler Robinson, 23, in a preliminary hearing. Kirk, a key Trump ally and founder of youth organisation Turning Point USA, was fatally shot on 10 September 2025 as he spoke on the campus of Utah Valley University in Orem, Utah, kicking off an intense manhunt. Authorities announced the arrest two days later of Robinson, who has been charged with aggravated murder, felony discharge of a firearm, obstructing justice and witness tampering. Robinson has not yet entered a plea. Utah County prosecutors are seeking the death penalty.\n\nHearing set to begin 6 July would mark the first time Kirk’s family has been in the courtroom with the suspect Charlie Kirk’s parents and his widow Erika Kirk are expected to attend a key hearing next week in Utah for the murder case against the man accused of slaying the conservative political activist, according to multiple news outlets. The preliminary hearing, set to begin on 6 July, would mark the first time Kirk’s family has been in the courtroom with Tyler James Robinson, the 23-year-old charged with aggravated murder related to Kirk’s death. The Utah county district attorney’s office did not immediately respond to a request for comment.\n\nTyler Robinson, 23, is accused of murdering Kirk, a key Trump ally and founder of youth organisation Turning Point USA.\n\nErika Kirk took the helm of Turning Point USA, the conservative youth movement that her husband co-founded, after his death last fall. During her husband’s memorial service, she said she forgives the young man accused of assassinating her husband. Still, she has pushed to maintain public access to the court proceedings. She is expected to attend court proceedings throughout the week with Charlie Kirk’s parents, Robert and Kathryn Kirk, who have largely stayed out of the spotlight. Prosecutors have said that during the hearing they plan to introduce forensic analyses, surveillance video, recordings of witness statements, autopsy findings and alleged messages from Robinson admitting to the crime.",
+    "source_diagnostics": {
+      "candidate_blocks": 8,
+      "candidate_source_words": 785,
+      "selected_blocks": 4,
+      "selected_source_words": 367,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "The Guardian",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "The Guardian",
+        "BBC World",
+        "The Guardian"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Charlie Kirk's family attends hearing for suspect charged with his murder",
+      "description": "Tyler Robinson, 23, is accused of murdering Kirk, a key Trump ally and founder of youth organisation Turning Point USA.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Charlie Kirk's family attends hearing for suspect charged with his murder",
+    "description": "Tyler Robinson, 23, is accused of murdering Kirk, a key Trump ally and founder of youth organisation Turning Point USA.",
+    "link": "https://www.bbc.co.uk/news/articles/c1myyyyjvx5o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-06T17:33:43+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "cc7f98eeb8299852e9499d7a67d97455",
+    "_url_hash": "135ad7d61cad207c1aee6e613b22ddfe536a3fd8efb0d79336a79c26a9550a6c",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nCharlie Kirk's parents, Robert W. Kirk and Kathryn Kirk, arrive at a Utah courthouse on 6 May 2026\n\nThe family of US conservative activist Charlie Kirk came face-to-face on Monday with his alleged killer as prosecutors laid out their evidence for the murder case against Tyler Robinson, 23, in a preliminary hearing.\n\nKirk, a key Trump ally and founder of youth organisation Turning Point USA, was fatally shot on 10 September 2025 as he spoke on the campus of Utah Valley University in Orem, Utah, kicking off an intense manhunt.\n\nAuthorities announced the arrest two days later of Robinson, who has been charged with aggravated murder, felony discharge of a firearm, obstructing justice and witness tampering.\n\nRobinson has not yet entered a plea. Utah County prosecutors are seeking the death penalty.\n\nCharlie Kirk was fatally shot while speaking at a university event on 10 September 2025\n\nThe family of Kirk, a 31-year-old father of two, released a statement to local media in advance of Monday's proceedings, which are scheduled to last through Friday.\n\n\"Charlie was a beloved husband, son, brother, friend, and father,\" said Kirk's widow, Erika, his parents, Robert and Kathryn, and sister, Mary. \"Every court proceeding serves as a painful reminder of his death and the loss that has irrevocably impacted our lives and the lives of his children.\"\n\nKirk's parents and widow arrived at court separately on Monday.\n\n\"We remain deeply grateful for the support, prayers, and kindness we have received,\" the family statement continued. \"This outpouring has sustained us during the darkest days of our lives.\n\n\"Out of respect for the judicial process, we will not be commenting further at this time. We ask for continued privacy as we navigate this process and immense grief.\"\n\nDefense attorneys in previous hearings sought to suppress various evidence and unsuccessfully attempted to ban cameras from the courtroom during the preliminary proceedings that began on Monday. They have also asked Judge Tony Graf to take the death penalty off the table.\n\nRobinson, wearing a light-coloured suit, sat between his attorneys at the defense table.\n\nProsecutors announced Monday morning that four law enforcement witnesses were expected to take the stand during the day.\n\nWhy the trail went cold in Nancy Guthrie case\n\nAt CrimeCon true crime obsessives come face-to-face with real loss\n\nCowboys, fighter jets and US Border Patrol - inside Trump's big recruitment drive\n\n---\n\n[Lähde: The Guardian]\nHearing set to begin 6 July would mark the first time Kirk’s family has been in the courtroom with the suspect\n\nCharlie Kirk’s parents and his widow Erika Kirk are expected to attend a key hearing next week in Utah for the murder case against the man accused of slaying the conservative political activist, according to multiple news outlets.\n\nThe preliminary hearing, set to begin on 6 July, would mark the first time Kirk’s family has been in the courtroom with Tyler James Robinson, the 23-year-old charged with aggravated murder related to Kirk’s death.\n\nThe Utah county district attorney’s office did not immediately respond to a request for comment.\n\nKirk was shot in the neck during one of his marquee events on 10 September, while debating ideological opponents before a crowd of thousands at Utah Valley University. Robinson has not yet entered a plea.\n\nAt next week’s hearing, the state must prove probable cause, “evidence sufficient to support a reasonable belief that an offense has been committed and that the defendant committed it”, in order to proceed to trial, according to the Utah county attorney’s office.\n\nProsecutors have said they intend to seek the death penalty if Robinson is convicted.\n\nErika Kirk took the helm of Turning Point USA, the conservative youth movement that her husband co-founded, after his death last fall. During her husband’s memorial service, she said she forgives the young man accused of assassinating her husband. Still, she has pushed to maintain public access to the court proceedings.\n\nShe is expected to attend court proceedings throughout the week with Charlie Kirk’s parents, Robert and Kathryn Kirk, who have largely stayed out of the spotlight.\n\nProsecutors have said that during the hearing they plan to introduce forensic analyses, surveillance video, recordings of witness statements, autopsy findings and alleged messages from Robinson admitting to the crime.\n\nAuthorities have said DNA consistent with Robinson’s was found on the trigger of the rifle used to kill Kirk, the fired cartridge casing, two unfired cartridges and a towel used to wrap the rifle. Prosecutors also have said Robinson left a note for his romantic partner that read: “I had the opportunity to take out Charlie Kirk and I’m going to take it.”",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-06T18:33:14.133438+00:00",
+  "failure": "Monica writer command failed: GatewayClientRequestError: Error: Sandbox image not found: openclaw-sandbox:bookworm-slim. Build it with scripts/sandbox-setup.sh before enabling Docker sandboxing. The default image includes python3 for sandbox write/edit helpers; OpenClaw will not substitute plain ...",
+  "raw_response": "",
+  "writer_failure_feedback": {
+    "packet_id": "20260706T183129Z_00cd25644b",
+    "category": "Ulkomaat",
+    "selected_source_words": 367,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 0,
+    "issues": [],
+    "source_backed": true,
+    "near_miss_short": false,
+    "retry_classification": "writer_runtime",
+    "fail_closed": true,
+    "title": "Charlie Kirk's family attends hearing for suspect charged with his murder"
+  }
+}
