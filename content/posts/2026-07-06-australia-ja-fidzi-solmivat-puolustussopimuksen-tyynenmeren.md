@@ -2,7 +2,7 @@
 title: "Australia ja Fidži solmivat puolustussopimuksen Tyynenmeren kiristyneessä tilanteessa"
 date: 2026-07-06T03:18:06.200627+00:00
 categories:
-  - Kotimaa
+  - Ulkomaat
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
@@ -22,8 +22,8 @@ journalist_note: |
   Artikkeli perustuu tiiviiseen lähdepakettiin. Sopimuksen tarkempia ehtoja tai käytännön toimeenpanoa ei avata, koska niitä ei lähteessä kerrota.
 content_type: "article"
 editorial_reviewed: true
-image: "/images/categories/kotimaa.jpg"
-image_thumb: "/images/categories/kotimaa.jpg"
+image: "/images/categories/ulkomaat.jpg"
+image_thumb: "/images/categories/ulkomaat.jpg"
 image_alt: "Kuvituskuva uutiseen: Australia ja Fidži solmivat puolustussopimuksen Tyynenmeren kiristyneessä tilanteessa (australia, fidži)"
 image_source: "category_fallback"
 image_source_type: "category_fallback"
@@ -74,3 +74,5 @@ Australia on solminut uusia sopimuksia muun muassa Papua-Uuden-Guinean, Vanuatun
 Fidžin asema Australian sopimusliittolaisena tekee maasta aiempaa näkyvämmän osan Australian alueellista turvallisuusverkostoa. Samalla sopimus kertoo siitä, että Australia hakee vahvempia kumppanuuksia lähialueellaan.
 
 Lähdepaketin perusteella sopimus liittyy sekä Australian ja Fidžin kahdenväliseen lähentymiseen että laajempaan huoleen Kiinan vaikutusvallasta Tyynenmeren alueella. Tarkempia tietoja sopimuksen aikataulusta, toimeenpanosta tai mahdollisista käytännön järjestelyistä ei lähteessä kerrota.
+
+Lue seuraavaksi lisää [ulkomaanuutisia](/categories/ulkomaat/).
