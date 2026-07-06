@@ -13,6 +13,7 @@ import time
 import urllib.request
 import urllib.error
 import glob
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -77,6 +78,19 @@ def post_to_discord(content):
         print(f"[cron-health] Discord post failed: {e}", file=sys.stderr)
         return False
 
+def latest_nonempty_line(path):
+    try:
+        lines = path.read_text(errors="replace").splitlines()
+    except OSError:
+        return ""
+    for line in reversed(lines):
+        if line.strip():
+            return line
+    return ""
+
+def pattern_matches(pattern, text):
+    return re.search(pattern, text) is not None
+
 def main():
     dry_run = "--dry-run" in sys.argv[1:]
 
@@ -90,6 +104,7 @@ def main():
     now = time.time()
     stale_jobs = []
     missing_jobs = []
+    failing_jobs = []
     ok_count = 0
 
     for job in registry:
@@ -123,9 +138,27 @@ def main():
                 "limit_h": round(interval_h * 1.5, 2)
             })
         else:
-            ok_count += 1
+            latest_line = latest_nonempty_line(marker_path)
+            required_latest = job.get("latest_line_required_pattern")
+            forbidden_latest = job.get("latest_line_forbidden_patterns", [])
+            failure_reason = ""
+            if required_latest and not pattern_matches(required_latest, latest_line):
+                failure_reason = f"latest marker line did not match /{required_latest}/"
+            for pattern in forbidden_latest:
+                if pattern_matches(pattern, latest_line):
+                    failure_reason = f"latest marker line matched forbidden /{pattern}/"
+                    break
 
-    if not stale_jobs and not missing_jobs:
+            if failure_reason:
+                failing_jobs.append({
+                    "name": name,
+                    "reason": failure_reason,
+                    "latest_line": latest_line[-160:] if latest_line else "<empty>",
+                })
+            else:
+                ok_count += 1
+
+    if not stale_jobs and not missing_jobs and not failing_jobs:
         print(f"All {ok_count} jobs healthy.")
         return 0
 
@@ -141,12 +174,17 @@ def main():
         for name in missing_jobs:
             report += f"- `{name}`\n"
 
+    if failing_jobs:
+        report += "\n❌ **Failing Jobs:**\n"
+        for job in failing_jobs:
+            report += f"- `{job['name']}`: {job['reason']}; latest `{job['latest_line']}`\n"
+
     report += f"\nTotal healthy: {ok_count}"
     
     print(report)
     if not dry_run:
         post_to_discord(report)
-    return 0
+    return 1
 
 if __name__ == "__main__":
     sys.exit(main())

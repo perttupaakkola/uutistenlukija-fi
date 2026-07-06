@@ -10,6 +10,11 @@ const DEFAULT_URL = "https://uutistenlukija.fi/";
 const DEFAULT_OUTPUT_DIR = path.join(PROJECT_DIR, "artifacts", "visual-qa-monitor");
 const DEFAULT_LOG = path.join(PROJECT_DIR, "pipeline", "logs", "visual-qa-monitor.log");
 const FALLBACK_CHROMIUM_PATH = "/home/pertt/.cache/ms-playwright/chromium-1217/chrome-linux64/chrome";
+const SYSTEM_CHROMIUM_PATHS = [
+  "/usr/bin/google-chrome",
+  "/usr/bin/chromium",
+  "/usr/bin/chromium-browser",
+];
 const VIEWPORTS = [
   { name: "desktop-1440", width: 1440, height: 1000, colorScheme: "light" },
   { name: "mobile-390", width: 390, height: 844, colorScheme: "light" },
@@ -61,6 +66,7 @@ function chromiumLaunchOptions() {
   const candidates = [
     process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH,
     FALLBACK_CHROMIUM_PATH,
+    ...SYSTEM_CHROMIUM_PATHS,
   ].filter(Boolean);
   try {
     candidates.unshift(chromium.executablePath());
@@ -190,6 +196,36 @@ async function inspectPage(page) {
       .slice(0, 10);
     for (const image of brokenImages) {
       issues.push(`broken visible image ${image}`);
+    }
+
+    function imageSource(img) {
+      return img ? String(img.currentSrc || img.src || img.getAttribute("src") || "") : "";
+    }
+
+    function isCategoryFallbackImage(img) {
+      const src = imageSource(img);
+      return src.includes("/images/categories/");
+    }
+
+    const leadImage = document.querySelector(".portal-lead__image img");
+    if (leadImage && visible(leadImage) && isCategoryFallbackImage(leadImage)) {
+      issues.push(`prominent homepage fallback image lead ${imageSource(leadImage)}`);
+    }
+
+    const teaserFallbacks = Array.from(document.querySelectorAll(".portal-teaser__thumb img"))
+      .filter(visible)
+      .filter(isCategoryFallbackImage)
+      .map((img) => imageSource(img))
+      .slice(0, 4);
+    if (teaserFallbacks.length > 1) {
+      issues.push(`prominent homepage fallback images in ${teaserFallbacks.length} top teasers`);
+    }
+
+    const failedFallbacks = Array.from(document.querySelectorAll(".portal-lead__image .img-failed, .portal-teaser__thumb .img-failed"))
+      .filter(visible)
+      .length;
+    if (failedFallbacks > 0) {
+      issues.push(`homepage image fallback error state on ${failedFallbacks} prominent slots`);
     }
 
     const overflowingElements = Array.from(document.querySelectorAll("a,h1,h2,h3,p,li,button,input,textarea,select"))

@@ -48,7 +48,13 @@
   {
     "name": "visual_qa_monitor",
     "expected_interval_hours": 6.0,
-    "marker_file_path": "pipeline/logs/visual-qa-monitor.log"
+    "marker_file_path": "pipeline/logs/visual-qa-monitor.log",
+    "latest_line_required_pattern": "run=\\d{8}T\\d{6}Z ok=true",
+    "latest_line_forbidden_patterns": [
+      "browserType\\.launch",
+      "Executable doesn't exist",
+      "Looks like Playwright"
+    ]
   },
   {
     "name": "disk_monitor",
