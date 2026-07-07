@@ -47,7 +47,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/seksuaalivakivalta-kohdistuu-yha-nuorempiin-lapsiin-verkon-kautta/9363238"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
