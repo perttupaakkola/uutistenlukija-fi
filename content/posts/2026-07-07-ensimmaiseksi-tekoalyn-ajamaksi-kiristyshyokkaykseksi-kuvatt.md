@@ -47,7 +47,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/07/06/the-first-ai-run-ransomware-attack-still-needed-a-human/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 

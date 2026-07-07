@@ -1,0 +1,141 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-07T02:11:23.940355+00:00",
+  "digest": "eac5190b84",
+  "packet": {
+    "packet_id": "20260707T021123Z_eac5190b84",
+    "created_at": "2026-07-07T02:11:23Z",
+    "headline_seed": "Fatal Typhoon Maysak floods burst dam wall in China",
+    "description_seed": "At least two have been killed by flooding due to Maysak, while another 480,000 have been evacuated across the southern Guangxi province.",
+    "link": "https://www.bbc.co.uk/news/videos/c1eyyevn5j7o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/videos/c1eyyevn5j7o?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.74,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Fatal Typhoon Maysak floods burst dam wall in China"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A reservoir wall broke in Nanning in China, sending out a torrent of water after rivers swelled from the passage of a typhoon. At least two people have been killed by flooding due to Typhoon Maysak, while another 480,000 have been evacuated across the southern Guangxi province, officials say. The province's emergency flood control response has been raised to its highest level. Authorities have warned that torrential rains will continue across Guangxi and several neighbouring provinces in the coming days. Maysak is the first typhoon to make landfall in China this year.",
+        "word_count": 92,
+        "keyword_overlap": 16,
+        "strong_overlap": 10
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "At least two have been killed by flooding due to Maysak, while another 480,000 have been evacuated across the southern Guangxi province.",
+        "word_count": 22,
+        "keyword_overlap": 13,
+        "strong_overlap": 9
+      }
+    ],
+    "source_text": "A reservoir wall broke in Nanning in China, sending out a torrent of water after rivers swelled from the passage of a typhoon. At least two people have been killed by flooding due to Typhoon Maysak, while another 480,000 have been evacuated across the southern Guangxi province, officials say. The province's emergency flood control response has been raised to its highest level. Authorities have warned that torrential rains will continue across Guangxi and several neighbouring provinces in the coming days. Maysak is the first typhoon to make landfall in China this year.\n\nAt least two have been killed by flooding due to Maysak, while another 480,000 have been evacuated across the southern Guangxi province.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 114,
+      "selected_blocks": 2,
+      "selected_source_words": 114,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Fatal Typhoon Maysak floods burst dam wall in China",
+      "description": "At least two have been killed by flooding due to Maysak, while another 480,000 have been evacuated across the southern Guangxi province.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Fatal Typhoon Maysak floods burst dam wall in China",
+    "description": "At least two have been killed by flooding due to Maysak, while another 480,000 have been evacuated across the southern Guangxi province.",
+    "link": "https://www.bbc.co.uk/news/videos/c1eyyevn5j7o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-07T00:58:22+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "34fa168928e273c81b1ed548922a2739",
+    "_url_hash": "319a6ff409e0e0735aca39cb8884cbe20f738100c90ffaa795e695f814268943",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nA reservoir wall broke in Nanning in China, sending out a torrent of water after rivers swelled from the passage of a typhoon. At least two people have been killed by flooding due to Typhoon Maysak, while another 480,000 have been evacuated across the southern Guangxi province, officials say. The province's emergency flood control response has been raised to its highest level.\n\nAuthorities have warned that torrential rains will continue across Guangxi and several neighbouring provinces in the coming days. Maysak is the first typhoon to make landfall in China this year.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-07T02:14:13.222138+00:00",
+  "failure": "content too short: 212 words; lead paragraph too short: 29 words",
+  "payload": {
+    "packet_id": "20260707T021123Z_eac5190b84",
+    "title": "Taifuuni Maysakin tulvat rikkoivat tekoaltaan seinämän Kiinassa",
+    "summary": "Ainakin kaksi ihmistä on kuollut ja noin 480 000 on evakuoitu Guangxin maakunnassa Etelä-Kiinassa taifuuni Maysakin tuomien tulvien vuoksi.",
+    "content": "Ainakin kaksi ihmistä on kuollut taifuuni Maysakin aiheuttamissa tulvissa Etelä-Kiinassa, viranomaiset kertovat. Guangxin maakunnassa noin 480 000 ihmistä on evakuoitu, ja Nanningissa tekoaltaan seinämä murtui jokien paisuttua myrskyn jälkeen.\n\n## Tekoaltaan seinämä murtui Nanningissa\n\nNanningissa Kiinassa tekoaltaan seinämä antoi periksi sen jälkeen, kun taifuuni Maysakin kulku oli paisuttanut jokia. Murtuma lähetti alueelle voimakkaan vesimassan, mikä kuvastaa tulvatilanteen vakavuutta maakunnassa.\n\nViranomaisten mukaan tulvat ovat vaatineet ainakin kaksi kuolonuhria. Guangxissa evakuoitujen määrä on noussut noin 480 000 ihmiseen. Lähdetiedoissa ei kerrota tarkemmin, miltä alueilta ihmiset on siirretty tai kuinka laajoja vahinkoja murtuma on aiheuttanut.\n\nMaysak on tämän vuoden ensimmäinen taifuuni, joka on rantautunut Kiinaan. Sen vaikutukset ovat näkyneet erityisesti rankkasateina ja jokien vedenpinnan nousuna. Tekoaltaan seinämän murtuminen tapahtui tilanteessa, jossa vesistöt olivat jo paisuneet myrskyn jäljiltä.\n\n## Tulvavalmius nostettiin korkeimmalle tasolle\n\nGuangxin maakunnan hätätilanteiden tulvatorjuntavalmius on nostettu korkeimmalle tasolle. Päätös kertoo, että viranomaiset pitävät tulvariskiä poikkeuksellisen vakavana ja seuraavat tilannetta laajalla alueella.\n\nViranomaiset ovat varoittaneet, että rankkasateet jatkuvat Guangxissa ja useissa naapurimaakunnissa tulevina päivinä. Jatkuvat sateet voivat pitää jokien vedenpinnat korkealla ja lisätä tulvavaaraa myös sen jälkeen, kun taifuuni on jo liikkunut alueen yli.\n\nToistaiseksi vahvistettuja tietoja on ainakin kahdesta kuolleesta, noin 480 000 evakuoidusta ja Nanningissa tapahtuneesta tekoaltaan seinämän murtumisesta. Lähdetietojen perusteella tilanne liittyy taifuuni Maysakin tuomiin rankkasateisiin ja niiden aiheuttamaan jokien paisumiseen.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Kiina",
+      "Guangxi",
+      "Nanning",
+      "taifuuni",
+      "tulvat",
+      "Maysak"
+    ],
+    "summary_bullets": [
+      "Ainakin kaksi ihmistä on kuollut taifuuni Maysakin aiheuttamissa tulvissa Kiinassa.",
+      "Noin 480 000 ihmistä on evakuoitu Guangxin maakunnassa.",
+      "Nanningissa tekoaltaan seinämä murtui jokien paisuttua myrskyn seurauksena."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.74,
+    "journalist_note": "Artikkeli perustuu yhteen lyhyeen lähdepakettiin. Vältetty lisäämästä vahvistamattomia tietoja vahingoista, pelastustoimien yksityiskohdista tai tarkemmista sijainneista."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260707T021123Z_eac5190b84\",\n  \"title\": \"Taifuuni Maysakin tulvat rikkoivat tekoaltaan seinämän Kiinassa\",\n  \"summary\": \"Ainakin kaksi ihmistä on kuollut ja noin 480 000 on evakuoitu Guangxin maakunnassa Etelä-Kiinassa taifuuni Maysakin tuomien tulvien vuoksi.\",\n  \"content\": \"Ainakin kaksi ihmistä on kuollut taifuuni Maysakin aiheuttamissa tulvissa Etelä-Kiinassa, viranomaiset kertovat. Guangxin maakunnassa noin 480 000 ihmistä on evakuoitu, ja Nanningissa tekoaltaan seinämä murtui jokien paisuttua myrskyn jälkeen.\\n\\n## Tekoaltaan seinämä murtui Nanningissa\\n\\nNanningissa Kiinassa tekoaltaan seinämä antoi periksi sen jälkeen, kun taifuuni Maysakin kulku oli paisuttanut jokia. Murtuma lähetti alueelle voimakkaan vesimassan, mikä kuvastaa tulvatilanteen vakavuutta maakunnassa.\\n\\nViranomaisten mukaan tulvat ovat vaatineet ainakin kaksi kuolonuhria. Guangxissa evakuoitujen määrä on noussut noin 480 000 ihmiseen. Lähdetiedoissa ei kerrota tarkemmin, miltä alueilta ihmiset on siirretty tai kuinka laajoja vahinkoja murtuma on aiheuttanut.\\n\\nMaysak on tämän vuoden ensimmäinen taifuuni, joka on rantautunut Kiinaan. Sen vaikutukset ovat näkyneet erityisesti rankkasateina ja jokien vedenpinnan nousuna. Tekoaltaan seinämän murtuminen tapahtui tilanteessa, jossa vesistöt olivat jo paisuneet myrskyn jäljiltä.\\n\\n## Tulvavalmius nostettiin korkeimmalle tasolle\\n\\nGuangxin maakunnan hätätilanteiden tulvatorjuntavalmius on nostettu korkeimmalle tasolle. Päätös kertoo, että viranomaiset pitävät tulvariskiä poikkeuksellisen vakavana ja seuraavat tilannetta laajalla alueella.\\n\\nViranomaiset ovat varoittaneet, että rankkasateet jatkuvat Guangxissa ja useissa naapurimaakunnissa tulevina päivinä. Jatkuvat sateet voivat pitää jokien vedenpinnat korkealla ja lisätä tulvavaaraa myös sen jälkeen, kun taifuuni on jo liikkunut alueen yli.\\n\\nToistaiseksi vahvistettuja tietoja on ainakin kahdesta kuolleesta, noin 480 000 evakuoidusta ja Nanningissa tapahtuneesta tekoaltaan seinämän murtumisesta. Lähdetietojen perusteella tilanne liittyy taifuuni Maysakin tuomiin rankkasateisiin ja niiden aiheuttamaan jokien paisumiseen.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Kiina\",\n    \"Guangxi\",\n    \"Nanning\",\n    \"taifuuni\",\n    \"tulvat\",\n    \"Maysak\"\n  ],\n  \"summary_bullets\": [\n    \"Ainakin kaksi ihmistä on kuollut taifuuni Maysakin aiheuttamissa tulvissa Kiinassa.\",\n    \"Noin 480 000 ihmistä on evakuoitu Guangxin maakunnassa.\",\n    \"Nanningissa tekoaltaan seinämä murtui jokien paisuttua myrskyn seurauksena.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.74,\n  \"journalist_note\": \"Artikkeli perustuu yhteen lyhyeen lähdepakettiin. Vältetty lisäämästä vahvistamattomia tietoja vahingoista, pelastustoimien yksityiskohdista tai tarkemmista sijainneista.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260707T021123Z_eac5190b84",
+    "category": "Kotimaa",
+    "selected_source_words": 114,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.74,
+    "final_word_count": 212,
+    "issues": [
+      "content too short: 212 words",
+      "lead paragraph too short: 29 words"
+    ],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_short_after_repair",
+    "fail_closed": true,
+    "title": "Taifuuni Maysakin tulvat rikkoivat tekoaltaan seinämän Kiinassa"
+  }
+}
