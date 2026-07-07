@@ -55,7 +55,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/07/07/savis-app-aims-to-protect-consumers-from-realistic-ai-scams-like-kidnappers-demanding-ransom/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
