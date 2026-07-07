@@ -11,11 +11,11 @@ author_image: ""
 description: "Oliver Tree kuoli Rio de Janeiron helikopteriturmassa 32-vuotiaana; perhe perustaa hänen nimissään säätiön testamenttiin kirjatun toiveen mukaan."
 summary: "Yhdysvaltalaismuusikko Oliver Tree on palautettu kotiseudulleen Kaliforniaan Rio de Janeiron helikopteriturman jälkeen. Perheen mukaan hänen viimeinen toiveensa oli perustaa säätiö, joka tukee iloa, taidetta ja nuoria tekijöitä."
 summary_bullets:
-  - "Oliver Treen ruumis on palautettu Kaliforniaan helikopteriturman jälkeen."
+  - "Oliver Tree on palautettu kotiseudulleen Kaliforniaan helikopteriturman jälkeen."
   - "Tree ja viisi muuta ihmistä kuolivat Rio de Janeiron yllä tapahtuneessa turmassa."
   - "Perhe kertoo perustavansa hänen nimeään kantavan hyväntekeväisyyssäätiön hänen viimeisen toiveensa mukaisesti."
 key_points:
-  - "Oliver Treen ruumis on palautettu Kaliforniaan helikopteriturman jälkeen."
+  - "Oliver Tree on palautettu kotiseudulleen Kaliforniaan helikopteriturman jälkeen."
   - "Tree ja viisi muuta ihmistä kuolivat Rio de Janeiron yllä tapahtuneessa turmassa."
   - "Perhe kertoo perustavansa hänen nimeään kantavan hyväntekeväisyyssäätiön hänen viimeisen toiveensa mukaisesti."
 journalist_note: |
