@@ -55,7 +55,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Artikkeli/Vapaiden-agenttien-NHL-sopimushulinan-voittajat-h%C3%A4vi%C3%A4j%C3%A4t-sek%C3%A4-parhaat-ja-karmeimmat-sopimukset/186304"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 

@@ -1,0 +1,191 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-07T21:31:22.731689+00:00",
+  "digest": "99c1fbf410",
+  "packet": {
+    "packet_id": "20260707T213122Z_99c1fbf410",
+    "created_at": "2026-07-07T21:31:22Z",
+    "headline_seed": "Watch: Marine Le Pen confirms run for French presidency",
+    "description_seed": "The National Rally leader also said she will attempt to appeal an embezzlement conviction.",
+    "link": "https://www.bbc.co.uk/news/videos/clyexverp0lo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "Newsweek",
+      "NBC News"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/videos/clyexverp0lo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Watch: Marine Le Pen confirms run for French presidency"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Leader of the French National Rally party Marine Le Pen has said she will run for the presidency in 2027. Le Pen also said she will attempt to appeal and embezzlement conviction that requires her to wear an electronic tag for a year. \"I can't campaign with a tag,\" the National Rally leader told French TV, \"I want to pursue all legal avenues to defend my innocence in this case.\" Hours earlier, a Paris appeal court found her guilty of misusing €2.8m (£2.4m) in EU funds in a fake jobs scheme, but ruled she could stand for the presidency while wearing an tag. ---",
+        "word_count": 104,
+        "keyword_overlap": 13,
+        "strong_overlap": 9
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "The National Rally leader also said she will attempt to appeal an embezzlement conviction.",
+        "word_count": 14,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      },
+      {
+        "source": "Newsweek",
+        "source_type": "research",
+        "text": "French opposition leader Marine Le Pen said she will run in the 2027 presidential election in an interview on French broadcaster TF1 following a ruling from a Paris appeals court Tuesday. Le Pen said she plans to appeal to the court regarding her electronic bracelet and believes they will approve, meaning she will be able to run. The court upheld Le Pen's March 25, 2025, conviction over a fraudulent scheme aimed at misappropriating European Union funds. \"I had indicated that I would not campaign under an electronic bracelet,\" Le Pen said in the interview translated from French to English. \"But as I have the possibility of appealing to the Court of Cassation [...] and the government suspends the effects of the ruling, I will campaign without an electronic bracelet,\" she said.",
+        "word_count": 131,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "NBC News",
+        "source_type": "research",
+        "text": "Far-right leader Marine Le Pen said Tuesday that she will run in France’s presidential election next year, hours after a Paris appeals court upheld her conviction for misusing European Union funds. The court shortened her ban on running for elected office. However it ruled she must wear an electronic ankle tag for a year — which Le Pen had said would rule her out of a presidential run because it would make campaigning difficult and undermine her credibility. But in a prime-time interview on France’s TF1 ⁠TV, she announced that she was a “candidate in the presidential election” and the French people would have the last word.",
+        "word_count": 107,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Leader of the French National Rally party Marine Le Pen has said she will run for the presidency in 2027. Le Pen also said she will attempt to appeal and embezzlement conviction that requires her to wear an electronic tag for a year. \"I can't campaign with a tag,\" the National Rally leader told French TV, \"I want to pursue all legal avenues to defend my innocence in this case.\" Hours earlier, a Paris appeal court found her guilty of misusing €2.8m (£2.4m) in EU funds in a fake jobs scheme, but ruled she could stand for the presidency while wearing an tag. ---\n\nThe National Rally leader also said she will attempt to appeal an embezzlement conviction.\n\nFrench opposition leader Marine Le Pen said she will run in the 2027 presidential election in an interview on French broadcaster TF1 following a ruling from a Paris appeals court Tuesday. Le Pen said she plans to appeal to the court regarding her electronic bracelet and believes they will approve, meaning she will be able to run. The court upheld Le Pen's March 25, 2025, conviction over a fraudulent scheme aimed at misappropriating European Union funds. \"I had indicated that I would not campaign under an electronic bracelet,\" Le Pen said in the interview translated from French to English. \"But as I have the possibility of appealing to the Court of Cassation [...] and the government suspends the effects of the ruling, I will campaign without an electronic bracelet,\" she said.\n\nFar-right leader Marine Le Pen said Tuesday that she will run in France’s presidential election next year, hours after a Paris appeals court upheld her conviction for misusing European Union funds. The court shortened her ban on running for elected office. However it ruled she must wear an electronic ankle tag for a year — which Le Pen had said would rule her out of a presidential run because it would make campaigning difficult and undermine her credibility. But in a prime-time interview on France’s TF1 ⁠TV, she announced that she was a “candidate in the presidential election” and the French people would have the last word.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 980,
+      "selected_blocks": 4,
+      "selected_source_words": 356,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "NBC News",
+        "NBC News",
+        "NBC News",
+        "NBC News",
+        "Newsweek",
+        "Newsweek",
+        "Newsweek",
+        "Newsweek",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "Newsweek",
+        "NBC News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Watch: Marine Le Pen confirms run for French presidency",
+      "description": "The National Rally leader also said she will attempt to appeal an embezzlement conviction.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Watch: Marine Le Pen confirms run for French presidency",
+    "description": "The National Rally leader also said she will attempt to appeal an embezzlement conviction.",
+    "link": "https://www.bbc.co.uk/news/videos/clyexverp0lo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-07T20:21:11+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "61529af15b4779c1ac8511484b178da1",
+    "_url_hash": "c981e80806795ecc24e7cc75c16615611b717e516eac768cafde77d24fe738b4",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nLeader of the French National Rally party Marine Le Pen has said she will run for the presidency in 2027.\n\nLe Pen also said she will attempt to appeal and embezzlement conviction that requires her to wear an electronic tag for a year.\n\n\"I can't campaign with a tag,\" the National Rally leader told French TV, \"I want to pursue all legal avenues to defend my innocence in this case.\"\n\nHours earlier, a Paris appeal court found her guilty of misusing €2.8m (£2.4m) in EU funds in a fake jobs scheme, but ruled she could stand for the presidency while wearing an tag.\n\n---\n\n[Lähde: NBC News]\nFar-right leader Marine Le Pen said Tuesday that she will run in France’s presidential election next year, hours after a Paris appeals court upheld her conviction for misusing European Union funds.\n\nThe court shortened her ban on running for elected office. However it ruled she must wear an electronic ankle tag for a year — which Le Pen had said would rule her out of a presidential run because it would make campaigning difficult and undermine her credibility.\n\nBut in a prime-time interview on France’s TF1 ⁠TV, she announced that she was a “candidate in the presidential election” and the French people would have the last word.\n\nLe Pen, 57, added that she would appeal the ruling to France’s highest court, the Cour ‌de Cassation. Until that court delivered its own ruling, she said she would not need to wear an electronic tag during the campaign.\n\nThis came despite the appeal court ruling that she would wear one for a year. The Court of Cassation has previously said that, if asked to review the case, it would seek to issue a ruling before the 2027 presidential election.\n\nLe Pen, who has run for president in France thrice, was banned from holding public office for five years in March last year after a court found her guilty of embezzling 1.4 million euros ($1.6 million) in European Parliament money to hire two high-ranking members of her party, then known as the National Front, as parliamentary assistants.\n\nE.U. lawmakers are provided funds to cover expenses and the salaries of parliamentary assistants, but are not allowed to use them for party activities.\n\nInvestigators said they later discovered these hires made between 2004 and 2016 were not isolated cases but part of a wider system of “fake jobs.”\n\nLe Pen, who came second to President Emmanuel Macron in 2017 and again in 2022, was handed a four-year jail term, two of which were suspended and hit with a fine of 100,000 euros ($114,355). She was allowed to serve the other two in home detention with an electronic tag.\n\nHer party was also fined 2 million euros ($2.29 million), half of which was suspended.\n\nAt the time, Le Pen claimed that her party was victim to a “witch hunt,” and she denounced the outcome as a “democratic scandal.”\n\nHer party, which changed it’s name to National Rally in 2018, was ahead in the polls at the time and she was widely seen as the likely front-runner to succeed Macron in the 2027 election until last year’s ruling.\n\nSome supporters sent death threats to Benedicte de Perthuis, the ju\n\n---\n\n[Lähde: Newsweek]\nFrench opposition leader Marine Le Pen said she will run in the 2027 presidential election in an interview on French broadcaster TF1 following a ruling from a Paris appeals court Tuesday.\n\nLe Pen said she plans to appeal to the court regarding her electronic bracelet and believes they will approve, meaning she will be able to run. The court upheld Le Pen's March 25, 2025, conviction over a fraudulent scheme aimed at misappropriating European Union funds.\n\n\"I had indicated that I would not campaign under an electronic bracelet,\" Le Pen said in the interview translated from French to English. \"But as I have the possibility of appealing to the Court of Cassation [...] and the government suspends the effects of the ruling, I will campaign without an electronic bracelet,\" she said.\n\n\"So tonight, I am a candidate for the presidential election,\" Le Pen told the outlet, while maintaining her innocence. \"I want to go to the end of the appeal channels to be able to defend my innocence in this case.\"\n\n\"I consider that we are innocent of the facts of which we are accused and that these facts cannot be qualified as embezzlement of public funds,\" Le Pen said. \"This is a reproach that is made against us by indicating that our assistants have been involved in national politics when they should have been doing European politics. The court recalled that there had been no financial benefit in this case.\"\n\nThe court ruled that her 45-month ban on holding public office would be reduced to 15 months, dated from March 2025, clearing her for an April 2027 race.\n\nThe ruling, however, includes the order for Le Pen to wear an electronic ankle tag for one year, making a presidential run difficult for the longtime leader of France’s far-right Rassemblement National (National Rally) party. Before the court’s ruling, Le Pen had said she would not run for president if ordered to wear an electronic bracelet.\n\n“If I can be a candidate, I will be a candidate, provided that I am able to campaign,” Le Pen said in a previous interview. “Because if I’m allowed to be a candidate but am effectively prevented from campaigning freely, then you understand that wouldn’t be possible.”\n\nAsked about the limitations imposed by wearing an ankle bracelet, she said: “I can’t be dependent on a judge to authorize me to go hold a campaign rally [...] or to visit a market.”\n\nThe sentence puts the spotlight back on Jordan Bardella, Le Pen’s 30-year-old political protege, who was favored to take her place in the ",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-07T21:35:26.155763+00:00",
+  "failure": "content too short: 236 words",
+  "payload": {
+    "packet_id": "20260707T213122Z_99c1fbf410",
+    "title": "Marine Le Pen aikoo pyrkiä Ranskan presidentiksi tuomiosta huolimatta",
+    "summary": "Ranskan Kansallisen liittouman johtaja Marine Le Pen sanoo lähtevänsä vuoden 2027 presidentinvaaleihin. Pariisin vetoomustuomioistuin piti voimassa hänen tuomionsa EU-varojen väärinkäytöstä, mutta ratkaisu ei estä ehdokkuutta.",
+    "content": "Marine Le Pen sanoo pyrkivänsä Ranskan presidentiksi vuonna 2027, vaikka Pariisin vetoomustuomioistuin on pitänyt voimassa hänen tuomionsa Euroopan unionin varojen väärinkäyttöön liittyvässä asiassa. Kansallisen liittouman johtaja kertoi aikovansa valittaa päätöksestä ja vastustaa myös vuoden mittaista sähköistä valvontaa, jonka hän on sanonut vaikeuttavan kampanjointia.\n\n## Ehdokkuus vahvistui televisiohaastattelussa\n\nLe Pen ilmoitti ehdokkuudestaan ranskalaisen TF1-kanavan haastattelussa. Hänen mukaansa hän on ehdolla presidentinvaaleissa, ja lopullisen arvion tekevät ranskalaiset äänestäjät. Ilmoitus tuli vain tunteja sen jälkeen, kun Pariisin vetoomustuomioistuin oli antanut ratkaisunsa häntä koskevassa asiassa.\n\nOikeus piti voimassa Le Penin maaliskuussa 2025 saaman tuomion. Tapauksessa oli kyse järjestelystä, jossa Euroopan unionin varoja käytettiin väärin tekaistuihin työpaikkoihin liittyneessä kokonaisuudessa. Lähdetietojen mukaan väärinkäytettyjen varojen määrä oli 2,8 miljoonaa euroa.\n\n## Valvontalaite nousi kampanjakysymykseksi\n\nTuomioistuin lyhensi Le Penin vaalikelpoisuutta koskevaa kieltoa, mutta määräsi hänet käyttämään sähköistä valvontalaitetta vuoden ajan. Samalla oikeus katsoi, että hän voisi silti asettua presidenttiehdokkaaksi valvontalaitteen käytöstä huolimatta.\n\nLe Pen on aiemmin sanonut, ettei hän voisi kampanjoida sähköisen valvontalaitteen kanssa. Hän perusteli tätä sillä, että valvontalaite vaikeuttaisi kampanjointia ja heikentäisi hänen uskottavuuttaan. Ranskalaiselle televisiolle hän sanoi haluavansa käyttää kaikki oikeudelliset keinot puolustaakseen syyttömyyttään asiassa.\n\n## Valitusprosessi jatkuu\n\nLe Pen viittasi haastattelussa mahdollisuuteen viedä asia Ranskan kassaatiotuomioistuimeen. Hänen mukaansa valitus voisi keskeyttää ratkaisun vaikutuksia niin, että hän pystyisi kampanjoimaan ilman sähköistä valvontalaitetta.\n\nLe Pen johtaa Kansallista liittoumaa, joka on Ranskan laitaoikeistolainen oppositiopuolue. Hänen ilmoituksensa pitää hänet mukana seuraavan presidentinvaalin asetelmissa, vaikka oikeusprosessi jatkuu ja tuomion käytännön vaikutuksista kampanjaan on edelleen kyse.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Ranska",
+      "Marine Le Pen",
+      "presidentinvaalit",
+      "Kansallinen liittouma",
+      "EU-varat"
+    ],
+    "summary_bullets": [
+      "Marine Le Pen sanoo pyrkivänsä Ranskan presidentiksi vuonna 2027.",
+      "Pariisin vetoomustuomioistuin piti voimassa hänen tuomionsa EU-varojen väärinkäytöstä.",
+      "Le Pen aikoo valittaa ja vastustaa vuoden mittaista sähköistä valvontaa."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.86,
+    "journalist_note": "Artikkeli perustuu usean lähteen yhteneviin tietoihin Le Penin ehdokkuusilmoituksesta, tuomion voimassa pysymisestä ja sähköistä valvontaa koskevasta määräyksestä."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260707T213122Z_99c1fbf410\",\n  \"title\": \"Marine Le Pen aikoo pyrkiä Ranskan presidentiksi tuomiosta huolimatta\",\n  \"summary\": \"Ranskan Kansallisen liittouman johtaja Marine Le Pen sanoo lähtevänsä vuoden 2027 presidentinvaaleihin. Pariisin vetoomustuomioistuin piti voimassa hänen tuomionsa EU-varojen väärinkäytöstä, mutta ratkaisu ei estä ehdokkuutta.\",\n  \"content\": \"Marine Le Pen sanoo pyrkivänsä Ranskan presidentiksi vuonna 2027, vaikka Pariisin vetoomustuomioistuin on pitänyt voimassa hänen tuomionsa Euroopan unionin varojen väärinkäyttöön liittyvässä asiassa. Kansallisen liittouman johtaja kertoi aikovansa valittaa päätöksestä ja vastustaa myös vuoden mittaista sähköistä valvontaa, jonka hän on sanonut vaikeuttavan kampanjointia.\\n\\n## Ehdokkuus vahvistui televisiohaastattelussa\\n\\nLe Pen ilmoitti ehdokkuudestaan ranskalaisen TF1-kanavan haastattelussa. Hänen mukaansa hän on ehdolla presidentinvaaleissa, ja lopullisen arvion tekevät ranskalaiset äänestäjät. Ilmoitus tuli vain tunteja sen jälkeen, kun Pariisin vetoomustuomioistuin oli antanut ratkaisunsa häntä koskevassa asiassa.\\n\\nOikeus piti voimassa Le Penin maaliskuussa 2025 saaman tuomion. Tapauksessa oli kyse järjestelystä, jossa Euroopan unionin varoja käytettiin väärin tekaistuihin työpaikkoihin liittyneessä kokonaisuudessa. Lähdetietojen mukaan väärinkäytettyjen varojen määrä oli 2,8 miljoonaa euroa.\\n\\n## Valvontalaite nousi kampanjakysymykseksi\\n\\nTuomioistuin lyhensi Le Penin vaalikelpoisuutta koskevaa kieltoa, mutta määräsi hänet käyttämään sähköistä valvontalaitetta vuoden ajan. Samalla oikeus katsoi, että hän voisi silti asettua presidenttiehdokkaaksi valvontalaitteen käytöstä huolimatta.\\n\\nLe Pen on aiemmin sanonut, ettei hän voisi kampanjoida sähköisen valvontalaitteen kanssa. Hän perusteli tätä sillä, että valvontalaite vaikeuttaisi kampanjointia ja heikentäisi hänen uskottavuuttaan. Ranskalaiselle televisiolle hän sanoi haluavansa käyttää kaikki oikeudelliset keinot puolustaakseen syyttömyyttään asiassa.\\n\\n## Valitusprosessi jatkuu\\n\\nLe Pen viittasi haastattelussa mahdollisuuteen viedä asia Ranskan kassaatiotuomioistuimeen. Hänen mukaansa valitus voisi keskeyttää ratkaisun vaikutuksia niin, että hän pystyisi kampanjoimaan ilman sähköistä valvontalaitetta.\\n\\nLe Pen johtaa Kansallista liittoumaa, joka on Ranskan laitaoikeistolainen oppositiopuolue. Hänen ilmoituksensa pitää hänet mukana seuraavan presidentinvaalin asetelmissa, vaikka oikeusprosessi jatkuu ja tuomion käytännön vaikutuksista kampanjaan on edelleen kyse.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Ranska\",\n    \"Marine Le Pen\",\n    \"presidentinvaalit\",\n    \"Kansallinen liittouma\",\n    \"EU-varat\"\n  ],\n  \"summary_bullets\": [\n    \"Marine Le Pen sanoo pyrkivänsä Ranskan presidentiksi vuonna 2027.\",\n    \"Pariisin vetoomustuomioistuin piti voimassa hänen tuomionsa EU-varojen väärinkäytöstä.\",\n    \"Le Pen aikoo valittaa ja vastustaa vuoden mittaista sähköistä valvontaa.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.86,\n  \"journalist_note\": \"Artikkeli perustuu usean lähteen yhteneviin tietoihin Le Penin ehdokkuusilmoituksesta, tuomion voimassa pysymisestä ja sähköistä valvontaa koskevasta määräyksestä.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260707T213122Z_99c1fbf410",
+    "category": "Kotimaa",
+    "selected_source_words": 356,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 236,
+    "issues": [
+      "content too short: 236 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Marine Le Pen aikoo pyrkiä Ranskan presidentiksi tuomiosta huolimatta",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-07-07T21:35:26.155478+00:00",
+    "repair_trigger": "pre_repair_word_count=230; selected_source_words=356; selected_source_blocks=4",
+    "pre_repair_word_count": 230,
+    "pre_repair_lead_word_count": 37,
+    "post_repair_word_count": 236,
+    "post_repair_lead_word_count": 43,
+    "selected_source_words_at_repair": 356,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 356,
+    "source_blocks": 4,
+    "repair_added_word_count": 6,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 236 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:acc143126c",
+      "2:BBC World:890d63d430",
+      "3:Newsweek:121c9d5c97",
+      "4:NBC News:74f5f052d5"
+    ],
+    "final_issues": [
+      "content too short: 236 words"
+    ],
+    "recovered": false
+  }
+}
