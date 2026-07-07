@@ -701,6 +701,17 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   }
   .portal-livebar__all { display: none; }
   .portal-front { gap: 18px; }
+  .portal-livebar,
+  .portal-front-grid,
+  .portal-center-list,
+  .portal-right-rail,
+  .portal-topic-strip,
+  .portal-editorials,
+  .portal-river {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
   .portal-front-grid { display: block; }
   .portal-lead {
     min-height: 0;
@@ -856,7 +867,7 @@ main.container { padding-top: 0; padding-bottom: 48px; }
     border-top: 1px solid var(--portal-line);
   }
   .portal-topic-strip__grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 1px;
     background: var(--portal-line);
   }
