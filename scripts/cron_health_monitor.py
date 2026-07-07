@@ -78,18 +78,29 @@ def post_to_discord(content):
         print(f"[cron-health] Discord post failed: {e}", file=sys.stderr)
         return False
 
-def latest_nonempty_line(path):
+def nonempty_lines(path):
     try:
         lines = path.read_text(errors="replace").splitlines()
     except OSError:
-        return ""
-    for line in reversed(lines):
-        if line.strip():
-            return line
-    return ""
+        return []
+    return [line for line in lines if line.strip()]
+
+def latest_nonempty_line(path):
+    lines = nonempty_lines(path)
+    return lines[-1] if lines else ""
 
 def pattern_matches(pattern, text):
     return re.search(pattern, text) is not None
+
+def latest_marker_context(path, required_pattern):
+    """Return the latest required marker line plus later lines for crash checks."""
+    lines = nonempty_lines(path)
+    if not required_pattern:
+        return (lines[-1] if lines else "", [])
+    for index in range(len(lines) - 1, -1, -1):
+        if pattern_matches(required_pattern, lines[index]):
+            return lines[index], lines[index + 1:]
+    return (lines[-1] if lines else "", [])
 
 def main():
     dry_run = "--dry-run" in sys.argv[1:]
@@ -138,14 +149,15 @@ def main():
                 "limit_h": round(interval_h * 1.5, 2)
             })
         else:
-            latest_line = latest_nonempty_line(marker_path)
             required_latest = job.get("latest_line_required_pattern")
+            latest_line, lines_after_marker = latest_marker_context(marker_path, required_latest)
             forbidden_latest = job.get("latest_line_forbidden_patterns", [])
             failure_reason = ""
             if required_latest and not pattern_matches(required_latest, latest_line):
                 failure_reason = f"latest marker line did not match /{required_latest}/"
             for pattern in forbidden_latest:
-                if pattern_matches(pattern, latest_line):
+                lines_to_check = [latest_line, *lines_after_marker]
+                if any(pattern_matches(pattern, line) for line in lines_to_check):
                     failure_reason = f"latest marker line matched forbidden /{pattern}/"
                     break
 
