@@ -54,7 +54,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Kolumni/Pelicansin-ongelmat-kertovat-ett%C3%A4-lisenssikomitea-ei-ole-tehnyt-ty%C3%B6t%C3%A4%C3%A4n-kunnolla/186323"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
