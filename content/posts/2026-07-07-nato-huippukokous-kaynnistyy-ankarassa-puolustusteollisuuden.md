@@ -47,7 +47,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/nato-huippukokous-alkaa-suurella-puolustusteollisuusfoorumilla/9363134"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
