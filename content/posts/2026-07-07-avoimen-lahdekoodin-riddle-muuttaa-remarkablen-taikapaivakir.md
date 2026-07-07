@@ -47,7 +47,6 @@ keywords:
 source_name: "Hacker News Best"
 source_url: "https://github.com/MaximeRivest/Riddle"
 source_domain: "hnrss.org"
-briefing: true
 draft: false
 ---
 
