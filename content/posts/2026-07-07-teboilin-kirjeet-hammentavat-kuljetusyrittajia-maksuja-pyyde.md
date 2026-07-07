@@ -47,7 +47,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/toimi-nain-jos-saat-kirjeen-teboililta-luulin-ensin-huijaukseksi/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
