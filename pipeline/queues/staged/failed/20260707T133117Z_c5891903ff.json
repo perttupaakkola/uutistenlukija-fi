@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-07T13:31:17.184631+00:00",
+  "digest": "c5891903ff",
+  "packet": {
+    "packet_id": "20260707T133117Z_c5891903ff",
+    "created_at": "2026-07-07T13:31:17Z",
+    "headline_seed": "Mediat: Trump on vihainen Nato-maille – varjo kokouksen yllä",
+    "description_seed": "Trump saapuu Turkkiin pitkin hampain.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012126261.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012126261.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Mediat: Trump on vihainen Nato-maille – varjo kokouksen yllä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 176,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Mediat: Trump on vihainen Nato-maille – varjo kokouksen yllä",
+      "description": "Trump saapuu Turkkiin pitkin hampain.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Mediat: Trump on vihainen Nato-maille – varjo kokouksen yllä",
+    "description": "Trump saapuu Turkkiin pitkin hampain.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012126261.html",
+    "published": "2026-07-07T12:58:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "cf10f2984121bcfdd524f15118c96c78",
+    "_url_hash": "971697702777a34e3e32a0ffa4777513475fc0335c750b6a5e13e50177527639",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: Yle]\nKeskusrikospoliisi on epäillyt paloittelumurhaaja Janne Hyvöstä lokakuussa 1999 kadonneen tamperelaisen Raisa Räisäsen murhasta. Asiasta kertoo Ilta-Sanomat.\n\nLehden mukaan Pirkanmaan käräjäoikeus antoi KRP:lle kesällä 2022 kahdeksi kuukaudeksi luvan käyttää Hyvösen tekojen selvittelyyn salaisia pakkokeinoja, eli televalvontaa ja -kuuntelua.\n\nKRP perusteli tarvetta salaisille pakkokeinoille silminnäkijähavainnoilla, joita Tampereella tehtiin 16-vuotiaan koripalloilijatytön katoamisen jälkimainingeissa.\n\nRaisa Räisänen nähtiin viimeisen kerran elossa lauantain ja sunnuntaina välisenä yönä 16.–17. lokakuuta 1999. Hän erosi ystävistään noin kello 23 aikaan kesken illanvieton.\n\nIlta-Sanomien jutussa mainitussa pakkokeino­vaatimuksessa poliisi kertoo Tampereella liikkuneesta katusoittajasta, joka tunsi Janne Hyvösen ja tämän ystävänä ja rikoskumppanina tunnetun Virpi Buttin. He olivat istuneet samoissa ravintoloissa.\n\nKatusoittaja kertoi poliisille törmänneensä kaksikkoon vuosituhannen vaihteessa Kuninkaankadulla vuonna 1999 tai 2000. Virpi Butt oli kertonut, että hänellä on repussa ihmisen pää. Katusoittaja kertoi nähneensä repussa ruskeita hiuksia ja pään sivuprofiilin.\n\nLehden mukaan poliisi myös kuulusteli Janne Hyvöstä puhelinkuuntelun jälkeen. Sen pidemmälle ei asia edennyt. Poliisi on sulkenut Hyvösen pois epäiltyjen joukosta.\n\nYle kertoi loppuvuonna 2022, kuinka Virpi Butt on ainoa epäilty, jonka syyttömyydestä ei olla varmoja. Butt kuoli ulkomailla vuonna 2021.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-07T13:33:16.919337+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "{\"packet_id\":\"20260707T133117Z_c5891903ff\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja faktoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
