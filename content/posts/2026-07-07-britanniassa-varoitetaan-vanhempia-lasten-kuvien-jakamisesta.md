@@ -47,7 +47,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/julkaisetko-lapsestasi-kuvia-somessa-vakava-varoitus-tekoaly-loi-uuden-uhan/9363448"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
