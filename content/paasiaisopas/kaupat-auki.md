@@ -1,14 +1,14 @@
 ---
-title: "Kaupat auki pääsiäisenä 2026: päiväkohtainen opas"
-seo_title: "Kaupat auki pääsiäisenä 2026: päiväkohtainen opas"
-description: "Kaupat auki pääsiäisenä 2026: päiväkohtainen opas 3.–6.4. ja muistutus tarkistaa oma myymälä ennen lähtöä."
+title: "Ovatko kaupat auki pääsiäisenä 2026? Päiväkohtainen opas"
+seo_title: "Ovatko kaupat auki pääsiäisenä 2026? Päiväkohtainen opas"
+description: "Katso, ovatko kaupat auki pääsiäisenä 2026 pitkäperjantaina, lankalauantaina ja pääsiäispäivinä. Tarkista aina oman myymälän aukiolo."
 date: 2026-03-26
-lastmod: 2026-07-01
+lastmod: 2026-07-07
 draft: false
 categories: ["kotimaa", "talous"]
 ---
 
-Pääsiäinen 2026 on **3.–6. huhtikuuta**. Tämä opas antaa päiväkohtaisen yleiskuvan siitä, milloin kaupat ovat todennäköisimmin auki pääsiäisenä. Tarkat aukioloajat vaihtelevat myymälän, paikkakunnan ja ketjun mukaan, joten varmista oma kauppa ketjun myymälähausta ennen lähtöä.
+Pääsiäinen 2026 on **3.–6. huhtikuuta**. Tässä on yleinen päiväkohtainen vastaus kauppojen aukioloon: lauantai on yleensä helpoin asiointipäivä, mutta pitkäperjantaina, pääsiäispäivänä ja toisena pääsiäispäivänä aukiolo vaihtelee. Tarkista aina oman Prisman, K-Citymarketin, Lidlin, Tokmannin, Alkon tai lähikaupan tieto ketjun myymälähausta ennen lähtöä.
 
 ## Pikavastaus
 
@@ -51,7 +51,7 @@ Aukioloajat vaihtelevat paikkakunnittain ja myymälöittäin. Ketjujen verkkosiv
 
 - **S-ryhmä:** [S-kanavan toimipaikkahaku](https://www.s-kanava.fi/toimipaikka)
 - **K-ryhmä:** [K-ryhmän kauppojen aukioloajat](https://www.k-ryhma.fi/kauppojen-aukioloajat)
-- **Lidl:** [Lidlin myymälähaku](https://www.lidl.fi/c/myymalat/s10008342)
+- **Lidl:** [Lidlin myymälähaku](https://www.lidl.fi/myymalat)
 - **Tokmanni:** [Tokmannin myymälähaku](https://www.tokmanni.fi/myymalat)
 - **Alko:** [Alkon myymälöiden aukioloajat 2026](https://www.alko.fi/palvelut/asiointi-myymalassa/aukioloajat)
 
