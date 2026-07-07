@@ -1,0 +1,192 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-07T10:11:26.681436+00:00",
+  "digest": "c81834d60b",
+  "packet": {
+    "packet_id": "20260707T101126Z_c81834d60b",
+    "created_at": "2026-07-07T10:11:26Z",
+    "headline_seed": "Explosions injure 18 in Damascus during Macron's visit",
+    "description_seed": "As reports of the blasts came in, state television said the Syrian president had welcomed Macron at the presidential palace.",
+    "link": "https://www.bbc.co.uk/news/articles/c2eylx1jj9ko?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC World",
+      "Times Now"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/c2eylx1jj9ko?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Explosions injure 18 in Damascus during Macron's visit"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "After reports of explosions in the city, videos and images on social media showed plumes of smoke and flames rising from a vehicle near a hotel in the Syrian capital. As those reports came in, Syrian state television said that al-Sharaa had welcomed Macron to the presidential palace. BBC Verify has been analysing video footage of the blasts, which shows the explosions happened approximately 125m from the Four Seasons hotel, on the pavement of Shoukry al-Quowatly, a major thoroughfare running through the capital. Macron's officials said the French president did not hear any explosions on his way to meeting Syrian leader Ahmed al-Sharaa Macron arrived in Syria on Monday evening, becoming the first EU leader to visit since the end of Bashar al‑Assad's 24‑year rule.",
+        "word_count": 125,
+        "keyword_overlap": 14,
+        "strong_overlap": 10
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "As reports of the blasts came in, state television said the Syrian president had welcomed Macron at the presidential palace.",
+        "word_count": 20,
+        "keyword_overlap": 12,
+        "strong_overlap": 9
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Videos and images on social media showed emergency services working around flames and damage caused by apparent explosions A number of people have been injured after explosive devices went off in central Damascus, reportedly near the hotel where French President Emmanuel Macron had been staying. A security source told the BBC the blasts were caused by two devices. Syrian media said 18 people, including four police officers, were injured. Macron is in the capital for talks with his Syrian counterpart Ahmed al-Sharaa at the presidential palace. His officials said he was safe and did not hear the explosions. After travelling to Syria, Macron is set to head to Turkey for the Nato summit. The visit \"continues as planned\", according to the Elysee Palace.",
+        "word_count": 123,
+        "keyword_overlap": 10,
+        "strong_overlap": 8
+      },
+      {
+        "source": "Times Now",
+        "source_type": "research",
+        "text": "By then, Macron was already travelling towards the presidential palace. Reuters video showed the French motorcade moving along a highway before the explosions, while photographs taken later showed Macron alongside Sharaa and meeting Syrian officials and military officers. A journalist travelling with the press group accompanying the French President also reported hearing no explosion and seeing no disruption during Macron's morning engagements. The French Presidency said the blasts were not audible from Macron's motorcade. There was no immediate alteration to his programme, and the President intended to complete the engagements scheduled for the day. His meeting with Sharaa went ahead soon after the explosions.",
+        "word_count": 104,
+        "keyword_overlap": 9,
+        "strong_overlap": 8
+      }
+    ],
+    "source_text": "After reports of explosions in the city, videos and images on social media showed plumes of smoke and flames rising from a vehicle near a hotel in the Syrian capital. As those reports came in, Syrian state television said that al-Sharaa had welcomed Macron to the presidential palace. BBC Verify has been analysing video footage of the blasts, which shows the explosions happened approximately 125m from the Four Seasons hotel, on the pavement of Shoukry al-Quowatly, a major thoroughfare running through the capital. Macron's officials said the French president did not hear any explosions on his way to meeting Syrian leader Ahmed al-Sharaa Macron arrived in Syria on Monday evening, becoming the first EU leader to visit since the end of Bashar al‑Assad's 24‑year rule.\n\nAs reports of the blasts came in, state television said the Syrian president had welcomed Macron at the presidential palace.\n\nVideos and images on social media showed emergency services working around flames and damage caused by apparent explosions A number of people have been injured after explosive devices went off in central Damascus, reportedly near the hotel where French President Emmanuel Macron had been staying. A security source told the BBC the blasts were caused by two devices. Syrian media said 18 people, including four police officers, were injured. Macron is in the capital for talks with his Syrian counterpart Ahmed al-Sharaa at the presidential palace. His officials said he was safe and did not hear the explosions. After travelling to Syria, Macron is set to head to Turkey for the Nato summit. The visit \"continues as planned\", according to the Elysee Palace.\n\nBy then, Macron was already travelling towards the presidential palace. Reuters video showed the French motorcade moving along a highway before the explosions, while photographs taken later showed Macron alongside Sharaa and meeting Syrian officials and military officers. A journalist travelling with the press group accompanying the French President also reported hearing no explosion and seeing no disruption during Macron's morning engagements. The French Presidency said the blasts were not audible from Macron's motorcade. There was no immediate alteration to his programme, and the President intended to complete the engagements scheduled for the day. His meeting with Sharaa went ahead soon after the explosions.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 960,
+      "selected_blocks": 4,
+      "selected_source_words": 372,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Times Now",
+        "Times Now",
+        "Times Now",
+        "Times Now",
+        "KSAT",
+        "KSAT",
+        "KSAT",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "Times Now"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Explosions injure 18 in Damascus during Macron's visit",
+      "description": "As reports of the blasts came in, state television said the Syrian president had welcomed Macron at the presidential palace.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Explosions injure 18 in Damascus during Macron's visit",
+    "description": "As reports of the blasts came in, state television said the Syrian president had welcomed Macron at the presidential palace.",
+    "link": "https://www.bbc.co.uk/news/articles/c2eylx1jj9ko?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-07T10:08:48+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "1c7b29e83eaa2b00cfb2ca09ed20f17d",
+    "_url_hash": "286290c40cc788ccece4dbc2272613ea32b3a8c7260f99d601f0ff79e63ecac9",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nVideos and images on social media showed emergency services working around flames and damage caused by apparent explosions\n\nA number of people have been injured after explosive devices went off in central Damascus,  reportedly near the hotel where French President Emmanuel Macron had been staying.\n\nA security source told the BBC the blasts were caused by two devices. Syrian media said 18 people, including four police officers, were injured.\n\nMacron is in the capital for talks with his Syrian counterpart Ahmed al-Sharaa at the presidential palace. His officials said he was safe and did not hear the explosions.\n\nAfter travelling to Syria, Macron is set to head to Turkey for the Nato summit. The visit \"continues as planned\", according to the Elysee Palace.\n\nAfter reports of explosions in the city, videos and images on social media showed plumes of smoke and flames rising from a vehicle near a hotel in the Syrian capital.\n\nAs those reports came in, Syrian state television said that al-Sharaa had welcomed Macron to the presidential palace.\n\nBBC Verify has been analysing video footage of the blasts, which shows the explosions happened approximately 125m from the Four Seasons hotel, on the pavement of Shoukry al-Quowatly, a major thoroughfare running through the capital.\n\nMacron's officials said the French president did not hear any explosions on his way to meeting Syrian leader Ahmed al-Sharaa\n\nMacron arrived in Syria on Monday evening, becoming the first EU leader to visit since the end of Bashar al‑Assad's 24‑year rule.\n\nAt the start of July, a bomb blast at a crowded cafe in central Damascus killed at least nine people and injured 22 others, according to Syrian state media.\n\nAdditional reporting by Richard Irvine-Brown\n\nBomb blast at Damascus cafe kills nine, Syrian state media say\n\n---\n\n[Lähde: Times Now]\nTwo bombs exploded near the Damascus hotel where French President Emmanuel Macron had been holding meetings on Tuesday, injuring 18 people and prompting a security sweep through the surrounding area. The first blast came soon after Macron's motorcade left for the presidential palace; minutes later, a second explosion was caught on camera as emergency crews and bystanders gathered nearby. Macron did not hear either explosion, according to the French Presidency, and went ahead with his meeting with Syrian President Ahmed al-Sharaa.\n\nThe explosions hit a busy part of central Damascus between Syria's tourism ministry and the national museum, directly across from the Four Seasons, where Macron had met civil society groups. Syrian state media said four police officers were among those injured. There has been no public claim of responsibility and, so far, Syrian authorities have not said the devices were aimed at the visiting French President.\n\nFootage from the scene showed flames and smoke rising from a rubbish bin following the first explosion. People began gathering in the area and an ambulance was parked close to the scene when another device exploded a few metres away. The second blast was captured on camera, sending thick black smoke into the street as emergency personnel moved towards nearby shops and worked to contain the fire.\n\nBy then, Macron was already travelling towards the presidential palace. Reuters video showed the French motorcade moving along a highway before the explosions, while photographs taken later showed Macron alongside Sharaa and meeting Syrian officials and military officers. A journalist travelling with the press group accompanying the French President also reported hearing no explosion and seeing no disruption during Macron's morning engagements.\n\nThe French Presidency said the blasts were not audible from Macron's motorcade. There was no immediate alteration to his programme, and the President intended to complete the engagements scheduled for the day. His meeting with Sharaa went ahead soon after the explosions.\n\nSyrian internal security forces, meanwhile, sealed roads and began searches for those responsible. State-run Al-Ekhbariya TV, citing a security source, reported that operations were underway to identify the people behind the bombings. Security measures around the area were tightened as investigators turned their attention to the two explosive devices and the circumstances in which they were placed.\n\nThe blasts have landed\n\n---\n\n[Lähde: KSAT]\nCopyright 2026 The Associated Press. All rights reserved.\n\nSyrian President Ahmad al-Sharaa, right, meets French President Emmanuel Macron at the presidential palace in Damascus, Syria, Tuesday, July 7, 2026. (AP Photo/Ghaith Alsayed)\n\nDAMASCUS – Explosions rocked Damascus on Tuesday as France’s president met with his Syrian counterpart in a landmark visit, wounding at least 18 people, Syria's Interior Ministry said.\n\nEmmanuel Macron had entered the presidential palace to meet Syrian President Ahmad al-Sharaa when the explosions happened near the Four Seasons Hotel, where Syrian media report that the French president is staying.\n\nAn Elysee official said Macron was safe and that his meeting with al-Sharaa was continuing. He is the first major Western leader to visit Syria since al-Sharaa came to power and his visit comes before he heads to a NATO summit in Ankara, Turkey. The official spoke on condition of anonymity to discuss Macron’s whereabouts and security.\n\nBut the explosions are a blow for al-Sharaa, who came to power after leading an insurgency that ousted Bashar Assad in 2024.\n\nHe has since pushed to assert full control and bring stability in war-torn Syria, appeal to minorities skeptical of his Islamist-led rule, and win the support of Western governments who were skeptical of his past as leader of the formerly al-Qaeda-linked Hayat Tahrir al-Sham group. His government has promised political and economic reform after decades of autocratic rule.\n\nMacron played a major role in pushing Europe and the United States to drop most sanctions on Syria. He arrived in the country Monday night with an economic delegation, and is scheduled to sign memorandums of under...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-07T10:14:54.055855+00:00",
+  "failure": "content too short: 211 words",
+  "payload": {
+    "packet_id": "20260707T101126Z_c81834d60b",
+    "title": "Räjähdykset haavoittivat 18:aa Damaskoksessa Macronin vierailun aikana",
+    "summary": "Syyrian median mukaan 18 ihmistä haavoittui Damaskoksen keskustassa tapahtuneissa räjähdyksissä samaan aikaan, kun Ranskan presidentti Emmanuel Macron oli matkalla tapaamaan Syyrian presidentti Ahmed al-Sharaata.",
+    "content": "Syyrian median mukaan 18 ihmistä, heidän joukossaan neljä poliisia, haavoittui Damaskoksen keskustassa, kun räjähdelaitteiden kerrotaan räjähtäneen lähellä hotellia, jossa Ranskan presidentti Emmanuel Macron oli oleskellut. Macron oli tapahtumahetkellä matkalla presidentinpalatsiin tapaamaan Syyrian presidentti Ahmed al-Sharaata, eikä hänen ohjelmaansa kerrottu muutetun räjähdysten vuoksi.\n\n## Räjähdykset tapahtuivat keskustassa\n\nSosiaalisessa mediassa julkaistuissa videoissa ja kuvissa näkyi savupatsaita, liekkejä ja vaurioita ajoneuvon läheisyydessä Syyrian pääkaupungissa. Pelastus- ja turvallisuusviranomaisia nähtiin työskentelemässä palojen ja vaurioituneen alueen ympärillä.\n\nVideomateriaalin arvioinnin mukaan räjähdykset tapahtuivat noin 125 metrin päässä Four Seasons -hotellista Shoukry al-Quowatly -kadun jalkakäytävällä. Katu on yksi Damaskoksen keskeisistä väylistä. Turvallisuuslähteen mukaan räjähdykset johtuivat kahdesta laitteesta.\n\nSyyrian valtiollinen televisio kertoi samaan aikaan, että al-Sharaa oli ottanut Macronin vastaan presidentinpalatsissa. Myöhemmin julkaistuissa kuvissa Macron nähtiin al-Sharaan sekä syyrialaisten viranomaisten ja sotilasjohtajien kanssa.\n\n## Macronin vierailu jatkui\n\nMacronin virkailijoiden mukaan Ranskan presidentti oli turvassa eikä kuullut räjähdyksiä matkallaan tapaamiseen. Myös presidentin mukana kulkeneeseen lehdistöryhmään kuulunut toimittaja kertoi, ettei kuullut räjähdystä eikä havainnut häiriötä Macronin aamun ohjelmassa.\n\nRanskan presidentinkanslian mukaan räjähdykset eivät kuuluneet Macronin autosaattueeseen. Vierailun kerrottiin jatkuvan suunnitellusti, eikä ohjelmaan tehty välittömiä muutoksia. Macronin tapaaminen al-Sharaan kanssa järjestettiin pian räjähdysten jälkeen.\n\nMacron saapui Syyriaan maanantai-iltana. Hänestä tuli ensimmäinen EU-johtaja, joka on vieraillut maassa Bashar al-Assadin 24 vuotta kestäneen valtakauden päättymisen jälkeen. Syyrian-vierailun jälkeen Macronin on määrä jatkaa Turkkiin Naton huippukokoukseen.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Syyria",
+      "Damaskos",
+      "Emmanuel Macron",
+      "Ahmed al-Sharaa",
+      "Ranska"
+    ],
+    "summary_bullets": [
+      "Syyrian median mukaan 18 ihmistä haavoittui Damaskoksen keskustassa tapahtuneissa räjähdyksissä.",
+      "Räjähdykset tapahtuivat lähellä hotellia, jossa Emmanuel Macronin kerrottiin oleskelleen.",
+      "Ranskan presidentinkanslian mukaan Macron oli turvassa ja hänen vierailunsa jatkui suunnitellusti."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu valittuihin lähdeblokkeihin. Keskeiset tiedot ovat yhteneviä: haavoittuneiden määrä, Macronin turvallisuus ja vierailuohjelman jatkuminen ovat lähteissä selvästi tuettuja."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260707T101126Z_c81834d60b\",\n  \"title\": \"Räjähdykset haavoittivat 18:aa Damaskoksessa Macronin vierailun aikana\",\n  \"summary\": \"Syyrian median mukaan 18 ihmistä haavoittui Damaskoksen keskustassa tapahtuneissa räjähdyksissä samaan aikaan, kun Ranskan presidentti Emmanuel Macron oli matkalla tapaamaan Syyrian presidentti Ahmed al-Sharaata.\",\n  \"content\": \"Syyrian median mukaan 18 ihmistä, heidän joukossaan neljä poliisia, haavoittui Damaskoksen keskustassa, kun räjähdelaitteiden kerrotaan räjähtäneen lähellä hotellia, jossa Ranskan presidentti Emmanuel Macron oli oleskellut. Macron oli tapahtumahetkellä matkalla presidentinpalatsiin tapaamaan Syyrian presidentti Ahmed al-Sharaata, eikä hänen ohjelmaansa kerrottu muutetun räjähdysten vuoksi.\\n\\n## Räjähdykset tapahtuivat keskustassa\\n\\nSosiaalisessa mediassa julkaistuissa videoissa ja kuvissa näkyi savupatsaita, liekkejä ja vaurioita ajoneuvon läheisyydessä Syyrian pääkaupungissa. Pelastus- ja turvallisuusviranomaisia nähtiin työskentelemässä palojen ja vaurioituneen alueen ympärillä.\\n\\nVideomateriaalin arvioinnin mukaan räjähdykset tapahtuivat noin 125 metrin päässä Four Seasons -hotellista Shoukry al-Quowatly -kadun jalkakäytävällä. Katu on yksi Damaskoksen keskeisistä väylistä. Turvallisuuslähteen mukaan räjähdykset johtuivat kahdesta laitteesta.\\n\\nSyyrian valtiollinen televisio kertoi samaan aikaan, että al-Sharaa oli ottanut Macronin vastaan presidentinpalatsissa. Myöhemmin julkaistuissa kuvissa Macron nähtiin al-Sharaan sekä syyrialaisten viranomaisten ja sotilasjohtajien kanssa.\\n\\n## Macronin vierailu jatkui\\n\\nMacronin virkailijoiden mukaan Ranskan presidentti oli turvassa eikä kuullut räjähdyksiä matkallaan tapaamiseen. Myös presidentin mukana kulkeneeseen lehdistöryhmään kuulunut toimittaja kertoi, ettei kuullut räjähdystä eikä havainnut häiriötä Macronin aamun ohjelmassa.\\n\\nRanskan presidentinkanslian mukaan räjähdykset eivät kuuluneet Macronin autosaattueeseen. Vierailun kerrottiin jatkuvan suunnitellusti, eikä ohjelmaan tehty välittömiä muutoksia. Macronin tapaaminen al-Sharaan kanssa järjestettiin pian räjähdysten jälkeen.\\n\\nMacron saapui Syyriaan maanantai-iltana. Hänestä tuli ensimmäinen EU-johtaja, joka on vieraillut maassa Bashar al-Assadin 24 vuotta kestäneen valtakauden päättymisen jälkeen. Syyrian-vierailun jälkeen Macronin on määrä jatkaa Turkkiin Naton huippukokoukseen.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Syyria\",\n    \"Damaskos\",\n    \"Emmanuel Macron\",\n    \"Ahmed al-Sharaa\",\n    \"Ranska\"\n  ],\n  \"summary_bullets\": [\n    \"Syyrian median mukaan 18 ihmistä haavoittui Damaskoksen keskustassa tapahtuneissa räjähdyksissä.\",\n    \"Räjähdykset tapahtuivat lähellä hotellia, jossa Emmanuel Macronin kerrottiin oleskelleen.\",\n    \"Ranskan presidentinkanslian mukaan Macron oli turvassa ja hänen vierailunsa jatkui suunnitellusti.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu valittuihin lähdeblokkeihin. Keskeiset tiedot ovat yhteneviä: haavoittuneiden määrä, Macronin turvallisuus ja vierailuohjelman jatkuminen ovat lähteissä selvästi tuettuja.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260707T101126Z_c81834d60b",
+    "category": "Kotimaa",
+    "selected_source_words": 372,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 211,
+    "issues": [
+      "content too short: 211 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Räjähdykset haavoittivat 18:aa Damaskoksessa Macronin vierailun aikana",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-07-07T10:14:54.055583+00:00",
+    "repair_trigger": "pre_repair_word_count=211; selected_source_words=372; selected_source_blocks=4",
+    "pre_repair_word_count": 211,
+    "pre_repair_lead_word_count": 42,
+    "post_repair_word_count": 211,
+    "post_repair_lead_word_count": 42,
+    "selected_source_words_at_repair": 372,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 372,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 211 words",
+    "source_block_ids_used_for_repair": [
+      "1:BBC World:04e0cad705",
+      "2:BBC World:863846f4c0",
+      "3:BBC World:e8b5383a8b",
+      "4:Times Now:827f003872"
+    ],
+    "final_issues": [
+      "content too short: 211 words"
+    ],
+    "recovered": false
+  }
+}
