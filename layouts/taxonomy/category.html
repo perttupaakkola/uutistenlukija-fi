@@ -4,8 +4,8 @@
 {{ $paginator := .Paginate (.RegularPages.ByDate.Reverse) 20 }}
 {{ $relatedByCategory := dict
   "talous" (slice (dict "label" "Kotimaa" "url" "/kategoriat/kotimaa/") (dict "label" "Teknologia" "url" "/kategoriat/teknologia/") (dict "label" "Päivän kooste" "url" "/paivan-kooste/"))
-  "kotimaa" (slice (dict "label" "Talous" "url" "/categories/talous/") (dict "label" "Ulkomaat" "url" "/categories/ulkomaat/") (dict "label" "Päivän kooste" "url" "/paivan-kooste/"))
-  "teknologia" (slice (dict "label" "Talous" "url" "/categories/talous/") (dict "label" "Tiede" "url" "/categories/tiede/") (dict "label" "Päivän kooste" "url" "/paivan-kooste/"))
+  "kotimaa" (slice (dict "label" "Talous" "url" "/kategoriat/talous/") (dict "label" "Ulkomaat" "url" "/categories/ulkomaat/") (dict "label" "Päivän kooste" "url" "/paivan-kooste/"))
+  "teknologia" (slice (dict "label" "Talous" "url" "/kategoriat/talous/") (dict "label" "Tiede" "url" "/categories/tiede/") (dict "label" "Päivän kooste" "url" "/paivan-kooste/"))
 }}
 {{ $termSlug := .Data.Term | default .Title | urlize }}
 {{ $relatedLinks := index $relatedByCategory $termSlug }}

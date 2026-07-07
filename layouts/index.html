@@ -84,7 +84,7 @@
       <section class="portal-market" data-market-widget>
         <div class="portal-module-head">
           <h2>Markkinat</h2>
-          <a href="/categories/talous/">Katso kaikki</a>
+          <a href="/kategoriat/talous/">Katso kaikki</a>
         </div>
         <div class="portal-tabs" role="tablist" aria-label="Markkinanäkymä">
           <button type="button" class="is-active" role="tab" aria-selected="true" data-market-tab="crypto">Kryptot</button>
@@ -97,7 +97,7 @@
           <div><dt>XRP</dt><dd data-symbol="XRP">Päivitetään…</dd></div>
         </dl>
         <p class="portal-market__note" data-market-note>Viivästetty krypto- ja valuuttadata, päivittyy selaimessa.</p>
-        <p class="portal-market__note"><a href="/categories/talous/">Lue myös: päivän talousaiheet</a></p>
+        <p class="portal-market__note"><a href="/kategoriat/talous/">Lue myös: päivän talousaiheet</a></p>
       </section>
 
       <section class="portal-most-read">
@@ -138,14 +138,14 @@
   <section class="portal-topic-strip" aria-labelledby="front-topics-title">
     <div class="portal-module-head">
       <h2 id="front-topics-title">Aiheet</h2>
-      <a href="/categories/">Kaikki kategoriat</a>
+      <a href="/kategoriat/">Kaikki kategoriat</a>
     </div>
     <div class="portal-topic-strip__grid">
       {{ range $cat := $topicCats }}
       {{ $catPosts := where $sorted ".Params.categories" "intersect" (slice $cat) }}
       {{ with index $catPosts 0 }}
       <article class="portal-topic-card">
-        <a href="/categories/{{ lower $cat | urlize }}/" class="portal-topic-card__label">{{ $cat }}</a>
+        <a href="/kategoriat/{{ lower $cat | urlize }}/" class="portal-topic-card__label">{{ $cat }}</a>
         <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         <span class="portal-topic-card__time">{{ partial "relative-date.html" . }}</span>
       </article>

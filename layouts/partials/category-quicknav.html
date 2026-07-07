@@ -1,5 +1,5 @@
 {{/* category-quicknav.html — Horizontal category pill navigation bar.
-     Links go to real category pages (/categories/kotimaa/ etc.) so they never 404.
+     Talous uses its canonical Finnish route; other category links keep existing taxonomy routes.
      JS in baseof.html can add is-active on the homepage by intersecting id="cat-{slug}" sections. */}}
 {{ $currentSlug := "" }}
 {{ if .IsHome }}
@@ -32,8 +32,10 @@
   {{ $categories := slice "Kotimaa" "Ulkomaat" "Talous" "Teknologia" "Urheilu" "Kulttuuri" "Tiede" }}
   {{ range $categories }}
   {{ $slug := . | lower | urlize }}
+  {{ $href := printf "/categories/%s/" $slug }}
+  {{ if eq $slug "talous" }}{{ $href = "/kategoriat/talous/" }}{{ end }}
   <a class="cat-quicknav__pill cat-quicknav__pill--{{ $slug }}{{ if eq $currentSlug $slug }} is-active{{ end }}"
-     href="/categories/{{ $slug }}/"
+     href="{{ $href }}"
      {{ if eq $currentSlug $slug }}aria-current="page"{{ end }}
      data-cat="{{ $slug }}"
      data-track="quicknav_click"

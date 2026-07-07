@@ -12,7 +12,9 @@
     {{ $title := humanize $name | title }}
     {{ with $page }}{{ $title = .Title }}{{ end }}
     <article class="article-card category-index-card">
-      <h2><a href="/categories/{{ $name | urlize }}/">{{ $title }}</a></h2>
+      {{ $href := printf "/categories/%s/" ($name | urlize) }}
+      {{ if eq ($name | urlize) "talous" }}{{ $href = "/kategoriat/talous/" }}{{ end }}
+      <h2><a href="{{ $href }}">{{ $title }}</a></h2>
       <p class="excerpt">{{ len $taxonomy.Pages }} artikkelia</p>
       {{ with $page.Params.description }}<p>{{ . }}</p>{{ end }}
     </article>
