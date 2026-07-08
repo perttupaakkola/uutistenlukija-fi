@@ -1,5 +1,6 @@
 ---
-title: "Uudet F-35-hävittäjät eivät kelpaa sodankäyntiin"
+title: "F-35-hävittäjien tutkaongelmat hidastavat sotavalmiutta"
+seo_title: "F-35:n tutkaongelmat hidastavat sotavalmiutta"
 date: 2026-03-28T21:04:50.653285+00:00
 categories:
   - Ulkomaat
@@ -8,7 +9,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Yhdysvaltain asevoimat kamppailee F-35-hävittäjien käyttöönoton kanssa, kun niiden kehitysongelmat estävät täysipainoisen sodankäynnin käytön."
+description: "Yhdysvaltain F-35-hävittäjien uuden tutkan kehitysongelmat hidastavat käyttöönottoa ja nostavat kysymyksiä koneiden sotavalmiudesta."
 summary: "Yhdysvaltain F-35-hävittäjien käyttöönottoa viivästyttävät tekniset ongelmat, jotka vaikuttavat niiden soveltuvuuteen sodankäyntiin. Ongelmat huolestuttavat sekä kansainvälisesti että Yhdysvaltojen omaa ilmapuolustusta ajatellen."
 key_points:
   - "F-35-hävittäjien tekniset ongelmat vaarantavat niiden käyttökelpoisuuden"
@@ -18,7 +19,7 @@ content_type: "article"
 editorial_reviewed: true
 image: "https://images.unsplash.com/photo-1757206281369-2f799699491d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmLTM1LWglQzMlQTR2aXR0JUMzJUE0aiVDMyVBNHQlMjBlaXYlQzMlQTR0JTIwa2VscGFhJTIwc29kYW5rJUMzJUE0eW50aWlufGVufDF8MHx8fDE3NzQ3MzE4ODR8MA&ixlib=rb-4.1.0&q=80&w=1080"
 image_thumb: "https://images.unsplash.com/photo-1757206281369-2f799699491d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmLTM1LWglQzMlQTR2aXR0JUMzJUE0aiVDMyVBNHQlMjBlaXYlQzMlQTR0JTIwa2VscGFhJTIwc29kYW5rJUMzJUE0eW50aWlufGVufDF8MHx8fDE3NzQ3MzE4ODR8MA&ixlib=rb-4.1.0&q=80&w=400"
-image_alt: "Kuvituskuva: Uudet F-35-hävittäjät eivät kelpaa sodankäyntiin"
+image_alt: "Kuvituskuva F-35-hävittäjien tutkaongelmista"
 image_credit: "Photo by Maryam Tello on Unsplash"
 image_source_url: "https://unsplash.com/photos/f-22-raptor-fighter-jet-tail-with-markings-knp3gyslihw?utm_source=uutistenlukija&utm_medium=referral"
 reading_time: 1
