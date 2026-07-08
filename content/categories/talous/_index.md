@@ -4,6 +4,7 @@ seo_title: "Talousuutiset tänään – korot, hinnat ja yritykset | Uutistenluk
 hero_title: "Talous-uutiset"
 url: "/kategoriat/talous/"
 aliases:
+  - "/talous/"
   - "/categories/talous/"
 description: "Seuraa taloutta yritysten, hintojen, työmarkkinoiden ja arjen rahan näkökulmasta yhdessä päivittyvässä uutisvirrassa."
 og_image: "/images/og-talous.png"
