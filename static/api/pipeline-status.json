@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-08T04:29:26+00:00",
+  "generated_at": "2026-07-08T05:59:32+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,21 +12,23 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 29,
-    "rejected": 2,
+    "published": 28,
+    "rejected": 3,
     "publish_rate": 0,
-    "last_published_ts": "2026-07-08T04:28:04.871323+00:00"
+    "last_published_ts": "2026-07-08T05:58:08.955091+00:00"
   },
   "reject_reasons": {
-    "missing: image": 2,
+    "missing: image": 3,
     "source_confidence_denial_conte": 2,
     "length under target (254 words": 1,
     "length under target (259 words": 1,
-    "unsourced numbers": 1
+    "unsourced numbers": 1,
+    "length under target (266 words": 1,
+    "keyword_stuffing": 1
   },
   "feeds": {
-    "total": 32,
-    "healthy": 32,
+    "total": 33,
+    "healthy": 33,
     "disabled": 0,
     "stale": 0,
     "stale_names": [],
@@ -38,19 +40,19 @@
       22
     ],
     [
-      "viime",
-      22
-    ],
-    [
       "ennen",
       22
     ],
     [
       "vuoden",
-      19
+      20
     ],
     [
-      "vuonna",
+      "viime",
+      20
+    ],
+    [
+      "aikana",
       19
     ]
   ]
