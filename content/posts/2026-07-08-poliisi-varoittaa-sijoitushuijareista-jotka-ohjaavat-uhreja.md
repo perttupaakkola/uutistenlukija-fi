@@ -47,7 +47,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/poliisi-varoittaa-nostamasta-tuntemattomille-rahaa-saattaa-syyllistya-itse-rikokseen/9363996"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
