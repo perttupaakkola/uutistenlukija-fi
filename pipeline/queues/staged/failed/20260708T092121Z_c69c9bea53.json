@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-08T09:21:21.661679+00:00",
+  "digest": "c69c9bea53",
+  "packet": {
+    "packet_id": "20260708T092121Z_c69c9bea53",
+    "created_at": "2026-07-08T09:21:21Z",
+    "headline_seed": "Teatteriarvio | Viehättävä Robin Hood ihastuttaa Iitissä",
+    "description_seed": "Käsikirjoitus on täynnä herkullisia sanaleikkejä ja näppärää dialogia, ja vaikka tarina on ainakin aikuiselle tuttu, silti saa jännittää, kuinka Robinille ja iloisille veikoille käy, kirjoittaa teatterikriitikko Johanna Hasu.",
+    "link": "https://www.ess.fi/paikalliset/9601326",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9601326"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Teatteriarvio | Viehättävä Robin Hood ihastuttaa Iitissä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 122,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Teatteriarvio | Viehättävä Robin Hood ihastuttaa Iitissä",
+      "description": "Käsikirjoitus on täynnä herkullisia sanaleikkejä ja näppärää dialogia, ja vaikka tarina on ainakin aikuiselle tuttu, silti saa jännittää, kuinka Robinille ja iloisille veikoille käy, kirjoittaa teatterikriitikko Johanna Hasu.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Teatteriarvio | Viehättävä Robin Hood ihastuttaa Iitissä",
+    "description": "Käsikirjoitus on täynnä herkullisia sanaleikkejä ja näppärää dialogia, ja vaikka tarina on ainakin aikuiselle tuttu, silti saa jännittää, kuinka Robinille ja iloisille veikoille käy, kirjoittaa teatterikriitikko Johanna Hasu.",
+    "link": "https://www.ess.fi/paikalliset/9601326",
+    "published": "2026-07-08T12:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "4d21bcbf40cffb16dffe4a1ad0fdbd70",
+    "_url_hash": "dac20a6f4b212c1141832e03627609d23fb512ad0ffd44beb50e6cc106a65739",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nKouvolassa Kuusankoskella lauantaina tapahtuneesta yliajosta epäilty mies on vangittu, kertoo rikoskomisario Nina Hietanen Kaakkois-Suomen poliisista.\n\nEpäilty on Hietasen mukaan 20-vuotias paikkakuntalainen mies. Vangitseminen tapahtui tiistaina. Asiasta uutisoi ensimmäisenä Kouvolan Sanomat.\n\nMiehen epäillään törmänneen jalankulkijaan pakettiautolla suojatiellä lauantaina noin kello 01.45 aikaan. Jalankulkija oli 22-vuotias mies, joka menehtyi saamiinsa vammoihin onnettomuuspaikalla.\n\nPoliisi otti pakettiautoa ajaneen miehen kiinni, kun tämä oli paennut paikalta. Mies puhalsi törkeän rattijuopumuksen rajan ylittävän lukeman.\n\nTapahtumien kulku on pääpiirteissään selvillä, Hietanen sanoo. Poliisi pyrkii selvittämään vielä yksityiskohtia kuulemalla silminnäkijöitä.\n\nMiestä epäillään törkeästä liikenneturvallisuuden vaarantamisesta, törkeästä rattijuopumuksesta, törkeästä kuolemantuottamuksesta ja liikennepaosta tieliikenteessä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-08T09:23:33.275145+00:00",
+  "failure": "Paketissa ei ole valittuja lähdekatkelmia eikä riittävästi varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen ilman lähdetekstin toistoa tai keksittyjä yksityiskohtia.",
+  "raw_response": "{\"packet_id\":\"20260708T092121Z_c69c9bea53\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittuja lähdekatkelmia eikä riittävästi varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen ilman lähdetekstin toistoa tai keksittyjä yksityiskohtia.\"}"
+}

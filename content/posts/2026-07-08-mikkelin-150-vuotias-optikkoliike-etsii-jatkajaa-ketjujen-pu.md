@@ -47,7 +47,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/ainakin-yhdessa-palvelussa-optikkoyrittaja-raimo-laitinen-83-lyo-laudalta-isot-ketjut-ainoa-asia-joka-pitaa-meidat-hengissa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
