@@ -1,18 +1,22 @@
-{{ define "extra_head" }}
-<link rel="stylesheet" href="/css/category-hero.css" media="print" onload="this.onload=null;this.media='all'">
-<link rel="stylesheet" href="/css/empty-state.css" media="print" onload="this.onload=null;this.media='all'">
-<noscript>
-  <link rel="stylesheet" href="/css/category-hero.css">
-  <link rel="stylesheet" href="/css/empty-state.css">
-</noscript>
-{{ end }}
-
 {{ define "main" }}
 {{ partial "breadcrumbs.html" . }}
-{{ partial "category-hero.html" . }}
-{{ partial "category-quicknav.html" . }}
+{{ $heading := partial "category-heading.html" . }}
+{{ $paginator := .Paginate (.RegularPages.ByDate.Reverse) 20 }}
+{{ $relatedByCategory := dict
+  "talous" (slice (dict "label" "Kotimaa" "url" "/kategoriat/kotimaa/") (dict "label" "Teknologia" "url" "/kategoriat/teknologia/") (dict "label" "Päivän kooste" "url" "/paivan-kooste/"))
+  "kotimaa" (slice (dict "label" "Talous" "url" "/kategoriat/talous/") (dict "label" "Ulkomaat" "url" "/categories/ulkomaat/") (dict "label" "Päivän kooste" "url" "/paivan-kooste/"))
+  "teknologia" (slice (dict "label" "Talous" "url" "/kategoriat/talous/") (dict "label" "Tiede" "url" "/categories/tiede/") (dict "label" "Päivän kooste" "url" "/paivan-kooste/"))
+}}
+{{ $termSlug := .Data.Term | default .Title | urlize }}
+{{ $relatedLinks := index $relatedByCategory $termSlug }}
+{{ $talousFocusLinks := slice
+  (dict "label" "Henkilöstöedut" "url" "/posts/2026-03-15-wolt-haastaa-epassin-ja-edenredin-henkilostoetumarkkinalla/")
+  (dict "label" "Yritysten luottoluokitus" "url" "/posts/2026-04-04-nama-yritykset-nousivat-aaa-luokkaan-katso-lista/")
+  (dict "label" "Kaupan ala" "url" "/posts/2026-05-06-r-kioski-hakee-kaannetta-uudella-arra-myymalabrandilla/")
+  (dict "label" "Konkurssit" "url" "/posts/2026-03-16-beyond-retro-vaatekaupan-suomalainen-taustayritys-hakeutui-k/")
+  (dict "label" "Arjen säästäminen" "url" "/posts/2026-05-09-luulitko-saastavasi-rahaa-isolla-maustepussilla-somessa-levi/")
+}}
 
-<<<<<<< Updated upstream
 <section class="portal-list-page">
   <header class="portal-list-header">
     <span class="portal-list-header__eyebrow">Kategoria</span>
@@ -116,67 +120,28 @@
         <a href="/uutiskirje/">Tilaa uutiskirje</a>
       </section>
     </aside>
-=======
-{{ $isTalous := eq (lower .Title) "talous" }}
-{{ $latestTalous := first 2 (.RegularPages.ByDate.Reverse) }}
-{{ if and $isTalous (gt (len $latestTalous) 0) }}
-<section class="talous-recirculation" aria-labelledby="talous-recirculation-title">
-  <div class="talous-recirculation__header">
-    <p class="talous-recirculation__eyebrow">Tuoretta taloudessa</p>
-    <h2 id="talous-recirculation-title">Talous juuri nyt</h2>
->>>>>>> Stashed changes
   </div>
-  <div class="talous-recirculation__items">
-    {{ range $latestTalous }}
-    <a class="talous-recirculation__link" href="{{ .RelPermalink }}">
-      <span class="talous-recirculation__label">{{ partial "relative-date.html" . }}</span>
-      <span class="talous-recirculation__title">{{ .Title }}</span>
-    </a>
-    {{ end }}
-  </div>
-</section>
-{{ end }}
-
-{{ $paginator := .Paginate (.RegularPages.ByDate.Reverse) 20 }}
-{{ if gt (len $paginator.Pages) 0 }}
-<div class="articles-grid">
-  {{ range $paginator.Pages }}
-  <article class="article-card">
-    {{ with .Params.categories }}
-    {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
-    {{ end }}
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    {{- with (.Summary | truncate 200) }}<p class="excerpt">{{ . }}</p>{{- end }}
-    <div class="meta">
-      {{ partial "relative-date.html" . }}
-      {{ with .Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
-      · {{ .ReadingTime }} min
-    </div>
+  {{ else }}
+  <article class="portal-empty">
+    <h2>Tässä kategoriassa ei ole vielä artikkeleita</h2>
+    <p>Kokeile hetken päästä uudelleen tai selaa muita osioita.</p>
   </article>
   {{ end }}
-</div>
-{{ else }}
-  {{ partial "empty-state.html" (dict 
-    "title" "Tässä kategoriassa ei ole vielä artikkeleita" 
-    "description" "Päivitämme sisältöä jatkuvasti. Kokeile hetken päästä uudelleen tai selaa muita uutisaiheita alta."
-    "icon" "news"
-    "extraAction" "Kaikki kategoriat"
-    "extraActionUrl" "/categories/"
-  ) }}
-{{ end }}
-
-{{ partial "newsletter-cta.html" . }}
-
-{{ $pag := $paginator }}
-{{ if gt $pag.TotalPages 1 }}
-<nav class="pagination" aria-label="Sivunavigaatio">
-  {{ if $pag.HasPrev }}
-  <a href="{{ $pag.Prev.URL }}" class="page-link">← Edellinen</a>
-  {{ end }}
-  <span class="page-info">Sivu {{ $pag.PageNumber }}/{{ $pag.TotalPages }}</span>
-  {{ if $pag.HasNext }}
-  <a href="{{ $pag.Next.URL }}" class="page-link">Seuraava →</a>
-  {{ end }}
-</nav>
-{{ end }}
+</section>
+<style>
+.category-related-links { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem .85rem; margin-top: .9rem; font-size: .88rem; }
+.category-related-links span { color: var(--portal-muted, var(--text-secondary)); font-weight: 700; }
+.category-related-links a { color: var(--accent, #c0392b); text-decoration: none; }
+.category-related-links a:hover { text-decoration: underline; text-underline-offset: 2px; }
+.category-focus-links { display: grid; gap: .65rem; margin-top: 1.15rem; padding-top: 1rem; border-top: 1px solid var(--border, #e0ddd8); }
+.category-focus-links__intro h2 { margin: 0; font-size: 1rem; line-height: 1.25; }
+.category-focus-links__intro p { margin: .2rem 0 0; color: var(--portal-muted, var(--text-secondary)); font-size: .9rem; }
+.category-focus-links__list { display: flex; flex-wrap: wrap; gap: .5rem .8rem; }
+.category-focus-links__list a { color: var(--accent, #c0392b); font-size: .9rem; font-weight: 700; text-decoration: none; }
+.category-focus-links__list a:hover { text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 640px) {
+  .category-focus-links { gap: .55rem; margin-top: 1rem; }
+  .category-focus-links__list { gap: .45rem .7rem; }
+}
+</style>
 {{ end }}

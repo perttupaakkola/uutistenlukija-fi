@@ -1062,6 +1062,61 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   .portal-feed-item__thumb { width: 78px; height: 68px; }
   .portal-article-topbar { margin-inline: -12px; }
   .portal-article-header__media { margin-inline: 0; }
+  .portal-list-header,
+  .portal-list-feature__body,
+  .category-related-links,
+  .category-focus-links,
+  .category-focus-links__intro,
+  .category-focus-links__list,
+  .talous-recirculation,
+  .talous-recirculation__header,
+  .talous-recirculation__items,
+  .talous-recirculation__link {
+    box-sizing: border-box !important;
+    inline-size: 100% !important;
+    width: 100% !important;
+    max-inline-size: 100% !important;
+    max-width: 100% !important;
+    min-inline-size: 0 !important;
+    min-width: 0 !important;
+  }
+  .category-related-links,
+  .category-focus-links__list {
+    align-items: flex-start;
+    gap: .4rem .65rem;
+  }
+  .category-related-links span,
+  .category-related-links a,
+  .category-focus-links__intro h2,
+  .category-focus-links__intro p,
+  .category-focus-links__list a,
+  .talous-recirculation h2,
+  .talous-recirculation__eyebrow,
+  .talous-recirculation__label,
+  .talous-recirculation__title,
+  .portal-list-feature h2,
+  .portal-list-feature h2 a,
+  .portal-feed-item h3,
+  .portal-feed-item h3 a {
+    max-inline-size: 100% !important;
+    min-inline-size: 0 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+    hyphens: auto;
+  }
+  .category-related-links a,
+  .category-focus-links__list a {
+    display: inline-block;
+    line-height: 1.25;
+  }
+  #cookie-banner .cb-actions {
+    grid-template-columns: 1fr !important;
+  }
+  #cookie-banner .cb-btn {
+    min-height: 38px !important;
+    line-height: 1.2 !important;
+  }
 }
 
 [data-theme="dark"] {
