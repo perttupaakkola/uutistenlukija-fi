@@ -47,7 +47,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/raakaoljyn-hinta-hienoisessa-nousussa-usa-n-uusien-iran-iskujen-jalkeen/9363564"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
