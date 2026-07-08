@@ -47,7 +47,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/yrittajien-asiantuntija-kritisoi-tyonantajille-esitettya-laiminlyontimaksua-ei-pitaisi-valmistella-nain-hataisesti/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
