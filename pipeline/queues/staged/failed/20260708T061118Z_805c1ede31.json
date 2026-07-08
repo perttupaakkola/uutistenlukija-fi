@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-08T06:11:18.736837+00:00",
+  "digest": "805c1ede31",
+  "packet": {
+    "packet_id": "20260708T061118Z_805c1ede31",
+    "created_at": "2026-07-08T06:11:18Z",
+    "headline_seed": "Yhä useampi suomalainen hakee velkajärjestelyä – hakemusten määrä korkeimmalla tasolla 30 vuoteen",
+    "description_seed": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/uutiset/8959c0de-e089-464d-b2d9-882059cddd88",
+    "source": "Maaseudun Tulevaisuus",
+    "source_names": [],
+    "source_urls": [
+      "https://www.maaseuduntulevaisuus.fi/uutiset/8959c0de-e089-464d-b2d9-882059cddd88"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Yhä useampi suomalainen hakee velkajärjestelyä – hakemusten määrä korkeimmalla tasolla 30 vuoteen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 146,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Verkkouutiset",
+        "Verkkouutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Yhä useampi suomalainen hakee velkajärjestelyä – hakemusten määrä korkeimmalla tasolla 30 vuoteen",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Yhä useampi suomalainen hakee velkajärjestelyä – hakemusten määrä korkeimmalla tasolla 30 vuoteen",
+    "description": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/uutiset/8959c0de-e089-464d-b2d9-882059cddd88",
+    "published": "2026-07-08T05:45:00+00:00",
+    "source": "Maaseudun Tulevaisuus",
+    "source_domain": "maaseuduntulevaisuus.fi",
+    "language": "fi",
+    "fingerprint": "e028fc266772f730aedbcab435231dfc",
+    "_url_hash": "2505b5b6b1b6a99b1172c8b25dee6b3006bf8cceabd4ac25121fc69a12c262a9",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Verkkouutiset]\nVelkajärjestelyhakemusten määrä kasvoi selvästi vuoden 2026 ensimmäisellä puoliskolla.\n\nKäräjäoikeuksiin jätettiin tammi–kesäkuussa 490 hakemusta enemmän kuin vuotta aiemmin. Hakemuksia jätettiin yhteensä 3 218 kappaletta.\n\nTämä oli suurin lukema ensimmäisellä vuosipuoliskolla sitten vuoden 1996. Tuolloin hakemuksia jätettiin miltei 7 000.\n\nVastaavaan aikaan vuonna 2025 hakemusten määrä oli 2 728. Velkajärjestelyhakemusten määrä kasvoi siis 18 prosenttia vuotta aiempaan verrattuna. Kahden vuoden takaiseen verrattuna hakemuksia jätettiin tammi-kesäkuussa lähes 30 prosenttia enemmän.\n\n– Velkajärjestelyhakemusten määrä näyttää seuraavan Suomen talouden tilannetta pienellä viiveellä. Taloudellisten ongelmien täytyy ensin kasautua riittävän suuriksi ennen kuin ne näkyvät velkajärjestelyhakemusten määrässä, yliaktuaari Sami Fredriksson sanoo tiedotteessa.\n\nVelkajärjestelyhakemusten määrä on kasvanut käytännössä viimeisen viidentoista vuoden ajan. Vuonna 2019 määrä laski tilapäisesti, mutta Fredrikssonin mukaan hakemusten väheneminen liittyi tuolloin osaltaan velkaneuvonnan siirtymiseen kunnilta valtiolle.\n\n– Velkajärjestelyhakemusten pitkän aikavälin kehitys on ollut pääosin kasvavaa, ja nyt vauhti näyttää kiihtyneen. Kasvu näyttää liittyvän velkaantumisen ja ulosottoasioiden määrään, joskin viiveellä, Fredriksson sanoo.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-08T06:13:21.293012+00:00",
+  "failure": "Packetissa ei ole valittua lähdetekstiä tai tarkistettavia taustatietoja, ja story_confidence on hyvin matala.",
+  "raw_response": "{\"packet_id\":\"20260708T061118Z_805c1ede31\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole valittua lähdetekstiä tai tarkistettavia taustatietoja, ja story_confidence on hyvin matala.\"}"
+}
