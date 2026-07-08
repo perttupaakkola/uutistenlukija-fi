@@ -47,7 +47,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/yksinyrittaja-tiina-palmgren-kay-lisaksi-palkkatoissa-pelkat-parturi-kampaajatulot-jaavat-pieniksi-kun-kaikki-kulut-lasketaan-pois/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
