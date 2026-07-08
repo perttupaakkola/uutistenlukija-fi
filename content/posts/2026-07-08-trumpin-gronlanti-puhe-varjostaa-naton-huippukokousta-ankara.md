@@ -55,7 +55,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/live/2026/jul/08/trump-nato-summit-greenland-us-turkey-rutte-marine-le-pen-europe-latest-news-updates"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 

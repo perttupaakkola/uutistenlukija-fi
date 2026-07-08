@@ -69,17 +69,20 @@
   {
     "name": "rss_health",
     "expected_interval_hours": 24.0,
-    "marker_file_path": "pipeline/logs/rss-health.log"
+    "marker_file_path": "pipeline/logs/rss-health.log",
+    "missing_marker_not_due_before_utc_hour": 6
   },
   {
     "name": "metrics_history",
     "expected_interval_hours": 24.0,
-    "marker_file_path": "pipeline/logs/metrics_history.log"
+    "marker_file_path": "pipeline/logs/metrics_history.log",
+    "missing_marker_not_due_before_utc_hour": 7
   },
   {
     "name": "metrics_cron",
     "expected_interval_hours": 24.0,
-    "marker_file_path": "pipeline/logs/metrics-cron.log"
+    "marker_file_path": "pipeline/logs/metrics-cron.log",
+    "missing_marker_not_due_before_utc_hour": 7
   },
   {
     "name": "staged_monica_worker",

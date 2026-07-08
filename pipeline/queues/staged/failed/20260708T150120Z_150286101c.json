@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-08T15:01:20.551715+00:00",
+  "digest": "150286101c",
+  "packet": {
+    "packet_id": "20260708T150120Z_150286101c",
+    "created_at": "2026-07-08T15:01:20Z",
+    "headline_seed": "Vesijärvenkadun tietyöt etenevät – Lahden kaupunki suosittelee kiertämään kadun maanantaista alkaen",
+    "description_seed": "Pysäkkien pitäisi rakentua heinäkuun aikana.",
+    "link": "https://www.ess.fi/paikalliset/9603804",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9603804"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Vesijärvenkadun tietyöt etenevät – Lahden kaupunki suosittelee kiertämään kadun maanantaista alkaen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 128,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Vesijärvenkadun tietyöt etenevät – Lahden kaupunki suosittelee kiertämään kadun maanantaista alkaen",
+      "description": "Pysäkkien pitäisi rakentua heinäkuun aikana.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Vesijärvenkadun tietyöt etenevät – Lahden kaupunki suosittelee kiertämään kadun maanantaista alkaen",
+    "description": "Pysäkkien pitäisi rakentua heinäkuun aikana.",
+    "link": "https://www.ess.fi/paikalliset/9603804",
+    "published": "2026-07-08T17:02:14+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "2663bb45a9651d648311fdea42b2c682",
+    "_url_hash": "6d920ec0cc25e4d0193fb14f5d25ef6153a8da67ab2b823db54fa04d57bf9409",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nPoliisi etsii edelleen yöllä Lahden Kymijärvellä kadonnutta miestä. Hämeen poliisin mukaan kadonnut on espoolainen, 1950-luvulla syntynyt mies.\n\nPoliisi on kirjannut tapahtumasta ilmoituksen kadonneesta henkilöstä.\n\nHätäkeskukseen tuli keskiviikkona 8. heinäkuuta aamuyöllä kello yhden jälkeen ilmoitus Lahdessa Kymijärvellä uimaan lähteneestä ja kadonneesta henkilöstä.\n\nPelastuslaitos teki etsintöjä yöllä tapahtumapaikalla Karistossa, mutta etsinnät lopetettiin muutaman tunnin päästä tuloksettomina. Tämän jälkeen tehtävä siirtyi poliisille.\n\nMyös poliisi on tehnyt etsintöjä tapahtumapaikalla, mutta kadonnutta ei ole vielä löydetty. Poliisi jatkaa miehen etsimistä.\n\nHämeen pelastuslaitoksen päivystävä palomestari Ilari Nokkanen kertoi aamulla, että heillä on vahva epäilys siitä, että mies olisi mennyt uimaan.\n\nPelastuslaitos yritti etsiä yöllä miestä monin eri keinoin. He käyttivät etsintään droonin lämpökameraa, veden kaikuluotainta, vesisukeltajaa sekä pintapelastajaa.\n\n– Etsintä on hankalaa, koska kyseessä on laaja alue, Nikkanen kuvaile.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-08T15:03:20.167748+00:00",
+  "failure": "Packetissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "{\"packet_id\":\"20260708T150120Z_150286101c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Packetissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

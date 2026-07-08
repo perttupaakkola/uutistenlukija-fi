@@ -47,7 +47,6 @@ keywords:
 source_name: "Teknavi"
 source_url: "https://teknavi.fi/digi/testi-digi/mista-tunnistat-kuulokkeet-joilla-kuuntelu-on-oikeasti-helppoa/"
 source_domain: "teknavi.fi"
-briefing: true
 draft: false
 ---
 

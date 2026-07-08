@@ -116,7 +116,9 @@ def main():
     stale_jobs = []
     missing_jobs = []
     failing_jobs = []
+    deferred_jobs = []
     ok_count = 0
+    now_utc_hour = datetime.now(timezone.utc).hour
 
     for job in registry:
         if job.get("enabled") is False:
@@ -135,6 +137,11 @@ def main():
             marker_path = None
 
         if marker_path is None or not marker_path.exists():
+            grace_until = job.get("missing_marker_not_due_before_utc_hour")
+            if isinstance(grace_until, int) and now_utc_hour < grace_until:
+                deferred_jobs.append(name)
+                ok_count += 1
+                continue
             missing_jobs.append(name)
             continue
 
@@ -171,7 +178,10 @@ def main():
                 ok_count += 1
 
     if not stale_jobs and not missing_jobs and not failing_jobs:
-        print(f"All {ok_count} jobs healthy.")
+        suffix = ""
+        if deferred_jobs:
+            suffix = f" ({len(deferred_jobs)} missing marker(s) not due yet: {', '.join(deferred_jobs)})"
+        print(f"All {ok_count} jobs healthy{suffix}.")
         return 0
 
     # Build report

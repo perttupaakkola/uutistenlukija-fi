@@ -1,0 +1,392 @@
+{
+  "ok": false,
+  "runId": "20260707T230711Z",
+  "checkedAt": "2026-07-07T23:07:20.563Z",
+  "url": "http://127.0.0.1:4317/",
+  "viewports": [
+    "desktop-1440",
+    "mobile-390",
+    "mobile-390-dark"
+  ],
+  "reportPath": "/home/pertt/.openclaw/workspace/projects/uutistenlukija/artifacts/visual-qa-monitor-local/20260707T230711Z/summary.json",
+  "browserExecutable": "/usr/bin/google-chrome",
+  "results": [
+    {
+      "viewport": "desktop-1440",
+      "width": 1440,
+      "height": 1000,
+      "colorScheme": "light",
+      "httpStatus": 200,
+      "screenshot": "/home/pertt/.openclaw/workspace/projects/uutistenlukija/artifacts/visual-qa-monitor-local/20260707T230711Z/desktop-1440.png",
+      "title": "Uutistenlukija",
+      "url": "http://127.0.0.1:4317/",
+      "requiredSelectors": [
+        "header",
+        "nav",
+        "main"
+      ],
+      "horizontalOverflow": 0,
+      "brokenImages": [],
+      "overflowingElements": [],
+      "contrastChecks": [
+        {
+          "selector": ".portal-livebar time",
+          "text": "22:28",
+          "ratio": 10.34
+        },
+        {
+          "selector": ".portal-teaser .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-teaser .portal-kicker",
+          "text": "Urheilu",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-teaser .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-teaser .portal-kicker",
+          "text": "Kotimaa",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Talous",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Kotimaa",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Ulkomaat",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-newsletter h2",
+          "text": "Pysy kartalla.",
+          "ratio": 18.54
+        },
+        {
+          "selector": ".portal-newsletter p",
+          "text": "Tilaa Uutistenlukija-uutiskirje ja saat tärkeimmät uutiset joka aamu.",
+          "ratio": 7.53
+        },
+        {
+          "selector": ".portal-newsletter p",
+          "text": "",
+          "ratio": 7.53
+        },
+        {
+          "selector": ".portal-newsletter input",
+          "text": "",
+          "ratio": 21
+        },
+        {
+          "selector": ".portal-newsletter button",
+          "text": "Tilaa uutiskirje",
+          "ratio": 13.91
+        }
+      ],
+      "issues": []
+    },
+    {
+      "viewport": "mobile-390",
+      "width": 390,
+      "height": 844,
+      "colorScheme": "light",
+      "httpStatus": 200,
+      "screenshot": "/home/pertt/.openclaw/workspace/projects/uutistenlukija/artifacts/visual-qa-monitor-local/20260707T230711Z/mobile-390.png",
+      "title": "Uutistenlukija",
+      "url": "http://127.0.0.1:4317/",
+      "requiredSelectors": [
+        "header",
+        "nav",
+        "main"
+      ],
+      "horizontalOverflow": 0,
+      "brokenImages": [],
+      "overflowingElements": [
+        "a 12..436",
+        "a 12..436",
+        "h2 12..436",
+        "a 350..436",
+        "a 350..436",
+        "a 350..436",
+        "a 350..436",
+        "h2 34..417",
+        "p 34..417",
+        "input 34..417"
+      ],
+      "contrastChecks": [
+        {
+          "selector": ".portal-livebar time",
+          "text": "22:28",
+          "ratio": 10.34
+        },
+        {
+          "selector": ".portal-teaser .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-teaser .portal-kicker",
+          "text": "Urheilu",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-teaser .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-teaser .portal-kicker",
+          "text": "Kotimaa",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Talous",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Kotimaa",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Ulkomaat",
+          "ratio": 5.01
+        },
+        {
+          "selector": ".portal-newsletter h2",
+          "text": "Pysy kartalla.",
+          "ratio": 16.78
+        },
+        {
+          "selector": ".portal-newsletter p",
+          "text": "Tilaa Uutistenlukija-uutiskirje ja saat tärkeimmät uutiset joka aamu.",
+          "ratio": 6.81
+        },
+        {
+          "selector": ".portal-newsletter p",
+          "text": "",
+          "ratio": 6.81
+        },
+        {
+          "selector": ".portal-newsletter input",
+          "text": "",
+          "ratio": 21
+        },
+        {
+          "selector": ".portal-newsletter button",
+          "text": "Tilaa uutiskirje",
+          "ratio": 13.91
+        }
+      ],
+      "issues": [
+        "visible element overflow a 12..436",
+        "visible element overflow a 12..436",
+        "visible element overflow h2 12..436",
+        "visible element overflow a 350..436",
+        "visible element overflow a 350..436",
+        "visible element overflow a 350..436",
+        "visible element overflow a 350..436",
+        "visible element overflow h2 34..417",
+        "visible element overflow p 34..417",
+        "visible element overflow input 34..417"
+      ]
+    },
+    {
+      "viewport": "mobile-390-dark",
+      "width": 390,
+      "height": 844,
+      "colorScheme": "dark",
+      "httpStatus": 200,
+      "screenshot": "/home/pertt/.openclaw/workspace/projects/uutistenlukija/artifacts/visual-qa-monitor-local/20260707T230711Z/mobile-390-dark.png",
+      "title": "Uutistenlukija",
+      "url": "http://127.0.0.1:4317/",
+      "requiredSelectors": [
+        "header",
+        "nav",
+        "main"
+      ],
+      "horizontalOverflow": 0,
+      "brokenImages": [],
+      "overflowingElements": [
+        "a 12..436",
+        "a 12..436",
+        "h2 12..436",
+        "a 350..436",
+        "a 350..436",
+        "a 350..436",
+        "a 350..436",
+        "h2 34..417",
+        "p 34..417",
+        "input 34..417"
+      ],
+      "contrastChecks": [
+        {
+          "selector": ".portal-livebar time",
+          "text": "22:28",
+          "ratio": 10.87
+        },
+        {
+          "selector": ".portal-teaser .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 12.16
+        },
+        {
+          "selector": ".portal-teaser .portal-kicker",
+          "text": "Urheilu",
+          "ratio": 12.16
+        },
+        {
+          "selector": ".portal-teaser .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 12.16
+        },
+        {
+          "selector": ".portal-teaser .portal-kicker",
+          "text": "Kotimaa",
+          "ratio": 12.16
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 12.16
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 12.16
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 12.16
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 12.16
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Talous",
+          "ratio": 12.16
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Kotimaa",
+          "ratio": 12.16
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Teknologia",
+          "ratio": 12.16
+        },
+        {
+          "selector": ".portal-row-card .portal-kicker",
+          "text": "Ulkomaat",
+          "ratio": 12.16
+        },
+        {
+          "selector": ".portal-newsletter h2",
+          "text": "Pysy kartalla.",
+          "ratio": 17.93
+        },
+        {
+          "selector": ".portal-newsletter p",
+          "text": "Tilaa Uutistenlukija-uutiskirje ja saat tärkeimmät uutiset joka aamu.",
+          "ratio": 5.41
+        },
+        {
+          "selector": ".portal-newsletter p",
+          "text": "",
+          "ratio": 5.41
+        },
+        {
+          "selector": ".portal-newsletter input",
+          "text": "",
+          "ratio": 18.21
+        },
+        {
+          "selector": ".portal-newsletter button",
+          "text": "Tilaa uutiskirje",
+          "ratio": 13.91
+        }
+      ],
+      "issues": [
+        "visible element overflow a 12..436",
+        "visible element overflow a 12..436",
+        "visible element overflow h2 12..436",
+        "visible element overflow a 350..436",
+        "visible element overflow a 350..436",
+        "visible element overflow a 350..436",
+        "visible element overflow a 350..436",
+        "visible element overflow h2 34..417",
+        "visible element overflow p 34..417",
+        "visible element overflow input 34..417"
+      ]
+    }
+  ]
+}

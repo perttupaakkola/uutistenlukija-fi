@@ -1,0 +1,199 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-08T16:31:23.010980+00:00",
+  "digest": "c2af9e805c",
+  "packet": {
+    "packet_id": "20260708T163122Z_c2af9e805c",
+    "created_at": "2026-07-08T16:31:22Z",
+    "headline_seed": "Arizona toddler found alive in hospital morgue after declared dead from drowning",
+    "description_seed": "After he was discovered to still be alive, the 18-month-old was flown to another hospital and survived.",
+    "link": "https://www.bbc.co.uk/news/articles/cvg5x0vvrmro?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "The Guardian",
+      "BBC World",
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/cvg5x0vvrmro?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Arizona toddler found alive in hospital morgue after declared dead from drowning"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A US toddler who was found unresponsive in an Arizona pool and declared dead was later discovered to be alive in the hospital's \"cold room\", a newly released police report shows. The family of the 18-month-old frantically called police after they found him face down in the pool at a home in the Phoenix-area suburb of Gilbert on 8 February. First responders were dispatched and performed life-saving measures, before the child was transported to hospital and declared dead an hour later. According to the police report, officers told a physician at the hospital, Dr Aryan Toosi, that they had seen signs of life. The doctor responded, \"please do your thing and let me do my thing\", the report says. \"I went to medical school for a reason,\" Toosi said.",
+        "word_count": 129,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      },
+      {
+        "source": "The Guardian",
+        "source_type": "research",
+        "text": "Officers say they saw signs of life multiple times, and after hospital treated the child, he was taken to hospital’s morgue A toddler who was declared dead after being discovered in a backyard pool in February was actually alive and found hours later in a room that serves as the hospital morgue, recently released police records show. Two Gilbert police officers saw possible signs of life multiple times, but the child was still taken to the hospital’s “cold room” after being treated by staff, according to the documents. “Please do your thing and let me do my thing,” Dr Aryan Toosi told an officer at one point, according to the report. “I went to medical school for a reason.”",
+        "word_count": 119,
+        "keyword_overlap": 10,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "After he was discovered to still be alive, the 18-month-old was flown to another hospital and survived.",
+        "word_count": 17,
+        "keyword_overlap": 9,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Family had gathered to watch the NFL Super Bowl game when police were called to the scene for a reported drowning. Gilbert police arrived to the home around 17:30 MST (00:30 GMT), before the child was taken to Mercy Gilbert Medical Center and pronounced dead at 18:20. \"If there's no objections, I'd like to call time of death,\" Toosi said, according to police officer bodycam video obtained by a local NBC News affiliate. \"Time of death 18:20. Moment of silence,\" the doctor said. A transporter from the Maricopa County Medical Examiner's Office arrived to hospital five hours later and found the child to still be breathing, according to police. He was flown to another hospital where he recovered and has since been released.",
+        "word_count": 123,
+        "keyword_overlap": 8,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "A US toddler who was found unresponsive in an Arizona pool and declared dead was later discovered to be alive in the hospital's \"cold room\", a newly released police report shows. The family of the 18-month-old frantically called police after they found him face down in the pool at a home in the Phoenix-area suburb of Gilbert on 8 February. First responders were dispatched and performed life-saving measures, before the child was transported to hospital and declared dead an hour later. According to the police report, officers told a physician at the hospital, Dr Aryan Toosi, that they had seen signs of life. The doctor responded, \"please do your thing and let me do my thing\", the report says. \"I went to medical school for a reason,\" Toosi said.\n\nOfficers say they saw signs of life multiple times, and after hospital treated the child, he was taken to hospital’s morgue A toddler who was declared dead after being discovered in a backyard pool in February was actually alive and found hours later in a room that serves as the hospital morgue, recently released police records show. Two Gilbert police officers saw possible signs of life multiple times, but the child was still taken to the hospital’s “cold room” after being treated by staff, according to the documents. “Please do your thing and let me do my thing,” Dr Aryan Toosi told an officer at one point, according to the report. “I went to medical school for a reason.”\n\nAfter he was discovered to still be alive, the 18-month-old was flown to another hospital and survived.\n\nFamily had gathered to watch the NFL Super Bowl game when police were called to the scene for a reported drowning. Gilbert police arrived to the home around 17:30 MST (00:30 GMT), before the child was taken to Mercy Gilbert Medical Center and pronounced dead at 18:20. \"If there's no objections, I'd like to call time of death,\" Toosi said, according to police officer bodycam video obtained by a local NBC News affiliate. \"Time of death 18:20. Moment of silence,\" the doctor said. A transporter from the Maricopa County Medical Examiner's Office arrived to hospital five hours later and found the child to still be breathing, according to police. He was flown to another hospital where he recovered and has since been released.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1020,
+      "selected_blocks": 4,
+      "selected_source_words": 388,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "BBC",
+        "BBC",
+        "BBC",
+        "The Guardian",
+        "The Guardian",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "The Guardian",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Arizona toddler found alive in hospital morgue after declared dead from drowning",
+      "description": "After he was discovered to still be alive, the 18-month-old was flown to another hospital and survived.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Arizona toddler found alive in hospital morgue after declared dead from drowning",
+    "description": "After he was discovered to still be alive, the 18-month-old was flown to another hospital and survived.",
+    "link": "https://www.bbc.co.uk/news/articles/cvg5x0vvrmro?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-08T16:12:50+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "bedacf6e64e88d6a5e2fe235f155cac8",
+    "_url_hash": "e49a35141975ed025776dcd0f1b4d2b59eeb5fd9f7b0793c7b18b23cfd8bb17e",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nA US toddler who was found unresponsive in an Arizona pool and declared dead was later discovered to be alive in the hospital's \"cold room\", a newly released police report shows.\n\nThe family of the 18-month-old frantically called police after they found him face down in the pool at a home in the Phoenix-area suburb of Gilbert on 8 February.\n\nFirst responders were dispatched and performed life-saving measures, before the child was transported to hospital and declared dead an hour later.\n\nAccording to the police report, officers told a physician at the hospital, Dr Aryan Toosi, that they had seen signs of life. The doctor responded, \"please do your thing and let me do my thing\", the report says.\n\n\"I went to medical school for a reason,\" Toosi said.\n\nFamily had gathered to watch the NFL Super Bowl game when police were called to the scene for a reported drowning.\n\nGilbert police arrived to the home around 17:30 MST (00:30 GMT), before the child was taken to Mercy Gilbert Medical Center and pronounced dead at 18:20.\n\n\"If there's no objections, I'd like to call time of death,\" Toosi said, according to police officer bodycam video obtained by a local NBC News affiliate.\n\n\"Time of death 18:20. Moment of silence,\" the doctor said.\n\nA transporter from the Maricopa County Medical Examiner's Office arrived to hospital five hours later and found the child to still be breathing, according to police.\n\nHe was flown to another hospital where he recovered and has since been released.\n\nMedical records for the child were not included in the police report, leaving uncertainty about what exactly happened.\n\nThe doctor's attorney, Scott Holden, told the Associated Press \"that there is much more to this case, both factually and medically, than has been reported thus far\".\n\nThe BBC has reached out to Toosi's lawyer for comment.\n\nPolice are recommending negligence charges against the parents.\n\nAccording to the police report, investigators said there was a strong smell of marijuana at the home, which led them to believe the child could have had unsupervised access to the pool.\n\nThe Maricopa County Attorney's Office has not yet said if it would seek to press charges.\n\nMercy Gilbert Medical Center said in a statement that the hospital conducted \"a thorough review of all aspects of the care provided to learn what happened and to make meaningful changes to strengthen our care\".\n\nThe hospital called it \"a heartbreaking situation\" and has declined to release any further details.\n\n---\n\n[Lähde: BBC]\nA US toddler who was found unresponsive in an Arizona pool and declared dead was later discovered to be alive in the hospital's \"cold room\", a newly released police report shows.\n\nThe family of the 18-month-old frantically called police after they found him face down in the pool at a home in the Phoenix-area suburb of Gilbert on 8 February.\n\nFirst responders were dispatched and performed life-saving measures, before the child was transported to hospital and declared dead an hour later.\n\nAccording to the police report, officers told a physician at the hospital, Dr Aryan Toosi, that they had seen signs of life. The doctor responded, \"please do your thing and let me do my thing\", the report says.\n\n\"I went to medical school for a reason,\" Toosi said.\n\nFamily had gathered to watch the NFL Super Bowl game when police were called to the scene for a reported drowning.\n\nGilbert police arrived to the home around 17:30 MST (00:30 GMT), before the child was taken to Mercy Gilbert Medical Center and pronounced dead at 18:20.\n\n\"If there's no objections, I'd like to call time of death,\" Toosi said, according to police officer bodycam video obtained by a local NBC News affiliate.\n\n\"Time of death 18:20. Moment of silence,\" the doctor said.\n\nA transporter from the Maricopa County Medical Examiner's Office arrived to hospital five hours later and found the child to still be breathing, according to police.\n\nHe was flown to another hospital where he recovered and has since been released.\n\nMedical records for the child were not included in the police report, leaving uncertainty about what exactly happened.\n\nThe doctor's attorney, Scott Holden, told the Associated Press \"that there is much more to this case, both factually and medically, than has been reported thus far\".\n\nThe BBC has reached out to Toosi's lawyer for comment.\n\nPolice are recommending negligence charges against the parents.\n\nAccording to the police report, investigators said there was a strong smell of marijuana at the home, which led them to believe the child could have had unsupervised access to the pool.\n\nThe Maricopa County Attorney's Office has not yet said if it would seek to press charges.\n\nMercy Gilbert Medical Center said in a statement that the hospital conducted \"a thorough review of all aspects of the care provided to learn what happened and to make meaningful changes to strengthen our care\".\n\nThe hospital called it \"a heartbreaking situation\" and has declined to release any further details.\n\n---\n\n[Lähde: The Guardian]\nOfficers say they saw signs of life multiple times, and after hospital treated the child, he was taken to hospital’s morgue\n\nA toddler who was declared dead after being discovered in a backyard pool in February was actually alive and found hours later in a room that serves as the hospital morgue, recently released police records show.\n\nTwo Gilbert police officers saw possible signs of life multiple times, but the child was still taken to the hospital’s “cold room” after being treated by staff, according to the documents.\n\n“Please do your thing and let me do my thing,” Dr Aryan Toosi told an officer at one point, according to the report. “I went to medical school for a reason.”\n\nFirst responders were dispatched to the home at about 5.30pm on 8 February in response to a reported drowning. They performed life-saving measures on the child before taking him to a hospital where the boy was pronounced dead about an hour later.\n\nAbout five hours later, police were notified that the child was indeed breathing, and...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-08T16:35:02.177127+00:00",
+  "payload": {
+    "packet_id": "20260708T163122Z_c2af9e805c",
+    "title": "Taapero löytyi elossa sairaalan ruumishuoneesta Arizonassa",
+    "summary": "Arizonassa 18 kuukauden ikäinen lapsi todettiin kuolleeksi uima-allasonnettomuuden jälkeen, mutta hänet löydettiin myöhemmin hengittämästä sairaalan kylmähuoneesta. Lapsi kuljetettiin toiseen sairaalaan, toipui ja on sittemmin päässyt kotiin.",
+    "content": "Arizonassa Yhdysvalloissa 18 kuukauden ikäinen lapsi selvisi hengissä tapauksesta, jossa hänet oli ensin löydetty elottomana uima-altaasta ja todettu myöhemmin kuolleeksi sairaalassa. Hiljattain julkaistujen poliisiasiakirjojen mukaan lapsi havaittiin tuntien kuluttua edelleen hengittäväksi sairaalan kylmähuoneessa, jota käytettiin ruumishuoneena.\n\n## Lapsi löydettiin altaasta\n\nTapaus sattui 8. helmikuuta Gilbertissä, Phoenixin alueella sijaitsevassa esikaupungissa. Perhe oli kokoontunut katsomaan NFL:n Super Bowl -ottelua, kun 18 kuukauden ikäinen lapsi löydettiin kasvot alaspäin kodin uima-altaasta. Perhe soitti hätäkeskukseen ilmoittaakseen hukkumistapauksesta.\n\nGilbertin poliisi saapui paikalle noin kello 17.30 paikallista aikaa. Ensihoitajat aloittivat hengenpelastustoimet, minkä jälkeen lapsi kuljetettiin Mercy Gilbert Medical Center -sairaalaan. Poliisiraportin mukaan lapsi todettiin kuolleeksi sairaalassa noin tuntia myöhemmin, kello 18.20.\n\nRaportissa kerrotaan, että kaksi Gilbertin poliisia näki mahdollisia elonmerkkejä useaan otteeseen. Asiakirjojen mukaan poliisit myös kertoivat havainnoistaan sairaalan lääkärille Aryan Toosille. Raportin mukaan Toosi vastasi poliisille englanniksi: ”please do your thing and let me do my thing”. Hänen kerrotaan sanoneen myös: ”I went to medical school for a reason.”\n\n## Kuolleeksi julistaminen ja kylmähuone\n\nPaikallisen NBC Newsin haltuunsa saaman poliisin vartalokameravideon mukaan Toosi sanoi ennen kuolinajan merkitsemistä: ”If there's no objections, I'd like to call time of death.” Videon mukaan hän ilmoitti kuolinajaksi kello 18.20 ja pyysi hetken hiljaisuutta.\n\nPoliisin asiakirjojen mukaan lapsi vietiin tämän jälkeen sairaalan kylmähuoneeseen, jota käytettiin ruumishuoneena. Hänet oli sitä ennen hoidettu sairaalassa ja todettu kuolleeksi, vaikka poliisit olivat kirjanneet nähneensä mahdollisia merkkejä elämästä.\n\n## Hengitys havaittiin myöhemmin\n\nNoin viisi tuntia myöhemmin sairaalaan saapui Maricopan piirikunnan oikeuslääkärin toimiston kuljettaja. Poliisin mukaan kuljettaja huomasi kylmähuoneessa, että lapsi hengitti edelleen.\n\nHavainnon jälkeen lapsi lennätettiin toiseen sairaalaan jatkohoitoon. Lähdetietojen mukaan hän toipui ja on sittemmin päässyt sairaalasta. Tiedot perustuvat julkaistuihin poliisiraportteihin, joissa kuvataan sekä allasonnettomuutta, sairaalassa tehtyä kuolleeksi toteamista että myöhempää havaintoa lapsen hengityksestä.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Arizona",
+      "Yhdysvallat",
+      "sairaala",
+      "poliisi",
+      "onnettomuus"
+    ],
+    "summary_bullets": [
+      "18 kuukauden ikäinen lapsi löydettiin kasvot alaspäin uima-altaasta Gilbertissä Arizonassa.",
+      "Lapsi todettiin kuolleeksi sairaalassa, vaikka poliisit kertoivat nähneensä mahdollisia elonmerkkejä.",
+      "Hänet löydettiin myöhemmin hengittämästä sairaalan kylmähuoneesta, lennätettiin toiseen sairaalaan ja toipui."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.93,
+    "journalist_note": "Artikkeli perustuu poliisiraportista ja julkaistuista asiakirjoista kerrottuihin tietoihin. Lapsen nimeä ei käytetty, ja alaikäisen yksityisyyttä suojattiin."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260708T163122Z_c2af9e805c\",\n  \"title\": \"Taapero löytyi elossa sairaalan ruumishuoneesta Arizonassa\",\n  \"summary\": \"Arizonassa 18 kuukauden ikäinen lapsi todettiin kuolleeksi uima-allasonnettomuuden jälkeen, mutta hänet löydettiin myöhemmin hengittämästä sairaalan kylmähuoneesta. Lapsi kuljetettiin toiseen sairaalaan, toipui ja on sittemmin päässyt kotiin.\",\n  \"content\": \"Arizonassa Yhdysvalloissa 18 kuukauden ikäinen lapsi selvisi hengissä tapauksesta, jossa hänet oli ensin löydetty elottomana uima-altaasta ja todettu myöhemmin kuolleeksi sairaalassa. Hiljattain julkaistujen poliisiasiakirjojen mukaan lapsi havaittiin tuntien kuluttua edelleen hengittäväksi sairaalan kylmähuoneessa, jota käytettiin ruumishuoneena.\\n\\n## Lapsi löydettiin altaasta\\n\\nTapaus sattui 8. helmikuuta Gilbertissä, Phoenixin alueella sijaitsevassa esikaupungissa. Perhe oli kokoontunut katsomaan NFL:n Super Bowl -ottelua, kun 18 kuukauden ikäinen lapsi löydettiin kasvot alaspäin kodin uima-altaasta. Perhe soitti hätäkeskukseen ilmoittaakseen hukkumistapauksesta.\\n\\nGilbertin poliisi saapui paikalle noin kello 17.30 paikallista aikaa. Ensihoitajat aloittivat hengenpelastustoimet, minkä jälkeen lapsi kuljetettiin Mercy Gilbert Medical Center -sairaalaan. Poliisiraportin mukaan lapsi todettiin kuolleeksi sairaalassa noin tuntia myöhemmin, kello 18.20.\\n\\nRaportissa kerrotaan, että kaksi Gilbertin poliisia näki mahdollisia elonmerkkejä useaan otteeseen. Asiakirjojen mukaan poliisit myös kertoivat havainnoistaan sairaalan lääkärille Aryan Toosille. Raportin mukaan Toosi vastasi poliisille englanniksi: ”please do your thing and let me do my thing”. Hänen kerrotaan sanoneen myös: ”I went to medical school for a reason.”\\n\\n## Kuolleeksi julistaminen ja kylmähuone\\n\\nPaikallisen NBC Newsin haltuunsa saaman poliisin vartalokameravideon mukaan Toosi sanoi ennen kuolinajan merkitsemistä: ”If there's no objections, I'd like to call time of death.” Videon mukaan hän ilmoitti kuolinajaksi kello 18.20 ja pyysi hetken hiljaisuutta.\\n\\nPoliisin asiakirjojen mukaan lapsi vietiin tämän jälkeen sairaalan kylmähuoneeseen, jota käytettiin ruumishuoneena. Hänet oli sitä ennen hoidettu sairaalassa ja todettu kuolleeksi, vaikka poliisit olivat kirjanneet nähneensä mahdollisia merkkejä elämästä.\\n\\n## Hengitys havaittiin myöhemmin\\n\\nNoin viisi tuntia myöhemmin sairaalaan saapui Maricopan piirikunnan oikeuslääkärin toimiston kuljettaja. Poliisin mukaan kuljettaja huomasi kylmähuoneessa, että lapsi hengitti edelleen.\\n\\nHavainnon jälkeen lapsi lennätettiin toiseen sairaalaan jatkohoitoon. Lähdetietojen mukaan hän toipui ja on sittemmin päässyt sairaalasta. Tiedot perustuvat julkaistuihin poliisiraportteihin, joissa kuvataan sekä allasonnettomuutta, sairaalassa tehtyä kuolleeksi toteamista että myöhempää havaintoa lapsen hengityksestä.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Arizona\",\n    \"Yhdysvallat\",\n    \"sairaala\",\n    \"poliisi\",\n    \"onnettomuus\"\n  ],\n  \"summary_bullets\": [\n    \"18 kuukauden ikäinen lapsi löydettiin kasvot alaspäin uima-altaasta Gilbertissä Arizonassa.\",\n    \"Lapsi todettiin kuolleeksi sairaalassa, vaikka poliisit kertoivat nähneensä mahdollisia elonmerkkejä.\",\n    \"Hänet löydettiin myöhemmin hengittämästä sairaalan kylmähuoneesta, lennätettiin toiseen sairaalaan ja toipui.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.93,\n  \"journalist_note\": \"Artikkeli perustuu poliisiraportista ja julkaistuista asiakirjoista kerrottuihin tietoihin. Lapsen nimeä ei käytetty, ja alaikäisen yksityisyyttä suojattiin.\"\n}",
+  "article": {
+    "title": "Taapero löytyi elossa sairaalan ruumishuoneesta Arizonassa",
+    "description": "Arizonassa 18 kuukauden ikäinen lapsi todettiin kuolleeksi uima-allasonnettomuuden jälkeen, mutta hänet löydettiin myöhemmin hengittämästä sairaalan kylmähuoneesta. Lapsi kuljetettiin toiseen sairaalaan, toipui ja on sittemmin päässyt kotiin.",
+    "link": "https://www.bbc.co.uk/news/articles/cvg5x0vvrmro?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-08T16:12:50+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "bedacf6e64e88d6a5e2fe235f155cac8",
+    "_url_hash": "e49a35141975ed025776dcd0f1b4d2b59eeb5fd9f7b0793c7b18b23cfd8bb17e",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nA US toddler who was found unresponsive in an Arizona pool and declared dead was later discovered to be alive in the hospital's \"cold room\", a newly released police report shows.\n\nThe family of the 18-month-old frantically called police after they found him face down in the pool at a home in the Phoenix-area suburb of Gilbert on 8 February.\n\nFirst responders were dispatched and performed life-saving measures, before the child was transported to hospital and declared dead an hour later.\n\nAccording to the police report, officers told a physician at the hospital, Dr Aryan Toosi, that they had seen signs of life. The doctor responded, \"please do your thing and let me do my thing\", the report says.\n\n\"I went to medical school for a reason,\" Toosi said.\n\nFamily had gathered to watch the NFL Super Bowl game when police were called to the scene for a reported drowning.\n\nGilbert police arrived to the home around 17:30 MST (00:30 GMT), before the child was taken to Mercy Gilbert Medical Center and pronounced dead at 18:20.\n\n\"If there's no objections, I'd like to call time of death,\" Toosi said, according to police officer bodycam video obtained by a local NBC News affiliate.\n\n\"Time of death 18:20. Moment of silence,\" the doctor said.\n\nA transporter from the Maricopa County Medical Examiner's Office arrived to hospital five hours later and found the child to still be breathing, according to police.\n\nHe was flown to another hospital where he recovered and has since been released.\n\nMedical records for the child were not included in the police report, leaving uncertainty about what exactly happened.\n\nThe doctor's attorney, Scott Holden, told the Associated Press \"that there is much more to this case, both factually and medically, than has been reported thus far\".\n\nThe BBC has reached out to Toosi's lawyer for comment.\n\nPolice are recommending negligence charges against the parents.\n\nAccording to the police report, investigators said there was a strong smell of marijuana at the home, which led them to believe the child could have had unsupervised access to the pool.\n\nThe Maricopa County Attorney's Office has not yet said if it would seek to press charges.\n\nMercy Gilbert Medical Center said in a statement that the hospital conducted \"a thorough review of all aspects of the care provided to learn what happened and to make meaningful changes to strengthen our care\".\n\nThe hospital called it \"a heartbreaking situation\" and has declined to release any further details.\n\n---\n\n[Lähde: BBC]\nA US toddler who was found unresponsive in an Arizona pool and declared dead was later discovered to be alive in the hospital's \"cold room\", a newly released police report shows.\n\nThe family of the 18-month-old frantically called police after they found him face down in the pool at a home in the Phoenix-area suburb of Gilbert on 8 February.\n\nFirst responders were dispatched and performed life-saving measures, before the child was transported to hospital and declared dead an hour later.\n\nAccording to the police report, officers told a physician at the hospital, Dr Aryan Toosi, that they had seen signs of life. The doctor responded, \"please do your thing and let me do my thing\", the report says.\n\n\"I went to medical school for a reason,\" Toosi said.\n\nFamily had gathered to watch the NFL Super Bowl game when police were called to the scene for a reported drowning.\n\nGilbert police arrived to the home around 17:30 MST (00:30 GMT), before the child was taken to Mercy Gilbert Medical Center and pronounced dead at 18:20.\n\n\"If there's no objections, I'd like to call time of death,\" Toosi said, according to police officer bodycam video obtained by a local NBC News affiliate.\n\n\"Time of death 18:20. Moment of silence,\" the doctor said.\n\nA transporter from the Maricopa County Medical Examiner's Office arrived to hospital five hours later and found the child to still be breathing, according to police.\n\nHe was flown to another hospital where he recovered and has since been released.\n\nMedical records for the child were not included in the police report, leaving uncertainty about what exactly happened.\n\nThe doctor's attorney, Scott Holden, told the Associated Press \"that there is much more to this case, both factually and medically, than has been reported thus far\".\n\nThe BBC has reached out to Toosi's lawyer for comment.\n\nPolice are recommending negligence charges against the parents.\n\nAccording to the police report, investigators said there was a strong smell of marijuana at the home, which led them to believe the child could have had unsupervised access to the pool.\n\nThe Maricopa County Attorney's Office has not yet said if it would seek to press charges.\n\nMercy Gilbert Medical Center said in a statement that the hospital conducted \"a thorough review of all aspects of the care provided to learn what happened and to make meaningful changes to strengthen our care\".\n\nThe hospital called it \"a heartbreaking situation\" and has declined to release any further details.\n\n---\n\n[Lähde: The Guardian]\nOfficers say they saw signs of life multiple times, and after hospital treated the child, he was taken to hospital’s morgue\n\nA toddler who was declared dead after being discovered in a backyard pool in February was actually alive and found hours later in a room that serves as the hospital morgue, recently released police records show.\n\nTwo Gilbert police officers saw possible signs of life multiple times, but the child was still taken to the hospital’s “cold room” after being treated by staff, according to the documents.\n\n“Please do your thing and let me do my thing,” Dr Aryan Toosi told an officer at one point, according to the report. “I went to medical school for a reason.”\n\nFirst responders were dispatched to the home at about 5.30pm on 8 February in response to a reported drowning. They performed life-saving measures on the child before taking him to a hospital where the boy was pronounced dead about an hour later.\n\nAbout five hours later, police were notified that the child was indeed breathing, and...",
+    "research_source": "multi",
+    "summary": "Arizonassa 18 kuukauden ikäinen lapsi todettiin kuolleeksi uima-allasonnettomuuden jälkeen, mutta hänet löydettiin myöhemmin hengittämästä sairaalan kylmähuoneesta. Lapsi kuljetettiin toiseen sairaalaan, toipui ja on sittemmin päässyt kotiin.",
+    "content": "Arizonassa Yhdysvalloissa 18 kuukauden ikäinen lapsi selvisi hengissä tapauksesta, jossa hänet oli ensin löydetty elottomana uima-altaasta ja todettu myöhemmin kuolleeksi sairaalassa. Hiljattain julkaistujen poliisiasiakirjojen mukaan lapsi havaittiin tuntien kuluttua edelleen hengittäväksi sairaalan kylmähuoneessa, jota käytettiin ruumishuoneena.\n\n## Lapsi löydettiin altaasta\n\nTapaus sattui 8. helmikuuta Gilbertissä, Phoenixin alueella sijaitsevassa esikaupungissa. Perhe oli kokoontunut katsomaan NFL:n Super Bowl -ottelua, kun 18 kuukauden ikäinen lapsi löydettiin kasvot alaspäin kodin uima-altaasta. Perhe soitti hätäkeskukseen ilmoittaakseen hukkumistapauksesta.\n\nGilbertin poliisi saapui paikalle noin kello 17.30 paikallista aikaa. Ensihoitajat aloittivat hengenpelastustoimet, minkä jälkeen lapsi kuljetettiin Mercy Gilbert Medical Center -sairaalaan. Poliisiraportin mukaan lapsi todettiin kuolleeksi sairaalassa noin tuntia myöhemmin, kello 18.20.\n\nRaportissa kerrotaan, että kaksi Gilbertin poliisia näki mahdollisia elonmerkkejä useaan otteeseen. Asiakirjojen mukaan poliisit myös kertoivat havainnoistaan sairaalan lääkärille Aryan Toosille. Raportin mukaan Toosi vastasi poliisille englanniksi: ”please do your thing and let me do my thing”. Hänen kerrotaan sanoneen myös: ”I went to medical school for a reason.”\n\n## Kuolleeksi julistaminen ja kylmähuone\n\nPaikallisen NBC Newsin haltuunsa saaman poliisin vartalokameravideon mukaan Toosi sanoi ennen kuolinajan merkitsemistä: ”If there's no objections, I'd like to call time of death.” Videon mukaan hän ilmoitti kuolinajaksi kello 18.20 ja pyysi hetken hiljaisuutta.\n\nPoliisin asiakirjojen mukaan lapsi vietiin tämän jälkeen sairaalan kylmähuoneeseen, jota käytettiin ruumishuoneena. Hänet oli sitä ennen hoidettu sairaalassa ja todettu kuolleeksi, vaikka poliisit olivat kirjanneet nähneensä mahdollisia merkkejä elämästä.\n\n## Hengitys havaittiin myöhemmin\n\nNoin viisi tuntia myöhemmin sairaalaan saapui Maricopan piirikunnan oikeuslääkärin toimiston kuljettaja. Poliisin mukaan kuljettaja huomasi kylmähuoneessa, että lapsi hengitti edelleen.\n\nHavainnon jälkeen lapsi lennätettiin toiseen sairaalaan jatkohoitoon. Lähdetietojen mukaan hän toipui ja on sittemmin päässyt sairaalasta. Tiedot perustuvat julkaistuihin poliisiraportteihin, joissa kuvataan sekä allasonnettomuutta, sairaalassa tehtyä kuolleeksi toteamista että myöhempää havaintoa lapsen hengityksestä.",
+    "category": "Kotimaa",
+    "tags": [
+      "arizona",
+      "yhdysvallat",
+      "sairaala",
+      "poliisi",
+      "onnettomuus"
+    ],
+    "summary_bullets": [
+      "18 kuukauden ikäinen lapsi löydettiin kasvot alaspäin uima-altaasta Gilbertissä Arizonassa.",
+      "Lapsi todettiin kuolleeksi sairaalassa, vaikka poliisit kertoivat nähneensä mahdollisia elonmerkkejä.",
+      "Hänet löydettiin myöhemmin hengittämästä sairaalan kylmähuoneesta, lennätettiin toiseen sairaalaan ja toipui."
+    ],
+    "key_points": [
+      "18 kuukauden ikäinen lapsi löydettiin kasvot alaspäin uima-altaasta Gilbertissä Arizonassa.",
+      "Lapsi todettiin kuolleeksi sairaalassa, vaikka poliisit kertoivat nähneensä mahdollisia elonmerkkejä.",
+      "Hänet löydettiin myöhemmin hengittämästä sairaalan kylmähuoneesta, lennätettiin toiseen sairaalaan ja toipui."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu poliisiraportista ja julkaistuista asiakirjoista kerrottuihin tietoihin. Lapsen nimeä ei käytetty, ja alaikäisen yksityisyyttä suojattiin.",
+    "source_text": "A US toddler who was found unresponsive in an Arizona pool and declared dead was later discovered to be alive in the hospital's \"cold room\", a newly released police report shows. The family of the 18-month-old frantically called police after they found him face down in the pool at a home in the Phoenix-area suburb of Gilbert on 8 February. First responders were dispatched and performed life-saving measures, before the child was transported to hospital and declared dead an hour later. According to the police report, officers told a physician at the hospital, Dr Aryan Toosi, that they had seen signs of life. The doctor responded, \"please do your thing and let me do my thing\", the report says. \"I went to medical school for a reason,\" Toosi said.\n\nOfficers say they saw signs of life multiple times, and after hospital treated the child, he was taken to hospital’s morgue A toddler who was declared dead after being discovered in a backyard pool in February was actually alive and found hours later in a room that serves as the hospital morgue, recently released police records show. Two Gilbert police officers saw possible signs of life multiple times, but the child was still taken to the hospital’s “cold room” after being treated by staff, according to the documents. “Please do your thing and let me do my thing,” Dr Aryan Toosi told an officer at one point, according to the report. “I went to medical school for a reason.”\n\nAfter he was discovered to still be alive, the 18-month-old was flown to another hospital and survived.\n\nFamily had gathered to watch the NFL Super Bowl game when police were called to the scene for a reported drowning. Gilbert police arrived to the home around 17:30 MST (00:30 GMT), before the child was taken to Mercy Gilbert Medical Center and pronounced dead at 18:20. \"If there's no objections, I'd like to call time of death,\" Toosi said, according to police officer bodycam video obtained by a local NBC News affiliate. \"Time of death 18:20. Moment of silence,\" the doctor said. A transporter from the Maricopa County Medical Examiner's Office arrived to hospital five hours later and found the child to still be breathing, according to police. He was flown to another hospital where he recovered and has since been released.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.93,
+    "degraded_mode": false,
+    "monica_packet_id": "20260708T163122Z_c2af9e805c"
+  },
+  "duplicate_rejected_at": "2026-07-08T16:48:01.780595+00:00",
+  "duplicate_rejected": true
+}

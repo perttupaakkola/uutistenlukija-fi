@@ -1,0 +1,192 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-08T16:21:24.768819+00:00",
+  "digest": "6d4fce14c0",
+  "packet": {
+    "packet_id": "20260708T162124Z_6d4fce14c0",
+    "created_at": "2026-07-08T16:21:24Z",
+    "headline_seed": "Another massive data breach exposed millions of driver’s license numbers",
+    "description_seed": "The cyberattack targeting a U.S. insurance giant is the largest known breach of driver's license numbers so far in 2026.",
+    "link": "https://techcrunch.com/2026/07/08/another-massive-data-breach-exposed-millions-of-drivers-license-numbers/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch",
+      "The Daily Hodl",
+      "techtimes"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/07/08/another-massive-data-breach-exposed-millions-of-drivers-license-numbers/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Another massive data breach exposed millions of driver’s license numbers"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "The cyberattack targeting a U.S. insurance giant is the largest known breach of driver's license numbers so far in 2026.",
+        "word_count": 20,
+        "keyword_overlap": 11,
+        "strong_overlap": 8
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "U.S. insurance provider AssuranceAmerica has confirmed a data breach affecting the personal information and driver’s license numbers of 6.9 million people, making it the largest known spill of Americans’ driver’s license information this year. Founded in 1998, AssuranceAmerica provides car and rental insurance to customers across more than a dozen U.S. states. As a large insurance provider, the company handles large amounts of information about prospective insurance customers and vehicle drivers, including their personal information and details about their state-issued driver’s licenses. In the hands of a malicious person, a driver’s license number can be used for fraud and impersonation. ---",
+        "word_count": 101,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      },
+      {
+        "source": "The Daily Hodl",
+        "source_type": "research",
+        "text": "The Texas Parks and Wildlife Department is notifying more than three million residents after a data breach at a third-party vendor exposed sensitive information. The department says an unauthorized actor accessed the vendor’s systems and obtained driver’s license details, passport numbers where provided, email addresses, phone numbers and residential addresses. “We recognize the seriousness of this issue and have identified and implemented additional security options to better protect customer information. Many of our staff are hunters and anglers and were affected by this incident. We are committed to continuing to work with the license system vendor to implement increased safeguards to prevent future incidents.” The agency says it acted swiftly upon detection to notify affected individuals and offer one year of free credit monitoring. Investigations by Texas Cyber Command are underway to assess the full scope of the incident.",
+        "word_count": 139,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      },
+      {
+        "source": "techtimes",
+        "source_type": "research",
+        "text": "The Texas Parks and Wildlife Department disclosed on June 18 that attackers had breached the third-party vendor that processes its hunting and fishing license sales — exposing the driver's license numbers, passport numbers, and contact information of 3,087,721 Texans in what state officials are calling the largest government data breach in Texas this year. Unlike passwords or credit card numbers, those identifiers cannot be reset. Any Texan who has purchased a hunting or fishing license in recent years should treat this breach as a permanent, long-term identity risk and take protective action before fraud begins.",
+        "word_count": 95,
+        "keyword_overlap": 6,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "The cyberattack targeting a U.S. insurance giant is the largest known breach of driver's license numbers so far in 2026.\n\nU.S. insurance provider AssuranceAmerica has confirmed a data breach affecting the personal information and driver’s license numbers of 6.9 million people, making it the largest known spill of Americans’ driver’s license information this year. Founded in 1998, AssuranceAmerica provides car and rental insurance to customers across more than a dozen U.S. states. As a large insurance provider, the company handles large amounts of information about prospective insurance customers and vehicle drivers, including their personal information and details about their state-issued driver’s licenses. In the hands of a malicious person, a driver’s license number can be used for fraud and impersonation. ---\n\nThe Texas Parks and Wildlife Department is notifying more than three million residents after a data breach at a third-party vendor exposed sensitive information. The department says an unauthorized actor accessed the vendor’s systems and obtained driver’s license details, passport numbers where provided, email addresses, phone numbers and residential addresses. “We recognize the seriousness of this issue and have identified and implemented additional security options to better protect customer information. Many of our staff are hunters and anglers and were affected by this incident. We are committed to continuing to work with the license system vendor to implement increased safeguards to prevent future incidents.” The agency says it acted swiftly upon detection to notify affected individuals and offer one year of free credit monitoring. Investigations by Texas Cyber Command are underway to assess the full scope of the incident.\n\nThe Texas Parks and Wildlife Department disclosed on June 18 that attackers had breached the third-party vendor that processes its hunting and fishing license sales — exposing the driver's license numbers, passport numbers, and contact information of 3,087,721 Texans in what state officials are calling the largest government data breach in Texas this year. Unlike passwords or credit card numbers, those identifiers cannot be reset. Any Texan who has purchased a hunting or fishing license in recent years should treat this breach as a permanent, long-term identity risk and take protective action before fraud begins.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 917,
+      "selected_blocks": 4,
+      "selected_source_words": 355,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "The Daily Hodl",
+        "The Daily Hodl",
+        "techtimes",
+        "techtimes",
+        "techtimes",
+        "techtimes",
+        "Bleeping Computer",
+        "Bleeping Computer",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch",
+        "The Daily Hodl",
+        "techtimes"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Another massive data breach exposed millions of driver’s license numbers",
+      "description": "The cyberattack targeting a U.S. insurance giant is the largest known breach of driver's license numbers so far in 2026.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Another massive data breach exposed millions of driver’s license numbers",
+    "description": "The cyberattack targeting a U.S. insurance giant is the largest known breach of driver's license numbers so far in 2026.",
+    "link": "https://techcrunch.com/2026/07/08/another-massive-data-breach-exposed-millions-of-drivers-license-numbers/",
+    "published": "2026-07-08T16:14:49+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "130b94b02b3c42a224242ac2dc33661a",
+    "_url_hash": "ee04d58f905b986b55840e01071cc8f950be5f94e56ad409ffd74f9b1e74ef98",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nU.S. insurance provider AssuranceAmerica has confirmed a data breach affecting the personal information and driver’s license numbers of 6.9 million people, making it the largest known spill of Americans’ driver’s license information this year.\n\nFounded in 1998, AssuranceAmerica provides car and rental insurance to customers across more than a dozen U.S. states. As a large insurance provider, the company handles large amounts of information about prospective insurance customers and vehicle drivers, including their personal information and details about their state-issued driver’s licenses. In the hands of a malicious person, a driver’s license number can be used for fraud and impersonation.\n\n---\n\n[Lähde: The Daily Hodl]\nThe Texas Parks and Wildlife Department is notifying more than three million residents after a data breach at a third-party vendor exposed sensitive information.\n\nThe department says an unauthorized actor accessed the vendor’s systems and obtained driver’s license details, passport numbers where provided, email addresses, phone numbers and residential addresses.\n\n“We recognize the seriousness of this issue and have identified and implemented additional security options to better protect customer information.\n\nMany of our staff are hunters and anglers and were affected by this incident. We are committed to continuing to work with the license system vendor to implement increased safeguards to prevent future incidents.”\n\nThe agency says it acted swiftly upon detection to notify affected individuals and offer one year of free credit monitoring.\n\nInvestigations by Texas Cyber Command are underway to assess the full scope of the incident.\n\nThe department emphasized its commitment to working with the vendor on enhanced safeguards.\n\nCovering the future of finance, including macro, bitcoin, ethereum, crypto, and web 3.\n\nBitcoin • Ethereum • Trading •\nAltcoins • Futuremash • Financeflux •\nBlockchain • Regulators • Scams •\nHodlX • Press Releases\n\nABOUT US | EDITORIAL POLICY | PRIVACY POLICY\nTERMS AND CONDITIONS  | CONTACT | ADVERTISE\n\n---\n\n[Lähde: techtimes]\nThe Texas Parks and Wildlife Department disclosed on June 18 that attackers had breached the third-party vendor that processes its hunting and fishing license sales — exposing the driver's license numbers, passport numbers, and contact information of 3,087,721 Texans in what state officials are calling the largest government data breach in Texas this year. Unlike passwords or credit card numbers, those identifiers cannot be reset. Any Texan who has purchased a hunting or fishing license in recent years should treat this breach as a permanent, long-term identity risk and take protective action before fraud begins.\n\nThe breach is not only a Texas story. Threat intelligence reports suggest it may be part of a broader campaign by the same actor against state wildlife licensing platforms across the country — a pattern that raises urgent questions about whether the niche software vendors that manage hunting and fishing licenses for dozens of states are being systematically targeted without adequate security standards in place.\n\nTexas Cyber Command detected unauthorized access to the licensing vendor's systems, and TPWD notified the command on May 13, 2026. The department published its formal data breach notification on June 12 and made a public disclosure on June 18. The investigation has not determined the date the initial breach occurred, the method of entry, or the total duration of unauthorized access.\n\nTPWD confirmed that the exposed data includes driver's license information, passport numbers (where customers provided them), email addresses, phone numbers, and residential addresses for 3,087,721 individuals. The department stated that Social Security numbers, dates of birth, and financial information including credit card details were not obtained in the incident. A spokesperson told Newsweek: \"We believe current and future customer data are not at risk.\" The full Texas Parks and Wildlife Department notification is available on the department's website.\n\nHowever, at least one discrepancy exists in the public record. The Register, citing the department's filing with the Texas Attorney General's Office, reported that the filing appeared to list names and Social Security numbers among the data involved — contradicting TPWD's public disclosure. TPWD has not publicly addressed this conflict. The investigation is ongoing, and the full scope of the breach has not been confirmed by independent forensic analysis.\n\nTPWD has not named the third-party vendor whose sys\n\n---\n\n[Lähde: Bleeping Computer]\nThe Texas Parks and Wildlife Department (TPWD) disclosed a data breach at its license system vendor that exposed personal information for more than three million individuals.\n\nThe Texas Cyber Command discovered the intrusion and launched an investigation to determine the extent and impact of the unauthorized access. The state authority found that Social Security Numbers (SSNs), dates of birth, or any financial information, such as credit cards, have not been impacted.\n\nHowever, the threat actor may have obtained personally identifiable information that includes the following data types associated with 3,087,721 Texas hunting and fishing license customers:\n\nThe exposed data set is sufficient for hackers to target impacted individuals in phishing and social engineering attacks that lead to web pages distributing malware or seeking more sensitive information.\n\n\"There is no evidence that customers under the age of 18 were involved or that any specific group was targeted,\" TPWD says in the data breach notification.\n\nTPWD is the Texas state agency responsible for managing wildlife and fisheries, state parks, conservation programs, hunting and fishing regulations, boating registration, and enforcement by Texas Game Wardens.\n\nThe Texas state agency also issues hunting and fishing licenses and permits, which are sold through an external vendor.\n\nBleepingComputer contacted TPWD for more information about the incident and the name of the third-p...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-08T16:37:11.423621+00:00",
+  "failure": "content too short: 249 words",
+  "payload": {
+    "packet_id": "20260708T162124Z_6d4fce14c0",
+    "title": "Yhdysvaltalaiselta vakuutusyhtiöltä vuoti 6,9 miljoonan ihmisen ajokorttitietoja",
+    "summary": "AssuranceAmerica on vahvistanut tietomurron, jossa paljastui 6,9 miljoonan ihmisen henkilötietoja ja ajokorttinumeroita. Kyseessä on tiettävästi suurin yhdysvaltalaisten ajokorttitietoihin kohdistunut vuoto tänä vuonna.",
+    "content": "Yhdysvaltalainen vakuutusyhtiö AssuranceAmerica on vahvistanut tietomurron, joka koskee 6,9 miljoonan ihmisen henkilötietoja ja ajokorttinumeroita. Tapausta pidetään toistaiseksi vuoden 2026 suurimpana tunnettuna yhdysvaltalaisten ajokorttitietojen vuotona, ja se korostaa, kuinka pysyviä tunnistetietoja sisältävät murrot voivat aiheuttaa pitkäaikaisia riskejä.\n\n## Vakuutusyhtiö käsittelee laajoja henkilötietoja\n\nAssuranceAmerica tarjoaa auto- ja vuokravakuutuksia asiakkaille yli tusinassa Yhdysvaltain osavaltiossa. Vuonna 1998 perustettu yhtiö käsittelee liiketoimintansa vuoksi suuria määriä tietoja vakuutusta hakevista asiakkaista ja ajoneuvojen kuljettajista. Näihin tietoihin kuuluu henkilökohtaisia tietoja sekä osavaltioiden myöntämiin ajokortteihin liittyviä yksityiskohtia.\n\nAjokorttinumero on rikolliselle käyttökelpoinen tieto, koska sitä voidaan hyödyntää petoksissa ja toisena henkilönä esiintymisessä. Toisin kuin salasanoja tai maksukortteja, ajokorttiin liittyviä tunnistetietoja ei voi yleensä vaihtaa nopeasti tai helposti. Siksi tällaisen tiedon paljastuminen voi jäädä vaikuttamaan uhrien arkeen pitkäksi aikaa.\n\n## Toinen suuri murto koski teksasilaisia lupa-asiakkaita\n\nAjokorttitietojen vuotoja on tänä vuonna tullut ilmi myös viranomaispalvelujen kautta. Texas Parks and Wildlife Department ilmoitti 18. kesäkuuta tietomurrosta, joka tapahtui sen metsästys- ja kalastuslupia käsittelevän kolmannen osapuolen järjestelmissä. Tapauksessa paljastui 3 087 721 teksasilaisen ajokorttitietoja, mahdollisesti annettuja passinumeroita, sähköpostiosoitteita, puhelinnumeroita ja kotiosoitteita.\n\nViranomaisen mukaan luvaton toimija pääsi toimittajan järjestelmiin ja sai haltuunsa arkaluonteisia asiakastietoja. Osasto on kertonut ilmoittavansa asiasta yli kolmelle miljoonalle asukkaalle ja tarjoavansa vuoden maksuttoman luottovalvonnan. Texas Cyber Command selvittää edelleen tapahtuman täyttä laajuutta.\n\n## Lisäsuojauksia selvitysten rinnalla\n\nTexas Parks and Wildlife Department on sanonut tunnistaneensa ja ottaneensa käyttöön uusia turvavaihtoehtoja asiakastietojen suojaamiseksi. Viranomaisen mukaan myös osa sen omasta henkilöstöstä, kuten metsästäjät ja kalastajat, kuului vaikutusten piiriin. Osasto kertoo jatkavansa lupajärjestelmän toimittajan kanssa lisäsuojausten toteuttamista, jotta vastaavia tapauksia voitaisiin ehkäistä jatkossa.",
+    "category": "Teknologia",
+    "tags": [
+      "tietomurto",
+      "kyberturvallisuus",
+      "henkilötiedot",
+      "vakuutusala",
+      "Yhdysvallat"
+    ],
+    "summary_bullets": [
+      "AssuranceAmerica vahvisti tietomurron, joka koskee 6,9 miljoonaa ihmistä.",
+      "Vuodossa paljastui henkilötietoja ja ajokorttinumeroita.",
+      "Texasissa erillinen kolmannen osapuolen murto paljasti yli kolmen miljoonan asukkaan tietoja."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu annettuihin lähdekatkelmiin. AssuranceAmerican murron tarkkaa ajankohtaa tai hyökkääjän yksityiskohtia ei lähdeaineistossa kerrottu, joten niitä ei lisätty."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260708T162124Z_6d4fce14c0\",\n  \"title\": \"Yhdysvaltalaiselta vakuutusyhtiöltä vuoti 6,9 miljoonan ihmisen ajokorttitietoja\",\n  \"summary\": \"AssuranceAmerica on vahvistanut tietomurron, jossa paljastui 6,9 miljoonan ihmisen henkilötietoja ja ajokorttinumeroita. Kyseessä on tiettävästi suurin yhdysvaltalaisten ajokorttitietoihin kohdistunut vuoto tänä vuonna.\",\n  \"content\": \"Yhdysvaltalainen vakuutusyhtiö AssuranceAmerica on vahvistanut tietomurron, joka koskee 6,9 miljoonan ihmisen henkilötietoja ja ajokorttinumeroita. Tapausta pidetään toistaiseksi vuoden 2026 suurimpana tunnettuna yhdysvaltalaisten ajokorttitietojen vuotona, ja se korostaa, kuinka pysyviä tunnistetietoja sisältävät murrot voivat aiheuttaa pitkäaikaisia riskejä.\\n\\n## Vakuutusyhtiö käsittelee laajoja henkilötietoja\\n\\nAssuranceAmerica tarjoaa auto- ja vuokravakuutuksia asiakkaille yli tusinassa Yhdysvaltain osavaltiossa. Vuonna 1998 perustettu yhtiö käsittelee liiketoimintansa vuoksi suuria määriä tietoja vakuutusta hakevista asiakkaista ja ajoneuvojen kuljettajista. Näihin tietoihin kuuluu henkilökohtaisia tietoja sekä osavaltioiden myöntämiin ajokortteihin liittyviä yksityiskohtia.\\n\\nAjokorttinumero on rikolliselle käyttökelpoinen tieto, koska sitä voidaan hyödyntää petoksissa ja toisena henkilönä esiintymisessä. Toisin kuin salasanoja tai maksukortteja, ajokorttiin liittyviä tunnistetietoja ei voi yleensä vaihtaa nopeasti tai helposti. Siksi tällaisen tiedon paljastuminen voi jäädä vaikuttamaan uhrien arkeen pitkäksi aikaa.\\n\\n## Toinen suuri murto koski teksasilaisia lupa-asiakkaita\\n\\nAjokorttitietojen vuotoja on tänä vuonna tullut ilmi myös viranomaispalvelujen kautta. Texas Parks and Wildlife Department ilmoitti 18. kesäkuuta tietomurrosta, joka tapahtui sen metsästys- ja kalastuslupia käsittelevän kolmannen osapuolen järjestelmissä. Tapauksessa paljastui 3 087 721 teksasilaisen ajokorttitietoja, mahdollisesti annettuja passinumeroita, sähköpostiosoitteita, puhelinnumeroita ja kotiosoitteita.\\n\\nViranomaisen mukaan luvaton toimija pääsi toimittajan järjestelmiin ja sai haltuunsa arkaluonteisia asiakastietoja. Osasto on kertonut ilmoittavansa asiasta yli kolmelle miljoonalle asukkaalle ja tarjoavansa vuoden maksuttoman luottovalvonnan. Texas Cyber Command selvittää edelleen tapahtuman täyttä laajuutta.\\n\\n## Lisäsuojauksia selvitysten rinnalla\\n\\nTexas Parks and Wildlife Department on sanonut tunnistaneensa ja ottaneensa käyttöön uusia turvavaihtoehtoja asiakastietojen suojaamiseksi. Viranomaisen mukaan myös osa sen omasta henkilöstöstä, kuten metsästäjät ja kalastajat, kuului vaikutusten piiriin. Osasto kertoo jatkavansa lupajärjestelmän toimittajan kanssa lisäsuojausten toteuttamista, jotta vastaavia tapauksia voitaisiin ehkäistä jatkossa.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"tietomurto\",\n    \"kyberturvallisuus\",\n    \"henkilötiedot\",\n    \"vakuutusala\",\n    \"Yhdysvallat\"\n  ],\n  \"summary_bullets\": [\n    \"AssuranceAmerica vahvisti tietomurron, joka koskee 6,9 miljoonaa ihmistä.\",\n    \"Vuodossa paljastui henkilötietoja ja ajokorttinumeroita.\",\n    \"Texasissa erillinen kolmannen osapuolen murto paljasti yli kolmen miljoonan asukkaan tietoja.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu annettuihin lähdekatkelmiin. AssuranceAmerican murron tarkkaa ajankohtaa tai hyökkääjän yksityiskohtia ei lähdeaineistossa kerrottu, joten niitä ei lisätty.\"\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260708T162124Z_6d4fce14c0",
+    "category": "Teknologia",
+    "selected_source_words": 355,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 249,
+    "issues": [
+      "content too short: 249 words"
+    ],
+    "source_backed": true,
+    "near_miss_short": true,
+    "retry_classification": "repair_near_miss_short",
+    "fail_closed": true,
+    "title": "Yhdysvaltalaiselta vakuutusyhtiöltä vuoti 6,9 miljoonan ihmisen ajokorttitietoja",
+    "repair_attempt": "source_backed_near_short",
+    "repair_attempted_at": "2026-07-08T16:37:11.423295+00:00",
+    "repair_trigger": "pre_repair_word_count=249; selected_source_words=355; selected_source_blocks=4",
+    "pre_repair_word_count": 249,
+    "pre_repair_lead_word_count": 36,
+    "post_repair_word_count": 249,
+    "post_repair_lead_word_count": 36,
+    "selected_source_words_at_repair": 355,
+    "selected_source_blocks_at_repair": 4,
+    "source_words": 355,
+    "source_blocks": 4,
+    "repair_added_word_count": 0,
+    "repair_result": "still_short",
+    "repair_rejection_reason": "content too short: 249 words",
+    "source_block_ids_used_for_repair": [
+      "1:TechCrunch:c7512553d5",
+      "2:TechCrunch:d5be65170d",
+      "3:The Daily Hodl:c4d8590f52",
+      "4:techtimes:883ca7ba15"
+    ],
+    "final_issues": [
+      "content too short: 249 words"
+    ],
+    "recovered": false
+  }
+}
