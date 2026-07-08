@@ -47,7 +47,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Artikkeli/Calgaryn-Saddledome-n%C3%A4ki-Leijonien-ensimm%C3%A4isen-olympiamitalin-mutta-pian-se-luovuttaa-valtikan-eteenp%C3%A4in/186312"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
