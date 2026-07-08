@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-08T00:41:18.220130+00:00",
+  "digest": "8addbc414f",
+  "packet": {
+    "packet_id": "20260708T004118Z_8addbc414f",
+    "created_at": "2026-07-08T00:41:18Z",
+    "headline_seed": "Pyhimys jää sairaslomalle, artistin tiedot katosivat ohjelmatoimiston sivuilta",
+    "description_seed": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9601019",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/uutissuomalainen/9601019"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Pyhimys jää sairaslomalle, artistin tiedot katosivat ohjelmatoimiston sivuilta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 87,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Pyhimys jää sairaslomalle, artistin tiedot katosivat ohjelmatoimiston sivuilta",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Pyhimys jää sairaslomalle, artistin tiedot katosivat ohjelmatoimiston sivuilta",
+    "description": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9601019",
+    "published": "2026-07-07T22:00:50+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "1a3714eeb8d6fc23fdf2ab04d4d33a05",
+    "_url_hash": "1e46f1dfdb63f291e9cdd1c5a5f28b5ec80341f608626e251c7ae71fc3b407ab",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nJyväskylässä Ruokkeentiellä Palokassa liikenne jonoutui keskiviikkona iltapäivällä kello 16 jälkeen.\n\nFintrafficin tieliikennekeskuksen mukaan raskas ajoneuvo oli jumissa Palokanorren kahden liikenneympyrän välillä.\n\nTilanteen vuoksi tie 16685 oli Palokanorren kohdalta jonkin aikaa kokonaan suljettu liikenteeltä. Liikenne alkoi sujua normaalisti vähän kello 17 jälkeen.\n\nYlen visuaalisen journalistin Jarkko Riikosen mukaan poliisi kertoi paikan päällä, että raskaaseen ajoneuvoon oli tullut tekninen vika ja tielle valui öljyä. Pelastuslaitos imeytti öljyä tien pinnasta valkoiseen imeytysaineeseen.\n\nRikkoutunut raskas ajoneuvo hinattiin pois paikalta.\n\nFintraffic tiedotti kello 17 jälkeen, että tiellä on kiertoliittymien välillä edelleen öljyä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-08T00:43:18.579700+00:00",
+  "failure": "Paketissa ei ole varsinaista lähdetekstiä tai varmistettuja yksityiskohtia artikkelin kirjoittamiseen ilman keksittyjä tietoja.",
+  "raw_response": "{\"packet_id\":\"20260708T004118Z_8addbc414f\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole varsinaista lähdetekstiä tai varmistettuja yksityiskohtia artikkelin kirjoittamiseen ilman keksittyjä tietoja.\"}"
+}
