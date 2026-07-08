@@ -47,7 +47,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/pelaajat-raivostuivat-sonylle-ps-plus-tilauksia-perutaan-sankoin-joukoin/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 

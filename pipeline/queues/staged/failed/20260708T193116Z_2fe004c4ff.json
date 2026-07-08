@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-08T19:31:16.886295+00:00",
+  "digest": "2fe004c4ff",
+  "packet": {
+    "packet_id": "20260708T193116Z_2fe004c4ff",
+    "created_at": "2026-07-08T19:31:16Z",
+    "headline_seed": "Nato-huippukokoukseen ilmestyi kaksi kissaa – hyppivät pöydille",
+    "description_seed": "Kissat ovat emo ja pentu.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012129802.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.is.fi/ulkomaat/art-2000012129802.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Nato-huippukokoukseen ilmestyi kaksi kissaa – hyppivät pöydille"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 170,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Kouvolan Sanomat",
+        "Kouvolan Sanomat",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Nato-huippukokoukseen ilmestyi kaksi kissaa – hyppivät pöydille",
+      "description": "Kissat ovat emo ja pentu.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Nato-huippukokoukseen ilmestyi kaksi kissaa – hyppivät pöydille",
+    "description": "Kissat ovat emo ja pentu.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012129802.html",
+    "published": "2026-07-08T19:15:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "8a4562667110b6357e3e2b25458209cf",
+    "_url_hash": "6f274408b5d8fc086692c9e6b238a1f94a349447c4aedc97fe7aa73f6cf8a393",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: Kouvolan Sanomat]\nJoulukuussa 2025 menehtynyt Popedan ex-solisti Pauli \"Pate\" Mustajärvi kertoo uutuuskirjassa kokeneensa, että Popedan historiaa yritettiin kirjoittaa uudelleen hänen lähtönsä jälkeen, Ilta-Sanomat uutisoi.\n\n”Paitsi Ilarin ja Arwon myös meidän muiden kovien biisintekijöiden ansiot tuppasivat jäämään nyky-Popedan menossa unholaan\", Mustajärvi kertoo kirjassa Ilta-Sanomien mukaan.\n\nMustajärven ystävä ja kitaristi Ari ”Kankku” Kankaanpää oletti Popedan loppuvan Mustajärven lähdön seurauksena, kirjassa kerrotaan. Kankaanpään mukaan Mustajärvi olisi itsekin halunnut näin.\n\nPopedan nykyinen laulaja Olli Herman aloitti yhtyeessä vuonna 2024.\n\nYllätyksenä Mustajärvi kuitenkin antoi siunauksensa yhtyeen jatkamiselle Ylen Popeda: Toiseen elämään -dokumentissa.\n\nNäin sukupolvenvaihdosta puidaan kirjassa:\n\n”Paten puheet ’viestikapulan antamisesta seuraavalle sukupolvelle’ elämäntyönsä suhteen olivat Kankulle yllätys ja järkytys. Hän sanoo puhuneensa Paulin kanssa kymmenien vuosien ajan, että niin ei voisi missään tapauksessa tapahtua. ’Kyllä sitä dokumenttia katsoessa selkänikamat niksahtelivat’.\"\n\nMustajärvi päätti Popedan lähdön jälkeen, että esittäisi soolokeikoillaan Popedan tuotannosta ainoastaan kappaleita, jotka hän itse oli sanoittanut, ja jotka oli säveltänyt Arwo Mikkonen, Ilari ”Ilpo” Ainiala tai Markku Petander.\n\nTiina Finnin kirjoittama Testamenttini-kirja julkaistiin 8. heinäkuuta. Mustajärvi suunnitteli kirjan julkaistavaksi hänen 70-vuotisjuhlavuotenaan.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-08T19:33:20.333652+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "{\"packet_id\":\"20260708T193116Z_2fe004c4ff\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}
