@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-09T04:01:22.544233+00:00",
+  "digest": "5869cf61f0",
+  "packet": {
+    "packet_id": "20260709T040122Z_5869cf61f0",
+    "created_at": "2026-07-09T04:01:22Z",
+    "headline_seed": "Suomessa on \"ihan kuollut\" kaupunki, jossa asuu \"vittumaista väkeä\" – Menimme paikalle",
+    "description_seed": "Porin keskusta palkittiin takavuosina Suomen parhaana. Nyt se on yksi kuolleimmista. Lähes kaikki paikalliset kertovat yhdestä asiasta, joka muutti kaiken. Esiin nousee myös porilaisuuden ydin – vittumaisuus. Aavekaupunki. Tai ainakin hyvin lähellä sitä.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/d010ea98-9bc0-4fbe-8ccc-917ce97602e5?utm_source=rss",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/kotimaa/a/d010ea98-9bc0-4fbe-8ccc-917ce97602e5?utm_source=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.51,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suomessa on \"ihan kuollut\" kaupunki, jossa asuu \"vittumaista väkeä\" – Menimme paikalle"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Porin keskusta palkittiin takavuosina Suomen parhaana. Nyt se on yksi kuolleimmista. Lähes kaikki paikalliset kertovat yhdestä asiasta, joka muutti kaiken. Esiin nousee myös porilaisuuden ydin – vittumaisuus. Aavekaupunki. Tai ainakin hyvin lähellä sitä.",
+        "word_count": 33,
+        "keyword_overlap": 25,
+        "strong_overlap": 18
+      }
+    ],
+    "source_text": "Porin keskusta palkittiin takavuosina Suomen parhaana. Nyt se on yksi kuolleimmista. Lähes kaikki paikalliset kertovat yhdestä asiasta, joka muutti kaiken. Esiin nousee myös porilaisuuden ydin – vittumaisuus. Aavekaupunki. Tai ainakin hyvin lähellä sitä.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 66,
+      "selected_blocks": 1,
+      "selected_source_words": 33,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suomessa on \"ihan kuollut\" kaupunki, jossa asuu \"vittumaista väkeä\" – Menimme paikalle",
+      "description": "Porin keskusta palkittiin takavuosina Suomen parhaana. Nyt se on yksi kuolleimmista. Lähes kaikki paikalliset kertovat yhdestä asiasta, joka muutti kaiken. Esiin nousee myös porilaisuuden ydin – vittumaisuus. Aavekaupunki. Tai ainakin hyvin lähellä sitä.",
+      "category_hint": "Kotimaa",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Suomessa on \"ihan kuollut\" kaupunki, jossa asuu \"vittumaista väkeä\" – Menimme paikalle",
+    "description": "Porin keskusta palkittiin takavuosina Suomen parhaana. Nyt se on yksi kuolleimmista. Lähes kaikki paikalliset kertovat yhdestä asiasta, joka muutti kaiken. Esiin nousee myös porilaisuuden ydin – vittumaisuus. Aavekaupunki. Tai ainakin hyvin lähellä sitä.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/d010ea98-9bc0-4fbe-8ccc-917ce97602e5?utm_source=rss",
+    "published": "2026-07-09T06:00:14+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "2f9ff57faa7d68ae9819f128c8e92014",
+    "_url_hash": "2aa4fe0f144e05fd055115f922e2a7eab25b2364d28edde02b237795a37cdd91",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Porin keskusta palkittiin takavuosina Suomen parhaana. Nyt se on yksi kuolleimmista. Lähes kaikki paikalliset kertovat yhdestä asiasta, joka muutti kaiken. Esiin nousee myös porilaisuuden ydin – vittumaisuus. Aavekaupunki. Tai ainakin hyvin lähellä sitä.",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-07-09T04:03:20.262093+00:00",
+  "failure": "Lähdeaineisto on hyvin niukka teaseriteksti, eikä se kerro riittävästi varmistettuja yksityiskohtia 250 sanan julkaistavaan uutisartikkeliin ilman arvailua.",
+  "raw_response": "{\"packet_id\":\"20260709T040122Z_5869cf61f0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on hyvin niukka teaseriteksti, eikä se kerro riittävästi varmistettuja yksityiskohtia 250 sanan julkaistavaan uutisartikkeliin ilman arvailua.\"}"
+}
