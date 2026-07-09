@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-09T05:11:16.762270+00:00",
+  "digest": "b4676d5983",
+  "packet": {
+    "packet_id": "20260709T051116Z_b4676d5983",
+    "created_at": "2026-07-09T05:11:16Z",
+    "headline_seed": "FIFA ei armahtanut syöttökuningasta – keltainen kortti voi käydä kalliiksi MM-puolivälierässä",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9604383",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9604383"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "FIFA ei armahtanut syöttökuningasta – keltainen kortti voi käydä kalliiksi MM-puolivälierässä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 147,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen",
+        "Keskisuomalainen"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "FIFA ei armahtanut syöttökuningasta – keltainen kortti voi käydä kalliiksi MM-puolivälierässä",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "FIFA ei armahtanut syöttökuningasta – keltainen kortti voi käydä kalliiksi MM-puolivälierässä",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9604383",
+    "published": "2026-07-09T07:49:39+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "ef49f15a97c78d5a53df9686db95435e",
+    "_url_hash": "3b14441899a69e68c925bb9f65d453c2f9275751bf94721350558c3bc074f5a7",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keskisuomalainen]\nRanska yritti saada kumottua Michael Oliselle Paraguay-neljännesvälierässä annetun keltaisen kortin, mutta FIFA hylkäsi valituksen ja varoitus pysyy voimassa.\n\nOlise on lopputurnauksen syöttökuningas viidellä maaliin johtaneella syötöllään ja avainroolissa Ranskan hyökkäyksien rakentamisessa. Mikäli Ranska etenee välieriin mutta Olise ottaa ottelussa keltaisen kortin, hän ei voi pelata tulevassa välieräottelussa.\n\nRanska–Marokko-ottelun alla katse kiinnittyy myös seitsemään muuhun pelaajaan, joiden tililtä löytyy keltainen kortti ja jotka ovat vaarassa joutua ulos mahdollisesta välieräottelusta. Olisen lisäksi Ranskan pelaajista vaaravyöhykkeellä ovat kiihkeässä Paraguay-ottelussa keltaista nähneet keskikenttäpelaaja Manu Kone sekä hyökkääjä Bradley Barcola.\n\nMarokon riveissä sama tilanne on viidellä pelaajalla. Issa Diop, Azzedine Ounahi, Bilal El Khannouss, Achraf Hakimi ja Redouane Halhal joutuvat tarkkailemaan otteitaan välttääkseen mahdollisen välierän pelikiellon. Erityisesti kaksi maalia Kanada-neljännesvälierässä tehneen Ounahin tai avainpuolustaja Hakimin poissaolot olisivat Atlaksen leijonille isoja menetyksiä.\n\nLohkovaiheen keltaiset kortit pyyhittiin ennen pudotuspelejä, ja korttitili nollautuu uudelleen puolivälierien jälkeen. Siksi puolivälierässä toisen pudotuspelivaroituksensa saava pelaaja menettää mahdollisen välierän.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-09T05:13:20.226307+00:00",
+  "failure": "Paketissa ei ole lähdetekstiä tai varmennettuja perustietoja artikkelin kirjoittamiseen ilman keksittyjä tietoja.",
+  "raw_response": "{\"packet_id\":\"20260709T051116Z_b4676d5983\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lähdetekstiä tai varmennettuja perustietoja artikkelin kirjoittamiseen ilman keksittyjä tietoja.\"}"
+}
