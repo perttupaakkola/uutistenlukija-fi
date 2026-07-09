@@ -1236,6 +1236,73 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   hyphens: auto;
 }
 
+.paasiaisopas-utility .holiday-hours-cta {
+  margin: 0 0 1.5rem;
+}
+
+.paasiaisopas-utility .holiday-hours-cta__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem 1.25rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-top: 2px solid var(--portal-ink);
+  border-bottom: 1px solid var(--portal-line);
+}
+
+.paasiaisopas-utility .holiday-hours-cta__copy {
+  min-width: 0;
+}
+
+.paasiaisopas-utility .holiday-hours-cta__eyebrow {
+  margin: 0 0 .35rem;
+  color: var(--portal-red);
+  font-size: 12px;
+  font-weight: 880;
+  letter-spacing: .05em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.paasiaisopas-utility .holiday-hours-cta__title {
+  margin: 0 0 .35rem;
+  color: var(--portal-ink);
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.14;
+  letter-spacing: 0;
+}
+
+.paasiaisopas-utility .holiday-hours-cta__text {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--portal-muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.paasiaisopas-utility .holiday-hours-cta__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: .72rem 1rem;
+  border-radius: 4px;
+  background: var(--portal-red);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 820;
+  line-height: 1.1;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.paasiaisopas-utility .holiday-hours-cta__button:hover,
+.paasiaisopas-utility .holiday-hours-cta__button:focus-visible {
+  background: #a93226;
+  color: #fff;
+}
+
 @media (max-width: 680px) {
   .paasiaisopas-utility .portal-article-header {
     padding-top: .75rem;
@@ -1250,5 +1317,15 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   .paasiaisopas-utility .portal-article-deck {
     font-size: .98rem;
     line-height: 1.45;
+  }
+
+  .paasiaisopas-utility .holiday-hours-cta__inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .paasiaisopas-utility .holiday-hours-cta__button {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
   }
 }

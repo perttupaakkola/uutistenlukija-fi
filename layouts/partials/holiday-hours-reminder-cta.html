@@ -1,0 +1,25 @@
+{{- $target := "/tilaa/pyhapaivien-kaupat-auki/" -}}
+{{- $placement := "paasiaisopas-kaupat-auki-article" -}}
+<section class="holiday-hours-cta" aria-labelledby="holiday-hours-cta-heading">
+  <div class="holiday-hours-cta__inner">
+    <div class="holiday-hours-cta__copy">
+      <p class="holiday-hours-cta__eyebrow">Muistutus ennen seuraavia pyhiä</p>
+      <h2 id="holiday-hours-cta-heading" class="holiday-hours-cta__title">Haluatko tiedon kauppojen aukioloajoista ajoissa?</h2>
+      <p class="holiday-hours-cta__text">Tilaa maksuton muistutus seuraavista pyhäpäivien aukioloajoista sähköpostiisi. Ei maksua, ei julkista postausta, vain käytännön muistutus ennen ostosreissua.</p>
+    </div>
+    <a class="holiday-hours-cta__button"
+       href="{{ $target }}"
+       data-track="holiday_hours_cta_click"
+       data-placement="{{ $placement }}"
+       data-monetization-signal="holiday_hours_signup_intent">Tilaa muistutus</a>
+  </div>
+</section>
+<script>
+(function () {
+  if (typeof gtag !== 'function') return;
+  gtag('event', 'holiday_hours_signup_view', {
+    placement: {{ $placement | jsonify }},
+    target_url: {{ $target | jsonify }}
+  });
+})();
+</script>

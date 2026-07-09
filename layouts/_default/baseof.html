@@ -326,6 +326,7 @@
       var status = form.parentElement ? form.parentElement.querySelector('[data-newsletter-status]') : null;
       var submitButton = form.querySelector('button[type="submit"]');
       var emailInput = form.querySelector('input[name="email"]');
+      var successMessage = form.dataset.successMessage || 'Kiitos! Lähetämme pian ensimmäisen uutiskirjeemme.';
 
       function setStatus(message, kind) {
         if (!status) return;
@@ -371,7 +372,7 @@
           }
 
           if (response.ok) {
-            setStatus(data.message || 'Kiitos! Lähetämme pian ensimmäisen uutiskirjeemme.', 'success');
+            setStatus(data.message || successMessage, 'success');
             form.reset();
             return;
           }

@@ -1,0 +1,83 @@
+{{ define "extra_head" }}
+{{ $webPage := dict
+  "@context" "https://schema.org"
+  "@type" "WebPage"
+  "name" (.Params.seo_title | default .Title)
+  "url" .Permalink
+  "description" .Description
+  "inLanguage" "fi"
+  "isPartOf" (dict
+    "@type" "WebSite"
+    "name" .Site.Title
+    "url" .Site.BaseURL
+  )
+}}
+<script type="application/ld+json">
+{{ $webPage | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{ end }}
+
+{{ define "main" }}
+<article class="single-article holiday-hours-capture">
+  <p class="holiday-hours-capture__eyebrow">Pyhäpäivien kaupat auki</p>
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.description }}<p class="holiday-hours-capture__deck">{{ . }}</p>{{ end }}
+
+  <section class="holiday-hours-capture__panel" aria-labelledby="holiday-hours-form-heading">
+    <div class="holiday-hours-capture__copy">
+      <h2 id="holiday-hours-form-heading">Tilaa maksuton muistutus sähköpostiisi</h2>
+      <p>Kerromme seuraavien pyhäpäivien kauppojen aukioloajoista ja linkitämme ajantasaisiin tarkistusohjeisiin ennen kuin ostokset pitää hoitaa.</p>
+      <ul>
+        <li>Muistutus ennen isoja pyhäpäiviä ja poikkeavia aukioloaikoja</li>
+        <li>Ei maksumuuria tai maksullista tilausta</li>
+        <li>Voit peruuttaa viestit milloin tahansa</li>
+      </ul>
+    </div>
+
+    <form class="newsletter-signup__form holiday-hours-capture__form js-newsletter-form"
+          action="/api/subscribe"
+          method="post"
+          data-event="newsletter"
+          data-location="holiday-hours-reminder"
+          data-variant="holiday-hours-store-hours"
+          data-success-message="Kiitos! Lähetämme muistutuksen sähköpostiisi ennen seuraavia pyhäpäivien aukiolomuutoksia.">
+      <input type="hidden" name="source" value="holiday-hours-reminder">
+      <input type="hidden" name="variant" value="holiday-hours-store-hours">
+      <label for="holiday-hours-email" class="visually-hidden">Sähköpostiosoite</label>
+      <input id="holiday-hours-email"
+             type="email"
+             name="email"
+             placeholder="Sähköpostiosoitteesi"
+             required
+             autocomplete="email"
+             inputmode="email"
+             class="newsletter-signup__input holiday-hours-capture__input">
+      <button type="submit" class="newsletter-signup__button holiday-hours-capture__button">Tilaa muistutus</button>
+    </form>
+    <p class="newsletter-signup__status holiday-hours-capture__status" data-newsletter-status aria-live="polite"></p>
+    <p class="holiday-hours-capture__privacy">Käytämme osoitetta tähän muistutukseen ja Uutistenlukijan uutiskirjeeseen. Ei roskapostia. <a href="/tietosuojaseloste/">Tietosuoja</a>.</p>
+  </section>
+
+  <p class="holiday-hours-capture__back"><a href="/paasiaisopas/kaupat-auki/">Takaisin pääsiäisen kauppaoppaaseen</a></p>
+</article>
+
+<script>
+(function () {
+  function track(eventName) {
+    if (typeof gtag !== 'function') return;
+    gtag('event', eventName, {
+      placement: 'holiday-hours-capture-page',
+      capture_target: '/api/subscribe',
+      source: 'holiday-hours-reminder'
+    });
+  }
+  track('holiday_hours_signup_view');
+  var form = document.querySelector('.holiday-hours-capture__form');
+  if (form) {
+    form.addEventListener('submit', function () {
+      track('holiday_hours_signup_submit');
+    });
+  }
+})();
+</script>
+{{ end }}

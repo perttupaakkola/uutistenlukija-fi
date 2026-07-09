@@ -2857,6 +2857,144 @@ body.is-home .highlights-row--top {
 .newsletter-signup {
   margin: 2rem 0;
 }
+.holiday-hours-cta {
+  margin: 0 0 1.5rem;
+}
+.holiday-hours-cta__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem 1.25rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-top: 2px solid var(--text);
+  border-bottom: 1px solid var(--border);
+}
+.holiday-hours-cta__copy {
+  min-width: 0;
+}
+.holiday-hours-cta__eyebrow,
+.holiday-hours-capture__eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--accent);
+  font: 800 0.72rem/1.2 var(--font-sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.holiday-hours-cta__title {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+.holiday-hours-cta__text {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--text-secondary);
+  font: 0.95rem/1.55 var(--font-sans);
+}
+.holiday-hours-cta__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.72rem 1rem;
+  border-radius: 4px;
+  background: var(--accent);
+  color: #fff;
+  font: 800 0.9rem/1 var(--font-sans);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.holiday-hours-cta__button:hover,
+.holiday-hours-cta__button:focus-visible {
+  background: var(--primary-hover, #a93226);
+  color: #fff;
+}
+.holiday-hours-capture {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+}
+.holiday-hours-capture__deck {
+  max-width: 62ch;
+  margin: 0 0 1.5rem;
+  color: var(--text-secondary);
+  font: 1.05rem/1.6 var(--font-sans);
+}
+.holiday-hours-capture__panel {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem;
+  border-top: 2px solid var(--text);
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface-alt) 64%, var(--card-bg) 36%);
+}
+.holiday-hours-capture__copy {
+  display: grid;
+  gap: 0.7rem;
+}
+.holiday-hours-capture__copy h2 {
+  margin: 0;
+  font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+  line-height: 1.15;
+}
+.holiday-hours-capture__copy p,
+.holiday-hours-capture__privacy,
+.holiday-hours-capture__back {
+  margin: 0;
+  color: var(--text-secondary);
+  font: 0.95rem/1.6 var(--font-sans);
+}
+.holiday-hours-capture__copy ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--text-secondary);
+  font: 0.95rem/1.6 var(--font-sans);
+}
+.holiday-hours-capture__form {
+  align-items: stretch;
+}
+.holiday-hours-capture__input {
+  min-width: 0;
+}
+.holiday-hours-capture__privacy a,
+.holiday-hours-capture__back a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+@media (max-width: 700px) {
+  .holiday-hours-cta__inner {
+    grid-template-columns: 1fr;
+  }
+  .holiday-hours-cta__button {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+}
+@media (max-width: 520px) {
+  .holiday-hours-capture,
+  .holiday-hours-capture * {
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .holiday-hours-capture__panel {
+    padding: 1rem;
+  }
+  .holiday-hours-capture__input {
+    flex: 0 1 auto;
+  }
+  .holiday-hours-capture__status {
+    overflow-wrap: anywhere;
+  }
+}
+:root:not([data-theme="light"]) .holiday-hours-capture__panel {
+  background: color-mix(in srgb, var(--surface-alt) 78%, var(--card-bg) 22%);
+}
 .advertiser-cta {
   margin: 2rem 0;
 }

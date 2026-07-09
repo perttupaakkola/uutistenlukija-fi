@@ -43,6 +43,9 @@
       {{ partial "share-buttons.html" . }}
     </aside>
     <div class="portal-article-main">
+      {{ if and (eq .Section "paasiaisopas") (eq .File.BaseFileName "kaupat-auki") }}
+      {{ partial "holiday-hours-reminder-cta.html" . }}
+      {{ end }}
       {{ partial "article-body.html" (dict
         "page" .
         "showSummaryBullets" true
