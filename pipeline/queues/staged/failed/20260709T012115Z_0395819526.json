@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-09T01:21:15.197555+00:00",
+  "digest": "0395819526",
+  "packet": {
+    "packet_id": "20260709T012115Z_0395819526",
+    "created_at": "2026-07-09T01:21:15Z",
+    "headline_seed": "Can geoengineering blunt El Niño’s fury?",
+    "description_seed": "Marine cloud brightening could cool part of the Pacific and weaken extreme El Niños, simulations suggest. But the approach could have risks.",
+    "link": "https://www.sciencenews.org/article/geoengineering-el-nino-extremes",
+    "source": "Science News",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.sciencenews.org/article/geoengineering-el-nino-extremes"
+    ],
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Can geoengineering blunt El Niño’s fury?"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Marine cloud brightening could cool part of the Pacific and weaken extreme El Niños, simulations suggest. But the approach could have risks.",
+        "word_count": 22,
+        "keyword_overlap": 14,
+        "strong_overlap": 8
+      }
+    ],
+    "source_text": "Marine cloud brightening could cool part of the Pacific and weaken extreme El Niños, simulations suggest. But the approach could have risks.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 44,
+      "selected_blocks": 1,
+      "selected_source_words": 22,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Science News"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Can geoengineering blunt El Niño’s fury?",
+      "description": "Marine cloud brightening could cool part of the Pacific and weaken extreme El Niños, simulations suggest. But the approach could have risks.",
+      "category_hint": "Tiede",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Can geoengineering blunt El Niño’s fury?",
+    "description": "Marine cloud brightening could cool part of the Pacific and weaken extreme El Niños, simulations suggest. But the approach could have risks.",
+    "link": "https://www.sciencenews.org/article/geoengineering-el-nino-extremes",
+    "published": "2026-07-08T18:00:00+00:00",
+    "source": "Science News",
+    "source_domain": "sciencenews.org",
+    "language": "en",
+    "fingerprint": "7c391646fc1c8a9d3390ed9583179023",
+    "_url_hash": "007d7dd63934a5c8e3a31d2425d6dcc7e6aaa4bb919f3b3a12eaec3834bad323",
+    "source_tier": 2,
+    "category_hint": "Tiede",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Tiede",
+    "research": "Marine cloud brightening could cool part of the Pacific and weaken extreme El Niños, simulations suggest. But the approach could have risks.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-07-09T01:23:18.948098+00:00",
+  "failure": "Lähdeaineisto on liian niukka: se sisältää vain yleisen väitteen simulaatioista ilman tutkimuksen tekijöitä, menetelmiä, ajankohtaa tai tarkempia tuloksia.",
+  "raw_response": "{\"packet_id\":\"20260709T012115Z_0395819526\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka: se sisältää vain yleisen väitteen simulaatioista ilman tutkimuksen tekijöitä, menetelmiä, ajankohtaa tai tarkempia tuloksia.\"}"
+}
