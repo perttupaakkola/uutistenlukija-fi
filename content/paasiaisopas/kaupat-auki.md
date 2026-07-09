@@ -21,6 +21,8 @@ Pääsiäinen 2026 on **3.–6. huhtikuuta**. Tässä on yleinen päiväkohtaine
 
 Taulukko on yleinen opas, ei lupaus yksittäisen Prisman, K-Citymarketin, Lidlin, Tokmannin, Alkon tai lähikaupan aukiolosta. Kauppakohtainen tieto kannattaa tarkistaa aina ketjun omasta hausta.
 
+**Ajankohtaista nyt:** seuraa myös [tuoreita talousuutisia hinnoista, kaupasta ja kuluttajan arjesta](/kategoriat/talous/).
+
 Seuraavaksi voit tarkistaa [pääsiäisen päivämäärät ja pyhäpäivät](/paasiaisopas/paivamaarat/) tai suunnitella ostokset [pääsiäisruokaoppaan](/paasiaisopas/ruoka/) avulla. Koko pääsiäisen linkit löytyvät [pääsiäisoppaasta](/paasiaisopas/).
 
 ## Kauppojen aukioloajat pääsiäisenä 2026
@@ -73,4 +75,5 @@ Pääsiäisen pyhäpäivät voivat yllättää, jos oma lähikauppa on kiinni ta
 - [Pääsiäisen päivämäärät 2026](/paasiaisopas/paivamaarat/)
 - [Pääsiäisruoka ja ostoslista](/paasiaisopas/ruoka/)
 - [Kaupat auki vappuna 2026](/vappuopas/kaupat-auki/)
+- [Tuoreimmat talousuutiset](/kategoriat/talous/)
 - [Päivän kooste](/paivan-kooste/)

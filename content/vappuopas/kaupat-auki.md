@@ -29,6 +29,8 @@ Vappuaatto ei ole virallinen pyhäpäivä, mutta monet ketjut lyhentävät aukio
 
 **Huom!** Alko sulkee ovensa vappuaattona klo 18. Hanki juomat ajoissa — vappuaaton iltapäivä on Alkon ruuhkaisimpia päiviä.
 
+**Ajankohtaista nyt:** seuraa myös [tuoreita talousuutisia hinnoista, kaupasta ja kuluttajan arjesta](/kategoriat/talous/).
+
 ### Vappupäivä — perjantai 1.5.2026 (yleinen pyhäpäivä)
 
 Vappupäivä on yleinen pyhäpäivä. Suurin osa kaupoista ja erikoisliikkeistä on **kiinni**. Päivittäistavarakaupat voivat olla auki rajoitetusti.
@@ -110,4 +112,5 @@ Aukioloajat vaihtelevat myymälöittäin, ja pyhäpäivän poikkeukset näkyvät
 
 - [Vappuopas 2026](/vappuopas/)
 - [Kaupat auki pääsiäisenä 2026](/paasiaisopas/kaupat-auki/)
+- [Tuoreimmat talousuutiset](/kategoriat/talous/)
 - [Päivän kooste](/paivan-kooste/)
