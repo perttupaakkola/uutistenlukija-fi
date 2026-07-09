@@ -55,7 +55,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuva-arvostelut/arvostelu-evil-dead-burn-on-sadistisessa-julmuudessaan-leffasarjan-ilkein-osa/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
