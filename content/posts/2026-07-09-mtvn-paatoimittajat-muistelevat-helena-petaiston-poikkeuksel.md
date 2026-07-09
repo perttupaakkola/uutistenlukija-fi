@@ -47,7 +47,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/mtv-uutisten-paatoimittajat-helena-petaistosta-hanessa-oli-vanhan-ajan-kirjeenvaihtajan-tahtipolya/9364418"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
