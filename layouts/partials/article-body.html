@@ -44,13 +44,26 @@
   {{ $page.Content }}
 </div>
 
+{{- $articleText := printf "%s %s" $page.Title ($page.Plain | default "") | lower -}}
+{{- if and (in $articleText "whatsapp") (in $articleText "ipad") }}
+<aside class="article-next-step-link" aria-label="Lue seuraavaksi">
+  <p>Lue seuraavaksi lisää <a href="/categories/teknologia/">teknologiauutisia</a>.</p>
+</aside>
+{{- end }}
+
 {{- $primaryCategory := "" -}}
-{{- with $page.Params.categories -}}{{- $primaryCategory = index . 0 -}}{{- end -}}
-{{- if eq (lower $primaryCategory) "talous" }}
+{{- $hasTalousCategory := false -}}
+{{- with $page.Params.categories -}}
+  {{- $primaryCategory = index . 0 -}}
+  {{- range . -}}
+    {{- if eq (lower .) "talous" -}}{{- $hasTalousCategory = true -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if $hasTalousCategory }}
 <aside class="article-talous-link" aria-label="Lisää talousuutisia">
   <span class="article-talous-link__label">Talous</span>
   <p class="article-talous-link__text">Seuraa yrityksiä, hintoja ja markkinoita yhdessä paikassa.</p>
-  <a class="article-talous-link__cta" href="/kategoriat/talous/">Lue lisää taloudesta</a>
+  <a class="article-talous-link__cta" href="/kategoriat/talous/">Avaa Talous-osio</a>
 </aside>
 {{- end }}
 
