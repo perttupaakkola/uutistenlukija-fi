@@ -45,7 +45,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/matias-petaisto-sai-helena-kummitadiltaan-arvokkaan-elamanohjeen-koskaan-ei-pida-antaa-periksi/9364372"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
