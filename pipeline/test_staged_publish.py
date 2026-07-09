@@ -47,10 +47,15 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.root = Path(self.tmp.name)
         for box in ["ready", "writing", "outbox", "published", "failed"]:
             (self.root / box).mkdir(parents=True, exist_ok=True)
+        self.cache_root = self.root / "cache"
+        self.cache_root.mkdir(parents=True, exist_ok=True)
         self.patch = patch.object(staged_publish, "STAGED_ROOT", self.root)
+        self.cache_patch = patch.object(staged_publish, "PIPELINE_CACHE_DIR", self.cache_root)
         self.patch.start()
+        self.cache_patch.start()
 
     def tearDown(self) -> None:
+        self.cache_patch.stop()
         self.patch.stop()
         self.tmp.cleanup()
 
@@ -772,6 +777,71 @@ class StagedPublishMetricsTests(unittest.TestCase):
         categories = [staged_publish.article_category(article) for article in selected]
         self.assertEqual(categories.count("Talous"), 2)
         self.assertEqual(sum(1 for article in selected if article["title"].startswith("talous")), 2)
+
+    def test_repeated_scan_records_one_source_floor_drop_and_rotates_to_next_candidate(self) -> None:
+        thin = {
+            "title": "Ohut Arvopaperin Talous-ehdokas",
+            "link": "https://example.com/talous-thin",
+            "category_hint": "Talous",
+            "source": "Arvopaperi",
+            "research": "[Lähde: Arvopaperi]\n" + "sana " * 37 + "\n\n[Lähde: Haastattelu]\n" + "sana " * 38,
+            "description": "Sijoittajan arvio yrityskaupasta.",
+            "story_confidence": 0.85,
+            "research_source": "multi",
+        }
+        next_candidate = {
+            "title": "Seuraava Talous-ehdokas",
+            "link": "https://example.com/talous-next",
+            "category_hint": "Talous",
+            "source": "Testi",
+            "description": "Seuraava ehdokas tutkittavaksi.",
+        }
+        now_ts = 1_800_000_000.0
+
+        self.assertEqual(staged_publish.talous_enqueue_drop_reason(thin), "source_floor_not_met")
+        self.assertEqual(staged_publish.org_source_talous_guardrail(thin)["classification"], "not_org_source_talous")
+        recorded = staged_publish.record_talous_source_floor_rejections(
+            [thin], [], hours=24, now_ts=now_ts
+        )
+        kept, skipped = staged_publish.filter_talous_source_floor_cooldown(
+            [thin, next_candidate], hours=24, now_ts=now_ts + 60
+        )
+        selected = staged_publish.select_research_candidates(kept, max_candidates=1)
+        repeated_scan_recorded = staged_publish.record_talous_source_floor_rejections(
+            kept, selected, hours=24, now_ts=now_ts + 60
+        )
+
+        self.assertEqual(recorded, [thin])
+        self.assertEqual(skipped, [thin])
+        self.assertEqual(selected, [next_candidate])
+        self.assertEqual(repeated_scan_recorded, [])
+        cache = staged_publish.load_talous_source_floor_cooldown(hours=24, now_ts=now_ts + 60)
+        self.assertEqual(list(cache), [staged_publish.stable_digest(thin)])
+        self.assertEqual(
+            staged_publish.load_talous_source_floor_cooldown(hours=24, now_ts=now_ts + 24 * 3600 + 1),
+            {},
+        )
+
+    def test_talous_source_floor_cooldown_reports_no_backfill_candidate(self) -> None:
+        thin = {
+            "title": "Ainoa ohut Talous-ehdokas",
+            "link": "https://example.com/talous-only-thin",
+            "category_hint": "Talous",
+            "source": "Arvopaperi",
+            "research": "[Lähde: Arvopaperi]\n" + "sana " * 75 + "\n\n[Lähde: Toinen]\n",
+            "description": "Niukka lähdeaineisto.",
+            "story_confidence": 0.85,
+            "research_source": "multi",
+        }
+        now_ts = 1_800_000_000.0
+        staged_publish.record_talous_source_floor_rejections([thin], [], hours=24, now_ts=now_ts)
+
+        kept, skipped = staged_publish.filter_talous_source_floor_cooldown(
+            [thin], hours=24, now_ts=now_ts + 60
+        )
+
+        self.assertEqual(kept, [])
+        self.assertEqual(skipped, [thin])
 
     def test_talous_failed_staged_digest_can_reenter_scan_cooldown(self) -> None:
         failed = _record("talous-failed", source_words=0, blocks=0)

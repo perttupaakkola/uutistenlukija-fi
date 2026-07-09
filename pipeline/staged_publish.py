@@ -28,6 +28,7 @@ from typing import Any
 PIPELINE_DIR = Path(__file__).resolve().parent
 PROJECT_DIR = PIPELINE_DIR.parent
 LOG_DIR = PIPELINE_DIR / "logs"
+PIPELINE_CACHE_DIR = PIPELINE_DIR / "cache"
 STAGED_ROOT = PIPELINE_DIR / "queues" / "staged"
 for sub in ["ready", "writing", "outbox", "published", "failed"]:
     (STAGED_ROOT / sub).mkdir(parents=True, exist_ok=True)
@@ -119,6 +120,93 @@ def stable_digest(article: dict) -> str:
 
 
 TALOUS_RESEARCH_MIN_CANDIDATES = 2
+TALOUS_SOURCE_FLOOR_COOLDOWN_SCHEMA = "uutistenlukija.talous_source_floor_cooldown.v1"
+
+
+def talous_source_floor_cooldown_path() -> Path:
+    return PIPELINE_CACHE_DIR / "talous_source_floor_cooldown.json"
+
+
+def load_talous_source_floor_cooldown(hours: int, now_ts: float | None = None) -> dict[str, dict]:
+    """Load active Talous source-floor rejects without changing quality gates."""
+    if hours <= 0:
+        return {}
+    now_ts = time.time() if now_ts is None else now_ts
+    cutoff = now_ts - hours * 3600
+    path = talous_source_floor_cooldown_path()
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8", errors="replace"))
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        return {}
+    candidates = payload.get("candidates") or {}
+    active: dict[str, dict] = {}
+    for digest, record in candidates.items():
+        try:
+            rejected_at = float(record.get("rejected_at", 0))
+        except (AttributeError, TypeError, ValueError):
+            continue
+        if rejected_at >= cutoff:
+            active[str(digest)] = dict(record)
+    return active
+
+
+def filter_talous_source_floor_cooldown(
+    articles: list[dict], hours: int, now_ts: float | None = None
+) -> tuple[list[dict], list[dict]]:
+    """Remove recent thin Talous repeats before they consume research capacity."""
+    active = load_talous_source_floor_cooldown(hours=hours, now_ts=now_ts)
+    if not active:
+        return articles, []
+    kept: list[dict] = []
+    skipped: list[dict] = []
+    for article in articles:
+        if article_category(article) == "Talous" and stable_digest(article) in active:
+            skipped.append(article)
+        else:
+            kept.append(article)
+    return kept, skipped
+
+
+def record_talous_source_floor_rejections(
+    before: list[dict],
+    after: list[dict],
+    hours: int,
+    now_ts: float | None = None,
+) -> list[dict]:
+    """Persist only Talous candidates rejected by the existing source floor."""
+    if hours <= 0:
+        return []
+    selected_digests = {stable_digest(article) for article in after}
+    rejected: list[dict] = []
+    for article in before:
+        digest = stable_digest(article)
+        if digest in selected_digests or talous_enqueue_drop_reason(article) != "source_floor_not_met":
+            continue
+        rejected.append(article)
+    if not rejected:
+        return []
+
+    now_ts = time.time() if now_ts is None else now_ts
+    active = load_talous_source_floor_cooldown(hours=hours, now_ts=now_ts)
+    for article in rejected:
+        digest = stable_digest(article)
+        active[digest] = {
+            "rejected_at": now_ts,
+            "reason": "source_floor_not_met",
+            "title": str(article.get("title") or "")[:100],
+            "source": str(article.get("source") or article.get("source_name") or "")[:60],
+        }
+    path = talous_source_floor_cooldown_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    atomic_write_json(
+        path,
+        {
+            "schema": TALOUS_SOURCE_FLOOR_COOLDOWN_SCHEMA,
+            "updated_at": datetime.fromtimestamp(now_ts, timezone.utc).isoformat(),
+            "candidates": active,
+        },
+    )
+    return rejected
 
 
 def select_research_candidates(articles: list[dict], max_candidates: int | None) -> list[dict]:
@@ -1043,6 +1131,20 @@ def cmd_scan(args: argparse.Namespace) -> int:
     if not articles:
         return 0
 
+    articles, source_floor_skips = filter_talous_source_floor_cooldown(
+        articles, hours=args.cooldown_hours
+    )
+    if source_floor_skips:
+        talous_remaining = category_counts(articles).get("Talous", 0)
+        outcome = "different_candidate_available" if talous_remaining else "no_eligible_backfill"
+        log(
+            "scan-stage-skip: talous_source_floor_cooldown "
+            f"skipped={len(source_floor_skips)} outcome={outcome}"
+        )
+    log_scan_stage("talous_source_floor_cooldown", articles)
+    if not articles:
+        return 0
+
     articles = select_research_candidates(articles, args.max_research_candidates)
     log_scan_stage("research_candidates", articles)
     articles = enrich_with_research(articles)
@@ -1054,6 +1156,17 @@ def cmd_scan(args: argparse.Namespace) -> int:
     articles = select_scan_enqueue_candidates(articles, args.max_packets)
     log_scan_stage("queued_candidates", articles)
     log_talous_enqueue_drop(pre_enqueue_articles, articles)
+    if not args.dry_run:
+        source_floor_rejections = record_talous_source_floor_rejections(
+            pre_enqueue_articles,
+            articles,
+            hours=args.cooldown_hours,
+        )
+        if source_floor_rejections:
+            log(
+                "scan-stage-cooldown: talous_source_floor_recorded "
+                f"candidates={len(source_floor_rejections)} hours={args.cooldown_hours}"
+            )
 
     queued = 0
     for article in articles:
