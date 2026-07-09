@@ -95,6 +95,12 @@ def sync_image_provider_keys() -> None:
             _pexels_module.PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "")
         except Exception:
             pass
+    if os.environ.get("KIE_API_KEY"):
+        try:
+            import image_gen as _image_gen_module
+            _image_gen_module.KIE_API_KEY = os.environ.get("KIE_API_KEY", "")
+        except Exception:
+            pass
 
 
 def atomic_write_json(path: Path, data: dict) -> None:
@@ -1326,6 +1332,10 @@ def article_needs_image(article: dict) -> bool:
     return not article.get("image") or bool(article.get("image_category_fallback"))
 
 
+def article_has_provider_image(article: dict) -> bool:
+    return bool(article.get("image")) and not bool(article.get("image_category_fallback"))
+
+
 def clear_image_fallback(article: dict) -> None:
     if article.get("image_category_fallback"):
         for key in [
@@ -1366,16 +1376,19 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
         if skip:
             log(f"images: unsplash skipped — {reason}")
         else:
-            before = sum(1 for a in articles if a.get("image") and not a.get("image_category_fallback"))
-            for article in missing:
-                clear_image_fallback(article)
-            unsplash_fetch_images(missing, delay=unsplash_delay)
-            after = sum(1 for a in articles if a.get("image") and not a.get("image_category_fallback"))
-            unsplash_count = max(0, after - before)
-            if unsplash_count:
-                record_success("unsplash")
-            else:
+            try:
+                before = sum(1 for a in articles if article_has_provider_image(a))
+                for article in missing:
+                    clear_image_fallback(article)
+                unsplash_fetch_images(missing, delay=unsplash_delay)
+                after = sum(1 for a in articles if article_has_provider_image(a))
+                unsplash_count = max(0, after - before)
+            except Exception as exc:  # noqa: BLE001 - keep publisher alive on provider faults
+                log(f"images: unsplash failed — {exc.__class__.__name__}: {exc}")
                 record_failure("unsplash")
+            else:
+                if unsplash_count:
+                    record_success("unsplash")
 
     missing = [a for a in articles if article_needs_image(a)]
     if missing and os.environ.get("PEXELS_API_KEY", ""):
@@ -1383,16 +1396,19 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
         if skip:
             log(f"images: pexels skipped — {reason}")
         else:
-            before = sum(1 for a in articles if a.get("image") and not a.get("image_category_fallback"))
-            for article in missing:
-                clear_image_fallback(article)
-            pexels_fetch_images(missing, delay=pexels_delay)
-            after = sum(1 for a in articles if a.get("image") and not a.get("image_category_fallback"))
-            pexels_count = max(0, after - before)
-            if pexels_count:
-                record_success("pexels")
-            else:
+            try:
+                before = sum(1 for a in articles if article_has_provider_image(a))
+                for article in missing:
+                    clear_image_fallback(article)
+                pexels_fetch_images(missing, delay=pexels_delay)
+                after = sum(1 for a in articles if article_has_provider_image(a))
+                pexels_count = max(0, after - before)
+            except Exception as exc:  # noqa: BLE001 - keep publisher alive on provider faults
+                log(f"images: pexels failed — {exc.__class__.__name__}: {exc}")
                 record_failure("pexels")
+            else:
+                if pexels_count:
+                    record_success("pexels")
 
     missing = [a for a in articles if article_needs_image(a)]
     if missing and os.environ.get("KIE_API_KEY", ""):
@@ -1400,16 +1416,21 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
         if skip:
             log(f"images: generated fallback skipped — Kie.ai {reason}")
         else:
-            before = sum(1 for a in articles if a.get("image_source") == "generated" and not a.get("image_category_fallback"))
-            for article in missing:
-                clear_image_fallback(article)
-            generate_images_for_articles(missing, max_total_sec=180)
-            after = sum(1 for a in articles if a.get("image_source") == "generated" and not a.get("image_category_fallback"))
-            generated_count = max(0, after - before)
-            if generated_count:
-                record_success("kie_api")
-            else:
+            try:
+                before = sum(1 for a in articles if a.get("image_source") == "generated" and article_has_provider_image(a))
+                for article in missing:
+                    clear_image_fallback(article)
+                generate_images_for_articles(missing, max_total_sec=180)
+                after = sum(1 for a in articles if a.get("image_source") == "generated" and article_has_provider_image(a))
+                generated_count = max(0, after - before)
+            except Exception as exc:  # noqa: BLE001 - keep publisher alive on provider faults
+                log(f"images: generated fallback failed — {exc.__class__.__name__}: {exc}")
                 record_failure("kie_api")
+            else:
+                if generated_count:
+                    record_success("kie_api")
+    elif missing:
+        log("images: generated fallback unavailable — KIE_API_KEY missing")
 
     for article in [a for a in articles if article_needs_image(a)]:
         clear_image_fallback(article)

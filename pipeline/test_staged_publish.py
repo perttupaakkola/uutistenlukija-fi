@@ -411,6 +411,23 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(articles[0]["image"], "https://images.unsplash.com/photo-test")
         success.assert_called_with("unsplash")
 
+    def test_enrich_images_does_not_mark_policy_rejection_as_provider_failure(self) -> None:
+        articles = [{"title": "Kuvaton artikkeli", "category": "Talous", "content": "sisältö"}]
+
+        def rejected_stock(batch, delay=0):
+            batch[0].update(staged_publish.category_fallback_fields("Talous", reason="stock rejected"))
+            return batch
+
+        with patch.dict(staged_publish.os.environ, {"UNSPLASH_ACCESS_KEY": "key", "PEXELS_API_KEY": "", "KIE_API_KEY": ""}, clear=False), \
+             patch.object(staged_publish, "should_skip", return_value=(False, None)), \
+             patch.object(staged_publish, "unsplash_fetch_images", side_effect=rejected_stock), \
+             patch.object(staged_publish, "record_failure") as failure:
+            summary = staged_publish.enrich_images_for_articles(articles, unsplash_delay=0, pexels_delay=0)
+
+        self.assertEqual(summary["unsplash"], 0)
+        self.assertEqual(summary["category_fallback"], 1)
+        failure.assert_not_called()
+
     def test_enrich_images_clears_category_fallback_before_pexels_rescue(self) -> None:
         articles = [{"title": "Fallback artikkeli", "category": "Kotimaa", "image": "/images/categories/kotimaa.jpg", "image_category_fallback": True}]
 
@@ -429,6 +446,17 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(summary["pexels"], 1)
         self.assertEqual(articles[0]["image"], "/images/articles/fallback-hero.jpg")
         self.assertFalse(articles[0]["image_category_fallback"])
+
+    def test_sync_image_provider_keys_refreshes_kie_module_key(self) -> None:
+        image_module_globals = staged_publish.generate_images_for_articles.__globals__
+        old_key = image_module_globals.get("KIE_API_KEY", "")
+        try:
+            image_module_globals["KIE_API_KEY"] = ""
+            with patch.dict(staged_publish.os.environ, {"KIE_API_KEY": "kie-test-key"}, clear=False):
+                staged_publish.sync_image_provider_keys()
+            self.assertEqual(image_module_globals["KIE_API_KEY"], "kie-test-key")
+        finally:
+            image_module_globals["KIE_API_KEY"] = old_key
 
     def test_enrich_images_uses_generated_fallback_after_rejected_stock(self) -> None:
         articles = [{"title": "Sääartikkeli", "category": "Kotimaa", "content": "aurinkoinen sää"}]
