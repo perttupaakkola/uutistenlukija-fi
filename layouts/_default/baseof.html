@@ -372,7 +372,7 @@
           }
 
           if (response.ok) {
-            setStatus(data.message || successMessage, 'success');
+            setStatus(successMessage || data.message, 'success');
             form.reset();
             return;
           }

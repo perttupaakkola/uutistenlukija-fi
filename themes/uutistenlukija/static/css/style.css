@@ -2956,7 +2956,8 @@ body.is-home .highlights-row--top {
 .holiday-hours-capture__form {
   align-items: stretch;
 }
-.holiday-hours-capture__input {
+.holiday-hours-capture__form .holiday-hours-capture__input {
+  flex: 0 0 auto;
   min-width: 0;
 }
 .holiday-hours-capture__privacy a,
@@ -2985,8 +2986,8 @@ body.is-home .highlights-row--top {
   .holiday-hours-capture__panel {
     padding: 1rem;
   }
-  .holiday-hours-capture__input {
-    flex: 0 1 auto;
+  .holiday-hours-capture__form .holiday-hours-capture__input {
+    flex: 0 0 auto;
   }
   .holiday-hours-capture__status {
     overflow-wrap: anywhere;
