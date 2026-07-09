@@ -1,0 +1,240 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-09T22:01:26.513122+00:00",
+  "digest": "d68a13566d",
+  "packet": {
+    "packet_id": "20260709T220126Z_d68a13566d",
+    "created_at": "2026-07-09T22:01:26Z",
+    "headline_seed": "Patch for Windows Defender 0-day could allow attackers to fill hard disk",
+    "description_seed": "A patch Microsoft released on Wednesday to fix a zero-day vulnerability in its Defender security engine may cause Windows machines to write files large enough to completely consume available disk space, the researcher who discovered the flaw said. RoguePlanet, tracked as CVE-2026-50656, came to public notice in June when NightmareEclipse, the pseudonymous name used by a researcher, disclosed it along with code for exploiting it. The vulnerability allows remote attackers to gain administrative control of Windows 10 and Windows 11 machines, even when real-time protection has been disabled. Over the past few months, the anonymous researcher has published a handful of other zero-days that have sent Microsoft scrambling to develop patches. Writing files of unlimited size Microsoft said Wednesday that it patched RoguePlanet with an update to the Microsoft Malware Protection Engine, which is used by the Defender antivirus app. The fix will automatically be downloaded and installed without users having to take any action. Wednesday’s update also includes “defense-in-depth updates to help improve security-related features.” Read full article Comments",
+    "link": "https://arstechnica.com/security/2026/07/patch-for-windows-defender-0-day-could-allow-attackers-to-fill-hard-disk/",
+    "source": "Ars Technica",
+    "source_names": [
+      "Ars Technica",
+      "Ars Technica",
+      "Ars Technica",
+      "Bleeping Computer"
+    ],
+    "source_urls": [
+      "https://arstechnica.com/security/2026/07/patch-for-windows-defender-0-day-could-allow-attackers-to-fill-hard-disk/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Patch for Windows Defender 0-day could allow attackers to fill hard disk"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Ars Technica",
+        "source_type": "description",
+        "text": "A patch Microsoft released on Wednesday to fix a zero-day vulnerability in its Defender security engine may cause Windows machines to write files large enough to completely consume available disk space, the researcher who discovered the flaw said. RoguePlanet, tracked as CVE-2026-50656, came to public notice in June when NightmareEclipse, the pseudonymous name used by a researcher, disclosed it along with code for exploiting it. The vulnerability allows remote attackers to gain administrative control of Windows 10 and Windows 11 machines, even when real-time protection has been disabled. Over the past few months, the anonymous researcher has published a handful of other zero-days that have sent Microsoft scrambling to develop patches. Writing files of unlimited size Microsoft said Wednesday that it patched RoguePlanet with an update to the Microsoft Malware Protection Engine, which is used by the Defender antivirus app. The fix will automatically be downloaded and installed without users having to take any action. Wednesday’s update also includes “defense-in-depth updates to help improve security-related features.” Read full article Comments",
+        "word_count": 170,
+        "keyword_overlap": 96,
+        "strong_overlap": 61
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "A patch Microsoft released on Wednesday to fix a zero-day vulnerability in its Defender security engine may cause Windows machines to write files large enough to completely consume available disk space, the researcher who discovered the flaw said. RoguePlanet, tracked as CVE-2026-50656, came to public notice in June when NightmareEclipse, the pseudonymous name used by a researcher, disclosed it along with code for exploiting it. The vulnerability allows remote attackers to gain administrative control of Windows 10 and Windows 11 machines, even when real-time protection has been disabled. Over the past few months, the anonymous researcher has published a handful of other zero-days that have sent Microsoft scrambling to develop patches.",
+        "word_count": 111,
+        "keyword_overlap": 67,
+        "strong_overlap": 41
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "Microsoft said Wednesday that it patched RoguePlanet with an update to the Microsoft Malware Protection Engine, which is used by the Defender antivirus app. The fix will automatically be downloaded and installed without users having to take any action. Wednesday’s update also includes “defense-in-depth updates to help improve security-related features.”",
+        "word_count": 50,
+        "keyword_overlap": 32,
+        "strong_overlap": 22
+      },
+      {
+        "source": "Bleeping Computer",
+        "source_type": "research",
+        "text": "On Tuesday, one week after the RoguePlanet flaw was disclosed, Microsoft assigned the CVE-2026-50656 ID to this security flaw and confirmed it's currently working on a patch, but didn't acknowledge that Nightmare Eclipse was the one who found the vulnerability. \"Microsoft is aware of an elevation of privilege in the Microsoft Malware Protection Engine in Microsoft Defender publicly referred to as 'RoguePlanet,' it said in an advisory published yesterday. \"We are working to provide a high quality security update that addresses this vulnerability. We will provide information in this CVE when the update is available.\" The RoguePlanet release is part of an ongoing dispute between Nightmare Eclipse and Microsoft over the latter's bug bounty and vulnerability disclosure practices.",
+        "word_count": 118,
+        "keyword_overlap": 20,
+        "strong_overlap": 13
+      }
+    ],
+    "source_text": "A patch Microsoft released on Wednesday to fix a zero-day vulnerability in its Defender security engine may cause Windows machines to write files large enough to completely consume available disk space, the researcher who discovered the flaw said. RoguePlanet, tracked as CVE-2026-50656, came to public notice in June when NightmareEclipse, the pseudonymous name used by a researcher, disclosed it along with code for exploiting it. The vulnerability allows remote attackers to gain administrative control of Windows 10 and Windows 11 machines, even when real-time protection has been disabled. Over the past few months, the anonymous researcher has published a handful of other zero-days that have sent Microsoft scrambling to develop patches. Writing files of unlimited size Microsoft said Wednesday that it patched RoguePlanet with an update to the Microsoft Malware Protection Engine, which is used by the Defender antivirus app. The fix will automatically be downloaded and installed without users having to take any action. Wednesday’s update also includes “defense-in-depth updates to help improve security-related features.” Read full article Comments\n\nA patch Microsoft released on Wednesday to fix a zero-day vulnerability in its Defender security engine may cause Windows machines to write files large enough to completely consume available disk space, the researcher who discovered the flaw said. RoguePlanet, tracked as CVE-2026-50656, came to public notice in June when NightmareEclipse, the pseudonymous name used by a researcher, disclosed it along with code for exploiting it. The vulnerability allows remote attackers to gain administrative control of Windows 10 and Windows 11 machines, even when real-time protection has been disabled. Over the past few months, the anonymous researcher has published a handful of other zero-days that have sent Microsoft scrambling to develop patches.\n\nMicrosoft said Wednesday that it patched RoguePlanet with an update to the Microsoft Malware Protection Engine, which is used by the Defender antivirus app. The fix will automatically be downloaded and installed without users having to take any action. Wednesday’s update also includes “defense-in-depth updates to help improve security-related features.”\n\nOn Tuesday, one week after the RoguePlanet flaw was disclosed, Microsoft assigned the CVE-2026-50656 ID to this security flaw and confirmed it's currently working on a patch, but didn't acknowledge that Nightmare Eclipse was the one who found the vulnerability. \"Microsoft is aware of an elevation of privilege in the Microsoft Malware Protection Engine in Microsoft Defender publicly referred to as 'RoguePlanet,' it said in an advisory published yesterday. \"We are working to provide a high quality security update that addresses this vulnerability. We will provide information in this CVE when the update is available.\" The RoguePlanet release is part of an ongoing dispute between Nightmare Eclipse and Microsoft over the latter's bug bounty and vulnerability disclosure practices.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 923,
+      "selected_blocks": 4,
+      "selected_source_words": 449,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "Bleeping Computer",
+        "Bleeping Computer",
+        "Bleeping Computer",
+        "Bleeping Computer",
+        "Ars Technica"
+      ],
+      "selected_sources": [
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "Bleeping Computer"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Patch for Windows Defender 0-day could allow attackers to fill hard disk",
+      "description": "A patch Microsoft released on Wednesday to fix a zero-day vulnerability in its Defender security engine may cause Windows machines to write files large enough to completely consume available disk space, the researcher who discovered the flaw said. RoguePlanet, tracked as CVE-2026-50656, came to public notice in June when NightmareEclipse, the pseudonymous name used by a researcher, disclosed it along with code for exploiting it. The vulnerability allows remote attackers to gain administrative control of Windows 10 and Windows 11 machines, even when real-time protection has been disabled. Over the past few months, the anonymous researcher has published a handful of other zero-days that have sent Microsoft scrambling to develop patches. Writing files of unlimited size Microsoft said Wednesday that it patched RoguePlanet with an update to the Microsoft Malware Protection Engine, which is used by the Defender antivirus app. The fix will automatically be downloaded and installed without users having to take any action. Wednesday’s update also includes “defense-in-depth updates to help improve security-related features.” Read full article Comments",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Patch for Windows Defender 0-day could allow attackers to fill hard disk",
+    "description": "A patch Microsoft released on Wednesday to fix a zero-day vulnerability in its Defender security engine may cause Windows machines to write files large enough to completely consume available disk space, the researcher who discovered the flaw said. RoguePlanet, tracked as CVE-2026-50656, came to public notice in June when NightmareEclipse, the pseudonymous name used by a researcher, disclosed it along with code for exploiting it. The vulnerability allows remote attackers to gain administrative control of Windows 10 and Windows 11 machines, even when real-time protection has been disabled. Over the past few months, the anonymous researcher has published a handful of other zero-days that have sent Microsoft scrambling to develop patches. Writing files of unlimited size Microsoft said Wednesday that it patched RoguePlanet with an update to the Microsoft Malware Protection Engine, which is used by the Defender antivirus app. The fix will automatically be downloaded and installed without users having to take any action. Wednesday’s update also includes “defense-in-depth updates to help improve security-related features.” Read full article Comments",
+    "link": "https://arstechnica.com/security/2026/07/patch-for-windows-defender-0-day-could-allow-attackers-to-fill-hard-disk/",
+    "published": "2026-07-09T20:52:55+00:00",
+    "source": "Ars Technica",
+    "source_domain": "arstechnica.com",
+    "language": "en",
+    "fingerprint": "78925f39a7a0c4f8825a57347c4bd6bd",
+    "_url_hash": "d42e66b7339a8003fef07bcd210902bae565b71e200436d16220ed2131de19df",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Ars Technica]\nA patch Microsoft released on Wednesday to fix a zero-day vulnerability in its Defender security engine may cause Windows machines to write files large enough to completely consume available disk space, the researcher who discovered the flaw said.\n\nRoguePlanet, tracked as CVE-2026-50656, came to public notice in June when NightmareEclipse, the pseudonymous name used by a researcher, disclosed it along with code for exploiting it. The vulnerability allows remote attackers to gain administrative control of Windows 10 and Windows 11 machines, even when real-time protection has been disabled. Over the past few months, the anonymous researcher has published a handful of other zero-days that have sent Microsoft scrambling to develop patches.\n\nMicrosoft said Wednesday that it patched RoguePlanet with an update to the Microsoft Malware Protection Engine, which is used by the Defender antivirus app. The fix will automatically be downloaded and installed without users having to take any action. Wednesday’s update also includes “defense-in-depth updates to help improve security-related features.”\n\nIn a post on Thursday, NightmareEclipse said the defense-in-depth additions produce behavior that may allow attackers to exhaust all available space on a hard drive by writing massive amounts of data to it. The newly introduced mitigations create a problem in mpengine.dll, the driver associated with the Microsoft Malware Protection Engine, that in some cases causes it to leak 8 bytes of data when trying to open a file. New functionality in SpyNet, a cloud service that allows Microsoft Security Essentials or Forefront Endpoint Protection to send reports about suspicious software and programs to Microsoft, also plays a role in the potential mass file-writing behavior.\n\nDefender normally places hard limits on how big a file can be written to disk when scanning and quarantining a machine.\n\n“This implementation make [sic] sense, because quarantining a huge file will cause Defender to completely exhaust the available disk space,” the researcher wrote. “I found a small exception to this rule, apparently the spynet functions in mpengine.dll really wants [sic] to keep a local copy of Zone.Identifier ADS file and it does not matter how big this file is, Windows Defender will cache it locally anyways.”\n\nA Zone.Identifier is a hidden metadata file, sometimes called an alternative data stream, that Windows automatically associates with files downloaded from the Internet or received in e\n\n---\n\n[Lähde: Bleeping Computer]\nMicrosoft confirmed that it's working on a security patch for a Defender zero-day vulnerability named \"RoguePlanet,\" disclosed one week ago.\n\nThe security researcher who published a RoguePlanet exploit during the June 2026 Patch Tuesday (known as Nightmare Eclipse) said it affects fully patched Windows 10 and Windows 11 devices and allows attackers to spawn command prompts with SYSTEM privileges via a Microsoft Defender race condition.\n\nHe shared a proof-of-concept exploit in a self-hosted Git repository, claiming that Microsoft had previously targeted and removed their repos hosting exploits on GitHub and GitLab.\n\n\"The exploit is a race condition, so it's a hit or miss. I have managed to get a 100% success rate on some machines while it struggled to work on others,\" Nightmare Eclipse said. \"The PoC for RoguePlanet works regardless if real time protection is on or not,\" they added in a Tuesday update.\n\n\"Microsoft is aware of the reported vulnerability and is actively investigating the validity and potential applicability of these claims. Microsoft is committed to investigating security issues and updating impacted products to protect customers as soon as possible,\" a Microsoft spokesperson told BleepingComputer when asked for a statement at the time.\n\nOn Tuesday, one week after the RoguePlanet flaw was disclosed, Microsoft assigned the CVE-2026-50656 ID to this security flaw and confirmed it's currently working on a patch, but didn't acknowledge that Nightmare Eclipse was the one who found the vulnerability.\n\n\"Microsoft is aware of an elevation of privilege in the Microsoft Malware Protection Engine in Microsoft Defender publicly referred to as 'RoguePlanet,' it said in an advisory published yesterday. \"We are working to provide a high quality security update that addresses this vulnerability. We will provide information in this CVE when the update is available.\"\n\nThe RoguePlanet release is part of an ongoing dispute between Nightmare Eclipse and Microsoft over the latter's bug bounty and vulnerability disclosure practices.\n\nOver the past several months, the researcher has publicly leaked multiple Windows zero-day exploits, including for the BlueHammer, RedSun, GreenPlasma, MiniPlasma, YellowKey, and UnDefend flaws. Some of these zero-days affect Microsoft Defender, while others target BitLocker and Windows components.\n\nThe company reacted to Nightmare Eclipse's disclosures by issuing warnings of legal action when people engage in \"malicious activity causi",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-09T22:04:23.314005+00:00",
+  "payload": {
+    "packet_id": "20260709T220126Z_d68a13566d",
+    "title": "Windows Defenderin nollapäiväkorjaus voi tutkijan mukaan täyttää kiintolevyn",
+    "summary": "Microsoft on korjannut RoguePlanet-haavoittuvuuden Defenderin haittaohjelmantorjuntamoottorissa. Haavoittuvuuden löytänyt tutkija kuitenkin varoittaa, että päivitys voi mahdollistaa kaiken vapaan levytilan kuluttavien tiedostojen kirjoittamisen.",
+    "content": "Microsoft on julkaissut korjauksen Windows Defenderin RoguePlanet-nollapäivähaavoittuvuuteen, jonka avulla etähyökkääjä voi saada järjestelmänvalvojan oikeudet Windows 10- ja Windows 11 -tietokoneessa. Haavoittuvuuden löytänyt tutkija varoittaa kuitenkin, että korjattu järjestelmä voidaan mahdollisesti saada kirjoittamaan niin suuria tiedostoja, että laitteen käytettävissä oleva levytila loppuu kokonaan.\n\n## Haavoittuvuus julkistettiin hyväksikäyttökoodin kanssa\n\nRoguePlanet sijaitsee Microsoft Malware Protection Engine -haittaohjelmantorjuntamoottorissa, jota Defender käyttää. Haavoittuvuus tunnetaan tunnuksella CVE-2026-50656. NightmareEclipse-nimimerkkiä käyttävä tutkija toi sen julkisuuteen kesäkuussa ja julkaisi samalla haavoittuvuutta hyödyntävää koodia. Tutkijan mukaan ongelma mahdollistaa Windows-laitteen hallinnan saamisen etäyhteydellä.\n\nJulkaistujen tietojen perusteella hyökkääjä voi saada RoguePlanetin kautta järjestelmänvalvojan oikeudet sekä Windows 10- että Windows 11 -järjestelmässä. Haavoittuvuuden hyväksikäyttö voi onnistua myös silloin, kun Defenderin reaaliaikainen suojaus on poistettu käytöstä. Kyse ei siten ole pelkästään reaaliaikaisen tarkistuksen toimintaan rajoittuvasta ongelmasta.\n\nMicrosoft antoi haavoittuvuudelle CVE-tunnuksen tiistaina, viikon kuluttua sen julkistamisesta, ja vahvisti tuolloin valmistelevansa tietoturvapäivitystä. Yhtiö kuvasi ongelmaa käyttöoikeuksien korottamiseksi Microsoft Malware Protection Enginessä, mutta ei nimennyt NightmareEclipseä löydön tekijäksi. Julkistaminen liittyy tutkijan ja Microsoftin väliseen kiistaan yhtiön löytöpalkkio- ja haavoittuvuuksien ilmoittamiskäytännöistä.\n\n## Korjaus asentuu ilman käyttäjän toimia\n\nMicrosoft ilmoitti keskiviikkona korjanneensa RoguePlanetin päivittämällä Microsoft Malware Protection Enginen. Korjaus ladataan ja asennetaan automaattisesti, joten käyttäjän ei tarvitse käynnistää päivitystä erikseen. Samassa päivityksessä on Microsoftin mukaan myös suojausta syventäviä muutoksia, joiden tarkoituksena on parantaa tietoturvaan liittyviä ominaisuuksia.\n\nNightmareEclipsen mukaan korjaukseen saattaa silti liittyä uusi ongelma. Tutkija kertoo, että Windows voidaan saada kirjoittamaan kooltaan rajoittamattomia tiedostoja, jotka voivat kuluttaa kaiken vapaan levytilan. Lähdeaineisto ei sisällä Microsoftin vahvistusta tälle korjauksen mahdolliselle vaikutukselle, joten kyse on tässä vaiheessa tutkijan esittämästä varoituksesta. Sama anonyymi tutkija on julkaissut viime kuukausina myös useita muita nollapäivähaavoittuvuuksia, joihin Microsoft on joutunut valmistelemaan korjauksia.",
+    "category": "Teknologia",
+    "tags": [
+      "Microsoft",
+      "Windows",
+      "Defender",
+      "tietoturva",
+      "nollapäivähaavoittuvuus",
+      "RoguePlanet"
+    ],
+    "summary_bullets": [
+      "RoguePlanet voi antaa etähyökkääjälle järjestelmänvalvojan oikeudet Windows 10- ja Windows 11 -laitteissa.",
+      "Microsoftin korjaus ladataan ja asennetaan automaattisesti Defenderin käyttämän haittaohjelmantorjuntamoottorin päivityksenä.",
+      "Haavoittuvuuden löytänyt tutkija varoittaa korjauksen voivan mahdollistaa kaiken vapaan levytilan kuluttavien tiedostojen kirjoittamisen."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "confidence": 0.93,
+    "journalist_note": "Korjauksen mahdollinen levytilavaikutus on esitetty tutkijan väitteenä, koska aineisto ei sisällä Microsoftin vahvistusta sivuvaikutukselle. Korjauksen valmistelu ja myöhempi julkaiseminen on kuvattu lähdeaineiston mukaisessa aikajärjestyksessä."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260709T220126Z_d68a13566d\",\n  \"title\": \"Windows Defenderin nollapäiväkorjaus voi tutkijan mukaan täyttää kiintolevyn\",\n  \"summary\": \"Microsoft on korjannut RoguePlanet-haavoittuvuuden Defenderin haittaohjelmantorjuntamoottorissa. Haavoittuvuuden löytänyt tutkija kuitenkin varoittaa, että päivitys voi mahdollistaa kaiken vapaan levytilan kuluttavien tiedostojen kirjoittamisen.\",\n  \"content\": \"Microsoft on julkaissut korjauksen Windows Defenderin RoguePlanet-nollapäivähaavoittuvuuteen, jonka avulla etähyökkääjä voi saada järjestelmänvalvojan oikeudet Windows 10- ja Windows 11 -tietokoneessa. Haavoittuvuuden löytänyt tutkija varoittaa kuitenkin, että korjattu järjestelmä voidaan mahdollisesti saada kirjoittamaan niin suuria tiedostoja, että laitteen käytettävissä oleva levytila loppuu kokonaan.\\n\\n## Haavoittuvuus julkistettiin hyväksikäyttökoodin kanssa\\n\\nRoguePlanet sijaitsee Microsoft Malware Protection Engine -haittaohjelmantorjuntamoottorissa, jota Defender käyttää. Haavoittuvuus tunnetaan tunnuksella CVE-2026-50656. NightmareEclipse-nimimerkkiä käyttävä tutkija toi sen julkisuuteen kesäkuussa ja julkaisi samalla haavoittuvuutta hyödyntävää koodia. Tutkijan mukaan ongelma mahdollistaa Windows-laitteen hallinnan saamisen etäyhteydellä.\\n\\nJulkaistujen tietojen perusteella hyökkääjä voi saada RoguePlanetin kautta järjestelmänvalvojan oikeudet sekä Windows 10- että Windows 11 -järjestelmässä. Haavoittuvuuden hyväksikäyttö voi onnistua myös silloin, kun Defenderin reaaliaikainen suojaus on poistettu käytöstä. Kyse ei siten ole pelkästään reaaliaikaisen tarkistuksen toimintaan rajoittuvasta ongelmasta.\\n\\nMicrosoft antoi haavoittuvuudelle CVE-tunnuksen tiistaina, viikon kuluttua sen julkistamisesta, ja vahvisti tuolloin valmistelevansa tietoturvapäivitystä. Yhtiö kuvasi ongelmaa käyttöoikeuksien korottamiseksi Microsoft Malware Protection Enginessä, mutta ei nimennyt NightmareEclipseä löydön tekijäksi. Julkistaminen liittyy tutkijan ja Microsoftin väliseen kiistaan yhtiön löytöpalkkio- ja haavoittuvuuksien ilmoittamiskäytännöistä.\\n\\n## Korjaus asentuu ilman käyttäjän toimia\\n\\nMicrosoft ilmoitti keskiviikkona korjanneensa RoguePlanetin päivittämällä Microsoft Malware Protection Enginen. Korjaus ladataan ja asennetaan automaattisesti, joten käyttäjän ei tarvitse käynnistää päivitystä erikseen. Samassa päivityksessä on Microsoftin mukaan myös suojausta syventäviä muutoksia, joiden tarkoituksena on parantaa tietoturvaan liittyviä ominaisuuksia.\\n\\nNightmareEclipsen mukaan korjaukseen saattaa silti liittyä uusi ongelma. Tutkija kertoo, että Windows voidaan saada kirjoittamaan kooltaan rajoittamattomia tiedostoja, jotka voivat kuluttaa kaiken vapaan levytilan. Lähdeaineisto ei sisällä Microsoftin vahvistusta tälle korjauksen mahdolliselle vaikutukselle, joten kyse on tässä vaiheessa tutkijan esittämästä varoituksesta. Sama anonyymi tutkija on julkaissut viime kuukausina myös useita muita nollapäivähaavoittuvuuksia, joihin Microsoft on joutunut valmistelemaan korjauksia.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"Microsoft\",\n    \"Windows\",\n    \"Defender\",\n    \"tietoturva\",\n    \"nollapäivähaavoittuvuus\",\n    \"RoguePlanet\"\n  ],\n  \"summary_bullets\": [\n    \"RoguePlanet voi antaa etähyökkääjälle järjestelmänvalvojan oikeudet Windows 10- ja Windows 11 -laitteissa.\",\n    \"Microsoftin korjaus ladataan ja asennetaan automaattisesti Defenderin käyttämän haittaohjelmantorjuntamoottorin päivityksenä.\",\n    \"Haavoittuvuuden löytänyt tutkija varoittaa korjauksen voivan mahdollistaa kaiken vapaan levytilan kuluttavien tiedostojen kirjoittamisen.\"\n  ],\n  \"content_type\": \"uutinen\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.93,\n  \"journalist_note\": \"Korjauksen mahdollinen levytilavaikutus on esitetty tutkijan väitteenä, koska aineisto ei sisällä Microsoftin vahvistusta sivuvaikutukselle. Korjauksen valmistelu ja myöhempi julkaiseminen on kuvattu lähdeaineiston mukaisessa aikajärjestyksessä.\"\n}",
+  "article": {
+    "title": "Windows Defenderin nollapäiväkorjaus voi tutkijan mukaan täyttää kiintolevyn",
+    "description": "Microsoft on korjannut RoguePlanet-haavoittuvuuden Defenderin haittaohjelmantorjuntamoottorissa. Haavoittuvuuden löytänyt tutkija kuitenkin varoittaa, että päivitys voi mahdollistaa kaiken vapaan levytilan kuluttavien tiedostojen kirjoittamisen.",
+    "link": "https://arstechnica.com/security/2026/07/patch-for-windows-defender-0-day-could-allow-attackers-to-fill-hard-disk/",
+    "published": "2026-07-09T20:52:55+00:00",
+    "source": "Ars Technica",
+    "source_domain": "arstechnica.com",
+    "language": "en",
+    "fingerprint": "78925f39a7a0c4f8825a57347c4bd6bd",
+    "_url_hash": "d42e66b7339a8003fef07bcd210902bae565b71e200436d16220ed2131de19df",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Ars Technica]\nA patch Microsoft released on Wednesday to fix a zero-day vulnerability in its Defender security engine may cause Windows machines to write files large enough to completely consume available disk space, the researcher who discovered the flaw said.\n\nRoguePlanet, tracked as CVE-2026-50656, came to public notice in June when NightmareEclipse, the pseudonymous name used by a researcher, disclosed it along with code for exploiting it. The vulnerability allows remote attackers to gain administrative control of Windows 10 and Windows 11 machines, even when real-time protection has been disabled. Over the past few months, the anonymous researcher has published a handful of other zero-days that have sent Microsoft scrambling to develop patches.\n\nMicrosoft said Wednesday that it patched RoguePlanet with an update to the Microsoft Malware Protection Engine, which is used by the Defender antivirus app. The fix will automatically be downloaded and installed without users having to take any action. Wednesday’s update also includes “defense-in-depth updates to help improve security-related features.”\n\nIn a post on Thursday, NightmareEclipse said the defense-in-depth additions produce behavior that may allow attackers to exhaust all available space on a hard drive by writing massive amounts of data to it. The newly introduced mitigations create a problem in mpengine.dll, the driver associated with the Microsoft Malware Protection Engine, that in some cases causes it to leak 8 bytes of data when trying to open a file. New functionality in SpyNet, a cloud service that allows Microsoft Security Essentials or Forefront Endpoint Protection to send reports about suspicious software and programs to Microsoft, also plays a role in the potential mass file-writing behavior.\n\nDefender normally places hard limits on how big a file can be written to disk when scanning and quarantining a machine.\n\n“This implementation make [sic] sense, because quarantining a huge file will cause Defender to completely exhaust the available disk space,” the researcher wrote. “I found a small exception to this rule, apparently the spynet functions in mpengine.dll really wants [sic] to keep a local copy of Zone.Identifier ADS file and it does not matter how big this file is, Windows Defender will cache it locally anyways.”\n\nA Zone.Identifier is a hidden metadata file, sometimes called an alternative data stream, that Windows automatically associates with files downloaded from the Internet or received in e\n\n---\n\n[Lähde: Bleeping Computer]\nMicrosoft confirmed that it's working on a security patch for a Defender zero-day vulnerability named \"RoguePlanet,\" disclosed one week ago.\n\nThe security researcher who published a RoguePlanet exploit during the June 2026 Patch Tuesday (known as Nightmare Eclipse) said it affects fully patched Windows 10 and Windows 11 devices and allows attackers to spawn command prompts with SYSTEM privileges via a Microsoft Defender race condition.\n\nHe shared a proof-of-concept exploit in a self-hosted Git repository, claiming that Microsoft had previously targeted and removed their repos hosting exploits on GitHub and GitLab.\n\n\"The exploit is a race condition, so it's a hit or miss. I have managed to get a 100% success rate on some machines while it struggled to work on others,\" Nightmare Eclipse said. \"The PoC for RoguePlanet works regardless if real time protection is on or not,\" they added in a Tuesday update.\n\n\"Microsoft is aware of the reported vulnerability and is actively investigating the validity and potential applicability of these claims. Microsoft is committed to investigating security issues and updating impacted products to protect customers as soon as possible,\" a Microsoft spokesperson told BleepingComputer when asked for a statement at the time.\n\nOn Tuesday, one week after the RoguePlanet flaw was disclosed, Microsoft assigned the CVE-2026-50656 ID to this security flaw and confirmed it's currently working on a patch, but didn't acknowledge that Nightmare Eclipse was the one who found the vulnerability.\n\n\"Microsoft is aware of an elevation of privilege in the Microsoft Malware Protection Engine in Microsoft Defender publicly referred to as 'RoguePlanet,' it said in an advisory published yesterday. \"We are working to provide a high quality security update that addresses this vulnerability. We will provide information in this CVE when the update is available.\"\n\nThe RoguePlanet release is part of an ongoing dispute between Nightmare Eclipse and Microsoft over the latter's bug bounty and vulnerability disclosure practices.\n\nOver the past several months, the researcher has publicly leaked multiple Windows zero-day exploits, including for the BlueHammer, RedSun, GreenPlasma, MiniPlasma, YellowKey, and UnDefend flaws. Some of these zero-days affect Microsoft Defender, while others target BitLocker and Windows components.\n\nThe company reacted to Nightmare Eclipse's disclosures by issuing warnings of legal action when people engage in \"malicious activity causi",
+    "research_source": "multi",
+    "summary": "Microsoft on korjannut RoguePlanet-haavoittuvuuden Defenderin haittaohjelmantorjuntamoottorissa. Haavoittuvuuden löytänyt tutkija kuitenkin varoittaa, että päivitys voi mahdollistaa kaiken vapaan levytilan kuluttavien tiedostojen kirjoittamisen.",
+    "content": "Microsoft on julkaissut korjauksen Windows Defenderin RoguePlanet-nollapäivähaavoittuvuuteen, jonka avulla etähyökkääjä voi saada järjestelmänvalvojan oikeudet Windows 10- ja Windows 11 -tietokoneessa. Haavoittuvuuden löytänyt tutkija varoittaa kuitenkin, että korjattu järjestelmä voidaan mahdollisesti saada kirjoittamaan niin suuria tiedostoja, että laitteen käytettävissä oleva levytila loppuu kokonaan.\n\n## Haavoittuvuus julkistettiin hyväksikäyttökoodin kanssa\n\nRoguePlanet sijaitsee Microsoft Malware Protection Engine -haittaohjelmantorjuntamoottorissa, jota Defender käyttää. Haavoittuvuus tunnetaan tunnuksella CVE-2026-50656. NightmareEclipse-nimimerkkiä käyttävä tutkija toi sen julkisuuteen kesäkuussa ja julkaisi samalla haavoittuvuutta hyödyntävää koodia. Tutkijan mukaan ongelma mahdollistaa Windows-laitteen hallinnan saamisen etäyhteydellä.\n\nJulkaistujen tietojen perusteella hyökkääjä voi saada RoguePlanetin kautta järjestelmänvalvojan oikeudet sekä Windows 10- että Windows 11 -järjestelmässä. Haavoittuvuuden hyväksikäyttö voi onnistua myös silloin, kun Defenderin reaaliaikainen suojaus on poistettu käytöstä. Kyse ei siten ole pelkästään reaaliaikaisen tarkistuksen toimintaan rajoittuvasta ongelmasta.\n\nMicrosoft antoi haavoittuvuudelle CVE-tunnuksen tiistaina, viikon kuluttua sen julkistamisesta, ja vahvisti tuolloin valmistelevansa tietoturvapäivitystä. Yhtiö kuvasi ongelmaa käyttöoikeuksien korottamiseksi Microsoft Malware Protection Enginessä, mutta ei nimennyt NightmareEclipseä löydön tekijäksi. Julkistaminen liittyy tutkijan ja Microsoftin väliseen kiistaan yhtiön löytöpalkkio- ja haavoittuvuuksien ilmoittamiskäytännöistä.\n\n## Korjaus asentuu ilman käyttäjän toimia\n\nMicrosoft ilmoitti keskiviikkona korjanneensa RoguePlanetin päivittämällä Microsoft Malware Protection Enginen. Korjaus ladataan ja asennetaan automaattisesti, joten käyttäjän ei tarvitse käynnistää päivitystä erikseen. Samassa päivityksessä on Microsoftin mukaan myös suojausta syventäviä muutoksia, joiden tarkoituksena on parantaa tietoturvaan liittyviä ominaisuuksia.\n\nNightmareEclipsen mukaan korjaukseen saattaa silti liittyä uusi ongelma. Tutkija kertoo, että Windows voidaan saada kirjoittamaan kooltaan rajoittamattomia tiedostoja, jotka voivat kuluttaa kaiken vapaan levytilan. Lähdeaineisto ei sisällä Microsoftin vahvistusta tälle korjauksen mahdolliselle vaikutukselle, joten kyse on tässä vaiheessa tutkijan esittämästä varoituksesta. Sama anonyymi tutkija on julkaissut viime kuukausina myös useita muita nollapäivähaavoittuvuuksia, joihin Microsoft on joutunut valmistelemaan korjauksia.",
+    "category": "Teknologia",
+    "tags": [
+      "microsoft",
+      "windows",
+      "defender",
+      "tietoturva",
+      "nollapäivähaavoittuvuus"
+    ],
+    "summary_bullets": [
+      "RoguePlanet voi antaa etähyökkääjälle järjestelmänvalvojan oikeudet Windows 10- ja Windows 11 -laitteissa.",
+      "Microsoftin korjaus ladataan ja asennetaan automaattisesti Defenderin käyttämän haittaohjelmantorjuntamoottorin päivityksenä.",
+      "Haavoittuvuuden löytänyt tutkija varoittaa korjauksen voivan mahdollistaa kaiken vapaan levytilan kuluttavien tiedostojen kirjoittamisen."
+    ],
+    "key_points": [
+      "RoguePlanet voi antaa etähyökkääjälle järjestelmänvalvojan oikeudet Windows 10- ja Windows 11 -laitteissa.",
+      "Microsoftin korjaus ladataan ja asennetaan automaattisesti Defenderin käyttämän haittaohjelmantorjuntamoottorin päivityksenä.",
+      "Haavoittuvuuden löytänyt tutkija varoittaa korjauksen voivan mahdollistaa kaiken vapaan levytilan kuluttavien tiedostojen kirjoittamisen."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "journalist_note": "Korjauksen mahdollinen levytilavaikutus on esitetty tutkijan väitteenä, koska aineisto ei sisällä Microsoftin vahvistusta sivuvaikutukselle. Korjauksen valmistelu ja myöhempi julkaiseminen on kuvattu lähdeaineiston mukaisessa aikajärjestyksessä.",
+    "source_text": "A patch Microsoft released on Wednesday to fix a zero-day vulnerability in its Defender security engine may cause Windows machines to write files large enough to completely consume available disk space, the researcher who discovered the flaw said. RoguePlanet, tracked as CVE-2026-50656, came to public notice in June when NightmareEclipse, the pseudonymous name used by a researcher, disclosed it along with code for exploiting it. The vulnerability allows remote attackers to gain administrative control of Windows 10 and Windows 11 machines, even when real-time protection has been disabled. Over the past few months, the anonymous researcher has published a handful of other zero-days that have sent Microsoft scrambling to develop patches. Writing files of unlimited size Microsoft said Wednesday that it patched RoguePlanet with an update to the Microsoft Malware Protection Engine, which is used by the Defender antivirus app. The fix will automatically be downloaded and installed without users having to take any action. Wednesday’s update also includes “defense-in-depth updates to help improve security-related features.” Read full article Comments\n\nA patch Microsoft released on Wednesday to fix a zero-day vulnerability in its Defender security engine may cause Windows machines to write files large enough to completely consume available disk space, the researcher who discovered the flaw said. RoguePlanet, tracked as CVE-2026-50656, came to public notice in June when NightmareEclipse, the pseudonymous name used by a researcher, disclosed it along with code for exploiting it. The vulnerability allows remote attackers to gain administrative control of Windows 10 and Windows 11 machines, even when real-time protection has been disabled. Over the past few months, the anonymous researcher has published a handful of other zero-days that have sent Microsoft scrambling to develop patches.\n\nMicrosoft said Wednesday that it patched RoguePlanet with an update to the Microsoft Malware Protection Engine, which is used by the Defender antivirus app. The fix will automatically be downloaded and installed without users having to take any action. Wednesday’s update also includes “defense-in-depth updates to help improve security-related features.”\n\nOn Tuesday, one week after the RoguePlanet flaw was disclosed, Microsoft assigned the CVE-2026-50656 ID to this security flaw and confirmed it's currently working on a patch, but didn't acknowledge that Nightmare Eclipse was the one who found the vulnerability. \"Microsoft is aware of an elevation of privilege in the Microsoft Malware Protection Engine in Microsoft Defender publicly referred to as 'RoguePlanet,' it said in an advisory published yesterday. \"We are working to provide a high quality security update that addresses this vulnerability. We will provide information in this CVE when the update is available.\" The RoguePlanet release is part of an ongoing dispute between Nightmare Eclipse and Microsoft over the latter's bug bounty and vulnerability disclosure practices.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.93,
+    "degraded_mode": false,
+    "monica_packet_id": "20260709T220126Z_d68a13566d",
+    "image_hotlink": false,
+    "image_category_fallback": true,
+    "image": "/images/categories/teknologia.jpg",
+    "image_thumb": "/images/categories/teknologia.jpg",
+    "image_alt": "Teknologia-uutiset",
+    "image_credit": "",
+    "image_source_url": "",
+    "image_caption": "",
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_visual_judge_score": 0,
+    "image_decision": {
+      "source": "category_fallback",
+      "accepted": true,
+      "reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+      "prompt_version": "image-flow-v2-2026-07-03"
+    }
+  },
+  "image_enriched_at": "2026-07-09T22:08:45.215425+00:00",
+  "image_enrichment": {
+    "image": "/images/categories/teknologia.jpg",
+    "image_thumb": "/images/categories/teknologia.jpg",
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+    "image_concept": null,
+    "image_query": null,
+    "image_candidate_id": null,
+    "image_candidate_url": null,
+    "image_visual_judge_score": 0,
+    "image_accepted_reasons": null,
+    "image_rejected_reasons": null,
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03"
+  },
+  "published_at": "2026-07-09T22:10:19.863801+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-07-09-windows-defenderin-nollapaivakorjaus-voi-tutkijan-mukaan-tay.md"
+  ]
+}

@@ -47,7 +47,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/09/hmd-tuo-nokia-puhelinten-takavuosien-asha-nimen-takaisin-perus-ja-alypuhelinten-valiin-tahtaava-hmd-asha-305-ilmestyi-hiljaisesti-myyntiin/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
