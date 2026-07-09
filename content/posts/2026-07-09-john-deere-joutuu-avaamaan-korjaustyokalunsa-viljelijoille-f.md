@@ -47,7 +47,6 @@ keywords:
 source_name: "Hacker News Best"
 source_url: "https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02"
 source_domain: "hnrss.org"
-briefing: true
 draft: false
 ---
 
