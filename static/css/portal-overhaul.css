@@ -222,6 +222,8 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   letter-spacing: .03em;
   text-transform: uppercase;
 }
+.portal-article-kickers { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+.portal-kicker--talous { color: #b26a00; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .portal-lead .portal-kicker { background: #0b49ad; color: #fff; border-radius: 3px; padding: 4px 7px; margin-right: 10px; }
 .portal-lead__time { color: rgba(255,255,255,.9); font-size: 13px; font-weight: 650; }
 .portal-lead h2 {

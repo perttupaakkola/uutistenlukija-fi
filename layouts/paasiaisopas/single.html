@@ -1,6 +1,14 @@
 {{ define "main" }}
 {{ partial "reading-progress.html" . }}
-{{ $cat := index .Params.categories 0 | default "Uutiset" }}
+{{ $categories := .Params.categories | default (slice) }}
+{{ $cat := "Uutiset" }}
+{{ with $categories }}{{ $cat = index . 0 }}{{ end }}
+{{ $showTalousKicker := false }}
+{{ if and (in (slice "paasiaisopas" "vappuopas") .Section) (eq .File.BaseFileName "kaupat-auki") }}
+  {{ range $categories }}
+    {{ if eq (lower .) "talous" }}{{ $showTalousKicker = true }}{{ end }}
+  {{ end }}
+{{ end }}
 <article class="portal-article-page single-article paasiaisopas-utility">
   <div class="portal-article-topbar">
     <a href="/paasiaisopas/" aria-label="Takaisin pääsiäisoppaaseen">‹ Pääsiäisopas</a>
@@ -10,7 +18,12 @@
 
   <header class="portal-article-header paasiaisopas-utility__header">
     <div class="portal-article-header__text">
-      <span class="portal-kicker">{{ $cat }}</span>
+      <div class="portal-article-kickers">
+        <span class="portal-kicker">{{ $cat }}</span>
+        {{ if and $showTalousKicker (ne (lower $cat) "talous") }}
+        <a class="portal-kicker portal-kicker--talous" href="/kategoriat/talous/">talous</a>
+        {{ end }}
+      </div>
       <h1>{{ .Title }}</h1>
       {{ with .Params.description }}<p class="portal-article-deck">{{ . }}</p>{{ end }}
       <div class="portal-article-byline">

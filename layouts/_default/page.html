@@ -1,7 +1,12 @@
 {{ define "main" }}
 <article class="single-article">
+  {{ $isCommerceGuide := and (in (slice "paasiaisopas" "vappuopas") .Section) (eq .File.BaseFileName "kaupat-auki") }}
   {{ with .Params.categories }}
-  {{ partial "category-badge.html" (dict "category" (index . 0) "link" true) }}
+  {{ $primaryCategory := index . 0 }}
+  {{ partial "category-badge.html" (dict "category" $primaryCategory "link" true) }}
+  {{ if and $isCommerceGuide (ne (lower $primaryCategory) "talous") }}
+  {{ partial "category-badge.html" (dict "category" "talous" "link" true) }}
+  {{ end }}
   {{ end }}
   <h1>{{ .Title }}</h1>
   {{ partial "hero-image.html" . }}
