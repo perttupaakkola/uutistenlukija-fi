@@ -47,7 +47,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/israelin-iskut-surmasivat-liki-kymmenen-gazassa/9364036"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
