@@ -47,7 +47,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
