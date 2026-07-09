@@ -47,7 +47,6 @@ keywords:
 source_name: "Tivi"
 source_url: "https://www.tivi.fi/uutiset/a/a76c43c5-4dc2-4997-85a0-5bb0b4f07f0d?utm_source=rss"
 source_domain: "tivi.fi"
-briefing: true
 draft: false
 ---
 
