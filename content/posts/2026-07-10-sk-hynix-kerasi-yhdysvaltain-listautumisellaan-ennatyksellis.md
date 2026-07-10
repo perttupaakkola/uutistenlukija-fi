@@ -47,7 +47,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
