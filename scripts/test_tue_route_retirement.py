@@ -24,6 +24,12 @@ class TueRouteRetirementTest(unittest.TestCase):
         self.assertIn(Path("tue/index.html"), FORBIDDEN_PUBLIC_PATHS)
         self.assertIn(Path("tue/index.xml"), FORBIDDEN_PUBLIC_PATHS)
 
+    def test_worker_bypasses_stale_asset_cache_for_retired_route(self) -> None:
+        worker = (ROOT / "static/_worker.js").read_text(encoding="utf-8")
+        self.assertIn("pathname === '/tue'", worker)
+        self.assertIn("pathname === '/tue/'", worker)
+        self.assertIn("pathname.startsWith('/tue/')", worker)
+
     def test_footers_do_not_link_to_retired_route(self) -> None:
         for footer in FOOTERS:
             with self.subTest(footer=footer.relative_to(ROOT)):

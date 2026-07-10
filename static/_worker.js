@@ -21,7 +21,14 @@ function notFoundResponse() {
 }
 
 function blockedPublicStatusPath(pathname) {
-  return pathname === '/tila' || pathname === '/tila/' || pathname.startsWith('/tila/');
+  return (
+    pathname === '/tila' ||
+    pathname === '/tila/' ||
+    pathname.startsWith('/tila/') ||
+    pathname === '/tue' ||
+    pathname === '/tue/' ||
+    pathname.startsWith('/tue/')
+  );
 }
 
 function readEnv(env, key) {
