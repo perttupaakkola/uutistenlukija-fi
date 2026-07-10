@@ -54,7 +54,6 @@ keywords:
 source_name: "Science News"
 source_url: "https://www.sciencenews.org/article/summit-living-isnt-a-problem-for-this-tiny-mouse"
 source_domain: "sciencenews.org"
-briefing: true
 draft: false
 ---
 
