@@ -47,7 +47,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/cooler-master-julkaisi-uuden-v8-ace-3dhp-tornicoolerin-3d-lampoputkilla/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
