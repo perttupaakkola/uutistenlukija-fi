@@ -55,7 +55,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/omdia-tietokonemarkkinat-kutistuivat-4-muistikriisin-vuoksi/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
