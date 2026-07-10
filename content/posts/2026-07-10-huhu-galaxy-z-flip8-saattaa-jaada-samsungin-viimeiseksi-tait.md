@@ -55,7 +55,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/10/huhu-samsung-lopettaa-taittuvanayttoiset-simpukkapuhelimet-pian-julkaistavan-galaxy-z-flip8n-jalkeen/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
