@@ -8,8 +8,8 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Oliver Tree kuoli Rio de Janeiron helikopteriturmassa 32-vuotiaana; perhe perustaa hänen nimissään säätiön testamenttiin kirjatun toiveen mukaan."
-summary: "Yhdysvaltalaismuusikko Oliver Tree on palautettu kotiseudulleen Kaliforniaan Rio de Janeiron helikopteriturman jälkeen. Perheen mukaan hänen viimeinen toiveensa oli perustaa säätiö, joka tukee iloa, taidetta ja nuoria tekijöitä."
+description: "Oliver Tree syntyi vuonna 1993 Santa Cruzissa Kaliforniassa. Muusikon ruumis palautettiin Kaliforniaan helikopteriturman jälkeen."
+summary: "Vuonna 1993 Santa Cruzissa syntyneen yhdysvaltalaismuusikko Oliver Treen ruumis on palautettu Kaliforniaan. Perhe kertoo perustavansa säätiön hänen viimeisen toiveensa mukaisesti."
 summary_bullets:
   - "Oliver Tree on palautettu kotiseudulleen Kaliforniaan helikopteriturman jälkeen."
   - "Tree ja viisi muuta ihmistä kuolivat Rio de Janeiron yllä tapahtuneessa turmassa."
@@ -50,6 +50,10 @@ draft: false
 ---
 
 Yhdysvaltalaismuusikko Oliver Tree on palautettu kotiseudulleen Kaliforniaan Rio de Janeiron helikopteriturman jälkeen. Perheen mukaan hänen viimeinen toiveensa oli perustaa säätiö, joka tukee iloa, taidetta ja nuoria tekijöitä. Tree ja viisi muuta ihmistä kuolivat, kun kaksi helikopteria törmäsi toisiinsa Rio de Janeiron yllä. Hänen Instagram-tilillään julkaistussa viestissä kerrottiin, että hän voi nyt “viimein levätä”.
+
+## Milloin Oliver Tree syntyi?
+
+Oliver Tree syntyi vuonna 1993 Santa Cruzissa Kaliforniassa. Hänen koko nimensä oli Oliver Tree Nickell, ja hän oli yhdysvaltalainen laulaja-lauluntekijä sekä sosiaalisen median persoona.
 
 ## Perhe kertoo viimeisestä toiveesta
 
