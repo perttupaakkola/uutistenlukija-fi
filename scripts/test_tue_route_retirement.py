@@ -37,6 +37,13 @@ class TueRouteRetirementTest(unittest.TestCase):
                 self.assertNotIn('href="/tue/"', markup)
 
     def test_public_sources_have_no_placeholder_or_payment_link(self) -> None:
+        retired_copy = (
+            "Tue Uutistenlukijaa",
+            "Tue riippumatonta uutiskoostetta",
+            "Yksi kahvi = parempi uutispalvelu kaikille.",
+            "Osta meille kahvi",
+            "Maksu on kertaluonteinen",
+        )
         public_roots = (
             ROOT / "content",
             ROOT / "layouts",
@@ -58,6 +65,8 @@ class TueRouteRetirementTest(unittest.TestCase):
                     text = path.read_text(encoding="utf-8", errors="replace")
                     self.assertNotIn("PLACEHOLDER", text)
                     self.assertNotIn("buymeacoffee.com", text)
+                    for snippet in retired_copy:
+                        self.assertNotIn(snippet, text)
 
 
 if __name__ == "__main__":
