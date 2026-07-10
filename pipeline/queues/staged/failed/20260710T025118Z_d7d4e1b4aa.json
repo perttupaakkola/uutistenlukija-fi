@@ -1,0 +1,90 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-10T02:51:18.608616+00:00",
+  "digest": "d7d4e1b4aa",
+  "packet": {
+    "packet_id": "20260710T025118Z_d7d4e1b4aa",
+    "created_at": "2026-07-10T02:51:18Z",
+    "headline_seed": "Tänne lävähtää kuumin sää",
+    "description_seed": "Helleraja ylittyy perjantaina osassa Suomea. Viikonloppuna sää lämpenee entisestään. Hellerajan odotetaan rikkoutuvan perjantaina usealla paikkakunnalla, kertoo Foreca. Lämpimimpiä lukemia povataan maan keskivaiheille, tarkemmin sanottuna Kainuusta Pohjanmaan maakuntiin ulottuvalle alueelle.",
+    "link": "https://www.iltalehti.fi/saauutiset/a/97dd3d5c-b21b-40fb-b98c-8772693e65e5?utm_source=rss",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/saauutiset/a/97dd3d5c-b21b-40fb-b98c-8772693e65e5?utm_source=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tänne lävähtää kuumin sää"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Helleraja ylittyy perjantaina osassa Suomea. Viikonloppuna sää lämpenee entisestään. Hellerajan odotetaan rikkoutuvan perjantaina usealla paikkakunnalla, kertoo Foreca. Lämpimimpiä lukemia povataan maan keskivaiheille, tarkemmin sanottuna Kainuusta Pohjanmaan maakuntiin ulottuvalle alueelle.",
+        "word_count": 29,
+        "keyword_overlap": 26,
+        "strong_overlap": 25
+      }
+    ],
+    "source_text": "Helleraja ylittyy perjantaina osassa Suomea. Viikonloppuna sää lämpenee entisestään. Hellerajan odotetaan rikkoutuvan perjantaina usealla paikkakunnalla, kertoo Foreca. Lämpimimpiä lukemia povataan maan keskivaiheille, tarkemmin sanottuna Kainuusta Pohjanmaan maakuntiin ulottuvalle alueelle.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 58,
+      "selected_blocks": 1,
+      "selected_source_words": 29,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tänne lävähtää kuumin sää",
+      "description": "Helleraja ylittyy perjantaina osassa Suomea. Viikonloppuna sää lämpenee entisestään. Hellerajan odotetaan rikkoutuvan perjantaina usealla paikkakunnalla, kertoo Foreca. Lämpimimpiä lukemia povataan maan keskivaiheille, tarkemmin sanottuna Kainuusta Pohjanmaan maakuntiin ulottuvalle alueelle.",
+      "category_hint": "",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Tänne lävähtää kuumin sää",
+    "description": "Helleraja ylittyy perjantaina osassa Suomea. Viikonloppuna sää lämpenee entisestään. Hellerajan odotetaan rikkoutuvan perjantaina usealla paikkakunnalla, kertoo Foreca. Lämpimimpiä lukemia povataan maan keskivaiheille, tarkemmin sanottuna Kainuusta Pohjanmaan maakuntiin ulottuvalle alueelle.",
+    "link": "https://www.iltalehti.fi/saauutiset/a/97dd3d5c-b21b-40fb-b98c-8772693e65e5?utm_source=rss",
+    "published": "2026-07-10T05:27:36+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "f565000de5290776af0d1a45fb7f25ba",
+    "_url_hash": "93b2452b3229328422bf9abed0ca77732158ce0d123a30d6e7ed2468b69870b6",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Helleraja ylittyy perjantaina osassa Suomea. Viikonloppuna sää lämpenee entisestään. Hellerajan odotetaan rikkoutuvan perjantaina usealla paikkakunnalla, kertoo Foreca. Lämpimimpiä lukemia povataan maan keskivaiheille, tarkemmin sanottuna Kainuusta Pohjanmaan maakuntiin ulottuvalle alueelle.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-07-10T02:53:16.545742+00:00",
+  "failure": "Aineisto sisältää vain 29 sanan mittaisen, yhden lähteen sääennusteen ilman lämpötilalukemia tai riittäviä alue- ja aikatietoja. Vähintään 250 sanan uutista ei voi laatia ilman täytettä tai perusteettomia lisäyksiä.",
+  "raw_response": "{\"packet_id\":\"20260710T025118Z_d7d4e1b4aa\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineisto sisältää vain 29 sanan mittaisen, yhden lähteen sääennusteen ilman lämpötilalukemia tai riittäviä alue- ja aikatietoja. Vähintään 250 sanan uutista ei voi laatia ilman täytettä tai perusteettomia lisäyksiä.\"}"
+}

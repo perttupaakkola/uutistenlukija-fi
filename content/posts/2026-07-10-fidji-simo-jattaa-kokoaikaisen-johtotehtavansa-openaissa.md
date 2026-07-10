@@ -47,7 +47,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
