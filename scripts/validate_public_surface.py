@@ -10,6 +10,8 @@ from pathlib import Path
 
 FORBIDDEN_PUBLIC_PATHS = (
     Path("tila/index.html"),
+    Path("tue/index.html"),
+    Path("tue/index.xml"),
 )
 
 
