@@ -47,7 +47,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/lapsi-pelasti-toisen-veden-varasta-soinissa/9364606"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 

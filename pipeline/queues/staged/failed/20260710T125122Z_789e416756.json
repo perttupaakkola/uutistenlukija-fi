@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-10T12:51:22.474762+00:00",
+  "digest": "789e416756",
+  "packet": {
+    "packet_id": "20260710T125122Z_789e416756",
+    "created_at": "2026-07-10T12:51:22Z",
+    "headline_seed": "Viisumihakemusten hylkääminen on aiheuttamassa katastrofin marja-alalla – \"3 000 olisi tarvittu, 200 saatiin\"",
+    "description_seed": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/uutiset/ff7efda7-0433-43e5-94fc-07e8bfc0d2e2",
+    "source": "Maaseudun Tulevaisuus",
+    "source_names": [],
+    "source_urls": [
+      "https://www.maaseuduntulevaisuus.fi/uutiset/ff7efda7-0433-43e5-94fc-07e8bfc0d2e2"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Viisumihakemusten hylkääminen on aiheuttamassa katastrofin marja-alalla – \"3 000 olisi tarvittu, 200 saatiin\""
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 118,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Verkkouutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Viisumihakemusten hylkääminen on aiheuttamassa katastrofin marja-alalla – \"3 000 olisi tarvittu, 200 saatiin\"",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Viisumihakemusten hylkääminen on aiheuttamassa katastrofin marja-alalla – \"3 000 olisi tarvittu, 200 saatiin\"",
+    "description": "",
+    "link": "https://www.maaseuduntulevaisuus.fi/uutiset/ff7efda7-0433-43e5-94fc-07e8bfc0d2e2",
+    "published": "2026-07-10T12:38:09+00:00",
+    "source": "Maaseudun Tulevaisuus",
+    "source_domain": "maaseuduntulevaisuus.fi",
+    "language": "fi",
+    "fingerprint": "67bbfdf70a0ade130e3f54b155fff071",
+    "_url_hash": "46712ac778f8c10df6c338f810266a346fbb77a9b7ca43c141105c0251f92293",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": true,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Verkkouutiset]\nVuokrataloyhtiöt Sato ja Lumo ovat asettaneet yli 2700 parveketta käyttökieltoon turvallisuusriskin vuoksi, kertoo Helsingin Sanomat.\n\nOnnettomuustutkintakeskus (Otkes) varoitti toukokuussa parvekekaiteen sementtikuitulevyistä, kun se oli tutkinut Helsingin Hietalahdessa tapahtuneen parveketurman. Otkesin mukaan levyt eivät välttämättä estä putoamista, vaan voivat pettää niihin törmättäessä. Otkes julkisti testeistä myös videon.\n\nLumon johtaja Katri Viippola ei osaa arvioida, kuinka kauan parvekkeiden korjaustyöt kestävät.\n\n– Kaikkia parvekkeita tuskin saadaan korjattua kesän aikana, hän sanoo.\n\nLumon vuokralaiset saavat viiden prosentin vuokranalennuksen niin kauan kuin parveke on pois käytöstä.\n\nJuhannuksena mies kuoli pudottuaan kerrostalon parvekkeelta lasituksen läpi Vantaan Tikkurilassa.\n\nMyös lasikaiteisia parvekkeita tarkistetaan, Lumo ja Sato kertovat. Niihin ei epäillä liittyvän turvallisuuspuutteita.\n\nPääkaupunkiseudun rakennusvalvonnat suosittelevat, että taloyhtiöt tarkistavat parvekkeiden turvallisuuden, jos niissä on käytetty lasirakenteisia kaiteita.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-10T12:53:23.865816+00:00",
+  "failure": "Paketissa ei ole lainkaan valittua lähdetekstiä, ja ainoa väite perustuu otsikkoon. Aineisto ei riitä vähintään 250 sanan todennettavaan uutisartikkeliin ilman täydennyksiä tai keksittyjä tietoja.",
+  "raw_response": "{\"packet_id\":\"20260710T125122Z_789e416756\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lainkaan valittua lähdetekstiä, ja ainoa väite perustuu otsikkoon. Aineisto ei riitä vähintään 250 sanan todennettavaan uutisartikkeliin ilman täydennyksiä tai keksittyjä tietoja.\"}"
+}
