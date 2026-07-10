@@ -5,7 +5,7 @@ import { createRequire } from 'node:module';
 import test from 'node:test';
 
 const require = createRequire(import.meta.url);
-const { createRuntime, evaluateAccess } = require('../static/js/ad-runtime.js');
+const { createRuntime, evaluateAccess, normalizedConfig } = require('../static/js/ad-runtime.js');
 
 function fakeElement(tagName) {
   return {
@@ -63,6 +63,39 @@ test('required dormant-ad regression matrix gates provider access', () => {
   }
 });
 
+test('immutable activation floor blocks stale and invalid revisions and forces a fresh choice', () => {
+  const blockedRevisions = [
+    ['activation v2', { ...currentConfig, activationRevision: 2 }],
+    ['activation zero', { ...currentConfig, activationRevision: 0 }],
+    ['activation negative', { ...currentConfig, activationRevision: -1 }],
+    ['activation invalid', { ...currentConfig, activationRevision: 'invalid' }],
+    ['consent v2', { ...currentConfig, consentRevision: 2 }],
+    ['consent zero', { ...currentConfig, consentRevision: 0 }],
+    ['consent negative', { ...currentConfig, consentRevision: -1 }],
+    ['consent invalid', { ...currentConfig, consentRevision: 'invalid' }],
+  ];
+
+  for (const [label, config] of blockedRevisions) {
+    const result = evaluateAccess(config, { v: 2, advertising: true });
+    assert.equal(result.providerReady, false, label);
+    assert.equal(result.mayLoad, false, label);
+    assert.equal(result.shouldReprompt, true, label);
+  }
+});
+
+test('missing revisions use the same safe defaults as server and business gates', () => {
+  const config = { enabled: true, providerId: 'ca-test-provider' };
+  const normalized = normalizedConfig(config);
+  assert.equal(normalized.configuredConsentRevision, 2);
+  assert.equal(normalized.activationRevision, 3);
+  assert.equal(normalized.consentRevision, 3);
+
+  const decision = evaluateAccess(config, { v: 2, advertising: true });
+  assert.equal(decision.providerReady, false);
+  assert.equal(decision.mayLoad, false);
+  assert.equal(decision.shouldReprompt, true);
+});
+
 test('blocked matrix states create no hints, provider script, slots, or initialization', () => {
   const cases = [
     [{ ...currentConfig, enabled: false }, { v: 3, advertising: true }],
@@ -70,6 +103,12 @@ test('blocked matrix states create no hints, provider script, slots, or initiali
     [currentConfig, null],
     [currentConfig, { v: 2, advertising: true }],
     [currentConfig, { v: 3, advertising: false }],
+    [{ ...currentConfig, activationRevision: 2 }, { v: 3, advertising: true }],
+    [{ ...currentConfig, activationRevision: 0 }, { v: 3, advertising: true }],
+    [{ ...currentConfig, activationRevision: -1 }, { v: 3, advertising: true }],
+    [{ ...currentConfig, activationRevision: 'invalid' }, { v: 3, advertising: true }],
+    [{ ...currentConfig, consentRevision: 2 }, { v: 3, advertising: true }],
+    [{ ...currentConfig, consentRevision: 'invalid' }, { v: 3, advertising: true }],
   ];
 
   for (const [config, prefs] of cases) {

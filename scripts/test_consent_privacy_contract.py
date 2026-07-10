@@ -78,7 +78,17 @@ class ConsentPrivacySourceContractTests(unittest.TestCase):
         self.assertIn("ads_activation_revision = 3", config)
 
         ad_config = (ROOT / "layouts/partials/ad-config.html").read_text(encoding="utf-8")
-        for token in ("ads_enabled", "adsense_id", "ads_consent_revision", "ads_activation_revision", "serverEligible"):
+        for token in (
+            "ads_enabled",
+            "adsense_id",
+            "ads_consent_revision",
+            "ads_activation_revision",
+            "immutableActivationFloor",
+            "activationFloorValid",
+            "configuredConsentRevision",
+            "serverEligible",
+            "findRE `^-?[0-9]+$`",
+        ):
             self.assertIn(token, ad_config)
 
         layout_text = "\n".join(
@@ -88,6 +98,29 @@ class ConsentPrivacySourceContractTests(unittest.TestCase):
         self.assertNotIn("pagead2.googlesyndication.com", layout_text)
         self.assertNotIn("cookie_consent_v3", layout_text)
         self.assertIn('partial "ad-config.html"', layout_text)
+
+    def test_cookie_controls_preserve_contrast_and_mobile_touch_targets(self) -> None:
+        critical = (ROOT / "layouts/partials/critical-css.html").read_text(encoding="utf-8")
+        style = (ROOT / "themes/uutistenlukija/static/css/style.css").read_text(encoding="utf-8")
+        portal_static = (ROOT / "static/css/portal-overhaul.css").read_text(encoding="utf-8")
+        portal_asset = (ROOT / "assets/css/portal-overhaul.css").read_text(encoding="utf-8")
+        compact = critical.replace(" ", "")
+        self.assertIn("#cookie-banner.cb-btn{min-height:44px", compact)
+        self.assertIn("#cookie-banner.cb-text{font-size:.85rem;line-height:1.35}", compact)
+        self.assertIn("#cookie-banner.cb-btn{min-width:0;min-height:44px", compact)
+        self.assertIn("#cookie-banner.cb-btn{min-height:44px!important", compact)
+        self.assertNotIn("#cookie-banner .cb-btn{min-height:38px", critical)
+        self.assertNotIn("#cookie-banner .cb-btn{min-width:0;min-height:34px", critical)
+        self.assertIn('[data-theme="dark"] #cookie-banner .cb-btn--primary', style)
+        self.assertIn("background: #c0392b", style)
+        self.assertIn(".cm-box .cb-btn--ghost", style)
+        self.assertIn("color: var(--text-secondary, #555)", style)
+        self.assertEqual(portal_static, portal_asset)
+        self.assertEqual(portal_static.count("min-height: 44px !important"), 2)
+        self.assertIn("font-size: 0.85rem !important", portal_static)
+        self.assertIn("line-height: 1.35 !important", portal_static)
+        self.assertNotIn("min-height: 32px !important", portal_static)
+        self.assertNotIn("min-height: 38px !important", portal_static)
 
 
 @unittest.skipUnless(PUBLIC_DIR, "set OPE351_PUBLIC_DIR to test rendered Hugo output")

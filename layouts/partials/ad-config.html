@@ -8,18 +8,42 @@
 */ -}}
 {{- $enabled := eq site.Params.ads_enabled true -}}
 {{- $providerID := trim (site.Params.adsense_id | default "") " " -}}
-{{- $consentRevision := int (site.Params.ads_consent_revision | default 2) -}}
-{{- $activationRevision := int (site.Params.ads_activation_revision | default 3) -}}
-{{- $serverEligible := and $enabled (ne $providerID "") (ge $consentRevision $activationRevision) -}}
+{{- $immutableActivationFloor := 3 -}}
+{{- $rawConsentRevision := "2" -}}
+{{- if isset site.Params "ads_consent_revision" -}}
+  {{- $rawConsentRevision = printf "%v" site.Params.ads_consent_revision -}}
+{{- end -}}
+{{- $configuredConsentRevision := 0 -}}
+{{- if gt (len (findRE `^-?[0-9]+$` $rawConsentRevision)) 0 -}}
+  {{- $configuredConsentRevision = int $rawConsentRevision -}}
+{{- end -}}
+{{- $rawActivationRevision := printf "%v" $immutableActivationFloor -}}
+{{- if isset site.Params "ads_activation_revision" -}}
+  {{- $rawActivationRevision = printf "%v" site.Params.ads_activation_revision -}}
+{{- end -}}
+{{- $activationRevision := 0 -}}
+{{- if gt (len (findRE `^-?[0-9]+$` $rawActivationRevision)) 0 -}}
+  {{- $activationRevision = int $rawActivationRevision -}}
+{{- end -}}
+{{- $activationRequested := and $enabled (ne $providerID "") -}}
+{{- $activationFloorValid := ge $activationRevision $immutableActivationFloor -}}
+{{- $consentRevisionValid := and (ge $configuredConsentRevision $immutableActivationFloor) (ge $configuredConsentRevision $activationRevision) -}}
+{{- $serverEligible := and $activationRequested $activationFloorValid $consentRevisionValid -}}
 {{- $currentConsentRevision := 2 -}}
-{{- if $serverEligible -}}
-  {{- $currentConsentRevision = $consentRevision -}}
+{{- if $activationRequested -}}
+  {{- $currentConsentRevision = $immutableActivationFloor -}}
+  {{- if gt $configuredConsentRevision $immutableActivationFloor -}}
+    {{- $currentConsentRevision = $configuredConsentRevision -}}
+  {{- end -}}
 {{- end -}}
 {{- return (dict
   "enabled" $enabled
   "providerID" $providerID
   "consentRevision" $currentConsentRevision
-  "configuredConsentRevision" $consentRevision
+  "configuredConsentRevision" $configuredConsentRevision
   "activationRevision" $activationRevision
+  "immutableActivationFloor" $immutableActivationFloor
+  "activationRequested" $activationRequested
+  "activationFloorValid" $activationFloorValid
   "serverEligible" $serverEligible
 ) -}}

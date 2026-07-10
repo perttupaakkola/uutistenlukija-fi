@@ -7,25 +7,44 @@
   'use strict';
 
   function normalizedConfig(config) {
-    var revision = Number(config && config.consentRevision) || 0;
-    var activationRevision = Number(config && config.activationRevision) || 3;
+    var immutableActivationFloor = 3;
+    var rawRevision = config && config.configuredConsentRevision !== undefined ?
+      config.configuredConsentRevision : config && config.consentRevision;
+    var rawActivationRevision = config && config.activationRevision;
+    var revision = rawRevision === undefined || rawRevision === null || rawRevision === '' ?
+      2 : Number(rawRevision);
+    var activationRevision = rawActivationRevision === undefined || rawActivationRevision === null || rawActivationRevision === '' ?
+      immutableActivationFloor : Number(rawActivationRevision);
+    if (!Number.isInteger(revision)) revision = 0;
+    if (!Number.isInteger(activationRevision)) activationRevision = 0;
+    var enabled = !!(config && config.enabled);
+    var providerId = String((config && config.providerId) || '').trim();
+    var activationRequested = enabled && !!providerId;
+    var activationFloorValid = activationRevision >= immutableActivationFloor;
+    var currentConsentRevision = activationRequested ?
+      Math.max(revision, immutableActivationFloor) : 2;
     return {
-      enabled: !!(config && config.enabled),
-      providerId: String((config && config.providerId) || '').trim(),
-      consentRevision: revision,
-      activationRevision: activationRevision
+      enabled: enabled,
+      providerId: providerId,
+      configuredConsentRevision: revision,
+      consentRevision: currentConsentRevision,
+      activationRevision: activationRevision,
+      immutableActivationFloor: immutableActivationFloor,
+      activationRequested: activationRequested,
+      activationFloorValid: activationFloorValid
     };
   }
 
   function evaluateAccess(config, prefs) {
     var current = normalizedConfig(config);
-    var providerReady = current.enabled && !!current.providerId &&
-      current.consentRevision >= current.activationRevision;
+    var providerReady = current.activationRequested && current.activationFloorValid &&
+      current.configuredConsentRevision >= current.immutableActivationFloor &&
+      current.configuredConsentRevision >= current.activationRevision;
     var currentChoice = !!prefs && Number(prefs.v) === current.consentRevision;
     return {
       providerReady: providerReady,
       currentChoice: currentChoice,
-      shouldReprompt: providerReady && !currentChoice,
+      shouldReprompt: current.activationRequested && !currentChoice,
       mayLoad: providerReady && currentChoice && prefs.advertising === true
     };
   }
@@ -85,7 +104,7 @@
 
     function applyConsent(prefs) {
       var current = normalizedConfig(config);
-      var decision = evaluateAccess(current, prefs);
+      var decision = evaluateAccess(config, prefs);
       if (!decision.mayLoad || loaded) return decision;
 
       loaded = true;

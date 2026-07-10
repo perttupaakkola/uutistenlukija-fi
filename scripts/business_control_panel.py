@@ -462,25 +462,40 @@ def parse_hugo_params(path: Path) -> dict[str, Any]:
 
 def effective_ad_config(params: dict[str, Any]) -> dict[str, Any]:
     """Mirror the Hugo ad-config gate from the same public config values."""
+    immutable_activation_floor = 3
     feature_flag = params.get("ads_enabled") is True
     provider_configured = bool(str(params.get("adsense_id") or "").strip())
     try:
-        consent_revision = int(params.get("ads_consent_revision", 2))
+        configured_consent_revision = int(params.get("ads_consent_revision", 2))
     except (TypeError, ValueError):
-        consent_revision = 2
+        configured_consent_revision = 0
     try:
-        activation_revision = int(params.get("ads_activation_revision", 3))
+        activation_revision = int(
+            params.get("ads_activation_revision", immutable_activation_floor)
+        )
     except (TypeError, ValueError):
-        activation_revision = 3
+        activation_revision = 0
 
-    revision_current = consent_revision >= activation_revision
-    effective = feature_flag and provider_configured and revision_current
+    activation_requested = feature_flag and provider_configured
+    activation_floor_valid = activation_revision >= immutable_activation_floor
+    consent_revision = (
+        max(configured_consent_revision, immutable_activation_floor)
+        if activation_requested
+        else 2
+    )
+    revision_current = (
+        configured_consent_revision >= immutable_activation_floor
+        and configured_consent_revision >= activation_revision
+    )
+    effective = activation_requested and activation_floor_valid and revision_current
     if not feature_flag:
         reason = "ads feature flag disabled"
     elif not provider_configured:
         reason = "provider ID missing"
+    elif not activation_floor_valid:
+        reason = "activation revision is below immutable dormant-safe floor 3"
     elif not revision_current:
-        reason = "consent revision is dormant; activation requires a newer revision"
+        reason = "consent revision is below the activation revision or immutable floor 3"
     else:
         reason = "server gate eligible; client still requires current explicit advertising consent"
 
@@ -489,7 +504,11 @@ def effective_ad_config(params: dict[str, Any]) -> dict[str, Any]:
         "feature_flag": feature_flag,
         "provider_configured": provider_configured,
         "consent_revision": consent_revision,
+        "configured_consent_revision": configured_consent_revision,
         "activation_revision": activation_revision,
+        "immutable_activation_floor": immutable_activation_floor,
+        "activation_requested": activation_requested,
+        "activation_floor_valid": activation_floor_valid,
         "revision_current": revision_current,
         "reason": reason,
     }

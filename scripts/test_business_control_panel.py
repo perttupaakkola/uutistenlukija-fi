@@ -19,16 +19,35 @@ spec.loader.exec_module(panel)
 class BusinessControlPanelReportingTest(unittest.TestCase):
     def test_effective_ad_config_rejects_incomplete_or_dormant_activation(self) -> None:
         cases = [
-            ({"ads_enabled": False, "adsense_id": "ca-test", "ads_consent_revision": 3}, False),
-            ({"ads_enabled": True, "adsense_id": "", "ads_consent_revision": 3}, False),
-            ({"ads_enabled": True, "adsense_id": "ca-test", "ads_consent_revision": 2}, False),
-            ({"ads_enabled": True, "adsense_id": "ca-test", "ads_consent_revision": 3}, True),
+            ({"ads_enabled": False, "adsense_id": "ca-test", "ads_consent_revision": 3}, False, 3, 2),
+            ({"ads_enabled": True, "adsense_id": "", "ads_consent_revision": 3}, False, 3, 2),
+            ({"ads_enabled": True, "adsense_id": "ca-test", "ads_consent_revision": 2}, False, 3, 3),
+            ({"ads_enabled": True, "adsense_id": "ca-test", "ads_consent_revision": 3}, True, 3, 3),
+            ({"ads_enabled": True, "adsense_id": "ca-test", "ads_consent_revision": 3, "ads_activation_revision": 2}, False, 2, 3),
+            ({"ads_enabled": True, "adsense_id": "ca-test", "ads_consent_revision": 3, "ads_activation_revision": 0}, False, 0, 3),
+            ({"ads_enabled": True, "adsense_id": "ca-test", "ads_consent_revision": 3, "ads_activation_revision": -1}, False, -1, 3),
+            ({"ads_enabled": True, "adsense_id": "ca-test", "ads_consent_revision": 3, "ads_activation_revision": "invalid"}, False, 0, 3),
+            ({"ads_enabled": True, "adsense_id": "ca-test", "ads_consent_revision": "invalid"}, False, 3, 3),
+            ({"ads_enabled": True, "adsense_id": "ca-test"}, False, 3, 3),
         ]
-        for params, expected in cases:
+        for params, expected, activation_revision, consent_revision in cases:
             with self.subTest(params=params):
                 config = panel.effective_ad_config(params)
                 self.assertEqual(config["effective_ads_enabled"], expected)
-                self.assertEqual(config["activation_revision"], 3)
+                self.assertEqual(config["activation_revision"], activation_revision)
+                self.assertEqual(config["consent_revision"], consent_revision)
+                self.assertEqual(config["immutable_activation_floor"], 3)
+
+    def test_effective_ad_config_requires_revision_at_or_above_activation(self) -> None:
+        config = panel.effective_ad_config({
+            "ads_enabled": True,
+            "adsense_id": "ca-test",
+            "ads_consent_revision": 3,
+            "ads_activation_revision": 4,
+        })
+        self.assertFalse(config["effective_ads_enabled"])
+        self.assertFalse(config["revision_current"])
+        self.assertEqual(config["consent_revision"], 3)
 
     def test_last_24h_article_count_uses_published_content_when_scanner_metrics_are_zero(self) -> None:
         """Fresh published posts must not be reported as 0 articles in the 24h business summary."""
