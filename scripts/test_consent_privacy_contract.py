@@ -29,6 +29,8 @@ class ConsentPrivacySourceContractTests(unittest.TestCase):
 
     def test_cookie_policy_contains_complete_approved_local_storage_inventory(self) -> None:
         policy = (ROOT / "content/evasteet.md").read_text(encoding="utf-8")
+        self.assertIn("lastmod: 2026-07-10", policy)
+        self.assertIn("**Päivitetty:** 10.7.2026", policy)
         expected = [
             "## Evästeet ja selaimen paikallinen tallennustila",
             "Alla oleva taulukko kuvaa sivuston nykyisiä localStorage-tallennuksia. Niitä ei ryhmitellä tässä välttämättömiksi tallennuksiksi.",
@@ -48,6 +50,8 @@ class ConsentPrivacySourceContractTests(unittest.TestCase):
 
     def test_privacy_statement_contains_approved_storage_ad_and_recipient_truth(self) -> None:
         privacy = (ROOT / "content/tietosuojaseloste.md").read_text(encoding="utf-8")
+        self.assertIn("lastmod: 2026-07-10", privacy)
+        self.assertIn("**Päivitetty:** 10.7.2026", privacy)
         expected = [
             "### Evästeet ja selaimen paikallinen tallennustila",
             "Uutistenlukija.fi käyttää selaimen paikallista tallennustilaa teema- ja evästeasetuksiin sekä joillakin sivuilla paikalliseen lukuhistoriaan, lukemisen edistymiseen ja mainontakiinnostusta koskevien toimintojen anonyymiin paikalliseen laskentaan. Tallennettavat tiedot, niiden tarkoitukset ja nykyinen säilytys kuvataan [evästekäytännössä](/evasteet/).",

@@ -1,12 +1,12 @@
 ---
 title: "Evästekäytäntö"
 date: 2026-03-21
-lastmod: 2026-03-21
+lastmod: 2026-07-10
 layout: "static"
 description: "Uutistenlukija.fi:n evästekäytäntö – mitä evästeitä käytämme ja miten hallita niitä."
 ---
 
-**Päivitetty:** 21.3.2026
+**Päivitetty:** 10.7.2026
 
 ## Evästeet ja selaimen paikallinen tallennustila
 
