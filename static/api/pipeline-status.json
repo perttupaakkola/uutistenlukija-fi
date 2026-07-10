@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-10T14:29:57+00:00",
+  "generated_at": "2026-07-10T14:50:04+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -13,19 +13,19 @@
   "articles": {
     "attempted": 0,
     "published": 40,
-    "rejected": 7,
+    "rejected": 6,
     "publish_rate": 0,
-    "last_published_ts": "2026-07-10T14:28:29.477358+00:00"
+    "last_published_ts": "2026-07-10T14:48:38.025359+00:00"
   },
   "reject_reasons": {
-    "missing: image": 7,
-    "language borderline Finnish si": 4,
-    "source_confidence_denial_conte": 4,
+    "missing: image": 6,
+    "source_confidence_denial_conte": 3,
+    "language borderline Finnish si": 3,
     "readability few paragraphs (1)": 2,
     "readability wall of text": 2,
     "only 1 paragraphs (min 3)": 2,
-    "length under target (251 words": 1,
-    "length under target (276 words": 1
+    "length under target (276 words": 1,
+    "keyword_stuffing": 1
   },
   "feeds": {
     "total": 33,
@@ -38,7 +38,11 @@
   "trending": [
     [
       "jälkeen",
-      37
+      36
+    ],
+    [
+      "vuonna",
+      22
     ],
     [
       "aikana",
@@ -46,10 +50,6 @@
     ],
     [
       "aiemmin",
-      21
-    ],
-    [
-      "vuonna",
       21
     ],
     [
