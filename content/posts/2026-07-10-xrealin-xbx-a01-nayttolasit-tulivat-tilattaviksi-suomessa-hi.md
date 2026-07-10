@@ -47,7 +47,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/10/xrealin-xbx-a01-nayttolasit-tulivat-tilattavaksi-alkaen-299-eurolla-tarjoavat-147-tuuman-nayttoa-vastaavan-katselukokemuksen/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
