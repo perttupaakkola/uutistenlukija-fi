@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-10T04:40:17+00:00",
+  "generated_at": "2026-07-10T06:29:33+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,20 +12,20 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 42,
-    "rejected": 5,
+    "published": 41,
+    "rejected": 7,
     "publish_rate": 0,
-    "last_published_ts": "2026-07-10T04:38:46.450467+00:00"
+    "last_published_ts": "2026-07-10T06:28:06.888093+00:00"
   },
   "reject_reasons": {
-    "missing: image": 5,
-    "language borderline Finnish si": 3,
-    "source_confidence_denial_conte": 3,
+    "missing: image": 7,
+    "language borderline Finnish si": 4,
+    "source_confidence_denial_conte": 4,
+    "readability few paragraphs (1)": 2,
+    "readability wall of text": 2,
+    "only 1 paragraphs (min 3)": 2,
     "length under target (251 words": 1,
-    "length under target (276 words": 1,
-    "keyword_stuffing": 1,
-    "length under target (291 words": 1,
-    "readability few paragraphs (1)": 1
+    "length under target (276 words": 1
   },
   "feeds": {
     "total": 33,
@@ -38,22 +38,22 @@
   "trending": [
     [
       "jälkeen",
-      34
+      36
     ],
     [
       "mukaansa",
-      31
-    ],
-    [
-      "aikana",
-      30
+      29
     ],
     [
       "kertoo",
-      28
+      27
     ],
     [
       "vuoden",
+      26
+    ],
+    [
+      "aikana",
       26
     ]
   ]
