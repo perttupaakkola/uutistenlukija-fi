@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-10T00:51:17.870487+00:00",
+  "digest": "6c158deafe",
+  "packet": {
+    "packet_id": "20260710T005117Z_6c158deafe",
+    "created_at": "2026-07-10T00:51:17Z",
+    "headline_seed": "Yhdysvallat | 84-vuotiaan senaattori Mitch McConnellin terveydentila on hämärän peitossa, Trumpilla ”ei ole hajuakaan”",
+    "description_seed": "Republikaaneja pitkään senaatissa johtanut, yhä senaattorin työssä jatkava Mitch McConnell on spekulaatioiden kohteena.",
+    "link": "https://www.hs.fi/maailma/art-2000012132558.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.hs.fi/maailma/art-2000012132558.html"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Yhdysvallat | 84-vuotiaan senaattori Mitch McConnellin terveydentila on hämärän peitossa, Trumpilla ”ei ole hajuakaan”"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 141,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Satakunnan Kansa",
+        "HS Tuoreimmat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Yhdysvallat | 84-vuotiaan senaattori Mitch McConnellin terveydentila on hämärän peitossa, Trumpilla ”ei ole hajuakaan”",
+      "description": "Republikaaneja pitkään senaatissa johtanut, yhä senaattorin työssä jatkava Mitch McConnell on spekulaatioiden kohteena.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Yhdysvallat | 84-vuotiaan senaattori Mitch McConnellin terveydentila on hämärän peitossa, Trumpilla ”ei ole hajuakaan”",
+    "description": "Republikaaneja pitkään senaatissa johtanut, yhä senaattorin työssä jatkava Mitch McConnell on spekulaatioiden kohteena.",
+    "link": "https://www.hs.fi/maailma/art-2000012132558.html",
+    "published": "2026-07-10T00:43:00+00:00",
+    "source": "HS Tuoreimmat",
+    "source_domain": "hs.fi",
+    "language": "fi",
+    "fingerprint": "079f3b16d2e853744967633639f85b83",
+    "_url_hash": "076abf553ddd95ff5dfe87feb3dc577cde16bccb18d132af832070340863a039",
+    "source_tier": 1,
+    "category_hint": "Uutiset",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Satakunnan Kansa]\n”Vakava lähisuhdeväkivalta ja parisuhdesurmat kohdistuvat useimmiten naisiin ja tekijä on useimmiten mies”, Markus Holm (vihr.) kirjoittaa.\n\nNaisiin kohdistuvaa väkivaltaa ei saa enää selitellä. Kuva: Ville Maali / Arkisto\n\nJo lapsena minulle opetettiin yksinkertainen sääntö: tyttöjä ei lyödä. Tästä säännöstä isäni oli erityisen tarkka. Se ei tarkoittanut, että poikia saisi lyödä, vaan sitä että toista ei satuteta, ketään ei alisteta eikä väkivaltaa hyväksytä. Pitkään ajattelin, että tämä on yleinen moraalinen normi.\n\nValitettavasti elämme Suomessa, jossa naisen on pelättävä miestä. Tutkimuksen mukaan noin 57 prosenttia suomalaisista naisista on kokenut elämänsä aikana fyysistä väkivaltaa, seksuaaliväkivaltaa tai niillä uhkailua.\n\nNoin joka kolmas nainen on kokenut nykyisen tai entisen parisuhdekumppanin tekemää fyysistä tai seksuaalista väkivaltaa tai sillä uhkailua. Samalla tiedämme, että vakava lähisuhdeväkivalta ja parisuhdesurmat kohdistuvat useimmiten naisiin ja tekijä on useimmiten mies.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-10T00:53:16.124202+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja tietoja vähintään 250 sanan uutisartikkeliin.",
+  "raw_response": "{\"packet_id\":\"20260710T005117Z_6c158deafe\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja tietoja vähintään 250 sanan uutisartikkeliin.\"}"
+}
