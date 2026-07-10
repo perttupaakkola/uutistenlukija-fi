@@ -47,7 +47,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/petteri-soini-lopetti-myyntijohtajan-tyot-porssiyhtiossa-ja-perusti-kahvilan-jonne-nyt-jonotetaan-vetonaulana-jattimainen-leivonnainen/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
