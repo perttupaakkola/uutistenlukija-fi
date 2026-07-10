@@ -103,14 +103,6 @@
   line-height: 1.6;
 }
 
-.mainosta-signal__body code {
-  font-size: 0.85em;
-  background: color-mix(in srgb, var(--accent) 10%, transparent);
-  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
-  border-radius: 4px;
-  padding: 0.08rem 0.28rem;
-}
-
 .mainosta-signal__btn {
   display: inline-flex;
   align-items: center;
@@ -174,64 +166,6 @@
   font-size: 0.9rem;
   line-height: 1.7;
   color: var(--text-secondary);
-}
-
-.mainosta-placements {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-}
-
-.mainosta-placement-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  transition: box-shadow 0.2s, transform 0.15s;
-}
-
-.mainosta-placement-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
-}
-
-.mainosta-placement-card__icon {
-  color: var(--accent);
-  margin-bottom: 0.25rem;
-}
-
-.mainosta-placement-card__title {
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  font-weight: 700;
-  margin: 0;
-}
-
-.mainosta-placement-card__desc {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin: 0;
-  flex: 1;
-}
-
-.mainosta-placement-card__badge {
-  display: inline-block;
-  font-family: var(--font-sans);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 10%, var(--bg) 90%);
-  border: 1px solid color-mix(in srgb, var(--accent) 20%, var(--border) 80%);
-  padding: 0.2rem 0.5rem;
-  border-radius: 20px;
-  align-self: flex-start;
-  margin-top: auto;
 }
 
 .mainosta-why__grid {
@@ -327,7 +261,6 @@
   }
 
   .mainosta-audience,
-  .mainosta-placements,
   .mainosta-why__grid,
   .mainosta-signal {
     grid-template-columns: 1fr;
@@ -348,8 +281,4 @@
   .mainosta-stat__value {
     font-size: 1.6rem;
   }
-}
-
-[data-theme="dark"] .mainosta-placement-card:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }

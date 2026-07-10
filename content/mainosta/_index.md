@@ -1,6 +1,6 @@
 ---
 title: "Mainosta Uutistenlukijassa"
-description: "Tavoita yli 10 000 suomalaista uutistenlukijaa kuukausittain. Mainostusmahdollisuudet Uutistenlukija.fi-sivustolla."
+description: "Mainosta Uutistenlukijassa. Mainonta erotetaan toimituksellisesta sisällöstä, eikä näkyvyyttä, klikkauksia tai myyntiä taata."
 url: "/mainosta/"
 layout: "mainosta"
 noindex: false

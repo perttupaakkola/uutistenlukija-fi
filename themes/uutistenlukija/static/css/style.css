@@ -3010,6 +3010,12 @@ body.is-home .highlights-row--top {
   border-radius: 12px;
   background: color-mix(in srgb, var(--surface-alt) 72%, var(--card-bg) 28%);
 }
+.advertiser-cta--article-bottom .advertiser-cta__inner {
+  grid-template-columns: minmax(0, 1fr);
+}
+.advertiser-cta--article-bottom .advertiser-cta__actions {
+  justify-content: flex-start;
+}
 .advertiser-cta__copy {
   display: grid;
   gap: 0.35rem;
