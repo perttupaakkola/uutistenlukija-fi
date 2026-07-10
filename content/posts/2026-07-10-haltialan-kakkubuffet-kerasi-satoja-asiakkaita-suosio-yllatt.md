@@ -47,7 +47,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/lahti-kasista-somesuosioon-nousseen-maatilan-kakkubuffetista-tuli-odottamaton-yleisoryntays/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
