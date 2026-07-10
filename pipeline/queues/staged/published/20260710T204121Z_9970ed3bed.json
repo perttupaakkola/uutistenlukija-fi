@@ -1,0 +1,298 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-10T20:41:21.029109+00:00",
+  "digest": "9970ed3bed",
+  "packet": {
+    "packet_id": "20260710T204121Z_9970ed3bed",
+    "created_at": "2026-07-10T20:41:21Z",
+    "headline_seed": "Apple sues OpenAI over alleged trade secret theft",
+    "description_seed": "Apple alleges the misconduct was directed by OpenAi's senior leadership, including a long-time former employee.",
+    "link": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
+    "source": "TechCrunch",
+    "source_names": [
+      "Courthouse News Service",
+      "Courthouse News Service",
+      "MacRumors",
+      "MacRumors"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Apple sues OpenAI over alleged trade secret theft"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Courthouse News Service",
+        "source_type": "research",
+        "text": "The judge dismissed the case against OpenAI for the second time, finding insufficient evidence that the company encouraged former xAI employees to steal trade secrets. SAN FRANCISCO (CN) — A federal judge on Monday dismissed, for the second time, claims of trade secret misappropriation brought by Elon Musk’s artificial intelligence company against OpenAI. U.S. District Judge Rita Lin found insufficient evidence that OpenAI induced an xAI employee to misappropriate trade secrets or knew confidential information was disclosed during the hiring process. xAI sued OpenAI on Feb. 3 after eight engineers and executives left the company in quick succession during the summer of 2025, most of them joining OpenAI. The company accused its rival of orchestrating the departures to obtain confidential information.",
+        "word_count": 121,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Courthouse News Service",
+        "source_type": "research",
+        "text": "The lawsuit centered on former xAI employee Xuechen Li, whom xAI accused of downloading source code while being recruited by OpenAI and disclosing trade secrets during an interview presentation. Lin rejected those claims, writing that asking a prospective employee about prior work experience does not amount to encouraging the disclosure of trade secrets. “Merely asking Li to discuss his previous work—a routine part of the hiring process—does not allow a plausible inference that OpenAI induced Li to reveal anything confidential or secret about that work,” the Joe Biden appointee wrote in her order. Lin also wrote that OpenAI’s continued interest in Li would only be unlawful if the company knew he exposed trade secrets, which OpenAI denies.",
+        "word_count": 117,
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      },
+      {
+        "source": "MacRumors",
+        "source_type": "research",
+        "text": "Apple today accused OpenAI of stealing Apple trade secrets and intellectual property in its effort to develop an AI hardware device. In a lawsuit filed with the Northern District of California, Apple said it uncovered evidence of a months-long scheme to steal confidential information. Apple says OpenAI hardware lead and former Apple designer Tang Tan and former electrical engineer Chang Liu directed Apple employees interviewing with OpenAI to provide details on unreleased devices, components, manufacturing processes, and vendor relationships. In a statement to MacRumors, Apple said it is suing to protect the hard work of its employees.",
+        "word_count": 97,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      },
+      {
+        "source": "MacRumors",
+        "source_type": "research",
+        "text": "Apple says it discovered a pattern of OpenAI recruits emailing themselves confidential information when leaving Apple, including Tan. Others were \"improperly using their knowledge of Apple's confidential and trade secret information to assist OpenAI ---",
+        "word_count": 35,
+        "keyword_overlap": 5,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "The judge dismissed the case against OpenAI for the second time, finding insufficient evidence that the company encouraged former xAI employees to steal trade secrets. SAN FRANCISCO (CN) — A federal judge on Monday dismissed, for the second time, claims of trade secret misappropriation brought by Elon Musk’s artificial intelligence company against OpenAI. U.S. District Judge Rita Lin found insufficient evidence that OpenAI induced an xAI employee to misappropriate trade secrets or knew confidential information was disclosed during the hiring process. xAI sued OpenAI on Feb. 3 after eight engineers and executives left the company in quick succession during the summer of 2025, most of them joining OpenAI. The company accused its rival of orchestrating the departures to obtain confidential information.\n\nThe lawsuit centered on former xAI employee Xuechen Li, whom xAI accused of downloading source code while being recruited by OpenAI and disclosing trade secrets during an interview presentation. Lin rejected those claims, writing that asking a prospective employee about prior work experience does not amount to encouraging the disclosure of trade secrets. “Merely asking Li to discuss his previous work—a routine part of the hiring process—does not allow a plausible inference that OpenAI induced Li to reveal anything confidential or secret about that work,” the Joe Biden appointee wrote in her order. Lin also wrote that OpenAI’s continued interest in Li would only be unlawful if the company knew he exposed trade secrets, which OpenAI denies.\n\nApple today accused OpenAI of stealing Apple trade secrets and intellectual property in its effort to develop an AI hardware device. In a lawsuit filed with the Northern District of California, Apple said it uncovered evidence of a months-long scheme to steal confidential information. Apple says OpenAI hardware lead and former Apple designer Tang Tan and former electrical engineer Chang Liu directed Apple employees interviewing with OpenAI to provide details on unreleased devices, components, manufacturing processes, and vendor relationships. In a statement to MacRumors, Apple said it is suing to protect the hard work of its employees.\n\nApple says it discovered a pattern of OpenAI recruits emailing themselves confidential information when leaving Apple, including Tan. Others were \"improperly using their knowledge of Apple's confidential and trade secret information to assist OpenAI ---",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 775,
+      "selected_blocks": 4,
+      "selected_source_words": 370,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "MacRumors",
+        "MacRumors",
+        "MacRumors",
+        "MacRumors",
+        "Courthouse News Service",
+        "Courthouse News Service",
+        "Courthouse News Service",
+        "Courthouse News Service",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "Courthouse News Service",
+        "Courthouse News Service",
+        "MacRumors",
+        "MacRumors"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Apple sues OpenAI over alleged trade secret theft",
+      "description": "Apple alleges the misconduct was directed by OpenAi's senior leadership, including a long-time former employee.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Apple sues OpenAI over alleged trade secret theft",
+    "description": "Apple alleges the misconduct was directed by OpenAi's senior leadership, including a long-time former employee.",
+    "link": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
+    "published": "2026-07-10T20:32:00+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "9f5fcba284c98aef8d0e81f337f3b703",
+    "_url_hash": "549812eeb4c461ac78fa852c79a78e81761408feaeb820b1cfab6fcb9f7535d4",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: MacRumors]\nApple today accused OpenAI of stealing Apple trade secrets and intellectual property in its effort to develop an AI hardware device.\n\nIn a lawsuit filed with the Northern District of California, Apple said it uncovered evidence of a months-long scheme to steal confidential information. Apple says OpenAI hardware lead and former Apple designer Tang Tan and former electrical engineer Chang Liu directed Apple employees interviewing with OpenAI to provide details on unreleased devices, components, manufacturing processes, and vendor relationships.\n\nIn a statement to MacRumors, Apple said it is suing to protect the hard work of its employees.\n\nAt Apple, our teams are constantly developing breakthrough technologies to create the best products and services in the world, and protecting their work and intellectual property is something we take very seriously. Recently, significant evidence has emerged suggesting individuals employed by OpenAI wrongfully took Apple's secret and confidential information regarding our unreleased technologies, processes, and products. We will always defend our teams' hard work and innovations, and we are taking all appropriate steps to do so.\n\nTan is accused of using his internal knowledge of Apple's exit procedures to help employees covertly deliver information, and giving OpenAI key information about Apple suppliers that has benefited OpenAI's work on an AI device. From the lawsuit:\n\nOpenAI also instructs new hires on how to avoid scrutiny when they leave Apple. For example, Mr. Tan warns them not to tell Apple that they have taken jobs at OpenAI, so they can stay at Apple as long as they can. After his own departure, Mr. Tan improperly retained or obtained an internal Apple managers' document marked \"Need to Know\" that describes security procedures for employee departures. Messages left on Apple-issued work devices show that Mr. Tan and his OpenAI colleagues have been sharing this document with new hires before they give notice to Apple of their departures, previewing Apple's security protocols. Unsurprisingly, Apple's investigation has found a pattern by employees who depart for OpenAI of taking steps to evade the security processes intended to protect Apple's confidential information.\n\nApple says it discovered a pattern of OpenAI recruits emailing themselves confidential information when leaving Apple, including Tan. Others were \"improperly using their knowledge of Apple's confidential and trade secret information to assist OpenAI\n\n---\n\n[Lähde: Courthouse News Service]\nThe judge dismissed the case against OpenAI for the second time, finding insufficient evidence that the company encouraged former xAI employees to steal trade secrets.\n\nSAN FRANCISCO (CN) — A federal judge on Monday dismissed, for the second time, claims of trade secret misappropriation brought by Elon Musk’s artificial intelligence company against OpenAI.\n\nU.S. District Judge Rita Lin found insufficient evidence that OpenAI induced an xAI employee to misappropriate trade secrets or knew confidential information was disclosed during the hiring process.\n\nxAI sued OpenAI on Feb. 3 after eight engineers and executives left the company in quick succession during the summer of 2025, most of them joining OpenAI. The company accused its rival of orchestrating the departures to obtain confidential information.\n\nThe lawsuit centered on former xAI employee Xuechen Li, whom xAI accused of downloading source code while being recruited by OpenAI and disclosing trade secrets during an interview presentation.\n\nLin rejected those claims, writing that asking a prospective employee about prior work experience does not amount to encouraging the disclosure of trade secrets.\n\n“Merely asking Li to discuss his previous work—a routine part of the hiring process—does not allow a plausible inference that OpenAI induced Li to reveal anything confidential or secret about that work,” the Joe Biden appointee wrote in her order.\n\nLin also wrote that OpenAI’s continued interest in Li would only be unlawful if the company knew he exposed trade secrets, which OpenAI denies.\n\n“The allegations are not sufficient to plausibly infer that it was obvious to OpenAI engineers that the information disclosed was an xAI trade secret,” she said. “That an xAI engineer ‘confirmed’ that the slides disclosed xAI trade secrets does not supply the inference that an OpenAI engineer, based on their industry experience, would know that the slides disclosed xAI trade secrets.”\n\nLin further found that even if OpenAI knew the information contained trade secrets, xAI still failed to state a misappropriation claim because OpenAI obtained the information passively. As she put it, “mere possession of trade secrets is not sufficient to constitute misappropriation.”\n\nShe dismissed the case against OpenAI without leave to amend, finding that xAI had failed to cure deficiencies identified in an earlier dismissal order. In that ruling, Lin concluded that even if employees had stolen trade secrets, xAI had sued the wrong p",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-10T20:44:45.368587+00:00",
+  "payload": {
+    "packet_id": "20260710T204121Z_9970ed3bed",
+    "title": "Apple syyttää OpenAI:ta liikesalaisuuksiensa varastamisesta",
+    "summary": "Apple väittää OpenAI:n hankkineen entisiltä Apple-työntekijöiltä luottamuksellisia tietoja tekoälylaitteen kehittämistä varten. Erillisessä asiassa tuomari on hylännyt toistamiseen xAI:n OpenAI:ta vastaan esittämät liikesalaisuusväitteet.",
+    "content": "Apple on nostanut OpenAI:ta vastaan kanteen, jossa se syyttää tekoäly-yhtiötä liikesalaisuuksien ja muun immateriaalioikeudellisen omaisuuden varastamisesta tekoälylaitteen kehittämistä varten. Applen mukaan kuukausia jatkuneessa toiminnassa hyödynnettiin sen nykyisiä ja entisiä työntekijöitä sekä OpenAI:n järjestämiä työhaastatteluja.\n\n## Apple epäilee suunnitelmallista tiedonhankintaa\n\nPohjois-Kalifornian liittovaltion tuomioistuimelle jätetyssä kanteessa Apple kertoo löytäneensä näyttöä järjestelystä, jolla OpenAI olisi hankkinut yhtiön luottamuksellisia tietoja. Applen mukaan OpenAI:n laitekehitystä johtava Tang Tan, joka työskenteli aiemmin Applen suunnittelijana, sekä entinen sähköinsinööri Chang Liu ohjasivat OpenAI:n haastattelemia Apple-työntekijöitä kertomaan vielä julkaisemattomista laitteista ja niiden osista.\n\nKanteen mukaan kysymykset ja tietopyynnöt koskivat myös Applen valmistusprosesseja sekä suhteita tavarantoimittajiin. Apple väittää lisäksi havainneensa toimintamallin, jossa OpenAI:lle siirtyneet työntekijät lähettivät luottamuksellista aineistoa henkilökohtaisiin sähköposteihinsa ennen lähtöään. Yhtiön mukaan myös Tan kuului tällä tavalla toimineisiin henkilöihin.\n\nApple sanoo nostaneensa kanteen suojellakseen työntekijöidensä tekemää työtä. Lähdeaineistossa ei ole OpenAI:n vastausta Applen syytöksiin. Siinä ei myöskään kerrota mahdollisista korvausvaatimuksista, asian käsittelyaikataulusta tai siitä, milloin tuomioistuin ottaa väitteet arvioitavakseen.\n\n## xAI:n erillinen kanne hylättiin uudelleen\n\nOpenAI on kohdannut liikesalaisuuksia koskevia syytöksiä myös Elon Muskin tekoäly-yhtiö xAI:lta. Liittovaltion tuomari Rita Lin hylkäsi maanantaina jo toistamiseen xAI:n väitteet siitä, että OpenAI olisi yllyttänyt entisiä xAI-työntekijöitä anastamaan salaisia tietoja. Linin mukaan näyttö ei riittänyt osoittamaan, että OpenAI olisi kannustanut väärinkäytökseen tai tiennyt luottamuksellisten tietojen paljastamisesta rekrytoinnin aikana.\n\nxAI nosti kanteensa 3. helmikuuta sen jälkeen, kun kahdeksan insinööriä ja johtajaa oli lähtenyt yhtiöstä lyhyen ajan sisällä kesällä 2025. Useimmat heistä siirtyivät OpenAI:lle. Kiistan keskiössä oli entinen xAI-työntekijä Xuechen Li, jonka xAI väitti ladanneen lähdekoodia ja paljastaneen liikesalaisuuksia työhaastatteluun liittyneessä esityksessä.\n\nLin katsoi, ettei hakijan aiempaa työtä koskeva tavanomainen haastattelukysymys sellaisenaan osoita OpenAI:n yllyttäneen Litä paljastamaan salaisia tietoja. Tuomarin mukaan OpenAI:n kiinnostus Lin palkkaamiseen olisi ollut lainvastaista vain, jos yhtiö olisi tiennyt hänen paljastaneen liikesalaisuuksia. OpenAI on kiistänyt xAI:n väitteet.",
+    "category": "Teknologia",
+    "tags": [
+      "Apple",
+      "OpenAI",
+      "liikesalaisuudet",
+      "tekoälylaitteet",
+      "xAI"
+    ],
+    "summary_bullets": [
+      "Apple syyttää OpenAI:ta julkaisemattomia laitteita, valmistusta ja tavarantoimittajia koskevien tietojen hankkimisesta.",
+      "Kanteessa nimetään OpenAI:n laitekehitystä johtava Tang Tan ja entinen sähköinsinööri Chang Liu.",
+      "Tuomari hylkäsi erillisessä asiassa toistamiseen xAI:n liikesalaisuusväitteet OpenAI:ta vastaan."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "confidence": 0.91,
+    "journalist_note": "Applen kanteen sisältö on esitetty väitteinä, koska aineisto ei sisällä OpenAI:n vastausta eikä tuomioistuimen arviota syytösten paikkansapitävyydestä. xAI:n erillinen oikeusasia on erotettu Applen kanteesta."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260710T204121Z_9970ed3bed\",\n  \"title\": \"Apple syyttää OpenAI:ta liikesalaisuuksiensa varastamisesta\",\n  \"summary\": \"Apple väittää OpenAI:n hankkineen entisiltä Apple-työntekijöiltä luottamuksellisia tietoja tekoälylaitteen kehittämistä varten. Erillisessä asiassa tuomari on hylännyt toistamiseen xAI:n OpenAI:ta vastaan esittämät liikesalaisuusväitteet.\",\n  \"content\": \"Apple on nostanut OpenAI:ta vastaan kanteen, jossa se syyttää tekoäly-yhtiötä liikesalaisuuksien ja muun immateriaalioikeudellisen omaisuuden varastamisesta tekoälylaitteen kehittämistä varten. Applen mukaan kuukausia jatkuneessa toiminnassa hyödynnettiin sen nykyisiä ja entisiä työntekijöitä sekä OpenAI:n järjestämiä työhaastatteluja.\\n\\n## Apple epäilee suunnitelmallista tiedonhankintaa\\n\\nPohjois-Kalifornian liittovaltion tuomioistuimelle jätetyssä kanteessa Apple kertoo löytäneensä näyttöä järjestelystä, jolla OpenAI olisi hankkinut yhtiön luottamuksellisia tietoja. Applen mukaan OpenAI:n laitekehitystä johtava Tang Tan, joka työskenteli aiemmin Applen suunnittelijana, sekä entinen sähköinsinööri Chang Liu ohjasivat OpenAI:n haastattelemia Apple-työntekijöitä kertomaan vielä julkaisemattomista laitteista ja niiden osista.\\n\\nKanteen mukaan kysymykset ja tietopyynnöt koskivat myös Applen valmistusprosesseja sekä suhteita tavarantoimittajiin. Apple väittää lisäksi havainneensa toimintamallin, jossa OpenAI:lle siirtyneet työntekijät lähettivät luottamuksellista aineistoa henkilökohtaisiin sähköposteihinsa ennen lähtöään. Yhtiön mukaan myös Tan kuului tällä tavalla toimineisiin henkilöihin.\\n\\nApple sanoo nostaneensa kanteen suojellakseen työntekijöidensä tekemää työtä. Lähdeaineistossa ei ole OpenAI:n vastausta Applen syytöksiin. Siinä ei myöskään kerrota mahdollisista korvausvaatimuksista, asian käsittelyaikataulusta tai siitä, milloin tuomioistuin ottaa väitteet arvioitavakseen.\\n\\n## xAI:n erillinen kanne hylättiin uudelleen\\n\\nOpenAI on kohdannut liikesalaisuuksia koskevia syytöksiä myös Elon Muskin tekoäly-yhtiö xAI:lta. Liittovaltion tuomari Rita Lin hylkäsi maanantaina jo toistamiseen xAI:n väitteet siitä, että OpenAI olisi yllyttänyt entisiä xAI-työntekijöitä anastamaan salaisia tietoja. Linin mukaan näyttö ei riittänyt osoittamaan, että OpenAI olisi kannustanut väärinkäytökseen tai tiennyt luottamuksellisten tietojen paljastamisesta rekrytoinnin aikana.\\n\\nxAI nosti kanteensa 3. helmikuuta sen jälkeen, kun kahdeksan insinööriä ja johtajaa oli lähtenyt yhtiöstä lyhyen ajan sisällä kesällä 2025. Useimmat heistä siirtyivät OpenAI:lle. Kiistan keskiössä oli entinen xAI-työntekijä Xuechen Li, jonka xAI väitti ladanneen lähdekoodia ja paljastaneen liikesalaisuuksia työhaastatteluun liittyneessä esityksessä.\\n\\nLin katsoi, ettei hakijan aiempaa työtä koskeva tavanomainen haastattelukysymys sellaisenaan osoita OpenAI:n yllyttäneen Litä paljastamaan salaisia tietoja. Tuomarin mukaan OpenAI:n kiinnostus Lin palkkaamiseen olisi ollut lainvastaista vain, jos yhtiö olisi tiennyt hänen paljastaneen liikesalaisuuksia. OpenAI on kiistänyt xAI:n väitteet.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"Apple\",\n    \"OpenAI\",\n    \"liikesalaisuudet\",\n    \"tekoälylaitteet\",\n    \"xAI\"\n  ],\n  \"summary_bullets\": [\n    \"Apple syyttää OpenAI:ta julkaisemattomia laitteita, valmistusta ja tavarantoimittajia koskevien tietojen hankkimisesta.\",\n    \"Kanteessa nimetään OpenAI:n laitekehitystä johtava Tang Tan ja entinen sähköinsinööri Chang Liu.\",\n    \"Tuomari hylkäsi erillisessä asiassa toistamiseen xAI:n liikesalaisuusväitteet OpenAI:ta vastaan.\"\n  ],\n  \"content_type\": \"uutinen\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.91,\n  \"journalist_note\": \"Applen kanteen sisältö on esitetty väitteinä, koska aineisto ei sisällä OpenAI:n vastausta eikä tuomioistuimen arviota syytösten paikkansapitävyydestä. xAI:n erillinen oikeusasia on erotettu Applen kanteesta.\"\n}",
+  "article": {
+    "title": "Apple syyttää OpenAI:ta liikesalaisuuksiensa varastamisesta",
+    "description": "Apple väittää OpenAI:n hankkineen entisiltä Apple-työntekijöiltä luottamuksellisia tietoja tekoälylaitteen kehittämistä varten. Erillisessä asiassa tuomari on hylännyt toistamiseen xAI:n OpenAI:ta vastaan esittämät liikesalaisuusväitteet.",
+    "link": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
+    "published": "2026-07-10T20:32:00+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "9f5fcba284c98aef8d0e81f337f3b703",
+    "_url_hash": "549812eeb4c461ac78fa852c79a78e81761408feaeb820b1cfab6fcb9f7535d4",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: MacRumors]\nApple today accused OpenAI of stealing Apple trade secrets and intellectual property in its effort to develop an AI hardware device.\n\nIn a lawsuit filed with the Northern District of California, Apple said it uncovered evidence of a months-long scheme to steal confidential information. Apple says OpenAI hardware lead and former Apple designer Tang Tan and former electrical engineer Chang Liu directed Apple employees interviewing with OpenAI to provide details on unreleased devices, components, manufacturing processes, and vendor relationships.\n\nIn a statement to MacRumors, Apple said it is suing to protect the hard work of its employees.\n\nAt Apple, our teams are constantly developing breakthrough technologies to create the best products and services in the world, and protecting their work and intellectual property is something we take very seriously. Recently, significant evidence has emerged suggesting individuals employed by OpenAI wrongfully took Apple's secret and confidential information regarding our unreleased technologies, processes, and products. We will always defend our teams' hard work and innovations, and we are taking all appropriate steps to do so.\n\nTan is accused of using his internal knowledge of Apple's exit procedures to help employees covertly deliver information, and giving OpenAI key information about Apple suppliers that has benefited OpenAI's work on an AI device. From the lawsuit:\n\nOpenAI also instructs new hires on how to avoid scrutiny when they leave Apple. For example, Mr. Tan warns them not to tell Apple that they have taken jobs at OpenAI, so they can stay at Apple as long as they can. After his own departure, Mr. Tan improperly retained or obtained an internal Apple managers' document marked \"Need to Know\" that describes security procedures for employee departures. Messages left on Apple-issued work devices show that Mr. Tan and his OpenAI colleagues have been sharing this document with new hires before they give notice to Apple of their departures, previewing Apple's security protocols. Unsurprisingly, Apple's investigation has found a pattern by employees who depart for OpenAI of taking steps to evade the security processes intended to protect Apple's confidential information.\n\nApple says it discovered a pattern of OpenAI recruits emailing themselves confidential information when leaving Apple, including Tan. Others were \"improperly using their knowledge of Apple's confidential and trade secret information to assist OpenAI\n\n---\n\n[Lähde: Courthouse News Service]\nThe judge dismissed the case against OpenAI for the second time, finding insufficient evidence that the company encouraged former xAI employees to steal trade secrets.\n\nSAN FRANCISCO (CN) — A federal judge on Monday dismissed, for the second time, claims of trade secret misappropriation brought by Elon Musk’s artificial intelligence company against OpenAI.\n\nU.S. District Judge Rita Lin found insufficient evidence that OpenAI induced an xAI employee to misappropriate trade secrets or knew confidential information was disclosed during the hiring process.\n\nxAI sued OpenAI on Feb. 3 after eight engineers and executives left the company in quick succession during the summer of 2025, most of them joining OpenAI. The company accused its rival of orchestrating the departures to obtain confidential information.\n\nThe lawsuit centered on former xAI employee Xuechen Li, whom xAI accused of downloading source code while being recruited by OpenAI and disclosing trade secrets during an interview presentation.\n\nLin rejected those claims, writing that asking a prospective employee about prior work experience does not amount to encouraging the disclosure of trade secrets.\n\n“Merely asking Li to discuss his previous work—a routine part of the hiring process—does not allow a plausible inference that OpenAI induced Li to reveal anything confidential or secret about that work,” the Joe Biden appointee wrote in her order.\n\nLin also wrote that OpenAI’s continued interest in Li would only be unlawful if the company knew he exposed trade secrets, which OpenAI denies.\n\n“The allegations are not sufficient to plausibly infer that it was obvious to OpenAI engineers that the information disclosed was an xAI trade secret,” she said. “That an xAI engineer ‘confirmed’ that the slides disclosed xAI trade secrets does not supply the inference that an OpenAI engineer, based on their industry experience, would know that the slides disclosed xAI trade secrets.”\n\nLin further found that even if OpenAI knew the information contained trade secrets, xAI still failed to state a misappropriation claim because OpenAI obtained the information passively. As she put it, “mere possession of trade secrets is not sufficient to constitute misappropriation.”\n\nShe dismissed the case against OpenAI without leave to amend, finding that xAI had failed to cure deficiencies identified in an earlier dismissal order. In that ruling, Lin concluded that even if employees had stolen trade secrets, xAI had sued the wrong p",
+    "research_source": "multi",
+    "summary": "Apple väittää OpenAI:n hankkineen entisiltä Apple-työntekijöiltä luottamuksellisia tietoja tekoälylaitteen kehittämistä varten. Erillisessä asiassa tuomari on hylännyt toistamiseen xAI:n OpenAI:ta vastaan esittämät liikesalaisuusväitteet.",
+    "content": "Apple on nostanut OpenAI:ta vastaan kanteen, jossa se syyttää tekoäly-yhtiötä liikesalaisuuksien ja muun immateriaalioikeudellisen omaisuuden varastamisesta tekoälylaitteen kehittämistä varten. Applen mukaan kuukausia jatkuneessa toiminnassa hyödynnettiin sen nykyisiä ja entisiä työntekijöitä sekä OpenAI:n järjestämiä työhaastatteluja.\n\n## Apple epäilee suunnitelmallista tiedonhankintaa\n\nPohjois-Kalifornian liittovaltion tuomioistuimelle jätetyssä kanteessa Apple kertoo löytäneensä näyttöä järjestelystä, jolla OpenAI olisi hankkinut yhtiön luottamuksellisia tietoja. Applen mukaan OpenAI:n laitekehitystä johtava Tang Tan, joka työskenteli aiemmin Applen suunnittelijana, sekä entinen sähköinsinööri Chang Liu ohjasivat OpenAI:n haastattelemia Apple-työntekijöitä kertomaan vielä julkaisemattomista laitteista ja niiden osista.\n\nKanteen mukaan kysymykset ja tietopyynnöt koskivat myös Applen valmistusprosesseja sekä suhteita tavarantoimittajiin. Apple väittää lisäksi havainneensa toimintamallin, jossa OpenAI:lle siirtyneet työntekijät lähettivät luottamuksellista aineistoa henkilökohtaisiin sähköposteihinsa ennen lähtöään. Yhtiön mukaan myös Tan kuului tällä tavalla toimineisiin henkilöihin.\n\nApple sanoo nostaneensa kanteen suojellakseen työntekijöidensä tekemää työtä. Lähdeaineistossa ei ole OpenAI:n vastausta Applen syytöksiin. Siinä ei myöskään kerrota mahdollisista korvausvaatimuksista, asian käsittelyaikataulusta tai siitä, milloin tuomioistuin ottaa väitteet arvioitavakseen.\n\n## xAI:n erillinen kanne hylättiin uudelleen\n\nOpenAI on kohdannut liikesalaisuuksia koskevia syytöksiä myös Elon Muskin tekoäly-yhtiö xAI:lta. Liittovaltion tuomari Rita Lin hylkäsi maanantaina jo toistamiseen xAI:n väitteet siitä, että OpenAI olisi yllyttänyt entisiä xAI-työntekijöitä anastamaan salaisia tietoja. Linin mukaan näyttö ei riittänyt osoittamaan, että OpenAI olisi kannustanut väärinkäytökseen tai tiennyt luottamuksellisten tietojen paljastamisesta rekrytoinnin aikana.\n\nxAI nosti kanteensa 3. helmikuuta sen jälkeen, kun kahdeksan insinööriä ja johtajaa oli lähtenyt yhtiöstä lyhyen ajan sisällä kesällä 2025. Useimmat heistä siirtyivät OpenAI:lle. Kiistan keskiössä oli entinen xAI-työntekijä Xuechen Li, jonka xAI väitti ladanneen lähdekoodia ja paljastaneen liikesalaisuuksia työhaastatteluun liittyneessä esityksessä.\n\nLin katsoi, ettei hakijan aiempaa työtä koskeva tavanomainen haastattelukysymys sellaisenaan osoita OpenAI:n yllyttäneen Litä paljastamaan salaisia tietoja. Tuomarin mukaan OpenAI:n kiinnostus Lin palkkaamiseen olisi ollut lainvastaista vain, jos yhtiö olisi tiennyt hänen paljastaneen liikesalaisuuksia. OpenAI on kiistänyt xAI:n väitteet.",
+    "category": "Teknologia",
+    "tags": [
+      "apple",
+      "openai",
+      "liikesalaisuudet",
+      "tekoälylaitteet",
+      "xai"
+    ],
+    "summary_bullets": [
+      "Apple syyttää OpenAI:ta julkaisemattomia laitteita, valmistusta ja tavarantoimittajia koskevien tietojen hankkimisesta.",
+      "Kanteessa nimetään OpenAI:n laitekehitystä johtava Tang Tan ja entinen sähköinsinööri Chang Liu.",
+      "Tuomari hylkäsi erillisessä asiassa toistamiseen xAI:n liikesalaisuusväitteet OpenAI:ta vastaan."
+    ],
+    "key_points": [
+      "Apple syyttää OpenAI:ta julkaisemattomia laitteita, valmistusta ja tavarantoimittajia koskevien tietojen hankkimisesta.",
+      "Kanteessa nimetään OpenAI:n laitekehitystä johtava Tang Tan ja entinen sähköinsinööri Chang Liu.",
+      "Tuomari hylkäsi erillisessä asiassa toistamiseen xAI:n liikesalaisuusväitteet OpenAI:ta vastaan."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "journalist_note": "Applen kanteen sisältö on esitetty väitteinä, koska aineisto ei sisällä OpenAI:n vastausta eikä tuomioistuimen arviota syytösten paikkansapitävyydestä. xAI:n erillinen oikeusasia on erotettu Applen kanteesta.",
+    "source_text": "The judge dismissed the case against OpenAI for the second time, finding insufficient evidence that the company encouraged former xAI employees to steal trade secrets. SAN FRANCISCO (CN) — A federal judge on Monday dismissed, for the second time, claims of trade secret misappropriation brought by Elon Musk’s artificial intelligence company against OpenAI. U.S. District Judge Rita Lin found insufficient evidence that OpenAI induced an xAI employee to misappropriate trade secrets or knew confidential information was disclosed during the hiring process. xAI sued OpenAI on Feb. 3 after eight engineers and executives left the company in quick succession during the summer of 2025, most of them joining OpenAI. The company accused its rival of orchestrating the departures to obtain confidential information.\n\nThe lawsuit centered on former xAI employee Xuechen Li, whom xAI accused of downloading source code while being recruited by OpenAI and disclosing trade secrets during an interview presentation. Lin rejected those claims, writing that asking a prospective employee about prior work experience does not amount to encouraging the disclosure of trade secrets. “Merely asking Li to discuss his previous work—a routine part of the hiring process—does not allow a plausible inference that OpenAI induced Li to reveal anything confidential or secret about that work,” the Joe Biden appointee wrote in her order. Lin also wrote that OpenAI’s continued interest in Li would only be unlawful if the company knew he exposed trade secrets, which OpenAI denies.\n\nApple today accused OpenAI of stealing Apple trade secrets and intellectual property in its effort to develop an AI hardware device. In a lawsuit filed with the Northern District of California, Apple said it uncovered evidence of a months-long scheme to steal confidential information. Apple says OpenAI hardware lead and former Apple designer Tang Tan and former electrical engineer Chang Liu directed Apple employees interviewing with OpenAI to provide details on unreleased devices, components, manufacturing processes, and vendor relationships. In a statement to MacRumors, Apple said it is suing to protect the hard work of its employees.\n\nApple says it discovered a pattern of OpenAI recruits emailing themselves confidential information when leaving Apple, including Tan. Others were \"improperly using their knowledge of Apple's confidential and trade secret information to assist OpenAI ---",
+    "writer_backend": "monica",
+    "writer_confidence": 0.91,
+    "degraded_mode": false,
+    "monica_packet_id": "20260710T204121Z_9970ed3bed",
+    "image_hotlink": false,
+    "image_category_fallback": false,
+    "image": "/images/articles/apple-syyttaa-openaita-liikesalaisuuksiensa-varastamisesta-hero.jpg",
+    "image_thumb": "/images/articles/apple-syyttaa-openaita-liikesalaisuuksiensa-varastamisesta-thumb.jpg",
+    "image_alt": "Apple syyttää OpenAI:ta liikesalaisuuksiensa varastamisesta",
+    "image_credit": "Photo by Sanket  Mishra on Pexels",
+    "image_source_url": "https://www.pexels.com/photo/webpage-of-ai-chatbot-a-prototype-ai-smith-open-chatbot-is-seen-on-the-website-of-openai-on-a-apple-smartphone-examples-capabilities-and-limitations-are-shown-16380906/",
+    "image_caption": "",
+    "image_source": "pexels",
+    "image_source_type": "stock",
+    "image_decision_reason": "metadata matches apple, on, openai",
+    "image_visual_intent": {
+      "subject": "apple liikesalaisuuksiensa openai varastamisesta syyttää",
+      "setting": "technology, devices, software, data, or abstract digital work",
+      "season_time": "neutral",
+      "must_have": [],
+      "must_not": [
+        "generic person portrait or lookalike"
+      ],
+      "stock_ok": true,
+      "generated_ok": true,
+      "safety_mode": "illustration_only",
+      "style_preference": "editorial illustration preferred for unsafe specifics"
+    },
+    "image_visual_brief": {
+      "acceptable_concepts": [
+        "apple liikesalaisuuksiensa openai varastamisesta syyttää",
+        "technology, devices, software, data, or abstract digital work"
+      ],
+      "hard_forbidden_implications": [
+        "generic person portrait or lookalike"
+      ],
+      "intent": {
+        "subject": "apple liikesalaisuuksiensa openai varastamisesta syyttää",
+        "setting": "technology, devices, software, data, or abstract digital work",
+        "season_time": "neutral",
+        "must_have": [],
+        "must_not": [
+          "generic person portrait or lookalike"
+        ],
+        "stock_ok": true,
+        "generated_ok": true,
+        "safety_mode": "illustration_only",
+        "style_preference": "editorial illustration preferred for unsafe specifics"
+      },
+      "prompt_version": "image-flow-v2-2026-07-03"
+    },
+    "image_concept": "primary_query",
+    "image_query": "Apple lawsuit against OpenAI",
+    "image_candidate_id": "16380906",
+    "image_candidate_url": "https://www.pexels.com/photo/webpage-of-ai-chatbot-a-prototype-ai-smith-open-chatbot-is-seen-on-the-website-of-openai-on-a-apple-smartphone-examples-capabilities-and-limitations-are-shown-16380906/",
+    "image_visual_judge_score": 49,
+    "image_accepted_reasons": [
+      "metadata matches apple, on, openai"
+    ],
+    "image_rejected_reasons": [],
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_decision": {
+      "source": "pexels",
+      "query": "Apple lawsuit against OpenAI",
+      "concept": "primary_query",
+      "accepted": true,
+      "score": 65,
+      "candidate_id": "16380906",
+      "source_url": "https://www.pexels.com/photo/webpage-of-ai-chatbot-a-prototype-ai-smith-open-chatbot-is-seen-on-the-website-of-openai-on-a-apple-smartphone-examples-capabilities-and-limitations-are-shown-16380906/",
+      "visual_judge_score": 49,
+      "visual_judge_reasons": [
+        "visual metadata supports concept 'apple liikesalaisuuksiensa openai varastamisesta syyttää'"
+      ],
+      "reasons": [
+        "metadata matches apple, on, openai"
+      ],
+      "prompt_version": "image-flow-v2-2026-07-03"
+    },
+    "image_quality_score": 65,
+    "image_placeholder": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EACEQAAIBBAEFAQAAAAAAAAAAAAECAwAREiEEEzFBcdFR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgH/xAAYEQEBAAMAAAAAAAAAAAAAAAARAAECYf/aAAwDAQACEQMRAD8Ab1eJjJG7XnCnFQjaNvJGjUaQxS5IsrCdSQ4Zr2P5byPW/dVxcZYuW8wZsnXYGh4+VjyWWXkygbJbR7AXH2rqJyWUZXUVib6INjRS8sdAdqKBJv/Z"
+  },
+  "image_enriched_at": "2026-07-10T20:48:07.121023+00:00",
+  "image_enrichment": {
+    "image": "/images/articles/apple-syyttaa-openaita-liikesalaisuuksiensa-varastamisesta-hero.jpg",
+    "image_thumb": "/images/articles/apple-syyttaa-openaita-liikesalaisuuksiensa-varastamisesta-thumb.jpg",
+    "image_category_fallback": false,
+    "image_source": "pexels",
+    "image_source_type": "stock",
+    "image_decision_reason": "metadata matches apple, on, openai",
+    "image_concept": "primary_query",
+    "image_query": "Apple lawsuit against OpenAI",
+    "image_candidate_id": "16380906",
+    "image_candidate_url": "https://www.pexels.com/photo/webpage-of-ai-chatbot-a-prototype-ai-smith-open-chatbot-is-seen-on-the-website-of-openai-on-a-apple-smartphone-examples-capabilities-and-limitations-are-shown-16380906/",
+    "image_visual_judge_score": 49,
+    "image_accepted_reasons": [
+      "metadata matches apple, on, openai"
+    ],
+    "image_rejected_reasons": [],
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03"
+  },
+  "published_at": "2026-07-10T20:49:35.246890+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-07-10-apple-syyttaa-openaita-liikesalaisuuksiensa-varastamisesta.md"
+  ]
+}
