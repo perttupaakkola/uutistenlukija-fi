@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-10T19:01:18.381730+00:00",
+  "digest": "44918e7096",
+  "packet": {
+    "packet_id": "20260710T190118Z_44918e7096",
+    "created_at": "2026-07-10T19:01:18Z",
+    "headline_seed": "Jalkapallotilastoja | Miesten Ykkösliiga",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9611188",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9611188"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Jalkapallotilastoja | Miesten Ykkösliiga"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 166,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen",
+        "Keskisuomalainen"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Jalkapallotilastoja | Miesten Ykkösliiga",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Jalkapallotilastoja | Miesten Ykkösliiga",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9611188",
+    "published": "2026-07-10T21:51:57+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "c3081f0cc8b522dbd61abfc83cf65ff7",
+    "_url_hash": "9a061d149d4a647bd4c7a23fe33d7ac6b6dde1d26f1226564419a99c0476a5b1",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keskisuomalainen]\n12. Mustapha Coker 0–1, 72. Foday Manneh 0–2.\n\nFC Haka: Anton Lepola, Niklas Friberg (83. Nita Sitchinava), Eero-Matti Auvinen, Spencer Silas, Jesper Karlsson (v), Torfiq Ali-Abubakar, Oiva Laaksonen (v), Imani Lanquedoc (73. Miika Mahlamäki), Valentin Purosalo, Aaron Keto-Diyawan (46. Kevin Nurmi), Oliver Whyte (60. Thomas Lahdensuo).\n\nKTP: Maksym Zhuk, Junior Christian Chibuzor, Joni Mäkelä (v), Matias Paavola, Atomu Tanaka (v), Foday Manneh (90+3. Otto Eloluoto), Samuli Hölttä (63. Luka Kuittinen), Derrick Atta Agyei, Roni Polat (63. Onni Hänninen), Mustapha Coker, Petteri Forsell (74. Arttu Tulehmo).\n\n37. Nuutti Tykkyläinen 1–0, 88. Saidou Bah 1–1.\n\nJippo: Pyry Piirainen, Valtteri Vesiaho (78. Karlos Mahugo), Junnosuke Watanabe, Miro Turunen (66. Jyri Kiuru), Juho Lehtiranta, Lauri Sahimaa (88. Terrence Smith), Nuutti Tykkyläinen, Lassi Forss (89. Eeli Kinnunen), Niklas Haataja, Eemeli Honkola (66. Aleksi Tarvonen), Yoshiaki Kikuchi.\n\nEIF: Antto Mikkonen, Roope Pakkanen, Asla Peltola (v), Oliver Günes (v), David Agbo (v) (78. August Björklund), Thaddee Kaleba (v), Fadah Mohamed, Francis Etu (19. kp), Saidou Bah, Lucas Kaufmann (61. Ralph Kerrebijn), Nils Veinbergs.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-10T19:03:19.779295+00:00",
+  "failure": "Paketissa ei ole lainkaan valittua lähdetekstiä eikä varmennettuja tietoja otteluista, joukkueista, tuloksista tai sarjatilanteesta, joten vähintään 250 sanan uutista ei voi kirjoittaa ilman keksittyjä tietoja.",
+  "raw_response": "{\"packet_id\":\"20260710T190118Z_44918e7096\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lainkaan valittua lähdetekstiä eikä varmennettuja tietoja otteluista, joukkueista, tuloksista tai sarjatilanteesta, joten vähintään 250 sanan uutista ei voi kirjoittaa ilman keksittyjä tietoja.\"}"
+}

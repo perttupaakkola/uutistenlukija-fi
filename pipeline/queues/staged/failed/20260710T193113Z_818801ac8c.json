@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-10T19:31:13.471130+00:00",
+  "digest": "818801ac8c",
+  "packet": {
+    "packet_id": "20260710T193113Z_818801ac8c",
+    "created_at": "2026-07-10T19:31:13Z",
+    "headline_seed": "Timanttiliigassa nähtiin maailmanennätys ja naisten seipään huipputulos",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9611241",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9611241"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Timanttiliigassa nähtiin maailmanennätys ja naisten seipään huipputulos"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 153,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Timanttiliigassa nähtiin maailmanennätys ja naisten seipään huipputulos",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Timanttiliigassa nähtiin maailmanennätys ja naisten seipään huipputulos",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9611241",
+    "published": "2026-07-10T22:22:49+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "c74fa39a9348b3a739bc7661913f1818",
+    "_url_hash": "201c544503bfaab750a105b1d6616a7ec2b6ddb7f0a390f4733c7bb2e5938099",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nTimanttiliigan Eugenen osakilpailussa Italian Leonardo Fabbri työnsi kuulassa tuloksen 22,74, joka on kauden kärkitulos maailmassa. Fabbrin ennätys on parin vuoden takainen 22,98.\n\nItalialainen voitti kilpailun. Toiseksi tuli Jamaikan Rajindra Campbell tuloksella 22,16 ja kolmanneksi Yhdysvaltain Jordan Geist, jonka paras työntö kantoi 21,98.\n\nNaisten pika-aidoissa Yhdysvaltain Masai Russell juoksi voittoon ajalla 12,24. Aika on kisaennätys, ja se jää kymmenyksen naisen omasta ennätyksestä. Russellin ennätys 12,14 on toukokuulta ja hän on kaikkien aikojen tilastossa toisena. Tobi Amusanin maailmanennätys on 12,12.\n\nMiesten 110 metrin aidoissa Jamal Britt tykitti kisaennätyksen ja oman ennätyksensä 12,86. ME-mies Ja'Kobe Tharp jäi toiseksi, ajalla 12,91. Britin tulos on kaikkien aikojen viidenneksi kovin aika.\n\nMiesten 200 metrillä yhdysvaltalainen Tate Taylor voitti omalla ennätyksellään 19,75. Botswanan Letsile Tebogo jätettiin toiseksi. Hän juoksi ajan 19,93.\n\nLauantaina juostussa miesten mailissa Australian Cameron Myers teki maanosan ennätyksen ja juoksi voittoon ajalla 3.46,06. Yhdysvaltain Yared Nuguse oli toinen ja Ethan Strand kolmas.\n\nTimanttiliigan tuloksia teksti-tv:n sivulla 211.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-10T19:33:17.283873+00:00",
+  "failure": "Paketissa ei ole lainkaan valittua lähdetekstiä eikä riittäviä tietoja urheilijoista, tuloksista, lajista, kilpailupaikasta tai ajankohdasta vähintään 250 sanan luotettavan uutisen kirjoittamiseksi.",
+  "raw_response": "{\"packet_id\":\"20260710T193113Z_818801ac8c\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lainkaan valittua lähdetekstiä eikä riittäviä tietoja urheilijoista, tuloksista, lajista, kilpailupaikasta tai ajankohdasta vähintään 250 sanan luotettavan uutisen kirjoittamiseksi.\"}"
+}

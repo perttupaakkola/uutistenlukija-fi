@@ -47,7 +47,6 @@ keywords:
 source_name: "Etelä-Suomen Sanomat"
 source_url: "https://www.ess.fi/urheilu/9610861"
 source_domain: "ess.fi"
-briefing: true
 draft: false
 ---
 
