@@ -47,7 +47,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/40-vuotiset-asuntolainat-kadenojennus-ensiasunnon-ostajille-ja-tyouran-alkumetreilla-oleville/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
