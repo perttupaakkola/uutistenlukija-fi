@@ -99,8 +99,9 @@ class AboutEditorialModelTests(unittest.TestCase):
         css = (ROOT / "themes/uutistenlukija/static/css/article.css").read_text(
             encoding="utf-8"
         )
-        selector = '[data-theme="dark"] .single-article .source-attribution__link'
+        selector = '[data-theme="dark"] .source-attribution__link'
         block = css[css.index(selector) : css.index("/* ── end source attribution", css.index(selector))]
+        self.assertNotIn(".single-article .source-attribution a {", css)
         self.assertIn("color: var(--text);", block)
         self.assertIn("text-decoration: underline;", block)
         self.assertIn("text-underline-offset: 2px;", block)
