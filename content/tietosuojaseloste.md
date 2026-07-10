@@ -6,8 +6,6 @@ layout: "static"
 description: "Uutistenlukija.fi:n tietosuojaseloste – miten keräämme ja käsittelemme henkilötietoja."
 ---
 
-# Tietosuojaseloste
-
 **Päivitetty:** 21.3.2026
 
 ## 1. Rekisterinpitäjä
@@ -37,8 +35,15 @@ Jos tilaat uutiskirjeemme, tallennamme sähköpostiosoitteesi uutiskirjeiden lä
 - **Oikeusperuste:** Suostumus (GDPR art. 6.1.a)
 - **Säilytysaika:** Tietoja säilytetään niin kauan kuin uutiskirjeen tilaus on voimassa. Voit peruuttaa tilauksesi koska tahansa kirjeen lopussa olevasta linkistä.
 
-### Evästeet
-Lisätietoja evästeistä löydät [evästekäytännöstämme](/evasteet/).
+### Evästeet ja selaimen paikallinen tallennustila
+
+Uutistenlukija.fi käyttää selaimen paikallista tallennustilaa teema- ja evästeasetuksiin sekä joillakin sivuilla paikalliseen lukuhistoriaan, lukemisen edistymiseen ja mainontakiinnostusta koskevien toimintojen anonyymiin paikalliseen laskentaan. Tallennettavat tiedot, niiden tarkoitukset ja nykyinen säilytys kuvataan [evästekäytännössä](/evasteet/).
+
+### Mainosverkostot ja kohdennettu mainonta (ei käytössä)
+
+Uutistenlukija.fi ei tällä hetkellä lataa Google AdSensea tai muuta mainosverkostoa eikä näytä kohdennettua mainontaa. Mainontavalinta tallentuu osana evästeasetuksia selaimesi paikalliseen tallennustilaan. Se ei nykytilassa lataa mainoksia, aseta mainosverkostojen evästeitä tai välitä tietoja mainosverkostoille.
+
+Sivuston malleissa on käyttämätön tekninen valmius mainosverkoston lisäämiseen. Mahdollinen käyttöönotto edellyttää erillistä teknistä ja tietosuojatarkastusta. Tietosuojaseloste ja evästekäytäntö päivitetään ennen käyttöönottoa vastaamaan aktiivisia palveluntarjoajia ja käsittelyä.
 
 ## 4. Tietojen vastaanottajat
 
@@ -46,6 +51,8 @@ Emme myy henkilötietoja kolmansille osapuolille. Tietoja voidaan jakaa seuraavi
 
 - **Google LLC** – analytiikka (Google Analytics 4)
 - **Uutiskirjepalvelu** – sähköpostiosoite uutiskirjeen lähettämistä varten
+
+Google AdSensea tai muuta mainosverkostoa ei tällä hetkellä käytetä. Mainontavalinta tallentuu osana evästeasetuksia selaimesi paikalliseen tallennustilaan. Se ei nykytilassa lataa mainoksia, aseta mainosverkostojen evästeitä tai välitä tietoja mainosverkostoille. Mahdolliset tulevat mainosverkoston vastaanottaja- ja siirtotiedot lisätään tähän selosteeseen ennen käyttöönottoa.
 
 ## 5. Rekisteröidyn oikeudet
 

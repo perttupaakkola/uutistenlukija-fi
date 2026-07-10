@@ -220,6 +220,16 @@ function redirectedEditorialSurface(requestUrl) {
   return Response.redirect(url.toString(), 308);
 }
 
+function redirectedPrivacySurface(requestUrl) {
+  const url = new URL(requestUrl);
+  if (url.pathname !== '/tietosuoja' && url.pathname !== '/tietosuoja/') return null;
+
+  url.pathname = '/tietosuojaseloste/';
+  url.search = '';
+  url.hash = '';
+  return Response.redirect(url.toString(), 308);
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -230,6 +240,11 @@ export default {
 
     if (url.pathname === '/api/subscribe') {
       return handleSubscribe(request, env, ctx);
+    }
+
+    const privacySurfaceRedirect = redirectedPrivacySurface(request.url);
+    if (privacySurfaceRedirect) {
+      return privacySurfaceRedirect;
     }
 
     const editorialSurfaceRedirect = redirectedEditorialSurface(request.url);

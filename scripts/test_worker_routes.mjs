@@ -103,6 +103,21 @@ test('fictional editorial surface redirects to the canonical disclosure', async 
   }
 });
 
+test('retired privacy surface redirects permanently to the canonical statement', async () => {
+  for (const pathname of ['/tietosuoja', '/tietosuoja/', '/tietosuoja/?legacy=1']) {
+    const { calls, env } = assetSpy();
+    const response = await worker.fetch(request(pathname), env, {});
+
+    assert.equal(response.status, 308, pathname);
+    assert.equal(
+      response.headers.get('location'),
+      'https://uutistenlukija.fi/tietosuojaseloste/',
+      pathname,
+    );
+    assert.deepEqual(calls, [], `${pathname} must not reach ASSETS.fetch`);
+  }
+});
+
 test('ordinary assets still delegate exactly once', async () => {
   const { calls, env } = assetSpy();
   const response = await worker.fetch(request('/css/style.css?rev=123'), env, {});

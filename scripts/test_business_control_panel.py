@@ -17,6 +17,19 @@ spec.loader.exec_module(panel)
 
 
 class BusinessControlPanelReportingTest(unittest.TestCase):
+    def test_effective_ad_config_rejects_incomplete_or_dormant_activation(self) -> None:
+        cases = [
+            ({"ads_enabled": False, "adsense_id": "ca-test", "ads_consent_revision": 3}, False),
+            ({"ads_enabled": True, "adsense_id": "", "ads_consent_revision": 3}, False),
+            ({"ads_enabled": True, "adsense_id": "ca-test", "ads_consent_revision": 2}, False),
+            ({"ads_enabled": True, "adsense_id": "ca-test", "ads_consent_revision": 3}, True),
+        ]
+        for params, expected in cases:
+            with self.subTest(params=params):
+                config = panel.effective_ad_config(params)
+                self.assertEqual(config["effective_ads_enabled"], expected)
+                self.assertEqual(config["activation_revision"], 3)
+
     def test_last_24h_article_count_uses_published_content_when_scanner_metrics_are_zero(self) -> None:
         """Fresh published posts must not be reported as 0 articles in the 24h business summary."""
         now = datetime(2026, 5, 24, 12, 0, tzinfo=timezone.utc)

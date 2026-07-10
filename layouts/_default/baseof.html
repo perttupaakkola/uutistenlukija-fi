@@ -16,10 +16,6 @@
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <link rel="preconnect" href="https://images.pexels.com" crossorigin>
   <link rel="preconnect" href="https://www.google-analytics.com">
-  {{- with .Site.Params.adsense_id }}
-  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
-  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
-  {{- end }}
   <link rel="dns-prefetch" href="https://images.unsplash.com">
   <link rel="dns-prefetch" href="https://images.pexels.com">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
@@ -106,6 +102,15 @@
   {{ partial "breadcrumb-schema.html" . }}
   {{ partial "site-nav-schema.html" . }}
   {{ partial "pagination-head.html" . }}
+  {{- $adConfig := partial "ad-config.html" . -}}
+  {{- if $adConfig.serverEligible }}
+  <script defer src="/js/ad-runtime.js"
+    data-ul-ad-runtime
+    data-enabled="true"
+    data-provider-id="{{ $adConfig.providerID }}"
+    data-consent-revision="{{ $adConfig.consentRevision }}"
+    data-activation-revision="{{ $adConfig.activationRevision }}"></script>
+  {{- end }}
 </head>
 <body{{ if .IsHome }} class="is-home"{{ end }}>
   <a class="skip-to-content" href="#main-content">Siirry pääsisältöön</a>

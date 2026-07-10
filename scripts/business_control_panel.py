@@ -460,6 +460,41 @@ def parse_hugo_params(path: Path) -> dict[str, Any]:
     return params
 
 
+def effective_ad_config(params: dict[str, Any]) -> dict[str, Any]:
+    """Mirror the Hugo ad-config gate from the same public config values."""
+    feature_flag = params.get("ads_enabled") is True
+    provider_configured = bool(str(params.get("adsense_id") or "").strip())
+    try:
+        consent_revision = int(params.get("ads_consent_revision", 2))
+    except (TypeError, ValueError):
+        consent_revision = 2
+    try:
+        activation_revision = int(params.get("ads_activation_revision", 3))
+    except (TypeError, ValueError):
+        activation_revision = 3
+
+    revision_current = consent_revision >= activation_revision
+    effective = feature_flag and provider_configured and revision_current
+    if not feature_flag:
+        reason = "ads feature flag disabled"
+    elif not provider_configured:
+        reason = "provider ID missing"
+    elif not revision_current:
+        reason = "consent revision is dormant; activation requires a newer revision"
+    else:
+        reason = "server gate eligible; client still requires current explicit advertising consent"
+
+    return {
+        "effective_ads_enabled": effective,
+        "feature_flag": feature_flag,
+        "provider_configured": provider_configured,
+        "consent_revision": consent_revision,
+        "activation_revision": activation_revision,
+        "revision_current": revision_current,
+        "reason": reason,
+    }
+
+
 def monetization_status() -> dict[str, Any]:
     params = parse_hugo_params(PROJECT_DIR / "hugo.toml")
     mainosta = PROJECT_DIR / "layouts" / "_default" / "mainosta.html"
@@ -481,15 +516,18 @@ def monetization_status() -> dict[str, Any]:
             tracked_files.append(str(path.relative_to(PROJECT_DIR)))
             tracked_signal_count += count
 
-    adsense_id = str(params.get("adsense_id") or "")
-    ads_enabled = bool(params.get("ads_enabled"))
+    ad_config = effective_ad_config(params)
     return {
         "status": "lead_capture_tracking_active" if tracked_signal_count else "not_tracked",
         "safe_public": True,
         "monthly_euros": 0,
-        "source": "hugo.toml + monetization CTA markup; no ad network or personal data required",
-        "ads_enabled": ads_enabled,
-        "adsense_configured": bool(adsense_id),
+        "source": "hugo.toml centralized ad gate + monetization CTA markup; no ad network or personal data required",
+        "ads_enabled": ad_config["effective_ads_enabled"],
+        "ads_feature_flag": ad_config["feature_flag"],
+        "adsense_configured": ad_config["provider_configured"],
+        "ads_consent_revision": ad_config["consent_revision"],
+        "ads_activation_revision": ad_config["activation_revision"],
+        "ads_gate_reason": ad_config["reason"],
         "experiment": {
             "id": "advertiser-lead-cta-v1",
             "primary_metric": "monetization_signal events",

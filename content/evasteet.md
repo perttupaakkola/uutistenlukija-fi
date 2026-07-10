@@ -6,34 +6,27 @@ layout: "static"
 description: "Uutistenlukija.fi:n evästekäytäntö – mitä evästeitä käytämme ja miten hallita niitä."
 ---
 
-# Evästekäytäntö
-
 **Päivitetty:** 21.3.2026
 
-## Mitä evästeet ovat?
+## Evästeet ja selaimen paikallinen tallennustila
 
-Evästeet ovat pieniä tekstitiedostoja, jotka tallennetaan laitteellesi, kun vierailet verkkosivustolla. Niitä käytetään sivuston toiminnallisuuden parantamiseen, käytön analysointiin ja kohdennetun mainonnan näyttämiseen.
+Evästeet ovat selaimeen tallennettavia pieniä tiedostoja. Selaimen paikallinen tallennustila (localStorage) säilyttää sivustokohtaisia tietoja ilman evästettä. Uutistenlukija käyttää paikallista tallennustilaa teema- ja evästeasetuksiin sekä joillakin sivuilla paikalliseen lukuhistoriaan, lukemisen edistymiseen ja mainontakiinnostusta koskevien toimintojen anonyymiin paikalliseen laskentaan. Suostumuksellasi Google Analytics voi lisäksi asettaa analytiikkaevästeitä sivuston käytön mittaamista varten.
 
-## Käyttämämme evästeet
+Mainosverkostoja tai kohdennettua mainontaa ei tällä hetkellä käytetä.
 
-Käytämme kolmea evästekategoriaa, joita voit hallita sivuston evästeasetuksista:
+### Paikallisen tallennustilan tiedot
 
----
+Alla oleva taulukko kuvaa sivuston nykyisiä localStorage-tallennuksia. Niitä ei ryhmitellä tässä välttämättömiksi tallennuksiksi.
 
-### 1. Välttämättömät evästeet
-
-**Aina käytössä — ei vaadi suostumusta**
-
-Nämä evästeet ovat välttämättömiä sivuston perustoimintojen kannalta. Niitä ei voi poistaa käytöstä.
-
-| Eväste | Tarkoitus | Säilytysaika |
+| Tallennettava tieto | Tarkoitus | Nykyinen säilytys |
 |---|---|---|
-| `theme` | Tallentaa valitsemasi tumman tai vaalean teeman | 1 vuosi |
-| `cookie_consent` | Tallentaa evästeasetuksesi | 1 vuosi |
+| `theme` | Tallentaa valitsemasi tumman tai vaalean teeman. | Ei ohjelmallista määräaikaa; kunnes muutat valintaa tai tyhjennät selaimen sivustotiedot. |
+| `cookie_consent_v2` | Tallentaa samaan evästeasetusobjektiin välttämättömiä toimintoja, analytiikkaa ja mainontaa koskevat valinnat. | Ei ohjelmallista määräaikaa; kunnes valinnat korvautuvat uudella tallennuksella tai tyhjennät selaimen sivustotiedot. |
+| `ul_views_v1` | Tallentaa selaimeen paikallisen artikkelikohtaisen katseluhistorian: artikkelin tunnisteen ja otsikon sekä katselulaskurin ja aikaleiman. Tietoa käytetään selaimessa paikallisen luetuimmat-listan muodostamiseen. | Yli seitsemän päivää vanhat artikkelimerkinnät poistetaan, kun artikkelisivun tallennuskoodi suoritetaan seuraavan kerran. Käynnin aikaleima päivittyy artikkelia katsottaessa. |
+| `ul_progress_v1` | Tallentaa selaimeen artikkelikohtaisen lukemisprosentin, otsikon, osoitteen, kuvan ja aikaleiman Jatka lukemista -toimintoa varten. | Jatka lukemista -toiminto ohittaa yli 30 päivää vanhat merkinnät, mutta nykyinen koodi ei poista niitä automaattisesti localStoragesta. Artikkelikohtainen merkintä poistetaan, kun lukeminen ylittää 90 prosenttia; muutoin tieto säilyy, kunnes se korvautuu tai sivustotiedot tyhjennetään. |
+| `uutistenlukija_monetization_signal_v1` | Tallentaa selaimeen mainontakiinnostusta koskevien toimintojen paikalliset laskurit sekä viimeisimmän toiminnon tyypin, ajan, sivupolun ja sijoittelun. | Ei ohjelmallista määräaikaa. Laskurit säilyvät ja viimeisimmän toiminnon tiedot päivittyvät uuden toiminnon yhteydessä, kunnes selaimen sivustotiedot tyhjennetään. |
 
----
-
-### 2. Analytiikkaevästeet
+### Analytiikkaevästeet
 
 **Vaatii suostumuksesi**
 
@@ -48,26 +41,26 @@ Google Analytics -tietoja käytetään ainoastaan sivuston kehittämiseen. Lisä
 
 ---
 
-### 3. Mainontaevästeet
+### Mainonta (ei käytössä)
 
-**Vaatii suostumuksesi**
+**Mainosverkostoja tai kohdennettua mainontaa ei käytetä tällä hetkellä.**
 
-Jos otamme käyttöön mainonnan (esim. Google AdSense), se asettaa evästeitä mainosten personointia varten. Tällä hetkellä emme näytä kohdennettuja mainoksia.
+Sivustolla ei tällä hetkellä ladata Google AdSensea tai muuta mainosverkostoa, näytetä kohdennettua mainontaa eikä aseteta mainosverkostojen evästeitä. Mainontavalinta tallentuu osana evästeasetuksia selaimesi paikalliseen tallennustilaan. Se ei nykytilassa lataa mainoksia, aseta mainosverkostojen evästeitä tai välitä tietoja mainosverkostoille.
 
-Kun mainonta otetaan käyttöön, tähän osioon lisätään tarkemmat tiedot käytetyistä evästeistä.
+Sivuston malleissa on käyttämätön tekninen valmius mainosverkoston lisäämiseen. Mahdollinen käyttöönotto edellyttää erillistä teknistä ja tietosuojatarkastusta. Tämä sivu ja tietosuojaseloste päivitetään ennen käyttöönottoa vastaamaan aktiivisia palveluntarjoajia ja käsittelyä.
 
 ---
 
 ## Evästeasetuksien hallinta
 
-Voit muuttaa evästeasetuksiasi milloin tahansa sivuston evästepalkista tai selaimen asetuksista:
+Voit muuttaa analytiikkaa ja mahdollista tulevaa mainontaa koskevia valintoja sivuston evästeasetuksissa. Voit hallita evästeitä ja poistaa paikallisen tallennustilan tietoja myös selaimen sivustotietoasetuksista.
 
 - **Chrome:** Asetukset → Tietosuoja ja turvallisuus → Evästeet
 - **Firefox:** Asetukset → Tietosuoja ja turvallisuus → Evästeet ja sivustotiedot
 - **Safari:** Asetukset → Tietosuoja → Hallinnoi verkkosivustotietoja
 - **Edge:** Asetukset → Evästeet ja sivustoluvat
 
-Huomaa, että välttämättömien evästeiden estäminen voi vaikuttaa sivuston toimintaan.
+Paikallisen tallennustilan tyhjentäminen poistaa selaimesta teema- ja evästeasetukset, paikallisen lukuhistorian, lukemisen edistymisen ja paikalliset toimintolaskurit.
 
 ## Lisätiedot
 

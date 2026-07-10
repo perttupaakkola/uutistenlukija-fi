@@ -4,22 +4,22 @@
   Categories:
     necessary   — always on, no toggle
     analytics   — GA4 (ga4_id param)
-    advertising — AdSense / future ad networks (adsense_id param)
+    advertising — dormant preference for a separately reviewed future release
 
-  localStorage key: cookie_consent_v2
-  Value: JSON {"v":2,"necessary":true,"analytics":bool,"advertising":bool}
+  Current dormant localStorage key: cookie_consent_v2
+  Value: JSON {"v":revision,"necessary":true,"analytics":bool,"advertising":bool}
 
-  GA4 and ad scripts are only injected after explicit consent.
-  Bumped key from v1 → v2 so existing binary-only consents are re-prompted.
+  GA4 is injected only after explicit analytics consent. A future ad-provider
+  release must use the centralized activation gate and a newer consent revision.
 ───────────────────────────────────────────────────────────────────────── */}}
 {{ $ga_id      := .Site.Params.ga4_id }}
-{{ $adsense_id := .Site.Params.adsense_id }}
+{{ $adConfig   := partial "ad-config.html" . }}
 
 <div id="cookie-banner" role="dialog" aria-modal="true" aria-label="Evästeasetukset" hidden>
   <div class="cb-inner">
     <p class="cb-text">
-      Käytämme evästeitä sivuston kehittämiseen ja mainoksiin.
-      <a href="/tietosuoja/" class="cb-link">Lue lisää</a>
+      Suostumuksellasi käytämme analytiikkaevästeitä sivuston kehittämiseen. Mainosverkostot ja kohdennettu mainonta eivät ole tällä hetkellä käytössä.
+      <a href="/tietosuojaseloste/" class="cb-link">Tietosuoja- ja evästetiedot</a>
     </p>
     <div class="cb-actions">
       <button id="cb-customize" class="cb-btn cb-btn--ghost" type="button">Asetukset</button>
@@ -35,10 +35,10 @@
 
     <div class="cm-category">
       <div class="cm-category-header">
-        <span class="cm-category-name">Välttämättömät</span>
-        <span class="cm-always-on">Aina käytössä</span>
+        <span class="cm-category-name">Paikallinen tallennustila</span>
+        <span class="cm-always-on">Käytössä sivustolla</span>
       </div>
-      <p class="cm-category-desc">Sivuston toiminnan kannalta välttämättömät evästeet (teema, suostumusasetus).</p>
+      <p class="cm-category-desc">Teema- ja evästeasetusten lisäksi sivusto käyttää joillakin sivuilla selaimen paikallista tallennustilaa paikalliseen lukuhistoriaan, lukemisen edistymiseen ja mainontakiinnostusta koskevien toimintojen anonyymiin paikalliseen laskentaan. Tarkemmat tarkoitukset ja säilytysajat on kuvattu evästekäytännössä.</p>
     </div>
 
     <div class="cm-category">
@@ -54,13 +54,13 @@
 
     <div class="cm-category">
       <div class="cm-category-header">
-        <label class="cm-category-name" for="cb-toggle-advertising">Mainokset</label>
-        <label class="cm-toggle" aria-label="Mainosevästeet">
+        <label class="cm-category-name" for="cb-toggle-advertising">Mainonta (ei käytössä)</label>
+        <label class="cm-toggle" aria-label="Mainontaa koskeva asetus">
           <input type="checkbox" id="cb-toggle-advertising" name="advertising">
           <span class="cm-toggle-track"></span>
         </label>
       </div>
-      <p class="cm-category-desc">Google AdSense ja muut mainosverkostot. Mahdollistaa kohdennetut mainokset.</p>
+      <p class="cm-category-desc">Sivustolla ei tällä hetkellä ladata Google AdSensea tai muita mainosverkostoja eikä näytetä kohdennettua mainontaa. Mainontavalinta tallentuu osana evästeasetuksia selaimesi paikalliseen tallennustilaan. Se ei nykytilassa lataa mainoksia, aseta mainosverkostojen evästeitä tai välitä tietoja mainosverkostoille. Sivuston malleissa on käyttämätön tekninen valmius mainosverkoston lisäämiseen. Mahdollinen käyttöönotto tarkastetaan erikseen, ja tiedot päivitetään ennen käyttöönottoa.</p>
     </div>
 
     <div class="cm-actions">
@@ -74,9 +74,9 @@
 <script>
 (function() {
   'use strict';
-  var KEY     = 'cookie_consent_v2';
+  var CONSENT_REVISION = {{ $adConfig.consentRevision }};
+  var KEY     = 'cookie_consent_v' + CONSENT_REVISION;
   var GA_ID   = '{{ $ga_id }}';
-  var ADS_ID  = '{{ $adsense_id }}';
 
   /* ── Helpers ─────────────────────────────────────────────── */
   function loadScript(src) {
@@ -95,18 +95,14 @@
     gtag('config', GA_ID, { anonymize_ip: true });
   }
 
-  function loadAds() {
-    if (!ADS_ID) return;
-    loadScript('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADS_ID);
-  }
-
   function applyConsent(prefs) {
-    if (prefs.analytics)   loadGA();
-    if (prefs.advertising) loadAds();
+    if (prefs.analytics) loadGA();
+    window.__UL_AD_CONSENT__ = prefs;
+    if (window.UutistenlukijaAds) window.UutistenlukijaAds.applyConsent(prefs);
   }
 
   function saveConsent(analytics, advertising) {
-    var prefs = { v: 2, necessary: true, analytics: !!analytics, advertising: !!advertising };
+    var prefs = { v: CONSENT_REVISION, necessary: true, analytics: !!analytics, advertising: !!advertising };
     try { localStorage.setItem(KEY, JSON.stringify(prefs)); } catch(e) {}
     return prefs;
   }
@@ -116,7 +112,7 @@
       var raw = localStorage.getItem(KEY);
       if (raw) {
         var p = JSON.parse(raw);
-        if (p && p.v === 2) return p;
+        if (p && p.v === CONSENT_REVISION) return p;
       }
     } catch(e) {}
     return null;

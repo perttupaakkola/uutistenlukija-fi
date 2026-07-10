@@ -16,6 +16,7 @@
 - Keep the site credible, calm, fast, and editorial. Avoid SaaS-style visual clutter, fake urgency, emoji-heavy UI, and generic AI-looking sections.
 - Preserve accessibility, semantic landmarks, canonical/metadata behavior, NewsArticle/CollectionPage structured data, and Finnish-language UX.
 - Do not hardcode secrets, private analytics values, or account tokens in templates.
+- `partials/ad-config.html` is the authoritative server-side ad gate. Provider hints, runtime loading, slot intent/markup, hydration, and initialization must not bypass it; external provider resources require a non-empty provider ID plus explicit consent from the configured current revision. Keep dormant consent on v2 until a separately reviewed activation release advances the revision.
 - Do not edit `public/` as the source for UI fixes; edit templates/assets and rebuild.
 
 ## Work Guidance

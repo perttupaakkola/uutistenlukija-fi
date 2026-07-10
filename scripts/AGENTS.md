@@ -17,6 +17,7 @@
 - Scripts that may be run by cron should be idempotent, bounded, and explicit about dry-run vs write mode.
 - Never print secrets. Redact paths or command strings that could expose token files, webhook URLs, API keys, bearer headers, cookies, or OAuth material.
 - Public JSON generators must mark output as safe/public and must not read private token files unless the whole script is explicitly private.
+- Business-control ad status must derive the same effective gate from `hugo.toml` as `layouts/partials/ad-config.html`; report the feature flag, provider presence, consent revision, activation revision, and rejection reason without exposing provider identifiers.
 - Keep script output compact and machine-readable where another agent/cron job consumes it.
 
 ## Work Guidance

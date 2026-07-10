@@ -1208,6 +1208,27 @@
   background: color-mix(in srgb, var(--surface-alt, #202428) 78%, transparent);
 }
 
+@media (max-width: 680px) {
+  .single-article .content table {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
+  }
+
+  .single-article .content table > thead,
+  .single-article .content table > tbody {
+    display: table;
+    width: 42rem;
+    min-width: 42rem;
+    max-width: none;
+    table-layout: fixed;
+  }
+}
+
 /* ── Summary Bullets (Kainalojuttu) ────────────────────────── */
 .article-summary-bullets {
   margin: 1.5rem 0 2rem;

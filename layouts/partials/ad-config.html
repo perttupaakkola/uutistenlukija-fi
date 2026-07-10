@@ -1,0 +1,25 @@
+{{- /*
+  Single server-side source of truth for all ad-provider paths.
+
+  Advertising remains dormant until all three activation inputs are present:
+  the explicit feature flag, a provider ID, and a consent revision newer than
+  the dormant v2 preference. Client-side provider access still additionally
+  requires an explicit advertising=true choice for that exact revision.
+*/ -}}
+{{- $enabled := eq site.Params.ads_enabled true -}}
+{{- $providerID := trim (site.Params.adsense_id | default "") " " -}}
+{{- $consentRevision := int (site.Params.ads_consent_revision | default 2) -}}
+{{- $activationRevision := int (site.Params.ads_activation_revision | default 3) -}}
+{{- $serverEligible := and $enabled (ne $providerID "") (ge $consentRevision $activationRevision) -}}
+{{- $currentConsentRevision := 2 -}}
+{{- if $serverEligible -}}
+  {{- $currentConsentRevision = $consentRevision -}}
+{{- end -}}
+{{- return (dict
+  "enabled" $enabled
+  "providerID" $providerID
+  "consentRevision" $currentConsentRevision
+  "configuredConsentRevision" $consentRevision
+  "activationRevision" $activationRevision
+  "serverEligible" $serverEligible
+) -}}
