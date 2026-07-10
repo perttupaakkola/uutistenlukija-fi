@@ -210,6 +210,16 @@ function redirectedArticleSubpage(requestUrl) {
   return Response.redirect(url.toString(), 308);
 }
 
+function redirectedEditorialSurface(requestUrl) {
+  const url = new URL(requestUrl);
+  if (url.pathname !== '/toimitus' && url.pathname !== '/toimitus/') return null;
+
+  url.pathname = '/tietoja/';
+  url.search = '';
+  url.hash = 'toimitustapa';
+  return Response.redirect(url.toString(), 308);
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -220,6 +230,11 @@ export default {
 
     if (url.pathname === '/api/subscribe') {
       return handleSubscribe(request, env, ctx);
+    }
+
+    const editorialSurfaceRedirect = redirectedEditorialSurface(request.url);
+    if (editorialSurfaceRedirect) {
+      return editorialSurfaceRedirect;
     }
 
     const articleSubpageRedirect = redirectedArticleSubpage(request.url);

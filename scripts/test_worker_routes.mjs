@@ -88,6 +88,21 @@ test('newsletter API and article redirects keep their existing routing', async (
   assert.deepEqual(redirectSpy.calls, [], 'article redirect must not reach ASSETS.fetch');
 });
 
+test('fictional editorial surface redirects to the canonical disclosure', async () => {
+  for (const pathname of ['/toimitus', '/toimitus/', '/toimitus/?legacy=1']) {
+    const { calls, env } = assetSpy();
+    const response = await worker.fetch(request(pathname), env, {});
+
+    assert.equal(response.status, 308, pathname);
+    assert.equal(
+      response.headers.get('location'),
+      'https://uutistenlukija.fi/tietoja/#toimitustapa',
+      pathname,
+    );
+    assert.deepEqual(calls, [], `${pathname} must not reach ASSETS.fetch`);
+  }
+});
+
 test('ordinary assets still delegate exactly once', async () => {
   const { calls, env } = assetSpy();
   const response = await worker.fetch(request('/css/style.css?rev=123'), env, {});

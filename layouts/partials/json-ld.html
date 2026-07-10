@@ -67,10 +67,11 @@
 
 {{/* Author block */}}
 {{ $authorName := .Params.author | default .Site.Params.author | default "Toimitus" }}
-{{ $authorUrl := .Params.author_url | default (printf "%stoimitus/" .Site.BaseURL) }}
-{{ $authorSameAs := $authorUrl }}
-{{ if not .Params.author_url }}{{ $authorSameAs = "https://uutistenlukija.fi/toimitus/" }}{{ end }}
-{{ $authorBlock := dict "@type" "Person" "name" $authorName "url" $authorUrl "sameAs" $authorSameAs }}
+{{ $authorUrl := .Params.author_url | default (printf "%stietoja/#toimitustapa" .Site.BaseURL) }}
+{{ $authorBlock := dict "@type" "Organization" "name" $authorName "url" $authorUrl }}
+{{ if .Params.author_url }}
+{{ $authorBlock = dict "@type" "Person" "name" $authorName "url" $authorUrl "sameAs" $authorUrl }}
+{{ end }}
 
 {{/* Build article section list */}}
 {{ $sections := .Params.categories | default (slice) }}

@@ -33,7 +33,7 @@ ACTIVE_TEMPLATE_PATHS = (
 )
 
 LEGACY_TEMPLATE_PATH = PROJECT_DIR / "layouts" / "partials" / "source-article-link.html"
-LEGACY_TEMPLATE_SENTINEL = "Legacy public provenance partial intentionally left blank"
+SHARED_TEMPLATE_PATH = PROJECT_DIR / "layouts" / "partials" / "article-source-attribution.html"
 
 
 class PublicProvenancePolicyTests(unittest.TestCase):
@@ -46,11 +46,13 @@ class PublicProvenancePolicyTests(unittest.TestCase):
             self.assertTrue(path.exists(), f"Missing template: {path}")
             self.assert_clean(path.read_text(encoding="utf-8"), context=str(path))
 
-    def test_legacy_source_partial_is_gone(self) -> None:
-        self.assertTrue(LEGACY_TEMPLATE_PATH.exists(), f"Legacy template missing: {LEGACY_TEMPLATE_PATH}")
-        content = LEGACY_TEMPLATE_PATH.read_text(encoding="utf-8")
-        self.assertIn(LEGACY_TEMPLATE_SENTINEL, content)
-        self.assert_clean(content, context=str(LEGACY_TEMPLATE_PATH))
+    def test_article_source_partial_requires_a_name_and_url(self) -> None:
+        adapter = LEGACY_TEMPLATE_PATH.read_text(encoding="utf-8")
+        shared = SHARED_TEMPLATE_PATH.read_text(encoding="utf-8")
+        self.assertEqual(adapter.strip(), '{{ partial "article-source-attribution.html" . }}')
+        self.assertIn("if and $sourceName $sourceUrl", shared)
+        self.assertIn('href="{{ $sourceUrl }}"', shared)
+        self.assertIn("{{ $sourceName }}", shared)
 
     def test_daily_briefing_render_hides_internal_sources(self) -> None:
         article = daily_briefing.Article(

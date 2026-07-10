@@ -1,4 +1,12 @@
 {{ define "main" }}
+{{ if eq .RelPermalink "/tietoja/" }}
+<article class="single-article single-article--about">
+  <h1>{{ .Title }}</h1>
+  <div class="content">
+    {{ .Content }}
+  </div>
+</article>
+{{ else }}
 <article class="single-article">
   {{ $isCommerceGuide := and (in (slice "paasiaisopas" "vappuopas") .Section) (eq .File.BaseFileName "kaupat-auki") }}
   {{ with .Params.categories }}
@@ -23,6 +31,7 @@
   {{ partial "advertiser-cta.html" (dict "placement" "article-bottom" "page" .) }}
   {{ partial "more-from-category.html" . }}
 </article>
+{{ end }}
 
 {{ partial "scroll-to-top.html" . }}
 {{ end }}
