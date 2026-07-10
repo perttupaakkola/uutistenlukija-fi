@@ -47,7 +47,6 @@ keywords:
 source_name: "io-tech.fi"
 source_url: "https://www.io-tech.fi/uutinen/muistikulut-nousevat-ja-edullisten-puhelinten-romahdus-painaa-koko-alan-toimitukset-miinukselle/"
 source_domain: "io-tech.fi"
-briefing: true
 draft: false
 ---
 
