@@ -2,7 +2,10 @@
 
 **Deliverable:** #33
 **Viimeksi päivitetty:** 2026-03-23
+**Status:** Historical projection model; not current pricing, traffic, or execution authority
 **Pohjadata:** Deliverable #12 (monetisaatiotutkimus)
+
+> Use `/workspace/procedures/uutistenlukija-business-quality-loop.md`, current business-control/GA4/GSC evidence, and live Linear OPE for decisions. Iris must revalidate RPM/CPM, traffic assumptions, provider eligibility, and the selected first-euro mechanism; Monica and Sara retain editorial/design gates.
 
 ---
 

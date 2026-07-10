@@ -1,6 +1,8 @@
 # Finnish Online News Monetization Research
 
-**Author:** Monica | **Date:** 2026-03-22 (päivitetty 2026-03-23) | **Status:** Complete
+**Author:** Monica | **Date:** 2026-03-22 (päivitetty 2026-03-23) | **Status:** Historical research input; revalidate current market/legal/platform facts before use
+
+> This is not the current operating plan. Use `/workspace/procedures/uutistenlukija-business-quality-loop.md`, fresh business-control/GA4/GSC evidence, and live Linear OPE. Iris owns current monetization experiments; Monica owns editorial/disclosure review. March benchmarks and provider recommendations may be stale.
 
 ## Executive Summary
 

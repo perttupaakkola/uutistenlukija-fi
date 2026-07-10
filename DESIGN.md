@@ -1,10 +1,10 @@
 ---
 name: Uutistenlukija Editorial Design System
-version: 1.0.0
+version: 1.1.0
 status: active
 owner: Sara
 scope: projects/uutistenlukija
-updated: 2026-06-24
+updated: 2026-07-10
 
 colors:
   primary: "#C0392B"
@@ -279,6 +279,21 @@ The “Päivän kooste” style should feel useful and scannable:
 - strong timestamp/date context
 - avoid walls of text
 - emphasize what changed and why it matters
+
+## Commercial UI guardrails
+
+Revenue surfaces must strengthen the business without making the site look or behave like an ad farm, affiliate template, or generic marketing funnel.
+
+- Keep the first viewport editorially led. Do not place an ad, sponsor block, affiliate module, newsletter modal, or advertiser CTA above or visually stronger than the primary lead story.
+- Commercial elements must be unmistakably labelled in Finnish and visually distinct from article cards, category labels, source metadata, and normal newsroom recommendations. Never use editorial styling to disguise a paid relationship.
+- Start with the smallest useful commercial footprint. Additional placements require measured evidence, not an assumption that more inventory means more revenue.
+- Preserve reading flow: no interruptive unit between an article headline and lead, no sticky overlay covering text, no autoplay, no deceptive close control, and no mobile interstitial that blocks entry.
+- Avoid layout shift and performance regressions. Reserve media/ad dimensions, load third-party scripts conservatively, and keep consent/privacy behavior visible and reversible.
+- Newsletter and advertiser CTAs should feel like restrained editorial service modules, not SaaS pricing cards or repeated popups.
+- Affiliate or sponsored recommendations require Monica's editorial/disclosure review and must not alter ordinary source selection, rankings, or conclusions.
+- Every changed commercial surface requires Sara's rendered before/after review at approximately 390 px mobile and 1366 px desktop, including affected light/dark states, hierarchy, overflow, focus/contrast, and the article reading flow.
+
+Felix verifies the evidence but does not replace Sara's rendered review or Monica's editorial verdict. Follow `/workspace/procedures/uutistenlukija-business-quality-loop.md` for the full handoff and acceptance gates.
 
 ## Accessibility requirements
 

@@ -3,7 +3,10 @@
 **Deliverable:** #37
 **Päivämäärä:** 2026-03-23
 **Tutkija:** Monica
+**Status:** Historical planning artifact; missed dates and projections are not current instructions
 **Pohjana:** Deliverable #33 (ad-revenue-model.md)
+
+> Current work must use `/workspace/procedures/uutistenlukija-business-quality-loop.md`, fresh business-control/GA4/GSC evidence, and live Linear OPE. Iris owns the active first-euro mechanism and decision rule. Rebaseline all dates, traffic, pricing, and channel assumptions before using this document.
 
 ---
 
