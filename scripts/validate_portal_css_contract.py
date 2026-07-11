@@ -70,6 +70,13 @@ CONTRAST_GUARDS = [
     '[data-theme="dark"] .newsletter-signup__title',
 ]
 
+MOBILE_CONTAINER_WIDTH_GUARD = (
+    ".container, main.container { width: 100% !important; max-width: 100% !important;"
+)
+CRITICAL_MOBILE_CONTAINER_WIDTH_GUARD = (
+    "main.container,.container{width:100%!important;max-width:100%!important}"
+)
+
 
 def require(path: Path) -> str:
     if not path.exists():
@@ -121,6 +128,11 @@ def main() -> int:
             if snippet not in css:
                 failures.append(f"{label} is missing OPE-162 layout guard {snippet!r}")
 
+        if MOBILE_CONTAINER_WIDTH_GUARD not in css:
+            failures.append(
+                f"{label} is missing the OPE-355 mobile 100% container width guard"
+            )
+
     if css_by_path[CSS_FILES[0]] != css_by_path[CSS_FILES[1]]:
         failures.append("assets/css/portal-overhaul.css and static/css/portal-overhaul.css differ")
 
@@ -129,6 +141,12 @@ def main() -> int:
             failures.append(
                 f"{CRITICAL_CSS.relative_to(ROOT)} is missing OPE-158 contrast lock for {selector}"
             )
+
+    if CRITICAL_MOBILE_CONTAINER_WIDTH_GUARD not in critical_css:
+        failures.append(
+            f"{CRITICAL_CSS.relative_to(ROOT)} is missing the OPE-355 critical mobile "
+            "100% container width guard"
+        )
 
     if failures:
         print("Portal CSS contract validation failed:")
