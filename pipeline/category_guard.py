@@ -28,7 +28,7 @@ _SCIENCE_ANGLE_TERMS = re.compile(
 _BUSINESS_SIGNAL_GROUPS = (
     re.compile(r"\b(?:yrity\w*|yhtiö\w*|ravintol\w*)\b", re.IGNORECASE),
     re.compile(r"\b(?:yrittäj\w*|ravintoloitsij\w*)\b", re.IGNORECASE),
-    re.compile(r"\b(?:tulos\w*|liikevaih\w*|käyttökate\w*|konkurss\w*|markkin\w*|pörss\w*|osak\w*)\b", re.IGNORECASE),
+    re.compile(r"\b(?:(?:tulos(?:ta)?|tulok\w*)|liikevaih\w*|käyttökate\w*|konkurss\w*|markkin\w*|pörss\w*|osak\w*)\b", re.IGNORECASE),
     re.compile(r"\b(?:kasv\w*|kannattav\w*|investoin\w*|myynt\w*|marginaal\w*|analyytik\w*)\b", re.IGNORECASE),
 )
 
