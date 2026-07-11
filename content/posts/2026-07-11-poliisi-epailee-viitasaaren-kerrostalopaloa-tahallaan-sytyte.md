@@ -47,7 +47,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/naitko-naita-volvo-miehia-poliisi-etsii-kerrostalopalon-sytyttajia/9364960"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
