@@ -14,9 +14,10 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="${PROJECT_DIR:-$(dirname "$SCRIPT_DIR")}"
-ENV_FILE="$PROJECT_DIR/.env"
-STATE_FILE="$PROJECT_DIR/pipeline/logs/health-monitor-state.json"
-HEALTH_URL="https://uutistenlukija.fi/api/health.json"
+ENV_FILE="${ENV_FILE:-$PROJECT_DIR/.env}"
+STATE_FILE="${STATE_FILE:-$PROJECT_DIR/pipeline/logs/health-monitor-state.json}"
+HEALTH_URL="${HEALTH_URL:-https://uutistenlukija.fi/api/health.json}"
+SNAPSHOT_FILE="${SNAPSHOT_FILE:-$PROJECT_DIR/static/metrics/snapshot.json}"
 ALERT_COOLDOWN_SECS=3600   # max 1 alert/hour for same condition
 ESCALATION_THRESHOLD=3     # consecutive degraded before pinging #general
 
@@ -181,14 +182,13 @@ except Exception:
     fi
 
     # Secondary degraded check: high error count (catches failures before 6h stale threshold)
-    if [[ "" == "ok" ]]; then
-        _snapshot="/static/metrics/snapshot.json"
-        if [[ -f "" ]]; then
+    if [[ "$condition" == "ok" ]]; then
+        if [[ -f "$SNAPSHOT_FILE" ]]; then
             _errors=$(python3 -c "
 import json,sys
 try: print(json.load(open(sys.argv[1])).get('pipelineErrorsToday',0))
 except: print(0)
-" "" 2>/dev/null || echo 0)
+" "$SNAPSHOT_FILE" 2>/dev/null || echo 0)
             if (( _errors > 20 )); then
                 condition="degraded"
                 alert_msg="⚠️ **Pipeline degraded** — ${_errors} errors today (threshold >20). Check pipeline logs."
