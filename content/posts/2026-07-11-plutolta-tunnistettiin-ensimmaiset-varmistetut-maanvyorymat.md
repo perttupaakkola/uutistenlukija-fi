@@ -55,7 +55,6 @@ keywords:
 source_name: "Science News"
 source_url: "https://www.sciencenews.org/article/pluto-landslides-nasa-new-horizons"
 source_domain: "sciencenews.org"
-briefing: true
 draft: false
 ---
 
