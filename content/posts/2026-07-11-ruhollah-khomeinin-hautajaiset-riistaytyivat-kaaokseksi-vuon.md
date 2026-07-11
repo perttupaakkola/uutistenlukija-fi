@@ -45,7 +45,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/ajatollahin-puolialaston-ruumis-putosi-arkusta-1989-keskella-kaaosta-isa-ala-jata-lapsiasi/9364558"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
