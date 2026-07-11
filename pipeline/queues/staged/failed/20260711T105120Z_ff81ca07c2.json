@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-11T10:51:20.760078+00:00",
+  "digest": "ff81ca07c2",
+  "packet": {
+    "packet_id": "20260711T105120Z_ff81ca07c2",
+    "created_at": "2026-07-11T10:51:20Z",
+    "headline_seed": "Koripallo | NBA-tähti Victor Wembanyama teki 250 miljoonan dollarin jatkosopimuksen",
+    "description_seed": "Victor Wembanyama saa hirmuisen määrän rahaa, mutta olisi voinut saada enemmänkin, kertoo ESPN.",
+    "link": "https://www.hs.fi/urheilu/art-2000012135527.html",
+    "source": "HS Tuoreimmat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.hs.fi/urheilu/art-2000012135527.html"
+    ],
+    "category_hint": "Uutiset",
+    "category": "Uutiset",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Koripallo | NBA-tähti Victor Wembanyama teki 250 miljoonan dollarin jatkosopimuksen"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 144,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "HS Tuoreimmat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Koripallo | NBA-tähti Victor Wembanyama teki 250 miljoonan dollarin jatkosopimuksen",
+      "description": "Victor Wembanyama saa hirmuisen määrän rahaa, mutta olisi voinut saada enemmänkin, kertoo ESPN.",
+      "category_hint": "Uutiset",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Koripallo | NBA-tähti Victor Wembanyama teki 250 miljoonan dollarin jatkosopimuksen",
+    "description": "Victor Wembanyama saa hirmuisen määrän rahaa, mutta olisi voinut saada enemmänkin, kertoo ESPN.",
+    "link": "https://www.hs.fi/urheilu/art-2000012135527.html",
+    "published": "2026-07-11T10:32:00+00:00",
+    "source": "HS Tuoreimmat",
+    "source_domain": "hs.fi",
+    "language": "fi",
+    "fingerprint": "b5bcc12e295c0bd778404ebf796df1df",
+    "_url_hash": "beaa7879f0bc4f1cd862c6ffe2cc5673e4caf9dc00c3aebcba3323bb3a0695e7",
+    "source_tier": 1,
+    "category_hint": "Uutiset",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle]\nNBA:n supertähti valitsi jättää rahaa pöydälle, mikä voi säästää Spursilta jopa 50 miljoonaa dollaria.\n\nKolumbian Jaminton Campaz joutui vihamyrskyn kohteeksi epä­onnistuttuaan maalipaikassa. Hän sai sosiaalisessa mediassa tukea maailman­mestarilta.\n\nJalkapallon MM-kisojen aikana vastustajat ovat jonottaneet yhteiskuvia Argentiinan kapteenin kanssa niin loppu­vihellysten kuin haastattelu­jenkin jälkeen.\n\nHeinolan EM-kotikisan palkinto­koroke­sija oli Melissa Mäntylälle ikimuistoinen.\n\nThibaut Courtois'n tilalle vaihdettu Senne Lammens teki ratkaisevan virheen Espanjaa vastaan. Kokenut Courtois kehui seuraajansa mentaliteettia.\n\nVille Ottavainen jatkaa Seattlen organi­saatiossa.\n\nPäävalmentajan kohua herättäneet kommentit kuvastivat sitä, miten Jude Bellingham on rikkonut englantilaisen jalka­palloilijan muotin.\n\nEspanja jatkaa jalkapallon MM-kisojen välieriin. Se voitti Belgian perjantaina viime hetkien maalilla 2–1.\n\nLasse Virénin ikivanhaa 5 000 metrin SE-aikaa jahtaava Mustafe Muuse joutui keskeyttämään Dublinissa.\n\nMonacon Timantti­liigassa tehtailtiin järisyttävän kovia tuloksia. Saint Lucian Julian Alfred juoksi kakkosella kaikkien aikojen kolmos­ajan. Emmanuel Wanyonyi rikkoi ME:n sivumatkallaan.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-11T10:53:15.627754+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja tietoja vähintään 250 sanan uutisartikkelin kirjoittamiseen ilman oletuksia.",
+  "raw_response": "{\"packet_id\":\"20260711T105120Z_ff81ca07c2\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja tietoja vähintään 250 sanan uutisartikkelin kirjoittamiseen ilman oletuksia.\"}"
+}
