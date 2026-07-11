@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-10T23:01:22.069520+00:00",
+  "digest": "c2618a6dda",
+  "packet": {
+    "packet_id": "20260710T230122Z_c2618a6dda",
+    "created_at": "2026-07-10T23:01:22Z",
+    "headline_seed": "Tallinnan vanhakaupunki vajoaa",
+    "description_seed": "Vajoaminen aiheuttaa vaurioita rakennuksiin ja teihin. Viron Tallinnan vanhassakaupungissa on havaittu ikävä piina. Osa rakennuksista on alkanut vajota. Samaa ilmiötä on havaittu myös teiden osissa, kertoo Viron yleisradioyhtiö ERR.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/c2561b7c-f5cd-4a52-9490-6be5c02f0b49?utm_source=rss",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.iltalehti.fi/ulkomaat/a/c2561b7c-f5cd-4a52-9490-6be5c02f0b49?utm_source=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tallinnan vanhakaupunki vajoaa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Vajoaminen aiheuttaa vaurioita rakennuksiin ja teihin. Viron Tallinnan vanhassakaupungissa on havaittu ikävä piina. Osa rakennuksista on alkanut vajota. Samaa ilmiötä on havaittu myös teiden osissa, kertoo Viron yleisradioyhtiö ERR.",
+        "word_count": 29,
+        "keyword_overlap": 19,
+        "strong_overlap": 15
+      }
+    ],
+    "source_text": "Vajoaminen aiheuttaa vaurioita rakennuksiin ja teihin. Viron Tallinnan vanhassakaupungissa on havaittu ikävä piina. Osa rakennuksista on alkanut vajota. Samaa ilmiötä on havaittu myös teiden osissa, kertoo Viron yleisradioyhtiö ERR.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 58,
+      "selected_blocks": 1,
+      "selected_source_words": 29,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tallinnan vanhakaupunki vajoaa",
+      "description": "Vajoaminen aiheuttaa vaurioita rakennuksiin ja teihin. Viron Tallinnan vanhassakaupungissa on havaittu ikävä piina. Osa rakennuksista on alkanut vajota. Samaa ilmiötä on havaittu myös teiden osissa, kertoo Viron yleisradioyhtiö ERR.",
+      "category_hint": "Ulkomaat",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Tallinnan vanhakaupunki vajoaa",
+    "description": "Vajoaminen aiheuttaa vaurioita rakennuksiin ja teihin. Viron Tallinnan vanhassakaupungissa on havaittu ikävä piina. Osa rakennuksista on alkanut vajota. Samaa ilmiötä on havaittu myös teiden osissa, kertoo Viron yleisradioyhtiö ERR.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/c2561b7c-f5cd-4a52-9490-6be5c02f0b49?utm_source=rss",
+    "published": "2026-07-11T01:55:21+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "6fdf014bf94a7bea24d903f9006d8dff",
+    "_url_hash": "d5c939b464e1e1a8f34df51a0ed7c461877c3c60f518da5d21962f6a1a6a291d",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Vajoaminen aiheuttaa vaurioita rakennuksiin ja teihin. Viron Tallinnan vanhassakaupungissa on havaittu ikävä piina. Osa rakennuksista on alkanut vajota. Samaa ilmiötä on havaittu myös teiden osissa, kertoo Viron yleisradioyhtiö ERR.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-07-10T23:03:17.490155+00:00",
+  "failure": "Lähdeaineisto kertoo vain yleisesti rakennusten ja teiden vajoamisesta, eikä sisällä riittäviä tietoja ilmiön laajuudesta, syistä, ajankohdasta tai viranomaisten arvioista vähintään 250 sanan uutisartikkeliin.",
+  "raw_response": "{\"packet_id\":\"20260710T230122Z_c2618a6dda\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto kertoo vain yleisesti rakennusten ja teiden vajoamisesta, eikä sisällä riittäviä tietoja ilmiön laajuudesta, syistä, ajankohdasta tai viranomaisten arvioista vähintään 250 sanan uutisartikkeliin.\"}"
+}

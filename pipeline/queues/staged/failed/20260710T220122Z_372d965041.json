@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-10T22:01:22.508769+00:00",
+  "digest": "372d965041",
+  "packet": {
+    "packet_id": "20260710T220122Z_372d965041",
+    "created_at": "2026-07-10T22:01:22Z",
+    "headline_seed": "Courtois loukkaantui, varamies epäonnistui – Espanja rankaisi armotta",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9611312",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9611312"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Courtois loukkaantui, varamies epäonnistui – Espanja rankaisi armotta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 230,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Helsingin Uutiset",
+        "Helsingin Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Courtois loukkaantui, varamies epäonnistui – Espanja rankaisi armotta",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Courtois loukkaantui, varamies epäonnistui – Espanja rankaisi armotta",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9611312",
+    "published": "2026-07-11T00:23:05+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "f5dd84d48eb40ff2144c9279ecca2b0d",
+    "_url_hash": "63326d6292b48f5a4d04b157685d77ca767e72d135997ef6e58163082c41b581",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Helsingin Uutiset]\nEspanja eteni jalkapallon MM-kisojen välieriin kaadettuaan Belgian puolivälierässä maalein 2–1 Los Angelesissa pelatussa ottelussa. Ratkaisumaalin viimeisteli Mikel Merino, joka osui ottelun loppuhetkillä ja sinetöi Espanjan paikan neljän parhaan joukossa.\n\nMerino nousi ratkaisijaksi myös edellisellä pudotuspelikierroksella Portugalia vastaan. Tällä kertaa hän pääsi iskemään pallon verkkoon Belgian varamaalivahti Senne Lammensin torjuntavirheen jälkeen, kun tämä ei saanut Pau Cubarsín kaukolaukausta haltuunsa.\n\nEspanja hallitsi ottelun ensimmäistä jaksoa ja siirtyi johtoon puolen tunnin kohdalla. Tilanne sai alkunsa Lamine Yamalin ja Pedro Porron rakentamasta hyökkäyksestä. Dani Olmon laukaus torjuttiin, mutta irtopallo kimposi Fabián Ruizille, joka viimeisteli lähietäisyydeltä.\n\nBelgia kuitenkin tasoitti ennen taukoa. Timothy Castagnen tarkka keskitys löysi Charles De Ketelaeren pään, ja hyökkääjä puski ottelun 1–1-numeroihin. Osuma oli samalla ensimmäinen maali, jonka Espanja oli päästänyt tämän kesän MM-turnauksessa.\n\nToisella puoliajalla Espanja piti palloa enemmän, mutta Belgia loi vaarallisia vastahyökkäyksiä etenkin Jérémy Dokun ja Kevin De Bruynen johdolla. Belgialle tuli kuitenkin takaisku 71. minuutilla, kun ykkösmaalivahti Thibaut Courtois joutui jättämään kentän loukkaantumisen vuoksi.\n\nOttelun ratkaisu nähtiin loppuhetkillä. Courtoisin korvannut Lammens torjui Cubarsín laukauksen epävarmasti, ja paikalle ehtinyt Merino laukoi irtopallon maalin kattoon.\n\nVoitto venytti Espanjan tappiottomien otteluiden putken jo 36 peliin, mikä on maan uusi ennätys. Samalla Espanja eteni MM-välieriin vasta historiansa toisen kerran. Se kohtaa välierässä Ranskan, joka varmisti oman paikkansa neljän parhaan joukossa aiemmin.\n\nBarcelonan teinitähti Lamine Yamal teki Belgiaa vastaan jo turnauksen kuudennen MM-esiintymisensä, mikä on uusi maailmanennätys 18-vuotiaiden tai sitä nuorempien pelaajien kategoriassa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-10T22:03:25.801856+00:00",
+  "failure": "Paketissa ei ole lainkaan valittua lähdetekstiä tai otsikon lisäksi varmennettuja faktoja, joten vähintään 250 sanan uutista ei voi kirjoittaa ilman tietojen keksimistä.",
+  "raw_response": "{\"packet_id\":\"20260710T220122Z_372d965041\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lainkaan valittua lähdetekstiä tai otsikon lisäksi varmennettuja faktoja, joten vähintään 250 sanan uutista ei voi kirjoittaa ilman tietojen keksimistä.\"}"
+}
