@@ -843,6 +843,46 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(kept, [])
         self.assertEqual(skipped, [thin])
 
+    def test_one_block_talous_source_floor_drop_rotates_to_next_candidate(self) -> None:
+        thin = {
+            "title": "Ohut Finanssialan Talous-ehdokas",
+            "link": "https://example.com/talous-one-block-thin",
+            "category_hint": "Talous",
+            "source": "Finanssiala",
+            "research": "[Lähde: Finanssiala]\n" + "sana " * 58,
+            "description": "Maksutapoja koskeva kysely.",
+            "story_confidence": 0.85,
+            "research_source": "multi",
+        }
+        next_candidate = {
+            "title": "Seuraava Talous-ehdokas",
+            "link": "https://example.com/talous-next-after-one-block",
+            "category_hint": "Talous",
+            "source": "Testi",
+            "description": "Seuraava ehdokas tutkittavaksi.",
+        }
+        now_ts = 1_800_000_000.0
+
+        self.assertEqual(
+            staged_publish.talous_enqueue_drop_reason(thin),
+            "source_floor_one_block_too_short",
+        )
+        recorded = staged_publish.record_talous_source_floor_rejections(
+            [thin], [], hours=24, now_ts=now_ts
+        )
+        kept, skipped = staged_publish.filter_talous_source_floor_cooldown(
+            [thin, next_candidate], hours=24, now_ts=now_ts + 60
+        )
+
+        self.assertEqual(recorded, [thin])
+        self.assertEqual(skipped, [thin])
+        self.assertEqual(kept, [next_candidate])
+        cache = staged_publish.load_talous_source_floor_cooldown(hours=24, now_ts=now_ts + 60)
+        self.assertEqual(
+            cache[staged_publish.stable_digest(thin)]["reason"],
+            "source_floor_one_block_too_short",
+        )
+
     def test_talous_failed_staged_digest_can_reenter_scan_cooldown(self) -> None:
         failed = _record("talous-failed", source_words=0, blocks=0)
         failed["packet"]["category_hint"] = "Talous"

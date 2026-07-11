@@ -180,7 +180,11 @@ def record_talous_source_floor_rejections(
     rejected: list[dict] = []
     for article in before:
         digest = stable_digest(article)
-        if digest in selected_digests or talous_enqueue_drop_reason(article) != "source_floor_not_met":
+        drop_reason = talous_enqueue_drop_reason(article)
+        if digest in selected_digests or drop_reason not in {
+            "source_floor_not_met",
+            "source_floor_one_block_too_short",
+        }:
             continue
         rejected.append(article)
     if not rejected:
@@ -192,7 +196,7 @@ def record_talous_source_floor_rejections(
         digest = stable_digest(article)
         active[digest] = {
             "rejected_at": now_ts,
-            "reason": "source_floor_not_met",
+            "reason": talous_enqueue_drop_reason(article),
             "title": str(article.get("title") or "")[:100],
             "source": str(article.get("source") or article.get("source_name") or "")[:60],
         }
