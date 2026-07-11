@@ -1,0 +1,77 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-11T17:21:18.202197+00:00",
+  "digest": "2442392953",
+  "packet": {
+    "packet_id": "20260711T172118Z_2442392953",
+    "created_at": "2026-07-11T17:21:18Z",
+    "headline_seed": "Pesäpallotuloksia | Miesten Ykköspesis",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9612420",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [
+      "https://www.ess.fi/urheilu/9612420"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Pesäpallotuloksia | Miesten Ykköspesis"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 81,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Keskisuomalainen"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Pesäpallotuloksia | Miesten Ykköspesis",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Pesäpallotuloksia | Miesten Ykköspesis",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9612420",
+    "published": "2026-07-11T20:18:10+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "5928766dc0283ee90bb54b0ae4cfd346",
+    "_url_hash": "b9a2d615e581d2a6610270df4e9fc8b5a13927de0d094ca7a42520c5d8b06f39",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Keskisuomalainen]\nJyväskylän Kiri–Seinäjoen Maila-Jussit 2–1k (5–0, 1–2, 2–1k)\n\nKannuksen Ura–Puijon Pesis, Kuopio 1–0 (0–0, 4–2)\n\nSimon Kiri–Siilinjärven Pesis 2–0 (8–7, 2–0)\n\nPuna-Mustat, Helsinki 13 4 6 1 2 99 55 25\n\nSeinäjoen Maila-Jussit 12 5 2 4 1 104 51 23\n\nSeuraavat ottelut: 26. 6. Puijon Pesis, Kuopio–Kankaanpään Maila, Simon Kiri–Ulvilan Pesä-Veikot, Haminan Palloilijat–Puna-Mustat, Helsinki, 27. 6. Nurmon Jymy–Jyväskylän Kiri, Kannuksen Ura–Ulvilan Pesä-Veikot, Siilinjärven Pesis–Kankaanpään Maila, 30. 6. Nurmon Jymy–Siilinjärven Pesis, 1. 7. Seinäjoen Maila-Jussit–Kannuksen Ura, Puna-Mustat, Helsinki–Kankaanpään Maila, Haminan Palloilijat–Jyväskylän Kiri.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-11T17:23:14.744961+00:00",
+  "failure": "Paketissa ei ole lainkaan lähdetekstiä, ottelutuloksia tai muita varmennettavia tietoja, joiden pohjalta vähintään 250 sanan uutisartikkeli voitaisiin kirjoittaa ilman keksittyjä faktoja.",
+  "raw_response": "{\"packet_id\":\"20260711T172118Z_2442392953\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lainkaan lähdetekstiä, ottelutuloksia tai muita varmennettavia tietoja, joiden pohjalta vähintään 250 sanan uutisartikkeli voitaisiin kirjoittaa ilman keksittyjä faktoja.\"}"
+}
