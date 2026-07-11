@@ -56,6 +56,8 @@ Sipilä on hankkinut eristetyn kontin ja sopinut tutun maanomistajan kanssa sen 
 
 Ajatuksena on korvata perinteinen myymälä ratkaisulla, jossa paikalliset asiakkaat voivat ostaa perunaa silloin, kun se heille sopii. Sipilä tavoittelee kontin pitämistä avoinna kesäkuukausien ajan. Alku- ja keskikesällä tarjolle tulee varhaisperunaa ja myöhemmin syysperunaa.
 
+Lue myös: [Turkulainen K-kauppias kokeilee varhaisperunoille kahta hintaa](https://uutistenlukija.fi/posts/2026-06-02-turkulainen-k-kauppias-kokeilee-varhaisperunoille-kahta-hint/)
+
 ## Käteinen jää vaihtoehdoksi
 
 Alkuvaiheessa maksutapoina ovat MobilePay ja käteinen. Korttimaksu on tarkoitus ottaa käyttöön myöhemmin. Käteismyynti merkitsee sitä, että kontissa on oltava vaihtorahaa avoimessa kassassa.
