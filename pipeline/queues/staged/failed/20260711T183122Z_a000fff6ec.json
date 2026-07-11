@@ -1,0 +1,84 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-11T18:31:22.117555+00:00",
+  "digest": "a000fff6ec",
+  "packet": {
+    "packet_id": "20260711T183122Z_a000fff6ec",
+    "created_at": "2026-07-11T18:31:22Z",
+    "headline_seed": "Networking and the Internet, from First Principles",
+    "description_seed": "Article URL: https://fazamhd.com/mental-models/networking/ Comments URL: https://news.ycombinator.com/item?id=48871470 Points: 187 # Comments: 54",
+    "link": "https://fazamhd.com/mental-models/networking/",
+    "source": "Hacker News Best",
+    "source_names": [],
+    "source_urls": [
+      "https://fazamhd.com/mental-models/networking/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Networking and the Internet, from First Principles"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 8,
+      "candidate_source_words": 828,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Hacker News Best",
+        "Hacker News Best",
+        "Hacker News Best",
+        "Hacker News Best",
+        "SDxCentral",
+        "SDxCentral",
+        "SDxCentral",
+        "Hacker News Best"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Networking and the Internet, from First Principles",
+      "description": "Article URL: https://fazamhd.com/mental-models/networking/ Comments URL: https://news.ycombinator.com/item?id=48871470 Points: 187 # Comments: 54",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Networking and the Internet, from First Principles",
+    "description": "Article URL: https://fazamhd.com/mental-models/networking/ Comments URL: https://news.ycombinator.com/item?id=48871470 Points: 187 # Comments: 54",
+    "link": "https://fazamhd.com/mental-models/networking/",
+    "published": "2026-07-11T12:30:40+00:00",
+    "source": "Hacker News Best",
+    "source_domain": "hnrss.org",
+    "language": "en",
+    "fingerprint": "ebcf0d3fff8d70cc14b624e0cbcb1d85",
+    "_url_hash": "e2577df8eba92efdca0fdaee36b31785c8df7c4d7d0983fa30adf60e054056c4",
+    "source_tier": 3,
+    "category_hint": "Teknologia",
+    "source_policy": "fix_parser_or_demote",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Hacker News Best]\nHave you ever wondered what happens when we text, call, or video chat with a friend or a colleague on another continent, and their reply arrives in a fraction of a second, as though they were in the same room? Behind the scenes, a chain of invisible conversions takes place: your voice, video, or message is translated into radio waves crossing the room to your Wi-Fi router, then electrical pulses in copper (or light, if you have a fiber connection), and then flashes of light inside a glass strand thinner than a hair lying deep on the ocean floor, only for the entire sequence to play in reverse at the other end. I find it mind-boggling that we can communicate instantly with anyone in the world by doing nothing more than creating controlled, patterned disturbances of electricity, light, and radio.\n\nThe message passes through equipment owned by dozens of independent companies in different countries. None of them coordinated with the others specifically for this message transfer, and none of them knows the full path your data took, they just hand it off to the next closest route. There is no central computer directing the traffic, and no single company owns the internet infrastructure. Yet it works, billions of times every second, so reliably that we only notice it when a call stutters or video buffers.\n\nRadio to your router, copper and fiber across your city, light in a submarine cable, a data center at the far end, and a separate, often different path back for the reply. The faint dots are everyone else's traffic; every wire, cable, and machine here is shared by millions of conversations at once. How this can possibly work with nobody in charge is the subject of this article.\n\nThe software article followed the story of a single machine, from electrons in silicon up to the software you run. This article follows the story of the connections between those machines. Like the layers of computing, the internet was not designed in one stroke; it accumulated over decades, and each protocol makes sense only once you see the concrete limitation it was invented to fix. It is easy to mistake the result for something engineered to a finished blueprint, because failures are rare enough to feel like the system was always this reliable. In reality, every mechanism in this article, packet switching, TCP, DNS, and TLS, was a patch for a specific problem, deployed decades after the internet already “worked”, and the pressure that produced them hasn’t stopped: it now comes from \n\n---\n\n[Lähde: SDxCentral]\nEuropean telecom providers face capex blow as DNA draft omits content provider contributions\n\nA leak of the EU’s proposed Digital Networks Act (DNA) reveals the bloc looks to have dropped the so-called \"fair share\" clause that would have forced large traffic-generating platforms like Netflix and Google to contribute to network infrastructure costs for European providers.\n\nThe draft version of the act, published by Table.Briefings, fail to mention the controversial proposal, which has already drawn ire from several big-name tech firms from across the Atlantic.\n\nNetwork operators argue that content providers are “free riding” on their network, and that this is a market failure that needs to be addressed with policy. These operators want to charge large companies a fee that they say is needed for the expansion and improvement of network infrastructure. However, there is no market failure.\n\nContinental network operators have long argued that they find themselves beholden to U.S. tech and that the firms responsible for the largest amounts of traffic should pay to help maintain those networks, what with increased constraints from more intense workloads like video streaming.\n\nA 2023 post on Spanish operator Telefonica’s website effectively outlines the position: “Telecom operators are stuck in [a] one-sided market model, getting payments for the use of the networks only from end customers and not from content providers. This affects the sustainability of the networks and reduces telcos’ investment capacity. At the same time, since networks are the backbone of Europe’s digital transformation, this also delays the consecution of the EU’s Digital Decade goals.”\n\nBut eagle-eyed readers of the 297-page DNA draft can find little to no mention of the fair share concept.\n\nIndustry analyst Dean Bubley was among those who first spotted its absence, writing on LinkedIn: “The ridiculous and ironically misnamed ‘fair share’ internet traffic tax seems to have been sidelined, although I'm sure there's some wiggle room in the detail for another decade of the same nonsense wearing a different hat.”\n\nThe absence of fair cost provisions may have been all but confirmed last summer when a White House fact sheet outlining the U.S.’s trade deal with the EU included: “The U.S and the European Union intend to address unjustified digital trade barriers. In that respect, the EU confirms that it will not adopt or maintain network usage fees.”\n\nAdd to that a questionnaire distributed by cons",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-11T18:33:14.331239+00:00",
+  "failure": "Paketissa ei ole lainkaan valittua lähdetekstiä tai varmennettuja asiatietoja, joten vähintään 250 sanan uutisartikkelia ei voi kirjoittaa ilman keksittyä sisältöä.",
+  "raw_response": "{\"packet_id\":\"20260711T183122Z_a000fff6ec\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lainkaan valittua lähdetekstiä tai varmennettuja asiatietoja, joten vähintään 250 sanan uutisartikkelia ei voi kirjoittaa ilman keksittyä sisältöä.\"}"
+}
