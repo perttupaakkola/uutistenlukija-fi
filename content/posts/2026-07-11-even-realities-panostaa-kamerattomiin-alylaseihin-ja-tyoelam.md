@@ -55,7 +55,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/07/11/smart-glasses-without-a-camera-even-realities-bets-productivity-beats-recording-everyone/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 

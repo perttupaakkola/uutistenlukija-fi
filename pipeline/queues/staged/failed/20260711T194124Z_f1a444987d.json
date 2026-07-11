@@ -1,0 +1,223 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-11T19:41:24.339611+00:00",
+  "digest": "f1a444987d",
+  "packet": {
+    "packet_id": "20260711T194124Z_f1a444987d",
+    "created_at": "2026-07-11T19:41:24Z",
+    "headline_seed": "Iran supreme leader calls for revenge after father's burial",
+    "description_seed": "Mojtaba Khamenei says vengeance is \"inevitable\" for the killing, which happened on the first day of the US-Israeli war on Iran.",
+    "link": "https://www.bbc.co.uk/news/articles/cj9gkpp0dkeo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "NBC News",
+      "NBC News"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/cj9gkpp0dkeo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Iran supreme leader calls for revenge after father's burial"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "Mojtaba Khamenei has not been seen in public since the conflict started in February. Iranian Supreme Leader Ayatollah Mojtaba Khamenei has called for revenge for the death of his father and predecessor Ayatollah Ali Khamenei. He said vengeance was the \"will of the nation\" in a written statement read out on state TV. It was his first public message since his father's funeral ceremonies began this week. Khamenei senior, 86, was killed in an air strike on 28 February, the first day of the US-Israeli war against Iran. Meanwhile US President Donald Trump has warned any Iranian plans to kill him would see the US \"decimate and destroy all areas\" of Iran in response. How Iran's new regime is very different to what came before",
+        "word_count": 125,
+        "keyword_overlap": 10,
+        "strong_overlap": 8
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "Mojtaba Khamenei says vengeance is \"inevitable\" for the killing, which happened on the first day of the US-Israeli war on Iran.",
+        "word_count": 21,
+        "keyword_overlap": 11,
+        "strong_overlap": 7
+      },
+      {
+        "source": "NBC News",
+        "source_type": "research",
+        "text": "Iran’s new Supreme Leader Mojtaba Khamenei pledged Sunday to take revenge for the death of his father as Ayatollah Ali Khamenei was buried in the holy city of Mashhad. “We pledge that we will take revenge for the pure blood of the martyred leader and all the martyrs of these two wars from the criminal and disgraced killers,” he said in a funeral message reported by Iranian state media. “Revenge is the demand of our nation and must certainly be carried out,” he added. “Soon, the free people of the world will carry out a part of this divine mission.”",
+        "word_count": 100,
+        "keyword_overlap": 7,
+        "strong_overlap": 6
+      },
+      {
+        "source": "NBC News",
+        "source_type": "research",
+        "text": "The younger Khamenei, who has not been seen since the war began, did not attend any public events as part of his father’s weeklong funeral. The statement attributed to him, like all others issued in his name as supreme leader, was a written message. President Donald Trump earlier warned Iran against any attempts to assassinate him after Khamenei’s funeral saw numerous English-language banners openly calling for Trump to be killed along with Israeli Prime Minister Benjamin Netanyahu. A thousand missiles “are Locked and Loaded and aimed at the Islamic Republic of Iran, with thousands of more to immediately follow, should the Iranian Government act on its threat,” Trump wrote in the overnight post.",
+        "word_count": 113,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Mojtaba Khamenei has not been seen in public since the conflict started in February. Iranian Supreme Leader Ayatollah Mojtaba Khamenei has called for revenge for the death of his father and predecessor Ayatollah Ali Khamenei. He said vengeance was the \"will of the nation\" in a written statement read out on state TV. It was his first public message since his father's funeral ceremonies began this week. Khamenei senior, 86, was killed in an air strike on 28 February, the first day of the US-Israeli war against Iran. Meanwhile US President Donald Trump has warned any Iranian plans to kill him would see the US \"decimate and destroy all areas\" of Iran in response. How Iran's new regime is very different to what came before\n\nMojtaba Khamenei says vengeance is \"inevitable\" for the killing, which happened on the first day of the US-Israeli war on Iran.\n\nIran’s new Supreme Leader Mojtaba Khamenei pledged Sunday to take revenge for the death of his father as Ayatollah Ali Khamenei was buried in the holy city of Mashhad. “We pledge that we will take revenge for the pure blood of the martyred leader and all the martyrs of these two wars from the criminal and disgraced killers,” he said in a funeral message reported by Iranian state media. “Revenge is the demand of our nation and must certainly be carried out,” he added. “Soon, the free people of the world will carry out a part of this divine mission.”\n\nThe younger Khamenei, who has not been seen since the war began, did not attend any public events as part of his father’s weeklong funeral. The statement attributed to him, like all others issued in his name as supreme leader, was a written message. President Donald Trump earlier warned Iran against any attempts to assassinate him after Khamenei’s funeral saw numerous English-language banners openly calling for Trump to be killed along with Israeli Prime Minister Benjamin Netanyahu. A thousand missiles “are Locked and Loaded and aimed at the Islamic Republic of Iran, with thousands of more to immediately follow, should the Iranian Government act on its threat,” Trump wrote in the overnight post.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 865,
+      "selected_blocks": 4,
+      "selected_source_words": 359,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "NBC News",
+        "NBC News",
+        "NBC News",
+        "NBC News",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "NBC News",
+        "NBC News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Iran supreme leader calls for revenge after father's burial",
+      "description": "Mojtaba Khamenei says vengeance is \"inevitable\" for the killing, which happened on the first day of the US-Israeli war on Iran.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Iran supreme leader calls for revenge after father's burial",
+    "description": "Mojtaba Khamenei says vengeance is \"inevitable\" for the killing, which happened on the first day of the US-Israeli war on Iran.",
+    "link": "https://www.bbc.co.uk/news/articles/cj9gkpp0dkeo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-11T19:30:36+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "ee24eed8256daee6786fb3c68b48f0ec",
+    "_url_hash": "21ba35b993fbd8c2867e5db20c624faec8cd66ebf3e6c8d4187b532114d01c5e",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nMojtaba Khamenei has not been seen in public since the conflict started in February.\n\nIranian Supreme Leader Ayatollah Mojtaba Khamenei has called for revenge for the death of his father and predecessor Ayatollah Ali Khamenei.\n\nHe said vengeance was the \"will of the nation\" in a written statement read out on state TV. It was his first public message since his father's funeral ceremonies began this week.\n\nKhamenei senior, 86, was killed in an air strike on 28 February, the first day of the US-Israeli war against Iran.\n\nMeanwhile US President Donald Trump has warned any Iranian plans to kill him would see the US \"decimate and destroy all areas\" of Iran in response.\n\nHow Iran's new regime is very different to what came before\n\nThe threats came after an exchange of strikes between the US and Iran earlier this week, sparked by attacks on three commercial tankers, purportedly by Iran.\n\nThe exchanges have raised tensions between the two sides, prompting Trump to declare the ceasefire over, though he said talks aimed at ending the war would continue.\n\nAli Khamenei was buried in his home city of Mashhad on Friday after nearly a week of funeral ceremonies.\n\nHis son has not been seen in public since before the war, and is rumoured to have been disfigured in the strike which killed his father.\n\nBut his statement on Saturday was uncompromising.\n\n\"We pledge to avenge the blood of the martyred leader and all the martyrs of these two wars from the criminal and disgraced killers,\" he was quoted as saying.\n\n\"Vengeance is the will of our nation and must inevitably be carried out.\n\n\"The matter depends neither on my personal existence nor on that of other officials. Whether we are present or not, it will come to pass.\"\n\nThose responsible \"will take the wish for a peaceful death in their beds to their graves\", he added.\n\nThere have been open calls for Trump's assassination at the funeral.\n\nCalls for the assassination of Donald Trump were heard at funeral ceremonies for Ayatollah Ali Khamenei in Mashhad\n\nIn the early hours of Saturday, Trump responded to reports that Iran had plans to assassinate him.\n\nThe US would \"completely decimate and destroy all areas\" of the country in retaliation to such an attack, he said.\n\nThe Wall Street Journal and other US media reported this week that Israel had shared intelligence with Washington that Iran had recently devised a plan to assassinate the US president.\n\nHowever, Trump denied that Tehran had made a fresh plan or that Israel was the so\n\n---\n\n[Lähde: NBC News]\nIran’s new Supreme Leader Mojtaba Khamenei pledged Sunday to take revenge for the death of his father as Ayatollah Ali Khamenei was buried in the holy city of Mashhad.\n\n“We pledge that we will take revenge for the pure blood of the martyred leader and all the martyrs of these two wars from the criminal and disgraced killers,” he said in a funeral message reported by Iranian state media.\n\n“Revenge is the demand of our nation and must certainly be carried out,” he added. “Soon, the free people of the world will carry out a part of this divine mission.”\n\nThe younger Khamenei, who has not been seen since the war began, did not attend any public events as part of his father’s weeklong funeral. The statement attributed to him, like all others issued in his name as supreme leader, was a written message.\n\nPresident Donald Trump earlier warned Iran against any attempts to assassinate him after Khamenei’s funeral saw numerous English-language banners openly calling for Trump to be killed along with Israeli Prime Minister Benjamin Netanyahu.\n\nA thousand missiles “are Locked and Loaded and aimed at the Islamic Republic of Iran, with thousands of more to immediately follow, should the Iranian Government act on its threat,” Trump wrote in the overnight post.\n\nTrump said he had issued instructions to the U.S. military to follow in the event of his death, adding that they would “completely decimate and destroy all areas of Iran.”\n\nHe signed off the post “PRAISE BE TO ALLAH!” — an invocation the leader has repeatedly used during the war. The Council on American-Islamic Relations, a nationwide advocacy group, in the past has criticized Trump’s “deranged mocking of Islam.”\n\nThe Iran war’s opening moments on Feb. 28 saw an airstrike that killed long-serving leader Ayatollah Ali Khamenei, 86. Iran only buried Khamenei this week in a sprawling funeral ceremony that saw his body taken to five cities in both Iran and Iraq.\n\nMojtaba Khamenei, 56, was seriously wounded in the same attack, sources previously told NBC News. Though Iranian officials have downplayed reports of his injuries, no photo or audio recording of him has been released.\n\nThe late supreme leader was laid to rest at the shrine of Imam Reza, Iran’s holiest Shia Muslim site on Thursday, marking the end of six days of public mourning ceremonies. Neither the U.S. nor Israel directly targeted funeral sites during the ceremonies.\n\nThe threats against Trump have further underlined the tensions gripping the Middle East as",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-11T19:44:14.829884+00:00",
+  "payload": {
+    "packet_id": "20260711T194124Z_f1a444987d",
+    "title": "Iranin johtaja Mojtaba Khamenei vannoo kostoa isänsä kuolemasta",
+    "summary": "Iranin uusi korkein johtaja Mojtaba Khamenei on vaatinut kostoa edeltäjänsä ja isänsä ajatollah Ali Khamenein surmasta. Kirjallinen viesti julkaistiin valtion tiedotusvälineissä viikon kestäneiden hautajaismenojen aikana.",
+    "content": "Iranin uusi korkein johtaja ajatollah Mojtaba Khamenei on luvannut kostaa isänsä ja edeltäjänsä ajatollah Ali Khamenein kuoleman. Iranin valtion tiedotusvälineiden julkaisema kirjallinen hautajaisviesti oli hänen ensimmäinen julkinen kannanottonsa sen jälkeen, kun isän hautajaisseremoniat alkoivat tällä viikolla.\n\n## Kosto nimettiin kansan vaatimukseksi\n\nMojtaba Khamenei sanoi viestissään, että kosto on Iranin kansan vaatimus ja että se on toteutettava. Hän lupasi kostaa isänsä sekä kahdessa sodassa kuolleiden veren ihmisille, joita hän kuvasi rikollisiksi ja häväistyiksi surmaajiksi. Khamenein mukaan myös ”maailman vapaat ihmiset” toteuttaisivat pian osan tästä tehtävästä. Toisessa viestistä välitetyssä muotoilussa hän kutsui kostoa väistämättömäksi.\n\nAli Khamenei haudattiin sunnuntaina Iranissa pyhänä pidettyyn Mashhadin kaupunkiin. Hän oli kuollessaan 86-vuotias. Iranin pitkäaikainen korkein johtaja sai surmansa ilmaiskussa 28. helmikuuta, joka oli Yhdysvaltojen ja Israelin Irania vastaan käymän sodan ensimmäinen päivä. Hänen poikansa Mojtaba nousi sittemmin Iranin uudeksi korkeimmaksi johtajaksi.\n\n## Uusi johtaja pysynyt poissa julkisuudesta\n\nMojtaba Khamenei ei osallistunut yhteenkään julkiseen tilaisuuteen isänsä viikon kestäneiden hautajaismenojen aikana. Häntä ei ole nähty julkisuudessa sen jälkeen, kun sota alkoi helmikuussa. Hänen nimiinsä korkeimpana johtajana annetut lausunnot on tähänkin asti välitetty kirjallisina, ja myös tuore hautajaisviesti luettiin Iranin valtiontelevisiossa.\n\n## Trump uhkaa Irania voimakkailla vastatoimilla\n\nYhdysvaltain presidentti Donald Trump on puolestaan varoittanut Irania yrityksistä surmata hänet. Varoitus annettiin sen jälkeen, kun Ali Khamenein hautajaisissa oli nähty useita englanninkielisiä kylttejä, joissa vaadittiin Trumpin sekä Israelin pääministerin Benjamin Netanjahun tappamista.\n\nTrump kirjoitti yön aikana julkaisemassaan viestissä, että tuhat ohjusta on valmiina ja suunnattu Iraniin. Hänen mukaansa tuhannet muut ohjukset seuraisivat välittömästi, jos Iranin hallinto toteuttaisi uhkauksensa. Trump sanoi myös Yhdysvaltojen tuhoavan Iranin alueita vastauksena mahdolliseen salamurhayritykseen. Mojtaba Khamenein lausunnossa ei yksilöity, millaisia kostotoimia Iran suunnittelisi, milloin niitä mahdollisesti toteutettaisiin tai ketkä olisivat niiden kohteina.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Iran",
+      "Mojtaba Khamenei",
+      "Ali Khamenei",
+      "Donald Trump",
+      "Yhdysvallat",
+      "Israel"
+    ],
+    "summary_bullets": [
+      "Mojtaba Khamenei lupasi kostaa isänsä Ali Khamenein kuoleman kirjallisessa hautajaisviestissä.",
+      "Ali Khamenei kuoli ilmaiskussa 28. helmikuuta ja hänet haudattiin Mashhadiin.",
+      "Donald Trump uhkasi Irania voimakkailla vastatoimilla, jos maa yrittäisi surmata hänet."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.96,
+    "journalist_note": "Artikkeli perustuu kahden uutismedian yhteneviin tietoihin sekä niiden välittämiin Iranin valtiollisten tiedotusvälineiden lausuntoihin. Mahdollisista konkreettisista kostotoimista ei ole vahvistettua tietoa."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260711T194124Z_f1a444987d\",\n  \"title\": \"Iranin johtaja Mojtaba Khamenei vannoo kostoa isänsä kuolemasta\",\n  \"summary\": \"Iranin uusi korkein johtaja Mojtaba Khamenei on vaatinut kostoa edeltäjänsä ja isänsä ajatollah Ali Khamenein surmasta. Kirjallinen viesti julkaistiin valtion tiedotusvälineissä viikon kestäneiden hautajaismenojen aikana.\",\n  \"content\": \"Iranin uusi korkein johtaja ajatollah Mojtaba Khamenei on luvannut kostaa isänsä ja edeltäjänsä ajatollah Ali Khamenein kuoleman. Iranin valtion tiedotusvälineiden julkaisema kirjallinen hautajaisviesti oli hänen ensimmäinen julkinen kannanottonsa sen jälkeen, kun isän hautajaisseremoniat alkoivat tällä viikolla.\\n\\n## Kosto nimettiin kansan vaatimukseksi\\n\\nMojtaba Khamenei sanoi viestissään, että kosto on Iranin kansan vaatimus ja että se on toteutettava. Hän lupasi kostaa isänsä sekä kahdessa sodassa kuolleiden veren ihmisille, joita hän kuvasi rikollisiksi ja häväistyiksi surmaajiksi. Khamenein mukaan myös ”maailman vapaat ihmiset” toteuttaisivat pian osan tästä tehtävästä. Toisessa viestistä välitetyssä muotoilussa hän kutsui kostoa väistämättömäksi.\\n\\nAli Khamenei haudattiin sunnuntaina Iranissa pyhänä pidettyyn Mashhadin kaupunkiin. Hän oli kuollessaan 86-vuotias. Iranin pitkäaikainen korkein johtaja sai surmansa ilmaiskussa 28. helmikuuta, joka oli Yhdysvaltojen ja Israelin Irania vastaan käymän sodan ensimmäinen päivä. Hänen poikansa Mojtaba nousi sittemmin Iranin uudeksi korkeimmaksi johtajaksi.\\n\\n## Uusi johtaja pysynyt poissa julkisuudesta\\n\\nMojtaba Khamenei ei osallistunut yhteenkään julkiseen tilaisuuteen isänsä viikon kestäneiden hautajaismenojen aikana. Häntä ei ole nähty julkisuudessa sen jälkeen, kun sota alkoi helmikuussa. Hänen nimiinsä korkeimpana johtajana annetut lausunnot on tähänkin asti välitetty kirjallisina, ja myös tuore hautajaisviesti luettiin Iranin valtiontelevisiossa.\\n\\n## Trump uhkaa Irania voimakkailla vastatoimilla\\n\\nYhdysvaltain presidentti Donald Trump on puolestaan varoittanut Irania yrityksistä surmata hänet. Varoitus annettiin sen jälkeen, kun Ali Khamenein hautajaisissa oli nähty useita englanninkielisiä kylttejä, joissa vaadittiin Trumpin sekä Israelin pääministerin Benjamin Netanjahun tappamista.\\n\\nTrump kirjoitti yön aikana julkaisemassaan viestissä, että tuhat ohjusta on valmiina ja suunnattu Iraniin. Hänen mukaansa tuhannet muut ohjukset seuraisivat välittömästi, jos Iranin hallinto toteuttaisi uhkauksensa. Trump sanoi myös Yhdysvaltojen tuhoavan Iranin alueita vastauksena mahdolliseen salamurhayritykseen. Mojtaba Khamenein lausunnossa ei yksilöity, millaisia kostotoimia Iran suunnittelisi, milloin niitä mahdollisesti toteutettaisiin tai ketkä olisivat niiden kohteina.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Iran\",\n    \"Mojtaba Khamenei\",\n    \"Ali Khamenei\",\n    \"Donald Trump\",\n    \"Yhdysvallat\",\n    \"Israel\"\n  ],\n  \"summary_bullets\": [\n    \"Mojtaba Khamenei lupasi kostaa isänsä Ali Khamenein kuoleman kirjallisessa hautajaisviestissä.\",\n    \"Ali Khamenei kuoli ilmaiskussa 28. helmikuuta ja hänet haudattiin Mashhadiin.\",\n    \"Donald Trump uhkasi Irania voimakkailla vastatoimilla, jos maa yrittäisi surmata hänet.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.96,\n  \"journalist_note\": \"Artikkeli perustuu kahden uutismedian yhteneviin tietoihin sekä niiden välittämiin Iranin valtiollisten tiedotusvälineiden lausuntoihin. Mahdollisista konkreettisista kostotoimista ei ole vahvistettua tietoa.\"\n}",
+  "article": {
+    "title": "Iranin johtaja Mojtaba Khamenei vannoo kostoa isänsä kuolemasta",
+    "description": "Iranin uusi korkein johtaja Mojtaba Khamenei on vaatinut kostoa edeltäjänsä ja isänsä ajatollah Ali Khamenein surmasta. Kirjallinen viesti julkaistiin valtion tiedotusvälineissä viikon kestäneiden hautajaismenojen aikana.",
+    "link": "https://www.bbc.co.uk/news/articles/cj9gkpp0dkeo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-11T19:30:36+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "ee24eed8256daee6786fb3c68b48f0ec",
+    "_url_hash": "21ba35b993fbd8c2867e5db20c624faec8cd66ebf3e6c8d4187b532114d01c5e",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World]\nMojtaba Khamenei has not been seen in public since the conflict started in February.\n\nIranian Supreme Leader Ayatollah Mojtaba Khamenei has called for revenge for the death of his father and predecessor Ayatollah Ali Khamenei.\n\nHe said vengeance was the \"will of the nation\" in a written statement read out on state TV. It was his first public message since his father's funeral ceremonies began this week.\n\nKhamenei senior, 86, was killed in an air strike on 28 February, the first day of the US-Israeli war against Iran.\n\nMeanwhile US President Donald Trump has warned any Iranian plans to kill him would see the US \"decimate and destroy all areas\" of Iran in response.\n\nHow Iran's new regime is very different to what came before\n\nThe threats came after an exchange of strikes between the US and Iran earlier this week, sparked by attacks on three commercial tankers, purportedly by Iran.\n\nThe exchanges have raised tensions between the two sides, prompting Trump to declare the ceasefire over, though he said talks aimed at ending the war would continue.\n\nAli Khamenei was buried in his home city of Mashhad on Friday after nearly a week of funeral ceremonies.\n\nHis son has not been seen in public since before the war, and is rumoured to have been disfigured in the strike which killed his father.\n\nBut his statement on Saturday was uncompromising.\n\n\"We pledge to avenge the blood of the martyred leader and all the martyrs of these two wars from the criminal and disgraced killers,\" he was quoted as saying.\n\n\"Vengeance is the will of our nation and must inevitably be carried out.\n\n\"The matter depends neither on my personal existence nor on that of other officials. Whether we are present or not, it will come to pass.\"\n\nThose responsible \"will take the wish for a peaceful death in their beds to their graves\", he added.\n\nThere have been open calls for Trump's assassination at the funeral.\n\nCalls for the assassination of Donald Trump were heard at funeral ceremonies for Ayatollah Ali Khamenei in Mashhad\n\nIn the early hours of Saturday, Trump responded to reports that Iran had plans to assassinate him.\n\nThe US would \"completely decimate and destroy all areas\" of the country in retaliation to such an attack, he said.\n\nThe Wall Street Journal and other US media reported this week that Israel had shared intelligence with Washington that Iran had recently devised a plan to assassinate the US president.\n\nHowever, Trump denied that Tehran had made a fresh plan or that Israel was the so\n\n---\n\n[Lähde: NBC News]\nIran’s new Supreme Leader Mojtaba Khamenei pledged Sunday to take revenge for the death of his father as Ayatollah Ali Khamenei was buried in the holy city of Mashhad.\n\n“We pledge that we will take revenge for the pure blood of the martyred leader and all the martyrs of these two wars from the criminal and disgraced killers,” he said in a funeral message reported by Iranian state media.\n\n“Revenge is the demand of our nation and must certainly be carried out,” he added. “Soon, the free people of the world will carry out a part of this divine mission.”\n\nThe younger Khamenei, who has not been seen since the war began, did not attend any public events as part of his father’s weeklong funeral. The statement attributed to him, like all others issued in his name as supreme leader, was a written message.\n\nPresident Donald Trump earlier warned Iran against any attempts to assassinate him after Khamenei’s funeral saw numerous English-language banners openly calling for Trump to be killed along with Israeli Prime Minister Benjamin Netanyahu.\n\nA thousand missiles “are Locked and Loaded and aimed at the Islamic Republic of Iran, with thousands of more to immediately follow, should the Iranian Government act on its threat,” Trump wrote in the overnight post.\n\nTrump said he had issued instructions to the U.S. military to follow in the event of his death, adding that they would “completely decimate and destroy all areas of Iran.”\n\nHe signed off the post “PRAISE BE TO ALLAH!” — an invocation the leader has repeatedly used during the war. The Council on American-Islamic Relations, a nationwide advocacy group, in the past has criticized Trump’s “deranged mocking of Islam.”\n\nThe Iran war’s opening moments on Feb. 28 saw an airstrike that killed long-serving leader Ayatollah Ali Khamenei, 86. Iran only buried Khamenei this week in a sprawling funeral ceremony that saw his body taken to five cities in both Iran and Iraq.\n\nMojtaba Khamenei, 56, was seriously wounded in the same attack, sources previously told NBC News. Though Iranian officials have downplayed reports of his injuries, no photo or audio recording of him has been released.\n\nThe late supreme leader was laid to rest at the shrine of Imam Reza, Iran’s holiest Shia Muslim site on Thursday, marking the end of six days of public mourning ceremonies. Neither the U.S. nor Israel directly targeted funeral sites during the ceremonies.\n\nThe threats against Trump have further underlined the tensions gripping the Middle East as",
+    "research_source": "multi",
+    "summary": "Iranin uusi korkein johtaja Mojtaba Khamenei on vaatinut kostoa edeltäjänsä ja isänsä ajatollah Ali Khamenein surmasta. Kirjallinen viesti julkaistiin valtion tiedotusvälineissä viikon kestäneiden hautajaismenojen aikana.",
+    "content": "Iranin uusi korkein johtaja ajatollah Mojtaba Khamenei on luvannut kostaa isänsä ja edeltäjänsä ajatollah Ali Khamenein kuoleman. Iranin valtion tiedotusvälineiden julkaisema kirjallinen hautajaisviesti oli hänen ensimmäinen julkinen kannanottonsa sen jälkeen, kun isän hautajaisseremoniat alkoivat tällä viikolla.\n\n## Kosto nimettiin kansan vaatimukseksi\n\nMojtaba Khamenei sanoi viestissään, että kosto on Iranin kansan vaatimus ja että se on toteutettava. Hän lupasi kostaa isänsä sekä kahdessa sodassa kuolleiden veren ihmisille, joita hän kuvasi rikollisiksi ja häväistyiksi surmaajiksi. Khamenein mukaan myös ”maailman vapaat ihmiset” toteuttaisivat pian osan tästä tehtävästä. Toisessa viestistä välitetyssä muotoilussa hän kutsui kostoa väistämättömäksi.\n\nAli Khamenei haudattiin sunnuntaina Iranissa pyhänä pidettyyn Mashhadin kaupunkiin. Hän oli kuollessaan 86-vuotias. Iranin pitkäaikainen korkein johtaja sai surmansa ilmaiskussa 28. helmikuuta, joka oli Yhdysvaltojen ja Israelin Irania vastaan käymän sodan ensimmäinen päivä. Hänen poikansa Mojtaba nousi sittemmin Iranin uudeksi korkeimmaksi johtajaksi.\n\n## Uusi johtaja pysynyt poissa julkisuudesta\n\nMojtaba Khamenei ei osallistunut yhteenkään julkiseen tilaisuuteen isänsä viikon kestäneiden hautajaismenojen aikana. Häntä ei ole nähty julkisuudessa sen jälkeen, kun sota alkoi helmikuussa. Hänen nimiinsä korkeimpana johtajana annetut lausunnot on tähänkin asti välitetty kirjallisina, ja myös tuore hautajaisviesti luettiin Iranin valtiontelevisiossa.\n\n## Trump uhkaa Irania voimakkailla vastatoimilla\n\nYhdysvaltain presidentti Donald Trump on puolestaan varoittanut Irania yrityksistä surmata hänet. Varoitus annettiin sen jälkeen, kun Ali Khamenein hautajaisissa oli nähty useita englanninkielisiä kylttejä, joissa vaadittiin Trumpin sekä Israelin pääministerin Benjamin Netanjahun tappamista.\n\nTrump kirjoitti yön aikana julkaisemassaan viestissä, että tuhat ohjusta on valmiina ja suunnattu Iraniin. Hänen mukaansa tuhannet muut ohjukset seuraisivat välittömästi, jos Iranin hallinto toteuttaisi uhkauksensa. Trump sanoi myös Yhdysvaltojen tuhoavan Iranin alueita vastauksena mahdolliseen salamurhayritykseen. Mojtaba Khamenein lausunnossa ei yksilöity, millaisia kostotoimia Iran suunnittelisi, milloin niitä mahdollisesti toteutettaisiin tai ketkä olisivat niiden kohteina.",
+    "category": "Ulkomaat",
+    "tags": [
+      "iran",
+      "mojtaba khamenei",
+      "ali khamenei",
+      "donald trump",
+      "yhdysvallat"
+    ],
+    "summary_bullets": [
+      "Mojtaba Khamenei lupasi kostaa isänsä Ali Khamenein kuoleman kirjallisessa hautajaisviestissä.",
+      "Ali Khamenei kuoli ilmaiskussa 28. helmikuuta ja hänet haudattiin Mashhadiin.",
+      "Donald Trump uhkasi Irania voimakkailla vastatoimilla, jos maa yrittäisi surmata hänet."
+    ],
+    "key_points": [
+      "Mojtaba Khamenei lupasi kostaa isänsä Ali Khamenein kuoleman kirjallisessa hautajaisviestissä.",
+      "Ali Khamenei kuoli ilmaiskussa 28. helmikuuta ja hänet haudattiin Mashhadiin.",
+      "Donald Trump uhkasi Irania voimakkailla vastatoimilla, jos maa yrittäisi surmata hänet."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu kahden uutismedian yhteneviin tietoihin sekä niiden välittämiin Iranin valtiollisten tiedotusvälineiden lausuntoihin. Mahdollisista konkreettisista kostotoimista ei ole vahvistettua tietoa.",
+    "source_text": "Mojtaba Khamenei has not been seen in public since the conflict started in February. Iranian Supreme Leader Ayatollah Mojtaba Khamenei has called for revenge for the death of his father and predecessor Ayatollah Ali Khamenei. He said vengeance was the \"will of the nation\" in a written statement read out on state TV. It was his first public message since his father's funeral ceremonies began this week. Khamenei senior, 86, was killed in an air strike on 28 February, the first day of the US-Israeli war against Iran. Meanwhile US President Donald Trump has warned any Iranian plans to kill him would see the US \"decimate and destroy all areas\" of Iran in response. How Iran's new regime is very different to what came before\n\nMojtaba Khamenei says vengeance is \"inevitable\" for the killing, which happened on the first day of the US-Israeli war on Iran.\n\nIran’s new Supreme Leader Mojtaba Khamenei pledged Sunday to take revenge for the death of his father as Ayatollah Ali Khamenei was buried in the holy city of Mashhad. “We pledge that we will take revenge for the pure blood of the martyred leader and all the martyrs of these two wars from the criminal and disgraced killers,” he said in a funeral message reported by Iranian state media. “Revenge is the demand of our nation and must certainly be carried out,” he added. “Soon, the free people of the world will carry out a part of this divine mission.”\n\nThe younger Khamenei, who has not been seen since the war began, did not attend any public events as part of his father’s weeklong funeral. The statement attributed to him, like all others issued in his name as supreme leader, was a written message. President Donald Trump earlier warned Iran against any attempts to assassinate him after Khamenei’s funeral saw numerous English-language banners openly calling for Trump to be killed along with Israeli Prime Minister Benjamin Netanyahu. A thousand missiles “are Locked and Loaded and aimed at the Islamic Republic of Iran, with thousands of more to immediately follow, should the Iranian Government act on its threat,” Trump wrote in the overnight post.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.96,
+    "degraded_mode": false,
+    "monica_packet_id": "20260711T194124Z_f1a444987d"
+  },
+  "quality_gate_rejected_at": "2026-07-11T19:48:01.803354+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260711T194124Z_f1a444987d",
+    "category": "Ulkomaat",
+    "selected_source_words": 359,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 8.01,
+    "quality_reasons": [
+      "length under target (274 words)",
+      "missing: image",
+      "source_confidence_denial_context_missing"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 274,
+    "title": "Iranin johtaja Mojtaba Khamenei vannoo kostoa isänsä kuolemasta"
+  },
+  "failure": "quality_gate_rejected: length under target (274 words); missing: image; source_confidence_denial_context_missing"
+}
