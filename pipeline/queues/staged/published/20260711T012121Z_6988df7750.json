@@ -1,0 +1,240 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-11T01:21:21.945489+00:00",
+  "digest": "6988df7750",
+  "packet": {
+    "packet_id": "20260711T012121Z_6988df7750",
+    "created_at": "2026-07-11T01:21:21Z",
+    "headline_seed": "US cyber agency CISA had to build its incident playbook during the incident, agency reveals",
+    "description_seed": "CISA said it \"missed\" an opportunity to get ahead of the security incident by not creating a response plan ahead of time.",
+    "link": "https://techcrunch.com/2026/07/10/us-cyber-agency-cisa-had-to-build-its-incident-playbook-during-the-incident-agency-reveals/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechCrunch",
+      "Infosecurity Magazine",
+      "Infosecurity Magazine"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/07/10/us-cyber-agency-cisa-had-to-build-its-incident-playbook-during-the-incident-agency-reveals/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "US cyber agency CISA had to build its incident playbook during the incident, agency reveals"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_type": "description",
+        "text": "CISA said it \"missed\" an opportunity to get ahead of the security incident by not creating a response plan ahead of time.",
+        "word_count": 22,
+        "keyword_overlap": 11,
+        "strong_overlap": 6
+      },
+      {
+        "source": "TechCrunch",
+        "source_type": "research",
+        "text": "U.S. federal cybersecurity agency CISA said it did not have a prepared response plan for how it should handle a cybersecurity incident in May, after an investigative reporter notified the agency that a contractor had publicly exposed sensitive keys and credentials for accessing U.S. government systems. CISA, the Homeland Security unit tasked with defending federal networks and helping to safeguard critical infrastructure, revealed Friday in a post-mortem report that its staff “had to spend time building [a playbook] during the early stages of the incident.” The agency said it is important to prepare playbooks for “all anticipated needs” to ensure that organizations are ready to respond in the event of a security incident rather than scrambling to improvise one in real time. ---",
+        "word_count": 123,
+        "keyword_overlap": 10,
+        "strong_overlap": 6
+      },
+      {
+        "source": "Infosecurity Magazine",
+        "source_type": "research",
+        "text": "The actions taken by the agency’s incidents responders included efforts to eliminate public exposure, prevent further harm, understand the scope of information shared, assess the impact and implement corrective actions. It was highlighted that no customer or mission data was exposed and leaked credentials were not used outside of CISA’s environments. The third-party individual uploaded copies of a CISA build and deployment repository to their personal GitHub account for the purpose of creating cloud infrastructure autonomously. This repository included CISA’s Infrastructure As Code and build code. In its reflections on the incident the cybersecurity agency said it was vital to take cybersecurity tips and external reporting seriously. CISA thanked the security researcher and the reporter for their collaboration. CISA also said the incident highlighted the need to adopt zero trust principles in order to protect systems and development environments.",
+        "word_count": 139,
+        "keyword_overlap": 7,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Infosecurity Magazine",
+        "source_type": "research",
+        "text": "The US Cybersecurity and Infrastructure Security Agency (CISA) has detailed its response to internal CISA Amazon AWS GovCloud Keys and other information being made available in a public repository. The reaction came after KrebsOnSecurity detailed in May how a security researcher with GitGuardian had identified a public GitHub repository that exposed credentials to several highly privileged AWS GovCloud accounts and a large number of internal CISA systems. The GitHub repository was not part of CISA’s official GitHub but rather was a personal repository owned by a contractor. In an update published on June 9, CISA said, “Within moments of receiving this information, CISA’s Office of the Chief Information Officer (OCIO) took swift and comprehensive action to mitigate any exposure to CISA’s cloud resources and code repositories.” CISA’s internal incident response began on May 15.",
+        "word_count": 134,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "CISA said it \"missed\" an opportunity to get ahead of the security incident by not creating a response plan ahead of time.\n\nU.S. federal cybersecurity agency CISA said it did not have a prepared response plan for how it should handle a cybersecurity incident in May, after an investigative reporter notified the agency that a contractor had publicly exposed sensitive keys and credentials for accessing U.S. government systems. CISA, the Homeland Security unit tasked with defending federal networks and helping to safeguard critical infrastructure, revealed Friday in a post-mortem report that its staff “had to spend time building [a playbook] during the early stages of the incident.” The agency said it is important to prepare playbooks for “all anticipated needs” to ensure that organizations are ready to respond in the event of a security incident rather than scrambling to improvise one in real time. ---\n\nThe actions taken by the agency’s incidents responders included efforts to eliminate public exposure, prevent further harm, understand the scope of information shared, assess the impact and implement corrective actions. It was highlighted that no customer or mission data was exposed and leaked credentials were not used outside of CISA’s environments. The third-party individual uploaded copies of a CISA build and deployment repository to their personal GitHub account for the purpose of creating cloud infrastructure autonomously. This repository included CISA’s Infrastructure As Code and build code. In its reflections on the incident the cybersecurity agency said it was vital to take cybersecurity tips and external reporting seriously. CISA thanked the security researcher and the reporter for their collaboration. CISA also said the incident highlighted the need to adopt zero trust principles in order to protect systems and development environments.\n\nThe US Cybersecurity and Infrastructure Security Agency (CISA) has detailed its response to internal CISA Amazon AWS GovCloud Keys and other information being made available in a public repository. The reaction came after KrebsOnSecurity detailed in May how a security researcher with GitGuardian had identified a public GitHub repository that exposed credentials to several highly privileged AWS GovCloud accounts and a large number of internal CISA systems. The GitHub repository was not part of CISA’s official GitHub but rather was a personal repository owned by a contractor. In an update published on June 9, CISA said, “Within moments of receiving this information, CISA’s Office of the Chief Information Officer (OCIO) took swift and comprehensive action to mitigate any exposure to CISA’s cloud resources and code repositories.” CISA’s internal incident response began on May 15.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 917,
+      "selected_blocks": 4,
+      "selected_source_words": 418,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "Infosecurity Magazine",
+        "Infosecurity Magazine",
+        "Infosecurity Magazine",
+        "Gizmodo",
+        "Gizmodo",
+        "Gizmodo",
+        "Gizmodo",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch",
+        "Infosecurity Magazine",
+        "Infosecurity Magazine"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "US cyber agency CISA had to build its incident playbook during the incident, agency reveals",
+      "description": "CISA said it \"missed\" an opportunity to get ahead of the security incident by not creating a response plan ahead of time.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "US cyber agency CISA had to build its incident playbook during the incident, agency reveals",
+    "description": "CISA said it \"missed\" an opportunity to get ahead of the security incident by not creating a response plan ahead of time.",
+    "link": "https://techcrunch.com/2026/07/10/us-cyber-agency-cisa-had-to-build-its-incident-playbook-during-the-incident-agency-reveals/",
+    "published": "2026-07-11T01:01:28+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "ad834f1dac034715eb5d53a84e17d0f5",
+    "_url_hash": "678296c36e479bfad1e823281d390a14273cb2c2b25ec8553c246e4ffc478358",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nU.S. federal cybersecurity agency CISA said it did not have a prepared response plan for how it should handle a cybersecurity incident in May, after an investigative reporter notified the agency that a contractor had publicly exposed sensitive keys and credentials for accessing U.S. government systems.\n\nCISA, the Homeland Security unit tasked with defending federal networks and helping to safeguard critical infrastructure, revealed Friday in a post-mortem report that its staff “had to spend time building [a playbook] during the early stages of the incident.” The agency said it is important to prepare playbooks for “all anticipated needs” to ensure that organizations are ready to respond in the event of a security incident rather than scrambling to improvise one in real time.\n\n---\n\n[Lähde: Infosecurity Magazine]\nThe US Cybersecurity and Infrastructure Security Agency (CISA) has detailed its response to internal CISA Amazon AWS GovCloud Keys and other information being made available in a public repository.\n\nThe reaction came after KrebsOnSecurity detailed in May how a security researcher with GitGuardian had identified a public GitHub repository that exposed credentials to several highly privileged AWS GovCloud accounts and a large number of internal CISA systems.\n\nThe GitHub repository was not part of CISA’s official GitHub but rather was a personal repository owned by a contractor.\n\nIn an update published on June 9, CISA said, “Within moments of receiving this information, CISA’s Office of the Chief Information Officer (OCIO) took swift and comprehensive action to mitigate any exposure to CISA’s cloud resources and code repositories.”\n\nCISA’s internal incident response began on May 15.\n\nThe actions taken by the agency’s incidents responders included efforts to eliminate public exposure, prevent further harm, understand the scope of information shared, assess the impact and implement corrective actions.\n\nIt was highlighted that no customer or mission data was exposed and leaked credentials were not used outside of CISA’s environments.\n\nThe third-party individual uploaded copies of a CISA build and deployment repository to their personal GitHub account for the purpose of creating cloud infrastructure autonomously. This repository included CISA’s Infrastructure As Code and build code.\n\nIn its reflections on the incident the cybersecurity agency said it was vital to take cybersecurity tips and external reporting seriously. CISA thanked the security researcher and the reporter for their collaboration.\n\nCISA also said the incident highlighted the need to adopt zero trust principles in order to protect systems and development environments.\n\nIt was also highlighted that strong logging capabilities are vital. CISA said its SOC has the necessary logs to successfully investigate the incident and continuous improvement of logging capabilities remains a key element of a strong security program.\n\nCISA said the incident drew attention to several areas for improvement, including tighter controls over public code repository access, stronger monitoring for exposed secrets, and the development of comprehensive GitHub and cloud incident-response playbooks.\n\nThe agency also plans to simplify security researcher reporting channels. In this instance, these channels “were not well defi\n\n---\n\n[Lähde: Gizmodo]\nThe U.S. Cybersecurity and Infrastructure Security Agency (CISA) has been leaving the digital keys to its own cloud storage accounts sitting out in the open, in plain text form, for some unknown amount of time, according to a report from Krebs on Security. The problem finally got fixed over the weekend, the report says.\n\nSurely the secret information was buried in some obscure folder with an inscrutable name, I hear you saying. The repository was reportedly named “Private-CISA.”\n\nBut there’s no way the contents were that sensitive, you object. But the contents included passwords, keys, and tokens—and the passwords were plain text in a .CSV file.\n\nCISA gave a statement to Krebs, saying the following:\n\n“Currently, there is no indication that any sensitive data was compromised as a result of this incident[…] While we hold our team members to the highest standards of integrity and operational awareness, we are working to ensure additional safeguards are implemented to prevent future occurrences.”\n\nSince the repository was created in November of last year, the duration of the vulnerability seems to have been about six months—but it could have been much shorter depending on what information as added when.\n\nTo refresh your memory, CISA is a relatively new branch of the Department of Homeland Security that has had an overall rough time during Trump 2.0, even though, by signing it into law in 2018, Trump actually midwifed CISA into existence during Administration 1.0, and sorry about the tangent, but Trump’s speech to mark the occasion was an exceptional example of Trump poetry, including excerpts like this one:\n\n“The cyber battlespace evolves — and it is evolving, and unfortunately, faster than a lot of people want to talk about. But battlespace it is. So as the cyber battlespace evolves, this new agency will ensure that we confront the full range of threats from nation-states, cyber criminals, and other malicious actors, of which there are many.”\n\nIncontestably true, Mister President. Battlespace it is.\n\nAnyway, Trump was enraged by information provided by CISA leadership during the period between the 2020 election and January 6, 2021 when he was on a mission to have the election results overturned in his favor. He fired the CISA director he appointed, and since taking office again, his CISA has been a chaotic farce. Neither of the acting directors he’s appointed so far have been confirmed by the Senate, and Trump has recently sought to drastically cut CISA’s fun",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-11T01:24:33.176630+00:00",
+  "payload": {
+    "packet_id": "20260711T012121Z_6988df7750",
+    "title": "CISA joutui laatimaan toimintasuunnitelman kesken tietoturvapoikkeaman",
+    "summary": "Yhdysvaltain kyberturvallisuusvirasto CISA myöntää, ettei sillä ollut valmista toimintasuunnitelmaa toukokuussa havaitun tietoturvapoikkeaman varalle. Urakoitsijan henkilökohtaisessa GitHub-tietovarastossa oli julkisesti saatavilla arkaluonteisia avaimia, tunnuksia ja viraston sisäistä koodia.",
+    "content": "Yhdysvaltain kyberturvallisuus- ja infrastruktuuriturvallisuusvirasto CISA joutui laatimaan toimintasuunnitelmaa samalla, kun se selvitti toukokuussa havaittua tietoturvapoikkeamaa. Virasto myönsi jälkiarviossaan menettäneensä tilaisuuden varautua tilanteeseen ennakolta, koska sillä ei ollut valmista mallia tapauksen käsittelyyn.\n\n## Urakoitsijan tietovarasto oli julkinen\n\nPoikkeama tuli CISAn tietoon tutkivan toimittajan ilmoituksen perusteella. GitGuardianin tietoturvatutkija oli löytänyt julkisen GitHub-tietovaraston, jossa oli tunnuksia useisiin laajoilla käyttöoikeuksilla varustettuihin AWS GovCloud -tileihin sekä lukuisiin viraston sisäisiin järjestelmiin. Tietovarasto ei kuulunut CISAn viralliseen GitHub-ympäristöön, vaan sen omisti viraston ulkopuolinen urakoitsija.\n\nUrakoitsija oli ladannut henkilökohtaiselle tililleen kopioita CISAn ohjelmistojen kokoamiseen ja käyttöönottoon liittyvästä tietovarastosta voidakseen luoda pilvi-infrastruktuuria itsenäisesti. Julkisesti saataville päätyneeseen aineistoon sisältyi viraston Infrastructure as Code -määrittelyjä, ohjelmistojen kokoamiskoodia, sisäisiä AWS GovCloud -avaimia ja muita tunnistetietoja.\n\n## Torjuntatoimet alkoivat 15. toukokuuta\n\nCISAn sisäinen poikkeamanhallinta käynnistyi 15. toukokuuta. Viraston mukaan sen tietohallinto ryhtyi ilmoituksen saatuaan nopeasti rajaamaan pilviresursseihin ja kooditietovarastoihin kohdistunutta mahdollista altistumista. Toimilla poistettiin aineiston julkinen näkyvyys, pyrittiin estämään lisävahingot, selvitettiin jaettujen tietojen laajuutta, arvioitiin vaikutuksia ja toteutettiin korjauksia.\n\nViraston selvityksen mukaan tapauksessa ei paljastunut asiakkaiden tietoja eikä CISAn tehtäviin liittyvää dataa. Vuotaneita tunnuksia ei myöskään käytetty CISAn omien ympäristöjen ulkopuolella. CISA kertoi tapahtumasta 9. kesäkuuta julkaistussa päivityksessä ja kuvasi myöhemmin tarkemmin sekä torjuntatoimiaan että toiminnassaan havaitsemiaan puutteita.\n\n## Valmiit toimintamallit puuttuivat\n\nCISA kertoi henkilöstön joutuneen käyttämään poikkeaman alkuvaiheessa aikaa toimintasuunnitelman rakentamiseen. Viraston mukaan organisaatioiden pitäisi valmistella toimintamallit kaikkiin ennakoitavissa oleviin tarpeisiin, jotta niitä ei tarvitse laatia kesken tietoturvatilanteen. Tapaus korosti sen mukaan myös nollaluottamusperiaatteiden merkitystä järjestelmien ja kehitysympäristöjen suojaamisessa.\n\nVirasto painotti lisäksi, että ulkopuoliset tietoturvavihjeet ja ilmoitukset on otettava vakavasti. CISA kiitti tapauksen löytänyttä tietoturvatutkijaa ja asiasta ilmoittanutta toimittajaa yhteistyöstä. Jälkiarvion perusteella viraston on tarkoitus parantaa ennakkovarautumistaan, jotta tulevien poikkeamien alkuvaihe voidaan käyttää suoraan altistumisen rajaamiseen ja vaikutusten selvittämiseen.",
+    "category": "Teknologia",
+    "tags": [
+      "CISA",
+      "kyberturvallisuus",
+      "tietoturva",
+      "GitHub",
+      "AWS GovCloud",
+      "Yhdysvallat"
+    ],
+    "summary_bullets": [
+      "CISAlla ei ollut valmista toimintasuunnitelmaa toukokuussa havaitun tietoturvapoikkeaman käsittelyyn.",
+      "Urakoitsijan henkilökohtainen GitHub-tietovarasto sisälsi viraston koodia sekä arkaluonteisia avaimia ja tunnuksia.",
+      "Viraston mukaan asiakas- tai tehtävätietoja ei paljastunut, eikä vuotaneita tunnuksia käytetty sen ympäristöjen ulkopuolella."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Keskeiset tapahtumat, päivämäärät, aineiston sisältö, torjuntatoimet ja viraston ilmoittamat vaikutukset perustuvat paketin lähdeaineistoon."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260711T012121Z_6988df7750\",\n  \"title\": \"CISA joutui laatimaan toimintasuunnitelman kesken tietoturvapoikkeaman\",\n  \"summary\": \"Yhdysvaltain kyberturvallisuusvirasto CISA myöntää, ettei sillä ollut valmista toimintasuunnitelmaa toukokuussa havaitun tietoturvapoikkeaman varalle. Urakoitsijan henkilökohtaisessa GitHub-tietovarastossa oli julkisesti saatavilla arkaluonteisia avaimia, tunnuksia ja viraston sisäistä koodia.\",\n  \"content\": \"Yhdysvaltain kyberturvallisuus- ja infrastruktuuriturvallisuusvirasto CISA joutui laatimaan toimintasuunnitelmaa samalla, kun se selvitti toukokuussa havaittua tietoturvapoikkeamaa. Virasto myönsi jälkiarviossaan menettäneensä tilaisuuden varautua tilanteeseen ennakolta, koska sillä ei ollut valmista mallia tapauksen käsittelyyn.\\n\\n## Urakoitsijan tietovarasto oli julkinen\\n\\nPoikkeama tuli CISAn tietoon tutkivan toimittajan ilmoituksen perusteella. GitGuardianin tietoturvatutkija oli löytänyt julkisen GitHub-tietovaraston, jossa oli tunnuksia useisiin laajoilla käyttöoikeuksilla varustettuihin AWS GovCloud -tileihin sekä lukuisiin viraston sisäisiin järjestelmiin. Tietovarasto ei kuulunut CISAn viralliseen GitHub-ympäristöön, vaan sen omisti viraston ulkopuolinen urakoitsija.\\n\\nUrakoitsija oli ladannut henkilökohtaiselle tililleen kopioita CISAn ohjelmistojen kokoamiseen ja käyttöönottoon liittyvästä tietovarastosta voidakseen luoda pilvi-infrastruktuuria itsenäisesti. Julkisesti saataville päätyneeseen aineistoon sisältyi viraston Infrastructure as Code -määrittelyjä, ohjelmistojen kokoamiskoodia, sisäisiä AWS GovCloud -avaimia ja muita tunnistetietoja.\\n\\n## Torjuntatoimet alkoivat 15. toukokuuta\\n\\nCISAn sisäinen poikkeamanhallinta käynnistyi 15. toukokuuta. Viraston mukaan sen tietohallinto ryhtyi ilmoituksen saatuaan nopeasti rajaamaan pilviresursseihin ja kooditietovarastoihin kohdistunutta mahdollista altistumista. Toimilla poistettiin aineiston julkinen näkyvyys, pyrittiin estämään lisävahingot, selvitettiin jaettujen tietojen laajuutta, arvioitiin vaikutuksia ja toteutettiin korjauksia.\\n\\nViraston selvityksen mukaan tapauksessa ei paljastunut asiakkaiden tietoja eikä CISAn tehtäviin liittyvää dataa. Vuotaneita tunnuksia ei myöskään käytetty CISAn omien ympäristöjen ulkopuolella. CISA kertoi tapahtumasta 9. kesäkuuta julkaistussa päivityksessä ja kuvasi myöhemmin tarkemmin sekä torjuntatoimiaan että toiminnassaan havaitsemiaan puutteita.\\n\\n## Valmiit toimintamallit puuttuivat\\n\\nCISA kertoi henkilöstön joutuneen käyttämään poikkeaman alkuvaiheessa aikaa toimintasuunnitelman rakentamiseen. Viraston mukaan organisaatioiden pitäisi valmistella toimintamallit kaikkiin ennakoitavissa oleviin tarpeisiin, jotta niitä ei tarvitse laatia kesken tietoturvatilanteen. Tapaus korosti sen mukaan myös nollaluottamusperiaatteiden merkitystä järjestelmien ja kehitysympäristöjen suojaamisessa.\\n\\nVirasto painotti lisäksi, että ulkopuoliset tietoturvavihjeet ja ilmoitukset on otettava vakavasti. CISA kiitti tapauksen löytänyttä tietoturvatutkijaa ja asiasta ilmoittanutta toimittajaa yhteistyöstä. Jälkiarvion perusteella viraston on tarkoitus parantaa ennakkovarautumistaan, jotta tulevien poikkeamien alkuvaihe voidaan käyttää suoraan altistumisen rajaamiseen ja vaikutusten selvittämiseen.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"CISA\",\n    \"kyberturvallisuus\",\n    \"tietoturva\",\n    \"GitHub\",\n    \"AWS GovCloud\",\n    \"Yhdysvallat\"\n  ],\n  \"summary_bullets\": [\n    \"CISAlla ei ollut valmista toimintasuunnitelmaa toukokuussa havaitun tietoturvapoikkeaman käsittelyyn.\",\n    \"Urakoitsijan henkilökohtainen GitHub-tietovarasto sisälsi viraston koodia sekä arkaluonteisia avaimia ja tunnuksia.\",\n    \"Viraston mukaan asiakas- tai tehtävätietoja ei paljastunut, eikä vuotaneita tunnuksia käytetty sen ympäristöjen ulkopuolella.\"\n  ],\n  \"content_type\": \"uutinen\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Keskeiset tapahtumat, päivämäärät, aineiston sisältö, torjuntatoimet ja viraston ilmoittamat vaikutukset perustuvat paketin lähdeaineistoon.\"\n}",
+  "article": {
+    "title": "CISA joutui laatimaan toimintasuunnitelman kesken tietoturvapoikkeaman",
+    "description": "Yhdysvaltain kyberturvallisuusvirasto CISA myöntää, ettei sillä ollut valmista toimintasuunnitelmaa toukokuussa havaitun tietoturvapoikkeaman varalle. Urakoitsijan henkilökohtaisessa GitHub-tietovarastossa oli julkisesti saatavilla arkaluonteisia avaimia, tunnuksia ja viraston sisäistä koodia.",
+    "link": "https://techcrunch.com/2026/07/10/us-cyber-agency-cisa-had-to-build-its-incident-playbook-during-the-incident-agency-reveals/",
+    "published": "2026-07-11T01:01:28+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "ad834f1dac034715eb5d53a84e17d0f5",
+    "_url_hash": "678296c36e479bfad1e823281d390a14273cb2c2b25ec8553c246e4ffc478358",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch]\nU.S. federal cybersecurity agency CISA said it did not have a prepared response plan for how it should handle a cybersecurity incident in May, after an investigative reporter notified the agency that a contractor had publicly exposed sensitive keys and credentials for accessing U.S. government systems.\n\nCISA, the Homeland Security unit tasked with defending federal networks and helping to safeguard critical infrastructure, revealed Friday in a post-mortem report that its staff “had to spend time building [a playbook] during the early stages of the incident.” The agency said it is important to prepare playbooks for “all anticipated needs” to ensure that organizations are ready to respond in the event of a security incident rather than scrambling to improvise one in real time.\n\n---\n\n[Lähde: Infosecurity Magazine]\nThe US Cybersecurity and Infrastructure Security Agency (CISA) has detailed its response to internal CISA Amazon AWS GovCloud Keys and other information being made available in a public repository.\n\nThe reaction came after KrebsOnSecurity detailed in May how a security researcher with GitGuardian had identified a public GitHub repository that exposed credentials to several highly privileged AWS GovCloud accounts and a large number of internal CISA systems.\n\nThe GitHub repository was not part of CISA’s official GitHub but rather was a personal repository owned by a contractor.\n\nIn an update published on June 9, CISA said, “Within moments of receiving this information, CISA’s Office of the Chief Information Officer (OCIO) took swift and comprehensive action to mitigate any exposure to CISA’s cloud resources and code repositories.”\n\nCISA’s internal incident response began on May 15.\n\nThe actions taken by the agency’s incidents responders included efforts to eliminate public exposure, prevent further harm, understand the scope of information shared, assess the impact and implement corrective actions.\n\nIt was highlighted that no customer or mission data was exposed and leaked credentials were not used outside of CISA’s environments.\n\nThe third-party individual uploaded copies of a CISA build and deployment repository to their personal GitHub account for the purpose of creating cloud infrastructure autonomously. This repository included CISA’s Infrastructure As Code and build code.\n\nIn its reflections on the incident the cybersecurity agency said it was vital to take cybersecurity tips and external reporting seriously. CISA thanked the security researcher and the reporter for their collaboration.\n\nCISA also said the incident highlighted the need to adopt zero trust principles in order to protect systems and development environments.\n\nIt was also highlighted that strong logging capabilities are vital. CISA said its SOC has the necessary logs to successfully investigate the incident and continuous improvement of logging capabilities remains a key element of a strong security program.\n\nCISA said the incident drew attention to several areas for improvement, including tighter controls over public code repository access, stronger monitoring for exposed secrets, and the development of comprehensive GitHub and cloud incident-response playbooks.\n\nThe agency also plans to simplify security researcher reporting channels. In this instance, these channels “were not well defi\n\n---\n\n[Lähde: Gizmodo]\nThe U.S. Cybersecurity and Infrastructure Security Agency (CISA) has been leaving the digital keys to its own cloud storage accounts sitting out in the open, in plain text form, for some unknown amount of time, according to a report from Krebs on Security. The problem finally got fixed over the weekend, the report says.\n\nSurely the secret information was buried in some obscure folder with an inscrutable name, I hear you saying. The repository was reportedly named “Private-CISA.”\n\nBut there’s no way the contents were that sensitive, you object. But the contents included passwords, keys, and tokens—and the passwords were plain text in a .CSV file.\n\nCISA gave a statement to Krebs, saying the following:\n\n“Currently, there is no indication that any sensitive data was compromised as a result of this incident[…] While we hold our team members to the highest standards of integrity and operational awareness, we are working to ensure additional safeguards are implemented to prevent future occurrences.”\n\nSince the repository was created in November of last year, the duration of the vulnerability seems to have been about six months—but it could have been much shorter depending on what information as added when.\n\nTo refresh your memory, CISA is a relatively new branch of the Department of Homeland Security that has had an overall rough time during Trump 2.0, even though, by signing it into law in 2018, Trump actually midwifed CISA into existence during Administration 1.0, and sorry about the tangent, but Trump’s speech to mark the occasion was an exceptional example of Trump poetry, including excerpts like this one:\n\n“The cyber battlespace evolves — and it is evolving, and unfortunately, faster than a lot of people want to talk about. But battlespace it is. So as the cyber battlespace evolves, this new agency will ensure that we confront the full range of threats from nation-states, cyber criminals, and other malicious actors, of which there are many.”\n\nIncontestably true, Mister President. Battlespace it is.\n\nAnyway, Trump was enraged by information provided by CISA leadership during the period between the 2020 election and January 6, 2021 when he was on a mission to have the election results overturned in his favor. He fired the CISA director he appointed, and since taking office again, his CISA has been a chaotic farce. Neither of the acting directors he’s appointed so far have been confirmed by the Senate, and Trump has recently sought to drastically cut CISA’s fun",
+    "research_source": "multi",
+    "summary": "Yhdysvaltain kyberturvallisuusvirasto CISA myöntää, ettei sillä ollut valmista toimintasuunnitelmaa toukokuussa havaitun tietoturvapoikkeaman varalle. Urakoitsijan henkilökohtaisessa GitHub-tietovarastossa oli julkisesti saatavilla arkaluonteisia avaimia, tunnuksia ja viraston sisäistä koodia.",
+    "content": "Yhdysvaltain kyberturvallisuus- ja infrastruktuuriturvallisuusvirasto CISA joutui laatimaan toimintasuunnitelmaa samalla, kun se selvitti toukokuussa havaittua tietoturvapoikkeamaa. Virasto myönsi jälkiarviossaan menettäneensä tilaisuuden varautua tilanteeseen ennakolta, koska sillä ei ollut valmista mallia tapauksen käsittelyyn.\n\n## Urakoitsijan tietovarasto oli julkinen\n\nPoikkeama tuli CISAn tietoon tutkivan toimittajan ilmoituksen perusteella. GitGuardianin tietoturvatutkija oli löytänyt julkisen GitHub-tietovaraston, jossa oli tunnuksia useisiin laajoilla käyttöoikeuksilla varustettuihin AWS GovCloud -tileihin sekä lukuisiin viraston sisäisiin järjestelmiin. Tietovarasto ei kuulunut CISAn viralliseen GitHub-ympäristöön, vaan sen omisti viraston ulkopuolinen urakoitsija.\n\nUrakoitsija oli ladannut henkilökohtaiselle tililleen kopioita CISAn ohjelmistojen kokoamiseen ja käyttöönottoon liittyvästä tietovarastosta voidakseen luoda pilvi-infrastruktuuria itsenäisesti. Julkisesti saataville päätyneeseen aineistoon sisältyi viraston Infrastructure as Code -määrittelyjä, ohjelmistojen kokoamiskoodia, sisäisiä AWS GovCloud -avaimia ja muita tunnistetietoja.\n\n## Torjuntatoimet alkoivat 15. toukokuuta\n\nCISAn sisäinen poikkeamanhallinta käynnistyi 15. toukokuuta. Viraston mukaan sen tietohallinto ryhtyi ilmoituksen saatuaan nopeasti rajaamaan pilviresursseihin ja kooditietovarastoihin kohdistunutta mahdollista altistumista. Toimilla poistettiin aineiston julkinen näkyvyys, pyrittiin estämään lisävahingot, selvitettiin jaettujen tietojen laajuutta, arvioitiin vaikutuksia ja toteutettiin korjauksia.\n\nViraston selvityksen mukaan tapauksessa ei paljastunut asiakkaiden tietoja eikä CISAn tehtäviin liittyvää dataa. Vuotaneita tunnuksia ei myöskään käytetty CISAn omien ympäristöjen ulkopuolella. CISA kertoi tapahtumasta 9. kesäkuuta julkaistussa päivityksessä ja kuvasi myöhemmin tarkemmin sekä torjuntatoimiaan että toiminnassaan havaitsemiaan puutteita.\n\n## Valmiit toimintamallit puuttuivat\n\nCISA kertoi henkilöstön joutuneen käyttämään poikkeaman alkuvaiheessa aikaa toimintasuunnitelman rakentamiseen. Viraston mukaan organisaatioiden pitäisi valmistella toimintamallit kaikkiin ennakoitavissa oleviin tarpeisiin, jotta niitä ei tarvitse laatia kesken tietoturvatilanteen. Tapaus korosti sen mukaan myös nollaluottamusperiaatteiden merkitystä järjestelmien ja kehitysympäristöjen suojaamisessa.\n\nVirasto painotti lisäksi, että ulkopuoliset tietoturvavihjeet ja ilmoitukset on otettava vakavasti. CISA kiitti tapauksen löytänyttä tietoturvatutkijaa ja asiasta ilmoittanutta toimittajaa yhteistyöstä. Jälkiarvion perusteella viraston on tarkoitus parantaa ennakkovarautumistaan, jotta tulevien poikkeamien alkuvaihe voidaan käyttää suoraan altistumisen rajaamiseen ja vaikutusten selvittämiseen.",
+    "category": "Teknologia",
+    "tags": [
+      "cisa",
+      "kyberturvallisuus",
+      "tietoturva",
+      "github",
+      "aws govcloud"
+    ],
+    "summary_bullets": [
+      "CISAlla ei ollut valmista toimintasuunnitelmaa toukokuussa havaitun tietoturvapoikkeaman käsittelyyn.",
+      "Urakoitsijan henkilökohtainen GitHub-tietovarasto sisälsi viraston koodia sekä arkaluonteisia avaimia ja tunnuksia.",
+      "Viraston mukaan asiakas- tai tehtävätietoja ei paljastunut, eikä vuotaneita tunnuksia käytetty sen ympäristöjen ulkopuolella."
+    ],
+    "key_points": [
+      "CISAlla ei ollut valmista toimintasuunnitelmaa toukokuussa havaitun tietoturvapoikkeaman käsittelyyn.",
+      "Urakoitsijan henkilökohtainen GitHub-tietovarasto sisälsi viraston koodia sekä arkaluonteisia avaimia ja tunnuksia.",
+      "Viraston mukaan asiakas- tai tehtävätietoja ei paljastunut, eikä vuotaneita tunnuksia käytetty sen ympäristöjen ulkopuolella."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "journalist_note": "Keskeiset tapahtumat, päivämäärät, aineiston sisältö, torjuntatoimet ja viraston ilmoittamat vaikutukset perustuvat paketin lähdeaineistoon.",
+    "source_text": "CISA said it \"missed\" an opportunity to get ahead of the security incident by not creating a response plan ahead of time.\n\nU.S. federal cybersecurity agency CISA said it did not have a prepared response plan for how it should handle a cybersecurity incident in May, after an investigative reporter notified the agency that a contractor had publicly exposed sensitive keys and credentials for accessing U.S. government systems. CISA, the Homeland Security unit tasked with defending federal networks and helping to safeguard critical infrastructure, revealed Friday in a post-mortem report that its staff “had to spend time building [a playbook] during the early stages of the incident.” The agency said it is important to prepare playbooks for “all anticipated needs” to ensure that organizations are ready to respond in the event of a security incident rather than scrambling to improvise one in real time. ---\n\nThe actions taken by the agency’s incidents responders included efforts to eliminate public exposure, prevent further harm, understand the scope of information shared, assess the impact and implement corrective actions. It was highlighted that no customer or mission data was exposed and leaked credentials were not used outside of CISA’s environments. The third-party individual uploaded copies of a CISA build and deployment repository to their personal GitHub account for the purpose of creating cloud infrastructure autonomously. This repository included CISA’s Infrastructure As Code and build code. In its reflections on the incident the cybersecurity agency said it was vital to take cybersecurity tips and external reporting seriously. CISA thanked the security researcher and the reporter for their collaboration. CISA also said the incident highlighted the need to adopt zero trust principles in order to protect systems and development environments.\n\nThe US Cybersecurity and Infrastructure Security Agency (CISA) has detailed its response to internal CISA Amazon AWS GovCloud Keys and other information being made available in a public repository. The reaction came after KrebsOnSecurity detailed in May how a security researcher with GitGuardian had identified a public GitHub repository that exposed credentials to several highly privileged AWS GovCloud accounts and a large number of internal CISA systems. The GitHub repository was not part of CISA’s official GitHub but rather was a personal repository owned by a contractor. In an update published on June 9, CISA said, “Within moments of receiving this information, CISA’s Office of the Chief Information Officer (OCIO) took swift and comprehensive action to mitigate any exposure to CISA’s cloud resources and code repositories.” CISA’s internal incident response began on May 15.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260711T012121Z_6988df7750",
+    "image_hotlink": false,
+    "image_category_fallback": true,
+    "image": "/images/categories/teknologia.jpg",
+    "image_thumb": "/images/categories/teknologia.jpg",
+    "image_alt": "Teknologia-uutiset",
+    "image_credit": "",
+    "image_source_url": "",
+    "image_caption": "",
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_visual_judge_score": 0,
+    "image_decision": {
+      "source": "category_fallback",
+      "accepted": true,
+      "reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+      "prompt_version": "image-flow-v2-2026-07-03"
+    }
+  },
+  "image_enriched_at": "2026-07-11T01:28:39.230550+00:00",
+  "image_enrichment": {
+    "image": "/images/categories/teknologia.jpg",
+    "image_thumb": "/images/categories/teknologia.jpg",
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+    "image_concept": null,
+    "image_query": null,
+    "image_candidate_id": null,
+    "image_candidate_url": null,
+    "image_visual_judge_score": 0,
+    "image_accepted_reasons": null,
+    "image_rejected_reasons": null,
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03"
+  },
+  "published_at": "2026-07-11T01:30:07.235807+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-07-11-cisa-joutui-laatimaan-toimintasuunnitelman-kesken-tietoturva.md"
+  ]
+}
