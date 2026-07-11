@@ -45,7 +45,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/kaanne-britanniaa-ravistelevassa-murhatutkinnassa-tama-jarkyttavasta-teosta-tiedetaan/9364938"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
