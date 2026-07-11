@@ -47,7 +47,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/travel/2026/jul/11/ryanair-family-seating-policy-kids-fees-airfare-flight-airline-charges"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
