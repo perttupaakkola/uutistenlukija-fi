@@ -14,9 +14,9 @@ from pathlib import Path
 from typing import Iterable
 
 try:
-    from .category_guard import category_text, protect_tiede_category
+    from .category_guard import category_text, contains_token, protect_business_category, protect_tiede_category
 except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
-    from category_guard import category_text, protect_tiede_category
+    from category_guard import category_text, contains_token, protect_business_category, protect_tiede_category
 
 _ALLOWED_CATEGORIES = {
     "Kotimaa",
@@ -564,6 +564,11 @@ def _infer_category(article: dict, selected_blocks: list[dict]) -> str:
         if part
     ).lower()
     hint = _normalize_ws(str(article.get("category_hint") or article.get("category") or ""))
+    full_text = category_text(article, " ".join(block.get("text", "") for block in selected_blocks))
+
+    business_category = protect_business_category(hint or "Kotimaa", full_text)
+    if business_category == "Talous":
+        return business_category
 
     # Trusted section hints should survive broad foreign-token matching for
     # business/market items. Otherwise a Talous feed item about Wall Street,
@@ -575,7 +580,7 @@ def _infer_category(article: dict, selected_blocks: list[dict]) -> str:
             category_text(article, " ".join(block.get("text", "") for block in selected_blocks)),
         )
 
-    if any(token in title_and_desc for token in _FOREIGN_TOPIC_TOKENS):
+    if any(contains_token(title_and_desc, token) for token in _FOREIGN_TOPIC_TOKENS):
         return "Ulkomaat"
 
     if hint in _ALLOWED_CATEGORIES:
@@ -585,7 +590,7 @@ def _infer_category(article: dict, selected_blocks: list[dict]) -> str:
         )
 
     combined = " ".join(block.get("text", "") for block in selected_blocks).lower()
-    if any(token in combined for token in _FOREIGN_TOPIC_TOKENS):
+    if any(contains_token(combined, token) for token in _FOREIGN_TOPIC_TOKENS):
         return "Ulkomaat"
     return "Kotimaa"
 

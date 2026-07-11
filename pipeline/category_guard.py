@@ -25,6 +25,13 @@ _SCIENCE_ANGLE_TERMS = re.compile(
     re.IGNORECASE,
 )
 
+_BUSINESS_SIGNAL_GROUPS = (
+    re.compile(r"\b(?:yrity\w*|yhtiö\w*|ravintol\w*)\b", re.IGNORECASE),
+    re.compile(r"\b(?:yrittäj\w*|ravintoloitsij\w*)\b", re.IGNORECASE),
+    re.compile(r"\b(?:tulos\w*|liikevaih\w*|käyttökate\w*|konkurss\w*|markkin\w*|pörss\w*|osak\w*)\b", re.IGNORECASE),
+    re.compile(r"\b(?:kasv\w*|kannattav\w*|investoin\w*|myynt\w*|marginaal\w*|analyytik\w*)\b", re.IGNORECASE),
+)
+
 
 def category_text(article: dict, *extra_parts: str) -> str:
     """Return compact article text used for deterministic category guards."""
@@ -51,3 +58,25 @@ def protect_tiede_category(category: str, text: str) -> str:
     if _SCHOOL_POLICE_TERMS.search(haystack) and not _SCIENCE_ANGLE_TERMS.search(haystack):
         return "Kotimaa"
     return category
+
+
+def protect_business_category(category: str, text: str) -> str:
+    """Route only strongly signalled company/business stories to Talous.
+
+    Two distinct signal groups are required so a lone mention of a company,
+    entrepreneur, result, or market cannot override an otherwise valid topic.
+    This is intentionally a category guard, not a quality-gate bypass.
+    """
+    haystack = str(text or "").casefold()
+    matched_groups = sum(bool(pattern.search(haystack)) for pattern in _BUSINESS_SIGNAL_GROUPS)
+    return "Talous" if matched_groups >= 2 else category
+
+
+def contains_token(text: str, token: str) -> bool:
+    """Match a category token as a word/stem, never inside another word."""
+    haystack = str(text or "").casefold()
+    needle = str(token or "").casefold().strip()
+    if not needle:
+        return False
+    right_boundary = r"(?![a-zäöå])" if len(needle) <= 3 else ""
+    return bool(re.search(rf"(?<![a-zäöå]){re.escape(needle)}{right_boundary}", haystack))

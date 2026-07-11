@@ -20,9 +20,9 @@ from email.utils import parsedate_to_datetime
 from urllib.parse import urlparse, parse_qs, urlunparse
 
 try:
-    from .category_guard import category_text, protect_tiede_category
+    from .category_guard import category_text, contains_token, protect_business_category, protect_tiede_category
 except ImportError:  # pragma: no cover - direct script execution from pipeline cwd
-    from category_guard import category_text, protect_tiede_category
+    from category_guard import category_text, contains_token, protect_business_category, protect_tiede_category
 
 try:
     from feed_health import get_global_health, save_global_health
@@ -992,16 +992,18 @@ def scan_all_feeds() -> List[Dict]:
     def _guess_category(article):
         """Guess category from source hint, title, or description."""
         hint = article.get("category_hint", "")
+        text = article.get("title", "") + " " + article.get("description", "")
         if hint in CATEGORIES:
-            return protect_tiede_category(hint, category_text(article))
-        text = (article.get("title", "") + " " + article.get("description", "")).lower()
+            guarded = protect_tiede_category(hint, category_text(article))
+            return protect_business_category(guarded, text)
         for cat, keywords in CATEGORY_KEYWORDS.items():
-            if any(kw in text for kw in keywords):
-                return protect_tiede_category(cat, category_text(article))
+            if any(contains_token(text, kw) for kw in keywords):
+                guarded = protect_tiede_category(cat, category_text(article))
+                return protect_business_category(guarded, text)
         # English sources default to Ulkomaat
         if article.get("language") == "en":
             return "Ulkomaat"
-        return "Kotimaa"
+        return protect_business_category("Kotimaa", text)
 
     TALOUS_SOURCE_RICHNESS = {
         # Open/RSS-rich sources first. KL/IS pages are useful as signals but

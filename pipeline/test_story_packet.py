@@ -10,6 +10,35 @@ except ImportError:  # pragma: no cover
 
 
 class StoryPacketTests(unittest.TestCase):
+    def test_oululainen_restaurant_business_story_is_not_ai_or_iran_substring_match(self) -> None:
+        article = {
+            "title": "Oululainen ravintoloitsija haukkuu päättäjät ja haluaa sanoa asiakkaille kaksi asiaa",
+            "description": "Ravintoloilla menee huonommin kuin koskaan aiemmin tilastohistorian aikana. Pitkän linjan yrittäjä kertoo, mitä sille pitäisi tehdä.",
+            "source": "Yle Uutiset",
+            "link": "https://yle.fi/a/74-20235833?origin=rss",
+            "_guessed_category": "Teknologia",
+            "research": "[Lähde: Yle Uutiset]\nMajoitus- ja ravintola-alalla tuli vireille konkursseja enemmän kuin koskaan. Yrittäjä arvioi alan kannattavuutta.",
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(packet["category_hint"], "Talous")
+
+    def test_neste_results_override_mixed_technology_feed_hint(self) -> None:
+        article = {
+            "title": "Nesteen tuloksen odotetaan pomppaavan 227 prosenttia – Analyytikko arvioi kasvun väliaikaiseksi",
+            "description": "Polttoaineyhtiö Nesteen luvuissa näkyy valtava kasvu ja uusiutuvien polttoaineiden myyntimarginaali.",
+            "source": "Tekniikka & Talous",
+            "link": "https://www.tekniikkatalous.fi/uutiset/example",
+            "category_hint": "Teknologia",
+            "_guessed_category": "Teknologia",
+            "research": "[Lähde: Yle]\nNeste kasvatti vertailukelpoista käyttökatettaan. Analyytikon mukaan yhtiön tulos ylitti markkinaennusteet.",
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(packet["category_hint"], "Talous")
+
     def test_irrelevant_research_block_is_dropped_in_favor_of_fallback(self) -> None:
         article = {
             "title": 'Kash Patel kiistää väitteet alkoholinkäytöstä',
