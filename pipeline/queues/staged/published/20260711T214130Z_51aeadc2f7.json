@@ -1,0 +1,238 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-11T21:41:30.968204+00:00",
+  "digest": "51aeadc2f7",
+  "packet": {
+    "packet_id": "20260711T214130Z_51aeadc2f7",
+    "created_at": "2026-07-11T21:41:30Z",
+    "headline_seed": "Prefer strict tables in SQLite",
+    "description_seed": "Article URL: https://evanhahn.com/prefer-strict-tables-in-sqlite/ Comments URL: https://news.ycombinator.com/item?id=48873940 Points: 154 # Comments: 57",
+    "link": "https://evanhahn.com/prefer-strict-tables-in-sqlite/",
+    "source": "Hacker News Best",
+    "source_names": [
+      "Hacker News Best",
+      "Hacker News Best",
+      "Hacker News Best",
+      "Hacker News Best"
+    ],
+    "source_urls": [
+      "https://evanhahn.com/prefer-strict-tables-in-sqlite/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Prefer strict tables in SQLite"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Hacker News Best",
+        "source_type": "description",
+        "text": "Article URL: https://evanhahn.com/prefer-strict-tables-in-sqlite/ Comments URL: https://news.ycombinator.com/item?id=48873940 Points: 154 # Comments: 57",
+        "word_count": 11,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      },
+      {
+        "source": "Hacker News Best",
+        "source_type": "research",
+        "text": "In short: I prefer strict tables in SQLite because they avoid some datatype problems, such as putting text in number columns. SQLite has a feature that I think is underrated: strict tables. Strict tables help enforce rigid typing, preventing mistakes like putting text into integer columns. I like them, and wrote this post to promote their use! To make a strict table, add STRICT to the end of its definition. Like this: Broadly, strict tables help enforce rigid types, like other SQL engines do. Most significantly, strict tables keep you from inserting the wrong type into a column. For example, SQLite normally lets you put text into an INTEGER column, but not with strict tables.",
+        "word_count": 115,
+        "keyword_overlap": 4,
+        "strong_overlap": 4
+      },
+      {
+        "source": "Hacker News Best",
+        "source_type": "research",
+        "text": "Only INT, INTEGER, REAL, TEXT, BLOB, and ANY are allowed. Strict tables also require a column type, so you can’t do CREATE TABLE tbl (name). If you still need a column to be flexible, you can use the ANY datatype. As the name suggests, it allows anything—even in a strict table. I haven’t found a use for this, but maybe you will! I prefer strict tables but I must share a few cons. Not everything is better! I think it’s best to use strictness from the start, but that’s not always possible. Unfortunately, I don’t think there’s a way to ALTER a table to make it strict. I think you have to copy the data out of the non-strict table into the strict one. Something like this:",
+        "word_count": 127,
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      },
+      {
+        "source": "Hacker News Best",
+        "source_type": "research",
+        "text": "Personally, I think it’s a mistake to try to put text in an integer column, or vice-versa. I don’t want SQLite to let me make this error! The same validation happens for UPDATEs, too. Notably, if a value can be losslessly converted, it will still be accepted. For example, the string '123' can be perfectly converted to an integer, so it’s allowed. These two lines are equivalent, even for a strict table: By default, you can create columns with bogus types. For example, all of these work even though they aren’t valid SQLite datatypes: I think these aren’t what the developer intended. Some of these are typos, some of them are misunderstandings of which datatypes SQLite supports, and some are egregious mistakes. Appending STRICT to any of these statements makes them error. In my opinion, that’s the correct behavior!",
+        "word_count": 139,
+        "keyword_overlap": 2,
+        "strong_overlap": 2
+      }
+    ],
+    "source_text": "Article URL: https://evanhahn.com/prefer-strict-tables-in-sqlite/ Comments URL: https://news.ycombinator.com/item?id=48873940 Points: 154 # Comments: 57\n\nIn short: I prefer strict tables in SQLite because they avoid some datatype problems, such as putting text in number columns. SQLite has a feature that I think is underrated: strict tables. Strict tables help enforce rigid typing, preventing mistakes like putting text into integer columns. I like them, and wrote this post to promote their use! To make a strict table, add STRICT to the end of its definition. Like this: Broadly, strict tables help enforce rigid types, like other SQL engines do. Most significantly, strict tables keep you from inserting the wrong type into a column. For example, SQLite normally lets you put text into an INTEGER column, but not with strict tables.\n\nOnly INT, INTEGER, REAL, TEXT, BLOB, and ANY are allowed. Strict tables also require a column type, so you can’t do CREATE TABLE tbl (name). If you still need a column to be flexible, you can use the ANY datatype. As the name suggests, it allows anything—even in a strict table. I haven’t found a use for this, but maybe you will! I prefer strict tables but I must share a few cons. Not everything is better! I think it’s best to use strictness from the start, but that’s not always possible. Unfortunately, I don’t think there’s a way to ALTER a table to make it strict. I think you have to copy the data out of the non-strict table into the strict one. Something like this:\n\nPersonally, I think it’s a mistake to try to put text in an integer column, or vice-versa. I don’t want SQLite to let me make this error! The same validation happens for UPDATEs, too. Notably, if a value can be losslessly converted, it will still be accepted. For example, the string '123' can be perfectly converted to an integer, so it’s allowed. These two lines are equivalent, even for a strict table: By default, you can create columns with bogus types. For example, all of these work even though they aren’t valid SQLite datatypes: I think these aren’t what the developer intended. Some of these are typos, some of them are misunderstandings of which datatypes SQLite supports, and some are egregious mistakes. Appending STRICT to any of these statements makes them error. In my opinion, that’s the correct behavior!",
+    "source_diagnostics": {
+      "candidate_blocks": 8,
+      "candidate_source_words": 819,
+      "selected_blocks": 4,
+      "selected_source_words": 392,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Hacker News Best",
+        "Hacker News Best",
+        "Hacker News Best",
+        "Hacker News Best",
+        "Linux Journal",
+        "Linux Journal",
+        "Linux Journal",
+        "Hacker News Best"
+      ],
+      "selected_sources": [
+        "Hacker News Best",
+        "Hacker News Best",
+        "Hacker News Best",
+        "Hacker News Best"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Prefer strict tables in SQLite",
+      "description": "Article URL: https://evanhahn.com/prefer-strict-tables-in-sqlite/ Comments URL: https://news.ycombinator.com/item?id=48873940 Points: 154 # Comments: 57",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Prefer strict tables in SQLite",
+    "description": "Article URL: https://evanhahn.com/prefer-strict-tables-in-sqlite/ Comments URL: https://news.ycombinator.com/item?id=48873940 Points: 154 # Comments: 57",
+    "link": "https://evanhahn.com/prefer-strict-tables-in-sqlite/",
+    "published": "2026-07-11T17:33:55+00:00",
+    "source": "Hacker News Best",
+    "source_domain": "hnrss.org",
+    "language": "en",
+    "fingerprint": "c1b475524576ff6d3929849e02a3bb5c",
+    "_url_hash": "7afd7326cf524d5e4cdb116a17a42d27564238a250c9a4744894478773b78116",
+    "source_tier": 3,
+    "category_hint": "Teknologia",
+    "source_policy": "fix_parser_or_demote",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Hacker News Best]\nIn short: I prefer strict tables in SQLite because they avoid some datatype problems, such as putting text in number columns.\n\nSQLite has a feature that I think is underrated: strict tables. Strict tables help enforce rigid typing, preventing mistakes like putting text into integer columns. I like them, and wrote this post to promote their use!\n\nTo make a strict table, add STRICT to the end of its definition. Like this:\n\nBroadly, strict tables help enforce rigid types, like other SQL engines do.\n\nMost significantly, strict tables keep you from inserting the wrong type into a column. For example, SQLite normally lets you put text into an INTEGER column, but not with strict tables.\n\nPersonally, I think it’s a mistake to try to put text in an integer column, or vice-versa. I don’t want SQLite to let me make this error!\n\nThe same validation happens for UPDATEs, too.\n\nNotably, if a value can be losslessly converted, it will still be accepted. For example, the string '123' can be perfectly converted to an integer, so it’s allowed. These two lines are equivalent, even for a strict table:\n\nBy default, you can create columns with bogus types. For example, all of these work even though they aren’t valid SQLite datatypes:\n\nI think these aren’t what the developer intended. Some of these are typos, some of them are misunderstandings of which datatypes SQLite supports, and some are egregious mistakes.\n\nAppending STRICT to any of these statements makes them error. In my opinion, that’s the correct behavior!\n\nOnly INT, INTEGER, REAL, TEXT, BLOB, and ANY are allowed.\n\nStrict tables also require a column type, so you can’t do CREATE TABLE tbl (name).\n\nIf you still need a column to be flexible, you can use the ANY datatype. As the name suggests, it allows anything—even in a strict table.\n\nI haven’t found a use for this, but maybe you will!\n\nI prefer strict tables but I must share a few cons. Not everything is better!\n\nI think it’s best to use strictness from the start, but that’s not always possible.\n\nUnfortunately, I don’t think there’s a way to ALTER a table to make it strict. I think you have to copy the data out of the non-strict table into the strict one. Something like this:\n\nNote that this could be tricky if the non-strict table has invalid data! For example, if the old data accidentally contains text in an integer column, you’ll get errors when doing the migration. You’ll probably need to clean the data or cast it.\n\nYou could make a rule for your codebase that all ne\n\n---\n\n[Lähde: Linux Journal]\nThe SQLite database is a wildly successful and ubiquitous software package that is mostly unknown to the larger IT community. Designed and coded by Dr. Richard Hipp, the third major revision of SQLite serves many users in market segments with critical requirements for software quality, which SQLite has met with compliance to the DO-178B avionics standard. In addition to a strong presence in aerospace and automotive, most major operating system vendors (including Oracle, Microsoft, Apple, Google, and RedHat) include SQLite as a core OS component.\n\nThere are a few eccentricities that may trip up users from other RDBMS environments. SQLite is known as a “flexibly-typed” database, unlike Oracle which rigidly enforces columnar datatypes; character values can be inserted into SQLite columns that are declared integer without error (although check constraints can strengthen SQLite type rigidity, if desired). While many concurrent processes are allowed to read from a SQLite database, only one process is allowed write privilege at any time (applications requiring concurrent writers should tread carefully with SQLite). There is no network interface, and all connections are made through a filesystem; SQLite does not implement a client-server model. There is no “point in time recovery,” and backup operations are basically an Oracle 7-style ALTER DATAFILE BEGIN BACKUP that makes a transaction-consistent copy of the whole database. GRANT and REVOKE are not implemented in SQLite, which uses filesystem permissions for all access control. There are no background processes, and newly-connecting clients may find themselves delayed and responsible for transaction recovery, statistics collection, or other administrative functions that are quietly performed in the background in this “zero-administration database.” Some history and architecture of SQLite can be found in audio and video records of Dr. Hipp's discussions.\n\nDespite these eccentricities, SQLite is likely a superior format for data exchange as opposed to CSV, XML, or even JSON, as indexes can be included, enabling recipients to perform high-speed queries in SQL92 without any preprocessing, licensing, or activation. SQLite’s conservative coding style and commentary is intended to benefit “future programmers who are not yet born,” and the on-disk database format has further been defined as a long-term storage standard by the Library of the U.S. Congress.\n\nThree methods will be presented to copy Oracle database tables in",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-11T21:44:16.767781+00:00",
+  "payload": {
+    "packet_id": "20260711T214130Z_51aeadc2f7",
+    "title": "SQLite-kehittäjiä kannustetaan käyttämään tiukasti tyypitettyjä tauluja",
+    "summary": "SQLiten STRICT-määritys auttaa estämään vääräntyyppisten arvojen tallentamisen ja virheelliset sarakemäärittelyt. Tiukassa taulussa sallitaan kuusi tietotyyppiä, mutta ANY-tyypillä yksittäinen sarake voidaan jättää joustavaksi.",
+    "content": "SQLite-tietokannan tiukasti tyypitetyt taulut voivat ehkäistä tavallisia tietovirheitä jo tallennusvaiheessa. Taulun määrittelyyn lisättävä STRICT-sana estää esimerkiksi tekstin lisäämisen kokonaisluvuille tarkoitettuun sarakkeeseen ja paljastaa sellaisia virheellisiä saraketyyppejä, jotka SQLite voisi tavallisesti hyväksyä.\n\n## STRICT valvoo arvoja ja sarakemäärittelyjä\n\nSQLite tunnetaan joustavasta tyyppijärjestelmästään. Tavalliseen INTEGER-sarakkeeseen voi tallentaa tekstiä, vaikka se ei vastaisi kehittäjän tarkoitusta. Tiukassa taulussa vääräntyyppinen arvo hylätään sekä uuden rivin lisäämisen että olemassa olevan rivin päivittämisen yhteydessä. Näin sama tyyppivalvonta koskee lähdeaineiston mukaan sekä INSERT- että UPDATE-toimintoja.\n\nSTRICT otetaan käyttöön lisäämällä sana taulun määrittelyn loppuun. Tiukassa taulussa jokaiselle sarakkeelle on ilmoitettava tietotyyppi, joten esimerkiksi kokonaan ilman tyyppiä määritelty sarake ei kelpaa. Sallittuja tyyppejä ovat INT, INTEGER, REAL, TEXT, BLOB ja ANY. Rajaus estää myös keksittyjen, väärin kirjoitettujen tai SQLiten tukemia tyyppejä koskeviin väärinkäsityksiin perustuvien tyyppinimien käytön. Ilman STRICT-määritystä SQLite voi hyväksyä tällaisia määrittelyjä.\n\nValvonta ei kuitenkaan hylkää arvoa, jos se voidaan muuntaa oikeaan tyyppiin tietoa menettämättä. Esimerkiksi merkkijono ”123” hyväksytään INTEGER-sarakkeeseen, koska se voidaan muuntaa täsmällisesti kokonaisluvuksi. Kyse ei siis ole kaikkien eri muodossa annettujen arvojen torjumisesta, vaan sellaisen sisällön estämisestä, jota ei voida sovittaa sarakkeen ilmoitettuun tyyppiin häviöttömästi.\n\n## ANY säilyttää harkitun joustavuuden\n\nJos yksittäiseen sarakkeeseen tarvitaan tarkoituksella eri tyyppisiä arvoja, sille voidaan määrittää ANY-tyyppi myös tiukassa taulussa. Se sallii kaikenlaiset arvot, vaikka muut sarakkeet noudattavat STRICT-taulun rajoituksia. Näin joustavuus voidaan kohdistaa vain siihen sarakkeeseen, jossa se on tietoinen ratkaisu.\n\nTiukkuuden hyötynä on, että kirjoitusvirheet, virheelliset tyyppinimet ja tahattomat tallennukset muuttuvat välittömiksi virheiksi. Lähdekirjoituksen tekijä pitää vääränä esimerkiksi tekstin tallentamista kokonaislukusarakkeeseen ja suosittelee siksi STRICT-määrityksen käyttämistä taulun perustamisesta lähtien.\n\n## Vanhan taulun muuttaminen voi vaatia kopioinnin\n\nKäyttöönotto ei välttämättä ole yhtä suoraviivaista olemassa olevissa tietokannoissa. Kirjoittaja ei tunne tapaa muuttaa tavallista taulua suoraan tiukaksi ALTER-komennolla. Hänen arvionsa mukaan tiedot täytyy tällöin kopioida vanhasta taulusta uuteen STRICT-määrityksellä luotuun tauluun. Siksi ominaisuus on helpointa valita jo tietokannan rakennetta suunniteltaessa.",
+    "category": "Teknologia",
+    "tags": [
+      "SQLite",
+      "tietokannat",
+      "ohjelmistokehitys",
+      "SQL",
+      "tietotyypit"
+    ],
+    "summary_bullets": [
+      "STRICT estää vääräntyyppiset tallennukset ja virheelliset saraketyypit SQLite-tauluissa.",
+      "Tiukoissa tauluissa sallitaan kuusi tietotyyppiä, joista ANY säilyttää tarvittaessa sarakekohtaisen joustavuuden.",
+      "Olemassa olevan taulun muuttaminen tiukaksi voi kirjoittajan arvion mukaan edellyttää tietojen kopioimista uuteen tauluun."
+    ],
+    "content_type": "uutisartikkeli",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu toimitettuun lähdeaineistoon. Olemassa olevan taulun muuttamista koskeva epävarma havainto on esitetty kirjoittajan arviona, ei varmistettuna SQLite-rajoituksena."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260711T214130Z_51aeadc2f7\",\n  \"title\": \"SQLite-kehittäjiä kannustetaan käyttämään tiukasti tyypitettyjä tauluja\",\n  \"summary\": \"SQLiten STRICT-määritys auttaa estämään vääräntyyppisten arvojen tallentamisen ja virheelliset sarakemäärittelyt. Tiukassa taulussa sallitaan kuusi tietotyyppiä, mutta ANY-tyypillä yksittäinen sarake voidaan jättää joustavaksi.\",\n  \"content\": \"SQLite-tietokannan tiukasti tyypitetyt taulut voivat ehkäistä tavallisia tietovirheitä jo tallennusvaiheessa. Taulun määrittelyyn lisättävä STRICT-sana estää esimerkiksi tekstin lisäämisen kokonaisluvuille tarkoitettuun sarakkeeseen ja paljastaa sellaisia virheellisiä saraketyyppejä, jotka SQLite voisi tavallisesti hyväksyä.\\n\\n## STRICT valvoo arvoja ja sarakemäärittelyjä\\n\\nSQLite tunnetaan joustavasta tyyppijärjestelmästään. Tavalliseen INTEGER-sarakkeeseen voi tallentaa tekstiä, vaikka se ei vastaisi kehittäjän tarkoitusta. Tiukassa taulussa vääräntyyppinen arvo hylätään sekä uuden rivin lisäämisen että olemassa olevan rivin päivittämisen yhteydessä. Näin sama tyyppivalvonta koskee lähdeaineiston mukaan sekä INSERT- että UPDATE-toimintoja.\\n\\nSTRICT otetaan käyttöön lisäämällä sana taulun määrittelyn loppuun. Tiukassa taulussa jokaiselle sarakkeelle on ilmoitettava tietotyyppi, joten esimerkiksi kokonaan ilman tyyppiä määritelty sarake ei kelpaa. Sallittuja tyyppejä ovat INT, INTEGER, REAL, TEXT, BLOB ja ANY. Rajaus estää myös keksittyjen, väärin kirjoitettujen tai SQLiten tukemia tyyppejä koskeviin väärinkäsityksiin perustuvien tyyppinimien käytön. Ilman STRICT-määritystä SQLite voi hyväksyä tällaisia määrittelyjä.\\n\\nValvonta ei kuitenkaan hylkää arvoa, jos se voidaan muuntaa oikeaan tyyppiin tietoa menettämättä. Esimerkiksi merkkijono ”123” hyväksytään INTEGER-sarakkeeseen, koska se voidaan muuntaa täsmällisesti kokonaisluvuksi. Kyse ei siis ole kaikkien eri muodossa annettujen arvojen torjumisesta, vaan sellaisen sisällön estämisestä, jota ei voida sovittaa sarakkeen ilmoitettuun tyyppiin häviöttömästi.\\n\\n## ANY säilyttää harkitun joustavuuden\\n\\nJos yksittäiseen sarakkeeseen tarvitaan tarkoituksella eri tyyppisiä arvoja, sille voidaan määrittää ANY-tyyppi myös tiukassa taulussa. Se sallii kaikenlaiset arvot, vaikka muut sarakkeet noudattavat STRICT-taulun rajoituksia. Näin joustavuus voidaan kohdistaa vain siihen sarakkeeseen, jossa se on tietoinen ratkaisu.\\n\\nTiukkuuden hyötynä on, että kirjoitusvirheet, virheelliset tyyppinimet ja tahattomat tallennukset muuttuvat välittömiksi virheiksi. Lähdekirjoituksen tekijä pitää vääränä esimerkiksi tekstin tallentamista kokonaislukusarakkeeseen ja suosittelee siksi STRICT-määrityksen käyttämistä taulun perustamisesta lähtien.\\n\\n## Vanhan taulun muuttaminen voi vaatia kopioinnin\\n\\nKäyttöönotto ei välttämättä ole yhtä suoraviivaista olemassa olevissa tietokannoissa. Kirjoittaja ei tunne tapaa muuttaa tavallista taulua suoraan tiukaksi ALTER-komennolla. Hänen arvionsa mukaan tiedot täytyy tällöin kopioida vanhasta taulusta uuteen STRICT-määrityksellä luotuun tauluun. Siksi ominaisuus on helpointa valita jo tietokannan rakennetta suunniteltaessa.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"SQLite\",\n    \"tietokannat\",\n    \"ohjelmistokehitys\",\n    \"SQL\",\n    \"tietotyypit\"\n  ],\n  \"summary_bullets\": [\n    \"STRICT estää vääräntyyppiset tallennukset ja virheelliset saraketyypit SQLite-tauluissa.\",\n    \"Tiukoissa tauluissa sallitaan kuusi tietotyyppiä, joista ANY säilyttää tarvittaessa sarakekohtaisen joustavuuden.\",\n    \"Olemassa olevan taulun muuttaminen tiukaksi voi kirjoittajan arvion mukaan edellyttää tietojen kopioimista uuteen tauluun.\"\n  ],\n  \"content_type\": \"uutisartikkeli\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu toimitettuun lähdeaineistoon. Olemassa olevan taulun muuttamista koskeva epävarma havainto on esitetty kirjoittajan arviona, ei varmistettuna SQLite-rajoituksena.\"\n}",
+  "article": {
+    "title": "SQLite-kehittäjiä kannustetaan käyttämään tiukasti tyypitettyjä tauluja",
+    "description": "SQLiten STRICT-määritys auttaa estämään vääräntyyppisten arvojen tallentamisen ja virheelliset sarakemäärittelyt. Tiukassa taulussa sallitaan kuusi tietotyyppiä, mutta ANY-tyypillä yksittäinen sarake voidaan jättää joustavaksi.",
+    "link": "https://evanhahn.com/prefer-strict-tables-in-sqlite/",
+    "published": "2026-07-11T17:33:55+00:00",
+    "source": "Hacker News Best",
+    "source_domain": "hnrss.org",
+    "language": "en",
+    "fingerprint": "c1b475524576ff6d3929849e02a3bb5c",
+    "_url_hash": "7afd7326cf524d5e4cdb116a17a42d27564238a250c9a4744894478773b78116",
+    "source_tier": 3,
+    "category_hint": "Teknologia",
+    "source_policy": "fix_parser_or_demote",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Hacker News Best]\nIn short: I prefer strict tables in SQLite because they avoid some datatype problems, such as putting text in number columns.\n\nSQLite has a feature that I think is underrated: strict tables. Strict tables help enforce rigid typing, preventing mistakes like putting text into integer columns. I like them, and wrote this post to promote their use!\n\nTo make a strict table, add STRICT to the end of its definition. Like this:\n\nBroadly, strict tables help enforce rigid types, like other SQL engines do.\n\nMost significantly, strict tables keep you from inserting the wrong type into a column. For example, SQLite normally lets you put text into an INTEGER column, but not with strict tables.\n\nPersonally, I think it’s a mistake to try to put text in an integer column, or vice-versa. I don’t want SQLite to let me make this error!\n\nThe same validation happens for UPDATEs, too.\n\nNotably, if a value can be losslessly converted, it will still be accepted. For example, the string '123' can be perfectly converted to an integer, so it’s allowed. These two lines are equivalent, even for a strict table:\n\nBy default, you can create columns with bogus types. For example, all of these work even though they aren’t valid SQLite datatypes:\n\nI think these aren’t what the developer intended. Some of these are typos, some of them are misunderstandings of which datatypes SQLite supports, and some are egregious mistakes.\n\nAppending STRICT to any of these statements makes them error. In my opinion, that’s the correct behavior!\n\nOnly INT, INTEGER, REAL, TEXT, BLOB, and ANY are allowed.\n\nStrict tables also require a column type, so you can’t do CREATE TABLE tbl (name).\n\nIf you still need a column to be flexible, you can use the ANY datatype. As the name suggests, it allows anything—even in a strict table.\n\nI haven’t found a use for this, but maybe you will!\n\nI prefer strict tables but I must share a few cons. Not everything is better!\n\nI think it’s best to use strictness from the start, but that’s not always possible.\n\nUnfortunately, I don’t think there’s a way to ALTER a table to make it strict. I think you have to copy the data out of the non-strict table into the strict one. Something like this:\n\nNote that this could be tricky if the non-strict table has invalid data! For example, if the old data accidentally contains text in an integer column, you’ll get errors when doing the migration. You’ll probably need to clean the data or cast it.\n\nYou could make a rule for your codebase that all ne\n\n---\n\n[Lähde: Linux Journal]\nThe SQLite database is a wildly successful and ubiquitous software package that is mostly unknown to the larger IT community. Designed and coded by Dr. Richard Hipp, the third major revision of SQLite serves many users in market segments with critical requirements for software quality, which SQLite has met with compliance to the DO-178B avionics standard. In addition to a strong presence in aerospace and automotive, most major operating system vendors (including Oracle, Microsoft, Apple, Google, and RedHat) include SQLite as a core OS component.\n\nThere are a few eccentricities that may trip up users from other RDBMS environments. SQLite is known as a “flexibly-typed” database, unlike Oracle which rigidly enforces columnar datatypes; character values can be inserted into SQLite columns that are declared integer without error (although check constraints can strengthen SQLite type rigidity, if desired). While many concurrent processes are allowed to read from a SQLite database, only one process is allowed write privilege at any time (applications requiring concurrent writers should tread carefully with SQLite). There is no network interface, and all connections are made through a filesystem; SQLite does not implement a client-server model. There is no “point in time recovery,” and backup operations are basically an Oracle 7-style ALTER DATAFILE BEGIN BACKUP that makes a transaction-consistent copy of the whole database. GRANT and REVOKE are not implemented in SQLite, which uses filesystem permissions for all access control. There are no background processes, and newly-connecting clients may find themselves delayed and responsible for transaction recovery, statistics collection, or other administrative functions that are quietly performed in the background in this “zero-administration database.” Some history and architecture of SQLite can be found in audio and video records of Dr. Hipp's discussions.\n\nDespite these eccentricities, SQLite is likely a superior format for data exchange as opposed to CSV, XML, or even JSON, as indexes can be included, enabling recipients to perform high-speed queries in SQL92 without any preprocessing, licensing, or activation. SQLite’s conservative coding style and commentary is intended to benefit “future programmers who are not yet born,” and the on-disk database format has further been defined as a long-term storage standard by the Library of the U.S. Congress.\n\nThree methods will be presented to copy Oracle database tables in",
+    "research_source": "multi",
+    "summary": "SQLiten STRICT-määritys auttaa estämään vääräntyyppisten arvojen tallentamisen ja virheelliset sarakemäärittelyt. Tiukassa taulussa sallitaan kuusi tietotyyppiä, mutta ANY-tyypillä yksittäinen sarake voidaan jättää joustavaksi.",
+    "content": "SQLite-tietokannan tiukasti tyypitetyt taulut voivat ehkäistä tavallisia tietovirheitä jo tallennusvaiheessa. Taulun määrittelyyn lisättävä STRICT-sana estää esimerkiksi tekstin lisäämisen kokonaisluvuille tarkoitettuun sarakkeeseen ja paljastaa sellaisia virheellisiä saraketyyppejä, jotka SQLite voisi tavallisesti hyväksyä.\n\n## STRICT valvoo arvoja ja sarakemäärittelyjä\n\nSQLite tunnetaan joustavasta tyyppijärjestelmästään. Tavalliseen INTEGER-sarakkeeseen voi tallentaa tekstiä, vaikka se ei vastaisi kehittäjän tarkoitusta. Tiukassa taulussa vääräntyyppinen arvo hylätään sekä uuden rivin lisäämisen että olemassa olevan rivin päivittämisen yhteydessä. Näin sama tyyppivalvonta koskee lähdeaineiston mukaan sekä INSERT- että UPDATE-toimintoja.\n\nSTRICT otetaan käyttöön lisäämällä sana taulun määrittelyn loppuun. Tiukassa taulussa jokaiselle sarakkeelle on ilmoitettava tietotyyppi, joten esimerkiksi kokonaan ilman tyyppiä määritelty sarake ei kelpaa. Sallittuja tyyppejä ovat INT, INTEGER, REAL, TEXT, BLOB ja ANY. Rajaus estää myös keksittyjen, väärin kirjoitettujen tai SQLiten tukemia tyyppejä koskeviin väärinkäsityksiin perustuvien tyyppinimien käytön. Ilman STRICT-määritystä SQLite voi hyväksyä tällaisia määrittelyjä.\n\nValvonta ei kuitenkaan hylkää arvoa, jos se voidaan muuntaa oikeaan tyyppiin tietoa menettämättä. Esimerkiksi merkkijono ”123” hyväksytään INTEGER-sarakkeeseen, koska se voidaan muuntaa täsmällisesti kokonaisluvuksi. Kyse ei siis ole kaikkien eri muodossa annettujen arvojen torjumisesta, vaan sellaisen sisällön estämisestä, jota ei voida sovittaa sarakkeen ilmoitettuun tyyppiin häviöttömästi.\n\n## ANY säilyttää harkitun joustavuuden\n\nJos yksittäiseen sarakkeeseen tarvitaan tarkoituksella eri tyyppisiä arvoja, sille voidaan määrittää ANY-tyyppi myös tiukassa taulussa. Se sallii kaikenlaiset arvot, vaikka muut sarakkeet noudattavat STRICT-taulun rajoituksia. Näin joustavuus voidaan kohdistaa vain siihen sarakkeeseen, jossa se on tietoinen ratkaisu.\n\nTiukkuuden hyötynä on, että kirjoitusvirheet, virheelliset tyyppinimet ja tahattomat tallennukset muuttuvat välittömiksi virheiksi. Lähdekirjoituksen tekijä pitää vääränä esimerkiksi tekstin tallentamista kokonaislukusarakkeeseen ja suosittelee siksi STRICT-määrityksen käyttämistä taulun perustamisesta lähtien.\n\n## Vanhan taulun muuttaminen voi vaatia kopioinnin\n\nKäyttöönotto ei välttämättä ole yhtä suoraviivaista olemassa olevissa tietokannoissa. Kirjoittaja ei tunne tapaa muuttaa tavallista taulua suoraan tiukaksi ALTER-komennolla. Hänen arvionsa mukaan tiedot täytyy tällöin kopioida vanhasta taulusta uuteen STRICT-määrityksellä luotuun tauluun. Siksi ominaisuus on helpointa valita jo tietokannan rakennetta suunniteltaessa.",
+    "category": "Teknologia",
+    "tags": [
+      "sqlite",
+      "tietokannat",
+      "ohjelmistokehitys",
+      "sql",
+      "tietotyypit"
+    ],
+    "summary_bullets": [
+      "STRICT estää vääräntyyppiset tallennukset ja virheelliset saraketyypit SQLite-tauluissa.",
+      "Tiukoissa tauluissa sallitaan kuusi tietotyyppiä, joista ANY säilyttää tarvittaessa sarakekohtaisen joustavuuden.",
+      "Olemassa olevan taulun muuttaminen tiukaksi voi kirjoittajan arvion mukaan edellyttää tietojen kopioimista uuteen tauluun."
+    ],
+    "key_points": [
+      "STRICT estää vääräntyyppiset tallennukset ja virheelliset saraketyypit SQLite-tauluissa.",
+      "Tiukoissa tauluissa sallitaan kuusi tietotyyppiä, joista ANY säilyttää tarvittaessa sarakekohtaisen joustavuuden.",
+      "Olemassa olevan taulun muuttaminen tiukaksi voi kirjoittajan arvion mukaan edellyttää tietojen kopioimista uuteen tauluun."
+    ],
+    "content_type": "uutisartikkeli",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu toimitettuun lähdeaineistoon. Olemassa olevan taulun muuttamista koskeva epävarma havainto on esitetty kirjoittajan arviona, ei varmistettuna SQLite-rajoituksena.",
+    "source_text": "Article URL: https://evanhahn.com/prefer-strict-tables-in-sqlite/ Comments URL: https://news.ycombinator.com/item?id=48873940 Points: 154 # Comments: 57\n\nIn short: I prefer strict tables in SQLite because they avoid some datatype problems, such as putting text in number columns. SQLite has a feature that I think is underrated: strict tables. Strict tables help enforce rigid typing, preventing mistakes like putting text into integer columns. I like them, and wrote this post to promote their use! To make a strict table, add STRICT to the end of its definition. Like this: Broadly, strict tables help enforce rigid types, like other SQL engines do. Most significantly, strict tables keep you from inserting the wrong type into a column. For example, SQLite normally lets you put text into an INTEGER column, but not with strict tables.\n\nOnly INT, INTEGER, REAL, TEXT, BLOB, and ANY are allowed. Strict tables also require a column type, so you can’t do CREATE TABLE tbl (name). If you still need a column to be flexible, you can use the ANY datatype. As the name suggests, it allows anything—even in a strict table. I haven’t found a use for this, but maybe you will! I prefer strict tables but I must share a few cons. Not everything is better! I think it’s best to use strictness from the start, but that’s not always possible. Unfortunately, I don’t think there’s a way to ALTER a table to make it strict. I think you have to copy the data out of the non-strict table into the strict one. Something like this:\n\nPersonally, I think it’s a mistake to try to put text in an integer column, or vice-versa. I don’t want SQLite to let me make this error! The same validation happens for UPDATEs, too. Notably, if a value can be losslessly converted, it will still be accepted. For example, the string '123' can be perfectly converted to an integer, so it’s allowed. These two lines are equivalent, even for a strict table: By default, you can create columns with bogus types. For example, all of these work even though they aren’t valid SQLite datatypes: I think these aren’t what the developer intended. Some of these are typos, some of them are misunderstandings of which datatypes SQLite supports, and some are egregious mistakes. Appending STRICT to any of these statements makes them error. In my opinion, that’s the correct behavior!",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260711T214130Z_51aeadc2f7",
+    "image_hotlink": false,
+    "image_category_fallback": true,
+    "image": "/images/categories/teknologia.jpg",
+    "image_thumb": "/images/categories/teknologia.jpg",
+    "image_alt": "Teknologia-uutiset",
+    "image_credit": "",
+    "image_source_url": "",
+    "image_caption": "",
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_visual_judge_score": 0,
+    "image_decision": {
+      "source": "category_fallback",
+      "accepted": true,
+      "reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+      "prompt_version": "image-flow-v2-2026-07-03"
+    }
+  },
+  "image_enriched_at": "2026-07-11T21:48:44.023248+00:00",
+  "image_enrichment": {
+    "image": "/images/categories/teknologia.jpg",
+    "image_thumb": "/images/categories/teknologia.jpg",
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+    "image_concept": null,
+    "image_query": null,
+    "image_candidate_id": null,
+    "image_candidate_url": null,
+    "image_visual_judge_score": 0,
+    "image_accepted_reasons": null,
+    "image_rejected_reasons": null,
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03"
+  },
+  "published_at": "2026-07-11T21:50:14.506959+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-07-11-sqlite-kehittajia-kannustetaan-kayttamaan-tiukasti-tyypitett.md"
+  ]
+}

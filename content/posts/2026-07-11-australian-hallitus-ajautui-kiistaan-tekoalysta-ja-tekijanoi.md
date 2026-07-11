@@ -55,7 +55,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/technology/2026/jul/12/ai-australia-will-labor-water-down-copyright-laws-datacentres"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
