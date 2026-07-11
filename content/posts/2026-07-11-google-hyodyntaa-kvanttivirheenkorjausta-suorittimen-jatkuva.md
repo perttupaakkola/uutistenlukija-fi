@@ -47,7 +47,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/science/2026/07/quantum-error-correction-can-constantly-recalibrate-a-processor/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 

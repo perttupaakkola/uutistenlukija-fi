@@ -1,0 +1,199 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-11T04:21:23.998785+00:00",
+  "digest": "b4d09fb73c",
+  "packet": {
+    "packet_id": "20260711T042123Z_b4d09fb73c",
+    "created_at": "2026-07-11T04:21:23Z",
+    "headline_seed": "Spain battles to contain one of its deadliest wildfires as at least 12 killed",
+    "description_seed": "At least four Britons are believed to be among the victims of the blaze, which left another 23 people missing.",
+    "link": "https://www.bbc.co.uk/news/articles/c1wyv383j2xo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World",
+      "BBC World",
+      "BBC",
+      "NBC News"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/c1wyv383j2xo?at_medium=RSS&at_campaign=rss"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Spain battles to contain one of its deadliest wildfires as at least 12 killed"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_type": "research",
+        "text": "A helicopter works to extinguish flames amid deadly wildfires affecting Almeria province in Spain Emergency services in south-eastern Spain are working to contain pockets of fire after one of the country's worst ever wildfires. Hundreds of firefighters and other specialists have been deployed around the village of Bedar where 12 people have been killed - among them four Britons, according to Spanish authorities. Another 23 people are still missing. Local officials in the Los Gallardos area of Almería have warned the number of dead could rise, with fears that more Britons are among those killed. A sustained heatwave with temperatures of around 40C (104F) has caused wildfires across Southern Europe this summer, particularly in France, Portugal and Spain. Firefighters battle flames as deadly wildfire rages in southern Spain",
+        "word_count": 128,
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_type": "description",
+        "text": "At least four Britons are believed to be among the victims of the blaze, which left another 23 people missing.",
+        "word_count": 20,
+        "keyword_overlap": 12,
+        "strong_overlap": 6
+      },
+      {
+        "source": "BBC",
+        "source_type": "research",
+        "text": "Meanwhile, the UK Foreign Office is in touch with the relevant authorities in Spain over the \"concerning\" reports of British casualties, Downing Street says A sustained heatwave with temperatures of around 40C (104F) has caused wildfires across southern Europe this summer Peter, on holidays near Los Gallardos, tells the BBC it was \"surreal\" as the sky became darker, with the \"glow\" of the fire in the distance - get in touch, external if it's safe to do so At least 12 people have been killed in one of Spain's deadliest wildfires, with 23 people still unaccounted for. Andalusia's health and emergencies minister, Antonio Sanz, says it's the \"most devastating fire\" the region has ever seen, saying the majority, or even all of the victims may have been foreign nationals.",
+        "word_count": 129,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "NBC News",
+        "source_type": "research",
+        "text": "A wildfire in southern Spain has killed at least 12 people, making it one of the country’s deadliest on record, as soaring temperatures grip much of the country, authorities said Friday. Several victims of the fire in the southern province of Almeria, a popular holiday destination, were found inside burnt-out vehicles and were thought to have died while trying to flee the flames. Eight people have been injured and a further 23 are unaccounted for, Andalusia’s regional leader Juan Manuel Moreno said. Some 150 firefighters and 220 soldiers from Spain’s military emergency unit were battling the blaze, which has consumed more than 3,200 hectares of forest and farmland. Regional emergency authorities said four British nationals and other unspecified foreign nationals appeared to be among the dead.",
+        "word_count": 126,
+        "keyword_overlap": 10,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "A helicopter works to extinguish flames amid deadly wildfires affecting Almeria province in Spain Emergency services in south-eastern Spain are working to contain pockets of fire after one of the country's worst ever wildfires. Hundreds of firefighters and other specialists have been deployed around the village of Bedar where 12 people have been killed - among them four Britons, according to Spanish authorities. Another 23 people are still missing. Local officials in the Los Gallardos area of Almería have warned the number of dead could rise, with fears that more Britons are among those killed. A sustained heatwave with temperatures of around 40C (104F) has caused wildfires across Southern Europe this summer, particularly in France, Portugal and Spain. Firefighters battle flames as deadly wildfire rages in southern Spain\n\nAt least four Britons are believed to be among the victims of the blaze, which left another 23 people missing.\n\nMeanwhile, the UK Foreign Office is in touch with the relevant authorities in Spain over the \"concerning\" reports of British casualties, Downing Street says A sustained heatwave with temperatures of around 40C (104F) has caused wildfires across southern Europe this summer Peter, on holidays near Los Gallardos, tells the BBC it was \"surreal\" as the sky became darker, with the \"glow\" of the fire in the distance - get in touch, external if it's safe to do so At least 12 people have been killed in one of Spain's deadliest wildfires, with 23 people still unaccounted for. Andalusia's health and emergencies minister, Antonio Sanz, says it's the \"most devastating fire\" the region has ever seen, saying the majority, or even all of the victims may have been foreign nationals.\n\nA wildfire in southern Spain has killed at least 12 people, making it one of the country’s deadliest on record, as soaring temperatures grip much of the country, authorities said Friday. Several victims of the fire in the southern province of Almeria, a popular holiday destination, were found inside burnt-out vehicles and were thought to have died while trying to flee the flames. Eight people have been injured and a further 23 are unaccounted for, Andalusia’s regional leader Juan Manuel Moreno said. Some 150 firefighters and 220 soldiers from Spain’s military emergency unit were battling the blaze, which has consumed more than 3,200 hectares of forest and farmland. Regional emergency authorities said four British nationals and other unspecified foreign nationals appeared to be among the dead.",
+    "source_diagnostics": {
+      "candidate_blocks": 11,
+      "candidate_source_words": 1026,
+      "selected_blocks": 4,
+      "selected_source_words": 403,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "BBC",
+        "BBC",
+        "BBC",
+        "NBC News",
+        "NBC News",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC",
+        "NBC News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Spain battles to contain one of its deadliest wildfires as at least 12 killed",
+      "description": "At least four Britons are believed to be among the victims of the blaze, which left another 23 people missing.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Spain battles to contain one of its deadliest wildfires as at least 12 killed",
+    "description": "At least four Britons are believed to be among the victims of the blaze, which left another 23 people missing.",
+    "link": "https://www.bbc.co.uk/news/articles/c1wyv383j2xo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-11T04:06:56+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "60485f52a3bdbbd3a37d8b55e1234b29",
+    "_url_hash": "b15a6181a194dc5620d3e8624793c77742c47d8ed1ae3a064e3147bc4a1bebba",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nA helicopter works to extinguish flames amid deadly wildfires affecting Almeria province in Spain\n\nEmergency services in south-eastern Spain are working to contain pockets of fire after one of the country's worst ever wildfires.\n\nHundreds of firefighters and other specialists have been deployed around the village of Bedar where 12 people have been killed - among them four Britons, according to Spanish authorities. Another 23 people are still missing.\n\nLocal officials in the Los Gallardos area of Almería have warned the number of dead could rise, with fears that more Britons are among those killed.\n\nA sustained heatwave with temperatures of around 40C (104F) has caused wildfires across Southern Europe this summer, particularly in France, Portugal and Spain.\n\nFirefighters battle flames as deadly wildfire rages in southern Spain\n\nSoaring temperatures, incredibly dry ground and powerful winds led to the Los Gallardos fire spreading quickly on Thursday afternoon.\n\nThe cause of the fire has been put down to a fallen power line, but local electricity companies have denied this was the cause.\n\nNo additional information has been given about the four people who were found dead in a burnt-out car.\n\nAntonio Sanz, Andalusia's health and emergencies minister, said earlier they were believed to be \"of British origin\" and that the car had a steering wheel on the right.\n\nLucinda Curtois, who arrived in Spain with her partner Riyaz Cheytan and their teenage children for a holiday on Thursday, described their escape from Bedar.\n\n\"It was almost like there was a mushroom cloud of smoke, it was like a bomb had gone off,\" she said.\n\nCurtois told the BBC she feared at least two other UK nationals had been killed.\n\n\"They left their home on foot, I don't know why,\" she said. \"I can only presume it was probably because their road was cut off because they live out in the countryside.\"\n\nThe Los Gallardos area is home to many foreign residents\n\nOfficials in Bedar said some of those who had died had not taken a recommended evacuation route - but it's not clear how well that guidance was conveyed.\n\nNeither the Spanish authorities - nor the Foreign Office in London - have revealed the identity of the deceased.\n\nSanz said the rapid fire had been complex and the majority or even all of the victims may have been foreign nationals.\n\nBelgian Foreign Minister Maxime Prévot said many Belgians had second homes in the country and consular services were trying to contact \"Belgians with whom they ha\n\n---\n\n[Lähde: BBC]\nThis live page is now closed - you can read more in our story here\n\nAt least 12 people have died in a wildfire in southern Spain, with early indications suggesting four of the victims are British, according to a local official\n\nHundreds of emergency responders are working to extinguish the blaze around Los Gallardos, Almería - officials say they've never had such a devastating fire\n\nThe bodies of the victims were found near the small village of Bédar, just outside Los Gallardos, while 23 others are still missing and hundreds of residents have been evacuated\n\nThe fire is \"more or less\" under control but \"if the wind picks up again, things could get complicated\", the mayor of nearby town Antas tells Spanish media\n\nMeanwhile, the UK Foreign Office is in touch with the relevant authorities in Spain over the \"concerning\" reports of British casualties, Downing Street says\n\nA sustained heatwave with temperatures of around 40C (104F) has caused wildfires across southern Europe this summer\n\nPeter, on holidays near Los Gallardos, tells the BBC it was \"surreal\" as the sky became darker, with the \"glow\" of the fire in the distance - get in touch, external if it's safe to do so\n\nAt least 12 people have been killed in one of Spain's deadliest wildfires, with 23 people still unaccounted for.\n\nAndalusia's health and emergencies minister, Antonio Sanz, says it's the \"most devastating fire\" the region has ever seen, saying the majority, or even all of the victims may have been foreign nationals.\n\nFour of those killed were trapped inside a car, Sanz said, adding that they are believed to be \"of British origin\" and that the car had a steering wheel on the right.\n\nA Civil Guard investigation into whether the blaze was caused by a fallen power line remains ongoing - electricity company Endesa disputed that that had been the cause.\n\nA sustained heatwave with temperatures of around 40C (104F) has caused wildfires across Southern Europe this summer. Firefighters have battled major incidents in France, Portugal and Spain, with thousands forced to leave their homes.\n\nWe are bringing our live coverage to a close now, but you can keep updated in our news story.\n\nAndrew, 59, moved to Los Gallardos five years ago for his semi-retirement.\n\n\"Two planes have been flying non-stop for about three hours now taking water from the sea to try and create a break a line to the west of the fire,\" he says. \"They were making a run every seven minutes or so.\"\n\n\"Many people were applauding then as they\n\n---\n\n[Lähde: NBC News]\nA wildfire in southern Spain has killed at least 12 people, making it one of the country’s deadliest on record, as soaring temperatures grip much of the country, authorities said Friday.\n\nSeveral victims of the fire in the southern province of Almeria, a popular holiday destination, were found inside burnt-out vehicles and were thought to have died while trying to flee the flames.\n\nEight people have been injured and a further 23 are unaccounted for, Andalusia’s regional leader Juan Manuel Moreno said. Some 150 firefighters and 220 soldiers from Spain’s military emergency unit were battling the blaze, which has consumed more than 3,200 hectares of forest and farmland.\n\nRegional emergency authorities said four British nationals and other unspecified foreign nationals appeared to be among the dead.\n\nThe fire broke out in a hamlet in a semiarid area near the Sierra de Los Filabres mountains. Authorities have not confirmed the cause, but said people who called to report the fire said that a...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-11T04:24:09.252072+00:00",
+  "payload": {
+    "packet_id": "20260711T042123Z_b4d09fb73c",
+    "title": "Etelä-Espanjan maastopalossa kuollut ainakin 12 ihmistä",
+    "summary": "Almerían maakunnassa riehuvassa maastopalossa on kuollut ainakin 12 ihmistä. Lisäksi 23 ihmistä on kateissa ja kahdeksan on loukkaantunut.",
+    "content": "Etelä-Espanjan Almerían maakunnassa riehuvassa maastopalossa on kuollut ainakin 12 ihmistä, 23 on kateissa ja kahdeksan on loukkaantunut. Pelastusviranomaiset yrittävät saada hallintaan jäljellä olevia palopesäkkeitä Bédarin kylän ympäristössä. Paloa pidetään yhtenä Espanjan historian kuolettavimmista maastopaloista.\n\n## Uhrimäärän pelätään kasvavan\n\nUseita uhreja löydettiin palaneista ajoneuvoista, ja heidän arvellaan kuolleen yrittäessään paeta liekkejä. Los Gallardosin alueen paikallisviranomaiset ovat varoittaneet, että kuolonuhrien määrä voi vielä kasvaa, sillä kadonneiden etsinnät jatkuvat. Andalusian aluejohtajan Juan Manuel Morenon mukaan kateissa on edelleen 23 ihmistä.\n\nAlueellisten pelastusviranomaisten mukaan kuolleiden joukossa näyttää olevan neljä Britannian kansalaista sekä muita ulkomaalaisia. Andalusian terveys- ja hätätilaministeri Antonio Sanz on kuvaillut paloa tuhoisimmaksi, jonka alue on koskaan kokenut. Hänen mukaansa suurin osa tai jopa kaikki uhrit saattavat olla ulkomaalaisia. Britannian ulkoministeriö on yhteydessä Espanjan viranomaisiin selvittääkseen huolta herättäneitä tietoja brittiuhreista.\n\n## Sammutustöihin osallistuu satoja ihmisiä\n\nPaloa vastaan taistelee noin 150 palomiestä ja 220 Espanjan asevoimien hätätilayksikön sotilasta. Lisäksi alueelle on lähetetty muita asiantuntijoita, ja liekkien sammuttamiseen on käytetty helikoptereita. Palo on kuluttanut yli 3 200 hehtaaria metsää ja viljelysmaata. Pelastustyöt keskittyvät Bédarin ja Los Gallardosin ympäristöön, missä viranomaiset pyrkivät rajaamaan paloalueita ja tavoittamaan kateissa olevat.\n\nLähistöllä lomaillut Peter kertoi BBC:lle tilanteen tuntuneen epätodelliselta, kun taivas tummeni ja palon hohde näkyi etäällä. Almería on suosittu matkailualue, mikä näkyy myös viranomaisten alustavissa tiedoissa uhrien kansalaisuuksista. Pelastusviranomaisten mukaan vahvistettujen brittiuhrien lisäksi kuolleiden joukossa vaikuttaa olevan muitakin ulkomaalaisia, mutta kaikkien henkilöllisyyksiä ei ole kerrottu.\n\nEtelä-Eurooppaa on koetellut pitkään jatkunut helleaalto, jonka aikana lämpötilat ovat nousseet noin 40 asteeseen. Kuumuus on aiheuttanut kesän aikana maastopaloja Espanjan lisäksi erityisesti Portugalissa ja Ranskassa. Almeríassa sammutus- ja etsintätyöt jatkuvat, ja viranomaiset seuraavat sekä palon etenemistä että kateissa olevien tilannetta.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Espanja",
+      "Almería",
+      "maastopalot",
+      "Andalusia",
+      "pelastustoimet"
+    ],
+    "summary_bullets": [
+      "Maastopalossa on kuollut ainakin 12 ihmistä, 23 on kateissa ja kahdeksan loukkaantunut.",
+      "Sammutustöihin osallistuu noin 150 palomiestä ja 220 sotilasta.",
+      "Palo on kuluttanut yli 3 200 hehtaaria metsää ja viljelysmaata."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Artikkeli perustuu neljään yhtenevään lähdeblokkiin. Paketin Kotimaa-luokitus korjattiin tapahtumapaikan perusteella Ulkomaat-luokaksi."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260711T042123Z_b4d09fb73c\",\n  \"title\": \"Etelä-Espanjan maastopalossa kuollut ainakin 12 ihmistä\",\n  \"summary\": \"Almerían maakunnassa riehuvassa maastopalossa on kuollut ainakin 12 ihmistä. Lisäksi 23 ihmistä on kateissa ja kahdeksan on loukkaantunut.\",\n  \"content\": \"Etelä-Espanjan Almerían maakunnassa riehuvassa maastopalossa on kuollut ainakin 12 ihmistä, 23 on kateissa ja kahdeksan on loukkaantunut. Pelastusviranomaiset yrittävät saada hallintaan jäljellä olevia palopesäkkeitä Bédarin kylän ympäristössä. Paloa pidetään yhtenä Espanjan historian kuolettavimmista maastopaloista.\\n\\n## Uhrimäärän pelätään kasvavan\\n\\nUseita uhreja löydettiin palaneista ajoneuvoista, ja heidän arvellaan kuolleen yrittäessään paeta liekkejä. Los Gallardosin alueen paikallisviranomaiset ovat varoittaneet, että kuolonuhrien määrä voi vielä kasvaa, sillä kadonneiden etsinnät jatkuvat. Andalusian aluejohtajan Juan Manuel Morenon mukaan kateissa on edelleen 23 ihmistä.\\n\\nAlueellisten pelastusviranomaisten mukaan kuolleiden joukossa näyttää olevan neljä Britannian kansalaista sekä muita ulkomaalaisia. Andalusian terveys- ja hätätilaministeri Antonio Sanz on kuvaillut paloa tuhoisimmaksi, jonka alue on koskaan kokenut. Hänen mukaansa suurin osa tai jopa kaikki uhrit saattavat olla ulkomaalaisia. Britannian ulkoministeriö on yhteydessä Espanjan viranomaisiin selvittääkseen huolta herättäneitä tietoja brittiuhreista.\\n\\n## Sammutustöihin osallistuu satoja ihmisiä\\n\\nPaloa vastaan taistelee noin 150 palomiestä ja 220 Espanjan asevoimien hätätilayksikön sotilasta. Lisäksi alueelle on lähetetty muita asiantuntijoita, ja liekkien sammuttamiseen on käytetty helikoptereita. Palo on kuluttanut yli 3 200 hehtaaria metsää ja viljelysmaata. Pelastustyöt keskittyvät Bédarin ja Los Gallardosin ympäristöön, missä viranomaiset pyrkivät rajaamaan paloalueita ja tavoittamaan kateissa olevat.\\n\\nLähistöllä lomaillut Peter kertoi BBC:lle tilanteen tuntuneen epätodelliselta, kun taivas tummeni ja palon hohde näkyi etäällä. Almería on suosittu matkailualue, mikä näkyy myös viranomaisten alustavissa tiedoissa uhrien kansalaisuuksista. Pelastusviranomaisten mukaan vahvistettujen brittiuhrien lisäksi kuolleiden joukossa vaikuttaa olevan muitakin ulkomaalaisia, mutta kaikkien henkilöllisyyksiä ei ole kerrottu.\\n\\nEtelä-Eurooppaa on koetellut pitkään jatkunut helleaalto, jonka aikana lämpötilat ovat nousseet noin 40 asteeseen. Kuumuus on aiheuttanut kesän aikana maastopaloja Espanjan lisäksi erityisesti Portugalissa ja Ranskassa. Almeríassa sammutus- ja etsintätyöt jatkuvat, ja viranomaiset seuraavat sekä palon etenemistä että kateissa olevien tilannetta.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Espanja\",\n    \"Almería\",\n    \"maastopalot\",\n    \"Andalusia\",\n    \"pelastustoimet\"\n  ],\n  \"summary_bullets\": [\n    \"Maastopalossa on kuollut ainakin 12 ihmistä, 23 on kateissa ja kahdeksan loukkaantunut.\",\n    \"Sammutustöihin osallistuu noin 150 palomiestä ja 220 sotilasta.\",\n    \"Palo on kuluttanut yli 3 200 hehtaaria metsää ja viljelysmaata.\"\n  ],\n  \"content_type\": \"uutinen\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Artikkeli perustuu neljään yhtenevään lähdeblokkiin. Paketin Kotimaa-luokitus korjattiin tapahtumapaikan perusteella Ulkomaat-luokaksi.\"\n}",
+  "article": {
+    "title": "Etelä-Espanjan maastopalossa kuollut ainakin 12 ihmistä",
+    "description": "Almerían maakunnassa riehuvassa maastopalossa on kuollut ainakin 12 ihmistä. Lisäksi 23 ihmistä on kateissa ja kahdeksan on loukkaantunut.",
+    "link": "https://www.bbc.co.uk/news/articles/c1wyv383j2xo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-11T04:06:56+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "60485f52a3bdbbd3a37d8b55e1234b29",
+    "_url_hash": "b15a6181a194dc5620d3e8624793c77742c47d8ed1ae3a064e3147bc4a1bebba",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: BBC World]\nA helicopter works to extinguish flames amid deadly wildfires affecting Almeria province in Spain\n\nEmergency services in south-eastern Spain are working to contain pockets of fire after one of the country's worst ever wildfires.\n\nHundreds of firefighters and other specialists have been deployed around the village of Bedar where 12 people have been killed - among them four Britons, according to Spanish authorities. Another 23 people are still missing.\n\nLocal officials in the Los Gallardos area of Almería have warned the number of dead could rise, with fears that more Britons are among those killed.\n\nA sustained heatwave with temperatures of around 40C (104F) has caused wildfires across Southern Europe this summer, particularly in France, Portugal and Spain.\n\nFirefighters battle flames as deadly wildfire rages in southern Spain\n\nSoaring temperatures, incredibly dry ground and powerful winds led to the Los Gallardos fire spreading quickly on Thursday afternoon.\n\nThe cause of the fire has been put down to a fallen power line, but local electricity companies have denied this was the cause.\n\nNo additional information has been given about the four people who were found dead in a burnt-out car.\n\nAntonio Sanz, Andalusia's health and emergencies minister, said earlier they were believed to be \"of British origin\" and that the car had a steering wheel on the right.\n\nLucinda Curtois, who arrived in Spain with her partner Riyaz Cheytan and their teenage children for a holiday on Thursday, described their escape from Bedar.\n\n\"It was almost like there was a mushroom cloud of smoke, it was like a bomb had gone off,\" she said.\n\nCurtois told the BBC she feared at least two other UK nationals had been killed.\n\n\"They left their home on foot, I don't know why,\" she said. \"I can only presume it was probably because their road was cut off because they live out in the countryside.\"\n\nThe Los Gallardos area is home to many foreign residents\n\nOfficials in Bedar said some of those who had died had not taken a recommended evacuation route - but it's not clear how well that guidance was conveyed.\n\nNeither the Spanish authorities - nor the Foreign Office in London - have revealed the identity of the deceased.\n\nSanz said the rapid fire had been complex and the majority or even all of the victims may have been foreign nationals.\n\nBelgian Foreign Minister Maxime Prévot said many Belgians had second homes in the country and consular services were trying to contact \"Belgians with whom they ha\n\n---\n\n[Lähde: BBC]\nThis live page is now closed - you can read more in our story here\n\nAt least 12 people have died in a wildfire in southern Spain, with early indications suggesting four of the victims are British, according to a local official\n\nHundreds of emergency responders are working to extinguish the blaze around Los Gallardos, Almería - officials say they've never had such a devastating fire\n\nThe bodies of the victims were found near the small village of Bédar, just outside Los Gallardos, while 23 others are still missing and hundreds of residents have been evacuated\n\nThe fire is \"more or less\" under control but \"if the wind picks up again, things could get complicated\", the mayor of nearby town Antas tells Spanish media\n\nMeanwhile, the UK Foreign Office is in touch with the relevant authorities in Spain over the \"concerning\" reports of British casualties, Downing Street says\n\nA sustained heatwave with temperatures of around 40C (104F) has caused wildfires across southern Europe this summer\n\nPeter, on holidays near Los Gallardos, tells the BBC it was \"surreal\" as the sky became darker, with the \"glow\" of the fire in the distance - get in touch, external if it's safe to do so\n\nAt least 12 people have been killed in one of Spain's deadliest wildfires, with 23 people still unaccounted for.\n\nAndalusia's health and emergencies minister, Antonio Sanz, says it's the \"most devastating fire\" the region has ever seen, saying the majority, or even all of the victims may have been foreign nationals.\n\nFour of those killed were trapped inside a car, Sanz said, adding that they are believed to be \"of British origin\" and that the car had a steering wheel on the right.\n\nA Civil Guard investigation into whether the blaze was caused by a fallen power line remains ongoing - electricity company Endesa disputed that that had been the cause.\n\nA sustained heatwave with temperatures of around 40C (104F) has caused wildfires across Southern Europe this summer. Firefighters have battled major incidents in France, Portugal and Spain, with thousands forced to leave their homes.\n\nWe are bringing our live coverage to a close now, but you can keep updated in our news story.\n\nAndrew, 59, moved to Los Gallardos five years ago for his semi-retirement.\n\n\"Two planes have been flying non-stop for about three hours now taking water from the sea to try and create a break a line to the west of the fire,\" he says. \"They were making a run every seven minutes or so.\"\n\n\"Many people were applauding then as they\n\n---\n\n[Lähde: NBC News]\nA wildfire in southern Spain has killed at least 12 people, making it one of the country’s deadliest on record, as soaring temperatures grip much of the country, authorities said Friday.\n\nSeveral victims of the fire in the southern province of Almeria, a popular holiday destination, were found inside burnt-out vehicles and were thought to have died while trying to flee the flames.\n\nEight people have been injured and a further 23 are unaccounted for, Andalusia’s regional leader Juan Manuel Moreno said. Some 150 firefighters and 220 soldiers from Spain’s military emergency unit were battling the blaze, which has consumed more than 3,200 hectares of forest and farmland.\n\nRegional emergency authorities said four British nationals and other unspecified foreign nationals appeared to be among the dead.\n\nThe fire broke out in a hamlet in a semiarid area near the Sierra de Los Filabres mountains. Authorities have not confirmed the cause, but said people who called to report the fire said that a...",
+    "research_source": "multi",
+    "summary": "Almerían maakunnassa riehuvassa maastopalossa on kuollut ainakin 12 ihmistä. Lisäksi 23 ihmistä on kateissa ja kahdeksan on loukkaantunut.",
+    "content": "Etelä-Espanjan Almerían maakunnassa riehuvassa maastopalossa on kuollut ainakin 12 ihmistä, 23 on kateissa ja kahdeksan on loukkaantunut. Pelastusviranomaiset yrittävät saada hallintaan jäljellä olevia palopesäkkeitä Bédarin kylän ympäristössä. Paloa pidetään yhtenä Espanjan historian kuolettavimmista maastopaloista.\n\n## Uhrimäärän pelätään kasvavan\n\nUseita uhreja löydettiin palaneista ajoneuvoista, ja heidän arvellaan kuolleen yrittäessään paeta liekkejä. Los Gallardosin alueen paikallisviranomaiset ovat varoittaneet, että kuolonuhrien määrä voi vielä kasvaa, sillä kadonneiden etsinnät jatkuvat. Andalusian aluejohtajan Juan Manuel Morenon mukaan kateissa on edelleen 23 ihmistä.\n\nAlueellisten pelastusviranomaisten mukaan kuolleiden joukossa näyttää olevan neljä Britannian kansalaista sekä muita ulkomaalaisia. Andalusian terveys- ja hätätilaministeri Antonio Sanz on kuvaillut paloa tuhoisimmaksi, jonka alue on koskaan kokenut. Hänen mukaansa suurin osa tai jopa kaikki uhrit saattavat olla ulkomaalaisia. Britannian ulkoministeriö on yhteydessä Espanjan viranomaisiin selvittääkseen huolta herättäneitä tietoja brittiuhreista.\n\n## Sammutustöihin osallistuu satoja ihmisiä\n\nPaloa vastaan taistelee noin 150 palomiestä ja 220 Espanjan asevoimien hätätilayksikön sotilasta. Lisäksi alueelle on lähetetty muita asiantuntijoita, ja liekkien sammuttamiseen on käytetty helikoptereita. Palo on kuluttanut yli 3 200 hehtaaria metsää ja viljelysmaata. Pelastustyöt keskittyvät Bédarin ja Los Gallardosin ympäristöön, missä viranomaiset pyrkivät rajaamaan paloalueita ja tavoittamaan kateissa olevat.\n\nLähistöllä lomaillut Peter kertoi BBC:lle tilanteen tuntuneen epätodelliselta, kun taivas tummeni ja palon hohde näkyi etäällä. Almería on suosittu matkailualue, mikä näkyy myös viranomaisten alustavissa tiedoissa uhrien kansalaisuuksista. Pelastusviranomaisten mukaan vahvistettujen brittiuhrien lisäksi kuolleiden joukossa vaikuttaa olevan muitakin ulkomaalaisia, mutta kaikkien henkilöllisyyksiä ei ole kerrottu.\n\nEtelä-Eurooppaa on koetellut pitkään jatkunut helleaalto, jonka aikana lämpötilat ovat nousseet noin 40 asteeseen. Kuumuus on aiheuttanut kesän aikana maastopaloja Espanjan lisäksi erityisesti Portugalissa ja Ranskassa. Almeríassa sammutus- ja etsintätyöt jatkuvat, ja viranomaiset seuraavat sekä palon etenemistä että kateissa olevien tilannetta.",
+    "category": "Kotimaa",
+    "tags": [
+      "espanja",
+      "almería",
+      "maastopalot",
+      "andalusia",
+      "pelastustoimet"
+    ],
+    "summary_bullets": [
+      "Maastopalossa on kuollut ainakin 12 ihmistä, 23 on kateissa ja kahdeksan loukkaantunut.",
+      "Sammutustöihin osallistuu noin 150 palomiestä ja 220 sotilasta.",
+      "Palo on kuluttanut yli 3 200 hehtaaria metsää ja viljelysmaata."
+    ],
+    "key_points": [
+      "Maastopalossa on kuollut ainakin 12 ihmistä, 23 on kateissa ja kahdeksan loukkaantunut.",
+      "Sammutustöihin osallistuu noin 150 palomiestä ja 220 sotilasta.",
+      "Palo on kuluttanut yli 3 200 hehtaaria metsää ja viljelysmaata."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu neljään yhtenevään lähdeblokkiin. Paketin Kotimaa-luokitus korjattiin tapahtumapaikan perusteella Ulkomaat-luokaksi.",
+    "source_text": "A helicopter works to extinguish flames amid deadly wildfires affecting Almeria province in Spain Emergency services in south-eastern Spain are working to contain pockets of fire after one of the country's worst ever wildfires. Hundreds of firefighters and other specialists have been deployed around the village of Bedar where 12 people have been killed - among them four Britons, according to Spanish authorities. Another 23 people are still missing. Local officials in the Los Gallardos area of Almería have warned the number of dead could rise, with fears that more Britons are among those killed. A sustained heatwave with temperatures of around 40C (104F) has caused wildfires across Southern Europe this summer, particularly in France, Portugal and Spain. Firefighters battle flames as deadly wildfire rages in southern Spain\n\nAt least four Britons are believed to be among the victims of the blaze, which left another 23 people missing.\n\nMeanwhile, the UK Foreign Office is in touch with the relevant authorities in Spain over the \"concerning\" reports of British casualties, Downing Street says A sustained heatwave with temperatures of around 40C (104F) has caused wildfires across southern Europe this summer Peter, on holidays near Los Gallardos, tells the BBC it was \"surreal\" as the sky became darker, with the \"glow\" of the fire in the distance - get in touch, external if it's safe to do so At least 12 people have been killed in one of Spain's deadliest wildfires, with 23 people still unaccounted for. Andalusia's health and emergencies minister, Antonio Sanz, says it's the \"most devastating fire\" the region has ever seen, saying the majority, or even all of the victims may have been foreign nationals.\n\nA wildfire in southern Spain has killed at least 12 people, making it one of the country’s deadliest on record, as soaring temperatures grip much of the country, authorities said Friday. Several victims of the fire in the southern province of Almeria, a popular holiday destination, were found inside burnt-out vehicles and were thought to have died while trying to flee the flames. Eight people have been injured and a further 23 are unaccounted for, Andalusia’s regional leader Juan Manuel Moreno said. Some 150 firefighters and 220 soldiers from Spain’s military emergency unit were battling the blaze, which has consumed more than 3,200 hectares of forest and farmland. Regional emergency authorities said four British nationals and other unspecified foreign nationals appeared to be among the dead.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260711T042123Z_b4d09fb73c"
+  },
+  "duplicate_rejected_at": "2026-07-11T04:38:02.287838+00:00",
+  "duplicate_rejected": true
+}
