@@ -55,7 +55,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/mobiili/mobiiliuutiset/samsung-healthin-kayttajat-kertovat-terveysdata-on-luovutettava-tekoalyn-koulutukseen-tai-tiedot-poistetaan/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
