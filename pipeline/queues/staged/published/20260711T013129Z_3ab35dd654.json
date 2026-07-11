@@ -1,0 +1,240 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-11T01:31:29.347068+00:00",
+  "digest": "3ab35dd654",
+  "packet": {
+    "packet_id": "20260711T013129Z_3ab35dd654",
+    "created_at": "2026-07-11T01:31:29Z",
+    "headline_seed": "Quantum error correction can constantly recalibrate a processor",
+    "description_seed": "There are some obvious big picture issues that stand between us and useful quantum computing. Issues like whether we can make enough high-quality hardware qubits to connect into the error-corrected logical qubits we need, and how we generate the states needed to perform universal computation on those logical qubits. But there are also many less prominent challenges that will need to be solved before we can perform calculations. One of those challenges, which only affects some types of hardware, is calibration. For devices we manufacture, like superconducting qubits, there are always subtle variations among individual qubits. (This is not true when we use something like an atom to hold the qubit, but the lasers that control them can drift.) As a result, this hardware is put through a process called calibration, where we test different frequencies and amplitudes of the microwave pulses that control them to find the combination that produces the lowest error rates, and then save those settings for use in calculations. However, you can't perform the typical calibration process while e you're doing calculations, which means drift becomes an issue for long and complicated algorithms. Google, though, has figured out that it's possible to do calibration using the same data that's used for error correction. Read full article Comments",
+    "link": "https://arstechnica.com/science/2026/07/quantum-error-correction-can-constantly-recalibrate-a-processor/",
+    "source": "Ars Technica",
+    "source_names": [
+      "Ars Technica",
+      "Ars Technica",
+      "Ars Technica",
+      "Ars Technica"
+    ],
+    "source_urls": [
+      "https://arstechnica.com/science/2026/07/quantum-error-correction-can-constantly-recalibrate-a-processor/"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Quantum error correction can constantly recalibrate a processor"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Ars Technica",
+        "source_type": "description",
+        "text": "There are some obvious big picture issues that stand between us and useful quantum computing. Issues like whether we can make enough high-quality hardware qubits to connect into the error-corrected logical qubits we need, and how we generate the states needed to perform universal computation on those logical qubits. But there are also many less prominent challenges that will need to be solved before we can perform calculations. One of those challenges, which only affects some types of hardware, is calibration. For devices we manufacture, like superconducting qubits, there are always subtle variations among individual qubits. (This is not true when we use something like an atom to hold the qubit, but the lasers that control them can drift.) As a result, this hardware is put through a process called calibration, where we test different frequencies and amplitudes of the microwave pulses that control them to find the combination that produces the lowest error rates, and then save those settings for use in calculations. However, you can't perform the typical calibration process while e you're doing calculations, which means drift becomes an issue for long and complicated algorithms. Google, though, has figured out that it's possible to do calibration using the same data that's used for error correction. Read full article Comments",
+        "word_count": 212,
+        "keyword_overlap": 106,
+        "strong_overlap": 63
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "One of those challenges, which only affects some types of hardware, is calibration. For devices we manufacture, like superconducting qubits, there are always subtle variations among individual qubits. (This is not true when we use something like an atom to hold the qubit, but the lasers that control them can drift.) As a result, this hardware is put through a process called calibration, where we test different frequencies and amplitudes of the microwave pulses that control them to find the combination that produces the lowest error rates, and then save those settings for use in calculations. However, you can’t perform the typical calibration process while you’re doing calculations, which means drift becomes an issue for long and complicated algorithms. Google, though, has figured out that it’s possible to do calibration using the same data that’s used for error correction.",
+        "word_count": 139,
+        "keyword_overlap": 73,
+        "strong_overlap": 40
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "There are some obvious big picture issues that stand between us and useful quantum computing. Issues like whether we can make enough high-quality hardware qubits to connect into the error-corrected logical qubits we need, and how we generate the states needed to perform universal computation on those logical qubits. But there are also many less prominent challenges that will need to be solved before we can perform calculations.",
+        "word_count": 68,
+        "keyword_overlap": 39,
+        "strong_overlap": 26
+      },
+      {
+        "source": "Ars Technica",
+        "source_type": "research",
+        "text": "This equipment can also drift from its initial settings due to random factors, such as the hardware heating up as it’s used. And that could be an issue for the sorts of complicated algorithms we ultimately intend to run on quantum computers, like those that could crack current encryption. Currently, if the system shows signs of drifting away from calibration, Google says that it simply stops the computations and recalibrates. However, that is not going to be an option partway through a complicated calculation. These computations will be taking place using error-corrected qubits, in which measurements on a subset of the hardware qubits are used to detect and characterize any errors that occur on the ones ---",
+        "word_count": 117,
+        "keyword_overlap": 22,
+        "strong_overlap": 11
+      }
+    ],
+    "source_text": "There are some obvious big picture issues that stand between us and useful quantum computing. Issues like whether we can make enough high-quality hardware qubits to connect into the error-corrected logical qubits we need, and how we generate the states needed to perform universal computation on those logical qubits. But there are also many less prominent challenges that will need to be solved before we can perform calculations. One of those challenges, which only affects some types of hardware, is calibration. For devices we manufacture, like superconducting qubits, there are always subtle variations among individual qubits. (This is not true when we use something like an atom to hold the qubit, but the lasers that control them can drift.) As a result, this hardware is put through a process called calibration, where we test different frequencies and amplitudes of the microwave pulses that control them to find the combination that produces the lowest error rates, and then save those settings for use in calculations. However, you can't perform the typical calibration process while e you're doing calculations, which means drift becomes an issue for long and complicated algorithms. Google, though, has figured out that it's possible to do calibration using the same data that's used for error correction. Read full article Comments\n\nOne of those challenges, which only affects some types of hardware, is calibration. For devices we manufacture, like superconducting qubits, there are always subtle variations among individual qubits. (This is not true when we use something like an atom to hold the qubit, but the lasers that control them can drift.) As a result, this hardware is put through a process called calibration, where we test different frequencies and amplitudes of the microwave pulses that control them to find the combination that produces the lowest error rates, and then save those settings for use in calculations. However, you can’t perform the typical calibration process while you’re doing calculations, which means drift becomes an issue for long and complicated algorithms. Google, though, has figured out that it’s possible to do calibration using the same data that’s used for error correction.\n\nThere are some obvious big picture issues that stand between us and useful quantum computing. Issues like whether we can make enough high-quality hardware qubits to connect into the error-corrected logical qubits we need, and how we generate the states needed to perform universal computation on those logical qubits. But there are also many less prominent challenges that will need to be solved before we can perform calculations.\n\nThis equipment can also drift from its initial settings due to random factors, such as the hardware heating up as it’s used. And that could be an issue for the sorts of complicated algorithms we ultimately intend to run on quantum computers, like those that could crack current encryption. Currently, if the system shows signs of drifting away from calibration, Google says that it simply stops the computations and recalibrates. However, that is not going to be an option partway through a complicated calculation. These computations will be taking place using error-corrected qubits, in which measurements on a subset of the hardware qubits are used to detect and characterize any errors that occur on the ones ---",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 1107,
+      "selected_blocks": 4,
+      "selected_source_words": 536,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "MIT Technology Review",
+        "MIT Technology Review",
+        "MIT Technology Review",
+        "MIT Technology Review",
+        "AOL",
+        "Ars Technica"
+      ],
+      "selected_sources": [
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica",
+        "Ars Technica"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Quantum error correction can constantly recalibrate a processor",
+      "description": "There are some obvious big picture issues that stand between us and useful quantum computing. Issues like whether we can make enough high-quality hardware qubits to connect into the error-corrected logical qubits we need, and how we generate the states needed to perform universal computation on those logical qubits. But there are also many less prominent challenges that will need to be solved before we can perform calculations. One of those challenges, which only affects some types of hardware, is calibration. For devices we manufacture, like superconducting qubits, there are always subtle variations among individual qubits. (This is not true when we use something like an atom to hold the qubit, but the lasers that control them can drift.) As a result, this hardware is put through a process called calibration, where we test different frequencies and amplitudes of the microwave pulses that control them to find the combination that produces the lowest error rates, and then save those settings for use in calculations. However, you can't perform the typical calibration process while e you're doing calculations, which means drift becomes an issue for long and complicated algorithms. Google, though, has figured out that it's possible to do calibration using the same data that's used for error correction. Read full article Comments",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Quantum error correction can constantly recalibrate a processor",
+    "description": "There are some obvious big picture issues that stand between us and useful quantum computing. Issues like whether we can make enough high-quality hardware qubits to connect into the error-corrected logical qubits we need, and how we generate the states needed to perform universal computation on those logical qubits. But there are also many less prominent challenges that will need to be solved before we can perform calculations. One of those challenges, which only affects some types of hardware, is calibration. For devices we manufacture, like superconducting qubits, there are always subtle variations among individual qubits. (This is not true when we use something like an atom to hold the qubit, but the lasers that control them can drift.) As a result, this hardware is put through a process called calibration, where we test different frequencies and amplitudes of the microwave pulses that control them to find the combination that produces the lowest error rates, and then save those settings for use in calculations. However, you can't perform the typical calibration process while e you're doing calculations, which means drift becomes an issue for long and complicated algorithms. Google, though, has figured out that it's possible to do calibration using the same data that's used for error correction. Read full article Comments",
+    "link": "https://arstechnica.com/science/2026/07/quantum-error-correction-can-constantly-recalibrate-a-processor/",
+    "published": "2026-07-10T23:02:30+00:00",
+    "source": "Ars Technica",
+    "source_domain": "arstechnica.com",
+    "language": "en",
+    "fingerprint": "690b196a0c6be4e1ea5c854827f720ab",
+    "_url_hash": "eb5b82343baa04a81837bb83d7f0c12cae96953273dba33a0a84340ac3791412",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Ars Technica]\nThere are some obvious big picture issues that stand between us and useful quantum computing. Issues like whether we can make enough high-quality hardware qubits to connect into the error-corrected logical qubits we need, and how we generate the states needed to perform universal computation on those logical qubits. But there are also many less prominent challenges that will need to be solved before we can perform calculations.\n\nOne of those challenges, which only affects some types of hardware, is calibration. For devices we manufacture, like superconducting qubits, there are always subtle variations among individual qubits. (This is not true when we use something like an atom to hold the qubit, but the lasers that control them can drift.) As a result, this hardware is put through a process called calibration, where we test different frequencies and amplitudes of the microwave pulses that control them to find the combination that produces the lowest error rates, and then save those settings for use in calculations.\n\nHowever, you can’t perform the typical calibration process while you’re doing calculations, which means drift becomes an issue for long and complicated algorithms. Google, though, has figured out that it’s possible to do calibration using the same data that’s used for error correction.\n\nThe hardware that Google and a number of other companies rely on are transmons. They consist of a loop of superconducting wire connected to a resonator, and they’re controlled by pulses of microwave photons. Those pulses are controlled by hardware that is kept outside of the refrigeration, including classical computers and the microwave sources they control. This hardware is used to test different combinations of wavelengths and amplitudes during calibration.\n\nThis equipment can also drift from its initial settings due to random factors, such as the hardware heating up as it’s used. And that could be an issue for the sorts of complicated algorithms we ultimately intend to run on quantum computers, like those that could crack current encryption. Currently, if the system shows signs of drifting away from calibration, Google says that it simply stops the computations and recalibrates. However, that is not going to be an option partway through a complicated calculation.\n\nThese computations will be taking place using error-corrected qubits, in which measurements on a subset of the hardware qubits are used to detect and characterize any errors that occur on the ones \n\n---\n\n[Lähde: MIT Technology Review]\nThe US- and UK-based company Quantinuum today unveiled Helios, its third-generation quantum computer, which includes expanded computing power and error correction capability.\n\nLike all other existing quantum computers, Helios is not powerful enough to execute the industry’s dream money-making algorithms, such as those that would be useful for materials discovery or financial modeling. But Quantinuum’s machines, which use individual ions as qubits, could be easier to scale up than quantum computers that use superconducting circuits as qubits, such as Google’s and IBM’s.\n\n“Helios is an important proof point in our road map about how we’ll scale to larger physical systems,” says Jennifer Strabley, vice president at Quantinuum, which formed in 2021 from the merger of Honeywell Quantum Solutions and Cambridge Quantum. Honeywell remains Quantinuum’s majority owner.\n\nLocated at Quantinuum’s facility in Colorado, Helios comprises a myriad of components, including mirrors, lasers, and optical fiber. Its core is a thumbnail-size chip containing the barium ions that serve as the qubits, which perform the actual computing. Helios computes with 98 barium ions at a time; its predecessor, H2, used 56 ytterbium qubits. The barium ions are an upgrade, as they have proven easier to control than ytterbium.  These components all sit within a chamber that is cooled to about 15 Kelvin (-432.67 ℉), on top of an optical table. Users can access the computer by logging in remotely over the cloud.\n\nHelios encodes information in the ions’ quantum states, which can represent not only 0s and 1s, like the bits in classical computing, but probabilistic combinations of both, known as superpositions. A hallmark of quantum computing, these superposition states are akin to the state of a coin flipping in the air—neither heads nor tails, but some probability of both.\n\nQuantum computing exploits the unique mathematics of quantum-mechanical objects like ions to perform computations. Proponents of the technology believe this should enable commercially useful applications, such as highly accurate chemistry simulations for the development of batteries or better optimization algorithms for logistics and finance.\n\nIn the last decade, researchers at companies and academic institutions worldwide have incrementally developed the technology with billions of dollars of private and public funding. Still, quantum computing is in an awkward teenage phase. It’s unclear when it will bring profitable applicati\n\n---\n\n[Lähde: AOL]\nMUNICH & ESPOO, Finland--(BUSINESS WIRE)--Jun 9, 2026--\n\nIQM Quantum Computers, the global leader in superconducting quantum computers, has developed a novel quantum error-correcting code that achieves up to three orders of magnitude lower logical error rates than the surface code, also requiring up to eight times fewer physical qubits.\n\nThis press release features multimedia. View the full release here: https://www.businesswire.com/news/home/20260609533201/en/\n\nIQM´s breakthrough technology, called barbell codes.\n\nUnlike many alternative high-performance quantum error-correction approaches, the new code also maintains a comparatively low hardware complexity, marking a significant advancement toward scalable fault-tolerant quantum computing.\n\nQuantum error correction remains one of the defining challenges in the race toward practical quantum computing. Errors introduced by noise must be corrected faster than they accumulate, a requirement that previous approaches demanded either comple...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-11T01:35:05.344809+00:00",
+  "payload": {
+    "packet_id": "20260711T013129Z_3ab35dd654",
+    "title": "Google hyödyntää kvanttivirheenkorjausta suorittimen jatkuvaan kalibrointiin",
+    "summary": "Google on kehittänyt menetelmän, jossa kvanttivirheenkorjauksen mittaustietoja käytetään myös kvanttiprosessorin asetusten tarkistamiseen laskennan aikana. Ratkaisu voi vähentää tarvetta keskeyttää pitkät laskutoimitukset uudelleenkalibrointia varten.",
+    "content": "Google on kehittänyt menetelmän, jonka avulla kvanttivirheenkorjauksessa syntyvää mittaustietoa voidaan käyttää kvanttiprosessorin kalibrointiin kesken laskennan. Menetelmä vastaa ongelmaan, jossa laitteiston toiminta ajautuu vähitellen pois sille määritetyistä asetuksista ja virheiden vaara kasvaa pitkien laskutoimitusten aikana.\n\n## Kvanttilaitteiston asetukset voivat ajautua\n\nSuprajohtavista kubiteista valmistetuissa kvanttiprosessoreissa yksittäisten kubittien ominaisuudet vaihtelevat hieman. Siksi laitteisto kalibroidaan ennen laskentaa testaamalla kubitteja ohjaavien mikroaaltopulssien erilaisia taajuuksia ja voimakkuuksia. Kokeiden perusteella valitaan asetukset, joilla laitteiston virhetaso on mahdollisimman alhainen, ja nämä asetukset tallennetaan laskentaa varten.\n\nKalibroitu tila ei kuitenkaan välttämättä säily käytön aikana. Laitteiston lämpeneminen ja muut satunnaiset tekijät voivat muuttaa sen toimintaa vähitellen. Ongelma ei rajoitu valmistettuihin suprajohtaviin kubitteihin: atomipohjaisissa järjestelmissä atomit ovat keskenään samanlaisia, mutta niitä ohjaavien lasereiden asetukset voivat puolestaan ajautua.\n\nGoogle kertoo nykyisin pysäyttävänsä laskennan ja kalibroivansa järjestelmän uudelleen, jos sen havaitaan poikenneen alkuperäisistä asetuksista. Menettely voi toimia lyhyissä suorituksissa, mutta sitä ei voida välttämättä käyttää kesken tulevaisuuden pitkien ja monimutkaisten algoritmien. Tällaisiin laskutoimituksiin kuuluvat myös algoritmit, joilla voitaisiin murtaa nykyisiä salausmenetelmiä.\n\n## Virheenkorjaustieto auttaa seuraamaan muutoksia\n\nVirheenkorjatussa kvanttilaskennassa useita fyysisiä kubitteja yhdistetään loogisiksi kubiteiksi. Järjestelmä mittaa osaa fyysisistä kubiteista havaitakseen ja luonnehtiakseen muissa kubiteissa tapahtuvia virheitä. Googlen menetelmässä samaa mittaustietoa voidaan käyttää myös sen arvioimiseen, onko prosessori ajautumassa pois sopivista kalibrointiasetuksista.\n\nKalibrointia voidaan näin tehdä laskennan rinnalla sen sijaan, että koko suoritus pitäisi aina keskeyttää erillistä tarkistusta varten. Menetelmä ei poista kvanttilaskennan muita suuria haasteita. Hyödyllisiä järjestelmiä varten tarvitaan edelleen riittävästi laadukkaita fyysisiä kubitteja, niistä rakennettuja virheenkorjattuja loogisia kubitteja sekä yleiskäyttöisen laskennan edellyttämiä tiloja. Jatkuva kalibrointi ratkaisee kuitenkin yhden käytännön ongelman, jonka merkitys kasvaa laskutoimitusten pidentyessä.",
+    "category": "Teknologia",
+    "tags": [
+      "kvanttilaskenta",
+      "Google",
+      "kvanttiprosessorit",
+      "virheenkorjaus",
+      "kalibrointi"
+    ],
+    "summary_bullets": [
+      "Virheenkorjauksen mittaustietoa voidaan käyttää kvanttiprosessorin kalibroinnin seuraamiseen.",
+      "Menetelmä mahdollistaa asetusten tarkistamisen laskennan aikana ilman erillistä keskeytystä.",
+      "Ratkaisu vastaa pitkissä ja monimutkaisissa kvanttialgoritmeissa korostuvaan laitteiston ajautumisongelmaan."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "confidence": 0.94,
+    "journalist_note": "Artikkeli perustuu paketin neljään keskenään yhdenmukaiseen aineistolohkoon. Menetelmän yksityiskohtaisia koetuloksia tai suorituskykylukuja ei ollut mukana, joten niitä ei ole arvioitu."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260711T013129Z_3ab35dd654\",\n  \"title\": \"Google hyödyntää kvanttivirheenkorjausta suorittimen jatkuvaan kalibrointiin\",\n  \"summary\": \"Google on kehittänyt menetelmän, jossa kvanttivirheenkorjauksen mittaustietoja käytetään myös kvanttiprosessorin asetusten tarkistamiseen laskennan aikana. Ratkaisu voi vähentää tarvetta keskeyttää pitkät laskutoimitukset uudelleenkalibrointia varten.\",\n  \"content\": \"Google on kehittänyt menetelmän, jonka avulla kvanttivirheenkorjauksessa syntyvää mittaustietoa voidaan käyttää kvanttiprosessorin kalibrointiin kesken laskennan. Menetelmä vastaa ongelmaan, jossa laitteiston toiminta ajautuu vähitellen pois sille määritetyistä asetuksista ja virheiden vaara kasvaa pitkien laskutoimitusten aikana.\\n\\n## Kvanttilaitteiston asetukset voivat ajautua\\n\\nSuprajohtavista kubiteista valmistetuissa kvanttiprosessoreissa yksittäisten kubittien ominaisuudet vaihtelevat hieman. Siksi laitteisto kalibroidaan ennen laskentaa testaamalla kubitteja ohjaavien mikroaaltopulssien erilaisia taajuuksia ja voimakkuuksia. Kokeiden perusteella valitaan asetukset, joilla laitteiston virhetaso on mahdollisimman alhainen, ja nämä asetukset tallennetaan laskentaa varten.\\n\\nKalibroitu tila ei kuitenkaan välttämättä säily käytön aikana. Laitteiston lämpeneminen ja muut satunnaiset tekijät voivat muuttaa sen toimintaa vähitellen. Ongelma ei rajoitu valmistettuihin suprajohtaviin kubitteihin: atomipohjaisissa järjestelmissä atomit ovat keskenään samanlaisia, mutta niitä ohjaavien lasereiden asetukset voivat puolestaan ajautua.\\n\\nGoogle kertoo nykyisin pysäyttävänsä laskennan ja kalibroivansa järjestelmän uudelleen, jos sen havaitaan poikenneen alkuperäisistä asetuksista. Menettely voi toimia lyhyissä suorituksissa, mutta sitä ei voida välttämättä käyttää kesken tulevaisuuden pitkien ja monimutkaisten algoritmien. Tällaisiin laskutoimituksiin kuuluvat myös algoritmit, joilla voitaisiin murtaa nykyisiä salausmenetelmiä.\\n\\n## Virheenkorjaustieto auttaa seuraamaan muutoksia\\n\\nVirheenkorjatussa kvanttilaskennassa useita fyysisiä kubitteja yhdistetään loogisiksi kubiteiksi. Järjestelmä mittaa osaa fyysisistä kubiteista havaitakseen ja luonnehtiakseen muissa kubiteissa tapahtuvia virheitä. Googlen menetelmässä samaa mittaustietoa voidaan käyttää myös sen arvioimiseen, onko prosessori ajautumassa pois sopivista kalibrointiasetuksista.\\n\\nKalibrointia voidaan näin tehdä laskennan rinnalla sen sijaan, että koko suoritus pitäisi aina keskeyttää erillistä tarkistusta varten. Menetelmä ei poista kvanttilaskennan muita suuria haasteita. Hyödyllisiä järjestelmiä varten tarvitaan edelleen riittävästi laadukkaita fyysisiä kubitteja, niistä rakennettuja virheenkorjattuja loogisia kubitteja sekä yleiskäyttöisen laskennan edellyttämiä tiloja. Jatkuva kalibrointi ratkaisee kuitenkin yhden käytännön ongelman, jonka merkitys kasvaa laskutoimitusten pidentyessä.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"kvanttilaskenta\",\n    \"Google\",\n    \"kvanttiprosessorit\",\n    \"virheenkorjaus\",\n    \"kalibrointi\"\n  ],\n  \"summary_bullets\": [\n    \"Virheenkorjauksen mittaustietoa voidaan käyttää kvanttiprosessorin kalibroinnin seuraamiseen.\",\n    \"Menetelmä mahdollistaa asetusten tarkistamisen laskennan aikana ilman erillistä keskeytystä.\",\n    \"Ratkaisu vastaa pitkissä ja monimutkaisissa kvanttialgoritmeissa korostuvaan laitteiston ajautumisongelmaan.\"\n  ],\n  \"content_type\": \"uutinen\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.94,\n  \"journalist_note\": \"Artikkeli perustuu paketin neljään keskenään yhdenmukaiseen aineistolohkoon. Menetelmän yksityiskohtaisia koetuloksia tai suorituskykylukuja ei ollut mukana, joten niitä ei ole arvioitu.\"\n}",
+  "article": {
+    "title": "Google hyödyntää kvanttivirheenkorjausta suorittimen jatkuvaan kalibrointiin",
+    "description": "Google on kehittänyt menetelmän, jossa kvanttivirheenkorjauksen mittaustietoja käytetään myös kvanttiprosessorin asetusten tarkistamiseen laskennan aikana. Ratkaisu voi vähentää tarvetta keskeyttää pitkät laskutoimitukset uudelleenkalibrointia varten.",
+    "link": "https://arstechnica.com/science/2026/07/quantum-error-correction-can-constantly-recalibrate-a-processor/",
+    "published": "2026-07-10T23:02:30+00:00",
+    "source": "Ars Technica",
+    "source_domain": "arstechnica.com",
+    "language": "en",
+    "fingerprint": "690b196a0c6be4e1ea5c854827f720ab",
+    "_url_hash": "eb5b82343baa04a81837bb83d7f0c12cae96953273dba33a0a84340ac3791412",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Ars Technica]\nThere are some obvious big picture issues that stand between us and useful quantum computing. Issues like whether we can make enough high-quality hardware qubits to connect into the error-corrected logical qubits we need, and how we generate the states needed to perform universal computation on those logical qubits. But there are also many less prominent challenges that will need to be solved before we can perform calculations.\n\nOne of those challenges, which only affects some types of hardware, is calibration. For devices we manufacture, like superconducting qubits, there are always subtle variations among individual qubits. (This is not true when we use something like an atom to hold the qubit, but the lasers that control them can drift.) As a result, this hardware is put through a process called calibration, where we test different frequencies and amplitudes of the microwave pulses that control them to find the combination that produces the lowest error rates, and then save those settings for use in calculations.\n\nHowever, you can’t perform the typical calibration process while you’re doing calculations, which means drift becomes an issue for long and complicated algorithms. Google, though, has figured out that it’s possible to do calibration using the same data that’s used for error correction.\n\nThe hardware that Google and a number of other companies rely on are transmons. They consist of a loop of superconducting wire connected to a resonator, and they’re controlled by pulses of microwave photons. Those pulses are controlled by hardware that is kept outside of the refrigeration, including classical computers and the microwave sources they control. This hardware is used to test different combinations of wavelengths and amplitudes during calibration.\n\nThis equipment can also drift from its initial settings due to random factors, such as the hardware heating up as it’s used. And that could be an issue for the sorts of complicated algorithms we ultimately intend to run on quantum computers, like those that could crack current encryption. Currently, if the system shows signs of drifting away from calibration, Google says that it simply stops the computations and recalibrates. However, that is not going to be an option partway through a complicated calculation.\n\nThese computations will be taking place using error-corrected qubits, in which measurements on a subset of the hardware qubits are used to detect and characterize any errors that occur on the ones \n\n---\n\n[Lähde: MIT Technology Review]\nThe US- and UK-based company Quantinuum today unveiled Helios, its third-generation quantum computer, which includes expanded computing power and error correction capability.\n\nLike all other existing quantum computers, Helios is not powerful enough to execute the industry’s dream money-making algorithms, such as those that would be useful for materials discovery or financial modeling. But Quantinuum’s machines, which use individual ions as qubits, could be easier to scale up than quantum computers that use superconducting circuits as qubits, such as Google’s and IBM’s.\n\n“Helios is an important proof point in our road map about how we’ll scale to larger physical systems,” says Jennifer Strabley, vice president at Quantinuum, which formed in 2021 from the merger of Honeywell Quantum Solutions and Cambridge Quantum. Honeywell remains Quantinuum’s majority owner.\n\nLocated at Quantinuum’s facility in Colorado, Helios comprises a myriad of components, including mirrors, lasers, and optical fiber. Its core is a thumbnail-size chip containing the barium ions that serve as the qubits, which perform the actual computing. Helios computes with 98 barium ions at a time; its predecessor, H2, used 56 ytterbium qubits. The barium ions are an upgrade, as they have proven easier to control than ytterbium.  These components all sit within a chamber that is cooled to about 15 Kelvin (-432.67 ℉), on top of an optical table. Users can access the computer by logging in remotely over the cloud.\n\nHelios encodes information in the ions’ quantum states, which can represent not only 0s and 1s, like the bits in classical computing, but probabilistic combinations of both, known as superpositions. A hallmark of quantum computing, these superposition states are akin to the state of a coin flipping in the air—neither heads nor tails, but some probability of both.\n\nQuantum computing exploits the unique mathematics of quantum-mechanical objects like ions to perform computations. Proponents of the technology believe this should enable commercially useful applications, such as highly accurate chemistry simulations for the development of batteries or better optimization algorithms for logistics and finance.\n\nIn the last decade, researchers at companies and academic institutions worldwide have incrementally developed the technology with billions of dollars of private and public funding. Still, quantum computing is in an awkward teenage phase. It’s unclear when it will bring profitable applicati\n\n---\n\n[Lähde: AOL]\nMUNICH & ESPOO, Finland--(BUSINESS WIRE)--Jun 9, 2026--\n\nIQM Quantum Computers, the global leader in superconducting quantum computers, has developed a novel quantum error-correcting code that achieves up to three orders of magnitude lower logical error rates than the surface code, also requiring up to eight times fewer physical qubits.\n\nThis press release features multimedia. View the full release here: https://www.businesswire.com/news/home/20260609533201/en/\n\nIQM´s breakthrough technology, called barbell codes.\n\nUnlike many alternative high-performance quantum error-correction approaches, the new code also maintains a comparatively low hardware complexity, marking a significant advancement toward scalable fault-tolerant quantum computing.\n\nQuantum error correction remains one of the defining challenges in the race toward practical quantum computing. Errors introduced by noise must be corrected faster than they accumulate, a requirement that previous approaches demanded either comple...",
+    "research_source": "multi",
+    "summary": "Google on kehittänyt menetelmän, jossa kvanttivirheenkorjauksen mittaustietoja käytetään myös kvanttiprosessorin asetusten tarkistamiseen laskennan aikana. Ratkaisu voi vähentää tarvetta keskeyttää pitkät laskutoimitukset uudelleenkalibrointia varten.",
+    "content": "Google on kehittänyt menetelmän, jonka avulla kvanttivirheenkorjauksessa syntyvää mittaustietoa voidaan käyttää kvanttiprosessorin kalibrointiin kesken laskennan. Menetelmä vastaa ongelmaan, jossa laitteiston toiminta ajautuu vähitellen pois sille määritetyistä asetuksista ja virheiden vaara kasvaa pitkien laskutoimitusten aikana.\n\n## Kvanttilaitteiston asetukset voivat ajautua\n\nSuprajohtavista kubiteista valmistetuissa kvanttiprosessoreissa yksittäisten kubittien ominaisuudet vaihtelevat hieman. Siksi laitteisto kalibroidaan ennen laskentaa testaamalla kubitteja ohjaavien mikroaaltopulssien erilaisia taajuuksia ja voimakkuuksia. Kokeiden perusteella valitaan asetukset, joilla laitteiston virhetaso on mahdollisimman alhainen, ja nämä asetukset tallennetaan laskentaa varten.\n\nKalibroitu tila ei kuitenkaan välttämättä säily käytön aikana. Laitteiston lämpeneminen ja muut satunnaiset tekijät voivat muuttaa sen toimintaa vähitellen. Ongelma ei rajoitu valmistettuihin suprajohtaviin kubitteihin: atomipohjaisissa järjestelmissä atomit ovat keskenään samanlaisia, mutta niitä ohjaavien lasereiden asetukset voivat puolestaan ajautua.\n\nGoogle kertoo nykyisin pysäyttävänsä laskennan ja kalibroivansa järjestelmän uudelleen, jos sen havaitaan poikenneen alkuperäisistä asetuksista. Menettely voi toimia lyhyissä suorituksissa, mutta sitä ei voida välttämättä käyttää kesken tulevaisuuden pitkien ja monimutkaisten algoritmien. Tällaisiin laskutoimituksiin kuuluvat myös algoritmit, joilla voitaisiin murtaa nykyisiä salausmenetelmiä.\n\n## Virheenkorjaustieto auttaa seuraamaan muutoksia\n\nVirheenkorjatussa kvanttilaskennassa useita fyysisiä kubitteja yhdistetään loogisiksi kubiteiksi. Järjestelmä mittaa osaa fyysisistä kubiteista havaitakseen ja luonnehtiakseen muissa kubiteissa tapahtuvia virheitä. Googlen menetelmässä samaa mittaustietoa voidaan käyttää myös sen arvioimiseen, onko prosessori ajautumassa pois sopivista kalibrointiasetuksista.\n\nKalibrointia voidaan näin tehdä laskennan rinnalla sen sijaan, että koko suoritus pitäisi aina keskeyttää erillistä tarkistusta varten. Menetelmä ei poista kvanttilaskennan muita suuria haasteita. Hyödyllisiä järjestelmiä varten tarvitaan edelleen riittävästi laadukkaita fyysisiä kubitteja, niistä rakennettuja virheenkorjattuja loogisia kubitteja sekä yleiskäyttöisen laskennan edellyttämiä tiloja. Jatkuva kalibrointi ratkaisee kuitenkin yhden käytännön ongelman, jonka merkitys kasvaa laskutoimitusten pidentyessä.",
+    "category": "Teknologia",
+    "tags": [
+      "kvanttilaskenta",
+      "google",
+      "kvanttiprosessorit",
+      "virheenkorjaus",
+      "kalibrointi"
+    ],
+    "summary_bullets": [
+      "Virheenkorjauksen mittaustietoa voidaan käyttää kvanttiprosessorin kalibroinnin seuraamiseen.",
+      "Menetelmä mahdollistaa asetusten tarkistamisen laskennan aikana ilman erillistä keskeytystä.",
+      "Ratkaisu vastaa pitkissä ja monimutkaisissa kvanttialgoritmeissa korostuvaan laitteiston ajautumisongelmaan."
+    ],
+    "key_points": [
+      "Virheenkorjauksen mittaustietoa voidaan käyttää kvanttiprosessorin kalibroinnin seuraamiseen.",
+      "Menetelmä mahdollistaa asetusten tarkistamisen laskennan aikana ilman erillistä keskeytystä.",
+      "Ratkaisu vastaa pitkissä ja monimutkaisissa kvanttialgoritmeissa korostuvaan laitteiston ajautumisongelmaan."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "journalist_note": "Artikkeli perustuu paketin neljään keskenään yhdenmukaiseen aineistolohkoon. Menetelmän yksityiskohtaisia koetuloksia tai suorituskykylukuja ei ollut mukana, joten niitä ei ole arvioitu.",
+    "source_text": "There are some obvious big picture issues that stand between us and useful quantum computing. Issues like whether we can make enough high-quality hardware qubits to connect into the error-corrected logical qubits we need, and how we generate the states needed to perform universal computation on those logical qubits. But there are also many less prominent challenges that will need to be solved before we can perform calculations. One of those challenges, which only affects some types of hardware, is calibration. For devices we manufacture, like superconducting qubits, there are always subtle variations among individual qubits. (This is not true when we use something like an atom to hold the qubit, but the lasers that control them can drift.) As a result, this hardware is put through a process called calibration, where we test different frequencies and amplitudes of the microwave pulses that control them to find the combination that produces the lowest error rates, and then save those settings for use in calculations. However, you can't perform the typical calibration process while e you're doing calculations, which means drift becomes an issue for long and complicated algorithms. Google, though, has figured out that it's possible to do calibration using the same data that's used for error correction. Read full article Comments\n\nOne of those challenges, which only affects some types of hardware, is calibration. For devices we manufacture, like superconducting qubits, there are always subtle variations among individual qubits. (This is not true when we use something like an atom to hold the qubit, but the lasers that control them can drift.) As a result, this hardware is put through a process called calibration, where we test different frequencies and amplitudes of the microwave pulses that control them to find the combination that produces the lowest error rates, and then save those settings for use in calculations. However, you can’t perform the typical calibration process while you’re doing calculations, which means drift becomes an issue for long and complicated algorithms. Google, though, has figured out that it’s possible to do calibration using the same data that’s used for error correction.\n\nThere are some obvious big picture issues that stand between us and useful quantum computing. Issues like whether we can make enough high-quality hardware qubits to connect into the error-corrected logical qubits we need, and how we generate the states needed to perform universal computation on those logical qubits. But there are also many less prominent challenges that will need to be solved before we can perform calculations.\n\nThis equipment can also drift from its initial settings due to random factors, such as the hardware heating up as it’s used. And that could be an issue for the sorts of complicated algorithms we ultimately intend to run on quantum computers, like those that could crack current encryption. Currently, if the system shows signs of drifting away from calibration, Google says that it simply stops the computations and recalibrates. However, that is not going to be an option partway through a complicated calculation. These computations will be taking place using error-corrected qubits, in which measurements on a subset of the hardware qubits are used to detect and characterize any errors that occur on the ones ---",
+    "writer_backend": "monica",
+    "writer_confidence": 0.94,
+    "degraded_mode": false,
+    "monica_packet_id": "20260711T013129Z_3ab35dd654",
+    "image_hotlink": false,
+    "image_category_fallback": true,
+    "image": "/images/categories/teknologia.jpg",
+    "image_thumb": "/images/categories/teknologia.jpg",
+    "image_alt": "Teknologia-uutiset",
+    "image_credit": "",
+    "image_source_url": "",
+    "image_caption": "",
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_visual_judge_score": 0,
+    "image_decision": {
+      "source": "category_fallback",
+      "accepted": true,
+      "reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+      "prompt_version": "image-flow-v2-2026-07-03"
+    }
+  },
+  "image_enriched_at": "2026-07-11T01:38:28.695794+00:00",
+  "image_enrichment": {
+    "image": "/images/categories/teknologia.jpg",
+    "image_thumb": "/images/categories/teknologia.jpg",
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+    "image_concept": null,
+    "image_query": null,
+    "image_candidate_id": null,
+    "image_candidate_url": null,
+    "image_visual_judge_score": 0,
+    "image_accepted_reasons": null,
+    "image_rejected_reasons": null,
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03"
+  },
+  "published_at": "2026-07-11T01:39:55.712087+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-07-11-google-hyodyntaa-kvanttivirheenkorjausta-suorittimen-jatkuva.md"
+  ]
+}
