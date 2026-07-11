@@ -32,6 +32,22 @@ class CategoryGuardTests(unittest.TestCase):
             "Teknologia",
         )
 
+    def test_tulossa_does_not_count_as_a_business_result_signal(self) -> None:
+        self.assertEqual(
+            protect_business_category(
+                "Kotimaa",
+                "Ravintolapäällikkö kertoi poliisin olevan tulossa paikalle.",
+            ),
+            "Kotimaa",
+        )
+        self.assertEqual(
+            protect_business_category(
+                "Teknologia",
+                "Yhtiön tulos kasvoi ja investoinnit vauhdittivat myyntiä.",
+            ),
+            "Talous",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
