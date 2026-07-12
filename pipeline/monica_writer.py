@@ -778,6 +778,8 @@ def _merge_article(original: dict, packet: dict, payload: dict) -> dict:
     guessed_category = _normalize_ws(str(original.get("_guessed_category") or ""))
     if packet_category == "Ulkomaat" and (original_category == "Talous" or guessed_category == "Talous"):
         category = "Talous"
+    elif packet_category == "Kotimaa" and category == "Ulkomaat" and guessed_category == "Ulkomaat":
+        category = "Ulkomaat"
     elif packet_category in ALLOWED_CATEGORIES:
         category = packet_category
     elif original_category in ALLOWED_CATEGORIES:

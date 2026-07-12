@@ -2,7 +2,7 @@
 title: "Etelä-Afrikka käsittelee yli 53 000 ulkomaalaisen palauttamista tai karkottamista"
 date: 2026-07-12T19:18:48.048381+00:00
 categories:
-  - Talous
+  - Ulkomaat
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import json
 import unittest
 from pathlib import Path
 import sys
@@ -11,6 +12,18 @@ from publisher import _apply_keyword_category_override
 
 
 class PublisherCategoryTests(unittest.TestCase):
+    def test_retained_immigration_packet_stays_ulkomaat(self) -> None:
+        fixture_path = (
+            Path(__file__).resolve().parent
+            / "queues/staged/published/20260712T191123Z_48bdfbec17.json"
+        )
+        retained = json.loads(fixture_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(
+            _apply_keyword_category_override(retained["payload"], "Ulkomaat"),
+            "Ulkomaat",
+        )
+
     def test_retained_macroeconomy_candidate_cannot_drift_to_tiede(self) -> None:
         article = {
             "title": "Talouspessimismi kasvattaa One Nationin kannatusta Australiassa",

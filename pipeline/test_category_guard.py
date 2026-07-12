@@ -68,6 +68,24 @@ class CategoryGuardTests(unittest.TestCase):
         self.assertEqual(retained["packet"]["packet_id"], "20260711T203153Z_b15231a0f0")
         self.assertEqual(protect_business_category("Ulkomaat", text), "Talous")
 
+    def test_retained_immigration_packet_is_not_stolen_by_incidental_terms(self) -> None:
+        fixture_path = (
+            Path(__file__).resolve().parent
+            / "queues/staged/published/20260712T191123Z_48bdfbec17.json"
+        )
+        retained = json.loads(fixture_path.read_text(encoding="utf-8"))
+        text = " ".join(
+            [
+                str(retained["original_article"].get("research") or ""),
+                str(retained["payload"].get("content") or ""),
+            ]
+        )
+
+        self.assertEqual(retained["packet"]["packet_id"], "20260712T191123Z_48bdfbec17")
+        self.assertIn("yrityksiin", text)
+        self.assertIn("kasvavan", text)
+        self.assertEqual(protect_business_category("Ulkomaat", text), "Ulkomaat")
+
     def test_single_economy_term_does_not_steal_genuine_science_or_non_business(self) -> None:
         self.assertEqual(
             protect_business_category(
