@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-12T17:50:36+00:00",
+  "generated_at": "2026-07-12T18:40:42+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -13,19 +13,19 @@
   "articles": {
     "attempted": 0,
     "published": 44,
-    "rejected": 2,
+    "rejected": 3,
     "publish_rate": 0,
-    "last_published_ts": "2026-07-12T17:48:49.577377+00:00"
+    "last_published_ts": "2026-07-12T18:38:53.816232+00:00"
   },
   "reject_reasons": {
-    "missing: image": 2,
+    "missing: image": 3,
+    "readability few paragraphs (1)": 2,
+    "readability wall of text": 2,
+    "only 1 paragraphs (min 3)": 2,
     "length under target (274 words": 1,
     "source_confidence_denial_conte": 1,
     "language borderline Finnish si": 1,
-    "length under target (259 words": 1,
-    "readability few paragraphs (1)": 1,
-    "readability wall of text": 1,
-    "only 1 paragraphs (min 3)": 1
+    "length under target (259 words": 1
   },
   "feeds": {
     "total": 33,
@@ -38,14 +38,10 @@
   "trending": [
     [
       "jälkeen",
-      52
+      50
     ],
     [
-      "samalla",
-      24
-    ],
-    [
-      "kanssa",
+      "mukaansa",
       23
     ],
     [
@@ -54,6 +50,10 @@
     ],
     [
       "aikana",
+      22
+    ],
+    [
+      "kanssa",
       22
     ]
   ]
