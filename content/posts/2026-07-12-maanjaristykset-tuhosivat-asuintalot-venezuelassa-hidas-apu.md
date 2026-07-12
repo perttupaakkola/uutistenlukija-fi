@@ -47,7 +47,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/news/ng-interactive/2026/jul/12/a-revolution-in-ruins-fury-amid-the-rubble-of-a-housing-project-in-quake-hit-venezuela"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
