@@ -1,0 +1,86 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-12T06:41:29.895032+00:00",
+  "digest": "b21c70de14",
+  "packet": {
+    "packet_id": "20260712T064129Z_b21c70de14",
+    "created_at": "2026-07-12T06:41:29Z",
+    "headline_seed": "What xAI's Grok Build CLI Actually Sends to xAI",
+    "description_seed": "Article URL: https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547 Comments URL: https://news.ycombinator.com/item?id=48877371 Points: 186 # Comments: 97",
+    "link": "https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547",
+    "source": "Hacker News Best",
+    "source_names": [],
+    "source_urls": [
+      "https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547"
+    ],
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "What xAI's Grok Build CLI Actually Sends to xAI"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 934,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Hacker News Best",
+        "Hacker News Best",
+        "Hacker News Best",
+        "TechCrunch",
+        "Engadget",
+        "Engadget",
+        "Engadget",
+        "Engadget",
+        "eWeek",
+        "Hacker News Best"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "What xAI's Grok Build CLI Actually Sends to xAI",
+      "description": "Article URL: https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547 Comments URL: https://news.ycombinator.com/item?id=48877371 Points: 186 # Comments: 97",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "What xAI's Grok Build CLI Actually Sends to xAI",
+    "description": "Article URL: https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547 Comments URL: https://news.ycombinator.com/item?id=48877371 Points: 186 # Comments: 97",
+    "link": "https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547",
+    "published": "2026-07-12T01:09:50+00:00",
+    "source": "Hacker News Best",
+    "source_domain": "hnrss.org",
+    "language": "en",
+    "fingerprint": "740327d7c1adcf784b329784cbfbef5c",
+    "_url_hash": "cbe2d7cc977042f8483a8047cf4b3882d7cec092f705dfac276e2751ad8ec1ac",
+    "source_tier": 3,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Hacker News Best]\nA measured, reproducible teardown. Findings are backed by captured artifacts (endpoint, HTTP method, status code, byte size, host) and repro commands; where an observation was seen live but not retained as a file, §7 says so explicitly. Section 8 is an evidence appendix with SHA-256s and a \"what we did not prove\" list. All captures are of my own traffic on my own machine, using a throwaway repository containing fake \"canary\" secrets — no real credentials were exposed.\n\nxAI's official Grok Build coding CLI (grok), on a normal consumer login, does three things worth documenting precisely:\n\nNone of this proves xAI trains on the data — that is a policy question addressed in §6. What is proven is transmission, acceptance, and storage.\n\nBinary identity (repro: file $(readlink -f ~/.grok/bin/grok); ~/.grok/bin/grok --version; shasum -a 256 $(readlink -f ~/.grok/bin/grok)):\n\nThe upload machinery is a first-party Rust crate. strings on the binary yields these source paths and constants (repro: strings <binary> | grep -E 'xai-data-collector|grok-code-session-traces|storage.googleapis'):\n\nEnvironment: macOS, Apple Silicon, grok 0.2.93, July 2026.\n\nCanary repo: each file carries a unique marker so anything appearing in captured traffic is unambiguously traceable to a file. Secrets file secrets.env / .env:\n\nClaim: when Grok reads a file, its contents are transmitted to xAI — serialized into the POST /v1/responses model-turn body, and packaged into a session_state archive that is uploaded and accepted (HTTP 200) via POST /v1/storage — with no redaction of the file's contents. A .env is sent like any other file.\n\nWire artifact — a decrypted 48,070-byte POST cli-chat-proxy.grok.com/v1/responses request body (identifiable as a model turn by its embedded \"messages\":[…]\"model\":\"grok-4.5\" JSON). It contains the secrets file verbatim (appendix: secrets_responses_body.bin, secret_verbatim.txt):\n\nRepro: grep -a \"CANARY7F3A9-DBPASS\" secrets_responses_body.bin → matches. All six file markers (source, logic, README, nested JS, API key, DB password) are recoverable from the decrypted /v1/responses bodies. (This artifact proves the secret was transmitted to the /v1/responses endpoint; the raw body file does not carry the response status, so the acceptance (200) claim is anchored to the /v1/storage channel immediately below, which is status-mapped in wire_12gb.log.)\n\nSecond channel — persisted to Google Cloud Storage. The same content is packaged into a session_state archive uploaded \n\n---\n\n[Lähde: TechCrunch]\nOn Wednesday, xAI and Anthropic announced a surprise partnership that has the Claude-maker buying out “all of the compute capacity at [xAI’s] Colossus 1 data center,” roughly 300MW that allowed Anthropic to immediately raise its usage limits. It’s a huge deal for xAI, likely worth billions of dollars. More importantly, it immediately monetized one of the company’s most impressive accomplishments, turning xAI from a consumer to a provider of compute.\n\nIt’s tempting to see the arrangement as a shot at OpenAI amid the ongoing lawsuit. But Musk’s explanation on X was that xAI had already moved training to a newer data center, Colossus 2, and xAI simply didn’t need them both.\n\n---\n\n[Lähde: Engadget]\nxAI has launched a coding agent of its own to serve as competitor to its rivals' products, such as Anthropic's Claude Code. It's called Grok Build, and it's still in its early beta version that's initially only available to SuperGrok Heavy subscribers paying $300 per month for the service. xAI describes Grok Build as a \"powerful new coding agent and CLI for professional software engineering and complex coding work.\" It says it will take user feedback from the early beta release to improve the product. SuperGrok Heavy users can install the beta from xAI's website and then log into their account to be able to access it.\n\nAs Bloomberg notes, xAI has been trying to catch up to its rival companies like Anthropic and OpenAI. Elon Musk, the company's founder and CEO, previously admitted that it has fallen behind its competitors when it comes to coding. A couple of months ago, Musk said he was rebuilding xAI \"from the foundations up\" after several co-founders had left the company. One of the company's executives reportedly told staffers to work on getting Grok to match Claude's performance across various tasks.\n\nGrok has somewhat of a spotty reputation. If you'll recall, it had been generating nonconsensual sexual images of real people instead of blocking users from doing so last year. According to a study by British nonprofit Center for Countering Digital Hate (CCDH) published in January, Grok generated around 3 million sexualized images, 23,000 of which featured children. xAI had since changed its policies to prevent users from \"editing of images of real people in revealing clothing such as bikinis.\"\n\nxAI was acquired by Musk's other company, SpaceX, back in February. The merger could lead to space-based data centers for xAI, with SpaceX launching millions of satellites for the project. In fact, SpaceX had already filed an application with the Federal Communications Commission (FCC) to launch satellites for an orbital data center. Since the merger, though, the companies have reportedly been losing talent one after the other. According to The Information, more than 50 researchers and engineers have left the combined company (called SpaceXAI), including key personnel in coding and AI training.\n\n---\n\n[Lähde: eWeek]\nAI success depends on whether enterprise data is ready, reachable, and close enough to the workloads that need it. In this eSpeaks episode, Dell Technologies’ Vrashank Jain explains why fragmented data, weak metadata, slow pipelines, and poor data locality can stall AI projects before models ever reach production.\n\nIn this episode of eSpeaks, Jennifer Margles, Director of Product Management at BMC Software, discusses the transition from traditional job scheduling to the era of the autonomous enterprise.\n\neSpeaks’ Corey Noles talks with Rob Israch, President of Tipalti, about what it means t...",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-12T06:43:45.022271+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä väitteitä, joiden perusteella vähintään 250 sanan uutisartikkeli voitaisiin kirjoittaa luotettavasti.",
+  "raw_response": "{\"packet_id\":\"20260712T064129Z_b21c70de14\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä väitteitä, joiden perusteella vähintään 250 sanan uutisartikkeli voitaisiin kirjoittaa luotettavasti.\"}"
+}
