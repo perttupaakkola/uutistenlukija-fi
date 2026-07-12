@@ -126,6 +126,16 @@ else
 
     log "status=$site_status lastPublished=$last_published pipelineLastRun=$pipeline_last_run articles=$article_count"
 
+    case "$site_status" in
+        ok|degraded)
+            ;;
+        *)
+            condition="invalid_health"
+            alert_msg="🔴 **Invalid health payload** — HTTP 200 response has missing or unrecognised \`status\`. Manual check required."
+            log "Invalid health status received"
+            ;;
+    esac
+
     article_age_hours=""
     if [[ -n "$last_published" && "$last_published" != "None" && "$last_published" != "null" ]]; then
         article_age_hours=$(python3 -c "
@@ -211,7 +221,7 @@ except: print(0)
 fi
 
 # ── Recovery detection ────────────────────────────────────────────────────────
-if [[ "$condition" == "ok" && ( "$last_status" == "degraded" || "$last_status" == "stale" || "$last_status" == "site_down" ) ]]; then
+if [[ "$condition" == "ok" && ( "$last_status" == "degraded" || "$last_status" == "stale" || "$last_status" == "site_down" || "$last_status" == "invalid_health" ) ]]; then
     condition="recovered"
     alert_msg="✅ **Pipeline recovered** — health check passing. Previous status: \`$last_status\`"
 fi
