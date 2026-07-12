@@ -26,11 +26,11 @@ from typing import Any
 try:
     from .category_guard import category_text, protect_business_category, protect_tiede_category
     from .quarantine import save_writer_quarantine
-    from .story_packet import build_story_packet, ensure_queue_dirs, save_packet
+    from .story_packet import build_story_packet, ensure_queue_dirs, save_packet, selected_source_provenance_error
 except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
     from category_guard import category_text, protect_business_category, protect_tiede_category
     from quarantine import save_writer_quarantine
-    from story_packet import build_story_packet, ensure_queue_dirs, save_packet
+    from story_packet import build_story_packet, ensure_queue_dirs, save_packet, selected_source_provenance_error
 
 ALLOWED_CATEGORIES = {
     "Kotimaa",
@@ -815,6 +815,7 @@ def _merge_article(original: dict, packet: dict, payload: dict) -> dict:
 
     word_count = len(content.split())
     merged = dict(original)
+    selected_source = packet.get("selected_source") or {}
     merged.update(
         {
             "title": title,
@@ -835,6 +836,15 @@ def _merge_article(original: dict, packet: dict, payload: dict) -> dict:
             "monica_packet_id": packet.get("packet_id", ""),
         }
     )
+    if selected_source:
+        merged.update(
+            {
+                "source": selected_source["name"],
+                "link": selected_source["url"],
+                "source_url": selected_source["url"],
+                "source_domain": selected_source["domain"],
+            }
+        )
     return merged
 
 
@@ -847,6 +857,16 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
         print(f"[monica] ({idx + 1}/{len(articles)}) {title}")
         packet = build_story_packet(article)
         save_packet(packet, box="inbox")
+
+        provenance_error = selected_source_provenance_error(packet)
+        if provenance_error:
+            save_writer_quarantine(
+                packet,
+                "selected_source_provenance_invalid",
+                extra={"reason_code": "selected_source_provenance_invalid", "error": provenance_error},
+            )
+            print(f"[monica]   quarantine: selected_source_provenance_invalid ({provenance_error})")
+            continue
 
         raw = ""
         try:

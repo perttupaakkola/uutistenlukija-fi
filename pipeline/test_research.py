@@ -77,8 +77,8 @@ class ResearchFallbackTests(unittest.TestCase):
              patch.object(research.time, "sleep", return_value=None):
             text = research._research_article(article)
 
-        self.assertIn("[Lähde: Example]", text)
-        self.assertIn("[Lähde: Suomen Yrittäjät]", text)
+        self.assertIn("[Lähde: Example | URL: https://example.com/maksuajat]", text)
+        self.assertIn("[Lähde: Suomen Yrittäjät | URL: https://www.yrittajat.fi/uutiset/maksuajat]", text)
         self.assertIn("Pk-yritysten maksuajat ovat pidentyneet", text)
 
     def test_talous_rss_supplement_rejects_promotional_context(self):

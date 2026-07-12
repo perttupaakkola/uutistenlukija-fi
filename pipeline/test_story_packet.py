@@ -2,14 +2,70 @@
 from __future__ import annotations
 
 import unittest
+import json
+from pathlib import Path
 
 try:
-    from .story_packet import build_story_packet
+    from .story_packet import build_story_packet, selected_source_provenance_error
 except ImportError:  # pragma: no cover
-    from story_packet import build_story_packet
+    from story_packet import build_story_packet, selected_source_provenance_error
 
 
 class StoryPacketTests(unittest.TestCase):
+    def test_retained_packet_rejects_seed_url_for_different_selected_source(self) -> None:
+        fixture = Path(__file__).resolve().parent / "queues/staged/published/20260712T185125Z_dd3d7edcb5.json"
+        retained = json.loads(fixture.read_text(encoding="utf-8"))
+
+        self.assertEqual(retained["packet"]["source_names"], ["Stara", "Stara", "Stara"])
+        self.assertIn("tivi.fi", retained["packet"]["source_urls"][0])
+        self.assertIn("seed provenance cannot substitute", selected_source_provenance_error(retained["packet"]))
+
+    def test_selected_blocks_publish_one_consistent_source_tuple(self) -> None:
+        url = "https://www.stara.fi/uutinen"
+        article = {
+            "title": "Sähkön futuurihinnat nousivat loppuvuodelle",
+            "description": "Futuurihintojen vertailu osoittaa sähkömarkkinan odotusten nousseen.",
+            "source": "Tivi",
+            "link": "https://www.tivi.fi/eri-uutinen",
+            "category_hint": "Talous",
+            "research": f"[Lähde: Stara | URL: {url}]\n" + ("Sähkön futuurihinta nousi markkinoilla loppuvuodelle. " * 30),
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(packet["source_selection_outcome"], "usable_source_packet")
+        self.assertEqual(packet["selected_source"], {"name": "Stara", "url": url, "domain": "stara.fi"})
+        self.assertEqual(packet["source_urls"], [url])
+
+    def test_missing_selected_source_url_is_provenance_invalid(self) -> None:
+        article = {
+            "title": "Sähkön futuurihinnat nousivat loppuvuodelle",
+            "description": "Futuurihintojen vertailu osoittaa sähkömarkkinan odotusten nousseen.",
+            "source": "Tivi",
+            "link": "https://www.tivi.fi/eri-uutinen",
+            "category_hint": "Talous",
+            "research": "[Lähde: Stara]\n" + ("Sähkön futuurihinta nousi markkinoilla loppuvuodelle. " * 30),
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(packet["source_selection_outcome"], "provenance_invalid")
+        self.assertIn("missing name/url/domain", packet["selected_source_provenance_error"])
+
+    def test_selected_source_url_domain_mismatch_is_rejected(self) -> None:
+        packet = {
+            "clean_source_blocks": [
+                {
+                    "source": "Stara",
+                    "source_url": "https://www.stara.fi/uutinen",
+                    "source_domain": "tivi.fi",
+                    "text": "Valittu lähdekatkelma.",
+                    "word_count": 3,
+                }
+            ]
+        }
+
+        self.assertEqual(selected_source_provenance_error(packet), "selected source URL/domain mismatch")
     def test_oululainen_restaurant_business_story_is_not_ai_or_iran_substring_match(self) -> None:
         article = {
             "title": "Oululainen ravintoloitsija haukkuu päättäjät ja haluaa sanoa asiakkaille kaksi asiaa",
@@ -267,7 +323,7 @@ class StoryPacketTests(unittest.TestCase):
             "source": "Taloussanomat",
             "link": "https://www.is.fi/taloussanomat/example",
             "category_hint": "Talous",
-            "research": f"[Lähde: ksml.fi]\n{research_words}",
+            "research": f"[Lähde: ksml.fi | URL: https://www.ksml.fi/uutinen]\n{research_words}",
         }
 
         packet = build_story_packet(article)

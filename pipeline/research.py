@@ -563,7 +563,7 @@ def _research_article(article: dict) -> str:
     if original_url:
         original_text = fetch_article_text(original_url)
         if original_text and len(original_text.split()) >= MIN_USEFUL_WORDS:
-            label = article.get("source", _get_domain(original_url) or "Alkuperäinen lähde")
+            label = f'{article.get("source", _get_domain(original_url) or "Alkuperäinen lähde")} | URL: {original_url}'
             sources_collected.append((label, original_text))
             print(f"[research]   Original: {len(original_text.split())}w from {_get_domain(original_url)}")
         elif original_text:
@@ -571,7 +571,8 @@ def _research_article(article: dict) -> str:
             print(f"[research]   Original: only {original_words}w (too thin, discarded)")
             cleaned_original = _clean_research_text(original_text)
             if _usable_talous_original_fallback(article, cleaned_original):
-                label = article.get("source") or _get_domain(original_url) or "Alkuperäinen lähde"
+                source_name = article.get("source") or _get_domain(original_url) or "Alkuperäinen lähde"
+                label = f"{source_name} | URL: {original_url}"
                 thin_original_fallback = (label, cleaned_original)
         else:
             print(f"[research]   Original: empty/blocked")
@@ -605,7 +606,7 @@ def _research_article(article: dict) -> str:
         word_count = len(text.split()) if text else 0
 
         if text and word_count >= MIN_USEFUL_WORDS:
-            sources_collected.append((source_name, text))
+            sources_collected.append((f"{source_name} | URL: {url}", text))
             fetched += 1
             print(f"[research]   + {domain}: {word_count}w ✓")
         elif text:
@@ -616,6 +617,7 @@ def _research_article(article: dict) -> str:
     rss_supplement = _talous_rss_supplement(article, sources_collected)
     if rss_supplement:
         label, text = rss_supplement
+        label = f"{label} | URL: {original_url}"
         print(f"[research]   + RSS: {len(text.split())}w bounded Talous supplement")
         sources_collected.append((label, text))
 

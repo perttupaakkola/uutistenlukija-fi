@@ -27,7 +27,7 @@ SAMPLE_ARTICLE = {
     "description": "Hallitus valmistelee uusia sosiaalihuollon säästöjä ja esittää niiden tulevan voimaan ensi vuonna.",
     "link": "https://example.com/story",
     "category_hint": "Kotimaa",
-    "research": "[Lähde: Yle]\nHallitus valmistelee uusia sosiaalihuollon säästöjä. Päätöksiä valmistellaan ensi vuodelle ja vaikutukset kohdistuvat useisiin palveluihin.\n\n---\n\n[Lähde: BBC]\nThe government is preparing new savings measures for social care. Ministers say the final package is still under preparation.",
+    "research": "[Lähde: Yle | URL: https://yle.fi/a/testi]\nHallitus valmistelee uusia sosiaalihuollon säästöjä. Päätöksiä valmistellaan ensi vuodelle ja vaikutukset kohdistuvat useisiin palveluihin.\n\n---\n\n[Lähde: BBC | URL: https://bbc.com/news/test]\nThe government is preparing new savings measures for social care. Ministers say the final package is still under preparation.",
 }
 
 
@@ -38,7 +38,7 @@ def _source_packet(source_words: int, blocks: int = 2) -> dict:
         "category_hint": "Talous",
         "source_text": "\n\n".join(f"[Lähde: Testi {idx}]\n{block_text}" for idx in range(blocks)),
         "clean_source_blocks": [
-            {"source": f"Testi {idx}", "text": block_text, "word_count": len(block_text.split())}
+            {"source": f"Testi {idx}", "source_url": f"https://testi.example/{idx}", "source_domain": "testi.example", "text": block_text, "word_count": len(block_text.split())}
             for idx in range(blocks)
         ],
     }
@@ -121,6 +121,23 @@ class MonicaWriterTests(unittest.TestCase):
 
     def test_openclaw_candidates_include_user_bin_wrapper_first(self):
         self.assertEqual(OPENCLAW_CANDIDATES[0], "/home/pertt/.openclaw/bin/openclaw")
+
+    @patch(PATCH_TARGET)
+    def test_rewrite_fails_closed_before_dispatch_on_provenance_mismatch(self, run_mock):
+        packet = _source_packet(120, blocks=1)
+        packet["clean_source_blocks"][0]["source_domain"] = "wrong.example"
+
+        with patch(f"{rewrite_articles.__module__}.build_story_packet", return_value=packet), \
+             patch(f"{rewrite_articles.__module__}.save_writer_quarantine") as quarantine_mock:
+            rewritten = rewrite_articles([dict(SAMPLE_ARTICLE)])
+
+        self.assertEqual(rewritten, [])
+        run_mock.assert_not_called()
+        self.assertEqual(quarantine_mock.call_args.args[1], "selected_source_provenance_invalid")
+        self.assertEqual(
+            quarantine_mock.call_args.kwargs["extra"]["reason_code"],
+            "selected_source_provenance_invalid",
+        )
 
     def test_extract_json_object_skips_noisy_braces_before_payload(self):
         raw = 'openclaw: dispatch {agent=monica}\nnot json {oops}\n' + _good_payload() + '\n[done]'
@@ -639,9 +656,9 @@ class MonicaWriterTests(unittest.TestCase):
         original_packet["source_text"] = " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 80)
         original_packet["story_confidence"] = 0.9
         original_packet["clean_source_blocks"] = [
-            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 20), "word_count": 120, "source": "Testi"},
-            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 15), "word_count": 90, "source": "Testi 2"},
-            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 12), "word_count": 72, "source": "Testi 3"},
+            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 20), "word_count": 120, "source": "Testi", "source_url": "https://testi.example/1", "source_domain": "testi.example"},
+            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 15), "word_count": 90, "source": "Testi 2", "source_url": "https://testi.example/2", "source_domain": "testi.example"},
+            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 12), "word_count": 72, "source": "Testi 3", "source_url": "https://testi.example/3", "source_domain": "testi.example"},
         ]
         with patch(f"{rewrite_articles.__module__}.build_story_packet", return_value=original_packet):
             rewritten = rewrite_articles([article])

@@ -9,6 +9,7 @@ import html
 import json
 import os
 import re
+from urllib.parse import urlparse
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
@@ -132,15 +133,25 @@ def _normalize_ws(text: str) -> str:
     return _WS_RE.sub(" ", text or "").strip()
 
 
-def _extract_source_label(text: str) -> str:
+def _extract_source_provenance(text: str) -> tuple[str, str]:
     lines = (text or "").splitlines()
     if not lines:
-        return ""
+        return "", ""
     first_line = lines[0].strip()
     match = re.match(r"\[(?:Lähde|Source):\s*([^\]]+?)\]", first_line, flags=re.IGNORECASE)
     if not match:
-        return ""
-    return _normalize_ws(match.group(1))
+        return "", ""
+    value = _normalize_ws(match.group(1))
+    name, separator, url = value.partition(" | URL: ")
+    return _normalize_ws(name), _normalize_ws(url) if separator else ""
+
+
+def _extract_source_label(text: str) -> str:
+    return _extract_source_provenance(text)[0]
+
+
+def _source_domain(url: str) -> str:
+    return (urlparse(str(url or "")).hostname or "").lower().removeprefix("www.")
 
 
 def queue_root() -> Path:
@@ -172,27 +183,29 @@ def _sanitize_source_block(text: str) -> str:
     return text.strip()
 
 
-def _source_sections(research_text: str) -> list[tuple[str, str]]:
-    sections: list[tuple[str, str]] = []
+def _source_sections(research_text: str) -> list[tuple[str, str, str]]:
+    sections: list[tuple[str, str, str]] = []
     current_label = ""
+    current_url = ""
     current_lines: list[str] = []
 
     for line in (research_text or "").splitlines():
-        label = _extract_source_label(line)
+        label, source_url = _extract_source_provenance(line)
         if label:
             if current_lines:
-                sections.append((current_label, "\n".join(current_lines).strip()))
+                sections.append((current_label, current_url, "\n".join(current_lines).strip()))
             current_label = label
+            current_url = source_url
             current_lines = []
             continue
         current_lines.append(line)
 
     if current_lines:
-        sections.append((current_label, "\n".join(current_lines).strip()))
+        sections.append((current_label, current_url, "\n".join(current_lines).strip()))
     return sections
 
 
-def _chunk_source_paragraphs(label: str, text: str, source_type: str = "research") -> list[dict]:
+def _chunk_source_paragraphs(label: str, text: str, source_type: str = "research", source_url: str = "") -> list[dict]:
     paragraphs = [_sanitize_source_block(part) for part in _SOURCE_SPLIT_RE.split(text or "")]
     paragraphs = [part for part in paragraphs if part]
     chunks: list[dict] = []
@@ -207,6 +220,8 @@ def _chunk_source_paragraphs(label: str, text: str, source_type: str = "research
             chunks.append(
                 {
                     "source": label,
+                    "source_url": source_url,
+                    "source_domain": _source_domain(source_url),
                     "source_type": source_type,
                     "text": clean,
                     "word_count": len(clean.split()),
@@ -222,6 +237,8 @@ def _chunk_source_paragraphs(label: str, text: str, source_type: str = "research
         chunks.append(
             {
                 "source": label,
+                "source_url": source_url,
+                "source_domain": _source_domain(source_url),
                 "source_type": source_type,
                 "text": clean,
                 "word_count": len(clean.split()),
@@ -241,9 +258,9 @@ def _split_research_blocks(research_text: str) -> list[dict]:
 
     sections = _source_sections(research_text)
     if sections:
-        for idx, (label, section_text) in enumerate(sections, start=1):
+        for idx, (label, source_url, section_text) in enumerate(sections, start=1):
             clean_label = label or f"source-{idx}"
-            blocks.extend(_chunk_source_paragraphs(clean_label, section_text))
+            blocks.extend(_chunk_source_paragraphs(clean_label, section_text, source_url=source_url))
         return blocks
 
     parts = [part.strip() for part in _SOURCE_SPLIT_RE.split(research_text) if part.strip()]
@@ -255,6 +272,8 @@ def _split_research_blocks(research_text: str) -> list[dict]:
         blocks.append(
             {
                 "source": label,
+                "source_url": "",
+                "source_domain": "",
                 "source_type": "research",
                 "text": clean,
                 "word_count": len(clean.split()),
@@ -384,6 +403,8 @@ def _fallback_source_blocks(article: dict) -> list[dict]:
         blocks.append(
             {
                 "source": article.get("source", "") or "rss",
+                "source_url": article.get("link", ""),
+                "source_domain": _source_domain(article.get("link", "")),
                 "source_type": "description",
                 "text": description,
                 "word_count": len(description.split()),
@@ -554,6 +575,62 @@ def _source_diagnostics(all_blocks: list[dict], selected_blocks: list[dict]) -> 
     }
 
 
+def _hydrate_selected_source_provenance(article: dict, blocks: list[dict]) -> None:
+    """Attach the seed URL only to blocks that actually name the seed source."""
+    seed_name = _normalize_ws(str(article.get("source") or "")).casefold()
+    seed_url = _normalize_ws(str(article.get("link") or ""))
+    for block in blocks:
+        if block.get("source_url") or _normalize_ws(str(block.get("source") or "")).casefold() != seed_name:
+            continue
+        block["source_url"] = seed_url
+        block["source_domain"] = _source_domain(seed_url)
+
+
+def selected_source_provenance_error(packet: dict) -> str:
+    """Return why selected supporting blocks cannot form trustworthy attribution."""
+    blocks = packet.get("clean_source_blocks") or []
+    if not blocks:
+        return ""
+    by_name: dict[str, tuple[str, str]] = {}
+    by_url: dict[str, str] = {}
+    for block in blocks:
+        name = _normalize_ws(str(block.get("source") or ""))
+        url = _normalize_ws(str(block.get("source_url") or ""))
+        domain = _normalize_ws(str(block.get("source_domain") or "")) or _source_domain(url)
+        if not name or not url or not domain:
+            return "selected source block is missing name/url/domain; seed provenance cannot substitute"
+        if _source_domain(url) != domain:
+            return "selected source URL/domain mismatch"
+        name_key = name.casefold()
+        url_key = url.casefold()
+        current = (url_key, domain)
+        if name_key in by_name and by_name[name_key] != current:
+            return "selected source name maps to multiple URL/domain tuples"
+        if url_key in by_url and by_url[url_key] != name_key:
+            return "selected source URL maps to multiple names"
+        by_name[name_key] = current
+        by_url[url_key] = name_key
+    return ""
+
+
+def _primary_selected_source(blocks: list[dict]) -> dict:
+    totals: dict[tuple[str, str, str], int] = {}
+    display: dict[tuple[str, str, str], dict] = {}
+    for block in blocks:
+        key = (
+            _normalize_ws(str(block.get("source") or "")).casefold(),
+            _normalize_ws(str(block.get("source_url") or "")).casefold(),
+            _normalize_ws(str(block.get("source_domain") or "")).casefold(),
+        )
+        totals[key] = totals.get(key, 0) + int(block.get("word_count", 0) or 0)
+        display[key] = {
+            "name": _normalize_ws(str(block.get("source") or "")),
+            "url": _normalize_ws(str(block.get("source_url") or "")),
+            "domain": _normalize_ws(str(block.get("source_domain") or "")),
+        }
+    return display[max(totals, key=totals.get)] if totals else {}
+
+
 def _infer_category(article: dict, selected_blocks: list[dict]) -> str:
     title_and_desc = " ".join(
         part
@@ -627,8 +704,15 @@ def build_story_packet(article: dict) -> dict:
     supported_blocks = _filter_topically_supported_sources(article, all_blocks)
     selected_blocks = _select_best_sources(article, supported_blocks)
     selected_blocks = _backfill_research_sources(selected_blocks, all_blocks)
+    _hydrate_selected_source_provenance(article, selected_blocks)
     source_text = "\n\n".join(block["text"] for block in selected_blocks)
     source_diagnostics = _source_diagnostics(all_blocks, selected_blocks)
+    provenance_error = selected_source_provenance_error({"clean_source_blocks": selected_blocks})
+    selected_source = _primary_selected_source(selected_blocks) if not provenance_error else {}
+
+    source_names = list(dict.fromkeys(block.get("source", "") for block in selected_blocks if block.get("source")))
+    source_urls = list(dict.fromkeys(block.get("source_url", "") for block in selected_blocks if block.get("source_url")))
+    source_domains = list(dict.fromkeys(block.get("source_domain", "") for block in selected_blocks if block.get("source_domain")))
 
     inferred_category = _infer_category(article, selected_blocks)
     packet = {
@@ -638,8 +722,11 @@ def build_story_packet(article: dict) -> dict:
         "description_seed": description,
         "link": article.get("link", ""),
         "source": article.get("source", ""),
-        "source_names": [block.get("source", "") for block in selected_blocks if block.get("source")],
-        "source_urls": [article.get("link", "")] if article.get("link") else [],
+        "source_names": source_names,
+        "source_urls": source_urls,
+        "source_domains": source_domains,
+        "selected_source": selected_source,
+        "selected_source_provenance_error": provenance_error,
         "category_hint": inferred_category,
         "category": inferred_category,
         "story_confidence": _story_confidence(selected_blocks, article),
@@ -656,7 +743,8 @@ def build_story_packet(article: dict) -> dict:
         "source_text": source_text,
         "source_diagnostics": source_diagnostics,
         "source_selection_outcome": (
-            "zero_source_packet" if source_diagnostics["zero_source_packet"]
+            "provenance_invalid" if provenance_error
+            else "zero_source_packet" if source_diagnostics["zero_source_packet"]
             else "low_source_packet" if source_diagnostics["low_source_packet"]
             else "usable_source_packet"
         ),
