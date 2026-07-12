@@ -45,7 +45,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/tuntematon-mies-seurasi-naista-yolla-kotiin-ja-raiskasi-ystava-todisti-jarkyttavia-tapahtumia-puhelimessa/9364318"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
