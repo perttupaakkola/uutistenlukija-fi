@@ -2,7 +2,7 @@
 title: "Nesteen alkuvuoden tulos vahvistui rajusti – osa kasvusta jää väliaikaiseksi"
 date: 2026-07-11T03:18:07.303656+00:00
 categories:
-  - Teknologia
+  - Talous
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

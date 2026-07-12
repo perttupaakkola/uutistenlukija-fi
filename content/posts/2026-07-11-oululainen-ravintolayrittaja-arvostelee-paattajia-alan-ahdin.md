@@ -2,7 +2,7 @@
 title: "Oululainen ravintolayrittäjä arvostelee päättäjiä alan ahdingosta"
 date: 2026-07-11T02:48:37.624483+00:00
 categories:
-  - Ulkomaat
+  - Talous
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
