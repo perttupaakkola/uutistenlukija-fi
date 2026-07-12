@@ -47,11 +47,40 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
     def test_existing_passive_lead_telemetry_is_preserved(self) -> None:
         for template in (self.mainosta, self.cta):
             self.assertIn('data-track="advertise_cta_click"', template)
-            self.assertIn('data-monetization-signal="advertise_email_click"', template)
 
-        self.assertIn('data-monetization-signal="advertise_page_click"', self.cta)
+        self.assertIn('data-monetization-signal="advertise_email_click"', self.mainosta)
+        self.assertIn("advertise_email_click", self.cta)
+        self.assertIn("advertise_page_click", self.cta)
         self.assertIn("_gtag('event', 'monetization_signal'", self.tracking)
         self.assertIn("[data-monetization-signal]", self.tracking)
+
+    def test_article_bottom_uses_approved_founding_sponsor_contract(self) -> None:
+        approved_copy = (
+            "Yrityksille · Perustajakumppanuus",
+            "Kiinnostaisiko näkyvyys Uutistenlukijan perustajakumppanina?",
+            "Kumppani ei vaikuta uutisaiheiden valintaan, juttujen sisältöön, "
+            "lähteisiin, julkaisemiseen tai järjestykseen.",
+            "Kiinnostuksen ilmaiseminen ei sido kampanjaan.",
+            "Näkyvyyttä, klikkauksia tai myyntiä ei taata.",
+            "Tutustu mainonnan periaatteisiin",
+            "Ilmaise kiinnostuksesi",
+        )
+        for copy in approved_copy:
+            with self.subTest(copy=copy):
+                self.assertIn(copy, self.cta)
+
+        self.assertIn('eq $placement "article-bottom"', self.cta)
+        self.assertIn("founding_sponsor_page_click", self.cta)
+        self.assertIn("founding_sponsor_interest_click", self.cta)
+        self.assertIn("article-bottom-founding-sponsor-v1", self.cta)
+        self.assertIn("Kiinnostus%20Uutistenlukijan%20perustajakumppanuuteen", self.cta)
+
+    def test_founding_sponsor_view_requires_half_visibility_for_one_second(self) -> None:
+        self.assertIn('data-monetization-view="founding_sponsor_cta_view"', self.cta)
+        self.assertIn("entry.intersectionRatio < 0.5", self.tracking)
+        self.assertIn("}, 1000);", self.tracking)
+        self.assertIn("_gtag('event', kind", self.tracking)
+        self.assertIn("viewFired = true", self.tracking)
 
     def test_article_bottom_cta_uses_full_width_copy_row(self) -> None:
         selector = ".advertiser-cta--article-bottom .advertiser-cta__inner"

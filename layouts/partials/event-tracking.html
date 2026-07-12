@@ -211,6 +211,39 @@
       if (!el) return;
       recordSignal(el.dataset.monetizationSignal || 'unknown', el);
     });
+
+    var viewTarget = document.querySelector('[data-monetization-view]');
+    if (!viewTarget || !('IntersectionObserver' in window)) return;
+
+    var viewTimer = null;
+    var viewFired = false;
+    var viewObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (viewFired) return;
+        if (!entry.isIntersecting || entry.intersectionRatio < 0.5) {
+          if (viewTimer !== null) {
+            window.clearTimeout(viewTimer);
+            viewTimer = null;
+          }
+          return;
+        }
+
+        if (viewTimer !== null) return;
+        viewTimer = window.setTimeout(function () {
+          var kind = viewTarget.dataset.monetizationView;
+          viewTimer = null;
+          viewFired = true;
+          viewObserver.unobserve(viewTarget);
+          recordSignal(kind, viewTarget);
+          _gtag('event', kind, {
+            placement: viewTarget.dataset.placement || 'unknown',
+            page_path: window.location.pathname
+          });
+        }, 1000);
+      });
+    }, { threshold: [0.5] });
+
+    viewObserver.observe(viewTarget);
   })();
 
   // ── outbound_click ──────────────────────────────────────────────────────
