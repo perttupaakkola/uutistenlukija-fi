@@ -55,7 +55,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/science/2026/07/a-jupiter-size-planet-that-escaped-its-stars-death/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
