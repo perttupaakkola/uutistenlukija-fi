@@ -1,0 +1,91 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-12T02:11:20.263349+00:00",
+  "digest": "445cde8f17",
+  "packet": {
+    "packet_id": "20260712T021120Z_445cde8f17",
+    "created_at": "2026-07-12T02:11:20Z",
+    "headline_seed": "Lahden johtajilta tyrmäys Garden Helsingin valtiontuelle – hakisivat tukea myös paikalliselle monitoimiareenalle",
+    "description_seed": "Lahden kaupunginjohtajan ja kaupunginhallituksen puheenjohtajan mielestä Helsingin jättiareenan tukipäätös on epäreilu. Kaupunginvaltuuston puheenjohtaja hakisi Lahteen suunnitellulle monitoimiareenalle valtiontukea, mutta hanke pitäisi ensin rakentaa uskottavalle pohjalle.",
+    "link": "https://www.ess.fi/paikalliset/9611573",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [
+      "https://www.ess.fi/paikalliset/9611573"
+    ],
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Lahden johtajilta tyrmäys Garden Helsingin valtiontuelle – hakisivat tukea myös paikalliselle monitoimiareenalle"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_type": "research",
+        "text": "Lahden kaupunginjohtajan ja kaupunginhallituksen puheenjohtajan mielestä Helsingin jättiareenan tukipäätös on epäreilu. Kaupunginvaltuuston puheenjohtaja hakisi Lahteen suunnitellulle monitoimiareenalle valtiontukea, mutta hanke pitäisi ensin rakentaa uskottavalle pohjalle.",
+        "word_count": 25,
+        "keyword_overlap": 23,
+        "strong_overlap": 20
+      }
+    ],
+    "source_text": "Lahden kaupunginjohtajan ja kaupunginhallituksen puheenjohtajan mielestä Helsingin jättiareenan tukipäätös on epäreilu. Kaupunginvaltuuston puheenjohtaja hakisi Lahteen suunnitellulle monitoimiareenalle valtiontukea, mutta hanke pitäisi ensin rakentaa uskottavalle pohjalle.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 50,
+      "selected_blocks": 1,
+      "selected_source_words": 25,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "low_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Lahden johtajilta tyrmäys Garden Helsingin valtiontuelle – hakisivat tukea myös paikalliselle monitoimiareenalle",
+      "description": "Lahden kaupunginjohtajan ja kaupunginhallituksen puheenjohtajan mielestä Helsingin jättiareenan tukipäätös on epäreilu. Kaupunginvaltuuston puheenjohtaja hakisi Lahteen suunnitellulle monitoimiareenalle valtiontukea, mutta hanke pitäisi ensin rakentaa uskottavalle pohjalle.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Lahden johtajilta tyrmäys Garden Helsingin valtiontuelle – hakisivat tukea myös paikalliselle monitoimiareenalle",
+    "description": "Lahden kaupunginjohtajan ja kaupunginhallituksen puheenjohtajan mielestä Helsingin jättiareenan tukipäätös on epäreilu. Kaupunginvaltuuston puheenjohtaja hakisi Lahteen suunnitellulle monitoimiareenalle valtiontukea, mutta hanke pitäisi ensin rakentaa uskottavalle pohjalle.",
+    "link": "https://www.ess.fi/paikalliset/9611573",
+    "published": "2026-07-12T05:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "24f7baa3143baa12a8c8ecc5158e9163",
+    "_url_hash": "38b619611d21deef59fb4a23dba1f722f487d10d876bf9f95959fb0571c9150c",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Lahden kaupunginjohtajan ja kaupunginhallituksen puheenjohtajan mielestä Helsingin jättiareenan tukipäätös on epäreilu. Kaupunginvaltuuston puheenjohtaja hakisi Lahteen suunnitellulle monitoimiareenalle valtiontukea, mutta hanke pitäisi ensin rakentaa uskottavalle pohjalle.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-07-12T02:13:17.701755+00:00",
+  "failure": "Aineisto sisältää vain lyhyen kuvauksen ilman päätöksen, tukisummaa koskevien tietojen, henkilöiden nimien tai Lahden areenahankkeen taustojen varmennusta. Siitä ei voi kirjoittaa vähintään 250 sanan uutista ilman täytettä tai keksittyjä tietoja.",
+  "raw_response": "{\"packet_id\":\"20260712T021120Z_445cde8f17\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Aineisto sisältää vain lyhyen kuvauksen ilman päätöksen, tukisummaa koskevien tietojen, henkilöiden nimien tai Lahden areenahankkeen taustojen varmennusta. Siitä ei voi kirjoittaa vähintään 250 sanan uutista ilman täytettä tai keksittyjä tietoja.\"}"
+}
