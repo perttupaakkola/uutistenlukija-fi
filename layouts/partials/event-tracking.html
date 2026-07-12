@@ -133,6 +133,15 @@
   // ── data-track click events ────────────────────────────────────────────
   // Fires GA4 events from declarative data attributes.
   (function () {
+    function safeLinkUrl(el) {
+      var href = el.href || '';
+      var schemeMatch = href.match(/^([a-z][a-z0-9+.-]*):/i);
+      if (schemeMatch && /^(mailto|tel)$/i.test(schemeMatch[1])) {
+        return schemeMatch[1].toLowerCase() + ':';
+      }
+      return href;
+    }
+
     document.addEventListener('click', function (e) {
       var el = e.target.closest('[data-track]');
       if (!el) return;
@@ -141,7 +150,7 @@
       if (!eventName) return;
 
       var params = {
-        link_url: el.href || '',
+        link_url: safeLinkUrl(el),
         link_text: (el.textContent || '').trim().slice(0, 100)
       };
 

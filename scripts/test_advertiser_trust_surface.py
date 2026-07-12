@@ -54,6 +54,12 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
         self.assertIn("_gtag('event', 'monetization_signal'", self.tracking)
         self.assertIn("[data-monetization-signal]", self.tracking)
 
+    def test_mailto_analytics_never_include_recipient_or_message_content(self) -> None:
+        self.assertIn("/^(mailto|tel)$/i.test(schemeMatch[1])", self.tracking)
+        self.assertIn("return schemeMatch[1].toLowerCase() + ':'", self.tracking)
+        self.assertIn("link_url: safeLinkUrl(el)", self.tracking)
+        self.assertNotIn("link_url: el.href", self.tracking)
+
     def test_article_bottom_uses_approved_founding_sponsor_contract(self) -> None:
         approved_copy = (
             "Yrityksille · Perustajakumppanuus",
