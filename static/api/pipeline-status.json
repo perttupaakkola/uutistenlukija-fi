@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-12T22:09:49+00:00",
+  "generated_at": "2026-07-12T22:40:21+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,19 +12,20 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 44,
-    "rejected": 2,
+    "published": 45,
+    "rejected": 3,
     "publish_rate": 0,
-    "last_published_ts": "2026-07-12T22:08:05.983087+00:00"
+    "last_published_ts": "2026-07-12T22:38:35.132390+00:00"
   },
   "reject_reasons": {
-    "missing: image": 2,
+    "missing: image": 3,
+    "language borderline Finnish si": 2,
     "readability few paragraphs (1)": 2,
     "readability wall of text": 2,
     "only 1 paragraphs (min 3)": 2,
-    "language borderline Finnish si": 1,
     "length under target (259 words": 1,
-    "length under target (273 words": 1
+    "length under target (273 words": 1,
+    "length under target (256 words": 1
   },
   "feeds": {
     "total": 33,
@@ -41,7 +42,7 @@
     ],
     [
       "aikana",
-      23
+      24
     ],
     [
       "kanssa",
