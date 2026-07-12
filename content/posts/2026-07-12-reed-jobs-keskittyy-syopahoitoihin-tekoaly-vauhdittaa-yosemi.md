@@ -47,7 +47,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/07/11/reed-jobs-would-rather-talk-about-curing-cancer-than-his-last-name/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
