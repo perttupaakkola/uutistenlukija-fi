@@ -47,7 +47,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/turun-linnan-turnajaisissa-loukkaantunut-kuvasi-onnettomuuden-vietti-yon-sairaalassa-se-oli-aivan-hirvea-tilanne/9365316"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
