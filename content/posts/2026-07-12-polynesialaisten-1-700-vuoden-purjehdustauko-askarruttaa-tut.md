@@ -47,7 +47,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/culture/2026/07/the-real-mystery-behind-moana-after-1700-years-why-did-polynesians-suddenly-sail-east/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
