@@ -47,7 +47,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/12/taas-yksi-magsafe-varavirtalahde-vedetaan-takaisin-ylikuumenemis-ja-tulipaloriskin-takia/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 

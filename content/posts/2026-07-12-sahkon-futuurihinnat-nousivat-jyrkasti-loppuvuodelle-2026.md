@@ -47,6 +47,7 @@ keywords:
 source_name: "Stara"
 source_url: "https://www.stara.fi/2026/06/13/sahkon-hintoihin-raju-nousu-loppuvuoden-hintaennuste-nousi-28-prosenttia/"
 source_domain: "stara.fi"
+briefing: true
 draft: false
 ---
 
