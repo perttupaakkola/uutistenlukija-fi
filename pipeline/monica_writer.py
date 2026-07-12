@@ -24,11 +24,11 @@ from pathlib import Path
 from typing import Any
 
 try:
-    from .category_guard import category_text, protect_tiede_category
+    from .category_guard import category_text, protect_business_category, protect_tiede_category
     from .quarantine import save_writer_quarantine
     from .story_packet import build_story_packet, ensure_queue_dirs, save_packet
 except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
-    from category_guard import category_text, protect_tiede_category
+    from category_guard import category_text, protect_business_category, protect_tiede_category
     from quarantine import save_writer_quarantine
     from story_packet import build_story_packet, ensure_queue_dirs, save_packet
 
@@ -787,6 +787,16 @@ def _merge_article(original: dict, packet: dict, payload: dict) -> dict:
     elif category not in ALLOWED_CATEGORIES:
         category = "Kotimaa"
     category = protect_tiede_category(
+        category,
+        " ".join(
+            [
+                category_text(original),
+                category_text(packet),
+                category_text(payload),
+            ]
+        ),
+    )
+    category = protect_business_category(
         category,
         " ".join(
             [

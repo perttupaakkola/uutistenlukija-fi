@@ -183,6 +183,27 @@ class MonicaWriterTests(unittest.TestCase):
 
         self.assertEqual(article["category"], "Talous")
 
+    def test_merge_article_recovers_retained_macroeconomy_candidate(self):
+        original = {
+            **SAMPLE_ARTICLE,
+            "title": "One Nation capitalises on economic pessimism",
+            "description": "Inflation, high housing costs and interest rate hikes weigh on households.",
+            "category_hint": "Ulkomaat",
+            "_guessed_category": "Ulkomaat",
+        }
+        packet = _source_packet(360, blocks=2)
+        packet["category"] = "Kotimaa"
+        packet["category_hint"] = "Kotimaa"
+        payload = json.loads(_good_payload())
+        payload["category"] = "Kotimaa"
+        payload["title"] = "Talouspessimismi kasvattaa One Nationin kannatusta"
+        payload["summary"] = "Inflaatio ja korkeat asumiskustannukset painavat kotitalouksia."
+        payload["content"] += " Elinkustannukset ja korkojen nousu lisäävät epävarmuutta."
+
+        article = _merge_article(original, packet, payload)
+
+        self.assertEqual(article["category"], "Talous")
+
     def test_merge_article_demotes_tiede_school_police_incident_to_kotimaa(self):
         original = {
             **SAMPLE_ARTICLE,

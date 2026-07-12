@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import unittest
+import json
+from pathlib import Path
 
 try:
     from .category_guard import contains_token, protect_business_category
@@ -46,6 +48,40 @@ class CategoryGuardTests(unittest.TestCase):
                 "Yhtiön tulos kasvoi ja investoinnit vauhdittivat myyntiä.",
             ),
             "Talous",
+        )
+
+    def test_retained_macroeconomy_candidate_routes_to_talous(self) -> None:
+        fixture_path = (
+            Path(__file__).resolve().parent
+            / "queues/staged/published/20260711T203153Z_b15231a0f0.json"
+        )
+        retained = json.loads(fixture_path.read_text(encoding="utf-8"))
+        original = retained["original_article"]
+        text = " ".join(
+            [
+                str(original.get("title") or ""),
+                str(original.get("description") or ""),
+                str(original.get("research") or ""),
+            ]
+        )
+
+        self.assertEqual(retained["packet"]["packet_id"], "20260711T203153Z_b15231a0f0")
+        self.assertEqual(protect_business_category("Ulkomaat", text), "Talous")
+
+    def test_single_economy_term_does_not_steal_genuine_science_or_non_business(self) -> None:
+        self.assertEqual(
+            protect_business_category(
+                "Tiede",
+                "Tutkijat analysoivat inflaation vaikutusta solujen aineenvaihduntaan.",
+            ),
+            "Tiede",
+        )
+        self.assertEqual(
+            protect_business_category(
+                "Kotimaa",
+                "Ravintolapäällikkö kertoi poliisin olevan tulossa paikalle.",
+            ),
+            "Kotimaa",
         )
 
 

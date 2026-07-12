@@ -32,6 +32,13 @@ _BUSINESS_SIGNAL_GROUPS = (
     re.compile(r"\b(?:kasv\w*|kannattav\w*|investoin\w*|myynt\w*|marginaal\w*|analyytik\w*)\b", re.IGNORECASE),
 )
 
+_MACROECONOMY_SIGNAL_GROUPS = (
+    re.compile(r"\b(?:talou\w*|econom\w*|stagfla\w*|infla\w*)\b", re.IGNORECASE),
+    re.compile(r"\b(?:elinkustann\w*|cost[\s-]+of[\s-]+living|living costs?)\b", re.IGNORECASE),
+    re.compile(r"\b(?:asumiskustann\w*|housing costs?|mortgage\w*|asuntolain\w*)\b", re.IGNORECASE),
+    re.compile(r"\b(?:korkojen? nous\w*|interest rate\w*|financial future|job insecurity)\b", re.IGNORECASE),
+)
+
 
 def category_text(article: dict, *extra_parts: str) -> str:
     """Return compact article text used for deterministic category guards."""
@@ -68,8 +75,9 @@ def protect_business_category(category: str, text: str) -> str:
     This is intentionally a category guard, not a quality-gate bypass.
     """
     haystack = str(text or "").casefold()
-    matched_groups = sum(bool(pattern.search(haystack)) for pattern in _BUSINESS_SIGNAL_GROUPS)
-    return "Talous" if matched_groups >= 2 else category
+    company_groups = sum(bool(pattern.search(haystack)) for pattern in _BUSINESS_SIGNAL_GROUPS)
+    macroeconomy_groups = sum(bool(pattern.search(haystack)) for pattern in _MACROECONOMY_SIGNAL_GROUPS)
+    return "Talous" if company_groups >= 2 or macroeconomy_groups >= 2 else category
 
 
 def contains_token(text: str, token: str) -> bool:
