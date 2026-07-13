@@ -47,7 +47,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/tarja-laaksolta-lahti-tyopaikka-alta-osti-tyonantajansa-liikkeen-ja-ryhtyi-yrittajaksi-en-halunnut-jaada-tyottomaksi/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
