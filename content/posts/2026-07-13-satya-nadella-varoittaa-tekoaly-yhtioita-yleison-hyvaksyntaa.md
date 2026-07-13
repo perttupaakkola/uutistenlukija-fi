@@ -47,7 +47,6 @@ keywords:
 source_name: "Fox Business"
 source_url: "https://www.foxbusiness.com/technology/microsoft-ceo-has-warning-about-ai-race"
 source_domain: "foxbusiness.com"
-briefing: true
 draft: false
 ---
 
