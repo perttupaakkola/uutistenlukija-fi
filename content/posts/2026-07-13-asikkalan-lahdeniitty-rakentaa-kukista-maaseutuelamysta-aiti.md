@@ -47,7 +47,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/pinjan-25-kukkatila-hehkuu-pian-useissa-pastellin-savyissa-yrittaja-nakee-maaseudulla-ongelman-johon-haluaa-tarttua-ollaan-aika-vasyneita/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
