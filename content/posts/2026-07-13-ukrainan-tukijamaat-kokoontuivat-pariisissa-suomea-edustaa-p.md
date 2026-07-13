@@ -47,7 +47,6 @@ keywords:
 source_name: "Aamuposti"
 source_url: "https://www.aamuposti.fi/uutissuomalainen/9615466"
 source_domain: "aamuposti.fi"
-briefing: true
 draft: false
 ---
 
