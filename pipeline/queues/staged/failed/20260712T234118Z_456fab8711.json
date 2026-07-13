@@ -1,0 +1,82 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-12T23:41:18.283458+00:00",
+  "digest": "456fab8711",
+  "packet": {
+    "packet_id": "20260712T234118Z_456fab8711",
+    "created_at": "2026-07-12T23:41:18Z",
+    "headline_seed": "Since Chromium 148, Math.tanh is now fingerprintable to link underlying OS",
+    "description_seed": "Article URL: https://scrapfly.dev/posts/browser-math-os-fingerprint/ Comments URL: https://news.ycombinator.com/item?id=48884853 Points: 198 # Comments: 85",
+    "link": "https://scrapfly.dev/posts/browser-math-os-fingerprint/",
+    "source": "Hacker News Best",
+    "source_names": [],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "",
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Since Chromium 148, Math.tanh is now fingerprintable to link underlying OS"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 5,
+      "candidate_source_words": 439,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Hacker News Best",
+        "Hacker News Best",
+        "Hacker News Best",
+        "Hacker News Best",
+        "Hacker News Best"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Since Chromium 148, Math.tanh is now fingerprintable to link underlying OS",
+      "description": "Article URL: https://scrapfly.dev/posts/browser-math-os-fingerprint/ Comments URL: https://news.ycombinator.com/item?id=48884853 Points: 198 # Comments: 85",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Since Chromium 148, Math.tanh is now fingerprintable to link underlying OS",
+    "description": "Article URL: https://scrapfly.dev/posts/browser-math-os-fingerprint/ Comments URL: https://news.ycombinator.com/item?id=48884853 Points: 198 # Comments: 85",
+    "link": "https://scrapfly.dev/posts/browser-math-os-fingerprint/",
+    "published": "2026-07-12T21:12:11+00:00",
+    "source": "Hacker News Best",
+    "source_domain": "hnrss.org",
+    "language": "en",
+    "fingerprint": "229dcd69ec2f6ae2e7d32a6818d1eddf",
+    "_url_hash": "9f0e8ea0f31ae1efab2f3b6d94f1b77b3017e7557b8adbedb43980de0002b8cc",
+    "source_tier": 3,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Hacker News Best | URL: https://scrapfly.dev/posts/browser-math-os-fingerprint/]\nFingerprinting is usually about canvas, WebGL, fonts, audio. There is a quieter signal, and it lives in the last bits of a number.\n\nThat output is an approximation, and its exact bits depend on the OS that computed it. A genuine Mac runs Math.tanh through Apple’s math library. Linux runs it through glibc1. The two disagree on about a quarter of all inputs, usually by one unit in the last place (1 ULP2). Windows, through the Universal C Runtime, disagrees with both on a few percent, and on the input above all three land on a different bit.\n\nThe same call, run on genuine Chrome 150 across three real machines:\n\nMeasured over the DevTools protocol on Chrome 150: Linux (glibc), macOS 26 on Apple Silicon (libsystem_m), Windows 11 (ucrtbase.dll). tanh(0.5) is one of the roughly three-in-four inputs where everyone agrees, which is exactly why it makes a useless probe. tanh(0.8) is one that separates all three at once.\n\nOne tanh call on the right input is a per-OS signature. Claim macOS, return Linux math bits, and you have contradicted your own User-Agent.\n\nThis tell is recent. Until Chrome 148, V8 computed tanh itself with a bundled fdlibm3 port, so it returned the same bits on every OS and leaked nothing. V8 commit c1486295ae5 replaced it with std::tanh, which reads the host libm. It first shipped in V8 14.8.57, which is Chrome 148. Chrome 147 and earlier do not leak here. Chrome 148, 149, and 150 do.\n\nScrapfly ships a browser that has to match a real one across hundreds of signals, and math is one of the harder ones.\n\nIEEE 7544 defines how a double is stored. It does not require sin, cos, tanh, or exp to be correctly rounded. Correct rounding is expensive, so every vendor ships a libm5 that trades a fraction of a ULP for speed, with its own minimax6 coefficients, lookup tables, and reduction constants.\n\nThe three implementations produce three sets of bits:\n\nThey agree almost everywhere and split just often enough to classify the OS. A detector needs no math, only a table: genuine macOS Chrome returns one pattern for cos(1), genuine Linux Chrome returns another, and a single comparison tells them apart.\n\n“Just reimplement the Mac functions” breaks on contact, for four reasons.\n\n1. Only some math leaks. V88 ships its own math and links it statically: Math.exp, Math.pow, Math.atan, and most of the rest come from bundled llvm-libc9, and Math.sin / Math.cos from a bundled glibc-derived dbl-64 routine. All of them are identical on every OS, so spoofing them creates a",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-12T23:43:32.357303+00:00",
+  "failure": "Paketissa ei ole lainkaan valittua lähdetekstiä tai varmennettuja lähteitä, ja ainoa väite ei riitä vähintään 250 sanan uutisartikkeliin ilman täytesisältöä tai keksittyjä tietoja.",
+  "raw_response": "{\"packet_id\":\"20260712T234118Z_456fab8711\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lainkaan valittua lähdetekstiä tai varmennettuja lähteitä, ja ainoa väite ei riitä vähintään 250 sanan uutisartikkeliin ilman täytesisältöä tai keksittyjä tietoja.\"}"
+}

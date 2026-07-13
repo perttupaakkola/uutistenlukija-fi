@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-12T22:51:17.514502+00:00",
+  "digest": "b9f060b7fb",
+  "packet": {
+    "packet_id": "20260712T225117Z_b9f060b7fb",
+    "created_at": "2026-07-12T22:51:17Z",
+    "headline_seed": "Kiekko-Espoon Atte Vuori lähtee valloittamaan WHL-kaukaloita",
+    "description_seed": "Hyökkääjä Atte Vuori on tehnyt sopimuksen WHL-seura Everett Silvertipsin kanssa.",
+    "link": "https://www.jatkoaika.com/Uutiset/Kiekko-Espoon-Atte-Vuori-l%C3%A4htee-valloittamaan-WHL-kaukaloita/186337",
+    "source": "Jatkoaika.com",
+    "source_names": [],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "",
+    "category_hint": "Urheilu",
+    "category": "Urheilu",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kiekko-Espoon Atte Vuori lähtee valloittamaan WHL-kaukaloita"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 93,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Jatkoaika.com"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kiekko-Espoon Atte Vuori lähtee valloittamaan WHL-kaukaloita",
+      "description": "Hyökkääjä Atte Vuori on tehnyt sopimuksen WHL-seura Everett Silvertipsin kanssa.",
+      "category_hint": "Urheilu",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kiekko-Espoon Atte Vuori lähtee valloittamaan WHL-kaukaloita",
+    "description": "Hyökkääjä Atte Vuori on tehnyt sopimuksen WHL-seura Everett Silvertipsin kanssa.",
+    "link": "https://www.jatkoaika.com/Uutiset/Kiekko-Espoon-Atte-Vuori-l%C3%A4htee-valloittamaan-WHL-kaukaloita/186337",
+    "published": "2026-07-11T11:18:26+03:00",
+    "source": "Jatkoaika.com",
+    "source_domain": "jatkoaika.com",
+    "language": "fi",
+    "fingerprint": "3b25748c6d898837a27c74a75bf52c6e",
+    "_url_hash": "1337a62e840a139c640c35bde23a3e3e19ce11bfe65ae501ef31708739144fa2",
+    "source_tier": 2,
+    "category_hint": "Urheilu",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Urheilu",
+    "research": "[Lähde: Yle | URL: https://yle.fi/a/74-20235926]\nJääkiekon NHL-seura Seattle Kraken teki perjantaina paikallista aikaa yksivuotisen jatkosopimuksen suomalaispuolustaja Ville Ottavaisen kanssa, NHL kertoi suomenkielisillä verkkosivuillaan. Kaksisuuntaisen jatkosopimuksen arvo on 850 000 Yhdysvaltain dollaria eli noin 744 000 euroa.\n\nOttavainen, 23, on Seattlen neljännen kierroksen varaus vuodelta 2021 ja siirtyi JYPin liigajoukkueesta rapakon taakse 2023.\n\nKolmen kauden aikana Ottavainen on pelannut yhden NHL-ottelun, mutta Seattlen farmiseura Coachella Valley Firebirdsissä hän on kiekkoillut suuressa roolissa. Kärppien kasvatille on kertynyt 193 runkosarjaottelua pistein 14+52=66 farmiliiga AHL:ssä. Pudotuspelejä hän on pelannut 36 pistein 1+8=9.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-12T22:53:14.356605+00:00",
+  "failure": "Paketissa ei ole valittua lähdeaineistoa, ja ainoa varmistettavissa oleva tieto on Atte Vuoren sopimus Everett Silvertipsin kanssa. Aineisto ei riitä vähintään 250 sanan uutiseen ilman täytettä tai keksittyjä tietoja.",
+  "raw_response": "{\"packet_id\":\"20260712T225117Z_b9f060b7fb\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdeaineistoa, ja ainoa varmistettavissa oleva tieto on Atte Vuoren sopimus Everett Silvertipsin kanssa. Aineisto ei riitä vähintään 250 sanan uutiseen ilman täytettä tai keksittyjä tietoja.\"}"
+}
