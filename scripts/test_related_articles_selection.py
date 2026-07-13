@@ -12,12 +12,32 @@ CASES = {
     "2026-07-12-sahkon-futuurihinnat-nousivat-jyrkasti-loppuvuodelle-2026": (
         "talous",
         ("mariano-rajoyta", "sonya-luopumasta-fyysisist"),
+        (
+            "/posts/2026-07-10-pankinjohtajat-40-vuoden-asuntolainat-kiinnostavat-etenkin-e/",
+            "/posts/2026-05-26-selvitys-suomi-on-muuttunut-sijoittajakansaksi/",
+            "/posts/2026-05-07-porssisahko-kallistuu-torstai-illaksi-perjantaina-hinnat-las/",
+        ),
     ),
     "2026-07-12-etela-afrikka-kasittelee-yli-53-000-ulkomaalaisen-palauttami": (
         "ulkomaat",
         (),
+        (
+            "/posts/2026-07-11-etela-afrikan-maajoukkuepelaaja-jayden-adams-on-kuollut-25-v/",
+            "/posts/2026-07-05-floridalainen-republikaani-varoittaa-haitilaisten-suojeluase/",
+            "/posts/2026-07-01-yhdysvaltain-korkein-oikeus-piti-syntymapaikkaan-perustuvan/",
+        ),
     ),
 }
+
+TARGET_HREF = (
+    "/posts/2026-04-30-mm-kisoissa-voidaan-antaa-punainen-kortti-"
+    "myos-suun-peittami/"
+)
+
+OPT_IN_CASES = (
+    "2026-07-12-argentiina-eteni-valieriin-dramaattisten-vaiheiden-jalkeen-e",
+    "2026-07-12-haaland-uupui-mm-puolivalierassa-norjassa-raivostuttiin-tuom",
+)
 
 
 class RelatedCardsParser(HTMLParser):
@@ -61,6 +81,7 @@ def check_page(
     slug: str,
     expected_category: str,
     forbidden_href_fragments: tuple[str, ...],
+    expected_hrefs: tuple[str, ...] | None = None,
 ) -> None:
     page = public_dir / "posts" / slug / "index.html"
     parser = RelatedCardsParser()
@@ -79,15 +100,48 @@ def check_page(
         for fragment in forbidden_href_fragments
         for href in parser.hrefs
     ), f"{slug}: prohibited semantic mismatch remained: {parser.hrefs}"
+    if expected_hrefs is not None:
+        assert tuple(parser.hrefs) == expected_hrefs, (
+            f"{slug}: default ranking changed: {parser.hrefs}"
+        )
+
+
+def check_opt_in_page(public_dir: Path, slug: str) -> None:
+    page = public_dir / "posts" / slug / "index.html"
+    parser = RelatedCardsParser()
+    parser.feed(page.read_text(encoding="utf-8"))
+
+    assert parser.categories == ["urheilu"] * 3, (
+        f"{slug}: expected three urheilu cards, got {parser.categories}"
+    )
+    assert len(parser.hrefs) == 3, f"{slug}: expected three related links"
+    assert len(set(parser.hrefs)) == 3, f"{slug}: duplicate related links: {parser.hrefs}"
+    assert all(slug not in href for href in parser.hrefs), (
+        f"{slug}: current article appeared in related links: {parser.hrefs}"
+    )
+    assert parser.hrefs.count(TARGET_HREF) == 1, (
+        f"{slug}: expected target exactly once: {parser.hrefs}"
+    )
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--public-dir", type=Path, required=True)
     args = parser.parse_args()
-    for slug, (expected_category, forbidden_href_fragments) in CASES.items():
-        check_page(args.public_dir, slug, expected_category, forbidden_href_fragments)
-    print("related article selection: 2 pages, 6 unique same-category cards — PASS")
+    for slug, (expected_category, forbidden_href_fragments, expected_hrefs) in CASES.items():
+        check_page(
+            args.public_dir,
+            slug,
+            expected_category,
+            forbidden_href_fragments,
+            expected_hrefs,
+        )
+    for slug in OPT_IN_CASES:
+        check_opt_in_page(args.public_dir, slug)
+    print(
+        "related article selection: default ranking unchanged; "
+        "2 opt-in pages have one unique target among 3 same-category cards — PASS"
+    )
     return 0
 
 

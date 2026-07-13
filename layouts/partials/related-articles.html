@@ -9,6 +9,8 @@
     - fill missing same-category slots with newest same-category posts
     - deterministically backfill below 3 with the remaining Hugo Related ranking,
       then newest published posts
+    - allow a bounded source-page opt-in to replace the first cards while keeping
+      the default selection order for every page without the opt-in
 */ -}}
 
 {{- $current := . -}}
@@ -108,6 +110,42 @@
 {{- end -}}
 
 {{- $related = first 3 $related -}}
+
+{{- $optInRefs := .Params.related_articles_opt_in | default (slice) -}}
+{{- if gt (len $optInRefs) 0 -}}
+  {{- $optInRelated := slice -}}
+  {{- range $ref := $optInRefs -}}
+    {{- with site.GetPage (printf "/posts/%s" $ref) -}}
+      {{- $optInCandidate := . -}}
+      {{- $optInCategories := .Params.categories | default (slice) -}}
+      {{- $optInCategory := "" -}}
+      {{- if gt (len $optInCategories) 0 -}}
+        {{- $optInCategory = (index $optInCategories 0) | urlize -}}
+      {{- end -}}
+      {{- if and (not .Draft) (le .Date now) (ne .Permalink $currentPermalink) (eq $optInCategory $currentCat) (lt (len $optInRelated) 3) -}}
+        {{- $alreadyIncluded := false -}}
+        {{- range $item := $optInRelated -}}
+          {{- if eq $item.Permalink $optInCandidate.Permalink -}}{{- $alreadyIncluded = true -}}{{- end -}}
+        {{- end -}}
+        {{- if not $alreadyIncluded -}}
+          {{- $optInRelated = $optInRelated | append $optInCandidate -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- range $candidate := $related -}}
+    {{- if lt (len $optInRelated) 3 -}}
+      {{- $alreadyIncluded := false -}}
+      {{- range $item := $optInRelated -}}
+        {{- if eq $item.Permalink $candidate.Permalink -}}{{- $alreadyIncluded = true -}}{{- end -}}
+      {{- end -}}
+      {{- if not $alreadyIncluded -}}
+        {{- $optInRelated = $optInRelated | append $candidate -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $related = first 3 $optInRelated -}}
+{{- end -}}
 
 {{- if gt (len $related) 0 -}}
 <section class="related-articles" aria-labelledby="related-heading">

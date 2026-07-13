@@ -39,6 +39,8 @@ tags:
   - argentiina
   - sveitsi
   - var
+related_articles_opt_in:
+  - 2026-04-30-mm-kisoissa-voidaan-antaa-punainen-kortti-myos-suun-peittami
 keywords:
   - "jalkapallo"
   - "mm-kisat"
