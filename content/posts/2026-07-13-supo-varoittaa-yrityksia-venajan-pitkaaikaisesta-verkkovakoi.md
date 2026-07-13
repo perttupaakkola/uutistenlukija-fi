@@ -56,7 +56,6 @@ keywords:
 source_name: "Verkkouutiset"
 source_url: "https://www.verkkouutiset.fi/a/nyt-tarkkana-suomen-tiedustelu-varoittaa-venajan-verkkovakoilusta/"
 source_domain: "verkkouutiset.fi"
-briefing: true
 draft: false
 ---
 
