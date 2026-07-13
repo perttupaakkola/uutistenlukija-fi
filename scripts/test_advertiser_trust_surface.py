@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import re
 import unittest
 from pathlib import Path
 
@@ -87,6 +88,56 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
         self.assertIn("}, 1000);", self.tracking)
         self.assertIn("_gtag('event', kind", self.tracking)
         self.assertIn("viewFired = true", self.tracking)
+
+    def test_founding_sponsor_click_events_are_named_and_privacy_safe(self) -> None:
+        helper = re.search(
+            r"function recordNamedFoundingSponsorClick\(.*?\n    \}",
+            self.tracking,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(helper)
+        block = helper.group(0)
+
+        allowed = set(
+            re.findall(
+                r"(founding_sponsor_(?:page|interest)_click): true",
+                block,
+            )
+        )
+        self.assertEqual(
+            allowed,
+            {"founding_sponsor_page_click", "founding_sponsor_interest_click"},
+        )
+
+        event_params = re.search(
+            r"_gtag\('event', kind, \{(.*?)\}\);",
+            block,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(event_params)
+        self.assertEqual(
+            re.findall(r"^\s*([a-z_]+):", event_params.group(1), re.MULTILINE),
+            ["placement", "page_path"],
+        )
+        for forbidden in (
+            "href",
+            "mailto",
+            "query",
+            "subject",
+            "body",
+            "email",
+            "article",
+            "link_url",
+            "link_text",
+        ):
+            with self.subTest(forbidden=forbidden):
+                self.assertNotIn(forbidden, block.lower())
+
+        self.assertIn(
+            "recordNamedFoundingSponsorClick("
+            "kind, state.last_placement, state.last_path);",
+            self.tracking,
+        )
 
     def test_article_bottom_cta_uses_full_width_copy_row(self) -> None:
         selector = ".advertiser-cta--article-bottom .advertiser-cta__inner"

@@ -198,6 +198,19 @@
       } catch (err) {}
     }
 
+    function recordNamedFoundingSponsorClick(kind, placement, pagePath) {
+      var allowedEvents = {
+        founding_sponsor_page_click: true,
+        founding_sponsor_interest_click: true
+      };
+      if (!allowedEvents[kind]) return;
+
+      _gtag('event', kind, {
+        placement: placement,
+        page_path: pagePath
+      });
+    }
+
     function recordSignal(kind, el) {
       var state = readState();
       var now = new Date().toISOString();
@@ -213,6 +226,7 @@
         placement: state.last_placement,
         page_path: state.last_path
       });
+      recordNamedFoundingSponsorClick(kind, state.last_placement, state.last_path);
     }
 
     document.addEventListener('click', function (e) {
