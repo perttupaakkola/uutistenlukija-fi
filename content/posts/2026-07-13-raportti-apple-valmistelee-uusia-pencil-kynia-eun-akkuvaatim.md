@@ -54,7 +54,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/13/raportti-apple-uudistamassa-pencilinsa-ensi-vuonna-taustalla-vaikuttaa-eu-saantely/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
