@@ -47,7 +47,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/14/waze-navigointisovellus-paivittyy-uusilla-ominaisuuksilla/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
