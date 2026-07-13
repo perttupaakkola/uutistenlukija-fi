@@ -47,7 +47,6 @@ keywords:
 source_name: "AOL"
 source_url: "https://www.aol.com/articles/fusion-always-twenty-years-away-125600000.html"
 source_domain: "aol.com"
-briefing: true
 draft: false
 ---
 
