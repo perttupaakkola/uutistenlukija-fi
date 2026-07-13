@@ -1,29 +1,29 @@
 {
   "description": "Uutistenlukija.fi KPIs — updated by Felix/Max on each flywheel cycle",
-  "lastUpdated": "2026-07-06T07:05:00Z",
+  "lastUpdated": "2026-07-13T07:05:00Z",
   "metrics": {
     "articles": {
-      "total": 3800,
-      "publishedToday": 37,
-      "publishedThisWeek": 256,
-      "lastPublishRun": "2026-07-06T04:18:04Z",
-      "note": "Weekly review 2026-07-06: publishedThisWeek is last 7 days by local post mtime since 2026-06-29 07:00 UTC. Pipeline status reports 37 published in the last 24h and last publish at 2026-07-06T04:18:04Z."
+      "total": 4061,
+      "publishedToday": 38,
+      "publishedThisWeek": 269,
+      "lastPublishRun": "2026-07-13T06:39:24Z",
+      "note": "Weekly review 2026-07-13: publishedThisWeek is the rolling seven-day local-post count since 2026-07-06 07:00 UTC. Public health reports 4,061 articles, 38 published today, and the latest publish at 2026-07-13T06:39:24Z."
     },
     "pipeline": {
       "lastRunSuccess": true,
-      "lastRunTime": "2026-07-06T07:00:00+00:00",
+      "lastRunTime": "2026-07-13T06:40:08.567511+00:00",
       "successRateRecent14": 100,
       "failuresLast24h": 0,
-      "cronHealthyJobs": 16,
-      "note": "Weekly review 2026-07-06: last 14 metrics runs succeeded, pipeline-status is OK/fresh, all 16 cron jobs checked healthy, and direct RSS check found four HTTP 403 responses while the production status artifact still reports 40 healthy feeds. Root disk is critical at 99% used."
+      "cronHealthyJobs": 9,
+      "note": "Weekly review 2026-07-13: last 14 metrics runs succeeded; public and local health checks are OK; all 9 enabled OpenClaw cron jobs report ok with zero consecutive errors. Direct RSS probing found 38/42 reachable, with four HTTP 403 responses. Root disk is 82-86% used with about 10 GB free."
     },
     "traffic": {
-      "dailyVisitors": 5,
-      "dailyPageviews": 21,
+      "dailyVisitors": 10,
+      "dailyPageviews": 27,
       "searchConsoleClicks7d": 28,
       "searchConsoleImpressions7d": 1192,
       "source": "GA4 + Search Console daily-report.json",
-      "note": "Weekly review 2026-07-06: analytics freshness is fresh; weekly metrics dry-run for 2026-06-29 to 2026-07-05 reports 21 pageviews, 5 users, and 9 sessions. Search Console 7d has 28 clicks / 1,192 impressions, and the 28d artifact has 500 rows."
+      "note": "Weekly review 2026-07-13: weekly metrics dry-run for 2026-07-06 to 2026-07-12 reports 27 pageviews, 10 users, and 13 sessions. GA4 and Search Console artifacts are fresh; the stored Search Console fields above await a matching weekly refresh."
     },
     "seo": {
       "indexedPages": null,
@@ -32,16 +32,16 @@
     "revenue": {
       "monthlyEuros": 0,
       "source": "advertiser-lead-cta-v1 monetization signal",
-      "note": "Revenue remains 0 EUR/month. Monetization work is focused on Talous/growth measurement and reader-facing SEO links; ads are disabled and AdSense is not configured."
+      "note": "Revenue remains 0 EUR/month. Ads are disabled and AdSense is not configured. OPE-367 has shipped the on-site founding-sponsor interest intake path; OPE-339 remains approval-gated for a private first-euro demand test."
     },
     "team": {
-      "activeAgents": 2,
+      "activeAgents": 6,
       "tasksCompletedThisWeek": null,
-      "activeLinearIssues": 3,
+      "activeLinearIssues": 9,
       "flywheel_ideasPosted": 213,
       "flywheel_ideasExecuted": 50,
       "flywheelExecutionRate": 0.37,
-      "note": "Legacy flywheel is historical/guarded; Linear OPE is authoritative. Active OPE at review time: OPE-9 Felix pull-loop hardening, OPE-264 Iris Talous movement measurement blocked/future-dated, and OPE-318 Alex Ulkomaat next-step link in progress. Max is ready/ops on watchdog-filtered mirrors."
+      "note": "Legacy flywheel is historical/guarded; Linear OPE is authoritative. Active mirror: 9 issues, including OPE-367/OPE-377 business-growth execution, OPE-376 article trust/discovery, OPE-9 pull-loop hardening, and five blocked follow-ups. All six configured agents are healthy; activity is concentrated in Monica/Iris/Felix, with Sara least recently active but assigned OPE-376."
     }
   }
 }
