@@ -47,7 +47,6 @@ keywords:
 source_name: "Keskisuomalainen"
 source_url: "https://www.ksml.fi/urheilu/9613827"
 source_domain: "ksml.fi"
-briefing: true
 draft: false
 ---
 
