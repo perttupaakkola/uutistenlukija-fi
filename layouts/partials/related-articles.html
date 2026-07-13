@@ -2,16 +2,20 @@
   related-articles.html — "Lue myös" section for article pages.
 
   Rules:
-    - prefer Hugo built-in Related results (tags + categories + configured indices)
+    - prefer shared-tag results within the same category, preserving Hugo's
+      ranking inside each preference bucket
     - exclude current page
     - cap at 3 cards
-    - if Related returns < 2 results, fill with newest posts from the same first category
+    - fill missing same-category slots with newest same-category posts
+    - deterministically backfill below 3 with the remaining Hugo Related ranking,
+      then newest published posts
 */ -}}
 
 {{- $current := . -}}
 {{- $currentPermalink := .Permalink -}}
 {{- $sourceTitle := .Title -}}
 {{- $categories := .Params.categories | default (slice) -}}
+{{- $currentTags := .Params.tags | default (slice) -}}
 {{- $currentCat := "" -}}
 {{- if gt (len $categories) 0 -}}
   {{- $currentCat = (index $categories 0) | urlize -}}
@@ -22,28 +26,76 @@
 {{- $publishedPosts = where $publishedPosts "Date" "le" now -}}
 {{- $publishedPosts = $publishedPosts.ByDate.Reverse -}}
 
-{{- $related := slice -}}
+{{- $tagMatchedSameCategory := slice -}}
+{{- $sameCategoryRelated := slice -}}
+{{- $otherRelated := slice -}}
 {{- $relatedPool := site.RegularPages.Related . -}}
 {{- range $candidate := $relatedPool -}}
-  {{- if and (eq $candidate.Section "posts") (not $candidate.Draft) (le $candidate.Date now) (ne $candidate.Permalink $currentPermalink) (lt (len $related) 3) -}}
-    {{- $alreadyIncluded := false -}}
-    {{- range $item := $related -}}
-      {{- if eq $item.Permalink $candidate.Permalink -}}{{- $alreadyIncluded = true -}}{{- end -}}
+  {{- if and (eq $candidate.Section "posts") (not $candidate.Draft) (le $candidate.Date now) (ne $candidate.Permalink $currentPermalink) -}}
+    {{- $candidateCats := $candidate.Params.categories | default (slice) -}}
+    {{- $candidateCat := "" -}}
+    {{- if gt (len $candidateCats) 0 -}}
+      {{- $candidateCat = (index $candidateCats 0) | urlize -}}
     {{- end -}}
-    {{- if not $alreadyIncluded -}}
+    {{- if and $currentCat (eq $candidateCat $currentCat) -}}
+      {{- $candidateTags := $candidate.Params.tags | default (slice) -}}
+      {{- if and (gt (len $currentTags) 0) (gt (len (intersect $currentTags $candidateTags)) 0) -}}
+        {{- $tagMatchedSameCategory = $tagMatchedSameCategory | append $candidate -}}
+      {{- else -}}
+        {{- $sameCategoryRelated = $sameCategoryRelated | append $candidate -}}
+      {{- end -}}
+    {{- else -}}
+      {{- $otherRelated = $otherRelated | append $candidate -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $related := first 3 $tagMatchedSameCategory -}}
+
+{{- if lt (len $related) 3 -}}
+  {{- range $candidate := $sameCategoryRelated -}}
+    {{- if lt (len $related) 3 -}}
       {{- $related = $related | append $candidate -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
 
-{{- if and $currentCat (lt (len $related) 2) -}}
-  {{- range $candidate := $publishedPosts -}}
+{{- if and $currentCat (lt (len $related) 3) -}}
+  {{- range $candidate := first 100 $publishedPosts -}}
     {{- $candidateCats := $candidate.Params.categories | default (slice) -}}
     {{- $candidateCat := "" -}}
     {{- if gt (len $candidateCats) 0 -}}
       {{- $candidateCat = (index $candidateCats 0) | urlize -}}
     {{- end -}}
     {{- if and (ne $candidate.Permalink $currentPermalink) (eq $candidateCat $currentCat) (lt (len $related) 3) -}}
+      {{- $alreadyIncluded := false -}}
+      {{- range $item := $related -}}
+        {{- if eq $item.Permalink $candidate.Permalink -}}{{- $alreadyIncluded = true -}}{{- end -}}
+      {{- end -}}
+      {{- if not $alreadyIncluded -}}
+        {{- $related = $related | append $candidate -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if lt (len $related) 3 -}}
+  {{- range $candidate := $otherRelated -}}
+    {{- if lt (len $related) 3 -}}
+      {{- $alreadyIncluded := false -}}
+      {{- range $item := $related -}}
+        {{- if eq $item.Permalink $candidate.Permalink -}}{{- $alreadyIncluded = true -}}{{- end -}}
+      {{- end -}}
+      {{- if not $alreadyIncluded -}}
+        {{- $related = $related | append $candidate -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if lt (len $related) 3 -}}
+  {{- range $candidate := first 100 $publishedPosts -}}
+    {{- if and (ne $candidate.Permalink $currentPermalink) (lt (len $related) 3) -}}
       {{- $alreadyIncluded := false -}}
       {{- range $item := $related -}}
         {{- if eq $item.Permalink $candidate.Permalink -}}{{- $alreadyIncluded = true -}}{{- end -}}
