@@ -15,7 +15,6 @@
 
 {{- $current := . -}}
 {{- $currentPermalink := .Permalink -}}
-{{- $sourceTitle := .Title -}}
 {{- $categories := .Params.categories | default (slice) -}}
 {{- $currentTags := .Params.tags | default (slice) -}}
 {{- $currentCat := "" -}}
@@ -159,8 +158,6 @@
       {{- end -}}
       {{- $img := .Params.image | default (printf "/images/categories/%s.jpg" $fallbackCat) -}}
       {{- $thumb := .Params.image_thumb | default $img -}}
-      {{- $targetTitle := .Title -}}
-      {{- $trackRelatedClick := printf "if(typeof gtag==='function'){gtag('event','related_article_click',{target_title:%s,source_title:%s});}" ($targetTitle | jsonify) ($sourceTitle | jsonify) -}}
       <article class="related-card">
         {{ partial "card-image.html" (dict
           "img" $img
@@ -168,13 +165,13 @@
           "context" .
           "permalink" .RelPermalink
           "fallback" (printf "/images/categories/%s.jpg" $fallbackCat)
-          "onclick" $trackRelatedClick
+          "track" "related_article_click"
         ) }}
         <div class="related-card__body">
           {{- if $fallbackCat -}}
           <span class="related-card__cat related-card__cat--{{ $fallbackCat | urlize }}">{{ $fallbackCat }}</span>
           {{- end -}}
-          <h3 class="related-card__title"><a href="{{ .RelPermalink }}" onclick="{{ $trackRelatedClick | safeHTMLAttr }}">{{ .Title }}</a></h3>
+          <h3 class="related-card__title"><a href="{{ .RelPermalink }}" data-track="related_article_click">{{ .Title }}</a></h3>
           <div class="related-card__meta">
             {{ partial "relative-date.html" . }}
           </div>
