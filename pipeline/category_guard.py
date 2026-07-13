@@ -37,6 +37,10 @@ _MACROECONOMY_SIGNAL_GROUPS = (
     re.compile(r"\b(?:elinkustann\w*|cost[\s-]+of[\s-]+living|living costs?)\b", re.IGNORECASE),
     re.compile(r"\b(?:asumiskustann\w*|housing costs?|mortgage\w*|asuntolain\w*)\b", re.IGNORECASE),
     re.compile(r"\b(?:korkojen? nous\w*|interest rate\w*|financial future|job insecurity)\b", re.IGNORECASE),
+    re.compile(
+        r"\b(?:nettovel\w*|velka-aste\w*|finanssivarallisu\w*|kotitalouksien vel\w*)\b",
+        re.IGNORECASE,
+    ),
 )
 
 

@@ -34,6 +34,19 @@ class PublisherCategoryTests(unittest.TestCase):
 
         self.assertEqual(_apply_keyword_category_override(article, "Kotimaa"), "Talous")
 
+    def test_retained_household_finance_candidate_cannot_drift_to_tiede(self) -> None:
+        fixture_path = (
+            Path(__file__).resolve().parent
+            / "queues/staged/published/20260713T061121Z_40f48c408f.json"
+        )
+        retained = json.loads(fixture_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(retained["article"]["category"], "Kotimaa")
+        self.assertEqual(
+            _apply_keyword_category_override(retained["article"], "Kotimaa"),
+            "Talous",
+        )
+
     def test_genuine_science_and_non_business_categories_remain_protected(self) -> None:
         science = {
             "title": "Tutkijat löysivät uuden solumekanismin",

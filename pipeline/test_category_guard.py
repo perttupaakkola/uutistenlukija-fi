@@ -68,6 +68,24 @@ class CategoryGuardTests(unittest.TestCase):
         self.assertEqual(retained["packet"]["packet_id"], "20260711T203153Z_b15231a0f0")
         self.assertEqual(protect_business_category("Ulkomaat", text), "Talous")
 
+    def test_retained_household_finance_candidate_routes_to_talous(self) -> None:
+        fixture_path = (
+            Path(__file__).resolve().parent
+            / "queues/staged/published/20260713T061121Z_40f48c408f.json"
+        )
+        retained = json.loads(fixture_path.read_text(encoding="utf-8"))
+        original = retained["original_article"]
+        text = " ".join(
+            [
+                str(original.get("title") or ""),
+                str(original.get("description") or ""),
+                str(original.get("research") or ""),
+            ]
+        )
+
+        self.assertEqual(retained["packet"]["packet_id"], "20260713T061121Z_40f48c408f")
+        self.assertEqual(protect_business_category("Kotimaa", text), "Talous")
+
     def test_retained_immigration_packet_is_not_stolen_by_incidental_terms(self) -> None:
         fixture_path = (
             Path(__file__).resolve().parent
@@ -100,6 +118,13 @@ class CategoryGuardTests(unittest.TestCase):
                 "Ravintolapäällikkö kertoi poliisin olevan tulossa paikalle.",
             ),
             "Kotimaa",
+        )
+        self.assertEqual(
+            protect_business_category(
+                "Tiede",
+                "Tutkijat analysoivat finanssivarallisuutta uudella tilastomenetelmällä.",
+            ),
+            "Tiede",
         )
 
 
