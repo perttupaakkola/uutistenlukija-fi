@@ -45,7 +45,6 @@ keywords:
 source_name: "Newstalk ZB"
 source_url: "https://www.newstalkzb.co.nz/news/world/ryanair-flight-emergency-wife-describes-battle-to-save-husband-sucked-out-plane-window/"
 source_domain: "newstalkzb.co.nz"
-briefing: true
 draft: false
 ---
 
