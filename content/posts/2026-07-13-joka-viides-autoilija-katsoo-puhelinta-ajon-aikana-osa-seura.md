@@ -45,7 +45,6 @@ keywords:
 source_name: "Tekniikan Maailma"
 source_url: "https://tekniikanmaailma.fi/ei-nain-joka-viides-kuljettaja-katsoo-puhelinta-ajon-aikana/"
 source_domain: "tekniikanmaailma.fi"
-briefing: true
 draft: false
 ---
 
