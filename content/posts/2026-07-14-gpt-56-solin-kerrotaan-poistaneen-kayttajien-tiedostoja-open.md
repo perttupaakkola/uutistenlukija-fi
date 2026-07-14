@@ -47,7 +47,6 @@ keywords:
 source_name: "Tech Times"
 source_url: "https://www.techtimes.com/articles/320198/20260712/chatgpt-work-launch-went-wrong-gpt-56-sol-deleted-user-files-without-permission.htm"
 source_domain: "techtimes.com"
-briefing: true
 draft: false
 ---
 
