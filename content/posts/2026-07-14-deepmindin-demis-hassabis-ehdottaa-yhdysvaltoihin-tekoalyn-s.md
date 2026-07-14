@@ -47,7 +47,6 @@ keywords:
 source_name: "The Register"
 source_url: "https://www.theregister.com/ai-and-ml/2026/07/14/deepmind-bigbrain-calls-for-america-to-set-ai-standards-before-its-too-late/5271343"
 source_domain: "theregister.com"
-briefing: true
 draft: false
 ---
 
