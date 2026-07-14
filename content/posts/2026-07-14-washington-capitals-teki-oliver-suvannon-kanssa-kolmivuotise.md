@@ -47,7 +47,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Oliver-Suvanto-l%C3%A4htee-t%C3%A4ytt%C3%A4m%C3%A4%C3%A4n-NHL-unelmaansa/186341"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 
