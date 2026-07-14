@@ -45,7 +45,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/juuri-julkaistu-palworld-ampaisi-steamin-suosituimpien-pelien-karkeen-emme-voi-uskoa-tata-todeksi/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
