@@ -47,7 +47,6 @@ keywords:
 source_name: "Sortiraparis.com"
 source_url: "https://www.sortiraparis.com/en/news/in-paris/articles/349166-july-14-7-000-gendarmes-and-police-mobilized-in-paris-for-the-world-cup-and-the-parade"
 source_domain: "sortiraparis.com"
-briefing: true
 draft: false
 ---
 
