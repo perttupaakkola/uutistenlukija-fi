@@ -47,7 +47,6 @@ keywords:
 source_name: "MacRumors"
 source_url: "https://www.macrumors.com/2026/07/14/openai-ai-hardware-device-speaker/"
 source_domain: "macrumors.com"
-briefing: true
 draft: false
 ---
 
