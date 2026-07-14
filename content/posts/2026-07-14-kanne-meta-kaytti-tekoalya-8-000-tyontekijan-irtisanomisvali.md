@@ -47,7 +47,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/tech-policy/2026/07/lawsuit-claims-metas-layoff-decisions-were-made-by-ai-not-humans/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
