@@ -47,7 +47,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/elokuvat/elokuvauutiset/backrooms-kauhuhitin-ohjaaja-lupasi-julkaista-pidennetyn-version-uuden-materiaalin-ilmaiseksi-youtubessa/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
