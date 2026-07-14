@@ -47,7 +47,6 @@ keywords:
 source_name: "Keskisuomalainen"
 source_url: "https://www.ksml.fi/uutissuomalainen/9618934"
 source_domain: "ksml.fi"
-briefing: true
 draft: false
 ---
 
