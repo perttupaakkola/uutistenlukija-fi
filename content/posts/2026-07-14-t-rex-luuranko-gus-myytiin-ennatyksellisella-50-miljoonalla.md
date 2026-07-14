@@ -47,7 +47,6 @@ keywords:
 source_name: "Artnet News"
 source_url: "https://news.artnet.com/market/gus-tyrannosaurus-rex-sothebys-auction-result-2787912"
 source_domain: "news.artnet.com"
-briefing: true
 draft: false
 ---
 
