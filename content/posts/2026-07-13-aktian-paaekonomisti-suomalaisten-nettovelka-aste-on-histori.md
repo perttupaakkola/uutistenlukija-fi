@@ -2,7 +2,7 @@
 title: "Aktian pääekonomisti: Suomalaisten nettovelka-aste on historiallisen matala"
 date: 2026-07-13T06:18:08.411666+00:00
 categories:
-  - Tiede
+  - Talous
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

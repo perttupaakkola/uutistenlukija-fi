@@ -2,7 +2,7 @@
 title: "Talouspessimismi kasvattaa One Nationin kannatusta Australiassa"
 date: 2026-07-11T20:38:23.430676+00:00
 categories:
-  - Tiede
+  - Talous
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
