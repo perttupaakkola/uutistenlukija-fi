@@ -46,7 +46,6 @@ keywords:
 source_name: "Sportti.com"
 source_url: "https://www.sportti.com/jaakiekko/hyllytys-valikohtaus-lahto-nain-paattyi-tarmo-reunasen-myrskyisa-kausi-tpsssa/"
 source_domain: "sportti.com"
-briefing: true
 draft: false
 ---
 
