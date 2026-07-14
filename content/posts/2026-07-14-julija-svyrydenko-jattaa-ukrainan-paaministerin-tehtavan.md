@@ -54,7 +54,6 @@ keywords:
 source_name: "Verkkouutiset"
 source_url: "https://www.verkkouutiset.fi/a/ukrainan-paaministeri-eroaa-muutamme-strategiaamme/"
 source_domain: "verkkouutiset.fi"
-briefing: true
 draft: false
 ---
 
