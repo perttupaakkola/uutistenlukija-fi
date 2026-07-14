@@ -47,7 +47,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/health/2026/07/us-continues-to-shun-ebola-infected-citizens-second-american-sent-to-germany/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
