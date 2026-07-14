@@ -55,7 +55,6 @@ keywords:
 source_name: "Stara"
 source_url: "https://www.stara.fi/2026/05/18/lammin-saa-vyoryy-nyt-suomeen-varaudu-tiistaina-voimakkaisiin-ukkosiin/"
 source_domain: "stara.fi"
-briefing: true
 draft: false
 ---
 
