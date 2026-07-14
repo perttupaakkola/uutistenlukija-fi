@@ -47,7 +47,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/14/huawei-julkisti-pura-90s-lippulaivapuhelinkaksikon-kansainvalisille-markkinoille-varustettu-erottuvilla-vareilla-ja-kameroilla/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
