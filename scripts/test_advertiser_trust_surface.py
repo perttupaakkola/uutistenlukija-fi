@@ -15,6 +15,7 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
     def setUp(self) -> None:
         self.frontmatter = (ROOT / "content/mainosta/_index.md").read_text(encoding="utf-8")
         self.mainosta = (ROOT / "layouts/_default/mainosta.html").read_text(encoding="utf-8")
+        self.homepage = (ROOT / "layouts/index.html").read_text(encoding="utf-8")
         self.cta = (ROOT / "layouts/partials/advertiser-cta.html").read_text(encoding="utf-8")
         self.tracking = (ROOT / "layouts/partials/event-tracking.html").read_text(encoding="utf-8")
         self.critical_css = (ROOT / "layouts/partials/critical-css.html").read_text(encoding="utf-8")
@@ -81,6 +82,31 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
         self.assertIn("founding_sponsor_interest_click", self.cta)
         self.assertIn("article-bottom-founding-sponsor-v1", self.cta)
         self.assertIn("Kiinnostus%20Uutistenlukijan%20perustajakumppanuuteen", self.cta)
+
+    def test_homepage_uses_approved_founding_sponsor_contract_after_lead_package(self) -> None:
+        partial_call = '{{ partial "advertiser-cta.html" (dict "placement" "homepage" "page" .) }}'
+        self.assertEqual(self.homepage.count(partial_call), 1)
+        self.assertLess(self.homepage.index('</section>\n  {{ end }}\n\n  ' + partial_call), self.homepage.index('{{ $topicCats :='))
+
+        self.assertIn('(eq $placement "homepage")', self.cta)
+        self.assertIn('"homepage-founding-sponsor-v1"', self.cta)
+        self.assertIn('data-monetization-view="founding_sponsor_cta_view"', self.cta)
+        self.assertIn('data-track="advertise_cta_click"', self.cta)
+        self.assertIn("founding_sponsor_page_click", self.cta)
+        self.assertIn("founding_sponsor_interest_click", self.cta)
+
+    def test_homepage_dark_contrast_fix_is_scoped_and_preserves_focus_outline(self) -> None:
+        eyebrow = ':root:not([data-theme="light"]) .advertiser-cta--homepage .advertiser-cta__eyebrow'
+        primary = ':root:not([data-theme="light"]) .advertiser-cta--homepage .advertiser-cta__button--primary:focus-visible'
+        for stylesheet in (self.critical_css, self.style_css):
+            with self.subTest(stylesheet=stylesheet[:24]):
+                self.assertIn(eyebrow, stylesheet)
+                self.assertIn("#f06b5d", stylesheet.lower())
+                self.assertIn(primary, stylesheet)
+                self.assertIn("#c0392b", stylesheet.lower())
+
+        self.assertIn(":focus-visible{outline:3px solid var(--accent)", self.critical_css)
+        self.assertNotIn(".advertiser-cta--article-bottom .advertiser-cta__eyebrow{color:#f06b5d", self.critical_css)
 
     def test_founding_sponsor_view_requires_half_visibility_for_one_second(self) -> None:
         self.assertIn('data-monetization-view="founding_sponsor_cta_view"', self.cta)
