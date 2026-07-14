@@ -55,7 +55,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/jul/14/kash-patel-gave-his-australian-counterpart-a-3d-replica-gun-as-a-gift-it-was-destroyed-within-months"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
