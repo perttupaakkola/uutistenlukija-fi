@@ -41,7 +41,7 @@ from firehose import poll_firehose  # noqa: E402
 from research import enrich_with_research  # noqa: E402
 from dedup import filter_new_articles, check_published_duplicates, dedup_within_batch, mark_published  # noqa: E402
 from story_packet import build_story_packet  # noqa: E402
-from publisher import publish_articles, build_site  # noqa: E402
+from publisher import build_site, effective_category, publish_articles  # noqa: E402
 from unsplash import fetch_images_for_articles as unsplash_fetch_images  # noqa: E402
 from pexels import fetch_images_for_articles as pexels_fetch_images  # noqa: E402
 from image_candidate_guard import category_fallback_fields  # noqa: E402
@@ -65,6 +65,47 @@ from quality_gate import score_article, run_gate as run_quality_gate  # noqa: E4
 
 def log(msg: str) -> None:
     print(f"[{datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')}] {msg}")
+
+
+def _published_category_from_record(data: dict[str, Any]) -> str:
+    """Read the actual committed front-matter category for a retained record."""
+    for created in data.get("created_files") or []:
+        path = PROJECT_DIR / "content" / "posts" / Path(str(created)).name
+        if not path.is_file():
+            continue
+        lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
+        for index, line in enumerate(lines):
+            if line.strip() == "categories:" and index + 1 < len(lines):
+                return lines[index + 1].strip().removeprefix("-").strip()
+    return ""
+
+
+def category_decision_trace(data: dict[str, Any], publisher_category: str = "") -> dict[str, Any]:
+    """Join privacy-safe guard, writer, and publisher category decisions."""
+    packet = data.get("packet") or {}
+    payload = data.get("payload") or {}
+    article = data.get("article") or {}
+    decisions = {
+        "guard": str(packet.get("category") or packet.get("category_hint") or "").strip(),
+        "writer": str(payload.get("category") or "").strip(),
+        "publisher": publisher_category or _published_category_from_record(data) or effective_category(article),
+    }
+    known = [value for value in decisions.values() if value]
+    return {
+        "packet_id": str(packet.get("packet_id") or data.get("digest") or "unknown"),
+        "decisions": decisions,
+        "disagreement": len(set(known)) > 1,
+    }
+
+
+def log_category_decision_trace(trace: dict[str, Any]) -> None:
+    decisions = trace["decisions"]
+    log(
+        "category-trace "
+        f"packet={trace['packet_id']} guard={decisions['guard'] or '-'} "
+        f"writer={decisions['writer'] or '-'} publisher={decisions['publisher'] or '-'} "
+        f"disagreement={str(trace['disagreement']).lower()}"
+    )
 
 
 def load_env_files() -> None:
@@ -1818,6 +1859,12 @@ def cmd_publish(args: argparse.Namespace) -> int:
                 target = STAGED_ROOT / "published" / p.name
                 data["published_at"] = datetime.now(timezone.utc).isoformat()
                 data["created_files"] = created
+                trace = category_decision_trace(
+                    data,
+                    publisher_category=effective_category(data.get("article") or {}),
+                )
+                data["category_trace"] = trace
+                log_category_decision_trace(trace)
                 atomic_write_json(target, data)
                 p.unlink(missing_ok=True)
         if args.git_push:
@@ -1975,6 +2022,12 @@ def cmd_status(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_category_trace(args: argparse.Namespace) -> int:
+    traces = [category_decision_trace(read_queue_record(Path(path))) for path in args.packet]
+    print(json.dumps(traces, indent=2, ensure_ascii=False))
+    return 1 if args.fail_on_disagreement and any(trace["disagreement"] for trace in traces) else 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -2025,6 +2078,11 @@ def main() -> int:
     status.add_argument("--verbose", action="store_true", help="include queue age/source metrics and failed reason buckets")
     status.add_argument("--sample-ready", type=int, default=0, help="include top N ready packets by worker priority without moving files")
     status.set_defaults(func=cmd_status)
+
+    trace = sub.add_parser("category-trace")
+    trace.add_argument("packet", nargs="+", help="retained staged packet JSON path")
+    trace.add_argument("--fail-on-disagreement", action="store_true")
+    trace.set_defaults(func=cmd_category_trace)
     args = ap.parse_args()
     return args.func(args)
 

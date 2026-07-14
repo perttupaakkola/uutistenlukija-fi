@@ -42,6 +42,8 @@ WEATHER_KEYWORDS = [
     "ukkosmyrsky", "tuuli", "sade", "pilvisyys", "aurinkoinen",
 ]
 
+CANONICAL_CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
+
 
 def _keyword_score(text: str, keywords: list) -> int:
     """Count keyword matches in text (case-insensitive, word-boundary for 'AI')."""
@@ -104,6 +106,16 @@ def _apply_keyword_category_override(article: dict, category: str) -> str:
     if science_score > tech_score:
         return "Tiede"
     return "Teknologia"
+
+
+def effective_category(article: dict) -> str:
+    """Return the category that publisher front matter will receive."""
+    raw = str(article.get("category", "") or "").strip()
+    category = next(
+        (candidate for candidate in CANONICAL_CATEGORIES if candidate.lower() == raw.lower()),
+        "Kotimaa",
+    )
+    return _apply_keyword_category_override(article, category)
 
 
 def _make_slug(title: str, max_length: int = 60) -> str:
@@ -295,13 +307,7 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     raw_title = " ".join(str(raw_title).split())
     title = raw_title.replace('"', '\\"')
     # Normalize category: match against canonical list (case-insensitive), fallback to Kotimaa
-    _CANONICAL_CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu", "Kulttuuri", "Tiede"]
-    _raw_category = str(article.get("category", "") or "").strip()
-    category = next(
-        (c for c in _CANONICAL_CATEGORIES if c.lower() == _raw_category.lower()),
-        "Kotimaa"  # fallback if LLM returns unknown value
-    )
-    category = _apply_keyword_category_override(article, category)
+    category = effective_category(article)
     content = article.get("content", "")
     # Sanitize content: strip bare YAML front matter delimiters (would break Hugo parsing)
     content = re.sub(r"(?m)^---+\s*$", "—", content)

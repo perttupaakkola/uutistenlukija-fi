@@ -627,7 +627,11 @@ class StagedPublishMetricsTests(unittest.TestCase):
             "image_decision_reason": "metadata matches article",
             "monica_packet_id": "pkt-image",
         }
-        data = {"article": article, "packet": {"packet_id": "pkt-image"}}
+        data = {
+            "article": article,
+            "packet": {"packet_id": "pkt-image", "category": "Kotimaa"},
+            "payload": {"category": "Kotimaa"},
+        }
         path = self._write("outbox", "pkt-image", data, age_hours=1)
 
         with patch.object(staged_publish, "load_outbox", return_value=[(path, data)]), \
@@ -648,6 +652,11 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(published["image_enrichment"]["image_source"], "pexels")
         self.assertEqual(published["image_enrichment"]["image_source_type"], "stock")
         self.assertEqual(published["image_enrichment"]["image_decision_reason"], "metadata matches article")
+        self.assertEqual(
+            published["category_trace"]["decisions"],
+            {"guard": "Kotimaa", "writer": "Kotimaa", "publisher": "Kotimaa"},
+        )
+        self.assertFalse(published["category_trace"]["disagreement"])
 
     def test_publisher_frontmatter_preserves_image_policy_metadata(self) -> None:
         markdown = publisher._article_to_markdown({
@@ -1557,7 +1566,6 @@ class StagedPublishFailedHygieneTests(unittest.TestCase):
         self.assertTrue((self.root / "failed" / "old-a.json").exists())
         self.assertTrue((self.root / "failed" / "old-b.json").exists())
         self.assertTrue((self.root / "failed" / "runtime.json").exists())
-
     def test_prune_failed_non_dry_removes_only_old_excess_bucket(self) -> None:
         self._write_failed("old-a", "stale_ready_expired age_h=240 max_age_h=10", age_hours=240)
         self._write_failed("old-b", "stale_ready_expired age_h=230 max_age_h=10", age_hours=230)
@@ -1568,6 +1576,51 @@ class StagedPublishFailedHygieneTests(unittest.TestCase):
         self.assertEqual(summary["pruned"], 1)
         self.assertEqual(len(list((self.root / "failed").glob("*.json"))), 2)
         self.assertTrue((self.root / "failed" / "runtime.json").exists())
+
+
+class CategoryDecisionTraceTests(unittest.TestCase):
+    def test_retained_disagreements_include_actual_published_category(self) -> None:
+        published = Path(__file__).resolve().parent / "queues" / "staged" / "published"
+        expected = {
+            "20260711T203153Z_b15231a0f0": {
+                "guard": "Kotimaa",
+                "writer": "Ulkomaat",
+                "publisher": "Tiede",
+            },
+            "20260713T061121Z_40f48c408f": {
+                "guard": "Kotimaa",
+                "writer": "Kotimaa",
+                "publisher": "Tiede",
+            },
+        }
+
+        for packet_id, decisions in expected.items():
+            with self.subTest(packet_id=packet_id):
+                data = staged_publish.read_queue_record(published / f"{packet_id}.json")
+                trace = staged_publish.category_decision_trace(data)
+                self.assertEqual(trace["packet_id"], packet_id)
+                self.assertEqual(trace["decisions"], decisions)
+                self.assertTrue(trace["disagreement"])
+
+    def test_stable_talous_trace_is_not_marked_as_disagreement(self) -> None:
+        data = {
+            "packet": {"packet_id": "stable-talous", "category": "Talous"},
+            "payload": {"category": "Talous"},
+            "article": {
+                "category": "Talous",
+                "title": "Yhtiön tulos kasvoi",
+                "summary": "Liikevaihto ja tulos kasvoivat.",
+                "content": "Yhtiö raportoi liikevaihdon ja tuloksen kasvusta.",
+            },
+        }
+
+        trace = staged_publish.category_decision_trace(data)
+
+        self.assertEqual(
+            trace["decisions"],
+            {"guard": "Talous", "writer": "Talous", "publisher": "Talous"},
+        )
+        self.assertFalse(trace["disagreement"])
 
 
 if __name__ == "__main__":
