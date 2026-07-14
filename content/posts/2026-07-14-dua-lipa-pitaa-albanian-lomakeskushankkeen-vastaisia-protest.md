@@ -47,7 +47,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/music/2026/jul/14/dua-lipa-calls-albanian-protests-against-jared-kushner-backed-resort-inspiring"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
