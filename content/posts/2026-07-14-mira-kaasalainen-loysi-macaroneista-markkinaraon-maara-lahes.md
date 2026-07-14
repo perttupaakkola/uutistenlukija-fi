@@ -45,7 +45,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/mira-kaasalaisen-yrityksen-tuotteesta-tuli-hitti-olen-leiponut-enemman-macaron-leivoksia-kuin-savonlinnassa-on-asukkaita/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
