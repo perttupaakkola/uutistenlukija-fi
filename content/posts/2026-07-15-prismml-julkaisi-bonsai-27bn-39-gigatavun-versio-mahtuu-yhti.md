@@ -47,7 +47,6 @@ keywords:
 source_name: "9to5Mac"
 source_url: "https://9to5mac.com/2026/07/14/prismml-releases-bonsai-27b-claiming-first-major-ai-model-of-its-size-fit-for-iphone/"
 source_domain: "9to5mac.com"
-briefing: true
 draft: false
 ---
 
