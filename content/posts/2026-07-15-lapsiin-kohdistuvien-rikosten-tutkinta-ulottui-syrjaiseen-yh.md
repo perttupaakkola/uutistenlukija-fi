@@ -47,7 +47,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/australia-news/2026/jul/15/remote-indigenous-school-south-australia-on-list-of-places-where-accused-paedophile-worked-ntwnfb"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
