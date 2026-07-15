@@ -1,0 +1,94 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-15T01:51:20.374728+00:00",
+  "digest": "9d304f0cd4",
+  "packet": {
+    "packet_id": "20260715T015120Z_9d304f0cd4",
+    "created_at": "2026-07-15T01:51:20Z",
+    "headline_seed": "Vaaratiedote: Ammoniakkia ilmassa Suomussalmella",
+    "description_seed": "Ihmisiä kehotetaan välttämään alueella liikkumista. Kainuussa Suomussalmella Kurimon ja Siikarannan alueella on ilmassa ammoniakkia. Vaaratiedote annettiin varhain keskiviikkona. Ihmisiä kehotetaan välttämään alueella liikkumista ja suojautumaan sisätiloihin.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/2e246501-bb21-4703-ab64-5f7a98f023c4?utm_source=rss",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "selected source block is missing name/url/domain; seed provenance cannot substitute",
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Vaaratiedote: Ammoniakkia ilmassa Suomussalmella"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_url": "",
+        "source_domain": "",
+        "source_type": "research",
+        "text": "Ihmisiä kehotetaan välttämään alueella liikkumista. Kainuussa Suomussalmella Kurimon ja Siikarannan alueella on ilmassa ammoniakkia. Vaaratiedote annettiin varhain keskiviikkona. Ihmisiä kehotetaan välttämään alueella liikkumista ja suojautumaan sisätiloihin.",
+        "word_count": 26,
+        "keyword_overlap": 17,
+        "strong_overlap": 17
+      }
+    ],
+    "source_text": "Ihmisiä kehotetaan välttämään alueella liikkumista. Kainuussa Suomussalmella Kurimon ja Siikarannan alueella on ilmassa ammoniakkia. Vaaratiedote annettiin varhain keskiviikkona. Ihmisiä kehotetaan välttämään alueella liikkumista ja suojautumaan sisätiloihin.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 52,
+      "selected_blocks": 1,
+      "selected_source_words": 26,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "provenance_invalid",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Vaaratiedote: Ammoniakkia ilmassa Suomussalmella",
+      "description": "Ihmisiä kehotetaan välttämään alueella liikkumista. Kainuussa Suomussalmella Kurimon ja Siikarannan alueella on ilmassa ammoniakkia. Vaaratiedote annettiin varhain keskiviikkona. Ihmisiä kehotetaan välttämään alueella liikkumista ja suojautumaan sisätiloihin.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Vaaratiedote: Ammoniakkia ilmassa Suomussalmella",
+    "description": "Ihmisiä kehotetaan välttämään alueella liikkumista. Kainuussa Suomussalmella Kurimon ja Siikarannan alueella on ilmassa ammoniakkia. Vaaratiedote annettiin varhain keskiviikkona. Ihmisiä kehotetaan välttämään alueella liikkumista ja suojautumaan sisätiloihin.",
+    "link": "https://www.iltalehti.fi/kotimaa/a/2e246501-bb21-4703-ab64-5f7a98f023c4?utm_source=rss",
+    "published": "2026-07-15T04:42:28+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "2284de168c8a05d2ec57f13028ec253b",
+    "_url_hash": "60420e0ae8754548b060394bfa004ecccf74e432e8d6f22b0927e2a25bc869d1",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Ihmisiä kehotetaan välttämään alueella liikkumista. Kainuussa Suomussalmella Kurimon ja Siikarannan alueella on ilmassa ammoniakkia. Vaaratiedote annettiin varhain keskiviikkona. Ihmisiä kehotetaan välttämään alueella liikkumista ja suojautumaan sisätiloihin.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-07-15T01:53:25.586214+00:00",
+  "failure": "Lähdeaineisto on vain 26 sanaa, lähteen alkuperätiedot puuttuvat ja tarinan keskeiset yksityiskohdat ovat vahvistamatta. Aineisto ei riitä vähintään 250 sanan uutiseen ilman täytettä tai oletuksia.",
+  "raw_response": "{\"packet_id\":\"20260715T015120Z_9d304f0cd4\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on vain 26 sanaa, lähteen alkuperätiedot puuttuvat ja tarinan keskeiset yksityiskohdat ovat vahvistamatta. Aineisto ei riitä vähintään 250 sanan uutiseen ilman täytettä tai oletuksia.\"}"
+}
