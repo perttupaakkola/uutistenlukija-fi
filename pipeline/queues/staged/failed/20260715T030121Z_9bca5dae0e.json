@@ -1,0 +1,81 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-15T03:01:21.241550+00:00",
+  "digest": "9bca5dae0e",
+  "packet": {
+    "packet_id": "20260715T030121Z_9bca5dae0e",
+    "created_at": "2026-07-15T03:01:21Z",
+    "headline_seed": "Cursor 0day: When Full Disclosure Becomes the Only Protection Left",
+    "description_seed": "Article URL: https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left Comments URL: https://news.ycombinator.com/item?id=48910676 Points: 259 # Comments: 109",
+    "link": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+    "source": "Hacker News Best",
+    "source_names": [],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "",
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Cursor 0day: When Full Disclosure Becomes the Only Protection Left"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 4,
+      "candidate_source_words": 381,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Hacker News Best",
+        "Hacker News Best",
+        "Hacker News Best",
+        "Hacker News Best"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Cursor 0day: When Full Disclosure Becomes the Only Protection Left",
+      "description": "Article URL: https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left Comments URL: https://news.ycombinator.com/item?id=48910676 Points: 259 # Comments: 109",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Cursor 0day: When Full Disclosure Becomes the Only Protection Left",
+    "description": "Article URL: https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left Comments URL: https://news.ycombinator.com/item?id=48910676 Points: 259 # Comments: 109",
+    "link": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+    "published": "2026-07-14T17:58:35+00:00",
+    "source": "Hacker News Best",
+    "source_domain": "hnrss.org",
+    "language": "en",
+    "fingerprint": "8d643bc5f1ebac2a0840ecbe91625f19",
+    "_url_hash": "27ec0538f7927c7e4d7d6233a4f76f19527ed584a2b47cf0a2a5d3527d2fafe3",
+    "source_tier": 3,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Hacker News Best | URL: https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left]\nThe vulnerability nobody seems interested in fixing\n\nAfter loading a project, Cursor attempts to find git binaries at various locations including the current workspace. By creating a repository with a planted malicious git.exe in the root, the IDE will execute it with no user interaction and no prompting of the user. This occurs repeatedly on a cadence.\n\nSometimes security research uncovers deeply technical vulnerabilities that require pages of explanation. This isn't one of those cases.\n\nThis bug is simple. A developer opens a repository in Cursor on Windows, and if that repository contains a malicious git.exe in the project root, Cursor will execute it automatically. There are no clicks, prompts, approval dialogs, or warnings. The result is arbitrary code execution.\n\nGiven that Cursor is one of the most widely adopted AI-assisted development environments (7 million+ active users, 1 million+ daily, 1 million+ paying, used by 50K+ companies), and its reported market price of $60 billion, it’s fair to assume that some level of respect for security practices exists, but this issue would indicate otherwise.\n\nThe vulnerability was first identified by Mindgard on December 15, 2025. We reported it the same day and multiple times since. More than six months and 197+ new versions later, the issue remains present in the latest tested version of Cursor.\n\nThe vulnerability is not theoretical and does not depend on a complex chain of exploitation, prompt injection, model manipulation, jailbreaks, memory corruption, or sophisticated attacker tradecraft. Exploitation simply requires a developer to open a project containing a git.exe binary in the repository at root.\n\nEnterprise/managed windows systems: As a temporary mitigation on managed Windows systems, administrators can use AppLocker or Windows App Control policies to deny execution of the affected executable name from developer workspace directories. Prefer path-based deny rules scoped to repo/workspace roots, such as %USERPROFILE%\\source\\repos\\*\\filename.exe, rather than hash-based rules, because attacker-supplied binaries can vary by hash. Windows does not provide a general built-in rule to block an arbitrary child executable only when launched by a specific parent process, so parent-aware enforcement generally requires EDR or a custom endpoint security product.\n\nConsumer systems: Until the IDE is patched, open untrusted repositories only in an isolated VM, Windows Sandbox, or other disposable environment. Do not",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-15T03:03:32.074551+00:00",
+  "failure": "Paketissa ei ole valittuja lähteitä, lähdetekstiä eikä jutun väitteitä tukevia varmennettuja tietoja.",
+  "raw_response": "{\"packet_id\":\"20260715T030121Z_9bca5dae0e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittuja lähteitä, lähdetekstiä eikä jutun väitteitä tukevia varmennettuja tietoja.\"}"
+}
