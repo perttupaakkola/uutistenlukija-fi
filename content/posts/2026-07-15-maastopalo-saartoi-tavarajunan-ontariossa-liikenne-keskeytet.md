@@ -47,7 +47,6 @@ keywords:
 source_name: "New York Post"
 source_url: "https://nypost.com/2026/07/15/us-news/apocalyptic-video-shows-wildfire-flames-surrounding-train-in-canada-this-could-potentially-overtake-us/"
 source_domain: "nypost.com"
-briefing: true
 draft: false
 ---
 
