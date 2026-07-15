@@ -9,8 +9,12 @@
 {{ else }}
 <article class="single-article">
   {{ $isCommerceGuide := and (in (slice "paasiaisopas" "vappuopas") .Section) (eq .File.BaseFileName "kaupat-auki") }}
+  {{ $hasTalousCategory := false }}
   {{ with .Params.categories }}
   {{ $primaryCategory := index . 0 }}
+  {{ range . }}
+    {{ if eq (lower .) "talous" }}{{ $hasTalousCategory = true }}{{ end }}
+  {{ end }}
   {{ partial "category-badge.html" (dict "category" $primaryCategory "link" true) }}
   {{ if and $isCommerceGuide (ne (lower $primaryCategory) "talous") }}
   {{ partial "category-badge.html" (dict "category" "talous" "link" true) }}
@@ -28,7 +32,7 @@
   ) }}
 
   {{ partial "related-articles.html" . }}
-  {{ partial "advertiser-cta.html" (dict "placement" "article-bottom" "page" .) }}
+  {{ partial "advertiser-cta.html" (dict "placement" (cond $hasTalousCategory "talous-article" "article-bottom") "page" .) }}
   {{ partial "more-from-category.html" . }}
 </article>
 {{ end }}
