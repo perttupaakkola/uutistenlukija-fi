@@ -47,7 +47,6 @@ keywords:
 source_name: "Uudenkaupunginsanomat"
 source_url: "https://www.uudenkaupunginsanomat.fi/2026/07/taksikuskia-uhattiin-teraaseella-ugissa-poliisi-pyytaa-yleisolta-havaintoja-ryostosta/"
 source_domain: "uudenkaupunginsanomat.fi"
-briefing: true
 draft: false
 ---
 

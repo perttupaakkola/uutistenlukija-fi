@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-15T15:31:22.074848+00:00",
+  "digest": "ef2f0840ea",
+  "packet": {
+    "packet_id": "20260715T153122Z_ef2f0840ea",
+    "created_at": "2026-07-15T15:31:22Z",
+    "headline_seed": "Päijännepurjehdus alkaa lauantaina Padasjoelta – päijäthämäläisiä ennakkosuosikeissa",
+    "description_seed": "Perjantaina Padasjoen satamassa järjestetään purjehduksen oheistapahtumia.",
+    "link": "https://www.ess.fi/urheilu/9621858",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "",
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Päijännepurjehdus alkaa lauantaina Padasjoelta – päijäthämäläisiä ennakkosuosikeissa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 99,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Suomenmaa",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Päijännepurjehdus alkaa lauantaina Padasjoelta – päijäthämäläisiä ennakkosuosikeissa",
+      "description": "Perjantaina Padasjoen satamassa järjestetään purjehduksen oheistapahtumia.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Päijännepurjehdus alkaa lauantaina Padasjoelta – päijäthämäläisiä ennakkosuosikeissa",
+    "description": "Perjantaina Padasjoen satamassa järjestetään purjehduksen oheistapahtumia.",
+    "link": "https://www.ess.fi/urheilu/9621858",
+    "published": "2026-07-15T17:53:25+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "dca3b2e4d2ad7872817aa91bee7cbe33",
+    "_url_hash": "1060ba4dde3198511d12e295490ea45463f9d2e337df26b60fcd7a255b9f2b40",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Suomenmaa | URL: https://www.suomenmaa.fi/uutiset/venezuelan-maanjaristysten-uhriluku-nousi-yli-4-700n-3/]\nVenezuelan maanjäristyksissä kuolleiden määrä on noussut jo yli 4 700:aan.\n\nMaan hallinto kertoi päivitetyistä virallisista uhriluvuista paikallista aikaa tiistaina. Kuolonuhrien määrä nousi aiemmin ilmoitetusta parillasadalla.\n\nLoukkaantuneiden lukumäärä on pysynyt samana kuin aiemmin on kerrottu. Lähes 17 000 ihmistä loukkaantui voimakkaissa maanjäristyksissä. Suurin osa loukkaantuneista oli tiistaina päässyt pois sairaalasta.\n\nTuhansia on yhä kateissa. YK on arvioinut, että noin 50 000 ihmistä oli kateissa järistysten jälkeen. Eloonjääneiden etsinnät on kuitenkin jo pääosin päätetty.\n\nKesäkuun lopulla Venezuelaa ravisteli minuutin sisällä kaksi maanjäristystä, jotka olivat voimakkuudeltaan 7,2 ja 7,5. Kyseessä on yksi Latinalaisen Amerikan tuhoisimmista järistyksistä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-15T15:33:19.402560+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja tietoja vähintään 250 sanan uutisartikkeliin.",
+  "raw_response": "{\"packet_id\":\"20260715T153122Z_ef2f0840ea\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja tietoja vähintään 250 sanan uutisartikkeliin.\"}"
+}
