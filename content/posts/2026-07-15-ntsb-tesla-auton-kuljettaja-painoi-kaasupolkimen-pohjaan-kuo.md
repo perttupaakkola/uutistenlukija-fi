@@ -55,7 +55,6 @@ keywords:
 source_name: "Electrek"
 source_url: "https://electrek.co/2026/06/23/tesla-fsd-katy-crash-driver-pedal/"
 source_domain: "electrek.co"
-briefing: true
 draft: false
 ---
 
