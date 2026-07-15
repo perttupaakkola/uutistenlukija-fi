@@ -55,7 +55,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/15/motorola-julkisti-799-euron-edge-70-maxin-7-100-mah-akulla-varustettu-alypuhelin-erottuu-joukosta-magneettisella-qi2-latauksella/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
