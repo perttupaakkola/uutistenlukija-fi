@@ -52,9 +52,9 @@ DAYTIME_END_HEL   = 23            # 23:00 Helsinki
 LOCK_STALE_MINUTES = 30           # stale lock threshold
 DEAD_LOCK_GRACE_MINUTES = 12      # avoid clearing fresh locks while child pipeline work may still be running
 DISK_WARN_GB       = 5.0          # warn if free < 5 GB
-DISK_WARN_USED_PCT = 90.0         # warn if root/project filesystem is >=90% used
+DISK_WARN_USED_PCT = 80.0         # match scripts/disk_space_monitor.sh warning threshold
 DISK_ERROR_GB      = 1.0          # error if free < 1 GB
-DISK_ERROR_USED_PCT = 97.0        # error if filesystem is >=97% used
+DISK_ERROR_USED_PCT = 90.0        # match scripts/disk_space_monitor.sh critical threshold
 MEM_WARN_MB        = 200          # warn if available < 200 MB
 
 DEFAULT_DISCORD_ALERT_CHANNEL_ID = "1482082645553713366"  # #operations
@@ -411,7 +411,10 @@ def check_disk_space() -> dict:
 
     free_gb = usage.free / (1024 ** 3)
     total_gb = usage.total / (1024 ** 3)
-    used_pct = 100.0 * usage.used / usage.total
+    # Match `df` capacity semantics: reserved filesystem blocks are unavailable
+    # to this process, so calculate against used + available rather than total.
+    usable_total = usage.used + usage.free
+    used_pct = 100.0 * usage.used / usable_total if usable_total else 0.0
 
     if free_gb < DISK_ERROR_GB or used_pct >= DISK_ERROR_USED_PCT:
         status = "ERROR"

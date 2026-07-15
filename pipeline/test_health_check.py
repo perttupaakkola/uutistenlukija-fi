@@ -53,15 +53,24 @@ class HealthCheckLockPathTests(unittest.TestCase):
 
 
 class HealthCheckDiskTests(unittest.TestCase):
-    def _mock_usage(self, total_gb, used_gb):
+    def _mock_usage(self, total_gb, used_gb, free_gb=None):
         gb = 1024 ** 3
         total = int(total_gb * gb)
         used = int(used_gb * gb)
-        free = total - used
+        free = int(free_gb * gb) if free_gb is not None else total - used
         return shutil._ntuple_diskusage(total=total, used=used, free=free)
 
+    def test_disk_percentage_matches_df_when_filesystem_has_reserved_blocks(self):
+        usage = self._mock_usage(75, 62.5, free_gb=9.25)
+        with mock.patch.object(health_check.shutil, "disk_usage", return_value=usage):
+            result = health_check.check_disk_space()
+
+        self.assertEqual(result["status"], "WARN")
+        self.assertAlmostEqual(result["value"]["used_pct"], 87.1, places=1)
+        self.assertIn("87% used", result["message"])
+
     def test_disk_warns_at_high_used_percentage_even_above_free_gb_floor(self):
-        with mock.patch.object(health_check.shutil, "disk_usage", return_value=self._mock_usage(75, 68)):
+        with mock.patch.object(health_check.shutil, "disk_usage", return_value=self._mock_usage(75, 60)):
             result = health_check.check_disk_space()
 
         self.assertEqual(result["status"], "WARN")
