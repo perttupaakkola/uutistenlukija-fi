@@ -55,7 +55,6 @@ keywords:
 source_name: "Yle"
 source_url: "https://yle.fi/uutiset/lyhyesti/74-20236287"
 source_domain: "yle.fi"
-briefing: true
 draft: false
 ---
 
