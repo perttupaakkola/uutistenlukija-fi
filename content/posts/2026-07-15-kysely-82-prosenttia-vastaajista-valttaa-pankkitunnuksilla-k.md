@@ -47,7 +47,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/kysely-suomalaiset-satsaavat-turvalliseen-maksamiseen-mutta-tulisiko-virtuaalisella-kirpputorilla-tarvita-pankkitunnuksia/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
