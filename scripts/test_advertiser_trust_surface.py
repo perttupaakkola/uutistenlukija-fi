@@ -17,6 +17,8 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
         self.mainosta = (ROOT / "layouts/_default/mainosta.html").read_text(encoding="utf-8")
         self.homepage = (ROOT / "layouts/index.html").read_text(encoding="utf-8")
         self.cta = (ROOT / "layouts/partials/advertiser-cta.html").read_text(encoding="utf-8")
+        self.founding_sponsor = (ROOT / "layouts/_default/perustajakumppanuus.html").read_text(encoding="utf-8")
+        self.founding_sponsor_frontmatter = (ROOT / "content/perustajakumppanuus/_index.md").read_text(encoding="utf-8")
         self.tracking = (ROOT / "layouts/partials/event-tracking.html").read_text(encoding="utf-8")
         self.critical_css = (ROOT / "layouts/partials/critical-css.html").read_text(encoding="utf-8")
         self.style_css = (ROOT / "themes/uutistenlukija/static/css/style.css").read_text(
@@ -94,6 +96,25 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
         self.assertIn('data-track="advertise_cta_click"', self.cta)
         self.assertIn("founding_sponsor_page_click", self.cta)
         self.assertIn("founding_sponsor_interest_click", self.cta)
+        self.assertIn('/perustajakumppanuus/', self.cta)
+        self.assertIn('/perustajakumppanuus/#yhteydenotto', self.cta)
+
+    def test_founding_sponsor_page_is_non_binding_and_privacy_safe(self) -> None:
+        public_copy = self.founding_sponsor + self.founding_sponsor_frontmatter
+        for expected in (
+            'url: "/perustajakumppanuus/"',
+            'id="yhteydenotto"',
+            "Kiinnostuksen ilmaiseminen ei ole tilaus",
+            "Sivulla ei tehdä tilausta, maksua tai laskutussopimusta.",
+            "Älä lähetä maksutietoja tai muita arkaluonteisia henkilötietoja.",
+            "Viesti ei sido kampanjaan.",
+            'href="/tietosuojaseloste/"',
+        ):
+            with self.subTest(expected=expected):
+                self.assertIn(expected, public_copy)
+
+        self.assertIn('data-monetization-signal="founding_sponsor_interest_click"', public_copy)
+        self.assertNotRegex(public_copy, r"\b\d+[,.]?\d*\s*€")
 
     def test_homepage_dark_contrast_fix_is_scoped_and_preserves_focus_outline(self) -> None:
         eyebrow = ':root:not([data-theme="light"]) .advertiser-cta--homepage .advertiser-cta__eyebrow'
