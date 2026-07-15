@@ -16,6 +16,7 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
         self.frontmatter = (ROOT / "content/mainosta/_index.md").read_text(encoding="utf-8")
         self.mainosta = (ROOT / "layouts/_default/mainosta.html").read_text(encoding="utf-8")
         self.homepage = (ROOT / "layouts/index.html").read_text(encoding="utf-8")
+        self.digest = (ROOT / "layouts/_default/digest-page.html").read_text(encoding="utf-8")
         self.cta = (ROOT / "layouts/partials/advertiser-cta.html").read_text(encoding="utf-8")
         self.founding_sponsor = (ROOT / "layouts/_default/perustajakumppanuus.html").read_text(encoding="utf-8")
         self.founding_sponsor_frontmatter = (ROOT / "content/perustajakumppanuus/_index.md").read_text(encoding="utf-8")
@@ -115,6 +116,35 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
 
         self.assertIn('data-monetization-signal="founding_sponsor_interest_click"', public_copy)
         self.assertNotRegex(public_copy, r"\b\d+[,.]?\d*\s*€")
+
+    def test_digest_footer_uses_approved_on_site_founding_sponsor_contract(self) -> None:
+        partial_call = '{{ partial "advertiser-cta.html" (dict "placement" "daily-digest-footer" "page" .) }}'
+        newsletter_call = '{{ partial "newsletter-cta.html" . }}'
+        self.assertEqual(self.digest.count(partial_call), 1)
+        self.assertLess(self.digest.index('{{ end }}\n\n' + partial_call), self.digest.index(newsletter_call))
+
+        self.assertIn('eq $placement "daily-digest-footer"', self.cta)
+        self.assertIn('"daily-digest-footer-founding-sponsor-v1"', self.cta)
+        self.assertIn('$usesFoundingSponsorPage', self.cta)
+        self.assertIn('/perustajakumppanuus/', self.cta)
+        self.assertIn('/perustajakumppanuus/#yhteydenotto', self.cta)
+        self.assertIn('data-monetization-view="founding_sponsor_cta_view"', self.cta)
+        self.assertIn('founding_sponsor_page_click', self.cta)
+        self.assertIn('founding_sponsor_interest_click', self.cta)
+
+    def test_digest_dark_contrast_fix_is_scoped_and_preserves_existing_variants(self) -> None:
+        digest_eyebrow = '.advertiser-cta--daily-digest-footer .advertiser-cta__eyebrow'
+        digest_primary = '.advertiser-cta--daily-digest-footer .advertiser-cta__button--primary:focus-visible'
+        for stylesheet in (self.critical_css, self.style_css):
+            with self.subTest(stylesheet=stylesheet[:24]):
+                self.assertIn(digest_eyebrow, stylesheet)
+                self.assertIn(digest_primary, stylesheet)
+                self.assertIn('#f06b5d', stylesheet.lower())
+                self.assertIn('#c0392b', stylesheet.lower())
+
+        self.assertIn('"homepage-founding-sponsor-v1"', self.cta)
+        self.assertIn('"article-bottom-founding-sponsor-v1"', self.cta)
+        self.assertNotIn('.advertiser-cta--article-bottom .advertiser-cta__eyebrow{color:#f06b5d', self.critical_css)
 
     def test_homepage_dark_contrast_fix_is_scoped_and_preserves_focus_outline(self) -> None:
         eyebrow = ':root:not([data-theme="light"]) .advertiser-cta--homepage .advertiser-cta__eyebrow'

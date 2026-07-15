@@ -22,6 +22,6 @@ html{scroll-behavior:smooth}*,*:before,*:after{box-sizing:border-box;margin:0;pa
 @media (max-width:680px){main.container,.container{width:100%!important;max-width:100%!important}}
 /* Keep the article-bottom advertiser copy on its own row before async CSS loads. */
 .advertiser-cta--article-bottom .advertiser-cta__inner{grid-template-columns:minmax(0, 1fr)}.advertiser-cta--article-bottom .advertiser-cta__actions{justify-content:flex-start}
-/* OPE-386: homepage sponsor CTA dark-mode contrast locks; keep article-bottom unchanged. */
-:root:not([data-theme="light"]) .advertiser-cta--homepage .advertiser-cta__eyebrow{color:#f06b5d}:root:not([data-theme="light"]) .advertiser-cta--homepage .advertiser-cta__button--primary:hover,:root:not([data-theme="light"]) .advertiser-cta--homepage .advertiser-cta__button--primary:focus-visible{background:#c0392b;border-color:#c0392b;color:#fff}
+/* Sponsor CTA dark-mode contrast locks; keep article-bottom unchanged. */
+:root:not([data-theme="light"]) .advertiser-cta--homepage .advertiser-cta__eyebrow,:root:not([data-theme="light"]) .advertiser-cta--daily-digest-footer .advertiser-cta__eyebrow{color:#f06b5d}:root:not([data-theme="light"]) .advertiser-cta--homepage .advertiser-cta__button--primary:hover,:root:not([data-theme="light"]) .advertiser-cta--homepage .advertiser-cta__button--primary:focus-visible,:root:not([data-theme="light"]) .advertiser-cta--daily-digest-footer .advertiser-cta__button--primary:hover,:root:not([data-theme="light"]) .advertiser-cta--daily-digest-footer .advertiser-cta__button--primary:focus-visible{background:#c0392b;border-color:#c0392b;color:#fff}
 </style>

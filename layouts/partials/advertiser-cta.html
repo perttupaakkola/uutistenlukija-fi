@@ -3,8 +3,10 @@
 {{- $page := .page -}}
 {{- $placement := .placement | default "unknown" -}}
 {{- $title := cond $page ($page.Title | default "") "" -}}
-{{- $isFoundingSponsor := or (eq $placement "article-bottom") (eq $placement "homepage") -}}
-{{- $foundingSponsorPlacement := cond (eq $placement "homepage") "homepage-founding-sponsor-v1" "article-bottom-founding-sponsor-v1" -}}
+{{- $isDigestFooter := eq $placement "daily-digest-footer" -}}
+{{- $isFoundingSponsor := or (or (eq $placement "article-bottom") (eq $placement "homepage")) $isDigestFooter -}}
+{{- $usesFoundingSponsorPage := or (eq $placement "homepage") $isDigestFooter -}}
+{{- $foundingSponsorPlacement := cond (eq $placement "homepage") "homepage-founding-sponsor-v1" (cond $isDigestFooter "daily-digest-footer-founding-sponsor-v1" "article-bottom-founding-sponsor-v1") -}}
 <section class="advertiser-cta advertiser-cta--{{ $placement }}" aria-labelledby="advertiser-cta-{{ $placement }}"{{ if $isFoundingSponsor }}
          data-monetization-view="founding_sponsor_cta_view"
          data-placement="{{ $foundingSponsorPlacement }}"{{ end }}>
@@ -21,21 +23,21 @@
       {{ end }}
     </div>
     <div class="advertiser-cta__actions">
-      <a href="{{ if eq $placement "homepage" }}/perustajakumppanuus/{{ else }}/mainosta/{{ end }}"
+      <a href="{{ if $usesFoundingSponsorPage }}/perustajakumppanuus/{{ else }}/mainosta/{{ end }}"
          class="advertiser-cta__button advertiser-cta__button--primary"
          data-track="advertise_cta_click"
          data-monetization-signal="{{ if $isFoundingSponsor }}founding_sponsor_page_click{{ else }}advertise_page_click{{ end }}"
          data-placement="{{ if $isFoundingSponsor }}{{ $foundingSponsorPlacement }}{{ else }}{{ $placement }}{{ end }}"
-         data-destination="{{ if eq $placement "homepage" }}perustajakumppanuus{{ else }}mainosta{{ end }}"
+         data-destination="{{ if $usesFoundingSponsorPage }}perustajakumppanuus{{ else }}mainosta{{ end }}"
          data-article-title="{{ $title }}">
-        {{ if eq $placement "homepage" }}Lue perustajakumppanuudesta{{ else if $isFoundingSponsor }}Tutustu mainonnan periaatteisiin{{ else }}Lue mainonnasta{{ end }}
+        {{ if $usesFoundingSponsorPage }}Lue perustajakumppanuudesta{{ else if $isFoundingSponsor }}Tutustu mainonnan periaatteisiin{{ else }}Lue mainonnasta{{ end }}
       </a>
-      <a href="{{ if eq $placement "homepage" }}/perustajakumppanuus/#yhteydenotto{{ else if $isFoundingSponsor }}mailto:info@uutistenlukija.fi?subject=Kiinnostus%20Uutistenlukijan%20perustajakumppanuuteen&amp;body=Yritys%3A%0AWWW-osoite%3A%0AYhteyshenkil%C3%B6%3A%0AMillaisesta%20n%C3%A4kyvyydest%C3%A4%20olette%20kiinnostuneita%3A%0A%0AT%C3%A4m%C3%A4%20viesti%20on%20kiinnostuksenilmaus%20eik%C3%A4%20sido%20kampanjaan.{{ else }}mailto:info@uutistenlukija.fi?subject=Mainostus%20Uutistenlukijassa{{ end }}"
+      <a href="{{ if $usesFoundingSponsorPage }}/perustajakumppanuus/#yhteydenotto{{ else if $isFoundingSponsor }}mailto:info@uutistenlukija.fi?subject=Kiinnostus%20Uutistenlukijan%20perustajakumppanuuteen&amp;body=Yritys%3A%0AWWW-osoite%3A%0AYhteyshenkil%C3%B6%3A%0AMillaisesta%20n%C3%A4kyvyydest%C3%A4%20olette%20kiinnostuneita%3A%0A%0AT%C3%A4m%C3%A4%20viesti%20on%20kiinnostuksenilmaus%20eik%C3%A4%20sido%20kampanjaan.{{ else }}mailto:info@uutistenlukija.fi?subject=Mainostus%20Uutistenlukijassa{{ end }}"
          class="advertiser-cta__button advertiser-cta__button--secondary"
          data-track="advertise_cta_click"
          data-monetization-signal="{{ if $isFoundingSponsor }}founding_sponsor_interest_click{{ else }}advertise_email_click{{ end }}"
          data-placement="{{ if $isFoundingSponsor }}{{ $foundingSponsorPlacement }}{{ else }}{{ $placement }}{{ end }}"
-         data-destination="{{ if eq $placement "homepage" }}perustajakumppanuus-contact{{ else }}email{{ end }}"
+         data-destination="{{ if $usesFoundingSponsorPage }}perustajakumppanuus-contact{{ else }}email{{ end }}"
          data-article-title="{{ $title }}">
         {{ if $isFoundingSponsor }}Ilmaise kiinnostuksesi{{ else }}Ota yhteyttä sähköpostilla{{ end }}
       </a>
