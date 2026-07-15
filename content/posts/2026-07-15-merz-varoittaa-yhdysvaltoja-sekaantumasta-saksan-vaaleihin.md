@@ -55,7 +55,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/us-news/2026/jul/15/germany-warns-against-election-interference-as-us-offers-funding-to-maga-aligned-causes-in-europe"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
