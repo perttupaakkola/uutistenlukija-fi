@@ -47,7 +47,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/yrittaja-vaihtoi-tyoterveyspalvelua-kahdesti-mutta-ongelmat-pysyivat-laakarilaskuja-tyontekijoista-jotka-eivat-olleet-enaa-toissa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
