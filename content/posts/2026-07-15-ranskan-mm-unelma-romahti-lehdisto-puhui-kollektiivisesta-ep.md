@@ -47,7 +47,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/football/2026/jul/15/france-world-cup-semi-final-media-reactions-spain"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 

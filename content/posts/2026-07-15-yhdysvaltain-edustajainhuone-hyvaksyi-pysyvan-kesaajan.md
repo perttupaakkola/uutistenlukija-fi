@@ -45,7 +45,6 @@ keywords:
 source_name: "USA TODAY"
 source_url: "https://www.usatoday.com/story/news/2026/07/13/could-alabama-get-permanent-daylight-saving-time-house-to-vote-on-bill/90901967007/"
 source_domain: "usatoday.com"
-briefing: true
 draft: false
 ---
 
