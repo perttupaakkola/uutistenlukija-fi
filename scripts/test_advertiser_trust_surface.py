@@ -17,6 +17,7 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
         self.mainosta = (ROOT / "layouts/_default/mainosta.html").read_text(encoding="utf-8")
         self.homepage = (ROOT / "layouts/index.html").read_text(encoding="utf-8")
         self.digest = (ROOT / "layouts/_default/digest-page.html").read_text(encoding="utf-8")
+        self.category = (ROOT / "layouts/taxonomy/category.html").read_text(encoding="utf-8")
         self.cta = (ROOT / "layouts/partials/advertiser-cta.html").read_text(encoding="utf-8")
         self.founding_sponsor = (ROOT / "layouts/_default/perustajakumppanuus.html").read_text(encoding="utf-8")
         self.founding_sponsor_frontmatter = (ROOT / "content/perustajakumppanuus/_index.md").read_text(encoding="utf-8")
@@ -145,6 +146,39 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
         self.assertIn('"homepage-founding-sponsor-v1"', self.cta)
         self.assertIn('"article-bottom-founding-sponsor-v1"', self.cta)
         self.assertNotIn('.advertiser-cta--article-bottom .advertiser-cta__eyebrow{color:#f06b5d', self.critical_css)
+
+    def test_talous_category_uses_bounded_on_site_founding_sponsor_contract(self) -> None:
+        partial_call = '{{ partial "advertiser-cta.html" (dict "placement" "talous-category" "page" .) }}'
+        self.assertEqual(self.category.count(partial_call), 1)
+        talous_gate = '{{ if eq $termSlug "talous" }}'
+        gate_start = self.category.index(talous_gate)
+        gate_end = self.category.index('{{ end }}\n  </header>', gate_start)
+        self.assertIn(partial_call, self.category[gate_start:gate_end])
+        self.assertLess(self.category.index('</section>\n    ' + partial_call), self.category.index('{{ $latestTalous :='))
+
+        self.assertIn('eq $placement "talous-category"', self.cta)
+        self.assertIn('"talous-category-founding-sponsor-v1"', self.cta)
+        self.assertIn('/perustajakumppanuus/', self.cta)
+        self.assertIn('/perustajakumppanuus/#yhteydenotto', self.cta)
+        self.assertIn('founding_sponsor_page_click', self.cta)
+        self.assertIn('founding_sponsor_interest_click', self.cta)
+
+    def test_talous_category_dark_contrast_scope_preserves_other_variants(self) -> None:
+        eyebrow = '.advertiser-cta--talous-category .advertiser-cta__eyebrow'
+        primary = '.advertiser-cta--talous-category .advertiser-cta__button--primary:focus-visible'
+        for stylesheet in (self.critical_css, self.style_css):
+            with self.subTest(stylesheet=stylesheet[:24]):
+                self.assertIn(eyebrow, stylesheet)
+                self.assertIn(primary, stylesheet)
+                self.assertIn('#f06b5d', stylesheet.lower())
+                self.assertIn('#c0392b', stylesheet.lower())
+
+        for placement in (
+            'homepage-founding-sponsor-v1',
+            'daily-digest-footer-founding-sponsor-v1',
+            'article-bottom-founding-sponsor-v1',
+        ):
+            self.assertIn(placement, self.cta)
 
     def test_homepage_dark_contrast_fix_is_scoped_and_preserves_focus_outline(self) -> None:
         eyebrow = ':root:not([data-theme="light"]) .advertiser-cta--homepage .advertiser-cta__eyebrow'

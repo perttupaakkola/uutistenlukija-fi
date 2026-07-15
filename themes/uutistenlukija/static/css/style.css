@@ -3152,13 +3152,16 @@ body.is-home .highlights-row--top {
   color: var(--accent);
 }
 :root:not([data-theme="light"]) .advertiser-cta--homepage .advertiser-cta__eyebrow,
-:root:not([data-theme="light"]) .advertiser-cta--daily-digest-footer .advertiser-cta__eyebrow {
+:root:not([data-theme="light"]) .advertiser-cta--daily-digest-footer .advertiser-cta__eyebrow,
+:root:not([data-theme="light"]) .advertiser-cta--talous-category .advertiser-cta__eyebrow {
   color: #f06b5d;
 }
 :root:not([data-theme="light"]) .advertiser-cta--homepage .advertiser-cta__button--primary:hover,
 :root:not([data-theme="light"]) .advertiser-cta--homepage .advertiser-cta__button--primary:focus-visible,
 :root:not([data-theme="light"]) .advertiser-cta--daily-digest-footer .advertiser-cta__button--primary:hover,
-:root:not([data-theme="light"]) .advertiser-cta--daily-digest-footer .advertiser-cta__button--primary:focus-visible {
+:root:not([data-theme="light"]) .advertiser-cta--daily-digest-footer .advertiser-cta__button--primary:focus-visible,
+:root:not([data-theme="light"]) .advertiser-cta--talous-category .advertiser-cta__button--primary:hover,
+:root:not([data-theme="light"]) .advertiser-cta--talous-category .advertiser-cta__button--primary:focus-visible {
   background: #c0392b;
   border-color: #c0392b;
   color: #fff;

@@ -42,6 +42,7 @@
         {{ end }}
       </nav>
     </section>
+    {{ partial "advertiser-cta.html" (dict "placement" "talous-category" "page" .) }}
     {{ $latestTalous := first 2 $paginator.Pages }}
     {{ if gt (len $latestTalous) 0 }}
     <section class="talous-recirculation" aria-labelledby="talous-recirculation-title">
