@@ -47,7 +47,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/ukrainalainen-miska-mietti-kymmenen-sekuntia-ja-siirtyi-poimijasta-mansikanviljelijaksi-emme-halunneet-paastaa-hanta-kasistamme/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
