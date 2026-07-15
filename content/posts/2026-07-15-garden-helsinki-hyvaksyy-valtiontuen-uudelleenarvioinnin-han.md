@@ -45,7 +45,6 @@ keywords:
 source_name: "Helsingin Uutiset"
 source_url: "https://www.helsinginuutiset.fi/paikalliset/9621168"
 source_domain: "helsinginuutiset.fi"
-briefing: true
 draft: false
 ---
 
