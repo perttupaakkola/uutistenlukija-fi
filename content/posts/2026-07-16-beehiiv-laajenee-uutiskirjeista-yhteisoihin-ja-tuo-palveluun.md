@@ -47,7 +47,6 @@ keywords:
 source_name: "TheWrap"
 source_url: "https://www.thewrap.com/industry-news/tech/beehiiv-expands-beyond-newsletters/"
 source_domain: "thewrap.com"
-briefing: true
 draft: false
 ---
 
