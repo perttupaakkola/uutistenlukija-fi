@@ -42,7 +42,7 @@ This file adapts the DOX idea from `agent0ai/dox`: keep a small hierarchy of `AG
 
 Use the checks relevant to the changed area and report real output:
 
-- Hugo/UI/templates: `hugo --minify --destination /tmp/uutistenlukija-hugo-check`
+- Hugo/UI/templates: `scripts/verify_hugo.sh OPE-NNN`. To inspect generated output before successful cleanup, append `-- <verification command>` and read `$HUGO_OUTPUT_DIR` in that command. Failed builds/checks remain at `/tmp/opeNNN-hugo-build` for diagnosis.
 - Template contract: `bash scripts/validate_templates.sh`
 - Portal CSS: `python3 scripts/validate_portal_css_contract.py`
 - Frontmatter: `python3 pipeline/validate_frontmatter.py`
