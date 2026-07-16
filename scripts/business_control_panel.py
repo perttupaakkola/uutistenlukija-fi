@@ -122,13 +122,21 @@ def extract_frontmatter(path: Path) -> dict[str, str]:
     return fm
 
 
+def frontmatter_truthy(value: Any) -> bool:
+    return str(value or "").strip().lower() in {"true", "yes", "on", "1"}
+
+
 def content_summary(now: datetime) -> dict[str, Any]:
     posts = sorted(CONTENT_DIR.glob("*.md")) if CONTENT_DIR.exists() else []
     latest: tuple[datetime, Path, dict[str, str]] | None = None
+    draft_count = 0
     published_24h = 0
     cutoff = now - timedelta(hours=24)
     for path in posts:
         fm = extract_frontmatter(path)
+        if frontmatter_truthy(fm.get("draft")):
+            draft_count += 1
+            continue
         dt = parse_dt(fm.get("date") or fm.get("published_at"))
         if dt and dt >= cutoff:
             published_24h += 1
@@ -136,7 +144,8 @@ def content_summary(now: datetime) -> dict[str, Any]:
             latest = (dt, path, fm)
     latest_dt = latest[0] if latest else None
     return {
-        "article_count_local": len(posts),
+        "article_count_local": len(posts) - draft_count,
+        "draft_count_local": draft_count,
         "published_last_24h_local": published_24h,
         "last_publish_at": iso(latest_dt),
         "last_publish_age_minutes": age_minutes(latest_dt, now),

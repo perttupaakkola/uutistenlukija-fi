@@ -17,6 +17,41 @@ spec.loader.exec_module(panel)
 
 
 class BusinessControlPanelReportingTest(unittest.TestCase):
+    def test_content_summary_excludes_truthy_drafts_from_published_metrics(self) -> None:
+        now = datetime(2026, 7, 16, 12, 0, tzinfo=timezone.utc)
+        cases = [
+            ("published-missing", "", 1),
+            ("published-false", "draft: false\n", 2),
+            ("draft-lower", "draft: true\n", 3),
+            ("draft-title", "draft: True\n", 4),
+            ("draft-upper", "draft: TRUE\n", 5),
+            ("draft-yes", "draft: yes\n", 6),
+            ("draft-on", "draft: ON\n", 7),
+        ]
+        with tempfile.TemporaryDirectory() as tmp:
+            content_dir = Path(tmp) / "content" / "posts"
+            content_dir.mkdir(parents=True)
+            for slug, draft_line, hours_ago in cases:
+                published = now - timedelta(hours=hours_ago)
+                (content_dir / f"{slug}.md").write_text(
+                    "---\n"
+                    f"title: {slug}\n"
+                    f"date: {published.isoformat()}\n"
+                    f"{draft_line}"
+                    "categories:\n"
+                    "  - Kotimaa\n"
+                    "---\nBody\n",
+                    encoding="utf-8",
+                )
+
+            with patch.object(panel, "CONTENT_DIR", content_dir):
+                content = panel.content_summary(now)
+
+        self.assertEqual(content["article_count_local"], 2)
+        self.assertEqual(content["draft_count_local"], 5)
+        self.assertEqual(content["published_last_24h_local"], 2)
+        self.assertEqual(content["latest_article"]["slug"], "published-missing")
+
     def test_effective_ad_config_rejects_incomplete_or_dormant_activation(self) -> None:
         cases = [
             ({"ads_enabled": False, "adsense_id": "ca-test", "ads_consent_revision": 3}, False, 3, 2),
