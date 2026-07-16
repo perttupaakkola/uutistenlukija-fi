@@ -27,6 +27,28 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
         self.style_css = (ROOT / "themes/uutistenlukija/static/css/style.css").read_text(
             encoding="utf-8"
         )
+        self.mainosta_css = (ROOT / "assets/css/mainosta.css").read_text(encoding="utf-8")
+
+    def test_mainosta_primary_cta_contrast_is_aa_in_both_themes(self) -> None:
+        dark_rule = re.search(
+            r':root:not\(\[data-theme="light"\]\) \.mainosta-signal__btn\s*\{([^}]*)\}',
+            self.mainosta_css,
+        )
+        self.assertIsNotNone(dark_rule)
+        declarations = dark_rule.group(1).lower()
+        self.assertIn("background: #c0392b", declarations)
+        self.assertIn("color: #fff", declarations)
+
+        def luminance(hex_color: str) -> float:
+            channels = [int(hex_color[index:index + 2], 16) / 255 for index in (1, 3, 5)]
+            linear = [value / 12.92 if value <= 0.04045 else ((value + 0.055) / 1.055) ** 2.4 for value in channels]
+            return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2]
+
+        white = luminance("#ffffff")
+        portal_red = luminance("#c0392b")
+        contrast = (white + 0.05) / (portal_red + 0.05)
+        self.assertGreaterEqual(contrast, 4.5)
+        self.assertIn(":focus-visible{outline:3px solid var(--accent)", self.critical_css)
 
     def test_public_copy_has_no_unsupported_or_internal_claims(self) -> None:
         public_copy = self.frontmatter + self.mainosta + self.cta

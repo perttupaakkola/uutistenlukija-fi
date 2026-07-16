@@ -119,6 +119,11 @@
   text-decoration: none;
 }
 
+:root:not([data-theme="light"]) .mainosta-signal__btn {
+  background: #c0392b;
+  color: #fff;
+}
+
 .mainosta-signal__btn:hover,
 .mainosta-signal__btn:focus-visible {
   filter: brightness(0.96);
