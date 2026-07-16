@@ -47,7 +47,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/osakeralli-tasaantui-mutta-rahastomarkkinan-nakyma-pysyi-myonteisena/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: true
 ---
 
