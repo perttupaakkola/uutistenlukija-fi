@@ -47,7 +47,6 @@ keywords:
 source_name: "Stara"
 source_url: "https://www.stara.fi/2026/07/03/tama-on-sinilevatilanne-heinakuun-alussa/"
 source_domain: "stara.fi"
-briefing: true
 draft: false
 ---
 
