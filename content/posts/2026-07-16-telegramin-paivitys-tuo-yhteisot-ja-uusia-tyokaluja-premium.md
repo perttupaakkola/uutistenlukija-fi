@@ -47,7 +47,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/15/telegramiin-taas-merkittava-paivitys-mukana-yhteisot-ja-lisaa-mahdollisuuksia-maksaville-kayttajille/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
