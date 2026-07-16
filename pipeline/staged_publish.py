@@ -1799,6 +1799,7 @@ def cmd_publish(args: argparse.Namespace) -> int:
     if not articles:
         log(f"publish: all articles rejected by quality gate rejected={len(gate.rejected)}")
         return 0
+    articles = filter_new_articles(articles)
     articles = check_published_duplicates(articles, window_hours=args.dedup_window)
     articles = dedup_within_batch(articles)
     if not args.dry_run:

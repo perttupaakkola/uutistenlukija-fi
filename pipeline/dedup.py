@@ -23,6 +23,7 @@ from difflib import SequenceMatcher
 DEDUP_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "published_fingerprints.json")
 URL_HASH_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "published_url_hashes.json")
 MAX_AGE_DAYS = 7  # Forget fingerprints older than 7 days
+URL_HASH_MAX_AGE_DAYS = 90  # Exact source URLs recur well beyond the semantic window
 
 # Semantic dedup: content/posts/ directory (relative to pipeline/)
 _CONTENT_POSTS_DIR = os.path.join(
@@ -282,9 +283,10 @@ def filter_new_articles(articles: list) -> list:
     url_hashes = _load_url_hashes()
 
     # Clean old entries
-    cutoff = (datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS)).isoformat()
-    fps = {k: v for k, v in fps.items() if v > cutoff}
-    url_hashes = {k: v for k, v in url_hashes.items() if v > cutoff}
+    fingerprint_cutoff = (datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS)).isoformat()
+    url_hash_cutoff = (datetime.now(timezone.utc) - timedelta(days=URL_HASH_MAX_AGE_DAYS)).isoformat()
+    fps = {k: v for k, v in fps.items() if v > fingerprint_cutoff}
+    url_hashes = {k: v for k, v in url_hashes.items() if v > url_hash_cutoff}
 
     new_articles = []
     for article in articles:
