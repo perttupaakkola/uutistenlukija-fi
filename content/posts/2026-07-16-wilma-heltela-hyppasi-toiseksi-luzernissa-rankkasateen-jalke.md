@@ -55,7 +55,6 @@ keywords:
 source_name: "Salon Seudun Sanomat"
 source_url: "https://www.sss.fi/2026/07/wilma-heltela-ylitti-rankkasateen-jalkeen-451-sveitsissa/"
 source_domain: "sss.fi"
-briefing: true
 draft: false
 ---
 
