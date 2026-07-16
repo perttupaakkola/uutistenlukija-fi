@@ -47,7 +47,6 @@ keywords:
 source_name: "Verkkouutiset"
 source_url: "https://www.verkkouutiset.fi/a/nordean-tulos-ylitti-odotukset-puolivuosiosinko-034-euroa/"
 source_domain: "verkkouutiset.fi"
-briefing: true
 draft: false
 ---
 
