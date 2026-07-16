@@ -55,7 +55,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/koska-viimeksi-paivitit-verkkoreitittimen-tai-vaihdoit-sen-uuteen-asiantuntija-neuvoo-miten-paivitys-onnistuu/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
