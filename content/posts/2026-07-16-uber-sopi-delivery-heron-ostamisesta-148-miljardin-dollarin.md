@@ -47,7 +47,6 @@ keywords:
 source_name: "AOL"
 source_url: "https://www.aol.com/articles/uber-launches-14-8-billion-062550000.html"
 source_domain: "aol.com"
-briefing: true
 draft: false
 ---
 
