@@ -1,0 +1,245 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-16T09:41:42.661572+00:00",
+  "digest": "7c14601495",
+  "packet": {
+    "packet_id": "20260716T094142Z_7c14601495",
+    "created_at": "2026-07-16T09:41:42Z",
+    "headline_seed": "Eleven people die in fire at Algerian foster care home",
+    "description_seed": "Along with the fatalities, 19 people suffered injuries, the authorities say.",
+    "link": "https://www.bbc.co.uk/news/articles/cvgwd4nz344o?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/cvgwd4nz344o?at_medium=RSS&at_campaign=rss"
+    ],
+    "source_domains": [
+      "bbc.co.uk"
+    ],
+    "selected_source": {
+      "name": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/cvgwd4nz344o?at_medium=RSS&at_campaign=rss",
+      "domain": "bbc.co.uk"
+    },
+    "selected_source_provenance_error": "",
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Eleven people die in fire at Algerian foster care home"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_url": "https://www.bbc.co.uk/news/articles/cvgwd4nz344o?at_medium=RSS&at_campaign=rss",
+        "source_domain": "bbc.co.uk",
+        "source_type": "description",
+        "text": "Along with the fatalities, 19 people suffered injuries, the authorities say.",
+        "word_count": 11,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      },
+      {
+        "source": "BBC World",
+        "source_url": "https://www.bbc.co.uk/news/articles/cvgwd4nz344o?at_medium=RSS&at_campaign=rss",
+        "source_domain": "bbc.co.uk",
+        "source_type": "research",
+        "text": "The fire service arrived at the scene in the early hours Eleven people have died in a fire at a foster care facility in Algiers, Algeria's capital city. The country's civil protection department said 19 others were injured in the blaze, which firefighters began to tackle at 03:30 local time (04:30 GMT) on Thursday. They were still attempting to extinguish the fire just over three hours later, when the authorities released an update on the situation. Their statement did not specify the ages of those killed or injured. The civil protection department deployed 10 fire engines and 16 ambulances to the scene. Algeria has been experiencing a heatwave for several days, and nearly 1,000 fires have been recorded in the space of a week, the AFP news agency has reported.",
+        "word_count": 130,
+        "keyword_overlap": 6,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_url": "https://www.bbc.co.uk/news/articles/cvgwd4nz344o?at_medium=RSS&at_campaign=rss",
+        "source_domain": "bbc.co.uk",
+        "source_type": "research",
+        "text": "Algerian state media said Prime Minister Sifi Ghrieb travelled to two hospitals in Algiers to visit individuals injured in Thursday's fire. The report was accompanied by a picture of Ghrieb next to a child in a hospital bed. Amid the fire, five people with special needs were \"taken into care and transported to a safe location\", the authorities said. Ten fire engines have been at the scene fighting the blaze 'Welcome to 2976' - North Africa's Amazigh people ring in the new year French row with Algeria escalates further with tit-for-tat expulsions Go to BBCAfrica.com, external for more news from the African continent. Follow us on Twitter @BBCAfrica, external, on Facebook at BBC Africa, external or on Instagram at bbcafrica, external",
+        "word_count": 121,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Along with the fatalities, 19 people suffered injuries, the authorities say.\n\nThe fire service arrived at the scene in the early hours Eleven people have died in a fire at a foster care facility in Algiers, Algeria's capital city. The country's civil protection department said 19 others were injured in the blaze, which firefighters began to tackle at 03:30 local time (04:30 GMT) on Thursday. They were still attempting to extinguish the fire just over three hours later, when the authorities released an update on the situation. Their statement did not specify the ages of those killed or injured. The civil protection department deployed 10 fire engines and 16 ambulances to the scene. Algeria has been experiencing a heatwave for several days, and nearly 1,000 fires have been recorded in the space of a week, the AFP news agency has reported.\n\nAlgerian state media said Prime Minister Sifi Ghrieb travelled to two hospitals in Algiers to visit individuals injured in Thursday's fire. The report was accompanied by a picture of Ghrieb next to a child in a hospital bed. Amid the fire, five people with special needs were \"taken into care and transported to a safe location\", the authorities said. Ten fire engines have been at the scene fighting the blaze 'Welcome to 2976' - North Africa's Amazigh people ring in the new year French row with Algeria escalates further with tit-for-tat expulsions Go to BBCAfrica.com, external for more news from the African continent. Follow us on Twitter @BBCAfrica, external, on Facebook at BBC Africa, external or on Instagram at bbcafrica, external",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 262,
+      "selected_blocks": 3,
+      "selected_source_words": 262,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Eleven people die in fire at Algerian foster care home",
+      "description": "Along with the fatalities, 19 people suffered injuries, the authorities say.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Eleven people die in fire at Algerian foster care home",
+    "description": "Along with the fatalities, 19 people suffered injuries, the authorities say.",
+    "link": "https://www.bbc.co.uk/news/articles/cvgwd4nz344o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-16T09:20:43+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "726ccf4691208679cd0527e1619d8445",
+    "_url_hash": "1829a24804c933eccd6168f18ac71e2aaee38dba9288821c21739655a1dde0db",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World | URL: https://www.bbc.co.uk/news/articles/cvgwd4nz344o?at_medium=RSS&at_campaign=rss]\nThe fire service arrived at the scene in the early hours\n\nEleven people have died in a fire at a foster care facility in Algiers, Algeria's capital city.\n\nThe country's civil protection department said 19 others were injured in the blaze, which firefighters began to tackle at 03:30 local time (04:30 GMT) on Thursday.\n\nThey were still attempting to extinguish the fire just over three hours later, when the authorities released an update on the situation.\n\nTheir statement did not specify the ages of those killed or injured.\n\nThe civil protection department deployed 10 fire engines and 16 ambulances to the scene.\n\nAlgeria has been experiencing a heatwave for several days, and nearly 1,000 fires have been recorded in the space of a week, the AFP news agency has reported.\n\nAlgerian state media said Prime Minister Sifi Ghrieb travelled to two hospitals in Algiers to visit individuals injured in Thursday's fire.\n\nThe report was accompanied by a picture of Ghrieb next to a child in a hospital bed.\n\nAmid the fire, five people with special needs were \"taken into care and transported to a safe location\", the authorities said.\n\nTen fire engines have been at the scene fighting the blaze\n\n'Welcome to 2976' - North Africa's Amazigh people ring in the new year\n\nFrench row with Algeria escalates further with tit-for-tat expulsions\n\nGo to BBCAfrica.com, external for more news from the African continent.\n\nFollow us on Twitter @BBCAfrica, external, on Facebook at BBC Africa, external or on Instagram at bbcafrica, external",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-16T09:49:08.412973+00:00",
+  "payload": {
+    "packet_id": "20260716T094142Z_7c14601495",
+    "title": "Yksitoista kuoli sijaishuoltolaitoksen tulipalossa Algerissa",
+    "summary": "Algerian pääkaupungissa syttyneessä tulipalossa kuoli 11 ja loukkaantui 19 ihmistä. Pelastusviranomaiset lähettivät paikalle kymmenen paloautoa ja 16 ambulanssia.",
+    "content": "Yksitoista ihmistä on kuollut tulipalossa sijaishuoltolaitoksessa Algerian pääkaupungissa Algerissa, ja 19 muuta ihmistä on loukkaantunut. Maan pelastusviranomaisen mukaan palomiehet aloittivat sammutustyöt varhain torstaiaamuna kello 3.30 paikallista aikaa eli kello 4.30 GMT-aikaa. Viranomaisten tiedotteessa ei kerrottu kuolleiden eikä loukkaantuneiden ikiä. Siinä ei myöskään eritelty, kuinka moni uhreista oli laitoksen hoidettavana.\n\n## Pelastusoperaatio jatkui aamulla\n\nPelastusviranomainen lähetti tapahtumapaikalle kymmenen paloautoa ja 16 ambulanssia. Lähteen mukaan pelastuslaitos saapui paikalle aamuyön tunteina. Hieman yli kolme tuntia sammutustöiden alkamisen jälkeen julkaistun päivityksen aikaan palomiehet yrittivät edelleen saada palon sammutetuksi. Päivitys kuvasi siten yhä käynnissä ollutta pelastusoperaatiota. Viranomaiset eivät tuolloin antaneet arviota siitä, milloin palo saataisiin hallintaan tai sammutustyö päättyisi.\n\nViranomaisten mukaan viisi erityistä tukea tarvitsevaa ihmistä otettiin palon aikana huolehdittaviksi ja kuljetettiin turvalliseen paikkaan. Julkaistuista tiedoista ei käy ilmi, olivatko he sijaishuoltolaitoksen asukkaita tai sisältyivätkö he 19 loukkaantuneen joukkoon. Viiden henkilön siirto mainittiin erillisenä pelastustoimena, mutta heidän voinnistaan tai iästään ei annettu tarkempia tietoja.\n\n## Pääministeri vieraili sairaaloissa\n\nAlgerian valtiollinen media kertoi pääministeri Sifi Ghriebin matkustaneen kahteen Algerissa sijaitsevaan sairaalaan tapaamaan torstain tulipalossa loukkaantuneita. Vierailua käsittelevän uutisen yhteydessä julkaistiin kuva, jossa Ghrieb oli sairaalavuoteessa olevan lapsen vierellä. Yhden lapsen näkyminen kuvassa ei kuitenkaan kerro muiden kuolleiden tai loukkaantuneiden ikää, eikä viranomaisten lausunto sisältänyt tällaista erittelyä.\n\nKuolleiden ja loukkaantuneiden määrät perustuvat Algerian pelastusviranomaisen torstaina julkaisemaan ilmoitukseen. Päivitys annettiin sammutustöiden ollessa vielä kesken, ja siinä keskityttiin käynnissä olleeseen pelastusoperaatioon: uhrilukuihin, paikalle lähetettyihin ajoneuvoihin ja turvaan siirrettyihin ihmisiin. Julkistetut tiedot kuvasivat siten torstaiaamun tilannetta. Niissä ei kerrottu palon syttymissyytä eikä laitoksen vahinkojen laajuutta.\n\n## Algeriaa koettelee helleaalto\n\nAlgeria on kokenut useita päiviä kestäneen helleaallon. Uutistoimisto AFP:n mukaan maassa kirjattiin yhden viikon aikana lähes tuhat tulipaloa. Algerin sijaishuoltolaitoksen palo sattui tämän laajan palojakson aikana, mutta pelastusviranomainen ei ilmoituksessaan yhdistänyt laitospaloa kuumuuteen eikä muihin maassa rekisteröityihin paloihin. Saatavilla olevien tietojen perusteella helleaallon mahdollista osuutta juuri tämän palon syttymiseen ei voida arvioida.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Algeria",
+      "Alger",
+      "tulipalo",
+      "sijaishuolto",
+      "onnettomuudet"
+    ],
+    "summary_bullets": [
+      "Tulipalossa kuoli 11 ja loukkaantui 19 ihmistä.",
+      "Paikalle lähetettiin kymmenen paloautoa ja 16 ambulanssia.",
+      "Palon syytä tai uhrien ikiä ei ole kerrottu."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "confidence": 0.94,
+    "journalist_note": "Uhriluvut ja pelastustoimia koskevat tiedot ovat Algerian viranomaisten ilmoittamia. Palon syytä ei ole kerrottu, eikä helleaallon mahdollista yhteyttä tapahtumaan pidä esittää varmana."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260716T094142Z_7c14601495\",\n  \"title\": \"Yksitoista kuoli sijaishuoltolaitoksen tulipalossa Algerissa\",\n  \"summary\": \"Algerian pääkaupungissa syttyneessä tulipalossa kuoli 11 ja loukkaantui 19 ihmistä. Pelastusviranomaiset lähettivät paikalle kymmenen paloautoa ja 16 ambulanssia.\",\n  \"content\": \"Yksitoista ihmistä on kuollut tulipalossa sijaishuoltolaitoksessa Algerian pääkaupungissa Algerissa, ja 19 muuta ihmistä on loukkaantunut. Maan pelastusviranomaisen mukaan palomiehet aloittivat sammutustyöt varhain torstaiaamuna kello 3.30 paikallista aikaa eli kello 4.30 GMT-aikaa. Viranomaisten tiedotteessa ei kerrottu kuolleiden eikä loukkaantuneiden ikiä. Siinä ei myöskään eritelty, kuinka moni uhreista oli laitoksen hoidettavana.\\n\\n## Pelastusoperaatio jatkui aamulla\\n\\nPelastusviranomainen lähetti tapahtumapaikalle kymmenen paloautoa ja 16 ambulanssia. Lähteen mukaan pelastuslaitos saapui paikalle aamuyön tunteina. Hieman yli kolme tuntia sammutustöiden alkamisen jälkeen julkaistun päivityksen aikaan palomiehet yrittivät edelleen saada palon sammutetuksi. Päivitys kuvasi siten yhä käynnissä ollutta pelastusoperaatiota. Viranomaiset eivät tuolloin antaneet arviota siitä, milloin palo saataisiin hallintaan tai sammutustyö päättyisi.\\n\\nViranomaisten mukaan viisi erityistä tukea tarvitsevaa ihmistä otettiin palon aikana huolehdittaviksi ja kuljetettiin turvalliseen paikkaan. Julkaistuista tiedoista ei käy ilmi, olivatko he sijaishuoltolaitoksen asukkaita tai sisältyivätkö he 19 loukkaantuneen joukkoon. Viiden henkilön siirto mainittiin erillisenä pelastustoimena, mutta heidän voinnistaan tai iästään ei annettu tarkempia tietoja.\\n\\n## Pääministeri vieraili sairaaloissa\\n\\nAlgerian valtiollinen media kertoi pääministeri Sifi Ghriebin matkustaneen kahteen Algerissa sijaitsevaan sairaalaan tapaamaan torstain tulipalossa loukkaantuneita. Vierailua käsittelevän uutisen yhteydessä julkaistiin kuva, jossa Ghrieb oli sairaalavuoteessa olevan lapsen vierellä. Yhden lapsen näkyminen kuvassa ei kuitenkaan kerro muiden kuolleiden tai loukkaantuneiden ikää, eikä viranomaisten lausunto sisältänyt tällaista erittelyä.\\n\\nKuolleiden ja loukkaantuneiden määrät perustuvat Algerian pelastusviranomaisen torstaina julkaisemaan ilmoitukseen. Päivitys annettiin sammutustöiden ollessa vielä kesken, ja siinä keskityttiin käynnissä olleeseen pelastusoperaatioon: uhrilukuihin, paikalle lähetettyihin ajoneuvoihin ja turvaan siirrettyihin ihmisiin. Julkistetut tiedot kuvasivat siten torstaiaamun tilannetta. Niissä ei kerrottu palon syttymissyytä eikä laitoksen vahinkojen laajuutta.\\n\\n## Algeriaa koettelee helleaalto\\n\\nAlgeria on kokenut useita päiviä kestäneen helleaallon. Uutistoimisto AFP:n mukaan maassa kirjattiin yhden viikon aikana lähes tuhat tulipaloa. Algerin sijaishuoltolaitoksen palo sattui tämän laajan palojakson aikana, mutta pelastusviranomainen ei ilmoituksessaan yhdistänyt laitospaloa kuumuuteen eikä muihin maassa rekisteröityihin paloihin. Saatavilla olevien tietojen perusteella helleaallon mahdollista osuutta juuri tämän palon syttymiseen ei voida arvioida.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Algeria\",\n    \"Alger\",\n    \"tulipalo\",\n    \"sijaishuolto\",\n    \"onnettomuudet\"\n  ],\n  \"summary_bullets\": [\n    \"Tulipalossa kuoli 11 ja loukkaantui 19 ihmistä.\",\n    \"Paikalle lähetettiin kymmenen paloautoa ja 16 ambulanssia.\",\n    \"Palon syytä tai uhrien ikiä ei ole kerrottu.\"\n  ],\n  \"content_type\": \"news\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.94,\n  \"journalist_note\": \"Uhriluvut ja pelastustoimia koskevat tiedot ovat Algerian viranomaisten ilmoittamia. Palon syytä ei ole kerrottu, eikä helleaallon mahdollista yhteyttä tapahtumaan pidä esittää varmana.\"\n}",
+  "article": {
+    "title": "Yksitoista kuoli sijaishuoltolaitoksen tulipalossa Algerissa",
+    "description": "Algerian pääkaupungissa syttyneessä tulipalossa kuoli 11 ja loukkaantui 19 ihmistä. Pelastusviranomaiset lähettivät paikalle kymmenen paloautoa ja 16 ambulanssia.",
+    "link": "https://www.bbc.co.uk/news/articles/cvgwd4nz344o?at_medium=RSS&at_campaign=rss",
+    "published": "2026-07-16T09:20:43+00:00",
+    "source": "BBC World",
+    "source_domain": "bbc.co.uk",
+    "language": "en",
+    "fingerprint": "726ccf4691208679cd0527e1619d8445",
+    "_url_hash": "1829a24804c933eccd6168f18ac71e2aaee38dba9288821c21739655a1dde0db",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World | URL: https://www.bbc.co.uk/news/articles/cvgwd4nz344o?at_medium=RSS&at_campaign=rss]\nThe fire service arrived at the scene in the early hours\n\nEleven people have died in a fire at a foster care facility in Algiers, Algeria's capital city.\n\nThe country's civil protection department said 19 others were injured in the blaze, which firefighters began to tackle at 03:30 local time (04:30 GMT) on Thursday.\n\nThey were still attempting to extinguish the fire just over three hours later, when the authorities released an update on the situation.\n\nTheir statement did not specify the ages of those killed or injured.\n\nThe civil protection department deployed 10 fire engines and 16 ambulances to the scene.\n\nAlgeria has been experiencing a heatwave for several days, and nearly 1,000 fires have been recorded in the space of a week, the AFP news agency has reported.\n\nAlgerian state media said Prime Minister Sifi Ghrieb travelled to two hospitals in Algiers to visit individuals injured in Thursday's fire.\n\nThe report was accompanied by a picture of Ghrieb next to a child in a hospital bed.\n\nAmid the fire, five people with special needs were \"taken into care and transported to a safe location\", the authorities said.\n\nTen fire engines have been at the scene fighting the blaze\n\n'Welcome to 2976' - North Africa's Amazigh people ring in the new year\n\nFrench row with Algeria escalates further with tit-for-tat expulsions\n\nGo to BBCAfrica.com, external for more news from the African continent.\n\nFollow us on Twitter @BBCAfrica, external, on Facebook at BBC Africa, external or on Instagram at bbcafrica, external",
+    "research_source": "multi",
+    "summary": "Algerian pääkaupungissa syttyneessä tulipalossa kuoli 11 ja loukkaantui 19 ihmistä. Pelastusviranomaiset lähettivät paikalle kymmenen paloautoa ja 16 ambulanssia.",
+    "content": "Yksitoista ihmistä on kuollut tulipalossa sijaishuoltolaitoksessa Algerian pääkaupungissa Algerissa, ja 19 muuta ihmistä on loukkaantunut. Maan pelastusviranomaisen mukaan palomiehet aloittivat sammutustyöt varhain torstaiaamuna kello 3.30 paikallista aikaa eli kello 4.30 GMT-aikaa. Viranomaisten tiedotteessa ei kerrottu kuolleiden eikä loukkaantuneiden ikiä. Siinä ei myöskään eritelty, kuinka moni uhreista oli laitoksen hoidettavana.\n\n## Pelastusoperaatio jatkui aamulla\n\nPelastusviranomainen lähetti tapahtumapaikalle kymmenen paloautoa ja 16 ambulanssia. Lähteen mukaan pelastuslaitos saapui paikalle aamuyön tunteina. Hieman yli kolme tuntia sammutustöiden alkamisen jälkeen julkaistun päivityksen aikaan palomiehet yrittivät edelleen saada palon sammutetuksi. Päivitys kuvasi siten yhä käynnissä ollutta pelastusoperaatiota. Viranomaiset eivät tuolloin antaneet arviota siitä, milloin palo saataisiin hallintaan tai sammutustyö päättyisi.\n\nViranomaisten mukaan viisi erityistä tukea tarvitsevaa ihmistä otettiin palon aikana huolehdittaviksi ja kuljetettiin turvalliseen paikkaan. Julkaistuista tiedoista ei käy ilmi, olivatko he sijaishuoltolaitoksen asukkaita tai sisältyivätkö he 19 loukkaantuneen joukkoon. Viiden henkilön siirto mainittiin erillisenä pelastustoimena, mutta heidän voinnistaan tai iästään ei annettu tarkempia tietoja.\n\n## Pääministeri vieraili sairaaloissa\n\nAlgerian valtiollinen media kertoi pääministeri Sifi Ghriebin matkustaneen kahteen Algerissa sijaitsevaan sairaalaan tapaamaan torstain tulipalossa loukkaantuneita. Vierailua käsittelevän uutisen yhteydessä julkaistiin kuva, jossa Ghrieb oli sairaalavuoteessa olevan lapsen vierellä. Yhden lapsen näkyminen kuvassa ei kuitenkaan kerro muiden kuolleiden tai loukkaantuneiden ikää, eikä viranomaisten lausunto sisältänyt tällaista erittelyä.\n\nKuolleiden ja loukkaantuneiden määrät perustuvat Algerian pelastusviranomaisen torstaina julkaisemaan ilmoitukseen. Päivitys annettiin sammutustöiden ollessa vielä kesken, ja siinä keskityttiin käynnissä olleeseen pelastusoperaatioon: uhrilukuihin, paikalle lähetettyihin ajoneuvoihin ja turvaan siirrettyihin ihmisiin. Julkistetut tiedot kuvasivat siten torstaiaamun tilannetta. Niissä ei kerrottu palon syttymissyytä eikä laitoksen vahinkojen laajuutta.\n\n## Algeriaa koettelee helleaalto\n\nAlgeria on kokenut useita päiviä kestäneen helleaallon. Uutistoimisto AFP:n mukaan maassa kirjattiin yhden viikon aikana lähes tuhat tulipaloa. Algerin sijaishuoltolaitoksen palo sattui tämän laajan palojakson aikana, mutta pelastusviranomainen ei ilmoituksessaan yhdistänyt laitospaloa kuumuuteen eikä muihin maassa rekisteröityihin paloihin. Saatavilla olevien tietojen perusteella helleaallon mahdollista osuutta juuri tämän palon syttymiseen ei voida arvioida.",
+    "category": "Ulkomaat",
+    "tags": [
+      "algeria",
+      "alger",
+      "tulipalo",
+      "sijaishuolto",
+      "onnettomuudet"
+    ],
+    "summary_bullets": [
+      "Tulipalossa kuoli 11 ja loukkaantui 19 ihmistä.",
+      "Paikalle lähetettiin kymmenen paloautoa ja 16 ambulanssia.",
+      "Palon syytä tai uhrien ikiä ei ole kerrottu."
+    ],
+    "key_points": [
+      "Tulipalossa kuoli 11 ja loukkaantui 19 ihmistä.",
+      "Paikalle lähetettiin kymmenen paloautoa ja 16 ambulanssia.",
+      "Palon syytä tai uhrien ikiä ei ole kerrottu."
+    ],
+    "content_type": "news",
+    "editorial_reviewed": true,
+    "journalist_note": "Uhriluvut ja pelastustoimia koskevat tiedot ovat Algerian viranomaisten ilmoittamia. Palon syytä ei ole kerrottu, eikä helleaallon mahdollista yhteyttä tapahtumaan pidä esittää varmana.",
+    "source_text": "Along with the fatalities, 19 people suffered injuries, the authorities say.\n\nThe fire service arrived at the scene in the early hours Eleven people have died in a fire at a foster care facility in Algiers, Algeria's capital city. The country's civil protection department said 19 others were injured in the blaze, which firefighters began to tackle at 03:30 local time (04:30 GMT) on Thursday. They were still attempting to extinguish the fire just over three hours later, when the authorities released an update on the situation. Their statement did not specify the ages of those killed or injured. The civil protection department deployed 10 fire engines and 16 ambulances to the scene. Algeria has been experiencing a heatwave for several days, and nearly 1,000 fires have been recorded in the space of a week, the AFP news agency has reported.\n\nAlgerian state media said Prime Minister Sifi Ghrieb travelled to two hospitals in Algiers to visit individuals injured in Thursday's fire. The report was accompanied by a picture of Ghrieb next to a child in a hospital bed. Amid the fire, five people with special needs were \"taken into care and transported to a safe location\", the authorities said. Ten fire engines have been at the scene fighting the blaze 'Welcome to 2976' - North Africa's Amazigh people ring in the new year French row with Algeria escalates further with tit-for-tat expulsions Go to BBCAfrica.com, external for more news from the African continent. Follow us on Twitter @BBCAfrica, external, on Facebook at BBC Africa, external or on Instagram at bbcafrica, external",
+    "writer_backend": "monica",
+    "writer_confidence": 0.94,
+    "degraded_mode": false,
+    "monica_packet_id": "20260716T094142Z_7c14601495",
+    "source_url": "https://www.bbc.co.uk/news/articles/cvgwd4nz344o?at_medium=RSS&at_campaign=rss",
+    "image_hotlink": false,
+    "image_category_fallback": true,
+    "image": "/images/categories/ulkomaat.jpg",
+    "image_thumb": "/images/categories/ulkomaat.jpg",
+    "image_alt": "Ulkomaat-uutiset",
+    "image_credit": "",
+    "image_source_url": "",
+    "image_caption": "",
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_visual_judge_score": 0,
+    "image_decision": {
+      "source": "category_fallback",
+      "accepted": true,
+      "reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+      "prompt_version": "image-flow-v2-2026-07-03"
+    }
+  },
+  "image_enriched_at": "2026-07-16T09:58:43.153532+00:00",
+  "image_enrichment": {
+    "image": "/images/categories/ulkomaat.jpg",
+    "image_thumb": "/images/categories/ulkomaat.jpg",
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+    "image_concept": null,
+    "image_query": null,
+    "image_candidate_id": null,
+    "image_candidate_url": null,
+    "image_visual_judge_score": 0,
+    "image_accepted_reasons": null,
+    "image_rejected_reasons": null,
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03"
+  },
+  "published_at": "2026-07-16T10:01:13.172063+00:00",
+  "created_files": [
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-07-16-yksitoista-kuoli-sijaishuoltolaitoksen-tulipalossa-algerissa.md",
+    "/home/pertt/.openclaw/workspace/projects/uutistenlukija/content/posts/2026-07-16-tsmc-teki-ennatystuloksen-ja-nosti-investointi-seka-kasvuenn.md"
+  ],
+  "category_trace": {
+    "packet_id": "20260716T094142Z_7c14601495",
+    "decisions": {
+      "guard": "Kotimaa",
+      "writer": "Ulkomaat",
+      "publisher": "Ulkomaat"
+    },
+    "disagreement": true
+  }
+}
