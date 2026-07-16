@@ -45,7 +45,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/07/16/founders-fund-hires-former-openai-exec-ryan-beiermeister-and-not-because-of-her-mafia-skills/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
