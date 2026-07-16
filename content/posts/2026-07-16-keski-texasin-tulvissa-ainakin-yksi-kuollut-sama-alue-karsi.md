@@ -45,7 +45,6 @@ keywords:
 source_name: "BBC World"
 source_url: "https://www.bbc.co.uk/news/articles/c3v0xe5elzyo?at_medium=RSS&at_campaign=rss"
 source_domain: "bbc.co.uk"
-briefing: true
 draft: false
 ---
 
