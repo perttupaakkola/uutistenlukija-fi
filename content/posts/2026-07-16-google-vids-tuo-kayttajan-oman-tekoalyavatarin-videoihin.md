@@ -55,7 +55,6 @@ keywords:
 source_name: "Digital Trends"
 source_url: "https://www.digitaltrends.com/computing/you-can-now-edit-videos-in-google-vids-by-simply-describing-the-changes/"
 source_domain: "digitaltrends.com"
-briefing: true
 draft: false
 ---
 
