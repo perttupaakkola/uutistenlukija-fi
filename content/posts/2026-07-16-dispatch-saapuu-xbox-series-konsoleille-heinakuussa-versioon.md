@@ -47,7 +47,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/pelit/peliuutiset/yksi-parhaista-supersankaripeleista-saapuu-viimein-xboxille-mukana-hyva-uutinen-pelaajille/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
