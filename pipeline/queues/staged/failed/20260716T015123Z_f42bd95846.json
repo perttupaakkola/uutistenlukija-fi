@@ -1,0 +1,244 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-16T01:51:23.895619+00:00",
+  "digest": "f42bd95846",
+  "packet": {
+    "packet_id": "20260716T015123Z_f42bd95846",
+    "created_at": "2026-07-16T01:51:23Z",
+    "headline_seed": "Grok Build is open source",
+    "description_seed": "Article URL: https://github.com/xai-org/grok-build Comments URL: https://news.ycombinator.com/item?id=48926590 Points: 243 # Comments: 290",
+    "link": "https://github.com/xai-org/grok-build",
+    "source": "Hacker News Best",
+    "source_names": [
+      "Hacker News Best",
+      "The American Bazaar"
+    ],
+    "source_urls": [
+      "https://github.com/xai-org/grok-build",
+      "https://americanbazaaronline.com/2026/07/15/elon-musk-pledges-to-make-x-open-source-after-grok-backlash-484643/"
+    ],
+    "source_domains": [
+      "github.com",
+      "americanbazaaronline.com"
+    ],
+    "selected_source": {
+      "name": "The American Bazaar",
+      "url": "https://americanbazaaronline.com/2026/07/15/elon-musk-pledges-to-make-x-open-source-after-grok-backlash-484643/",
+      "domain": "americanbazaaronline.com"
+    },
+    "selected_source_provenance_error": "",
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Grok Build is open source"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Hacker News Best",
+        "source_url": "https://github.com/xai-org/grok-build",
+        "source_domain": "github.com",
+        "source_type": "description",
+        "text": "Article URL: https://github.com/xai-org/grok-build Comments URL: https://news.ycombinator.com/item?id=48926590 Points: 243 # Comments: 290",
+        "word_count": 11,
+        "keyword_overlap": 11,
+        "strong_overlap": 8
+      },
+      {
+        "source": "The American Bazaar",
+        "source_url": "https://americanbazaaronline.com/2026/07/15/elon-musk-pledges-to-make-x-open-source-after-grok-backlash-484643/",
+        "source_domain": "americanbazaaronline.com",
+        "source_type": "research",
+        "text": "Open sourcing software allows outside developers to inspect, modify and contribute to source code. Advocates argue that it improves security by enabling independent audits and encouraging community-driven improvements, while critics note that simply publishing code does not automatically guarantee transparency if key components remain proprietary. This is not the first time Musk has committed to opening X’s technology. In 2023, the company released portions of Twitter’s recommendation algorithm on GitHub, and earlier this year Musk pledged to publish the platform’s updated recommendation and advertising-ranking algorithms. Researchers, however, argued that previous releases omitted critical AI components that influence content ranking. The latest announcement appears broader in scope, with Musk indicating that the entire X codebase will eventually become publicly available. He did not provide a timeline or specify how proprietary infrastructure, security systems or commercial technologies would be handled.",
+        "word_count": 138,
+        "keyword_overlap": 3,
+        "strong_overlap": 2
+      },
+      {
+        "source": "The American Bazaar",
+        "source_url": "https://americanbazaaronline.com/2026/07/15/elon-musk-pledges-to-make-x-open-source-after-grok-backlash-484643/",
+        "source_domain": "americanbazaaronline.com",
+        "source_type": "research",
+        "text": "CEO Elon Musk said social media platform X will make its entire codebase open source, expanding his long-standing push for greater transparency after criticism surrounding xAI’s AI coding assistant, Grok Build. Musk announced the move in a post on X, saying the platform’s codebase would be made publicly available “with no exceptions.” The pledge came after security researchers reported that Grok Build had uploaded users’ private code repositories to Google Cloud servers controlled by xAI without clearly informing users, triggering concerns about data privacy and developer trust. The incident drew criticism from OpenAI Chief Executive Sam Altman, who described the behavior as “concerning.” Musk responded by promising greater transparency across X’s software infrastructure, positioning the open source initiative as a way to rebuild confidence among developers and users. READ: Ro Khanna, Elon Musk clash over accountability (June 23, 2026)",
+        "word_count": 139,
+        "keyword_overlap": 4,
+        "strong_overlap": 1
+      },
+      {
+        "source": "Hacker News Best",
+        "source_url": "https://github.com/xai-org/grok-build",
+        "source_domain": "github.com",
+        "source_type": "research",
+        "text": "Grok Build is SpaceXAI's terminal-based AI coding agent. It runs as a full-screen TUI that understands your codebase, edits files, executes shell commands, searches the web, and manages long-running tasks — interactively, headlessly for scripting/CI, or embedded in editors via the Agent Client Protocol (ACP). Installing the released binary · Building from source · Documentation · Repository layout · Development · Contributing · License This repository contains the Rust source for the grok CLI/TUI and its agent runtime. It is synced periodically from the SpaceXAI monorepo. Prebuilt binaries are published for macOS, Linux, and Windows: See the changelog for the latest fixes, features, and improvements in each release. The binary artifact is named xai-grok-pager; official installs ship it as grok. On first launch it opens your browser to authenticate — see the authentication guide.",
+        "word_count": 134,
+        "keyword_overlap": 3,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "Article URL: https://github.com/xai-org/grok-build Comments URL: https://news.ycombinator.com/item?id=48926590 Points: 243 # Comments: 290\n\nOpen sourcing software allows outside developers to inspect, modify and contribute to source code. Advocates argue that it improves security by enabling independent audits and encouraging community-driven improvements, while critics note that simply publishing code does not automatically guarantee transparency if key components remain proprietary. This is not the first time Musk has committed to opening X’s technology. In 2023, the company released portions of Twitter’s recommendation algorithm on GitHub, and earlier this year Musk pledged to publish the platform’s updated recommendation and advertising-ranking algorithms. Researchers, however, argued that previous releases omitted critical AI components that influence content ranking. The latest announcement appears broader in scope, with Musk indicating that the entire X codebase will eventually become publicly available. He did not provide a timeline or specify how proprietary infrastructure, security systems or commercial technologies would be handled.\n\nCEO Elon Musk said social media platform X will make its entire codebase open source, expanding his long-standing push for greater transparency after criticism surrounding xAI’s AI coding assistant, Grok Build. Musk announced the move in a post on X, saying the platform’s codebase would be made publicly available “with no exceptions.” The pledge came after security researchers reported that Grok Build had uploaded users’ private code repositories to Google Cloud servers controlled by xAI without clearly informing users, triggering concerns about data privacy and developer trust. The incident drew criticism from OpenAI Chief Executive Sam Altman, who described the behavior as “concerning.” Musk responded by promising greater transparency across X’s software infrastructure, positioning the open source initiative as a way to rebuild confidence among developers and users. READ: Ro Khanna, Elon Musk clash over accountability (June 23, 2026)\n\nGrok Build is SpaceXAI's terminal-based AI coding agent. It runs as a full-screen TUI that understands your codebase, edits files, executes shell commands, searches the web, and manages long-running tasks — interactively, headlessly for scripting/CI, or embedded in editors via the Agent Client Protocol (ACP). Installing the released binary · Building from source · Documentation · Repository layout · Development · Contributing · License This repository contains the Rust source for the grok CLI/TUI and its agent runtime. It is synced periodically from the SpaceXAI monorepo. Prebuilt binaries are published for macOS, Linux, and Windows: See the changelog for the latest fixes, features, and improvements in each release. The binary artifact is named xai-grok-pager; official installs ship it as grok. On first launch it opens your browser to authenticate — see the authentication guide.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 880,
+      "selected_blocks": 4,
+      "selected_source_words": 422,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Hacker News Best",
+        "Hacker News Best",
+        "The American Bazaar",
+        "The American Bazaar",
+        "The American Bazaar",
+        "International Business Times Singapore",
+        "International Business Times Singapore",
+        "International Business Times Singapore",
+        "Hacker News Best"
+      ],
+      "selected_sources": [
+        "Hacker News Best",
+        "The American Bazaar",
+        "The American Bazaar",
+        "Hacker News Best"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Grok Build is open source",
+      "description": "Article URL: https://github.com/xai-org/grok-build Comments URL: https://news.ycombinator.com/item?id=48926590 Points: 243 # Comments: 290",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Grok Build is open source",
+    "description": "Article URL: https://github.com/xai-org/grok-build Comments URL: https://news.ycombinator.com/item?id=48926590 Points: 243 # Comments: 290",
+    "link": "https://github.com/xai-org/grok-build",
+    "published": "2026-07-15T20:24:58+00:00",
+    "source": "Hacker News Best",
+    "source_domain": "hnrss.org",
+    "language": "en",
+    "fingerprint": "09e9c9b68849320563a989ce4f891d6e",
+    "_url_hash": "cc7d258f82fc4f0550191f315b02c42e4a3c072042a3d154cf5667e8f7654507",
+    "source_tier": 3,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Hacker News Best | URL: https://github.com/xai-org/grok-build]\nGrok Build is SpaceXAI's terminal-based AI coding agent. It runs as a\nfull-screen TUI that understands your codebase, edits files, executes shell\ncommands, searches the web, and manages long-running tasks — interactively,\nheadlessly for scripting/CI, or embedded in editors via the Agent Client\nProtocol (ACP).\n\nInstalling the released binary ·\nBuilding from source ·\nDocumentation ·\nRepository layout ·\nDevelopment ·\nContributing ·\nLicense\n\nThis repository contains the Rust source for the grok CLI/TUI and its agent\nruntime. It is synced periodically from the SpaceXAI monorepo.\n\nPrebuilt binaries are published for macOS, Linux, and Windows:\n\nSee the changelog for the latest fixes,\nfeatures, and improvements in each release.\n\nThe binary artifact is named xai-grok-pager; official installs ship it as\ngrok. On first launch it opens your browser to authenticate — see the\nauthentication guide.\n\nFull online documentation is available at\ndocs.x.ai/build/overview.\n\nThe user guide ships with the pager crate:\ncrates/codegen/xai-grok-pager/docs/user-guide/\n— getting started, keyboard shortcuts, slash commands, configuration, theming,\nMCP servers, skills, plugins, hooks, headless mode, sandboxing, and more.\n\nThe root Cargo.toml (workspace members, dependency versions, lints,\nprofiles) is generated — treat it as read-only. Prefer editing per-crate\nCargo.toml files.\n\nExternal contributions are not accepted. See CONTRIBUTING.md.\n\nFirst-party code in this repository is licensed under the Apache License,\nVersion 2.0 — see LICENSE.\n\nThird-party and vendored code remains under its original licenses. See:\n\n---\n\n[Lähde: The American Bazaar | URL: https://americanbazaaronline.com/2026/07/15/elon-musk-pledges-to-make-x-open-source-after-grok-backlash-484643/]\nCEO Elon Musk said social media platform X will make its entire codebase open source, expanding his long-standing push for greater transparency after criticism surrounding xAI’s AI coding assistant, Grok Build.\n\nMusk announced the move in a post on X, saying the platform’s codebase would be made publicly available “with no exceptions.” The pledge came after security researchers reported that Grok Build had uploaded users’ private code repositories to Google Cloud servers controlled by xAI without clearly informing users, triggering concerns about data privacy and developer trust.\n\nThe incident drew criticism from OpenAI Chief Executive Sam Altman, who described the behavior as “concerning.” Musk responded by promising greater transparency across X’s software infrastructure, positioning the open source initiative as a way to rebuild confidence among developers and users.\n\nREAD: Ro Khanna, Elon Musk clash over accountability (June 23, 2026)\n\nOpen sourcing software allows outside developers to inspect, modify and contribute to source code. Advocates argue that it improves security by enabling independent audits and encouraging community-driven improvements, while critics note that simply publishing code does not automatically guarantee transparency if key components remain proprietary.\n\nThis is not the first time Musk has committed to opening X’s technology. In 2023, the company released portions of Twitter’s recommendation algorithm on GitHub, and earlier this year Musk pledged to publish the platform’s updated recommendation and advertising-ranking algorithms. Researchers, however, argued that previous releases omitted critical AI components that influence content ranking.\n\nThe latest announcement appears broader in scope, with Musk indicating that the entire X codebase will eventually become publicly available. He did not provide a timeline or specify how proprietary infrastructure, security systems or commercial technologies would be handled.\n\nThe move also aligns with Musk’s long-standing criticism of OpenAI, which he has repeatedly accused of abandoning its original nonprofit mission and moving away from open-source principles. Musk remains engaged in an ongoing legal dispute with OpenAI and Chief Executive Sam Altman over the company’s direction and governance.\n\nREAD: Elon Musk threatens lawsuit over Ro Khanna’s DOGE criticism (June 22, 2026)\n\nThe announcement comes as competition intensifies among major AI companies, with firms increasingly balancing \n\n---\n\n[Lähde: International Business Times Singapore | URL: https://www.ibtimes.sg/researchers-allege-grok-build-exposed-entire-code-repositories-overlooking-privacy-89805]\nImagine asking an AI coding assistant to leave your project untouched. You tell it not to open a single file and to reply with one word: \"OK\" and it does exactly that. According to a new security investigation, however, another process quietly uploads your entire code repository including its Git history to xAI's cloud servers.\n\nSecurity researcher cereblab wrote, \"Grok Build uploaded my entire Git repository despite explicit instructions not to access it.\" He published a wire-level investigation on July 12 after monitoring traffic from Grok Build CLI version 0.2.93 using the open-source network analysis tool mitmproxy.\n\nThe researcher says the upload happened through a second, undisclosed data channel that operated independently of the coding task the user had requested.\n\nThe findings stand out because of the amount of data involved. According to the report, Grok Build needed only about 192KB of information to answer the coding request.\n\nAccording to Cereblab,\"only around 192KB was required to answer the prompt, but more than 5GB was uploaded through a separate channel.\" Yet network logs showed another process transferring roughly 5.1GB of data in 73 successful uploads to a Google Cloud Storage bucket associated with xAI. That is nearly 28,000 times more data than the task appeared to require.\n\nTo verify what was being copied, the researcher placed a fake credential inside a .env file and later found it unredacted in the captured traffic. Files the AI had been explicitly instructed not to open were also recovered from the uploaded Git bundle, suggesting the transfer included the repository itself rather than only files accessed during the session.\n\nThat distinction matters because Git history often contains deleted credentials, old configuration files and sensitive information developers assume no longer exists. The investigation also questioned Grok Build's p...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-16T01:54:42.880528+00:00",
+  "payload": {
+    "packet_id": "20260716T015123Z_f42bd95846",
+    "title": "Grok Build -ohjelmointiagentin lähdekoodi julkaistiin GitHubissa",
+    "summary": "Päätteessä toimivan Grok Build -tekoälyagentin Rust-lähdekoodi on nyt julkisesti tarkasteltavissa. Julkaisu kattaa komentorivityökalun, käyttöliittymän ja agentin suoritusympäristön.",
+    "content": "<p>Grok Build -tekoälyagentin lähdekoodi on julkaistu GitHubissa. Rustilla toteutettu työkalu pystyy tarkastelemaan ohjelmistoprojektia, muokkaamaan tiedostoja, suorittamaan komentorivikomentoja, tekemään verkkohakuja ja hoitamaan pitkäkestoisia tehtäviä käyttäjän ohjauksessa tai automatisoituna.</p>\n<h2>Työkalu toimii päätteessä ja kehitysputkissa</h2>\n<p>Grok Build on koko näytön tekstikäyttöliittymänä toimiva ohjelmointiagentti. Sitä voi käyttää vuorovaikutteisesti päätteessä tai ilman käyttöliittymää esimerkiksi skripteissä ja jatkuvan integraation eli CI:n työnkuluissa. Agentti voidaan liittää myös ohjelmointieditoreihin ACP-protokollan avulla.</p>\n<p>GitHubissa julkaistu kokonaisuus sisältää grok-komentorivityökalun, tekstikäyttöliittymän ja agentin suoritusympäristön lähdekoodin. Valmiiksi käännettyjä ohjelmaversioita tarjotaan macOS-, Linux- ja Windows-järjestelmille. Ensimmäisellä käynnistyskerralla työkalu avaa selaimen käyttäjän tunnistautumista varten.</p>\n<h2>Julkinen koodi on kopio laajemmasta kokonaisuudesta</h2>\n<p>Projektin kuvauksen mukaan GitHub-julkaisu synkronoidaan ajoittain laajemmasta yhteisestä koodivarastosta. Julkinen aineisto antaa ulkopuolisille kehittäjille mahdollisuuden tarkastella työkalun toimintaa, rakentaa sen lähdekoodista ja osallistua kehittämiseen. Julkaisu ei kuitenkaan yksin osoita, että kaikki Grok Buildin käyttämät taustapalvelut tai muu siihen liittyvä infrastruktuuri olisivat avoimia.</p>\n<p>Avoin lähdekoodi helpottaa riippumatonta tarkastusta ja voi auttaa löytämään turvallisuusongelmia. Pelkkä lähdekoodin julkaiseminen ei silti takaa koko palvelun läpinäkyvyyttä, jos osa sen toimintaan vaikuttavista järjestelmistä jää suljetuksi.</p>\n<h2>Taustalla kiista yksityisten koodivarastojen käsittelystä</h2>\n<p>Julkaisu tapahtuu tilanteessa, jossa Grok Buildin tietosuojakäytännöt ovat joutuneet arvostelun kohteeksi. Tietoturvatutkijat ovat raportoineet työkalun siirtäneen käyttäjien yksityisiä koodivarastoja xAI:n hallinnoimille Google Cloud -palvelimille ilman riittävän selkeää ilmoitusta käyttäjille. OpenAI:n toimitusjohtaja Sam Altman kuvasi raportoitua toimintaa huolestuttavaksi.</p>\n<p>Elon Musk on samalla luvannut julkaista myös X-viestipalvelun koko lähdekoodin ilman poikkeuksia. Lupaukselle ei ole kerrottu aikataulua, eikä Musk ole täsmentänyt, miten turvallisuusjärjestelmät, kaupalliset teknologiat tai muu suljettu infrastruktuuri käsiteltäisiin. X julkaisi jo vuonna 2023 osia silloisen Twitterin suosittelualgoritmista, mutta tutkijat arvioivat tuolloin keskeisten sisältöjen järjestykseen vaikuttavien tekoälyosien jääneen julkaisun ulkopuolelle.</p>",
+    "category": "Teknologia",
+    "tags": [
+      "Grok Build",
+      "tekoäly",
+      "avoin lähdekoodi",
+      "ohjelmistokehitys",
+      "X"
+    ],
+    "summary_bullets": [
+      "GitHub-julkaisu sisältää Grok Buildin Rust-pohjaisen komentorivityökalun, tekstikäyttöliittymän ja agentin suoritusympäristön.",
+      "Ohjelmointiagenttia voi käyttää vuorovaikutteisesti, automatisoiduissa kehitysputkissa tai ACP-yhteensopivissa editoreissa.",
+      "Julkaisu seuraa arvostelua, joka koskee käyttäjien yksityisten koodivarastojen käsittelyä."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "confidence": 0.9,
+    "journalist_note": "GitHub-julkaisu vahvistaa Grok Buildin keskeisten osien lähdekoodin saatavuuden. Yksityisiä koodivarastoja ja X:n tulevaa avoimuutta koskevat tiedot perustuvat paketissa referoituihin raportteihin, eikä X:n koko koodikannan julkaisulle ole ilmoitettu aikataulua."
+  },
+  "raw_response": "{\"packet_id\":\"20260716T015123Z_f42bd95846\",\"title\":\"Grok Build -ohjelmointiagentin lähdekoodi julkaistiin GitHubissa\",\"summary\":\"Päätteessä toimivan Grok Build -tekoälyagentin Rust-lähdekoodi on nyt julkisesti tarkasteltavissa. Julkaisu kattaa komentorivityökalun, käyttöliittymän ja agentin suoritusympäristön.\",\"content\":\"<p>Grok Build -tekoälyagentin lähdekoodi on julkaistu GitHubissa. Rustilla toteutettu työkalu pystyy tarkastelemaan ohjelmistoprojektia, muokkaamaan tiedostoja, suorittamaan komentorivikomentoja, tekemään verkkohakuja ja hoitamaan pitkäkestoisia tehtäviä käyttäjän ohjauksessa tai automatisoituna.</p>\\n<h2>Työkalu toimii päätteessä ja kehitysputkissa</h2>\\n<p>Grok Build on koko näytön tekstikäyttöliittymänä toimiva ohjelmointiagentti. Sitä voi käyttää vuorovaikutteisesti päätteessä tai ilman käyttöliittymää esimerkiksi skripteissä ja jatkuvan integraation eli CI:n työnkuluissa. Agentti voidaan liittää myös ohjelmointieditoreihin ACP-protokollan avulla.</p>\\n<p>GitHubissa julkaistu kokonaisuus sisältää grok-komentorivityökalun, tekstikäyttöliittymän ja agentin suoritusympäristön lähdekoodin. Valmiiksi käännettyjä ohjelmaversioita tarjotaan macOS-, Linux- ja Windows-järjestelmille. Ensimmäisellä käynnistyskerralla työkalu avaa selaimen käyttäjän tunnistautumista varten.</p>\\n<h2>Julkinen koodi on kopio laajemmasta kokonaisuudesta</h2>\\n<p>Projektin kuvauksen mukaan GitHub-julkaisu synkronoidaan ajoittain laajemmasta yhteisestä koodivarastosta. Julkinen aineisto antaa ulkopuolisille kehittäjille mahdollisuuden tarkastella työkalun toimintaa, rakentaa sen lähdekoodista ja osallistua kehittämiseen. Julkaisu ei kuitenkaan yksin osoita, että kaikki Grok Buildin käyttämät taustapalvelut tai muu siihen liittyvä infrastruktuuri olisivat avoimia.</p>\\n<p>Avoin lähdekoodi helpottaa riippumatonta tarkastusta ja voi auttaa löytämään turvallisuusongelmia. Pelkkä lähdekoodin julkaiseminen ei silti takaa koko palvelun läpinäkyvyyttä, jos osa sen toimintaan vaikuttavista järjestelmistä jää suljetuksi.</p>\\n<h2>Taustalla kiista yksityisten koodivarastojen käsittelystä</h2>\\n<p>Julkaisu tapahtuu tilanteessa, jossa Grok Buildin tietosuojakäytännöt ovat joutuneet arvostelun kohteeksi. Tietoturvatutkijat ovat raportoineet työkalun siirtäneen käyttäjien yksityisiä koodivarastoja xAI:n hallinnoimille Google Cloud -palvelimille ilman riittävän selkeää ilmoitusta käyttäjille. OpenAI:n toimitusjohtaja Sam Altman kuvasi raportoitua toimintaa huolestuttavaksi.</p>\\n<p>Elon Musk on samalla luvannut julkaista myös X-viestipalvelun koko lähdekoodin ilman poikkeuksia. Lupaukselle ei ole kerrottu aikataulua, eikä Musk ole täsmentänyt, miten turvallisuusjärjestelmät, kaupalliset teknologiat tai muu suljettu infrastruktuuri käsiteltäisiin. X julkaisi jo vuonna 2023 osia silloisen Twitterin suosittelualgoritmista, mutta tutkijat arvioivat tuolloin keskeisten sisältöjen järjestykseen vaikuttavien tekoälyosien jääneen julkaisun ulkopuolelle.</p>\",\"category\":\"Teknologia\",\"tags\":[\"Grok Build\",\"tekoäly\",\"avoin lähdekoodi\",\"ohjelmistokehitys\",\"X\"],\"summary_bullets\":[\"GitHub-julkaisu sisältää Grok Buildin Rust-pohjaisen komentorivityökalun, tekstikäyttöliittymän ja agentin suoritusympäristön.\",\"Ohjelmointiagenttia voi käyttää vuorovaikutteisesti, automatisoiduissa kehitysputkissa tai ACP-yhteensopivissa editoreissa.\",\"Julkaisu seuraa arvostelua, joka koskee käyttäjien yksityisten koodivarastojen käsittelyä.\"],\"content_type\":\"uutinen\",\"editorial_reviewed\":true,\"confidence\":0.9,\"journalist_note\":\"GitHub-julkaisu vahvistaa Grok Buildin keskeisten osien lähdekoodin saatavuuden. Yksityisiä koodivarastoja ja X:n tulevaa avoimuutta koskevat tiedot perustuvat paketissa referoituihin raportteihin, eikä X:n koko koodikannan julkaisulle ole ilmoitettu aikataulua.\"}",
+  "article": {
+    "title": "Grok Build -ohjelmointiagentin lähdekoodi julkaistiin GitHubissa",
+    "description": "Päätteessä toimivan Grok Build -tekoälyagentin Rust-lähdekoodi on nyt julkisesti tarkasteltavissa. Julkaisu kattaa komentorivityökalun, käyttöliittymän ja agentin suoritusympäristön.",
+    "link": "https://americanbazaaronline.com/2026/07/15/elon-musk-pledges-to-make-x-open-source-after-grok-backlash-484643/",
+    "published": "2026-07-15T20:24:58+00:00",
+    "source": "The American Bazaar",
+    "source_domain": "americanbazaaronline.com",
+    "language": "en",
+    "fingerprint": "09e9c9b68849320563a989ce4f891d6e",
+    "_url_hash": "cc7d258f82fc4f0550191f315b02c42e4a3c072042a3d154cf5667e8f7654507",
+    "source_tier": 3,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Hacker News Best | URL: https://github.com/xai-org/grok-build]\nGrok Build is SpaceXAI's terminal-based AI coding agent. It runs as a\nfull-screen TUI that understands your codebase, edits files, executes shell\ncommands, searches the web, and manages long-running tasks — interactively,\nheadlessly for scripting/CI, or embedded in editors via the Agent Client\nProtocol (ACP).\n\nInstalling the released binary ·\nBuilding from source ·\nDocumentation ·\nRepository layout ·\nDevelopment ·\nContributing ·\nLicense\n\nThis repository contains the Rust source for the grok CLI/TUI and its agent\nruntime. It is synced periodically from the SpaceXAI monorepo.\n\nPrebuilt binaries are published for macOS, Linux, and Windows:\n\nSee the changelog for the latest fixes,\nfeatures, and improvements in each release.\n\nThe binary artifact is named xai-grok-pager; official installs ship it as\ngrok. On first launch it opens your browser to authenticate — see the\nauthentication guide.\n\nFull online documentation is available at\ndocs.x.ai/build/overview.\n\nThe user guide ships with the pager crate:\ncrates/codegen/xai-grok-pager/docs/user-guide/\n— getting started, keyboard shortcuts, slash commands, configuration, theming,\nMCP servers, skills, plugins, hooks, headless mode, sandboxing, and more.\n\nThe root Cargo.toml (workspace members, dependency versions, lints,\nprofiles) is generated — treat it as read-only. Prefer editing per-crate\nCargo.toml files.\n\nExternal contributions are not accepted. See CONTRIBUTING.md.\n\nFirst-party code in this repository is licensed under the Apache License,\nVersion 2.0 — see LICENSE.\n\nThird-party and vendored code remains under its original licenses. See:\n\n---\n\n[Lähde: The American Bazaar | URL: https://americanbazaaronline.com/2026/07/15/elon-musk-pledges-to-make-x-open-source-after-grok-backlash-484643/]\nCEO Elon Musk said social media platform X will make its entire codebase open source, expanding his long-standing push for greater transparency after criticism surrounding xAI’s AI coding assistant, Grok Build.\n\nMusk announced the move in a post on X, saying the platform’s codebase would be made publicly available “with no exceptions.” The pledge came after security researchers reported that Grok Build had uploaded users’ private code repositories to Google Cloud servers controlled by xAI without clearly informing users, triggering concerns about data privacy and developer trust.\n\nThe incident drew criticism from OpenAI Chief Executive Sam Altman, who described the behavior as “concerning.” Musk responded by promising greater transparency across X’s software infrastructure, positioning the open source initiative as a way to rebuild confidence among developers and users.\n\nREAD: Ro Khanna, Elon Musk clash over accountability (June 23, 2026)\n\nOpen sourcing software allows outside developers to inspect, modify and contribute to source code. Advocates argue that it improves security by enabling independent audits and encouraging community-driven improvements, while critics note that simply publishing code does not automatically guarantee transparency if key components remain proprietary.\n\nThis is not the first time Musk has committed to opening X’s technology. In 2023, the company released portions of Twitter’s recommendation algorithm on GitHub, and earlier this year Musk pledged to publish the platform’s updated recommendation and advertising-ranking algorithms. Researchers, however, argued that previous releases omitted critical AI components that influence content ranking.\n\nThe latest announcement appears broader in scope, with Musk indicating that the entire X codebase will eventually become publicly available. He did not provide a timeline or specify how proprietary infrastructure, security systems or commercial technologies would be handled.\n\nThe move also aligns with Musk’s long-standing criticism of OpenAI, which he has repeatedly accused of abandoning its original nonprofit mission and moving away from open-source principles. Musk remains engaged in an ongoing legal dispute with OpenAI and Chief Executive Sam Altman over the company’s direction and governance.\n\nREAD: Elon Musk threatens lawsuit over Ro Khanna’s DOGE criticism (June 22, 2026)\n\nThe announcement comes as competition intensifies among major AI companies, with firms increasingly balancing \n\n---\n\n[Lähde: International Business Times Singapore | URL: https://www.ibtimes.sg/researchers-allege-grok-build-exposed-entire-code-repositories-overlooking-privacy-89805]\nImagine asking an AI coding assistant to leave your project untouched. You tell it not to open a single file and to reply with one word: \"OK\" and it does exactly that. According to a new security investigation, however, another process quietly uploads your entire code repository including its Git history to xAI's cloud servers.\n\nSecurity researcher cereblab wrote, \"Grok Build uploaded my entire Git repository despite explicit instructions not to access it.\" He published a wire-level investigation on July 12 after monitoring traffic from Grok Build CLI version 0.2.93 using the open-source network analysis tool mitmproxy.\n\nThe researcher says the upload happened through a second, undisclosed data channel that operated independently of the coding task the user had requested.\n\nThe findings stand out because of the amount of data involved. According to the report, Grok Build needed only about 192KB of information to answer the coding request.\n\nAccording to Cereblab,\"only around 192KB was required to answer the prompt, but more than 5GB was uploaded through a separate channel.\" Yet network logs showed another process transferring roughly 5.1GB of data in 73 successful uploads to a Google Cloud Storage bucket associated with xAI. That is nearly 28,000 times more data than the task appeared to require.\n\nTo verify what was being copied, the researcher placed a fake credential inside a .env file and later found it unredacted in the captured traffic. Files the AI had been explicitly instructed not to open were also recovered from the uploaded Git bundle, suggesting the transfer included the repository itself rather than only files accessed during the session.\n\nThat distinction matters because Git history often contains deleted credentials, old configuration files and sensitive information developers assume no longer exists. The investigation also questioned Grok Build's p...",
+    "research_source": "multi",
+    "summary": "Päätteessä toimivan Grok Build -tekoälyagentin Rust-lähdekoodi on nyt julkisesti tarkasteltavissa. Julkaisu kattaa komentorivityökalun, käyttöliittymän ja agentin suoritusympäristön.",
+    "content": "<p>Grok Build -tekoälyagentin lähdekoodi on julkaistu GitHubissa. Rustilla toteutettu työkalu pystyy tarkastelemaan ohjelmistoprojektia, muokkaamaan tiedostoja, suorittamaan komentorivikomentoja, tekemään verkkohakuja ja hoitamaan pitkäkestoisia tehtäviä käyttäjän ohjauksessa tai automatisoituna.</p>\n<h2>Työkalu toimii päätteessä ja kehitysputkissa</h2>\n<p>Grok Build on koko näytön tekstikäyttöliittymänä toimiva ohjelmointiagentti. Sitä voi käyttää vuorovaikutteisesti päätteessä tai ilman käyttöliittymää esimerkiksi skripteissä ja jatkuvan integraation eli CI:n työnkuluissa. Agentti voidaan liittää myös ohjelmointieditoreihin ACP-protokollan avulla.</p>\n<p>GitHubissa julkaistu kokonaisuus sisältää grok-komentorivityökalun, tekstikäyttöliittymän ja agentin suoritusympäristön lähdekoodin. Valmiiksi käännettyjä ohjelmaversioita tarjotaan macOS-, Linux- ja Windows-järjestelmille. Ensimmäisellä käynnistyskerralla työkalu avaa selaimen käyttäjän tunnistautumista varten.</p>\n<h2>Julkinen koodi on kopio laajemmasta kokonaisuudesta</h2>\n<p>Projektin kuvauksen mukaan GitHub-julkaisu synkronoidaan ajoittain laajemmasta yhteisestä koodivarastosta. Julkinen aineisto antaa ulkopuolisille kehittäjille mahdollisuuden tarkastella työkalun toimintaa, rakentaa sen lähdekoodista ja osallistua kehittämiseen. Julkaisu ei kuitenkaan yksin osoita, että kaikki Grok Buildin käyttämät taustapalvelut tai muu siihen liittyvä infrastruktuuri olisivat avoimia.</p>\n<p>Avoin lähdekoodi helpottaa riippumatonta tarkastusta ja voi auttaa löytämään turvallisuusongelmia. Pelkkä lähdekoodin julkaiseminen ei silti takaa koko palvelun läpinäkyvyyttä, jos osa sen toimintaan vaikuttavista järjestelmistä jää suljetuksi.</p>\n<h2>Taustalla kiista yksityisten koodivarastojen käsittelystä</h2>\n<p>Julkaisu tapahtuu tilanteessa, jossa Grok Buildin tietosuojakäytännöt ovat joutuneet arvostelun kohteeksi. Tietoturvatutkijat ovat raportoineet työkalun siirtäneen käyttäjien yksityisiä koodivarastoja xAI:n hallinnoimille Google Cloud -palvelimille ilman riittävän selkeää ilmoitusta käyttäjille. OpenAI:n toimitusjohtaja Sam Altman kuvasi raportoitua toimintaa huolestuttavaksi.</p>\n<p>Elon Musk on samalla luvannut julkaista myös X-viestipalvelun koko lähdekoodin ilman poikkeuksia. Lupaukselle ei ole kerrottu aikataulua, eikä Musk ole täsmentänyt, miten turvallisuusjärjestelmät, kaupalliset teknologiat tai muu suljettu infrastruktuuri käsiteltäisiin. X julkaisi jo vuonna 2023 osia silloisen Twitterin suosittelualgoritmista, mutta tutkijat arvioivat tuolloin keskeisten sisältöjen järjestykseen vaikuttavien tekoälyosien jääneen julkaisun ulkopuolelle.</p>",
+    "category": "Teknologia",
+    "tags": [
+      "grok build",
+      "tekoäly",
+      "avoin lähdekoodi",
+      "ohjelmistokehitys",
+      "x"
+    ],
+    "summary_bullets": [
+      "GitHub-julkaisu sisältää Grok Buildin Rust-pohjaisen komentorivityökalun, tekstikäyttöliittymän ja agentin suoritusympäristön.",
+      "Ohjelmointiagenttia voi käyttää vuorovaikutteisesti, automatisoiduissa kehitysputkissa tai ACP-yhteensopivissa editoreissa.",
+      "Julkaisu seuraa arvostelua, joka koskee käyttäjien yksityisten koodivarastojen käsittelyä."
+    ],
+    "key_points": [
+      "GitHub-julkaisu sisältää Grok Buildin Rust-pohjaisen komentorivityökalun, tekstikäyttöliittymän ja agentin suoritusympäristön.",
+      "Ohjelmointiagenttia voi käyttää vuorovaikutteisesti, automatisoiduissa kehitysputkissa tai ACP-yhteensopivissa editoreissa.",
+      "Julkaisu seuraa arvostelua, joka koskee käyttäjien yksityisten koodivarastojen käsittelyä."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "journalist_note": "GitHub-julkaisu vahvistaa Grok Buildin keskeisten osien lähdekoodin saatavuuden. Yksityisiä koodivarastoja ja X:n tulevaa avoimuutta koskevat tiedot perustuvat paketissa referoituihin raportteihin, eikä X:n koko koodikannan julkaisulle ole ilmoitettu aikataulua.",
+    "source_text": "Article URL: https://github.com/xai-org/grok-build Comments URL: https://news.ycombinator.com/item?id=48926590 Points: 243 # Comments: 290\n\nOpen sourcing software allows outside developers to inspect, modify and contribute to source code. Advocates argue that it improves security by enabling independent audits and encouraging community-driven improvements, while critics note that simply publishing code does not automatically guarantee transparency if key components remain proprietary. This is not the first time Musk has committed to opening X’s technology. In 2023, the company released portions of Twitter’s recommendation algorithm on GitHub, and earlier this year Musk pledged to publish the platform’s updated recommendation and advertising-ranking algorithms. Researchers, however, argued that previous releases omitted critical AI components that influence content ranking. The latest announcement appears broader in scope, with Musk indicating that the entire X codebase will eventually become publicly available. He did not provide a timeline or specify how proprietary infrastructure, security systems or commercial technologies would be handled.\n\nCEO Elon Musk said social media platform X will make its entire codebase open source, expanding his long-standing push for greater transparency after criticism surrounding xAI’s AI coding assistant, Grok Build. Musk announced the move in a post on X, saying the platform’s codebase would be made publicly available “with no exceptions.” The pledge came after security researchers reported that Grok Build had uploaded users’ private code repositories to Google Cloud servers controlled by xAI without clearly informing users, triggering concerns about data privacy and developer trust. The incident drew criticism from OpenAI Chief Executive Sam Altman, who described the behavior as “concerning.” Musk responded by promising greater transparency across X’s software infrastructure, positioning the open source initiative as a way to rebuild confidence among developers and users. READ: Ro Khanna, Elon Musk clash over accountability (June 23, 2026)\n\nGrok Build is SpaceXAI's terminal-based AI coding agent. It runs as a full-screen TUI that understands your codebase, edits files, executes shell commands, searches the web, and manages long-running tasks — interactively, headlessly for scripting/CI, or embedded in editors via the Agent Client Protocol (ACP). Installing the released binary · Building from source · Documentation · Repository layout · Development · Contributing · License This repository contains the Rust source for the grok CLI/TUI and its agent runtime. It is synced periodically from the SpaceXAI monorepo. Prebuilt binaries are published for macOS, Linux, and Windows: See the changelog for the latest fixes, features, and improvements in each release. The binary artifact is named xai-grok-pager; official installs ship it as grok. On first launch it opens your browser to authenticate — see the authentication guide.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.9,
+    "degraded_mode": false,
+    "monica_packet_id": "20260716T015123Z_f42bd95846",
+    "source_url": "https://americanbazaaronline.com/2026/07/15/elon-musk-pledges-to-make-x-open-source-after-grok-backlash-484643/"
+  },
+  "quality_gate_rejected_at": "2026-07-16T01:58:01.938142+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260716T015123Z_f42bd95846",
+    "category": "Teknologia",
+    "selected_source_words": 422,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 6.67,
+    "quality_reasons": [
+      "length under target (257 words)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "only 1 paragraphs (min 3)"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 257,
+    "title": "Grok Build -ohjelmointiagentin lähdekoodi julkaistiin GitHubissa"
+  },
+  "failure": "quality_gate_rejected: length under target (257 words); missing: image; readability few paragraphs (1); readability wall of text; only 1 paragraphs (min 3)"
+}
