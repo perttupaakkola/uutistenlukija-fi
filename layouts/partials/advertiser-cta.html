@@ -37,7 +37,7 @@
       <a href="{{ if $usesFoundingSponsorPage }}/perustajakumppanuus/#yhteydenotto{{ else if $isFoundingSponsor }}mailto:info@uutistenlukija.fi?subject=Kiinnostus%20Uutistenlukijan%20perustajakumppanuuteen&amp;body=Yritys%3A%0AWWW-osoite%3A%0AYhteyshenkil%C3%B6%3A%0AMillaisesta%20n%C3%A4kyvyydest%C3%A4%20olette%20kiinnostuneita%3A%0A%0AT%C3%A4m%C3%A4%20viesti%20on%20kiinnostuksenilmaus%20eik%C3%A4%20sido%20kampanjaan.{{ else }}mailto:info@uutistenlukija.fi?subject=Mainostus%20Uutistenlukijassa{{ end }}"
          class="advertiser-cta__button advertiser-cta__button--secondary"
          data-track="advertise_cta_click"
-         data-monetization-signal="{{ if $isFoundingSponsor }}founding_sponsor_interest_click{{ else }}advertise_email_click{{ end }}"
+         data-monetization-signal="{{ if $usesFoundingSponsorPage }}founding_sponsor_contact_click{{ else if $isFoundingSponsor }}founding_sponsor_interest_click{{ else }}advertise_email_click{{ end }}"
          data-placement="{{ if $isFoundingSponsor }}{{ $foundingSponsorPlacement }}{{ else }}{{ $placement }}{{ end }}"
          data-destination="{{ if $usesFoundingSponsorPage }}perustajakumppanuus-contact{{ else }}email{{ end }}"
          data-article-title="{{ $title }}">

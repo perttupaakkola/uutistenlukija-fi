@@ -266,13 +266,17 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
 
         allowed = set(
             re.findall(
-                r"(founding_sponsor_(?:page|interest)_click): true",
+                r"(founding_sponsor_(?:page|contact|interest)_click): true",
                 block,
             )
         )
         self.assertEqual(
             allowed,
-            {"founding_sponsor_page_click", "founding_sponsor_interest_click"},
+            {
+                "founding_sponsor_page_click",
+                "founding_sponsor_contact_click",
+                "founding_sponsor_interest_click",
+            },
         )
 
         event_params = re.search(
@@ -303,6 +307,18 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
             "recordNamedFoundingSponsorClick("
             "kind, state.last_placement, state.last_path);",
             self.tracking,
+        )
+
+    def test_founding_sponsor_contact_and_interest_stages_are_separate(self) -> None:
+        self.assertIn(
+            'data-monetization-signal="{{ if $usesFoundingSponsorPage }}'
+            'founding_sponsor_contact_click{{ else if $isFoundingSponsor }}'
+            'founding_sponsor_interest_click',
+            self.cta,
+        )
+        self.assertIn(
+            'data-monetization-signal="founding_sponsor_interest_click"',
+            self.founding_sponsor,
         )
 
     def test_article_bottom_cta_uses_full_width_copy_row(self) -> None:
