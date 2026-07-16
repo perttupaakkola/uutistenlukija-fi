@@ -47,7 +47,6 @@ keywords:
 source_name: "BBC"
 source_url: "https://www.bbc.com/news/war-in-ukraine"
 source_domain: "bbc.com"
-briefing: true
 draft: false
 ---
 
