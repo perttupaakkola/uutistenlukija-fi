@@ -47,7 +47,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/gaming/2026/07/hundreds-rally-at-bethesda-hq-to-protest-xbox-layoffs-and-ars-was-there/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
