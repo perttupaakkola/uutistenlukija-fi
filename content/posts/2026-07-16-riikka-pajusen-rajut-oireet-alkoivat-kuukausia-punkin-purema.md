@@ -47,7 +47,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/yrittaja-riikka-pajusen-borrelioosioireet-alkoivat-vasta-vuoden-paasta-puremasta-laakkeista-pahoja-sivuvaikutuksia-kavelin-seinia-pitkin/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
