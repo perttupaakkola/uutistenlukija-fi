@@ -47,7 +47,6 @@ keywords:
 source_name: "NPR"
 source_url: "https://www.npr.org/2026/07/16/g-s1-133920/ukraine-defense-minister-fired"
 source_domain: "npr.org"
-briefing: true
 draft: false
 ---
 
