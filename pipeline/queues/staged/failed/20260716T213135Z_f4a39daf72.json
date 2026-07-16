@@ -1,0 +1,80 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-16T21:31:35.494854+00:00",
+  "digest": "f4a39daf72",
+  "packet": {
+    "packet_id": "20260716T213135Z_f4a39daf72",
+    "created_at": "2026-07-16T21:31:35Z",
+    "headline_seed": "Coca-Cola suspended production at its Fairlife dairy after a ransomware attack",
+    "description_seed": "Coca Cola said dairy production at its Fairlife unit will \"remain suspended\" in the United States following a hack.",
+    "link": "https://techcrunch.com/2026/07/16/coca-cola-suspended-production-at-its-fairlife-dairy-after-a-ransomware-attack/",
+    "source": "TechCrunch",
+    "source_names": [],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "",
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Coca-Cola suspended production at its Fairlife dairy after a ransomware attack"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 176,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Revista Merca2.0",
+        "Revista Merca2.0",
+        "TechCrunch"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Coca-Cola suspended production at its Fairlife dairy after a ransomware attack",
+      "description": "Coca Cola said dairy production at its Fairlife unit will \"remain suspended\" in the United States following a hack.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Coca-Cola suspended production at its Fairlife dairy after a ransomware attack",
+    "description": "Coca Cola said dairy production at its Fairlife unit will \"remain suspended\" in the United States following a hack.",
+    "link": "https://techcrunch.com/2026/07/16/coca-cola-suspended-production-at-its-fairlife-dairy-after-a-ransomware-attack/",
+    "published": "2026-07-16T21:22:31+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "f76b8a95a9b85a10044e30d28cd6c9c8",
+    "_url_hash": "b7ff0efec4653197d7d96ef18c0d25e1a16526b784fd84b8f68730ac25d849c7",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Revista Merca2.0 | URL: https://www.merca20.com/coca-cola-confirms-cyberattack-and-suspends-part-of-its-production-in-the-united-states/]\nCoca-Cola reported that it detected unauthorized access by a third party and immediately activated its incident response and business continuity protocols.\n\nRed Robin is moving forward with a strategy that includes restaurant sales, selective closures, and changes to its business model\n\nHal Williams’ death was announced by his representative and quickly prompted reactions from fans of the classic sitcoms he appeared in\n\nAlthough sales remain virtually unchanged compared to the previous year, NIKE managed to significantly improve its profitability and maintains a solid performance in North America.\n\nEsta web utiliza cookies para que podamos ofrecerte la mejor experiencia de usuario posible. La información de las cookies se almacena en tu navegador y realiza funciones tales como reconocerte cuando vuelves a nuestra web o ayudar a nuestro equipo a comprender qué secciones de la web encuentras más interesantes y útiles.\n\nLas cookies estrictamente necesarias tiene que activarse siempre para que podamos guardar tus preferencias de ajustes de cookies.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-16T21:33:20.470154+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja tietoja vähintään 250 sanan uutisartikkeliin.",
+  "raw_response": "{\"packet_id\":\"20260716T213135Z_f4a39daf72\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja tietoja vähintään 250 sanan uutisartikkeliin.\"}"
+}

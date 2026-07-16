@@ -47,7 +47,6 @@ keywords:
 source_name: "NBC News"
 source_url: "https://www.nbcnews.com/pop-culture/pop-culture-news/kris-jenner-announces-death-mother-mary-jo-mj-shannon-rcna587888"
 source_domain: "nbcnews.com"
-briefing: true
 draft: false
 ---
 
