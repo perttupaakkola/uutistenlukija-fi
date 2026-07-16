@@ -48,7 +48,7 @@ source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/osakeralli-tasaantui-mutta-rahastomarkkinan-nakyma-pysyi-myonteisena/"
 source_domain: "finanssiala.fi"
 briefing: true
-draft: false
+draft: true
 ---
 
 Rahastoihin sijoitettiin kesäkuussa 2026 nettomääräisesti lähes kaksi miljardia euroa, ja niiden yhteenlaskettu pääoma nousi 221 miljardiin euroon. Uutta rahaa tuli kaikkiin muihin päärahastoluokkiin paitsi osakerahastoihin. Rahavirrat pysyivät vahvoina, vaikka kevään voimakas osakenousu tasaantui ja maailman osakkeiden euromääräinen tuotto jäi kuukaudessa lähelle nollaa.
