@@ -198,6 +198,7 @@
           <span class="portal-kicker">{{ $cat }}</span>
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           <p>{{ .Summary | truncate 120 }}</p>
+          {{ with .Params.source_name }}<span class="portal-row-card__source">{{ . }}</span>{{ end }}
           <span class="portal-row-card__time">{{ partial "relative-date.html" . }}</span>
         </div>
       </article>
