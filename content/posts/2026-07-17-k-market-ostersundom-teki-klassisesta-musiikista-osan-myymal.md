@@ -55,7 +55,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/k-kauppiaan-lanseeraamasta-aanimaailmasta-buustia-bisnekseen-osa-asiakkaista-viipyy-kaupassa-pidempaan-klassisen-musiikin-takia/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
