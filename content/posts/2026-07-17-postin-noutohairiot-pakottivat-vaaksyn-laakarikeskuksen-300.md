@@ -47,7 +47,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/laakarikeskuksen-laboratorionaytteet-pilaantuvat-kun-posti-ei-tayta-lupauksiaan-yrittaja-on-joutunut-toimittamaan-naytteita-300-euron-taksikyydeilla-kaikki-hakematta/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
