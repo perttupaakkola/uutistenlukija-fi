@@ -47,7 +47,6 @@ keywords:
 source_name: "AndroGuider"
 source_url: "https://www.androguider.com/2026/07/san-francisco-mayor-calls-for-stricter.html"
 source_domain: "androguider.com"
-briefing: true
 draft: false
 ---
 
