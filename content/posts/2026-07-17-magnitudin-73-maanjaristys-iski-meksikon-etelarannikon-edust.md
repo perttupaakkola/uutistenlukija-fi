@@ -47,7 +47,6 @@ keywords:
 source_name: "Newsweek"
 source_url: "https://www.newsweek.com/mexico-earthquake-puerto-madero-usgs-map-magnitude-12211196"
 source_domain: "newsweek.com"
-briefing: true
 draft: false
 ---
 

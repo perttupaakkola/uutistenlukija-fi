@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-17T20:21:21.248123+00:00",
+  "digest": "0d6d1b4353",
+  "packet": {
+    "packet_id": "20260717T202121Z_0d6d1b4353",
+    "created_at": "2026-07-17T20:21:21Z",
+    "headline_seed": "Pelicansille jysähti lähes 200 000 dollarin potti",
+    "description_seed": "Pelicans-kasvatti Juho Piiparisen tällä viikolla allekirjoittama NHL-sopimus poiki lahtelaisseuralle tuntuvan kasvattajakorvauksen.",
+    "link": "https://www.ess.fi/urheilu/9628879",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "",
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Pelicansille jysähti lähes 200 000 dollarin potti"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 99,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Suomenmaa",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Pelicansille jysähti lähes 200 000 dollarin potti",
+      "description": "Pelicans-kasvatti Juho Piiparisen tällä viikolla allekirjoittama NHL-sopimus poiki lahtelaisseuralle tuntuvan kasvattajakorvauksen.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Pelicansille jysähti lähes 200 000 dollarin potti",
+    "description": "Pelicans-kasvatti Juho Piiparisen tällä viikolla allekirjoittama NHL-sopimus poiki lahtelaisseuralle tuntuvan kasvattajakorvauksen.",
+    "link": "https://www.ess.fi/urheilu/9628879",
+    "published": "2026-07-17T22:10:25+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "c3d803727b6b67413da3f7c205b13e84",
+    "_url_hash": "39f3f56c32f88692c1fc78ac48b70b8ec56047873afd97a95963b65710ef540f",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Suomenmaa | URL: https://www.suomenmaa.fi/stt/ugandassa-20-lasta-on-kuollut-bussionnettomuudessa-2/]\nUgandassa 20 lasta on kuollut linja-auton ajauduttua tieltä, kertoo paikallinen poliisi. Onnettomuudessa kuoli lisäksi yksi aikuinen.\n\nLinja-auto oli kuljettamassa lapsia koulumatkalta. Poliisin arvion mukaan kuljettaja menetti ajoneuvon hallinnan, minkä seurauksena auto ajautui tieltä ja osui suureen kiveen. Onnettomuudessa loukkaantui lisäksi useita aikuisia sekä lapsia.\n\nUgandan poliisi jakoi kuvia pahasti vaurioituneesta linja-autosta, joka oli kääntynyt kyljelleen. Poliisin mukaan tapauksen tutkinta on kesken.\n\nKuolemaan johtavat linja-auto-onnettomuudet ovat melko yleisiä Ugandassa, jossa tieinfrastruktuuri ei ole parhaalla mallilla.\n\nVuonna 2024 maassa sattui yli 4 400 kuolonkolaria, joista aiheutui yli 5 100 kuolemaa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-17T20:23:16.832827+00:00",
+  "failure": "Paketissa ei ole lainkaan valittua lähdetekstiä, joten sopimuksen ja kasvattajakorvauksen tietoja ei voida varmistaa.",
+  "raw_response": "{\"packet_id\":\"20260717T202121Z_0d6d1b4353\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lainkaan valittua lähdetekstiä, joten sopimuksen ja kasvattajakorvauksen tietoja ei voida varmistaa.\"}"
+}
