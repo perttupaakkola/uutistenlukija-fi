@@ -47,7 +47,6 @@ keywords:
 source_name: "TechCrunch"
 source_url: "https://techcrunch.com/2026/07/17/fbi-arrests-man-accused-of-using-steam-games-to-drain-victims-crypto-wallets/"
 source_domain: "techcrunch.com"
-briefing: true
 draft: false
 ---
 
