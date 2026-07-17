@@ -1037,6 +1037,14 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   }
 }
 
+@media (max-width: 900px) {
+  .portal-opinion-card h3 a {
+    display: block;
+    min-height: 44px;
+    padding-block: 2px;
+  }
+}
+
 @media (max-width: 430px) {
   .container, main.container { padding-inline: 12px !important; }
   .portal-masthead {
