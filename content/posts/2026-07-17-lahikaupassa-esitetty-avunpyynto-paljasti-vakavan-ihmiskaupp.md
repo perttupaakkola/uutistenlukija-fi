@@ -47,7 +47,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/nainen-pyysi-apua-lahikaupassa-paljastui-jarkyttava-rinki-oulussa/9367104"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
