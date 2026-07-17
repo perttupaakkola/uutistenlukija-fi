@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-17T21:41:28+00:00",
+  "generated_at": "2026-07-17T22:41:17+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -13,18 +13,18 @@
   "articles": {
     "attempted": 0,
     "published": 51,
-    "rejected": 8,
+    "rejected": 9,
     "publish_rate": 0,
-    "last_published_ts": "2026-07-17T21:38:49.358312+00:00"
+    "last_published_ts": "2026-07-17T22:38:42.947236+00:00"
   },
   "reject_reasons": {
-    "missing: image": 8,
+    "missing: image": 9,
+    "readability few paragraphs (1)": 6,
+    "readability wall of text": 6,
+    "only 1 paragraphs (min 3)": 6,
     "language borderline Finnish si": 5,
-    "readability few paragraphs (1)": 5,
-    "readability wall of text": 5,
-    "only 1 paragraphs (min 3)": 5,
     "source_confidence_denial_conte": 3,
-    "unsourced numbers": 2,
+    "unsourced numbers": 3,
     "length under target (259 words": 1
   },
   "feeds": {
@@ -41,14 +41,14 @@
   "trending": [
     [
       "jälkeen",
-      56
-    ],
-    [
-      "yhtiön",
-      28
+      54
     ],
     [
       "prosenttia",
+      26
+    ],
+    [
+      "vuonna",
       26
     ],
     [
@@ -56,7 +56,7 @@
       25
     ],
     [
-      "aiemmin",
+      "aikana",
       25
     ]
   ]
