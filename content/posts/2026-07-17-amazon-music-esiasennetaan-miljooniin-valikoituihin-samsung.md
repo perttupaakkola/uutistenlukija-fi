@@ -48,7 +48,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/17/lisaa-esiasennettuja-sovelluksia-samsung-puhelimiin-amazon-music-musiikkipalvelu-tulee-miljooniin-puhelimiin-maailmanlaajuisesti/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
