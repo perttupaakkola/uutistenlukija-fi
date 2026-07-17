@@ -45,7 +45,6 @@ keywords:
 source_name: "Samaa TV"
 source_url: "https://www.samaa.tv/2087353713-uganda-school-bus-crash-kills-20-children-school-founder"
 source_domain: "samaa.tv"
-briefing: true
 draft: false
 ---
 
