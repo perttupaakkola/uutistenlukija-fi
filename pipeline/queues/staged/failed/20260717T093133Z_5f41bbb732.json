@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-17T09:31:33.238735+00:00",
+  "digest": "5f41bbb732",
+  "packet": {
+    "packet_id": "20260717T093133Z_5f41bbb732",
+    "created_at": "2026-07-17T09:31:33Z",
+    "headline_seed": "Tommi Nikunen saa jatkaa tehtävässään ainakin kavallustuomioon asti",
+    "description_seed": "Tammer-Golfin hallitus kertoo olleensa koko ajan selvillä Tommi Nikusen tunnustusmenettelyn etenemisestä ja jatkaneensa yhteistyötä normaalisti.",
+    "link": "https://www.ess.fi/paikalliset/9626120",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "",
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Tommi Nikunen saa jatkaa tehtävässään ainakin kavallustuomioon asti"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 103,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Suomenmaa",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Tommi Nikunen saa jatkaa tehtävässään ainakin kavallustuomioon asti",
+      "description": "Tammer-Golfin hallitus kertoo olleensa koko ajan selvillä Tommi Nikusen tunnustusmenettelyn etenemisestä ja jatkaneensa yhteistyötä normaalisti.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Tommi Nikunen saa jatkaa tehtävässään ainakin kavallustuomioon asti",
+    "description": "Tammer-Golfin hallitus kertoo olleensa koko ajan selvillä Tommi Nikusen tunnustusmenettelyn etenemisestä ja jatkaneensa yhteistyötä normaalisti.",
+    "link": "https://www.ess.fi/paikalliset/9626120",
+    "published": "2026-07-17T11:22:59+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "a1d96a3868a7c34d6128090917580452",
+    "_url_hash": "462aacaddca4f0818e35bbef7bff916e2183c02e176bf393878d9e0fc8ff9b24",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Suomenmaa | URL: https://www.suomenmaa.fi/stt/ugandassa-20-lasta-on-kuollut-bussionnettomuudessa-2/]\nUgandassa 20 lasta on kuollut linja-auton ajauduttua tieltä, kertoo paikallinen poliisi. Onnettomuudessa kuoli lisäksi yksi aikuinen.\n\nLinja-auto oli kuljettamassa lapsia koulumatkalta. Poliisin arvion mukaan kuljettaja menetti ajoneuvon hallinnan, minkä seurauksena auto ajautui tieltä ja osui suureen kiveen. Onnettomuudessa loukkaantui lisäksi useita aikuisia sekä lapsia.\n\nUgandan poliisi jakoi kuvia pahasti vaurioituneesta linja-autosta, joka oli kääntynyt kyljelleen. Poliisin mukaan tapauksen tutkinta on kesken.\n\nKuolemaan johtavat linja-auto-onnettomuudet ovat melko yleisiä Ugandassa, jossa tieinfrastruktuuri ei ole parhaalla mallilla.\n\nVuonna 2024 maassa sattui yli 4 400 kuolonkolaria, joista aiheutui yli 5 100 kuolemaa.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-17T09:33:16.738938+00:00",
+  "failure": "Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja tietoja vähintään 250 sanan uutisartikkeliin.",
+  "raw_response": "{\"packet_id\":\"20260717T093133Z_5f41bbb732\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdetekstiä eikä riittävästi varmennettuja tietoja vähintään 250 sanan uutisartikkeliin.\"}"
+}
