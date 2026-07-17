@@ -47,7 +47,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/17/opera-kertoi-mobiiliselaimensa-kovasta-kayttajamaaran-kasvusta/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
