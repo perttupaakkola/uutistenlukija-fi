@@ -55,7 +55,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/jul/17/eu-border-chaos-feared-dover-crossing-busiest-summer-weekend-looms"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
