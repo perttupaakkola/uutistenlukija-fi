@@ -277,6 +277,15 @@ img { max-width: 100%; height: auto; }
   background: var(--accent);
   text-decoration: none;
 }
+.single-article > .category-label--badge {
+  gap: 0.4rem;
+  min-height: 44px;
+}
+.single-article > .category-label--badge::before {
+  content: "←";
+  font-size: 0.9rem;
+  line-height: 1;
+}
 .category-pill:hover,
 .category-pill:focus-visible {
   opacity: 0.88;
