@@ -1,0 +1,113 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-17T02:01:21.014201+00:00",
+  "digest": "0d33e117cc",
+  "packet": {
+    "packet_id": "20260717T020121Z_0d33e117cc",
+    "created_at": "2026-07-17T02:01:21Z",
+    "headline_seed": "This “exotic weirdo” exoplanet has a rocky surface and an atmosphere",
+    "description_seed": "Astronomers found a helium atmosphere around a rocky exoplanet — a good sign for the search for life outside the solar system.",
+    "link": "https://www.sciencenews.org/article/rocky-exoplanet-helium-atmosphere",
+    "source": "Science News",
+    "source_names": [
+      "Science News"
+    ],
+    "source_urls": [
+      "https://www.sciencenews.org/article/rocky-exoplanet-helium-atmosphere"
+    ],
+    "source_domains": [
+      "sciencenews.org"
+    ],
+    "selected_source": {
+      "name": "Science News",
+      "url": "https://www.sciencenews.org/article/rocky-exoplanet-helium-atmosphere",
+      "domain": "sciencenews.org"
+    },
+    "selected_source_provenance_error": "",
+    "category_hint": "Tiede",
+    "category": "Tiede",
+    "story_confidence": 0.73,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "This “exotic weirdo” exoplanet has a rocky surface and an atmosphere"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Science News",
+        "source_url": "https://www.sciencenews.org/article/rocky-exoplanet-helium-atmosphere",
+        "source_domain": "sciencenews.org",
+        "source_type": "description",
+        "text": "Astronomers found a helium atmosphere around a rocky exoplanet — a good sign for the search for life outside the solar system.",
+        "word_count": 22,
+        "keyword_overlap": 14,
+        "strong_overlap": 8
+      },
+      {
+        "source": "Science News",
+        "source_url": "https://www.sciencenews.org/article/rocky-exoplanet-helium-atmosphere",
+        "source_domain": "sciencenews.org",
+        "source_type": "research",
+        "text": "For the first time, astronomers have detected an atmosphere around a rocky planet orbiting in the habitable zone of a nearby star. Such planets have long been considered the best places in the galaxy to look for signs of alien life. But so far, “the planets looked like bare rocks,” says astronomer Laura Kreidberg of the Max Planck Institute for Astronomy in Heidelberg, Germany. It wasn’t clear if planets like this could even have atmospheres. This study shows that they can, astronomers report in Science July 16.",
+        "word_count": 87,
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Astronomers found a helium atmosphere around a rocky exoplanet — a good sign for the search for life outside the solar system.\n\nFor the first time, astronomers have detected an atmosphere around a rocky planet orbiting in the habitable zone of a nearby star. Such planets have long been considered the best places in the galaxy to look for signs of alien life. But so far, “the planets looked like bare rocks,” says astronomer Laura Kreidberg of the Max Planck Institute for Astronomy in Heidelberg, Germany. It wasn’t clear if planets like this could even have atmospheres. This study shows that they can, astronomers report in Science July 16.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 109,
+      "selected_blocks": 2,
+      "selected_source_words": 109,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Science News",
+        "Science News"
+      ],
+      "selected_sources": [
+        "Science News",
+        "Science News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "This “exotic weirdo” exoplanet has a rocky surface and an atmosphere",
+      "description": "Astronomers found a helium atmosphere around a rocky exoplanet — a good sign for the search for life outside the solar system.",
+      "category_hint": "Tiede",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "This “exotic weirdo” exoplanet has a rocky surface and an atmosphere",
+    "description": "Astronomers found a helium atmosphere around a rocky exoplanet — a good sign for the search for life outside the solar system.",
+    "link": "https://www.sciencenews.org/article/rocky-exoplanet-helium-atmosphere",
+    "published": "2026-07-16T18:00:00+00:00",
+    "source": "Science News",
+    "source_domain": "sciencenews.org",
+    "language": "en",
+    "fingerprint": "61fe5343a6ba40106cc5a6fc66770e4e",
+    "_url_hash": "e3d978e5264c5d6c0a93b9b9f8ee8024c40c8cf12915f0cb3e38f67ef49db41a",
+    "source_tier": 2,
+    "category_hint": "Tiede",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Tiede",
+    "research": "[Lähde: Science News | URL: https://www.sciencenews.org/article/rocky-exoplanet-helium-atmosphere]\nFor the first time, astronomers have detected an atmosphere around a rocky planet orbiting in the habitable zone of a nearby star.\n\nSuch planets have long been considered the best places in the galaxy to look for signs of alien life. But so far, “the planets looked like bare rocks,” says astronomer Laura Kreidberg of the Max Planck Institute for Astronomy in Heidelberg, Germany. It wasn’t clear if planets like this could even have atmospheres. This study shows that they can, astronomers report in Science July 16.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-17T02:03:16.218226+00:00",
+  "failure": "Lähdeaineisto ei kerro planeetan nimeä, sijaintia, tutkimusmenetelmää eikä keskeisiä havaintotietoja, joten vähintään 250 sanan uutista ei voi kirjoittaa ilman täytesisältöä tai perusteettomia oletuksia.",
+  "raw_response": "{\"packet_id\":\"20260717T020121Z_0d33e117cc\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto ei kerro planeetan nimeä, sijaintia, tutkimusmenetelmää eikä keskeisiä havaintotietoja, joten vähintään 250 sanan uutista ei voi kirjoittaa ilman täytesisältöä tai perusteettomia oletuksia.\"}"
+}
