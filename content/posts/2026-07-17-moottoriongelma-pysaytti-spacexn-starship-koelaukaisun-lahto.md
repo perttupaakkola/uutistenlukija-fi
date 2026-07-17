@@ -54,7 +54,6 @@ keywords:
 source_name: "Ars Technica"
 source_url: "https://arstechnica.com/space/2026/07/spacex-scrubs-starship-launch-after-some-of-its-engines-didnt-start/"
 source_domain: "arstechnica.com"
-briefing: true
 draft: false
 ---
 
