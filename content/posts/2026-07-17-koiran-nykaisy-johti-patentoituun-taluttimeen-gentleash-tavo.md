@@ -54,7 +54,6 @@ keywords:
 source_name: "Suomen Yrittäjät"
 source_url: "https://www.yrittajat.fi/uutiset/ukko-koiran-voimakas-nykaisy-sytytti-kipinan-keksinnolle-jonka-yrittaja-uskoo-mullistavan-koirien-talutuksen-mikaan-ei-ole-ollut-helppoa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
