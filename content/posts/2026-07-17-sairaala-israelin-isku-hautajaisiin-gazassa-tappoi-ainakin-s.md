@@ -47,7 +47,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/world/2026/jul/17/israeli-strike-gaza-funeral-multiple-deaths"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
