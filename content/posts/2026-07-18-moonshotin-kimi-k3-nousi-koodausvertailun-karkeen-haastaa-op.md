@@ -47,7 +47,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/18/kiinalainen-moonshot-julkaisi-vakuuttavan-kimi-k3-tekoalymallin-haastaa-jopa-anthropicin-ja-openain-suorituskykyisimmat-mallit/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
