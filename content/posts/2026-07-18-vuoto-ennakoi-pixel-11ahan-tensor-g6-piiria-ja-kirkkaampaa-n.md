@@ -47,7 +47,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/18/vuotaja-paljasti-tietoja-google-pixel-11an-ominaisuuksista-tallainen-puhelin-on-luvassa-kevaalla-2027/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
