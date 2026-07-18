@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Avengers: Doomsdayn Suomen ensi-illaksi on vahvistettu 16. joulukuuta 2026. Kolmas Dyyni-elokuva on yhä tulossa Suomessa valkokankaille 18. joulukuuta,…"
+description: "Avengers: Doomsday saa Suomessa ensi-iltansa 16. joulukuuta 2026, kaksi päivää ennen kolmatta Dyyni-elokuvaa."
 summary: "Avengers: Doomsdayn Suomen ensi-illaksi on vahvistettu 16. joulukuuta 2026. Kolmas Dyyni-elokuva on yhä tulossa Suomessa valkokankaille 18. joulukuuta, joten suurten elokuvien ensi-illat eivät osu täällä samalle päivälle."
 summary_bullets:
   - "Avengers: Doomsdayn Suomen ensi-ilta on 16. joulukuuta 2026."
