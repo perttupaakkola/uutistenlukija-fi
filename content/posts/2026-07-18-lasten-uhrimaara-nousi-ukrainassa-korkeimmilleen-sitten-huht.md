@@ -47,7 +47,6 @@ keywords:
 source_name: "Uusi Suomi"
 source_url: "https://www.uusisuomi.fi/uutiset/a/9f7d8b26-953f-48d2-8874-4e9bfa2e1ac1"
 source_domain: "uusisuomi.fi"
-briefing: true
 draft: false
 ---
 
