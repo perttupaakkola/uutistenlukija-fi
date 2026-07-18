@@ -55,7 +55,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Auroraliigan-huippumaalivahti-Salla-Sivula-suuntaa-sarjaporrasta-alemmas/186352"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 

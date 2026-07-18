@@ -1,0 +1,94 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-17T23:41:24.478046+00:00",
+  "digest": "7fec639cd0",
+  "packet": {
+    "packet_id": "20260717T234124Z_7fec639cd0",
+    "created_at": "2026-07-17T23:41:24Z",
+    "headline_seed": "Applications close in 48 hours — here’s everything Australian founders need to know about Stripe x Startup Battlefield",
+    "description_seed": "The window is almost shut. On August 19, eight startups will take the stage at Stripe Tour Sydney in front of investors, global press, and the Australian tech community. One startup walks away with automatic entry into TechCrunch Disrupt in San Francisco — no application, no further competition, a guaranteed spot on the world’s most […]",
+    "link": "https://techcrunch.com/2026/07/17/applications-close-in-48-hours-heres-everything-australian-founders-need-to-know-about-stripe-x-startup-battlefield/",
+    "source": "TechCrunch",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "selected source block is missing name/url/domain; seed provenance cannot substitute",
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.54,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Applications close in 48 hours — here’s everything Australian founders need to know about Stripe x Startup Battlefield"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_url": "",
+        "source_domain": "",
+        "source_type": "research",
+        "text": "The window is almost shut. On August 19, eight startups will take the stage at Stripe Tour Sydney in front of investors, global press, and the Australian tech community. One startup walks away with automatic entry into TechCrunch Disrupt in San Francisco — no application, no further competition, a guaranteed spot on the world’s most […]",
+        "word_count": 56,
+        "keyword_overlap": 36,
+        "strong_overlap": 19
+      }
+    ],
+    "source_text": "The window is almost shut. On August 19, eight startups will take the stage at Stripe Tour Sydney in front of investors, global press, and the Australian tech community. One startup walks away with automatic entry into TechCrunch Disrupt in San Francisco — no application, no further competition, a guaranteed spot on the world’s most […]",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 112,
+      "selected_blocks": 1,
+      "selected_source_words": 56,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "provenance_invalid",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Applications close in 48 hours — here’s everything Australian founders need to know about Stripe x Startup Battlefield",
+      "description": "The window is almost shut. On August 19, eight startups will take the stage at Stripe Tour Sydney in front of investors, global press, and the Australian tech community. One startup walks away with automatic entry into TechCrunch Disrupt in San Francisco — no application, no further competition, a guaranteed spot on the world’s most […]",
+      "category_hint": "Teknologia",
+      "research_source": "rss"
+    }
+  },
+  "original_article": {
+    "title": "Applications close in 48 hours — here’s everything Australian founders need to know about Stripe x Startup Battlefield",
+    "description": "The window is almost shut. On August 19, eight startups will take the stage at Stripe Tour Sydney in front of investors, global press, and the Australian tech community. One startup walks away with automatic entry into TechCrunch Disrupt in San Francisco — no application, no further competition, a guaranteed spot on the world’s most […]",
+    "link": "https://techcrunch.com/2026/07/17/applications-close-in-48-hours-heres-everything-australian-founders-need-to-know-about-stripe-x-startup-battlefield/",
+    "published": "2026-07-17T23:08:00+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "50d34fc28023784edc5b3a766e9416df",
+    "_url_hash": "bfc832d5f00b0ed4b02da441519ad49c5143b3cf2c6f08f4e37415310b314c02",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "The window is almost shut. On August 19, eight startups will take the stage at Stripe Tour Sydney in front of investors, global press, and the Australian tech community. One startup walks away with automatic entry into TechCrunch Disrupt in San Francisco — no application, no further competition, a guaranteed spot on the world’s most […]",
+    "research_source": "rss"
+  },
+  "failed_at": "2026-07-17T23:43:34.951203+00:00",
+  "failure": "Lähteen alkuperätiedot puuttuvat, ja käytettävissä oleva 56 sanan katkelma ei riitä vähintään 250 sanan uutisartikkelin luotettavaan kirjoittamiseen.",
+  "raw_response": "{\"packet_id\":\"20260717T234124Z_7fec639cd0\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähteen alkuperätiedot puuttuvat, ja käytettävissä oleva 56 sanan katkelma ei riitä vähintään 250 sanan uutisartikkelin luotettavaan kirjoittamiseen.\"}"
+}
