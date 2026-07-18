@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { readdir, readFile } from 'node:fs/promises';
 import test from 'node:test';
 
@@ -11,6 +12,37 @@ const rankedKuubaSlug =
   '2026-03-17-kuuban-sahkoverkko-romahti-ja-jatti-10-miljoonaa-ihmista-pim';
 const alternateKuubaSlug =
   '2026-03-17-kuuban-sahkoverkko-romahti-kymmenen-miljoonaa-ihmista-jai-pi';
+const jyvaskylaSurvivorSlug =
+  '2026-03-20-jyvaskylassa-lahihoitajalle-tuomio-tietosuojarikoksista';
+const retiredJyvaskylaBodyHashes = new Map([
+  [
+    '2026-03-20-lahihoitajalle-tuomio-186-tietosuojarikoksesta-jyvaskylassa',
+    '6d666607c20ebe0e84bc4febd4ddd8dff4699a2a24925ee2f55848419109ca24',
+  ],
+  [
+    '2026-03-20-lahihoitajalle-tuomio-186-tietosuojarikoksesta-katseli-luvat',
+    '5ad901cbb92cc6460d354fa04c8e8595761cec19ba907c70227f89899dd65d75',
+  ],
+  [
+    '2026-03-20-lahihoitajalle-tuomio-186-tietosuojarikoksesta-luvaton-paasy',
+    'a8e7e832dcb919b8ca4a939c6db891564652dc96ec9a52b77c9045f8a852b589',
+  ],
+  [
+    '2026-03-20-jyvaskylan-lahihoitaja-sai-tuomion-massiivisista-tietosuojar',
+    'd23719da24e53bd85298c99fb5bd34ed7731d381f80c5cd9fd1222fc0ff9c2fa',
+  ],
+]);
+
+function articleBody(source) {
+  const marker = '\n---\n';
+  const bodyStart = source.indexOf(marker);
+  assert.notEqual(bodyStart, -1, 'article must have a closing frontmatter delimiter');
+  return source.slice(bodyStart + marker.length);
+}
+
+function bodyHash(source) {
+  return createHash('sha256').update(articleBody(source)).digest('hex');
+}
 
 function request(pathname, init) {
   return new Request(`https://uutistenlukija.fi${pathname}`, init);
@@ -140,6 +172,106 @@ test('duplicate Kuuba source is retired from index and first-party content links
   const urls = searchIndex.map((record) => record.url);
   assert.equal(urls.filter((url) => url === `/posts/${alternateKuubaSlug}/`).length, 0);
   assert.equal(urls.filter((url) => url === `/posts/${rankedKuubaSlug}/`).length, 1);
+});
+
+test('Jyväskylä privacy duplicates redirect exactly one hop to the source-safe survivor', async () => {
+  const canonicalUrl = `https://uutistenlukija.fi/posts/${jyvaskylaSurvivorSlug}/`;
+  for (const slug of retiredJyvaskylaBodyHashes.keys()) {
+    for (const pathname of [
+      `/posts/${slug}`,
+      `/posts/${slug}/`,
+      `/posts/${slug}/?source=regression`,
+    ]) {
+      const { calls, env } = assetSpy();
+      const response = await worker.fetch(request(pathname), env, {});
+
+      assert.equal(response.status, 308, pathname);
+      assert.equal(response.headers.get('location'), canonicalUrl, pathname);
+      assert.deepEqual(calls, [], `${pathname} must not reach ASSETS.fetch before redirect`);
+
+      const followed = await worker.fetch(new Request(response.headers.get('location')), env, {});
+      assert.equal(followed.status, 200, `${pathname} must finish after one redirect`);
+      assert.deepEqual(calls, [canonicalUrl], `${pathname} must reach the survivor once`);
+    }
+  }
+
+  const survivorSpy = assetSpy();
+  const survivorResponse = await worker.fetch(
+    request(`/posts/${jyvaskylaSurvivorSlug}/`),
+    survivorSpy.env,
+    {},
+  );
+  assert.equal(survivorResponse.status, 200);
+  assert.deepEqual(survivorSpy.calls, [canonicalUrl]);
+});
+
+test('Jyväskylä survivor matches the accepted source-bounded contract', async () => {
+  const survivor = await readFile(
+    new URL(`../content/posts/${jyvaskylaSurvivorSlug}.md`, import.meta.url),
+    'utf8',
+  );
+  assert.match(
+    survivor,
+    /^title: "Jyväskylässä lähihoitajalle tuomio tietosuojarikoksista"$/m,
+  );
+  assert.match(
+    survivor,
+    /^description: "Keski-Suomen käräjäoikeus tuomitsi lähihoitajan neljän kuukauden ehdolliseen vankeuteen 186 ihmisen potilastietojen luvattomasta katselusta\."$/m,
+  );
+  assert.match(survivor, /^source_name: "Yle"$/m);
+  assert.match(survivor, /^source_url: "https:\/\/yle\.fi\/a\/74-20216112"$/m);
+  assert.match(survivor, /^source_domain: "yle\.fi"$/m);
+  assert.match(survivor, /^editorial_reviewed: true$/m);
+  assert.ok(
+    survivor.includes(
+      '  Artikkeli perustuu Ylen 20.3.2026 julkaisemaan selostukseen Keski-Suomen käräjäoikeuden kansliatuomiosta. Ylen mukaan tuomio ei ollut julkaisuhetkellä lainvoimainen.',
+    ),
+  );
+  assert.doesNotMatch(survivor, /^\s+- liikenne$/m);
+  assert.equal(
+    articleBody(survivor).trim(),
+    `Keski-Suomen käräjäoikeus tuomitsi lähihoitajan neljän kuukauden ehdolliseen vankeuteen laajassa tietosuojarikosjutussa. Ylen 20. maaliskuuta julkaiseman uutisen mukaan lähihoitajan todettiin katselleen luvatta 186 ihmisen potilastietoja Keski-Suomen hyvinvointialueella. Vastaajaa syytettiin alun perin 192 tietosuojarikoksesta, joista kuusi hylättiin. Tuomio ei ollut Ylen uutisen julkaisuhetkellä lainvoimainen.
+
+## Tietoja katsottiin huhtikuusta 2022 kesäkuuhun 2023
+
+Luvattomat haut tehtiin huhtikuun 2022 ja kesäkuun 2023 välisenä aikana. Monien asianomistajien tietoja oli katsottu useita kertoja, enimmillään lähes 30 kertaa. Työnantajaa edustaneiden todistajien mukaan lähihoitaja oli kuulemistilaisuuksissa kertonut motiivikseen uteliaisuuden ja mielenkiinnon. Monet ihmiset, joiden tietoja katsottiin, olivat hänelle puolituttuja.
+
+Lähihoitaja kiisti syytteet ja vaati niiden hylkäämistä puutteelliseen perehdytykseen vedoten. Käräjäoikeuden mukaan perehdytys oli asianmukainen. Myös todistajat kertoivat, että potilastietojen käyttöä koskevat ohjeet oli annettu sekä työsuhteen aikana että jo opintojen alussa.
+
+## Korvauksia ja kuluja yli 37 000 euroa
+
+Ylen mukaan lähihoitaja määrättiin maksamaan korvauksia ja oikeudenkäyntikuluja yhteensä yli 37 000 euroa. Uhreille maksettavien korvausten osuus oli lähes 19 000 euroa, ja kärsimyskorvaukset vaihtelivat 350 eurosta 600 euroon. Käräjäoikeus ei sovitellut korvauksia.
+
+**Korjaus 18.7.2026:** Artikkeliin lisättiin lähdeviittaus. Samalla syytteiden määrä, korvaukset, motiivin lähde ja tuomion lainvoimaisuutta koskeva tieto täsmennettiin. Neljä samasta tapauksesta kertonutta päällekkäistä artikkelia yhdistettiin tähän sivuun.`,
+  );
+});
+
+test('Jyväskylä retirees keep their bodies and leave discovery and first-party links', async () => {
+  for (const [slug, expectedHash] of retiredJyvaskylaBodyHashes) {
+    const source = await readFile(new URL(`../content/posts/${slug}.md`, import.meta.url), 'utf8');
+    assert.match(source, /^draft:\s*true$/m, slug);
+    assert.equal(bodyHash(source), expectedHash, `${slug} body must remain byte-identical`);
+  }
+
+  const contentRoot = new URL('../content/', import.meta.url);
+  const contentPaths = await readdir(contentRoot, { recursive: true });
+  const offenders = [];
+  for (const relativePath of contentPaths.filter((path) => path.endsWith('.md'))) {
+    const source = await readFile(new URL(relativePath, contentRoot), 'utf8');
+    for (const slug of retiredJyvaskylaBodyHashes.keys()) {
+      if (source.includes(slug)) offenders.push(`${relativePath}: ${slug}`);
+    }
+  }
+  assert.deepEqual(offenders, [], 'first-party content must link directly to the survivor');
+
+  const searchIndex = JSON.parse(
+    await readFile(new URL('../static/search-index.json', import.meta.url), 'utf8'),
+  );
+  const urls = searchIndex.map((record) => record.url);
+  for (const slug of retiredJyvaskylaBodyHashes.keys()) {
+    assert.equal(urls.filter((url) => url === `/posts/${slug}/`).length, 0, slug);
+  }
+  assert.equal(urls.filter((url) => url === `/posts/${jyvaskylaSurvivorSlug}/`).length, 1);
 });
 
 test('fictional editorial surface redirects to the canonical disclosure', async () => {

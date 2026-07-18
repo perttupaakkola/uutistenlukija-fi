@@ -210,17 +210,38 @@ function redirectedArticleSubpage(requestUrl) {
   return Response.redirect(url.toString(), 308);
 }
 
-function redirectedDuplicateKuubaOutage(requestUrl) {
+const DUPLICATE_ARTICLE_REDIRECTS = new Map([
+  [
+    '/posts/2026-03-17-kuuban-sahkoverkko-romahti-kymmenen-miljoonaa-ihmista-jai-pi',
+    '/posts/2026-03-17-kuuban-sahkoverkko-romahti-ja-jatti-10-miljoonaa-ihmista-pim/',
+  ],
+  [
+    '/posts/2026-03-20-lahihoitajalle-tuomio-186-tietosuojarikoksesta-jyvaskylassa',
+    '/posts/2026-03-20-jyvaskylassa-lahihoitajalle-tuomio-tietosuojarikoksista/',
+  ],
+  [
+    '/posts/2026-03-20-lahihoitajalle-tuomio-186-tietosuojarikoksesta-katseli-luvat',
+    '/posts/2026-03-20-jyvaskylassa-lahihoitajalle-tuomio-tietosuojarikoksista/',
+  ],
+  [
+    '/posts/2026-03-20-lahihoitajalle-tuomio-186-tietosuojarikoksesta-luvaton-paasy',
+    '/posts/2026-03-20-jyvaskylassa-lahihoitajalle-tuomio-tietosuojarikoksista/',
+  ],
+  [
+    '/posts/2026-03-20-jyvaskylan-lahihoitaja-sai-tuomion-massiivisista-tietosuojar',
+    '/posts/2026-03-20-jyvaskylassa-lahihoitajalle-tuomio-tietosuojarikoksista/',
+  ],
+]);
+
+function redirectedDuplicateArticle(requestUrl) {
   const url = new URL(requestUrl);
-  const alternatePath =
-    '/posts/2026-03-17-kuuban-sahkoverkko-romahti-kymmenen-miljoonaa-ihmista-jai-pi';
   const normalizedPath = url.pathname.endsWith('/')
     ? url.pathname.slice(0, -1)
     : url.pathname;
-  if (normalizedPath !== alternatePath) return null;
+  const canonicalPath = DUPLICATE_ARTICLE_REDIRECTS.get(normalizedPath);
+  if (!canonicalPath) return null;
 
-  url.pathname =
-    '/posts/2026-03-17-kuuban-sahkoverkko-romahti-ja-jatti-10-miljoonaa-ihmista-pim/';
+  url.pathname = canonicalPath;
   url.search = '';
   url.hash = '';
   return Response.redirect(url.toString(), 308);
@@ -268,9 +289,9 @@ export default {
       return editorialSurfaceRedirect;
     }
 
-    const duplicateKuubaOutageRedirect = redirectedDuplicateKuubaOutage(request.url);
-    if (duplicateKuubaOutageRedirect) {
-      return duplicateKuubaOutageRedirect;
+    const duplicateArticleRedirect = redirectedDuplicateArticle(request.url);
+    if (duplicateArticleRedirect) {
+      return duplicateArticleRedirect;
     }
 
     const articleSubpageRedirect = redirectedArticleSubpage(request.url);

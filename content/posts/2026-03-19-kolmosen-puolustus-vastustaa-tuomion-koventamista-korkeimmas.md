@@ -12,7 +12,7 @@ tags:
   - oikeus
 related_articles:
   - 2026-03-19-koulusurmaa-suunnitelleen-kolmosen-puolustus-vastustaa-tuomi
-  - 2026-03-20-jyvaskylan-lahihoitaja-sai-tuomion-massiivisista-tietosuojar
+  - 2026-03-20-jyvaskylassa-lahihoitajalle-tuomio-tietosuojarikoksista
   - 2026-03-20-lahtelainen-mies-sai-tuomion-viestintarauhan-rikkomisesta
 description: "Evita Kolmosen puolustus kiistää korkeimmassa oikeudessa syyttäjän vaatimuksen tuomion koventamisesta koulusurmasta."
 image: "https://images.unsplash.com/photo-1674931009515-2a9348f4b1cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxmaW5sYW5kJTIwbGFuZHNjYXBlJTIwY2l0eXxlbnwxfDB8fHwxNzczOTUyNTE1fDA&ixlib=rb-4.1.0&q=85"
