@@ -210,6 +210,22 @@ function redirectedArticleSubpage(requestUrl) {
   return Response.redirect(url.toString(), 308);
 }
 
+function redirectedDuplicateKuubaOutage(requestUrl) {
+  const url = new URL(requestUrl);
+  const alternatePath =
+    '/posts/2026-03-17-kuuban-sahkoverkko-romahti-kymmenen-miljoonaa-ihmista-jai-pi';
+  const normalizedPath = url.pathname.endsWith('/')
+    ? url.pathname.slice(0, -1)
+    : url.pathname;
+  if (normalizedPath !== alternatePath) return null;
+
+  url.pathname =
+    '/posts/2026-03-17-kuuban-sahkoverkko-romahti-ja-jatti-10-miljoonaa-ihmista-pim/';
+  url.search = '';
+  url.hash = '';
+  return Response.redirect(url.toString(), 308);
+}
+
 function redirectedEditorialSurface(requestUrl) {
   const url = new URL(requestUrl);
   if (url.pathname !== '/toimitus' && url.pathname !== '/toimitus/') return null;
@@ -250,6 +266,11 @@ export default {
     const editorialSurfaceRedirect = redirectedEditorialSurface(request.url);
     if (editorialSurfaceRedirect) {
       return editorialSurfaceRedirect;
+    }
+
+    const duplicateKuubaOutageRedirect = redirectedDuplicateKuubaOutage(request.url);
+    if (duplicateKuubaOutageRedirect) {
+      return duplicateKuubaOutageRedirect;
     }
 
     const articleSubpageRedirect = redirectedArticleSubpage(request.url);
