@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-18T17:11:21.660019+00:00",
+  "digest": "aaf4775b35",
+  "packet": {
+    "packet_id": "20260718T171121Z_aaf4775b35",
+    "created_at": "2026-07-18T17:11:21Z",
+    "headline_seed": "Kontulan puukotus järkyttää paikallisia: \"Tosi kamalaa\"",
+    "description_seed": "Kontulassa tapahtui lauantaipäivällä puukotus.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/kontulan-puukotus-jarkyttaa-paikallisia-tosi-kamalaa/9367610",
+    "source": "MTV Uutiset",
+    "source_names": [],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "",
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Kontulan puukotus järkyttää paikallisia: \"Tosi kamalaa\""
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 117,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "MTV Uutiset",
+        "MTV Uutiset"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Kontulan puukotus järkyttää paikallisia: \"Tosi kamalaa\"",
+      "description": "Kontulassa tapahtui lauantaipäivällä puukotus.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Kontulan puukotus järkyttää paikallisia: \"Tosi kamalaa\"",
+    "description": "Kontulassa tapahtui lauantaipäivällä puukotus.",
+    "link": "https://www.mtvuutiset.fi/artikkeli/kontulan-puukotus-jarkyttaa-paikallisia-tosi-kamalaa/9367610",
+    "published": "2026-07-18T16:59:43+00:00",
+    "source": "MTV Uutiset",
+    "source_domain": "mtvuutiset.fi",
+    "language": "fi",
+    "fingerprint": "fb703c00c3f7cc94a37da79672bb2afb",
+    "_url_hash": "95a27c2c40e00a65ddf9ec7db8db4abbd2f4515942cb4d535dffc200a1f62696",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: MTV Uutiset | URL: https://www.mtvuutiset.fi/artikkeli/kontulan-puukotus-jarkyttaa-paikallisia-tosi-kamalaa/9367610]\nMies puukotti iäkkään naisen hengiltä Helsingin Kontulassa lauantaina.\n\nMies puukotti noin 80-vuotiasta naista Helsingin Kontulassa lauantai-iltapäivänä. Nainen kuoli saamiinsa vammoihin.\n\nPoliisi tutkii puukotusta alustavasti rikosnimikkeellä tappo. Poliisin alustavien tietojen mukaan uhri ja epäilty eivät tunteneet toisiaan entuudestaan.\n\nMTV Uutiset kävi tapahtumapaikalla selvittämässä, millaisia ajatuksia tapaus herättää alueen asukkaissa.\n\nAnne Koskinen pitää tapahtunutta ikävänä.\n\n– Erittäin ikävä mieli, kun vanhus kuolee tällä tavalla, hän sanoo.\n\nHän kertoo, että tapahtunut vaikuttaa jonkin verran turvallisuuden tunteeseen.\n\n– Ehkä hieman vaikuttaa asenteisiin ja ylipäätään siihen, miten liikkuu, Koskinen kertoo\n\nTapahtunut järkyttää Kontulassa myös yli 50 vuotta asunutta Margot Apilaista.\n\nApilainen kuitenkin lisää, että Kontula on ihana paikka asua.\n\n– Eikä Kontulaa voi verrata tähän ostariin, Apilainen sanoo.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-18T17:23:46.188424+00:00",
+  "failure": "Paketissa ei ole lähdetekstiä eikä riittävästi varmennettuja tietoja vähintään 250 sanan uutisartikkeliin.",
+  "raw_response": "{\"packet_id\":\"20260718T171121Z_aaf4775b35\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lähdetekstiä eikä riittävästi varmennettuja tietoja vähintään 250 sanan uutisartikkeliin.\"}"
+}
