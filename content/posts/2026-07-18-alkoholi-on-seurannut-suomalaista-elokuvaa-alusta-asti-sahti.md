@@ -48,7 +48,6 @@ keywords:
 source_name: "Yle Uutiset"
 source_url: "https://yle.fi/a/74-20235615?origin=rss"
 source_domain: "yle.fi"
-briefing: true
 draft: false
 ---
 
