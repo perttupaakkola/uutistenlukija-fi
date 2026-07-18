@@ -47,7 +47,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/tietotekniikka/tietotekniikkauutiset/modaaja-teki-25-tuuman-ssd-asemista-steam-pelikasetteja/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
