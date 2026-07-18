@@ -47,7 +47,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/norjassa-riehuva-tulipalo-on-pahin-sataan-vuoteen-uusi-uhka-piinaa-pelastajia/9367390"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
