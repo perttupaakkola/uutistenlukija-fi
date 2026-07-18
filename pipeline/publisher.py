@@ -46,16 +46,16 @@ CANONICAL_CATEGORIES = ["Kotimaa", "Ulkomaat", "Talous", "Teknologia", "Urheilu"
 
 
 def _keyword_score(text: str, keywords: list) -> int:
-    """Count keyword matches in text (case-insensitive, word-boundary for 'AI')."""
+    """Count whole keyword matches without matching inside unrelated words."""
     score = 0
     lowered = text.casefold()
     for keyword in keywords:
         folded = keyword.casefold()
-        if keyword == "AI":
-            if re.search(r"(?<![a-zåäö])ai(?![a-zåäö])", lowered, re.IGNORECASE):
-                score += 1
-            continue
-        if folded in lowered:
+        if re.search(
+            rf"(?<![a-zåäö]){re.escape(folded)}(?![a-zåäö])",
+            lowered,
+            re.IGNORECASE,
+        ):
             score += 1
     return score
 

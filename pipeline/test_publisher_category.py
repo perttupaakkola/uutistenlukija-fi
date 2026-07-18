@@ -8,10 +8,40 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from publisher import _apply_keyword_category_override
+from publisher import _apply_keyword_category_override, _article_to_markdown
 
 
 class PublisherCategoryTests(unittest.TestCase):
+    def test_retained_teknologia_packet_reaches_frontmatter_unchanged(self) -> None:
+        fixture_path = (
+            Path(__file__).resolve().parent
+            / "queues/staged/published/20260718T083134Z_96358acb15.json"
+        )
+        retained = json.loads(fixture_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(retained["packet"]["category"], "Teknologia")
+        self.assertEqual(retained["payload"]["category"], "Teknologia")
+        markdown = _article_to_markdown(
+            retained["article"],
+            "2026-07-18T08:31:34+00:00",
+        )
+        self.assertIn("\ncategories:\n  - Teknologia\n", markdown)
+
+    def test_retained_kotimaa_packet_reaches_frontmatter_unchanged(self) -> None:
+        fixture_path = (
+            Path(__file__).resolve().parent
+            / "queues/staged/published/20260718T085119Z_00a3748bb8.json"
+        )
+        retained = json.loads(fixture_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(retained["packet"]["category"], "Kotimaa")
+        self.assertEqual(retained["payload"]["category"], "Kotimaa")
+        markdown = _article_to_markdown(
+            retained["article"],
+            "2026-07-18T08:51:19+00:00",
+        )
+        self.assertIn("\ncategories:\n  - Kotimaa\n", markdown)
+
     def test_retained_immigration_packet_stays_ulkomaat(self) -> None:
         fixture_path = (
             Path(__file__).resolve().parent
@@ -63,6 +93,29 @@ class PublisherCategoryTests(unittest.TestCase):
 
         self.assertEqual(_apply_keyword_category_override(science, "Kotimaa"), "Tiede")
         self.assertEqual(_apply_keyword_category_override(local, "Kotimaa"), "Kotimaa")
+
+    def test_genuine_weather_terms_still_override_to_kotimaa(self) -> None:
+        weather = {
+            "title": "Sääennuste varoittaa ukkosmyrskystä",
+            "summary": "Lämpötila laskee nopeasti illalla.",
+            "content": "Ilmatieteen laitos seuraa sadealuetta.",
+            "category": "Tiede",
+        }
+
+        self.assertEqual(_apply_keyword_category_override(weather, "Tiede"), "Kotimaa")
+
+    def test_genuine_technology_terms_still_override_to_teknologia(self) -> None:
+        technology = {
+            "title": "Uusi tekoäly nopeuttaa ohjelmiston kehitystä",
+            "summary": "Sovellus auttaa ohjelmoijia työssään.",
+            "content": "Teknologia on saatavilla pilvipalvelun kautta.",
+            "category": "Kotimaa",
+        }
+
+        self.assertEqual(
+            _apply_keyword_category_override(technology, "Kotimaa"),
+            "Teknologia",
+        )
 
 
 if __name__ == "__main__":
