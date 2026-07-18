@@ -47,7 +47,6 @@ keywords:
 source_name: "Finanssiala"
 source_url: "https://www.finanssiala.fi/uutiset/finanssialan-ahosniemi-eu-komissiokin-tunnistaa-vahvojen-ja-vakavaraisten-pankkien-roolin-talouskasvun-tukijana-seka-tarpeen-jarkevoittaa-saantelya/"
 source_domain: "finanssiala.fi"
-briefing: true
 draft: false
 ---
 
