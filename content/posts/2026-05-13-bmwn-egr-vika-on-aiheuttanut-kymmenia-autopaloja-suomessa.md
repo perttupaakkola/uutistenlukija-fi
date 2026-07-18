@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "BMW-merkkisiä autoja on syttynyt tuleen Suomessa ja muualla Euroopassa päästöjenhallintajärjestelmän EGR-vian vuoksi. Suomessa vahvistettuja tapauksia o…"
+description: "BMW:n EGR-vika on aiheuttanut Suomessa ainakin 45 autopaloa. Tapaukset koskevat etenkin vuosina 2010–2017 valmistettuja dieselmalleja."
 summary: "BMW-merkkisiä autoja on syttynyt tuleen Suomessa ja muualla Euroopassa päästöjenhallintajärjestelmän EGR-vian vuoksi. Suomessa vahvistettuja tapauksia on seitsemän vuoden ajalta ainakin 45."
 summary_bullets:
   - "Suomessa on varmistettu 45 BMW-paloa, joiden syyksi on todettu EGR-järjestelmän vika."
