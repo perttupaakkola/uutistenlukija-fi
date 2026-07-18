@@ -47,7 +47,6 @@ keywords:
 source_name: "yrittajat.fi"
 source_url: "https://www.yrittajat.fi/uutiset/talouden-kaanne-on-jo-kasilla-mutta-orastava-kasvu-ei-viela-nay-ihmisten-arjessa/"
 source_domain: "yrittajat.fi"
-briefing: true
 draft: false
 ---
 
