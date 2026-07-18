@@ -47,7 +47,6 @@ keywords:
 source_name: "Helsingin Uutiset"
 source_url: "https://www.helsinginuutiset.fi/urheilu/9629075"
 source_domain: "helsinginuutiset.fi"
-briefing: true
 draft: false
 ---
 
