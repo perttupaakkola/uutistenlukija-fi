@@ -45,7 +45,6 @@ keywords:
 source_name: "MTV Uutiset"
 source_url: "https://www.mtvuutiset.fi/artikkeli/perhetragedia-virroilla-tapahtuneessa-onnettomuudessa-kuolivat-perheen-vanhemmat/9367446"
 source_domain: "mtvuutiset.fi"
-briefing: true
 draft: false
 ---
 
