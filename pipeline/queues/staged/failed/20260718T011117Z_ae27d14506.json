@@ -1,0 +1,94 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-18T01:11:17.358023+00:00",
+  "digest": "ae27d14506",
+  "packet": {
+    "packet_id": "20260718T011117Z_ae27d14506",
+    "created_at": "2026-07-18T01:11:17Z",
+    "headline_seed": "Suomalainen perheenisä otti 10 000 euron lainan ja osti koko summalla kryptoja – Ammattisijoittaja neuvoo: Näin velkarahalla voi vaurastua",
+    "description_seed": "Perheenisä Jusa Harju otti kymppitonnin lainan ja teki kovan sijoitusratkaisun. Nyt ammattisijoittaja kommentoi huomiota herättänyttä ratkaisua ja neuvoo, miten lainaraha kannattaa sijoittaa.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/c6193a81-02d5-4a1d-beed-825cbcb663c4?utm_source=rss",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "selected source block is missing name/url/domain; seed provenance cannot substitute",
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suomalainen perheenisä otti 10 000 euron lainan ja osti koko summalla kryptoja – Ammattisijoittaja neuvoo: Näin velkarahalla voi vaurastua"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_url": "",
+        "source_domain": "",
+        "source_type": "research",
+        "text": "Perheenisä Jusa Harju otti kymppitonnin lainan ja teki kovan sijoitusratkaisun. Nyt ammattisijoittaja kommentoi huomiota herättänyttä ratkaisua ja neuvoo, miten lainaraha kannattaa sijoittaa.",
+        "word_count": 22,
+        "keyword_overlap": 19,
+        "strong_overlap": 13
+      }
+    ],
+    "source_text": "Perheenisä Jusa Harju otti kymppitonnin lainan ja teki kovan sijoitusratkaisun. Nyt ammattisijoittaja kommentoi huomiota herättänyttä ratkaisua ja neuvoo, miten lainaraha kannattaa sijoittaa.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 44,
+      "selected_blocks": 1,
+      "selected_source_words": 22,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "provenance_invalid",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suomalainen perheenisä otti 10 000 euron lainan ja osti koko summalla kryptoja – Ammattisijoittaja neuvoo: Näin velkarahalla voi vaurastua",
+      "description": "Perheenisä Jusa Harju otti kymppitonnin lainan ja teki kovan sijoitusratkaisun. Nyt ammattisijoittaja kommentoi huomiota herättänyttä ratkaisua ja neuvoo, miten lainaraha kannattaa sijoittaa.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Suomalainen perheenisä otti 10 000 euron lainan ja osti koko summalla kryptoja – Ammattisijoittaja neuvoo: Näin velkarahalla voi vaurastua",
+    "description": "Perheenisä Jusa Harju otti kymppitonnin lainan ja teki kovan sijoitusratkaisun. Nyt ammattisijoittaja kommentoi huomiota herättänyttä ratkaisua ja neuvoo, miten lainaraha kannattaa sijoittaa.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/c6193a81-02d5-4a1d-beed-825cbcb663c4?utm_source=rss",
+    "published": "2026-07-18T01:03:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "3d2e3acea4a3bcd401b45c4fc0fd1a4c",
+    "_url_hash": "b582a3d8b2358eaa98fbb95518234f2180ca6584cca22a155c41751d31bc9675",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Perheenisä Jusa Harju otti kymppitonnin lainan ja teki kovan sijoitusratkaisun. Nyt ammattisijoittaja kommentoi huomiota herättänyttä ratkaisua ja neuvoo, miten lainaraha kannattaa sijoittaa.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-07-18T01:13:23.903885+00:00",
+  "failure": "Lähdeaineisto on liian niukka ja sen alkuperä on puutteellisesti todennettu vähintään 250 sanan artikkelin kirjoittamiseksi ilman oletuksia.",
+  "raw_response": "{\"packet_id\":\"20260718T011117Z_ae27d14506\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka ja sen alkuperä on puutteellisesti todennettu vähintään 250 sanan artikkelin kirjoittamiseksi ilman oletuksia.\"}"
+}
