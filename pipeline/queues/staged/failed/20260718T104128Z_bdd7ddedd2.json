@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-18T10:41:28.755563+00:00",
+  "digest": "bdd7ddedd2",
+  "packet": {
+    "packet_id": "20260718T104128Z_bdd7ddedd2",
+    "created_at": "2026-07-18T10:41:28Z",
+    "headline_seed": "Ainoa laatuaan Suomessa – hostellissa yövytään värikkäissä sirkusvaunuissa ja vastaanotossa on klovni",
+    "description_seed": "Kiinnostaako tänä kesänä karata sirkukseen? Nyt se on mahdollista – ainakin lomailumielessä.",
+    "link": "https://www.ess.fi/teemat/9629205",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "",
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Ainoa laatuaan Suomessa – hostellissa yövytään värikkäissä sirkusvaunuissa ja vastaanotossa on klovni"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 131,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Ainoa laatuaan Suomessa – hostellissa yövytään värikkäissä sirkusvaunuissa ja vastaanotossa on klovni",
+      "description": "Kiinnostaako tänä kesänä karata sirkukseen? Nyt se on mahdollista – ainakin lomailumielessä.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Ainoa laatuaan Suomessa – hostellissa yövytään värikkäissä sirkusvaunuissa ja vastaanotossa on klovni",
+    "description": "Kiinnostaako tänä kesänä karata sirkukseen? Nyt se on mahdollista – ainakin lomailumielessä.",
+    "link": "https://www.ess.fi/teemat/9629205",
+    "published": "2026-07-18T12:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "3bfa5033ccdc92d90bed94fec1efe77d",
+    "_url_hash": "400f7e5365438c0459fa17d40ab7790ca9108fbfe3fa04bd835779a33f093ccc",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle | URL: https://yle.fi/a/74-20236910]\nVenezuelan maanjäristysten kuolonuhrien määrä on noussut 5 069:ään, kertoo maan kansalliskokouksen puhemies Jorge Rodríguez. Hän vahvisti asian viestipalvelu Telegramissa perjantaina.\n\nKesäkuun 24. päivän tapahtuneissa kahdessa järistyksessä loukkaantui lisäksi 16 740 ihmistä. Lisäksi tuhansia ihmisiä on yhä kateissa.\n\nJäristykset aiheuttivat eniten tuhoja La Guairan osavaltiossa.\n\nNoin 20 000 ihmistä on jäänyt kodittomaksi maanjäristysten vuoksi. He asuvat tällä hetkellä ahtaissa väliaikaisleireissä, joista monista puuttuvat vesihuolto ja asianmukainen viemäröinti.\n\nVäliaikainen presidentti Delcy Rodriguez kertoo, että Venezuelan hallinto on nostanut 346 miljoonan Yhdysvaltain dollarin eli noin 300 miljoonan euron arvosta omia varojaan kansainväliseltä valuuttarahastolta IMF:ltä.\n\nVaroilla on tarkoitus tukea maanjäristyksistä kärsieiden alueiden uudelleenrakentamisessa.\n\n– Tämä auttaa tukemaan kärsineitä perheitä, infrastruktuuria, välttämättömiä julkisia palveluita sekä muita tarpeita, kirjoitti Rodriguez viestipalvelu Telegramissa julkaisemassaan lausunnossa perjantaina.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-18T10:43:16.048146+00:00",
+  "failure": "Paketissa ei ole valittua lähdeaineistoa eikä riittävästi varmennettuja tietoja vähintään 250 sanan uutisartikkeliin.",
+  "raw_response": "{\"packet_id\":\"20260718T104128Z_bdd7ddedd2\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole valittua lähdeaineistoa eikä riittävästi varmennettuja tietoja vähintään 250 sanan uutisartikkeliin.\"}"
+}
