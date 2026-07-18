@@ -47,7 +47,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/18/apple-musicin-hinta-nousi-useilla-markkinoilla-ei-nayta-taydessa-mitassaan-koskevan-suomea/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
