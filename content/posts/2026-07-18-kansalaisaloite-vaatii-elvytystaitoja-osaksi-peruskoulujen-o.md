@@ -47,7 +47,6 @@ keywords:
 source_name: "Lääkärilehti"
 source_url: "http://www.laakarilehti.fi/terveydenhuolto/kansalaisaloite-elvytystaidot-peruskoulujen-opetukseen/"
 source_domain: "laakarilehti.fi"
-briefing: true
 draft: false
 ---
 
