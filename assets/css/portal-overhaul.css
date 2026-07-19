@@ -1051,6 +1051,13 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   }
 }
 
+@media (max-width: 480px) {
+  .portal-teaser h3 {
+    font-size: 1.03125rem !important;
+    margin-bottom: 0 !important;
+  }
+}
+
 @media (max-width: 900px) {
   .portal-opinion-card h3 a {
     display: block;
