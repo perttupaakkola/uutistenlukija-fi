@@ -47,7 +47,6 @@ keywords:
 source_name: "muropaketti.com"
 source_url: "https://muropaketti.com/mobiili/mobiiliuutiset/redmagic-astra-2-pelitabletissa-on-185-hertsin-oled-naytto-ja-snapdragon-8-elite-gen-5/"
 source_domain: "muropaketti.com"
-briefing: true
 draft: false
 ---
 
