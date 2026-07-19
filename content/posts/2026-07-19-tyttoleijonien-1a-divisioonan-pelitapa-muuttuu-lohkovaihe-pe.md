@@ -47,7 +47,6 @@ keywords:
 source_name: "Jatkoaika.com"
 source_url: "https://www.jatkoaika.com/Uutiset/Tytt%C3%B6leijonien-divarikisojen-pelitapa-uusiksi/186357"
 source_domain: "jatkoaika.com"
-briefing: true
 draft: false
 ---
 

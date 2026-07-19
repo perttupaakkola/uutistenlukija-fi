@@ -47,7 +47,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/19/tulevien-iphone-18-pro-puhelinten-uudistuneesta-paakamerasta-paljastui-yksityiskohtia-muut-kamerat-pysymassa-ennallaan/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
