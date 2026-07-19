@@ -54,6 +54,7 @@
       {{ $teaserPool := where $visualPosts "Permalink" "not in" $seen }}
       {{ range first 4 $teaserPool }}
       {{ $cat := index .Params.categories 0 | default "Uutiset" }}
+      {{ $catClass := $cat | lower | urlize }}
       {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
       {{ $seen = $seen | append .Permalink }}
       <article class="portal-teaser">
@@ -61,7 +62,7 @@
           <img src="{{ $img }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="180" height="120" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.src='{{ printf "/images/categories/%s.jpg" ($cat | lower) }}'">
         </a>
         <div>
-          <div class="portal-teaser__meta"><span class="portal-kicker">{{ $cat }}</span><span>{{ partial "relative-date.html" . }}</span></div>
+          <div class="portal-teaser__meta"><span class="portal-kicker portal-teaser__category portal-teaser__category--{{ $catClass }}">{{ $cat }}</span><span>{{ partial "relative-date.html" . }}</span></div>
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         </div>
       </article>

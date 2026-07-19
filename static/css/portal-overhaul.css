@@ -249,6 +249,18 @@ main.container { padding-top: 0; padding-bottom: 48px; }
 .portal-teaser__thumb { width: 136px; height: 104px; border-radius: 7px; overflow: hidden; background: var(--portal-soft); }
 .portal-teaser__thumb img { width: 100%; height: 100%; object-fit: cover; }
 .portal-teaser__meta { display: flex; gap: 10px; align-items: center; margin: 0 0 7px; color: var(--portal-muted); font-size: 13px; }
+.portal-teaser__category {
+  --portal-teaser-category: #0b49ad;
+  --portal-teaser-category-dark: #8ab4ff;
+}
+.portal-teaser__category--kotimaa { --portal-teaser-category: #1f5f8b; --portal-teaser-category-dark: #75bce8; }
+.portal-teaser__category--ulkomaat { --portal-teaser-category: #a93226; --portal-teaser-category-dark: #ff8a7a; }
+.portal-teaser__category--talous { --portal-teaser-category: #8b5b00; --portal-teaser-category-dark: #f1c75b; }
+.portal-teaser__category--teknologia { --portal-teaser-category: #6f3c8f; --portal-teaser-category-dark: #d8a2f0; }
+.portal-teaser__category--urheilu { --portal-teaser-category: #1e6f43; --portal-teaser-category-dark: #79d5a5; }
+.portal-teaser__category--kulttuuri { --portal-teaser-category: #8a4b00; --portal-teaser-category-dark: #f0b76a; }
+.portal-teaser__category--tiede { --portal-teaser-category: #0f6b5c; --portal-teaser-category-dark: #65d1bd; }
+.portal-teaser__meta .portal-teaser__category { color: var(--portal-teaser-category) !important; }
 .portal-teaser h3 { margin: 0 0 9px; font-size: 17px; line-height: 1.2; letter-spacing: -.01em; }
 .portal-right-rail { display: grid; grid-column: 3; grid-row: 1 / span 2; gap: 20px; }
 .portal-newsletter, .portal-market, .portal-most-read, .portal-editorials {
@@ -1241,6 +1253,9 @@ main.container { padding-top: 0; padding-bottom: 48px; }
 [data-theme="dark"] .portal-row-card__time,
 [data-theme="dark"] .portal-section-label {
   color: #d7cfc3 !important;
+}
+[data-theme="dark"] .portal-teaser__meta .portal-teaser__category {
+  color: var(--portal-teaser-category-dark) !important;
 }
 [data-theme="dark"] .portal-lead .portal-kicker {
   background: #0b49ad;
