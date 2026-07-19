@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-19T18:21:23.652650+00:00",
+  "digest": "ba620c4280",
+  "packet": {
+    "packet_id": "20260719T182123Z_ba620c4280",
+    "created_at": "2026-07-19T18:21:23Z",
+    "headline_seed": "Hämeen poliisi etsii Lahdessa kadonnutta naista",
+    "description_seed": "",
+    "link": "https://www.ess.fi/paikalliset/9630937",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "",
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Hämeen poliisi etsii Lahdessa kadonnutta naista"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 162,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Hämeen poliisi etsii Lahdessa kadonnutta naista",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Hämeen poliisi etsii Lahdessa kadonnutta naista",
+    "description": "",
+    "link": "https://www.ess.fi/paikalliset/9630937",
+    "published": "2026-07-19T21:12:33+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "e35b1f4289abc60962d5e025da6efc27",
+    "_url_hash": "6059caf364e96a0fdc9132b93d601a5901456a657ad2255ce4cccc319968719c",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle | URL: https://yle.fi/a/74-20234122]\nNaisen murhasta Lahden Tonttilassa epäilty 32-vuotias mies on vangittu Päijät-Hämeen käräjäoikeudessa.\n\nPoliisi löysi kerrostalosta kuolleen naisen lauantaina 27. kesäkuuta ennen puolta yötä. Naisen epäillään kuolleen väkivallan seurauksena.\n\nYlen tietojen mukaan murhasta epäillyn miehen osoite ei ole kerrostalossa, josta kuollut nainen löytyi.\n\nMurhasta epäillyllä miehellä on vireillä avioero. Avioeroa haki miehen 31-vuotias puoliso. Puolison kotiosoite sijaitsee Tonttilan asuinalueella.\n\nTutkinnanjohtaja Jari Kiiskinen toteaa, että kyse on perheen sisäisestä asiasta ja lähisuhdeväkivallasta.\n\nPoliisi on kertonut ottaneensa murhasta epäillyn miehen kiinni muutama tunti sen jälkeen, kun rikosepäily tuli ilmi sunnuntaina.\n\nMurhan tutkinta jatkuu nyt kuulusteiluilla ja teknisen tutkinnan aineiston tarkastelulla, Kiiskinen kertoo.\n\nTodennäköisin syin vangitulla miehellä ei ole kymmenen viime vuoden ajalta merkittävää rikostaustaa.\n\n32-vuotias mies on kuitenkin aiemmin tuomittu törkeästä liikenneturvallisuuden vaarantamisesta. Mies ajoi autoa valtatiellä 110 kilometrin tuntinopeudella, kun alueella nopeusrajoitus oli 60 kilometriä tunnissa. Miehellä oli matkustajia kyydissään.\n\nMies sai rangaistukseksi 50 päiväsakkoa, joka teki hänen tuloillaan 300 euroa. Vuonna 2020 annettu tuomio on lainvoimainen.\n\nMurhasta epäillyltä mieheltä on haettu myös oikeusteitse velkasaatavia.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-19T18:23:19.485183+00:00",
+  "failure": "Paketissa ei ole lainkaan valittua lähdetekstiä eikä riittäviä tietoja katoamisajasta, -paikasta, henkilön tuntomerkeistä tai poliisin ohjeista vähintään 250 sanan uutisen laatimiseksi.",
+  "raw_response": "{\"packet_id\":\"20260719T182123Z_ba620c4280\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lainkaan valittua lähdetekstiä eikä riittäviä tietoja katoamisajasta, -paikasta, henkilön tuntomerkeistä tai poliisin ohjeista vähintään 250 sanan uutisen laatimiseksi.\"}"
+}
