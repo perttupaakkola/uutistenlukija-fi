@@ -23,6 +23,7 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
         self.founding_sponsor = (ROOT / "layouts/_default/perustajakumppanuus.html").read_text(encoding="utf-8")
         self.founding_sponsor_frontmatter = (ROOT / "content/perustajakumppanuus/_index.md").read_text(encoding="utf-8")
         self.tracking = (ROOT / "layouts/partials/event-tracking.html").read_text(encoding="utf-8")
+        self.footer = (ROOT / "layouts/partials/footer.html").read_text(encoding="utf-8")
         self.critical_css = (ROOT / "layouts/partials/critical-css.html").read_text(encoding="utf-8")
         self.style_css = (ROOT / "themes/uutistenlukija/static/css/style.css").read_text(
             encoding="utf-8"
@@ -82,6 +83,38 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
         self.assertIn("advertise_page_click", self.cta)
         self.assertIn("_gtag('event', 'monetization_signal'", self.tracking)
         self.assertIn("[data-monetization-signal]", self.tracking)
+
+    def test_footer_mainosta_anchor_has_exact_approved_signal_contract(self) -> None:
+        anchors = re.findall(r"<a\b([^>]*)>([^<]*)</a>", self.footer)
+        mainosta_anchors = [(attrs, copy) for attrs, copy in anchors if copy == "Mainosta"]
+        self.assertEqual(len(mainosta_anchors), 1)
+
+        parsed_attributes = re.findall(r'([a-zA-Z][\w:-]*)="([^"]*)"', mainosta_anchors[0][0])
+        expected_attributes = {
+            "href": "/mainosta/",
+            "data-track": "advertise_cta_click",
+            "data-monetization-signal": "advertise_page_click",
+            "data-placement": "site-footer-mainosta-v1",
+            "data-destination": "mainosta",
+        }
+        self.assertEqual(len(parsed_attributes), len(expected_attributes))
+        self.assertEqual(dict(parsed_attributes), expected_attributes)
+
+        tietoa_list = re.search(
+            r"<h3>Tietoa</h3>\s*<ul[^>]*>(.*?)</ul>",
+            self.footer,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(tietoa_list)
+        self.assertEqual(
+            re.findall(r'<a\b[^>]*href="([^"]+)"[^>]*>([^<]+)</a>', tietoa_list.group(1)),
+            [
+                ("/tietoja/", "Tietoja palvelusta"),
+                ("/tietosuojaseloste/", "Tietosuoja"),
+                ("/kayttoehdot/", "Käyttöehdot"),
+                ("/mainosta/", "Mainosta"),
+            ],
+        )
 
     def test_mailto_analytics_never_include_recipient_or_message_content(self) -> None:
         self.assertIn("/^(mailto|tel)$/i.test(schemeMatch[1])", self.tracking)
