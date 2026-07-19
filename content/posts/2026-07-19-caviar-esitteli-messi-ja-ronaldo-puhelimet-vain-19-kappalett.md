@@ -47,7 +47,6 @@ keywords:
 source_name: "mobiili.fi"
 source_url: "https://mobiili.fi/2026/07/19/caviar-julkisti-messi-ja-ronaldo-erikoispuhelimet-varustettu-emalimuotokuvilla-ja-24-karaatin-kullalla/"
 source_domain: "mobiili.fi"
-briefing: true
 draft: false
 ---
 
