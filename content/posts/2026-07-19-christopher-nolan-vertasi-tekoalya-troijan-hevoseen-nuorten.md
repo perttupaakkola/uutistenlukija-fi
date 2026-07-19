@@ -47,7 +47,6 @@ keywords:
 source_name: "Fox News"
 source_url: "https://www.foxnews.com/outkick-culture/christopher-nolans-odyssey-uncorks-trojan-horse-popcorn-bucket-stores-goods-crotch"
 source_domain: "foxnews.com"
-briefing: true
 draft: false
 ---
 
