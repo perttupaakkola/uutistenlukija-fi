@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-19T08:51:19.502613+00:00",
+  "digest": "31c30bf77a",
+  "packet": {
+    "packet_id": "20260719T085119Z_31c30bf77a",
+    "created_at": "2026-07-19T08:51:19Z",
+    "headline_seed": "Mies ajoi Lahdessa katsastamattomalla autolla vahvassa humalassa",
+    "description_seed": "Hämeen poliisille kertyi 701 tehtävää perjantaiaamusta sunnuntaiaamuun.",
+    "link": "https://www.ess.fi/paikalliset/9630234",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "",
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Mies ajoi Lahdessa katsastamattomalla autolla vahvassa humalassa"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 146,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Aamuposti",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Mies ajoi Lahdessa katsastamattomalla autolla vahvassa humalassa",
+      "description": "Hämeen poliisille kertyi 701 tehtävää perjantaiaamusta sunnuntaiaamuun.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Mies ajoi Lahdessa katsastamattomalla autolla vahvassa humalassa",
+    "description": "Hämeen poliisille kertyi 701 tehtävää perjantaiaamusta sunnuntaiaamuun.",
+    "link": "https://www.ess.fi/paikalliset/9630234",
+    "published": "2026-07-19T11:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "417d3882c8d7b5c95db5453f126be41c",
+    "_url_hash": "864d0d5ee4ed19d2d0e3ff56e9b8708a45324e500906057a84eaa1ad7dc35bc5",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Aamuposti | URL: https://www.aamuposti.fi/uutissuomalainen/9630066]\nIsraelin iskut ovat surmanneet kymmenkunta ihmistä Gazassa lauantaina, kertoivat paikalliset viranomaiset.\n\nGazan väestönsuojeluviraston mukaan Gazan kaupungissa asuinhuoneistoon osuneessa Israelin iskussa kuoli kolme lasta ja heidän vanhempansa.\n\n– Ainoa eloonjäänyt perheenjäsen on lapsi, joka ei ollut sisällä talossa, kun isku tapahtui, väestönsuojeluviraston edustaja Mahmud Bassal sanoi uutistoimisto AFP:lle.\n\nLäheisestä sairaalasta vahvistettiin, että perheenjäsenten ruumiit oli tuotu sairaalaan.\n\nIsraelin asevoimien tiedottajan mukaan Israel teki lauantaina Gazan kaupungissa iskun, jonka kohteena oli äärijärjestö Hamasin terroristi. Tiedottaja sanoi, että asevoimat arvioi edelleen iskun tuloksia.\n\nGazalaisviranomaisten mukaan useita muita ihmisiä sai surmansa muissa Israelin iskuissa Gazan kaupungissa ja muualla Gazan kaistalla. Israelin asevoimat ei tuoreeltaan kommentoinut näitä muita iskuja.\n\nVäkivalta on jatkunut Gazassa viime lokakuussa solmitusta aselevosta huolimatta. Alueen terveysministeriön mukaan ainakin 1 140 palestiinalaista on saanut surmansa aselevon alkamisen jälkeen.\n\nIsraelin armeija on kertonut menettäneensä Gazassa samana ajanjaksona viisi sotilasta sekä yhden siviilin.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-19T08:53:33.009963+00:00",
+  "failure": "Paketissa ei ole lainkaan valittua lähdetekstiä, ja käytettävissä olevat tiedot eivät riitä vähintään 250 sanan uutisartikkeliin ilman täyteainesta tai keksittyjä yksityiskohtia.",
+  "raw_response": "{\"packet_id\":\"20260719T085119Z_31c30bf77a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lainkaan valittua lähdetekstiä, ja käytettävissä olevat tiedot eivät riitä vähintään 250 sanan uutisartikkeliin ilman täyteainesta tai keksittyjä yksityiskohtia.\"}"
+}
