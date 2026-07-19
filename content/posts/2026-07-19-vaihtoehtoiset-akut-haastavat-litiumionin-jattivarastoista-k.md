@@ -47,7 +47,6 @@ keywords:
 source_name: "The Guardian World"
 source_url: "https://www.theguardian.com/environment/2026/jul/19/molten-salt-human-sweat-weird-batteries-store-renewable-energy"
 source_domain: "theguardian.com"
-briefing: true
 draft: false
 ---
 
