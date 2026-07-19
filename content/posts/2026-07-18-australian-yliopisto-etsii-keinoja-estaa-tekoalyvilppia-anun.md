@@ -2,7 +2,7 @@
 title: "Australian yliopisto etsii keinoja estää tekoälyvilppiä – ANU:n valmistelua arvostellaan hätiköidyksi"
 date: 2026-07-18T21:18:09.027645+00:00
 categories:
-  - Kotimaa
+  - Ulkomaat
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
@@ -22,23 +22,15 @@ journalist_note: |
   Kesken katkennutta Batemanin sitaattia ei ole käytetty, ja hänen näkemyksensä on rajattu kokonaisina välittyneisiin tietoihin.
 content_type: "article"
 editorial_reviewed: true
-image: "/images/articles/australian-yliopisto-etsii-keinoja-estaa-tekoalyvilppia-anun-hero.jpg"
-image_thumb: "/images/articles/australian-yliopisto-etsii-keinoja-estaa-tekoalyvilppia-anun-thumb.jpg"
-image_placeholder: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAASABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBQH/xAAjEAACAgEDAwUAAAAAAAAAAAABAgARAwQhMQUSFCJBcYGR/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwEE/8QAGBEBAQEBAQAAAAAAAAAAAAAAAAECExL/2gAMAwEAAhEDEQA/AJ+HtxKmwFXVa2Msz9RG7YWoNX1M7S9SfPqmXI99rmthxfEX1pLnLQ8ce5AiV6rV4VzEF62HAuJelTnHAoK2QL+JJMadp9C/kRHrPGXnJGVgDQEREIr/2Q=="
+image: "/images/categories/ulkomaat.jpg"
+image_thumb: "/images/categories/ulkomaat.jpg"
 image_alt: "Kuvituskuva uutiseen: Australian yliopisto etsii keinoja estää tekoälyvilppiä – ANU:n valmistelua arvostellaan hätiköidyksi (australia, yliopistot)"
-image_credit: "Photo by Markku Soini on Pexels"
-image_source_url: "https://www.pexels.com/photo/kemi-church-in-winter-sunset-37254048/"
-image_source: "pexels"
-image_source_type: "stock"
-image_decision_reason: "weather metadata matches visual intent"
-image_concept: "finland landscape city"
-image_query: "finland landscape city"
-image_candidate_id: "37254048"
-image_candidate_url: "https://www.pexels.com/photo/kemi-church-in-winter-sunset-37254048/"
-image_visual_judge_score: 47
+image_source: "category_fallback"
+image_source_type: "category_fallback"
+image_decision_reason: "generated fallback unavailable, unsafe, or failed after stock rejection"
+image_visual_judge_score: 0
 image_prompt_version: "image-flow-v2-2026-07-03"
-image_accepted_reasons_json: '["weather metadata matches visual intent"]'
-image_category_fallback: false
+image_category_fallback: true
 reading_time: 2
 tags:
   - australia

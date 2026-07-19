@@ -2,7 +2,7 @@
 title: "RedMagic Astra 2 saapuu 185 hertsin OLED-näytöllä – hinnat alkavat 699 eurosta"
 date: 2026-07-18T17:58:30.205078+00:00
 categories:
-  - Talous
+  - Teknologia
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
@@ -22,8 +22,8 @@ journalist_note: |
   Laitteen nimi vaihtelee markkina-alueittain: Kiinassa se julkaistiin Gaming Tablet 5 Pro -nimellä ja kansainvälisessä myynnissä nimi on Nubia Astra 2.
 content_type: "article"
 editorial_reviewed: true
-image: "/images/categories/talous.jpg"
-image_thumb: "/images/categories/talous.jpg"
+image: "/images/categories/teknologia.jpg"
+image_thumb: "/images/categories/teknologia.jpg"
 image_alt: "Kuvituskuva uutiseen: RedMagic Astra 2 saapuu 185 hertsin OLED-näytöllä – hinnat alkavat 699 eurosta (redmagic, nubia)"
 image_source: "category_fallback"
 image_source_type: "category_fallback"
