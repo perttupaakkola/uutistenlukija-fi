@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-19T06:20:59+00:00",
+  "generated_at": "2026-07-19T08:01:06+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,18 +12,18 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 39,
-    "rejected": 9,
+    "published": 35,
+    "rejected": 10,
     "publish_rate": 0,
-    "last_published_ts": "2026-07-19T06:18:23.038960+00:00"
+    "last_published_ts": "2026-07-19T07:58:26.793439+00:00"
   },
   "reject_reasons": {
-    "missing: image": 9,
+    "missing: image": 10,
+    "readability few paragraphs (1)": 5,
+    "readability wall of text": 5,
     "unsourced numbers": 5,
+    "only 1 paragraphs (min 3)": 5,
     "source_confidence_denial_conte": 5,
-    "readability few paragraphs (1)": 4,
-    "readability wall of text": 4,
-    "only 1 paragraphs (min 3)": 4,
     "language borderline Finnish si": 4,
     "length under target (273 words": 1
   },
@@ -40,11 +40,11 @@
   },
   "trending": [
     [
-      "jälkeen",
-      32
+      "aikana",
+      30
     ],
     [
-      "aikana",
+      "jälkeen",
       29
     ],
     [
@@ -52,12 +52,12 @@
       25
     ],
     [
-      "samalla",
+      "kaksi",
       24
     ],
     [
-      "kaksi",
-      24
+      "samalla",
+      22
     ]
   ]
 }
