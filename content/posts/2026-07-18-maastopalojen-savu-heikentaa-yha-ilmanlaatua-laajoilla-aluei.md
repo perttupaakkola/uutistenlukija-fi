@@ -2,7 +2,7 @@
 title: "Maastopalojen savu heikentää yhä ilmanlaatua laajoilla alueilla Yhdysvalloissa"
 date: 2026-07-18T14:38:08.499447+00:00
 categories:
-  - Kotimaa
+  - Ulkomaat
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
