@@ -8,7 +8,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from publisher import _apply_keyword_category_override, _article_to_markdown
+from publisher import _apply_keyword_category_override, _article_to_markdown, effective_category
 
 
 class PublisherCategoryTests(unittest.TestCase):
@@ -41,6 +41,20 @@ class PublisherCategoryTests(unittest.TestCase):
             "2026-07-18T08:51:19+00:00",
         )
         self.assertIn("\ncategories:\n  - Kotimaa\n", markdown)
+
+    def test_retained_iphone_article_reaches_frontmatter_as_teknologia(self) -> None:
+        fixture_path = (
+            Path(__file__).resolve().parent
+            / "queues/staged/published/20260719T170121Z_452931fc1d.json"
+        )
+        retained = json.loads(fixture_path.read_text(encoding="utf-8"))
+        corrected = {**retained["article"], "category": "Teknologia"}
+
+        self.assertEqual(retained["article"]["category"], "Talous")
+        self.assertEqual(effective_category(corrected), "Teknologia")
+        markdown = _article_to_markdown(corrected, "2026-07-19T17:01:21+00:00")
+        self.assertIn("\ncategories:\n  - Teknologia\n", markdown)
+        self.assertNotIn("\ncategories:\n  - Talous\n", markdown)
 
     def test_retained_immigration_packet_stays_ulkomaat(self) -> None:
         fixture_path = (

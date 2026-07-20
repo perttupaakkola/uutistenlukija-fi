@@ -25,11 +25,33 @@ _SCIENCE_ANGLE_TERMS = re.compile(
     re.IGNORECASE,
 )
 
+_STRONG_FINANCIAL_SIGNAL = re.compile(
+    r"\b(?:(?:tulos(?:ta)?|tulok\w*)|liikevaih\w*|käyttökate\w*|"
+    r"konkurss\w*|pörss\w*|osak\w*)\b",
+    re.IGNORECASE,
+)
+
 _BUSINESS_SIGNAL_GROUPS = (
     re.compile(r"\b(?:yrity\w*|yhtiö\w*|ravintol\w*)\b", re.IGNORECASE),
     re.compile(r"\b(?:yrittäj\w*|ravintoloitsij\w*)\b", re.IGNORECASE),
-    re.compile(r"\b(?:(?:tulos(?:ta)?|tulok\w*)|liikevaih\w*|käyttökate\w*|konkurss\w*|markkin\w*|pörss\w*|osak\w*)\b", re.IGNORECASE),
+    re.compile(
+        r"\b(?:(?:tulos(?:ta)?|tulok\w*)|liikevaih\w*|käyttökate\w*|"
+        r"konkurss\w*|markkin\w*|pörss\w*|osak\w*)\b",
+        re.IGNORECASE,
+    ),
     re.compile(r"\b(?:kannattav\w*|investoin\w*|myynt\w*|marginaal\w*|analyytik\w*)\b", re.IGNORECASE),
+)
+
+_SPECIALIST_CATEGORIES = frozenset({"Teknologia", "Kulttuuri", "Tiede", "Urheilu"})
+
+# A broad ``markkin*`` mention is common in product and release coverage. It
+# remains a useful Talous signal for generic categories, but cannot be the
+# second signal that steals an explicit specialist category on its own.
+_SPECIALIST_BUSINESS_SIGNAL_GROUPS = (
+    _BUSINESS_SIGNAL_GROUPS[0],
+    _BUSINESS_SIGNAL_GROUPS[1],
+    _STRONG_FINANCIAL_SIGNAL,
+    _BUSINESS_SIGNAL_GROUPS[3],
 )
 
 _MACROECONOMY_SIGNAL_GROUPS = (
@@ -76,10 +98,17 @@ def protect_business_category(category: str, text: str) -> str:
 
     Two distinct signal groups are required so a lone mention of a company,
     entrepreneur, result, or market cannot override an otherwise valid topic.
-    This is intentionally a category guard, not a quality-gate bypass.
+    Generic market vocabulary is excluded as a confirming signal for explicit
+    specialist categories, while strong financial and macroeconomic stories
+    can still override them. This is a category guard, not a quality-gate bypass.
     """
     haystack = str(text or "").casefold()
-    company_groups = sum(bool(pattern.search(haystack)) for pattern in _BUSINESS_SIGNAL_GROUPS)
+    company_patterns = (
+        _SPECIALIST_BUSINESS_SIGNAL_GROUPS
+        if str(category or "").strip() in _SPECIALIST_CATEGORIES
+        else _BUSINESS_SIGNAL_GROUPS
+    )
+    company_groups = sum(bool(pattern.search(haystack)) for pattern in company_patterns)
     macroeconomy_groups = sum(bool(pattern.search(haystack)) for pattern in _MACROECONOMY_SIGNAL_GROUPS)
     return "Talous" if company_groups >= 2 or macroeconomy_groups >= 2 else category
 

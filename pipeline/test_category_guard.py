@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-import unittest
 import json
+import unittest
 from pathlib import Path
 
 try:
-    from .category_guard import contains_token, protect_business_category
+    from .category_guard import category_text, contains_token, protect_business_category
 except ImportError:  # pragma: no cover
-    from category_guard import contains_token, protect_business_category
+    from category_guard import category_text, contains_token, protect_business_category
 
 
 class CategoryGuardTests(unittest.TestCase):
@@ -33,6 +33,36 @@ class CategoryGuardTests(unittest.TestCase):
             protect_business_category("Teknologia", "Yhtiö julkaisi uuden puhelimen."),
             "Teknologia",
         )
+
+    def test_retained_iphone_packet_keeps_explicit_technology_category(self) -> None:
+        fixture_path = (
+            Path(__file__).resolve().parent
+            / "queues/staged/published/20260719T170121Z_452931fc1d.json"
+        )
+        retained = json.loads(fixture_path.read_text(encoding="utf-8"))
+        text = " ".join(
+            [
+                category_text(retained["original_article"]),
+                category_text(retained["packet"]),
+                category_text(retained["payload"]),
+            ]
+        )
+
+        self.assertEqual(retained["packet"]["category"], "Teknologia")
+        self.assertEqual(retained["payload"]["category"], "Teknologia")
+        self.assertEqual(retained["article"]["category"], "Talous")
+        self.assertEqual(protect_business_category("Teknologia", text), "Teknologia")
+
+    def test_generic_company_market_terms_do_not_steal_specialist_categories(self) -> None:
+        samples = {
+            "Kulttuuri": "Yhtiö tuo uuden dokumenttielokuvan markkinoille syksyllä.",
+            "Tiede": "Yhtiö tuo tutkimusryhmän uuden mittalaitteen markkinoille.",
+            "Urheilu": "Yhtiö tuo uuden juoksukengän markkinoille ennen kisakautta.",
+        }
+
+        for category, text in samples.items():
+            with self.subTest(category=category):
+                self.assertEqual(protect_business_category(category, text), category)
 
     def test_tulossa_does_not_count_as_a_business_result_signal(self) -> None:
         self.assertEqual(

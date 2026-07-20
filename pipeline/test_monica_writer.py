@@ -236,6 +236,22 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(retained["payload"]["category"], "Kotimaa")
         self.assertEqual(article["category"], "Talous")
 
+    def test_merge_article_preserves_retained_iphone_technology_category(self):
+        fixture_path = (
+            Path(__file__).resolve().parent
+            / "queues/staged/published/20260719T170121Z_452931fc1d.json"
+        )
+        retained = json.loads(fixture_path.read_text(encoding="utf-8"))
+
+        article = _merge_article(
+            retained["original_article"], retained["packet"], retained["payload"]
+        )
+
+        self.assertEqual(retained["packet"]["category"], "Teknologia")
+        self.assertEqual(retained["payload"]["category"], "Teknologia")
+        self.assertEqual(retained["article"]["category"], "Talous")
+        self.assertEqual(article["category"], "Teknologia")
+
     def test_merge_article_preserves_retained_immigration_packet_category(self):
         fixture_path = (
             Path(__file__).resolve().parent
