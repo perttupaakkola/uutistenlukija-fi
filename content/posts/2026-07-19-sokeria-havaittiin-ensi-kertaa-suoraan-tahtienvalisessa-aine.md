@@ -45,7 +45,6 @@ keywords:
 source_name: "Tekniikan Maailma"
 source_url: "https://tekniikanmaailma.fi/ulkoavaruudessa-havaittiin-sokeria-ensimmaista-kertaa/"
 source_domain: "tekniikanmaailma.fi"
-briefing: true
 draft: false
 ---
 
