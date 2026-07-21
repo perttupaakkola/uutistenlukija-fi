@@ -49,6 +49,8 @@ draft: false
 
 Erja Yli-Kahila on johtanut hyvinkääläistä romumetallinkeräysyritys Teräskolmiota vuodesta 2021, vaikka hän ei nuorena uskonut jatkavansa perheyritystä. Miesvaltaiselle alalle siirtyminen jännitti, mutta Yli-Kahilan mukaan ala otti hänet lopulta vastaan paremmin kuin hän oli pelännyt.
 
+Miesvaltaiselle autoalalle lähtenyt [autofiksausyrittäjä Susanna Liukkonen](<https://uutistenlukija.fi/posts/2026-06-19-susanna-liukkonen-rakensi-autofiksausbisneksen-nollabudjetil/>) on puolestaan kertonut kohdanneensa sukupuoleensa liittyvää epäilyä.
+
 ## Perheyrityksen juuret ulottuvat vuoteen 1960
 
 Teräskolmion perusti Yli-Kahilan isoisä Eeli Yli-Kahila vuonna 1960 muutettuaan Hyvinkäälle Pohjanmaalta. Myöhemmin yritykseen liittyi hänen poikansa Erkki, Erja Yli-Kahilan isä. Myös Yli-Kahilan äiti tuli mukaan hoitamaan toimistotöitä ja hallintoa.
