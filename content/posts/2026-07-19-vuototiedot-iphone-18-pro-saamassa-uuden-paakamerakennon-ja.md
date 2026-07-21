@@ -1,5 +1,5 @@
 ---
-title: "Vuototiedot: iPhone 18 Pro saamassa uuden pääkamerakennon ja vaihtuvan aukon"
+title: "Raportti: iPhone 18 Pro Maxin pääkamera saisi uuden kennon ja vaihtuvan aukon"
 date: 2026-07-19T17:08:27.775841+00:00
 categories:
   - Teknologia
@@ -8,18 +8,18 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "iPhone 18 Pro -mallien pääkameraan odotetaan uutta Sony IMX905 -kennoa ja vaihtuvaa aukkoa. Muu kamerakokoonpano näyttäisi säilyvän ennallaan."
-summary: "iPhone 18 Pro -mallien pääkameraan odotetaan uutta Sony IMX905 -kennoa ja vaihtuvaa aukkoa. Muu kamerakokoonpano näyttäisi säilyvän ennallaan."
+description: "Vuotaneeksi kuvattu iPhone 18 Pro Maxin diagnostiikkaloki viittaa Sony IMX905 -pääkameraan ja vaihtuvaan aukkoon. Apple ei ole vahvistanut tietoja."
+summary: "Vuotaneeksi kuvattu iPhone 18 Pro Maxin diagnostiikkaloki viittaa Sony IMX905 -pääkameraan ja vaihtuvaan aukkoon. Apple ei ole vahvistanut tietoja."
 summary_bullets:
-  - "Pääkameran uudeksi kennoksi odotetaan Sony IMX905:tä."
-  - "Vaihtuva aukko voisi auttaa eri valaistusolosuhteissa ja mahdollistaa syväterävyyden optisen säädön."
-  - "Tele- ja ultralaajakulmakameroiden sekä etukameran ja LiDAR-skannerin odotetaan säilyvän ennallaan."
+  - "Notebookcheckin raportoima diagnostiikkaloki koskee iPhone 18 Pro Maxia."
+  - "Lokissa pääkameraan yhdistetään Sony IMX905 -kenno ja vaihtuva aukko."
+  - "Apple ei ole kommentoinut vuotoa eikä vahvistanut laitteen ominaisuuksia."
 key_points:
-  - "Pääkameran uudeksi kennoksi odotetaan Sony IMX905:tä."
-  - "Vaihtuva aukko voisi auttaa eri valaistusolosuhteissa ja mahdollistaa syväterävyyden optisen säädön."
-  - "Tele- ja ultralaajakulmakameroiden sekä etukameran ja LiDAR-skannerin odotetaan säilyvän ennallaan."
+  - "Notebookcheckin raportoima diagnostiikkaloki koskee iPhone 18 Pro Maxia."
+  - "Lokissa pääkameraan yhdistetään Sony IMX905 -kenno ja vaihtuva aukko."
+  - "Apple ei ole kommentoinut vuotoa eikä vahvistanut laitteen ominaisuuksia."
 journalist_note: |
-  Artikkeli käsittelee vahvistamattomia vuototietoja. Apple ei ole vahvistanut laitteiden ominaisuuksia, julkistuspäivää tai markkina-aluekohtaisia SIM-ratkaisuja.
+  Artikkeli käsittelee Notebookcheckin raportoimaa vuotaneeksi kuvattua diagnostiikkalokia. Apple ei ole kommentoinut vuotoa eikä vahvistanut iPhone 18 Pro Maxin ominaisuuksia. Lokin tietoja ei pidä yleistää muihin iPhone 18 -malleihin.
 content_type: "article"
 editorial_reviewed: true
 image: "/images/articles/vuototiedot-iphone-18-pro-saamassa-uuden-paakamerakennon-ja-hero.jpg"
@@ -41,13 +41,13 @@ image_category_fallback: false
 reading_time: 2
 tags:
   - apple
-  - iphone 18 pro
+  - iphone 18 pro max
   - älypuhelimet
   - kamerat
   - vuototiedot
 keywords:
   - "apple"
-  - "iphone 18 pro"
+  - "iphone 18 pro max"
   - "älypuhelimet"
   - "kamerat"
   - "vuototiedot"
@@ -57,20 +57,16 @@ source_domain: "mobiili.fi"
 draft: false
 ---
 
-Applen tulevien iPhone 18 Pro -mallien pääkameraan odotetaan vuototietojen perusteella uutta Sony IMX905 -kennoa ja vaihtuvaa aukkoa. Tiedot perustuvat Applen intialaisen valmistuskumppanin Tata Electronicsin järjestelmiin kohdistuneen tietomurron yhteydessä paljastuneiksi kuvattuihin materiaaleihin, diagnostiikkalokeihin ja komponenttitietoihin. Apple ei ole vahvistanut laitteiden ominaisuuksia, joten yksityiskohdat ovat toistaiseksi huhuja.
+Mobiili.fi uutisoi [Notebookcheckin raportista](https://www.notebookcheck.net/Exclusive-Diagnostics-log-confirms-iPhone-18-Pro-Max-camera-specs-ahead-of-launch.1344805.0.html), jonka mukaan Tata Electronicsilta vuodettujen tiedostojen joukossa ollut diagnostiikkaloki kuvaa iPhone 18 Pro Maxin kamerakokoonpanoa. Lokissa mallin pääkameraan yhdistetään Sony IMX905 -kenno ja tuki vaihtuvalle aukolle. Apple ei ole kommentoinut vuotoa eikä vahvistanut laitteen ominaisuuksia, joten tiedot ovat toistaiseksi vahvistamattomia.
 
 ## Uusi kenno toimisi vaihtuvan aukon kanssa
 
-Vuotaneiden tietojen mukaan IMX905 korvaisi iPhone 18 Pro -mallien nykyisen pääkamerakennon. Kennon koko säilyisi kuitenkin ennallaan, ja yksittäisen pikselin koko olisi edelleen 1,22 mikronia. Uusi kenno olisi suunniteltu toimimaan yhdessä vaihtuvan aukon kanssa, joten uudistus painottuisi kennon ja optiikan yhteistoimintaan koon kasvattamisen sijasta.
+Raportin mukaan lokissa Sony IMX905 on merkitty iPhone 18 Pro Maxin pääkameran uudeksi kennoksi. Se korvaisi iPhone 17 Pro Maxissa käytetyn kennon. Kennon koko säilyisi ennallaan, ja yksittäisen pikselin koko olisi edelleen 1,22 mikrometriä. Lokiin kirjattu kalibrointilohko viittaa siihen, että kenno tukisi vaihtuvaa aukkoa.
 
-Vaihtuvan aukon tarkoituksena olisi auttaa kameraa sopeutumaan erilaisiin valaistusolosuhteisiin. Aukkoa säätämällä kamera voisi myös vaikuttaa optisesti kuvan syväterävyyteen, mikä voisi parantaa esimerkiksi muotokuvia. Kyse olisi siten sekä valaistukseen mukautumiseen että syväterävyyden hallintaan vaikuttavasta muutoksesta, jos vuotaneet tiedot pitävät paikkansa. Tiedot tukevat aiempia huhuja pääkameran uudistamisesta uudella kennolla usean vuoden jälkeen.
+Vaihtuva aukko voisi auttaa kameraa sopeutumaan erilaisiin valaistusolosuhteisiin. Aukkoa säätämällä kamera voisi myös vaikuttaa optisesti kuvan syväterävyyteen, mikä voisi auttaa esimerkiksi muotokuvauksessa. Mahdolliset hyödyt riippuisivat kuitenkin toteutuksesta, jota raportissa kuvattu loki ei avaa tarkemmin.
 
-## Muut kamerat näyttävät säilyvän ennallaan
+## Muut Pro Maxin kamerat näyttävät säilyvän ennallaan
 
-Muuhun kamerakokoonpanoon ei diagnostiikkalokin perusteella olisi tulossa vastaavia muutoksia. Telekamerassa säilyisi Sony IMX973 -kenno ja ultralaajakulmakamerassa Sony IMX972 -kenno. Myös LiDAR-skannerin ja etukameran kerrotaan pysyvän ennallaan. Kennon vaihtumista ei näille osille ole vuotaneissa tiedoissa kuvattu, joten tämän sukupolven näkyvin kamerauudistus keskittyisi pääkameraan.
+Saman lokin perusteella iPhone 18 Pro Maxin muuhun kamerakokoonpanoon ei olisi tulossa vastaavia muutoksia. Telekamerassa säilyisi Sony IMX973 -kenno ja ultralaajakulmakamerassa Sony IMX972 -kenno. Myös LiDAR-skannerin ja etukameran kerrotaan pysyvän ennallaan.
 
-Seuraavien iPhone-puhelinten julkistukseen arvioidaan olevan alle kaksi kuukautta. Applen odotetaan esittelevän uutuudet tavanomaisen aikataulunsa mukaisesti syyskuussa, ja todennäköisimpänä julkistuspäivänä on pidetty tiistaita 8. syyskuuta. Ajankohta tai laitteiden lopulliset tekniset tiedot eivät kuitenkaan ole yhtiön vahvistamia.
-
-## Myös näyttöön, suorituskykyyn ja akkuihin odotetaan muutoksia
-
-Kameran lisäksi iPhone 18 Pro -malleihin on yhdistetty nykyistä pienempi Dynamic Island sekä uusi ja tehokkaampi A20 Pro -järjestelmäpiiri. Myös akkukapasiteettien odotetaan kasvavan edeltäjistä. Puhelimista kerrotaan olevan tulossa markkina-alueittain erilaisia versioita, ja ilman fyysistä SIM-korttipaikkaa toimitettaviin eSIM-malleihin mahtuisi suurempi akku. iPhone 17 Pro -mallit tulivat Euroopassa vielä fyysisellä SIM-korttipaikalla, mutta helmikuisen huhun mukaan Apple saattaa siirtyä iPhone 18 Pro -sukupolvessa myös Euroopassa pelkkiin eSIM-versioihin.
+Raportti koskee nimenomaan iPhone 18 Pro Maxiksi tunnistettua diagnostiikkalokia. Sen perusteella ei voi päätellä, että sama kamerakokoonpano kuuluisi myös iPhone 18 Prohon tai muihin iPhone 18 -malleihin. Apple ei ole vahvistanut lokin aitoutta tai tulevan puhelimen ominaisuuksia.
