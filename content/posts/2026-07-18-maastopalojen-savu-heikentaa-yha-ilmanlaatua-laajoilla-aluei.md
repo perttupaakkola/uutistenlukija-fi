@@ -60,6 +60,8 @@ draft: false
 
 Kanadan Ontariossa ja Yhdysvaltain Minnesotassa hallitsemattomina palavista maastopaloista leviävä savu heikentää edelleen ilmanlaatua laajoilla alueilla Yhdysvalloissa. Varoitusten odotetaan pysyvän voimassa lauantaina etenkin Keskilännessä ja Suurten järvien ympäristössä. Maan itäosissa sade voi tuoda tilapäistä helpotusta, mutta ukkosiin liittyy samalla äkkitulvien ja voimakkaiden tuulten vaara.
 
+Tilanteen kehitystä taustoittaa [16. heinäkuuta julkaistu katsaus Kanadan maastopalojen savun vaikutuksista Yhdysvaltain ilmanlaatuun](https://uutistenlukija.fi/posts/2026-07-16-kanadan-maastopalojen-savu-heikentaa-ilmanlaatua-laajalti-yh/).
+
 <h2>Koillis-Minnesotassa ilmanlaatu vaarallisella tasolla</h2>
 
 Minnesotan viranomaiset ovat jatkaneet ilmanlaatuvaroitusta viikonlopulle suuressa osassa osavaltiota. Savu on erityisen sakeaa Minnesotan koillisosassa, missä ilmanlaatu saavutti vaarallisen tason ja olosuhteet olivat turvattomat kaikille. Michiganin ja Wisconsinin viranomaiset varoittivat myös asukkaita ilmanlaatuongelmista. Koko Michigan oli perjantaina varoituksen piirissä, ja viranomaisten mukaan savuiset olot saattoivat jatkua lauantaille. Keskilännen ja Suurten järvien alueilla vaarallisen ilmanlaadun arvioitiin jatkuvan paikoin viikonlopun aikana.
