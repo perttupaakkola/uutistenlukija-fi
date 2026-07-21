@@ -2,7 +2,7 @@
 title: "Vuototiedot: iPhone 18 Pro saamassa uuden pääkamerakennon ja vaihtuvan aukon"
 date: 2026-07-19T17:08:27.775841+00:00
 categories:
-  - Talous
+  - Teknologia
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
@@ -22,15 +22,22 @@ journalist_note: |
   Artikkeli käsittelee vahvistamattomia vuototietoja. Apple ei ole vahvistanut laitteiden ominaisuuksia, julkistuspäivää tai markkina-aluekohtaisia SIM-ratkaisuja.
 content_type: "article"
 editorial_reviewed: true
-image: "/images/categories/talous.jpg"
-image_thumb: "/images/categories/talous.jpg"
-image_alt: "Kuvituskuva uutiseen: Vuototiedot: iPhone 18 Pro saamassa uuden pääkamerakennon ja vaihtuvan aukon (apple, iphone 18 pro)"
-image_source: "category_fallback"
-image_source_type: "category_fallback"
-image_decision_reason: "generated fallback unavailable, unsafe, or failed after stock rejection"
-image_visual_judge_score: 0
-image_prompt_version: "image-flow-v2-2026-07-03"
-image_category_fallback: true
+image: "/images/articles/vuototiedot-iphone-18-pro-saamassa-uuden-paakamerakennon-ja-hero.jpg"
+image_thumb: "/images/articles/vuototiedot-iphone-18-pro-saamassa-uuden-paakamerakennon-ja-thumb.jpg"
+image_alt: "Kuvituskuva: neljän iPhonen takakamerat"
+image_caption: "Eri iPhone-mallien takakamerat. Kuva ei esitä iPhone 18 Pro -mallia."
+image_credit: "IPHONE MAX / Wikimedia Commons · CC BY-SA 4.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:IPhone_camera.jpeg"
+image_source: "wikimedia_commons"
+image_source_type: "stock"
+image_decision_reason: "accepted_stock_subject_match"
+image_concept: "iPhone camera hardware"
+image_query: "smartphone camera"
+image_candidate_id: "commons:142070756"
+image_candidate_url: "https://commons.wikimedia.org/wiki/File:IPhone_camera.jpeg"
+image_prompt_version: "manual-editorial-review-ope-454"
+image_accepted_reasons_json: '["iPhone camera hardware subject match", "generic product context without iPhone 18 claim", "license and attribution verified"]'
+image_category_fallback: false
 reading_time: 2
 tags:
   - apple

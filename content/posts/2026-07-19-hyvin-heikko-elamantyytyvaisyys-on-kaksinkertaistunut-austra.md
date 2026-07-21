@@ -2,7 +2,7 @@
 title: "Hyvin heikko elämäntyytyväisyys on kaksinkertaistunut Australiassa"
 date: 2026-07-19T15:38:07.557881+00:00
 categories:
-  - Talous
+  - Ulkomaat
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
@@ -24,20 +24,19 @@ content_type: "article"
 editorial_reviewed: true
 image: "/images/articles/hyvin-heikko-elamantyytyvaisyys-on-kaksinkertaistunut-austra-hero.jpg"
 image_thumb: "/images/articles/hyvin-heikko-elamantyytyvaisyys-on-kaksinkertaistunut-austra-thumb.jpg"
-image_placeholder: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUCBAb/xAAkEAABAwMDBAMAAAAAAAAAAAABAgMRAAQSBSExBhNRYRRx8f/EABYBAQEBAAAAAAAAAAAAAAAAAAIAAf/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8AgOoX7i47TzLb7Tp2bI4Hj9p5k2hlIaxCYhATwPW3is30/ZB9q6fzKXUApQYnGRzTDTGvjafbMNEA3a1ZrIkjnj3tSoxQ1S2un7xS0rREbZTtRT523bUuYI+jRWasf//Z"
-image_alt: "Kuvituskuva uutiseen: Hyvin heikko elämäntyytyväisyys on kaksinkertaistunut Australiassa (australia, elämäntyytyväisyys)"
-image_credit: "Photo by Leeloo The First on Pexels"
-image_source_url: "https://www.pexels.com/photo/smartphone-displaying-a-stock-market-chart-lying-on-documents-next-to-a-laptop-on-the-desk-7887850/"
-image_source: "pexels"
+image_alt: "Kuvituskuva: yhteisöpuutarha Australiassa"
+image_caption: "Merri Cornerin yhteisöpuutarha Australiassa. Kuva ei liity ABS:n tutkimukseen."
+image_credit: "Gavin Anderson / Wikimedia Commons · CC BY-SA 2.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:2011_MerriCorner_community_garden_Australia_5355964141.jpg"
+image_source: "wikimedia_commons"
 image_source_type: "stock"
-image_decision_reason: "metadata matches on"
-image_concept: "business finance economy"
-image_query: "business finance economy"
-image_candidate_id: "7887850"
-image_candidate_url: "https://www.pexels.com/photo/smartphone-displaying-a-stock-market-chart-lying-on-documents-next-to-a-laptop-on-the-desk-7887850/"
-image_visual_judge_score: 49
-image_prompt_version: "image-flow-v2-2026-07-03"
-image_accepted_reasons_json: '["metadata matches on"]'
+image_decision_reason: "accepted_stock_subject_match"
+image_concept: "Australia community wellbeing"
+image_query: "Australian community people"
+image_candidate_id: "commons:14525495"
+image_candidate_url: "https://commons.wikimedia.org/wiki/File:2011_MerriCorner_community_garden_Australia_5355964141.jpg"
+image_prompt_version: "manual-editorial-review-ope-454"
+image_accepted_reasons_json: '["verified Australian community setting", "people-free subject-safe composition", "community and wellbeing context match"]'
 image_category_fallback: false
 reading_time: 2
 tags:

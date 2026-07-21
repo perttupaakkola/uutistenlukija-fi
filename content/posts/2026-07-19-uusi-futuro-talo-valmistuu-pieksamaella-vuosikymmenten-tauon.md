@@ -2,7 +2,7 @@
 title: "Uusi Futuro-talo valmistuu Pieksämäellä vuosikymmenten tauon jälkeen"
 date: 2026-07-19T13:28:43.143968+00:00
 categories:
-  - Talous
+  - Kulttuuri
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
@@ -22,15 +22,22 @@ journalist_note: |
   Futurojen kokonaismäärä 80–100 on lähteessä esitetty arvio, joten luku on ilmaistu artikkelissa arviona.
 content_type: "article"
 editorial_reviewed: true
-image: "/images/categories/talous.jpg"
-image_thumb: "/images/categories/talous.jpg"
-image_alt: "Kuvituskuva uutiseen: Uusi Futuro-talo valmistuu Pieksämäellä vuosikymmenten tauon jälkeen (futuro, matti suuronen)"
-image_source: "category_fallback"
-image_source_type: "category_fallback"
-image_decision_reason: "generated fallback unavailable, unsafe, or failed after stock rejection"
-image_visual_judge_score: 0
-image_prompt_version: "image-flow-v2-2026-07-03"
-image_category_fallback: true
+image: "/images/articles/uusi-futuro-talo-valmistuu-pieksamaella-vuosikymmenten-tauon-hero.jpg"
+image_thumb: "/images/articles/uusi-futuro-talo-valmistuu-pieksamaella-vuosikymmenten-tauon-thumb.jpg"
+image_alt: "Matti Suurosen suunnittelema keltainen Futuro-talo metsämaisemassa"
+image_caption: "Matti Suurosen suunnittelema Futuro-talo Suomessa. Kuva ei esitä Pieksämäellä valmistuvaa uutta yksilöä."
+image_credit: "TTKK / Wikimedia Commons · CC BY-SA 3.0"
+image_source_url: "https://commons.wikimedia.org/wiki/File:Matti_Suuronen_Futoro_House.JPG"
+image_source: "wikimedia_commons"
+image_source_type: "stock"
+image_decision_reason: "accepted_stock_subject_match"
+image_concept: "Matti Suuronen Futuro architecture"
+image_query: "Futuro House Matti Suuronen"
+image_candidate_id: "commons:30730770"
+image_candidate_url: "https://commons.wikimedia.org/wiki/File:Matti_Suuronen_Futoro_House.JPG"
+image_prompt_version: "manual-editorial-review-ope-454"
+image_accepted_reasons_json: '["exact Matti Suuronen Futuro subject", "verified Finland context", "license and attribution verified"]'
+image_category_fallback: false
 reading_time: 2
 tags:
   - futuro
