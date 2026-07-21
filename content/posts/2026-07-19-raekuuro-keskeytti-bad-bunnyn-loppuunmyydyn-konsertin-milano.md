@@ -2,7 +2,7 @@
 title: "Raekuuro keskeytti Bad Bunnyn loppuunmyydyn konsertin Milanossa"
 date: 2026-07-19T19:28:38.348614+00:00
 categories:
-  - Kotimaa
+  - Kulttuuri
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
@@ -22,9 +22,9 @@ journalist_note: |
   Artikkeli perustuu Live Nationin ilmoitukseen sekä tapahtumapaikalta julkaistuja videoita koskeviin tietoihin. Mahdollisista henkilövahingoista ei ollut packetissa vahvistettua tietoa, joten niitä ei käsitellä.
 content_type: "article"
 editorial_reviewed: true
-image: "/images/categories/kotimaa.jpg"
-image_thumb: "/images/categories/kotimaa.jpg"
-image_alt: "Kuvituskuva uutiseen: Raekuuro keskeytti Bad Bunnyn loppuunmyydyn konsertin Milanossa (bad bunny, milano)"
+image: "/images/categories/kulttuuri.jpg"
+image_thumb: "/images/categories/kulttuuri.jpg"
+image_alt: "Kuvituskuva musiikista ja kulttuurista"
 image_source: "category_fallback"
 image_source_type: "category_fallback"
 image_decision_reason: "generated fallback unavailable, unsafe, or failed after stock rejection"
