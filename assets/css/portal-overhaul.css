@@ -33,8 +33,9 @@ img { max-width: 100%; height: auto; display: block; }
 .container { max-width: var(--max-width) !important; width: 100%; margin-inline: auto; padding-inline: 36px; }
 main.container { padding-top: 0; padding-bottom: 48px; }
 .visually-hidden { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; white-space: nowrap !important; }
-.skip-to-content { position: absolute; left: -999px; top: 0; z-index: 1000; background: #fff; padding: 10px; }
-.skip-to-content:focus { left: 10px; }
+.skip-to-content { position: absolute; left: -999px; top: 0; z-index: 1000; background: #fff; color: #071329; padding: 10px; }
+:root[data-theme="dark"] .skip-to-content { color: #071329; }
+.skip-to-content:focus { left: 10px; outline: 3px solid var(--portal-red); outline-offset: 2px; }
 
 /* Header */
 .site-header {
