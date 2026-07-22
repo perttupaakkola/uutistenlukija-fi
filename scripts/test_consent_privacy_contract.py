@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""OPE-351 exact-copy, canonical-route, and dormant-ad safety contracts."""
+"""Consent copy, persistence, revocation, and dormant-ad safety contracts."""
 from __future__ import annotations
 
 import os
@@ -122,6 +122,37 @@ class ConsentPrivacySourceContractTests(unittest.TestCase):
         self.assertNotIn("min-height: 32px !important", portal_static)
         self.assertNotIn("min-height: 38px !important", portal_static)
 
+    def test_persistent_settings_and_ga_revocation_contract(self) -> None:
+        footer = (ROOT / "layouts/partials/footer.html").read_text(encoding="utf-8")
+        banner = (ROOT / "layouts/partials/cookie-banner.html").read_text(encoding="utf-8")
+        critical = (ROOT / "layouts/partials/critical-css.html").read_text(encoding="utf-8")
+        style = (ROOT / "themes/uutistenlukija/static/css/style.css").read_text(encoding="utf-8")
+
+        for token in (
+            'id="cookie-settings"',
+            'type="button"',
+            'aria-haspopup="dialog"',
+            'aria-controls="cookie-modal"',
+            ">Evästeasetukset</button>",
+        ):
+            self.assertIn(token, footer)
+
+        for token in (
+            "window['ga-disable-' + GA_ID] = !!disabled",
+            "clearFirstPartyGACookies",
+            "cookiePaths",
+            "cookieDomains",
+            "document.cookie",
+            "window.location.reload()",
+            "bindConsentUI",
+            "cookie-settings",
+        ):
+            self.assertIn(token, banner)
+        self.assertNotIn("return; // already consented", banner)
+        self.assertIn("/^_ga(?:_|$)/", banner)
+        self.assertIn(".site-footer-consent-button", critical)
+        self.assertIn(".site-footer-consent-button", style)
+
 
 @unittest.skipUnless(PUBLIC_DIR, "set OPE351_PUBLIC_DIR to test rendered Hugo output")
 class ConsentPrivacyRenderedContractTests(unittest.TestCase):
@@ -166,6 +197,14 @@ class ConsentPrivacyRenderedContractTests(unittest.TestCase):
         self.assertRegex(
             homepage,
             r'href=(?:"/tietosuojaseloste/"|/tietosuojaseloste/) class=cb-link>Tietosuoja- ja evästetiedot</a>',
+        )
+
+    def test_rendered_footer_exposes_one_persistent_settings_control(self) -> None:
+        homepage = self.read_public("index.html")
+        self.assertEqual(homepage.count('id=cookie-settings'), 1)
+        self.assertRegex(
+            homepage,
+            r'<button[^>]+id=cookie-settings[^>]+aria-controls=cookie-modal[^>]*>Evästeasetukset</button>',
         )
 
 

@@ -22,7 +22,7 @@
       <a href="/tietosuojaseloste/" class="cb-link">Tietosuoja- ja evästetiedot</a>
     </p>
     <div class="cb-actions">
-      <button id="cb-customize" class="cb-btn cb-btn--ghost" type="button">Asetukset</button>
+      <button id="cb-customize" class="cb-btn cb-btn--ghost" type="button" aria-haspopup="dialog" aria-controls="cookie-modal" aria-expanded="false">Asetukset</button>
       <button id="cb-reject"    class="cb-btn cb-btn--secondary" type="button">Hylkää kaikki</button>
       <button id="cb-accept"    class="cb-btn cb-btn--primary" type="button">Hyväksy kaikki</button>
     </div>
@@ -81,12 +81,21 @@
   /* ── Helpers ─────────────────────────────────────────────── */
   function loadScript(src) {
     var s = document.createElement('script');
-    s.async = true; s.src = src;
+    s.async = true;
+    s.src = src;
+    s.setAttribute('data-ul-ga-loader', 'true');
     document.head.appendChild(s);
+  }
+
+  function setGADisabled(disabled) {
+    if (!GA_ID) return;
+    window['ga-disable-' + GA_ID] = !!disabled;
   }
 
   function loadGA() {
     if (!GA_ID) return;
+    setGADisabled(false);
+    if (document.querySelector('script[data-ul-ga-loader]')) return;
     loadScript('https://www.googletagmanager.com/gtag/js?id=' + GA_ID);
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
@@ -95,16 +104,80 @@
     gtag('config', GA_ID, { anonymize_ip: true });
   }
 
+  function unique(values) {
+    return values.filter(function(value, index) { return value && values.indexOf(value) === index; });
+  }
+
+  function cookiePaths() {
+    var paths = ['/'];
+    var segments = (window.location.pathname || '/').split('/').filter(Boolean);
+    var current = '';
+    segments.forEach(function(segment) {
+      current += '/' + segment;
+      paths.push(current, current + '/');
+    });
+    return unique(paths);
+  }
+
+  function cookieDomains() {
+    var hostname = (window.location.hostname || '').replace(/^\./, '');
+    if (!hostname || hostname === 'localhost' || /^\d+(?:\.\d+){3}$/.test(hostname)) return [];
+    var labels = hostname.split('.');
+    var domains = [];
+    for (var i = 0; i < labels.length - 1; i += 1) {
+      var domain = labels.slice(i).join('.');
+      domains.push(domain, '.' + domain);
+    }
+    return unique(domains);
+  }
+
+  function expireCookie(name, path, domain) {
+    var cookie = name + '=; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00 GMT; Path=' + path + '; SameSite=Lax';
+    if (domain) cookie += '; Domain=' + domain;
+    if (window.location.protocol === 'https:') cookie += '; Secure';
+    document.cookie = cookie;
+  }
+
+  function clearFirstPartyGACookies() {
+    var names = unique(document.cookie.split(';').map(function(cookie) {
+      return cookie.trim().split('=')[0];
+    }).filter(function(name) {
+      return /^_ga(?:_|$)/.test(name);
+    }));
+    var paths = cookiePaths();
+    var domains = cookieDomains();
+    names.forEach(function(name) {
+      paths.forEach(function(path) {
+        expireCookie(name, path, '');
+        domains.forEach(function(domain) { expireCookie(name, path, domain); });
+      });
+    });
+  }
+
+  function revokeAnalytics() {
+    setGADisabled(true);
+    clearFirstPartyGACookies();
+  }
+
   function applyConsent(prefs) {
     if (prefs.analytics) loadGA();
+    else revokeAnalytics();
     window.__UL_AD_CONSENT__ = prefs;
     if (window.UutistenlukijaAds) window.UutistenlukijaAds.applyConsent(prefs);
   }
 
   function saveConsent(analytics, advertising) {
     var prefs = { v: CONSENT_REVISION, necessary: true, analytics: !!analytics, advertising: !!advertising };
-    try { localStorage.setItem(KEY, JSON.stringify(prefs)); } catch(e) {}
-    return prefs;
+    var serialized = JSON.stringify(prefs);
+    var persisted = false;
+    try {
+      localStorage.setItem(KEY, serialized);
+      persisted = localStorage.getItem(KEY) === serialized;
+    } catch(e) {}
+    if (!persisted && !prefs.analytics) {
+      try { localStorage.removeItem(KEY); } catch(ignore) {}
+    }
+    return { prefs: prefs, persisted: persisted };
   }
 
   function loadConsent() {
@@ -146,11 +219,14 @@
   }
 
   var _trapHandler = null;
+  var _returnFocus = null;
 
-  function openModal() {
+  function openModal(trigger) {
     var modal   = document.getElementById('cookie-modal');
     var overlay = document.getElementById('cookie-overlay');
     var saved   = loadConsent() || {};
+    _returnFocus = trigger || document.activeElement;
+    if (_returnFocus && _returnFocus.setAttribute) _returnFocus.setAttribute('aria-expanded', 'true');
     document.getElementById('cb-toggle-analytics').checked   = !!saved.analytics;
     document.getElementById('cb-toggle-advertising').checked = !!saved.advertising;
     show(overlay); show(modal);
@@ -163,75 +239,93 @@
     modal.addEventListener('keydown', _trapHandler);
   }
 
-  function closeModal() {
+  function closeModal(restoreFocus) {
     var modal = document.getElementById('cookie-modal');
     if (_trapHandler) { modal.removeEventListener('keydown', _trapHandler); _trapHandler = null; }
     hide(modal);
     hide(document.getElementById('cookie-overlay'));
+    var returnFocus = _returnFocus;
+    _returnFocus = null;
+    if (returnFocus && returnFocus.setAttribute) returnFocus.setAttribute('aria-expanded', 'false');
+    if (restoreFocus && returnFocus && document.documentElement.contains(returnFocus)) returnFocus.focus();
   }
 
   /* ── Init ────────────────────────────────────────────────── */
   var existing = loadConsent();
-  if (existing) {
-    applyConsent(existing);
-    return; // already consented — nothing else to do
-  }
+  if (existing) applyConsent(existing);
+  else revokeAnalytics();
 
-  /* First visit: show banner after DOM ready */
-  function initBanner() {
+  function bindConsentUI() {
     var banner  = document.getElementById('cookie-banner');
-    var overlay = document.getElementById('cookie-overlay');
+    var settings = document.getElementById('cookie-settings');
 
-    show(banner);
+    if (!existing) show(banner);
 
     document.getElementById('cb-accept').addEventListener('click', function() {
-      var prefs = saveConsent(true, true);
+      var saved = saveConsent(true, true);
       hide(banner);
-      applyConsent(prefs);
+      if (saved.persisted) applyConsent(saved.prefs);
+      else applyConsent({ v: CONSENT_REVISION, necessary: true, analytics: false, advertising: false });
     });
 
     document.getElementById('cb-reject').addEventListener('click', function() {
-      saveConsent(false, false);
+      var saved = saveConsent(false, false);
       hide(banner);
+      applyConsent(saved.prefs);
     });
 
     document.getElementById('cb-customize').addEventListener('click', function() {
       hide(banner);
-      openModal();
+      openModal(this);
+    });
+
+    settings.addEventListener('click', function() {
+      hide(banner);
+      openModal(this);
     });
 
     document.getElementById('cm-save').addEventListener('click', function() {
+      var previous    = loadConsent();
       var analytics   = document.getElementById('cb-toggle-analytics').checked;
       var advertising = document.getElementById('cb-toggle-advertising').checked;
-      var prefs = saveConsent(analytics, advertising);
-      closeModal();
-      applyConsent(prefs);
+      var saved = saveConsent(analytics, advertising);
+      closeModal(false);
+      applyConsent(saved.persisted ? saved.prefs : { v: CONSENT_REVISION, necessary: true, analytics: false, advertising: false });
+      if (previous && previous.analytics && !analytics && saved.persisted) {
+        window.location.reload();
+        return;
+      }
+      settings.focus();
     });
 
+    function dismissModal() {
+      var shouldShowBanner = !loadConsent();
+      if (shouldShowBanner) show(banner);
+      closeModal(true);
+    }
+
     document.getElementById('cm-cancel').addEventListener('click', function() {
-      closeModal();
-      show(banner);
+      dismissModal();
     });
 
     /* Close modal on overlay click */
     document.getElementById('cookie-overlay').addEventListener('click', function() {
-      closeModal();
-      show(banner);
+      dismissModal();
     });
 
     /* Trap Escape key */
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         var modal = document.getElementById('cookie-modal');
-        if (!modal.hidden) { closeModal(); show(banner); }
+        if (!modal.hidden) dismissModal();
       }
     });
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initBanner);
+    document.addEventListener('DOMContentLoaded', bindConsentUI);
   } else {
-    initBanner();
+    bindConsentUI();
   }
 })();
 </script>
