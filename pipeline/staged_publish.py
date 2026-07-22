@@ -1475,9 +1475,12 @@ def cmd_monica_worker(args: argparse.Namespace) -> int:
     return 0
 
 
-def load_outbox(max_items: int) -> list[tuple[Path, dict]]:
+def load_outbox(max_items: int | None = None) -> list[tuple[Path, dict]]:
     out = []
-    for p in sorted((STAGED_ROOT / "outbox").glob("*.json"), key=lambda p: p.stat().st_mtime)[:max_items]:
+    paths = sorted((STAGED_ROOT / "outbox").glob("*.json"), key=lambda p: p.stat().st_mtime)
+    if max_items is not None:
+        paths = paths[:max_items]
+    for p in paths:
         try:
             data = json.loads(p.read_text(encoding="utf-8", errors="replace"))
             if isinstance(data.get("article"), dict):
@@ -1487,13 +1490,19 @@ def load_outbox(max_items: int) -> list[tuple[Path, dict]]:
     return out
 
 
-def apply_publish_preflight(items: list[tuple[Path, dict]]) -> list[tuple[Path, dict]]:
+def apply_publish_preflight(
+    items: list[tuple[Path, dict]], max_items: int | None = None
+) -> list[tuple[Path, dict]]:
     """Keep only records safe for existing publish gates; leave held files untouched."""
     eligible: list[tuple[Path, dict]] = []
+    if max_items is not None and max_items <= 0:
+        return eligible
     for path, data in items:
         result = evaluate_publish_preflight(data)
         if result.action == "publish":
             eligible.append((path, data))
+            if max_items is not None and len(eligible) >= max_items:
+                break
             continue
         packet_value = data.get("packet")
         packet = packet_value if isinstance(packet_value, dict) else {}
@@ -1811,12 +1820,12 @@ def run_git_deploy(created_count: int) -> int:
 
 
 def cmd_publish(args: argparse.Namespace) -> int:
-    items = load_outbox(args.max_articles)
+    items = load_outbox()
     if not items:
         log("publish: no outbox articles")
         return 0
     selected_count = len(items)
-    items = apply_publish_preflight(items)
+    items = apply_publish_preflight(items, max_items=args.max_articles)
     if not items:
         log(f"publish: all selected outbox records held by preflight selected={selected_count}")
         return 0

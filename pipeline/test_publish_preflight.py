@@ -2,6 +2,10 @@
 from __future__ import annotations
 
 from copy import deepcopy
+import json
+import os
+from pathlib import Path
+import tempfile
 import unittest
 from types import SimpleNamespace
 from unittest.mock import patch
@@ -445,6 +449,84 @@ class PublishPreflightTests(unittest.TestCase):
         self.assertEqual(status, 0)
         quality_gate.assert_not_called()
         publish_articles.assert_not_called()
+
+    def test_cmd_publish_scans_past_six_held_records_to_eligible_seventh(self) -> None:
+        args = SimpleNamespace(max_articles=1, dry_run=True, dedup_window=72, git_push=False)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            staged_root = Path(tmp)
+            outbox = staged_root / "outbox"
+            outbox.mkdir()
+            held_paths: list[Path] = []
+            original_bytes: dict[Path, bytes] = {}
+            base_mtime = 1_700_000_000
+            for index in range(6):
+                held = _record(
+                    packet_category="Kotimaa",
+                    payload_category="Ulkomaat",
+                    article_category="Ulkomaat",
+                )
+                held["packet"]["packet_id"] = f"held-{index + 1}"
+                path = outbox / f"held-{index + 1}.json"
+                path.write_text(json.dumps(held), encoding="utf-8")
+                os.utime(path, (base_mtime + index, base_mtime + index))
+                held_paths.append(path)
+                original_bytes[path] = path.read_bytes()
+
+            eligible = _record()
+            eligible["packet"]["packet_id"] = "eligible-7"
+            eligible["article"]["title"] = "Eligible seventh"
+            eligible_path = outbox / "eligible-7.json"
+            eligible_path.write_text(json.dumps(eligible), encoding="utf-8")
+            os.utime(eligible_path, (base_mtime + 6, base_mtime + 6))
+            original_bytes[eligible_path] = eligible_path.read_bytes()
+
+            later_eligible = _record()
+            later_eligible["packet"]["packet_id"] = "eligible-8"
+            later_eligible["article"]["title"] = "Eligible eighth"
+            later_eligible_path = outbox / "eligible-8.json"
+            later_eligible_path.write_text(json.dumps(later_eligible), encoding="utf-8")
+            os.utime(later_eligible_path, (base_mtime + 7, base_mtime + 7))
+            original_bytes[later_eligible_path] = later_eligible_path.read_bytes()
+
+            with patch.object(staged_publish, "STAGED_ROOT", staged_root), \
+                 patch.object(
+                     staged_publish,
+                     "run_quality_gate",
+                     side_effect=lambda articles: SimpleNamespace(passed=articles, rejected=[]),
+                 ) as quality_gate, \
+                 patch.object(staged_publish, "filter_new_articles", side_effect=lambda articles: articles), \
+                 patch.object(
+                     staged_publish,
+                     "check_published_duplicates",
+                     side_effect=lambda articles, window_hours: articles,
+                 ), \
+                 patch.object(staged_publish, "dedup_within_batch", side_effect=lambda articles: articles), \
+                 patch.object(
+                     staged_publish,
+                     "enrich_images_for_articles",
+                     return_value={
+                         "total": 1,
+                         "images": 0,
+                         "unsplash": 0,
+                         "pexels": 0,
+                         "generated": 0,
+                         "category_fallback": 0,
+                         "missing": 1,
+                     },
+                 ):
+                status = staged_publish.cmd_publish(args)
+
+            self.assertEqual(status, 0)
+            quality_gate.assert_called_once_with([eligible["article"]])
+            self.assertEqual(
+                [path.name for path in held_paths],
+                [f"held-{index}.json" for index in range(1, 7)],
+            )
+            self.assertEqual(
+                {path: path.read_bytes() for path in original_bytes},
+                original_bytes,
+            )
 
 
 if __name__ == "__main__":
