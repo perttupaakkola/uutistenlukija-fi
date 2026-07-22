@@ -110,20 +110,36 @@ def _url_values(value: Any) -> Iterable[str]:
 
 
 def _public_source_urls(article: dict[str, Any]) -> tuple[str, ...]:
-    """Return URLs exposed by publisher-backed public fields.
+    """Return URLs exposed by the publisher's exact article projection.
 
     ``journalist_note`` is deliberately excluded: it is not the article's
     source-attribution surface and cannot make a hidden selected source public.
     """
+    description = article.get("description", "")
+    if isinstance(description, str) and len(description) > 155:
+        description = description[:152].rstrip() + "…"
+
+    raw_summary_bullets = article.get("summary_bullets", [])
+    summary_bullets = (
+        [str(point).strip() for point in raw_summary_bullets if str(point).strip()][:4]
+        if isinstance(raw_summary_bullets, list)
+        else []
+    )
+    raw_key_points = article.get("key_points", [])
+    key_points = (
+        [str(point).strip() for point in raw_key_points if str(point).strip()][:3]
+        if isinstance(raw_key_points, list)
+        else []
+    )
+
     values: list[Any] = [
-        article.get("source_url"),
-        article.get("link"),
+        article.get("source_url") or article.get("link"),
         article.get("title"),
-        article.get("description"),
+        description,
         article.get("summary"),
         article.get("content"),
-        article.get("summary_bullets"),
-        article.get("key_points"),
+        summary_bullets,
+        key_points,
     ]
     return tuple(sorted({url for value in values for url in _url_values(value)}))
 

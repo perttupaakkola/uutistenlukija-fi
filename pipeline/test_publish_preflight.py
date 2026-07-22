@@ -144,6 +144,110 @@ class PublishPreflightTests(unittest.TestCase):
         self.assertEqual(result.action, "reject")
         self.assertEqual(result.hidden_source_urls, ("https://example.test/story",))
 
+    def test_shadowed_link_does_not_expose_selected_source(self) -> None:
+        record = _record(
+            source_blocks=[
+                {
+                    "source": "Public",
+                    "source_url": "https://public.test/story",
+                    "text": _words(110, "public"),
+                },
+                {
+                    "source": "Shadowed",
+                    "source_url": "https://shadowed.test/report",
+                    "text": _words(110, "shadowed"),
+                },
+            ],
+        )
+        record["article"].update(
+            {
+                "source_url": "https://public.test/story",
+                "link": "https://shadowed.test/report",
+            }
+        )
+
+        result = evaluate_publish_preflight(record)
+
+        self.assertEqual(result.action, "reject")
+        self.assertEqual(result.hidden_source_urls, ("https://shadowed.test/report",))
+
+    def test_truncated_description_does_not_expose_selected_source(self) -> None:
+        record = _record(
+            source_blocks=[
+                {
+                    "source": "Public",
+                    "source_url": "https://public.test/story",
+                    "text": _words(110, "public"),
+                },
+                {
+                    "source": "Truncated",
+                    "source_url": "https://truncated.test/report",
+                    "text": _words(110, "truncated"),
+                },
+            ],
+        )
+        record["article"].update(
+            {
+                "source_url": "https://public.test/story",
+                "description": "x" * 156 + " https://truncated.test/report",
+            }
+        )
+
+        result = evaluate_publish_preflight(record)
+
+        self.assertEqual(result.action, "reject")
+        self.assertEqual(result.hidden_source_urls, ("https://truncated.test/report",))
+
+    def test_fifth_summary_bullet_and_fourth_key_point_do_not_expose_sources(self) -> None:
+        record = _record(
+            source_blocks=[
+                {
+                    "source": "Public",
+                    "source_url": "https://public.test/story",
+                    "text": _words(80, "public"),
+                },
+                {
+                    "source": "Fifth bullet",
+                    "source_url": "https://fifth-bullet.test/report",
+                    "text": _words(80, "bullet"),
+                },
+                {
+                    "source": "Fourth key point",
+                    "source_url": "https://fourth-key.test/report",
+                    "text": _words(80, "key"),
+                },
+            ],
+        )
+        record["article"].update(
+            {
+                "source_url": "https://public.test/story",
+                "summary_bullets": [
+                    "First",
+                    "Second",
+                    "Third",
+                    "Fourth",
+                    "Fifth https://fifth-bullet.test/report",
+                ],
+                "key_points": [
+                    "First",
+                    "Second",
+                    "Third",
+                    "Fourth https://fourth-key.test/report",
+                ],
+            }
+        )
+
+        result = evaluate_publish_preflight(record)
+
+        self.assertEqual(result.action, "reject")
+        self.assertEqual(
+            result.hidden_source_urls,
+            (
+                "https://fifth-bullet.test/report",
+                "https://fourth-key.test/report",
+            ),
+        )
+
     def test_selected_source_block_without_url_rejects(self) -> None:
         record = _record(
             source_blocks=[
