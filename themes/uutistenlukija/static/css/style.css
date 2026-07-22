@@ -1129,7 +1129,7 @@ img { max-width: 100%; height: auto; }
 }
 .cm-always-on {
   font-size: 0.8rem;
-  color: #4caf50;
+  color: #1f7a4d;
   font-weight: 600;
 }
 .cm-category-desc {
@@ -1188,6 +1188,7 @@ img { max-width: 100%; height: auto; }
 }
 [data-theme="dark"] .cm-category { border-color: #333; }
 [data-theme="dark"] .cm-category-desc { color: #aaa; }
+[data-theme="dark"] .cm-always-on { color: #4caf50; }
 [data-theme="dark"] .cm-box .cb-btn--ghost {
   color: #aaa;
   border-color: #555;

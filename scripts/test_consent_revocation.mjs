@@ -23,6 +23,20 @@ function browserLaunchOptions() {
   return { executablePath: '/usr/bin/google-chrome', headless: true };
 }
 
+function relativeLuminance(rgb) {
+  const linear = rgb.map((channel) => {
+    const value = channel / 255;
+    return value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4;
+  });
+  return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
+}
+
+function contrastRatio(foreground, background) {
+  const lighter = Math.max(relativeLuminance(foreground), relativeLuminance(background));
+  const darker = Math.min(relativeLuminance(foreground), relativeLuminance(background));
+  return (lighter + 0.05) / (darker + 0.05);
+}
+
 function renderConsentPage({ scriptFailure = false } = {}) {
   let footer = readFileSync(resolve(ROOT, 'layouts/partials/footer.html'), 'utf8')
     .replace('{{ now.Year }}', '2026');
@@ -36,8 +50,13 @@ function renderConsentPage({ scriptFailure = false } = {}) {
   assert.equal(consent.includes('{{'), false, 'test fixture must resolve Hugo expressions');
   if (scriptFailure) consent = consent.replace(/<script>[\s\S]*?<\/script>/, '');
 
+  const criticalCss = readFileSync(resolve(ROOT, 'layouts/partials/critical-css.html'), 'utf8');
+  const fullCss = readFileSync(resolve(ROOT, 'themes/uutistenlukija/static/css/style.css'), 'utf8');
+  const portalCss = readFileSync(resolve(ROOT, 'static/css/portal-overhaul.css'), 'utf8');
+
   return `<!doctype html>
-    <html lang="fi"><head><meta charset="utf-8"><title>Consent test</title></head>
+    <html lang="fi"><head><meta charset="utf-8"><title>Consent test</title>
+    ${criticalCss}<style>${fullCss}\n${portalCss}</style></head>
     <body><main id="main-content"><h1>Luettava sisältö</h1></main>${footer}${consent}</body></html>`;
 }
 
@@ -84,6 +103,50 @@ async function preparePage(browser) {
   return { context, page, analyticsRequests };
 }
 
+test('OPE-452 consent status label keeps rendered AA contrast in both themes', async () => {
+  await withServer(async (origin) => {
+    const browser = await chromium.launch(browserLaunchOptions());
+    try {
+      for (const viewport of [{ width: 390, height: 844 }, { width: 1366, height: 900 }]) {
+        for (const theme of ['light', 'dark']) {
+          const context = await browser.newContext({ viewport });
+          const page = await context.newPage();
+          await page.goto(`${origin}/`);
+          await page.evaluate((selectedTheme) => {
+            document.documentElement.setAttribute('data-theme', selectedTheme);
+          }, theme);
+          await page.locator('#cb-customize').click();
+
+          const colors = await page.locator('.cm-always-on').evaluate((label) => {
+            const parseRgb = (value) => {
+              const match = value.match(/rgba?\(([^)]+)\)/);
+              if (!match) throw new Error(`Unsupported rendered color: ${value}`);
+              return match[1].split(',').slice(0, 3).map((part) => Number.parseFloat(part.trim()));
+            };
+            let surface = label;
+            while (surface && getComputedStyle(surface).backgroundColor === 'rgba(0, 0, 0, 0)') {
+              surface = surface.parentElement;
+            }
+            if (!surface) throw new Error('status label must render on an opaque ancestor');
+            return {
+              foreground: parseRgb(getComputedStyle(label).color),
+              background: parseRgb(getComputedStyle(surface).backgroundColor),
+            };
+          });
+
+          assert(
+            contrastRatio(colors.foreground, colors.background) >= 4.5,
+            `${viewport.width}px ${theme} status-label contrast must be at least 4.5:1`,
+          );
+          await context.close();
+        }
+      }
+    } finally {
+      await browser.close();
+    }
+  });
+});
+
 test('OPE-453 consent remains fail-closed and revocation survives reload/navigation', async () => {
   await withServer(async (origin, documentRequests) => {
     const browser = await chromium.launch(browserLaunchOptions());
@@ -117,7 +180,7 @@ test('OPE-453 consent remains fail-closed and revocation survives reload/navigat
         const { context, page, analyticsRequests } = await preparePage(browser);
         await page.goto(`${origin}/`);
         await page.locator('#cb-customize').click();
-        await page.locator('#cb-toggle-analytics').check();
+        await page.locator('label[aria-label="Analytiikkaevästeet"]').click();
         await page.locator('#cm-save').click();
         await page.waitForTimeout(50);
         assert(analyticsRequests.some((url) => url.includes('googletagmanager.com/gtag/js')));
@@ -135,7 +198,7 @@ test('OPE-453 consent remains fail-closed and revocation survives reload/navigat
         await settings.focus();
         await page.keyboard.press('Enter');
         assert.equal(await page.locator('#cb-toggle-analytics').isChecked(), true);
-        await page.locator('#cb-toggle-analytics').uncheck();
+        await page.locator('label[aria-label="Analytiikkaevästeet"]').click();
         await Promise.all([
           page.waitForNavigation({ waitUntil: 'domcontentloaded' }),
           page.locator('#cm-save').click(),
