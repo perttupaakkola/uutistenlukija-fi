@@ -55,6 +55,8 @@ class ExactSourceDedupTest(unittest.TestCase):
                 "_url_hash": "same-source-hash",
                 "source_url": "https://example.test/same-story",
                 "monica_packet_id": "duplicate-packet",
+                "category": "Kotimaa",
+                "content": "artikkelisana " * 220,
             },
             {
                 "title": "Distinct source and facts",
@@ -62,6 +64,8 @@ class ExactSourceDedupTest(unittest.TestCase):
                 "_url_hash": "distinct-source-hash",
                 "source_url": "https://different.test/new-facts",
                 "monica_packet_id": "distinct-packet",
+                "category": "Kotimaa",
+                "content": "artikkelisana " * 220,
             },
         ]
 
@@ -79,7 +83,21 @@ class ExactSourceDedupTest(unittest.TestCase):
         items = []
         for article in self.articles():
             path = outbox / f'{article["monica_packet_id"]}.json'
-            data = {"packet": {"packet_id": article["monica_packet_id"]}, "article": article}
+            data = {
+                "packet": {
+                    "packet_id": article["monica_packet_id"],
+                    "category": "Kotimaa",
+                    "clean_source_blocks": [
+                        {
+                            "source": "Testi",
+                            "source_url": article["source_url"],
+                            "text": "lähdesana " * 220,
+                        }
+                    ],
+                },
+                "payload": {"category": "Kotimaa"},
+                "article": article,
+            }
             path.write_text(json.dumps(data), encoding="utf-8")
             items.append((path, data))
 

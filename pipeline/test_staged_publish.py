@@ -620,6 +620,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
             "title": "Kuvallinen julkaisu",
             "content": "sana " * 260,
             "category": "Kotimaa",
+            "source_url": "https://example.test/kuvallinen-julkaisu",
             "image": "/images/articles/pub.jpg",
             "image_category_fallback": False,
             "image_source": "pexels",
@@ -629,7 +630,17 @@ class StagedPublishMetricsTests(unittest.TestCase):
         }
         data = {
             "article": article,
-            "packet": {"packet_id": "pkt-image", "category": "Kotimaa"},
+            "packet": {
+                "packet_id": "pkt-image",
+                "category": "Kotimaa",
+                "clean_source_blocks": [
+                    {
+                        "source": "Testi",
+                        "source_url": "https://example.test/kuvallinen-julkaisu",
+                        "text": "lähdesana " * 260,
+                    }
+                ],
+            },
             "payload": {"category": "Kotimaa"},
         }
         path = self._write("outbox", "pkt-image", data, age_hours=1)

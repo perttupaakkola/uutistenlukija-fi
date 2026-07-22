@@ -61,6 +61,7 @@ from monica_writer import (  # noqa: E402
     _run_monica,
 )
 from quality_gate import score_article, run_gate as run_quality_gate  # noqa: E402
+from publish_preflight import evaluate_publish_preflight  # noqa: E402
 
 
 def log(msg: str) -> None:
@@ -1486,6 +1487,29 @@ def load_outbox(max_items: int) -> list[tuple[Path, dict]]:
     return out
 
 
+def apply_publish_preflight(items: list[tuple[Path, dict]]) -> list[tuple[Path, dict]]:
+    """Keep only records safe for existing publish gates; leave held files untouched."""
+    eligible: list[tuple[Path, dict]] = []
+    for path, data in items:
+        result = evaluate_publish_preflight(data)
+        if result.action == "publish":
+            eligible.append((path, data))
+            continue
+        packet_value = data.get("packet")
+        packet = packet_value if isinstance(packet_value, dict) else {}
+        packet_id = packet.get("packet_id") or data.get("digest") or path.name
+        ratio = "inf" if result.article_source_ratio == float("inf") else f"{result.article_source_ratio:.3f}"
+        log(
+            "publish: preflight hold "
+            f"packet={packet_id} action={result.action} reasons={','.join(result.reasons)} "
+            f"categories={'/'.join(category or '-' for category in result.categories)} "
+            f"source_words={result.distinct_source_words} article_words={result.article_words} "
+            f"ratio={ratio} sensitive={str(result.sensitive).lower()} "
+            f"monica_review={str(result.requires_monica_review).lower()}"
+        )
+    return eligible
+
+
 def article_needs_image(article: dict) -> bool:
     return not article.get("image") or bool(article.get("image_category_fallback"))
 
@@ -1790,6 +1814,11 @@ def cmd_publish(args: argparse.Namespace) -> int:
     items = load_outbox(args.max_articles)
     if not items:
         log("publish: no outbox articles")
+        return 0
+    selected_count = len(items)
+    items = apply_publish_preflight(items)
+    if not items:
+        log(f"publish: all selected outbox records held by preflight selected={selected_count}")
         return 0
     articles = [data["article"] for _, data in items]
     gate = run_quality_gate(articles)
