@@ -92,6 +92,8 @@ def _download_generated_image(image_url: str, output_stem: str) -> str:
                 raise ValueError("generated image response is not a supported image")
 
             total = len(prefix)
+            if total > IMAGE_DOWNLOAD_MAX_BYTES:
+                raise ValueError(f"generated image exceeds {IMAGE_DOWNLOAD_MAX_BYTES} bytes")
             with open(part_path, "wb") as handle:
                 handle.write(prefix)
                 while True:

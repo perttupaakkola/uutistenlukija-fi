@@ -70,6 +70,28 @@ class GeneratedImageDownloadTests(unittest.TestCase):
 
             self.assertEqual(list(Path(temp_dir).iterdir()), [])
 
+    def test_download_enforces_stream_cap_without_content_length(self) -> None:
+        payload = b"\x89PNG\r\n\x1a\n" + b"oversized"
+        response = _Response(payload, "image/png")
+        response.headers.pop("Content-Length")
+        with tempfile.TemporaryDirectory() as temp_dir, patch.object(
+            image_gen,
+            "IMAGE_DOWNLOAD_MAX_BYTES",
+            12,
+        ), patch.object(
+            image_gen.urllib.request,
+            "urlopen",
+            return_value=response,
+        ):
+            output_stem = str(Path(temp_dir) / "story")
+            with self.assertRaisesRegex(ValueError, "exceeds 12 bytes"):
+                image_gen._download_generated_image(
+                    "https://tempfile.example/generated",
+                    output_stem,
+                )
+
+            self.assertEqual(list(Path(temp_dir).iterdir()), [])
+
 
 if __name__ == "__main__":
     unittest.main()
