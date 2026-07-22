@@ -70,6 +70,19 @@ CONTRAST_GUARDS = [
     '[data-theme="dark"] .newsletter-signup__title',
 ]
 
+OPE_446_DARK_CONTRAST_GUARDS = [
+    '[data-theme="dark"] .portal-livebar__all',
+    '[data-theme="dark"] .portal-market dd',
+    '[data-theme="dark"] .bc-current',
+    '[data-theme="dark"] .portal-list-feature__body > p',
+    '[data-theme="dark"] .portal-feed-item p',
+    '[data-theme="dark"] .single-article > .category-label--badge',
+]
+
+OPE_446_CRITICAL_BADGE_GUARD = (
+    '[data-theme="dark"] .single-article>.category-label--badge'
+)
+
 MOBILE_CONTAINER_WIDTH_GUARD = (
     ".container, main.container { width: 100% !important; max-width: 100% !important;"
 )
@@ -124,6 +137,10 @@ def main() -> int:
             if selector not in css:
                 failures.append(f"{label} is missing OPE-158 contrast guard for {selector}")
 
+        for selector in OPE_446_DARK_CONTRAST_GUARDS:
+            if selector not in css:
+                failures.append(f"{label} is missing OPE-446 contrast guard for {selector}")
+
         for snippet in LAYOUT_GUARDS:
             if snippet not in css:
                 failures.append(f"{label} is missing OPE-162 layout guard {snippet!r}")
@@ -141,6 +158,12 @@ def main() -> int:
             failures.append(
                 f"{CRITICAL_CSS.relative_to(ROOT)} is missing OPE-158 contrast lock for {selector}"
             )
+
+    if OPE_446_CRITICAL_BADGE_GUARD not in critical_css:
+        failures.append(
+            f"{CRITICAL_CSS.relative_to(ROOT)} is missing the OPE-446 article badge "
+            "contrast lock"
+        )
 
     if CRITICAL_MOBILE_CONTAINER_WIDTH_GUARD not in critical_css:
         failures.append(

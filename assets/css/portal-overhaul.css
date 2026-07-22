@@ -1219,6 +1219,18 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   --portal-soft: #1a1d22;
   --portal-line: #2c333d;
 }
+[data-theme="dark"] .portal-livebar__all,
+[data-theme="dark"] .portal-market dd,
+[data-theme="dark"] .portal-list-feature__body > p,
+[data-theme="dark"] .portal-feed-item p {
+  color: var(--portal-muted);
+}
+[data-theme="dark"] .bc-current {
+  color: var(--portal-text);
+}
+[data-theme="dark"] .single-article > .category-label--badge {
+  color: var(--portal-text) !important;
+}
 [data-theme="dark"] .site-header,
 [data-theme="dark"] .portal-newsletter,
 [data-theme="dark"] .portal-market,
