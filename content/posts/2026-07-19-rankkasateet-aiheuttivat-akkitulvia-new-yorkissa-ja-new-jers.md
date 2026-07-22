@@ -2,7 +2,7 @@
 title: "Rankkasateet aiheuttivat äkkitulvia New Yorkissa ja New Jerseyssä"
 date: 2026-07-19T23:08:37.502302+00:00
 categories:
-  - Kotimaa
+  - Ulkomaat
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"

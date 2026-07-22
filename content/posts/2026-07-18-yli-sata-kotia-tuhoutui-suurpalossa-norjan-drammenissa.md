@@ -2,7 +2,7 @@
 title: "Yli sata kotia tuhoutui suurpalossa Norjan Drammenissa"
 date: 2026-07-18T13:08:26.977866+00:00
 categories:
-  - Tiede
+  - Ulkomaat
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
@@ -22,8 +22,8 @@ journalist_note: |
   Artikkeli on laadittu toimitetun lähdeaineiston varmistettujen tietojen perusteella. Tapahtumapaikan vuoksi luokitus on korjattu ulkomaanuutiseksi.
 content_type: "article"
 editorial_reviewed: true
-image: "/images/categories/kotimaa.jpg"
-image_thumb: "/images/categories/kotimaa.jpg"
+image: "/images/categories/ulkomaat.jpg"
+image_thumb: "/images/categories/ulkomaat.jpg"
 image_alt: "Kuvituskuva uutiseen: Yli sata kotia tuhoutui suurpalossa Norjan Drammenissa (norja, drammen)"
 image_source: "category_fallback"
 image_source_type: "category_fallback"
