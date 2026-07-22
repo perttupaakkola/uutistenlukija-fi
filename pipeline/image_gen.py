@@ -22,6 +22,8 @@ IMAGE_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 PER_ARTICLE_TIMEOUT = 90     # seconds — if Kie.ai hasn't responded, it won't
 MAX_TOTAL_SEC = 300           # seconds — hard cap on entire image_gen call
 CIRCUIT_BREAKER_THRESHOLD = 1  # consecutive failures before giving up the whole batch
+IMAGE_DOWNLOAD_MAX_BYTES = 20 * 1024 * 1024
+IMAGE_DOWNLOAD_USER_AGENT = "uutistenlukija-image-fetch/1.0"
 
 
 def _kie_request(endpoint: str, data: dict) -> dict:
@@ -52,6 +54,61 @@ def _kie_get(endpoint: str, params: dict = None) -> dict:
     )
     with urllib.request.urlopen(req, timeout=30) as resp:
         return json.loads(resp.read())
+
+
+def _image_extension(content_type: str, prefix: bytes) -> Optional[str]:
+    """Return a safe extension for a validated provider image payload."""
+    normalized = (content_type or "").split(";", 1)[0].strip().lower()
+    if normalized and not normalized.startswith("image/"):
+        return None
+    if prefix.startswith(b"\xff\xd8\xff"):
+        return ".jpg"
+    if prefix.startswith(b"\x89PNG\r\n\x1a\n"):
+        return ".png"
+    if len(prefix) >= 12 and prefix.startswith(b"RIFF") and prefix[8:12] == b"WEBP":
+        return ".webp"
+    return None
+
+
+def _download_generated_image(image_url: str, output_stem: str) -> str:
+    """Download a generated image with provider-compatible headers and validation."""
+    req = urllib.request.Request(
+        image_url,
+        headers={
+            "User-Agent": IMAGE_DOWNLOAD_USER_AGENT,
+            "Accept": "image/avif,image/webp,image/png,image/jpeg,image/*;q=0.8,*/*;q=0.1",
+        },
+    )
+    part_path = f"{output_stem}.part"
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            declared_length = resp.headers.get("Content-Length")
+            if declared_length and int(declared_length) > IMAGE_DOWNLOAD_MAX_BYTES:
+                raise ValueError(f"generated image exceeds {IMAGE_DOWNLOAD_MAX_BYTES} bytes")
+
+            prefix = resp.read(64 * 1024)
+            extension = _image_extension(resp.headers.get("Content-Type", ""), prefix)
+            if not extension:
+                raise ValueError("generated image response is not a supported image")
+
+            total = len(prefix)
+            with open(part_path, "wb") as handle:
+                handle.write(prefix)
+                while True:
+                    chunk = resp.read(64 * 1024)
+                    if not chunk:
+                        break
+                    total += len(chunk)
+                    if total > IMAGE_DOWNLOAD_MAX_BYTES:
+                        raise ValueError(f"generated image exceeds {IMAGE_DOWNLOAD_MAX_BYTES} bytes")
+                    handle.write(chunk)
+
+        filepath = f"{output_stem}{extension}"
+        os.replace(part_path, filepath)
+        return filepath
+    finally:
+        if os.path.exists(part_path):
+            os.remove(part_path)
 
 
 def _poll_task_with_timeout(task_id: str, timeout_sec: int = PER_ARTICLE_TIMEOUT) -> Optional[str]:
@@ -156,11 +213,12 @@ def generate_article_image(
     """Generate a header image for an article. Returns (relative path, prompt) or None."""
     os.makedirs(IMAGE_DIR, exist_ok=True)
 
-    filepath = os.path.join(IMAGE_DIR, f"{slug}.jpg")
-    webpath = f"/images/articles/{slug}.jpg"
-
-    if os.path.exists(filepath):
-        return webpath, _build_generation_prompt(title, category, intent)
+    output_stem = os.path.join(IMAGE_DIR, slug)
+    for extension in (".jpg", ".png", ".webp"):
+        filepath = f"{output_stem}{extension}"
+        if os.path.exists(filepath):
+            webpath = f"/images/articles/{slug}{extension}"
+            return webpath, _build_generation_prompt(title, category, intent)
 
     prompt = _build_generation_prompt(title, category, intent)
 
@@ -185,9 +243,10 @@ def generate_article_image(
         if not image_url:
             return None
 
-        urllib.request.urlretrieve(image_url, filepath)
+        filepath = _download_generated_image(image_url, output_stem)
+        webpath = f"/images/articles/{os.path.basename(filepath)}"
         size = os.path.getsize(filepath)
-        print(f"[image_gen] Downloaded {slug}.jpg ({size} bytes)")
+        print(f"[image_gen] Downloaded {os.path.basename(filepath)} ({size} bytes)")
         return webpath, prompt
 
     except Exception as e:
