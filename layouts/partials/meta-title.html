@@ -2,11 +2,15 @@
 {{- $coreTitle := "" -}}
 {{- $fullTitle := "" -}}
 {{- $pageSuffix := "" -}}
-{{- if or .IsHome .IsSection (eq .Kind "taxonomy") (eq .Kind "term") -}}
-  {{- with .Paginator -}}
-    {{- if gt .PageNumber 1 -}}
-      {{- $pageSuffix = printf " – sivu %d" .PageNumber -}}
-    {{- end -}}
+{{- $paginator := false -}}
+{{- if and (eq .Kind "taxonomy") (eq .Data.Plural "tags") -}}
+  {{- $paginator = .Paginate (.Pages.ByTitle) -}}
+{{- else if or .IsHome .IsSection (eq .Kind "taxonomy") (eq .Kind "term") -}}
+  {{- $paginator = .Paginator -}}
+{{- end -}}
+{{- with $paginator -}}
+  {{- if gt .PageNumber 1 -}}
+    {{- $pageSuffix = printf " – sivu %d" .PageNumber -}}
   {{- end -}}
 {{- end -}}
 {{- if .Params.seo_title -}}

@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $paginator := .Paginator }}
+{{ $paginator := .Paginate (.Pages.ByTitle) }}
 <div class="category-hero">
   <h1 class="category-hero__title">Kaikki aihetunnisteet</h1>
   <div class="category-hero__meta">
