@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $paginator := .Paginator }}
 <div class="category-hero">
   <h1 class="category-hero__title">Kaikki aihetunnisteet</h1>
   <div class="category-hero__meta">
@@ -7,12 +8,13 @@
 </div>
 
 <div class="tag-terms-grid">
-  {{ $tags := .Pages.ByTitle }}
-  {{ range $tags }}
+  {{ range $paginator.Pages }}
   <a href="{{ .Permalink }}" class="tag-term-card">
     <span class="tag-term-name">#{{ .Title }}</span>
     <span class="tag-term-count">{{ len .Pages }}</span>
   </a>
   {{ end }}
 </div>
+
+{{ partial "pagination.html" (dict "Paginator" $paginator) }}
 {{ end }}
