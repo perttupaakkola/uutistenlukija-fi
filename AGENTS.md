@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This repository runs `uutistenlukija.fi`, a live Finnish automated newspaper business. Treat it as a production product: publishing reliability, editorial trust, SEO/discovery, analytics, monetization experiments, and agent handoffs all matter.
+This repository runs `uutistenlukija.fi`, a live automated Finnish news site. Owner directive (Perttu, 2026-07-23): the goal is audience and trust growth, not monetization — grow this into an SEO-strong, trustworthy news site that real people read (10,000 GA4 page views and 1,000 active readers in the same rolling 30-day window). Treat it as a production product: publishing reliability, editorial trust, SEO/discovery, reader experience, analytics, and agent handoffs all matter. Do not start monetization/revenue experiments.
 
 This file adapts the DOX idea from `agent0ai/dox`: keep a small hierarchy of `AGENTS.md` files so agents read the local contract before editing and update durable instructions when the project structure or workflow changes.
 
@@ -26,7 +26,7 @@ This file adapts the DOX idea from `agent0ai/dox`: keep a small hierarchy of `AG
 
 ## Work Guidance
 
-- For revenue, advertising, sponsorship, affiliate, newsletter, lead-generation, commercial CTA, or monetization analytics work, read `/workspace/procedures/uutistenlukija-business-quality-loop.md` (host path: `/home/pertt/.openclaw/workspace/procedures/uutistenlukija-business-quality-loop.md`) before changing the repository.
+- Monetization work is paused per the owner directive above. If legacy revenue, advertising, sponsorship, affiliate, newsletter, lead-generation, commercial CTA, or monetization analytics surfaces need maintenance, read `/workspace/procedures/uutistenlukija-business-quality-loop.md` (host path: `/home/pertt/.openclaw/workspace/procedures/uutistenlukija-business-quality-loop.md`) before changing the repository.
 - Felix coordinates and reviews this work; Iris owns the experiment, Monica the editorial/disclosure gate, Sara the rendered reader-experience gate, Alex implementation, and Max privacy/ops review when applicable. Do not let Felix substitute for missing specialist evidence.
 - A commercial change is not ready merely because it builds or tracks clicks. Preserve editorial separation, source/Finnish-language quality, the accepted portal hierarchy, accessibility/performance, explicit disclosures, and a measurable decision rule.
 - Start with `git status --short --branch`; preserve unrelated local changes and untracked queue/log files.

@@ -1,5 +1,7 @@
 # Uutistenlukija.fi — Autonomous Improvement Flywheel
 
+> **STATUS (2026-07-23): dormant since 2026-03-28; kept for reference.** Owner directive: the mission is audience and trust growth (see AGENTS.md), not monetization. The Money domain below is retired — if the flywheel is revived, replace it with Trust & Accuracy (source quality, corrections, transparency).
+
 ## How It Works
 
 A continuous loop runs every 4 hours, cycling through each domain. Each cycle:
@@ -23,7 +25,7 @@ Each heartbeat picks ONE domain (rotating). This keeps costs low while ensuring 
 | 5 | SEO | #seo | Search rankings, meta tags, structured data |
 | 6 | Operations | #operations | Process efficiency, agent coordination, automation |
 | 7 | Metrics | #metrics | What to measure, dashboards, analytics |
-| 8 | Money | #money | Monetization strategy, ad placement, revenue |
+| 8 | ~~Money~~ (retired 2026-07-23) | — | Replaced by Trust & Accuracy if flywheel is revived |
 
 ## Review Prompts Per Domain
 
