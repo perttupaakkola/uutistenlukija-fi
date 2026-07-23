@@ -456,6 +456,23 @@ class PublishPreflightTests(unittest.TestCase):
         self.assertFalse(result.requires_monica_review)
         self.assertTrue(result.sensitive)
 
+    def test_sensitive_well_sourced_entertainment_hold_is_not_labeled_thin(self) -> None:
+        record = _record(article_words=220)
+        record["payload"]["tags"] = ["viihde"]
+        record["packet"]["headline_seed"] = (
+            "Konsertti järjestettiin onnettomuuden jälkeen"
+        )
+
+        result = evaluate_publish_preflight(record)
+
+        self.assertEqual(result.action, "monica_review")
+        self.assertTrue(result.requires_monica_review)
+        self.assertTrue(result.sensitive)
+        self.assertEqual(result.distinct_source_words, 220)
+        self.assertEqual(result.article_words, 220)
+        self.assertEqual(result.article_source_ratio, 1.0)
+        self.assertEqual(result.reasons, ("entertainment_category_review",))
+
     def test_malformed_packet_and_payload_fail_closed_without_crashing(self) -> None:
         record = _record()
         record["packet"] = ["not", "a", "mapping"]

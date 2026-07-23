@@ -305,7 +305,10 @@ def evaluate_publish_preflight(record: dict[str, Any]) -> PublishPreflightResult
         review_reasons.append("thin_distinct_source")
     if ratio > MAX_ARTICLE_SOURCE_RATIO:
         review_reasons.append("article_source_ratio_exceeded")
-    if sensitive and review_reasons:
+    if sensitive and (
+        "thin_distinct_source" in review_reasons
+        or "article_source_ratio_exceeded" in review_reasons
+    ):
         review_reasons.append("sensitive_thin_story")
 
     reasons = tuple([*hard_reasons, *review_reasons])
