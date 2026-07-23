@@ -39,6 +39,10 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   # publisher.py defaults to the VPS-only /workspace/hugo path.
   HUGO_BIN: hugo
+  # A clean GitHub runner builds the full archive more slowly than the VPS.
+  # Keep the publisher's pre-commit validation bounded, but above the measured
+  # 180-second Actions timeout; the workflow validates the result again.
+  HUGO_BUILD_TIMEOUT_SEC: "600"
 
 jobs:
   publish:

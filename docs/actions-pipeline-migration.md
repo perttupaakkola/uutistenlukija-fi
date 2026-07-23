@@ -49,6 +49,9 @@ pushes from the VPS.
      queue/marker-only pushes are ignored by `deploy.yml`, avoiding a concurrent
      old-build deploy race. A later `staged-publish.yml` repair also triggers a
      max-1 retry while the marker exists.
+   - The staged workflow gives the publisher's full-archive Hugo pre-commit build
+     a 600-second bound. The original 180-second VPS default is too short on a
+     clean GitHub runner; the same output is validated again before Pages deploy.
    Verify: run green, article live on the site, packet moved to `published/`.
 4. Commit only the marker and reviewed queue archive paths (do not use broad
    `git add -A` in a dirty checkout):
