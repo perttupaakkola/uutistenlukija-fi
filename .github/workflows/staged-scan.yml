@@ -6,9 +6,14 @@ name: Staged scan
 # restoration decision.
 #
 # Scheduled runs are inert until `pipeline/actions-scan.enabled` exists.
-# Manual dispatch bypasses the marker solely for the bounded max-1 canary.
+# Manual dispatch bypasses the marker for an authenticated canary. Adding the
+# marker triggers the same max-1 canary when Actions dispatch is unavailable.
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "pipeline/actions-scan.enabled"
   schedule:
     # Scanner -> retained VPS worker -> publisher spacing:
     # 01 -> 03 -> 13; 16 -> 23 -> 28; 31 -> 33 -> 43; 46 -> 53 -> 58.
@@ -35,12 +40,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Gate scheduled runs on cutover marker
+      - name: Gate automated runs on cutover marker
         id: gate
         run: |
-          if [ "$GITHUB_EVENT_NAME" = "schedule" ] && [ ! -f pipeline/actions-scan.enabled ]; then
+          if [ "$GITHUB_EVENT_NAME" != "workflow_dispatch" ] && [ ! -f pipeline/actions-scan.enabled ]; then
             echo "enabled=false" >> "$GITHUB_OUTPUT"
-            echo "Cutover marker pipeline/actions-scan.enabled not present; skipping scheduled run."
+            echo "Cutover marker pipeline/actions-scan.enabled not present; skipping automated run."
           else
             echo "enabled=true" >> "$GITHUB_OUTPUT"
           fi
@@ -108,9 +113,9 @@ jobs:
               raise SystemExit(
                   f"scan added {len(added_names)} ready packets; max-packets contract is 1"
               )
-          if os.environ["GITHUB_EVENT_NAME"] == "workflow_dispatch" and len(added_names) != 1:
+          if os.environ["GITHUB_EVENT_NAME"] in {"workflow_dispatch", "push"} and len(added_names) != 1:
               raise SystemExit(
-                  "manual canary expected exactly one new ready packet; "
+                  "supervised canary expected exactly one new ready packet; "
                   f"observed {len(added_names)}"
               )
 

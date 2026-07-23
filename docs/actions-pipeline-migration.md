@@ -72,8 +72,9 @@ pushes from the VPS.
 
 - `.github/workflows/staged-scan.yml` runs at staggered UTC minutes
   `01,16,31,46`. Scheduled runs are inert until
-  `pipeline/actions-scan.enabled` is committed; manual dispatch bypasses the
-  marker for the supervised canary only.
+  `pipeline/actions-scan.enabled` is committed. Manual dispatch bypasses the
+  marker for an authenticated canary; adding the marker triggers the same
+  bounded canary as the git-only fallback.
 - The scan command keeps the accepted paused VPS flags exactly:
   `scan --max-packets 1 --max-research-candidates 8 --dedup-window 48
   --max-ready-backlog 150 --max-ready-age-hours 24`. The old CPU/disk guards
@@ -94,12 +95,15 @@ pushes from the VPS.
 1. Merge the workflow while `pipeline/actions-scan.enabled` is absent. Confirm
    the VPS `uutis-staged-scan` and `uutis-monica-worker` declarations remain
    commented.
-2. Dispatch `Staged scan` once. Record the Actions run ID and the queue
-   pre/post counts plus manifest from the run summary. The run must add exactly
-   one valid `ready/` packet.
-3. Commit the empty `pipeline/actions-scan.enabled` marker to enable the
-   staggered schedule. Do not resume the Monica worker here; that is a separate
-   Max restoration decision at the verified ready-packet boundary.
+2. Preferred when authenticated Actions control is available: dispatch
+   `Staged scan` once, verify its exact-one manifest, then commit the empty
+   `pipeline/actions-scan.enabled` marker.
+3. Git-only fallback: commit the empty marker. Its path-limited push trigger is
+   the supervised max-1 canary and also enables later schedules. Record the
+   Actions run ID and queue pre/post counts plus manifest from the run summary.
+   The run must add exactly one valid `ready/` packet.
+4. Do not resume the Monica worker here; that is a separate Max restoration
+   decision at the verified ready-packet boundary.
 
 Rollback is independent of publishing: remove
 `pipeline/actions-scan.enabled` to stop scheduled scans, and revert

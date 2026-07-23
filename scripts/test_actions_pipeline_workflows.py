@@ -10,6 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 STAGED_SCAN = ROOT / ".github/workflows/staged-scan.yml"
+SCAN_MARKER = ROOT / "pipeline/actions-scan.enabled"
 DEPLOY = ROOT / ".github/workflows/deploy.yml"
 FAILURE_ALERT = ROOT / ".github/workflows/deploy-failure-alert.yml"
 
@@ -23,6 +24,8 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
             "name: Staged scan",
             'cron: "1,16,31,46 * * * *"',
             "workflow_dispatch: {}",
+            "branches: [main]",
+            '- "pipeline/actions-scan.enabled"',
             "permissions:\n  contents: write",
             "group: staged-scan",
             "cancel-in-progress: false",
@@ -31,6 +34,8 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
             with self.subTest(expected=expected):
                 self.assertIn(expected, self.workflow)
         self.assertNotIn("pipeline/actions-publish.enabled", self.workflow)
+        self.assertTrue(SCAN_MARKER.is_file())
+        self.assertEqual(SCAN_MARKER.read_text(encoding="utf-8").strip(), "")
 
     def test_scanner_command_matches_the_paused_vps_contract(self) -> None:
         command = (
@@ -60,10 +65,10 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
             ),
         )
 
-    def test_manual_canary_requires_exactly_one_valid_ready_packet(self) -> None:
+    def test_supervised_canary_requires_exactly_one_valid_ready_packet(self) -> None:
         for expected in (
-            'os.environ["GITHUB_EVENT_NAME"] == "workflow_dispatch"',
-            "expected exactly one new ready packet",
+            'os.environ["GITHUB_EVENT_NAME"] in {"workflow_dispatch", "push"}',
+            "supervised canary expected exactly one new ready packet",
             "uutistenlukija.staged_packet.v1",
             "packet_id",
             "source_text",
