@@ -29,6 +29,11 @@ on:
         description: "Max articles to publish this run"
         required: false
         default: "3"
+        type: choice
+        options:
+          - "1"
+          - "2"
+          - "3"
 
 permissions:
   contents: write
@@ -102,7 +107,18 @@ jobs:
           if [ "$GITHUB_EVENT_NAME" = "push" ]; then
             MAX_ARTICLES=1
           fi
+          case "$MAX_ARTICLES" in
+            1|2|3) ;;
+            *)
+              echo "::error title=Invalid staged publish cap::max_articles must be 1, 2, or 3"
+              exit 1
+              ;;
+          esac
           python3 pipeline/staged_publish.py publish --max-articles "$MAX_ARTICLES" --git-push
+
+      - name: Summarize staged queue runway
+        if: steps.gate.outputs.enabled == 'true'
+        run: python3 pipeline/generate_pipeline_status.py --actions-summary
 
       - name: Validate Hugo templates
         if: steps.gate.outputs.enabled == 'true'

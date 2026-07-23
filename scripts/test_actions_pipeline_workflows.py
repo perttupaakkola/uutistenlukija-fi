@@ -3,13 +3,17 @@
 
 from __future__ import annotations
 
+import os
 import re
+import subprocess
+import textwrap
 import unittest
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 STAGED_SCAN = ROOT / ".github/workflows/staged-scan.yml"
+STAGED_PUBLISH = ROOT / ".github/workflows/staged-publish.yml"
 DEPLOY = ROOT / ".github/workflows/deploy.yml"
 FAILURE_ALERT = ROOT / ".github/workflows/deploy-failure-alert.yml"
 
@@ -91,6 +95,79 @@ class ScannerDeployIsolationContractTests(unittest.TestCase):
     def test_scanner_failures_are_watched(self) -> None:
         alert = FAILURE_ALERT.read_text(encoding="utf-8")
         self.assertIn("      - Staged scan", alert)
+
+
+class StagedPublishRunwayContractTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.workflow = STAGED_PUBLISH.read_text(encoding="utf-8")
+
+    def _publish_run_script(self) -> str:
+        step = self.workflow.index("      - name: Publish staged outbox packets")
+        run_header = "        run: |\n"
+        run_start = self.workflow.index(run_header, step) + len(run_header)
+        run_end = self.workflow.index("\n      - name:", run_start)
+        return textwrap.dedent(self.workflow[run_start:run_end])
+
+    def test_runway_summary_uses_the_canonical_status_producer(self) -> None:
+        publish = self.workflow.index("- name: Publish staged outbox packets")
+        summary = self.workflow.index("- name: Summarize staged queue runway")
+        validate = self.workflow.index("- name: Validate Hugo templates")
+        self.assertLess(publish, summary)
+        self.assertLess(summary, validate)
+        self.assertIn(
+            "python3 pipeline/generate_pipeline_status.py --actions-summary",
+            self.workflow,
+        )
+
+    def test_runway_cap_is_enforced_for_manual_actions_runs(self) -> None:
+        self.assertIn('default: "3"', self.workflow)
+        self.assertIn(
+            '        type: choice\n'
+            '        options:\n'
+            '          - "1"\n'
+            '          - "2"\n'
+            '          - "3"',
+            self.workflow,
+        )
+        self.assertIn("github.event.inputs.max_articles || '3'", self.workflow)
+
+        script = (
+            'python3() { printf "PUBLISHER_CALLED %s\\n" "$*"; }\n'
+            + self._publish_run_script()
+        )
+        env = os.environ.copy()
+        env["GITHUB_EVENT_NAME"] = "workflow_dispatch"
+        for max_articles in ("4", "24"):
+            with self.subTest(max_articles=max_articles):
+                env["MAX_ARTICLES"] = max_articles
+                result = subprocess.run(
+                    ["bash", "-c", script],
+                    cwd=ROOT,
+                    env=env,
+                    capture_output=True,
+                    text=True,
+                    check=False,
+                )
+                self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+                self.assertIn("max_articles must be 1, 2, or 3", result.stdout)
+                self.assertNotIn("PUBLISHER_CALLED", result.stdout)
+
+        for max_articles in ("1", "2", "3"):
+            with self.subTest(max_articles=max_articles):
+                env["MAX_ARTICLES"] = max_articles
+                result = subprocess.run(
+                    ["bash", "-c", script],
+                    cwd=ROOT,
+                    env=env,
+                    capture_output=True,
+                    text=True,
+                    check=False,
+                )
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertIn(
+                    f"--max-articles {max_articles} --git-push",
+                    result.stdout,
+                )
 
 
 if __name__ == "__main__":
