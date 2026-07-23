@@ -20,7 +20,9 @@ on:
       - "pipeline/actions-publish.enabled"
       - ".github/workflows/staged-publish.yml"
   schedule:
-    - cron: "*/15 * * * *"
+    # Keep the 15-minute cadence off common quarter-hour boundaries. GitHub
+    # documents that scheduled events can be delayed or dropped under load.
+    - cron: "13,28,43,58 * * * *"
   workflow_dispatch:
     inputs:
       max_articles:

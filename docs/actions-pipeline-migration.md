@@ -18,9 +18,12 @@ pushes from the VPS.
 
 ## Phase 1 — publish + kooste (workflows shipped 2026-07-23, gated)
 
-- `.github/workflows/staged-publish.yml` — every 15 min: publish up to 3 outbox
-  packets, build, deploy. Replaces the quiesced VPS `uutis-staged-publish` cron and
-  resolves OPE-448's root cause (heavy local Hugo builds on the VPS) structurally.
+- `.github/workflows/staged-publish.yml` — every 15 min at staggered UTC minutes
+  `13,28,43,58`: publish up to 3 outbox packets, build, deploy. The stagger avoids
+  common quarter-hour contention because GitHub documents that scheduled events
+  can be delayed or dropped under load. Replaces the quiesced VPS
+  `uutis-staged-publish` cron and resolves OPE-448's root cause (heavy local Hugo
+  builds on the VPS) structurally.
 - `.github/workflows/daily-kooste.yml` — 18:00 UTC: generate kooste, push, build, deploy.
 - Both are inert on schedule until the marker file `pipeline/actions-publish.enabled`
   is committed. `workflow_dispatch` always runs (use for a supervised first run).
