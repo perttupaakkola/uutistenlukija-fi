@@ -42,7 +42,6 @@
         {{ end }}
       </nav>
     </section>
-    {{ partial "advertiser-cta.html" (dict "placement" "talous-category" "page" .) }}
     {{ $latestTalous := first 2 $paginator.Pages }}
     {{ if gt (len $latestTalous) 0 }}
     <section class="talous-recirculation" aria-labelledby="talous-recirculation-title">
@@ -72,7 +71,7 @@
 
   <div class="portal-list-layout">
     <div class="portal-list-main">
-      <article class="portal-list-feature">
+      <article class="portal-list-feature{{ if eq $termSlug "talous" }} portal-list-feature--talous{{ end }}">
         <div class="portal-list-feature__image">
           {{ partial "card-image.html" (dict "img" $img "thumb" $thumb "context" $feature "eager" true "hero" true "permalink" $feature.Permalink "fallback" (printf "/images/categories/%s.jpg" ($cat | lower))) }}
         </div>
@@ -83,6 +82,9 @@
           <time>{{ partial "relative-date.html" $feature }}</time>
         </div>
       </article>
+      {{ if eq $termSlug "talous" }}
+      {{ partial "advertiser-cta.html" (dict "placement" "talous-category" "page" .) }}
+      {{ end }}
 
       <div class="portal-list-feed">
         {{ range $rest }}

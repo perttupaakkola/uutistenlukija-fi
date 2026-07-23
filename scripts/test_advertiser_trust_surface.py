@@ -28,6 +28,15 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
         self.style_css = (ROOT / "themes/uutistenlukija/static/css/style.css").read_text(
             encoding="utf-8"
         )
+        self.portal_asset_css = (ROOT / "assets/css/portal-overhaul.css").read_text(
+            encoding="utf-8"
+        )
+        self.portal_static_css = (ROOT / "static/css/portal-overhaul.css").read_text(
+            encoding="utf-8"
+        )
+        self.critical_generator = (ROOT / "pipeline/extract_critical_css.py").read_text(
+            encoding="utf-8"
+        )
         self.mainosta_css = (ROOT / "assets/css/mainosta.css").read_text(encoding="utf-8")
 
     def test_mainosta_primary_cta_contrast_is_aa_in_both_themes(self) -> None:
@@ -209,8 +218,20 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
         talous_gate = '{{ if eq $termSlug "talous" }}'
         gate_start = self.category.index(talous_gate)
         gate_end = self.category.index('{{ end }}\n  </header>', gate_start)
-        self.assertIn(partial_call, self.category[gate_start:gate_end])
-        self.assertLess(self.category.index('</section>\n    ' + partial_call), self.category.index('{{ $latestTalous :='))
+        self.assertNotIn(partial_call, self.category[gate_start:gate_end])
+        recirculation_start = self.category.index('<section class="talous-recirculation"', gate_start)
+        recirculation_end = self.category.index('</section>\n    {{ end }}', recirculation_start)
+        feature_start = self.category.index('<article class="portal-list-feature', recirculation_end)
+        feature_end = self.category.index('</article>', feature_start)
+        feed_start = self.category.index('<div class="portal-list-feed">', feature_end)
+        partial_index = self.category.index(partial_call)
+        self.assertLess(recirculation_end, feature_start)
+        self.assertLess(feature_end, partial_index)
+        self.assertLess(partial_index, feed_start)
+        self.assertIn(
+            talous_gate + '\n      ' + partial_call + '\n      {{ end }}',
+            self.category[feature_end:feed_start],
+        )
 
         self.assertIn('eq $placement "talous-category"', self.cta)
         self.assertIn('"talous-category-founding-sponsor-v1"', self.cta)
@@ -218,6 +239,26 @@ class AdvertiserTrustSurfaceTest(unittest.TestCase):
         self.assertIn('/perustajakumppanuus/#yhteydenotto', self.cta)
         self.assertIn('founding_sponsor_page_click', self.cta)
         self.assertIn('founding_sponsor_interest_click', self.cta)
+
+    def test_talous_feature_headline_has_scoped_desktop_containment(self) -> None:
+        self.assertIn(
+            'portal-list-feature{{ if eq $termSlug "talous" }} portal-list-feature--talous{{ end }}',
+            self.category,
+        )
+        headline_rule = re.compile(
+            r"\.portal-list-feature--talous h2\s*\{[^}]*overflow-wrap:\s*anywhere",
+            re.DOTALL,
+        )
+        for stylesheet in (
+            self.critical_css,
+            self.portal_asset_css,
+            self.portal_static_css,
+        ):
+            with self.subTest(stylesheet=stylesheet[:24]):
+                self.assertRegex(stylesheet, headline_rule)
+
+        self.assertEqual(self.portal_asset_css, self.portal_static_css)
+        self.assertRegex(self.critical_generator, headline_rule)
 
     def test_talous_category_dark_contrast_scope_preserves_other_variants(self) -> None:
         eyebrow = '.advertiser-cta--talous-category .advertiser-cta__eyebrow'

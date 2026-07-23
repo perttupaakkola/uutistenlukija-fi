@@ -496,6 +496,7 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   opacity: 1 !important;
 }
 .portal-list-feature h2 { margin: 8px 0 12px; font-size: clamp(28px, 3vw, 42px); line-height: 1.08; letter-spacing: -.02em; }
+.portal-list-feature--talous h2 { overflow-wrap: anywhere; }
 .portal-list-feature p { margin: 0 0 14px; color: #334155; font-size: 17px; line-height: 1.4; }
 .portal-list-feature time, .portal-feed-item__relative { color: var(--portal-muted); font-size: 13px; }
 .portal-list-feed { display: grid; }
