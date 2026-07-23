@@ -59,6 +59,11 @@ function renderFixture() {
     ${criticalCss}<style>${fullCss}</style><style>${portalCss}</style><style>${breadcrumbCss()}</style>
     </head><body>
       <a class="skip-to-content" href="#main-content">Siirry pääsisältöön</a>
+      <header class="site-header">
+        <nav class="main-nav" id="main-nav-menu" aria-label="Päävalikko">
+          <ul><li><a id="test-main-nav-link" href="#home">Etusivu</a></li></ul>
+        </nav>
+      </header>
       <main id="main-content" class="container">
         <a class="portal-livebar" href="#updates">
           <span class="portal-livebar__all">Katso kaikki päivitykset</span>
@@ -183,6 +188,70 @@ test('OPE-446 keeps the accepted dark skip-link keyboard focus contrast', async 
         assert(contrastRatio(focus.outline, focus.page) >= 3);
         await context.close();
       }
+    } finally {
+      await browser.close();
+    }
+  });
+});
+
+test('OPE-446 dark desktop main-nav focus outline reaches 3:1', async () => {
+  const compact = (value) => value
+    .replace(/\s+/g, '')
+    .replaceAll('"', '')
+    .replaceAll(';}', '}');
+  const expectedLock = compact('@media (min-width: 681px) { :root[data-theme="dark"] #main-nav-menu a:focus-visible { outline-color: var(--accent, #e74c3c); } }');
+  const portalAssetCss = readFileSync(resolve(ROOT, 'assets/css/portal-overhaul.css'), 'utf8');
+  const portalStaticCss = readFileSync(resolve(ROOT, 'static/css/portal-overhaul.css'), 'utf8');
+  assert.equal(portalAssetCss, portalStaticCss, 'portal CSS mirrors must remain byte-identical');
+  for (const [label, source] of [
+    ['portal CSS', portalAssetCss],
+    ['critical CSS', readFileSync(resolve(ROOT, 'layouts/partials/critical-css.html'), 'utf8')],
+    ['critical CSS generator', readFileSync(resolve(ROOT, 'pipeline/extract_critical_css.py'), 'utf8')],
+  ]) {
+    assert(
+      compact(source).includes(expectedLock),
+      `${label} must retain the dark desktop main-nav focus lock`,
+    );
+  }
+  await withServer(async (origin) => {
+    const browser = await chromium.launch(browserLaunchOptions());
+    try {
+      const context = await browser.newContext({ viewport: { width: 1366, height: 900 } });
+      const page = await context.newPage();
+      await page.goto(origin);
+      await page.keyboard.press('Tab');
+      await page.keyboard.press('Tab');
+      assert.equal(
+        await page.evaluate(() => document.activeElement?.id),
+        'test-main-nav-link',
+        'second desktop Tab must focus the first main-nav link',
+      );
+      const focus = await page.locator('#test-main-nav-link').evaluate((element) => {
+        const parseRgb = (value) => value
+          .match(/rgba?\(([^)]+)\)/)[1]
+          .replace('/', ' ')
+          .split(/[\s,]+/)
+          .filter(Boolean)
+          .slice(0, 3)
+          .map((part) => Number.parseFloat(part));
+        const style = getComputedStyle(element);
+        const nav = element.closest('#main-nav-menu');
+        return {
+          outline: parseRgb(style.outlineColor),
+          outlineWidth: Number.parseFloat(style.outlineWidth),
+          outlineOffset: Number.parseFloat(style.outlineOffset),
+          background: parseRgb(getComputedStyle(nav).backgroundColor),
+        };
+      });
+      assert.equal(focus.outlineWidth, 3, 'main-nav outline geometry must stay 3px');
+      assert.equal(focus.outlineOffset, 2, 'main-nav outline offset must stay 2px');
+      assert.deepEqual(focus.outline, [231, 76, 60], 'dark accent token must drive the outline');
+      assert.deepEqual(focus.background, [36, 33, 29], 'fixture must retain the accepted dark nav surface');
+      assert(
+        contrastRatio(focus.outline, focus.background) >= 3,
+        `dark desktop main-nav focus contrast ${contrastRatio(focus.outline, focus.background).toFixed(4)} must be at least 3:1`,
+      );
+      await context.close();
     } finally {
       await browser.close();
     }

@@ -122,6 +122,10 @@ PORTAL_OVERHAUL_CRITICAL_LOCKS = """
 [data-theme="dark"] .newsletter-band__privacy,
 [data-theme="dark"] .newsletter-signup__text,
 [data-theme="dark"] .newsletter-signup__note { color: #6f685f !important; }
+/* OPE-446 dark desktop main-nav focus contrast; preserve the accepted 3px geometry. */
+@media (min-width: 681px) {
+  :root[data-theme="dark"] #main-nav-menu a:focus-visible { outline-color: var(--accent, #e74c3c); }
+}
 """
 
 # ── @media that we must include (mobile critical overrides) ───────────────────
