@@ -47,7 +47,8 @@ pushes from the VPS.
    - Git-only fallback: commit the marker in step 4. A push adding
      `pipeline/actions-publish.enabled` triggers exactly one article immediately;
      queue/marker-only pushes are ignored by `deploy.yml`, avoiding a concurrent
-     old-build deploy race.
+     old-build deploy race. A later `staged-publish.yml` repair also triggers a
+     max-1 retry while the marker exists.
    Verify: run green, article live on the site, packet moved to `published/`.
 4. Commit only the marker and reviewed queue archive paths (do not use broad
    `git add -A` in a dirty checkout):

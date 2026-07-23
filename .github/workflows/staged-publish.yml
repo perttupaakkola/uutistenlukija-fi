@@ -18,6 +18,7 @@ on:
     branches: [main]
     paths:
       - "pipeline/actions-publish.enabled"
+      - ".github/workflows/staged-publish.yml"
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch:
@@ -36,6 +37,8 @@ concurrency:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  # publisher.py defaults to the VPS-only /workspace/hugo path.
+  HUGO_BIN: hugo
 
 jobs:
   publish:

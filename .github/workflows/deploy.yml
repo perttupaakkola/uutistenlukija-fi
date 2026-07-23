@@ -6,6 +6,11 @@ on:
     paths-ignore:
       - "pipeline/actions-publish.enabled"
       - "pipeline/queues/staged/**"
+      - ".github/workflows/deploy.yml"
+      - ".github/workflows/staged-publish.yml"
+      - ".github/workflows/daily-kooste.yml"
+      - ".github/workflows/deploy-failure-alert.yml"
+      - "docs/actions-pipeline-migration.md"
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
