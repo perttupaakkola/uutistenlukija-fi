@@ -3,6 +3,9 @@ name: Deploy to Cloudflare Pages
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - "pipeline/actions-publish.enabled"
+      - "pipeline/queues/staged/**"
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true

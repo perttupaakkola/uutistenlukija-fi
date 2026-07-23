@@ -40,9 +40,18 @@ pushes from the VPS.
    packets written before the 2026-07-20 pause; several days old is not news.
    Recommended: archive packets older than 48h to `failed_archive/` with reason
    `stale-backlog-20260723`, publish the rest via the 3-per-run trickle.
-3. Run one supervised `workflow_dispatch` of "Staged publish" (max_articles=1).
+3. Run one supervised max-1 publish:
+   - Preferred when authenticated Actions control is available: use
+     `workflow_dispatch` with `max_articles=1`, then verify the run before
+     enabling schedules.
+   - Git-only fallback: commit the marker in step 4. A push adding
+     `pipeline/actions-publish.enabled` triggers exactly one article immediately;
+     queue/marker-only pushes are ignored by `deploy.yml`, avoiding a concurrent
+     old-build deploy race.
    Verify: run green, article live on the site, packet moved to `published/`.
-4. Commit the marker: `touch pipeline/actions-publish.enabled && git add -A && git commit -m "Enable Actions publish cutover" && git push`.
+4. Commit only the marker and reviewed queue archive paths (do not use broad
+   `git add -A` in a dirty checkout):
+   `touch pipeline/actions-publish.enabled && git add pipeline/actions-publish.enabled pipeline/queues/staged && git commit -m "Enable Actions publish cutover" && git push`.
 5. On the VPS crontab: the `uutis-staged-publish` line stays commented (now
    permanently — annotate it "MIGRATED to GitHub Actions 2026-07"), and comment out
    the `0 18 * * *` kooste line the same way. Do NOT re-enable them after OPE-465.

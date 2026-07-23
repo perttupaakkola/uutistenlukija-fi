@@ -62,9 +62,40 @@ jobs:
           echo "${HUGO_SHA256}  ${HUGO_DEB}" | sha256sum --check --strict
           sudo dpkg -i /tmp/hugo.deb
 
+      - name: Validate Hugo templates
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          DISCORD_PIPELINE_WEBHOOK: ${{ secrets.DISCORD_PIPELINE_WEBHOOK }}
+        run: bash scripts/validate_templates.sh
+
+      - name: Validate portal CSS contract
+        if: steps.gate.outputs.enabled == 'true'
+        run: python3 scripts/validate_portal_css_contract.py
+
+      - name: Validate critical pipeline script permissions
+        if: steps.gate.outputs.enabled == 'true'
+        run: bash scripts/validate_critical_scripts.sh
+
+      - name: Validate frontmatter YAML syntax
+        if: steps.gate.outputs.enabled == 'true'
+        run: python3 pipeline/validate_frontmatter.py
+
       - name: Build
         if: steps.gate.outputs.enabled == 'true'
         run: hugo --minify --cleanDestinationDir
+
+      - name: Validate build
+        if: steps.gate.outputs.enabled == 'true'
+        continue-on-error: true
+        run: python3 pipeline/ci_validate.py --skip templates
+
+      - name: Check Cloudflare Pages file budget
+        if: steps.gate.outputs.enabled == 'true'
+        run: python3 scripts/check_public_file_count.py --public-dir public --limit 20000 --min-headroom 1000
+
+      - name: Validate public surface
+        if: steps.gate.outputs.enabled == 'true'
+        run: python3 scripts/validate_public_surface.py --public-dir public
 
       - name: Deploy to Cloudflare Pages
         if: steps.gate.outputs.enabled == 'true'
@@ -73,3 +104,15 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy public --project-name=uutistenlukija-fi --branch=main
+
+      - name: Check internal links
+        if: steps.gate.outputs.enabled == 'true'
+        continue-on-error: true
+        env:
+          DISCORD_PIPELINE_WEBHOOK: ${{ secrets.DISCORD_PIPELINE_WEBHOOK }}
+        run: |
+          python3 pipeline/check_links.py --public-dir public
+          if [ -f pipeline/logs/link_check.log ]; then
+            echo "--- link_check.log (last 40 lines) ---"
+            tail -40 pipeline/logs/link_check.log
+          fi

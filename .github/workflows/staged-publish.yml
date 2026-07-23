@@ -10,9 +10,14 @@ name: Staged publish
 #
 # Scheduled runs are gated on the marker file `pipeline/actions-publish.enabled`
 # so this can be merged inert and cut over deliberately (see
-# docs/actions-pipeline-migration.md). Manual dispatch always runs.
+# docs/actions-pipeline-migration.md). A push adding the marker runs one article
+# immediately as the supervised canary; manual dispatch always runs.
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "pipeline/actions-publish.enabled"
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch:
@@ -40,12 +45,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Gate scheduled runs on cutover marker
+      - name: Gate automated runs on cutover marker
         id: gate
         run: |
-          if [ "${{ github.event_name }}" = "schedule" ] && [ ! -f pipeline/actions-publish.enabled ]; then
+          if [ "${{ github.event_name }}" != "workflow_dispatch" ] && [ ! -f pipeline/actions-publish.enabled ]; then
             echo "enabled=false" >> "$GITHUB_OUTPUT"
-            echo "Cutover marker pipeline/actions-publish.enabled not present; skipping scheduled run."
+            echo "Cutover marker pipeline/actions-publish.enabled not present; skipping automated run."
           else
             echo "enabled=true" >> "$GITHUB_OUTPUT"
           fi
@@ -85,11 +90,45 @@ jobs:
           DISCORD_PIPELINE_WEBHOOK: ${{ secrets.DISCORD_PIPELINE_WEBHOOK }}
           MAX_ARTICLES: ${{ github.event.inputs.max_articles || '3' }}
         run: |
+          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+            MAX_ARTICLES=1
+          fi
           python3 pipeline/staged_publish.py publish --max-articles "$MAX_ARTICLES" --git-push
+
+      - name: Validate Hugo templates
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          DISCORD_PIPELINE_WEBHOOK: ${{ secrets.DISCORD_PIPELINE_WEBHOOK }}
+        run: bash scripts/validate_templates.sh
+
+      - name: Validate portal CSS contract
+        if: steps.gate.outputs.enabled == 'true'
+        run: python3 scripts/validate_portal_css_contract.py
+
+      - name: Validate critical pipeline script permissions
+        if: steps.gate.outputs.enabled == 'true'
+        run: bash scripts/validate_critical_scripts.sh
+
+      - name: Validate frontmatter YAML syntax
+        if: steps.gate.outputs.enabled == 'true'
+        run: python3 pipeline/validate_frontmatter.py
 
       - name: Build
         if: steps.gate.outputs.enabled == 'true'
         run: hugo --minify --cleanDestinationDir
+
+      - name: Validate build
+        if: steps.gate.outputs.enabled == 'true'
+        continue-on-error: true
+        run: python3 pipeline/ci_validate.py --skip templates
+
+      - name: Check Cloudflare Pages file budget
+        if: steps.gate.outputs.enabled == 'true'
+        run: python3 scripts/check_public_file_count.py --public-dir public --limit 20000 --min-headroom 1000
+
+      - name: Validate public surface
+        if: steps.gate.outputs.enabled == 'true'
+        run: python3 scripts/validate_public_surface.py --public-dir public
 
       - name: Deploy to Cloudflare Pages
         if: steps.gate.outputs.enabled == 'true'
@@ -98,3 +137,15 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy public --project-name=uutistenlukija-fi --branch=main
+
+      - name: Check internal links
+        if: steps.gate.outputs.enabled == 'true'
+        continue-on-error: true
+        env:
+          DISCORD_PIPELINE_WEBHOOK: ${{ secrets.DISCORD_PIPELINE_WEBHOOK }}
+        run: |
+          python3 pipeline/check_links.py --public-dir public
+          if [ -f pipeline/logs/link_check.log ]; then
+            echo "--- link_check.log (last 40 lines) ---"
+            tail -40 pipeline/logs/link_check.log
+          fi

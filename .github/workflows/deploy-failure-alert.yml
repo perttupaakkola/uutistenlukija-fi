@@ -4,6 +4,8 @@ on:
   workflow_run:
     workflows:
       - Deploy to Cloudflare Pages
+      - Staged publish
+      - Daily kooste
     types:
       - completed
 
