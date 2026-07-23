@@ -2,7 +2,7 @@
 {{- $pages := ($pagesAll | first 50) -}}
 {{- $title := .Title | default .Site.Title -}}
 {{- $desc := .Description | default .Site.Params.description -}}
-<?xml version="1.0" encoding="UTF-8"?>
+{{- printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML }}
 <rss version="2.0"
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -37,7 +37,7 @@
       {{ range .Params.categories }}<category>{{ . | html }}</category>
       {{ end -}}
       <description>{{ $itemDesc | html }}</description>
-      {{ with .Content }}<content:encoded><![CDATA[{{ . }}]]></content:encoded>{{ end }}
+      {{ with .Content }}<content:encoded>{{ . | html }}</content:encoded>{{ end }}
       {{ with $itemImage -}}
       <media:content url="{{ . | absURL }}" medium="image">
         <media:title type="plain">{{ $.Title | html }}</media:title>
