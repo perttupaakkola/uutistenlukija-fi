@@ -1,0 +1,218 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-20T21:31:34.428488+00:00",
+  "digest": "a76ea83eb2",
+  "packet": {
+    "packet_id": "20260720T213134Z_a76ea83eb2",
+    "created_at": "2026-07-20T21:31:34Z",
+    "headline_seed": "Google is working on a new AI chip designed to make Gemini more efficient",
+    "description_seed": "Alphabet, Google's parent company, is reportedly working on a new chip designed to make its Gemini models run much more efficiently.",
+    "link": "https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/",
+    "source": "TechCrunch",
+    "source_names": [
+      "Republic World",
+      "The News International",
+      "The Next Web"
+    ],
+    "source_urls": [
+      "https://www.republicworld.com/tech/google-may-be-building-a-new-ai-chip-with-gemini-baked-directly-into-the-hardware-2026-07-20-132936",
+      "https://www.thenews.com.pk/latest/1409702-google-developing-frozen-v2-chip-to-hardcode-gemini-architecture-with-10x-efficiency",
+      "https://thenextweb.com/news/google-frozen-chip-gemini-silicon"
+    ],
+    "source_domains": [
+      "republicworld.com",
+      "thenews.com.pk",
+      "thenextweb.com"
+    ],
+    "selected_source": {
+      "name": "Republic World",
+      "url": "https://www.republicworld.com/tech/google-may-be-building-a-new-ai-chip-with-gemini-baked-directly-into-the-hardware-2026-07-20-132936",
+      "domain": "republicworld.com"
+    },
+    "selected_source_provenance_error": "",
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Google is working on a new AI chip designed to make Gemini more efficient"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Republic World",
+        "source_url": "https://www.republicworld.com/tech/google-may-be-building-a-new-ai-chip-with-gemini-baked-directly-into-the-hardware-2026-07-20-132936",
+        "source_domain": "republicworld.com",
+        "source_type": "research",
+        "text": "Google is reportedly developing a new server chip that would integrate elements of its Gemini AI model directly into the hardware, potentially allowing the company to run its artificial intelligence services more efficiently while addressing growing constraints on computing capacity. According to The Information, the new chip is informally known as Frozen v2 and is being developed as part of Google's efforts to more tightly integrate its AI software and underlying hardware infrastructure. Google reportedly plans to deploy the chip as early as 2028, although engineers are still finalising its design and determining how much information from its AI models will be hardwired into the chip. The most significant aspect of Frozen v2 is Google's reported plan to incorporate elements of its Gemini models directly into the hardware.",
+        "word_count": 128,
+        "keyword_overlap": 9,
+        "strong_overlap": 6
+      },
+      {
+        "source": "The News International",
+        "source_url": "https://www.thenews.com.pk/latest/1409702-google-developing-frozen-v2-chip-to-hardcode-gemini-architecture-with-10x-efficiency",
+        "source_domain": "thenews.com.pk",
+        "source_type": "research",
+        "text": "The custom chip is designed to optimize Gemini's architecture, potentially improving AI performance while reducing computing costs and energy use Google is planning for new chips production to run on its 'Gemini' models to boost AI. As reported by The Information, Google is reportedly developing a new custom server chip internally codenamed \"Frozen v2\"—designed to incorporate elements of the Gemini model architecture directly into the hardware. Unlike general-purpose AI chips that load models into memory and continuously shuffle data back and forth, Frozen v2 aims to hardcode portions of Gemini’s neural-network blueprint straight into the physical circuitry. According to the reports, the chip could be 6 to 10 times more efficient than Google’s latest custom Tensor Processing Units (TPUs), measured by AI tokens served per unit of power.",
+        "word_count": 128,
+        "keyword_overlap": 8,
+        "strong_overlap": 6
+      },
+      {
+        "source": "The Next Web",
+        "source_url": "https://thenextweb.com/news/google-frozen-chip-gemini-silicon",
+        "source_domain": "thenextweb.com",
+        "source_type": "research",
+        "text": "Frozen v2 would bake Gemini’s neural-network architecture straight into the circuitry. The hardware locks to the shape of Google’s current AI design. Engineers can still refresh the model by loading new weights, but the underlying structure stays fixed, or “frozen.” How much of the model gets hardwired is reportedly still being decided. The payoff is efficiency. The Information reports the chip could be 6 to 10 times more efficient than Google’s latest custom AI chips, measured by tokens served per unit of power. It would be a new line of silicon, separate from Google’s TPUs rather than a replacement. Deployment is targeted for as early as 2028. TNW City Coworking space - Where your best work happens A workspace designed for growth, collaboration, and endless networking opportunities in the heart of tech. The timing is not random. The Info...",
+        "word_count": 139,
+        "keyword_overlap": 8,
+        "strong_overlap": 5
+      },
+      {
+        "source": "Republic World",
+        "source_url": "https://www.republicworld.com/tech/google-may-be-building-a-new-ai-chip-with-gemini-baked-directly-into-the-hardware-2026-07-20-132936",
+        "source_domain": "republicworld.com",
+        "source_type": "research",
+        "text": "AI models typically run on general-purpose accelerators that must repeatedly access and process enormous amounts of model data. By hardwiring certain model information into specialised silicon, Google could potentially reduce some of the computing and memory requirements involved in serving Gemini responses to users. The approach could make AI inference, the process of running a trained AI model to generate responses, considerably more efficient. Frozen v2 could reportedly deliver six to 10 times greater efficiency than Google's latest custom AI chips when measured by the number of AI tokens served for each unit of power consumed. If achieved, such efficiency gains could allow Google to serve significantly more Gemini users without requiring a proportional increase in electricity and computing infrastructure.",
+        "word_count": 120,
+        "keyword_overlap": 7,
+        "strong_overlap": 5
+      }
+    ],
+    "source_text": "Google is reportedly developing a new server chip that would integrate elements of its Gemini AI model directly into the hardware, potentially allowing the company to run its artificial intelligence services more efficiently while addressing growing constraints on computing capacity. According to The Information, the new chip is informally known as Frozen v2 and is being developed as part of Google's efforts to more tightly integrate its AI software and underlying hardware infrastructure. Google reportedly plans to deploy the chip as early as 2028, although engineers are still finalising its design and determining how much information from its AI models will be hardwired into the chip. The most significant aspect of Frozen v2 is Google's reported plan to incorporate elements of its Gemini models directly into the hardware.\n\nThe custom chip is designed to optimize Gemini's architecture, potentially improving AI performance while reducing computing costs and energy use Google is planning for new chips production to run on its 'Gemini' models to boost AI. As reported by The Information, Google is reportedly developing a new custom server chip internally codenamed \"Frozen v2\"—designed to incorporate elements of the Gemini model architecture directly into the hardware. Unlike general-purpose AI chips that load models into memory and continuously shuffle data back and forth, Frozen v2 aims to hardcode portions of Gemini’s neural-network blueprint straight into the physical circuitry. According to the reports, the chip could be 6 to 10 times more efficient than Google’s latest custom Tensor Processing Units (TPUs), measured by AI tokens served per unit of power.\n\nFrozen v2 would bake Gemini’s neural-network architecture straight into the circuitry. The hardware locks to the shape of Google’s current AI design. Engineers can still refresh the model by loading new weights, but the underlying structure stays fixed, or “frozen.” How much of the model gets hardwired is reportedly still being decided. The payoff is efficiency. The Information reports the chip could be 6 to 10 times more efficient than Google’s latest custom AI chips, measured by tokens served per unit of power. It would be a new line of silicon, separate from Google’s TPUs rather than a replacement. Deployment is targeted for as early as 2028. TNW City Coworking space - Where your best work happens A workspace designed for growth, collaboration, and endless networking opportunities in the heart of tech. The timing is not random. The Info...\n\nAI models typically run on general-purpose accelerators that must repeatedly access and process enormous amounts of model data. By hardwiring certain model information into specialised silicon, Google could potentially reduce some of the computing and memory requirements involved in serving Gemini responses to users. The approach could make AI inference, the process of running a trained AI model to generate responses, considerably more efficient. Frozen v2 could reportedly deliver six to 10 times greater efficiency than Google's latest custom AI chips when measured by the number of AI tokens served for each unit of power consumed. If achieved, such efficiency gains could allow Google to serve significantly more Gemini users without requiring a proportional increase in electricity and computing infrastructure.",
+    "source_diagnostics": {
+      "candidate_blocks": 9,
+      "candidate_source_words": 942,
+      "selected_blocks": 4,
+      "selected_source_words": 515,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Republic World",
+        "Republic World",
+        "Republic World",
+        "The News International",
+        "The News International",
+        "The News International",
+        "The Next Web",
+        "The Next Web",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "Republic World",
+        "The News International",
+        "The Next Web",
+        "Republic World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Google is working on a new AI chip designed to make Gemini more efficient",
+      "description": "Alphabet, Google's parent company, is reportedly working on a new chip designed to make its Gemini models run much more efficiently.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Google is working on a new AI chip designed to make Gemini more efficient",
+    "description": "Alphabet, Google's parent company, is reportedly working on a new chip designed to make its Gemini models run much more efficiently.",
+    "link": "https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/",
+    "published": "2026-07-20T21:21:15+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "6b8501fb95d92fe509c2fbae2cef5d47",
+    "_url_hash": "91446a6fdee3f6090a63a8ca70f92e27a5b9a6c52b92c35c3b414ea4e8007213",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Republic World | URL: https://www.republicworld.com/tech/google-may-be-building-a-new-ai-chip-with-gemini-baked-directly-into-the-hardware-2026-07-20-132936]\nGoogle is reportedly developing a new server chip that would integrate elements of its Gemini AI model directly into the hardware, potentially allowing the company to run its artificial intelligence services more efficiently while addressing growing constraints on computing capacity.\n\nAccording to The Information, the new chip is informally known as Frozen v2 and is being developed as part of Google's efforts to more tightly integrate its AI software and underlying hardware infrastructure.\n\nGoogle reportedly plans to deploy the chip as early as 2028, although engineers are still finalising its design and determining how much information from its AI models will be hardwired into the chip.\n\nThe most significant aspect of Frozen v2 is Google's reported plan to incorporate elements of its Gemini models directly into the hardware.\n\nAI models typically run on general-purpose accelerators that must repeatedly access and process enormous amounts of model data. By hardwiring certain model information into specialised silicon, Google could potentially reduce some of the computing and memory requirements involved in serving Gemini responses to users.\n\nThe approach could make AI inference, the process of running a trained AI model to generate responses, considerably more efficient.\n\nFrozen v2 could reportedly deliver six to 10 times greater efficiency than Google's latest custom AI chips when measured by the number of AI tokens served for each unit of power consumed.\n\nIf achieved, such efficiency gains could allow Google to serve significantly more Gemini users without requiring a proportional increase in electricity and computing infrastructure.\n\nThe development comes as Google reportedly faces constraints on the amount of AI computing capacity available across its infrastructure. The capacity crunch has reportedly created internal tensions and even prompted Google Cloud to turn down some deals with external customers as the company balances demand for computing resources against the requirements of its own AI products.\n\nThe rapid expansion of generative AI has forced technology companies to spend heavily on data centres, processors and electricity to train and operate increasingly sophisticated models.\n\nMore efficient chips could therefore help Google increase its available AI capacity without relying exclusively on building additional data centres and deploying more conventional accelerators.\n\nGoogle already develops its own Tensor Processing Units, or TPUs, which \n\n---\n\n[Lähde: The News International | URL: https://www.thenews.com.pk/latest/1409702-google-developing-frozen-v2-chip-to-hardcode-gemini-architecture-with-10x-efficiency]\nThe custom chip is designed to optimize Gemini's architecture, potentially improving AI performance while reducing computing costs and energy use\n\nGoogle is planning for new chips production to run on its 'Gemini' models to boost AI.\n\nAs reported by The Information, Google is reportedly developing a new custom server chip internally codenamed \"Frozen v2\"—designed to incorporate elements of the Gemini model architecture directly into the hardware.\n\nUnlike general-purpose AI chips that load models into memory and continuously shuffle data back and forth, Frozen v2 aims to hardcode portions of Gemini’s neural-network blueprint straight into the physical circuitry.\n\nAccording to the reports, the chip could be 6 to 10 times more efficient than Google’s latest custom Tensor Processing Units (TPUs), measured by AI tokens served per unit of power.\n\nThe initiative is partly driven by an internal AI computing capacity constraint that has created friction and forced Google Cloud to turn away some outside customer deals.\n\nEngineers are still finalizing the design and determining how much of the model will be permanently hardwired.\n\nThe 'Frozen' project is aimed  at creating a new set of homegrown chips  apart from  Google's TPUs, rather than replacing them, the report said.\n\nBloomberg News reported last week that Google delayed the launch of its  latest  Gemini AI model after it fell  short of internal goals, with the company working to improve its capabilities, particularly  in coding.\n\nA Google Cloud spokesperson said, \"Our teams are constantly researching and experimenting with new innovations... By co-designing our hardware and software from  the ground up,  we ensure  our systems are integrated and highly optimized.\"\n\nThe report informed engineers are still finalizing its design and the amount of model information  that will be hardwired.\n\nNotably, the chip is planned to complement—rather than replace—Google's existing TPU lineup, with a targeted deployment as early as 2028.\n\n---\n\n[Lähde: The Next Web | URL: https://thenextweb.com/news/google-frozen-chip-gemini-silicon]\nMost AI chips are general-purpose. You load a model onto them, and they run it. Google is reportedly trying something stranger: a chip that is the model, with Gemini’s blueprint etched into the hardware itself.\n\nThe project, informally called “Frozen v2,” was reported by The Information and picked up by Reuters and Bloomberg Law. Alphabet shares rose as much as 3.7% on the news. Google has not confirmed the project, and the chip is years away. But the idea behind it is a serious bet on where AI infrastructure goes next.\n\nToday’s chips keep the model in memory and shuttle its data back and forth. That flexibility costs power and time.\n\nFrozen v2 would bake Gemini’s neural-network architecture straight into the circuitry. The hardware locks to the shape of Google’s current AI design. Engineers can still refresh the model by loading new weights, but the underlying structure stays fixed, or “frozen.” How much of the model gets hardwired is reportedly still being decided.\n\nThe payoff is efficiency. The Information reports the chip could be 6 to 10 times more efficient than Google’s latest custom AI chips, measured by tokens served per unit of power. It would be a new line of silicon, separate from Google’s TPUs rather than a replacement. Deployment is targeted for as early as 2028.\n\nTNW City Coworking space - Where your best work happens\n\nA workspace designed for growth, collaboration, and endless networking opportunities in the heart of tech.\n\nThe timing is not random. The Info...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-20T21:35:53.114648+00:00",
+  "payload": {
+    "packet_id": "20260720T213134Z_a76ea83eb2",
+    "title": "Google kehittää Geminiä varten uutta tekoälypiiriä",
+    "summary": "Frozen v2 -nimellä tunnettu palvelinpiiri voisi parantaa Gemini-mallien energiatehokkuutta moninkertaisesti. Piirin käyttöönotto voisi alkaa aikaisintaan vuonna 2028.",
+    "content": "Google kehittää tiettävästi uutta Frozen v2 -työnimellä tunnettua palvelinpiiriä, jossa osia Gemini-tekoälymallien arkkitehtuurista rakennettaisiin suoraan fyysiseen laitteistoon. Tavoitteena on tehostaa tekoälypalvelujen toimintaa sekä vähentää niiden vaatimaa laskentakapasiteettia, muistiliikennettä, energiankulutusta ja kustannuksia tilanteessa, jossa käytettävissä oleva laskentakapasiteetti muodostaa kasvavan rajoitteen.\n\n## Geminin rakenne osaksi fyysistä piiriä\n\nNykyiset yleiskäyttöiset tekoälykiihdyttimet joutuvat lataamaan mallien tietoja muistiin ja siirtämään niitä jatkuvasti muistin ja laskentayksiköiden välillä. Frozen v2:ssa osa Geminin neuroverkon rakenteesta olisi kiinteä osa piirin fyysistä kytkentää, mikä voisi vähentää tätä tiedonsiirtoa ja siihen liittyviä laskenta- ja muistivaatimuksia. Hyöty kohdistuisi erityisesti päättelyyn eli vaiheeseen, jossa koulutettu tekoälymalli tuottaa käyttäjille vastauksia.\n\nLaitteistoon rakennettava perusrakenne pysyisi kiinteänä eli niin sanotusti jäädytettynä, mutta mallia voitaisiin edelleen päivittää lataamalla piirille uusia painokertoimia. Googlen insinöörit viimeistelevät raporttien mukaan yhä suunnittelua ja ratkaisevat, kuinka suuri osa Geminin tiedoista tai arkkitehtuurista kannattaa toteuttaa suoraan piirissä. Tämä ratkaisu määrittää, kuinka tiukasti uusi laitteisto sitoutuu Geminin nykyiseen rakenteeseen.\n\nRatkaisu poikkeaa tavasta, jossa yleiskäyttöinen piiri käsittelee kokonaan muistista ladattavaa mallia. Frozen v2:n hyöty syntyisi juuri ohjelmiston ja laitteiston tiiviimmästä yhdistämisestä. Piirin fyysiseen kytkentään rakennettu neuroverkon perusmuoto ei kuitenkaan vaihtuisi uusien painokertoimien mukana, joten arkkitehtuurin rakenne pysyisi samana myös mallia päivitettäessä. Siksi insinöörien on päätettävä jo suunnitteluvaiheessa, mikä osa Geministä kannattaa lukita laitteistoon ja mikä jättää päivitettäväksi.\n\n## Tehokkuushyöty voi olla moninkertainen\n\nThe Informationin tietoihin pohjautuvien raporttien mukaan Frozen v2 voisi olla kuudesta kymmeneen kertaa energiatehokkaampi kuin Googlen uusimmat omat Tensor Processing Unit -piirit eli TPU:t. Arvio perustuu tuotettujen tekoälytokenien määrään kulutettua energiayksikköä kohti. Kyse on vielä kehitteillä olevaa piiriä koskevasta arviosta, sillä suunnittelu ei ole valmis. Frozen v2:sta suunnitellaan TPU-piireistä erillistä uutta piirisarjaa, ei niiden korvaajaa.\n\nGoogle suunnittelee ottavansa piirin käyttöön aikaisintaan vuonna 2028. Jos kuusinkertainen tai jopa kymmenkertainen tehokkuus saavutetaan, yhtiö voisi palvella huomattavasti useampia Gemini-käyttäjiä ilman, että sähkönkulutusta ja laskentainfrastruktuuria pitäisi kasvattaa samassa suhteessa. Samalla tekoälypalvelujen laskenta- ja energiakustannukset voisivat pienentyä. Aikataulu riippuu kuitenkin keskeneräisen rakenteen viimeistelystä ja siitä, kuinka paljon mallista lopulta kiinnitetään pysyvästi piiriin.",
+    "category": "Teknologia",
+    "tags": [
+      "Google",
+      "Gemini",
+      "tekoälypiirit",
+      "palvelinpiirit",
+      "energiatehokkuus"
+    ],
+    "summary_bullets": [
+      "Frozen v2:ssa osia Geminin arkkitehtuurista rakennettaisiin suoraan piiriin.",
+      "Piirin arvioidaan voivan olla kuudesta kymmeneen kertaa Googlen nykyisiä tekoälypiirejä energiatehokkaampi.",
+      "Käyttöönotto voisi alkaa aikaisintaan vuonna 2028, mutta suunnittelu on vielä kesken."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "confidence": 0.88,
+    "journalist_note": "Tiedot perustuvat useiden julkaisujen välittämään The Informationin raportointiin. Tehokkuusluvut ja vuoden 2028 aikataulu ovat kehitysvaiheen arvioita."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260720T213134Z_a76ea83eb2\",\n  \"title\": \"Google kehittää Geminiä varten uutta tekoälypiiriä\",\n  \"summary\": \"Frozen v2 -nimellä tunnettu palvelinpiiri voisi parantaa Gemini-mallien energiatehokkuutta moninkertaisesti. Piirin käyttöönotto voisi alkaa aikaisintaan vuonna 2028.\",\n  \"content\": \"Google kehittää tiettävästi uutta Frozen v2 -työnimellä tunnettua palvelinpiiriä, jossa osia Gemini-tekoälymallien arkkitehtuurista rakennettaisiin suoraan fyysiseen laitteistoon. Tavoitteena on tehostaa tekoälypalvelujen toimintaa sekä vähentää niiden vaatimaa laskentakapasiteettia, muistiliikennettä, energiankulutusta ja kustannuksia tilanteessa, jossa käytettävissä oleva laskentakapasiteetti muodostaa kasvavan rajoitteen.\\n\\n## Geminin rakenne osaksi fyysistä piiriä\\n\\nNykyiset yleiskäyttöiset tekoälykiihdyttimet joutuvat lataamaan mallien tietoja muistiin ja siirtämään niitä jatkuvasti muistin ja laskentayksiköiden välillä. Frozen v2:ssa osa Geminin neuroverkon rakenteesta olisi kiinteä osa piirin fyysistä kytkentää, mikä voisi vähentää tätä tiedonsiirtoa ja siihen liittyviä laskenta- ja muistivaatimuksia. Hyöty kohdistuisi erityisesti päättelyyn eli vaiheeseen, jossa koulutettu tekoälymalli tuottaa käyttäjille vastauksia.\\n\\nLaitteistoon rakennettava perusrakenne pysyisi kiinteänä eli niin sanotusti jäädytettynä, mutta mallia voitaisiin edelleen päivittää lataamalla piirille uusia painokertoimia. Googlen insinöörit viimeistelevät raporttien mukaan yhä suunnittelua ja ratkaisevat, kuinka suuri osa Geminin tiedoista tai arkkitehtuurista kannattaa toteuttaa suoraan piirissä. Tämä ratkaisu määrittää, kuinka tiukasti uusi laitteisto sitoutuu Geminin nykyiseen rakenteeseen.\\n\\nRatkaisu poikkeaa tavasta, jossa yleiskäyttöinen piiri käsittelee kokonaan muistista ladattavaa mallia. Frozen v2:n hyöty syntyisi juuri ohjelmiston ja laitteiston tiiviimmästä yhdistämisestä. Piirin fyysiseen kytkentään rakennettu neuroverkon perusmuoto ei kuitenkaan vaihtuisi uusien painokertoimien mukana, joten arkkitehtuurin rakenne pysyisi samana myös mallia päivitettäessä. Siksi insinöörien on päätettävä jo suunnitteluvaiheessa, mikä osa Geministä kannattaa lukita laitteistoon ja mikä jättää päivitettäväksi.\\n\\n## Tehokkuushyöty voi olla moninkertainen\\n\\nThe Informationin tietoihin pohjautuvien raporttien mukaan Frozen v2 voisi olla kuudesta kymmeneen kertaa energiatehokkaampi kuin Googlen uusimmat omat Tensor Processing Unit -piirit eli TPU:t. Arvio perustuu tuotettujen tekoälytokenien määrään kulutettua energiayksikköä kohti. Kyse on vielä kehitteillä olevaa piiriä koskevasta arviosta, sillä suunnittelu ei ole valmis. Frozen v2:sta suunnitellaan TPU-piireistä erillistä uutta piirisarjaa, ei niiden korvaajaa.\\n\\nGoogle suunnittelee ottavansa piirin käyttöön aikaisintaan vuonna 2028. Jos kuusinkertainen tai jopa kymmenkertainen tehokkuus saavutetaan, yhtiö voisi palvella huomattavasti useampia Gemini-käyttäjiä ilman, että sähkönkulutusta ja laskentainfrastruktuuria pitäisi kasvattaa samassa suhteessa. Samalla tekoälypalvelujen laskenta- ja energiakustannukset voisivat pienentyä. Aikataulu riippuu kuitenkin keskeneräisen rakenteen viimeistelystä ja siitä, kuinka paljon mallista lopulta kiinnitetään pysyvästi piiriin.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"Google\",\n    \"Gemini\",\n    \"tekoälypiirit\",\n    \"palvelinpiirit\",\n    \"energiatehokkuus\"\n  ],\n  \"summary_bullets\": [\n    \"Frozen v2:ssa osia Geminin arkkitehtuurista rakennettaisiin suoraan piiriin.\",\n    \"Piirin arvioidaan voivan olla kuudesta kymmeneen kertaa Googlen nykyisiä tekoälypiirejä energiatehokkaampi.\",\n    \"Käyttöönotto voisi alkaa aikaisintaan vuonna 2028, mutta suunnittelu on vielä kesken.\"\n  ],\n  \"content_type\": \"uutinen\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.88,\n  \"journalist_note\": \"Tiedot perustuvat useiden julkaisujen välittämään The Informationin raportointiin. Tehokkuusluvut ja vuoden 2028 aikataulu ovat kehitysvaiheen arvioita.\"\n}",
+  "article": {
+    "title": "Google kehittää Geminiä varten uutta tekoälypiiriä",
+    "description": "Frozen v2 -nimellä tunnettu palvelinpiiri voisi parantaa Gemini-mallien energiatehokkuutta moninkertaisesti. Piirin käyttöönotto voisi alkaa aikaisintaan vuonna 2028.",
+    "link": "https://www.republicworld.com/tech/google-may-be-building-a-new-ai-chip-with-gemini-baked-directly-into-the-hardware-2026-07-20-132936",
+    "published": "2026-07-20T21:21:15+00:00",
+    "source": "Republic World",
+    "source_domain": "republicworld.com",
+    "language": "en",
+    "fingerprint": "6b8501fb95d92fe509c2fbae2cef5d47",
+    "_url_hash": "91446a6fdee3f6090a63a8ca70f92e27a5b9a6c52b92c35c3b414ea4e8007213",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: Republic World | URL: https://www.republicworld.com/tech/google-may-be-building-a-new-ai-chip-with-gemini-baked-directly-into-the-hardware-2026-07-20-132936]\nGoogle is reportedly developing a new server chip that would integrate elements of its Gemini AI model directly into the hardware, potentially allowing the company to run its artificial intelligence services more efficiently while addressing growing constraints on computing capacity.\n\nAccording to The Information, the new chip is informally known as Frozen v2 and is being developed as part of Google's efforts to more tightly integrate its AI software and underlying hardware infrastructure.\n\nGoogle reportedly plans to deploy the chip as early as 2028, although engineers are still finalising its design and determining how much information from its AI models will be hardwired into the chip.\n\nThe most significant aspect of Frozen v2 is Google's reported plan to incorporate elements of its Gemini models directly into the hardware.\n\nAI models typically run on general-purpose accelerators that must repeatedly access and process enormous amounts of model data. By hardwiring certain model information into specialised silicon, Google could potentially reduce some of the computing and memory requirements involved in serving Gemini responses to users.\n\nThe approach could make AI inference, the process of running a trained AI model to generate responses, considerably more efficient.\n\nFrozen v2 could reportedly deliver six to 10 times greater efficiency than Google's latest custom AI chips when measured by the number of AI tokens served for each unit of power consumed.\n\nIf achieved, such efficiency gains could allow Google to serve significantly more Gemini users without requiring a proportional increase in electricity and computing infrastructure.\n\nThe development comes as Google reportedly faces constraints on the amount of AI computing capacity available across its infrastructure. The capacity crunch has reportedly created internal tensions and even prompted Google Cloud to turn down some deals with external customers as the company balances demand for computing resources against the requirements of its own AI products.\n\nThe rapid expansion of generative AI has forced technology companies to spend heavily on data centres, processors and electricity to train and operate increasingly sophisticated models.\n\nMore efficient chips could therefore help Google increase its available AI capacity without relying exclusively on building additional data centres and deploying more conventional accelerators.\n\nGoogle already develops its own Tensor Processing Units, or TPUs, which \n\n---\n\n[Lähde: The News International | URL: https://www.thenews.com.pk/latest/1409702-google-developing-frozen-v2-chip-to-hardcode-gemini-architecture-with-10x-efficiency]\nThe custom chip is designed to optimize Gemini's architecture, potentially improving AI performance while reducing computing costs and energy use\n\nGoogle is planning for new chips production to run on its 'Gemini' models to boost AI.\n\nAs reported by The Information, Google is reportedly developing a new custom server chip internally codenamed \"Frozen v2\"—designed to incorporate elements of the Gemini model architecture directly into the hardware.\n\nUnlike general-purpose AI chips that load models into memory and continuously shuffle data back and forth, Frozen v2 aims to hardcode portions of Gemini’s neural-network blueprint straight into the physical circuitry.\n\nAccording to the reports, the chip could be 6 to 10 times more efficient than Google’s latest custom Tensor Processing Units (TPUs), measured by AI tokens served per unit of power.\n\nThe initiative is partly driven by an internal AI computing capacity constraint that has created friction and forced Google Cloud to turn away some outside customer deals.\n\nEngineers are still finalizing the design and determining how much of the model will be permanently hardwired.\n\nThe 'Frozen' project is aimed  at creating a new set of homegrown chips  apart from  Google's TPUs, rather than replacing them, the report said.\n\nBloomberg News reported last week that Google delayed the launch of its  latest  Gemini AI model after it fell  short of internal goals, with the company working to improve its capabilities, particularly  in coding.\n\nA Google Cloud spokesperson said, \"Our teams are constantly researching and experimenting with new innovations... By co-designing our hardware and software from  the ground up,  we ensure  our systems are integrated and highly optimized.\"\n\nThe report informed engineers are still finalizing its design and the amount of model information  that will be hardwired.\n\nNotably, the chip is planned to complement—rather than replace—Google's existing TPU lineup, with a targeted deployment as early as 2028.\n\n---\n\n[Lähde: The Next Web | URL: https://thenextweb.com/news/google-frozen-chip-gemini-silicon]\nMost AI chips are general-purpose. You load a model onto them, and they run it. Google is reportedly trying something stranger: a chip that is the model, with Gemini’s blueprint etched into the hardware itself.\n\nThe project, informally called “Frozen v2,” was reported by The Information and picked up by Reuters and Bloomberg Law. Alphabet shares rose as much as 3.7% on the news. Google has not confirmed the project, and the chip is years away. But the idea behind it is a serious bet on where AI infrastructure goes next.\n\nToday’s chips keep the model in memory and shuttle its data back and forth. That flexibility costs power and time.\n\nFrozen v2 would bake Gemini’s neural-network architecture straight into the circuitry. The hardware locks to the shape of Google’s current AI design. Engineers can still refresh the model by loading new weights, but the underlying structure stays fixed, or “frozen.” How much of the model gets hardwired is reportedly still being decided.\n\nThe payoff is efficiency. The Information reports the chip could be 6 to 10 times more efficient than Google’s latest custom AI chips, measured by tokens served per unit of power. It would be a new line of silicon, separate from Google’s TPUs rather than a replacement. Deployment is targeted for as early as 2028.\n\nTNW City Coworking space - Where your best work happens\n\nA workspace designed for growth, collaboration, and endless networking opportunities in the heart of tech.\n\nThe timing is not random. The Info...",
+    "research_source": "multi",
+    "summary": "Frozen v2 -nimellä tunnettu palvelinpiiri voisi parantaa Gemini-mallien energiatehokkuutta moninkertaisesti. Piirin käyttöönotto voisi alkaa aikaisintaan vuonna 2028.",
+    "content": "Google kehittää tiettävästi uutta Frozen v2 -työnimellä tunnettua palvelinpiiriä, jossa osia Gemini-tekoälymallien arkkitehtuurista rakennettaisiin suoraan fyysiseen laitteistoon. Tavoitteena on tehostaa tekoälypalvelujen toimintaa sekä vähentää niiden vaatimaa laskentakapasiteettia, muistiliikennettä, energiankulutusta ja kustannuksia tilanteessa, jossa käytettävissä oleva laskentakapasiteetti muodostaa kasvavan rajoitteen.\n\n## Geminin rakenne osaksi fyysistä piiriä\n\nNykyiset yleiskäyttöiset tekoälykiihdyttimet joutuvat lataamaan mallien tietoja muistiin ja siirtämään niitä jatkuvasti muistin ja laskentayksiköiden välillä. Frozen v2:ssa osa Geminin neuroverkon rakenteesta olisi kiinteä osa piirin fyysistä kytkentää, mikä voisi vähentää tätä tiedonsiirtoa ja siihen liittyviä laskenta- ja muistivaatimuksia. Hyöty kohdistuisi erityisesti päättelyyn eli vaiheeseen, jossa koulutettu tekoälymalli tuottaa käyttäjille vastauksia.\n\nLaitteistoon rakennettava perusrakenne pysyisi kiinteänä eli niin sanotusti jäädytettynä, mutta mallia voitaisiin edelleen päivittää lataamalla piirille uusia painokertoimia. Googlen insinöörit viimeistelevät raporttien mukaan yhä suunnittelua ja ratkaisevat, kuinka suuri osa Geminin tiedoista tai arkkitehtuurista kannattaa toteuttaa suoraan piirissä. Tämä ratkaisu määrittää, kuinka tiukasti uusi laitteisto sitoutuu Geminin nykyiseen rakenteeseen.\n\nRatkaisu poikkeaa tavasta, jossa yleiskäyttöinen piiri käsittelee kokonaan muistista ladattavaa mallia. Frozen v2:n hyöty syntyisi juuri ohjelmiston ja laitteiston tiiviimmästä yhdistämisestä. Piirin fyysiseen kytkentään rakennettu neuroverkon perusmuoto ei kuitenkaan vaihtuisi uusien painokertoimien mukana, joten arkkitehtuurin rakenne pysyisi samana myös mallia päivitettäessä. Siksi insinöörien on päätettävä jo suunnitteluvaiheessa, mikä osa Geministä kannattaa lukita laitteistoon ja mikä jättää päivitettäväksi.\n\n## Tehokkuushyöty voi olla moninkertainen\n\nThe Informationin tietoihin pohjautuvien raporttien mukaan Frozen v2 voisi olla kuudesta kymmeneen kertaa energiatehokkaampi kuin Googlen uusimmat omat Tensor Processing Unit -piirit eli TPU:t. Arvio perustuu tuotettujen tekoälytokenien määrään kulutettua energiayksikköä kohti. Kyse on vielä kehitteillä olevaa piiriä koskevasta arviosta, sillä suunnittelu ei ole valmis. Frozen v2:sta suunnitellaan TPU-piireistä erillistä uutta piirisarjaa, ei niiden korvaajaa.\n\nGoogle suunnittelee ottavansa piirin käyttöön aikaisintaan vuonna 2028. Jos kuusinkertainen tai jopa kymmenkertainen tehokkuus saavutetaan, yhtiö voisi palvella huomattavasti useampia Gemini-käyttäjiä ilman, että sähkönkulutusta ja laskentainfrastruktuuria pitäisi kasvattaa samassa suhteessa. Samalla tekoälypalvelujen laskenta- ja energiakustannukset voisivat pienentyä. Aikataulu riippuu kuitenkin keskeneräisen rakenteen viimeistelystä ja siitä, kuinka paljon mallista lopulta kiinnitetään pysyvästi piiriin.",
+    "category": "Talous",
+    "tags": [
+      "google",
+      "gemini",
+      "tekoälypiirit",
+      "palvelinpiirit",
+      "energiatehokkuus"
+    ],
+    "summary_bullets": [
+      "Frozen v2:ssa osia Geminin arkkitehtuurista rakennettaisiin suoraan piiriin.",
+      "Piirin arvioidaan voivan olla kuudesta kymmeneen kertaa Googlen nykyisiä tekoälypiirejä energiatehokkaampi.",
+      "Käyttöönotto voisi alkaa aikaisintaan vuonna 2028, mutta suunnittelu on vielä kesken."
+    ],
+    "key_points": [
+      "Frozen v2:ssa osia Geminin arkkitehtuurista rakennettaisiin suoraan piiriin.",
+      "Piirin arvioidaan voivan olla kuudesta kymmeneen kertaa Googlen nykyisiä tekoälypiirejä energiatehokkaampi.",
+      "Käyttöönotto voisi alkaa aikaisintaan vuonna 2028, mutta suunnittelu on vielä kesken."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "journalist_note": "Tiedot perustuvat useiden julkaisujen välittämään The Informationin raportointiin. Tehokkuusluvut ja vuoden 2028 aikataulu ovat kehitysvaiheen arvioita.",
+    "source_text": "Google is reportedly developing a new server chip that would integrate elements of its Gemini AI model directly into the hardware, potentially allowing the company to run its artificial intelligence services more efficiently while addressing growing constraints on computing capacity. According to The Information, the new chip is informally known as Frozen v2 and is being developed as part of Google's efforts to more tightly integrate its AI software and underlying hardware infrastructure. Google reportedly plans to deploy the chip as early as 2028, although engineers are still finalising its design and determining how much information from its AI models will be hardwired into the chip. The most significant aspect of Frozen v2 is Google's reported plan to incorporate elements of its Gemini models directly into the hardware.\n\nThe custom chip is designed to optimize Gemini's architecture, potentially improving AI performance while reducing computing costs and energy use Google is planning for new chips production to run on its 'Gemini' models to boost AI. As reported by The Information, Google is reportedly developing a new custom server chip internally codenamed \"Frozen v2\"—designed to incorporate elements of the Gemini model architecture directly into the hardware. Unlike general-purpose AI chips that load models into memory and continuously shuffle data back and forth, Frozen v2 aims to hardcode portions of Gemini’s neural-network blueprint straight into the physical circuitry. According to the reports, the chip could be 6 to 10 times more efficient than Google’s latest custom Tensor Processing Units (TPUs), measured by AI tokens served per unit of power.\n\nFrozen v2 would bake Gemini’s neural-network architecture straight into the circuitry. The hardware locks to the shape of Google’s current AI design. Engineers can still refresh the model by loading new weights, but the underlying structure stays fixed, or “frozen.” How much of the model gets hardwired is reportedly still being decided. The payoff is efficiency. The Information reports the chip could be 6 to 10 times more efficient than Google’s latest custom AI chips, measured by tokens served per unit of power. It would be a new line of silicon, separate from Google’s TPUs rather than a replacement. Deployment is targeted for as early as 2028. TNW City Coworking space - Where your best work happens A workspace designed for growth, collaboration, and endless networking opportunities in the heart of tech. The timing is not random. The Info...\n\nAI models typically run on general-purpose accelerators that must repeatedly access and process enormous amounts of model data. By hardwiring certain model information into specialised silicon, Google could potentially reduce some of the computing and memory requirements involved in serving Gemini responses to users. The approach could make AI inference, the process of running a trained AI model to generate responses, considerably more efficient. Frozen v2 could reportedly deliver six to 10 times greater efficiency than Google's latest custom AI chips when measured by the number of AI tokens served for each unit of power consumed. If achieved, such efficiency gains could allow Google to serve significantly more Gemini users without requiring a proportional increase in electricity and computing infrastructure.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.88,
+    "degraded_mode": false,
+    "monica_packet_id": "20260720T213134Z_a76ea83eb2",
+    "source_url": "https://www.republicworld.com/tech/google-may-be-building-a-new-ai-chip-with-gemini-baked-directly-into-the-hardware-2026-07-20-132936"
+  }
+}

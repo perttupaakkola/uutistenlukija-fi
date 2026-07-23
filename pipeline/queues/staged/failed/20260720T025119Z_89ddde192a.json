@@ -1,0 +1,94 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-20T02:51:19.973743+00:00",
+  "digest": "89ddde192a",
+  "packet": {
+    "packet_id": "20260720T025119Z_89ddde192a",
+    "created_at": "2026-07-20T02:51:19Z",
+    "headline_seed": "Moni talotoimittaja myy nyt ”valehirsitaloja” – Edullisempi, parempi lämmöneristys ja näyttää hirsitalolta",
+    "description_seed": "Hirsitalot ovat kysyttyjä mutta myös kalliimpia kuin vastaavan kokoiset tavalliset puutalot. Markkinoilta löytyy nykyään myös vaihtoehtoja, jotka näyttävät hirsitaloilta, mutta ovat edullisempia ja eristävät paremmin lämpöä.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/d18bbe2d-9474-408c-b09d-2468549cc81d?utm_source=rss",
+    "source": "Tekniikka & Talous",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "selected source block is missing name/url/domain; seed provenance cannot substitute",
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Moni talotoimittaja myy nyt ”valehirsitaloja” – Edullisempi, parempi lämmöneristys ja näyttää hirsitalolta"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_url": "",
+        "source_domain": "",
+        "source_type": "research",
+        "text": "Hirsitalot ovat kysyttyjä mutta myös kalliimpia kuin vastaavan kokoiset tavalliset puutalot. Markkinoilta löytyy nykyään myös vaihtoehtoja, jotka näyttävät hirsitaloilta, mutta ovat edullisempia ja eristävät paremmin lämpöä.",
+        "word_count": 26,
+        "keyword_overlap": 20,
+        "strong_overlap": 17
+      }
+    ],
+    "source_text": "Hirsitalot ovat kysyttyjä mutta myös kalliimpia kuin vastaavan kokoiset tavalliset puutalot. Markkinoilta löytyy nykyään myös vaihtoehtoja, jotka näyttävät hirsitaloilta, mutta ovat edullisempia ja eristävät paremmin lämpöä.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 52,
+      "selected_blocks": 1,
+      "selected_source_words": 26,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Tekniikka & Talous"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "provenance_invalid",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Moni talotoimittaja myy nyt ”valehirsitaloja” – Edullisempi, parempi lämmöneristys ja näyttää hirsitalolta",
+      "description": "Hirsitalot ovat kysyttyjä mutta myös kalliimpia kuin vastaavan kokoiset tavalliset puutalot. Markkinoilta löytyy nykyään myös vaihtoehtoja, jotka näyttävät hirsitaloilta, mutta ovat edullisempia ja eristävät paremmin lämpöä.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Moni talotoimittaja myy nyt ”valehirsitaloja” – Edullisempi, parempi lämmöneristys ja näyttää hirsitalolta",
+    "description": "Hirsitalot ovat kysyttyjä mutta myös kalliimpia kuin vastaavan kokoiset tavalliset puutalot. Markkinoilta löytyy nykyään myös vaihtoehtoja, jotka näyttävät hirsitaloilta, mutta ovat edullisempia ja eristävät paremmin lämpöä.",
+    "link": "https://www.tekniikkatalous.fi/uutiset/a/d18bbe2d-9474-408c-b09d-2468549cc81d?utm_source=rss",
+    "published": "2026-07-20T01:45:00+00:00",
+    "source": "Tekniikka & Talous",
+    "source_domain": "tekniikkatalous.fi",
+    "language": "fi",
+    "fingerprint": "c3bb6fa443a18e7ab38e76fda064898f",
+    "_url_hash": "6c43878a0742ebbf951360fb0273dba4269460e3078d5b1b916f635629e6087b",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "Hirsitalot ovat kysyttyjä mutta myös kalliimpia kuin vastaavan kokoiset tavalliset puutalot. Markkinoilta löytyy nykyään myös vaihtoehtoja, jotka näyttävät hirsitaloilta, mutta ovat edullisempia ja eristävät paremmin lämpöä.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-07-20T02:53:18.733640+00:00",
+  "failure": "Lähdeaineisto on liian suppea ja sen alkuperä on vahvistamatta, joten vähintään 250 sanan artikkelia ei voi kirjoittaa ilman perusteettomia lisäyksiä.",
+  "raw_response": "{\"packet_id\":\"20260720T025119Z_89ddde192a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian suppea ja sen alkuperä on vahvistamatta, joten vähintään 250 sanan artikkelia ei voi kirjoittaa ilman perusteettomia lisäyksiä.\"}"
+}
