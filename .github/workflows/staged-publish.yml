@@ -1,0 +1,100 @@
+name: Staged publish
+
+# Actions-side publisher (owner directive, Perttu, 2026-07-23).
+# Replaces the VPS `staged_publish.py publish` cron: publishes completed
+# outbox packets, builds, deploys to Cloudflare Pages directly.
+#
+# IMPORTANT: pushes made with the default GITHUB_TOKEN do NOT trigger
+# other workflows, so deploy.yml will not fire for our push — this
+# workflow therefore builds and deploys itself (same steps as deploy.yml).
+#
+# Scheduled runs are gated on the marker file `pipeline/actions-publish.enabled`
+# so this can be merged inert and cut over deliberately (see
+# docs/actions-pipeline-migration.md). Manual dispatch always runs.
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      max_articles:
+        description: "Max articles to publish this run"
+        required: false
+        default: "3"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: staged-publish
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Gate scheduled runs on cutover marker
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ ! -f pipeline/actions-publish.enabled ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "Cutover marker pipeline/actions-publish.enabled not present; skipping scheduled run."
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Setup Hugo
+        if: steps.gate.outputs.enabled == 'true'
+        run: |
+          HUGO_VERSION="0.147.0"
+          HUGO_DEB="/tmp/hugo.deb"
+          HUGO_SHA256="d2a308de005f87e2d5ffe76b6cab924509ccb59be542cd4ea5f9471c29176b1c"
+          HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          wget --quiet --tries=5 --waitretry=5 --retry-connrefused "$HUGO_URL" -O "$HUGO_DEB"
+          test -s "$HUGO_DEB"
+          echo "${HUGO_SHA256}  ${HUGO_DEB}" | sha256sum --check --strict
+          sudo dpkg -i /tmp/hugo.deb
+          hugo version
+
+      - name: Install Python dependencies
+        if: steps.gate.outputs.enabled == 'true'
+        run: python3 -m pip install --quiet -r requirements.txt
+
+      - name: Configure git identity
+        if: steps.gate.outputs.enabled == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898062+github-actions[bot]@users.noreply.github.com"
+
+      - name: Publish staged outbox packets
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          # Image enrichment keys. Optional: without them articles fall back
+          # to category images. Set via `gh secret set` per the migration doc.
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          KIE_API_KEY: ${{ secrets.KIE_API_KEY }}
+          DISCORD_PIPELINE_WEBHOOK: ${{ secrets.DISCORD_PIPELINE_WEBHOOK }}
+          MAX_ARTICLES: ${{ github.event.inputs.max_articles || '3' }}
+        run: |
+          python3 pipeline/staged_publish.py publish --max-articles "$MAX_ARTICLES" --git-push
+
+      - name: Build
+        if: steps.gate.outputs.enabled == 'true'
+        run: hugo --minify --cleanDestinationDir
+
+      - name: Deploy to Cloudflare Pages
+        if: steps.gate.outputs.enabled == 'true'
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=uutistenlukija-fi --branch=main

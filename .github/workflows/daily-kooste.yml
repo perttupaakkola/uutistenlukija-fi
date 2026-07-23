@@ -1,0 +1,75 @@
+name: Daily kooste
+
+# Actions-side daily digest generator (owner directive, Perttu, 2026-07-23).
+# Replaces the VPS 18:00 UTC cron: generate_kooste.py + commit + push,
+# then builds and deploys (GITHUB_TOKEN pushes do not trigger deploy.yml).
+# Scheduled runs are gated on pipeline/actions-publish.enabled, same as
+# the staged-publish workflow. Manual dispatch always runs.
+
+on:
+  schedule:
+    - cron: "0 18 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-kooste
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  kooste:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Gate scheduled runs on cutover marker
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ ! -f pipeline/actions-publish.enabled ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "Cutover marker pipeline/actions-publish.enabled not present; skipping scheduled run."
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate kooste and push
+        if: steps.gate.outputs.enabled == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898062+github-actions[bot]@users.noreply.github.com"
+          python3 scripts/generate_kooste.py
+          git add -A
+          git commit -m "auto: päivän kooste" --allow-empty
+          git pull --rebase --autostash origin main
+          git push origin main
+
+      - name: Setup Hugo
+        if: steps.gate.outputs.enabled == 'true'
+        run: |
+          HUGO_VERSION="0.147.0"
+          HUGO_DEB="/tmp/hugo.deb"
+          HUGO_SHA256="d2a308de005f87e2d5ffe76b6cab924509ccb59be542cd4ea5f9471c29176b1c"
+          HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          wget --quiet --tries=5 --waitretry=5 --retry-connrefused "$HUGO_URL" -O "$HUGO_DEB"
+          test -s "$HUGO_DEB"
+          echo "${HUGO_SHA256}  ${HUGO_DEB}" | sha256sum --check --strict
+          sudo dpkg -i /tmp/hugo.deb
+
+      - name: Build
+        if: steps.gate.outputs.enabled == 'true'
+        run: hugo --minify --cleanDestinationDir
+
+      - name: Deploy to Cloudflare Pages
+        if: steps.gate.outputs.enabled == 'true'
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=uutistenlukija-fi --branch=main
