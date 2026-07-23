@@ -1,14 +1,15 @@
 name: Daily kooste
 
 # Actions-side daily digest generator (owner directive, Perttu, 2026-07-23).
-# Replaces the VPS 18:00 UTC cron: generate_kooste.py + commit + push,
+# Replaces the VPS 18:00 UTC cron: generate_kooste.py + commit + push.
+# Actions runs at 18:07 UTC to avoid GitHub's documented top-of-hour load,
 # then builds and deploys (GITHUB_TOKEN pushes do not trigger deploy.yml).
 # Scheduled runs are gated on pipeline/actions-publish.enabled, same as
 # the staged-publish workflow. Manual dispatch always runs.
 
 on:
   schedule:
-    - cron: "0 18 * * *"
+    - cron: "7 18 * * *"
   workflow_dispatch: {}
 
 permissions:

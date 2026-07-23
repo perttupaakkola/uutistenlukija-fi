@@ -24,7 +24,9 @@ pushes from the VPS.
   can be delayed or dropped under load. Replaces the quiesced VPS
   `uutis-staged-publish` cron and resolves OPE-448's root cause (heavy local Hugo
   builds on the VPS) structurally.
-- `.github/workflows/daily-kooste.yml` — 18:00 UTC: generate kooste, push, build, deploy.
+- `.github/workflows/daily-kooste.yml` — 18:07 UTC: generate kooste, push, build,
+  deploy. The seven-minute offset avoids GitHub's documented top-of-hour load
+  while replacing the prior 18:00 VPS cron.
 - Both are inert on schedule until the marker file `pipeline/actions-publish.enabled`
   is committed. `workflow_dispatch` always runs (use for a supervised first run).
 
