@@ -1886,11 +1886,11 @@ def cmd_publish(args: argparse.Namespace) -> int:
         return 0
     created = publish_articles(articles)
     if created:
-        mark_published(articles)
         ok, err = build_site()
         if not ok:
             log(f"publish: build failed: {err}")
             return 2
+        mark_published(articles)
         keep = {a.get("monica_packet_id") for a in articles if a.get("monica_packet_id")}
         for p, data in items:
             pid = (data.get("packet") or {}).get("packet_id")

@@ -1,0 +1,94 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-20T22:31:25.106660+00:00",
+  "digest": "764b04b08a",
+  "packet": {
+    "packet_id": "20260720T223125Z_764b04b08a",
+    "created_at": "2026-07-20T22:31:25Z",
+    "headline_seed": "Trump’s latest AI czar has already resigned",
+    "description_seed": "The director role for the Center for AI Standards and Innovation (CAISI) has become a revolving door since David Sacks left his position as czar.",
+    "link": "https://techcrunch.com/2026/07/20/trumps-latest-ai-czar-has-already-resigned/",
+    "source": "TechCrunch",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "selected source block is missing name/url/domain; seed provenance cannot substitute",
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.49,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Trump’s latest AI czar has already resigned"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_url": "",
+        "source_domain": "",
+        "source_type": "research",
+        "text": "The director role for the Center for AI Standards and Innovation (CAISI) has become a revolving door since David Sacks left his position as czar.",
+        "word_count": 25,
+        "keyword_overlap": 15,
+        "strong_overlap": 7
+      }
+    ],
+    "source_text": "The director role for the Center for AI Standards and Innovation (CAISI) has become a revolving door since David Sacks left his position as czar.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 50,
+      "selected_blocks": 1,
+      "selected_source_words": 25,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "provenance_invalid",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Trump’s latest AI czar has already resigned",
+      "description": "The director role for the Center for AI Standards and Innovation (CAISI) has become a revolving door since David Sacks left his position as czar.",
+      "category_hint": "Teknologia",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Trump’s latest AI czar has already resigned",
+    "description": "The director role for the Center for AI Standards and Innovation (CAISI) has become a revolving door since David Sacks left his position as czar.",
+    "link": "https://techcrunch.com/2026/07/20/trumps-latest-ai-czar-has-already-resigned/",
+    "published": "2026-07-20T22:21:04+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "84ac36f2b494241db3ef9c9b4350fdcd",
+    "_url_hash": "04ed37ca5667c30245521381030c3a830bcd266ab879249c58d62666f22ac9c7",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "The director role for the Center for AI Standards and Innovation (CAISI) has become a revolving door since David Sacks left his position as czar.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-07-20T22:33:15.717037+00:00",
+  "failure": "Lähdeaineisto on liian niukka ja sen alkuperätiedot ovat puutteelliset vähintään 250 sanan luotettavan uutisartikkelin kirjoittamiseen.",
+  "raw_response": "{\"packet_id\":\"20260720T223125Z_764b04b08a\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka ja sen alkuperätiedot ovat puutteelliset vähintään 250 sanan luotettavan uutisartikkelin kirjoittamiseen.\"}"
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-20T08:41:22.705403+00:00",
+  "digest": "ff6ca55968",
+  "packet": {
+    "packet_id": "20260720T084122Z_ff6ca55968",
+    "created_at": "2026-07-20T08:41:22Z",
+    "headline_seed": "Venäjän oikeusministeriö kielsi suomalaisen järjestön toiminnan Venäjällä",
+    "description_seed": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9631403",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "",
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Venäjän oikeusministeriö kielsi suomalaisen järjestön toiminnan Venäjällä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 104,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Aamuposti"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Venäjän oikeusministeriö kielsi suomalaisen järjestön toiminnan Venäjällä",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Venäjän oikeusministeriö kielsi suomalaisen järjestön toiminnan Venäjällä",
+    "description": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9631403",
+    "published": "2026-07-20T10:33:02+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "488ec38746311a84b24ea50ced9abcaf",
+    "_url_hash": "1c722a1696a8d2c538fd8fa01c730fa307c70653ef0a878158715f426ea4b6c3",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Aamuposti | URL: https://www.aamuposti.fi/uutissuomalainen/9631079]\nItä-Afrikan Burundissa ainakin kahdeksan ihmistä on kuollut väentungoksessa, poliisi kertoi sunnuntaina. Lisäksi yhdeksän ihmisen kerrotaan loukkaantuneen.\n\nTurma sattui, kun tuhansia ihmisiä oli kokoontunut maan suurimpaan kaupunkiin Bujumburaan kuuntelemaan suosittua evankelikaalista saarnaajaa Chris Ndikumanaa.\n\nTapahtuma järjestettiin paikallisessa oppilaitoksessa, jonka opettaja kuvaili väentungosta uutistoimisto AFP:lle.\n\n– Ihmisiä oli niin paljon, ja kaikki halusivat lähteä samaan aikaan -- ihmisiä tallaantui, hän sanoi.\n\nEvankelikaalisten kirkkojen suosio on kasvanut nopeasti Afrikassa, ja monissa uskonnollisissa kokoontumisissa on nähty viime vuosina tallautumiskuolemia.\n\nTansaniassa ainakin 20 ihmistä kuoli vuonna 2020, kun väkijoukot ryntäsivät hakemaan saarnaajan jakamaa \"pyhää öljyä\".\n\nVuonna 2022 ainakin 29 ihmistä sai surmansa väentungoksessa Liberiassa, kun varkaat iskivät uskonnolliseen kokoontumiseen.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-20T08:43:19.866082+00:00",
+  "failure": "Paketissa ei ole lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen.",
+  "raw_response": "{\"packet_id\":\"20260720T084122Z_ff6ca55968\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lähdetekstiä eikä riittäviä varmennettuja tietoja julkaistavan artikkelin kirjoittamiseen.\"}"
+}

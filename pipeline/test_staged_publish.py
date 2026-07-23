@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import tempfile
 import unittest
+from argparse import Namespace
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from unittest.mock import patch
@@ -668,6 +669,47 @@ class StagedPublishMetricsTests(unittest.TestCase):
             {"guard": "Kotimaa", "writer": "Kotimaa", "publisher": "Kotimaa"},
         )
         self.assertFalse(published["category_trace"]["disagreement"])
+
+    def test_publish_build_failure_does_not_mark_dedup_or_move_packet(self) -> None:
+        article = {
+            "title": "Build failure must remain retryable",
+            "content": "sana " * 260,
+            "category": "Kotimaa",
+            "source_url": "https://example.test/build-failure",
+            "image": "/images/articles/build-failure.jpg",
+            "monica_packet_id": "pkt-build-failure",
+        }
+        data = {
+            "article": article,
+            "packet": {
+                "packet_id": "pkt-build-failure",
+                "category": "Kotimaa",
+                "clean_source_blocks": [
+                    {
+                        "source": "Testi",
+                        "source_url": "https://example.test/build-failure",
+                        "text": "lähdesana " * 260,
+                    }
+                ],
+            },
+            "payload": {"category": "Kotimaa"},
+        }
+        path = self._write("outbox", "pkt-build-failure", data, age_hours=1)
+
+        with patch.object(staged_publish, "load_outbox", return_value=[(path, data)]), \
+             patch.object(staged_publish, "run_quality_gate", return_value=type("Gate", (), {"passed": [article], "rejected": []})()), \
+             patch.object(staged_publish, "check_published_duplicates", side_effect=lambda articles, window_hours=48: articles), \
+             patch.object(staged_publish, "dedup_within_batch", side_effect=lambda articles: articles), \
+             patch.object(staged_publish, "enrich_images_for_articles", return_value={"total": 1, "images": 1, "unsplash": 0, "pexels": 1, "missing": 0}), \
+             patch.object(staged_publish, "publish_articles", return_value=["content/posts/test.md"]), \
+             patch.object(staged_publish, "mark_published") as mark_published, \
+             patch.object(staged_publish, "build_site", return_value=(False, "synthetic build failure")):
+            rc = staged_publish.cmd_publish(Namespace(max_articles=1, dedup_window=48, dry_run=False, git_push=False))
+
+        self.assertEqual(rc, 2)
+        mark_published.assert_not_called()
+        self.assertTrue(path.exists())
+        self.assertFalse((self.root / "published" / "pkt-build-failure.json").exists())
 
     def test_publisher_frontmatter_preserves_image_policy_metadata(self) -> None:
         markdown = publisher._article_to_markdown({

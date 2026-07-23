@@ -1,19 +1,19 @@
 {
   "analytics": {
     "freshness": {
-      "age_minutes": 195.6,
+      "age_minutes": 196.7,
       "blocked_by": null,
-      "checked_at": "2026-07-16T00:15:04+00:00",
+      "checked_at": "2026-07-22T00:15:04+00:00",
       "daily_report": {
         "age_hours": 0.0,
         "artifact": "analytics/daily-report.json",
         "counts": {
-          "daily_pageview_rows": 1,
-          "search_console_top_queries": 10,
+          "daily_pageview_rows": 2,
+          "search_console_top_queries": 0,
           "top_pages_7d": 10,
           "traffic_sources_7d": 4
         },
-        "evidence_at": "2026-07-16T00:15:04+00:00",
+        "evidence_at": "2026-07-22T00:15:04+00:00",
         "fresh": true,
         "property_id": "529369568",
         "site": "sc-domain:uutistenlukija.fi"
@@ -25,10 +25,10 @@
         "superseded_by_fresh_validation": false
       },
       "search_console": {
-        "age_hours": 17.55,
+        "age_hours": 17.75,
         "artifact": "static/api/search-console-data.json",
         "days": 28,
-        "evidence_at": "2026-07-15T06:41:50+00:00",
+        "evidence_at": "2026-07-21T06:30:02+00:00",
         "fresh": true,
         "row_count": 500,
         "site": "sc-domain:uutistenlukija.fi"
@@ -42,48 +42,48 @@
         "age_hours": 0.0,
         "artifact": "analytics/daily-report.json",
         "counts": {
-          "daily_pageview_rows": 1,
-          "search_console_top_queries": 10,
+          "daily_pageview_rows": 2,
+          "search_console_top_queries": 0,
           "top_pages_7d": 10,
           "traffic_sources_7d": 4
         },
-        "evidence_at": "2026-07-16T00:15:04+00:00",
+        "evidence_at": "2026-07-22T00:15:04+00:00",
         "fresh": true,
         "property_id": "529369568",
         "site": "sc-domain:uutistenlukija.fi"
       },
       "daily_traffic_log": {
-        "age_minutes": 1230.6,
+        "age_minutes": 1231.8,
         "exists": true,
         "status": "log_present"
       },
       "reason": "fresh GA4 validation artifact present",
       "status": "fresh",
       "weekly_metrics_log": {
-        "age_minutes": 4110.6,
+        "age_minutes": 2671.7,
         "exists": true,
         "status": "log_present"
       }
     },
     "gsc": {
       "ctr_gap_report": {
-        "age_minutes": 4050.6,
+        "age_minutes": 2611.8,
         "data_source": "google_search_console",
-        "generated_at": "2026-07-13T08:00:02.075694Z",
+        "generated_at": "2026-07-20T08:00:01.479363Z",
         "source": "static/api/ctr-gap-report.json",
-        "total_gaps_found": 3
+        "total_gaps_found": 2
       },
       "fetch_log": {
-        "age_minutes": 1260.6,
+        "age_minutes": 1261.8,
         "exists": true,
         "status": "log_present"
       },
       "reason": "fresh Search Console validation artifact present",
       "search_console_report": {
-        "age_hours": 17.55,
+        "age_hours": 17.75,
         "artifact": "static/api/search-console-data.json",
         "days": 28,
-        "evidence_at": "2026-07-15T06:41:50+00:00",
+        "evidence_at": "2026-07-21T06:30:02+00:00",
         "fresh": true,
         "row_count": 500,
         "site": "sc-domain:uutistenlukija.fi"
@@ -94,84 +94,85 @@
   },
   "category_drift": {
     "alerts": [
-      "Kotimaa: 32.2% (+7.2% over target 25%)",
-      "Kulttuuri: 1.7% (-5.3% under target 7%)",
-      "Talous: 10.3% (-9.7% under target 20%)",
-      "Ulkomaat: 25.3% (+5.3% over target 20%)"
+      "Kotimaa: 31.8% (+6.8% over target 25%)",
+      "Kulttuuri: 1.6% (-5.4% under target 7%)",
+      "Talous: 10.9% (-9.1% under target 20%)",
+      "Ulkomaat: 25.6% (+5.6% over target 20%)"
     ],
     "available": true,
     "categories": [
       {
         "category": "Kotimaa",
-        "count": 1337,
-        "delta": 7.2,
-        "pct": 32.2,
+        "count": 1392,
+        "delta": 6.8,
+        "pct": 31.8,
         "status": "over",
         "target_pct": 25
       },
       {
         "category": "Kulttuuri",
-        "count": 71,
-        "delta": -5.3,
-        "pct": 1.7,
+        "count": 72,
+        "delta": -5.4,
+        "pct": 1.6,
         "status": "under",
         "target_pct": 7
       },
       {
         "category": "Talous",
-        "count": 427,
-        "delta": -9.7,
-        "pct": 10.3,
+        "count": 476,
+        "delta": -9.1,
+        "pct": 10.9,
         "status": "under",
         "target_pct": 20
       },
       {
         "category": "Teknologia",
-        "count": 737,
-        "delta": 2.7,
-        "pct": 17.7,
+        "count": 768,
+        "delta": 2.5,
+        "pct": 17.5,
         "status": "ok",
         "target_pct": 15
       },
       {
         "category": "Tiede",
-        "count": 247,
-        "delta": 2.9,
-        "pct": 5.9,
+        "count": 255,
+        "delta": 2.8,
+        "pct": 5.8,
         "status": "ok",
         "target_pct": 3
       },
       {
         "category": "Ulkomaat",
-        "count": 1050,
-        "delta": 5.3,
-        "pct": 25.3,
+        "count": 1122,
+        "delta": 5.6,
+        "pct": 25.6,
         "status": "over",
         "target_pct": 20
       },
       {
         "category": "Urheilu",
-        "count": 288,
-        "delta": -3.1,
-        "pct": 6.9,
+        "count": 295,
+        "delta": -3.3,
+        "pct": 6.7,
         "status": "ok",
         "target_pct": 10
       }
     ],
-    "generated_at": "2026-07-15T07:30:01.892324+00:00",
+    "generated_at": "2026-07-21T07:30:02.032376+00:00",
     "source": "static/api/category-stats.json",
-    "total_articles": 4157
+    "total_articles": 4380
   },
   "content": {
-    "article_count_local": 4201,
-    "last_publish_age_minutes": 12.2,
-    "last_publish_at": "2026-07-16T03:18:26.877820Z",
+    "article_count_local": 4373,
+    "draft_count_local": 7,
+    "last_publish_age_minutes": 3003.4,
+    "last_publish_at": "2026-07-20T01:28:27.565553Z",
     "latest_article": {
-      "category": "Talous",
-      "slug": "2026-07-16-rahastoihin-virtasi-kesakuussa-lahes-kaksi-miljardia-euroa-o",
-      "title": "Rahastoihin virtasi kesäkuussa lähes kaksi miljardia euroa – osakerahastoista lunastettiin varoja"
+      "category": "Ulkomaat",
+      "slug": "2026-07-20-norja-avasi-uuden-muistomerkin-vuoden-2011-terrori-iskujen-u",
+      "title": "Norja avasi uuden muistomerkin vuoden 2011 terrori-iskujen uhreille"
     },
-    "published_last_24h_local": 53,
+    "published_last_24h_local": 0,
     "source": "content/posts frontmatter"
   },
   "coordination": {
@@ -181,9 +182,21 @@
       "OPE-352",
       "OPE-354",
       "OPE-367",
-      "OPE-377",
-      "OPE-389",
-      "OPE-394"
+      "OPE-405",
+      "OPE-426",
+      "OPE-430",
+      "OPE-433",
+      "OPE-435",
+      "OPE-444",
+      "OPE-446",
+      "OPE-449",
+      "OPE-450",
+      "OPE-453",
+      "OPE-455",
+      "OPE-465",
+      "OPE-466",
+      "OPE-471",
+      "OPE-472"
     ],
     "assignment_coverage_ok": true,
     "blocked_issue_ids": [
@@ -191,14 +204,23 @@
       "OPE-352",
       "OPE-354",
       "OPE-367",
-      "OPE-377"
+      "OPE-426",
+      "OPE-430",
+      "OPE-433",
+      "OPE-435",
+      "OPE-444",
+      "OPE-446",
+      "OPE-449",
+      "OPE-450",
+      "OPE-465",
+      "OPE-466"
     ],
     "items": {
       "agent_health": {
-        "age_minutes": 0.0,
+        "age_minutes": 0.5,
         "available": true,
         "path": "workspace:agent-health.json",
-        "size_bytes": 31473,
+        "size_bytes": 50011,
         "summary": {
           "active_issue_ids": [
             "OPE-9",
@@ -206,21 +228,33 @@
             "OPE-352",
             "OPE-354",
             "OPE-367",
-            "OPE-377",
-            "OPE-389",
-            "OPE-394"
+            "OPE-405",
+            "OPE-426",
+            "OPE-430",
+            "OPE-433",
+            "OPE-435",
+            "OPE-444",
+            "OPE-446",
+            "OPE-449",
+            "OPE-450",
+            "OPE-453",
+            "OPE-455",
+            "OPE-465",
+            "OPE-466",
+            "OPE-471",
+            "OPE-472"
           ],
           "agents": {
             "felix": {
               "current_task": "Keep OPE-9 open for pull-loop hardening.",
-              "last_check": "2026-07-16T03:30:40+00:00",
+              "last_check": "2026-07-22T03:31:18+00:00",
               "linear_issue": "OPE-9",
               "state": "coordinating",
               "status": "linear_reconciled"
             },
             "max": {
               "current_task": "Maintain watchdog-filtered Linear OPE mirrors.",
-              "last_check": "2026-07-16T03:30:40+00:00",
+              "last_check": "2026-07-22T03:31:18+00:00",
               "linear_issue": "OPE-352",
               "state": "ops",
               "status": "assigned"
@@ -231,7 +265,16 @@
             "OPE-352",
             "OPE-354",
             "OPE-367",
-            "OPE-377"
+            "OPE-426",
+            "OPE-430",
+            "OPE-433",
+            "OPE-435",
+            "OPE-444",
+            "OPE-446",
+            "OPE-449",
+            "OPE-450",
+            "OPE-465",
+            "OPE-466"
           ],
           "issue_summaries": [
             {
@@ -247,7 +290,7 @@
               "state": "In Progress",
               "state_type": "started",
               "title": "Prove and harden 24/7 Linear pull loop for all agents",
-              "updated_at": "2026-07-16T02:22:21.675Z"
+              "updated_at": "2026-07-22T02:41:11.327Z"
             },
             {
               "blockers": [
@@ -265,7 +308,7 @@
               "state": "Todo",
               "state_type": "unstarted",
               "title": "Select and run one first-euro mechanism from fresh evidence",
-              "updated_at": "2026-07-15T03:11:47.890Z"
+              "updated_at": "2026-07-21T19:17:39.664Z"
             },
             {
               "blockers": [
@@ -282,7 +325,7 @@
               "state": "Todo",
               "state_type": "unstarted",
               "title": "Audit info@ inbound/outbound readiness for founding-sponsor pilot",
-              "updated_at": "2026-07-13T20:21:03.534Z"
+              "updated_at": "2026-07-20T23:26:52.999Z"
             },
             {
               "blockers": [
@@ -299,7 +342,7 @@
               "state": "Todo",
               "state_type": "unstarted",
               "title": "Package one no-wait analytics-led recirculation experiment",
-              "updated_at": "2026-07-15T03:10:10.739Z"
+              "updated_at": "2026-07-21T20:18:38.555Z"
             },
             {
               "blockers": [
@@ -317,13 +360,11 @@
               "state": "Todo",
               "state_type": "unstarted",
               "title": "Launch an on-site founding-sponsor interest intake experiment",
-              "updated_at": "2026-07-15T03:13:16.892Z"
+              "updated_at": "2026-07-22T02:26:15.671Z"
             },
             {
-              "blockers": [
-                "blocked"
-              ],
-              "identifier": "OPE-377",
+              "blockers": [],
+              "identifier": "OPE-405",
               "lanes": [
                 "lane:business-growth",
                 "lane:growth"
@@ -333,65 +374,150 @@
               ],
               "state": "Todo",
               "state_type": "unstarted",
-              "title": "Package a same-cycle measurable on-site distribution experiment",
-              "updated_at": "2026-07-15T03:08:24.698Z"
+              "title": "Audit sponsor landing-path conversion friction and package one no-wait experiment",
+              "updated_at": "2026-07-22T03:27:52.795Z"
             },
             {
-              "blockers": [],
-              "identifier": "OPE-389",
+              "blockers": [
+                "blocked"
+              ],
+              "identifier": "OPE-426",
+              "lanes": [
+                "lane:business-growth",
+                "lane:growth",
+                "lane:seo"
+              ],
+              "owners": [
+                "owner:iris"
+              ],
+              "state": "Todo",
+              "state_type": "unstarted",
+              "title": "Measure the Avengers zero-click repair at the valid GSC checkpoint",
+              "updated_at": "2026-07-21T21:12:15.851Z"
+            },
+            {
+              "blockers": [
+                "blocked"
+              ],
+              "identifier": "OPE-430",
+              "lanes": [
+                "lane:business-growth",
+                "lane:growth",
+                "lane:seo"
+              ],
+              "owners": [
+                "owner:iris"
+              ],
+              "state": "Todo",
+              "state_type": "unstarted",
+              "title": "Measure Kuuba canonical consolidation at the valid GSC checkpoint",
+              "updated_at": "2026-07-22T01:42:43.838Z"
+            },
+            {
+              "blockers": [
+                "blocked"
+              ],
+              "identifier": "OPE-433",
               "lanes": [
                 "lane:automation",
                 "lane:ops"
               ],
               "owners": [
-                "owner:max"
+                "owner:alex"
               ],
-              "state": "In Progress",
-              "state_type": "started",
-              "title": "Attribute and contain current root growth before backup headroom erodes",
-              "updated_at": "2026-07-15T19:13:11.984Z"
+              "state": "Todo",
+              "state_type": "unstarted",
+              "title": "Protect queued CLI run contexts from the 30-minute stale sweep",
+              "updated_at": "2026-07-21T21:11:20.420Z"
             },
             {
-              "blockers": [],
-              "identifier": "OPE-394",
+              "blockers": [
+                "blocked"
+              ],
+              "identifier": "OPE-435",
               "lanes": [
-                "lane:content-quality"
+                "lane:business-growth",
+                "lane:growth",
+                "lane:marketing"
               ],
               "owners": [
-                "owner:monica"
+                "owner:iris"
+              ],
+              "state": "Todo",
+              "state_type": "unstarted",
+              "title": "Activate a no-wait owned-site path to the first qualified advertiser inquiry",
+              "updated_at": "2026-07-21T22:54:32.000Z"
+            },
+            {
+              "blockers": [
+                "blocked",
+                "needs:perttu"
+              ],
+              "identifier": "OPE-444",
+              "lanes": [
+                "lane:business-growth",
+                "lane:growth",
+                "lane:marketing"
+              ],
+              "owners": [
+                "owner:iris"
+              ],
+              "state": "Todo",
+              "state_type": "unstarted",
+              "title": "Qualify fresh advertiser inbound without waiting on the OPE-435 volume gate",
+              "updated_at": "2026-07-20T16:10:41.349Z"
+            },
+            {
+              "blockers": [
+                "blocked"
+              ],
+              "identifier": "OPE-446",
+              "lanes": [
+                "lane:design"
+              ],
+              "owners": [
+                "owner:sara"
               ],
               "state": "In Progress",
               "state_type": "started",
-              "title": "Publish one source-sufficient Talous article to improve the live category mix",
-              "updated_at": "2026-07-16T02:49:54.071Z"
+              "title": "Run the post-OPE-443 daily rendered audit on homepage, Talous, and one article",
+              "updated_at": "2026-07-22T01:22:09.948Z"
             }
           ],
           "lane_issue_counts": {
             "lane:automation": 2,
-            "lane:business-growth": 4,
-            "lane:content-quality": 1,
+            "lane:business-growth": 12,
+            "lane:coding": 2,
+            "lane:content-quality": 2,
             "lane:coordination": 1,
-            "lane:growth": 4,
-            "lane:marketing": 2,
-            "lane:ops": 2
+            "lane:design": 1,
+            "lane:growth": 9,
+            "lane:marketing": 5,
+            "lane:ops": 6,
+            "lane:seo": 2
           },
           "needs_approval_issue_ids": [
-            "OPE-352"
+            "OPE-352",
+            "OPE-444",
+            "OPE-449",
+            "OPE-450"
           ],
-          "open_issue_count": 8,
+          "open_issue_count": 20,
           "owner_issue_counts": {
+            "owner:alex": 3,
             "owner:felix": 1,
-            "owner:iris": 4,
-            "owner:max": 2,
-            "owner:monica": 1
+            "owner:iris": 9,
+            "owner:max": 5,
+            "owner:monica": 1,
+            "owner:sara": 1
           },
           "owner_lane_label_audit": {
-            "checked_at": "2026-07-16T03:30:40+00:00",
-            "checked_count": 8,
+            "checked_at": "2026-07-22T03:31:19+00:00",
+            "checked_count": 20,
             "missing_label_count": 0,
             "ok": true
           },
-          "updated_at": "2026-07-16T03:30:40+00:00"
+          "updated_at": "2026-07-22T03:31:18+00:00"
         }
       },
       "autonomy_state": {
@@ -401,10 +527,10 @@
         "available": false
       },
       "taskboard": {
-        "age_minutes": 0.0,
+        "age_minutes": 0.5,
         "available": true,
         "path": "workspace:TASKBOARD.md",
-        "size_bytes": 4416,
+        "size_bytes": 9612,
         "summary": {
           "active_issue_ids": [
             "OPE-9",
@@ -412,40 +538,60 @@
             "OPE-352",
             "OPE-354",
             "OPE-367",
-            "OPE-377",
-            "OPE-389",
-            "OPE-394"
+            "OPE-405",
+            "OPE-426",
+            "OPE-430",
+            "OPE-433",
+            "OPE-435",
+            "OPE-444",
+            "OPE-446",
+            "OPE-449",
+            "OPE-450",
+            "OPE-453",
+            "OPE-455",
+            "OPE-465",
+            "OPE-466",
+            "OPE-471",
+            "OPE-472"
           ],
           "linear_authoritative": true,
           "readable": true,
-          "updated_at": "2026-07-16T03:30:40+00:00"
+          "updated_at": "2026-07-22T03:31:18+00:00"
         }
       }
     },
     "lane_issue_counts": {
       "lane:automation": 2,
-      "lane:business-growth": 4,
-      "lane:content-quality": 1,
+      "lane:business-growth": 12,
+      "lane:coding": 2,
+      "lane:content-quality": 2,
       "lane:coordination": 1,
-      "lane:growth": 4,
-      "lane:marketing": 2,
-      "lane:ops": 2
+      "lane:design": 1,
+      "lane:growth": 9,
+      "lane:marketing": 5,
+      "lane:ops": 6,
+      "lane:seo": 2
     },
-    "linear_open_issue_count": 8,
+    "linear_open_issue_count": 20,
     "needs_approval_issue_ids": [
-      "OPE-352"
+      "OPE-352",
+      "OPE-444",
+      "OPE-449",
+      "OPE-450"
     ],
     "owner_issue_counts": {
+      "owner:alex": 3,
       "owner:felix": 1,
-      "owner:iris": 4,
-      "owner:max": 2,
-      "owner:monica": 1
+      "owner:iris": 9,
+      "owner:max": 5,
+      "owner:monica": 1,
+      "owner:sara": 1
     },
     "safe_public": true,
     "source": "workspace Linear mirror/cache files; Linear API not queried by this public JSON generator",
     "workspace_path": "workspace:."
   },
-  "generated_at": "2026-07-16T03:30:40.844923Z",
+  "generated_at": "2026-07-22T03:31:48.878056Z",
   "monetization": {
     "ads_activation_revision": 3,
     "ads_consent_revision": 2,
@@ -480,28 +626,28 @@
   ],
   "pipeline": {
     "last_24h": {
-      "article_count": 53,
-      "article_count_source": "content/posts frontmatter",
+      "article_count": 0,
+      "article_count_source": "pipeline/logs/metrics.json",
       "failure": 0,
       "generated_article_count": 0,
-      "published_article_count_local": 53,
+      "published_article_count_local": 0,
       "runs_total": 144,
       "skipped": 0,
       "success": 144,
       "top_error_reasons": []
     },
-    "last_run_age_minutes": 0.5,
+    "last_run_age_minutes": 1.7,
     "last_run_article_count": 0,
-    "last_run_at": "2026-07-16T03:30:08.009016Z",
+    "last_run_at": "2026-07-22T03:30:08.027822Z",
     "last_run_success": true,
     "metrics_rows_total": 200,
     "published_status_snapshot": {
       "articles": {
         "attempted": 0,
-        "last_published_ts": "2026-07-16T03:18:26.877820+00:00",
+        "last_published_ts": "2026-07-20T00:08:28.180498+00:00",
         "publish_rate": 0,
-        "published": 53,
-        "rejected": 16
+        "published": 37,
+        "rejected": 9
       },
       "feeds": {
         "disabled": 0,
@@ -514,18 +660,18 @@
         ],
         "total": 33
       },
-      "generated_at": "2026-07-16T03:20:56+00:00",
+      "generated_at": "2026-07-20T00:11:08+00:00",
       "hours": 24,
       "is_stale": false,
       "reject_reasons": {
-        "language borderline Finnish si": 7,
-        "length under target (257 words": 2,
-        "missing: image": 16,
-        "only 1 paragraphs (min 3)": 9,
-        "readability few paragraphs (1)": 9,
-        "readability wall of text": 9,
-        "source_confidence_denial_conte": 8,
-        "unsourced numbers": 7
+        "language borderline Finnish si": 4,
+        "length under target (260 words": 2,
+        "missing: image": 9,
+        "only 1 paragraphs (min 3)": 5,
+        "readability few paragraphs (1)": 5,
+        "readability wall of text": 5,
+        "source_confidence_denial_conte": 4,
+        "unsourced numbers": 3
       },
       "runs": {
         "error": 0,
@@ -537,24 +683,24 @@
       "status": "ok",
       "trending": [
         [
-          "mukaansa",
-          45
-        ],
-        [
           "jälkeen",
-          37
+          33
         ],
         [
-          "aikana",
-          29
-        ],
-        [
-          "samalla",
+          "vuoden",
           27
         ],
         [
-          "kertoi",
-          25
+          "aikana",
+          27
+        ],
+        [
+          "ennen",
+          26
+        ],
+        [
+          "vuonna",
+          20
         ]
       ]
     },
@@ -563,24 +709,24 @@
   "queues": {
     "queues": {
       "staged/failed": {
-        "count": 4372,
-        "newest_item_age_minutes": 22.7,
-        "oldest_item_age_minutes": 65867.4
+        "count": 4666,
+        "newest_item_age_minutes": 617.3,
+        "oldest_item_age_minutes": 74508.5
+      },
+      "staged/outbox": {
+        "count": 143,
+        "newest_item_age_minutes": 530.7,
+        "oldest_item_age_minutes": 3005.5
       },
       "staged/published": {
-        "count": 2309,
-        "newest_item_age_minutes": 9.7,
-        "oldest_item_age_minutes": 108362.2
-      },
-      "staged/writing": {
-        "count": 1,
-        "newest_item_age_minutes": 1159.3,
-        "oldest_item_age_minutes": 1159.3
+        "count": 2458,
+        "newest_item_age_minutes": 3080.7,
+        "oldest_item_age_minutes": 117003.4
       },
       "staged/writing_orphan_backups/20260623T053158Z": {
         "count": 1,
-        "newest_item_age_minutes": 37099.7,
-        "oldest_item_age_minutes": 37099.7
+        "newest_item_age_minutes": 45740.8,
+        "oldest_item_age_minutes": 45740.8
       }
     },
     "source": "pipeline/queues/*.json file counts only"
@@ -588,5 +734,5 @@
   "safe_public": true,
   "schema_version": "1.1",
   "site": "uutistenlukija.fi",
-  "status": "ok"
+  "status": "attention"
 }

@@ -1,0 +1,94 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-21T02:11:26.342582+00:00",
+  "digest": "d1aa33e59e",
+  "packet": {
+    "packet_id": "20260721T021126Z_d1aa33e59e",
+    "created_at": "2026-07-21T02:11:26Z",
+    "headline_seed": "Orimattilassa pelätään tutun poliisin katoavan katukuvasta: ”Paikallistuntemuksen tärkeyttä ei korvaa mikään”",
+    "description_seed": "Hämeen poliisi suunnittelee Orimattilan poliisipartion siirtämistä Lahteen. Kaupunkilaisten mukaan suurin menetys ei välttämättä olisi partioauto vaan vuosien aikana kertynyt paikallistuntemus.",
+    "link": "https://www.ess.fi/paikalliset/9633484",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "selected source block is missing name/url/domain; seed provenance cannot substitute",
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.48,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Orimattilassa pelätään tutun poliisin katoavan katukuvasta: ”Paikallistuntemuksen tärkeyttä ei korvaa mikään”"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_url": "",
+        "source_domain": "",
+        "source_type": "research",
+        "text": "Hämeen poliisi suunnittelee Orimattilan poliisipartion siirtämistä Lahteen. Kaupunkilaisten mukaan suurin menetys ei välttämättä olisi partioauto vaan vuosien aikana kertynyt paikallistuntemus.",
+        "word_count": 20,
+        "keyword_overlap": 18,
+        "strong_overlap": 16
+      }
+    ],
+    "source_text": "Hämeen poliisi suunnittelee Orimattilan poliisipartion siirtämistä Lahteen. Kaupunkilaisten mukaan suurin menetys ei välttämättä olisi partioauto vaan vuosien aikana kertynyt paikallistuntemus.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 40,
+      "selected_blocks": 1,
+      "selected_source_words": 20,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Etelä-Suomen Sanomat"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "provenance_invalid",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Orimattilassa pelätään tutun poliisin katoavan katukuvasta: ”Paikallistuntemuksen tärkeyttä ei korvaa mikään”",
+      "description": "Hämeen poliisi suunnittelee Orimattilan poliisipartion siirtämistä Lahteen. Kaupunkilaisten mukaan suurin menetys ei välttämättä olisi partioauto vaan vuosien aikana kertynyt paikallistuntemus.",
+      "category_hint": "Kotimaa",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "Orimattilassa pelätään tutun poliisin katoavan katukuvasta: ”Paikallistuntemuksen tärkeyttä ei korvaa mikään”",
+    "description": "Hämeen poliisi suunnittelee Orimattilan poliisipartion siirtämistä Lahteen. Kaupunkilaisten mukaan suurin menetys ei välttämättä olisi partioauto vaan vuosien aikana kertynyt paikallistuntemus.",
+    "link": "https://www.ess.fi/paikalliset/9633484",
+    "published": "2026-07-21T05:00:00+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "d022d4de16613c603bc9a613b568d973",
+    "_url_hash": "3299f1607eca8e9fb6536ad453d75450c111028213957075a8b48000e1bcfa06",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "Hämeen poliisi suunnittelee Orimattilan poliisipartion siirtämistä Lahteen. Kaupunkilaisten mukaan suurin menetys ei välttämättä olisi partioauto vaan vuosien aikana kertynyt paikallistuntemus.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-07-21T02:20:00.419580+00:00",
+  "failure": "Lähdeaineisto on liian niukka ja sen alkuperä on puutteellisesti varmennettu vähintään 250 sanan uutisartikkelia varten.",
+  "raw_response": "{\"packet_id\":\"20260721T021126Z_d1aa33e59e\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian niukka ja sen alkuperä on puutteellisesti varmennettu vähintään 250 sanan uutisartikkelia varten.\"}"
+}

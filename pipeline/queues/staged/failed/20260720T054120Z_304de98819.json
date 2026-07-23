@@ -1,0 +1,94 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-20T05:41:20.809472+00:00",
+  "digest": "304de98819",
+  "packet": {
+    "packet_id": "20260720T054120Z_304de98819",
+    "created_at": "2026-07-20T05:41:20Z",
+    "headline_seed": "”Tohtori Kuolema” kylvi kauhua Venäjällä",
+    "description_seed": "Venäläinen vankilalääkäri esitti ukrainalaisille sotavangeille kieroutuneita vaatimuksia. Kesällä 2023 Venäjän sotavangiksi joutunut ukrainalainen Ihor Šyško kärsi voimakasta kutinaa aiheuttavasta syyhystä. Kun syyhy levisi miehen silmiin, hän päätti hakea apua.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/707679fb-ed0c-4d6e-8536-30ab0fdfcfa9?utm_source=rss",
+    "source": "Iltalehti",
+    "source_names": [
+      "source-1"
+    ],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "selected source block is missing name/url/domain; seed provenance cannot substitute",
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.5,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "”Tohtori Kuolema” kylvi kauhua Venäjällä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "source-1",
+        "source_url": "",
+        "source_domain": "",
+        "source_type": "research",
+        "text": "Venäläinen vankilalääkäri esitti ukrainalaisille sotavangeille kieroutuneita vaatimuksia. Kesällä 2023 Venäjän sotavangiksi joutunut ukrainalainen Ihor Šyško kärsi voimakasta kutinaa aiheuttavasta syyhystä. Kun syyhy levisi miehen silmiin, hän päätti hakea apua.",
+        "word_count": 29,
+        "keyword_overlap": 26,
+        "strong_overlap": 20
+      }
+    ],
+    "source_text": "Venäläinen vankilalääkäri esitti ukrainalaisille sotavangeille kieroutuneita vaatimuksia. Kesällä 2023 Venäjän sotavangiksi joutunut ukrainalainen Ihor Šyško kärsi voimakasta kutinaa aiheuttavasta syyhystä. Kun syyhy levisi miehen silmiin, hän päätti hakea apua.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 58,
+      "selected_blocks": 1,
+      "selected_source_words": 29,
+      "zero_source_packet": false,
+      "low_source_packet": true,
+      "candidate_sources": [
+        "source-1",
+        "Iltalehti"
+      ],
+      "selected_sources": [
+        "source-1"
+      ]
+    },
+    "source_selection_outcome": "provenance_invalid",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "”Tohtori Kuolema” kylvi kauhua Venäjällä",
+      "description": "Venäläinen vankilalääkäri esitti ukrainalaisille sotavangeille kieroutuneita vaatimuksia. Kesällä 2023 Venäjän sotavangiksi joutunut ukrainalainen Ihor Šyško kärsi voimakasta kutinaa aiheuttavasta syyhystä. Kun syyhy levisi miehen silmiin, hän päätti hakea apua.",
+      "category_hint": "Ulkomaat",
+      "research_source": "none"
+    }
+  },
+  "original_article": {
+    "title": "”Tohtori Kuolema” kylvi kauhua Venäjällä",
+    "description": "Venäläinen vankilalääkäri esitti ukrainalaisille sotavangeille kieroutuneita vaatimuksia. Kesällä 2023 Venäjän sotavangiksi joutunut ukrainalainen Ihor Šyško kärsi voimakasta kutinaa aiheuttavasta syyhystä. Kun syyhy levisi miehen silmiin, hän päätti hakea apua.",
+    "link": "https://www.iltalehti.fi/ulkomaat/a/707679fb-ed0c-4d6e-8536-30ab0fdfcfa9?utm_source=rss",
+    "published": "2026-07-20T07:30:06+03:00",
+    "source": "Iltalehti",
+    "source_domain": "iltalehti.fi",
+    "language": "fi",
+    "fingerprint": "84d82bd71102ffae05e7b70dead98694",
+    "_url_hash": "8a99f8dfc2dd3c7c19c39d28bce955133013f8630c52e3d7b75fb1a55782324b",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "Venäläinen vankilalääkäri esitti ukrainalaisille sotavangeille kieroutuneita vaatimuksia. Kesällä 2023 Venäjän sotavangiksi joutunut ukrainalainen Ihor Šyško kärsi voimakasta kutinaa aiheuttavasta syyhystä. Kun syyhy levisi miehen silmiin, hän päätti hakea apua.",
+    "research_source": "none"
+  },
+  "failed_at": "2026-07-20T05:43:34.675320+00:00",
+  "failure": "Lähdeaineisto on liian suppea ja sen alkuperä on puutteellisesti yksilöity vähintään 250 sanan artikkelin kirjoittamiseksi ilman perusteettomia lisäyksiä.",
+  "raw_response": "{\"packet_id\":\"20260720T054120Z_304de98819\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto on liian suppea ja sen alkuperä on puutteellisesti yksilöity vähintään 250 sanan artikkelin kirjoittamiseksi ilman perusteettomia lisäyksiä.\"}"
+}

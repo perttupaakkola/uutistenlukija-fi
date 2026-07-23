@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-20T08:51:25.956992+00:00",
+  "digest": "152c6b7dc5",
+  "packet": {
+    "packet_id": "20260720T085125Z_152c6b7dc5",
+    "created_at": "2026-07-20T08:51:25Z",
+    "headline_seed": "Varusmies kolaroi Savi­taipaleella",
+    "description_seed": "Poliisi selvittää onnettomuuden syytä.",
+    "link": "https://www.is.fi/kotimaa/art-2000012152673.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "",
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.25,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Varusmies kolaroi Savi­taipaleella"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 125,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Kouvolan Sanomat",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Varusmies kolaroi Savi­taipaleella",
+      "description": "Poliisi selvittää onnettomuuden syytä.",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Varusmies kolaroi Savi­taipaleella",
+    "description": "Poliisi selvittää onnettomuuden syytä.",
+    "link": "https://www.is.fi/kotimaa/art-2000012152673.html",
+    "published": "2026-07-20T08:44:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "42b23496534c42b9a25d9520a1cfdf50",
+    "_url_hash": "3bc85d2ce6d3da9a08bcff3329c38c38067f3ddc7bb12ebdb4b72ed9a4579e0c",
+    "source_tier": 1,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Kouvolan Sanomat | URL: https://www.kouvolansanomat.fi/uutissuomalainen/9627613]\nRaejuuston myynti on kovassa kasvussa, kertoo Ilta-Sanomat (IS). Kasvu on huomattu lehden mukaan K- ja S-kaupoissa sekä Lidlissä.\n\n– Raejuustoja on myyty tammi–kesäkuun aikana kymmenisen prosenttia enemmän kuin edellisvuonna vastaavaan aikaan, S-ryhmän myyntipäällikkö Mikko Kovalainen kertoo IS:lle.\n\nKyseessä on pidempi trendi, sillä raejuustojen myynti on kasvanut jo viime vuodesta lähtien, IS kertoo.\n\nLehden mukaan esimerkiksi Valio on muuttanut suositun Valio Hyvä suomalainen Arki pehmeä raejuuston pakkauskoon isommaksi kuluttajien toiveesta. Trendituote on siis huomattu myös valmistajien keskuudessa.\n\nIS:n haastattelemien Keskon ja Lidlin edustajien mukaan proteiinipitoiset tuotteet kiinnostavat kuluttajia. Lisäksi terveellistä raejuustoa saa kaupasta edulliseen hintaan.\n\nMyös sosiaalisen median luomat trendit vaikuttavat tuotteen kasvaneeseen suosioon. Jo viime vuonna CNN uutisoi Tiktokin tehneen raejuustosta maailmalla niin suosittua, että tuottajilla oli vaikeuksia pysyä trendin perässä.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-20T08:53:18.635225+00:00",
+  "failure": "Lähdeaineisto ei sisällä riittävästi varmennettuja tietoja julkaistavan uutisartikkelin kirjoittamiseen.",
+  "raw_response": "{\"packet_id\":\"20260720T085125Z_152c6b7dc5\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Lähdeaineisto ei sisällä riittävästi varmennettuja tietoja julkaistavan uutisartikkelin kirjoittamiseen.\"}"
+}

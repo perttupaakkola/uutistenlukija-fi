@@ -1,0 +1,217 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-20T12:41:26.486518+00:00",
+  "digest": "5dcbd9a2c0",
+  "packet": {
+    "packet_id": "20260720T124126Z_5dcbd9a2c0",
+    "created_at": "2026-07-20T12:41:26Z",
+    "headline_seed": "Hugging Face confirms breach affected internal datasets and credentials, urges users to take action",
+    "description_seed": "Hugging Face is urging users to rotate any access tokens stored on the platform and review account activity.",
+    "link": "https://techcrunch.com/2026/07/20/hugging-face-confirms-breach-affected-internal-datasets-and-credentials-urges-users-to-take-action/",
+    "source": "TechCrunch",
+    "source_names": [
+      "TechCrunch",
+      "TechBooky",
+      "The Hacker News"
+    ],
+    "source_urls": [
+      "https://techcrunch.com/2026/07/20/hugging-face-confirms-breach-affected-internal-datasets-and-credentials-urges-users-to-take-action/",
+      "https://www.techbooky.com/hugging-face-agentic-ai-data-pipeline-breach/",
+      "https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html"
+    ],
+    "source_domains": [
+      "techcrunch.com",
+      "techbooky.com",
+      "thehackernews.com"
+    ],
+    "selected_source": {
+      "name": "TechBooky",
+      "url": "https://www.techbooky.com/hugging-face-agentic-ai-data-pipeline-breach/",
+      "domain": "techbooky.com"
+    },
+    "selected_source_provenance_error": "",
+    "category_hint": "Teknologia",
+    "category": "Teknologia",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Hugging Face confirms breach affected internal datasets and credentials, urges users to take action"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/07/20/hugging-face-confirms-breach-affected-internal-datasets-and-credentials-urges-users-to-take-action/",
+        "source_domain": "techcrunch.com",
+        "source_type": "description",
+        "text": "Hugging Face is urging users to rotate any access tokens stored on the platform and review account activity.",
+        "word_count": 18,
+        "keyword_overlap": 12,
+        "strong_overlap": 10
+      },
+      {
+        "source": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/07/20/hugging-face-confirms-breach-affected-internal-datasets-and-credentials-urges-users-to-take-action/",
+        "source_domain": "techcrunch.com",
+        "source_type": "research",
+        "text": "Hugging Face, a platform that hosts AI models and datasets, said its internal datasets and service credentials were compromised in a hack last week. The company disclosed the breach on Friday, but said it was still investigating whether any customer or partner data was stolen during the incident. In a blog post, the company said a dataset uploaded to its platform abused a security vulnerability to run malicious code on its servers, allowing the attackers to escalate their permissions and gain broader access to Hugging Face’s internal systems. ---",
+        "word_count": 89,
+        "keyword_overlap": 8,
+        "strong_overlap": 7
+      },
+      {
+        "source": "TechBooky",
+        "source_url": "https://www.techbooky.com/hugging-face-agentic-ai-data-pipeline-breach/",
+        "source_domain": "techbooky.com",
+        "source_type": "research",
+        "text": "Hugging Face has disclosed a security incident that feels like a preview of the next phase of cybersecurity; an attacker used an autonomous AI agent system to compromise part of its production infrastructure, while Hugging Face used AI-assisted detection and analysis to understand and contain the breach. In its own security incident disclosure, Hugging Face said the intrusion affected a limited set of internal datasets and several service credentials, but that it had found no evidence of tampering with public user-facing models, datasets or Spaces. The company said it closed the dataset code-execution paths used for initial access, rebuilt compromised nodes, rotated credentials and reported the incident to law enforcement. The uncomfortable detail is where the attack began. Hugging Face sai...",
+        "word_count": 121,
+        "keyword_overlap": 8,
+        "strong_overlap": 7
+      },
+      {
+        "source": "The Hacker News",
+        "source_url": "https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html",
+        "source_domain": "thehackernews.com",
+        "source_type": "research",
+        "text": "Hugging Face said it has since addressed the root cause of the issue, precisely the code execution pathways used for initial access. It also carried out the following remediation steps - As a further safeguard, Hugging Face is urging customers to rotate any access tokens and review recent activity on their accounts. The company also said it turned to Z.ai's GLM 5.2, a Chinese open-weight model, to conduct the forensic analysis after Western frontier models refused requests containing real attack commands, exploit payloads, and command-and-control (C2) artifacts because their safety guardrails were triggered and owing to their inability to differentiate between an attacker and a legitimate incident response effort.",
+        "word_count": 109,
+        "keyword_overlap": 8,
+        "strong_overlap": 7
+      }
+    ],
+    "source_text": "Hugging Face is urging users to rotate any access tokens stored on the platform and review account activity.\n\nHugging Face, a platform that hosts AI models and datasets, said its internal datasets and service credentials were compromised in a hack last week. The company disclosed the breach on Friday, but said it was still investigating whether any customer or partner data was stolen during the incident. In a blog post, the company said a dataset uploaded to its platform abused a security vulnerability to run malicious code on its servers, allowing the attackers to escalate their permissions and gain broader access to Hugging Face’s internal systems. ---\n\nHugging Face has disclosed a security incident that feels like a preview of the next phase of cybersecurity; an attacker used an autonomous AI agent system to compromise part of its production infrastructure, while Hugging Face used AI-assisted detection and analysis to understand and contain the breach. In its own security incident disclosure, Hugging Face said the intrusion affected a limited set of internal datasets and several service credentials, but that it had found no evidence of tampering with public user-facing models, datasets or Spaces. The company said it closed the dataset code-execution paths used for initial access, rebuilt compromised nodes, rotated credentials and reported the incident to law enforcement. The uncomfortable detail is where the attack began. Hugging Face sai...\n\nHugging Face said it has since addressed the root cause of the issue, precisely the code execution pathways used for initial access. It also carried out the following remediation steps - As a further safeguard, Hugging Face is urging customers to rotate any access tokens and review recent activity on their accounts. The company also said it turned to Z.ai's GLM 5.2, a Chinese open-weight model, to conduct the forensic analysis after Western frontier models refused requests containing real attack commands, exploit payloads, and command-and-control (C2) artifacts because their safety guardrails were triggered and owing to their inability to differentiate between an attacker and a legitimate incident response effort.",
+    "source_diagnostics": {
+      "candidate_blocks": 10,
+      "candidate_source_words": 912,
+      "selected_blocks": 4,
+      "selected_source_words": 337,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "TechCrunch",
+        "SecurityWeek",
+        "SecurityWeek",
+        "SecurityWeek",
+        "The Hacker News",
+        "The Hacker News",
+        "The Hacker News",
+        "The Hacker News",
+        "TechBooky",
+        "TechCrunch"
+      ],
+      "selected_sources": [
+        "TechCrunch",
+        "TechCrunch",
+        "TechBooky",
+        "The Hacker News"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Hugging Face confirms breach affected internal datasets and credentials, urges users to take action",
+      "description": "Hugging Face is urging users to rotate any access tokens stored on the platform and review account activity.",
+      "category_hint": "Teknologia",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Hugging Face confirms breach affected internal datasets and credentials, urges users to take action",
+    "description": "Hugging Face is urging users to rotate any access tokens stored on the platform and review account activity.",
+    "link": "https://techcrunch.com/2026/07/20/hugging-face-confirms-breach-affected-internal-datasets-and-credentials-urges-users-to-take-action/",
+    "published": "2026-07-20T12:39:28+00:00",
+    "source": "TechCrunch",
+    "source_domain": "techcrunch.com",
+    "language": "en",
+    "fingerprint": "d3f064a9283d6dd878b7ac34d494a8d3",
+    "_url_hash": "54c3d2c75d899ba5035eff2f4b07fd25d3c4174854d1d3f0ed659d88fcc42f67",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch | URL: https://techcrunch.com/2026/07/20/hugging-face-confirms-breach-affected-internal-datasets-and-credentials-urges-users-to-take-action/]\nHugging Face, a platform that hosts AI models and datasets, said its internal datasets and service credentials were compromised in a hack last week. The company disclosed the breach on Friday, but said it was still investigating whether any customer or partner data was stolen during the incident.\n\nIn a blog post, the company said a dataset uploaded to its platform abused a security vulnerability to run malicious code on its servers, allowing the attackers to escalate their permissions and gain broader access to Hugging Face’s internal systems.\n\n---\n\n[Lähde: SecurityWeek | URL: https://www.securityweek.com/hugging-face-hacked-in-autonomous-ai-attack/]\nIonut Arghire is an international correspondent for SecurityWeek.\n\nSubscribe to the SecurityWeek Email Briefing for the latest cybersecurity threats, trends, and expert\n            insights.\n\nSubscribe to the SecurityWeek Email Briefing to stay informed on the latest threats, trends, and technology, along with insightful columns from industry experts.\n\nJoin this live webinar as we break down why email-layer defenses alone can't keep pace with the modern phishing ecosystem, how agentic AI is changing the capacity equation for security teams, and more.\n\nThis year's summit will help organizations learn how to utilize tools, controls, and design models needed to properly secure cloud environments. Interact with leading solution providers and other end users facing similar challenges in securing a variety of cloud deployments.\n\nJazz has named Sean Robinson, Rickie Goyal, Danielle Guetta, Shani Nago, and Lior Magram as VPs and Michael Calev as COO.\n\nAJ Shipley has been appointed Chief Product Officer at CrowdStrike.\n\nBrinqa has named Ron Dovich as Chief AI and Automation Officer, David Allen as CTO, Steve Biagioni as CFO, and James Walta as VP of Product.\n\nLegacy systems, safety concerns, and critical infrastructure risks make OT vulnerability disclosure one of cybersecurity's most challenging balancing acts.\r\n\t\t\t\t\t\t\t\t\t(Tod Beardsley)\n\nMoving from isolated, technical data to a continuous risk lifecycle can help organizations align security controls with actual business consequences.\r\n\t\t\t\t\t\t\t\t\t(Steve Durbin)\n\nAs AI-generated code becomes commonplace, CISOs need new audit strategies to measure developer practices, govern AI tool usage, and identify software risks before they reach production.\r\n\t\t\t\t\t\t\t\t\t(Matias Madou)\n\nFrom model selection and automation to validation and measurable results, the right questions can help enterprises separate genuine AI capabilities from marketing hype.\r\n\t\t\t\t\t\t\t\t\t(Joshua Goldfarb)\n\nAs cybersecurity platforms embrace agentic AI, organizations must balance detection performance against the escalating costs of token consumption, deployment architecture, and AI credits.\r\n\t\t\t\t\t\t\t\t\t(Danelle Au)\n\n---\n\n[Lähde: The Hacker News | URL: https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html]\nIn an ironic twist, open-source artificial intelligence (AI) platform Hugging Face revealed that it was the victim of a hack perpetrated by an autonomous AI agent system.\n\nThe company said it detected and responded to the incident targeting its production infrastructure earlier last week.\n\n\"We identified unauthorized access to a limited set of internal datasets and to several credentials used by our services,\" the company said in a statement.\n\nWhile an investigation into the intrusion remains ongoing, Hugging Face said it has found no evidence that the AI agent tampered with public, user-facing models, datasets, or Spaces, and its own software supply chain.\n\nThe starting point of the attack was the data processing pipeline itself, with a malicious dataset abusing two code execution paths, viz., in its remote code dataset loader and a template injection in a dataset configuration, to run code on a processing worker.\n\nWith that access, the threat actor is said to have escalated to node-level access, collected cloud and cluster credentials, and moved laterally into several internal clusters over a weekend.\n\nThe exact large language model (LLM) used to pull off the attack is unclear, but the campaign was executed by an autonomous agent framework performing \"many thousands of individual actions across a swarm of short-lived sandboxes, with self-migrating command-and-control staged on public services.\"\n\nHugging Face said it has since addressed the root cause of the issue, precisely the code execution pathways used for initial access. It also carried out the following remediation steps -\n\nAs a further safeguard, Hugging Face is urging customers to rotate any access tokens and review recent activity on their accounts.\n\nThe company also said it turned to Z.ai's GLM 5.2, a Chinese open-weight model, to conduct the forensic analysis after Western frontier models refused requests containing real attack commands, exploit payloads, and command-and-control (C2) artifacts because their safety guardrails were triggered and owing to their inability to differentiate between an attacker and a legitimate incident response effort.\n\n\"This experience points to a gap worth planning for,\" the New York-headquartered company said. \"We do not know which model powered the attacker's agents, whether a jailbroken hosted model or an unrestricted open-weight one; either way, the attacker was bound by no usage policy, while our own forensic work was blocked by the guardrails of the hosted m\n\n---\n\n[Lähde: TechBooky | URL: https://www.techbooky.com/hugging-face-agentic-ai-data-pipeline-breach/]\nHugging Face has disclosed a security incident that feels like a preview of the next phase of cybersecurity; an attacker used an autonomous AI agent system to compromise part of its production infrastructure, while Hugging Face used AI-assisted detection and analysis to understand and contain the breach.\n\nIn its own security incident disclosure, Hugging Face said the intrusion affected a limited set of internal datasets and several service credentials, but that it had found no evidence of tampering with public user-facing models, datasets or Spaces. The company said it closed the dataset code-execution paths used for initial access, rebuilt compromised nodes, rotated credentials and reported the incident to law enforcement.\n\nThe uncomfortable detail is where the attack began. Hugging Face sai...",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-07-20T12:49:30.447657+00:00",
+  "payload": {
+    "packet_id": "20260720T124126Z_5dcbd9a2c0",
+    "title": "Hugging Facen tietomurto vaaransi sisäisiä aineistoja ja palvelutunnuksia",
+    "summary": "Hugging Face kehottaa käyttäjiään vaihtamaan alustalle tallennetut käyttöoikeustunnukset ja tarkistamaan tiliensä viimeaikaisen toiminnan. Yhtiö selvittää edelleen, anastettiinko tietomurrossa asiakkaiden tai kumppaneiden tietoja.",
+    "content": "Tekoälymallien ja -aineistojen jakelualusta Hugging Face kertoo, että viime viikolla tapahtunut tietomurto vaaransi rajatun joukon yhtiön sisäisiä aineistoja ja useita palvelutunnuksia. Perjantaina tapauksesta kertonut yhtiö ei ole havainnut näyttöä julkisten mallien, aineistojen tai Spaces-sovellusten muuttamisesta, mutta se selvittää edelleen, anastettiinko hyökkäyksessä asiakkaiden tai kumppaneiden tietoja.\n\n## Hyökkäys eteni ladatun aineiston kautta\n\nYhtiön mukaan hyökkäys alkoi palveluun ladatusta aineistosta. Aineisto hyödynsi haavoittuvuutta, jonka kautta Hugging Facen palvelimilla pystyttiin suorittamaan haitallista koodia. Saatuaan ensimmäisen pääsyn hyökkääjä kasvatti käyttöoikeuksiaan ja eteni laajemmin sisäisiin järjestelmiin sekä osaan tuotantoinfrastruktuuria. Hugging Facen mukaan tunkeutumisessa käytettiin autonomista tekoälyagenttijärjestelmää. Näin aineistojen käsittelyyn liittynyt koodinsuoritusreitti avasi tien alkuperäistä kohdetta laajempaan pääsyyn.\n\nHugging Face käytti tapahtuman havaitsemiseen, analysointiin ja rajaamiseen tekoälyavusteisia menetelmiä. Yhtiön vahvistamat vaikutukset koskevat toistaiseksi sisäisiä aineistoja ja palvelutunnuksia. Julkisiin käyttäjille näkyviin malleihin, aineistoihin tai Spaces-palveluihin kohdistuneesta peukaloinnista ei ole löytynyt näyttöä. Tämä ei kuitenkaan ratkaise erillistä kysymystä siitä, päätyikö hyökkääjälle asiakkaiden tai yhteistyökumppaneiden tietoja, sillä sen selvitys jatkuu.\n\n## Hyökkäysreitti suljettiin ja ympäristö rakennettiin uudelleen\n\nYhtiö kertoo korjanneensa ongelman juurisyyn sulkemalla aineistojen koodinsuoritusreitit, joita käytettiin ensimmäisen pääsyn saamiseen. Lisäksi se rakensi vaarantuneet palvelinsolmut uudelleen, vaihtoi palvelutunnuksia ja ilmoitti tapahtumasta lainvalvontaviranomaisille. Korjaukset kohdistuivat sekä hyökkääjän käyttämään sisääntuloreittiin että niihin tuotantoympäristön osiin, joiden katsottiin vaarantuneen. Yhtiön omien palvelutunnusten vaihtaminen kuului sisäisiin korjaustoimiin, kun taas käyttäjille annettiin erillinen varotoimiohje heidän alustalle tallentamistaan käyttöoikeustunnuksista.\n\nLisävarotoimena Hugging Face kehottaa asiakkaitaan vaihtamaan kaikki alustalle tallennetut käyttöoikeustunnukset ja tarkistamaan tiliensä viimeaikaisen toiminnan. Ohje koskee käyttäjiä siitä huolimatta, ettei yhtiö ole löytänyt näyttöä julkisten käyttäjäsisältöjen muuttamisesta. Asiakas- ja kumppanitietojen mahdollinen joutuminen hyökkääjälle on edelleen tutkinnan avoin osa.\n\n## Forensiikassa käytettiin GLM 5.2 -mallia\n\nForensisessä analyysissa Hugging Face turvautui kiinalaisen Z.ai-yhtiön avoimilla painoilla julkaistuun GLM 5.2 -malliin. Yhtiön mukaan länsimaiset edistyneet mallit kieltäytyivät käsittelemästä tutkinnassa tarvittuja todellisia hyökkäyskomentoja, hyväksikäyttökuormia sekä komento- ja hallintajärjestelmiin liittyviä aineistoja. Niiden turvarajoitukset aktivoituivat, koska mallit eivät kyenneet erottamaan, oliko aineistoa käsittelevä taho hyökkääjä vai valtuutettua tietoturvapoikkeaman tutkintaa tekevä asiantuntija. GLM 5.2:ta käytettiin tämän vuoksi tapahtuman forensiseen selvittämiseen.",
+    "category": "Teknologia",
+    "tags": [
+      "Hugging Face",
+      "tietoturva",
+      "tietomurto",
+      "tekoäly"
+    ],
+    "summary_bullets": [
+      "Tietomurto vaaransi rajatun joukon Hugging Facen sisäisiä aineistoja ja useita palvelutunnuksia.",
+      "Julkisten mallien, aineistojen tai Spaces-sovellusten muuttamisesta ei ole löytynyt näyttöä.",
+      "Käyttäjiä kehotetaan vaihtamaan alustalle tallennetut käyttöoikeustunnukset ja tarkistamaan tiliensä toimintaa."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Tietomurron täysi laajuus on vielä avoin, sillä yhtiö tutkii edelleen, anastettiinko asiakkaiden tai kumppaneiden tietoja."
+  },
+  "raw_response": "{\n  \"packet_id\": \"20260720T124126Z_5dcbd9a2c0\",\n  \"title\": \"Hugging Facen tietomurto vaaransi sisäisiä aineistoja ja palvelutunnuksia\",\n  \"summary\": \"Hugging Face kehottaa käyttäjiään vaihtamaan alustalle tallennetut käyttöoikeustunnukset ja tarkistamaan tiliensä viimeaikaisen toiminnan. Yhtiö selvittää edelleen, anastettiinko tietomurrossa asiakkaiden tai kumppaneiden tietoja.\",\n  \"content\": \"Tekoälymallien ja -aineistojen jakelualusta Hugging Face kertoo, että viime viikolla tapahtunut tietomurto vaaransi rajatun joukon yhtiön sisäisiä aineistoja ja useita palvelutunnuksia. Perjantaina tapauksesta kertonut yhtiö ei ole havainnut näyttöä julkisten mallien, aineistojen tai Spaces-sovellusten muuttamisesta, mutta se selvittää edelleen, anastettiinko hyökkäyksessä asiakkaiden tai kumppaneiden tietoja.\\n\\n## Hyökkäys eteni ladatun aineiston kautta\\n\\nYhtiön mukaan hyökkäys alkoi palveluun ladatusta aineistosta. Aineisto hyödynsi haavoittuvuutta, jonka kautta Hugging Facen palvelimilla pystyttiin suorittamaan haitallista koodia. Saatuaan ensimmäisen pääsyn hyökkääjä kasvatti käyttöoikeuksiaan ja eteni laajemmin sisäisiin järjestelmiin sekä osaan tuotantoinfrastruktuuria. Hugging Facen mukaan tunkeutumisessa käytettiin autonomista tekoälyagenttijärjestelmää. Näin aineistojen käsittelyyn liittynyt koodinsuoritusreitti avasi tien alkuperäistä kohdetta laajempaan pääsyyn.\\n\\nHugging Face käytti tapahtuman havaitsemiseen, analysointiin ja rajaamiseen tekoälyavusteisia menetelmiä. Yhtiön vahvistamat vaikutukset koskevat toistaiseksi sisäisiä aineistoja ja palvelutunnuksia. Julkisiin käyttäjille näkyviin malleihin, aineistoihin tai Spaces-palveluihin kohdistuneesta peukaloinnista ei ole löytynyt näyttöä. Tämä ei kuitenkaan ratkaise erillistä kysymystä siitä, päätyikö hyökkääjälle asiakkaiden tai yhteistyökumppaneiden tietoja, sillä sen selvitys jatkuu.\\n\\n## Hyökkäysreitti suljettiin ja ympäristö rakennettiin uudelleen\\n\\nYhtiö kertoo korjanneensa ongelman juurisyyn sulkemalla aineistojen koodinsuoritusreitit, joita käytettiin ensimmäisen pääsyn saamiseen. Lisäksi se rakensi vaarantuneet palvelinsolmut uudelleen, vaihtoi palvelutunnuksia ja ilmoitti tapahtumasta lainvalvontaviranomaisille. Korjaukset kohdistuivat sekä hyökkääjän käyttämään sisääntuloreittiin että niihin tuotantoympäristön osiin, joiden katsottiin vaarantuneen. Yhtiön omien palvelutunnusten vaihtaminen kuului sisäisiin korjaustoimiin, kun taas käyttäjille annettiin erillinen varotoimiohje heidän alustalle tallentamistaan käyttöoikeustunnuksista.\\n\\nLisävarotoimena Hugging Face kehottaa asiakkaitaan vaihtamaan kaikki alustalle tallennetut käyttöoikeustunnukset ja tarkistamaan tiliensä viimeaikaisen toiminnan. Ohje koskee käyttäjiä siitä huolimatta, ettei yhtiö ole löytänyt näyttöä julkisten käyttäjäsisältöjen muuttamisesta. Asiakas- ja kumppanitietojen mahdollinen joutuminen hyökkääjälle on edelleen tutkinnan avoin osa.\\n\\n## Forensiikassa käytettiin GLM 5.2 -mallia\\n\\nForensisessä analyysissa Hugging Face turvautui kiinalaisen Z.ai-yhtiön avoimilla painoilla julkaistuun GLM 5.2 -malliin. Yhtiön mukaan länsimaiset edistyneet mallit kieltäytyivät käsittelemästä tutkinnassa tarvittuja todellisia hyökkäyskomentoja, hyväksikäyttökuormia sekä komento- ja hallintajärjestelmiin liittyviä aineistoja. Niiden turvarajoitukset aktivoituivat, koska mallit eivät kyenneet erottamaan, oliko aineistoa käsittelevä taho hyökkääjä vai valtuutettua tietoturvapoikkeaman tutkintaa tekevä asiantuntija. GLM 5.2:ta käytettiin tämän vuoksi tapahtuman forensiseen selvittämiseen.\",\n  \"category\": \"Teknologia\",\n  \"tags\": [\n    \"Hugging Face\",\n    \"tietoturva\",\n    \"tietomurto\",\n    \"tekoäly\"\n  ],\n  \"summary_bullets\": [\n    \"Tietomurto vaaransi rajatun joukon Hugging Facen sisäisiä aineistoja ja useita palvelutunnuksia.\",\n    \"Julkisten mallien, aineistojen tai Spaces-sovellusten muuttamisesta ei ole löytynyt näyttöä.\",\n    \"Käyttäjiä kehotetaan vaihtamaan alustalle tallennetut käyttöoikeustunnukset ja tarkistamaan tiliensä toimintaa.\"\n  ],\n  \"content_type\": \"uutinen\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Tietomurron täysi laajuus on vielä avoin, sillä yhtiö tutkii edelleen, anastettiinko asiakkaiden tai kumppaneiden tietoja.\"\n}",
+  "article": {
+    "title": "Hugging Facen tietomurto vaaransi sisäisiä aineistoja ja palvelutunnuksia",
+    "description": "Hugging Face kehottaa käyttäjiään vaihtamaan alustalle tallennetut käyttöoikeustunnukset ja tarkistamaan tiliensä viimeaikaisen toiminnan. Yhtiö selvittää edelleen, anastettiinko tietomurrossa asiakkaiden tai kumppaneiden tietoja.",
+    "link": "https://www.techbooky.com/hugging-face-agentic-ai-data-pipeline-breach/",
+    "published": "2026-07-20T12:39:28+00:00",
+    "source": "TechBooky",
+    "source_domain": "techbooky.com",
+    "language": "en",
+    "fingerprint": "d3f064a9283d6dd878b7ac34d494a8d3",
+    "_url_hash": "54c3d2c75d899ba5035eff2f4b07fd25d3c4174854d1d3f0ed659d88fcc42f67",
+    "source_tier": 2,
+    "category_hint": "Teknologia",
+    "source_policy": "warn_only",
+    "fresh_source_quota_eligible": false,
+    "trending": false,
+    "_guessed_category": "Teknologia",
+    "research": "[Lähde: TechCrunch | URL: https://techcrunch.com/2026/07/20/hugging-face-confirms-breach-affected-internal-datasets-and-credentials-urges-users-to-take-action/]\nHugging Face, a platform that hosts AI models and datasets, said its internal datasets and service credentials were compromised in a hack last week. The company disclosed the breach on Friday, but said it was still investigating whether any customer or partner data was stolen during the incident.\n\nIn a blog post, the company said a dataset uploaded to its platform abused a security vulnerability to run malicious code on its servers, allowing the attackers to escalate their permissions and gain broader access to Hugging Face’s internal systems.\n\n---\n\n[Lähde: SecurityWeek | URL: https://www.securityweek.com/hugging-face-hacked-in-autonomous-ai-attack/]\nIonut Arghire is an international correspondent for SecurityWeek.\n\nSubscribe to the SecurityWeek Email Briefing for the latest cybersecurity threats, trends, and expert\n            insights.\n\nSubscribe to the SecurityWeek Email Briefing to stay informed on the latest threats, trends, and technology, along with insightful columns from industry experts.\n\nJoin this live webinar as we break down why email-layer defenses alone can't keep pace with the modern phishing ecosystem, how agentic AI is changing the capacity equation for security teams, and more.\n\nThis year's summit will help organizations learn how to utilize tools, controls, and design models needed to properly secure cloud environments. Interact with leading solution providers and other end users facing similar challenges in securing a variety of cloud deployments.\n\nJazz has named Sean Robinson, Rickie Goyal, Danielle Guetta, Shani Nago, and Lior Magram as VPs and Michael Calev as COO.\n\nAJ Shipley has been appointed Chief Product Officer at CrowdStrike.\n\nBrinqa has named Ron Dovich as Chief AI and Automation Officer, David Allen as CTO, Steve Biagioni as CFO, and James Walta as VP of Product.\n\nLegacy systems, safety concerns, and critical infrastructure risks make OT vulnerability disclosure one of cybersecurity's most challenging balancing acts.\r\n\t\t\t\t\t\t\t\t\t(Tod Beardsley)\n\nMoving from isolated, technical data to a continuous risk lifecycle can help organizations align security controls with actual business consequences.\r\n\t\t\t\t\t\t\t\t\t(Steve Durbin)\n\nAs AI-generated code becomes commonplace, CISOs need new audit strategies to measure developer practices, govern AI tool usage, and identify software risks before they reach production.\r\n\t\t\t\t\t\t\t\t\t(Matias Madou)\n\nFrom model selection and automation to validation and measurable results, the right questions can help enterprises separate genuine AI capabilities from marketing hype.\r\n\t\t\t\t\t\t\t\t\t(Joshua Goldfarb)\n\nAs cybersecurity platforms embrace agentic AI, organizations must balance detection performance against the escalating costs of token consumption, deployment architecture, and AI credits.\r\n\t\t\t\t\t\t\t\t\t(Danelle Au)\n\n---\n\n[Lähde: The Hacker News | URL: https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html]\nIn an ironic twist, open-source artificial intelligence (AI) platform Hugging Face revealed that it was the victim of a hack perpetrated by an autonomous AI agent system.\n\nThe company said it detected and responded to the incident targeting its production infrastructure earlier last week.\n\n\"We identified unauthorized access to a limited set of internal datasets and to several credentials used by our services,\" the company said in a statement.\n\nWhile an investigation into the intrusion remains ongoing, Hugging Face said it has found no evidence that the AI agent tampered with public, user-facing models, datasets, or Spaces, and its own software supply chain.\n\nThe starting point of the attack was the data processing pipeline itself, with a malicious dataset abusing two code execution paths, viz., in its remote code dataset loader and a template injection in a dataset configuration, to run code on a processing worker.\n\nWith that access, the threat actor is said to have escalated to node-level access, collected cloud and cluster credentials, and moved laterally into several internal clusters over a weekend.\n\nThe exact large language model (LLM) used to pull off the attack is unclear, but the campaign was executed by an autonomous agent framework performing \"many thousands of individual actions across a swarm of short-lived sandboxes, with self-migrating command-and-control staged on public services.\"\n\nHugging Face said it has since addressed the root cause of the issue, precisely the code execution pathways used for initial access. It also carried out the following remediation steps -\n\nAs a further safeguard, Hugging Face is urging customers to rotate any access tokens and review recent activity on their accounts.\n\nThe company also said it turned to Z.ai's GLM 5.2, a Chinese open-weight model, to conduct the forensic analysis after Western frontier models refused requests containing real attack commands, exploit payloads, and command-and-control (C2) artifacts because their safety guardrails were triggered and owing to their inability to differentiate between an attacker and a legitimate incident response effort.\n\n\"This experience points to a gap worth planning for,\" the New York-headquartered company said. \"We do not know which model powered the attacker's agents, whether a jailbroken hosted model or an unrestricted open-weight one; either way, the attacker was bound by no usage policy, while our own forensic work was blocked by the guardrails of the hosted m\n\n---\n\n[Lähde: TechBooky | URL: https://www.techbooky.com/hugging-face-agentic-ai-data-pipeline-breach/]\nHugging Face has disclosed a security incident that feels like a preview of the next phase of cybersecurity; an attacker used an autonomous AI agent system to compromise part of its production infrastructure, while Hugging Face used AI-assisted detection and analysis to understand and contain the breach.\n\nIn its own security incident disclosure, Hugging Face said the intrusion affected a limited set of internal datasets and several service credentials, but that it had found no evidence of tampering with public user-facing models, datasets or Spaces. The company said it closed the dataset code-execution paths used for initial access, rebuilt compromised nodes, rotated credentials and reported the incident to law enforcement.\n\nThe uncomfortable detail is where the attack began. Hugging Face sai...",
+    "research_source": "multi",
+    "summary": "Hugging Face kehottaa käyttäjiään vaihtamaan alustalle tallennetut käyttöoikeustunnukset ja tarkistamaan tiliensä viimeaikaisen toiminnan. Yhtiö selvittää edelleen, anastettiinko tietomurrossa asiakkaiden tai kumppaneiden tietoja.",
+    "content": "Tekoälymallien ja -aineistojen jakelualusta Hugging Face kertoo, että viime viikolla tapahtunut tietomurto vaaransi rajatun joukon yhtiön sisäisiä aineistoja ja useita palvelutunnuksia. Perjantaina tapauksesta kertonut yhtiö ei ole havainnut näyttöä julkisten mallien, aineistojen tai Spaces-sovellusten muuttamisesta, mutta se selvittää edelleen, anastettiinko hyökkäyksessä asiakkaiden tai kumppaneiden tietoja.\n\n## Hyökkäys eteni ladatun aineiston kautta\n\nYhtiön mukaan hyökkäys alkoi palveluun ladatusta aineistosta. Aineisto hyödynsi haavoittuvuutta, jonka kautta Hugging Facen palvelimilla pystyttiin suorittamaan haitallista koodia. Saatuaan ensimmäisen pääsyn hyökkääjä kasvatti käyttöoikeuksiaan ja eteni laajemmin sisäisiin järjestelmiin sekä osaan tuotantoinfrastruktuuria. Hugging Facen mukaan tunkeutumisessa käytettiin autonomista tekoälyagenttijärjestelmää. Näin aineistojen käsittelyyn liittynyt koodinsuoritusreitti avasi tien alkuperäistä kohdetta laajempaan pääsyyn.\n\nHugging Face käytti tapahtuman havaitsemiseen, analysointiin ja rajaamiseen tekoälyavusteisia menetelmiä. Yhtiön vahvistamat vaikutukset koskevat toistaiseksi sisäisiä aineistoja ja palvelutunnuksia. Julkisiin käyttäjille näkyviin malleihin, aineistoihin tai Spaces-palveluihin kohdistuneesta peukaloinnista ei ole löytynyt näyttöä. Tämä ei kuitenkaan ratkaise erillistä kysymystä siitä, päätyikö hyökkääjälle asiakkaiden tai yhteistyökumppaneiden tietoja, sillä sen selvitys jatkuu.\n\n## Hyökkäysreitti suljettiin ja ympäristö rakennettiin uudelleen\n\nYhtiö kertoo korjanneensa ongelman juurisyyn sulkemalla aineistojen koodinsuoritusreitit, joita käytettiin ensimmäisen pääsyn saamiseen. Lisäksi se rakensi vaarantuneet palvelinsolmut uudelleen, vaihtoi palvelutunnuksia ja ilmoitti tapahtumasta lainvalvontaviranomaisille. Korjaukset kohdistuivat sekä hyökkääjän käyttämään sisääntuloreittiin että niihin tuotantoympäristön osiin, joiden katsottiin vaarantuneen. Yhtiön omien palvelutunnusten vaihtaminen kuului sisäisiin korjaustoimiin, kun taas käyttäjille annettiin erillinen varotoimiohje heidän alustalle tallentamistaan käyttöoikeustunnuksista.\n\nLisävarotoimena Hugging Face kehottaa asiakkaitaan vaihtamaan kaikki alustalle tallennetut käyttöoikeustunnukset ja tarkistamaan tiliensä viimeaikaisen toiminnan. Ohje koskee käyttäjiä siitä huolimatta, ettei yhtiö ole löytänyt näyttöä julkisten käyttäjäsisältöjen muuttamisesta. Asiakas- ja kumppanitietojen mahdollinen joutuminen hyökkääjälle on edelleen tutkinnan avoin osa.\n\n## Forensiikassa käytettiin GLM 5.2 -mallia\n\nForensisessä analyysissa Hugging Face turvautui kiinalaisen Z.ai-yhtiön avoimilla painoilla julkaistuun GLM 5.2 -malliin. Yhtiön mukaan länsimaiset edistyneet mallit kieltäytyivät käsittelemästä tutkinnassa tarvittuja todellisia hyökkäyskomentoja, hyväksikäyttökuormia sekä komento- ja hallintajärjestelmiin liittyviä aineistoja. Niiden turvarajoitukset aktivoituivat, koska mallit eivät kyenneet erottamaan, oliko aineistoa käsittelevä taho hyökkääjä vai valtuutettua tietoturvapoikkeaman tutkintaa tekevä asiantuntija. GLM 5.2:ta käytettiin tämän vuoksi tapahtuman forensiseen selvittämiseen.",
+    "category": "Teknologia",
+    "tags": [
+      "hugging face",
+      "tietoturva",
+      "tietomurto",
+      "tekoäly"
+    ],
+    "summary_bullets": [
+      "Tietomurto vaaransi rajatun joukon Hugging Facen sisäisiä aineistoja ja useita palvelutunnuksia.",
+      "Julkisten mallien, aineistojen tai Spaces-sovellusten muuttamisesta ei ole löytynyt näyttöä.",
+      "Käyttäjiä kehotetaan vaihtamaan alustalle tallennetut käyttöoikeustunnukset ja tarkistamaan tiliensä toimintaa."
+    ],
+    "key_points": [
+      "Tietomurto vaaransi rajatun joukon Hugging Facen sisäisiä aineistoja ja useita palvelutunnuksia.",
+      "Julkisten mallien, aineistojen tai Spaces-sovellusten muuttamisesta ei ole löytynyt näyttöä.",
+      "Käyttäjiä kehotetaan vaihtamaan alustalle tallennetut käyttöoikeustunnukset ja tarkistamaan tiliensä toimintaa."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "journalist_note": "Tietomurron täysi laajuus on vielä avoin, sillä yhtiö tutkii edelleen, anastettiinko asiakkaiden tai kumppaneiden tietoja.",
+    "source_text": "Hugging Face is urging users to rotate any access tokens stored on the platform and review account activity.\n\nHugging Face, a platform that hosts AI models and datasets, said its internal datasets and service credentials were compromised in a hack last week. The company disclosed the breach on Friday, but said it was still investigating whether any customer or partner data was stolen during the incident. In a blog post, the company said a dataset uploaded to its platform abused a security vulnerability to run malicious code on its servers, allowing the attackers to escalate their permissions and gain broader access to Hugging Face’s internal systems. ---\n\nHugging Face has disclosed a security incident that feels like a preview of the next phase of cybersecurity; an attacker used an autonomous AI agent system to compromise part of its production infrastructure, while Hugging Face used AI-assisted detection and analysis to understand and contain the breach. In its own security incident disclosure, Hugging Face said the intrusion affected a limited set of internal datasets and several service credentials, but that it had found no evidence of tampering with public user-facing models, datasets or Spaces. The company said it closed the dataset code-execution paths used for initial access, rebuilt compromised nodes, rotated credentials and reported the incident to law enforcement. The uncomfortable detail is where the attack began. Hugging Face sai...\n\nHugging Face said it has since addressed the root cause of the issue, precisely the code execution pathways used for initial access. It also carried out the following remediation steps - As a further safeguard, Hugging Face is urging customers to rotate any access tokens and review recent activity on their accounts. The company also said it turned to Z.ai's GLM 5.2, a Chinese open-weight model, to conduct the forensic analysis after Western frontier models refused requests containing real attack commands, exploit payloads, and command-and-control (C2) artifacts because their safety guardrails were triggered and owing to their inability to differentiate between an attacker and a legitimate incident response effort.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260720T124126Z_5dcbd9a2c0",
+    "source_url": "https://www.techbooky.com/hugging-face-agentic-ai-data-pipeline-breach/"
+  }
+}

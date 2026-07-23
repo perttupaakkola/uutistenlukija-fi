@@ -1,0 +1,79 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-07-20T19:01:43.156093+00:00",
+  "digest": "8200cdffd2",
+  "packet": {
+    "packet_id": "20260720T190143Z_8200cdffd2",
+    "created_at": "2026-07-20T19:01:43Z",
+    "headline_seed": "Pesäpallotilastoja | Naisten Superpesis",
+    "description_seed": "",
+    "link": "https://www.ess.fi/urheilu/9633657",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [],
+    "source_urls": [],
+    "source_domains": [],
+    "selected_source": {},
+    "selected_source_provenance_error": "",
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.15,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Pesäpallotilastoja | Naisten Superpesis"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [],
+    "source_text": "",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 177,
+      "selected_blocks": 0,
+      "selected_source_words": 0,
+      "zero_source_packet": true,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "ksml.fi",
+        "ksml.fi"
+      ],
+      "selected_sources": []
+    },
+    "source_selection_outcome": "zero_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Pesäpallotilastoja | Naisten Superpesis",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "Pesäpallotilastoja | Naisten Superpesis",
+    "description": "",
+    "link": "https://www.ess.fi/urheilu/9633657",
+    "published": "2026-07-20T21:37:26+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "02f5b6dc222c7fed7181b5f63af46269",
+    "_url_hash": "6c97bf30dde5cfd5af67e8ef6114b215584143335046bff09754969eb40f8d8d",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: ksml.fi | URL: https://www.ksml.fi/urheilu/9561991]\nJoensuun Maila–Jyväskylän Kirittäret 2–0 (5–4, 7–3)\n\nJyväskylän Kirittäret: 0 0 2 2 = 4 1 0 0 2 = 3 0\n\nJoensuun Maila: Johanna Pirskanen 0/4, Noora Pasi 0/2, Eeva Mäki-Maukola 0/2, Emilia Linna 4/1, Nelli Huotari 1/0, Veera Varonen 0/1, Mira Heikkilä 1/1, Mari Mantsinen 1/0, Maria Kaakinen 2/0, Hanna Toivanen 2/0, Kaisa Viitala 0/1.\n\nPalkitut: I Emilia Linna, II Eeva Mäki-Maukola.\n\nJyväskylän Kirittäret: Viivi Partanen 0/3, Iida Pajunen 0/1, Venla Karttunen 1/0, Emmi Särkioja 2/0, Tinja Töyrylä 2/0, Saana Kamppinen 0/1, Sara Kujanen 2/0, Mette Mortensen 0/2.\n\nPalkitut: I Tinja Töyrylä, II Iida Pajunen.\n\nMailattaret, Vaasa–Manse PP, Tampere 0–2 (0–6, 0–6)\n\nMailattaret, Vaasa: 0 0 0 0 = 0 0 0 0 0 = 0 0\n\nManse PP, Tampere: 0 2 4 = 6 0 2 4 0 = 6 2\n\nPalkitut: I Minea Mäkiviita, II Linnea Nikola.\n\nManse PP, Tampere: Ella Korpela 1+0/1, Saaga-Angelia Raudasoja 0/3, Virpi Hukka 0/3, Anna Ala-Kauhaluoma 1/1, Lina Olenius 1/2, Johanna Ylöstalo 1/0, Hanna Lammela 1+2/1, Maija Vastamäki 2/0, Siri Eskola 1+2/1.\n\nPalkitut: I Venla Tanhua, II Siri Eskola.",
+    "research_source": "multi"
+  },
+  "failed_at": "2026-07-20T19:03:16.188966+00:00",
+  "failure": "Paketissa ei ole lainkaan valittua lähdetekstiä tai varmennettuja uutistietoja, joten vähintään 250 sanan artikkelia ei voi kirjoittaa ilman keksittyjä tietoja.",
+  "raw_response": "{\"packet_id\":\"20260720T190143Z_8200cdffd2\",\"status\":\"INSUFFICIENT_CONFIDENCE\",\"reason\":\"Paketissa ei ole lainkaan valittua lähdetekstiä tai varmennettuja uutistietoja, joten vähintään 250 sanan artikkelia ei voi kirjoittaa ilman keksittyjä tietoja.\"}"
+}
