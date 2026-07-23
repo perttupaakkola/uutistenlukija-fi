@@ -6,6 +6,7 @@ Reads data/cron_registry.json, checks mtime of marker files,
 and reports stale jobs to Discord #operations.
 """
 
+import argparse
 import json
 import os
 import sys
@@ -44,12 +45,21 @@ DISCORD_WEBHOOK_URL = (
     or ""
 )
 DISCORD_HTTP_USER_AGENT = "Hermes-Uutistenlukija/1.0"
+UNRESOLVED_ENV_PLACEHOLDER_RE = re.compile(r"\$\{[^}]+\}")
+
+def configured_value(value):
+    normalized = str(value or "").strip()
+    if not normalized or UNRESOLVED_ENV_PLACEHOLDER_RE.search(normalized):
+        return ""
+    return normalized
 
 def post_to_discord(content):
     payload = json.dumps({"content": content}).encode()
-    if DISCORD_WEBHOOK_URL:
+    webhook_url = configured_value(DISCORD_WEBHOOK_URL)
+    bot_token = configured_value(DISCORD_BOT_TOKEN)
+    if webhook_url:
         req = urllib.request.Request(
-            DISCORD_WEBHOOK_URL,
+            webhook_url,
             payload,
             {
                 "Content-Type": "application/json",
@@ -57,12 +67,12 @@ def post_to_discord(content):
             },
             method="POST",
         )
-    elif DISCORD_BOT_TOKEN:
+    elif bot_token:
         req = urllib.request.Request(
             f"https://discord.com/api/v10/channels/{OPERATIONS_CHANNEL}/messages",
             payload,
             {
-                "Authorization": f"Bot {DISCORD_BOT_TOKEN}",
+                "Authorization": f"Bot {bot_token}",
                 "Content-Type": "application/json",
                 "User-Agent": DISCORD_HTTP_USER_AGENT,
             },
@@ -102,8 +112,19 @@ def latest_marker_context(path, required_pattern):
             return lines[index], lines[index + 1:]
     return (lines[-1] if lines else "", [])
 
-def main():
-    dry_run = "--dry-run" in sys.argv[1:]
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(
+        description="Check registered cron markers and report unhealthy jobs."
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Print the health report without posting to Discord.",
+    )
+    return parser.parse_args(argv)
+
+def main(argv=None):
+    args = parse_args(argv)
 
     if not REGISTRY_FILE.exists():
         print(f"Registry file not found: {REGISTRY_FILE}")
@@ -204,7 +225,7 @@ def main():
     report += f"\nTotal healthy: {ok_count}"
     
     print(report)
-    if not dry_run:
+    if not args.dry_run:
         post_to_discord(report)
     return 1
 
