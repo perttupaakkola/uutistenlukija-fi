@@ -140,6 +140,11 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   color: #fff !important;
   text-decoration: none;
 }
+@media (min-width: 681px) {
+  :root[data-theme="dark"] #main-nav-menu a:focus-visible {
+    outline-color: var(--accent, #e74c3c);
+  }
+}
 .search-dropdown {
   position: absolute;
   top: calc(100% + 8px);
