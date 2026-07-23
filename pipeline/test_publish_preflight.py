@@ -73,6 +73,43 @@ class PublishPreflightTests(unittest.TestCase):
         self.assertEqual(result.article_words, 220)
         self.assertEqual(result.reasons, ())
 
+    def test_retained_concert_with_unanimous_wrong_category_routes_to_monica(self) -> None:
+        path = (
+            Path(__file__).resolve().parent
+            / "queues/staged/failed/20260719T233133Z_1573541d16.json"
+        )
+        before = path.read_bytes()
+        record = json.loads(before)
+
+        result = evaluate_publish_preflight(record)
+        eligible = staged_publish.apply_publish_preflight([(path, record)])
+
+        self.assertEqual(result.action, "monica_review")
+        self.assertTrue(result.requires_monica_review)
+        self.assertEqual(result.categories, ("Ulkomaat", "Ulkomaat", "Ulkomaat"))
+        self.assertEqual(result.reasons, ("entertainment_category_review",))
+        self.assertEqual(eligible, [])
+        self.assertEqual(path.read_bytes(), before)
+
+    def test_retained_bbc_brief_keeps_independent_density_holds(self) -> None:
+        path = (
+            Path(__file__).resolve().parent
+            / "queues/staged/published/20260719T230120Z_8b790c104e.json"
+        )
+        before = path.read_bytes()
+        record = json.loads(before)
+
+        result = evaluate_publish_preflight(record)
+        eligible = staged_publish.apply_publish_preflight([(path, record)])
+
+        self.assertEqual(result.action, "reject")
+        self.assertIn("category_disagreement", result.reasons)
+        self.assertIn("thin_distinct_source", result.reasons)
+        self.assertIn("article_source_ratio_exceeded", result.reasons)
+        self.assertNotIn("entertainment_category_review", result.reasons)
+        self.assertEqual(eligible, [])
+        self.assertEqual(path.read_bytes(), before)
+
     def test_category_disagreement_rejects_before_publish(self) -> None:
         record = _record(packet_category="Kotimaa", payload_category="Ulkomaat", article_category="Ulkomaat")
 

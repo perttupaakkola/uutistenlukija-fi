@@ -34,6 +34,12 @@ _SENSITIVE_PUBLIC_SAFETY_RE = re.compile(
     r")\b",
     re.IGNORECASE,
 )
+_ENTERTAINMENT_CATEGORY_TAGS = frozenset({"kulttuuri", "viihde"})
+_ENTERTAINMENT_PERFORMANCE_RE = re.compile(
+    r"\b(?:concert\w*|konsert\w*|perform\w*|esiinty\w*|"
+    r"(?:musiikki|väliaika|lava)esity\w*|half[- ]time show\w*)\b",
+    re.IGNORECASE,
+)
 
 
 @dataclass(frozen=True)
@@ -222,6 +228,39 @@ def _is_sensitive(record: dict[str, Any]) -> bool:
     return bool(_SENSITIVE_PUBLIC_SAFETY_RE.search(" ".join(str(value or "") for value in values)))
 
 
+def _requires_entertainment_category_review(
+    record: dict[str, Any], categories: tuple[str, str, str]
+) -> bool:
+    if not all(categories) or len(set(categories)) != 1 or categories[0] == "Kulttuuri":
+        return False
+    packet = _mapping(record.get("packet"))
+    payload = _mapping(record.get("payload"))
+    article = _mapping(record.get("article"))
+    tags = {
+        str(tag).strip().casefold()
+        for value in (payload.get("tags"), article.get("tags"))
+        if isinstance(value, (list, tuple))
+        for tag in value
+        if str(tag).strip()
+    }
+    if not tags.intersection(_ENTERTAINMENT_CATEGORY_TAGS):
+        return False
+    values = [
+        packet.get("headline_seed"),
+        packet.get("description_seed"),
+        packet.get("source_text"),
+        payload.get("title"),
+        payload.get("content"),
+        article.get("title"),
+        article.get("content"),
+    ]
+    return bool(
+        _ENTERTAINMENT_PERFORMANCE_RE.search(
+            " ".join(str(value or "") for value in values)
+        )
+    )
+
+
 def evaluate_publish_preflight(record: dict[str, Any]) -> PublishPreflightResult:
     """Classify one completed Monica record without changing it or its queue."""
     packet = _mapping(record.get("packet"))
@@ -260,6 +299,8 @@ def evaluate_publish_preflight(record: dict[str, Any]) -> PublishPreflightResult
         hard_reasons.append("selected_source_url_missing")
     if hidden_urls:
         hard_reasons.append("selected_source_not_public")
+    if _requires_entertainment_category_review(record, categories):
+        review_reasons.append("entertainment_category_review")
     if distinct_source_words < MIN_DISTINCT_SOURCE_WORDS:
         review_reasons.append("thin_distinct_source")
     if ratio > MAX_ARTICLE_SOURCE_RATIO:
