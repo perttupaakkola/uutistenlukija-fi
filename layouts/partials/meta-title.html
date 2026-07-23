@@ -22,7 +22,8 @@
     {{- $fullTitle = printf "%s | %s" $seoWithPage $siteName -}}
   {{- end -}}
 {{- else if .IsHome -}}
-  {{- $fullTitle = printf "%s%s" .Site.Title $pageSuffix -}}
+  {{- $homeTagline := .Site.Params.homeTitleTagline | default "Kotimaan ja maailman uutiset" -}}
+  {{- $fullTitle = printf "%s — %s%s" .Site.Title $homeTagline $pageSuffix -}}
 {{- else -}}
   {{- $coreTitle = partial "page-title-core.html" . -}}
 {{- end -}}
