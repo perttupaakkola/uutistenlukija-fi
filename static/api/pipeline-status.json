@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-23T12:10:17+00:00",
+  "generated_at": "2026-07-23T14:36:44+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,12 +12,18 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 6,
-    "rejected": 0,
+    "published": 7,
+    "rejected": 1,
     "publish_rate": 0,
-    "last_published_ts": "2026-07-23T12:07:10.275028+00:00"
+    "last_published_ts": "2026-07-23T14:33:22.972876+00:00"
   },
-  "reject_reasons": {},
+  "reject_reasons": {
+    "missing: image": 1,
+    "readability few paragraphs (1)": 1,
+    "readability wall of text": 1,
+    "unsourced numbers": 1,
+    "only 1 paragraphs (min 3)": 1
+  },
   "feeds": {
     "total": 0,
     "healthy": 0,
@@ -36,16 +42,16 @@
       7
     ],
     [
+      "vaikka",
+      6
+    ],
+    [
+      "poliisi",
+      6
+    ],
+    [
       "eivät",
       6
-    ],
-    [
-      "espanjan",
-      6
-    ],
-    [
-      "vaikka",
-      5
     ]
   ]
 }

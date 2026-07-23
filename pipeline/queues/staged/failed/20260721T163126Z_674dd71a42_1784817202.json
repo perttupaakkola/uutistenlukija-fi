@@ -203,5 +203,39 @@
     "degraded_mode": false,
     "monica_packet_id": "20260721T163126Z_674dd71a42",
     "source_url": "https://arstechnica.com/cars/2026/07/when-your-vehicle-outlives-its-cloud-what-happens-next/"
-  }
+  },
+  "quality_gate_rejected_at": "2026-07-23T14:33:22.804762+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260721T163126Z_674dd71a42",
+    "category": "Teknologia",
+    "selected_source_words": 516,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 50,
+    "quality_normalized": 6.94,
+    "quality_reasons": [
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "unsourced numbers",
+      "only 1 paragraphs (min 3)",
+      "unsourced_numbers: 1990, 40prosentti"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 1990, 40prosentti"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 304,
+    "title": "Auto voi kestää pilvipalveluaan pidempään – tutut etätoiminnot voivat kadota"
+  },
+  "failure": "quality_gate_rejected: missing: image; readability few paragraphs (1); readability wall of text; unsourced numbers; only 1 paragraphs (min 3); unsourced_numbers: 1990, 40prosentti",
+  "duplicate_rejected_at": "2026-07-23T14:33:22.971835+00:00",
+  "duplicate_rejected": true
 }
