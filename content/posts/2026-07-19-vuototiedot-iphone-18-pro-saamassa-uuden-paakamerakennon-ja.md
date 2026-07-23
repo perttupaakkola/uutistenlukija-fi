@@ -70,3 +70,5 @@ Vaihtuva aukko voisi auttaa kameraa sopeutumaan erilaisiin valaistusolosuhteisii
 Saman lokin perusteella iPhone 18 Pro Maxin muuhun kamerakokoonpanoon ei olisi tulossa vastaavia muutoksia. Telekamerassa säilyisi Sony IMX973 -kenno ja ultralaajakulmakamerassa Sony IMX972 -kenno. Myös LiDAR-skannerin ja etukameran kerrotaan pysyvän ennallaan.
 
 Raportti koskee nimenomaan iPhone 18 Pro Maxiksi tunnistettua diagnostiikkalokia. Sen perusteella ei voi päätellä, että sama kamerakokoonpano kuuluisi myös iPhone 18 Prohon tai muihin iPhone 18 -malleihin. Apple ei ole vahvistanut lokin aitoutta tai tulevan puhelimen ominaisuuksia.
+
+<p><strong>Lue myös:</strong> <a href="/posts/2026-07-10-huhu-iphone-18-pro-max-voi-painaa-seitseman-grammaa-edeltaja/" data-track="related_article_click" data-placement="article-end-ope435">Huhu: iPhone 18 Pro Max voi painaa seitsemän grammaa edeltäjäänsä enemmän</a></p>
