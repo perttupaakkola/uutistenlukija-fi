@@ -1,8 +1,9 @@
 ---
 title: "Karhuhavainnot ovat yleistyneet Lieksassa ja Pohjois-Savossa"
+seo_title: "Karhuhavainnot Lieksassa ja Pohjois-Savossa"
 date: 2026-05-30T08:08:08.087421+00:00
 categories:
-  - Ulkomaat
+  - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
@@ -65,4 +66,4 @@ Pohjois-Savossa karhuhavaintoja on kirjattu tänä keväänä vajaat 900, mikä 
 
 Karhukannan kasvua selittää osaltaan se, ettei karhua ole metsästetty poronhoitoalueen ulkopuolella muutamaan vuoteen. Viimeksi metsästystä oli syksyllä 2023. Nyholmin mukaan ravinnon puute ei rajoita karhukannan kasvua, sillä kaikkiruokainen karhu löytää yleensä syötävää.
 
-Asiantuntijat muistuttavat, ettei karhuille pidä jättää tai tarjota ravintoa pihojen läheisyydessä. Ruoka voi houkutella eläimiä lähemmäs asutusta, mikä lisää ongelmatilanteiden riskiä.
+Nyholmin mukaan karhuille ei pidä jättää tai tarjota ravintoa pihojen läheisyyteen, jotta karhut eivät hakeutuisi pihoihin.
