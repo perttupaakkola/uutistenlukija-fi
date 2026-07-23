@@ -14,6 +14,8 @@
 
 - Never print or hardcode GitHub, Cloudflare, Discord, or other secrets. Use GitHub Actions secrets and keep logs redacted.
 - Keep the Cloudflare Pages deploy path aligned with the repository build: checkout, Hugo setup, validators, `hugo --minify`, deploy `public`.
+- Keep deterministic staged pipeline workflows independently marker-gated. Scanner control uses `pipeline/actions-scan.enabled`; publisher control uses `pipeline/actions-publish.enabled`. Changing or rolling back one must not toggle the other.
+- Staged scanner runs may commit only `pipeline/queues/staged/**`, must validate the bounded queue delta, then rebase and push fail closed. Queue/control-only pushes must stay excluded from `deploy.yml`.
 - Alert workflows should be actionable and low-noise; include failing workflow/run URLs and first failing step when feasible.
 - Do not disable validation steps to make deploys pass unless a Linear issue explicitly tracks the risk and replacement check.
 
@@ -26,6 +28,7 @@
 ## Verification
 
 - YAML parse/lint if a local checker is available.
+- Staged Actions contracts: `python3 -m unittest -v scripts.test_actions_pipeline_workflows`.
 - For deploy-impacting changes, push only after local checks pass and then verify the GitHub Actions run through the GitHub API or `gh` if available.
 - Confirm `https://uutistenlukija.fi/` or the relevant `/api/...` endpoint after deploy when public behavior changes.
 

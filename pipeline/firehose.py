@@ -34,7 +34,7 @@ from typing import List, Dict, Optional
 from urllib.parse import urlparse, urlencode, parse_qs, urlunparse
 
 FIREHOSE_BASE = "https://api.firehose.com/v1"
-FIREHOSE_TOKEN = "fh_MPdE6AVizFkpIdRiKgL10QJUfoORj2eEZUfXBHtk"
+FIREHOSE_TOKEN = os.environ.get("FIREHOSE_TOKEN", "").strip()
 
 # Rules to register with Firehose (idempotent — tag is unique key)
 # Synced with live API state 2026-03-19. quality:true on all rules.
@@ -137,9 +137,8 @@ _TAG_CATEGORY_MAP = {
     "finnish-teknologia": "Teknologia",
 }
 
-HEADERS = {
+BASE_HEADERS = {
     "User-Agent": "Uutistenlukija/1.0 (+https://uutistenlukija.fi)",
-    "Authorization": f"Bearer {FIREHOSE_TOKEN}",
     "Accept": "text/event-stream",
 }
 
@@ -225,6 +224,9 @@ def _parse_sse_events(raw: bytes) -> List[Dict]:
 
 def list_rules() -> List[Dict]:
     """Fetch current rules from Firehose API."""
+    if not FIREHOSE_TOKEN:
+        print("[firehose] FIREHOSE_TOKEN missing; cannot list rules")
+        return []
     req = urllib.request.Request(
         f"{FIREHOSE_BASE}/rules",
         headers={
@@ -242,6 +244,9 @@ def list_rules() -> List[Dict]:
 
 def register_rules(dry_run: bool = False) -> None:
     """Register all configured rules with Firehose (idempotent by tag)."""
+    if not FIREHOSE_TOKEN and not dry_run:
+        print("[firehose] FIREHOSE_TOKEN missing; cannot register rules")
+        return
     existing = list_rules()
     # existing may be a list of rule dicts, or empty/error
     if not isinstance(existing, list):
@@ -257,7 +262,7 @@ def register_rules(dry_run: bool = False) -> None:
         if dry_run:
             print(f"[firehose] Would register: {tag}")
             print(f"  curl -X POST {FIREHOSE_BASE}/rules \\")
-            print(f"    -H 'Authorization: Bearer {FIREHOSE_TOKEN}' \\")
+            print("    -H 'Authorization: Bearer $FIREHOSE_TOKEN' \\")
             print(f"    -H 'Content-Type: application/json' \\")
             print(f"    -d '{json.dumps(rule)}'")
             continue
@@ -296,6 +301,10 @@ def poll_firehose(since: str = "20m") -> List[Dict]:
 
     Uses Last-Event-ID for exact-offset resume when available.
     """
+    if not FIREHOSE_TOKEN:
+        print("[firehose] FIREHOSE_TOKEN missing; skipping supplementary source")
+        return []
+
     state = _load_state()
     last_event_id = state.get("last_event_id")
 
@@ -305,7 +314,10 @@ def poll_firehose(since: str = "20m") -> List[Dict]:
     params = {"timeout": str(FIREHOSE_STREAM_WAIT_SEC), "since": since}
     url = f"{FIREHOSE_BASE}/stream?" + urlencode(params)
 
-    req_headers = dict(HEADERS)
+    req_headers = {
+        **BASE_HEADERS,
+        "Authorization": f"Bearer {FIREHOSE_TOKEN}",
+    }
     if last_event_id:
         req_headers["Last-Event-ID"] = last_event_id
 
@@ -452,6 +464,9 @@ def _parse_firehose_doc(doc: Dict, event: Dict) -> Optional[Dict]:
 
 def delete_rule(rule_id: str) -> bool:
     """Delete a rule by ID. Returns True on success."""
+    if not FIREHOSE_TOKEN:
+        print("[firehose] FIREHOSE_TOKEN missing; cannot delete rules")
+        return False
     req = urllib.request.Request(
         f"{FIREHOSE_BASE}/rules/{rule_id}",
         headers={

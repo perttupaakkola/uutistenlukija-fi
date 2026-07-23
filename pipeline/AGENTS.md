@@ -17,6 +17,7 @@
 - Preserve Finnish editorial quality, source attribution, source sufficiency, duplicate suppression, and category balance.
 - Do not commit most `logs/`, `queues/`, lock files, or runtime artifacts. Commit only durable source, public/static status JSON intentionally generated for the site, metrics artifacts explicitly tracked by the pipeline, or small evidence fixtures required by tests.
 - Never print or commit `.env`, webhook URLs, API keys, OAuth tokens, cookies, or bearer headers. Use wrappers such as `scripts/run_with_project_env.sh` when a cron/reporting script needs environment variables.
+- Firehose credentials must come from `FIREHOSE_TOKEN` in the runtime environment or GitHub Secrets, never source. The supplementary local source skips cleanly when absent; the Actions staged-scan workflow requires the secret before scanning.
 - Before changing yield/classification behavior, reproduce with real logs or packets where possible and add a targeted regression test.
 - Queue cleanup must be reversible or manifest-backed unless deleting clearly generated throwaway artifacts under an approved retention rule.
 

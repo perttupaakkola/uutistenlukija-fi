@@ -68,15 +68,44 @@ pushes from the VPS.
    `deploy-failure-alert.yml` `workflows:` list with "Staged publish" and
    "Daily kooste" so Discord gets failures from these too.
 
-## Phase 2 — scan (needs research-source keys)
+## Phase 2 — scan (marker-gated)
 
-`staged_publish.py scan` is stdlib + `scanner.py`/`firehose.py` (urllib). Add a
-15-min scheduled workflow running `scan --max-packets 1 ...` with the same flags as
-the old `uutis-staged-scan` safe-job-runner line (drop the CPU/disk guards — the
-runner is ephemeral). Queue writes land in `queues/staged/ready/` and are committed
-by the workflow (`git add pipeline/queues/staged && commit && pull --rebase && push`).
-Check `scanner.py`/`research` for any API keys read from `.env` and mirror them as
-secrets first.
+- `.github/workflows/staged-scan.yml` runs at staggered UTC minutes
+  `01,16,31,46`. Scheduled runs are inert until
+  `pipeline/actions-scan.enabled` is committed; manual dispatch bypasses the
+  marker for the supervised canary only.
+- The scan command keeps the accepted paused VPS flags exactly:
+  `scan --max-packets 1 --max-research-candidates 8 --dedup-window 48
+  --max-ready-backlog 150 --max-ready-age-hours 24`. The old CPU/disk guards
+  are omitted on the ephemeral runner, while the prior 240-second execution
+  bound is retained.
+- Firehose is supplementary but credentialed. Configure only the
+  `FIREHOSE_TOKEN` GitHub Secret. `firehose.py` reads it from the environment,
+  never source or logs; the Actions job fails before scanning when it is absent.
+  RSS and research extraction remain stdlib/public-endpoint code.
+- The workflow validates a manual canary as exactly one new packet with the
+  staged schema, matching packet ID, usable source provenance, and a SHA-256
+  manifest. It stages only `pipeline/queues/staged`, checks the staged diff,
+  commits, rebases on `origin/main`, and pushes. Queue-only pushes remain ignored
+  by `deploy.yml`.
+
+### Phase 2 canary and enablement
+
+1. Merge the workflow while `pipeline/actions-scan.enabled` is absent. Confirm
+   the VPS `uutis-staged-scan` and `uutis-monica-worker` declarations remain
+   commented.
+2. Dispatch `Staged scan` once. Record the Actions run ID and the queue
+   pre/post counts plus manifest from the run summary. The run must add exactly
+   one valid `ready/` packet.
+3. Commit the empty `pipeline/actions-scan.enabled` marker to enable the
+   staggered schedule. Do not resume the Monica worker here; that is a separate
+   Max restoration decision at the verified ready-packet boundary.
+
+Rollback is independent of publishing: remove
+`pipeline/actions-scan.enabled` to stop scheduled scans, and revert
+`.github/workflows/staged-scan.yml` if the workflow itself must be removed.
+Neither action changes `pipeline/actions-publish.enabled`,
+`.github/workflows/staged-publish.yml`, or the current publisher.
 
 ## Phase 3 — metrics, reports, monitors (needs GA4/SC + Discord secrets)
 

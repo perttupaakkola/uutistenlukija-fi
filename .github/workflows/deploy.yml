@@ -5,9 +5,16 @@ on:
     branches: [main]
     paths-ignore:
       - "pipeline/actions-publish.enabled"
+      - "pipeline/actions-scan.enabled"
       - "pipeline/queues/staged/**"
+      - "pipeline/firehose.py"
+      - "pipeline/test_firehose.py"
+      - "pipeline/AGENTS.md"
+      - "scripts/test_actions_pipeline_workflows.py"
+      - ".github/AGENTS.md"
       - ".github/workflows/deploy.yml"
       - ".github/workflows/staged-publish.yml"
+      - ".github/workflows/staged-scan.yml"
       - ".github/workflows/daily-kooste.yml"
       - ".github/workflows/deploy-failure-alert.yml"
       - "docs/actions-pipeline-migration.md"

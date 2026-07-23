@@ -5,6 +5,7 @@ on:
     workflows:
       - Deploy to Cloudflare Pages
       - Staged publish
+      - Staged scan
       - Daily kooste
     types:
       - completed
