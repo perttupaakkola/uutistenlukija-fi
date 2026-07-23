@@ -75,8 +75,8 @@
 # Visual QA monitor (every 6h — desktop/mobile screenshots + overflow/image/contrast checks → #operations on failure)
 17 */6 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && node scripts/visual_qa_monitor.js --post-discord >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/visual-qa-monitor.log 2>&1
 
-# Disk monitor (every 6h; canonical entry)
-0 */6 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && bash scripts/disk_space_monitor.sh >> pipeline/logs/disk_monitor.log 2>&1
+# Disk status writer (every 6h; systemd owns Discord alerts)
+0 */6 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && bash scripts/disk_space_monitor.sh --no-alert >> pipeline/logs/disk_monitor.log 2>&1
 
 # Log rotation (Sundays 06:00 UTC)
 0 6 * * 0 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && bash scripts/rotate_logs.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/rotate_logs.log 2>&1
