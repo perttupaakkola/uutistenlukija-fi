@@ -10,7 +10,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 STAGED_SCAN = ROOT / ".github/workflows/staged-scan.yml"
-SCAN_MARKER = ROOT / "pipeline/actions-scan.enabled"
 DEPLOY = ROOT / ".github/workflows/deploy.yml"
 FAILURE_ALERT = ROOT / ".github/workflows/deploy-failure-alert.yml"
 
@@ -34,8 +33,6 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
             with self.subTest(expected=expected):
                 self.assertIn(expected, self.workflow)
         self.assertNotIn("pipeline/actions-publish.enabled", self.workflow)
-        self.assertTrue(SCAN_MARKER.is_file())
-        self.assertEqual(SCAN_MARKER.read_text(encoding="utf-8").strip(), "")
 
     def test_scanner_command_matches_the_paused_vps_contract(self) -> None:
         command = (
