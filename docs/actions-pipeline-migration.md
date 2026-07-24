@@ -72,36 +72,43 @@ pushes from the VPS.
 
 - `.github/workflows/staged-scan.yml` runs at staggered UTC minutes
   `01,16,31,46`. Scheduled runs are inert until
-  `pipeline/actions-scan.enabled` is committed. Manual dispatch bypasses the
-  marker for an authenticated canary; adding the marker triggers the same
-  bounded canary as the git-only fallback.
+  `pipeline/actions-scan.enabled` is committed. Authenticated manual dispatch
+  from exact `refs/heads/main` is the only one-shot canary path and never
+  creates the marker or enables later schedules. The workflow rejects manual
+  dispatch from any other branch or tag. The marker is reserved for final
+  cutover.
 - The scan command keeps the accepted paused VPS flags exactly:
   `scan --max-packets 1 --max-research-candidates 8 --dedup-window 48
   --max-ready-backlog 150 --max-ready-age-hours 24`. The old CPU/disk guards
   are omitted on the ephemeral runner, while the prior 240-second execution
   bound is retained.
-- Firehose is supplementary but credentialed. Configure only the
-  `FIREHOSE_TOKEN` GitHub Secret. `firehose.py` reads it from the environment,
-  never source or logs; the Actions job fails before scanning when it is absent.
-  RSS and research extraction remain stdlib/public-endpoint code.
-- The workflow validates a manual canary as exactly one new packet with the
-  staged schema, matching packet ID, usable source provenance, and a SHA-256
-  manifest. It stages only `pipeline/queues/staged`, checks the staged diff,
-  commits, rebases on `origin/main`, and pushes. Queue-only pushes remain ignored
-  by `deploy.yml`.
+- Firehose is supplementary but credentialed. Configure only a newly rotated
+  value as the `FIREHOSE_TOKEN` GitHub Secret; never reuse or test the value
+  exposed in public Git history. `firehose.py` reads the secret from the
+  environment, never source or logs; the Actions job fails before scanning when
+  it is absent. RSS and research extraction remain stdlib/public-endpoint code.
+- The workflow validates a manual canary against the complete staged queue
+  snapshot: exactly one valid `ready/` addition, no removals or modifications,
+  and no changes in another queue box. The packet must have the staged schema,
+  matching packet ID, usable source provenance, and a SHA-256 manifest.
+  Scheduled runs separately permit only bounded `ready/` to `failed/` expiry
+  moves plus at most one valid ready addition. The workflow stages only
+  `pipeline/queues/staged`, checks the staged diff, commits, rebases on
+  `origin/main`, and pushes. Queue-only pushes remain ignored by `deploy.yml`.
 
 ### Phase 2 canary and enablement
 
 1. Merge the workflow while `pipeline/actions-scan.enabled` is absent. Confirm
    the VPS `uutis-staged-scan` and `uutis-monica-worker` declarations remain
    commented.
-2. Preferred when authenticated Actions control is available: dispatch
-   `Staged scan` once, verify its exact-one manifest, then commit the empty
-   `pipeline/actions-scan.enabled` marker.
-3. Git-only fallback: commit the empty marker. Its path-limited push trigger is
-   the supervised max-1 canary and also enables later schedules. Record the
-   Actions run ID and queue pre/post counts plus manifest from the run summary.
-   The run must add exactly one valid `ready/` packet.
+2. After independent workflow/security review and separate provider-side
+   credential rotation, dispatch `Staged scan` once from the default `main`
+   branch (select `main` in the Actions branch control, or use `--ref main`).
+   Record the run ID and queue pre/post counts plus manifest from the run
+   summary. The run must add exactly one valid `ready/` packet, make no other
+   staged queue change, and leave `pipeline/actions-scan.enabled` absent.
+3. Only after the canary and live-verification gates pass, commit the empty
+   `pipeline/actions-scan.enabled` marker as the final scheduled-scan cutover.
 4. Do not resume the Monica worker here; that is a separate Max restoration
    decision at the verified ready-packet boundary.
 

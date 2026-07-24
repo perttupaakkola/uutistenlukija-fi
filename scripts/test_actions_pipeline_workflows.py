@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 import re
 import subprocess
@@ -24,13 +25,90 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
     def setUp(self) -> None:
         self.workflow = STAGED_SCAN.read_text(encoding="utf-8")
 
+    def _run_script(self, step_name: str) -> str:
+        step = self.workflow.index(f"      - name: {step_name}")
+        run_header = "        run: |\n"
+        run_start = self.workflow.index(run_header, step) + len(run_header)
+        run_end = self.workflow.find("\n      - name:", run_start)
+        if run_end == -1:
+            run_end = len(self.workflow)
+        return textwrap.dedent(self.workflow[run_start:run_end])
+
+    def _embedded_python(self, step_name: str) -> str:
+        script = self._run_script(step_name)
+        match = re.search(
+            r"python3 <<'PY'\n(?P<source>.*?)\nPY(?:\n|$)",
+            script,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(match, f"{step_name}: embedded Python block missing")
+        return match.group("source")
+
+    def _write_valid_ready_packet(self, root: Path, packet_id: str = "valid_packet") -> None:
+        target = root / "pipeline/queues/staged/ready" / f"{packet_id}.json"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(
+            json.dumps(
+                {
+                    "schema": "uutistenlukija.staged_packet.v1",
+                    "packet": {
+                        "packet_id": packet_id,
+                        "headline_seed": "Test headline",
+                        "link": "https://example.com/story",
+                        "source_text": "sufficient deterministic source text",
+                        "source_selection_outcome": "usable_source_packet",
+                        "selected_source_provenance_error": False,
+                    },
+                }
+            ),
+            encoding="utf-8",
+        )
+
+    def _run_queue_delta_fixture(
+        self,
+        setup_before,
+        mutate_after,
+        *,
+        event_name: str = "workflow_dispatch",
+    ) -> subprocess.CompletedProcess:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            runner_temp = root / "runner-temp"
+            runner_temp.mkdir()
+            (root / "pipeline/queues/staged/ready").mkdir(parents=True)
+            setup_before(root)
+            env = os.environ.copy()
+            env.update(
+                {
+                    "RUNNER_TEMP": str(runner_temp),
+                    "GITHUB_EVENT_NAME": event_name,
+                    "GITHUB_STEP_SUMMARY": str(root / "summary.md"),
+                }
+            )
+            capture = subprocess.run(
+                ["python3", "-c", self._embedded_python("Capture staged queue before scan")],
+                cwd=root,
+                env=env,
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            self.assertEqual(capture.returncode, 0, capture.stdout + capture.stderr)
+            mutate_after(root)
+            return subprocess.run(
+                ["python3", "-c", self._embedded_python("Verify queue delta and push")],
+                cwd=root,
+                env=env,
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+
     def test_schedule_marker_permissions_and_concurrency_are_fail_closed(self) -> None:
         for expected in (
             "name: Staged scan",
             'cron: "1,16,31,46 * * * *"',
             "workflow_dispatch: {}",
-            "branches: [main]",
-            '- "pipeline/actions-scan.enabled"',
             "permissions:\n  contents: write",
             "group: staged-scan",
             "cancel-in-progress: false",
@@ -39,6 +117,83 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
             with self.subTest(expected=expected):
                 self.assertIn(expected, self.workflow)
         self.assertNotIn("pipeline/actions-publish.enabled", self.workflow)
+        trigger_block = self.workflow[: self.workflow.index("\npermissions:")]
+        self.assertNotIn("\n  push:", trigger_block)
+        self.assertNotIn('- "pipeline/actions-scan.enabled"', trigger_block)
+
+    def test_manual_canary_cannot_enable_scheduled_scans(self) -> None:
+        gate = self._run_script("Gate automated runs on cutover marker")
+        cases = (
+            ("workflow_dispatch", False, "enabled=true\nmode=canary\n"),
+            ("schedule", False, "enabled=false\nmode=disabled\n"),
+            ("schedule", True, "enabled=true\nmode=cutover\n"),
+        )
+        for event_name, marker_present, expected_output in cases:
+            with self.subTest(event=event_name, marker=marker_present), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                marker = root / "pipeline/actions-scan.enabled"
+                if marker_present:
+                    marker.parent.mkdir(parents=True)
+                    marker.touch()
+                output = root / "github-output"
+                env = os.environ.copy()
+                env.update(
+                    {
+                        "GITHUB_EVENT_NAME": event_name,
+                        "GITHUB_REF": "refs/heads/main",
+                        "GITHUB_OUTPUT": str(output),
+                    }
+                )
+                result = subprocess.run(
+                    ["bash", "-c", gate],
+                    cwd=root,
+                    env=env,
+                    capture_output=True,
+                    text=True,
+                    check=False,
+                )
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertEqual(output.read_text(encoding="utf-8"), expected_output)
+                self.assertEqual(marker.exists(), marker_present)
+
+    def test_manual_canary_rejects_non_main_ref_before_secret_or_scan(self) -> None:
+        gate = self._run_script("Gate automated runs on cutover marker")
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            output = root / "github-output"
+            env = os.environ.copy()
+            env.update(
+                {
+                    "GITHUB_EVENT_NAME": "workflow_dispatch",
+                    "GITHUB_REF": "refs/heads/unreviewed-canary",
+                    "GITHUB_OUTPUT": str(output),
+                }
+            )
+            result = subprocess.run(
+                ["bash", "-c", gate],
+                cwd=root,
+                env=env,
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            output_exists = output.exists()
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn(
+            "manual canary must run from refs/heads/main",
+            result.stdout + result.stderr,
+        )
+        self.assertFalse(output_exists)
+        gate_step = self.workflow.index(
+            "      - name: Gate automated runs on cutover marker"
+        )
+        secret_step = self.workflow.index(
+            "      - name: Require supplementary research-source credential"
+        )
+        scan_step = self.workflow.index("      - name: Scan one staged packet")
+        self.assertLess(gate_step, secret_step)
+        self.assertLess(secret_step, scan_step)
 
     def test_scanner_command_matches_the_paused_vps_contract(self) -> None:
         command = (
@@ -70,8 +225,11 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
 
     def test_supervised_canary_requires_exactly_one_valid_ready_packet(self) -> None:
         for expected in (
-            'os.environ["GITHUB_EVENT_NAME"] in {"workflow_dispatch", "push"}',
+            'os.environ["GITHUB_EVENT_NAME"] == "workflow_dispatch"',
             "supervised canary expected exactly one new ready packet",
+            "removed_paths",
+            "modified_paths",
+            "other_added_paths",
             "uutistenlukija.staged_packet.v1",
             "packet_id",
             "source_text",
@@ -79,6 +237,89 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
         ):
             with self.subTest(expected=expected):
                 self.assertIn(expected, self.workflow)
+
+    def test_canary_accepts_exactly_one_valid_ready_addition(self) -> None:
+        result = self._run_queue_delta_fixture(
+            lambda root: (root / "pipeline/queues/staged/outbox").mkdir(parents=True),
+            lambda root: self._write_valid_ready_packet(root),
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn('"added_paths": [', result.stdout)
+        self.assertIn("ready/valid_packet.json", result.stdout)
+
+    def test_canary_rejects_removed_ready_file(self) -> None:
+        def setup(root: Path) -> None:
+            existing = root / "pipeline/queues/staged/ready/existing.json"
+            existing.write_text("{}", encoding="utf-8")
+
+        def mutate(root: Path) -> None:
+            (root / "pipeline/queues/staged/ready/existing.json").unlink()
+            self._write_valid_ready_packet(root)
+
+        result = self._run_queue_delta_fixture(setup, mutate)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("removed_paths", result.stdout + result.stderr)
+
+    def test_canary_rejects_other_box_addition_and_modification(self) -> None:
+        def setup_unchanged(root: Path) -> None:
+            outbox = root / "pipeline/queues/staged/outbox"
+            outbox.mkdir(parents=True)
+            (outbox / "existing.json").write_text('{"state":"before"}', encoding="utf-8")
+
+        def add_other_box_file(root: Path) -> None:
+            self._write_valid_ready_packet(root)
+            writing = root / "pipeline/queues/staged/writing"
+            writing.mkdir(parents=True)
+            (writing / "unexpected.json").write_text("{}", encoding="utf-8")
+
+        def modify_other_box_file(root: Path) -> None:
+            self._write_valid_ready_packet(root)
+            (root / "pipeline/queues/staged/outbox/existing.json").write_text(
+                '{"state":"after"}',
+                encoding="utf-8",
+            )
+
+        for label, mutation, expected in (
+            ("addition", add_other_box_file, "other_added_paths"),
+            ("modification", modify_other_box_file, "modified_paths"),
+        ):
+            with self.subTest(change=label):
+                result = self._run_queue_delta_fixture(setup_unchanged, mutation)
+                self.assertNotEqual(result.returncode, 0)
+                self.assertIn(expected, result.stdout + result.stderr)
+
+    def test_schedule_allows_only_paired_ready_expiry_moves(self) -> None:
+        def setup(root: Path) -> None:
+            existing = root / "pipeline/queues/staged/ready/expired.json"
+            existing.write_text('{"state":"ready"}', encoding="utf-8")
+
+        def paired_expiry(root: Path) -> None:
+            (root / "pipeline/queues/staged/ready/expired.json").unlink()
+            failed = root / "pipeline/queues/staged/failed"
+            failed.mkdir(parents=True)
+            (failed / "expired.json").write_text('{"state":"expired"}', encoding="utf-8")
+            self._write_valid_ready_packet(root)
+
+        result = self._run_queue_delta_fixture(
+            setup,
+            paired_expiry,
+            event_name="schedule",
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+        def unpaired_failed_addition(root: Path) -> None:
+            self._write_valid_ready_packet(root)
+            failed = root / "pipeline/queues/staged/failed"
+            failed.mkdir(parents=True)
+            (failed / "unpaired.json").write_text("{}", encoding="utf-8")
+
+        result = self._run_queue_delta_fixture(
+            lambda root: None,
+            unpaired_failed_addition,
+            event_name="schedule",
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("unmatched_failed_paths", result.stdout + result.stderr)
 
 
 class ScannerDeployIsolationContractTests(unittest.TestCase):

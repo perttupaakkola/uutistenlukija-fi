@@ -6,14 +6,11 @@ name: Staged scan
 # restoration decision.
 #
 # Scheduled runs are inert until `pipeline/actions-scan.enabled` exists.
-# Manual dispatch bypasses the marker for an authenticated canary. Adding the
-# marker triggers the same max-1 canary when Actions dispatch is unavailable.
+# Authenticated manual dispatch from exact main is the only one-shot canary
+# path; it never creates the marker or enables later schedules. The marker is
+# cutover-only.
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "pipeline/actions-scan.enabled"
   schedule:
     # Scanner -> retained VPS worker -> publisher spacing:
     # 01 -> 03 -> 13; 16 -> 23 -> 28; 31 -> 33 -> 43; 46 -> 53 -> 58.
@@ -43,12 +40,30 @@ jobs:
       - name: Gate automated runs on cutover marker
         id: gate
         run: |
-          if [ "$GITHUB_EVENT_NAME" != "workflow_dispatch" ] && [ ! -f pipeline/actions-scan.enabled ]; then
-            echo "enabled=false" >> "$GITHUB_OUTPUT"
-            echo "Cutover marker pipeline/actions-scan.enabled not present; skipping automated run."
-          else
-            echo "enabled=true" >> "$GITHUB_OUTPUT"
-          fi
+          case "$GITHUB_EVENT_NAME" in
+            workflow_dispatch)
+              if [ "$GITHUB_REF" != "refs/heads/main" ]; then
+                echo "::error::Staged scan manual canary must run from refs/heads/main; got ${GITHUB_REF:-<unset>}."
+                exit 1
+              fi
+              echo "enabled=true" >> "$GITHUB_OUTPUT"
+              echo "mode=canary" >> "$GITHUB_OUTPUT"
+              ;;
+            schedule)
+              if [ -f pipeline/actions-scan.enabled ]; then
+                echo "enabled=true" >> "$GITHUB_OUTPUT"
+                echo "mode=cutover" >> "$GITHUB_OUTPUT"
+              else
+                echo "enabled=false" >> "$GITHUB_OUTPUT"
+                echo "mode=disabled" >> "$GITHUB_OUTPUT"
+                echo "Cutover marker pipeline/actions-scan.enabled not present; skipping scheduled run."
+              fi
+              ;;
+            *)
+              echo "::error::Unsupported staged scan event: $GITHUB_EVENT_NAME"
+              exit 1
+              ;;
+          esac
 
       - name: Require supplementary research-source credential
         if: steps.gate.outputs.enabled == 'true'
@@ -66,17 +81,30 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898062+github-actions[bot]@users.noreply.github.com"
 
-      - name: Capture ready queue before scan
+      - name: Capture staged queue before scan
         if: steps.gate.outputs.enabled == 'true'
         run: |
           python3 <<'PY'
+          import hashlib
           import json
           import os
           from pathlib import Path
 
-          ready = Path("pipeline/queues/staged/ready")
-          files = sorted(path.name for path in ready.glob("*.json"))
-          snapshot = {"count": len(files), "files": files}
+          queue_root = Path("pipeline/queues/staged")
+          files = {
+              path.relative_to(queue_root).as_posix(): hashlib.sha256(
+                  path.read_bytes()
+              ).hexdigest()
+              for path in sorted(queue_root.rglob("*"))
+              if path.is_file()
+          }
+          snapshot = {
+              "ready_count": sum(
+                  path.startswith("ready/") and path.endswith(".json")
+                  for path in files
+              ),
+              "files": files,
+          }
           target = Path(os.environ["RUNNER_TEMP"]) / "staged-scan-before.json"
           target.write_text(json.dumps(snapshot, indent=2) + "\n", encoding="utf-8")
           print(json.dumps(snapshot, sort_keys=True))
@@ -98,30 +126,116 @@ jobs:
           import os
           from pathlib import Path
 
-          ready = Path("pipeline/queues/staged/ready")
+          queue_root = Path("pipeline/queues/staged")
           before = json.loads(
               (Path(os.environ["RUNNER_TEMP"]) / "staged-scan-before.json").read_text(
                   encoding="utf-8"
               )
           )
-          before_files = set(before["files"])
-          after_paths = {path.name: path for path in ready.glob("*.json")}
-          added_names = sorted(set(after_paths) - before_files)
-          removed_names = sorted(before_files - set(after_paths))
+          before_files = before["files"]
+          after_paths = {
+              path.relative_to(queue_root).as_posix(): path
+              for path in sorted(queue_root.rglob("*"))
+              if path.is_file()
+          }
+          after_files = {
+              relative: hashlib.sha256(path.read_bytes()).hexdigest()
+              for relative, path in after_paths.items()
+          }
+          added_paths = sorted(set(after_files) - set(before_files))
+          removed_paths = sorted(set(before_files) - set(after_files))
+          modified_paths = sorted(
+              path
+              for path in set(before_files) & set(after_files)
+              if before_files[path] != after_files[path]
+          )
+          ready_added_paths = [
+              path
+              for path in added_paths
+              if Path(path).parent == Path("ready") and Path(path).suffix == ".json"
+          ]
+          other_added_paths = [
+              path for path in added_paths if path not in ready_added_paths
+          ]
 
-          if len(added_names) > 1:
+          if len(ready_added_paths) > 1:
               raise SystemExit(
-                  f"scan added {len(added_names)} ready packets; max-packets contract is 1"
+                  f"scan added {len(ready_added_paths)} ready packets; "
+                  "max-packets contract is 1"
               )
-          if os.environ["GITHUB_EVENT_NAME"] in {"workflow_dispatch", "push"} and len(added_names) != 1:
+          if os.environ["GITHUB_EVENT_NAME"] == "workflow_dispatch":
+              if (
+                  len(ready_added_paths) != 1
+                  or other_added_paths
+                  or removed_paths
+                  or modified_paths
+              ):
+                  raise SystemExit(
+                      "supervised canary expected exactly one new ready packet "
+                      "and no other staged queue changes; "
+                      f"ready_added_paths={ready_added_paths} "
+                      f"other_added_paths={other_added_paths} "
+                      f"removed_paths={removed_paths} "
+                      f"modified_paths={modified_paths}"
+                  )
+          elif os.environ["GITHUB_EVENT_NAME"] == "schedule":
+              removed_ready_paths = [
+                  path
+                  for path in removed_paths
+                  if Path(path).parent == Path("ready")
+                  and Path(path).suffix == ".json"
+              ]
+              failed_added_paths = [
+                  path
+                  for path in other_added_paths
+                  if Path(path).parent == Path("failed")
+                  and Path(path).suffix == ".json"
+              ]
+              unexpected_removed_paths = [
+                  path for path in removed_paths if path not in removed_ready_paths
+              ]
+              unexpected_added_paths = [
+                  path for path in other_added_paths if path not in failed_added_paths
+              ]
+              unmatched_failed_paths = set(failed_added_paths)
+              unmatched_removed_paths = []
+              for removed_path in removed_ready_paths:
+                  removed = Path(removed_path)
+                  matches = sorted(
+                      path
+                      for path in unmatched_failed_paths
+                      if Path(path).name == removed.name
+                      or Path(path).stem.startswith(f"{removed.stem}_")
+                  )
+                  if matches:
+                      unmatched_failed_paths.remove(matches[0])
+                  else:
+                      unmatched_removed_paths.append(removed_path)
+              if (
+                  unexpected_removed_paths
+                  or unexpected_added_paths
+                  or unmatched_removed_paths
+                  or unmatched_failed_paths
+                  or modified_paths
+              ):
+                  raise SystemExit(
+                      "scheduled scan contained queue changes outside bounded "
+                      "ready-to-failed expiry moves; "
+                      f"unexpected_added_paths={unexpected_added_paths} "
+                      f"unexpected_removed_paths={unexpected_removed_paths} "
+                      f"unmatched_removed_paths={unmatched_removed_paths} "
+                      f"unmatched_failed_paths={sorted(unmatched_failed_paths)} "
+                      f"modified_paths={modified_paths}"
+                  )
+          else:
               raise SystemExit(
-                  "supervised canary expected exactly one new ready packet; "
-                  f"observed {len(added_names)}"
+                  f"unsupported staged scan event: {os.environ['GITHUB_EVENT_NAME']}"
               )
 
           added = []
-          for name in added_names:
-              path = after_paths[name]
+          for relative in ready_added_paths:
+              path = after_paths[relative]
+              name = path.name
               data = json.loads(path.read_text(encoding="utf-8"))
               packet = data.get("packet") or {}
               required_strings = ("packet_id", "headline_seed", "link", "source_text")
@@ -148,10 +262,22 @@ jobs:
               )
 
           summary = {
-              "pre_count": before["count"],
-              "post_count": len(after_paths),
+              "event_name": os.environ["GITHUB_EVENT_NAME"],
+              "pre_count": before["ready_count"],
+              "post_count": sum(
+                  path.startswith("ready/") and path.endswith(".json")
+                  for path in after_files
+              ),
               "added": added,
-              "removed_ready_files": removed_names,
+              "added_paths": added_paths,
+              "removed_paths": removed_paths,
+              "modified_paths": modified_paths,
+              "other_added_paths": other_added_paths,
+              "removed_ready_files": [
+                  Path(path).name
+                  for path in removed_paths
+                  if Path(path).parent == Path("ready")
+              ],
           }
           manifest = Path(os.environ["RUNNER_TEMP"]) / "staged-scan-manifest.json"
           manifest.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
