@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Viaplayn kesäkuun 2026 tarjontaan on ennakkoon kerrottu kuuluvan muun muassa Suitsin kaikki kaudet, FBI:n kolme ensimmäistä kautta sekä elokuvia, kuten…"
+description: "Viaplayn kesäkuun 2026 tarjontaan kuuluvat Suitsin kaikki yhdeksän kautta, FBI:n kolme ensimmäistä kautta sekä useita uusia elokuvia."
 summary: "Viaplayn kesäkuun 2026 tarjontaan on ennakkoon kerrottu kuuluvan muun muassa Suitsin kaikki kaudet, FBI:n kolme ensimmäistä kautta sekä elokuvia, kuten A Big Bold Beautiful Journey, The Apprentice ja Jurassic World Dominion."
 summary_bullets:
   - "Suitsin kaikki yhdeksän kautta tulevat Viaplayhin 4. kesäkuuta 2026."
