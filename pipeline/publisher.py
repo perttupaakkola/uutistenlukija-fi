@@ -16,8 +16,10 @@ from writers import assign_writer
 
 try:
     from .category_guard import category_text, protect_business_category, protect_tiede_category
+    from .description_projection import project_public_description
 except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
     from category_guard import category_text, protect_business_category, protect_tiede_category
+    from description_projection import project_public_description
 
 
 CONTENT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "content", "posts")
@@ -350,7 +352,7 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image_thumb = article.get("image_thumb", "")
     image_placeholder = article.get("image_placeholder", "")
     trending = article.get("trending", False)
-    description = article.get("description", "")
+    description = project_public_description(article.get("description", ""))
     # Source attribution — source_url prefers original link over feed domain
     source_name = article.get("source", "")
     source_url = article.get("source_url", "") or article.get("link", "")
@@ -425,9 +427,6 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     source_url_line = f'\nsource_url: "{source_url}"' if source_url else ""
     source_domain_line = f'\nsource_domain: "{source_domain}"' if source_domain else ""
     reading_time_line = f"\nreading_time: {reading_time}"
-    # Cap description at 155 chars for Google SERP display (truncates at ~160)
-    if description and len(description) > 155:
-        description = description[:152].rstrip() + "…"
     description_line = f'\ndescription: "{_esc(description)}"' if description else ""
     summary_line = f'\nsummary: "{_esc(summary)}"' if summary else ""
     if isinstance(summary_bullets, list):

@@ -10,8 +10,10 @@ from typing import Any, Iterable
 from urllib.parse import urlsplit, urlunsplit
 
 try:
+    from .description_projection import project_public_description
     from .publisher import CANONICAL_CATEGORIES, effective_category
 except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
+    from description_projection import project_public_description
     from publisher import CANONICAL_CATEGORIES, effective_category
 
 
@@ -121,9 +123,7 @@ def _public_source_urls(article: dict[str, Any]) -> tuple[str, ...]:
     ``journalist_note`` is deliberately excluded: it is not the article's
     source-attribution surface and cannot make a hidden selected source public.
     """
-    description = article.get("description", "")
-    if isinstance(description, str) and len(description) > 155:
-        description = description[:152].rstrip() + "…"
+    description = project_public_description(article.get("description", ""))
 
     raw_summary_bullets = article.get("summary_bullets", [])
     summary_bullets = (
