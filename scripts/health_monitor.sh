@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # =============================================================================
-# health_monitor.sh — monitors /api/health.json and alerts #operations
+# health_monitor.sh — monitors site health and Actions publishing status
 #
 # Runs every 15 min (matching pipeline cadence).
 # State file: pipeline/logs/health-monitor-state.json
@@ -17,6 +17,7 @@ PROJECT_DIR="${PROJECT_DIR:-$(dirname "$SCRIPT_DIR")}"
 ENV_FILE="${ENV_FILE:-$PROJECT_DIR/.env}"
 STATE_FILE="${STATE_FILE:-$PROJECT_DIR/pipeline/logs/health-monitor-state.json}"
 HEALTH_URL="${HEALTH_URL:-https://uutistenlukija.fi/api/health.json}"
+PIPELINE_STATUS_URL="${PIPELINE_STATUS_URL:-https://uutistenlukija.fi/api/pipeline-status.json}"
 SNAPSHOT_FILE="${SNAPSHOT_FILE:-$PROJECT_DIR/static/metrics/snapshot.json}"
 ALERT_COOLDOWN_SECS=3600   # max 1 alert/hour for same condition
 ESCALATION_THRESHOLD=3     # consecutive degraded before pinging #general
@@ -34,7 +35,7 @@ fi
 
 WEBHOOK="${DISCORD_PIPELINE_WEBHOOK:-}"
 GENERAL_WEBHOOK="${DISCORD_GENERAL_WEBHOOK:-$WEBHOOK}"  # fallback to same webhook
-PIPELINE_RUN_STALE_HOURS="${PIPELINE_RUN_STALE_HOURS:-1}"
+PIPELINE_STATUS_STALE_HOURS="${PIPELINE_STATUS_STALE_HOURS:-${PIPELINE_RUN_STALE_HOURS:-1}}"
 CONTENT_STALE_HOURS="${CONTENT_STALE_HOURS:-6}"
 
 # ── State helpers ─────────────────────────────────────────────────────────────
@@ -56,9 +57,43 @@ write_state() {
 STATEOF
 }
 
-get_field() {
-    # get_field <json_string> <key>
-    echo "$1" | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('$2',''))" 2>/dev/null || echo ""
+get_json_field() {
+    # get_json_field <json_string> <key> [nested_key ...]
+    printf '%s\n' "$1" | python3 -c '
+import json
+import sys
+
+value = json.load(sys.stdin)
+for key in sys.argv[1:]:
+    if not isinstance(value, dict):
+        value = None
+        break
+    value = value.get(key)
+
+if value is None:
+    print("")
+elif value is True:
+    print("true")
+elif value is False:
+    print("false")
+elif isinstance(value, (str, int, float)):
+    print(value)
+else:
+    print("")
+' "${@:2}" 2>/dev/null || echo ""
+}
+
+age_hours() {
+    python3 -c '
+from datetime import datetime, timezone
+import sys
+
+try:
+    ref = datetime.fromisoformat(sys.argv[1].replace("Z", "+00:00"))
+    print(f"{(datetime.now(timezone.utc) - ref).total_seconds() / 3600:.1f}")
+except Exception:
+    print("")
+' "$1" 2>/dev/null || echo ""
 }
 
 post_discord() {
@@ -83,10 +118,10 @@ log() { echo "[health_monitor $(date -u '+%H:%M:%S UTC')] $*"; }
 
 # ── Read current state ────────────────────────────────────────────────────────
 state=$(read_state)
-last_status=$(get_field "$state" "lastStatus")
-last_alert_time=$(get_field "$state" "lastAlertTime")
-consecutive=$(get_field "$state" "consecutiveFailures")
-last_condition=$(get_field "$state" "lastAlertCondition")
+last_status=$(get_json_field "$state" "lastStatus")
+last_alert_time=$(get_json_field "$state" "lastAlertTime")
+consecutive=$(get_json_field "$state" "consecutiveFailures")
+last_condition=$(get_json_field "$state" "lastAlertCondition")
 
 [[ -z "$last_alert_time" ]] && last_alert_time=0
 [[ -z "$consecutive"     ]] && consecutive=0
@@ -107,6 +142,24 @@ fi
 
 log "curl_ok=$curl_ok http_status=$http_status"
 
+# The staged Actions publisher writes and deploys this artifact on every
+# admitted cycle. It is the publishing freshness/queue authority; health.json
+# can retain null runtime markers after the retired VPS writer is gone.
+pipeline_http_status=""
+pipeline_status_json=""
+pipeline_curl_ok=true
+
+pipeline_status_json=$(curl -sf --max-time 15 \
+    -w "\n__HTTP_STATUS__%{http_code}" \
+    "$PIPELINE_STATUS_URL" 2>/dev/null) || pipeline_curl_ok=false
+
+if [[ "$pipeline_curl_ok" == "true" ]]; then
+    pipeline_http_status=$(echo "$pipeline_status_json" | grep '__HTTP_STATUS__' | sed 's/__HTTP_STATUS__//')
+    pipeline_status_json=$(echo "$pipeline_status_json" | grep -v '__HTTP_STATUS__')
+fi
+
+log "pipeline_curl_ok=$pipeline_curl_ok pipeline_http_status=$pipeline_http_status"
+
 # ── Evaluate health ───────────────────────────────────────────────────────────
 condition="ok"
 alert_msg=""
@@ -118,13 +171,11 @@ if [[ "$curl_ok" == "false" || "$http_status" != "200" ]]; then
     alert_msg="🔴 **Site unreachable** — \`curl $HEALTH_URL\` failed ($detail). Manual check required."
 
 else
-    site_status=$(get_field "$health_json" "status")
-    last_published=$(get_field "$health_json" "lastPublished")
-    article_count=$(get_field "$health_json" "articleCount")
-    generated_at=$(get_field "$health_json" "generatedAt")
-    pipeline_last_run=$(echo "$health_json" | python3 -c "import json,sys; d=json.load(sys.stdin); print((d.get('pipeline') or {}).get('lastRun',''))" 2>/dev/null || echo "")
+    site_status=$(get_json_field "$health_json" "status")
+    last_published=$(get_json_field "$health_json" "lastPublished")
+    article_count=$(get_json_field "$health_json" "articleCount")
 
-    log "status=$site_status lastPublished=$last_published pipelineLastRun=$pipeline_last_run articles=$article_count"
+    log "status=$site_status lastPublished=$last_published articles=$article_count"
 
     case "$site_status" in
         ok|degraded)
@@ -137,30 +188,8 @@ else
     esac
 
     article_age_hours=""
-    if [[ -n "$last_published" && "$last_published" != "None" && "$last_published" != "null" ]]; then
-        article_age_hours=$(python3 -c "
-from datetime import datetime, timezone
-try:
-    lp = datetime.fromisoformat('$last_published'.replace('Z','+00:00'))
-    age = (datetime.now(timezone.utc) - lp).total_seconds() / 3600
-    print(f'{age:.1f}')
-except Exception:
-    print('')
-" 2>/dev/null || echo "")
-    fi
-
-    pipeline_age_hours=""
-    freshness_ref="${pipeline_last_run:-$generated_at}"
-    if [[ -n "$freshness_ref" && "$freshness_ref" != "None" && "$freshness_ref" != "null" ]]; then
-        pipeline_age_hours=$(python3 -c "
-from datetime import datetime, timezone
-try:
-    ref = datetime.fromisoformat('$freshness_ref'.replace('Z','+00:00'))
-    age = (datetime.now(timezone.utc) - ref).total_seconds() / 3600
-    print(f'{age:.1f}')
-except Exception:
-    print('')
-" 2>/dev/null || echo "")
+    if [[ -n "$last_published" ]]; then
+        article_age_hours=$(age_hours "$last_published")
     fi
 
     article_is_stale="no"
@@ -168,30 +197,83 @@ except Exception:
         article_is_stale=$(python3 -c "print('yes' if float('${article_age_hours}') > float('${CONTENT_STALE_HOURS}') else 'no')" 2>/dev/null || echo "no")
     fi
 
-    pipeline_run_is_stale="unknown"
-    if [[ -n "$pipeline_age_hours" ]]; then
-        pipeline_run_is_stale=$(python3 -c "print('yes' if float('${pipeline_age_hours}') > float('${PIPELINE_RUN_STALE_HOURS}') else 'no')" 2>/dev/null || echo "unknown")
+    # A non-content health degradation (for example zero articles) remains an
+    # alert. Content age itself is evaluated against the Actions artifact below.
+    if [[ "$condition" == "ok" && "$site_status" == "degraded" && "$article_is_stale" != "yes" ]]; then
+        condition="degraded"
+        alert_msg="⚠️ **Site health degraded** — \`status=degraded\` | articles=${article_count:-?}"
     fi
 
-    if [[ "$site_status" == "degraded" ]]; then
-        if [[ "$article_is_stale" == "yes" && "$pipeline_run_is_stale" == "no" ]]; then
-            condition="content_quiet"
-            alert_msg="ℹ️ **Content quiet** — last article **${article_age_hours}h ago**, but pipeline last ran **${pipeline_age_hours}h ago**. articles=${article_count:-?}"
+    if [[ "$condition" == "ok" ]]; then
+        if [[ "$pipeline_curl_ok" == "false" || "$pipeline_http_status" != "200" ]]; then
+            condition="actions_status_unavailable"
+            alert_msg="⚠️ **Actions pipeline status unavailable** — \`GET $PIPELINE_STATUS_URL\` failed (HTTP ${pipeline_http_status:-?}). Scheduler/deploy freshness cannot be verified."
         else
-            stale_msg=""
-            if [[ -n "$article_age_hours" ]]; then
-                stale_msg=" | Last article: **${article_age_hours}h ago**"
+            pipeline_schema_valid=$(printf '%s\n' "$pipeline_status_json" | python3 -c '
+import json
+import sys
+
+try:
+    data = json.load(sys.stdin)
+    runway = data.get("stagedQueueRunway")
+    enabled = runway.get("publisherEnabled") if isinstance(runway, dict) else None
+    severity = runway.get("severity") if isinstance(runway, dict) else None
+    outbox = runway.get("outboxCount") if isinstance(runway, dict) else None
+    valid = (
+        isinstance(data.get("generated_at"), str)
+        and data.get("status") in {"ok", "degraded"}
+        and isinstance(data.get("is_stale"), bool)
+        and isinstance(enabled, bool)
+        and isinstance(outbox, int)
+        and not isinstance(outbox, bool)
+        and outbox >= 0
+        and (
+            (enabled and severity in {"ok", "warning", "critical"})
+            or (not enabled and severity == "inactive")
+        )
+        and ((data.get("status") == "degraded") == data.get("is_stale"))
+    )
+    print("yes" if valid else "no")
+except Exception:
+    print("no")
+' 2>/dev/null || echo "no")
+
+            if [[ "$pipeline_schema_valid" != "yes" ]]; then
+                condition="invalid_actions_status"
+                alert_msg="⚠️ **Invalid Actions pipeline status** — required freshness, publish-state, or runway fields are missing/inconsistent."
+            else
+                pipeline_generated_at=$(get_json_field "$pipeline_status_json" "generated_at")
+                pipeline_status=$(get_json_field "$pipeline_status_json" "status")
+                pipeline_is_stale=$(get_json_field "$pipeline_status_json" "is_stale")
+                publisher_enabled=$(get_json_field "$pipeline_status_json" "stagedQueueRunway" "publisherEnabled")
+                runway_severity=$(get_json_field "$pipeline_status_json" "stagedQueueRunway" "severity")
+                outbox_count=$(get_json_field "$pipeline_status_json" "stagedQueueRunway" "outboxCount")
+                remaining_cycles=$(get_json_field "$pipeline_status_json" "stagedQueueRunway" "worstCaseRemainingCycles")
+                pipeline_age_hours=$(age_hours "$pipeline_generated_at")
+
+                log "actions_status=$pipeline_status generated=${pipeline_generated_at:-?} age_hours=${pipeline_age_hours:-?} is_stale=$pipeline_is_stale publisher_enabled=$publisher_enabled outbox=$outbox_count runway=$runway_severity"
+
+                if [[ -z "$pipeline_age_hours" ]]; then
+                    condition="invalid_actions_status"
+                    alert_msg="⚠️ **Invalid Actions pipeline status** — \`generated_at\` is not a parseable timestamp."
+                elif [[ $(python3 -c "print('yes' if float('${pipeline_age_hours}') > float('${PIPELINE_STATUS_STALE_HOURS}') else 'no')" 2>/dev/null || echo "yes") == "yes" ]]; then
+                    condition="actions_status_stale"
+                    alert_msg="⚠️ **Actions pipeline status stale** — last deployed **${pipeline_age_hours}h ago** (threshold ${PIPELINE_STATUS_STALE_HOURS}h). Check scheduled publisher admission and deploy."
+                elif [[ "$publisher_enabled" != "true" ]]; then
+                    condition="publisher_disabled"
+                    alert_msg="⚠️ **Actions publisher disabled** — deployed pipeline status reports the publisher marker off."
+                elif [[ "$runway_severity" == "critical" || "$runway_severity" == "warning" ]]; then
+                    condition="queue_${runway_severity}"
+                    alert_msg="⚠️ **Staged queue ${runway_severity}** — outbox=${outbox_count}, worst-case cycles=${remaining_cycles:-?}. Publishing is enabled but supply is depleting."
+                elif [[ "$pipeline_is_stale" == "true" ]]; then
+                    condition="publish_stalled"
+                    alert_msg="⚠️ **Publishing stalled** — Actions status is fresh, but no article arrived within the active-hours threshold. Last article: **${article_age_hours:-unknown}h ago** | outbox=${outbox_count}"
+                fi
             fi
-            run_msg=""
-            if [[ -n "$pipeline_age_hours" ]]; then
-                run_msg=" | Pipeline last run: **${pipeline_age_hours}h ago**"
-            fi
-            condition="degraded"
-            alert_msg="⚠️ **Pipeline degraded** — \`status=degraded\`${stale_msg}${run_msg} | articles=${article_count:-?}"
         fi
     fi
 
-    # Secondary degraded check: high error count (catches failures before 6h stale threshold)
+    # Secondary degraded check: high error count (catches failures before content staleness)
     if [[ "$condition" == "ok" ]]; then
         if [[ -f "$SNAPSHOT_FILE" ]]; then
             _errors=$(python3 -c "
@@ -207,21 +289,23 @@ except: print(0)
         fi
     fi
 
-    # Explicit stale check (belt + suspenders) only if content is stale AND runtime also looks stale.
+    # A fresh Actions artifact with healthy runway and is_stale=false is the
+    # canonical off-hours/quiet signal, even when legacy health content is old.
     if [[ "$condition" == "ok" && "$article_is_stale" == "yes" ]]; then
-        if [[ "$pipeline_run_is_stale" == "yes" || "$pipeline_run_is_stale" == "unknown" ]]; then
-            condition="stale"
-            if [[ -n "$pipeline_age_hours" ]]; then
-                alert_msg="⚠️ **Stale pipeline** — last article published **${article_age_hours}h ago** and pipeline last ran **${pipeline_age_hours}h ago**"
-            else
-                alert_msg="⚠️ **Stale pipeline** — last article published **${article_age_hours}h ago** and pipeline freshness could not be verified"
-            fi
-        fi
+        condition="content_quiet"
+        alert_msg="ℹ️ **Content quiet** — last article **${article_age_hours}h ago**, while Actions status and queue runway are healthy."
     fi
 fi
 
 # ── Recovery detection ────────────────────────────────────────────────────────
-if [[ "$condition" == "ok" && ( "$last_status" == "degraded" || "$last_status" == "stale" || "$last_status" == "site_down" || "$last_status" == "invalid_health" ) ]]; then
+previous_was_failure=false
+case "$last_status" in
+    degraded|stale|site_down|invalid_health|actions_status_unavailable|invalid_actions_status|actions_status_stale|publisher_disabled|queue_warning|queue_critical|publish_stalled)
+        previous_was_failure=true
+        ;;
+esac
+
+if [[ ( "$condition" == "ok" || "$condition" == "content_quiet" ) && "$previous_was_failure" == "true" ]]; then
     condition="recovered"
     alert_msg="✅ **Pipeline recovered** — health check passing. Previous status: \`$last_status\`"
 fi
@@ -243,7 +327,7 @@ elif [[ "$condition" == "recovered" ]]; then
     consecutive=0
 
 else
-    # Degraded / stale / site_down — apply cooldown
+    # Failure conditions — apply cooldown
     consecutive=$(( consecutive + 1 ))
     if (( secs_since_alert >= ALERT_COOLDOWN_SECS )) || [[ "$condition" != "$last_condition" ]]; then
         should_alert=true
