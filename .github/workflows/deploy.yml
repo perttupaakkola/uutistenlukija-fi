@@ -12,12 +12,16 @@ on:
       - "pipeline/AGENTS.md"
       - "scripts/test_actions_pipeline_workflows.py"
       - ".github/AGENTS.md"
-      - ".github/workflows/deploy.yml"
       - ".github/workflows/staged-publish.yml"
       - ".github/workflows/staged-scan.yml"
       - ".github/workflows/daily-kooste.yml"
       - ".github/workflows/deploy-failure-alert.yml"
       - "docs/actions-pipeline-migration.md"
+
+concurrency:
+  group: cloudflare-pages-production
+  queue: max
+  cancel-in-progress: false
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -54,6 +58,9 @@ jobs:
       - name: Validate frontmatter YAML syntax
         run: python3 pipeline/validate_frontmatter.py
 
+      - name: Generate canonical pipeline status
+        run: python3 pipeline/generate_pipeline_status.py
+
       - name: Build
         run: hugo --minify --cleanDestinationDir
 
@@ -67,7 +74,24 @@ jobs:
       - name: Validate public surface
         run: python3 scripts/validate_public_surface.py --public-dir public
 
+      - name: Verify deployment checkout is current
+        id: deploy_head
+        run: |
+          CHECKOUT_HEAD="$(git rev-parse HEAD)"
+          REMOTE_MAIN="$(git ls-remote origin refs/heads/main | awk '{print $1}')"
+          if [ -z "$REMOTE_MAIN" ]; then
+            echo "::error title=Deployment freshness check failed::Unable to resolve origin/main"
+            exit 1
+          fi
+          if [ "$CHECKOUT_HEAD" != "$REMOTE_MAIN" ]; then
+            echo "current=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Superseded deployment skipped::checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN"
+            exit 0
+          fi
+          echo "current=true" >> "$GITHUB_OUTPUT"
+
       - name: Deploy to Cloudflare Pages
+        if: steps.deploy_head.outputs.current == 'true'
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}

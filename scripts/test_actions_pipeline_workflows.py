@@ -6,12 +6,14 @@ from __future__ import annotations
 import os
 import re
 import subprocess
+import tempfile
 import textwrap
 import unittest
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+WORKFLOWS = ROOT / ".github/workflows"
 STAGED_SCAN = ROOT / ".github/workflows/staged-scan.yml"
 STAGED_PUBLISH = ROOT / ".github/workflows/staged-publish.yml"
 DEPLOY = ROOT / ".github/workflows/deploy.yml"
@@ -95,6 +97,107 @@ class ScannerDeployIsolationContractTests(unittest.TestCase):
     def test_scanner_failures_are_watched(self) -> None:
         alert = FAILURE_ALERT.read_text(encoding="utf-8")
         self.assertIn("      - Staged scan", alert)
+
+
+class PagesDeployStatusContractTests(unittest.TestCase):
+    def _deploy_workflows(self) -> list[tuple[Path, str]]:
+        workflows = []
+        for workflow_path in sorted(WORKFLOWS.glob("*.yml")):
+            workflow = workflow_path.read_text(encoding="utf-8")
+            if "pages deploy public" in workflow:
+                workflows.append((workflow_path, workflow))
+        return workflows
+
+    def _run_script(self, workflow: str, step_name: str) -> str:
+        step = workflow.index(f"      - name: {step_name}")
+        run_header = "        run: |\n"
+        run_start = workflow.index(run_header, step) + len(run_header)
+        run_end = workflow.index("\n      - name:", run_start)
+        return textwrap.dedent(workflow[run_start:run_end])
+
+    def test_every_pages_deploy_refreshes_canonical_status_before_build(self) -> None:
+        deploy_workflows = []
+        for workflow_path, workflow in self._deploy_workflows():
+            deploy_workflows.append(workflow_path.name)
+            with self.subTest(workflow=workflow_path.name):
+                producer = "python3 pipeline/generate_pipeline_status.py"
+                self.assertIn(producer, workflow)
+                status = workflow.index(producer)
+                build = workflow.index("- name: Build")
+                deploy = workflow.index("- name: Deploy to Cloudflare Pages")
+                self.assertLess(status, build)
+                self.assertLess(build, deploy)
+
+        self.assertEqual(
+            deploy_workflows,
+            ["daily-kooste.yml", "deploy.yml", "staged-publish.yml"],
+        )
+
+    def test_deploy_workflow_changes_trigger_the_corrected_path(self) -> None:
+        deploy = DEPLOY.read_text(encoding="utf-8")
+        self.assertNotIn('- ".github/workflows/deploy.yml"', deploy)
+
+    def test_pages_deployments_share_one_non_cancelling_multi_run_queue(self) -> None:
+        concurrency = (
+            "concurrency:\n"
+            "  group: cloudflare-pages-production\n"
+            "  queue: max\n"
+            "  cancel-in-progress: false"
+        )
+        for workflow_path, workflow in self._deploy_workflows():
+            with self.subTest(workflow=workflow_path.name):
+                self.assertIn(concurrency, workflow)
+
+    def test_superseded_checkout_skips_pages_deploy_cleanly(self) -> None:
+        git_stub = textwrap.dedent(
+            """\
+            git() {
+              case "$*" in
+                "rev-parse HEAD") printf '%s\\n' "$TEST_CHECKOUT_HEAD" ;;
+                "ls-remote origin refs/heads/main")
+                  printf '%s\\trefs/heads/main\\n' "$TEST_REMOTE_MAIN"
+                  ;;
+                *) command git "$@" ;;
+              esac
+            }
+            """
+        )
+        for workflow_path, workflow in self._deploy_workflows():
+            with self.subTest(workflow=workflow_path.name), tempfile.TemporaryDirectory() as tmp:
+                script = git_stub + self._run_script(
+                    workflow,
+                    "Verify deployment checkout is current",
+                )
+                output = Path(tmp) / "github-output"
+                env = os.environ.copy()
+                env.update(
+                    {
+                        "GITHUB_OUTPUT": str(output),
+                        "TEST_CHECKOUT_HEAD": "older-checkout",
+                        "TEST_REMOTE_MAIN": "newer-main",
+                    }
+                )
+                result = subprocess.run(
+                    ["bash", "-c", script],
+                    cwd=ROOT,
+                    env=env,
+                    capture_output=True,
+                    text=True,
+                    check=False,
+                )
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertEqual(output.read_text(encoding="utf-8"), "current=false\n")
+                self.assertIn("Superseded deployment skipped", result.stdout)
+
+                deploy_start = workflow.index(
+                    "      - name: Deploy to Cloudflare Pages"
+                )
+                deploy_end = workflow.index("\n      - name:", deploy_start)
+                deploy_step = workflow[deploy_start:deploy_end]
+                self.assertIn(
+                    "steps.deploy_head.outputs.current == 'true'",
+                    deploy_step,
+                )
 
 
 class StagedPublishRunwayContractTests(unittest.TestCase):
