@@ -118,10 +118,13 @@ pushes from the VPS.
 4. Do not resume the Monica worker here; that is a separate Max restoration
    decision at the verified ready-packet boundary.
 
-Rollback is independent of publishing: remove
-`pipeline/actions-scan.enabled` to stop scheduled scans, and revert
-`.github/workflows/staged-scan.yml` if the workflow itself must be removed.
-Neither action changes `pipeline/actions-publish.enabled`,
+Rollback is independent of publishing and starts with containment: keep
+`pipeline/actions-scan.enabled` absent (or remove it), do not manually dispatch
+the scanner, and disable the workflow if execution must be stopped before a code
+change can land. After containment, land a reviewed safe workflow removal or
+immediate safe replacement. Do not use a plain revert that restores a rejected
+parent workflow with weaker trigger, ref, queue-delta, or concurrency guards.
+None of these scanner actions changes `pipeline/actions-publish.enabled`,
 `.github/workflows/staged-publish.yml`, or the current publisher.
 
 ## Phase 3 — metrics, reports, monitors (needs GA4/SC + Discord secrets)

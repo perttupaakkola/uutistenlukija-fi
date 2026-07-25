@@ -112,10 +112,22 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
             "permissions:\n  contents: write",
             "group: staged-scan",
             "cancel-in-progress: false",
+            "queue: max",
             "pipeline/actions-scan.enabled",
         ):
             with self.subTest(expected=expected):
                 self.assertIn(expected, self.workflow)
+        self.assertRegex(
+            self.workflow,
+            re.compile(
+                r"^concurrency:\n"
+                r"  group: staged-scan\n"
+                r"  cancel-in-progress: false\n"
+                r"  queue: max$",
+                re.MULTILINE,
+            ),
+        )
+        self.assertEqual(self.workflow.count("queue: max"), 1)
         self.assertNotIn("pipeline/actions-publish.enabled", self.workflow)
         trigger_block = self.workflow[: self.workflow.index("\npermissions:")]
         self.assertNotIn("\n  push:", trigger_block)

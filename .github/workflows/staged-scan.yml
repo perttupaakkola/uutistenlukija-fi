@@ -24,6 +24,7 @@ permissions:
 concurrency:
   group: staged-scan
   cancel-in-progress: false
+  queue: max
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true

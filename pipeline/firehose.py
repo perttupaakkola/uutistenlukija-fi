@@ -146,6 +146,14 @@ FIREHOSE_STREAM_WAIT_SEC = int(os.environ.get("FIREHOSE_STREAM_WAIT_SEC", "5"))
 FIREHOSE_HTTP_TIMEOUT_SEC = int(os.environ.get("FIREHOSE_HTTP_TIMEOUT_SEC", "12"))
 
 
+def _redact_firehose_token(value: object) -> str:
+    """Render an error without exposing the configured Firehose credential."""
+    text = str(value)
+    if FIREHOSE_TOKEN:
+        text = text.replace(FIREHOSE_TOKEN, "[REDACTED]")
+    return text
+
+
 # ─── URL normalization & dedup ────────────────────────────────────────────────
 
 def _normalize_url(url: str) -> str:
@@ -237,8 +245,11 @@ def list_rules() -> List[Dict]:
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:
             return json.loads(resp.read())
+    except urllib.error.HTTPError as e:
+        print(f"[firehose] Failed to list rules: HTTP {e.code}")
+        return []
     except Exception as e:
-        print(f"[firehose] Failed to list rules: {e}")
+        print(f"[firehose] Failed to list rules: {_redact_firehose_token(e)}")
         return []
 
 
@@ -283,10 +294,12 @@ def register_rules(dry_run: bool = False) -> None:
                 result = json.loads(resp.read())
                 print(f"[firehose] Registered rule: {tag} → id={result.get('id', '?')}")
         except urllib.error.HTTPError as e:
-            body = e.read().decode("utf-8", errors="replace")
-            print(f"[firehose] Failed to register {tag}: HTTP {e.code} — {body}")
+            print(f"[firehose] Failed to register {tag}: HTTP {e.code}")
         except Exception as e:
-            print(f"[firehose] Failed to register {tag}: {e}")
+            print(
+                f"[firehose] Failed to register {tag}: "
+                f"{_redact_firehose_token(e)}"
+            )
         time.sleep(0.5)  # polite — don't hammer the API
 
 
@@ -366,10 +379,9 @@ def poll_firehose(since: str = "20m") -> List[Dict]:
                 articles.append(article)
 
     except urllib.error.HTTPError as e:
-        body = e.read().decode("utf-8", errors="replace")
-        print(f"[firehose] HTTP {e.code}: {body[:200]}")
+        print(f"[firehose] HTTP {e.code}")
     except Exception as e:
-        print(f"[firehose] Poll error: {e}")
+        print(f"[firehose] Poll error: {_redact_firehose_token(e)}")
 
     # Persist last event ID for next run
     if last_seen_id and last_seen_id != last_event_id:
@@ -480,11 +492,13 @@ def delete_rule(rule_id: str) -> bool:
             print(f"[firehose] Deleted rule {rule_id}: HTTP {resp.status}")
             return True
     except urllib.error.HTTPError as e:
-        body = e.read().decode("utf-8", errors="replace")
-        print(f"[firehose] Failed to delete {rule_id}: HTTP {e.code} — {body}")
+        print(f"[firehose] Failed to delete {rule_id}: HTTP {e.code}")
         return False
     except Exception as e:
-        print(f"[firehose] Failed to delete {rule_id}: {e}")
+        print(
+            f"[firehose] Failed to delete {rule_id}: "
+            f"{_redact_firehose_token(e)}"
+        )
         return False
 
 
