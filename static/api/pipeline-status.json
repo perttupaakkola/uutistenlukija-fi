@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-25T16:49:17+00:00",
+  "generated_at": "2026-07-25T17:05:09+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,10 +12,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 0,
+    "published": 1,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": null
+    "last_published_ts": "2026-07-25T17:01:51.816701+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -26,13 +26,34 @@
     "stale_names": [],
     "disabled_names": []
   },
-  "trending": [],
+  "trending": [
+    [
+      "sofia",
+      4
+    ],
+    [
+      "ennen",
+      3
+    ],
+    [
+      "sälgrundin",
+      2
+    ],
+    [
+      "kaskisten",
+      2
+    ],
+    [
+      "viime",
+      2
+    ]
+  ],
   "stagedQueueRunway": {
-    "outboxCount": 1,
+    "outboxCount": 0,
     "publisherEnabled": true,
     "scannerEnabled": false,
     "maxPacketsPerCycle": 3,
-    "worstCaseRemainingCycles": 1,
+    "worstCaseRemainingCycles": 0,
     "replenishmentState": "disabled",
     "severity": "critical",
     "reasons": [
