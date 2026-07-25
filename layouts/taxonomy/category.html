@@ -82,9 +82,6 @@
           <time>{{ partial "relative-date.html" $feature }}</time>
         </div>
       </article>
-      {{ if eq $termSlug "talous" }}
-      {{ partial "advertiser-cta.html" (dict "placement" "talous-category" "page" .) }}
-      {{ end }}
 
       <div class="portal-list-feed">
         {{ range $rest }}

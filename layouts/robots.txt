@@ -19,32 +19,64 @@ Allow: /categories/*/index.xml
 # Block draft/test content if accidentally published
 Disallow: /draft/
 
-# ── AI training opt-out ──────────────────────────────────────────────
+# -- AI crawlers ------------------------------------------------------
+# Owner directive 2026-07-25: the mission is readership and trust, so the
+# crawlers that power assistant answers and citations are allowed -- being
+# quotable in ChatGPT/Claude/Gemini/Perplexity is a discovery channel.
+# Bulk dataset scrapers and abusive crawlers stay blocked.
+# NOTE: Cloudflare also injects a managed AI-crawler block ahead of this file.
+# Turning that off in the Cloudflare dashboard is required for these Allow
+# rules to take effect.
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: ChatGPT-User
-Disallow: /
+Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# -- Bulk training / abusive scrapers: still blocked -------------------
 User-agent: CCBot
 Disallow: /
 
-User-agent: anthropic-ai
+User-agent: Bytespider
 Disallow: /
 
-User-agent: Claude-Web
+User-agent: Amazonbot
 Disallow: /
 
-User-agent: cohere-ai
+User-agent: Applebot-Extended
 Disallow: /
 
-User-agent: Google-Extended
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: Diffbot
 Disallow: /
 
 User-agent: Omgilibot
 Disallow: /
 
-User-agent: FacebookBot
+User-agent: ImagesiftBot
 Disallow: /
 
 # ── Sitemaps ─────────────────────────────────────────────────────────

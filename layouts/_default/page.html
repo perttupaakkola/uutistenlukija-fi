@@ -32,7 +32,6 @@
   ) }}
 
   {{ partial "related-articles.html" . }}
-  {{ partial "advertiser-cta.html" (dict "placement" (cond $hasTalousCategory "talous-article" "article-bottom") "page" .) }}
   {{ partial "more-from-category.html" . }}
 </article>
 {{ end }}

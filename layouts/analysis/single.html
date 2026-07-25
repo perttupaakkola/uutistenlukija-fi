@@ -68,7 +68,6 @@
   </div>
 
   {{ partial "related-articles.html" . }}
-  {{ partial "advertiser-cta.html" (dict "placement" "article-bottom" "page" .) }}
   {{ partial "more-from-category.html" . }}
   {{ partial "most-read.html" (dict "Site" .Site "exclude" (slice .Permalink)) }}
 </article>

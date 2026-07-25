@@ -1,3 +1,10 @@
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(self), microphone=(), camera=(), interest-cohort=()
+
 /api/health.json
   Content-Type: application/json; charset=utf-8
   Access-Control-Allow-Origin: *
