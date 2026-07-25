@@ -156,7 +156,7 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
                 self.assertEqual(output.read_text(encoding="utf-8"), expected_output)
                 self.assertEqual(marker.exists(), marker_present)
 
-    def test_manual_canary_rejects_non_main_ref_before_secret_or_scan(self) -> None:
+    def test_manual_canary_rejects_non_main_ref_before_source_setup_or_scan(self) -> None:
         gate = self._run_script("Gate automated runs on cutover marker")
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -188,12 +188,12 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
         gate_step = self.workflow.index(
             "      - name: Gate automated runs on cutover marker"
         )
-        secret_step = self.workflow.index(
-            "      - name: Require supplementary research-source credential"
+        source_step = self.workflow.index(
+            "      - name: Declare RSS-only restoration mode"
         )
         scan_step = self.workflow.index("      - name: Scan one staged packet")
-        self.assertLess(gate_step, secret_step)
-        self.assertLess(secret_step, scan_step)
+        self.assertLess(gate_step, source_step)
+        self.assertLess(source_step, scan_step)
 
     def test_scanner_command_matches_the_paused_vps_contract(self) -> None:
         command = (
@@ -209,8 +209,10 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
         self.assertNotIn("--cpu-load-max", self.workflow)
         self.assertNotIn("--min-disk-free-mb", self.workflow)
 
-    def test_only_required_source_secret_and_queue_paths_are_used(self) -> None:
-        self.assertIn("FIREHOSE_TOKEN: ${{ secrets.FIREHOSE_TOKEN }}", self.workflow)
+    def test_rss_only_source_mode_and_queue_paths_are_used(self) -> None:
+        self.assertIn("source_mode=rss-only", self.workflow)
+        self.assertNotIn("FIREHOSE_TOKEN", self.workflow)
+        self.assertNotIn("secrets.", self.workflow)
         self.assertNotRegex(self.workflow, r"(?i)(api|access|firehose)[_-]?key:\s*[\"']?[A-Za-z0-9_-]{16,}")
         self.assertIn("git add -- pipeline/queues/staged", self.workflow)
         self.assertIn("git pull --rebase origin main", self.workflow)

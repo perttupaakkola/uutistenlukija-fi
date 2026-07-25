@@ -14,7 +14,7 @@
 
 - Never print or hardcode GitHub, Cloudflare, Discord, or other secrets. Use GitHub Actions secrets and keep logs redacted.
 - Keep the Cloudflare Pages deploy path aligned with the repository build: checkout, Hugo setup, validators, `hugo --minify`, deploy `public`.
-- Keep deterministic staged pipeline workflows independently marker-gated. Scanner canaries use authenticated `workflow_dispatch` from exact `refs/heads/main` only; `pipeline/actions-scan.enabled` is reserved for final scheduled cutover. Publisher control uses `pipeline/actions-publish.enabled`. Changing or rolling back one must not toggle the other.
+- Keep deterministic staged pipeline workflows independently marker-gated. Scanner canaries use authenticated `workflow_dispatch` from exact `refs/heads/main` only; `pipeline/actions-scan.enabled` is reserved for final scheduled cutover. Until the historically exposed Firehose credential is rotated and separately reviewed, the scanner is intentionally RSS/public-research only and must not inject `FIREHOSE_TOKEN`. Publisher control uses `pipeline/actions-publish.enabled`. Changing or rolling back one must not toggle the other.
 - Staged scanner runs may commit only `pipeline/queues/staged/**`, must validate the bounded queue delta, then rebase and push fail closed. Queue/control-only pushes must stay excluded from `deploy.yml`.
 - Alert workflows should be actionable and low-noise; include failing workflow/run URLs and first failing step when feasible.
 - Do not disable validation steps to make deploys pass unless a Linear issue explicitly tracks the risk and replacement check.

@@ -65,15 +65,11 @@ jobs:
               ;;
           esac
 
-      - name: Require supplementary research-source credential
+      - name: Declare RSS-only restoration mode
         if: steps.gate.outputs.enabled == 'true'
-        env:
-          FIREHOSE_TOKEN: ${{ secrets.FIREHOSE_TOKEN }}
         run: |
-          if [ -z "$FIREHOSE_TOKEN" ]; then
-            echo "::error::Required GitHub Secret FIREHOSE_TOKEN is not configured."
-            exit 1
-          fi
+          echo "Firehose is quarantined pending provider-side credential rotation; scanning RSS/public research sources only."
+          printf '%s\n' 'source_mode=rss-only' >> "$GITHUB_STEP_SUMMARY"
 
       - name: Configure git identity
         if: steps.gate.outputs.enabled == 'true'
@@ -112,8 +108,6 @@ jobs:
 
       - name: Scan one staged packet
         if: steps.gate.outputs.enabled == 'true'
-        env:
-          FIREHOSE_TOKEN: ${{ secrets.FIREHOSE_TOKEN }}
         run: |
           timeout --signal=TERM --kill-after=15s 240s python3 pipeline/staged_publish.py scan --max-packets 1 --max-research-candidates 8 --dedup-window 48 --max-ready-backlog 150 --max-ready-age-hours 24
 

@@ -82,11 +82,12 @@ pushes from the VPS.
   --max-ready-backlog 150 --max-ready-age-hours 24`. The old CPU/disk guards
   are omitted on the ephemeral runner, while the prior 240-second execution
   bound is retained.
-- Firehose is supplementary but credentialed. Configure only a newly rotated
-  value as the `FIREHOSE_TOKEN` GitHub Secret; never reuse or test the value
-  exposed in public Git history. `firehose.py` reads the secret from the
-  environment, never source or logs; the Actions job fails before scanning when
-  it is absent. RSS and research extraction remain stdlib/public-endpoint code.
+- Firehose is supplementary and quarantined during the initial restoration.
+  The Actions scanner does not request or inject `FIREHOSE_TOKEN`; it runs only
+  the RSS and public-research path, while `firehose.py` skips cleanly when the
+  environment variable is absent. Never reuse or test the value exposed in
+  public Git history. Reintroducing Firehose requires a newly rotated credential
+  and a separate review of its GitHub Secret wiring and no-secret-log contract.
 - The workflow validates a manual canary against the complete staged queue
   snapshot: exactly one valid `ready/` addition, no removals or modifications,
   and no changes in another queue box. The packet must have the staged schema,
