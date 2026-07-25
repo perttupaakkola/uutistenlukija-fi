@@ -1,0 +1,133 @@
+{
+  "schema": "uutistenlukija.stale_outbox_archive.v1",
+  "created_at": "2026-07-25T15:03:22+00:00",
+  "reason": "OPE-458 recovery: prevent four-day-old pre-recovery articles from publishing after live pipeline restoration",
+  "selection": {
+    "created_at_min": "2026-07-21T11:11:31.115711+00:00",
+    "created_at_max": "2026-07-21T16:51:23.032486+00:00",
+    "count": 24
+  },
+  "reversible": true,
+  "entries": [
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T111131Z_60e74a976d.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T111131Z_60e74a976d.json",
+      "sha256": "baed345aa16997c6ee4cbb5baff6dc34c551010304b0a9f3aa032ad4a378bfdb"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T114123Z_907e8246bd.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T114123Z_907e8246bd.json",
+      "sha256": "958ad384a7ecfb32582136f068bd8ed6d409836967a24b141bc1609b4838686e"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T121125Z_415cdfcf2b.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T121125Z_415cdfcf2b.json",
+      "sha256": "f120063f33287614ba002126407641622b577e94456adb9482ea3aae74b6cf63"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T123144Z_3eff72d20e.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T123144Z_3eff72d20e.json",
+      "sha256": "081f74571ff3c2c5c2b41fe2dc95bde4a3b950c8fb9507d559b5505df1fe7d8f"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T124128Z_96d97c8999.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T124128Z_96d97c8999.json",
+      "sha256": "ba129737c056acfeaf8eceb63597375109dfe2726e61b59acd7b2b6f7bd6c1c5"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T125129Z_71cb64cd5b.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T125129Z_71cb64cd5b.json",
+      "sha256": "21d13328991f727fc37ce83a5f662d20d126bf47fe799f33d98c12373d05b445"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T130136Z_36f46f8d69.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T130136Z_36f46f8d69.json",
+      "sha256": "1a956aa37dc3413388ff54a6347be56ccb7c2b23da19122b8b66cd848d8f1142"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T131130Z_dea8f0cc57.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T131130Z_dea8f0cc57.json",
+      "sha256": "09c077dca90b3121a6ba4a5073889322c7774b4fb3089669e21508a00e00f402"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T132128Z_e1b67b6e4b.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T132128Z_e1b67b6e4b.json",
+      "sha256": "2fdba988520e386b6f48553e8352b4aeb87370d505665c6be3e0e20b6a6e96d7"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T134128Z_0a6ee92cfb.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T134128Z_0a6ee92cfb.json",
+      "sha256": "45a07a4d70b2b5bb1299e9a9588c5b558228155d9cfb7cf08cafd6328fbcd080"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T135134Z_6478ec3f17.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T135134Z_6478ec3f17.json",
+      "sha256": "dc26c6b86a40ec5d8b423ac5f81b64c172f8bdae4047830f74fe267006e5061b"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T141143Z_959577a4bc.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T141143Z_959577a4bc.json",
+      "sha256": "8fbbd735283337614fa937aedc28acf60ab56a25fbf9ddd76a9c348931ea0e2b"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T142125Z_6b7c0310ee.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T142125Z_6b7c0310ee.json",
+      "sha256": "93c29e8c5d75ba9c2b5d7d13945625ab1dd72ad97eb0bedb2e408049bf7940d0"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T143138Z_73d8b29d7a.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T143138Z_73d8b29d7a.json",
+      "sha256": "0f8b9c4239346045d8641698450d39d94c7effdd28ae3cdc9523165047be86e3"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T145135Z_9e98c9cf01.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T145135Z_9e98c9cf01.json",
+      "sha256": "2ed3083d33d5572ae89e03beadae5fa8e6b5536c4e745d5c5c279082eb57dea3"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T150132Z_0277db438e.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T150132Z_0277db438e.json",
+      "sha256": "4403fb9a3f9f61f0f66d9c883c023d2e8ccb0cb43041b2a01585a9e81d862d6e"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T151128Z_2c5c209ecf.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T151128Z_2c5c209ecf.json",
+      "sha256": "b2bf8f80a76d53e0187e2c7e4894131fc2c323cc6e75ad41a60698f28df74746"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T152144Z_e3ec262ec6.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T152144Z_e3ec262ec6.json",
+      "sha256": "067d5b18453dd83c1c43823eebcc838256b0035c7f2c92e64f7e61e5071055c4"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T154128Z_a837463434.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T154128Z_a837463434.json",
+      "sha256": "3861950d34c7c18044ac74ee14ad9c97e670284cb68470309794ad45fa9c2a7f"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T160124Z_5a00a13375.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T160124Z_5a00a13375.json",
+      "sha256": "4beb21ea53df1a5739eca32222e82ade9422b0194341fa6e43701d43be94180b"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T161128Z_68f67680e0.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T161128Z_68f67680e0.json",
+      "sha256": "94e8eb4cc828e3de57c96c3f8afb1b0dfb26e16538f5b08cf60f89c26ae892fd"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T162127Z_b8b27cd04b.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T162127Z_b8b27cd04b.json",
+      "sha256": "d77e5f00ce285fb82902904994606295e7c017cb0277815a7e2e6504991cc158"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T164128Z_04db4b4678.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T164128Z_04db4b4678.json",
+      "sha256": "c07302dacb159f78d59c1155597789e10376dec8a8b956a0a7a6c196cb9448ed"
+    },
+    {
+      "source": "pipeline/queues/staged/outbox/20260721T165123Z_d56cd3f65c.json",
+      "destination": "pipeline/queues/staged/failed_archive/20260725T150322Z/stale_outbox/20260721T165123Z_d56cd3f65c.json",
+      "sha256": "0c02e02402b816c1795359d7424c770f69e65cc8249b86681f38e1dc96e2b3be"
+    }
+  ]
+}
