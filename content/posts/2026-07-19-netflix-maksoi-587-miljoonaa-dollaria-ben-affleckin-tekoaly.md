@@ -1,5 +1,5 @@
 ---
-title: "Netflix maksoi 587 miljoonaa dollaria Ben Affleckin tekoäly-yhtiöstä"
+title: "Tietojen mukaan Netflix maksoi 587 miljoonaa dollaria Ben Affleckin tekoäly-yhtiöstä."
 date: 2026-07-19T22:08:32.111547+00:00
 categories:
   - Talous
@@ -8,15 +8,15 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Netflix maksoi InterPositivesta 587 miljoonaa dollaria käteisellä. Maaliskuussa toteutuneen kaupan hinta selvisi lähes neljä kuukautta myöhemmin viranom…"
-summary: "Netflix maksoi InterPositivesta 587 miljoonaa dollaria käteisellä. Maaliskuussa toteutuneen kaupan hinta selvisi lähes neljä kuukautta myöhemmin viranomaisasiakirjasta."
+description: "Netflixin SEC-asiakirja kertoo noin 587 miljoonan dollarin käteiskaupasta nimeämättä kohdetta. TechCrunch ja Indulgexpress yhdistävät sen InterPositiveen."
+summary: "Netflixin SEC-asiakirja kertoo noin 587 miljoonan dollarin käteiskaupasta nimeämättä kohdetta. TechCrunch ja Indulgexpress yhdistävät sen InterPositiveen."
 summary_bullets:
-  - "Netflix maksoi InterPositivesta 587 miljoonaa dollaria käteisellä."
-  - "Maaliskuussa 2026 toteutuneen yrityskaupan hinta selvisi Netflixin toisen vuosineljänneksen viranomaisasiakirjasta."
+  - "Netflixin SEC-asiakirja kertoo noin 587 miljoonan dollarin käteiskaupasta, mutta ei nimeä ostokohdetta."
+  - "TechCrunch ja Indulgexpress yhdistävät kaupan maaliskuussa julkistettuun InterPositiven yritysostoon."
   - "InterPositive kehittää elokuvan omalla kuvamateriaalilla koulutettavia tekoälymalleja jälkituotantoon."
 key_points:
-  - "Netflix maksoi InterPositivesta 587 miljoonaa dollaria käteisellä."
-  - "Maaliskuussa 2026 toteutuneen yrityskaupan hinta selvisi Netflixin toisen vuosineljänneksen viranomaisasiakirjasta."
+  - "Netflixin SEC-asiakirja kertoo noin 587 miljoonan dollarin käteiskaupasta, mutta ei nimeä ostokohdetta."
+  - "TechCrunch ja Indulgexpress yhdistävät kaupan maaliskuussa julkistettuun InterPositiven yritysostoon."
   - "InterPositive kehittää elokuvan omalla kuvamateriaalilla koulutettavia tekoälymalleja jälkituotantoon."
 journalist_note: |
   Viranomaisasiakirja ei nimeä InterPositivea suoraan. Kauppahinnan yhteys yhtiöön perustuu asiakirjassa kuvatun maaliskuun 2026 järjestelyn ja Netflixin julkistaman yritysoston vastaavaan ajankohtaan.
@@ -24,7 +24,7 @@ content_type: "article"
 editorial_reviewed: true
 image: "/images/categories/talous.jpg"
 image_thumb: "/images/categories/talous.jpg"
-image_alt: "Kuvituskuva uutiseen: Netflix maksoi 587 miljoonaa dollaria Ben Affleckin tekoäly-yhtiöstä (netflix, ben affleck)"
+image_alt: "Kuvituskuva uutiseen: Tietojen mukaan Netflix maksoi 587 miljoonaa dollaria Ben Affleckin tekoäly-yhtiöstä (netflix, ben affleck)"
 image_source: "category_fallback"
 image_source_type: "category_fallback"
 image_decision_reason: "generated fallback unavailable, unsafe, or failed after stock rejection"
@@ -51,7 +51,7 @@ briefing: true
 draft: false
 ---
 
-Netflix maksoi tekoäly-yhtiö InterPositivesta 587 miljoonaa dollaria käteisellä. Näyttelijä ja ohjaaja Ben Affleckin mukana perustaman yrityksen kauppa saatettiin päätökseen maaliskuussa 2026, mutta hinta tuli julki vasta lähes neljä kuukautta myöhemmin Netflixin toisen vuosineljänneksen viranomaisasiakirjasta. InterPositive kehittää elokuvatuotantoihin tarkoitettuja tekoälymalleja ja työkaluja, joiden käyttö painottuu kuvamateriaalin jälkituotantoon. Kaupan rahallinen arvo ei ollut mukana alkuperäisessä julkistuksessa.
+Netflixin Yhdysvaltain arvopaperi- ja pörssikomissiolle toimittama asiakirja kertoo maaliskuussa 2026 toteutetusta noin 587 miljoonan dollarin käteiskaupasta, mutta ei nimeä ostokohdetta. TechCrunch ja Indulgexpress yhdistävät kaupan samassa kuussa julkistettuun InterPositiven yritysostoon.
 
 ## Kauppahinta löytyi viranomaisasiakirjasta
 

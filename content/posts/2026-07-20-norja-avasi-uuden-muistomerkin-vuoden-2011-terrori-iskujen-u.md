@@ -57,7 +57,7 @@ Norja on avannut Oslossa uuden muistomerkin vuoden 2011 terrori-iskujen 77 uhril
 
 Upholding-niminen nykytaideteos on sijoitettu Oslon kunnostetulle hallintoalueelle lähelle paikkaa, jossa hyökkäyksen aloittanut autopommi räjähti. Teoksen ulkorakenteena on suuri sininen teräskehys. Se kannattelee 12 metriä korkeaa kivimosaiikkia, jossa näkyvät pieni kahlaajalintu sekä vedestä heijastuvat oljet ja kepit.
 
-Taiteilija Matias Faldbakken kertoi nähneensä mosaiikissa kuvatun linnun Utøyan saarella. Saarella kuoli suurin osa iskujen uhreista. Kaikkien 77:n surmansa saaneen nimet on kaiverrettu muistomerkkiin.
+Taiteilija Matias Faldbakken kertoi nähneensä mosaiikissa kuvatun linnun Utøyan saarella. Saarella kuoli suurin osa iskujen uhreista. Kaikkien 77 uhrin nimet on kaiverrettu muistomerkkiin.
 
 Paljastustilaisuuteen kokoontui sunnuntaina iskuista selvinneitä sekä omaisia, jotka menettivät hyökkäyksessä läheisensä. Avajaiset järjestettiin juuri ennen 22. heinäkuuta vietettävää iskujen vuosipäivää.
 
