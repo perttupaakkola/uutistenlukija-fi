@@ -2,6 +2,18 @@
   "schema": "uutistenlukija.staged_packet.v1",
   "created_at": "2026-07-25T14:19:10.604191+00:00",
   "digest": "5140652ec7",
+  "failed_at": "2026-07-25T15:04:34Z",
+  "failure": "editorial_rollback_named_speaker_attribution_error: the transparent-assessment-procedure evaluation is attributed to Atte Rytkönen-Sandberg, but the source assigns it to Mikael Pentikäinen",
+  "editorial_rollback": {
+    "reason_code": "named_speaker_attribution_error",
+    "review_issue": "OPE-415",
+    "review_comment": "d77a3768-dbbc-4f5d-a693-035b52e45672",
+    "article_commit": "55ff05a79cb12997049efc41c0fae648f8640a3f",
+    "article_path": "content/posts/2026-07-25-suomen-yrittajat-vaatii-yel-uudistukseen-reaaliaikaisempia-t.md",
+    "incorrect_speaker": "Atte Rytkönen-Sandberg",
+    "source_speaker": "Mikael Pentikäinen",
+    "rolled_back_at": "2026-07-25T15:04:34Z"
+  },
   "packet": {
     "packet_id": "20260725T141910Z_5140652ec7",
     "created_at": "2026-07-25T14:19:10Z",

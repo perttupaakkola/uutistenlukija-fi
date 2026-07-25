@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-25T14:42:02+00:00",
+  "generated_at": "2026-07-25T16:39:04+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,10 +12,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 1,
+    "published": 0,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-07-25T14:38:43.138917+00:00"
+    "last_published_ts": null
   },
   "reject_reasons": {},
   "feeds": {
@@ -26,40 +26,19 @@
     "stale_names": [],
     "disabled_names": []
   },
-  "trending": [
-    [
-      "yrittäjän",
-      9
-    ],
-    [
-      "hallituksen",
-      4
-    ],
-    [
-      "järjestö",
-      4
-    ],
-    [
-      "viimeksi",
-      4
-    ],
-    [
-      "yrittäjät",
-      3
-    ]
-  ],
+  "trending": [],
   "stagedQueueRunway": {
-    "outboxCount": 24,
+    "outboxCount": 0,
     "publisherEnabled": true,
     "scannerEnabled": false,
     "maxPacketsPerCycle": 3,
-    "worstCaseRemainingCycles": 8,
+    "worstCaseRemainingCycles": 0,
     "replenishmentState": "disabled",
-    "severity": "ok",
+    "severity": "critical",
     "reasons": [
       "publisher_enabled",
       "scanner_disabled",
-      "outbox_ok"
+      "outbox_critical"
     ]
   }
 }
