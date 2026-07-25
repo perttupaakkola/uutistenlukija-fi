@@ -73,10 +73,12 @@ pushes from the VPS.
 - `.github/workflows/staged-scan.yml` runs at staggered UTC minutes
   `01,16,31,46`. Scheduled runs are inert until
   `pipeline/actions-scan.enabled` is committed. Authenticated manual dispatch
-  from exact `refs/heads/main` is the only one-shot canary path and never
+  from exact `refs/heads/main` is the preferred one-shot canary path and never
   creates the marker or enables later schedules. The workflow rejects manual
-  dispatch from any other branch or tag. The marker is reserved for final
-  cutover.
+  dispatch from any other branch or tag. If dispatch permission is unavailable,
+  operators may add the marker for one scheduled canary and must remove it after
+  that run completes, before the next boundary. Otherwise the marker remains
+  reserved for final cutover.
 - The scan command keeps the accepted paused VPS flags exactly:
   `scan --max-packets 1 --max-research-candidates 8 --dedup-window 48
   --max-ready-backlog 150 --max-ready-age-hours 24`. The old CPU/disk guards
@@ -102,12 +104,15 @@ pushes from the VPS.
 1. Merge the workflow while `pipeline/actions-scan.enabled` is absent. Confirm
    the VPS `uutis-staged-scan` and `uutis-monica-worker` declarations remain
    commented.
-2. After independent workflow/security review and separate provider-side
-   credential rotation, dispatch `Staged scan` once from the default `main`
-   branch (select `main` in the Actions branch control, or use `--ref main`).
-   Record the run ID and queue pre/post counts plus manifest from the run
-   summary. The run must add exactly one valid `ready/` packet, make no other
-   staged queue change, and leave `pipeline/actions-scan.enabled` absent.
+2. After independent workflow/security review, dispatch `Staged scan` once from
+   the default `main` branch (select `main` in the Actions branch control, or use
+   `--ref main`). Provider-side Firehose credential rotation is not a prerequisite
+   for this RSS/public-research-only canary; it is required only before Firehose
+   is reintroduced. If dispatch permission is unavailable, commit the marker to
+   admit one scheduled run, then remove it after completion and before the next
+   boundary. Record the run ID and queue pre/post counts plus manifest from the
+   run summary. The run must add exactly one valid `ready/` packet, make no other
+   staged queue change, and leave `pipeline/actions-scan.enabled` absent afterward.
 3. Only after the canary and live-verification gates pass, commit the empty
    `pipeline/actions-scan.enabled` marker as the final scheduled-scan cutover.
 4. Do not resume the Monica worker here; that is a separate Max restoration

@@ -6,9 +6,10 @@ name: Staged scan
 # restoration decision.
 #
 # Scheduled runs are inert until `pipeline/actions-scan.enabled` exists.
-# Authenticated manual dispatch from exact main is the only one-shot canary
-# path; it never creates the marker or enables later schedules. The marker is
-# cutover-only.
+# Authenticated manual dispatch from exact main is the preferred one-shot
+# canary path. If dispatch permission is unavailable, operators may add the
+# marker for one scheduled canary and remove it after completion, before the
+# next boundary. The marker otherwise remains reserved for final cutover.
 
 on:
   schedule:
