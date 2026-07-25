@@ -18,6 +18,7 @@
 - Do not commit most `logs/`, `queues/`, lock files, or runtime artifacts. Commit only durable source, public/static status JSON intentionally generated for the site, metrics artifacts explicitly tracked by the pipeline, or small evidence fixtures required by tests.
 - Never print or commit `.env`, webhook URLs, API keys, OAuth tokens, cookies, or bearer headers. Use wrappers such as `scripts/run_with_project_env.sh` when a cron/reporting script needs environment variables.
 - Firehose credentials must come from `FIREHOSE_TOKEN` in the runtime environment, never source. The supplementary local source skips cleanly when absent. Until the historically exposed credential is rotated and separately reviewed, the Actions staged-scan workflow intentionally runs RSS/public-research only and must not inject `FIREHOSE_TOKEN`.
+- The Monica worker defaults to embedded-local OpenClaw dispatch with a unique explicit session per packet and a 360-second per-attempt timeout. Set `MONICA_OPENCLAW_LOCAL=0` only after gateway admission is verified healthy; keep explicit session isolation in both modes.
 - Before changing yield/classification behavior, reproduce with real logs or packets where possible and add a targeted regression test.
 - Queue cleanup must be reversible or manifest-backed unless deleting clearly generated throwaway artifacts under an approved retention rule.
 

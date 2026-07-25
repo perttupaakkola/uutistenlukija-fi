@@ -45,7 +45,7 @@ ALLOWED_CATEGORIES = {
 
 DEFAULT_MONICA_AGENT = os.environ.get("MONICA_OPENCLAW_AGENT", "monica")
 DEFAULT_OPENCLAW_CMD = os.environ.get("MONICA_OPENCLAW_CMD", "openclaw")
-DEFAULT_TIMEOUT_SEC = int(os.environ.get("MONICA_WRITER_TIMEOUT_SEC", "240"))
+DEFAULT_TIMEOUT_SEC = int(os.environ.get("MONICA_WRITER_TIMEOUT_SEC", "360"))
 MONICA_DISPATCH_TIMING_LOG = Path(os.environ.get(
     "MONICA_DISPATCH_TIMING_LOG",
     str(Path(__file__).resolve().parent / "logs" / "monica-dispatch-timing.jsonl"),
@@ -584,22 +584,26 @@ def _openclaw_command(prompt: str, *, force_local: bool | None = None, session_i
     base = _resolve_openclaw_base_cmd()
     cmd = [*base, "agent", "--agent", os.environ.get("MONICA_OPENCLAW_AGENT", DEFAULT_MONICA_AGENT)]
     if force_local is None:
-        # Default to a fresh one-shot gateway dispatch. The old implicit gateway
-        # path reused `agent:monica:main`, so unattended article prompts
-        # accumulated in one durable transcript until every worker hit context
-        # overflow. A unique explicit session keeps each packet isolated while
-        # still using the normal OpenClaw gateway/provider setup.
-        use_local = os.environ.get("MONICA_OPENCLAW_LOCAL", "0").lower() not in {"0", "false", "no"}
+        # Default to embedded-local dispatch because gateway task admission can
+        # stall before the first event. An explicit session id still keeps every
+        # packet out of the durable `agent:monica:main` transcript. Operators can
+        # set MONICA_OPENCLAW_LOCAL=0 to force the gateway path after it is healthy.
+        use_local = os.environ.get("MONICA_OPENCLAW_LOCAL", "1").lower() not in {"0", "false", "no"}
     else:
         use_local = force_local
 
-    explicit_session = session_id or os.environ.get("MONICA_OPENCLAW_SESSION_ID")
-    if not explicit_session:
-        explicit_session = f"monica-pipeline-{uuid.uuid4()}"
+    # Never honor a process-wide fixed session id: unattended workers may
+    # overlap, and sharing one transcript reintroduces both context pollution
+    # and cross-packet collisions. Explicit ids are reserved for the caller's
+    # bounded retry; otherwise every invocation gets a fresh session.
+    explicit_session = session_id or f"monica-pipeline-{uuid.uuid4()}"
     if use_local:
         cmd.append("--local")
-    else:
-        cmd.extend(["--session-id", explicit_session])
+    # Keep every packet isolated in both gateway and embedded-local modes.
+    # Local mode without an explicit id silently falls back to the durable
+    # `agent:monica:main` transcript and eventually recreates the context
+    # overflow problem this path was designed to avoid.
+    cmd.extend(["--session-id", explicit_session])
     cmd.extend(["--message", prompt])
     return cmd
 
@@ -755,14 +759,13 @@ def _run_openclaw_command(cmd: list[str]) -> str:
 
 
 def _run_monica(prompt: str) -> str:
-    # Use one explicit, unique Gateway session per attempt. Reusing a durable
-    # Monica session (or resetting it through `/reset`) polluted the writer lane
-    # until every retry overflowed. A second unique session is the safest small
-    # recovery: it bypasses the bad transcript without sending extra reset turns.
+    # Use one explicit, unique session per attempt in both gateway and local
+    # mode. Reusing a durable Monica session (or resetting it through `/reset`)
+    # polluted the writer lane until every retry overflowed.
     text = _run_openclaw_command(_openclaw_command(prompt))
     if _looks_like_context_overflow(text):
         print("[monica]   context overflow from Monica session; retrying once with fresh explicit session")
-        text = _run_openclaw_command(_openclaw_command(prompt, force_local=False, session_id=f"monica-pipeline-retry-{uuid.uuid4()}"))
+        text = _run_openclaw_command(_openclaw_command(prompt, session_id=f"monica-pipeline-retry-{uuid.uuid4()}"))
     if _looks_like_context_overflow(text):
         raise RuntimeError("Monica writer context overflow after fresh-session retry")
     return text

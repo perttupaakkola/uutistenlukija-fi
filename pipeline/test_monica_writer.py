@@ -11,12 +11,12 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 try:
-    from .monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_prompt, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, _run_openclaw_command, rewrite_articles
+    from .monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_prompt, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _openclaw_command, _packet_source_blocks, _packet_source_words, _packet_story_confidence, _run_openclaw_command, rewrite_articles
     PATCH_TARGET = "pipeline.monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "pipeline.monica_writer._resolve_openclaw_base_cmd"
     TIMING_LOG_PATCH_TARGET = "pipeline.monica_writer.MONICA_DISPATCH_TIMING_LOG"
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
-    from monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_prompt, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _packet_source_blocks, _packet_source_words, _packet_story_confidence, _run_openclaw_command, rewrite_articles
+    from monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_prompt, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _openclaw_command, _packet_source_blocks, _packet_source_words, _packet_story_confidence, _run_openclaw_command, rewrite_articles
     PATCH_TARGET = "monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "monica_writer._resolve_openclaw_base_cmd"
     TIMING_LOG_PATCH_TARGET = "monica_writer.MONICA_DISPATCH_TIMING_LOG"
@@ -118,6 +118,43 @@ class MonicaWriterTests(unittest.TestCase):
 
     def _result(self, stdout: str):
         return SimpleNamespace(returncode=0, stdout=stdout, stderr="")
+
+    @patch(RESOLVE_PATCH_TARGET, return_value=["openclaw"])
+    def test_local_command_keeps_packet_in_unique_explicit_session(self, _resolve_mock):
+        cmd = _openclaw_command("prompt", force_local=True, session_id="packet-session")
+
+        self.assertIn("--local", cmd)
+        self.assertIn("--session-id", cmd)
+        self.assertEqual(cmd[cmd.index("--session-id") + 1], "packet-session")
+
+    @patch(RESOLVE_PATCH_TARGET, return_value=["openclaw"])
+    def test_gateway_command_keeps_packet_in_unique_explicit_session(self, _resolve_mock):
+        cmd = _openclaw_command("prompt", force_local=False, session_id="packet-session")
+
+        self.assertNotIn("--local", cmd)
+        self.assertIn("--session-id", cmd)
+        self.assertEqual(cmd[cmd.index("--session-id") + 1], "packet-session")
+
+    @patch(RESOLVE_PATCH_TARGET, return_value=["openclaw"])
+    def test_default_command_uses_isolated_local_mode(self, _resolve_mock):
+        with patch.dict(os.environ, {"MONICA_OPENCLAW_CMD": "openclaw"}, clear=True):
+            cmd = _openclaw_command("prompt", session_id="packet-session")
+
+        self.assertIn("--local", cmd)
+        self.assertIn("--session-id", cmd)
+        self.assertEqual(cmd[cmd.index("--session-id") + 1], "packet-session")
+
+    @patch(RESOLVE_PATCH_TARGET, return_value=["openclaw"])
+    def test_legacy_fixed_session_environment_cannot_disable_isolation(self, _resolve_mock):
+        with patch.dict(os.environ, {"MONICA_OPENCLAW_SESSION_ID": "legacy-fixed-session"}, clear=False):
+            first = _openclaw_command("first")
+            second = _openclaw_command("second")
+
+        first_session = first[first.index("--session-id") + 1]
+        second_session = second[second.index("--session-id") + 1]
+        self.assertNotEqual(first_session, "legacy-fixed-session")
+        self.assertNotEqual(second_session, "legacy-fixed-session")
+        self.assertNotEqual(first_session, second_session)
 
     def test_openclaw_candidates_include_user_bin_wrapper_first(self):
         self.assertEqual(OPENCLAW_CANDIDATES[0], "/home/pertt/.openclaw/bin/openclaw")
@@ -395,6 +432,16 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(_extract_json_object(raw)["category"], "Kotimaa")
 
     @patch(PATCH_TARGET)
+    def test_run_openclaw_command_uses_360_default_timeout_when_env_absent(self, run_mock):
+        run_mock.return_value = self._result(_good_payload())
+
+        with patch.dict(os.environ, {}, clear=False):
+            os.environ.pop("MONICA_WRITER_TIMEOUT_SEC", None)
+            _run_openclaw_command(["openclaw"])
+
+        self.assertEqual(run_mock.call_args.kwargs["timeout"], 360)
+
+    @patch(PATCH_TARGET)
     def test_run_openclaw_command_rejects_incomplete_timeout_stdout(self, run_mock):
         run_mock.side_effect = subprocess.TimeoutExpired(["openclaw"], 360, output="progress\n" + _good_payload()[:-20])
 
@@ -473,13 +520,31 @@ class MonicaWriterTests(unittest.TestCase):
         retry_cmd = run_mock.call_args_list[1].args[0]
         self.assertNotIn("/reset", retry_cmd)
         self.assertNotEqual(first_cmd, retry_cmd)
-        if "--session-id" in first_cmd:
-            self.assertIn("--session-id", retry_cmd)
-            self.assertNotEqual(first_cmd[first_cmd.index("--session-id") + 1], retry_cmd[retry_cmd.index("--session-id") + 1])
-        else:
-            self.assertIn("--local", first_cmd)
-            self.assertIn("--session-id", retry_cmd)
-            self.assertNotIn("--local", retry_cmd)
+        self.assertIn("--local", first_cmd)
+        self.assertIn("--local", retry_cmd)
+        self.assertIn("--session-id", first_cmd)
+        self.assertIn("--session-id", retry_cmd)
+        self.assertNotEqual(first_cmd[first_cmd.index("--session-id") + 1], retry_cmd[retry_cmd.index("--session-id") + 1])
+
+    @patch(PATCH_TARGET)
+    def test_rewrite_articles_resets_gateway_session_on_context_overflow(self, run_mock):
+        run_mock.side_effect = [
+            self._result("Context overflow: prompt too large for the model. Try /reset (or /new) to start a fresh session."),
+            self._result(_good_payload()),
+        ]
+
+        with patch.dict(os.environ, {"MONICA_OPENCLAW_LOCAL": "0"}, clear=False):
+            rewritten = rewrite_articles([dict(SAMPLE_ARTICLE)])
+
+        self.assertEqual(len(rewritten), 1)
+        self.assertEqual(run_mock.call_count, 2)
+        first_cmd = run_mock.call_args_list[0].args[0]
+        retry_cmd = run_mock.call_args_list[1].args[0]
+        self.assertNotIn("--local", first_cmd)
+        self.assertNotIn("--local", retry_cmd)
+        self.assertIn("--session-id", first_cmd)
+        self.assertIn("--session-id", retry_cmd)
+        self.assertNotEqual(first_cmd[first_cmd.index("--session-id") + 1], retry_cmd[retry_cmd.index("--session-id") + 1])
 
     def test_source_backed_repair_candidate_requires_words_blocks_and_length_issue(self):
         issues = ["content too short: 207 words", "lead paragraph too short: 22 words"]
