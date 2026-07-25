@@ -30,6 +30,7 @@ This file adapts the DOX idea from `agent0ai/dox`: keep a small hierarchy of `AG
 - Felix coordinates and reviews this work; Iris owns the experiment, Monica the editorial/disclosure gate, Sara the rendered reader-experience gate, Alex implementation, and Max privacy/ops review when applicable. Do not let Felix substitute for missing specialist evidence.
 - A commercial change is not ready merely because it builds or tracks clicks. Preserve editorial separation, source/Finnish-language quality, the accepted portal hierarchy, accessibility/performance, explicit disclosures, and a measurable decision rule.
 - Start with `git status --short --branch`; preserve unrelated local changes and untracked queue/log files.
+- Need a scratch copy of the repo for review or diagnosis? Run `scripts/make_review_snapshot.sh OPE-NNN [suffix]` and work in the path it prints. Do not `cp -a` the working tree: a full copy is ~480 MB (mostly `pipeline/queues`, `backups/`, `public/`), and 69 of them filled /tmp with 14 GB in two days (2026-07-25). The helper produces ~137 MB, keeps the `opeNNN-` prefix that the daily /tmp janitor reclaims after two days, and prints the cleanup command. Remove your snapshot when the review is done.
 - Tie non-trivial work to an OPE issue or create/update one through Felix/Linear when needed.
 - For code changes, make the smallest safe patch and add/adjust regression tests when behavior changes.
 - For UI/design/SEO work, read `DESIGN.md` and follow the editorial design system.
