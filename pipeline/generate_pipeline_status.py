@@ -24,28 +24,47 @@ def build_staged_queue_runway(
     max_packets_per_cycle: int = MAX_PACKETS_PER_CYCLE,
 ) -> dict:
     pipeline_dir = project_dir / "pipeline"
+    ready_count = len(list((pipeline_dir / "queues/staged/ready").glob("*.json")))
+    writing_count = len(list((pipeline_dir / "queues/staged/writing").glob("*.json")))
     outbox_count = len(list((pipeline_dir / "queues/staged/outbox").glob("*.json")))
     publisher_enabled = (pipeline_dir / "actions-publish.enabled").is_file()
     scanner_enabled = (pipeline_dir / "actions-scan.enabled").is_file()
+    worker_enabled = (pipeline_dir / "monica-worker.enabled").is_file()
     remaining_cycles = (
         outbox_count + max_packets_per_cycle - 1
     ) // max_packets_per_cycle
     reasons = [
         "publisher_enabled" if publisher_enabled else "publisher_disabled",
         "scanner_enabled" if scanner_enabled else "scanner_disabled",
+        "worker_enabled" if worker_enabled else "worker_disabled",
     ]
 
-    # The Actions scanner replenishes ready/, not outbox/. Until a durable
-    # Monica-writer signal exists, the scanner marker cannot suppress outbox
-    # depletion severity or claim end-to-end replenishment.
-    if scanner_enabled:
+    # A healthy end-to-end pipeline is allowed to be idle. Outbox depletion was
+    # a useful migration warning only while no durable Monica worker signal
+    # existed; once scanner + transactional worker + publisher are all enabled,
+    # zero queue depth means caught up rather than starved.
+    if publisher_enabled and scanner_enabled and worker_enabled:
+        replenishment_state = "end_to_end_enabled"
+        reasons.append("queue_idle" if ready_count + writing_count + outbox_count == 0 else "queue_active")
+    elif scanner_enabled and worker_enabled:
+        replenishment_state = "scanner_worker_enabled_publisher_disabled"
+        reasons.append("publisher_delivery_disabled")
+    elif scanner_enabled:
         replenishment_state = "scanner_enabled_writer_unverified"
         reasons.append("writer_unverified")
+    elif worker_enabled:
+        replenishment_state = "worker_enabled_scanner_disabled"
+        reasons.append("scanner_replenishment_disabled")
     else:
         replenishment_state = "disabled"
 
-    if not publisher_enabled:
+    if writing_count > 1:
+        severity = "critical"
+        reasons.append("multiple_writing_packets")
+    elif not publisher_enabled:
         severity = "inactive"
+    elif scanner_enabled and worker_enabled:
+        severity = "ok"
     elif outbox_count <= 6:
         severity = "critical"
     elif outbox_count <= 12:
@@ -53,13 +72,16 @@ def build_staged_queue_runway(
     else:
         severity = "ok"
 
-    if publisher_enabled:
+    if publisher_enabled and not (scanner_enabled and worker_enabled):
         reasons.append(f"outbox_{severity}")
 
     return {
+        "readyCount": ready_count,
+        "writingCount": writing_count,
         "outboxCount": outbox_count,
         "publisherEnabled": publisher_enabled,
         "scannerEnabled": scanner_enabled,
+        "workerEnabled": worker_enabled,
         "maxPacketsPerCycle": max_packets_per_cycle,
         "worstCaseRemainingCycles": remaining_cycles,
         "replenishmentState": replenishment_state,
@@ -70,9 +92,12 @@ def build_staged_queue_runway(
 
 def write_actions_summary(runway: dict, summary_path: Path) -> None:
     rows = (
+        ("Ready packets", runway["readyCount"]),
+        ("Writing packets", runway["writingCount"]),
         ("Outbox packets", runway["outboxCount"]),
         ("Publisher marker", "enabled" if runway["publisherEnabled"] else "disabled"),
         ("Scanner marker", "enabled" if runway["scannerEnabled"] else "disabled"),
+        ("Monica worker marker", "enabled" if runway["workerEnabled"] else "disabled"),
         ("Max packets per cycle", runway["maxPacketsPerCycle"]),
         ("Worst-case remaining cycles", runway["worstCaseRemainingCycles"]),
         ("Replenishment", runway["replenishmentState"]),

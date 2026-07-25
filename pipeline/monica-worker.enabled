@@ -1,0 +1,7 @@
+The VPS Monica cron runs the reviewed transactional wrapper through safe-job-runner.
+
+This marker is an operator assertion used by pipeline observability; it must be removed before disabling the transactional cron.
+enabled_utc=2026-07-25T17:13:33Z
+wrapper_commit=a54343d6e112c86aee0843def3d087b6c0af4f0f
+max_packets_per_run=1
+writer_mode=embedded-local-isolated-session
