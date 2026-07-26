@@ -7,12 +7,16 @@
   {
     "name": "firehose_cron",
     "expected_interval_hours": 0.167,
-    "marker_file_path": "pipeline/logs/firehose_cron.log"
+    "marker_file_path": "pipeline/logs/firehose_cron.log",
+    "enabled": false,
+    "disabled_reason": "Security-paused in VPS crontab pending OPE-450 credential rotation and review."
   },
   {
     "name": "staged_scan",
     "expected_interval_hours": 0.167,
-    "marker_file_path": "pipeline/logs/staged-scan.log"
+    "marker_file_path": "pipeline/logs/staged-scan.log",
+    "enabled": false,
+    "disabled_reason": "OPE-465 scanner admission is quiesced while the transactional consumer lane is constrained."
   },
   {
     "name": "health_monitor",
@@ -87,11 +91,19 @@
   {
     "name": "staged_monica_worker",
     "expected_interval_hours": 0.333,
-    "marker_file_path": "pipeline/logs/staged-monica-worker.log"
+    "marker_file_path": "pipeline/logs/staged-monica-worker.log",
+    "latest_line_required_pattern": "\\[uutis-monica-worker\\] (?:END rc=0\\b|SKIP (?:high_load|already_running|low_disk)\\b)",
+    "latest_line_forbidden_patterns": [
+      "\\[uutis-monica-worker\\] END rc=(?!0\\b)\\d+",
+      "No such file or directory",
+      "\\[staged-monica-cron\\] ERROR"
+    ]
   },
   {
     "name": "staged_publish",
     "expected_interval_hours": 0.333,
-    "marker_file_path": "pipeline/logs/staged-publish.log"
+    "marker_file_path": "pipeline/logs/staged-publish.log",
+    "enabled": false,
+    "disabled_reason": "Publishing admission migrated to the reviewed GitHub Actions workflow in July 2026."
   }
 ]
