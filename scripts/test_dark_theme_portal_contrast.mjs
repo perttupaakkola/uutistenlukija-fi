@@ -13,6 +13,41 @@ const VIEWPORTS = [
   { width: 390, height: 844 },
   { width: 1366, height: 900 },
 ];
+const ARTICLE_BADGE_CASES = [
+  {
+    key: 'talous',
+    slug: 'talous',
+    label: 'Talous',
+    background: '#f39c12',
+    backgroundRgb: [243, 156, 18],
+    foregroundByTheme: {
+      light: [7, 19, 41],
+      dark: [7, 19, 41],
+    },
+  },
+  {
+    key: 'teknologia',
+    slug: 'teknologia',
+    label: 'Teknologia',
+    background: '#8e44ad',
+    backgroundRgb: [142, 68, 173],
+    foregroundByTheme: {
+      light: [255, 255, 255],
+      dark: [243, 245, 247],
+    },
+  },
+  {
+    key: 'default',
+    slug: 'default',
+    label: 'Muu',
+    background: '#c0392b',
+    backgroundRgb: [192, 57, 43],
+    foregroundByTheme: {
+      light: [255, 255, 255],
+      dark: [243, 245, 247],
+    },
+  },
+];
 const CONTRAST_TARGETS = [
   ['.portal-livebar__all', 'live-update CTA'],
   ['[data-market-list] dd', 'market value'],
@@ -49,13 +84,22 @@ function breadcrumbCss() {
   return style[1];
 }
 
-function renderFixture() {
+function renderFixture(theme = 'dark', articleBadges = [ARTICLE_BADGE_CASES[1]]) {
   const criticalCss = readFileSync(resolve(ROOT, 'layouts/partials/critical-css.html'), 'utf8');
   const fullCss = readFileSync(resolve(ROOT, 'themes/uutistenlukija/static/css/style.css'), 'utf8');
   const portalCss = readFileSync(resolve(ROOT, 'static/css/portal-overhaul.css'), 'utf8');
+  const badgeMarkup = articleBadges.map((badge) => `
+        <article class="single-article">
+          <a data-contrast-case="${badge.key}"
+             class="category-label category-label--badge category-label--${badge.slug}"
+             href="#category-${badge.key}"
+             style="background-color:${badge.background};border-color:${badge.background}">
+            ${badge.label}
+          </a>
+        </article>`).join('');
 
   return `<!doctype html>
-    <html lang="fi" data-theme="dark"><head><meta charset="utf-8"><title>OPE-446 contrast</title>
+    <html lang="fi" data-theme="${theme}"><head><meta charset="utf-8"><title>Portal contrast</title>
     ${criticalCss}<style>${fullCss}</style><style>${portalCss}</style><style>${breadcrumbCss()}</style>
     </head><body>
       <a class="skip-to-content" href="#main-content">Siirry pääsisältöön</a>
@@ -78,18 +122,15 @@ function renderFixture() {
           <div class="portal-list-feature__body"><p>Nostoartikkelin ingressi.</p></div>
         </section>
         <article class="portal-feed-item"><div><p>Uutisvirran ingressi.</p></div></article>
-        <article class="single-article">
-          <a class="category-label category-label--badge category-label--teknologia"
-             href="#category" style="background-color:#8e44ad;border-color:#8e44ad">Teknologia</a>
-        </article>
+        ${badgeMarkup}
       </main>
     </body></html>`;
 }
 
-async function withServer(run) {
+async function withServer(run, theme = 'dark', articleBadges) {
   const server = createServer((_request, response) => {
     response.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
-    response.end(renderFixture());
+    response.end(renderFixture(theme, articleBadges));
   });
   await new Promise((resolveListen) => server.listen(0, '127.0.0.1', resolveListen));
   const address = server.address();
@@ -102,6 +143,58 @@ async function withServer(run) {
     });
   }
 }
+
+test('OPE-363 scopes portal navy to Talous and preserves other article badges', async () => {
+  for (const theme of ['light', 'dark']) {
+    await withServer(async (origin) => {
+      const browser = await chromium.launch(browserLaunchOptions());
+      try {
+        for (const viewport of VIEWPORTS) {
+          const context = await browser.newContext({ viewport });
+          const page = await context.newPage();
+          await page.goto(origin);
+          assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
+          for (const badge of ARTICLE_BADGE_CASES) {
+            const locator = page.locator(`[data-contrast-case="${badge.key}"]`);
+            assert.equal(await locator.count(), 1, `${badge.key} fixture must resolve once`);
+            const colors = await locator.evaluate((element) => {
+              const parseRgb = (value) => value
+                .match(/rgba?\(([^)]+)\)/)[1]
+                .replace('/', ' ')
+                .split(/[\s,]+/)
+                .filter(Boolean)
+                .slice(0, 3)
+                .map((part) => Number.parseFloat(part));
+              const style = getComputedStyle(element);
+              return {
+                foreground: parseRgb(style.color),
+                background: parseRgb(style.backgroundColor),
+              };
+            });
+            assert.deepEqual(
+              colors.foreground,
+              badge.foregroundByTheme[theme],
+              `${viewport.width}px ${theme} ${badge.key} badge must preserve its foreground`,
+            );
+            assert.deepEqual(
+              colors.background,
+              badge.backgroundRgb,
+              `${viewport.width}px ${theme} ${badge.key} badge must preserve its background`,
+            );
+            const ratio = contrastRatio(colors.foreground, colors.background);
+            assert(
+              ratio >= 4.5,
+              `${viewport.width}px ${theme} ${badge.key} badge contrast ${ratio.toFixed(4)} must be at least 4.5:1`,
+            );
+          }
+          await context.close();
+        }
+      } finally {
+        await browser.close();
+      }
+    }, theme, ARTICLE_BADGE_CASES);
+  }
+});
 
 test('OPE-446 dark portal text reaches rendered WCAG AA contrast', async () => {
   await withServer(async (origin) => {

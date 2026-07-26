@@ -105,6 +105,8 @@ PORTAL_OVERHAUL_CRITICAL_LOCKS = """
 /* OPE-158 dark portal contrast locks; keep in sync with portal-overhaul.css. */
 [data-theme="dark"] .portal-livebar time { color: #f0b8ad !important; }
 [data-theme="dark"] .single-article > .category-label--badge { color: var(--portal-text, #fff) !important; }
+/* OPE-363 Talous article badge contrast lock; invariant across light and dark themes. */
+.single-article > .category-label--badge.category-label--talous { color: #071329 !important; }
 /* OPE-439 Talous feature headline containment; keep in sync with portal-overhaul.css. */
 .portal-list-feature--talous h2 { overflow-wrap: anywhere; }
 [data-theme="dark"] .portal-kicker,

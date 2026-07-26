@@ -83,6 +83,16 @@ OPE_446_CRITICAL_BADGE_GUARD = (
     '[data-theme="dark"] .single-article>.category-label--badge'
 )
 
+OPE_363_ARTICLE_BADGE_GUARD = (
+    ".single-article > .category-label--badge.category-label--talous {\n"
+    "  color: #071329 !important;\n"
+    "}"
+)
+OPE_363_CRITICAL_ARTICLE_BADGE_GUARD = (
+    ".single-article>.category-label--badge.category-label--talous"
+    "{color:#071329!important}"
+)
+
 MOBILE_CONTAINER_WIDTH_GUARD = (
     ".container, main.container { width: 100% !important; max-width: 100% !important;"
 )
@@ -141,6 +151,11 @@ def main() -> int:
             if selector not in css:
                 failures.append(f"{label} is missing OPE-446 contrast guard for {selector}")
 
+        if OPE_363_ARTICLE_BADGE_GUARD not in css:
+            failures.append(
+                f"{label} is missing the OPE-363 article badge contrast guard"
+            )
+
         for snippet in LAYOUT_GUARDS:
             if snippet not in css:
                 failures.append(f"{label} is missing OPE-162 layout guard {snippet!r}")
@@ -162,6 +177,12 @@ def main() -> int:
     if OPE_446_CRITICAL_BADGE_GUARD not in critical_css:
         failures.append(
             f"{CRITICAL_CSS.relative_to(ROOT)} is missing the OPE-446 article badge "
+            "contrast lock"
+        )
+
+    if OPE_363_CRITICAL_ARTICLE_BADGE_GUARD not in critical_css:
+        failures.append(
+            f"{CRITICAL_CSS.relative_to(ROOT)} is missing the OPE-363 Talous article badge "
             "contrast lock"
         )
 
