@@ -217,5 +217,36 @@
     "degraded_mode": false,
     "monica_packet_id": "20260726T072028Z_5818ef4fff",
     "source_url": "https://www.yrittajat.fi/uutiset/yrittaja-antti-torronen-huomasi-etta-tekoaly-voi-loytaa-potentiaalisen-osakesijoituksen-yksi-moka-vei-rahat-edes-tekoaly-ei-pysty-huomaamaan/"
-  }
+  },
+  "quality_gate_rejected_at": "2026-07-26T08:40:40.016149+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260726T072028Z_5818ef4fff",
+    "category": "Talous",
+    "selected_source_words": 345,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 6.76,
+    "quality_reasons": [
+      "length under target (285 words)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "only 1 paragraphs (min 3)"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 285,
+    "title": "Antti Törrönen käyttää tekoälyä osakkeiden seulontaan – yksi sijoitus meni lähes kokonaan"
+  },
+  "failure": "quality_gate_rejected: length under target (285 words); missing: image; readability few paragraphs (1); readability wall of text; only 1 paragraphs (min 3)",
+  "duplicate_rejected_at": "2026-07-26T08:40:40.139081+00:00",
+  "duplicate_rejected": true
 }
