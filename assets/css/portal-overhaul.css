@@ -1449,3 +1449,16 @@ main.container { padding-top: 0; padding-bottom: 48px; }
     white-space: normal;
   }
 }
+
+/* AI disclosure -- one line at the end of every article. Uses theme variables
+   so it stays legible in dark mode (unlike the older !important card rules). */
+.ai-disclosure {
+  margin: 1.5rem auto 0;
+  max-width: 680px;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border, #e0ddd8);
+  color: var(--text-muted, #666);
+  font: 0.85rem/1.5 var(--font-sans, sans-serif);
+}
+.ai-disclosure a { color: inherit; text-decoration: underline; }
+.ai-disclosure a:hover { color: var(--accent, #c0392b); }
