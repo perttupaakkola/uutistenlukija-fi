@@ -4,7 +4,7 @@ seo_title: "Ovatko kaupat auki pääsiäisenä 2026? Päiväkohtainen opas"
 description: "Katso, ovatko kaupat auki pääsiäisenä 2026 pitkäperjantaina, lankalauantaina ja pääsiäispäivinä. Tarkista aina oman myymälän aukiolo."
 date: 2026-03-26
 lastmod: 2026-07-07
-draft: false
+draft: true
 categories: ["kotimaa", "talous"]
 ---
 

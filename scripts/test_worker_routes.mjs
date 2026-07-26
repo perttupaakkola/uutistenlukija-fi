@@ -32,6 +32,11 @@ const retiredJyvaskylaBodyHashes = new Map([
     'd23719da24e53bd85298c99fb5bd34ed7731d381f80c5cd9fd1222fc0ff9c2fa',
   ],
 ]);
+const legacyGuideBodyHashes = new Map([
+  ['paasiaisopas/kaupat-auki.md', 'd0f4bd0559e7f9e0c288be4962d90f16b131adb420a2cd4359bf3cdc0c35b511'],
+  ['vappuopas/kaupat-auki.md', '4bfd68b54aaf62d265758bba7ebeb06d128df0dddcee7594f94dff5aa3544c39'],
+]);
+const canonicalGuidePath = '/oppaat/kauppojen-aukioloajat/';
 
 function articleBody(source) {
   const marker = '\n---\n';
@@ -122,6 +127,75 @@ test('newsletter API and article redirects keep their existing routing', async (
     'https://uutistenlukija.fi/posts/example-article/?from=regression',
   );
   assert.deepEqual(redirectSpy.calls, [], 'article redirect must not reach ASSETS.fetch');
+});
+
+test('exact legacy seasonal guide routes redirect 308 to one clean canonical hop', async () => {
+  for (const legacyPath of ['/paasiaisopas/kaupat-auki', '/vappuopas/kaupat-auki']) {
+    for (const pathname of [
+      legacyPath,
+      `${legacyPath}/`,
+      `${legacyPath}/?campaign=old#hours`,
+    ]) {
+      const { calls, env } = assetSpy();
+      const response = await worker.fetch(request(pathname), env, {});
+
+      assert.equal(response.status, 308, pathname);
+      assert.equal(
+        response.headers.get('location'),
+        `https://uutistenlukija.fi${canonicalGuidePath}`,
+        pathname,
+      );
+      assert.deepEqual(calls, [], `${pathname} must redirect before ASSETS.fetch`);
+
+      const followed = await worker.fetch(new Request(response.headers.get('location')), env, {});
+      assert.equal(followed.status, 200, `${pathname} must finish after one redirect`);
+      assert.deepEqual(
+        calls,
+        [`https://uutistenlukija.fi${canonicalGuidePath}`],
+        `${pathname} must fetch only the canonical asset`,
+      );
+    }
+  }
+
+  const canonicalSpy = assetSpy();
+  const canonicalResponse = await worker.fetch(
+    request(canonicalGuidePath),
+    canonicalSpy.env,
+    {},
+  );
+  assert.equal(canonicalResponse.status, 200);
+  assert.deepEqual(
+    canonicalSpy.calls,
+    [`https://uutistenlukija.fi${canonicalGuidePath}`],
+  );
+});
+
+test('legacy seasonal guide bodies stay recoverable and leave public discovery', async () => {
+  const contentRoot = new URL('../content/', import.meta.url);
+  for (const [relativePath, expectedHash] of legacyGuideBodyHashes) {
+    const source = await readFile(new URL(relativePath, contentRoot), 'utf8');
+    assert.match(source, /^draft:\s*true$/m, relativePath);
+    assert.equal(bodyHash(source), expectedHash, `${relativePath} body must remain byte-identical`);
+  }
+
+  const publishedPaths = await readdir(contentRoot, { recursive: true });
+  const offenders = [];
+  for (const relativePath of publishedPaths.filter((path) => path.endsWith('.md'))) {
+    if (legacyGuideBodyHashes.has(relativePath)) continue;
+    const source = await readFile(new URL(relativePath, contentRoot), 'utf8');
+    for (const legacyPath of ['/paasiaisopas/kaupat-auki/', '/vappuopas/kaupat-auki/']) {
+      if (source.includes(legacyPath)) offenders.push(`${relativePath}: ${legacyPath}`);
+    }
+  }
+  assert.deepEqual(offenders, [], 'published content must link directly to the canonical guide');
+
+  const searchIndex = JSON.parse(
+    await readFile(new URL('../static/search-index.json', import.meta.url), 'utf8'),
+  );
+  const urls = searchIndex.map((record) => record.url);
+  assert.equal(urls.filter((url) => url === canonicalGuidePath).length, 1);
+  assert.equal(urls.filter((url) => url.includes('/paasiaisopas/kaupat-auki')).length, 0);
+  assert.equal(urls.filter((url) => url.includes('/vappuopas/kaupat-auki')).length, 0);
 });
 
 test('duplicate Kuuba outage URL redirects one hop to the ranked canonical', async () => {

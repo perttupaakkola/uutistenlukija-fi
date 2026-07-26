@@ -3,7 +3,7 @@ title: "Kaupat auki vappuna 2026 — aukioloajat vappuaattona ja vappupäivänä
 description: "Mitkä kaupat ovat auki vappuna 2026? Tarkista aukioloajat vappuaatolle 30.4. ja vappupäivälle 1.5. Prisma, K-ryhmä, Lidl, Tokmanni, Alko ja kauppakeskukset."
 date: 2026-04-04
 lastmod: 2026-06-11
-draft: false
+draft: true
 categories: ["kotimaa", "talous"]
 ---
 

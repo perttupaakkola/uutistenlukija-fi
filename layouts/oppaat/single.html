@@ -1,0 +1,82 @@
+{{ define "main" }}
+{{ partial "oppaat-styles.html" . }}
+{{ partial "breadcrumbs.html" . }}
+{{ $state := partial "guide-state.html" . }}
+
+<article class="guide-shell">
+  <header class="guide-header">
+    <span class="guide-eyebrow">Opas</span>
+    <h1>{{ .Title }}</h1>
+    <p class="guide-deck">{{ .Description }}</p>
+  </header>
+
+  <section class="guide-answer" aria-labelledby="guide-answer-heading">
+    <h2 id="guide-answer-heading">Lyhyt vastaus</h2>
+    <p>Tarkista oman myymälän poikkeava aukioloaika ketjun virallisesta myymälähausta samana päivänä ennen lähtöä.</p>
+    {{ range .Params.sources }}
+      {{ if .authoritative_checker }}
+      <a href="{{ .url }}" rel="noopener">Avaa ensisijainen virallinen tarkistus: {{ .name }}</a>
+      {{ end }}
+    {{ end }}
+  </section>
+
+  <ul class="guide-status" aria-label="Oppaan ajantasaisuus">
+    <li>
+      <span class="guide-status__label">Lähteet tarkistettu</span>
+      <strong>{{ time.Format "2.1.2006" .Params.reviewed_at }}</strong>
+    </li>
+    {{ if .Params.materially_updated }}
+    <li>
+      <span class="guide-status__label">Päivitetty</span>
+      <strong>{{ time.Format "2.1.2006" .Params.updated_at }}</strong>
+    </li>
+    {{ end }}
+    <li>
+      <span class="guide-status__label">Seuraava tarkistus viimeistään</span>
+      <strong>{{ time.Format "2.1.2006" .Params.next_review_at }}</strong>
+    </li>
+    <li>
+      <span class="guide-status__label">Voimassa</span>
+      <strong>{{ time.Format "2.1.2006" .Params.expires_at }} asti</strong>
+    </li>
+  </ul>
+
+  {{ if $state.invalid }}
+  <p class="guide-warning" role="status">Oppaan tarkistus- tai lähdetiedot ovat puutteelliset. Käytä virallisia lähteitä ja ilmoita sivun virheestä toimitukselle.</p>
+  {{ else if $state.expired }}
+  <p class="guide-warning" role="status">Tämän oppaan voimassaolo on päättynyt. Sivu säilyy korjauksia varten, mutta älä käytä sitä ajantasaisena tarkistusohjeena.</p>
+  {{ else if $state.reviewDue }}
+  <p class="guide-warning" role="status">Oppaan määräaikaistarkistus on tehtävä. Tarkista tiedot suoraan virallisista lähteistä ennen asiointia.</p>
+  {{ end }}
+
+  <div class="guide-content">
+    {{ .Content }}
+  </div>
+
+  <section class="guide-sources" aria-labelledby="guide-sources-heading">
+    <h2 id="guide-sources-heading">Viralliset lähteet</h2>
+    <ul>
+      {{ range .Params.sources }}
+      <li>
+        <a href="{{ .url }}" rel="noopener">{{ .name }}</a>
+        <span>— tarkistettu {{ time.Format "2.1.2006" .source_checked_at }}</span>
+      </li>
+      {{ end }}
+    </ul>
+    <p class="guide-correction">
+      <a href="{{ .Params.correction_url }}">Ilmoita korjauksesta</a>
+    </p>
+  </section>
+
+  <section class="guide-related" aria-labelledby="guide-related-heading">
+    <h2 id="guide-related-heading">Aiheeseen liittyvät uutiset</h2>
+    {{ $relatedTerms := slice "kauppa" "kaupat" "kuluttaja" "ruokakauppa" }}
+    {{ $relatedPosts := where (where .Site.RegularPages "Section" "posts") "Params.tags" "intersect" $relatedTerms }}
+    <ul>
+      {{ range first 3 $relatedPosts.ByDate.Reverse }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </section>
+</article>
+{{ end }}

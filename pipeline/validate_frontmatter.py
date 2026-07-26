@@ -33,9 +33,12 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
 
+from guide_lifecycle import evaluate_guide, load_guide
+
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_DIR = SCRIPT_DIR.parent
 DEFAULT_CONTENT_DIR = PROJECT_DIR / "content" / "posts"
+GUIDES_DIR = PROJECT_DIR / "content" / "oppaat"
 MAX_HEADLINE_LEN = 110
 MAX_DESCRIPTION_LEN = 160
 
@@ -255,6 +258,30 @@ def main() -> int:
 
     if schema_warnings:
         print(f"[schema] WARNING: {len(schema_warnings)} schema violation(s) — not blocking deploy")
+
+    guide_failures: list[str] = []
+    guide_count = 0
+    if GUIDES_DIR.exists():
+        for path in sorted(GUIDES_DIR.glob("*.md")):
+            if path.name == "_index.md":
+                continue
+            guide_count += 1
+            meta, body = load_guide(path)
+            lifecycle = evaluate_guide(meta, body)
+            guide_failures.extend(
+                f"{path.relative_to(PROJECT_DIR)}: {error}"
+                for error in lifecycle.errors
+            )
+            print(
+                f"[guide-schema] {path.name}: state={lifecycle.state} "
+                f"words={lifecycle.word_count}"
+            )
+
+    if guide_failures:
+        for failure in guide_failures:
+            print(f"[guide-schema] FATAL: {failure}")
+        return 1
+    print(f"[guide-schema] Validation passed: {guide_count} guide(s)")
 
     print("[schema] Validation passed")
     return 0

@@ -35,4 +35,4 @@ Pääsiäinen 2026 vietetään **3.–6. huhtikuuta**. Pitkäperjantai on 3.4. j
 
 ---
 
-→ [Kauppojen aukioloajat pääsiäisenä](/paasiaisopas/kaupat-auki/) | [Pääsiäisen päivämäärät](/paasiaisopas/paivamaarat/) | [Takaisin pääsiäisoppaaseen](/paasiaisopas/)
+→ [Kauppojen aukioloajat pyhinä](/oppaat/kauppojen-aukioloajat/) | [Pääsiäisen päivämäärät](/paasiaisopas/paivamaarat/) | [Takaisin pääsiäisoppaaseen](/paasiaisopas/)

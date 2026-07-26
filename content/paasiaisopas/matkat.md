@@ -37,4 +37,4 @@ Pitkäperjantaina 3.4. ja toisena pääsiäispäivänä 6.4. kaupat ovat pääos
 
 ---
 
-→ [Kauppojen aukioloajat pääsiäisenä](/paasiaisopas/kaupat-auki/) | [Takaisin pääsiäisoppaaseen](/paasiaisopas/)
+→ [Kauppojen aukioloajat pyhinä](/oppaat/kauppojen-aukioloajat/) | [Takaisin pääsiäisoppaaseen](/paasiaisopas/)

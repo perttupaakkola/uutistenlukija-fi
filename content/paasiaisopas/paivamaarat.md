@@ -35,4 +35,4 @@ Vuonna 2026 täysikuu on huhtikuun alussa, minkä vuoksi pääsiäinen vietetä�
 
 ---
 
-→ [Kauppojen aukioloajat pääsiäisenä](/paasiaisopas/kaupat-auki/) | [Takaisin pääsiäisoppaaseen](/paasiaisopas/)
+→ [Kauppojen aukioloajat pyhinä](/oppaat/kauppojen-aukioloajat/) | [Takaisin pääsiäisoppaaseen](/paasiaisopas/)

@@ -1,0 +1,135 @@
+{{- $isGuide := and .IsPage (eq .Section "oppaat") -}}
+{{- $valid := $isGuide -}}
+{{- $draft := and $isGuide .Draft -}}
+{{- $noindex := and $isGuide (eq .Params.noindex true) -}}
+{{- $suppressed := or $draft $noindex -}}
+{{- $expired := false -}}
+{{- $reviewDue := false -}}
+{{- $wordCount := 0 -}}
+{{- if $isGuide -}}
+  {{- $sourceText := os.ReadFile .File.Filename -}}
+  {{- $frontMatterMatches := findRE `(?s)^---[ \t]*\r?\n.*?\r?\n---[ \t]*(?:\r?\n|$)` $sourceText 1 -}}
+  {{- if ne (len $frontMatterMatches) 1 -}}
+    {{- $valid = false -}}
+  {{- else -}}
+    {{- $frontMatter := index $frontMatterMatches 0 -}}
+    {{- $dateLines := findRE `(?m)^date[ \t]*:.*$` $frontMatter -}}
+    {{- if ne (len $dateLines) 1 -}}
+      {{- $valid = false -}}
+    {{- else -}}
+      {{- $rawDate := strings.TrimSpace (replaceRE `^date[ \t]*:[ \t]*` "" (index $dateLines 0)) -}}
+      {{- if in (slice "" `""` "''" "false" "null" "~") (lower $rawDate) -}}
+        {{- $valid = false -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not .Params.title }}{{- $valid = false -}}{{- end -}}
+  {{- if not .Params.description }}{{- $valid = false -}}{{- end -}}
+  {{- if not .Params.date }}{{- $valid = false -}}{{- end -}}
+  {{- if not .Params.updated_at }}{{- $valid = false -}}{{- end -}}
+  {{- if not .Params.reviewed_at }}{{- $valid = false -}}{{- end -}}
+  {{- if not .Params.next_review_at }}{{- $valid = false -}}{{- end -}}
+  {{- if not .Params.expires_at }}{{- $valid = false -}}{{- end -}}
+  {{- if not .Params.correction_url }}{{- $valid = false -}}{{- end -}}
+  {{- if not .Params.search_terms }}{{- $valid = false -}}{{- end -}}
+
+  {{- $bodyText := printf "%s" .RawContent -}}
+  {{- $bodyText = replaceRE "(?s)```.*?```" " " $bodyText -}}
+  {{- $bodyText = replaceRE "`[^`]*`" " " $bodyText -}}
+  {{- $bodyText = replaceRE `!\[[^\]]*]\([^)]*\)` " " $bodyText -}}
+  {{- $bodyText = replaceRE `\[([^\]]+)]\([^)]*\)` "$1" $bodyText -}}
+  {{- $bodyText = replaceRE `(?m)^\s{0,3}#{1,6}\s+` "" $bodyText -}}
+  {{- $bodyText = replaceRE `(?m)^\s*[-*+>]\s+` "" $bodyText -}}
+  {{- $wordCount = len (findRE `[0-9A-Za-zÅÄÖåäö]+([-’'][0-9A-Za-zÅÄÖåäö]+)*` $bodyText) -}}
+  {{- if or (lt $wordCount 900) (gt $wordCount 1500) -}}
+    {{- $valid = false -}}
+  {{- end -}}
+
+  {{- $publishedDate := partial "guide-date.html" .Params.date -}}
+  {{- $reviewedDate := partial "guide-date.html" .Params.reviewed_at -}}
+  {{- $updatedDate := partial "guide-date.html" .Params.updated_at -}}
+  {{- $nextReviewDate := partial "guide-date.html" .Params.next_review_at -}}
+  {{- $expiresDate := partial "guide-date.html" .Params.expires_at -}}
+  {{- if not $publishedDate.valid }}{{- $valid = false -}}{{- end -}}
+  {{- if not $reviewedDate.valid }}{{- $valid = false -}}{{- end -}}
+  {{- if not $updatedDate.valid }}{{- $valid = false -}}{{- end -}}
+  {{- if not $nextReviewDate.valid }}{{- $valid = false -}}{{- end -}}
+  {{- if not $expiresDate.valid }}{{- $valid = false -}}{{- end -}}
+  {{- if and $publishedDate.valid $reviewedDate.valid $updatedDate.valid $nextReviewDate.valid $expiresDate.valid -}}
+    {{- $published := $publishedDate.value -}}
+    {{- $reviewed := $reviewedDate.value -}}
+    {{- $updated := $updatedDate.value -}}
+    {{- $nextReview := $nextReviewDate.value -}}
+    {{- $expires := $expiresDate.value -}}
+    {{- if lt $updated.Unix $published.Unix }}{{- $valid = false -}}{{- end -}}
+    {{- if gt $updated.Unix $reviewed.Unix }}{{- $valid = false -}}{{- end -}}
+    {{- $reviewDays := math.Div (math.Sub $nextReview.Unix $reviewed.Unix) 86400 -}}
+    {{- if or (lt $reviewDays 1) (gt $reviewDays 14) }}{{- $valid = false -}}{{- end -}}
+    {{- $expiryDays := math.Div (math.Sub $expires.Unix $reviewed.Unix) 86400 -}}
+    {{- if or (lt $expiryDays 1) (gt $expiryDays 30) }}{{- $valid = false -}}{{- end -}}
+    {{- if gt $nextReview.Unix $expires.Unix }}{{- $valid = false -}}{{- end -}}
+  {{- end -}}
+
+  {{- $correctionURL := strings.TrimSpace (printf "%v" (.Params.correction_url | default "")) -}}
+  {{- if and $correctionURL (not (or (hasPrefix $correctionURL "mailto:") (hasPrefix $correctionURL "https://"))) -}}
+    {{- $valid = false -}}
+  {{- end -}}
+
+  {{- $sources := .Params.sources -}}
+  {{- $checkerCount := 0 -}}
+  {{- $domains := slice -}}
+  {{- if not (reflect.IsSlice $sources) -}}
+    {{- $valid = false -}}
+  {{- else -}}
+    {{- if lt (len $sources) 3 }}{{- $valid = false -}}{{- end -}}
+    {{- range $sources -}}
+      {{- if not (reflect.IsMap .) -}}
+        {{- $valid = false -}}
+      {{- else -}}
+        {{- if not .name }}{{- $valid = false -}}{{- end -}}
+        {{- $sourceURL := strings.TrimSpace (printf "%v" (.url | default "")) -}}
+        {{- $parsedURL := try (urls.Parse $sourceURL) -}}
+        {{- if $parsedURL.Err -}}
+          {{- $valid = false -}}
+        {{- else -}}
+          {{- $url := $parsedURL.Value -}}
+          {{- if or (ne $url.Scheme "https") (not $url.Host) -}}
+            {{- $valid = false -}}
+          {{- else if in $domains $url.Host -}}
+            {{- $valid = false -}}
+          {{- else -}}
+            {{- $domains = $domains | append $url.Host -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if ne .official true }}{{- $valid = false -}}{{- end -}}
+        {{- if eq .authoritative_checker true -}}
+          {{- $checkerCount = math.Add $checkerCount 1 -}}
+        {{- end -}}
+        {{- $checkedDate := partial "guide-date.html" .source_checked_at -}}
+        {{- if not $checkedDate.valid -}}
+          {{- $valid = false -}}
+        {{- else if and $reviewedDate.valid (ne $checkedDate.text $reviewedDate.text) -}}
+          {{- $valid = false -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if ne $checkerCount 1 }}{{- $valid = false -}}{{- end -}}
+
+  {{- if $valid -}}
+    {{- $today := now.Format "2006-01-02" -}}
+    {{- $expired = ge $today $expiresDate.text -}}
+    {{- $reviewDue = and (not $expired) (ge $today $nextReviewDate.text) -}}
+  {{- end -}}
+{{- end -}}
+{{- return (dict
+  "isGuide" $isGuide
+  "invalid" (and $isGuide (not $valid))
+  "draft" $draft
+  "noindex" $noindex
+  "expired" $expired
+  "reviewDue" $reviewDue
+  "current" (and $valid (not $expired) (not $reviewDue) (not $suppressed))
+  "discoverable" (and $valid (not $expired) (not $suppressed))
+  "wordCount" $wordCount
+) -}}

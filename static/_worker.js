@@ -210,6 +210,25 @@ function redirectedArticleSubpage(requestUrl) {
   return Response.redirect(url.toString(), 308);
 }
 
+const LEGACY_GUIDE_REDIRECTS = new Map([
+  ['/paasiaisopas/kaupat-auki', '/oppaat/kauppojen-aukioloajat/'],
+  ['/vappuopas/kaupat-auki', '/oppaat/kauppojen-aukioloajat/'],
+]);
+
+function redirectedLegacyGuide(requestUrl) {
+  const url = new URL(requestUrl);
+  const normalizedPath = url.pathname.endsWith('/')
+    ? url.pathname.slice(0, -1)
+    : url.pathname;
+  const canonicalPath = LEGACY_GUIDE_REDIRECTS.get(normalizedPath);
+  if (!canonicalPath) return null;
+
+  url.pathname = canonicalPath;
+  url.search = '';
+  url.hash = '';
+  return Response.redirect(url.toString(), 308);
+}
+
 const DUPLICATE_ARTICLE_REDIRECTS = new Map([
   [
     '/posts/2026-03-17-kuuban-sahkoverkko-romahti-kymmenen-miljoonaa-ihmista-jai-pi',
@@ -287,6 +306,11 @@ export default {
     const editorialSurfaceRedirect = redirectedEditorialSurface(request.url);
     if (editorialSurfaceRedirect) {
       return editorialSurfaceRedirect;
+    }
+
+    const legacyGuideRedirect = redirectedLegacyGuide(request.url);
+    if (legacyGuideRedirect) {
+      return legacyGuideRedirect;
     }
 
     const duplicateArticleRedirect = redirectedDuplicateArticle(request.url);

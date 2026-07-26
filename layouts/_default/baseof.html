@@ -9,6 +9,10 @@
   <title>{{ $fullTitle }}</title>
   {{ $metaDesc := partial "meta-description.html" . }}
   <meta name="description" content="{{ $metaDesc }}">
+  {{- $guideState := partial "guide-state.html" . -}}
+  {{- if or .Params.noindex $guideState.expired $guideState.invalid $guideState.draft }}
+  <meta name="robots" content="noindex,follow">
+  {{- end }}
   {{- with .Params.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end -}}
   {{/* === Resource hints === */}}
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>

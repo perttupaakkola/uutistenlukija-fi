@@ -147,6 +147,65 @@
 {{ $schema | jsonify (dict "indent" "  ") | safeJS }}
 </script>
 
+{{/* ── Utility guide: Article, never NewsArticle ─────────────────── */}}
+{{ else if and .IsPage (eq .Section "oppaat") }}
+{{ $guideAuthor := dict
+    "@type" "Organization"
+    "name" "Uutistenlukija"
+    "url" (printf "%stietoja/#toimitustapa" .Site.BaseURL)
+}}
+{{ $guideSchema := dict
+    "@context" "https://schema.org"
+    "@type" "Article"
+    "headline" .Title
+    "description" .Description
+    "url" .Permalink
+    "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" ((time.AsTime .Params.updated_at).Format "2006-01-02T15:04:05Z07:00")
+    "author" $guideAuthor
+    "publisher" $publisherBlock
+    "inLanguage" "fi"
+    "isAccessibleForFree" true
+    "wordCount" .WordCount
+}}
+<script type="application/ld+json">
+{{ $guideSchema | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+
+{{/* ── Guide hub: one CollectionPage with a current-only ItemList ─ */}}
+{{ else if and .IsSection (eq .Section "oppaat") }}
+{{ $guideItems := slice }}
+{{ $guidePosition := 0 }}
+{{ range .Pages.ByTitle }}
+  {{ $guideState := partial "guide-state.html" . }}
+  {{ if $guideState.current }}
+    {{ $guidePosition = math.Add $guidePosition 1 }}
+    {{ $guideItems = $guideItems | append (dict
+      "@type" "ListItem"
+      "position" $guidePosition
+      "url" .Permalink
+      "name" .Title
+    ) }}
+  {{ end }}
+{{ end }}
+{{ $guideHubSchema := dict
+    "@context" "https://schema.org"
+    "@type" "CollectionPage"
+    "name" .Title
+    "url" .Permalink
+    "description" .Description
+    "inLanguage" "fi"
+    "publisher" $publisherBlock
+    "mainEntity" (dict
+      "@type" "ItemList"
+      "itemListElement" $guideItems
+    )
+}}
+<script type="application/ld+json">
+{{ $guideHubSchema | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+
 {{/* ── Category / section page: CollectionPage ─────────────────────── */}}
 {{ else if or .IsSection .IsNode }}
 {{ $catDesc := partial "meta-description.html" . }}

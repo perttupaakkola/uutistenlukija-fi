@@ -35,17 +35,22 @@
 
 {{ else if .IsPage }}
   {{/* Article page — category crumb then article title; static page — just title */}}
-  {{ $cat := index .Params.categories 0 }}
-  {{ if $cat }}
-    {{ $catUrl := printf "%scategories/%s/" .Site.BaseURL ($cat | urlize) }}
-    {{ $crumbs = $crumbs | append (dict "name" $cat "url" $catUrl) }}
+  {{ if eq .Section "oppaat" }}
+    {{ $crumbs = $crumbs | append (dict "name" "Oppaat" "url" (printf "%soppaat/" .Site.BaseURL)) }}
+    {{ $crumbs = $crumbs | append (dict "name" .Title "url" .Permalink) }}
+  {{ else }}
+    {{ $cat := index .Params.categories 0 }}
+    {{ if $cat }}
+      {{ $catUrl := printf "%scategories/%s/" .Site.BaseURL ($cat | urlize) }}
+      {{ $crumbs = $crumbs | append (dict "name" $cat "url" $catUrl) }}
+    {{ end }}
+    {{/* Truncate long page titles */}}
+    {{ $title := .Title }}
+    {{ if gt (len $title) 63 }}
+      {{ $title = printf "%s…" (substr $title 0 60) }}
+    {{ end }}
+    {{ $crumbs = $crumbs | append (dict "name" $title "url" .Permalink) }}
   {{ end }}
-  {{/* Truncate long page titles */}}
-  {{ $title := .Title }}
-  {{ if gt (len $title) 63 }}
-    {{ $title = printf "%s…" (substr $title 0 60) }}
-  {{ end }}
-  {{ $crumbs = $crumbs | append (dict "name" $title "url" .Permalink) }}
 {{ end }}
 
 {{/* ── HTML nav ──────────────────────────────────────────────────── */}}

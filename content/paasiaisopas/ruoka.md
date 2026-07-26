@@ -35,4 +35,4 @@ Monissa kodeissa leivotaan pääsiäisenä. Pasha — venäläistä alkuperää 
 
 Pääsiäinen 2026 on **3.–6. huhtikuuta**. Kaupat ovat kiinni pitkäperjantaina 3.4. ja toisena pääsiäispäivänä 6.4. — muista ostokset etukäteen.
 
-→ [Kauppojen aukioloajat](/paasiaisopas/kaupat-auki/) | [Takaisin pääsiäisoppaaseen](/paasiaisopas/)
+→ [Kauppojen aukioloajat pyhinä](/oppaat/kauppojen-aukioloajat/) | [Takaisin pääsiäisoppaaseen](/paasiaisopas/)

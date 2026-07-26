@@ -1,4 +1,4 @@
-{{- $pagesAll := .Pages -}}
+{{- $pagesAll := .RegularPages -}}
 {{- if .IsHome -}}{{- $pagesAll = where .Site.RegularPages "Section" "posts" -}}{{- end -}}
 {{- $pages := ($pagesAll.ByDate.Reverse | first 50) -}}
 {{- $title := .Title | default .Site.Title -}}

@@ -1,12 +1,12 @@
 ---
 title: "Pääsiäisopas 2026 — uutiset, perinteet ja vinkit"
-description: "Kaikki pääsiäisestä: uutiset, perinteet, reseptit ja vinkit. Seuraa Uutistenlukijan pääsiäisuutisia 3.–6.4.2026."
+description: "Arkistoitu pääsiäisopas vuodelta 2026. Sivun sisältöä ei enää päivitetä ajantasaisena pyhäoppaana."
 date: 2026-03-27
+lastmod: 2026-07-26
+archive_status: true
 ---
 
-Pääsiäinen 2026 on **3.–6. huhtikuuta** (pitkäperjantai 3.4., pääsiäissunnuntai 5.4.). Tästä oppaasta löydät kaikki pääsiäiseen liittyvät uutiset, perinteet ja käytännön vinkit.
+**Arkistoitu:** Tämä vuoden 2026 pääsiäissivu säilyy historiallisena koosteena, eikä sen sisältöä enää päivitetä ajantasaisena pyhäoppaana.
 
-Jos suunnittelet pyhien ostoksia, tarkista ensin [kauppojen aukioloajat pääsiäisenä](/paasiaisopas/kaupat-auki/).
-
-Seuraa uusimpia pääsiäisuutisia alta — päivitämme oppaan koko pyhäkauden ajan.
+Kauppojen nykyiset poikkeusaukiolot tarkistetaan [ajantasaisesta kauppojen aukiolo-oppaasta](/oppaat/kauppojen-aukioloajat/).
 ---

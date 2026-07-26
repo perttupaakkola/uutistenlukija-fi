@@ -1,0 +1,37 @@
+{{ define "main" }}
+{{ partial "oppaat-styles.html" . }}
+{{ partial "breadcrumbs.html" . }}
+
+<section class="guide-shell" aria-labelledby="oppaat-heading">
+  <header class="guide-header">
+    <span class="guide-eyebrow">Oppaat</span>
+    <h1 id="oppaat-heading">{{ .Title }}</h1>
+    <p class="guide-deck">{{ .Description }}</p>
+  </header>
+
+  {{ $currentGuides := slice }}
+  {{ range .Pages.ByTitle }}
+    {{ $state := partial "guide-state.html" . }}
+    {{ if $state.current }}
+      {{ $currentGuides = $currentGuides | append . }}
+    {{ end }}
+  {{ end }}
+
+  {{ if $currentGuides }}
+  <div class="guide-grid" aria-label="Ajantasaiset oppaat">
+    {{ range $currentGuides }}
+    <article class="guide-card">
+      <span class="guide-card__category">Opas</span>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <p>{{ .Description }}</p>
+      <span class="guide-card__meta">
+        Lähteet tarkistettu {{ time.Format "2.1.2006" .Params.reviewed_at }}
+      </span>
+    </article>
+    {{ end }}
+  </div>
+  {{ else }}
+  <p class="guide-warning">Yhtään opasta ei ole juuri nyt voimassa ja tarkistettuna.</p>
+  {{ end }}
+</section>
+{{ end }}

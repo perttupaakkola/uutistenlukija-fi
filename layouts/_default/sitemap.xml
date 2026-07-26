@@ -36,7 +36,9 @@
   {{- /* ── Exclusions ────────────────────────────────────────────── */}}
   {{- $permalink := .Permalink }}
   {{- $skip := false }}
+  {{- $guideState := partial "guide-state.html" . }}
   {{- if .Params.noindex }}{{- $skip = true }}{{- end }}
+  {{- if and $guideState.isGuide (not $guideState.discoverable) }}{{- $skip = true }}{{- end }}
   {{- if hasSuffix $permalink "/pipeline-dashboard/" }}{{- $skip = true }}{{- end }}
   {{- if strings.Contains $permalink "/pipeline-dashboard/" }}{{- $skip = true }}{{- end }}
   {{- if hasSuffix $permalink "/haku/" }}{{- $skip = true }}{{- end }}

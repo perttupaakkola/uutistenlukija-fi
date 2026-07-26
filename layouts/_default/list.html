@@ -9,6 +9,11 @@
     <h1>{{ $heading }}</h1>
     {{ with .Description }}<p>{{ . }}</p>{{ end }}
   </header>
+  {{ if .Params.archive_status }}
+  <aside class="portal-empty" aria-label="Arkistotila">
+    {{ with .Content }}{{ . }}{{ end }}
+  </aside>
+  {{ end }}
 
   {{ if gt (len $paginator.Pages) 0 }}
   {{ $feature := index $paginator.Pages 0 }}

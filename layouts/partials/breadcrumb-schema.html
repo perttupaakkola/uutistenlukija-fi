@@ -36,14 +36,19 @@
     {{ end }}
   {{ else }}
     {{/* Regular article page */}}
-    {{ $cat := index .Params.categories 0 }}
-    {{ if $cat }}
-      {{ $catUrl := printf "%scategories/%s/" $base ($cat | urlize) }}
-      {{ $crumbs = $crumbs | append (dict "name" $cat "url" $catUrl) }}
+    {{ if eq .Section "oppaat" }}
+      {{ $crumbs = $crumbs | append (dict "name" "Oppaat" "url" (printf "%soppaat/" $base)) }}
+      {{ $crumbs = $crumbs | append (dict "name" .Title "url" .Permalink) }}
+    {{ else }}
+      {{ $cat := index .Params.categories 0 }}
+      {{ if $cat }}
+        {{ $catUrl := printf "%scategories/%s/" $base ($cat | urlize) }}
+        {{ $crumbs = $crumbs | append (dict "name" $cat "url" $catUrl) }}
+      {{ end }}
+      {{ $title := .Title }}
+      {{ if gt (len $title) 63 }}{{ $title = printf "%s…" (substr $title 0 60) }}{{ end }}
+      {{ $crumbs = $crumbs | append (dict "name" $title "url" .Permalink) }}
     {{ end }}
-    {{ $title := .Title }}
-    {{ if gt (len $title) 63 }}{{ $title = printf "%s…" (substr $title 0 60) }}{{ end }}
-    {{ $crumbs = $crumbs | append (dict "name" $title "url" .Permalink) }}
   {{ end }}
 
 {{ else if eq .Kind "taxonomy" }}

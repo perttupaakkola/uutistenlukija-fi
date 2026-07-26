@@ -12,7 +12,8 @@
     teknologia: 'Teknologia',
     urheilu: 'Urheilu',
     kulttuuri: 'Kulttuuri',
-    tiede: 'Tiede'
+    tiede: 'Tiede',
+    oppaat: 'Oppaat'
   };
 
   function esc(value) {
@@ -67,13 +68,16 @@
             var category = String(item.category || '');
             var url = String(item.url || item.slug || item.permalink || '#');
             var publishedAt = String(item.published_at || item.date || item.publishedAt || '');
+            var searchTerms = Array.isArray(item.search_terms)
+              ? item.search_terms.join(' ')
+              : String(item.search_terms || '');
             return {
               title: title,
               slug: url,
               category: category,
               summary: summary,
               published_at: publishedAt,
-              haystack: normalize([title, summary, category].join(' '))
+              haystack: normalize([title, summary, category, searchTerms].join(' '))
             };
           });
         });
