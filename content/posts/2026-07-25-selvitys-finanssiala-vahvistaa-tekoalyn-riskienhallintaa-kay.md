@@ -53,7 +53,7 @@ Suomalaiset finanssialan yritykset ottavat tekoälyä käyttöön ja rakentavat 
 
 ## Hallintamallit ovat eri kehitysvaiheissa
 
-Helmi–maaliskuussa 2026 toteutettu tekoälykatsaus antaa ajankohtaisen kuvan siitä, miten finanssiala hyödyntää tekoälyä ja valmistautuu sen käytön laajenemiseen. Lähes 60 prosentilla organisaatioista tekoälyn hallintamalli on jo selkeästi määritelty tai käytännössä testattu. Selvityksen mukaan käyttöönotto etenee määrätietoisesti mutta hallitusti.
+Helmi–maaliskuussa 2026 toteutettu tekoälykatsaus antaa ajankohtaisen kuvan siitä, miten finanssiala hyödyntää tekoälyä ja valmistautuu sen käytön laajenemiseen. Finanssiala ry:n mukaan kyselyyn saatiin 34 vastausta, jotka kattoivat jopa 80 prosenttia yhdistyksen jäsenyrityksistä; suurimmista yhtiöryhmistä saatiin useita vastauksia. Lähes 60 prosentilla organisaatioista tekoälyn hallintamalli on jo selkeästi määritelty tai käytännössä testattu. Selvityksen mukaan käyttöönotto etenee määrätietoisesti mutta hallitusti.
 
 Prosenttiluvut kuvaavat hallintamallien kypsyydessä eri tasoja: laajempi osuus sisältää myös osittain määritellyt mallit, kun pienemmässä osuudessa malli on selkeästi määritelty tai sitä on jo kokeiltu käytännössä.
 
