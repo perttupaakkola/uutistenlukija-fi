@@ -2,6 +2,18 @@
 
 > Suomenkielinen uutiskooste — automaattisesti kirjoitetut uutiset suomalaisista lähteistä (Yle, HS, Iltalehti, Kauppalehti jne.). Julkaisee {{ len .Site.RegularPages }} artikkelia.
 
+## Tietoja
+
+- Julkaisija: Uutistenlukija ({{ $.Site.BaseURL }})
+- Sisältö on laadittu tekoälyavusteisesti ja toimitettu suomeksi.
+- Toimitusperiaatteet: {{ $.Site.BaseURL }}tietoja/
+- Tietosuojaseloste: {{ $.Site.BaseURL }}tietosuojaseloste/
+
+## Yhteystiedot
+
+- Toimitus: toimitus@uutistenlukija.fi
+- Korjauspyynnöt ja palaute: toimitus@uutistenlukija.fi
+
 ## Uutiset
 
 {{ $posts := where .Site.RegularPages "Section" "posts" }}
