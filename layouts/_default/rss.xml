@@ -1,5 +1,6 @@
 {{- $pagesAll := .Pages -}}
-{{- $pages := ($pagesAll | first 50) -}}
+{{- if .IsHome -}}{{- $pagesAll = where .Site.RegularPages "Section" "posts" -}}{{- end -}}
+{{- $pages := ($pagesAll.ByDate.Reverse | first 50) -}}
 {{- $title := .Title | default .Site.Title -}}
 {{- $desc := .Description | default .Site.Params.description -}}
 {{- printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML }}

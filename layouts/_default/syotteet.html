@@ -14,22 +14,6 @@
     </p>
   </section>
 
-  <section class="feeds-section">
-    <h2>📂 Kategorioittain</h2>
-    <ul class="feeds-list">
-      {{ range .Site.Taxonomies.categories.ByCount }}
-      {{ if ge .Count 5 }}
-      <li>
-        <a href="/categories/{{ .Page.Slug }}/index.xml" class="feed-link">
-          <span class="feed-icon">RSS</span>
-          {{ .Page.Title }}
-          <span class="feed-count">({{ .Count }} artikkelia)</span>
-        </a>
-      </li>
-      {{ end }}
-      {{ end }}
-    </ul>
-  </section>
 
   <section class="feeds-section feeds-howto">
     <h2>❓ Miten RSS toimii?</h2>
