@@ -18,6 +18,7 @@ CSS_FILES = [
     ROOT / "static" / "css" / "portal-overhaul.css",
 ]
 CRITICAL_CSS = ROOT / "layouts" / "partials" / "critical-css.html"
+OPPAAT_STYLES = ROOT / "layouts" / "partials" / "oppaat-styles.html"
 
 HEADER_CLASSES = [
     "portal-masthead",
@@ -99,6 +100,25 @@ MOBILE_CONTAINER_WIDTH_GUARD = (
 CRITICAL_MOBILE_CONTAINER_WIDTH_GUARD = (
     "main.container,.container{width:100%!important;max-width:100%!important}"
 )
+OPE_333_DESKTOP_NAV_GUARDS = [
+    (
+        ".main-nav ul { display: flex; align-items: center; flex-wrap: nowrap; "
+        "gap: 14px;"
+    ),
+    (
+        ".main-nav a {\n"
+        "  display: inline-flex;\n"
+        "  align-items: center;\n"
+        "  min-height: 34px;\n"
+        "  padding: 0 14px;"
+    ),
+]
+OPE_333_CRITICAL_LAYOUT_GUARD = (
+    "@media (min-width:901px){.main-nav ul{flex-wrap:nowrap;gap:.875rem}"
+    ".main-nav a{padding-inline:.875rem}}article.guide-shell{max-width:45rem}"
+)
+OPE_333_GUIDE_DIRECTORY_GUARD = ".guide-shell {\n  max-width: 56rem;"
+OPE_333_GUIDE_ARTICLE_GUARD = "article.guide-shell {\n  max-width: 45rem;"
 
 
 def require(path: Path) -> str:
@@ -112,6 +132,7 @@ def main() -> int:
     index = require(INDEX)
     css_by_path = {css_path: require(css_path) for css_path in CSS_FILES}
     critical_css = require(CRITICAL_CSS)
+    oppaat_styles = require(OPPAAT_STYLES)
     failures: list[str] = []
 
     for class_name in HEADER_CLASSES:
@@ -165,6 +186,12 @@ def main() -> int:
                 f"{label} is missing the OPE-355 mobile 100% container width guard"
             )
 
+        for guard in OPE_333_DESKTOP_NAV_GUARDS:
+            if guard not in css:
+                failures.append(
+                    f"{label} is missing the OPE-333 desktop navigation fit guard"
+                )
+
     if css_by_path[CSS_FILES[0]] != css_by_path[CSS_FILES[1]]:
         failures.append("assets/css/portal-overhaul.css and static/css/portal-overhaul.css differ")
 
@@ -191,6 +218,22 @@ def main() -> int:
             f"{CRITICAL_CSS.relative_to(ROOT)} is missing the OPE-355 critical mobile "
             "100% container width guard"
         )
+
+    if OPE_333_CRITICAL_LAYOUT_GUARD not in critical_css:
+        failures.append(
+            f"{CRITICAL_CSS.relative_to(ROOT)} is missing the OPE-333 critical "
+            "navigation/guide layout guard"
+        )
+
+    for guard, description in (
+        (OPE_333_GUIDE_DIRECTORY_GUARD, "56rem directory measure"),
+        (OPE_333_GUIDE_ARTICLE_GUARD, "45rem article measure"),
+    ):
+        if guard not in oppaat_styles:
+            failures.append(
+                f"{OPPAAT_STYLES.relative_to(ROOT)} is missing the OPE-333 "
+                f"{description}"
+            )
 
     if failures:
         print("Portal CSS contract validation failed:")

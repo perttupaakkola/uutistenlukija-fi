@@ -122,13 +122,13 @@ main.container { padding-top: 0; padding-bottom: 48px; }
   padding: 0 36px 18px;
   overflow: hidden;
 }
-.main-nav ul { display: flex; align-items: center; gap: 18px; list-style: none; padding: 0; margin: 0; overflow-x: auto; scrollbar-width: none; }
+.main-nav ul { display: flex; align-items: center; flex-wrap: nowrap; gap: 14px; list-style: none; padding: 0; margin: 0; overflow-x: auto; scrollbar-width: none; }
 .main-nav ul::-webkit-scrollbar { display: none; }
 .main-nav a {
   display: inline-flex;
   align-items: center;
   min-height: 34px;
-  padding: 0 16px;
+  padding: 0 14px;
   border-radius: 999px;
   color: var(--portal-ink);
   font-size: 15px;
