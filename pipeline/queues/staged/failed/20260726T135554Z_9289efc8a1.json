@@ -214,5 +214,18 @@
     "degraded_mode": false,
     "monica_packet_id": "20260726T135554Z_9289efc8a1",
     "source_url": "https://www.bbc.co.uk/news/articles/cevmdxz4872o?at_medium=RSS&at_campaign=rss"
+  },
+  "failed_at": "2026-07-27T08:17:16Z",
+  "failure": "editorial_reject: superseded sensitive manhunt coverage",
+  "editorial_disposition": {
+    "decision": "reject",
+    "reason_code": "superseded_sensitive_manhunt",
+    "recoverable": true,
+    "publish_eligible": false,
+    "requires_editorial_reapproval": true,
+    "source_issue": "OPE-472",
+    "source_comment_id": "4f553094-8994-414d-9d14-11a05c8ed496",
+    "superseded_by_packet_id": "20260726T175752Z_3693514a33",
+    "note": "Second stale manhunt account; preserve as recoverable evidence but do not publish after the confirmed suspect-death update."
   }
 }

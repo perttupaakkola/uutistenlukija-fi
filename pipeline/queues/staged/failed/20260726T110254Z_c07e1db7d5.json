@@ -213,5 +213,18 @@
     "degraded_mode": false,
     "monica_packet_id": "20260726T110254Z_c07e1db7d5",
     "source_url": "https://www.trtworld.com/article/79bc8ad4a386"
+  },
+  "failed_at": "2026-07-27T08:17:16Z",
+  "failure": "editorial_reject: superseded wildfire coverage",
+  "editorial_disposition": {
+    "decision": "reject",
+    "reason_code": "superseded_wildfire_coverage",
+    "recoverable": true,
+    "publish_eligible": false,
+    "requires_editorial_reapproval": true,
+    "source_issue": "OPE-472",
+    "source_comment_id": "4f553094-8994-414d-9d14-11a05c8ed496",
+    "superseded_by_packet_id": "20260726T155916Z_2bec49ca65",
+    "note": "Older 250,000-person wildfire account; preserve as recoverable evidence but do not publish after the newer 330,000-person packet."
   }
 }

@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 
 from quality_gate import score_article
+from source_confidence_guard import source_confidence_issues
 
 
 FIXTURE_DIR = Path("/home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/queues/staged/published")
@@ -70,6 +71,20 @@ class SourceConfidenceGuardTests(unittest.TestCase):
         result = score_article(article)
 
         self.assertNotIn("source_confidence_election_uncertainty_missing", result.hard_fails)
+
+    def test_talous_ydintehtava_is_not_misclassified_as_nuclear_geopolitics(self):
+        article = {
+            "category": "Talous",
+            "title": "Julkisen talouden tehtävät",
+            "summary": "Haastateltava arvioi julkisen sektorin tehtäviä.",
+            "content": "Haastateltavan mukaan maanpuolustus on julkisen talouden ydintehtävä.",
+            "source_text": (
+                "Jokainen ymmärtää, että maanpuolustus on julkisen talouden ydintehtävä, "
+                "haastateltava sanoi. Julkisen terveydenhuollon tarvetta en kiistä."
+            ),
+        }
+
+        self.assertEqual(source_confidence_issues(article), [])
 
 
 if __name__ == "__main__":
