@@ -68,15 +68,19 @@
     </p>
   </section>
 
+  {{ $relatedPosts := slice }}
+  {{ if eq .File.BaseFileName "kauppojen-aukioloajat" }}
+    {{ $relatedPosts = where (where .Site.RegularPages "Section" "posts") "Params.tags" "intersect" (slice "aukioloajat") }}
+  {{ end }}
+  {{ if gt (len $relatedPosts) 0 }}
   <section class="guide-related" aria-labelledby="guide-related-heading">
     <h2 id="guide-related-heading">Aiheeseen liittyvät uutiset</h2>
-    {{ $relatedTerms := slice "kauppa" "kaupat" "kuluttaja" "ruokakauppa" }}
-    {{ $relatedPosts := where (where .Site.RegularPages "Section" "posts") "Params.tags" "intersect" $relatedTerms }}
     <ul>
       {{ range first 3 $relatedPosts.ByDate.Reverse }}
       <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
       {{ end }}
     </ul>
   </section>
+  {{ end }}
 </article>
 {{ end }}
