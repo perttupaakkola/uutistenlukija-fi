@@ -1218,6 +1218,17 @@ def cmd_scan(args: argparse.Namespace) -> int:
     for article in articles:
         digest = stable_digest(article)
         packet = build_story_packet(article)
+        admission_errors = []
+        if packet.get("selected_source_provenance_error"):
+            admission_errors.append("selected_source_provenance_error")
+        if packet.get("source_selection_outcome") != "usable_source_packet":
+            admission_errors.append("source_selection_outcome_not_usable")
+        if admission_errors:
+            log(
+                "scan: skipped invalid packet "
+                f"digest={digest} reasons={','.join(admission_errors)}"
+            )
+            continue
         record = {
             "schema": "uutistenlukija.staged_packet.v1",
             "created_at": datetime.now(timezone.utc).isoformat(),

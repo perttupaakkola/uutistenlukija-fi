@@ -71,6 +71,111 @@ class StagedPublishMetricsTests(unittest.TestCase):
         os.utime(path, (ts, ts))
         return path
 
+    def _run_single_packet_scan(self, packet: dict) -> tuple[int, list[str]]:
+        article = {
+            "title": "Synthetic scheduled scan candidate",
+            "description": "Focused scanner admission regression.",
+            "link": "https://example.test/ope-447",
+            "category_hint": "Kotimaa",
+            "research": (
+                "[Lähde: Testi | URL: https://example.test/source]\n"
+                + "lähdesana " * 100
+            ),
+        }
+        args = Namespace(
+            dry_run=False,
+            max_ready_age_hours=24,
+            max_ready_backlog=150,
+            dedup_window=48,
+            cooldown_hours=48,
+            max_research_candidates=8,
+            min_source_words=80,
+            max_packets=1,
+        )
+        with patch.object(staged_publish, "scan_all_feeds", return_value=[article]), \
+             patch.object(staged_publish, "poll_firehose", return_value=[]), \
+             patch.object(staged_publish, "filter_new_articles", side_effect=lambda candidates: candidates), \
+             patch.object(
+                 staged_publish,
+                 "check_published_duplicates",
+                 side_effect=lambda candidates, window_hours: candidates,
+             ), \
+             patch.object(staged_publish, "dedup_within_batch", side_effect=lambda candidates: candidates), \
+             patch.object(staged_publish, "should_skip_staged_cooldown", return_value=False), \
+             patch.object(
+                 staged_publish,
+                 "filter_talous_source_floor_cooldown",
+                 side_effect=lambda candidates, hours: (candidates, []),
+             ), \
+             patch.object(
+                 staged_publish,
+                 "select_research_candidates",
+                 side_effect=lambda candidates, max_candidates: candidates,
+             ), \
+             patch.object(staged_publish, "enrich_with_research", side_effect=lambda candidates: candidates), \
+             patch.object(
+                 staged_publish,
+                 "annotate_selected_source_evidence",
+                 side_effect=lambda candidates: candidates,
+             ), \
+             patch.object(
+                 staged_publish,
+                 "select_scan_enqueue_candidates",
+                 side_effect=lambda candidates, max_packets: candidates,
+             ), \
+             patch.object(staged_publish, "record_talous_source_floor_rejections", return_value=[]), \
+             patch.object(staged_publish, "build_story_packet", return_value=packet), \
+             patch.object(staged_publish, "log") as log_mock:
+            result = staged_publish.cmd_scan(args)
+        return result, [str(call.args[0]) for call in log_mock.call_args_list]
+
+    def test_cmd_scan_rejects_invalid_built_packets_before_ready_write(self) -> None:
+        cases = (
+            (
+                "selected provenance error",
+                {
+                    "selected_source_provenance_error": "SYNTHETIC_PRIVATE_DETAIL_447",
+                    "source_selection_outcome": "provenance_invalid",
+                },
+                "selected_source_provenance_error",
+                "SYNTHETIC_PRIVATE_DETAIL_447",
+            ),
+            (
+                "unusable selection outcome",
+                {
+                    "selected_source_provenance_error": "",
+                    "source_selection_outcome": "SYNTHETIC_PRIVATE_OUTCOME_447",
+                },
+                "source_selection_outcome_not_usable",
+                "SYNTHETIC_PRIVATE_OUTCOME_447",
+            ),
+        )
+        for index, (label, invalid_fields, expected_reason, private_detail) in enumerate(cases):
+            with self.subTest(label=label):
+                packet = {
+                    "packet_id": f"invalid_packet_{index}",
+                    "headline_seed": "Synthetic invalid packet",
+                    "link": "https://example.test/ope-447",
+                    "source_text": "Synthetic source text",
+                    **invalid_fields,
+                }
+                before = {
+                    path.relative_to(self.root).as_posix(): path.read_bytes()
+                    for path in sorted(self.root.glob("*/*.json"))
+                }
+
+                result, messages = self._run_single_packet_scan(packet)
+
+                after = {
+                    path.relative_to(self.root).as_posix(): path.read_bytes()
+                    for path in sorted(self.root.glob("*/*.json"))
+                }
+                diagnostic = "\n".join(messages)
+                self.assertEqual(result, 0)
+                self.assertEqual(after, before)
+                self.assertIn(expected_reason, diagnostic)
+                self.assertNotIn(private_detail, diagnostic)
+
     def test_failure_reason_normalization(self) -> None:
         self.assertEqual(staged_publish.normalize_failure_reason("content too short: 233 words"), "content_too_short")
         self.assertEqual(staged_publish.normalize_failure_reason("Lähdeaineisto on liian niukka"), "insufficient_confidence")
