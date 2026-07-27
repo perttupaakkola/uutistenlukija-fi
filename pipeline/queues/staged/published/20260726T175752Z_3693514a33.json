@@ -208,6 +208,59 @@
     "writer_confidence": 0.96,
     "degraded_mode": false,
     "monica_packet_id": "20260726T175752Z_3693514a33",
-    "source_url": "https://www.aamuposti.fi/uutissuomalainen/9648409"
+    "source_url": "https://www.aamuposti.fi/uutissuomalainen/9648409",
+    "image": "/images/categories/ulkomaat.jpg",
+    "image_thumb": "/images/categories/ulkomaat.jpg",
+    "image_alt": "Ulkomaat-uutiset",
+    "image_credit": "",
+    "image_source_url": "",
+    "image_caption": "",
+    "image_hotlink": false,
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_visual_judge_score": 0,
+    "image_decision": {
+      "source": "category_fallback",
+      "accepted": true,
+      "reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+      "prompt_version": "image-flow-v2-2026-07-03"
+    }
+  },
+  "image_enriched_at": "2026-07-27T15:25:43.498517+00:00",
+  "image_enrichment": {
+    "image": "/images/categories/ulkomaat.jpg",
+    "image_thumb": "/images/categories/ulkomaat.jpg",
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "generated fallback unavailable, unsafe, or failed after stock rejection",
+    "image_concept": null,
+    "image_query": null,
+    "image_candidate_id": null,
+    "image_candidate_url": null,
+    "image_visual_judge_score": 0,
+    "image_accepted_reasons": null,
+    "image_rejected_reasons": null,
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03"
+  },
+  "published_at": "2026-07-27T15:29:07.160744+00:00",
+  "created_files": [
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-07-27-maastopalot-lahestyvat-bordeauxta-yli-330-000-ihmista-evakuo.md",
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-07-27-berliinin-pride-hyokkayksesta-epailty-kuoli-poliisioperaatio.md",
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-07-27-britannia-lupaa-jatkaa-ukrainan-tukemista-zelenskyin-vierail.md"
+  ],
+  "category_trace": {
+    "packet_id": "20260726T175752Z_3693514a33",
+    "decisions": {
+      "guard": "Ulkomaat",
+      "writer": "Ulkomaat",
+      "publisher": "Ulkomaat"
+    },
+    "disagreement": false
   }
 }
