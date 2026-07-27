@@ -68,3 +68,5 @@ Perusteettomasta sairauslomasta kertoivat useimmin 18–44-vuotiaat, alemmat toi
 Suomen Yrittäjät vaatii samalla sairausvakuutuslain mukaisen sairauspäivärahan omavastuuajan lyhentämistä nykyisestä kymmenestä päivästä kolmeen. Järjestön mukaan nykyinen malli asettaa etenkin pienet yritykset vaikeaan asemaan, koska työnantaja voi maksaa sairaana olevan työntekijän palkkaa jopa kymmenen päivää saamatta siitä hyvitystä.
 
 Pentikäisen mukaan kustannukset ja riskit voivat muodostua pk-yrityksille palkkaamisen esteeksi. Hän pitää sairauslomajärjestelmän ja siihen liittyvän luottamuksen väärinkäyttöä vastuuttomana ja sanoo sairauspoissaolojen kuormittavan erityisesti pieniä työnantajia.
+
+<p><strong>Lue myös:</strong> <a href="/posts/2026-06-10-kysely-tekoalyn-paivittainen-kaytto-tyoelamassa-lahes-tuplaa/" data-track="related_article_click" data-placement="article-end-ope435-worklife">Kysely: Tekoälyn päivittäinen käyttö työelämässä lähes tuplaantui vuodessa</a></p>
