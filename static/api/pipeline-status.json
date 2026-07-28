@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-28T17:16:51+00:00",
+  "generated_at": "2026-07-28T18:54:04+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,10 +12,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 7,
+    "published": 8,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-07-28T17:13:30.415953+00:00"
+    "last_published_ts": "2026-07-28T18:50:56.962114+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -29,34 +29,34 @@
   "trending": [
     [
       "jälkeen",
-      10
+      12
     ],
     [
       "euroa",
       9
     ],
     [
-      "parvin",
+      "prosenttia",
+      8
+    ],
+    [
+      "viime",
       6
     ],
     [
       "tilikauden",
-      5
-    ],
-    [
-      "tilinpäätös",
       5
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 5,
+    "outboxCount": 3,
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "worstCaseRemainingCycles": 2,
+    "worstCaseRemainingCycles": 1,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
     "reasons": [

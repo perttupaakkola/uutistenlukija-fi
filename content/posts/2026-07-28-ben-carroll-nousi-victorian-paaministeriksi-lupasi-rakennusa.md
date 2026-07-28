@@ -47,7 +47,6 @@ keywords:
 source_name: "The Conversation"
 source_url: "https://theconversation.com/ben-carroll-is-the-new-victorian-premier-he-has-a-long-and-urgent-to-do-list-and-4-months-until-an-election-288487"
 source_domain: "theconversation.com"
-briefing: true
 draft: false
 ---
 
