@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-27T17:22:04+00:00",
+  "generated_at": "2026-07-28T08:04:57+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,10 +12,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 7,
+    "published": 8,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-07-27T17:19:31.120782+00:00"
+    "last_published_ts": "2026-07-28T08:01:39.822462+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -29,7 +29,15 @@
   "trending": [
     [
       "jälkeen",
-      12
+      14
+    ],
+    [
+      "ennen",
+      7
+    ],
+    [
+      "samalla",
+      7
     ],
     [
       "sunnuntain",
@@ -38,25 +46,17 @@
     [
       "sunnuntaina",
       6
-    ],
-    [
-      "romanian",
-      6
-    ],
-    [
-      "samalla",
-      6
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 3,
+    "outboxCount": 7,
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "worstCaseRemainingCycles": 1,
+    "worstCaseRemainingCycles": 3,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
     "reasons": [
