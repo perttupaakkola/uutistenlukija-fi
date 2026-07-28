@@ -47,7 +47,6 @@ keywords:
 source_name: "The Independent"
 source_url: "https://www.independent.co.uk/travel/news-and-advice/europe-heatwave-travel-advice-summer-holidays-b3008151.html"
 source_domain: "independent.co.uk"
-briefing: true
 draft: false
 ---
 
