@@ -53,6 +53,9 @@ class PublicProvenancePolicyTests(unittest.TestCase):
         self.assertIn("if and $sourceName $sourceUrl", shared)
         self.assertIn('href="{{ $sourceUrl }}"', shared)
         self.assertIn("{{ $sourceName }}", shared)
+        self.assertIn("$page.Params.source_attributions", shared)
+        self.assertIn('href="{{ .url }}"', shared)
+        self.assertIn("{{ .name }}", shared)
 
     def test_daily_briefing_render_hides_internal_sources(self) -> None:
         article = daily_briefing.Article(

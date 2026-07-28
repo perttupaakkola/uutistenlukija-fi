@@ -58,7 +58,9 @@ from monica_writer import (  # noqa: E402
     _normalize_ws,
     _packet_source_blocks as monica_packet_source_blocks,
     _packet_source_words as monica_packet_source_words,
+    _persist_source_usage,
     _run_monica,
+    _synchronize_packet_category,
 )
 from quality_gate import score_article, run_gate as run_quality_gate  # noqa: E402
 from publish_preflight import evaluate_publish_preflight  # noqa: E402
@@ -1251,7 +1253,7 @@ def failed_writer_feedback(data: dict, payload: dict | None = None, issues: list
     packet = data.get("packet") or {}
     original = data.get("original_article") or {}
     payload = payload or data.get("payload") or {}
-    issues = issues or _basic_payload_issues(payload) if payload else []
+    issues = issues or _basic_payload_issues(payload, packet) if payload else []
     source_words = packet_source_words(data)
     source_blocks = packet_source_blocks(data)
     content = str(payload.get("content") or "")
@@ -1412,7 +1414,7 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
             writing.unlink(missing_ok=True)
             return ("failed", reason)
         repair_metadata = None
-        issues = _basic_payload_issues(payload)
+        issues = _basic_payload_issues(payload, packet)
         if issues:
             log(f"monica-worker: repair pass {'; '.join(issues)}")
             repaired_raw = _run_monica(_build_repair_prompt(packet, payload, issues))
@@ -1425,7 +1427,7 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
                 atomic_write_json(STAGED_ROOT / "failed" / writing.name, data)
                 writing.unlink(missing_ok=True)
                 return ("failed", reason)
-            issues = _basic_payload_issues(payload)
+            issues = _basic_payload_issues(payload, packet)
             if _is_source_backed_near_miss(packet, payload, issues):
                 near_miss_payload = payload
                 near_miss_issues = list(issues) + ["source_backed_writer_shortfall: final expansion required"]
@@ -1434,7 +1436,7 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
                 repaired_payload = _extract_json_object(repaired_raw)
                 raw = repaired_raw
                 payload = repaired_payload
-                issues = _basic_payload_issues(payload)
+                issues = _basic_payload_issues(payload, packet)
                 repair_metadata = _near_miss_repair_metadata(packet, near_miss_payload, payload, issues)
         if issues:
             feedback = failed_writer_feedback(data, payload, issues, raw)
@@ -1444,7 +1446,9 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
             atomic_write_json(STAGED_ROOT / "failed" / writing.name, data)
             writing.unlink(missing_ok=True)
             return ("failed", "; ".join(issues))
+        _persist_source_usage(packet, payload)
         article = _merge_article(original, packet, payload)
+        _synchronize_packet_category(packet, original, payload, article)
         if repair_metadata:
             article["monica_repair"] = repair_metadata
         out = {

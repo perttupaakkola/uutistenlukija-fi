@@ -11,12 +11,12 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 try:
-    from .monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_prompt, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _openclaw_command, _packet_source_blocks, _packet_source_words, _packet_story_confidence, _run_openclaw_command, rewrite_articles
+    from .monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _basic_payload_issues, _build_prompt, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _openclaw_command, _packet_source_blocks, _packet_source_words, _packet_story_confidence, _persist_source_usage, _run_openclaw_command, _synchronize_packet_category, rewrite_articles
     PATCH_TARGET = "pipeline.monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "pipeline.monica_writer._resolve_openclaw_base_cmd"
     TIMING_LOG_PATCH_TARGET = "pipeline.monica_writer.MONICA_DISPATCH_TIMING_LOG"
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
-    from monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _build_prompt, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _openclaw_command, _packet_source_blocks, _packet_source_words, _packet_story_confidence, _run_openclaw_command, rewrite_articles
+    from monica_writer import MIN_CONTENT_WORDS, OPENCLAW_CANDIDATES, SOURCE_BACKED_NEAR_MISS_MIN_WORDS, _basic_payload_issues, _build_prompt, _build_repair_prompt, _extract_json_object, _is_source_backed_near_miss, _is_source_backed_repair_candidate, _is_source_backed_talous_micro_near_miss, _merge_article, _near_miss_repair_metadata, _openclaw_command, _packet_source_blocks, _packet_source_words, _packet_story_confidence, _persist_source_usage, _run_openclaw_command, _synchronize_packet_category, rewrite_articles
     PATCH_TARGET = "monica_writer.subprocess.run"
     RESOLVE_PATCH_TARGET = "monica_writer._resolve_openclaw_base_cmd"
     TIMING_LOG_PATCH_TARGET = "monica_writer.MONICA_DISPATCH_TIMING_LOG"
@@ -42,6 +42,18 @@ def _source_packet(source_words: int, blocks: int = 2) -> dict:
             for idx in range(blocks)
         ],
     }
+
+
+def _with_packet_source_usage(payload: dict, packet: dict) -> dict:
+    payload["source_usage"] = [
+        {
+            "source_url": block["source_url"],
+            "used": True,
+            "dependent_claims": [f"{block['source']} tukee testin pääväitettä."],
+        }
+        for block in packet["clean_source_blocks"]
+    ]
+    return payload
 
 
 def _long_content() -> str:
@@ -97,6 +109,15 @@ def _good_payload() -> str:
         "editorial_reviewed": True,
         "confidence": 0.88,
         "journalist_note": " ",
+        "source_usage": [
+            {
+                "source_url": "https://yle.fi/a/testi",
+                "used": True,
+                "dependent_claims": [
+                    "Hallitus valmistelee sosiaalihuollon säästöjä ensi vuodelle."
+                ],
+            }
+        ],
     }
     return json.dumps(payload, ensure_ascii=False)
 
@@ -212,6 +233,90 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertEqual(article["category"], "Kotimaa")
         self.assertGreaterEqual(len(article["key_points"]), 2)
         self.assertIn("Hallitus valmistelee", article["content"])
+        self.assertEqual(
+            article["source_attributions"],
+            [{"name": "Yle", "url": "https://yle.fi/a/testi"}],
+        )
+
+    def test_source_usage_contract_requires_every_selected_url_and_claims(self):
+        packet = _source_packet(360, blocks=2)
+        payload = json.loads(_good_payload())
+        payload["source_usage"] = [
+            {
+                "source_url": "https://testi.example/0",
+                "used": True,
+                "dependent_claims": [],
+            }
+        ]
+
+        issues = _basic_payload_issues(payload, packet)
+
+        self.assertIn(
+            "source_usage: source_usage[0] used:true requires at least one dependent claim",
+            issues,
+        )
+        self.assertTrue(
+            any("source_usage is missing selected URLs" in issue for issue in issues)
+        )
+
+    def test_persisted_source_usage_drives_one_public_projection(self):
+        packet = _source_packet(360, blocks=2)
+        payload = json.loads(_good_payload())
+        payload["source_usage"] = [
+            {
+                "source_url": "https://testi.example/0",
+                "used": True,
+                "dependent_claims": ["Ensimmäinen lähde tukee pääväitettä."],
+            },
+            {
+                "source_url": "https://testi.example/1",
+                "used": False,
+                "dependent_claims": [],
+            },
+        ]
+
+        rows = _persist_source_usage(packet, payload)
+        article = _merge_article(SAMPLE_ARTICLE, packet, payload)
+
+        self.assertEqual(packet["source_usage"], rows)
+        self.assertEqual(packet["source_usage_contract"], "v1")
+        self.assertEqual(
+            article["source_attributions"],
+            [{"name": "Testi 0", "url": "https://testi.example/0"}],
+        )
+        self.assertEqual(article["source_url"], "https://testi.example/0")
+
+    def test_ready_to_outbox_category_sync_covers_talous_and_ulkomaat_drift(self):
+        for stale, canonical in (("Ulkomaat", "Talous"), ("Kotimaa", "Ulkomaat")):
+            with self.subTest(stale=stale, canonical=canonical):
+                packet = {"category": stale, "category_hint": stale}
+                original = {"_guessed_category": canonical}
+                payload = {"category": canonical}
+                article = {
+                    "_guessed_category": canonical,
+                    "category": canonical,
+                }
+
+                result = _synchronize_packet_category(
+                    packet, original, payload, article
+                )
+
+                self.assertEqual(result, canonical)
+                self.assertEqual(packet["category"], canonical)
+                self.assertEqual(packet["category_hint"], canonical)
+
+    def test_ready_to_outbox_category_sync_retains_hard_disagreement(self):
+        packet = {"category": "Kotimaa", "category_hint": "Kotimaa"}
+
+        result = _synchronize_packet_category(
+            packet,
+            {"_guessed_category": "Ulkomaat"},
+            {"category": "Ulkomaat"},
+            {"_guessed_category": "Ulkomaat", "category": "Talous"},
+        )
+
+        self.assertEqual(result, "")
+        self.assertEqual(packet, {"category": "Kotimaa", "category_hint": "Kotimaa"})
 
     def test_merge_article_preserves_packet_category_over_payload_guess(self):
         original = {**SAMPLE_ARTICLE, "category_hint": "Talous"}
@@ -741,12 +846,6 @@ class MonicaWriterTests(unittest.TestCase):
             "research": source_text,
         }
 
-        run_mock.side_effect = [
-            self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
-            self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
-            self._result(json.dumps(repaired_payload, ensure_ascii=False)),
-        ]
-
         from pipeline.story_packet import build_story_packet as original_build_story_packet
         original_packet = original_build_story_packet(article)
         original_packet["source_text"] = " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 80)
@@ -755,6 +854,13 @@ class MonicaWriterTests(unittest.TestCase):
             {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 20), "word_count": 120, "source": "Testi", "source_url": "https://testi.example/1", "source_domain": "testi.example"},
             {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 15), "word_count": 90, "source": "Testi 2", "source_url": "https://testi.example/2", "source_domain": "testi.example"},
             {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 12), "word_count": 72, "source": "Testi 3", "source_url": "https://testi.example/3", "source_domain": "testi.example"},
+        ]
+        _with_packet_source_usage(near_miss_payload, original_packet)
+        _with_packet_source_usage(repaired_payload, original_packet)
+        run_mock.side_effect = [
+            self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
+            self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
+            self._result(json.dumps(repaired_payload, ensure_ascii=False)),
         ]
         with patch(f"{rewrite_articles.__module__}.build_story_packet", return_value=original_packet):
             rewritten = rewrite_articles([article])
@@ -778,6 +884,7 @@ class MonicaWriterTests(unittest.TestCase):
         near_miss_payload["content"] = " ".join(["Sana"] * 247)
         packet = _source_packet(252, blocks=3)
         packet["story_confidence"] = 0.9
+        _with_packet_source_usage(near_miss_payload, packet)
 
         run_mock.side_effect = [
             self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
@@ -810,6 +917,8 @@ class MonicaWriterTests(unittest.TestCase):
         packet = _source_packet(252, blocks=3)
         packet["story_confidence"] = 0.98
         packet["category"] = "Talous"
+        _with_packet_source_usage(initial_payload, packet)
+        _with_packet_source_usage(still_short_payload, packet)
 
         run_mock.side_effect = [
             self._result(json.dumps(initial_payload, ensure_ascii=False)),
@@ -844,6 +953,8 @@ class MonicaWriterTests(unittest.TestCase):
         packet = _source_packet(252, blocks=3)
         packet["story_confidence"] = 0.98
         packet["category"] = "Talous"
+        _with_packet_source_usage(near_miss_payload, packet)
+        _with_packet_source_usage(repaired_payload, packet)
 
         run_mock.side_effect = [
             self._result(json.dumps(near_miss_payload, ensure_ascii=False)),

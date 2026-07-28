@@ -37,6 +37,58 @@ class StoryPacketTests(unittest.TestCase):
         self.assertEqual(packet["selected_source"], {"name": "Stara", "url": url, "domain": "stara.fi"})
         self.assertEqual(packet["source_urls"], [url])
 
+    def test_same_bbc_article_aliases_collapse_before_source_accounting(self) -> None:
+        rss_url = (
+            "https://www.bbc.co.uk/news/articles/c70gkg62w0ro"
+            "?at_medium=RSS&at_campaign=rss"
+        )
+        canonical_url = "https://www.bbc.com/news/articles/c70gkg62w0ro"
+        article = {
+            "title": "D4vdin oikeudenkäynti etenee Los Angelesissa",
+            "description": (
+                "Tuomari katsoi D4vdin tapauksen näytön riittävän "
+                "oikeudenkäyntiin."
+            ),
+            "source": "BBC World",
+            "link": rss_url,
+            "category_hint": "Ulkomaat",
+            "research": (
+                f"[Lähde: BBC World | URL: {rss_url}]\n"
+                + (
+                    "D4vdin oikeudenkäynti etenee Los Angelesissa tuomarin "
+                    "näyttöratkaisun jälkeen. "
+                )
+                * 20
+                + "\n\n---\n\n"
+                + f"[Lähde: BBC | URL: {canonical_url}]\n"
+                + (
+                    "Los Angelesin tuomari määräsi D4vdin tapauksen "
+                    "etenemään oikeudenkäyntiin. "
+                )
+                * 20
+            ),
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(len(packet["clean_source_blocks"]), 1)
+        self.assertEqual(packet["source_urls"], [rss_url])
+        self.assertEqual(
+            {
+                block["source_url"]
+                for block in packet["clean_source_blocks"]
+                if "bbc." in block.get("source_url", "")
+            },
+            {rss_url},
+        )
+        identities = {
+            block["source_identity"]
+            for block in packet["clean_source_blocks"]
+            if "bbc." in block.get("source_url", "")
+        }
+        self.assertEqual(len(identities), 1)
+        self.assertEqual(packet["selected_source_provenance_error"], "")
+
     def test_missing_selected_source_url_is_provenance_invalid(self) -> None:
         article = {
             "title": "Sähkön futuurihinnat nousivat loppuvuodelle",

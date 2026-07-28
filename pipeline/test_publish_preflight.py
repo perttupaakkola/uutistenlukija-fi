@@ -11,9 +11,10 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 try:
-    from . import staged_publish
+    from . import staged_publish, publisher
     from .publish_preflight import evaluate_publish_preflight
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
+    import publisher
     import staged_publish
     from publish_preflight import evaluate_publish_preflight
 
@@ -335,6 +336,93 @@ class PublishPreflightTests(unittest.TestCase):
         self.assertEqual(result.action, "publish")
         self.assertEqual(result.hidden_source_urls, ())
 
+    def test_structured_attributions_are_the_shared_public_projection(self) -> None:
+        record = _record(
+            source_blocks=[
+                {
+                    "source": "First",
+                    "source_url": "https://first.test/a",
+                    "text": _words(110, "first"),
+                },
+                {
+                    "source": "Second",
+                    "source_url": "https://second.test/b",
+                    "text": _words(110, "second"),
+                },
+            ],
+        )
+        record["article"].update(
+            {
+                "source_url": "https://first.test/a",
+                "source_attributions": [
+                    {"name": "First", "url": "https://first.test/a"},
+                    {"name": "Second", "url": "https://second.test/b"},
+                ],
+            }
+        )
+
+        result = evaluate_publish_preflight(record)
+        markdown = publisher._article_to_markdown(
+            record["article"],
+            "2026-07-28T12:00:00+00:00",
+        )
+
+        self.assertEqual(result.action, "publish")
+        self.assertEqual(result.hidden_source_urls, ())
+        self.assertIn("source_attributions:", markdown)
+        self.assertIn('url: "https://first.test/a"', markdown)
+        self.assertIn('url: "https://second.test/b"', markdown)
+
+    def test_same_article_alias_is_counted_once_before_public_check(self) -> None:
+        rss_url = (
+            "https://www.bbc.co.uk/news/articles/c70gkg62w0ro"
+            "?at_medium=RSS&at_campaign=rss"
+        )
+        canonical_url = "https://www.bbc.com/news/articles/c70gkg62w0ro"
+        yahoo_url = "https://www.yahoo.com/entertainment/music/articles/example.html"
+        record = _record(
+            source_blocks=[
+                {
+                    "source": "BBC World",
+                    "source_url": rss_url,
+                    "text": _words(110, "bbc-rss"),
+                },
+                {
+                    "source": "BBC",
+                    "source_url": canonical_url,
+                    "text": _words(110, "bbc-canonical"),
+                },
+                {
+                    "source": "Yahoo",
+                    "source_url": yahoo_url,
+                    "text": _words(110, "yahoo"),
+                },
+            ],
+        )
+        record["packet"]["source_usage"] = [
+            {
+                "source_url": canonical_url,
+                "used": False,
+                "dependent_claims": [],
+            }
+        ]
+        record["article"].update(
+            {
+                "source_url": rss_url,
+                "source_attributions": [
+                    {"name": "BBC World", "url": rss_url},
+                    {"name": "Yahoo", "url": yahoo_url},
+                ],
+            }
+        )
+
+        result = evaluate_publish_preflight(record)
+
+        self.assertEqual(result.action, "publish")
+        self.assertEqual(len(result.selected_source_urls), 2)
+        self.assertEqual(len(result.public_source_urls), 2)
+        self.assertEqual(result.hidden_source_urls, ())
+
     def test_explicit_unused_source_without_dependent_claim_is_exempt(self) -> None:
         record = _record(
             source_blocks=[
@@ -392,7 +480,40 @@ class PublishPreflightTests(unittest.TestCase):
         result = evaluate_publish_preflight(record)
 
         self.assertEqual(result.action, "reject")
+        self.assertIn("source_usage_invalid", result.reasons)
         self.assertEqual(result.hidden_source_urls, ("https://hidden.test/report",))
+
+    def test_v1_source_usage_contract_rejects_missing_selected_rows(self) -> None:
+        record = _record(
+            source_blocks=[
+                {
+                    "source": "First",
+                    "source_url": "https://first.test/story",
+                    "text": _words(110, "first"),
+                },
+                {
+                    "source": "Second",
+                    "source_url": "https://second.test/story",
+                    "text": _words(110, "second"),
+                },
+            ],
+        )
+        record["packet"]["source_usage_contract"] = "v1"
+        record["packet"]["source_usage"] = [
+            {
+                "source_url": "https://first.test/story",
+                "used": True,
+                "dependent_claims": ["Ensimmäinen lähde tukee pääväitettä."],
+            }
+        ]
+        record["article"]["source_attributions"] = [
+            {"name": "First", "url": "https://first.test/story"}
+        ]
+
+        result = evaluate_publish_preflight(record)
+
+        self.assertEqual(result.action, "reject")
+        self.assertIn("source_usage_invalid", result.reasons)
 
     def test_contained_duplicate_blocks_count_once_and_route_to_monica(self) -> None:
         full = _words(190, "source")

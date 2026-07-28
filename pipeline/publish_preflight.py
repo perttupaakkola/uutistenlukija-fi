@@ -7,14 +7,25 @@ from dataclasses import dataclass
 from difflib import SequenceMatcher
 import re
 from typing import Any, Iterable
-from urllib.parse import urlsplit, urlunsplit
 
 try:
     from .description_projection import project_public_description
     from .publisher import CANONICAL_CATEGORIES, effective_category
+    from .source_attribution import (
+        normalize_source_usage,
+        normalize_source_url,
+        project_public_source_attributions,
+        source_identity_key,
+    )
 except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
     from description_projection import project_public_description
     from publisher import CANONICAL_CATEGORIES, effective_category
+    from source_attribution import (
+        normalize_source_usage,
+        normalize_source_url,
+        project_public_source_attributions,
+        source_identity_key,
+    )
 
 
 MIN_DISTINCT_SOURCE_WORDS = 200
@@ -80,26 +91,7 @@ def _resolved_categories(record: dict[str, Any]) -> tuple[str, str, str]:
 
 
 def _normalize_url(value: Any) -> str:
-    raw = str(value or "").strip().rstrip(".,;:!?")
-    if not raw:
-        return ""
-    try:
-        parts = urlsplit(raw)
-    except ValueError:
-        return ""
-    if parts.scheme.casefold() not in {"http", "https"} or not parts.hostname:
-        return ""
-    hostname = parts.hostname.casefold().removeprefix("www.")
-    try:
-        port = parts.port
-    except ValueError:
-        return ""
-    if port and not ((parts.scheme.casefold() == "http" and port == 80) or (parts.scheme.casefold() == "https" and port == 443)):
-        hostname = f"{hostname}:{port}"
-    path = parts.path or "/"
-    if path != "/":
-        path = path.rstrip("/")
-    return urlunsplit((parts.scheme.casefold(), hostname, path, parts.query, ""))
+    return normalize_source_url(value)
 
 
 def _url_values(value: Any) -> Iterable[str]:
@@ -140,6 +132,7 @@ def _public_source_urls(article: dict[str, Any]) -> tuple[str, ...]:
 
     values: list[Any] = [
         article.get("source_url") or article.get("link"),
+        [row["url"] for row in project_public_source_attributions(article)],
         article.get("title"),
         description,
         article.get("summary"),
@@ -148,23 +141,6 @@ def _public_source_urls(article: dict[str, Any]) -> tuple[str, ...]:
         key_points,
     ]
     return tuple(sorted({url for value in values for url in _url_values(value)}))
-
-
-def _explicitly_unused_urls(packet: dict[str, Any]) -> set[str]:
-    """Accept only structured unused declarations with an explicit empty claim list."""
-    rows = packet.get("source_usage")
-    if not isinstance(rows, list):
-        return set()
-    unused: set[str] = set()
-    for row in rows:
-        if not isinstance(row, dict) or row.get("used") is not False:
-            continue
-        if row.get("dependent_claims") != []:
-            continue
-        url = _normalize_url(row.get("source_url"))
-        if url:
-            unused.add(url)
-    return unused
 
 
 def _block_word_tokens(block: dict[str, Any]) -> tuple[str, ...]:
@@ -267,18 +243,39 @@ def evaluate_publish_preflight(record: dict[str, Any]) -> PublishPreflightResult
     article = _mapping(record.get("article"))
     blocks = [block for block in packet.get("clean_source_blocks") or [] if isinstance(block, dict)]
     categories = _resolved_categories(record)
-    unused_urls = _explicitly_unused_urls(packet)
-    selected_urls = tuple(
-        sorted(
-            {
-                normalized
-                for block in blocks
-                if (normalized := _normalize_url(block.get("source_url"))) and normalized not in unused_urls
-            }
-        )
+    usage_rows, usage_issues = normalize_source_usage(
+        packet,
+        packet.get("source_usage"),
+        require_complete=packet.get("source_usage_contract") == "v1",
     )
+    unused_urls = {
+        row["source_url"]
+        for row in usage_rows
+        if row["used"] is False and row["dependent_claims"] == []
+    }
+    selected_by_identity: dict[str, str] = {}
+    for block in blocks:
+        normalized = _normalize_url(block.get("source_url"))
+        identity = source_identity_key(normalized)
+        if (
+            normalized
+            and identity
+            and normalized not in unused_urls
+            and identity not in selected_by_identity
+        ):
+            selected_by_identity[identity] = normalized
+    selected_urls = tuple(sorted(selected_by_identity.values()))
     public_urls = _public_source_urls(article)
-    hidden_urls = tuple(url for url in selected_urls if url not in set(public_urls))
+    public_identities = {
+        source_identity_key(url)
+        for url in public_urls
+        if source_identity_key(url)
+    }
+    hidden_urls = tuple(
+        url
+        for url in selected_urls
+        if source_identity_key(url) not in public_identities
+    )
     missing_selected_url = any(
         _block_word_tokens(block)
         and not _normalize_url(block.get("source_url"))
@@ -297,6 +294,8 @@ def evaluate_publish_preflight(record: dict[str, Any]) -> PublishPreflightResult
         hard_reasons.append("category_disagreement")
     if missing_selected_url:
         hard_reasons.append("selected_source_url_missing")
+    if usage_issues:
+        hard_reasons.append("source_usage_invalid")
     if hidden_urls:
         hard_reasons.append("selected_source_not_public")
     if _requires_entertainment_category_review(record, categories):

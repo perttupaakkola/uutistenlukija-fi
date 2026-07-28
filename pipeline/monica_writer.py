@@ -22,14 +22,25 @@ import time
 import uuid
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlsplit
 
 try:
     from .category_guard import category_text, protect_business_category, protect_tiede_category
     from .quarantine import save_writer_quarantine
+    from .source_attribution import (
+        build_source_attributions,
+        normalize_source_usage,
+        normalize_source_url,
+    )
     from .story_packet import build_story_packet, ensure_queue_dirs, save_packet, selected_source_provenance_error
 except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
     from category_guard import category_text, protect_business_category, protect_tiede_category
     from quarantine import save_writer_quarantine
+    from source_attribution import (
+        build_source_attributions,
+        normalize_source_usage,
+        normalize_source_url,
+    )
     from story_packet import build_story_packet, ensure_queue_dirs, save_packet, selected_source_provenance_error
 
 ALLOWED_CATEGORIES = {
@@ -89,7 +100,17 @@ WRITER_SCHEMA = {
         "editorial_reviewed",
         "confidence",
         "journalist_note",
+        "source_usage",
     ],
+    "source_usage": {
+        "one_row_per_distinct_clean_source_url": True,
+        "row": {
+            "source_url": "exact selected URL",
+            "used": "boolean",
+            "dependent_claims": "non-empty string list when used; [] when unused",
+        },
+        "same_article_aliases": "at most one alias may be used",
+    },
     "optional_status": "INSUFFICIENT_CONFIDENCE",
 }
 
@@ -252,7 +273,7 @@ def _normalize_summary_bullets(value, fallback_summary: str = "") -> list[str]:
     return bullets[:4]
 
 
-def _basic_payload_issues(payload: dict) -> list[str]:
+def _basic_payload_issues(payload: dict, packet: dict | None = None) -> list[str]:
     issues: list[str] = []
     required = WRITER_SCHEMA["required"]
     missing = [key for key in required if key not in payload]
@@ -284,6 +305,13 @@ def _basic_payload_issues(payload: dict) -> list[str]:
         issues.append("not enough tags")
     if len(bullets) < 2:
         issues.append("not enough summary bullets")
+    if packet is not None:
+        _, usage_issues = normalize_source_usage(
+            packet,
+            payload.get("source_usage"),
+            require_complete=True,
+        )
+        issues.extend(f"source_usage: {issue}" for issue in usage_issues)
     return issues
 
 
@@ -494,6 +522,10 @@ Hard rules:
 - No source labels in public copy (never output 'Lähde:', 'Source:', 'Continue reading', 'Alkuperäinen artikkeli')
 - No duplicated opener, no repeated paragraphs, no generic AI ending
 - No invented facts
+- `source_usage` must contain exactly one row for every distinct `clean_source_blocks[].source_url`
+- Mark a row `used:true` only when the public article depends on at least one claim from it, and list those claims in `dependent_claims`
+- Mark a row `used:false` only when no public claim depends on it; then `dependent_claims` must be exactly `[]`
+- Same-article URL aliases represent one source: at most one alias may be `used:true`
 - If the evidence is too weak or contradictory, return: {{"packet_id":"{packet['packet_id']}","status":"INSUFFICIENT_CONFIDENCE","reason":"short reason"}}
 - Write at least 250 words and usually 280–420 words; if the packet cannot support that without filler or invention, return INSUFFICIENT_CONFIDENCE{source_repair_hint}
 - The first paragraph must be at least 30 words and summarize the verified core of the story
@@ -548,6 +580,8 @@ Problems to fix:
 Repair rules:
 - Return INSUFFICIENT_CONFIDENCE if the original packet cannot support at least 250 factual Finnish words without filler or invention.
 - Otherwise expand the article to 280–420 words, make the first paragraph at least 30 words, and include at least two H2 subheadings.
+- Return one `source_usage` row for every distinct selected URL. `used:true` requires explicit dependent claims; `used:false` requires `dependent_claims=[]`.
+- Collapse same-article aliases by marking at most one alias `used:true`.
 {source_backed_rules}
 Original packet source evidence:
 - source_words: {source_words}
@@ -771,6 +805,53 @@ def _run_monica(prompt: str) -> str:
     return text
 
 
+def _persist_source_usage(packet: dict, payload: dict) -> list[dict[str, Any]]:
+    """Persist the validated per-URL contract into the eventual outbox packet."""
+    rows, issues = normalize_source_usage(
+        packet,
+        payload.get("source_usage"),
+        require_complete=True,
+    )
+    if issues:
+        raise ValueError("invalid source_usage: " + "; ".join(issues))
+    packet["source_usage"] = rows
+    packet["source_usage_contract"] = "v1"
+    return rows
+
+
+def _canonical_public_category(value: Any) -> str:
+    raw = _normalize_ws(str(value or "")).casefold()
+    return next(
+        (
+            category
+            for category in ALLOWED_CATEGORIES
+            if category != "Uutiset" and category.casefold() == raw
+        ),
+        "",
+    )
+
+
+def _synchronize_packet_category(
+    packet: dict,
+    original: dict,
+    payload: dict,
+    article: dict,
+) -> str:
+    """Synchronize stale packet guards only from four unanimous canonical signals."""
+    categories = (
+        _canonical_public_category(original.get("_guessed_category")),
+        _canonical_public_category(article.get("_guessed_category")),
+        _canonical_public_category(payload.get("category")),
+        _canonical_public_category(article.get("category")),
+    )
+    if any(not category for category in categories) or len(set(categories)) != 1:
+        return ""
+    category = categories[0]
+    packet["category"] = category
+    packet["category_hint"] = category
+    return category
+
+
 def _merge_article(original: dict, packet: dict, payload: dict) -> dict:
     title = _normalize_ws(payload.get("title", ""))
     summary = _normalize_ws(payload.get("summary", ""))
@@ -819,6 +900,10 @@ def _merge_article(original: dict, packet: dict, payload: dict) -> dict:
     word_count = len(content.split())
     merged = dict(original)
     selected_source = packet.get("selected_source") or {}
+    source_attributions = build_source_attributions(
+        packet,
+        packet.get("source_usage") if isinstance(packet.get("source_usage"), list) else [],
+    )
     merged.update(
         {
             "title": title,
@@ -839,6 +924,17 @@ def _merge_article(original: dict, packet: dict, payload: dict) -> dict:
             "monica_packet_id": packet.get("packet_id", ""),
         }
     )
+    if source_attributions:
+        merged["source_attributions"] = source_attributions
+        used_urls = {row["url"] for row in source_attributions}
+        selected_url = normalize_source_url(selected_source.get("url"))
+        if not selected_url or selected_url not in used_urls:
+            primary = source_attributions[0]
+            selected_source = {
+                "name": primary["name"],
+                "url": primary["url"],
+                "domain": (urlsplit(primary["url"]).hostname or "").removeprefix("www."),
+            }
     if selected_source:
         merged.update(
             {
@@ -887,7 +983,7 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
                 continue
 
             repair_metadata = None
-            issues = _basic_payload_issues(payload)
+            issues = _basic_payload_issues(payload, packet)
             if issues:
                 print(f"[monica]   repair pass: {'; '.join(issues)}")
                 repaired_raw = _run_monica(_build_repair_prompt(packet, payload, issues))
@@ -898,7 +994,7 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
                     print(f"[monica]   quarantine: dispatch_error ({e})")
                     continue
                 raw = repaired_raw
-                issues = _basic_payload_issues(payload)
+                issues = _basic_payload_issues(payload, packet)
 
                 if _is_source_backed_near_miss(packet, payload, issues):
                     near_miss_issues = list(issues) + ["source_backed_writer_shortfall: final expansion required"]
@@ -912,7 +1008,7 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
                         print(f"[monica]   quarantine: dispatch_error ({e})")
                         continue
                     raw = repaired_raw
-                    issues = _basic_payload_issues(payload)
+                    issues = _basic_payload_issues(payload, packet)
                     repair_metadata = _near_miss_repair_metadata(packet, near_miss_payload, payload, issues)
                     if (
                         repair_metadata["repair_added_word_count"] == 0
@@ -930,7 +1026,7 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
                             print(f"[monica]   quarantine: dispatch_error ({e})")
                             continue
                         raw = retry_raw
-                        issues = _basic_payload_issues(payload)
+                        issues = _basic_payload_issues(payload, packet)
                         repair_metadata = _near_miss_repair_metadata(packet, near_miss_payload, payload, issues)
                         repair_metadata["repair_retry"] = "talous_zero_word_short_retry"
                         repair_metadata["repair_retry_reason"] = "previous repair added 0 words and remained under final length floor"
@@ -953,7 +1049,9 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
                 print(f"[monica]   quarantine: schema_invalid ({'; '.join(issues)})")
                 continue
 
+            _persist_source_usage(packet, payload)
             written_article = _merge_article(article, packet, payload)
+            _synchronize_packet_category(packet, article, payload, written_article)
             outbox_packet = {"packet_id": packet["packet_id"], "packet": packet, "response": payload, "raw_response": raw}
             if repair_metadata:
                 outbox_packet["repair"] = repair_metadata

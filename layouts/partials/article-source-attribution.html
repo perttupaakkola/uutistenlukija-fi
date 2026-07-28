@@ -1,9 +1,20 @@
 {{- $page := . -}}
 {{- $sourceName := $page.Params.source_name | default "" -}}
 {{- $sourceUrl := $page.Params.source_url | default "" -}}
+{{- with $page.Params.source_attributions }}
+<div class="source-attribution" role="note" aria-label="Artikkelin lähteet">
+  <span class="source-attribution__label">Pohjautuu lähteisiin</span>
+  {{- range . }}
+    {{- if and .name .url }}
+  <a class="source-attribution__link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
+    {{- end }}
+  {{- end }}
+</div>
+{{- else }}
 {{- if and $sourceName $sourceUrl }}
 <div class="source-attribution" role="note" aria-label="Artikkelin lähde">
   <span class="source-attribution__label">Pohjautuu lähteeseen</span>
   <a class="source-attribution__link" href="{{ $sourceUrl }}" target="_blank" rel="noopener noreferrer">{{ $sourceName }}</a>
 </div>
+{{- end }}
 {{- end }}

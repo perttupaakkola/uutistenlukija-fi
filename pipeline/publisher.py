@@ -17,9 +17,11 @@ from writers import assign_writer
 try:
     from .category_guard import category_text, protect_business_category, protect_tiede_category
     from .description_projection import project_public_description
+    from .source_attribution import project_public_source_attributions
 except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
     from category_guard import category_text, protect_business_category, protect_tiede_category
     from description_projection import project_public_description
+    from source_attribution import project_public_source_attributions
 
 
 CONTENT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "content", "posts")
@@ -357,6 +359,7 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     source_name = article.get("source", "")
     source_url = article.get("source_url", "") or article.get("link", "")
     source_domain = article.get("source_domain", "")
+    source_attributions = project_public_source_attributions(article)
     summary = article.get("summary", "")
     summary_bullets = article.get("summary_bullets", [])
     key_points = article.get("key_points", [])
@@ -426,6 +429,18 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     source_name_line = f'\nsource_name: "{_esc(source_name)}"' if source_name else ""
     source_url_line = f'\nsource_url: "{source_url}"' if source_url else ""
     source_domain_line = f'\nsource_domain: "{source_domain}"' if source_domain else ""
+    source_attributions_yaml = (
+        "\nsource_attributions:\n"
+        + "\n".join(
+            (
+                f'  - name: "{_esc(row["name"])}"\n'
+                f'    url: "{_esc(row["url"])}"'
+            )
+            for row in source_attributions
+        )
+        if source_attributions
+        else ""
+    )
     reading_time_line = f"\nreading_time: {reading_time}"
     description_line = f'\ndescription: "{_esc(description)}"' if description else ""
     summary_line = f'\nsummary: "{_esc(summary)}"' if summary else ""
@@ -481,7 +496,7 @@ author: "{writer['name']}"
 author_id: "{writer['id']}"
 author_title: "{writer['title']}"
 author_bio: "{writer['bio']}"
-author_image: "{writer['image']}"{description_line}{summary_line}{summary_bullets_yaml}{key_points_yaml}{journalist_note_line}{content_type_line}{type_line}{editorial_reviewed_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{image_source_line}{image_source_type_line}{image_decision_reason_line}{image_concept_line}{image_query_line}{image_candidate_id_line}{image_candidate_url_line}{image_visual_judge_score_line}{image_provider_line}{image_model_line}{image_prompt_version_line}{image_accepted_reasons_line}{image_rejected_reasons_line}{image_category_fallback_line}{trending_line}{reading_time_line}{tags_yaml}{keywords_yaml}{source_name_line}{source_url_line}{source_domain_line}
+author_image: "{writer['image']}"{description_line}{summary_line}{summary_bullets_yaml}{key_points_yaml}{journalist_note_line}{content_type_line}{type_line}{editorial_reviewed_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{image_source_line}{image_source_type_line}{image_decision_reason_line}{image_concept_line}{image_query_line}{image_candidate_id_line}{image_candidate_url_line}{image_visual_judge_score_line}{image_provider_line}{image_model_line}{image_prompt_version_line}{image_accepted_reasons_line}{image_rejected_reasons_line}{image_category_fallback_line}{trending_line}{reading_time_line}{tags_yaml}{keywords_yaml}{source_name_line}{source_url_line}{source_domain_line}{source_attributions_yaml}
 draft: false
 ---
 

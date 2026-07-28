@@ -16,8 +16,10 @@ from typing import Iterable
 
 try:
     from .category_guard import category_text, contains_token, protect_business_category, protect_tiede_category
+    from .source_attribution import normalize_source_url, source_identity_key
 except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
     from category_guard import category_text, contains_token, protect_business_category, protect_tiede_category
+    from source_attribution import normalize_source_url, source_identity_key
 
 _ALLOWED_CATEGORIES = {
     "Kotimaa",
@@ -501,15 +503,38 @@ def _select_best_sources(article: dict, blocks: Iterable[dict], max_sources: int
     ranked.sort(key=lambda item: item[0], reverse=True)
     selected: list[dict] = []
     seen_text: set[str] = set()
+    selected_url_by_identity: dict[str, str] = {}
     for _, block in ranked:
         text = block["text"]
         if text in seen_text:
             continue
+        url = normalize_source_url(block.get("source_url"))
+        identity = str(block.get("source_identity") or source_identity_key(url))
+        if identity and url:
+            selected_url = selected_url_by_identity.get(identity)
+            if selected_url and selected_url != url:
+                continue
+            selected_url_by_identity.setdefault(identity, url)
         seen_text.add(text)
         selected.append(block)
         if len(selected) >= max_sources:
             break
     return selected
+
+
+def _annotate_source_identities(blocks: Iterable[dict]) -> list[dict]:
+    """Attach alias-safe identities before source ranking without dropping evidence."""
+    annotated: list[dict] = []
+    for block in blocks:
+        url = normalize_source_url(block.get("source_url"))
+        identity = source_identity_key(url)
+        annotated.append(
+            {
+                **block,
+                **({"source_identity": identity} if identity else {}),
+            }
+        )
+    return annotated
 
 
 def _backfill_research_sources(
@@ -531,6 +556,12 @@ def _backfill_research_sources(
 
     selected_sources = {str(block.get("source", "")).lower() for block in selected if block.get("source")}
     selected_text = " ".join(str(block.get("text", "")) for block in selected)
+    selected_url_by_identity: dict[str, str] = {}
+    for block in selected:
+        url = normalize_source_url(block.get("source_url"))
+        identity = str(block.get("source_identity") or source_identity_key(url))
+        if identity and url:
+            selected_url_by_identity.setdefault(identity, url)
 
     def _candidate_score(block: dict) -> tuple[int, int, int]:
         source = str(block.get("source", "")).lower()
@@ -547,6 +578,14 @@ def _backfill_research_sources(
             continue
         if int(block.get("word_count", 0) or 0) < 40:
             continue
+        url = normalize_source_url(block.get("source_url"))
+        identity = str(block.get("source_identity") or source_identity_key(url))
+        if (
+            identity
+            and identity in selected_url_by_identity
+            and selected_url_by_identity[identity] != url
+        ):
+            continue
         score = _candidate_score(block)
         if score[1] == 0:
             continue
@@ -556,6 +595,10 @@ def _backfill_research_sources(
     for block in candidates:
         selected.append(block)
         seen_text.add(block.get("text", ""))
+        url = normalize_source_url(block.get("source_url"))
+        identity = str(block.get("source_identity") or source_identity_key(url))
+        if identity and url:
+            selected_url_by_identity.setdefault(identity, url)
         if _source_words(selected) >= min_words or len(selected) >= max_sources:
             break
     return selected
@@ -591,7 +634,7 @@ def selected_source_provenance_error(packet: dict) -> str:
     blocks = packet.get("clean_source_blocks") or []
     if not blocks:
         return ""
-    by_name: dict[str, tuple[str, str]] = {}
+    by_name: dict[str, str] = {}
     by_url: dict[str, str] = {}
     for block in blocks:
         name = _normalize_ws(str(block.get("source") or ""))
@@ -603,31 +646,33 @@ def selected_source_provenance_error(packet: dict) -> str:
             return "selected source URL/domain mismatch"
         name_key = name.casefold()
         url_key = url.casefold()
-        current = (url_key, domain)
-        if name_key in by_name and by_name[name_key] != current:
+        identity = source_identity_key(url)
+        if not identity:
+            return "selected source URL is invalid"
+        if name_key in by_name and by_name[name_key] != identity:
             return "selected source name maps to multiple URL/domain tuples"
         if url_key in by_url and by_url[url_key] != name_key:
             return "selected source URL maps to multiple names"
-        by_name[name_key] = current
+        by_name[name_key] = identity
         by_url[url_key] = name_key
     return ""
 
 
 def _primary_selected_source(blocks: list[dict]) -> dict:
-    totals: dict[tuple[str, str, str], int] = {}
-    display: dict[tuple[str, str, str], dict] = {}
+    totals: dict[str, int] = {}
+    display: dict[str, dict] = {}
     for block in blocks:
-        key = (
-            _normalize_ws(str(block.get("source") or "")).casefold(),
-            _normalize_ws(str(block.get("source_url") or "")).casefold(),
-            _normalize_ws(str(block.get("source_domain") or "")).casefold(),
-        )
+        url = _normalize_ws(str(block.get("source_url") or ""))
+        key = source_identity_key(url) or url.casefold()
         totals[key] = totals.get(key, 0) + int(block.get("word_count", 0) or 0)
-        display[key] = {
-            "name": _normalize_ws(str(block.get("source") or "")),
-            "url": _normalize_ws(str(block.get("source_url") or "")),
-            "domain": _normalize_ws(str(block.get("source_domain") or "")),
-        }
+        display.setdefault(
+            key,
+            {
+                "name": _normalize_ws(str(block.get("source") or "")),
+                "url": url,
+                "domain": _normalize_ws(str(block.get("source_domain") or "")),
+            },
+        )
     return display[max(totals, key=totals.get)] if totals else {}
 
 
@@ -708,6 +753,7 @@ def build_story_packet(article: dict) -> dict:
     research_text = article.get("research_text") or article.get("research") or ""
     all_blocks = _split_research_blocks(str(research_text))
     all_blocks.extend(_fallback_source_blocks(article))
+    all_blocks = _annotate_source_identities(all_blocks)
     supported_blocks = _filter_topically_supported_sources(article, all_blocks)
     selected_blocks = _select_best_sources(article, supported_blocks)
     selected_blocks = _backfill_research_sources(selected_blocks, all_blocks)
@@ -718,7 +764,15 @@ def build_story_packet(article: dict) -> dict:
     selected_source = _primary_selected_source(selected_blocks) if not provenance_error else {}
 
     source_names = list(dict.fromkeys(block.get("source", "") for block in selected_blocks if block.get("source")))
-    source_urls = list(dict.fromkeys(block.get("source_url", "") for block in selected_blocks if block.get("source_url")))
+    source_urls: list[str] = []
+    seen_source_identities: set[str] = set()
+    for block in selected_blocks:
+        url = _normalize_ws(str(block.get("source_url") or ""))
+        identity = source_identity_key(url)
+        if not url or not identity or identity in seen_source_identities:
+            continue
+        seen_source_identities.add(identity)
+        source_urls.append(url)
     source_domains = list(dict.fromkeys(block.get("source_domain", "") for block in selected_blocks if block.get("source_domain")))
 
     inferred_category = _infer_category(article, selected_blocks)
