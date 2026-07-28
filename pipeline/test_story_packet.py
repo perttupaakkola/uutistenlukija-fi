@@ -112,6 +112,23 @@ class StoryPacketTests(unittest.TestCase):
         self.assertIn("Kash Patel", packet["source_text"])
         self.assertNotIn("Washingtonin ampumisessa", packet["source_text"])
 
+    def test_guessed_foreign_category_survives_without_feed_hint(self) -> None:
+        article = {
+            "title": "Ben Carroll nousi Victorian uudeksi pääministeriksi",
+            "description": "Työväenpuolue valitsi Carrollin johtajakseen osavaltion vallanvaihdoksessa.",
+            "source": "The Conversation",
+            "link": "https://example.com/victoria-premier",
+            "_guessed_category": "Ulkomaat",
+            "research": (
+                "[Lähde: The Conversation | URL: https://example.com/victoria-premier]\n"
+                + "Victorian työväenpuolue valitsi Ben Carrollin uudeksi johtajakseen. " * 20
+            ),
+        }
+
+        packet = build_story_packet(article)
+
+        self.assertEqual(packet["category_hint"], "Ulkomaat")
+
 
 
     def test_labeled_research_keeps_coherent_multi_paragraph_source_chunks(self) -> None:

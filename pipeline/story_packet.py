@@ -640,7 +640,14 @@ def _infer_category(article: dict, selected_blocks: list[dict]) -> str:
         ]
         if part
     ).lower()
-    hint = _normalize_ws(str(article.get("category_hint") or article.get("category") or ""))
+    hint = _normalize_ws(
+        str(
+            article.get("category_hint")
+            or article.get("category")
+            or article.get("_guessed_category")
+            or ""
+        )
+    )
     full_text = category_text(article, " ".join(block.get("text", "") for block in selected_blocks))
 
     business_category = protect_business_category(hint or "Kotimaa", full_text)
