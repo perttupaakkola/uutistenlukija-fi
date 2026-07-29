@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-29T02:48:20+00:00",
+  "generated_at": "2026-07-29T08:48:03+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,17 +12,18 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 12,
+    "published": 13,
     "rejected": 1,
     "publish_rate": 0,
-    "last_published_ts": "2026-07-29T02:45:11.439710+00:00"
+    "last_published_ts": "2026-07-29T08:45:34.355223+00:00"
   },
   "reject_reasons": {
     "language borderline Finnish si": 1,
-    "length under target (267 words": 1,
+    "length under target (263 words": 1,
     "missing: image": 1,
-    "unsourced numbers": 1,
-    "source_confidence_denial_conte": 1
+    "readability few paragraphs (1)": 1,
+    "readability wall of text": 1,
+    "only 1 paragraphs (min 3)": 1
   },
   "feeds": {
     "total": 0,
@@ -34,12 +35,12 @@
   },
   "trending": [
     [
-      "jälkeen",
-      18
+      "prosenttia",
+      19
     ],
     [
-      "prosenttia",
-      18
+      "jälkeen",
+      17
     ],
     [
       "euroa",
@@ -47,17 +48,17 @@
     ],
     [
       "vuoden",
-      8
+      9
     ],
     [
-      "viime",
+      "mukaansa",
       7
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 3,
+    "outboxCount": 1,
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
