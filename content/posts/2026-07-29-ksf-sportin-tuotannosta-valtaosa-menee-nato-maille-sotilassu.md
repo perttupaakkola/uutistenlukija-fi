@@ -50,7 +50,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/harri-kirvesniemen-suksifirman-tuotannosta-valtaosa-menee-natolle-suksien-paino-aiheutti-aluksi-paanvaivaa-oli-ajateltava-taysin-uudentyyppista-ratkaisua"
-briefing: true
 draft: false
 ---
 
