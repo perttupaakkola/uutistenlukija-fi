@@ -21,7 +21,9 @@ pushes from the VPS.
 - `.github/workflows/staged-publish.yml` — every 15 min at staggered UTC minutes
   `13,28,43,58`: publish up to 3 outbox packets, build, deploy. The stagger avoids
   common quarter-hour contention because GitHub documents that scheduled events
-  can be delayed or dropped under load. Replaces the quiesced VPS
+  can be delayed or dropped under load. A host-authored outbox push also admits a
+  marker-gated max-1 run; publisher commits use `GITHUB_TOKEN` and cannot recurse.
+  Replaces the quiesced VPS
   `uutis-staged-publish` cron and resolves OPE-448's root cause (heavy local Hugo
   builds on the VPS) structurally.
 - `.github/workflows/daily-kooste.yml` — 18:07 UTC: generate kooste, push, build,

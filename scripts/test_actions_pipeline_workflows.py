@@ -477,6 +477,33 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
             self.workflow,
         )
 
+    def test_outbox_push_reuses_marker_gate_and_max_one_cap(self) -> None:
+        trigger_block = self.workflow[: self.workflow.index("\npermissions:")]
+        self.assertIn('"pipeline/queues/staged/outbox/**"', trigger_block)
+        self.assertNotIn('"pipeline/queues/staged/ready/**"', trigger_block)
+        self.assertIn(
+            'github.event_name }}" != "workflow_dispatch" ] && '
+            "[ ! -f pipeline/actions-publish.enabled ]",
+            self.workflow,
+        )
+
+        script = (
+            'python3() { printf "PUBLISHER_CALLED %s\\n" "$*"; }\n'
+            + self._publish_run_script()
+        )
+        env = os.environ.copy()
+        env.update({"GITHUB_EVENT_NAME": "push", "MAX_ARTICLES": "3"})
+        result = subprocess.run(
+            ["bash", "-c", script],
+            cwd=ROOT,
+            env=env,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("--max-articles 1 --git-push", result.stdout)
+
     def test_runway_cap_is_enforced_for_manual_actions_runs(self) -> None:
         self.assertIn('default: "3"', self.workflow)
         self.assertIn(

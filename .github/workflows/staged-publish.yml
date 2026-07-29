@@ -19,6 +19,7 @@ on:
     branches: [main]
     paths:
       - "pipeline/actions-publish.enabled"
+      - "pipeline/queues/staged/outbox/**"
       - ".github/workflows/staged-publish.yml"
   schedule:
     # Keep the 15-minute cadence off common quarter-hour boundaries. GitHub
