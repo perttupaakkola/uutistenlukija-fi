@@ -89,6 +89,8 @@
 {{ $hasCaption := and .Params.image_caption (ne .Params.image_caption "") }}
 {{ $hasCredit := and .Params.image_credit (ne .Params.image_credit "") }}
 {{ $hasSourceUrl := and .Params.image_source_url (ne .Params.image_source_url "") }}
+{{ $isCategoryFallback := or (eq .Params.image_category_fallback true) (eq .Params.image_source_type "category_fallback") }}
+{{ $showFallbackCaption := and (not $hasCaption) $isCategoryFallback }}
 
 {{/* ── Blur-up placeholder ────────────────────────────────────── */}}
 {{ $placeholder := .Params.image_placeholder }}
@@ -188,10 +190,10 @@
   })();
   </script>
   {{ end }}
-  {{ if or $hasCaption $hasCredit }}
+  {{ if or $hasCaption $hasCredit $showFallbackCaption }}
   <figcaption class="article-hero-caption">
-    {{ if $hasCaption }}
-      <span class="caption-text">{{ .Params.image_caption }}</span>
+    {{ if or $hasCaption $showFallbackCaption }}
+      <span class="caption-text">{{ if $hasCaption }}{{ .Params.image_caption }}{{ else }}Kuvituskuva{{ end }}</span>
     {{ end }}
     {{ if $hasCredit }}
       <span class="caption-credit">
