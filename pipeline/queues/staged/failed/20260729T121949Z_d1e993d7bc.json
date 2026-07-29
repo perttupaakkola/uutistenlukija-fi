@@ -260,5 +260,34 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20238151?origin=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-07-29T15:30:43.550119+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260729T121949Z_d1e993d7bc",
+    "category": "Talous",
+    "selected_source_words": 306,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 6.62,
+    "quality_reasons": [
+      "length under target (258 words)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "only 1 paragraphs (min 3)"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 258,
+    "title": "Närpiön pieni jäätelötehdas toimittaa jo yli 400 kauppaan – kasvu tuo laajennuspaineita"
+  },
+  "failure": "quality_gate_rejected: length under target (258 words); missing: image; readability few paragraphs (1); readability wall of text; only 1 paragraphs (min 3)"
 }

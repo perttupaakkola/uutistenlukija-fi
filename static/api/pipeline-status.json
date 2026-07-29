@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-29T11:30:58+00:00",
+  "generated_at": "2026-07-29T15:33:56+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,12 +12,18 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 14,
-    "rejected": 0,
+    "published": 15,
+    "rejected": 1,
     "publish_rate": 0,
-    "last_published_ts": "2026-07-29T11:27:48.738207+00:00"
+    "last_published_ts": "2026-07-29T15:30:43.712141+00:00"
   },
-  "reject_reasons": {},
+  "reject_reasons": {
+    "length under target (258 words": 1,
+    "missing: image": 1,
+    "readability few paragraphs (1)": 1,
+    "readability wall of text": 1,
+    "only 1 paragraphs (min 3)": 1
+  },
   "feeds": {
     "total": 0,
     "healthy": 0,
@@ -40,12 +46,12 @@
       10
     ],
     [
-      "vuoden",
+      "kertoo",
       9
     ],
     [
       "vaikka",
-      8
+      9
     ]
   ],
   "stagedQueueRunway": {
