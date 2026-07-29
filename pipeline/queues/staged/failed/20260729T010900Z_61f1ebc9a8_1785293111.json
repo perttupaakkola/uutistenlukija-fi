@@ -264,5 +264,39 @@
       }
     ],
     "source_url": "https://www.bbc.co.uk/news/articles/c70g6y24d76o?at_medium=RSS&at_campaign=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-07-29T02:45:11.277731+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260729T010900Z_61f1ebc9a8",
+    "category": "Ulkomaat",
+    "selected_source_words": 412,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 7.63,
+    "quality_reasons": [
+      "language borderline Finnish signal (10.0%)",
+      "length under target (267 words)",
+      "missing: image",
+      "unsourced numbers",
+      "source_confidence_denial_context_missing",
+      "unsourced_numbers: 21.45"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 21.45"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 267,
+    "title": "Iranin ohjukset ja vastaiskut Irakissa katkaisivat lyhyen tauon"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (10.0%); length under target (267 words); missing: image; unsourced numbers; source_confidence_denial_context_missing; unsourced_numbers: 21.45",
+  "duplicate_rejected_at": "2026-07-29T02:45:11.438659+00:00",
+  "duplicate_rejected": true
 }
