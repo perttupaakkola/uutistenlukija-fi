@@ -240,5 +240,36 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20238473?origin=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-07-29T19:48:57.938303+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260729T161017Z_5c19f789b4",
+    "category": "Kotimaa",
+    "selected_source_words": 311,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 6.71,
+    "quality_reasons": [
+      "length under target (270 words)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "only 1 paragraphs (min 3)"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 270,
+    "title": "Herttoniemestä löytynyt useita kuolleita kaneja – kuolinsyy selviää tutkimuksissa"
+  },
+  "failure": "quality_gate_rejected: length under target (270 words); missing: image; readability few paragraphs (1); readability wall of text; only 1 paragraphs (min 3)",
+  "duplicate_rejected_at": "2026-07-29T19:48:58.062296+00:00",
+  "duplicate_rejected": true
 }
