@@ -113,6 +113,51 @@ function contrastRatio(foreground, background) {
   return (lighter + 0.05) / (darker + 0.05);
 }
 
+function normalizeImageSource(value, baseUrl = DEFAULT_URL) {
+  const raw = String(value || "").trim();
+  if (!raw) return "";
+  try {
+    const parsed = new URL(raw, baseUrl);
+    const pathname = parsed.pathname.replace(/\/{2,}/g, "/");
+    const hostname = parsed.hostname.toLowerCase().replace(/^www\./, "");
+    const port = parsed.port ? `:${parsed.port}` : "";
+    return `${parsed.protocol.toLowerCase()}//${hostname}${port}${pathname}`;
+  } catch (_error) {
+    return raw.split(/[?#]/, 1)[0];
+  }
+}
+
+function riverCategoryFallbackIssues(imageSources, baseUrl = DEFAULT_URL) {
+  const normalized = imageSources
+    .slice(0, 12)
+    .map((source) => normalizeImageSource(source, baseUrl));
+  const fallbacks = normalized.map((source) => (
+    source.includes("/images/categories/") ? source : ""
+  ));
+  const issues = [];
+  const consecutive = new Set();
+  for (let index = 1; index < fallbacks.length; index += 1) {
+    if (fallbacks[index] && fallbacks[index] === fallbacks[index - 1]) {
+      consecutive.add(fallbacks[index]);
+    }
+  }
+  for (const source of consecutive) {
+    issues.push(`river category fallback repeated in consecutive cards ${source}`);
+  }
+
+  const counts = new Map();
+  for (const source of fallbacks) {
+    if (!source) continue;
+    counts.set(source, (counts.get(source) || 0) + 1);
+  }
+  for (const [source, count] of counts) {
+    if (count >= 3) {
+      issues.push(`river category fallback repeated ${count}/${normalized.length} cards ${source}`);
+    }
+  }
+  return issues;
+}
+
 function selfTest() {
   const whiteBlack = contrastRatio([255, 255, 255], [0, 0, 0]);
   const same = contrastRatio([10, 10, 10], [10, 10, 10]);
@@ -125,6 +170,33 @@ function selfTest() {
   const slug = timestampSlug(new Date("2026-06-03T22:00:00Z"));
   if (slug !== "20260603T220000Z") {
     throw new Error(`Unexpected timestamp slug: ${slug}`);
+  }
+
+  const talousFallback = "/images/categories/talous.jpg";
+  const currentPattern = [
+    talousFallback,
+    "https://www.uutistenlukija.fi/images/categories/talous.jpg?cache=1",
+    talousFallback,
+    talousFallback,
+    "/images/articles/distinct-a.jpg",
+    talousFallback,
+    talousFallback,
+    "/images/articles/distinct-b.jpg",
+    talousFallback,
+    talousFallback,
+    talousFallback,
+    talousFallback,
+  ];
+  const currentIssues = riverCategoryFallbackIssues(currentPattern);
+  if (!currentIssues.some((issue) => issue.includes("consecutive cards"))) {
+    throw new Error(`Current river fixture did not trigger consecutive fallback: ${currentIssues}`);
+  }
+  if (!currentIssues.some((issue) => issue.includes("10/12 cards"))) {
+    throw new Error(`Current river fixture did not trigger 10/12 fallback: ${currentIssues}`);
+  }
+  const imageFreeIssues = riverCategoryFallbackIssues(Array(12).fill(""));
+  if (imageFreeIssues.length !== 0) {
+    throw new Error(`Image-free river fixture unexpectedly failed: ${imageFreeIssues}`);
   }
 }
 
@@ -228,6 +300,13 @@ async function inspectPage(page) {
       issues.push(`homepage image fallback error state on ${failedFallbacks} prominent slots`);
     }
 
+    const riverCardImageSources = Array.from(document.querySelectorAll(".portal-river .portal-row-card"))
+      .slice(0, 12)
+      .map((card) => {
+        const img = card.querySelector("img");
+        return img && visible(img) ? imageSource(img) : "";
+      });
+
     const overflowingElements = Array.from(document.querySelectorAll("a,h1,h2,h3,p,li,button,input,textarea,select"))
       .filter(visible)
       .filter((element) => {
@@ -268,6 +347,8 @@ async function inspectPage(page) {
       requiredSelectors,
       horizontalOverflow,
       brokenImages,
+      riverCardCount: riverCardImageSources.length,
+      riverCardImageSources,
       overflowingElements,
       contrastChecks,
       issues,
@@ -347,7 +428,10 @@ async function runMonitor(args) {
       });
       const details = await inspectPage(page);
       const status = response ? response.status() : 0;
-      const issues = [...details.issues];
+      const issues = [
+        ...details.issues,
+        ...riverCategoryFallbackIssues(details.riverCardImageSources, details.url),
+      ];
       if (status < 200 || status >= 400) issues.push(`HTTP status ${status}`);
       results.push({
         viewport: viewport.name,

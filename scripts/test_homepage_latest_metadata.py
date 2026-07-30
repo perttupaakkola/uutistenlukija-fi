@@ -22,7 +22,7 @@ def compact_css(path: Path) -> str:
 class HomepageLatestMetadataTest(unittest.TestCase):
     def test_source_metadata_preserves_story_links_and_order(self) -> None:
         template = INDEX_TEMPLATE.read_text(encoding="utf-8")
-        card = template.split('<article class="portal-row-card">', 1)[1].split(
+        card = template.split('<article class="portal-row-card{{', 1)[1].split(
             "</article>", 1
         )[0]
 
@@ -41,6 +41,34 @@ class HomepageLatestMetadataTest(unittest.TestCase):
         self.assertLess(card.index(source), card.index(timestamp))
         self.assertEqual(card.count('href="{{ .RelPermalink }}"'), 2)
         self.assertNotIn("data-track", card)
+
+    def test_category_fallback_and_runtime_failure_are_image_free(self) -> None:
+        template = INDEX_TEMPLATE.read_text(encoding="utf-8")
+        card = template.split('<article class="portal-row-card{{', 1)[1].split(
+            "</article>", 1
+        )[0]
+
+        self.assertIn(
+            '(strings.Contains $img "/images/categories/")',
+            template,
+        )
+        self.assertIn("portal-row-card--no-image", card)
+        self.assertIn("{{ if not $isCategoryFallback }}", card)
+        self.assertIn("card.classList.add('portal-row-card--no-image')", card)
+        self.assertIn("thumb.hidden=true", card)
+        self.assertNotIn("this.src=", card)
+
+        expected_rules = (
+            ".portal-row-card.portal-row-card--no-image{"
+            "grid-template-columns:minmax(0,1fr)}",
+            ".portal-row-card--no-image>div{grid-column:1/-1;min-width:0}",
+            ".portal-row-card--no-image.portal-row-card__thumb{display:none}",
+        )
+        for stylesheet in PORTAL_CSS:
+            compact = compact_css(stylesheet)
+            with self.subTest(stylesheet=stylesheet.relative_to(ROOT)):
+                for rule in expected_rules:
+                    self.assertIn(rule, compact)
 
     def test_mobile_metadata_has_scoped_readability_contract(self) -> None:
         expected = (

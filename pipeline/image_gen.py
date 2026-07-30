@@ -9,21 +9,156 @@ Hardening:
 """
 import os
 import json
+import socket
 import time
 import threading
 import urllib.request
 import urllib.error
+from dataclasses import dataclass, field
 from typing import Any, List, Dict, Optional
 
 KIE_API_KEY = os.environ.get("KIE_API_KEY", "")
 KIE_BASE_URL = "https://api.kie.ai"
-IMAGE_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "static", "images", "articles")
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+IMAGE_DIR = os.path.join(PROJECT_ROOT, "static", "images", "articles")
+REJECTED_IMAGE_DIR = os.path.join(
+    PROJECT_ROOT,
+    "pipeline",
+    "rejected",
+    "generated-images",
+)
 
 PER_ARTICLE_TIMEOUT = 90     # seconds — if Kie.ai hasn't responded, it won't
 MAX_TOTAL_SEC = 300           # seconds — hard cap on entire image_gen call
 CIRCUIT_BREAKER_THRESHOLD = 1  # consecutive failures before giving up the whole batch
 IMAGE_DOWNLOAD_MAX_BYTES = 20 * 1024 * 1024
 IMAGE_DOWNLOAD_USER_AGENT = "uutistenlukija-image-fetch/1.0"
+TRANSIENT_POLL_HTTP_STATUS = frozenset({408, 425, 429})
+POLL_INTERVAL_SEC = 5
+IMAGE_TERMINAL_SCHEMA = "uutistenlukija.image_terminal.v1"
+GENERATION_TERMINAL_FIELD = "image_generation_terminal"
+IMAGE_TERMINAL_REASONS_FIELD = "image_terminal_reasons"
+
+REASON_ACCEPTED = "accepted"
+REASON_STOCK_REJECTION = "stock_rejection"
+REASON_KEY_UNAVAILABLE = "key_unavailable"
+REASON_BACKOFF = "backoff"
+REASON_PROVIDER_HTTP = "provider_http_status"
+REASON_PROVIDER_RUNTIME = "provider_runtime_fault"
+REASON_TIMEOUT = "timeout"
+REASON_PRE_SAFETY_REJECT = "pre_safety_reject"
+REASON_VISUAL_REJECT = "visual_reject"
+REASON_CATEGORY_FALLBACK = "category_fallback"
+
+
+@dataclass(frozen=True)
+class GeneratedImageResult:
+    """One non-secret generated-image outcome.
+
+    ``raster_properties`` contains objective format/dimension diagnostics.
+    ``pixel_semantics`` is reserved for semantic evidence produced by a trusted
+    analyzer from decoded pixels. Provider-controlled embedded text, requested
+    prompts, and negative constraints must never populate that trusted channel.
+    """
+
+    image_path: Optional[str]
+    prompt: str
+    terminal: dict[str, Any]
+    raster_properties: dict[str, Any] = field(default_factory=dict)
+    pixel_semantics: dict[str, Any] = field(default_factory=dict)
+
+
+@dataclass(frozen=True)
+class _PollResult:
+    image_url: Optional[str]
+    reason: str = ""
+    provider_fault: bool = False
+    http_status_class: Optional[str] = None
+
+
+def build_image_terminal_reason(
+    *,
+    stage: str,
+    reason: str,
+    outcome: str,
+    provider_fault: bool = False,
+    provider_attempted: bool = False,
+    provider_succeeded: bool = False,
+    http_status_class: Optional[str] = None,
+) -> dict[str, Any]:
+    """Return a stable, non-secret image terminal record."""
+    result: dict[str, Any] = {
+        "schema": IMAGE_TERMINAL_SCHEMA,
+        "stage": stage,
+        "reason": reason,
+        "outcome": outcome,
+        "provider_fault": bool(provider_fault),
+        "provider_attempted": bool(provider_attempted),
+        "provider_succeeded": bool(provider_succeeded),
+    }
+    if http_status_class:
+        result["http_status_class"] = http_status_class
+    return result
+
+
+def append_image_terminal_reason(article: dict[str, Any], terminal: dict[str, Any]) -> None:
+    """Append one deduplicated terminal record to an article."""
+    existing = list(article.get(IMAGE_TERMINAL_REASONS_FIELD) or [])
+    identity = (
+        terminal.get("stage"),
+        terminal.get("reason"),
+        terminal.get("outcome"),
+        terminal.get("http_status_class"),
+    )
+    if not any(
+        (
+            row.get("stage"),
+            row.get("reason"),
+            row.get("outcome"),
+            row.get("http_status_class"),
+        ) == identity
+        for row in existing
+        if isinstance(row, dict)
+    ):
+        existing.append(dict(terminal))
+    article[IMAGE_TERMINAL_REASONS_FIELD] = existing
+
+
+def set_generation_terminal(article: dict[str, Any], terminal: dict[str, Any]) -> None:
+    """Persist the generated stage result and its cross-stage trace."""
+    article[GENERATION_TERMINAL_FIELD] = dict(terminal)
+    append_image_terminal_reason(article, terminal)
+
+
+def _http_status_class(status: int) -> str:
+    if 100 <= int(status) <= 599:
+        return f"{int(status) // 100}xx"
+    return "unknown"
+
+
+def _provider_error_terminal(exc: BaseException) -> dict[str, Any]:
+    if isinstance(exc, urllib.error.HTTPError):
+        return build_image_terminal_reason(
+            stage="generated",
+            reason=REASON_PROVIDER_HTTP,
+            outcome="provider_fault",
+            provider_fault=True,
+            provider_attempted=True,
+            http_status_class=_http_status_class(exc.code),
+        )
+    if isinstance(exc, (TimeoutError, socket.timeout)):
+        reason = REASON_TIMEOUT
+    elif isinstance(exc, urllib.error.URLError) and isinstance(exc.reason, (TimeoutError, socket.timeout)):
+        reason = REASON_TIMEOUT
+    else:
+        reason = REASON_PROVIDER_RUNTIME
+    return build_image_terminal_reason(
+        stage="generated",
+        reason=reason,
+        outcome="provider_fault",
+        provider_fault=True,
+        provider_attempted=True,
+    )
 
 
 def _kie_request(endpoint: str, data: dict) -> dict:
@@ -70,6 +205,34 @@ def _image_extension(content_type: str, prefix: bytes) -> Optional[str]:
     return None
 
 
+def _inspect_generated_image(filepath: str) -> dict[str, Any]:
+    """Validate one raster and return only objective properties.
+
+    EXIF and ``Image.info`` text are controlled by the image provider. They are
+    deliberately ignored because they cannot authorize unrelated pixels. Until
+    a trusted pixel analyzer supplies semantic evidence, the downstream visual
+    judge sees no semantic description and therefore remains fail-closed.
+    """
+    try:
+        from PIL import Image
+
+        with Image.open(filepath) as image:
+            observed: dict[str, Any] = {
+                "image_format": str(image.format or "").lower(),
+                "image_width": int(image.width),
+                "image_height": int(image.height),
+            }
+            image.verify()
+
+        return observed
+    except Exception as exc:
+        print(
+            "[image_gen] Generated image metadata unavailable "
+            f"type={exc.__class__.__name__}"
+        )
+        return {}
+
+
 def _download_generated_image(image_url: str, output_stem: str) -> str:
     """Download a generated image with provider-compatible headers and validation."""
     req = urllib.request.Request(
@@ -113,20 +276,29 @@ def _download_generated_image(image_url: str, output_stem: str) -> str:
             os.remove(part_path)
 
 
-def _poll_task_with_timeout(task_id: str, timeout_sec: int = PER_ARTICLE_TIMEOUT) -> Optional[str]:
-    """Poll for task completion with a hard wall-clock timeout via threading.Timer.
+def _is_transient_poll_http_status(status: int) -> bool:
+    return int(status) in TRANSIENT_POLL_HTTP_STATUS or 500 <= int(status) <= 599
 
-    Returns image URL or None.
-    """
-    result_holder: List[Optional[str]] = [None]
+
+def _poll_task_with_timeout(task_id: str, timeout_sec: int = PER_ARTICLE_TIMEOUT) -> _PollResult:
+    """Poll for task completion and preserve the typed terminal reason."""
+    result_holder: List[_PollResult] = [
+        _PollResult(None, reason=REASON_TIMEOUT, provider_fault=True)
+    ]
     done_event = threading.Event()
 
+    def _finish(result: _PollResult) -> None:
+        if done_event.is_set():
+            return
+        result_holder[0] = result
+        done_event.set()
+
     def _poll():
-        start = time.time()
+        deadline = time.monotonic() + timeout_sec
         while not done_event.is_set():
-            if time.time() - start >= timeout_sec:
+            if time.monotonic() >= deadline:
                 print(f"[image_gen] Task {task_id} poll loop timed out ({timeout_sec}s)")
-                done_event.set()
+                _finish(_PollResult(None, reason=REASON_TIMEOUT, provider_fault=True))
                 return
             try:
                 result = _kie_get("/api/v1/jobs/recordInfo", {"taskId": task_id})
@@ -134,18 +306,45 @@ def _poll_task_with_timeout(task_id: str, timeout_sec: int = PER_ARTICLE_TIMEOUT
                 if state == "success":
                     rj = json.loads(result["data"]["resultJson"])
                     urls = rj.get("resultUrls", [])
-                    result_holder[0] = urls[0] if urls else None
-                    done_event.set()
+                    if urls:
+                        _finish(_PollResult(str(urls[0])))
+                    else:
+                        _finish(_PollResult(None, reason=REASON_PROVIDER_RUNTIME, provider_fault=True))
                     return
                 elif state == "fail":
-                    print(f"[image_gen] Task {task_id} failed: {result['data'].get('failMsg', 'unknown')}")
-                    done_event.set()
+                    print(f"[image_gen] Task {task_id} failed with provider terminal state")
+                    _finish(_PollResult(None, reason=REASON_PROVIDER_RUNTIME, provider_fault=True))
                     return
-            except Exception as e:
-                if not done_event.is_set():
-                    print(f"[image_gen] Poll error: {e}")
+            except urllib.error.HTTPError as exc:
+                status_class = _http_status_class(exc.code)
+                if _is_transient_poll_http_status(exc.code):
+                    print(
+                        "[image_gen] Poll transient HTTP failure "
+                        f"class={status_class}; retrying"
+                    )
+                else:
+                    print(f"[image_gen] Poll permanent HTTP failure class={status_class}")
+                    _finish(_PollResult(
+                        None,
+                        reason=REASON_PROVIDER_HTTP,
+                        provider_fault=True,
+                        http_status_class=status_class,
+                    ))
+                    return
+            except (TimeoutError, socket.timeout):
+                print("[image_gen] Poll request timed out; retrying")
+            except urllib.error.URLError:
+                print("[image_gen] Poll transient transport failure; retrying")
+            except Exception as exc:
+                print(f"[image_gen] Poll runtime failure type={exc.__class__.__name__}")
+                _finish(_PollResult(None, reason=REASON_PROVIDER_RUNTIME, provider_fault=True))
+                return
             if not done_event.is_set():
-                time.sleep(5)
+                remaining = deadline - time.monotonic()
+                if remaining <= 0:
+                    _finish(_PollResult(None, reason=REASON_TIMEOUT, provider_fault=True))
+                    return
+                time.sleep(min(POLL_INTERVAL_SEC, remaining))
 
     # Start poll thread
     poll_thread = threading.Thread(target=_poll, daemon=True)
@@ -155,7 +354,7 @@ def _poll_task_with_timeout(task_id: str, timeout_sec: int = PER_ARTICLE_TIMEOUT
     def _timeout_trigger():
         if not done_event.is_set():
             print(f"[image_gen] Hard timeout ({timeout_sec}s) for task {task_id}")
-            done_event.set()
+            _finish(_PollResult(None, reason=REASON_TIMEOUT, provider_fault=True))
 
     timer = threading.Timer(timeout_sec, _timeout_trigger)
     timer.start()
@@ -164,6 +363,62 @@ def _poll_task_with_timeout(task_id: str, timeout_sec: int = PER_ARTICLE_TIMEOUT
     timer.cancel()
 
     return result_holder[0]
+
+
+def _generated_image_local_path(image_path: str) -> Optional[str]:
+    """Resolve one generated web path inside IMAGE_DIR, rejecting traversal."""
+    prefix = "/images/articles/"
+    value = str(image_path or "")
+    if not value.startswith(prefix):
+        return None
+    relative = value[len(prefix):]
+    if not relative or os.path.basename(relative) != relative:
+        return None
+    root = os.path.realpath(IMAGE_DIR)
+    candidate = os.path.realpath(os.path.join(root, relative))
+    try:
+        if os.path.commonpath([root, candidate]) != root:
+            return None
+    except ValueError:
+        return None
+    return candidate
+
+
+def _quarantine_rejected_generated_image(image_path: str) -> bool:
+    """Move one rejected generated asset out of the successful cache path."""
+    local_path = _generated_image_local_path(image_path)
+    if not local_path or not os.path.isfile(local_path):
+        return False
+    try:
+        os.makedirs(REJECTED_IMAGE_DIR, exist_ok=True)
+        quarantine_path = os.path.join(
+            REJECTED_IMAGE_DIR,
+            os.path.basename(local_path),
+        )
+        os.replace(local_path, quarantine_path)
+        print(
+            "[image_gen] Quarantined rejected generated image "
+            f"{os.path.basename(local_path)}"
+        )
+        return True
+    except OSError as exc:
+        print(
+            "[image_gen] Failed to quarantine rejected generated image "
+            f"type={exc.__class__.__name__}"
+        )
+        try:
+            os.remove(local_path)
+            print(
+                "[image_gen] Removed rejected generated image after "
+                "quarantine failure"
+            )
+            return True
+        except OSError as remove_exc:
+            print(
+                "[image_gen] Failed to remove rejected generated image "
+                f"type={remove_exc.__class__.__name__}"
+            )
+            return False
 
 
 def _build_alt_text(title: str, category: str) -> str:
@@ -211,18 +466,26 @@ def generate_article_image(
     slug: str,
     *,
     intent: dict[str, Any] | None = None,
-) -> Optional[tuple[str, str]]:
-    """Generate a header image for an article. Returns (relative path, prompt) or None."""
+) -> GeneratedImageResult:
+    """Generate one header image and return a typed non-secret result."""
     os.makedirs(IMAGE_DIR, exist_ok=True)
 
     output_stem = os.path.join(IMAGE_DIR, slug)
+    prompt = _build_generation_prompt(title, category, intent)
     for extension in (".jpg", ".png", ".webp"):
         filepath = f"{output_stem}{extension}"
         if os.path.exists(filepath):
             webpath = f"/images/articles/{slug}{extension}"
-            return webpath, _build_generation_prompt(title, category, intent)
-
-    prompt = _build_generation_prompt(title, category, intent)
+            return GeneratedImageResult(
+                webpath,
+                prompt,
+                build_image_terminal_reason(
+                    stage="generated",
+                    reason=REASON_ACCEPTED,
+                    outcome="accepted",
+                ),
+                raster_properties=_inspect_generated_image(filepath),
+            )
 
     try:
         result = _kie_request("/api/v1/jobs/createTask", {
@@ -237,23 +500,87 @@ def generate_article_image(
         task_id = result.get("data", {}).get("taskId")
         if not task_id:
             print(f"[image_gen] No taskId returned for '{title[:40]}'")
-            return None
+            return GeneratedImageResult(
+                None,
+                prompt,
+                build_image_terminal_reason(
+                    stage="generated",
+                    reason=REASON_PROVIDER_RUNTIME,
+                    outcome="provider_fault",
+                    provider_fault=True,
+                    provider_attempted=True,
+                ),
+            )
 
         print(f"[image_gen] Task {task_id} for '{title[:40]}'")
 
-        image_url = _poll_task_with_timeout(task_id, timeout_sec=PER_ARTICLE_TIMEOUT)
-        if not image_url:
-            return None
+        poll_result = _poll_task_with_timeout(task_id, timeout_sec=PER_ARTICLE_TIMEOUT)
+        if not poll_result.image_url:
+            return GeneratedImageResult(
+                None,
+                prompt,
+                build_image_terminal_reason(
+                    stage="generated",
+                    reason=poll_result.reason or REASON_PROVIDER_RUNTIME,
+                    outcome="provider_fault",
+                    provider_fault=bool(poll_result.provider_fault),
+                    provider_attempted=True,
+                    http_status_class=poll_result.http_status_class,
+                ),
+            )
 
-        filepath = _download_generated_image(image_url, output_stem)
+        filepath = _download_generated_image(poll_result.image_url, output_stem)
         webpath = f"/images/articles/{os.path.basename(filepath)}"
         size = os.path.getsize(filepath)
         print(f"[image_gen] Downloaded {os.path.basename(filepath)} ({size} bytes)")
-        return webpath, prompt
+        return GeneratedImageResult(
+            webpath,
+            prompt,
+            build_image_terminal_reason(
+                stage="generated",
+                reason=REASON_ACCEPTED,
+                outcome="accepted",
+                provider_attempted=True,
+                provider_succeeded=True,
+            ),
+            raster_properties=_inspect_generated_image(filepath),
+        )
 
-    except Exception as e:
-        print(f"[image_gen] Error generating image for '{title[:40]}': {e}")
-        return None
+    except Exception as exc:
+        terminal = _provider_error_terminal(exc)
+        safe_class = terminal.get("http_status_class") or exc.__class__.__name__
+        print(f"[image_gen] Generation provider failure for '{title[:40]}' type={safe_class}")
+        return GeneratedImageResult(None, prompt, terminal)
+
+
+def _coerce_generated_result(value: Any) -> GeneratedImageResult:
+    """Keep legacy test/caller tuples fail-closed while migrating the API."""
+    if isinstance(value, GeneratedImageResult):
+        return value
+    if isinstance(value, tuple) and len(value) == 2:
+        image_path, prompt = value
+        return GeneratedImageResult(
+            str(image_path) if image_path else None,
+            str(prompt or ""),
+            build_image_terminal_reason(
+                stage="generated",
+                reason=REASON_ACCEPTED,
+                outcome="accepted",
+                provider_attempted=True,
+                provider_succeeded=True,
+            ),
+        )
+    return GeneratedImageResult(
+        None,
+        "",
+        build_image_terminal_reason(
+            stage="generated",
+            reason=REASON_PROVIDER_RUNTIME,
+            outcome="provider_fault",
+            provider_fault=True,
+            provider_attempted=True,
+        ),
+    )
 
 
 def generate_images_for_articles(articles: List[Dict], max_total_sec: int = MAX_TOTAL_SEC) -> List[Dict]:
@@ -263,11 +590,12 @@ def generate_images_for_articles(articles: List[Dict], max_total_sec: int = MAX_
         articles: List of article dicts to process.
         max_total_sec: Hard cap on total wall-clock time for the entire batch.
 
-    Circuit breaker: if CIRCUIT_BREAKER_THRESHOLD consecutive articles fail,
-    skip the rest (API is probably down).
+    Circuit breaker: only consecutive provider/runtime faults trip it. Safety
+    and visual-policy rejections remain fail-closed without poisoning provider
+    health or blocking the next article.
     """
     step_start = time.time()
-    consecutive_failures = 0
+    consecutive_provider_failures = 0
 
     for i, article in enumerate(articles):
         # Hard total budget check
@@ -276,12 +604,30 @@ def generate_images_for_articles(articles: List[Dict], max_total_sec: int = MAX_
             remaining = len(articles) - i
             print(f"[image_gen] Total budget {max_total_sec}s exhausted after {elapsed:.0f}s. "
                   f"Skipping {remaining} remaining articles.")
+            for pending in articles[i:]:
+                set_generation_terminal(
+                    pending,
+                    build_image_terminal_reason(
+                        stage="generated",
+                        reason=REASON_TIMEOUT,
+                        outcome="skipped",
+                    ),
+                )
             break
 
         # Circuit breaker
-        if consecutive_failures >= CIRCUIT_BREAKER_THRESHOLD:
-            print(f"[image_gen] Circuit breaker tripped ({consecutive_failures} consecutive failures). "
+        if consecutive_provider_failures >= CIRCUIT_BREAKER_THRESHOLD:
+            print(f"[image_gen] Circuit breaker tripped ({consecutive_provider_failures} provider failures). "
                   f"Skipping remaining {len(articles) - i} articles.")
+            for pending in articles[i:]:
+                set_generation_terminal(
+                    pending,
+                    build_image_terminal_reason(
+                        stage="generated",
+                        reason=REASON_BACKOFF,
+                        outcome="skipped",
+                    ),
+                )
             break
 
         title = article.get("title", "")
@@ -311,59 +657,106 @@ def generate_images_for_articles(articles: List[Dict], max_total_sec: int = MAX_
                 content=article.get("content", "") or "",
             )
             intent = brief.intent.to_dict()
-        except Exception:
-            brief = {}
-            intent = {}
-
-        if intent and not intent.get("generated_ok", True):
-            print(f"[image_gen] Generated fallback unsafe for '{title[:40]}'")
-            consecutive_failures += 1
+        except Exception as exc:
+            print(f"[image_gen] Visual brief unavailable type={exc.__class__.__name__}")
+            set_generation_terminal(
+                article,
+                build_image_terminal_reason(
+                    stage="generated",
+                    reason=REASON_PRE_SAFETY_REJECT,
+                    outcome="policy_reject",
+                ),
+            )
             continue
 
-        generated = generate_article_image(title, category, slug, intent=intent)
-        if generated:
-            image_path, prompt = generated
-            try:
-                judge = judge_visual_candidate(
-                    {
-                        "id": image_path,
-                        "alt": prompt,
-                        "description": " ".join((brief.acceptable_concepts if hasattr(brief, "acceptable_concepts") else []) or []),
-                        "url": image_path,
-                    },
-                    brief=brief,
-                    provider="generated",
-                )
-            except Exception:
-                judge = {"score": 0, "accepted": False, "reasons": ["visual judge unavailable"]}
-            if hasattr(judge, "accepted") and not judge.accepted:
-                consecutive_failures += 1
-                print(f"[image_gen] Generated image rejected by visual judge for '{title[:40]}'")
-                continue
-            article["image"] = image_path
-            article["image_alt"] = _build_alt_text(title, category)
-            article["image_thumb"] = image_path
-            article["image_credit"] = ""
-            article["image_source_url"] = ""
-            article["image_caption"] = ""
-            article["image_hotlink"] = False
-            article["image_category_fallback"] = False
-            article.update(generated_decision_fields(
-                provider="kie.ai",
-                model="z-image",
-                prompt=prompt,
-                image_path=image_path,
-                brief=brief,
-                judge=judge,
-                reason="stock candidates unavailable or rejected; KIE generated editorial fallback accepted",
-            ))
-            consecutive_failures = 0  # reset on success
-        else:
-            consecutive_failures += 1
-            print(f"[image_gen] Failure #{consecutive_failures} (consecutive) for '{title[:40]}'")
+        if not intent or not intent.get("generated_ok", True):
+            print(f"[image_gen] Generated fallback unsafe for '{title[:40]}'")
+            set_generation_terminal(
+                article,
+                build_image_terminal_reason(
+                    stage="generated",
+                    reason=REASON_PRE_SAFETY_REJECT,
+                    outcome="policy_reject",
+                ),
+            )
+            continue
 
-        # Rate limit — skip after last article
-        if i < len(articles) - 1:
+        generated = _coerce_generated_result(
+            generate_article_image(title, category, slug, intent=intent)
+        )
+        # Throttle every real provider attempt before any post-call branch can
+        # continue to the next article. Cached images and pre-provider policy,
+        # key, budget, or backoff terminals keep provider_attempted=false.
+        if generated.terminal.get("provider_attempted") and i < len(articles) - 1:
             time.sleep(2)
+
+        if not generated.image_path:
+            set_generation_terminal(article, generated.terminal)
+            if generated.terminal.get("provider_fault"):
+                consecutive_provider_failures += 1
+            print(
+                f"[image_gen] Generated terminal for '{title[:40]}' "
+                f"reason={generated.terminal.get('reason')}"
+            )
+            continue
+
+        if generated.terminal.get("provider_succeeded"):
+            consecutive_provider_failures = 0
+
+        try:
+            # Only semantic evidence derived from decoded pixels belongs in the
+            # visual judge. Objective raster properties, embedded provider text,
+            # and the requested prompt are not evidence of depicted content.
+            judge = judge_visual_candidate(
+                dict(generated.pixel_semantics or {}),
+                brief=brief,
+                provider="generated",
+            )
+        except Exception as exc:
+            print(f"[image_gen] Visual judge unavailable type={exc.__class__.__name__}")
+            judge = {"score": 0, "accepted": False, "reasons": ["visual judge unavailable"]}
+
+        judge_dict = judge.to_dict() if hasattr(judge, "to_dict") else dict(judge or {})
+        if not bool(judge_dict.get("accepted")):
+            terminal = build_image_terminal_reason(
+                stage="generated",
+                reason=REASON_VISUAL_REJECT,
+                outcome="policy_reject",
+                provider_attempted=bool(generated.terminal.get("provider_attempted")),
+                provider_succeeded=bool(generated.terminal.get("provider_succeeded")),
+            )
+            terminal["visual_judge_score"] = judge_dict.get("score")
+            terminal["visual_judge_hard_fail"] = bool(judge_dict.get("hard_fail"))
+            set_generation_terminal(article, terminal)
+            _quarantine_rejected_generated_image(generated.image_path)
+            print(f"[image_gen] Generated image rejected by visual judge for '{title[:40]}'")
+            continue
+
+        image_path = generated.image_path
+        article["image"] = image_path
+        article["image_alt"] = _build_alt_text(title, category)
+        article["image_thumb"] = image_path
+        article["image_credit"] = ""
+        article["image_source_url"] = ""
+        article["image_caption"] = ""
+        article["image_hotlink"] = False
+        article["image_category_fallback"] = False
+        article.update(generated_decision_fields(
+            provider="kie.ai",
+            model="z-image",
+            prompt=generated.prompt,
+            image_path=image_path,
+            brief=brief,
+            judge=judge,
+            reason="stock candidates unavailable or rejected; KIE generated editorial fallback accepted",
+        ))
+        accepted_terminal = build_image_terminal_reason(
+            stage="generated",
+            reason=REASON_ACCEPTED,
+            outcome="accepted",
+            provider_attempted=bool(generated.terminal.get("provider_attempted")),
+            provider_succeeded=bool(generated.terminal.get("provider_succeeded")),
+        )
+        set_generation_terminal(article, accepted_terminal)
 
     return articles
