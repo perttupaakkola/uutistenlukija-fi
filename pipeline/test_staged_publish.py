@@ -110,7 +110,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
              patch.object(
                  staged_publish,
                  "select_research_candidates",
-                 side_effect=lambda candidates, max_candidates: candidates,
+                 side_effect=lambda candidates, max_candidates, **kwargs: candidates,
              ), \
              patch.object(staged_publish, "enrich_with_research", side_effect=lambda candidates: candidates), \
              patch.object(

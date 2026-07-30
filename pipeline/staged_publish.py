@@ -35,6 +35,7 @@ for sub in ["ready", "writing", "outbox", "published", "failed"]:
 
 # Make local pipeline imports work when run from cron.
 sys.path.insert(0, str(PIPELINE_DIR))
+sys.path.insert(0, str(PROJECT_DIR))
 
 from scanner import scan_all_feeds  # noqa: E402
 from firehose import poll_firehose  # noqa: E402
@@ -64,6 +65,7 @@ from monica_writer import (  # noqa: E402
 )
 from quality_gate import score_article, run_gate as run_quality_gate  # noqa: E402
 from publish_preflight import evaluate_publish_preflight  # noqa: E402
+from scripts.category_distribution import count_articles  # noqa: E402
 
 
 def log(msg: str) -> None:
@@ -164,6 +166,8 @@ def stable_digest(article: dict) -> str:
 
 
 TALOUS_RESEARCH_MIN_CANDIDATES = 2
+TALOUS_RESEARCH_BELOW_FLOOR_MIN_CANDIDATES = 3
+TALOUS_INTERIM_SHARE_FLOOR = 0.15
 TALOUS_SOURCE_FLOOR_COOLDOWN_SCHEMA = "uutistenlukija.talous_source_floor_cooldown.v1"
 
 
@@ -257,7 +261,39 @@ def record_talous_source_floor_rejections(
     return rejected
 
 
-def select_research_candidates(articles: list[dict], max_candidates: int | None) -> list[dict]:
+def talous_interim_priority_state(counts: dict[str, int] | None = None) -> dict[str, Any]:
+    """Return repository-backed Talous share and bounded priority state."""
+    try:
+        category_counts = count_articles() if counts is None else counts
+    except Exception as exc:
+        return {
+            "active": False,
+            "talous_count": 0,
+            "total": 0,
+            "share": None,
+            "floor": TALOUS_INTERIM_SHARE_FLOOR,
+            "reason": f"category_count_unavailable:{exc.__class__.__name__}",
+        }
+
+    total = sum(int(count or 0) for count in category_counts.values())
+    talous_count = int(category_counts.get("Talous", 0) or 0)
+    share = talous_count / total if total else None
+    return {
+        "active": share is not None and share < TALOUS_INTERIM_SHARE_FLOOR,
+        "talous_count": talous_count,
+        "total": total,
+        "share": share,
+        "floor": TALOUS_INTERIM_SHARE_FLOOR,
+        "reason": "below_interim_floor" if share is not None and share < TALOUS_INTERIM_SHARE_FLOOR else "at_or_above_interim_floor",
+    }
+
+
+def select_research_candidates(
+    articles: list[dict],
+    max_candidates: int | None,
+    *,
+    talous_priority_active: bool = False,
+) -> list[dict]:
     if not max_candidates or max_candidates <= 0 or len(articles) <= max_candidates:
         return articles
     selected = list(articles[:max_candidates])
@@ -267,7 +303,12 @@ def select_research_candidates(articles: list[dict], max_candidates: int | None)
         if not priority_candidates:
             continue
         selected_priority = [article for article in selected if article_category(article) == category]
-        target_count = min(len(priority_candidates), TALOUS_RESEARCH_MIN_CANDIDATES)
+        priority_floor = (
+            TALOUS_RESEARCH_BELOW_FLOOR_MIN_CANDIDATES
+            if category == "Talous" and talous_priority_active
+            else TALOUS_RESEARCH_MIN_CANDIDATES
+        )
+        target_count = min(len(priority_candidates), priority_floor)
         for candidate in priority_candidates:
             if len(selected_priority) >= target_count:
                 break
@@ -1193,7 +1234,29 @@ def cmd_scan(args: argparse.Namespace) -> int:
     if not articles:
         return 0
 
-    articles = select_research_candidates(articles, args.max_research_candidates)
+    talous_priority = talous_interim_priority_state()
+    share_label = (
+        f"{talous_priority['share'] * 100:.1f}%"
+        if talous_priority["share"] is not None
+        else "unavailable"
+    )
+    research_min = (
+        TALOUS_RESEARCH_BELOW_FLOOR_MIN_CANDIDATES
+        if talous_priority["active"]
+        else TALOUS_RESEARCH_MIN_CANDIDATES
+    )
+    log(
+        "scan-stage: talous_interim_priority "
+        f"active={str(talous_priority['active']).lower()} "
+        f"content_mix={talous_priority['talous_count']}/{talous_priority['total']} "
+        f"share={share_label} floor={TALOUS_INTERIM_SHARE_FLOOR * 100:.1f}% "
+        f"research_min={research_min} reason={talous_priority['reason']}"
+    )
+    articles = select_research_candidates(
+        articles,
+        args.max_research_candidates,
+        talous_priority_active=talous_priority["active"],
+    )
     log_scan_stage("research_candidates", articles)
     articles = enrich_with_research(articles)
     log_scan_research_buckets("research_result", articles)
