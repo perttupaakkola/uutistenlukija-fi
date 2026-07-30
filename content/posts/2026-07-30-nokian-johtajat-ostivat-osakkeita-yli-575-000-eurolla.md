@@ -58,7 +58,6 @@ source_attributions:
     url: "https://nokia.com/newsroom/nokia-corporation-managers-transactions-hammar%C3%A9n-844266"
   - name: "Nokia: Mahajanin johtohenkilökauppa"
     url: "https://nokia.com/newsroom/nokia-corporation-managers-transactions-mahajan"
-briefing: true
 draft: false
 ---
 
