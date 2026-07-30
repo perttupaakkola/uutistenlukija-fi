@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-07-29T21:01:09+00:00",
+  "generated_at": "2026-07-30T04:08:42+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,18 +12,12 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 9,
-    "rejected": 1,
+    "published": 7,
+    "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-07-29T20:58:02.216133+00:00"
+    "last_published_ts": "2026-07-30T04:05:21.719977+00:00"
   },
-  "reject_reasons": {
-    "length under target (268 words": 1,
-    "missing: image": 1,
-    "readability few paragraphs (1)": 1,
-    "readability wall of text": 1,
-    "only 1 paragraphs (min 3)": 1
-  },
+  "reject_reasons": {},
   "feeds": {
     "total": 0,
     "healthy": 0,
@@ -34,12 +28,8 @@
   },
   "trending": [
     [
-      "jälkeen",
+      "euroa",
       11
-    ],
-    [
-      "kertoo",
-      8
     ],
     [
       "eräpäivä",
@@ -50,12 +40,16 @@
       8
     ],
     [
-      "vaikka",
+      "nokian",
+      7
+    ],
+    [
+      "euron",
       7
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 1,
+    "readyCount": 0,
     "writingCount": 0,
     "outboxCount": 0,
     "publisherEnabled": true,
@@ -69,7 +63,7 @@
       "publisher_enabled",
       "scanner_enabled",
       "worker_enabled",
-      "queue_active"
+      "queue_idle"
     ]
   }
 }
