@@ -46,7 +46,19 @@ from publisher import build_site, effective_category, publish_articles  # noqa: 
 from unsplash import fetch_images_for_articles as unsplash_fetch_images  # noqa: E402
 from pexels import fetch_images_for_articles as pexels_fetch_images  # noqa: E402
 from image_candidate_guard import category_fallback_fields  # noqa: E402
-from image_gen import generate_images_for_articles  # noqa: E402
+from image_gen import (  # noqa: E402
+    GENERATION_TERMINAL_FIELD,
+    IMAGE_TERMINAL_REASONS_FIELD,
+    REASON_BACKOFF,
+    REASON_CATEGORY_FALLBACK,
+    REASON_KEY_UNAVAILABLE,
+    REASON_PROVIDER_RUNTIME,
+    REASON_STOCK_REJECTION,
+    append_image_terminal_reason,
+    build_image_terminal_reason,
+    generate_images_for_articles,
+    set_generation_terminal,
+)
 from service_health import should_skip, record_success, record_failure  # noqa: E402
 from monica_writer import (  # noqa: E402
     _build_prompt,
@@ -1605,6 +1617,35 @@ def article_has_provider_image(article: dict) -> bool:
     return bool(article.get("image")) and not bool(article.get("image_category_fallback"))
 
 
+def capture_stock_rejection(article: dict[str, Any]) -> None:
+    """Preserve a typed stock-policy rejection before clearing its fallback."""
+    reason = str(article.get("image_decision_reason") or "").lower()
+    source = str(article.get("image_source") or "").lower()
+    if (
+        article.get("image_category_fallback")
+        and source == "category_fallback"
+        and ("stock" in reason or "candidate" in reason)
+    ):
+        append_image_terminal_reason(
+            article,
+            build_image_terminal_reason(
+                stage="stock",
+                reason=REASON_STOCK_REJECTION,
+                outcome="policy_reject",
+            ),
+        )
+
+
+def generation_terminal_counts(articles: list[dict[str, Any]]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for article in articles:
+        terminal = article.get(GENERATION_TERMINAL_FIELD) or {}
+        reason = str(terminal.get("reason") or "").strip()
+        if reason:
+            counts[reason] = counts.get(reason, 0) + 1
+    return dict(sorted(counts.items()))
+
+
 def clear_image_fallback(article: dict) -> None:
     if article.get("image_category_fallback"):
         for key in [
@@ -1630,7 +1671,16 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
     """
     total = len(articles)
     if not total:
-        return {"total": 0, "images": 0, "unsplash": 0, "pexels": 0, "generated": 0, "category_fallback": 0, "missing": 0}
+        return {
+            "total": 0,
+            "images": 0,
+            "unsplash": 0,
+            "pexels": 0,
+            "generated": 0,
+            "category_fallback": 0,
+            "missing": 0,
+            "generated_terminal_reasons": {},
+        }
 
     load_env_files()
     sync_image_provider_keys()
@@ -1648,6 +1698,7 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
             try:
                 before = sum(1 for a in articles if article_has_provider_image(a))
                 for article in missing:
+                    capture_stock_rejection(article)
                     clear_image_fallback(article)
                 unsplash_fetch_images(missing, delay=unsplash_delay)
                 after = sum(1 for a in articles if article_has_provider_image(a))
@@ -1668,6 +1719,7 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
             try:
                 before = sum(1 for a in articles if article_has_provider_image(a))
                 for article in missing:
+                    capture_stock_rejection(article)
                     clear_image_fallback(article)
                 pexels_fetch_images(missing, delay=pexels_delay)
                 after = sum(1 for a in articles if article_has_provider_image(a))
@@ -1681,9 +1733,20 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
 
     missing = [a for a in articles if article_needs_image(a)]
     if missing and os.environ.get("KIE_API_KEY", ""):
+        for article in missing:
+            capture_stock_rejection(article)
         skip, reason = should_skip("kie_api")
         if skip:
             log(f"images: generated fallback skipped — Kie.ai {reason}")
+            for article in missing:
+                set_generation_terminal(
+                    article,
+                    build_image_terminal_reason(
+                        stage="generated",
+                        reason=REASON_BACKOFF,
+                        outcome="skipped",
+                    ),
+                )
         else:
             try:
                 before = sum(1 for a in articles if a.get("image_source") == "generated" and article_has_provider_image(a))
@@ -1693,19 +1756,57 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
                 after = sum(1 for a in articles if a.get("image_source") == "generated" and article_has_provider_image(a))
                 generated_count = max(0, after - before)
             except Exception as exc:  # noqa: BLE001 - keep publisher alive on provider faults
-                log(f"images: generated fallback failed — {exc.__class__.__name__}: {exc}")
+                log(f"images: generated fallback runtime fault — {exc.__class__.__name__}")
+                for article in missing:
+                    set_generation_terminal(
+                        article,
+                        build_image_terminal_reason(
+                            stage="generated",
+                            reason=REASON_PROVIDER_RUNTIME,
+                            outcome="provider_fault",
+                            provider_fault=True,
+                            provider_attempted=True,
+                        ),
+                    )
                 record_failure("kie_api")
             else:
-                if generated_count:
+                terminals = [
+                    article.get(GENERATION_TERMINAL_FIELD) or {}
+                    for article in missing
+                ]
+                if any(terminal.get("provider_fault") for terminal in terminals):
+                    record_failure("kie_api")
+                elif any(terminal.get("provider_succeeded") for terminal in terminals):
                     record_success("kie_api")
     elif missing:
         log("images: generated fallback unavailable — KIE_API_KEY missing")
+        for article in missing:
+            capture_stock_rejection(article)
+            set_generation_terminal(
+                article,
+                build_image_terminal_reason(
+                    stage="generated",
+                    reason=REASON_KEY_UNAVAILABLE,
+                    outcome="unavailable",
+                ),
+            )
 
     for article in [a for a in articles if article_needs_image(a)]:
+        capture_stock_rejection(article)
         clear_image_fallback(article)
+        terminal = article.get(GENERATION_TERMINAL_FIELD) or {}
+        terminal_reason = str(terminal.get("reason") or REASON_STOCK_REJECTION)
+        append_image_terminal_reason(
+            article,
+            build_image_terminal_reason(
+                stage="fallback",
+                reason=REASON_CATEGORY_FALLBACK,
+                outcome="selected",
+            ),
+        )
         article.update(category_fallback_fields(
             article.get("category", "Kotimaa"),
-            reason="generated fallback unavailable, unsafe, or failed after stock rejection",
+            reason=f"final category fallback after {terminal_reason}",
         ))
 
     image_count = sum(1 for a in articles if a.get("image") and not a.get("image_category_fallback"))
@@ -1719,6 +1820,7 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
         "generated": generated_count,
         "category_fallback": category_fallback_count,
         "missing": missing_count,
+        "generated_terminal_reasons": generation_terminal_counts(articles),
     }
 
 
@@ -1949,13 +2051,16 @@ def cmd_publish(args: argparse.Namespace) -> int:
                     "image_provider": enriched.get("image_provider"),
                     "image_model": enriched.get("image_model"),
                     "image_prompt_version": enriched.get("image_prompt_version"),
+                    GENERATION_TERMINAL_FIELD: enriched.get(GENERATION_TERMINAL_FIELD),
+                    IMAGE_TERMINAL_REASONS_FIELD: enriched.get(IMAGE_TERMINAL_REASONS_FIELD),
                 }
     log(
         "publish: images "
         f"{image_summary['images']}/{image_summary['total']} "
         f"unsplash={image_summary.get('unsplash', 0)} pexels={image_summary.get('pexels', 0)} "
         f"generated={image_summary.get('generated', 0)} category_fallback={image_summary.get('category_fallback', 0)} "
-        f"missing={image_summary.get('missing', 0)}"
+        f"missing={image_summary.get('missing', 0)} "
+        f"generated_terminal_reasons={json.dumps(image_summary.get('generated_terminal_reasons', {}), sort_keys=True)}"
     )
     if args.dry_run:
         log(f"publish: dry-run would publish {len(articles)} article(s)")

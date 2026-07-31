@@ -642,18 +642,46 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertTrue(articles[0]["image_category_fallback"])
         self.assertEqual(articles[0]["image_source"], "category_fallback")
         self.assertEqual(articles[0]["image_source_type"], "category_fallback")
-        self.assertEqual(articles[0]["image_decision_reason"], "generated fallback unavailable, unsafe, or failed after stock rejection")
+        self.assertEqual(articles[0]["image_decision_reason"], "final category fallback after key_unavailable")
+        self.assertEqual(
+            articles[0][image_gen.GENERATION_TERMINAL_FIELD]["reason"],
+            image_gen.REASON_KEY_UNAVAILABLE,
+        )
+        self.assertEqual(
+            [row["reason"] for row in articles[0][image_gen.IMAGE_TERMINAL_REASONS_FIELD]],
+            [
+                image_gen.REASON_STOCK_REJECTION,
+                image_gen.REASON_KEY_UNAVAILABLE,
+                image_gen.REASON_CATEGORY_FALLBACK,
+            ],
+        )
 
     def test_kie_generated_fallback_is_one_attempt_and_persists_evidence(self) -> None:
         articles = [{
-            "title": "Veneenkorjaus toi nuorelle kesätyön",
+            "title": "Akseli Hinkkalan veneenkorjaus toi nuorelle kesätyön",
             "category": "Talous",
             "slug": "veneenkorjaus",
             "summary": "Nuori korjaa soutuveneitä ja moottoriveneitä.",
             "content": "4H-yrittäjyys, vene, korjaus ja kunnostaminen ovat jutun ydintä.",
         }]
+        prompt = "Boat repair workshop. Avoid: generic person portrait or lookalike."
+        terminal = image_gen.build_image_terminal_reason(
+            stage="generated",
+            reason=image_gen.REASON_ACCEPTED,
+            outcome="accepted",
+            provider_attempted=True,
+            provider_succeeded=True,
+        )
+        result = image_gen.GeneratedImageResult(
+            "/images/articles/veneenkorjaus.jpg",
+            prompt,
+            terminal,
+            pixel_semantics={
+                "description": "boat repair workshop and small craft restoration",
+            },
+        )
 
-        with patch.object(image_gen, "generate_article_image", return_value=("/images/articles/veneenkorjaus.jpg", "boat repair prompt")) as generated:
+        with patch.object(image_gen, "generate_article_image", return_value=result) as generated:
             image_gen.generate_images_for_articles(articles, max_total_sec=180)
 
         generated.assert_called_once()
@@ -663,6 +691,367 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(articles[0]["image_model"], "z-image")
         self.assertEqual(articles[0]["image_prompt_version"], "image-flow-v2-2026-07-03")
         self.assertGreaterEqual(articles[0]["image_visual_judge_score"], 45)
+        self.assertEqual(articles[0]["image_generation_prompt"], prompt)
+        self.assertEqual(
+            articles[0][image_gen.GENERATION_TERMINAL_FIELD]["reason"],
+            image_gen.REASON_ACCEPTED,
+        )
+
+    def test_generated_prompt_is_not_pixel_semantic_evidence(self) -> None:
+        articles = [{
+            "title": "Akseli Hinkkalan veneenkorjaus toi nuorelle kesätyön",
+            "category": "Talous",
+            "slug": "veneenkorjaus",
+            "summary": "Nuori korjaa soutuveneitä ja moottoriveneitä.",
+            "content": "4H-yrittäjyys, vene, korjaus ja kunnostaminen ovat jutun ydintä.",
+        }]
+        terminal = image_gen.build_image_terminal_reason(
+            stage="generated",
+            reason=image_gen.REASON_ACCEPTED,
+            outcome="accepted",
+            provider_attempted=True,
+            provider_succeeded=True,
+        )
+        result = image_gen.GeneratedImageResult(
+            "/images/articles/veneenkorjaus.jpg",
+            "Required: boat repair. Avoid: generic person portrait or lookalike.",
+            terminal,
+            pixel_semantics={"description": "boat repair workshop"},
+        )
+
+        with patch.object(image_gen, "generate_article_image", return_value=result):
+            image_gen.generate_images_for_articles(articles, max_total_sec=180)
+
+        self.assertEqual(articles[0]["image"], "/images/articles/veneenkorjaus.jpg")
+        self.assertFalse(articles[0]["image_category_fallback"])
+
+    def test_generated_candidate_without_pixel_semantics_fails_closed(self) -> None:
+        articles = [{
+            "title": "Akseli Hinkkalan veneenkorjaus toi nuorelle kesätyön",
+            "category": "Talous",
+            "slug": "veneenkorjaus",
+            "summary": "Nuori korjaa soutuveneitä ja moottoriveneitä.",
+            "content": "4H-yrittäjyys, vene, korjaus ja kunnostaminen ovat jutun ydintä.",
+        }]
+        terminal = image_gen.build_image_terminal_reason(
+            stage="generated",
+            reason=image_gen.REASON_ACCEPTED,
+            outcome="accepted",
+            provider_attempted=True,
+            provider_succeeded=True,
+        )
+        result = image_gen.GeneratedImageResult(
+            "/images/articles/veneenkorjaus.jpg",
+            "Required: boat repair. Avoid: generic person portrait or lookalike.",
+            terminal,
+        )
+
+        with patch.object(image_gen, "generate_article_image", return_value=result):
+            image_gen.generate_images_for_articles(articles, max_total_sec=180)
+
+        self.assertNotIn("image", articles[0])
+        self.assertEqual(
+            articles[0][image_gen.GENERATION_TERMINAL_FIELD]["reason"],
+            image_gen.REASON_VISUAL_REJECT,
+        )
+        self.assertFalse(
+            articles[0][image_gen.GENERATION_TERMINAL_FIELD]["provider_fault"],
+        )
+
+    def test_cached_generated_image_rejects_misleading_exif_without_pixel_verdict(self) -> None:
+        from PIL import Image
+
+        image_dir = self.root / "generated-images"
+        rejected_dir = self.root / "rejected-generated-images"
+        image_dir.mkdir()
+        image_path = image_dir / "veneenkorjaus.jpg"
+        exif = Image.Exif()
+        exif[270] = "boat repair workshop and small craft restoration"
+        Image.new("RGB", (160, 90), "navy").save(image_path, exif=exif)
+        articles = [{
+            "title": "Akseli Hinkkalan veneenkorjaus toi nuorelle kesätyön",
+            "category": "Talous",
+            "slug": "veneenkorjaus",
+            "summary": "Nuori korjaa soutuveneitä ja moottoriveneitä.",
+            "content": "4H-yrittäjyys, vene, korjaus ja kunnostaminen ovat jutun ydintä.",
+        }]
+
+        with patch.object(image_gen, "IMAGE_DIR", str(image_dir)), \
+             patch.object(image_gen, "REJECTED_IMAGE_DIR", str(rejected_dir)), \
+             patch.object(image_gen, "_kie_request") as provider:
+            image_gen.generate_images_for_articles(articles, max_total_sec=180)
+
+        provider.assert_not_called()
+        self.assertNotIn("image", articles[0])
+        self.assertEqual(
+            articles[0][image_gen.GENERATION_TERMINAL_FIELD]["reason"],
+            image_gen.REASON_VISUAL_REJECT,
+        )
+        self.assertFalse(
+            articles[0][image_gen.GENERATION_TERMINAL_FIELD]["provider_fault"],
+        )
+        self.assertFalse(image_path.exists())
+        self.assertTrue((rejected_dir / image_path.name).exists())
+
+    def test_generated_visual_reject_quarantines_download_before_cache_reuse(self) -> None:
+        image_dir = self.root / "generated-images"
+        rejected_dir = self.root / "rejected-generated-images"
+        image_dir.mkdir()
+        image_path = image_dir / "veneenkorjaus.jpg"
+        image_path.write_bytes(b"rejected generated image")
+        articles = [{
+            "title": "Akseli Hinkkalan veneenkorjaus toi nuorelle kesätyön",
+            "category": "Talous",
+            "slug": "veneenkorjaus",
+            "summary": "Nuori korjaa soutuveneitä ja moottoriveneitä.",
+            "content": "4H-yrittäjyys, vene, korjaus ja kunnostaminen ovat jutun ydintä.",
+        }]
+        terminal = image_gen.build_image_terminal_reason(
+            stage="generated",
+            reason=image_gen.REASON_ACCEPTED,
+            outcome="accepted",
+            provider_attempted=True,
+            provider_succeeded=True,
+        )
+        result = image_gen.GeneratedImageResult(
+            "/images/articles/veneenkorjaus.jpg",
+            "Required: boat repair. Avoid: generic person portrait or lookalike.",
+            terminal,
+        )
+
+        with patch.object(image_gen, "IMAGE_DIR", str(image_dir)), \
+             patch.object(
+                 image_gen,
+                 "REJECTED_IMAGE_DIR",
+                 str(rejected_dir),
+                 create=True,
+             ), \
+             patch.object(image_gen, "generate_article_image", return_value=result):
+            image_gen.generate_images_for_articles(articles, max_total_sec=180)
+
+        self.assertFalse(image_path.exists())
+        self.assertTrue((rejected_dir / image_path.name).exists())
+        self.assertNotIn("image", articles[0])
+        self.assertEqual(
+            articles[0][image_gen.GENERATION_TERMINAL_FIELD]["reason"],
+            image_gen.REASON_VISUAL_REJECT,
+        )
+        with patch.object(image_gen, "IMAGE_DIR", str(image_dir)), \
+             patch.object(
+                 image_gen,
+                 "_kie_request",
+                 return_value={"data": {}},
+             ) as provider:
+            retry = image_gen.generate_article_image(
+                articles[0]["title"],
+                articles[0]["category"],
+                articles[0]["slug"],
+            )
+
+        provider.assert_called_once()
+        self.assertIsNone(retry.image_path)
+
+    def test_generated_visual_reject_delays_before_next_provider_attempt(self) -> None:
+        articles = [
+            {
+                "title": "Akseli Hinkkalan veneenkorjaus toi nuorelle kesätyön",
+                "category": "Talous",
+                "slug": "veneenkorjaus-ensimmainen",
+                "summary": "Nuori korjaa soutuveneitä ja moottoriveneitä.",
+                "content": "4H-yrittäjyys, vene, korjaus ja kunnostaminen ovat jutun ydintä.",
+            },
+            {
+                "title": "Akseli Hinkkalan veneenkorjaus jatkuu",
+                "category": "Talous",
+                "slug": "veneenkorjaus-toinen",
+                "summary": "Nuori jatkaa soutuveneiden ja moottoriveneiden korjausta.",
+                "content": "Vene, korjaus ja kunnostaminen ovat jutun ydintä.",
+            },
+        ]
+        terminal = image_gen.build_image_terminal_reason(
+            stage="generated",
+            reason=image_gen.REASON_ACCEPTED,
+            outcome="accepted",
+            provider_attempted=True,
+            provider_succeeded=True,
+        )
+        result = image_gen.GeneratedImageResult(
+            "/images/articles/veneenkorjaus.jpg",
+            "Required: boat repair. Avoid: generic person portrait or lookalike.",
+            terminal,
+        )
+        events: list[tuple[str, object]] = []
+
+        def generated(title, category, slug, *, intent=None):
+            events.append(("provider", slug))
+            return result
+
+        def delayed(seconds):
+            events.append(("sleep", seconds))
+
+        with patch.object(image_gen, "generate_article_image", side_effect=generated) as provider, \
+             patch.object(image_gen.time, "sleep", side_effect=delayed):
+            image_gen.generate_images_for_articles(articles, max_total_sec=180)
+
+        self.assertEqual(provider.call_count, 2)
+        self.assertEqual(
+            events,
+            [
+                ("provider", "veneenkorjaus-ensimmainen"),
+                ("sleep", 2),
+                ("provider", "veneenkorjaus-toinen"),
+            ],
+        )
+        for article in articles:
+            terminal_record = article[image_gen.GENERATION_TERMINAL_FIELD]
+            self.assertEqual(terminal_record["reason"], image_gen.REASON_VISUAL_REJECT)
+            self.assertFalse(terminal_record["provider_fault"])
+
+    def test_generated_pre_safety_reject_does_not_delay_or_call_provider(self) -> None:
+        articles = [
+            {
+                "title": "Kuvaturvallisuus estää generoinnin",
+                "category": "Talous",
+                "slug": "pre-safety-reject",
+            },
+            {
+                "title": "Akseli Hinkkalan veneenkorjaus toi nuorelle kesätyön",
+                "category": "Talous",
+                "slug": "veneenkorjaus",
+                "summary": "Nuori korjaa soutuveneitä ja moottoriveneitä.",
+                "content": "4H-yrittäjyys, vene, korjaus ja kunnostaminen ovat jutun ydintä.",
+            },
+        ]
+        terminal = image_gen.build_image_terminal_reason(
+            stage="generated",
+            reason=image_gen.REASON_ACCEPTED,
+            outcome="accepted",
+            provider_attempted=True,
+            provider_succeeded=True,
+        )
+        result = image_gen.GeneratedImageResult(
+            "/images/articles/veneenkorjaus.jpg",
+            "Required: boat repair. Avoid: generic person portrait or lookalike.",
+            terminal,
+        )
+
+        class _Intent:
+            def __init__(self, generated_ok: bool) -> None:
+                self.generated_ok = generated_ok
+
+            def to_dict(self) -> dict[str, bool]:
+                return {"generated_ok": self.generated_ok}
+
+        class _Brief:
+            def __init__(self, generated_ok: bool) -> None:
+                self.intent = _Intent(generated_ok)
+
+        runtime_guard = __import__("image_candidate_guard")
+        with patch.object(
+                 runtime_guard,
+                 "build_visual_brief",
+                 side_effect=[_Brief(False), _Brief(True)],
+             ), \
+             patch.object(
+                 runtime_guard,
+                 "judge_visual_candidate",
+                 return_value={"score": 0, "accepted": False},
+             ), \
+             patch.object(image_gen, "generate_article_image", return_value=result) as provider, \
+             patch.object(image_gen.time, "sleep") as delayed:
+            image_gen.generate_images_for_articles(articles, max_total_sec=180)
+
+        provider.assert_called_once()
+        self.assertEqual(provider.call_args.args[2], "veneenkorjaus")
+        delayed.assert_not_called()
+        pre_safety = articles[0][image_gen.GENERATION_TERMINAL_FIELD]
+        self.assertEqual(pre_safety["reason"], image_gen.REASON_PRE_SAFETY_REJECT)
+        self.assertFalse(pre_safety["provider_attempted"])
+        self.assertEqual(
+            articles[1][image_gen.GENERATION_TERMINAL_FIELD]["reason"],
+            image_gen.REASON_VISUAL_REJECT,
+        )
+
+    def test_generated_provider_fault_records_kie_failure_with_typed_reason(self) -> None:
+        articles = [{"title": "Kuvaton artikkeli", "category": "Talous"}]
+
+        def provider_fault(batch, max_total_sec=180):
+            terminal = image_gen.build_image_terminal_reason(
+                stage="generated",
+                reason=image_gen.REASON_PROVIDER_HTTP,
+                outcome="provider_fault",
+                provider_fault=True,
+                provider_attempted=True,
+                http_status_class="5xx",
+            )
+            image_gen.set_generation_terminal(batch[0], terminal)
+            return batch
+
+        with patch.dict(staged_publish.os.environ, {
+            "UNSPLASH_ACCESS_KEY": "",
+            "PEXELS_API_KEY": "",
+            "KIE_API_KEY": "key",
+        }, clear=False), \
+             patch.object(staged_publish, "should_skip", return_value=(False, None)), \
+             patch.object(staged_publish, "generate_images_for_articles", side_effect=provider_fault), \
+             patch.object(staged_publish, "record_failure") as failure, \
+             patch.object(staged_publish, "record_success") as success:
+            summary = staged_publish.enrich_images_for_articles(
+                articles,
+                unsplash_delay=0,
+                pexels_delay=0,
+            )
+
+        failure.assert_called_once_with("kie_api")
+        success.assert_not_called()
+        self.assertEqual(
+            summary["generated_terminal_reasons"],
+            {image_gen.REASON_PROVIDER_HTTP: 1},
+        )
+        self.assertEqual(
+            articles[0][image_gen.GENERATION_TERMINAL_FIELD]["http_status_class"],
+            "5xx",
+        )
+
+    def test_generated_visual_reject_never_records_kie_failure(self) -> None:
+        articles = [{"title": "Kuvaton artikkeli", "category": "Talous"}]
+
+        def visual_reject(batch, max_total_sec=180):
+            terminal = image_gen.build_image_terminal_reason(
+                stage="generated",
+                reason=image_gen.REASON_VISUAL_REJECT,
+                outcome="policy_reject",
+                provider_attempted=True,
+                provider_succeeded=True,
+            )
+            image_gen.set_generation_terminal(batch[0], terminal)
+            return batch
+
+        with patch.dict(staged_publish.os.environ, {
+            "UNSPLASH_ACCESS_KEY": "",
+            "PEXELS_API_KEY": "",
+            "KIE_API_KEY": "key",
+        }, clear=False), \
+             patch.object(staged_publish, "should_skip", return_value=(False, None)), \
+             patch.object(staged_publish, "generate_images_for_articles", side_effect=visual_reject), \
+             patch.object(staged_publish, "record_failure") as failure, \
+             patch.object(staged_publish, "record_success") as success:
+            summary = staged_publish.enrich_images_for_articles(
+                articles,
+                unsplash_delay=0,
+                pexels_delay=0,
+            )
+
+        failure.assert_not_called()
+        success.assert_called_once_with("kie_api")
+        self.assertEqual(
+            summary["generated_terminal_reasons"],
+            {image_gen.REASON_VISUAL_REJECT: 1},
+        )
+        self.assertEqual(
+            articles[0]["image_decision_reason"],
+            "final category fallback after visual_reject",
+        )
 
     def test_stock_decision_fields_emit_policy_metadata(self) -> None:
         fields = stock_decision_fields("unsplash", {
@@ -732,6 +1121,26 @@ class StagedPublishMetricsTests(unittest.TestCase):
             "image_source": "pexels",
             "image_source_type": "stock",
             "image_decision_reason": "metadata matches article",
+            image_gen.GENERATION_TERMINAL_FIELD: {
+                "schema": image_gen.IMAGE_TERMINAL_SCHEMA,
+                "stage": "generated",
+                "reason": image_gen.REASON_BACKOFF,
+                "outcome": "skipped",
+                "provider_fault": False,
+                "provider_attempted": False,
+                "provider_succeeded": False,
+            },
+            image_gen.IMAGE_TERMINAL_REASONS_FIELD: [
+                {
+                    "schema": image_gen.IMAGE_TERMINAL_SCHEMA,
+                    "stage": "generated",
+                    "reason": image_gen.REASON_BACKOFF,
+                    "outcome": "skipped",
+                    "provider_fault": False,
+                    "provider_attempted": False,
+                    "provider_succeeded": False,
+                }
+            ],
             "monica_packet_id": "pkt-image",
         }
         data = {
@@ -769,6 +1178,14 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(published["image_enrichment"]["image_source"], "pexels")
         self.assertEqual(published["image_enrichment"]["image_source_type"], "stock")
         self.assertEqual(published["image_enrichment"]["image_decision_reason"], "metadata matches article")
+        self.assertEqual(
+            published["image_enrichment"][image_gen.GENERATION_TERMINAL_FIELD]["reason"],
+            image_gen.REASON_BACKOFF,
+        )
+        self.assertEqual(
+            published["image_enrichment"][image_gen.IMAGE_TERMINAL_REASONS_FIELD][0]["reason"],
+            image_gen.REASON_BACKOFF,
+        )
         self.assertEqual(
             published["category_trace"]["decisions"],
             {"guard": "Kotimaa", "writer": "Kotimaa", "publisher": "Kotimaa"},

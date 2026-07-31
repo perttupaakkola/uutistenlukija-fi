@@ -189,10 +189,13 @@
       {{ range first 12 (where $sorted "Permalink" "not in" $seen) }}
       {{ $cat := index .Params.categories 0 | default "Uutiset" }}
       {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
-      <article class="portal-row-card">
+      {{ $isCategoryFallback := or .Params.image_category_fallback (eq .Params.image_source "category_fallback") (strings.Contains $img "/images/categories/") }}
+      <article class="portal-row-card{{ if $isCategoryFallback }} portal-row-card--no-image{{ end }}">
+        {{ if not $isCategoryFallback }}
         <a class="portal-row-card__thumb" href="{{ .RelPermalink }}">
-          <img src="{{ $img }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="160" height="110" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.src='{{ printf "/images/categories/%s.jpg" ($cat | lower) }}'">
+          <img src="{{ $img }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="160" height="110" onerror="var card=this.closest('.portal-row-card');if(card){card.classList.add('portal-row-card--no-image')}var thumb=this.closest('.portal-row-card__thumb');if(thumb){thumb.hidden=true}">
         </a>
+        {{ end }}
         <div>
           <span class="portal-kicker">{{ $cat }}</span>
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>

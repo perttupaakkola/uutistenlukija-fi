@@ -330,6 +330,9 @@ main.container { padding-top: 0; padding-bottom: 48px; }
 .portal-river { border-top: 1px solid var(--portal-line); padding-top: 22px; }
 .portal-river__grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0 24px; }
 .portal-row-card { display: grid; grid-template-columns: 112px minmax(0,1fr); gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--portal-line); }
+.portal-row-card.portal-row-card--no-image { grid-template-columns: minmax(0,1fr); }
+.portal-row-card--no-image > div { grid-column: 1 / -1; min-width: 0; }
+.portal-row-card--no-image .portal-row-card__thumb { display: none; }
 .portal-row-card__thumb { width: 112px; height: 82px; overflow: hidden; border-radius: 7px; background: var(--portal-soft); }
 .portal-row-card__thumb img { width: 100%; height: 100%; object-fit: cover; }
 .portal-row-card h3 { margin: 4px 0 6px; font-size: 17px; line-height: 1.2; }
