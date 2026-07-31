@@ -120,5 +120,22 @@
     "_guessed_category": "Kotimaa",
     "research": "[Lähde: Yle Uutiset | URL: https://yle.fi/a/74-20238928?origin=rss]\nMaa on järissyt perjantai-iltana Etelä-Italiassa lähellä Napolia. Italian geofysiikan ja vulkanologian laitoksen (INGV) mukaan järistys tapahtui perjantai-iltana hieman ennen yhdeksää Suomen aikaa ja oli voimakkuudeltaan 4,7. Sen keskus sijaitsi tuliperäisellä Campi Flegrein alueella noin kolmen kilometrin syvyydessä.\n\nPaikallisviranomaisten mukaan järistys aiheutti sähkökatkoja, häiritsi juna- ja metroliikennettä sekä vaurioitti joitain rakennuksia. Italian pelastuslaitos kertoo saaneensa ilmoituksia rakennusten saamista vähäisistä vaurioista Napolissa ja sen lähialueilla, mutta pelastusyksiköt eivät saaneet välittömiä avun- tai pelastuspyyntöjä asukkailta. Napolin kaupunki ilmoitti, että kaupungille sähköä syöttävä suurjännitepylväs oli kaatunut, mutta varavirta oli saatu palautettua häiriöalueille. Paikallisviranomaisten mukaan paikallinen juna- ja metroliikenne keskeytettiin varotoimena.\n\nNapolin länsipuolella, noin 15 kilometrin päässä kaupungista sijaitseva Campi Flegrei on yksi maailman vaarallisimmista tulivuorista eli niin kutsuttu supertulivuori . Se ei muistuta perinteistä tulivuorta, vaan on kaldera eli romahtanut tulivuori. Tiheään asuttu kaldera on Euroopan suurin, ja sen läpimitta on noin 12 kilometriä. Siinä esiintyy toistuvasti seismistä toimintaa, joka on viime vuosina lisääntynyt. Järistysten voimakkuus on myös noussut. Italian hallitus onkin tehostanut alueen seurantaa. Campi Flegrei purkautui edellisen kerran vuonna 1538.\n\nItalian tiedotusvälineiden mukaan perjantai-illan maanjäristys oli yksi alueen historian voimakkaimmista. Se sai Napolissa joidenkin kaupunginosien asukkaat ryntäämään kaduille järistyksen säikäyttäminä.\n\nMaanjäristykset ovat Italiassa suhteellisen yleisiä. Vuonna 2016 Keski-Italiaa koetteli voimakkaiden järistysten sarja, joka tuhosi osia Lazion, Umbrian ja Marchen alueista ja vaati noin 300 ihmishenkeä. Viime vuosikymmenten tuhoisin järistys tapahtui Etelä-Italian Irpiniassa marraskuussa 1980: sen voimakkuus oli 6,9, ja se surmasi noin 2 700 ihmistä.",
     "research_source": "multi"
+  },
+  "failed_at": "2026-07-31T23:53:11.295775+00:00",
+  "failure": "Monica writer command failed: [state-migrations] Legacy state migration warnings:\n- Skipped plugin doctor state migrations because exclusive state ownership is unavailable: GatewayLockError: gateway already running (pid 4076667); lock timeout after 250ms\n[plugins] discord failed to load from /home/pertt/.openclaw/npm/projects/openclaw-discord-c0892df945__openclaw-generation__g-3a4aecad18bbe2c4/node_modules/@openclaw/discord/dist/index.js: SyntaxError: The requested module 'openclaw/plugin-sdk/security-runtime' does not provide an export named 'privateFileStore'\n[openclaw] Could not start the CLI.\n[openclaw] Reason: plugin load failed: discord: SyntaxError: The requested module 'openclaw/plugin-sdk/security-runtime' does not provide an export named 'privateFileStore'\n[openclaw] Debug: set OPENCLAW_DEBUG=1 to include the stack trace.\n[openclaw] Try: openclaw doctor\n[openclaw] Help: openclaw --help",
+  "raw_response": "",
+  "writer_failure_feedback": {
+    "packet_id": "20260731T234310Z_b938faad83",
+    "category": "Kotimaa",
+    "selected_source_words": 247,
+    "selected_source_blocks": 3,
+    "story_confidence": 0.98,
+    "final_word_count": 0,
+    "issues": [],
+    "source_backed": true,
+    "near_miss_short": false,
+    "retry_classification": "writer_runtime",
+    "fail_closed": true,
+    "title": "Maanjäristys ravisteli Napolia perjantai-iltana"
   }
 }
