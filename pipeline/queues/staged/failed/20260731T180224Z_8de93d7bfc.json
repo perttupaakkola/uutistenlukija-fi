@@ -274,5 +274,33 @@
       }
     ],
     "source_url": "https://www.suomenmaa.fi/uutiset/sisaministeri-rantanen-kannattaa-italian-vaateita-erottaa-espanja-schengenista-3/"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-01T12:43:00.860270+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260731T180224Z_8de93d7bfc",
+    "category": "Kotimaa",
+    "selected_source_words": 496,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 50,
+    "quality_normalized": 7.9,
+    "quality_reasons": [
+      "language borderline Finnish signal (10.0%)",
+      "length under target (285 words)",
+      "missing: image",
+      "source_confidence_denial_context_missing"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 285,
+    "title": "Italia keskeyttää Schengen-yhteistyön Espanjan kanssa Ceutan tilanteen vuoksi"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (10.0%); length under target (285 words); missing: image; source_confidence_denial_context_missing"
 }
