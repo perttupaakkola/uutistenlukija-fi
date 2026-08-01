@@ -257,6 +257,68 @@ writing.unlink()
         self.assertEqual(remote_payload["article"]["title"], "Säilytetty keskeytynyt artikkeli")
         self.assertEqual(self._git(self.worker, "status", "--porcelain").stdout, "")
 
+    def test_startup_resumes_already_staged_outbox_with_openclaw_trajectory_artifacts(self):
+        packet = self._admit_packet("20260801T115839Z_11f340b340.json")
+        self._sync_worker()
+        ready = self.worker / "pipeline/queues/staged/ready" / packet
+        outbox = self.worker / "pipeline/queues/staged/outbox" / packet
+        payload = json.loads(ready.read_text(encoding="utf-8"))
+        payload["article"] = {"title": "Säilytetty valmis artikkeli"}
+        ready.unlink()
+        outbox.parent.mkdir(parents=True, exist_ok=True)
+        outbox.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+        self._git(self.worker, "add", str(ready.relative_to(self.worker)))
+        self._git(self.worker, "add", "-f", str(outbox.relative_to(self.worker)))
+
+        trajectory_stem = (
+            "agent_monica_explicit_"
+            "monica-pipeline-1ff46377-0173-409e-8fc5-3c970d99c9c8"
+        )
+        trajectory = self.worker / f"{trajectory_stem}.trajectory.jsonl"
+        trajectory_pointer = self.worker / f"{trajectory_stem}.trajectory-path.json"
+        trajectory.write_text(
+            json.dumps(
+                {
+                    "traceSchema": "openclaw-trajectory",
+                    "schemaVersion": 1,
+                    "source": "runtime",
+                }
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        trajectory_pointer.write_text(
+            json.dumps(
+                {
+                    "traceSchema": "openclaw-trajectory-pointer",
+                    "schemaVersion": 1,
+                    "runtimeFile": str(trajectory),
+                }
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+
+        result = self._run_wrapper(STUB_FAIL="1")
+        self.assertEqual(result.returncode, 0, result.stderr or result.stdout)
+        remote_payload = json.loads(
+            self._git(
+                self.worker,
+                "--git-dir",
+                str(self.origin),
+                "show",
+                f"main:pipeline/queues/staged/outbox/{packet}",
+            ).stdout
+        )
+        self.assertEqual(remote_payload["article"]["title"], "Säilytetty valmis artikkeli")
+        self.assertNotIn(f"pipeline/queues/staged/ready/{packet}", self._remote_files())
+        self.assertTrue(trajectory.is_file())
+        self.assertTrue(trajectory_pointer.is_file())
+        untracked = set(
+            self._git(self.worker, "ls-files", "--others", "--exclude-standard").stdout.splitlines()
+        )
+        self.assertEqual(untracked, {trajectory.name, trajectory_pointer.name})
+
     def test_startup_commits_completed_failed_record_without_regenerating_it(self):
         packet = self._admit_packet("failed-before-commit.json")
         self._sync_worker()
