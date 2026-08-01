@@ -22,10 +22,45 @@ die() {
   exit 1
 }
 
+is_monica_trajectory_artifact() {
+  local path="$1"
+  [[ "$path" != */* ]] || return 1
+  case "$path" in
+    agent_monica_explicit_monica-pipeline-*.trajectory.jsonl | \
+      agent_monica_explicit_monica-pipeline-*.trajectory-path.json)
+      return 0
+      ;;
+  esac
+  return 1
+}
+
+untracked_outside_monica_trajectories() {
+  local path
+  while IFS= read -r -d '' path; do
+    is_monica_trajectory_artifact "$path" || printf '%s\n' "$path"
+  done < <(git ls-files --others --exclude-standard -z)
+}
+
+transactional_worktree_status() {
+  git status --porcelain --untracked-files=no
+  local path
+  while IFS= read -r path; do
+    [[ -n "$path" ]] && printf '?? %s\n' "$path"
+  done < <(untracked_outside_monica_trajectories)
+}
+
 require_clean_tree() {
   local status
-  status="$(git status --porcelain --untracked-files=all)"
+  status="$(transactional_worktree_status)"
   [[ -z "$status" ]] || die "worktree is not clean before queue sync: ${status//$'\n'/; }"
+}
+
+configure_openclaw_trajectory_storage() {
+  [[ -z "${OPENCLAW_TRAJECTORY_DIR:-}" ]] || return 0
+  local trajectory_dir
+  trajectory_dir="$(git rev-parse --git-path staged-monica-trajectories)"
+  mkdir -p -- "$trajectory_dir"
+  export OPENCLAW_TRAJECTORY_DIR="$trajectory_dir"
 }
 
 acquire_worker_lock() {
@@ -148,13 +183,13 @@ sync_from_remote() {
 stage_queue_pair() {
   local ready_rel="$1" destination_rel="$2"
   local -a staged_changes expected_changes
-  git add -- "$ready_rel"
+  git update-index --remove -- "$ready_rel"
   git add -f -- "$destination_rel"
 
   local unstaged untracked
   unstaged="$(git diff --name-only)"
   [[ -z "$unstaged" ]] || die "unstaged changes remain outside the queue transaction: ${unstaged//$'\n'/; }"
-  untracked="$(git ls-files --others --exclude-standard)"
+  untracked="$(untracked_outside_monica_trajectories)"
   [[ -z "$untracked" ]] || die "untracked files remain outside the queue transaction: ${untracked//$'\n'/; }"
 
   mapfile -t staged_changes < <(
@@ -206,7 +241,7 @@ reconcile_and_push() {
 }
 
 resume_completed_transition() {
-  [[ -n "$(git status --porcelain --untracked-files=all)" ]] || return 0
+  [[ -n "$(transactional_worktree_status)" ]] || return 0
 
   local -a deleted_ready
   mapfile -t deleted_ready < <(git diff HEAD --diff-filter=D --name-only -- "$READY_DIR")
@@ -270,6 +305,7 @@ fi
 
 base_remote="$(git rev-parse "$REMOTE/$BRANCH")"
 worker_rc=0
+configure_openclaw_trajectory_storage
 "$PYTHON_BIN" pipeline/staged_publish.py monica-worker \
   --max-packets 1 \
   --max-ready-age-hours "$MAX_READY_AGE_HOURS" || worker_rc=$?
