@@ -52,7 +52,6 @@ source_attributions:
     url: "https://globalbankingandfinance.com/three-killed-15-injured-moscow-explosion-tass"
   - name: "scmp.com"
     url: "https://scmp.com/news/world/russia-central-asia/article/3362666/3-dead-15-injured-explosion-near-moscow-cafe-police-say"
-briefing: true
 draft: false
 ---
 
