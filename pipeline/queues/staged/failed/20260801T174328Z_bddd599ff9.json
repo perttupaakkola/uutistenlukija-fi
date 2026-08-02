@@ -264,5 +264,36 @@
       }
     ],
     "source_url": "https://www.bbc.co.uk/news/articles/cy07qe0knvzo?at_medium=RSS&at_campaign=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-02T07:35:18.451113+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260801T174328Z_bddd599ff9",
+    "category": "Ulkomaat",
+    "selected_source_words": 380,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 50,
+    "quality_normalized": 8.06,
+    "quality_reasons": [
+      "length under target (284 words)",
+      "missing: image",
+      "unsourced numbers",
+      "source_confidence_denial_context_missing",
+      "unsourced_numbers: 44"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 44"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 284,
+    "title": "WHO: Kongon demokraattisessa tasavallassa maan historian laajin ebolaepidemia"
+  },
+  "failure": "quality_gate_rejected: length under target (284 words); missing: image; unsourced numbers; source_confidence_denial_context_missing; unsourced_numbers: 44"
 }

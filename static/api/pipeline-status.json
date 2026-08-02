@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-02T06:55:18+00:00",
+  "generated_at": "2026-08-02T07:38:40+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,12 +12,17 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 3,
-    "rejected": 0,
+    "published": 5,
+    "rejected": 1,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-02T06:51:55.905362+00:00"
+    "last_published_ts": "2026-08-02T07:35:18.614538+00:00"
   },
-  "reject_reasons": {},
+  "reject_reasons": {
+    "length under target (284 words": 1,
+    "missing: image": 1,
+    "unsourced numbers": 1,
+    "source_confidence_denial_conte": 1
+  },
   "feeds": {
     "total": 0,
     "healthy": 0,
@@ -36,22 +41,22 @@
       9
     ],
     [
+      "räjähdyksen",
+      8
+    ],
+    [
       "fifan",
       6
     ],
     [
       "concacaf",
       6
-    ],
-    [
-      "päivän",
-      5
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 6,
+    "readyCount": 3,
     "writingCount": 0,
-    "outboxCount": 5,
+    "outboxCount": 6,
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
