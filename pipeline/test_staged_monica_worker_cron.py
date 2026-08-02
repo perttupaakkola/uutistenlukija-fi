@@ -270,34 +270,56 @@ writing.unlink()
         self._git(self.worker, "add", str(ready.relative_to(self.worker)))
         self._git(self.worker, "add", "-f", str(outbox.relative_to(self.worker)))
 
-        trajectory_stem = (
-            "agent_monica_explicit_"
-            "monica-pipeline-1ff46377-0173-409e-8fc5-3c970d99c9c8"
+        session_id = "monica-pipeline-1ff46377-0173-409e-8fc5-3c970d99c9c8"
+        trajectory_stems = (
+            f"agent:monica:explicit:{session_id}",
+            f"agent_monica_explicit_{session_id}",
         )
-        trajectory = self.worker / f"{trajectory_stem}.trajectory.jsonl"
-        trajectory_pointer = self.worker / f"{trajectory_stem}.trajectory-path.json"
-        trajectory.write_text(
-            json.dumps(
-                {
-                    "traceSchema": "openclaw-trajectory",
-                    "schemaVersion": 1,
-                    "source": "runtime",
-                }
+        trajectory_artifacts = []
+        for trajectory_stem in trajectory_stems:
+            trajectory = self.worker / f"{trajectory_stem}.trajectory.jsonl"
+            trajectory_pointer = self.worker / f"{trajectory_stem}.trajectory-path.json"
+            trajectory.write_text(
+                json.dumps(
+                    {
+                        "traceSchema": "openclaw-trajectory",
+                        "schemaVersion": 1,
+                        "source": "runtime",
+                    }
+                )
+                + "\n",
+                encoding="utf-8",
             )
-            + "\n",
-            encoding="utf-8",
-        )
-        trajectory_pointer.write_text(
-            json.dumps(
-                {
-                    "traceSchema": "openclaw-trajectory-pointer",
-                    "schemaVersion": 1,
-                    "runtimeFile": str(trajectory),
-                }
+            trajectory_pointer.write_text(
+                json.dumps(
+                    {
+                        "traceSchema": "openclaw-trajectory-pointer",
+                        "schemaVersion": 1,
+                        "runtimeFile": str(trajectory),
+                    }
+                )
+                + "\n",
+                encoding="utf-8",
             )
-            + "\n",
-            encoding="utf-8",
-        )
+            trajectory_artifacts.extend((trajectory, trajectory_pointer))
+
+        outbox_bytes = outbox.read_bytes()
+        artifact_bytes = {
+            artifact: artifact.read_bytes() for artifact in trajectory_artifacts
+        }
+        unrelated = self.worker / f"agent:monica:explicit:{session_id}.trajectory.tmp"
+        unrelated.write_text("must fail closed\n", encoding="utf-8")
+
+        blocked = self._run_wrapper(STUB_FAIL="1")
+        self.assertNotEqual(blocked.returncode, 0)
+        self.assertIn(unrelated.name, blocked.stderr)
+        self.assertIn(f"pipeline/queues/staged/ready/{packet}", self._remote_files())
+        self.assertNotIn(f"pipeline/queues/staged/outbox/{packet}", self._remote_files())
+        self.assertEqual(outbox.read_bytes(), outbox_bytes)
+        for artifact, expected_bytes in artifact_bytes.items():
+            self.assertEqual(artifact.read_bytes(), expected_bytes)
+
+        unrelated.unlink()
 
         result = self._run_wrapper(STUB_FAIL="1")
         self.assertEqual(result.returncode, 0, result.stderr or result.stdout)
@@ -312,12 +334,13 @@ writing.unlink()
         )
         self.assertEqual(remote_payload["article"]["title"], "Säilytetty valmis artikkeli")
         self.assertNotIn(f"pipeline/queues/staged/ready/{packet}", self._remote_files())
-        self.assertTrue(trajectory.is_file())
-        self.assertTrue(trajectory_pointer.is_file())
+        self.assertEqual(outbox.read_bytes(), outbox_bytes)
+        for artifact, expected_bytes in artifact_bytes.items():
+            self.assertEqual(artifact.read_bytes(), expected_bytes)
         untracked = set(
             self._git(self.worker, "ls-files", "--others", "--exclude-standard").stdout.splitlines()
         )
-        self.assertEqual(untracked, {trajectory.name, trajectory_pointer.name})
+        self.assertEqual(untracked, {artifact.name for artifact in trajectory_artifacts})
 
     def test_startup_commits_completed_failed_record_without_regenerating_it(self):
         packet = self._admit_packet("failed-before-commit.json")

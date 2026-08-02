@@ -26,7 +26,9 @@ is_monica_trajectory_artifact() {
   local path="$1"
   [[ "$path" != */* ]] || return 1
   case "$path" in
-    agent_monica_explicit_monica-pipeline-*.trajectory.jsonl | \
+    agent:monica:explicit:monica-pipeline-*.trajectory.jsonl | \
+      agent:monica:explicit:monica-pipeline-*.trajectory-path.json | \
+      agent_monica_explicit_monica-pipeline-*.trajectory.jsonl | \
       agent_monica_explicit_monica-pipeline-*.trajectory-path.json)
       return 0
       ;;
