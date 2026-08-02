@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regression contract for the mobile homepage ``Nostot`` story target."""
+"""Regression contract for the mobile homepage discovery story target."""
 
 from pathlib import Path
 import re
@@ -26,8 +26,9 @@ class HomepageStoryCardTapTargetTest(unittest.TestCase):
             "</article>", 1
         )[0]
 
-        self.assertIn('<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>', card)
-        self.assertNotIn("data-track", card)
+        self.assertIn('<h3><a href="{{ $story.RelPermalink }}"', card)
+        self.assertIn('data-track="homepage_discovery_click"', card)
+        self.assertIn('data-rank="{{ add $rank 1 }}"', card)
 
     def test_mobile_opinion_card_headline_is_a_44px_target(self) -> None:
         expected = (

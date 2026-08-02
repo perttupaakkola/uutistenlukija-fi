@@ -16,6 +16,7 @@
 
   {{ if gt (len $sorted) 1 }}
   {{ $live := index $sorted 1 }}
+  {{ $seen = $seen | append $live.Permalink }}
   <a class="portal-livebar" href="{{ $live.RelPermalink }}">
     <span class="portal-livebar__badge">Live</span>
     <time>{{ $live.Date.Format "15:04" }}</time>
@@ -105,6 +106,7 @@
         <h2>Luetuimmat</h2>
         <ol>
           {{ range first 3 (where $sorted "Permalink" "not in" $seen) }}
+          {{ $seen = $seen | append .Permalink }}
           <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
           {{ end }}
         </ol>
@@ -145,6 +147,7 @@
       {{ range $cat := $topicCats }}
       {{ $catPosts := where $sorted ".Params.categories" "intersect" (slice $cat) }}
       {{ with index $catPosts 0 }}
+      {{ $seen = $seen | append .Permalink }}
       <article class="portal-topic-card">
         <a href="/kategoriat/{{ lower $cat | urlize }}/" class="portal-topic-card__label">{{ $cat }}</a>
         <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
@@ -155,25 +158,27 @@
     </div>
   </section>
 
-  <section class="portal-editorials" aria-labelledby="editorials-title">
+  <section class="portal-editorials portal-discovery" aria-labelledby="editorials-title">
     <div class="portal-module-head">
-      <h2 id="editorials-title">Nostot</h2>
-      <a href="/categories/kotimaa/">Näytä kaikki</a>
+      <h2 id="editorials-title">Löydä lisää</h2>
+      <a href="/paivan-tarkeimmat-uutiset/">Kaikki uutiset</a>
     </div>
     <div class="portal-editorials__grid">
-      {{ $opinionPool := where $visualPosts "Permalink" "not in" $seen }}
-      {{ if lt (len $opinionPool) 3 }}{{ $opinionPool = where $sorted "Permalink" "not in" $seen }}{{ end }}
-      {{ range first 3 $opinionPool }}
-      {{ $cat := index .Params.categories 0 | default "Uutiset" }}
-      {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
-      {{ $seen = $seen | append .Permalink }}
+      {{/* Newest rendered posts not already exposed in the homepage modules above. */}}
+      {{ $discoveryPool := where $sorted "Permalink" "not in" $seen }}
+      {{ range $rank, $story := first 4 $discoveryPool }}
+      {{ $cat := index $story.Params.categories 0 | default "Uutiset" }}
+      {{ $seen = $seen | append $story.Permalink }}
       <article class="portal-opinion-card">
-        <img src="{{ $img }}" alt="" loading="lazy" decoding="async" width="96" height="96" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.src='{{ printf "/images/categories/%s.jpg" ($cat | lower) }}'">
         <div>
           <span class="portal-kicker">{{ $cat }}</span>
-          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          {{ with .Params.source_name }}<span class="portal-opinion-card__source">{{ . }}</span>{{ end }}
-          <span class="portal-opinion-card__time">{{ partial "relative-date.html" . }}</span>
+          <h3><a href="{{ $story.RelPermalink }}"
+            data-track="homepage_discovery_click"
+            data-placement="homepage_find_more"
+            data-rank="{{ add $rank 1 }}"
+            data-category="{{ $cat }}">{{ $story.Title }}</a></h3>
+          {{ with $story.Params.source_name }}<span class="portal-opinion-card__source">{{ . }}</span>{{ end }}
+          <span class="portal-opinion-card__time">{{ partial "relative-date.html" $story }}</span>
         </div>
       </article>
       {{ end }}
