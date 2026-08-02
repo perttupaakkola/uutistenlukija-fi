@@ -164,9 +164,18 @@
       <a href="/paivan-tarkeimmat-uutiset/">Kaikki uutiset</a>
     </div>
     <div class="portal-editorials__grid">
-      {{/* Newest rendered posts not already exposed in the homepage modules above. */}}
+      {{/* Keep four unseen stories; reserve the fourth slot for the newest unseen
+           Talous story only when the newest four do not already contain one. */}}
       {{ $discoveryPool := where $sorted "Permalink" "not in" $seen }}
-      {{ range $rank, $story := first 4 $discoveryPool }}
+      {{ $discoveryStories := first 4 $discoveryPool }}
+      {{ $talousCandidates := where $discoveryPool ".Params.categories" "intersect" (slice "Talous") }}
+      {{ $selectedTalous := where $discoveryStories ".Params.categories" "intersect" (slice "Talous") }}
+      {{ if and (eq (len $selectedTalous) 0) (gt (len $talousCandidates) 0) }}
+        {{ $newestUnseenTalous := index $talousCandidates 0 }}
+        {{ $discoveryStories = first 3 $discoveryStories }}
+        {{ $discoveryStories = $discoveryStories | append $newestUnseenTalous }}
+      {{ end }}
+      {{ range $rank, $story := $discoveryStories }}
       {{ $cat := index $story.Params.categories 0 | default "Uutiset" }}
       {{ $seen = $seen | append $story.Permalink }}
       <article class="portal-opinion-card">
