@@ -13,6 +13,7 @@ import argparse
 import json
 import os
 import re
+import subprocess
 import sys
 from collections import Counter
 from datetime import datetime, timedelta, timezone
@@ -92,6 +93,113 @@ def sanitize_reason(reason: Any) -> str:
     text = URL_QUERY_RE.sub(lambda m: m.group(0).split("?", 1)[0], text)
     text = re.sub(r"\s+", " ", text)
     return text[:180] or "unknown"
+
+
+def _read_git(repo_dir: Path, *args: str) -> str | None:
+    """Run one bounded local Git read without fetching or taking optional locks."""
+    env = os.environ.copy()
+    env["GIT_OPTIONAL_LOCKS"] = "0"
+    env["GIT_TERMINAL_PROMPT"] = "0"
+    try:
+        result = subprocess.run(
+            ["git", *args],
+            cwd=repo_dir,
+            check=False,
+            capture_output=True,
+            text=True,
+            timeout=10,
+            env=env,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+    if result.returncode != 0:
+        return None
+    return result.stdout.strip()
+
+
+def git_upstream_freshness(repo_dir: Path) -> dict[str, Any]:
+    """Assess HEAD against its configured upstream using local Git metadata only."""
+    result: dict[str, Any] = {
+        "status": "unknown",
+        "fresh": None,
+        "reason": "Git freshness could not be determined",
+        "head": None,
+        "upstream": None,
+        "upstream_head": None,
+        "behind_count": None,
+        "ahead_count": None,
+        "source": "read-only local Git metadata; no fetch or network access",
+    }
+    if not repo_dir.is_dir():
+        result["reason"] = "project path is missing or not a directory"
+        return result
+    if _read_git(repo_dir, "rev-parse", "--is-inside-work-tree") != "true":
+        result["reason"] = "project path is not a Git worktree"
+        return result
+
+    head = _read_git(repo_dir, "rev-parse", "--verify", "HEAD^{commit}")
+    if not head:
+        result["reason"] = "Git HEAD is missing or unresolvable"
+        return result
+    result["head"] = head
+
+    upstream = _read_git(
+        repo_dir,
+        "rev-parse",
+        "--abbrev-ref",
+        "--symbolic-full-name",
+        "@{upstream}",
+    )
+    if not upstream:
+        result["reason"] = "configured upstream is missing or unresolvable"
+        return result
+    result["upstream"] = upstream
+
+    upstream_head = _read_git(
+        repo_dir,
+        "rev-parse",
+        "--verify",
+        "@{upstream}^{commit}",
+    )
+    if not upstream_head:
+        result["reason"] = "configured upstream commit is missing or unresolvable"
+        return result
+    result["upstream_head"] = upstream_head
+
+    if head == upstream_head:
+        result.update({
+            "status": "fresh",
+            "fresh": True,
+            "reason": f"HEAD matches configured upstream {upstream}",
+            "behind_count": 0,
+            "ahead_count": 0,
+        })
+        return result
+
+    counts = _read_git(
+        repo_dir,
+        "rev-list",
+        "--left-right",
+        "--count",
+        "HEAD...@{upstream}",
+    )
+    try:
+        ahead_count, behind_count = (int(value) for value in (counts or "").split())
+    except (TypeError, ValueError):
+        result["reason"] = "HEAD relationship to configured upstream is unresolvable"
+        return result
+    result["ahead_count"] = ahead_count
+    result["behind_count"] = behind_count
+    if behind_count > 0:
+        result.update({
+            "status": "stale",
+            "fresh": False,
+            "reason": f"HEAD is {behind_count} commit(s) behind configured upstream {upstream}",
+        })
+        return result
+
+    result["reason"] = "HEAD differs from configured upstream without a positive behind count"
+    return result
 
 
 def extract_frontmatter(path: Path) -> dict[str, str]:
@@ -763,6 +871,8 @@ def local_coordination_placeholders(now: datetime) -> dict[str, Any]:
 
 def build_panel(now: datetime | None = None) -> dict[str, Any]:
     now = now or utcnow()
+    checkout_freshness = dict(git_upstream_freshness(PROJECT_DIR))
+    checkout_freshness["checked_at"] = iso(now)
     content = content_summary(now)
     pipeline = pipeline_summary(now)
     raw_last_24h = pipeline.get("last_24h")
@@ -782,6 +892,8 @@ def build_panel(now: datetime | None = None) -> dict[str, Any]:
         last_24h["article_count_source"] = "pipeline/logs/metrics.json"
     pipeline["last_24h"] = last_24h
     queues = queue_summary(now)
+    for local_section in (content, pipeline, queues):
+        local_section["git_upstream_freshness"] = dict(checkout_freshness)
     categories = category_drift()
     analytics = analytics_status(now)
     published_last = content.get("last_publish_age_minutes")
@@ -791,8 +903,11 @@ def build_panel(now: datetime | None = None) -> dict[str, Any]:
         status = "attention"
     if published_last is None and not pipeline.get("metrics_rows_total"):
         status = "unknown"
+    checkout_status = checkout_freshness.get("status")
+    if checkout_status != "fresh":
+        status = "stale" if checkout_status == "stale" else "unknown"
     return {
-        "schema_version": "1.1",
+        "schema_version": "1.2",
         "site": "uutistenlukija.fi",
         "generated_at": iso(now),
         "status": status,
@@ -800,7 +915,9 @@ def build_panel(now: datetime | None = None) -> dict[str, Any]:
         "notes": [
             "Generated from local files/logs only.",
             "No external APIs queried; no credentials read or printed.",
+            "Git freshness uses the configured local upstream reference; no fetch or network access.",
         ],
+        "git_upstream_freshness": checkout_freshness,
         "content": content,
         "pipeline": pipeline,
         "queues": queues,

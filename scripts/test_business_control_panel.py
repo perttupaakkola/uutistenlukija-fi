@@ -5,6 +5,7 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone
 import importlib.util
 from pathlib import Path
+import subprocess
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -17,6 +18,142 @@ spec.loader.exec_module(panel)
 
 
 class BusinessControlPanelReportingTest(unittest.TestCase):
+    def run_git(self, cwd: Path, *args: str) -> str:
+        result = subprocess.run(
+            ["git", *args],
+            cwd=cwd,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        return result.stdout.strip()
+
+    def init_tracked_repo(self, root: Path) -> str:
+        root.mkdir(parents=True)
+        self.run_git(root, "init", "--initial-branch=main")
+        self.run_git(root, "config", "user.name", "Business Panel Test")
+        self.run_git(root, "config", "user.email", "panel-test@example.invalid")
+        (root / "tracked.txt").write_text("base\n", encoding="utf-8")
+        self.run_git(root, "add", "tracked.txt")
+        self.run_git(root, "commit", "-m", "base")
+        head = self.run_git(root, "rev-parse", "HEAD")
+        self.run_git(root, "remote", "add", "origin", str(root.parent / "unused-origin.git"))
+        self.run_git(root, "update-ref", "refs/remotes/origin/main", head)
+        self.run_git(root, "branch", "--set-upstream-to=origin/main", "main")
+        return head
+
+    def test_git_upstream_freshness_is_fresh_only_at_configured_upstream(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "checkout"
+            head = self.init_tracked_repo(root)
+
+            freshness = panel.git_upstream_freshness(root)
+
+        self.assertEqual(freshness["status"], "fresh")
+        self.assertTrue(freshness["fresh"])
+        self.assertEqual(freshness["head"], head)
+        self.assertEqual(freshness["upstream_head"], head)
+        self.assertEqual(freshness["behind_count"], 0)
+        self.assertEqual(freshness["ahead_count"], 0)
+
+    def test_git_upstream_freshness_reports_positive_behind_count_as_stale(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "checkout"
+            head = self.init_tracked_repo(root)
+            self.run_git(root, "switch", "--create", "upstream-work")
+            (root / "tracked.txt").write_text("base\nupstream\n", encoding="utf-8")
+            self.run_git(root, "add", "tracked.txt")
+            self.run_git(root, "commit", "-m", "upstream")
+            upstream_head = self.run_git(root, "rev-parse", "HEAD")
+            self.run_git(root, "switch", "main")
+            self.run_git(root, "update-ref", "refs/remotes/origin/main", upstream_head)
+
+            freshness = panel.git_upstream_freshness(root)
+
+        self.assertEqual(freshness["status"], "stale")
+        self.assertFalse(freshness["fresh"])
+        self.assertEqual(freshness["head"], head)
+        self.assertEqual(freshness["upstream_head"], upstream_head)
+        self.assertEqual(freshness["behind_count"], 1)
+        self.assertEqual(freshness["ahead_count"], 0)
+
+    def test_git_upstream_freshness_is_unknown_without_resolvable_upstream(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "checkout"
+            root.mkdir()
+            missing_repo = panel.git_upstream_freshness(root)
+
+            self.run_git(root, "init", "--initial-branch=main")
+            self.run_git(root, "config", "user.name", "Business Panel Test")
+            self.run_git(root, "config", "user.email", "panel-test@example.invalid")
+            (root / "tracked.txt").write_text("base\n", encoding="utf-8")
+            self.run_git(root, "add", "tracked.txt")
+            self.run_git(root, "commit", "-m", "base")
+            missing_upstream = panel.git_upstream_freshness(root)
+
+        self.assertEqual(missing_repo["status"], "unknown")
+        self.assertIsNone(missing_repo["fresh"])
+        self.assertIn("Git worktree", missing_repo["reason"])
+        self.assertEqual(missing_upstream["status"], "unknown")
+        self.assertIsNone(missing_upstream["fresh"])
+        self.assertIn("configured upstream", missing_upstream["reason"])
+
+    def test_panel_propagates_checkout_freshness_to_local_sections(self) -> None:
+        now = datetime(2026, 8, 2, 8, 0, tzinfo=timezone.utc)
+        cases = [
+            ("fresh", True, "ok"),
+            ("stale", False, "stale"),
+            ("unknown", None, "unknown"),
+        ]
+        for freshness_status, fresh, expected_panel_status in cases:
+            with self.subTest(freshness_status=freshness_status), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                content_dir = root / "content" / "posts"
+                log_dir = root / "pipeline" / "logs"
+                content_dir.mkdir(parents=True)
+                log_dir.mkdir(parents=True)
+                (content_dir / "fresh.md").write_text(
+                    "---\n"
+                    "title: Fresh article\n"
+                    f"date: {(now - timedelta(hours=1)).isoformat()}\n"
+                    "categories:\n"
+                    "  - Kotimaa\n"
+                    "---\nBody\n",
+                    encoding="utf-8",
+                )
+                (log_dir / "metrics.json").write_text(
+                    '[{"timestamp":"2026-08-02T07:30:00+00:00","success":true,"article_count":1,"errors":[]}]',
+                    encoding="utf-8",
+                )
+                freshness = {
+                    "status": freshness_status,
+                    "fresh": fresh,
+                    "reason": f"fixture is {freshness_status}",
+                    "head": "a" * 40,
+                    "upstream": "origin/main" if freshness_status != "unknown" else None,
+                    "upstream_head": "b" * 40 if freshness_status == "stale" else "a" * 40,
+                    "behind_count": 3 if freshness_status == "stale" else (0 if fresh else None),
+                    "ahead_count": 0 if freshness_status != "unknown" else None,
+                    "source": "read-only local Git metadata; no fetch or network access",
+                }
+                with (
+                    patch.object(panel, "PROJECT_DIR", root),
+                    patch.object(panel, "CONTENT_DIR", content_dir),
+                    patch.object(panel, "PIPELINE_DIR", root / "pipeline"),
+                    patch.object(panel, "LOG_DIR", log_dir),
+                    patch.object(panel, "QUEUE_DIR", root / "pipeline" / "queues"),
+                    patch.object(panel, "git_upstream_freshness", return_value=freshness),
+                ):
+                    data = panel.build_panel(now)
+
+            self.assertEqual(data["status"], expected_panel_status)
+            self.assertEqual(data["git_upstream_freshness"]["status"], freshness_status)
+            self.assertEqual(data["content"]["git_upstream_freshness"]["status"], freshness_status)
+            self.assertEqual(data["pipeline"]["git_upstream_freshness"]["status"], freshness_status)
+            self.assertEqual(data["queues"]["git_upstream_freshness"]["status"], freshness_status)
+            self.assertEqual(data["content"]["article_count_local"], 1)
+            self.assertEqual(data["pipeline"]["last_24h"]["article_count"], 1)
+
     def test_content_summary_excludes_truthy_drafts_from_published_metrics(self) -> None:
         now = datetime(2026, 7, 16, 12, 0, tzinfo=timezone.utc)
         cases = [
