@@ -1,0 +1,206 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-08-02T23:10:49.952704+00:00",
+  "digest": "c025955902",
+  "packet": {
+    "packet_id": "20260802T231049Z_c025955902",
+    "created_at": "2026-08-02T23:10:49Z",
+    "headline_seed": "Suomalainen vuorikiipeilijä on kateissa Matterhornilla",
+    "description_seed": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9666456",
+    "source": "Etelä-Suomen Sanomat",
+    "source_names": [
+      "Yle"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20239061"
+    ],
+    "source_domains": [
+      "yle.fi"
+    ],
+    "selected_source": {
+      "name": "Yle",
+      "url": "https://yle.fi/a/74-20239061",
+      "domain": "yle.fi"
+    },
+    "selected_source_provenance_error": "",
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.57,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Suomalainen vuorikiipeilijä on kateissa Matterhornilla"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle",
+        "source_url": "https://yle.fi/a/74-20239061",
+        "source_domain": "yle.fi",
+        "source_type": "research",
+        "text": "Suomalainen vuorikiipeilijä on ollut kadoksissa Matterhornilla perjantaista 31. heinäkuuta lähtien. Asiasta kertoo italialinen verkkolehti Aostrasera. Vuoren Sveitsin puoleiselta rinteeltä on löytynyt takki ja osa kiipeilyvarusteista, jotka viranomaiset ovat vahvistaneet kadonneen miehen omaisuudeksi. Etsinnät jatkuvat Sveitsin puolella. Kadonnut kiipeilijä työskenteli Italiassa. Viranomaisten tietojen perusteella mies lähti torstaina 30. heinäkuuta nousemaan Furggenin harjannetta pitkin niin kutsuttua ”suoraa reittiä”, joka kulkee jyrkänteiden yli Matterhornin kaakon puoleisella harjanteella. Reitti on yksi vuoren vaativimmista, Aostasera kirjoittaa. Nousu ei ilmeisesti onnistunut saman päivän aikana, vaan mies pysähtyi muutamaa köydenpituutta vaille huippua ja vietti yön korkealla vuorella. Aamulla nousua jatkettiin. Mies nähtiin huipulla perjantaina noin kello 9, minkä jälkeen hän aloitti laskeutumisen tavanomaisempaa Leonen harjanteen reittiä pitkin, lehden lähteet kertovat. Perjantaina puolenpäivän tienoilla alueella oli voimakas ukkoskuuro, mikä huolestutti miehen kumppania. Kun yhteyttä ei saatu, nainen teki ilmoituksen viranomaisille.",
+        "word_count": 132,
+        "source_identity": "https://yle.fi/a/74-20239061",
+        "keyword_overlap": 3,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Suomalainen vuorikiipeilijä on ollut kadoksissa Matterhornilla perjantaista 31. heinäkuuta lähtien. Asiasta kertoo italialinen verkkolehti Aostrasera. Vuoren Sveitsin puoleiselta rinteeltä on löytynyt takki ja osa kiipeilyvarusteista, jotka viranomaiset ovat vahvistaneet kadonneen miehen omaisuudeksi. Etsinnät jatkuvat Sveitsin puolella. Kadonnut kiipeilijä työskenteli Italiassa. Viranomaisten tietojen perusteella mies lähti torstaina 30. heinäkuuta nousemaan Furggenin harjannetta pitkin niin kutsuttua ”suoraa reittiä”, joka kulkee jyrkänteiden yli Matterhornin kaakon puoleisella harjanteella. Reitti on yksi vuoren vaativimmista, Aostasera kirjoittaa. Nousu ei ilmeisesti onnistunut saman päivän aikana, vaan mies pysähtyi muutamaa köydenpituutta vaille huippua ja vietti yön korkealla vuorella. Aamulla nousua jatkettiin. Mies nähtiin huipulla perjantaina noin kello 9, minkä jälkeen hän aloitti laskeutumisen tavanomaisempaa Leonen harjanteen reittiä pitkin, lehden lähteet kertovat. Perjantaina puolenpäivän tienoilla alueella oli voimakas ukkoskuuro, mikä huolestutti miehen kumppania. Kun yhteyttä ei saatu, nainen teki ilmoituksen viranomaisille.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 184,
+      "selected_blocks": 1,
+      "selected_source_words": 132,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle"
+      ],
+      "selected_sources": [
+        "Yle"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Suomalainen vuorikiipeilijä on kateissa Matterhornilla",
+      "description": "",
+      "category_hint": "Kotimaa",
+      "research_source": "multi"
+    },
+    "source_usage": [
+      {
+        "source_url": "https://yle.fi/a/74-20239061",
+        "used": true,
+        "dependent_claims": [
+          "Suomalainen vuorikiipeilijä on ollut kateissa Matterhornilla perjantaista 31. heinäkuuta lähtien.",
+          "Kadonneen takki ja osa kiipeilyvarusteista löydettiin Sveitsin-puoleiselta rinteeltä ja vahvistettiin hänen omaisuudekseen.",
+          "Mies nousi Furggenin harjanteen suoraa reittiä ja vietti yön muutamaa köydenpituutta ennen huippua.",
+          "Mies nähtiin huipulla perjantaina noin kello yhdeksän ja aloitti laskeutumisen Leonen harjannetta pitkin.",
+          "Alueella oli puolenpäivän aikaan voimakas ukkoskuuro, minkä jälkeen miehen kumppani ilmoitti hänestä viranomaisille.",
+          "Etsinnät jatkuvat Sveitsin puolella."
+        ]
+      }
+    ],
+    "source_usage_contract": "v1"
+  },
+  "original_article": {
+    "title": "Suomalainen vuorikiipeilijä on kateissa Matterhornilla",
+    "description": "",
+    "link": "https://www.ess.fi/uutissuomalainen/9666456",
+    "published": "2026-08-02T21:52:40+03:00",
+    "source": "Etelä-Suomen Sanomat",
+    "source_domain": "ess.fi",
+    "language": "fi",
+    "fingerprint": "dfe6d3571dcbf38b5b6e7f5a6834ad75",
+    "_url_hash": "7fbb6d867e43f6a8352936d470c5bb2cec994914e550bddb19217b13a5cc5414",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle | URL: https://yle.fi/a/74-20239061]\nSuomalainen vuorikiipeilijä on ollut kadoksissa Matterhornilla perjantaista 31. heinäkuuta lähtien. Asiasta kertoo italialinen verkkolehti Aostrasera.\n\nVuoren Sveitsin puoleiselta rinteeltä on löytynyt takki ja osa kiipeilyvarusteista, jotka viranomaiset ovat vahvistaneet kadonneen miehen omaisuudeksi. Etsinnät jatkuvat Sveitsin puolella.\n\nKadonnut kiipeilijä työskenteli Italiassa.\n\nViranomaisten tietojen perusteella mies lähti torstaina 30. heinäkuuta nousemaan Furggenin harjannetta pitkin niin kutsuttua ”suoraa reittiä”, joka kulkee jyrkänteiden yli Matterhornin kaakon puoleisella harjanteella. Reitti on yksi vuoren vaativimmista, Aostasera kirjoittaa.\n\nNousu ei ilmeisesti onnistunut saman päivän aikana, vaan mies pysähtyi muutamaa köydenpituutta vaille huippua ja vietti yön korkealla vuorella. Aamulla nousua jatkettiin. Mies nähtiin huipulla perjantaina noin kello 9, minkä jälkeen hän aloitti laskeutumisen tavanomaisempaa Leonen harjanteen reittiä pitkin, lehden lähteet kertovat.\n\nPerjantaina puolenpäivän tienoilla alueella oli voimakas ukkoskuuro, mikä huolestutti miehen kumppania. Kun yhteyttä ei saatu, nainen teki ilmoituksen viranomaisille.\n\nLähteet epäilevät miehen mahdollisesti pudonneen laskeutumisen aikana vuoren länsiseinämää pitkin Sveitsin puolelle.\n\nVuoripelastajat ovat tehneet alueella ylilennon puoli kahden aikaan iltapäivällä ja toistamiseen kello viideltä. Ratkaisevia havaintoja ei ole tehty, ja etsintöjä vaikeuttavat huonon säätilan vuoksi alueen jyrkkyys.\n\nYlilennot paljastivat kuitenkin vuoren länsiseinämän luota takin ja kiipeilyvarusteita, jotka viranomaiset vahvistivat suomalaiskiipeilijälle kuuluviksi.",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-08-02T23:18:44.160729+00:00",
+  "payload": {
+    "packet_id": "20260802T231049Z_c025955902",
+    "title": "Suomalainen vuorikiipeilijä kateissa Matterhornilla – etsinnät jatkuvat Sveitsin puolella",
+    "summary": "Suomalainen vuorikiipeilijä katosi aloitettuaan laskeutumisen Matterhornin huipulta. Hänen takkinsa ja osa kiipeilyvarusteistaan on löydetty vuoren Sveitsin-puoleiselta rinteeltä.",
+    "content": "Suomalainen vuorikiipeilijä on ollut kateissa Matterhornilla perjantaista 31. heinäkuuta lähtien. Vuoren Sveitsin-puoleiselta rinteeltä on löytynyt hänen takkinsa ja osa kiipeilyvarusteistaan. Viranomaiset ovat vahvistaneet tavaroiden kuuluvan kadonneelle miehelle, ja etsinnät jatkuvat vuoren Sveitsin puolella. Katoamisen syystä ei ole kerrottu varmistettua tietoa.\n\nTapausta koskevat tiedot ovat peräisin italialaiselta Aostrasera-verkkolehdeltä, jonka tietoja Yle on välittänyt. Italiassa työskennelleen miehen vaiheista on kuvattu nousu torstaista perjantaiaamuun sekä laskeutumisen alkaminen, mutta hänen myöhemmistä liikkeistään ei ole saatu varmistettua tietoa.\n\n<h2>Mies vietti yön lähellä Matterhornin huippua</h2>\n\nViranomaisten tietojen perusteella mies aloitti nousunsa torstaina 30. heinäkuuta Furggenin harjannetta pitkin. Hän käytti niin kutsuttua suoraa reittiä, joka kulkee jyrkänteiden yli Matterhornin kaakkoisella harjanteella. Aostrasera kuvaa tätä reittiä yhdeksi vuoren vaativimmista.\n\nNousu ei ilmeisesti valmistunut saman päivän aikana. Mies pysähtyi muutamaa köydenpituutta ennen huippua ja vietti yön korkealla vuorella. Hän jatkoi nousua perjantaiaamuna, ja lehden lähteiden mukaan hänet nähtiin Matterhornin huipulla noin kello yhdeksän.\n\n<h2>Laskeutuminen alkoi ennen voimakasta ukkoskuuroa</h2>\n\nHuipulta mies lähti laskeutumaan Leonen harjanteen reittiä pitkin. Kyseessä oli Aostraseran mukaan nousuun käytettyä suoraa reittiä tavanomaisempi vaihtoehto. Saatavilla olevat tiedot eivät kerro, kuinka pitkälle hän ehti laskeutua ennen yhteyden katkeamista.\n\nAlueella oli perjantaina puolenpäivän aikaan voimakas ukkoskuuro. Säätilanne huolestutti miehen kumppania, joka yritti tavoittaa häntä siinä onnistumatta. Kun mieheen ei saatu yhteyttä, kumppani ilmoitti asiasta viranomaisille. Ukkoskuuron ja katoamisen mahdollisesta yhteydestä ei ole varmistettua tietoa.\n\n<h2>Varusteita löytyi Sveitsin-puoleiselta rinteeltä</h2>\n\nVuoren Sveitsin-puoleiselta rinteeltä löydettiin myöhemmin kadonneen takki ja osa hänen kiipeilyvarusteistaan. Viranomaiset ovat vahvistaneet löytöjen kuuluvan miehelle. Niiden tarkkaa löytöpaikkaa tai sitä, mitä löydöt kertovat miehen liikkeistä, ei ole lähdetiedoissa yksilöity.\n\nEtsinnät jatkuvat Sveitsin puolella. Varmistettu tapahtumaketju ulottuu torstaina alkaneesta noususta perjantaiseen huippuhavaintoon ja laskeutumisen aloittamiseen. Miehen olinpaikasta, myöhemmistä vaiheista tai katoamisen syystä ei ole kerrottu uusia vahvistettuja tietoja.",
+    "category": "Kotimaa",
+    "tags": [
+      "Matterhorn",
+      "vuorikiipeily",
+      "kadonneet",
+      "Sveitsi"
+    ],
+    "summary_bullets": [
+      "Suomalainen vuorikiipeilijä on ollut kateissa Matterhornilla perjantaista 31. heinäkuuta lähtien.",
+      "Mies nähtiin huipulla noin kello yhdeksän ennen kuin hän aloitti laskeutumisen Leonen harjannetta pitkin.",
+      "Kadonneen takki ja osa kiipeilyvarusteista on löydetty Sveitsin-puoleiselta rinteeltä."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "confidence": 0.57,
+    "journalist_note": "Juttu perustuu yhteen tutkimuslähteeseen, joka välittää Aostraseran tietoja. Tapahtumien yksityiskohtia ei ole vahvistettu toisesta riippumattomasta lähteestä.",
+    "source_usage": [
+      {
+        "source_url": "https://yle.fi/a/74-20239061",
+        "used": true,
+        "dependent_claims": [
+          "Suomalainen vuorikiipeilijä on ollut kateissa Matterhornilla perjantaista 31. heinäkuuta lähtien.",
+          "Kadonneen takki ja osa kiipeilyvarusteista löydettiin Sveitsin-puoleiselta rinteeltä ja vahvistettiin hänen omaisuudekseen.",
+          "Mies nousi Furggenin harjanteen suoraa reittiä ja vietti yön muutamaa köydenpituutta ennen huippua.",
+          "Mies nähtiin huipulla perjantaina noin kello yhdeksän ja aloitti laskeutumisen Leonen harjannetta pitkin.",
+          "Alueella oli puolenpäivän aikaan voimakas ukkoskuuro, minkä jälkeen miehen kumppani ilmoitti hänestä viranomaisille.",
+          "Etsinnät jatkuvat Sveitsin puolella."
+        ]
+      }
+    ]
+  },
+  "raw_response": "[agents/tool-policy] tool policy removed 20 tool(s) via tools.allow: agents_list, ask_user, automations, computer, conversations_list, conversations_send, conversations_turn, create_goal, dashboard, gateway, get_goal, image, mobile_ui, nodes, sessions, sessions_search, transcripts, tts, update_goal, update_plan\n[agents/tool-policy] tool policy removed 1 tool(s) via sandbox tools.allow: message\n[agents/tool-policy] tool policy removed 21 tool(s) via tools.allow: agents_list, ask_user, automations, computer, conversations_list, conversations_send, conversations_turn, create_goal, dashboard, gateway, get_goal, heartbeat_respond, image, mobile_ui, nodes, sessions, sessions_search, transcripts, tts, update_goal, update_plan\n[agents/tool-policy] tool policy removed 1 tool(s) via sandbox tools.allow: message\n[agent/embedded] codex app-server context-engine projection decision\n[agent/embedded] codex app-server wrote context-engine thread binding\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=7a15e3af-d709-40ba-82ad-6a6a6e6641a2 sessionKey=agent:monica:explicit:monica-pipeline-78629ce6-5658-40e7-af90-bd99501637f3 lane=context-engine-turn-maintenance:agent:monica:explicit:monica-pipeline-78629ce6-5658-40e7-af90-bd99501637f3\n[agent/embedded] codex app-server one-shot cleanup retired shared client\n{\n  \"packet_id\": \"20260802T231049Z_c025955902\",\n  \"title\": \"Suomalainen vuorikiipeilijä kateissa Matterhornilla – etsinnät jatkuvat Sveitsin puolella\",\n  \"summary\": \"Suomalainen vuorikiipeilijä katosi aloitettuaan laskeutumisen Matterhornin huipulta. Hänen takkinsa ja osa kiipeilyvarusteistaan on löydetty vuoren Sveitsin-puoleiselta rinteeltä.\",\n  \"content\": \"Suomalainen vuorikiipeilijä on ollut kateissa Matterhornilla perjantaista 31. heinäkuuta lähtien. Vuoren Sveitsin-puoleiselta rinteeltä on löytynyt hänen takkinsa ja osa kiipeilyvarusteistaan. Viranomaiset ovat vahvistaneet tavaroiden kuuluvan kadonneelle miehelle, ja etsinnät jatkuvat vuoren Sveitsin puolella. Katoamisen syystä ei ole kerrottu varmistettua tietoa.\\n\\nTapausta koskevat tiedot ovat peräisin italialaiselta Aostrasera-verkkolehdeltä, jonka tietoja Yle on välittänyt. Italiassa työskennelleen miehen vaiheista on kuvattu nousu torstaista perjantaiaamuun sekä laskeutumisen alkaminen, mutta hänen myöhemmistä liikkeistään ei ole saatu varmistettua tietoa.\\n\\n<h2>Mies vietti yön lähellä Matterhornin huippua</h2>\\n\\nViranomaisten tietojen perusteella mies aloitti nousunsa torstaina 30. heinäkuuta Furggenin harjannetta pitkin. Hän käytti niin kutsuttua suoraa reittiä, joka kulkee jyrkänteiden yli Matterhornin kaakkoisella harjanteella. Aostrasera kuvaa tätä reittiä yhdeksi vuoren vaativimmista.\\n\\nNousu ei ilmeisesti valmistunut saman päivän aikana. Mies pysähtyi muutamaa köydenpituutta ennen huippua ja vietti yön korkealla vuorella. Hän jatkoi nousua perjantaiaamuna, ja lehden lähteiden mukaan hänet nähtiin Matterhornin huipulla noin kello yhdeksän.\\n\\n<h2>Laskeutuminen alkoi ennen voimakasta ukkoskuuroa</h2>\\n\\nHuipulta mies lähti laskeutumaan Leonen harjanteen reittiä pitkin. Kyseessä oli Aostraseran mukaan nousuun käytettyä suoraa reittiä tavanomaisempi vaihtoehto. Saatavilla olevat tiedot eivät kerro, kuinka pitkälle hän ehti laskeutua ennen yhteyden katkeamista.\\n\\nAlueella oli perjantaina puolenpäivän aikaan voimakas ukkoskuuro. Säätilanne huolestutti miehen kumppania, joka yritti tavoittaa häntä siinä onnistumatta. Kun mieheen ei saatu yhteyttä, kumppani ilmoitti asiasta viranomaisille. Ukkoskuuron ja katoamisen mahdollisesta yhteydestä ei ole varmistettua tietoa.\\n\\n<h2>Varusteita löytyi Sveitsin-puoleiselta rinteeltä</h2>\\n\\nVuoren Sveitsin-puoleiselta rinteeltä löydettiin myöhemmin kadonneen takki ja osa hänen kiipeilyvarusteistaan. Viranomaiset ovat vahvistaneet löytöjen kuuluvan miehelle. Niiden tarkkaa löytöpaikkaa tai sitä, mitä löydöt kertovat miehen liikkeistä, ei ole lähdetiedoissa yksilöity.\\n\\nEtsinnät jatkuvat Sveitsin puolella. Varmistettu tapahtumaketju ulottuu torstaina alkaneesta noususta perjantaiseen huippuhavaintoon ja laskeutumisen aloittamiseen. Miehen olinpaikasta, myöhemmistä vaiheista tai katoamisen syystä ei ole kerrottu uusia vahvistettuja tietoja.\",\n  \"category\": \"Kotimaa\",\n  \"tags\": [\n    \"Matterhorn\",\n    \"vuorikiipeily\",\n    \"kadonneet\",\n    \"Sveitsi\"\n  ],\n  \"summary_bullets\": [\n    \"Suomalainen vuorikiipeilijä on ollut kateissa Matterhornilla perjantaista 31. heinäkuuta lähtien.\",\n    \"Mies nähtiin huipulla noin kello yhdeksän ennen kuin hän aloitti laskeutumisen Leonen harjannetta pitkin.\",\n    \"Kadonneen takki ja osa kiipeilyvarusteista on löydetty Sveitsin-puoleiselta rinteeltä.\"\n  ],\n  \"content_type\": \"uutinen\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.57,\n  \"journalist_note\": \"Juttu perustuu yhteen tutkimuslähteeseen, joka välittää Aostraseran tietoja. Tapahtumien yksityiskohtia ei ole vahvistettu toisesta riippumattomasta lähteestä.\",\n  \"source_usage\": [\n    {\n      \"source_url\": \"https://yle.fi/a/74-20239061\",\n      \"used\": true,\n      \"dependent_claims\": [\n        \"Suomalainen vuorikiipeilijä on ollut kateissa Matterhornilla perjantaista 31. heinäkuuta lähtien.\",\n        \"Kadonneen takki ja osa kiipeilyvarusteista löydettiin Sveitsin-puoleiselta rinteeltä ja vahvistettiin hänen omaisuudekseen.\",\n        \"Mies nousi Furggenin harjanteen suoraa reittiä ja vietti yön muutamaa köydenpituutta ennen huippua.\",\n        \"Mies nähtiin huipulla perjantaina noin kello yhdeksän ja aloitti laskeutumisen Leonen harjannetta pitkin.\",\n        \"Alueella oli puolenpäivän aikaan voimakas ukkoskuuro, minkä jälkeen miehen kumppani ilmoitti hänestä viranomaisille.\",\n        \"Etsinnät jatkuvat Sveitsin puolella.\"\n      ]\n    }\n  ]\n}\n[agents/agent-command] [agent] run 0d3588d5-3e05-43f4-8f28-4cddc3e2d676 ended with stopReason=stop",
+  "article": {
+    "title": "Suomalainen vuorikiipeilijä kateissa Matterhornilla – etsinnät jatkuvat Sveitsin puolella",
+    "description": "Suomalainen vuorikiipeilijä katosi aloitettuaan laskeutumisen Matterhornin huipulta. Hänen takkinsa ja osa kiipeilyvarusteistaan on löydetty vuoren Sveitsin-puoleiselta rinteeltä.",
+    "link": "https://yle.fi/a/74-20239061",
+    "published": "2026-08-02T21:52:40+03:00",
+    "source": "Yle",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "dfe6d3571dcbf38b5b6e7f5a6834ad75",
+    "_url_hash": "7fbb6d867e43f6a8352936d470c5bb2cec994914e550bddb19217b13a5cc5414",
+    "source_tier": 2,
+    "category_hint": "Kotimaa",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle | URL: https://yle.fi/a/74-20239061]\nSuomalainen vuorikiipeilijä on ollut kadoksissa Matterhornilla perjantaista 31. heinäkuuta lähtien. Asiasta kertoo italialinen verkkolehti Aostrasera.\n\nVuoren Sveitsin puoleiselta rinteeltä on löytynyt takki ja osa kiipeilyvarusteista, jotka viranomaiset ovat vahvistaneet kadonneen miehen omaisuudeksi. Etsinnät jatkuvat Sveitsin puolella.\n\nKadonnut kiipeilijä työskenteli Italiassa.\n\nViranomaisten tietojen perusteella mies lähti torstaina 30. heinäkuuta nousemaan Furggenin harjannetta pitkin niin kutsuttua ”suoraa reittiä”, joka kulkee jyrkänteiden yli Matterhornin kaakon puoleisella harjanteella. Reitti on yksi vuoren vaativimmista, Aostasera kirjoittaa.\n\nNousu ei ilmeisesti onnistunut saman päivän aikana, vaan mies pysähtyi muutamaa köydenpituutta vaille huippua ja vietti yön korkealla vuorella. Aamulla nousua jatkettiin. Mies nähtiin huipulla perjantaina noin kello 9, minkä jälkeen hän aloitti laskeutumisen tavanomaisempaa Leonen harjanteen reittiä pitkin, lehden lähteet kertovat.\n\nPerjantaina puolenpäivän tienoilla alueella oli voimakas ukkoskuuro, mikä huolestutti miehen kumppania. Kun yhteyttä ei saatu, nainen teki ilmoituksen viranomaisille.\n\nLähteet epäilevät miehen mahdollisesti pudonneen laskeutumisen aikana vuoren länsiseinämää pitkin Sveitsin puolelle.\n\nVuoripelastajat ovat tehneet alueella ylilennon puoli kahden aikaan iltapäivällä ja toistamiseen kello viideltä. Ratkaisevia havaintoja ei ole tehty, ja etsintöjä vaikeuttavat huonon säätilan vuoksi alueen jyrkkyys.\n\nYlilennot paljastivat kuitenkin vuoren länsiseinämän luota takin ja kiipeilyvarusteita, jotka viranomaiset vahvistivat suomalaiskiipeilijälle kuuluviksi.",
+    "research_source": "multi",
+    "summary": "Suomalainen vuorikiipeilijä katosi aloitettuaan laskeutumisen Matterhornin huipulta. Hänen takkinsa ja osa kiipeilyvarusteistaan on löydetty vuoren Sveitsin-puoleiselta rinteeltä.",
+    "content": "Suomalainen vuorikiipeilijä on ollut kateissa Matterhornilla perjantaista 31. heinäkuuta lähtien. Vuoren Sveitsin-puoleiselta rinteeltä on löytynyt hänen takkinsa ja osa kiipeilyvarusteistaan. Viranomaiset ovat vahvistaneet tavaroiden kuuluvan kadonneelle miehelle, ja etsinnät jatkuvat vuoren Sveitsin puolella. Katoamisen syystä ei ole kerrottu varmistettua tietoa.\n\nTapausta koskevat tiedot ovat peräisin italialaiselta Aostrasera-verkkolehdeltä, jonka tietoja Yle on välittänyt. Italiassa työskennelleen miehen vaiheista on kuvattu nousu torstaista perjantaiaamuun sekä laskeutumisen alkaminen, mutta hänen myöhemmistä liikkeistään ei ole saatu varmistettua tietoa.\n\n<h2>Mies vietti yön lähellä Matterhornin huippua</h2>\n\nViranomaisten tietojen perusteella mies aloitti nousunsa torstaina 30. heinäkuuta Furggenin harjannetta pitkin. Hän käytti niin kutsuttua suoraa reittiä, joka kulkee jyrkänteiden yli Matterhornin kaakkoisella harjanteella. Aostrasera kuvaa tätä reittiä yhdeksi vuoren vaativimmista.\n\nNousu ei ilmeisesti valmistunut saman päivän aikana. Mies pysähtyi muutamaa köydenpituutta ennen huippua ja vietti yön korkealla vuorella. Hän jatkoi nousua perjantaiaamuna, ja lehden lähteiden mukaan hänet nähtiin Matterhornin huipulla noin kello yhdeksän.\n\n<h2>Laskeutuminen alkoi ennen voimakasta ukkoskuuroa</h2>\n\nHuipulta mies lähti laskeutumaan Leonen harjanteen reittiä pitkin. Kyseessä oli Aostraseran mukaan nousuun käytettyä suoraa reittiä tavanomaisempi vaihtoehto. Saatavilla olevat tiedot eivät kerro, kuinka pitkälle hän ehti laskeutua ennen yhteyden katkeamista.\n\nAlueella oli perjantaina puolenpäivän aikaan voimakas ukkoskuuro. Säätilanne huolestutti miehen kumppania, joka yritti tavoittaa häntä siinä onnistumatta. Kun mieheen ei saatu yhteyttä, kumppani ilmoitti asiasta viranomaisille. Ukkoskuuron ja katoamisen mahdollisesta yhteydestä ei ole varmistettua tietoa.\n\n<h2>Varusteita löytyi Sveitsin-puoleiselta rinteeltä</h2>\n\nVuoren Sveitsin-puoleiselta rinteeltä löydettiin myöhemmin kadonneen takki ja osa hänen kiipeilyvarusteistaan. Viranomaiset ovat vahvistaneet löytöjen kuuluvan miehelle. Niiden tarkkaa löytöpaikkaa tai sitä, mitä löydöt kertovat miehen liikkeistä, ei ole lähdetiedoissa yksilöity.\n\nEtsinnät jatkuvat Sveitsin puolella. Varmistettu tapahtumaketju ulottuu torstaina alkaneesta noususta perjantaiseen huippuhavaintoon ja laskeutumisen aloittamiseen. Miehen olinpaikasta, myöhemmistä vaiheista tai katoamisen syystä ei ole kerrottu uusia vahvistettuja tietoja.",
+    "category": "Kotimaa",
+    "tags": [
+      "matterhorn",
+      "vuorikiipeily",
+      "kadonneet",
+      "sveitsi"
+    ],
+    "summary_bullets": [
+      "Suomalainen vuorikiipeilijä on ollut kateissa Matterhornilla perjantaista 31. heinäkuuta lähtien.",
+      "Mies nähtiin huipulla noin kello yhdeksän ennen kuin hän aloitti laskeutumisen Leonen harjannetta pitkin.",
+      "Kadonneen takki ja osa kiipeilyvarusteista on löydetty Sveitsin-puoleiselta rinteeltä."
+    ],
+    "key_points": [
+      "Suomalainen vuorikiipeilijä on ollut kateissa Matterhornilla perjantaista 31. heinäkuuta lähtien.",
+      "Mies nähtiin huipulla noin kello yhdeksän ennen kuin hän aloitti laskeutumisen Leonen harjannetta pitkin.",
+      "Kadonneen takki ja osa kiipeilyvarusteista on löydetty Sveitsin-puoleiselta rinteeltä."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "journalist_note": "Juttu perustuu yhteen tutkimuslähteeseen, joka välittää Aostraseran tietoja. Tapahtumien yksityiskohtia ei ole vahvistettu toisesta riippumattomasta lähteestä.",
+    "source_text": "Suomalainen vuorikiipeilijä on ollut kadoksissa Matterhornilla perjantaista 31. heinäkuuta lähtien. Asiasta kertoo italialinen verkkolehti Aostrasera. Vuoren Sveitsin puoleiselta rinteeltä on löytynyt takki ja osa kiipeilyvarusteista, jotka viranomaiset ovat vahvistaneet kadonneen miehen omaisuudeksi. Etsinnät jatkuvat Sveitsin puolella. Kadonnut kiipeilijä työskenteli Italiassa. Viranomaisten tietojen perusteella mies lähti torstaina 30. heinäkuuta nousemaan Furggenin harjannetta pitkin niin kutsuttua ”suoraa reittiä”, joka kulkee jyrkänteiden yli Matterhornin kaakon puoleisella harjanteella. Reitti on yksi vuoren vaativimmista, Aostasera kirjoittaa. Nousu ei ilmeisesti onnistunut saman päivän aikana, vaan mies pysähtyi muutamaa köydenpituutta vaille huippua ja vietti yön korkealla vuorella. Aamulla nousua jatkettiin. Mies nähtiin huipulla perjantaina noin kello 9, minkä jälkeen hän aloitti laskeutumisen tavanomaisempaa Leonen harjanteen reittiä pitkin, lehden lähteet kertovat. Perjantaina puolenpäivän tienoilla alueella oli voimakas ukkoskuuro, mikä huolestutti miehen kumppania. Kun yhteyttä ei saatu, nainen teki ilmoituksen viranomaisille.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.57,
+    "degraded_mode": false,
+    "monica_packet_id": "20260802T231049Z_c025955902",
+    "source_attributions": [
+      {
+        "name": "Yle",
+        "url": "https://yle.fi/a/74-20239061"
+      }
+    ],
+    "source_url": "https://yle.fi/a/74-20239061"
+  }
+}
