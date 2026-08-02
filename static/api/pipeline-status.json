@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-02T18:13:19+00:00",
+  "generated_at": "2026-08-02T22:33:35+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,12 +12,16 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 9,
-    "rejected": 0,
+    "published": 10,
+    "rejected": 1,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-02T18:10:06.079899+00:00"
+    "last_published_ts": "2026-08-02T22:30:04.379730+00:00"
   },
-  "reject_reasons": {},
+  "reject_reasons": {
+    "length under target (276 words": 1,
+    "missing: image": 1,
+    "source_confidence_denial_conte": 1
+  },
   "feeds": {
     "total": 0,
     "healthy": 0,
@@ -29,7 +33,7 @@
   "trending": [
     [
       "jälkeen",
-      14
+      17
     ],
     [
       "olivat",
@@ -44,19 +48,19 @@
       9
     ],
     [
-      "räjähdyksen",
+      "mukaansa",
       8
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 7,
+    "outboxCount": 6,
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "worstCaseRemainingCycles": 3,
+    "worstCaseRemainingCycles": 2,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
     "reasons": [

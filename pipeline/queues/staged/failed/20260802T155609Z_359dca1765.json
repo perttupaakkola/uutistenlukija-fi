@@ -255,5 +255,32 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20238530?origin=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-02T22:30:04.256435+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260802T155609Z_359dca1765",
+    "category": "Talous",
+    "selected_source_words": 302,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 8.0,
+    "quality_reasons": [
+      "length under target (276 words)",
+      "missing: image",
+      "source_confidence_denial_context_missing"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 276,
+    "title": "Tavase-hanke kaatui oikeudessa – maastoon jäi 168 havaintoputkea ja seitsemän kaivoa"
+  },
+  "failure": "quality_gate_rejected: length under target (276 words); missing: image; source_confidence_denial_context_missing"
 }

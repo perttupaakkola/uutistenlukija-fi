@@ -50,7 +50,6 @@ source_domain: "bbc.com"
 source_attributions:
   - name: "BBC"
     url: "https://bbc.com/news/articles/czrjyevmv61o"
-briefing: true
 draft: false
 ---
 
