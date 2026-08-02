@@ -52,7 +52,6 @@ source_attributions:
     url: "https://bbc.co.uk/sport/football/articles/c04kr2nv3v3o?at_medium=RSS&at_campaign=rss"
   - name: "Yahoo Sports"
     url: "https://sports.yahoo.com/articles/fifa-abandon-20b-world-cup-060500041.html"
-briefing: true
 draft: false
 ---
 
