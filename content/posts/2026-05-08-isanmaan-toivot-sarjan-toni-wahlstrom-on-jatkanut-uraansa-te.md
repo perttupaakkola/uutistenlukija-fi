@@ -65,4 +65,4 @@ Wahlströmin perheessä näyttelijäntyö on jatkunut myös seuraavassa sukupolv
 
 Vivi Wahlström on ollut esillä myös Nelosen Selviytyjät Suomi -ohjelmassa. Ohjelman yhteydessä hän kertoi lisäksi opinnoistaan. Näin Isänmaan toivot -sarjasta monille tutun Toni Wahlströmin ura kytkeytyy aineiston perusteella sekä pitkään omaan näyttelijä- ja teatteritaustaan että seuraavan sukupolven näkyviin televisiotöihin.
 
-Lue lisää: [Kotimaan uutiset](/categories/kotimaa/).
+Lue lisää: [Kulttuuriuutiset](/categories/kulttuuri/).
