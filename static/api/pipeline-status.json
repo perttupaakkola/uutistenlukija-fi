@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-02T22:33:35+00:00",
+  "generated_at": "2026-08-03T04:11:44+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,16 +12,12 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 10,
-    "rejected": 1,
+    "published": 11,
+    "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-02T22:30:04.379730+00:00"
+    "last_published_ts": "2026-08-03T04:08:11.709512+00:00"
   },
-  "reject_reasons": {
-    "length under target (276 words": 1,
-    "missing: image": 1,
-    "source_confidence_denial_conte": 1
-  },
+  "reject_reasons": {},
   "feeds": {
     "total": 0,
     "healthy": 0,
@@ -33,11 +29,11 @@
   "trending": [
     [
       "jälkeen",
-      17
+      19
     ],
     [
       "olivat",
-      9
+      10
     ],
     [
       "espanjan",
@@ -48,19 +44,19 @@
       9
     ],
     [
-      "mukaansa",
+      "siten",
       8
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 6,
+    "outboxCount": 8,
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "worstCaseRemainingCycles": 2,
+    "worstCaseRemainingCycles": 3,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
     "reasons": [
