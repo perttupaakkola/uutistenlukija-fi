@@ -36,6 +36,8 @@ class HomepageDiscoveryMetadataTest(unittest.TestCase):
 
             newest = datetime(2020, 1, 31, 12, tzinfo=timezone.utc)
             fixed_categories = {
+                1: "Talous",
+                2: "Talous",
                 3: "Talous",
                 4: "Kotimaa",
                 5: "Ulkomaat",
@@ -107,7 +109,32 @@ class HomepageDiscoveryMetadataTest(unittest.TestCase):
         preceding_hrefs = set(
             re.findall(r'href="([^"]+)"', rendered[: section_match.start()])
         )
-        return {"cards": cards, "preceding_hrefs": preceding_hrefs}
+        talous_match = re.search(
+            r'<section class="talous-recirculation talous-recirculation--homepage".*?'
+            r'(?=<section class="portal-river")',
+            rendered,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(talous_match, "rendered homepage Talous block missing")
+        talous_section = talous_match.group(0)
+        talous_links = [
+            {
+                "href": href,
+                "title": html.unescape(re.sub(r"<[^>]+>", "", title)).strip(),
+            }
+            for href, title in re.findall(
+                r'<a class="talous-recirculation__link" href="([^"]+)">.*?'
+                r'<span class="talous-recirculation__title">(.*?)</span>',
+                talous_section,
+                re.DOTALL,
+            )
+        ]
+        return {
+            "cards": cards,
+            "preceding_hrefs": preceding_hrefs,
+            "talous_section": talous_section,
+            "talous_links": talous_links,
+        }
 
     def test_discovery_includes_newest_unseen_talous_candidate(self) -> None:
         rendered = self._render_discovery_fixture(include_unseen_talous=True)
@@ -157,6 +184,36 @@ class HomepageDiscoveryMetadataTest(unittest.TestCase):
             )
         )
 
+    def test_homepage_talous_block_uses_freshest_eligible_inventory(self) -> None:
+        rendered = self._render_discovery_fixture(include_unseen_talous=True)
+
+        self.assertIn(
+            '<h2 id="homepage-talous-recirculation-title">Talous juuri nyt</h2>',
+            rendered["talous_section"],
+        )
+        self.assertEqual(
+            [link["title"] for link in rendered["talous_links"]],
+            [
+                "Fixture story 01",
+                "Fixture story 02",
+                "Fixture story 03",
+                "Fixture story 14",
+            ],
+        )
+        self.assertEqual(len({link["href"] for link in rendered["talous_links"]}), 4)
+        self.assertTrue(
+            all(link["href"].startswith("/posts/") for link in rendered["talous_links"])
+        )
+
+    def test_homepage_talous_block_renders_available_inventory_without_blanks(self) -> None:
+        rendered = self._render_discovery_fixture(include_unseen_talous=False)
+
+        self.assertEqual(len(rendered["talous_links"]), 3)
+        self.assertEqual(
+            [link["title"] for link in rendered["talous_links"]],
+            ["Fixture story 01", "Fixture story 02", "Fixture story 03"],
+        )
+
     def test_discovery_uses_fresh_unseen_published_story_contract(self) -> None:
         template = INDEX_TEMPLATE.read_text(encoding="utf-8")
         card = template.split('<article class="portal-opinion-card">', 1)[1].split(
@@ -204,6 +261,22 @@ class HomepageDiscoveryMetadataTest(unittest.TestCase):
         self.assertIn('data-rank="{{ add $rank 1 }}"', card)
         self.assertIn('data-category="{{ $cat }}"', card)
 
+    def test_homepage_talous_block_does_not_change_primary_selection(self) -> None:
+        template = INDEX_TEMPLATE.read_text(encoding="utf-8")
+        section = template.split(
+            '<section class="talous-recirculation talous-recirculation--homepage"',
+            1,
+        )[1].split('<section class="portal-river"', 1)[0]
+
+        self.assertIn(
+            '$latestHomepageTalous := first 4 (where $sorted '
+            '".Params.categories" "intersect" (slice "Talous"))',
+            template,
+        )
+        self.assertIn('{{ range $latestHomepageTalous }}', section)
+        self.assertNotIn('$seen', section)
+        self.assertNotIn('where $sorted "Permalink" "not in" $seen', section)
+
     def test_discovery_reuses_compact_editorial_card_layout(self) -> None:
         expected = (
             ".portal-discovery.portal-editorials__grid{"
@@ -240,6 +313,48 @@ class HomepageDiscoveryMetadataTest(unittest.TestCase):
             with self.subTest(stylesheet=stylesheet.relative_to(ROOT)):
                 for rule in expected:
                     self.assertIn(rule, compact)
+
+        self.assertEqual(
+            PORTAL_CSS[0].read_bytes(),
+            PORTAL_CSS[1].read_bytes(),
+            "assets/static portal stylesheet copies must stay identical",
+        )
+
+    def test_homepage_talous_block_reuses_mobile_dark_overflow_contract(self) -> None:
+        critical = compact_css(CRITICAL_CSS)
+        self.assertIn(
+            ".talous-recirculation__items{display:grid;"
+            "grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem}",
+            critical,
+        )
+        self.assertIn(
+            "@media(max-width:560px){.talous-recirculation{margin-left:0;"
+            "margin-right:0}.talous-recirculation__header{display:grid;"
+            "align-items:start}.talous-recirculation__items{"
+            "grid-template-columns:1fr}.talous-recirculation__link{padding:.85rem}}",
+            critical,
+        )
+        self.assertIn(
+            "[data-theme=dark].talous-recirculation{"
+            "background:var(--portal-card,var(--card-bg));"
+            "border-color:var(--portal-line,var(--border))}",
+            critical,
+        )
+        self.assertIn(
+            "[data-theme=dark].talous-recirculation__link{"
+            "background:var(--portal-card-alt,var(--surface-alt));"
+            "border-color:var(--portal-line,var(--border));"
+            "color:var(--portal-ink,var(--text))}",
+            critical,
+        )
+
+        for stylesheet in (CRITICAL_CSS, *PORTAL_CSS):
+            compact = compact_css(stylesheet)
+            with self.subTest(stylesheet=stylesheet.relative_to(ROOT)):
+                self.assertRegex(
+                    compact,
+                    r"\.talous-recirculation__title[^{}]*\{[^}]*overflow-wrap:anywhere",
+                )
 
         self.assertEqual(
             PORTAL_CSS[0].read_bytes(),

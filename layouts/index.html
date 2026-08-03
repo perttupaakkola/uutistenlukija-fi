@@ -195,6 +195,26 @@
     <a class="portal-discovery__talous-link" href="/categories/talous/">Kaikki Talous-uutiset</a>
   </section>
 
+  {{/* Recirculate the freshest published Talous pages without changing the
+       primary homepage selection or its duplicate-suppression state. */}}
+  {{ $latestHomepageTalous := first 4 (where $sorted ".Params.categories" "intersect" (slice "Talous")) }}
+  {{ if gt (len $latestHomepageTalous) 0 }}
+  <section class="talous-recirculation talous-recirculation--homepage" aria-labelledby="homepage-talous-recirculation-title">
+    <div class="talous-recirculation__header">
+      <p class="talous-recirculation__eyebrow">Tuoretta taloudessa</p>
+      <h2 id="homepage-talous-recirculation-title">Talous juuri nyt</h2>
+    </div>
+    <div class="talous-recirculation__items">
+      {{ range $latestHomepageTalous }}
+      <a class="talous-recirculation__link" href="{{ .RelPermalink }}">
+        <span class="talous-recirculation__label">{{ partial "relative-date.html" . }}</span>
+        <span class="talous-recirculation__title">{{ .Title }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
   <section class="portal-river" aria-labelledby="river-title">
     <div class="portal-module-head">
       <h2 id="river-title">Tuoreimmat uutiset</h2>
