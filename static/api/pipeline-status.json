@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-04T19:20:05+00:00",
+  "generated_at": "2026-08-04T22:11:45+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,10 +12,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 7,
+    "published": 8,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-04T19:16:28.454681+00:00"
+    "last_published_ts": "2026-08-04T22:08:07.836539+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -29,34 +29,34 @@
   "trending": [
     [
       "sanoi",
-      10
+      11
     ],
     [
       "hallituksen",
       9
     ],
     [
+      "mukaansa",
+      8
+    ],
+    [
+      "olevan",
+      8
+    ],
+    [
       "purran",
       8
-    ],
-    [
-      "purra",
-      8
-    ],
-    [
-      "yhdysvaltain",
-      7
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 9,
+    "outboxCount": 10,
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "worstCaseRemainingCycles": 3,
+    "worstCaseRemainingCycles": 4,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
     "reasons": [

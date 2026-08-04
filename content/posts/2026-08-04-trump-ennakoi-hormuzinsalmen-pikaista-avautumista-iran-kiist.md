@@ -54,7 +54,6 @@ source_attributions:
     url: "https://newstribune.com/news/2026/aug/02/us-embassies-warn-americans-as-iran-threatens"
   - name: "Yahoo"
     url: "https://yahoo.com/news/politics/articles/iran-denies-trump-claim-u-111708718.html"
-briefing: true
 draft: false
 ---
 
