@@ -703,6 +703,109 @@ class PublishPreflightTests(unittest.TestCase):
                 original_bytes,
             )
 
+    def test_cmd_publish_scans_past_quality_reject_to_later_pass(self) -> None:
+        args = SimpleNamespace(max_articles=1, dry_run=False, dedup_window=72, git_push=False)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            staged_root = Path(tmp)
+            outbox = staged_root / "outbox"
+            outbox.mkdir()
+            failed = staged_root / "failed"
+            failed.mkdir()
+            base_mtime = 1_700_000_000
+            records = [
+                (
+                    "held-1.json",
+                    _record(
+                        packet_category="Kotimaa",
+                        payload_category="Ulkomaat",
+                        article_category="Ulkomaat",
+                    ),
+                ),
+                ("quality-reject.json", _record()),
+                ("quality-pass.json", _record()),
+                ("after-cap.json", _record()),
+            ]
+            original_bytes: dict[Path, bytes] = {}
+            for index, (name, record) in enumerate(records):
+                record["packet"]["packet_id"] = Path(name).stem
+                record["article"]["title"] = Path(name).stem
+                path = outbox / name
+                path.write_text(json.dumps(record), encoding="utf-8")
+                os.utime(path, (base_mtime + index, base_mtime + index))
+                original_bytes[path] = path.read_bytes()
+
+            def quality_result(articles: list[dict]) -> SimpleNamespace:
+                article = articles[0]
+                if article["title"] == "quality-reject":
+                    return SimpleNamespace(passed=[], rejected=articles)
+                return SimpleNamespace(passed=articles, rejected=[])
+
+            with patch.object(staged_publish, "STAGED_ROOT", staged_root), \
+                 patch.object(
+                     staged_publish,
+                     "run_quality_gate",
+                     side_effect=quality_result,
+                 ) as quality_gate, \
+                 patch.object(
+                     staged_publish,
+                     "filter_new_articles",
+                     side_effect=lambda articles: articles,
+                 ) as filter_new_articles, \
+                 patch.object(
+                     staged_publish,
+                     "check_published_duplicates",
+                     side_effect=lambda articles, window_hours: articles,
+                 ), \
+                 patch.object(
+                     staged_publish,
+                     "dedup_within_batch",
+                     side_effect=lambda articles: articles,
+                 ), \
+                 patch.object(
+                     staged_publish,
+                     "enrich_images_for_articles",
+                     return_value={
+                         "total": 1,
+                         "images": 0,
+                         "unsplash": 0,
+                         "pexels": 0,
+                         "generated": 0,
+                         "category_fallback": 0,
+                         "missing": 1,
+                     },
+                 ) as enrich_images, \
+                 patch.object(
+                     staged_publish,
+                     "publish_articles",
+                     return_value=[],
+                 ) as publish_articles:
+                status = staged_publish.cmd_publish(args)
+
+            self.assertEqual(status, 0)
+            self.assertEqual(
+                [
+                    [article["title"] for article in quality_call.args[0]]
+                    for quality_call in quality_gate.call_args_list
+                ],
+                [["quality-reject"], ["quality-pass"]],
+            )
+            passed_article = records[2][1]["article"]
+            filter_new_articles.assert_called_once_with([passed_article])
+            enrich_images.assert_called_once_with([passed_article])
+            publish_articles.assert_called_once_with([passed_article])
+
+            held_path = outbox / "held-1.json"
+            rejected_path = outbox / "quality-reject.json"
+            passed_path = outbox / "quality-pass.json"
+            after_cap_path = outbox / "after-cap.json"
+            self.assertEqual(held_path.read_bytes(), original_bytes[held_path])
+            self.assertFalse(rejected_path.exists())
+            rejected = json.loads((failed / rejected_path.name).read_text(encoding="utf-8"))
+            self.assertTrue(rejected["quality_gate_rejected"])
+            self.assertEqual(passed_path.read_bytes(), original_bytes[passed_path])
+            self.assertEqual(after_cap_path.read_bytes(), original_bytes[after_cap_path])
+
 
 if __name__ == "__main__":
     unittest.main()

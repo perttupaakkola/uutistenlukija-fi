@@ -2005,17 +2005,41 @@ def cmd_publish(args: argparse.Namespace) -> int:
         log("publish: no outbox articles")
         return 0
     selected_count = len(items)
-    items = apply_publish_preflight(items, max_items=args.max_articles)
-    if not items:
+    if args.max_articles <= 0:
+        log("publish: max-articles cap is zero")
+        return 0
+
+    quality_checked_items: list[tuple[Path, dict]] = []
+    quality_passed_items: list[tuple[Path, dict]] = []
+    quality_rejected_articles: list[dict] = []
+    # The cap applies to publishable output, not to attempts rejected by either
+    # gate. Scan oldest-first until enough records survive both gates.
+    for item in items:
+        eligible = apply_publish_preflight([item], max_items=1)
+        if not eligible:
+            continue
+        path, data = eligible[0]
+        article = data["article"]
+        gate = run_quality_gate([article])
+        quality_checked_items.append((path, data))
+        quality_rejected_articles.extend(gate.rejected)
+        if any(passed is article for passed in gate.passed):
+            quality_passed_items.append((path, data))
+            if len(quality_passed_items) >= args.max_articles:
+                break
+
+    if not quality_checked_items:
         log(f"publish: all selected outbox records held by preflight selected={selected_count}")
         return 0
-    articles = [data["article"] for _, data in items]
-    gate = run_quality_gate(articles)
     if not args.dry_run:
-        quarantine_rejected_outbox(items, gate.rejected)
-    articles = gate.passed
+        quarantine_rejected_outbox(quality_checked_items, quality_rejected_articles)
+    items = quality_passed_items
+    articles = [data["article"] for _, data in items]
     if not articles:
-        log(f"publish: all articles rejected by quality gate rejected={len(gate.rejected)}")
+        log(
+            "publish: all articles rejected by quality gate "
+            f"rejected={len(quality_rejected_articles)}"
+        )
         return 0
     articles = filter_new_articles(articles)
     articles = check_published_duplicates(articles, window_hours=args.dedup_window)
