@@ -50,7 +50,6 @@ source_domain: "theguardian.com"
 source_attributions:
   - name: "The Guardian World"
     url: "https://theguardian.com/australia-news/live/2026/aug/04/alan-jones-trial-live-updates-day-2-sydney-court-case-latest-news-ntwnfb"
-briefing: true
 draft: false
 ---
 
