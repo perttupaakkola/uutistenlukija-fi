@@ -256,5 +256,35 @@
       }
     ],
     "source_url": "https://www.bbc.co.uk/news/articles/c4g43l251vyo?at_medium=RSS&at_campaign=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-04T23:08:31.004214+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260804T225520Z_12c6463563",
+    "category": "Ulkomaat",
+    "selected_source_words": 376,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 6.48,
+    "quality_reasons": [
+      "language borderline Finnish signal (10.0%)",
+      "length under target (264 words)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "only 1 paragraphs (min 3)"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 264,
+    "title": "Intian CJP-protesteihin osallistuneet naiset kertovat raiskausuhkauksista ja muokatuista kuvista"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (10.0%); length under target (264 words); missing: image; readability few paragraphs (1); readability wall of text; only 1 paragraphs (min 3)"
 }
