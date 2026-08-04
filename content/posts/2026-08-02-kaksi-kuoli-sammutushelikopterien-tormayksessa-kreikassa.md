@@ -60,9 +60,9 @@ Kaksi miehistön jäsentä kuoli ja kaksi pelastui, kun kaksi maastopalon sammut
 
 ## Helikopterit törmäsivät sammutuslennolla
 
-Kreikan palokunnan mukaan onnettomuudessa olivat kaksi vuokrattua Bell-helikopteria. Ne lensivät Psathan alueella Ateenan länsipuolella, ja kummassakin oli kaksihenkinen miehistö. Helikopterit olivat mukana suuren maastopalon torjunnassa, kun ne osuivat toisiinsa ilmassa. Koneissa oli yhteensä neljä miehistön jäsentä. Tuuli levitti paloa syvemmälle alueelle ja vaikeutti sammutustyötä.
+Kreikan palokunnan mukaan onnettomuudessa oli mukana kaksi vuokrattua Bell-helikopteria. Ne lensivät Psathan alueella Ateenan länsipuolella, ja kummassakin oli kaksihenkinen miehistö. Helikopterit olivat mukana suuren maastopalon torjunnassa, kun ne osuivat toisiinsa ilmassa. Koneissa oli yhteensä neljä miehistön jäsentä. Tuuli levitti paloa syvemmälle alueelle ja vaikeutti sammutustyötä.
 
-Onnettomuudesta kuvattu video näyttää toisen helikopterin osuvan toisen roottoriin. Toinen koneista syttyy kuvissa tuleen, ja molemmat putosivat rotkoon. Kuvamateriaali tallensi törmäystä edeltäneet hetket ja koneiden osuman kesken sammutuslennon. Yhden helikopterin miehistö saatiin pelastettua elossa. Toisen koneen miehistön jäsenet löydettiin tajuttomina, ja heidät todettiin myöhemmin kuolleiksi.
+Onnettomuudesta kuvattu video näyttää toisen helikopterin osuvan toisen roottoriin. Toinen helikoptereista syttyi tuleen ja putosi rotkoon, kun taas toinen teki BBC:n mukaan hätälaskun matalan kasvillisuuden alueelle. Kuvamateriaali tallensi törmäystä edeltäneet hetket ja koneiden osuman kesken sammutuslennon. Yhden helikopterin miehistö saatiin pelastettua elossa. Toisen koneen miehistön jäsenet löydettiin tajuttomina, ja heidät todettiin myöhemmin kuolleiksi.
 
 ## Kaksi kuoli ja kaksi pelastui
 
