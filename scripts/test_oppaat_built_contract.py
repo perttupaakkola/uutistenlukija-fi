@@ -28,11 +28,33 @@ HUB_DESCRIPTION = (
     "Selkeät, lähteisiin perustuvat oppaat palvelujen, poikkeusaikojen "
     "ja arjen käytännön tietojen tarkistamiseen."
 )
-GUIDE_TITLE = "Kaupat auki pyhinä – tarkista oma kauppa | Uutistenlukija"
-GUIDE_H1 = "Kauppojen aukioloajat pyhinä – näin tarkistat oman kaupan"
+GUIDE_TITLE = "Kauppojen aukioloajat tänään – tarkista kauppa"
+GUIDE_H1 = "Kauppojen aukioloajat tänään – tarkista oma kauppa"
 GUIDE_DESCRIPTION = (
-    "Tarkista kauppojen poikkeavat aukioloajat luotettavasti virallisista "
-    "myymälähauista. Opas kertoo, mistä oman kaupan ajantasainen tieto löytyy."
+    "Tarkista K- ja S-kauppojen, Lidlin, Tokmannin ja Alkon aukioloajat "
+    "ketjujen virallisista myymälähauista ennen lähtöä."
+)
+GUIDE_SEARCH_TERMS = (
+    "oppaat",
+    "kaupat auki",
+    "aukioloajat",
+    "pyhäpäivä",
+    "kauppojen aukioloajat tänään",
+    "kauppa auki",
+    "avoinna olevat kaupat",
+)
+FINDER_LINKS = (
+    ("S-kauppojen myymäläsivu", "https://www.s-kaupat.fi/sivu/myymalat"),
+    (
+        "K-ryhmän aukiolo-ohje ja kauppakohtainen sivu",
+        "https://www.k-ryhma.fi/kauppojen-aukioloajat",
+    ),
+    ("Lidlin myymälähaku", "https://www.lidl.fi/myymalat"),
+    ("Tokmannin myymälähaku", "https://www.tokmanni.fi/myymalat"),
+    (
+        "Alkon myymälä- ja palveluhaku",
+        "https://www.alko.fi/myymalat-palvelut",
+    ),
 )
 
 
@@ -253,16 +275,45 @@ class BuiltOppaatContractTest(unittest.TestCase):
             html.unescape(re.sub(r"<[^>]+>", " ", source)),
         )
         for label in (
+            "Päivitetty",
             "Lähteet tarkistettu",
             "Seuraava tarkistus viimeistään",
             "Voimassa",
             "Ilmoita korjauksesta",
         ):
             self.assertIn(label, visible)
-        self.assertNotIn(">Päivitetty<", source)
+        self.assertIn(">Päivitetty<", source)
         self.assertIn("K-ryhmä: kauppojen aukioloajat", visible)
         self.assertIn("S-kaupat: myymälät", visible)
         self.assertIn("Lidl: myymälät Suomessa", visible)
+
+    def test_finder_section_leads_content_and_links_exact_official_urls(self) -> None:
+        source = read_page(self.public, GUIDE_PATH)
+        guide_content = re.search(
+            r"<div\b[^>]*class=guide-content[^>]*>(.*?)</div>",
+            source,
+            flags=re.DOTALL,
+        )
+        self.assertIsNotNone(guide_content)
+        headings = tag_text(guide_content.group(1), "h2")
+        self.assertGreaterEqual(len(headings), 2)
+        self.assertEqual(
+            headings[:2],
+            [
+                "Viralliset haut eri ketjuille",
+                "Aloita kaupasta, älä kalenterin oletuksesta",
+            ],
+        )
+
+        finder_table = re.search(
+            r"<table\b[^>]*>(.*?)</table>",
+            guide_content.group(1),
+            flags=re.DOTALL,
+        )
+        self.assertIsNotNone(finder_table)
+        labels = tag_text(finder_table.group(1), "a")
+        hrefs = attr_values(finder_table.group(1), "a", "href")
+        self.assertEqual(list(zip(labels, hrefs)), list(FINDER_LINKS))
 
     def test_sitemap_and_feeds_have_only_the_accepted_discovery(self) -> None:
         locations = sitemap_locations(self.public / "sitemap.xml")
@@ -308,7 +359,7 @@ class BuiltOppaatContractTest(unittest.TestCase):
         self.assertEqual(guide["category"], "Oppaat")
         self.assertEqual(
             guide["search_terms"],
-            ["oppaat", "kaupat auki", "aukioloajat", "pyhäpäivä"],
+            list(GUIDE_SEARCH_TERMS),
         )
         for legacy in LEGACY_PATHS:
             self.assertNotIn(legacy, urls)

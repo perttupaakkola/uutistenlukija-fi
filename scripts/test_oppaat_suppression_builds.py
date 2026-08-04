@@ -11,7 +11,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 
@@ -34,7 +34,6 @@ from test_oppaat_built_contract import (  # noqa: E402
 GUIDE_SOURCE = ROOT / "content/oppaat/kauppojen-aukioloajat.md"
 HUB_SOURCE = ROOT / "content/oppaat/_index.md"
 HUGO = Path(os.environ.get("HUGO_BIN", "/workspace/hugo"))
-FIXTURE_TODAY = date(2026, 7, 26)
 PROBE_SINGLE = """{{- $state := partial "guide-state.html" . -}}
 <!doctype html>
 <html lang="fi">
@@ -46,6 +45,17 @@ PROBE_SINGLE = """{{- $state := partial "guide-state.html" . -}}
 <body><p id="guide-state">{{ $state.invalid }}|{{ $state.discoverable }}</p></body>
 </html>
 """
+
+
+def metadata_date(meta: dict, field: str) -> date:
+    value = meta[field]
+    if isinstance(value, date):
+        return value
+    return date.fromisoformat(str(value)[:10])
+
+
+def metadata_clock(meta: dict, field: str) -> str:
+    return f"{metadata_date(meta, field).isoformat()}T12:00:00Z"
 
 
 def yaml_scalar(value: object) -> str:
@@ -96,13 +106,17 @@ def document_with_flag(flag: str) -> str:
 
 def source_mismatch_document() -> str:
     meta, body = source_document()
-    meta["sources"][0]["source_checked_at"] = "2026-07-25"
+    meta["sources"][0]["source_checked_at"] = (
+        metadata_date(meta, "reviewed_at") - timedelta(days=1)
+    ).isoformat()
     return dump_guide_document(meta, body)
 
 
 def invalid_parity_documents() -> dict[str, str]:
     """One invalid document per Python lifecycle invariant class."""
     source_meta, source_body = source_document()
+    published = metadata_date(source_meta, "date")
+    reviewed = metadata_date(source_meta, "reviewed_at")
     documents: dict[str, str] = {}
 
     def add(
@@ -121,7 +135,7 @@ def invalid_parity_documents() -> dict[str, str]:
         lifecycle = evaluate_guide(
             parsed_meta,
             parsed_body,
-            today=FIXTURE_TODAY,
+            today=reviewed,
         )
         if lifecycle.state != "invalid":
             raise AssertionError(
@@ -156,32 +170,44 @@ def invalid_parity_documents() -> dict[str, str]:
 
     add(
         "updated-before-published",
-        lambda meta: meta.__setitem__("updated_at", "2026-07-25"),
+        lambda meta: meta.__setitem__(
+            "updated_at",
+            (published - timedelta(days=1)).isoformat(),
+        ),
     )
     add(
         "updated-after-reviewed",
-        lambda meta: meta.__setitem__("updated_at", "2026-07-27"),
+        lambda meta: meta.__setitem__(
+            "updated_at",
+            (reviewed + timedelta(days=1)).isoformat(),
+        ),
     )
     add(
         "review-window-zero",
-        lambda meta: meta.__setitem__("next_review_at", "2026-07-26"),
+        lambda meta: meta.__setitem__("next_review_at", reviewed.isoformat()),
     )
     add(
         "review-window-fifteen",
-        lambda meta: meta.__setitem__("next_review_at", "2026-08-10"),
+        lambda meta: meta.__setitem__(
+            "next_review_at",
+            (reviewed + timedelta(days=15)).isoformat(),
+        ),
     )
     add(
         "expiry-window-zero",
-        lambda meta: meta.__setitem__("expires_at", "2026-07-26"),
+        lambda meta: meta.__setitem__("expires_at", reviewed.isoformat()),
     )
     add(
         "expiry-window-thirty-one",
-        lambda meta: meta.__setitem__("expires_at", "2026-08-26"),
+        lambda meta: meta.__setitem__(
+            "expires_at",
+            (reviewed + timedelta(days=31)).isoformat(),
+        ),
     )
 
     def next_after_expiry(meta: dict) -> None:
-        meta["next_review_at"] = "2026-08-09"
-        meta["expires_at"] = "2026-08-08"
+        meta["next_review_at"] = (reviewed + timedelta(days=2)).isoformat()
+        meta["expires_at"] = (reviewed + timedelta(days=1)).isoformat()
 
     add("next-review-after-expiry", next_after_expiry)
     add(
@@ -236,7 +262,7 @@ def invalid_parity_documents() -> dict[str, str]:
         "source-checked-at-mismatch",
         lambda meta: meta["sources"][0].__setitem__(
             "source_checked_at",
-            "2026-07-25",
+            (reviewed - timedelta(days=1)).isoformat(),
         ),
     )
     add(
@@ -329,30 +355,33 @@ class BuiltSuppressionStateTest(unittest.TestCase):
             dir=ROOT,
         )
         root = Path(cls.fixture_root.name)
+        source_meta, _ = source_document()
+        reviewed_clock = metadata_clock(source_meta, "reviewed_at")
+        expiry_clock = metadata_clock(source_meta, "expires_at")
         source = GUIDE_SOURCE.read_text(encoding="utf-8")
         cls.noindex = render_documents(
             root,
             "noindex",
             {GUIDE_SOURCE.name: document_with_flag("noindex")},
-            clock="2026-07-26T12:00:00Z",
+            clock=reviewed_clock,
         )
         cls.draft = render_documents(
             root,
             "draft",
             {GUIDE_SOURCE.name: document_with_flag("draft")},
-            clock="2026-07-26T12:00:00Z",
+            clock=reviewed_clock,
         )
         cls.exact_expiry = render_documents(
             root,
             "exact-expiry",
             {GUIDE_SOURCE.name: source},
-            clock="2026-08-25T12:00:00Z",
+            clock=expiry_clock,
         )
         cls.source_mismatch = render_documents(
             root,
             "source-mismatch",
             {GUIDE_SOURCE.name: source_mismatch_document()},
-            clock="2026-07-26T12:00:00Z",
+            clock=reviewed_clock,
         )
         invalid_documents = invalid_parity_documents()
         cls.invalid_slugs = tuple(
@@ -362,7 +391,7 @@ class BuiltSuppressionStateTest(unittest.TestCase):
             root,
             "invalid-matrix",
             invalid_documents,
-            clock="2026-07-26T12:00:00Z",
+            clock=reviewed_clock,
             probe_layout=True,
         )
 
@@ -441,6 +470,7 @@ class BuiltSuppressionStateTest(unittest.TestCase):
 
     def test_invalid_native_date_stops_hugo_before_discovery(self) -> None:
         meta, body = source_document()
+        fixture_today = metadata_date(meta, "reviewed_at")
         meta["date"] = "not-a-date"
         document = dump_guide_document(meta, body)
         parsed_meta, parsed_body = parse_guide_document(document)
@@ -448,7 +478,7 @@ class BuiltSuppressionStateTest(unittest.TestCase):
             evaluate_guide(
                 parsed_meta,
                 parsed_body,
-                today=FIXTURE_TODAY,
+                today=fixture_today,
             ).state,
             "invalid",
         )
@@ -460,7 +490,7 @@ class BuiltSuppressionStateTest(unittest.TestCase):
                 Path(self.fixture_root.name),
                 "invalid-native-date",
                 {"invalid-native-date.md": document},
-                clock="2026-07-26T12:00:00Z",
+                clock=metadata_clock(meta, "reviewed_at"),
                 probe_layout=True,
             )
 

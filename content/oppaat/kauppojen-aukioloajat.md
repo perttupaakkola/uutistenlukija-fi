@@ -1,44 +1,62 @@
 ---
-title: "Kauppojen aukioloajat pyhinä – näin tarkistat oman kaupan"
-seo_title: "Kaupat auki pyhinä – tarkista oma kauppa | Uutistenlukija"
-description: "Tarkista kauppojen poikkeavat aukioloajat luotettavasti virallisista myymälähauista. Opas kertoo, mistä oman kaupan ajantasainen tieto löytyy."
+title: "Kauppojen aukioloajat tänään – tarkista oma kauppa"
+seo_title: "Kauppojen aukioloajat tänään – tarkista kauppa"
+description: "Tarkista K- ja S-kauppojen, Lidlin, Tokmannin ja Alkon aukioloajat ketjujen virallisista myymälähauista ennen lähtöä."
 date: 2026-07-26
-lastmod: 2026-07-26
-updated_at: 2026-07-26
-reviewed_at: 2026-07-26
-next_review_at: 2026-08-09
-expires_at: 2026-08-25
+lastmod: 2026-08-03
+updated_at: 2026-08-03
+reviewed_at: 2026-08-03
+materially_updated: true
+next_review_at: 2026-08-10
+expires_at: 2026-09-02
 correction_url: "mailto:info@uutistenlukija.fi?subject=Korjaus%20kauppojen%20aukiolo-oppaaseen"
 search_terms:
   - "oppaat"
   - "kaupat auki"
   - "aukioloajat"
   - "pyhäpäivä"
+  - "kauppojen aukioloajat tänään"
+  - "kauppa auki"
+  - "avoinna olevat kaupat"
 sources:
   - name: "K-ryhmä: kauppojen aukioloajat"
     url: "https://www.k-ryhma.fi/kauppojen-aukioloajat"
     official: true
-    source_checked_at: 2026-07-26
+    source_checked_at: 2026-08-03
     authoritative_checker: true
   - name: "S-kaupat: myymälät"
     url: "https://www.s-kaupat.fi/sivu/myymalat"
     official: true
-    source_checked_at: 2026-07-26
+    source_checked_at: 2026-08-03
   - name: "Lidl: myymälät Suomessa"
     url: "https://www.lidl.fi/myymalat"
     official: true
-    source_checked_at: 2026-07-26
+    source_checked_at: 2026-08-03
   - name: "Tokmanni: myymälöiden aukioloajat ja yhteystiedot"
     url: "https://www.tokmanni.fi/myymalat"
     official: true
-    source_checked_at: 2026-07-26
+    source_checked_at: 2026-08-03
   - name: "Alko: myymälät ja palvelut"
     url: "https://www.alko.fi/myymalat-palvelut"
     official: true
-    source_checked_at: 2026-07-26
+    source_checked_at: 2026-08-03
 ---
 
 Yksittäisen kaupan aukioloaika kannattaa tarkistaa aina juuri kyseisen ketjun virallisesta myymälähausta. Pyhäpäivä, paikkakunta, kaupan koko ja sijainti voivat vaikuttaa palveluaikaan, joten yleinen arvio ei korvaa myymälän omaa tietoa. Tarkistus on varminta tehdä samana päivänä ja vielä ennen lähtöä, jos asiointi osuu iltaan tai poikkeuspäivään.
+
+## Viralliset haut eri ketjuille
+
+Alla olevat linkit vievät ketjujen omiin palveluihin. Ne ovat parempi lähtökohta kuin yksittäinen yleisluonteinen kellonaika.
+
+| Ketju tai palvelu | Mistä tieto tarkistetaan | Mitä kannattaa varmistaa |
+| --- | --- | --- |
+| S-ryhmän ruokakaupat | [S-kauppojen myymäläsivu](https://www.s-kaupat.fi/sivu/myymalat) | Toimipaikka, haluttu päivä ja mahdolliset palvelukohtaiset ajat |
+| K-ryhmän ruokakaupat | [K-ryhmän aukiolo-ohje ja kauppakohtainen sivu](https://www.k-ryhma.fi/kauppojen-aukioloajat) | Oikea K-kauppa, päivämäärä ja poikkeusaukiolo |
+| Lidl | [Lidlin myymälähaku](https://www.lidl.fi/myymalat) | Myymälän osoite ja päivän ilmoitettu aika |
+| Tokmanni | [Tokmannin myymälähaku](https://www.tokmanni.fi/myymalat) | Myymäläkohtainen aika ja poikkeusilmoitus |
+| Alko | [Alkon myymälä- ja palveluhaku](https://www.alko.fi/myymalat-palvelut) | Myymälä, noutopiste ja päivän palveluaika |
+
+Ketjun nimen kirjoittaminen tavalliseen verkkohakuun voi tuoda ensimmäiseksi mainoksen, vanhan artikkelin tai kolmannen osapuolen karttatiedon. Tarkista osoiteriviltä, että olet ketjun omalla verkkotunnuksella. Tämän oppaan lähdeluettelossa ovat suorat viralliset tarkistusreitit, jotka toimitus tarkisti oppaan tarkistuspäivänä.
 
 ## Aloita kaupasta, älä kalenterin oletuksesta
 
@@ -53,20 +71,6 @@ Tee tarkistus näin:
 5. Tarkista erikseen tarvitsemasi palvelu, kuten noutopiste, apteekki, ravintola tai Alko.
 
 Jos sivulla näkyy vain tavallinen viikkoaikataulu eikä pyhäpäivää ole vielä merkitty, tieto voi täydentyä lähempänä ajankohtaa. Tällöin tarkistus kannattaa uusia. Kaupan yhteystiedot löytyvät tavallisesti samalta toimipaikkasivulta, joten epäselvässä tilanteessa myymälältä voi kysyä suoraan.
-
-## Viralliset haut eri ketjuille
-
-Alla olevat linkit vievät ketjujen omiin palveluihin. Ne ovat parempi lähtökohta kuin yksittäinen yleisluonteinen kellonaika.
-
-| Ketju tai palvelu | Mistä tieto tarkistetaan | Mitä kannattaa varmistaa |
-| --- | --- | --- |
-| S-ryhmän ruokakaupat | S-kauppojen myymäläsivu | Toimipaikka, haluttu päivä ja mahdolliset palvelukohtaiset ajat |
-| K-ryhmän ruokakaupat | K-ryhmän aukiolo-ohje ja kauppakohtainen sivu | Oikea K-kauppa, päivämäärä ja poikkeusaukiolo |
-| Lidl | Lidlin myymälähaku | Myymälän osoite ja päivän ilmoitettu aika |
-| Tokmanni | Tokmannin myymälähaku | Myymäläkohtainen aika ja poikkeusilmoitus |
-| Alko | Alkon myymälä- ja palveluhaku | Myymälä, noutopiste ja päivän palveluaika |
-
-Ketjun nimen kirjoittaminen tavalliseen verkkohakuun voi tuoda ensimmäiseksi mainoksen, vanhan artikkelin tai kolmannen osapuolen karttatiedon. Tarkista osoiteriviltä, että olet ketjun omalla verkkotunnuksella. Tämän oppaan lähdeluettelossa ovat suorat viralliset tarkistusreitit, jotka toimitus tarkisti oppaan tarkistuspäivänä.
 
 ## Pyhäpäivänä tarkistus kannattaa tehdä kahdesti
 
