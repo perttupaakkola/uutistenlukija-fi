@@ -625,6 +625,34 @@ class PublishPreflightTests(unittest.TestCase):
         quality_gate.assert_not_called()
         publish_articles.assert_not_called()
 
+    def test_load_outbox_order_uses_versioned_packet_and_path_not_mtime(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            staged_root = Path(tmp)
+            outbox = staged_root / "outbox"
+            outbox.mkdir()
+            specs = [
+                ("z-path.json", "20260804T010000Z_first"),
+                ("a-path.json", "20260804T020000Z_second"),
+                ("m-path.json", "20260804T030000Z_third"),
+            ]
+            paths = []
+            for index, (name, packet_id) in enumerate(specs):
+                record = _record()
+                record["packet"]["packet_id"] = packet_id
+                path = outbox / name
+                path.write_text(json.dumps(record), encoding="utf-8")
+                os.utime(path, (1_700_000_300 - index, 1_700_000_300 - index))
+                paths.append(path)
+
+            with patch.object(staged_publish, "STAGED_ROOT", staged_root):
+                first_order = [path.name for path, _ in staged_publish.load_outbox()]
+                for index, path in enumerate(paths):
+                    os.utime(path, (1_600_000_000 + index, 1_600_000_000 + index))
+                second_order = [path.name for path, _ in staged_publish.load_outbox()]
+
+            self.assertEqual(first_order, ["z-path.json", "a-path.json", "m-path.json"])
+            self.assertEqual(second_order, first_order)
+
     def test_cmd_publish_scans_past_six_held_records_to_eligible_seventh(self) -> None:
         args = SimpleNamespace(max_articles=1, dry_run=True, dedup_window=72, git_push=False)
 
@@ -641,25 +669,26 @@ class PublishPreflightTests(unittest.TestCase):
                     payload_category="Ulkomaat",
                     article_category="Ulkomaat",
                 )
-                held["packet"]["packet_id"] = f"held-{index + 1}"
-                path = outbox / f"held-{index + 1}.json"
+                packet_id = f"20260804T00000{index + 1}Z_held-{index + 1}"
+                held["packet"]["packet_id"] = packet_id
+                path = outbox / f"{packet_id}.json"
                 path.write_text(json.dumps(held), encoding="utf-8")
                 os.utime(path, (base_mtime + index, base_mtime + index))
                 held_paths.append(path)
                 original_bytes[path] = path.read_bytes()
 
             eligible = _record()
-            eligible["packet"]["packet_id"] = "eligible-7"
+            eligible["packet"]["packet_id"] = "20260804T000007Z_eligible-7"
             eligible["article"]["title"] = "Eligible seventh"
-            eligible_path = outbox / "eligible-7.json"
+            eligible_path = outbox / "20260804T000007Z_eligible-7.json"
             eligible_path.write_text(json.dumps(eligible), encoding="utf-8")
             os.utime(eligible_path, (base_mtime + 6, base_mtime + 6))
             original_bytes[eligible_path] = eligible_path.read_bytes()
 
             later_eligible = _record()
-            later_eligible["packet"]["packet_id"] = "eligible-8"
+            later_eligible["packet"]["packet_id"] = "20260804T000008Z_eligible-8"
             later_eligible["article"]["title"] = "Eligible eighth"
-            later_eligible_path = outbox / "eligible-8.json"
+            later_eligible_path = outbox / "20260804T000008Z_eligible-8.json"
             later_eligible_path.write_text(json.dumps(later_eligible), encoding="utf-8")
             os.utime(later_eligible_path, (base_mtime + 7, base_mtime + 7))
             original_bytes[later_eligible_path] = later_eligible_path.read_bytes()
@@ -696,7 +725,7 @@ class PublishPreflightTests(unittest.TestCase):
             quality_gate.assert_called_once_with([eligible["article"]])
             self.assertEqual(
                 [path.name for path in held_paths],
-                [f"held-{index}.json" for index in range(1, 7)],
+                [f"20260804T00000{index}Z_held-{index}.json" for index in range(1, 7)],
             )
             self.assertEqual(
                 {path: path.read_bytes() for path in original_bytes},
@@ -715,21 +744,22 @@ class PublishPreflightTests(unittest.TestCase):
             base_mtime = 1_700_000_000
             records = [
                 (
-                    "held-1.json",
+                    "20260804T000001Z_held-1.json",
+                    "held-1",
                     _record(
                         packet_category="Kotimaa",
                         payload_category="Ulkomaat",
                         article_category="Ulkomaat",
                     ),
                 ),
-                ("quality-reject.json", _record()),
-                ("quality-pass.json", _record()),
-                ("after-cap.json", _record()),
+                ("20260804T000002Z_quality-reject.json", "quality-reject", _record()),
+                ("20260804T000003Z_quality-pass.json", "quality-pass", _record()),
+                ("20260804T000004Z_after-cap.json", "after-cap", _record()),
             ]
             original_bytes: dict[Path, bytes] = {}
-            for index, (name, record) in enumerate(records):
+            for index, (name, title, record) in enumerate(records):
                 record["packet"]["packet_id"] = Path(name).stem
-                record["article"]["title"] = Path(name).stem
+                record["article"]["title"] = title
                 path = outbox / name
                 path.write_text(json.dumps(record), encoding="utf-8")
                 os.utime(path, (base_mtime + index, base_mtime + index))
@@ -790,21 +820,91 @@ class PublishPreflightTests(unittest.TestCase):
                 ],
                 [["quality-reject"], ["quality-pass"]],
             )
-            passed_article = records[2][1]["article"]
+            passed_article = records[2][2]["article"]
             filter_new_articles.assert_called_once_with([passed_article])
             enrich_images.assert_called_once_with([passed_article])
             publish_articles.assert_called_once_with([passed_article])
 
-            held_path = outbox / "held-1.json"
-            rejected_path = outbox / "quality-reject.json"
-            passed_path = outbox / "quality-pass.json"
-            after_cap_path = outbox / "after-cap.json"
+            held_path = outbox / "20260804T000001Z_held-1.json"
+            rejected_path = outbox / "20260804T000002Z_quality-reject.json"
+            passed_path = outbox / "20260804T000003Z_quality-pass.json"
+            after_cap_path = outbox / "20260804T000004Z_after-cap.json"
             self.assertEqual(held_path.read_bytes(), original_bytes[held_path])
             self.assertFalse(rejected_path.exists())
             rejected = json.loads((failed / rejected_path.name).read_text(encoding="utf-8"))
             self.assertTrue(rejected["quality_gate_rejected"])
+            self.assertNotIn("duplicate_rejected", rejected)
             self.assertEqual(passed_path.read_bytes(), original_bytes[passed_path])
             self.assertEqual(after_cap_path.read_bytes(), original_bytes[after_cap_path])
+
+    def test_cmd_publish_applies_cap_after_dedup_and_leaves_unselected_unique(self) -> None:
+        args = SimpleNamespace(max_articles=1, dry_run=False, dedup_window=72, git_push=False)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            staged_root = Path(tmp)
+            outbox = staged_root / "outbox"
+            failed = staged_root / "failed"
+            outbox.mkdir()
+            failed.mkdir()
+            records = [
+                ("20260804T010000Z_published-duplicate.json", "published-duplicate"),
+                ("20260804T020000Z_unique.json", "unique"),
+                ("20260804T030000Z_unselected-unique.json", "unselected-unique"),
+            ]
+            by_title: dict[str, tuple[Path, dict, bytes]] = {}
+            for index, (name, title) in enumerate(records):
+                record = _record()
+                record["packet"]["packet_id"] = Path(name).stem
+                record["article"]["title"] = title
+                path = outbox / name
+                path.write_text(json.dumps(record), encoding="utf-8")
+                os.utime(path, (1_700_100_000 + index, 1_700_100_000 + index))
+                by_title[title] = (path, record, path.read_bytes())
+
+            def published_dedup(articles: list[dict], window_hours: int) -> list[dict]:
+                self.assertEqual(window_hours, 72)
+                return [article for article in articles if article["title"] != "published-duplicate"]
+
+            with patch.object(staged_publish, "STAGED_ROOT", staged_root), \
+                 patch.object(
+                     staged_publish,
+                     "run_quality_gate",
+                     side_effect=lambda articles: SimpleNamespace(passed=articles, rejected=[]),
+                 ) as quality_gate, \
+                 patch.object(staged_publish, "filter_new_articles", side_effect=lambda articles: articles), \
+                 patch.object(staged_publish, "check_published_duplicates", side_effect=published_dedup), \
+                 patch.object(staged_publish, "dedup_within_batch", side_effect=lambda articles: articles), \
+                 patch.object(
+                     staged_publish,
+                     "enrich_images_for_articles",
+                     return_value={
+                         "total": 1,
+                         "images": 0,
+                         "unsplash": 0,
+                         "pexels": 0,
+                         "generated": 0,
+                         "category_fallback": 0,
+                         "missing": 1,
+                     },
+                 ), \
+                 patch.object(staged_publish, "publish_articles", return_value=[]) as publish_articles:
+                status = staged_publish.cmd_publish(args)
+
+            self.assertEqual(status, 0)
+            self.assertEqual(
+                [call.args[0][0]["title"] for call in quality_gate.call_args_list],
+                ["published-duplicate", "unique"],
+            )
+            publish_articles.assert_called_once_with([by_title["unique"][1]["article"]])
+            duplicate_path = by_title["published-duplicate"][0]
+            self.assertFalse(duplicate_path.exists())
+            duplicate = json.loads((failed / duplicate_path.name).read_text(encoding="utf-8"))
+            self.assertTrue(duplicate["duplicate_rejected"])
+            self.assertNotIn("quality_gate_rejected", duplicate)
+            self.assertEqual(
+                by_title["unselected-unique"][0].read_bytes(),
+                by_title["unselected-unique"][2],
+            )
 
 
 if __name__ == "__main__":

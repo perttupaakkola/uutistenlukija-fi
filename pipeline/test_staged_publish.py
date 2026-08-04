@@ -71,6 +71,32 @@ class StagedPublishMetricsTests(unittest.TestCase):
         os.utime(path, (ts, ts))
         return path
 
+    def _write_publish_record(self, packet_id: str) -> tuple[Path, dict, dict]:
+        article = {
+            "title": packet_id,
+            "description": f"Kuvaus uutiselle {packet_id}.",
+            "content": "sana " * 260,
+            "category": "Kotimaa",
+            "source_url": f"https://example.test/{packet_id}",
+            "monica_packet_id": packet_id,
+        }
+        data = {
+            "article": article,
+            "packet": {
+                "packet_id": packet_id,
+                "category": "Kotimaa",
+                "clean_source_blocks": [
+                    {
+                        "source": "Testi",
+                        "source_url": f"https://example.test/{packet_id}",
+                        "text": "lähdesana " * 260,
+                    }
+                ],
+            },
+            "payload": {"category": "Kotimaa"},
+        }
+        return self._write("outbox", packet_id, data, age_hours=1), data, article
+
     def _run_single_packet_scan(self, packet: dict) -> tuple[int, list[str]]:
         article = {
             "title": "Synthetic scheduled scan candidate",
@@ -1233,6 +1259,57 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertTrue(path.exists())
         self.assertFalse((self.root / "published" / "pkt-build-failure.json").exists())
 
+    def test_all_quality_rejects_persist_exact_queue_delta_and_propagate_failure(self) -> None:
+        path, data, article = self._write_publish_record("20260804T010000Z_quality-reject")
+        args = Namespace(max_articles=1, dedup_window=48, dry_run=False, git_push=True)
+
+        with patch.object(staged_publish, "load_outbox", return_value=[(path, data)]), \
+             patch.object(
+                 staged_publish,
+                 "run_quality_gate",
+                 return_value=type("Gate", (), {"passed": [], "rejected": [article]})(),
+             ), \
+             patch.object(staged_publish, "quarantine_duplicate_outbox") as duplicate_quarantine, \
+             patch.object(staged_publish, "persist_queue_transitions", return_value=17) as persist:
+            rc = staged_publish.cmd_publish(args)
+
+        self.assertEqual(rc, 17)
+        duplicate_quarantine.assert_not_called()
+        persist.assert_called_once()
+        self.assertEqual(
+            persist.call_args.args[0],
+            [(path, self.root / "failed" / path.name)],
+        )
+        failed = json.loads((self.root / "failed" / path.name).read_text(encoding="utf-8"))
+        self.assertTrue(failed["quality_gate_rejected"])
+        self.assertNotIn("duplicate_rejected", failed)
+
+    def test_all_duplicate_passes_persist_exact_queue_delta_before_zero_return(self) -> None:
+        path, data, article = self._write_publish_record("20260804T020000Z_duplicate")
+        args = Namespace(max_articles=1, dedup_window=48, dry_run=False, git_push=True)
+
+        with patch.object(staged_publish, "load_outbox", return_value=[(path, data)]), \
+             patch.object(
+                 staged_publish,
+                 "run_quality_gate",
+                 return_value=type("Gate", (), {"passed": [article], "rejected": []})(),
+             ), \
+             patch.object(staged_publish, "filter_new_articles", return_value=[]), \
+             patch.object(staged_publish, "check_published_duplicates", return_value=[]), \
+             patch.object(staged_publish, "dedup_within_batch", return_value=[]), \
+             patch.object(staged_publish, "persist_queue_transitions", return_value=0) as persist:
+            rc = staged_publish.cmd_publish(args)
+
+        self.assertEqual(rc, 0)
+        persist.assert_called_once()
+        self.assertEqual(
+            persist.call_args.args[0],
+            [(path, self.root / "failed" / path.name)],
+        )
+        failed = json.loads((self.root / "failed" / path.name).read_text(encoding="utf-8"))
+        self.assertTrue(failed["duplicate_rejected"])
+        self.assertNotIn("quality_gate_rejected", failed)
+
     def test_publisher_frontmatter_preserves_image_policy_metadata(self) -> None:
         markdown = publisher._article_to_markdown({
             "title": "Kuvallinen julkaisu",
@@ -1264,6 +1341,82 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(rc, 0)
         git_add = next(cmd for cmd in commands if cmd[:3] == ["git", "add", "-A"])
         self.assertIn("static/images/articles/", git_add)
+
+    def test_queue_only_persistence_stages_exact_transition_and_verifies_remote(self) -> None:
+        project_dir = self.root / "project"
+        staged_root = project_dir / "pipeline" / "queues" / "staged"
+        source = staged_root / "outbox" / "packet.json"
+        target = staged_root / "failed" / "packet.json"
+        source.parent.mkdir(parents=True)
+        target.parent.mkdir(parents=True)
+        target.write_text("{}", encoding="utf-8")
+        expected_head = "a" * 40
+        expected_status = (
+            "D\tpipeline/queues/staged/outbox/packet.json\n"
+            "A\tpipeline/queues/staged/failed/packet.json\n"
+        )
+        commands: list[list[str]] = []
+
+        def fake_run(cmd, **kwargs):
+            commands.append(cmd)
+            stdout = ""
+            if cmd[:4] == ["git", "diff", "--cached", "--name-status"]:
+                stdout = expected_status
+            elif cmd == ["git", "rev-parse", "HEAD"]:
+                stdout = expected_head + "\n"
+            elif cmd == ["git", "ls-remote", "origin", "refs/heads/main"]:
+                stdout = f"{expected_head}\trefs/heads/main\n"
+            return type("Result", (), {"returncode": 0, "stdout": stdout, "stderr": ""})()
+
+        with patch.object(staged_publish, "PROJECT_DIR", project_dir), \
+             patch.object(staged_publish, "STAGED_ROOT", staged_root), \
+             patch.object(staged_publish.subprocess, "run", side_effect=fake_run):
+            rc = staged_publish.persist_queue_transitions([(source, target)])
+
+        self.assertEqual(rc, 0)
+        self.assertIn(
+            [
+                "git",
+                "add",
+                "-A",
+                "--",
+                "pipeline/queues/staged/failed/packet.json",
+                "pipeline/queues/staged/outbox/packet.json",
+            ],
+            commands,
+        )
+        self.assertIn(["git", "pull", "--rebase", "--autostash", "origin", "main"], commands)
+        self.assertIn(["git", "push", "origin", "main"], commands)
+        self.assertIn(["git", "ls-remote", "origin", "refs/heads/main"], commands)
+
+    def test_queue_only_persistence_rejects_unrelated_staged_delta(self) -> None:
+        project_dir = self.root / "project"
+        staged_root = project_dir / "pipeline" / "queues" / "staged"
+        source = staged_root / "outbox" / "packet.json"
+        target = staged_root / "failed" / "packet.json"
+        source.parent.mkdir(parents=True)
+        target.parent.mkdir(parents=True)
+        target.write_text("{}", encoding="utf-8")
+        commands: list[list[str]] = []
+
+        def fake_run(cmd, **kwargs):
+            commands.append(cmd)
+            stdout = ""
+            if cmd[:4] == ["git", "diff", "--cached", "--name-status"]:
+                stdout = (
+                    "D\tpipeline/queues/staged/outbox/packet.json\n"
+                    "A\tpipeline/queues/staged/failed/packet.json\n"
+                    "M\tpipeline/staged_publish.py\n"
+                )
+            return type("Result", (), {"returncode": 0, "stdout": stdout, "stderr": ""})()
+
+        with patch.object(staged_publish, "PROJECT_DIR", project_dir), \
+             patch.object(staged_publish, "STAGED_ROOT", staged_root), \
+             patch.object(staged_publish.subprocess, "run", side_effect=fake_run):
+            rc = staged_publish.persist_queue_transitions([(source, target)])
+
+        self.assertEqual(rc, 4)
+        self.assertNotIn(["git", "push", "origin", "main"], commands)
 
     def test_quality_gate_feedback_marks_source_backed_length_only_as_repairable(self) -> None:
         record = _record("length-only", source_words=360, blocks=3)
