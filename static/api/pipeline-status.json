@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-04T06:52:02+00:00",
+  "generated_at": "2026-08-04T14:20:21+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,12 +12,21 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 3,
-    "rejected": 0,
+    "published": 5,
+    "rejected": 5,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-04T06:48:25.929680+00:00"
+    "last_published_ts": "2026-08-04T14:16:43.465837+00:00"
   },
-  "reject_reasons": {},
+  "reject_reasons": {
+    "missing: image": 5,
+    "language borderline Finnish si": 3,
+    "readability few paragraphs (1)": 3,
+    "readability wall of text": 3,
+    "unsourced numbers": 3,
+    "only 1 paragraphs (min 3)": 3,
+    "source_confidence_denial_conte": 2,
+    "length under target (269 words": 1
+  },
   "feeds": {
     "total": 0,
     "healthy": 0,
@@ -28,35 +37,35 @@
   },
   "trending": [
     [
-      "prosenttia",
-      7
+      "hallituksen",
+      9
     ],
     [
-      "vaalikauden",
-      5
-    ],
-    [
-      "valtion",
-      5
+      "purran",
+      8
     ],
     [
       "purra",
-      5
+      8
     ],
     [
-      "arviot",
-      5
+      "trump",
+      7
+    ],
+    [
+      "sanoi",
+      7
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 2,
+    "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 12,
+    "outboxCount": 9,
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "worstCaseRemainingCycles": 4,
+    "worstCaseRemainingCycles": 3,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
     "reasons": [

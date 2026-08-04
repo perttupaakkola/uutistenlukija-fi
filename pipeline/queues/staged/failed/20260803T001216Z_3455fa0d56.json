@@ -228,5 +228,39 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20238951"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-04T14:16:43.446067+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260803T001216Z_3455fa0d56",
+    "category": "Ulkomaat",
+    "selected_source_words": 290,
+    "selected_source_blocks": 3,
+    "story_confidence": 0.98,
+    "quality_total": 50,
+    "quality_normalized": 6.5,
+    "quality_reasons": [
+      "language borderline Finnish signal (9.0%)",
+      "length under target (269 words)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "unsourced numbers",
+      "only 1 paragraphs (min 3)",
+      "unsourced_numbers: 11"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 11"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_thin_source",
+    "fail_closed": true,
+    "source_backed": false,
+    "article_words": 269,
+    "title": "Marokko ilmoitti 11 ihmisen kuolleen Ceutan rajan omalla puolellaan"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (9.0%); length under target (269 words); missing: image; readability few paragraphs (1); readability wall of text; unsourced numbers; only 1 paragraphs (min 3); unsourced_numbers: 11"
 }

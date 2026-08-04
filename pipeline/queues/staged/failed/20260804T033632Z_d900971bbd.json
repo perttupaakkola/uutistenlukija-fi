@@ -267,5 +267,35 @@
       }
     ],
     "source_url": "https://www.bbc.co.uk/news/articles/cyvl84zmgyro?at_medium=RSS&at_campaign=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-04T14:16:43.455827+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260804T033632Z_d900971bbd",
+    "category": "Ulkomaat",
+    "selected_source_words": 418,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 6.07,
+    "quality_reasons": [
+      "language borderline Finnish signal (8.0%)",
+      "length under target (266 words)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "only 1 paragraphs (min 3)"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 266,
+    "title": "Von der Leyen vaatii EU:lta yhteisiä toimia Ceutan rajakriisin jälkeen"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (8.0%); length under target (266 words); missing: image; readability few paragraphs (1); readability wall of text; only 1 paragraphs (min 3)"
 }

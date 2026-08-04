@@ -247,5 +247,36 @@
       }
     ],
     "source_url": "https://www.bbc.co.uk/news/articles/c151pkww79zo?at_medium=RSS&at_campaign=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-04T14:16:43.460695+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260804T090919Z_2b57d9598e",
+    "category": "Ulkomaat",
+    "selected_source_words": 401,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 7.92,
+    "quality_reasons": [
+      "length under target (257 words)",
+      "missing: image",
+      "unsourced numbers",
+      "source_confidence_denial_context_missing",
+      "unsourced_numbers: 2, 5, 69"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 2, 5, 69"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 257,
+    "title": "Kuvernööri: Viisi kuoli Ukrainan lennokki-iskussa Moskovan alueella"
+  },
+  "failure": "quality_gate_rejected: length under target (257 words); missing: image; unsourced numbers; source_confidence_denial_context_missing; unsourced_numbers: 2, 5, 69"
 }

@@ -249,5 +249,37 @@
       }
     ],
     "source_url": "https://www.arvopaperi.fi/uutiset/a/d8274307-f154-4413-a65b-bf6b7bcabd4f?utm_source=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-04T14:16:43.450825+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260803T160503Z_aebc40651f",
+    "category": "Talous",
+    "selected_source_words": 299,
+    "selected_source_blocks": 3,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 7.52,
+    "quality_reasons": [
+      "language borderline Finnish signal (8.0%)",
+      "length under target (271 words)",
+      "missing: image",
+      "unsourced numbers",
+      "source_confidence_denial_context_missing",
+      "unsourced_numbers: 4233prosentti, 5222prosentti"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 4233prosentti, 5222prosentti"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_thin_source",
+    "fail_closed": true,
+    "source_backed": false,
+    "article_words": 271,
+    "title": "Yhdysvallat ja Japani tukivat jeniä harvinaisessa yhteisinterventiossa"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (8.0%); length under target (271 words); missing: image; unsourced numbers; source_confidence_denial_context_missing; unsourced_numbers: 4233prosentti, 5222prosentti"
 }
