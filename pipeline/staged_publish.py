@@ -1565,19 +1565,26 @@ def cmd_monica_worker(args: argparse.Namespace) -> int:
     return 0
 
 
+def outbox_order_key(item: tuple[Path, dict]) -> tuple[str, str]:
+    """Order tracked packets by versioned content/path, never checkout metadata."""
+    path, data = item
+    packet_value = data.get("packet")
+    packet = packet_value if isinstance(packet_value, dict) else {}
+    packet_id = packet.get("packet_id") or data.get("digest") or path.stem
+    return str(packet_id), path.name
+
+
 def load_outbox(max_items: int | None = None) -> list[tuple[Path, dict]]:
     out = []
-    paths = sorted((STAGED_ROOT / "outbox").glob("*.json"), key=lambda p: p.stat().st_mtime)
-    if max_items is not None:
-        paths = paths[:max_items]
-    for p in paths:
+    for p in (STAGED_ROOT / "outbox").glob("*.json"):
         try:
             data = json.loads(p.read_text(encoding="utf-8", errors="replace"))
             if isinstance(data.get("article"), dict):
                 out.append((p, data))
         except Exception as e:
             log(f"publish: skip bad outbox {p.name}: {e}")
-    return out
+    out.sort(key=outbox_order_key)
+    return out if max_items is None else out[:max_items]
 
 
 def apply_publish_preflight(
@@ -1885,7 +1892,11 @@ def quality_gate_retry_classification(data: dict, article: dict, breakdown: Any 
     }
 
 
-def quarantine_rejected_outbox(items: list[tuple[Path, dict]], rejected_articles: list[dict]) -> int:
+def quarantine_rejected_outbox(
+    items: list[tuple[Path, dict]],
+    rejected_articles: list[dict],
+    transitions: list[tuple[Path, Path]] | None = None,
+) -> int:
     """Move quality-gate rejects out of outbox so one bad draft cannot block publishing."""
     rejected_ids = {id(article) for article in rejected_articles}
     moved = 0
@@ -1904,13 +1915,19 @@ def quarantine_rejected_outbox(items: list[tuple[Path, dict]], rejected_articles
             target = STAGED_ROOT / "failed" / f"{path.stem}_{int(time.time())}{path.suffix}"
         atomic_write_json(target, data)
         path.unlink(missing_ok=True)
+        if transitions is not None:
+            transitions.append((path, target))
         moved += 1
     if moved:
         log(f"publish: quarantined quality-gate rejects moved={moved}")
     return moved
 
 
-def quarantine_duplicate_outbox(items: list[tuple[Path, dict]], kept_articles: list[dict]) -> int:
+def quarantine_duplicate_outbox(
+    items: list[tuple[Path, dict]],
+    kept_articles: list[dict],
+    transitions: list[tuple[Path, Path]] | None = None,
+) -> int:
     """Move drafts dropped by published/batch dedup out of outbox.
 
     Quality-gate rejects were already fail-closed, but duplicate drafts could stay
@@ -1930,6 +1947,8 @@ def quarantine_duplicate_outbox(items: list[tuple[Path, dict]], kept_articles: l
             target = STAGED_ROOT / "failed" / f"{path.stem}_{int(time.time())}{path.suffix}"
         atomic_write_json(target, data)
         path.unlink(missing_ok=True)
+        if transitions is not None:
+            transitions.append((path, target))
         moved += 1
     if moved:
         log(f"publish: quarantined duplicate drops moved={moved}")
@@ -1957,6 +1976,112 @@ def refresh_static_status() -> None:
             raise RuntimeError(f"status refresh failed rc={res.returncode}: {' '.join(cmd)}\n{combined[-1000:]}")
         if res.stdout.strip():
             log(res.stdout.strip()[-1000:])
+
+
+def persist_queue_transitions(transitions: list[tuple[Path, Path]]) -> int:
+    """Commit and push only proven outbox-to-failed terminal transitions."""
+    if not transitions:
+        return 0
+
+    outbox_root = (STAGED_ROOT / "outbox").resolve()
+    failed_root = (STAGED_ROOT / "failed").resolve()
+    project_root = PROJECT_DIR.resolve()
+    expected_status: dict[str, str] = {}
+    try:
+        for source, target in transitions:
+            source = source.resolve()
+            target = target.resolve()
+            if source.parent != outbox_root or target.parent != failed_root:
+                raise ValueError(f"invalid queue transition {source} -> {target}")
+            if source.exists() or not target.is_file():
+                raise ValueError(f"incomplete queue transition {source} -> {target}")
+            source_rel = source.relative_to(project_root).as_posix()
+            target_rel = target.relative_to(project_root).as_posix()
+            expected_status[source_rel] = "D"
+            expected_status[target_rel] = "A"
+    except ValueError as exc:
+        log(f"publish: queue-only persistence rejected: {exc}")
+        return 4
+    if len(expected_status) != len(transitions) * 2:
+        log("publish: queue-only persistence rejected duplicate transition paths")
+        return 4
+
+    def run_git(cmd: list[str], *, timeout: int = 180) -> subprocess.CompletedProcess[str]:
+        return subprocess.run(
+            cmd,
+            cwd=PROJECT_DIR,
+            timeout=timeout,
+            text=True,
+            capture_output=True,
+        )
+
+    pull = run_git(["git", "pull", "--rebase", "--autostash", "origin", "main"], timeout=120)
+    if pull.returncode != 0:
+        combined = (pull.stdout + "\n" + pull.stderr).strip()
+        log(f"publish: queue-only pull failed rc={pull.returncode}\n{combined[-1000:]}")
+        return pull.returncode or 4
+
+    transition_paths = sorted(expected_status)
+    add = run_git(["git", "add", "-A", "--", *transition_paths])
+    if add.returncode != 0:
+        combined = (add.stdout + "\n" + add.stderr).strip()
+        log(f"publish: queue-only add failed rc={add.returncode}\n{combined[-1000:]}")
+        return add.returncode or 4
+
+    staged = run_git(["git", "diff", "--cached", "--name-status", "--no-renames"])
+    if staged.returncode != 0:
+        combined = (staged.stdout + "\n" + staged.stderr).strip()
+        log(f"publish: queue-only diff failed rc={staged.returncode}\n{combined[-1000:]}")
+        return staged.returncode or 4
+    actual_status: dict[str, str] = {}
+    try:
+        for line in staged.stdout.splitlines():
+            status, path = line.split("\t", 1)
+            actual_status[path] = status
+    except ValueError:
+        log("publish: queue-only staged diff had an unexpected shape")
+        return 4
+    if actual_status != expected_status:
+        log(
+            "publish: queue-only staged diff mismatch "
+            f"expected={json.dumps(expected_status, sort_keys=True)} "
+            f"actual={json.dumps(actual_status, sort_keys=True)}"
+        )
+        return 4
+
+    commit = run_git([
+        "git",
+        "commit",
+        "-m",
+        f"Auto-terminalize staged: {len(transitions)} packet(s) ({datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')})",
+    ])
+    if commit.returncode != 0:
+        combined = (commit.stdout + "\n" + commit.stderr).strip()
+        log(f"publish: queue-only commit failed rc={commit.returncode}\n{combined[-1000:]}")
+        return commit.returncode or 4
+
+    head = run_git(["git", "rev-parse", "HEAD"])
+    if head.returncode != 0 or not head.stdout.strip():
+        log(f"publish: queue-only HEAD verification failed rc={head.returncode}")
+        return head.returncode or 4
+    expected_head = head.stdout.strip()
+
+    push = run_git(["git", "push", "origin", "main"])
+    if push.returncode != 0:
+        combined = (push.stdout + "\n" + push.stderr).strip()
+        log(f"publish: queue-only push failed rc={push.returncode}\n{combined[-1000:]}")
+        return push.returncode or 4
+
+    remote = run_git(["git", "ls-remote", "origin", "refs/heads/main"])
+    remote_head = remote.stdout.split(maxsplit=1)[0] if remote.returncode == 0 and remote.stdout.strip() else ""
+    if remote_head != expected_head:
+        log(
+            "publish: queue-only remote verification failed "
+            f"expected={expected_head} actual={remote_head or '-'} rc={remote.returncode}"
+        )
+        return remote.returncode or 4
+    log(f"publish: persisted queue-only transitions moved={len(transitions)} head={expected_head}")
+    return 0
 
 
 def run_git_deploy(created_count: int) -> int:
@@ -2005,26 +2130,69 @@ def cmd_publish(args: argparse.Namespace) -> int:
         log("publish: no outbox articles")
         return 0
     selected_count = len(items)
-    items = apply_publish_preflight(items, max_items=args.max_articles)
-    if not items:
+    if args.max_articles <= 0:
+        log("publish: max-articles cap is zero")
+        return 0
+
+    quality_checked_items: list[tuple[Path, dict]] = []
+    quality_passed_items: list[tuple[Path, dict]] = []
+    quality_rejected_articles: list[dict] = []
+    deduplicated_articles: list[dict] = []
+    # The cap applies to final publishable output, after both gates and dedup.
+    # Scan the deterministic outbox order until enough unique records survive.
+    for item in items:
+        eligible = apply_publish_preflight([item], max_items=1)
+        if not eligible:
+            continue
+        path, data = eligible[0]
+        article = data["article"]
+        gate = run_quality_gate([article])
+        quality_checked_items.append((path, data))
+        rejected = any(candidate is article for candidate in gate.rejected)
+        passed = any(candidate is article for candidate in gate.passed)
+        if rejected or not passed:
+            # Rejection wins if a malformed gate response names the same input
+            # in both lists. Every quality-checked input receives one outcome.
+            quality_rejected_articles.append(article)
+            continue
+        quality_passed_items.append((path, data))
+        candidate_articles = [record["article"] for _, record in quality_passed_items]
+        deduplicated_articles = filter_new_articles(candidate_articles)
+        deduplicated_articles = check_published_duplicates(
+            deduplicated_articles,
+            window_hours=args.dedup_window,
+        )
+        deduplicated_articles = dedup_within_batch(deduplicated_articles)
+        if len(deduplicated_articles) >= args.max_articles:
+            break
+
+    if not quality_checked_items:
         log(f"publish: all selected outbox records held by preflight selected={selected_count}")
         return 0
-    articles = [data["article"] for _, data in items]
-    gate = run_quality_gate(articles)
+    queue_transitions: list[tuple[Path, Path]] = []
     if not args.dry_run:
-        quarantine_rejected_outbox(items, gate.rejected)
-    articles = gate.passed
+        quarantine_rejected_outbox(
+            quality_checked_items,
+            quality_rejected_articles,
+            queue_transitions,
+        )
+    items = quality_passed_items
+    articles = deduplicated_articles
     if not articles:
-        log(f"publish: all articles rejected by quality gate rejected={len(gate.rejected)}")
+        if not args.dry_run and items:
+            quarantine_duplicate_outbox(items, articles, queue_transitions)
+        if items:
+            log("publish: all articles dropped as duplicates")
+        else:
+            log(
+                "publish: all articles rejected by quality gate "
+                f"rejected={len(quality_rejected_articles)}"
+            )
+        if args.git_push and queue_transitions:
+            return persist_queue_transitions(queue_transitions)
         return 0
-    articles = filter_new_articles(articles)
-    articles = check_published_duplicates(articles, window_hours=args.dedup_window)
-    articles = dedup_within_batch(articles)
     if not args.dry_run:
-        quarantine_duplicate_outbox(items, articles)
-    if not articles:
-        log("publish: all articles dropped as duplicates")
-        return 0
+        quarantine_duplicate_outbox(items, articles, queue_transitions)
     image_summary = enrich_images_for_articles(articles)
     article_by_id = {id(article): article for article in articles}
     for _, data in items:
@@ -2091,6 +2259,10 @@ def cmd_publish(args: argparse.Namespace) -> int:
                 p.unlink(missing_ok=True)
         if args.git_push:
             return run_git_deploy(len(created))
+    elif args.git_push and queue_transitions:
+        queue_rc = persist_queue_transitions(queue_transitions)
+        if queue_rc != 0:
+            return queue_rc
     log(f"publish: done created={len(created)}")
     return 0
 
