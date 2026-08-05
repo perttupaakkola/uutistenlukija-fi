@@ -88,6 +88,7 @@ class HomepageLatestMetadataTest(unittest.TestCase):
         self.assertIsNotNone(lead, "rendered homepage lead missing")
         self.assertIn("Newest fallback lead", lead.group(1))
         self.assertNotIn("Older visual story", lead.group(1))
+        self.assertNotIn("portal-lead__image", lead.group(1))
 
         teasers = re.search(
             r'<div class="portal-center-list".*?</div>\s*</div>',

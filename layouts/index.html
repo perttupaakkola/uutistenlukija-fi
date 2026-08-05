@@ -28,12 +28,15 @@
   {{ $leadCat := index $lead.Params.categories 0 | default "Uutiset" }}
   {{ $leadImg := $lead.Params.image | default (printf "/images/categories/%s.jpg" ($leadCat | lower)) }}
   {{ $leadThumb := $lead.Params.image_thumb | default $leadImg }}
+  {{ $leadIsCategoryFallback := or $lead.Params.image_category_fallback (eq $lead.Params.image_source "category_fallback") (hasPrefix $leadImg "/images/categories/") }}
   {{ $seen = $seen | append $lead.Permalink }}
   <section class="portal-front-grid" aria-labelledby="front-lead-title">
     <article class="portal-lead">
+      {{ if not $leadIsCategoryFallback }}
       <div class="portal-lead__image">
         {{ partial "card-image.html" (dict "img" $leadImg "thumb" $leadThumb "context" $lead "eager" true "hero" true "permalink" $lead.Permalink "fallback" (printf "/images/categories/%s.jpg" ($leadCat | lower))) }}
       </div>
+      {{ end }}
       <div class="portal-lead__body">
         <span class="portal-kicker">{{ $leadCat }}</span>
         <span class="portal-lead__time">{{ partial "relative-date.html" $lead }}</span>
