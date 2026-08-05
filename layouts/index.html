@@ -39,7 +39,7 @@
       {{ end }}
       <div class="portal-lead__body">
         <span class="portal-kicker">{{ $leadCat }}</span>
-        <span class="portal-lead__time">{{ partial "relative-date.html" $lead }}</span>
+        <span class="portal-lead__time">Julkaistu {{ partial "relative-date.html" $lead }}</span>
         <h2 id="front-lead-title"><a href="{{ $lead.RelPermalink }}">{{ $lead.Title }}</a></h2>
         {{ with $lead.Params.description }}<p>{{ . | truncate 185 }}</p>{{ else }}<p>{{ $lead.Summary | truncate 185 }}</p>{{ end }}
         <div class="portal-meta-row">
@@ -65,7 +65,7 @@
           <img src="{{ $img }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="180" height="120" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.src='{{ printf "/images/categories/%s.jpg" ($cat | lower) }}'">
         </a>
         <div>
-          <div class="portal-teaser__meta"><span class="portal-kicker portal-teaser__category portal-teaser__category--{{ $catClass }}">{{ $cat }}</span><span>{{ partial "relative-date.html" . }}</span></div>
+          <div class="portal-teaser__meta"><span class="portal-kicker portal-teaser__category portal-teaser__category--{{ $catClass }}">{{ $cat }}</span><span>Julkaistu {{ partial "relative-date.html" . }}</span></div>
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         </div>
       </article>

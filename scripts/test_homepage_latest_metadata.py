@@ -30,6 +30,12 @@ class HomepageLatestMetadataTest(unittest.TestCase):
             ("Live fallback story", "2020-01-30T12:00:00+00:00", "Kotimaa", True),
             ("Older visual story", "2020-01-29T12:00:00+00:00", "Ulkomaat", False),
             ("Tiede fallback story", "2020-01-28T12:00:00+00:00", "Tiede", True),
+            (
+                "Another older visual story",
+                "2020-01-27T12:00:00+00:00",
+                "Kulttuuri",
+                False,
+            ),
         )
         with tempfile.TemporaryDirectory(prefix="homepage-lead-") as tmp:
             root = Path(tmp)
@@ -89,6 +95,10 @@ class HomepageLatestMetadataTest(unittest.TestCase):
         self.assertIn("Newest fallback lead", lead.group(1))
         self.assertNotIn("Older visual story", lead.group(1))
         self.assertNotIn("portal-lead__image", lead.group(1))
+        self.assertRegex(
+            lead.group(1),
+            r'<span class="portal-lead__time">\s*Julkaistu\s+<time\s+datetime=',
+        )
 
         teasers = re.search(
             r'<div class="portal-center-list".*?</div>\s*</div>',
@@ -97,6 +107,16 @@ class HomepageLatestMetadataTest(unittest.TestCase):
         )
         self.assertIsNotNone(teasers, "rendered homepage teaser list missing")
         self.assertIn("Older visual story", teasers.group(0))
+
+        teaser_cards = re.findall(
+            r'<article class="portal-teaser">(.*?)</article>', rendered, re.DOTALL
+        )
+        self.assertEqual(len(teaser_cards), 2)
+        for card in teaser_cards:
+            self.assertRegex(
+                card,
+                r'<div class="portal-teaser__meta">.*?Julkaistu\s+<time\s+datetime=',
+            )
 
     def test_source_metadata_preserves_story_links_and_order(self) -> None:
         template = INDEX_TEMPLATE.read_text(encoding="utf-8")
