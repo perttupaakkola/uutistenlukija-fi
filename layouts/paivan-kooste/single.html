@@ -43,10 +43,11 @@
   {{ $slug := .slug }}
   {{ $matched := slice }}
   {{ range $dayPosts }}
-    {{ $cats := .Params.categories | default slice }}
+    {{ $article := . }}
+    {{ $cats := $article.Params.categories | default slice }}
     {{ range $cats }}
       {{ if and (eq (. | lower | urlize) $slug) (lt (len $matched) 5) }}
-        {{ $matched = $matched | append $ }}
+        {{ $matched = $matched | append $article }}
       {{ end }}
     {{ end }}
   {{ end }}
@@ -109,12 +110,13 @@
 
       <ul class="kooste-article-list" role="list">
         {{ range $arts }}
+        {{ $article := . }}
         <li class="kooste-article-card">
-          {{ with .Params.image }}
-          <a href="{{ $.RelPermalink }}" class="kooste-card__image-wrap" tabindex="-1" aria-hidden="true">
+          {{ with $article.Params.image }}
+          <a href="{{ $article.RelPermalink }}" class="kooste-card__image-wrap" tabindex="-1" aria-hidden="true">
             <img
               src="{{ . }}"
-              alt="{{ $.Params.image_alt | default $.Title }}"
+              alt="{{ $article.Params.image_alt | default $article.Title }}"
               class="kooste-card__image"
               loading="lazy"
               decoding="async"

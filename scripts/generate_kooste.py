@@ -43,16 +43,31 @@ def parse_frontmatter(text):
     if end == -1:
         return {}
     fm = {}
-    for line in text[3:end].splitlines():
-        if ":" not in line:
+    lines = text[3:end].splitlines()
+    index = 0
+    while index < len(lines):
+        line = lines[index]
+        if line.startswith((" ", "\t")) or ":" not in line:
+            index += 1
             continue
         k, _, v = line.partition(":")
         k = k.strip()
         v = v.strip().strip("\"'")
+        if not v:
+            items = []
+            index += 1
+            while index < len(lines) and lines[index].startswith((" ", "\t")):
+                item = re.match(r"^\s*-\s+(.+?)\s*$", lines[index])
+                if item:
+                    items.append(item.group(1).strip().strip("\"'"))
+                index += 1
+            fm[k] = items if items else ""
+            continue
         if v.startswith("[") and v.endswith("]"):
             fm[k] = [x.strip().strip("\"'") for x in v[1:-1].split(",") if x.strip()]
         else:
             fm[k] = v
+        index += 1
     return fm
 
 
