@@ -50,7 +50,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/mikael-pentikaiselta-varoitus-hallitukselle-yel-uudistuksen-aikataulusta-voi-tulla-ikava-yllatys"
-briefing: true
 draft: false
 ---
 
