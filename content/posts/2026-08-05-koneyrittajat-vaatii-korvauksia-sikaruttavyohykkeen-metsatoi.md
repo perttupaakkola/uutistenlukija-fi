@@ -11,11 +11,11 @@ author_image: ""
 description: "Koneyrittäjien mukaan eläintautilaki ei huomioi riittävän selvästi metsäkoneyrittäjille toimintakiellosta aiheutuvia tuotannonmenetyksiä."
 summary: "Koneyrittäjien mukaan eläintautilaki ei huomioi riittävän selvästi metsäkoneyrittäjille toimintakiellosta aiheutuvia tuotannonmenetyksiä. Yhden puunkorjuuketjun tulonmenetys voi järjestön arvion mukaan olla kahdessa vuorossa noin 3 400 euroa päivässä."
 summary_bullets:
-  - "Kaikki metsätaloustyöt on kielletty Ruokaviraston perustamalla tartuntavyöhykkeellä Virolahdella, Miehikkälässä ja Lappeenrannan eteläpuolisella alueella."
+  - "Metsätaloustöiden tekeminen on kielletty Ruokaviraston perustamalla tartuntavyöhykkeellä Virolahdella, Miehikkälässä ja Lappeenrannan eteläpuolisella alueella lukuun ottamatta valmiiksi kaadettujen puiden noutamista tienvarsilta."
   - "Koneyrittäjät arvioi yhden puunkorjuuketjun tulonmenetykseksi yhdessä vuorossa noin 1 700 euroa ja kahdessa vuorossa noin 3 400 euroa päivässä."
   - "Järjestö vaatii Ruokavirastolta selkeää tulkintaa korvausvastuusta sekä eläintautilain päivittämistä."
 key_points:
-  - "Kaikki metsätaloustyöt on kielletty Ruokaviraston perustamalla tartuntavyöhykkeellä Virolahdella, Miehikkälässä ja Lappeenrannan eteläpuolisella alueella."
+  - "Metsätaloustöiden tekeminen on kielletty Ruokaviraston perustamalla tartuntavyöhykkeellä Virolahdella, Miehikkälässä ja Lappeenrannan eteläpuolisella alueella lukuun ottamatta valmiiksi kaadettujen puiden noutamista tienvarsilta."
   - "Koneyrittäjät arvioi yhden puunkorjuuketjun tulonmenetykseksi yhdessä vuorossa noin 1 700 euroa ja kahdessa vuorossa noin 3 400 euroa päivässä."
   - "Järjestö vaatii Ruokavirastolta selkeää tulkintaa korvausvastuusta sekä eläintautilain päivittämistä."
 journalist_note: |
@@ -54,7 +54,7 @@ briefing: true
 draft: false
 ---
 
-Ruokaviraston afrikkalaisen sikaruton leviämisen estämiseksi perustamalla tartuntavyöhykkeellä on kielletty kaikki metsätaloustyöt. Kielto koskee Virolahtea, Miehikkälää ja Lappeenrannan kaupungin eteläpuolista aluetta. Koneyrittäjät vaatii, että toiminnan keskeytymisestä aiheutuvien tuotannonmenetysten korvaamista selkeytetään eläintautilaissa eikä kustannuksia jätetä yksittäisten yrittäjien kannettaviksi.
+Ruokaviraston afrikkalaisen sikaruton leviämisen estämiseksi perustamalla tartuntavyöhykkeellä metsätaloustöiden tekeminen on kielletty lukuun ottamatta valmiiksi kaadettujen puiden noutamista tienvarsilta. Kielto koskee Virolahtea, Miehikkälää ja Lappeenrannan kaupungin eteläpuolista aluetta. Koneyrittäjät vaatii, että toiminnan keskeytymisestä aiheutuvien tuotannonmenetysten korvaamista selkeytetään eläintautilaissa eikä kustannuksia jätetä yksittäisten yrittäjien kannettaviksi.
 
 ## Puunkorjuuketjun menetys voi olla 3 400 euroa päivässä
 
