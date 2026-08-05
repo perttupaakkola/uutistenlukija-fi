@@ -3,6 +3,9 @@
 
 from pathlib import Path
 import re
+import shutil
+import subprocess
+import tempfile
 import unittest
 
 
@@ -13,6 +16,7 @@ PORTAL_CSS = (
     ROOT / "assets" / "css" / "portal-overhaul.css",
     ROOT / "static" / "css" / "portal-overhaul.css",
 )
+HUGO_BIN = shutil.which("hugo") or "/workspace/hugo"
 
 
 def compact_css(path: Path) -> str:
@@ -20,6 +24,79 @@ def compact_css(path: Path) -> str:
 
 
 class HomepageLatestMetadataTest(unittest.TestCase):
+    def test_lead_uses_newest_eligible_story_before_older_visual_story(self) -> None:
+        fixtures = (
+            ("Newest fallback lead", "2020-01-31T12:00:00+00:00", "Talous", True),
+            ("Live fallback story", "2020-01-30T12:00:00+00:00", "Kotimaa", True),
+            ("Older visual story", "2020-01-29T12:00:00+00:00", "Ulkomaat", False),
+            ("Tiede fallback story", "2020-01-28T12:00:00+00:00", "Tiede", True),
+        )
+        with tempfile.TemporaryDirectory(prefix="homepage-lead-") as tmp:
+            root = Path(tmp)
+            posts_dir = root / "content" / "posts"
+            public_dir = root / "public"
+            posts_dir.mkdir(parents=True)
+            for rank, (title, published, category, fallback) in enumerate(fixtures, 1):
+                image = (
+                    f"/images/categories/{category.lower()}.jpg"
+                    if fallback
+                    else "/images/articles/older-visual-story.jpg"
+                )
+                image_source = "category_fallback" if fallback else "generated"
+                (posts_dir / f"fixture-{rank}.md").write_text(
+                    "---\n"
+                    f'title: "{title}"\n'
+                    f"date: {published}\n"
+                    f'categories: ["{category}"]\n'
+                    f'image: "{image}"\n'
+                    f'image_source: "{image_source}"\n'
+                    f"image_category_fallback: {str(fallback).lower()}\n"
+                    'source_name: "Fixture source"\n'
+                    "draft: false\n"
+                    "---\n\n"
+                    f"{title} fixture content.\n",
+                    encoding="utf-8",
+                )
+
+            completed = subprocess.run(
+                (
+                    HUGO_BIN,
+                    "--source",
+                    str(ROOT),
+                    "--contentDir",
+                    str(root / "content"),
+                    "--destination",
+                    str(public_dir),
+                    "--cleanDestinationDir",
+                    "--quiet",
+                ),
+                check=False,
+                capture_output=True,
+                text=True,
+                timeout=90,
+            )
+            self.assertEqual(
+                completed.returncode,
+                0,
+                f"Hugo fixture render failed:\n{completed.stdout}\n{completed.stderr}",
+            )
+            rendered = (public_dir / "index.html").read_text(encoding="utf-8")
+
+        lead = re.search(
+            r'<article class="portal-lead">(.*?)</article>', rendered, re.DOTALL
+        )
+        self.assertIsNotNone(lead, "rendered homepage lead missing")
+        self.assertIn("Newest fallback lead", lead.group(1))
+        self.assertNotIn("Older visual story", lead.group(1))
+
+        teasers = re.search(
+            r'<div class="portal-center-list".*?</div>\s*</div>',
+            rendered,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(teasers, "rendered homepage teaser list missing")
+        self.assertIn("Older visual story", teasers.group(0))
+
     def test_source_metadata_preserves_story_links_and_order(self) -> None:
         template = INDEX_TEMPLATE.read_text(encoding="utf-8")
         card = template.split('<article class="portal-row-card{{', 1)[1].split(

@@ -8,7 +8,6 @@
   {{ if and $image (not $isCategoryFallback) }}{{ $visualPosts = $visualPosts | append . }}{{ end }}
 {{ end }}
 {{ $lead := index $sorted 0 }}
-{{ if gt (len $visualPosts) 0 }}{{ $lead = index $visualPosts 0 }}{{ end }}
 {{ $seen := slice }}
 
 <div class="portal-front">
