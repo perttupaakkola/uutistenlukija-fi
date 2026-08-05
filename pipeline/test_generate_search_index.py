@@ -96,7 +96,7 @@ class GenerateSearchIndexTest(unittest.TestCase):
     def test_review_due_stays_searchable_without_freshness_signal(self) -> None:
         record = build_guide_record(
             GUIDES_DIR / "kauppojen-aukioloajat.md",
-            today=date(2026, 8, 9),
+            today=date(2026, 8, 10),
         )
         self.assertIsNotNone(record)
         self.assertEqual(record["date"], "")
@@ -104,7 +104,7 @@ class GenerateSearchIndexTest(unittest.TestCase):
     def test_guide_fails_closed_from_search_at_exact_expiry(self) -> None:
         record = build_guide_record(
             GUIDES_DIR / "kauppojen-aukioloajat.md",
-            today=date(2026, 8, 25),
+            today=date(2026, 9, 2),
         )
         self.assertIsNone(record)
 
