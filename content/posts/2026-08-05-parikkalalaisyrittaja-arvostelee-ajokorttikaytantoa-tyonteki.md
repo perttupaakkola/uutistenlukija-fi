@@ -73,3 +73,5 @@ Pohjanmaalta kotoisin oleva Kujanpää työskenteli aiemmin toimittajana ja muut
 <h2>Muuttunut käytäntö herättää kritiikkiä</h2>
 
 Kasvavan siivousyrityksen työntekijän pitkä matka ajokortin suorittamiseksi on saanut Kujanpään kyseenalaistamaan Traficomin käytännön vaikutukset. Hänen arvionsa mukaan yli 300 kilometrin matkustusvaatimus ei ota riittävästi huomioon syrjäseuduilla toimivia työntekijöitä ja yrityksiä.
+
+**Lähdekonteksti:** Juttu perustuu Suomen Yrittäjien haastatteluun. Traficom ei kommentoi lähdejutussa tätä yksittäistapausta. Traficomin yleisohjeen mukaan uusia etätulkkauksen poikkeuslupia ei enää myönnetä. Voimassa olevaa poikkeuslupaa voi kuitenkin käyttää luvan saanut kokelas luvan voimassaolon loppuun tai enintään 31.12.2026 asti. [Lue Traficomin ohje teoriakokeesta ja tulkin käytöstä](https://traficom.fi/fi/autoilijat/ajokortit/kuljettajantutkinto).
