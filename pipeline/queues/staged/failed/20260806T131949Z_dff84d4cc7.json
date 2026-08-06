@@ -246,5 +246,31 @@
       }
     ],
     "source_url": "https://www.theguardian.com/world/live/2026/aug/06/iran-oman-strait-of-hormuz-yemen-houthis-israel-lebanon-gaza-us-donald-trump-middle-east-crisis-live-news"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-06T13:28:35.171273+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260806T131949Z_dff84d4cc7",
+    "category": "Ulkomaat",
+    "selected_source_words": 374,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 8.2,
+    "quality_reasons": [
+      "missing: image",
+      "source_confidence_denial_context_missing"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 312,
+    "title": "Iran: Sopimus Hormuzinsalmen avaamisesta lähellä – keskeisiä ehtoja yhä ratkaisematta"
+  },
+  "failure": "quality_gate_rejected: missing: image; source_confidence_denial_context_missing"
 }
