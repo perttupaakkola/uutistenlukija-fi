@@ -86,6 +86,20 @@ class SourceConfidenceGuardTests(unittest.TestCase):
 
         self.assertEqual(source_confidence_issues(article), [])
 
+    def test_viranomainen_and_non_denial_ristiriita_do_not_activate_iran_guard(self):
+        article = {
+            "category": "Kotimaa",
+            "title": "Ruokaviraston viestintää arvioitiin Kaakkois-Suomessa",
+            "summary": "Yle tarkasteli viranomaisviestinnän resursointia.",
+            "content": "Ylen analyysi käsitteli sikaruttotiedotuksen järjestämistä.",
+            "source_text": (
+                "Ylen analyysin mukaan viranomainen sanoi, että viesteissä saattoi "
+                "olla ristiriita. Ristiriita koski viestinnän ajoitusta."
+            ),
+        }
+
+        self.assertEqual(source_confidence_issues(article), [])
+
 
 if __name__ == "__main__":
     unittest.main()

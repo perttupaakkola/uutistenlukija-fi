@@ -40,6 +40,7 @@ HIGH_STAKES_KEYWORDS = (
     "strike",
     "isku",
 )
+IRAN_LEFT_BOUNDARY_RE = re.compile(r"(?<![a-zåäö])iran")
 
 STATE_ACTOR_CLAIM_MARKERS = (
     "says",
@@ -136,6 +137,13 @@ def _contains_any(text: str, needles: tuple[str, ...]) -> bool:
     return any(needle in haystack for needle in needles)
 
 
+def _contains_high_stakes_keyword(text: str) -> bool:
+    haystack = _norm(text)
+    return bool(IRAN_LEFT_BOUNDARY_RE.search(haystack)) or any(
+        needle in haystack for needle in HIGH_STAKES_KEYWORDS if needle != "iran"
+    )
+
+
 def _first_paragraph(content: str) -> str:
     paragraphs = [p.strip() for p in (content or "").split("\n\n") if p.strip()]
     return paragraphs[0] if paragraphs else ""
@@ -171,7 +179,7 @@ def is_high_stakes_geopolitics(article: dict, source_text: str | None = None) ->
             str(source_text if source_text is not None else _source_corpus(article)),
         ]
     )
-    return category == "ulkomaat" or _contains_any(corpus, HIGH_STAKES_KEYWORDS)
+    return category == "ulkomaat" or _contains_high_stakes_keyword(corpus)
 
 
 def source_confidence_issues(article: dict) -> list[str]:
