@@ -70,6 +70,7 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
         mutate_after,
         *,
         event_name: str = "workflow_dispatch",
+        event_action: str = "",
     ) -> subprocess.CompletedProcess:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -82,6 +83,7 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
                 {
                     "RUNNER_TEMP": str(runner_temp),
                     "GITHUB_EVENT_NAME": event_name,
+                    "STAGED_SCAN_EVENT_ACTION": event_action,
                     "GITHUB_STEP_SUMMARY": str(root / "summary.md"),
                 }
             )
@@ -113,6 +115,8 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
             "group: staged-scan",
             "cancel-in-progress: false",
             "queue: max",
+            "timeout-minutes: 8",
+            "STAGED_SCAN_EVENT_ACTION:",
             "pipeline/actions-scan.enabled",
         ):
             with self.subTest(expected=expected):
@@ -130,6 +134,15 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
         self.assertEqual(self.workflow.count("queue: max"), 1)
         self.assertNotIn("pipeline/actions-publish.enabled", self.workflow)
         trigger_block = self.workflow[: self.workflow.index("\npermissions:")]
+        self.assertRegex(
+            trigger_block,
+            re.compile(
+                r"^  repository_dispatch:\n"
+                r"    types:\n"
+                r"      - staged_scan_recovery$",
+                re.MULTILINE,
+            ),
+        )
         self.assertNotIn("\n  push:", trigger_block)
         self.assertNotIn('- "pipeline/actions-scan.enabled"', trigger_block)
 
@@ -167,6 +180,59 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
                 self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
                 self.assertEqual(output.read_text(encoding="utf-8"), expected_output)
                 self.assertEqual(marker.exists(), marker_present)
+
+    def test_recovery_dispatch_admits_only_exact_type_from_main(self) -> None:
+        gate = self._run_script("Gate automated runs on cutover marker")
+        cases = (
+            (
+                "staged_scan_recovery",
+                "refs/heads/main",
+                0,
+                "enabled=true\nmode=canary\n",
+                "",
+            ),
+            (
+                "unexpected_recovery",
+                "refs/heads/main",
+                1,
+                "",
+                "Unsupported staged scan repository_dispatch type",
+            ),
+            (
+                "staged_scan_recovery",
+                "refs/heads/unreviewed-canary",
+                1,
+                "",
+                "recovery canary must run from refs/heads/main",
+            ),
+        )
+        for event_action, event_ref, expected_returncode, expected_output, expected_error in cases:
+            with self.subTest(action=event_action, ref=event_ref), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                output = root / "github-output"
+                env = os.environ.copy()
+                env.update(
+                    {
+                        "GITHUB_EVENT_NAME": "repository_dispatch",
+                        "GITHUB_REF": event_ref,
+                        "GITHUB_OUTPUT": str(output),
+                        "STAGED_SCAN_EVENT_ACTION": event_action,
+                    }
+                )
+                result = subprocess.run(
+                    ["bash", "-c", gate],
+                    cwd=root,
+                    env=env,
+                    capture_output=True,
+                    text=True,
+                    check=False,
+                )
+                actual_output = output.read_text(encoding="utf-8") if output.exists() else ""
+
+            self.assertEqual(result.returncode, expected_returncode, result.stdout + result.stderr)
+            self.assertEqual(actual_output, expected_output)
+            if expected_error:
+                self.assertIn(expected_error, result.stdout + result.stderr)
 
     def test_manual_canary_rejects_non_main_ref_before_source_setup_or_scan(self) -> None:
         gate = self._run_script("Gate automated runs on cutover marker")
@@ -239,7 +305,9 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
 
     def test_supervised_canary_requires_exactly_one_valid_ready_packet(self) -> None:
         for expected in (
-            'os.environ["GITHUB_EVENT_NAME"] == "workflow_dispatch"',
+            'event_name == "workflow_dispatch"',
+            'event_name == "repository_dispatch"',
+            'event_action == "staged_scan_recovery"',
             "supervised canary expected exactly one new ready packet",
             "removed_paths",
             "modified_paths",
@@ -260,6 +328,30 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertIn('"added_paths": [', result.stdout)
         self.assertIn("ready/valid_packet.json", result.stdout)
+
+    def test_recovery_dispatch_reuses_supervised_canary_queue_contract(self) -> None:
+        result = self._run_queue_delta_fixture(
+            lambda root: (root / "pipeline/queues/staged/outbox").mkdir(parents=True),
+            lambda root: self._write_valid_ready_packet(root),
+            event_name="repository_dispatch",
+            event_action="staged_scan_recovery",
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn('"event_action": "staged_scan_recovery"', result.stdout)
+        self.assertIn("ready/valid_packet.json", result.stdout)
+
+    def test_recovery_queue_contract_rejects_unknown_dispatch_type(self) -> None:
+        result = self._run_queue_delta_fixture(
+            lambda root: None,
+            lambda root: self._write_valid_ready_packet(root),
+            event_name="repository_dispatch",
+            event_action="unexpected_recovery",
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn(
+            "unsupported staged scan event: repository_dispatch/unexpected_recovery",
+            result.stdout + result.stderr,
+        )
 
     def test_canary_rejects_removed_ready_file(self) -> None:
         def setup(root: Path) -> None:
