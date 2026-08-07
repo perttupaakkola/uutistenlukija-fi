@@ -107,5 +107,22 @@
     "_guessed_category": "Ulkomaat",
     "research": "[Lähde: Yle Uutiset | URL: https://yle.fi/a/74-20239980?origin=rss]\nEU:n teknologiakomissaari Henna Virkkunen (kok.) on kehottanut sosiaalisen median sovelluksista tunnettuja Metaa ja TikTokia toimiin disinformaation pysäyttämiseksi kriisiaikoina. Metan sovelluksia ovat mm. Facebook ja Instagram.\n\nVirkkunen kertoo Euroopan komission käyneen neuvotteluja molempien yhtiöiden kanssa eilen perjantaina.\n\nSosiaalisen median disinformaatioaallon uskotaan olleen merkittävässä roolissa viime viikolla kuolonuhreja vaatineessa kymmenientuhansien siirtolaisten rynnistyksessä Marokosta Espanjalle kuuluvalle Ceutan alueelle. Sosiaalisessa mediassa oli levinnyt tietoa Ceutan rajan avautumisesta.\n\n- Alustojen on toimittava päättäväisesti digitaalisen tilan eheyden säilyttämiseksi, erityisesti kriisitilanteissa. Valvontaa on lisättävä ja yhteistyötä faktantarkistajien kanssa on vahvistettava, Virkkunen sanoo.",
     "research_source": "multi"
+  },
+  "failed_at": "2026-08-07T23:03:39.441235+00:00",
+  "failure": "Monica writer command failed: [state/agent-db] slow OpenClaw agent database open\n[state/agent-db] slow OpenClaw agent database open\n[agent/embedded] embedded run failover decision: runId=4ef3df2c-9830-4057-bf84-46db6a385617 stage=prompt decision=surface_error reason=rate_limit from=openai/gpt-5.6-sol profile=sha256:19a76843f0c7 rawError=You've reached your Codex subscription usage limit. Next reset in 5 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured mode…\n[diagnostic] lane task error: lane=main durationMs=14658 error=\"Error: You've reached your Codex subscription usage limit. Next reset in 5 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider.\"\n[diagnostic] lane task error: lane=session:agent:monica:explicit:monica-pipeline-8dd110b6-e788-4f01-94b0-4d7a4027e28a durationMs=14660 error=\"Error: You've reached your Codex subscription usage limit. Next reset in 5 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai/gpt-5.6-sol candidate=openai/gpt-5.6-sol reason=rate_limit next=none detail=You've reached your Codex subscription usage limit. Next reset in 5 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider.\nFailoverError: You've reached your Codex subscription usage limit. Next reset in 5 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider. | You've reached your Codex subscription usage limit. Next reset in 5 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider.",
+  "raw_response": "",
+  "writer_failure_feedback": {
+    "packet_id": "20260807T225524Z_03369e6c00",
+    "category": "Ulkomaat",
+    "selected_source_words": 96,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.71,
+    "final_word_count": 0,
+    "issues": [],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_runtime",
+    "fail_closed": true,
+    "title": "EU vaatii somealustoja torjumaan tehokkaammin väärän tiedon levittämistä kriisitilanteissa"
   }
 }
