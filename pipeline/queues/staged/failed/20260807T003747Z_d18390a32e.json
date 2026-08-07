@@ -253,5 +253,33 @@
       }
     ],
     "source_url": "https://www.theguardian.com/australia-news/live/2026/aug/07/royal-commission-antisemitism-national-cabinet-datacentres-icac-liberal-party-labor-anthony-albanese-one-nation-pauline-hanson-angus-taylor-ntwnfb"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-07T00:48:58.062555+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260807T003747Z_d18390a32e",
+    "category": "Ulkomaat",
+    "selected_source_words": 433,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 50,
+    "quality_normalized": 7.96,
+    "quality_reasons": [
+      "language borderline Finnish signal (9.0%)",
+      "length under target (272 words)",
+      "missing: image",
+      "source_confidence_denial_context_missing"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 272,
+    "title": "Marles: Tony Burken maahanmuuttopuhetta ei ole peruttu"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (9.0%); length under target (272 words); missing: image; source_confidence_denial_context_missing"
 }
