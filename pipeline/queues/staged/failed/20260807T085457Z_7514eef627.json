@@ -262,5 +262,35 @@
       }
     ],
     "source_url": "https://www.yrittajat.fi/uutiset/parikkalassa-toimii-yha-liike-jollainen-alkaa-olla-muualla-harvinaisuus-yrittaja-hilkka-myllyla-tuntee-asiakkaidensa-jalat-kuin-omansa/"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-07T09:06:19.897907+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260807T085457Z_7514eef627",
+    "category": "Talous",
+    "selected_source_words": 364,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 30,
+    "quality_normalized": 6.61,
+    "quality_reasons": [
+      "language borderline Finnish signal (9.0%)",
+      "length under target (254 words)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "only 1 paragraphs (min 3)"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 254,
+    "title": "Parikkalan Kenkä palvelee yhä kuutena päivänä viikossa – Hilkka Myllylä on pitänyt liikettä 33 vuotta"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (9.0%); length under target (254 words); missing: image; readability few paragraphs (1); readability wall of text; only 1 paragraphs (min 3)"
 }
