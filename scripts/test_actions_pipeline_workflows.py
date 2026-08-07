@@ -446,6 +446,268 @@ class ScannerDeployIsolationContractTests(unittest.TestCase):
         self.assertIn("      - Staged scan", alert)
 
 
+class DeployFallbackContractTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.workflow = DEPLOY.read_text(encoding="utf-8")
+
+    def _run_script(self, step_name: str) -> str:
+        step = self.workflow.index(f"      - name: {step_name}")
+        run_header = "        run: |\n"
+        run_start = self.workflow.index(run_header, step) + len(run_header)
+        run_end = self.workflow.find("\n      - name:", run_start)
+        if run_end == -1:
+            run_end = len(self.workflow)
+        return textwrap.dedent(self.workflow[run_start:run_end])
+
+    def _run_step(
+        self,
+        step_name: str,
+        *,
+        event_name: str = "push",
+        event_ref: str = "refs/heads/main",
+        github_sha: str = "current-main",
+        checkout_head: str = "current-main",
+        remote_main: str = "current-main",
+        fetch_mode: str = "ok",
+        resolve_mode: str = "ok",
+    ) -> tuple[subprocess.CompletedProcess, str]:
+        git_stub = textwrap.dedent(
+            """\
+            git() {
+              case "$*" in
+                "rev-parse HEAD") printf '%s\\n' "$TEST_CHECKOUT_HEAD" ;;
+                "fetch --no-tags --force origin refs/heads/main:refs/remotes/origin/deploy-main")
+                  if [ "${TEST_FETCH_MODE:-ok}" = "fail" ]; then
+                    return 42
+                  fi
+                  ;;
+                "rev-parse --verify --quiet refs/remotes/origin/deploy-main^{commit}")
+                  case "${TEST_RESOLVE_MODE:-ok}" in
+                    fail) return 43 ;;
+                    empty) return 0 ;;
+                    ambiguous)
+                      printf '%s\\n%s\\n' "$TEST_REMOTE_MAIN" "$TEST_REMOTE_OTHER"
+                      ;;
+                    *) printf '%s\\n' "$TEST_REMOTE_MAIN" ;;
+                  esac
+                  ;;
+                *) command git "$@" ;;
+              esac
+            }
+            """
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            output = Path(tmp) / "github-output"
+            env = os.environ.copy()
+            env.update(
+                {
+                    "GITHUB_EVENT_NAME": event_name,
+                    "GITHUB_REF": event_ref,
+                    "GITHUB_SHA": github_sha,
+                    "GITHUB_OUTPUT": str(output),
+                    "TEST_CHECKOUT_HEAD": checkout_head,
+                    "TEST_REMOTE_MAIN": remote_main,
+                    "TEST_REMOTE_OTHER": "other-main",
+                    "TEST_FETCH_MODE": fetch_mode,
+                    "TEST_RESOLVE_MODE": resolve_mode,
+                }
+            )
+            result = subprocess.run(
+                ["bash", "-c", git_stub + self._run_script(step_name)],
+                cwd=ROOT,
+                env=env,
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            actual_output = output.read_text(encoding="utf-8") if output.exists() else ""
+        return result, actual_output
+
+    def test_dispatch_permissions_checkout_and_secret_boundary(self) -> None:
+        trigger_block = self.workflow[: self.workflow.index("\npermissions:")]
+        self.assertRegex(
+            trigger_block,
+            re.compile(r"^  workflow_dispatch: \{\}$", re.MULTILINE),
+        )
+        self.assertEqual(trigger_block.count("workflow_dispatch"), 1)
+        self.assertNotIn("inputs:", trigger_block)
+        self.assertIn(
+            "permissions:\n  contents: read\n\nconcurrency:",
+            self.workflow,
+        )
+        for prohibited in (
+            "contents: write",
+            "actions: write",
+            "deployments: write",
+            "id-token: write",
+        ):
+            with self.subTest(prohibited=prohibited):
+                self.assertNotIn(prohibited, self.workflow)
+
+        checkout = self.workflow.index("      - uses: actions/checkout@v5")
+        admission = self.workflow.index("      - name: Admit current-main deploy event")
+        checkout_step = self.workflow[checkout:admission]
+        self.assertIn("persist-credentials: false", checkout_step)
+        self.assertNotRegex(self.workflow, re.compile(r"^\s+environment:", re.MULTILINE))
+
+        for secret_name, action_input in (
+            ("CLOUDFLARE_API_TOKEN", "apiToken"),
+            ("CLOUDFLARE_ACCOUNT_ID", "accountId"),
+        ):
+            with self.subTest(secret=secret_name):
+                self.assertEqual(self.workflow.count(secret_name), 1)
+                self.assertIn(
+                    f"{action_input}: ${{{{ secrets.{secret_name} }}}}",
+                    self.workflow,
+                )
+        prohibited_historical_sha = "".join(
+            ("0549c28a9e5ee5fdbea32ffbd516b917", "31f0b75d")
+        )
+        self.assertNotIn(prohibited_historical_sha, self.workflow)
+
+    def test_event_admission_is_main_only_and_checkout_bound(self) -> None:
+        for event_name in ("push", "workflow_dispatch"):
+            with self.subTest(event=event_name):
+                result, output = self._run_step(
+                    "Admit current-main deploy event",
+                    event_name=event_name,
+                )
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertEqual(output, "")
+
+        rejected = (
+            ("workflow_dispatch", "refs/heads/unreviewed", "current-main", "refs/heads/main"),
+            ("workflow_dispatch", "refs/tags/release", "current-main", "refs/heads/main"),
+            ("schedule", "refs/heads/main", "current-main", "Unsupported deploy event"),
+            ("push", "refs/heads/main", "different-checkout", "Checkout does not match GITHUB_SHA"),
+        )
+        for event_name, event_ref, checkout_head, expected in rejected:
+            with self.subTest(event=event_name, ref=event_ref, checkout=checkout_head):
+                result, output = self._run_step(
+                    "Admit current-main deploy event",
+                    event_name=event_name,
+                    event_ref=event_ref,
+                    checkout_head=checkout_head,
+                )
+                self.assertNotEqual(result.returncode, 0)
+                self.assertEqual(output, "")
+                self.assertIn(expected, result.stdout + result.stderr)
+
+        checkout = self.workflow.index("      - uses: actions/checkout@v5")
+        admission = self.workflow.index("      - name: Admit current-main deploy event")
+        setup = self.workflow.index("      - name: Setup Hugo")
+        self.assertLess(checkout, admission)
+        self.assertLess(admission, setup)
+
+    def test_existing_validation_and_concurrency_order_is_preserved(self) -> None:
+        expected_order = (
+            "      - uses: actions/checkout@v5",
+            "      - name: Admit current-main deploy event",
+            "      - name: Setup Hugo",
+            "      - name: Validate Hugo templates",
+            "      - name: Validate portal CSS contract",
+            "      - name: Validate critical pipeline script permissions",
+            "      - name: Validate frontmatter YAML syntax",
+            "      - name: Generate canonical pipeline status",
+            "      - name: Build",
+            "      - name: Validate build",
+            "      - name: Check Cloudflare Pages file budget",
+            "      - name: Validate public surface",
+            "      - name: Verify deployment checkout is current",
+            "      - name: Deploy to Cloudflare Pages",
+            "      - name: Check internal links",
+        )
+        positions = [self.workflow.index(step) for step in expected_order]
+        self.assertEqual(positions, sorted(positions))
+        for expected in (
+            'HUGO_VERSION="0.147.0"',
+            "sha256sum --check --strict",
+            "hugo --minify --cleanDestinationDir",
+            "python3 pipeline/ci_validate.py --skip templates",
+            "python3 scripts/check_public_file_count.py --public-dir public --limit 20000 --min-headroom 1000",
+            "python3 scripts/validate_public_surface.py --public-dir public",
+            "python3 pipeline/check_links.py --public-dir public",
+            "group: cloudflare-pages-production",
+            "queue: max",
+            "cancel-in-progress: false",
+        ):
+            with self.subTest(expected=expected):
+                self.assertIn(expected, self.workflow)
+
+    def test_freshness_fetch_and_resolution_fail_closed(self) -> None:
+        cases = (
+            ("fail", "ok", "Unable to fetch refs/heads/main"),
+            ("ok", "fail", "Unable to resolve fetched origin/main"),
+            ("ok", "empty", "did not resolve to exactly one commit"),
+            ("ok", "ambiguous", "did not resolve to exactly one commit"),
+        )
+        for fetch_mode, resolve_mode, expected in cases:
+            with self.subTest(fetch=fetch_mode, resolve=resolve_mode):
+                result, output = self._run_step(
+                    "Verify deployment checkout is current",
+                    fetch_mode=fetch_mode,
+                    resolve_mode=resolve_mode,
+                )
+                self.assertNotEqual(result.returncode, 0)
+                self.assertEqual(output, "")
+                self.assertIn(expected, result.stdout + result.stderr)
+
+        result, output = self._run_step(
+            "Verify deployment checkout is current",
+            event_name="schedule",
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(output, "")
+        self.assertIn("Unsupported deploy event", result.stdout + result.stderr)
+
+    def test_stale_manual_fails_stale_push_skips_and_exact_main_enables(self) -> None:
+        result, output = self._run_step(
+            "Verify deployment checkout is current",
+            event_name="workflow_dispatch",
+            remote_main="newer-main",
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(output, "")
+        self.assertIn("Stale manual deployment rejected", result.stdout + result.stderr)
+
+        result, output = self._run_step(
+            "Verify deployment checkout is current",
+            event_name="push",
+            remote_main="newer-main",
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertEqual(output, "current=false\n")
+        self.assertIn("Superseded deployment skipped", result.stdout + result.stderr)
+
+        for event_name in ("push", "workflow_dispatch"):
+            with self.subTest(event=event_name):
+                result, output = self._run_step(
+                    "Verify deployment checkout is current",
+                    event_name=event_name,
+                )
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertEqual(output, "current=true\n")
+
+    def test_fresh_fetch_directly_controls_the_following_cloudflare_step(self) -> None:
+        verify = self.workflow.index("      - name: Verify deployment checkout is current")
+        deploy = self.workflow.index("      - name: Deploy to Cloudflare Pages")
+        next_step = self.workflow.index("\n      - name:", verify + 1) + 1
+        self.assertEqual(next_step, deploy)
+        verify_step = self.workflow[verify:deploy]
+        self.assertIn(
+            'git fetch --no-tags --force origin "refs/heads/main:${REMOTE_REF}"',
+            verify_step,
+        )
+        self.assertIn(
+            'git rev-parse --verify --quiet "${REMOTE_REF}^{commit}"',
+            verify_step,
+        )
+        link_check = self.workflow.index("\n      - name: Check internal links", deploy)
+        deploy_step = self.workflow[deploy:link_check]
+        self.assertIn("steps.deploy_head.outputs.current == 'true'", deploy_step)
+        self.assertIn("uses: cloudflare/wrangler-action@v4", deploy_step)
+
+
 class PagesDeployStatusContractTests(unittest.TestCase):
     def _deploy_workflows(self) -> list[tuple[Path, str]]:
         workflows = []
@@ -501,6 +763,12 @@ class PagesDeployStatusContractTests(unittest.TestCase):
             git() {
               case "$*" in
                 "rev-parse HEAD") printf '%s\\n' "$TEST_CHECKOUT_HEAD" ;;
+                "fetch --no-tags --force origin refs/heads/main:refs/remotes/origin/deploy-main")
+                  return 0
+                  ;;
+                "rev-parse --verify --quiet refs/remotes/origin/deploy-main^{commit}")
+                  printf '%s\\n' "$TEST_REMOTE_MAIN"
+                  ;;
                 "ls-remote origin refs/heads/main")
                   printf '%s\\trefs/heads/main\\n' "$TEST_REMOTE_MAIN"
                   ;;
@@ -519,6 +787,7 @@ class PagesDeployStatusContractTests(unittest.TestCase):
                 env = os.environ.copy()
                 env.update(
                     {
+                        "GITHUB_EVENT_NAME": "push",
                         "GITHUB_OUTPUT": str(output),
                         "TEST_CHECKOUT_HEAD": "older-checkout",
                         "TEST_REMOTE_MAIN": "newer-main",

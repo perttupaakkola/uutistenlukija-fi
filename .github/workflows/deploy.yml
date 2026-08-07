@@ -17,6 +17,10 @@ on:
       - ".github/workflows/daily-kooste.yml"
       - ".github/workflows/deploy-failure-alert.yml"
       - "docs/actions-pipeline-migration.md"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
 
 concurrency:
   group: cloudflare-pages-production
@@ -31,6 +35,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - name: Admit current-main deploy event
+        run: |
+          set -euo pipefail
+          case "${GITHUB_EVENT_NAME:-}" in
+            push|workflow_dispatch) ;;
+            *)
+              echo "::error title=Deploy admission failed::Unsupported deploy event ${GITHUB_EVENT_NAME:-<unset>}"
+              exit 1
+              ;;
+          esac
+          if [ "${GITHUB_REF:-}" != "refs/heads/main" ]; then
+            echo "::error title=Deploy admission failed::Deployment must run from refs/heads/main; got ${GITHUB_REF:-<unset>}"
+            exit 1
+          fi
+          CHECKOUT_HEAD="$(git rev-parse HEAD)"
+          if [ "$CHECKOUT_HEAD" != "${GITHUB_SHA:-}" ]; then
+            echo "::error title=Deploy admission failed::Checkout does not match GITHUB_SHA; checkout=$CHECKOUT_HEAD event_sha=${GITHUB_SHA:-<unset>}"
+            exit 1
+          fi
 
       - name: Setup Hugo
         run: |
@@ -77,13 +103,33 @@ jobs:
       - name: Verify deployment checkout is current
         id: deploy_head
         run: |
+          set -euo pipefail
+          case "${GITHUB_EVENT_NAME:-}" in
+            push|workflow_dispatch) ;;
+            *)
+              echo "::error title=Deployment freshness check failed::Unsupported deploy event ${GITHUB_EVENT_NAME:-<unset>}"
+              exit 1
+              ;;
+          esac
           CHECKOUT_HEAD="$(git rev-parse HEAD)"
-          REMOTE_MAIN="$(git ls-remote origin refs/heads/main | awk '{print $1}')"
-          if [ -z "$REMOTE_MAIN" ]; then
-            echo "::error title=Deployment freshness check failed::Unable to resolve origin/main"
+          REMOTE_REF="refs/remotes/origin/deploy-main"
+          if ! git fetch --no-tags --force origin "refs/heads/main:${REMOTE_REF}"; then
+            echo "::error title=Deployment freshness check failed::Unable to fetch refs/heads/main"
+            exit 1
+          fi
+          if ! REMOTE_MAIN="$(git rev-parse --verify --quiet "${REMOTE_REF}^{commit}")"; then
+            echo "::error title=Deployment freshness check failed::Unable to resolve fetched origin/main"
+            exit 1
+          fi
+          if [ -z "$REMOTE_MAIN" ] || [ "$(printf '%s\n' "$REMOTE_MAIN" | wc -l)" -ne 1 ]; then
+            echo "::error title=Deployment freshness check failed::Fetched origin/main did not resolve to exactly one commit"
             exit 1
           fi
           if [ "$CHECKOUT_HEAD" != "$REMOTE_MAIN" ]; then
+            if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
+              echo "::error title=Stale manual deployment rejected::checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN"
+              exit 1
+            fi
             echo "current=false" >> "$GITHUB_OUTPUT"
             echo "::notice title=Superseded deployment skipped::checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN"
             exit 0
