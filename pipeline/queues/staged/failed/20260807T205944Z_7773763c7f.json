@@ -107,5 +107,22 @@
     "_guessed_category": "Kotimaa",
     "research": "[Lähde: Yle Uutiset | URL: https://yle.fi/a/74-20239979?origin=rss]\nEspanja on ilmoittanut aloittavansa rajatarkastukset Italiasta saapuville matkustajille.\n\nRajatarkastuksia tehdään Italiasta saapuvien lentokoneiden ja laivojen matkustajille 8.8.–7.9. välisenä aikana. Tarkastuksissa tarkistetaan matkustajien matkustusasiakirjat ja kansalaisuudet.\n\nKyseessä on vastatoimi sille, että Italia ilmoitti, ettei se peru kuukauden mittaista keskeytystä Schengenin vapaan liikkuvuuden sopimukseen.\n\nItalia ilmoitti heinäkuun lopussa keskeyttävänsä Schengen-sopimuksen soveltamisen Espanjan kanssa sen jälkeen, kun kymmenettuhannet siirtolaiset pyrkivät Espanjalle kuuluvaan Ceutaan Pohjois-Afrikassa. Italia on sulkenut meri- ja lentoliikenteen maahantulopisteitä ja tehostanut maarajojen valvontaa.\n\nEspanja vaati, että Italia luopuu Schengen-sopimuksen keskeyttämisestä sunnuntaihin mennessä. Se ei aluksi tarkentanut, mitä sen vastatoimet olisivat.\n\nItalian hallitus ilmoitti kuitenkin, ettei se aio muuttaa päätöstään ennen ensi viikon lauantaita. Italian hallituksen mukaan Espanjan viranomaiset odottavat tuolloin lisää Ceutaan pyrkiviä siirtolaisia.\n\nMuokkaus 7.8.2026 kello 23.21: Juttuun lisättiin rajatarkastusten voimassaoloaika.",
     "research_source": "multi"
+  },
+  "failed_at": "2026-08-07T21:03:47.168455+00:00",
+  "failure": "Monica writer command failed: [state/agent-db] slow OpenClaw agent database open\n[state/agent-db] slow OpenClaw agent database open\n[state/agent-db] slow OpenClaw agent database open\n[state/agent-db] slow OpenClaw agent database open\n[agent/embedded] embedded run failover decision: runId=9f1a6acb-4238-4eb9-8eda-012a29d7b751 stage=prompt decision=surface_error reason=rate_limit from=openai/gpt-5.6-sol profile=sha256:19a76843f0c7 rawError=You've reached your Codex subscription usage limit. Next reset in 7 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured mode…\n[diagnostic] lane task error: lane=main durationMs=14930 error=\"Error: You've reached your Codex subscription usage limit. Next reset in 7 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider.\"\n[diagnostic] lane task error: lane=session:agent:monica:explicit:monica-pipeline-ec556232-9ec3-4c74-9aaf-14a8fa7944a1 durationMs=14935 error=\"Error: You've reached your Codex subscription usage limit. Next reset in 7 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai/gpt-5.6-sol candidate=openai/gpt-5.6-sol reason=rate_limit next=none detail=You've reached your Codex subscription usage limit. Next reset in 7 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider.\nFailoverError: You've reached your Codex subscription usage limit. Next reset in 7 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider. | You've reached your Codex subscription usage limit. Next reset in 7 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider.",
+  "raw_response": "",
+  "writer_failure_feedback": {
+    "packet_id": "20260807T205944Z_7773763c7f",
+    "category": "Kotimaa",
+    "selected_source_words": 131,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.77,
+    "final_word_count": 0,
+    "issues": [],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_runtime",
+    "fail_closed": true,
+    "title": "Espanja aloittaa vastatoimena rajatarkastukset Italialle"
   }
 }
