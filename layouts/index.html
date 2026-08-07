@@ -39,7 +39,7 @@
       {{ end }}
       <div class="portal-lead__body">
         <span class="portal-kicker">{{ $leadCat }}</span>
-        <span class="portal-lead__time">Julkaistu {{ partial "relative-date.html" $lead }}</span>
+        <a class="portal-lead__time" href="{{ $lead.RelPermalink }}">Uusin juttu · julkaistu {{ partial "relative-date.html" $lead }}</a>
         <h2 id="front-lead-title"><a href="{{ $lead.RelPermalink }}">{{ $lead.Title }}</a></h2>
         {{ with $lead.Params.description }}<p>{{ . | truncate 185 }}</p>{{ else }}<p>{{ $lead.Summary | truncate 185 }}</p>{{ end }}
         <div class="portal-meta-row">

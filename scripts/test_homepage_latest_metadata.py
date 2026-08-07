@@ -95,10 +95,20 @@ class HomepageLatestMetadataTest(unittest.TestCase):
         self.assertIn("Newest fallback lead", lead.group(1))
         self.assertNotIn("Older visual story", lead.group(1))
         self.assertNotIn("portal-lead__image", lead.group(1))
-        self.assertRegex(
+        freshness_cue = re.search(
+            r'<a class="portal-lead__time" href="([^"]+)">\s*'
+            r'Uusin juttu\s*·\s*julkaistu\s+'
+            r'<time\s+datetime="2020-01-31T12:00:00(?:Z|\+00:00)">',
             lead.group(1),
-            r'<span class="portal-lead__time">\s*Julkaistu\s+<time\s+datetime=',
         )
+        self.assertIsNotNone(freshness_cue, "newest-story freshness cue missing")
+        headline = re.search(
+            r'<h2 id="front-lead-title"><a href="([^"]+)">'
+            r'Newest fallback lead</a></h2>',
+            lead.group(1),
+        )
+        self.assertIsNotNone(headline, "newest-story headline link missing")
+        self.assertEqual(freshness_cue.group(1), headline.group(1))
 
         teasers = re.search(
             r'<div class="portal-center-list".*?</div>\s*</div>',
