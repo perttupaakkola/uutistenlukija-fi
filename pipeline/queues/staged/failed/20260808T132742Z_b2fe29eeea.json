@@ -215,5 +215,32 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20212869/64-3-306552"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-08T13:35:54.902158+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260808T132742Z_b2fe29eeea",
+    "category": "Talous",
+    "selected_source_words": 271,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.9,
+    "quality_total": 40,
+    "quality_normalized": 7.86,
+    "quality_reasons": [
+      "length under target (261 words)",
+      "missing: image",
+      "source_confidence_denial_context_missing"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_thin_source",
+    "fail_closed": true,
+    "source_backed": false,
+    "article_words": 261,
+    "title": "Iran ja Oman lähellä sopua Hormuzinsalmen uudesta laivareitistä"
+  },
+  "failure": "quality_gate_rejected: length under target (261 words); missing: image; source_confidence_denial_context_missing"
 }
