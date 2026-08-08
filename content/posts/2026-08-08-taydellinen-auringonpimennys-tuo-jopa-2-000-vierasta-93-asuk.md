@@ -48,7 +48,6 @@ source_domain: "theguardian.com"
 source_attributions:
   - name: "The Guardian World"
     url: "https://theguardian.com/world/2026/aug/08/spanish-mountain-village-braces-for-astrotourists-lured-by-total-solar-eclipse"
-briefing: true
 draft: false
 ---
 
