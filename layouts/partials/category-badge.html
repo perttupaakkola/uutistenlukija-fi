@@ -21,17 +21,18 @@
     <span class="category-naked" style="color: {{ $color }};">{{ upper $category }}</span>
     {{- end -}}
   {{- else -}}
+    {{- $badgeColor := cond (eq $slug "kulttuuri") "#9a5200" $color -}}
     {{- $class := printf "category-label category-label--badge category-label--%s" $slug -}}
     {{- if $link -}}
     <a
       href="/categories/{{ $slug }}/"
       class="{{ $class }}"
-      style="background-color: {{ $color }}; border-color: {{ $color }};"
+      style="background-color: {{ $badgeColor }}; border-color: {{ $badgeColor }};"
     >{{ $category }}</a>
     {{- else -}}
     <span
       class="{{ $class }}"
-      style="background-color: {{ $color }}; border-color: {{ $color }};"
+      style="background-color: {{ $badgeColor }}; border-color: {{ $badgeColor }};"
     >{{ $category }}</span>
     {{- end -}}
   {{- end -}}
