@@ -54,7 +54,6 @@ source_attributions:
     url: "https://livemint.com/news/us-news/who-is-todd-blanche-trump-s-ex-personal-lawyer-in-stormy-daniels-hush-money-case-nominated-to-replace-pam-bondi-11780968256991.html"
   - name: "New York Post"
     url: "https://nypost.com/2026/08/07/us-news/sen-bill-cassidy-says-hell-vote-for-todd-blanche-likely-securing-ag-confirmation"
-briefing: true
 draft: false
 ---
 
