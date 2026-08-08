@@ -50,7 +50,6 @@ source_domain: "theguardian.com"
 source_attributions:
   - name: "The Guardian World"
     url: "https://theguardian.com/world/ng-interactive/2026/aug/08/trump-iran-war-criticism-groundhog-day"
-briefing: true
 draft: false
 ---
 
