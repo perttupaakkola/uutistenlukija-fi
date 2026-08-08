@@ -52,7 +52,6 @@ source_attributions:
     url: "https://bbc.co.uk/sport/football/articles/c70gn3w5ek5o?at_medium=RSS&at_campaign=rss"
   - name: "WPLG Local 10"
     url: "https://local10.com/sports/2026/08/08/jorge-messi-lionel-messis-father-dies-at-68-reports-say"
-briefing: true
 draft: false
 ---
 
