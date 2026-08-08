@@ -827,6 +827,82 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
         run_end = self.workflow.index("\n      - name:", run_start)
         return textwrap.dedent(self.workflow[run_start:run_end])
 
+    def _gate_run_script(self) -> str:
+        step = self.workflow.index(
+            "      - name: Gate automated runs and admit current main"
+        )
+        run_header = "        run: |\n"
+        run_start = self.workflow.index(run_header, step) + len(run_header)
+        run_end = self.workflow.index("\n      - name:", run_start)
+        return textwrap.dedent(self.workflow[run_start:run_end])
+
+    def _run_gate(
+        self,
+        *,
+        event_name: str = "schedule",
+        marker_present: bool = True,
+        github_sha: str = "current-main",
+        checkout_head: str = "current-main",
+        remote_main: str = "current-main",
+        fetch_mode: str = "ok",
+        resolve_mode: str = "ok",
+    ) -> tuple[subprocess.CompletedProcess, str]:
+        git_stub = textwrap.dedent(
+            """\
+            git() {
+              case "$*" in
+                "rev-parse HEAD") printf '%s\\n' "$TEST_CHECKOUT_HEAD" ;;
+                "fetch --no-tags --force origin refs/heads/main:refs/remotes/origin/staged-publish-main")
+                  if [ "${TEST_FETCH_MODE:-ok}" = "fail" ]; then
+                    return 42
+                  fi
+                  ;;
+                "rev-parse --verify --quiet refs/remotes/origin/staged-publish-main^{commit}")
+                  case "${TEST_RESOLVE_MODE:-ok}" in
+                    fail) return 43 ;;
+                    empty) return 0 ;;
+                    ambiguous)
+                      printf '%s\\n%s\\n' "$TEST_REMOTE_MAIN" "$TEST_REMOTE_OTHER"
+                      ;;
+                    *) printf '%s\\n' "$TEST_REMOTE_MAIN" ;;
+                  esac
+                  ;;
+                *) command git "$@" ;;
+              esac
+            }
+            """
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            if marker_present:
+                marker = root / "pipeline/actions-publish.enabled"
+                marker.parent.mkdir(parents=True)
+                marker.touch()
+            output = root / "github-output"
+            env = os.environ.copy()
+            env.update(
+                {
+                    "GITHUB_EVENT_NAME": event_name,
+                    "GITHUB_SHA": github_sha,
+                    "GITHUB_OUTPUT": str(output),
+                    "TEST_CHECKOUT_HEAD": checkout_head,
+                    "TEST_REMOTE_MAIN": remote_main,
+                    "TEST_REMOTE_OTHER": "other-main",
+                    "TEST_FETCH_MODE": fetch_mode,
+                    "TEST_RESOLVE_MODE": resolve_mode,
+                }
+            )
+            result = subprocess.run(
+                ["bash", "-c", git_stub + self._gate_run_script()],
+                cwd=root,
+                env=env,
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            actual_output = output.read_text(encoding="utf-8") if output.exists() else ""
+        return result, actual_output
+
     def test_runway_summary_uses_the_canonical_status_producer(self) -> None:
         publish = self.workflow.index("- name: Publish staged outbox packets")
         summary = self.workflow.index("- name: Summarize staged queue runway")
@@ -843,7 +919,7 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
         self.assertIn('"pipeline/queues/staged/outbox/**"', trigger_block)
         self.assertNotIn('"pipeline/queues/staged/ready/**"', trigger_block)
         self.assertIn(
-            'github.event_name }}" != "workflow_dispatch" ] && '
+            '"$GITHUB_EVENT_NAME" != "workflow_dispatch" ] && '
             "[ ! -f pipeline/actions-publish.enabled ]",
             self.workflow,
         )
@@ -864,6 +940,77 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
         )
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertIn("--max-articles 1 --git-push", result.stdout)
+
+    def test_disabled_schedule_skips_without_remote_admission(self) -> None:
+        result, output = self._run_gate(
+            marker_present=False,
+            fetch_mode="fail",
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertEqual(output, "enabled=false\n")
+        self.assertIn("Cutover marker", result.stdout)
+        self.assertNotIn("Unable to fetch", result.stdout + result.stderr)
+
+    def test_exact_current_main_is_admitted_for_every_supported_event(self) -> None:
+        for event_name in ("push", "schedule", "workflow_dispatch"):
+            with self.subTest(event=event_name):
+                result, output = self._run_gate(
+                    event_name=event_name,
+                    marker_present=event_name != "workflow_dispatch",
+                )
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertEqual(output, "enabled=true\n")
+
+        gate = self.workflow.index(
+            "      - name: Gate automated runs and admit current main"
+        )
+        setup = self.workflow.index("      - name: Setup Hugo")
+        publish = self.workflow.index("      - name: Publish staged outbox packets")
+        self.assertLess(gate, setup)
+        self.assertLess(setup, publish)
+
+    def test_superseded_automatic_runs_skip_but_stale_manual_fails(self) -> None:
+        for event_name in ("push", "schedule"):
+            with self.subTest(event=event_name):
+                result, output = self._run_gate(
+                    event_name=event_name,
+                    remote_main="newer-main",
+                )
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertEqual(output, "enabled=false\n")
+                self.assertIn("Superseded staged publish skipped", result.stdout)
+
+        result, output = self._run_gate(
+            event_name="workflow_dispatch",
+            marker_present=False,
+            remote_main="newer-main",
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(output, "")
+        self.assertIn("Stale manual staged publish rejected", result.stdout)
+
+    def test_admission_failures_do_not_enable_publishing(self) -> None:
+        cases = (
+            ("different-checkout", "ok", "ok", "Checkout does not match GITHUB_SHA"),
+            ("current-main", "fail", "ok", "Unable to fetch refs/heads/main"),
+            ("current-main", "ok", "fail", "did not resolve to exactly one commit"),
+            ("current-main", "ok", "empty", "did not resolve to exactly one commit"),
+            ("current-main", "ok", "ambiguous", "did not resolve to exactly one commit"),
+        )
+        for checkout_head, fetch_mode, resolve_mode, expected in cases:
+            with self.subTest(
+                checkout=checkout_head,
+                fetch=fetch_mode,
+                resolve=resolve_mode,
+            ):
+                result, output = self._run_gate(
+                    checkout_head=checkout_head,
+                    fetch_mode=fetch_mode,
+                    resolve_mode=resolve_mode,
+                )
+                self.assertNotEqual(result.returncode, 0)
+                self.assertEqual(output, "")
+                self.assertIn(expected, result.stdout + result.stderr)
 
     def test_runway_cap_is_enforced_for_manual_actions_runs(self) -> None:
         self.assertIn('default: "3"', self.workflow)

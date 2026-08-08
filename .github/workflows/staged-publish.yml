@@ -62,15 +62,51 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Gate automated runs on cutover marker
+      - name: Gate automated runs and admit current main
         id: gate
         run: |
-          if [ "${{ github.event_name }}" != "workflow_dispatch" ] && [ ! -f pipeline/actions-publish.enabled ]; then
+          if [ "$GITHUB_EVENT_NAME" != "workflow_dispatch" ] && [ ! -f pipeline/actions-publish.enabled ]; then
             echo "enabled=false" >> "$GITHUB_OUTPUT"
             echo "Cutover marker pipeline/actions-publish.enabled not present; skipping automated run."
-          else
-            echo "enabled=true" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+
+          CHECKOUT_HEAD="$(git rev-parse HEAD)"
+          if [ "$CHECKOUT_HEAD" != "$GITHUB_SHA" ]; then
+            echo "::error title=Staged publish admission failed::Checkout does not match GITHUB_SHA"
+            exit 1
+          fi
+
+          REMOTE_REF="refs/remotes/origin/staged-publish-main"
+          if ! git fetch --no-tags --force origin "refs/heads/main:${REMOTE_REF}"; then
+            echo "::error title=Staged publish admission failed::Unable to fetch refs/heads/main"
+            exit 1
+          fi
+          REMOTE_MAIN="$(git rev-parse --verify --quiet "${REMOTE_REF}^{commit}")"
+          if [ "$(printf '%s\n' "$REMOTE_MAIN" | wc -w)" -ne 1 ]; then
+            echo "::error title=Staged publish admission failed::Fetched origin/main did not resolve to exactly one commit"
+            exit 1
+          fi
+
+          if [ "$CHECKOUT_HEAD" != "$REMOTE_MAIN" ]; then
+            case "$GITHUB_EVENT_NAME" in
+              push|schedule)
+                echo "enabled=false" >> "$GITHUB_OUTPUT"
+                echo "::notice title=Superseded staged publish skipped::checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN"
+                exit 0
+                ;;
+              workflow_dispatch)
+                echo "::error title=Stale manual staged publish rejected::checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN"
+                exit 1
+                ;;
+              *)
+                echo "::error title=Staged publish admission failed::Unsupported event $GITHUB_EVENT_NAME"
+                exit 1
+                ;;
+            esac
+          fi
+
+          echo "enabled=true" >> "$GITHUB_OUTPUT"
 
       - name: Setup Hugo
         if: steps.gate.outputs.enabled == 'true'
