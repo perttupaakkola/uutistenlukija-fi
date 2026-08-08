@@ -120,5 +120,22 @@
     "_guessed_category": "Kotimaa",
     "research": "[Lähde: Yle Uutiset | URL: https://yle.fi/a/74-20239981?origin=rss]\nKolumbian uusi presidentti Abelardo de la Espriella on vannonut virkavalansa.\n\nVirkaanastujaiset järjestettiin poikkeuksellisesti Calin kaupungissa, jonka alueella liikkuu laittomia aseistettuja ryhmiä. Kaupungin valintaa on pidetty merkkinä siitä, että uusi presidentti haluaa kohdistaa huomiotaan juuri näille ongelma-alueille.\n\nLiikemiehenä tunnettu oikeistolainen de la Espriella ei ole aiemmmin toiminut poliittisessa virassa. Hän on linjannut, että Kolumbian huumeita välittävien aseellisten ryhmien kanssa ei enää neuvotella vaan ne torjutaan rautaisella otteella.\n\nVirkaanastujaisten vieraiden joukossa olivat Kolumbian naapurimaiden presidenttien lisäksi mm. Espanjan kuningas Felipe VI, Yhdysvaltain virkaa tekevä oikeusministeri Todd Blanche ja Fifan puheenjohtaja Gianni Infantino.\n\nYhdysvaltain presidentti Donald Trump ei ollut tilaisuudessa läsnä. Hän tuki vaalikampanjan aikana de la Espriellan valintaa presidentiksi.\n\nMyös väistyvä presidentti, vasemmistolainen Gustavo Petro jätti virkaanastujaiset väliin. Hän hävisi vaalit kesäkuussa niukasti ja on kehottanut kansalaisia valmistautumaan yleislakkoon, jos häntä yritetään vangita.\n\nCalin kaduilla järjestettiin useita uutta presidenttiä vastustavia mielenosoituksia virkaanastujaisten aikana.",
     "research_source": "multi"
+  },
+  "failed_at": "2026-08-08T00:03:42.198397+00:00",
+  "failure": "Monica writer command failed: [state/agent-db] slow OpenClaw agent database open\n[state/agent-db] slow OpenClaw agent database open\n[state/agent-db] slow OpenClaw agent database open\n[agent/embedded] embedded run failover decision: runId=34877268-424c-43bc-be8e-d8755fdcc754 stage=prompt decision=surface_error reason=rate_limit from=openai/gpt-5.6-sol profile=sha256:19a76843f0c7 rawError=You've reached your Codex subscription usage limit. Next reset in 4 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured mode…\n[diagnostic] lane task error: lane=main durationMs=12925 error=\"Error: You've reached your Codex subscription usage limit. Next reset in 4 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider.\"\n[diagnostic] lane task error: lane=session:agent:monica:explicit:monica-pipeline-4497e556-6061-4801-87ca-eddacab2a494 durationMs=12929 error=\"Error: You've reached your Codex subscription usage limit. Next reset in 4 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider.\"\n[model-fallback/decision] model fallback decision: decision=candidate_failed requested=openai/gpt-5.6-sol candidate=openai/gpt-5.6-sol reason=rate_limit next=none detail=You've reached your Codex subscription usage limit. Next reset in 4 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider.\nFailoverError: You've reached your Codex subscription usage limit. Next reset in 4 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider. | You've reached your Codex subscription usage limit. Next reset in 4 hours, Aug 8 at 3:45 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider.",
+  "raw_response": "",
+  "writer_failure_feedback": {
+    "packet_id": "20260807T235739Z_e35910eebd",
+    "category": "Kotimaa",
+    "selected_source_words": 151,
+    "selected_source_blocks": 3,
+    "story_confidence": 0.9,
+    "final_word_count": 0,
+    "issues": [],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_runtime",
+    "fail_closed": true,
+    "title": "Kolumbian uusi presidentti vannoi virkavalansa mielenosoitusten keskellä"
   }
 }
