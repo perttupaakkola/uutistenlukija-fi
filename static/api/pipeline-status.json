@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-08T14:21:52+00:00",
+  "generated_at": "2026-08-08T16:10:33+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,10 +12,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 6,
+    "published": 7,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-08T14:18:19.195441+00:00"
+    "last_published_ts": "2026-08-08T16:07:10.635471+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -28,6 +28,14 @@
   },
   "trending": [
     [
+      "aikana",
+      8
+    ],
+    [
+      "jorge",
+      8
+    ],
+    [
       "iranin",
       7
     ],
@@ -38,25 +46,17 @@
     [
       "venäjän",
       6
-    ],
-    [
-      "vuoksi",
-      6
-    ],
-    [
-      "yhdysvaltain",
-      6
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 18,
+    "outboxCount": 20,
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "worstCaseRemainingCycles": 6,
+    "worstCaseRemainingCycles": 7,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
     "reasons": [
