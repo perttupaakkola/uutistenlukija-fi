@@ -52,7 +52,6 @@ source_attributions:
     url: "https://yle.fi/a/74-20240021?origin=rss"
   - name: "Suomenmaa"
     url: "https://suomenmaa.fi/uutiset/eu-kehottaa-somejatteja-toimiin-disinformaation-suitsimiseksi-ceutan-tilanteen-jalkeen-2"
-briefing: true
 draft: false
 ---
 
