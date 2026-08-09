@@ -243,5 +243,32 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20239602?origin=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-09T16:18:35.894113+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260809T152400Z_2a6534ed46",
+    "category": "Ulkomaat",
+    "selected_source_words": 337,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 8.03,
+    "quality_reasons": [
+      "length under target (273 words)",
+      "missing: image",
+      "source_confidence_denial_context_missing"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 273,
+    "title": "Työn puute houkuttelee Fnideqin nuoria kohti Ceutaa – Ali, 21, luottaa koulutukseen"
+  },
+  "failure": "quality_gate_rejected: length under target (273 words); missing: image; source_confidence_denial_context_missing"
 }
