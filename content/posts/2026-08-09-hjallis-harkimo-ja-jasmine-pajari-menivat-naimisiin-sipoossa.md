@@ -50,7 +50,6 @@ source_attributions:
     url: "https://como.fi/uutiset/is-hjalliksen-ja-jasminen-haissa-suomalainen-supertahti"
   - name: "hymy.fi"
     url: "https://hymy.fi/uutiset/liikemies-hjallis-harkimo-ja-jasmine-pajari-ovat-menneet-naimisiin-lauantaina-8-elokuuta-2026"
-briefing: true
 draft: false
 ---
 
