@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Helsingin Haltialan tilan kakkubuffettiin muodostui sadan ihmisen jono jo ennen varsinaista aloitusaikaa. Rannekkeiden myynti lopetettiin 300 asiakkaan…"
+description: "Haltialan kakkubuffet keräsi 300 asiakasta. Tarjolla oli noin sata kakkua, ja suosio yllätti yrittäjät."
 summary: "Helsingin Haltialan tilan kakkubuffettiin muodostui sadan ihmisen jono jo ennen varsinaista aloitusaikaa. Rannekkeiden myynti lopetettiin 300 asiakkaan jälkeen, jotta noin sata tarjolla ollutta kakkua riittäisivät kaikille."
 summary_bullets:
   - "Kakkubuffetin jonossa oli varsinaiseen aloitusaikaan noin sata ihmistä."
