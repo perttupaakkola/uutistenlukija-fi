@@ -245,5 +245,33 @@
       }
     ],
     "source_url": "https://www.theguardian.com/world/live/2026/aug/09/iran-us-irgc-strait-of-hormuz-israel-netanyahu-trump-gaza-plan-latest-news-updates"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-09T13:47:50.945447+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260809T133318Z_85d9fc2535",
+    "category": "Ulkomaat",
+    "selected_source_words": 487,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 30,
+    "quality_normalized": 7.73,
+    "quality_reasons": [
+      "language borderline Finnish signal (10.0%)",
+      "length under target (294 words)",
+      "missing: image",
+      "source_confidence_denial_context_missing"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 294,
+    "title": "Netanyahu torjui Gazan 15-kohtaisen suunnitelman – vaatii Hamasin aseistariisuntaa ennen vetäytymistä"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (10.0%); length under target (294 words); missing: image; source_confidence_denial_context_missing"
 }
