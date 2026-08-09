@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "MobilePayn uusi ominaisuus mahdollistaa asiakkaan henkilöllisyyden vahvistamisen puhelinasiakaspalvelussa sovelluksen kautta ilman henkilötietojen kerto…"
+description: "Puhelinasiakaspalvelussa asiakas voi vahvistaa henkilöllisyytensä MobilePay-sovelluksessa ilman henkilötietojen kertomista ääneen."
 summary: "MobilePayn uusi ominaisuus mahdollistaa asiakkaan henkilöllisyyden vahvistamisen puhelinasiakaspalvelussa sovelluksen kautta ilman henkilötietojen kertomista ääneen."
 summary_bullets:
   - "MobilePayhin on tullut ominaisuus puhelinasiakaspalvelun digitaaliseen tunnistamiseen."
@@ -52,18 +52,16 @@ MobilePay-maksusovellukseen on tullut uusi ominaisuus, jonka avulla yritys voi t
 
 Uudistuksen tarkoituksena on helpottaa tilanteita, joissa asiakaspalvelun on varmistettava soittajan henkilöllisyys ennen asian käsittelyä. Käytännössä yritys voi lähettää asiakkaan puhelimeen MobilePay-ilmoituksen, jonka kautta asiakas tekee vahvistuksen sovelluksessa.
 
-Tunnistaminen voidaan tehdä jo ennen puheluun vastaamista tai puhelun aikana. Tämä antaa asiakaspalveluorganisaatiolle uuden tavan todentaa soittaja tilanteissa, joissa henkilöllisyyden varmistaminen on palvelun tai väärinkäytösten ehkäisemisen kannalta välttämätöntä.
+Tunnistaminen voidaan tehdä jo ennen puheluun vastaamista tai puhelun aikana. Tämä antaa asiakaspalvelulle uuden tavan vahvistaa soittajan henkilöllisyys puhelun yhteydessä.
 
 Muutos vähentää tarvetta kertoa henkilötietoja ääneen puhelun aikana. Se voi tehdä asioinnista sujuvampaa erityisesti silloin, kun asiakas ei halua lausua tunnistamiseen tarvittavia tietoja asiakaspalvelijalle puhelinkeskustelussa.
 
-## Yrityksille uusi tapa ehkäistä väärinkäytöksiä
+## Yritysedustajat kommentoivat uudistusta
 
-Digitaaliseen tunnistamiseen erikoistuneen Iduran Suomen maajohtaja Kari Lehtimäki sanoo tiedotteessa, että monille asiakaspalveluorganisaatioille on välttämätöntä todentaa puhelinpalveluun soittavat asiakkaat mahdollisten väärinkäytösten välttämiseksi. Hänen mukaansa MobilePay on kuluttajille valmiiksi tuttu ja arkisessa käytössä.
+Iduran Suomen maajohtaja Kari Lehtimäki sanoo tiedotteessa, että monissa puhelinpalveluissa soittajan henkilöllisyys on varmistettava. Hän perustelee MobilePay-vahvistusta sillä, ettei asiakkaan tarvitse kertoa henkilötietojaan ääneen.
 
-Lehtimäen mukaan tunnistautuminen MobilePayn avulla voi tuoda sekä miellyttävämmän että turvallisemman palvelukokemuksen, koska henkilötietoja ei tarvitse enää kertoa ääneen. Uudistus rakentuu siis sovelluksen kautta tehtävän vahvistuksen varaan eikä pelkän puhelinkeskustelussa annetun tiedon varaan.
+## Vahvistus edellyttää sovelluksen hyväksyntää
 
-## Turvallisuus perustuu puhelimeen ja tunnuksiin
-
-Vipps MobilePayn Suomen maajohtaja Perttu Kröger kuvaa tiedotteessa tunnistautumistapaa turvalliseksi. Hänen mukaansa rikolliset eivät voi väittää olevansa tietty MobilePay-käyttäjä ilman, että heillä olisi hallussaan sekä käyttäjän puhelin että käyttäjätunnukset.
+Vipps MobilePayn Suomen maajohtaja Perttu Kröger sanoo tiedotteessa, että vahvistus edellyttää käyttäjän puhelimen ja MobilePay-tunnusten hallintaa.
 
 Uudistus koskee erityisesti yrityksiä ja asiakaspalveluorganisaatioita, joiden täytyy varmistaa asiakkaan henkilöllisyys puhelinasioinnissa. Asiakkaan näkökulmasta muutos näkyy ilmoituksena MobilePay-sovelluksessa ja mahdollisuutena vahvistaa henkilöllisyys yhdellä painalluksella.
