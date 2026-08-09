@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-09T09:42:50+00:00",
+  "generated_at": "2026-08-09T11:00:23+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -15,7 +15,7 @@
     "published": 14,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-09T09:39:12.919281+00:00"
+    "last_published_ts": "2026-08-09T10:57:17.283688+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -29,7 +29,11 @@
   "trending": [
     [
       "jälkeen",
-      15
+      16
+    ],
+    [
+      "aikana",
+      13
     ],
     [
       "kertoi",
@@ -37,11 +41,7 @@
     ],
     [
       "kanssa",
-      13
-    ],
-    [
-      "aikana",
-      11
+      12
     ],
     [
       "lauantaina",
@@ -51,12 +51,12 @@
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 24,
+    "outboxCount": 25,
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "worstCaseRemainingCycles": 8,
+    "worstCaseRemainingCycles": 9,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
     "reasons": [
