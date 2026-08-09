@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-08T22:30:29+00:00",
+  "generated_at": "2026-08-09T05:41:37+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,10 +12,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 14,
+    "published": 15,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-08T22:28:30.750388+00:00"
+    "last_published_ts": "2026-08-09T05:38:02.087840+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -28,35 +28,35 @@
   },
   "trending": [
     [
+      "jälkeen",
+      13
+    ],
+    [
       "iranin",
       12
     ],
     [
-      "jälkeen",
+      "kertoi",
+      11
+    ],
+    [
+      "aikana",
       11
     ],
     [
       "kanssa",
       11
-    ],
-    [
-      "aikana",
-      10
-    ],
-    [
-      "trump",
-      9
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 20,
+    "outboxCount": 23,
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "worstCaseRemainingCycles": 7,
+    "worstCaseRemainingCycles": 8,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
     "reasons": [
