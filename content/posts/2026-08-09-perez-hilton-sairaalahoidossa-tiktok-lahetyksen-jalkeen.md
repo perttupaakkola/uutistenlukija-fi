@@ -50,7 +50,6 @@ source_attributions:
     url: "https://bbc.co.uk/news/articles/cg5lnqjz497o?at_medium=RSS&at_campaign=rss"
   - name: "Yahoo"
     url: "https://yahoo.com/entertainment/celebrity/articles/know-perez-hiltons-live-streamed-195327220.html"
-briefing: true
 draft: false
 ---
 
