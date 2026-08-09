@@ -1,0 +1,203 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-08-09T10:06:56.861875+00:00",
+  "digest": "eee1d8f1ee",
+  "packet": {
+    "packet_id": "20260809T100656Z_eee1d8f1ee",
+    "created_at": "2026-08-09T10:06:56Z",
+    "headline_seed": "Poliisilla ei ollut hälytystehtävää Tuusulan mopomiitissä",
+    "description_seed": "",
+    "link": "https://yle.fi/a/74-20240071?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20240071?origin=rss"
+    ],
+    "source_domains": [
+      "yle.fi"
+    ],
+    "selected_source": {
+      "name": "Yle Uutiset",
+      "url": "https://yle.fi/a/74-20240071?origin=rss",
+      "domain": "yle.fi"
+    },
+    "selected_source_provenance_error": "",
+    "category_hint": "Kotimaa",
+    "category": "Kotimaa",
+    "story_confidence": 0.57,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Poliisilla ei ollut hälytystehtävää Tuusulan mopomiitissä"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_url": "https://yle.fi/a/74-20240071?origin=rss",
+        "source_domain": "yle.fi",
+        "source_type": "research",
+        "text": "Itä-Uudenmaan poliisista kerrotaan Ylelle, ettei poliisilla ollut hälytystehtävää Tuusulan mopomiitissä. Poliisin mukaan eilen liikennettä oli partioimassa alueella 3-4 partiota, mutta tarkkaa tietoa ei ole kuinka moni partioista oli mopomiitissä. Helsingin poliisin viestinnästä sanotaan, että Tuusulassa lauantaina tapahtunut mopoilijan ojaan kiilaaminen on ”tietyllä tavalla iso tapaus”, mutta tietoa annetaan toistaiseksi hyvin niukasti. – Tässä on tosiaan se tilanne, että meillä on tavallaan kaksi puolta tässä, että on se poliisin toiminta, jonka osalta on aloitettu esitutkinta ja siinä toimii tutkinnanjohtajana syyttäjä. Ja sitten on tämä itse tapahtuma mopoilijan toiminnan osalta, jota tutkii Helsingin poliisilaitos, sanotan viestinnästä. Tuusulassa lauantaina pidetty mopomiitti päättyi rajuun tieltäsuistumiseen, kun poliisi ajoi takaa-ajotilanteessa mopoilijan ojaan. Tapahtumasta levinneet videot ovat herättäneet laajaa huomiota sosiaalisessa mediassa. Itä-Uudenmaan poliisista kerrotaan myös yleisön laittaneen sähköpostia asiaan liittyen. Poliisin mukaan viestejä on tullut asiaankuulumattomilta.",
+        "word_count": 131,
+        "source_identity": "https://yle.fi/a/74-20240071",
+        "keyword_overlap": 5,
+        "strong_overlap": 4
+      }
+    ],
+    "source_text": "Itä-Uudenmaan poliisista kerrotaan Ylelle, ettei poliisilla ollut hälytystehtävää Tuusulan mopomiitissä. Poliisin mukaan eilen liikennettä oli partioimassa alueella 3-4 partiota, mutta tarkkaa tietoa ei ole kuinka moni partioista oli mopomiitissä. Helsingin poliisin viestinnästä sanotaan, että Tuusulassa lauantaina tapahtunut mopoilijan ojaan kiilaaminen on ”tietyllä tavalla iso tapaus”, mutta tietoa annetaan toistaiseksi hyvin niukasti. – Tässä on tosiaan se tilanne, että meillä on tavallaan kaksi puolta tässä, että on se poliisin toiminta, jonka osalta on aloitettu esitutkinta ja siinä toimii tutkinnanjohtajana syyttäjä. Ja sitten on tämä itse tapahtuma mopoilijan toiminnan osalta, jota tutkii Helsingin poliisilaitos, sanotan viestinnästä. Tuusulassa lauantaina pidetty mopomiitti päättyi rajuun tieltäsuistumiseen, kun poliisi ajoi takaa-ajotilanteessa mopoilijan ojaan. Tapahtumasta levinneet videot ovat herättäneet laajaa huomiota sosiaalisessa mediassa. Itä-Uudenmaan poliisista kerrotaan myös yleisön laittaneen sähköpostia asiaan liittyen. Poliisin mukaan viestejä on tullut asiaankuulumattomilta.",
+    "source_diagnostics": {
+      "candidate_blocks": 1,
+      "candidate_source_words": 131,
+      "selected_blocks": 1,
+      "selected_source_words": 131,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle Uutiset"
+      ],
+      "selected_sources": [
+        "Yle Uutiset"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Poliisilla ei ollut hälytystehtävää Tuusulan mopomiitissä",
+      "description": "",
+      "category_hint": "",
+      "research_source": "multi"
+    },
+    "source_usage": [
+      {
+        "source_url": "https://yle.fi/a/74-20240071?origin=rss",
+        "used": true,
+        "dependent_claims": [
+          "Poliisilla ei ollut mopomiitissä hälytystehtävää.",
+          "Alueella partioi liikenteen parissa 3–4 partiota, mutta mopomiitissä olleiden partioiden tarkkaa määrää ei tiedetä.",
+          "Mopomiitti päättyi poliisin takaa-ajotilanteessa mopoilijan ojaan ajamiseen.",
+          "Poliisin toimintaa koskevaa esitutkintaa johtaa syyttäjä, ja Helsingin poliisilaitos tutkii erikseen mopoilijan toimintaa.",
+          "Poliisi on luonnehtinut tapausta tietyllä tavalla isoksi ja kertonut siitä toistaiseksi niukasti.",
+          "Tapahtumasta levinneet videot ovat herättäneet laajaa huomiota, ja Itä-Uudenmaan poliisi on saanut asiasta sähköpostia yleisöltä."
+        ]
+      }
+    ],
+    "source_usage_contract": "v1"
+  },
+  "original_article": {
+    "title": "Poliisilla ei ollut hälytystehtävää Tuusulan mopomiitissä",
+    "description": "",
+    "link": "https://yle.fi/a/74-20240071?origin=rss",
+    "published": "2026-08-09T12:59:23+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "fd3318022ec058bc0e0cce451082143a",
+    "_url_hash": "e65a62ae8336f126aeefa4d64fb09065791e534e973910352ad4593b6bbdc2a7",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle Uutiset | URL: https://yle.fi/a/74-20240071?origin=rss]\nItä-Uudenmaan poliisista kerrotaan Ylelle, ettei poliisilla ollut hälytystehtävää Tuusulan mopomiitissä.\n\nPoliisin mukaan eilen liikennettä oli partioimassa alueella 3-4 partiota, mutta tarkkaa tietoa ei ole kuinka moni partioista oli mopomiitissä.\n\nHelsingin poliisin viestinnästä sanotaan, että Tuusulassa lauantaina tapahtunut mopoilijan ojaan kiilaaminen on ”tietyllä tavalla iso tapaus”, mutta tietoa annetaan toistaiseksi hyvin niukasti.\n\n– Tässä on tosiaan se tilanne, että meillä on tavallaan kaksi puolta tässä, että on se poliisin toiminta, jonka osalta on aloitettu esitutkinta ja siinä toimii tutkinnanjohtajana syyttäjä. Ja sitten on tämä itse tapahtuma mopoilijan toiminnan osalta, jota tutkii Helsingin poliisilaitos, sanotan viestinnästä.\n\nTuusulassa lauantaina pidetty mopomiitti päättyi rajuun tieltäsuistumiseen, kun poliisi ajoi takaa-ajotilanteessa mopoilijan ojaan. Tapahtumasta levinneet videot ovat herättäneet laajaa huomiota sosiaalisessa mediassa.\n\nItä-Uudenmaan poliisista kerrotaan myös yleisön laittaneen sähköpostia asiaan liittyen.\n\nPoliisin mukaan viestejä on tullut asiaankuulumattomilta.",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-08-09T10:17:54.357717+00:00",
+  "payload": {
+    "packet_id": "20260809T100656Z_eee1d8f1ee",
+    "title": "Poliisilla ei ollut hälytystehtävää Tuusulan mopomiitissä",
+    "summary": "Tuusulan lauantainen mopomiitti päättyi mopoilijan tieltäsuistumiseen poliisin takaa-ajon aikana. Poliisin ja mopoilijan toimintaa tutkitaan erillisinä kokonaisuuksina.",
+    "content": "Tuusulan lauantainen mopomiitti ei ollut Itä-Uudenmaan poliisin mukaan hälytystehtävä, vaikka alueella liikkui useita poliisipartioita ja tapahtuma päättyi mopoilijan rajuun tieltäsuistumiseen takaa-ajon aikana. Poliisin toimintaa selvitetään nyt erillisessä esitutkinnassa, ja Helsingin poliisilaitos tutkii samanaikaisesti mopoilijan toimintaa.\n\n## Partioiden määrä mopomiitissä jäi epäselväksi\n\nItä-Uudenmaan poliisi kertoi Ylelle, että alueella partioi lauantaina liikenteen parissa 3–4 partiota. Tarkkaa tietoa siitä, kuinka moni niistä oli mopomiitissä, ei kuitenkaan ollut. Poliisin ilmoittama määrä koskee siis alueella liikkuneita partioita, eikä sen perusteella voi päätellä itse miitin poliisivahvuutta.\n\nPoliisin mukaan mopomiittiin ei liittynyt hälytystehtävää. Miitti päättyi kuitenkin Ylen tietojen mukaan rajuun tieltäsuistumiseen, kun poliisi ajoi takaa-ajotilanteessa mopoilijan ojaan. Saatavilla olevissa tiedoissa ei täsmennetä, miten takaa-ajo alkoi tai mitä juuri ennen suistumista tapahtui.\n\n## Poliisin toimintaa koskevaa tutkintaa johtaa syyttäjä\n\nHelsingin poliisin viestinnän mukaan tapausta käsitellään kahtena erillisenä tutkintakokonaisuutena. Poliisin omaa toimintaa koskeva esitutkinta on aloitettu, ja sen tutkinnanjohtajana toimii syyttäjä. Mopoilijan toimintaa tapahtuman aikana puolestaan tutkii Helsingin poliisilaitos.\n\nPoliisin viestinnässä korostettiin, että tapauksessa on kaksi puolta: poliisin toiminta ja mopoilijan toiminta. Ojaan ajamiseen liittyvää tapausta luonnehdittiin ”tietyllä tavalla isoksi”, mutta tietoja annetaan toistaiseksi niukasti. Tutkintojen alustavista havainnoista tai mahdollisista rikosnimikkeistä ei ole kerrottu.\n\n## Videot herättivät laajaa huomiota\n\nTapahtumasta levinneet videot ovat herättäneet laajaa huomiota sosiaalisessa mediassa. Videoiden perusteella käyty keskustelu ei kuitenkaan ratkaise sitä, miten poliisin tai mopoilijan toimintaa arvioidaan, sillä molemmat kokonaisuudet ovat erikseen tutkittavina.\n\nItä-Uudenmaan poliisi on saanut tapauksesta myös sähköpostia yleisöltä. Poliisin mukaan viestejä on tullut henkilöiltä, jotka eivät liity asiaan. Viestien määrää tai sisältöä ei ole tarkennettu, eikä poliisi ole kertonut, milloin tutkintojen etenemisestä annetaan lisää tietoa. Tapahtumien tarkempi kulku ja osapuolten toiminnan arviointi jäävät esitutkinnoissa selvitettäviksi.",
+    "category": "Kotimaa",
+    "tags": [
+      "Tuusula",
+      "poliisi",
+      "mopomiitti",
+      "esitutkinta"
+    ],
+    "summary_bullets": [
+      "Poliisilla ei ollut Tuusulan mopomiitissä hälytystehtävää.",
+      "Poliisin toimintaa koskevaa esitutkintaa johtaa syyttäjä.",
+      "Helsingin poliisilaitos tutkii erikseen mopoilijan toimintaa."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "confidence": 0.67,
+    "journalist_note": "Tiedot perustuvat poliisien viestinnästä saatuihin tietoihin. Tutkinnat ovat kesken, ja tapahtumien yksityiskohtainen kulku sekä mahdolliset rikosnimikkeet ovat vielä avoimia.",
+    "source_usage": [
+      {
+        "source_url": "https://yle.fi/a/74-20240071?origin=rss",
+        "used": true,
+        "dependent_claims": [
+          "Poliisilla ei ollut mopomiitissä hälytystehtävää.",
+          "Alueella partioi liikenteen parissa 3–4 partiota, mutta mopomiitissä olleiden partioiden tarkkaa määrää ei tiedetä.",
+          "Mopomiitti päättyi poliisin takaa-ajotilanteessa mopoilijan ojaan ajamiseen.",
+          "Poliisin toimintaa koskevaa esitutkintaa johtaa syyttäjä, ja Helsingin poliisilaitos tutkii erikseen mopoilijan toimintaa.",
+          "Poliisi on luonnehtinut tapausta tietyllä tavalla isoksi ja kertonut siitä toistaiseksi niukasti.",
+          "Tapahtumasta levinneet videot ovat herättäneet laajaa huomiota, ja Itä-Uudenmaan poliisi on saanut asiasta sähköpostia yleisöltä."
+        ]
+      }
+    ]
+  },
+  "raw_response": "[agents/tool-policy] tool policy removed 20 tool(s) via tools.allow: agents_list, ask_user, automations, computer, conversations_list, conversations_send, conversations_turn, create_goal, dashboard, gateway, get_goal, image, mobile_ui, nodes, sessions, sessions_search, transcripts, tts, update_goal, update_plan\n[agents/tool-policy] tool policy removed 1 tool(s) via sandbox tools.allow: message\n[agents/tool-policy] tool policy removed 21 tool(s) via tools.allow: agents_list, ask_user, automations, computer, conversations_list, conversations_send, conversations_turn, create_goal, dashboard, gateway, get_goal, heartbeat_respond, image, mobile_ui, nodes, sessions, sessions_search, transcripts, tts, update_goal, update_plan\n[agents/tool-policy] tool policy removed 1 tool(s) via sandbox tools.allow: message\n[agent/embedded] codex app-server context-engine projection decision\n[agent/embedded] codex app-server wrote context-engine thread binding\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=3e83e919-4cf7-4886-802a-a081bf89b028 sessionKey=agent:monica:explicit:monica-pipeline-c5093223-3cf7-4e03-bbbe-9cefeb84fc18 lane=context-engine-turn-maintenance:agent:monica:explicit:monica-pipeline-c5093223-3cf7-4e03-bbbe-9cefeb84fc18\n[agent/embedded] codex app-server one-shot cleanup retired shared client\n{\"packet_id\":\"20260809T100656Z_eee1d8f1ee\",\"title\":\"Poliisilla ei ollut hälytystehtävää Tuusulan mopomiitissä\",\"summary\":\"Tuusulan lauantainen mopomiitti päättyi mopoilijan tieltäsuistumiseen poliisin takaa-ajon aikana. Poliisin ja mopoilijan toimintaa tutkitaan erillisinä kokonaisuuksina.\",\"content\":\"Tuusulan lauantainen mopomiitti ei ollut Itä-Uudenmaan poliisin mukaan hälytystehtävä, vaikka alueella liikkui useita poliisipartioita ja tapahtuma päättyi mopoilijan rajuun tieltäsuistumiseen takaa-ajon aikana. Poliisin toimintaa selvitetään nyt erillisessä esitutkinnassa, ja Helsingin poliisilaitos tutkii samanaikaisesti mopoilijan toimintaa.\\n\\n## Partioiden määrä mopomiitissä jäi epäselväksi\\n\\nItä-Uudenmaan poliisi kertoi Ylelle, että alueella partioi lauantaina liikenteen parissa 3–4 partiota. Tarkkaa tietoa siitä, kuinka moni niistä oli mopomiitissä, ei kuitenkaan ollut. Poliisin ilmoittama määrä koskee siis alueella liikkuneita partioita, eikä sen perusteella voi päätellä itse miitin poliisivahvuutta.\\n\\nPoliisin mukaan mopomiittiin ei liittynyt hälytystehtävää. Miitti päättyi kuitenkin Ylen tietojen mukaan rajuun tieltäsuistumiseen, kun poliisi ajoi takaa-ajotilanteessa mopoilijan ojaan. Saatavilla olevissa tiedoissa ei täsmennetä, miten takaa-ajo alkoi tai mitä juuri ennen suistumista tapahtui.\\n\\n## Poliisin toimintaa koskevaa tutkintaa johtaa syyttäjä\\n\\nHelsingin poliisin viestinnän mukaan tapausta käsitellään kahtena erillisenä tutkintakokonaisuutena. Poliisin omaa toimintaa koskeva esitutkinta on aloitettu, ja sen tutkinnanjohtajana toimii syyttäjä. Mopoilijan toimintaa tapahtuman aikana puolestaan tutkii Helsingin poliisilaitos.\\n\\nPoliisin viestinnässä korostettiin, että tapauksessa on kaksi puolta: poliisin toiminta ja mopoilijan toiminta. Ojaan ajamiseen liittyvää tapausta luonnehdittiin ”tietyllä tavalla isoksi”, mutta tietoja annetaan toistaiseksi niukasti. Tutkintojen alustavista havainnoista tai mahdollisista rikosnimikkeistä ei ole kerrottu.\\n\\n## Videot herättivät laajaa huomiota\\n\\nTapahtumasta levinneet videot ovat herättäneet laajaa huomiota sosiaalisessa mediassa. Videoiden perusteella käyty keskustelu ei kuitenkaan ratkaise sitä, miten poliisin tai mopoilijan toimintaa arvioidaan, sillä molemmat kokonaisuudet ovat erikseen tutkittavina.\\n\\nItä-Uudenmaan poliisi on saanut tapauksesta myös sähköpostia yleisöltä. Poliisin mukaan viestejä on tullut henkilöiltä, jotka eivät liity asiaan. Viestien määrää tai sisältöä ei ole tarkennettu, eikä poliisi ole kertonut, milloin tutkintojen etenemisestä annetaan lisää tietoa. Tapahtumien tarkempi kulku ja osapuolten toiminnan arviointi jäävät esitutkinnoissa selvitettäviksi.\",\"category\":\"Kotimaa\",\"tags\":[\"Tuusula\",\"poliisi\",\"mopomiitti\",\"esitutkinta\"],\"summary_bullets\":[\"Poliisilla ei ollut Tuusulan mopomiitissä hälytystehtävää.\",\"Poliisin toimintaa koskevaa esitutkintaa johtaa syyttäjä.\",\"Helsingin poliisilaitos tutkii erikseen mopoilijan toimintaa.\"],\"content_type\":\"uutinen\",\"editorial_reviewed\":true,\"confidence\":0.67,\"journalist_note\":\"Tiedot perustuvat poliisien viestinnästä saatuihin tietoihin. Tutkinnat ovat kesken, ja tapahtumien yksityiskohtainen kulku sekä mahdolliset rikosnimikkeet ovat vielä avoimia.\",\"source_usage\":[{\"source_url\":\"https://yle.fi/a/74-20240071?origin=rss\",\"used\":true,\"dependent_claims\":[\"Poliisilla ei ollut mopomiitissä hälytystehtävää.\",\"Alueella partioi liikenteen parissa 3–4 partiota, mutta mopomiitissä olleiden partioiden tarkkaa määrää ei tiedetä.\",\"Mopomiitti päättyi poliisin takaa-ajotilanteessa mopoilijan ojaan ajamiseen.\",\"Poliisin toimintaa koskevaa esitutkintaa johtaa syyttäjä, ja Helsingin poliisilaitos tutkii erikseen mopoilijan toimintaa.\",\"Poliisi on luonnehtinut tapausta tietyllä tavalla isoksi ja kertonut siitä toistaiseksi niukasti.\",\"Tapahtumasta levinneet videot ovat herättäneet laajaa huomiota, ja Itä-Uudenmaan poliisi on saanut asiasta sähköpostia yleisöltä.\"]}]}\n[agents/agent-command] [agent] run b224b656-e124-461c-8063-35686ebdb023 ended with stopReason=stop",
+  "article": {
+    "title": "Poliisilla ei ollut hälytystehtävää Tuusulan mopomiitissä",
+    "description": "Tuusulan lauantainen mopomiitti päättyi mopoilijan tieltäsuistumiseen poliisin takaa-ajon aikana. Poliisin ja mopoilijan toimintaa tutkitaan erillisinä kokonaisuuksina.",
+    "link": "https://yle.fi/a/74-20240071?origin=rss",
+    "published": "2026-08-09T12:59:23+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "fd3318022ec058bc0e0cce451082143a",
+    "_url_hash": "e65a62ae8336f126aeefa4d64fb09065791e534e973910352ad4593b6bbdc2a7",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle Uutiset | URL: https://yle.fi/a/74-20240071?origin=rss]\nItä-Uudenmaan poliisista kerrotaan Ylelle, ettei poliisilla ollut hälytystehtävää Tuusulan mopomiitissä.\n\nPoliisin mukaan eilen liikennettä oli partioimassa alueella 3-4 partiota, mutta tarkkaa tietoa ei ole kuinka moni partioista oli mopomiitissä.\n\nHelsingin poliisin viestinnästä sanotaan, että Tuusulassa lauantaina tapahtunut mopoilijan ojaan kiilaaminen on ”tietyllä tavalla iso tapaus”, mutta tietoa annetaan toistaiseksi hyvin niukasti.\n\n– Tässä on tosiaan se tilanne, että meillä on tavallaan kaksi puolta tässä, että on se poliisin toiminta, jonka osalta on aloitettu esitutkinta ja siinä toimii tutkinnanjohtajana syyttäjä. Ja sitten on tämä itse tapahtuma mopoilijan toiminnan osalta, jota tutkii Helsingin poliisilaitos, sanotan viestinnästä.\n\nTuusulassa lauantaina pidetty mopomiitti päättyi rajuun tieltäsuistumiseen, kun poliisi ajoi takaa-ajotilanteessa mopoilijan ojaan. Tapahtumasta levinneet videot ovat herättäneet laajaa huomiota sosiaalisessa mediassa.\n\nItä-Uudenmaan poliisista kerrotaan myös yleisön laittaneen sähköpostia asiaan liittyen.\n\nPoliisin mukaan viestejä on tullut asiaankuulumattomilta.",
+    "research_source": "multi",
+    "summary": "Tuusulan lauantainen mopomiitti päättyi mopoilijan tieltäsuistumiseen poliisin takaa-ajon aikana. Poliisin ja mopoilijan toimintaa tutkitaan erillisinä kokonaisuuksina.",
+    "content": "Tuusulan lauantainen mopomiitti ei ollut Itä-Uudenmaan poliisin mukaan hälytystehtävä, vaikka alueella liikkui useita poliisipartioita ja tapahtuma päättyi mopoilijan rajuun tieltäsuistumiseen takaa-ajon aikana. Poliisin toimintaa selvitetään nyt erillisessä esitutkinnassa, ja Helsingin poliisilaitos tutkii samanaikaisesti mopoilijan toimintaa.\n\n## Partioiden määrä mopomiitissä jäi epäselväksi\n\nItä-Uudenmaan poliisi kertoi Ylelle, että alueella partioi lauantaina liikenteen parissa 3–4 partiota. Tarkkaa tietoa siitä, kuinka moni niistä oli mopomiitissä, ei kuitenkaan ollut. Poliisin ilmoittama määrä koskee siis alueella liikkuneita partioita, eikä sen perusteella voi päätellä itse miitin poliisivahvuutta.\n\nPoliisin mukaan mopomiittiin ei liittynyt hälytystehtävää. Miitti päättyi kuitenkin Ylen tietojen mukaan rajuun tieltäsuistumiseen, kun poliisi ajoi takaa-ajotilanteessa mopoilijan ojaan. Saatavilla olevissa tiedoissa ei täsmennetä, miten takaa-ajo alkoi tai mitä juuri ennen suistumista tapahtui.\n\n## Poliisin toimintaa koskevaa tutkintaa johtaa syyttäjä\n\nHelsingin poliisin viestinnän mukaan tapausta käsitellään kahtena erillisenä tutkintakokonaisuutena. Poliisin omaa toimintaa koskeva esitutkinta on aloitettu, ja sen tutkinnanjohtajana toimii syyttäjä. Mopoilijan toimintaa tapahtuman aikana puolestaan tutkii Helsingin poliisilaitos.\n\nPoliisin viestinnässä korostettiin, että tapauksessa on kaksi puolta: poliisin toiminta ja mopoilijan toiminta. Ojaan ajamiseen liittyvää tapausta luonnehdittiin ”tietyllä tavalla isoksi”, mutta tietoja annetaan toistaiseksi niukasti. Tutkintojen alustavista havainnoista tai mahdollisista rikosnimikkeistä ei ole kerrottu.\n\n## Videot herättivät laajaa huomiota\n\nTapahtumasta levinneet videot ovat herättäneet laajaa huomiota sosiaalisessa mediassa. Videoiden perusteella käyty keskustelu ei kuitenkaan ratkaise sitä, miten poliisin tai mopoilijan toimintaa arvioidaan, sillä molemmat kokonaisuudet ovat erikseen tutkittavina.\n\nItä-Uudenmaan poliisi on saanut tapauksesta myös sähköpostia yleisöltä. Poliisin mukaan viestejä on tullut henkilöiltä, jotka eivät liity asiaan. Viestien määrää tai sisältöä ei ole tarkennettu, eikä poliisi ole kertonut, milloin tutkintojen etenemisestä annetaan lisää tietoa. Tapahtumien tarkempi kulku ja osapuolten toiminnan arviointi jäävät esitutkinnoissa selvitettäviksi.",
+    "category": "Kotimaa",
+    "tags": [
+      "tuusula",
+      "poliisi",
+      "mopomiitti",
+      "esitutkinta"
+    ],
+    "summary_bullets": [
+      "Poliisilla ei ollut Tuusulan mopomiitissä hälytystehtävää.",
+      "Poliisin toimintaa koskevaa esitutkintaa johtaa syyttäjä.",
+      "Helsingin poliisilaitos tutkii erikseen mopoilijan toimintaa."
+    ],
+    "key_points": [
+      "Poliisilla ei ollut Tuusulan mopomiitissä hälytystehtävää.",
+      "Poliisin toimintaa koskevaa esitutkintaa johtaa syyttäjä.",
+      "Helsingin poliisilaitos tutkii erikseen mopoilijan toimintaa."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "journalist_note": "Tiedot perustuvat poliisien viestinnästä saatuihin tietoihin. Tutkinnat ovat kesken, ja tapahtumien yksityiskohtainen kulku sekä mahdolliset rikosnimikkeet ovat vielä avoimia.",
+    "source_text": "Itä-Uudenmaan poliisista kerrotaan Ylelle, ettei poliisilla ollut hälytystehtävää Tuusulan mopomiitissä. Poliisin mukaan eilen liikennettä oli partioimassa alueella 3-4 partiota, mutta tarkkaa tietoa ei ole kuinka moni partioista oli mopomiitissä. Helsingin poliisin viestinnästä sanotaan, että Tuusulassa lauantaina tapahtunut mopoilijan ojaan kiilaaminen on ”tietyllä tavalla iso tapaus”, mutta tietoa annetaan toistaiseksi hyvin niukasti. – Tässä on tosiaan se tilanne, että meillä on tavallaan kaksi puolta tässä, että on se poliisin toiminta, jonka osalta on aloitettu esitutkinta ja siinä toimii tutkinnanjohtajana syyttäjä. Ja sitten on tämä itse tapahtuma mopoilijan toiminnan osalta, jota tutkii Helsingin poliisilaitos, sanotan viestinnästä. Tuusulassa lauantaina pidetty mopomiitti päättyi rajuun tieltäsuistumiseen, kun poliisi ajoi takaa-ajotilanteessa mopoilijan ojaan. Tapahtumasta levinneet videot ovat herättäneet laajaa huomiota sosiaalisessa mediassa. Itä-Uudenmaan poliisista kerrotaan myös yleisön laittaneen sähköpostia asiaan liittyen. Poliisin mukaan viestejä on tullut asiaankuulumattomilta.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.67,
+    "degraded_mode": false,
+    "monica_packet_id": "20260809T100656Z_eee1d8f1ee",
+    "source_attributions": [
+      {
+        "name": "Yle Uutiset",
+        "url": "https://yle.fi/a/74-20240071?origin=rss"
+      }
+    ],
+    "source_url": "https://yle.fi/a/74-20240071?origin=rss"
+  }
+}
