@@ -240,5 +240,34 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20240055?origin=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-09T08:07:45.433191+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260809T080248Z_5cd40a992e",
+    "category": "Kotimaa",
+    "selected_source_words": 320,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 6.6,
+    "quality_reasons": [
+      "language borderline Finnish signal (7.0%)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "only 1 paragraphs (min 3)"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 306,
+    "title": "Asiantuntija kyseenalaistaa mopoilijan rajun kiilaamisen Tuusulassa"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (7.0%); missing: image; readability few paragraphs (1); readability wall of text; only 1 paragraphs (min 3)"
 }
