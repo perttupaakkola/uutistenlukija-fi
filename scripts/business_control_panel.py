@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Build a safe machine-readable KPI/control panel from local files only.
+"""Build a safe machine-readable KPI/control panel from production truth.
 
-Outputs public JSON for uutistenlukija.fi without contacting external APIs or
-reading/printing credentials. Intended for cron/manual use:
+Operator-facing pipeline values come from a bounded unauthenticated public
+status response. Local files remain explicit diagnostics. No credentials are
+read or printed. Intended for cron/manual use:
 
     python3 scripts/business_control_panel.py
     python3 scripts/business_control_panel.py --dry-run
@@ -19,6 +20,9 @@ from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
+from urllib.error import HTTPError, URLError
+from urllib.parse import urlsplit
+from urllib.request import Request, urlopen
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 CONTENT_DIR = PROJECT_DIR / "content" / "posts"
@@ -34,6 +38,11 @@ SECRETISH_RE = re.compile(
     r"(?i)(api[_-]?key|token|secret|password|authorization|bearer|client[_-]?secret)\s*[:=]\s*[^\s,;]+"
 )
 URL_QUERY_RE = re.compile(r"https?://[^\s]+")
+PRODUCTION_PIPELINE_STATUS_URL = "https://uutistenlukija.fi/api/pipeline-status.json"
+PRODUCTION_PIPELINE_STATUS_TIMEOUT_SECONDS = 5
+PRODUCTION_PIPELINE_STATUS_MAX_BYTES = 256 * 1024
+PRODUCTION_PIPELINE_STATUS_MAX_AGE_MINUTES = 90
+PRODUCTION_PIPELINE_STATUS_FUTURE_TOLERANCE_MINUTES = 5
 
 
 def utcnow() -> datetime:
@@ -93,6 +102,212 @@ def sanitize_reason(reason: Any) -> str:
     text = URL_QUERY_RE.sub(lambda m: m.group(0).split("?", 1)[0], text)
     text = re.sub(r"\s+", " ", text)
     return text[:180] or "unknown"
+
+
+def _production_evidence_failure(
+    now: datetime,
+    evidence_status: str,
+    reason: str,
+    *,
+    generated_at: datetime | None = None,
+) -> dict[str, Any]:
+    return {
+        "evidence_status": evidence_status,
+        "fresh": False,
+        "reason": sanitize_reason(reason),
+        "source": PRODUCTION_PIPELINE_STATUS_URL,
+        "checked_at": iso(now),
+        "generated_at": iso(generated_at),
+        "age_minutes": age_minutes(generated_at, now),
+        "pipeline_status": None,
+        "published_last_24h": None,
+        "last_publish_at": None,
+        "last_publish_age_minutes": None,
+        "staged_queue_runway": None,
+    }
+
+
+def _is_nonnegative_int(value: Any) -> bool:
+    return isinstance(value, int) and not isinstance(value, bool) and value >= 0
+
+
+def validate_production_pipeline_status(
+    payload: Any,
+    now: datetime,
+    source_url: str,
+) -> dict[str, Any]:
+    """Validate and normalize the public pipeline status without trusting it blindly."""
+    try:
+        parsed_url = urlsplit(str(source_url or ""))
+        response_port = parsed_url.port
+    except (TypeError, ValueError):
+        return _production_evidence_failure(now, "invalid", "production response URL is invalid")
+    if (
+        parsed_url.scheme != "https"
+        or parsed_url.hostname != "uutistenlukija.fi"
+        or response_port not in (None, 443)
+        or parsed_url.username is not None
+        or parsed_url.password is not None
+        or parsed_url.path != "/api/pipeline-status.json"
+        or parsed_url.query
+        or parsed_url.fragment
+    ):
+        return _production_evidence_failure(now, "invalid", "production response came from the wrong site or path")
+    if not isinstance(payload, dict):
+        return _production_evidence_failure(now, "invalid", "production response root is not an object")
+    if payload.get("site") not in (None, "uutistenlukija.fi"):
+        return _production_evidence_failure(now, "invalid", "production response declares the wrong site")
+    if payload.get("hours") != 24:
+        return _production_evidence_failure(now, "invalid", "production response is not a 24-hour status")
+
+    generated_at = parse_dt(payload.get("generated_at"))
+    if generated_at is None:
+        return _production_evidence_failure(now, "invalid", "production generated_at is missing or invalid")
+
+    def fail(evidence_status: str, reason: str) -> dict[str, Any]:
+        return _production_evidence_failure(
+            now,
+            evidence_status,
+            reason,
+            generated_at=generated_at,
+        )
+
+    if generated_at > now + timedelta(minutes=PRODUCTION_PIPELINE_STATUS_FUTURE_TOLERANCE_MINUTES):
+        return fail("invalid", "production generated_at is implausibly in the future")
+
+    stale_threshold = payload.get("stale_threshold_minutes")
+    if not _is_nonnegative_int(stale_threshold) or stale_threshold == 0:
+        return fail("invalid", "production stale threshold is missing or invalid")
+    response_age_minutes = (now - generated_at).total_seconds() / 60
+    max_age_minutes = min(PRODUCTION_PIPELINE_STATUS_MAX_AGE_MINUTES, stale_threshold)
+    if response_age_minutes > max_age_minutes:
+        return fail("stale", f"production response is older than {max_age_minutes} minutes")
+
+    pipeline_status = payload.get("status")
+    is_stale = payload.get("is_stale")
+    if pipeline_status not in {"ok", "degraded"} or not isinstance(is_stale, bool):
+        return fail("invalid", "production status fields are missing or invalid")
+    if (pipeline_status == "ok" and is_stale) or (pipeline_status == "degraded" and not is_stale):
+        return fail("contradictory", "production status and stale flag contradict each other")
+    if is_stale:
+        return fail("stale", "production pipeline reports stale evidence")
+
+    articles = payload.get("articles")
+    if not isinstance(articles, dict) or not _is_nonnegative_int(articles.get("published")):
+        return fail("invalid", "production article counts are missing or invalid")
+    last_published = parse_dt(articles.get("last_published_ts"))
+    if last_published is None:
+        return fail("invalid", "production last-publish timestamp is missing or invalid")
+    future_tolerance = timedelta(minutes=PRODUCTION_PIPELINE_STATUS_FUTURE_TOLERANCE_MINUTES)
+    if last_published > now + future_tolerance or last_published > generated_at + future_tolerance:
+        return fail("contradictory", "production last-publish timestamp is later than its status snapshot")
+    publication_window = generated_at - timedelta(hours=24) - future_tolerance
+    if articles["published"] > 0 and last_published < publication_window:
+        return fail("contradictory", "production published count contradicts its last-publish timestamp")
+
+    runway = payload.get("stagedQueueRunway")
+    if not isinstance(runway, dict):
+        return fail("invalid", "production staged runway is missing")
+    count_keys = ("readyCount", "writingCount", "outboxCount", "worstCaseRemainingCycles")
+    bool_keys = ("publisherEnabled", "scannerEnabled", "workerEnabled")
+    if any(not _is_nonnegative_int(runway.get(key)) for key in count_keys):
+        return fail("invalid", "production staged runway counts are invalid")
+    if any(not isinstance(runway.get(key), bool) for key in bool_keys):
+        return fail("invalid", "production staged runway markers are invalid")
+    max_packets = runway.get("maxPacketsPerCycle")
+    if not _is_nonnegative_int(max_packets) or max_packets == 0:
+        return fail("invalid", "production staged cycle cap is invalid")
+    replenishment = runway.get("replenishmentState")
+    severity = runway.get("severity")
+    reasons = runway.get("reasons")
+    if not isinstance(replenishment, str) or not replenishment:
+        return fail("invalid", "production replenishment state is invalid")
+    if severity not in {"ok", "warning", "critical", "inactive"}:
+        return fail("invalid", "production staged severity is invalid")
+    if not isinstance(reasons, list) or any(not isinstance(reason, str) for reason in reasons):
+        return fail("invalid", "production staged reasons are invalid")
+
+    expected_cycles = (runway["outboxCount"] + max_packets - 1) // max_packets
+    publisher_enabled = runway["publisherEnabled"]
+    scanner_enabled = runway["scannerEnabled"]
+    worker_enabled = runway["workerEnabled"]
+    all_enabled = publisher_enabled and scanner_enabled and worker_enabled
+    if runway["worstCaseRemainingCycles"] != expected_cycles:
+        return fail("contradictory", "production staged cycle count contradicts outbox depth")
+    if all_enabled:
+        expected_replenishment = "end_to_end_enabled"
+    elif scanner_enabled and worker_enabled:
+        expected_replenishment = "scanner_worker_enabled_publisher_disabled"
+    elif scanner_enabled:
+        expected_replenishment = "scanner_enabled_writer_unverified"
+    elif worker_enabled:
+        expected_replenishment = "worker_enabled_scanner_disabled"
+    else:
+        expected_replenishment = "disabled"
+    if replenishment != expected_replenishment:
+        return fail("contradictory", "production staged replenishment contradicts marker state")
+    if runway["writingCount"] > 1:
+        expected_severity = "critical"
+    elif not publisher_enabled:
+        expected_severity = "inactive"
+    elif scanner_enabled and worker_enabled:
+        expected_severity = "ok"
+    elif runway["outboxCount"] <= 6:
+        expected_severity = "critical"
+    elif runway["outboxCount"] <= 12:
+        expected_severity = "warning"
+    else:
+        expected_severity = "ok"
+    if severity != expected_severity:
+        return fail("contradictory", "production staged severity contradicts queue and marker state")
+
+    normalized_runway = {
+        **{key: runway[key] for key in count_keys},
+        **{key: runway[key] for key in bool_keys},
+        "maxPacketsPerCycle": max_packets,
+        "replenishmentState": replenishment,
+        "severity": severity,
+        "reasons": [sanitize_reason(reason) for reason in reasons[:20]],
+    }
+    return {
+        "evidence_status": "validated",
+        "fresh": True,
+        "reason": "validated fresh production pipeline status",
+        "source": PRODUCTION_PIPELINE_STATUS_URL,
+        "checked_at": iso(now),
+        "generated_at": iso(generated_at),
+        "age_minutes": age_minutes(generated_at, now),
+        "pipeline_status": pipeline_status,
+        "published_last_24h": articles["published"],
+        "last_publish_at": iso(last_published),
+        "last_publish_age_minutes": age_minutes(last_published, now),
+        "staged_queue_runway": normalized_runway,
+    }
+
+
+def production_pipeline_status(now: datetime | None = None) -> dict[str, Any]:
+    """Fetch one bounded unauthenticated production status response."""
+    now = now or utcnow()
+    request = Request(
+        PRODUCTION_PIPELINE_STATUS_URL,
+        headers={
+            "Accept": "application/json",
+            "User-Agent": "uutistenlukija-business-control-panel/1.0",
+        },
+    )
+    try:
+        with urlopen(request, timeout=PRODUCTION_PIPELINE_STATUS_TIMEOUT_SECONDS) as response:
+            final_url = response.geturl()
+            raw = response.read(PRODUCTION_PIPELINE_STATUS_MAX_BYTES + 1)
+    except (HTTPError, URLError, TimeoutError, OSError) as exc:
+        return _production_evidence_failure(now, "unavailable", f"production status fetch failed: {exc}")
+    if len(raw) > PRODUCTION_PIPELINE_STATUS_MAX_BYTES:
+        return _production_evidence_failure(now, "invalid", "production response exceeds the byte limit")
+    try:
+        payload = json.loads(raw.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError):
+        return _production_evidence_failure(now, "invalid", "production response is not valid JSON")
+    return validate_production_pipeline_status(payload, now, final_url)
 
 
 def _read_git(repo_dir: Path, *args: str) -> str | None:
@@ -873,7 +1088,10 @@ def build_panel(now: datetime | None = None) -> dict[str, Any]:
     now = now or utcnow()
     checkout_freshness = dict(git_upstream_freshness(PROJECT_DIR))
     checkout_freshness["checked_at"] = iso(now)
+    production = production_pipeline_status(now)
     content = content_summary(now)
+    content["last_publish_at_local"] = content.get("last_publish_at")
+    content["last_publish_age_minutes_local"] = content.get("last_publish_age_minutes")
     pipeline = pipeline_summary(now)
     raw_last_24h = pipeline.get("last_24h")
     last_24h: dict[str, Any] = raw_last_24h if isinstance(raw_last_24h, dict) else {}
@@ -881,42 +1099,57 @@ def build_panel(now: datetime | None = None) -> dict[str, Any]:
     published_count = int(content.get("published_last_24h_local") or 0)
     last_24h["generated_article_count"] = generated_count
     last_24h["published_article_count_local"] = published_count
-    # For the public/operator-facing 24h article count, prefer what actually
-    # exists on the site. The scanner metrics can legitimately be 0 when the
-    # staged publisher/Monica path produced fresh articles, and reporting that
-    # as "0 articles" creates a false yellow drift alert.
+    # Retain the best local observer count as a diagnostic. It is not allowed
+    # to override validated production truth in operator-facing fields.
     if published_count > generated_count:
-        last_24h["article_count"] = published_count
-        last_24h["article_count_source"] = "content/posts frontmatter"
+        last_24h["article_count_local"] = published_count
+        last_24h["article_count_local_source"] = "content/posts frontmatter"
     else:
-        last_24h["article_count_source"] = "pipeline/logs/metrics.json"
+        last_24h["article_count_local"] = generated_count
+        last_24h["article_count_local_source"] = "pipeline/logs/metrics.json"
+
+    if production.get("evidence_status") == "validated":
+        content["operator_source"] = production["source"]
+        pipeline["operator_source"] = production["source"]
+        content["published_last_24h"] = production["published_last_24h"]
+        content["last_publish_at"] = production["last_publish_at"]
+        content["last_publish_age_minutes"] = production["last_publish_age_minutes"]
+        last_24h["article_count"] = production["published_last_24h"]
+        last_24h["article_count_source"] = "validated production pipeline-status"
+        pipeline["staged_queue_runway"] = production["staged_queue_runway"]
+    else:
+        content["operator_source"] = None
+        pipeline["operator_source"] = None
+        content["published_last_24h"] = None
+        content["last_publish_at"] = None
+        content["last_publish_age_minutes"] = None
+        last_24h["article_count"] = None
+        last_24h["article_count_source"] = "production pipeline-status unavailable or invalid"
+        pipeline["staged_queue_runway"] = None
     pipeline["last_24h"] = last_24h
     queues = queue_summary(now)
     for local_section in (content, pipeline, queues):
         local_section["git_upstream_freshness"] = dict(checkout_freshness)
     categories = category_drift()
     analytics = analytics_status(now)
-    published_last = content.get("last_publish_age_minutes")
-    failures = pipeline.get("last_24h", {}).get("failure", 0)
-    status = "ok"
-    if published_last is None or published_last > 180 or failures:
-        status = "attention"
-    if published_last is None and not pipeline.get("metrics_rows_total"):
+    if production.get("evidence_status") == "validated" and production.get("pipeline_status") == "ok":
+        status = "ok"
+    elif production.get("evidence_status") == "stale":
+        status = "stale"
+    else:
         status = "unknown"
-    checkout_status = checkout_freshness.get("status")
-    if checkout_status != "fresh":
-        status = "stale" if checkout_status == "stale" else "unknown"
     return {
-        "schema_version": "1.2",
+        "schema_version": "1.3",
         "site": "uutistenlukija.fi",
         "generated_at": iso(now),
         "status": status,
         "safe_public": True,
         "notes": [
-            "Generated from local files/logs only.",
-            "No external APIs queried; no credentials read or printed.",
-            "Git freshness uses the configured local upstream reference; no fetch or network access.",
+            "Operator-facing pipeline values use a bounded unauthenticated production status response.",
+            "Local Git, content, queue, and log values remain diagnostics only.",
+            "No credentials are read or printed.",
         ],
+        "production_pipeline": production,
         "git_upstream_freshness": checkout_freshness,
         "content": content,
         "pipeline": pipeline,

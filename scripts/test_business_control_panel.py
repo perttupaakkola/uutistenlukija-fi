@@ -18,6 +18,49 @@ spec.loader.exec_module(panel)
 
 
 class BusinessControlPanelReportingTest(unittest.TestCase):
+    def production_payload(self, now: datetime) -> dict:
+        return {
+            "hours": 24,
+            "generated_at": (now - timedelta(minutes=5)).isoformat(),
+            "status": "ok",
+            "is_stale": False,
+            "stale_threshold_minutes": 90,
+            "articles": {
+                "attempted": 0,
+                "published": 14,
+                "rejected": 0,
+                "publish_rate": 0,
+                "last_published_ts": (now - timedelta(minutes=30)).isoformat(),
+            },
+            "stagedQueueRunway": {
+                "readyCount": 0,
+                "writingCount": 0,
+                "outboxCount": 23,
+                "publisherEnabled": True,
+                "scannerEnabled": True,
+                "workerEnabled": True,
+                "maxPacketsPerCycle": 3,
+                "worstCaseRemainingCycles": 8,
+                "replenishmentState": "end_to_end_enabled",
+                "severity": "ok",
+                "reasons": [
+                    "publisher_enabled",
+                    "scanner_enabled",
+                    "worker_enabled",
+                    "queue_active",
+                ],
+            },
+        }
+
+    def validated_production(self, now: datetime, *, published: int = 14) -> dict:
+        payload = self.production_payload(now)
+        payload["articles"]["published"] = published
+        return panel.validate_production_pipeline_status(
+            payload,
+            now,
+            panel.PRODUCTION_PIPELINE_STATUS_URL,
+        )
+
     def run_git(self, cwd: Path, *args: str) -> str:
         result = subprocess.run(
             ["git", *args],
@@ -41,6 +84,195 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
         self.run_git(root, "update-ref", "refs/remotes/origin/main", head)
         self.run_git(root, "branch", "--set-upstream-to=origin/main", "main")
         return head
+
+    def test_fresh_production_truth_overrides_stale_local_checkout(self) -> None:
+        now = datetime(2026, 8, 9, 5, 30, tzinfo=timezone.utc)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            content_dir = root / "content" / "posts"
+            log_dir = root / "pipeline" / "logs"
+            outbox_dir = root / "pipeline" / "queues" / "staged" / "outbox"
+            content_dir.mkdir(parents=True)
+            log_dir.mkdir(parents=True)
+            outbox_dir.mkdir(parents=True)
+            (content_dir / "stale.md").write_text(
+                "---\n"
+                "title: Stale observer article\n"
+                "date: 2026-08-04T22:08:07+00:00\n"
+                "categories:\n"
+                "  - Kotimaa\n"
+                "---\nBody\n",
+                encoding="utf-8",
+            )
+            (log_dir / "metrics.json").write_text("[]", encoding="utf-8")
+            (outbox_dir / "local-only.json").write_text("{}", encoding="utf-8")
+            checkout_freshness = {
+                "status": "stale",
+                "fresh": False,
+                "reason": "fixture is stale",
+                "head": "a" * 40,
+                "upstream": "origin/main",
+                "upstream_head": "b" * 40,
+                "behind_count": 200,
+                "ahead_count": 0,
+                "source": "read-only local Git metadata; no fetch or network access",
+            }
+            production = self.validated_production(now)
+            with (
+                patch.object(panel, "PROJECT_DIR", root),
+                patch.object(panel, "CONTENT_DIR", content_dir),
+                patch.object(panel, "PIPELINE_DIR", root / "pipeline"),
+                patch.object(panel, "LOG_DIR", log_dir),
+                patch.object(panel, "QUEUE_DIR", root / "pipeline" / "queues"),
+                patch.object(panel, "git_upstream_freshness", return_value=checkout_freshness),
+                patch.object(panel, "production_pipeline_status", return_value=production),
+            ):
+                data = panel.build_panel(now)
+
+        self.assertEqual(data["status"], "ok")
+        self.assertEqual(data["production_pipeline"]["evidence_status"], "validated")
+        self.assertEqual(data["pipeline"]["last_24h"]["article_count"], 14)
+        self.assertEqual(data["pipeline"]["last_24h"]["article_count_source"], "validated production pipeline-status")
+        self.assertEqual(data["content"]["published_last_24h"], 14)
+        self.assertEqual(data["content"]["published_last_24h_local"], 0)
+        self.assertEqual(data["content"]["last_publish_at"], production["last_publish_at"])
+        self.assertEqual(data["content"]["last_publish_at_local"], "2026-08-04T22:08:07Z")
+        self.assertEqual(data["content"]["operator_source"], panel.PRODUCTION_PIPELINE_STATUS_URL)
+        self.assertEqual(data["pipeline"]["operator_source"], panel.PRODUCTION_PIPELINE_STATUS_URL)
+        self.assertEqual(data["pipeline"]["staged_queue_runway"]["outboxCount"], 23)
+        self.assertEqual(data["queues"]["queues"]["staged/outbox"]["count"], 1)
+        self.assertEqual(data["git_upstream_freshness"]["status"], "stale")
+
+    def test_unusable_production_never_falls_back_to_local_ok(self) -> None:
+        now = datetime(2026, 8, 9, 5, 30, tzinfo=timezone.utc)
+        local_content = {
+            "article_count_local": 1,
+            "draft_count_local": 0,
+            "published_last_24h_local": 1,
+            "last_publish_at": (now - timedelta(minutes=10)).isoformat().replace("+00:00", "Z"),
+            "last_publish_age_minutes": 10.0,
+            "latest_article": {"slug": "local", "title": "Local", "category": "Kotimaa"},
+            "source": "content/posts frontmatter",
+        }
+        local_pipeline = {
+            "source": "local metrics",
+            "metrics_rows_total": 1,
+            "last_24h": {"article_count": 1, "failure": 0},
+        }
+        local_queues = {"source": "pipeline/queues", "queues": {}}
+        checkout_freshness = {"status": "fresh", "fresh": True, "reason": "local fixture is fresh"}
+        cases = [
+            ("unavailable", "unknown"),
+            ("invalid", "unknown"),
+            ("contradictory", "unknown"),
+            ("stale", "stale"),
+        ]
+        for evidence_status, expected_status in cases:
+            with self.subTest(evidence_status=evidence_status):
+                production = panel._production_evidence_failure(
+                    now,
+                    evidence_status,
+                    f"fixture is {evidence_status}",
+                    generated_at=now - timedelta(minutes=100) if evidence_status == "stale" else None,
+                )
+                with (
+                    patch.object(panel, "git_upstream_freshness", return_value=checkout_freshness),
+                    patch.object(panel, "production_pipeline_status", return_value=production),
+                    patch.object(panel, "content_summary", return_value=dict(local_content)),
+                    patch.object(
+                        panel,
+                        "pipeline_summary",
+                        return_value={**local_pipeline, "last_24h": dict(local_pipeline["last_24h"])},
+                    ),
+                    patch.object(panel, "queue_summary", return_value=dict(local_queues)),
+                    patch.object(panel, "category_drift", return_value={}),
+                    patch.object(panel, "analytics_status", return_value={}),
+                    patch.object(panel, "monetization_status", return_value={}),
+                    patch.object(panel, "local_coordination_placeholders", return_value={}),
+                ):
+                    data = panel.build_panel(now)
+
+                self.assertEqual(data["status"], expected_status)
+                self.assertIsNone(data["content"]["published_last_24h"])
+                self.assertIsNone(data["content"]["last_publish_at"])
+                self.assertEqual(data["content"]["published_last_24h_local"], 1)
+                self.assertEqual(data["content"]["last_publish_at_local"], local_content["last_publish_at"])
+                self.assertIsNone(data["pipeline"]["last_24h"]["article_count"])
+                self.assertEqual(data["pipeline"]["last_24h"]["article_count_local"], 1)
+                self.assertIsNone(data["pipeline"]["staged_queue_runway"])
+
+    def test_production_validation_fails_closed_for_stale_invalid_site_and_contradiction(self) -> None:
+        now = datetime(2026, 8, 9, 5, 30, tzinfo=timezone.utc)
+        cases = []
+
+        stale = self.production_payload(now)
+        stale["generated_at"] = (now - timedelta(minutes=91)).isoformat()
+        cases.append(("stale", stale, "stale", panel.PRODUCTION_PIPELINE_STATUS_URL))
+
+        invalid = self.production_payload(now)
+        invalid["articles"] = {**invalid["articles"], "published": "14"}
+        cases.append(("invalid", invalid, "invalid", panel.PRODUCTION_PIPELINE_STATUS_URL))
+
+        wrong_site = self.production_payload(now)
+        wrong_site["site"] = "other.invalid"
+        cases.append(("wrong_site", wrong_site, "invalid", panel.PRODUCTION_PIPELINE_STATUS_URL))
+
+        wrong_url = self.production_payload(now)
+        cases.append(("wrong_url", wrong_url, "invalid", "https://other.invalid/api/pipeline-status.json"))
+
+        contradictory = self.production_payload(now)
+        contradictory["is_stale"] = True
+        cases.append(("contradictory", contradictory, "contradictory", panel.PRODUCTION_PIPELINE_STATUS_URL))
+
+        for name, payload, expected, source_url in cases:
+            with self.subTest(name=name):
+                evidence = panel.validate_production_pipeline_status(
+                    payload,
+                    now,
+                    source_url,
+                )
+                self.assertEqual(evidence["evidence_status"], expected)
+                self.assertFalse(evidence["fresh"])
+                self.assertNotEqual(evidence.get("pipeline_status"), "ok")
+
+    def test_production_fetch_timeout_is_sanitized_and_fails_closed(self) -> None:
+        now = datetime(2026, 8, 9, 5, 30, tzinfo=timezone.utc)
+        with patch.object(
+            panel,
+            "urlopen",
+            side_effect=TimeoutError(
+                "request failed https://uutistenlukija.fi/api/pipeline-status.json?token=do-not-print"
+            ),
+        ):
+            evidence = panel.production_pipeline_status(now)
+
+        self.assertEqual(evidence["evidence_status"], "unavailable")
+        self.assertFalse(evidence["fresh"])
+        self.assertNotIn("do-not-print", evidence["reason"])
+        self.assertNotIn("?", evidence["reason"])
+
+    def test_production_fetch_rejects_invalid_json(self) -> None:
+        now = datetime(2026, 8, 9, 5, 30, tzinfo=timezone.utc)
+
+        class InvalidJsonResponse:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *_args):
+                return False
+
+            def geturl(self) -> str:
+                return panel.PRODUCTION_PIPELINE_STATUS_URL
+
+            def read(self, _limit: int) -> bytes:
+                return b"{not-json"
+
+        with patch.object(panel, "urlopen", return_value=InvalidJsonResponse()):
+            evidence = panel.production_pipeline_status(now)
+
+        self.assertEqual(evidence["evidence_status"], "invalid")
+        self.assertFalse(evidence["fresh"])
+        self.assertIn("valid JSON", evidence["reason"])
 
     def test_git_upstream_freshness_is_fresh_only_at_configured_upstream(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -102,8 +334,8 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
         now = datetime(2026, 8, 2, 8, 0, tzinfo=timezone.utc)
         cases = [
             ("fresh", True, "ok"),
-            ("stale", False, "stale"),
-            ("unknown", None, "unknown"),
+            ("stale", False, "ok"),
+            ("unknown", None, "ok"),
         ]
         for freshness_status, fresh, expected_panel_status in cases:
             with self.subTest(freshness_status=freshness_status), tempfile.TemporaryDirectory() as tmp:
@@ -143,6 +375,11 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
                     patch.object(panel, "LOG_DIR", log_dir),
                     patch.object(panel, "QUEUE_DIR", root / "pipeline" / "queues"),
                     patch.object(panel, "git_upstream_freshness", return_value=freshness),
+                    patch.object(
+                        panel,
+                        "production_pipeline_status",
+                        return_value=self.validated_production(now, published=1),
+                    ),
                 ):
                     data = panel.build_panel(now)
 
@@ -153,6 +390,10 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
             self.assertEqual(data["queues"]["git_upstream_freshness"]["status"], freshness_status)
             self.assertEqual(data["content"]["article_count_local"], 1)
             self.assertEqual(data["pipeline"]["last_24h"]["article_count"], 1)
+            self.assertEqual(
+                data["pipeline"]["last_24h"]["article_count_source"],
+                "validated production pipeline-status",
+            )
 
     def test_content_summary_excludes_truthy_drafts_from_published_metrics(self) -> None:
         now = datetime(2026, 7, 16, 12, 0, tzinfo=timezone.utc)
@@ -222,7 +463,7 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
         self.assertEqual(config["consent_revision"], 3)
 
     def test_last_24h_article_count_uses_published_content_when_scanner_metrics_are_zero(self) -> None:
-        """Fresh published posts must not be reported as 0 articles in the 24h business summary."""
+        """Local diagnostics retain published content even when production is authoritative."""
         now = datetime(2026, 5, 24, 12, 0, tzinfo=timezone.utc)
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -245,13 +486,26 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
                 '[{"timestamp":"2026-05-24T11:50:00+00:00","success":true,"article_count":0,"errors":[]}]',
                 encoding="utf-8",
             )
-            with patch.object(panel, "PROJECT_DIR", root), patch.object(panel, "CONTENT_DIR", content_dir), patch.object(panel, "PIPELINE_DIR", root / "pipeline"), patch.object(panel, "LOG_DIR", log_dir), patch.object(panel, "QUEUE_DIR", root / "pipeline" / "queues"):
+            with (
+                patch.object(panel, "PROJECT_DIR", root),
+                patch.object(panel, "CONTENT_DIR", content_dir),
+                patch.object(panel, "PIPELINE_DIR", root / "pipeline"),
+                patch.object(panel, "LOG_DIR", log_dir),
+                patch.object(panel, "QUEUE_DIR", root / "pipeline" / "queues"),
+                patch.object(
+                    panel,
+                    "production_pipeline_status",
+                    return_value=self.validated_production(now, published=9),
+                ),
+            ):
                 data = panel.build_panel(now)
 
         self.assertEqual(data["content"]["published_last_24h_local"], 2)
         self.assertEqual(data["pipeline"]["last_24h"]["generated_article_count"], 0)
-        self.assertEqual(data["pipeline"]["last_24h"]["article_count"], 2)
-        self.assertEqual(data["pipeline"]["last_24h"]["article_count_source"], "content/posts frontmatter")
+        self.assertEqual(data["pipeline"]["last_24h"]["article_count_local"], 2)
+        self.assertEqual(data["pipeline"]["last_24h"]["article_count_local_source"], "content/posts frontmatter")
+        self.assertEqual(data["pipeline"]["last_24h"]["article_count"], 9)
+        self.assertEqual(data["pipeline"]["last_24h"]["article_count_source"], "validated production pipeline-status")
 
     def test_fresh_analytics_evidence_supersedes_stale_log_errors(self) -> None:
         """Fresh redacted GA4/GSC evidence must not be reported as blocked because old log tails contain errors."""
