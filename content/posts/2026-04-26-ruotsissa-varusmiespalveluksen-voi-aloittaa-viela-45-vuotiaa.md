@@ -1,6 +1,6 @@
 ---
 title: "Ruotsissa varusmiespalveluksen voi aloittaa vielä 45-vuotiaana"
-seo_title: "Ruotsissa armeijaan voi mennä 45-vuotiaana"
+seo_title: "Ruotsissa varusmiespalvelukseen vielä 45-vuotiaana"
 date: 2026-04-26T06:54:31.479220+00:00
 categories:
   - Ulkomaat
