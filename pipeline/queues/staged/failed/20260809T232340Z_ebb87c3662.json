@@ -94,5 +94,24 @@
     "_guessed_category": "Kotimaa",
     "research": "[Lähde: Yle Uutiset | URL: https://yle.fi/a/74-20240094?origin=rss]\nYli puolet varhaiskasvatuksen asiakkaista ei enää maksa asiakasmaksua tulojensa perusteella, kertoo Kuntaliitto.\n\nNeljä vuotta sitten luku oli vielä hieman alle 40 prosenttia.\n\nMuutos on Kuntaliiton mukaan seurausta viime vuosien asiakasmaksulain muutoksista ja tulorajojen korostuksista.\n\nMaakuntien välillä on paljon eroja. Etelä-Savossa maksua ei peritty lähes 70 prosentilta, kun taas Uudellamaalla vastaava luku oli hieman alle 50 prosenttia.\n\nKuntien mukaan asiakasmaksujen muutokset näkyvät palveluiden käytössä. Asiakkaat varaavat entistä useammin kokoaikaisen varhaiskasvatuspaikan, eikä esimerkiksi poissaoloista ilmoiteta yhtä paljon kuin aiemmin.\n\nKuntaliitto lähetti kyselyn kaikkiin Manner-Suomen kuntiin. Siihen vastasi 75 prosenttia vastaanottajista eli 219 kuntaa.",
     "research_source": "multi"
+  },
+  "failed_at": "2026-08-10T02:27:08.223667+00:00",
+  "failure": "insufficient_confidence_after_repair",
+  "raw_response": "[agents/tool-policy] tool policy removed 20 tool(s) via tools.allow: agents_list, ask_user, automations, computer, conversations_list, conversations_send, conversations_turn, create_goal, dashboard, gateway, get_goal, image, mobile_ui, nodes, sessions, sessions_search, transcripts, tts, update_goal, update_plan\n[agents/tool-policy] tool policy removed 1 tool(s) via sandbox tools.allow: message\n[agents/tool-policy] tool policy removed 21 tool(s) via tools.allow: agents_list, ask_user, automations, computer, conversations_list, conversations_send, conversations_turn, create_goal, dashboard, gateway, get_goal, heartbeat_respond, image, mobile_ui, nodes, sessions, sessions_search, transcripts, tts, update_goal, update_plan\n[agents/tool-policy] tool policy removed 1 tool(s) via sandbox tools.allow: message\n[agent/embedded] codex app-server context-engine projection decision\n[agent/embedded] codex app-server wrote context-engine thread binding\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=072a9a9c-b5c9-47ce-8f40-2b42b94c1d43 sessionKey=agent:monica:explicit:monica-pipeline-a868a82d-2758-4be8-be81-d02702557c22 lane=context-engine-turn-maintenance:agent:monica:explicit:monica-pipeline-a868a82d-2758-4be8-be81-d02702557c22\n[agent/embedded] codex app-server one-shot cleanup retired shared client\n{\"status\":\"INSUFFICIENT_CONFIDENCE\"}\n[agents/agent-command] [agent] run d973273c-83fd-4c33-be37-87749de860b4 ended with stopReason=stop",
+  "writer_failure_feedback": {
+    "packet_id": "20260809T232340Z_ebb87c3662",
+    "category": "Kotimaa",
+    "selected_source_words": 91,
+    "selected_source_blocks": 1,
+    "story_confidence": 0.5,
+    "final_word_count": 0,
+    "issues": [
+      "missing keys: packet_id, title, summary, content, category, tags, summary_bullets, content_type, editorial_reviewed, confidence, journalist_note, source_usage"
+    ],
+    "source_backed": false,
+    "near_miss_short": false,
+    "retry_classification": "writer_schema_invalid",
+    "fail_closed": true,
+    "title": "Yli puolet varhais­kasvatuksen asiakkaista ei enää maksa asiakasmaksua tulojensa perusteella"
   }
 }
