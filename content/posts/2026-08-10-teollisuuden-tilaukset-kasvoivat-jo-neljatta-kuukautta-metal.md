@@ -50,7 +50,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/teollisuuden-tilausten-kasvu-jatkuu-sodan-jatkuminen-ei-nayta-horjuttavan-hyvaa-kehitysta"
-briefing: true
 draft: false
 ---
 
