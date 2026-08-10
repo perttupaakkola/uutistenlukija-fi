@@ -1,12 +1,6 @@
 {{ define "main" }}
 {{ $posts := where .Site.RegularPages "Section" "posts" }}
 {{ $sorted := $posts.ByDate.Reverse }}
-{{ $visualPosts := slice }}
-{{ range $sorted }}
-  {{ $image := .Params.image | default "" }}
-  {{ $isCategoryFallback := or .Params.image_category_fallback (eq .Params.image_source "category_fallback") (hasPrefix $image "/images/categories/") }}
-  {{ if and $image (not $isCategoryFallback) }}{{ $visualPosts = $visualPosts | append . }}{{ end }}
-{{ end }}
 {{ $lead := index $sorted 0 }}
 {{ $seen := slice }}
 
@@ -14,13 +8,14 @@
   <h1 class="visually-hidden">Uutistenlukija</h1>
 
   {{ if gt (len $sorted) 1 }}
-  {{ $live := index $sorted 1 }}
-  {{ $seen = $seen | append $live.Permalink }}
-  <a class="portal-livebar" href="{{ $live.RelPermalink }}">
-    <span class="portal-livebar__badge">Live</span>
-    <time>{{ $live.Date.Format "15:04" }}</time>
-    <strong>{{ $live.Title }}</strong>
-    <span class="portal-livebar__all">Katso kaikki päivitykset</span>
+  {{ $statusStory := index $sorted 1 }}
+  {{ $isActiveLive := or $statusStory.Params.live $statusStory.Params.is_live }}
+  {{ $seen = $seen | append $statusStory.Permalink }}
+  <a class="portal-livebar{{ if not $isActiveLive }} portal-livebar--latest{{ end }}" href="{{ $statusStory.RelPermalink }}">
+    {{ if $isActiveLive }}<span class="portal-livebar__badge">Live</span>{{ end }}
+    <time datetime="{{ $statusStory.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $statusStory.Date.Format "15:04" }}</time>
+    <strong>{{ $statusStory.Title }}</strong>
+    <span class="portal-livebar__all">{{ if $isActiveLive }}Katso kaikki päivitykset{{ else }}Lue juttu{{ end }}</span>
   </a>
   {{ end }}
 
@@ -30,7 +25,7 @@
   {{ $leadThumb := $lead.Params.image_thumb | default $leadImg }}
   {{ $leadIsCategoryFallback := or $lead.Params.image_category_fallback (eq $lead.Params.image_source "category_fallback") (hasPrefix $leadImg "/images/categories/") }}
   {{ $seen = $seen | append $lead.Permalink }}
-  <section class="portal-front-grid" aria-labelledby="front-lead-title">
+  <section class="portal-front-grid{{ if $leadIsCategoryFallback }} portal-front-grid--image-free-lead{{ end }}" aria-labelledby="front-lead-title">
     <article class="portal-lead">
       {{ if not $leadIsCategoryFallback }}
       <div class="portal-lead__image">
@@ -54,16 +49,20 @@
         <span>Etusivu</span>
         <h2 id="front-top-stories-title">Päivän pääuutiset</h2>
       </div>
-      {{ $teaserPool := where $visualPosts "Permalink" "not in" $seen }}
+      {{ $teaserPool := where $sorted "Permalink" "not in" $seen }}
       {{ range first 4 $teaserPool }}
       {{ $cat := index .Params.categories 0 | default "Uutiset" }}
       {{ $catClass := $cat | lower | urlize }}
-      {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
+      {{ $img := .Params.image_thumb | default (.Params.image | default "") }}
+      {{ $isCategoryFallback := or .Params.image_category_fallback (eq .Params.image_source "category_fallback") (strings.Contains $img "/images/categories/") }}
+      {{ $hasSafeImage := and $img (not $isCategoryFallback) }}
       {{ $seen = $seen | append .Permalink }}
-      <article class="portal-teaser">
+      <article class="portal-teaser{{ if not $hasSafeImage }} portal-teaser--no-image{{ end }}">
+        {{ if $hasSafeImage }}
         <a class="portal-teaser__thumb" href="{{ .RelPermalink }}">
-          <img src="{{ $img }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="180" height="120" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.src='{{ printf "/images/categories/%s.jpg" ($cat | lower) }}'">
+          <img src="{{ $img }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="180" height="120" onerror="var card=this.closest('.portal-teaser');if(card){card.classList.add('portal-teaser--no-image')}var thumb=this.closest('.portal-teaser__thumb');if(thumb){thumb.hidden=true}">
         </a>
+        {{ end }}
         <div>
           <div class="portal-teaser__meta"><span class="portal-kicker portal-teaser__category portal-teaser__category--{{ $catClass }}">{{ $cat }}</span><span>Julkaistu {{ partial "relative-date.html" . }}</span></div>
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
