@@ -255,6 +255,115 @@
         "url": "https://yrittajat.fi/uutiset/parikkalassa-viljellaan-terveyshyodyistaan-tunnettua-trooppista-maustekasvia-yrittajalla-kovat-odotukset-ei-ollut-mitaan-kasitysta-millainen-mollykka-tulee"
       }
     ],
-    "source_url": "https://www.yrittajat.fi/uutiset/parikkalassa-viljellaan-terveyshyodyistaan-tunnettua-trooppista-maustekasvia-yrittajalla-kovat-odotukset-ei-ollut-mitaan-kasitysta-millainen-mollykka-tulee/"
+    "source_url": "https://www.yrittajat.fi/uutiset/parikkalassa-viljellaan-terveyshyodyistaan-tunnettua-trooppista-maustekasvia-yrittajalla-kovat-odotukset-ei-ollut-mitaan-kasitysta-millainen-mollykka-tulee/",
+    "image_generation_terminal": {
+      "schema": "uutistenlukija.image_terminal.v1",
+      "stage": "generated",
+      "reason": "key_unavailable",
+      "outcome": "unavailable",
+      "provider_fault": false,
+      "provider_attempted": false,
+      "provider_succeeded": false
+    },
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "generated",
+        "reason": "key_unavailable",
+        "outcome": "unavailable",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "fallback",
+        "reason": "category_fallback",
+        "outcome": "selected",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      }
+    ],
+    "image": "/images/categories/talous.jpg",
+    "image_thumb": "/images/categories/talous.jpg",
+    "image_alt": "Talous-uutiset",
+    "image_credit": "",
+    "image_source_url": "",
+    "image_caption": "",
+    "image_hotlink": false,
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "final category fallback after key_unavailable",
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_visual_judge_score": 0,
+    "image_decision": {
+      "source": "category_fallback",
+      "accepted": true,
+      "reason": "final category fallback after key_unavailable",
+      "prompt_version": "image-flow-v2-2026-07-03"
+    }
+  },
+  "image_enriched_at": "2026-08-10T09:58:08.209080+00:00",
+  "image_enrichment": {
+    "image": "/images/categories/talous.jpg",
+    "image_thumb": "/images/categories/talous.jpg",
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "final category fallback after key_unavailable",
+    "image_concept": null,
+    "image_query": null,
+    "image_candidate_id": null,
+    "image_candidate_url": null,
+    "image_visual_judge_score": 0,
+    "image_accepted_reasons": null,
+    "image_rejected_reasons": null,
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_generation_terminal": {
+      "schema": "uutistenlukija.image_terminal.v1",
+      "stage": "generated",
+      "reason": "key_unavailable",
+      "outcome": "unavailable",
+      "provider_fault": false,
+      "provider_attempted": false,
+      "provider_succeeded": false
+    },
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "generated",
+        "reason": "key_unavailable",
+        "outcome": "unavailable",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "fallback",
+        "reason": "category_fallback",
+        "outcome": "selected",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      }
+    ]
+  },
+  "published_at": "2026-08-10T10:01:18.493089+00:00",
+  "created_files": [
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-08-10-parikkalassa-viljellaan-inkivaaria-kolmessa-kasvihuoneessa-p.md"
+  ],
+  "category_trace": {
+    "packet_id": "20260810T094801Z_8f12b21d47",
+    "decisions": {
+      "guard": "Talous",
+      "writer": "Talous",
+      "publisher": "Talous"
+    },
+    "disagreement": false
   }
 }
