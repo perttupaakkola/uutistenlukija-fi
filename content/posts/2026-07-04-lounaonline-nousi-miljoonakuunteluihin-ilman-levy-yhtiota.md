@@ -1,5 +1,6 @@
 ---
 title: "Lounaonline nousi miljoonakuunteluihin ilman levy-yhtiötä"
+seo_title: "Louna Kukkonen eli Lounaonline ilman levy-yhtiötä"
 date: 2026-07-04T05:08:02.148677+00:00
 categories:
   - Teknologia
