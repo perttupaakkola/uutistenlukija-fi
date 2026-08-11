@@ -1,5 +1,6 @@
 ---
 title: "Kansalaisaloite vaatii elvytystaitoja osaksi peruskoulujen opetusta"
+seo_title: "Kansalaisaloite: elvytystaidot peruskouluihin"
 date: 2026-07-18T17:38:38.995738+00:00
 categories:
   - Kotimaa
