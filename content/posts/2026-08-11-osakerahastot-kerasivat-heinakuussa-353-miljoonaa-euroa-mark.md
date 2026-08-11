@@ -50,7 +50,6 @@ source_domain: "finanssiala.fi"
 source_attributions:
   - name: "Finanssiala"
     url: "https://finanssiala.fi/uutiset/tekoalyhuuma-osoitti-heinakuussa-rauhoittumisen-merkkeja-osakerahastot-vetivat-silti-uusia-sijoituksia"
-briefing: true
 draft: false
 ---
 
