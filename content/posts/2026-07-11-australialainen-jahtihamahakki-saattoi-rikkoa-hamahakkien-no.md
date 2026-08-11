@@ -1,5 +1,6 @@
 ---
 title: "Australialainen jahtihämähäkki saattoi rikkoa hämähäkkien nopeusennätyksen"
+seo_title: "Australialainen jahtihämähäkki saattoi olla nopein"
 date: 2026-07-11T15:28:27.473770+00:00
 categories:
   - Tiede
