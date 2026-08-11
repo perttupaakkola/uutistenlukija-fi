@@ -50,7 +50,6 @@ source_domain: "theguardian.com"
 source_attributions:
   - name: "The Guardian World"
     url: "https://theguardian.com/australia-news/2026/aug/11/coalition-divided-angus-taylor-gambling-laws-overreach"
-briefing: true
 draft: false
 ---
 
