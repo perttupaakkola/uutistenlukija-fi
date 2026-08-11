@@ -50,7 +50,6 @@ source_domain: "yle.fi"
 source_attributions:
   - name: "Yle"
     url: "https://yle.fi/a/74-20010573/64-3-305312"
-briefing: true
 draft: false
 ---
 
