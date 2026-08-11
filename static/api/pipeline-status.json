@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-11T08:39:43+00:00",
+  "generated_at": "2026-08-11T08:58:45+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,10 +12,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 15,
+    "published": 16,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-11T08:36:31.479456+00:00"
+    "last_published_ts": "2026-08-11T08:55:25.770587+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -33,7 +33,11 @@
     ],
     [
       "mukaansa",
-      16
+      18
+    ],
+    [
+      "jälkeen",
+      14
     ],
     [
       "kertoi",
@@ -42,21 +46,17 @@
     [
       "sanoi",
       13
-    ],
-    [
-      "maanantaina",
-      12
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 1,
+    "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 30,
+    "outboxCount": 31,
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "worstCaseRemainingCycles": 10,
+    "worstCaseRemainingCycles": 11,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
     "reasons": [

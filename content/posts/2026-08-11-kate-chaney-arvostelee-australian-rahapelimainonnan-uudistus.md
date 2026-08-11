@@ -50,7 +50,6 @@ source_domain: "theguardian.com"
 source_attributions:
   - name: "The Guardian World"
     url: "https://theguardian.com/australia-news/live/2026/aug/11/australia-politics-live-rba-interest-rates-question-time-anthony-albanese-angus-taylor-one-nation-pauline-hanson-ndis-gambling-ads-ntwnfb"
-briefing: true
 draft: false
 ---
 
