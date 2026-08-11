@@ -243,5 +243,37 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20238618?origin=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-11T15:48:06.249969+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260811T153850Z_3403a3ce1b",
+    "category": "Talous",
+    "selected_source_words": 268,
+    "selected_source_blocks": 3,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 5.9,
+    "quality_reasons": [
+      "filler phrases",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "only 1 paragraphs (min 3)",
+      "filler_gate (-10): filler:herättää kysymyksiä"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [
+      "filler_gate (-10): filler:herättää kysymyksiä"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_thin_source",
+    "fail_closed": true,
+    "source_backed": false,
+    "article_words": 300,
+    "title": "Carunan omistajavaihdos herättää kysymyksiä sähköverkkojen valvonnasta"
+  },
+  "failure": "quality_gate_rejected: filler phrases; missing: image; readability few paragraphs (1); readability wall of text; only 1 paragraphs (min 3); filler_gate (-10): filler:herättää kysymyksiä"
 }
