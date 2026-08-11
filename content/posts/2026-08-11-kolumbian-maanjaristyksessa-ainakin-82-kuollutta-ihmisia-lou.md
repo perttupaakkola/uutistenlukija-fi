@@ -50,7 +50,6 @@ source_attributions:
     url: "https://independent.co.uk/news/world/americas/colombia-earthquake-choco-bogota-venezuela-b3030473.html"
   - name: "Yahoo"
     url: "https://yahoo.com/news/world/articles/least-82-dead-7-4-181922166.html"
-briefing: true
 draft: false
 ---
 
