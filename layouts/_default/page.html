@@ -21,6 +21,12 @@
   {{ end }}
   {{ end }}
   <h1>{{ .Title }}</h1>
+  {{- $hailuotoDeckFile := "2026-06-25-raystaspaaskyjen-pesinta-viivastyttaa-hailuodon-lauttojen-si" -}}
+  {{- if and .File (eq .File.BaseFileName $hailuotoDeckFile) }}
+    {{- with .Params.description }}
+  <p class="article-ingress article-ingress--hailuoto" data-ope507-hailuoto-deck="true">{{ . }}</p>
+    {{- end }}
+  {{- end }}
   {{ partial "hero-image.html" . }}
   {{ partial "article-body.html" (dict
     "page" .

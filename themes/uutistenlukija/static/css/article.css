@@ -15,6 +15,15 @@
   overflow-wrap: break-word;
 }
 
+.single-article > .article-ingress--hailuoto {
+  max-width: 38em;
+  margin: 0 0 1.35rem;
+  color: var(--text-secondary);
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
 .single-article .article-meta {
   font-family: var(--font-sans);
   font-size: 0.84rem;

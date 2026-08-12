@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Hailuodon ja Oulunsalon välillä liikennöineiden lauttojen siirto etelään viivästyy, koska aluksilla pesii uhanalaisia räystäspääskyjä. Poikasia on arvio…"
+description: "Hailuodon lauttojen siirto viivästyy, sillä lautoilla pesivillä uhanalaisilla räystäspääskyillä on yli sata poikasta."
 summary: "Hailuodon ja Oulunsalon välillä liikennöineiden lauttojen siirto etelään viivästyy, koska aluksilla pesii uhanalaisia räystäspääskyjä. Poikasia on arvioiden mukaan yli sata, ja niiden pelätään kuolevan, jos lautat siirretään ennen kuin ne ovat lentokykyisiä."
 summary_bullets:
   - "Hailuodon lauttojen siirto etelään viivästyy räystäspääskyjen pesinnän vuoksi."

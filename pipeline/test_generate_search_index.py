@@ -129,7 +129,10 @@ class GenerateSearchIndexTest(unittest.TestCase):
         client = (ROOT / "static/js/search.js").read_text(encoding="utf-8")
         self.assertIn("oppaat: 'Oppaat'", client)
         self.assertIn("item.search_terms", client)
-        self.assertIn("[title, summary, category, searchTerms]", client)
+        self.assertIn(
+            "[title, summary, category, searchTerms, searchAliases]",
+            client,
+        )
 
 
 if __name__ == "__main__":

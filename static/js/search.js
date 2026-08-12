@@ -15,6 +15,9 @@
     tiede: 'Tiede',
     oppaat: 'Oppaat'
   };
+  var ARTICLE_SEARCH_ALIASES_BY_URL = {
+    '/posts/2026-06-25-raystaspaaskyjen-pesinta-viivastyttaa-hailuodon-lauttojen-si/': ['Hailuoto']
+  };
 
   function esc(value) {
     return String(value || '')
@@ -54,6 +57,27 @@
     return 'result-cat result-cat--' + normalize(category);
   }
 
+  function prepareItem(item, aliasesByUrl) {
+    var title = String(item.title || '');
+    var summary = String(item.summary || item.description || '');
+    var category = String(item.category || '');
+    var url = String(item.url || item.slug || item.permalink || '#');
+    var publishedAt = String(item.published_at || item.date || item.publishedAt || '');
+    var searchTerms = Array.isArray(item.search_terms)
+      ? item.search_terms.join(' ')
+      : String(item.search_terms || '');
+    var aliasMap = aliasesByUrl || ARTICLE_SEARCH_ALIASES_BY_URL;
+    var searchAliases = Array.isArray(aliasMap[url]) ? aliasMap[url].join(' ') : '';
+    return {
+      title: title,
+      slug: url,
+      category: category,
+      summary: summary,
+      published_at: publishedAt,
+      haystack: normalize([title, summary, category, searchTerms, searchAliases].join(' '))
+    };
+  }
+
   function ensureIndex() {
     if (!indexPromise) {
       indexPromise = fetch(INDEX_URL)
@@ -63,22 +87,7 @@
         })
         .then(function (items) {
           return (items || []).map(function (item) {
-            var title = String(item.title || '');
-            var summary = String(item.summary || item.description || '');
-            var category = String(item.category || '');
-            var url = String(item.url || item.slug || item.permalink || '#');
-            var publishedAt = String(item.published_at || item.date || item.publishedAt || '');
-            var searchTerms = Array.isArray(item.search_terms)
-              ? item.search_terms.join(' ')
-              : String(item.search_terms || '');
-            return {
-              title: title,
-              slug: url,
-              category: category,
-              summary: summary,
-              published_at: publishedAt,
-              haystack: normalize([title, summary, category, searchTerms].join(' '))
-            };
+            return prepareItem(item);
           });
         });
     }
@@ -356,6 +365,16 @@
       input.value = initialQuery;
       runSearch(initialQuery);
     }
+  }
+
+  if (typeof module === 'object' && module.exports) {
+    module.exports = {
+      ARTICLE_SEARCH_ALIASES_BY_URL: ARTICLE_SEARCH_ALIASES_BY_URL,
+      normalize: normalize,
+      prepareItem: prepareItem,
+      rankResults: rankResults
+    };
+    return;
   }
 
   document.addEventListener('DOMContentLoaded', function () {
