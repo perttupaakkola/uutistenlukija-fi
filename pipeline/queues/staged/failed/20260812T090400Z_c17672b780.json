@@ -256,5 +256,38 @@
       }
     ],
     "source_url": "https://www.yrittajat.fi/uutiset/lampopumppujen-myynti-ampaisi-kasvuun-kuopiolaisyrittaja-huomasi-asiakkaiden-kyllastyneen-liian-lampimiin-kesiin/"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-12T09:26:45.885497+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260812T090400Z_c17672b780",
+    "category": "Talous",
+    "selected_source_words": 355,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 6.63,
+    "quality_reasons": [
+      "length under target (263 words)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "unsourced numbers",
+      "only 1 paragraphs (min 3)",
+      "unsourced_numbers: 60"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 60"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 263,
+    "title": "Lämpöpumppujen myynti kasvoi yli 60 prosenttia – kuopiolaisyrityksessä viilennys korostuu"
+  },
+  "failure": "quality_gate_rejected: length under target (263 words); missing: image; readability few paragraphs (1); readability wall of text; unsourced numbers; only 1 paragraphs (min 3); unsourced_numbers: 60"
 }
