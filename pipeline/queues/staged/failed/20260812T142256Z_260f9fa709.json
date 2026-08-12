@@ -254,5 +254,37 @@
       }
     ],
     "source_url": "https://www.arvopaperi.fi/uutiset/a/ec27e6e3-1282-4fc7-b641-33e3818485cf?utm_source=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-12T14:26:20.403788+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260812T142256Z_260f9fa709",
+    "category": "Talous",
+    "selected_source_words": 298,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 50,
+    "quality_normalized": 7.84,
+    "quality_reasons": [
+      "language borderline Finnish signal (8.0%)",
+      "length under target (272 words)",
+      "missing: image",
+      "unsourced numbers",
+      "keyword stuffing: 'prosenttia' 16× (7.2%)",
+      "unsourced_numbers: 0.4prosentti, 0.5prosentti, 0.7prosentti, 1.4prosentti, 14"
+    ],
+    "hard_fails": [
+      "keyword stuffing: 'prosenttia' 16× (7.2%)"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 0.4prosentti, 0.5prosentti, 0.7prosentti, 1.4prosentti, 14"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_thin_source",
+    "fail_closed": true,
+    "source_backed": false,
+    "article_words": 272,
+    "title": "Nokia veti Helsingin pörssiä nousuun tulosyhtiöiden laskusta huolimatta"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (8.0%); length under target (272 words); missing: image; unsourced numbers; keyword stuffing: 'prosenttia' 16× (7.2%); unsourced_numbers: 0.4prosentti, 0.5prosentti, 0.7prosentti, 1.4prosentti, 14"
 }
