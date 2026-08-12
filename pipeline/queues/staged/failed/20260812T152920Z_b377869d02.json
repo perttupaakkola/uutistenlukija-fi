@@ -232,5 +232,36 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20212869/64-3-295713"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-12T15:36:41.601981+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260812T152920Z_b377869d02",
+    "category": "Ulkomaat",
+    "selected_source_words": 284,
+    "selected_source_blocks": 3,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 6.57,
+    "quality_reasons": [
+      "length under target (256 words)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "only 1 paragraphs (min 3)",
+      "source_confidence_denial_context_missing"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)",
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_thin_source",
+    "fail_closed": true,
+    "source_backed": false,
+    "article_words": 256,
+    "title": "Trump väittää Yhdysvaltojen hallitsevan Hormuzinsalmea täysin"
+  },
+  "failure": "quality_gate_rejected: length under target (256 words); missing: image; readability few paragraphs (1); readability wall of text; only 1 paragraphs (min 3); source_confidence_denial_context_missing"
 }
