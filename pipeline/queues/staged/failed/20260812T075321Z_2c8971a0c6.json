@@ -260,5 +260,35 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20240347?origin=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-12T09:20:10.068698+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260812T075321Z_2c8971a0c6",
+    "category": "Talous",
+    "selected_source_words": 310,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 6.39,
+    "quality_reasons": [
+      "language borderline Finnish signal (8.0%)",
+      "length under target (268 words)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "only 1 paragraphs (min 3)"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 268,
+    "title": "Laiva Gold tähtää Kanadan pörssiin – Raahen kultakaivoksen avaaminen riippuu luvista"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (8.0%); length under target (268 words); missing: image; readability few paragraphs (1); readability wall of text; only 1 paragraphs (min 3)"
 }
