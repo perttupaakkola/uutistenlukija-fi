@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Ranskan poliisi on ottanut kiinni kaksi ihmistä, joita epäillään Pariisin eteläpuolella sijaitsevan Fontainebleaun metsän maastopalon tahallisesta sytyt…"
+description: "Ranskan poliisi otti kiinni kaksi ihmistä, joita epäillään Fontainebleaun maastopalon sytyttämisestä. Palo oli polttanut yli tuhat hehtaaria."
 summary: "Ranskan poliisi on ottanut kiinni kaksi ihmistä, joita epäillään Pariisin eteläpuolella sijaitsevan Fontainebleaun metsän maastopalon tahallisesta sytyttämisestä. Palo oli maanantaihin mennessä polttanut yli tuhat hehtaaria metsää."
 summary_bullets:
   - "Kaksi ihmistä otettiin kiinni Fontainebleaun maastopaloon liittyvän tuhopolttoepäilyn vuoksi."
