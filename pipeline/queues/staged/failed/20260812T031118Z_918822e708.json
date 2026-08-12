@@ -241,5 +241,34 @@
       }
     ],
     "source_url": "https://www.bbc.co.uk/news/articles/c980r4wpl9lo?at_medium=RSS&at_campaign=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-12T03:37:45.800592+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260812T031118Z_918822e708",
+    "category": "Ulkomaat",
+    "selected_source_words": 422,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 6.46,
+    "quality_reasons": [
+      "length under target (277 words)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "only 1 paragraphs (min 3)"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 277,
+    "title": "Trump vaihtoi salaa konetta – viranomaiset kertoivat Iranin ohjusuhasta"
+  },
+  "failure": "quality_gate_rejected: length under target (277 words); missing: image; readability few paragraphs (1); readability wall of text; only 1 paragraphs (min 3)"
 }
