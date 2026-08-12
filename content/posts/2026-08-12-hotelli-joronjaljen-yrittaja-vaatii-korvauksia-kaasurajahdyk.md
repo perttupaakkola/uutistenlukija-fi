@@ -50,7 +50,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/hotelliyrittaja-auvo-puurtinen-kay-taistelua-vakuutusyhtiota-vastaan-hamaan-loppuun-asti-uskon-etta-hotelli-viela-loistaa"
-briefing: true
 draft: false
 ---
 
