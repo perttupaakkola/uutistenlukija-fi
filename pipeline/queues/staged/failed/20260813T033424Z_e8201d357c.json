@@ -285,5 +285,34 @@
       }
     ],
     "source_url": "https://www.bbc.co.uk/news/articles/c5y49xp2wrno?at_medium=RSS&at_campaign=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-13T03:48:20.880923+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260813T033424Z_e8201d357c",
+    "category": "Ulkomaat",
+    "selected_source_words": 325,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 6.61,
+    "quality_reasons": [
+      "length under target (251 words)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "only 1 paragraphs (min 3)"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 251,
+    "title": "Ukrainan iskun kerrotaan vaurioittaneen kahta viljaterminaalia Novorossijskissa"
+  },
+  "failure": "quality_gate_rejected: length under target (251 words); missing: image; readability few paragraphs (1); readability wall of text; only 1 paragraphs (min 3)"
 }
