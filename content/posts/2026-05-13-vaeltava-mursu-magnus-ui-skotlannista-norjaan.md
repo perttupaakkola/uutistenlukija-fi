@@ -2,7 +2,7 @@
 title: "Vaeltava mursu Magnus ui Skotlannista Norjaan"
 date: 2026-05-13T18:08:06.020539+00:00
 categories:
-  - Kotimaa
+  - Ulkomaat
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
