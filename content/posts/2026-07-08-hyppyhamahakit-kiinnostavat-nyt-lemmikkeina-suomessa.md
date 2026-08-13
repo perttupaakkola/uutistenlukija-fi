@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Hyppyhämähäkkien suosio on kasvanut, ja eläinliikkeet kertovat niiden olevan kysyttyjä lemmikkejä. Jurvassa Tiia Korpikaijan perheessä yli kaksivuotias…"
+description: "Hyppyhämähäkit kiinnostavat lemmikkeinä Suomessa. Eläinliikkeiden mukaan suosioon vaikuttavat pieni koko, helppohoitoisuus ja utelias käytös."
 summary: "Hyppyhämähäkkien suosio on kasvanut, ja eläinliikkeet kertovat niiden olevan kysyttyjä lemmikkejä. Jurvassa Tiia Korpikaijan perheessä yli kaksivuotias Mauri on ehtinyt mukaan arkeen, someen ja lomallekin."
 summary_bullets:
   - "Hyppyhämähäkkien suosio lemmikkeinä on kasvanut Suomessa viime vuosina."
