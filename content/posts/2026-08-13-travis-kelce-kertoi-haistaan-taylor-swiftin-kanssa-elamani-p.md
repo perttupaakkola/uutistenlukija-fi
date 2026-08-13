@@ -54,7 +54,6 @@ source_attributions:
     url: "https://yahoo.com/entertainment/celebrity/articles/travis-kelce-opens-marrying-taylor-184104770.html"
   - name: "Yahoo Sports"
     url: "https://sports.yahoo.com/articles/travis-kelce-fitness-post-wedding-124913232.html"
-briefing: true
 draft: false
 ---
 
