@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Savonlinnan Kongonsaareen on tulossa ennen juhannusta uusi automaattilossi, joka parantaa saaren saavutettavuutta ja turvallisuutta. Lossi kantaa 35 ton…"
+description: "Kongonsaaren uusi automaattilossi kantaa 35 tonnia, parantaa turvallisuutta ja helpottaa paloautojen, ambulanssien sekä raskaan kaluston kulkua."
 summary: "Savonlinnan Kongonsaareen on tulossa ennen juhannusta uusi automaattilossi, joka parantaa saaren saavutettavuutta ja turvallisuutta. Lossi kantaa 35 tonnia ja mahdollistaa muun muassa paloautojen ja ambulanssien pääsyn saarelle aiempaa helpommin."
 summary_bullets:
   - "Savonlinnan Kongonsaareen tulee ennen juhannusta uusi 35 tonnin automaattilossi."
