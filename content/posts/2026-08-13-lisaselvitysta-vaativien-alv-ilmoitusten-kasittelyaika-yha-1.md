@@ -48,7 +48,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/alv-palautuksia-saa-yha-odottaa-kuukausia-kasittelyaika-kohtuuttoman-pitka"
-briefing: true
 draft: false
 ---
 
