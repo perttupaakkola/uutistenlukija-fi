@@ -275,5 +275,34 @@
       }
     ],
     "source_url": "https://www.bbc.co.uk/news/articles/cj4kppdk2qwo?at_medium=RSS&at_campaign=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-13T20:29:35.039381+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260813T202151Z_09443cca3d",
+    "category": "Ulkomaat",
+    "selected_source_words": 498,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 6.66,
+    "quality_reasons": [
+      "length under target (275 words)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "only 1 paragraphs (min 3)"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 275,
+    "title": "Noin tusinan palestiinalaiskodin asukkaat käskettiin poistumaan Qusrassa"
+  },
+  "failure": "quality_gate_rejected: length under target (275 words); missing: image; readability few paragraphs (1); readability wall of text; only 1 paragraphs (min 3)"
 }
