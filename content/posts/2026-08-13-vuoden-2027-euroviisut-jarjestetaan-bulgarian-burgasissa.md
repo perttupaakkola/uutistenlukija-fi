@@ -50,7 +50,6 @@ source_attributions:
     url: "https://bbc.co.uk/news/articles/cly8p8lpyvmo?at_medium=RSS&at_campaign=rss"
   - name: "Yahoo"
     url: "https://yahoo.com/entertainment/music/articles/eurovision-song-contest-2027-host-100416076.html"
-briefing: true
 draft: false
 ---
 
