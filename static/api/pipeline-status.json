@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-13T05:39:46+00:00",
+  "generated_at": "2026-08-13T08:59:08+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -15,7 +15,7 @@
     "published": 9,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-13T05:36:22.000844+00:00"
+    "last_published_ts": "2026-08-13T08:56:10.516893+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -28,35 +28,35 @@
   },
   "trending": [
     [
+      "sanoi",
+      9
+    ],
+    [
       "barkov",
       8
     ],
     [
+      "kertoi",
+      7
+    ],
+    [
+      "mukaansa",
+      7
+    ],
+    [
       "kelce",
       7
-    ],
-    [
-      "sanoi",
-      7
-    ],
-    [
-      "olivat",
-      7
-    ],
-    [
-      "kuvaili",
-      6
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 39,
+    "outboxCount": 40,
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "worstCaseRemainingCycles": 13,
+    "worstCaseRemainingCycles": 14,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
     "reasons": [
