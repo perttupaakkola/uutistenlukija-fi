@@ -287,5 +287,31 @@
       }
     ],
     "source_url": "https://www.bbc.co.uk/news/articles/cyvl2d5j52lo?at_medium=RSS&at_campaign=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-13T23:39:04.260022+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260813T232643Z_89555754a0",
+    "category": "Ulkomaat",
+    "selected_source_words": 377,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 8.26,
+    "quality_reasons": [
+      "missing: image",
+      "source_confidence_denial_context_missing"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 307,
+    "title": "USS Abraham Lincolnin ennätyspitkä merijakso herättää huolta miehistön oloista"
+  },
+  "failure": "quality_gate_rejected: missing: image; source_confidence_denial_context_missing"
 }
