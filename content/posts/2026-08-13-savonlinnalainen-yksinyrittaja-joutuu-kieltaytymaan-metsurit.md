@@ -48,7 +48,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/ahkeran-miehen-maineessa-oleva-yksinyrittaja-mika-laitinen-ei-ehdi-millaan-jokaiselle-tarjotulle-tyokeikalle-jotkut-ovat-kateellisia"
-briefing: true
 draft: false
 ---
 
