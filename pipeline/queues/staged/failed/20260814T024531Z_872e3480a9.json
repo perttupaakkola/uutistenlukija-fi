@@ -212,5 +212,32 @@
       }
     ],
     "source_url": "https://yle.fi/uutiset/lyhyesti/74-20240006"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-14T02:58:49.507087+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260814T024531Z_872e3480a9",
+    "category": "Ulkomaat",
+    "selected_source_words": 256,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.9,
+    "quality_total": 40,
+    "quality_normalized": 8.11,
+    "quality_reasons": [
+      "language borderline Finnish signal (9.0%)",
+      "missing: image",
+      "source_confidence_denial_context_missing"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_thin_source",
+    "fail_closed": true,
+    "source_backed": false,
+    "article_words": 318,
+    "title": "Hegseth: Yhdysvallat suunnittelee maaiskuja huumekartelleja vastaan"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (9.0%); missing: image; source_confidence_denial_context_missing"
 }
