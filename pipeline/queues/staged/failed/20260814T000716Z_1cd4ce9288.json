@@ -218,5 +218,37 @@
       }
     ],
     "source_url": "https://www.suomenmaa.fi/uutiset/putin-vieraili-kiistellyilla-kuriilien-saarilla-japanilta-jyrkka-reaktio-2/"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-14T00:15:20.687350+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260814T000716Z_1cd4ce9288",
+    "category": "Ulkomaat",
+    "selected_source_words": 254,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.9,
+    "quality_total": 40,
+    "quality_normalized": 7.75,
+    "quality_reasons": [
+      "language borderline Finnish signal (8.0%)",
+      "length under target (250 words)",
+      "missing: image",
+      "unsourced numbers",
+      "source_confidence_denial_context_missing",
+      "unsourced_numbers: 2020"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 2020"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_thin_source",
+    "fail_closed": true,
+    "source_backed": false,
+    "article_words": 250,
+    "title": "Putin vieraili kiistellyillä Kuriileilla – Japani vastustaa jyrkästi"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (8.0%); length under target (250 words); missing: image; unsourced numbers; source_confidence_denial_context_missing; unsourced_numbers: 2020"
 }
