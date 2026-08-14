@@ -48,7 +48,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/yritysten-luottamus-verotukseen-laski-vain-joka-neljas-katsoo-suomen-jarjestelman-kannustavan-yrittajyyteen"
-briefing: true
 draft: false
 ---
 
