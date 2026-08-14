@@ -1,5 +1,6 @@
 ---
 title: "Ukrainalaislääkärin tulevaisuus Mäntyharjussa riippuu pian työpaikasta"
+seo_title: "Kateryna Prochukhan haluaa lääkäriksi Mäntyharjuun"
 date: 2026-06-01T02:48:06.535432+00:00
 categories:
   - Ulkomaat
