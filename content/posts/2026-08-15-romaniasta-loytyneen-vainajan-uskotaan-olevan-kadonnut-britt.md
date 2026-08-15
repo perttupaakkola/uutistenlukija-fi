@@ -54,7 +54,6 @@ source_attributions:
     url: "https://aol.com/articles/body-found-search-18-old-160543000.html"
   - name: "BBC"
     url: "https://bbc.com/news/articles/cwy4413g6rko"
-briefing: true
 draft: false
 ---
 
