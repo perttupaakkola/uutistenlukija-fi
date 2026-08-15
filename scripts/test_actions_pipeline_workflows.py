@@ -903,6 +903,158 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
             actual_output = output.read_text(encoding="utf-8") if output.exists() else ""
         return result, actual_output
 
+    def _git(self, cwd: Path, *args: str) -> str:
+        result = subprocess.run(
+            ["git", *args],
+            cwd=cwd,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        return result.stdout.strip()
+
+    def _commit_changes(
+        self,
+        repository: Path,
+        changes: dict[str, str | None],
+        message: str,
+    ) -> str:
+        for relative_path, content in changes.items():
+            target = repository / relative_path
+            if content is None:
+                target.unlink()
+            else:
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_text(content, encoding="utf-8")
+        self._git(repository, "add", "-A")
+        self._git(repository, "commit", "-m", message)
+        return self._git(repository, "rev-parse", "HEAD")
+
+    def _run_real_schedule_gate(
+        self,
+        first_changes: dict[str, str | None],
+        *,
+        second_changes: dict[str, str | None] | None = None,
+        divergent: bool = False,
+        merge_history: bool = False,
+    ) -> tuple[subprocess.CompletedProcess, str, dict[str, str]]:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            remote = root / "remote.git"
+            seed = root / "seed"
+            runner = root / "runner"
+            runner_temp = root / "runner-temp"
+
+            self._git(root, "init", "--bare", str(remote))
+            seed.mkdir()
+            self._git(seed, "init")
+            self._git(seed, "config", "user.name", "Workflow Fixture")
+            self._git(seed, "config", "user.email", "workflow-fixture@example.invalid")
+            marker = seed / "pipeline/actions-publish.enabled"
+            marker.parent.mkdir(parents=True)
+            marker.write_text("", encoding="utf-8")
+            (seed / "README.md").write_text("baseline\n", encoding="utf-8")
+            self._git(seed, "add", "-A")
+            self._git(seed, "commit", "-m", "baseline")
+            self._git(seed, "branch", "-M", "main")
+            self._git(seed, "remote", "add", "origin", str(remote))
+            self._git(seed, "push", "-u", "origin", "main")
+            base = self._git(seed, "rev-parse", "HEAD")
+
+            self._git(root, "clone", "--branch", "main", str(remote), str(runner))
+            self._git(runner, "checkout", "-B", "main", base)
+
+            if merge_history:
+                self._git(seed, "checkout", "-b", "queue-side", base)
+                self._commit_changes(seed, first_changes, "side queue motion")
+                self._git(seed, "checkout", "main")
+                self._commit_changes(
+                    seed,
+                    {
+                        "pipeline/queues/staged/ready/main.json":
+                            '{"packet":"main"}\n',
+                    },
+                    "main queue motion",
+                )
+                self._git(seed, "merge", "--no-ff", "queue-side", "-m", "merge queue motion")
+                first_tip = self._git(seed, "rev-parse", "HEAD")
+            else:
+                first_tip = self._commit_changes(seed, first_changes, "first main motion")
+            self._git(seed, "push", "origin", "HEAD:main")
+
+            if divergent:
+                tree = self._git(seed, "rev-parse", f"{first_tip}^{{tree}}")
+                divergent_tip = self._git(seed, "commit-tree", tree, "-m", "divergent motion")
+                self._git(
+                    seed,
+                    "push",
+                    "origin",
+                    f"{divergent_tip}:refs/heads/divergent-fixture",
+                )
+                self._git(
+                    root,
+                    f"--git-dir={remote}",
+                    "update-ref",
+                    "refs/heads/main",
+                    divergent_tip,
+                    first_tip,
+                )
+                first_tip = divergent_tip
+
+            second_tip = ""
+            wrapper = ""
+            if second_changes is not None:
+                second_tip = self._commit_changes(seed, second_changes, "second main motion")
+                wrapper = textwrap.dedent(
+                    """\
+                    TEST_FETCH_COUNT=0
+                    git() {
+                      if [ "$1" = "fetch" ]; then
+                        command git "$@"
+                        fetch_status=$?
+                        TEST_FETCH_COUNT=$((TEST_FETCH_COUNT + 1))
+                        if [ "$fetch_status" -eq 0 ] && [ "$TEST_FETCH_COUNT" -eq 1 ]; then
+                          command git -C "$TEST_SECOND_PUSH_REPO" push origin HEAD:main >/dev/null
+                          fetch_status=$?
+                        fi
+                        return "$fetch_status"
+                      fi
+                      command git "$@"
+                    }
+                    """
+                )
+
+            output = root / "github-output"
+            runner_temp.mkdir()
+            env = os.environ.copy()
+            env.update(
+                {
+                    "GITHUB_EVENT_NAME": "schedule",
+                    "GITHUB_SHA": base,
+                    "GITHUB_OUTPUT": str(output),
+                    "RUNNER_TEMP": str(runner_temp),
+                    "TEST_SECOND_PUSH_REPO": str(seed),
+                }
+            )
+            result = subprocess.run(
+                ["bash", "-c", wrapper + self._gate_run_script()],
+                cwd=runner,
+                env=env,
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            actual_output = output.read_text(encoding="utf-8") if output.exists() else ""
+            state = {
+                "base": base,
+                "first_tip": first_tip,
+                "second_tip": second_tip,
+                "head": self._git(runner, "rev-parse", "HEAD"),
+                "branch": self._git(runner, "branch", "--show-current"),
+            }
+        return result, actual_output, state
+
     def test_runway_summary_uses_the_canonical_status_producer(self) -> None:
         publish = self.workflow.index("- name: Publish staged outbox packets")
         summary = self.workflow.index("- name: Summarize staged queue runway")
@@ -1005,16 +1157,14 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
         self.assertLess(gate, setup)
         self.assertLess(setup, publish)
 
-    def test_superseded_automatic_runs_skip_but_stale_manual_fails(self) -> None:
-        for event_name in ("push", "schedule"):
-            with self.subTest(event=event_name):
-                result, output = self._run_gate(
-                    event_name=event_name,
-                    remote_main="newer-main",
-                )
-                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-                self.assertEqual(output, "enabled=false\n")
-                self.assertIn("Superseded staged publish skipped", result.stdout)
+    def test_superseded_push_skips_but_stale_manual_fails(self) -> None:
+        result, output = self._run_gate(
+            event_name="push",
+            remote_main="newer-main",
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertEqual(output, "enabled=false\n")
+        self.assertIn("Superseded staged publish skipped", result.stdout)
 
         result, output = self._run_gate(
             event_name="workflow_dispatch",
@@ -1024,6 +1174,97 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertEqual(output, "")
         self.assertIn("Stale manual staged publish rejected", result.stdout)
+
+    def test_stale_schedule_readmits_one_queue_json_motion(self) -> None:
+        result, output, state = self._run_real_schedule_gate(
+            {
+                "pipeline/queues/staged/ready/20260815T103927Z_415eeab89b.json":
+                    '{"schema":"uutistenlukija.staged_packet.v1"}\n',
+            }
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertEqual(output, "enabled=true\n")
+        self.assertEqual(state["head"], state["first_tip"])
+        self.assertEqual(state["branch"], "main")
+
+    def test_stale_schedule_stops_on_second_main_motion(self) -> None:
+        result, output, state = self._run_real_schedule_gate(
+            {
+                "pipeline/queues/staged/ready/first.json": '{"packet":"first"}\n',
+            },
+            second_changes={
+                "pipeline/queues/staged/ready/second.json": '{"packet":"second"}\n',
+            },
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertEqual(output, "enabled=false\n")
+        self.assertIn("reason=second_main_motion", result.stdout)
+        self.assertEqual(state["head"], state["first_tip"])
+        self.assertNotEqual(state["head"], state["second_tip"])
+
+    def test_stale_schedule_stops_on_wider_drift(self) -> None:
+        wider_paths = (
+            ".github/workflows/staged-publish.yml",
+            "pipeline/generate_pipeline_status.py",
+            "content/posts/drift.md",
+            "pipeline/actions-publish.enabled",
+        )
+        for wider_path in wider_paths:
+            with self.subTest(path=wider_path):
+                result, output, state = self._run_real_schedule_gate(
+                    {
+                        "pipeline/queues/staged/ready/packet.json": '{"packet":"queue"}\n',
+                        wider_path: "wider drift\n",
+                    }
+                )
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertEqual(output, "enabled=false\n")
+                self.assertIn("reason=wider_drift", result.stdout)
+                self.assertIn(f"path={wider_path}", result.stdout)
+                self.assertEqual(state["head"], state["base"])
+
+    def test_stale_schedule_stops_on_invalid_queue_json(self) -> None:
+        result, output, state = self._run_real_schedule_gate(
+            {
+                "pipeline/queues/staged/ready/packet.json": "not json\n",
+            }
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertEqual(output, "enabled=false\n")
+        self.assertIn("reason=invalid_queue_json", result.stdout)
+        self.assertEqual(state["head"], state["base"])
+
+    def test_stale_schedule_stops_on_ambiguous_ancestry(self) -> None:
+        cases = (
+            {"divergent": True},
+            {"merge_history": True},
+        )
+        for options in cases:
+            with self.subTest(options=options):
+                result, output, state = self._run_real_schedule_gate(
+                    {
+                        "pipeline/queues/staged/ready/packet.json":
+                            '{"packet":"queue"}\n',
+                    },
+                    **options,
+                )
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertEqual(output, "enabled=false\n")
+                self.assertIn("reason=ambiguous_ancestry", result.stdout)
+                self.assertEqual(state["head"], state["base"])
+
+    def test_schedule_readmission_is_single_bounded_refetch_and_recheckout(self) -> None:
+        gate = self._gate_run_script()
+        fetch = 'git fetch --no-tags --force origin "refs/heads/main:${REMOTE_REF}"'
+        self.assertEqual(gate.count(fetch), 2)
+        self.assertEqual(gate.count("git checkout main"), 1)
+        self.assertEqual(gate.count('git merge --ff-only "$REMOTE_MAIN"'), 1)
+        self.assertIn('pipeline/queues/staged/*.json)', gate)
+        self.assertIn('git merge-base --is-ancestor "$CHECKOUT_HEAD" "$REMOTE_MAIN"', gate)
+        self.assertIn("reason=ambiguous_ancestry", gate)
+        self.assertIn("reason=wider_drift", gate)
+        self.assertIn("reason=invalid_queue_json", gate)
+        self.assertIn("reason=second_main_motion", gate)
 
     def test_admission_failures_do_not_enable_publishing(self) -> None:
         cases = (

@@ -90,10 +90,112 @@ jobs:
 
           if [ "$CHECKOUT_HEAD" != "$REMOTE_MAIN" ]; then
             case "$GITHUB_EVENT_NAME" in
-              push|schedule)
+              push)
                 echo "enabled=false" >> "$GITHUB_OUTPUT"
                 echo "::notice title=Superseded staged publish skipped::checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN"
                 exit 0
+                ;;
+              schedule)
+                stop_schedule_readmission() {
+                  echo "enabled=false" >> "$GITHUB_OUTPUT"
+                  echo "::notice title=Scheduled staged publish readmission stopped::$1"
+                  exit 0
+                }
+
+                if ! git merge-base --is-ancestor "$CHECKOUT_HEAD" "$REMOTE_MAIN"; then
+                  stop_schedule_readmission "checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN reason=ambiguous_ancestry"
+                fi
+
+                CURSOR="$REMOTE_MAIN"
+                QUEUE_PATH_COUNT=0
+                while [ "$CURSOR" != "$CHECKOUT_HEAD" ]; do
+                  if ! COMMIT_LINE="$(git rev-list --parents -n 1 "$CURSOR")"; then
+                    echo "::error title=Staged publish admission failed::Unable to inspect intervening commit $CURSOR"
+                    exit 1
+                  fi
+                  read -r -a COMMIT_PARTS <<< "$COMMIT_LINE"
+                  if [ "${#COMMIT_PARTS[@]}" -ne 2 ] || [ "${COMMIT_PARTS[0]}" != "$CURSOR" ]; then
+                    stop_schedule_readmission "checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN reason=ambiguous_ancestry commit=$CURSOR"
+                  fi
+                  PARENT="${COMMIT_PARTS[1]}"
+
+                  if ! CHANGED_PATHS="$(git diff-tree --no-commit-id --name-only --no-renames -r "$PARENT" "$CURSOR" --)"; then
+                    echo "::error title=Staged publish admission failed::Unable to inspect intervening paths for $CURSOR"
+                    exit 1
+                  fi
+                  if [ -z "$CHANGED_PATHS" ]; then
+                    stop_schedule_readmission "checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN reason=empty_intervening_commit commit=$CURSOR"
+                  fi
+
+                  while IFS= read -r CHANGED_PATH; do
+                    case "$CHANGED_PATH" in
+                      pipeline/queues/staged/*.json) ;;
+                      *)
+                        stop_schedule_readmission "checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN reason=wider_drift path=$CHANGED_PATH"
+                        ;;
+                    esac
+
+                    TREE_ENTRY_COUNT=0
+                    for TREEISH in "$PARENT" "$CURSOR"; do
+                      if ! TREE_ENTRY="$(git ls-tree "$TREEISH" -- "$CHANGED_PATH")"; then
+                        echo "::error title=Staged publish admission failed::Unable to inspect $CHANGED_PATH at $TREEISH"
+                        exit 1
+                      fi
+                      if [ -n "$TREE_ENTRY" ]; then
+                        TREE_ENTRY_COUNT=$((TREE_ENTRY_COUNT + 1))
+                        ENTRY_MODE="${TREE_ENTRY%% *}"
+                        ENTRY_REST="${TREE_ENTRY#* }"
+                        ENTRY_TYPE="${ENTRY_REST%% *}"
+                        if [ "$ENTRY_MODE" != "100644" ] || [ "$ENTRY_TYPE" != "blob" ]; then
+                          stop_schedule_readmission "checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN reason=non_data_queue_entry path=$CHANGED_PATH"
+                        fi
+                        if ! git cat-file blob "$TREEISH:$CHANGED_PATH" | python3 -m json.tool >/dev/null; then
+                          stop_schedule_readmission "checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN reason=invalid_queue_json path=$CHANGED_PATH"
+                        fi
+                      fi
+                    done
+                    if [ "$TREE_ENTRY_COUNT" -eq 0 ]; then
+                      stop_schedule_readmission "checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN reason=unresolved_queue_entry path=$CHANGED_PATH"
+                    fi
+                    QUEUE_PATH_COUNT=$((QUEUE_PATH_COUNT + 1))
+                  done <<< "$CHANGED_PATHS"
+
+                  CURSOR="$PARENT"
+                done
+
+                if [ "$QUEUE_PATH_COUNT" -eq 0 ]; then
+                  stop_schedule_readmission "checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN reason=no_queue_data_motion"
+                fi
+                if ! CHECKOUT_STATUS="$(git status --porcelain=v1 -uall)"; then
+                  echo "::error title=Staged publish admission failed::Unable to inspect checkout cleanliness"
+                  exit 1
+                fi
+                if [ -n "$CHECKOUT_STATUS" ]; then
+                  echo "::error title=Staged publish admission failed::Checkout became dirty before schedule readmission"
+                  exit 1
+                fi
+                if ! git checkout main || ! git merge --ff-only "$REMOTE_MAIN"; then
+                  echo "::error title=Staged publish admission failed::Unable to fast-forward scheduled checkout to $REMOTE_MAIN"
+                  exit 1
+                fi
+                READMITTED_HEAD="$(git rev-parse HEAD)"
+                if [ "$READMITTED_HEAD" != "$REMOTE_MAIN" ]; then
+                  echo "::error title=Staged publish admission failed::Readmitted checkout identity mismatch"
+                  exit 1
+                fi
+
+                if ! git fetch --no-tags --force origin "refs/heads/main:${REMOTE_REF}"; then
+                  echo "::error title=Staged publish admission failed::Unable to refetch refs/heads/main after schedule readmission"
+                  exit 1
+                fi
+                FRESH_REMOTE_MAIN="$(git rev-parse --verify --quiet "${REMOTE_REF}^{commit}")"
+                if [ "$(printf '%s\n' "$FRESH_REMOTE_MAIN" | wc -w)" -ne 1 ]; then
+                  echo "::error title=Staged publish admission failed::Refetched origin/main did not resolve to exactly one commit"
+                  exit 1
+                fi
+                if [ "$FRESH_REMOTE_MAIN" != "$REMOTE_MAIN" ]; then
+                  stop_schedule_readmission "checkout=$CHECKOUT_HEAD admitted_main=$REMOTE_MAIN current_main=$FRESH_REMOTE_MAIN reason=second_main_motion"
+                fi
                 ;;
               workflow_dispatch)
                 echo "::error title=Stale manual staged publish rejected::checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN"
