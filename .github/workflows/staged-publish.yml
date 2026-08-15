@@ -153,11 +153,20 @@ jobs:
               exit 1
               ;;
           esac
-          python3 pipeline/staged_publish.py publish --max-articles "$MAX_ARTICLES" --git-push
+          python3 pipeline/staged_publish.py publish --max-articles "$MAX_ARTICLES" --git-push --outcome-json "$RUNNER_TEMP/staged-publish-cycle.json"
 
       - name: Summarize staged queue runway
-        if: steps.gate.outputs.enabled == 'true'
-        run: python3 pipeline/generate_pipeline_status.py --actions-summary
+        if: always() && steps.gate.outputs.enabled == 'true'
+        run: python3 pipeline/generate_pipeline_status.py --cycle-outcome "$RUNNER_TEMP/staged-publish-cycle.json" --actions-summary
+
+      - name: Preserve staged publish cycle telemetry
+        if: always() && steps.gate.outputs.enabled == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: staged-publish-cycle-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/staged-publish-cycle.json
+          if-no-files-found: error
+          retention-days: 14
 
       - name: Validate Hugo templates
         if: steps.gate.outputs.enabled == 'true'

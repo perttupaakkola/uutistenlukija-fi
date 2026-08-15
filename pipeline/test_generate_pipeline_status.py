@@ -10,10 +10,45 @@ import tempfile
 import types
 import unittest
 from contextlib import redirect_stdout
+from datetime import datetime, timezone
 from pathlib import Path
 from unittest.mock import patch
 
-from pipeline import generate_pipeline_status
+from pipeline import dashboard, generate_pipeline_status
+
+
+def _words(count: int, prefix: str) -> str:
+    return " ".join(f"{prefix}{index}" for index in range(count))
+
+
+def _outbox_record(action: str, index: int) -> dict:
+    if action not in {"publish", "monica_review", "reject"}:
+        raise ValueError(f"unsupported fixture action: {action}")
+    source_words = 100 if action == "monica_review" else 220
+    packet_category = "Kotimaa" if action == "reject" else "Ulkomaat"
+    source_url = f"https://example.test/story-{index}"
+    return {
+        "packet": {
+            "packet_id": f"packet-{index}",
+            "category": packet_category,
+            "clean_source_blocks": [
+                {
+                    "source": "Example News",
+                    "source_url": source_url,
+                    "source_domain": "example.test",
+                    "text": _words(source_words, f"source{index}-"),
+                    "word_count": source_words,
+                }
+            ],
+        },
+        "payload": {"category": "Ulkomaat"},
+        "article": {
+            "title": f"Testiuutinen {index}",
+            "category": "Ulkomaat",
+            "content": _words(220, f"article{index}-"),
+            "source_url": source_url,
+        },
+    }
 
 
 class StagedQueueRunwayTests(unittest.TestCase):
@@ -27,6 +62,7 @@ class StagedQueueRunwayTests(unittest.TestCase):
         worker_enabled: bool = False,
         ready_count: int = 0,
         writing_count: int = 0,
+        outbox_actions: list[str] | None = None,
     ) -> None:
         ready = root / "pipeline/queues/staged/ready"
         writing = root / "pipeline/queues/staged/writing"
@@ -38,8 +74,14 @@ class StagedQueueRunwayTests(unittest.TestCase):
             (ready / f"{index:03d}.json").write_text("{}", encoding="utf-8")
         for index in range(writing_count):
             (writing / f"{index:03d}.json").write_text("{}", encoding="utf-8")
-        for index in range(outbox_count):
-            (outbox / f"{index:03d}.json").write_text("{}", encoding="utf-8")
+        actions = outbox_actions or ["publish"] * outbox_count
+        if len(actions) != outbox_count:
+            raise ValueError("outbox_actions must match outbox_count")
+        for index, action in enumerate(actions):
+            (outbox / f"{index:03d}.json").write_text(
+                json.dumps(_outbox_record(action, index)),
+                encoding="utf-8",
+            )
         if publisher_enabled:
             (root / "pipeline/actions-publish.enabled").touch()
         if scanner_enabled:
@@ -74,6 +116,8 @@ class StagedQueueRunwayTests(unittest.TestCase):
                 self.assertFalse(runway["scannerEnabled"])
                 self.assertFalse(runway["workerEnabled"])
                 self.assertEqual(runway["maxPacketsPerCycle"], 3)
+                self.assertEqual(runway["rawOutboxRemainingCycles"], remaining_cycles)
+                self.assertEqual(runway["publishableRemainingCycles"], remaining_cycles)
                 self.assertEqual(runway["worstCaseRemainingCycles"], remaining_cycles)
                 self.assertEqual(runway["replenishmentState"], "disabled")
                 self.assertEqual(runway["severity"], severity)
@@ -83,7 +127,7 @@ class StagedQueueRunwayTests(unittest.TestCase):
                         "publisher_enabled",
                         "scanner_disabled",
                         "worker_disabled",
-                        f"outbox_{severity}",
+                        f"eligible_supply_{severity}",
                     ],
                 )
 
@@ -117,7 +161,7 @@ class StagedQueueRunwayTests(unittest.TestCase):
                 False,
                 "critical",
                 "scanner_enabled_writer_unverified",
-                ["writer_unverified", "outbox_critical"],
+                ["writer_unverified", "eligible_supply_critical"],
             ),
             (
                 True,
@@ -125,7 +169,7 @@ class StagedQueueRunwayTests(unittest.TestCase):
                 True,
                 "critical",
                 "worker_enabled_scanner_disabled",
-                ["scanner_replenishment_disabled", "outbox_critical"],
+                ["scanner_replenishment_disabled", "eligible_supply_critical"],
             ),
             (
                 False,
@@ -184,27 +228,27 @@ class StagedQueueRunwayTests(unittest.TestCase):
             )
             runway = generate_pipeline_status.build_staged_queue_runway(root)
 
+            self.assertEqual(runway["outboxCount"], 0)
+            self.assertEqual(runway["publishEligibleCount"], 0)
+            self.assertEqual(runway["monicaReviewCount"], 0)
+            self.assertEqual(runway["rejectCount"], 0)
+            self.assertEqual(runway["rawOutboxRemainingCycles"], 0)
+            self.assertEqual(runway["publishableRemainingCycles"], 0)
+            self.assertEqual(runway["worstCaseRemainingCycles"], 0)
             self.assertEqual(
-                runway,
-                {
-                    "readyCount": 0,
-                    "writingCount": 0,
-                    "outboxCount": 0,
-                    "publisherEnabled": True,
-                    "scannerEnabled": True,
-                    "workerEnabled": False,
-                    "maxPacketsPerCycle": 3,
-                    "worstCaseRemainingCycles": 0,
-                    "replenishmentState": "scanner_enabled_writer_unverified",
-                    "severity": "critical",
-                    "reasons": [
-                        "publisher_enabled",
-                        "scanner_enabled",
-                        "worker_disabled",
-                        "writer_unverified",
-                        "outbox_critical",
-                    ],
-                },
+                runway["replenishmentState"],
+                "scanner_enabled_writer_unverified",
+            )
+            self.assertEqual(runway["severity"], "critical")
+            self.assertEqual(
+                runway["reasons"],
+                [
+                    "publisher_enabled",
+                    "scanner_enabled",
+                    "worker_disabled",
+                    "writer_unverified",
+                    "eligible_supply_critical",
+                ],
             )
 
             summary = root / "summary.md"
@@ -216,7 +260,8 @@ class StagedQueueRunwayTests(unittest.TestCase):
             self.assertIn("## Staged queue runway", rendered)
             self.assertIn("| Ready packets | 0 |", rendered)
             self.assertIn("| Writing packets | 0 |", rendered)
-            self.assertIn("| Worst-case remaining cycles | 0 |", rendered)
+            self.assertIn("| Raw outbox cycles | 0 |", rendered)
+            self.assertIn("| Publishable remaining cycles | 0 |", rendered)
             self.assertIn("| Monica worker marker | disabled |", rendered)
             self.assertIn(
                 "| Replenishment | scanner_enabled_writer_unverified |",
@@ -267,6 +312,39 @@ class StagedQueueRunwayTests(unittest.TestCase):
             self.assertEqual(runway["severity"], "ok")
             self.assertIn("queue_active", runway["reasons"])
 
+    def test_raw_depth_does_not_overstate_publishable_supply(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.build_fixture(
+                root,
+                outbox_count=35,
+                outbox_actions=["monica_review"] * 16 + ["reject"] * 19,
+                publisher_enabled=True,
+                scanner_enabled=True,
+                worker_enabled=True,
+            )
+
+            runway = generate_pipeline_status.build_staged_queue_runway(root)
+
+            self.assertEqual(runway["outboxCount"], 35)
+            self.assertEqual(runway["publishEligibleCount"], 0)
+            self.assertEqual(runway["monicaReviewCount"], 16)
+            self.assertEqual(runway["rejectCount"], 19)
+            self.assertEqual(runway["rawOutboxRemainingCycles"], 12)
+            self.assertEqual(runway["publishableRemainingCycles"], 0)
+            self.assertEqual(runway["worstCaseRemainingCycles"], 0)
+            self.assertEqual(runway["severity"], "critical")
+            self.assertIn("eligible_supply_empty", runway["reasons"])
+            for action, expected in (
+                ("publish", 0),
+                ("monica_review", 16),
+                ("reject", 19),
+            ):
+                self.assertEqual(
+                    sum(runway["preflightPrimaryReasonBuckets"][action].values()),
+                    expected,
+                )
+
     def test_multiple_writing_packets_are_always_critical(self) -> None:
         for publisher_enabled in (False, True):
             for scanner_enabled in (False, True):
@@ -300,10 +378,17 @@ class StagedQueueRunwayTests(unittest.TestCase):
             "readyCount": 0,
             "writingCount": 0,
             "outboxCount": 13,
+            "publishEligibleCount": 13,
+            "monicaReviewCount": 0,
+            "rejectCount": 0,
+            "preflightPrimaryReasonBuckets": {},
+            "preflightReasonBuckets": {},
             "publisherEnabled": True,
             "scannerEnabled": False,
             "workerEnabled": False,
             "maxPacketsPerCycle": 3,
+            "rawOutboxRemainingCycles": 5,
+            "publishableRemainingCycles": 5,
             "worstCaseRemainingCycles": 5,
             "replenishmentState": "disabled",
             "severity": "ok",
@@ -311,11 +396,11 @@ class StagedQueueRunwayTests(unittest.TestCase):
                 "publisher_enabled",
                 "scanner_disabled",
                 "worker_disabled",
-                "outbox_ok",
+                "eligible_supply_ok",
             ],
         }
         fake_dashboard = types.ModuleType("dashboard")
-        fake_dashboard.build_dashboard = lambda hours: {
+        fake_dashboard.build_dashboard = lambda hours, actions_cycle_path=None: {
             "hours": hours,
             "articles": {"published": 0},
             "runs": {"total": 0},
@@ -337,6 +422,85 @@ class StagedQueueRunwayTests(unittest.TestCase):
 
             data = json.loads(output.read_text(encoding="utf-8"))
             self.assertEqual(data["stagedQueueRunway"], runway)
+
+    def test_main_consumes_actions_cycle_without_local_metrics_log(self) -> None:
+        runway = {
+            "readyCount": 0,
+            "writingCount": 0,
+            "outboxCount": 2,
+            "publishEligibleCount": 0,
+            "monicaReviewCount": 1,
+            "rejectCount": 1,
+            "preflightPrimaryReasonBuckets": {},
+            "preflightReasonBuckets": {},
+            "publisherEnabled": True,
+            "scannerEnabled": True,
+            "workerEnabled": True,
+            "maxPacketsPerCycle": 3,
+            "rawOutboxRemainingCycles": 1,
+            "publishableRemainingCycles": 0,
+            "worstCaseRemainingCycles": 0,
+            "replenishmentState": "end_to_end_enabled",
+            "severity": "critical",
+            "reasons": [
+                "publisher_enabled",
+                "scanner_enabled",
+                "worker_enabled",
+                "queue_active",
+                "eligible_supply_empty",
+            ],
+        }
+        cycle = {
+            "schema": dashboard.PUBLISH_CYCLE_SCHEMA,
+            "cycle_id": "github:123:1",
+            "ts": datetime.now(timezone.utc).isoformat(),
+            "admitted": True,
+            "outcome": "skip",
+            "result": "no_publish_eligible_supply",
+            "attempted": 0,
+            "published": 0,
+            "supply": {
+                "raw_outbox": 2,
+                "action_counts": {
+                    "publish": 0,
+                    "monica_review": 1,
+                    "reject": 1,
+                },
+            },
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            pipeline_dir = root / "pipeline"
+            pipeline_dir.mkdir()
+            outcome = root / "runner/staged-publish-cycle.json"
+            outcome.parent.mkdir()
+            outcome.write_text(json.dumps(cycle), encoding="utf-8")
+            output = root / "static/api/pipeline-status.json"
+            self.assertFalse((pipeline_dir / "logs/publish-metrics.json").exists())
+            with (
+                patch.dict(sys.modules, {"dashboard": dashboard}),
+                patch.object(dashboard, "SCRIPT_DIR", pipeline_dir),
+                patch.object(dashboard, "REPO_ROOT", root),
+                patch.object(generate_pipeline_status, "PROJECT_DIR", root),
+                patch.object(generate_pipeline_status, "OUT_FILE", output),
+                patch.object(
+                    generate_pipeline_status,
+                    "build_staged_queue_runway",
+                    return_value=runway,
+                ),
+            ):
+                generate_pipeline_status.main(["--cycle-outcome", str(outcome)])
+
+            data = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual(data["runs"]["total"], 1)
+            self.assertEqual(data["runs"]["admitted"], 1)
+            self.assertEqual(data["stagedPublishCycles"]["total"], 1)
+            self.assertEqual(data["stagedPublishCycles"]["monicaReview"], 1)
+            self.assertEqual(data["stagedPublishCycles"]["reject"], 1)
+            self.assertEqual(
+                data["stagedPublishCycles"]["latest"]["cycleId"],
+                "github:123:1",
+            )
 
 
 if __name__ == "__main__":

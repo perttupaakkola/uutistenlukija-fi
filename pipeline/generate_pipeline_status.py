@@ -19,6 +19,14 @@ OUT_FILE    = PROJECT_DIR / "static" / "api" / "pipeline-status.json"
 MAX_PACKETS_PER_CYCLE = 3
 
 
+def _summarize_outbox_supply(files: list[Path]) -> dict:
+    try:
+        from .staged_publish import summarize_outbox_supply
+    except ImportError:  # pragma: no cover - direct script execution
+        from staged_publish import summarize_outbox_supply
+    return summarize_outbox_supply(files)
+
+
 def build_staged_queue_runway(
     project_dir: Path = PROJECT_DIR,
     max_packets_per_cycle: int = MAX_PACKETS_PER_CYCLE,
@@ -26,12 +34,21 @@ def build_staged_queue_runway(
     pipeline_dir = project_dir / "pipeline"
     ready_count = len(list((pipeline_dir / "queues/staged/ready").glob("*.json")))
     writing_count = len(list((pipeline_dir / "queues/staged/writing").glob("*.json")))
-    outbox_count = len(list((pipeline_dir / "queues/staged/outbox").glob("*.json")))
+    outbox_files = list((pipeline_dir / "queues/staged/outbox").glob("*.json"))
+    supply = _summarize_outbox_supply(outbox_files)
+    outbox_count = supply["raw_outbox"]
+    action_counts = supply["action_counts"]
+    publish_eligible_count = action_counts["publish"]
+    monica_review_count = action_counts["monica_review"]
+    reject_count = action_counts["reject"]
     publisher_enabled = (pipeline_dir / "actions-publish.enabled").is_file()
     scanner_enabled = (pipeline_dir / "actions-scan.enabled").is_file()
     worker_enabled = (pipeline_dir / "monica-worker.enabled").is_file()
-    remaining_cycles = (
+    raw_outbox_cycles = (
         outbox_count + max_packets_per_cycle - 1
+    ) // max_packets_per_cycle
+    publishable_cycles = (
+        publish_eligible_count + max_packets_per_cycle - 1
     ) // max_packets_per_cycle
     reasons = [
         "publisher_enabled" if publisher_enabled else "publisher_disabled",
@@ -63,43 +80,65 @@ def build_staged_queue_runway(
         reasons.append("multiple_writing_packets")
     elif not publisher_enabled:
         severity = "inactive"
+    elif outbox_count > 0 and publish_eligible_count == 0:
+        severity = "critical"
+        reasons.append("eligible_supply_empty")
     elif scanner_enabled and worker_enabled:
         severity = "ok"
-    elif outbox_count <= 6:
+        if publish_eligible_count:
+            reasons.append("eligible_supply_available")
+    elif publish_eligible_count <= 6:
         severity = "critical"
-    elif outbox_count <= 12:
+    elif publish_eligible_count <= 12:
         severity = "warning"
     else:
         severity = "ok"
 
     if publisher_enabled and not (scanner_enabled and worker_enabled):
-        reasons.append(f"outbox_{severity}")
+        reasons.append(f"eligible_supply_{severity}")
 
     return {
         "readyCount": ready_count,
         "writingCount": writing_count,
         "outboxCount": outbox_count,
+        "publishEligibleCount": publish_eligible_count,
+        "monicaReviewCount": monica_review_count,
+        "rejectCount": reject_count,
+        "preflightPrimaryReasonBuckets": supply["primary_reason_buckets"],
+        "preflightReasonBuckets": supply["reason_buckets"],
         "publisherEnabled": publisher_enabled,
         "scannerEnabled": scanner_enabled,
         "workerEnabled": worker_enabled,
         "maxPacketsPerCycle": max_packets_per_cycle,
-        "worstCaseRemainingCycles": remaining_cycles,
+        "rawOutboxRemainingCycles": raw_outbox_cycles,
+        "publishableRemainingCycles": publishable_cycles,
+        # Backward-compatible field name; its value is now deliberately based
+        # on eligible supply, never raw depth.
+        "worstCaseRemainingCycles": publishable_cycles,
         "replenishmentState": replenishment_state,
         "severity": severity,
         "reasons": reasons,
     }
 
 
-def write_actions_summary(runway: dict, summary_path: Path) -> None:
+def write_actions_summary(
+    runway: dict,
+    summary_path: Path,
+    staged_cycles: dict | None = None,
+) -> None:
     rows = (
         ("Ready packets", runway["readyCount"]),
         ("Writing packets", runway["writingCount"]),
         ("Outbox packets", runway["outboxCount"]),
+        ("Publish-eligible packets", runway["publishEligibleCount"]),
+        ("Monica-held packets", runway["monicaReviewCount"]),
+        ("Hard-reject packets", runway["rejectCount"]),
         ("Publisher marker", "enabled" if runway["publisherEnabled"] else "disabled"),
         ("Scanner marker", "enabled" if runway["scannerEnabled"] else "disabled"),
         ("Monica worker marker", "enabled" if runway["workerEnabled"] else "disabled"),
         ("Max packets per cycle", runway["maxPacketsPerCycle"]),
-        ("Worst-case remaining cycles", runway["worstCaseRemainingCycles"]),
+        ("Raw outbox cycles", runway["rawOutboxRemainingCycles"]),
+        ("Publishable remaining cycles", runway["publishableRemainingCycles"]),
         ("Replenishment", runway["replenishmentState"]),
         ("Severity", runway["severity"]),
         ("Reasons", ", ".join(runway["reasons"])),
@@ -109,12 +148,30 @@ def write_actions_summary(runway: dict, summary_path: Path) -> None:
         for label, value in rows:
             output.write(f"| {label} | {value} |\n")
         output.write("\n")
+        if staged_cycles and staged_cycles.get("latest"):
+            latest = staged_cycles["latest"]
+            output.write(
+                "## Staged publish cycle\n\n"
+                "| Field | Value |\n| --- | --- |\n"
+                f"| Cycle | {latest.get('cycleId') or '-'} |\n"
+                f"| Admitted | {str(bool(latest.get('admitted'))).lower()} |\n"
+                f"| Outcome | {latest.get('outcome') or '-'} |\n"
+                f"| Result | {latest.get('result') or '-'} |\n"
+                f"| Raw outbox | {latest.get('rawOutbox', 0)} |\n"
+                f"| Publish eligible | {latest.get('publishEligible', 0)} |\n"
+                f"| Monica review | {latest.get('monicaReview', 0)} |\n"
+                f"| Reject | {latest.get('reject', 0)} |\n"
+                f"| Published | {latest.get('published', 0)} |\n\n"
+            )
 
     annotation = "warning" if runway["severity"] in {"critical", "warning"} else "notice"
     print(
         f"::{annotation} title=Staged queue runway {runway['severity']}::"
         f"outbox={runway['outboxCount']} "
-        f"remaining_cycles={runway['worstCaseRemainingCycles']} "
+        f"eligible={runway['publishEligibleCount']} "
+        f"held={runway['monicaReviewCount']} "
+        f"reject={runway['rejectCount']} "
+        f"publishable_cycles={runway['publishableRemainingCycles']} "
         f"replenishment={runway['replenishmentState']} "
         f"reasons={','.join(runway['reasons'])}"
     )
@@ -123,13 +180,14 @@ def write_actions_summary(runway: dict, summary_path: Path) -> None:
 def main(argv: list[str] | None = None):
     parser = argparse.ArgumentParser()
     parser.add_argument("--actions-summary", action="store_true")
+    parser.add_argument("--cycle-outcome", type=Path)
     args = parser.parse_args(argv)
 
     # Import dashboard from same directory
     sys.path.insert(0, str(SCRIPT_DIR))
     from dashboard import build_dashboard
 
-    data = build_dashboard(hours=24)
+    data = build_dashboard(hours=24, actions_cycle_path=args.cycle_outcome)
     runway = build_staged_queue_runway()
     data["stagedQueueRunway"] = runway
 
@@ -139,10 +197,14 @@ def main(argv: list[str] | None = None):
         encoding="utf-8"
     )
     if args.actions_summary:
-        write_actions_summary(runway, Path(os.environ["GITHUB_STEP_SUMMARY"]))
+        write_actions_summary(
+            runway,
+            Path(os.environ["GITHUB_STEP_SUMMARY"]),
+            data.get("stagedPublishCycles"),
+        )
     print(f"[generate_pipeline_status] Written: {OUT_FILE.relative_to(PROJECT_DIR)}"
           f" (published={data['articles']['published']} runs={data['runs']['total']}"
-          f" runway={runway['severity']}/{runway['worstCaseRemainingCycles']} cycles)")
+          f" runway={runway['severity']}/{runway['publishableRemainingCycles']} publishable cycles)")
 
 if __name__ == "__main__":
     main()

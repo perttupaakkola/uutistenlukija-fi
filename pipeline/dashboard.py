@@ -62,26 +62,69 @@ STOPWORDS = {
 
 # ── Data loaders ─────────────────────────────────────────────────────────────
 
-def load_metrics(hours: int = 24) -> list[dict]:
-    """Load publish-metrics.json JSONL for the last N hours."""
+PUBLISH_CYCLE_SCHEMA = "uutistenlukija.staged_publish_cycle.v1"
+
+
+def _metric_timestamp(record: dict) -> datetime | None:
+    try:
+        timestamp = datetime.fromisoformat(str(record.get("ts") or ""))
+    except ValueError:
+        return None
+    if timestamp.tzinfo is None:
+        timestamp = timestamp.replace(tzinfo=timezone.utc)
+    return timestamp.astimezone(timezone.utc)
+
+
+def load_metrics(
+    hours: int = 24,
+    actions_cycle_path: Path | None = None,
+) -> list[dict]:
+    """Load local history plus one Actions-native clean-runner cycle."""
     path = SCRIPT_DIR / "logs" / "publish-metrics.json"
-    if not path.exists():
-        return []
     cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
-    runs = []
-    for line in path.read_text(encoding="utf-8").splitlines():
-        line = line.strip()
-        if not line:
-            continue
+    runs: list[dict] = []
+    if path.exists():
+        for line in path.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                record = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            timestamp = _metric_timestamp(record) if isinstance(record, dict) else None
+            if timestamp and timestamp >= cutoff:
+                runs.append(record)
+
+    if actions_cycle_path and actions_cycle_path.is_file():
         try:
-            r = json.loads(line)
-            ts_str = r.get("ts", "")
-            ts = datetime.fromisoformat(ts_str) if ts_str else None
-            if ts and ts >= cutoff:
-                runs.append(r)
-        except (json.JSONDecodeError, ValueError):
-            pass
-    return runs
+            actions_record = json.loads(actions_cycle_path.read_text(encoding="utf-8"))
+        except (OSError, UnicodeError, json.JSONDecodeError):
+            actions_record = None
+        if (
+            isinstance(actions_record, dict)
+            and actions_record.get("schema") == PUBLISH_CYCLE_SCHEMA
+            and (timestamp := _metric_timestamp(actions_record)) is not None
+            and timestamp >= cutoff
+        ):
+            runs.append(actions_record)
+
+    # A host log may already contain the same Actions cycle. Prefer the final
+    # Actions-native record without counting the admitted run twice.
+    deduplicated: dict[str, tuple[datetime, dict]] = {}
+    anonymous: list[tuple[datetime, dict]] = []
+    for record in runs:
+        timestamp = _metric_timestamp(record)
+        if timestamp is None:
+            continue
+        cycle_id = str(record.get("cycle_id") or "").strip()
+        if cycle_id:
+            deduplicated[cycle_id] = (timestamp, record)
+        else:
+            anonymous.append((timestamp, record))
+    combined = [*anonymous, *deduplicated.values()]
+    combined.sort(key=lambda item: item[0])
+    return [record for _, record in combined]
 
 
 def load_rejects(hours: int = 24) -> list[dict]:
@@ -207,8 +250,11 @@ STALE_THRESHOLD_MINUTES = 90   # daytime publishing gap threshold
 ACTIVE_HOURS_UTC = (6, 22)     # 06:00–22:00 UTC — hours when staleness matters
 
 
-def build_dashboard(hours: int = 24) -> dict:
-    runs    = load_metrics(hours)
+def build_dashboard(
+    hours: int = 24,
+    actions_cycle_path: Path | None = None,
+) -> dict:
+    runs    = load_metrics(hours, actions_cycle_path)
     rejects = load_rejects(hours)
     health  = load_feed_health()
     trends  = trending_keywords(hours)
@@ -221,6 +267,37 @@ def build_dashboard(hours: int = 24) -> dict:
     error_runs   = sum(1 for r in runs if r.get("outcome") == "error")
     attempted    = sum(r.get("attempted", 0) for r in runs)
     published    = sum(r.get("published", 0) for r in runs)
+    staged_cycles = [
+        record for record in runs
+        if record.get("schema") == PUBLISH_CYCLE_SCHEMA
+    ]
+    admitted_cycles = sum(1 for record in staged_cycles if record.get("admitted") is True)
+    cycle_action_counts: Counter = Counter()
+    for record in staged_cycles:
+        supply = record.get("supply") if isinstance(record.get("supply"), dict) else {}
+        actions = supply.get("action_counts") if isinstance(supply.get("action_counts"), dict) else {}
+        for action in ("publish", "monica_review", "reject"):
+            try:
+                cycle_action_counts[action] += max(0, int(actions.get(action) or 0))
+            except (TypeError, ValueError):
+                continue
+    latest_cycle = None
+    if staged_cycles:
+        record = staged_cycles[-1]
+        supply = record.get("supply") if isinstance(record.get("supply"), dict) else {}
+        actions = supply.get("action_counts") if isinstance(supply.get("action_counts"), dict) else {}
+        latest_cycle = {
+            "cycleId": record.get("cycle_id"),
+            "ts": record.get("ts"),
+            "admitted": record.get("admitted") is True,
+            "outcome": record.get("outcome"),
+            "result": record.get("result"),
+            "rawOutbox": supply.get("raw_outbox", 0),
+            "publishEligible": actions.get("publish", 0),
+            "monicaReview": actions.get("monica_review", 0),
+            "reject": actions.get("reject", 0),
+            "published": record.get("published", 0),
+        }
 
     # ── Reject reasons
     reason_counts: Counter = Counter()
@@ -284,6 +361,16 @@ def build_dashboard(hours: int = 24) -> dict:
             "ok": ok_runs,
             "skip": skip_runs,
             "error": error_runs,
+            "admitted": admitted_cycles,
+        },
+        "stagedPublishCycles": {
+            "total": len(staged_cycles),
+            "admitted": admitted_cycles,
+            "publishEligible": cycle_action_counts["publish"],
+            "monicaReview": cycle_action_counts["monica_review"],
+            "reject": cycle_action_counts["reject"],
+            "published": sum(record.get("published", 0) for record in staged_cycles),
+            "latest": latest_cycle,
         },
         "articles": {
             "attempted": attempted,

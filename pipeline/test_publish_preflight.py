@@ -59,6 +59,136 @@ def _record(
 
 
 class PublishPreflightTests(unittest.TestCase):
+    def test_outbox_supply_summary_is_mutually_exclusive_and_reasoned(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            publish = _record()
+            review = _record(source_blocks=[{
+                "source": "Example News",
+                "source_url": "https://example.test/story",
+                "source_domain": "example.test",
+                "text": _words(100, "source"),
+                "word_count": 100,
+            }])
+            reject = _record(
+                packet_category="Kotimaa",
+                payload_category="Ulkomaat",
+                article_category="Ulkomaat",
+            )
+            paths = []
+            before = {}
+            for index, record in enumerate((publish, review, reject)):
+                path = root / f"{index}.json"
+                path.write_text(json.dumps(record), encoding="utf-8")
+                paths.append(path)
+                before[path] = path.read_bytes()
+
+            summary = staged_publish.summarize_outbox_supply(paths)
+
+            self.assertEqual(summary["raw_outbox"], 3)
+            self.assertEqual(
+                summary["action_counts"],
+                {"publish": 1, "monica_review": 1, "reject": 1},
+            )
+            self.assertEqual(
+                summary["primary_reason_buckets"]["publish"],
+                {"eligible": 1},
+            )
+            self.assertEqual(
+                summary["primary_reason_buckets"]["monica_review"],
+                {"thin_distinct_source": 1},
+            )
+            self.assertEqual(
+                summary["primary_reason_buckets"]["reject"],
+                {"category_disagreement": 1},
+            )
+            self.assertEqual({path: path.read_bytes() for path in paths}, before)
+
+    def test_cmd_publish_writes_clean_runner_cycle_without_publishing_holds(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            staged_root = Path(tmp) / "staged"
+            outbox = staged_root / "outbox"
+            outbox.mkdir(parents=True)
+            (staged_root / "failed").mkdir()
+            review = _record(source_blocks=[{
+                "source": "Example News",
+                "source_url": "https://example.test/story",
+                "source_domain": "example.test",
+                "text": _words(100, "source"),
+                "word_count": 100,
+            }])
+            reject = _record(
+                packet_category="Kotimaa",
+                payload_category="Ulkomaat",
+                article_category="Ulkomaat",
+            )
+            paths = []
+            for name, record in (("review.json", review), ("reject.json", reject)):
+                path = outbox / name
+                path.write_text(json.dumps(record), encoding="utf-8")
+                paths.append(path)
+            before = {path: path.read_bytes() for path in paths}
+            outcome_path = Path(tmp) / "runner/staged-publish-cycle.json"
+            args = SimpleNamespace(
+                max_articles=3,
+                dry_run=False,
+                dedup_window=72,
+                git_push=False,
+                outcome_json=str(outcome_path),
+            )
+
+            with patch.object(staged_publish, "STAGED_ROOT", staged_root), \
+                 patch.object(staged_publish, "run_quality_gate") as quality_gate:
+                status = staged_publish.cmd_publish(args)
+
+            self.assertEqual(status, 0)
+            quality_gate.assert_not_called()
+            self.assertEqual({path: path.read_bytes() for path in paths}, before)
+            outcome = json.loads(outcome_path.read_text(encoding="utf-8"))
+            self.assertEqual(outcome["schema"], staged_publish.PUBLISH_CYCLE_SCHEMA)
+            self.assertTrue(outcome["admitted"])
+            self.assertEqual(outcome["outcome"], "skip")
+            self.assertEqual(outcome["result"], "no_publish_eligible_supply")
+            self.assertEqual(outcome["supply"]["raw_outbox"], 2)
+            self.assertEqual(
+                outcome["supply"]["action_counts"],
+                {"publish": 0, "monica_review": 1, "reject": 1},
+            )
+            self.assertEqual(outcome["attempted"], 0)
+            self.assertEqual(outcome["published"], 0)
+            self.assertEqual(outcome["held"], 1)
+            self.assertEqual(outcome["rejected"], 1)
+
+    def test_cmd_publish_writes_terminal_cycle_when_execution_raises(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            staged_root = Path(tmp) / "staged"
+            (staged_root / "outbox").mkdir(parents=True)
+            outcome_path = Path(tmp) / "runner/staged-publish-cycle.json"
+            args = SimpleNamespace(
+                max_articles=3,
+                dry_run=False,
+                dedup_window=72,
+                git_push=False,
+                outcome_json=str(outcome_path),
+            )
+
+            with (
+                patch.object(staged_publish, "STAGED_ROOT", staged_root),
+                patch.object(
+                    staged_publish,
+                    "load_outbox",
+                    side_effect=RuntimeError("synthetic execution failure"),
+                ),
+                self.assertRaisesRegex(RuntimeError, "synthetic execution failure"),
+            ):
+                staged_publish.cmd_publish(args)
+
+            outcome = json.loads(outcome_path.read_text(encoding="utf-8"))
+            self.assertEqual(outcome["outcome"], "error")
+            self.assertEqual(outcome["result"], "exception:RuntimeError")
+            self.assertEqual(outcome["return_code"], 1)
+            self.assertTrue(outcome["ts"])
+
     def test_matching_categories_and_public_source_pass(self) -> None:
         record = _record(
             packet_category="ulkomaat",

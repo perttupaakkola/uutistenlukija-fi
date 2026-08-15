@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import subprocess
 import tempfile
 import unittest
@@ -29,6 +30,166 @@ SAMPLE_ARTICLE = {
     "category_hint": "Kotimaa",
     "research": "[Lähde: Yle | URL: https://yle.fi/a/testi]\nHallitus valmistelee uusia sosiaalihuollon säästöjä. Päätöksiä valmistellaan ensi vuodelle ja vaikutukset kohdistuvat useisiin palveluihin.\n\n---\n\n[Lähde: BBC | URL: https://bbc.com/news/test]\nThe government is preparing new savings measures for social care. Ministers say the final package is still under preparation.",
 }
+
+
+EDITORIAL_TITLE = "Hallitus valmistelee sosiaalihuollon säästöpakettia"
+EDITORIAL_CATEGORY = "Kotimaa"
+EDITORIAL_H2_HEADINGS = (
+    "## Valmistelu ja vaikutusarviot",
+    "## Päätökset etenevät vaiheittain",
+)
+EDITORIAL_SOURCE_CLAIMS = (
+    "Hallitus valmistelee sosiaalihuollon säästöpakettia, jonka on tarkoitus vaikuttaa ensi vuoden menoihin.",
+    "Valmistelu on kesken, eikä euromäärästä tai yksittäisistä leikkauksista ole vielä tehty lopullisia päätöksiä.",
+    "Sosiaali- ja terveysministeriö kokoaa vaihtoehtoja hallituksen myöhempiä neuvotteluja varten.",
+    "Ministeriö arvioi samalla, miten vaihtoehdot vaikuttaisivat hyvinvointialueiden palveluihin ja henkilöstöön.",
+    "Arvioinnissa tarkastellaan perhepalveluja, ikääntyneiden palveluja ja muuta sosiaalihuollon arjen toimintaa.",
+    "Hallituksen mukaan tavoitteena on vähentää menoja vaarantamatta välttämättömien palvelujen saatavuutta.",
+    "Hyvinvointialueilta pyydetään valmistelun aikana tietoja palvelujen kustannuksista ja nykyisestä kapasiteetista.",
+    "Alueet voivat toimittaa ministeriölle huomioita ehdotusten käytännön vaikutuksista.",
+    "Ministeriö ei ole vielä julkaissut aluekohtaisia säästötavoitteita.",
+    "Mahdollisten muutosten aikataulu täsmentyy vasta hallituksen neuvottelujen jälkeen.",
+    "Esitysluonnokset on määrä lähettää lausunnolle ennen lopullista päätöksentekoa.",
+    "Lausuntokierroksella kunnat, hyvinvointialueet ja järjestöt voivat arvioida ehdotusten seurauksia.",
+    "Hallitus käsittelee lausuntopalautteen ennen kuin se päättää lopullisen paketin sisällöstä.",
+    "Mahdolliset lakimuutokset tuodaan eduskunnan käsiteltäviksi tavallisessa järjestyksessä.",
+    "Ministeriö lupaa julkaista vaikutusarviot, kun valmistelu on edennyt riittävän pitkälle.",
+    "Valmistelussa verrataan myös keinoja, joilla säästöjen haittoja voitaisiin rajata.",
+    "Hallituksen mukaan yhtäkään vaihtoehtoa ei pidä pitää päätettynä ennen neuvotteluja.",
+    "Hyvinvointialueet jatkavat nykyisiä palvelujaan voimassa olevan rahoituksen ja lainsäädännön mukaisesti.",
+    "Uudet säästötoimet eivät tule voimaan ennen erillisiä päätöksiä.",
+    "Tiedot tarkentuvat, kun ministeriö julkaisee luonnokset ja hallitus päättää jatkovalmistelusta.",
+    "Virkamiehet selvittävät, edellyttäisivätkö vaihtoehdot muutoksia lainsäädäntöön, rahoitukseen tai palvelujen järjestämisvastuisiin.",
+    "Jos vaihtoehto vaatisi lakimuutoksen, siitä laadittaisiin erillinen hallituksen esitys perusteluineen.",
+    "Esityksessä kuvattaisiin tavoitellut säästöt, vaikutukset eri ryhmiin ja muutoksen toimeenpanon aikataulu.",
+    "Eduskunta voisi muuttaa esitystä valiokuntakäsittelyn ja täysistunnon aikana.",
+    "Ministeriö seuraa valmistelussa myös perustuslain ja sosiaalihuollon vähimmäisvelvoitteiden asettamia rajoja.",
+    "Hallituksen tavoitteena on saada kokonaisuudesta riittävät tiedot ennen budjettipäätöksiä.",
+    "Viranomaiset kokoavat tietoja palvelujen saatavuudesta, kustannuksista ja henkilöstön riittävyydestä.",
+    "Valmisteluaineistossa erotetaan arvioitavat vaihtoehdot niistä ratkaisuista, joista hallitus myöhemmin päättää.",
+)
+EDITORIAL_SOURCE_SPECS = (
+    ("Yle", "https://yle.fi/a/ope-477-lahde", EDITORIAL_SOURCE_CLAIMS[:10]),
+    ("STT", "https://sttinfo.fi/tiedote/ope-477", EDITORIAL_SOURCE_CLAIMS[10:19]),
+    (
+        "Sosiaali- ja terveysministeriö",
+        "https://stm.fi/-/ope-477-valmistelu",
+        EDITORIAL_SOURCE_CLAIMS[19:],
+    ),
+)
+
+
+def _editorial_content() -> str:
+    paragraphs = (
+        " ".join(EDITORIAL_SOURCE_CLAIMS[:6]),
+        EDITORIAL_H2_HEADINGS[0] + "\n" + " ".join(EDITORIAL_SOURCE_CLAIMS[6:12]),
+        " ".join(EDITORIAL_SOURCE_CLAIMS[12:17]),
+        EDITORIAL_H2_HEADINGS[1] + "\n" + " ".join(EDITORIAL_SOURCE_CLAIMS[17:23]),
+        " ".join(EDITORIAL_SOURCE_CLAIMS[23:]),
+    )
+    return "\n\n".join(paragraphs)
+
+
+def _editorial_near_miss_content() -> str:
+    claims = EDITORIAL_SOURCE_CLAIMS[:21]
+    paragraphs = (
+        " ".join(claims[:5]),
+        EDITORIAL_H2_HEADINGS[0] + "\n" + " ".join(claims[5:9]),
+        " ".join(claims[9:13]),
+        EDITORIAL_H2_HEADINGS[1] + "\n" + " ".join(claims[13:17]),
+        " ".join(claims[17:]),
+    )
+    return "\n\n".join(paragraphs)
+
+
+def _editorial_unstructured_content() -> str:
+    return " ".join(EDITORIAL_SOURCE_CLAIMS)
+
+
+def _content_claim_sentences(content: str) -> tuple[str, ...]:
+    prose = " ".join(
+        line.strip()
+        for line in str(content).splitlines()
+        if line.strip() and not line.lstrip().startswith("#")
+    )
+    return tuple(
+        sentence.strip()
+        for sentence in re.split(r"(?<=[.!?])\s+", prose)
+        if sentence.strip()
+    )
+
+
+def _editorial_source_usage(
+    used_claims: tuple[str, ...] = EDITORIAL_SOURCE_CLAIMS,
+) -> list[dict]:
+    used_claim_set = set(used_claims)
+    rows = []
+    for _, source_url, source_claims in EDITORIAL_SOURCE_SPECS:
+        dependent_claims = [
+            claim for claim in source_claims if claim in used_claim_set
+        ]
+        rows.append(
+            {
+                "source_url": source_url,
+                "used": bool(dependent_claims),
+                "dependent_claims": dependent_claims,
+            }
+        )
+    return rows
+
+
+def _editorial_packet() -> dict:
+    blocks = [
+        {
+            "source": source,
+            "source_url": source_url,
+            "source_domain": source_url.split("/", 3)[2],
+            "text": " ".join(claims),
+            "word_count": len(" ".join(claims).split()),
+        }
+        for source, source_url, claims in EDITORIAL_SOURCE_SPECS
+    ]
+    return {
+        "packet_id": "ope-477-editorial-fixture",
+        "category_hint": EDITORIAL_CATEGORY,
+        "source_text": "\n\n".join(block["text"] for block in blocks),
+        "clean_source_blocks": blocks,
+        "story_confidence": 0.93,
+    }
+
+
+def _editorial_article() -> dict:
+    return {
+        "title": EDITORIAL_TITLE,
+        "description": EDITORIAL_SOURCE_CLAIMS[0],
+        "link": EDITORIAL_SOURCE_SPECS[0][1],
+        "category_hint": EDITORIAL_CATEGORY,
+        "research": _editorial_packet()["source_text"],
+    }
+
+
+def _editorial_payload(content: str | None = None) -> dict:
+    article_content = content if content is not None else _editorial_content()
+    return {
+        "packet_id": "ope-477-editorial-fixture",
+        "title": EDITORIAL_TITLE,
+        "summary": EDITORIAL_SOURCE_CLAIMS[0],
+        "content": article_content,
+        "category": EDITORIAL_CATEGORY,
+        "tags": ["hallitus", "sosiaalihuolto", "säästöt"],
+        "summary_bullets": [
+            EDITORIAL_SOURCE_CLAIMS[0],
+            EDITORIAL_SOURCE_CLAIMS[1],
+            EDITORIAL_SOURCE_CLAIMS[10],
+        ],
+        "content_type": "article",
+        "editorial_reviewed": True,
+        "confidence": 0.93,
+        "journalist_note": "",
+        "source_usage": _editorial_source_usage(
+            _content_claim_sentences(article_content)
+        ),
+    }
 
 
 def _source_packet(source_words: int, blocks: int = 2) -> dict:
@@ -224,19 +385,143 @@ class MonicaWriterTests(unittest.TestCase):
 
     @patch(PATCH_TARGET)
     def test_rewrite_articles_valid_output(self, run_mock):
-        run_mock.return_value = self._result(_good_payload())
+        packet = _editorial_packet()
+        original = _editorial_article()
+        payload = _editorial_payload()
+        run_mock.return_value = self._result(json.dumps(payload, ensure_ascii=False))
 
-        rewritten = rewrite_articles([dict(SAMPLE_ARTICLE)])
+        with patch(f"{rewrite_articles.__module__}.build_story_packet", return_value=packet):
+            rewritten = rewrite_articles([dict(original)])
+
         self.assertEqual(len(rewritten), 1)
         article = rewritten[0]
         self.assertEqual(article["writer_backend"], "monica")
-        self.assertEqual(article["category"], "Kotimaa")
+        self.assertEqual(article["title"], EDITORIAL_TITLE)
+        self.assertEqual(article["category"], EDITORIAL_CATEGORY)
+        self.assertEqual(article["source_url"], EDITORIAL_SOURCE_SPECS[0][1])
         self.assertGreaterEqual(len(article["key_points"]), 2)
-        self.assertIn("Hallitus valmistelee", article["content"])
+        content_claims = _content_claim_sentences(article["content"])
+        self.assertEqual(content_claims, EDITORIAL_SOURCE_CLAIMS)
+        self.assertEqual(len(content_claims), len(set(content_claims)))
+        self.assertTrue(
+            all(
+                len(sentence.split()) >= 7
+                and sentence[0].isupper()
+                and sentence.endswith(".")
+                for sentence in content_claims
+            )
+        )
+        self.assertEqual(
+            tuple(
+                line
+                for line in article["content"].splitlines()
+                if line.startswith("##")
+            ),
+            EDITORIAL_H2_HEADINGS,
+        )
+        self.assertEqual(packet["source_usage"], _editorial_source_usage())
+        self.assertEqual(packet["source_usage_contract"], "v1")
         self.assertEqual(
             article["source_attributions"],
-            [{"name": "Yle", "url": "https://yle.fi/a/testi"}],
+            [
+                {"name": source, "url": source_url}
+                for source, source_url, _ in EDITORIAL_SOURCE_SPECS
+            ],
         )
+        self.assertEqual(original["title"], EDITORIAL_TITLE)
+        self.assertEqual(original["category_hint"], EDITORIAL_CATEGORY)
+        self.assertEqual(original["link"], EDITORIAL_SOURCE_SPECS[0][1])
+
+    def test_structure_contract_rejects_250_word_single_paragraph(self):
+        payload = _editorial_payload(_editorial_unstructured_content())
+
+        issues = _basic_payload_issues(payload)
+
+        self.assertGreaterEqual(len(payload["content"].split()), MIN_CONTENT_WORDS)
+        self.assertEqual(
+            _content_claim_sentences(payload["content"]),
+            EDITORIAL_SOURCE_CLAIMS,
+        )
+        self.assertIn("structure contract: prose paragraphs 1 < 4", issues)
+        self.assertIn("structure contract: H2 headings 0 < 2", issues)
+        self.assertFalse(any(issue.startswith("content too short") for issue in issues))
+
+    def test_structure_contract_rejects_single_newline_pseudo_structure(self):
+        payload = _editorial_payload(_editorial_content().replace("\n\n", "\n"))
+
+        issues = _basic_payload_issues(payload)
+
+        self.assertIn("structure contract: prose paragraphs 1 < 4", issues)
+        self.assertNotIn("structure contract: H2 headings 0 < 2", issues)
+
+    def test_structure_contract_rejects_empty_h2_and_trivial_padding(self):
+        content = "\n\n".join(
+            [
+                _editorial_unstructured_content(),
+                "##",
+                "Täyte.",
+                "Lisäke.",
+                "Toisto.",
+                EDITORIAL_H2_HEADINGS[0],
+            ]
+        )
+        payload = _editorial_payload(content)
+
+        issues = _basic_payload_issues(payload)
+
+        self.assertIn("structure contract: prose paragraphs 1 < 4", issues)
+        self.assertIn("structure contract: H2 headings 1 < 2", issues)
+        self.assertIn("structure contract: empty H2 headings 1", issues)
+        self.assertIn(
+            "structure contract: trivial prose paragraphs 3 below 5 words",
+            issues,
+        )
+
+    def test_structure_contract_accepts_four_prose_paragraphs_and_two_h2s(self):
+        payload = _editorial_payload()
+
+        issues = _basic_payload_issues(payload)
+
+        self.assertFalse(
+            any(issue.startswith("structure contract:") for issue in issues),
+            issues,
+        )
+
+    @patch(PATCH_TARGET)
+    def test_rewrite_articles_quarantines_unrepaired_structure_before_outbox(self, run_mock):
+        packet = _editorial_packet()
+        original = _editorial_article()
+        payload = _editorial_payload(_editorial_unstructured_content())
+        raw = json.dumps(payload, ensure_ascii=False)
+        run_mock.side_effect = [self._result(raw), self._result(raw)]
+
+        with patch(f"{rewrite_articles.__module__}.build_story_packet", return_value=packet):
+            rewritten = rewrite_articles([dict(original)])
+
+        self.assertEqual(rewritten, [])
+        self.assertEqual(run_mock.call_count, 2)
+        self.assertEqual(
+            _content_claim_sentences(payload["content"]),
+            EDITORIAL_SOURCE_CLAIMS,
+        )
+        self.assertEqual(payload["source_usage"], _editorial_source_usage())
+        self.assertEqual(payload["title"], original["title"])
+        self.assertEqual(payload["category"], original["category_hint"])
+        self.assertEqual(original["link"], EDITORIAL_SOURCE_SPECS[0][1])
+        self.assertEqual(list((Path(self.tmpdir.name) / "outbox").glob("*.json")), [])
+        quarantine_paths = list((Path(self.tmpdir.name) / "quarantine").glob("*.json"))
+        self.assertEqual(len(quarantine_paths), 1)
+        quarantine = json.loads(quarantine_paths[0].read_text(encoding="utf-8"))
+        self.assertEqual(quarantine["reason"], "writer_structure_contract_unmet")
+        self.assertEqual(
+            quarantine["extra"]["reason_code"],
+            "writer_structure_contract_unmet",
+        )
+        self.assertEqual(quarantine["extra"]["final_prose_paragraphs"], 1)
+        self.assertEqual(quarantine["extra"]["final_trivial_prose_paragraphs"], 0)
+        self.assertEqual(quarantine["extra"]["final_h2_headings"], 0)
+        self.assertEqual(quarantine["extra"]["final_empty_h2_headings"], 0)
+        self.assertEqual(quarantine["extra"]["required_min_prose_words"], 5)
 
     def test_source_usage_contract_requires_every_selected_url_and_claims(self):
         packet = _source_packet(360, blocks=2)
@@ -691,6 +976,22 @@ class MonicaWriterTests(unittest.TestCase):
         self.assertIn("return INSUFFICIENT_CONFIDENCE", prompt)
         self.assertIn("Do not pad", prompt)
 
+    def test_writer_prompts_require_substantive_source_bounded_structure(self):
+        packet = _editorial_packet()
+        initial_prompt = _build_prompt(packet)
+        repair_prompt = _build_repair_prompt(
+            packet,
+            _editorial_payload(_editorial_near_miss_content()),
+            ["content too short: 205 words"],
+        )
+
+        self.assertIn("paragraph must contain at least 5 words", initial_prompt)
+        self.assertIn("a bare `##` is invalid", initial_prompt)
+        self.assertIn("paragraphs of at least 5 words each", repair_prompt)
+        self.assertIn("a bare `##` is invalid", repair_prompt)
+        self.assertIn("Reorganize or expand only claims present", repair_prompt)
+        self.assertIn("do not introduce an actor, date, cause, consequence", repair_prompt)
+
     def test_source_backed_near_short_hint_requires_250_words_and_three_blocks(self):
         rich_packet = _source_packet(252, blocks=3)
         rich_packet["story_confidence"] = 0.9
@@ -810,19 +1111,19 @@ class MonicaWriterTests(unittest.TestCase):
 
 
     def test_near_miss_repair_metadata_records_recovered_runtime_proof(self):
-        packet = _source_packet(252, blocks=3)
-        initial_payload = json.loads(_good_payload())
-        initial_payload["content"] = " ".join(["Sana"] * 247)
-        final_payload = json.loads(_good_payload())
-        final_payload["content"] = " ".join(["Sana"] * 281)
+        packet = _editorial_packet()
+        initial_payload = _editorial_payload(_editorial_near_miss_content())
+        final_payload = _editorial_payload()
+        initial_words = len(initial_payload["content"].split())
+        final_words = len(final_payload["content"].split())
 
         metadata = _near_miss_repair_metadata(packet, initial_payload, final_payload, [])
 
         self.assertEqual(metadata["repair_attempt"], "source_backed_near_short")
-        self.assertEqual(metadata["pre_repair_word_count"], 247)
-        self.assertEqual(metadata["post_repair_word_count"], 281)
+        self.assertEqual(metadata["pre_repair_word_count"], initial_words)
+        self.assertEqual(metadata["post_repair_word_count"], final_words)
         self.assertEqual(metadata["repair_result"], "published")
-        self.assertIn("pre_repair_word_count=247", metadata["repair_trigger"])
+        self.assertIn(f"pre_repair_word_count={initial_words}", metadata["repair_trigger"])
         self.assertGreaterEqual(metadata["selected_source_words_at_repair"], 250)
         self.assertGreaterEqual(metadata["selected_source_blocks_at_repair"], 3)
         self.assertGreaterEqual(metadata["source_words"], 250)
@@ -833,45 +1134,61 @@ class MonicaWriterTests(unittest.TestCase):
 
     @patch(PATCH_TARGET)
     def test_rewrite_articles_retries_source_backed_near_miss_once(self, run_mock):
-        near_miss_payload = json.loads(_good_payload())
-        near_miss_payload["content"] = " ".join(["Sana"] * 247)
-        repaired_payload = json.loads(_good_payload())
-        repaired_payload["content"] = _long_content()
-        source_text = "\n\n".join(["[Lähde: Testi %d]\nHallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle. %s" % (i, " ".join(["palvelu"] * 160)) for i in range(3)])
-        article = {
-            "title": "Hallitus valmistelee uusia säästöjä",
-            "description": source_text,
-            "link": "https://example.com/story",
-            "category_hint": "Kotimaa",
-            "research": source_text,
-        }
-
-        from pipeline.story_packet import build_story_packet as original_build_story_packet
-        original_packet = original_build_story_packet(article)
-        original_packet["source_text"] = " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 80)
-        original_packet["story_confidence"] = 0.9
-        original_packet["clean_source_blocks"] = [
-            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 20), "word_count": 120, "source": "Testi", "source_url": "https://testi.example/1", "source_domain": "testi.example"},
-            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 15), "word_count": 90, "source": "Testi 2", "source_url": "https://testi.example/2", "source_domain": "testi.example"},
-            {"text": " ".join(["Hallitus valmistelee säästöjä sosiaalihuoltoon ensi vuodelle"] * 12), "word_count": 72, "source": "Testi 3", "source_url": "https://testi.example/3", "source_domain": "testi.example"},
-        ]
-        _with_packet_source_usage(near_miss_payload, original_packet)
-        _with_packet_source_usage(repaired_payload, original_packet)
+        packet = _editorial_packet()
+        original = _editorial_article()
+        near_miss_payload = _editorial_payload(_editorial_near_miss_content())
+        repaired_payload = _editorial_payload()
+        pre_repair_words = len(near_miss_payload["content"].split())
         run_mock.side_effect = [
             self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
             self._result(json.dumps(near_miss_payload, ensure_ascii=False)),
             self._result(json.dumps(repaired_payload, ensure_ascii=False)),
         ]
-        with patch(f"{rewrite_articles.__module__}.build_story_packet", return_value=original_packet):
-            rewritten = rewrite_articles([article])
+        with patch(f"{rewrite_articles.__module__}.build_story_packet", return_value=packet):
+            rewritten = rewrite_articles([dict(original)])
 
         self.assertEqual(len(rewritten), 1)
         self.assertGreaterEqual(len(rewritten[0]["content"].split()), 250)
+        self.assertGreaterEqual(pre_repair_words, SOURCE_BACKED_NEAR_MISS_MIN_WORDS)
+        self.assertLess(pre_repair_words, MIN_CONTENT_WORDS)
         self.assertEqual(run_mock.call_count, 3)
         self.assertIn("source_backed_writer_shortfall", run_mock.call_args_list[2].args[0][-1])
         self.assertIn("source_words:", run_mock.call_args_list[2].args[0][-1])
+        initial_claims = _content_claim_sentences(near_miss_payload["content"])
+        final_claims = _content_claim_sentences(rewritten[0]["content"])
+        source_claims = set(EDITORIAL_SOURCE_CLAIMS)
+        self.assertEqual(initial_claims, EDITORIAL_SOURCE_CLAIMS[:21])
+        self.assertEqual(final_claims, EDITORIAL_SOURCE_CLAIMS)
+        self.assertEqual(
+            near_miss_payload["source_usage"],
+            _editorial_source_usage(EDITORIAL_SOURCE_CLAIMS[:21]),
+        )
+        self.assertEqual(
+            set(final_claims) - set(initial_claims),
+            set(EDITORIAL_SOURCE_CLAIMS[21:]),
+        )
+        self.assertTrue(set(final_claims) <= source_claims)
+        self.assertEqual(
+            tuple(
+                line
+                for line in rewritten[0]["content"].splitlines()
+                if line.startswith("##")
+            ),
+            EDITORIAL_H2_HEADINGS,
+        )
+        self.assertEqual(packet["source_usage"], _editorial_source_usage())
+        self.assertEqual(
+            rewritten[0]["source_attributions"],
+            [
+                {"name": source, "url": source_url}
+                for source, source_url, _ in EDITORIAL_SOURCE_SPECS
+            ],
+        )
+        self.assertEqual(rewritten[0]["title"], original["title"])
+        self.assertEqual(rewritten[0]["category"], original["category_hint"])
+        self.assertEqual(rewritten[0]["source_url"], original["link"])
         self.assertEqual(rewritten[0]["monica_repair"]["repair_attempt"], "source_backed_near_short")
-        self.assertEqual(rewritten[0]["monica_repair"]["pre_repair_word_count"], 247)
+        self.assertEqual(rewritten[0]["monica_repair"]["pre_repair_word_count"], pre_repair_words)
         self.assertGreaterEqual(rewritten[0]["monica_repair"]["post_repair_word_count"], 250)
         self.assertEqual(rewritten[0]["monica_repair"]["repair_result"], "published")
         self.assertTrue(rewritten[0]["monica_repair"]["source_block_ids_used_for_repair"])

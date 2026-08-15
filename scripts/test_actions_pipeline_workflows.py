@@ -906,13 +906,43 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
     def test_runway_summary_uses_the_canonical_status_producer(self) -> None:
         publish = self.workflow.index("- name: Publish staged outbox packets")
         summary = self.workflow.index("- name: Summarize staged queue runway")
+        preserve = self.workflow.index("- name: Preserve staged publish cycle telemetry")
         validate = self.workflow.index("- name: Validate Hugo templates")
         self.assertLess(publish, summary)
-        self.assertLess(summary, validate)
+        self.assertLess(summary, preserve)
+        self.assertLess(preserve, validate)
         self.assertIn(
-            "python3 pipeline/generate_pipeline_status.py --actions-summary",
+            "python3 pipeline/generate_pipeline_status.py "
+            '--cycle-outcome "$RUNNER_TEMP/staged-publish-cycle.json" '
+            "--actions-summary",
             self.workflow,
         )
+
+    def test_clean_runner_cycle_telemetry_is_always_preserved(self) -> None:
+        publish = self.workflow.index("      - name: Publish staged outbox packets")
+        summary = self.workflow.index("      - name: Summarize staged queue runway")
+        preserve = self.workflow.index(
+            "      - name: Preserve staged publish cycle telemetry"
+        )
+        publish_step = self.workflow[publish:summary]
+        summary_step = self.workflow[summary:preserve]
+        preserve_end = self.workflow.index("\n      - name:", preserve + 1)
+        preserve_step = self.workflow[preserve:preserve_end]
+
+        self.assertIn(
+            '--outcome-json "$RUNNER_TEMP/staged-publish-cycle.json"',
+            publish_step,
+        )
+        self.assertIn("if: always() && steps.gate.outputs.enabled == 'true'", summary_step)
+        self.assertIn(
+            '--cycle-outcome "$RUNNER_TEMP/staged-publish-cycle.json"',
+            summary_step,
+        )
+        self.assertIn("if: always() && steps.gate.outputs.enabled == 'true'", preserve_step)
+        self.assertIn("uses: actions/upload-artifact@v4", preserve_step)
+        self.assertIn("path: ${{ runner.temp }}/staged-publish-cycle.json", preserve_step)
+        self.assertIn("if-no-files-found: error", preserve_step)
+        self.assertNotIn("pipeline/logs/publish-metrics.json", self.workflow)
 
     def test_outbox_push_reuses_marker_gate_and_max_one_cap(self) -> None:
         trigger_block = self.workflow[: self.workflow.index("\npermissions:")]
@@ -929,7 +959,13 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
             + self._publish_run_script()
         )
         env = os.environ.copy()
-        env.update({"GITHUB_EVENT_NAME": "push", "MAX_ARTICLES": "3"})
+        env.update(
+            {
+                "GITHUB_EVENT_NAME": "push",
+                "MAX_ARTICLES": "3",
+                "RUNNER_TEMP": "/tmp/test-runner",
+            }
+        )
         result = subprocess.run(
             ["bash", "-c", script],
             cwd=ROOT,
@@ -1030,6 +1066,7 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
         )
         env = os.environ.copy()
         env["GITHUB_EVENT_NAME"] = "workflow_dispatch"
+        env["RUNNER_TEMP"] = "/tmp/test-runner"
         for max_articles in ("4", "24"):
             with self.subTest(max_articles=max_articles):
                 env["MAX_ARTICLES"] = max_articles

@@ -1243,6 +1243,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
             "payload": {"category": "Kotimaa"},
         }
         path = self._write("outbox", "pkt-build-failure", data, age_hours=1)
+        outcome_path = self.root / "cycle.json"
 
         with patch.object(staged_publish, "load_outbox", return_value=[(path, data)]), \
              patch.object(staged_publish, "run_quality_gate", return_value=type("Gate", (), {"passed": [article], "rejected": []})()), \
@@ -1252,12 +1253,25 @@ class StagedPublishMetricsTests(unittest.TestCase):
              patch.object(staged_publish, "publish_articles", return_value=["content/posts/test.md"]), \
              patch.object(staged_publish, "mark_published") as mark_published, \
              patch.object(staged_publish, "build_site", return_value=(False, "synthetic build failure")):
-            rc = staged_publish.cmd_publish(Namespace(max_articles=1, dedup_window=48, dry_run=False, git_push=False))
+            rc = staged_publish.cmd_publish(
+                Namespace(
+                    max_articles=1,
+                    dedup_window=48,
+                    dry_run=False,
+                    git_push=False,
+                    outcome_json=str(outcome_path),
+                )
+            )
 
         self.assertEqual(rc, 2)
         mark_published.assert_not_called()
         self.assertTrue(path.exists())
         self.assertFalse((self.root / "published" / "pkt-build-failure.json").exists())
+        outcome = json.loads(outcome_path.read_text(encoding="utf-8"))
+        self.assertEqual(outcome["outcome"], "error")
+        self.assertEqual(outcome["result"], "build_failed")
+        self.assertEqual(outcome["execution"]["created"], 1)
+        self.assertEqual(outcome["published"], 0)
 
     def test_all_quality_rejects_persist_exact_queue_delta_and_propagate_failure(self) -> None:
         path, data, article = self._write_publish_record("20260804T010000Z_quality-reject")
@@ -2161,11 +2175,33 @@ class StagedPublishMetricsTests(unittest.TestCase):
                 )
                 record["original_article"]["_guessed_category"] = canonical_category
                 path = self._write("ready", packet_id, record, age_hours=1)
+                lead = (
+                    "Aloituskappale sisältää riittävästi sanoja ja kuvaa asian taustan, "
+                    "vaikutukset sekä jatkon lukijalle selkeästi, ja mukana on vielä lisää "
+                    "varmistavia sanoja lukijalle nyt, jotta pituusraja täyttyy varmasti "
+                    "tässä testissä nyt selvästi."
+                )
+
+                def structured_content(filler_words: int) -> str:
+                    first = filler_words // 3
+                    second = filler_words // 3
+                    third = filler_words - first - second
+                    return "\n\n".join(
+                        [
+                            lead,
+                            "## Tausta",
+                            " ".join(["sana"] * first),
+                            " ".join(["sana"] * second),
+                            "## Vaikutukset",
+                            " ".join(["sana"] * third),
+                        ]
+                    )
+
                 near_payload = {
                     "packet_id": packet_id,
                     "title": "Lähes valmis artikkeli",
                     "summary": "Lähes valmis yhteenveto.",
-                    "content": "Aloituskappale sisältää riittävästi sanoja ja kuvaa asian taustan, vaikutukset sekä jatkon lukijalle selkeästi, ja mukana on vielä lisää varmistavia sanoja lukijalle nyt, jotta pituusraja täyttyy varmasti tässä testissä nyt selvästi.\n\n## Tausta\n\n" + " ".join(["sana"] * 215),
+                    "content": structured_content(213),
                     "category": canonical_category,
                     "tags": ["talous", "testi", "korjaus"],
                     "summary_bullets": ["Yksi asia", "Toinen asia", "Kolmas asia"],
@@ -2185,8 +2221,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
                 }
                 repaired_payload = {
                     **near_payload,
-                    "content": "Aloituskappale sisältää riittävästi sanoja ja kuvaa asian taustan, vaikutukset sekä jatkon lukijalle selkeästi, ja mukana on vielä lisää varmistavia sanoja lukijalle nyt, jotta pituusraja täyttyy varmasti tässä testissä nyt selvästi.\n\n## Tausta\n\n"
-                    + " ".join(["sana"] * 266),
+                    "content": structured_content(264),
                 }
                 run_mock.side_effect = [
                     json.dumps(near_payload),

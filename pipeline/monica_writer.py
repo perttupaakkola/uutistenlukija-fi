@@ -273,6 +273,61 @@ def _normalize_summary_bullets(value, fallback_summary: str = "") -> list[str]:
     return bullets[:4]
 
 
+MIN_PROSE_PARAGRAPHS = 4
+MIN_H2_HEADINGS = 2
+MIN_PROSE_PARAGRAPH_WORDS = 5
+_MARKDOWN_HEADING_RE = re.compile(r"^\s{0,3}#{1,6}(?:\s+|$)")
+_MARKDOWN_H2_CANDIDATE_RE = re.compile(r"^\s{0,3}##(?!#)(?:[ \t]|$)")
+_MARKDOWN_H2_RE = re.compile(r"^\s{0,3}##(?!#)[ \t]+\S")
+_STRUCTURE_ISSUE_PREFIX = "structure contract:"
+
+
+def _content_structure_counts(content: str) -> dict[str, int]:
+    """Count substantive blank-line prose blocks and non-empty H2 headings.
+
+    A sequence of prose lines separated only by single newlines is one prose
+    paragraph, not several. A block may begin with an H2 and continue with its
+    prose on the next line; the heading itself is never counted as prose.
+    Short non-heading blocks are reported as trivial instead of satisfying the
+    prose floor, and a bare ``##`` is reported instead of counting as an H2.
+    """
+    normalized = str(content or "").replace("\r\n", "\n").replace("\r", "\n").strip()
+    if not normalized:
+        return {
+            "prose_paragraphs": 0,
+            "h2_headings": 0,
+            "trivial_prose_paragraphs": 0,
+            "empty_h2_headings": 0,
+        }
+
+    prose_paragraphs = 0
+    h2_headings = 0
+    trivial_prose_paragraphs = 0
+    empty_h2_headings = 0
+    for block in re.split(r"\n[ \t]*\n+", normalized):
+        lines = [line.strip() for line in block.splitlines() if line.strip()]
+        h2_candidates = [line for line in lines if _MARKDOWN_H2_CANDIDATE_RE.match(line)]
+        h2_headings += sum(1 for line in h2_candidates if _MARKDOWN_H2_RE.match(line))
+        empty_h2_headings += sum(1 for line in h2_candidates if not _MARKDOWN_H2_RE.match(line))
+        prose_lines = [line for line in lines if not _MARKDOWN_HEADING_RE.match(line)]
+        if prose_lines:
+            prose_word_count = len(" ".join(prose_lines).split())
+            if prose_word_count >= MIN_PROSE_PARAGRAPH_WORDS:
+                prose_paragraphs += 1
+            else:
+                trivial_prose_paragraphs += 1
+    return {
+        "prose_paragraphs": prose_paragraphs,
+        "h2_headings": h2_headings,
+        "trivial_prose_paragraphs": trivial_prose_paragraphs,
+        "empty_h2_headings": empty_h2_headings,
+    }
+
+
+def _has_structure_issue(issues: list[str]) -> bool:
+    return any(str(issue).startswith(_STRUCTURE_ISSUE_PREFIX) for issue in issues)
+
+
 def _basic_payload_issues(payload: dict, packet: dict | None = None) -> list[str]:
     issues: list[str] = []
     required = WRITER_SCHEMA["required"]
@@ -301,6 +356,28 @@ def _basic_payload_issues(payload: dict, packet: dict | None = None) -> list[str
     paragraphs = [p.strip() for p in content.split("\n\n") if p.strip()]
     if paragraphs and len(paragraphs[0].split()) < MIN_LEAD_WORDS:
         issues.append(f"lead paragraph too short: {len(paragraphs[0].split())} words")
+    structure = _content_structure_counts(content)
+    if structure["prose_paragraphs"] < MIN_PROSE_PARAGRAPHS:
+        issues.append(
+            f"{_STRUCTURE_ISSUE_PREFIX} prose paragraphs "
+            f"{structure['prose_paragraphs']} < {MIN_PROSE_PARAGRAPHS}"
+        )
+    if structure["h2_headings"] < MIN_H2_HEADINGS:
+        issues.append(
+            f"{_STRUCTURE_ISSUE_PREFIX} H2 headings "
+            f"{structure['h2_headings']} < {MIN_H2_HEADINGS}"
+        )
+    if structure["empty_h2_headings"]:
+        issues.append(
+            f"{_STRUCTURE_ISSUE_PREFIX} empty H2 headings "
+            f"{structure['empty_h2_headings']}"
+        )
+    if structure["trivial_prose_paragraphs"]:
+        issues.append(
+            f"{_STRUCTURE_ISSUE_PREFIX} trivial prose paragraphs "
+            f"{structure['trivial_prose_paragraphs']} below "
+            f"{MIN_PROSE_PARAGRAPH_WORDS} words"
+        )
     if len(tags) < 2:
         issues.append("not enough tags")
     if len(bullets) < 2:
@@ -529,7 +606,8 @@ Hard rules:
 - If the evidence is too weak or contradictory, return: {{"packet_id":"{packet['packet_id']}","status":"INSUFFICIENT_CONFIDENCE","reason":"short reason"}}
 - Write at least 250 words and usually 280–420 words; if the packet cannot support that without filler or invention, return INSUFFICIENT_CONFIDENCE{source_repair_hint}
 - The first paragraph must be at least 30 words and summarize the verified core of the story
-- Include at least two H2 subheadings inside `content`
+- Build at least four substantive non-heading prose paragraphs separated by blank lines; every counted paragraph must contain at least {MIN_PROSE_PARAGRAPH_WORDS} words
+- Include at least two Markdown H2 (`##`) subheadings with specific visible heading text inside `content`; a bare `##` is invalid
 
 Required JSON schema:
 {schema_text}
@@ -566,8 +644,9 @@ Source-backed repair mode:
 - For Talous only, the same final expansion requirement also applies to 200–249 word near-misses with at least {SOURCE_BACKED_TALOUS_MICRO_REPAIR_WORDS} selected source words, {SOURCE_BACKED_TALOUS_MICRO_REPAIR_BLOCKS} source blocks, and confidence >= {SOURCE_BACKED_NEAR_MISS_MIN_CONFIDENCE}. This exists for narrow Suomen Yrittäjät / Finanssiala packets that are source-backed but selected-source constrained.
 - Before returning, count the words in `content` and in the first paragraph. If content is under 250 words or the lead is under 30 words, either add source-backed detail from the packet until it is at least {SOURCE_BACKED_REPAIR_MIN_SAFE_WORDS} words with a 30+ word lead, or return INSUFFICIENT_CONFIDENCE with reason `source_backed_writer_shortfall_unrepairable`.
 - Treat 200–249 source-backed output words and 1–29 word lead paragraphs on otherwise near-complete drafts as failed repairs. Do not return a near-miss; continue revising until the article is safely above both floors or explicitly return `source_backed_writer_shortfall_unrepairable`.
-- Build 4–6 concise paragraphs plus at least two H2 subheadings.
+- Build 4–6 substantive paragraphs of at least {MIN_PROSE_PARAGRAPH_WORDS} words each plus at least two non-empty, specific H2 subheadings.
 - Use available source blocks to add concrete context: actors, figures/timing, cause, consequence, and what happens next when available.
+- Reorganize or expand only claims present in the selected source blocks; do not introduce an actor, date, cause, consequence, reaction, or attribution absent from those blocks.
 - Do not stop at 200–249 words. A 209-word, 211-word, or 244–248-word repair is still invalid and will be quarantined.
 - Do not pad with generic economy commentary, advice, sentiment, or invented market context.
 """
@@ -580,6 +659,8 @@ Problems to fix:
 Repair rules:
 - Return INSUFFICIENT_CONFIDENCE if the original packet cannot support at least 250 factual Finnish words without filler or invention.
 - Otherwise expand the article to 280–420 words, make the first paragraph at least 30 words, and include at least two H2 subheadings.
+- Build at least four substantive non-heading prose paragraphs of at least {MIN_PROSE_PARAGRAPH_WORDS} words each, separated by blank lines. Single-newline-only pseudo-structure and shorter padding blocks do not satisfy the contract.
+- Every H2 must contain specific visible heading text after `##`; a bare `##` is invalid.
 - Return one `source_usage` row for every distinct selected URL. `used:true` requires explicit dependent claims; `used:false` requires `dependent_claims=[]`.
 - Collapse same-article aliases by marking at most one alias `used:true`.
 {source_backed_rules}
@@ -1045,8 +1126,21 @@ def rewrite_articles(articles: list[dict]) -> list[dict]:
                         "final_word_count": _content_word_count(payload),
                         "final_lead_word_count": _content_lead_word_count(payload),
                     })
+                elif _has_structure_issue(issues):
+                    structure = _content_structure_counts(str(payload.get("content") or ""))
+                    reason = "writer_structure_contract_unmet"
+                    extra.update({
+                        "reason_code": "writer_structure_contract_unmet",
+                        "required_prose_paragraphs": MIN_PROSE_PARAGRAPHS,
+                        "required_min_prose_words": MIN_PROSE_PARAGRAPH_WORDS,
+                        "required_h2_headings": MIN_H2_HEADINGS,
+                        "final_prose_paragraphs": structure["prose_paragraphs"],
+                        "final_trivial_prose_paragraphs": structure["trivial_prose_paragraphs"],
+                        "final_h2_headings": structure["h2_headings"],
+                        "final_empty_h2_headings": structure["empty_h2_headings"],
+                    })
                 save_writer_quarantine(packet, reason, raw_response=raw, extra=extra)
-                print(f"[monica]   quarantine: schema_invalid ({'; '.join(issues)})")
+                print(f"[monica]   quarantine: {reason} ({'; '.join(issues)})")
                 continue
 
             _persist_source_usage(packet, payload)

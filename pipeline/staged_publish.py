@@ -19,6 +19,7 @@ import shutil
 import subprocess
 import sys
 import time
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 import shutil
@@ -1587,6 +1588,137 @@ def load_outbox(max_items: int | None = None) -> list[tuple[Path, dict]]:
     return out if max_items is None else out[:max_items]
 
 
+PUBLISH_PREFLIGHT_ACTIONS = ("publish", "monica_review", "reject")
+PUBLISH_CYCLE_SCHEMA = "uutistenlukija.staged_publish_cycle.v1"
+
+
+def summarize_outbox_supply(files: list[Path]) -> dict[str, Any]:
+    """Classify every raw outbox JSON into one mutually exclusive action.
+
+    Invalid or unreadable records are hard rejects in telemetry. The publisher
+    already skips them; counting them as eligible would overstate supply.
+    """
+    action_counts = Counter({action: 0 for action in PUBLISH_PREFLIGHT_ACTIONS})
+    reason_buckets = {
+        action: Counter() for action in PUBLISH_PREFLIGHT_ACTIONS
+    }
+    primary_reason_buckets = {
+        action: Counter() for action in PUBLISH_PREFLIGHT_ACTIONS
+    }
+
+    for path in sorted(files, key=lambda item: item.name):
+        action = "reject"
+        reasons: tuple[str, ...] = ("outbox_record_unreadable",)
+        try:
+            data = json.loads(path.read_text(encoding="utf-8", errors="strict"))
+            if not isinstance(data, dict) or not isinstance(data.get("article"), dict):
+                reasons = ("outbox_record_invalid",)
+            else:
+                result = evaluate_publish_preflight(data)
+                if result.action in PUBLISH_PREFLIGHT_ACTIONS:
+                    action = result.action
+                    reasons = tuple(result.reasons)
+                else:
+                    reasons = ("unknown_preflight_action",)
+        except (OSError, UnicodeError, json.JSONDecodeError):
+            pass
+        except Exception:
+            reasons = ("preflight_evaluation_error",)
+
+        if not reasons:
+            reasons = ("eligible",) if action == "publish" else ("unspecified",)
+        action_counts[action] += 1
+        primary_reason_buckets[action][reasons[0]] += 1
+        for reason in dict.fromkeys(reasons):
+            reason_buckets[action][reason] += 1
+
+    raw_count = len(files)
+    if sum(action_counts.values()) != raw_count:
+        raise RuntimeError("outbox supply classification did not cover every raw record")
+    return {
+        "raw_outbox": raw_count,
+        "action_counts": {
+            action: action_counts[action] for action in PUBLISH_PREFLIGHT_ACTIONS
+        },
+        "primary_reason_buckets": {
+            action: dict(sorted(primary_reason_buckets[action].items()))
+            for action in PUBLISH_PREFLIGHT_ACTIONS
+        },
+        "reason_buckets": {
+            action: dict(sorted(reason_buckets[action].items()))
+            for action in PUBLISH_PREFLIGHT_ACTIONS
+        },
+    }
+
+
+def _new_publish_cycle(args: argparse.Namespace, supply: dict[str, Any]) -> dict[str, Any]:
+    started_at = datetime.now(timezone.utc).isoformat()
+    run_id = str(os.environ.get("GITHUB_RUN_ID") or "").strip()
+    run_attempt = str(os.environ.get("GITHUB_RUN_ATTEMPT") or "1").strip()
+    cycle_id = f"github:{run_id}:{run_attempt}" if run_id else f"local:{started_at}"
+    counts = supply["action_counts"]
+    return {
+        "schema": PUBLISH_CYCLE_SCHEMA,
+        "cycle_id": cycle_id,
+        "started_at": started_at,
+        "ts": None,
+        "admitted": True,
+        "outcome": "error",
+        "result": "cycle_did_not_complete",
+        "return_code": 1,
+        "event": {
+            "name": str(os.environ.get("GITHUB_EVENT_NAME") or "local"),
+            "run_id": run_id or None,
+            "run_attempt": run_attempt if run_id else None,
+            "sha": str(os.environ.get("GITHUB_SHA") or "") or None,
+        },
+        "max_articles": int(getattr(args, "max_articles", 0)),
+        "dry_run": bool(getattr(args, "dry_run", False)),
+        "git_push": bool(getattr(args, "git_push", False)),
+        "attempted": 0,
+        "published": 0,
+        "held": counts["monica_review"],
+        "rejected": counts["reject"],
+        "publish_eligible": counts["publish"],
+        "supply": supply,
+        "execution": {
+            "quality_checked": 0,
+            "quality_passed": 0,
+            "quality_rejected": 0,
+            "duplicate_rejected": 0,
+            "publish_selected": 0,
+            "created": 0,
+        },
+    }
+
+
+def _complete_publish_cycle(
+    cycle: dict[str, Any],
+    *,
+    outcome: str,
+    result: str,
+    return_code: int = 0,
+) -> int:
+    cycle.update(
+        {
+            "outcome": outcome,
+            "result": result,
+            "return_code": return_code,
+        }
+    )
+    return return_code
+
+
+def _write_publish_cycle(args: argparse.Namespace, cycle: dict[str, Any]) -> None:
+    raw_path = str(getattr(args, "outcome_json", "") or "").strip()
+    if not raw_path:
+        return
+    path = Path(raw_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    cycle["ts"] = datetime.now(timezone.utc).isoformat()
+    atomic_write_json(path, cycle)
+
+
 def apply_publish_preflight(
     items: list[tuple[Path, dict]], max_items: int | None = None
 ) -> list[tuple[Path, dict]]:
@@ -2125,14 +2257,40 @@ def run_git_deploy(created_count: int) -> int:
 
 
 def cmd_publish(args: argparse.Namespace) -> int:
+    raw_outbox = sorted((STAGED_ROOT / "outbox").glob("*.json"))
+    cycle = _new_publish_cycle(args, summarize_outbox_supply(raw_outbox))
+    try:
+        return _cmd_publish(args, cycle)
+    except Exception as exc:
+        _complete_publish_cycle(
+            cycle,
+            outcome="error",
+            result=f"exception:{type(exc).__name__}",
+            return_code=1,
+        )
+        raise
+    finally:
+        _write_publish_cycle(args, cycle)
+
+
+def _cmd_publish(args: argparse.Namespace, cycle: dict[str, Any]) -> int:
     items = load_outbox()
     if not items:
         log("publish: no outbox articles")
-        return 0
+        result = (
+            "no_outbox_records"
+            if cycle["supply"]["raw_outbox"] == 0
+            else "no_valid_outbox_records"
+        )
+        return _complete_publish_cycle(cycle, outcome="skip", result=result)
     selected_count = len(items)
     if args.max_articles <= 0:
         log("publish: max-articles cap is zero")
-        return 0
+        return _complete_publish_cycle(
+            cycle,
+            outcome="skip",
+            result="max_articles_zero",
+        )
 
     quality_checked_items: list[tuple[Path, dict]] = []
     quality_passed_items: list[tuple[Path, dict]] = []
@@ -2166,9 +2324,23 @@ def cmd_publish(args: argparse.Namespace) -> int:
         if len(deduplicated_articles) >= args.max_articles:
             break
 
+    execution = cycle["execution"]
+    execution.update(
+        {
+            "quality_checked": len(quality_checked_items),
+            "quality_passed": len(quality_passed_items),
+            "quality_rejected": len(quality_rejected_articles),
+        }
+    )
+    cycle["attempted"] = len(quality_checked_items)
+    cycle["rejected"] += len(quality_rejected_articles)
     if not quality_checked_items:
         log(f"publish: all selected outbox records held by preflight selected={selected_count}")
-        return 0
+        return _complete_publish_cycle(
+            cycle,
+            outcome="skip",
+            result="no_publish_eligible_supply",
+        )
     queue_transitions: list[tuple[Path, Path]] = []
     if not args.dry_run:
         quarantine_rejected_outbox(
@@ -2178,6 +2350,10 @@ def cmd_publish(args: argparse.Namespace) -> int:
         )
     items = quality_passed_items
     articles = deduplicated_articles
+    duplicate_rejected_count = max(0, len(items) - len(articles))
+    execution["duplicate_rejected"] = duplicate_rejected_count
+    execution["publish_selected"] = len(articles)
+    cycle["rejected"] += duplicate_rejected_count
     if not articles:
         if not args.dry_run and items:
             quarantine_duplicate_outbox(items, articles, queue_transitions)
@@ -2189,8 +2365,18 @@ def cmd_publish(args: argparse.Namespace) -> int:
                 f"rejected={len(quality_rejected_articles)}"
             )
         if args.git_push and queue_transitions:
-            return persist_queue_transitions(queue_transitions)
-        return 0
+            queue_rc = persist_queue_transitions(queue_transitions)
+            return _complete_publish_cycle(
+                cycle,
+                outcome="error" if queue_rc else "skip",
+                result="queue_transition_persist_failed" if queue_rc else "all_candidates_rejected",
+                return_code=queue_rc,
+            )
+        return _complete_publish_cycle(
+            cycle,
+            outcome="skip",
+            result="all_candidates_rejected",
+        )
     if not args.dry_run:
         quarantine_duplicate_outbox(items, articles, queue_transitions)
     image_summary = enrich_images_for_articles(articles)
@@ -2234,13 +2420,23 @@ def cmd_publish(args: argparse.Namespace) -> int:
         log(f"publish: dry-run would publish {len(articles)} article(s)")
         for a in articles:
             log(f"publish: dry-run article {a.get('title','')[:100]}")
-        return 0
+        return _complete_publish_cycle(
+            cycle,
+            outcome="ok",
+            result="dry_run",
+        )
     created = publish_articles(articles)
+    execution["created"] = len(created)
     if created:
         ok, err = build_site()
         if not ok:
             log(f"publish: build failed: {err}")
-            return 2
+            return _complete_publish_cycle(
+                cycle,
+                outcome="error",
+                result="build_failed",
+                return_code=2,
+            )
         mark_published(articles)
         keep = {a.get("monica_packet_id") for a in articles if a.get("monica_packet_id")}
         for p, data in items:
@@ -2257,14 +2453,30 @@ def cmd_publish(args: argparse.Namespace) -> int:
                 log_category_decision_trace(trace)
                 atomic_write_json(target, data)
                 p.unlink(missing_ok=True)
+        cycle["published"] = len(created)
         if args.git_push:
-            return run_git_deploy(len(created))
+            deploy_rc = run_git_deploy(len(created))
+            return _complete_publish_cycle(
+                cycle,
+                outcome="error" if deploy_rc else "ok",
+                result="git_deploy_failed" if deploy_rc else "published",
+                return_code=deploy_rc,
+            )
     elif args.git_push and queue_transitions:
         queue_rc = persist_queue_transitions(queue_transitions)
         if queue_rc != 0:
-            return queue_rc
+            return _complete_publish_cycle(
+                cycle,
+                outcome="error",
+                result="queue_transition_persist_failed",
+                return_code=queue_rc,
+            )
     log(f"publish: done created={len(created)}")
-    return 0
+    return _complete_publish_cycle(
+        cycle,
+        outcome="ok" if created else "skip",
+        result="published" if created else "no_files_created",
+    )
 
 
 def queue_box_status(box: str, files: list[Path], now: datetime) -> dict[str, Any]:
@@ -2446,6 +2658,10 @@ def main() -> int:
     pub.add_argument("--dedup-window", type=int, default=48)
     pub.add_argument("--git-push", action="store_true")
     pub.add_argument("--dry-run", action="store_true")
+    pub.add_argument(
+        "--outcome-json",
+        help="write one safe per-cycle outcome JSON (for example under RUNNER_TEMP)",
+    )
     pub.set_defaults(func=cmd_publish)
 
     audit = sub.add_parser("audit-ready")
