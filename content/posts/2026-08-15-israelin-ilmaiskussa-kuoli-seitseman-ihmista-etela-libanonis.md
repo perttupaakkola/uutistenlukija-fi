@@ -50,7 +50,6 @@ source_attributions:
     url: "https://bbc.co.uk/news/articles/c4gjygx4gjeo?at_medium=RSS&at_campaign=rss"
   - name: "The Guardian"
     url: "https://theguardian.com/world/2026/aug/15/israeli-strike-on-southern-lebanon-kills-seven-in-worst-toll-since-june-state-media-says"
-briefing: true
 draft: false
 ---
 
