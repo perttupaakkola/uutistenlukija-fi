@@ -266,5 +266,37 @@
       }
     ],
     "source_url": "https://inews.co.uk/news/jason-arday-found-dead-after-being-found-unresponsive-at-home-4709855?ico=more_from_this_author"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-15T08:18:24.755354+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260815T075942Z_57b34a6475",
+    "category": "Ulkomaat",
+    "selected_source_words": 326,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 6.59,
+    "quality_reasons": [
+      "language borderline Finnish signal (8.0%)",
+      "length under target (261 words)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "only 1 paragraphs (min 3)",
+      "source_confidence_denial_context_missing"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)",
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 261,
+    "title": "Cambridgen entinen professori Jason Arday löydettiin kuolleena Lontoossa"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (8.0%); length under target (261 words); missing: image; readability few paragraphs (1); readability wall of text; only 1 paragraphs (min 3); source_confidence_denial_context_missing"
 }
