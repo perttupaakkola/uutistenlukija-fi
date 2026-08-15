@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-15T16:11:50+00:00",
+  "generated_at": "2026-08-15T17:10:48+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -25,7 +25,7 @@
     "published": 21,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-15T16:08:28.520594+00:00"
+    "last_published_ts": "2026-08-15T17:07:13.545948+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -43,7 +43,7 @@
     ],
     [
       "kertoi",
-      16
+      15
     ],
     [
       "kello",
@@ -51,43 +51,43 @@
     ],
     [
       "olivat",
-      12
+      13
     ],
     [
-      "israelin",
+      "ettei",
       12
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 54,
+    "outboxCount": 56,
     "publishEligibleCount": 0,
-    "monicaReviewCount": 26,
-    "rejectCount": 28,
+    "monicaReviewCount": 27,
+    "rejectCount": 29,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
         "article_source_ratio_exceeded": 5,
         "entertainment_category_review": 1,
-        "thin_distinct_source": 20
+        "thin_distinct_source": 21
       },
       "reject": {
-        "category_disagreement": 26,
+        "category_disagreement": 27,
         "category_unresolved": 2
       }
     },
     "preflightReasonBuckets": {
       "publish": {},
       "monica_review": {
-        "article_source_ratio_exceeded": 25,
+        "article_source_ratio_exceeded": 26,
         "entertainment_category_review": 1,
-        "sensitive_thin_story": 8,
-        "thin_distinct_source": 20
+        "sensitive_thin_story": 9,
+        "thin_distinct_source": 21
       },
       "reject": {
         "article_source_ratio_exceeded": 9,
-        "category_disagreement": 26,
+        "category_disagreement": 27,
         "category_unresolved": 2,
         "sensitive_thin_story": 5,
         "thin_distinct_source": 9
@@ -97,7 +97,7 @@
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "rawOutboxRemainingCycles": 18,
+    "rawOutboxRemainingCycles": 19,
     "publishableRemainingCycles": 0,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
