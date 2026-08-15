@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-15T15:12:55+00:00",
+  "generated_at": "2026-08-15T16:11:50+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -25,7 +25,7 @@
     "published": 21,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-15T15:09:27.760458+00:00"
+    "last_published_ts": "2026-08-15T16:08:28.520594+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -39,32 +39,32 @@
   "trending": [
     [
       "jälkeen",
-      31
+      35
     ],
     [
       "kertoi",
-      14
+      16
     ],
     [
       "kello",
       14
     ],
     [
-      "poliisi",
-      13
+      "olivat",
+      12
     ],
     [
-      "olivat",
+      "israelin",
       12
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 53,
+    "outboxCount": 54,
     "publishEligibleCount": 0,
     "monicaReviewCount": 26,
-    "rejectCount": 27,
+    "rejectCount": 28,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
@@ -73,7 +73,7 @@
         "thin_distinct_source": 20
       },
       "reject": {
-        "category_disagreement": 25,
+        "category_disagreement": 26,
         "category_unresolved": 2
       }
     },
@@ -87,7 +87,7 @@
       },
       "reject": {
         "article_source_ratio_exceeded": 9,
-        "category_disagreement": 25,
+        "category_disagreement": 26,
         "category_unresolved": 2,
         "sensitive_thin_story": 5,
         "thin_distinct_source": 9

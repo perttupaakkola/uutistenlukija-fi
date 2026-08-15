@@ -52,7 +52,6 @@ source_attributions:
     url: "https://theguardian.com/world/2026/aug/15/irish-teenager-electrocuted-shower-greece"
   - name: "The Irish Times"
     url: "https://irishtimes.com/ireland/2026/08/15/family-consider-legal-action-after-irish-teenager-electrocuted-in-shower-in-greece"
-briefing: true
 draft: false
 ---
 
