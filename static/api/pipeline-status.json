@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-15T11:52:41+00:00",
+  "generated_at": "2026-08-15T13:24:35+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -25,7 +25,7 @@
     "published": 19,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-15T11:49:02.034646+00:00"
+    "last_published_ts": "2026-08-15T13:20:55.764152+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -39,10 +39,10 @@
   "trending": [
     [
       "jälkeen",
-      26
+      27
     ],
     [
-      "kertoi",
+      "sanoi",
       12
     ],
     [
@@ -50,26 +50,26 @@
       12
     ],
     [
-      "ihmistä",
+      "kertoi",
       11
     ],
     [
-      "sanoi",
-      11
+      "poliisi",
+      10
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 51,
+    "outboxCount": 52,
     "publishEligibleCount": 0,
-    "monicaReviewCount": 24,
+    "monicaReviewCount": 25,
     "rejectCount": 27,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
         "article_source_ratio_exceeded": 5,
-        "thin_distinct_source": 19
+        "thin_distinct_source": 20
       },
       "reject": {
         "category_disagreement": 25,
@@ -79,9 +79,9 @@
     "preflightReasonBuckets": {
       "publish": {},
       "monica_review": {
-        "article_source_ratio_exceeded": 24,
-        "sensitive_thin_story": 7,
-        "thin_distinct_source": 19
+        "article_source_ratio_exceeded": 25,
+        "sensitive_thin_story": 8,
+        "thin_distinct_source": 20
       },
       "reject": {
         "article_source_ratio_exceeded": 9,
@@ -95,7 +95,7 @@
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "rawOutboxRemainingCycles": 17,
+    "rawOutboxRemainingCycles": 18,
     "publishableRemainingCycles": 0,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
