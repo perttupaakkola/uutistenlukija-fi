@@ -50,7 +50,6 @@ source_domain: "theguardian.com"
 source_attributions:
   - name: "The Guardian World"
     url: "https://theguardian.com/australia-news/2026/aug/15/coalition-split-on-andrew-bragg-speech-as-south-australian-senator-andrew-mclachlan-urges-colleagues-to-follow-his-lead"
-briefing: true
 draft: false
 ---
 

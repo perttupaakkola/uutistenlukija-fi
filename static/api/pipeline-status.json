@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-15T08:02:40+00:00",
+  "generated_at": "2026-08-15T09:31:37+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -8,14 +8,24 @@
     "total": 0,
     "ok": 0,
     "skip": 0,
-    "error": 0
+    "error": 0,
+    "admitted": 0
+  },
+  "stagedPublishCycles": {
+    "total": 0,
+    "admitted": 0,
+    "publishEligible": 0,
+    "monicaReview": 0,
+    "reject": 0,
+    "published": 0,
+    "latest": null
   },
   "articles": {
     "attempted": 0,
     "published": 15,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-15T07:59:08.510838+00:00"
+    "last_published_ts": "2026-08-15T09:28:07.448130+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -29,7 +39,7 @@
   "trending": [
     [
       "jälkeen",
-      17
+      18
     ],
     [
       "kertoi",
@@ -44,26 +54,58 @@
       10
     ],
     [
-      "poliisi",
+      "braggin",
       10
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 4,
+    "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 49,
+    "outboxCount": 51,
+    "publishEligibleCount": 0,
+    "monicaReviewCount": 24,
+    "rejectCount": 27,
+    "preflightPrimaryReasonBuckets": {
+      "publish": {},
+      "monica_review": {
+        "article_source_ratio_exceeded": 5,
+        "thin_distinct_source": 19
+      },
+      "reject": {
+        "category_disagreement": 25,
+        "category_unresolved": 2
+      }
+    },
+    "preflightReasonBuckets": {
+      "publish": {},
+      "monica_review": {
+        "article_source_ratio_exceeded": 24,
+        "sensitive_thin_story": 7,
+        "thin_distinct_source": 19
+      },
+      "reject": {
+        "article_source_ratio_exceeded": 9,
+        "category_disagreement": 25,
+        "category_unresolved": 2,
+        "sensitive_thin_story": 5,
+        "thin_distinct_source": 9
+      }
+    },
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "worstCaseRemainingCycles": 17,
+    "rawOutboxRemainingCycles": 17,
+    "publishableRemainingCycles": 0,
+    "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
-    "severity": "ok",
+    "severity": "critical",
     "reasons": [
       "publisher_enabled",
       "scanner_enabled",
       "worker_enabled",
-      "queue_active"
+      "queue_active",
+      "eligible_supply_empty"
     ]
   }
 }
