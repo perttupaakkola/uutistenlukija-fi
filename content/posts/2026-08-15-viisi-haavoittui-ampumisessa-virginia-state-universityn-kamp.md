@@ -52,7 +52,6 @@ source_attributions:
     url: "https://marca.com/en/lifestyle/us-news/2026/08/15/virginia-state-university-shooting-leaves-5-injured-one-critical-as-police-search-for-multiple-suspects.html"
   - name: "UPI"
     url: "https://upi.com/Top_News/US/2026/08/15/5-injured-virginia-state-university-shooting/8271786802712"
-briefing: true
 draft: false
 ---
 
