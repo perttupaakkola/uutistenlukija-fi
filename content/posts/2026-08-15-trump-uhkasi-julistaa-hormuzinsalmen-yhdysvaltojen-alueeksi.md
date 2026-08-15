@@ -50,7 +50,6 @@ source_domain: "theguardian.com"
 source_attributions:
   - name: "The Guardian World"
     url: "https://theguardian.com/us-news/2026/aug/14/trump-threat-strait-hormuz-us-territory"
-briefing: true
 draft: false
 ---
 
