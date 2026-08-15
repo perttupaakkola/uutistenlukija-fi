@@ -54,7 +54,6 @@ source_attributions:
     url: "https://engadget.com/2231699/california-teamsters-union-is-suing-the-state-over-self-driving-trucks"
   - name: "ABC7"
     url: "https://abc7.com/post/california-dmv-approves-testing-driverless-semi-trucks-despite-teamsters-pushback-job-loss-fears/19009730"
-briefing: true
 draft: false
 ---
 
