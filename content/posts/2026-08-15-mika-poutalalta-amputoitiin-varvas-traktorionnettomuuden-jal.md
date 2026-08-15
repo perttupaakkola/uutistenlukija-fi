@@ -50,7 +50,6 @@ source_attributions:
     url: "https://seiska.fi/kotimaa/ministeri-mika-poutala-joutui-vakavaan-traktorionnettomuuteen/2231042"
   - name: "Suomenmaa"
     url: "https://suomenmaa.fi/uutiset/ministeri-poutala-joutui-pahaan-onnettomuuteen-viettanee-ensi-viikon-sairaalassa-3"
-briefing: true
 draft: false
 ---
 
