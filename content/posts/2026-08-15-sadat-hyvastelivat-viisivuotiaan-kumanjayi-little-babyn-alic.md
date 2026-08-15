@@ -48,7 +48,6 @@ source_domain: "theguardian.com"
 source_attributions:
   - name: "The Guardian World"
     url: "https://theguardian.com/australia-news/2026/aug/15/emotional-tributes-kumanjayi-little-baby-alice-springs-funeral-ntwnfb"
-briefing: true
 draft: false
 ---
 
