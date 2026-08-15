@@ -54,7 +54,6 @@ source_attributions:
     url: "https://eturbonews.com/indonesia-earthquake-flores-7-7-tsunami"
   - name: "Metro"
     url: "https://metro.co.uk/2026/08/15/five-dead-7-7-magnitude-earthquake-indonesia-sparks-tsunami-fears-29382697"
-briefing: true
 draft: false
 ---
 
