@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-15T13:24:35+00:00",
+  "generated_at": "2026-08-15T14:12:48+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -25,7 +25,7 @@
     "published": 19,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-15T13:20:55.764152+00:00"
+    "last_published_ts": "2026-08-15T14:09:13.286346+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -39,7 +39,11 @@
   "trending": [
     [
       "jälkeen",
-      27
+      30
+    ],
+    [
+      "kertoi",
+      12
     ],
     [
       "sanoi",
@@ -50,25 +54,22 @@
       12
     ],
     [
-      "kertoi",
+      "kello",
       11
-    ],
-    [
-      "poliisi",
-      10
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 52,
+    "outboxCount": 53,
     "publishEligibleCount": 0,
-    "monicaReviewCount": 25,
+    "monicaReviewCount": 26,
     "rejectCount": 27,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
         "article_source_ratio_exceeded": 5,
+        "entertainment_category_review": 1,
         "thin_distinct_source": 20
       },
       "reject": {
@@ -80,6 +81,7 @@
       "publish": {},
       "monica_review": {
         "article_source_ratio_exceeded": 25,
+        "entertainment_category_review": 1,
         "sensitive_thin_story": 8,
         "thin_distinct_source": 20
       },
