@@ -50,7 +50,6 @@ source_domain: "theguardian.com"
 source_attributions:
   - name: "The Guardian World"
     url: "https://theguardian.com/australia-news/2026/aug/15/fears-for-missing-sydney-teen-who-hasnt-been-seen-since-leaving-for-hike-on-wednesday"
-briefing: true
 draft: false
 ---
 
