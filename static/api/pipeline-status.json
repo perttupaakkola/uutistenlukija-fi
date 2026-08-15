@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-14T17:41:24+00:00",
+  "generated_at": "2026-08-15T05:39:24+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -12,10 +12,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 11,
+    "published": 8,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-14T17:37:44.290204+00:00"
+    "last_published_ts": "2026-08-15T05:35:42.535667+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -32,31 +32,31 @@
       9
     ],
     [
-      "kertoi",
-      9
-    ],
-    [
-      "sanoi",
-      8
-    ],
-    [
       "poliisi",
       8
     ],
     [
       "verohallinnon",
       7
+    ],
+    [
+      "ennen",
+      6
+    ],
+    [
+      "perjantaina",
+      6
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 0,
+    "readyCount": 13,
     "writingCount": 0,
-    "outboxCount": 45,
+    "outboxCount": 46,
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "worstCaseRemainingCycles": 15,
+    "worstCaseRemainingCycles": 16,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
     "reasons": [
