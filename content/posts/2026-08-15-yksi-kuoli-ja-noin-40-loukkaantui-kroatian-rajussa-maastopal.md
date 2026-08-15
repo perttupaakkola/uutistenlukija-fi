@@ -50,7 +50,6 @@ source_attributions:
     url: "https://bbc.co.uk/news/articles/c9342wn2x27o?at_medium=RSS&at_campaign=rss"
   - name: "Yahoo"
     url: "https://yahoo.com/news/articles/croatian-blaze-forces-thousands-flee-102123019.html"
-briefing: true
 draft: false
 ---
 
