@@ -270,5 +270,35 @@
       }
     ],
     "source_url": "https://www.yahoo.com/news/politics/articles/bbc-says-secret-won-t-193923827.html"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-15T05:48:35.638238+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260814T211834Z_b8ee5b69ef",
+    "category": "Ulkomaat",
+    "selected_source_words": 431,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 6.74,
+    "quality_reasons": [
+      "language borderline Finnish signal (10.0%)",
+      "length under target (295 words)",
+      "missing: image",
+      "readability few paragraphs (1)",
+      "readability wall of text",
+      "only 1 paragraphs (min 3)"
+    ],
+    "hard_fails": [
+      "only 1 paragraphs (min 3)"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 295,
+    "title": "BBC pyytää lupaa haastaa Trumpin vanhimmat lapset ja vävyn todistajiksi"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (10.0%); length under target (295 words); missing: image; readability few paragraphs (1); readability wall of text; only 1 paragraphs (min 3)"
 }
