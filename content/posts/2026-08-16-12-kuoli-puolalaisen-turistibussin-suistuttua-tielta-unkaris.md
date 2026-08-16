@@ -52,7 +52,6 @@ source_attributions:
     url: "https://bbc.co.uk/news/articles/ckg4424zd7go?at_medium=RSS&at_campaign=rss"
   - name: "Devdiscourse"
     url: "https://devdiscourse.com/article/business/3964312-tragedy-strikes-polish-bus-overturns-in-hungary"
-briefing: true
 draft: false
 ---
 
