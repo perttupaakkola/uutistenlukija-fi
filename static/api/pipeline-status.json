@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-16T20:19:13+00:00",
+  "generated_at": "2026-08-16T20:59:06+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -25,7 +25,7 @@
     "published": 13,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-16T20:15:30.704066+00:00"
+    "last_published_ts": "2026-08-16T20:57:07.610407+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -38,39 +38,39 @@
   },
   "trending": [
     [
-      "ihmistä",
-      17
-    ],
-    [
       "jälkeen",
-      11
+      12
     ],
     [
-      "mukaansa",
-      11
-    ],
-    [
-      "vuonna",
+      "ihmistä",
       11
     ],
     [
       "australian",
+      11
+    ],
+    [
+      "mukaansa",
+      10
+    ],
+    [
+      "vuonna",
       10
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 19,
+    "readyCount": 17,
     "writingCount": 0,
-    "outboxCount": 60,
+    "outboxCount": 61,
     "publishEligibleCount": 0,
-    "monicaReviewCount": 29,
+    "monicaReviewCount": 30,
     "rejectCount": 31,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
         "article_source_ratio_exceeded": 5,
         "entertainment_category_review": 1,
-        "thin_distinct_source": 23
+        "thin_distinct_source": 24
       },
       "reject": {
         "category_disagreement": 29,
@@ -80,10 +80,10 @@
     "preflightReasonBuckets": {
       "publish": {},
       "monica_review": {
-        "article_source_ratio_exceeded": 28,
+        "article_source_ratio_exceeded": 29,
         "entertainment_category_review": 1,
         "sensitive_thin_story": 10,
-        "thin_distinct_source": 23
+        "thin_distinct_source": 24
       },
       "reject": {
         "article_source_ratio_exceeded": 9,
@@ -97,7 +97,7 @@
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "rawOutboxRemainingCycles": 20,
+    "rawOutboxRemainingCycles": 21,
     "publishableRemainingCycles": 0,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
