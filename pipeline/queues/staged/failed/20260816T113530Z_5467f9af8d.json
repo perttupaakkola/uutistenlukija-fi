@@ -273,5 +273,35 @@
       }
     ],
     "source_url": "https://www.theguardian.com/world/2026/aug/16/ukrainian-drone-attack-on-russia-wildberries-warehouse-fire"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-16T20:08:09.879099+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260816T113530Z_5467f9af8d",
+    "category": "Ulkomaat",
+    "selected_source_words": 485,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 8.11,
+    "quality_reasons": [
+      "missing: image",
+      "unsourced numbers",
+      "source_confidence_denial_context_missing",
+      "unsourced_numbers: 2400"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 2400"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 311,
+    "title": "Venäjä: Ukrainan laaja lennokki-isku surmasi ainakin kuusi"
+  },
+  "failure": "quality_gate_rejected: missing: image; unsourced numbers; source_confidence_denial_context_missing; unsourced_numbers: 2400"
 }
