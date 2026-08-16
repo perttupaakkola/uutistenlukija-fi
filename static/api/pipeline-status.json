@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-16T19:40:22+00:00",
+  "generated_at": "2026-08-16T20:19:13+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -22,10 +22,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 12,
+    "published": 13,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-16T19:36:48.459904+00:00"
+    "last_published_ts": "2026-08-16T20:15:30.704066+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -47,24 +47,24 @@
     ],
     [
       "mukaansa",
-      10
+      11
+    ],
+    [
+      "vuonna",
+      11
     ],
     [
       "australian",
       10
-    ],
-    [
-      "havaijin",
-      10
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 22,
+    "readyCount": 19,
     "writingCount": 0,
-    "outboxCount": 59,
+    "outboxCount": 60,
     "publishEligibleCount": 0,
     "monicaReviewCount": 29,
-    "rejectCount": 30,
+    "rejectCount": 31,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
@@ -73,7 +73,7 @@
         "thin_distinct_source": 23
       },
       "reject": {
-        "category_disagreement": 28,
+        "category_disagreement": 29,
         "category_unresolved": 2
       }
     },
@@ -87,7 +87,7 @@
       },
       "reject": {
         "article_source_ratio_exceeded": 9,
-        "category_disagreement": 28,
+        "category_disagreement": 29,
         "category_unresolved": 2,
         "sensitive_thin_story": 5,
         "thin_distinct_source": 9
