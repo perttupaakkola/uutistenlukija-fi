@@ -259,5 +259,37 @@
       }
     ],
     "source_url": "https://www.bbc.co.uk/news/articles/cd69ely319eo?at_medium=RSS&at_campaign=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-16T18:49:27.948360+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260816T004527Z_e3b931ebe3",
+    "category": "Ulkomaat",
+    "selected_source_words": 408,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 7.79,
+    "quality_reasons": [
+      "language borderline Finnish signal (10.0%)",
+      "length under target (278 words)",
+      "missing: image",
+      "unsourced numbers",
+      "source_confidence_denial_context_missing",
+      "unsourced_numbers: 10milj, 7.4milj"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 10milj, 7.4milj"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 278,
+    "title": "BBC pyrkii haastamaan Trumpin lapset ja vävyn todistajiksi kunnianloukkausjutussa"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (10.0%); length under target (278 words); missing: image; unsourced numbers; source_confidence_denial_context_missing; unsourced_numbers: 10milj, 7.4milj"
 }
