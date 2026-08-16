@@ -50,7 +50,6 @@ source_domain: "theguardian.com"
 source_attributions:
   - name: "The Guardian World"
     url: "https://theguardian.com/australia-news/live/2026/aug/16/politics-reactions-nsw-gun-buyback-anthony-albanese-labor-angus-taylor-coalition-pauline-hanson-one-nation-bird-flu-ntwnfb"
-briefing: true
 draft: false
 ---
 
