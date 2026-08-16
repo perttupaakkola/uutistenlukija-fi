@@ -52,7 +52,6 @@ source_attributions:
     url: "https://arstechnica.com/culture/2026/08/visionquest-trailer-kicks-off-disneys-d23-fan-event"
   - name: "ABC7 New York"
     url: "https://abc7ny.com/post/visionquest-trailer-brings-1st-look-marvel-show-d23/19684131"
-briefing: true
 draft: false
 ---
 
