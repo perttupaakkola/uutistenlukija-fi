@@ -52,7 +52,6 @@ source_attributions:
     url: "https://bbc.co.uk/news/articles/crmrr7kjy9vo?at_medium=RSS&at_campaign=rss"
   - name: "Yahoo"
     url: "https://yahoo.com/news/weather-news/articles/weather-hawaii-braces-potential-hurricane-145151284.html"
-briefing: true
 draft: false
 ---
 
