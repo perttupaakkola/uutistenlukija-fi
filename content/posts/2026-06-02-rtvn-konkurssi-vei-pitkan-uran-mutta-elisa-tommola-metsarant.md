@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Lahtelainen Elisa Tommola-Metsäranta menetti työnsä RTV:n konkurssissa pitkän uran jälkeen. Nyt hän jatkaa tutulla alalla Italian Kaakeli Oy:n yrittäjän…"
+description: "Elisa Tommola-Metsäranta menetti työnsä RTV:n konkurssissa. Sen jälkeen hän ryhtyi Lahdessa Italian Kaakeli Oy:n yrittäjäksi."
 summary: "Lahtelainen Elisa Tommola-Metsäranta menetti työnsä RTV:n konkurssissa pitkän uran jälkeen. Nyt hän jatkaa tutulla alalla Italian Kaakeli Oy:n yrittäjänä yhdessä miehensä kanssa."
 summary_bullets:
   - "Elisa Tommola-Metsärannan 26 vuoden ura RTV:llä päättyi yhtiön konkurssiin."
