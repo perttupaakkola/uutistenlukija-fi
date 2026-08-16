@@ -220,7 +220,7 @@ reconcile_and_push() {
       return 0
     fi
     if [[ "$remote_head" != "$base_remote" ]]; then
-      if ! git rebase "$remote_ref"; then
+      if ! git -c merge.directoryRenames=false rebase "$remote_ref"; then
         git rebase --abort || true
         die "queue transition conflicted with concurrent main update"
       fi

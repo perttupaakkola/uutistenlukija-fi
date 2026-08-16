@@ -128,12 +128,14 @@ writing.unlink()
         )
         (self.seed / "README.md").write_text("fixture\n", encoding="utf-8")
 
-    def _admit_packet(self, packet="packet.json"):
+    def _admit_packet(self, packet="packet.json", payload=None):
         self._git(self.seed, "fetch", "origin", "main")
         self._git(self.seed, "reset", "--hard", "origin/main")
         ready = self.seed / "pipeline/queues/staged/ready" / packet
         ready.parent.mkdir(parents=True, exist_ok=True)
-        ready.write_text(json.dumps({"packet_id": packet}), encoding="utf-8")
+        if payload is None:
+            payload = {"packet_id": packet}
+        ready.write_text(json.dumps(payload), encoding="utf-8")
         self._git(self.seed, "add", "-f", str(ready.relative_to(self.seed)))
         self._git(self.seed, "commit", "-m", f"admit {packet}")
         self._git(self.seed, "push", "origin", "main")
@@ -159,6 +161,31 @@ writing.unlink()
             ["bash", "pipeline/staged_monica_worker_cron.sh"],
             cwd=self.worker,
             env=self._wrapper_env(**overrides),
+            check=False,
+        )
+
+    def _run_retry_reconciliation(self):
+        # Exercise the persisted-commit retry without starting a fresh packet dispatch.
+        wrapper_source = SOURCE_WRAPPER.read_text(encoding="utf-8")
+        definitions, marker, _ = wrapper_source.partition('\ncd "$PROJECT_DIR"\n')
+        self.assertTrue(marker, "wrapper main entrypoint marker is missing")
+        retry_wrapper = self.root / "retry-reconciliation.sh"
+        retry_wrapper.write_text(
+            definitions
+            + marker
+            + "git rev-parse --is-inside-work-tree >/dev/null\n"
+            + "acquire_worker_lock\n"
+            + "recover_orphaned_writing\n"
+            + "resume_completed_transition\n"
+            + "require_clean_tree\n"
+            + "sync_from_remote\n"
+            + "require_clean_tree\n",
+            encoding="utf-8",
+        )
+        return self._run(
+            ["bash", str(retry_wrapper)],
+            cwd=self.worker,
+            env=self._wrapper_env(),
             check=False,
         )
 
@@ -464,6 +491,109 @@ writing.unlink()
         self.assertIn("concurrent-after-local-commit.txt", files)
         self.assertIn(f"pipeline/queues/staged/outbox/{packet}", files)
         self.assertNotIn(f"pipeline/queues/staged/ready/{packet}", files)
+        self.assertEqual(self._git(self.worker, "status", "--porcelain").stdout, "")
+
+    def test_pending_failed_transition_preserves_concurrent_ready_packet(self):
+        packet = "directory-rename-source.json"
+        self._admit_packet(
+            packet,
+            {
+                "packet_id": packet,
+                "research": "stable source material " * 100,
+            },
+        )
+        self._sync_worker()
+        ready_rel = f"pipeline/queues/staged/ready/{packet}"
+        failed_rel = f"pipeline/queues/staged/failed/{packet}"
+        ready = self.worker / ready_rel
+        failed = self.worker / failed_rel
+        payload = json.loads(ready.read_text(encoding="utf-8"))
+        payload["failure"] = "insufficient_confidence"
+        ready.unlink()
+        failed.parent.mkdir(parents=True, exist_ok=True)
+        failed.write_text(json.dumps(payload, sort_keys=True), encoding="utf-8")
+        self._git(self.worker, "add", ready_rel)
+        self._git(self.worker, "add", "-f", failed_rel)
+        self._git(
+            self.worker,
+            "commit",
+            "-m",
+            f"auto(staged): Monica ready to failed {packet}",
+        )
+
+        self._git(self.seed, "fetch", "origin", "main")
+        self._git(self.seed, "reset", "--hard", "origin/main")
+        concurrent_packet = "concurrent-ready.json"
+        concurrent_rel = f"pipeline/queues/staged/ready/{concurrent_packet}"
+        concurrent_bytes = (
+            b'{"marker":"byte-identical","packet_id":"concurrent-ready.json"}\n'
+        )
+        concurrent_ready = self.seed / concurrent_rel
+        concurrent_ready.write_bytes(concurrent_bytes)
+        self._git(self.seed, "add", "-f", concurrent_rel)
+        self._git(self.seed, "commit", "-m", "scanner adds a different ready packet")
+        self._git(self.seed, "push", "origin", "main")
+        remote_before_reconcile = self._git(
+            self.worker,
+            "--git-dir",
+            str(self.origin),
+            "rev-parse",
+            "main",
+        ).stdout.strip()
+
+        result = self._run_retry_reconciliation()
+        self.assertEqual(result.returncode, 0, result.stderr or result.stdout)
+        files = self._remote_files()
+        self.assertIn(failed_rel, files)
+        self.assertNotIn(ready_rel, files)
+        self.assertNotIn(
+            f"pipeline/queues/staged/outbox/{packet}",
+            files,
+        )
+        self.assertIn(concurrent_rel, files)
+        self.assertNotIn(
+            f"pipeline/queues/staged/failed/{concurrent_packet}",
+            files,
+        )
+        remote_bytes = subprocess.run(
+            [
+                "git",
+                "--git-dir",
+                str(self.origin),
+                "show",
+                f"main:{concurrent_rel}",
+            ],
+            check=True,
+            capture_output=True,
+        ).stdout
+        self.assertEqual(remote_bytes, concurrent_bytes)
+        remote_after_reconcile = self._git(
+            self.worker,
+            "--git-dir",
+            str(self.origin),
+            "rev-parse",
+            "main",
+        ).stdout.strip()
+        fast_forward = self._git(
+            self.worker,
+            "--git-dir",
+            str(self.origin),
+            "merge-base",
+            "--is-ancestor",
+            remote_before_reconcile,
+            remote_after_reconcile,
+            check=False,
+        )
+        self.assertEqual(fast_forward.returncode, 0, fast_forward.stderr)
+        local_config = self._git(
+            self.worker,
+            "config",
+            "--local",
+            "--get",
+            "merge.directoryRenames",
+            check=False,
+        )
+        self.assertNotEqual(local_config.returncode, 0, local_config.stdout)
         self.assertEqual(self._git(self.worker, "status", "--porcelain").stdout, "")
 
     def test_partial_pending_queue_commit_is_rejected_without_remote_data_loss(self):
