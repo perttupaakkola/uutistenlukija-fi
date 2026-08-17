@@ -724,17 +724,25 @@ class PagesDeployStatusContractTests(unittest.TestCase):
         run_end = workflow.index("\n      - name:", run_start)
         return textwrap.dedent(workflow[run_start:run_end])
 
-    def test_every_pages_deploy_refreshes_canonical_status_before_build(self) -> None:
+    def test_every_pages_deploy_refreshes_status_then_panel_before_build(self) -> None:
         deploy_workflows = []
         for workflow_path, workflow in self._deploy_workflows():
             deploy_workflows.append(workflow_path.name)
             with self.subTest(workflow=workflow_path.name):
                 producer = "python3 pipeline/generate_pipeline_status.py"
+                panel = (
+                    "python3 scripts/business_control_panel.py "
+                    "--pipeline-status-file static/api/pipeline-status.json "
+                    "--output static/api/business-control-panel.json"
+                )
                 self.assertIn(producer, workflow)
+                self.assertIn(panel, workflow)
                 status = workflow.index(producer)
+                business_panel = workflow.index(panel)
                 build = workflow.index("- name: Build")
                 deploy = workflow.index("- name: Deploy to Cloudflare Pages")
-                self.assertLess(status, build)
+                self.assertLess(status, business_panel)
+                self.assertLess(business_panel, build)
                 self.assertLess(build, deploy)
 
         self.assertEqual(

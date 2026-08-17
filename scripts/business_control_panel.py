@@ -7,6 +7,7 @@ read or printed. Intended for cron/manual use:
 
     python3 scripts/business_control_panel.py
     python3 scripts/business_control_panel.py --dry-run
+    python3 scripts/business_control_panel.py --pipeline-status-file static/api/pipeline-status.json
 """
 from __future__ import annotations
 
@@ -43,6 +44,7 @@ PRODUCTION_PIPELINE_STATUS_TIMEOUT_SECONDS = 5
 PRODUCTION_PIPELINE_STATUS_MAX_BYTES = 256 * 1024
 PRODUCTION_PIPELINE_STATUS_MAX_AGE_MINUTES = 90
 PRODUCTION_PIPELINE_STATUS_FUTURE_TOLERANCE_MINUTES = 5
+CANONICAL_PIPELINE_STATUS_RELATIVE_PATH = Path("static/api/pipeline-status.json")
 
 
 def utcnow() -> datetime:
@@ -210,7 +212,17 @@ def validate_production_pipeline_status(
     runway = payload.get("stagedQueueRunway")
     if not isinstance(runway, dict):
         return fail("invalid", "production staged runway is missing")
-    count_keys = ("readyCount", "writingCount", "outboxCount", "worstCaseRemainingCycles")
+    count_keys = (
+        "readyCount",
+        "writingCount",
+        "outboxCount",
+        "publishEligibleCount",
+        "monicaReviewCount",
+        "rejectCount",
+        "rawOutboxRemainingCycles",
+        "publishableRemainingCycles",
+        "worstCaseRemainingCycles",
+    )
     bool_keys = ("publisherEnabled", "scannerEnabled", "workerEnabled")
     if any(not _is_nonnegative_int(runway.get(key)) for key in count_keys):
         return fail("invalid", "production staged runway counts are invalid")
@@ -229,43 +241,128 @@ def validate_production_pipeline_status(
     if not isinstance(reasons, list) or any(not isinstance(reason, str) for reason in reasons):
         return fail("invalid", "production staged reasons are invalid")
 
-    expected_cycles = (runway["outboxCount"] + max_packets - 1) // max_packets
+    bucket_keys = ("preflightPrimaryReasonBuckets", "preflightReasonBuckets")
+    action_keys = {"publish", "monica_review", "reject"}
+    for bucket_key in bucket_keys:
+        buckets = runway.get(bucket_key)
+        if not isinstance(buckets, dict) or set(buckets) != action_keys:
+            return fail("invalid", "production staged reason buckets are invalid")
+        for action_buckets in buckets.values():
+            if not isinstance(action_buckets, dict) or any(
+                not isinstance(reason, str)
+                or re.fullmatch(r"[a-z0-9_]{1,80}", reason) is None
+                or not _is_nonnegative_int(count)
+                or count == 0
+                for reason, count in action_buckets.items()
+            ):
+                return fail("invalid", "production staged reason bucket counts must be positive integers")
+
+    action_count_keys = {
+        "publish": "publishEligibleCount",
+        "monica_review": "monicaReviewCount",
+        "reject": "rejectCount",
+    }
+    primary_buckets = runway["preflightPrimaryReasonBuckets"]
+    secondary_buckets = runway["preflightReasonBuckets"]
+    for action, count_key in action_count_keys.items():
+        action_count = runway[count_key]
+        if sum(primary_buckets[action].values()) != action_count:
+            return fail("contradictory", "production staged primary reason bucket totals contradict action counts")
+        if any(count > action_count for count in secondary_buckets[action].values()):
+            return fail("contradictory", "production staged secondary reason bucket count exceeds its action count")
+        if any(
+            secondary_buckets[action].get(reason, 0) < count
+            for reason, count in primary_buckets[action].items()
+        ):
+            return fail(
+                "contradictory",
+                "production staged primary reasons are not represented consistently in secondary buckets",
+            )
+
+    publish_eligible_count = runway["publishEligibleCount"]
+    if (
+        publish_eligible_count
+        + runway["monicaReviewCount"]
+        + runway["rejectCount"]
+        != runway["outboxCount"]
+    ):
+        return fail(
+            "contradictory",
+            "production staged eligible/held/rejected partition contradicts raw outbox depth",
+        )
+    expected_raw_cycles = (runway["outboxCount"] + max_packets - 1) // max_packets
+    expected_publishable_cycles = (publish_eligible_count + max_packets - 1) // max_packets
     publisher_enabled = runway["publisherEnabled"]
     scanner_enabled = runway["scannerEnabled"]
     worker_enabled = runway["workerEnabled"]
     all_enabled = publisher_enabled and scanner_enabled and worker_enabled
-    if runway["worstCaseRemainingCycles"] != expected_cycles:
-        return fail("contradictory", "production staged cycle count contradicts outbox depth")
+    if runway["rawOutboxRemainingCycles"] != expected_raw_cycles:
+        return fail("contradictory", "production staged raw-outbox cycle count contradicts raw outbox depth")
+    if runway["publishableRemainingCycles"] != expected_publishable_cycles:
+        return fail("contradictory", "production staged publishable cycle count contradicts eligible supply")
+    if runway["worstCaseRemainingCycles"] != runway["publishableRemainingCycles"]:
+        return fail(
+            "contradictory",
+            "production staged backward-compatible cycle count contradicts publishable cycles",
+        )
+
+    expected_reasons = [
+        "publisher_enabled" if publisher_enabled else "publisher_disabled",
+        "scanner_enabled" if scanner_enabled else "scanner_disabled",
+        "worker_enabled" if worker_enabled else "worker_disabled",
+    ]
     if all_enabled:
         expected_replenishment = "end_to_end_enabled"
+        expected_reasons.append(
+            "queue_idle"
+            if runway["readyCount"] + runway["writingCount"] + runway["outboxCount"] == 0
+            else "queue_active"
+        )
     elif scanner_enabled and worker_enabled:
         expected_replenishment = "scanner_worker_enabled_publisher_disabled"
+        expected_reasons.append("publisher_delivery_disabled")
     elif scanner_enabled:
         expected_replenishment = "scanner_enabled_writer_unverified"
+        expected_reasons.append("writer_unverified")
     elif worker_enabled:
         expected_replenishment = "worker_enabled_scanner_disabled"
+        expected_reasons.append("scanner_replenishment_disabled")
     else:
         expected_replenishment = "disabled"
     if replenishment != expected_replenishment:
         return fail("contradictory", "production staged replenishment contradicts marker state")
     if runway["writingCount"] > 1:
         expected_severity = "critical"
+        expected_reasons.append("multiple_writing_packets")
     elif not publisher_enabled:
         expected_severity = "inactive"
+    elif runway["outboxCount"] > 0 and publish_eligible_count == 0:
+        expected_severity = "critical"
+        expected_reasons.append("eligible_supply_empty")
     elif scanner_enabled and worker_enabled:
         expected_severity = "ok"
-    elif runway["outboxCount"] <= 6:
+        if publish_eligible_count:
+            expected_reasons.append("eligible_supply_available")
+    elif publish_eligible_count <= 6:
         expected_severity = "critical"
-    elif runway["outboxCount"] <= 12:
+    elif publish_eligible_count <= 12:
         expected_severity = "warning"
     else:
         expected_severity = "ok"
+    if publisher_enabled and not (scanner_enabled and worker_enabled):
+        expected_reasons.append(f"eligible_supply_{expected_severity}")
     if severity != expected_severity:
-        return fail("contradictory", "production staged severity contradicts queue and marker state")
+        return fail("contradictory", "production staged severity contradicts eligible supply and marker state")
+    if reasons != expected_reasons:
+        return fail("contradictory", "production staged reasons contradict queue and marker state")
 
     normalized_runway = {
         **{key: runway[key] for key in count_keys},
         **{key: runway[key] for key in bool_keys},
+        **{
+            key: {action: dict(runway[key][action]) for action in sorted(action_keys)}
+            for key in bucket_keys
+        },
         "maxPacketsPerCycle": max_packets,
         "replenishmentState": replenishment,
         "severity": severity,
@@ -310,6 +407,36 @@ def production_pipeline_status(now: datetime | None = None) -> dict[str, Any]:
     except (UnicodeDecodeError, json.JSONDecodeError):
         return _production_evidence_failure(now, "invalid", "production response is not valid JSON")
     return validate_production_pipeline_status(payload, now, final_url)
+
+
+def deployment_pipeline_status(path: Path, now: datetime | None = None) -> dict[str, Any]:
+    """Read only the just-generated canonical deployment status artifact."""
+    now = now or utcnow()
+    expected = Path(os.path.abspath(PROJECT_DIR / CANONICAL_PIPELINE_STATUS_RELATIVE_PATH))
+    candidate_input = path if path.is_absolute() else PROJECT_DIR / path
+    candidate = Path(os.path.abspath(candidate_input))
+    if candidate != expected or candidate.is_symlink():
+        return _production_evidence_failure(
+            now,
+            "invalid",
+            "deployment status input is not the canonical generated pipeline-status file",
+        )
+    try:
+        with candidate.open("rb") as status_file:
+            raw = status_file.read(PRODUCTION_PIPELINE_STATUS_MAX_BYTES + 1)
+    except OSError as exc:
+        return _production_evidence_failure(now, "unavailable", f"deployment status read failed: {exc}")
+    if len(raw) > PRODUCTION_PIPELINE_STATUS_MAX_BYTES:
+        return _production_evidence_failure(now, "invalid", "deployment status exceeds the byte limit")
+    try:
+        payload = json.loads(raw.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError):
+        return _production_evidence_failure(now, "invalid", "deployment status is not valid JSON")
+    return validate_production_pipeline_status(
+        payload,
+        now,
+        PRODUCTION_PIPELINE_STATUS_URL,
+    )
 
 
 def _read_git(repo_dir: Path, *args: str) -> str | None:
@@ -1086,11 +1213,19 @@ def local_coordination_placeholders(now: datetime) -> dict[str, Any]:
     }
 
 
-def build_panel(now: datetime | None = None) -> dict[str, Any]:
+def build_panel(
+    now: datetime | None = None,
+    *,
+    pipeline_status_file: Path | None = None,
+) -> dict[str, Any]:
     now = now or utcnow()
     checkout_freshness = dict(git_upstream_freshness(PROJECT_DIR))
     checkout_freshness["checked_at"] = iso(now)
-    production = production_pipeline_status(now)
+    production = (
+        deployment_pipeline_status(pipeline_status_file, now)
+        if pipeline_status_file is not None
+        else production_pipeline_status(now)
+    )
     content = content_summary(now)
     content["last_publish_at_local"] = content.get("last_publish_at")
     content["last_publish_age_minutes_local"] = content.get("last_publish_age_minutes")
@@ -1167,9 +1302,14 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dry-run", action="store_true", help="print JSON to stdout and do not write files")
     parser.add_argument("--output", action="append", type=Path, help="additional/alternate output path; may be repeated")
+    parser.add_argument(
+        "--pipeline-status-file",
+        type=Path,
+        help="deployment-only input; accepts static/api/pipeline-status.json and no other path",
+    )
     args = parser.parse_args(argv)
 
-    panel = build_panel()
+    panel = build_panel(pipeline_status_file=args.pipeline_status_file)
     if args.dry_run:
         print(json.dumps(panel, ensure_ascii=False, indent=2, sort_keys=True))
         return 0

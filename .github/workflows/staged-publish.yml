@@ -261,6 +261,10 @@ jobs:
         if: always() && steps.gate.outputs.enabled == 'true'
         run: python3 pipeline/generate_pipeline_status.py --cycle-outcome "$RUNNER_TEMP/staged-publish-cycle.json" --actions-summary
 
+      - name: Generate business control panel
+        if: steps.gate.outputs.enabled == 'true'
+        run: python3 scripts/business_control_panel.py --pipeline-status-file static/api/pipeline-status.json --output static/api/business-control-panel.json
+
       - name: Preserve staged publish cycle telemetry
         if: always() && steps.gate.outputs.enabled == 'true'
         uses: actions/upload-artifact@v4

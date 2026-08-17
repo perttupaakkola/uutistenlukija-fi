@@ -87,6 +87,9 @@ jobs:
       - name: Generate canonical pipeline status
         run: python3 pipeline/generate_pipeline_status.py
 
+      - name: Generate business control panel
+        run: python3 scripts/business_control_panel.py --pipeline-status-file static/api/pipeline-status.json --output static/api/business-control-panel.json
+
       - name: Build
         run: hugo --minify --cleanDestinationDir
 

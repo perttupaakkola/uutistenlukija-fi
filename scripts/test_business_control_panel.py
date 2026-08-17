@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
 import importlib.util
+import json
 from pathlib import Path
 import subprocess
 import tempfile
@@ -53,13 +54,249 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
         }
 
     def validated_production(self, now: datetime, *, published: int = 14) -> dict:
-        payload = self.production_payload(now)
+        payload = self.current_production_payload(now)
         payload["articles"]["published"] = published
         return panel.validate_production_pipeline_status(
             payload,
             now,
             panel.PRODUCTION_PIPELINE_STATUS_URL,
         )
+
+    def current_production_payload(self, now: datetime) -> dict:
+        payload = self.production_payload(now)
+        payload["stagedQueueRunway"].update(
+            {
+                "publishEligibleCount": 14,
+                "monicaReviewCount": 5,
+                "rejectCount": 4,
+                "preflightPrimaryReasonBuckets": {
+                    "publish": {"eligible": 14},
+                    "monica_review": {"article_source_ratio_exceeded": 2, "thin_distinct_source": 3},
+                    "reject": {"category_disagreement": 4},
+                },
+                "preflightReasonBuckets": {
+                    "publish": {"eligible": 14},
+                    "monica_review": {"article_source_ratio_exceeded": 2, "thin_distinct_source": 5},
+                    "reject": {"category_disagreement": 4},
+                },
+                "rawOutboxRemainingCycles": 8,
+                "publishableRemainingCycles": 5,
+                "worstCaseRemainingCycles": 5,
+                "reasons": [
+                    "publisher_enabled",
+                    "scanner_enabled",
+                    "worker_enabled",
+                    "queue_active",
+                    "eligible_supply_available",
+                ],
+            }
+        )
+        return payload
+
+    def test_current_schema_distinguishes_raw_and_publishable_runway(self) -> None:
+        now = datetime(2026, 8, 17, 6, 0, tzinfo=timezone.utc)
+
+        evidence = panel.validate_production_pipeline_status(
+            self.current_production_payload(now),
+            now,
+            panel.PRODUCTION_PIPELINE_STATUS_URL,
+        )
+
+        self.assertEqual(evidence["evidence_status"], "validated")
+        runway = evidence["staged_queue_runway"]
+        self.assertEqual(runway["outboxCount"], 23)
+        self.assertEqual(runway["publishEligibleCount"], 14)
+        self.assertEqual(runway["monicaReviewCount"], 5)
+        self.assertEqual(runway["rejectCount"], 4)
+        self.assertEqual(runway["rawOutboxRemainingCycles"], 8)
+        self.assertEqual(runway["publishableRemainingCycles"], 5)
+        self.assertEqual(runway["worstCaseRemainingCycles"], 5)
+
+    def test_current_schema_zero_eligible_supply_is_critical_not_contradictory(self) -> None:
+        now = datetime(2026, 8, 17, 6, 0, tzinfo=timezone.utc)
+        payload = self.current_production_payload(now)
+        payload["stagedQueueRunway"].update(
+            {
+                "outboxCount": 70,
+                "publishEligibleCount": 0,
+                "monicaReviewCount": 35,
+                "rejectCount": 35,
+                "rawOutboxRemainingCycles": 24,
+                "publishableRemainingCycles": 0,
+                "worstCaseRemainingCycles": 0,
+                "preflightPrimaryReasonBuckets": {
+                    "publish": {},
+                    "monica_review": {"thin_distinct_source": 35},
+                    "reject": {"category_disagreement": 35},
+                },
+                "preflightReasonBuckets": {
+                    "publish": {},
+                    "monica_review": {"thin_distinct_source": 35},
+                    "reject": {"category_disagreement": 35},
+                },
+                "severity": "critical",
+                "reasons": [
+                    "publisher_enabled",
+                    "scanner_enabled",
+                    "worker_enabled",
+                    "queue_active",
+                    "eligible_supply_empty",
+                ],
+            }
+        )
+
+        evidence = panel.validate_production_pipeline_status(
+            payload,
+            now,
+            panel.PRODUCTION_PIPELINE_STATUS_URL,
+        )
+
+        self.assertEqual(evidence["evidence_status"], "validated")
+        runway = evidence["staged_queue_runway"]
+        self.assertEqual(runway["severity"], "critical")
+        self.assertEqual(runway["rawOutboxRemainingCycles"], 24)
+        self.assertEqual(runway["publishableRemainingCycles"], 0)
+
+    def test_current_schema_fails_closed_for_mixed_and_tampered_runway(self) -> None:
+        now = datetime(2026, 8, 17, 6, 0, tzinfo=timezone.utc)
+        mixed = self.production_payload(now)
+        tampered = self.current_production_payload(now)
+        tampered["stagedQueueRunway"]["rejectCount"] = 5
+        tampered["stagedQueueRunway"]["preflightPrimaryReasonBuckets"]["reject"][
+            "category_disagreement"
+        ] = 5
+        tampered["stagedQueueRunway"]["preflightReasonBuckets"]["reject"][
+            "category_disagreement"
+        ] = 5
+
+        cases = (
+            ("mixed", mixed, "invalid", "counts"),
+            ("tampered_partition", tampered, "contradictory", "partition"),
+        )
+        for name, payload, expected_status, expected_reason in cases:
+            with self.subTest(name=name):
+                evidence = panel.validate_production_pipeline_status(
+                    payload,
+                    now,
+                    panel.PRODUCTION_PIPELINE_STATUS_URL,
+                )
+
+                self.assertEqual(evidence["evidence_status"], expected_status)
+                self.assertIn(expected_reason, evidence["reason"])
+                self.assertFalse(evidence["fresh"])
+                self.assertIsNone(evidence["staged_queue_runway"])
+
+    def test_current_schema_fails_closed_for_reason_bucket_count_tampering(self) -> None:
+        now = datetime(2026, 8, 17, 6, 0, tzinfo=timezone.utc)
+        cases = (
+            (
+                "felix_primary_count",
+                "preflightPrimaryReasonBuckets",
+                "publish",
+                "eligible",
+                999,
+                "contradictory",
+                "primary reason bucket totals",
+            ),
+            (
+                "felix_secondary_count",
+                "preflightReasonBuckets",
+                "reject",
+                "category_disagreement",
+                999,
+                "contradictory",
+                "secondary reason bucket count",
+            ),
+            (
+                "zero_primary_count",
+                "preflightPrimaryReasonBuckets",
+                "monica_review",
+                "thin_distinct_source",
+                0,
+                "invalid",
+                "positive",
+            ),
+            (
+                "zero_secondary_count",
+                "preflightReasonBuckets",
+                "reject",
+                "category_disagreement",
+                0,
+                "invalid",
+                "positive",
+            ),
+            (
+                "primary_not_consistent_with_secondary",
+                "preflightReasonBuckets",
+                "publish",
+                "eligible",
+                13,
+                "contradictory",
+                "represented consistently",
+            ),
+        )
+        for name, bucket_key, action, reason, count, expected_status, expected_reason in cases:
+            with self.subTest(name=name):
+                payload = self.current_production_payload(now)
+                payload["stagedQueueRunway"][bucket_key][action][reason] = count
+
+                evidence = panel.validate_production_pipeline_status(
+                    payload,
+                    now,
+                    panel.PRODUCTION_PIPELINE_STATUS_URL,
+                )
+
+                self.assertEqual(evidence["evidence_status"], expected_status)
+                self.assertIn(expected_reason, evidence["reason"])
+                self.assertFalse(evidence["fresh"])
+                self.assertIsNone(evidence["staged_queue_runway"])
+
+    def test_deployment_input_accepts_only_the_generated_canonical_status_file(self) -> None:
+        now = datetime(2026, 8, 17, 6, 0, tzinfo=timezone.utc)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            canonical = root / "static" / "api" / "pipeline-status.json"
+            canonical.parent.mkdir(parents=True)
+            canonical.write_text(
+                json.dumps(self.current_production_payload(now)),
+                encoding="utf-8",
+            )
+            other = root / "pipeline-status.json"
+            other.write_text(canonical.read_text(encoding="utf-8"), encoding="utf-8")
+
+            with patch.object(panel, "PROJECT_DIR", root):
+                accepted = panel.deployment_pipeline_status(canonical, now)
+                rejected = panel.deployment_pipeline_status(other, now)
+
+        self.assertEqual(accepted["evidence_status"], "validated")
+        self.assertEqual(accepted["source"], panel.PRODUCTION_PIPELINE_STATUS_URL)
+        self.assertEqual(rejected["evidence_status"], "invalid")
+        self.assertIn("canonical", rejected["reason"])
+
+    def test_cli_passes_the_constrained_deployment_input_to_panel_builder(self) -> None:
+        generated = Path("static/api/pipeline-status.json")
+        output = Path("static/api/business-control-panel.json")
+        built = {
+            "status": "ok",
+            "generated_at": "2026-08-17T06:00:00Z",
+        }
+        with (
+            patch.object(panel, "build_panel", return_value=built) as build_panel,
+            patch.object(panel, "safe_write_json") as safe_write,
+            patch("builtins.print"),
+        ):
+            result = panel.main(
+                [
+                    "--pipeline-status-file",
+                    str(generated),
+                    "--output",
+                    str(output),
+                ]
+            )
+
+        self.assertEqual(result, 0)
+        build_panel.assert_called_once_with(pipeline_status_file=generated)
+        safe_write.assert_called_once_with(output, built)
 
     def run_git(self, cwd: Path, *args: str) -> str:
         result = subprocess.run(
@@ -205,22 +442,22 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
         now = datetime(2026, 8, 9, 5, 30, tzinfo=timezone.utc)
         cases = []
 
-        stale = self.production_payload(now)
+        stale = self.current_production_payload(now)
         stale["generated_at"] = (now - timedelta(minutes=91)).isoformat()
         cases.append(("stale", stale, "stale", panel.PRODUCTION_PIPELINE_STATUS_URL))
 
-        invalid = self.production_payload(now)
+        invalid = self.current_production_payload(now)
         invalid["articles"] = {**invalid["articles"], "published": "14"}
         cases.append(("invalid", invalid, "invalid", panel.PRODUCTION_PIPELINE_STATUS_URL))
 
-        wrong_site = self.production_payload(now)
+        wrong_site = self.current_production_payload(now)
         wrong_site["site"] = "other.invalid"
         cases.append(("wrong_site", wrong_site, "invalid", panel.PRODUCTION_PIPELINE_STATUS_URL))
 
-        wrong_url = self.production_payload(now)
+        wrong_url = self.current_production_payload(now)
         cases.append(("wrong_url", wrong_url, "invalid", "https://other.invalid/api/pipeline-status.json"))
 
-        contradictory = self.production_payload(now)
+        contradictory = self.current_production_payload(now)
         contradictory["is_stale"] = True
         cases.append(("contradictory", contradictory, "contradictory", panel.PRODUCTION_PIPELINE_STATUS_URL))
 
@@ -237,7 +474,7 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
 
     def test_zero_published_with_recent_last_publish_fails_closed(self) -> None:
         now = datetime(2026, 8, 9, 5, 30, tzinfo=timezone.utc)
-        payload = self.production_payload(now)
+        payload = self.current_production_payload(now)
         payload["articles"]["published"] = 0
 
         evidence = panel.validate_production_pipeline_status(
