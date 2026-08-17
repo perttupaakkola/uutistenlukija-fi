@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-17T02:03:07+00:00",
+  "generated_at": "2026-08-17T03:29:22+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -22,10 +22,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 18,
+    "published": 19,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-17T01:59:14.838119+00:00"
+    "last_published_ts": "2026-08-17T03:25:46.045486+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -46,48 +46,48 @@
       14
     ],
     [
+      "vuonna",
+      13
+    ],
+    [
       "olivat",
       13
     ],
     [
-      "vuonna",
-      12
-    ],
-    [
       "mukaansa",
-      11
+      12
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 4,
+    "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 67,
+    "outboxCount": 70,
     "publishEligibleCount": 0,
-    "monicaReviewCount": 33,
-    "rejectCount": 34,
+    "monicaReviewCount": 35,
+    "rejectCount": 35,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
         "article_source_ratio_exceeded": 5,
         "entertainment_category_review": 1,
-        "thin_distinct_source": 27
+        "thin_distinct_source": 29
       },
       "reject": {
-        "category_disagreement": 31,
+        "category_disagreement": 32,
         "category_unresolved": 3
       }
     },
     "preflightReasonBuckets": {
       "publish": {},
       "monica_review": {
-        "article_source_ratio_exceeded": 32,
+        "article_source_ratio_exceeded": 34,
         "entertainment_category_review": 1,
-        "sensitive_thin_story": 11,
-        "thin_distinct_source": 27
+        "sensitive_thin_story": 12,
+        "thin_distinct_source": 29
       },
       "reject": {
         "article_source_ratio_exceeded": 9,
-        "category_disagreement": 31,
+        "category_disagreement": 32,
         "category_unresolved": 3,
         "sensitive_thin_story": 5,
         "thin_distinct_source": 9
@@ -97,7 +97,7 @@
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "rawOutboxRemainingCycles": 23,
+    "rawOutboxRemainingCycles": 24,
     "publishableRemainingCycles": 0,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
