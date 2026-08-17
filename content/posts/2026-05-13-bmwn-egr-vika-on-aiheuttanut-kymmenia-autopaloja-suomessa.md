@@ -1,5 +1,6 @@
 ---
 title: "BMW:n EGR-vika on aiheuttanut kymmeniä autopaloja Suomessa"
+seo_title: "BMW:n EGR-vika: ainakin 45 autopaloa Suomessa"
 date: 2026-05-13T17:08:06.753830+00:00
 categories:
   - Ulkomaat
