@@ -50,7 +50,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/yrittaja-odottaa-edelleen-yli-150-000-euron-alv-palautuksia-huhtikuulta-tuntuu-etta-tama-on-tahallista"
-briefing: true
 draft: false
 ---
 
