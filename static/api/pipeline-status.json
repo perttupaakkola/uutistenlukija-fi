@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-16T21:09:21+00:00",
+  "generated_at": "2026-08-17T00:00:15+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -22,10 +22,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 14,
+    "published": 13,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-16T21:05:54.340599+00:00"
+    "last_published_ts": "2026-08-16T23:56:41.901651+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -38,57 +38,57 @@
   },
   "trending": [
     [
-      "jälkeen",
-      12
-    ],
-    [
-      "ihmistä",
-      11
-    ],
-    [
-      "mukaansa",
-      11
-    ],
-    [
       "vuonna",
       11
     ],
     [
-      "australian",
-      11
+      "ihmistä",
+      10
+    ],
+    [
+      "havaijin",
+      10
+    ],
+    [
+      "jälkeen",
+      9
+    ],
+    [
+      "samalla",
+      8
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 16,
     "writingCount": 0,
-    "outboxCount": 61,
+    "outboxCount": 63,
     "publishEligibleCount": 0,
-    "monicaReviewCount": 30,
-    "rejectCount": 31,
+    "monicaReviewCount": 31,
+    "rejectCount": 32,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
         "article_source_ratio_exceeded": 5,
         "entertainment_category_review": 1,
-        "thin_distinct_source": 24
+        "thin_distinct_source": 25
       },
       "reject": {
         "category_disagreement": 29,
-        "category_unresolved": 2
+        "category_unresolved": 3
       }
     },
     "preflightReasonBuckets": {
       "publish": {},
       "monica_review": {
-        "article_source_ratio_exceeded": 29,
+        "article_source_ratio_exceeded": 30,
         "entertainment_category_review": 1,
         "sensitive_thin_story": 10,
-        "thin_distinct_source": 24
+        "thin_distinct_source": 25
       },
       "reject": {
         "article_source_ratio_exceeded": 9,
         "category_disagreement": 29,
-        "category_unresolved": 2,
+        "category_unresolved": 3,
         "sensitive_thin_story": 5,
         "thin_distinct_source": 9
       }
