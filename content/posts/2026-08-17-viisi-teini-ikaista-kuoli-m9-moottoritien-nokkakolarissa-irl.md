@@ -52,7 +52,6 @@ source_attributions:
     url: "https://theguardian.com/world/2026/aug/16/five-teenagers-killed-and-four-other-people-injured-in-ireland-car-crash"
   - name: "The Telegraph"
     url: "https://telegraph.co.uk/world-news/2026/08/16/several-dead-in-irish-motorway-head-on-collision"
-briefing: true
 draft: false
 ---
 
