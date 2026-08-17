@@ -54,7 +54,6 @@ source_attributions:
     url: "https://yahoo.com/entertainment/celebrity/articles/heroes-nashville-star-hayden-panettiere-031725454.html"
   - name: "South China Morning Post"
     url: "https://scmp.com/news/world/united-states-canada/article/3364248/heroes-star-hayden-panettiere-dies-aged-36-father-confirms"
-briefing: true
 draft: false
 ---
 
