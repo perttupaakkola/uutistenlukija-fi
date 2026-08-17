@@ -239,5 +239,33 @@
       }
     ],
     "source_url": "https://www.theguardian.com/australia-news/2026/aug/17/ralph-carr-in-living-hell-after-being-convicted-of-victorian-court-hears-ntwnfb"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-17T04:08:04.981404+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260817T040130Z_59743cedc3",
+    "category": "Ulkomaat",
+    "selected_source_words": 435,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 7.97,
+    "quality_reasons": [
+      "language borderline Finnish signal (9.0%)",
+      "length under target (270 words)",
+      "missing: image",
+      "source_confidence_denial_context_missing"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 270,
+    "title": "Raiskauksiin syylliseksi todetun Ralph Carrin voinnista kuultiin Victorian oikeudessa"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (9.0%); length under target (270 words); missing: image; source_confidence_denial_context_missing"
 }
