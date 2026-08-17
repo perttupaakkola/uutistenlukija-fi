@@ -268,5 +268,33 @@
       }
     ],
     "source_url": "https://www.yahoo.com/news/politics/articles/brazils-lula-launches-fourth-term-012050574.html"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-17T00:45:44.590999+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260816T184918Z_adc8c29dd4",
+    "category": "Ulkomaat",
+    "selected_source_words": 490,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 7.86,
+    "quality_reasons": [
+      "language borderline Finnish signal (9.0%)",
+      "length under target (293 words)",
+      "missing: image",
+      "source_confidence_election_uncertainty_missing"
+    ],
+    "hard_fails": [
+      "source_confidence_election_uncertainty_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 293,
+    "title": "Lula tavoittelee neljättä kautta – Flávio Bolsonaro haastaa hänet lokakuun vaaleissa"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (9.0%); length under target (293 words); missing: image; source_confidence_election_uncertainty_missing"
 }
