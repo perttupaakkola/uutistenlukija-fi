@@ -50,7 +50,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/yksinyrittaja-terho-kosonen-90-ajaa-yha-kuorma-autoa-eika-osaa-lopettaa-yrittamista-en-varmasti-lahtisi-kuljetusalalle-jos-nyt-pitaisi-paattaa"
-briefing: true
 draft: false
 ---
 
