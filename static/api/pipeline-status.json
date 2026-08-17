@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-17T00:21:29+00:00",
+  "generated_at": "2026-08-17T01:30:58+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -22,10 +22,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 15,
+    "published": 16,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-17T00:17:48.867983+00:00"
+    "last_published_ts": "2026-08-17T01:27:24.586510+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -59,35 +59,35 @@
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 14,
+    "readyCount": 7,
     "writingCount": 0,
-    "outboxCount": 63,
+    "outboxCount": 66,
     "publishEligibleCount": 0,
-    "monicaReviewCount": 31,
-    "rejectCount": 32,
+    "monicaReviewCount": 32,
+    "rejectCount": 34,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
         "article_source_ratio_exceeded": 5,
         "entertainment_category_review": 1,
-        "thin_distinct_source": 25
+        "thin_distinct_source": 26
       },
       "reject": {
-        "category_disagreement": 29,
+        "category_disagreement": 31,
         "category_unresolved": 3
       }
     },
     "preflightReasonBuckets": {
       "publish": {},
       "monica_review": {
-        "article_source_ratio_exceeded": 30,
+        "article_source_ratio_exceeded": 31,
         "entertainment_category_review": 1,
         "sensitive_thin_story": 10,
-        "thin_distinct_source": 25
+        "thin_distinct_source": 26
       },
       "reject": {
         "article_source_ratio_exceeded": 9,
-        "category_disagreement": 29,
+        "category_disagreement": 31,
         "category_unresolved": 3,
         "sensitive_thin_story": 5,
         "thin_distinct_source": 9
@@ -97,7 +97,7 @@
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "rawOutboxRemainingCycles": 21,
+    "rawOutboxRemainingCycles": 22,
     "publishableRemainingCycles": 0,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",

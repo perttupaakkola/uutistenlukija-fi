@@ -267,6 +267,115 @@
         "url": "https://theverge.com/tech/977395/meta-mark-zuckerberg-superintelligent-ai-ramble"
       }
     ],
-    "source_url": "https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/"
+    "source_url": "https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/",
+    "image_generation_terminal": {
+      "schema": "uutistenlukija.image_terminal.v1",
+      "stage": "generated",
+      "reason": "key_unavailable",
+      "outcome": "unavailable",
+      "provider_fault": false,
+      "provider_attempted": false,
+      "provider_succeeded": false
+    },
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "generated",
+        "reason": "key_unavailable",
+        "outcome": "unavailable",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "fallback",
+        "reason": "category_fallback",
+        "outcome": "selected",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      }
+    ],
+    "image": "/images/categories/teknologia.jpg",
+    "image_thumb": "/images/categories/teknologia.jpg",
+    "image_alt": "Teknologia-uutiset",
+    "image_credit": "",
+    "image_source_url": "",
+    "image_caption": "",
+    "image_hotlink": false,
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "final category fallback after key_unavailable",
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_visual_judge_score": 0,
+    "image_decision": {
+      "source": "category_fallback",
+      "accepted": true,
+      "reason": "final category fallback after key_unavailable",
+      "prompt_version": "image-flow-v2-2026-07-03"
+    }
+  },
+  "image_enriched_at": "2026-08-17T01:27:24.586440+00:00",
+  "image_enrichment": {
+    "image": "/images/categories/teknologia.jpg",
+    "image_thumb": "/images/categories/teknologia.jpg",
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "final category fallback after key_unavailable",
+    "image_concept": null,
+    "image_query": null,
+    "image_candidate_id": null,
+    "image_candidate_url": null,
+    "image_visual_judge_score": 0,
+    "image_accepted_reasons": null,
+    "image_rejected_reasons": null,
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_generation_terminal": {
+      "schema": "uutistenlukija.image_terminal.v1",
+      "stage": "generated",
+      "reason": "key_unavailable",
+      "outcome": "unavailable",
+      "provider_fault": false,
+      "provider_attempted": false,
+      "provider_succeeded": false
+    },
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "generated",
+        "reason": "key_unavailable",
+        "outcome": "unavailable",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "fallback",
+        "reason": "category_fallback",
+        "outcome": "selected",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      }
+    ]
+  },
+  "published_at": "2026-08-17T01:30:58.365574+00:00",
+  "created_files": [
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-08-17-zuckerberg-visioi-jokaiselle-henkilokohtaisen-tekoalyagentin.md"
+  ],
+  "category_trace": {
+    "packet_id": "20260816T203813Z_832c648f0c",
+    "decisions": {
+      "guard": "Teknologia",
+      "writer": "Teknologia",
+      "publisher": "Teknologia"
+    },
+    "disagreement": false
   }
 }
