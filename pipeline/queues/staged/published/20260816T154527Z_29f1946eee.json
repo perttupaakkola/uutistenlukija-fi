@@ -297,6 +297,115 @@
         "url": "https://nbcnews.com/world/europe/water-dropping-aircraft-take-tackle-major-greek-wildfire-2-killed-cras-rcna590537"
       }
     ],
-    "source_url": "https://www.theguardian.com/world/2026/aug/16/greek-island-salamis-belgium-high-fens-helicopters-wildfire"
+    "source_url": "https://www.theguardian.com/world/2026/aug/16/greek-island-salamis-belgium-high-fens-helicopters-wildfire",
+    "image_generation_terminal": {
+      "schema": "uutistenlukija.image_terminal.v1",
+      "stage": "generated",
+      "reason": "key_unavailable",
+      "outcome": "unavailable",
+      "provider_fault": false,
+      "provider_attempted": false,
+      "provider_succeeded": false
+    },
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "generated",
+        "reason": "key_unavailable",
+        "outcome": "unavailable",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "fallback",
+        "reason": "category_fallback",
+        "outcome": "selected",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      }
+    ],
+    "image": "/images/categories/ulkomaat.jpg",
+    "image_thumb": "/images/categories/ulkomaat.jpg",
+    "image_alt": "Ulkomaat-uutiset",
+    "image_credit": "",
+    "image_source_url": "",
+    "image_caption": "",
+    "image_hotlink": false,
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "final category fallback after key_unavailable",
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_visual_judge_score": 0,
+    "image_decision": {
+      "source": "category_fallback",
+      "accepted": true,
+      "reason": "final category fallback after key_unavailable",
+      "prompt_version": "image-flow-v2-2026-07-03"
+    }
+  },
+  "image_enriched_at": "2026-08-17T00:17:48.867904+00:00",
+  "image_enrichment": {
+    "image": "/images/categories/ulkomaat.jpg",
+    "image_thumb": "/images/categories/ulkomaat.jpg",
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "final category fallback after key_unavailable",
+    "image_concept": null,
+    "image_query": null,
+    "image_candidate_id": null,
+    "image_candidate_url": null,
+    "image_visual_judge_score": 0,
+    "image_accepted_reasons": null,
+    "image_rejected_reasons": null,
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_generation_terminal": {
+      "schema": "uutistenlukija.image_terminal.v1",
+      "stage": "generated",
+      "reason": "key_unavailable",
+      "outcome": "unavailable",
+      "provider_fault": false,
+      "provider_attempted": false,
+      "provider_succeeded": false
+    },
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "generated",
+        "reason": "key_unavailable",
+        "outcome": "unavailable",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "fallback",
+        "reason": "category_fallback",
+        "outcome": "selected",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      }
+    ]
+  },
+  "published_at": "2026-08-17T00:21:29.632298+00:00",
+  "created_files": [
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-08-17-kreikassa-nelja-kuollutta-palojen-yhteydessa-belgiassa-600-i.md"
+  ],
+  "category_trace": {
+    "packet_id": "20260816T154527Z_29f1946eee",
+    "decisions": {
+      "guard": "Ulkomaat",
+      "writer": "Ulkomaat",
+      "publisher": "Ulkomaat"
+    },
+    "disagreement": false
   }
 }
