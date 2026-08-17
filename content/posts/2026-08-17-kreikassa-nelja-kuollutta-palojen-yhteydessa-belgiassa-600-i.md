@@ -54,7 +54,6 @@ source_attributions:
     url: "https://yahoo.com/news/world/articles/french-wildfire-near-bordeaux-contained-102500375.html"
   - name: "NBC News"
     url: "https://nbcnews.com/world/europe/water-dropping-aircraft-take-tackle-major-greek-wildfire-2-killed-cras-rcna590537"
-briefing: true
 draft: false
 ---
 
