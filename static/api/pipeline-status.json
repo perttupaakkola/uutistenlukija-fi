@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-20T05:39:02+00:00",
+  "generated_at": "2026-08-20T06:15:31+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -22,10 +22,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 1,
+    "published": 2,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-20T05:37:06.294947+00:00"
+    "last_published_ts": "2026-08-20T06:11:54.951538+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -38,35 +38,37 @@
   },
   "trending": [
     [
+      "etelä-korean",
+      9
+    ],
+    [
       "patterson",
       7
+    ],
+    [
+      "trump",
+      6
     ],
     [
       "pattersonin",
       5
     ],
     [
-      "oikeudenkäynnissä",
+      "yhdysvaltain",
       4
-    ],
-    [
-      "kolme",
-      2
-    ],
-    [
-      "tuomiot",
-      2
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 38,
+    "readyCount": 35,
     "writingCount": 0,
-    "outboxCount": 71,
-    "publishEligibleCount": 0,
+    "outboxCount": 73,
+    "publishEligibleCount": 2,
     "monicaReviewCount": 36,
     "rejectCount": 35,
     "preflightPrimaryReasonBuckets": {
-      "publish": {},
+      "publish": {
+        "eligible": 2
+      },
       "monica_review": {
         "article_source_ratio_exceeded": 5,
         "entertainment_category_review": 1,
@@ -78,7 +80,9 @@
       }
     },
     "preflightReasonBuckets": {
-      "publish": {},
+      "publish": {
+        "eligible": 2
+      },
       "monica_review": {
         "article_source_ratio_exceeded": 34,
         "entertainment_category_review": 1,
@@ -97,17 +101,17 @@
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "rawOutboxRemainingCycles": 24,
-    "publishableRemainingCycles": 0,
-    "worstCaseRemainingCycles": 0,
+    "rawOutboxRemainingCycles": 25,
+    "publishableRemainingCycles": 1,
+    "worstCaseRemainingCycles": 1,
     "replenishmentState": "end_to_end_enabled",
-    "severity": "critical",
+    "severity": "ok",
     "reasons": [
       "publisher_enabled",
       "scanner_enabled",
       "worker_enabled",
       "queue_active",
-      "eligible_supply_empty"
+      "eligible_supply_available"
     ]
   }
 }
