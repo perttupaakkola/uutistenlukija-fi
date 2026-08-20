@@ -1,0 +1,124 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-08-20T14:54:51.342782+00:00",
+  "digest": "a1a3f0c4c1",
+  "packet": {
+    "packet_id": "20260820T145451Z_a1a3f0c4c1",
+    "created_at": "2026-08-20T14:54:51Z",
+    "headline_seed": "At least 13 workers killed in landslide at Colombian gold mine",
+    "description_seed": "Four members of an indigenous family are among the dead, witnesses said.",
+    "link": "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss"
+    ],
+    "source_domains": [
+      "bbc.co.uk"
+    ],
+    "selected_source": {
+      "name": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss",
+      "domain": "bbc.co.uk"
+    },
+    "selected_source_provenance_error": "",
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "At least 13 workers killed in landslide at Colombian gold mine"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_url": "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss",
+        "source_domain": "bbc.co.uk",
+        "source_type": "research",
+        "text": "The landslide happened at a mine in Policarpa, in the south of the country At least 13 workers have been killed and another seven injured in a landslide at an unlicensed mine in southern Colombia, local officials say. Witnesses described hearing an explosion at the open-air artisanal gold mine on Wednesday afternoon, moments before the workers below were trapped. Emergency workers and locals were able to retrieve the bodies with the help of diggers. Deadly accidents are not uncommon in Colombia, especially at unlicensed mines where locals dig for precious metals without any official oversight. Witnesses said that four of the 13 dead were members of the same indigenous family. Residents of the area said some 50 people, most of them members of the Quillacinga indigenous group, regularly worked in the mine near Policarpa, in southern Nariño province.",
+        "word_count": 138,
+        "source_identity": "https://bbc.com/news/articles/czxel9lz3vqo",
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_url": "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss",
+        "source_domain": "bbc.co.uk",
+        "source_type": "description",
+        "text": "Four members of an indigenous family are among the dead, witnesses said.",
+        "word_count": 12,
+        "source_identity": "https://bbc.com/news/articles/czxel9lz3vqo",
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_url": "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss",
+        "source_domain": "bbc.co.uk",
+        "source_type": "research",
+        "text": "Between 200,000 and 400,000 people are estimated to engage in artisanal mining in Colombia, with many families relying on the income from selling the precious metals and stones they find to make ends meet. Nine coal miners die in gas explosion in Colombia Colombian rescuers inch towards trapped miners",
+        "word_count": 49,
+        "source_identity": "https://bbc.com/news/articles/czxel9lz3vqo",
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "The landslide happened at a mine in Policarpa, in the south of the country At least 13 workers have been killed and another seven injured in a landslide at an unlicensed mine in southern Colombia, local officials say. Witnesses described hearing an explosion at the open-air artisanal gold mine on Wednesday afternoon, moments before the workers below were trapped. Emergency workers and locals were able to retrieve the bodies with the help of diggers. Deadly accidents are not uncommon in Colombia, especially at unlicensed mines where locals dig for precious metals without any official oversight. Witnesses said that four of the 13 dead were members of the same indigenous family. Residents of the area said some 50 people, most of them members of the Quillacinga indigenous group, regularly worked in the mine near Policarpa, in southern Nariño province.\n\nFour members of an indigenous family are among the dead, witnesses said.\n\nBetween 200,000 and 400,000 people are estimated to engage in artisanal mining in Colombia, with many families relying on the income from selling the precious metals and stones they find to make ends meet. Nine coal miners die in gas explosion in Colombia Colombian rescuers inch towards trapped miners",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 199,
+      "selected_blocks": 3,
+      "selected_source_words": 199,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "At least 13 workers killed in landslide at Colombian gold mine",
+      "description": "Four members of an indigenous family are among the dead, witnesses said.",
+      "category_hint": "",
+      "research_source": "multi"
+    }
+  },
+  "original_article": {
+    "title": "At least 13 workers killed in landslide at Colombian gold mine",
+    "description": "Four members of an indigenous family are among the dead, witnesses said.",
+    "link": "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-08-20T14:34:15+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "f226db237e23e3b95c2863189ed21872",
+    "_url_hash": "1ada5833dfc8af362c65fb7c6e94e4d3dc685c21572855a97d31fd1177976f3f",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World | URL: https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss]\nThe landslide happened at a mine in Policarpa, in the south of the country\n\nAt least 13 workers have been killed and another seven injured in a landslide at an unlicensed mine in southern Colombia, local officials say.\n\nWitnesses described hearing an explosion at the open-air artisanal gold mine on Wednesday afternoon, moments before the workers below were trapped.\n\nEmergency workers and locals were able to retrieve the bodies with the help of diggers.\n\nDeadly accidents are not uncommon in Colombia, especially at unlicensed mines where locals dig for precious metals without any official oversight.\n\nWitnesses said that four of the 13 dead were members of the same indigenous family.\n\nResidents of the area said some 50 people, most of them members of the Quillacinga indigenous group, regularly worked in the mine near Policarpa, in southern Nariño province.\n\nBetween 200,000 and 400,000 people are estimated to engage in artisanal mining in Colombia, with many families relying on the income from selling the precious metals and stones they find to make ends meet.\n\nNine coal miners die in gas explosion in Colombia\n\nColombian rescuers inch towards trapped miners",
+    "research_source": "multi"
+  }
+}
