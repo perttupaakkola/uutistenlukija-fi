@@ -255,6 +255,115 @@
         "url": "https://nbcnews.com/world/asia/erin-patterson-appeals-3-murder-convictions-australia-mushrooms-rcna593281"
       }
     ],
-    "source_url": "https://www.nbcnews.com/world/asia/erin-patterson-appeals-3-murder-convictions-australia-mushrooms-rcna593281"
+    "source_url": "https://www.nbcnews.com/world/asia/erin-patterson-appeals-3-murder-convictions-australia-mushrooms-rcna593281",
+    "image_generation_terminal": {
+      "schema": "uutistenlukija.image_terminal.v1",
+      "stage": "generated",
+      "reason": "key_unavailable",
+      "outcome": "unavailable",
+      "provider_fault": false,
+      "provider_attempted": false,
+      "provider_succeeded": false
+    },
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "generated",
+        "reason": "key_unavailable",
+        "outcome": "unavailable",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "fallback",
+        "reason": "category_fallback",
+        "outcome": "selected",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      }
+    ],
+    "image": "/images/categories/ulkomaat.jpg",
+    "image_thumb": "/images/categories/ulkomaat.jpg",
+    "image_alt": "Ulkomaat-uutiset",
+    "image_credit": "",
+    "image_source_url": "",
+    "image_caption": "",
+    "image_hotlink": false,
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "final category fallback after key_unavailable",
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_visual_judge_score": 0,
+    "image_decision": {
+      "source": "category_fallback",
+      "accepted": true,
+      "reason": "final category fallback after key_unavailable",
+      "prompt_version": "image-flow-v2-2026-07-03"
+    }
+  },
+  "image_enriched_at": "2026-08-20T05:37:06.294899+00:00",
+  "image_enrichment": {
+    "image": "/images/categories/ulkomaat.jpg",
+    "image_thumb": "/images/categories/ulkomaat.jpg",
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "final category fallback after key_unavailable",
+    "image_concept": null,
+    "image_query": null,
+    "image_candidate_id": null,
+    "image_candidate_url": null,
+    "image_visual_judge_score": 0,
+    "image_accepted_reasons": null,
+    "image_rejected_reasons": null,
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_generation_terminal": {
+      "schema": "uutistenlukija.image_terminal.v1",
+      "stage": "generated",
+      "reason": "key_unavailable",
+      "outcome": "unavailable",
+      "provider_fault": false,
+      "provider_attempted": false,
+      "provider_succeeded": false
+    },
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "generated",
+        "reason": "key_unavailable",
+        "outcome": "unavailable",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "fallback",
+        "reason": "category_fallback",
+        "outcome": "selected",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      }
+    ]
+  },
+  "published_at": "2026-08-20T05:39:02.389342+00:00",
+  "created_files": [
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-08-20-erin-patterson-hakee-sienimyrkytystuomioidensa-kumoamista-au.md"
+  ],
+  "category_trace": {
+    "packet_id": "20260819T070513Z_11a0a1b204",
+    "decisions": {
+      "guard": "Ulkomaat",
+      "writer": "Ulkomaat",
+      "publisher": "Ulkomaat"
+    },
+    "disagreement": false
   }
 }
