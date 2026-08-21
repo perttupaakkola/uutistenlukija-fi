@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-21T08:20:51+00:00",
+  "generated_at": "2026-08-21T08:33:04+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -22,10 +22,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 3,
+    "published": 4,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-21T08:17:07.218389+00:00"
+    "last_published_ts": "2026-08-21T08:30:22.476685+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -50,26 +50,27 @@
       5
     ],
     [
-      "kokoomus",
+      "aikana",
       5
     ],
     [
-      "hallituksen",
+      "kokoomus",
       5
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 27,
+    "readyCount": 26,
     "writingCount": 0,
     "outboxCount": 71,
-    "publishEligibleCount": 0,
-    "monicaReviewCount": 36,
+    "publishEligibleCount": 1,
+    "monicaReviewCount": 35,
     "rejectCount": 35,
     "preflightPrimaryReasonBuckets": {
-      "publish": {},
+      "publish": {
+        "eligible": 1
+      },
       "monica_review": {
         "article_source_ratio_exceeded": 5,
-        "entertainment_category_review": 1,
         "thin_distinct_source": 30
       },
       "reject": {
@@ -78,10 +79,11 @@
       }
     },
     "preflightReasonBuckets": {
-      "publish": {},
+      "publish": {
+        "eligible": 1
+      },
       "monica_review": {
         "article_source_ratio_exceeded": 34,
-        "entertainment_category_review": 1,
         "sensitive_thin_story": 12,
         "thin_distinct_source": 30
       },
@@ -98,16 +100,16 @@
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 24,
-    "publishableRemainingCycles": 0,
-    "worstCaseRemainingCycles": 0,
+    "publishableRemainingCycles": 1,
+    "worstCaseRemainingCycles": 1,
     "replenishmentState": "end_to_end_enabled",
-    "severity": "critical",
+    "severity": "ok",
     "reasons": [
       "publisher_enabled",
       "scanner_enabled",
       "worker_enabled",
       "queue_active",
-      "eligible_supply_empty"
+      "eligible_supply_available"
     ]
   }
 }
