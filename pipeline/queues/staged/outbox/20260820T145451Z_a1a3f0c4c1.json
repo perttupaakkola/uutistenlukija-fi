@@ -1,0 +1,237 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-08-20T14:54:51.342782+00:00",
+  "digest": "a1a3f0c4c1",
+  "packet": {
+    "packet_id": "20260820T145451Z_a1a3f0c4c1",
+    "created_at": "2026-08-20T14:54:51Z",
+    "headline_seed": "At least 13 workers killed in landslide at Colombian gold mine",
+    "description_seed": "Four members of an indigenous family are among the dead, witnesses said.",
+    "link": "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss",
+    "source": "BBC World",
+    "source_names": [
+      "BBC World"
+    ],
+    "source_urls": [
+      "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss"
+    ],
+    "source_domains": [
+      "bbc.co.uk"
+    ],
+    "selected_source": {
+      "name": "BBC World",
+      "url": "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss",
+      "domain": "bbc.co.uk"
+    },
+    "selected_source_provenance_error": "",
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.98,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "At least 13 workers killed in landslide at Colombian gold mine"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "BBC World",
+        "source_url": "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss",
+        "source_domain": "bbc.co.uk",
+        "source_type": "research",
+        "text": "The landslide happened at a mine in Policarpa, in the south of the country At least 13 workers have been killed and another seven injured in a landslide at an unlicensed mine in southern Colombia, local officials say. Witnesses described hearing an explosion at the open-air artisanal gold mine on Wednesday afternoon, moments before the workers below were trapped. Emergency workers and locals were able to retrieve the bodies with the help of diggers. Deadly accidents are not uncommon in Colombia, especially at unlicensed mines where locals dig for precious metals without any official oversight. Witnesses said that four of the 13 dead were members of the same indigenous family. Residents of the area said some 50 people, most of them members of the Quillacinga indigenous group, regularly worked in the mine near Policarpa, in southern Nariño province.",
+        "word_count": 138,
+        "source_identity": "https://bbc.com/news/articles/czxel9lz3vqo",
+        "keyword_overlap": 13,
+        "strong_overlap": 7
+      },
+      {
+        "source": "BBC World",
+        "source_url": "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss",
+        "source_domain": "bbc.co.uk",
+        "source_type": "description",
+        "text": "Four members of an indigenous family are among the dead, witnesses said.",
+        "word_count": 12,
+        "source_identity": "https://bbc.com/news/articles/czxel9lz3vqo",
+        "keyword_overlap": 8,
+        "strong_overlap": 4
+      },
+      {
+        "source": "BBC World",
+        "source_url": "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss",
+        "source_domain": "bbc.co.uk",
+        "source_type": "research",
+        "text": "Between 200,000 and 400,000 people are estimated to engage in artisanal mining in Colombia, with many families relying on the income from selling the precious metals and stones they find to make ends meet. Nine coal miners die in gas explosion in Colombia Colombian rescuers inch towards trapped miners",
+        "word_count": 49,
+        "source_identity": "https://bbc.com/news/articles/czxel9lz3vqo",
+        "keyword_overlap": 1,
+        "strong_overlap": 1
+      }
+    ],
+    "source_text": "The landslide happened at a mine in Policarpa, in the south of the country At least 13 workers have been killed and another seven injured in a landslide at an unlicensed mine in southern Colombia, local officials say. Witnesses described hearing an explosion at the open-air artisanal gold mine on Wednesday afternoon, moments before the workers below were trapped. Emergency workers and locals were able to retrieve the bodies with the help of diggers. Deadly accidents are not uncommon in Colombia, especially at unlicensed mines where locals dig for precious metals without any official oversight. Witnesses said that four of the 13 dead were members of the same indigenous family. Residents of the area said some 50 people, most of them members of the Quillacinga indigenous group, regularly worked in the mine near Policarpa, in southern Nariño province.\n\nFour members of an indigenous family are among the dead, witnesses said.\n\nBetween 200,000 and 400,000 people are estimated to engage in artisanal mining in Colombia, with many families relying on the income from selling the precious metals and stones they find to make ends meet. Nine coal miners die in gas explosion in Colombia Colombian rescuers inch towards trapped miners",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 199,
+      "selected_blocks": 3,
+      "selected_source_words": 199,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ],
+      "selected_sources": [
+        "BBC World",
+        "BBC World",
+        "BBC World"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "At least 13 workers killed in landslide at Colombian gold mine",
+      "description": "Four members of an indigenous family are among the dead, witnesses said.",
+      "category_hint": "",
+      "research_source": "multi"
+    },
+    "source_usage": [
+      {
+        "source_url": "https://bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss",
+        "used": true,
+        "dependent_claims": [
+          "Maanvyöry luvattomalla kultakaivoksella surmasi ainakin 13 työntekijää ja loukkaannutti seitsemän.",
+          "Onnettomuus tapahtui Policarpan alueella Etelä-Kolumbian Nariñon maakunnassa.",
+          "Silminnäkijät kuulivat räjähdyksen juuri ennen alempana työskennelleiden jäämistä maanvyöryn alle.",
+          "Pelastustyöntekijät ja paikalliset nostivat ruumiit kaivinkoneiden avulla.",
+          "Neljä kuolleista oli silminnäkijöiden mukaan saman alkuperäiskansaperheen jäseniä.",
+          "Kaivoksella työskenteli säännöllisesti noin 50 ihmistä, joista useimmat kuuluivat Quillacinga-alkuperäiskansaan.",
+          "Kuolemaan johtavat onnettomuudet eivät ole Kolumbian luvattomilla kaivoksilla harvinaisia.",
+          "Kolumbiassa arviolta 200 000–400 000 ihmistä harjoittaa käsityövaltaista kaivostoimintaa.",
+          "Monet perheet saavat toimeentulonsa löytämiensä arvometallien ja jalokivien myynnistä."
+        ]
+      }
+    ],
+    "source_usage_contract": "v1"
+  },
+  "original_article": {
+    "title": "At least 13 workers killed in landslide at Colombian gold mine",
+    "description": "Four members of an indigenous family are among the dead, witnesses said.",
+    "link": "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-08-20T14:34:15+00:00",
+    "source": "BBC World",
+    "source_domain": "bbci.co.uk",
+    "language": "en",
+    "fingerprint": "f226db237e23e3b95c2863189ed21872",
+    "_url_hash": "1ada5833dfc8af362c65fb7c6e94e4d3dc685c21572855a97d31fd1177976f3f",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World | URL: https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss]\nThe landslide happened at a mine in Policarpa, in the south of the country\n\nAt least 13 workers have been killed and another seven injured in a landslide at an unlicensed mine in southern Colombia, local officials say.\n\nWitnesses described hearing an explosion at the open-air artisanal gold mine on Wednesday afternoon, moments before the workers below were trapped.\n\nEmergency workers and locals were able to retrieve the bodies with the help of diggers.\n\nDeadly accidents are not uncommon in Colombia, especially at unlicensed mines where locals dig for precious metals without any official oversight.\n\nWitnesses said that four of the 13 dead were members of the same indigenous family.\n\nResidents of the area said some 50 people, most of them members of the Quillacinga indigenous group, regularly worked in the mine near Policarpa, in southern Nariño province.\n\nBetween 200,000 and 400,000 people are estimated to engage in artisanal mining in Colombia, with many families relying on the income from selling the precious metals and stones they find to make ends meet.\n\nNine coal miners die in gas explosion in Colombia\n\nColombian rescuers inch towards trapped miners",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-08-21T10:08:10.489128+00:00",
+  "payload": {
+    "packet_id": "20260820T145451Z_a1a3f0c4c1",
+    "title": "Maanvyöry surmasi ainakin 13 työntekijää kultakaivoksella Kolumbiassa",
+    "summary": "Luvattomalla kultakaivoksella Etelä-Kolumbiassa tapahtunut maanvyöry surmasi ainakin 13 työntekijää ja loukkaannutti seitsemän. Neljä kuolleista kuului silminnäkijöiden mukaan samaan alkuperäiskansaperheeseen.",
+    "content": "Etelä-Kolumbian Nariñon maakunnassa sijaitsevalla luvattomalla kultakaivoksella tapahtunut maanvyöry on surmannut ainakin 13 työntekijää ja loukkaannuttanut seitsemän, paikalliset viranomaiset kertovat. Onnettomuus sattui Policarpan alueella keskiviikkoiltapäivänä. Silminnäkijöiden mukaan neljä kuolleista oli saman alkuperäiskansaperheen jäseniä, ja kaivoksella työskenteli säännöllisesti noin 50 ihmistä.\n\n## Räjähdys kuultiin juuri ennen maanvyöryä\n\nSilminnäkijät kertoivat kuulleensa räjähdyksen ulkoilmassa toimineella, käsityövaltaisella kultakaivoksella. Ääni kuului heidän mukaansa vain hetkeä ennen kuin alempana työskennelleet ihmiset jäivät maanvyöryn alle. Käytettävissä oleva lähdeaineisto ei kerro räjähdyksen syytä eikä vahvista, oliko räjähdyksellä suoraa yhteyttä maanvyöryn alkamiseen.\n\nPelastustyöntekijät ja alueen asukkaat osallistuivat ruumiiden noutamiseen maanvyöryalueelta. Ruumiit saatiin nostettua kaivosalueelta kaivinkoneiden avulla. Lähdeaineisto ei täsmennä pelastustöiden kestoa, seitsemän loukkaantuneen vammoja tai sitä, kuinka monta ihmistä oli kaivoksella juuri turman sattuessa.\n\nOnnettomuuspaikka oli Policarpan lähistöllä Etelä-Nariñossa sijaitseva luvaton kaivos. Lähteen kuvauksen mukaan kultaa etsittiin siellä käsityövaltaisesti avoimella kaivosalueella. Maanvyöryn loukkuun jäivät alempana työskennelleet ihmiset, minkä jälkeen pelastustyöntekijät ja paikalliset käyttivät kaivinkoneita ruumiiden saamiseksi pois alueelta.\n\n## Kaivoksen työntekijöistä useimmat kuuluivat Quillacinga-kansaan\n\nAlueen asukkaiden mukaan kaivoksella työskenteli säännöllisesti noin 50 ihmistä. Useimmat heistä kuuluivat Quillacinga-alkuperäiskansaan. Kaivoksen säännöllisestä työntekijäjoukosta valtaosa oli siten saman paikallisen alkuperäiskansan jäseniä, vaikka lähdeaineisto ei yksilöi kaikkien kuolleiden tai loukkaantuneiden taustaa.\n\nSilminnäkijöiden mukaan neljä 13 kuolleesta oli saman alkuperäiskansaperheen jäseniä. Uhrien perhesuhteesta ei ole lähdeaineistossa viranomaisvahvistusta, vaan tieto perustuu silminnäkijöiden kertomuksiin. Kuolleiden ja loukkaantuneiden kokonaismäärät puolestaan ovat paikallisten viranomaisten ilmoittamia.\n\n## Luvattomat kaivokset toimivat ilman virallista valvontaa\n\nKuolemaan johtavat kaivosonnettomuudet eivät lähdeaineiston mukaan ole Kolumbiassa harvinaisia, varsinkaan luvattomilla kaivoksilla. Tällaisilla kaivoksilla paikalliset etsivät arvometalleja ilman virallista valvontaa. Policarpan kaivos kuului tähän ryhmään: se oli luvaton, ulkoilmassa toiminut ja käsityövaltainen kultakaivos.\n\nKolumbiassa arviolta 200 000–400 000 ihmistä harjoittaa käsityövaltaista kaivostoimintaa. Monet perheet ovat riippuvaisia tuloista, joita ne saavat löytämiensä arvometallien ja jalokivien myynnistä. Lähdeaineiston mukaan kaivannaisista saatava raha auttaa näitä perheitä kattamaan elinkustannuksia, joten toiminta on niille tärkeä toimeentulon lähde.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Kolumbia",
+      "kaivosonnettomuus",
+      "maanvyöry",
+      "Nariño",
+      "alkuperäiskansat"
+    ],
+    "summary_bullets": [
+      "Ainakin 13 työntekijää kuoli ja seitsemän loukkaantui luvattomalla kultakaivoksella.",
+      "Silminnäkijät kuulivat räjähdyksen juuri ennen maanvyöryä, mutta tapahtumien yhteyttä ei ole vahvistettu.",
+      "Neljä kuolleista kuului silminnäkijöiden mukaan samaan alkuperäiskansaperheeseen."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "confidence": 0.98,
+    "journalist_note": "Kuolleiden ja loukkaantuneiden määrät perustuvat paikallisten viranomaisten tietoihin. Räjähdyksen syytä tai mahdollista yhteyttä maanvyöryyn ei ole vahvistettu, ja neljän uhrin perhesuhdetta koskeva tieto perustuu silminnäkijöiden kertomuksiin.",
+    "source_usage": [
+      {
+        "source_url": "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss",
+        "used": true,
+        "dependent_claims": [
+          "Maanvyöry luvattomalla kultakaivoksella surmasi ainakin 13 työntekijää ja loukkaannutti seitsemän.",
+          "Onnettomuus tapahtui Policarpan alueella Etelä-Kolumbian Nariñon maakunnassa.",
+          "Silminnäkijät kuulivat räjähdyksen juuri ennen alempana työskennelleiden jäämistä maanvyöryn alle.",
+          "Pelastustyöntekijät ja paikalliset nostivat ruumiit kaivinkoneiden avulla.",
+          "Neljä kuolleista oli silminnäkijöiden mukaan saman alkuperäiskansaperheen jäseniä.",
+          "Kaivoksella työskenteli säännöllisesti noin 50 ihmistä, joista useimmat kuuluivat Quillacinga-alkuperäiskansaan.",
+          "Kuolemaan johtavat onnettomuudet eivät ole Kolumbian luvattomilla kaivoksilla harvinaisia.",
+          "Kolumbiassa arviolta 200 000–400 000 ihmistä harjoittaa käsityövaltaista kaivostoimintaa.",
+          "Monet perheet saavat toimeentulonsa löytämiensä arvometallien ja jalokivien myynnistä."
+        ]
+      }
+    ]
+  },
+  "raw_response": "[agents/tool-policy] tool policy removed 20 tool(s) via tools.allow: agents_list, ask_user, automations, computer, conversations_list, conversations_send, conversations_turn, create_goal, dashboard, gateway, get_goal, image, mobile_ui, nodes, sessions, sessions_search, transcripts, tts, update_goal, update_plan\n[agents/tool-policy] tool policy removed 1 tool(s) via sandbox tools.allow: message\n[agents/tool-policy] tool policy removed 21 tool(s) via tools.allow: agents_list, ask_user, automations, computer, conversations_list, conversations_send, conversations_turn, create_goal, dashboard, gateway, get_goal, heartbeat_respond, image, mobile_ui, nodes, sessions, sessions_search, transcripts, tts, update_goal, update_plan\n[agents/tool-policy] tool policy removed 1 tool(s) via sandbox tools.allow: message\n[agent/embedded] codex app-server context-engine projection decision\n[agent/embedded] codex app-server wrote context-engine thread binding\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=ab9d53e9-5c01-4550-85e9-83cb5bf0eea9 sessionKey=agent:monica:explicit:monica-pipeline-31948239-4f8b-4e30-a42b-94df08918b91 lane=context-engine-turn-maintenance:agent:monica:explicit:monica-pipeline-31948239-4f8b-4e30-a42b-94df08918b91\n[agent/embedded] codex app-server one-shot cleanup retired shared client\n{\n  \"packet_id\": \"20260820T145451Z_a1a3f0c4c1\",\n  \"title\": \"Maanvyöry surmasi ainakin 13 työntekijää kultakaivoksella Kolumbiassa\",\n  \"summary\": \"Luvattomalla kultakaivoksella Etelä-Kolumbiassa tapahtunut maanvyöry surmasi ainakin 13 työntekijää ja loukkaannutti seitsemän. Neljä kuolleista kuului silminnäkijöiden mukaan samaan alkuperäiskansaperheeseen.\",\n  \"content\": \"Etelä-Kolumbian Nariñon maakunnassa sijaitsevalla luvattomalla kultakaivoksella tapahtunut maanvyöry on surmannut ainakin 13 työntekijää ja loukkaannuttanut seitsemän, paikalliset viranomaiset kertovat. Onnettomuus sattui Policarpan alueella keskiviikkoiltapäivänä. Silminnäkijöiden mukaan neljä kuolleista oli saman alkuperäiskansaperheen jäseniä, ja kaivoksella työskenteli säännöllisesti noin 50 ihmistä.\\n\\n## Räjähdys kuultiin juuri ennen maanvyöryä\\n\\nSilminnäkijät kertoivat kuulleensa räjähdyksen ulkoilmassa toimineella, käsityövaltaisella kultakaivoksella. Ääni kuului heidän mukaansa vain hetkeä ennen kuin alempana työskennelleet ihmiset jäivät maanvyöryn alle. Käytettävissä oleva lähdeaineisto ei kerro räjähdyksen syytä eikä vahvista, oliko räjähdyksellä suoraa yhteyttä maanvyöryn alkamiseen.\\n\\nPelastustyöntekijät ja alueen asukkaat osallistuivat ruumiiden noutamiseen maanvyöryalueelta. Ruumiit saatiin nostettua kaivosalueelta kaivinkoneiden avulla. Lähdeaineisto ei täsmennä pelastustöiden kestoa, seitsemän loukkaantuneen vammoja tai sitä, kuinka monta ihmistä oli kaivoksella juuri turman sattuessa.\\n\\nOnnettomuuspaikka oli Policarpan lähistöllä Etelä-Nariñossa sijaitseva luvaton kaivos. Lähteen kuvauksen mukaan kultaa etsittiin siellä käsityövaltaisesti avoimella kaivosalueella. Maanvyöryn loukkuun jäivät alempana työskennelleet ihmiset, minkä jälkeen pelastustyöntekijät ja paikalliset käyttivät kaivinkoneita ruumiiden saamiseksi pois alueelta.\\n\\n## Kaivoksen työntekijöistä useimmat kuuluivat Quillacinga-kansaan\\n\\nAlueen asukkaiden mukaan kaivoksella työskenteli säännöllisesti noin 50 ihmistä. Useimmat heistä kuuluivat Quillacinga-alkuperäiskansaan. Kaivoksen säännöllisestä työntekijäjoukosta valtaosa oli siten saman paikallisen alkuperäiskansan jäseniä, vaikka lähdeaineisto ei yksilöi kaikkien kuolleiden tai loukkaantuneiden taustaa.\\n\\nSilminnäkijöiden mukaan neljä 13 kuolleesta oli saman alkuperäiskansaperheen jäseniä. Uhrien perhesuhteesta ei ole lähdeaineistossa viranomaisvahvistusta, vaan tieto perustuu silminnäkijöiden kertomuksiin. Kuolleiden ja loukkaantuneiden kokonaismäärät puolestaan ovat paikallisten viranomaisten ilmoittamia.\\n\\n## Luvattomat kaivokset toimivat ilman virallista valvontaa\\n\\nKuolemaan johtavat kaivosonnettomuudet eivät lähdeaineiston mukaan ole Kolumbiassa harvinaisia, varsinkaan luvattomilla kaivoksilla. Tällaisilla kaivoksilla paikalliset etsivät arvometalleja ilman virallista valvontaa. Policarpan kaivos kuului tähän ryhmään: se oli luvaton, ulkoilmassa toiminut ja käsityövaltainen kultakaivos.\\n\\nKolumbiassa arviolta 200 000–400 000 ihmistä harjoittaa käsityövaltaista kaivostoimintaa. Monet perheet ovat riippuvaisia tuloista, joita ne saavat löytämiensä arvometallien ja jalokivien myynnistä. Lähdeaineiston mukaan kaivannaisista saatava raha auttaa näitä perheitä kattamaan elinkustannuksia, joten toiminta on niille tärkeä toimeentulon lähde.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Kolumbia\",\n    \"kaivosonnettomuus\",\n    \"maanvyöry\",\n    \"Nariño\",\n    \"alkuperäiskansat\"\n  ],\n  \"summary_bullets\": [\n    \"Ainakin 13 työntekijää kuoli ja seitsemän loukkaantui luvattomalla kultakaivoksella.\",\n    \"Silminnäkijät kuulivat räjähdyksen juuri ennen maanvyöryä, mutta tapahtumien yhteyttä ei ole vahvistettu.\",\n    \"Neljä kuolleista kuului silminnäkijöiden mukaan samaan alkuperäiskansaperheeseen.\"\n  ],\n  \"content_type\": \"uutinen\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.98,\n  \"journalist_note\": \"Kuolleiden ja loukkaantuneiden määrät perustuvat paikallisten viranomaisten tietoihin. Räjähdyksen syytä tai mahdollista yhteyttä maanvyöryyn ei ole vahvistettu, ja neljän uhrin perhesuhdetta koskeva tieto perustuu silminnäkijöiden kertomuksiin.\",\n  \"source_usage\": [\n    {\n      \"source_url\": \"https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss\",\n      \"used\": true,\n      \"dependent_claims\": [\n        \"Maanvyöry luvattomalla kultakaivoksella surmasi ainakin 13 työntekijää ja loukkaannutti seitsemän.\",\n        \"Onnettomuus tapahtui Policarpan alueella Etelä-Kolumbian Nariñon maakunnassa.\",\n        \"Silminnäkijät kuulivat räjähdyksen juuri ennen alempana työskennelleiden jäämistä maanvyöryn alle.\",\n        \"Pelastustyöntekijät ja paikalliset nostivat ruumiit kaivinkoneiden avulla.\",\n        \"Neljä kuolleista oli silminnäkijöiden mukaan saman alkuperäiskansaperheen jäseniä.\",\n        \"Kaivoksella työskenteli säännöllisesti noin 50 ihmistä, joista useimmat kuuluivat Quillacinga-alkuperäiskansaan.\",\n        \"Kuolemaan johtavat onnettomuudet eivät ole Kolumbian luvattomilla kaivoksilla harvinaisia.\",\n        \"Kolumbiassa arviolta 200 000–400 000 ihmistä harjoittaa käsityövaltaista kaivostoimintaa.\",\n        \"Monet perheet saavat toimeentulonsa löytämiensä arvometallien ja jalokivien myynnistä.\"\n      ]\n    }\n  ]\n}\n[agents/agent-command] [agent] run 2ccb949d-92ec-428b-8f71-a89b333d98b5 ended with stopReason=stop",
+  "article": {
+    "title": "Maanvyöry surmasi ainakin 13 työntekijää kultakaivoksella Kolumbiassa",
+    "description": "Luvattomalla kultakaivoksella Etelä-Kolumbiassa tapahtunut maanvyöry surmasi ainakin 13 työntekijää ja loukkaannutti seitsemän. Neljä kuolleista kuului silminnäkijöiden mukaan samaan alkuperäiskansaperheeseen.",
+    "link": "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss",
+    "published": "2026-08-20T14:34:15+00:00",
+    "source": "BBC World",
+    "source_domain": "bbc.co.uk",
+    "language": "en",
+    "fingerprint": "f226db237e23e3b95c2863189ed21872",
+    "_url_hash": "1ada5833dfc8af362c65fb7c6e94e4d3dc685c21572855a97d31fd1177976f3f",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: BBC World | URL: https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss]\nThe landslide happened at a mine in Policarpa, in the south of the country\n\nAt least 13 workers have been killed and another seven injured in a landslide at an unlicensed mine in southern Colombia, local officials say.\n\nWitnesses described hearing an explosion at the open-air artisanal gold mine on Wednesday afternoon, moments before the workers below were trapped.\n\nEmergency workers and locals were able to retrieve the bodies with the help of diggers.\n\nDeadly accidents are not uncommon in Colombia, especially at unlicensed mines where locals dig for precious metals without any official oversight.\n\nWitnesses said that four of the 13 dead were members of the same indigenous family.\n\nResidents of the area said some 50 people, most of them members of the Quillacinga indigenous group, regularly worked in the mine near Policarpa, in southern Nariño province.\n\nBetween 200,000 and 400,000 people are estimated to engage in artisanal mining in Colombia, with many families relying on the income from selling the precious metals and stones they find to make ends meet.\n\nNine coal miners die in gas explosion in Colombia\n\nColombian rescuers inch towards trapped miners",
+    "research_source": "multi",
+    "summary": "Luvattomalla kultakaivoksella Etelä-Kolumbiassa tapahtunut maanvyöry surmasi ainakin 13 työntekijää ja loukkaannutti seitsemän. Neljä kuolleista kuului silminnäkijöiden mukaan samaan alkuperäiskansaperheeseen.",
+    "content": "Etelä-Kolumbian Nariñon maakunnassa sijaitsevalla luvattomalla kultakaivoksella tapahtunut maanvyöry on surmannut ainakin 13 työntekijää ja loukkaannuttanut seitsemän, paikalliset viranomaiset kertovat. Onnettomuus sattui Policarpan alueella keskiviikkoiltapäivänä. Silminnäkijöiden mukaan neljä kuolleista oli saman alkuperäiskansaperheen jäseniä, ja kaivoksella työskenteli säännöllisesti noin 50 ihmistä.\n\n## Räjähdys kuultiin juuri ennen maanvyöryä\n\nSilminnäkijät kertoivat kuulleensa räjähdyksen ulkoilmassa toimineella, käsityövaltaisella kultakaivoksella. Ääni kuului heidän mukaansa vain hetkeä ennen kuin alempana työskennelleet ihmiset jäivät maanvyöryn alle. Käytettävissä oleva lähdeaineisto ei kerro räjähdyksen syytä eikä vahvista, oliko räjähdyksellä suoraa yhteyttä maanvyöryn alkamiseen.\n\nPelastustyöntekijät ja alueen asukkaat osallistuivat ruumiiden noutamiseen maanvyöryalueelta. Ruumiit saatiin nostettua kaivosalueelta kaivinkoneiden avulla. Lähdeaineisto ei täsmennä pelastustöiden kestoa, seitsemän loukkaantuneen vammoja tai sitä, kuinka monta ihmistä oli kaivoksella juuri turman sattuessa.\n\nOnnettomuuspaikka oli Policarpan lähistöllä Etelä-Nariñossa sijaitseva luvaton kaivos. Lähteen kuvauksen mukaan kultaa etsittiin siellä käsityövaltaisesti avoimella kaivosalueella. Maanvyöryn loukkuun jäivät alempana työskennelleet ihmiset, minkä jälkeen pelastustyöntekijät ja paikalliset käyttivät kaivinkoneita ruumiiden saamiseksi pois alueelta.\n\n## Kaivoksen työntekijöistä useimmat kuuluivat Quillacinga-kansaan\n\nAlueen asukkaiden mukaan kaivoksella työskenteli säännöllisesti noin 50 ihmistä. Useimmat heistä kuuluivat Quillacinga-alkuperäiskansaan. Kaivoksen säännöllisestä työntekijäjoukosta valtaosa oli siten saman paikallisen alkuperäiskansan jäseniä, vaikka lähdeaineisto ei yksilöi kaikkien kuolleiden tai loukkaantuneiden taustaa.\n\nSilminnäkijöiden mukaan neljä 13 kuolleesta oli saman alkuperäiskansaperheen jäseniä. Uhrien perhesuhteesta ei ole lähdeaineistossa viranomaisvahvistusta, vaan tieto perustuu silminnäkijöiden kertomuksiin. Kuolleiden ja loukkaantuneiden kokonaismäärät puolestaan ovat paikallisten viranomaisten ilmoittamia.\n\n## Luvattomat kaivokset toimivat ilman virallista valvontaa\n\nKuolemaan johtavat kaivosonnettomuudet eivät lähdeaineiston mukaan ole Kolumbiassa harvinaisia, varsinkaan luvattomilla kaivoksilla. Tällaisilla kaivoksilla paikalliset etsivät arvometalleja ilman virallista valvontaa. Policarpan kaivos kuului tähän ryhmään: se oli luvaton, ulkoilmassa toiminut ja käsityövaltainen kultakaivos.\n\nKolumbiassa arviolta 200 000–400 000 ihmistä harjoittaa käsityövaltaista kaivostoimintaa. Monet perheet ovat riippuvaisia tuloista, joita ne saavat löytämiensä arvometallien ja jalokivien myynnistä. Lähdeaineiston mukaan kaivannaisista saatava raha auttaa näitä perheitä kattamaan elinkustannuksia, joten toiminta on niille tärkeä toimeentulon lähde.",
+    "category": "Ulkomaat",
+    "tags": [
+      "kolumbia",
+      "kaivosonnettomuus",
+      "maanvyöry",
+      "nariño",
+      "alkuperäiskansat"
+    ],
+    "summary_bullets": [
+      "Ainakin 13 työntekijää kuoli ja seitsemän loukkaantui luvattomalla kultakaivoksella.",
+      "Silminnäkijät kuulivat räjähdyksen juuri ennen maanvyöryä, mutta tapahtumien yhteyttä ei ole vahvistettu.",
+      "Neljä kuolleista kuului silminnäkijöiden mukaan samaan alkuperäiskansaperheeseen."
+    ],
+    "key_points": [
+      "Ainakin 13 työntekijää kuoli ja seitsemän loukkaantui luvattomalla kultakaivoksella.",
+      "Silminnäkijät kuulivat räjähdyksen juuri ennen maanvyöryä, mutta tapahtumien yhteyttä ei ole vahvistettu.",
+      "Neljä kuolleista kuului silminnäkijöiden mukaan samaan alkuperäiskansaperheeseen."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "journalist_note": "Kuolleiden ja loukkaantuneiden määrät perustuvat paikallisten viranomaisten tietoihin. Räjähdyksen syytä tai mahdollista yhteyttä maanvyöryyn ei ole vahvistettu, ja neljän uhrin perhesuhdetta koskeva tieto perustuu silminnäkijöiden kertomuksiin.",
+    "source_text": "The landslide happened at a mine in Policarpa, in the south of the country At least 13 workers have been killed and another seven injured in a landslide at an unlicensed mine in southern Colombia, local officials say. Witnesses described hearing an explosion at the open-air artisanal gold mine on Wednesday afternoon, moments before the workers below were trapped. Emergency workers and locals were able to retrieve the bodies with the help of diggers. Deadly accidents are not uncommon in Colombia, especially at unlicensed mines where locals dig for precious metals without any official oversight. Witnesses said that four of the 13 dead were members of the same indigenous family. Residents of the area said some 50 people, most of them members of the Quillacinga indigenous group, regularly worked in the mine near Policarpa, in southern Nariño province.\n\nFour members of an indigenous family are among the dead, witnesses said.\n\nBetween 200,000 and 400,000 people are estimated to engage in artisanal mining in Colombia, with many families relying on the income from selling the precious metals and stones they find to make ends meet. Nine coal miners die in gas explosion in Colombia Colombian rescuers inch towards trapped miners",
+    "writer_backend": "monica",
+    "writer_confidence": 0.98,
+    "degraded_mode": false,
+    "monica_packet_id": "20260820T145451Z_a1a3f0c4c1",
+    "source_attributions": [
+      {
+        "name": "BBC World",
+        "url": "https://bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss"
+      }
+    ],
+    "source_url": "https://www.bbc.co.uk/news/articles/czxel9lz3vqo?at_medium=RSS&at_campaign=rss"
+  }
+}
