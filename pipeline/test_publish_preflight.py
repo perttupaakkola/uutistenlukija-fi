@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from copy import deepcopy
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -220,6 +221,59 @@ class PublishPreflightTests(unittest.TestCase):
         self.assertEqual(result.categories, ("Ulkomaat", "Ulkomaat", "Ulkomaat"))
         self.assertEqual(result.reasons, ("entertainment_category_review",))
         self.assertEqual(eligible, [])
+        self.assertEqual(path.read_bytes(), before)
+
+    def test_concertinaed_does_not_trigger_entertainment_review(self) -> None:
+        record = _record()
+        record["payload"]["tags"] = ["viihde"]
+        record["packet"]["source_text"] = (
+            "The Bayeux Tapestry was concertinaed for transport to the exhibition."
+        )
+        before = deepcopy(record)
+
+        result = evaluate_publish_preflight(record)
+
+        self.assertEqual(result.action, "publish")
+        self.assertFalse(result.requires_monica_review)
+        self.assertNotIn("entertainment_category_review", result.reasons)
+        self.assertEqual(record, before)
+
+    def test_genuine_performance_terms_still_trigger_entertainment_review(self) -> None:
+        for performance_term in ("concert", "concerts", "konsertti", "esiintyy"):
+            with self.subTest(performance_term=performance_term):
+                record = _record()
+                record["payload"]["tags"] = ["viihde"]
+                record["packet"]["headline_seed"] = (
+                    f"Artist {performance_term} tonight"
+                )
+
+                result = evaluate_publish_preflight(record)
+
+                self.assertEqual(result.action, "monica_review")
+                self.assertTrue(result.requires_monica_review)
+                self.assertEqual(result.reasons, ("entertainment_category_review",))
+
+    def test_bayeux_packet_is_immutable_and_publish_eligible(self) -> None:
+        path = (
+            Path(__file__).resolve().parent
+            / "queues/staged/outbox/20260815T134311Z_3e59e0f4f4.json"
+        )
+        before = path.read_bytes()
+        self.assertEqual(
+            hashlib.sha256(before).hexdigest(),
+            "1da8e5a8e12cc5e3146b7f2f952f2c7c79754ba7368fccb5c68cf4da24a67d52",
+        )
+        record = json.loads(before)
+        original = deepcopy(record)
+
+        result = evaluate_publish_preflight(record)
+        eligible = staged_publish.apply_publish_preflight([(path, record)])
+
+        self.assertEqual(result.action, "publish")
+        self.assertFalse(result.requires_monica_review)
+        self.assertEqual(result.reasons, ())
+        self.assertEqual(eligible, [(path, record)])
+        self.assertEqual(record, original)
         self.assertEqual(path.read_bytes(), before)
 
     def test_retained_bbc_brief_keeps_independent_density_holds(self) -> None:

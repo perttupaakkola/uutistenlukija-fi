@@ -49,7 +49,7 @@ _SENSITIVE_PUBLIC_SAFETY_RE = re.compile(
 )
 _ENTERTAINMENT_CATEGORY_TAGS = frozenset({"kulttuuri", "viihde"})
 _ENTERTAINMENT_PERFORMANCE_RE = re.compile(
-    r"\b(?:concert\w*|konsert\w*|perform\w*|esiinty\w*|"
+    r"\b(?:concerts?|konsert\w*|perform\w*|esiinty\w*|"
     r"(?:musiikki|väliaika|lava)esity\w*|half[- ]time show\w*)\b",
     re.IGNORECASE,
 )
