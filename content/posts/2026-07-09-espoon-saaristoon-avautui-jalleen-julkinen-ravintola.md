@@ -1,5 +1,6 @@
 ---
 title: "Espoon saaristoon avautui jälleen julkinen ravintola"
+seo_title: "Gula Villan avattiin uudelleen Isossa Vasikkasaaressa 2026"
 date: 2026-07-09T12:18:28.440233+00:00
 categories:
   - Kotimaa
@@ -8,7 +9,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Ison Vasikkasaaren Gula Villan on avattu muutaman vuoden tauon jälkeen. Stillmanin sisarusten vetämä ravintola on toistaiseksi Espoon saariston ainoa ka…"
+description: "Gula Villan avattiin uudelleen kesäravintolana Isossa Vasikkasaaressa toukokuussa 2026 muutaman vuoden tauon jälkeen."
 summary: "Ison Vasikkasaaren Gula Villan on avattu muutaman vuoden tauon jälkeen. Stillmanin sisarusten vetämä ravintola on toistaiseksi Espoon saariston ainoa kaikille avoin ravintola."
 summary_bullets:
   - "Ison Vasikkasaaren Gula Villan on avattu kesäravintolana muutaman vuoden tauon jälkeen."
