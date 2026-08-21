@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-21T11:00:04+00:00",
+  "generated_at": "2026-08-21T11:19:30+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -22,10 +22,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 15,
+    "published": 16,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-21T10:56:19.400437+00:00"
+    "last_published_ts": "2026-08-21T11:15:52.357910+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -38,11 +38,11 @@
   },
   "trending": [
     [
-      "helsingin",
-      16
+      "mukaansa",
+      18
     ],
     [
-      "mukaansa",
+      "helsingin",
       16
     ],
     [
@@ -59,12 +59,12 @@
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 14,
+    "readyCount": 13,
     "writingCount": 0,
-    "outboxCount": 72,
+    "outboxCount": 73,
     "publishEligibleCount": 0,
     "monicaReviewCount": 37,
-    "rejectCount": 35,
+    "rejectCount": 36,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
@@ -72,7 +72,7 @@
         "thin_distinct_source": 31
       },
       "reject": {
-        "category_disagreement": 32,
+        "category_disagreement": 33,
         "category_unresolved": 3
       }
     },
@@ -85,7 +85,7 @@
       },
       "reject": {
         "article_source_ratio_exceeded": 9,
-        "category_disagreement": 32,
+        "category_disagreement": 33,
         "category_unresolved": 3,
         "sensitive_thin_story": 5,
         "thin_distinct_source": 9
@@ -95,7 +95,7 @@
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "rawOutboxRemainingCycles": 24,
+    "rawOutboxRemainingCycles": 25,
     "publishableRemainingCycles": 0,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
