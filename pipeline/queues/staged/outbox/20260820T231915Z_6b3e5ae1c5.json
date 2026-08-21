@@ -1,0 +1,207 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-08-20T23:19:15.030911+00:00",
+  "digest": "6b3e5ae1c5",
+  "packet": {
+    "packet_id": "20260820T231915Z_6b3e5ae1c5",
+    "created_at": "2026-08-20T23:19:15Z",
+    "headline_seed": "Melania Trump palasi julkisuuteen keskellä kohua",
+    "description_seed": "Te kuulemma ikävöitte minua, vitsaili Melania Trump.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012220113.html",
+    "source": "Ilta-Sanomat",
+    "source_names": [
+      "Yle"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20242149"
+    ],
+    "source_domains": [
+      "yle.fi"
+    ],
+    "selected_source": {
+      "name": "Yle",
+      "url": "https://yle.fi/a/74-20242149",
+      "domain": "yle.fi"
+    },
+    "selected_source_provenance_error": "",
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.67,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "Melania Trump palasi julkisuuteen keskellä kohua"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle",
+        "source_url": "https://yle.fi/a/74-20242149",
+        "source_domain": "yle.fi",
+        "source_type": "research",
+        "text": "Yhdysvaltain ensimmäinen nainen Melania Trump palasi torstaina parrasvaloihin ensimmäistä kertaa kuukauteen. Hänen julkinen esiintymisensä tapahtui keskellä vellovaa kohua, joka liittyy presidentti Donald Trumpin 35-vuotiaaseen avustajaan Natalie Harpiin. Harpin tiedetään viettävän presidentin kanssa enemmän aikaa kuin kenenkään muun avustajan. Melania Trump, 56, ja hänen 80-vuotias aviomiehensä kävelivät käsi kädessä Valkoisen talon Ruusutarhan puhujakorokkeelle, ja presidentti istui yleisössä Melanian puhuessa. – Hyvää iltapäivää. Kuulin, että kaipasitte minua. Tässä minä olen, Melania sanoi naurahtaen. Tilaisuudessa juhlistettiin Melania Trumpin ”Fostering the Future” -aloitetta, joka tarjoaa yliopistostipendejä sijaishuollosta aikuistuville nuorille. Presidentin puolisoa on nähty harvakseltaan julkisuudessa Trumpin toisella presidenttikaudella. Viimeksi hän edusti julkisesti miehensä vierellä jalkapallon MM-finaalissa 19. heinäkuuta. Avustaja Harp sitä vastoin on ollut lähes jatkuva näky Trumpin rinnalla tämän toisella kaudella: Harp muun muassa kirjoittaa viestejä sosiaaliseen mediaan ja tulostaa tietoja presidentille, minkä vuoksi häntä on kutsuttu ”ihmisprintteriksi”.",
+        "word_count": 135,
+        "source_identity": "https://yle.fi/a/74-20242149",
+        "keyword_overlap": 6,
+        "strong_overlap": 3
+      }
+    ],
+    "source_text": "Yhdysvaltain ensimmäinen nainen Melania Trump palasi torstaina parrasvaloihin ensimmäistä kertaa kuukauteen. Hänen julkinen esiintymisensä tapahtui keskellä vellovaa kohua, joka liittyy presidentti Donald Trumpin 35-vuotiaaseen avustajaan Natalie Harpiin. Harpin tiedetään viettävän presidentin kanssa enemmän aikaa kuin kenenkään muun avustajan. Melania Trump, 56, ja hänen 80-vuotias aviomiehensä kävelivät käsi kädessä Valkoisen talon Ruusutarhan puhujakorokkeelle, ja presidentti istui yleisössä Melanian puhuessa. – Hyvää iltapäivää. Kuulin, että kaipasitte minua. Tässä minä olen, Melania sanoi naurahtaen. Tilaisuudessa juhlistettiin Melania Trumpin ”Fostering the Future” -aloitetta, joka tarjoaa yliopistostipendejä sijaishuollosta aikuistuville nuorille. Presidentin puolisoa on nähty harvakseltaan julkisuudessa Trumpin toisella presidenttikaudella. Viimeksi hän edusti julkisesti miehensä vierellä jalkapallon MM-finaalissa 19. heinäkuuta. Avustaja Harp sitä vastoin on ollut lähes jatkuva näky Trumpin rinnalla tämän toisella kaudella: Harp muun muassa kirjoittaa viestejä sosiaaliseen mediaan ja tulostaa tietoja presidentille, minkä vuoksi häntä on kutsuttu ”ihmisprintteriksi”.",
+    "source_diagnostics": {
+      "candidate_blocks": 3,
+      "candidate_source_words": 149,
+      "selected_blocks": 1,
+      "selected_source_words": 135,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle",
+        "Yle",
+        "Ilta-Sanomat"
+      ],
+      "selected_sources": [
+        "Yle"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "Melania Trump palasi julkisuuteen keskellä kohua",
+      "description": "Te kuulemma ikävöitte minua, vitsaili Melania Trump.",
+      "category_hint": "Ulkomaat",
+      "research_source": "multi"
+    },
+    "source_usage": [
+      {
+        "source_url": "https://yle.fi/a/74-20242149",
+        "used": true,
+        "dependent_claims": [
+          "Melania Trump palasi torstaina julkisuuteen noin kuukauden tauon jälkeen.",
+          "Melania ja Donald Trump esiintyivät yhdessä Valkoisen talon Ruusutarhassa, jossa Melania piti puheen.",
+          "Tilaisuudessa juhlistettiin sijaishuollosta aikuistuville nuorille yliopistostipendejä tarjoavaa aloitetta.",
+          "Melania Trumpin edellinen julkinen esiintyminen miehensä rinnalla oli jalkapallon MM-finaalissa 19. heinäkuuta.",
+          "Natalie Harp on ollut näkyvästi presidentin rinnalla ja hoitanut sosiaalisen median viestejä sekä tietojen tulostamista."
+        ]
+      }
+    ],
+    "source_usage_contract": "v1"
+  },
+  "original_article": {
+    "title": "Melania Trump palasi julkisuuteen keskellä kohua",
+    "description": "Te kuulemma ikävöitte minua, vitsaili Melania Trump.",
+    "link": "https://www.is.fi/ulkomaat/art-2000012220113.html",
+    "published": "2026-08-20T22:57:00+00:00",
+    "source": "Ilta-Sanomat",
+    "source_domain": "is.fi",
+    "language": "fi",
+    "fingerprint": "bf80f2001136dc51d993db6bf7a27483",
+    "_url_hash": "7bede6f4b5703f48ffdf375e867b4059740a5d561c7870fa94155434422e92ca",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: Yle | URL: https://yle.fi/a/74-20242149]\nYhdysvaltain ensimmäinen nainen Melania Trump palasi torstaina parrasvaloihin ensimmäistä kertaa kuukauteen. Hänen julkinen esiintymisensä tapahtui keskellä vellovaa kohua, joka liittyy presidentti Donald Trumpin 35-vuotiaaseen avustajaan Natalie Harpiin. Harpin tiedetään viettävän presidentin kanssa enemmän aikaa kuin kenenkään muun avustajan.\n\nMelania Trump, 56, ja hänen 80-vuotias aviomiehensä kävelivät käsi kädessä Valkoisen talon Ruusutarhan puhujakorokkeelle, ja presidentti istui yleisössä Melanian puhuessa.\n\n– Hyvää iltapäivää. Kuulin, että kaipasitte minua. Tässä minä olen, Melania sanoi naurahtaen.\n\nTilaisuudessa juhlistettiin Melania Trumpin ”Fostering the Future” -aloitetta, joka tarjoaa yliopistostipendejä sijaishuollosta aikuistuville nuorille.\n\nPresidentin puolisoa on nähty harvakseltaan julkisuudessa Trumpin toisella presidenttikaudella. Viimeksi hän edusti julkisesti miehensä vierellä jalkapallon MM-finaalissa 19. heinäkuuta.\n\nAvustaja Harp sitä vastoin on ollut lähes jatkuva näky Trumpin rinnalla tämän toisella kaudella: Harp muun muassa kirjoittaa viestejä sosiaaliseen mediaan ja tulostaa tietoja presidentille, minkä vuoksi häntä on kutsuttu ”ihmisprintteriksi”.\n\nHarp ei tiettävästi ollut paikalla Ruusutarhan tilaisuudessa.",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-08-21T13:28:07.842001+00:00",
+  "payload": {
+    "packet_id": "20260820T231915Z_6b3e5ae1c5",
+    "title": "Melania Trump palasi julkisuuteen kuukauden tauon jälkeen",
+    "summary": "Melania Trump esiintyi Valkoisen talon Ruusutarhassa ensimmäistä kertaa noin kuukauteen. Paluu tapahtui presidentin avustajan Natalie Harpin näkyvästä asemasta syntyneen kohun keskellä.",
+    "content": "Yhdysvaltain ensimmäinen nainen Melania Trump palasi torstaina julkisuuteen noin kuukauden tauon jälkeen. Hän esiintyi Valkoisen talon Ruusutarhassa presidentti Donald Trumpin rinnalla samaan aikaan, kun presidentin 35-vuotiaan avustajan Natalie Harpin poikkeuksellisen näkyvä asema on ollut kohun ja julkisen huomion kohteena.\n\n## Paluu Valkoisen talon Ruusutarhaan\n\nMelania Trump, 56, ja Donald Trump, 80, kävelivät tilaisuuteen käsi kädessä. Presidentti istui yleisössä, kun hänen puolisonsa puhui Ruusutarhan puhujakorokkeella. Melania Trump aloitti puheensa viittaamalla poissaoloonsa kevyesti: ”Kuulin, että kaipasitte minua. Tässä minä olen”, hän sanoi naurahtaen. Presidentti jäi seuraamaan tilaisuutta yleisöstä, kun huomio kohdistui ensimmäisen naisen puheenvuoroon.\n\nTilaisuudessa juhlistettiin Melania Trumpin stipendialoitetta, joka tarjoaa yliopistostipendejä sijaishuollosta aikuistuville nuorille. Esiintyminen liittyi siten hänen omaan ohjelmaansa ja sen tukemiin nuoriin. Harpista käyty keskustelu muodosti tapahtumalle ajankohtaisen taustan, mutta stipendialoite oli tilaisuuden varsinainen aihe. Yliopistostipendit ovat aloitteen konkreettinen tukimuoto.\n\n## Harvinainen esiintyminen toisella kaudella\n\nEnsimmäisen naisen ja presidentin avustajan julkinen näkyvyys on ollut toisella kaudella hyvin erilaista. Melania Trumpia on nähty julkisissa tehtävissä vain satunnaisesti. Ennen Ruusutarhan tilaisuutta hänet nähtiin viimeksi Donald Trumpin rinnalla jalkapallon MM-finaalissa 19. heinäkuuta. Torstain esiintyminen päätti noin kuukauden tauon hänen julkisessa ohjelmassaan.\n\n## Natalie Harpin näkyvä rooli\n\nNatalie Harp on puolestaan ollut lähes jatkuva näky Donald Trumpin rinnalla tämän toisella presidenttikaudella. Harpin kerrotaan viettävän presidentin kanssa enemmän aikaa kuin kukaan muu avustaja. Hänen tehtäviinsä kuuluu sosiaalisen median viestien kirjoittaminen ja tietojen tulostaminen presidentille. Jälkimmäisen tehtävän vuoksi häntä on kutsuttu ”ihmisprintteriksi”.\n\nHarpia koskevan kohun tarkempia väitteitä ei saatavilla olevissa tiedoissa eritellä. Niiden perusteella Harpin tiedetään työskentelevän tiiviisti presidentin rinnalla ja hoitavan tälle sosiaalisen median viestejä sekä tulostettavia tietoja. Kohun taustasta ei siksi ole perusteltua tehdä pidemmälle meneviä päätelmiä. Melania Trumpin torstainen esiintyminen puolestaan liittyi hänen stipendialoitteeseensa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Melania Trump",
+      "Donald Trump",
+      "Natalie Harp",
+      "Yhdysvallat",
+      "Valkoinen talo"
+    ],
+    "summary_bullets": [
+      "Melania Trump esiintyi julkisuudessa ensimmäistä kertaa noin kuukauteen.",
+      "Ruusutarhan tilaisuudessa juhlistettiin sijaishuollosta aikuistuville nuorille stipendejä tarjoavaa aloitetta.",
+      "Presidentin avustaja Natalie Harp on ollut lähes jatkuvasti Donald Trumpin rinnalla tämän toisella kaudella."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "confidence": 0.67,
+    "journalist_note": "Aineisto vahvistaa julkisen esiintymisen, stipendialoitteen ja Natalie Harpin työroolin, mutta ei erittele Harpiin liittyvän kohun tarkempaa sisältöä. Artikkelissa ei tehdä siitä pidemmälle meneviä päätelmiä.",
+    "source_usage": [
+      {
+        "source_url": "https://yle.fi/a/74-20242149",
+        "used": true,
+        "dependent_claims": [
+          "Melania Trump palasi torstaina julkisuuteen noin kuukauden tauon jälkeen.",
+          "Melania ja Donald Trump esiintyivät yhdessä Valkoisen talon Ruusutarhassa, jossa Melania piti puheen.",
+          "Tilaisuudessa juhlistettiin sijaishuollosta aikuistuville nuorille yliopistostipendejä tarjoavaa aloitetta.",
+          "Melania Trumpin edellinen julkinen esiintyminen miehensä rinnalla oli jalkapallon MM-finaalissa 19. heinäkuuta.",
+          "Natalie Harp on ollut näkyvästi presidentin rinnalla ja hoitanut sosiaalisen median viestejä sekä tietojen tulostamista."
+        ]
+      }
+    ]
+  },
+  "raw_response": "[agents/tool-policy] tool policy removed 20 tool(s) via tools.allow: agents_list, ask_user, automations, computer, conversations_list, conversations_send, conversations_turn, create_goal, dashboard, gateway, get_goal, image, mobile_ui, nodes, sessions, sessions_search, transcripts, tts, update_goal, update_plan\n[agents/tool-policy] tool policy removed 1 tool(s) via sandbox tools.allow: message\n[agents/tool-policy] tool policy removed 21 tool(s) via tools.allow: agents_list, ask_user, automations, computer, conversations_list, conversations_send, conversations_turn, create_goal, dashboard, gateway, get_goal, heartbeat_respond, image, mobile_ui, nodes, sessions, sessions_search, transcripts, tts, update_goal, update_plan\n[agents/tool-policy] tool policy removed 1 tool(s) via sandbox tools.allow: message\n[agent/embedded] codex app-server context-engine projection decision\n[agent/embedded] codex app-server wrote context-engine thread binding\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=d05a6543-c4f9-4f11-8bf0-90578b7bbb68 sessionKey=agent:monica:explicit:monica-pipeline-55e3717e-8076-45a9-8c11-29c769c42017 lane=context-engine-turn-maintenance:agent:monica:explicit:monica-pipeline-55e3717e-8076-45a9-8c11-29c769c42017\n[agent/embedded] codex app-server one-shot cleanup retired shared client\n{\"packet_id\":\"20260820T231915Z_6b3e5ae1c5\",\"title\":\"Melania Trump palasi julkisuuteen kuukauden tauon jälkeen\",\"summary\":\"Melania Trump esiintyi Valkoisen talon Ruusutarhassa ensimmäistä kertaa noin kuukauteen. Paluu tapahtui presidentin avustajan Natalie Harpin näkyvästä asemasta syntyneen kohun keskellä.\",\"content\":\"Yhdysvaltain ensimmäinen nainen Melania Trump palasi torstaina julkisuuteen noin kuukauden tauon jälkeen. Hän esiintyi Valkoisen talon Ruusutarhassa presidentti Donald Trumpin rinnalla samaan aikaan, kun presidentin 35-vuotiaan avustajan Natalie Harpin poikkeuksellisen näkyvä asema on ollut kohun ja julkisen huomion kohteena.\\n\\n## Paluu Valkoisen talon Ruusutarhaan\\n\\nMelania Trump, 56, ja Donald Trump, 80, kävelivät tilaisuuteen käsi kädessä. Presidentti istui yleisössä, kun hänen puolisonsa puhui Ruusutarhan puhujakorokkeella. Melania Trump aloitti puheensa viittaamalla poissaoloonsa kevyesti: ”Kuulin, että kaipasitte minua. Tässä minä olen”, hän sanoi naurahtaen. Presidentti jäi seuraamaan tilaisuutta yleisöstä, kun huomio kohdistui ensimmäisen naisen puheenvuoroon.\\n\\nTilaisuudessa juhlistettiin Melania Trumpin stipendialoitetta, joka tarjoaa yliopistostipendejä sijaishuollosta aikuistuville nuorille. Esiintyminen liittyi siten hänen omaan ohjelmaansa ja sen tukemiin nuoriin. Harpista käyty keskustelu muodosti tapahtumalle ajankohtaisen taustan, mutta stipendialoite oli tilaisuuden varsinainen aihe. Yliopistostipendit ovat aloitteen konkreettinen tukimuoto.\\n\\n## Harvinainen esiintyminen toisella kaudella\\n\\nEnsimmäisen naisen ja presidentin avustajan julkinen näkyvyys on ollut toisella kaudella hyvin erilaista. Melania Trumpia on nähty julkisissa tehtävissä vain satunnaisesti. Ennen Ruusutarhan tilaisuutta hänet nähtiin viimeksi Donald Trumpin rinnalla jalkapallon MM-finaalissa 19. heinäkuuta. Torstain esiintyminen päätti noin kuukauden tauon hänen julkisessa ohjelmassaan.\\n\\n## Natalie Harpin näkyvä rooli\\n\\nNatalie Harp on puolestaan ollut lähes jatkuva näky Donald Trumpin rinnalla tämän toisella presidenttikaudella. Harpin kerrotaan viettävän presidentin kanssa enemmän aikaa kuin kukaan muu avustaja. Hänen tehtäviinsä kuuluu sosiaalisen median viestien kirjoittaminen ja tietojen tulostaminen presidentille. Jälkimmäisen tehtävän vuoksi häntä on kutsuttu ”ihmisprintteriksi”.\\n\\nHarpia koskevan kohun tarkempia väitteitä ei saatavilla olevissa tiedoissa eritellä. Niiden perusteella Harpin tiedetään työskentelevän tiiviisti presidentin rinnalla ja hoitavan tälle sosiaalisen median viestejä sekä tulostettavia tietoja. Kohun taustasta ei siksi ole perusteltua tehdä pidemmälle meneviä päätelmiä. Melania Trumpin torstainen esiintyminen puolestaan liittyi hänen stipendialoitteeseensa.\",\"category\":\"Ulkomaat\",\"tags\":[\"Melania Trump\",\"Donald Trump\",\"Natalie Harp\",\"Yhdysvallat\",\"Valkoinen talo\"],\"summary_bullets\":[\"Melania Trump esiintyi julkisuudessa ensimmäistä kertaa noin kuukauteen.\",\"Ruusutarhan tilaisuudessa juhlistettiin sijaishuollosta aikuistuville nuorille stipendejä tarjoavaa aloitetta.\",\"Presidentin avustaja Natalie Harp on ollut lähes jatkuvasti Donald Trumpin rinnalla tämän toisella kaudella.\"],\"content_type\":\"uutinen\",\"editorial_reviewed\":true,\"confidence\":0.67,\"journalist_note\":\"Aineisto vahvistaa julkisen esiintymisen, stipendialoitteen ja Natalie Harpin työroolin, mutta ei erittele Harpiin liittyvän kohun tarkempaa sisältöä. Artikkelissa ei tehdä siitä pidemmälle meneviä päätelmiä.\",\"source_usage\":[{\"source_url\":\"https://yle.fi/a/74-20242149\",\"used\":true,\"dependent_claims\":[\"Melania Trump palasi torstaina julkisuuteen noin kuukauden tauon jälkeen.\",\"Melania ja Donald Trump esiintyivät yhdessä Valkoisen talon Ruusutarhassa, jossa Melania piti puheen.\",\"Tilaisuudessa juhlistettiin sijaishuollosta aikuistuville nuorille yliopistostipendejä tarjoavaa aloitetta.\",\"Melania Trumpin edellinen julkinen esiintyminen miehensä rinnalla oli jalkapallon MM-finaalissa 19. heinäkuuta.\",\"Natalie Harp on ollut näkyvästi presidentin rinnalla ja hoitanut sosiaalisen median viestejä sekä tietojen tulostamista.\"]}]}\n[agents/agent-command] [agent] run a51a9405-d25a-4cf9-905a-fec5a6877cd5 ended with stopReason=stop",
+  "article": {
+    "title": "Melania Trump palasi julkisuuteen kuukauden tauon jälkeen",
+    "description": "Melania Trump esiintyi Valkoisen talon Ruusutarhassa ensimmäistä kertaa noin kuukauteen. Paluu tapahtui presidentin avustajan Natalie Harpin näkyvästä asemasta syntyneen kohun keskellä.",
+    "link": "https://yle.fi/a/74-20242149",
+    "published": "2026-08-20T22:57:00+00:00",
+    "source": "Yle",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "bf80f2001136dc51d993db6bf7a27483",
+    "_url_hash": "7bede6f4b5703f48ffdf375e867b4059740a5d561c7870fa94155434422e92ca",
+    "source_tier": 1,
+    "category_hint": "Ulkomaat",
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Ulkomaat",
+    "research": "[Lähde: Yle | URL: https://yle.fi/a/74-20242149]\nYhdysvaltain ensimmäinen nainen Melania Trump palasi torstaina parrasvaloihin ensimmäistä kertaa kuukauteen. Hänen julkinen esiintymisensä tapahtui keskellä vellovaa kohua, joka liittyy presidentti Donald Trumpin 35-vuotiaaseen avustajaan Natalie Harpiin. Harpin tiedetään viettävän presidentin kanssa enemmän aikaa kuin kenenkään muun avustajan.\n\nMelania Trump, 56, ja hänen 80-vuotias aviomiehensä kävelivät käsi kädessä Valkoisen talon Ruusutarhan puhujakorokkeelle, ja presidentti istui yleisössä Melanian puhuessa.\n\n– Hyvää iltapäivää. Kuulin, että kaipasitte minua. Tässä minä olen, Melania sanoi naurahtaen.\n\nTilaisuudessa juhlistettiin Melania Trumpin ”Fostering the Future” -aloitetta, joka tarjoaa yliopistostipendejä sijaishuollosta aikuistuville nuorille.\n\nPresidentin puolisoa on nähty harvakseltaan julkisuudessa Trumpin toisella presidenttikaudella. Viimeksi hän edusti julkisesti miehensä vierellä jalkapallon MM-finaalissa 19. heinäkuuta.\n\nAvustaja Harp sitä vastoin on ollut lähes jatkuva näky Trumpin rinnalla tämän toisella kaudella: Harp muun muassa kirjoittaa viestejä sosiaaliseen mediaan ja tulostaa tietoja presidentille, minkä vuoksi häntä on kutsuttu ”ihmisprintteriksi”.\n\nHarp ei tiettävästi ollut paikalla Ruusutarhan tilaisuudessa.",
+    "research_source": "multi",
+    "summary": "Melania Trump esiintyi Valkoisen talon Ruusutarhassa ensimmäistä kertaa noin kuukauteen. Paluu tapahtui presidentin avustajan Natalie Harpin näkyvästä asemasta syntyneen kohun keskellä.",
+    "content": "Yhdysvaltain ensimmäinen nainen Melania Trump palasi torstaina julkisuuteen noin kuukauden tauon jälkeen. Hän esiintyi Valkoisen talon Ruusutarhassa presidentti Donald Trumpin rinnalla samaan aikaan, kun presidentin 35-vuotiaan avustajan Natalie Harpin poikkeuksellisen näkyvä asema on ollut kohun ja julkisen huomion kohteena.\n\n## Paluu Valkoisen talon Ruusutarhaan\n\nMelania Trump, 56, ja Donald Trump, 80, kävelivät tilaisuuteen käsi kädessä. Presidentti istui yleisössä, kun hänen puolisonsa puhui Ruusutarhan puhujakorokkeella. Melania Trump aloitti puheensa viittaamalla poissaoloonsa kevyesti: ”Kuulin, että kaipasitte minua. Tässä minä olen”, hän sanoi naurahtaen. Presidentti jäi seuraamaan tilaisuutta yleisöstä, kun huomio kohdistui ensimmäisen naisen puheenvuoroon.\n\nTilaisuudessa juhlistettiin Melania Trumpin stipendialoitetta, joka tarjoaa yliopistostipendejä sijaishuollosta aikuistuville nuorille. Esiintyminen liittyi siten hänen omaan ohjelmaansa ja sen tukemiin nuoriin. Harpista käyty keskustelu muodosti tapahtumalle ajankohtaisen taustan, mutta stipendialoite oli tilaisuuden varsinainen aihe. Yliopistostipendit ovat aloitteen konkreettinen tukimuoto.\n\n## Harvinainen esiintyminen toisella kaudella\n\nEnsimmäisen naisen ja presidentin avustajan julkinen näkyvyys on ollut toisella kaudella hyvin erilaista. Melania Trumpia on nähty julkisissa tehtävissä vain satunnaisesti. Ennen Ruusutarhan tilaisuutta hänet nähtiin viimeksi Donald Trumpin rinnalla jalkapallon MM-finaalissa 19. heinäkuuta. Torstain esiintyminen päätti noin kuukauden tauon hänen julkisessa ohjelmassaan.\n\n## Natalie Harpin näkyvä rooli\n\nNatalie Harp on puolestaan ollut lähes jatkuva näky Donald Trumpin rinnalla tämän toisella presidenttikaudella. Harpin kerrotaan viettävän presidentin kanssa enemmän aikaa kuin kukaan muu avustaja. Hänen tehtäviinsä kuuluu sosiaalisen median viestien kirjoittaminen ja tietojen tulostaminen presidentille. Jälkimmäisen tehtävän vuoksi häntä on kutsuttu ”ihmisprintteriksi”.\n\nHarpia koskevan kohun tarkempia väitteitä ei saatavilla olevissa tiedoissa eritellä. Niiden perusteella Harpin tiedetään työskentelevän tiiviisti presidentin rinnalla ja hoitavan tälle sosiaalisen median viestejä sekä tulostettavia tietoja. Kohun taustasta ei siksi ole perusteltua tehdä pidemmälle meneviä päätelmiä. Melania Trumpin torstainen esiintyminen puolestaan liittyi hänen stipendialoitteeseensa.",
+    "category": "Ulkomaat",
+    "tags": [
+      "melania trump",
+      "donald trump",
+      "natalie harp",
+      "yhdysvallat",
+      "valkoinen talo"
+    ],
+    "summary_bullets": [
+      "Melania Trump esiintyi julkisuudessa ensimmäistä kertaa noin kuukauteen.",
+      "Ruusutarhan tilaisuudessa juhlistettiin sijaishuollosta aikuistuville nuorille stipendejä tarjoavaa aloitetta.",
+      "Presidentin avustaja Natalie Harp on ollut lähes jatkuvasti Donald Trumpin rinnalla tämän toisella kaudella."
+    ],
+    "key_points": [
+      "Melania Trump esiintyi julkisuudessa ensimmäistä kertaa noin kuukauteen.",
+      "Ruusutarhan tilaisuudessa juhlistettiin sijaishuollosta aikuistuville nuorille stipendejä tarjoavaa aloitetta.",
+      "Presidentin avustaja Natalie Harp on ollut lähes jatkuvasti Donald Trumpin rinnalla tämän toisella kaudella."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "journalist_note": "Aineisto vahvistaa julkisen esiintymisen, stipendialoitteen ja Natalie Harpin työroolin, mutta ei erittele Harpiin liittyvän kohun tarkempaa sisältöä. Artikkelissa ei tehdä siitä pidemmälle meneviä päätelmiä.",
+    "source_text": "Yhdysvaltain ensimmäinen nainen Melania Trump palasi torstaina parrasvaloihin ensimmäistä kertaa kuukauteen. Hänen julkinen esiintymisensä tapahtui keskellä vellovaa kohua, joka liittyy presidentti Donald Trumpin 35-vuotiaaseen avustajaan Natalie Harpiin. Harpin tiedetään viettävän presidentin kanssa enemmän aikaa kuin kenenkään muun avustajan. Melania Trump, 56, ja hänen 80-vuotias aviomiehensä kävelivät käsi kädessä Valkoisen talon Ruusutarhan puhujakorokkeelle, ja presidentti istui yleisössä Melanian puhuessa. – Hyvää iltapäivää. Kuulin, että kaipasitte minua. Tässä minä olen, Melania sanoi naurahtaen. Tilaisuudessa juhlistettiin Melania Trumpin ”Fostering the Future” -aloitetta, joka tarjoaa yliopistostipendejä sijaishuollosta aikuistuville nuorille. Presidentin puolisoa on nähty harvakseltaan julkisuudessa Trumpin toisella presidenttikaudella. Viimeksi hän edusti julkisesti miehensä vierellä jalkapallon MM-finaalissa 19. heinäkuuta. Avustaja Harp sitä vastoin on ollut lähes jatkuva näky Trumpin rinnalla tämän toisella kaudella: Harp muun muassa kirjoittaa viestejä sosiaaliseen mediaan ja tulostaa tietoja presidentille, minkä vuoksi häntä on kutsuttu ”ihmisprintteriksi”.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.67,
+    "degraded_mode": false,
+    "monica_packet_id": "20260820T231915Z_6b3e5ae1c5",
+    "source_attributions": [
+      {
+        "name": "Yle",
+        "url": "https://yle.fi/a/74-20242149"
+      }
+    ],
+    "source_url": "https://yle.fi/a/74-20242149"
+  }
+}
