@@ -1,0 +1,216 @@
+{
+  "schema": "uutistenlukija.staged_packet.v1",
+  "created_at": "2026-08-21T21:47:24.163441+00:00",
+  "digest": "d684696082",
+  "packet": {
+    "packet_id": "20260821T214724Z_d684696082",
+    "created_at": "2026-08-21T21:47:24Z",
+    "headline_seed": "WSJ: Kiista leimahti Yhdysvaltain asevoimien johdossa – maavoimaministeri astumassa syrjään",
+    "description_seed": "Lehden mukaan taustalla ovat maavoimaministeri Dan Driscollin ja Yhdysvaltain puolustusministerin Pete Hegsethin tulehtuneet välit.",
+    "link": "https://yle.fi/a/74-20242366?origin=rss",
+    "source": "Yle Uutiset",
+    "source_names": [
+      "Yle Uutiset"
+    ],
+    "source_urls": [
+      "https://yle.fi/a/74-20242366?origin=rss"
+    ],
+    "source_domains": [
+      "yle.fi"
+    ],
+    "selected_source": {
+      "name": "Yle Uutiset",
+      "url": "https://yle.fi/a/74-20242366?origin=rss",
+      "domain": "yle.fi"
+    },
+    "selected_source_provenance_error": "",
+    "category_hint": "Ulkomaat",
+    "category": "Ulkomaat",
+    "story_confidence": 0.72,
+    "language_mix": [
+      "fi"
+    ],
+    "facts": {
+      "who": [],
+      "what": [
+        "WSJ: Kiista leimahti Yhdysvaltain asevoimien johdossa – maavoimaministeri astumassa syrjään"
+      ],
+      "where": [],
+      "when": [],
+      "why": [],
+      "consequences": []
+    },
+    "clean_source_blocks": [
+      {
+        "source": "Yle Uutiset",
+        "source_url": "https://yle.fi/a/74-20242366?origin=rss",
+        "source_domain": "yle.fi",
+        "source_type": "description",
+        "text": "Lehden mukaan taustalla ovat maavoimaministeri Dan Driscollin ja Yhdysvaltain puolustusministerin Pete Hegsethin tulehtuneet välit.",
+        "word_count": 14,
+        "source_identity": "https://yle.fi/a/74-20242366",
+        "keyword_overlap": 11,
+        "strong_overlap": 8
+      },
+      {
+        "source": "Yle Uutiset",
+        "source_url": "https://yle.fi/a/74-20242366?origin=rss",
+        "source_domain": "yle.fi",
+        "source_type": "research",
+        "text": "Yhdysvaltain maavoimaministerin Dan Driscollin on määrä luopua tehtävästään vuoden loppuun mennessä, kertoo Wall Street Journal (WSJ) lähteisiinsä pohjaten. Lehden mukaan taustalla ovat Driscollin ja Yhdysvaltain puolustusministerin Pete Hegsethin tulehtuneet välit. Driscollin mahdollisen vetäytymisen jälkeen asevoimat jäisi ilman senaatin hyväksymää johtajaa, sillä Hegseth erotti aiemmin huhtikuussa maavoimien komentajan, kenraali Randy Georgen tehtävistään. Georgen tilelle ei ole toistaiseksi nimetty seuraajaa. Virkaa tekevä komentaja on apulaisesikuntapäällikkö Christopher LaNeve. WSJ:n mukaan Driscoll ja George painostivat asevoimia omaksumaan uutta teknologiaa, jota he pitivät sodankäynnin tulevaisuutena. Driscoll myös kannusti asevoimia hyödyntämään enemmän yksityisiä toimijoita joukkojen varustelussa.",
+        "word_count": 90,
+        "source_identity": "https://yle.fi/a/74-20242366",
+        "keyword_overlap": 10,
+        "strong_overlap": 7
+      }
+    ],
+    "source_text": "Lehden mukaan taustalla ovat maavoimaministeri Dan Driscollin ja Yhdysvaltain puolustusministerin Pete Hegsethin tulehtuneet välit.\n\nYhdysvaltain maavoimaministerin Dan Driscollin on määrä luopua tehtävästään vuoden loppuun mennessä, kertoo Wall Street Journal (WSJ) lähteisiinsä pohjaten. Lehden mukaan taustalla ovat Driscollin ja Yhdysvaltain puolustusministerin Pete Hegsethin tulehtuneet välit. Driscollin mahdollisen vetäytymisen jälkeen asevoimat jäisi ilman senaatin hyväksymää johtajaa, sillä Hegseth erotti aiemmin huhtikuussa maavoimien komentajan, kenraali Randy Georgen tehtävistään. Georgen tilelle ei ole toistaiseksi nimetty seuraajaa. Virkaa tekevä komentaja on apulaisesikuntapäällikkö Christopher LaNeve. WSJ:n mukaan Driscoll ja George painostivat asevoimia omaksumaan uutta teknologiaa, jota he pitivät sodankäynnin tulevaisuutena. Driscoll myös kannusti asevoimia hyödyntämään enemmän yksityisiä toimijoita joukkojen varustelussa.",
+    "source_diagnostics": {
+      "candidate_blocks": 2,
+      "candidate_source_words": 104,
+      "selected_blocks": 2,
+      "selected_source_words": 104,
+      "zero_source_packet": false,
+      "low_source_packet": false,
+      "candidate_sources": [
+        "Yle Uutiset",
+        "Yle Uutiset"
+      ],
+      "selected_sources": [
+        "Yle Uutiset",
+        "Yle Uutiset"
+      ]
+    },
+    "source_selection_outcome": "usable_source_packet",
+    "editor_brief": "Kirjoita tästä yksi julkaistava, luonnollinen suomenkielinen uutisartikkeli. Älä toista lähdetekstiä, älä vuoda lähdelabelia, älä jätä englanninkielisiä otsikkoja tai kappaleita.",
+    "article_snapshot": {
+      "title": "WSJ: Kiista leimahti Yhdysvaltain asevoimien johdossa – maavoimaministeri astumassa syrjään",
+      "description": "Lehden mukaan taustalla ovat maavoimaministeri Dan Driscollin ja Yhdysvaltain puolustusministerin Pete Hegsethin tulehtuneet välit.",
+      "category_hint": "",
+      "research_source": "multi"
+    },
+    "source_usage": [
+      {
+        "source_url": "https://yle.fi/a/74-20242366?origin=rss",
+        "used": true,
+        "dependent_claims": [
+          "WSJ:n mukaan Dan Driscollin on määrä luopua tehtävästään vuoden loppuun mennessä tulehtuneiden Hegseth-suhteiden vuoksi.",
+          "Pete Hegseth erotti Randy Georgen huhtikuussa, eikä tälle ole nimetty seuraajaa.",
+          "Christopher LaNeve toimii maavoimien virkaa tekevänä komentajana.",
+          "Driscollin lähtö jättäisi maavoimat ilman senaatin hyväksymää johtajaa.",
+          "Driscoll ja George ajoivat uuden teknologian käyttöönottoa, ja Driscoll kannusti hyödyntämään yksityisiä toimijoita varustelussa."
+        ]
+      }
+    ],
+    "source_usage_contract": "v1"
+  },
+  "original_article": {
+    "title": "WSJ: Kiista leimahti Yhdysvaltain asevoimien johdossa – maavoimaministeri astumassa syrjään",
+    "description": "Lehden mukaan taustalla ovat maavoimaministeri Dan Driscollin ja Yhdysvaltain puolustusministerin Pete Hegsethin tulehtuneet välit.",
+    "link": "https://yle.fi/a/74-20242366?origin=rss",
+    "published": "2026-08-22T00:20:13+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "5268d7a0a687f1a7b1815190c450db19",
+    "_url_hash": "e215df778cb35c2aeae756ef90cb94a031bad717c14f398f802eadf6016f23e8",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle Uutiset | URL: https://yle.fi/a/74-20242366?origin=rss]\nYhdysvaltain maavoimaministerin Dan Driscollin on määrä luopua tehtävästään vuoden loppuun mennessä, kertoo Wall Street Journal (WSJ) lähteisiinsä pohjaten.\n\nLehden mukaan taustalla ovat Driscollin ja Yhdysvaltain puolustusministerin Pete Hegsethin tulehtuneet välit.\n\nDriscollin mahdollisen vetäytymisen jälkeen asevoimat jäisi ilman senaatin hyväksymää johtajaa, sillä Hegseth erotti aiemmin huhtikuussa maavoimien komentajan, kenraali Randy Georgen tehtävistään.\n\nGeorgen tilelle ei ole toistaiseksi nimetty seuraajaa. Virkaa tekevä komentaja on apulaisesikuntapäällikkö Christopher LaNeve.\n\nWSJ:n mukaan Driscoll ja George painostivat asevoimia omaksumaan uutta teknologiaa, jota he pitivät sodankäynnin tulevaisuutena. Driscoll myös kannusti asevoimia hyödyntämään enemmän yksityisiä toimijoita joukkojen varustelussa.",
+    "research_source": "multi"
+  },
+  "completed_at": "2026-08-21T21:56:37.067333+00:00",
+  "payload": {
+    "packet_id": "20260821T214724Z_d684696082",
+    "title": "WSJ: Yhdysvaltain maavoimaministeri Driscoll luopumassa tehtävästään",
+    "summary": "Dan Driscollin kerrotaan jättävän tehtävänsä vuoden loppuun mennessä. Taustalla ovat hänen tulehtuneet välinsä puolustusministeri Pete Hegsethiin.",
+    "content": "Yhdysvaltain maavoimaministeri Dan Driscollin on määrä jättää tehtävänsä vuoden loppuun mennessä, kertoo The Wall Street Journal lähteisiinsä nojaten. Lehden mukaan lähdön taustalla ovat Driscollin ja puolustusministeri Pete Hegsethin tulehtuneet välit. Kyse on toistaiseksi lehden lähdetiedosta, ja Driscollin lähtöä käsitellään mahdollisena.\n\nDriscollin mahdollinen ero osuisi aikaan, jolloin maavoimien komentajan tehtävään ei ole nimetty pysyvää seuraajaa. Hegseth erotti huhtikuussa komentajan, kenraali Randy Georgen. Virkaa hoitaa nyt apulaisesikuntapäällikkö Christopher LaNeve, eikä Georgen tilalle ole toistaiseksi tehty uutta nimitystä.\n\n## Taustalla kiista ja uudistuslinja\n\nWSJ:n mukaan Driscoll ja George painostivat maavoimia omaksumaan uutta teknologiaa, jota he pitivät sodankäynnin tulevaisuutena. Driscoll kannusti lisäksi maavoimia hyödyntämään nykyistä enemmän yksityisiä toimijoita joukkojen varustelussa. Nämä ovat ainoat uutisoiduissa tiedoissa yksilöidyt linjaukset, joita Driscollin toiminnasta nostetaan esiin.\n\nUutisoidut tiedot eivät erittele, mistä Driscollin ja Hegsethin tulehtuneet välit johtuvat tai milloin kiista kärjistyi. Niistä ei myöskään käy ilmi, liittyvätkö teknologiaa ja yksityisiä toimijoita koskevat näkemykset suoraan Driscollin mahdolliseen lähtöön.\n\n## Kaksi johtoratkaisua avoinna\n\nJos Driscoll vetäytyy, maavoimat jäisivät WSJ:n mukaan ilman senaatin hyväksymää johtajaa. Lehden arvio perustuu siihen, ettei Georgelle ole nimetty seuraajaa ja että Driscoll olisi luopumassa omasta tehtävästään.\n\nKyse on kahdesta eri johtotehtävästä: Driscoll toimii maavoimaministerinä, kun taas George toimi maavoimien komentajana ennen erottamistaan. LaNeve hoitaa komentajan tehtäviä virkaa tekevänä komentajana, mutta pysyvää seuraajaa ei ole kerrottu valitun.\n\nJohtomuutosten aikajana ulottuu huhtikuusta vuoden loppuun: George erotettiin huhtikuussa, LaNeve toimii tällä välin virkaa tekevänä komentajana ja Driscollin kerrotaan lähtevän viimeistään vuoden lopussa. Uutisoiduissa tiedoissa ei anneta tarkempia päivämääriä.\n\nUutisoiduissa tiedoissa ei myöskään nimetä mahdollista seuraajaa Driscollille. Myös Georgen seuraajan valinta on edelleen avoin. Näin maavoimien johtoa koskevat ratkaisut ovat kesken kahdessa eri tehtävässä samalla, kun Driscollin lähtöä koskeva tieto odottaa vahvistusta.",
+    "category": "Ulkomaat",
+    "tags": [
+      "Yhdysvallat",
+      "Yhdysvaltain maavoimat",
+      "Dan Driscoll",
+      "Pete Hegseth",
+      "Randy George"
+    ],
+    "summary_bullets": [
+      "Dan Driscollin kerrotaan luopuvan maavoimaministerin tehtävästä vuoden loppuun mennessä.",
+      "WSJ:n mukaan lähdön taustalla ovat Driscollin ja puolustusministeri Pete Hegsethin tulehtuneet välit.",
+      "Maavoimien komentajan tehtävää hoitaa Christopher LaNeve, sillä Randy Georgelle ei ole nimetty seuraajaa."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "confidence": 0.72,
+    "journalist_note": "Tieto Driscollin mahdollisesta lähdöstä perustuu Ylen välittämään WSJ:n lähdeuutiseen. Tarkkaa lähtöpäivää, seuraajaehdokkaita tai kiistan yksityiskohtia ei ole annettu.",
+    "source_usage": [
+      {
+        "source_url": "https://yle.fi/a/74-20242366?origin=rss",
+        "used": true,
+        "dependent_claims": [
+          "WSJ:n mukaan Dan Driscollin on määrä luopua tehtävästään vuoden loppuun mennessä tulehtuneiden Hegseth-suhteiden vuoksi.",
+          "Pete Hegseth erotti Randy Georgen huhtikuussa, eikä tälle ole nimetty seuraajaa.",
+          "Christopher LaNeve toimii maavoimien virkaa tekevänä komentajana.",
+          "Driscollin lähtö jättäisi maavoimat ilman senaatin hyväksymää johtajaa.",
+          "Driscoll ja George ajoivat uuden teknologian käyttöönottoa, ja Driscoll kannusti hyödyntämään yksityisiä toimijoita varustelussa."
+        ]
+      }
+    ]
+  },
+  "raw_response": "[agents/tool-policy] tool policy removed 20 tool(s) via tools.allow: agents_list, ask_user, automations, computer, conversations_list, conversations_send, conversations_turn, create_goal, dashboard, gateway, get_goal, image, mobile_ui, nodes, sessions, sessions_search, transcripts, tts, update_goal, update_plan\n[agents/tool-policy] tool policy removed 1 tool(s) via sandbox tools.allow: message\n[agents/tool-policy] tool policy removed 21 tool(s) via tools.allow: agents_list, ask_user, automations, computer, conversations_list, conversations_send, conversations_turn, create_goal, dashboard, gateway, get_goal, heartbeat_respond, image, mobile_ui, nodes, sessions, sessions_search, transcripts, tts, update_goal, update_plan\n[agents/tool-policy] tool policy removed 1 tool(s) via sandbox tools.allow: message\n[agent/embedded] codex app-server context-engine projection decision\n[agent/embedded] codex app-server wrote context-engine thread binding\n[agent/embedded] [context-engine] deferred turn maintenance queued taskId=c46e0530-4eae-442f-a209-5fd6b9b374bd sessionKey=agent:monica:explicit:monica-pipeline-7324a888-ef48-4a0d-a592-2725c47a820b lane=context-engine-turn-maintenance:agent:monica:explicit:monica-pipeline-7324a888-ef48-4a0d-a592-2725c47a820b\n[agent/embedded] codex app-server one-shot cleanup retired shared client\n{\n  \"packet_id\": \"20260821T214724Z_d684696082\",\n  \"title\": \"WSJ: Yhdysvaltain maavoimaministeri Driscoll luopumassa tehtävästään\",\n  \"summary\": \"Dan Driscollin kerrotaan jättävän tehtävänsä vuoden loppuun mennessä. Taustalla ovat hänen tulehtuneet välinsä puolustusministeri Pete Hegsethiin.\",\n  \"content\": \"Yhdysvaltain maavoimaministeri Dan Driscollin on määrä jättää tehtävänsä vuoden loppuun mennessä, kertoo The Wall Street Journal lähteisiinsä nojaten. Lehden mukaan lähdön taustalla ovat Driscollin ja puolustusministeri Pete Hegsethin tulehtuneet välit. Kyse on toistaiseksi lehden lähdetiedosta, ja Driscollin lähtöä käsitellään mahdollisena.\\n\\nDriscollin mahdollinen ero osuisi aikaan, jolloin maavoimien komentajan tehtävään ei ole nimetty pysyvää seuraajaa. Hegseth erotti huhtikuussa komentajan, kenraali Randy Georgen. Virkaa hoitaa nyt apulaisesikuntapäällikkö Christopher LaNeve, eikä Georgen tilalle ole toistaiseksi tehty uutta nimitystä.\\n\\n## Taustalla kiista ja uudistuslinja\\n\\nWSJ:n mukaan Driscoll ja George painostivat maavoimia omaksumaan uutta teknologiaa, jota he pitivät sodankäynnin tulevaisuutena. Driscoll kannusti lisäksi maavoimia hyödyntämään nykyistä enemmän yksityisiä toimijoita joukkojen varustelussa. Nämä ovat ainoat uutisoiduissa tiedoissa yksilöidyt linjaukset, joita Driscollin toiminnasta nostetaan esiin.\\n\\nUutisoidut tiedot eivät erittele, mistä Driscollin ja Hegsethin tulehtuneet välit johtuvat tai milloin kiista kärjistyi. Niistä ei myöskään käy ilmi, liittyvätkö teknologiaa ja yksityisiä toimijoita koskevat näkemykset suoraan Driscollin mahdolliseen lähtöön.\\n\\n## Kaksi johtoratkaisua avoinna\\n\\nJos Driscoll vetäytyy, maavoimat jäisivät WSJ:n mukaan ilman senaatin hyväksymää johtajaa. Lehden arvio perustuu siihen, ettei Georgelle ole nimetty seuraajaa ja että Driscoll olisi luopumassa omasta tehtävästään.\\n\\nKyse on kahdesta eri johtotehtävästä: Driscoll toimii maavoimaministerinä, kun taas George toimi maavoimien komentajana ennen erottamistaan. LaNeve hoitaa komentajan tehtäviä virkaa tekevänä komentajana, mutta pysyvää seuraajaa ei ole kerrottu valitun.\\n\\nJohtomuutosten aikajana ulottuu huhtikuusta vuoden loppuun: George erotettiin huhtikuussa, LaNeve toimii tällä välin virkaa tekevänä komentajana ja Driscollin kerrotaan lähtevän viimeistään vuoden lopussa. Uutisoiduissa tiedoissa ei anneta tarkempia päivämääriä.\\n\\nUutisoiduissa tiedoissa ei myöskään nimetä mahdollista seuraajaa Driscollille. Myös Georgen seuraajan valinta on edelleen avoin. Näin maavoimien johtoa koskevat ratkaisut ovat kesken kahdessa eri tehtävässä samalla, kun Driscollin lähtöä koskeva tieto odottaa vahvistusta.\",\n  \"category\": \"Ulkomaat\",\n  \"tags\": [\n    \"Yhdysvallat\",\n    \"Yhdysvaltain maavoimat\",\n    \"Dan Driscoll\",\n    \"Pete Hegseth\",\n    \"Randy George\"\n  ],\n  \"summary_bullets\": [\n    \"Dan Driscollin kerrotaan luopuvan maavoimaministerin tehtävästä vuoden loppuun mennessä.\",\n    \"WSJ:n mukaan lähdön taustalla ovat Driscollin ja puolustusministeri Pete Hegsethin tulehtuneet välit.\",\n    \"Maavoimien komentajan tehtävää hoitaa Christopher LaNeve, sillä Randy Georgelle ei ole nimetty seuraajaa.\"\n  ],\n  \"content_type\": \"uutinen\",\n  \"editorial_reviewed\": true,\n  \"confidence\": 0.72,\n  \"journalist_note\": \"Tieto Driscollin mahdollisesta lähdöstä perustuu Ylen välittämään WSJ:n lähdeuutiseen. Tarkkaa lähtöpäivää, seuraajaehdokkaita tai kiistan yksityiskohtia ei ole annettu.\",\n  \"source_usage\": [\n    {\n      \"source_url\": \"https://yle.fi/a/74-20242366?origin=rss\",\n      \"used\": true,\n      \"dependent_claims\": [\n        \"WSJ:n mukaan Dan Driscollin on määrä luopua tehtävästään vuoden loppuun mennessä tulehtuneiden Hegseth-suhteiden vuoksi.\",\n        \"Pete Hegseth erotti Randy Georgen huhtikuussa, eikä tälle ole nimetty seuraajaa.\",\n        \"Christopher LaNeve toimii maavoimien virkaa tekevänä komentajana.\",\n        \"Driscollin lähtö jättäisi maavoimat ilman senaatin hyväksymää johtajaa.\",\n        \"Driscoll ja George ajoivat uuden teknologian käyttöönottoa, ja Driscoll kannusti hyödyntämään yksityisiä toimijoita varustelussa.\"\n      ]\n    }\n  ]\n}\n[agents/agent-command] [agent] run a0439352-1dca-4758-8296-f9a8d910602f ended with stopReason=stop",
+  "article": {
+    "title": "WSJ: Yhdysvaltain maavoimaministeri Driscoll luopumassa tehtävästään",
+    "description": "Dan Driscollin kerrotaan jättävän tehtävänsä vuoden loppuun mennessä. Taustalla ovat hänen tulehtuneet välinsä puolustusministeri Pete Hegsethiin.",
+    "link": "https://yle.fi/a/74-20242366?origin=rss",
+    "published": "2026-08-22T00:20:13+03:00",
+    "source": "Yle Uutiset",
+    "source_domain": "yle.fi",
+    "language": "fi",
+    "fingerprint": "5268d7a0a687f1a7b1815190c450db19",
+    "_url_hash": "e215df778cb35c2aeae756ef90cb94a031bad717c14f398f802eadf6016f23e8",
+    "source_tier": 1,
+    "source_policy": "fresh",
+    "fresh_source_quota_eligible": true,
+    "trending": false,
+    "_guessed_category": "Kotimaa",
+    "research": "[Lähde: Yle Uutiset | URL: https://yle.fi/a/74-20242366?origin=rss]\nYhdysvaltain maavoimaministerin Dan Driscollin on määrä luopua tehtävästään vuoden loppuun mennessä, kertoo Wall Street Journal (WSJ) lähteisiinsä pohjaten.\n\nLehden mukaan taustalla ovat Driscollin ja Yhdysvaltain puolustusministerin Pete Hegsethin tulehtuneet välit.\n\nDriscollin mahdollisen vetäytymisen jälkeen asevoimat jäisi ilman senaatin hyväksymää johtajaa, sillä Hegseth erotti aiemmin huhtikuussa maavoimien komentajan, kenraali Randy Georgen tehtävistään.\n\nGeorgen tilelle ei ole toistaiseksi nimetty seuraajaa. Virkaa tekevä komentaja on apulaisesikuntapäällikkö Christopher LaNeve.\n\nWSJ:n mukaan Driscoll ja George painostivat asevoimia omaksumaan uutta teknologiaa, jota he pitivät sodankäynnin tulevaisuutena. Driscoll myös kannusti asevoimia hyödyntämään enemmän yksityisiä toimijoita joukkojen varustelussa.",
+    "research_source": "multi",
+    "summary": "Dan Driscollin kerrotaan jättävän tehtävänsä vuoden loppuun mennessä. Taustalla ovat hänen tulehtuneet välinsä puolustusministeri Pete Hegsethiin.",
+    "content": "Yhdysvaltain maavoimaministeri Dan Driscollin on määrä jättää tehtävänsä vuoden loppuun mennessä, kertoo The Wall Street Journal lähteisiinsä nojaten. Lehden mukaan lähdön taustalla ovat Driscollin ja puolustusministeri Pete Hegsethin tulehtuneet välit. Kyse on toistaiseksi lehden lähdetiedosta, ja Driscollin lähtöä käsitellään mahdollisena.\n\nDriscollin mahdollinen ero osuisi aikaan, jolloin maavoimien komentajan tehtävään ei ole nimetty pysyvää seuraajaa. Hegseth erotti huhtikuussa komentajan, kenraali Randy Georgen. Virkaa hoitaa nyt apulaisesikuntapäällikkö Christopher LaNeve, eikä Georgen tilalle ole toistaiseksi tehty uutta nimitystä.\n\n## Taustalla kiista ja uudistuslinja\n\nWSJ:n mukaan Driscoll ja George painostivat maavoimia omaksumaan uutta teknologiaa, jota he pitivät sodankäynnin tulevaisuutena. Driscoll kannusti lisäksi maavoimia hyödyntämään nykyistä enemmän yksityisiä toimijoita joukkojen varustelussa. Nämä ovat ainoat uutisoiduissa tiedoissa yksilöidyt linjaukset, joita Driscollin toiminnasta nostetaan esiin.\n\nUutisoidut tiedot eivät erittele, mistä Driscollin ja Hegsethin tulehtuneet välit johtuvat tai milloin kiista kärjistyi. Niistä ei myöskään käy ilmi, liittyvätkö teknologiaa ja yksityisiä toimijoita koskevat näkemykset suoraan Driscollin mahdolliseen lähtöön.\n\n## Kaksi johtoratkaisua avoinna\n\nJos Driscoll vetäytyy, maavoimat jäisivät WSJ:n mukaan ilman senaatin hyväksymää johtajaa. Lehden arvio perustuu siihen, ettei Georgelle ole nimetty seuraajaa ja että Driscoll olisi luopumassa omasta tehtävästään.\n\nKyse on kahdesta eri johtotehtävästä: Driscoll toimii maavoimaministerinä, kun taas George toimi maavoimien komentajana ennen erottamistaan. LaNeve hoitaa komentajan tehtäviä virkaa tekevänä komentajana, mutta pysyvää seuraajaa ei ole kerrottu valitun.\n\nJohtomuutosten aikajana ulottuu huhtikuusta vuoden loppuun: George erotettiin huhtikuussa, LaNeve toimii tällä välin virkaa tekevänä komentajana ja Driscollin kerrotaan lähtevän viimeistään vuoden lopussa. Uutisoiduissa tiedoissa ei anneta tarkempia päivämääriä.\n\nUutisoiduissa tiedoissa ei myöskään nimetä mahdollista seuraajaa Driscollille. Myös Georgen seuraajan valinta on edelleen avoin. Näin maavoimien johtoa koskevat ratkaisut ovat kesken kahdessa eri tehtävässä samalla, kun Driscollin lähtöä koskeva tieto odottaa vahvistusta.",
+    "category": "Ulkomaat",
+    "tags": [
+      "yhdysvallat",
+      "yhdysvaltain maavoimat",
+      "dan driscoll",
+      "pete hegseth",
+      "randy george"
+    ],
+    "summary_bullets": [
+      "Dan Driscollin kerrotaan luopuvan maavoimaministerin tehtävästä vuoden loppuun mennessä.",
+      "WSJ:n mukaan lähdön taustalla ovat Driscollin ja puolustusministeri Pete Hegsethin tulehtuneet välit.",
+      "Maavoimien komentajan tehtävää hoitaa Christopher LaNeve, sillä Randy Georgelle ei ole nimetty seuraajaa."
+    ],
+    "key_points": [
+      "Dan Driscollin kerrotaan luopuvan maavoimaministerin tehtävästä vuoden loppuun mennessä.",
+      "WSJ:n mukaan lähdön taustalla ovat Driscollin ja puolustusministeri Pete Hegsethin tulehtuneet välit.",
+      "Maavoimien komentajan tehtävää hoitaa Christopher LaNeve, sillä Randy Georgelle ei ole nimetty seuraajaa."
+    ],
+    "content_type": "uutinen",
+    "editorial_reviewed": true,
+    "journalist_note": "Tieto Driscollin mahdollisesta lähdöstä perustuu Ylen välittämään WSJ:n lähdeuutiseen. Tarkkaa lähtöpäivää, seuraajaehdokkaita tai kiistan yksityiskohtia ei ole annettu.",
+    "source_text": "Lehden mukaan taustalla ovat maavoimaministeri Dan Driscollin ja Yhdysvaltain puolustusministerin Pete Hegsethin tulehtuneet välit.\n\nYhdysvaltain maavoimaministerin Dan Driscollin on määrä luopua tehtävästään vuoden loppuun mennessä, kertoo Wall Street Journal (WSJ) lähteisiinsä pohjaten. Lehden mukaan taustalla ovat Driscollin ja Yhdysvaltain puolustusministerin Pete Hegsethin tulehtuneet välit. Driscollin mahdollisen vetäytymisen jälkeen asevoimat jäisi ilman senaatin hyväksymää johtajaa, sillä Hegseth erotti aiemmin huhtikuussa maavoimien komentajan, kenraali Randy Georgen tehtävistään. Georgen tilelle ei ole toistaiseksi nimetty seuraajaa. Virkaa tekevä komentaja on apulaisesikuntapäällikkö Christopher LaNeve. WSJ:n mukaan Driscoll ja George painostivat asevoimia omaksumaan uutta teknologiaa, jota he pitivät sodankäynnin tulevaisuutena. Driscoll myös kannusti asevoimia hyödyntämään enemmän yksityisiä toimijoita joukkojen varustelussa.",
+    "writer_backend": "monica",
+    "writer_confidence": 0.72,
+    "degraded_mode": false,
+    "monica_packet_id": "20260821T214724Z_d684696082",
+    "source_attributions": [
+      {
+        "name": "Yle Uutiset",
+        "url": "https://yle.fi/a/74-20242366?origin=rss"
+      }
+    ],
+    "source_url": "https://yle.fi/a/74-20242366?origin=rss"
+  }
+}
