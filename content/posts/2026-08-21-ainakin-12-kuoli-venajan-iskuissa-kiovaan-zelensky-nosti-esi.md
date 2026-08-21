@@ -50,7 +50,6 @@ source_domain: "bbc.com"
 source_attributions:
   - name: "BBC"
     url: "https://bbc.com/news/articles/c98vzmden5yo?at_link_type=web_link&at_campaign_type=owned&at_link_id=6BA9BFB8-9C3D-11F1-974A-EA77835FA1BE&at_link_origin=BBCWorld&at_ptr_name=twitter&at_bbc_team=editorial&at_format=link"
-briefing: true
 draft: false
 ---
 
