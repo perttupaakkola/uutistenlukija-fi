@@ -50,7 +50,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/levykauppias-ajautui-burnoutiin-ja-taisteli-yrityksensa-konkurssin-partaalta-miljoonabisnekseksi-kylla-mina-perkele-taman-pelastan"
-briefing: true
 draft: false
 ---
 
