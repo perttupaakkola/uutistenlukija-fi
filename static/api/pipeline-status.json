@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-21T10:01:14+00:00",
+  "generated_at": "2026-08-21T10:22:46+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -22,10 +22,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 12,
+    "published": 13,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-21T09:57:36.267615+00:00"
+    "last_published_ts": "2026-08-21T10:19:06.068787+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -43,11 +43,11 @@
     ],
     [
       "mukaansa",
-      12
+      13
     ],
     [
       "aikana",
-      10
+      11
     ],
     [
       "prosenttia",
@@ -59,16 +59,16 @@
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 18,
+    "readyCount": 17,
     "writingCount": 0,
-    "outboxCount": 71,
+    "outboxCount": 72,
     "publishEligibleCount": 0,
-    "monicaReviewCount": 36,
+    "monicaReviewCount": 37,
     "rejectCount": 35,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
-        "article_source_ratio_exceeded": 5,
+        "article_source_ratio_exceeded": 6,
         "thin_distinct_source": 31
       },
       "reject": {
@@ -79,8 +79,8 @@
     "preflightReasonBuckets": {
       "publish": {},
       "monica_review": {
-        "article_source_ratio_exceeded": 35,
-        "sensitive_thin_story": 13,
+        "article_source_ratio_exceeded": 36,
+        "sensitive_thin_story": 14,
         "thin_distinct_source": 31
       },
       "reject": {
