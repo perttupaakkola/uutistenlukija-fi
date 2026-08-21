@@ -50,7 +50,6 @@ source_domain: "demokraatti.fi"
 source_attributions:
   - name: "Demokraatti"
     url: "https://demokraatti.fi/kysely-kone-oli-sijoittajille-hyvamaineisin-porssiyhtio"
-briefing: true
 draft: false
 ---
 
