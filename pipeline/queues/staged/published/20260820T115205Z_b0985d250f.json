@@ -242,6 +242,115 @@
         "url": "https://arvopaperi.fi/uutiset/a/6e2ecb2a-90cb-43e4-9635-ed6ceedd83c5?utm_source=rss"
       }
     ],
-    "source_url": "https://www.arvopaperi.fi/uutiset/a/6e2ecb2a-90cb-43e4-9635-ed6ceedd83c5?utm_source=rss"
+    "source_url": "https://www.arvopaperi.fi/uutiset/a/6e2ecb2a-90cb-43e4-9635-ed6ceedd83c5?utm_source=rss",
+    "image_generation_terminal": {
+      "schema": "uutistenlukija.image_terminal.v1",
+      "stage": "generated",
+      "reason": "key_unavailable",
+      "outcome": "unavailable",
+      "provider_fault": false,
+      "provider_attempted": false,
+      "provider_succeeded": false
+    },
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "generated",
+        "reason": "key_unavailable",
+        "outcome": "unavailable",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "fallback",
+        "reason": "category_fallback",
+        "outcome": "selected",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      }
+    ],
+    "image": "/images/categories/talous.jpg",
+    "image_thumb": "/images/categories/talous.jpg",
+    "image_alt": "Talous-uutiset",
+    "image_credit": "",
+    "image_source_url": "",
+    "image_caption": "",
+    "image_hotlink": false,
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "final category fallback after key_unavailable",
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_visual_judge_score": 0,
+    "image_decision": {
+      "source": "category_fallback",
+      "accepted": true,
+      "reason": "final category fallback after key_unavailable",
+      "prompt_version": "image-flow-v2-2026-07-03"
+    }
+  },
+  "image_enriched_at": "2026-08-21T08:38:12.989667+00:00",
+  "image_enrichment": {
+    "image": "/images/categories/talous.jpg",
+    "image_thumb": "/images/categories/talous.jpg",
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "final category fallback after key_unavailable",
+    "image_concept": null,
+    "image_query": null,
+    "image_candidate_id": null,
+    "image_candidate_url": null,
+    "image_visual_judge_score": 0,
+    "image_accepted_reasons": null,
+    "image_rejected_reasons": null,
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_generation_terminal": {
+      "schema": "uutistenlukija.image_terminal.v1",
+      "stage": "generated",
+      "reason": "key_unavailable",
+      "outcome": "unavailable",
+      "provider_fault": false,
+      "provider_attempted": false,
+      "provider_succeeded": false
+    },
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "generated",
+        "reason": "key_unavailable",
+        "outcome": "unavailable",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "fallback",
+        "reason": "category_fallback",
+        "outcome": "selected",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      }
+    ]
+  },
+  "published_at": "2026-08-21T08:41:55.454962+00:00",
+  "created_files": [
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-08-21-ovaro-suunnittelee-siirtymista-paalistalta-first-northiin-le.md"
+  ],
+  "category_trace": {
+    "packet_id": "20260820T115205Z_b0985d250f",
+    "decisions": {
+      "guard": "Talous",
+      "writer": "Talous",
+      "publisher": "Talous"
+    },
+    "disagreement": false
   }
 }
