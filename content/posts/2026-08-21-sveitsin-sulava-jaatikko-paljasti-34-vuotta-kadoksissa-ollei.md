@@ -50,7 +50,6 @@ source_attributions:
     url: "https://bbc.co.uk/news/articles/cd9w1jwdkkjo?at_medium=RSS&at_campaign=rss"
   - name: "UPI"
     url: "https://upi.com/Top_News/World-News/2026/08/20/switzerland-bodies-2-hikers-found-melting-glacier/6231787244942"
-briefing: true
 draft: false
 ---
 
