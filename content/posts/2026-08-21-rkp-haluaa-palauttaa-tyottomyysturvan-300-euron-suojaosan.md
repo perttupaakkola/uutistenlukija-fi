@@ -54,7 +54,6 @@ source_attributions:
     url: "https://suomenmaa.fi/uutiset/rkp-haluaa-palauttaa-tyottomyysturvan-suojaosan"
   - name: "Yle Uutiset"
     url: "https://yle.fi/a/74-20241989?origin=rss"
-briefing: true
 draft: false
 ---
 
