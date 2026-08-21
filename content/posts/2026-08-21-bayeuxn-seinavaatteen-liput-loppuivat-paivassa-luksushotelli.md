@@ -52,7 +52,6 @@ source_attributions:
     url: "https://theguardian.com/world/2026/aug/15/bayeux-tapestry-london-british-museum-one-aldwych-hotel"
   - name: "Yahoo"
     url: "https://yahoo.com/news/world/articles/britain-deserves-see-bayeux-tapestry-083700496.html"
-briefing: true
 draft: false
 ---
 

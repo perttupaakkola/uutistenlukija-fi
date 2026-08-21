@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-21T09:31:56+00:00",
+  "generated_at": "2026-08-21T09:41:53+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -22,10 +22,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 9,
+    "published": 10,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-21T09:28:12.392721+00:00"
+    "last_published_ts": "2026-08-21T09:38:11.983310+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -38,40 +38,38 @@
   },
   "trending": [
     [
+      "helsingin",
+      15
+    ],
+    [
       "prosenttia",
       10
     ],
     [
-      "mukaansa",
+      "aikana",
       8
     ],
     [
-      "samalla",
-      7
+      "yhtiön",
+      8
     ],
     [
-      "pitää",
-      7
-    ],
-    [
-      "prosentin",
-      6
+      "mukaansa",
+      8
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 20,
     "writingCount": 0,
     "outboxCount": 71,
-    "publishEligibleCount": 1,
-    "monicaReviewCount": 35,
+    "publishEligibleCount": 0,
+    "monicaReviewCount": 36,
     "rejectCount": 35,
     "preflightPrimaryReasonBuckets": {
-      "publish": {
-        "eligible": 1
-      },
+      "publish": {},
       "monica_review": {
         "article_source_ratio_exceeded": 5,
-        "thin_distinct_source": 30
+        "thin_distinct_source": 31
       },
       "reject": {
         "category_disagreement": 32,
@@ -79,13 +77,11 @@
       }
     },
     "preflightReasonBuckets": {
-      "publish": {
-        "eligible": 1
-      },
+      "publish": {},
       "monica_review": {
-        "article_source_ratio_exceeded": 34,
-        "sensitive_thin_story": 12,
-        "thin_distinct_source": 30
+        "article_source_ratio_exceeded": 35,
+        "sensitive_thin_story": 13,
+        "thin_distinct_source": 31
       },
       "reject": {
         "article_source_ratio_exceeded": 9,
@@ -100,16 +96,16 @@
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 24,
-    "publishableRemainingCycles": 1,
-    "worstCaseRemainingCycles": 1,
+    "publishableRemainingCycles": 0,
+    "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
-    "severity": "ok",
+    "severity": "critical",
     "reasons": [
       "publisher_enabled",
       "scanner_enabled",
       "worker_enabled",
       "queue_active",
-      "eligible_supply_available"
+      "eligible_supply_empty"
     ]
   }
 }
