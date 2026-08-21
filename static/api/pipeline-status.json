@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-21T13:24:05+00:00",
+  "generated_at": "2026-08-21T14:19:08+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -22,10 +22,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 22,
+    "published": 23,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-21T13:20:27.612386+00:00"
+    "last_published_ts": "2026-08-21T14:15:29.414738+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -39,7 +39,15 @@
   "trending": [
     [
       "mukaansa",
-      23
+      25
+    ],
+    [
+      "vuonna",
+      18
+    ],
+    [
+      "vuoden",
+      17
     ],
     [
       "helsingin",
@@ -48,28 +56,20 @@
     [
       "jälkeen",
       16
-    ],
-    [
-      "vuonna",
-      16
-    ],
-    [
-      "vuoden",
-      14
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 3,
+    "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 76,
+    "outboxCount": 78,
     "publishEligibleCount": 0,
-    "monicaReviewCount": 40,
+    "monicaReviewCount": 42,
     "rejectCount": 36,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
         "article_source_ratio_exceeded": 6,
-        "thin_distinct_source": 34
+        "thin_distinct_source": 36
       },
       "reject": {
         "category_disagreement": 33,
@@ -79,9 +79,9 @@
     "preflightReasonBuckets": {
       "publish": {},
       "monica_review": {
-        "article_source_ratio_exceeded": 39,
+        "article_source_ratio_exceeded": 41,
         "sensitive_thin_story": 14,
-        "thin_distinct_source": 34
+        "thin_distinct_source": 36
       },
       "reject": {
         "article_source_ratio_exceeded": 9,

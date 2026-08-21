@@ -52,7 +52,6 @@ source_attributions:
     url: "https://bbc.co.uk/news/articles/c1l10mdrld5o?at_medium=RSS&at_campaign=rss"
   - name: "ABC (Australian Broadcasting Corporation)"
     url: "https://abc.net.au/news/2026-08-21/hong-kong-protestors-organisers-tiananmen-vigil-convicted/107063308"
-briefing: true
 draft: false
 ---
 
