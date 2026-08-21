@@ -255,6 +255,115 @@
         "url": "https://bbc.com/news/articles/c98vzmden5yo?at_link_type=web_link&at_campaign_type=owned&at_link_id=6BA9BFB8-9C3D-11F1-974A-EA77835FA1BE&at_link_origin=BBCWorld&at_ptr_name=twitter&at_bbc_team=editorial&at_format=link"
       }
     ],
-    "source_url": "https://www.bbc.com/news/articles/c98vzmden5yo?at_link_type=web_link&at_campaign_type=owned&at_link_id=6BA9BFB8-9C3D-11F1-974A-EA77835FA1BE&at_link_origin=BBCWorld&at_ptr_name=twitter&at_bbc_team=editorial&at_format=link"
+    "source_url": "https://www.bbc.com/news/articles/c98vzmden5yo?at_link_type=web_link&at_campaign_type=owned&at_link_id=6BA9BFB8-9C3D-11F1-974A-EA77835FA1BE&at_link_origin=BBCWorld&at_ptr_name=twitter&at_bbc_team=editorial&at_format=link",
+    "image_generation_terminal": {
+      "schema": "uutistenlukija.image_terminal.v1",
+      "stage": "generated",
+      "reason": "key_unavailable",
+      "outcome": "unavailable",
+      "provider_fault": false,
+      "provider_attempted": false,
+      "provider_succeeded": false
+    },
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "generated",
+        "reason": "key_unavailable",
+        "outcome": "unavailable",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "fallback",
+        "reason": "category_fallback",
+        "outcome": "selected",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      }
+    ],
+    "image": "/images/categories/ulkomaat.jpg",
+    "image_thumb": "/images/categories/ulkomaat.jpg",
+    "image_alt": "Ulkomaat-uutiset",
+    "image_credit": "",
+    "image_source_url": "",
+    "image_caption": "",
+    "image_hotlink": false,
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "final category fallback after key_unavailable",
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_visual_judge_score": 0,
+    "image_decision": {
+      "source": "category_fallback",
+      "accepted": true,
+      "reason": "final category fallback after key_unavailable",
+      "prompt_version": "image-flow-v2-2026-07-03"
+    }
+  },
+  "image_enriched_at": "2026-08-21T06:17:47.228081+00:00",
+  "image_enrichment": {
+    "image": "/images/categories/ulkomaat.jpg",
+    "image_thumb": "/images/categories/ulkomaat.jpg",
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "final category fallback after key_unavailable",
+    "image_concept": null,
+    "image_query": null,
+    "image_candidate_id": null,
+    "image_candidate_url": null,
+    "image_visual_judge_score": 0,
+    "image_accepted_reasons": null,
+    "image_rejected_reasons": null,
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_generation_terminal": {
+      "schema": "uutistenlukija.image_terminal.v1",
+      "stage": "generated",
+      "reason": "key_unavailable",
+      "outcome": "unavailable",
+      "provider_fault": false,
+      "provider_attempted": false,
+      "provider_succeeded": false
+    },
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "generated",
+        "reason": "key_unavailable",
+        "outcome": "unavailable",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "fallback",
+        "reason": "category_fallback",
+        "outcome": "selected",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      }
+    ]
+  },
+  "published_at": "2026-08-21T06:21:27.997920+00:00",
+  "created_files": [
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-08-21-ainakin-12-kuoli-venajan-iskuissa-kiovaan-zelensky-nosti-esi.md"
+  ],
+  "category_trace": {
+    "packet_id": "20260820T072428Z_cedf7f5c01",
+    "decisions": {
+      "guard": "Ulkomaat",
+      "writer": "Ulkomaat",
+      "publisher": "Ulkomaat"
+    },
+    "disagreement": false
   }
 }
