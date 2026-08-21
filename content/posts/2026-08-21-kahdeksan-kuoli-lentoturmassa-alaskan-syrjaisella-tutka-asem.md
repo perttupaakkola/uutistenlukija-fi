@@ -50,7 +50,6 @@ source_attributions:
     url: "https://bbc.co.uk/news/articles/cj9dmw8183wo?at_medium=RSS&at_campaign=rss"
   - name: "NBC News"
     url: "https://nbcnews.com/news/us-news/charter-plane-carrying-8-crashes-western-alaska-rcna593687"
-briefing: true
 draft: false
 ---
 
