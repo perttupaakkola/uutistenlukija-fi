@@ -292,5 +292,33 @@
       }
     ],
     "source_url": "https://www.ottumwacourier.com/news/national_news/pakistans-former-prime-minister-imran-khan-returned-to-prison-after-exam-at-a-private-hospital/article_3b2a9153-ab46-545d-b9d2-089ce587fec9.html"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-21T11:37:30.932178+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260821T052605Z_8fa036f595",
+    "category": "Ulkomaat",
+    "selected_source_words": 406,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 7.86,
+    "quality_reasons": [
+      "language borderline Finnish signal (8.0%)",
+      "length under target (254 words)",
+      "missing: image",
+      "source_confidence_denial_context_missing"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 254,
+    "title": "Imran Khan palautettiin vankilaan sairaalatutkimuksen jälkeen"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (8.0%); length under target (254 words); missing: image; source_confidence_denial_context_missing"
 }
