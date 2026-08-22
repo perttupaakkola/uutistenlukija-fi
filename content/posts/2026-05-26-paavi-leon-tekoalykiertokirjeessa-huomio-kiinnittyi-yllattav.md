@@ -1,5 +1,6 @@
 ---
 title: "Paavi Leon tekoälykiertokirjeessä huomio kiinnittyi yllättävään Gandalf-sitaattiin"
+seo_title: "Paavi Leo XIV siteerasi Gandalfia"
 date: 2026-05-26T22:58:04.902835+00:00
 categories:
   - Teknologia
@@ -8,7 +9,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Paavi Leo on käyttänyt uudessa tekoälyä ja teknologiaa käsittelevässä kiertokirjeessään J. R. R. Tolkienin Taru sormusten herrasta -teoksesta tunnettua…"
+description: "Magnifica Humanitas käsittelee tekoälyä ja teknologiaa sekä sisältää Gandalf-sitaatin. Vatikaanin tekstissä ei nimetä Peter Thieliä."
 summary: "Paavi Leo on käyttänyt uudessa tekoälyä ja teknologiaa käsittelevässä kiertokirjeessään J. R. R. Tolkienin Taru sormusten herrasta -teoksesta tunnettua Gandalf-sitaattia. Valinta on herättänyt tulkintoja siitä, onko viittauksella myös viesti teknologia-alan konservatiivisille Tolkien-ihailijoille, kuten Peter Thielille."
 summary_bullets:
   - "Paavi Leon uudessa tekoälyä käsittelevässä kiertokirjeessä siteerataan Gandalfia."
