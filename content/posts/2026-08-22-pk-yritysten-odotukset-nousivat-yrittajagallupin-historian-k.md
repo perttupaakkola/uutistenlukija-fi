@@ -48,7 +48,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/pk-yritysten-usko-tulevaan-muuttunut-vaikeiden-vuosien-jalkeen-tama-lupaa-hyvaa-taloudelle"
-briefing: true
 draft: false
 ---
 
