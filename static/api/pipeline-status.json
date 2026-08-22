@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-22T11:49:58+00:00",
+  "generated_at": "2026-08-22T13:20:13+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -22,10 +22,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 22,
+    "published": 19,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-22T11:46:27.739640+00:00"
+    "last_published_ts": "2026-08-22T13:16:29.558468+00:00"
   },
   "reject_reasons": {},
   "feeds": {
@@ -38,33 +38,33 @@
   },
   "trending": [
     [
-      "jälkeen",
-      24
+      "mukaansa",
+      17
     ],
     [
-      "mukaansa",
-      18
+      "jälkeen",
+      16
     ],
     [
       "kertoi",
-      15
-    ],
-    [
-      "vuonna",
       14
     ],
     [
-      "vuoden",
+      "viime",
       14
+    ],
+    [
+      "eivät",
+      11
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 86,
+    "outboxCount": 88,
     "publishEligibleCount": 0,
     "monicaReviewCount": 46,
-    "rejectCount": 40,
+    "rejectCount": 42,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
@@ -72,7 +72,7 @@
         "thin_distinct_source": 40
       },
       "reject": {
-        "category_disagreement": 37,
+        "category_disagreement": 39,
         "category_unresolved": 3
       }
     },
@@ -84,18 +84,18 @@
         "thin_distinct_source": 40
       },
       "reject": {
-        "article_source_ratio_exceeded": 9,
-        "category_disagreement": 37,
+        "article_source_ratio_exceeded": 11,
+        "category_disagreement": 39,
         "category_unresolved": 3,
         "sensitive_thin_story": 5,
-        "thin_distinct_source": 9
+        "thin_distinct_source": 11
       }
     },
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "rawOutboxRemainingCycles": 29,
+    "rawOutboxRemainingCycles": 30,
     "publishableRemainingCycles": 0,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
