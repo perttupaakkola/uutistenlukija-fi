@@ -45,6 +45,7 @@ PRODUCTION_PIPELINE_STATUS_MAX_BYTES = 256 * 1024
 PRODUCTION_PIPELINE_STATUS_MAX_AGE_MINUTES = 90
 PRODUCTION_PIPELINE_STATUS_FUTURE_TOLERANCE_MINUTES = 5
 CANONICAL_PIPELINE_STATUS_RELATIVE_PATH = Path("static/api/pipeline-status.json")
+ANALYTICS_FRESHNESS_MAX_AGE_HOURS = 48
 
 
 def utcnow() -> datetime:
@@ -879,7 +880,22 @@ def analytics_status(now: datetime) -> dict[str, Any]:
         "oauth_blocker": artifact_summary(oauth_artifact, ["blocked", "superseded_by_fresh_validation", "blocked_by", "services"]),
     }
 
-    if freshness_status == "fresh" and daily_artifact.get("fresh") and search_artifact.get("fresh"):
+    freshness_times = [
+        parse_dt(freshness_checked_at),
+        parse_dt(daily_artifact.get("evidence_at")),
+        parse_dt(search_artifact.get("evidence_at")),
+    ]
+    freshness_age_valid = all(
+        timestamp is not None
+        and timedelta(0) <= now - timestamp <= timedelta(hours=ANALYTICS_FRESHNESS_MAX_AGE_HOURS)
+        for timestamp in freshness_times
+    )
+    if (
+        freshness_status == "fresh"
+        and daily_artifact.get("fresh")
+        and search_artifact.get("fresh")
+        and freshness_age_valid
+    ):
         for probe in (traffic_log_probe, weekly_log_probe, gsc_log_probe):
             if probe.get("status") == "error_seen":
                 probe["superseded_by_freshness_status"] = True
@@ -1227,8 +1243,11 @@ def summarize_taskboard(path: Path) -> dict[str, Any]:
     }
 
 
-def local_coordination_placeholders(now: datetime) -> dict[str, Any]:
-    workspace_dir = inferred_workspace_dir()
+def local_coordination_placeholders(
+    now: datetime,
+    coordination_dir: Path | None = None,
+) -> dict[str, Any]:
+    workspace_dir = coordination_dir.resolve() if coordination_dir is not None else inferred_workspace_dir()
     candidates = {
         "taskboard": [workspace_dir / "TASKBOARD.md", PROJECT_DIR / "TASKBOARD.md"],
         "agent_health": [workspace_dir / "agent-health.json", PROJECT_DIR / "agent-health.json"],
@@ -1284,6 +1303,7 @@ def build_panel(
     now: datetime | None = None,
     *,
     pipeline_status_file: Path | None = None,
+    coordination_dir: Path | None = None,
 ) -> dict[str, Any]:
     now = now or utcnow()
     checkout_freshness = dict(git_upstream_freshness(PROJECT_DIR))
@@ -1336,6 +1356,14 @@ def build_panel(
         local_section["git_upstream_freshness"] = dict(checkout_freshness)
     categories = category_drift()
     analytics = analytics_status(now)
+    coordination = local_coordination_placeholders(now, coordination_dir)
+    degraded_reasons: list[str] = []
+    if analytics.get("ga4", {}).get("status") != "fresh":
+        degraded_reasons.append("analytics_ga4_not_fresh")
+    if analytics.get("gsc", {}).get("status") != "fresh":
+        degraded_reasons.append("analytics_gsc_not_fresh")
+    if not coordination.get("items", {}).get("agent_health", {}).get("available"):
+        degraded_reasons.append("coordination_agent_health_unavailable")
     if production.get("evidence_status") == "validated" and production.get("pipeline_status") == "ok":
         status = "ok"
     elif production.get("evidence_status") == "stale":
@@ -1347,6 +1375,8 @@ def build_panel(
         "site": "uutistenlukija.fi",
         "generated_at": iso(now),
         "status": status,
+        "aggregate_status": "degraded" if degraded_reasons else status,
+        "aggregate_status_reasons": degraded_reasons,
         "safe_public": True,
         "notes": [
             "Operator-facing pipeline values use a bounded unauthenticated production status response.",
@@ -1361,7 +1391,7 @@ def build_panel(
         "category_drift": categories,
         "analytics": analytics,
         "monetization": monetization_status(),
-        "coordination": local_coordination_placeholders(now),
+        "coordination": coordination,
     }
 
 
@@ -1374,9 +1404,17 @@ def main(argv: list[str] | None = None) -> int:
         type=Path,
         help="deployment-only input; accepts static/api/pipeline-status.json and no other path",
     )
+    parser.add_argument(
+        "--coordination-dir",
+        type=Path,
+        help="safe build-time directory containing coordination mirror artifacts",
+    )
     args = parser.parse_args(argv)
 
-    panel = build_panel(pipeline_status_file=args.pipeline_status_file)
+    build_kwargs: dict[str, Any] = {"pipeline_status_file": args.pipeline_status_file}
+    if args.coordination_dir is not None:
+        build_kwargs["coordination_dir"] = args.coordination_dir
+    panel = build_panel(**build_kwargs)
     if args.dry_run:
         print(json.dumps(panel, ensure_ascii=False, indent=2, sort_keys=True))
         return 0

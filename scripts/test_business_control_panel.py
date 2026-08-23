@@ -945,8 +945,8 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
                 '"checked_at":"2026-06-01T07:55:00+00:00",'
                 '"source_command":"SECRETS_DIR=/home/pertt/.openclaw/workspace/.secrets bash pipeline/check-analytics.sh",'
                 '"artifacts":{'
-                '"daily_report":{"artifact":"analytics/daily-report.json","fresh":true,"property_id":"529369568","counts":{"daily_pageview_rows":1,"top_pages_7d":10,"search_console_top_queries":10}},'
-                '"search_console":{"artifact":"static/api/search-console-data.json","fresh":true,"site":"sc-domain:uutistenlukija.fi","row_count":293},'
+                '"daily_report":{"artifact":"analytics/daily-report.json","fresh":true,"evidence_at":"2026-06-01T07:54:00+00:00","property_id":"529369568","counts":{"daily_pageview_rows":1,"top_pages_7d":10,"search_console_top_queries":10}},'
+                '"search_console":{"artifact":"static/api/search-console-data.json","fresh":true,"evidence_at":"2026-06-01T07:53:00+00:00","site":"sc-domain:uutistenlukija.fi","row_count":293},'
                 '"oauth_blocker":{"blocked":false}'
                 '}'
                 '}',
@@ -1027,6 +1027,37 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
         self.assertEqual(coordination["owner_issue_counts"], {"owner:felix": 1, "owner:iris": 1})
         self.assertEqual(coordination["items"]["taskboard"]["path"], "workspace:TASKBOARD.md")
         self.assertEqual(coordination["items"]["agent_health"]["summary"]["agents"]["felix"]["linear_issue"], "OPE-9")
+
+    def test_month_old_fresh_analytics_artifact_fails_closed(self) -> None:
+        now = datetime(2026, 8, 23, 12, 0, tzinfo=timezone.utc)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            status_path = root / "static/api/analytics-freshness-status.json"
+            status_path.parent.mkdir(parents=True)
+            status_path.write_text(json.dumps({
+                "status": "fresh",
+                "checked_at": "2026-07-23T12:00:00Z",
+                "artifacts": {
+                    "daily_report": {"fresh": True, "evidence_at": "2026-07-23T12:00:00Z"},
+                    "search_console": {"fresh": True, "evidence_at": "2026-07-23T12:00:00Z"},
+                },
+            }), encoding="utf-8")
+            with patch.object(panel, "PROJECT_DIR", root), patch.object(panel, "LOG_DIR", root / "logs"):
+                analytics = panel.analytics_status(now)
+        self.assertEqual(analytics["ga4"]["status"], "stale_or_incomplete")
+        self.assertEqual(analytics["gsc"]["status"], "stale_or_incomplete")
+
+    def test_explicit_coordination_dir_overrides_checkout_inference(self) -> None:
+        now = datetime(2026, 8, 23, 12, 0, tzinfo=timezone.utc)
+        with tempfile.TemporaryDirectory() as tmp:
+            coordination_dir = Path(tmp) / "coordination"
+            coordination_dir.mkdir()
+            (coordination_dir / "agent-health.json").write_text(
+                '{"linearOpenIssues":[],"agents":{}}', encoding="utf-8"
+            )
+            coordination = panel.local_coordination_placeholders(now, coordination_dir)
+        self.assertTrue(coordination["items"]["agent_health"]["available"])
+        self.assertEqual(coordination["workspace_path"], coordination_dir.name)
 
 
 if __name__ == "__main__":
