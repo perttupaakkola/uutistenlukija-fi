@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-23T16:20:31+00:00",
+  "generated_at": "2026-08-23T16:42:18+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 12,
+    "published": 13,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-23T16:16:53.670042+00:00",
+    "last_published_ts": "2026-08-23T16:38:28.252071+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -52,21 +52,21 @@
       11
     ],
     [
-      "venäjän",
+      "vuoden",
       10
     ],
     [
-      "viime",
-      9
+      "venäjän",
+      10
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 9,
+    "readyCount": 7,
     "writingCount": 0,
-    "outboxCount": 96,
+    "outboxCount": 97,
     "publishEligibleCount": 0,
     "monicaReviewCount": 48,
-    "rejectCount": 48,
+    "rejectCount": 49,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
@@ -74,7 +74,7 @@
         "thin_distinct_source": 42
       },
       "reject": {
-        "category_disagreement": 45,
+        "category_disagreement": 46,
         "category_unresolved": 3
       }
     },
@@ -87,7 +87,7 @@
       },
       "reject": {
         "article_source_ratio_exceeded": 13,
-        "category_disagreement": 45,
+        "category_disagreement": 46,
         "category_unresolved": 3,
         "sensitive_thin_story": 6,
         "thin_distinct_source": 13
@@ -97,7 +97,7 @@
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "rawOutboxRemainingCycles": 32,
+    "rawOutboxRemainingCycles": 33,
     "publishableRemainingCycles": 0,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
