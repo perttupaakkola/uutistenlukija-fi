@@ -268,5 +268,32 @@
       }
     ],
     "source_url": "https://www.bbc.co.uk/news/articles/cre4e1q3wewo?at_medium=RSS&at_campaign=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-23T16:49:00.783688+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260823T144843Z_02fe1f5a45",
+    "category": "Ulkomaat",
+    "selected_source_words": 393,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 8.07,
+    "quality_reasons": [
+      "length under target (297 words)",
+      "missing: image",
+      "source_confidence_denial_context_missing"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 297,
+    "title": "Kongon demokraattinen tasavalta ja M23 sopivat rauhanneuvottelujen etenemissuunnitelmasta"
+  },
+  "failure": "quality_gate_rejected: length under target (297 words); missing: image; source_confidence_denial_context_missing"
 }
