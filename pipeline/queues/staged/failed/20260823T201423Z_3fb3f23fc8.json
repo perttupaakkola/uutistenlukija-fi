@@ -270,5 +270,37 @@
       }
     ],
     "source_url": "https://www.foxbusiness.com/politics/trump-fires-back-canada-after-carney-suspends-trade-talks-accuses-us-last-minute-power-play"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-23T20:27:41.719177+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260823T201423Z_3fb3f23fc8",
+    "category": "Ulkomaat",
+    "selected_source_words": 462,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 7.45,
+    "quality_reasons": [
+      "language borderline Finnish signal (8.0%)",
+      "length under target (263 words)",
+      "missing: image",
+      "unsourced numbers",
+      "source_confidence_denial_context_missing",
+      "unsourced_numbers: 20milj, 50"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 20milj, 50"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 263,
+    "title": "Yhdysvaltain ja Kanadan kauppakiista kärjistyi 50 prosentin tulleihin"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (8.0%); length under target (263 words); missing: image; unsourced numbers; source_confidence_denial_context_missing; unsourced_numbers: 20milj, 50"
 }
