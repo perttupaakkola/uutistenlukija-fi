@@ -50,7 +50,6 @@ source_domain: "theguardian.com"
 source_attributions:
   - name: "The Guardian World"
     url: "https://theguardian.com/world/2026/aug/23/french-fires-150-years-in-the-making-visual-guide"
-briefing: true
 draft: false
 ---
 
