@@ -126,6 +126,11 @@ def _production_evidence_failure(
         "last_publish_at": None,
         "last_publish_age_minutes": None,
         "staged_queue_runway": None,
+        "staged_queue_runway_evidence": {
+            "status": "unavailable",
+            "reason": "production pipeline evidence is unavailable or invalid",
+        },
+        "publish_eligible_supply": None,
     }
 
 
@@ -209,9 +214,39 @@ def validate_production_pipeline_status(
     if articles["published"] == 0 and last_published >= generated_at - timedelta(hours=24):
         return fail("contradictory", "production zero-publish count contradicts its last-publish timestamp")
 
+    validated_core = {
+        "evidence_status": "validated",
+        "fresh": True,
+        "reason": "validated fresh production pipeline status",
+        "source": PRODUCTION_PIPELINE_STATUS_URL,
+        "checked_at": iso(now),
+        "generated_at": iso(generated_at),
+        "age_minutes": age_minutes(generated_at, now),
+        "pipeline_status": pipeline_status,
+        "published_last_24h": articles["published"],
+        "last_publish_at": iso(last_published),
+        "last_publish_age_minutes": age_minutes(last_published, now),
+    }
+
+    def runway_fail(evidence_status: str, reason: str) -> dict[str, Any]:
+        clean_reason = sanitize_reason(reason)
+        return {
+            **validated_core,
+            "reason": (
+                "validated fresh production pipeline status; "
+                f"staged runway {evidence_status}: {clean_reason}"
+            ),
+            "staged_queue_runway": None,
+            "staged_queue_runway_evidence": {
+                "status": evidence_status,
+                "reason": clean_reason,
+            },
+            "publish_eligible_supply": None,
+        }
+
     runway = payload.get("stagedQueueRunway")
     if not isinstance(runway, dict):
-        return fail("invalid", "production staged runway is missing")
+        return runway_fail("invalid", "production staged runway is missing")
     count_keys = (
         "readyCount",
         "writingCount",
@@ -225,28 +260,28 @@ def validate_production_pipeline_status(
     )
     bool_keys = ("publisherEnabled", "scannerEnabled", "workerEnabled")
     if any(not _is_nonnegative_int(runway.get(key)) for key in count_keys):
-        return fail("invalid", "production staged runway counts are invalid")
+        return runway_fail("invalid", "production staged runway counts are invalid")
     if any(not isinstance(runway.get(key), bool) for key in bool_keys):
-        return fail("invalid", "production staged runway markers are invalid")
+        return runway_fail("invalid", "production staged runway markers are invalid")
     max_packets = runway.get("maxPacketsPerCycle")
     if not _is_nonnegative_int(max_packets) or max_packets == 0:
-        return fail("invalid", "production staged cycle cap is invalid")
+        return runway_fail("invalid", "production staged cycle cap is invalid")
     replenishment = runway.get("replenishmentState")
     severity = runway.get("severity")
     reasons = runway.get("reasons")
     if not isinstance(replenishment, str) or not replenishment:
-        return fail("invalid", "production replenishment state is invalid")
+        return runway_fail("invalid", "production replenishment state is invalid")
     if severity not in {"ok", "warning", "critical", "inactive"}:
-        return fail("invalid", "production staged severity is invalid")
+        return runway_fail("invalid", "production staged severity is invalid")
     if not isinstance(reasons, list) or any(not isinstance(reason, str) for reason in reasons):
-        return fail("invalid", "production staged reasons are invalid")
+        return runway_fail("invalid", "production staged reasons are invalid")
 
     bucket_keys = ("preflightPrimaryReasonBuckets", "preflightReasonBuckets")
     action_keys = {"publish", "monica_review", "reject"}
     for bucket_key in bucket_keys:
         buckets = runway.get(bucket_key)
         if not isinstance(buckets, dict) or set(buckets) != action_keys:
-            return fail("invalid", "production staged reason buckets are invalid")
+            return runway_fail("invalid", "production staged reason buckets are invalid")
         for action_buckets in buckets.values():
             if not isinstance(action_buckets, dict) or any(
                 not isinstance(reason, str)
@@ -255,7 +290,10 @@ def validate_production_pipeline_status(
                 or count == 0
                 for reason, count in action_buckets.items()
             ):
-                return fail("invalid", "production staged reason bucket counts must be positive integers")
+                return runway_fail(
+                    "invalid",
+                    "production staged reason bucket counts must be positive integers",
+                )
 
     action_count_keys = {
         "publish": "publishEligibleCount",
@@ -267,14 +305,20 @@ def validate_production_pipeline_status(
     for action, count_key in action_count_keys.items():
         action_count = runway[count_key]
         if sum(primary_buckets[action].values()) != action_count:
-            return fail("contradictory", "production staged primary reason bucket totals contradict action counts")
+            return runway_fail(
+                "contradictory",
+                "production staged primary reason bucket totals contradict action counts",
+            )
         if any(count > action_count for count in secondary_buckets[action].values()):
-            return fail("contradictory", "production staged secondary reason bucket count exceeds its action count")
+            return runway_fail(
+                "contradictory",
+                "production staged secondary reason bucket count exceeds its action count",
+            )
         if any(
             secondary_buckets[action].get(reason, 0) < count
             for reason, count in primary_buckets[action].items()
         ):
-            return fail(
+            return runway_fail(
                 "contradictory",
                 "production staged primary reasons are not represented consistently in secondary buckets",
             )
@@ -286,7 +330,7 @@ def validate_production_pipeline_status(
         + runway["rejectCount"]
         != runway["outboxCount"]
     ):
-        return fail(
+        return runway_fail(
             "contradictory",
             "production staged eligible/held/rejected partition contradicts raw outbox depth",
         )
@@ -297,11 +341,17 @@ def validate_production_pipeline_status(
     worker_enabled = runway["workerEnabled"]
     all_enabled = publisher_enabled and scanner_enabled and worker_enabled
     if runway["rawOutboxRemainingCycles"] != expected_raw_cycles:
-        return fail("contradictory", "production staged raw-outbox cycle count contradicts raw outbox depth")
+        return runway_fail(
+            "contradictory",
+            "production staged raw-outbox cycle count contradicts raw outbox depth",
+        )
     if runway["publishableRemainingCycles"] != expected_publishable_cycles:
-        return fail("contradictory", "production staged publishable cycle count contradicts eligible supply")
+        return runway_fail(
+            "contradictory",
+            "production staged publishable cycle count contradicts eligible supply",
+        )
     if runway["worstCaseRemainingCycles"] != runway["publishableRemainingCycles"]:
-        return fail(
+        return runway_fail(
             "contradictory",
             "production staged backward-compatible cycle count contradicts publishable cycles",
         )
@@ -330,7 +380,7 @@ def validate_production_pipeline_status(
     else:
         expected_replenishment = "disabled"
     if replenishment != expected_replenishment:
-        return fail("contradictory", "production staged replenishment contradicts marker state")
+        return runway_fail("contradictory", "production staged replenishment contradicts marker state")
     if runway["writingCount"] > 1:
         expected_severity = "critical"
         expected_reasons.append("multiple_writing_packets")
@@ -352,9 +402,12 @@ def validate_production_pipeline_status(
     if publisher_enabled and not (scanner_enabled and worker_enabled):
         expected_reasons.append(f"eligible_supply_{expected_severity}")
     if severity != expected_severity:
-        return fail("contradictory", "production staged severity contradicts eligible supply and marker state")
+        return runway_fail(
+            "contradictory",
+            "production staged severity contradicts eligible supply and marker state",
+        )
     if reasons != expected_reasons:
-        return fail("contradictory", "production staged reasons contradict queue and marker state")
+        return runway_fail("contradictory", "production staged reasons contradict queue and marker state")
 
     normalized_runway = {
         **{key: runway[key] for key in count_keys},
@@ -368,19 +421,33 @@ def validate_production_pipeline_status(
         "severity": severity,
         "reasons": [sanitize_reason(reason) for reason in reasons[:20]],
     }
+    eligible_reasons = [reason for reason in reasons if reason.startswith("eligible_supply_")]
+    if "eligible_supply_empty" in eligible_reasons:
+        eligible_severity = "critical"
+    elif not publisher_enabled:
+        eligible_severity = "inactive"
+    elif eligible_reasons and eligible_reasons[-1].rsplit("_", 1)[-1] in {
+        "ok",
+        "warning",
+        "critical",
+    }:
+        eligible_severity = eligible_reasons[-1].rsplit("_", 1)[-1]
+    else:
+        eligible_severity = "ok"
     return {
-        "evidence_status": "validated",
-        "fresh": True,
-        "reason": "validated fresh production pipeline status",
-        "source": PRODUCTION_PIPELINE_STATUS_URL,
-        "checked_at": iso(now),
-        "generated_at": iso(generated_at),
-        "age_minutes": age_minutes(generated_at, now),
-        "pipeline_status": pipeline_status,
-        "published_last_24h": articles["published"],
-        "last_publish_at": iso(last_published),
-        "last_publish_age_minutes": age_minutes(last_published, now),
+        **validated_core,
         "staged_queue_runway": normalized_runway,
+        "staged_queue_runway_evidence": {
+            "status": "validated",
+            "reason": "validated staged queue runway",
+        },
+        "publish_eligible_supply": {
+            "raw_outbox_count": runway["outboxCount"],
+            "publish_eligible_count": publish_eligible_count,
+            "publishable_remaining_cycles": runway["publishableRemainingCycles"],
+            "severity": eligible_severity,
+            "reasons": [sanitize_reason(reason) for reason in eligible_reasons],
+        },
     }
 
 

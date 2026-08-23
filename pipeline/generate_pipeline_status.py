@@ -185,9 +185,19 @@ def main(argv: list[str] | None = None):
 
     # Import dashboard from same directory
     sys.path.insert(0, str(SCRIPT_DIR))
-    from dashboard import build_dashboard
+    from dashboard import build_dashboard, recent_post_dates
 
-    data = build_dashboard(hours=24, actions_cycle_path=args.cycle_outcome)
+    hours = 24
+    data = build_dashboard(hours=hours, actions_cycle_path=args.cycle_outcome)
+    recent_posts = recent_post_dates(hours=hours)
+    if recent_posts:
+        data["articles"]["published"] = len(recent_posts)
+        data["articles"]["last_published_ts"] = recent_posts[-1].isoformat()
+    data["articles"]["production_truth_scope"] = (
+        "rolling_24h_published_content" if recent_posts else "observed_cycle_records"
+    )
+    if isinstance(data.get("stagedPublishCycles"), dict):
+        data["stagedPublishCycles"]["scope"] = "observed_cycle_records"
     runway = build_staged_queue_runway()
     data["stagedQueueRunway"] = runway
 

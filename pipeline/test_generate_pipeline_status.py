@@ -10,7 +10,7 @@ import tempfile
 import types
 import unittest
 from contextlib import redirect_stdout
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from unittest.mock import patch
 
@@ -405,6 +405,7 @@ class StagedQueueRunwayTests(unittest.TestCase):
             "articles": {"published": 0},
             "runs": {"total": 0},
         }
+        fake_dashboard.recent_post_dates = lambda hours: []
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             output = root / "static/api/pipeline-status.json"
@@ -422,6 +423,78 @@ class StagedQueueRunwayTests(unittest.TestCase):
 
             data = json.loads(output.read_text(encoding="utf-8"))
             self.assertEqual(data["stagedQueueRunway"], runway)
+
+    def test_main_keeps_rolling_article_truth_separate_from_latest_publish_cycle(self) -> None:
+        now = datetime.now(timezone.utc).replace(microsecond=0)
+        published_dates = [now - timedelta(hours=hours) for hours in (3, 2, 1)]
+        cycle = {
+            "schema": dashboard.PUBLISH_CYCLE_SCHEMA,
+            "cycle_id": "github:536:1",
+            "ts": now.isoformat(),
+            "admitted": True,
+            "outcome": "ok",
+            "result": "published",
+            "attempted": 1,
+            "published": 1,
+            "supply": {
+                "raw_outbox": 3,
+                "action_counts": {
+                    "publish": 1,
+                    "monica_review": 1,
+                    "reject": 1,
+                },
+            },
+        }
+        runway = {"severity": "critical", "publishableRemainingCycles": 0}
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            pipeline_dir = root / "pipeline"
+            pipeline_dir.mkdir()
+            posts_dir = root / "content/posts"
+            posts_dir.mkdir(parents=True)
+            for index, published_at in enumerate(published_dates):
+                (posts_dir / f"article-{index}.md").write_text(
+                    "---\n"
+                    f"title: Article {index}\n"
+                    f"date: {published_at.isoformat()}\n"
+                    "---\nBody\n",
+                    encoding="utf-8",
+                )
+            outcome = root / "runner/staged-publish-cycle.json"
+            outcome.parent.mkdir()
+            outcome.write_text(json.dumps(cycle), encoding="utf-8")
+            output = root / "static/api/pipeline-status.json"
+            with (
+                patch.dict(sys.modules, {"dashboard": dashboard}),
+                patch.object(dashboard, "SCRIPT_DIR", pipeline_dir),
+                patch.object(dashboard, "REPO_ROOT", root),
+                patch.object(generate_pipeline_status, "PROJECT_DIR", root),
+                patch.object(generate_pipeline_status, "OUT_FILE", output),
+                patch.object(
+                    generate_pipeline_status,
+                    "build_staged_queue_runway",
+                    return_value=runway,
+                ),
+            ):
+                generate_pipeline_status.main(["--cycle-outcome", str(outcome)])
+
+            data = json.loads(output.read_text(encoding="utf-8"))
+
+        self.assertEqual(data["articles"]["published"], len(published_dates))
+        self.assertEqual(
+            data["articles"]["last_published_ts"],
+            published_dates[-1].isoformat(),
+        )
+        self.assertEqual(
+            data["articles"]["production_truth_scope"],
+            "rolling_24h_published_content",
+        )
+        self.assertEqual(
+            data["stagedPublishCycles"]["scope"],
+            "observed_cycle_records",
+        )
+        self.assertEqual(data["stagedPublishCycles"]["latest"]["published"], 1)
 
     def test_main_consumes_actions_cycle_without_local_metrics_log(self) -> None:
         runway = {

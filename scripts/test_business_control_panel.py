@@ -157,6 +157,128 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
         self.assertEqual(runway["rawOutboxRemainingCycles"], 24)
         self.assertEqual(runway["publishableRemainingCycles"], 0)
 
+    def test_latest_no_publish_cycle_does_not_override_rolling_production_truth(self) -> None:
+        now = datetime(2026, 8, 23, 5, 25, tzinfo=timezone.utc)
+        payload = self.current_production_payload(now)
+        payload["stagedPublishCycles"] = {
+            "total": 1,
+            "admitted": 1,
+            "publishEligible": 0,
+            "monicaReview": 48,
+            "reject": 47,
+            "published": 0,
+            "latest": {
+                "cycleId": "github:32619773020:1",
+                "ts": (now - timedelta(minutes=12)).isoformat(),
+                "admitted": True,
+                "outcome": "skip",
+                "result": "no_publish_eligible_supply",
+                "rawOutbox": 95,
+                "publishEligible": 0,
+                "monicaReview": 48,
+                "reject": 47,
+                "published": 0,
+            },
+        }
+        payload["stagedQueueRunway"].update(
+            {
+                "outboxCount": 95,
+                "publishEligibleCount": 0,
+                "monicaReviewCount": 48,
+                "rejectCount": 47,
+                "rawOutboxRemainingCycles": 32,
+                "publishableRemainingCycles": 0,
+                "worstCaseRemainingCycles": 0,
+                "preflightPrimaryReasonBuckets": {
+                    "publish": {},
+                    "monica_review": {"thin_distinct_source": 48},
+                    "reject": {"category_disagreement": 47},
+                },
+                "preflightReasonBuckets": {
+                    "publish": {},
+                    "monica_review": {"thin_distinct_source": 48},
+                    "reject": {"category_disagreement": 47},
+                },
+                "severity": "critical",
+                "reasons": [
+                    "publisher_enabled",
+                    "scanner_enabled",
+                    "worker_enabled",
+                    "queue_active",
+                    "eligible_supply_empty",
+                ],
+            }
+        )
+        production = panel.validate_production_pipeline_status(
+            payload,
+            now,
+            panel.PRODUCTION_PIPELINE_STATUS_URL,
+        )
+        checkout_freshness = {
+            "status": "stale",
+            "fresh": False,
+            "reason": "fixture is 746 commits behind",
+            "behind_count": 746,
+        }
+        local_content = {
+            "published_last_24h_local": 1,
+            "last_publish_at": (now - timedelta(days=10)).isoformat(),
+            "last_publish_age_minutes": 14400.0,
+        }
+        with (
+            patch.object(panel, "git_upstream_freshness", return_value=checkout_freshness),
+            patch.object(panel, "production_pipeline_status", return_value=production),
+            patch.object(panel, "content_summary", return_value=local_content),
+            patch.object(panel, "pipeline_summary", return_value={"last_24h": {}}),
+            patch.object(panel, "queue_summary", return_value={}),
+            patch.object(panel, "category_drift", return_value={}),
+            patch.object(panel, "analytics_status", return_value={}),
+            patch.object(panel, "monetization_status", return_value={}),
+            patch.object(panel, "local_coordination_placeholders", return_value={}),
+        ):
+            data = panel.build_panel(now)
+
+        self.assertEqual(production["evidence_status"], "validated")
+        self.assertEqual(data["status"], "ok")
+        self.assertEqual(data["content"]["published_last_24h"], 14)
+        self.assertEqual(data["content"]["published_last_24h_local"], 1)
+        self.assertEqual(data["git_upstream_freshness"]["behind_count"], 746)
+        warning = data["production_pipeline"]["staged_queue_runway"]
+        self.assertEqual(warning["publishEligibleCount"], 0)
+        self.assertEqual(warning["severity"], "critical")
+        self.assertIn("eligible_supply_empty", warning["reasons"])
+        supply = data["production_pipeline"]["publish_eligible_supply"]
+        self.assertEqual(supply["publish_eligible_count"], 0)
+        self.assertEqual(supply["publishable_remaining_cycles"], 0)
+        self.assertEqual(supply["severity"], "critical")
+        self.assertEqual(supply["reasons"], ["eligible_supply_empty"])
+
+    def test_runway_contract_conflict_does_not_erase_valid_production_core(self) -> None:
+        now = datetime(2026, 8, 23, 5, 25, tzinfo=timezone.utc)
+        payload = self.current_production_payload(now)
+        payload["stagedQueueRunway"]["worstCaseRemainingCycles"] = 8
+
+        evidence = panel.validate_production_pipeline_status(
+            payload,
+            now,
+            panel.PRODUCTION_PIPELINE_STATUS_URL,
+        )
+
+        self.assertEqual(evidence["evidence_status"], "validated")
+        self.assertTrue(evidence["fresh"])
+        self.assertEqual(evidence["pipeline_status"], "ok")
+        self.assertEqual(evidence["published_last_24h"], 14)
+        self.assertEqual(
+            evidence["last_publish_at"],
+            (now - timedelta(minutes=30)).isoformat().replace("+00:00", "Z"),
+        )
+        self.assertIsNone(evidence["staged_queue_runway"])
+        self.assertEqual(
+            evidence["staged_queue_runway_evidence"]["status"],
+            "contradictory",
+        )
+        self.assertIsNone(evidence["publish_eligible_supply"])
+
     def test_current_schema_fails_closed_for_mixed_and_tampered_runway(self) -> None:
         now = datetime(2026, 8, 17, 6, 0, tzinfo=timezone.utc)
         mixed = self.production_payload(now)
@@ -181,10 +303,19 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
                     panel.PRODUCTION_PIPELINE_STATUS_URL,
                 )
 
-                self.assertEqual(evidence["evidence_status"], expected_status)
-                self.assertIn(expected_reason, evidence["reason"])
-                self.assertFalse(evidence["fresh"])
+                self.assertEqual(evidence["evidence_status"], "validated")
+                self.assertEqual(
+                    evidence["staged_queue_runway_evidence"]["status"],
+                    expected_status,
+                )
+                self.assertIn(
+                    expected_reason,
+                    evidence["staged_queue_runway_evidence"]["reason"],
+                )
+                self.assertTrue(evidence["fresh"])
+                self.assertEqual(evidence["published_last_24h"], 14)
                 self.assertIsNone(evidence["staged_queue_runway"])
+                self.assertIsNone(evidence["publish_eligible_supply"])
 
     def test_current_schema_fails_closed_for_reason_bucket_count_tampering(self) -> None:
         now = datetime(2026, 8, 17, 6, 0, tzinfo=timezone.utc)
@@ -246,10 +377,19 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
                     panel.PRODUCTION_PIPELINE_STATUS_URL,
                 )
 
-                self.assertEqual(evidence["evidence_status"], expected_status)
-                self.assertIn(expected_reason, evidence["reason"])
-                self.assertFalse(evidence["fresh"])
+                self.assertEqual(evidence["evidence_status"], "validated")
+                self.assertEqual(
+                    evidence["staged_queue_runway_evidence"]["status"],
+                    expected_status,
+                )
+                self.assertIn(
+                    expected_reason,
+                    evidence["staged_queue_runway_evidence"]["reason"],
+                )
+                self.assertTrue(evidence["fresh"])
+                self.assertEqual(evidence["published_last_24h"], 14)
                 self.assertIsNone(evidence["staged_queue_runway"])
+                self.assertIsNone(evidence["publish_eligible_supply"])
 
     def test_deployment_input_accepts_only_the_generated_canonical_status_file(self) -> None:
         now = datetime(2026, 8, 17, 6, 0, tzinfo=timezone.utc)
