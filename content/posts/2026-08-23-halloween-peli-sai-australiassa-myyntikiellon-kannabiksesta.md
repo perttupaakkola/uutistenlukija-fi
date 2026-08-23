@@ -50,7 +50,6 @@ source_domain: "theguardian.com"
 source_attributions:
   - name: "The Guardian World"
     url: "https://theguardian.com/games/2026/aug/24/michael-myers-halloween-video-game-banned-in-australia-drugs"
-briefing: true
 draft: false
 ---
 

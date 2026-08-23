@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-23T19:51:05+00:00",
+  "generated_at": "2026-08-23T22:54:40+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 17,
+    "published": 18,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-23T19:47:25.917397+00:00",
+    "last_published_ts": "2026-08-23T22:50:54.751021+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -40,12 +40,12 @@
   },
   "trending": [
     [
-      "vuoden",
-      16
+      "jälkeen",
+      18
     ],
     [
-      "jälkeen",
-      15
+      "vuoden",
+      16
     ],
     [
       "mukaansa",
@@ -63,10 +63,10 @@
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 102,
+    "outboxCount": 104,
     "publishEligibleCount": 0,
     "monicaReviewCount": 52,
-    "rejectCount": 50,
+    "rejectCount": 52,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
@@ -74,7 +74,7 @@
         "thin_distinct_source": 46
       },
       "reject": {
-        "category_disagreement": 47,
+        "category_disagreement": 49,
         "category_unresolved": 3
       }
     },
@@ -86,18 +86,18 @@
         "thin_distinct_source": 46
       },
       "reject": {
-        "article_source_ratio_exceeded": 14,
-        "category_disagreement": 47,
+        "article_source_ratio_exceeded": 15,
+        "category_disagreement": 49,
         "category_unresolved": 3,
         "sensitive_thin_story": 6,
-        "thin_distinct_source": 14
+        "thin_distinct_source": 15
       }
     },
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "rawOutboxRemainingCycles": 34,
+    "rawOutboxRemainingCycles": 35,
     "publishableRemainingCycles": 0,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
