@@ -48,7 +48,6 @@ source_domain: "theguardian.com"
 source_attributions:
   - name: "The Guardian World"
     url: "https://theguardian.com/australia-news/2026/aug/23/victoria-election-liberals-plan-split-appeals-court-attacked-as-thought-bubble-politicise-judiciary"
-briefing: true
 draft: false
 ---
 
