@@ -50,7 +50,6 @@ source_domain: "theguardian.com"
 source_attributions:
   - name: "The Guardian World"
     url: "https://theguardian.com/world/2026/aug/23/russia-withdraws-ambassador-uk-kremlin-pressure-ukraine-andrey-kelin"
-briefing: true
 draft: false
 ---
 
