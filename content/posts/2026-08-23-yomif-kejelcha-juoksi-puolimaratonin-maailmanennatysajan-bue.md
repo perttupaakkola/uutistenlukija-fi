@@ -54,7 +54,6 @@ source_attributions:
     url: "https://worldathletics.org/news/report/world-half-marathon-record-buenos-aires-2026-yomif-kejelcha"
   - name: "FloTrack"
     url: "https://flotrack.org/articles/16142447-kejelcha-reclaims-half-marathon-world-record-in-buenos-aires"
-briefing: true
 draft: false
 ---
 
