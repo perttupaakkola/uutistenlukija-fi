@@ -50,7 +50,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/luottokunnasta-osaksi-eurooppalaista-nexia-nets-tuntee-suomalaisen-maksamisen"
-briefing: true
 draft: false
 ---
 
