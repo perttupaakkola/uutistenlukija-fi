@@ -48,7 +48,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/yrittaja-heidi-kjellman-on-espanjassa-asiakkaat-suomessa-loysi-onnellisen-arjen-mutta-tormasi-byrokratiaan-osaa-arvostaa-sita-mita-on-kotona"
-briefing: true
 draft: false
 ---
 
