@@ -242,5 +242,36 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20242653?origin=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-24T18:37:33.908978+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260824T182858Z_e67bc3a4cb",
+    "category": "Talous",
+    "selected_source_words": 291,
+    "selected_source_blocks": 3,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 7.96,
+    "quality_reasons": [
+      "length under target (265 words)",
+      "missing: image",
+      "unsourced numbers",
+      "source_confidence_denial_context_missing",
+      "unsourced_numbers: 1.5miljoonaa"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 1.5miljoonaa"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_thin_source",
+    "fail_closed": true,
+    "source_backed": false,
+    "article_words": 265,
+    "title": "Ontarion pääministeri uhkaa katkaista sähkötoimitukset Yhdysvaltoihin"
+  },
+  "failure": "quality_gate_rejected: length under target (265 words); missing: image; unsourced numbers; source_confidence_denial_context_missing; unsourced_numbers: 1.5miljoonaa"
 }
