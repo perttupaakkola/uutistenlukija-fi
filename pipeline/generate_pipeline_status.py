@@ -30,6 +30,7 @@ def _summarize_outbox_supply(files: list[Path]) -> dict:
 def build_staged_queue_runway(
     project_dir: Path = PROJECT_DIR,
     max_packets_per_cycle: int = MAX_PACKETS_PER_CYCLE,
+    recent_published_packets: int = 0,
 ) -> dict:
     pipeline_dir = project_dir / "pipeline"
     ready_count = len(list((pipeline_dir / "queues/staged/ready").glob("*.json")))
@@ -81,8 +82,12 @@ def build_staged_queue_runway(
     elif not publisher_enabled:
         severity = "inactive"
     elif outbox_count > 0 and publish_eligible_count == 0:
-        severity = "critical"
-        reasons.append("eligible_supply_empty")
+        if scanner_enabled and worker_enabled and recent_published_packets >= 2:
+            severity = "ok"
+            reasons.append("eligible_supply_post_drain")
+        else:
+            severity = "critical"
+            reasons.append("eligible_supply_stalled")
     elif scanner_enabled and worker_enabled:
         severity = "ok"
         if publish_eligible_count:
@@ -112,6 +117,7 @@ def build_staged_queue_runway(
         "maxPacketsPerCycle": max_packets_per_cycle,
         "rawOutboxRemainingCycles": raw_outbox_cycles,
         "publishableRemainingCycles": publishable_cycles,
+        "recentPublishedPackets": recent_published_packets,
         # Backward-compatible field name; its value is now deliberately based
         # on eligible supply, never raw depth.
         "worstCaseRemainingCycles": publishable_cycles,
@@ -198,7 +204,13 @@ def main(argv: list[str] | None = None):
     )
     if isinstance(data.get("stagedPublishCycles"), dict):
         data["stagedPublishCycles"]["scope"] = "observed_cycle_records"
-    runway = build_staged_queue_runway()
+    staged_cycles = data.get("stagedPublishCycles")
+    recent_published_packets = (
+        staged_cycles.get("published", 0) if isinstance(staged_cycles, dict) else 0
+    )
+    runway = build_staged_queue_runway(
+        recent_published_packets=recent_published_packets,
+    )
     data["stagedQueueRunway"] = runway
 
     OUT_FILE.parent.mkdir(parents=True, exist_ok=True)

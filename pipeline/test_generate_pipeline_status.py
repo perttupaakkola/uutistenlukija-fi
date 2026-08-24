@@ -312,7 +312,7 @@ class StagedQueueRunwayTests(unittest.TestCase):
             self.assertEqual(runway["severity"], "ok")
             self.assertIn("queue_active", runway["reasons"])
 
-    def test_raw_depth_does_not_overstate_publishable_supply(self) -> None:
+    def test_zero_eligible_is_critical_without_recent_natural_throughput(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             self.build_fixture(
@@ -334,7 +334,30 @@ class StagedQueueRunwayTests(unittest.TestCase):
             self.assertEqual(runway["publishableRemainingCycles"], 0)
             self.assertEqual(runway["worstCaseRemainingCycles"], 0)
             self.assertEqual(runway["severity"], "critical")
-            self.assertIn("eligible_supply_empty", runway["reasons"])
+            self.assertEqual(runway["recentPublishedPackets"], 0)
+            self.assertIn("eligible_supply_stalled", runway["reasons"])
+
+    def test_zero_eligible_is_post_drain_after_two_recent_natural_publishes(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.build_fixture(
+                root,
+                outbox_count=35,
+                outbox_actions=["monica_review"] * 16 + ["reject"] * 19,
+                publisher_enabled=True,
+                scanner_enabled=True,
+                worker_enabled=True,
+            )
+
+            runway = generate_pipeline_status.build_staged_queue_runway(
+                root,
+                recent_published_packets=2,
+            )
+
+            self.assertEqual(runway["publishEligibleCount"], 0)
+            self.assertEqual(runway["recentPublishedPackets"], 2)
+            self.assertEqual(runway["severity"], "ok")
+            self.assertIn("eligible_supply_post_drain", runway["reasons"])
             for action, expected in (
                 ("publish", 0),
                 ("monica_review", 16),

@@ -258,6 +258,7 @@ def validate_production_pipeline_status(
         "rawOutboxRemainingCycles",
         "publishableRemainingCycles",
         "worstCaseRemainingCycles",
+        "recentPublishedPackets",
     )
     bool_keys = ("publisherEnabled", "scannerEnabled", "workerEnabled")
     if any(not _is_nonnegative_int(runway.get(key)) for key in count_keys):
@@ -388,8 +389,12 @@ def validate_production_pipeline_status(
     elif not publisher_enabled:
         expected_severity = "inactive"
     elif runway["outboxCount"] > 0 and publish_eligible_count == 0:
-        expected_severity = "critical"
-        expected_reasons.append("eligible_supply_empty")
+        if scanner_enabled and worker_enabled and runway["recentPublishedPackets"] >= 2:
+            expected_severity = "ok"
+            expected_reasons.append("eligible_supply_post_drain")
+        else:
+            expected_severity = "critical"
+            expected_reasons.append("eligible_supply_stalled")
     elif scanner_enabled and worker_enabled:
         expected_severity = "ok"
         if publish_eligible_count:
@@ -423,7 +428,7 @@ def validate_production_pipeline_status(
         "reasons": [sanitize_reason(reason) for reason in reasons[:20]],
     }
     eligible_reasons = [reason for reason in reasons if reason.startswith("eligible_supply_")]
-    if "eligible_supply_empty" in eligible_reasons:
+    if "eligible_supply_stalled" in eligible_reasons:
         eligible_severity = "critical"
     elif not publisher_enabled:
         eligible_severity = "inactive"

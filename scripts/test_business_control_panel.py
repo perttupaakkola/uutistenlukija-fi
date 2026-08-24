@@ -82,6 +82,7 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
                 "rawOutboxRemainingCycles": 8,
                 "publishableRemainingCycles": 5,
                 "worstCaseRemainingCycles": 5,
+                "recentPublishedPackets": 14,
                 "reasons": [
                     "publisher_enabled",
                     "scanner_enabled",
@@ -112,7 +113,7 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
         self.assertEqual(runway["publishableRemainingCycles"], 5)
         self.assertEqual(runway["worstCaseRemainingCycles"], 5)
 
-    def test_current_schema_zero_eligible_supply_is_critical_not_contradictory(self) -> None:
+    def test_current_schema_zero_eligible_supply_is_critical_without_throughput(self) -> None:
         now = datetime(2026, 8, 17, 6, 0, tzinfo=timezone.utc)
         payload = self.current_production_payload(now)
         payload["stagedQueueRunway"].update(
@@ -124,6 +125,7 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
                 "rawOutboxRemainingCycles": 24,
                 "publishableRemainingCycles": 0,
                 "worstCaseRemainingCycles": 0,
+                "recentPublishedPackets": 0,
                 "preflightPrimaryReasonBuckets": {
                     "publish": {},
                     "monica_review": {"thin_distinct_source": 35},
@@ -140,7 +142,7 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
                     "scanner_enabled",
                     "worker_enabled",
                     "queue_active",
-                    "eligible_supply_empty",
+                    "eligible_supply_stalled",
                 ],
             }
         )
@@ -157,7 +159,7 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
         self.assertEqual(runway["rawOutboxRemainingCycles"], 24)
         self.assertEqual(runway["publishableRemainingCycles"], 0)
 
-    def test_latest_no_publish_cycle_does_not_override_rolling_production_truth(self) -> None:
+    def test_latest_no_publish_cycle_does_not_override_recent_natural_throughput(self) -> None:
         now = datetime(2026, 8, 23, 5, 25, tzinfo=timezone.utc)
         payload = self.current_production_payload(now)
         payload["stagedPublishCycles"] = {
@@ -189,6 +191,7 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
                 "rawOutboxRemainingCycles": 32,
                 "publishableRemainingCycles": 0,
                 "worstCaseRemainingCycles": 0,
+                "recentPublishedPackets": 12,
                 "preflightPrimaryReasonBuckets": {
                     "publish": {},
                     "monica_review": {"thin_distinct_source": 48},
@@ -199,13 +202,13 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
                     "monica_review": {"thin_distinct_source": 48},
                     "reject": {"category_disagreement": 47},
                 },
-                "severity": "critical",
+                "severity": "ok",
                 "reasons": [
                     "publisher_enabled",
                     "scanner_enabled",
                     "worker_enabled",
                     "queue_active",
-                    "eligible_supply_empty",
+                    "eligible_supply_post_drain",
                 ],
             }
         )
@@ -245,13 +248,13 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
         self.assertEqual(data["git_upstream_freshness"]["behind_count"], 746)
         warning = data["production_pipeline"]["staged_queue_runway"]
         self.assertEqual(warning["publishEligibleCount"], 0)
-        self.assertEqual(warning["severity"], "critical")
-        self.assertIn("eligible_supply_empty", warning["reasons"])
+        self.assertEqual(warning["severity"], "ok")
+        self.assertIn("eligible_supply_post_drain", warning["reasons"])
         supply = data["production_pipeline"]["publish_eligible_supply"]
         self.assertEqual(supply["publish_eligible_count"], 0)
         self.assertEqual(supply["publishable_remaining_cycles"], 0)
-        self.assertEqual(supply["severity"], "critical")
-        self.assertEqual(supply["reasons"], ["eligible_supply_empty"])
+        self.assertEqual(supply["severity"], "ok")
+        self.assertEqual(supply["reasons"], ["eligible_supply_post_drain"])
 
     def test_runway_contract_conflict_does_not_erase_valid_production_core(self) -> None:
         now = datetime(2026, 8, 23, 5, 25, tzinfo=timezone.utc)
