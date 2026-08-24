@@ -297,5 +297,37 @@
       }
     ],
     "source_url": "https://www.bbc.co.uk/news/articles/cx2z889l0dxo?at_medium=RSS&at_campaign=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-24T05:08:36.150472+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260824T050146Z_cff087719c",
+    "category": "Ulkomaat",
+    "selected_source_words": 368,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 7.52,
+    "quality_reasons": [
+      "language borderline Finnish signal (7.0%)",
+      "length under target (299 words)",
+      "missing: image",
+      "unsourced numbers",
+      "source_confidence_denial_context_missing",
+      "unsourced_numbers: 2025"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 2025"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 299,
+    "title": "Entiset krikettikapteenit vaativat Imran Khanille asianmukaista hoitoa"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (7.0%); length under target (299 words); missing: image; unsourced numbers; source_confidence_denial_context_missing; unsourced_numbers: 2025"
 }
