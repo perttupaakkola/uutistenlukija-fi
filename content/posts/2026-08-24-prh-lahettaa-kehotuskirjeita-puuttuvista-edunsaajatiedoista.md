@@ -50,7 +50,6 @@ source_attributions:
     url: "https://yrittajat.fi/uutiset/pida-yrityksen-edunsaajatiedot-ajan-tasalla-ja-valta-300-euron-maksu"
   - name: "Stara"
     url: "https://stara.fi/2026/07/14/prhlta-muistutus-yrittajille-virhe-voi-maksaa-300-euroa"
-briefing: true
 draft: false
 ---
 
