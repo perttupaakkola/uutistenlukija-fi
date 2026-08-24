@@ -48,7 +48,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/finnveran-pilottilaina-palkittiin-mikroyrityslainan-haku-jatkuu-toistaiseksi"
-briefing: true
 draft: false
 ---
 
