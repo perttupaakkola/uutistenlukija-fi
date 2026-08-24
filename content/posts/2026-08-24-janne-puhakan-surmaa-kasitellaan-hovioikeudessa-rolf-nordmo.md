@@ -54,7 +54,6 @@ source_attributions:
     url: "https://mtvuutiset.fi/artikkeli/rolf-nordmo-kiistaa-yha-murhan-janne-puhakan-tragedia-nyt-hovioikeuden-kasittelyssa/9381184"
   - name: "Yle"
     url: "https://yle.fi/a/74-20153980"
-briefing: true
 draft: false
 ---
 
