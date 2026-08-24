@@ -50,7 +50,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/useita-ilmoituksia-palkanmaksuhuijauksista-vaarennos-voi-ohjata-tyontekijan-palkan-rikollisen-tilille"
-briefing: true
 draft: false
 ---
 
