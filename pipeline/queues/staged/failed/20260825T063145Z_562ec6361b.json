@@ -254,5 +254,36 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20242701"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-25T06:37:31.064596+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260825T063145Z_562ec6361b",
+    "category": "Kotimaa",
+    "selected_source_words": 374,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 7.95,
+    "quality_reasons": [
+      "length under target (264 words)",
+      "missing: image",
+      "unsourced numbers",
+      "keyword stuffing: 'prosenttia' 12× (6.7%)",
+      "unsourced_numbers: 10.4, 11.0prosentti, 13.7, 4.8prosentti, 5.0prosentti"
+    ],
+    "hard_fails": [
+      "keyword stuffing: 'prosenttia' 12× (6.7%)"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 10.4, 11.0prosentti, 13.7, 4.8prosentti, 5.0prosentti"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 264,
+    "title": "Naisten osuus työttömistä kasvoi Pohjanmaalla – pitkäaikaistyöttömyys lisääntyi"
+  },
+  "failure": "quality_gate_rejected: length under target (264 words); missing: image; unsourced numbers; keyword stuffing: 'prosenttia' 12× (6.7%); unsourced_numbers: 10.4, 11.0prosentti, 13.7, 4.8prosentti, 5.0prosentti"
 }
