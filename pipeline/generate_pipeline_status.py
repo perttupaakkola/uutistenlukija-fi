@@ -8,15 +8,19 @@ Output served at: https://uutistenlukija.fi/api/pipeline-status.json
 Consumers: /tila/ page (live dashboard widget)
 """
 import argparse
+import heapq
 import json
 import os
 import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 SCRIPT_DIR  = Path(__file__).parent
 PROJECT_DIR = SCRIPT_DIR.parent
 OUT_FILE    = PROJECT_DIR / "static" / "api" / "pipeline-status.json"
 MAX_PACKETS_PER_CYCLE = 3
+RECENT_PUBLISH_HOURS = 24
+MAX_RECENT_PUBLISHED_RECORDS = 300
 
 
 def _summarize_outbox_supply(files: list[Path]) -> dict:
@@ -27,9 +31,62 @@ def _summarize_outbox_supply(files: list[Path]) -> dict:
     return summarize_outbox_supply(files)
 
 
+def count_recent_published_packets(
+    project_dir: Path = PROJECT_DIR,
+    *,
+    hours: int = RECENT_PUBLISH_HOURS,
+    max_records: int = MAX_RECENT_PUBLISHED_RECORDS,
+    now: datetime | None = None,
+) -> int:
+    """Count recent terminals through a publish-time-keyed bounded index."""
+    if max_records <= 0:
+        return 0
+    observed_at = now or datetime.now(timezone.utc)
+    cutoff = observed_at - timedelta(hours=hours)
+    published_dir = project_dir / "pipeline/queues/staged/published"
+    newest_published_at: list[datetime] = []
+    for path in published_dir.glob("*.json"):
+        try:
+            record = json.loads(path.read_text(encoding="utf-8"))
+            published_at = datetime.fromisoformat(str(record.get("published_at") or ""))
+            if published_at.tzinfo is None:
+                published_at = published_at.replace(tzinfo=timezone.utc)
+            published_at = published_at.astimezone(timezone.utc)
+        except (
+            AttributeError,
+            OSError,
+            OverflowError,
+            TypeError,
+            UnicodeError,
+            ValueError,
+            json.JSONDecodeError,
+        ):
+            continue
+        created_files = record.get("created_files")
+        if (
+            published_at <= observed_at
+            and isinstance(created_files, list)
+            and any(
+                isinstance(created_file, str)
+                and (
+                    created_file.replace("\\", "/").startswith("content/posts/")
+                    or "/content/posts/" in created_file.replace("\\", "/")
+                )
+                and created_file.endswith(".md")
+                for created_file in created_files
+            )
+        ):
+            if len(newest_published_at) < max_records:
+                heapq.heappush(newest_published_at, published_at)
+            elif published_at > newest_published_at[0]:
+                heapq.heapreplace(newest_published_at, published_at)
+    return sum(published_at >= cutoff for published_at in newest_published_at)
+
+
 def build_staged_queue_runway(
     project_dir: Path = PROJECT_DIR,
     max_packets_per_cycle: int = MAX_PACKETS_PER_CYCLE,
+    recent_published_packets: int = 0,
 ) -> dict:
     pipeline_dir = project_dir / "pipeline"
     ready_count = len(list((pipeline_dir / "queues/staged/ready").glob("*.json")))
@@ -81,8 +138,12 @@ def build_staged_queue_runway(
     elif not publisher_enabled:
         severity = "inactive"
     elif outbox_count > 0 and publish_eligible_count == 0:
-        severity = "critical"
-        reasons.append("eligible_supply_empty")
+        if scanner_enabled and worker_enabled and recent_published_packets >= 2:
+            severity = "ok"
+            reasons.append("eligible_supply_post_drain")
+        else:
+            severity = "critical"
+            reasons.append("eligible_supply_stalled")
     elif scanner_enabled and worker_enabled:
         severity = "ok"
         if publish_eligible_count:
@@ -112,6 +173,7 @@ def build_staged_queue_runway(
         "maxPacketsPerCycle": max_packets_per_cycle,
         "rawOutboxRemainingCycles": raw_outbox_cycles,
         "publishableRemainingCycles": publishable_cycles,
+        "recentPublishedPackets": recent_published_packets,
         # Backward-compatible field name; its value is now deliberately based
         # on eligible supply, never raw depth.
         "worstCaseRemainingCycles": publishable_cycles,
@@ -198,7 +260,10 @@ def main(argv: list[str] | None = None):
     )
     if isinstance(data.get("stagedPublishCycles"), dict):
         data["stagedPublishCycles"]["scope"] = "observed_cycle_records"
-    runway = build_staged_queue_runway()
+    recent_published_packets = count_recent_published_packets(PROJECT_DIR)
+    runway = build_staged_queue_runway(
+        recent_published_packets=recent_published_packets,
+    )
     data["stagedQueueRunway"] = runway
 
     OUT_FILE.parent.mkdir(parents=True, exist_ok=True)
