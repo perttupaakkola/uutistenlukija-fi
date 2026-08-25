@@ -368,6 +368,43 @@ class StagedQueueRunwayTests(unittest.TestCase):
                     expected,
                 )
 
+    def test_recent_published_packets_require_valid_durable_terminal_records(self) -> None:
+        now = datetime.now(timezone.utc).replace(microsecond=0)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            published = root / "pipeline/queues/staged/published"
+            published.mkdir(parents=True)
+            records = {
+                "20260825T010000Z_valid.json": {
+                    "published_at": (now - timedelta(hours=1)).isoformat(),
+                    "created_files": ["/home/runner/work/site/content/posts/valid.md"],
+                },
+                "20260825T020000Z_old.json": {
+                    "published_at": (now - timedelta(hours=25)).isoformat(),
+                    "created_files": ["content/posts/old.md"],
+                },
+                "20260825T030000Z_missing_article.json": {
+                    "published_at": (now - timedelta(hours=1)).isoformat(),
+                    "created_files": ["static/api/pipeline-status.json"],
+                },
+                "20260825T035000Z_future.json": {
+                    "published_at": (now + timedelta(hours=1)).isoformat(),
+                    "created_files": ["content/posts/future.md"],
+                },
+                "20260825T037500Z_overflow.json": {
+                    "published_at": "9999-12-31T23:59:59-23:59",
+                    "created_files": ["content/posts/overflow.md"],
+                },
+            }
+            for name, record in records.items():
+                (published / name).write_text(json.dumps(record), encoding="utf-8")
+            (published / "20260825T040000Z_invalid.json").write_text("{", encoding="utf-8")
+
+            self.assertEqual(
+                generate_pipeline_status.count_recent_published_packets(root, now=now),
+                1,
+            )
+
     def test_multiple_writing_packets_are_always_critical(self) -> None:
         for publisher_enabled in (False, True):
             for scanner_enabled in (False, True):
@@ -597,6 +634,76 @@ class StagedQueueRunwayTests(unittest.TestCase):
                 data["stagedPublishCycles"]["latest"]["cycleId"],
                 "github:123:1",
             )
+
+    def test_publish_cycle_then_clean_deploy_keeps_recent_published_packets(self) -> None:
+        now = datetime.now(timezone.utc).replace(microsecond=0)
+        cycle = {
+            "schema": dashboard.PUBLISH_CYCLE_SCHEMA,
+            "cycle_id": "github:536:1",
+            "ts": now.isoformat(),
+            "admitted": True,
+            "outcome": "ok",
+            "result": "published",
+            "attempted": 2,
+            "published": 2,
+            "supply": {
+                "raw_outbox": 2,
+                "action_counts": {"publish": 2, "monica_review": 0, "reject": 0},
+            },
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            pipeline_dir = root / "pipeline"
+            published = pipeline_dir / "queues/staged/published"
+            published.mkdir(parents=True)
+            for index in range(301):
+                (published / f"z-newer-name-{index:03d}.json").write_text(
+                    json.dumps(
+                        {
+                            "published_at": (now - timedelta(hours=25, minutes=index)).isoformat(),
+                            "created_files": [f"content/posts/stale-{index}.md"],
+                        }
+                    ),
+                    encoding="utf-8",
+                )
+            for index in range(2):
+                (published / f"a-older-name-{index}.json").write_text(
+                    json.dumps(
+                        {
+                            "published_at": (now - timedelta(minutes=index)).isoformat(),
+                            "created_files": [f"content/posts/article-{index}.md"],
+                        }
+                    ),
+                    encoding="utf-8",
+                )
+            outcome = root / "runner/staged-publish-cycle.json"
+            outcome.parent.mkdir()
+            outcome.write_text(json.dumps(cycle), encoding="utf-8")
+            output = root / "static/api/pipeline-status.json"
+            with (
+                patch.dict(sys.modules, {"dashboard": dashboard}),
+                patch.object(dashboard, "SCRIPT_DIR", pipeline_dir),
+                patch.object(dashboard, "REPO_ROOT", root),
+                patch.object(generate_pipeline_status, "PROJECT_DIR", root),
+                patch.object(generate_pipeline_status, "OUT_FILE", output),
+                patch.object(
+                    generate_pipeline_status,
+                    "build_staged_queue_runway",
+                    wraps=lambda **kwargs: {
+                        "recentPublishedPackets": kwargs["recent_published_packets"],
+                        "severity": "ok",
+                        "publishableRemainingCycles": 0,
+                    },
+                ),
+            ):
+                generate_pipeline_status.main(["--cycle-outcome", str(outcome)])
+                publish_payload = json.loads(output.read_text(encoding="utf-8"))
+                generate_pipeline_status.main([])
+                clean_deploy_payload = json.loads(output.read_text(encoding="utf-8"))
+
+        self.assertEqual(publish_payload["stagedQueueRunway"]["recentPublishedPackets"], 2)
+        self.assertEqual(clean_deploy_payload["stagedPublishCycles"]["published"], 0)
+        self.assertEqual(clean_deploy_payload["stagedQueueRunway"]["recentPublishedPackets"], 2)
 
 
 if __name__ == "__main__":
