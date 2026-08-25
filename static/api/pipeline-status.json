@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-25T02:13:11+00:00",
+  "generated_at": "2026-08-25T03:20:42+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 18,
+    "published": 19,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-25T02:09:43.523419+00:00",
+    "last_published_ts": "2026-08-25T03:16:47.107972+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -52,21 +52,21 @@
       11
     ],
     [
-      "venäjän",
+      "siten",
       11
     ],
     [
-      "koskee",
+      "venäjän",
       11
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 4,
+    "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 107,
+    "outboxCount": 109,
     "publishEligibleCount": 0,
     "monicaReviewCount": 54,
-    "rejectCount": 53,
+    "rejectCount": 55,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
@@ -74,7 +74,7 @@
         "thin_distinct_source": 47
       },
       "reject": {
-        "category_disagreement": 50,
+        "category_disagreement": 52,
         "category_unresolved": 3
       }
     },
@@ -86,18 +86,18 @@
         "thin_distinct_source": 47
       },
       "reject": {
-        "article_source_ratio_exceeded": 15,
-        "category_disagreement": 50,
+        "article_source_ratio_exceeded": 17,
+        "category_disagreement": 52,
         "category_unresolved": 3,
         "sensitive_thin_story": 6,
-        "thin_distinct_source": 15
+        "thin_distinct_source": 17
       }
     },
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "rawOutboxRemainingCycles": 36,
+    "rawOutboxRemainingCycles": 37,
     "publishableRemainingCycles": 0,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
