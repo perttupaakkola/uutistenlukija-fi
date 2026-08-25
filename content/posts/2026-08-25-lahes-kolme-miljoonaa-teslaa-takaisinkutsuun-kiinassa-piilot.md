@@ -52,7 +52,6 @@ source_attributions:
     url: "https://bbc.co.uk/news/articles/c4g6ggdg030o?at_medium=RSS&at_campaign=rss"
   - name: "International Business Times Singapore"
     url: "https://ibtimes.sg/china-recalls-nearly-3-million-teslas-over-hidden-door-handles-that-could-trap-passengers-92751"
-briefing: true
 draft: false
 ---
 
