@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-24T17:43:23+00:00",
+  "generated_at": "2026-08-25T01:12:09+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 17,
+    "published": 14,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-24T17:39:33.964064+00:00",
+    "last_published_ts": "2026-08-25T01:08:25.065125+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -45,33 +45,33 @@
     ],
     [
       "aikana",
-      12
-    ],
-    [
-      "vaikka",
       11
-    ],
-    [
-      "kertoo",
-      10
     ],
     [
       "venäjän",
       10
+    ],
+    [
+      "kertoo",
+      9
+    ],
+    [
+      "vaikka",
+      9
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 0,
+    "readyCount": 10,
     "writingCount": 0,
-    "outboxCount": 105,
+    "outboxCount": 106,
     "publishEligibleCount": 0,
-    "monicaReviewCount": 52,
+    "monicaReviewCount": 53,
     "rejectCount": 53,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
         "article_source_ratio_exceeded": 6,
-        "thin_distinct_source": 46
+        "thin_distinct_source": 47
       },
       "reject": {
         "category_disagreement": 50,
@@ -81,9 +81,9 @@
     "preflightReasonBuckets": {
       "publish": {},
       "monica_review": {
-        "article_source_ratio_exceeded": 51,
+        "article_source_ratio_exceeded": 52,
         "sensitive_thin_story": 18,
-        "thin_distinct_source": 46
+        "thin_distinct_source": 47
       },
       "reject": {
         "article_source_ratio_exceeded": 15,
@@ -97,7 +97,7 @@
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "rawOutboxRemainingCycles": 35,
+    "rawOutboxRemainingCycles": 36,
     "publishableRemainingCycles": 0,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
