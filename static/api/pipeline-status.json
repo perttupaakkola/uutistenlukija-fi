@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-25T10:29:33+00:00",
+  "generated_at": "2026-08-25T11:19:32+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 16,
+    "published": 15,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-25T10:26:01.103701+00:00",
+    "last_published_ts": "2026-08-25T11:16:11.609920+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -40,24 +40,24 @@
   },
   "trending": [
     [
-      "aikana",
-      12
-    ],
-    [
-      "siten",
-      11
-    ],
-    [
       "törkeästä",
       11
+    ],
+    [
+      "aikana",
+      11
+    ],
+    [
+      "jälkeen",
+      10
     ],
     [
       "käräjäoikeus",
       9
     ],
     [
-      "prosenttia",
-      9
+      "vuoden",
+      8
     ]
   ],
   "stagedQueueRunway": {
@@ -99,15 +99,16 @@
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 37,
     "publishableRemainingCycles": 0,
+    "recentPublishedPackets": 15,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
-    "severity": "critical",
+    "severity": "ok",
     "reasons": [
       "publisher_enabled",
       "scanner_enabled",
       "worker_enabled",
       "queue_active",
-      "eligible_supply_empty"
+      "eligible_supply_post_drain"
     ]
   }
 }
