@@ -259,5 +259,36 @@
       }
     ],
     "source_url": "https://www.yrittajat.fi/uutiset/purra-on-pk-yrittajien-suosikki-paaministeriksi-perussuomalaiset-haastaa-kokoomusta-puoluekannatuksessa/"
-  }
+  },
+  "quality_gate_rejected_at": "2026-08-25T07:38:00.353664+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260825T072716Z_7073f0f558",
+    "category": "Talous",
+    "selected_source_words": 356,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 7.95,
+    "quality_reasons": [
+      "length under target (258 words)",
+      "missing: image",
+      "unsourced numbers",
+      "keyword stuffing: 'prosenttia' 16× (8.1%)",
+      "unsourced_numbers: 11, 12, 19prosentti, 23prosentti, 36"
+    ],
+    "hard_fails": [
+      "keyword stuffing: 'prosenttia' 16× (8.1%)"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 11, 12, 19prosentti, 23prosentti, 36"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 258,
+    "title": "Yrittäjägallup: Purra suosituin pääministerivaihtoehto, kokoomus yhä suosituin puolue"
+  },
+  "failure": "quality_gate_rejected: length under target (258 words); missing: image; unsourced numbers; keyword stuffing: 'prosenttia' 16× (8.1%); unsourced_numbers: 11, 12, 19prosentti, 23prosentti, 36"
 }
