@@ -52,7 +52,6 @@ source_attributions:
     url: "https://bbc.co.uk/news/articles/c5yednen30go?at_medium=RSS&at_campaign=rss"
   - name: "Ars Technica"
     url: "https://arstechnica.com/health/2026/08/two-unvaccinated-people-die-from-measles-in-pennsylvania-officials-confirm"
-briefing: true
 draft: false
 ---
 
