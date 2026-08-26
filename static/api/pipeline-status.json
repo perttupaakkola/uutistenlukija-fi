@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-26T09:11:48+00:00",
+  "generated_at": "2026-08-26T09:22:17+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 14,
+    "published": 15,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-26T09:08:18.166377+00:00",
+    "last_published_ts": "2026-08-26T09:18:42.635171+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -41,27 +41,27 @@
   "trending": [
     [
       "jälkeen",
-      14
+      15
     ],
     [
       "yhdysvaltain",
       11
     ],
     [
+      "vuoden",
+      10
+    ],
+    [
       "arvioi",
       10
     ],
     [
-      "vuoden",
-      9
-    ],
-    [
-      "eivät",
+      "mukaansa",
       9
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 5,
+    "readyCount": 4,
     "writingCount": 0,
     "outboxCount": 113,
     "publishEligibleCount": 0,
@@ -99,7 +99,7 @@
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 38,
     "publishableRemainingCycles": 0,
-    "recentPublishedPackets": 14,
+    "recentPublishedPackets": 15,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",

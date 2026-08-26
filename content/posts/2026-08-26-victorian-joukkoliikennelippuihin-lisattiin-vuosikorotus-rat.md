@@ -50,7 +50,6 @@ source_domain: "theguardian.com"
 source_attributions:
   - name: "The Guardian World"
     url: "https://theguardian.com/australia-news/2026/aug/26/victoria-suburban-rail-loop-srl-public-transport-fare-levy-increase"
-briefing: true
 draft: false
 ---
 
