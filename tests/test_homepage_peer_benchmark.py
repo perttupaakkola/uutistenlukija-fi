@@ -234,19 +234,36 @@ class HomepagePeerBenchmarkTest(unittest.TestCase):
         self.assertIn("Explicit active live story", body)
         self.assertIn("Katso kaikki päivitykset", body)
 
-    def test_image_free_lead_and_teasers_have_content_driven_css_contract(self) -> None:
+    def test_fallback_only_primary_window_renders_one_lead_fallback(self) -> None:
         lead_grid = re.search(
             r'<section class="([^"]*portal-front-grid[^"]*)"', self.fallback_only
         )
         self.assertIsNotNone(lead_grid)
-        self.assertIn("portal-front-grid--image-free-lead", lead_grid.group(1))
+        self.assertNotIn("portal-front-grid--image-free-lead", lead_grid.group(1))
         lead = re.search(
             r'<article class="([^"]*portal-lead[^"]*)">(.*?)</article>',
             self.fallback_only,
             re.DOTALL,
         )
         self.assertIsNotNone(lead)
-        self.assertNotIn("portal-lead__image", lead.group(2))
+        self.assertIn("portal-lead__image", lead.group(2))
+        self.assertIn("/images/categories/kotimaa.jpg", lead.group(2))
+
+        teasers = re.search(
+            r'<div class="portal-center-list".*?</div>\s*</div>',
+            self.fallback_only,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(teasers)
+        self.assertNotIn("/images/categories/", teasers.group(0))
+
+        river = re.search(
+            r'<section class="portal-river".*?</section>',
+            self.fallback_only,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(river)
+        self.assertNotIn("/images/categories/", river.group(0))
 
         template = INDEX_TEMPLATE.read_text(encoding="utf-8")
         self.assertNotIn("$visualPosts", template)

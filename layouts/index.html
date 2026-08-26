@@ -3,6 +3,14 @@
 {{ $sorted := $posts.ByDate.Reverse }}
 {{ $lead := index $sorted 0 }}
 {{ $seen := slice }}
+{{ $hasApprovedPrimaryImage := false }}
+{{ range first 6 $sorted }}
+  {{ $candidateImage := .Params.image_thumb | default (.Params.image | default "") }}
+  {{ $candidateIsCategoryFallback := or .Params.image_category_fallback (eq .Params.image_source "category_fallback") (strings.Contains $candidateImage "/images/categories/") }}
+  {{ if and $candidateImage (not $candidateIsCategoryFallback) }}
+    {{ $hasApprovedPrimaryImage = true }}
+  {{ end }}
+{{ end }}
 
 <div class="portal-front">
   <h1 class="visually-hidden">Uutistenlukija</h1>
@@ -24,10 +32,12 @@
   {{ $leadImg := $lead.Params.image | default (printf "/images/categories/%s.jpg" ($leadCat | lower)) }}
   {{ $leadThumb := $lead.Params.image_thumb | default $leadImg }}
   {{ $leadIsCategoryFallback := or $lead.Params.image_category_fallback (eq $lead.Params.image_source "category_fallback") (hasPrefix $leadImg "/images/categories/") }}
+  {{ $showLeadCategoryFallback := and $leadIsCategoryFallback (not $hasApprovedPrimaryImage) }}
+  {{ $showLeadImage := or (not $leadIsCategoryFallback) $showLeadCategoryFallback }}
   {{ $seen = $seen | append $lead.Permalink }}
-  <section class="portal-front-grid{{ if $leadIsCategoryFallback }} portal-front-grid--image-free-lead{{ end }}" aria-labelledby="front-lead-title">
+  <section class="portal-front-grid{{ if not $showLeadImage }} portal-front-grid--image-free-lead{{ end }}" aria-labelledby="front-lead-title">
     <article class="portal-lead">
-      {{ if not $leadIsCategoryFallback }}
+      {{ if $showLeadImage }}
       <div class="portal-lead__image">
         {{ partial "card-image.html" (dict "img" $leadImg "thumb" $leadThumb "context" $lead "eager" true "hero" true "permalink" $lead.Permalink "fallback" (printf "/images/categories/%s.jpg" ($leadCat | lower))) }}
       </div>

@@ -158,6 +158,12 @@ function riverCategoryFallbackIssues(imageSources, baseUrl = DEFAULT_URL) {
   return issues;
 }
 
+function homepageArticleImageIssues(imageSources) {
+  return imageSources.some((source) => String(source || "").trim())
+    ? []
+    : ["homepage has zero visible article images"];
+}
+
 function selfTest() {
   const whiteBlack = contrastRatio([255, 255, 255], [0, 0, 0]);
   const same = contrastRatio([10, 10, 10], [10, 10, 10]);
@@ -194,9 +200,13 @@ function selfTest() {
   if (!currentIssues.some((issue) => issue.includes("10/12 cards"))) {
     throw new Error(`Current river fixture did not trigger 10/12 fallback: ${currentIssues}`);
   }
-  const imageFreeIssues = riverCategoryFallbackIssues(Array(12).fill(""));
-  if (imageFreeIssues.length !== 0) {
-    throw new Error(`Image-free river fixture unexpectedly failed: ${imageFreeIssues}`);
+  const imageFreeIssues = homepageArticleImageIssues([]);
+  if (!imageFreeIssues.some((issue) => issue.includes("zero visible article images"))) {
+    throw new Error(`Image-free homepage fixture did not fail: ${imageFreeIssues}`);
+  }
+  const illustratedIssues = homepageArticleImageIssues(["/images/categories/talous.jpg"]);
+  if (illustratedIssues.length !== 0) {
+    throw new Error(`Illustrated homepage fixture unexpectedly failed: ${illustratedIssues}`);
   }
 }
 
@@ -293,6 +303,15 @@ async function inspectPage(page) {
       issues.push(`prominent homepage fallback images in ${teaserFallbacks.length} top teasers`);
     }
 
+    const visibleArticleImageSources = Array.from(document.querySelectorAll(
+      ".portal-lead__image img, .portal-teaser__thumb img, .portal-river .portal-row-card img",
+    ))
+      .filter(visible)
+      .map((img) => imageSource(img));
+    if (visibleArticleImageSources.length === 0) {
+      issues.push("homepage has zero visible article images");
+    }
+
     const failedFallbacks = Array.from(document.querySelectorAll(".portal-lead__image .img-failed, .portal-teaser__thumb .img-failed"))
       .filter(visible)
       .length;
@@ -347,6 +366,7 @@ async function inspectPage(page) {
       requiredSelectors,
       horizontalOverflow,
       brokenImages,
+      visibleArticleImageCount: visibleArticleImageSources.length,
       riverCardCount: riverCardImageSources.length,
       riverCardImageSources,
       overflowingElements,
