@@ -52,7 +52,6 @@ source_attributions:
     url: "https://theguardian.com/world/2026/aug/25/gang-attack-kenscoff-port-au-prince-haiti"
   - name: "Yahoo"
     url: "https://yahoo.com/news/world/articles/more-50-kidnapped-violent-gang-155218957.html"
-briefing: true
 draft: false
 ---
 

@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-26T08:01:45+00:00",
+  "generated_at": "2026-08-26T08:24:23+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 9,
+    "published": 10,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-26T07:58:00.188767+00:00",
+    "last_published_ts": "2026-08-26T08:20:38.312114+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -49,7 +49,7 @@
     ],
     [
       "kertoo",
-      7
+      8
     ],
     [
       "vuoden",
@@ -61,7 +61,7 @@
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 10,
+    "readyCount": 9,
     "writingCount": 0,
     "outboxCount": 112,
     "publishEligibleCount": 0,
@@ -99,7 +99,7 @@
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 38,
     "publishableRemainingCycles": 0,
-    "recentPublishedPackets": 9,
+    "recentPublishedPackets": 10,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
