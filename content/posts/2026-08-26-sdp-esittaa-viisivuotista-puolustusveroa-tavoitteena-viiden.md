@@ -52,7 +52,6 @@ source_attributions:
     url: "https://yle.fi/a/74-20242936/64-3-308295"
   - name: "Suomenmaa"
     url: "https://suomenmaa.fi/uutiset/sdp-esittaa-maaraaikaista-puolustusveroa-viisi-miljardia-kerattaisiin-veronkorotuksilla"
-briefing: true
 draft: false
 ---
 
