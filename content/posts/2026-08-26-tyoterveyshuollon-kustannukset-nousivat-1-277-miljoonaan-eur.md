@@ -48,7 +48,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/tyonantajat-maksoivat-aiempaa-enemman-tyoterveyshuollosta-nain-paljon-oli-yhden-tyontekijan-kustannus"
-briefing: true
 draft: false
 ---
 

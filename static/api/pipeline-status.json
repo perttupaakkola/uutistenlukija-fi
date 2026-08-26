@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-26T13:56:59+00:00",
+  "generated_at": "2026-08-26T14:41:45+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 21,
+    "published": 22,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-26T13:53:13.666611+00:00",
+    "last_published_ts": "2026-08-26T14:37:49.323253+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -44,6 +44,10 @@
       16
     ],
     [
+      "arvioi",
+      16
+    ],
+    [
       "euroa",
       16
     ],
@@ -54,10 +58,6 @@
     [
       "jälkeen",
       16
-    ],
-    [
-      "arvioi",
-      15
     ]
   ],
   "stagedQueueRunway": {
@@ -99,7 +99,7 @@
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 39,
     "publishableRemainingCycles": 0,
-    "recentPublishedPackets": 21,
+    "recentPublishedPackets": 22,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
