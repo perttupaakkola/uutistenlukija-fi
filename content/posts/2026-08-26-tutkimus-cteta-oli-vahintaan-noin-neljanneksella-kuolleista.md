@@ -52,7 +52,6 @@ source_attributions:
     url: "https://bbc.co.uk/sport/american-football/articles/cew9l95kyp0o?at_medium=RSS&at_campaign=rss"
   - name: "Jefferson Public Radio"
     url: "https://ijpr.org/npr-news/2026-08-25/at-least-25-of-former-nfl-players-who-died-between-2016-and-2021-had-cte-study-finds"
-briefing: true
 draft: false
 ---
 
