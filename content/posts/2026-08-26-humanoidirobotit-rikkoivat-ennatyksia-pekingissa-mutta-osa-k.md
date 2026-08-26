@@ -50,7 +50,6 @@ source_attributions:
     url: "https://arstechnica.com/ai/2026/08/world-humanoid-robot-games-show-runners-breaking-records-bursting-into-flames"
   - name: "CBS News"
     url: "https://cbsnews.com/news/china-robot-usain-bolt-sprint-run-record-faster"
-briefing: true
 draft: false
 ---
 
