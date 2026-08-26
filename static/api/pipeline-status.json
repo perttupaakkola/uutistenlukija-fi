@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-26T10:00:52+00:00",
+  "generated_at": "2026-08-26T10:29:34+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -26,7 +26,7 @@
     "published": 18,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-26T09:57:04.366536+00:00",
+    "last_published_ts": "2026-08-26T10:26:43.903997+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -44,29 +44,29 @@
       17
     ],
     [
+      "vuonna",
+      14
+    ],
+    [
       "yhdysvaltain",
       14
     ],
     [
+      "prosenttia",
+      13
+    ],
+    [
       "vuoden",
-      12
-    ],
-    [
-      "arvioi",
-      12
-    ],
-    [
-      "mukaansa",
       12
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 1,
+    "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 114,
+    "outboxCount": 115,
     "publishEligibleCount": 0,
     "monicaReviewCount": 55,
-    "rejectCount": 59,
+    "rejectCount": 60,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
@@ -74,7 +74,7 @@
         "thin_distinct_source": 48
       },
       "reject": {
-        "category_disagreement": 55,
+        "category_disagreement": 56,
         "category_unresolved": 4
       }
     },
@@ -86,18 +86,18 @@
         "thin_distinct_source": 48
       },
       "reject": {
-        "article_source_ratio_exceeded": 17,
-        "category_disagreement": 55,
+        "article_source_ratio_exceeded": 18,
+        "category_disagreement": 56,
         "category_unresolved": 4,
-        "sensitive_thin_story": 6,
-        "thin_distinct_source": 17
+        "sensitive_thin_story": 7,
+        "thin_distinct_source": 18
       }
     },
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "rawOutboxRemainingCycles": 38,
+    "rawOutboxRemainingCycles": 39,
     "publishableRemainingCycles": 0,
     "recentPublishedPackets": 18,
     "worstCaseRemainingCycles": 0,
