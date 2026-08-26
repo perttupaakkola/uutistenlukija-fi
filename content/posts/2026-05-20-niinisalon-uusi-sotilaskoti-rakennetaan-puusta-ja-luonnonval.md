@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Niinisalon uusi sotilaskoti valmistuu vuoden 2027 loppuun mennessä varuskunta-alueen ulkopuolelle. Rakennuksesta tulee poikkeuksellisen suuri uudisraken…"
+description: "Niinisalon uuden sotilaskodin on määrä valmistua vuoden 2027 loppuun mennessä. 1930-luvun sotilaskoti puretaan, kun uusi on otettu käyttöön."
 summary: "Niinisalon uusi sotilaskoti valmistuu vuoden 2027 loppuun mennessä varuskunta-alueen ulkopuolelle. Rakennuksesta tulee poikkeuksellisen suuri uudisrakennus sotilaskotikäyttöön, ja se palvelee jatkossa myös siviilejä."
 summary_bullets:
   - "Niinisalon uuden sotilaskodin rakentaminen alkaa tämän vuoden loppupuolella."
