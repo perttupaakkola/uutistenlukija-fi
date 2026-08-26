@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-26T06:31:08+00:00",
+  "generated_at": "2026-08-26T06:41:37+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 3,
+    "published": 4,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-26T06:28:20.842473+00:00",
+    "last_published_ts": "2026-08-26T06:39:38.341895+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -48,15 +48,15 @@
       6
     ],
     [
+      "haitin",
+      5
+    ],
+    [
       "kertoo",
       4
     ],
     [
       "tutkimus",
-      4
-    ],
-    [
-      "tutkijat",
       4
     ]
   ],
@@ -99,7 +99,7 @@
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 37,
     "publishableRemainingCycles": 0,
-    "recentPublishedPackets": 3,
+    "recentPublishedPackets": 4,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
