@@ -50,7 +50,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/mauri-meronen-joutui-lopettamaan-soittimien-myynnin-eurooppaan-syyna-eun-pakkausasetus-liikevoitosta-menisi-90-prosenttia-kuluihin"
-briefing: true
 draft: false
 ---
 
