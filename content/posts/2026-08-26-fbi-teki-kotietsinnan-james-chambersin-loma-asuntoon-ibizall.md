@@ -50,7 +50,6 @@ source_domain: "theguardian.com"
 source_attributions:
   - name: "The Guardian World"
     url: "https://theguardian.com/us-news/2026/aug/25/fbi-raid-james-fergie-cox-vacation-rental"
-briefing: true
 draft: false
 ---
 
