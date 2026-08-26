@@ -50,7 +50,6 @@ source_domain: "bbc.co.uk"
 source_attributions:
   - name: "BBC World"
     url: "https://bbc.co.uk/news/articles/c87vg9x5d7do?at_medium=RSS&at_campaign=rss"
-briefing: true
 draft: false
 ---
 
