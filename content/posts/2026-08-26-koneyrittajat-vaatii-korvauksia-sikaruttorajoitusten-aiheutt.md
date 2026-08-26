@@ -50,7 +50,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/koneyrittajat-elinkeinovapauteen-puututtu-sikaruttorajoitusten-valittomat-vahingot-korvattava-yrittajille"
-briefing: true
 draft: false
 ---
 
