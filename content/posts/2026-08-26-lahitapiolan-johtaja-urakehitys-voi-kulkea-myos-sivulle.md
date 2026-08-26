@@ -50,7 +50,6 @@ source_domain: "finanssiala.fi"
 source_attributions:
   - name: "Finanssiala"
     url: "https://finanssiala.fi/uutiset/uralla-etenemisen-ei-aina-tarvitse-tarkoittaa-ylennysta-tyossa-viihtyminen-voi-silti-kohentua"
-briefing: true
 draft: false
 ---
 

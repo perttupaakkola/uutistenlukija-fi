@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-26T09:41:53+00:00",
+  "generated_at": "2026-08-26T10:00:52+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 17,
+    "published": 18,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-26T09:39:31.629358+00:00",
+    "last_published_ts": "2026-08-26T09:57:04.366536+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -49,29 +49,29 @@
     ],
     [
       "vuoden",
-      11
+      12
     ],
     [
-      "vuonna",
-      11
+      "arvioi",
+      12
     ],
     [
-      "koskee",
-      10
+      "mukaansa",
+      12
     ]
   ],
   "stagedQueueRunway": {
-    "readyCount": 2,
+    "readyCount": 1,
     "writingCount": 0,
-    "outboxCount": 113,
+    "outboxCount": 114,
     "publishEligibleCount": 0,
-    "monicaReviewCount": 54,
+    "monicaReviewCount": 55,
     "rejectCount": 59,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
         "article_source_ratio_exceeded": 7,
-        "thin_distinct_source": 47
+        "thin_distinct_source": 48
       },
       "reject": {
         "category_disagreement": 55,
@@ -81,9 +81,9 @@
     "preflightReasonBuckets": {
       "publish": {},
       "monica_review": {
-        "article_source_ratio_exceeded": 53,
+        "article_source_ratio_exceeded": 54,
         "sensitive_thin_story": 18,
-        "thin_distinct_source": 47
+        "thin_distinct_source": 48
       },
       "reject": {
         "article_source_ratio_exceeded": 17,
@@ -99,7 +99,7 @@
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 38,
     "publishableRemainingCycles": 0,
-    "recentPublishedPackets": 17,
+    "recentPublishedPackets": 18,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
