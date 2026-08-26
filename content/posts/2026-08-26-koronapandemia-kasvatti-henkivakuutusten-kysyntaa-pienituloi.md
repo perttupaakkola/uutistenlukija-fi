@@ -50,7 +50,6 @@ source_domain: "finanssiala.fi"
 source_attributions:
   - name: "Finanssiala"
     url: "https://finanssiala.fi/uutiset/fan-rahoittama-tutkimus-julkaistiin-kansainvalisessa-tiedelehdessa"
-briefing: true
 draft: false
 ---
 
