@@ -50,7 +50,6 @@ source_domain: "vuohi.fi"
 source_attributions:
   - name: "vuohi"
     url: "https://vuohi.fi/a/9736948"
-briefing: true
 draft: false
 ---
 
