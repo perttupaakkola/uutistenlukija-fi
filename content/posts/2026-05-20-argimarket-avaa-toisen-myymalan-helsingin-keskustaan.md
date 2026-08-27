@@ -1,5 +1,6 @@
 ---
 title: "Argimarket avaa toisen myymälän Helsingin keskustaan"
+seo_title: "Argimarket avaa toisen myymälän Helsinkiin"
 date: 2026-05-20T10:18:05.356153+00:00
 categories:
   - Kotimaa
