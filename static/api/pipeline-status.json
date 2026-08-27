@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-26T18:41:53+00:00",
+  "generated_at": "2026-08-27T06:12:55+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 25,
+    "published": 26,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-26T18:38:07.067931+00:00",
+    "last_published_ts": "2026-08-27T06:08:56.769783+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -40,12 +40,16 @@
   },
   "trending": [
     [
+      "prosenttia",
+      25
+    ],
+    [
       "arvioi",
-      20
+      23
     ],
     [
       "vuoden",
-      19
+      22
     ],
     [
       "jälkeen",
@@ -54,19 +58,15 @@
     [
       "mukaansa",
       18
-    ],
-    [
-      "vuonna",
-      16
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 115,
+    "outboxCount": 116,
     "publishEligibleCount": 0,
     "monicaReviewCount": 55,
-    "rejectCount": 60,
+    "rejectCount": 61,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
       "monica_review": {
@@ -74,7 +74,7 @@
         "thin_distinct_source": 48
       },
       "reject": {
-        "category_disagreement": 56,
+        "category_disagreement": 57,
         "category_unresolved": 4
       }
     },
@@ -86,11 +86,11 @@
         "thin_distinct_source": 48
       },
       "reject": {
-        "article_source_ratio_exceeded": 18,
-        "category_disagreement": 56,
+        "article_source_ratio_exceeded": 19,
+        "category_disagreement": 57,
         "category_unresolved": 4,
         "sensitive_thin_story": 7,
-        "thin_distinct_source": 18
+        "thin_distinct_source": 19
       }
     },
     "publisherEnabled": true,
@@ -99,7 +99,7 @@
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 39,
     "publishableRemainingCycles": 0,
-    "recentPublishedPackets": 25,
+    "recentPublishedPackets": 26,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
