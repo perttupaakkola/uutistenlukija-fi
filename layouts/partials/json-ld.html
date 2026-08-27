@@ -129,9 +129,19 @@
 {{ if .Params.editorial_reviewed }}
 {{ $schema = merge $schema (dict "reviewedBy" $publisherBlock) }}
 {{ end }}
-{{/* isBasedOn: source attribution */}}
-{{ with .Params.source_url }}
-{{ $schema = merge $schema (dict "isBasedOn" (dict "@type" "WebPage" "url" .)) }}
+{{/* isBasedOn: ordered multi-source attribution, with the legacy single source fallback */}}
+{{ with .Params.source_attributions }}
+  {{ $basedOn := slice }}
+  {{ range . }}
+    {{ if and .name .url }}
+      {{ $basedOn = $basedOn | append (dict "@type" "WebPage" "url" .url) }}
+    {{ end }}
+  {{ end }}
+  {{ if $basedOn }}{{ $schema = merge $schema (dict "isBasedOn" $basedOn) }}{{ end }}
+{{ else }}
+  {{ with .Params.source_url }}
+    {{ $schema = merge $schema (dict "isBasedOn" (dict "@type" "WebPage" "url" .)) }}
+  {{ end }}
 {{ end }}
 {{/* Speakable: h1 + .article-summary__body (summary block with Tiivistelmä).
      Only emitted when summary frontmatter exists — avoids marking up pages

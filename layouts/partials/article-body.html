@@ -67,7 +67,7 @@
 </aside>
 {{- end }}
 
-{{- if and (eq .showSource true) (not $page.Params.source_url) (not $page.Params.journalist_note) }}
+{{- if and (eq .showSource true) (not $page.Params.source_url) (not $page.Params.source_attributions) (not $page.Params.journalist_note) }}
 {{- $fallbackSource := $page.Params.source_name | default $page.Params.source_domain -}}
 <div class="article-end-note">
   <p>{{ with $fallbackSource }}Tämä juttu perustuu lähteeseen {{ . }} ja muuhun toimitukselliseen taustoitukseen.{{ else }}Tämä juttu perustuu useisiin uutislähteisiin ja on koottu tiiviiksi kokonaisuudeksi.{{ end }}</p>

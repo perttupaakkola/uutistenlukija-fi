@@ -1,6 +1,6 @@
 ---
-title: "Isänmaan toivot -sarjan Toni Wahlström on jatkanut uraansa teatterissa ja ohjaajana"
-seo_title: "Toni Wahlström nyt: Isänmaan toivot -näyttelijän ura jatkui teatterissa"
+title: "Toni Wahlström näytteli Anttia Isänmaan toivoissa – teatterityöstä tietoa vuosilta 2016 ja 2022"
+seo_title: "Toni Wahlström – Isänmaan toivot ja teatterityö | Uutistenlukija"
 date: 2026-05-08T16:48:01.595344+00:00
 categories:
   - Kotimaa
@@ -9,18 +9,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Isänmaan toivot -sarjasta tuttu Toni Wahlström on ollut viime vuosina harvemmin televisiossa, mutta ura on jatkunut teatterissa ja ohjaajana."
-summary: "Vuosituhannen vaihteen komediasarjasta tuttu Toni Wahlström on nähty viime vuosina harvemmin televisiossa, mutta hän on jatkanut uraansa erityisesti teatterin puolella."
-summary_bullets:
-  - "Toni Wahlström tunnetaan yhä Isänmaan toivot -komediasarjasta."
-  - "Viime vuosina hän on ollut harvemmin esillä televisio- ja elokuvatuotannoissa."
-  - "Teatterissa Wahlström on keskittynyt erityisesti ohjaamiseen."
-key_points:
-  - "Toni Wahlström tunnetaan yhä Isänmaan toivot -komediasarjasta."
-  - "Viime vuosina hän on ollut harvemmin esillä televisio- ja elokuvatuotannoissa."
-  - "Teatterissa Wahlström on keskittynyt erityisesti ohjaamiseen."
-journalist_note: |
-  Artikkeli perustuu annettuun aineistoon. Julkiseen tekstiin ei lisätty lähdelabeleita eikä aineiston ulkopuolisia väitteitä.
+description: "Toni Wahlström näytteli Anttia Isänmaan toivot -sarjassa. Lue hänen ruututöistään sekä vuosien 2016 ja 2022 teatterityöstä lähteineen."
 content_type: "article"
 editorial_reviewed: true
 image_alt: "Kuvituskuva"
@@ -30,39 +19,39 @@ tags:
   - isänmaan toivot
   - televisio
   - teatteri
-  - vivi wahlström
 keywords:
   - "toni wahlström"
   - "isänmaan toivot"
   - "televisio"
   - "teatteri"
-  - "vivi wahlström"
-source_name: "Maaseudun Tulevaisuus"
-source_url: "https://www.maaseuduntulevaisuus.fi/hevoset/2454f036-c6ba-4ada-be38-8a5a2cf93ba0"
-source_domain: "maaseuduntulevaisuus.fi"
+source_attributions:
+  - name: "Ruutu"
+    url: "https://www.ruutu.fi/ohjelmat/isanmaan-toivot"
+  - name: "KAVI/Elonet"
+    url: "https://elonet.finna.fi/Search/Results?filter%5B%5D=author2_id_str_mv%3Akavi.elonet_henkilo_718596&sort=main_date_str+desc&limit=50"
+  - name: "Ilta-Sanomat"
+    url: "https://www.is.fi/viihde/art-2000001167471.html"
+  - name: "Rauhalahti Teatteri"
+    url: "https://www.rauhalahtiteatteri.fi/tuotanto/rockn-rollators-musikaali-2022/"
+  - name: "Tiketti"
+    url: "https://www.tiketti.fi/kaunis-ja-koskettava-rockmusikaalikomedia-rock-n-rollators-news/12617"
 draft: false
 ---
 
-Toni Wahlström muistetaan yhä vuosituhannen vaihteessa nähdystä Isänmaan toivot -komediasarjasta, jossa hän näytteli aluksi yhtä päärooleista Tiina Lymin ja Petteri Summasen rinnalla. Sarjaa tehtiin kolme kautta, ja sen uusinnat ovat pitäneet Wahlströmin esittämän Antti-hahmon monien katsojien mielessä vielä pitkään alkuperäisten esitysvuosien jälkeen.
+Toni Wahlström näytteli Anttia Isänmaan toivot -sarjassa. KAVI/Elonet kokoaa hänen ruututöitään, ja vuosilta 2016 ja 2022 on lähteitä hänen teatteriohjauksistaan. Tämän jutun tiedot koskevat lähteissä nimettyjä vuosia, eivät Wahlströmin nykyistä työtilannetta.
 
-## Tv-rooleja on tullut viime vuosina harvemmin
+## Antti Isänmaan toivot -sarjassa
 
-Isänmaan toivot -sarjan näyttelijöistä Tiina Lymi ja Petteri Summanen ovat pysyneet näkyvästi julkisuudessa, mutta Toni Wahlströmiä ei ole nähty viime vuosina yhtä monessa televisio- tai elokuvatuotannossa. Vuonna 2021 hän oli mukana parissa jaksossa dokumenttidraamassa Pahan väri, ja kolme vuotta aiemmin hän vieraili Kontio & Parmas -komediasarjassa.
+Ruutu-palvelun ohjelmasivun mukaan Toni Wahlström näytteli Isänmaan toivot -sarjassa Anttia.
 
-Vakituisempi televisiorooli Wahlströmillä oli vuosina 2009–2012 sarjassa Karjalan kunnailla. Elokuvissa hänet on nähty muun muassa Hevisaurus-elokuvassa vuonna 2015 sekä Aleksi Mäkelän ohjaamissa elokuvissa Kaappari, Rööperi ja Matti.
+## Ruututyöt KAVI/Elonetin tiedoissa
 
-Wahlström on itse kertonut, että Isänmaan toivot -sarjan retkumainen Antti-rooli on seurannut häntä vuosikausia. Hän kommentoi vuonna 2016, että hahmoon liittyvä kiinnostus herää uudelleen sykleittäin aina silloin, kun sarjan uusinnat pyörähtävät käyntiin. Sarjan on kerrottu palanneen katsottavaksi Nelosella ja Ruudussa tiistaista 25. tammikuuta alkaen.
+Kansallisen audiovisuaalisen instituutin Elonet-hakutulos kokoaa Wahlströmin elokuva- ja televisiotöitä. Kaappari on luettelossa vuoden 2012 teoksena.
 
-## Teatteri ja ohjaaminen ovat korostuneet uralla
+## Teatteriohjauksia koskeva haastattelu vuodelta 2016
 
-Wahlström opiskeli Teatterikorkeakoulussa vuosina 1988–1992 ja on työskennellyt freelancer-näyttelijänä vuodesta 1995. Opintojensa jälkeen hän oli kiinnitettynä Oulun kaupunginteatteriin kolmen vuoden ajan. Tällä vuosikymmenellä hänen työnsä teatterin puolella on painottunut aiempaa enemmän ohjaamiseen.
+Ilta-Sanomien vuonna 2016 julkaisemassa haastattelussa Wahlström kertoi tehneensä teatteriohjauksia haastattelua edeltäneiden kymmenen vuoden aikana. Tieto kuvaa hänen uraansa haastattelun ajankohtana eikä kerro hänen nykyisestä työtilanteestaan.
 
-Hänen ansioluettelostaan löytyy esimerkiksi Rock’n Rollators -musikaali, jonka hän käsikirjoitti yhdessä Karjalan kunnailla -sarjasta tutun Ismo Apellin kanssa. Wahlström myös ohjasi teoksen Rauhalahti Teatteriin vuonna 2022.
+## Rock&#39;n Rollators vuonna 2022
 
-## Näyttelijäntyö jatkuu myös seuraavassa sukupolvessa
-
-Wahlströmin perheessä näyttelijäntyö on jatkunut myös seuraavassa sukupolvessa. Hänen tyttärensä Vivi Wahlström tunnetaan Salatut elämät -sarjasta, jossa hän näytteli Viola Angervuon roolia vuosina 2016–2024.
-
-Vivi Wahlström on ollut esillä myös Nelosen Selviytyjät Suomi -ohjelmassa. Ohjelman yhteydessä hän kertoi lisäksi opinnoistaan. Näin Isänmaan toivot -sarjasta monille tutun Toni Wahlströmin ura kytkeytyy aineiston perusteella sekä pitkään omaan näyttelijä- ja teatteritaustaan että seuraavan sukupolven näkyviin televisiotöihin.
-
-Lue lisää: [Kulttuuriuutiset](/categories/kulttuuri/).
+Rauhalahti Teatterin tuotantosivun mukaan Toni Wahlström ja Ismo Apell kirjoittivat vuoden 2022 Rock&#39;n Rollators -musikaalin. Tiketin tiedotteen mukaan Wahlström myös ohjasi teoksen, jonka ensi-ilta oli 30. kesäkuuta 2022.
