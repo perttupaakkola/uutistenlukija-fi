@@ -12,7 +12,7 @@ name: Staged publish
 # so this can be merged inert and cut over deliberately (see
 # docs/actions-pipeline-migration.md). A push adding the marker runs one article
 # immediately as the supervised canary; manual dispatch always runs.
-# A reviewed workflow repair is the git-only max-1 retry when dispatch access is unavailable.
+# The reviewed workflow repair is a git-only max-1 retry when dispatch access is unavailable.
 
 on:
   push:
