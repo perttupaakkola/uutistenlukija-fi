@@ -3,11 +3,15 @@
 
 from __future__ import annotations
 
+import base64
 import io
+import json
+import os
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from types import SimpleNamespace
+from unittest.mock import Mock, patch
 
 try:
     from . import image_gen
@@ -31,6 +35,80 @@ class _Response(io.BytesIO):
 
 
 class GeneratedImageDownloadTests(unittest.TestCase):
+    def _analyzer_client(self, description: str):
+        response = SimpleNamespace(
+            choices=[SimpleNamespace(message=SimpleNamespace(
+                content=json.dumps({"description": description}),
+            ))],
+        )
+        create = Mock(return_value=response)
+        client = SimpleNamespace(chat=SimpleNamespace(
+            completions=SimpleNamespace(create=create),
+        ))
+        return client, create
+
+    def test_pixel_analyzer_sends_decoded_bytes_without_text_hints(self) -> None:
+        from PIL import Image
+
+        client, create = self._analyzer_client("boat repair workshop")
+        with tempfile.TemporaryDirectory() as temp_dir:
+            image_path = Path(temp_dir) / "misleading-skyscraper-url-name.png"
+            Image.new("RGB", (32, 18), "navy").save(image_path)
+            with patch.dict(os.environ, {"OPENAI_API_KEY": "test-key"}), patch(
+                "openai.OpenAI",
+                return_value=client,
+            ) as openai:
+                semantics = image_gen._analyze_generated_pixels(str(image_path))
+
+        self.assertEqual(semantics, {"description": "boat repair workshop"})
+        openai.assert_called_once_with(api_key="test-key", timeout=30, max_retries=0)
+        content = create.call_args.kwargs["messages"][0]["content"]
+        prompt = content[0]["text"]
+        data_url = content[1]["image_url"]["url"]
+        self.assertNotIn("misleading", prompt)
+        self.assertNotIn("skyscraper", prompt)
+        decoded_payload = base64.b64decode(data_url.split(",", 1)[1])
+        with Image.open(io.BytesIO(decoded_payload)) as decoded:
+            self.assertEqual(decoded.size, (32, 18))
+            self.assertEqual(decoded.mode, "RGB")
+
+    def test_pixel_analyzer_rejects_corrupt_image_before_api_call(self) -> None:
+        client, create = self._analyzer_client("irrelevant")
+        with tempfile.TemporaryDirectory() as temp_dir:
+            image_path = Path(temp_dir) / "corrupt.jpg"
+            image_path.write_bytes(b"not decoded pixels")
+            with patch.dict(os.environ, {"OPENAI_API_KEY": "test-key"}), patch(
+                "openai.OpenAI",
+                return_value=client,
+            ), self.assertRaises(Exception):
+                image_gen._analyze_generated_pixels(str(image_path))
+        create.assert_not_called()
+
+    def test_pixel_analyzer_fails_closed_when_unavailable(self) -> None:
+        from PIL import Image
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            image_path = Path(temp_dir) / "valid.jpg"
+            Image.new("RGB", (32, 18), "navy").save(image_path)
+            with patch.dict(os.environ, {}, clear=True), self.assertRaisesRegex(
+                RuntimeError,
+                "pixel analyzer unavailable",
+            ):
+                image_gen._analyze_generated_pixels(str(image_path))
+
+    def test_pixel_analyzer_rejects_empty_semantic_response(self) -> None:
+        from PIL import Image
+
+        client, _ = self._analyzer_client("")
+        with tempfile.TemporaryDirectory() as temp_dir:
+            image_path = Path(temp_dir) / "valid.jpg"
+            Image.new("RGB", (32, 18), "navy").save(image_path)
+            with patch.dict(os.environ, {"OPENAI_API_KEY": "test-key"}), patch(
+                "openai.OpenAI",
+                return_value=client,
+            ), self.assertRaisesRegex(ValueError, "no description"):
+                image_gen._analyze_generated_pixels(str(image_path))
+
     def test_download_uses_image_headers_and_preserves_png_extension(self) -> None:
         payload = b"\x89PNG\r\n\x1a\n" + b"test-png-payload"
         with tempfile.TemporaryDirectory() as temp_dir, patch.object(

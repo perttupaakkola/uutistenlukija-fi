@@ -7,8 +7,10 @@ Hardening:
 - CIRCUIT_BREAKER_THRESHOLD: 1 consecutive failure trips the breaker
 - MAX_TOTAL_SEC: 300s hard cap on entire batch (overridable via generate_images_for_articles)
 """
-import os
+import base64
+import io
 import json
+import os
 import socket
 import time
 import threading
@@ -38,6 +40,9 @@ POLL_INTERVAL_SEC = 5
 IMAGE_TERMINAL_SCHEMA = "uutistenlukija.image_terminal.v1"
 GENERATION_TERMINAL_FIELD = "image_generation_terminal"
 IMAGE_TERMINAL_REASONS_FIELD = "image_terminal_reasons"
+PIXEL_ANALYZER_MODEL = "gpt-4o-mini"
+PIXEL_ANALYZER_MAX_EDGE = 1024
+PIXEL_ANALYZER_TIMEOUT_SEC = 30
 
 REASON_ACCEPTED = "accepted"
 REASON_STOCK_REJECTION = "stock_rejection"
@@ -56,9 +61,9 @@ class GeneratedImageResult:
     """One non-secret generated-image outcome.
 
     ``raster_properties`` contains objective format/dimension diagnostics.
-    ``pixel_semantics`` is reserved for semantic evidence produced by a trusted
-    analyzer from decoded pixels. Provider-controlled embedded text, requested
-    prompts, and negative constraints must never populate that trusted channel.
+    ``pixel_semantics`` is a legacy compatibility field and is never trusted by
+    the publish gate. The gate invokes its own analyzer over the local decoded
+    raster so callers cannot inject prompt, filename, URL, or metadata hints.
     """
 
     image_path: Optional[str]
@@ -209,9 +214,8 @@ def _inspect_generated_image(filepath: str) -> dict[str, Any]:
     """Validate one raster and return only objective properties.
 
     EXIF and ``Image.info`` text are controlled by the image provider. They are
-    deliberately ignored because they cannot authorize unrelated pixels. Until
-    a trusted pixel analyzer supplies semantic evidence, the downstream visual
-    judge sees no semantic description and therefore remains fail-closed.
+    deliberately ignored because they cannot authorize unrelated pixels. The
+    separate pixel analyzer receives a decoded, metadata-free raster.
     """
     try:
         from PIL import Image
@@ -231,6 +235,63 @@ def _inspect_generated_image(filepath: str) -> dict[str, Any]:
             f"type={exc.__class__.__name__}"
         )
         return {}
+
+
+def _analyze_generated_pixels(filepath: str) -> dict[str, str]:
+    """Describe depicted content from a decoded, metadata-free raster.
+
+    The analyzer receives no filename, URL, article text, prompt, or provider
+    metadata. Any decode, credential, transport, or response failure propagates
+    to the caller, which rejects the candidate.
+    """
+    from PIL import Image
+    from openai import OpenAI
+
+    with Image.open(filepath) as image:
+        image.load()
+        decoded = image.convert("RGB")
+        decoded.thumbnail((PIXEL_ANALYZER_MAX_EDGE, PIXEL_ANALYZER_MAX_EDGE))
+        payload = io.BytesIO()
+        decoded.save(payload, format="JPEG", quality=85)
+
+    api_key = os.environ.get("OPENAI_API_KEY", "")
+    if not api_key:
+        raise RuntimeError("pixel analyzer unavailable")
+
+    encoded = base64.b64encode(payload.getvalue()).decode("ascii")
+    response = OpenAI(
+        api_key=api_key,
+        timeout=PIXEL_ANALYZER_TIMEOUT_SEC,
+        max_retries=0,
+    ).chat.completions.create(
+        model=PIXEL_ANALYZER_MODEL,
+        response_format={"type": "json_object"},
+        temperature=0,
+        max_tokens=100,
+        messages=[{
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": (
+                        "Describe only the visible depicted content of this image. "
+                        "Do not infer a filename, URL, prompt, article, identity, or event. "
+                        "Return JSON with one non-empty string field named description."
+                    ),
+                },
+                {
+                    "type": "image_url",
+                    "image_url": {"url": f"data:image/jpeg;base64,{encoded}"},
+                },
+            ],
+        }],
+    )
+    content = response.choices[0].message.content
+    parsed = json.loads(content or "")
+    description = parsed.get("description") if isinstance(parsed, dict) else None
+    if not isinstance(description, str) or not description.strip():
+        raise ValueError("pixel analyzer returned no description")
+    return {"description": description.strip()[:1000]}
 
 
 def _download_generated_image(image_url: str, output_stem: str) -> str:
@@ -704,11 +765,12 @@ def generate_images_for_articles(articles: List[Dict], max_total_sec: int = MAX_
             consecutive_provider_failures = 0
 
         try:
-            # Only semantic evidence derived from decoded pixels belongs in the
-            # visual judge. Objective raster properties, embedded provider text,
-            # and the requested prompt are not evidence of depicted content.
+            local_image_path = _generated_image_local_path(generated.image_path)
+            if not local_image_path:
+                raise ValueError("generated image path is not locally analyzable")
+            pixel_semantics = _analyze_generated_pixels(local_image_path)
             judge = judge_visual_candidate(
-                dict(generated.pixel_semantics or {}),
+                pixel_semantics,
                 brief=brief,
                 provider="generated",
             )

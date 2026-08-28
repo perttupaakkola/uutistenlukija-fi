@@ -702,12 +702,15 @@ class StagedPublishMetricsTests(unittest.TestCase):
             "/images/articles/veneenkorjaus.jpg",
             prompt,
             terminal,
-            pixel_semantics={
-                "description": "boat repair workshop and small craft restoration",
-            },
         )
 
-        with patch.object(image_gen, "generate_article_image", return_value=result) as generated:
+        with patch.object(image_gen, "generate_article_image", return_value=result) as generated, \
+             patch.object(image_gen, "_generated_image_local_path", return_value="/decoded.jpg"), \
+             patch.object(
+                 image_gen,
+                 "_analyze_generated_pixels",
+                 return_value={"description": "boat repair workshop and small craft restoration"},
+             ):
             image_gen.generate_images_for_articles(articles, max_total_sec=180)
 
         generated.assert_called_once()
@@ -745,13 +748,22 @@ class StagedPublishMetricsTests(unittest.TestCase):
             pixel_semantics={"description": "boat repair workshop"},
         )
 
-        with patch.object(image_gen, "generate_article_image", return_value=result):
+        with patch.object(image_gen, "generate_article_image", return_value=result), \
+             patch.object(image_gen, "_generated_image_local_path", return_value="/decoded.jpg"), \
+             patch.object(
+                 image_gen,
+                 "_analyze_generated_pixels",
+                 return_value={"description": "glass skyscraper office tower"},
+             ):
             image_gen.generate_images_for_articles(articles, max_total_sec=180)
 
-        self.assertEqual(articles[0]["image"], "/images/articles/veneenkorjaus.jpg")
-        self.assertFalse(articles[0]["image_category_fallback"])
+        self.assertNotIn("image", articles[0])
+        self.assertEqual(
+            articles[0][image_gen.GENERATION_TERMINAL_FIELD]["reason"],
+            image_gen.REASON_VISUAL_REJECT,
+        )
 
-    def test_generated_candidate_without_pixel_semantics_fails_closed(self) -> None:
+    def test_generated_candidate_fails_closed_when_pixel_analyzer_is_unavailable(self) -> None:
         articles = [{
             "title": "Akseli Hinkkalan veneenkorjaus toi nuorelle kesätyön",
             "category": "Talous",
@@ -772,7 +784,13 @@ class StagedPublishMetricsTests(unittest.TestCase):
             terminal,
         )
 
-        with patch.object(image_gen, "generate_article_image", return_value=result):
+        with patch.object(image_gen, "generate_article_image", return_value=result), \
+             patch.object(image_gen, "_generated_image_local_path", return_value="/decoded.jpg"), \
+             patch.object(
+                 image_gen,
+                 "_analyze_generated_pixels",
+                 side_effect=RuntimeError("analyzer unavailable"),
+             ):
             image_gen.generate_images_for_articles(articles, max_total_sec=180)
 
         self.assertNotIn("image", articles[0])
