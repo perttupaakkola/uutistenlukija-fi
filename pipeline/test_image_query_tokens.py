@@ -140,6 +140,49 @@ class ImageQueryTokenTests(unittest.TestCase):
 
         self.assertTrue(accepted, reason)
 
+    def test_generated_weather_query_cannot_redefine_economy_article_truth(self) -> None:
+        title = "Suomen talous elpyy, mutta kasvu näkyy kuluttajien arjessa viiveellä"
+        summary = "BKT, vienti, palkat, työllisyys ja kulutus vahvistuvat eri tahdissa."
+        content = (
+            "Talouden kasvu perustuu vientiin ja kotitalouksien ostovoiman asteittaiseen "
+            "elpymiseen. Työllisyys reagoi suhdanteeseen viiveellä."
+        )
+        query = "sunny Finnish weather"
+        candidate = {
+            "id": "CcNCC0Zplwc",
+            "alt": "white and red boat near city under sunny sky",
+            "photo_page": "https://unsplash.com/photos/CcNCC0Zplwc",
+        }
+
+        intent = image_candidate_guard.build_image_intent(
+            title,
+            "Talous",
+            summary=summary,
+            content=content,
+            query=query,
+        )
+        brief = image_candidate_guard.build_visual_brief(
+            title,
+            "Talous",
+            summary=summary,
+            content=content,
+            query=query,
+        )
+        decision = image_candidate_guard.score_image_candidate(
+            candidate,
+            intent=intent,
+            query=query,
+            title=title,
+            summary=summary,
+            content=content,
+            provider="unsplash",
+        )
+
+        self.assertNotIn("weather", intent.must_have)
+        self.assertNotIn("sunny Finnish weather", brief.acceptable_concepts)
+        self.assertFalse(decision.accepted)
+        self.assertIn("no article-grounded concept overlap", "; ".join(decision.reasons))
+
     def test_named_person_story_rejects_generic_lookalike_stock_portrait(self) -> None:
         candidate = {
             "id": "generic-politician",

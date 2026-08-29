@@ -31,7 +31,8 @@ RAIN_TERMS = {
 
 SUN_TERMS = {
     "sun", "sunny", "sunshine", "clear sky", "bright", "summer",
-    "aurinko", "aurinkoinen", "pouta", "kesä",
+    "aurinko", "aurinkoa", "aurinkoinen", "aurinkoisena", "pouta", "poutainen",
+    "poutaisena", "kesä",
 }
 
 HEAT_TERMS = {
@@ -190,7 +191,7 @@ def build_image_intent(
     """Derive conservative visual intent from article fields."""
     key_points = key_points or []
     article_text = " ".join([title or "", summary or "", " ".join(key_points), content or ""])
-    article_tokens = _tokens(article_text, query)
+    article_tokens = _tokens(article_text)
 
     must_have: list[str] = []
     must_not: list[str] = []
@@ -264,7 +265,7 @@ def build_visual_brief(
         content=content,
         query=query,
     )
-    article_tokens = _tokens(title, summary, " ".join(key_points or []), content, query)
+    article_tokens = _tokens(title, summary, " ".join(key_points or []), content)
     concepts: list[str] = []
     forbidden = list(intent.must_not)
 
@@ -347,7 +348,8 @@ def score_image_candidate(
     provider: str = "image",
 ) -> CandidateDecision:
     """Score and vet one stock candidate against the article intent."""
-    article_tokens = _tokens(title, summary, " ".join(key_points or []), content, query)
+    article_tokens = _tokens(title, summary, " ".join(key_points or []), content)
+    grounded_tokens = article_tokens | _tokens(intent.setting, " ".join(intent.must_have))
     query_tokens = _tokens(query)
     candidate_tokens = _tokens(_candidate_text(candidate))
     candidate_id, source_url = _source_id(candidate)
@@ -355,31 +357,40 @@ def score_image_candidate(
     score = 50
     reasons: list[str] = []
 
+    grounded_overlap = grounded_tokens & candidate_tokens
     if not candidate_tokens:
-        score += 5
-        reasons.append("candidate has no semantic metadata")
-    else:
-        shared = (article_tokens | query_tokens) & candidate_tokens
-        if shared:
-            score += min(25, 5 * len(shared))
-            reasons.append(f"metadata matches {', '.join(sorted(shared)[:5])}")
+        return CandidateDecision(
+            provider,
+            candidate_id,
+            source_url,
+            MISMATCH_SCORE,
+            False,
+            ["candidate has no semantic metadata"],
+        )
+    if grounded_overlap:
+        score += min(25, 5 * len(grounded_overlap))
+        reasons.append(f"metadata matches {', '.join(sorted(grounded_overlap)[:5])}")
+        query_overlap = query_tokens & candidate_tokens
+        if query_overlap:
+            score += min(5, len(query_overlap))
+            reasons.append(f"retrieval hint matches {', '.join(sorted(query_overlap)[:5])}")
 
     weather_cues = candidate_tokens & WEATHER_TERMS
-    if weather_cues and (article_tokens | query_tokens) & WEATHER_TERMS:
+    if weather_cues and article_tokens & WEATHER_TERMS:
         score += 10
         reasons.append("weather metadata matches visual intent")
-    if candidate_tokens & SUN_TERMS and ((article_tokens | query_tokens) & SUN_TERMS):
+    if candidate_tokens & SUN_TERMS and (article_tokens & SUN_TERMS):
         score += 10
         reasons.append("sunny metadata matches visual intent")
-    if candidate_tokens & RAIN_TERMS and ((article_tokens | query_tokens) & RAIN_TERMS):
+    if candidate_tokens & RAIN_TERMS and (article_tokens & RAIN_TERMS):
         score += 10
         reasons.append("rain metadata matches visual intent")
 
-    article_is_weather = bool((article_tokens | query_tokens) & WEATHER_TERMS)
+    article_is_weather = bool(article_tokens & WEATHER_TERMS)
     article_allows_winter = bool(article_tokens & WINTER_TERMS)
     article_allows_rain = bool(article_tokens & RAIN_TERMS)
-    article_requests_sun = bool(query_tokens & SUN_TERMS) or bool(article_tokens & SUN_TERMS)
-    article_requests_heat = bool(query_tokens & HEAT_TERMS) or bool(article_tokens & HEAT_TERMS)
+    article_requests_sun = bool(article_tokens & SUN_TERMS)
+    article_requests_heat = bool(article_tokens & HEAT_TERMS)
 
     hard_rejects: list[str] = []
     if article_is_weather and not article_allows_winter and candidate_tokens & WINTER_TERMS:
@@ -387,7 +398,7 @@ def score_image_candidate(
     if article_requests_sun and not article_allows_rain and candidate_tokens & RAIN_TERMS:
         hard_rejects.append("rain/storm metadata contradicts sunny weather story")
     if article_requests_sun and candidate_tokens & WINTER_TERMS:
-        hard_rejects.append("winter metadata contradicts sunny weather query")
+        hard_rejects.append("winter metadata contradicts sunny weather story")
     if article_requests_heat and candidate_tokens & (WINTER_TERMS | COLD_TERMS):
         hard_rejects.append("cold/winter metadata contradicts heat weather story")
     if article_allows_rain and not article_allows_winter and candidate_tokens & WINTER_TERMS:
@@ -406,6 +417,16 @@ def score_image_candidate(
 
     if hard_rejects:
         return CandidateDecision(provider, candidate_id, source_url, MISMATCH_SCORE, False, hard_rejects)
+
+    if not grounded_overlap:
+        return CandidateDecision(
+            provider,
+            candidate_id,
+            source_url,
+            MISMATCH_SCORE,
+            False,
+            ["candidate metadata has no article-grounded concept overlap"],
+        )
 
     if any(term in candidate_tokens for term in {"generic", "abstract", "background"}):
         score -= 8
