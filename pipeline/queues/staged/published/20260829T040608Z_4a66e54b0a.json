@@ -247,6 +247,138 @@
         "url": "https://yle.fi/a/74-20243464?origin=rss"
       }
     ],
-    "source_url": "https://yle.fi/a/74-20243464?origin=rss"
+    "source_url": "https://yle.fi/a/74-20243464?origin=rss",
+    "image": "https://images.unsplash.com/photo-1596717613610-ed5bfcc1e22d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw2fHxzdW5ueSUyMEZpbm5pc2glMjB3ZWF0aGVyfGVufDF8MHx8fDE3ODc5NzY5ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1596717613610-ed5bfcc1e22d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw2fHxzdW5ueSUyMEZpbm5pc2glMjB3ZWF0aGVyfGVufDF8MHx8fDE3ODc5NzY5ODh8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Suomen talous elpyy, mutta kasvu näkyy kuluttajien arjessa viiveellä",
+    "image_credit": "Photo by Vivian K on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/white-and-red-boat-on-sea-near-city-buildings-under-blue-and-white-sunny-cloudy-sky-CcNCC0Zplwc?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_source": "unsplash",
+    "image_source_type": "stock",
+    "image_decision_reason": "metadata matches 0, 4, on, sunny; weather metadata matches visual intent; sunny metadata matches visual intent",
+    "image_visual_intent": {
+      "subject": "suomen talous kuluttajien näkyy kasvu",
+      "setting": "business, finance, offices, documents, charts, or economy",
+      "season_time": "summer or non-winter",
+      "must_have": [
+        "weather",
+        "sunny or bright outdoor weather"
+      ],
+      "must_not": [
+        "snow",
+        "winter",
+        "rainstorm",
+        "generic person portrait or lookalike"
+      ],
+      "stock_ok": true,
+      "generated_ok": true,
+      "safety_mode": "illustration_only",
+      "style_preference": "editorial illustration preferred for unsafe specifics"
+    },
+    "image_visual_brief": {
+      "acceptable_concepts": [
+        "sunny Finnish weather"
+      ],
+      "hard_forbidden_implications": [
+        "snow",
+        "winter",
+        "rainstorm",
+        "generic person portrait or lookalike"
+      ],
+      "intent": {
+        "subject": "suomen talous kuluttajien näkyy kasvu",
+        "setting": "business, finance, offices, documents, charts, or economy",
+        "season_time": "summer or non-winter",
+        "must_have": [
+          "weather",
+          "sunny or bright outdoor weather"
+        ],
+        "must_not": [
+          "snow",
+          "winter",
+          "rainstorm",
+          "generic person portrait or lookalike"
+        ],
+        "stock_ok": true,
+        "generated_ok": true,
+        "safety_mode": "illustration_only",
+        "style_preference": "editorial illustration preferred for unsafe specifics"
+      },
+      "prompt_version": "image-flow-v2-2026-07-03"
+    },
+    "image_concept": "sunny Finnish weather",
+    "image_query": "sunny Finnish weather",
+    "image_candidate_id": "CcNCC0Zplwc",
+    "image_candidate_url": "https://unsplash.com/photos/white-and-red-boat-on-sea-near-city-buildings-under-blue-and-white-sunny-cloudy-sky-CcNCC0Zplwc?utm_source=uutistenlukija&utm_medium=referral",
+    "image_visual_judge_score": 47,
+    "image_accepted_reasons": [
+      "metadata matches 0, 4, on, sunny",
+      "weather metadata matches visual intent",
+      "sunny metadata matches visual intent"
+    ],
+    "image_rejected_reasons": [],
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_decision": {
+      "source": "unsplash",
+      "query": "sunny Finnish weather",
+      "concept": "sunny Finnish weather",
+      "accepted": true,
+      "score": 90,
+      "candidate_id": "CcNCC0Zplwc",
+      "source_url": "https://unsplash.com/photos/white-and-red-boat-on-sea-near-city-buildings-under-blue-and-white-sunny-cloudy-sky-CcNCC0Zplwc?utm_source=uutistenlukija&utm_medium=referral",
+      "visual_judge_score": 47,
+      "visual_judge_reasons": [
+        "visual metadata supports concept 'sunny Finnish weather'",
+        "visual metadata supports required cue 'sunny or bright outdoor weather'"
+      ],
+      "reasons": [
+        "metadata matches 0, 4, on, sunny",
+        "weather metadata matches visual intent",
+        "sunny metadata matches visual intent"
+      ],
+      "prompt_version": "image-flow-v2-2026-07-03"
+    },
+    "image_quality_score": 90,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-08-29T04:16:30.067157+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1596717613610-ed5bfcc1e22d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw2fHxzdW5ueSUyMEZpbm5pc2glMjB3ZWF0aGVyfGVufDF8MHx8fDE3ODc5NzY5ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1596717613610-ed5bfcc1e22d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw2fHxzdW5ueSUyMEZpbm5pc2glMjB3ZWF0aGVyfGVufDF8MHx8fDE3ODc5NzY5ODh8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false,
+    "image_source": "unsplash",
+    "image_source_type": "stock",
+    "image_decision_reason": "metadata matches 0, 4, on, sunny; weather metadata matches visual intent; sunny metadata matches visual intent",
+    "image_concept": "sunny Finnish weather",
+    "image_query": "sunny Finnish weather",
+    "image_candidate_id": "CcNCC0Zplwc",
+    "image_candidate_url": "https://unsplash.com/photos/white-and-red-boat-on-sea-near-city-buildings-under-blue-and-white-sunny-cloudy-sky-CcNCC0Zplwc?utm_source=uutistenlukija&utm_medium=referral",
+    "image_visual_judge_score": 47,
+    "image_accepted_reasons": [
+      "metadata matches 0, 4, on, sunny",
+      "weather metadata matches visual intent",
+      "sunny metadata matches visual intent"
+    ],
+    "image_rejected_reasons": [],
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_generation_terminal": null,
+    "image_terminal_reasons": null
+  },
+  "published_at": "2026-08-29T04:20:20.176846+00:00",
+  "created_files": [
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-08-29-suomen-talous-elpyy-mutta-kasvu-nakyy-kuluttajien-arjessa-vi.md"
+  ],
+  "category_trace": {
+    "packet_id": "20260829T040608Z_4a66e54b0a",
+    "decisions": {
+      "guard": "Talous",
+      "writer": "Talous",
+      "publisher": "Talous"
+    },
+    "disagreement": false
   }
 }
