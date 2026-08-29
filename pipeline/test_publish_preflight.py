@@ -256,7 +256,7 @@ class PublishPreflightTests(unittest.TestCase):
     def test_bayeux_packet_is_immutable_and_publish_eligible(self) -> None:
         path = (
             Path(__file__).resolve().parent
-            / "queues/staged/outbox/20260815T134311Z_3e59e0f4f4.json"
+            / "fixtures/publish_preflight/bayeux-publish-eligible.json"
         )
         before = path.read_bytes()
         self.assertEqual(

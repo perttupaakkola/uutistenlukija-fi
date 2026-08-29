@@ -202,6 +202,60 @@ class StagedPublishMetricsTests(unittest.TestCase):
                 self.assertIn(expected_reason, diagnostic)
                 self.assertNotIn(private_detail, diagnostic)
 
+    def test_cmd_scan_backfills_valid_second_after_invalid_top_candidate(self) -> None:
+        articles = [
+            {
+                "title": "Invalid thin Talous top", "link": "https://example.test/top",
+                "category_hint": "Talous", "source": "Fixture",
+                "research": "[Lähde: Fixture]\n" + "thin " * 37 + "\n[Lähde: Other]\n" + "thin " * 38,
+                "research_source": "multi", "story_confidence": 0.85,
+                "_selected_source_evidence": {"source_words": 75, "source_blocks": 2},
+            },
+            {"title": "Valid second", "link": "https://example.test/second", "category_hint": "Kotimaa"},
+        ]
+        invalid = {
+            "packet_id": "invalid-top",
+            "clean_source_blocks": [{"source_url": "https://example.test/top", "text": "thin"}],
+            "selected_source_provenance_error": "",
+            "source_selection_outcome": "usable_source_packet",
+        }
+        valid = {
+            "packet_id": "valid-second",
+            "clean_source_blocks": [{
+                "source": "Fixture",
+                "source_url": "https://example.test/second",
+                "text": " ".join(f"source{index}" for index in range(200)),
+            }],
+            "selected_source_provenance_error": "",
+            "source_selection_outcome": "usable_source_packet",
+        }
+        args = Namespace(
+            dry_run=False, max_ready_age_hours=24, max_ready_backlog=150,
+            dedup_window=48, cooldown_hours=48, max_research_candidates=8,
+            min_source_words=200, max_packets=1,
+        )
+        with patch.object(staged_publish, "scan_all_feeds", return_value=articles), \
+             patch.object(staged_publish, "poll_firehose", return_value=[]), \
+             patch.object(staged_publish, "filter_new_articles", side_effect=lambda rows: rows), \
+             patch.object(staged_publish, "check_published_duplicates", side_effect=lambda rows, window_hours: rows), \
+             patch.object(staged_publish, "dedup_within_batch", side_effect=lambda rows: rows), \
+             patch.object(staged_publish, "talous_interim_priority_state", return_value={"active": False, "share": None, "talous_count": 0, "total": 0, "reason": "fixture"}), \
+             patch.object(staged_publish, "select_research_candidates", side_effect=lambda rows, max_candidates, **kwargs: rows), \
+             patch.object(staged_publish, "enrich_with_research", side_effect=lambda rows: rows) as enrich_mock, \
+             patch.object(staged_publish, "annotate_selected_source_evidence", side_effect=lambda rows: rows), \
+             patch.object(staged_publish, "build_story_packet", side_effect=[invalid, valid]), \
+             patch.object(staged_publish, "select_scan_enqueue_candidates", side_effect=lambda rows, max_packets: rows[:max_packets]) as select_mock:
+            self.assertEqual(staged_publish.cmd_scan(args), 0)
+            self.assertEqual(staged_publish.cmd_scan(args), 0)
+        self.assertEqual([path.name for path in (self.root / "ready").glob("*.json")], ["valid-second.json"])
+        self.assertEqual(select_mock.call_args.args[0], [articles[1]])
+        self.assertEqual(enrich_mock.call_count, 1)
+        invalid_digest = staged_publish.stable_digest(articles[0])
+        cache = staged_publish.load_talous_source_floor_cooldown(hours=48)
+        self.assertEqual(list(cache), [invalid_digest])
+        self.assertEqual(cache[invalid_digest]["reason"], "source_floor_not_met")
+        self.assertFalse(any(list((self.root / box).glob("*.json")) for box in ("writing", "outbox", "failed")))
+
     def test_failure_reason_normalization(self) -> None:
         self.assertEqual(staged_publish.normalize_failure_reason("content too short: 233 words"), "content_too_short")
         self.assertEqual(staged_publish.normalize_failure_reason("Lähdeaineisto on liian niukka"), "insufficient_confidence")
@@ -2174,6 +2228,8 @@ class StagedPublishMetricsTests(unittest.TestCase):
                         "story_confidence": 0.9,
                         "category": stale_category,
                         "category_hint": stale_category,
+                        "selected_source_provenance_error": "",
+                        "source_selection_outcome": "usable_source_packet",
                         "clean_source_blocks": [
                             {
                                 "source": "Testi 1",

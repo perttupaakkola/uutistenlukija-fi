@@ -78,6 +78,14 @@ from monica_writer import (  # noqa: E402
 )
 from quality_gate import score_article, run_gate as run_quality_gate  # noqa: E402
 from publish_preflight import evaluate_publish_preflight  # noqa: E402
+from source_attribution import normalize_source_usage  # noqa: E402
+from source_sufficiency import (  # noqa: E402
+    MAX_ARTICLE_SOURCE_RATIO,
+    MIN_DISTINCT_SOURCE_WORDS,
+    article_source_ratio,
+    deduplicated_selected_source_words,
+    selected_source_admission_errors,
+)
 from scripts.category_distribution import count_articles  # noqa: E402
 
 
@@ -1273,11 +1281,28 @@ def cmd_scan(args: argparse.Namespace) -> int:
     log_scan_stage("research_candidates", articles)
     articles = enrich_with_research(articles)
     log_scan_research_buckets("research_result", articles)
-    articles = [a for a in articles if total_source_words(a) >= args.min_source_words]
-    log_scan_stage("min_source_words_pass", articles)
     articles = annotate_selected_source_evidence(articles)
     pre_enqueue_articles = list(articles)
-    articles = select_scan_enqueue_candidates(articles, args.max_packets)
+    admitted_packets: dict[int, dict] = {}
+    valid_articles = []
+    for article in articles:
+        digest = stable_digest(article)
+        packet = build_story_packet(article)
+        admission_errors = list(
+            selected_source_admission_errors(
+                packet,
+                minimum_words=max(MIN_DISTINCT_SOURCE_WORDS, args.min_source_words),
+            )
+        )
+        if admission_errors:
+            log(
+                "scan: skipped invalid packet "
+                f"digest={digest} reasons={','.join(admission_errors)}"
+            )
+            continue
+        valid_articles.append(article)
+        admitted_packets[id(article)] = packet
+    articles = select_scan_enqueue_candidates(valid_articles, args.max_packets)
     log_scan_stage("queued_candidates", articles)
     log_talous_enqueue_drop(pre_enqueue_articles, articles)
     if not args.dry_run:
@@ -1295,18 +1320,7 @@ def cmd_scan(args: argparse.Namespace) -> int:
     queued = 0
     for article in articles:
         digest = stable_digest(article)
-        packet = build_story_packet(article)
-        admission_errors = []
-        if packet.get("selected_source_provenance_error"):
-            admission_errors.append("selected_source_provenance_error")
-        if packet.get("source_selection_outcome") != "usable_source_packet":
-            admission_errors.append("source_selection_outcome_not_usable")
-        if admission_errors:
-            log(
-                "scan: skipped invalid packet "
-                f"digest={digest} reasons={','.join(admission_errors)}"
-            )
-            continue
+        packet = admitted_packets[id(article)]
         record = {
             "schema": "uutistenlukija.staged_packet.v1",
             "created_at": datetime.now(timezone.utc).isoformat(),
@@ -1466,6 +1480,34 @@ def quarantine_weak_talous_ready(path: Path, data: dict, guard: dict) -> None:
     path.unlink(missing_ok=True)
 
 
+def worker_source_ratio_issues(packet: dict, payload: dict) -> list[str]:
+    """Apply the publish-preflight source ratio before any outbox write."""
+    rows, usage_issues = normalize_source_usage(
+        packet, payload.get("source_usage"), require_complete=True
+    )
+    if usage_issues:
+        return []
+    unused = {
+        row["source_url"]
+        for row in rows
+        if row["used"] is False and row["dependent_claims"] == []
+    }
+    source_words = deduplicated_selected_source_words(
+        packet.get("clean_source_blocks") or [], unused
+    )
+    issues = []
+    if source_words < MIN_DISTINCT_SOURCE_WORDS:
+        issues.append(
+            f"used-source distinct words below {MIN_DISTINCT_SOURCE_WORDS}: {source_words}"
+        )
+    ratio = article_source_ratio(
+        payload.get("content"), packet.get("clean_source_blocks") or [], unused
+    )
+    if ratio > MAX_ARTICLE_SOURCE_RATIO:
+        issues.append(f"article/source ratio exceeds {MAX_ARTICLE_SOURCE_RATIO}: {ratio:.3f}")
+    return issues
+
+
 def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
     writing = STAGED_ROOT / "writing" / path.name
     try:
@@ -1479,6 +1521,21 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
         return ("failed", guard["reason"])
     packet = data.get("packet") or data
     original = data.get("original_article") or reconstruct_original(packet)
+    admission_errors = list(selected_source_admission_errors(packet))
+    if admission_errors:
+        reason = "selected_source_admission_failed: " + ",".join(admission_errors)
+        data.update({
+            "failed_at": datetime.now(timezone.utc).isoformat(),
+            "failure": reason,
+            "writer_failure_feedback": {
+                "fail_closed": True,
+                "stage": "pre_monica_source_admission",
+                "reasons": admission_errors,
+            },
+        })
+        atomic_write_json(STAGED_ROOT / "failed" / writing.name, data)
+        writing.unlink(missing_ok=True)
+        return ("failed", reason)
     raw = ""
     try:
         raw = _run_monica(_build_prompt(packet))
@@ -1490,7 +1547,7 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
             writing.unlink(missing_ok=True)
             return ("failed", reason)
         repair_metadata = None
-        issues = _basic_payload_issues(payload, packet)
+        issues = _basic_payload_issues(payload, packet) + worker_source_ratio_issues(packet, payload)
         if issues:
             log(f"monica-worker: repair pass {'; '.join(issues)}")
             repaired_raw = _run_monica(_build_repair_prompt(packet, payload, issues))
@@ -1503,7 +1560,7 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
                 atomic_write_json(STAGED_ROOT / "failed" / writing.name, data)
                 writing.unlink(missing_ok=True)
                 return ("failed", reason)
-            issues = _basic_payload_issues(payload, packet)
+            issues = _basic_payload_issues(payload, packet) + worker_source_ratio_issues(packet, payload)
             if _is_source_backed_near_miss(packet, payload, issues):
                 near_miss_payload = payload
                 near_miss_issues = list(issues) + ["source_backed_writer_shortfall: final expansion required"]
@@ -1512,7 +1569,7 @@ def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
                 repaired_payload = _extract_json_object(repaired_raw)
                 raw = repaired_raw
                 payload = repaired_payload
-                issues = _basic_payload_issues(payload, packet)
+                issues = _basic_payload_issues(payload, packet) + worker_source_ratio_issues(packet, payload)
                 repair_metadata = _near_miss_repair_metadata(packet, near_miss_payload, payload, issues)
         if issues:
             feedback = failed_writer_feedback(data, payload, issues, raw)
@@ -2640,7 +2697,7 @@ def main() -> int:
     scan = sub.add_parser("scan")
     scan.add_argument("--max-packets", type=int, default=3)
     scan.add_argument("--max-research-candidates", type=int, default=12)
-    scan.add_argument("--min-source-words", type=int, default=50)
+    scan.add_argument("--min-source-words", type=int, default=MIN_DISTINCT_SOURCE_WORDS)
     scan.add_argument("--dedup-window", type=int, default=48)
     scan.add_argument("--cooldown-hours", type=int, default=24)
     scan.add_argument("--max-ready-backlog", type=int, default=120, help="skip scan when ready queue is already this large; 0 disables")

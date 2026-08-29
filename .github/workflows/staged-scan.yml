@@ -129,7 +129,7 @@ jobs:
       - name: Scan one staged packet
         if: steps.gate.outputs.enabled == 'true'
         run: |
-          timeout --signal=TERM --kill-after=15s 240s python3 pipeline/staged_publish.py scan --max-packets 1 --max-research-candidates 8 --dedup-window 48 --max-ready-backlog 150 --max-ready-age-hours 24
+          timeout --signal=TERM --kill-after=15s 240s python3 pipeline/staged_publish.py scan --max-packets 1 --max-research-candidates 8 --min-source-words 200 --dedup-window 48 --max-ready-backlog 150 --max-ready-age-hours 24
 
       - name: Verify queue delta and push
         if: steps.gate.outputs.enabled == 'true'
@@ -149,7 +149,8 @@ jobs:
           before_files = before["files"]
           event_name = os.environ["GITHUB_EVENT_NAME"]
           event_action = os.environ.get("STAGED_SCAN_EVENT_ACTION", "")
-          supervised_canary = event_name == "workflow_dispatch" or (
+          manual_canary = event_name == "workflow_dispatch"
+          recovery_canary = (
               event_name == "repository_dispatch"
               and event_action == "staged_scan_recovery"
           )
@@ -183,7 +184,7 @@ jobs:
                   f"scan added {len(ready_added_paths)} ready packets; "
                   "max-packets contract is 1"
               )
-          if supervised_canary:
+          if manual_canary:
               if (
                   len(ready_added_paths) != 1
                   or other_added_paths
@@ -192,6 +193,16 @@ jobs:
               ):
                   raise SystemExit(
                       "supervised canary expected exactly one new ready packet "
+                      "and no other staged queue changes; "
+                      f"ready_added_paths={ready_added_paths} "
+                      f"other_added_paths={other_added_paths} "
+                      f"removed_paths={removed_paths} "
+                      f"modified_paths={modified_paths}"
+                  )
+          elif recovery_canary:
+              if other_added_paths or removed_paths or modified_paths:
+                  raise SystemExit(
+                      "recovery scan expected zero or one new ready packet "
                       "and no other staged queue changes; "
                       f"ready_added_paths={ready_added_paths} "
                       f"other_added_paths={other_added_paths} "

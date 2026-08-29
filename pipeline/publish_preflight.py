@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from difflib import SequenceMatcher
 import re
 from typing import Any, Iterable
 
@@ -17,6 +16,12 @@ try:
         project_public_source_attributions,
         source_identity_key,
     )
+    from .source_sufficiency import (
+        MAX_ARTICLE_SOURCE_RATIO,
+        MIN_DISTINCT_SOURCE_WORDS,
+        deduplicated_selected_source_words,
+        word_count,
+    )
 except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
     from description_projection import project_public_description
     from publisher import CANONICAL_CATEGORIES, effective_category
@@ -26,11 +31,13 @@ except ImportError:  # pragma: no cover - direct script/test execution from pipe
         project_public_source_attributions,
         source_identity_key,
     )
+    from source_sufficiency import (
+        MAX_ARTICLE_SOURCE_RATIO,
+        MIN_DISTINCT_SOURCE_WORDS,
+        deduplicated_selected_source_words,
+        word_count,
+    )
 
-
-MIN_DISTINCT_SOURCE_WORDS = 200
-MAX_ARTICLE_SOURCE_RATIO = 1.35
-DUPLICATE_BLOCK_COVERAGE = 0.80
 
 _WORD_RE = re.compile(r"[\wäöåÄÖÅ]+(?:[-’'][\wäöåÄÖÅ]+)*", re.UNICODE)
 _URL_RE = re.compile(r"https?://[^\s<>()\[\]{}\"']+", re.IGNORECASE)
@@ -147,45 +154,8 @@ def _block_word_tokens(block: dict[str, Any]) -> tuple[str, ...]:
     return tuple(token.casefold() for token in _WORD_RE.findall(str(block.get("text") or "")))
 
 
-def _contains_tokens(container: tuple[str, ...], candidate: tuple[str, ...]) -> bool:
-    if not candidate or len(candidate) > len(container):
-        return False
-    width = len(candidate)
-    return any(container[index : index + width] == candidate for index in range(len(container) - width + 1))
-
-
-def _is_duplicate_block(container: tuple[str, ...], candidate: tuple[str, ...]) -> bool:
-    if _contains_tokens(container, candidate):
-        return True
-    if not candidate or len(candidate) > len(container):
-        return False
-    # Feed extraction can retain one complete block plus slightly wrapped
-    # halves. Treat strong contiguous coverage as duplicated evidence so CTA or
-    # wrapper words cannot inflate the source floor.
-    longest = SequenceMatcher(a=container, b=candidate, autojunk=False).find_longest_match().size
-    return longest / len(candidate) >= DUPLICATE_BLOCK_COVERAGE
-
-
-def _deduplicated_source_words(blocks: list[dict[str, Any]], unused_urls: set[str]) -> int:
-    candidates: list[tuple[str, ...]] = []
-    for block in blocks:
-        block_url = _normalize_url(block.get("source_url"))
-        if block_url and block_url in unused_urls:
-            continue
-        tokens = _block_word_tokens(block)
-        if tokens:
-            candidates.append(tokens)
-    candidates.sort(key=lambda tokens: (-len(tokens), tokens))
-    retained: list[tuple[str, ...]] = []
-    for candidate in candidates:
-        if any(_is_duplicate_block(existing, candidate) for existing in retained):
-            continue
-        retained.append(candidate)
-    return sum(len(tokens) for tokens in retained)
-
-
 def _article_word_count(article: dict[str, Any]) -> int:
-    return len(_WORD_RE.findall(str(article.get("content") or "")))
+    return word_count(article.get("content"))
 
 
 def _is_sensitive(record: dict[str, Any]) -> bool:
@@ -281,7 +251,7 @@ def evaluate_publish_preflight(record: dict[str, Any]) -> PublishPreflightResult
         and not _normalize_url(block.get("source_url"))
         for block in blocks
     )
-    distinct_source_words = _deduplicated_source_words(blocks, unused_urls)
+    distinct_source_words = deduplicated_selected_source_words(blocks, unused_urls)
     article_words = _article_word_count(article)
     ratio = article_words / distinct_source_words if distinct_source_words else float("inf")
     sensitive = _is_sensitive(record)

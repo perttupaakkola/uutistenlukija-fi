@@ -279,6 +279,7 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
             "python3 pipeline/staged_publish.py scan "
             "--max-packets 1 "
             "--max-research-candidates 8 "
+            "--min-source-words 200 "
             "--dedup-window 48 "
             "--max-ready-backlog 150 "
             "--max-ready-age-hours 24"
@@ -305,7 +306,7 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
 
     def test_supervised_canary_requires_exactly_one_valid_ready_packet(self) -> None:
         for expected in (
-            'event_name == "workflow_dispatch"',
+            'manual_canary = event_name == "workflow_dispatch"',
             'event_name == "repository_dispatch"',
             'event_action == "staged_scan_recovery"',
             "supervised canary expected exactly one new ready packet",
@@ -329,16 +330,34 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
         self.assertIn('"added_paths": [', result.stdout)
         self.assertIn("ready/valid_packet.json", result.stdout)
 
-    def test_recovery_dispatch_reuses_supervised_canary_queue_contract(self) -> None:
+    def test_recovery_dispatch_accepts_zero_or_one_ready_addition(self) -> None:
+        for label, mutation in (
+            ("zero", lambda root: None),
+            ("one", lambda root: self._write_valid_ready_packet(root)),
+        ):
+            with self.subTest(label=label):
+                result = self._run_queue_delta_fixture(
+                    lambda root: (root / "pipeline/queues/staged/outbox").mkdir(parents=True),
+                    mutation,
+                    event_name="repository_dispatch",
+                    event_action="staged_scan_recovery",
+                )
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertIn('"event_action": "staged_scan_recovery"', result.stdout)
+
+    def test_recovery_dispatch_rejects_two_ready_additions(self) -> None:
+        def add_two(root: Path) -> None:
+            self._write_valid_ready_packet(root, "one")
+            self._write_valid_ready_packet(root, "two")
+
         result = self._run_queue_delta_fixture(
-            lambda root: (root / "pipeline/queues/staged/outbox").mkdir(parents=True),
-            lambda root: self._write_valid_ready_packet(root),
+            lambda root: None,
+            add_two,
             event_name="repository_dispatch",
             event_action="staged_scan_recovery",
         )
-        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        self.assertIn('"event_action": "staged_scan_recovery"', result.stdout)
-        self.assertIn("ready/valid_packet.json", result.stdout)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("max-packets contract is 1", result.stdout + result.stderr)
 
     def test_recovery_queue_contract_rejects_unknown_dispatch_type(self) -> None:
         result = self._run_queue_delta_fixture(
