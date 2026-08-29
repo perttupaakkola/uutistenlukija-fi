@@ -2,15 +2,10 @@
 {{ $posts := where .Site.RegularPages "Section" "posts" }}
 {{ $sorted := $posts.ByDate.Reverse }}
 {{ $lead := index $sorted 0 }}
+{{ $primaryWindow := first 6 $sorted }}
 {{ $seen := slice }}
+{{ $statusStoryPermalinks := slice }}
 {{ $hasApprovedPrimaryImage := false }}
-{{ range first 6 $sorted }}
-  {{ $candidateImage := .Params.image_thumb | default (.Params.image | default "") }}
-  {{ $candidateIsCategoryFallback := or .Params.image_category_fallback (eq .Params.image_source "category_fallback") (strings.Contains $candidateImage "/images/categories/") }}
-  {{ if and $candidateImage (not $candidateIsCategoryFallback) }}
-    {{ $hasApprovedPrimaryImage = true }}
-  {{ end }}
-{{ end }}
 
 <div class="portal-front">
   <h1 class="visually-hidden">Uutistenlukija</h1>
@@ -18,6 +13,7 @@
   {{ if gt (len $sorted) 1 }}
   {{ $statusStory := index $sorted 1 }}
   {{ $isActiveLive := or $statusStory.Params.live $statusStory.Params.is_live }}
+  {{ $statusStoryPermalinks = $statusStoryPermalinks | append $statusStory.Permalink }}
   {{ $seen = $seen | append $statusStory.Permalink }}
   <a class="portal-livebar{{ if not $isActiveLive }} portal-livebar--latest{{ end }}" href="{{ $statusStory.RelPermalink }}">
     {{ if $isActiveLive }}<span class="portal-livebar__badge">Live</span>{{ end }}
@@ -25,6 +21,14 @@
     <strong>{{ $statusStory.Title }}</strong>
     <span class="portal-livebar__all">{{ if $isActiveLive }}Katso kaikki päivitykset{{ else }}Lue juttu{{ end }}</span>
   </a>
+  {{ end }}
+
+  {{ range $primaryWindow }}
+    {{ $candidateImage := .Params.image_thumb | default (.Params.image | default "") }}
+    {{ $candidateIsCategoryFallback := or .Params.image_category_fallback (eq .Params.image_source "category_fallback") (strings.Contains $candidateImage "/images/categories/") }}
+    {{ if and (not (in $seen .Permalink)) $candidateImage (not $candidateIsCategoryFallback) }}
+      {{ $hasApprovedPrimaryImage = true }}
+    {{ end }}
   {{ end }}
 
   {{ if $lead }}
@@ -156,7 +160,8 @@
     </div>
     <div class="portal-topic-strip__grid">
       {{ range $cat := $topicCats }}
-      {{ $catPosts := where $sorted ".Params.categories" "intersect" (slice $cat) }}
+      {{ $topicPool := where $sorted "Permalink" "not in" $statusStoryPermalinks }}
+      {{ $catPosts := where $topicPool ".Params.categories" "intersect" (slice $cat) }}
       {{ with index $catPosts 0 }}
       {{ $seen = $seen | append .Permalink }}
       <article class="portal-topic-card">

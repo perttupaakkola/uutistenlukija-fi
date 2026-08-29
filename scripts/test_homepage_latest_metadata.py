@@ -24,6 +24,87 @@ def compact_css(path: Path) -> str:
 
 
 class HomepageLatestMetadataTest(unittest.TestCase):
+    def test_status_story_image_does_not_suppress_only_lead_fallback(self) -> None:
+        fixtures = (
+            ("Fallback lead", "2020-01-31T12:00:00+00:00", "Talous", True),
+            (
+                "Visual status story – hyväksytty kuva vain tilannejutulla",
+                "2020-01-30T12:00:00+00:00",
+                "Kotimaa",
+                False,
+            ),
+            ("Fallback story three", "2020-01-29T12:00:00+00:00", "Ulkomaat", True),
+            ("Fallback story four", "2020-01-28T12:00:00+00:00", "Tiede", True),
+            ("Fallback story five", "2020-01-27T12:00:00+00:00", "Kulttuuri", True),
+            ("Fallback story six", "2020-01-26T12:00:00+00:00", "Urheilu", True),
+        )
+        with tempfile.TemporaryDirectory(prefix="homepage-status-image-") as tmp:
+            root = Path(tmp)
+            posts_dir = root / "content" / "posts"
+            public_dir = root / "public"
+            posts_dir.mkdir(parents=True)
+            for rank, (title, published, category, fallback) in enumerate(fixtures, 1):
+                image = (
+                    f"/images/categories/{category.lower()}.jpg"
+                    if fallback
+                    else "/images/articles/status-story.jpg"
+                )
+                image_source = "category_fallback" if fallback else "generated"
+                (posts_dir / f"rank-{rank:02d}.md").write_text(
+                    "---\n"
+                    f'title: "{title}"\n'
+                    f"date: {published}\n"
+                    f'categories: ["{category}"]\n'
+                    f'image: "{image}"\n'
+                    f'image_source: "{image_source}"\n'
+                    f"image_category_fallback: {str(fallback).lower()}\n"
+                    'source_name: "Fixture source"\n'
+                    "draft: false\n"
+                    "---\n\n"
+                    f"{title} fixture content.\n",
+                    encoding="utf-8",
+                )
+
+            completed = subprocess.run(
+                (
+                    HUGO_BIN,
+                    "--source",
+                    str(ROOT),
+                    "--contentDir",
+                    str(root / "content"),
+                    "--destination",
+                    str(public_dir),
+                    "--cleanDestinationDir",
+                    "--quiet",
+                ),
+                check=False,
+                capture_output=True,
+                text=True,
+                timeout=90,
+            )
+            self.assertEqual(
+                completed.returncode,
+                0,
+                f"Hugo fixture render failed:\n{completed.stdout}\n{completed.stderr}",
+            )
+            rendered = (public_dir / "index.html").read_text(encoding="utf-8")
+
+        article_images = re.findall(
+            r'<img[^>]+src="([^"]+)"[^>]*>', rendered
+        )
+        category_fallbacks = [
+            src for src in article_images if "/images/categories/" in src
+        ]
+        self.assertEqual(category_fallbacks, ["/images/categories/talous.jpg"])
+        self.assertNotIn("/images/articles/status-story.jpg", article_images)
+        self.assertEqual(rendered.count('href="/posts/rank-02/"'), 1)
+        self.assertEqual(
+            rendered.count(
+                "Visual status story – hyväksytty kuva vain tilannejutulla"
+            ),
+            1,
+        )
+
     def test_lead_uses_newest_eligible_story_before_older_visual_story(self) -> None:
         fixtures = (
             ("Newest fallback lead", "2020-01-31T12:00:00+00:00", "Talous", True),
