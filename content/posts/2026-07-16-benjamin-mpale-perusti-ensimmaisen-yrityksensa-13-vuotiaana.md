@@ -1,5 +1,6 @@
 ---
 title: "Benjamin Mpale perusti ensimmäisen yrityksensä 13-vuotiaana – nyt hän kannustaa muita nuoria yrittämään"
+seo_title: "Benjamin Mpale perusti yrityksen 13-vuotiaana"
 date: 2026-07-16T09:18:38.392145+00:00
 categories:
   - Talous
@@ -8,7 +9,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Forssaan 12-vuotiaana muuttanut Benjamin Mpale opetteli suomea määrätietoisesti, ryhtyi nopeasti yrittäjäksi ja haluaa esimerkillään rohkaista muita nuo…"
+description: "Benjamin Mpale perusti ensimmäisen yrityksensä 13-vuotiaana. Hän kannustaa muita nuoria yrittäjyyteen."
 summary: "Forssaan 12-vuotiaana muuttanut Benjamin Mpale opetteli suomea määrätietoisesti, ryhtyi nopeasti yrittäjäksi ja haluaa esimerkillään rohkaista muita nuoria tavoittelemaan päämääriään."
 summary_bullets:
   - "Benjamin Mpale muutti Kongon demokraattisesta tasavallasta Forssaan 12-vuotiaana kesällä 2021."
