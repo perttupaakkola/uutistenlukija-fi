@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-30T07:12:08+00:00",
+  "generated_at": "2026-08-30T17:10:08+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 4,
+    "published": 3,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-30T07:08:22.361625+00:00",
+    "last_published_ts": "2026-08-30T17:06:12.941503+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -41,23 +41,23 @@
   "trending": [
     [
       "prosenttia",
-      10
-    ],
-    [
-      "kertoo",
-      7
-    ],
-    [
-      "kanssa",
-      7
+      11
     ],
     [
       "sodan",
       6
     ],
     [
-      "päättäjän",
+      "kertoo",
       6
+    ],
+    [
+      "hallitus",
+      6
+    ],
+    [
+      "aiemmin",
+      5
     ]
   ],
   "stagedQueueRunway": {
@@ -83,7 +83,7 @@
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 0,
     "publishableRemainingCycles": 0,
-    "recentPublishedPackets": 4,
+    "recentPublishedPackets": 3,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
