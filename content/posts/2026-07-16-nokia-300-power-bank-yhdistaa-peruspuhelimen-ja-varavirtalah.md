@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "HMD Globalin uusi Nokia 300 Power Bank voi ladata muita laitteita viiden watin teholla. Peruspuhelimessa on 3 700 milliampeeritunnin akku ja poikkeuksel…"
+description: "Nokia 300 Power Bank toimii myös varavirtalähteenä. Sen 3 700 milliampeeritunnin akusta voi ladata muita laitteita viiden watin teholla."
 summary: "HMD Globalin uusi Nokia 300 Power Bank voi ladata muita laitteita viiden watin teholla. Peruspuhelimessa on 3 700 milliampeeritunnin akku ja poikkeuksellisen tehokkaaksi mainostettu taskulamppu."
 summary_bullets:
   - "3 700 milliampeeritunnin akkua voi käyttää muiden laitteiden lataamiseen viiden watin teholla."
