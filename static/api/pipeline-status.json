@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-29T15:50:36+00:00",
+  "generated_at": "2026-08-30T06:00:33+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 4,
+    "published": 3,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-29T15:46:43.666712+00:00",
+    "last_published_ts": "2026-08-30T05:56:28.957091+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -40,66 +40,50 @@
   },
   "trending": [
     [
-      "kanssa",
-      8
-    ],
-    [
       "prosenttia",
+      10
+    ],
+    [
+      "kanssa",
       7
     ],
     [
-      "warsh",
-      7
+      "sodan",
+      6
     ],
     [
       "päättäjän",
       6
     ],
     [
-      "fedin",
-      6
+      "kertoo",
+      4
     ]
   ],
   "stagedQueueRunway": {
     "readyCount": 0,
     "writingCount": 0,
-    "outboxCount": 116,
+    "outboxCount": 0,
     "publishEligibleCount": 0,
-    "monicaReviewCount": 55,
-    "rejectCount": 61,
+    "monicaReviewCount": 0,
+    "rejectCount": 0,
     "preflightPrimaryReasonBuckets": {
       "publish": {},
-      "monica_review": {
-        "article_source_ratio_exceeded": 7,
-        "thin_distinct_source": 48
-      },
-      "reject": {
-        "category_disagreement": 57,
-        "category_unresolved": 4
-      }
+      "monica_review": {},
+      "reject": {}
     },
     "preflightReasonBuckets": {
       "publish": {},
-      "monica_review": {
-        "article_source_ratio_exceeded": 54,
-        "sensitive_thin_story": 18,
-        "thin_distinct_source": 48
-      },
-      "reject": {
-        "article_source_ratio_exceeded": 19,
-        "category_disagreement": 57,
-        "category_unresolved": 4,
-        "sensitive_thin_story": 7,
-        "thin_distinct_source": 19
-      }
+      "monica_review": {},
+      "reject": {}
     },
     "publisherEnabled": true,
     "scannerEnabled": true,
     "workerEnabled": true,
     "maxPacketsPerCycle": 3,
-    "rawOutboxRemainingCycles": 39,
+    "rawOutboxRemainingCycles": 0,
     "publishableRemainingCycles": 0,
-    "recentPublishedPackets": 4,
+    "recentPublishedPackets": 3,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
@@ -107,8 +91,7 @@
       "publisher_enabled",
       "scanner_enabled",
       "worker_enabled",
-      "queue_active",
-      "eligible_supply_post_drain"
+      "queue_idle"
     ]
   }
 }
