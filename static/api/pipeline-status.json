@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-08-30T17:10:08+00:00",
+  "generated_at": "2026-08-30T19:50:38+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 3,
+    "published": 4,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-08-30T17:06:12.941503+00:00",
+    "last_published_ts": "2026-08-30T19:46:48.001775+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -44,20 +44,20 @@
       11
     ],
     [
+      "pajari",
+      8
+    ],
+    [
+      "kolme",
+      6
+    ],
+    [
       "sodan",
       6
     ],
     [
       "kertoo",
       6
-    ],
-    [
-      "hallitus",
-      6
-    ],
-    [
-      "aiemmin",
-      5
     ]
   ],
   "stagedQueueRunway": {
@@ -83,7 +83,7 @@
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 0,
     "publishableRemainingCycles": 0,
-    "recentPublishedPackets": 3,
+    "recentPublishedPackets": 4,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
