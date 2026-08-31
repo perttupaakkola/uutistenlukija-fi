@@ -5,19 +5,22 @@ import os
 from pathlib import Path
 import tempfile
 import unittest
+from unittest import mock
 
-from scripts.staged_scan_watchdog import decide_and_dispatch
+from scripts.staged_scan_watchdog import decide_and_dispatch, decide_combined, main
 
 
 NOW = datetime(2026, 8, 29, 16, 47, tzinfo=timezone.utc)
 
 
 class FakeAPI:
-    def __init__(self, *, lane="scan", age=60, active_event="", marker=True, ready=0, writing=0, outbox=0, status=204, workflow_state="active", fail_at="", move_main=False):
+    def __init__(self, *, lane="scan", age=60, active_event="", marker=True, ready=0, writing=0, outbox=0, status=204, workflow_state="active", fail_at="", move_main=False, terminal_push_status="completed", push_age=None):
         self.lane, self.age, self.active_event, self.marker = lane, age, active_event, marker
         self.counts = {"ready": ready, "writing": writing, "outbox": outbox}
         self.status, self.workflow_state, self.fail_at, self.move_main = status, workflow_state, fail_at, move_main
         self.dispatches, self.branch_calls = [], 0
+        self.terminal_push_status = terminal_push_status
+        self.push_age = age if push_age is None else push_age
 
     def _fail(self, name):
         if self.fail_at == name: raise ValueError(name)
@@ -29,7 +32,9 @@ class FakeAPI:
     def workflow(self, repository, workflow): self._fail("workflow"); return {"id": 123, "state": self.workflow_state}
     def runs(self, repository, workflow, event):
         self._fail("runs")
-        return [{"status": "queued" if event == self.active_event else "completed", "created_at": (NOW - timedelta(minutes=self.age)).isoformat()}]
+        status = "queued" if event == self.active_event else (self.terminal_push_status if event == "push" else "completed")
+        age = self.push_age if event == "push" else self.age
+        return [{"status": status, "created_at": (NOW - timedelta(minutes=age)).isoformat()}]
     def tree(self, repository, sha):
         self._fail("tree")
         marker = f"pipeline/actions-{self.lane}.enabled"
@@ -83,6 +88,52 @@ class WatchdogTests(unittest.TestCase):
             self.assertEqual(self.decide(FakeAPI(lane="publish"), root / "zero")["reason"], "publish_outbox_empty")
             self.assertEqual(self.decide(FakeAPI(lane="publish", writing=1, outbox=1), root / "writing")["reason"], "publish_writing_active")
             self.assertEqual(self.decide(FakeAPI(lane="publish", outbox=1), root / "one")["dispatch_count"], 1)
+
+    def test_terminal_push_does_not_suppress_publish_but_active_push_does(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            for status in ("completed", "failure"):
+                api = FakeAPI(lane="publish", age=60, push_age=1, outbox=1, terminal_push_status=status)
+                self.assertEqual(self.decide(api, root / status)["dispatch_count"], 1)
+            active = self.decide(
+                FakeAPI(lane="publish", age=60, push_age=1, outbox=1, active_event="push"),
+                root / "active",
+            )
+            self.assertEqual(active["reason"], "matching_run_active")
+            self.assertEqual(active["dispatch_count"], 0)
+            empty = self.decide(
+                FakeAPI(lane="publish", age=60, push_age=1, outbox=0), root / "empty"
+            )
+            self.assertEqual(empty["reason"], "publish_outbox_empty")
+
+    def test_combined_is_publish_first_then_scan(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            publish = FakeAPI(lane="publish", outbox=1)
+            result = decide_combined(
+                publish, repository="owner/repo", state_path=root / "publish.json", now=NOW
+            )
+            self.assertEqual(result["lane"], "publish")
+            self.assertEqual(result["dispatch_count"], 1)
+
+            scan = FakeAPI(lane="scan")
+            result = decide_combined(
+                scan, repository="owner/repo", state_path=root / "scan.json", now=NOW
+            )
+            self.assertEqual(result["lane"], "scan")
+            self.assertEqual(result["dispatch_count"], 1)
+
+    def test_cli_without_lane_uses_combined_path(self):
+        result = {
+            "decision": "no_dispatch", "lane": "scan", "due_boundary": "",
+            "expected_sha": "", "queue_counts": {"ready": 0, "writing": 0, "outbox": 0},
+            "dispatch_count": 0, "reason": "fresh",
+        }
+        with mock.patch("scripts.staged_scan_watchdog.GitHubAPI"), mock.patch(
+            "scripts.staged_scan_watchdog.decide_combined", return_value=result
+        ) as combined, mock.patch("sys.argv", ["watchdog", "--state", "/tmp/watchdog-test-state"]):
+            self.assertEqual(main(), 0)
+            combined.assert_called_once()
 
     def test_same_window_sha_change_dedupes_but_next_window_runs(self):
         with tempfile.TemporaryDirectory() as tmp:

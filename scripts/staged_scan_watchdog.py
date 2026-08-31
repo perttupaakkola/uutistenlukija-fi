@@ -119,11 +119,24 @@ def decide_and_dispatch(api: Any, *, repository: str, lane: str, state_path: Pat
             return _result(lane, boundary, sha, counts, "no_dispatch", "workflow_inactive")
         workflow_id = str(workflow["id"])
         runs = []
+        runs_by_event: dict[str, list[dict[str, Any]]] = {}
         for event in ("schedule", "repository_dispatch", "workflow_dispatch", "push"):
-            runs.extend(api.runs(repository, workflow_id, event))
+            event_runs = api.runs(repository, workflow_id, event)
+            runs_by_event[event] = event_runs
+            runs.extend(event_runs)
         if any(str(run.get("status")) in ACTIVE_STATUSES for run in runs):
             return _result(lane, boundary, sha, counts, "no_dispatch", "matching_run_active")
-        if any(_utc(str(run["created_at"])) >= boundary_dt for run in runs):
+        freshness_runs = runs
+        if lane == "publish":
+            # A terminal push is not evidence that it consumed the current outbox
+            # transition. Active pushes still suppress through the check above.
+            freshness_runs = [
+                run
+                for event, event_runs in runs_by_event.items()
+                if event != "push"
+                for run in event_runs
+            ]
+        if any(_utc(str(run["created_at"])) >= boundary_dt for run in freshness_runs):
             return _result(lane, boundary, sha, counts, "no_dispatch", "fresh")
 
         tree = api.tree(repository, sha)
@@ -174,6 +187,18 @@ def decide_and_dispatch(api: Any, *, repository: str, lane: str, state_path: Pat
             return _result(lane, boundary, sha, counts, "dispatched", "stale_dispatched", 1)
     except Exception as exc:
         return _result(lane, boundary, sha, counts, "fail_closed", f"fail_closed:{exc.__class__.__name__}")
+
+
+def decide_combined(api: Any, *, repository: str, state_path: Path, now: datetime | None = None) -> dict[str, Any]:
+    """Evaluate publish first, then scan when publish did not dispatch or fail closed."""
+    publish = decide_and_dispatch(
+        api, repository=repository, lane="publish", state_path=state_path, now=now
+    )
+    if publish["decision"] in {"dispatched", "fail_closed"}:
+        return publish
+    return decide_and_dispatch(
+        api, repository=repository, lane="scan", state_path=state_path, now=now
+    )
 
 
 class GitHubAPI:
@@ -228,13 +253,21 @@ class GitHubAPI:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repository", default=os.environ.get("GITHUB_REPOSITORY", ""))
-    parser.add_argument("--lane", choices=sorted(LANES), required=True)
+    parser.add_argument("--lane", choices=sorted(LANES))
     parser.add_argument("--state", type=Path, required=True)
     args = parser.parse_args()
     try:
-        result = decide_and_dispatch(GitHubAPI(os.environ.get("GITHUB_TOKEN", "")), repository=args.repository, lane=args.lane, state_path=args.state)
+        api = GitHubAPI(os.environ.get("GITHUB_TOKEN", ""))
+        if args.lane:
+            result = decide_and_dispatch(
+                api, repository=args.repository, lane=args.lane, state_path=args.state
+            )
+        else:
+            result = decide_combined(
+                api, repository=args.repository, state_path=args.state
+            )
     except Exception as exc:
-        result = _result(args.lane, "", "", {"ready": 0, "writing": 0, "outbox": 0}, "fail_closed", f"fail_closed:{exc.__class__.__name__}")
+        result = _result(args.lane or "combined", "", "", {"ready": 0, "writing": 0, "outbox": 0}, "fail_closed", f"fail_closed:{exc.__class__.__name__}")
     print(json.dumps(result, sort_keys=True))
     return 1 if result["decision"] == "fail_closed" else 0
 
