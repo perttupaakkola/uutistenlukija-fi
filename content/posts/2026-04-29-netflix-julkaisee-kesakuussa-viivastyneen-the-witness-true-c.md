@@ -8,7 +8,7 @@ author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
 author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
 author_image: ""
-description: "Netflix on julkistanut trailerin true crime -sarjalleen The Witness, jonka ensi-ilta on 4. kesäkuuta. Tositapahtumiin perustuva draamasarja kertoo Rache…"
+description: "Netflixin The Witness -sarja oli määrä julkaista 4. kesäkuuta. Sarja kertoo Rachel Nickellin murhan seurauksista pojan ja isän näkökulmasta."
 summary: "Netflix on julkistanut trailerin true crime -sarjalleen The Witness, jonka ensi-ilta on 4. kesäkuuta. Tositapahtumiin perustuva draamasarja kertoo Rachel Nickellin murhan seurauksista pojan ja isän näkökulmasta, ja samalla alustalle saapuu myös aiheesta tehty dokumentti."
 summary_bullets:
   - "Netflix julkaisee The Witness -true crime -sarjan 4. kesäkuuta."
