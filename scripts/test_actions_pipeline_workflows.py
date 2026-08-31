@@ -69,8 +69,8 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
         setup_before,
         mutate_after,
         *,
-        event_name: str = "workflow_dispatch",
-        event_action: str = "",
+        event_name: str = "repository_dispatch",
+        event_action: str = "staged_scan_recovery",
     ) -> subprocess.CompletedProcess:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -110,7 +110,6 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
         for expected in (
             "name: Staged scan",
             'cron: "1,16,31,46 * * * *"',
-            "workflow_dispatch: {}",
             "permissions:\n  contents: write",
             "group: staged-scan",
             "cancel-in-progress: false",
@@ -149,7 +148,6 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
     def test_manual_canary_cannot_enable_scheduled_scans(self) -> None:
         gate = self._run_script("Gate automated runs on cutover marker")
         cases = (
-            ("workflow_dispatch", False, "enabled=true\nmode=canary\n"),
             ("schedule", False, "enabled=false\nmode=disabled\n"),
             ("schedule", True, "enabled=true\nmode=cutover\n"),
         )
@@ -215,8 +213,12 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
                     {
                         "GITHUB_EVENT_NAME": "repository_dispatch",
                         "GITHUB_REF": event_ref,
+                        "GITHUB_SHA": "a" * 40,
                         "GITHUB_OUTPUT": str(output),
                         "STAGED_SCAN_EVENT_ACTION": event_action,
+                        "RECOVERY_LANE": "scan",
+                        "RECOVERY_DUE_BOUNDARY": "2026-08-29T16:16:00+00:00",
+                        "RECOVERY_EXPECTED_MAIN_SHA": "a" * 40,
                     }
                 )
                 result = subprocess.run(
@@ -234,7 +236,7 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
             if expected_error:
                 self.assertIn(expected_error, result.stdout + result.stderr)
 
-    def test_manual_canary_rejects_non_main_ref_before_source_setup_or_scan(self) -> None:
+    def test_unsupported_manual_event_rejects_before_source_setup_or_scan(self) -> None:
         gate = self._run_script("Gate automated runs on cutover marker")
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -243,7 +245,7 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
             env.update(
                 {
                     "GITHUB_EVENT_NAME": "workflow_dispatch",
-                    "GITHUB_REF": "refs/heads/unreviewed-canary",
+                    "GITHUB_REF": "refs/heads/main",
                     "GITHUB_OUTPUT": str(output),
                 }
             )
@@ -259,7 +261,7 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
 
         self.assertNotEqual(result.returncode, 0)
         self.assertIn(
-            "manual canary must run from refs/heads/main",
+            "Unsupported staged scan event: workflow_dispatch",
             result.stdout + result.stderr,
         )
         self.assertFalse(output_exists)
@@ -306,7 +308,7 @@ class StagedScanWorkflowContractTests(unittest.TestCase):
 
     def test_supervised_canary_requires_exactly_one_valid_ready_packet(self) -> None:
         for expected in (
-            'manual_canary = event_name == "workflow_dispatch"',
+            "manual_canary = False",
             'event_name == "repository_dispatch"',
             'event_action == "staged_scan_recovery"',
             "supervised canary expected exactly one new ready packet",
@@ -910,6 +912,7 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
             env.update(
                 {
                     "GITHUB_EVENT_NAME": event_name,
+                    "GITHUB_REF": "refs/heads/main",
                     "GITHUB_SHA": github_sha,
                     "GITHUB_OUTPUT": str(output),
                     "TEST_CHECKOUT_HEAD": checkout_head,
@@ -917,6 +920,10 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
                     "TEST_REMOTE_OTHER": "other-main",
                     "TEST_FETCH_MODE": fetch_mode,
                     "TEST_RESOLVE_MODE": resolve_mode,
+                    "STAGED_PUBLISH_EVENT_ACTION": "staged_publish_recovery",
+                    "RECOVERY_LANE": "publish",
+                    "RECOVERY_DUE_BOUNDARY": "2026-08-29T16:13:00+00:00",
+                    "RECOVERY_EXPECTED_MAIN_SHA": github_sha,
                 }
             )
             result = subprocess.run(
@@ -1058,6 +1065,7 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
             env.update(
                 {
                     "GITHUB_EVENT_NAME": "schedule",
+                    "GITHUB_REF": "refs/heads/main",
                     "GITHUB_SHA": base,
                     "GITHUB_OUTPUT": str(output),
                     "RUNNER_TEMP": str(runner_temp),
@@ -1127,34 +1135,11 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
         trigger_block = self.workflow[: self.workflow.index("\npermissions:")]
         self.assertIn('"pipeline/queues/staged/outbox/**"', trigger_block)
         self.assertNotIn('"pipeline/queues/staged/ready/**"', trigger_block)
-        self.assertIn(
-            '"$GITHUB_EVENT_NAME" != "workflow_dispatch" ] && '
-            "[ ! -f pipeline/actions-publish.enabled ]",
-            self.workflow,
-        )
-
-        script = (
-            'python3() { printf "PUBLISHER_CALLED %s\\n" "$*"; }\n'
-            + self._publish_run_script()
-        )
-        env = os.environ.copy()
-        env.update(
-            {
-                "GITHUB_EVENT_NAME": "push",
-                "MAX_ARTICLES": "3",
-                "RUNNER_TEMP": "/tmp/test-runner",
-            }
-        )
-        result = subprocess.run(
-            ["bash", "-c", script],
-            cwd=ROOT,
-            env=env,
-            capture_output=True,
-            text=True,
-            check=False,
-        )
-        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        self.assertIn("--max-articles 1 --git-push", result.stdout)
+        self.assertIn("if [ ! -f pipeline/actions-publish.enabled ]", self.workflow)
+        script = self._publish_run_script()
+        self.assertIn('"$GITHUB_EVENT_NAME" = "push"', script)
+        self.assertIn('"$GITHUB_EVENT_NAME" = "repository_dispatch"', script)
+        self.assertIn("MAX_ARTICLES=1", script)
 
     def test_disabled_schedule_skips_without_remote_admission(self) -> None:
         result, output = self._run_gate(
@@ -1167,11 +1152,11 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
         self.assertNotIn("Unable to fetch", result.stdout + result.stderr)
 
     def test_exact_current_main_is_admitted_for_every_supported_event(self) -> None:
-        for event_name in ("push", "schedule", "workflow_dispatch"):
+        for event_name in ("push", "schedule", "repository_dispatch"):
             with self.subTest(event=event_name):
                 result, output = self._run_gate(
                     event_name=event_name,
-                    marker_present=event_name != "workflow_dispatch",
+                    marker_present=True,
                 )
                 self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
                 self.assertEqual(output, "enabled=true\n")
@@ -1184,7 +1169,7 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
         self.assertLess(gate, setup)
         self.assertLess(setup, publish)
 
-    def test_superseded_push_skips_but_stale_manual_fails(self) -> None:
+    def test_superseded_push_skips_but_stale_recovery_fails(self) -> None:
         result, output = self._run_gate(
             event_name="push",
             remote_main="newer-main",
@@ -1194,13 +1179,13 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
         self.assertIn("Superseded staged publish skipped", result.stdout)
 
         result, output = self._run_gate(
-            event_name="workflow_dispatch",
-            marker_present=False,
+            event_name="repository_dispatch",
+            marker_present=True,
             remote_main="newer-main",
         )
         self.assertNotEqual(result.returncode, 0)
         self.assertEqual(output, "")
-        self.assertIn("Stale manual staged publish rejected", result.stdout)
+        self.assertIn("Stale recovery staged publish rejected", result.stdout)
 
     def test_stale_schedule_readmits_one_queue_json_motion(self) -> None:
         result, output, state = self._run_real_schedule_gate(
@@ -1316,56 +1301,13 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
                 self.assertEqual(output, "")
                 self.assertIn(expected, result.stdout + result.stderr)
 
-    def test_runway_cap_is_enforced_for_manual_actions_runs(self) -> None:
-        self.assertIn('default: "3"', self.workflow)
-        self.assertIn(
-            '        type: choice\n'
-            '        options:\n'
-            '          - "1"\n'
-            '          - "2"\n'
-            '          - "3"',
-            self.workflow,
-        )
-        self.assertIn("github.event.inputs.max_articles || '3'", self.workflow)
-
-        script = (
-            'python3() { printf "PUBLISHER_CALLED %s\\n" "$*"; }\n'
-            + self._publish_run_script()
-        )
-        env = os.environ.copy()
-        env["GITHUB_EVENT_NAME"] = "workflow_dispatch"
-        env["RUNNER_TEMP"] = "/tmp/test-runner"
-        for max_articles in ("4", "24"):
-            with self.subTest(max_articles=max_articles):
-                env["MAX_ARTICLES"] = max_articles
-                result = subprocess.run(
-                    ["bash", "-c", script],
-                    cwd=ROOT,
-                    env=env,
-                    capture_output=True,
-                    text=True,
-                    check=False,
-                )
-                self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
-                self.assertIn("max_articles must be 1, 2, or 3", result.stdout)
-                self.assertNotIn("PUBLISHER_CALLED", result.stdout)
-
-        for max_articles in ("1", "2", "3"):
-            with self.subTest(max_articles=max_articles):
-                env["MAX_ARTICLES"] = max_articles
-                result = subprocess.run(
-                    ["bash", "-c", script],
-                    cwd=ROOT,
-                    env=env,
-                    capture_output=True,
-                    text=True,
-                    check=False,
-                )
-                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-                self.assertIn(
-                    f"--max-articles {max_articles} --git-push",
-                    result.stdout,
-                )
+    def test_recovery_has_no_workflow_dispatch_dependency_and_is_max_one(self) -> None:
+        trigger = self.workflow[: self.workflow.index("\npermissions:")]
+        self.assertNotIn("workflow_dispatch", trigger)
+        self.assertIn("staged_publish_recovery", trigger)
+        script = self._publish_run_script()
+        self.assertIn("MAX_ARTICLES=1", script)
+        self.assertIn('--max-articles "$MAX_ARTICLES"', script)
 
 
 if __name__ == "__main__":

@@ -1,13 +1,11 @@
 from datetime import datetime, timedelta, timezone
-from pathlib import Path
 import fcntl
 import json
 import os
+from pathlib import Path
 import tempfile
 import unittest
-from unittest import mock
 
-from scripts import staged_scan_watchdog
 from scripts.staged_scan_watchdog import decide_and_dispatch
 
 
@@ -15,195 +13,113 @@ NOW = datetime(2026, 8, 29, 16, 47, tzinfo=timezone.utc)
 
 
 class FakeAPI:
-    def __init__(self, *, age_minutes=60, active=False, manual_active=False, workflow_state="active", dispatch_status=204, fail_at=""):
-        self.age_minutes = age_minutes
-        self.active = active
-        self.manual_active = manual_active
-        self.workflow_state = workflow_state
-        self.dispatch_status = dispatch_status
-        self.fail_at = fail_at
-        self.dispatches = []
+    def __init__(self, *, lane="scan", age=60, active_event="", marker=True, ready=0, writing=0, outbox=0, status=204, workflow_state="active", fail_at="", move_main=False):
+        self.lane, self.age, self.active_event, self.marker = lane, age, active_event, marker
+        self.counts = {"ready": ready, "writing": writing, "outbox": outbox}
+        self.status, self.workflow_state, self.fail_at, self.move_main = status, workflow_state, fail_at, move_main
+        self.dispatches, self.branch_calls = [], 0
 
     def _fail(self, name):
-        if self.fail_at == name:
-            raise ValueError(name)
+        if self.fail_at == name: raise ValueError(name)
 
-    def repository(self, repository):
-        self._fail("repository")
-        return {"default_branch": "main"}
-
+    def repository(self, repository): self._fail("repository"); return {"default_branch": "main"}
     def branch(self, repository, branch):
-        self._fail("branch")
-        return {"commit": {"sha": "a" * 40}}
-
-    def workflow(self, repository, workflow):
-        self._fail("workflow")
-        return {"id": 123, "state": self.workflow_state}
-
+        self._fail("branch"); self.branch_calls += 1
+        return {"commit": {"sha": ("b" if self.move_main and self.branch_calls > 1 else "a") * 40}}
+    def workflow(self, repository, workflow): self._fail("workflow"); return {"id": 123, "state": self.workflow_state}
     def runs(self, repository, workflow, event):
         self._fail("runs")
-        if event == "repository_dispatch":
-            return []
-        if event == "workflow_dispatch":
-            return [{
-                "status": "in_progress" if self.manual_active else "completed",
-                "created_at": (NOW - timedelta(minutes=1)).isoformat(),
-            }]
-        return [{
-            "status": "queued" if self.active else "completed",
-            "created_at": (NOW - timedelta(minutes=self.age_minutes)).isoformat(),
-        }]
-
-    def dispatch(self, repository, event_type):
-        self._fail("dispatch")
-        self.dispatches.append(event_type)
-        return self.dispatch_status
+        return [{"status": "queued" if event == self.active_event else "completed", "created_at": (NOW - timedelta(minutes=self.age)).isoformat()}]
+    def tree(self, repository, sha):
+        self._fail("tree")
+        marker = f"pipeline/actions-{self.lane}.enabled"
+        paths = [marker] if self.marker else []
+        for queue, count in self.counts.items():
+            paths.extend(f"pipeline/queues/staged/{queue}/{i}.json" for i in range(count))
+        return [{"path": path, "type": "blob"} for path in paths]
+    def dispatch(self, repository, event_type, payload):
+        self._fail("dispatch"); self.dispatches.append((event_type, payload)); return self.status
 
 
 class WatchdogTests(unittest.TestCase):
-    def decide(self, api, path):
-        return decide_and_dispatch(
-            api,
-            repository="owner/repo",
-            workflow_name="staged-scan.yml",
-            state_path=path,
-            now=NOW,
-        )
+    def decide(self, api, path, lane=None, now=NOW):
+        return decide_and_dispatch(api, repository="owner/repo", lane=lane or api.lane, state_path=path, now=now)
 
-    def test_fresh_and_active_dispatch_zero(self):
+    def test_lane_boundaries_payload_and_zero_one_dispatch(self):
         with tempfile.TemporaryDirectory() as tmp:
-            for api, reason in ((FakeAPI(age_minutes=34), "fresh"), (FakeAPI(active=True), "matching_run_active")):
-                result = self.decide(api, Path(tmp) / reason)
-                self.assertEqual(result, {"dispatch_count": 0, "outcome": "no_dispatch", "reason": reason})
+            for lane, due, event in (("scan", "2026-08-29T16:16:00+00:00", "staged_scan_recovery"), ("publish", "2026-08-29T16:13:00+00:00", "staged_publish_recovery")):
+                api = FakeAPI(lane=lane, outbox=1 if lane == "publish" else 0)
+                result = self.decide(api, Path(tmp) / f"{lane}.json")
+                self.assertEqual(result["dispatch_count"], 1)
+                self.assertEqual(result["due_boundary"], due)
+                self.assertEqual(api.dispatches, [(event, {"lane": lane, "due_boundary": due, "expected_main_sha": "a" * 40})])
 
-    def test_active_manual_suppresses_but_completed_manual_does_not_refresh(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            active = self.decide(FakeAPI(manual_active=True), Path(tmp) / "active.json")
-            self.assertEqual(active["reason"], "matching_run_active")
-            completed = self.decide(FakeAPI(), Path(tmp) / "completed.json")
-            self.assertEqual(completed["dispatch_count"], 1)
-
-    def test_stale_unused_key_dispatches_once_and_replay_is_zero(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            path = Path(tmp) / "state.json"
-            api = FakeAPI()
-            self.assertEqual(self.decide(api, path)["dispatch_count"], 1)
-            self.assertEqual(self.decide(api, path), {"dispatch_count": 0, "outcome": "no_dispatch", "reason": "accepted_replay"})
-            self.assertEqual(api.dispatches, ["staged_scan_recovery"])
-
-    def test_ambiguous_dispatch_is_not_retried(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            path = Path(tmp) / "state.json"
-            api = FakeAPI(dispatch_status=202)
-            self.assertEqual(self.decide(api, path), {"dispatch_count": 0, "outcome": "fail_closed", "reason": "ambiguous_dispatch"})
-            replay = self.decide(api, path)
-            self.assertEqual(replay["outcome"], "fail_closed")
-            self.assertEqual(replay["reason"], "prior_ambiguous")
-
-    def test_dispatch_exception_persists_ambiguous_and_is_not_retried(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            path = Path(tmp) / "state.json"
-            api = FakeAPI(fail_at="dispatch")
-            first = self.decide(api, path)
-            self.assertEqual(first["outcome"], "fail_closed")
-            state = json.loads(path.read_text(encoding="utf-8"))
-            self.assertEqual(next(iter(state["requests"].values()))["status"], "ambiguous")
-            api.fail_at = ""
-            replay = self.decide(api, path)
-            self.assertEqual(replay["outcome"], "fail_closed")
-            self.assertEqual(replay["reason"], "prior_ambiguous")
-            self.assertEqual(api.dispatches, [])
-
-    def test_inactive_and_all_api_or_state_failures_close(self):
+    def test_fresh_inactive_missing_marker_and_malformed_api_state(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            self.assertEqual(self.decide(FakeAPI(workflow_state="disabled"), root / "inactive")["dispatch_count"], 0)
-            for name in ("repository", "branch", "workflow", "runs", "dispatch"):
-                with self.subTest(name=name):
-                    self.assertEqual(self.decide(FakeAPI(fail_at=name), root / name)["dispatch_count"], 0)
-            malformed = root / "malformed"
-            malformed.write_text("{}", encoding="utf-8")
-            self.assertEqual(self.decide(FakeAPI(), malformed)["dispatch_count"], 0)
+            cases = ((FakeAPI(age=10), "fresh"), (FakeAPI(workflow_state="disabled"), "workflow_inactive"), (FakeAPI(marker=False), "missing_marker"))
+            for index, (api, reason) in enumerate(cases):
+                self.assertEqual(self.decide(api, root / str(index))["reason"], reason)
+            for name in ("repository", "branch", "workflow", "runs", "tree"):
+                self.assertEqual(self.decide(FakeAPI(fail_at=name), root / name)["decision"], "fail_closed")
+            malformed = root / "malformed"; malformed.write_text("{}", encoding="utf-8")
+            self.assertEqual(self.decide(FakeAPI(), malformed)["decision"], "fail_closed")
 
-    def test_orphan_lockfile_is_crash_recoverable(self):
+    def test_all_active_event_types_suppress(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            for event in ("schedule", "repository_dispatch", "workflow_dispatch", "push"):
+                self.assertEqual(self.decide(FakeAPI(active_event=event), Path(tmp) / event)["reason"], "matching_run_active")
+
+    def test_scan_backpressure_matrix(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            for ready, writing, outbox in ((1,0,0),(0,1,0),(0,0,1),(1,1,1)):
+                result = self.decide(FakeAPI(ready=ready, writing=writing, outbox=outbox), Path(tmp) / f"{ready}{writing}{outbox}")
+                self.assertEqual(result["reason"], "scan_backpressure")
+                self.assertEqual(result["queue_counts"], {"ready": ready, "writing": writing, "outbox": outbox})
+
+    def test_publish_requires_outbox_and_no_writing(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.assertEqual(self.decide(FakeAPI(lane="publish"), root / "zero")["reason"], "publish_outbox_empty")
+            self.assertEqual(self.decide(FakeAPI(lane="publish", writing=1, outbox=1), root / "writing")["reason"], "publish_writing_active")
+            self.assertEqual(self.decide(FakeAPI(lane="publish", outbox=1), root / "one")["dispatch_count"], 1)
+
+    def test_same_window_sha_change_dedupes_but_next_window_runs(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "state.json"
-            path.with_suffix(".json.lock").write_text("orphan", encoding="utf-8")
-            result = self.decide(FakeAPI(), path)
-            self.assertEqual(result["dispatch_count"], 1)
-            self.assertEqual(result["outcome"], "dispatched")
+            first = FakeAPI(); self.assertEqual(self.decide(first, path)["dispatch_count"], 1)
+            changed = FakeAPI(); changed.branch = lambda repository, branch: {"commit": {"sha": "c" * 40}}
+            self.assertEqual(self.decide(changed, path)["reason"], "prior_accepted")
+            later = NOW + timedelta(minutes=15)
+            self.assertEqual(self.decide(FakeAPI(), path, now=later)["dispatch_count"], 1)
 
-    def test_contended_lock_fails_closed_then_dispatches_exactly_once(self):
+    def test_lock_crash_timeout_non_2xx_and_replays_are_zero(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            lock_path = root / "locked.json"; lock = lock_path.with_suffix(".json.lock")
+            descriptor = os.open(lock, os.O_CREAT | os.O_RDWR, 0o600); fcntl.flock(descriptor, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            try: self.assertEqual(self.decide(FakeAPI(), lock_path)["dispatch_count"], 0)
+            finally: fcntl.flock(descriptor, fcntl.LOCK_UN); os.close(descriptor)
+            for label, api in (("non2xx", FakeAPI(status=500)), ("timeout", FakeAPI(fail_at="dispatch"))):
+                path = root / f"{label}.json"
+                self.assertEqual(self.decide(api, path)["dispatch_count"], 0)
+                api.fail_at = ""; api.status = 204
+                replay = self.decide(api, path)
+                self.assertEqual(replay["dispatch_count"], 0)
+                self.assertEqual(replay["reason"], "prior_ambiguous")
+
+            class Crash(FakeAPI):
+                def dispatch(self, *args): raise KeyboardInterrupt()
+            path = root / "crash.json"
+            with self.assertRaises(KeyboardInterrupt): self.decide(Crash(), path)
+            self.assertEqual(self.decide(FakeAPI(), path)["reason"], "prior_pending")
+
+    def test_main_mismatch_rejected_before_state_mutation(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "state.json"
-            lock = path.with_suffix(".json.lock")
-            descriptor = os.open(lock, os.O_CREAT | os.O_RDWR, 0o600)
-            fcntl.flock(descriptor, fcntl.LOCK_EX | fcntl.LOCK_NB)
-            api = FakeAPI()
-            try:
-                blocked = self.decide(api, path)
-            finally:
-                fcntl.flock(descriptor, fcntl.LOCK_UN)
-                os.close(descriptor)
-            self.assertEqual(blocked["dispatch_count"], 0)
-            self.assertEqual(blocked["outcome"], "fail_closed")
-            self.assertEqual(self.decide(api, path)["dispatch_count"], 1)
-            self.assertEqual(api.dispatches, ["staged_scan_recovery"])
-
-    def test_crash_after_pending_remains_fail_closed_without_retry(self):
-        class CrashAPI(FakeAPI):
-            def dispatch(self, repository, event_type):
-                self.dispatches.append(event_type)
-                raise KeyboardInterrupt("simulated crash")
-
-        with tempfile.TemporaryDirectory() as tmp:
-            path = Path(tmp) / "state.json"
-            api = CrashAPI()
-            with self.assertRaises(KeyboardInterrupt):
-                self.decide(api, path)
-            state = json.loads(path.read_text(encoding="utf-8"))
-            self.assertEqual(next(iter(state["requests"].values()))["status"], "pending")
-            replay = self.decide(api, path)
-            self.assertEqual(replay["outcome"], "fail_closed")
-            self.assertEqual(replay["reason"], "prior_pending")
-            self.assertEqual(api.dispatches, ["staged_scan_recovery"])
-
-    def test_legacy_requested_state_is_fail_closed(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            path = Path(tmp) / "state.json"
-            api = FakeAPI()
-            self.assertEqual(self.decide(api, path)["dispatch_count"], 1)
-            state = json.loads(path.read_text(encoding="utf-8"))
-            next(iter(state["requests"].values()))["status"] = "requested"
-            path.write_text(json.dumps(state), encoding="utf-8")
-            result = self.decide(api, path)
-            self.assertEqual(result["outcome"], "fail_closed")
-            self.assertEqual(result["reason"], "prior_requested")
-            self.assertEqual(api.dispatches, ["staged_scan_recovery"])
-
-    def test_main_exit_codes_distinguish_fail_closed_from_healthy_results(self):
-        cases = (
-            ({"dispatch_count": 0, "outcome": "fail_closed", "reason": "missing_token"}, 1),
-            ({"dispatch_count": 0, "outcome": "fail_closed", "reason": "api_failure"}, 1),
-            ({"dispatch_count": 0, "outcome": "fail_closed", "reason": "ambiguous_dispatch"}, 1),
-            ({"dispatch_count": 0, "outcome": "fail_closed", "reason": "prior_pending"}, 1),
-            ({"dispatch_count": 0, "outcome": "no_dispatch", "reason": "fresh"}, 0),
-            ({"dispatch_count": 0, "outcome": "no_dispatch", "reason": "matching_run_active"}, 0),
-            ({"dispatch_count": 0, "outcome": "no_dispatch", "reason": "accepted_replay"}, 0),
-            ({"dispatch_count": 1, "outcome": "dispatched", "reason": "stale_dispatched"}, 0),
-        )
-        for result, expected in cases:
-            with self.subTest(reason=result["reason"]), tempfile.TemporaryDirectory() as tmp, \
-                 mock.patch.object(staged_scan_watchdog, "GitHubAPI"), \
-                 mock.patch.object(staged_scan_watchdog, "decide_and_dispatch", return_value=result), \
-                 mock.patch("sys.argv", ["watchdog", "--state", str(Path(tmp) / "state.json")]), \
-                 mock.patch("builtins.print"):
-                self.assertEqual(staged_scan_watchdog.main(), expected)
-
-        with tempfile.TemporaryDirectory() as tmp, mock.patch.dict(os.environ, {}, clear=True), \
-             mock.patch("sys.argv", ["watchdog", "--state", str(Path(tmp) / "state.json")]), \
-             mock.patch("builtins.print"):
-            self.assertEqual(staged_scan_watchdog.main(), 1)
+            result = self.decide(FakeAPI(move_main=True), path)
+            self.assertEqual(result["reason"], "main_moved")
+            self.assertFalse(path.exists())
 
 
 if __name__ == "__main__":

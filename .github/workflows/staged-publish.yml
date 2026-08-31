@@ -11,8 +11,7 @@ name: Staged publish
 # Scheduled runs are gated on the marker file `pipeline/actions-publish.enabled`
 # so this can be merged inert and cut over deliberately (see
 # docs/actions-pipeline-migration.md). A push adding the marker runs one article
-# immediately as the supervised canary; manual dispatch always runs.
-# The reviewed workflow repair is a git-only max-1 retry when dispatch access is unavailable.
+# immediately; exact staged_publish_recovery dispatches are also max-1.
 
 on:
   push:
@@ -25,17 +24,9 @@ on:
     # Keep the 15-minute cadence off common quarter-hour boundaries. GitHub
     # documents that scheduled events can be delayed or dropped under load.
     - cron: "13,28,43,58 * * * *"
-  workflow_dispatch:
-    inputs:
-      max_articles:
-        description: "Max articles to publish this run"
-        required: false
-        default: "3"
-        type: choice
-        options:
-          - "1"
-          - "2"
-          - "3"
+  repository_dispatch:
+    types:
+      - staged_publish_recovery
 
 permissions:
   contents: write
@@ -53,6 +44,10 @@ env:
   # Keep the publisher's pre-commit validation bounded, but above the measured
   # 180-second Actions timeout; the workflow validates the result again.
   HUGO_BUILD_TIMEOUT_SEC: "600"
+  STAGED_PUBLISH_EVENT_ACTION: ${{ github.event.action || '' }}
+  RECOVERY_LANE: ${{ github.event.client_payload.lane || '' }}
+  RECOVERY_DUE_BOUNDARY: ${{ github.event.client_payload.due_boundary || '' }}
+  RECOVERY_EXPECTED_MAIN_SHA: ${{ github.event.client_payload.expected_main_sha || '' }}
 
 jobs:
   publish:
@@ -65,7 +60,18 @@ jobs:
       - name: Gate automated runs and admit current main
         id: gate
         run: |
-          if [ "$GITHUB_EVENT_NAME" != "workflow_dispatch" ] && [ ! -f pipeline/actions-publish.enabled ]; then
+          case "$GITHUB_EVENT_NAME" in
+            push|schedule|repository_dispatch) ;;
+            *)
+              echo "::error title=Staged publish admission failed::Unsupported event $GITHUB_EVENT_NAME"
+              exit 1
+              ;;
+          esac
+          if [ "$GITHUB_REF" != "refs/heads/main" ]; then
+            echo "::error title=Staged publish admission failed::Event must run from refs/heads/main"
+            exit 1
+          fi
+          if [ ! -f pipeline/actions-publish.enabled ]; then
             echo "enabled=false" >> "$GITHUB_OUTPUT"
             echo "Cutover marker pipeline/actions-publish.enabled not present; skipping automated run."
             exit 0
@@ -75,6 +81,17 @@ jobs:
           if [ "$CHECKOUT_HEAD" != "$GITHUB_SHA" ]; then
             echo "::error title=Staged publish admission failed::Checkout does not match GITHUB_SHA"
             exit 1
+          fi
+
+          if [ "$GITHUB_EVENT_NAME" = "repository_dispatch" ]; then
+            if [ "${STAGED_PUBLISH_EVENT_ACTION:-}" != "staged_publish_recovery" ] || [ "$GITHUB_REF" != "refs/heads/main" ]; then
+              echo "::error title=Staged publish admission failed::Unsupported recovery event or non-main ref"
+              exit 1
+            fi
+            if [ "${RECOVERY_LANE:-}" != "publish" ] || [ -z "${RECOVERY_DUE_BOUNDARY:-}" ] || [ "${RECOVERY_EXPECTED_MAIN_SHA:-}" != "$GITHUB_SHA" ]; then
+              echo "::error title=Staged publish admission failed::Recovery payload mismatch"
+              exit 1
+            fi
           fi
 
           REMOTE_REF="refs/remotes/origin/staged-publish-main"
@@ -197,8 +214,8 @@ jobs:
                   stop_schedule_readmission "checkout=$CHECKOUT_HEAD admitted_main=$REMOTE_MAIN current_main=$FRESH_REMOTE_MAIN reason=second_main_motion"
                 fi
                 ;;
-              workflow_dispatch)
-                echo "::error title=Stale manual staged publish rejected::checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN"
+              repository_dispatch)
+                echo "::error title=Stale recovery staged publish rejected::checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN"
                 exit 1
                 ;;
               *)
@@ -245,7 +262,19 @@ jobs:
           DISCORD_PIPELINE_WEBHOOK: ${{ secrets.DISCORD_PIPELINE_WEBHOOK }}
           MAX_ARTICLES: ${{ github.event.inputs.max_articles || '3' }}
         run: |
-          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+          RECOVERY_REF="refs/remotes/origin/staged-publish-business-main"
+          git fetch --no-tags --force origin "refs/heads/main:${RECOVERY_REF}"
+          CURRENT_MAIN="$(git rev-parse --verify --quiet "${RECOVERY_REF}^{commit}")"
+          test -n "$CURRENT_MAIN"
+          if [ "$CURRENT_MAIN" != "$(git rev-parse HEAD)" ]; then
+            echo "::error::Staged publish current main mismatch before queue mutation."
+            exit 1
+          fi
+          if [ "$GITHUB_EVENT_NAME" = "repository_dispatch" ] && [ "$CURRENT_MAIN" != "$RECOVERY_EXPECTED_MAIN_SHA" ]; then
+            echo "::error::Staged publish recovery expected main mismatch before queue mutation."
+            exit 1
+          fi
+          if [ "$GITHUB_EVENT_NAME" = "push" ] || [ "$GITHUB_EVENT_NAME" = "repository_dispatch" ]; then
             MAX_ARTICLES=1
           fi
           case "$MAX_ARTICLES" in

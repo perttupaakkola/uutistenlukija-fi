@@ -6,19 +6,14 @@ name: Staged scan
 # restoration decision.
 #
 # Scheduled runs are inert until `pipeline/actions-scan.enabled` exists.
-# Authenticated manual dispatch from exact main is the preferred one-shot
-# canary path. The exact staged_scan_recovery repository dispatch provides a
-# credential-neutral recovery path from default main. If dispatch permission
-# is unavailable, operators may add the marker for one scheduled canary and
-# remove it after completion, before the next boundary. The marker otherwise
-# remains reserved for final cutover.
+# The exact staged_scan_recovery repository dispatch provides the bounded
+# recovery path from current main. The marker remains reserved for cutover.
 
 on:
   schedule:
     # Scanner -> retained VPS worker -> publisher spacing:
     # 01 -> 03 -> 13; 16 -> 23 -> 28; 31 -> 33 -> 43; 46 -> 53 -> 58.
     - cron: "1,16,31,46 * * * *"
-  workflow_dispatch: {}
   repository_dispatch:
     types:
       - staged_scan_recovery
@@ -35,6 +30,9 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   PYTHONUNBUFFERED: "1"
   STAGED_SCAN_EVENT_ACTION: ${{ github.event.action || '' }}
+  RECOVERY_LANE: ${{ github.event.client_payload.lane || '' }}
+  RECOVERY_DUE_BOUNDARY: ${{ github.event.client_payload.due_boundary || '' }}
+  RECOVERY_EXPECTED_MAIN_SHA: ${{ github.event.client_payload.expected_main_sha || '' }}
 
 jobs:
   scan:
@@ -49,14 +47,6 @@ jobs:
         id: gate
         run: |
           case "$GITHUB_EVENT_NAME" in
-            workflow_dispatch)
-              if [ "$GITHUB_REF" != "refs/heads/main" ]; then
-                echo "::error::Staged scan manual canary must run from refs/heads/main; got ${GITHUB_REF:-<unset>}."
-                exit 1
-              fi
-              echo "enabled=true" >> "$GITHUB_OUTPUT"
-              echo "mode=canary" >> "$GITHUB_OUTPUT"
-              ;;
             repository_dispatch)
               if [ "${STAGED_SCAN_EVENT_ACTION:-}" != "staged_scan_recovery" ]; then
                 echo "::error::Unsupported staged scan repository_dispatch type: ${STAGED_SCAN_EVENT_ACTION:-<unset>}"
@@ -64,6 +54,10 @@ jobs:
               fi
               if [ "$GITHUB_REF" != "refs/heads/main" ]; then
                 echo "::error::Staged scan recovery canary must run from refs/heads/main; got ${GITHUB_REF:-<unset>}."
+                exit 1
+              fi
+              if [ "${RECOVERY_LANE:-}" != "scan" ] || [ -z "${RECOVERY_DUE_BOUNDARY:-}" ] || [ "${RECOVERY_EXPECTED_MAIN_SHA:-}" != "$GITHUB_SHA" ]; then
+                echo "::error::Staged scan recovery payload mismatch."
                 exit 1
               fi
               echo "enabled=true" >> "$GITHUB_OUTPUT"
@@ -129,6 +123,18 @@ jobs:
       - name: Scan one staged packet
         if: steps.gate.outputs.enabled == 'true'
         run: |
+          RECOVERY_REF="refs/remotes/origin/staged-scan-recovery-main"
+          git fetch --no-tags --force origin "refs/heads/main:${RECOVERY_REF}"
+          CURRENT_MAIN="$(git rev-parse --verify --quiet "${RECOVERY_REF}^{commit}")"
+          test -n "$CURRENT_MAIN"
+          if [ "$CURRENT_MAIN" != "$(git rev-parse HEAD)" ]; then
+            echo "::error::Staged scan current main mismatch before queue mutation."
+            exit 1
+          fi
+          if [ "$GITHUB_EVENT_NAME" = "repository_dispatch" ] && [ "$CURRENT_MAIN" != "$RECOVERY_EXPECTED_MAIN_SHA" ]; then
+            echo "::error::Staged scan recovery expected main mismatch before queue mutation."
+            exit 1
+          fi
           timeout --signal=TERM --kill-after=15s 240s python3 pipeline/staged_publish.py scan --max-packets 1 --max-research-candidates 8 --min-source-words 200 --dedup-window 48 --max-ready-backlog 150 --max-ready-age-hours 24
 
       - name: Verify queue delta and push
@@ -149,7 +155,7 @@ jobs:
           before_files = before["files"]
           event_name = os.environ["GITHUB_EVENT_NAME"]
           event_action = os.environ.get("STAGED_SCAN_EVENT_ACTION", "")
-          manual_canary = event_name == "workflow_dispatch"
+          manual_canary = False
           recovery_canary = (
               event_name == "repository_dispatch"
               and event_action == "staged_scan_recovery"
