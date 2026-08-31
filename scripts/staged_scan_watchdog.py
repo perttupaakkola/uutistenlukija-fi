@@ -196,6 +196,8 @@ def decide_combined(api: Any, *, repository: str, state_path: Path, now: datetim
     )
     if publish["decision"] in {"dispatched", "fail_closed"}:
         return publish
+    if any(publish["queue_counts"].values()):
+        return publish
     return decide_and_dispatch(
         api, repository=repository, lane="scan", state_path=state_path, now=now
     )

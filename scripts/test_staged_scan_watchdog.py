@@ -123,6 +123,20 @@ class WatchdogTests(unittest.TestCase):
             self.assertEqual(result["lane"], "scan")
             self.assertEqual(result["dispatch_count"], 1)
 
+    def test_combined_does_not_scan_with_ready_or_writing_work(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            for queue in ("ready", "writing"):
+                counts = {queue: 1}
+                api = FakeAPI(lane="publish", **counts)
+                result = decide_combined(
+                    api, repository="owner/repo", state_path=root / f"{queue}.json", now=NOW
+                )
+                self.assertEqual(result["lane"], "publish")
+                self.assertEqual(result["dispatch_count"], 0)
+                self.assertEqual(result["queue_counts"][queue], 1)
+                self.assertEqual(api.dispatches, [])
+
     def test_cli_without_lane_uses_combined_path(self):
         result = {
             "decision": "no_dispatch", "lane": "scan", "due_boundary": "",
