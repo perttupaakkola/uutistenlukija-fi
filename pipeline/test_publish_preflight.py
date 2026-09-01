@@ -134,12 +134,17 @@ class PublishPreflightTests(unittest.TestCase):
                 max_articles=3,
                 dry_run=False,
                 dedup_window=72,
-                git_push=False,
+                git_push=True,
                 outcome_json=str(outcome_path),
             )
 
             with patch.object(staged_publish, "STAGED_ROOT", staged_root), \
-                 patch.object(staged_publish, "run_quality_gate") as quality_gate:
+                 patch.object(staged_publish, "run_quality_gate") as quality_gate, \
+                 patch.object(
+                     staged_publish,
+                     "persist_queue_transitions",
+                     return_value=0,
+                 ) as persist:
                 status = staged_publish.cmd_publish(args)
 
             self.assertEqual(status, 0)
@@ -150,6 +155,25 @@ class PublishPreflightTests(unittest.TestCase):
                 (staged_root / "failed" / paths[1].name).read_text(encoding="utf-8")
             )
             self.assertTrue(failed_reject["publish_preflight_rejected"])
+            self.assertTrue(
+                failed_reject["publish_preflight_rejected_at"].endswith("+00:00")
+            )
+            self.assertEqual(
+                set(failed_reject["publish_preflight_feedback"]),
+                {
+                    "action",
+                    "requires_monica_review",
+                    "reasons",
+                    "categories",
+                    "selected_source_urls",
+                    "public_source_urls",
+                    "hidden_source_urls",
+                    "distinct_source_words",
+                    "article_words",
+                    "article_source_ratio",
+                    "sensitive",
+                },
+            )
             self.assertEqual(
                 failed_reject["publish_preflight_feedback"]["action"],
                 "reject",
@@ -157,6 +181,13 @@ class PublishPreflightTests(unittest.TestCase):
             self.assertEqual(
                 failed_reject["publish_preflight_feedback"]["reasons"],
                 ["category_disagreement"],
+            )
+            self.assertEqual(
+                failed_reject["failure"],
+                "publish_preflight_rejected: category_disagreement",
+            )
+            persist.assert_called_once_with(
+                [(paths[1], staged_root / "failed" / paths[1].name)]
             )
             outcome = json.loads(outcome_path.read_text(encoding="utf-8"))
             self.assertEqual(outcome["schema"], staged_publish.PUBLISH_CYCLE_SCHEMA)
@@ -1006,7 +1037,11 @@ class PublishPreflightTests(unittest.TestCase):
                      staged_publish,
                      "publish_articles",
                      return_value=[],
-                 ) as publish_articles:
+                 ) as publish_articles, \
+                 patch.object(
+                     staged_publish,
+                     "persist_queue_transitions",
+                 ) as persist:
                 status = staged_publish.cmd_publish(args)
 
             self.assertEqual(status, 0)
@@ -1021,6 +1056,7 @@ class PublishPreflightTests(unittest.TestCase):
             filter_new_articles.assert_called_once_with([passed_article])
             enrich_images.assert_called_once_with([passed_article])
             publish_articles.assert_called_once_with([passed_article])
+            persist.assert_not_called()
 
             preflight_reject_path = outbox / "20260804T000001Z_held-1.json"
             rejected_path = outbox / "20260804T000002Z_quality-reject.json"
