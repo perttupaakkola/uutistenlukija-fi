@@ -90,6 +90,7 @@ def build_image_terminal_reason(
     provider_attempted: bool = False,
     provider_succeeded: bool = False,
     http_status_class: Optional[str] = None,
+    provider: str = "",
 ) -> dict[str, Any]:
     """Return a stable, non-secret image terminal record."""
     result: dict[str, Any] = {
@@ -103,6 +104,8 @@ def build_image_terminal_reason(
     }
     if http_status_class:
         result["http_status_class"] = http_status_class
+    if provider:
+        result["provider"] = provider
     return result
 
 
@@ -111,6 +114,7 @@ def append_image_terminal_reason(article: dict[str, Any], terminal: dict[str, An
     existing = list(article.get(IMAGE_TERMINAL_REASONS_FIELD) or [])
     identity = (
         terminal.get("stage"),
+        terminal.get("provider"),
         terminal.get("reason"),
         terminal.get("outcome"),
         terminal.get("http_status_class"),
@@ -118,6 +122,7 @@ def append_image_terminal_reason(article: dict[str, Any], terminal: dict[str, An
     if not any(
         (
             row.get("stage"),
+            row.get("provider"),
             row.get("reason"),
             row.get("outcome"),
             row.get("http_status_class"),

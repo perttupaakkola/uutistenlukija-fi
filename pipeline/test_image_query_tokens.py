@@ -11,12 +11,14 @@ try:
     from . import image_query
     from . import image_candidate_guard
     from . import audit_image_flow
+    from .image_provider_result import search_photos
 except ImportError:  # pragma: no cover
     import pexels
     import unsplash
     import image_query
     import image_candidate_guard
     import audit_image_flow
+    from image_provider_result import search_photos
 
 
 DEGREE_ROI_FIXTURE = {
@@ -66,20 +68,30 @@ class ImageQueryTokenTests(unittest.TestCase):
     def test_entertainment_fetch_does_not_search_broad_category_fallback(self) -> None:
         title = "Atomfall-pelistä tehdään televisiosarja"
 
+        pexels_empty = search_photos([], provider="pexels", attempted=True, succeeded=True,
+                                     outcome="search_succeeded", reason="response_received")
+        unsplash_empty = search_photos([], provider="unsplash", attempted=True, succeeded=True,
+                                       outcome="search_succeeded", reason="response_received")
         with patch("image_query.generate_image_query", return_value="Atomfall television series"), \
-             patch.object(pexels, "_search_pexels", return_value=[]) as pexels_search, \
+             patch.object(pexels, "PEXELS_API_KEY", "key"), \
+             patch.object(pexels, "_search_pexels", return_value=pexels_empty) as pexels_search, \
              patch.object(pexels, "time") as pexels_time:
             self.assertIsNone(pexels.fetch_image_for_article(title, "Kulttuuri", inter_request_delay=0))
             pexels_time.sleep.assert_not_called()
 
         with patch("image_query.generate_image_query", return_value="Atomfall television series"), \
-             patch.object(unsplash, "_search", return_value=[]) as unsplash_search, \
+             patch.object(unsplash, "UNSPLASH_ACCESS_KEY", "key"), \
+             patch.object(unsplash, "_search", return_value=unsplash_empty) as unsplash_search, \
              patch.object(unsplash, "time") as unsplash_time:
             self.assertIsNone(unsplash.fetch_image_for_article(title, "Kulttuuri", inter_request_delay=0))
             unsplash_time.sleep.assert_not_called()
 
-        self.assertEqual(pexels_search.call_count, 1)
-        self.assertEqual(unsplash_search.call_count, 1)
+        pexels_queries = [call.args[0] for call in pexels_search.call_args_list]
+        unsplash_queries = [call.args[0] for call in unsplash_search.call_args_list]
+        self.assertIn("Atomfall television series", pexels_queries)
+        self.assertIn("Atomfall television series", unsplash_queries)
+        self.assertNotIn(pexels.CATEGORY_QUERIES["Kulttuuri"], pexels_queries)
+        self.assertNotIn(unsplash.CATEGORY_QUERIES["Kulttuuri"], unsplash_queries)
 
     def test_political_poll_query_sanitizes_named_person_portrait(self) -> None:
         title = "Kysely: Orpon hallitus saa kansalaisilta hallituskautensa heikoimman arvion"
@@ -94,12 +106,18 @@ class ImageQueryTokenTests(unittest.TestCase):
         title = "Kysely: Orpon hallitus saa kansalaisilta hallituskautensa heikoimman arvion"
         body = "Yli puolet vastaajista arvioi Petteri Orpon hallituksen onnistuneen huonosti."
 
+        pexels_empty = search_photos([], provider="pexels", attempted=True, succeeded=True,
+                                     outcome="search_succeeded", reason="response_received")
+        unsplash_empty = search_photos([], provider="unsplash", attempted=True, succeeded=True,
+                                       outcome="search_succeeded", reason="response_received")
         with patch("image_query.generate_image_query", return_value="Petteri Orpo politician portrait"), \
-             patch.object(pexels, "_search_pexels", return_value=[]) as pexels_search:
+             patch.object(pexels, "PEXELS_API_KEY", "key"), \
+             patch.object(pexels, "_search_pexels", return_value=pexels_empty) as pexels_search:
             self.assertIsNone(pexels.fetch_image_for_article(title, "Kotimaa", content=body, inter_request_delay=0))
 
         with patch("image_query.generate_image_query", return_value="Petteri Orpo politician portrait"), \
-             patch.object(unsplash, "_search", return_value=[]) as unsplash_search:
+             patch.object(unsplash, "UNSPLASH_ACCESS_KEY", "key"), \
+             patch.object(unsplash, "_search", return_value=unsplash_empty) as unsplash_search:
             self.assertIsNone(unsplash.fetch_image_for_article(title, "Kotimaa", content=body, inter_request_delay=0))
 
         pexels_search.assert_any_call("public opinion survey ballot")
@@ -255,6 +273,103 @@ class ImageQueryTokenTests(unittest.TestCase):
         self.assertFalse(judge.accepted)
         self.assertEqual(judge.score, 0)
 
+    def test_logistics_payment_terms_use_article_grounded_stock_concepts(self) -> None:
+        title = (
+            "Kuljetusyrittäjälle esitettiin jopa 90 päivän maksuehtoa – "
+            "60 päivääkin olisi vaatinut pankkilainaa"
+        )
+        summary = "Kuljetusyrityksen laskujen maksuaikaa haluttiin pidentää rajusti."
+        content = (
+            "Kuljetusyrittäjä ajaa kuorma-autoa ja kertoo pitkän maksuehdon "
+            "vaikeuttavan kuljetusliikkeen kassaa ja logistiikan rahoitusta."
+        )
+
+        queries = image_candidate_guard.build_stock_queries(
+            title,
+            "Talous",
+            summary=summary,
+            content=content,
+            primary_query="asiakkaan maksuehto olisi pidentynyt päivästä",
+        )
+
+        self.assertIn("freight truck logistics", [query for query, _, _ in queries])
+        self.assertNotEqual(queries[0][1], "primary_query")
+        query, concept, brief = queries[0]
+        accepted, _ = image_candidate_guard.filter_image_candidates(
+            [{
+                "id": "freight-truck",
+                "alt": "commercial freight truck on road for logistics transport",
+                "photo_page": "https://example.com/freight-truck",
+            }],
+            query=query,
+            title=title,
+            summary=summary,
+            content=content,
+            provider="unsplash",
+            brief=brief,
+            concept=concept,
+            return_decisions=True,
+        )
+
+        self.assertEqual(len(accepted), 1)
+        self.assertTrue(
+            any(
+                isinstance(row, dict) and row.get("id") == "freight-truck"
+                for row in accepted
+            )
+        )
+
+    def test_named_carpenter_story_accepts_non_person_workshop_image(self) -> None:
+        title = "Puuseppäyrittäjä Jukka Korpi haastaa halvan Ikea-keittiön mielikuvan"
+        summary = "Kalannin Kaluste valmistaa erikoismittaisia keittiökalusteita."
+        content = (
+            "Puuseppä valmistaa puusta keittiökaappeja ja muita kalusteita "
+            "verstaassa asiakkaan mittojen mukaan."
+        )
+        queries = image_candidate_guard.build_stock_queries(
+            title,
+            "Talous",
+            summary=summary,
+            content=content,
+            primary_query="kalannin kaluste valmistaa erikoismittaiset kalusteet",
+        )
+
+        self.assertIn("carpentry workshop", [query for query, _, _ in queries])
+        query, concept, brief = queries[0]
+        self.assertEqual(brief.intent.safety_mode, "illustration_only")
+        accepted, _ = image_candidate_guard.filter_image_candidates(
+            [{
+                "id": "carpentry-workshop",
+                "alt": "carpentry workshop with wooden kitchen cabinets and woodworking tools",
+                "photo_page": "https://example.com/carpentry-workshop",
+            }],
+            query=query,
+            title=title,
+            summary=summary,
+            content=content,
+            provider="pexels",
+            brief=brief,
+            concept=concept,
+            return_decisions=True,
+        )
+
+        self.assertEqual(len(accepted), 1)
+        self.assertFalse(
+            any(
+                isinstance(row, dict) and "person" in str(row.get("alt", ""))
+                for row in accepted
+            )
+        )
+
+    def test_ambiguous_terms_do_not_activate_unrelated_visual_concepts(self) -> None:
+        intent = image_candidate_guard.build_image_intent(
+            "Gordon Bennett kommentoi hallituksen cabinet-keskustelua",
+            "Ulkomaat",
+            content="Poliittinen rally keräsi yleisöä ja transport-kysymykset olivat esillä.",
+        )
+
+        self.assertEqual(intent.must_have, [])
+
     def test_multi_concept_stock_rejection_records_all_candidate_failures(self) -> None:
         brief = image_candidate_guard.build_visual_brief(
             "16-vuotiaan Akseli Hinkkalan veneenkorjaus lähti kesätyön puutteesta",
@@ -341,8 +456,13 @@ class ImageQueryTokenTests(unittest.TestCase):
             "alt": "sunny blue sky over green trees",
         }
 
+        photos = search_photos(
+            [snowy, sunny], provider="unsplash", attempted=True, succeeded=True,
+            outcome="search_succeeded", reason="response_received",
+        )
         with patch("image_query.generate_image_query", return_value="sunny weather Finland"), \
-             patch.object(unsplash, "_search", return_value=[snowy, sunny]), \
+             patch.object(unsplash, "UNSPLASH_ACCESS_KEY", "key"), \
+             patch.object(unsplash, "_search", return_value=photos), \
              patch.object(unsplash, "_trigger_download") as trigger_download, \
              patch("image_state.is_image_used", return_value=False), \
              patch("image_state.mark_image_used"), \
@@ -379,8 +499,13 @@ class ImageQueryTokenTests(unittest.TestCase):
             "pexels_url": "https://www.pexels.com/photo/sunny-blue-sky-over-green-trees-2/",
         }
 
+        photos = search_photos(
+            [snowy, sunny], provider="pexels", attempted=True, succeeded=True,
+            outcome="search_succeeded", reason="response_received",
+        )
         with patch("image_query.generate_image_query", return_value="sunny weather Finland"), \
-             patch.object(pexels, "_search_pexels", return_value=[snowy, sunny]), \
+             patch.object(pexels, "PEXELS_API_KEY", "key"), \
+             patch.object(pexels, "_search_pexels", return_value=photos), \
              patch("image_state.is_image_used", return_value=False), \
              patch("image_state.mark_image_used"):
             result = pexels.fetch_image_for_article(

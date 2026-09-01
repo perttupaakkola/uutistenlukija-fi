@@ -93,6 +93,96 @@ URBAN_BUSINESS_IMAGE_TERMS = {
     "buildings", "architecture", "urban", "corporate", "tower", "towers",
 }
 
+# Article-derived bilingual concepts. These are deliberately keyed only from
+# editorial fields, never from the generated provider query. They let Finnish
+# stories retrieve and verify English stock metadata without reviving the
+# query-as-truth defect fixed by OPE-585.
+ARTICLE_VISUAL_CONCEPT_RULES: tuple[
+    tuple[set[str], str, tuple[str, ...]], ...
+] = (
+    (
+        {
+            "kuljetusyrittäjä", "kuljetusyrittäjälle", "kuljetusyritys",
+            "kuljetusliike", "kuorma-auto", "kuorma-autoa", "rekka",
+            "logistiikka", "freight", "truck", "logistics",
+        },
+        "freight truck or logistics",
+        (
+            "freight truck logistics",
+            "commercial truck on road",
+            "transport and logistics",
+        ),
+    ),
+    (
+        {
+            "puuseppä", "puuseppäyrittäjä", "puusepän", "kaluste",
+            "kalusteet", "kalusteita", "keittiö", "keittiön",
+            "keittiökaluste", "keittiökalusteita", "verstas", "carpentry",
+            "woodworking", "furniture",
+        },
+        "carpentry, woodworking, kitchen cabinets, or furniture workshop",
+        (
+            "carpentry workshop",
+            "woodworking kitchen cabinets",
+            "furniture workshop tools",
+        ),
+    ),
+    (
+        {
+            "korkeakoulu", "korkeakoulujen", "yhteishaku", "opiskelupaikka",
+            "opiskelupaikkaa", "opiskelijat", "university", "college",
+            "admissions", "students",
+        },
+        "university, study, or student admissions",
+        ("university campus", "students studying", "university admissions"),
+    ),
+    (
+        {
+            "hotelli", "hotellit", "hotellimajoitus", "majoitus", "spahotel",
+            "hotel", "hospitality", "accommodation",
+        },
+        "hotel or hospitality",
+        ("hotel exterior", "hotel room hospitality", "hotel reception"),
+    ),
+    (
+        {
+            "sikarutto", "villisika", "villisikoja", "swine", "boar",
+        },
+        "wild boar or animal disease monitoring",
+        ("wild boar in forest", "wildlife monitoring", "forest field research"),
+    ),
+    (
+        {
+            "budjetti", "vaalibudjetti", "talousarvio", "julkistalous",
+            "budget", "fiscal",
+        },
+        "budget documents or public finance",
+        ("budget documents", "public finance papers", "financial planning desk"),
+    ),
+    (
+        {
+            "dekkari", "kirja", "romaani", "tv-sarja", "televisiosarja",
+            "hollywood", "book", "novel", "television", "cinema",
+        },
+        "book, television, or screen production",
+        ("book and television production", "film studio equipment", "open book cinema"),
+    ),
+    (
+        {
+            "ralli", "mm-ralli", "rallissa", "ralliauto", "motorsport",
+        },
+        "rally car or motorsport",
+        ("rally car on gravel road", "motorsport service area", "rally racing"),
+    ),
+    (
+        {
+            "kaasupallo", "kuumailmapallo", "balloon",
+        },
+        "competitive gas balloon flight",
+        ("gas balloon in sky", "balloon aviation competition", "balloon landing field"),
+    ),
+)
+
 
 @dataclass(frozen=True)
 class ImageIntent:
@@ -219,6 +309,9 @@ def build_image_intent(
     if article_tokens & WINTER_TERMS:
         must_have.append("winter conditions")
         season_time = "winter"
+    for cues, required_concept, _ in ARTICLE_VISUAL_CONCEPT_RULES:
+        if article_tokens & cues:
+            must_have.append(required_concept)
 
     named_person = _named_person_like(article_text)
     sensitive = bool(article_tokens & SENSITIVE_TERMS)
@@ -289,6 +382,9 @@ def build_visual_brief(
             concepts.append("winter weather")
         else:
             concepts.append("weather forecast")
+    for cues, _, article_concepts in ARTICLE_VISUAL_CONCEPT_RULES:
+        if article_tokens & cues:
+            concepts.extend(article_concepts)
     if not concepts:
         concepts.extend([
             intent.subject,
