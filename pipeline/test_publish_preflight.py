@@ -144,7 +144,20 @@ class PublishPreflightTests(unittest.TestCase):
 
             self.assertEqual(status, 0)
             quality_gate.assert_not_called()
-            self.assertEqual({path: path.read_bytes() for path in paths}, before)
+            self.assertEqual(paths[0].read_bytes(), before[paths[0]])
+            self.assertFalse(paths[1].exists())
+            failed_reject = json.loads(
+                (staged_root / "failed" / paths[1].name).read_text(encoding="utf-8")
+            )
+            self.assertTrue(failed_reject["publish_preflight_rejected"])
+            self.assertEqual(
+                failed_reject["publish_preflight_feedback"]["action"],
+                "reject",
+            )
+            self.assertEqual(
+                failed_reject["publish_preflight_feedback"]["reasons"],
+                ["category_disagreement"],
+            )
             outcome = json.loads(outcome_path.read_text(encoding="utf-8"))
             self.assertEqual(outcome["schema"], staged_publish.PUBLISH_CYCLE_SCHEMA)
             self.assertTrue(outcome["admitted"])
@@ -1009,11 +1022,19 @@ class PublishPreflightTests(unittest.TestCase):
             enrich_images.assert_called_once_with([passed_article])
             publish_articles.assert_called_once_with([passed_article])
 
-            held_path = outbox / "20260804T000001Z_held-1.json"
+            preflight_reject_path = outbox / "20260804T000001Z_held-1.json"
             rejected_path = outbox / "20260804T000002Z_quality-reject.json"
             passed_path = outbox / "20260804T000003Z_quality-pass.json"
             after_cap_path = outbox / "20260804T000004Z_after-cap.json"
-            self.assertEqual(held_path.read_bytes(), original_bytes[held_path])
+            self.assertFalse(preflight_reject_path.exists())
+            preflight_failed = json.loads(
+                (failed / preflight_reject_path.name).read_text(encoding="utf-8")
+            )
+            self.assertTrue(preflight_failed["publish_preflight_rejected"])
+            self.assertEqual(
+                preflight_failed["failure"],
+                "publish_preflight_rejected: category_disagreement",
+            )
             self.assertFalse(rejected_path.exists())
             rejected = json.loads((failed / rejected_path.name).read_text(encoding="utf-8"))
             self.assertTrue(rejected["quality_gate_rejected"])

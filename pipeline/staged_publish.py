@@ -1805,6 +1805,52 @@ def apply_publish_preflight(
     return eligible
 
 
+def quarantine_preflight_rejected_outbox(
+    path: Path,
+    data: dict[str, Any],
+    result: Any,
+    transitions: list[tuple[Path, Path]] | None = None,
+) -> Path:
+    """Terminalize one hard preflight reject with its complete decision evidence."""
+    if result.action != "reject":
+        raise ValueError(f"preflight terminalization requires reject action, got {result.action!r}")
+    rejected_at = datetime.now(timezone.utc).isoformat()
+    ratio = (
+        "inf"
+        if result.article_source_ratio == float("inf")
+        else result.article_source_ratio
+    )
+    data["publish_preflight_rejected_at"] = rejected_at
+    data["publish_preflight_rejected"] = True
+    data["publish_preflight_feedback"] = {
+        "action": result.action,
+        "requires_monica_review": result.requires_monica_review,
+        "reasons": list(result.reasons),
+        "categories": list(result.categories),
+        "selected_source_urls": list(result.selected_source_urls),
+        "public_source_urls": list(result.public_source_urls),
+        "hidden_source_urls": list(result.hidden_source_urls),
+        "distinct_source_words": result.distinct_source_words,
+        "article_words": result.article_words,
+        "article_source_ratio": ratio,
+        "sensitive": result.sensitive,
+    }
+    reasons = list(result.reasons) or ["unspecified"]
+    data["failure"] = "publish_preflight_rejected: " + "; ".join(reasons)
+    target = STAGED_ROOT / "failed" / path.name
+    if target.exists():
+        target = STAGED_ROOT / "failed" / f"{path.stem}_{int(time.time())}{path.suffix}"
+    atomic_write_json(target, data)
+    path.unlink(missing_ok=True)
+    if transitions is not None:
+        transitions.append((path, target))
+    log(
+        "publish: terminalized preflight reject "
+        f"packet={path.name} reasons={','.join(reasons)}"
+    )
+    return target
+
+
 def article_needs_image(article: dict) -> bool:
     return not article.get("image") or bool(article.get("image_category_fallback"))
 
@@ -2353,9 +2399,22 @@ def _cmd_publish(args: argparse.Namespace, cycle: dict[str, Any]) -> int:
     quality_passed_items: list[tuple[Path, dict]] = []
     quality_rejected_articles: list[dict] = []
     deduplicated_articles: list[dict] = []
+    queue_transitions: list[tuple[Path, Path]] = []
     # The cap applies to final publishable output, after both gates and dedup.
     # Scan the deterministic outbox order until enough unique records survive.
     for item in items:
+        path, data = item
+        preflight = evaluate_publish_preflight(data)
+        if preflight.action == "reject":
+            apply_publish_preflight([item], max_items=1)
+            if not args.dry_run:
+                quarantine_preflight_rejected_outbox(
+                    path,
+                    data,
+                    preflight,
+                    queue_transitions,
+                )
+            continue
         eligible = apply_publish_preflight([item], max_items=1)
         if not eligible:
             continue
@@ -2393,12 +2452,23 @@ def _cmd_publish(args: argparse.Namespace, cycle: dict[str, Any]) -> int:
     cycle["rejected"] += len(quality_rejected_articles)
     if not quality_checked_items:
         log(f"publish: all selected outbox records held by preflight selected={selected_count}")
+        if args.git_push and queue_transitions:
+            queue_rc = persist_queue_transitions(queue_transitions)
+            return _complete_publish_cycle(
+                cycle,
+                outcome="error" if queue_rc else "skip",
+                result=(
+                    "queue_transition_persist_failed"
+                    if queue_rc
+                    else "no_publish_eligible_supply"
+                ),
+                return_code=queue_rc,
+            )
         return _complete_publish_cycle(
             cycle,
             outcome="skip",
             result="no_publish_eligible_supply",
         )
-    queue_transitions: list[tuple[Path, Path]] = []
     if not args.dry_run:
         quarantine_rejected_outbox(
             quality_checked_items,
