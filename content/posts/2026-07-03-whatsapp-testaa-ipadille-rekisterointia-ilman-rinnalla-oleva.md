@@ -1,5 +1,6 @@
 ---
 title: "WhatsApp testaa iPadille rekisteröintiä ilman rinnalla olevaa puhelinta"
+seo_title: "WhatsApp testaa iPad-käyttöä ilman puhelinta | Uutistenlukija"
 date: 2026-07-03T19:58:05.074617+00:00
 categories:
   - Teknologia
