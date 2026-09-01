@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import unittest
 
-from quality_gate import score_article
+from quality_gate import check_numbers_sourced, score_article
 
 
 _BASE = (
@@ -74,6 +74,56 @@ class QualityGateDegradedModeTests(unittest.TestCase):
         breakdown = score_article(article)
         self.assertFalse(breakdown.passes)
         self.assertTrue(any("central unsourced number" in fail for fail in breakdown.hard_fails))
+
+    def test_date_equivalence_works_in_both_directions(self):
+        self.assertEqual(
+            check_numbers_sourced(
+                "Tehtävä alkaa 1.9.2026.",
+                "Tehtävä alkaa 1. syyskuuta 2026.",
+            ),
+            [],
+        )
+        self.assertEqual(
+            check_numbers_sourced(
+                "Tehtävä alkaa 1. syyskuuta 2026.",
+                "Tehtävä alkaa 1.9.2026.",
+            ),
+            [],
+        )
+
+    def test_source_date_without_year_does_not_authorize_invented_year(self):
+        self.assertEqual(
+            check_numbers_sourced(
+                "Tehtävä alkaa 1. syyskuuta.",
+                "Tehtävä alkaa 1. syyskuuta 2037.",
+            ),
+            ["1.9.2037"],
+        )
+        self.assertEqual(
+            check_numbers_sourced(
+                "Tehtävä alkaa 1. syyskuuta.",
+                "Tehtävä alkaa 1.9.",
+            ),
+            [],
+        )
+
+    def test_equivalent_finnish_number_units_are_canonicalized(self):
+        self.assertEqual(
+            check_numbers_sourced(
+                "Vaikutus on 42 miljoonaa euroa eli 7 prosenttia.",
+                "Vaikutus on 42 miljoonan euron suuruinen eli 7 %.",
+            ),
+            [],
+        )
+
+    def test_million_and_billion_are_not_conflated(self):
+        self.assertEqual(
+            check_numbers_sourced(
+                "Vaikutus on 42 miljardia euroa.",
+                "Vaikutus on 42 miljoonaa euroa.",
+            ),
+            ["42miljoona"],
+        )
 
 
 if __name__ == "__main__":

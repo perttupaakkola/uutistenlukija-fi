@@ -29,8 +29,20 @@ import re
 import json
 import time
 import urllib.request
+import urllib.error
 import urllib.parse
 from typing import Optional, Dict, List
+
+try:
+    from .image_provider_result import (
+        build_provider_result, combine_provider_results, search_photos,
+        search_result, set_provider_result,
+    )
+except ImportError:  # pragma: no cover - direct pipeline execution
+    from image_provider_result import (
+        build_provider_result, combine_provider_results, search_photos,
+        search_result, set_provider_result,
+    )
 
 UNSPLASH_ACCESS_KEY = os.environ.get("UNSPLASH_ACCESS_KEY", "")
 UNSPLASH_SEARCH_URL = "https://api.unsplash.com/search/photos"
@@ -257,16 +269,19 @@ def _api_headers() -> Dict[str, str]:
 
 
 def _search(query: str, per_page: int = 30) -> List[Dict]:
-    """Search Unsplash. Returns list of normalized photo dicts, cached per query.
-
-    Per Unsplash API guidelines, per_page max is 30.
-    """
+    """Search Unsplash and return photos with a bounded request receipt."""
     if not UNSPLASH_ACCESS_KEY:
-        return []
+        return search_photos(
+            [], provider="unsplash", attempted=False, succeeded=False,
+            outcome="no_key", reason="key_unavailable",
+        )
 
     cache_key = f"{query}|{per_page}"
     if cache_key in _query_cache:
-        return _query_cache[cache_key]
+        return search_photos(
+            _query_cache[cache_key], provider="unsplash", attempted=False,
+            succeeded=True, outcome="cache_hit", reason="cached_search_result",
+        )
 
     params = urllib.parse.urlencode({
         "query": query,
@@ -284,54 +299,64 @@ def _search(query: str, per_page: int = 30) -> List[Dict]:
             if remaining != "?" and int(remaining) < 10:
                 print(f"[unsplash] ⚠ Rate limit low: {remaining} remaining")
             data = json.loads(resp.read())
-    except urllib.error.HTTPError as e:
-        if e.code == 429:
+    except urllib.error.HTTPError as exc:
+        if exc.code == 429:
             print("[unsplash] ✗ Rate limit exceeded (429)")
         else:
-            print(f"[unsplash] HTTP {e.code} for query '{query}'")
-        _query_cache[cache_key] = []
-        return []
-    except Exception as e:
-        print(f"[unsplash] Search error for '{query}': {e}")
-        _query_cache[cache_key] = []
-        return []
+            print(f"[unsplash] HTTP {exc.code} during image search")
+        failed = search_photos(
+            [], provider="unsplash", attempted=True, succeeded=False,
+            outcome="provider_fault", reason=f"http_{exc.code}", fault_count=1,
+        )
+        return failed
+    except Exception as exc:
+        print(f"[unsplash] Search error: {exc.__class__.__name__}")
+        failed = search_photos(
+            [], provider="unsplash", attempted=True, succeeded=False,
+            outcome="provider_fault", reason="request_exception", fault_count=1,
+        )
+        return failed
 
     photos = []
-    for p in data.get("results", []):
-        user = p.get("user", {})
+    for photo in data.get("results", []):
+        user = photo.get("user", {})
         user_links = user.get("links", {})
         photographer_profile = user_links.get("html", "https://unsplash.com")
-        # Append UTM to attribution URLs (required by Unsplash guidelines)
         if "?" in photographer_profile:
             photographer_profile += f"&{UTM}"
         else:
             photographer_profile += f"?{UTM}"
 
-        photo_page = p.get("links", {}).get("html", "https://unsplash.com")
+        photo_page = photo.get("links", {}).get("html", "https://unsplash.com")
         if "?" in photo_page:
             photo_page += f"&{UTM}"
         else:
             photo_page += f"?{UTM}"
 
-        urls = p.get("urls", {})
+        urls = photo.get("urls", {})
         photos.append({
-            "id": p["id"],
-            # Hotlink URLs — served directly from images.unsplash.com
-            "url_full":    urls.get("full"),
-            "url_regular": urls.get("regular"),   # ~1080px
-            "url_small":   urls.get("small"),     # ~400px
-            "url_thumb":   urls.get("thumb"),     # 200px
-            "download_location": p.get("links", {}).get("download_location"),
+            "id": photo["id"],
+            "url_full": urls.get("full"),
+            "url_regular": urls.get("regular"),
+            "url_small": urls.get("small"),
+            "url_thumb": urls.get("thumb"),
+            "download_location": photo.get("links", {}).get("download_location"),
             "photographer": user.get("name", "Unknown"),
             "photographer_url": photographer_profile,
             "photo_page": photo_page,
-            "alt": p.get("alt_description") or query,
-            "width": p.get("width", 0),
-            "height": p.get("height", 0),
+            # Never use our query as candidate evidence. An absent provider
+            # caption must remain absent so the semantic guard fails closed.
+            "alt": photo.get("alt_description") or "",
+            "width": photo.get("width", 0),
+            "height": photo.get("height", 0),
         })
 
-    _query_cache[cache_key] = photos
-    return photos
+    completed = search_photos(
+        photos, provider="unsplash", attempted=True, succeeded=True,
+        outcome="search_succeeded", reason="response_received",
+    )
+    _query_cache[cache_key] = completed
+    return completed
 
 
 def _trigger_download(photo: Dict) -> None:
@@ -368,7 +393,8 @@ def fetch_image_for_article(
     key_points: list[str] | None = None,
     content: str = "",
     inter_request_delay: float = 1.2,
-) -> Optional[Dict]:
+    return_result: bool = False,
+) -> object:
     """Fetch a relevant Unsplash image for a single article.
 
     Returns dict with:
@@ -385,6 +411,29 @@ def fetch_image_for_article(
     Side effect: triggers Unsplash download tracking endpoint.
     """
     category = _normalize_category(category)
+    searches: list[dict] = []
+    candidate_count = 0
+    fresh_candidate_count = 0
+    rejected_count = 0
+
+    def finish(image: Optional[Dict], *, reason: str = "") -> object:
+        receipt = combine_provider_results(
+            provider="unsplash",
+            searches=searches,
+            candidate_count=candidate_count,
+            fresh_candidate_count=fresh_candidate_count,
+            rejected_count=rejected_count,
+            accepted_count=1 if image else 0,
+            reason=reason,
+        )
+        return (image, receipt) if return_result else image
+
+    if not UNSPLASH_ACCESS_KEY:
+        receipt = build_provider_result(
+            provider="unsplash", attempted=False, succeeded=False,
+            outcome="no_key", reason="key_unavailable",
+        )
+        return (None, receipt) if return_result else None
 
     # Try LLM-powered query first for better contextual matching
     query = ""
@@ -414,6 +463,7 @@ def fetch_image_for_article(
         from image_state import is_image_used, mark_image_used, get_query_index, set_query_index
         from image_candidate_guard import build_stock_queries, filter_image_candidates, stock_decision_fields
     except ImportError:
+        is_image_used = lambda x: False
         mark_image_used = lambda x: None
         get_query_index = lambda x: _query_index.get(x, 0)
         set_query_index = lambda x, y: _query_index.update({x: y})
@@ -431,8 +481,12 @@ def fetch_image_for_article(
     selected_query = query
     for candidate_query, concept, brief in stock_queries:
         photos = _search(candidate_query)
-        fresh = [p for p in photos if not is_image_used(p["id"])]
-        available_photos = filter_image_candidates(
+        receipt = search_result(photos, "unsplash")
+        searches.append(receipt)
+        candidate_count += len(photos)
+        fresh = [p for p in photos if not is_image_used(p["id"])] if receipt.get("succeeded") else []
+        fresh_candidate_count += len(fresh)
+        available_photos, decisions = filter_image_candidates(
             fresh,
             query=candidate_query,
             title=title,
@@ -443,7 +497,9 @@ def fetch_image_for_article(
             intent=brief.intent,
             brief=brief,
             concept=concept,
+            return_decisions=True,
         )
+        rejected_count += sum(1 for decision in decisions if not decision.accepted)
         selected_query = candidate_query
         if available_photos:
             break
@@ -451,13 +507,17 @@ def fetch_image_for_article(
     if not available_photos and category in CATEGORY_QUERIES:
         if blocks_broad_category_fallback(title, summary=summary, key_points=key_points, content=content):
             print(f"[unsplash] No fresh results for '{query}' — broad category fallback blocked")
-            return None
+            return finish(None, reason="broad_category_fallback_blocked")
         fallback_query = CATEGORY_QUERIES[category]
         print(f"[unsplash] No fresh results for '{query}' → category fallback '{fallback_query}'")
         photos = _search(fallback_query)
-        available_photos = [p for p in photos if not is_image_used(p["id"])]
-        available_photos = filter_image_candidates(
-            available_photos,
+        receipt = search_result(photos, "unsplash")
+        searches.append(receipt)
+        candidate_count += len(photos)
+        fresh = [p for p in photos if not is_image_used(p["id"])] if receipt.get("succeeded") else []
+        fresh_candidate_count += len(fresh)
+        available_photos, decisions = filter_image_candidates(
+            fresh,
             query=fallback_query,
             title=title,
             summary=summary,
@@ -467,11 +527,13 @@ def fetch_image_for_article(
             intent=stock_queries[0][2].intent,
             brief=stock_queries[0][2],
             concept=fallback_query,
+            return_decisions=True,
         )
+        rejected_count += sum(1 for decision in decisions if not decision.accepted)
         selected_query = fallback_query
 
     if not available_photos:
-        return None
+        return finish(None)
 
     idx = get_query_index(query) % len(available_photos)
     set_query_index(query, idx + 1)
@@ -501,7 +563,7 @@ def fetch_image_for_article(
         "concept": photo.get("_image_concept", selected_query),
     }
     result.update(stock_decision_fields("unsplash", result, selected_query))
-    return result
+    return finish(result)
 
 
 def fetch_images_for_articles(articles: list, delay: float = 1.2) -> list:
@@ -528,14 +590,16 @@ def fetch_images_for_articles(articles: list, delay: float = 1.2) -> list:
         key_points = list(article.get("key_points") or [])
         key_points.extend(article.get("tags") or [])
 
-        result = fetch_image_for_article(
+        result, provider_result = fetch_image_for_article(
             title,
             category,
             summary=article.get("summary", "") or "",
             key_points=key_points,
             content=article.get("content", "") or "",
             inter_request_delay=delay,
+            return_result=True,
         )
+        set_provider_result(article, provider_result)
 
         if result:
             article["image"] = result["url"]

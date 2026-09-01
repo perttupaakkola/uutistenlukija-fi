@@ -28,8 +28,20 @@ import hashlib
 import base64
 import io
 import urllib.request
+import urllib.error
 import urllib.parse
 from typing import Optional, Dict, List
+
+try:
+    from .image_provider_result import (
+        build_provider_result, combine_provider_results, search_photos,
+        search_result, set_provider_result,
+    )
+except ImportError:  # pragma: no cover - direct pipeline execution
+    from image_provider_result import (
+        build_provider_result, combine_provider_results, search_photos,
+        search_result, set_provider_result,
+    )
 
 PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "")
 PEXELS_SEARCH_URL = "https://api.pexels.com/v1/search"
@@ -254,19 +266,20 @@ def extract_keywords(title: str, category: str = "", max_terms: int = 4) -> str:
 
 
 def _search_pexels(query: str, per_page: int = 80) -> List[Dict]:
-    """Search Pexels API. Returns list of photo dicts (may be empty).
-
-    Uses in-memory cache to avoid repeat API calls for same query.
-    Each photo dict: url, thumb_url, photographer, photographer_url,
-                     pexels_url, width, height, avg_color
-    """
+    """Search Pexels and return photos with a bounded request receipt."""
     if not PEXELS_API_KEY:
         print("[pexels] No PEXELS_API_KEY set — skipping API calls")
-        return []
+        return search_photos(
+            [], provider="pexels", attempted=False, succeeded=False,
+            outcome="no_key", reason="key_unavailable",
+        )
 
     cache_key = f"{query}|{per_page}"
     if cache_key in _query_cache:
-        return _query_cache[cache_key]
+        return search_photos(
+            _query_cache[cache_key], provider="pexels", attempted=False,
+            succeeded=True, outcome="cache_hit", reason="cached_search_result",
+        )
 
     params = urllib.parse.urlencode({
         "query": query,
@@ -282,41 +295,51 @@ def _search_pexels(query: str, per_page: int = 80) -> List[Dict]:
 
     try:
         with urllib.request.urlopen(req, timeout=10) as resp:
-            # Log rate limit headers
             remaining = resp.headers.get("X-Ratelimit-Remaining", "?")
             reset = resp.headers.get("X-Ratelimit-Reset", "?")
             if remaining != "?" and int(remaining) < 20:
                 print(f"[pexels] ⚠ Rate limit low: {remaining} remaining, resets {reset}")
             data = json.loads(resp.read())
-    except urllib.error.HTTPError as e:
-        if e.code == 429:
+    except urllib.error.HTTPError as exc:
+        if exc.code == 429:
             print("[pexels] ✗ Rate limit exceeded (429) — skipping image search")
         else:
-            print(f"[pexels] HTTP error {e.code} for query '{query}'")
-        _query_cache[cache_key] = []
-        return []
-    except Exception as e:
-        print(f"[pexels] Search error for '{query}': {e}")
-        _query_cache[cache_key] = []
-        return []
+            print(f"[pexels] HTTP error {exc.code} during image search")
+        failed = search_photos(
+            [], provider="pexels", attempted=True, succeeded=False,
+            outcome="provider_fault", reason=f"http_{exc.code}", fault_count=1,
+        )
+        return failed
+    except Exception as exc:
+        print(f"[pexels] Search error: {exc.__class__.__name__}")
+        failed = search_photos(
+            [], provider="pexels", attempted=True, succeeded=False,
+            outcome="provider_fault", reason="request_exception", fault_count=1,
+        )
+        return failed
 
     photos = []
     for photo in data.get("photos", []):
         src = photo.get("src", {})
         photos.append({
-            "url": src.get("large") or src.get("large2x"),  # 800px large, not huge large2x for performance
+            "url": src.get("large") or src.get("large2x"),
             "thumb_url": src.get("medium") or src.get("small"),
             "photographer": photo.get("photographer", "Unknown"),
             "photographer_url": photo.get("photographer_url", "https://www.pexels.com"),
             "pexels_url": photo.get("url", "https://www.pexels.com"),
+            "alt": photo.get("alt") or "",
             "width": photo.get("width", 0),
             "height": photo.get("height", 0),
             "avg_color": photo.get("avg_color", ""),
             "id": photo.get("id"),
         })
 
-    _query_cache[cache_key] = photos
-    return photos
+    completed = search_photos(
+        photos, provider="pexels", attempted=True, succeeded=True,
+        outcome="search_succeeded", reason="response_received",
+    )
+    _query_cache[cache_key] = completed
+    return completed
 
 
 def _download_image(url: str, slug: str, suffix: str = "hero") -> Optional[str]:
@@ -421,7 +444,8 @@ def fetch_image_for_article(
     slug: str = "",
     download: bool = True,
     inter_request_delay: float = 0.5,
-) -> Optional[Dict]:
+    return_result: bool = False,
+) -> object:
     """Fetch a Pexels image for a single article.
 
     Returns dict with:
@@ -436,6 +460,37 @@ def fetch_image_for_article(
     Or None if no suitable image found.
     """
     category = _normalize_category(category)
+    searches: list[dict] = []
+    candidate_count = 0
+    fresh_candidate_count = 0
+    rejected_count = 0
+    download_failed = False
+
+    def finish(image: Optional[Dict], *, reason: str = "") -> object:
+        receipt = combine_provider_results(
+            provider="pexels",
+            searches=searches,
+            candidate_count=candidate_count,
+            fresh_candidate_count=fresh_candidate_count,
+            rejected_count=rejected_count,
+            accepted_count=1 if image and (not download or image.get("local_path")) else 0,
+            reason=reason,
+        )
+        if download_failed:
+            receipt.update({
+                "outcome": "provider_fault",
+                "reason": "download_failed",
+                "accepted_count": 0,
+                "fault_count": min(10_000, int(receipt.get("fault_count") or 0) + 1),
+            })
+        return (image, receipt) if return_result else image
+
+    if not PEXELS_API_KEY:
+        receipt = build_provider_result(
+            provider="pexels", attempted=False, succeeded=False,
+            outcome="no_key", reason="key_unavailable",
+        )
+        return (None, receipt) if return_result else None
 
     # Try LLM-powered query first for better contextual matching
     query = ""
@@ -465,6 +520,7 @@ def fetch_image_for_article(
         from image_state import is_image_used, mark_image_used, get_query_index, set_query_index
         from image_candidate_guard import build_stock_queries, filter_image_candidates, stock_decision_fields
     except ImportError:
+        is_image_used = lambda x: False
         mark_image_used = lambda x: None
         get_query_index = lambda x: _query_index.get(x, 0)
         set_query_index = lambda x, y: _query_index.update({x: y})
@@ -482,8 +538,12 @@ def fetch_image_for_article(
     selected_query = query
     for candidate_query, concept, brief in stock_queries:
         photos = _search_pexels(candidate_query)
-        fresh = [p for p in photos if not is_image_used(p["id"])]
-        available_photos = filter_image_candidates(
+        receipt = search_result(photos, "pexels")
+        searches.append(receipt)
+        candidate_count += len(photos)
+        fresh = [p for p in photos if not is_image_used(p["id"])] if receipt.get("succeeded") else []
+        fresh_candidate_count += len(fresh)
+        available_photos, decisions = filter_image_candidates(
             fresh,
             query=candidate_query,
             title=title,
@@ -494,7 +554,9 @@ def fetch_image_for_article(
             intent=brief.intent,
             brief=brief,
             concept=concept,
+            return_decisions=True,
         )
+        rejected_count += sum(1 for decision in decisions if not decision.accepted)
         selected_query = candidate_query
         if available_photos:
             break
@@ -503,13 +565,17 @@ def fetch_image_for_article(
     if not available_photos and category in CATEGORY_QUERIES:
         if blocks_broad_category_fallback(title, summary=summary, key_points=key_points, content=content):
             print(f"[pexels] No fresh results for '{query}' — broad category fallback blocked")
-            return None
+            return finish(None, reason="broad_category_fallback_blocked")
         fallback_query = CATEGORY_QUERIES[category]
         print(f"[pexels] No fresh results for '{query}' — trying category fallback '{fallback_query}'")
         photos = _search_pexels(fallback_query)
-        available_photos = [p for p in photos if not is_image_used(p["id"])]
-        available_photos = filter_image_candidates(
-            available_photos,
+        receipt = search_result(photos, "pexels")
+        searches.append(receipt)
+        candidate_count += len(photos)
+        fresh = [p for p in photos if not is_image_used(p["id"])] if receipt.get("succeeded") else []
+        fresh_candidate_count += len(fresh)
+        available_photos, decisions = filter_image_candidates(
+            fresh,
             query=fallback_query,
             title=title,
             summary=summary,
@@ -519,12 +585,14 @@ def fetch_image_for_article(
             intent=stock_queries[0][2].intent,
             brief=stock_queries[0][2],
             concept=fallback_query,
+            return_decisions=True,
         )
+        rejected_count += sum(1 for decision in decisions if not decision.accepted)
         selected_query = fallback_query
 
     if not available_photos:
         print(f"[pexels] No fresh image found for '{title[:50]}'")
-        return None
+        return finish(None)
 
     # Round-robin to distribute different photos across articles
     idx = get_query_index(query) % len(available_photos)
@@ -539,6 +607,8 @@ def fetch_image_for_article(
         thumb_local = _download_image(photo["thumb_url"], slug, suffix="thumb")
         if local_path:
             mark_image_used(photo["id"])
+        else:
+            download_failed = True
         time.sleep(inter_request_delay)
     else:
         thumb_local = None
@@ -563,7 +633,7 @@ def fetch_image_for_article(
         "concept": photo.get("_image_concept", selected_query),
     }
     result.update(stock_decision_fields("pexels", result, selected_query))
-    return result
+    return finish(result, reason="download_failed" if download_failed else "")
 
 
 def fetch_images_for_articles(articles: list, delay: float = 0.5) -> list:
@@ -604,7 +674,7 @@ def fetch_images_for_articles(articles: list, delay: float = 0.5) -> list:
         key_points = list(article.get("key_points") or [])
         key_points.extend(article.get("tags") or [])
 
-        result = fetch_image_for_article(
+        result, provider_result = fetch_image_for_article(
             title,
             category,
             summary=article.get("summary", "") or "",
@@ -613,7 +683,9 @@ def fetch_images_for_articles(articles: list, delay: float = 0.5) -> list:
             slug=slug,
             download=True,
             inter_request_delay=delay,
+            return_result=True,
         )
+        set_provider_result(article, provider_result)
 
         if result and result.get("local_path"):
             article["image"] = result["local_path"]

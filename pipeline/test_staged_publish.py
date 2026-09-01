@@ -7,6 +7,7 @@ import unittest
 from argparse import Namespace
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from typing import Any, cast
 from unittest.mock import patch
 
 try:
@@ -19,6 +20,23 @@ except ImportError:  # pragma: no cover - direct execution from pipeline cwd
     import publisher
     import image_gen
     from image_candidate_guard import category_fallback_fields, stock_decision_fields
+
+
+def _mock_stock_receipt(article: dict[str, Any], *, provider: str | None = None, accepted: bool = False) -> None:
+    if provider is None:
+        provider = "unsplash" if staged_publish.get_provider_result(article, "unsplash") is None else "pexels"
+    staged_publish.set_provider_result(article, staged_publish.build_provider_result(
+        provider=provider,
+        attempted=True,
+        succeeded=True,
+        outcome="accepted" if accepted else "all_policy_rejected",
+        reason="candidate_accepted" if accepted else "all_fresh_candidates_rejected",
+        query_count=1,
+        candidate_count=1,
+        fresh_candidate_count=1,
+        rejected_count=0 if accepted else 1,
+        accepted_count=1 if accepted else 0,
+    ))
 
 
 def _record(title: str, source_words: int, blocks: int = 1) -> dict:
@@ -588,6 +606,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
             batch[0]["image"] = "https://images.unsplash.com/photo-test"
             batch[0]["image_alt"] = "Kuvaton artikkeli"
             batch[0]["image_category_fallback"] = False
+            _mock_stock_receipt(batch[0], provider="unsplash", accepted=True)
             return batch
 
         with patch.dict(staged_publish.os.environ, {"UNSPLASH_ACCESS_KEY": "key"}, clear=False), \
@@ -607,6 +626,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
         def rejected_stock(batch, delay=0):
             batch[0].update(staged_publish.category_fallback_fields("Talous", reason="stock rejected"))
+            _mock_stock_receipt(batch[0])
             return batch
 
         with patch.dict(staged_publish.os.environ, {"UNSPLASH_ACCESS_KEY": "key", "PEXELS_API_KEY": "", "KIE_API_KEY": ""}, clear=False), \
@@ -619,6 +639,44 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(summary["category_fallback"], 1)
         failure.assert_not_called()
 
+    def test_enrich_images_records_each_stock_provider_policy_attempt(self) -> None:
+        articles = [{"title": "Kuvaton artikkeli", "category": "Talous", "content": "sisältö"}]
+
+        def rejected_stock(batch, delay=0):
+            batch[0].update(staged_publish.category_fallback_fields("Talous", reason="stock rejected"))
+            _mock_stock_receipt(batch[0])
+            return batch
+
+        with patch.dict(
+            staged_publish.os.environ,
+            {"UNSPLASH_ACCESS_KEY": "key", "PEXELS_API_KEY": "key", "KIE_API_KEY": ""},
+            clear=False,
+        ), patch.object(staged_publish, "should_skip", return_value=(False, None)), patch.object(
+            staged_publish,
+            "unsplash_fetch_images",
+            side_effect=rejected_stock,
+        ), patch.object(
+            staged_publish,
+            "pexels_fetch_images",
+            side_effect=rejected_stock,
+        ):
+            staged_publish.enrich_images_for_articles(articles, unsplash_delay=0, pexels_delay=0)
+
+        terminal_rows = articles[0].get(image_gen.IMAGE_TERMINAL_REASONS_FIELD) or []
+        stock_rows = [
+            row
+            for row in terminal_rows
+            if isinstance(row, dict) and row.get("stage") == "stock"
+        ]
+        self.assertEqual(
+            [
+                (row.get("provider"), row.get("provider_attempted"), row.get("provider_succeeded"))
+                for row in stock_rows
+            ],
+            [("unsplash", True, True), ("pexels", True, True)],
+        )
+        self.assertTrue(all(row.get("reason") == image_gen.REASON_STOCK_REJECTION for row in stock_rows))
+
     def test_enrich_images_clears_category_fallback_before_pexels_rescue(self) -> None:
         articles = [{"title": "Fallback artikkeli", "category": "Kotimaa", "image": "/images/categories/kotimaa.jpg", "image_category_fallback": True}]
 
@@ -626,6 +684,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
             self.assertNotIn("image", batch[0])
             batch[0]["image"] = "/images/articles/fallback-hero.jpg"
             batch[0]["image_category_fallback"] = False
+            _mock_stock_receipt(batch[0], provider="pexels", accepted=True)
             return batch
 
         with patch.dict(staged_publish.os.environ, {"PEXELS_API_KEY": "key", "UNSPLASH_ACCESS_KEY": ""}, clear=False), \
@@ -654,6 +713,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
         def rejected_stock(batch, delay=0):
             batch[0].update(staged_publish.category_fallback_fields("Kotimaa", reason="stock rejected"))
+            _mock_stock_receipt(batch[0])
             return batch
 
         def generated(batch, max_total_sec=180):
@@ -685,6 +745,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
         def rejected_stock(batch, delay=0):
             batch[0].update(staged_publish.category_fallback_fields("Kotimaa", reason="stock rejected"))
+            _mock_stock_receipt(batch[0])
             return batch
 
         def rejected_generated(batch, max_total_sec=180):
@@ -707,6 +768,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
         def rejected_stock(batch, delay=0):
             batch[0].update(staged_publish.category_fallback_fields("Kotimaa", reason="stock rejected"))
+            _mock_stock_receipt(batch[0])
             return batch
 
         with patch.dict(staged_publish.os.environ, {"UNSPLASH_ACCESS_KEY": "key", "PEXELS_API_KEY": "key", "KIE_API_KEY": ""}, clear=False), \
@@ -727,13 +789,22 @@ class StagedPublishMetricsTests(unittest.TestCase):
             articles[0][image_gen.GENERATION_TERMINAL_FIELD]["reason"],
             image_gen.REASON_KEY_UNAVAILABLE,
         )
+        terminal_rows = cast(
+            list[dict[str, Any]],
+            articles[0][image_gen.IMAGE_TERMINAL_REASONS_FIELD],
+        )
         self.assertEqual(
-            [row["reason"] for row in articles[0][image_gen.IMAGE_TERMINAL_REASONS_FIELD]],
+            [row["reason"] for row in terminal_rows],
             [
+                image_gen.REASON_STOCK_REJECTION,
                 image_gen.REASON_STOCK_REJECTION,
                 image_gen.REASON_KEY_UNAVAILABLE,
                 image_gen.REASON_CATEGORY_FALLBACK,
             ],
+        )
+        self.assertEqual(
+            [row.get("provider") for row in terminal_rows[:2]],
+            ["unsplash", "pexels"],
         )
 
     def test_kie_generated_fallback_is_one_attempt_and_persists_evidence(self) -> None:
@@ -1185,6 +1256,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
             def fake_pexels(batch, delay=0):
                 batch[0]["image"] = "/images/articles/env-hero.jpg"
                 batch[0]["image_category_fallback"] = False
+                _mock_stock_receipt(batch[0], provider="pexels", accepted=True)
                 return batch
 
             with patch.object(staged_publish, "should_skip", return_value=(False, None)), \
@@ -1344,6 +1416,77 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(outcome["result"], "build_failed")
         self.assertEqual(outcome["execution"]["created"], 1)
         self.assertEqual(outcome["published"], 0)
+
+    def test_preflight_reject_is_terminalized_without_moving_monica_review_hold(self) -> None:
+        reject_path, reject_data, _ = self._write_publish_record("20260901T010000Z_preflight-reject")
+        reject_data["article"]["category"] = "Talous"
+        reject_path.write_text(json.dumps(reject_data, ensure_ascii=False), encoding="utf-8")
+
+        review_path, review_data, _ = self._write_publish_record("20260901T020000Z_monica-review")
+        review_data["packet"]["clean_source_blocks"][0]["text"] = "lähdesana " * 40
+        review_path.write_text(json.dumps(review_data, ensure_ascii=False), encoding="utf-8")
+
+        self.assertEqual(staged_publish.evaluate_publish_preflight(reject_data).action, "reject")
+        self.assertEqual(staged_publish.evaluate_publish_preflight(review_data).action, "monica_review")
+        args = Namespace(max_articles=1, dedup_window=48, dry_run=False, git_push=True)
+
+        with patch.object(
+            staged_publish,
+            "load_outbox",
+            return_value=[(reject_path, reject_data), (review_path, review_data)],
+        ), patch.object(staged_publish, "run_quality_gate") as quality_gate, patch.object(
+            staged_publish,
+            "persist_queue_transitions",
+            return_value=0,
+        ) as persist:
+            rc = staged_publish.cmd_publish(args)
+
+        self.assertEqual(rc, 0)
+        quality_gate.assert_not_called()
+        persist.assert_called_once_with(
+            [(reject_path, self.root / "failed" / reject_path.name)]
+        )
+        self.assertFalse(reject_path.exists())
+        failed = json.loads((self.root / "failed" / reject_path.name).read_text(encoding="utf-8"))
+        self.assertTrue(failed["publish_preflight_rejected"])
+        self.assertEqual(failed["publish_preflight_feedback"]["action"], "reject")
+        self.assertIn("category_disagreement", failed["publish_preflight_feedback"]["reasons"])
+        self.assertTrue(failed["failure"].startswith("publish_preflight_rejected:"))
+        self.assertTrue(review_path.exists())
+        self.assertFalse((self.root / "failed" / review_path.name).exists())
+
+    def test_preflight_reject_dry_run_preserves_outbox_and_does_not_persist(self) -> None:
+        path, data, _ = self._write_publish_record("20260901T030000Z_preflight-dry-run")
+        data["article"]["category"] = "Talous"
+        path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+        args = Namespace(max_articles=1, dedup_window=48, dry_run=True, git_push=True)
+
+        with patch.object(staged_publish, "load_outbox", return_value=[(path, data)]), patch.object(
+            staged_publish,
+            "persist_queue_transitions",
+        ) as persist:
+            rc = staged_publish.cmd_publish(args)
+
+        self.assertEqual(rc, 0)
+        persist.assert_not_called()
+        self.assertTrue(path.exists())
+        self.assertFalse((self.root / "failed" / path.name).exists())
+
+    def test_preflight_reject_fails_closed_on_terminal_basename_collision(self) -> None:
+        path, data, _ = self._write_publish_record("20260901T040000Z_preflight-collision")
+        data["article"]["category"] = "Talous"
+        path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+        failed_path = self.root / "failed" / path.name
+        failed_bytes = b'{"existing": true}\n'
+        failed_path.write_bytes(failed_bytes)
+        result = staged_publish.evaluate_publish_preflight(data)
+        self.assertEqual(result.action, "reject")
+
+        with self.assertRaises(FileExistsError):
+            staged_publish.quarantine_preflight_rejected_outbox(path, data, result)
+
+        self.assertTrue(path.exists())
+        self.assertEqual(failed_path.read_bytes(), failed_bytes)
 
     def test_all_quality_rejects_persist_exact_queue_delta_and_propagate_failure(self) -> None:
         path, data, article = self._write_publish_record("20260804T010000Z_quality-reject")
@@ -2489,12 +2632,12 @@ class CategoryDecisionTraceTests(unittest.TestCase):
             "20260711T203153Z_b15231a0f0": {
                 "guard": "Kotimaa",
                 "writer": "Ulkomaat",
-                "publisher": "Tiede",
+                "publisher": "Talous",
             },
             "20260713T061121Z_40f48c408f": {
                 "guard": "Kotimaa",
                 "writer": "Kotimaa",
-                "publisher": "Tiede",
+                "publisher": "Talous",
             },
         }
 

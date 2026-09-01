@@ -69,20 +69,56 @@ _FINNISH_SIGNAL_WORDS = {
 
 # ── Number extraction ─────────────────────────────────────────────────────────
 
+_NUMBER_UNIT_PATTERN = (
+    r"%|prosent[a-zäöå]*|miljard[a-zäöå]*|mrd|miljoon[a-zäöå]*|milj[.]?"
+    r"|kg|km|m²|mw|gw|€|euro[a-zäöå]*|dollari[a-zäöå]*"
+)
 _NUMBER_RE = re.compile(
     r"\b(?:19|20)\d{2}\b"
-    r"|\b\d{1,3}(?:[,.\s]\d{3})*(?:[,.]\d+)?\s*(?:%|prosentt[ia]|milj(?:oona[a-z]*)?|mrd|kg|km|m²|MW|GW|€|euroa|dollari[a-z]*)?",
+    rf"|\b\d{{1,3}}(?:[,.\s]\d{{3}})*(?:[,.]\d+)?\s*(?:{_NUMBER_UNIT_PATTERN})?",
     re.IGNORECASE,
 )
 
+_FINNISH_MONTHS = {
+    "tammikuuta": 1,
+    "helmikuuta": 2,
+    "maaliskuuta": 3,
+    "huhtikuuta": 4,
+    "toukokuuta": 5,
+    "kesäkuuta": 6,
+    "heinäkuuta": 7,
+    "elokuuta": 8,
+    "syyskuuta": 9,
+    "lokakuuta": 10,
+    "marraskuuta": 11,
+    "joulukuuta": 12,
+}
+_TEXTUAL_DATE_RE = re.compile(
+    r"\b(\d{1,2})\.\s+(" + "|".join(_FINNISH_MONTHS) + r")(?:\s+(\d{4}))?\b",
+    re.IGNORECASE,
+)
+_NUMERIC_DATE_RE = re.compile(r"\b(\d{1,2})[.]([01]?\d)[.](?:(\d{4})\b)?")
+
 
 def _extract_numbers(text: str) -> set[str]:
-    raw = _NUMBER_RE.findall(text or "")
+    without_dates = _NUMERIC_DATE_RE.sub(" ", text or "")
+    without_dates = _TEXTUAL_DATE_RE.sub(" ", without_dates)
+    raw = _NUMBER_RE.findall(without_dates)
     normalised: set[str] = set()
     for token in raw:
         n = token.strip()
-        unit_match = re.search(r"(%|prosentt[ia]|milj(?:oona[a-z]*)?|mrd|kg|km|m²|MW|GW|€|euroa|dollari[a-z]*)$", n, re.IGNORECASE)
+        unit_match = re.search(rf"({_NUMBER_UNIT_PATTERN})$", n, re.IGNORECASE)
         unit = unit_match.group(0).lower() if unit_match else ""
+        if unit == "%" or unit.startswith("prosent"):
+            unit = "%"
+        elif unit == "mrd" or unit.startswith("miljard"):
+            unit = "miljardi"
+        elif unit.startswith("miljoon") or unit.startswith("milj"):
+            unit = "miljoona"
+        elif unit == "€" or unit.startswith("euro"):
+            unit = "euro"
+        elif unit.startswith("dollari"):
+            unit = "dollari"
         num_part = n[:unit_match.start()].strip() if unit_match else n
         if re.match(r"^\d{1,3}(,\d{3})+$", num_part):
             num_part = num_part.replace(",", "")
@@ -94,10 +130,35 @@ def _extract_numbers(text: str) -> set[str]:
     return normalised
 
 
+def _date_signatures(text: str) -> set[tuple[int, int, int | None]]:
+    signatures: set[tuple[int, int, int | None]] = set()
+    for day, month, year in _NUMERIC_DATE_RE.findall(text or ""):
+        signatures.add((int(day), int(month), int(year) if year else None))
+    for day, month_name, year in _TEXTUAL_DATE_RE.findall(text or ""):
+        signatures.add((
+            int(day),
+            _FINNISH_MONTHS[month_name.lower()],
+            int(year) if year else None,
+        ))
+    return signatures
+
+
 def check_numbers_sourced(source_text: str, content: str, title: str = "") -> list[str]:
     source_nums = _extract_numbers(source_text)
-    article_nums = _extract_numbers((title or "") + " " + (content or ""))
-    return sorted(article_nums - source_nums)
+    article_text = (title or "") + " " + (content or "")
+    article_nums = _extract_numbers(article_text)
+    unsourced = article_nums - source_nums
+    source_dates = _date_signatures(source_text)
+    for day, month, year in _date_signatures(article_text):
+        supported = any(
+            source_day == day
+            and source_month == month
+            and (year is None or source_year == year)
+            for source_day, source_month, source_year in source_dates
+        )
+        if not supported:
+            unsourced.add(f"{day}.{month}" + (f".{year}" if year is not None else ""))
+    return sorted(unsourced)
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -348,6 +409,7 @@ def score_article(article: dict) -> ScoreBreakdown:
     image = article.get("image", "") or ""
     category = article.get("category", "") or ""
     source_text = article.get("source_text", "") or ""
+    degraded_mode = bool(article.get("degraded_mode"))
 
     word_count = len(content.split())
     missing_image = not image.strip()
@@ -365,7 +427,7 @@ def score_article(article: dict) -> ScoreBreakdown:
     title_pts = 10 if (title and len(title) < 100) else 0
     desc_len = len(description.strip())
     desc_pts = 10 if (50 <= desc_len <= 160) else 0
-    image_pts = 10 if image.strip() else 0
+    image_pts = 10 if image.strip() or degraded_mode else 0
     cat_pts = 10 if category.strip() else 0
     placeholder_pts = 0 if _PLACEHOLDER_PATTERNS.search(content + title + description) else 10
 
@@ -395,7 +457,7 @@ def score_article(article: dict) -> ScoreBreakdown:
         + language_score * 0.16
     )
 
-    if missing_image:
+    if missing_image and not degraded_mode:
         weighted_score = max(0.0, weighted_score - 0.2)  # ~1.6 points on legacy 80-point scale
 
     if paragraphs:
@@ -422,7 +484,7 @@ def score_article(article: dict) -> ScoreBreakdown:
     if source_text_words > 0 and source_text_words < 60:
         hard_fails.append(f"thin_source ({source_text_words} words in source — likely paywall/stub)")
 
-    if word_count < MIN_BODY_WORDS:
+    if word_count < MIN_BODY_WORDS and not degraded_mode:
         hard_fails.append(f"too_short ({word_count} words, min {MIN_BODY_WORDS})")
 
     if len(paragraphs) < 3:
@@ -448,16 +510,20 @@ def score_article(article: dict) -> ScoreBreakdown:
         if ratio > 0.06 and top_count >= 6:
             hard_fails.append(f"keyword stuffing: '{top_word}' {top_count}× ({ratio:.1%})")
 
-    # NOTE: unsourced numbers downgraded from hard fail to score penalty (2026-04-02).
-    # The rewriter frequently reformats numbers ("noin 30 000" → "30000", "3,5 miljardia"
-    # → "3.5 billion") causing 30% false positive rate on hard fail. Now deducts 5 points
-    # from the 80-point score instead of blocking outright.
+    # Body-only unsourced numbers remain a warning because editorial rewrites can
+    # reformat valid figures. New figures in the title or lead are central claims
+    # and fail closed.
     if source_text:
         unsourced = check_numbers_sourced(source_text, content, title)
         if unsourced:
             sample = ", ".join(unsourced[:5])
             soft_warnings.append(f"unsourced_numbers: {sample}")
             reasons.append("unsourced numbers")
+        lead = paragraphs[0] if paragraphs else ""
+        central_unsourced = check_numbers_sourced(source_text, lead, title)
+        if central_unsourced:
+            sample = ", ".join(central_unsourced[:5])
+            hard_fails.append(f"central unsourced number(s): {sample}")
 
     hard_fails.extend(source_confidence_issues(article))
 
