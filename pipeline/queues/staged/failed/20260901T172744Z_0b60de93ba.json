@@ -128,5 +128,21 @@
       "candidate_source_words": 320,
       "candidate_blocks": 3
     }
+  },
+  "failed_at": "2026-09-01T17:33:02.929990+00:00",
+  "failure": "weak_talous_ready_promotional",
+  "ready_quality_feedback": {
+    "action": "fail",
+    "reason": "weak_talous_ready_promotional",
+    "source_words": 320,
+    "source_blocks": 3,
+    "story_confidence": 0.98,
+    "org_guardrail": {
+      "applies": true,
+      "classification": "down_rank_promotional_org_source",
+      "penalty": 160,
+      "requires_attribution": true
+    },
+    "fail_closed": true
   }
 }
