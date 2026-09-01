@@ -272,6 +272,201 @@
         "url": "https://yle.fi/a/74-20167101"
       }
     ],
-    "source_url": "https://yle.fi/a/74-20167101"
+    "source_url": "https://yle.fi/a/74-20167101",
+    "image_provider_results": [
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "unsplash",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "all_policy_rejected",
+        "reason": "all_fresh_candidates_rejected",
+        "query_count": 2,
+        "candidate_count": 60,
+        "fresh_candidate_count": 60,
+        "rejected_count": 60,
+        "accepted_count": 0,
+        "fault_count": 0
+      },
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "pexels",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "accepted",
+        "reason": "candidate_accepted",
+        "query_count": 2,
+        "candidate_count": 160,
+        "fresh_candidate_count": 160,
+        "rejected_count": 151,
+        "accepted_count": 1,
+        "fault_count": 0
+      }
+    ],
+    "image_hotlink": false,
+    "image_category_fallback": false,
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "stock",
+        "reason": "stock_rejection",
+        "outcome": "all_policy_rejected",
+        "provider_fault": false,
+        "provider_attempted": true,
+        "provider_succeeded": true,
+        "provider": "unsplash"
+      }
+    ],
+    "image": "/images/articles/eurooppalaisen-raideleveyden-suunnittelua-esitetaan-laajenne-hero.jpg",
+    "image_thumb": "/images/articles/eurooppalaisen-raideleveyden-suunnittelua-esitetaan-laajenne-thumb.jpg",
+    "image_alt": "Eurooppalaisen raideleveyden suunnittelua esitetään laajennettavaksi Pohjois-Suomessa",
+    "image_credit": "Photo by Atlantic Ambience on Pexels",
+    "image_source_url": "https://www.pexels.com/photo/coins-on-documents-12932891/",
+    "image_caption": "",
+    "image_source": "pexels",
+    "image_source_type": "stock",
+    "image_decision_reason": "metadata matches charts, documents, on",
+    "image_visual_intent": {
+      "subject": "pohjois-suomessa raideleveyden esitetään suomessa laajennettavaksi",
+      "setting": "business, finance, offices, documents, charts, or economy",
+      "season_time": "neutral",
+      "must_have": [],
+      "must_not": [
+        "generic person portrait or lookalike"
+      ],
+      "stock_ok": true,
+      "generated_ok": true,
+      "safety_mode": "illustration_only",
+      "style_preference": "editorial illustration preferred for unsafe specifics"
+    },
+    "image_visual_brief": {
+      "acceptable_concepts": [
+        "pohjois-suomessa raideleveyden esitetään suomessa laajennettavaksi",
+        "business, finance, offices, documents, charts, or economy"
+      ],
+      "hard_forbidden_implications": [
+        "generic person portrait or lookalike"
+      ],
+      "intent": {
+        "subject": "pohjois-suomessa raideleveyden esitetään suomessa laajennettavaksi",
+        "setting": "business, finance, offices, documents, charts, or economy",
+        "season_time": "neutral",
+        "must_have": [],
+        "must_not": [
+          "generic person portrait or lookalike"
+        ],
+        "stock_ok": true,
+        "generated_ok": true,
+        "safety_mode": "illustration_only",
+        "style_preference": "editorial illustration preferred for unsafe specifics"
+      },
+      "prompt_version": "image-flow-v2-2026-07-03"
+    },
+    "image_concept": "business finance economy",
+    "image_query": "business finance economy",
+    "image_candidate_id": "12932891",
+    "image_candidate_url": "https://www.pexels.com/photo/coins-on-documents-12932891/",
+    "image_visual_judge_score": 49,
+    "image_accepted_reasons": [
+      "metadata matches charts, documents, on"
+    ],
+    "image_rejected_reasons": [],
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_decision": {
+      "source": "pexels",
+      "query": "business finance economy",
+      "concept": "business finance economy",
+      "accepted": true,
+      "score": 65,
+      "candidate_id": "12932891",
+      "source_url": "https://www.pexels.com/photo/coins-on-documents-12932891/",
+      "visual_judge_score": 49,
+      "visual_judge_reasons": [
+        "visual metadata supports concept 'business, finance, offices, documents, charts, or economy'"
+      ],
+      "reasons": [
+        "metadata matches charts, documents, on"
+      ],
+      "prompt_version": "image-flow-v2-2026-07-03"
+    },
+    "image_quality_score": 65,
+    "image_placeholder": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQDBQb/xAAgEAABBAICAwEAAAAAAAAAAAABAAIDERIhBDEiQWHB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgED/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oADAMBAAIRAxEAPwDQ8mYRsJHTTv8AUtNyMcJOozQN6rfddpvlxg5EEimlx+0qjmsDMSwuGbvO3XeiVVbTBmHGRxyDGvB2CD6QpIRhDG27po2UJbDL/9k="
+  },
+  "image_enriched_at": "2026-09-01T19:57:02.514347+00:00",
+  "image_enrichment": {
+    "image": "/images/articles/eurooppalaisen-raideleveyden-suunnittelua-esitetaan-laajenne-hero.jpg",
+    "image_thumb": "/images/articles/eurooppalaisen-raideleveyden-suunnittelua-esitetaan-laajenne-thumb.jpg",
+    "image_category_fallback": false,
+    "image_source": "pexels",
+    "image_source_type": "stock",
+    "image_decision_reason": "metadata matches charts, documents, on",
+    "image_concept": "business finance economy",
+    "image_query": "business finance economy",
+    "image_candidate_id": "12932891",
+    "image_candidate_url": "https://www.pexels.com/photo/coins-on-documents-12932891/",
+    "image_visual_judge_score": 49,
+    "image_accepted_reasons": [
+      "metadata matches charts, documents, on"
+    ],
+    "image_rejected_reasons": [],
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_provider_results": [
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "unsplash",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "all_policy_rejected",
+        "reason": "all_fresh_candidates_rejected",
+        "query_count": 2,
+        "candidate_count": 60,
+        "fresh_candidate_count": 60,
+        "rejected_count": 60,
+        "accepted_count": 0,
+        "fault_count": 0
+      },
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "pexels",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "accepted",
+        "reason": "candidate_accepted",
+        "query_count": 2,
+        "candidate_count": 160,
+        "fresh_candidate_count": 160,
+        "rejected_count": 151,
+        "accepted_count": 1,
+        "fault_count": 0
+      }
+    ],
+    "image_generation_terminal": null,
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "stock",
+        "reason": "stock_rejection",
+        "outcome": "all_policy_rejected",
+        "provider_fault": false,
+        "provider_attempted": true,
+        "provider_succeeded": true,
+        "provider": "unsplash"
+      }
+    ]
+  },
+  "published_at": "2026-09-01T20:01:00.913987+00:00",
+  "created_files": [
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-09-01-eurooppalaisen-raideleveyden-suunnittelua-esitetaan-laajenne.md"
+  ],
+  "category_trace": {
+    "packet_id": "20260901T194316Z_6addece58f",
+    "decisions": {
+      "guard": "Talous",
+      "writer": "Talous",
+      "publisher": "Talous"
+    },
+    "disagreement": false
   }
 }
