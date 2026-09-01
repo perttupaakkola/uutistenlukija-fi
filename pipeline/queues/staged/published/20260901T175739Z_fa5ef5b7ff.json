@@ -265,6 +265,161 @@
         "url": "https://suomenmaa.fi/uutiset/yhdysvallat-teki-iskuja-iraniin-ensimmaista-kertaa-kuukauteen-iran-iski-yhdysvaltalaiskohteisiin"
       }
     ],
-    "source_url": "https://yle.fi/a/74-20212869/64-3-308140"
+    "source_url": "https://yle.fi/a/74-20212869/64-3-308140",
+    "image_provider_results": [
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "unsplash",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "accepted",
+        "reason": "candidate_accepted",
+        "query_count": 1,
+        "candidate_count": 30,
+        "fresh_candidate_count": 30,
+        "rejected_count": 27,
+        "accepted_count": 1,
+        "fault_count": 0
+      }
+    ],
+    "image": "https://images.unsplash.com/photo-1719691462526-0ab8120d7542?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyNXx8Ym9vayUyMGFuZCUyMHRlbGV2aXNpb24lMjBwcm9kdWN0aW9ufGVufDF8MHx8fDE3ODgyODU5NTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1719691462526-0ab8120d7542?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyNXx8Ym9vayUyMGFuZCUyMHRlbGV2aXNpb24lMjBwcm9kdWN0aW9ufGVufDF8MHx8fDE3ODgyODU5NTh8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Yhdysvallat iski Larakin saarelle – Iran ilmoitti ohjusiskuista Jordaniaan",
+    "image_credit": "Photo by Parastoo Maleki on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/a-television-sitting-on-top-of-a-shelf-filled-with-books-ORT8CtIFriE?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_source": "unsplash",
+    "image_source_type": "stock",
+    "image_decision_reason": "metadata matches a, on, television; retrieval hint matches television",
+    "image_visual_intent": {
+      "subject": "ohjusiskuista saarelle iran ilmoitti yhdysvallat",
+      "setting": "international context without implying a specific event scene",
+      "season_time": "neutral",
+      "must_have": [
+        "book, television, or screen production"
+      ],
+      "must_not": [
+        "generic person portrait or lookalike",
+        "realistic victim, crime, attack, or disaster scene"
+      ],
+      "stock_ok": true,
+      "generated_ok": true,
+      "safety_mode": "illustration_only",
+      "style_preference": "editorial illustration preferred for unsafe specifics"
+    },
+    "image_visual_brief": {
+      "acceptable_concepts": [
+        "book and television production",
+        "film studio equipment",
+        "open book cinema"
+      ],
+      "hard_forbidden_implications": [
+        "generic person portrait or lookalike",
+        "realistic victim, crime, attack, or disaster scene"
+      ],
+      "intent": {
+        "subject": "ohjusiskuista saarelle iran ilmoitti yhdysvallat",
+        "setting": "international context without implying a specific event scene",
+        "season_time": "neutral",
+        "must_have": [
+          "book, television, or screen production"
+        ],
+        "must_not": [
+          "generic person portrait or lookalike",
+          "realistic victim, crime, attack, or disaster scene"
+        ],
+        "stock_ok": true,
+        "generated_ok": true,
+        "safety_mode": "illustration_only",
+        "style_preference": "editorial illustration preferred for unsafe specifics"
+      },
+      "prompt_version": "image-flow-v2-2026-07-03"
+    },
+    "image_concept": "book and television production",
+    "image_query": "book and television production",
+    "image_candidate_id": "ORT8CtIFriE",
+    "image_candidate_url": "https://unsplash.com/photos/a-television-sitting-on-top-of-a-shelf-filled-with-books-ORT8CtIFriE?utm_source=uutistenlukija&utm_medium=referral",
+    "image_visual_judge_score": 47,
+    "image_accepted_reasons": [
+      "metadata matches a, on, television",
+      "retrieval hint matches television"
+    ],
+    "image_rejected_reasons": [],
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_decision": {
+      "source": "unsplash",
+      "query": "book and television production",
+      "concept": "book and television production",
+      "accepted": true,
+      "score": 66,
+      "candidate_id": "ORT8CtIFriE",
+      "source_url": "https://unsplash.com/photos/a-television-sitting-on-top-of-a-shelf-filled-with-books-ORT8CtIFriE?utm_source=uutistenlukija&utm_medium=referral",
+      "visual_judge_score": 47,
+      "visual_judge_reasons": [
+        "visual metadata supports concept 'book and television production'",
+        "visual metadata supports required cue 'book, television, or screen production'"
+      ],
+      "reasons": [
+        "metadata matches a, on, television",
+        "retrieval hint matches television"
+      ],
+      "prompt_version": "image-flow-v2-2026-07-03"
+    },
+    "image_quality_score": 66,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-09-01T18:05:59.643635+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1719691462526-0ab8120d7542?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyNXx8Ym9vayUyMGFuZCUyMHRlbGV2aXNpb24lMjBwcm9kdWN0aW9ufGVufDF8MHx8fDE3ODgyODU5NTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1719691462526-0ab8120d7542?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyNXx8Ym9vayUyMGFuZCUyMHRlbGV2aXNpb24lMjBwcm9kdWN0aW9ufGVufDF8MHx8fDE3ODgyODU5NTh8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false,
+    "image_source": "unsplash",
+    "image_source_type": "stock",
+    "image_decision_reason": "metadata matches a, on, television; retrieval hint matches television",
+    "image_concept": "book and television production",
+    "image_query": "book and television production",
+    "image_candidate_id": "ORT8CtIFriE",
+    "image_candidate_url": "https://unsplash.com/photos/a-television-sitting-on-top-of-a-shelf-filled-with-books-ORT8CtIFriE?utm_source=uutistenlukija&utm_medium=referral",
+    "image_visual_judge_score": 47,
+    "image_accepted_reasons": [
+      "metadata matches a, on, television",
+      "retrieval hint matches television"
+    ],
+    "image_rejected_reasons": [],
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_provider_results": [
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "unsplash",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "accepted",
+        "reason": "candidate_accepted",
+        "query_count": 1,
+        "candidate_count": 30,
+        "fresh_candidate_count": 30,
+        "rejected_count": 27,
+        "accepted_count": 1,
+        "fault_count": 0
+      }
+    ],
+    "image_generation_terminal": null,
+    "image_terminal_reasons": null
+  },
+  "published_at": "2026-09-01T18:09:53.837094+00:00",
+  "created_files": [
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-09-01-yhdysvallat-iski-larakin-saarelle-iran-ilmoitti-ohjusiskuist.md"
+  ],
+  "category_trace": {
+    "packet_id": "20260901T175739Z_fa5ef5b7ff",
+    "decisions": {
+      "guard": "Ulkomaat",
+      "writer": "Ulkomaat",
+      "publisher": "Ulkomaat"
+    },
+    "disagreement": false
   }
 }
