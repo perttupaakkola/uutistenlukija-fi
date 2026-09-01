@@ -223,5 +223,31 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20243697?origin=rss"
-  }
+  },
+  "publish_preflight_rejected_at": "2026-09-01T16:10:23.388364+00:00",
+  "publish_preflight_rejected": true,
+  "publish_preflight_feedback": {
+    "action": "reject",
+    "requires_monica_review": false,
+    "reasons": [
+      "category_disagreement"
+    ],
+    "categories": [
+      "Kotimaa",
+      "Ulkomaat",
+      "Kotimaa"
+    ],
+    "selected_source_urls": [
+      "https://yle.fi/a/74-20243697?origin=rss"
+    ],
+    "public_source_urls": [
+      "https://yle.fi/a/74-20243697?origin=rss"
+    ],
+    "hidden_source_urls": [],
+    "distinct_source_words": 283,
+    "article_words": 270,
+    "article_source_ratio": 0.9540636042402827,
+    "sensitive": true
+  },
+  "failure": "publish_preflight_rejected: category_disagreement"
 }
