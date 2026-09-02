@@ -714,13 +714,17 @@ def generate_images_for_articles(articles: List[Dict], max_total_sec: int = MAX_
                 judge_visual_candidate,
             )
             key_points = list(article.get("key_points") or [])
-            key_points.extend(article.get("tags") or [])
             brief = build_visual_brief(
                 title,
                 category,
                 summary=article.get("summary", "") or "",
                 key_points=key_points,
                 content=article.get("content", "") or "",
+                source_evidence=(
+                    article.get("source_text", "")
+                    or article.get("research", "")
+                    or ""
+                ),
             )
             intent = brief.intent.to_dict()
         except Exception as exc:

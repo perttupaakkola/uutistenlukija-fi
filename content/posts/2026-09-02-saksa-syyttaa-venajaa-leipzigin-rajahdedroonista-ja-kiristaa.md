@@ -22,23 +22,15 @@ journalist_note: |
   Saksan Venäjä-syyte on esitetty hallituksen kantana, epäiltyjä koskevat tiedot on attribuoitu Süddeutsche Zeitungille ja hybriditoimintaa koskevat arviot Matti Pesulle.
 content_type: "article"
 editorial_reviewed: true
-image: "/images/articles/saksa-syyttaa-venajaa-leipzigin-rajahdedroonista-ja-kiristaa-hero.jpg"
-image_thumb: "/images/articles/saksa-syyttaa-venajaa-leipzigin-rajahdedroonista-ja-kiristaa-thumb.jpg"
-image_placeholder: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYCAwX/xAAiEAABAgUEAwAAAAAAAAAAAAABAAIDBRESkQQTITJBcYH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAv/EABYRAQEBAAAAAAAAAAAAAAAAAAAREv/aAAwDAQACEQMRAD8A2jNoO+xjSCwg3OJAtPj4rRMdNuWbzA4ioq4cpVMR9Oxyog+sKNkN4mGmI4jMyhKoe+nY5QmyP//Z"
-image_alt: "Kuvituskuva uutiseen: Saksa syyttää Venäjää Leipzigin räjähdedroonista ja kiristää vastatoimia (saksa, venäjä)"
-image_credit: "Photo by Wolfgang Weiser on Pexels"
-image_source_url: "https://www.pexels.com/photo/commercial-airplane-on-the-runway-19116921/"
-image_source: "pexels"
-image_source_type: "stock"
-image_decision_reason: "metadata matches a, international, on; retrieval hint matches airport"
-image_concept: "primary_query"
-image_query: "Leipzig airport drone incident"
-image_candidate_id: "19116921"
-image_candidate_url: "https://www.pexels.com/photo/commercial-airplane-on-the-runway-19116921/"
-image_visual_judge_score: 49
-image_prompt_version: "image-flow-v2-2026-07-03"
-image_accepted_reasons_json: '["metadata matches a, international, on", "retrieval hint matches airport"]'
-image_category_fallback: false
+image: "/images/categories/ulkomaat.jpg"
+image_thumb: "/images/categories/ulkomaat.jpg"
+image_alt: "Ulkomaat-uutiset"
+image_credit: ""
+image_source_url: ""
+image_source: "category_fallback"
+image_source_type: "category_fallback"
+image_decision_reason: "safe category fallback after independent image audit"
+image_category_fallback: true
 reading_time: 2
 tags:
   - saksa

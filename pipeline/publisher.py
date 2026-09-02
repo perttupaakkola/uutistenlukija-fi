@@ -344,6 +344,7 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image_query = article.get("image_query", "")
     image_candidate_id = article.get("image_candidate_id", "")
     image_candidate_url = article.get("image_candidate_url", "")
+    image_asset_identity = article.get("image_asset_identity", "")
     image_visual_judge_score = article.get("image_visual_judge_score")
     image_provider = article.get("image_provider", "")
     image_model = article.get("image_model", "")
@@ -401,6 +402,7 @@ def _article_to_markdown(article: Dict, date: str) -> str:
     image_query_line = f'\nimage_query: "{_esc(str(image_query))}"' if image_query else ""
     image_candidate_id_line = f'\nimage_candidate_id: "{_esc(str(image_candidate_id))}"' if image_candidate_id else ""
     image_candidate_url_line = f'\nimage_candidate_url: "{_esc(str(image_candidate_url))}"' if image_candidate_url else ""
+    image_asset_identity_line = f'\nimage_asset_identity: "{_esc(str(image_asset_identity))}"' if image_asset_identity else ""
     image_visual_judge_score_line = (
         f"\nimage_visual_judge_score: {int(image_visual_judge_score)}"
         if image_visual_judge_score is not None and str(image_visual_judge_score).isdigit()
@@ -496,7 +498,7 @@ author: "{writer['name']}"
 author_id: "{writer['id']}"
 author_title: "{writer['title']}"
 author_bio: "{writer['bio']}"
-author_image: "{writer['image']}"{description_line}{summary_line}{summary_bullets_yaml}{key_points_yaml}{journalist_note_line}{content_type_line}{type_line}{editorial_reviewed_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{image_source_line}{image_source_type_line}{image_decision_reason_line}{image_concept_line}{image_query_line}{image_candidate_id_line}{image_candidate_url_line}{image_visual_judge_score_line}{image_provider_line}{image_model_line}{image_prompt_version_line}{image_accepted_reasons_line}{image_rejected_reasons_line}{image_category_fallback_line}{trending_line}{reading_time_line}{tags_yaml}{keywords_yaml}{source_name_line}{source_url_line}{source_domain_line}{source_attributions_yaml}
+author_image: "{writer['image']}"{description_line}{summary_line}{summary_bullets_yaml}{key_points_yaml}{journalist_note_line}{content_type_line}{type_line}{editorial_reviewed_line}{image_line}{image_thumb_line}{image_placeholder_line}{image_alt_line}{image_caption_line}{image_credit_line}{image_source_url_line}{image_source_line}{image_source_type_line}{image_decision_reason_line}{image_concept_line}{image_query_line}{image_candidate_id_line}{image_candidate_url_line}{image_asset_identity_line}{image_visual_judge_score_line}{image_provider_line}{image_model_line}{image_prompt_version_line}{image_accepted_reasons_line}{image_rejected_reasons_line}{image_category_fallback_line}{trending_line}{reading_time_line}{tags_yaml}{keywords_yaml}{source_name_line}{source_url_line}{source_domain_line}{source_attributions_yaml}
 draft: false
 ---
 

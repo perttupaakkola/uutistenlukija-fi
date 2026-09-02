@@ -10,6 +10,7 @@ try:
     from . import pexels, unsplash
     from . import image_query
     from . import image_candidate_guard
+    from . import image_state
     from . import audit_image_flow
     from .image_provider_result import search_photos
 except ImportError:  # pragma: no cover
@@ -17,6 +18,7 @@ except ImportError:  # pragma: no cover
     import unsplash
     import image_query
     import image_candidate_guard
+    import image_state
     import audit_image_flow
     from image_provider_result import search_photos
 
@@ -72,14 +74,14 @@ class ImageQueryTokenTests(unittest.TestCase):
                                      outcome="search_succeeded", reason="response_received")
         unsplash_empty = search_photos([], provider="unsplash", attempted=True, succeeded=True,
                                        outcome="search_succeeded", reason="response_received")
-        with patch("image_query.generate_image_query", return_value="Atomfall television series"), \
+        with patch.object(image_query, "generate_image_query", return_value="Atomfall television series"), \
              patch.object(pexels, "PEXELS_API_KEY", "key"), \
              patch.object(pexels, "_search_pexels", return_value=pexels_empty) as pexels_search, \
              patch.object(pexels, "time") as pexels_time:
             self.assertIsNone(pexels.fetch_image_for_article(title, "Kulttuuri", inter_request_delay=0))
             pexels_time.sleep.assert_not_called()
 
-        with patch("image_query.generate_image_query", return_value="Atomfall television series"), \
+        with patch.object(image_query, "generate_image_query", return_value="Atomfall television series"), \
              patch.object(unsplash, "UNSPLASH_ACCESS_KEY", "key"), \
              patch.object(unsplash, "_search", return_value=unsplash_empty) as unsplash_search, \
              patch.object(unsplash, "time") as unsplash_time:
@@ -102,7 +104,7 @@ class ImageQueryTokenTests(unittest.TestCase):
             "public opinion survey ballot",
         )
 
-    def test_fetch_uses_sanitized_political_poll_query(self) -> None:
+    def test_fetch_blocks_named_political_poll_before_provider_search(self) -> None:
         title = "Kysely: Orpon hallitus saa kansalaisilta hallituskautensa heikoimman arvion"
         body = "Yli puolet vastaajista arvioi Petteri Orpon hallituksen onnistuneen huonosti."
 
@@ -110,18 +112,18 @@ class ImageQueryTokenTests(unittest.TestCase):
                                      outcome="search_succeeded", reason="response_received")
         unsplash_empty = search_photos([], provider="unsplash", attempted=True, succeeded=True,
                                        outcome="search_succeeded", reason="response_received")
-        with patch("image_query.generate_image_query", return_value="Petteri Orpo politician portrait"), \
+        with patch.object(image_query, "generate_image_query", return_value="Petteri Orpo politician portrait"), \
              patch.object(pexels, "PEXELS_API_KEY", "key"), \
              patch.object(pexels, "_search_pexels", return_value=pexels_empty) as pexels_search:
             self.assertIsNone(pexels.fetch_image_for_article(title, "Kotimaa", content=body, inter_request_delay=0))
 
-        with patch("image_query.generate_image_query", return_value="Petteri Orpo politician portrait"), \
+        with patch.object(image_query, "generate_image_query", return_value="Petteri Orpo politician portrait"), \
              patch.object(unsplash, "UNSPLASH_ACCESS_KEY", "key"), \
              patch.object(unsplash, "_search", return_value=unsplash_empty) as unsplash_search:
             self.assertIsNone(unsplash.fetch_image_for_article(title, "Kotimaa", content=body, inter_request_delay=0))
 
-        pexels_search.assert_any_call("public opinion survey ballot")
-        unsplash_search.assert_any_call("public opinion survey ballot")
+        pexels_search.assert_not_called()
+        unsplash_search.assert_not_called()
 
     def test_sunny_weather_finland_rejects_snowy_unsplash_candidate(self) -> None:
         title = "Loppuviikon sää viilenee, mutta aurinkoa riittää monin paikoin"
@@ -238,7 +240,7 @@ class ImageQueryTokenTests(unittest.TestCase):
         )
 
         self.assertFalse(accepted)
-        self.assertIn("boat-repair", reason)
+        self.assertIn("named-person", reason)
 
     def test_visual_brief_lists_concepts_and_forbidden_implications(self) -> None:
         brief = image_candidate_guard.build_visual_brief(
@@ -319,7 +321,7 @@ class ImageQueryTokenTests(unittest.TestCase):
             )
         )
 
-    def test_named_carpenter_story_accepts_non_person_workshop_image(self) -> None:
+    def test_named_carpenter_story_uses_safe_fallback_even_for_workshop_image(self) -> None:
         title = "Puuseppäyrittäjä Jukka Korpi haastaa halvan Ikea-keittiön mielikuvan"
         summary = "Kalannin Kaluste valmistaa erikoismittaisia keittiökalusteita."
         content = (
@@ -334,32 +336,36 @@ class ImageQueryTokenTests(unittest.TestCase):
             primary_query="kalannin kaluste valmistaa erikoismittaiset kalusteet",
         )
 
-        self.assertIn("carpentry workshop", [query for query, _, _ in queries])
-        query, concept, brief = queries[0]
+        self.assertEqual(queries, [])
+        brief = image_candidate_guard.build_visual_brief(
+            title,
+            "Talous",
+            summary=summary,
+            content=content,
+        )
+        self.assertTrue(brief.intent.named_person)
+        self.assertFalse(brief.intent.stock_ok)
         self.assertEqual(brief.intent.safety_mode, "illustration_only")
-        accepted, _ = image_candidate_guard.filter_image_candidates(
+        accepted, decisions = image_candidate_guard.filter_image_candidates(
             [{
                 "id": "carpentry-workshop",
                 "alt": "carpentry workshop with wooden kitchen cabinets and woodworking tools",
                 "photo_page": "https://example.com/carpentry-workshop",
             }],
-            query=query,
+            query="carpentry workshop",
             title=title,
             summary=summary,
             content=content,
             provider="pexels",
             brief=brief,
-            concept=concept,
+            concept="carpentry workshop",
             return_decisions=True,
         )
 
-        self.assertEqual(len(accepted), 1)
-        self.assertFalse(
-            any(
-                isinstance(row, dict) and "person" in str(row.get("alt", ""))
-                for row in accepted
-            )
-        )
+        self.assertEqual(accepted, [])
+        self.assertEqual(len(decisions), 1)
+        self.assertFalse(decisions[0].accepted)
+        self.assertIn("named-person", "; ".join(decisions[0].reasons))
 
     def test_ambiguous_terms_do_not_activate_unrelated_visual_concepts(self) -> None:
         intent = image_candidate_guard.build_image_intent(
@@ -433,26 +439,26 @@ class ImageQueryTokenTests(unittest.TestCase):
         title = "Loppuviikon sää viilenee, mutta aurinkoa riittää monin paikoin"
         snowy = {
             "id": "Ah_hBiz2-ao",
-            "url_regular": "https://images.unsplash.com/snowy",
-            "url_full": "https://images.unsplash.com/snowy-full",
-            "url_small": "https://images.unsplash.com/snowy-small",
-            "url_thumb": "https://images.unsplash.com/snowy-thumb",
+            "url_regular": "https://images.unsplash.com/photo-1500000000000-snowyforest?w=1080",
+            "url_full": "https://images.unsplash.com/photo-1500000000000-snowyforest?w=2400",
+            "url_small": "https://images.unsplash.com/photo-1500000000000-snowyforest?w=400",
+            "url_thumb": "https://images.unsplash.com/photo-1500000000000-snowyforest?w=200",
             "download_location": "https://api.unsplash.com/photos/Ah_hBiz2-ao/download",
             "photographer": "Aiva Apsite",
-            "photographer_url": "https://unsplash.com/@aiva",
-            "photo_page": "https://unsplash.com/photos/the-sun-is-setting-over-a-snowy-forest-Ah_hBiz2-ao",
+            "photographer_url": "https://unsplash.com/@aiva?utm_source=uutistenlukija&utm_medium=referral",
+            "photo_page": "https://unsplash.com/photos/the-sun-is-setting-over-a-snowy-forest-Ah_hBiz2-ao?utm_source=uutistenlukija&utm_medium=referral",
             "alt": "the sun is setting over a snowy forest",
         }
         sunny = {
             "id": "sunny-field",
-            "url_regular": "https://images.unsplash.com/sunny",
-            "url_full": "https://images.unsplash.com/sunny-full",
-            "url_small": "https://images.unsplash.com/sunny-small",
-            "url_thumb": "https://images.unsplash.com/sunny-thumb",
+            "url_regular": "https://images.unsplash.com/photo-1700000000000-sunnyfield?w=1080",
+            "url_full": "https://images.unsplash.com/photo-1700000000000-sunnyfield?w=2400",
+            "url_small": "https://images.unsplash.com/photo-1700000000000-sunnyfield?w=400",
+            "url_thumb": "https://images.unsplash.com/photo-1700000000000-sunnyfield?w=200",
             "download_location": "https://api.unsplash.com/photos/sunny-field/download",
             "photographer": "Test Photographer",
-            "photographer_url": "https://unsplash.com/@test",
-            "photo_page": "https://unsplash.com/photos/sunny-blue-sky-green-trees",
+            "photographer_url": "https://unsplash.com/@test?utm_source=uutistenlukija&utm_medium=referral",
+            "photo_page": "https://unsplash.com/photos/sunny-blue-sky-green-trees-sunny-field?utm_source=uutistenlukija&utm_medium=referral",
             "alt": "sunny blue sky over green trees",
         }
 
@@ -460,12 +466,12 @@ class ImageQueryTokenTests(unittest.TestCase):
             [snowy, sunny], provider="unsplash", attempted=True, succeeded=True,
             outcome="search_succeeded", reason="response_received",
         )
-        with patch("image_query.generate_image_query", return_value="sunny weather Finland"), \
+        with patch.object(image_query, "generate_image_query", return_value="sunny weather Finland"), \
              patch.object(unsplash, "UNSPLASH_ACCESS_KEY", "key"), \
              patch.object(unsplash, "_search", return_value=photos), \
-             patch.object(unsplash, "_trigger_download") as trigger_download, \
-             patch("image_state.is_image_used", return_value=False), \
-             patch("image_state.mark_image_used"), \
+             patch.object(unsplash, "_trigger_download", return_value=(True, True)) as trigger_download, \
+             patch.object(image_state, "is_image_used", return_value=False), \
+             patch.object(image_state, "mark_image_used"), \
              patch.object(unsplash, "time") as unsplash_time:
             result = unsplash.fetch_image_for_article(
                 title,
@@ -475,7 +481,10 @@ class ImageQueryTokenTests(unittest.TestCase):
             )
 
         self.assertIsNotNone(result)
-        self.assertEqual(result["url"], "https://images.unsplash.com/sunny")
+        self.assertEqual(
+            result["url"],
+            "https://images.unsplash.com/photo-1700000000000-sunnyfield?w=1080",
+        )
         trigger_download.assert_called_once()
         self.assertEqual(trigger_download.call_args.args[0]["id"], "sunny-field")
         unsplash_time.sleep.assert_called_once_with(0)
@@ -484,16 +493,16 @@ class ImageQueryTokenTests(unittest.TestCase):
         title = "Loppuviikon sää viilenee, mutta aurinkoa riittää monin paikoin"
         snowy = {
             "id": 1,
-            "url": "https://images.pexels.com/photos/snowy-forest.jpeg",
-            "thumb_url": "https://images.pexels.com/photos/snowy-forest-thumb.jpeg",
+            "url": "https://images.pexels.com/photos/1/pexels-photo-1.jpeg?w=1920",
+            "thumb_url": "https://images.pexels.com/photos/1/pexels-photo-1.jpeg?w=400",
             "photographer": "Winter Photo",
             "photographer_url": "https://www.pexels.com/@winter",
             "pexels_url": "https://www.pexels.com/photo/the-sun-is-setting-over-a-snowy-forest-1/",
         }
         sunny = {
             "id": 2,
-            "url": "https://images.pexels.com/photos/sunny-sky.jpeg",
-            "thumb_url": "https://images.pexels.com/photos/sunny-sky-thumb.jpeg",
+            "url": "https://images.pexels.com/photos/2/pexels-photo-2.jpeg?w=1920",
+            "thumb_url": "https://images.pexels.com/photos/2/pexels-photo-2.jpeg?w=400",
             "photographer": "Sunny Photo",
             "photographer_url": "https://www.pexels.com/@sunny",
             "pexels_url": "https://www.pexels.com/photo/sunny-blue-sky-over-green-trees-2/",
@@ -503,11 +512,11 @@ class ImageQueryTokenTests(unittest.TestCase):
             [snowy, sunny], provider="pexels", attempted=True, succeeded=True,
             outcome="search_succeeded", reason="response_received",
         )
-        with patch("image_query.generate_image_query", return_value="sunny weather Finland"), \
+        with patch.object(image_query, "generate_image_query", return_value="sunny weather Finland"), \
              patch.object(pexels, "PEXELS_API_KEY", "key"), \
              patch.object(pexels, "_search_pexels", return_value=photos), \
-             patch("image_state.is_image_used", return_value=False), \
-             patch("image_state.mark_image_used"):
+             patch.object(image_state, "is_image_used", return_value=False), \
+             patch.object(image_state, "mark_image_used"):
             result = pexels.fetch_image_for_article(
                 title,
                 "Kotimaa",
@@ -517,7 +526,10 @@ class ImageQueryTokenTests(unittest.TestCase):
             )
 
         self.assertIsNotNone(result)
-        self.assertEqual(result["url"], "https://images.pexels.com/photos/sunny-sky.jpeg")
+        self.assertEqual(
+            result["url"],
+            "https://images.pexels.com/photos/2/pexels-photo-2.jpeg?w=1920",
+        )
 
 
 if __name__ == "__main__":

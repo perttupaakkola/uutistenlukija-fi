@@ -25,6 +25,7 @@ from pathlib import Path
 import shutil
 from statistics import median
 from typing import Any
+from urllib.parse import urlsplit
 
 PIPELINE_DIR = Path(__file__).resolve().parent
 PROJECT_DIR = PIPELINE_DIR.parent
@@ -1867,11 +1868,156 @@ def quarantine_preflight_rejected_outbox(
 
 
 def article_needs_image(article: dict) -> bool:
-    return not article.get("image") or bool(article.get("image_category_fallback"))
+    return not article_has_provider_image(article)
 
 
 def article_has_provider_image(article: dict) -> bool:
-    return bool(article.get("image")) and not bool(article.get("image_category_fallback"))
+    if not article.get("image") or article.get("image_category_fallback"):
+        return False
+    source = str(article.get("image_source") or "").strip().lower()
+    if source == "generated":
+        terminal = article.get(GENERATION_TERMINAL_FIELD)
+        return bool(
+            isinstance(terminal, dict)
+            and terminal.get("outcome") == "accepted"
+            and terminal.get("reason") == "accepted"
+            and terminal.get("provider_succeeded")
+            and not terminal.get("provider_fault")
+            and _trusted_local_article_artifact(article.get("image"))
+            and _trusted_local_article_artifact(article.get("image_thumb"))
+        )
+
+    provider = _stock_provider_for_image(article)
+    if not provider:
+        return False
+    receipt = get_provider_result(article, provider)
+    return bool(
+        receipt
+        and receipt.get("outcome") == "accepted"
+        and int(receipt.get("accepted_count") or 0) > 0
+        and _stock_artifact_matches_receipt(article, provider, receipt)
+    )
+
+
+_IMAGE_ARTIFACT_FIELDS = (
+    "image", "image_thumb", "image_alt", "image_credit", "image_source_url",
+    "image_caption", "image_placeholder", "image_source", "image_decision",
+    "image_hotlink",
+    "image_source_type", "image_decision_reason", "image_visual_intent",
+    "image_visual_brief", "image_quality_score", "image_generated_fallback",
+    "image_concept", "image_query", "image_candidate_id", "image_candidate_url",
+    "image_asset_identity", "image_visual_judge_score", "image_accepted_reasons",
+    "image_rejected_reasons", "image_provider", "image_model",
+    "image_prompt_version", "image_generation_prompt", "image_category_fallback",
+)
+
+
+def _trusted_https_asset(value: object, host: str) -> bool:
+    try:
+        parsed = urlsplit(str(value or "").strip())
+        port = parsed.port
+    except ValueError:
+        return False
+    return bool(
+        parsed.scheme.lower() == "https"
+        and (parsed.hostname or "").lower() == host
+        and port in {None, 443}
+        and parsed.username is None
+        and parsed.password is None
+        and bool(parsed.path.strip("/"))
+        and not parsed.fragment
+    )
+
+
+def _trusted_local_article_artifact(value: object) -> bool:
+    return bool(re.fullmatch(
+        r"/images/articles/[A-Za-z0-9][A-Za-z0-9._-]*",
+        str(value or "").strip(),
+    ))
+
+
+def _stock_artifact_matches_receipt(
+    article: dict[str, Any],
+    provider: str,
+    receipt: dict[str, Any],
+) -> bool:
+    hero = article.get("image")
+    thumb = article.get("image_thumb")
+    delivery_mode = str(receipt.get("delivery_mode") or "").strip().lower()
+    if provider == "unsplash":
+        return bool(
+            delivery_mode == "hotlink"
+            and _trusted_https_asset(hero, "images.unsplash.com")
+            and _trusted_https_asset(thumb, "images.unsplash.com")
+        )
+    if provider == "pexels" and delivery_mode == "download":
+        return bool(
+            _trusted_local_article_artifact(hero)
+            and _trusted_local_article_artifact(thumb)
+        )
+    if provider == "pexels" and delivery_mode == "hotlink":
+        return bool(
+            _trusted_https_asset(hero, "images.pexels.com")
+            and _trusted_https_asset(thumb, "images.pexels.com")
+        )
+    return False
+
+
+def _stock_provider_for_image(article: dict[str, Any]) -> str:
+    source = str(article.get("image_source") or "").strip().lower()
+    if source in {"unsplash", "pexels"}:
+        return source
+    if source and source not in {"stock", "provider"}:
+        return ""
+
+    for key in ("image", "image_thumb", "image_candidate_url", "image_source_url"):
+        value = str(article.get(key) or "").strip().lower()
+        if re.match(r"^https://images\.unsplash\.com(?::443)?/", value):
+            return "unsplash"
+        if re.match(r"^https://images\.pexels\.com(?::443)?/", value):
+            return "pexels"
+
+    rows = article.get(IMAGE_PROVIDER_RESULTS_FIELD)
+    if isinstance(rows, list):
+        for row in reversed(rows):
+            if not isinstance(row, dict):
+                continue
+            provider = str(row.get("provider") or "").strip().lower()
+            if provider in {"unsplash", "pexels"}:
+                return provider
+    return ""
+
+
+def _clear_image_artifact(article: dict[str, Any]) -> None:
+    for key in _IMAGE_ARTIFACT_FIELDS:
+        article.pop(key, None)
+
+
+def _reset_inbound_image_authorization(article: dict[str, Any]) -> None:
+    """Remove self-asserted image evidence before this enrichment invocation."""
+    article.pop(IMAGE_PROVIDER_RESULTS_FIELD, None)
+    article.pop(GENERATION_TERMINAL_FIELD, None)
+    article.pop(IMAGE_TERMINAL_REASONS_FIELD, None)
+    if not article.get("image_category_fallback"):
+        _clear_image_artifact(article)
+
+
+def _discard_unverified_stock_image(article: dict[str, Any], _provider: str) -> None:
+    if (
+        article.get("image")
+        and not article.get("image_category_fallback")
+        and not article_has_provider_image(article)
+    ):
+        _clear_image_artifact(article)
+
+
+def _discard_unverified_generated_image(article: dict[str, Any]) -> None:
+    if (
+        article.get("image")
+        and not article.get("image_category_fallback")
+        and not article_has_provider_image(article)
+    ):
+        _clear_image_artifact(article)
 
 
 def capture_stock_provider_result(article: dict[str, Any], provider: str) -> dict[str, Any]:
@@ -1890,12 +2036,41 @@ def capture_stock_provider_result(article: dict[str, Any], provider: str) -> dic
 
     outcome = str(result.get("outcome") or "unknown")
     if outcome == "accepted":
-        return result
+        if article_has_provider_image(article):
+            return result
+        result = build_provider_result(
+            provider=provider,
+            attempted=bool(result.get("attempted")),
+            succeeded=bool(result.get("succeeded")),
+            outcome="provider_fault",
+            reason="provider_artifact_mismatch",
+            query_count=int(result.get("query_count") or 0),
+            candidate_count=int(result.get("candidate_count") or 0),
+            fresh_candidate_count=int(result.get("fresh_candidate_count") or 0),
+            rejected_count=int(result.get("rejected_count") or 0),
+            fault_count=int(result.get("fault_count") or 0) + 1,
+            semantic_accepted=bool(result.get("semantic_accepted")),
+            attribution_complete=bool(result.get("attribution_complete")),
+            delivery_mode=str(result.get("delivery_mode") or "none"),
+            delivery_attempted=bool(result.get("delivery_attempted")),
+            delivery_succeeded=bool(result.get("delivery_succeeded")),
+            thumbnail_delivery_succeeded=bool(result.get("thumbnail_delivery_succeeded")),
+            tracking_attempted=bool(result.get("tracking_attempted")),
+            tracking_succeeded=bool(result.get("tracking_succeeded")),
+        )
+        set_provider_result(article, result)
+        outcome = "provider_fault"
     if outcome == "no_key":
         reason = REASON_KEY_UNAVAILABLE
     elif outcome == "backoff":
         reason = REASON_BACKOFF
-    elif outcome in {"provider_fault", "partial_fault"}:
+    elif outcome in {
+        "provider_fault",
+        "partial_fault",
+        "delivery_failed",
+        "tracking_failed",
+        "attribution_incomplete",
+    }:
         reason = REASON_PROVIDER_RUNTIME
     else:
         reason = REASON_STOCK_REJECTION
@@ -1911,7 +2086,59 @@ def capture_stock_provider_result(article: dict[str, Any], provider: str) -> dic
             provider_succeeded=bool(result.get("succeeded")),
         ),
     )
+    _discard_unverified_stock_image(article, provider)
     return result
+
+
+def _snapshot_provider_receipts(
+    articles: list[dict[str, Any]],
+    provider: str,
+) -> dict[int, tuple[Any, dict[str, Any] | None]]:
+    """Remember receipt state so a partial batch exception faults only pending rows."""
+    return {
+        id(article): (
+            article.get(IMAGE_PROVIDER_RESULTS_FIELD),
+            get_provider_result(article, provider),
+        )
+        for article in articles
+    }
+
+
+def _provider_receipt_completed_after_snapshot(
+    article: dict[str, Any],
+    provider: str,
+    snapshots: dict[int, tuple[Any, dict[str, Any] | None]],
+) -> bool:
+    rows_before, result_before = snapshots.get(id(article), (None, None))
+    result_now = get_provider_result(article, provider)
+    if result_now is None:
+        return False
+    rows_now = article.get(IMAGE_PROVIDER_RESULTS_FIELD)
+    return rows_now is not rows_before or result_now != result_before
+
+
+def _snapshot_generation_terminals(
+    articles: list[dict[str, Any]],
+) -> dict[int, tuple[Any, dict[str, Any] | None]]:
+    snapshots: dict[int, tuple[Any, dict[str, Any] | None]] = {}
+    for article in articles:
+        terminal = article.get(GENERATION_TERMINAL_FIELD)
+        snapshots[id(article)] = (
+            terminal,
+            dict(terminal) if isinstance(terminal, dict) else None,
+        )
+    return snapshots
+
+
+def _generation_terminal_completed_after_snapshot(
+    article: dict[str, Any],
+    snapshots: dict[int, tuple[Any, dict[str, Any] | None]],
+) -> bool:
+    terminal_before, value_before = snapshots.get(id(article), (None, None))
+    terminal_now = article.get(GENERATION_TERMINAL_FIELD)
+    if not isinstance(terminal_now, dict):
+        return False
+    return terminal_now is not terminal_before or terminal_now != value_before
 
 
 def provider_outcome_counts(articles: list[dict[str, Any]]) -> dict[str, dict[str, int]]:
@@ -1941,16 +2168,7 @@ def generation_terminal_counts(articles: list[dict[str, Any]]) -> dict[str, int]
 
 def clear_image_fallback(article: dict) -> None:
     if article.get("image_category_fallback"):
-        for key in [
-            "image", "image_thumb", "image_alt", "image_credit", "image_source_url",
-            "image_caption", "image_placeholder", "image_source", "image_decision",
-            "image_source_type", "image_decision_reason", "image_visual_intent",
-            "image_visual_brief", "image_quality_score", "image_generated_fallback",
-            "image_concept", "image_query", "image_candidate_id", "image_candidate_url",
-            "image_visual_judge_score", "image_accepted_reasons", "image_rejected_reasons",
-            "image_provider", "image_model", "image_prompt_version", "image_generation_prompt",
-        ]:
-            article.pop(key, None)
+        _clear_image_artifact(article)
         article["image_category_fallback"] = False
 
 
@@ -1979,6 +2197,11 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
     load_env_files()
     sync_image_provider_keys()
 
+    # Merged/source-provided evidence cannot self-authorize an image. Only
+    # receipts and terminals produced below during this invocation are trusted.
+    for article in articles:
+        _reset_inbound_image_authorization(article)
+
     unsplash_count = 0
     pexels_count = 0
     generated_count = 0
@@ -2002,6 +2225,7 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
                 ))
                 capture_stock_provider_result(article, "unsplash")
         else:
+            receipt_snapshots = _snapshot_provider_receipts(missing, "unsplash")
             try:
                 before = sum(1 for article in articles if article_has_provider_image(article))
                 for article in missing:
@@ -2011,21 +2235,28 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
                 unsplash_count = max(0, after - before)
             except Exception as exc:  # noqa: BLE001 - keep publisher alive on provider faults
                 log(f"images: unsplash failed — {exc.__class__.__name__}")
+                after = sum(1 for article in articles if article_has_provider_image(article))
+                unsplash_count = max(0, after - before)
                 receipts = []
                 for article in missing:
-                    set_provider_result(article, build_provider_result(
-                        provider="unsplash", attempted=False, succeeded=False,
-                        outcome="provider_fault", reason="provider_wrapper_exception",
-                        fault_count=1,
-                    ))
+                    if not _provider_receipt_completed_after_snapshot(
+                        article,
+                        "unsplash",
+                        receipt_snapshots,
+                    ):
+                        set_provider_result(article, build_provider_result(
+                            provider="unsplash", attempted=False, succeeded=False,
+                            outcome="provider_fault", reason="provider_wrapper_exception",
+                            fault_count=1,
+                        ))
                     receipts.append(capture_stock_provider_result(article, "unsplash"))
                 record_failure("unsplash")
             else:
                 receipts = [capture_stock_provider_result(article, "unsplash") for article in missing]
-                if any(bool(receipt.get("succeeded")) for receipt in receipts):
-                    record_success("unsplash")
-                elif any(bool(receipt.get("fault_count")) for receipt in receipts):
+                if any(bool(receipt.get("fault_count")) for receipt in receipts):
                     record_failure("unsplash")
+                elif any(bool(receipt.get("succeeded")) for receipt in receipts):
+                    record_success("unsplash")
 
     missing = [a for a in articles if article_needs_image(a)]
     if missing and not os.environ.get("PEXELS_API_KEY", ""):
@@ -2046,6 +2277,7 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
                 ))
                 capture_stock_provider_result(article, "pexels")
         else:
+            receipt_snapshots = _snapshot_provider_receipts(missing, "pexels")
             try:
                 before = sum(1 for article in articles if article_has_provider_image(article))
                 for article in missing:
@@ -2055,21 +2287,28 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
                 pexels_count = max(0, after - before)
             except Exception as exc:  # noqa: BLE001 - keep publisher alive on provider faults
                 log(f"images: pexels failed — {exc.__class__.__name__}")
+                after = sum(1 for article in articles if article_has_provider_image(article))
+                pexels_count = max(0, after - before)
                 receipts = []
                 for article in missing:
-                    set_provider_result(article, build_provider_result(
-                        provider="pexels", attempted=False, succeeded=False,
-                        outcome="provider_fault", reason="provider_wrapper_exception",
-                        fault_count=1,
-                    ))
+                    if not _provider_receipt_completed_after_snapshot(
+                        article,
+                        "pexels",
+                        receipt_snapshots,
+                    ):
+                        set_provider_result(article, build_provider_result(
+                            provider="pexels", attempted=False, succeeded=False,
+                            outcome="provider_fault", reason="provider_wrapper_exception",
+                            fault_count=1,
+                        ))
                     receipts.append(capture_stock_provider_result(article, "pexels"))
                 record_failure("pexels")
             else:
                 receipts = [capture_stock_provider_result(article, "pexels") for article in missing]
-                if any(bool(receipt.get("succeeded")) for receipt in receipts):
-                    record_success("pexels")
-                elif any(bool(receipt.get("fault_count")) for receipt in receipts):
+                if any(bool(receipt.get("fault_count")) for receipt in receipts):
                     record_failure("pexels")
+                elif any(bool(receipt.get("succeeded")) for receipt in receipts):
+                    record_success("pexels")
 
     missing = [a for a in articles if article_needs_image(a)]
     if missing and os.environ.get("KIE_API_KEY", ""):
@@ -2086,26 +2325,36 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
                     ),
                 )
         else:
+            terminal_snapshots = _snapshot_generation_terminals(missing)
             try:
                 before = sum(1 for a in articles if a.get("image_source") == "generated" and article_has_provider_image(a))
                 for article in missing:
                     clear_image_fallback(article)
                 generate_images_for_articles(missing, max_total_sec=180)
+                for article in missing:
+                    _discard_unverified_generated_image(article)
                 after = sum(1 for a in articles if a.get("image_source") == "generated" and article_has_provider_image(a))
                 generated_count = max(0, after - before)
             except Exception as exc:  # noqa: BLE001 - keep publisher alive on provider faults
                 log(f"images: generated fallback runtime fault — {exc.__class__.__name__}")
                 for article in missing:
-                    set_generation_terminal(
+                    if not _generation_terminal_completed_after_snapshot(
                         article,
-                        build_image_terminal_reason(
-                            stage="generated",
-                            reason=REASON_PROVIDER_RUNTIME,
-                            outcome="provider_fault",
-                            provider_fault=True,
-                            provider_attempted=True,
-                        ),
-                    )
+                        terminal_snapshots,
+                    ):
+                        set_generation_terminal(
+                            article,
+                            build_image_terminal_reason(
+                                stage="generated",
+                                reason=REASON_PROVIDER_RUNTIME,
+                                outcome="provider_fault",
+                                provider_fault=True,
+                                provider_attempted=True,
+                            ),
+                        )
+                    _discard_unverified_generated_image(article)
+                after = sum(1 for a in articles if a.get("image_source") == "generated" and article_has_provider_image(a))
+                generated_count = max(0, after - before)
                 record_failure("kie_api")
             else:
                 terminals = [
@@ -2145,7 +2394,7 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
             reason=f"final category fallback after {terminal_reason}",
         ))
 
-    image_count = sum(1 for a in articles if a.get("image") and not a.get("image_category_fallback"))
+    image_count = sum(1 for a in articles if article_has_provider_image(a))
     missing_count = sum(1 for a in articles if article_needs_image(a))
     category_fallback_count = sum(1 for a in articles if a.get("image_category_fallback"))
     return {
@@ -2624,6 +2873,7 @@ def _cmd_publish(args: argparse.Namespace, cycle: dict[str, Any]) -> int:
                     "image_query": enriched.get("image_query"),
                     "image_candidate_id": enriched.get("image_candidate_id"),
                     "image_candidate_url": enriched.get("image_candidate_url"),
+                    "image_asset_identity": enriched.get("image_asset_identity"),
                     "image_visual_judge_score": enriched.get("image_visual_judge_score"),
                     "image_accepted_reasons": enriched.get("image_accepted_reasons"),
                     "image_rejected_reasons": enriched.get("image_rejected_reasons"),

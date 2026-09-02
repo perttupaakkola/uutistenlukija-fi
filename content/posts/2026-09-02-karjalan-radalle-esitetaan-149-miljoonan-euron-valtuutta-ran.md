@@ -22,22 +22,15 @@ journalist_note: |
   Työllisyysvaikutus on esitetty ministerin karkeana arviona, ei toteutuneena tai riippumattomasti varmennettuna työpaikkamääränä.
 content_type: "article"
 editorial_reviewed: true
-image: "https://images.unsplash.com/photo-1511803471753-da23b1a92d4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw1fHx3aW50ZXIlMjB3ZWF0aGVyfGVufDF8MHx8fDE3ODgzMTcxMDd8MA&ixlib=rb-4.1.0&q=80&w=1080"
-image_thumb: "https://images.unsplash.com/photo-1511803471753-da23b1a92d4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw1fHx3aW50ZXIlMjB3ZWF0aGVyfGVufDF8MHx8fDE3ODgzMTcxMDd8MA&ixlib=rb-4.1.0&q=80&w=400"
-image_alt: "Kuvituskuva uutiseen: Karjalan radalle esitetään 149 miljoonan euron valtuutta – Ranne arvioi hankkeen tuovan työtä yli tuhannelle (karjalan rata, rautatiehankkeet)"
-image_credit: "Photo by Tim Gouw on Unsplash"
-image_source_url: "https://unsplash.com/photos/brown-wooden-fence-filled-with-snow-during-winter-rxLGSOM0e3U?utm_source=uutistenlukija&utm_medium=referral"
-image_source: "unsplash"
-image_source_type: "stock"
-image_decision_reason: "metadata matches winter; retrieval hint matches winter; weather metadata matches visual intent"
-image_concept: "winter weather"
-image_query: "winter weather"
-image_candidate_id: "rxLGSOM0e3U"
-image_candidate_url: "https://unsplash.com/photos/brown-wooden-fence-filled-with-snow-during-winter-rxLGSOM0e3U?utm_source=uutistenlukija&utm_medium=referral"
-image_visual_judge_score: 47
-image_prompt_version: "image-flow-v2-2026-07-03"
-image_accepted_reasons_json: '["metadata matches winter", "retrieval hint matches winter", "weather metadata matches visual intent"]'
-image_category_fallback: false
+image: "/images/categories/kotimaa.jpg"
+image_thumb: "/images/categories/kotimaa.jpg"
+image_alt: "Kotimaa-uutiset"
+image_credit: ""
+image_source_url: ""
+image_source: "category_fallback"
+image_source_type: "category_fallback"
+image_decision_reason: "safe category fallback after independent image audit"
+image_category_fallback: true
 reading_time: 2
 tags:
   - karjalan rata
