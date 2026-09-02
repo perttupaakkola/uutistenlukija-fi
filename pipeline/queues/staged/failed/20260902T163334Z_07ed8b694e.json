@@ -237,5 +237,37 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20244145?origin=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-09-02T16:47:05.423383+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260902T163334Z_07ed8b694e",
+    "category": "Talous",
+    "selected_source_words": 285,
+    "selected_source_blocks": 3,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 7.94,
+    "quality_reasons": [
+      "language borderline Finnish signal (8.0%)",
+      "length under target (257 words)",
+      "missing: image",
+      "unsourced numbers",
+      "central unsourced number(s): 350miljoona",
+      "unsourced_numbers: 350miljoona"
+    ],
+    "hard_fails": [
+      "central unsourced number(s): 350miljoona"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 350miljoona"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_thin_source",
+    "fail_closed": true,
+    "source_backed": false,
+    "article_words": 257,
+    "title": "VM: Budjettiratkaisut heikentävät julkista taloutta 350 miljoonalla eurolla vuonna 2027"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (8.0%); length under target (257 words); missing: image; unsourced numbers; central unsourced number(s): 350miljoona; unsourced_numbers: 350miljoona"
 }
