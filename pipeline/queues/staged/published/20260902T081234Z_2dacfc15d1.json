@@ -235,6 +235,204 @@
         "url": "https://yle.fi/a/74-20241594?origin=rss"
       }
     ],
-    "source_url": "https://yle.fi/a/74-20241594?origin=rss"
+    "source_url": "https://yle.fi/a/74-20241594?origin=rss",
+    "image_provider_results": [
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "unsplash",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "all_policy_rejected",
+        "reason": "all_fresh_candidates_rejected",
+        "query_count": 2,
+        "candidate_count": 42,
+        "fresh_candidate_count": 42,
+        "rejected_count": 42,
+        "accepted_count": 0,
+        "fault_count": 0
+      },
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "pexels",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "accepted",
+        "reason": "candidate_accepted",
+        "query_count": 2,
+        "candidate_count": 160,
+        "fresh_candidate_count": 160,
+        "rejected_count": 159,
+        "accepted_count": 1,
+        "fault_count": 0
+      }
+    ],
+    "image_hotlink": false,
+    "image_category_fallback": false,
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "stock",
+        "reason": "stock_rejection",
+        "outcome": "all_policy_rejected",
+        "provider_fault": false,
+        "provider_attempted": true,
+        "provider_succeeded": true,
+        "provider": "unsplash"
+      }
+    ],
+    "image": "/images/articles/malmin-kerhotilaepaily-ei-etene-oikeuteen-omistaja-kertoi-po-hero.jpg",
+    "image_thumb": "/images/articles/malmin-kerhotilaepaily-ei-etene-oikeuteen-omistaja-kertoi-po-thumb.jpg",
+    "image_alt": "Malmin kerhotilaepäily ei etene oikeuteen – omistaja kertoi poliisille väkivallasta",
+    "image_credit": "Photo by Daniel Shipilov on Pexels",
+    "image_source_url": "https://www.pexels.com/photo/scenic-aerial-view-of-snowy-finnish-landscape-36099396/",
+    "image_caption": "",
+    "image_source": "pexels",
+    "image_source_type": "stock",
+    "image_decision_reason": "metadata matches finnish, landscape; retrieval hint matches finland, landscape",
+    "image_visual_intent": {
+      "subject": "kertoi etene kerhotilaepäily malmin väkivallasta",
+      "setting": "Finnish public life or neutral Finnish landscape",
+      "season_time": "neutral",
+      "must_have": [],
+      "must_not": [
+        "generic person portrait or lookalike"
+      ],
+      "stock_ok": true,
+      "generated_ok": true,
+      "safety_mode": "illustration_only",
+      "style_preference": "editorial illustration preferred for unsafe specifics"
+    },
+    "image_visual_brief": {
+      "acceptable_concepts": [
+        "kertoi etene kerhotilaepäily malmin väkivallasta",
+        "Finnish public life or neutral Finnish landscape"
+      ],
+      "hard_forbidden_implications": [
+        "generic person portrait or lookalike"
+      ],
+      "intent": {
+        "subject": "kertoi etene kerhotilaepäily malmin väkivallasta",
+        "setting": "Finnish public life or neutral Finnish landscape",
+        "season_time": "neutral",
+        "must_have": [],
+        "must_not": [
+          "generic person portrait or lookalike"
+        ],
+        "stock_ok": true,
+        "generated_ok": true,
+        "safety_mode": "illustration_only",
+        "style_preference": "editorial illustration preferred for unsafe specifics"
+      },
+      "prompt_version": "image-flow-v2-2026-07-03"
+    },
+    "image_concept": "finland landscape city",
+    "image_query": "finland landscape city",
+    "image_candidate_id": "36099396",
+    "image_candidate_url": "https://www.pexels.com/photo/scenic-aerial-view-of-snowy-finnish-landscape-36099396/",
+    "image_visual_judge_score": 49,
+    "image_accepted_reasons": [
+      "metadata matches finnish, landscape",
+      "retrieval hint matches finland, landscape"
+    ],
+    "image_rejected_reasons": [],
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_decision": {
+      "source": "pexels",
+      "query": "finland landscape city",
+      "concept": "finland landscape city",
+      "accepted": true,
+      "score": 62,
+      "candidate_id": "36099396",
+      "source_url": "https://www.pexels.com/photo/scenic-aerial-view-of-snowy-finnish-landscape-36099396/",
+      "visual_judge_score": 49,
+      "visual_judge_reasons": [
+        "visual metadata supports concept 'Finnish public life or neutral Finnish landscape'"
+      ],
+      "reasons": [
+        "metadata matches finnish, landscape",
+        "retrieval hint matches finland, landscape"
+      ],
+      "prompt_version": "image-flow-v2-2026-07-03"
+    },
+    "image_quality_score": 62,
+    "image_placeholder": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIEAQX/xAAiEAACAQMCBwAAAAAAAAAAAAABAgAEBSERMwMUMXFygZH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAA//EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8Ao57jL0Zfk1bjVltFcDtiREnOY9Lur4mWyJOgK24abi+zCLCMhtf/2Q=="
+  },
+  "image_enriched_at": "2026-09-02T08:17:14.078923+00:00",
+  "image_enrichment": {
+    "image": "/images/articles/malmin-kerhotilaepaily-ei-etene-oikeuteen-omistaja-kertoi-po-hero.jpg",
+    "image_thumb": "/images/articles/malmin-kerhotilaepaily-ei-etene-oikeuteen-omistaja-kertoi-po-thumb.jpg",
+    "image_category_fallback": false,
+    "image_source": "pexels",
+    "image_source_type": "stock",
+    "image_decision_reason": "metadata matches finnish, landscape; retrieval hint matches finland, landscape",
+    "image_concept": "finland landscape city",
+    "image_query": "finland landscape city",
+    "image_candidate_id": "36099396",
+    "image_candidate_url": "https://www.pexels.com/photo/scenic-aerial-view-of-snowy-finnish-landscape-36099396/",
+    "image_visual_judge_score": 49,
+    "image_accepted_reasons": [
+      "metadata matches finnish, landscape",
+      "retrieval hint matches finland, landscape"
+    ],
+    "image_rejected_reasons": [],
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_provider_results": [
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "unsplash",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "all_policy_rejected",
+        "reason": "all_fresh_candidates_rejected",
+        "query_count": 2,
+        "candidate_count": 42,
+        "fresh_candidate_count": 42,
+        "rejected_count": 42,
+        "accepted_count": 0,
+        "fault_count": 0
+      },
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "pexels",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "accepted",
+        "reason": "candidate_accepted",
+        "query_count": 2,
+        "candidate_count": 160,
+        "fresh_candidate_count": 160,
+        "rejected_count": 159,
+        "accepted_count": 1,
+        "fault_count": 0
+      }
+    ],
+    "image_generation_terminal": null,
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "stock",
+        "reason": "stock_rejection",
+        "outcome": "all_policy_rejected",
+        "provider_fault": false,
+        "provider_attempted": true,
+        "provider_succeeded": true,
+        "provider": "unsplash"
+      }
+    ]
+  },
+  "published_at": "2026-09-02T08:21:10.745455+00:00",
+  "created_files": [
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-09-02-malmin-kerhotilaepaily-ei-etene-oikeuteen-omistaja-kertoi-po.md"
+  ],
+  "category_trace": {
+    "packet_id": "20260902T081234Z_2dacfc15d1",
+    "decisions": {
+      "guard": "Kotimaa",
+      "writer": "Kotimaa",
+      "publisher": "Kotimaa"
+    },
+    "disagreement": false
   }
 }

@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-09-02T07:21:24+00:00",
+  "generated_at": "2026-09-02T08:21:11+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 9,
+    "published": 10,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-09-02T07:18:26.822698+00:00",
+    "last_published_ts": "2026-09-02T08:17:14.079024+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -41,10 +41,14 @@
   "trending": [
     [
       "euroa",
-      8
+      10
     ],
     [
       "mukaansa",
+      9
+    ],
+    [
+      "johtaja",
       8
     ],
     [
@@ -53,10 +57,6 @@
     ],
     [
       "lindroos",
-      7
-    ],
-    [
-      "hallitus",
       7
     ]
   ],
@@ -83,7 +83,7 @@
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 0,
     "publishableRemainingCycles": 0,
-    "recentPublishedPackets": 9,
+    "recentPublishedPackets": 10,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
