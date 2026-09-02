@@ -242,5 +242,31 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20244281?origin=rss"
-  }
+  },
+  "publish_preflight_rejected_at": "2026-09-02T17:16:37.357119+00:00",
+  "publish_preflight_rejected": true,
+  "publish_preflight_feedback": {
+    "action": "reject",
+    "requires_monica_review": false,
+    "reasons": [
+      "category_disagreement"
+    ],
+    "categories": [
+      "Kotimaa",
+      "Kotimaa",
+      "Tiede"
+    ],
+    "selected_source_urls": [
+      "https://yle.fi/a/74-20244281?origin=rss"
+    ],
+    "public_source_urls": [
+      "https://yle.fi/a/74-20244281?origin=rss"
+    ],
+    "hidden_source_urls": [],
+    "distinct_source_words": 299,
+    "article_words": 266,
+    "article_source_ratio": 0.8896321070234113,
+    "sensitive": false
+  },
+  "failure": "publish_preflight_rejected: category_disagreement"
 }
