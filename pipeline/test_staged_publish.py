@@ -14,12 +14,12 @@ try:
     from . import staged_publish
     from . import publisher
     from . import image_gen
-    from .image_candidate_guard import category_fallback_fields, stock_decision_fields
+    from .image_candidate_guard import PROMPT_VERSION, category_fallback_fields, stock_decision_fields
 except ImportError:  # pragma: no cover - direct execution from pipeline cwd
     import staged_publish
     import publisher
     import image_gen
-    from image_candidate_guard import category_fallback_fields, stock_decision_fields
+    from image_candidate_guard import PROMPT_VERSION, category_fallback_fields, stock_decision_fields
 
 
 def _mock_stock_receipt(article: dict[str, Any], *, provider: str | None = None, accepted: bool = False) -> None:
@@ -36,6 +36,14 @@ def _mock_stock_receipt(article: dict[str, Any], *, provider: str | None = None,
         fresh_candidate_count=1,
         rejected_count=0 if accepted else 1,
         accepted_count=1 if accepted else 0,
+        semantic_accepted=accepted,
+        attribution_complete=accepted,
+        delivery_mode=("hotlink" if provider == "unsplash" else "download") if accepted else "none",
+        delivery_attempted=accepted,
+        delivery_succeeded=accepted,
+        thumbnail_delivery_succeeded=accepted,
+        tracking_attempted=accepted and provider == "unsplash",
+        tracking_succeeded=accepted and provider == "unsplash",
     ))
 
 
@@ -604,7 +612,9 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
         def fake_unsplash(batch, delay=0):
             batch[0]["image"] = "https://images.unsplash.com/photo-test"
+            batch[0]["image_thumb"] = "https://images.unsplash.com/photo-test-thumb"
             batch[0]["image_alt"] = "Kuvaton artikkeli"
+            batch[0]["image_source"] = "unsplash"
             batch[0]["image_category_fallback"] = False
             _mock_stock_receipt(batch[0], provider="unsplash", accepted=True)
             return batch
@@ -620,6 +630,348 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(summary["missing"], 0)
         self.assertEqual(articles[0]["image"], "https://images.unsplash.com/photo-test")
         success.assert_called_with("unsplash")
+
+    def test_invalid_stock_receipt_cannot_retain_image_or_stop_next_provider(self) -> None:
+        articles = [{"title": "Kuvaton artikkeli", "category": "Talous", "content": "sisältö"}]
+
+        def impossible_unsplash_acceptance(batch, delay=0):
+            batch[0].update({
+                "image": "https://images.unsplash.com/photo-unverified?w=1080",
+                "image_thumb": "https://images.unsplash.com/photo-unverified?w=400",
+                "image_source": "unsplash",
+                "image_source_url": "https://unsplash.com/photos/unverified",
+                "image_category_fallback": False,
+            })
+            # Missing semantic, attribution, delivery, and tracking facts: the
+            # receipt normalizer must turn this impossible acceptance into a fault.
+            staged_publish.set_provider_result(batch[0], staged_publish.build_provider_result(
+                provider="unsplash",
+                attempted=True,
+                succeeded=True,
+                outcome="accepted",
+                reason="candidate_accepted",
+                accepted_count=1,
+            ))
+            return batch
+
+        def pexels_rescue(batch, delay=0):
+            self.assertNotIn("image", batch[0])
+            batch[0].update({
+                "image": "/images/articles/pexels-rescue.jpg",
+                "image_thumb": "/images/articles/pexels-rescue-thumb.jpg",
+                "image_source": "pexels",
+                "image_category_fallback": False,
+            })
+            _mock_stock_receipt(batch[0], provider="pexels", accepted=True)
+            return batch
+
+        with patch.dict(staged_publish.os.environ, {
+            "UNSPLASH_ACCESS_KEY": "key",
+            "PEXELS_API_KEY": "key",
+            "KIE_API_KEY": "",
+        }, clear=False), patch.object(
+            staged_publish,
+            "should_skip",
+            return_value=(False, None),
+        ), patch.object(
+            staged_publish,
+            "unsplash_fetch_images",
+            side_effect=impossible_unsplash_acceptance,
+        ), patch.object(
+            staged_publish,
+            "pexels_fetch_images",
+            side_effect=pexels_rescue,
+        ) as pexels_fetch:
+            summary = staged_publish.enrich_images_for_articles(
+                articles,
+                unsplash_delay=0,
+                pexels_delay=0,
+            )
+
+        pexels_fetch.assert_called_once()
+        self.assertEqual(articles[0]["image"], "/images/articles/pexels-rescue.jpg")
+        self.assertEqual(summary["images"], 1)
+        self.assertEqual(summary["unsplash"], 0)
+        self.assertEqual(summary["pexels"], 1)
+        self.assertEqual(summary["missing"], 0)
+        unsplash_receipt = staged_publish.get_provider_result(articles[0], "unsplash")
+        self.assertEqual(unsplash_receipt["outcome"], "provider_fault")
+        self.assertEqual(unsplash_receipt["reason"], "invalid_acceptance_receipt")
+        self.assertEqual(unsplash_receipt["accepted_count"], 0)
+
+    def test_unknown_remote_image_cannot_bypass_verified_enrichment(self) -> None:
+        articles = [{
+            "title": "Lähteestä yhdistetty artikkeli",
+            "category": "Kotimaa",
+            "image": "https://attacker.invalid/unvetted.jpg",
+            "image_thumb": "https://attacker.invalid/unvetted-thumb.jpg",
+            "image_source_url": "https://attacker.invalid/source",
+            "image_candidate_id": "unvetted-candidate",
+            "image_category_fallback": False,
+        }]
+
+        with patch.dict(staged_publish.os.environ, {
+            "UNSPLASH_ACCESS_KEY": "",
+            "PEXELS_API_KEY": "",
+            "KIE_API_KEY": "",
+        }, clear=False):
+            summary = staged_publish.enrich_images_for_articles(
+                articles,
+                unsplash_delay=0,
+                pexels_delay=0,
+            )
+
+        self.assertEqual(summary["images"], 0)
+        self.assertEqual(summary["category_fallback"], 1)
+        self.assertEqual(summary["missing"], 1)
+        self.assertTrue(articles[0]["image_category_fallback"])
+        self.assertEqual(articles[0]["image_source"], "category_fallback")
+        self.assertEqual(articles[0]["image"], "/images/categories/kotimaa.jpg")
+        self.assertNotIn("image_candidate_id", articles[0])
+        self.assertNotIn("attacker.invalid", str(articles[0]))
+
+    def test_stock_receipt_cannot_bless_artifact_from_wrong_origin(self) -> None:
+        articles = [{"title": "Väärään alkuperään sidottu kuva", "category": "Kotimaa"}]
+
+        def wrong_origin_unsplash(batch, delay=0):
+            batch[0].update({
+                "image": "https://attacker.invalid/unvetted.jpg",
+                "image_thumb": "https://attacker.invalid/unvetted-thumb.jpg",
+                "image_source": "unsplash",
+                "image_category_fallback": False,
+            })
+            _mock_stock_receipt(batch[0], provider="unsplash", accepted=True)
+            return batch
+
+        def pexels_rescue(batch, delay=0):
+            self.assertNotIn("image", batch[0])
+            batch[0].update({
+                "image": "/images/articles/origin-rescue.jpg",
+                "image_thumb": "/images/articles/origin-rescue-thumb.jpg",
+                "image_source": "pexels",
+                "image_category_fallback": False,
+            })
+            _mock_stock_receipt(batch[0], provider="pexels", accepted=True)
+            return batch
+
+        with patch.dict(staged_publish.os.environ, {
+            "UNSPLASH_ACCESS_KEY": "key",
+            "PEXELS_API_KEY": "key",
+            "KIE_API_KEY": "",
+        }, clear=False), patch.object(
+            staged_publish,
+            "should_skip",
+            return_value=(False, None),
+        ), patch.object(
+            staged_publish,
+            "unsplash_fetch_images",
+            side_effect=wrong_origin_unsplash,
+        ), patch.object(
+            staged_publish,
+            "pexels_fetch_images",
+            side_effect=pexels_rescue,
+        ) as pexels_fetch:
+            summary = staged_publish.enrich_images_for_articles(
+                articles,
+                unsplash_delay=0,
+                pexels_delay=0,
+            )
+
+        pexels_fetch.assert_called_once()
+        self.assertEqual(summary["images"], 1)
+        self.assertEqual(summary["unsplash"], 0)
+        self.assertEqual(summary["pexels"], 1)
+        self.assertEqual(articles[0]["image"], "/images/articles/origin-rescue.jpg")
+        self.assertNotIn("attacker.invalid", str(articles[0]))
+        receipt = staged_publish.get_provider_result(articles[0], "unsplash")
+        self.assertEqual(receipt["outcome"], "provider_fault")
+        self.assertEqual(receipt["reason"], "provider_artifact_mismatch")
+        self.assertEqual(receipt["accepted_count"], 0)
+
+    def test_inbound_complete_stock_receipt_cannot_self_authorize_image(self) -> None:
+        article = {
+            "title": "Monican toimittama kuva",
+            "category": "Kotimaa",
+            "image": "https://images.unsplash.com/photo-inbound?w=1080",
+            "image_thumb": "https://images.unsplash.com/photo-inbound?w=400",
+            "image_source": "unsplash",
+            "image_candidate_id": "inbound",
+            "image_category_fallback": False,
+            image_gen.IMAGE_TERMINAL_REASONS_FIELD: [{
+                "schema": image_gen.IMAGE_TERMINAL_SCHEMA,
+                "stage": "stock",
+                "provider": "unsplash",
+                "reason": "forged_acceptance",
+                "outcome": "accepted",
+                "provider_fault": False,
+                "provider_attempted": True,
+                "provider_succeeded": True,
+            }],
+        }
+        _mock_stock_receipt(article, provider="unsplash", accepted=True)
+        articles = [article]
+
+        def current_unsplash(batch, delay=0):
+            self.assertNotIn("image", batch[0])
+            self.assertIsNone(staged_publish.get_provider_result(batch[0], "unsplash"))
+            self.assertNotIn(image_gen.GENERATION_TERMINAL_FIELD, batch[0])
+            self.assertNotIn(image_gen.IMAGE_TERMINAL_REASONS_FIELD, batch[0])
+            batch[0].update({
+                "image": "https://images.unsplash.com/photo-current?w=1080",
+                "image_thumb": "https://images.unsplash.com/photo-current?w=400",
+                "image_source": "unsplash",
+                "image_candidate_id": "current",
+                "image_category_fallback": False,
+            })
+            _mock_stock_receipt(batch[0], provider="unsplash", accepted=True)
+            return batch
+
+        with patch.dict(staged_publish.os.environ, {
+            "UNSPLASH_ACCESS_KEY": "key",
+            "PEXELS_API_KEY": "",
+            "KIE_API_KEY": "",
+        }, clear=False), patch.object(
+            staged_publish,
+            "should_skip",
+            return_value=(False, None),
+        ), patch.object(
+            staged_publish,
+            "unsplash_fetch_images",
+            side_effect=current_unsplash,
+        ) as fetch:
+            summary = staged_publish.enrich_images_for_articles(articles, unsplash_delay=0)
+
+        fetch.assert_called_once()
+        self.assertEqual(summary["images"], 1)
+        self.assertEqual(summary["unsplash"], 1)
+        self.assertEqual(article["image_candidate_id"], "current")
+        self.assertNotIn("forged_acceptance", str(article))
+
+    def test_inbound_generated_terminal_cannot_self_authorize_local_paths(self) -> None:
+        article = {
+            "title": "Monican generoitu kuva",
+            "category": "Kotimaa",
+            "image": "/images/articles/inbound-generated.jpg",
+            "image_thumb": "/images/articles/inbound-generated.jpg",
+            "image_source": "generated",
+            "image_candidate_id": "/images/articles/inbound-generated.jpg",
+            "image_category_fallback": False,
+        }
+        image_gen.set_generation_terminal(
+            article,
+            image_gen.build_image_terminal_reason(
+                stage="generated",
+                reason=image_gen.REASON_ACCEPTED,
+                outcome="accepted",
+                provider_attempted=True,
+                provider_succeeded=True,
+            ),
+        )
+        article[image_gen.IMAGE_TERMINAL_REASONS_FIELD][0]["forged"] = True
+        articles = [article]
+
+        def current_unsplash(batch, delay=0):
+            self.assertNotIn("image", batch[0])
+            self.assertNotIn(image_gen.GENERATION_TERMINAL_FIELD, batch[0])
+            self.assertNotIn(image_gen.IMAGE_TERMINAL_REASONS_FIELD, batch[0])
+            batch[0].update({
+                "image": "https://images.unsplash.com/photo-current-generated?w=1080",
+                "image_thumb": "https://images.unsplash.com/photo-current-generated?w=400",
+                "image_source": "unsplash",
+                "image_candidate_id": "current-generated",
+                "image_category_fallback": False,
+            })
+            _mock_stock_receipt(batch[0], provider="unsplash", accepted=True)
+            return batch
+
+        with patch.dict(staged_publish.os.environ, {
+            "UNSPLASH_ACCESS_KEY": "key",
+            "PEXELS_API_KEY": "",
+            "KIE_API_KEY": "",
+        }, clear=False), patch.object(
+            staged_publish,
+            "should_skip",
+            return_value=(False, None),
+        ), patch.object(
+            staged_publish,
+            "unsplash_fetch_images",
+            side_effect=current_unsplash,
+        ) as fetch:
+            summary = staged_publish.enrich_images_for_articles(articles, unsplash_delay=0)
+
+        fetch.assert_called_once()
+        self.assertEqual(summary["images"], 1)
+        self.assertEqual(summary["unsplash"], 1)
+        self.assertEqual(article["image_candidate_id"], "current-generated")
+        self.assertNotIn("forged", str(article))
+
+    def test_stock_batch_exception_preserves_completed_receipts_images_and_count(self) -> None:
+        cases = (
+            (
+                "unsplash",
+                "unsplash_fetch_images",
+                {"UNSPLASH_ACCESS_KEY": "key", "PEXELS_API_KEY": "", "KIE_API_KEY": ""},
+                "https://images.unsplash.com/photo-accepted",
+            ),
+            (
+                "pexels",
+                "pexels_fetch_images",
+                {"UNSPLASH_ACCESS_KEY": "", "PEXELS_API_KEY": "key", "KIE_API_KEY": ""},
+                "/images/articles/pexels-accepted.jpg",
+            ),
+        )
+        for provider, fetch_name, environment, accepted_image in cases:
+            with self.subTest(provider=provider):
+                articles = [
+                    {"title": "Hyväksytty kuva", "category": "Kotimaa"},
+                    {"title": "Valmis hylkäys", "category": "Kotimaa"},
+                    {"title": "Kesken jäänyt", "category": "Kotimaa"},
+                ]
+
+                def partial_stock(batch, delay=0):
+                    batch[0]["image"] = accepted_image
+                    batch[0]["image_thumb"] = accepted_image
+                    batch[0]["image_source"] = provider
+                    batch[0]["image_category_fallback"] = False
+                    _mock_stock_receipt(batch[0], provider=provider, accepted=True)
+                    _mock_stock_receipt(batch[1], provider=provider, accepted=False)
+                    raise RuntimeError("synthetic batch failure")
+
+                with patch.dict(staged_publish.os.environ, environment, clear=False), \
+                     patch.object(staged_publish, "should_skip", return_value=(False, None)), \
+                     patch.object(staged_publish, fetch_name, side_effect=partial_stock), \
+                     patch.object(staged_publish, "record_failure") as failure:
+                    summary = staged_publish.enrich_images_for_articles(
+                        articles,
+                        unsplash_delay=0,
+                        pexels_delay=0,
+                    )
+
+                self.assertEqual(summary["images"], 1)
+                self.assertEqual(summary[provider], 1)
+                self.assertEqual(articles[0]["image"], accepted_image)
+                self.assertEqual(
+                    staged_publish.get_provider_result(articles[0], provider)["outcome"],
+                    "accepted",
+                )
+                self.assertEqual(
+                    staged_publish.get_provider_result(articles[0], provider)["accepted_count"],
+                    1,
+                )
+                self.assertEqual(
+                    staged_publish.get_provider_result(articles[1], provider)["outcome"],
+                    "all_policy_rejected",
+                )
+                self.assertEqual(
+                    staged_publish.get_provider_result(articles[2], provider)["outcome"],
+                    "provider_fault",
+                )
+                self.assertEqual(summary["provider_outcomes"][provider], {
+                    "accepted": 1,
+                    "all_policy_rejected": 1,
+                    "provider_fault": 1,
+                })
+                failure.assert_called_once_with(provider)
 
     def test_enrich_images_does_not_mark_policy_rejection_as_provider_failure(self) -> None:
         articles = [{"title": "Kuvaton artikkeli", "category": "Talous", "content": "sisältö"}]
@@ -638,6 +990,76 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(summary["unsplash"], 0)
         self.assertEqual(summary["category_fallback"], 1)
         failure.assert_not_called()
+
+    def test_stock_compliance_failures_are_provider_runtime_terminals(self) -> None:
+        for outcome in ("delivery_failed", "tracking_failed", "attribution_incomplete"):
+            with self.subTest(outcome=outcome):
+                article: dict[str, Any] = {}
+                staged_publish.set_provider_result(
+                    article,
+                    staged_publish.build_provider_result(
+                        provider="unsplash",
+                        attempted=True,
+                        succeeded=True,
+                        outcome=outcome,
+                        reason=f"synthetic_{outcome}",
+                        fault_count=1,
+                    ),
+                )
+
+                staged_publish.capture_stock_provider_result(article, "unsplash")
+
+                terminals = article[image_gen.IMAGE_TERMINAL_REASONS_FIELD]
+                self.assertEqual(len(terminals), 1)
+                self.assertEqual(terminals[0]["outcome"], outcome)
+                self.assertEqual(terminals[0]["reason"], image_gen.REASON_PROVIDER_RUNTIME)
+                self.assertTrue(terminals[0]["provider_fault"])
+
+    def test_stock_compliance_failure_updates_provider_backoff_as_failure(self) -> None:
+        articles = [{"title": "Kuvaton artikkeli", "category": "Kotimaa"}]
+
+        def compliance_failure(batch, delay=0):
+            batch[0].update(category_fallback_fields(
+                "Kotimaa",
+                reason="provider delivery failed",
+            ))
+            staged_publish.set_provider_result(
+                batch[0],
+                staged_publish.build_provider_result(
+                    provider="unsplash",
+                    attempted=True,
+                    succeeded=True,
+                    outcome="delivery_failed",
+                    reason="hero_or_thumbnail_delivery_unavailable",
+                    fault_count=1,
+                ),
+            )
+            return batch
+
+        with patch.dict(staged_publish.os.environ, {
+            "UNSPLASH_ACCESS_KEY": "key",
+            "PEXELS_API_KEY": "",
+            "KIE_API_KEY": "",
+        }, clear=False), patch.object(
+            staged_publish,
+            "should_skip",
+            return_value=(False, None),
+        ), patch.object(
+            staged_publish,
+            "unsplash_fetch_images",
+            side_effect=compliance_failure,
+        ), patch.object(staged_publish, "record_failure") as failure, patch.object(
+            staged_publish,
+            "record_success",
+        ) as success:
+            staged_publish.enrich_images_for_articles(
+                articles,
+                unsplash_delay=0,
+                pexels_delay=0,
+            )
+
+        failure.assert_called_once_with("unsplash")
+        success.assert_not_called()
 
     def test_enrich_images_records_each_stock_provider_policy_attempt(self) -> None:
         articles = [{"title": "Kuvaton artikkeli", "category": "Talous", "content": "sisältö"}]
@@ -683,6 +1105,8 @@ class StagedPublishMetricsTests(unittest.TestCase):
         def fake_pexels(batch, delay=0):
             self.assertNotIn("image", batch[0])
             batch[0]["image"] = "/images/articles/fallback-hero.jpg"
+            batch[0]["image_thumb"] = "/images/articles/fallback-thumb.jpg"
+            batch[0]["image_source"] = "pexels"
             batch[0]["image_category_fallback"] = False
             _mock_stock_receipt(batch[0], provider="pexels", accepted=True)
             return batch
@@ -724,6 +1148,16 @@ class StagedPublishMetricsTests(unittest.TestCase):
             batch[0]["image_decision_reason"] = "stock candidates unavailable or rejected"
             batch[0]["image_category_fallback"] = False
             batch[0]["image_decision"] = {"source": "generated", "accepted": True}
+            image_gen.set_generation_terminal(
+                batch[0],
+                image_gen.build_image_terminal_reason(
+                    stage="generated",
+                    reason=image_gen.REASON_ACCEPTED,
+                    outcome="accepted",
+                    provider_attempted=True,
+                    provider_succeeded=True,
+                ),
+            )
             return batch
 
         with patch.dict(staged_publish.os.environ, {"UNSPLASH_ACCESS_KEY": "key", "PEXELS_API_KEY": "key", "KIE_API_KEY": "key"}, clear=False), \
@@ -739,6 +1173,123 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(articles[0]["image_source"], "generated")
         self.assertEqual(articles[0]["image_source_type"], "generated_editorial")
         self.assertIn("stock candidates", articles[0]["image_decision_reason"])
+
+    def test_generated_batch_exception_preserves_completed_terminals_images_and_count(self) -> None:
+        articles = [
+            {"title": "Hyväksytty generoitu kuva", "category": "Kotimaa"},
+            {"title": "Valmis visuaalinen hylkäys", "category": "Kotimaa"},
+            {"title": "Generoimatta jäänyt", "category": "Kotimaa"},
+        ]
+
+        def partial_generation(batch, max_total_sec=180):
+            batch[0].update({
+                "image": "/images/articles/generated-accepted.jpg",
+                "image_thumb": "/images/articles/generated-accepted.jpg",
+                "image_source": "generated",
+                "image_source_type": "generated_editorial",
+                "image_category_fallback": False,
+            })
+            image_gen.set_generation_terminal(
+                batch[0],
+                image_gen.build_image_terminal_reason(
+                    stage="generated",
+                    reason=image_gen.REASON_ACCEPTED,
+                    outcome="accepted",
+                    provider_attempted=True,
+                    provider_succeeded=True,
+                ),
+            )
+            image_gen.set_generation_terminal(
+                batch[1],
+                image_gen.build_image_terminal_reason(
+                    stage="generated",
+                    reason=image_gen.REASON_VISUAL_REJECT,
+                    outcome="policy_reject",
+                    provider_attempted=True,
+                    provider_succeeded=True,
+                ),
+            )
+            raise RuntimeError("synthetic generation batch failure")
+
+        with patch.dict(staged_publish.os.environ, {
+            "UNSPLASH_ACCESS_KEY": "",
+            "PEXELS_API_KEY": "",
+            "KIE_API_KEY": "key",
+        }, clear=False), \
+             patch.object(staged_publish, "should_skip", return_value=(False, None)), \
+             patch.object(staged_publish, "generate_images_for_articles", side_effect=partial_generation), \
+             patch.object(staged_publish, "record_failure") as failure:
+            summary = staged_publish.enrich_images_for_articles(
+                articles,
+                unsplash_delay=0,
+                pexels_delay=0,
+            )
+
+        self.assertEqual(summary["images"], 1)
+        self.assertEqual(summary["generated"], 1)
+        self.assertEqual(articles[0]["image"], "/images/articles/generated-accepted.jpg")
+        self.assertEqual(
+            articles[0][image_gen.GENERATION_TERMINAL_FIELD]["reason"],
+            image_gen.REASON_ACCEPTED,
+        )
+        self.assertEqual(
+            articles[1][image_gen.GENERATION_TERMINAL_FIELD]["reason"],
+            image_gen.REASON_VISUAL_REJECT,
+        )
+        self.assertEqual(
+            articles[2][image_gen.GENERATION_TERMINAL_FIELD]["reason"],
+            image_gen.REASON_PROVIDER_RUNTIME,
+        )
+        self.assertEqual(summary["generated_terminal_reasons"], {
+            image_gen.REASON_ACCEPTED: 1,
+            image_gen.REASON_PROVIDER_RUNTIME: 1,
+            image_gen.REASON_VISUAL_REJECT: 1,
+        })
+        failure.assert_called_once_with("kie_api")
+
+    def test_generated_exception_cannot_retain_unverified_partial_artifact(self) -> None:
+        articles = [{"title": "Kuvaton artikkeli", "category": "Kotimaa"}]
+
+        def partial_generation(batch, max_total_sec=180):
+            batch[0].update({
+                "image": "/images/generated/unverified.png",
+                "image_thumb": "/images/generated/unverified.png",
+                "image_source": "generated",
+                "image_source_type": "generated_editorial",
+                "image_category_fallback": False,
+            })
+            raise RuntimeError("synthetic generation failure after mutation")
+
+        with patch.dict(staged_publish.os.environ, {
+            "UNSPLASH_ACCESS_KEY": "",
+            "PEXELS_API_KEY": "",
+            "KIE_API_KEY": "key",
+        }, clear=False), patch.object(
+            staged_publish,
+            "should_skip",
+            return_value=(False, None),
+        ), patch.object(
+            staged_publish,
+            "generate_images_for_articles",
+            side_effect=partial_generation,
+        ), patch.object(staged_publish, "record_failure") as failure:
+            summary = staged_publish.enrich_images_for_articles(
+                articles,
+                unsplash_delay=0,
+                pexels_delay=0,
+            )
+
+        failure.assert_called_once_with("kie_api")
+        self.assertEqual(summary["images"], 0)
+        self.assertEqual(summary["generated"], 0)
+        self.assertEqual(summary["category_fallback"], 1)
+        self.assertEqual(summary["missing"], 1)
+        self.assertTrue(articles[0]["image_category_fallback"])
+        self.assertEqual(articles[0]["image_source"], "category_fallback")
+        self.assertNotEqual(articles[0]["image"], "/images/generated/unverified.png")
+        terminal = articles[0][image_gen.GENERATION_TERMINAL_FIELD]
+        self.assertEqual(terminal["outcome"], "provider_fault")
+        self.assertEqual(terminal["reason"], image_gen.REASON_PROVIDER_RUNTIME)
 
     def test_enrich_images_uses_category_fallback_when_generated_visual_judge_fails(self) -> None:
         articles = [{"title": "Sääartikkeli", "category": "Kotimaa", "content": "aurinkoinen sää"}]
@@ -843,7 +1394,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(articles[0]["image_source_type"], "generated_editorial")
         self.assertEqual(articles[0]["image_provider"], "kie.ai")
         self.assertEqual(articles[0]["image_model"], "z-image")
-        self.assertEqual(articles[0]["image_prompt_version"], "image-flow-v2-2026-07-03")
+        self.assertEqual(articles[0]["image_prompt_version"], PROMPT_VERSION)
         self.assertGreaterEqual(articles[0]["image_visual_judge_score"], 45)
         self.assertEqual(articles[0]["image_generation_prompt"], prompt)
         self.assertEqual(
@@ -1236,6 +1787,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(fields["image_source"], "unsplash")
         self.assertEqual(fields["image_source_type"], "stock")
         self.assertEqual(fields["image_decision_reason"], "metadata matches boat; accepted")
+        self.assertEqual(fields["image_asset_identity"], "unsplash:id:boat-1")
 
     def test_category_fallback_fields_emit_policy_metadata(self) -> None:
         fields = category_fallback_fields("Talous", reason="stock rejected")
@@ -1255,6 +1807,8 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
             def fake_pexels(batch, delay=0):
                 batch[0]["image"] = "/images/articles/env-hero.jpg"
+                batch[0]["image_thumb"] = "/images/articles/env-thumb.jpg"
+                batch[0]["image_source"] = "pexels"
                 batch[0]["image_category_fallback"] = False
                 _mock_stock_receipt(batch[0], provider="pexels", accepted=True)
                 return batch
@@ -1548,12 +2102,14 @@ class StagedPublishMetricsTests(unittest.TestCase):
             "image_source": "pexels",
             "image_source_type": "stock",
             "image_decision_reason": "metadata matches article",
+            "image_asset_identity": "pexels:id:12345",
             "image_category_fallback": False,
         }, "2026-07-03T08:00:00+00:00")
 
         self.assertIn('image_source: "pexels"', markdown)
         self.assertIn('image_source_type: "stock"', markdown)
         self.assertIn('image_decision_reason: "metadata matches article"', markdown)
+        self.assertIn('image_asset_identity: "pexels:id:12345"', markdown)
         self.assertIn("image_category_fallback: false", markdown)
 
     def test_git_deploy_includes_generated_article_images(self) -> None:

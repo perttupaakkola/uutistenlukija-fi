@@ -22,22 +22,15 @@ journalist_note: |
   Katkenneen lähdekatkelman keskeneräistä loppuosaa ei käytetty. Kuluttajien luottamuksesta mukana on vain kokonaisena ilmennyt tieto pitkän ajan keskiarvon saavuttamisesta.
 content_type: "article"
 editorial_reviewed: true
-image: "https://images.unsplash.com/photo-1596717613610-ed5bfcc1e22d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw2fHxzdW5ueSUyMEZpbm5pc2glMjB3ZWF0aGVyfGVufDF8MHx8fDE3ODc5NzY5ODh8MA&ixlib=rb-4.1.0&q=80&w=1080"
-image_thumb: "https://images.unsplash.com/photo-1596717613610-ed5bfcc1e22d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw2fHxzdW5ueSUyMEZpbm5pc2glMjB3ZWF0aGVyfGVufDF8MHx8fDE3ODc5NzY5ODh8MA&ixlib=rb-4.1.0&q=80&w=400"
-image_alt: "Kuvituskuva uutiseen: Suomen talous elpyy, mutta kasvu näkyy kuluttajien arjessa viiveellä (suomen talous, talouskasvu)"
-image_credit: "Photo by Vivian K on Unsplash"
-image_source_url: "https://unsplash.com/photos/white-and-red-boat-on-sea-near-city-buildings-under-blue-and-white-sunny-cloudy-sky-CcNCC0Zplwc?utm_source=uutistenlukija&utm_medium=referral"
-image_source: "unsplash"
-image_source_type: "stock"
-image_decision_reason: "metadata matches 0, 4, on, sunny; weather metadata matches visual intent; sunny metadata matches visual intent"
-image_concept: "sunny Finnish weather"
-image_query: "sunny Finnish weather"
-image_candidate_id: "CcNCC0Zplwc"
-image_candidate_url: "https://unsplash.com/photos/white-and-red-boat-on-sea-near-city-buildings-under-blue-and-white-sunny-cloudy-sky-CcNCC0Zplwc?utm_source=uutistenlukija&utm_medium=referral"
-image_visual_judge_score: 47
-image_prompt_version: "image-flow-v2-2026-07-03"
-image_accepted_reasons_json: '["metadata matches 0, 4, on, sunny", "weather metadata matches visual intent", "sunny metadata matches visual intent"]'
-image_category_fallback: false
+image: "/images/categories/talous.jpg"
+image_thumb: "/images/categories/talous.jpg"
+image_alt: "Talous-uutiset"
+image_credit: ""
+image_source_url: ""
+image_source: "category_fallback"
+image_source_type: "category_fallback"
+image_decision_reason: "safe category fallback after independent image audit"
+image_category_fallback: true
 reading_time: 2
 tags:
   - suomen talous

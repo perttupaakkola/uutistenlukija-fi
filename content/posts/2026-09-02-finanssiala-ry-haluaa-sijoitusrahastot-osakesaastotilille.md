@@ -22,23 +22,15 @@ journalist_note: |
   Artikkeli käsittelee Finanssiala ry:n kannanottoa, joten järjestön arviot ja ehdotukset on erotettu hallituksen päätöksestä selkeällä attribuutiolla. Paketissa ei ollut erillistä viranomaisaineistoa päätöksen tai lakivalmistelun vahvistamiseksi.
 content_type: "article"
 editorial_reviewed: true
-image: "/images/articles/finanssiala-ry-haluaa-sijoitusrahastot-osakesaastotilille-hero.jpg"
-image_thumb: "/images/articles/finanssiala-ry-haluaa-sijoitusrahastot-osakesaastotilille-thumb.jpg"
-image_placeholder: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQC/8QAIBAAAwACAgEFAAAAAAAAAAAAAQIDABEEIRIFIjJBof/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAYEQADAQEAAAAAAAAAAAAAAAAAAQIRA//aAAwDAQACEQMRAD8Au4Lx5PhSQ2lNaJGjodnNVjCfJ3SE/Ar0xTpTj0tVmwko9spkD8yrkBHRg8wwBB1hxlLR+mw1KJLSiabaEmJ+ygOM1RgG+IOMUA//2Q=="
-image_alt: "Kuvituskuva uutiseen: Finanssiala ry haluaa sijoitusrahastot osakesäästötilille (osakesäästötili, sijoitusrahastot)"
-image_credit: "Photo by Leeloo The First on Pexels"
-image_source_url: "https://www.pexels.com/photo/black-framed-eyeglasses-on-white-printer-paper-7873560/"
-image_source: "pexels"
-image_source_type: "stock"
-image_decision_reason: "metadata matches business, documents, on"
-image_concept: "primary_query"
-image_query: "investment funds Finland"
-image_candidate_id: "7873560"
-image_candidate_url: "https://www.pexels.com/photo/black-framed-eyeglasses-on-white-printer-paper-7873560/"
-image_visual_judge_score: 49
-image_prompt_version: "image-flow-v2-2026-07-03"
-image_accepted_reasons_json: '["metadata matches business, documents, on"]'
-image_category_fallback: false
+image: "/images/categories/talous.jpg"
+image_thumb: "/images/categories/talous.jpg"
+image_alt: "Talous-uutiset"
+image_credit: ""
+image_source_url: ""
+image_source: "category_fallback"
+image_source_type: "category_fallback"
+image_decision_reason: "safe category fallback after independent image audit"
+image_category_fallback: true
 reading_time: 2
 tags:
   - osakesäästötili

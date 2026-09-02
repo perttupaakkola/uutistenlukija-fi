@@ -23,23 +23,15 @@ journalist_note: |
   Hallituksen linjaukset ja luonnoksen sisältö on kuvattu paketissa vain Suomen Yrittäjien julkaisun kautta. Järjestön arviot on erotettu hallituksen toimista ja ilmaistu järjestön tai sen edustajan kannanottoina.
 content_type: "article"
 editorial_reviewed: true
-image: "/images/articles/hallitus-aikoo-tuoda-yel-uudistuksen-kiireellisesti-eduskunt-hero.jpg"
-image_thumb: "/images/articles/hallitus-aikoo-tuoda-yel-uudistuksen-kiireellisesti-eduskunt-thumb.jpg"
-image_placeholder: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQDBQb/xAAgEAABBAICAwEAAAAAAAAAAAABAAIDERIhBDEiQWHB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgED/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oADAMBAAIRAxEAPwDQ8mYRsJHTTv8AUtNyMcJOozQN6rfddpvlxg5EEimlx+0qjmsDMSwuGbvO3XeiVVbTBmHGRxyDGvB2CD6QpIRhDG27po2UJbDL/9k="
-image_alt: "Kuvituskuva uutiseen: Hallitus aikoo tuoda YEL-uudistuksen kiireellisesti eduskuntaan (yel, yrittäjät)"
-image_credit: "Photo by Atlantic Ambience on Pexels"
-image_source_url: "https://www.pexels.com/photo/coins-on-documents-12932891/"
-image_source: "pexels"
-image_source_type: "stock"
-image_decision_reason: "metadata matches charts, documents, on"
-image_concept: "business finance economy"
-image_query: "business finance economy"
-image_candidate_id: "12932891"
-image_candidate_url: "https://www.pexels.com/photo/coins-on-documents-12932891/"
-image_visual_judge_score: 49
-image_prompt_version: "image-flow-v2-2026-07-03"
-image_accepted_reasons_json: '["metadata matches charts, documents, on"]'
-image_category_fallback: false
+image: "/images/categories/talous.jpg"
+image_thumb: "/images/categories/talous.jpg"
+image_alt: "Talous-uutiset"
+image_credit: ""
+image_source_url: ""
+image_source: "category_fallback"
+image_source_type: "category_fallback"
+image_decision_reason: "safe category fallback after independent image audit"
+image_category_fallback: true
 reading_time: 2
 tags:
   - yel

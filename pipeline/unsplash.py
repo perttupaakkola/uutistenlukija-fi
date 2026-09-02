@@ -57,6 +57,162 @@ _query_cache: Dict[str, List[Dict]] = {}
 # Round-robin index per query
 _query_index: Dict[str, int] = {}
 
+
+def _valid_https_url(value: object, allowed_hosts: set[str]) -> bool:
+    try:
+        parsed = urllib.parse.urlsplit(str(value or "").strip())
+    except ValueError:
+        return False
+    host = (parsed.hostname or "").lower()
+    return parsed.scheme.lower() == "https" and host in allowed_hosts and bool(parsed.path.strip("/"))
+
+
+_UNSPLASH_PHOTO_ID_RE = re.compile(r"^[A-Za-z0-9_-]+$")
+
+
+def _strict_provider_url(value: object, allowed_hosts: set[str]) -> urllib.parse.SplitResult | None:
+    raw = str(value or "").strip()
+    try:
+        parsed = urllib.parse.urlsplit(raw)
+        port = parsed.port
+    except ValueError:
+        return None
+    if (
+        parsed.scheme.lower() != "https"
+        or (parsed.hostname or "").lower() not in allowed_hosts
+        or port is not None
+        or parsed.username is not None
+        or parsed.password is not None
+        or parsed.fragment
+        or "%" in parsed.path
+        or "\\" in parsed.path
+        or any(segment in {".", ".."} for segment in parsed.path.split("/"))
+    ):
+        return None
+    return parsed
+
+
+def _download_location_binds_photo_id(value: object, photo_id: str) -> bool:
+    if not _UNSPLASH_PHOTO_ID_RE.fullmatch(photo_id):
+        return False
+    parsed = _strict_provider_url(value, {"api.unsplash.com"})
+    return bool(
+        parsed
+        and parsed.path == f"/photos/{photo_id}/download"
+    )
+
+
+def _photo_page_binds_photo_id(value: object, photo_id: str) -> bool:
+    if not _UNSPLASH_PHOTO_ID_RE.fullmatch(photo_id):
+        return False
+    parsed = _strict_provider_url(value, {"unsplash.com", "www.unsplash.com"})
+    if parsed is None:
+        return False
+    match = re.fullmatch(r"/photos/([^/]+)/?", parsed.path)
+    if not match:
+        return False
+    page_slug = match.group(1)
+    return page_slug == photo_id or page_slug.endswith(f"-{photo_id}")
+
+
+def _candidate_identity_consistent(photo: Dict) -> bool:
+    photo_id = str(photo.get("id") or "").strip()
+    if not _photo_page_binds_photo_id(photo.get("photo_page"), photo_id):
+        return False
+    download_location = photo.get("download_location")
+    return not download_location or _download_location_binds_photo_id(
+        download_location,
+        photo_id,
+    )
+
+
+def _load_image_pipeline_guards():
+    """Load duplicate/policy guards for package and direct-script execution."""
+
+    try:
+        from .image_state import (
+            canonical_image_identity,
+            get_query_index,
+            image_identity_aliases,
+            is_image_used,
+            mark_image_used,
+            set_query_index,
+        )
+    except ImportError:  # pragma: no cover - direct pipeline execution
+        try:
+            from image_state import (
+                canonical_image_identity,
+                get_query_index,
+                image_identity_aliases,
+                is_image_used,
+                mark_image_used,
+                set_query_index,
+            )
+        except ImportError:
+            return None
+
+    try:
+        from .image_candidate_guard import (
+            build_stock_queries,
+            filter_image_candidates,
+            stock_decision_fields,
+        )
+    except ImportError:  # pragma: no cover - direct pipeline execution
+        try:
+            from image_candidate_guard import (
+                build_stock_queries,
+                filter_image_candidates,
+                stock_decision_fields,
+            )
+        except ImportError:
+            return None
+
+    return (
+        canonical_image_identity,
+        image_identity_aliases,
+        get_query_index,
+        is_image_used,
+        mark_image_used,
+        set_query_index,
+        build_stock_queries,
+        filter_image_candidates,
+        stock_decision_fields,
+    )
+
+
+def _load_category_fallback_fields():
+    try:
+        from .image_candidate_guard import category_fallback_fields
+    except ImportError:  # pragma: no cover - direct pipeline execution
+        try:
+            from image_candidate_guard import category_fallback_fields
+        except ImportError:
+            return None
+    return category_fallback_fields
+
+
+def _attribution_complete(photo: Dict) -> bool:
+    photographer = str(photo.get("photographer") or "").strip()
+    if not photographer or photographer.lower() == "unknown":
+        return False
+    for key in ("photographer_url", "photo_page"):
+        value = photo.get(key)
+        if not _valid_https_url(
+            value,
+            {"unsplash.com", "www.unsplash.com"},
+        ):
+            return False
+        query = urllib.parse.parse_qs(urllib.parse.urlsplit(str(value)).query)
+        if (
+            "uutistenlukija" not in query.get("utm_source", [])
+            or "referral" not in query.get("utm_medium", [])
+        ):
+            return False
+    return _photo_page_binds_photo_id(
+        photo.get("photo_page"),
+        str(photo.get("id") or "").strip(),
+    )
+
 # Finnish stopwords
 _FI_STOPWORDS = {
     "ja", "tai", "on", "ei", "se", "hän", "he", "me", "te", "olla", "oli",
@@ -321,17 +477,19 @@ def _search(query: str, per_page: int = 30) -> List[Dict]:
     for photo in data.get("results", []):
         user = photo.get("user", {})
         user_links = user.get("links", {})
-        photographer_profile = user_links.get("html", "https://unsplash.com")
-        if "?" in photographer_profile:
-            photographer_profile += f"&{UTM}"
-        else:
-            photographer_profile += f"?{UTM}"
+        photographer_profile = str(user_links.get("html") or "").strip()
+        if photographer_profile:
+            if "?" in photographer_profile:
+                photographer_profile += f"&{UTM}"
+            else:
+                photographer_profile += f"?{UTM}"
 
-        photo_page = photo.get("links", {}).get("html", "https://unsplash.com")
-        if "?" in photo_page:
-            photo_page += f"&{UTM}"
-        else:
-            photo_page += f"?{UTM}"
+        photo_page = str(photo.get("links", {}).get("html") or "").strip()
+        if photo_page:
+            if "?" in photo_page:
+                photo_page += f"&{UTM}"
+            else:
+                photo_page += f"?{UTM}"
 
         urls = photo.get("urls", {})
         photos.append({
@@ -341,7 +499,7 @@ def _search(query: str, per_page: int = 30) -> List[Dict]:
             "url_small": urls.get("small"),
             "url_thumb": urls.get("thumb"),
             "download_location": photo.get("links", {}).get("download_location"),
-            "photographer": user.get("name", "Unknown"),
+            "photographer": user.get("name") or "",
             "photographer_url": photographer_profile,
             "photo_page": photo_page,
             # Never use our query as candidate evidence. An absent provider
@@ -359,30 +517,38 @@ def _search(query: str, per_page: int = 30) -> List[Dict]:
     return completed
 
 
-def _trigger_download(photo: Dict) -> None:
+def _trigger_download(photo: Dict) -> tuple[bool, bool]:
     """Trigger Unsplash download tracking endpoint.
 
     Required by Unsplash API guidelines every time a photo is used.
     Uses download_location from the photo (preferred) or constructs it.
-    Non-blocking: failure is logged but does not abort the pipeline.
+    Return ``(attempted, succeeded)`` so acceptance can fail closed when the
+    provider-required tracking call does not complete.
     """
     if not UNSPLASH_ACCESS_KEY:
-        return
+        return False, False
+
+    photo_id = str(photo.get("id") or "").strip()
+    if not _UNSPLASH_PHOTO_ID_RE.fullmatch(photo_id):
+        return False, False
 
     dl_url = photo.get("download_location")
     if not dl_url:
-        photo_id = photo.get("id")
-        if not photo_id:
-            return
         dl_url = UNSPLASH_DOWNLOAD_URL.format(id=photo_id)
+
+    if not _download_location_binds_photo_id(dl_url, photo_id):
+        print("[unsplash] Download tracking blocked: invalid provider endpoint")
+        return False, False
 
     req = urllib.request.Request(dl_url, headers=_api_headers())
     try:
         with urllib.request.urlopen(req, timeout=8) as _:
             pass
         print(f"[unsplash] Download tracked: {photo.get('id')}")
-    except Exception as e:
-        print(f"[unsplash] Download tracking failed (non-fatal): {e}")
+        return True, True
+    except Exception as exc:
+        print(f"[unsplash] Download tracking failed type={exc.__class__.__name__}")
+        return True, False
 
 
 def fetch_image_for_article(
@@ -392,6 +558,7 @@ def fetch_image_for_article(
     summary: str = "",
     key_points: list[str] | None = None,
     content: str = "",
+    source_evidence: str = "",
     inter_request_delay: float = 1.2,
     return_result: bool = False,
 ) -> object:
@@ -415,6 +582,13 @@ def fetch_image_for_article(
     candidate_count = 0
     fresh_candidate_count = 0
     rejected_count = 0
+    semantic_accepted = False
+    attribution_complete = False
+    delivery_attempted = False
+    delivery_succeeded = False
+    thumbnail_delivery_succeeded = False
+    tracking_attempted = False
+    tracking_succeeded = False
 
     def finish(image: Optional[Dict], *, reason: str = "") -> object:
         receipt = combine_provider_results(
@@ -425,8 +599,32 @@ def fetch_image_for_article(
             rejected_count=rejected_count,
             accepted_count=1 if image else 0,
             reason=reason,
+            semantic_accepted=semantic_accepted,
+            attribution_complete=attribution_complete,
+            delivery_mode="hotlink" if semantic_accepted else "none",
+            delivery_attempted=delivery_attempted,
+            delivery_succeeded=delivery_succeeded,
+            thumbnail_delivery_succeeded=thumbnail_delivery_succeeded,
+            tracking_attempted=tracking_attempted,
+            tracking_succeeded=tracking_succeeded,
         )
         return (image, receipt) if return_result else image
+
+    def duplicate_guard_fault(reason: str) -> object:
+        receipt = build_provider_result(
+            provider="unsplash",
+            attempted=bool(searches),
+            succeeded=False,
+            outcome="provider_fault",
+            reason=reason,
+            query_count=len(searches),
+            candidate_count=candidate_count,
+            fresh_candidate_count=fresh_candidate_count,
+            rejected_count=rejected_count,
+            accepted_count=0,
+            fault_count=1,
+        )
+        return (None, receipt) if return_result else None
 
     if not UNSPLASH_ACCESS_KEY:
         receipt = build_provider_result(
@@ -438,7 +636,10 @@ def fetch_image_for_article(
     # Try LLM-powered query first for better contextual matching
     query = ""
     try:
-        from image_query import generate_image_query, sanitize_generated_query
+        try:
+            from .image_query import generate_image_query, sanitize_generated_query
+        except ImportError:  # pragma: no cover - direct pipeline execution
+            from image_query import generate_image_query, sanitize_generated_query
         query = sanitize_generated_query(
             generate_image_query(title, content or summary or "", category),
             title,
@@ -458,16 +659,33 @@ def fetch_image_for_article(
         )
     print(f"[unsplash] '{title[:50]}' → '{query}'")
 
-    # Filter out already used images
-    try:
-        from image_state import is_image_used, mark_image_used, get_query_index, set_query_index
-        from image_candidate_guard import build_stock_queries, filter_image_candidates, stock_decision_fields
-    except ImportError:
-        is_image_used = lambda x: False
-        mark_image_used = lambda x: None
-        get_query_index = lambda x: _query_index.get(x, 0)
-        set_query_index = lambda x, y: _query_index.update({x: y})
-        from image_candidate_guard import build_stock_queries, filter_image_candidates, stock_decision_fields
+    guards = _load_image_pipeline_guards()
+    if guards is None:
+        return duplicate_guard_fault("duplicate_guard_unavailable")
+    (
+        canonical_image_identity,
+        image_identity_aliases,
+        get_query_index,
+        is_image_used,
+        mark_image_used,
+        set_query_index,
+        build_stock_queries,
+        filter_image_candidates,
+        stock_decision_fields,
+    ) = guards
+
+    def candidate_identities(candidate: dict) -> tuple[str, ...]:
+        canonical = str(canonical_image_identity("unsplash", candidate) or "").strip()
+        aliases = {
+            str(alias or "").strip()
+            for alias in image_identity_aliases("unsplash", candidate)
+            if str(alias or "").strip()
+        }
+        if canonical:
+            aliases.add(canonical)
+        if not aliases:
+            raise ValueError("candidate has no stable image identity")
+        return tuple(([canonical] if canonical else []) + sorted(aliases - {canonical}))
 
     stock_queries = build_stock_queries(
         title,
@@ -475,8 +693,43 @@ def fetch_image_for_article(
         summary=summary,
         key_points=key_points,
         content=content,
+        source_evidence=source_evidence,
         primary_query=query,
     )
+    if not stock_queries:
+        return finish(None, reason="no_grounded_stock_queries")
+
+    duplicate_guard_failed = False
+    identity_binding_failed = False
+
+    def fresh_candidates(photos: list[dict]) -> list[dict]:
+        nonlocal duplicate_guard_failed, identity_binding_failed
+        fresh: list[dict] = []
+        for candidate in photos:
+            download_location = candidate.get("download_location")
+            provider_urls_are_official = bool(
+                _valid_https_url(
+                    candidate.get("photo_page"),
+                    {"unsplash.com", "www.unsplash.com"},
+                )
+                and (
+                    not download_location
+                    or _valid_https_url(download_location, {"api.unsplash.com"})
+                )
+            )
+            if provider_urls_are_official and not _candidate_identity_consistent(candidate):
+                identity_binding_failed = True
+                return []
+            try:
+                identities = candidate_identities(candidate)
+                used = [is_image_used(identity) for identity in identities]
+            except Exception:
+                duplicate_guard_failed = True
+                return []
+            if not any(used):
+                fresh.append(candidate)
+        return fresh
+
     available_photos = []
     selected_query = query
     for candidate_query, concept, brief in stock_queries:
@@ -484,7 +737,11 @@ def fetch_image_for_article(
         receipt = search_result(photos, "unsplash")
         searches.append(receipt)
         candidate_count += len(photos)
-        fresh = [p for p in photos if not is_image_used(p["id"])] if receipt.get("succeeded") else []
+        fresh = fresh_candidates(photos) if receipt.get("succeeded") else []
+        if identity_binding_failed:
+            return duplicate_guard_fault("provider_identity_mismatch")
+        if duplicate_guard_failed:
+            return duplicate_guard_fault("duplicate_guard_check_failed")
         fresh_candidate_count += len(fresh)
         available_photos, decisions = filter_image_candidates(
             fresh,
@@ -493,6 +750,8 @@ def fetch_image_for_article(
             summary=summary,
             key_points=key_points,
             content=content,
+            source_evidence=source_evidence,
+            category=category,
             provider="unsplash",
             intent=brief.intent,
             brief=brief,
@@ -514,7 +773,11 @@ def fetch_image_for_article(
         receipt = search_result(photos, "unsplash")
         searches.append(receipt)
         candidate_count += len(photos)
-        fresh = [p for p in photos if not is_image_used(p["id"])] if receipt.get("succeeded") else []
+        fresh = fresh_candidates(photos) if receipt.get("succeeded") else []
+        if identity_binding_failed:
+            return duplicate_guard_fault("provider_identity_mismatch")
+        if duplicate_guard_failed:
+            return duplicate_guard_fault("duplicate_guard_check_failed")
         fresh_candidate_count += len(fresh)
         available_photos, decisions = filter_image_candidates(
             fresh,
@@ -523,6 +786,8 @@ def fetch_image_for_article(
             summary=summary,
             key_points=key_points,
             content=content,
+            source_evidence=source_evidence,
+            category=category,
             provider="unsplash",
             intent=stock_queries[0][2].intent,
             brief=stock_queries[0][2],
@@ -539,17 +804,40 @@ def fetch_image_for_article(
     set_query_index(query, idx + 1)
     photo = available_photos[idx]
 
+    semantic_accepted = True
+    hero_url = str(photo.get("url_regular") or photo.get("url_full") or "").strip()
+    thumb_url = str(photo.get("url_small") or photo.get("url_thumb") or "").strip()
+    delivery_attempted = True
+    delivery_succeeded = _valid_https_url(hero_url, {"images.unsplash.com"})
+    thumbnail_delivery_succeeded = _valid_https_url(
+        thumb_url,
+        {"images.unsplash.com"},
+    )
+    attribution_complete = _attribution_complete(photo)
+    if not delivery_succeeded or not thumbnail_delivery_succeeded:
+        return finish(None, reason="hero_or_thumbnail_delivery_unavailable")
+    if not attribution_complete:
+        return finish(None, reason="provider_attribution_incomplete")
+    if not _candidate_identity_consistent(photo):
+        return duplicate_guard_fault("provider_identity_mismatch")
+
     # Trigger mandatory download tracking
-    _trigger_download(photo)
-    mark_image_used(photo["id"])
+    tracking_attempted, tracking_succeeded = _trigger_download(photo)
+    if not tracking_attempted or not tracking_succeeded:
+        return finish(None, reason="download_tracking_failed")
+    try:
+        for identity in candidate_identities(photo):
+            mark_image_used(identity)
+    except Exception:
+        return duplicate_guard_fault("duplicate_guard_mark_failed")
     time.sleep(inter_request_delay)
 
     photographer = photo["photographer"]
     photo_page = photo["photo_page"]
 
     result = {
-        "url": photo["url_regular"] or photo["url_full"],  # 1080px for performance, not full 2400px
-        "thumb_url": photo["url_small"] or photo["url_thumb"],
+        "url": hero_url,  # 1080px for performance, not full 2400px
+        "thumb_url": thumb_url,
         "photographer": photographer,
         "photographer_url": photo["photographer_url"],
         "photo_page": photo_page,
@@ -588,7 +876,6 @@ def fetch_images_for_articles(articles: list, delay: float = 1.2) -> list:
         title = article.get("title", "")
         category = article.get("category", "Kotimaa")
         key_points = list(article.get("key_points") or [])
-        key_points.extend(article.get("tags") or [])
 
         result, provider_result = fetch_image_for_article(
             title,
@@ -596,6 +883,7 @@ def fetch_images_for_articles(articles: list, delay: float = 1.2) -> list:
             summary=article.get("summary", "") or "",
             key_points=key_points,
             content=article.get("content", "") or "",
+            source_evidence=str(article.get("source_text") or article.get("research") or ""),
             inter_request_delay=delay,
             return_result=True,
         )
@@ -611,7 +899,11 @@ def fetch_images_for_articles(articles: list, delay: float = 1.2) -> list:
             article["image_hotlink"] = True
             article.update({k: v for k, v in result.items() if k.startswith("image_")})
         else:
-            from image_candidate_guard import category_fallback_fields
-            article.update(category_fallback_fields(category, reason="stock candidates unavailable or rejected"))
+            category_fallback_fields = _load_category_fallback_fields()
+            if category_fallback_fields is not None:
+                article.update(category_fallback_fields(
+                    category,
+                    reason="stock candidates unavailable or rejected",
+                ))
 
     return articles

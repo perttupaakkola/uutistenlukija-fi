@@ -22,23 +22,15 @@ journalist_note: |
   Paketin kolme aineistokatkelmaa ovat saman Ylen artikkelin osia. Julkiset väitteet on rajattu THL:n jätevesiseurannan tuloksiin ja tiedotteessa esitettyihin asiantuntija-arvioihin.
 content_type: "article"
 editorial_reviewed: true
-image: "/images/articles/thln-jatevesitutkimus-kokaiinin-kaytto-kasvoi-lahes-koko-suo-hero.jpg"
-image_thumb: "/images/articles/thln-jatevesitutkimus-kokaiinin-kaytto-kasvoi-lahes-koko-suo-thumb.jpg"
-image_placeholder: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIEAQX/xAAiEAACAQMCBwAAAAAAAAAAAAABAgAEBSERMwMUMXFygZH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAA//EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8Ao57jL0Zfk1bjVltFcDtiREnOY9Lur4mWyJOgK24abi+zCLCMhtf/2Q=="
-image_alt: "Kuvituskuva uutiseen: THL:n jätevesitutkimus: Kokaiinin käyttö kasvoi lähes koko Suomessa (kokaiini, huumausaineet)"
-image_credit: "Photo by Daniel Shipilov on Pexels"
-image_source_url: "https://www.pexels.com/photo/scenic-aerial-view-of-snowy-finnish-landscape-36099396/"
-image_source: "pexels"
-image_source_type: "stock"
-image_decision_reason: "metadata matches finnish, landscape; retrieval hint matches finland"
-image_concept: "primary_query"
-image_query: "cocaine use Finland cities"
-image_candidate_id: "36099396"
-image_candidate_url: "https://www.pexels.com/photo/scenic-aerial-view-of-snowy-finnish-landscape-36099396/"
-image_visual_judge_score: 49
-image_prompt_version: "image-flow-v2-2026-07-03"
-image_accepted_reasons_json: '["metadata matches finnish, landscape", "retrieval hint matches finland"]'
-image_category_fallback: false
+image: "/images/categories/kotimaa.jpg"
+image_thumb: "/images/categories/kotimaa.jpg"
+image_alt: "Kotimaa-uutiset"
+image_credit: ""
+image_source_url: ""
+image_source: "category_fallback"
+image_source_type: "category_fallback"
+image_decision_reason: "safe category fallback after independent image audit"
+image_category_fallback: true
 reading_time: 2
 tags:
   - kokaiini

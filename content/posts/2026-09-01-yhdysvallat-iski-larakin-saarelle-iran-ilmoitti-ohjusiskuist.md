@@ -22,22 +22,15 @@ journalist_note: |
   Miinoja, vahinkoja ja uhreja koskevat tiedot ovat pääosin konfliktin osapuolten ilmoituksia. Tarkkoja uhrilukuja ei ole kerrottu.
 content_type: "article"
 editorial_reviewed: true
-image: "https://images.unsplash.com/photo-1719691462526-0ab8120d7542?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyNXx8Ym9vayUyMGFuZCUyMHRlbGV2aXNpb24lMjBwcm9kdWN0aW9ufGVufDF8MHx8fDE3ODgyODU5NTh8MA&ixlib=rb-4.1.0&q=80&w=1080"
-image_thumb: "https://images.unsplash.com/photo-1719691462526-0ab8120d7542?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyNXx8Ym9vayUyMGFuZCUyMHRlbGV2aXNpb24lMjBwcm9kdWN0aW9ufGVufDF8MHx8fDE3ODgyODU5NTh8MA&ixlib=rb-4.1.0&q=80&w=400"
-image_alt: "Kuvituskuva uutiseen: Yhdysvallat iski Larakin saarelle – Iran ilmoitti ohjusiskuista Jordaniaan (iran, yhdysvallat)"
-image_credit: "Photo by Parastoo Maleki on Unsplash"
-image_source_url: "https://unsplash.com/photos/a-television-sitting-on-top-of-a-shelf-filled-with-books-ORT8CtIFriE?utm_source=uutistenlukija&utm_medium=referral"
-image_source: "unsplash"
-image_source_type: "stock"
-image_decision_reason: "metadata matches a, on, television; retrieval hint matches television"
-image_concept: "book and television production"
-image_query: "book and television production"
-image_candidate_id: "ORT8CtIFriE"
-image_candidate_url: "https://unsplash.com/photos/a-television-sitting-on-top-of-a-shelf-filled-with-books-ORT8CtIFriE?utm_source=uutistenlukija&utm_medium=referral"
-image_visual_judge_score: 47
-image_prompt_version: "image-flow-v2-2026-07-03"
-image_accepted_reasons_json: '["metadata matches a, on, television", "retrieval hint matches television"]'
-image_category_fallback: false
+image: "/images/categories/ulkomaat.jpg"
+image_thumb: "/images/categories/ulkomaat.jpg"
+image_alt: "Ulkomaat-uutiset"
+image_credit: ""
+image_source_url: ""
+image_source: "category_fallback"
+image_source_type: "category_fallback"
+image_decision_reason: "safe category fallback after independent image audit"
+image_category_fallback: true
 reading_time: 2
 tags:
   - iran

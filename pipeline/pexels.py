@@ -27,9 +27,11 @@ import time
 import hashlib
 import base64
 import io
+import tempfile
 import urllib.request
 import urllib.error
 import urllib.parse
+import warnings
 from typing import Optional, Dict, List
 
 try:
@@ -48,10 +50,157 @@ PEXELS_SEARCH_URL = "https://api.pexels.com/v1/search"
 
 # Local cache directory (relative to project root — resolved at call time)
 _CACHE_SUBDIR = "static/images/articles"
+_MAX_IMAGE_DOWNLOAD_BYTES = 20 * 1024 * 1024
+_IMAGE_DOWNLOAD_CHUNK_BYTES = 64 * 1024
+_SUPPORTED_IMAGE_MIME = {
+    "image/jpeg": ("JPEG", ".jpg"),
+    "image/png": ("PNG", ".png"),
+    "image/webp": ("WEBP", ".webp"),
+}
 
 # In-memory result cache: query → list of photo dicts
 # Avoids re-querying the same keyword set across articles in one run
 _query_cache: Dict[str, List[Dict]] = {}
+
+
+def _valid_https_url(value: object, allowed_hosts: set[str]) -> bool:
+    try:
+        parsed = urllib.parse.urlsplit(str(value or "").strip())
+        port = parsed.port
+    except ValueError:
+        return False
+    host = (parsed.hostname or "").lower()
+    return (
+        parsed.scheme.lower() == "https"
+        and host in allowed_hosts
+        and port in {None, 443}
+        and parsed.username is None
+        and parsed.password is None
+        and bool(parsed.path.strip("/"))
+    )
+
+
+_PEXELS_PHOTO_ID_RE = re.compile(r"^[0-9]+$")
+
+
+def _strict_provider_url(value: object, allowed_hosts: set[str]) -> urllib.parse.SplitResult | None:
+    raw = str(value or "").strip()
+    try:
+        parsed = urllib.parse.urlsplit(raw)
+        port = parsed.port
+    except ValueError:
+        return None
+    if (
+        parsed.scheme.lower() != "https"
+        or (parsed.hostname or "").lower() not in allowed_hosts
+        or port is not None
+        or parsed.username is not None
+        or parsed.password is not None
+        or parsed.fragment
+        or "%" in parsed.path
+        or "\\" in parsed.path
+        or any(segment in {".", ".."} for segment in parsed.path.split("/"))
+    ):
+        return None
+    return parsed
+
+
+def _pexels_cdn_url_binds_photo_id(value: object, photo_id: str) -> bool:
+    if not _PEXELS_PHOTO_ID_RE.fullmatch(photo_id):
+        return False
+    parsed = _strict_provider_url(value, {"images.pexels.com"})
+    if parsed is None:
+        return False
+    match = re.fullmatch(r"/photos/([0-9]+)/[^/]+/?", parsed.path)
+    return bool(match and match.group(1) == photo_id)
+
+
+def _pexels_page_binds_photo_id(value: object, photo_id: str) -> bool:
+    if not _PEXELS_PHOTO_ID_RE.fullmatch(photo_id):
+        return False
+    parsed = _strict_provider_url(value, {"pexels.com", "www.pexels.com"})
+    if parsed is None:
+        return False
+    match = re.fullmatch(r"/photo/([^/]+)/?", parsed.path)
+    if not match:
+        return False
+    page_slug = match.group(1)
+    return page_slug == photo_id or page_slug.endswith(f"-{photo_id}")
+
+
+def _candidate_identity_consistent(photo: Dict) -> bool:
+    photo_id = str(photo.get("id") or "").strip()
+    return bool(
+        _pexels_cdn_url_binds_photo_id(photo.get("url"), photo_id)
+        and _pexels_cdn_url_binds_photo_id(photo.get("thumb_url"), photo_id)
+        and _pexels_page_binds_photo_id(photo.get("pexels_url"), photo_id)
+    )
+
+
+def _load_image_pipeline_guards():
+    """Load duplicate/policy guards for package and direct-script execution."""
+
+    try:
+        from .image_state import (
+            canonical_image_identity,
+            get_query_index,
+            image_identity_aliases,
+            is_image_used,
+            mark_image_used,
+            set_query_index,
+        )
+    except ImportError:  # pragma: no cover - direct pipeline execution
+        try:
+            from image_state import (
+                canonical_image_identity,
+                get_query_index,
+                image_identity_aliases,
+                is_image_used,
+                mark_image_used,
+                set_query_index,
+            )
+        except ImportError:
+            return None
+
+    try:
+        from .image_candidate_guard import (
+            build_stock_queries,
+            filter_image_candidates,
+            stock_decision_fields,
+        )
+    except ImportError:  # pragma: no cover - direct pipeline execution
+        try:
+            from image_candidate_guard import (
+                build_stock_queries,
+                filter_image_candidates,
+                stock_decision_fields,
+            )
+        except ImportError:
+            return None
+
+    return (
+        canonical_image_identity,
+        image_identity_aliases,
+        get_query_index,
+        is_image_used,
+        mark_image_used,
+        set_query_index,
+        build_stock_queries,
+        filter_image_candidates,
+        stock_decision_fields,
+    )
+
+
+def _load_category_fallback_fields():
+    try:
+        from .image_candidate_guard import category_fallback_fields
+    except ImportError:  # pragma: no cover - direct pipeline execution
+        try:
+            from image_candidate_guard import category_fallback_fields
+        except ImportError:
+            return None
+    return category_fallback_fields
+
 
 # Finnish stopwords — stripped before building search query
 _FI_STOPWORDS = {
@@ -324,9 +473,9 @@ def _search_pexels(query: str, per_page: int = 80) -> List[Dict]:
         photos.append({
             "url": src.get("large") or src.get("large2x"),
             "thumb_url": src.get("medium") or src.get("small"),
-            "photographer": photo.get("photographer", "Unknown"),
-            "photographer_url": photo.get("photographer_url", "https://www.pexels.com"),
-            "pexels_url": photo.get("url", "https://www.pexels.com"),
+            "photographer": photo.get("photographer") or "",
+            "photographer_url": photo.get("photographer_url") or "",
+            "pexels_url": photo.get("url") or "",
             "alt": photo.get("alt") or "",
             "width": photo.get("width", 0),
             "height": photo.get("height", 0),
@@ -342,53 +491,159 @@ def _search_pexels(query: str, per_page: int = 80) -> List[Dict]:
     return completed
 
 
-def _download_image(url: str, slug: str, suffix: str = "hero") -> Optional[str]:
-    """Download image to local cache. Returns relative static path or None.
+def _download_cache_stem(
+    url: str,
+    slug: str,
+    suffix: str,
+    candidate_identity: str,
+) -> str:
+    safe_slug = re.sub(r"[^a-z0-9-]", "-", str(slug or "").lower()).strip("-")
+    safe_slug = re.sub(r"-+", "-", safe_slug)[:64]
+    safe_suffix = re.sub(r"[^a-z0-9-]", "-", str(suffix or "").lower()).strip("-")
+    safe_suffix = re.sub(r"-+", "-", safe_suffix)[:24] or "image"
+    provenance = str(candidate_identity or "").strip() or f"url:{url}"
+    provenance_hash = hashlib.sha256(provenance.encode("utf-8")).hexdigest()[:16]
+    prefix = f"{safe_slug}-" if safe_slug else ""
+    return f"{prefix}{provenance_hash}-{safe_suffix}"
 
-    File is named {slug}-{suffix}.jpg for human readability and Sara's layout refs.
-    Falls back to URL hash if slug is empty.
-    Returns path like /images/articles/my-article-hero.jpg for Hugo frontmatter.
-    """
+
+def _validated_raster_file(path: str, expected_format: str | None = None) -> bool:
+    """Require a fully decodable raster from a small explicit format set."""
+
+    try:
+        from PIL import Image
+    except (ImportError, ModuleNotFoundError):
+        return False
+
+    supported_formats = {value[0] for value in _SUPPORTED_IMAGE_MIME.values()}
+    try:
+        with warnings.catch_warnings():
+            warnings.simplefilter(
+                "error",
+                getattr(Image, "DecompressionBombWarning", Warning),
+            )
+            with Image.open(path) as image:
+                image_format = str(image.format or "").upper()
+                if image_format not in supported_formats:
+                    return False
+                if expected_format and image_format != expected_format:
+                    return False
+                if image.width <= 0 or image.height <= 0:
+                    return False
+                image.verify()
+
+            # verify() checks structure; load() ensures pixel decoding also
+            # succeeds before the file becomes visible at its final path.
+            with Image.open(path) as image:
+                if str(image.format or "").upper() != image_format:
+                    return False
+                image.load()
+        return True
+    except Exception:
+        return False
+
+
+def _download_image(
+    url: str,
+    slug: str,
+    suffix: str = "hero",
+    *,
+    candidate_identity: str = "",
+) -> Optional[str]:
+    """Download, validate, and atomically cache one trusted Pexels raster."""
+
+    url = str(url or "").strip()
+    if not _valid_https_url(url, {"images.pexels.com"}):
+        print("[pexels] Download rejected: untrusted image origin")
+        return None
+
     cache_dir = _cache_dir()
     os.makedirs(cache_dir, exist_ok=True)
+    stem = _download_cache_stem(url, slug, suffix, candidate_identity)
 
-    # Always store as .jpg (Pexels large/large2x are always JPEG)
-    if slug:
-        # Sanitize slug: lowercase, alphanumeric + hyphens only
-        safe_slug = re.sub(r"[^a-z0-9-]", "-", slug.lower()).strip("-")
-        safe_slug = re.sub(r"-+", "-", safe_slug)[:80]  # cap length
-        filename = f"{safe_slug}-{suffix}.jpg"
-    else:
-        url_hash = hashlib.sha1(url.encode()).hexdigest()[:12]
-        filename = f"{url_hash}-{suffix}.jpg"
+    # Cached files are provenance-keyed, but still must decode successfully.
+    for expected_format, extension in _SUPPORTED_IMAGE_MIME.values():
+        cached_path = os.path.join(cache_dir, f"{stem}{extension}")
+        if os.path.isfile(cached_path) and _validated_raster_file(
+            cached_path,
+            expected_format,
+        ):
+            return f"/images/articles/{stem}{extension}"
 
-    local_path = os.path.join(cache_dir, filename)
-    static_path = f"/images/articles/{filename}"
-
-    if os.path.exists(local_path):
-        return static_path  # already cached
-
+    temp_path = ""
+    descriptor: int | None = None
+    total_bytes = 0
     try:
         req = urllib.request.Request(url, headers={
             "User-Agent": "uutistenlukija/1.0 (https://uutistenlukija.fi)",
             "Referer": "https://www.pexels.com/",
         })
         with urllib.request.urlopen(req, timeout=20) as resp:
-            data = resp.read()
+            raw_content_type = str(resp.headers.get("Content-Type") or "")
+            content_type = raw_content_type.split(";", 1)[0].strip().lower()
+            image_type = _SUPPORTED_IMAGE_MIME.get(content_type)
+            if image_type is None:
+                print("[pexels] Download rejected: unsupported response MIME")
+                return None
+            expected_format, extension = image_type
 
-        if len(data) < 1000:
-            print(f"[pexels] Download too small ({len(data)}B) — skipping: {url[:60]}")
+            raw_length = str(resp.headers.get("Content-Length") or "").strip()
+            if raw_length:
+                try:
+                    content_length = int(raw_length)
+                except ValueError:
+                    return None
+                if content_length < 0 or content_length > _MAX_IMAGE_DOWNLOAD_BYTES:
+                    print("[pexels] Download rejected: response exceeds size limit")
+                    return None
+
+            descriptor, temp_path = tempfile.mkstemp(
+                prefix=f".{stem}.",
+                suffix=".part",
+                dir=cache_dir,
+            )
+            with os.fdopen(descriptor, "wb") as handle:
+                descriptor = None
+                while True:
+                    remaining = _MAX_IMAGE_DOWNLOAD_BYTES - total_bytes
+                    chunk = resp.read(min(_IMAGE_DOWNLOAD_CHUNK_BYTES, remaining + 1))
+                    if not chunk:
+                        break
+                    if not isinstance(chunk, bytes):
+                        raise TypeError("image response yielded non-bytes data")
+                    total_bytes += len(chunk)
+                    if total_bytes > _MAX_IMAGE_DOWNLOAD_BYTES:
+                        print("[pexels] Download rejected: streamed body exceeds size limit")
+                        return None
+                    handle.write(chunk)
+                handle.flush()
+                os.fsync(handle.fileno())
+
+        if not _validated_raster_file(temp_path, expected_format):
+            print("[pexels] Download rejected: invalid raster payload")
             return None
 
-        with open(local_path, "wb") as f:
-            f.write(data)
-
-        print(f"[pexels] Downloaded {len(data)//1024}KB → {filename}")
-        return static_path
-
-    except Exception as e:
-        print(f"[pexels] Download failed for {url[:60]}: {e}")
+        filename = f"{stem}{extension}"
+        local_path = os.path.join(cache_dir, filename)
+        os.chmod(temp_path, 0o644)
+        os.replace(temp_path, local_path)
+        temp_path = ""
+        print(f"[pexels] Downloaded {total_bytes // 1024}KB → {filename}")
+        return f"/images/articles/{filename}"
+    except Exception as exc:
+        print(f"[pexels] Download failed: {exc.__class__.__name__}")
         return None
+    finally:
+        if descriptor is not None:
+            try:
+                os.close(descriptor)
+            except OSError:
+                pass
+        if temp_path:
+            try:
+                os.unlink(temp_path)
+            except OSError:
+                pass
 
 
 def _generate_blur_placeholder(local_static_path: str) -> Optional[str]:
@@ -434,6 +689,22 @@ def _generate_blur_placeholder(local_static_path: str) -> Optional[str]:
 _query_index: Dict[str, int] = {}
 
 
+def _attribution_complete(photo: Dict) -> bool:
+    photographer = str(photo.get("photographer") or "").strip()
+    if not photographer or photographer.lower() == "unknown":
+        return False
+    for key in ("photographer_url", "pexels_url"):
+        if not _valid_https_url(
+            photo.get(key),
+            {"pexels.com", "www.pexels.com"},
+        ):
+            return False
+    return _pexels_page_binds_photo_id(
+        photo.get("pexels_url"),
+        str(photo.get("id") or "").strip(),
+    )
+
+
 def fetch_image_for_article(
     title: str,
     category: str,
@@ -441,6 +712,7 @@ def fetch_image_for_article(
     summary: str = "",
     key_points: list[str] | None = None,
     content: str = "",
+    source_evidence: str = "",
     slug: str = "",
     download: bool = True,
     inter_request_delay: float = 0.5,
@@ -464,7 +736,11 @@ def fetch_image_for_article(
     candidate_count = 0
     fresh_candidate_count = 0
     rejected_count = 0
-    download_failed = False
+    semantic_accepted = False
+    attribution_complete = False
+    delivery_attempted = False
+    delivery_succeeded = False
+    thumbnail_delivery_succeeded = False
 
     def finish(image: Optional[Dict], *, reason: str = "") -> object:
         receipt = combine_provider_results(
@@ -475,15 +751,30 @@ def fetch_image_for_article(
             rejected_count=rejected_count,
             accepted_count=1 if image and (not download or image.get("local_path")) else 0,
             reason=reason,
+            semantic_accepted=semantic_accepted,
+            attribution_complete=attribution_complete,
+            delivery_mode=("download" if download else "hotlink") if semantic_accepted else "none",
+            delivery_attempted=delivery_attempted,
+            delivery_succeeded=delivery_succeeded,
+            thumbnail_delivery_succeeded=thumbnail_delivery_succeeded,
         )
-        if download_failed:
-            receipt.update({
-                "outcome": "provider_fault",
-                "reason": "download_failed",
-                "accepted_count": 0,
-                "fault_count": min(10_000, int(receipt.get("fault_count") or 0) + 1),
-            })
         return (image, receipt) if return_result else image
+
+    def duplicate_guard_fault(reason: str) -> object:
+        receipt = build_provider_result(
+            provider="pexels",
+            attempted=bool(searches),
+            succeeded=False,
+            outcome="provider_fault",
+            reason=reason,
+            query_count=len(searches),
+            candidate_count=candidate_count,
+            fresh_candidate_count=fresh_candidate_count,
+            rejected_count=rejected_count,
+            accepted_count=0,
+            fault_count=1,
+        )
+        return (None, receipt) if return_result else None
 
     if not PEXELS_API_KEY:
         receipt = build_provider_result(
@@ -495,7 +786,10 @@ def fetch_image_for_article(
     # Try LLM-powered query first for better contextual matching
     query = ""
     try:
-        from image_query import generate_image_query, sanitize_generated_query
+        try:
+            from .image_query import generate_image_query, sanitize_generated_query
+        except ImportError:  # pragma: no cover - direct pipeline execution
+            from image_query import generate_image_query, sanitize_generated_query
         query = sanitize_generated_query(
             generate_image_query(title, content or summary or "", category),
             title,
@@ -515,16 +809,33 @@ def fetch_image_for_article(
         )
     print(f"[pexels] '{title[:50]}' → '{query}'")
 
-    # Filter out already used images
-    try:
-        from image_state import is_image_used, mark_image_used, get_query_index, set_query_index
-        from image_candidate_guard import build_stock_queries, filter_image_candidates, stock_decision_fields
-    except ImportError:
-        is_image_used = lambda x: False
-        mark_image_used = lambda x: None
-        get_query_index = lambda x: _query_index.get(x, 0)
-        set_query_index = lambda x, y: _query_index.update({x: y})
-        from image_candidate_guard import build_stock_queries, filter_image_candidates, stock_decision_fields
+    guards = _load_image_pipeline_guards()
+    if guards is None:
+        return duplicate_guard_fault("duplicate_guard_unavailable")
+    (
+        canonical_image_identity,
+        image_identity_aliases,
+        get_query_index,
+        is_image_used,
+        mark_image_used,
+        set_query_index,
+        build_stock_queries,
+        filter_image_candidates,
+        stock_decision_fields,
+    ) = guards
+
+    def candidate_identities(candidate: dict) -> tuple[str, ...]:
+        canonical = str(canonical_image_identity("pexels", candidate) or "").strip()
+        aliases = {
+            str(alias or "").strip()
+            for alias in image_identity_aliases("pexels", candidate)
+            if str(alias or "").strip()
+        }
+        if canonical:
+            aliases.add(canonical)
+        if not aliases:
+            raise ValueError("candidate has no stable image identity")
+        return tuple(([canonical] if canonical else []) + sorted(aliases - {canonical}))
 
     stock_queries = build_stock_queries(
         title,
@@ -532,8 +843,40 @@ def fetch_image_for_article(
         summary=summary,
         key_points=key_points,
         content=content,
+        source_evidence=source_evidence,
         primary_query=query,
     )
+    if not stock_queries:
+        return finish(None, reason="no_grounded_stock_queries")
+
+    duplicate_guard_failed = False
+    identity_binding_failed = False
+
+    def fresh_candidates(photos: list[dict]) -> list[dict]:
+        nonlocal duplicate_guard_failed, identity_binding_failed
+        fresh: list[dict] = []
+        for candidate in photos:
+            provider_urls_are_official = bool(
+                _valid_https_url(candidate.get("url"), {"images.pexels.com"})
+                and _valid_https_url(candidate.get("thumb_url"), {"images.pexels.com"})
+                and _valid_https_url(
+                    candidate.get("pexels_url"),
+                    {"pexels.com", "www.pexels.com"},
+                )
+            )
+            if provider_urls_are_official and not _candidate_identity_consistent(candidate):
+                identity_binding_failed = True
+                return []
+            try:
+                identities = candidate_identities(candidate)
+                used = [is_image_used(identity) for identity in identities]
+            except Exception:
+                duplicate_guard_failed = True
+                return []
+            if not any(used):
+                fresh.append(candidate)
+        return fresh
+
     available_photos = []
     selected_query = query
     for candidate_query, concept, brief in stock_queries:
@@ -541,7 +884,11 @@ def fetch_image_for_article(
         receipt = search_result(photos, "pexels")
         searches.append(receipt)
         candidate_count += len(photos)
-        fresh = [p for p in photos if not is_image_used(p["id"])] if receipt.get("succeeded") else []
+        fresh = fresh_candidates(photos) if receipt.get("succeeded") else []
+        if identity_binding_failed:
+            return duplicate_guard_fault("provider_identity_mismatch")
+        if duplicate_guard_failed:
+            return duplicate_guard_fault("duplicate_guard_check_failed")
         fresh_candidate_count += len(fresh)
         available_photos, decisions = filter_image_candidates(
             fresh,
@@ -550,6 +897,8 @@ def fetch_image_for_article(
             summary=summary,
             key_points=key_points,
             content=content,
+            source_evidence=source_evidence,
+            category=category,
             provider="pexels",
             intent=brief.intent,
             brief=brief,
@@ -572,7 +921,11 @@ def fetch_image_for_article(
         receipt = search_result(photos, "pexels")
         searches.append(receipt)
         candidate_count += len(photos)
-        fresh = [p for p in photos if not is_image_used(p["id"])] if receipt.get("succeeded") else []
+        fresh = fresh_candidates(photos) if receipt.get("succeeded") else []
+        if identity_binding_failed:
+            return duplicate_guard_fault("provider_identity_mismatch")
+        if duplicate_guard_failed:
+            return duplicate_guard_fault("duplicate_guard_check_failed")
         fresh_candidate_count += len(fresh)
         available_photos, decisions = filter_image_candidates(
             fresh,
@@ -581,6 +934,8 @@ def fetch_image_for_article(
             summary=summary,
             key_points=key_points,
             content=content,
+            source_evidence=source_evidence,
+            category=category,
             provider="pexels",
             intent=stock_queries[0][2].intent,
             brief=stock_queries[0][2],
@@ -599,19 +954,61 @@ def fetch_image_for_article(
     set_query_index(query, idx + 1)
     photo = available_photos[idx]
 
+    semantic_accepted = True
+    hero_url = str(photo.get("url") or "").strip()
+    thumb_url = str(photo.get("thumb_url") or "").strip()
+    attribution_complete = _attribution_complete(photo)
+    if not attribution_complete:
+        return finish(None, reason="provider_attribution_incomplete")
+    if not (
+        _valid_https_url(hero_url, {"images.pexels.com"})
+        and _valid_https_url(thumb_url, {"images.pexels.com"})
+    ):
+        delivery_attempted = True
+        return finish(None, reason="hero_or_thumbnail_delivery_unavailable")
+    if not _candidate_identity_consistent(photo):
+        return duplicate_guard_fault("provider_identity_mismatch")
+    try:
+        selected_identities = candidate_identities(photo)
+    except Exception:
+        return duplicate_guard_fault("duplicate_guard_check_failed")
+
     local_path = None
     if download:
         # large2x = 2560px, large = 1920px — prefer large2x per Sara's spec
-        hero_url = photo.get("url")  # already large2x or large from _search_pexels
-        local_path = _download_image(hero_url, slug, suffix="hero")
-        thumb_local = _download_image(photo["thumb_url"], slug, suffix="thumb")
-        if local_path:
-            mark_image_used(photo["id"])
-        else:
-            download_failed = True
+        delivery_attempted = True
+        local_path = _download_image(
+            hero_url,
+            slug,
+            suffix="hero",
+            candidate_identity=selected_identities[0],
+        )
+        thumb_local = _download_image(
+            thumb_url,
+            slug,
+            suffix="thumb",
+            candidate_identity=selected_identities[0],
+        )
+        delivery_succeeded = bool(local_path)
+        thumbnail_delivery_succeeded = bool(thumb_local)
+        if local_path and not thumb_local:
+            thumb_local = local_path
+            thumbnail_delivery_succeeded = True
         time.sleep(inter_request_delay)
     else:
         thumb_local = None
+        delivery_attempted = True
+        delivery_succeeded = True
+        thumbnail_delivery_succeeded = True
+
+    if not delivery_succeeded:
+        return finish(None, reason="hero_download_failed")
+
+    try:
+        for identity in selected_identities:
+            mark_image_used(identity)
+    except Exception:
+        return duplicate_guard_fault("duplicate_guard_mark_failed")
 
     photographer = photo["photographer"]
     pexels_url = photo["pexels_url"]
@@ -619,8 +1016,8 @@ def fetch_image_for_article(
     result = {
         "local_path": local_path,
         "thumb_path": thumb_local,
-        "url": photo["url"],
-        "thumb_url": photo["thumb_url"],
+        "url": hero_url,
+        "thumb_url": thumb_url,
         "photographer": photographer,
         "photographer_url": photo["photographer_url"],
         "pexels_url": pexels_url,
@@ -633,7 +1030,7 @@ def fetch_image_for_article(
         "concept": photo.get("_image_concept", selected_query),
     }
     result.update(stock_decision_fields("pexels", result, selected_query))
-    return finish(result, reason="download_failed" if download_failed else "")
+    return finish(result)
 
 
 def fetch_images_for_articles(articles: list, delay: float = 0.5) -> list:
@@ -672,7 +1069,6 @@ def fetch_images_for_articles(articles: list, delay: float = 0.5) -> list:
         category = article.get("category", "Kotimaa")
         slug = article.get("slug", "") or _derive_slug(title)
         key_points = list(article.get("key_points") or [])
-        key_points.extend(article.get("tags") or [])
 
         result, provider_result = fetch_image_for_article(
             title,
@@ -680,6 +1076,7 @@ def fetch_images_for_articles(articles: list, delay: float = 0.5) -> list:
             summary=article.get("summary", "") or "",
             key_points=key_points,
             content=article.get("content", "") or "",
+            source_evidence=str(article.get("source_text") or article.get("research") or ""),
             slug=slug,
             download=True,
             inter_request_delay=delay,
@@ -700,7 +1097,11 @@ def fetch_images_for_articles(articles: list, delay: float = 0.5) -> list:
             if b64:
                 article["image_placeholder"] = b64
         else:
-            from image_candidate_guard import category_fallback_fields
-            article.update(category_fallback_fields(category, reason="stock candidates unavailable or rejected"))
+            category_fallback_fields = _load_category_fallback_fields()
+            if category_fallback_fields is not None:
+                article.update(category_fallback_fields(
+                    category,
+                    reason="stock candidates unavailable or rejected",
+                ))
 
     return articles
