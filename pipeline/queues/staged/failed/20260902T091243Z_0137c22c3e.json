@@ -226,5 +226,31 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20243097?origin=rss"
-  }
+  },
+  "publish_preflight_rejected_at": "2026-09-02T09:15:43.863237+00:00",
+  "publish_preflight_rejected": true,
+  "publish_preflight_feedback": {
+    "action": "reject",
+    "requires_monica_review": false,
+    "reasons": [
+      "category_disagreement"
+    ],
+    "categories": [
+      "Kotimaa",
+      "Kotimaa",
+      "Talous"
+    ],
+    "selected_source_urls": [
+      "https://yle.fi/a/74-20243097?origin=rss"
+    ],
+    "public_source_urls": [
+      "https://yle.fi/a/74-20243097?origin=rss"
+    ],
+    "hidden_source_urls": [],
+    "distinct_source_words": 281,
+    "article_words": 260,
+    "article_source_ratio": 0.9252669039145908,
+    "sensitive": false
+  },
+  "failure": "publish_preflight_rejected: category_disagreement"
 }
