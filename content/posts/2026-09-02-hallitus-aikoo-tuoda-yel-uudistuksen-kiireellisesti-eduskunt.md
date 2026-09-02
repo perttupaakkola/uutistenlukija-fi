@@ -57,7 +57,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/hallitus-kiirehtii-esitysta-yel-uudistuksesta-odotamme-etta-asiassa-edetaan-nopeasti"
-briefing: true
 draft: false
 ---
 
