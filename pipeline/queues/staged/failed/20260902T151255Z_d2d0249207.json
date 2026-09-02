@@ -261,5 +261,36 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20244269"
-  }
+  },
+  "quality_gate_rejected_at": "2026-09-02T15:17:22.361755+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260902T151255Z_d2d0249207",
+    "category": "Kotimaa",
+    "selected_source_words": 318,
+    "selected_source_blocks": 3,
+    "story_confidence": 0.98,
+    "quality_total": 50,
+    "quality_normalized": 8.02,
+    "quality_reasons": [
+      "length under target (273 words)",
+      "missing: image",
+      "unsourced numbers",
+      "source_confidence_denial_context_missing",
+      "unsourced_numbers: 7372.89euro"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 7372.89euro"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 273,
+    "title": "Ano Turtiaisen omakotitalo Juvalla on ulosmitattu"
+  },
+  "failure": "quality_gate_rejected: length under target (273 words); missing: image; unsourced numbers; source_confidence_denial_context_missing; unsourced_numbers: 7372.89euro"
 }
