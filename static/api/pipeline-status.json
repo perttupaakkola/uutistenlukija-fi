@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-09-02T14:29:48+00:00",
+  "generated_at": "2026-09-02T15:50:29+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 11,
+    "published": 12,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-09-02T14:26:01.650170+00:00",
+    "last_published_ts": "2026-09-02T15:46:37.075194+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -41,6 +41,10 @@
   "trending": [
     [
       "mukaansa",
+      13
+    ],
+    [
+      "hallitus",
       11
     ],
     [
@@ -48,16 +52,12 @@
       10
     ],
     [
-      "hallitus",
+      "venäjän",
       10
     ],
     [
-      "järjestön",
+      "pitää",
       9
-    ],
-    [
-      "johtaja",
-      8
     ]
   ],
   "stagedQueueRunway": {
@@ -83,7 +83,7 @@
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 0,
     "publishableRemainingCycles": 0,
-    "recentPublishedPackets": 11,
+    "recentPublishedPackets": 12,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",

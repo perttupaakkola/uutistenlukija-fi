@@ -58,7 +58,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/kultasepanliike-tahtaa-suomen-cartieriksi-50-vuotias-perheyritys-avaa-lippulaivamyymalan-helsingin-ytimeen"
-briefing: true
 draft: false
 ---
 

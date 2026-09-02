@@ -226,6 +226,207 @@
         "url": "https://lapinkansa.fi/saksasta-loydetty-rajahdedrooni-on-osa-venajan-hyb/13650650"
       }
     ],
-    "source_url": "https://www.lapinkansa.fi/saksasta-loydetty-rajahdedrooni-on-osa-venajan-hyb/13650650"
+    "source_url": "https://www.lapinkansa.fi/saksasta-loydetty-rajahdedrooni-on-osa-venajan-hyb/13650650",
+    "image_provider_results": [
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "unsplash",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "all_policy_rejected",
+        "reason": "broad_category_fallback_blocked",
+        "query_count": 1,
+        "candidate_count": 4,
+        "fresh_candidate_count": 4,
+        "rejected_count": 4,
+        "accepted_count": 0,
+        "fault_count": 0
+      },
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "pexels",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "accepted",
+        "reason": "candidate_accepted",
+        "query_count": 1,
+        "candidate_count": 80,
+        "fresh_candidate_count": 80,
+        "rejected_count": 79,
+        "accepted_count": 1,
+        "fault_count": 0
+      }
+    ],
+    "image_hotlink": false,
+    "image_category_fallback": false,
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "stock",
+        "reason": "stock_rejection",
+        "outcome": "all_policy_rejected",
+        "provider_fault": false,
+        "provider_attempted": true,
+        "provider_succeeded": true,
+        "provider": "unsplash"
+      }
+    ],
+    "image": "/images/articles/saksa-syyttaa-venajaa-leipzigin-rajahdedroonista-ja-kiristaa-hero.jpg",
+    "image_thumb": "/images/articles/saksa-syyttaa-venajaa-leipzigin-rajahdedroonista-ja-kiristaa-thumb.jpg",
+    "image_alt": "Saksa syyttää Venäjää Leipzigin räjähdedroonista ja kiristää vastatoimia",
+    "image_credit": "Photo by Wolfgang Weiser on Pexels",
+    "image_source_url": "https://www.pexels.com/photo/commercial-airplane-on-the-runway-19116921/",
+    "image_caption": "",
+    "image_source": "pexels",
+    "image_source_type": "stock",
+    "image_decision_reason": "metadata matches a, international, on; retrieval hint matches airport",
+    "image_visual_intent": {
+      "subject": "vastatoimia ja räjähdedroonista saksa venäjää",
+      "setting": "international context without implying a specific event scene",
+      "season_time": "neutral",
+      "must_have": [],
+      "must_not": [
+        "generic person portrait or lookalike",
+        "realistic victim, crime, attack, or disaster scene"
+      ],
+      "stock_ok": true,
+      "generated_ok": true,
+      "safety_mode": "illustration_only",
+      "style_preference": "editorial illustration preferred for unsafe specifics"
+    },
+    "image_visual_brief": {
+      "acceptable_concepts": [
+        "vastatoimia ja räjähdedroonista saksa venäjää",
+        "international context without implying a specific event scene"
+      ],
+      "hard_forbidden_implications": [
+        "generic person portrait or lookalike",
+        "realistic victim, crime, attack, or disaster scene"
+      ],
+      "intent": {
+        "subject": "vastatoimia ja räjähdedroonista saksa venäjää",
+        "setting": "international context without implying a specific event scene",
+        "season_time": "neutral",
+        "must_have": [],
+        "must_not": [
+          "generic person portrait or lookalike",
+          "realistic victim, crime, attack, or disaster scene"
+        ],
+        "stock_ok": true,
+        "generated_ok": true,
+        "safety_mode": "illustration_only",
+        "style_preference": "editorial illustration preferred for unsafe specifics"
+      },
+      "prompt_version": "image-flow-v2-2026-07-03"
+    },
+    "image_concept": "primary_query",
+    "image_query": "Leipzig airport drone incident",
+    "image_candidate_id": "19116921",
+    "image_candidate_url": "https://www.pexels.com/photo/commercial-airplane-on-the-runway-19116921/",
+    "image_visual_judge_score": 49,
+    "image_accepted_reasons": [
+      "metadata matches a, international, on",
+      "retrieval hint matches airport"
+    ],
+    "image_rejected_reasons": [],
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_decision": {
+      "source": "pexels",
+      "query": "Leipzig airport drone incident",
+      "concept": "primary_query",
+      "accepted": true,
+      "score": 66,
+      "candidate_id": "19116921",
+      "source_url": "https://www.pexels.com/photo/commercial-airplane-on-the-runway-19116921/",
+      "visual_judge_score": 49,
+      "visual_judge_reasons": [
+        "visual metadata supports concept 'international context without implying a specific event scene'"
+      ],
+      "reasons": [
+        "metadata matches a, international, on",
+        "retrieval hint matches airport"
+      ],
+      "prompt_version": "image-flow-v2-2026-07-03"
+    },
+    "image_quality_score": 66,
+    "image_placeholder": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAYCAwX/xAAiEAABAgUEAwAAAAAAAAAAAAABAAIDBRESkQQTITJBcYH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAv/EABYRAQEBAAAAAAAAAAAAAAAAAAAREv/aAAwDAQACEQMRAD8A2jNoO+xjSCwg3OJAtPj4rRMdNuWbzA4ioq4cpVMR9Oxyog+sKNkN4mGmI4jMyhKoe+nY5QmyP//Z"
+  },
+  "image_enriched_at": "2026-09-02T15:46:37.075059+00:00",
+  "image_enrichment": {
+    "image": "/images/articles/saksa-syyttaa-venajaa-leipzigin-rajahdedroonista-ja-kiristaa-hero.jpg",
+    "image_thumb": "/images/articles/saksa-syyttaa-venajaa-leipzigin-rajahdedroonista-ja-kiristaa-thumb.jpg",
+    "image_category_fallback": false,
+    "image_source": "pexels",
+    "image_source_type": "stock",
+    "image_decision_reason": "metadata matches a, international, on; retrieval hint matches airport",
+    "image_concept": "primary_query",
+    "image_query": "Leipzig airport drone incident",
+    "image_candidate_id": "19116921",
+    "image_candidate_url": "https://www.pexels.com/photo/commercial-airplane-on-the-runway-19116921/",
+    "image_visual_judge_score": 49,
+    "image_accepted_reasons": [
+      "metadata matches a, international, on",
+      "retrieval hint matches airport"
+    ],
+    "image_rejected_reasons": [],
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_provider_results": [
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "unsplash",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "all_policy_rejected",
+        "reason": "broad_category_fallback_blocked",
+        "query_count": 1,
+        "candidate_count": 4,
+        "fresh_candidate_count": 4,
+        "rejected_count": 4,
+        "accepted_count": 0,
+        "fault_count": 0
+      },
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "pexels",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "accepted",
+        "reason": "candidate_accepted",
+        "query_count": 1,
+        "candidate_count": 80,
+        "fresh_candidate_count": 80,
+        "rejected_count": 79,
+        "accepted_count": 1,
+        "fault_count": 0
+      }
+    ],
+    "image_generation_terminal": null,
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "stock",
+        "reason": "stock_rejection",
+        "outcome": "all_policy_rejected",
+        "provider_fault": false,
+        "provider_attempted": true,
+        "provider_succeeded": true,
+        "provider": "unsplash"
+      }
+    ]
+  },
+  "published_at": "2026-09-02T15:50:29.166959+00:00",
+  "created_files": [
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-09-02-saksa-syyttaa-venajaa-leipzigin-rajahdedroonista-ja-kiristaa.md"
+  ],
+  "category_trace": {
+    "packet_id": "20260902T154214Z_66b11e7fc1",
+    "decisions": {
+      "guard": "Ulkomaat",
+      "writer": "Ulkomaat",
+      "publisher": "Ulkomaat"
+    },
+    "disagreement": false
   }
 }
