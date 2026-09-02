@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-09-02T08:21:11+00:00",
+  "generated_at": "2026-09-02T08:50:46+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 10,
+    "published": 11,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-09-02T08:17:14.079024+00:00",
+    "last_published_ts": "2026-09-02T08:47:45.767735+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -45,6 +45,10 @@
     ],
     [
       "mukaansa",
+      10
+    ],
+    [
+      "järjestön",
       9
     ],
     [
@@ -52,12 +56,8 @@
       8
     ],
     [
-      "epower",
-      7
-    ],
-    [
-      "lindroos",
-      7
+      "pitää",
+      8
     ]
   ],
   "stagedQueueRunway": {
@@ -83,7 +83,7 @@
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 0,
     "publishableRemainingCycles": 0,
-    "recentPublishedPackets": 10,
+    "recentPublishedPackets": 11,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",

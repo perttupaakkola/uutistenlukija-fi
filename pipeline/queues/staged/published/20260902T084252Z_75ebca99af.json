@@ -244,6 +244,201 @@
         "url": "https://finanssiala.fi/uutiset/hyva-etta-hallituksella-on-halua-kehittaa-osakesaastotilia-nyt-tarkeinta-olisi-hyvaksya-myos-aloittaville-piensijoittajille-sopivat-sijoitusrahastot-mukaan"
       }
     ],
-    "source_url": "https://www.finanssiala.fi/uutiset/hyva-etta-hallituksella-on-halua-kehittaa-osakesaastotilia-nyt-tarkeinta-olisi-hyvaksya-myos-aloittaville-piensijoittajille-sopivat-sijoitusrahastot-mukaan/"
+    "source_url": "https://www.finanssiala.fi/uutiset/hyva-etta-hallituksella-on-halua-kehittaa-osakesaastotilia-nyt-tarkeinta-olisi-hyvaksya-myos-aloittaville-piensijoittajille-sopivat-sijoitusrahastot-mukaan/",
+    "image_provider_results": [
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "unsplash",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "all_policy_rejected",
+        "reason": "all_fresh_candidates_rejected",
+        "query_count": 2,
+        "candidate_count": 60,
+        "fresh_candidate_count": 60,
+        "rejected_count": 60,
+        "accepted_count": 0,
+        "fault_count": 0
+      },
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "pexels",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "accepted",
+        "reason": "candidate_accepted",
+        "query_count": 1,
+        "candidate_count": 80,
+        "fresh_candidate_count": 80,
+        "rejected_count": 78,
+        "accepted_count": 1,
+        "fault_count": 0
+      }
+    ],
+    "image_hotlink": false,
+    "image_category_fallback": false,
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "stock",
+        "reason": "stock_rejection",
+        "outcome": "all_policy_rejected",
+        "provider_fault": false,
+        "provider_attempted": true,
+        "provider_succeeded": true,
+        "provider": "unsplash"
+      }
+    ],
+    "image": "/images/articles/finanssiala-ry-haluaa-sijoitusrahastot-osakesaastotilille-hero.jpg",
+    "image_thumb": "/images/articles/finanssiala-ry-haluaa-sijoitusrahastot-osakesaastotilille-thumb.jpg",
+    "image_alt": "Finanssiala ry haluaa sijoitusrahastot osakesäästötilille",
+    "image_credit": "Photo by Leeloo The First on Pexels",
+    "image_source_url": "https://www.pexels.com/photo/black-framed-eyeglasses-on-white-printer-paper-7873560/",
+    "image_caption": "",
+    "image_source": "pexels",
+    "image_source_type": "stock",
+    "image_decision_reason": "metadata matches business, documents, on",
+    "image_visual_intent": {
+      "subject": "sijoitusrahastot osakesäästötilille ry haluaa finanssiala",
+      "setting": "business, finance, offices, documents, charts, or economy",
+      "season_time": "neutral",
+      "must_have": [],
+      "must_not": [
+        "generic person portrait or lookalike"
+      ],
+      "stock_ok": true,
+      "generated_ok": true,
+      "safety_mode": "illustration_only",
+      "style_preference": "editorial illustration preferred for unsafe specifics"
+    },
+    "image_visual_brief": {
+      "acceptable_concepts": [
+        "sijoitusrahastot osakesäästötilille ry haluaa finanssiala",
+        "business, finance, offices, documents, charts, or economy"
+      ],
+      "hard_forbidden_implications": [
+        "generic person portrait or lookalike"
+      ],
+      "intent": {
+        "subject": "sijoitusrahastot osakesäästötilille ry haluaa finanssiala",
+        "setting": "business, finance, offices, documents, charts, or economy",
+        "season_time": "neutral",
+        "must_have": [],
+        "must_not": [
+          "generic person portrait or lookalike"
+        ],
+        "stock_ok": true,
+        "generated_ok": true,
+        "safety_mode": "illustration_only",
+        "style_preference": "editorial illustration preferred for unsafe specifics"
+      },
+      "prompt_version": "image-flow-v2-2026-07-03"
+    },
+    "image_concept": "primary_query",
+    "image_query": "investment funds Finland",
+    "image_candidate_id": "7873560",
+    "image_candidate_url": "https://www.pexels.com/photo/black-framed-eyeglasses-on-white-printer-paper-7873560/",
+    "image_visual_judge_score": 49,
+    "image_accepted_reasons": [
+      "metadata matches business, documents, on"
+    ],
+    "image_rejected_reasons": [],
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_decision": {
+      "source": "pexels",
+      "query": "investment funds Finland",
+      "concept": "primary_query",
+      "accepted": true,
+      "score": 65,
+      "candidate_id": "7873560",
+      "source_url": "https://www.pexels.com/photo/black-framed-eyeglasses-on-white-printer-paper-7873560/",
+      "visual_judge_score": 49,
+      "visual_judge_reasons": [
+        "visual metadata supports concept 'business, finance, offices, documents, charts, or economy'"
+      ],
+      "reasons": [
+        "metadata matches business, documents, on"
+      ],
+      "prompt_version": "image-flow-v2-2026-07-03"
+    },
+    "image_quality_score": 65,
+    "image_placeholder": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQC/8QAIBAAAwACAgEFAAAAAAAAAAAAAQIDABEEIRIFIjJBof/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAYEQADAQEAAAAAAAAAAAAAAAAAAQIRA//aAAwDAQACEQMRAD8Au4Lx5PhSQ2lNaJGjodnNVjCfJ3SE/Ar0xTpTj0tVmwko9spkD8yrkBHRg8wwBB1hxlLR+mw1KJLSiabaEmJ+ygOM1RgG+IOMUA//2Q=="
+  },
+  "image_enriched_at": "2026-09-02T08:47:45.767663+00:00",
+  "image_enrichment": {
+    "image": "/images/articles/finanssiala-ry-haluaa-sijoitusrahastot-osakesaastotilille-hero.jpg",
+    "image_thumb": "/images/articles/finanssiala-ry-haluaa-sijoitusrahastot-osakesaastotilille-thumb.jpg",
+    "image_category_fallback": false,
+    "image_source": "pexels",
+    "image_source_type": "stock",
+    "image_decision_reason": "metadata matches business, documents, on",
+    "image_concept": "primary_query",
+    "image_query": "investment funds Finland",
+    "image_candidate_id": "7873560",
+    "image_candidate_url": "https://www.pexels.com/photo/black-framed-eyeglasses-on-white-printer-paper-7873560/",
+    "image_visual_judge_score": 49,
+    "image_accepted_reasons": [
+      "metadata matches business, documents, on"
+    ],
+    "image_rejected_reasons": [],
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_provider_results": [
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "unsplash",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "all_policy_rejected",
+        "reason": "all_fresh_candidates_rejected",
+        "query_count": 2,
+        "candidate_count": 60,
+        "fresh_candidate_count": 60,
+        "rejected_count": 60,
+        "accepted_count": 0,
+        "fault_count": 0
+      },
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "pexels",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "accepted",
+        "reason": "candidate_accepted",
+        "query_count": 1,
+        "candidate_count": 80,
+        "fresh_candidate_count": 80,
+        "rejected_count": 78,
+        "accepted_count": 1,
+        "fault_count": 0
+      }
+    ],
+    "image_generation_terminal": null,
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "stock",
+        "reason": "stock_rejection",
+        "outcome": "all_policy_rejected",
+        "provider_fault": false,
+        "provider_attempted": true,
+        "provider_succeeded": true,
+        "provider": "unsplash"
+      }
+    ]
+  },
+  "published_at": "2026-09-02T08:50:46.117785+00:00",
+  "created_files": [
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-09-02-finanssiala-ry-haluaa-sijoitusrahastot-osakesaastotilille.md"
+  ],
+  "category_trace": {
+    "packet_id": "20260902T084252Z_75ebca99af",
+    "decisions": {
+      "guard": "Talous",
+      "writer": "Talous",
+      "publisher": "Talous"
+    },
+    "disagreement": false
   }
 }
