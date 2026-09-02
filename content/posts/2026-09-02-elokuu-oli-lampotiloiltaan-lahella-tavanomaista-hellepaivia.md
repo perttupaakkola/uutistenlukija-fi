@@ -58,7 +58,6 @@ source_domain: "aamuset.fi"
 source_attributions:
   - name: "aamuset"
     url: "https://aamuset.fi/artikkeli/7072672"
-briefing: true
 draft: false
 ---
 

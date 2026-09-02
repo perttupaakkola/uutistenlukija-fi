@@ -228,6 +228,166 @@
         "url": "https://yle.fi/a/74-20244242?origin=rss"
       }
     ],
-    "source_url": "https://yle.fi/a/74-20244242?origin=rss"
+    "source_url": "https://yle.fi/a/74-20244242?origin=rss",
+    "image_provider_results": [
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "unsplash",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "accepted",
+        "reason": "candidate_accepted",
+        "query_count": 1,
+        "candidate_count": 30,
+        "fresh_candidate_count": 30,
+        "rejected_count": 28,
+        "accepted_count": 1,
+        "fault_count": 0
+      }
+    ],
+    "image": "https://images.unsplash.com/photo-1511803471753-da23b1a92d4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw1fHx3aW50ZXIlMjB3ZWF0aGVyfGVufDF8MHx8fDE3ODgzMTcxMDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1511803471753-da23b1a92d4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw1fHx3aW50ZXIlMjB3ZWF0aGVyfGVufDF8MHx8fDE3ODgzMTcxMDd8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_alt": "Karjalan radalle esitetään 149 miljoonan euron valtuutta – Ranne arvioi hankkeen tuovan työtä yli tuhannelle",
+    "image_credit": "Photo by Tim Gouw on Unsplash",
+    "image_source_url": "https://unsplash.com/photos/brown-wooden-fence-filled-with-snow-during-winter-rxLGSOM0e3U?utm_source=uutistenlukija&utm_medium=referral",
+    "image_caption": "",
+    "image_hotlink": true,
+    "image_source": "unsplash",
+    "image_source_type": "stock",
+    "image_decision_reason": "metadata matches winter; retrieval hint matches winter; weather metadata matches visual intent",
+    "image_visual_intent": {
+      "subject": "tuhannelle tuovan yli radalle 149",
+      "setting": "Finnish public life or neutral Finnish landscape",
+      "season_time": "winter",
+      "must_have": [
+        "weather",
+        "winter conditions",
+        "budget documents or public finance"
+      ],
+      "must_not": [
+        "generic person portrait or lookalike"
+      ],
+      "stock_ok": true,
+      "generated_ok": true,
+      "safety_mode": "illustration_only",
+      "style_preference": "editorial illustration preferred for unsafe specifics"
+    },
+    "image_visual_brief": {
+      "acceptable_concepts": [
+        "winter weather",
+        "budget documents",
+        "public finance papers",
+        "financial planning desk"
+      ],
+      "hard_forbidden_implications": [
+        "generic person portrait or lookalike"
+      ],
+      "intent": {
+        "subject": "tuhannelle tuovan yli radalle 149",
+        "setting": "Finnish public life or neutral Finnish landscape",
+        "season_time": "winter",
+        "must_have": [
+          "weather",
+          "winter conditions",
+          "budget documents or public finance"
+        ],
+        "must_not": [
+          "generic person portrait or lookalike"
+        ],
+        "stock_ok": true,
+        "generated_ok": true,
+        "safety_mode": "illustration_only",
+        "style_preference": "editorial illustration preferred for unsafe specifics"
+      },
+      "prompt_version": "image-flow-v2-2026-07-03"
+    },
+    "image_concept": "winter weather",
+    "image_query": "winter weather",
+    "image_candidate_id": "rxLGSOM0e3U",
+    "image_candidate_url": "https://unsplash.com/photos/brown-wooden-fence-filled-with-snow-during-winter-rxLGSOM0e3U?utm_source=uutistenlukija&utm_medium=referral",
+    "image_visual_judge_score": 47,
+    "image_accepted_reasons": [
+      "metadata matches winter",
+      "retrieval hint matches winter",
+      "weather metadata matches visual intent"
+    ],
+    "image_rejected_reasons": [],
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_decision": {
+      "source": "unsplash",
+      "query": "winter weather",
+      "concept": "winter weather",
+      "accepted": true,
+      "score": 66,
+      "candidate_id": "rxLGSOM0e3U",
+      "source_url": "https://unsplash.com/photos/brown-wooden-fence-filled-with-snow-during-winter-rxLGSOM0e3U?utm_source=uutistenlukija&utm_medium=referral",
+      "visual_judge_score": 47,
+      "visual_judge_reasons": [
+        "visual metadata supports concept 'winter weather'",
+        "visual metadata supports required cue 'winter conditions'"
+      ],
+      "reasons": [
+        "metadata matches winter",
+        "retrieval hint matches winter",
+        "weather metadata matches visual intent"
+      ],
+      "prompt_version": "image-flow-v2-2026-07-03"
+    },
+    "image_quality_score": 66,
+    "image_category_fallback": false
+  },
+  "image_enriched_at": "2026-09-02T14:26:01.650072+00:00",
+  "image_enrichment": {
+    "image": "https://images.unsplash.com/photo-1511803471753-da23b1a92d4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw1fHx3aW50ZXIlMjB3ZWF0aGVyfGVufDF8MHx8fDE3ODgzMTcxMDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "image_thumb": "https://images.unsplash.com/photo-1511803471753-da23b1a92d4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw1fHx3aW50ZXIlMjB3ZWF0aGVyfGVufDF8MHx8fDE3ODgzMTcxMDd8MA&ixlib=rb-4.1.0&q=80&w=400",
+    "image_category_fallback": false,
+    "image_source": "unsplash",
+    "image_source_type": "stock",
+    "image_decision_reason": "metadata matches winter; retrieval hint matches winter; weather metadata matches visual intent",
+    "image_concept": "winter weather",
+    "image_query": "winter weather",
+    "image_candidate_id": "rxLGSOM0e3U",
+    "image_candidate_url": "https://unsplash.com/photos/brown-wooden-fence-filled-with-snow-during-winter-rxLGSOM0e3U?utm_source=uutistenlukija&utm_medium=referral",
+    "image_visual_judge_score": 47,
+    "image_accepted_reasons": [
+      "metadata matches winter",
+      "retrieval hint matches winter",
+      "weather metadata matches visual intent"
+    ],
+    "image_rejected_reasons": [],
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v2-2026-07-03",
+    "image_provider_results": [
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "unsplash",
+        "attempted": true,
+        "succeeded": true,
+        "outcome": "accepted",
+        "reason": "candidate_accepted",
+        "query_count": 1,
+        "candidate_count": 30,
+        "fresh_candidate_count": 30,
+        "rejected_count": 28,
+        "accepted_count": 1,
+        "fault_count": 0
+      }
+    ],
+    "image_generation_terminal": null,
+    "image_terminal_reasons": null
+  },
+  "published_at": "2026-09-02T14:29:48.314519+00:00",
+  "created_files": [
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-09-02-karjalan-radalle-esitetaan-149-miljoonan-euron-valtuutta-ran.md"
+  ],
+  "category_trace": {
+    "packet_id": "20260902T141337Z_1b0eb7bde7",
+    "decisions": {
+      "guard": "Kotimaa",
+      "writer": "Kotimaa",
+      "publisher": "Kotimaa"
+    },
+    "disagreement": false
   }
 }
