@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-09-02T04:50:21+00:00",
+  "generated_at": "2026-09-02T05:50:10+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 8,
+    "published": 9,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-09-02T04:46:45.697177+00:00",
+    "last_published_ts": "2026-09-02T05:46:14.599052+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -44,19 +44,19 @@
       9
     ],
     [
+      "euroa",
+      8
+    ],
+    [
+      "epower",
+      7
+    ],
+    [
       "lindroos",
       7
     ],
     [
       "mukaansa",
-      7
-    ],
-    [
-      "euroa",
-      7
-    ],
-    [
-      "yhdysvaltain",
       7
     ]
   ],
@@ -83,7 +83,7 @@
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 0,
     "publishableRemainingCycles": 0,
-    "recentPublishedPackets": 8,
+    "recentPublishedPackets": 9,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
