@@ -144,5 +144,22 @@
       "candidate_source_words": 339,
       "candidate_blocks": 5
     }
+  },
+  "failed_at": "2026-09-05T05:33:10.187564+00:00",
+  "failure": "Monica writer command failed: [state/agent-db] slow OpenClaw agent database open\nAuth profile \"openai:perttupaakkola@aol.com\" is temporarily unavailable for openai/gpt-5.6-sol.",
+  "raw_response": "",
+  "writer_failure_feedback": {
+    "packet_id": "20260905T052740Z_0d5b8f662a",
+    "category": "Talous",
+    "selected_source_words": 296,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 0,
+    "issues": [],
+    "source_backed": true,
+    "near_miss_short": false,
+    "retry_classification": "writer_schema_invalid",
+    "fail_closed": true,
+    "title": "Kysely: Suomalaiset yrittäjämyönteisiä, mutta eivät itse halua yrittäjiksi"
   }
 }
