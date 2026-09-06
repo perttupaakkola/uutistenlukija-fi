@@ -141,5 +141,22 @@
       "candidate_source_words": 317,
       "candidate_blocks": 4
     }
+  },
+  "failed_at": "2026-09-06T07:03:14.471764+00:00",
+  "failure": "Monica writer command failed: [sqlite/transaction] slow SQLite transaction hold\n[state/agent-db] slow OpenClaw agent database open\nAuth profile \"openai:perttupaakkola@aol.com\" is temporarily unavailable for openai/gpt-5.6-sol.",
+  "raw_response": "",
+  "writer_failure_feedback": {
+    "packet_id": "20260906T065741Z_5b4f7c2ee2",
+    "category": "Talous",
+    "selected_source_words": 317,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "final_word_count": 0,
+    "issues": [],
+    "source_backed": true,
+    "near_miss_short": false,
+    "retry_classification": "writer_schema_invalid",
+    "fail_closed": true,
+    "title": "Suvi Kinnunen osti sijoitusasunnon hintojen ollessa huipussa – Näin hän ajattelee siitä nyt"
   }
 }
