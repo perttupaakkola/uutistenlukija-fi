@@ -45,6 +45,8 @@ jobs:
         env:
           PYTHONPATH: pipeline
         run: python -m unittest test_rebuild_invariants test_pipeline_repair test_source_sufficiency test_story_packet test_research test_quality_gate test_monica_writer test_publish_preflight test_publisher_category test_generation_policy_order
+      - name: Verify credential-loader test isolation
+        run: python -B scripts/verify_env_test_isolation.py
       - name: Reader and real navigation regressions
         run: |
           python tests/reader_rebuild/test_reader.py

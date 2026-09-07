@@ -1801,42 +1801,51 @@ class StagedPublishMetricsTests(unittest.TestCase):
         self.assertEqual(fields["image_decision_reason"], "stock rejected")
 
     def test_enrich_images_loads_project_env_for_staged_publish(self) -> None:
-        project_env = staged_publish.PROJECT_DIR / ".env"
-        old_text = project_env.read_text(encoding="utf-8") if project_env.exists() else None
-        old_pexels = staged_publish.os.environ.pop("PEXELS_API_KEY", None)
-        old_unsplash = staged_publish.os.environ.pop("UNSPLASH_ACCESS_KEY", None)
-        try:
-            project_env.write_text("PEXELS_API_KEY=project-key\n", encoding="utf-8")
-            articles = [{"title": "Env artikkeli", "category": "Kotimaa"}]
+        # Never snapshot/overwrite a real credential file, even temporarily.
+        project = self.root / "synthetic-project"
+        project.mkdir()
+        project_env = project / ".env"
+        project_env.write_text("PEXELS_API_KEY=synthetic-project-key\n", encoding="utf-8")
+        articles = [{"title": "Env artikkeli", "category": "Kotimaa"}]
+        original_exists = Path.exists
+        checked_env_paths = []
 
-            def fake_pexels(batch, delay=0):
-                batch[0]["image"] = "/images/articles/env-hero.jpg"
-                batch[0]["image_thumb"] = "/images/articles/env-thumb.jpg"
-                batch[0]["image_source"] = "pexels"
-                batch[0]["image_category_fallback"] = False
-                _mock_stock_receipt(batch[0], provider="pexels", accepted=True)
-                return batch
+        def isolated_exists(path):
+            if path.name == ".env":
+                checked_env_paths.append(path)
+                # Hide every other credential source, including host fallbacks.
+                return path == project_env
+            return original_exists(path)
 
-            with patch.object(staged_publish, "should_skip", return_value=(False, None)), \
-                 patch.object(staged_publish, "pexels_fetch_images", side_effect=fake_pexels), \
-                 patch.object(staged_publish, "unsplash_fetch_images", side_effect=lambda batch, delay=0: batch):
-                summary = staged_publish.enrich_images_for_articles(articles, unsplash_delay=0, pexels_delay=0)
+        def fake_pexels(batch, delay=0):
+            self.assertEqual(staged_publish.os.environ.get("PEXELS_API_KEY"), "synthetic-project-key")
+            batch[0]["image"] = "/images/articles/env-hero.jpg"
+            batch[0]["image_thumb"] = "/images/articles/env-thumb.jpg"
+            batch[0]["image_source"] = "pexels"
+            batch[0]["image_category_fallback"] = False
+            _mock_stock_receipt(batch[0], provider="pexels", accepted=True)
+            return batch
 
-            self.assertEqual(summary["pexels"], 1)
-            self.assertEqual(articles[0]["image"], "/images/articles/env-hero.jpg")
-        finally:
-            if old_text is None:
-                project_env.unlink(missing_ok=True)
-            else:
-                project_env.write_text(old_text, encoding="utf-8")
-            if old_pexels is not None:
-                staged_publish.os.environ["PEXELS_API_KEY"] = old_pexels
-            else:
-                staged_publish.os.environ.pop("PEXELS_API_KEY", None)
-            if old_unsplash is not None:
-                staged_publish.os.environ["UNSPLASH_ACCESS_KEY"] = old_unsplash
-            else:
-                staged_publish.os.environ.pop("UNSPLASH_ACCESS_KEY", None)
+        with patch.dict(staged_publish.os.environ, {}, clear=True), \
+             patch.object(staged_publish, "PROJECT_DIR", project), \
+             patch.object(staged_publish, "PIPELINE_DIR", project / "pipeline"), \
+             patch.object(Path, "exists", isolated_exists), \
+             patch.object(staged_publish, "sync_image_provider_keys"), \
+             patch.object(staged_publish, "should_skip", return_value=(False, None)), \
+             patch.object(staged_publish, "record_success") as success, \
+             patch.object(staged_publish, "record_failure") as failure, \
+             patch.object(staged_publish, "pexels_fetch_images", side_effect=fake_pexels) as pexels, \
+             patch.object(staged_publish, "unsplash_fetch_images", side_effect=AssertionError("unexpected stock call")), \
+             patch.object(staged_publish, "generate_images_for_articles", side_effect=AssertionError("unexpected generation")):
+            summary = staged_publish.enrich_images_for_articles(articles, unsplash_delay=0, pexels_delay=0)
+            self.assertIn(project_env, checked_env_paths)
+            self.assertEqual(staged_publish.os.environ.get("PEXELS_API_KEY"), "synthetic-project-key")
+            pexels.assert_called_once()
+            success.assert_called_once_with("pexels")
+            failure.assert_not_called()
+
+        self.assertEqual(summary["pexels"], 1)
+        self.assertEqual(articles[0]["image"], "/images/articles/env-hero.jpg")
 
     def test_publish_persists_enriched_image_metadata_to_published_queue(self) -> None:
         article = {
