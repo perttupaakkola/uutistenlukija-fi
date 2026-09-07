@@ -240,5 +240,36 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20243496?origin=rss"
-  }
+  },
+  "quality_gate_rejected_at": "2026-09-07T06:15:48.107537+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260907T061231Z_e5b2537642",
+    "category": "Ulkomaat",
+    "selected_source_words": 301,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 50,
+    "quality_normalized": 8.04,
+    "quality_reasons": [
+      "length under target (273 words)",
+      "missing: image",
+      "unsourced numbers",
+      "central unsourced number(s): 70",
+      "unsourced_numbers: 2500, 35000, 50, 70"
+    ],
+    "hard_fails": [
+      "central unsourced number(s): 70"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 2500, 35000, 50, 70"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 273,
+    "title": "Ukrainan drooni-iskut vaurioittivat jalostamoja – Venäjä joutuu tuomaan polttoainetta"
+  },
+  "failure": "quality_gate_rejected: length under target (273 words); missing: image; unsourced numbers; central unsourced number(s): 70; unsourced_numbers: 2500, 35000, 50, 70"
 }
