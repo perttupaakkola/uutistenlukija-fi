@@ -3,8 +3,10 @@ Publisher — saves rewritten articles as Hugo content files and builds the site
 """
 
 import os
+import hashlib
 import json
 import subprocess
+import tempfile
 from datetime import datetime, timezone
 from typing import List, Dict
 from pathlib import Path
@@ -196,7 +198,51 @@ def _set_boolean_front_matter_flag(text: str, key: str, enabled: bool) -> str:
     return f"---\n{front}\n---\n\n{body}"
 
 
-def _refresh_daily_briefing_flags(target_day: str) -> list[str]:
+def _atomic_replace_bytes(path: Path, content: bytes) -> None:
+    """Never truncate a published file, even if the replacement write fails."""
+    fd, name = tempfile.mkstemp(prefix=f".{path.name}.", dir=path.parent)
+    temporary = Path(name)
+    try:
+        with os.fdopen(fd, "wb") as handle:
+            handle.write(content)
+        if path.exists():
+            temporary.chmod(path.stat().st_mode & 0o777)
+        temporary.replace(path)
+    finally:
+        temporary.unlink(missing_ok=True)
+
+
+class PublicationTransaction:
+    """Journal only this single-writer attempt's content and briefing changes.
+
+    Commit after the caller's build succeeds. Raised exceptions and uncommitted
+    returns restore exact previous bytes; no queue or Git ownership is changed.
+    """
+    def __init__(self):
+        self.before = {}
+        self.committed = False
+
+    def __enter__(self):
+        return self
+
+    def replace(self, path, content):
+        if path not in self.before:
+            self.before[path] = path.read_bytes()
+        _atomic_replace_bytes(path, content)
+
+    def commit(self):
+        self.committed = True
+
+    def __exit__(self, exc_type, exc, traceback):
+        if exc_type is not None or not self.committed:
+            for path, previous in reversed(list(self.before.items())):
+                if previous is None:
+                    path.unlink(missing_ok=True)
+                elif path.read_bytes() != previous:
+                    _atomic_replace_bytes(path, previous)
+
+
+def _refresh_daily_briefing_flags(target_day: str, transaction: PublicationTransaction) -> list[str]:
     """Assign briefing=true to up to 6 same-day articles, preferring category diversity.
 
     Selection order:
@@ -293,7 +339,7 @@ def _refresh_daily_briefing_flags(target_day: str) -> list[str]:
             continue
 
         new_text = _set_boolean_front_matter_flag(item["text"], "briefing", should_brief)
-        item["path"].write_text(new_text, encoding="utf-8")
+        transaction.replace(item["path"], new_text.encode("utf-8"))
         updated.append(item["path"].name)
 
     print(
@@ -507,34 +553,84 @@ draft: false
     return front_matter
 
 
-def publish_articles(articles: List[Dict]) -> List[str]:
-    """Save articles as Hugo content files. Returns list of created file paths."""
-    os.makedirs(CONTENT_DIR, exist_ok=True)
-    created = []
+def _publication_identity(article):
+    # Stable across retries and publication days, without changing legacy URLs.
+    from source_attribution import source_identity_key
+    source = source_identity_key(article.get("source_url") or article.get("link") or "")
+    seed = source or str(article.get("monica_packet_id") or article.get("title") or "")
+    return hashlib.sha256(seed.encode("utf-8")).hexdigest()
 
+
+def publish_articles(articles: List[Dict], *, transaction=None) -> List[str]:
+    """Publish atomically, or join the staged caller's build transaction."""
+    if transaction is not None:
+        return _publish_articles(articles, transaction)
+    with PublicationTransaction() as owned:
+        paths = _publish_articles(articles, owned)
+        owned.commit()
+        return paths
+
+
+def _publish_articles(articles: List[Dict], transaction: PublicationTransaction) -> List[str]:
+    """Create-only batch publication with deterministic collision names/retries.
+
+    Resolve the entire batch before writes. Existing story bodies and legacy
+    URLs are preserved. Retry of a recorded identity returns its URL;
+    a changed body needs an explicit editorial correction outside this writer.
+    """
     now = datetime.now(timezone.utc)
     date_str = now.strftime("%Y-%m-%d")
-
-    for idx, article in enumerate(articles):
-        slug = _make_slug(article.get("title", f"article-{idx}"))
-        filename = f"{date_str}-{slug}.md"
-        filepath = os.path.join(CONTENT_DIR, filename)
-
-        # Use article date or now, offset by index to maintain order
-        article_date = now.isoformat()
-        markdown = _article_to_markdown(article, article_date)
-
-        with open(filepath, "w", encoding="utf-8") as f:
-            f.write(markdown)
-
-        created.append(filepath)
-        print(f"[publisher] Created: {filename}")
-
-    updated = _refresh_daily_briefing_flags(date_str)
-    if updated:
-        print(f"[publisher] Updated briefing flags: {', '.join(updated)}")
-
-    return created
+    root = Path(CONTENT_DIR)
+    existing = {}
+    ambiguous = set()
+    for path in root.glob("*.md"):
+        front, body = _split_front_matter(path.read_text(encoding="utf-8"))
+        identity = _extract_front_matter_value(front, "publication_identity")
+        if not identity:
+            legacy_source = _extract_front_matter_value(front, "source_url")
+            legacy_title = _extract_front_matter_value(front, "title")
+            if legacy_source or legacy_title:
+                identity = _publication_identity({"source_url": legacy_source, "title": legacy_title})
+        if identity:
+            if identity in existing:
+                ambiguous.add(identity)
+            existing[identity] = (path, body.strip())
+    planned = {}
+    paths = []
+    for article in articles:
+        identity = _publication_identity(article)
+        if identity in ambiguous:
+            raise FileExistsError("ambiguous existing publication identity")
+        markdown = _article_to_markdown(article, now.isoformat())
+        _, body = _split_front_matter(markdown)
+        if identity in existing:
+            path, previous_body = existing[identity]
+            if body.strip() != previous_body:
+                raise FileExistsError("existing story changed; explicit editorial correction required")
+            paths.append(str(path))
+            continue
+        slug = _make_slug(article.get("title", "article"))
+        path = root / f"{date_str}-{slug}.md"
+        if path.exists() or path in planned:
+            path = root / f"{date_str}-{slug}-{identity[:16]}.md"
+        if path.exists() or path in planned:
+            raise FileExistsError(f"publication path collision: {path.name}")
+        markdown = markdown.replace("---\n", f'---\npublication_identity: "{identity}"\n', 1)
+        planned[path] = markdown
+        existing[identity] = (path, body.strip())
+        paths.append(str(path))
+    root.mkdir(parents=True, exist_ok=True)
+    for path, markdown in planned.items():
+        # Journal only after exclusive creation succeeds: never remove a rival.
+        with path.open("x", encoding="utf-8") as handle:
+            transaction.before[path] = None
+            handle.write(markdown)
+        print(f"[publisher] Created: {path.name}")
+    if planned:
+        updated = _refresh_daily_briefing_flags(date_str, transaction)
+        if updated:
+            print(f"[publisher] Updated briefing flags: {', '.join(updated)}")
+    return list(dict.fromkeys(paths))
 
 
 def build_site() -> tuple[bool, str]:

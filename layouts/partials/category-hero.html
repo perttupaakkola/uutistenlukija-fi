@@ -17,7 +17,7 @@
   <div class="category-stats" aria-label="Kategorian tiedot">
     <span>{{ $articleCount }} artikkelia</span>
     {{ with $latest }}
-      <span>Viimeisin artikkeli: {{ .Date | time.Format "2.1. klo 15:04" }}</span>
+      <span>Viimeisin artikkeli: {{ partial "absolute-date.html" .Date }}</span>
     {{ end }}
     <a href="{{ .Permalink }}index.xml" class="rss-link" title="RSS-syöte">RSS-syöte</a>
   </div>

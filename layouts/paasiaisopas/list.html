@@ -30,7 +30,7 @@
       <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
       <p class="excerpt">{{ .Summary | truncate 200 }}</p>
       <div class="meta">
-        {{ .Date | time.Format "2.1. klo 15:04" }}
+        {{ partial "absolute-date.html" .Date }}
       </div>
     </article>
     {{ end }}
@@ -59,7 +59,7 @@
       <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
       <p class="excerpt">{{ .Summary | truncate 200 }}</p>
       <div class="meta">
-        {{ .Date | time.Format "2.1. klo 15:04" }}
+        {{ partial "absolute-date.html" .Date }}
       </div>
     </article>
     {{ end }}

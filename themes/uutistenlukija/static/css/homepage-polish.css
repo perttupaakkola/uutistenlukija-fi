@@ -294,3 +294,13 @@
     line-height: 1.5 !important;
   }
 }
+
+/* Latest-story brief: date and summary remain readable in the existing portal. */
+.portal-day-digest__list p { margin: .4rem 0; font-size: .95rem; line-height: 1.5; color: var(--text-secondary, #555); }
+.portal-day-digest__list time { display: block; font: .75rem/1.5 var(--font-ui, sans-serif); color: var(--text-muted, #666); }
+[data-theme="dark"] .portal-day-digest__list p,
+[data-theme="dark"] .portal-day-digest__list time { color: #b8b6b3; }
+
+.portal-day-digest__list p, .portal-day-digest__list time { grid-column: 2; }
+.portal-teaser__meta { flex-wrap: wrap; row-gap: .25rem; }
+.portal-teaser__meta .portal-kicker { flex-shrink: 0; white-space: nowrap; }

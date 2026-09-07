@@ -9,6 +9,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from analytics_contract import validate_source, validate_daily_report
+
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DEFAULT_OUTPUT = PROJECT_DIR / "analytics" / "post-reauth-freshness-evidence.json"
@@ -78,10 +80,10 @@ def rel(path: Path) -> str:
 
 
 def summarize_daily_report(data: dict[str, Any] | None, error: str | None, now: datetime, max_age_hours: float) -> dict[str, Any]:
-    generated_at = parse_time(data.get("generated_at") if data else None)
-    mtime = parse_time(file_mtime(DAILY_REPORT))
-    evidence_time = mtime or generated_at
-    stale = True if evidence_time is None else age_hours(evidence_time, now) > max_age_hours
+    # A successful total does not certify other independently queried components.
+    validation = validate_daily_report(data, now, max_age_hours)
+    evidence_time = parse_time(validation.get("evidence_at"))
+    stale = not validation["fresh"]
 
     daily_rows = data.get("daily_pageviews", []) if data else []
     top_pages = data.get("top_pages_7d", []) if data else []
@@ -90,13 +92,16 @@ def summarize_daily_report(data: dict[str, Any] | None, error: str | None, now: 
 
     return {
         "artifact": rel(DAILY_REPORT),
+        "scope": "ga4_totals_and_daily_components",
         "exists": DAILY_REPORT.exists(),
         "read_status": "ok" if error is None else error,
-        "generated_at": data.get("generated_at") if data else None,
+        "generated_at": data.get("fetched_at", data.get("generated_at")) if data else None,
         "file_mtime": file_mtime(DAILY_REPORT),
         "age_hours": age_hours(evidence_time, now),
         "evidence_at": evidence_time.isoformat() if evidence_time else None,
         "fresh": not stale and error is None,
+        "status": validation["status"],
+        "reason": validation["reason"],
         "property_id": data.get("property_id") if data else None,
         "site": data.get("site") if data else None,
         "counts": {
@@ -109,21 +114,22 @@ def summarize_daily_report(data: dict[str, Any] | None, error: str | None, now: 
 
 
 def summarize_search_console(data: dict[str, Any] | None, error: str | None, now: datetime, max_age_hours: float) -> dict[str, Any]:
-    generated_at = parse_time(data.get("generated_at") if data else None)
-    mtime = parse_time(file_mtime(SEARCH_CONSOLE_REPORT))
-    evidence_time = mtime or generated_at
-    stale = True if evidence_time is None else age_hours(evidence_time, now) > max_age_hours
+    validation = validate_source(data, "gsc", now, max_age_hours)
+    evidence_time = parse_time(validation.get("evidence_at"))
+    stale = not validation["fresh"]
 
     rows = data.get("rows", []) if data else []
     return {
         "artifact": rel(SEARCH_CONSOLE_REPORT),
         "exists": SEARCH_CONSOLE_REPORT.exists(),
         "read_status": "ok" if error is None else error,
-        "generated_at": data.get("generated_at") if data else None,
+        "generated_at": data.get("fetched_at", data.get("generated_at")) if data else None,
         "file_mtime": file_mtime(SEARCH_CONSOLE_REPORT),
         "age_hours": age_hours(evidence_time, now),
         "evidence_at": evidence_time.isoformat() if evidence_time else None,
         "fresh": not stale and error is None,
+        "status": validation["status"],
+        "reason": validation["reason"],
         "site": data.get("site") if data else None,
         "days": data.get("days") if data else None,
         "row_count": data.get("row_count", len(rows) if isinstance(rows, list) else 0) if data else 0,
@@ -153,7 +159,7 @@ def summarize_oauth_blocker(
 
     checked_at = parse_time(data.get("checked_at") if data else None)
     mtime = parse_time(file_mtime(OAUTH_SENTINEL))
-    evidence_at = checked_at or mtime
+    evidence_at = checked_at
     fresh_validation_after_sentinel = bool(
         daily_summary.get("fresh")
         and search_console_summary.get("fresh")

@@ -41,7 +41,7 @@
            class="read-next__img article-card-thumb"
            loading="lazy" decoding="async" width="800" height="450"
            onload="this.classList.add('img-loaded')"
-           onerror="if(this.dataset.fallbackApplied==='1'){this.classList.add('img-loaded');return;}this.dataset.fallbackApplied='1';this.src='{{ $nextFallback }}';this.classList.add('img-loaded')">
+           onerror="if(this.dataset.fallbackApplied==='1'){this.classList.add('img-loaded');return;}this.dataset.fallbackApplied='1';this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='{{ $nextFallback }}';this.classList.add('img-loaded')">
       {{ else }}
       <div class="read-next__img-placeholder read-next__img-placeholder--{{ $nextCat | lower | urlize }}"></div>
       {{ end }}

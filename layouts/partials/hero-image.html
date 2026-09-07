@@ -89,7 +89,7 @@
 {{ $hasCaption := and .Params.image_caption (ne .Params.image_caption "") }}
 {{ $hasCredit := and .Params.image_credit (ne .Params.image_credit "") }}
 {{ $hasSourceUrl := and .Params.image_source_url (ne .Params.image_source_url "") }}
-{{ $isCategoryFallback := or (eq .Params.image_category_fallback true) (eq .Params.image_source_type "category_fallback") }}
+{{ $isCategoryFallback := or (eq .Params.image_category_fallback true) (eq .Params.image_source_type "category_fallback") (strings.Contains $img "/images/categories/") }}
 {{ $showFallbackCaption := and (not $hasCaption) $isCategoryFallback }}
 
 {{/* ── Blur-up placeholder ────────────────────────────────────── */}}
@@ -151,7 +151,7 @@
         srcset="{{ $srcJpegTablet }}"
         type="image/jpeg">
       <img
-        src="{{ $defaultSrc }}"
+        src="{{ partial "display-image.html" $defaultSrc }}"
         alt="{{ $alt }}"
         class="article-hero-img"
         loading="eager"
@@ -160,14 +160,14 @@
         width="1200"
         height="675"
         onload="this.classList.add('loaded')"
-        onerror="this.onerror=null;this.src='{{ $fallbackSrc }}';this.classList.add('loaded')"
+        onerror="this.onerror=null;this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='{{ $fallbackSrc }}';this.classList.add('loaded')"
         {{ if $placeholder }}data-has-placeholder="1"{{ end }}
       >
     </picture>
     {{ else }}
     {{/* ── Static/local image — plain img (no CDN format support) */}}
     <img
-      src="{{ $defaultSrc }}"
+      src="{{ partial "display-image.html" $defaultSrc }}"
       alt="{{ $alt }}"
       class="article-hero-img"
       loading="eager"
@@ -176,7 +176,7 @@
       width="1200"
       height="675"
       onload="this.classList.add('loaded')"
-      onerror="this.onerror=null;this.src='{{ $fallbackSrc }}';this.classList.add('loaded')"
+      onerror="this.onerror=null;this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='{{ $fallbackSrc }}';this.classList.add('loaded')"
       {{ if $placeholder }}data-has-placeholder="1"{{ end }}
     >
     {{ end }}

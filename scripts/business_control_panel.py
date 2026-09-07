@@ -838,8 +838,27 @@ def analytics_status(now: datetime) -> dict[str, Any]:
 
     gsc_source = ctr.get("data_source") if ctr else None
     gsc_generated = parse_dt(ctr.get("generated_at") if ctr else None)
-    gsc_blocked = gsc_source in (None, "frontmatter_synthetic", "frontmatter")
-    gsc_reason = "no local GSC export; CTR gap report uses frontmatter fallback" if gsc_blocked else "local GSC-derived report present"
+    ctr_status = ctr.get("status") if ctr else None
+    gsc_report_status = "local_report_present"
+    gsc_reason = "local GSC-derived report present"
+    if ctr_status in ("blocked", "stale", "invalid", "unavailable"):
+        gsc_report_status = "stale" if ctr_status == "stale" else "blocked"
+        gsc_reason = sanitize_reason(ctr.get("reason") or "CTR gap report unavailable")
+    elif gsc_source != "google_search_console":
+        gsc_report_status = "blocked"
+        gsc_reason = "missing or unsupported GSC source in CTR gap report"
+    elif ctr_status not in (None, "fresh") or (ctr.get("schema_version") == 2 and ctr_status != "fresh"):
+        gsc_report_status = "blocked"
+        gsc_reason = "missing or unsupported CTR gap report status"
+    elif gsc_generated is None or gsc_generated > now:
+        gsc_report_status = "blocked"
+        gsc_reason = "missing or invalid CTR gap report timestamp"
+    elif now - gsc_generated > timedelta(hours=ANALYTICS_FRESHNESS_MAX_AGE_HOURS):
+        gsc_report_status = "stale"
+        gsc_reason = "CTR gap report timestamp stale"
+    # Fresh provider evidence can stand alone, but cannot bless an explicitly
+    # blocked/stale derived report. Preserve that report's reason for callers.
+    ctr_unavailable = bool(ctr) and gsc_report_status != "local_report_present"
 
     def log_probe(path: Path) -> dict[str, Any]:
         if not path.exists():
@@ -915,14 +934,16 @@ def analytics_status(now: datetime) -> dict[str, Any]:
                 "weekly_metrics_log": weekly_log_probe,
             },
             "gsc": {
-                "status": "fresh",
-                "reason": "fresh Search Console validation artifact present",
+                "status": gsc_report_status if ctr_unavailable else "fresh",
+                "reason": gsc_reason if ctr_unavailable else "fresh Search Console validation artifact present",
                 "search_console_report": freshness_summary["search_console"],
                 "ctr_gap_report": {
                     "source": str(ctr_path.relative_to(PROJECT_DIR)) if ctr_path else None,
                     "generated_at": iso(gsc_generated),
                     "age_minutes": age_minutes(gsc_generated, now),
                     "data_source": gsc_source,
+                    "status": ctr_status,
+                    "reason": sanitize_reason(ctr.get("reason")) if ctr else None,
                     "total_gaps_found": ctr.get("total_gaps_found") if ctr else None,
                 },
                 "fetch_log": gsc_log_probe,
@@ -950,6 +971,8 @@ def analytics_status(now: datetime) -> dict[str, Any]:
                     "generated_at": iso(gsc_generated),
                     "age_minutes": age_minutes(gsc_generated, now),
                     "data_source": gsc_source,
+                    "status": ctr_status,
+                    "reason": sanitize_reason(ctr.get("reason")) if ctr else None,
                     "total_gaps_found": ctr.get("total_gaps_found") if ctr else None,
                 },
                 "fetch_log": gsc_log_probe,
@@ -967,14 +990,16 @@ def analytics_status(now: datetime) -> dict[str, Any]:
             "weekly_metrics_log": weekly_log_probe,
         },
         "gsc": {
-            "status": "stale_or_incomplete" if freshness_status else ("blocked" if gsc_blocked else "local_report_present"),
-            "reason": "no fresh Search Console validation artifact present" if freshness_status else gsc_reason,
+            "status": gsc_report_status if ctr_unavailable or not freshness_status else "stale_or_incomplete",
+            "reason": gsc_reason if ctr_unavailable or not freshness_status else "no fresh Search Console validation artifact present",
             "search_console_report": freshness_summary["search_console"],
             "ctr_gap_report": {
                 "source": str(ctr_path.relative_to(PROJECT_DIR)) if ctr_path else None,
                 "generated_at": iso(gsc_generated),
                 "age_minutes": age_minutes(gsc_generated, now),
                 "data_source": gsc_source,
+                "status": ctr_status,
+                "reason": sanitize_reason(ctr.get("reason")) if ctr else None,
                 "total_gaps_found": ctr.get("total_gaps_found") if ctr else None,
             },
             "fetch_log": gsc_log_probe,
@@ -1101,7 +1126,7 @@ def monetization_status() -> dict[str, Any]:
             "primary_metric": "monetization_signal events",
             "secondary_metrics": ["advertise_cta_click", "advertise_email_click"],
             "target": "first qualified advertiser inquiry",
-            "tracking_storage": "anonymous localStorage counter plus GA4 event when analytics consent is granted",
+            "tracking_storage": "GA4 event only when analytics consent is granted; no local interaction storage",
             "tracked_signal_markers": tracked_signal_count,
             "tracked_files": tracked_files,
         },

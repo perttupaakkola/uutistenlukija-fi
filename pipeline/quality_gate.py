@@ -556,7 +556,7 @@ def score_article(article: dict) -> ScoreBreakdown:
 
 # ── Gate ──────────────────────────────────────────────────────────────────────
 
-def run_gate(articles: list[dict], threshold: int = REJECT_THRESHOLD) -> GateResult:
+def run_gate(articles: list[dict], threshold: int = REJECT_THRESHOLD, *, persist: bool = True) -> GateResult:
     passed = []
     rejected = []
     scores: dict[str, int] = {}
@@ -575,7 +575,7 @@ def run_gate(articles: list[dict], threshold: int = REJECT_THRESHOLD) -> GateRes
                 f"[quality] WARNING ({breakdown.total}/80, norm={breakdown.normalized_score}/10): '{title}' — "
                 + " | ".join(breakdown.soft_warnings)
             )
-        if breakdown.filler_labels:
+        if persist and breakdown.filler_labels:
             _log_filler_hits(article, filler_result)
 
         if breakdown.passes:
@@ -594,9 +594,11 @@ def run_gate(articles: list[dict], threshold: int = REJECT_THRESHOLD) -> GateRes
             reason_str = " | ".join(dict.fromkeys(reasons))
             print(f"[quality] REJECTED ({breakdown.total}/80, norm={breakdown.normalized_score}/10): '{title}' — {reason_str}")
 
-            _save_rejected(article, breakdown, reason_str)
+            if persist:
+                _save_rejected(article, breakdown, reason_str)
             rejected.append(article)
-            _log_reject(article, reason_str)
+            if persist:
+                _log_reject(article, reason_str)
 
             if breakdown.total < threshold or breakdown.normalized_score < DEFAULT_NORMALIZED_THRESHOLD:
                 reason_counter["low_score"] += 1

@@ -1,14 +1,9 @@
-{{/*
-  most-read.html — homepage/support widget
-  Uses localStorage-based reader history when available.
-  Falls back to a server-rendered starter list so the block never looks empty.
-*/}}
 {{ $site := .Site | default site }}
 {{ $exclude := .exclude | default (slice) }}
 {{ $fallbackPool := where $site.RegularPages "Section" "posts" }}
 {{ $fallbackSorted := $fallbackPool.ByDate.Reverse }}
 {{ $fallback := first 5 (where $fallbackSorted "Permalink" "not in" $exclude) }}
-<aside class="most-read-widget most-read-widget--fallback-only" aria-label="Luetuimmat artikkelit" id="most-read-widget">
+<aside class="most-read-widget most-read-widget--fallback-only" aria-label="Uusimmat artikkelit" id="most-read-widget">
   <h3 class="most-read-title" id="most-read-title">Uusimmat</h3>
   <ul class="most-read-list" id="most-read-list" style="list-style:none;padding-left:0">
     {{ range $i, $p := $fallback }}
@@ -21,75 +16,3 @@
   </ul>
   <p class="most-read-empty" id="most-read-empty"{{ if $fallback }} style="display:none"{{ end }}>Ei vielä lukuhistoriaa.</p>
 </aside>
-
-<script>
-(function () {
-  var STORE_KEY = 'ul_views_v1';
-  var TTL_MS = 7 * 24 * 60 * 60 * 1000;
-  var now = Date.now();
-
-  function loadStore() {
-    try {
-      return JSON.parse(localStorage.getItem(STORE_KEY) || '{}');
-    } catch (e) { return {}; }
-  }
-
-  function pruneStore(store) {
-    var pruned = {};
-    Object.keys(store).forEach(function (slug) {
-      var entry = store[slug];
-      if (entry && entry.ts && (now - entry.ts) < TTL_MS) {
-        pruned[slug] = entry;
-      }
-    });
-    return pruned;
-  }
-
-  function renderWidget(store) {
-    var entries = Object.keys(store).map(function (slug) {
-      return { slug: slug, count: store[slug].count || 0, title: store[slug].title || slug };
-    });
-    entries.sort(function (a, b) { return b.count - a.count; });
-    var top = entries.slice(0, 5);
-
-    var list = document.getElementById('most-read-list');
-    var empty = document.getElementById('most-read-empty');
-    var title = document.getElementById('most-read-title');
-    if (!list) return;
-
-    if (top.length === 0) {
-      if (title) title.textContent = 'Uusimmat';
-      list.style.display = '';
-      if (empty) empty.style.display = list.children.length ? 'none' : '';
-      return;
-    }
-
-    if (title) title.textContent = 'Luetuimmat';
-    var widget = document.getElementById('most-read-widget');
-    if (widget) widget.classList.remove('most-read-widget--fallback-only');
-    list.innerHTML = '';
-    if (empty) empty.style.display = 'none';
-    top.forEach(function (item, i) {
-      var li = document.createElement('li');
-      li.className = 'most-read-item';
-      li.innerHTML =
-        '<span class="most-read-rank">' + (i + 1) + '</span>' +
-        '<a class="most-read-link" href="/' + encodeURIComponent(item.slug) + '/">' +
-          escapeHtml(item.title) +
-        '</a>' +
-        '<span class="most-read-count">' + item.count + ' lukijaa</span>';
-      list.appendChild(li);
-    });
-  }
-
-  function escapeHtml(s) {
-    return String(s)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
-  }
-
-  renderWidget(pruneStore(loadStore()));
-})();
-</script>

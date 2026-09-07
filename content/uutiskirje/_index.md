@@ -1,34 +1,11 @@
 ---
-title: "Tilaa uutiskirje"
-description: "Tilaa Uutistenlukijan päivittäinen uutiskatsaus sähköpostiisi."
-layout: "simple"
+title: "Uutiskirje"
+description: "Tietoa Uutistenlukijan uutiskirjeen tilanteesta ja tavoista seurata uutisia."
+layout: "newsletter-landing"
 ---
 
-<div id="signup-status">
+Uutiskirjeen säännöllistä lähettämistä ja lähetysaikataulua ei ole vahvistettu. Uusia tilauksia ei oteta tällä sivulla vastaan toistaiseksi.
 
-## Kiitos tilauksesta! ✅
+Aiemmat tilaukset säilyvät. Tämä sivu ei vahvista yksittäisen tilauksen tilaa.
 
-Olet nyt Uutistenlukijan uutiskirjeen tilaaja.
-
-**Mitä saat:**
-- Päivän tärkeimmät uutiset kerran päivässä
-- Ei mainoksia, ei roskapostia
-- Voit peruuttaa koska tahansa
-
-</div>
-
-<script>
-(function() {
-  var params = new URLSearchParams(window.location.search);
-  var status = params.get('status');
-  var el = document.getElementById('signup-status');
-  if (!el) return;
-  if (status === 'invalid') {
-    el.innerHTML = '<h2>⚠️ Virheellinen sähköpostiosoite</h2><p>Tarkista osoite ja yritä uudelleen.</p><p><a href="/">← Takaisin etusivulle</a></p>';
-  } else if (status === 'error') {
-    el.innerHTML = '<h2>⚠️ Virhe</h2><p>Jokin meni pieleen. Yritä myöhemmin uudelleen.</p><p><a href="/">← Takaisin etusivulle</a></p>';
-  }
-})();
-</script>
-
-[← Takaisin etusivulle](/)
+Voit lukea [uusimmat uutiset etusivulta](/), selata [kaikkia aiheita](/kategoriat/) tai seurata [RSS-syötteitä](/syotteet/).

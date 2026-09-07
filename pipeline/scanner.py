@@ -3,6 +3,11 @@ RSS Scanner — fetches and deduplicates Finnish news from public RSS feeds.
 Uses only stdlib (no feedparser dependency).
 """
 
+try:
+    from .freshness import freshness_reasons, parse_source_date
+except ImportError:
+    from freshness import freshness_reasons, parse_source_date
+
 import difflib
 import hashlib
 import html as html_module
@@ -16,7 +21,6 @@ import urllib.error
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from typing import List, Dict, Optional
-from email.utils import parsedate_to_datetime
 from urllib.parse import urlparse, parse_qs, urlunparse
 
 try:
@@ -459,19 +463,8 @@ def _clean_html(text: str) -> str:
 
 
 def _parse_rss_date(date_str: str) -> Optional[datetime]:
-    """Parse RSS date string."""
-    if not date_str:
-        return None
-    try:
-        return parsedate_to_datetime(date_str)
-    except Exception:
-        pass
-    # Try ISO format
-    try:
-        return datetime.fromisoformat(date_str.replace("Z", "+00:00"))
-    except Exception:
-        pass
-    return None
+    """Parse an explicitly zoned source date; never substitute fetch time."""
+    return parse_source_date(date_str)
 
 
 _STRIP_PARAMS = {
@@ -685,9 +678,16 @@ def _fuzzy_dedup(articles: List[Dict], threshold: float = 0.85) -> List[Dict]:
 def _get_text(element, tag: str) -> str:
     """Safely get text from an XML element."""
     child = element.find(tag)
-    if child is not None and child.text:
-        return child.text.strip()
+    if child is not None:
+        return "".join(child.itertext()).strip()
     return ""
+
+
+class FeedFetchResult(list):
+    """List-compatible fetch result; caller records exactly one health outcome."""
+    def __init__(self, articles=(), *, error=None):
+        super().__init__(articles)
+        self.error = error
 
 
 def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]:
@@ -728,7 +728,9 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
             root = ET.fromstring(content)
         
         # Handle both RSS 2.0 and Atom feeds
-        items = root.findall(".//item")
+        if root.tag not in ("rss", "{http://www.w3.org/2005/Atom}feed", "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}RDF"):
+            raise ValueError("unsupported feed root")
+        items = root.findall(".//item") or root.findall(".//{http://purl.org/rss/1.0/}item")
         if not items:
             # Try Atom format
             ns = {"atom": "http://www.w3.org/2005/Atom"}
@@ -742,7 +744,10 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
         }
 
         for item in items[:30]:
-            title = _clean_html(_get_text(item, "title"))
+            namespace = item.tag.rsplit("}", 1)[0] + "}" if item.tag.startswith("{") else ""
+            def field(tag):
+                return _get_text(item, namespace + tag)
+            title = _clean_html(field("title"))
             if not title:
                 continue
 
@@ -754,30 +759,27 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
                 content_encoded = _clean_html(ce_el.text)
 
             plain_desc = _clean_html(
-                _get_text(item, "description") or _get_text(item, "summary") or ""
+                field("description") or field("summary") or field("content") or ""
             )
 
             # Use whichever is longer (content:encoded may be full article)
             description = content_encoded if len(content_encoded) > len(plain_desc) else plain_desc
 
-            link = _get_text(item, "link")
+            link = field("link")
             if not link:
-                link_el = item.find("link")
-                if link_el is not None:
-                    link = link_el.get("href", "")
+                for link_el in item.findall(namespace + "link"):
+                    if link_el.get("rel", "alternate") == "alternate":
+                        link = link_el.get("href", "")
+                        break
 
-            date_str = (
-                _get_text(item, "pubDate") or
-                _get_text(item, "published") or
-                _get_text(item, "updated")
-            )
-            pub_date = _parse_rss_date(date_str) or datetime.now(timezone.utc)
+            date_str = field("pubDate") or field("published") or field("updated") or _get_text(item, "{http://purl.org/dc/elements/1.1/}date")
+            pub_date = _parse_rss_date(date_str)
 
             articles.append({
                 "title": title,
                 "description": description[:2000],  # raised from 500 — content:encoded can be long
                 "link": link,
-                "published": pub_date.isoformat(),
+                "published": pub_date.isoformat() if pub_date else date_str,
                 "source": feed_info["name"],
                 "source_domain": urlparse(feed_info["url"]).netloc.removeprefix("www.").removeprefix("feeds."),
                 "language": feed_info.get("language", "fi"),
@@ -788,17 +790,9 @@ def fetch_feed(feed_info: dict, http_cache: Optional[Dict] = None) -> List[Dict]
             })
     except Exception as e:
         print(f"[scanner] Error fetching {feed_info['name']}: {e}")
-        # Record error in feed health tracker
-        if _FEED_HEALTH_AVAILABLE:
-            _h = get_global_health()
-            if _h:
-                code = 0
-                msg = str(e)[:120]
-                if isinstance(e, urllib.error.HTTPError):
-                    code = e.code
-                _h.record_error(feed_info["name"], code, msg)
+        return FeedFetchResult(error=e)
 
-    return articles
+    return FeedFetchResult(articles)
 
 
 def _source_diversity_reorder(articles: List[Dict]) -> List[Dict]:
@@ -872,7 +866,6 @@ def scan_all_feeds() -> List[Dict]:
             break
 
         print(f"[scanner] Fetching {feed['name']}...")
-        prev_count = len(all_articles)
         articles = fetch_feed(feed)
         print(f"[scanner]   → {len(articles)} articles")
         for article in articles:
@@ -880,20 +873,20 @@ def scan_all_feeds() -> List[Dict]:
         all_articles.extend(articles)
         feeds_fetched += 1
 
-        # Record success in health tracker
-        if _health and len(all_articles) > prev_count:
+        # A failed fetch is distinct from a valid empty feed.
+        error = getattr(articles, "error", None)
+        if _health and error is not None:
+            _health.record_error(feed["name"], getattr(error, "code", 0), str(error)[:120])
+        elif _health and articles:
             # Find newest article timestamp from this feed's batch
             newest = None
             for a in articles:
-                try:
-                    ts = datetime.fromisoformat(a.get("published", "").replace("Z", "+00:00"))
-                    if newest is None or ts > newest:
-                        newest = ts
-                except (ValueError, AttributeError):
-                    pass
+                ts = parse_source_date(a.get("published"))
+                if ts is not None and (newest is None or ts > newest):
+                    newest = ts
             _health.record_success(feed["name"], newest_article_ts=newest)
-        elif _health and len(all_articles) == prev_count:
-            # Feed returned 0 articles but didn't error — still a "success" (304 or no new items)
+        elif _health:
+            # A valid empty feed is still a successful fetch.
             _health.record_success(feed["name"])
 
     # Count remaining skipped feeds
@@ -905,6 +898,9 @@ def scan_all_feeds() -> List[Dict]:
     print(f"[scanner] Scan complete: {feeds_fetched} feeds in {total_scan_time:.1f}s "
           f"({feeds_skipped} skipped due to timeout)")
     save_global_health()  # persist feed health state
+
+    # Admission before quotas/writing; stale feed metadata is an enforced gate.
+    all_articles = [a for a in all_articles if not freshness_reasons(a)]
 
     # Exact dedup by fingerprint
     seen = set()

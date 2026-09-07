@@ -3,7 +3,7 @@
 
 Fetches from GA4:
 - New users vs. returning users for the past full week (Mon–Sun)
-- Return rate % and week-over-week trend
+- Returning active share (not cohort retention) and week-over-week trend
 
 Posts to #metrics every Monday at 08:30 UTC.
 
@@ -138,48 +138,80 @@ def ga4_report(token: str, start: str, end: str, metrics: list, dimensions: list
 
 
 def extract_metric(report: dict, name: str) -> float:
-    rows = report.get("rows", [])
-    if not rows:
-        return 0.0
-    metric_headers = [h["name"] for h in report.get("metricHeaders", [])]
-    if name not in metric_headers:
-        return 0.0
-    idx = metric_headers.index(name)
+    """Read a required finite nonnegative metric; malformed data is not zero."""
+    import math
     try:
-        return float(rows[0]["metricValues"][idx]["value"])
-    except (IndexError, KeyError, ValueError):
-        return 0.0
+        headers = [h["name"] for h in report["metricHeaders"]]
+        value = report["rows"][0]["metricValues"][headers.index(name)]["value"]
+        if isinstance(value, bool):
+            raise ValueError("boolean metric")
+        result = float(value)
+        if not math.isfinite(result) or result < 0:
+            raise ValueError("invalid metric")
+        return result
+    except (KeyError, IndexError, TypeError, ValueError, OverflowError) as exc:
+        raise ValueError("missing or invalid " + name) from exc
 
 
-def extract_new_returning(report: dict) -> tuple[float, float, float, float]:
-    """Return (new_users, returning_users, sessions, total_users).
+def extract_new_returning(report: dict, totals: dict | None = None,
+                          expected_metrics: list | None = None) -> tuple[float, float, float, float | None]:
+    """Validated new/returning active users, sessions and independent denominator.
 
-    GA4 Data API no longer exposes a `returningUsers` metric.  Use the
-    `newVsReturning` dimension and activeUsers instead; this mirrors the GA4 UI
-    concept and keeps the weekly retention report working after API schema drift.
+    The weekly caller supplies the exact requested metrics. Both queries use
+    that week's same dates; dimension user counts must never be summed into
+    the denominator. This is returning active share, not cohort retention.
     """
-    metric_headers = [h["name"] for h in report.get("metricHeaders", [])]
-
-    def metric(row: dict, name: str) -> float:
-        if name not in metric_headers:
-            return 0.0
-        idx = metric_headers.index(name)
+    def validate(response, dimensions, required_metrics, requested_metrics=None):
         try:
-            return float(row["metricValues"][idx]["value"])
-        except (IndexError, KeyError, ValueError):
-            return 0.0
+            headers = [h["name"] for h in response["metricHeaders"]]
+            if (not headers or len(set(headers)) != len(headers)
+                    or not set(required_metrics).issubset(headers)
+                    or (requested_metrics is not None and headers != requested_metrics)
+                    or [h["name"] for h in response.get("dimensionHeaders", [])] != dimensions):
+                raise ValueError("response schema mismatch")
+            rows = response["rows"]
+            if (not isinstance(rows, list) or not rows
+                    or type(response["rowCount"]) is not int
+                    or response["rowCount"] != len(rows)
+                    or (not dimensions and len(rows) != 1)):
+                raise ValueError("empty or incomplete rows")
+            metadata = response.get("metadata", {})
+            if not isinstance(metadata, dict) or any(metadata.get(key) for key in (
+                    "subjectToThresholding", "samplingMetadatas", "dataLossFromOtherRow")):
+                raise ValueError("limited provider data")
+            seen = set()
+            for row in rows:
+                if (len(row["metricValues"]) != len(headers)
+                        or len(row.get("dimensionValues", [])) != len(dimensions)):
+                    raise ValueError("row schema mismatch")
+                if dimensions:
+                    cohort = row["dimensionValues"][0]["value"]
+                    if cohort not in ("new", "returning", "(not set)") or cohort in seen:
+                        raise ValueError("invalid or duplicate newVsReturning row")
+                    seen.add(cohort)
+                for name in headers:
+                    extract_metric({"metricHeaders": response["metricHeaders"], "rows": [row]}, name)
+            return rows
+        except (KeyError, IndexError, TypeError, AttributeError, ValueError) as exc:
+            raise ValueError("invalid weekly GA4 response: " + str(exc)) from exc
 
-    new_users = returning = sessions = total = 0.0
-    for row in report.get("rows", []):
-        cohort = (row.get("dimensionValues") or [{}])[0].get("value", "").lower()
-        users = metric(row, "activeUsers") or metric(row, "totalUsers") or metric(row, "newUsers")
-        row_sessions = metric(row, "sessions")
-        sessions += row_sessions
-        total += users
+    rows = validate(report, ["newVsReturning"], ["activeUsers", "sessions"], expected_metrics)
+    new_users = returning = sessions = 0.0
+    for row in rows:
+        values = {"metricHeaders": report["metricHeaders"], "rows": [row]}
+        cohort = row["dimensionValues"][0]["value"]
+        users = extract_metric(values, "activeUsers")
+        sessions += extract_metric(values, "sessions")
         if cohort == "new":
-            new_users += users
+            new_users = users
         elif cohort == "returning":
-            returning += users
+            returning = users
+    total = None
+    if totals is not None:
+        validate(totals, [], ["activeUsers"], ["activeUsers"] if expected_metrics is not None else None)
+        total = extract_metric(totals, "activeUsers")
+        if total <= 0 or returning > total or new_users > total:
+            raise ValueError("zero or inconsistent direct activeUsers denominator")
     return new_users, returning, sessions, total
 
 
@@ -259,15 +291,20 @@ def main():
     try:
         this_week = ga4_report(token, ws, we, metrics, dimensions=["newVsReturning"])
         prev_week = ga4_report(token, pws, pwe, metrics, dimensions=["newVsReturning"])
+        this_totals = ga4_report(token, ws, we, ["activeUsers"])
+        prev_totals = ga4_report(token, pws, pwe, ["activeUsers"])
     except RuntimeError as e:
         print(f"GA4 error: {e}")
         sys.exit(1)
 
-    new_users, returning, sessions, total = extract_new_returning(this_week)
-    total = total or (new_users + returning) or 1
-
-    prev_new, prev_returning, _prev_sessions, prev_total = extract_new_returning(prev_week)
-    prev_total = prev_total or (prev_new + prev_returning) or 1
+    try:
+        new_users, returning, sessions, total = extract_new_returning(this_week, this_totals, metrics)
+        prev_new, prev_returning, _prev_sessions, prev_total = extract_new_returning(prev_week, prev_totals, metrics)
+        if total is None or prev_total is None:
+            raise ValueError("missing direct activeUsers response")
+    except ValueError as exc:
+        print(f"Returning active share unavailable: {exc}")
+        return 1
 
     return_rate = returning / total * 100
     prev_return_rate = prev_returning / prev_total * 100
@@ -275,12 +312,13 @@ def main():
     rate_delta_str = f"+{rate_delta:.0f} pp" if rate_delta >= 0 else f"{rate_delta:.0f} pp"
     trend_emoji = "📈" if rate_delta >= 0 else "📉"
 
-    msg = f"""📊 **Kävijäuskollisuus vko {wk_num}** ({ws} – {we})
+    msg = f"""📊 **Palaavien aktiivisten käyttäjien osuus vko {wk_num}** ({ws} – {we})
 
 👤 Uudet: **{new_users:.0f}** ({pct_change(new_users, prev_new)} vko:sta)
 🔄 Palaavat: **{returning:.0f}** ({pct_change(returning, prev_returning)} vko:sta)
 📋 Sessiot: **{sessions:.0f}**
-{trend_emoji} Paluuprosentti: **{return_rate:.0f} %** ({rate_delta_str} edellisestä viikosta, oli {prev_return_rate:.0f} %)"""
+{trend_emoji} Palaavien osuus aktiivisista: **{return_rate:.0f} %** ({rate_delta_str} edellisestä viikosta, oli {prev_return_rate:.0f} %)
+Tämä osuus ei ole hankintakohortin säilyvyysaste."""
 
     print(msg)
 
@@ -292,4 +330,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

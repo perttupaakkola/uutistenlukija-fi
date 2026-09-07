@@ -44,7 +44,7 @@
   {{ if $state.invalid }}
   <p class="guide-warning" role="status">Oppaan tarkistus- tai lähdetiedot ovat puutteelliset. Käytä virallisia lähteitä ja ilmoita sivun virheestä toimitukselle.</p>
   {{ else if $state.expired }}
-  <p class="guide-warning" role="status">Tämän oppaan voimassaolo on päättynyt. Sivu säilyy korjauksia varten, mutta älä käytä sitä ajantasaisena tarkistusohjeena.</p>
+  <p class="guide-warning" role="status">Tämän oppaan voimassaolo on päättynyt. Alla säilyvät tarkistuslinkit ja ohjeet. Myymäläkohtaisia tämän päivän aikoja ei ole vahvistettu; varmista ne suoraan kaupalta.</p>
   {{ else if $state.reviewDue }}
   <p class="guide-warning" role="status">Oppaan määräaikaistarkistus on tehtävä. Tarkista tiedot suoraan virallisista lähteistä ennen asiointia.</p>
   {{ end }}

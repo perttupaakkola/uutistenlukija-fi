@@ -92,7 +92,7 @@
             decoding="async"
             width="1200" height="700"
             onload="this.classList.add('img-loaded')"
-            onerror="if(this.dataset.fallbackApplied==='1'){this.classList.add('img-loaded');return;}this.dataset.fallbackApplied='1';this.src='{{ printf "/images/categories/%s.jpg" ($cat | lower) }}';this.classList.add('img-loaded')">
+            onerror="if(this.dataset.fallbackApplied==='1'){this.classList.add('img-loaded');return;}this.dataset.fallbackApplied='1';this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='{{ printf "/images/categories/%s.jpg" ($cat | lower) }}';this.classList.add('img-loaded')">
         </picture>
       </a>
       <div class="reference-front-package__lead-body">
@@ -124,7 +124,7 @@
           {{- $itemThumb := .Params.image_thumb | default $itemImg -}}
           <article class="reference-front-package__editor-card">
             <a href="{{ .Permalink }}" class="reference-front-package__editor-thumb">
-              <img src="{{ $itemThumb }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="300" height="200" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.src='{{ printf "/images/categories/%s.jpg" ($itemCat | lower) }}'">
+              <img src="{{ $itemThumb }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="300" height="200" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='{{ printf "/images/categories/%s.jpg" ($itemCat | lower) }}'">
             </a>
             <div class="reference-front-package__editor-body">
               <span class="reference-front-package__editor-kicker">{{ $itemCat }}</span>
@@ -147,7 +147,7 @@
           {{- $itemCat := index .Params.categories 0 | default "Uutiset" -}}
           <li class="reference-front-package__latest-item">
             <a href="{{ .Permalink }}" class="reference-front-package__latest-link" data-track="ticker_click">
-              <span class="reference-front-package__latest-time">{{ .Date.Format "15:04" }}</span>
+              <span class="reference-front-package__latest-time">{{ partial "absolute-date.html" .Date }}</span>
               <div class="reference-front-package__latest-body">
                 <span class="reference-front-package__latest-cat">{{ $itemCat }}</span>
                 <span class="reference-front-package__latest-headline">{{ .Title }}</span>

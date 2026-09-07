@@ -1,6 +1,6 @@
 ---
-title: "Kauppojen aukioloajat tänään – tarkista oma kauppa"
-seo_title: "Kauppojen aukioloajat tänään – tarkista kauppa"
+title: "Kauppojen aukioloajat – viralliset tarkistuslinkit"
+seo_title: "Kauppojen aukioloajat – viralliset tarkistuslinkit"
 description: "Tarkista K- ja S-kauppojen, Lidlin, Tokmannin ja Alkon aukioloajat ketjujen virallisista myymälähauista ennen lähtöä."
 date: 2026-07-26
 lastmod: 2026-08-03
@@ -42,6 +42,9 @@ sources:
     source_checked_at: 2026-08-03
 ---
 
+> **Tarkistustilanne 7.9.2026:** Oppaan määräaikaistarkistus on myöhässä. K-ryhmän aukiolo-ohje avautui ja ohjaa kauppakohtaisiin tietoihin. Tokmannin myymälälinkki ohjautui osoitteeseen /stores. S-kauppojen ja Lidlin hakujen toimivuutta ei voitu varmistaa tässä tarkistuksessa. Alkon sivusta saatiin vain hakupalvelun aiempi lukukopio. Oppaan voimassaoloa ei ole jatkettu. Alla olevat linkit auttavat löytämään ketjun oman palvelun, mutta tämän päivän myymäläkohtaisia aikoja ei ole tarkistettu.
+
+
 Yksittäisen kaupan aukioloaika kannattaa tarkistaa aina juuri kyseisen ketjun virallisesta myymälähausta. Pyhäpäivä, paikkakunta, kaupan koko ja sijainti voivat vaikuttaa palveluaikaan, joten yleinen arvio ei korvaa myymälän omaa tietoa. Tarkistus on varminta tehdä samana päivänä ja vielä ennen lähtöä, jos asiointi osuu iltaan tai poikkeuspäivään.
 
 ## Viralliset haut eri ketjuille
@@ -56,7 +59,7 @@ Alla olevat linkit vievät ketjujen omiin palveluihin. Ne ovat parempi lähtöko
 | Tokmanni | [Tokmannin myymälähaku](https://www.tokmanni.fi/myymalat) | Myymäläkohtainen aika ja poikkeusilmoitus |
 | Alko | [Alkon myymälä- ja palveluhaku](https://www.alko.fi/myymalat-palvelut) | Myymälä, noutopiste ja päivän palveluaika |
 
-Ketjun nimen kirjoittaminen tavalliseen verkkohakuun voi tuoda ensimmäiseksi mainoksen, vanhan artikkelin tai kolmannen osapuolen karttatiedon. Tarkista osoiteriviltä, että olet ketjun omalla verkkotunnuksella. Tämän oppaan lähdeluettelossa ovat suorat viralliset tarkistusreitit, jotka toimitus tarkisti oppaan tarkistuspäivänä.
+Ketjun nimen kirjoittaminen tavalliseen verkkohakuun voi tuoda ensimmäiseksi mainoksen, vanhan artikkelin tai kolmannen osapuolen karttatiedon. Tarkista osoiteriviltä, että olet ketjun omalla verkkotunnuksella. Lähdeluettelossa säilyvät aiemman tarkistuksen päivämäärät. Kaikkien hakujen toimivuutta ei ole voitu varmistaa uudelleen.
 
 ## Aloita kaupasta, älä kalenterin oletuksesta
 
@@ -94,7 +97,7 @@ Vanhassa hakutuloksessa voi näkyä päivämäärä, joka muistuttaa tämän vuo
 
 Myös karttapalvelujen aukioloajat ovat hyödyllisiä suunnistamiseen, mutta poikkeuspäivän kohdalla niissä voi olla viive. Jos karttapalvelu ja ketjun oma sivu ovat ristiriidassa, käytä ketjun toimipaikkasivua ja varmista tarvittaessa puhelimitse. Älä jaa ristiriitaista kellonaikaa eteenpäin varmana tietona.
 
-Tässä oppaassa ei julkaista yleistä pyhäpäivien kellonaikataulukkoa juuri siksi, että sellainen vanhenee nopeasti ja voi johtaa väärään myymälään. Opas antaa pysyvän tarkistusmenetelmän, mutta sen lähdelinkit ja toimivuus tarkistetaan säännöllisesti. Sivun yläosassa näkyvät seuraava tarkistuspäivä ja voimassaolon päättymispäivä.
+Tässä oppaassa ei julkaista yleistä pyhäpäivien kellonaikataulukkoa juuri siksi, että sellainen vanhenee nopeasti ja voi johtaa väärään myymälään. Opas antaa tarkistusmenetelmän. Lähdelinkkien seuraava tarkistus on myöhässä. Sivun yläosassa näkyvät seuraava tarkistuspäivä ja voimassaolon päättymispäivä.
 
 ## Kun virallinen haku ei toimi
 

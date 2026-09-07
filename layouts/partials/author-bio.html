@@ -1,0 +1,3 @@
+{{- if or (eq .Params.author_id "toimitus") (eq .Params.author "Toimitus") -}}
+Uutistenlukija kokoaa lähteisiin perustuvia uutisartikkeleita tekoälyn avulla. Juttuja ei tarkisteta yksitellen ihmistoimituksessa.
+{{- else -}}{{ .Params.author_bio }}{{- end -}}

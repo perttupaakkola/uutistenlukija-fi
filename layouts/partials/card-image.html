@@ -22,6 +22,7 @@
   {{- $alt = partial "image-alt.html" .context -}}
 {{- end -}}
 
+{{- if strings.Contains $thumb "/images/categories/" }}{{ $alt = "Kuvituskuva – ei kuva uutisen tapahtumasta" }}{{ end -}}
 {{- $eager  := .eager  | default false -}}
 {{- $hero   := .hero   | default false -}}
 {{- $href   := .permalink | default "#" -}}
@@ -72,7 +73,7 @@
     {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}"{{ if $sizes }} sizes="{{ $sizes }}"{{ end }}>{{ end -}}
     {{- if $srcset }}<source type="image/webp" srcset="{{ $srcset }}"{{ if $sizes }} sizes="{{ $sizes }}"{{ end }}>{{ end -}}
     <img
-      src="{{ $src }}"
+      src="{{ partial "display-image.html" $src }}"
       alt="{{ $alt }}"
       class="article-image article-card-thumb"
       loading="{{ $loading }}"
@@ -81,7 +82,7 @@
       width="{{ if $hero }}800{{ else }}400{{ end }}"
       height="{{ if $hero }}450{{ else }}225{{ end }}"
       onload="this.classList.add('img-loaded')"
-      onerror="if(this.dataset.fallbackApplied==='1'){this.classList.add('img-loaded');this.closest('.article-image-link')?.classList.add('img-failed');return;}this.dataset.fallbackApplied='1';this.src='{{ $fallback }}';this.srcset='';this.classList.add('img-loaded');"
+      onerror="if(this.dataset.fallbackApplied==='1'){this.classList.add('img-loaded');this.closest('.article-image-link')?.classList.add('img-failed');return;}this.dataset.fallbackApplied='1';this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='{{ $fallback }}';this.srcset='';this.classList.add('img-loaded');"
       data-fallback="{{ $fallback }}">
   </picture>
 </a>

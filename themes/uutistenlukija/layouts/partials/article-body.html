@@ -10,10 +10,10 @@
 
 {{- if eq .metaVariant "single" }}
 <div class="article-meta">
-  {{ $page.Date | time.Format "2.1. klo 15:04" }}
+  {{ partial "absolute-date.html" $page.Date }}
   {{- $diffSec := math.Sub $page.Lastmod.Unix $page.Date.Unix -}}
   {{- if gt $diffSec 3600 }}
-  · <span class="article-updated" title="Viimeksi päivitetty">Päivitetty: {{ $page.Lastmod | time.Format "2.1.2006 klo 15:04" }}</span>
+  · <span class="article-updated" title="Viimeksi päivitetty">Päivitetty: {{ partial "absolute-date.html" $page.Lastmod }}</span>
   {{- end }}
   {{ with $page.Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
   {{- if ge $page.WordCount 200 }}
@@ -28,7 +28,7 @@
 {{- end }}
 {{- else if eq .metaVariant "page" }}
 <div class="article-meta">
-  {{ $page.Date | time.Format "2.1.2006 klo 15:04" }}
+  {{ partial "absolute-date.html" $page.Date }}
   {{ with $page.Params.author }} · <span class="author-inline">{{ . }}</span>{{ end }}
   · {{ $page.ReadingTime }} min lukuaika
 </div>
@@ -52,9 +52,7 @@
       {{ with $page.Params.author_title }}
       <span class="author-role">{{ . }}</span>
       {{ end }}
-      {{ with $page.Params.author_bio }}
-      <p class="author-bio">{{ . }}</p>
-      {{ end }}
+      <p class="author-bio">{{ partial "author-bio.html" $page }}</p>
     </div>
   </div>
   {{ end }}

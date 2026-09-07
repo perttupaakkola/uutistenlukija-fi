@@ -584,6 +584,18 @@ def _source_backed_near_short_hint(packet: dict) -> str:
     return ""
 
 
+EDITORIAL_EVIDENCE_RULES = """
+Source-grounded editorial review (also applies to every repair):
+- Check each public claim against the selected article text, not a search snippet, title, source reputation or an unrelated block. Do not invent context to meet length/paragraph/source quotas; return INSUFFICIENT_CONFIDENCE when evidence cannot support the required format.
+- Preserve every statistic's denominator, population, response category, time window and uncertainty. Example: 49% check tread depth ONLY at tyre changes and 24% check pressure equally infrequently; these are low-frequency response categories, not total checking rates. Do not infer that pressure checking is rarer, or infer the remaining respondents' behaviour without the distribution.
+- Map every quote and paraphrased assessment to its actual speaker and role in that source passage. A nearby speaker or colleague in the same organization is not interchangeable. Example: Tiina Toivonen's court-congestion assessment must not become Atte Rytkönen-Sandberg's claim. If the passage is cut off or ambiguous, omit the attribution/claim or return INSUFFICIENT_CONFIDENCE.
+- Preserve source-method limits next to the affected comparison: sampling frame, collection schedule, geography, coverage and comparability. Example: THL continuous Sunday-to-Monday sampling particularly describes weekend use, while nationwide collection averages all weekdays; do not silently compare them as the same series. If the supplied intermediary omits a material method detail, flag the missing primary evidence rather than inventing it.
+- Keep interested-party claims, allegations, aspirations and causal interpretations attributed; distinguish proposals from enacted decisions and observations from causal proof.
+- One sufficient primary-source official report may support a story; do not force two independent sources or pad with unrelated sources. Link the primary report only when it was actually supplied and used, and preserve all used-source dependent claims.
+- Before setting editorial_reviewed=true, review the title, lead, body and summary against these checks. Record material uncertainty in journalist_note or decline. This self-review and structural/regex checks do not prove all factual truth or independent corroboration.
+"""
+
+
 def _build_prompt(packet: dict) -> str:
     schema_text = json.dumps(WRITER_SCHEMA, ensure_ascii=False, indent=2)
     packet_text = json.dumps(packet, ensure_ascii=False, indent=2)
@@ -594,6 +606,7 @@ Write exactly one publication-quality Finnish news article from the structured p
 Return ONLY one JSON object. No markdown fences, no commentary.
 
 Hard rules:
+{EDITORIAL_EVIDENCE_RULES}
 - Language: neutral, natural standard Finnish
 - No English title or English body paragraphs unless a very short direct quote absolutely requires it
 - No source labels in public copy (never output 'Lähde:', 'Source:', 'Continue reading', 'Alkuperäinen artikkeli')
@@ -664,6 +677,7 @@ Repair rules:
 - Return one `source_usage` row for every distinct selected URL. `used:true` requires explicit dependent claims; `used:false` requires `dependent_claims=[]`.
 - Collapse same-article aliases by marking at most one alias `used:true`.
 {source_backed_rules}
+{EDITORIAL_EVIDENCE_RULES}
 Original packet source evidence:
 - source_words: {source_words}
 - source_blocks: {source_blocks}

@@ -42,7 +42,7 @@
         <a class="tanaan-headline" href="{{ $p.RelPermalink }}" data-track="trending_click" data-article-category="{{ $catSlug }}">{{ $p.Title }}</a>
       </div>
       <div class="tanaan-meta">
-        <time class="tanaan-time" datetime="{{ $p.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $p.Date | time.Format "15:04" }}</time>
+        <time class="tanaan-time" datetime="{{ $p.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ (time.In "Europe/Helsinki" $p.Date).Format "2.1.2006 klo 15:04 MST" }}</time>
         <span class="tanaan-reading-time">· {{ partial "reading-time.html" $p }}</span>
       </div>
     </li>

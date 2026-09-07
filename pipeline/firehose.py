@@ -422,9 +422,9 @@ def _parse_firehose_doc(doc: Dict, event: Dict) -> Optional[Dict]:
     elif markdown and len(markdown) > len(description):
         description = markdown[:500]
 
-    pub_date = doc.get("published_at") or doc.get("published") or doc.get("created_at") or ""
-    if not pub_date:
-        pub_date = datetime.now(timezone.utc).isoformat()
+    # Discovery/creation timestamps do not establish source publication time.
+    # Preserve missing and malformed evidence for the shared freshness gate.
+    pub_date = doc.get("published_at") or doc.get("published") or ""
 
     # Determine category hint from Firehose metadata.
     # Field name quirk: response uses page_category[] (singular key, array value)

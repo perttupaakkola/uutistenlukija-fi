@@ -267,7 +267,7 @@ def main():
 👥 Sessiot: **{sessions:.0f}** ({pct_change(sessions, b_sessions)} vs 7pv ka)
 🆕 Uudet käyttäjät: **{new_users:.0f}** ({pct_change(new_users, b_new_users)} vs 7pv ka)
 ⏱️ Keskim. istunto: **{fmt_duration(avg_duration)}** (7pv ka: {fmt_duration(b_duration)})
-↩️ Poistumisprosentti: **{bounce_rate:.1f}%** (7pv ka: {b_bounce:.1f}%){alert}"""
+↩️ Poistumisprosentti: **{bounce_rate:.1%}** (7pv ka: {b_bounce:.1%}){alert}"""
 
     emit_message(msg, webhook, dry_run)
 

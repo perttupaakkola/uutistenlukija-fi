@@ -7,7 +7,7 @@
   "url": {{ $p.Permalink | jsonify }},
   "description": {{ $p.Description | default ($p.Plain | truncate 200) | jsonify }},
   "content": {{ $p.Plain | truncate 300 | jsonify }},
-  "date": {{ $p.Date.Format "2.1.2006" | jsonify }},
+  "date": {{ $p.Date | time.In "Europe/Helsinki" | time.Format "2.1.2006" | jsonify }},
   "category": {{ with $p.Params.categories }}{{ index . 0 | jsonify }}{{ else }}""{{ end }},
   "image": {{ $p.Params.image | default "" | jsonify }},
   "author": "Toimitus"

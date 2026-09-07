@@ -5,7 +5,12 @@
 {{- $page := . -}}
 {{- $alt := "" -}}
 
-{{- if $page.Params.image_alt -}}
+{{- $img := $page.Params.image | default "" -}}
+{{- $thumb := $page.Params.image_thumb | default "" -}}
+{{- $generic := or (not $img) $page.Params.image_category_fallback (eq $page.Params.image_source "category_fallback") (eq $page.Params.image_source_type "category_fallback") (strings.Contains $img "/images/categories/") (strings.Contains $thumb "/images/categories/") -}}
+{{- if $generic -}}
+  {{- $alt = "Kuvituskuva – ei kuva uutisen tapahtumasta" -}}
+{{- else if $page.Params.image_alt -}}
   {{- $alt = $page.Params.image_alt -}}
 {{- else if $page.Params.image_caption -}}
   {{- $alt = $page.Params.image_caption -}}

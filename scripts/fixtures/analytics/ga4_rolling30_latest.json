@@ -1,0 +1,124 @@
+{
+  "fetched_at": "2026-09-07T09:10:18.696043+00:00",
+  "http_status": 200,
+  "endpoint": "https://analyticsdata.googleapis.com/v1beta/properties/529369568:runReport",
+  "request": {
+    "dateRanges": [
+      {
+        "startDate": "2026-08-08",
+        "endDate": "2026-09-06"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "screenPageViews"
+      },
+      {
+        "name": "activeUsers"
+      },
+      {
+        "name": "totalUsers"
+      },
+      {
+        "name": "newUsers"
+      },
+      {
+        "name": "sessions"
+      },
+      {
+        "name": "engagedSessions"
+      },
+      {
+        "name": "userEngagementDuration"
+      },
+      {
+        "name": "bounceRate"
+      },
+      {
+        "name": "averageSessionDuration"
+      }
+    ],
+    "limit": 10000,
+    "returnPropertyQuota": true
+  },
+  "response": {
+    "metricHeaders": [
+      {
+        "name": "screenPageViews",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "activeUsers",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "totalUsers",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "newUsers",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "sessions",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "engagedSessions",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "userEngagementDuration",
+        "type": "TYPE_SECONDS"
+      },
+      {
+        "name": "bounceRate",
+        "type": "TYPE_FLOAT"
+      },
+      {
+        "name": "averageSessionDuration",
+        "type": "TYPE_SECONDS"
+      }
+    ],
+    "rows": [
+      {
+        "metricValues": [
+          {
+            "value": "108"
+          },
+          {
+            "value": "54"
+          },
+          {
+            "value": "54"
+          },
+          {
+            "value": "52"
+          },
+          {
+            "value": "67"
+          },
+          {
+            "value": "52"
+          },
+          {
+            "value": "4383"
+          },
+          {
+            "value": "0.22388059701492538"
+          },
+          {
+            "value": "103.61760108955225"
+          }
+        ]
+      }
+    ],
+    "rowCount": 1,
+    "metadata": {
+      "currencyCode": "EUR",
+      "timeZone": "Europe/Helsinki"
+    },
+    "kind": "analyticsData#runReport"
+  },
+  "fixture_source": "Sanitized audit ga4_rolling30_latest.json, 2026-09-07; no credentials; offline regression only."
+}

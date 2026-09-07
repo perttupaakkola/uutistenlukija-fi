@@ -8,6 +8,8 @@
     <span class="portal-list-header__eyebrow">Kategoria</span>
     <h1>{{ $heading }}</h1>
     {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    <p>Jutut julkaisuajan mukaan. Aiheiden julkaisutiheys vaihtelee.</p>
+    {{ with first 1 $paginator.Pages }}{{ range . }}<p>Uusin tämän sivun juttu: {{ partial "relative-date.html" . }}</p>{{ end }}{{ end }}
   </header>
 
   {{ if gt (len $paginator.Pages) 0 }}
@@ -27,7 +29,7 @@
           <span class="portal-kicker">{{ $cat }}</span>
           <h2><a href="{{ $feature.RelPermalink }}">{{ $feature.Title }}</a></h2>
           <p>{{ $feature.Summary | truncate 210 }}</p>
-          <time>{{ partial "relative-date.html" $feature }}</time>
+          {{ partial "relative-date.html" $feature }}
         </div>
       </article>
 
@@ -36,7 +38,7 @@
         {{ $itemCat := index .Params.categories 0 | default "Uutiset" }}
         {{ $itemImg := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($itemCat | lower))) }}
         <article class="portal-feed-item">
-          <time class="portal-feed-item__time">{{ .Date.Format "15:04" }}</time>
+          <span class="portal-feed-item__time">{{ (time.In "Europe/Helsinki" .Date).Format "2.1." }}</span>
           <div class="portal-feed-item__body">
             <span class="portal-kicker">{{ $itemCat }}</span>
             <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
@@ -44,7 +46,7 @@
             <span class="portal-feed-item__relative">{{ partial "relative-date.html" . }}</span>
           </div>
           <a class="portal-feed-item__thumb" href="{{ .RelPermalink }}">
-            <img src="{{ $itemImg }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="132" height="92" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.src='{{ printf "/images/categories/%s.jpg" ($itemCat | lower) }}'">
+            <img src="{{ $itemImg }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="132" height="92" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='{{ printf "/images/categories/%s.jpg" ($itemCat | lower) }}'">
           </a>
         </article>
         {{ end }}
@@ -55,17 +57,17 @@
 
     <aside class="portal-list-rail">
       <section class="portal-most-read">
-        <h2>Luetuimmat</h2>
+        <h2>Uusimmat uutiset</h2>
         <ol>
-          {{ range first 5 .Site.RegularPages.ByDate.Reverse }}
+          {{ range first 5 (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
           <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
           {{ end }}
         </ol>
       </section>
       <section class="portal-newsletter portal-newsletter--compact">
         <h2>Pysy kartalla.</h2>
-        <p>Uutiskirje kokoaa päivän olennaiset uutiset.</p>
-        <a href="/uutiskirje/">Tilaa uutiskirje</a>
+        <p>Uutiskirjeen lähetysaikataulua ei ole vahvistettu.</p>
+        <a href="/uutiskirje/">Tietoa uutiskirjeestä</a>
       </section>
     </aside>
   </div>

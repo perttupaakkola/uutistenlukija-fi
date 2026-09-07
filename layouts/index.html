@@ -1,27 +1,14 @@
 {{ define "main" }}
 {{ $posts := where .Site.RegularPages "Section" "posts" }}
 {{ $sorted := $posts.ByDate.Reverse }}
-{{ $lead := index $sorted 0 }}
+{{ $lead := false }}
+{{ with first 1 $sorted }}{{ $lead = index . 0 }}{{ end }}
 {{ $primaryWindow := first 6 $sorted }}
 {{ $seen := slice }}
-{{ $statusStoryPermalinks := slice }}
 {{ $hasApprovedPrimaryImage := false }}
 
 <div class="portal-front">
   <h1 class="visually-hidden">Uutistenlukija</h1>
-
-  {{ if gt (len $sorted) 1 }}
-  {{ $statusStory := index $sorted 1 }}
-  {{ $isActiveLive := or $statusStory.Params.live $statusStory.Params.is_live }}
-  {{ $statusStoryPermalinks = $statusStoryPermalinks | append $statusStory.Permalink }}
-  {{ $seen = $seen | append $statusStory.Permalink }}
-  <a class="portal-livebar{{ if not $isActiveLive }} portal-livebar--latest{{ end }}" href="{{ $statusStory.RelPermalink }}">
-    {{ if $isActiveLive }}<span class="portal-livebar__badge">Live</span>{{ end }}
-    <time datetime="{{ $statusStory.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $statusStory.Date.Format "15:04" }}</time>
-    <strong>{{ $statusStory.Title }}</strong>
-    <span class="portal-livebar__all">{{ if $isActiveLive }}Katso kaikki päivitykset{{ else }}Lue juttu{{ end }}</span>
-  </a>
-  {{ end }}
 
   {{ range $primaryWindow }}
     {{ $candidateImage := .Params.image_thumb | default (.Params.image | default "") }}
@@ -61,7 +48,7 @@
     <div class="portal-center-list" aria-labelledby="front-top-stories-title">
       <div class="portal-mobile-section-head">
         <span>Etusivu</span>
-        <h2 id="front-top-stories-title">Päivän pääuutiset</h2>
+        <h2 id="front-top-stories-title">Uusimmat otsikot</h2>
       </div>
       {{ $teaserPool := where $sorted "Permalink" "not in" $seen }}
       {{ range first 4 $teaserPool }}
@@ -87,15 +74,10 @@
 
     <aside class="portal-right-rail" aria-label="Sivupalkki">
       <section class="portal-newsletter">
-        <div class="portal-newsletter__icon" aria-hidden="true">✉</div>
-        <h2>Pysy kartalla.</h2>
-        <p>Tilaa Uutistenlukija-uutiskirje ja saat tärkeimmät uutiset joka aamu.</p>
-        <form class="portal-newsletter__form js-newsletter-form" action="/api/subscribe" method="post" data-location="homepage-rail">
-          <input type="email" name="email" placeholder="Sähköpostiosoite" aria-label="Sähköpostiosoite" required>
-          <input type="hidden" name="source" value="homepage-rail">
-          <button type="submit">Tilaa uutiskirje</button>
-        </form>
-        <p class="portal-newsletter__status" data-newsletter-status aria-live="polite"></p>
+        <h2>Seuraa uutisia</h2>
+        <p>Lue uusimmat jutut verkkosivulla tai seuraa RSS-syötettä.</p>
+        <a href="/syotteet/">Uutissyötteet</a>
+        <p><a href="/uutiskirje/">Tietoa uutiskirjeestä</a></p>
       </section>
 
       <section class="portal-market" data-market-widget>
@@ -114,27 +96,18 @@
           <div><dt>XRP</dt><dd data-symbol="XRP">Päivitetään…</dd></div>
         </dl>
         <p class="portal-market__note" data-market-note>Viivästetty krypto- ja valuuttadata, päivittyy selaimessa.</p>
-        <p class="portal-market__note"><a href="/kategoriat/talous/">Lue myös: päivän talousaiheet</a></p>
+        <p class="portal-market__note"><a href="/kategoriat/talous/">Lue myös: talousuutiset</a></p>
       </section>
 
-      <section class="portal-most-read">
-        <h2>Luetuimmat</h2>
-        <ol>
-          {{ range first 3 (where $sorted "Permalink" "not in" $seen) }}
-          {{ $seen = $seen | append .Permalink }}
-          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-          {{ end }}
-        </ol>
-      </section>
     </aside>
 
-    {{ $digestPool := where $sorted "Permalink" "not in" $seen }}
+    {{ $digestPool := first 4 $sorted }}
     {{ if gt (len $digestPool) 0 }}
     <section class="portal-day-digest" aria-labelledby="front-digest-title">
       <div class="portal-day-digest__intro">
-        <span class="portal-section-label">Päivän kooste</span>
-        <h2 id="front-digest-title">Mitä tänään kannattaa seurata</h2>
-        <p>Tiivis tilannekuva uusimmista aiheista ennen uutisvirtaa.</p>
+        <span class="portal-section-label">Lyhyesti</span>
+        <h2 id="front-digest-title">Uusimmat lyhyesti</h2>
+        <p>Uusimpien juttujen tiivistelmät. Julkaisuajat näkyvät kunkin jutun kohdalla.</p>
         <a href="/paivan-kooste/">Avaa päivän kooste</a>
       </div>
       <ol class="portal-day-digest__list">
@@ -144,90 +117,13 @@
         <li>
           <span>{{ $cat }}</span>
           <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+          {{ partial "relative-date.html" . }}
         </li>
         {{ end }}
       </ol>
     </section>
     {{ end }}
-  </section>
-  {{ end }}
-
-  {{ $topicCats := slice "Talous" "Kotimaa" "Ulkomaat" "Tiede" }}
-  <section class="portal-topic-strip" aria-labelledby="front-topics-title">
-    <div class="portal-module-head">
-      <h2 id="front-topics-title">Aiheet</h2>
-      <a href="/kategoriat/">Kaikki kategoriat</a>
-    </div>
-    <div class="portal-topic-strip__grid">
-      {{ range $cat := $topicCats }}
-      {{ $topicPool := where $sorted "Permalink" "not in" $statusStoryPermalinks }}
-      {{ $catPosts := where $topicPool ".Params.categories" "intersect" (slice $cat) }}
-      {{ with index $catPosts 0 }}
-      {{ $seen = $seen | append .Permalink }}
-      <article class="portal-topic-card">
-        <a href="/kategoriat/{{ lower $cat | urlize }}/" class="portal-topic-card__label">{{ $cat }}</a>
-        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        <span class="portal-topic-card__time">{{ partial "relative-date.html" . }}</span>
-      </article>
-      {{ end }}
-      {{ end }}
-    </div>
-  </section>
-
-  <section class="portal-editorials portal-discovery" aria-labelledby="editorials-title">
-    <div class="portal-module-head">
-      <h2 id="editorials-title">Löydä lisää</h2>
-      <a href="/paivan-tarkeimmat-uutiset/">Kaikki uutiset</a>
-    </div>
-    <div class="portal-editorials__grid">
-      {{/* Keep four unseen stories; reserve the fourth slot for the newest unseen
-           Talous story only when the newest four do not already contain one. */}}
-      {{ $discoveryPool := where $sorted "Permalink" "not in" $seen }}
-      {{ $discoveryStories := first 4 $discoveryPool }}
-      {{ $talousCandidates := where $discoveryPool ".Params.categories" "intersect" (slice "Talous") }}
-      {{ $selectedTalous := where $discoveryStories ".Params.categories" "intersect" (slice "Talous") }}
-      {{ if and (eq (len $selectedTalous) 0) (gt (len $talousCandidates) 0) }}
-        {{ $newestUnseenTalous := index $talousCandidates 0 }}
-        {{ $discoveryStories = first 3 $discoveryStories }}
-        {{ $discoveryStories = $discoveryStories | append $newestUnseenTalous }}
-      {{ end }}
-      {{ range $rank, $story := $discoveryStories }}
-      {{ $cat := index $story.Params.categories 0 | default "Uutiset" }}
-      {{ $seen = $seen | append $story.Permalink }}
-      <article class="portal-opinion-card">
-        <div>
-          <span class="portal-kicker">{{ $cat }}</span>
-          <h3><a href="{{ $story.RelPermalink }}"
-            data-track="homepage_discovery_click"
-            data-placement="homepage_find_more"
-            data-rank="{{ add $rank 1 }}"
-            data-category="{{ $cat }}">{{ $story.Title }}</a></h3>
-          {{ with $story.Params.source_name }}<span class="portal-opinion-card__source">{{ . }}</span>{{ end }}
-          <span class="portal-opinion-card__time">{{ partial "relative-date.html" $story }}</span>
-        </div>
-      </article>
-      {{ end }}
-    </div>
-    <a class="portal-discovery__talous-link" href="/categories/talous/">Kaikki Talous-uutiset</a>
-  </section>
-
-  {{/* Recirculate the freshest published Talous pages without changing the
-       primary homepage selection or its duplicate-suppression state. */}}
-  {{ $latestHomepageTalous := first 4 (where $sorted ".Params.categories" "intersect" (slice "Talous")) }}
-  {{ if gt (len $latestHomepageTalous) 0 }}
-  <section class="talous-recirculation talous-recirculation--homepage" aria-labelledby="homepage-talous-recirculation-title">
-    <div class="talous-recirculation__header">
-      <p class="talous-recirculation__eyebrow">Tuoretta taloudessa</p>
-      <h2 id="homepage-talous-recirculation-title">Talous juuri nyt</h2>
-    </div>
-    <div class="talous-recirculation__items">
-      {{ range $latestHomepageTalous }}
-      <a class="talous-recirculation__link" href="{{ .RelPermalink }}">
-        <span class="talous-recirculation__label">{{ partial "relative-date.html" . }}</span>
-        <span class="talous-recirculation__title">{{ .Title }}</span>
-      </a>
-      {{ end }}
-    </div>
   </section>
   {{ end }}
 
@@ -237,7 +133,7 @@
       <a href="/paivan-tarkeimmat-uutiset/">Kaikki uutiset</a>
     </div>
     <div class="portal-river__grid">
-      {{ range first 12 (where $sorted "Permalink" "not in" $seen) }}
+      {{ range first 12 $sorted }}
       {{ $cat := index .Params.categories 0 | default "Uutiset" }}
       {{ $img := .Params.image_thumb | default (.Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower))) }}
       {{ $isCategoryFallback := or .Params.image_category_fallback (eq .Params.image_source "category_fallback") (strings.Contains $img "/images/categories/") }}

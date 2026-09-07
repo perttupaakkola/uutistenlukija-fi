@@ -16,7 +16,7 @@
       <span class="category-label">{{ index . 0 }}</span>
       {{ end }}
       <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-      <div class="meta">{{ .Date | time.Format "2.1. klo 15:04" }}</div>
+      <div class="meta">{{ partial "absolute-date.html" .Date }}</div>
     </article>
     {{ end }}
   </div>
@@ -28,7 +28,7 @@
 {{ $cat := index .Params.categories 0 | default "kotimaa" }}
 {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
 {{ $thumb := .Params.image_thumb | default $img }}
-{{ $alt := .Params.image_alt | default .Title }}
+{{ $alt := partial "image-alt.html" . }}
 <article class="lead-article">
   <a href="{{ .Permalink }}" class="card-link" data-track="hero_click">
     <img src="{{ $img }}" alt="{{ $alt }}" class="article-image" loading="eager" decoding="async" width="800" height="450">
@@ -36,7 +36,7 @@
     <h2>{{ .Title }}</h2>
     {{- with (.Summary | truncate 300) }}<p class="excerpt">{{ . }}</p>{{- end }}
     <div class="meta">
-      {{ .Date | time.Format "2.1. klo 15:04" }}
+      {{ partial "absolute-date.html" .Date }}
       · {{ .ReadingTime }} min
     </div>
   </a>
@@ -50,13 +50,13 @@
   {{ range $highlights }}
   {{ $cat := index .Params.categories 0 | default "kotimaa" }}
   {{ $img := .Params.image | default (printf "/images/categories/%s.jpg" ($cat | lower)) }}
-  {{ $alt := .Params.image_alt | default .Title }}
+  {{ $alt := partial "image-alt.html" . }}
   <article class="highlight-card">
     <a href="{{ .Permalink }}" class="card-link">
       <img src="{{ $img }}" alt="{{ $alt }}" class="article-image" loading="lazy" decoding="async" width="400" height="225">
       {{ with .Params.categories }}<span class="category-label">{{ index . 0 }}</span>{{ end }}
       <h3>{{ .Title }}</h3>
-      <div class="meta">{{ .Date | time.Format "2.1. klo 15:04" }}</div>
+      <div class="meta">{{ partial "absolute-date.html" .Date }}</div>
     </a>
   </article>
   {{ end }}
@@ -84,14 +84,14 @@
       {{ range first 3 $catPosts }}
       {{ $cardCat := index .Params.categories 0 | default "kotimaa" }}
       {{ $cardImg := .Params.image | default (printf "/images/categories/%s.jpg" ($cardCat | lower)) }}
-      {{ $cardAlt := .Params.image_alt | default .Title }}
+      {{ $cardAlt := partial "image-alt.html" . }}
       <article class="category-article-card">
         <a href="{{ .Permalink }}" class="card-link">
           <img src="{{ $cardImg }}" alt="{{ $cardAlt }}" class="article-image" loading="lazy" decoding="async" width="400" height="225">
           <h3>{{ .Title }}</h3>
           {{- with (.Summary | truncate 150) }}<p class="excerpt">{{ . }}</p>{{- end }}
           <div class="meta">
-            {{ .Date | time.Format "2.1. klo 15:04" }}
+            {{ partial "absolute-date.html" .Date }}
           </div>
         </a>
       </article>

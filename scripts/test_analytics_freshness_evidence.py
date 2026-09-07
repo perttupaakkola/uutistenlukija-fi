@@ -8,7 +8,7 @@ import json
 import os
 import tempfile
 import unittest
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 
@@ -45,30 +45,26 @@ class AnalyticsFreshnessEvidenceTest(unittest.TestCase):
         os.utime(path, (ts, ts))
 
     def write_reports(self, *, report_time: datetime, sentinel_time: datetime) -> None:
-        self.write_json(
-            self.module.DAILY_REPORT,
-            {
-                "generated_at": report_time.date().isoformat(),
-                "property_id": "529369568",
-                "site": "sc-domain:uutistenlukija.fi",
-                "daily_pageviews": [{"date": report_time.date().isoformat(), "screenPageViews": "1"}],
-                "top_pages_7d": [{"path": "/"}],
-                "traffic_sources_7d": [{"source": "google"}],
-                "search_console": {"top_queries": [{"query": "uutiset"}]},
-            },
-            mtime=report_time,
-        )
-        self.write_json(
-            self.module.SEARCH_CONSOLE_REPORT,
-            {
-                "generated_at": report_time.isoformat(),
-                "site": "sc-domain:uutistenlukija.fi",
-                "days": 28,
-                "rows": [{"keys": ["uutiset"]}],
-                "row_count": 1,
-            },
-            mtime=report_time,
-        )
+        # Genuine provider schema and explicit window replace the old mtime-only fixtures.
+        fixtures = Path(__file__).with_name("fixtures") / "analytics"
+        daily = json.loads((fixtures / "ga4_rolling30_latest.json").read_text())
+        daily["fetched_at"] = report_time.isoformat()
+        daily["request"]["dateRanges"] = [{
+            "startDate": (report_time - timedelta(days=30)).date().isoformat(),
+            "endDate": (report_time - timedelta(days=1)).date().isoformat(),
+        }]
+        self.write_json(self.module.DAILY_REPORT, daily, mtime=report_time)
+        self.write_json(self.module.SEARCH_CONSOLE_REPORT, {
+            "schema_version": 2, "generated_at": report_time.isoformat(),
+            "ctr_unit": "percent", "canonical_ctr_field": "ctr_fraction",
+            "search_type": "web", "data_state": "final",
+            "site": "sc-domain:uutistenlukija.fi", "days": 28, "row_count": 1,
+            "query_window": {"startDate": (report_time - timedelta(days=30)).date().isoformat(),
+                             "endDate": (report_time - timedelta(days=3)).date().isoformat()},
+            "rows": [{"url": "https://uutistenlukija.fi/", "clicks": 1, "impressions": 100, "position": 10}],
+            "property_totals": {"clicks": 1, "impressions": 100, "position": 10, "aggregation_type": "byProperty"},
+            "completeness": {"pagination_exhausted": True},
+        }, mtime=report_time)
         self.write_json(
             self.module.OAUTH_SENTINEL,
             {

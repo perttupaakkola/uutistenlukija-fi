@@ -76,7 +76,7 @@
       {{- $sep := "?" -}}{{- if in $heroBase "?" -}}{{- $sep = "&" -}}{{- end -}}
       {{- $heroSrc = printf "%s%sw=1200&h=675&fit=crop" $heroBase $sep -}}
     {{- end -}}
-  <link rel="preload" href="{{ $heroSrc }}" as="image" fetchpriority="high"{{ if $heroSrcset }} imagesrcset="{{ $heroSrcset }}" imagesizes="{{ $heroSizes }}"{{ end }}>
+  <link rel="preload" href="{{ partial "display-image.html" $heroSrc }}" as="image" fetchpriority="high"{{ if $heroSrcset }} imagesrcset="{{ $heroSrcset }}" imagesizes="{{ $heroSizes }}"{{ end }}>
   {{ end }}
   {{- $canonicalURL := .Permalink -}}
   {{- if or .IsHome .IsSection (eq .Kind "taxonomy") (eq .Kind "term") -}}
@@ -102,7 +102,6 @@
   {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">{{ end }}
   {{ if .IsSection }}<link rel="alternate" type="application/rss+xml" title="{{ .Title }} — {{ .Site.Title }}" href="{{ .Permalink }}index.xml">{{ end }}
   {{ partial "json-ld.html" . }}
-  {{ partial "faq-article-schema.html" . }}
   {{ partial "breadcrumb-schema.html" . }}
   {{ partial "site-nav-schema.html" . }}
   {{ partial "pagination-head.html" . }}
@@ -335,7 +334,7 @@
       var status = form.parentElement ? form.parentElement.querySelector('[data-newsletter-status]') : null;
       var submitButton = form.querySelector('button[type="submit"]');
       var emailInput = form.querySelector('input[name="email"]');
-      var successMessage = form.dataset.successMessage || 'Kiitos! Lähetämme pian ensimmäisen uutiskirjeemme.';
+      var successMessage = form.dataset.successMessage || 'Kiitos! Pyyntösi on vastaanotettu. Uutiskirjeen lähetysaikataulua ei ole vahvistettu.';
 
       function setStatus(message, kind) {
         if (!status) return;

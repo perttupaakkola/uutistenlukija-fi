@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+from datetime import datetime, timezone
 from copy import deepcopy
 import hashlib
 import json
@@ -44,6 +45,7 @@ def _record(
     ]
     article_content = " ".join(part for part in [content_prefix, _words(article_words, "article")] if part)
     return {
+        "original_article": {"published": datetime.now(timezone.utc).isoformat()},
         "packet": {
             "packet_id": "packet-1",
             "category": packet_category,
@@ -257,8 +259,8 @@ class PublishPreflightTests(unittest.TestCase):
         before = path.read_bytes()
         record = json.loads(before)
 
-        result = evaluate_publish_preflight(record)
-        eligible = staged_publish.apply_publish_preflight([(path, record)])
+        result = evaluate_publish_preflight(record, now=datetime.fromisoformat("2026-07-20T00:00:00+00:00"))
+        eligible = staged_publish.apply_publish_preflight([(path, record)], now=datetime.fromisoformat("2026-07-20T00:00:00+00:00"))
 
         self.assertEqual(result.action, "monica_review")
         self.assertTrue(result.requires_monica_review)
@@ -310,8 +312,8 @@ class PublishPreflightTests(unittest.TestCase):
         record = json.loads(before)
         original = deepcopy(record)
 
-        result = evaluate_publish_preflight(record)
-        eligible = staged_publish.apply_publish_preflight([(path, record)])
+        result = evaluate_publish_preflight(record, now=datetime.fromisoformat("2026-08-15T15:00:00+00:00"))
+        eligible = staged_publish.apply_publish_preflight([(path, record)], now=datetime.fromisoformat("2026-08-15T15:00:00+00:00"))
 
         self.assertEqual(result.action, "publish")
         self.assertFalse(result.requires_monica_review)
@@ -328,8 +330,8 @@ class PublishPreflightTests(unittest.TestCase):
         before = path.read_bytes()
         record = json.loads(before)
 
-        result = evaluate_publish_preflight(record)
-        eligible = staged_publish.apply_publish_preflight([(path, record)])
+        result = evaluate_publish_preflight(record, now=datetime.fromisoformat("2026-07-20T00:00:00+00:00"))
+        eligible = staged_publish.apply_publish_preflight([(path, record)], now=datetime.fromisoformat("2026-07-20T00:00:00+00:00"))
 
         self.assertEqual(result.action, "reject")
         self.assertIn("category_disagreement", result.reasons)
@@ -925,7 +927,7 @@ class PublishPreflightTests(unittest.TestCase):
                  patch.object(
                      staged_publish,
                      "run_quality_gate",
-                     side_effect=lambda articles: SimpleNamespace(passed=articles, rejected=[]),
+                     side_effect=lambda articles, **kwargs: SimpleNamespace(passed=articles, rejected=[]),
                  ) as quality_gate, \
                  patch.object(staged_publish, "filter_new_articles", side_effect=lambda articles: articles), \
                  patch.object(
@@ -950,7 +952,7 @@ class PublishPreflightTests(unittest.TestCase):
                 status = staged_publish.cmd_publish(args)
 
             self.assertEqual(status, 0)
-            quality_gate.assert_called_once_with([eligible["article"]])
+            quality_gate.assert_called_once_with([eligible["article"]], persist=False)
             self.assertEqual(
                 [path.name for path in held_paths],
                 [f"20260804T00000{index}Z_held-{index}.json" for index in range(1, 7)],
@@ -1055,7 +1057,9 @@ class PublishPreflightTests(unittest.TestCase):
             passed_article = records[2][2]["article"]
             filter_new_articles.assert_called_once_with([passed_article])
             enrich_images.assert_called_once_with([passed_article])
-            publish_articles.assert_called_once_with([passed_article])
+            transaction = publish_articles.call_args.kwargs["transaction"]
+            self.assertIsInstance(transaction, staged_publish.PublicationTransaction)
+            publish_articles.assert_called_once_with([passed_article], transaction=transaction)
             persist.assert_not_called()
 
             preflight_reject_path = outbox / "20260804T000001Z_held-1.json"
@@ -1110,7 +1114,7 @@ class PublishPreflightTests(unittest.TestCase):
                  patch.object(
                      staged_publish,
                      "run_quality_gate",
-                     side_effect=lambda articles: SimpleNamespace(passed=articles, rejected=[]),
+                     side_effect=lambda articles, **kwargs: SimpleNamespace(passed=articles, rejected=[]),
                  ) as quality_gate, \
                  patch.object(staged_publish, "filter_new_articles", side_effect=lambda articles: articles), \
                  patch.object(staged_publish, "check_published_duplicates", side_effect=published_dedup), \
@@ -1136,7 +1140,9 @@ class PublishPreflightTests(unittest.TestCase):
                 [call.args[0][0]["title"] for call in quality_gate.call_args_list],
                 ["published-duplicate", "unique"],
             )
-            publish_articles.assert_called_once_with([by_title["unique"][1]["article"]])
+            transaction = publish_articles.call_args.kwargs["transaction"]
+            self.assertIsInstance(transaction, staged_publish.PublicationTransaction)
+            publish_articles.assert_called_once_with([by_title["unique"][1]["article"]], transaction=transaction)
             duplicate_path = by_title["published-duplicate"][0]
             self.assertFalse(duplicate_path.exists())
             duplicate = json.loads((failed / duplicate_path.name).read_text(encoding="utf-8"))

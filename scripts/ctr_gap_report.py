@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """CTR gap report for uutistenlukija.fi
 
-Reads Search Console data (or uses frontmatter as fallback) and finds articles
+Reads validated Search Console data and finds articles
 with high impressions but low CTR — prime candidates for title/meta optimization.
 
 Usage:
@@ -15,19 +15,19 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+from analytics_contract import ctr_fraction, number, validate_source
+
 PROJECT_DIR = Path(__file__).parent.parent
 
 
 def load_search_console_data(data_path: Path) -> list:
-    """Load GSC data. Expected: list of {url, impressions, clicks, ctr, position}."""
+    """Load fresh v2 producer data; unversioned files lack a trusted query window."""
     if not data_path.exists():
         return []
     try:
         data = json.loads(data_path.read_text())
-        if isinstance(data, list):
-            return data
-        if isinstance(data, dict) and "rows" in data:
-            return data["rows"]
+        if validate_source(data, "gsc")["fresh"]:
+            return [dict(row, ctr_unit=data.get("ctr_unit")) for row in data["rows"]]
     except (json.JSONDecodeError, KeyError):
         pass
     return []
@@ -83,13 +83,13 @@ def analyze_gsc_data(rows: list, top_n: int) -> list:
     """Find CTR gaps: high impressions + low CTR in positions 4-20."""
     gaps = []
     for row in rows:
-        impressions = row.get("impressions", 0)
-        clicks = row.get("clicks", 0)
-        ctr_raw = row.get("ctr", clicks / impressions if impressions > 0 else 0)
-        # Normalise: GSC stores CTR as decimal (0.027) but fetch_search_console.py
-        # may return percentage (2.7). Normalise to percentage for display.
-        ctr = ctr_raw * 100 if ctr_raw < 1 else ctr_raw
-        position = row.get("position", 99)
+        try:
+            impressions = number(row.get("impressions", 0))
+            clicks = number(row.get("clicks", 0))
+            position = number(row.get("position", 99))
+            ctr = ctr_fraction(row) * 100
+        except (ValueError, TypeError):
+            continue
 
         if impressions >= 50 and ctr < 3.0 and 4 <= position <= 20:
             gaps.append({
@@ -181,15 +181,16 @@ def main():
         gaps = analyze_gsc_data(gsc_rows, args.top)
         data_source = "google_search_console"
     else:
-        print("[ctr_gap_report] No GSC data found, using frontmatter fallback.")
-        posts_dir = PROJECT_DIR / "content" / "posts"
-        articles = load_from_frontmatter(posts_dir)
-        print(f"[ctr_gap_report] Analyzed {len(articles)} articles.")
-        gaps = analyze_frontmatter_data(articles, args.top)
-        data_source = "frontmatter_synthetic"
+        print("[ctr_gap_report] GSC source invalid, stale or empty; report blocked.")
+        gaps = []
+        data_source = "unavailable"
 
     report = {
         "generated_at": now,
+        "schema_version": 2,
+        "ctr_unit": "percent",
+        "status": "fresh" if gsc_rows else "blocked",
+        "reason": "validated_source" if gsc_rows else "invalid_stale_or_empty_gsc",
         "data_source": data_source,
         "total_gaps_found": len(gaps),
         "gaps": gaps,
@@ -200,7 +201,7 @@ def main():
     output_path.write_text(json.dumps(report, ensure_ascii=False, indent=2))
     print(f"[ctr_gap_report] Report written to {output_path} ({len(gaps)} gaps).")
 
-    if args.post_discord:
+    if args.post_discord and gsc_rows:
         msg = format_discord_message(report)
         print(f"[ctr_gap_report] Discord message:\n{msg}")
         post_to_discord(msg)

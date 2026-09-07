@@ -15,8 +15,8 @@
       {{ with .Params.description }}<p class="portal-article-deck">{{ . }}</p>{{ end }}
       <div class="portal-article-byline">
         <strong>{{ .Params.author | default "Uutistenlukija" }}</strong>
-        <span>{{ .Date | time.Format "2.1.2006 15:04" }}</span>
-        {{ if gt .Lastmod.Unix .Date.Unix }}<span>Päivitetty {{ .Lastmod | time.Format "2.1.2006 15:04" }}</span>{{ end }}
+        <span>{{ partial "relative-date.html" . }}</span>
+        {{ if gt .Lastmod.Unix .Date.Unix }}<span>Päivitetty {{ partial "absolute-date.html" .Lastmod }}</span>{{ end }}
       </div>
     </div>
     <div class="portal-article-header__media">

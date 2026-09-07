@@ -35,7 +35,7 @@
   {{ partial "toc.html" . }}
 
   <div class="article-meta">
-    {{ .Date | time.Format "2.1. klo 15:04" }}
+    {{ partial "absolute-date.html" .Date }}
     {{- if isset .Params "updated_at" }}
     · <span class="article-updated" title="Artikkeli päivitetty uudelleenkäsittelyn jälkeen">Päivitetty {{ time.AsTime .Params.updated_at | time.Format "2.1.2006" }}</span>
     {{- end }}

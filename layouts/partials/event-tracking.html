@@ -11,95 +11,85 @@
   var _articleCategory = {{ if $page.IsPage }}{{ with $page.Params.categories }}{{ index . 0 | jsonify }}{{ else }}{{ with $page.Params.category }}{{ . | jsonify }}{{ else }}"uncategorized"{{ end }}{{ end }}{{ else }}""{{ end }};
   var _articleSlug = {{ if $page.IsPage }}{{ with $page.File }}{{ .BaseFileName | jsonify }}{{ else }}""{{ end }}{{ else }}""{{ end }};
 
-  // Guard: only run if gtag is available
-  function _gtag() {
-    if (typeof gtag === 'function') {
-      gtag.apply(null, arguments);
-    }
+  // cookie-banner.html applies these preferences, including revocation.
+  var _gaId = {{ . | jsonify }};
+  function analyticsAllowed() {
+    return !!(window.__UL_AD_CONSENT__ && window.__UL_AD_CONSENT__.analytics === true &&
+      window['ga-disable-' + _gaId] !== true && typeof window.gtag === 'function');
+  }
+  function _gtag(action, name, params) {
+    if (!analyticsAllowed()) return false;
+    var traffic = window.__UL_ANALYTICS_TRAFFIC_TYPE__;
+    params = params || {};
+    params.traffic_type = traffic === 'qa' || traffic === 'internal' ? traffic : 'unclassified';
+    window.gtag(action, name, params);
+    return true;
   }
 
-  // ── article_scroll_depth + article_read ────────────────────────────────
-  // Uses IntersectionObserver markers inside the article body.
+  // Post-consent visible dwell plus depth, not comprehension or retention.
+  // Poll the banner's applied state: it has no consent-change event. No
+  // pre-consent observer, interaction queue or dwell history is retained.
   if (_isPage && 'IntersectionObserver' in window) {
     (function () {
-      var articleBody = document.querySelector('.article-body, .content');
-      if (!articleBody) return;
-
-      var thresholds = [25, 50, 75, 100];
-      var firedDepths = Object.create(null);
-      var articleReadFired = false;
-
-      function ensurePositionContext(el) {
-        if (window.getComputedStyle(el).position === 'static') {
-          el.style.position = 'relative';
-        }
+      var body = document.querySelector('.article-body');
+      if (!body) return;
+      var observer = null, markers = [], visible = false, reached75 = false;
+      var dwell = 0, last = null, depths = Object.create(null), readFired = false;
+      function stop() {
+        if (observer) observer.disconnect();
+        observer = null;
+        markers.forEach(function (marker) { marker.remove(); });
+        markers = [];
+        visible = false; reached75 = false; dwell = 0; last = null;
+        depths = Object.create(null);
       }
-
-      function markerTopPx(depth, height) {
-        if (depth === 100) {
-          return Math.max(height - 2, 0);
-        }
-        return Math.max(Math.round((height * depth) / 100) - 1, 0);
-      }
-
-      function initObserver() {
-        var height = articleBody.scrollHeight;
-        if (!height) return;
-
-        ensurePositionContext(articleBody);
-
-        var observer = new IntersectionObserver(function (entries) {
+      function start() {
+        if (!body.scrollHeight) return;
+        if (window.getComputedStyle(body).position === 'static') body.style.position = 'relative';
+        observer = new IntersectionObserver(function (entries) {
+          if (!analyticsAllowed()) { stop(); return; }
           entries.forEach(function (entry) {
-            if (!entry.isIntersecting) return;
-
+            if (entry.target === body) { visible = entry.isIntersecting; last = null; return; }
+            if (!entry.isIntersecting || document.visibilityState !== 'visible') return;
             var depth = Number(entry.target.getAttribute('data-depth'));
-            if (!depth || firedDepths[depth]) return;
-
-            firedDepths[depth] = true;
-            _gtag('event', 'article_scroll_depth', {
-              depth: depth,
-              article_title: _articleTitle,
-              article_category: _articleCategory
-            });
-
-            if (depth === 75 && !articleReadFired) {
-              articleReadFired = true;
-              _gtag('event', 'article_read', {
-                article_title: _articleTitle,
-                article_category: _articleCategory,
-                article_slug: _articleSlug
-              });
-            }
-
-            observer.unobserve(entry.target);
+            if (depth === 75) reached75 = true;
+            if (!depths[depth] && _gtag('event', 'article_scroll_depth', {
+              depth: depth, article_title: _articleTitle, article_category: _articleCategory
+            })) depths[depth] = true;
           });
-        }, {
-          threshold: 0
-        });
-
-        thresholds.forEach(function (depth) {
+        }, { threshold: 0 });
+        observer.observe(body);
+        [25, 50, 75, 100].forEach(function (depth) {
           var marker = document.createElement('span');
           marker.setAttribute('data-depth', String(depth));
           marker.setAttribute('aria-hidden', 'true');
-          marker.style.cssText = [
-            'position:absolute',
-            'left:0',
-            'top:' + markerTopPx(depth, height) + 'px',
-            'width:1px',
-            'height:1px',
-            'pointer-events:none',
-            'opacity:0'
-          ].join(';');
-          articleBody.appendChild(marker);
-          observer.observe(marker);
+          marker.style.cssText = 'position:absolute;left:0;top:' +
+            Math.max(Math.round(body.scrollHeight * depth / 100) - 2, 0) +
+            'px;width:1px;height:1px;pointer-events:none;opacity:0';
+          body.appendChild(marker); markers.push(marker); observer.observe(marker);
         });
       }
-
-      if (document.readyState === 'complete') {
-        initObserver();
-      } else {
-        window.addEventListener('load', initObserver, { once: true });
+      document.addEventListener('visibilitychange', function () { last = null; });
+      function tick() {
+        if (!analyticsAllowed()) { if (observer) stop(); return; }
+        if (document.readyState !== 'complete') return;
+        if (!observer) start();
+        var now = performance.now();
+        if (visible && document.visibilityState === 'visible') {
+          // Cap timer gaps: suspended tabs must not accumulate background time.
+          if (last !== null) dwell += Math.min(now - last, 1000);
+          last = now;
+          if (reached75 && dwell >= 15000 && !readFired) {
+            readFired = _gtag('event', 'article_read', {
+              article_title: _articleTitle, article_category: _articleCategory,
+              article_slug: _articleSlug, visible_dwell_seconds: Math.floor(dwell / 1000),
+              measurement_version: 'visible_dwell_v2'
+            });
+          }
+        } else { last = null; }
       }
+      window.setInterval(tick, 500);
+      tick();
     })();
   }
 
@@ -178,26 +168,9 @@
 
 
   // ── monetization CTA funnel ─────────────────────────────────────────────
-  // Stores anonymous local intent so /api/business-control-panel.json can
-  // expose a safe_public=true measurable growth-loop target without reading
-  // external analytics credentials. GA4 receives the same event when consented.
+  // Keep existing GA4 click names under the applied analytics consent gate.
+  // No persistent interaction history: no consumer uses the former local counter.
   (function () {
-    var KEY = 'uutistenlukija_monetization_signal_v1';
-
-    function readState() {
-      try {
-        return JSON.parse(localStorage.getItem(KEY) || '{}') || {};
-      } catch (err) {
-        return {};
-      }
-    }
-
-    function writeState(state) {
-      try {
-        localStorage.setItem(KEY, JSON.stringify(state));
-      } catch (err) {}
-    }
-
     function recordNamedFoundingSponsorClick(kind, placement, pagePath) {
       var allowedEvents = {
         founding_sponsor_page_click: true,
@@ -213,21 +186,15 @@
     }
 
     function recordSignal(kind, el) {
-      var state = readState();
-      var now = new Date().toISOString();
-      state[kind] = (Number(state[kind]) || 0) + 1;
-      state.last_signal = kind;
-      state.last_signal_at = now;
-      state.last_path = window.location.pathname;
-      state.last_placement = el ? (el.dataset.placement || el.dataset.package || 'unknown') : 'unknown';
-      writeState(state);
-
+      if (!analyticsAllowed()) return;
+      var placement = el ? (el.dataset.placement || el.dataset.package || 'unknown') : 'unknown';
+      var pagePath = window.location.pathname;
       _gtag('event', 'monetization_signal', {
         signal_type: kind,
-        placement: state.last_placement,
-        page_path: state.last_path
+        placement: placement,
+        page_path: pagePath
       });
-      recordNamedFoundingSponsorClick(kind, state.last_placement, state.last_path);
+      recordNamedFoundingSponsorClick(kind, placement, pagePath);
     }
 
     document.addEventListener('click', function (e) {
@@ -236,38 +203,6 @@
       recordSignal(el.dataset.monetizationSignal || 'unknown', el);
     });
 
-    var viewTarget = document.querySelector('[data-monetization-view]');
-    if (!viewTarget || !('IntersectionObserver' in window)) return;
-
-    var viewTimer = null;
-    var viewFired = false;
-    var viewObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (viewFired) return;
-        if (!entry.isIntersecting || entry.intersectionRatio < 0.5) {
-          if (viewTimer !== null) {
-            window.clearTimeout(viewTimer);
-            viewTimer = null;
-          }
-          return;
-        }
-
-        if (viewTimer !== null) return;
-        viewTimer = window.setTimeout(function () {
-          var kind = viewTarget.dataset.monetizationView;
-          viewTimer = null;
-          viewFired = true;
-          viewObserver.unobserve(viewTarget);
-          recordSignal(kind, viewTarget);
-          _gtag('event', kind, {
-            placement: viewTarget.dataset.placement || 'unknown',
-            page_path: window.location.pathname
-          });
-        }, 1000);
-      });
-    }, { threshold: [0.5] });
-
-    viewObserver.observe(viewTarget);
   })();
 
   // ── outbound_click ──────────────────────────────────────────────────────

@@ -1,0 +1,58 @@
+{
+  "fetched_at": "2026-09-07T09:16:27.894264+00:00",
+  "http_status": 200,
+  "endpoint": "https://searchconsole.googleapis.com/webmasters/v3/sites/sc-domain%3Auutistenlukija.fi/searchAnalytics/query",
+  "request": {
+    "startDate": "2026-08-10",
+    "endDate": "2026-09-06",
+    "type": "web",
+    "dataState": "final",
+    "dimensions": [
+      "page"
+    ],
+    "rowLimit": 25000
+  },
+  "response": {
+    "rows": [
+      {
+        "keys": [
+          "https://uutistenlukija.fi/posts/2026-05-08-isanmaan-toivot-sarjan-toni-wahlstrom-on-jatkanut-uraansa-te/"
+        ],
+        "clicks": 14,
+        "impressions": 2290,
+        "ctr": 0.00611353711790393,
+        "position": 11.219650655021834
+      },
+      {
+        "keys": [
+          "https://uutistenlukija.fi/posts/2026-07-19-uusi-futuro-talo-valmistuu-pieksamaella-vuosikymmenten-tauon/"
+        ],
+        "clicks": 3,
+        "impressions": 38,
+        "ctr": 0.07894736842105263,
+        "position": 13.605263157894736
+      },
+      {
+        "keys": [
+          "https://uutistenlukija.fi/posts/2026-05-18-afganistanin-nalkakriisi-ajaa-perheita-epatoivoisiin-valinto/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 86
+      },
+      {
+        "keys": [
+          "https://uutistenlukija.fi/posts/2026-05-18-christopher-nolan-kutsuu-the-odysseyta-uransa-suurimmaksi-el/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      }
+    ],
+    "responseAggregationType": "byPage"
+  },
+  "fixture_note": "Four provider rows selected from 1,145 returned rows; not the full production table.",
+  "fixture_source": "Sanitized audit gsc_production28_full.json, 2026-09-07; no credentials; offline regression only."
+}

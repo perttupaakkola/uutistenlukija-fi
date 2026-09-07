@@ -10,10 +10,13 @@
   </header>
 
   {{ $currentGuides := slice }}
+  {{ $archiveGuides := slice }}
   {{ range .Pages.ByTitle }}
     {{ $state := partial "guide-state.html" . }}
     {{ if $state.current }}
       {{ $currentGuides = $currentGuides | append . }}
+    {{ else if and (not $state.draft) (not $state.noindex) (not $state.invalid) }}
+      {{ $archiveGuides = $archiveGuides | append . }}
     {{ end }}
   {{ end }}
 
@@ -32,6 +35,11 @@
   </div>
   {{ else }}
   <p class="guide-warning">Yhtään opasta ei ole juuri nyt voimassa ja tarkistettuna.</p>
+  {{ end }}
+  {{ with $archiveGuides }}
+  <h2>Tarkistusta odottavat oppaat</h2>
+  <p>Näiden oppaiden voimassaoloa ei ole jatkettu. Niissä on aiempia tarkistusohjeita ja linkkejä virallisiin lähteisiin.</p>
+  <ul>{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a> — tarkistus myöhässä</li>{{ end }}</ul>
   {{ end }}
 </section>
 {{ end }}

@@ -116,7 +116,7 @@
           <a href="{{ $article.RelPermalink }}" class="kooste-card__image-wrap" tabindex="-1" aria-hidden="true">
             <img
               src="{{ . }}"
-              alt="{{ $article.Params.image_alt | default $article.Title }}"
+              alt="{{ partial "image-alt.html" $article }}"
               class="kooste-card__image"
               loading="lazy"
               decoding="async"

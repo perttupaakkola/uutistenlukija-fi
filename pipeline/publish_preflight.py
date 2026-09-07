@@ -8,6 +8,7 @@ import re
 from typing import Any, Iterable
 
 try:
+    from .freshness import freshness_reasons
     from .description_projection import project_public_description
     from .publisher import CANONICAL_CATEGORIES, effective_category
     from .source_attribution import (
@@ -23,6 +24,7 @@ try:
         word_count,
     )
 except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
+    from freshness import freshness_reasons
     from description_projection import project_public_description
     from publisher import CANONICAL_CATEGORIES, effective_category
     from source_attribution import (
@@ -207,7 +209,7 @@ def _requires_entertainment_category_review(
     )
 
 
-def evaluate_publish_preflight(record: dict[str, Any]) -> PublishPreflightResult:
+def evaluate_publish_preflight(record: dict[str, Any], *, now=None) -> PublishPreflightResult:
     """Classify one completed Monica record without changing it or its queue."""
     packet = _mapping(record.get("packet"))
     article = _mapping(record.get("article"))
@@ -256,7 +258,7 @@ def evaluate_publish_preflight(record: dict[str, Any]) -> PublishPreflightResult
     ratio = article_words / distinct_source_words if distinct_source_words else float("inf")
     sensitive = _is_sensitive(record)
 
-    hard_reasons: list[str] = []
+    hard_reasons: list[str] = list(freshness_reasons(record, now=now))
     review_reasons: list[str] = []
     if any(not category for category in categories):
         hard_reasons.append("category_unresolved")

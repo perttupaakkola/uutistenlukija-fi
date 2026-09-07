@@ -1,85 +1,42 @@
 {{ define "extra_head" }}
-{{ $publisherBlock := partial "publisher-schema.html" . }}
-{{ $cats := slice
-  (dict "key" "Kotimaa" "slug" "kotimaa")
-  (dict "key" "Ulkomaat" "slug" "ulkomaat")
-  (dict "key" "Talous" "slug" "talous")
-  (dict "key" "Teknologia" "slug" "teknologia")
-}}
-{{ $posts := where .Site.RegularPages "Section" "posts" }}
-{{ $displayed := slice }}
-{{ range $cats }}
-  {{ $catPosts := first 4 (where $posts.ByDate.Reverse "Params.categories" "intersect" (slice .key)) }}
-  {{ range $catPosts }}{{ $displayed = $displayed | append . }}{{ end }}
-{{ end }}
+{{ $posts := (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+{{ $pager := .Paginate $posts 30 }}
 {{ $items := slice }}
-{{ range $i, $p := $displayed }}
-  {{ $items = $items | append (dict
-    "@type" "ListItem"
-    "position" (math.Add $i 1)
-    "url" $p.Permalink
-    "name" $p.Title
-  ) }}
+{{ range $i, $p := $pager.Pages }}
+  {{ $items = $items | append (dict "@type" "ListItem" "position" (math.Add $i 1) "url" $p.Permalink "name" $p.Title) }}
 {{ end }}
-{{ $schema := dict
-  "@context" "https://schema.org"
-  "@type" "CollectionPage"
-  "name" (.Params.seo_title | default .Title)
-  "url" .Permalink
-  "description" .Description
-  "inLanguage" "fi"
-  "publisher" $publisherBlock
-  "itemListElement" $items
-}}
-<script type="application/ld+json">
-{{ $schema | jsonify (dict "indent" "  ") | safeJS }}
-</script>
+{{ $schema := dict "@context" "https://schema.org" "@type" "CollectionPage" "name" (.Params.seo_title | default .Title) "url" .Permalink "description" .Description "inLanguage" "fi" "publisher" (partial "publisher-schema.html" .) "itemListElement" $items }}
+<script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
 {{ end }}
 
 {{ define "main" }}
 {{ partial "breadcrumbs.html" . }}
-{{ $cats := slice
-  (dict "key" "Kotimaa" "slug" "kotimaa")
-  (dict "key" "Ulkomaat" "slug" "ulkomaat")
-  (dict "key" "Talous" "slug" "talous")
-  (dict "key" "Teknologia" "slug" "teknologia")
-}}
-{{ $posts := where .Site.RegularPages "Section" "posts" }}
-<article class="single-article">
-  <h1>{{ .Title }}</h1>
-  <div class="content">
-    <p>Uutistenlukija kokoaa päivän tärkeimmät uutiset tiiviiseen koosteeseen. Suomen ja maailman uutiset yhdessä paikassa, selkeästi ja nopeasti luettavassa muodossa.</p>
-    <p>Tältä sivulta löydät uusimmat jutut kotimaasta, ulkomailta, taloudesta ja teknologiasta. Jos haluat saman suoraan sähköpostiisi, <a href="/uutiskirje/">tilaa ilmainen uutiskirje</a>.</p>
+{{ $posts := (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+{{ $pager := .Paginate $posts 30 }}
+<section aria-labelledby="latest-news-title">
+  <header class="single-article">
+    <h1 id="latest-news-title">{{ .Title }}</h1>
+    <p>Kaikkien aihealueiden jutut julkaisujärjestyksessä, uusimmat ensin. Julkaisuajat näkyvät Suomen ajassa. Vanhemmat jutut löytyvät seuraavilta sivuilta.</p>
+    <p>Voit myös seurata <a href="/syotteet/">RSS-syötteitä</a> tai valita aihealueen päävalikosta.</p>
+  </header>
+  <div class="articles-grid">
+    {{ range $pager.Pages }}
+    <article class="article-card">
+      {{ with .Params.categories }}<span class="category-label">{{ index . 0 }}</span>{{ end }}
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <p class="excerpt">{{ .Description | default (.Summary | plainify | truncate 180) }}</p>
+      <div class="meta">{{ partial "relative-date.html" . }} · <span class="author-inline">{{ .Params.author | default "Toimitus" }}</span></div>
+    </article>
+    {{ else }}
+    <p>Uutisia ei ole vielä julkaistu.</p>
+    {{ end }}
   </div>
-</article>
-
-{{ range $cats }}
-  {{ $catPosts := first 4 (where $posts.ByDate.Reverse "Params.categories" "intersect" (slice .key)) }}
-  {{ if $catPosts }}
-  <section aria-labelledby="digest-{{ .slug }}">
-    <div class="category-header">
-      <h2 id="digest-{{ .slug }}"><a href="/categories/{{ .slug }}/">{{ .key }}</a></h2>
-    </div>
-    <div class="articles-grid">
-      {{ range $catPosts }}
-      <article class="article-card">
-        {{ with .Params.categories }}
-        <span class="category-label">{{ index . 0 }}</span>
-        {{ end }}
-        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-        <p class="excerpt">{{ .Description | default (.Summary | plainify | truncate 180) }}</p>
-        <div class="meta">
-          {{ partial "relative-date.html" . }}
-          · <span class="author-inline">{{ .Params.author | default "Toimitus" }}</span>
-        </div>
-      </article>
-      {{ end }}
-    </div>
-  </section>
+  {{ if gt $pager.TotalPages 1 }}
+  <nav class="pagination" aria-label="Uutisarkiston sivut">
+    {{ if $pager.HasPrev }}<a href="{{ $pager.Prev.URL }}" rel="prev">← Uudempia uutisia</a>{{ end }}
+    <span aria-current="page">Sivu {{ $pager.PageNumber }} / {{ $pager.TotalPages }}</span>
+    {{ if $pager.HasNext }}<a href="{{ $pager.Next.URL }}" rel="next">Vanhempia uutisia →</a>{{ end }}
+  </nav>
   {{ end }}
-{{ end }}
-
-<article class="single-article">
-  {{ partial "newsletter-cta.html" . }}
-</article>
+</section>
 {{ end }}

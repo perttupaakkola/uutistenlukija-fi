@@ -1,23 +1,24 @@
 ---
 title: "Kysely: Lähes puolet ajaa renkaat lain edellyttämälle minimitasolle"
 date: 2026-09-07T04:46:07.967299+00:00
+lastmod: 2026-09-07T11:08:00+00:00
 categories:
   - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
-author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
+author_bio: "Uutistenlukija kokoaa lähteisiin perustuvia uutisartikkeleita tekoälyn avulla."
 author_image: ""
 description: "Autonrengasliiton kyselyn mukaan moni kuljettaja lykkää renkaiden vaihtamista ja tarkastaa niiden kunnon harvoin, vaikka renkaita pidetään tärkeänä…"
 summary: "Autonrengasliiton kyselyn mukaan moni kuljettaja lykkää renkaiden vaihtamista ja tarkastaa niiden kunnon harvoin, vaikka renkaita pidetään tärkeänä turvallisuustekijänä."
 summary_bullets:
   - "Lähes puolet vastaajista ajaa renkaansa lain edellyttämälle minimitasolle ennen vaihtoa."
   - "18–34-vuotiaista kuljettajista näin toimii hieman yli puolet."
-  - "Noin puolet tarkistaa urasyvyyden ja neljännes rengaspaineet renkaanvaihdon yhteydessä."
+  - "49 prosenttia tarkistaa urasyvyyden vain renkaanvaihdon yhteydessä; rengaspaineet tarkistaa yhtä harvoin 24 prosenttia."
 key_points:
   - "Lähes puolet vastaajista ajaa renkaansa lain edellyttämälle minimitasolle ennen vaihtoa."
   - "18–34-vuotiaista kuljettajista näin toimii hieman yli puolet."
-  - "Noin puolet tarkistaa urasyvyyden ja neljännes rengaspaineet renkaanvaihdon yhteydessä."
+  - "49 prosenttia tarkistaa urasyvyyden vain renkaanvaihdon yhteydessä; rengaspaineet tarkistaa yhtä harvoin 24 prosenttia."
 journalist_note: |
   Artikkeli perustuu Autonrengasliiton teettämästä kyselystä julkaistuihin tietoihin. Kyselyn toteutti YouGov Finland, ja siihen vastasi noin tuhat autoilevaa suomalaista. Käytettävissä olevassa aineistossa ei ollut tarkempia tietoja otannasta tai virhemarginaalista.
 content_type: "article"
@@ -48,9 +49,14 @@ source_domain: "kouvolansanomat.fi"
 source_attributions:
   - name: "Kouvolan Sanomat"
     url: "https://kouvolansanomat.fi/uutissuomalainen/9770525"
+  - name: "Autonrengasliitto"
+    url: "https://autonrengasliitto.fi/ajankohtaista/tiedotteet/kuluneet-renkaat-ovat-riski-liikenteessa-silti-niilla-ajetaan/"
 briefing: true
 draft: false
 ---
+
+> **Korjattu 7.9.2026: Urasyvyyden ja rengaspaineiden tarkistamista koskevat prosenttiosuudet kuvaavat vain renkaanvaihdon yhteydessä tarkistavia. Poistettu virheellinen päätelmä, jonka mukaan paineiden tarkistaminen olisi harvinaisempaa, ja täsmennetty tiivistelmiä.**
+
 
 Autonrengasliiton teettämän kyselyn mukaan lähes puolet autoilevista suomalaisista vaihtaa vanhat renkaansa vasta, kun ne ovat kuluneet lain edellyttämälle minimitasolle. Nuorista, 18–34-vuotiaista kuljettajista, näin toimii hieman yli puolet. Vastaukset kertovat erosta turvallisuutta koskevien näkemysten ja käytännön toiminnan välillä.
 
@@ -66,7 +72,7 @@ Kyselyssä neljännes vastaajista kertoo ajavansa renkailla, vaikka niiden kunto
 
 ## Urasyvyys ja rengaspaineet tarkistetaan harvoin
 
-Renkaiden säännöllinen tarkastus jää monelta tekemättä. Noin puolet vastaajista sanoo tarkistavansa renkaiden urasyvyyden keväällä ja syksyllä renkaanvaihdon yhteydessä. Rengaspaineet tarkastaa tuolloin vain neljännes vastaajista, joten paineiden tarkistaminen on kyselyn perusteella urasyvyyden tarkastamista harvinaisempaa.
+[Autonrengasliiton tiedotteen](https://autonrengasliitto.fi/ajankohtaista/tiedotteet/kuluneet-renkaat-ovat-riski-liikenteessa-silti-niilla-ajetaan/) mukaan 49 prosenttia vastaajista tarkistaa urasyvyyden vain kevään ja syksyn renkaanvaihtojen yhteydessä. Rengaspaineet tarkistaa yhtä harvoin 24 prosenttia. Luvut kuvaavat vain renkaanvaihdon yhteydessä tarkistavien osuuksia. Niistä ei voi päätellä, että rengaspaineiden tarkistaminen olisi kokonaisuutena urasyvyyden tarkistamista harvinaisempaa.
 
 Liikenneturvan koulutusohjaaja Lari Mäkelä suosittelee tarkistamaan rengaspaineet mieluiten kuukausittain. Hänen mukaansa paineet pitäisi tarkastaa myös aina ennen pitkää ajomatkaa sekä silloin, kun säässä tapahtuu selvä muutos.
 

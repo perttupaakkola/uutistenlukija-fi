@@ -779,6 +779,7 @@ def build_story_packet(article: dict) -> dict:
     packet = {
         "packet_id": packet_id,
         "created_at": created_at,
+        **{key: article[key] for key in ("published", "source_published_at", "event_at", "event_date", "freshness", "fresh_source_quota_eligible", "stale_source") if key in article},
         "headline_seed": title,
         "description_seed": description,
         "link": article.get("link", ""),

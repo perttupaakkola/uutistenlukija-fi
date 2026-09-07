@@ -99,6 +99,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
     def _write_publish_record(self, packet_id: str) -> tuple[Path, dict, dict]:
         article = {
+            "published": datetime.now(timezone.utc).isoformat(),
             "title": packet_id,
             "description": f"Kuvaus uutiselle {packet_id}.",
             "content": "sana " * 260,
@@ -125,6 +126,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
     def _run_single_packet_scan(self, packet: dict) -> tuple[int, list[str]]:
         article = {
+            "published": datetime.now(timezone.utc).isoformat(),
             "title": "Synthetic scheduled scan candidate",
             "description": "Focused scanner admission regression.",
             "link": "https://example.test/ope-447",
@@ -239,6 +241,8 @@ class StagedPublishMetricsTests(unittest.TestCase):
             },
             {"title": "Valid second", "link": "https://example.test/second", "category_hint": "Kotimaa"},
         ]
+        for article in articles:
+            article["published"] = datetime.now(timezone.utc).isoformat()
         invalid = {
             "packet_id": "invalid-top",
             "clean_source_blocks": [{"source_url": "https://example.test/top", "text": "thin"}],
@@ -1836,6 +1840,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
     def test_publish_persists_enriched_image_metadata_to_published_queue(self) -> None:
         article = {
+            "published": datetime.now(timezone.utc).isoformat(),
             "title": "Kuvallinen julkaisu",
             "content": "sana " * 260,
             "category": "Kotimaa",
@@ -1918,6 +1923,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
     def test_publish_build_failure_does_not_mark_dedup_or_move_packet(self) -> None:
         article = {
+            "published": datetime.now(timezone.utc).isoformat(),
             "title": "Build failure must remain retryable",
             "content": "sana " * 260,
             "category": "Kotimaa",

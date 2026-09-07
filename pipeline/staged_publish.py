@@ -32,8 +32,8 @@ PROJECT_DIR = PIPELINE_DIR.parent
 LOG_DIR = PIPELINE_DIR / "logs"
 PIPELINE_CACHE_DIR = PIPELINE_DIR / "cache"
 STAGED_ROOT = PIPELINE_DIR / "queues" / "staged"
-for sub in ["ready", "writing", "outbox", "published", "failed"]:
-    (STAGED_ROOT / sub).mkdir(parents=True, exist_ok=True)
+# Queue writers create their destination lazily; imports and publish dry-runs
+# must remain read-only even when runtime directories do not exist.
 
 # Make local pipeline imports work when run from cron.
 sys.path.insert(0, str(PIPELINE_DIR))
@@ -44,7 +44,7 @@ from firehose import poll_firehose  # noqa: E402
 from research import enrich_with_research  # noqa: E402
 from dedup import filter_new_articles, check_published_duplicates, dedup_within_batch, mark_published  # noqa: E402
 from story_packet import build_story_packet  # noqa: E402
-from publisher import build_site, effective_category, publish_articles  # noqa: E402
+from publisher import PublicationTransaction, build_site, effective_category, publish_articles  # noqa: E402
 from unsplash import fetch_images_for_articles as unsplash_fetch_images  # noqa: E402
 from pexels import fetch_images_for_articles as pexels_fetch_images  # noqa: E402
 from image_candidate_guard import category_fallback_fields  # noqa: E402
@@ -84,6 +84,7 @@ from monica_writer import (  # noqa: E402
     _synchronize_packet_category,
 )
 from quality_gate import score_article, run_gate as run_quality_gate  # noqa: E402
+from freshness import freshness_reasons
 from publish_preflight import evaluate_publish_preflight  # noqa: E402
 from source_attribution import normalize_source_usage  # noqa: E402
 from source_sufficiency import (  # noqa: E402
@@ -179,6 +180,7 @@ def sync_image_provider_keys() -> None:
 
 
 def atomic_write_json(path: Path, data: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
     tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     tmp.replace(path)
@@ -1220,7 +1222,7 @@ def cmd_scan(args: argparse.Namespace) -> int:
         log(f"scan: firehose skipped: {e}")
     seen_url_hashes = {a.get("_url_hash") for a in rss_articles if a.get("_url_hash")}
     fh_new = [a for a in fh_articles if a.get("_url_hash") not in seen_url_hashes]
-    articles = rss_articles + fh_new
+    articles = [a for a in rss_articles + fh_new if not freshness_reasons(a)]
     log(f"scan: discovered rss={len(rss_articles)} firehose_new={len(fh_new)} total={len(articles)}")
     log_scan_stage("discovered", articles)
     if not articles:
@@ -1517,6 +1519,7 @@ def worker_source_ratio_issues(packet: dict, payload: dict) -> list[str]:
 
 def process_one_packet(path: Path, args: argparse.Namespace) -> tuple[str, str]:
     writing = STAGED_ROOT / "writing" / path.name
+    writing.parent.mkdir(parents=True, exist_ok=True)
     try:
         path.rename(writing)
     except FileNotFoundError:
@@ -1776,7 +1779,7 @@ def _complete_publish_cycle(
 
 def _write_publish_cycle(args: argparse.Namespace, cycle: dict[str, Any]) -> None:
     raw_path = str(getattr(args, "outcome_json", "") or "").strip()
-    if not raw_path:
+    if args.dry_run or not raw_path:
         return
     path = Path(raw_path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -1785,14 +1788,14 @@ def _write_publish_cycle(args: argparse.Namespace, cycle: dict[str, Any]) -> Non
 
 
 def apply_publish_preflight(
-    items: list[tuple[Path, dict]], max_items: int | None = None
+    items: list[tuple[Path, dict]], max_items: int | None = None, *, now: datetime | None = None
 ) -> list[tuple[Path, dict]]:
     """Keep only records safe for existing publish gates; leave held files untouched."""
     eligible: list[tuple[Path, dict]] = []
     if max_items is not None and max_items <= 0:
         return eligible
     for path, data in items:
-        result = evaluate_publish_preflight(data)
+        result = evaluate_publish_preflight(data, now=now)
         if result.action == "publish":
             eligible.append((path, data))
             if max_items is not None and len(eligible) >= max_items:
@@ -2663,6 +2666,32 @@ def persist_queue_transitions(transitions: list[tuple[Path, Path]]) -> int:
     return 0
 
 
+def _deploy_working_delta() -> dict[str, tuple[str, str | None]]:
+    """Snapshot exact publication changes, rejecting conflicts and foreign paths."""
+    import hashlib
+    result = subprocess.run(["git", "status", "--porcelain=v1", "-z", "--untracked-files=all"],
+                            cwd=PROJECT_DIR, timeout=30, text=True, capture_output=True)
+    if result.returncode:
+        raise RuntimeError("cannot inspect publication delta")
+    allowed = ("content/", "static/images/articles/", "static/api/", "static/metrics/",
+               "pipeline/queues/staged/")
+    single = {"static/search-index.json", "pipeline/published_url_hashes.json"}
+    delta = {}
+    for entry in result.stdout.split("\0"):
+        if not entry:
+            continue
+        status, name = entry[:2], entry[3:]
+        if (status not in ("??", " M", " D", "M ", "A ", "D ", "AM", "MM")
+                or not (name in single or name.startswith(allowed))):
+            raise RuntimeError("unexpected/conflicting publication delta")
+        path = PROJECT_DIR / name
+        if path.is_symlink() or ".." in Path(name).parts:
+            raise RuntimeError("unsafe publication path")
+        digest = hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else None
+        delta[name] = (status, digest)
+    return delta
+
+
 def run_git_deploy(created_count: int) -> int:
     if created_count <= 0:
         return 0
@@ -2687,8 +2716,23 @@ def run_git_deploy(created_count: int) -> int:
         ["git", "commit", "-m", f"Auto-publish staged: {created_count} new articles ({datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')})"],
         ["git", "push", "origin", "main"],
     ]
-    # Fetch first. Do not hard reset after publishing; use rebase/autostash before add if clean enough.
-    subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=PROJECT_DIR, timeout=120, check=False)
+    try:
+        expected_delta = _deploy_working_delta()
+    except (OSError, RuntimeError):
+        log("deploy: publication delta inspection failed")
+        return 4
+    # Preserve current-main synchronization; never reset publication artifacts.
+    sync = subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=PROJECT_DIR, timeout=120, text=True, capture_output=True)
+    if sync.returncode != 0:
+        log(f"deploy: synchronization failed rc={sync.returncode}; publication push aborted")
+        return sync.returncode
+    try:
+        if _deploy_working_delta() != expected_delta:
+            log("deploy: publication delta changed during synchronization; aborting")
+            return 4
+    except (OSError, RuntimeError):
+        log("deploy: publication delta revalidation failed")
+        return 4
     for cmd in cmds:
         res = subprocess.run(cmd, cwd=PROJECT_DIR, timeout=180, text=True, capture_output=True)
         if res.returncode != 0:
@@ -2766,7 +2810,7 @@ def _cmd_publish(args: argparse.Namespace, cycle: dict[str, Any]) -> int:
             continue
         path, data = eligible[0]
         article = data["article"]
-        gate = run_quality_gate([article])
+        gate = run_quality_gate([article], persist=False) if args.dry_run else run_quality_gate([article])
         quality_checked_items.append((path, data))
         rejected = any(candidate is article for candidate in gate.rejected)
         passed = any(candidate is article for candidate in gate.passed)
@@ -2853,6 +2897,15 @@ def _cmd_publish(args: argparse.Namespace, cycle: dict[str, Any]) -> int:
         )
     if not args.dry_run:
         quarantine_duplicate_outbox(items, articles, queue_transitions)
+    if args.dry_run:
+        log(f"publish: dry-run would publish {len(articles)} article(s)")
+        for a in articles:
+            log(f"publish: dry-run article {a.get('title','')[:100]}")
+        return _complete_publish_cycle(
+            cycle,
+            outcome="ok",
+            result="dry_run",
+        )
     image_summary = enrich_images_for_articles(articles)
     article_by_id = {id(article): article for article in articles}
     for _, data in items:
@@ -2893,27 +2946,27 @@ def _cmd_publish(args: argparse.Namespace, cycle: dict[str, Any]) -> int:
         f"generated_terminal_reasons={json.dumps(image_summary.get('generated_terminal_reasons', {}), sort_keys=True)} "
         f"provider_outcomes={json.dumps(image_summary.get('provider_outcomes', {}), sort_keys=True)}"
     )
-    if args.dry_run:
-        log(f"publish: dry-run would publish {len(articles)} article(s)")
-        for a in articles:
-            log(f"publish: dry-run article {a.get('title','')[:100]}")
-        return _complete_publish_cycle(
-            cycle,
-            outcome="ok",
-            result="dry_run",
-        )
-    created = publish_articles(articles)
-    execution["created"] = len(created)
+    # Asset work can take time: recheck every selected record at the actual
+    # write boundary, before a partial publication/queue transition is possible.
+    selected_ids = {id(article) for article in articles}
+    if any(evaluate_publish_preflight(data).action != "publish"
+           for _, data in items if id(data["article"]) in selected_ids):
+        return _complete_publish_cycle(cycle, outcome="error", result="terminal_preflight_changed", return_code=4)
+    with PublicationTransaction() as transaction:
+        created = publish_articles(articles, transaction=transaction)
+        execution["created"] = len(created)
+        if created:
+            ok, err = build_site()
+            if not ok:
+                log(f"publish: build failed: {err}")
+                return _complete_publish_cycle(
+                    cycle,
+                    outcome="error",
+                    result="build_failed",
+                    return_code=2,
+                )
+        transaction.commit()
     if created:
-        ok, err = build_site()
-        if not ok:
-            log(f"publish: build failed: {err}")
-            return _complete_publish_cycle(
-                cycle,
-                outcome="error",
-                result="build_failed",
-                return_code=2,
-            )
         mark_published(articles)
         keep = {a.get("monica_packet_id") for a in articles if a.get("monica_packet_id")}
         for p, data in items:

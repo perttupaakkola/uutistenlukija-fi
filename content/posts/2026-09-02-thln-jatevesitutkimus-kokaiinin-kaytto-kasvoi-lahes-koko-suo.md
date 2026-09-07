@@ -1,12 +1,13 @@
 ---
 title: "THL:n jätevesitutkimus: Kokaiinin käyttö kasvoi lähes koko Suomessa"
 date: 2026-09-02T21:35:37.703787+00:00
+lastmod: 2026-09-07T11:08:00+00:00
 categories:
   - Kotimaa
 author: "Toimitus"
 author_id: "toimitus"
 author_title: "Uutistenlukija-toimitus"
-author_bio: "Uutistenlukija on suomalainen verkkolehti, joka kirjoittaa alkuperäisiä uutisartikkeleita."
+author_bio: "Uutistenlukija kokoaa lähteisiin perustuvia uutisartikkeleita tekoälyn avulla."
 author_image: ""
 description: "Kokaiinin käyttö on lisääntynyt lähes koko Suomessa, vaikka pääkaupunkiseudulla käyttö on edelleen runsainta."
 summary: "Kokaiinin käyttö on lisääntynyt lähes koko Suomessa, vaikka pääkaupunkiseudulla käyttö on edelleen runsainta. Amfetamiinin käyttömäärät ovat pysyneet tasaisina ja ekstaasin käyttö näyttää vähenevän."
@@ -19,7 +20,7 @@ key_points:
   - "Amfetamiinin käyttömäärät ovat pysyneet tasaisina, ekstaasin käyttö näyttää vähenevän ja metamfetamiinin käyttö on keskimäärin vähäistä."
   - "Alfa-PVP:n käytön kasvu on taittunut, mutta käyttömäärät ovat vakiintuneet varsin suuriksi etenkin Etelä- ja Länsi-Suomessa."
 journalist_note: |
-  Paketin kolme aineistokatkelmaa ovat saman Ylen artikkelin osia. Julkiset väitteet on rajattu THL:n jätevesiseurannan tuloksiin ja tiedotteessa esitettyihin asiantuntija-arvioihin.
+  Uutinen perustuu Ylen uutiseen ja THL:n tiedotteeseen. Jätevesiseurannan tuloksia vertailtaessa on huomioitava jatkuvan seurannan ja valtakunnallisen keräyksen erilaiset näytteenottojaksot.
 content_type: "article"
 editorial_reviewed: true
 image: "/images/categories/kotimaa.jpg"
@@ -50,9 +51,14 @@ source_domain: "yle.fi"
 source_attributions:
   - name: "Yle Uutiset"
     url: "https://yle.fi/a/74-20244285?origin=rss"
+  - name: "THL"
+    url: "https://thl.fi/-/jatevesitutkimus-alfa-pvp-n-kaytto-vakiintunut-kokaiini-edelleen-nousussa"
 briefing: true
 draft: false
 ---
+
+> **Täydennetty 7.9.2026: Lisätty THL:n ensisijainen lähde ja ero jatkuvan seurannan viikonloppunäytteiden sekä valtakunnallisen keräyksen kaikkia viikonpäiviä kuvaavan aineiston välillä.**
+
 
 Kokaiinin käyttö on lisääntynyt lähes koko Suomessa, ilmenee Terveyden ja hyvinvoinnin laitoksen (THL) valtakunnallisesta jätevesitutkimuksesta. Käyttöä havaitaan eniten Etelä-Suomen suurissa kaupungeissa ja erityisesti pääkaupunkiseudulla, mutta suurimmat viimeaikaiset muutokset näkyvät laitoksen mukaan muualla Suomessa. Samaan aikaan amfetamiinin käyttömäärät ovat pysyneet tasaisina ja ekstaasin käyttö näyttää vähenevän.
 
@@ -61,6 +67,8 @@ Kokaiinin käyttö on lisääntynyt lähes koko Suomessa, ilmenee Terveyden ja h
 THL:n mukaan kokaiinin käyttö on kasvanut koko mittaushistorian ajan eli vuodesta 2012 lähtien. Kehittämispäällikkö Aino Kankaanpää toteaa tiedotteessa, että pääkaupunkiseudulla käyttö on yhä runsainta. Nyt suurimmat muutokset ovat kuitenkin tapahtuneet muualla maassa.
 
 Laajan valtakunnallisen tutkimuksen maaliskuun keräysjakso ulottui yli 30 kaupunkiin ja niiden lähialueille. Tutkimuksen kattamalla alueella asuu noin 65 prosenttia Suomen väestöstä. Helsingistä, Tampereelta ja Turusta julkaistiin lisäksi jatkuvan jätevesiseurannan tulokset kuluvan vuoden kesäkuun loppuun saakka.
+
+[THL:n menetelmäkuvauksen](https://thl.fi/-/jatevesitutkimus-alfa-pvp-n-kaytto-vakiintunut-kokaiini-edelleen-nousussa) mukaan jatkuvan seurannan näytteet kerätään sunnuntaiaamun ja maanantaiaamun väliltä, joten ne kuvaavat erityisesti viikonlopun käyttöä. Valtakunnallinen keräys kuvaa keskimääräistä käyttöä kaikkina viikonpäivinä. Eri keräysrytmit on huomioitava sarjoja vertailtaessa.
 
 ## Muiden aineiden kehitys poikkeaa kokaiinista
 

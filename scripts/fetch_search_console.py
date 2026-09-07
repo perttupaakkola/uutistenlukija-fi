@@ -73,30 +73,73 @@ def record_oauth_sentinel():
     )
 
 
-def fetch_rows(token, days=28):
-    end = (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%Y-%m-%d")
-    start = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
-    payload = json.dumps({
-        "startDate": start, "endDate": end,
-        "dimensions": ["page"], "rowLimit": 500
-    }).encode()
+def query(token, payload):
     url = ("https://searchconsole.googleapis.com/webmasters/v3/sites/"
            + urllib.parse.quote(SITE_URL, safe="") + "/searchAnalytics/query")
-    req = urllib.request.Request(url, data=payload,
+    req = urllib.request.Request(url, data=json.dumps(payload).encode(),
           headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"},
           method="POST")
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            rows = json.load(r).get("rows", [])
-        return [{"url": r["keys"][0],
-                 "impressions": r.get("impressions", 0),
-                 "clicks": r.get("clicks", 0),
-                 "ctr": round(r.get("ctr", 0.0) * 100, 2),
-                 "position": round(r.get("position", 0.0), 1)} for r in rows]
-    except urllib.error.HTTPError as e:
-        print(f"[fetch_sc] HTTP {e.code}: {e.read().decode()[:200]}", file=sys.stderr); return []
-    except Exception as e:
-        print(f"[fetch_sc] error: {e}", file=sys.stderr); return []
+    with urllib.request.urlopen(req, timeout=30) as response:
+        return json.load(response)
+
+
+def fetch_report(token, days=28, *, page_size=25000, max_rows=100000, now=None, query_fn=None):
+    """Bounded pagination of provider-visible rows, plus independent property totals.
+
+    Exhausting pagination does not prove all search queries/pages were disclosed.
+    Existing percent `ctr` remains compatible; canonical `ctr_fraction` is exact.
+    """
+    from analytics_contract import ctr_fraction
+    if not 1 <= days <= 480 or not 1 <= page_size <= 25000 or max_rows < 1:
+        raise ValueError("invalid collection limits")
+    now = now or datetime.now(timezone.utc)
+    query_fn = query_fn or query
+    end = (now - timedelta(days=3)).date()
+    start = end - timedelta(days=days - 1)
+    window = {"startDate": start.isoformat(), "endDate": end.isoformat()}
+    base = dict(window, type="web", dataState="final")
+    rows, seen, calls, exhausted = [], set(), 0, False
+    while len(rows) < max_rows:
+        limit = min(page_size, max_rows - len(rows))
+        response = query_fn(token, dict(base, dimensions=["page"], aggregationType="byPage",
+                                        rowLimit=limit, startRow=len(rows)))
+        page = response.get("rows", [])
+        calls += 1
+        if len(page) > limit:
+            raise ValueError("provider exceeded requested row limit")
+        for row in page:
+            url = row["keys"][0]
+            if url in seen:
+                raise ValueError("duplicate page across pagination")
+            seen.add(url)
+            fraction = ctr_fraction(row)
+            rows.append({"url": url, "impressions": row["impressions"], "clicks": row["clicks"],
+                         "ctr": round(fraction * 100, 2), "ctr_fraction": fraction,
+                         "position": round(row["position"], 1)})
+        if len(page) < limit:
+            exhausted = True
+            break
+    aggregate = query_fn(token, dict(base, aggregationType="byProperty", rowLimit=1))
+    totals = aggregate.get("rows", [])
+    if len(totals) != 1 or aggregate.get("responseAggregationType") != "byProperty":
+        raise ValueError("missing property aggregate")
+    total = totals[0]
+    return {"schema_version": 2, "generated_at": now.isoformat(), "site": SITE_URL,
+            "days": days, "query_window": window, "search_type": "web", "data_state": "final",
+            "ctr_unit": "percent", "canonical_ctr_field": "ctr_fraction",
+            "row_count": len(rows), "rows": rows,
+            "property_totals": {"clicks": total["clicks"], "impressions": total["impressions"],
+                                "ctr_fraction": ctr_fraction(total), "position": total["position"],
+                                "aggregation_type": "byProperty"},
+            "completeness": {"pagination_exhausted": exhausted, "row_limit_reached": not exhausted,
+                             "page_size": page_size, "max_rows": max_rows, "page_requests": calls,
+                             "scope": "provider_visible_page_rows",
+                             "provider_limits": "Top rows only; privacy omissions and provider limits may apply. Dimension sums are not property totals."}}
+
+
+def fetch_rows(token, days=28):
+    """Compatibility API for callers expecting a list of percentage-valued rows."""
+    return fetch_report(token, days)["rows"]
 
 
 def main():
@@ -114,13 +157,16 @@ def main():
         record_oauth_sentinel()
         return 1
 
-    rows = fetch_rows(token, args.days)
+    try:
+        out = fetch_report(token, args.days)
+    except (ValueError, KeyError, urllib.error.URLError):
+        print("[fetch_sc] collection failed; existing artifact preserved", file=sys.stderr)
+        return 1
+    rows = out["rows"]
     if not rows:
         print("[fetch_sc] no rows returned"); return 1
     print(f"[fetch_sc] got {len(rows)} pages ({args.days}d)")
     rows.sort(key=lambda r: -r["impressions"])
-    out = {"generated_at": datetime.now(timezone.utc).isoformat(),
-           "days": args.days, "site": SITE_URL, "row_count": len(rows), "rows": rows}
     if args.dry_run:
         print(json.dumps(out, indent=2)[:600]); return 0
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)

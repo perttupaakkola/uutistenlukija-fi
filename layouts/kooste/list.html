@@ -25,7 +25,7 @@
       {{ range $todayPosts }}
       <li class="kooste-today-list__item">
         <a href="{{ .RelPermalink }}" class="kooste-today-list__link">
-          <span class="kooste-today-list__time">{{ .Date | time.Format "15:04" }}</span>
+          <span class="kooste-today-list__time">{{ partial "absolute-date.html" .Date }}</span>
           <span class="kooste-today-list__title">{{ .Title }}</span>
           {{ with .Params.categories }}{{ range first 1 . }}
           <span class="category-pill category-{{ . | urlize }} kooste-today-list__pill">{{ . }}</span>

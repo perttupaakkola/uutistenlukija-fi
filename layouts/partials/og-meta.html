@@ -53,7 +53,7 @@
       {{/* Relative path — make absolute */}}
       {{ $ogImage = printf "%s/%s" $siteBase (strings.TrimPrefix "/" .) }}
     {{ end }}
-    {{ $ogImageAlt = $.Params.image_alt | default $.Title }}
+    {{ $ogImageAlt = partial "image-alt.html" $ }}
   {{ end }}
 {{ end }}
 

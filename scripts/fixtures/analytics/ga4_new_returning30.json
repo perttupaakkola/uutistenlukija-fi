@@ -1,0 +1,211 @@
+{
+  "fetched_at": "2026-09-07T09:10:21.152677+00:00",
+  "http_status": 200,
+  "endpoint": "https://analyticsdata.googleapis.com/v1beta/properties/529369568:runReport",
+  "request": {
+    "dateRanges": [
+      {
+        "startDate": "2026-08-08",
+        "endDate": "2026-09-06"
+      }
+    ],
+    "metrics": [
+      {
+        "name": "screenPageViews"
+      },
+      {
+        "name": "activeUsers"
+      },
+      {
+        "name": "totalUsers"
+      },
+      {
+        "name": "newUsers"
+      },
+      {
+        "name": "sessions"
+      },
+      {
+        "name": "engagedSessions"
+      },
+      {
+        "name": "userEngagementDuration"
+      },
+      {
+        "name": "bounceRate"
+      },
+      {
+        "name": "averageSessionDuration"
+      }
+    ],
+    "limit": 10000,
+    "returnPropertyQuota": true,
+    "dimensions": [
+      {
+        "name": "newVsReturning"
+      }
+    ]
+  },
+  "response": {
+    "dimensionHeaders": [
+      {
+        "name": "newVsReturning"
+      }
+    ],
+    "metricHeaders": [
+      {
+        "name": "screenPageViews",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "activeUsers",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "totalUsers",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "newUsers",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "sessions",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "engagedSessions",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "userEngagementDuration",
+        "type": "TYPE_SECONDS"
+      },
+      {
+        "name": "bounceRate",
+        "type": "TYPE_FLOAT"
+      },
+      {
+        "name": "averageSessionDuration",
+        "type": "TYPE_SECONDS"
+      }
+    ],
+    "rows": [
+      {
+        "dimensionValues": [
+          {
+            "value": "new"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "89"
+          },
+          {
+            "value": "52"
+          },
+          {
+            "value": "52"
+          },
+          {
+            "value": "52"
+          },
+          {
+            "value": "52"
+          },
+          {
+            "value": "44"
+          },
+          {
+            "value": "3033"
+          },
+          {
+            "value": "0.15384615384615385"
+          },
+          {
+            "value": "99.486635653846164"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "returning"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "16"
+          },
+          {
+            "value": "6"
+          },
+          {
+            "value": "6"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "12"
+          },
+          {
+            "value": "8"
+          },
+          {
+            "value": "1350"
+          },
+          {
+            "value": "0.33333333333333331"
+          },
+          {
+            "value": "147.42285158333334"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "(not set)"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "1"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "1"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      }
+    ],
+    "rowCount": 3,
+    "metadata": {
+      "currencyCode": "EUR",
+      "timeZone": "Europe/Helsinki"
+    },
+    "kind": "analyticsData#runReport"
+  },
+  "fixture_source": "Sanitized audit ga4_new_returning30.json, 2026-09-07; no credentials; offline regression only."
+}

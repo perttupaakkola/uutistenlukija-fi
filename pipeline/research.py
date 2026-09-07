@@ -51,6 +51,26 @@ TALOUS_RSS_MIN_SENTENCES = 2
 TALOUS_ORIGINAL_THIN_MIN_WORDS = 40  # preserve bounded business-source bodies for fallback enrichment
 ARTICLE_RESEARCH_TIMEOUT = int(os.environ.get("ARTICLE_RESEARCH_TIMEOUT_SEC", "45"))
 
+# Context-local absolute budget also bounds retries and fallback requests.
+from contextvars import ContextVar
+import threading
+
+
+class ResearchDeadlineExceeded(TimeoutError):
+    """Article budget exhausted; never treat as a recoverable fetch failure."""
+
+
+_RESEARCH_DEADLINE = ContextVar("research_deadline", default=None)
+
+
+def _remaining_timeout(limit):
+    deadline = _RESEARCH_DEADLINE.get()
+    remaining = deadline - time.monotonic() if deadline is not None else limit
+    if remaining <= 0:
+        raise ResearchDeadlineExceeded("article research deadline exhausted")
+    return min(limit, remaining)
+
+
 # Domains known to hard-paywall — always skip (never get useful text)
 _BLOCKED_DOMAINS = {
     "hs.fi",                # Helsingin Sanomat
@@ -210,6 +230,8 @@ def _extract_text(html: bytes) -> str:
     parser = _ArticleExtractor()
     try:
         parser.feed(html.decode("utf-8", errors="replace"))
+    except ResearchDeadlineExceeded:
+        raise
     except Exception:
         return ""
     raw = parser.get_text()
@@ -226,6 +248,8 @@ def _get_domain(url: str) -> str:
         if host.startswith("www."):
             host = host[4:]
         return host
+    except ResearchDeadlineExceeded:
+        raise
     except Exception:
         return ""
 
@@ -245,6 +269,8 @@ def _is_same_article(url1: str, url2: str) -> bool:
         d1 = p1.netloc.lower().replace("www.", "")
         d2 = p2.netloc.lower().replace("www.", "")
         return d1 == d2 and p1.path.rstrip("/") == p2.path.rstrip("/")
+    except ResearchDeadlineExceeded:
+        raise
     except Exception:
         return False
 
@@ -271,13 +297,15 @@ def fetch_article_text(url: str, timeout: int = FETCH_TIMEOUT) -> str:
 
     try:
         req = urllib.request.Request(url, headers=_HEADERS)
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
+        with urllib.request.urlopen(req, timeout=_remaining_timeout(timeout)) as resp:
             ct = resp.headers.get("Content-Type", "")
             if "html" not in ct.lower():
                 return ""
             html = resp.read(500_000)
     except urllib.error.HTTPError:
         return ""
+    except ResearchDeadlineExceeded:
+        raise
     except Exception:
         return ""
 
@@ -303,7 +331,7 @@ def _search_bing_news(query: str, language: str = "fi", max_results: int = 10) -
             "User-Agent": _HEADERS["User-Agent"],
             "Accept": "application/xml, text/xml, */*",
         })
-        with urllib.request.urlopen(req, timeout=SEARCH_TIMEOUT) as resp:
+        with urllib.request.urlopen(req, timeout=_remaining_timeout(SEARCH_TIMEOUT)) as resp:
             xml_data = resp.read(200_000)
 
         # Bing sometimes returns empty body when rate-limiting or on long queries.
@@ -318,8 +346,10 @@ def _search_bing_news(query: str, language: str = "fi", max_results: int = 10) -
                     "Accept": "application/xml, text/xml, */*",
                 })
                 try:
-                    with urllib.request.urlopen(req2, timeout=SEARCH_TIMEOUT) as resp2:
+                    with urllib.request.urlopen(req2, timeout=_remaining_timeout(SEARCH_TIMEOUT)) as resp2:
                         xml_data = resp2.read(200_000)
+                except ResearchDeadlineExceeded:
+                    raise
                 except Exception:
                     pass  # fall through to empty parse
             if not xml_data.strip():
@@ -358,6 +388,8 @@ def _search_bing_news(query: str, language: str = "fi", max_results: int = 10) -
                 "source": source_name,
             })
 
+    except ResearchDeadlineExceeded:
+        raise
     except Exception as e:
         print(f"[research]   Bing News search failed: {e}")
 
@@ -383,7 +415,7 @@ def _search_google_news(query: str, language: str = "fi", max_results: int = 8) 
             "User-Agent": _HEADERS["User-Agent"],
             "Accept": "application/xml, text/xml, application/rss+xml",
         })
-        with urllib.request.urlopen(req, timeout=SEARCH_TIMEOUT) as resp:
+        with urllib.request.urlopen(req, timeout=_remaining_timeout(SEARCH_TIMEOUT)) as resp:
             xml_data = resp.read(200_000)
 
         root = ET.fromstring(xml_data)
@@ -410,6 +442,8 @@ def _search_google_news(query: str, language: str = "fi", max_results: int = 8) 
                 "source": source_name,
             })
 
+    except ResearchDeadlineExceeded:
+        raise
     except Exception as e:
         print(f"[research]   Google News search failed: {e}")
 
@@ -581,6 +615,7 @@ def _research_article(article: dict) -> str:
     query = _build_search_query(title, description)
     print(f"[research]   Searching: \"{query[:60]}\"")
 
+    _remaining_timeout(SEARCH_TIMEOUT)
     search_results = _search_news(query, language=language)
     print(f"[research]   Found {len(search_results)} search results")
 
@@ -600,7 +635,8 @@ def _research_article(article: dict) -> str:
         source_name = result.get("source", _get_domain(url))
         domain = _get_domain(url)
 
-        time.sleep(INTER_FETCH_DELAY)
+        time.sleep(_remaining_timeout(INTER_FETCH_DELAY))
+        _remaining_timeout(FETCH_TIMEOUT)
 
         text = fetch_article_text(url)
         word_count = len(text.split()) if text else 0
@@ -667,22 +703,21 @@ def enrich_with_research(articles: list) -> list:
     RSS_MIN_WORDS = 30
 
     def _timeout_handler(signum, frame):
-        raise TimeoutError(f"research article exceeded {ARTICLE_RESEARCH_TIMEOUT}s")
+        raise ResearchDeadlineExceeded(f"research article exceeded {ARTICLE_RESEARCH_TIMEOUT}s")
 
-    can_alarm = hasattr(signal, "SIGALRM") and ARTICLE_RESEARCH_TIMEOUT > 0
+    can_alarm = hasattr(signal, "SIGALRM") and ARTICLE_RESEARCH_TIMEOUT > 0 and threading.current_thread() is threading.main_thread()
 
     for i, article in enumerate(articles):
         title = article.get("title", "?")[:60]
         print(f"\n[research] ({i+1}/{total}) {title}", flush=True)
 
+        token = _RESEARCH_DEADLINE.set(time.monotonic() + max(0, ARTICLE_RESEARCH_TIMEOUT))
         try:
             if can_alarm:
                 previous_handler = signal.signal(signal.SIGALRM, _timeout_handler)
                 signal.alarm(ARTICLE_RESEARCH_TIMEOUT)
             research_text = _research_article(article)
-            if can_alarm:
-                signal.alarm(0)
-                signal.signal(signal.SIGALRM, previous_handler)
+            _remaining_timeout(FETCH_TIMEOUT)
 
             if research_text:
                 word_count = len(research_text.split())
@@ -714,21 +749,21 @@ def enrich_with_research(articles: list) -> list:
                 skipped += 1
 
         except TimeoutError as e:
-            if can_alarm:
-                signal.alarm(0)
-                signal.signal(signal.SIGALRM, previous_handler)
             print(f"[research]   → Timeout: {e}")
             article["research"] = ""
             article["research_source"] = "timeout"
             skipped += 1
         except Exception as e:
-            if can_alarm:
-                signal.alarm(0)
-                signal.signal(signal.SIGALRM, previous_handler)
             print(f"[research]   → Failed: {e}")
             article["research"] = ""
             article["research_source"] = "error"
             skipped += 1
+
+        finally:
+            if can_alarm:
+                signal.alarm(0)
+                signal.signal(signal.SIGALRM, previous_handler)
+            _RESEARCH_DEADLINE.reset(token)
 
         if i < total - 1:
             time.sleep(0.3)
