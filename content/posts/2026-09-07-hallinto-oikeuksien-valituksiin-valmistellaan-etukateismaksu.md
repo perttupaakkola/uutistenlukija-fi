@@ -53,7 +53,6 @@ source_attributions:
     url: "https://yrittajat.fi/uutiset/valitustehtailu-halutaan-kuriin-etukateismaksulla-valitettavasti-suomessa-esiintyy-kiusantekovalituksia-ja-sarjavalittamista"
   - name: "Oikeusministeriö"
     url: "https://valtioneuvosto.fi/-/1410853/valmistelu-aiheettomien-valituksien-ehkaisemiseksi-etenee"
-briefing: true
 draft: false
 ---
 
