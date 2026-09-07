@@ -76,6 +76,8 @@ image_alt: "An event this image does not depict"
 Fixture article text.
 ''')
         (cls.site / 'content/posts/escaping.md').write_text('---\n' + json.dumps({'title': 'A "quote" </script><script>alert(1)</script> & more', 'date': '2026-01-01', 'categories': ['Kotimaa']}) + '\n---\nFixture body.\n')
+        shutil.copy(ROOT / 'content/evasteet.md', cls.site / 'content/evasteet.md')
+        (cls.site / 'content/information-fixture.md').write_text('---\ntitle: Information fixture\nauthor: Fixture author\n---\nInformational fixture body, not a news article.\n')
         shutil.copytree(ROOT / 'content/tilaa', cls.site / 'content/tilaa')
         shutil.copytree(ROOT / 'content/uutiskirje', cls.site / 'content/uutiskirje')
         shutil.copytree(ROOT / 'content/oppaat', cls.site / 'content/oppaat')
@@ -146,6 +148,22 @@ Fixture article text.
         cta = (ROOT / 'layouts/partials/holiday-hours-reminder-cta.html').read_text()
         self.assertNotIn('<script', cta)
         self.assertNotIn('Tilaa maksuton', cta)
+
+    def test_informational_pages_do_not_inherit_news_claims(self):
+        for route in ('evasteet', 'information-fixture'):
+            with self.subTest(route=route):
+                html = self.page(route)
+                self.assertNotIn('Tämä juttu perustuu useisiin uutislähteisiin', html)
+                self.assertNotIn('class="ai-disclosure"', html)
+                self.assertNotIn('class="author-bio"', html)
+        self.assertIn('Fixture author', self.page('information-fixture'))
+        self.assertIn('Informational fixture body, not a news article.', self.page('information-fixture'))
+        self.assertEqual((self.site/'content/evasteet.md').read_bytes(), (ROOT/'content/evasteet.md').read_bytes())
+        news = self.page('posts/latest-00')
+        self.assertIn('class="ai-disclosure"', news)
+        self.assertIn('class="author-bio"', news)
+        self.assertIn('Tämä juttu perustuu useisiin uutislähteisiin', news)
+        self.assertIn('Ilmoita virheestä', news)
 
     def test_helsinki_absolute_dst_and_publication(self):
         html = self.page('time-cases')

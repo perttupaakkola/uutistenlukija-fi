@@ -1,4 +1,5 @@
 {{- $page := .page -}}
+{{- $isNewsArticle := eq $page.Section "posts" -}}
 {{- $contentClass := .contentClass | default "content" -}}
 {{- $authorBoxClass := .authorBoxClass | default "author-box" -}}
 {{- $authorImageSize := .authorImageSize | default 80 -}}
@@ -67,7 +68,7 @@
 </aside>
 {{- end }}
 
-{{- if and (eq .showSource true) (not $page.Params.source_url) (not $page.Params.source_attributions) (not $page.Params.journalist_note) }}
+{{- if and $isNewsArticle (eq .showSource true) (not $page.Params.source_url) (not $page.Params.source_attributions) (not $page.Params.journalist_note) }}
 {{- $fallbackSource := $page.Params.source_name | default $page.Params.source_domain -}}
 <div class="article-end-note">
   <p>{{ with $fallbackSource }}Tämä juttu perustuu lähteeseen {{ . }} ja muuhun toimitukselliseen taustoitukseen.{{ else }}Tämä juttu perustuu useisiin uutislähteisiin ja on koottu tiiviiksi kokonaisuudeksi.{{ end }}</p>
@@ -91,11 +92,11 @@
       {{ with $page.Params.author_title }}
       <span class="author-role">{{ . }}</span>
       {{ end }}
-      <p class="author-bio">{{ partial "author-bio.html" $page }}</p>
+      {{ if $isNewsArticle }}<p class="author-bio">{{ partial "author-bio.html" $page }}</p>{{ end }}
     </div>
   </div>
   {{ end }}
-  <p class="ai-disclosure">Artikkeli on laadittu tekoälyavusteisesti. <a href="/tietoja/">Lue toimitusperiaatteemme</a>. <a href="mailto:info@uutistenlukija.fi?subject=Korjauspyynt%C3%B6">Ilmoita virheestä</a> ja liitä mukaan jutun osoite.</p>
+  {{ if $isNewsArticle }}<p class="ai-disclosure">Artikkeli on laadittu tekoälyavusteisesti. <a href="/tietoja/">Lue toimitusperiaatteemme</a>. <a href="mailto:info@uutistenlukija.fi?subject=Korjauspyynt%C3%B6">Ilmoita virheestä</a> ja liitä mukaan jutun osoite.</p>{{ end }}
 {{- end }}
 
 {{- if eq .showBottomShare true }}
