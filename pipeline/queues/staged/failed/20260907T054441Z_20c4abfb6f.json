@@ -289,5 +289,32 @@
       }
     ],
     "source_url": "https://www.mtvuutiset.fi/artikkeli/janne-puhakan-murhasta-syytetyn-rolf-nordmon-tytar-saapuu-tanaan-hovioikeuteen/9388834"
-  }
+  },
+  "quality_gate_rejected_at": "2026-09-07T06:06:16.833549+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260907T054441Z_20c4abfb6f",
+    "category": "Kotimaa",
+    "selected_source_words": 413,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 8.0,
+    "quality_reasons": [
+      "length under target (269 words)",
+      "missing: image",
+      "source_confidence_denial_context_missing"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 269,
+    "title": "Rolf Nordmon tytär saapuu hovioikeuteen – kuultavana kolme puolustuksen todistajaa"
+  },
+  "failure": "quality_gate_rejected: length under target (269 words); missing: image; source_confidence_denial_context_missing"
 }
