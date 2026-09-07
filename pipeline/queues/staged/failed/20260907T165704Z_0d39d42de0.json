@@ -225,5 +225,36 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20244915"
-  }
+  },
+  "quality_gate_rejected_at": "2026-09-07T17:04:37.000356+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260907T165704Z_0d39d42de0",
+    "category": "Kotimaa",
+    "selected_source_words": 245,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.8,
+    "quality_total": 40,
+    "quality_normalized": 7.92,
+    "quality_reasons": [
+      "length under target (265 words)",
+      "missing: image",
+      "unsourced numbers",
+      "central unsourced number(s): 202, 74",
+      "unsourced_numbers: 202, 74"
+    ],
+    "hard_fails": [
+      "central unsourced number(s): 202, 74"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 202, 74"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_thin_source",
+    "fail_closed": true,
+    "source_backed": false,
+    "article_words": 265,
+    "title": "Yle: Noin kaksi prosenttia viljan korotetuista varmuusvarastoista on tuontiviljaa"
+  },
+  "failure": "quality_gate_rejected: length under target (265 words); missing: image; unsourced numbers; central unsourced number(s): 202, 74; unsourced_numbers: 202, 74"
 }
