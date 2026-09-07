@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-09-07T18:08:46+00:00",
+  "generated_at": "2026-09-07T18:38:15+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 12,
+    "published": 13,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-09-07T18:05:20.940570+00:00",
+    "last_published_ts": "2026-09-07T18:34:53.843697+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -44,11 +44,11 @@
       13
     ],
     [
-      "poliisin",
-      10
+      "mukaansa",
+      11
     ],
     [
-      "mukaansa",
+      "poliisin",
       10
     ],
     [
@@ -83,7 +83,7 @@
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 0,
     "publishableRemainingCycles": 0,
-    "recentPublishedPackets": 12,
+    "recentPublishedPackets": 13,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
