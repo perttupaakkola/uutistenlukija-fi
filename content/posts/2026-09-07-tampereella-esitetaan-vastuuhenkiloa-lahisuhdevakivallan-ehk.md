@@ -65,7 +65,7 @@ Tampereella on meneillään mittava säästökuuri. Kaupunginvaltuusto tavoittel
 
 Perttulan mielestä väkivallan vastainen työ ei saisi jäädä yhden henkilön harteille. Hän pitää kuitenkin tärkeänä, että joku koordinoi kokonaisuutta. Kunnissa väkivallan ja lähisuhdeväkivallan ehkäisy kuuluu hyvinvoinnin ja terveyden edistämiseen sekä turvallisuussuunnitteluun.
 
-## Poliisi kertoo lähisuhdeväkiva*** kasvusta
+## Poliisi kertoo lähisuhdeväkivallan kasvusta
 
 Ylen välittämän Aamulehden uutisen mukaan Pirkanmaalla otettiin elokuussa yhden vuorokauden aikana kiinni neljä miestä lähisuhdeväkivallasta epäiltyinä. Saman vuorokauden aikana Sisä-Suomen poliisin alueella kirjattiin kymmenkunta lähisuhdeväkivaltailmoitusta. Kiinniotot koskivat siis Pirkanmaata, ilmoitusten määrä laajempaa poliisialuetta.
 
