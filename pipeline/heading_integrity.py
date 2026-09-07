@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import re
 
-_HEADING = re.compile(r"^ {0,3}#{1,6}[ \t]+(.+)$")
+_HEADING = re.compile(r"^#{1,6}[ \t]+(.+)$")
 _FENCE = re.compile(r"^ {0,3}(`{3,}|~{3,})(.*)$")
 _WORD_STARS = re.compile(r"[^\W\d_]\*{3}(?=\s|[.,!?;:]|$)", re.UNICODE)
 
@@ -20,8 +20,13 @@ def corrupt_heading_lines(content: str) -> tuple[int, ...]:
     Requiring exactly three stars in the entire heading avoids classifying
     valid triple emphasis or nested italic/bold closers as damaged words.
     Escapes, inline code, links and HTML are deliberately outside this narrow
-    check. Fenced/indented code and nonheading thematic breaks are ignored.
+    check. Only column-zero headings are considered, avoiding list-container
+    ambiguity. Documents containing potential raw HTML are outside scope.
+    These intentional false negatives are safer than hand-parsing Markdown.
     """
+    content = str(content or "")
+    if "<" in content:
+        return ()
     suspect: list[int] = []
     fence_char = ""
     fence_size = 0

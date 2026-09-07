@@ -109,6 +109,13 @@ class HeadingIntegrityPreflightTests(unittest.TestCase):
             "```markdown\n## Esimerkki sana***\n```",
             "~~~~markdown\n## Esimerkki sana***\n~~~~",
             "    ## Esimerkki sana***",
+            "<!--\n## Väkiva*** kasvaa\n-->",
+            "<pre>\n## Väkiva*** kasvaa\n</pre>",
+            "- ```\n  ## Väkiva*** kasvaa\n  ```",
+            "1. ```\n   ## Väkiva*** kasvaa\n   ```",
+            "````\n## Väkiva*** kasvaa\n```\n## Väkiva*** kasvaa",
+            "```\n## Väkiva*** kasvaa\n~~~\n## Väkiva*** kasvaa",
+            "```\n## Väkiva*** kasvaa",
             "Tavallinen kappale\n\n***\n\n- Listan kohta",
         ]
         for content in examples:
