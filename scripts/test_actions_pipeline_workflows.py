@@ -512,6 +512,7 @@ class DeployFallbackContractTests(unittest.TestCase):
                     *) printf '%s\\n' "$TEST_REMOTE_MAIN" ;;
                   esac
                   ;;
+                "diff --quiet --exit-code "*) return 1 ;; # These fixtures model changed site inputs.
                 *) command git "$@" ;;
               esac
             }
@@ -801,6 +802,7 @@ class PagesDeployStatusContractTests(unittest.TestCase):
                 "ls-remote origin refs/heads/main")
                   printf '%s\\trefs/heads/main\\n' "$TEST_REMOTE_MAIN"
                   ;;
+                "diff --quiet --exit-code "*) return 1 ;; # These fixtures model changed site inputs.
                 *) command git "$@" ;;
               esac
             }
@@ -896,6 +898,7 @@ class StagedPublishRunwayContractTests(unittest.TestCase):
                     *) printf '%s\\n' "$TEST_REMOTE_MAIN" ;;
                   esac
                   ;;
+                "diff --quiet --exit-code "*) return 1 ;; # These fixtures model changed site inputs.
                 *) command git "$@" ;;
               esac
             }

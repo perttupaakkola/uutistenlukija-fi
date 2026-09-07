@@ -58,6 +58,9 @@ jobs:
             exit 1
           fi
 
+      - name: Validate deployment freshness guard
+        run: python3 -B -m unittest scripts.test_deploy_queue_advancement scripts.test_actions_pipeline_workflows
+
       - name: Setup Hugo
         run: |
           HUGO_VERSION="0.147.0"
@@ -129,6 +132,20 @@ jobs:
             exit 1
           fi
           if [ "$CHECKOUT_HEAD" != "$REMOTE_MAIN" ]; then
+            # Queue-only pushes intentionally do not trigger this workflow.
+            # Compare committed trees, never generated/dirty working-tree files.
+            # Keep the build SHA: status snapshots describe that build, not a
+            # later queue state. All non-queue changes still require a new build.
+            DIFF_STATUS=0
+            git diff --quiet --exit-code "$CHECKOUT_HEAD" "$REMOTE_MAIN" -- . ':(exclude)pipeline/queues/staged/**' || DIFF_STATUS=$?
+            if [ "$DIFF_STATUS" -eq 0 ]; then
+              echo "current=true" >> "$GITHUB_OUTPUT"
+              echo "::notice title=Queue-only advancement accepted::build=$CHECKOUT_HEAD current_main=$REMOTE_MAIN"
+              exit 0
+            elif [ "$DIFF_STATUS" -ne 1 ]; then
+              echo "::error title=Deployment freshness check failed::Unable to compare committed deployment inputs"
+              exit 1
+            fi
             if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
               echo "::error title=Stale manual deployment rejected::checkout=$CHECKOUT_HEAD current_main=$REMOTE_MAIN"
               exit 1
