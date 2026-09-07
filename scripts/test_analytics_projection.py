@@ -29,6 +29,14 @@ class ProjectionTests(unittest.TestCase):
         fn(data)
         path.write_text(json.dumps(data))
 
+    def rebind_fixture_marker(self):
+        # Simulate producer-captured bytes with corrupt cached projections. This
+        # deliberately bypasses the digest gate to exercise semantic revalidation.
+        marker = json.loads((self.data/'collector-status.json').read_text())
+        marker['source_sha256'] = {name: p.canonical_source_hash(json.loads((self.data/name).read_text()))
+                                  for name in ('daily-report.json', 'search-console-data.json')}
+        (self.data/'collector-status.json').write_text(json.dumps(marker))
+
     def test_exact_private_sources_and_direct_goal_not_static_mtime(self):
         legacy = self.root / 'static/api'
         legacy.mkdir(parents=True)
@@ -49,6 +57,7 @@ class ProjectionTests(unittest.TestCase):
 
     def test_nested_reader_and_gsc_totals_recomputed_not_trusted(self):
         self.alter('daily-report.json', lambda d: d.update(reader_retention={'goal_met': True}, search_console={'total_clicks': 999999}))
+        self.rebind_fixture_marker()
         outputs, summary = p.team_snapshot(self.root, NOW)
         self.assertEqual(summary['freshness_status'], 'fresh')
         self.assertFalse(outputs['daily-report.json']['reader_retention']['goal_met'])
@@ -150,6 +159,7 @@ class ProjectionTests(unittest.TestCase):
     def test_allowlist_excludes_raw_queries_arbitrary_extras_and_realtime(self):
         self.alter('daily-report.json', lambda d: d.update(arbitrary='not-for-export', realtime={'active_users': 999999}))
         self.alter('search-console-data.json', lambda d: d['property_totals'].update(extra='not-for-export', ctr_fraction=0.99))
+        self.rebind_fixture_marker()
         outputs, summary = p.team_snapshot(self.root, NOW)
         self.assertEqual(summary['freshness_status'], 'fresh')
         text = json.dumps(outputs)
@@ -161,6 +171,7 @@ class ProjectionTests(unittest.TestCase):
 
     def test_invalid_returning_does_not_invent_retention_or_hide_valid_goal(self):
         self.alter('daily-report.json', lambda d: d.update(ga4_returning_source={}))
+        self.rebind_fixture_marker()
         outputs, summary = p.team_snapshot(self.root, NOW)
         self.assertEqual(summary['freshness_status'], 'fresh')
         reader = outputs['reader-retention-report.json']
@@ -215,6 +226,60 @@ class ProjectionTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'symlink_parent_refused'):
             p.atomic_write(link/'do-not-write.json', b'{}')
         self.assertFalse((self.data/'do-not-write.json').exists())
+
+    def test_rejects_other_fresh_gsc_generation(self):
+        fake = FakeProvider()
+        old = c.collect(NOW-timedelta(hours=1), fake.token, fake.post)['search-console-data.json']
+        (self.data/'search-console-data.json').write_text(json.dumps(old))
+        outputs, summary = p.team_snapshot(self.root, NOW)
+        self.assertEqual(summary['freshness_status'], 'blocked')
+        self.assertIsNone(outputs['reader-retention-report.json']['goal'])
+
+    def test_reused_gsc_matches_its_recorded_source_time(self):
+        fake = FakeProvider()
+        old = c.collect(NOW-timedelta(hours=1), fake.token, fake.post)['search-console-data.json']
+        source = self.root/'reused-gsc.json'
+        source.write_text(json.dumps(old))
+        code, evidence = c.execute(self.data, now=NOW, token_fn=fake.token, transport=fake.post, gsc_input=source)
+        self.assertEqual(code, 0)
+        outputs, summary = p.team_snapshot(self.root, NOW)
+        self.assertEqual(summary['freshness_status'], 'fresh')
+        self.assertEqual(summary['search_console_generated_at'], evidence['artifacts']['search_console']['evidence_at'])
+        self.assertNotEqual(summary['collector_checked_at'], summary['search_console_generated_at'])
+
+    def test_same_timestamp_content_replacement_is_rejected(self):
+        self.alter('search-console-data.json', lambda d: d['property_totals'].update(clicks=77))
+        outputs, summary = p.team_snapshot(self.root, NOW)
+        self.assertEqual(summary['freshness_status'], 'blocked')
+        self.assertNotIn('search_console', outputs['daily-report.json'])
+
+    def test_strict_invalid_header_replaces_previous_success_without_crash(self):
+        destination = self.root/'export'
+        p.export_snapshot(*p.team_snapshot(self.root, NOW), [destination])
+        def mutate(data):
+            data['ga4_source']['request']['metrics'][0]['name'] = 1
+            data['ga4_source']['response']['metricHeaders'][0]['name'] = 1
+        self.alter('daily-report.json', mutate)
+        self.rebind_fixture_marker()
+        outputs, summary = p.team_snapshot(self.root, NOW)
+        self.assertEqual(summary['freshness_status'], 'blocked')
+        p.export_snapshot(outputs, summary, [destination])
+        self.assertEqual(json.loads((destination/'latest.json').read_text())['freshness_status'], 'blocked')
+        self.assertIsNone(json.loads((destination/'reader-retention-report.json').read_text())['goal'])
+
+    def test_nonfinite_extra_records_failed_attempt_and_preserves_last_good(self):
+        fake = FakeProvider()
+        original = (self.data/'daily-report.json').read_bytes()
+        def post(endpoint, request, token):
+            status, response = fake.post(endpoint, request, token)
+            if 'analyticsdata' in endpoint:
+                response['unrecognised_extra'] = float('nan')
+            return status, response
+        code, evidence = c.execute(self.data, now=NOW, token_fn=fake.token, transport=post)
+        self.assertEqual(code, 1)
+        self.assertEqual(evidence['reason'], 'invalid_source_serialization')
+        self.assertEqual((self.data/'daily-report.json').read_bytes(), original)
+        self.assertEqual(p.team_snapshot(self.root, NOW)[1]['freshness_status'], 'blocked')
 
     def test_interrupted_export_does_not_commit_new_manifest(self):
         outputs, summary = p.team_snapshot(self.root, NOW)

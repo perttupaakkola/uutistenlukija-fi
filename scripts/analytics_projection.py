@@ -16,7 +16,7 @@ from pathlib import Path
 import tempfile
 from datetime import datetime, timezone
 
-from analytics_contract import validate_daily_report, validate_source, source_time as stamp, ctr_fraction, ga4_rows
+from analytics_contract import validate_daily_report, validate_source, source_time as stamp, ctr_fraction, ga4_rows, canonical_source_hash
 from collect_analytics import run_report, CollectionError
 from reader_retention_report import build_report
 from ctr_gap_report import analyze_gsc_data
@@ -36,7 +36,7 @@ def read_data(path):
             return {}
         value = json.loads(raw)
         return value if isinstance(value, dict) else {}
-    except (OSError, ValueError, UnicodeError):
+    except (OSError, ValueError, UnicodeError, RecursionError):
         return {}
 
 
@@ -115,8 +115,12 @@ def team_snapshot(project, now):
                       and attempt.get('source_command') == 'pipeline/check-analytics.sh'
                       and 0 <= (now - stamp(attempt['checked_at'])).total_seconds() <= 30 * 3600
                       and stamp(attempt['checked_at']) >= stamp(ga_state['evidence_at'])
-                      and stamp(attempt['checked_at']) >= stamp(sc_state['evidence_at']))
-    except (ValueError, KeyError, TypeError):
+                      and stamp(attempt['checked_at']) >= stamp(sc_state['evidence_at'])
+                      and stamp(sc_state['evidence_at']) == stamp(attempt['artifacts']['search_console']['evidence_at'])
+                      and all(isinstance(attempt['source_sha256'][name], str)
+                              and attempt['source_sha256'][name] == canonical_source_hash(value)
+                              for name, value in (('daily-report.json', daily), ('search-console-data.json', gsc))))
+    except (ValueError, KeyError, TypeError, AttributeError):
         attempt_ok = False
     if not strict_ok:
         ga_state.update(status='invalid', fresh=False)
@@ -129,7 +133,11 @@ def team_snapshot(project, now):
                  'checked_at': now.isoformat(), 'collector_checked_at': attempt_time,
                  'source_command': 'private_collector_projection', 'reason': reason,
                  'artifacts': {'daily_report': safe_state(ga_state), 'search_console': safe_state(sc_state)}}
-    reader = build_report(daily.get('ga4_source'), returning, None, now)
+    try:
+        reader = build_report(daily.get('ga4_source') if good else None, returning if good else None, None, now)
+    except (ValueError, TypeError, KeyError, AttributeError, OverflowError):
+        reader = build_report(None, None, None, now)
+        good = False
     reader['source'] = safe_state(reader['source'])
     if reader.get('query_window'):
         reader['query_window'] = {key: reader['query_window'][key] for key in ('startDate', 'endDate')}
@@ -141,7 +149,8 @@ def team_snapshot(project, now):
                                               'engagedSessions', 'engagementRate', 'bounceRate')}
     if reader['status'] != 'fresh':
         good = False
-        freshness.update(status='blocked', fresh=False, reason='invalid_direct_goal_source')
+        failure_reason = 'invalid_direct_goal_source' if freshness['fresh'] else freshness['reason']
+        freshness.update(status='blocked', fresh=False, reason=failure_reason)
     if not good:
         reader = dict(unavailable(now, 'source_validation_failed'), goal=None,
                       cohort_retention={'status': 'unavailable'},
@@ -199,7 +208,8 @@ def team_snapshot(project, now):
         'ctr_gap_status': 'fresh' if good else 'blocked',
         'canonical_goal_report': 'reader-retention-report.json',
         'search_console_rows': gsc.get('row_count') if good else None,
-        'scope': 'private_validated_collector_snapshot', 'artifacts': {}}
+        'scope': 'private_validated_collector_snapshot', 'artifacts': {},
+        'source_sha256': {name: attempt['source_sha256'][name] for name in ('daily-report.json', 'search-console-data.json')} if good else {}}
     return outputs, summary
 
 

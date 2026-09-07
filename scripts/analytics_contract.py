@@ -46,6 +46,20 @@ def source_time(value):
     return result.astimezone(timezone.utc)
 
 
+def canonical_source_hash(data):
+    """SHA-256 of canonical JSON content, independent of file formatting."""
+    import hashlib
+    import json
+    if not isinstance(data, dict) or not data:
+        return None
+    try:
+        raw = json.dumps(data, sort_keys=True, separators=(",", ":"),
+                         ensure_ascii=False, allow_nan=False).encode()
+    except (ValueError, TypeError, RecursionError):
+        return None
+    return hashlib.sha256(raw).hexdigest()
+
+
 def validate_source(data, kind, now=None, max_age_hours=30, expected_days=None):
     """Return explicit state. File modification time never establishes freshness."""
     now = now or datetime.now(timezone.utc)

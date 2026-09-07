@@ -254,7 +254,11 @@ def freshness(artifacts, now, output_dir, status, reason):
             state.update(property_id=GA4_PROPERTY, site=GSC_PROPERTY)
         summaries[key] = state
     summaries["oauth_blocker"] = {"blocked": reason == "auth_failed", "services": []}
+    from analytics_contract import canonical_source_hash
+    digests = {name: canonical_source_hash(artifacts.get(name))
+               for name in ("daily-report.json", "search-console-data.json")} if status == "fresh" else {}
     return {"status": status, "checked_at": now.isoformat(), "max_age_hours": 30,
+            "source_sha256": digests,
             "source_command": "pipeline/check-analytics.sh", "reason": reason,
             "artifacts": summaries, "last_good_preserved": status != "fresh"}
 
@@ -271,6 +275,9 @@ def execute(output_dir, *, no_write=False, gsc_input=None, now=None, token_fn=ge
     except Exception:
         status, reason = "blocked", "collection_failed"
     evidence = freshness(artifacts, now, output_dir, status, reason)
+    if status == "fresh" and any(value is None for value in evidence["source_sha256"].values()):
+        artifacts, status, reason = {}, "blocked", "invalid_source_serialization"
+        evidence = freshness(artifacts, now, output_dir, status, reason)
     if not no_write:
         try:
             # Collect and validate EVERYTHING before touching last-good reports.
