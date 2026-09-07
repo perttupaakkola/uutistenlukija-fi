@@ -8,6 +8,7 @@ import re
 from typing import Any, Iterable
 
 try:
+    from .heading_integrity import corrupt_heading_lines
     from .freshness import freshness_reasons
     from .description_projection import project_public_description
     from .publisher import CANONICAL_CATEGORIES, effective_category
@@ -24,6 +25,7 @@ try:
         word_count,
     )
 except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
+    from heading_integrity import corrupt_heading_lines
     from freshness import freshness_reasons
     from description_projection import project_public_description
     from publisher import CANONICAL_CATEGORIES, effective_category
@@ -260,6 +262,8 @@ def evaluate_publish_preflight(record: dict[str, Any], *, now=None) -> PublishPr
 
     hard_reasons: list[str] = list(freshness_reasons(record, now=now))
     review_reasons: list[str] = []
+    if corrupt_heading_lines(article.get("content", "")):
+        hard_reasons.append("heading_word_corruption")
     if any(not category for category in categories):
         hard_reasons.append("category_unresolved")
     elif len(set(categories)) != 1:

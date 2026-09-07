@@ -25,6 +25,7 @@ from typing import Any
 from urllib.parse import urlsplit
 
 try:
+    from .heading_integrity import corrupt_heading_lines
     from .category_guard import category_text, protect_business_category, protect_tiede_category
     from .quarantine import save_writer_quarantine
     from .source_attribution import (
@@ -34,6 +35,7 @@ try:
     )
     from .story_packet import build_story_packet, ensure_queue_dirs, save_packet, selected_source_provenance_error
 except ImportError:  # pragma: no cover - direct script/test execution from pipeline cwd
+    from heading_integrity import corrupt_heading_lines
     from category_guard import category_text, protect_business_category, protect_tiede_category
     from quarantine import save_writer_quarantine
     from source_attribution import (
@@ -356,6 +358,8 @@ def _basic_payload_issues(payload: dict, packet: dict | None = None) -> list[str
     paragraphs = [p.strip() for p in content.split("\n\n") if p.strip()]
     if paragraphs and len(paragraphs[0].split()) < MIN_LEAD_WORDS:
         issues.append(f"lead paragraph too short: {len(paragraphs[0].split())} words")
+    if corrupt_heading_lines(content):
+        issues.append("heading_word_corruption: orphan triple-star word suffix; rewrite from source, do not guess missing letters")
     structure = _content_structure_counts(content)
     if structure["prose_paragraphs"] < MIN_PROSE_PARAGRAPHS:
         issues.append(

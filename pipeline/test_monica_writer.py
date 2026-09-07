@@ -284,6 +284,24 @@ def _good_payload() -> str:
 
 
 class MonicaWriterTests(unittest.TestCase):
+    def test_orphan_heading_word_stars_fail_writer_validation(self):
+        payload = _editorial_payload()
+        payload["content"] = payload["content"].replace(
+            EDITORIAL_H2_HEADINGS[0], "## Poliisi kertoo lähisuhdeväkiva*** kasvusta"
+        )
+        before = json.dumps(payload, ensure_ascii=False, sort_keys=True)
+        issues = _basic_payload_issues(payload)
+        self.assertTrue(any(issue.startswith("heading_word_corruption:") for issue in issues))
+        self.assertEqual(json.dumps(payload, ensure_ascii=False, sort_keys=True), before)
+
+    def test_balanced_heading_emphasis_passes_writer_validation(self):
+        for heading in ("## ***Korostettu otsikko***", "## **Ulompi *sisempi***"):
+            payload = _editorial_payload()
+            payload["content"] = payload["content"].replace(EDITORIAL_H2_HEADINGS[0], heading)
+            with self.subTest(heading=heading):
+                self.assertFalse(any(issue.startswith("heading_word_corruption:")
+                                     for issue in _basic_payload_issues(payload)))
+
     def setUp(self):
         self.tmpdir = tempfile.TemporaryDirectory()
         os.environ["MONICA_QUEUE_DIR"] = self.tmpdir.name

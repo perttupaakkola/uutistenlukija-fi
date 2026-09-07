@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+from argparse import Namespace
 from datetime import datetime, timezone
 from copy import deepcopy
 import hashlib
@@ -59,6 +60,69 @@ def _record(
             "source_url": "https://example.test/story",
         },
     }
+
+
+class HeadingIntegrityPreflightTests(unittest.TestCase):
+    def test_observed_corrupt_heading_is_rejected_without_mutation(self):
+        record = _record(content_prefix="## Poliisi kertoo lähisuhdeväkiva*** kasvusta\n\n")
+        before = deepcopy(record)
+        result = evaluate_publish_preflight(record)
+        self.assertEqual(result.action, "reject")
+        self.assertIn("heading_word_corruption", result.reasons)
+        self.assertEqual(record, before)
+
+    def test_corrupt_heading_moves_to_failed_before_asset_work(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "staged"
+            (root / "outbox").mkdir(parents=True)
+            (root / "failed").mkdir()
+            path = root / "outbox" / "corrupt-heading.json"
+            record = _record(content_prefix="## Poliisi kertoo lähisuhdeväkiva*** kasvusta\n\n")
+            path.write_text(json.dumps(record), encoding="utf-8")
+            args = Namespace(max_articles=1, dry_run=False, dedup_window=72,
+                                   git_push=True, outcome_json=str(Path(tmp) / "outcome.json"))
+            with patch.object(staged_publish, "STAGED_ROOT", root), \
+                 patch.object(staged_publish, "run_quality_gate") as quality, \
+                 patch.object(staged_publish, "enrich_images_for_articles") as images, \
+                 patch.object(staged_publish, "publish_articles") as publish, \
+                 patch.object(staged_publish, "persist_queue_transitions", return_value=0):
+                self.assertEqual(staged_publish.cmd_publish(args), 0)
+            quality.assert_not_called()
+            images.assert_not_called()
+            publish.assert_not_called()
+            self.assertFalse(path.exists())
+            rejected = json.loads((root / "failed" / path.name).read_text())
+            self.assertEqual(rejected["publish_preflight_feedback"]["reasons"],
+                             ["heading_word_corruption"])
+            self.assertEqual(rejected["article"], record["article"])
+
+    def test_valid_markdown_and_literal_examples_are_not_rejected(self):
+        examples = [
+            "## Poliisi kertoo lähisuhdeväkivallan kasvusta",
+            "## **Lihavoitu otsikko**",
+            "## *Kursivoitu otsikko*",
+            "## ***Korostettu otsikko***",
+            "## **Ulompi *sisempi***",
+            "## *Ulompi **sisempi***",
+            "## Esimerkki `sana***`",
+            r"## Esimerkki sana\*\*\*",
+            "```markdown\n## Esimerkki sana***\n```",
+            "~~~~markdown\n## Esimerkki sana***\n~~~~",
+            "    ## Esimerkki sana***",
+            "Tavallinen kappale\n\n***\n\n- Listan kohta",
+        ]
+        for content in examples:
+            with self.subTest(content=content):
+                result = evaluate_publish_preflight(_record(content_prefix=content + "\n\n"))
+                self.assertEqual(result.action, "publish")
+                self.assertNotIn("heading_word_corruption", result.reasons)
+
+    def test_corruption_after_closed_code_fence_is_still_rejected(self):
+        for fence in ("```", "~~~~"):
+            content = f"{fence}\nesimerkki\n{fence}\n\n## Väkiva*** kasvaa"
+            with self.subTest(fence=fence):
+                result = evaluate_publish_preflight(_record(content_prefix=content + "\n\n"))
+                self.assertIn("heading_word_corruption", result.reasons)
 
 
 class PublishPreflightTests(unittest.TestCase):
