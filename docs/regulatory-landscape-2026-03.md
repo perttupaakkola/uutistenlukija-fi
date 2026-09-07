@@ -1,5 +1,7 @@
 # Finnish Media Regulatory Landscape — uutistenlukija.fi (2026-03)
 
+> **Audit qualification, 2026-09-07:** Historical research, not legal clearance or a current platform checklist. Source-based AI rewriting is not automatically independent reporting or legally permissible reuse. Google News automatically considers eligible sites; Publisher Center application instructions below are obsolete ([official Google guidance](https://support.google.com/news/publisher-center/answer/15898024?hl=en)). Apple News availability does not establish a Finnish distribution channel. Other legal and platform claims still require their own current evidence.
+
 **Last updated:** 2026-03-22
 **Purpose:** Practical regulatory overview for launching and operating uutistenlukija.fi as a Finnish online newspaper (verkkolehti) producing original AI-written journalism.
 

@@ -1,6 +1,8 @@
 # User Personas — Uutistenlukija.fi
 
-**Author:** Monica | **Date:** 2026-03-22 | **Status:** Complete
+> **Evidence status, 2026-09-07 audit:** These are illustrative, unvalidated personas; the audit found no documented Uutistenlukija reader interviews or site-user sample supporting them. It also found no source map substantiating the precise income, session-behaviour or conversion assumptions. References to established media do not validate those assumptions for this site. This document does not establish a target niche or a business case.
+
+**Author:** Monica | **Date:** 2026-03-22 | **Status:** Historical hypotheses; validation outstanding
 **Sources:** Reuters Institute 2024-2025, Sanoma/Alma media insights
 
 ---

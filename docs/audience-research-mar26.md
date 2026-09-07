@@ -1,5 +1,7 @@
 # Audience Research — March 2026 Update (Supplement)
 
+> **Evidence status, 2026-09-07 audit:** Historical desk-research hypotheses, not demonstrated demand for Uutistenlukija. Market statistics, inferred gaps and the site's own reader behaviour are different evidence classes. The audit did not establish reader-cohort validation for the segment or format recommendations below. No narrow audience or business case has been selected by the owner.
+
 **Deliverable #43-alt** | Monica | 2026-03-25
 **Note:** Supplements deliverables #13 (user-personas), #14 (audience-growth-playbook), #38 (finnish-media-landscape). Unassigned — Monica self-started this instead of assigned Ghost theme spec task.
 

@@ -1,13 +1,13 @@
 # Finnish News Publishing — Legal/Copyright Brief
 **Date:** 2026-03-21 (päivitetty 2026-03-23)
 **Author:** Monica (research agent)
-**Status:** Final — päivitetty vastaamaan nykyistä sisältömallia (alkuperäinen AI-journalismi)
+**Status:** Historical research; not legal clearance. Qualified by the 2026-09-07 audit.
 
 ## Executive Summary
 
-**Bottom line:** uutistenlukija.fi toimii **verkkolehtenä, joka tuottaa alkuperäistä AI-avusteista journalismia** useiden lähteiden pohjalta. Emme ole uutisaggregaattori — emme kopioi tai välitä muiden artikkeleja.
+**Audit qualification, 2026-09-07:** The audit found source-based automated rewriting and did not establish independent reporting for the sampled articles. Calling the output “original AI journalism” does not establish originality, reuse rights or freedom from copyright risk. The historical analysis below is not a source licence or legal clearance, and its conclusions must not be inferred from the product label alone.
 
-Koska kirjoitamme alkuperäistä sisältöä, EU DSM Directive Art. 15 (press publishers' right) ei ole suoraan sovellettavissa samalla tavalla kuin aggregaattoreille. Silti toimituksellisena standardina:
+Historiallinen, auditissa osoittamatta jäänyt oletus oli, että sisällön kutsuminen alkuperäiseksi muuttaisi EU DSM -direktiivin 15 artiklan soveltumista. Tätä ei ole vahvistettu oikeudelliseksi johtopäätökseksi. Seuraavat toimitukselliset käytännöt eivät itsessään ratkaise käyttöoikeuksia:
 
 - **Alkuperäiset artikkelit useiden lähteiden pohjalta** ✅
 - **Ei sanatarkkaa kopiointia lähdemateriaaleista** ✅

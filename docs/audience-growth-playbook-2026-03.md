@@ -1,6 +1,8 @@
 # Audience Growth Playbook — Uutistenlukija.fi
 
-**Author:** Monica | **Date:** 2026-03-22 | **Status:** Complete
+> **Evidence status, 2026-09-07 audit:** Historical growth hypotheses, not a measured forecast for this site. Incumbent-media traffic shares and precise acquisition/conversion expectations have not been validated for Uutistenlukija. Newsletter delivery is unverified and new signups are paused; it is not an established acquisition channel. Growth claims require the actual source/query window and observed outcomes, rather than these projections.
+
+**Author:** Monica | **Date:** 2026-03-22 | **Status:** Historical hypotheses; validation outstanding
 
 ---
 
