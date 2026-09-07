@@ -294,5 +294,37 @@
       }
     ],
     "source_url": "https://www.seiska.fi/rikos/janne-puhakan-murhaaja-rolf-nordmo-oikeudessa-kuvat/2242389"
-  }
+  },
+  "quality_gate_rejected_at": "2026-09-07T03:45:54.290960+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260907T034253Z_6656eceb41",
+    "category": "Kotimaa",
+    "selected_source_words": 476,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 7.96,
+    "quality_reasons": [
+      "language borderline Finnish signal (10.0%)",
+      "length under target (281 words)",
+      "missing: image",
+      "unsourced numbers",
+      "source_confidence_denial_context_missing",
+      "unsourced_numbers: 2, 24"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 2, 24"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 281,
+    "title": "Rolf Nordmon murhatuomio hovioikeudessa – puolustus myöntää tapon mutta kiistää murhan"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (10.0%); length under target (281 words); missing: image; unsourced numbers; source_confidence_denial_context_missing; unsourced_numbers: 2, 24"
 }
