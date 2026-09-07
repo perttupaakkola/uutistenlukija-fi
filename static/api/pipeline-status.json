@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-09-07T14:21:31+00:00",
+  "generated_at": "2026-09-07T19:08:34+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 9,
+    "published": 14,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-09-07T14:18:22.992040+00:00",
+    "last_published_ts": "2026-09-07T19:04:58.555367+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -41,23 +41,23 @@
   "trending": [
     [
       "kertoo",
-      10
+      15
     ],
     [
       "mukaansa",
-      9
+      11
     ],
     [
       "arvioi",
-      8
+      10
     ],
     [
-      "kaupunki",
-      8
+      "poliisin",
+      10
     ],
     [
-      "esiin",
-      8
+      "eivät",
+      9
     ]
   ],
   "stagedQueueRunway": {
@@ -83,7 +83,7 @@
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 0,
     "publishableRemainingCycles": 0,
-    "recentPublishedPackets": 9,
+    "recentPublishedPackets": 14,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
