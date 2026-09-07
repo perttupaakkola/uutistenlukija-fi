@@ -6,13 +6,13 @@
   'use strict';
 
   // Page context — set by Hugo at build time
-  var _isPage = {{ if $page.IsPage }}true{{ else }}false{{ end }};
-  var _articleTitle = {{ if $page.IsPage }}{{ $page.Title | jsonify }}{{ else }}""{{ end }};
-  var _articleCategory = {{ if $page.IsPage }}{{ with $page.Params.categories }}{{ index . 0 | jsonify }}{{ else }}{{ with $page.Params.category }}{{ . | jsonify }}{{ else }}"uncategorized"{{ end }}{{ end }}{{ else }}""{{ end }};
-  var _articleSlug = {{ if $page.IsPage }}{{ with $page.File }}{{ .BaseFileName | jsonify }}{{ else }}""{{ end }}{{ else }}""{{ end }};
+  var _isPage = {{ if and $page.IsPage (eq $page.Section "posts") }}true{{ else }}false{{ end }};
+  var _articleTitle = {{ if $page.IsPage }}{{ $page.Title }}{{ else }}""{{ end }};
+  var _articleCategory = {{ if $page.IsPage }}{{ with $page.Params.categories }}{{ index . 0 }}{{ else }}{{ with $page.Params.category }}{{ . }}{{ else }}"uncategorized"{{ end }}{{ end }}{{ else }}""{{ end }};
+  var _articleSlug = {{ if $page.IsPage }}{{ with $page.File }}{{ .BaseFileName }}{{ else }}""{{ end }}{{ else }}""{{ end }};
 
   // cookie-banner.html applies these preferences, including revocation.
-  var _gaId = {{ . | jsonify }};
+  var _gaId = {{ . }};
   function analyticsAllowed() {
     return !!(window.__UL_AD_CONSENT__ && window.__UL_AD_CONSENT__.analytics === true &&
       window['ga-disable-' + _gaId] !== true && typeof window.gtag === 'function');
@@ -31,7 +31,7 @@
   // pre-consent observer, interaction queue or dwell history is retained.
   if (_isPage && 'IntersectionObserver' in window) {
     (function () {
-      var body = document.querySelector('.article-body');
+      var body = document.querySelector('[data-article-body]');
       if (!body) return;
       var observer = null, markers = [], visible = false, reached75 = false;
       var dwell = 0, last = null, depths = Object.create(null), readFired = false;

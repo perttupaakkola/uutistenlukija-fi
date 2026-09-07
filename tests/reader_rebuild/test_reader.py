@@ -52,6 +52,8 @@ title = "Uutistenlukija"
 languageCode = "fi"
 timeZone = "UTC"
 disableKinds = ["RSS", "sitemap", "robotsTXT"]
+[params]
+ga4_id = "G-FIXTURE"
 [markup.goldmark.renderer]
 unsafe = true
 [taxonomies]
@@ -73,6 +75,8 @@ image_alt: "An event this image does not depict"
 ---
 Fixture article text.
 ''')
+        (cls.site / 'content/posts/escaping.md').write_text('---\n' + json.dumps({'title': 'A "quote" </script><script>alert(1)</script> & more', 'date': '2026-01-01', 'categories': ['Kotimaa']}) + '\n---\nFixture body.\n')
+        shutil.copytree(ROOT / 'content/tilaa', cls.site / 'content/tilaa')
         shutil.copytree(ROOT / 'content/uutiskirje', cls.site / 'content/uutiskirje')
         shutil.copytree(ROOT / 'content/oppaat', cls.site / 'content/oppaat')
         # Exercise actual shared partials across DST and published/update distinction.
@@ -118,6 +122,30 @@ Fixture article text.
         self.assertNotIn('/api/subscribe', main)
         self.assertNotIn('ei ole vielä artikkeleita', main)
         self.assertNotIn('Kiitos tilauksesta', main)
+
+    def test_real_rendered_tracking_contract(self):
+        page = self.output / 'posts' / ARTICLES[0] / 'index.html'
+        result = subprocess.run(['node', str(ROOT / 'scripts/test_event_tracking_consent.js'), str(page)], capture_output=True, text=True, timeout=15)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        escaped = self.output / 'posts/escaping/index.html'
+        raw = escaped.read_text()
+        script = next(s for s in re.findall(r'<script[^>]*>(.*?)</script>', raw, re.S) if 'visible_dwell_v2' in s)
+        title = json.loads(re.search(r'var _articleTitle = (.*);', script).group(1))
+        self.assertEqual(title, 'A "quote" </script><script>alert(1)</script> & more')
+        self.assertNotIn('<script>alert(1)</script>', raw)
+        result = subprocess.run(['node', str(ROOT / 'scripts/test_event_tracking_consent.js'), str(escaped)], capture_output=True, text=True, timeout=15)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_holiday_landing_has_no_unverified_promise(self):
+        html = self.page('tilaa/pyhapaivien-kaupat-auki')
+        main = html.split('<main', 1)[1].split('</main>', 1)[0]
+        self.assertIn('lähetysaikataulua ei ole vahvistettu', main)
+        self.assertNotIn('<form', main)
+        self.assertNotIn('holiday_hours_signup_view', main)
+        self.assertNotIn('Tilaa maksuton', html)
+        cta = (ROOT / 'layouts/partials/holiday-hours-reminder-cta.html').read_text()
+        self.assertNotIn('<script', cta)
+        self.assertNotIn('Tilaa maksuton', cta)
 
     def test_helsinki_absolute_dst_and_publication(self):
         html = self.page('time-cases')

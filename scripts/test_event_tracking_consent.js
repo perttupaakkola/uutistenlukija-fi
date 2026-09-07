@@ -4,11 +4,19 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 const sourcePath = path.join(__dirname, '../layouts/partials/event-tracking.html');
-let source = fs.readFileSync(sourcePath, 'utf8').split('<script>')[1].split('</script>')[0];
-for (const [name, value] of Object.entries({_isPage:'true', _articleTitle:'"Fixture"', _articleCategory:'"uutiset"', _articleSlug:'"fixture"', _gaId:'"G-FIXTURE"'})) {
+const rendered = process.argv[2] ? fs.readFileSync(process.argv[2], 'utf8') : null;
+let source = rendered ? [...rendered.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)].map(m => m[1]).find(s => s.includes('visible_dwell_v2')) : fs.readFileSync(sourcePath, 'utf8').split('<script>')[1].split('</script>')[0];
+assert(source, 'Rendered page includes the real tracking script');
+if (!rendered) for (const [name, value] of Object.entries({_isPage:'true', _articleTitle:'"Fixture"', _articleCategory:'"uutiset"', _articleSlug:'"fixture"', _gaId:'"G-FIXTURE"'})) {
   source = source.replace(new RegExp('  var ' + name + ' = .*'), '  var ' + name + ' = ' + value + ';');
 }
 assert(!source.includes('{{'), 'All Hugo expressions must be rendered in fixture');
+if (rendered) {
+  const contextValue = name => JSON.parse(source.match(new RegExp('var ' + name + ' = (.*);'))[1]);
+  assert.equal(contextValue('_gaId'), 'G-FIXTURE', 'Hugo must not double-encode the GA disable key');
+  assert(!contextValue('_articleSlug').startsWith('\"'), 'Slug must not contain JSON wrapper quotes');
+  assert(!contextValue('_articleCategory').startsWith('\"'), 'Category must not contain JSON wrapper quotes');
+}
 function browser(consented = false, viewTarget = null) {
   const events = [], observers = [], timers = [], listeners = {};
   let now = 0;
@@ -24,7 +32,7 @@ function browser(consented = false, viewTarget = null) {
     show(show = true) { this.callback(this.targets.map(target => ({target, isIntersecting: show, intersectionRatio: show ? 1 : 0}))); }
   }
   const document = {readyState: 'complete', visibilityState: 'visible',
-    querySelector: selector => selector === '.article-body' ? body : selector === '[data-monetization-view]' ? viewTarget : null,
+    querySelector: selector => selector === '[data-article-body]' && (!rendered || /<div[^>]*\sdata-article-body(?:[\s=>])/.test(rendered)) ? body : selector === '[data-monetization-view]' ? viewTarget : null,
     addEventListener: (name, callback) => (listeners[name] ||= []).push(callback),
     createElement: () => ({style: {}, attrs: {}, setAttribute(k,v) {this.attrs[k] = v;}, getAttribute(k) {return this.attrs[k];}, remove() {this.removed = true;}})};
   const window = {IntersectionObserver: Observer, getComputedStyle: () => ({position:'static'}),
@@ -35,7 +43,7 @@ function browser(consented = false, viewTarget = null) {
   vm.runInNewContext(source, {localStorage, window, document, IntersectionObserver: Observer, performance: {now: () => now}, URL}, {filename: sourcePath});
   return {events, observers, window, document, storageCalls,
     signalClick(el) { (listeners.click || []).forEach(fn => fn({target: {closest: selector =>
-      selector === "[data-monetization-signal]" || selector === "[data-track]" ? el : null}})); },
+      (selector === "[data-monetization-signal]" && el.dataset.monetizationSignal) || (selector === "[data-track]" && el.dataset.track) ? el : null}})); },
     tick(seconds) { for (let i=0; i<seconds*2; i++) {now += 500; timers.forEach(fn => fn());} },
     consent(value) {window.__UL_AD_CONSENT__.analytics = value; window['ga-disable-G-FIXTURE'] = !value;},
     visibility(value) {document.visibilityState = value; (listeners.visibilitychange || []).forEach(fn => fn());},
@@ -79,7 +87,6 @@ console.log('PASS: delayed/prior consent, no replay, dwell, visibility, revoke/r
 const holidayMarkup = fs.readFileSync(path.join(__dirname, '../layouts/partials/holiday-hours-reminder-cta.html'), 'utf8');
 const holiday = {dataset: {
   track: holidayMarkup.match(/data-track="([^"]+)"/)[1],
-  monetizationSignal: holidayMarkup.match(/data-monetization-signal="([^"]+)"/)[1],
   placement: holidayMarkup.match(/\$placement := "([^"]+)"/)[1]
 }, href:'https://fixture.invalid/tilaa/pyhapaivien-kaupat-auki/', textContent:'Tilaa muistutus'};
 const signal = browser();
@@ -89,24 +96,23 @@ assert.equal(signal.events.length, 0);
 signal.consent(true); signal.tick(1);
 assert.equal(signal.events.length, 0, 'No replay of denied signal');
 signal.signalClick(holiday);
-assert.deepEqual(signal.events.map(e => e[1]), ['holiday_hours_cta_click', 'monetization_signal']);
-assert.equal(signal.events[1][2].signal_type, 'holiday_hours_signup_intent');
-assert.equal(signal.events[1][2].placement, 'paasiaisopas-kaupat-auki-article');
+assert.deepEqual(signal.events.map(e => e[1]), ['holiday_hours_guide_click']);
+assert.equal(signal.events[0][2].placement, 'paasiaisopas-kaupat-auki-article');
 assert.equal(signal.storageCalls.length, 0, 'Removed storage stays unused after consent');
 signal.consent(false); signal.signalClick(holiday); signal.tick(2);
-assert.equal(signal.events.length, 2);
+assert.equal(signal.events.length, 1);
 signal.consent(true); signal.tick(1);
-assert.equal(signal.events.length, 2, 'Regrant does not replay denied signals');
+assert.equal(signal.events.length, 1, 'Regrant does not replay denied signals');
 signal.signalClick(holiday);
-assert.equal(signal.events.length, 4);
+assert.equal(signal.events.length, 2);
 assert.equal(signal.storageCalls.length, 0);
 signal.window['ga-disable-G-FIXTURE'] = true;
 signal.signalClick(holiday);
-assert.equal(signal.events.length, 4, 'GA disable also gates actual signals despite consent state');
+assert.equal(signal.events.length, 2, 'GA disable also gates actual signals despite consent state');
 signal.window['ga-disable-G-FIXTURE'] = false;
 delete signal.window.gtag;
 signal.signalClick(holiday);
-assert.equal(signal.events.length, 4, 'Missing GA cannot collect or queue signals');
+assert.equal(signal.events.length, 2, 'Missing GA cannot collect or queue signals');
 assert.equal(signal.storageCalls.length, 0);
 const sponsor = browser(true);
 sponsor.signalClick({dataset:{monetizationSignal:'founding_sponsor_contact_click', placement:'fixture'}, textContent:''});

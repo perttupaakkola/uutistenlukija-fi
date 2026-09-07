@@ -40,7 +40,7 @@
 </div>
 {{- end }}
 {{- if eq .showSource true }}{{ partial "source-article-link.html" $page }}{{ end }}
-<div class="{{ $contentClass }}">
+<div class="{{ $contentClass }}"{{ if eq $page.Section "posts" }} data-article-body{{ end }}>
   {{ $page.Content }}
 </div>
 
