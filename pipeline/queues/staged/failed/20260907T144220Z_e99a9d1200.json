@@ -130,5 +130,24 @@
       "candidate_source_words": 193,
       "candidate_blocks": 3
     }
+  },
+  "failed_at": "2026-09-07T14:44:24.317308+00:00",
+  "failure": "insufficient_confidence_after_repair",
+  "raw_response": "{\n  \"packet_id\": \"20260907T144220Z_e99a9d1200\",\n  \"status\": \"INSUFFICIENT_CONFIDENCE\",\n  \"editorial_reviewed\": false,\n  \"journalist_note\": \"Aineisto ei tue vähintään 250 sanan faktapohjaista uutista ilman toistoa tai täytettä. Lisäksi 280 sanan vähimmäispituus ylittäisi 193 lähdesanalla suhderajan 1,35, joka sallii enintään 260 sanaa. Korjaaminen edellyttää lisää samaa uutista koskevaa lähdeaineistoa.\",\n  \"source_usage\": [\n    {\n      \"source_url\": \"https://www.arvopaperi.fi/uutiset/a/d3d0dc98-2e14-4624-a47f-c7b6b98f84f4?utm_source=rss\",\n      \"used\": false,\n      \"dependent_claims\": []\n    }\n  ]\n}",
+  "writer_failure_feedback": {
+    "packet_id": "20260907T144220Z_e99a9d1200",
+    "category": "Talous",
+    "selected_source_words": 193,
+    "selected_source_blocks": 3,
+    "story_confidence": 0.97,
+    "final_word_count": 0,
+    "issues": [
+      "missing keys: title, summary, content, category, tags, summary_bullets, content_type, confidence"
+    ],
+    "source_backed": true,
+    "near_miss_short": false,
+    "retry_classification": "writer_schema_invalid",
+    "fail_closed": true,
+    "title": "Euroopassa korot nousussa, jeni vahvistuu"
   }
 }
