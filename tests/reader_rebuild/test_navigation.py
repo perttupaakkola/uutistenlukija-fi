@@ -12,7 +12,9 @@ class ArchiveContract(unittest.TestCase):
             shutil.copytree(ROOT/'layouts/partials', site/'layouts/partials')
             (site/'layouts/_default').mkdir()
             shutil.copy(ROOT/'layouts/_default/digest-page.html', site/'layouts/_default/digest-page.html')
-            (site/'layouts/_default/baseof.html').write_text('<html><head>{{ block "extra_head" . }}{{ end }}</head><body>{{ partial "header.html" . }}<main>{{ block "main" . }}{{ end }}</main></body></html>')
+            # Keep the real base template: its SEO partials can initialise .Paginator
+            # before the list template does. A reduced base concealed this regression.
+            shutil.copy(ROOT/'layouts/_default/baseof.html', site/'layouts/_default/baseof.html')
             (site/'layouts/_default/single.html').write_text('{{ define "main" }}{{ .Content }}{{ end }}')
             (site/'hugo.toml').write_text('baseURL="https://fixture.invalid/"\ntitle="Uutistenlukija"\ndisableKinds=["home","RSS","sitemap","taxonomy","term","404"]\n'+ '[menu]\n'+(ROOT/'hugo.toml').read_text().split('[menu]\n',1)[1])
             (site/'content/posts').mkdir(parents=True)
@@ -28,14 +30,16 @@ class ArchiveContract(unittest.TestCase):
                 self.assertNotIn('>Live<',html)
                 self.assertNotIn('portal-live-dot',html)
                 self.assertNotIn('Päivän tärkeimmät',html)
-                main=html.split('<main>')[1].split('</main>')[0]
+                main_match=re.search(r'<main\b[^>]*>(.*?)</main>',html,re.S)
+                assert main_match is not None
+                main=main_match.group(1)
                 titles=re.findall(r'<h2><a[^>]*>(.*?)</a></h2>',main)
                 all_titles+=titles
                 schemas=[json.loads(x) for x in re.findall(r'<script type="application/ld\+json">(.*?)</script>',html,re.S)]
                 collection=next(s for s in schemas if s.get('@type')=='CollectionPage')
                 self.assertEqual([x['name'] for x in collection['itemListElement']],titles)
                 for cat in ['Kotimaa','Ulkomaat','Talous','Teknologia','Urheilu','Kulttuuri','Tiede','Oppaat']:
-                    self.assertIn(cat,html.split('<main>')[0])
+                    self.assertIn(cat,html.split('<main')[0])
                 (scratch/f'archive-page-{index+1}.html').write_text(html)
             self.assertEqual(len(all_titles),len(stories))
             self.assertEqual(set(all_titles),{x[0] for x in stories})
