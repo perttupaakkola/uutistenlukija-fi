@@ -1,0 +1,61 @@
+name: Source validation
+"on":
+  push:
+    branches: ['hermes/news-rebuild-*']
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: source-validation-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  regression-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      COLLECTOR_TEST_SCRATCH: /tmp/uutis-collector-tests
+      UL_READER_TEST_SCRATCH: /tmp/uutis-reader-tests
+      UL_NAV_TEST_SCRATCH: /tmp/uutis-navigation-tests
+      HUGO_BIN: hugo
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.147.0'
+          extended: true
+      - name: Install test dependencies
+        run: python -m pip install requests PyYAML beautifulsoup4 Pillow
+      - name: Analytics and privacy regressions
+        env:
+          PYTHONPATH: scripts
+        run: |
+          python -m unittest scripts.test_collect_analytics scripts.test_analytics_rebuild scripts.test_analytics_freshness_evidence scripts.test_analytics_review
+          node scripts/test_event_tracking_consent.js
+      - name: Publishing regressions
+        env:
+          PYTHONPATH: pipeline
+        run: python -m unittest test_rebuild_invariants test_pipeline_repair test_source_sufficiency test_story_packet test_research test_quality_gate test_monica_writer test_publish_preflight test_publisher_category
+      - name: Reader and real navigation regressions
+        run: |
+          python tests/reader_rebuild/test_reader.py
+          python tests/reader_rebuild/test_navigation.py
+      - name: Source validation
+        run: |
+          bash scripts/validate_critical_scripts.sh
+          python scripts/validate_portal_css_contract.py
+          python pipeline/validate_frontmatter.py
+          bash scripts/validate_templates.sh --no-discord
+      - name: Full production-mode build
+        env:
+          HUGO_ENVIRONMENT: production
+        run: hugo --minify --destination public
+      - name: Cloudflare file budget
+        run: python scripts/check_public_file_count.py --public-dir public --limit 20000 --min-headroom 1000

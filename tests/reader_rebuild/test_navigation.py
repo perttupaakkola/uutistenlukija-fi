@@ -5,7 +5,7 @@ ROOT = Path(__file__).resolve().parents[2]
 HUGO = os.environ.get('HUGO_BIN', '/home/pertt/.openclaw/workspace/bin/hugo')
 class ArchiveContract(unittest.TestCase):
     def test_all_categories_pagination_and_honest_labels(self):
-        scratch = Path('/home/pertt/outputs/news-rebuild-20260907/scratch/navigation')
+        scratch = Path(os.environ.get('UL_NAV_TEST_SCRATCH', str(Path(tempfile.gettempdir()) / 'uutistenlukija-navigation-tests')))
         scratch.mkdir(parents=True, exist_ok=True)
         with tempfile.TemporaryDirectory(dir=scratch) as directory:
             site = Path(directory)

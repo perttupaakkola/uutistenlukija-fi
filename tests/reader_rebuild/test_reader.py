@@ -16,7 +16,7 @@ from html.parser import HTMLParser
 from html import unescape
 
 ROOT = Path(__file__).resolve().parents[2]
-SCRATCH = Path('/home/pertt/outputs/news-rebuild-20260907/scratch/reader')
+SCRATCH = Path(os.environ.get('UL_READER_TEST_SCRATCH', str(Path(tempfile.gettempdir()) / 'uutistenlukija-reader-tests')))
 HUGO = os.environ.get('HUGO_BIN', '/home/pertt/.openclaw/workspace/bin/hugo')
 ARTICLES = [
     '2026-09-07-kysely-lahes-puolet-ajaa-renkaat-lain-edellyttamalle-minimit',
