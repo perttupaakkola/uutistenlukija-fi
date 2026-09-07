@@ -35,6 +35,23 @@ def _article(degraded_mode: bool) -> dict:
     }
 
 
+class TranslatedNumberUnitTests(unittest.TestCase):
+    def test_english_bn_supports_same_finnish_magnitude(self):
+        self.assertEqual(check_numbers_sourced('China will inject $54bn and 35bn yuan.',
+            'Kiina sijoittaa 54 miljardia dollaria ja 35 miljardia juania.'), [])
+
+    def test_spelled_english_magnitudes_support_finnish(self):
+        self.assertEqual(check_numbers_sourced('54 billion and 15 million.',
+            '54 miljardia ja 15 miljoonaa.'), [])
+
+    def test_magnitude_and_value_changes_still_fail(self):
+        self.assertIn('54miljardi', check_numbers_sourced('54 million.', '54 miljardia.'))
+        self.assertIn('55miljardi', check_numbers_sourced('54bn.', '55 miljardia.'))
+
+    def test_alias_requires_complete_word(self):
+        self.assertIn('54miljardi', check_numbers_sourced('54bnonsense.', '54 miljardia.'))
+
+
 class QualityGateDegradedModeTests(unittest.TestCase):
     def test_short_article_fails_without_degraded_mode(self):
         breakdown = score_article(_article(False))

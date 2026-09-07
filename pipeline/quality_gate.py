@@ -71,6 +71,7 @@ _FINNISH_SIGNAL_WORDS = {
 
 _NUMBER_UNIT_PATTERN = (
     r"%|prosent[a-zäöå]*|miljard[a-zäöå]*|mrd|miljoon[a-zäöå]*|milj[.]?"
+    r"|billions?\b|bn\b|millions?\b"
     r"|kg|km|m²|mw|gw|€|euro[a-zäöå]*|dollari[a-zäöå]*"
 )
 _NUMBER_RE = re.compile(
@@ -111,9 +112,9 @@ def _extract_numbers(text: str) -> set[str]:
         unit = unit_match.group(0).lower() if unit_match else ""
         if unit == "%" or unit.startswith("prosent"):
             unit = "%"
-        elif unit == "mrd" or unit.startswith("miljard"):
+        elif unit in {"mrd", "bn"} or unit.startswith(("miljard", "billion")):
             unit = "miljardi"
-        elif unit.startswith("miljoon") or unit.startswith("milj"):
+        elif unit.startswith(("miljoon", "milj", "million")):
             unit = "miljoona"
         elif unit == "€" or unit.startswith("euro"):
             unit = "euro"
