@@ -47,7 +47,7 @@ from story_packet import build_story_packet  # noqa: E402
 from publisher import PublicationTransaction, build_site, effective_category, publish_articles  # noqa: E402
 from unsplash import fetch_images_for_articles as unsplash_fetch_images  # noqa: E402
 from pexels import fetch_images_for_articles as pexels_fetch_images  # noqa: E402
-from image_candidate_guard import category_fallback_fields  # noqa: E402
+from image_candidate_guard import build_visual_brief, category_fallback_fields  # noqa: E402
 from image_provider_result import (  # noqa: E402
     IMAGE_PROVIDER_RESULTS_FIELD,
     build_provider_result,
@@ -60,6 +60,7 @@ from image_gen import (  # noqa: E402
     REASON_BACKOFF,
     REASON_CATEGORY_FALLBACK,
     REASON_KEY_UNAVAILABLE,
+    REASON_PRE_SAFETY_REJECT,
     REASON_PROVIDER_RUNTIME,
     REASON_STOCK_REJECTION,
     append_image_terminal_reason,
@@ -2313,7 +2314,35 @@ def enrich_images_for_articles(articles: list[dict], *, unsplash_delay: float = 
                 elif any(bool(receipt.get("succeeded")) for receipt in receipts):
                     record_success("pexels")
 
-    missing = [a for a in articles if article_needs_image(a)]
+    # Policy precedes operational prerequisites. A key/backoff change cannot
+    # make an ineligible article safe. Match image_gen's independently grounded
+    # brief inputs and keep its own later safety check as defense in depth.
+    missing = []
+    for article in [a for a in articles if article_needs_image(a)]:
+        try:
+            brief = build_visual_brief(
+                article.get("title", ""),
+                article.get("category", ""),
+                summary=article.get("summary", "") or "",
+                key_points=list(article.get("key_points") or []),
+                content=article.get("content", "") or "",
+                source_evidence=article.get("source_text", "") or article.get("research", "") or "",
+            )
+            eligible = bool(brief.intent.generated_ok)
+        except Exception as exc:  # same fail-closed policy as image_gen
+            log(f"images: generation policy unavailable — {exc.__class__.__name__}")
+            eligible = False
+        if eligible:
+            missing.append(article)
+        else:
+            set_generation_terminal(
+                article,
+                build_image_terminal_reason(
+                    stage="generated",
+                    reason=REASON_PRE_SAFETY_REJECT,
+                    outcome="policy_reject",
+                ),
+            )
     if missing and os.environ.get("KIE_API_KEY", ""):
         skip, reason = should_skip("kie_api")
         if skip:

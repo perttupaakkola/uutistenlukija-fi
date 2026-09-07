@@ -1180,9 +1180,9 @@ class StagedPublishMetricsTests(unittest.TestCase):
 
     def test_generated_batch_exception_preserves_completed_terminals_images_and_count(self) -> None:
         articles = [
-            {"title": "Hyväksytty generoitu kuva", "category": "Kotimaa"},
-            {"title": "Valmis visuaalinen hylkäys", "category": "Kotimaa"},
-            {"title": "Generoimatta jäänyt", "category": "Kotimaa"},
+            {"title": "Hyväksytty generoitu kuva", "category": "Kotimaa", "content": "aurinkoinen sää"},
+            {"title": "Valmis visuaalinen hylkäys", "category": "Kotimaa", "content": "aurinkoinen sää"},
+            {"title": "Generoimatta jäänyt", "category": "Kotimaa", "content": "aurinkoinen sää"},
         ]
 
         def partial_generation(batch, max_total_sec=180):
@@ -1252,7 +1252,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
         failure.assert_called_once_with("kie_api")
 
     def test_generated_exception_cannot_retain_unverified_partial_artifact(self) -> None:
-        articles = [{"title": "Kuvaton artikkeli", "category": "Kotimaa"}]
+        articles = [{"title": "Kuvaton artikkeli", "category": "Kotimaa", "content": "aurinkoinen sää"}]
 
         def partial_generation(batch, max_total_sec=180):
             batch[0].update({
@@ -1697,7 +1697,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
         )
 
     def test_generated_provider_fault_records_kie_failure_with_typed_reason(self) -> None:
-        articles = [{"title": "Kuvaton artikkeli", "category": "Talous"}]
+        articles = [{"title": "Kuvaton artikkeli", "category": "Talous", "content": "aurinkoinen sää"}]
 
         def provider_fault(batch, max_total_sec=180):
             terminal = image_gen.build_image_terminal_reason(
@@ -1738,7 +1738,7 @@ class StagedPublishMetricsTests(unittest.TestCase):
         )
 
     def test_generated_visual_reject_never_records_kie_failure(self) -> None:
-        articles = [{"title": "Kuvaton artikkeli", "category": "Talous"}]
+        articles = [{"title": "Kuvaton artikkeli", "category": "Talous", "content": "aurinkoinen sää"}]
 
         def visual_reject(batch, max_total_sec=180):
             terminal = image_gen.build_image_terminal_reason(
