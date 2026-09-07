@@ -753,7 +753,7 @@ class PagesDeployStatusContractTests(unittest.TestCase):
             with self.subTest(workflow=workflow_path.name):
                 producer = "python3 pipeline/generate_pipeline_status.py"
                 panel = (
-                    "python3 scripts/business_control_panel.py "
+                    "python3 scripts/business_control_panel.py --public-analytics "
                     "--pipeline-status-file static/api/pipeline-status.json "
                     "--output static/api/business-control-panel.json"
                 )

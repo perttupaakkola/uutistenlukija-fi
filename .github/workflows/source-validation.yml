@@ -39,7 +39,7 @@ jobs:
         env:
           PYTHONPATH: scripts
         run: |
-          python -m unittest scripts.test_collect_analytics scripts.test_analytics_rebuild scripts.test_analytics_freshness_evidence scripts.test_analytics_review
+          python -m unittest scripts.test_collect_analytics scripts.test_analytics_rebuild scripts.test_analytics_freshness_evidence scripts.test_analytics_review scripts.test_analytics_projection scripts.test_business_control_panel
           node scripts/test_event_tracking_consent.js
       - name: Publishing regressions
         env:
@@ -60,7 +60,9 @@ jobs:
       - name: Full production-mode build
         env:
           HUGO_ENVIRONMENT: production
-        run: hugo --minify --destination public
+        run: |
+          python scripts/analytics_projection.py --public-output static/api/analytics-freshness-status.json
+          hugo --minify --destination public
       - name: Verify full-build news archive
         run: |
           python - <<'PY'

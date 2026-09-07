@@ -134,39 +134,37 @@ class WeeklyReviewTest(unittest.TestCase):
 
 class PanelReviewTest(unittest.TestCase):
     def caller(self, ctr, freshness=None):
-        scope = functions_only('business_control_panel.py',
-            {'analytics_status', 'parse_dt', 'iso', 'age_minutes', 'sanitize_reason'},
-            Any=Any, Path=Path, datetime=datetime, timedelta=timedelta, timezone=timezone, re=re,
-            PROJECT_DIR=ROOT, LOG_DIR=ROOT / 'absent-fixture-logs', ANALYTICS_FRESHNESS_MAX_AGE_HOURS=48,
-            SECRETISH_RE=re.compile(r'(?!)'), URL_QUERY_RE=re.compile(r'(?!)'))
-        scope['newest_existing_json'] = lambda paths: (paths[0], ctr) if 'ctr-gap-report' in str(paths[0]) else (None, freshness)
-        return scope['analytics_status'](NOW)
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            target = root / 'static/api'
+            target.mkdir(parents=True)
+            (target / 'ctr-gap-report.json').write_text(json.dumps(ctr))
+            (target / 'analytics-freshness-status.json').write_text(json.dumps(freshness))
+            scope = functions_only('business_control_panel.py', {'analytics_status'},
+                Any=Any, datetime=datetime, PROJECT_DIR=root)
+            return scope['analytics_status'](NOW)
 
-    def test_exact_blocked_v2_report_with_missing_stale_and_fresh_evidence(self):
+    def test_legacy_blocked_reports_cannot_be_blessed_by_cached_fresh_flags(self):
         ctr = {'schema_version': 2, 'status': 'blocked', 'reason': 'invalid_stale_or_empty_gsc',
-               'data_source': 'unavailable', 'generated_at': NOW.isoformat(), 'gaps': [], 'total_gaps_found': 0}
+               'data_source': 'unavailable', 'generated_at': NOW.isoformat()}
         fresh = {'status': 'fresh', 'checked_at': NOW.isoformat(), 'artifacts': {
             key: {'fresh': True, 'evidence_at': NOW.isoformat()} for key in ['daily_report', 'search_console']}}
         for freshness in [None, {'status': 'stale'}, fresh]:
             with self.subTest(freshness=freshness):
-                result = self.caller(ctr, freshness)['gsc']
-                self.assertEqual(result['status'], 'blocked')
-                self.assertEqual(result['reason'], ctr['reason'])
-                self.assertEqual(result['ctr_gap_report']['status'], 'blocked')
+                result = self.caller(ctr, freshness)
+                self.assertEqual(result['gsc']['status'], 'unavailable')
+                self.assertEqual(result['freshness']['status'], 'unavailable')
 
-    def test_stale_and_unknown_sources_never_look_valid(self):
+    def test_newly_generated_legacy_report_is_not_source_evidence(self):
         valid = {'schema_version': 2, 'status': 'fresh', 'reason': 'validated_source',
                  'data_source': 'google_search_console', 'generated_at': NOW.isoformat()}
-        self.assertEqual(self.caller(valid)['gsc']['status'], 'local_report_present')
-        for fields, expected in [({'status': 'stale', 'reason': 'source_timestamp_stale'}, 'stale'),
-                                 ({'data_source': 'surprise'}, 'blocked'),
-                                 ({'status': 'surprise'}, 'blocked'),
-                                 ({'status': None}, 'blocked'),
-                                 ({'generated_at': '2026-01-01T00:00:00Z'}, 'stale')]:
+        for fields in ({}, {'status': 'stale'}, {'data_source': 'surprise'}, {'status': None},
+                       {'generated_at': '2026-01-01T00:00:00Z'}):
             with self.subTest(fields=fields):
-                ctr = dict(valid, **fields)
-                for freshness in [None, {'status': 'stale'}]:
-                    self.assertEqual(self.caller(ctr, freshness)['gsc']['status'], expected)
+                result = self.caller(dict(valid, **fields))
+                self.assertEqual(result['gsc']['status'], 'unavailable')
+                self.assertEqual(result['gsc']['reason'], 'private_analytics_not_exported')
 
 
 if __name__ == '__main__':

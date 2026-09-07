@@ -931,8 +931,8 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
         self.assertEqual(data["pipeline"]["last_24h"]["article_count"], 9)
         self.assertEqual(data["pipeline"]["last_24h"]["article_count_source"], "validated production pipeline-status")
 
-    def test_fresh_analytics_evidence_supersedes_stale_log_errors(self) -> None:
-        """Fresh redacted GA4/GSC evidence must not be reported as blocked because old log tails contain errors."""
+    def test_cached_fresh_flags_and_log_tails_cannot_certify_provider_data(self) -> None:
+        """Neither saved redacted fresh flags nor old logs are canonical source proof."""
         now = datetime(2026, 6, 1, 8, 0, tzinfo=timezone.utc)
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -959,11 +959,11 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
             with patch.object(panel, "PROJECT_DIR", root), patch.object(panel, "LOG_DIR", log_dir):
                 analytics = panel.analytics_status(now)
 
-        self.assertEqual(analytics["freshness"]["status"], "fresh")
-        self.assertEqual(analytics["ga4"]["status"], "fresh")
-        self.assertEqual(analytics["gsc"]["status"], "fresh")
-        self.assertEqual(analytics["ga4"]["reason"], "fresh GA4 validation artifact present")
-        self.assertEqual(analytics["gsc"]["reason"], "fresh Search Console validation artifact present")
+        self.assertEqual(analytics["freshness"]["status"], "unavailable")
+        self.assertEqual(analytics["ga4"]["status"], "unavailable")
+        self.assertEqual(analytics["gsc"]["status"], "unavailable")
+        self.assertEqual(analytics["ga4"]["reason"], "private_analytics_not_exported")
+        self.assertEqual(analytics["gsc"]["reason"], "private_analytics_not_exported")
 
     def test_queue_summary_excludes_retention_archives(self) -> None:
         """Archived queue artifacts are evidence, not live backlog."""
@@ -1047,8 +1047,9 @@ class BusinessControlPanelReportingTest(unittest.TestCase):
             }), encoding="utf-8")
             with patch.object(panel, "PROJECT_DIR", root), patch.object(panel, "LOG_DIR", root / "logs"):
                 analytics = panel.analytics_status(now)
-        self.assertEqual(analytics["ga4"]["status"], "stale_or_incomplete")
-        self.assertEqual(analytics["gsc"]["status"], "stale_or_incomplete")
+        self.assertEqual(analytics["ga4"]["status"], "unavailable")
+        self.assertEqual(analytics["gsc"]["status"], "unavailable")
+        self.assertEqual(analytics["freshness"]["status"], "unavailable")
 
     def test_explicit_coordination_dir_overrides_checkout_inference(self) -> None:
         now = datetime(2026, 8, 23, 12, 0, tzinfo=timezone.utc)

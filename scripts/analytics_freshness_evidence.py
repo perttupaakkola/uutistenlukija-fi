@@ -16,7 +16,7 @@ PROJECT_DIR = Path(__file__).resolve().parent.parent
 DEFAULT_OUTPUT = PROJECT_DIR / "analytics" / "post-reauth-freshness-evidence.json"
 DEFAULT_STATIC_OUTPUT = PROJECT_DIR / "static" / "api" / "analytics-freshness-status.json"
 DAILY_REPORT = PROJECT_DIR / "analytics" / "daily-report.json"
-SEARCH_CONSOLE_REPORT = PROJECT_DIR / "static" / "api" / "search-console-data.json"
+SEARCH_CONSOLE_REPORT = PROJECT_DIR / "analytics" / "search-console-data.json"
 OAUTH_SENTINEL = PROJECT_DIR / "analytics" / "oauth-failure-sentinel.json"
 
 SAFE_SOURCE_COMMANDS = [
@@ -216,7 +216,7 @@ def build_payload(max_age_hours: float, source_command: str) -> dict[str, Any]:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
-    parser.add_argument("--static-output", type=Path, default=DEFAULT_STATIC_OUTPUT)
+    parser.add_argument("--static-output", type=Path, default=None, help="optional public availability-only output; private evidence is never copied")
     parser.add_argument("--max-age-hours", type=float, default=30.0)
     parser.add_argument(
         "--source-command",
@@ -235,10 +235,12 @@ def main() -> int:
         print(json.dumps(payload, indent=2, ensure_ascii=False))
         return 0
 
-    for output in (args.output, args.static_output):
-        output.parent.mkdir(parents=True, exist_ok=True)
-        output.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
-        print(f"[analytics-freshness-evidence] wrote {output.relative_to(PROJECT_DIR)} status={payload['status']}")
+    from analytics_projection import atomic_write, public_status
+    atomic_write(args.output, (json.dumps(payload, indent=2, ensure_ascii=False) + "\n").encode())
+    if args.static_output is not None:
+        public = public_status(utc_now())
+        atomic_write(args.static_output, (json.dumps(public, indent=2) + "\n").encode())
+    print(f"[analytics-freshness-evidence] private status={payload['status']}")
     return 0
 
 

@@ -822,190 +822,28 @@ def category_drift() -> dict[str, Any]:
     }
 
 
-def analytics_status(now: datetime) -> dict[str, Any]:
-    """Report local analytics data freshness; never calls GA4/GSC or reads tokens."""
-    ctr_path, ctr = newest_existing_json([
-        PROJECT_DIR / "static" / "api" / "ctr-gap-report.json",
-        PROJECT_DIR / "public" / "api" / "ctr-gap-report.json",
-    ])
-    freshness_path, freshness = newest_existing_json([
-        PROJECT_DIR / "static" / "api" / "analytics-freshness-status.json",
-        PROJECT_DIR / "analytics" / "post-reauth-freshness-evidence.json",
-    ])
-    traffic_log = LOG_DIR / "daily-traffic-card.log"
-    weekly_log = LOG_DIR / "weekly-metrics-digest.log"
-    gsc_log = LOG_DIR / "fetch-search-console.log"
+def analytics_status(now: datetime, public_only: bool = False) -> dict[str, Any]:
+    """Revalidate canonical private evidence, or state public unavailability.
 
-    gsc_source = ctr.get("data_source") if ctr else None
-    gsc_generated = parse_dt(ctr.get("generated_at") if ctr else None)
-    ctr_status = ctr.get("status") if ctr else None
-    gsc_report_status = "local_report_present"
-    gsc_reason = "local GSC-derived report present"
-    if ctr_status in ("blocked", "stale", "invalid", "unavailable"):
-        gsc_report_status = "stale" if ctr_status == "stale" else "blocked"
-        gsc_reason = sanitize_reason(ctr.get("reason") or "CTR gap report unavailable")
-    elif gsc_source != "google_search_console":
-        gsc_report_status = "blocked"
-        gsc_reason = "missing or unsupported GSC source in CTR gap report"
-    elif ctr_status not in (None, "fresh") or (ctr.get("schema_version") == 2 and ctr_status != "fresh"):
-        gsc_report_status = "blocked"
-        gsc_reason = "missing or unsupported CTR gap report status"
-    elif gsc_generated is None or gsc_generated > now:
-        gsc_report_status = "blocked"
-        gsc_reason = "missing or invalid CTR gap report timestamp"
-    elif now - gsc_generated > timedelta(hours=ANALYTICS_FRESHNESS_MAX_AGE_HOURS):
-        gsc_report_status = "stale"
-        gsc_reason = "CTR gap report timestamp stale"
-    # Fresh provider evidence can stand alone, but cannot bless an explicitly
-    # blocked/stale derived report. Preserve that report's reason for callers.
-    ctr_unavailable = bool(ctr) and gsc_report_status != "local_report_present"
-
-    def log_probe(path: Path) -> dict[str, Any]:
-        if not path.exists():
-            return {"exists": False, "age_minutes": None, "status": "missing"}
-        try:
-            mtime = datetime.fromtimestamp(path.stat().st_mtime, timezone.utc)
-            tail = path.read_text(encoding="utf-8", errors="replace")[-4000:].lower()
-        except Exception:
-            return {"exists": True, "age_minutes": None, "status": "unreadable"}
-        has_error = any(term in tail for term in ["error", "failed", "not found", "no access_token", "cannot run"])
-        return {"exists": True, "age_minutes": age_minutes(mtime, now), "status": "error_seen" if has_error else "log_present"}
-
-    traffic_log_probe = log_probe(traffic_log)
-    weekly_log_probe = log_probe(weekly_log)
-    gsc_log_probe = log_probe(gsc_log)
-
-    def artifact_summary(payload: Any, keys: list[str]) -> dict[str, Any]:
-        if not isinstance(payload, dict):
-            return {}
-        return {key: payload.get(key) for key in keys if key in payload}
-
-    freshness_payload: dict[str, Any] = freshness if isinstance(freshness, dict) else {}
-    raw_artifacts = freshness_payload.get("artifacts")
-    artifacts: dict[str, Any] = raw_artifacts if isinstance(raw_artifacts, dict) else {}
-    raw_daily_artifact = artifacts.get("daily_report")
-    raw_search_artifact = artifacts.get("search_console")
-    raw_oauth_artifact = artifacts.get("oauth_blocker")
-    daily_artifact: dict[str, Any] = raw_daily_artifact if isinstance(raw_daily_artifact, dict) else {}
-    search_artifact: dict[str, Any] = raw_search_artifact if isinstance(raw_search_artifact, dict) else {}
-    oauth_artifact: dict[str, Any] = raw_oauth_artifact if isinstance(raw_oauth_artifact, dict) else {}
-    freshness_status = freshness_payload.get("status") if freshness_payload else None
-    freshness_checked_at = freshness_payload.get("checked_at") if freshness_payload else None
-    source_command = freshness_payload.get("source_command") if freshness_payload else None
-    freshness_summary = {
-        "source": str(freshness_path.relative_to(PROJECT_DIR)) if freshness_path and freshness_path.is_relative_to(PROJECT_DIR) else None,
-        "status": freshness_status or "missing",
-        "checked_at": freshness_checked_at,
-        "age_minutes": age_minutes(parse_dt(freshness_checked_at), now),
-        "source_command": sanitize_reason(source_command) if source_command else None,
-        "blocked_by": freshness_payload.get("blocked_by") if freshness_payload else None,
-        "daily_report": artifact_summary(daily_artifact, ["artifact", "fresh", "property_id", "site", "counts", "age_hours", "evidence_at"]),
-        "search_console": artifact_summary(search_artifact, ["artifact", "fresh", "site", "days", "row_count", "age_hours", "evidence_at"]),
-        "oauth_blocker": artifact_summary(oauth_artifact, ["blocked", "superseded_by_fresh_validation", "blocked_by", "services"]),
-    }
-
-    freshness_times = [
-        parse_dt(freshness_checked_at),
-        parse_dt(daily_artifact.get("evidence_at")),
-        parse_dt(search_artifact.get("evidence_at")),
-    ]
-    freshness_age_valid = all(
-        timestamp is not None
-        and timedelta(0) <= now - timestamp <= timedelta(hours=ANALYTICS_FRESHNESS_MAX_AGE_HOURS)
-        for timestamp in freshness_times
-    )
-    if (
-        freshness_status == "fresh"
-        and daily_artifact.get("fresh")
-        and search_artifact.get("fresh")
-        and freshness_age_valid
-    ):
-        for probe in (traffic_log_probe, weekly_log_probe, gsc_log_probe):
-            if probe.get("status") == "error_seen":
-                probe["superseded_by_freshness_status"] = True
-        return {
-            "source": "redacted local analytics freshness artifact plus public/static reports; external analytics APIs not queried by this script",
-            "freshness": freshness_summary,
-            "ga4": {
-                "status": "fresh",
-                "reason": "fresh GA4 validation artifact present",
-                "daily_report": freshness_summary["daily_report"],
-                "daily_traffic_log": traffic_log_probe,
-                "weekly_metrics_log": weekly_log_probe,
-            },
-            "gsc": {
-                "status": gsc_report_status if ctr_unavailable else "fresh",
-                "reason": gsc_reason if ctr_unavailable else "fresh Search Console validation artifact present",
-                "search_console_report": freshness_summary["search_console"],
-                "ctr_gap_report": {
-                    "source": str(ctr_path.relative_to(PROJECT_DIR)) if ctr_path else None,
-                    "generated_at": iso(gsc_generated),
-                    "age_minutes": age_minutes(gsc_generated, now),
-                    "data_source": gsc_source,
-                    "status": ctr_status,
-                    "reason": sanitize_reason(ctr.get("reason")) if ctr else None,
-                    "total_gaps_found": ctr.get("total_gaps_found") if ctr else None,
-                },
-                "fetch_log": gsc_log_probe,
-            },
-        }
-
-    if freshness_status == "blocked_oauth_reauthorization_required" or bool(oauth_artifact.get("blocked")):
-        blocked_reason = "OAuth reauthorization required by latest analytics freshness artifact"
-        return {
-            "source": "redacted local analytics freshness artifact plus public/static reports; external analytics APIs not queried by this script",
-            "freshness": freshness_summary,
-            "ga4": {
-                "status": "blocked",
-                "reason": blocked_reason,
-                "daily_report": freshness_summary["daily_report"],
-                "daily_traffic_log": traffic_log_probe,
-                "weekly_metrics_log": weekly_log_probe,
-            },
-            "gsc": {
-                "status": "blocked",
-                "reason": blocked_reason,
-                "search_console_report": freshness_summary["search_console"],
-                "ctr_gap_report": {
-                    "source": str(ctr_path.relative_to(PROJECT_DIR)) if ctr_path else None,
-                    "generated_at": iso(gsc_generated),
-                    "age_minutes": age_minutes(gsc_generated, now),
-                    "data_source": gsc_source,
-                    "status": ctr_status,
-                    "reason": sanitize_reason(ctr.get("reason")) if ctr else None,
-                    "total_gaps_found": ctr.get("total_gaps_found") if ctr else None,
-                },
-                "fetch_log": gsc_log_probe,
-            },
-        }
-
+    Neither a saved status flag, an export timestamp nor filesystem mtime is
+    evidence of provider freshness. This adapter exposes no private metrics.
+    """
+    from analytics_projection import public_status, team_snapshot
+    private = PROJECT_DIR / "analytics"
+    if public_only or not any((private / name).exists() for name in ("collector-status.json", "daily-report.json")):
+        freshness = public_status(now)
+        status = "unavailable"
+    else:
+        outputs, summary = team_snapshot(PROJECT_DIR, now)
+        freshness = outputs["analytics-freshness-status.json"]
+        status = summary["freshness_status"]
     return {
-        "source": "local public/static reports and pipeline/logs only; external analytics APIs not queried",
-        "freshness": freshness_summary,
-        "ga4": {
-            "status": "stale_or_incomplete" if freshness_status else "blocked_or_unknown",
-            "reason": "no fresh GA4 validation artifact present; see local GA4 cron logs for last known state",
-            "daily_report": freshness_summary["daily_report"],
-            "daily_traffic_log": traffic_log_probe,
-            "weekly_metrics_log": weekly_log_probe,
-        },
-        "gsc": {
-            "status": gsc_report_status if ctr_unavailable or not freshness_status else "stale_or_incomplete",
-            "reason": gsc_reason if ctr_unavailable or not freshness_status else "no fresh Search Console validation artifact present",
-            "search_console_report": freshness_summary["search_console"],
-            "ctr_gap_report": {
-                "source": str(ctr_path.relative_to(PROJECT_DIR)) if ctr_path else None,
-                "generated_at": iso(gsc_generated),
-                "age_minutes": age_minutes(gsc_generated, now),
-                "data_source": gsc_source,
-                "status": ctr_status,
-                "reason": sanitize_reason(ctr.get("reason")) if ctr else None,
-                "total_gaps_found": ctr.get("total_gaps_found") if ctr else None,
-            },
-            "fetch_log": gsc_log_probe,
-        },
+        "freshness": freshness,
+        "ga4": {"status": status, "reason": freshness["reason"]},
+        "gsc": {"status": status, "reason": freshness["reason"],
+                "report_status": status, "report_reason": freshness["reason"]},
+        "evidence_boundary": "private validated collector; no public metric projection",
     }
-
 
 
 def parse_hugo_params(path: Path) -> dict[str, Any]:
@@ -1334,6 +1172,7 @@ def build_panel(
     *,
     pipeline_status_file: Path | None = None,
     coordination_dir: Path | None = None,
+    public_analytics: bool = False,
 ) -> dict[str, Any]:
     now = now or utcnow()
     checkout_freshness = dict(git_upstream_freshness(PROJECT_DIR))
@@ -1385,7 +1224,7 @@ def build_panel(
     for local_section in (content, pipeline, queues):
         local_section["git_upstream_freshness"] = dict(checkout_freshness)
     categories = category_drift()
-    analytics = analytics_status(now)
+    analytics = analytics_status(now, public_only=True) if public_analytics else analytics_status(now)
     coordination = local_coordination_placeholders(now, coordination_dir)
     degraded_reasons: list[str] = []
     if analytics.get("ga4", {}).get("status") != "fresh":
@@ -1427,6 +1266,7 @@ def build_panel(
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--public-analytics", action="store_true", help="public availability only; never read private collector data")
     parser.add_argument("--dry-run", action="store_true", help="print JSON to stdout and do not write files")
     parser.add_argument("--output", action="append", type=Path, help="additional/alternate output path; may be repeated")
     parser.add_argument(
@@ -1442,6 +1282,8 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     build_kwargs: dict[str, Any] = {"pipeline_status_file": args.pipeline_status_file}
+    if args.public_analytics:
+        build_kwargs["public_analytics"] = True
     if args.coordination_dir is not None:
         build_kwargs["coordination_dir"] = args.coordination_dir
     panel = build_panel(**build_kwargs)
@@ -1449,6 +1291,8 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps(panel, ensure_ascii=False, indent=2, sort_keys=True))
         return 0
 
+    if args.public_analytics:
+        safe_write_json(PROJECT_DIR / "static/api/analytics-freshness-status.json", panel["analytics"]["freshness"])
     outputs = args.output if args.output else DEFAULT_OUTPUTS
     for output in outputs:
         safe_write_json(output, panel)
