@@ -50,7 +50,6 @@ source_domain: "arvopaperi.fi"
 source_attributions:
   - name: "Arvopaperi"
     url: "https://arvopaperi.fi/uutiset/a/78fc7c86-505e-4c4a-917d-8ad497ed2c9e?utm_source=rss"
-briefing: true
 draft: false
 ---
 
