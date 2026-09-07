@@ -57,5 +57,16 @@ jobs:
         env:
           HUGO_ENVIRONMENT: production
         run: hugo --minify --destination public
+      - name: Verify full-build news archive
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          for page in ('index.html', 'page/2/index.html'):
+              path = Path('public/paivan-tarkeimmat-uutiset') / page
+              text = path.read_text()
+              assert len(re.findall(r'<h2><a\b', text)) == 30, f'Empty or truncated archive: {path}'
+          print('Real-base archive pagination: PASS')
+          PY
       - name: Cloudflare file budget
         run: python scripts/check_public_file_count.py --public-dir public --limit 20000 --min-headroom 1000
