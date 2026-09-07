@@ -48,7 +48,6 @@ source_domain: "finanssiala.fi"
 source_attributions:
   - name: "Finanssiala"
     url: "https://finanssiala.fi/uutiset/uusi-opinnaytetyo-vallitseva-urakulttuuri-jarruttaa-joustavia-tyouria"
-briefing: true
 draft: false
 ---
 
