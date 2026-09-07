@@ -51,7 +51,6 @@ source_attributions:
     url: "https://kouvolansanomat.fi/uutissuomalainen/9770525"
   - name: "Autonrengasliitto"
     url: "https://autonrengasliitto.fi/ajankohtaista/tiedotteet/kuluneet-renkaat-ovat-riski-liikenteessa-silti-niilla-ajetaan/"
-briefing: true
 draft: false
 ---
 
