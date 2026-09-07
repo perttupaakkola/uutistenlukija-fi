@@ -261,5 +261,36 @@
       }
     ],
     "source_url": "https://www.theguardian.com/world/2026/sep/06/china-prepares-40bn-stimulus-for-financial-sector-amid-fears-over-sluggish-growth"
-  }
+  },
+  "quality_gate_rejected_at": "2026-09-07T12:14:48.261106+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260907T121223Z_5ff640fa6d",
+    "category": "Talous",
+    "selected_source_words": 467,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 7.99,
+    "quality_reasons": [
+      "length under target (272 words)",
+      "missing: image",
+      "unsourced numbers",
+      "central unsourced number(s): 54miljardi",
+      "unsourced_numbers: 100miljardi, 15miljardi, 160miljardi, 290miljardi, 35miljardi"
+    ],
+    "hard_fails": [
+      "central unsourced number(s): 54miljardi"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 100miljardi, 15miljardi, 160miljardi, 290miljardi, 35miljardi"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 272,
+    "title": "Kiina valmistelee 54 miljardin dollarin pääomitusta pankeille ja vakuutusyhtiöille"
+  },
+  "failure": "quality_gate_rejected: length under target (272 words); missing: image; unsourced numbers; central unsourced number(s): 54miljardi; unsourced_numbers: 100miljardi, 15miljardi, 160miljardi, 290miljardi, 35miljardi"
 }
