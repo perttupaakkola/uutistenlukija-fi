@@ -482,7 +482,7 @@ class IndependentImageAuditTests(unittest.TestCase):
         )
         self.assertEqual(row["status"], "ok")
 
-    def test_packet_source_text_can_ground_candidate_but_missing_source_fails(self) -> None:
+    def test_packet_source_text_cannot_ground_candidate_and_missing_source_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             article = root / "article.md"
@@ -519,7 +519,8 @@ class IndependentImageAuditTests(unittest.TestCase):
             packet.write_text(json.dumps({"article": packet_article}), encoding="utf-8")
             missing = audit_image_flow.audit_packet(packet, article)
 
-        self.assertEqual(grounded["status"], "ok")
+        self.assertEqual(grounded["status"], "flag")
+        self.assertIn("no concrete audit-grounded visual concept", str(grounded["reason"]))
         self.assertEqual(missing["status"], "missing")
         self.assertIn("source evidence unavailable", str(missing["reason"]))
 

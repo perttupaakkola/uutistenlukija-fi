@@ -368,6 +368,16 @@ class ArticleGroundedImagePipelineTests(unittest.TestCase):
 
         generated_symbolic = image_candidate_guard.judge_visual_candidate(
             {
+                "id": "symbolic-survey",
+                "alt": "public opinion survey questionnaire documents",
+                "photo_page": "https://example.com/photos/survey-questionnaire-documents",
+            },
+            brief=brief,
+            provider="generated",
+        )
+        self.assertTrue(generated_symbolic.accepted)
+        ungrounded_ballot = image_candidate_guard.judge_visual_candidate(
+            {
                 "id": "symbolic-ballot",
                 "alt": "public opinion survey questionnaire and ballot box",
                 "photo_page": "https://example.com/photos/survey-questionnaire-ballot-box",
@@ -375,7 +385,8 @@ class ArticleGroundedImagePipelineTests(unittest.TestCase):
             brief=brief,
             provider="generated",
         )
-        self.assertTrue(generated_symbolic.accepted)
+        self.assertFalse(ungrounded_ballot.accepted)
+        self.assertTrue(ungrounded_ballot.hard_fail)
 
     def test_railway_concept_requires_railway_anchor(self) -> None:
         title = "Karjalan radan rahoitusta lisätään"

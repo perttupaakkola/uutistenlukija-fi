@@ -389,9 +389,26 @@ ARTICLE_VISUAL_CONCEPT_RULES: tuple[
         ),
     ),
     (
-        {"kysely", "mielipidekysely", "gallup", "poll", "survey", "ballot"},
-        "public opinion survey or ballot",
-        ("public opinion survey ballot", "survey questionnaire", "ballot box"),
+        {
+            "kysely", "kyselyn", "kyselyssä", "kyselyä", "kyselylomake",
+            "mielipidekysely", "mielipidekyselyn", "mielipidekyselyä",
+            "gallup", "poll", "survey", "questionnaire",
+        },
+        "public opinion survey or questionnaire",
+        ("public opinion survey", "survey questionnaire", "questionnaire documents"),
+    ),
+    (
+        {
+            "vaalit", "vaalien", "vaaleissa", "vaaleihin", "vaaleja",
+            "osavaltiovaalit", "osavaltiovaaleissa", "osavaltiovaalien",
+            "vaalivoitto", "vaalivoitosta", "vaalivoittoja",
+            "vaalitappio", "vaalitappiosta", "vaalitappioksi", "vaalikampanjassa",
+            "äänestys", "äänestyksen", "äänestyksessä", "äänestyslippu",
+            "äänestysliput", "äänestyslippujen", "vaaliuurna",
+            "election", "elections", "voting", "ballot", "ballots",
+        },
+        "election voting or ballot",
+        ("election voting ballot", "ballot box", "election ballot papers"),
     ),
 )
 
@@ -407,11 +424,18 @@ CONCEPT_RULE_PRIORITY = {
     "rally car or motorsport": 90,
     "competitive gas balloon flight": 90,
     "hotel or hospitality": 80,
-    "public opinion survey or ballot": 80,
+    "public opinion survey or questionnaire": 80,
+    "election voting or ballot": 80,
     "budget documents or public finance": 40,
 }
 
 CONCEPT_SPECIFIC_ANCHORS = {
+    "public opinion survey or questionnaire": {
+        "survey", "surveys", "questionnaire", "questionnaires", "poll", "polls",
+    },
+    "election voting or ballot": {
+        "election", "elections", "voting", "ballot", "ballots",
+    },
     "railway tracks, rail infrastructure, or railway construction": {
         "railway", "railways", "railroad", "railroads", "rail", "rails",
         "train", "trains", "rautatie", "rautatien", "rautatiehanke", "raide",
@@ -1255,10 +1279,20 @@ def stored_intent_support_issues(
     return issues
 
 
+# Only these verified, complete attribution spans are exempt. Do not exempt
+# outlet-looking tokens globally: they may also occur next to a real person.
+_OUTLET_ATTRIBUTION_PATTERN = re.compile(
+    r"(?<!\w)(?:Yle\s+Uutisten|MTV\s+Uutisten|The\s+Guardianin)\s+mukaan(?!\w)"
+)
+
+
 def _named_person_like(text: str) -> bool:
     # Finnish article titles often capitalize only proper names. Two adjacent
     # capitalized words is a conservative enough proxy for stock-person safety.
-    person_text = _STRUCTURED_COUNTRY_PERSON_PATTERN.sub("", text or "")
+    # A separator prevents removal from joining two unrelated capitalized words.
+    # Apply this to BOTH name and role/action checks, not just the first regex.
+    attribution_free = _OUTLET_ATTRIBUTION_PATTERN.sub(". ", text or "")
+    person_text = _STRUCTURED_COUNTRY_PERSON_PATTERN.sub("", attribution_free)
     location_phrases = sorted(
         {
             alias
@@ -1276,7 +1310,7 @@ def _named_person_like(text: str) -> bool:
     if re.search(r"\b[A-ZÅÄÖ][a-zåäö]+(?:\s+[A-ZÅÄÖ][a-zåäö]+)+\b", person_text):
         return True
 
-    words = re.findall(r"[A-ZÅÄÖa-zåäö][A-ZÅÄÖa-zåäö'-]*", text or "")
+    words = re.findall(r"[A-ZÅÄÖa-zåäö][A-ZÅÄÖa-zåäö'-]*", attribution_free)
     lowered = [word.lower() for word in words]
     if set(lowered) & PERSON_ROLE_TERMS and set(lowered) & PERSON_HEADLINE_ACTION_TERMS:
         return True
@@ -1307,6 +1341,25 @@ def _missing_concept_anchors(intent: ImageIntent, candidate_tokens: set[str]) ->
     ]
 
 
+def _unsupported_survey_ballot_concepts(intent: ImageIntent, tokens: set[str]) -> list[str]:
+    # A questionnaire is not an election ballot (nor vice versa). A mixed
+    # query/caption must not sneak an unsupported half through shared overlap.
+    return [
+        concept for concept in (
+            "public opinion survey or questionnaire", "election voting or ballot",
+        )
+        if tokens & CONCEPT_SPECIFIC_ANCHORS[concept] and concept not in intent.must_have
+    ]
+
+
+def _published_key_points(key_points: list[str] | None) -> list[str]:
+    # Match publisher._article_to_markdown: discard blank entries, then cap at
+    # three. Omitted points remain safety evidence, never positive image truth.
+    if not isinstance(key_points, list):
+        return []
+    return [str(point).strip() for point in key_points if str(point).strip()][:3]
+
+
 def build_image_intent(
     title: str,
     category: str = "",
@@ -1317,10 +1370,10 @@ def build_image_intent(
     source_evidence: str = "",
     query: str = "",
 ) -> ImageIntent:
-    """Derive conservative visual truth without using any image-side fields."""
+    """Ground positives in final editorial fields; source evidence is safety-only."""
     key_points = key_points or []
     article_text = " ".join(
-        [title or "", summary or "", " ".join(key_points), content or "", source_evidence or ""]
+        [title or "", summary or "", " ".join(_published_key_points(key_points)), content or ""]
     )
     article_tokens = _tokens(article_text)
     meaningful_article_tokens = _meaningful_tokens(article_text)
@@ -1359,7 +1412,9 @@ def build_image_intent(
         for part in [title, summary, *(key_points or []), content, source_evidence]
         if part
     )
-    sensitive_hits = _sensitive_tokens(article_tokens)
+    sensitive_hits = _sensitive_tokens(
+        article_tokens | _tokens(source_evidence) | _tokens(" ".join(key_points))
+    )
     sensitive = bool(sensitive_hits)
     if named_person or sensitive:
         safety_mode = "illustration_only"
@@ -1404,8 +1459,8 @@ def build_image_intent(
                 | BOAT_REPAIR_TERMS
                 | REPAIR_WORK_TERMS
                 | set().union(*(cues for cues, _, _ in ARTICLE_VISUAL_CONCEPT_RULES))
-                | sensitive_hits
             )
+            | sensitive_hits
         ),
         style_preference="editorial illustration preferred for unsafe specifics",
         location_pairs=sorted(location_pairs),
@@ -1433,7 +1488,7 @@ def build_visual_brief(
         query=query,
     )
     article_text = " ".join(
-        [title, summary, " ".join(key_points or []), content, source_evidence]
+        [title, summary, " ".join(_published_key_points(key_points)), content]
     )
     article_tokens = _tokens(article_text)
     winter_hits = _winter_tokens(article_text, article_tokens)
@@ -1499,6 +1554,7 @@ def build_stock_queries(
     if (
         primary_query
         and _meaningful_tokens(primary_query) & grounded_query_tokens
+        and not _unsupported_survey_ballot_concepts(brief.intent, _tokens(primary_query))
         and primary_query not in {q for q, _, _ in queries}
     ):
         queries.append((primary_query, "primary_query", brief))
@@ -1544,7 +1600,7 @@ def score_image_candidate(
         )
 
     article_text = " ".join(
-        [title, summary, " ".join(key_points or []), content, source_evidence]
+        [title, summary, " ".join(_published_key_points(key_points)), content]
     )
     article_tokens = _tokens(article_text)
     query_tokens = _meaningful_tokens(query)
@@ -1629,6 +1685,8 @@ def score_image_candidate(
     article_requests_heat = bool(article_tokens & HEAT_TERMS)
 
     hard_rejects: list[str] = []
+    for unsupported in _unsupported_survey_ballot_concepts(grounded_intent, candidate_tokens):
+        hard_rejects.append(f"candidate {unsupported} lacks article-grounded support")
     for missing_concept in _missing_concept_anchors(grounded_intent, candidate_tokens):
         hard_rejects.append(
             f"candidate lacks concept-specific anchor for {missing_concept}"
@@ -1737,6 +1795,8 @@ def judge_visual_candidate(
     text = _candidate_text(candidate).lower()
     reasons: list[str] = []
     hard_fails: list[str] = []
+    for unsupported in _unsupported_survey_ballot_concepts(brief.intent, candidate_tokens):
+        hard_fails.append(f"candidate {unsupported} lacks article-grounded support")
 
     if brief.intent.safety_mode == "illustration_only" and candidate_tokens & PERSON_IMAGE_TERMS:
         hard_fails.append(

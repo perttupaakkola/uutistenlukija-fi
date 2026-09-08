@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Independently audit article-image grounding and recent stock reuse.
 
-Article truth is derived only from editorial article fields and, when a packet
-is supplied, its source evidence. Persisted image intent, retrieval queries,
+Positive truth is derived only from final editorial article fields. Packet
+source evidence contributes safety exclusions only. Persisted intent, queries,
 article-written alt text, and earlier acceptance scores are evidence to audit,
 never evidence that an image is relevant.
 """
@@ -168,6 +168,18 @@ _AUDIT_COUNTRY_SLUG_SUFFIXES: tuple[tuple[tuple[str, ...], str], ...] = (
 # marker, never a substring search over the raw article.
 _AUDIT_CONCEPT_RULES: tuple[tuple[str, tuple[tuple[str, ...], ...]], ...] = (
     (
+        "public opinion survey or questionnaire",
+        (("kysely*", "mielipidekysely*", "gallup*", "survey*", "questionnaire*", "poll", "polls"),),
+    ),
+    (
+        "election voting or ballot",
+        ((
+            "vaalit", "vaalien", "vaaleissa", "vaaleihin", "vaaleja",
+            "osavaltiovaal*", "vaalivoit*", "vaalitappio*", "vaalikampanj*",
+            "äänestys*", "äänestyks*", "vaaliuurna*", "election*", "voting", "ballot*",
+        ),),
+    ),
+    (
         "financial regulation, investment funds, or compliance documents",
         ((
             "finans*", "rahasto*", "sijoituspalvel*", "sisäpiirirekister*",
@@ -215,6 +227,10 @@ _AUDIT_CONCEPT_RULES: tuple[tuple[str, tuple[tuple[str, ...], ...]], ...] = (
 )
 
 _AUDIT_CONCEPT_ANCHORS: dict[str, set[str]] = {
+    "public opinion survey or questionnaire": {
+        "survey", "surveys", "questionnaire", "questionnaires", "poll", "polls",
+    },
+    "election voting or ballot": {"election", "elections", "voting", "ballot", "ballots"},
     "financial regulation, investment funds, or compliance documents": {
         "financial", "finance", "regulation", "regulatory", "compliance",
         "investment", "fund", "funds", "documents", "registry", "register",
@@ -468,11 +484,11 @@ def _matching_concepts(
             }
             for group in groups
         ]
-        # A central-field match is enough. Body/source-only concepts need at
+        # A central-field match is enough. Body-only concepts need at
         # least two independent cue tokens so an incidental attribution such
         # as "valtiollisen television mukaan" cannot become image truth.
-        source_evidence_is_concrete = len(set().union(*group_hits)) >= max(2, len(groups))
-        if all(group_hits) and (all(primary_group_hits) or source_evidence_is_concrete):
+        body_evidence_is_concrete = len(set().union(*group_hits)) >= max(2, len(groups))
+        if all(group_hits) and (all(primary_group_hits) or body_evidence_is_concrete):
             concepts.append(concept)
             for hits in group_hits:
                 evidence.update(hits)
@@ -527,6 +543,12 @@ def _single_named_people(text: str, occupied_spans: list[tuple[int, int]]) -> li
 
 
 def _named_people(text: str) -> list[str]:
+    # Independent, narrow attribution recognition; never trust runtime intent
+    # or globally exempt names/tokens that could also denote real people.
+    text = re.sub(
+        r"(?<!\w)(?:Yle\s+Uutisten|MTV\s+Uutisten|The\s+Guardianin)\s+mukaan(?!\w)",
+        ". ", text or "",
+    )
     names: list[str] = []
     matches = list(re.finditer(
         r"\b[A-ZÅÄÖ][a-zåäö'-]{1,}(?:\s+[A-ZÅÄÖ][a-zåäö'-]{1,})+\b",
@@ -562,15 +584,19 @@ def _derive_audit_truth(
     title = _text(fields, "title")
     primary_parts = [
         title,
-        _text(fields, "description"),
         _text(fields, "summary"),
         *_string_list(fields, "key_points"),
     ]
-    all_parts = [*primary_parts, body, source_evidence]
+    all_parts = [*primary_parts, body]
     primary_text = " ".join(part for part in primary_parts if part)
     all_text = " ".join(part for part in all_parts if part)
     primary_tokens = _word_tokens(primary_text)
     all_tokens = _word_tokens(all_text)
+    # SEO descriptions are not final editorial concept evidence; retain their
+    # pre-existing person/sensitivity exclusions without granting positives.
+    safety_primary_text = " ".join([primary_text, _text(fields, "description")])
+    safety_text = " ".join([safety_primary_text, body, source_evidence])
+    safety_tokens = _word_tokens(safety_text)
 
     primary_weather = _matching_tokens(
         primary_tokens,
@@ -627,16 +653,16 @@ def _derive_audit_truth(
         acceptable_concepts.append("sunny, warm, or non-winter outdoor weather")
         weather_evidence.update(all_summer)
 
-    primary_names = _named_people(primary_text)
-    all_names = _named_people(all_text)
+    primary_names = _named_people(safety_primary_text)
+    all_names = _named_people(safety_text)
     sensitive_tokens = {
         token
-        for token in all_tokens
+        for token in safety_tokens
         if token in _AUDIT_SENSITIVE_EXACT
         or any(token.startswith(prefix) for prefix in _AUDIT_SENSITIVE_PREFIXES)
     }
     named_person = bool(primary_names) or any(
-        len(re.findall(re.escape(name), all_text, flags=re.IGNORECASE)) >= 2
+        len(re.findall(re.escape(name), safety_text, flags=re.IGNORECASE)) >= 2
         for name in all_names
     )
     sensitive_story = bool(sensitive_tokens)
@@ -931,6 +957,8 @@ def _constraint_supported(value: str, truth: AuditTruth) -> bool:
     tokens = _word_tokens(value)
     if not tokens:
         return False
+    if _unsupported_survey_ballot_concepts(tokens, truth):
+        return False
     weather = _matching_tokens(tokens, _AUDIT_WEATHER_EXACT, _AUDIT_WEATHER_PREFIXES)
     winter = _matching_tokens(tokens, _AUDIT_WINTER_EXACT, _AUDIT_WINTER_PREFIXES)
     summer = _matching_tokens(tokens, _AUDIT_SUMMER_EXACT, _AUDIT_SUMMER_PREFIXES)
@@ -951,6 +979,17 @@ def _constraint_supported(value: str, truth: AuditTruth) -> bool:
         return True
     meaningful = tokens - _GROUNDING_NOISE - _AUDIT_GENERIC_CONCEPT_TOKENS
     return bool(meaningful & _grounded_concept_tokens(truth))
+
+
+def _unsupported_survey_ballot_concepts(tokens: set[str], truth: AuditTruth) -> list[str]:
+    # Check both halves of legacy/mixed intent, not just any overlapping word.
+    # Keep this audit vocabulary independent of the runtime implementation.
+    return [
+        concept for concept in (
+            "public opinion survey or questionnaire", "election voting or ballot",
+        )
+        if tokens & _AUDIT_CONCEPT_ANCHORS[concept] and concept not in truth.acceptable_concepts
+    ]
 
 
 def _stored_truth_issues(
@@ -1073,6 +1112,8 @@ def _audit_stock_candidate(
         candidate,
     )
     if comparison_tokens and grounded_tokens:
+        for unsupported in _unsupported_survey_ballot_concepts(comparison_tokens, grounded_intent):
+            flag_reasons.append(f"candidate unrelated: {unsupported} lacks article support")
         overlap = comparison_tokens & grounded_tokens
         missing_anchors = [
             concept
