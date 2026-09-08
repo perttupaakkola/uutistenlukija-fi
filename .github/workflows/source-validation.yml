@@ -44,7 +44,9 @@ jobs:
       - name: Structured editorial decline feedback
         run: python3 -I -B pipeline/test_editorial_decline_feedback.py
       - name: Retained legacy publishing Git safety
-        run: python3 -I -B pipeline/test_legacy_publish_git.py
+        run: |
+          test -x pipeline/legacy_publish_git.sh
+          python3 -I -B pipeline/test_legacy_publish_git.py
       - name: Retained SEO reporter contract
         run: python3 -I -B pipeline/test_seo_daily_dashboard_contract.py
       - name: Publishing regressions
