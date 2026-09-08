@@ -87,6 +87,17 @@ fail={'fetchfail':'fetch','reffail':'rev-parse','statusfail':'status','postfetch
 if command==fail and (not case.startswith('post') or produced):
     if command!='rev-parse' or 'refs/remotes/origin/main^{commit}' in a:
         sys.exit(71)
+if command=='diff-tree' and case=='deltaerror': sys.exit(72)
+if command=='commit' and case in {'tamperdelta','tamperparents','tampertree'}:
+    if case=='tamperdelta':
+        pathlib.Path('static/metrics/extra.json').write_text('SYNTHETIC extra')
+        subprocess.run(['/usr/bin/git','add','static/metrics/extra.json'],check=True)
+    if case=='tampertree':
+        pathlib.Path('content/posts/synthetic.md').write_text('SYNTHETIC tampered')
+        subprocess.run(['/usr/bin/git','add','content/posts/synthetic.md'],check=True)
+    if case=='tamperparents':
+        side=subprocess.check_output(['/usr/bin/git','commit-tree','HEAD^{tree}','-p','HEAD','-m','synthetic side'],text=True).strip()
+        pathlib.Path('.git/MERGE_HEAD').write_text(side+'\\n')
 os.execv('/usr/bin/git',['/usr/bin/git']+a)
 '''
 PRODUCER = '''#!/usr/bin/python3
@@ -107,14 +118,26 @@ if case in {'postsource','postindex'}:
 if case=='postadvance':
     subprocess.run(['/usr/bin/git','commit','--allow-empty','-m','synthetic concurrent advance'],cwd=r/'peer',check=True)
     subprocess.run(['/usr/bin/git','push','origin','main'],cwd=r/'peer',check=True)
+if case=='postoperation':
+    (repo/'.git/CHERRY_PICK_HEAD').write_text(subprocess.check_output(['/usr/bin/git','rev-parse','HEAD'],cwd=repo,text=True))
 if case=='producerfail': sys.exit(19)
 '''
 
 
+SNAPSHOT = """#!/bin/bash
+/usr/bin/python3 -I -S -B - <<'PY'
+import json,pathlib
+p=pathlib.Path('static/metrics/snapshot.json')
+n=json.loads(p.read_text())['articlesTotal']+1
+p.write_text(json.dumps(dict(articlesTotal=n, articlesPublishedToday=0, lastSuccessfulRun=None, pipelineErrorsToday=0, uptimeSinceRestart=0, generatedAt='2026-09-08T00:00:%02dZ'%n))+'\\n')
+PY
+"""
+
 class LegacyShell(unittest.TestCase):
     def test_isolation(self):
-        script = "import pathlib,socket;\nfor f in [lambda: list(pathlib.Path('/home/pertt').iterdir()), lambda: pathlib.Path('/tmp/legacy-outside-guard').write_text('x'), lambda: socket.socket()]:\n try: f()\n except PermissionError: pass\n else: raise AssertionError('guard failed')\nprint('three guard denials verified')"
-        p = run(['/usr/bin/python3', '-c', script], ROOT, guarded=True)
+        script = "import pathlib,socket;\nfor f in [lambda: list(pathlib.Path('/etc').iterdir()), lambda: pathlib.Path('/tmp/legacy-outside-guard').write_text('x'), lambda: socket.socket()]:\n try: f()\n except PermissionError: pass\n else: raise AssertionError('guard failed')\nprint('three guard denials verified')"
+        self.assertTrue(Path('/etc').is_dir(), 'existing denied directory required')
+        p = run(['/usr/bin/python3', '-I', '-S', '-B', '-c', script], ROOT, guarded=True)
         print(p.stdout.strip())
 
     def test_wrapper_matrix(self):
@@ -122,6 +145,8 @@ class LegacyShell(unittest.TestCase):
                  'dirtyprotected','untrackedsource','dirtygenerated','postadvance',
                  'postfetch','postref','poststatus','postsource','postindex','pushfail',
                  'addfail','difffail','commitfail','producerfail','legacylock','workerlock','sharedlock']
+        operations = ['MERGE_HEAD','rebase-merge','rebase-apply','CHERRY_PICK_HEAD','REVERT_HEAD','sequencer','BISECT_START','BISECT_LOG']
+        cases += ['operation-'+s for s in operations] + ['postoperation','tamperdelta','tamperparents','tampertree','deltaerror']
         records = []
         for wrapper in ['auto_publish.sh','auto_publish_copy.sh','firehose_cron.sh']:
             for case in cases:
@@ -131,7 +156,9 @@ class LegacyShell(unittest.TestCase):
                     (repo/'scripts').mkdir(); (r/'bin').mkdir()
                     for name in [wrapper,'legacy_publish_git.sh']:
                         (repo/'pipeline'/name).write_bytes((SOURCE/name).read_bytes())
-                    (repo/'scripts/daily-snapshot.sh').write_text('#!/bin/bash\n# Synthetic no-op boundary\nexit 0\n')
+                    (repo/'scripts/daily-snapshot.sh').write_text(SNAPSHOT)
+                    (repo/'static/metrics').mkdir(parents=True)
+                    (repo/'static/metrics/snapshot.json').write_text('{"articlesTotal":0}\n')
                     (repo/'AGENTS.md').write_bytes(b'SYNTHETIC protected source\n')
                     (repo/'content/posts/existing.md').write_bytes(b'SYNTHETIC existing article\n')
                     (repo/'.gitignore').write_text('pipeline/logs/\npipeline/.pipeline_lock\n')
@@ -145,6 +172,17 @@ class LegacyShell(unittest.TestCase):
                     for name, text in [('git',GIT_SHIM),('python3',PRODUCER)]:
                         p=r/'bin'/name; p.write_text(text); p.chmod(0o755)
                     env={**ENV,'PATH':str(r/'bin')+':/usr/bin:/bin','FIXTURE':str(r),'CASE':case}
+                    operation_bytes=None
+                    if case.startswith('operation-'):
+                        state=case.removeprefix('operation-'); marker=repo/'.git'/state
+                        if state=='MERGE_HEAD':
+                            side=git(repo,'commit-tree','HEAD^{tree}','-p','HEAD','-m','synthetic pending merge')
+                            git(repo,'merge','--no-ff','--no-commit',side)
+                        elif state in {'rebase-merge','rebase-apply','sequencer'}:
+                            marker.mkdir(); (marker/'synthetic').write_text('SYNTHETIC operation')
+                        else: marker.write_text(git(repo,'rev-parse','HEAD')+'\n')
+                        operation_bytes={str(f):f.read_bytes() for f in ([marker] if marker.is_file() else marker.rglob('*')) if f.is_file()}
+                        self.assertEqual(git(repo,'status','--porcelain=v1'),'')
                     if case=='stale':
                         git(r/'peer','commit','--allow-empty','-m','synthetic advance'); git(r/'peer','push','origin','main')
                     if case=='branch': git(repo,'switch','-c','not-main')
@@ -162,18 +200,32 @@ class LegacyShell(unittest.TestCase):
                     (r/'wrapper.log').write_text(p.stdout)
                     if lock: lock.close()
                     self.assertEqual(p.returncode==0, case=='current',p.stdout)
-                    pre = case in cases[:10] or case in {'legacylock','workerlock','sharedlock'}
+                    pre = case in cases[:10] or case in {'legacylock','workerlock','sharedlock'} or case.startswith('operation-')
+                    if operation_bytes:
+                        for f,b in operation_bytes.items(): self.assertEqual(Path(f).read_bytes(),b)
+                    if case=='postoperation': self.assertEqual((repo/'.git/CHERRY_PICK_HEAD').read_text().strip(),head)
                     self.assertEqual((r/'produced').exists(), not pre or case=='current',p.stdout)
                     for rel, digest in before.items():
+                        if rel=='static/metrics/snapshot.json' and (r/'produced').exists(): continue
                         if rel=='AGENTS.md' and case in {'postsource','postindex'}: continue
                         self.assertEqual(hashlib.sha256((repo/rel).read_bytes()).hexdigest(),digest,rel)
-                    if (r/'produced').exists():
+                    if (r/'produced').exists() and case!='tampertree':
                         self.assertEqual((repo/'content/posts/synthetic.md').read_bytes(),b'SYNTHETIC generated article\n')
                     if case in {'postsource','postindex'}:
                         self.assertEqual((repo/'AGENTS.md').read_bytes(),b'SYNTHETIC concurrent protected edit\n')
                     if case=='postindex': self.assertEqual(git(repo,'diff','--cached','--name-only'),'AGENTS.md')
-                    if case=='current': self.assertEqual(git(repo,'rev-parse','HEAD'),git(r/'remote.git','rev-parse','main'))
-                    elif case not in {'pushfail'}: self.assertEqual(git(repo,'rev-parse','HEAD'),head)
+                    if case=='current':
+                        self.assertEqual(git(repo,'rev-parse','HEAD'),git(r/'remote.git','rev-parse','main'))
+                        self.assertEqual(git(repo,'status','--porcelain=v1'),'')
+                        if wrapper!='firehose_cron.sh':
+                            self.assertEqual(json.loads((repo/'static/metrics/snapshot.json').read_text())['articlesTotal'],1)
+                        again=run(['/bin/bash',str(repo/'pipeline'/wrapper)],repo,env,guarded=True,check=False)
+                        self.assertEqual(again.returncode,0,again.stdout)
+                        self.assertEqual(git(repo,'status','--porcelain=v1'),'')
+                        self.assertEqual(git(repo,'rev-parse','HEAD'),git(r/'remote.git','rev-parse','main'))
+                        if wrapper!='firehose_cron.sh':
+                            self.assertEqual(json.loads((repo/'static/metrics/snapshot.json').read_text())['articlesTotal'],2)
+                    elif case not in {'pushfail','tamperdelta','tamperparents','tampertree','deltaerror'}: self.assertEqual(git(repo,'rev-parse','HEAD'),head)
                     if case not in {'current','postadvance'}: self.assertEqual(git(r/'remote.git','rev-parse','main'),remote)
                     records.append({'wrapper':wrapper,'case':case,'rc':p.returncode,'preservation':'PASS','before_sha256':before})
                     print('PASS',wrapper,case,flush=True)

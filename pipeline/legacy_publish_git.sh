@@ -20,6 +20,14 @@ legacy_fetch() {
     git fetch --no-tags origin '+refs/heads/main:refs/remotes/origin/main' || legacy_die 'fetch failed'
     LEGACY_REMOTE=$(git rev-parse --verify 'refs/remotes/origin/main^{commit}') || legacy_die 'main ref lookup failed'
 }
+legacy_no_operation() {
+    local state path git_dir
+    git_dir=$(git rev-parse --absolute-git-dir) || legacy_die 'operation state lookup failed'
+    for state in MERGE_HEAD rebase-merge rebase-apply CHERRY_PICK_HEAD REVERT_HEAD sequencer BISECT_START BISECT_LOG; do
+        path="$git_dir/$state"
+        [[ ! -e "$path" && ! -L "$path" ]] || legacy_die "active Git operation ($state); preserved"
+    done
+}
 legacy_clean() {
     local status
     status=$(git status --porcelain=v1 --untracked-files=all) || legacy_die 'status failed'
@@ -35,14 +43,17 @@ legacy_admit() {
     exec {LEGACY_WORKER_FD}>"$worker_lock"
     flock -n "$LEGACY_WORKER_FD" || legacy_die 'transactional worker holds checkout lock'
     [[ ! -e "$PROJECT_DIR/pipeline/.pipeline_lock" ]] || legacy_die 'legacy PID lock exists; operator review required'
+    legacy_no_operation
     legacy_clean
     LEGACY_BASE=$(git rev-parse --verify 'HEAD^{commit}') || legacy_die 'HEAD lookup failed'
     legacy_fetch
     [[ "$LEGACY_BASE" == "$LEGACY_REMOTE" ]] || legacy_die 'checkout is not exact current main; no work admitted'
+    legacy_no_operation
     legacy_clean
 }
 legacy_postwork_check() {
     legacy_identity
+    legacy_no_operation
     local head
     head=$(git rev-parse --verify 'HEAD^{commit}') || legacy_die 'postwork HEAD lookup failed'
     [[ "$head" == "$LEGACY_BASE" ]] || legacy_die 'local HEAD changed during work; preserved'
@@ -60,6 +71,7 @@ legacy_commit_and_push() {
     [[ -n "$status" ]] || { printf '[legacy-git] no changes\n'; return; }
     ARTICLE_COUNT=0
     local -a paths=()
+    local approved="" staged actual parents tree committed_tree
     while IFS= read -r line; do
         path=${line:3}
         # Quoted/newline/rename paths intentionally rejected rather than guessed.
@@ -72,11 +84,32 @@ legacy_commit_and_push() {
             ARTICLE_COUNT=$((ARTICLE_COUNT + 1))
         fi
         paths+=("$path")
+        if [[ "${line:0:2}" == '??' ]]; then
+            approved+=$'A\t'"$path"$'\n'
+        else
+            approved+=$'M\t'"$path"$'\n'
+        fi
     done <<< "$status"
     git add -- "${paths[@]}" || legacy_die 'staging failed; output preserved'
+    approved=$(printf '%s' "$approved" | LC_ALL=C sort)
+    staged=$(git -c core.quotePath=true diff --cached --name-status --no-renames) || legacy_die 'staged delta lookup failed'
+    staged=$(printf '%s\n' "$staged" | LC_ALL=C sort)
+    [[ "$staged" == "$approved" ]] || legacy_die 'staged delta differs from approved output; preserved'
+    tree=$(git write-tree) || legacy_die 'approved tree lookup failed'
+    legacy_postwork_check
+    legacy_no_operation
     git commit -m "Auto-publish: guarded legacy output ($(date -u '+%Y-%m-%d %H:%M UTC'))" || legacy_die 'commit failed; output preserved'
     local commit
     commit=$(git rev-parse --verify 'HEAD^{commit}') || legacy_die 'commit lookup failed'
+    parents=$(git rev-list --parents -n 1 "$commit") || legacy_die 'commit parents lookup failed'
+    [[ "$parents" == "$commit $LEGACY_BASE" ]] || legacy_die 'commit must have sole parent LEGACY_BASE; preserved'
+    actual=$(git -c core.quotePath=true diff-tree --no-commit-id --name-status --no-renames -r "$LEGACY_BASE" "$commit") || legacy_die 'committed delta lookup failed'
+    actual=$(printf '%s\n' "$actual" | LC_ALL=C sort)
+    [[ "$actual" == "$approved" ]] || legacy_die 'committed delta differs from approved output; preserved'
+    committed_tree=$(git rev-parse "$commit^{tree}") || legacy_die 'committed tree lookup failed'
+    [[ "$committed_tree" == "$tree" ]] || legacy_die 'committed tree differs from approved output; preserved'
+    legacy_no_operation
+    legacy_clean
     # Normal push only. A race fails, retaining the local commit, never rebases it.
     git push origin "$commit:refs/heads/main" || legacy_die 'push failed; local commit preserved'
     legacy_fetch
