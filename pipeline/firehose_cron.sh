@@ -12,6 +12,9 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 LOG_DIR="$SCRIPT_DIR/logs"
 LOG_FILE="$LOG_DIR/firehose_$(date -u +%Y%m%d).log"
 
+cd "$PROJECT_DIR"
+source "$SCRIPT_DIR/legacy_publish_git.sh"
+legacy_admit
 mkdir -p "$LOG_DIR"
 
 echo "" | tee -a "$LOG_FILE"
@@ -42,18 +45,7 @@ fi
 
 # Commit and push if new content was added
 cd "$PROJECT_DIR"
-# CRITICAL: Reset index first to prevent bridge-staged files (layouts/, docs/, etc.)
-# from being accidentally swept into firehose commits. See 0dfb184 revert.
-git reset HEAD -- . 2>/dev/null || true
-git add content/ pipeline/.pipeline_lock pipeline/metrics.jsonl 2>/dev/null || true
-if git diff --cached --quiet; then
-    echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] No new content to commit" | tee -a "$LOG_FILE"
-else
-    ARTICLE_COUNT=$(git diff --cached --name-only 2>/dev/null | grep -c "^content/posts/" || echo "0")
-    git commit -m "auto(firehose): ${ARTICLE_COUNT} articles $(date -u +%Y-%m-%dT%H:%M:%SZ)" 2>&1 | tee -a "$LOG_FILE"
-    git push origin main 2>&1 | tee -a "$LOG_FILE"
-    echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] Committed and pushed ${ARTICLE_COUNT} firehose articles" | tee -a "$LOG_FILE"
-fi
+legacy_commit_and_push
 
 echo "[$(date -u +%Y-%m-%dT%H:%M:%SZ)] === firehose_cron done ===" | tee -a "$LOG_FILE"
 
