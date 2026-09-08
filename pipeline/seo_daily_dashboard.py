@@ -227,26 +227,67 @@ def fetch_sc_data(token: str) -> dict:
         "orderBy": [{"fieldName": "impressions", "sortOrder": "DESCENDING"}]
     })
 
-    top_queries = q_resp.get("rows", [])
-    top_pages   = p_resp.get("rows", [])
+    return summarize_sc_data(q_resp, p_resp, ctr_resp, start, end)
 
-    # Filter low-CTR pages
-    low_ctr = [
-        r for r in ctr_resp.get("rows", [])
-        if r.get("impressions", 0) >= 200 and r.get("ctr", 1) < 0.02
-    ]
+
+def summarize_sc_data(q_resp: dict, p_resp: dict, ctr_resp: dict,
+                      start: str, end: str) -> dict:
+    """Describe fixed provider samples, never property totals or full coverage.
+
+    This reporter consumes raw GSC fractions, NOT the canonical export's legacy
+    percent-valued `ctr`. Keep old keys as explicitly deprecated aliases for
+    external consumers whose activity is unknown. No unit inference/conversion
+    occurs here; Python's percent formatter performs the sole display conversion.
+    """
+    def rows(response):
+        return [dict(r, ctr_fraction=r.get("ctr")) for r in response.get("rows", [])]
+
+    top_queries = rows(q_resp)
+    top_pages = rows(p_resp)
+    candidates = rows(ctr_resp)
+    low_ctr = [r for r in candidates
+               if r.get("impressions", 0) >= 200
+               and r["ctr_fraction"] is not None and r["ctr_fraction"] < 0.02]
     low_ctr.sort(key=lambda r: r.get("impressions", 0), reverse=True)
+    selected_clicks = sum(r.get("clicks", 0) for r in top_queries)
+    selected_impressions = sum(r.get("impressions", 0) for r in top_queries)
 
-    total_clicks      = sum(r.get("clicks", 0) for r in top_queries)
-    total_impressions = sum(r.get("impressions", 0) for r in q_resp.get("rows", []))
+    def sample(response, limit, stored):
+        count = len(response.get("rows", []))
+        return {
+            "requested_limit": limit, "returned_rows": count,
+            "stored_rows": stored, "row_limit_reached": count >= limit,
+            # sc_request returns {} on HTTP errors; omitted rows cannot prove
+            # a successful empty response, let alone full property coverage.
+            "response_status": "rows_present" if "rows" in response else "empty_or_unavailable",
+        }
 
     return {
+        "schema_version": 2,
+        "schema": "legacy_seo_sc_sample_v2",
+        "units": {"ctr": "fraction", "ctr_fraction": "fraction",
+                  "clicks": "count", "impressions": "count", "position": "rank"},
+        "deprecated_aliases": {"total_clicks": "selected_query_clicks",
+                               "total_impressions": "selected_query_impressions",
+                               "row.ctr": "row.ctr_fraction"},
         "period": f"{start} → {end}",
+        "query_window": {"start_date": start, "end_date": end},
         "top_queries": top_queries[:10],
         "top_pages": top_pages[:10],
         "low_ctr_pages": low_ctr[:5],
-        "total_clicks": total_clicks,
-        "total_impressions": total_impressions,
+        "selected_query_clicks": selected_clicks,
+        "selected_query_impressions": selected_impressions,
+        "total_clicks": selected_clicks,  # Deprecated: selected-query sum only.
+        "total_impressions": selected_impressions,  # NOT property totals.
+        "property_totals": None,  # Not requested by this retained reporter.
+        "completeness": {"scope": "fixed_samples", "complete": False,
+                         "paginated": False, "provider_omissions": None,
+                         "property_totals_available": False},
+        "samples": {
+            "queries": sample(q_resp, 20, len(top_queries[:10])),
+            "pages": sample(p_resp, 10, len(top_pages[:10])),
+            "low_ctr_candidates": sample(ctr_resp, 50, len(low_ctr[:5])),
+        },
         "has_data": len(top_queries) > 0,
     }
 
@@ -290,33 +331,41 @@ def format_report(ga4: dict, sc: dict, date_str: str) -> str:
     lines.append("")
 
     # SC section
+    lines.append("Search Console: rajattu otos, ei koko sivuston lukuja; kattavuus tuntematon.")
     if sc["has_data"]:
         lines.append(f"**Search Console** ({sc['period']})")
-        lines.append(f"Klikkaukset: {sc['total_clicks']:,} | Näyttökerrat: {sc['total_impressions']:,}")
+        clicks = sc.get("selected_query_clicks", sc.get("total_clicks", 0))
+        impressions = sc.get("selected_query_impressions", sc.get("total_impressions", 0))
+        lines.append(f"Valittujen hakusanojen summa: {clicks:,} klikkausta | {impressions:,} näyttökertaa")
+        if sc.get("samples"):
+            samples = sc["samples"]
+            counts = [f"{samples[key]['returned_rows']}/{samples[key]['requested_limit']}"
+                      for key in ("queries", "pages", "low_ctr_candidates")]
+            lines.append("Otosrivit / pyyntöraja (hakusanat, sivut, CTR-ehdokkaat): " + ", ".join(counts))
 
         if sc["top_queries"]:
-            lines.append("\nTop hakusanat:")
+            lines.append("\nTop hakusanat (otoksesta; CTR prosentteina):")
             for r in sc["top_queries"][:5]:
                 q    = r.get("keys", ["?"])[0]
                 cl   = r.get("clicks", 0)
                 imp  = r.get("impressions", 0)
-                ctr  = r.get("ctr", 0)
+                ctr  = r.get("ctr_fraction", r.get("ctr"))
+                ctr_text = f"{ctr:.1%}" if ctr is not None else "ei saatavilla"
                 pos  = r.get("position", 0)
-                lines.append(f"  `{q[:40]}` — {cl} klik, {imp:,} näyttöä, {ctr:.1%} CTR, pos {pos:.1f}")
+                lines.append(f"  `{q[:40]}` — {cl} klik, {imp:,} näyttöä, {ctr_text} CTR, pos {pos:.1f}")
 
         if sc["low_ctr_pages"]:
-            lines.append("\n⚠️ Matala CTR (parannuspotentiaalia):")
+            lines.append("\n⚠️ Matala CTR (rajatusta sivuotoksesta):")
             for r in sc["low_ctr_pages"][:3]:
                 page = r.get("keys", ["?"])[0]
                 slug = page.rstrip("/").split("/")[-1][:50]
                 imp  = r.get("impressions", 0)
-                ctr  = r.get("ctr", 0)
+                ctr  = r.get("ctr_fraction", r.get("ctr"))
+                ctr_text = f"{ctr:.1%}" if ctr is not None else "ei saatavilla"
                 pos  = r.get("position", 0)
-                lines.append(f"  `{slug}` — {imp:,} näyttöä, {ctr:.1%} CTR, pos {pos:.1f} → korjaa otsikko/kuvaus")
+                lines.append(f"  `{slug}` — {imp:,} näyttöä, {ctr_text} CTR, pos {pos:.1f} → korjaa otsikko/kuvaus")
     else:
-        lines.append("**Search Console:** Ei dataa vielä (2-3 päivän viive uusille kiinteistöille)")
-        lines.append("⚠️ Muistutus: Sitemap pitää rekisteröidä Search Consoleen:")
-        lines.append("  → <https://search.google.com/search-console> → Sitemaps → `https://uutistenlukija.fi/sitemap.xml`")
+        lines.append("**Search Console:** Hakusanaotos tyhjä tai ei saatavilla; ei päätelmää sivuston liikenteestä.")
 
     return "\n".join(lines)
 
@@ -389,7 +438,10 @@ def main():
         "ga4_has_data": ga4["has_data"],
         "sc_has_data": sc["has_data"],
         "ga4_sessions": ga4["totals"][0] if ga4.get("totals") else 0,
-        "sc_clicks": sc.get("total_clicks", 0),
+        "sc_selected_query_clicks": sc["selected_query_clicks"],
+        "sc_clicks": sc["selected_query_clicks"],  # Deprecated compatibility alias.
+        "sc_clicks_scope": "selected_query_sample_not_property_total",
+        "deprecated_aliases": {"sc_clicks": "sc_selected_query_clicks"},
     }
     with open(STATE_FILE, "w") as f:
         json.dump(state, f, indent=2)
