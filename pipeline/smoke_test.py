@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Pipeline smoke test: dry-import every .py module, verify cross-module
-function references, check auto_publish.sh syntax.
+Pipeline smoke test: import runtime modules, compile test entrypoints without
+importing them, verify cross-module references, check auto_publish.sh syntax.
 
 Exit 0 = all clear, exit 1 = failures found.
 
@@ -45,13 +45,24 @@ CRITICAL_IMPORTS = {
 }
 
 
+def is_test_entrypoint(path):
+    """Tests run separately: their permanent audit hooks cannot share smoke.
+
+    Keep production run_pipeline.py and other run_* utilities discoverable.
+    Naming conventions cover new test modules/runners, not a stale allowlist.
+    """
+    stem = path.stem
+    return (stem.startswith("test_") or stem.endswith("_test")
+            or (stem.startswith("run_") and stem.endswith("_tests")))
+
+
 def main():
     verbose = "--verbose" in sys.argv or "-v" in sys.argv
     fails = []
     warns = []
     ok_count = 0
 
-    # ── 1. Dry-import every .py module ──────────────────────────────────────
+    # ── 1. Import runtime modules; syntax-check isolated test entrypoints ────
     print("═" * 60)
     print(" Pipeline Smoke Test")
     print("═" * 60)
@@ -59,12 +70,24 @@ def main():
     print("── Module imports ──")
 
     py_files = sorted(PIPELINE_DIR.glob("*.py"))
-    skip = {"smoke_test.py", "__init__.py", "test_ghost_publish.py", "test_key_points.py", "test_templates.py", "test_monica_writer.py"}
+    skip = {"smoke_test.py", "__init__.py"}
 
     for f in py_files:
         if f.name in skip:
             continue
         mod_name = f.stem
+        if is_test_entrypoint(f):
+            # Syntax coverage is not runtime coverage. Source validation invokes
+            # the bounded standalone suites in their own Python processes.
+            try:
+                compile(f.read_bytes(), str(f), "exec")
+            except (SyntaxError, OSError, ValueError) as e:
+                fails.append(f"SYNTAX {mod_name}: {e}")
+                print(f"  ✗ {mod_name}: {e}")
+            else:
+                ok_count += 1
+                print(f"  ✓ {mod_name} (syntax only; tests run separately)")
+            continue
         try:
             importlib.import_module(mod_name)
             ok_count += 1
