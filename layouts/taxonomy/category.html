@@ -98,7 +98,7 @@
             <span class="portal-feed-item__relative">{{ partial "relative-date.html" . }}</span>
           </div>
           <a class="portal-feed-item__thumb" href="{{ .RelPermalink }}">
-            <img src="{{ $itemImg }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="132" height="92" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='{{ printf "/images/categories/%s.jpg" ($itemCat | lower) }}'">
+            <img src="{{ partial "display-image.html" $itemImg }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="132" height="92" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='{{ partial "display-image.html" (printf "/images/categories/%s.jpg" ($itemCat | lower)) }}'">
           </a>
         </article>
         {{ end }}

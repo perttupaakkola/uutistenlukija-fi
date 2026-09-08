@@ -84,7 +84,7 @@
           {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}" sizes="(max-width: 920px) 100vw, 760px">{{ end -}}
           {{- if $heroSrcset }}<source type="image/webp" srcset="{{ $heroSrcset }}" sizes="(max-width: 920px) 100vw, 760px">{{ end -}}
           <img
-            src="{{ $heroSrc }}"
+            src="{{ partial "display-image.html" $heroSrc }}"
             alt="{{ partial "image-alt.html" $lead }}"
             class="reference-front-package__lead-img{{ if not $hasHeroImage }} reference-front-package__lead-img--fallback{{ end }}"
             loading="eager"
@@ -92,7 +92,7 @@
             decoding="async"
             width="1200" height="700"
             onload="this.classList.add('img-loaded')"
-            onerror="if(this.dataset.fallbackApplied==='1'){this.classList.add('img-loaded');return;}this.dataset.fallbackApplied='1';this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='{{ printf "/images/categories/%s.jpg" ($cat | lower) }}';this.classList.add('img-loaded')">
+            onerror="if(this.dataset.fallbackApplied==='1'){this.classList.add('img-loaded');return;}this.dataset.fallbackApplied='1';this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='{{ partial "display-image.html" (printf "/images/categories/%s.jpg" ($cat | lower)) }}';this.classList.add('img-loaded')">
         </picture>
       </a>
       <div class="reference-front-package__lead-body">
@@ -124,7 +124,7 @@
           {{- $itemThumb := .Params.image_thumb | default $itemImg -}}
           <article class="reference-front-package__editor-card">
             <a href="{{ .Permalink }}" class="reference-front-package__editor-thumb">
-              <img src="{{ $itemThumb }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="300" height="200" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='{{ printf "/images/categories/%s.jpg" ($itemCat | lower) }}'">
+              <img src="{{ partial "display-image.html" $itemThumb }}" alt="{{ partial "image-alt.html" . }}" loading="lazy" decoding="async" width="300" height="200" onerror="if(this.dataset.fb==='1')return;this.dataset.fb='1';this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='{{ partial "display-image.html" (printf "/images/categories/%s.jpg" ($itemCat | lower)) }}'">
             </a>
             <div class="reference-front-package__editor-body">
               <span class="reference-front-package__editor-kicker">{{ $itemCat }}</span>

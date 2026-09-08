@@ -28,7 +28,7 @@
 {{- $href   := .permalink | default "#" -}}
 {{- $track  := .track | default "" -}}
 {{- $onclick := .onclick | default "" -}}
-{{- $fallback := .fallback | default "/images/categories/kotimaa.jpg" -}}
+{{- $fallback := partial "display-image.html" (.fallback | default "/images/categories/kotimaa.jpg") -}}
 
 {{- $loading  := cond $eager "eager" "lazy" -}}
 {{- $fetchpri := cond $eager "high" "auto" -}}

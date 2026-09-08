@@ -194,7 +194,7 @@ Fixture article text.
             self.assertIn('Ilmoita virheestä', html)
             self.assertNotIn('kirjoittaa alkuperäisiä', html)
             self.assertIn('Kuvituskuva – ei kuva uutisen tapahtumasta', html)
-            self.assertIn('/images/illustrations/kotimaa.jpg' if 'hallinto-' not in slug else '/images/categories/talous.jpg', html)
+            self.assertIn('/images/illustrations/kotimaa.jpg' if 'hallinto-' not in slug else '/images/illustrations/talous.webp', html)
         tyre = self.page('posts/' + ARTICLES[0])
         self.assertIn('49 prosenttia', tyre)
         self.assertIn('yhtä harvoin 24 prosenttia', tyre)

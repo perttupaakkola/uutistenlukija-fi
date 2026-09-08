@@ -17,7 +17,7 @@
 <a href="{{ .Permalink }}" class="category-featured">
   {{ with .Params.image }}
   <div class="category-featured__img-wrap">
-    <img src="{{ . }}" alt="{{ partial "image-alt.html" $featurePage }}" class="category-featured__img" loading="eager" decoding="async" fetchpriority="high" width="260" height="146" onerror="if(this.dataset.fallbackApplied==='1'){return;}this.dataset.fallbackApplied='1';this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='/images/categories/{{ $featCat | lower }}.jpg'">
+    <img src="{{ partial "display-image.html" . }}" alt="{{ partial "image-alt.html" $featurePage }}" class="category-featured__img" loading="eager" decoding="async" fetchpriority="high" width="260" height="146" onerror="if(this.dataset.fallbackApplied==='1'){return;}this.dataset.fallbackApplied='1';this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='{{ partial "display-image.html" (printf "/images/categories/%s.jpg" ($featCat | lower)) }}'">
   </div>
   {{ end }}
   <div class="category-featured__body">

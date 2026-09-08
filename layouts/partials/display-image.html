@@ -1,2 +1,18 @@
-{{- /* Rights-cleared category original retained; optimized display derivative. */ -}}
-{{- return (replace . "/images/categories/kotimaa.jpg" "/images/illustrations/kotimaa.jpg") -}}
+{{- /* Retained category originals; display-only derivatives. Match exact local
+      paths, not external URLs, article photos or similarly named files. Keep
+      query/fragment suffixes and all caller-owned alt/caption/credit metadata. */ -}}
+{{- $src := . -}}
+{{- $path := replaceRE "[?#].*$" "" $src -}}
+{{- $mapping := dict
+  "/images/categories/kotimaa.jpg" "/images/illustrations/kotimaa.jpg"
+  "/images/categories/talous.jpg" "/images/illustrations/talous.webp"
+  "/images/categories/ulkomaat.jpg" "/images/illustrations/ulkomaat.webp"
+  "/images/categories/kulttuuri.jpg" "/images/illustrations/kulttuuri.webp"
+  "/images/categories/teknologia.jpg" "/images/illustrations/teknologia.webp"
+  "/images/categories/tiede.jpg" "/images/illustrations/tiede.webp"
+  "/images/categories/urheilu.jpg" "/images/illustrations/urheilu.webp"
+-}}
+{{- with index $mapping $path -}}
+  {{- $src = printf "%s%s" . (strings.TrimPrefix $path $src) -}}
+{{- end -}}
+{{- return $src -}}

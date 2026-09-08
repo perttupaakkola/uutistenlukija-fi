@@ -102,7 +102,7 @@
 {{/* ── Fallback URL for onerror ───────────────────────────────── */}}
 {{ $fallbackHash := substr (md5 .Permalink) 0 8 }}
 {{ $fallbackCat  := index .Params.categories 0 | lower | default "kotimaa" }}
-{{ $fallbackSrc  := printf "/images/categories/%s.jpg?v=%s" $fallbackCat $fallbackHash }}
+{{ $fallbackSrc  := partial "display-image.html" (printf "/images/categories/%s.jpg?v=%s" $fallbackCat $fallbackHash) }}
 
 {{/* ── Default img src (JPEG desktop, or original if static) ─── */}}
 {{ $defaultSrc := $img }}

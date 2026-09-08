@@ -27,12 +27,12 @@
     <picture>
       {{- if $avifSrcset }}<source type="image/avif" srcset="{{ $avifSrcset }}" sizes="260px">{{ end -}}
       {{- if $webpSrcset }}<source type="image/webp" srcset="{{ $webpSrcset }}" sizes="260px">{{ end -}}
-      <img src="{{ $src }}"
+      <img src="{{ partial "display-image.html" $src }}"
            alt="{{ partial "image-alt.html" $ }}"
            class="category-featured__img"
            loading="eager" decoding="async" fetchpriority="high"
            width="260" height="146"
-           onerror="this.onerror=null;this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='/images/categories/{{ $featCat | lower }}.jpg';this.classList.add('img-loaded')">
+           onerror="this.onerror=null;this.alt='Kuvituskuva – ei kuva uutisen tapahtumasta';this.src='{{ partial "display-image.html" (printf "/images/categories/%s.jpg" ($featCat | lower)) }}';this.classList.add('img-loaded')">
     </picture>
   </div>
   {{ end }}
