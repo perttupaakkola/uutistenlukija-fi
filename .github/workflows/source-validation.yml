@@ -41,6 +41,10 @@ jobs:
         run: |
           python -m unittest scripts.test_collect_analytics scripts.test_analytics_rebuild scripts.test_analytics_freshness_evidence scripts.test_analytics_review scripts.test_analytics_projection scripts.test_business_control_panel
           node scripts/test_event_tracking_consent.js
+      - name: Retained legacy publishing Git safety
+        run: python3 -I -B pipeline/test_legacy_publish_git.py
+      - name: Retained SEO reporter contract
+        run: python3 -I -B pipeline/test_seo_daily_dashboard_contract.py
       - name: Publishing regressions
         env:
           PYTHONPATH: pipeline
