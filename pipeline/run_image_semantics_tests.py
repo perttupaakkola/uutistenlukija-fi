@@ -56,7 +56,9 @@ def guard(event, args):
             os.O_WRONLY | os.O_RDWR | os.O_CREAT | os.O_TRUNC | os.O_APPEND
         ):
             writable(value)
-        elif path.is_relative_to(ROOT) and path.suffix not in ('.py', '.pyc'):
+        # TMPDIR may be inside the worktree; owned fixtures remain readable.
+        elif (path.is_relative_to(ROOT) and not path.is_relative_to(SCRATCH)
+              and path.suffix not in ('.py', '.pyc')):
             deny('project runtime/data read forbidden')
     elif event in ('os.mkdir', 'os.remove', 'os.rmdir', 'os.chmod', 'os.utime'):
         index = {'os.mkdir': 2, 'os.chmod': 2, 'os.utime': 3}.get(event, 1)

@@ -67,7 +67,7 @@ SENSITIVE_PREFIXES = (
     "ampum", "hyökkä", "isku", "konflikt", "kuol", "murh", "ohju",
     "diabe", "loukkaantu", "pahoinpit", "rikos", "räjäh", "sair", "sot",
     "surm", "syöp", "syöv", "tauti", "terror", "tervey", "tulipal", "uhr",
-    "väkivalt", "accident", "attack", "cancer", "conflict", "crime", "death",
+    "väkivalt", "väkivall", "accident", "attack", "cancer", "conflict", "crime", "death",
     "disease", "health", "missile", "murder", "shoot", "terror", "victim", "war",
 )
 

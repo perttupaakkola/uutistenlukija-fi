@@ -70,10 +70,10 @@ _AUDIT_WINTER_PREFIXES = ("talvi", "lum", "jäis", "winter", "snow", "icy", "ice
 _AUDIT_SUMMER_EXACT = {"kesä", "kesän", "kesällä", "summer", "elokuu", "august"}
 _AUDIT_SUMMER_PREFIXES = ("kesä", "helle", "summer", "elokuu", "august")
 _AUDIT_SENSITIVE_PREFIXES = (
-    "murh", "tapp", "tapet", "kuole", "väkivalt", "pahoinpit", "rikos",
+    "murh", "tapp", "tapet", "kuole", "väkivalt", "väkivall", "pahoinpit", "rikos",
     "puukot", "ryöst", "kavall", "raisk", "seksuaal", "hyökkä", "ohjus",
     "sotilas", "sodan", "sota",
-    "konflikt", "räjäh", "pommi", "tulipal", "onnettom", "uhri", "sairau",
+    "konflikt", "räjäh", "pommi", "tulipal", "onnettom", "uhr", "sairau",
     "tervey", "tauti", "hoito", "syöp", "diabet", "epidem", "pandem",
     "sikarutto", "murder", "killed", "death", "violence", "assault", "crime",
     "rape", "attack", "missile", "military", "war", "conflict", "explosion",

@@ -129,6 +129,97 @@ class AttributionTests(unittest.TestCase):
                 self.assertEqual(row['status'], 'ok', row['reason'])
 
 
+class FinnishSensitivityTests(unittest.TestCase):
+    # No person names or accident words may rescue these morphology cases.
+    PHRASES = ('väkivallan ehkäisyä', 'väkivallan uhreja', 'uhreja', 'uhrien tukemista')
+
+    def sensitive_texts(self):
+        for prefix in ('', *OUTLETS):
+            for phrase in self.PHRASES:
+                yield f'{prefix} {phrase}'.strip()
+
+    def assert_runtime_excluded(self, data):
+        inputs = fields(data)
+        brief = guard.build_visual_brief(**inputs)
+        self.assertFalse(brief.intent.named_person)
+        self.assertTrue(brief.intent.sensitive_story)
+        self.assertFalse(brief.intent.stock_ok)
+        self.assertFalse(brief.intent.generated_ok)
+        self.assertEqual(brief.intent.must_have, [RAIL])
+        self.assertEqual(guard.build_stock_queries(**inputs), [])
+        candidate = CANDIDATES['rail']
+        decision = guard.score_image_candidate(candidate, intent=brief.intent,
+                                               query='railway tracks', **inputs)
+        self.assertFalse(decision.accepted, decision.reasons)
+        for provider in ('unsplash', 'generated'):
+            judge = guard.judge_visual_candidate(candidate, brief=brief, provider=provider)
+            self.assertFalse(judge.accepted, judge.reasons)
+            self.assertTrue(judge.hard_fail)
+
+    def test_inflections_block_runtime_editorial_and_source_lanes(self):
+        for text in self.sensitive_texts():
+            for field in ('summary', 'content', 'key_points', 'source_text', 'research'):
+                with self.subTest(text=text, field=field):
+                    data = article(**{field: [text] if field == 'key_points' else text})
+                    self.assert_runtime_excluded(data)
+
+    def test_omitted_fourth_key_point_still_blocks_runtime_both_lanes(self):
+        for text in self.sensitive_texts():
+            with self.subTest(text=text):
+                data = article(key_points=['Hanke etenee.', 'Valmistelu jatkuu.',
+                                           'Päätös annetaan pian.', text])
+                _, fm, body = project(data)
+                self.assertEqual(len(fm['key_points']), 3)
+                self.assertNotIn(text, body)
+                self.assertNotIn(text, fm['key_points'])
+                # Unpublished points remain runtime safety input, not audit truth.
+                self.assert_runtime_excluded(data)
+
+    def test_inflections_independently_reject_stock_including_seo_description(self):
+        candidate = CANDIDATES['rail']
+        for text in self.sensitive_texts():
+            for field in ('summary', 'content', 'key_points', 'source_text', 'research', 'description'):
+                with self.subTest(text=text, field=field):
+                    data = article(**{field: [text] if field == 'key_points' else text},
+                                   image='https://images.unsplash.com/photo-fixture',
+                                   image_source='unsplash', image_category_fallback=False,
+                                   image_candidate_id=candidate['id'],
+                                   image_source_url=candidate['photo_page'],
+                                   image_candidate_url=candidate['photo_page'])
+                    _, fm, body = project(data)
+                    with patch.object(guard, 'build_image_intent',
+                                      side_effect=AssertionError('circular audit')):
+                        truth = audit._derive_audit_truth(
+                            fm, body, source_evidence=fields(data)['source_evidence'])
+                        status, reasons, *_ = audit._audit_stock_candidate(fm, truth)
+                    self.assertFalse(truth.named_person)
+                    self.assertTrue(truth.sensitive_story)
+                    self.assertFalse(truth.stock_ok)
+                    self.assertEqual(truth.acceptable_concepts, (RAIL,))
+                    self.assertEqual(status, 'flag', reasons)
+                    self.assertIn('sensitive article', '; '.join(reasons))
+
+    def test_safe_bare_and_exempt_outlet_railway_controls_remain_eligible(self):
+        for prefix in ('', *OUTLETS):
+            with self.subTest(prefix=prefix):
+                data = article(summary=f'{prefix} rautatiehanke etenee.'.strip())
+                inputs = fields(data)
+                intent = guard.build_image_intent(**inputs)
+                self.assertFalse(intent.named_person)
+                self.assertFalse(intent.sensitive_story)
+                self.assertTrue(intent.stock_ok)
+                self.assertTrue(intent.generated_ok)
+                self.assertEqual(len(guard.build_stock_queries(**inputs)), 3)
+                decision = guard.score_image_candidate(CANDIDATES['rail'], intent=intent,
+                                                       query='railway tracks', **inputs)
+                self.assertTrue(decision.accepted, decision.reasons)
+                _, fm, body = project(data)
+                truth = audit._derive_audit_truth(fm, body)
+                self.assertFalse(truth.named_person)
+                self.assertFalse(truth.sensitive_story)
+                self.assertTrue(truth.stock_ok)
+
+
 class FinalGroundingTests(unittest.TestCase):
     def test_unpublished_fourth_key_point_cannot_ground_positive_intent(self):
         data = article(title='Valmistelu jatkuu', content='Päätös annetaan myöhemmin.',
