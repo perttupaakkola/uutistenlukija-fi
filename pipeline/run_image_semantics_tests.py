@@ -93,6 +93,7 @@ allowed = {
     'test_image_semantics', 'test_image_pipeline_grounding',
     'test_audit_image_flow_independent', 'test_generation_policy_order',
     'test_image_query_tokens', 'test_image_provider_result',
+    'test_confidence_contract',
 }
 names = sys.argv[1:] or ['test_image_semantics']
 if not all(name.split('.')[0] in allowed for name in names):
