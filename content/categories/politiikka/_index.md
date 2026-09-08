@@ -1,4 +1,4 @@
 ---
 title: Politiikka
-description: "Kotimaan ja maailman poliittiset käänteet, päätöksenteko ja valtapelit. Syvällistä analyysia yhteiskunnan suunnasta."
+description: "Politiikan uutisarkisto. Tähän osioon luokitellut jutut näkyvät julkaisuajan mukaan."
 ---

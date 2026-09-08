@@ -25,6 +25,11 @@
         {{ end }}
       </div>
       <h1>{{ .Title }}</h1>
+      {{ if .Params.archive_status }}
+      <aside class="portal-empty" aria-label="Oppaan arkistotila">
+        <p><strong>Historiallinen opas – ei ajantasainen.</strong> Tämä keväällä 2026 julkaistu sisältö säilyy arkistossa. Sen tietoja ei ole tarkistettu nykyhetkeä varten, eikä sitä pidä käyttää ajantasaisena oppaana.</p>
+      </aside>
+      {{ end }}
       {{ with .Params.description }}<p class="portal-article-deck">{{ . }}</p>{{ end }}
       <div class="portal-article-byline">
         <strong>{{ .Params.author | default "Uutistenlukija" }}</strong>

@@ -1,6 +1,6 @@
 ---
 title: "Talous"
-seo_title: "Talousuutiset tänään – korot, hinnat ja yritykset | Uutistenlukija"
+seo_title: "Talousuutiset ja arkisto – korot, hinnat ja yritykset | Uutistenlukija"
 hero_title: "Talous-uutiset"
 url: "/kategoriat/talous/"
 aliases:

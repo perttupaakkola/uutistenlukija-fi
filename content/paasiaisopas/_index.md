@@ -8,5 +8,6 @@ archive_status: true
 
 **Arkistoitu:** Tämä vuoden 2026 pääsiäissivu säilyy historiallisena koosteena, eikä sen sisältöä enää päivitetä ajantasaisena pyhäoppaana.
 
-Kauppojen nykyiset poikkeusaukiolot tarkistetaan [ajantasaisesta kauppojen aukiolo-oppaasta](/oppaat/kauppojen-aukioloajat/).
+Kauppojen [viralliset tarkistuslinkit löytyvät aukiolo-oppaasta](/oppaat/kauppojen-aukioloajat/), jonka voimassaolo on päättynyt. Linkkien nykyistä toimivuutta tai tämän päivän myymäläkohtaisia aukioloaikoja ei ole vahvistettu. Tarkista oman myymäläsi tiedot ketjun omasta palvelusta ennen lähtöä.
+
 ---

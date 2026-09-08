@@ -4,6 +4,7 @@ description: "Mihin suomalaiset lähtevät pääsiäiseksi 2026? Laskettelukesku
 date: 2026-03-27
 lastmod: 2026-03-27
 draft: false
+archive_status: true
 categories: ["kotimaa"]
 ---
 
