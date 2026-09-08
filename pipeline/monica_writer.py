@@ -53,7 +53,6 @@ ALLOWED_CATEGORIES = {
     "Urheilu",
     "Kulttuuri",
     "Tiede",
-    "Uutiset",
 }
 
 DEFAULT_MONICA_AGENT = os.environ.get("MONICA_OPENCLAW_AGENT", "monica")
@@ -956,8 +955,14 @@ def _merge_article(original: dict, packet: dict, payload: dict) -> dict:
     summary = _normalize_ws(payload.get("summary", ""))
     content = str(payload.get("content", "")).strip()
     category = _normalize_ws(payload.get("category", ""))
-    packet_category = _normalize_ws(str(packet.get("category") or packet.get("category_hint") or ""))
-    original_category = _normalize_ws(str(original.get("category_hint") or original.get("category") or ""))
+    packet_category = next(
+        (value for key in ("category", "category_hint")
+         if (value := _canonical_public_category(packet.get(key)))), ""
+    )
+    original_category = next(
+        (value for key in ("category_hint", "category")
+         if (value := _canonical_public_category(original.get(key)))), ""
+    )
     guessed_category = _normalize_ws(str(original.get("_guessed_category") or ""))
     if packet_category == "Ulkomaat" and (original_category == "Talous" or guessed_category == "Talous"):
         category = "Talous"
@@ -965,12 +970,16 @@ def _merge_article(original: dict, packet: dict, payload: dict) -> dict:
         category = "Ulkomaat"
     elif packet_category in ALLOWED_CATEGORIES:
         category = packet_category
+    elif category in ALLOWED_CATEGORIES:
+        # A stale generic packet cannot erase the writer's canonical signal.
+        # Synchronization below still requires all four signals to agree.
+        pass
     elif original_category in ALLOWED_CATEGORIES:
         category = original_category
     elif guessed_category in ALLOWED_CATEGORIES:
         category = guessed_category
     elif category not in ALLOWED_CATEGORIES:
-        category = "Kotimaa"
+        category = ""
     category = protect_tiede_category(
         category,
         " ".join(

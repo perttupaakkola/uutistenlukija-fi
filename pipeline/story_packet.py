@@ -685,13 +685,13 @@ def _infer_category(article: dict, selected_blocks: list[dict]) -> str:
         ]
         if part
     ).lower()
-    hint = _normalize_ws(
-        str(
-            article.get("category_hint")
-            or article.get("category")
-            or article.get("_guessed_category")
-            or ""
-        )
+    # Generic feed sections are not public categories and must not mask a
+    # canonical section or classifier signal further down the hint chain.
+    hint = next(
+        (value for key in ("category_hint", "category", "_guessed_category")
+         if (value := _normalize_ws(str(article.get(key) or "")))
+         in _ALLOWED_CATEGORIES - {"Uutiset"}),
+        "",
     )
     full_text = category_text(article, " ".join(block.get("text", "") for block in selected_blocks))
 
