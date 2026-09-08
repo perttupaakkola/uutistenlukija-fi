@@ -1353,7 +1353,10 @@ def failed_writer_feedback(data: dict, payload: dict | None = None, issues: list
     packet = data.get("packet") or {}
     original = data.get("original_article") or {}
     payload = payload or data.get("payload") or {}
-    issues = issues or _basic_payload_issues(payload, packet) if payload else []
+    # A deliberate refusal is not an article and need not have article keys.
+    # Match the same structured status as the worker, never free-text tokens.
+    editorial_decline = payload.get("status") == "INSUFFICIENT_CONFIDENCE"
+    issues = [] if editorial_decline else (issues or _basic_payload_issues(payload, packet) if payload else [])
     source_words = packet_source_words(data)
     source_blocks = packet_source_blocks(data)
     content = str(payload.get("content") or "")
@@ -1369,11 +1372,13 @@ def failed_writer_feedback(data: dict, payload: dict | None = None, issues: list
         or (category == "Talous" and source_words >= 190 and source_blocks >= 3 and story_confidence >= 0.85)
     ) and source_blocks >= 2
     near_miss = 200 <= word_count < 250 and source_backed and any("content too short" in issue for issue in issues)
-    failure_text = str(data.get("failure") or raw_response or "").lower()
+    failure_text = str(data.get("failure") or ("" if editorial_decline else raw_response) or "").lower()
     runtime_failure = any(token in failure_text for token in ("timed out", "timeout", "context overflow", "gatewayclientrequesterror", "failovererror", "oauth token"))
     invalid_json = not payload and "json" in failure_text
     if runtime_failure:
         classification = "writer_runtime"
+    elif editorial_decline:
+        classification = "insufficient_confidence"
     elif invalid_json:
         classification = "writer_invalid_json"
     elif near_miss:
