@@ -48,7 +48,9 @@ jobs:
       - name: Verify credential-loader test isolation
         run: python -B scripts/verify_env_test_isolation.py
       - name: Isolated final-article image semantics
-        run: python -I -B pipeline/run_image_semantics_tests.py test_image_semantics test_image_pipeline_grounding test_audit_image_flow_independent test_generation_policy_order
+        run: python -I -B pipeline/run_image_semantics_tests.py test_image_semantics test_image_pipeline_grounding test_audit_image_flow_independent test_generation_policy_order test_confidence_contract
+      - name: Isolated category contract and staged caller
+        run: python -I -B pipeline/run_category_contract_tests.py tests/fixtures/category-contract-housing.json
       - name: Reader and real navigation regressions
         run: |
           python tests/reader_rebuild/test_reader.py
