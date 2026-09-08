@@ -47,10 +47,14 @@ jobs:
         run: python -m unittest test_rebuild_invariants test_pipeline_repair test_source_sufficiency test_story_packet test_research test_quality_gate test_monica_writer test_publish_preflight test_publisher_category test_generation_policy_order
       - name: Verify credential-loader test isolation
         run: python -B scripts/verify_env_test_isolation.py
+      - name: Isolated final-article image semantics
+        run: python -I -B pipeline/run_image_semantics_tests.py test_image_semantics test_image_pipeline_grounding test_audit_image_flow_independent test_generation_policy_order
       - name: Reader and real navigation regressions
         run: |
           python tests/reader_rebuild/test_reader.py
           python tests/reader_rebuild/test_navigation.py
+          python tests/reader_rebuild/test_category_coverage.py
+          python tests/reader_rebuild/test_category_assets.py
       - name: Source validation
         run: |
           bash scripts/validate_critical_scripts.sh
