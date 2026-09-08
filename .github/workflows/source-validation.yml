@@ -55,6 +55,7 @@ jobs:
           python tests/reader_rebuild/test_navigation.py
           python tests/reader_rebuild/test_category_coverage.py
           python tests/reader_rebuild/test_category_assets.py
+          python tests/reader_rebuild/test_archive_honesty.py
       - name: Source validation
         run: |
           bash scripts/validate_critical_scripts.sh
