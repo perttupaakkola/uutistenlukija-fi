@@ -138,12 +138,12 @@ def _contains_any(text: str, needles: tuple[str, ...]) -> bool:
 
 
 _FINNISH_DENIAL_RE = re.compile(
-    r"\bkiist(?:ää|ävät|i|ivät|ä|änyt|äneet|etään|ettiin|etty)\b"
+    r"\bkiist(?:ää|ävät|i|ivät|ä|änyt|äneet|ävänsä|ävän|äneen|äneensä|etään|ettiin|etty)\b"
 )
 _NEGATED_FINNISH_DENIAL_RE = re.compile(
     r"\b(?:en|et|ei|emme|ette|eivät|eikä|ettei|etteivät)\s+"
     r"(?:(?!(?:mutta|vaan|ja)\b)[\w-]+\s+){0,3}"
-    r"kiist(?:ä|ää|änyt|äneet|etty)\b"
+    r"kiist(?:ä|ää|änyt|äneet|ävänsä|ävän|äneen|äneensä|etty)\b"
 )
 _PENDING_CHARGING_DECISION_RE = re.compile(
     r"\b(?:ei|eivät)\s+ole\s+(?:vielä\s+)?(?:tehnyt|tehneet|antanut|antaneet)\s+"

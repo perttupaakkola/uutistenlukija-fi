@@ -47,6 +47,39 @@ class ConfidenceContractTests(unittest.TestCase):
     def score(self, article):
         return quality_gate.score_article(article)
 
+    def test_indirect_affirmative_source_preserves_deficient_headline_gate(self):
+        for sentence in (
+            'Ylen mukaan syytetyt kertovat kiistävänsä kaikki syytteet.',
+            'Ylen mukaan syytettyjen kerrotaan kiistäneen kaikki syytteet.',
+            'Ylen mukaan syytetty kertoo kiistäneensä kaikki syytteet.',
+        ):
+            article = copy.deepcopy(YLE_ARTICLE)
+            source = article['source_text']
+            for old in ('Syytetyt kiistävät rikokset.', 'Molemmat kiistävät syytteet.'):
+                source = source.replace(old, sentence)
+            article['source_text'] = source
+            with self.subTest(sentence=sentence):
+                self.assertTrue(guard._contains_denial(sentence))
+                result = self.score(article)
+                self.assertIn(ISSUE, result.hard_fails)
+                self.assertFalse(result.passes)
+
+    def test_indirect_public_affirmatives_and_paired_negation(self):
+        for positive, negative in (
+            ('kertoo kiistävänsä', 'ei kertonut kiistävänsä'),
+            ('kerrotaan kiistäneen', 'ei kerrottu kiistäneen'),
+            ('kertoo kiistäneensä', 'ei ole kertonut kiistäneensä'),
+        ):
+            with self.subTest(positive=positive):
+                self.assertTrue(guard._contains_denial('Hän ' + positive + ' syytteen.', public=True))
+                self.assertFalse(guard._contains_denial('Hän ' + negative + ' syytteen.'))
+                article = supported()
+                for surface in ('title', 'summary', 'content'):
+                    article[surface] = 'BBC:n mukaan Iran ' + positive + ' väitteet.'
+                self.assertNotIn(ISSUE, self.score(article).hard_fails)
+                article['title'] = 'BBC:n mukaan Iran ' + negative + ' väitteet.'
+                self.assertIn(ISSUE, self.score(article).hard_fails)
+
     def test_present_and_past_attribution(self):
         for text in ('kertoo Yle', 'kertoi Yle'):
             with self.subTest(text=text):
