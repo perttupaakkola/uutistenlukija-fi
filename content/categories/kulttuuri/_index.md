@@ -1,6 +1,6 @@
 ---
 title: "Kulttuuri"
-description: "Elokuvan, kirjallisuuden ja taiteen puhutuimmat ilmiöt. Katsaus siihen, mistä kulttuurikentällä juuri nyt väitellään."
+description: "Kulttuuri- ja viihdejuttuja elokuvasta, musiikista, kirjallisuudesta ja taiteesta. Selaa julkaistuja juttuja aikajärjestyksessä."
 og_image: "/images/og-kulttuuri.png"
 keywords:
   - "kulttuuri uutiset"
