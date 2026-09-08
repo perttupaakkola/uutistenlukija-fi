@@ -50,6 +50,7 @@ STATE_ACTOR_CLAIM_MARKERS = (
     "väitt",
     "sano",
     "kertoi",
+    "kertoo",
     "mukaan",
     "agreed",
     "suostu",
@@ -64,7 +65,6 @@ DENIAL_MARKERS = (
     "no new commitment",
     "not made new commitment",
     "has not made",
-    "kiist",
     "ei ole tehnyt",
     "ei ole antanut",
     "ei uusia sitoum",
@@ -73,7 +73,6 @@ DENIAL_MARKERS = (
 )
 
 PUBLIC_DENIAL_CONTEXT_MARKERS = (
-    "kiist",
     "ei ole tehnyt",
     "ei ole antanut",
     "ei uusia sitoum",
@@ -87,6 +86,7 @@ PUBLIC_ATTRIBUTION_MARKERS = (
     "mukaan",
     "sanoi",
     "kertoi",
+    "kertoo",
     "väitt",
     "arvioi",
     "lausunn",
@@ -135,6 +135,42 @@ def _norm(text: str) -> str:
 def _contains_any(text: str, needles: tuple[str, ...]) -> bool:
     haystack = _norm(text)
     return any(needle in haystack for needle in needles)
+
+
+_FINNISH_DENIAL_RE = re.compile(
+    r"\bkiist(?:ää|ävät|i|ivät|ä|änyt|äneet|etään|ettiin|etty)\b"
+)
+_NEGATED_FINNISH_DENIAL_RE = re.compile(
+    r"\b(?:en|et|ei|emme|ette|eivät|eikä|ettei|etteivät)\s+"
+    r"(?:(?!(?:mutta|vaan|ja)\b)[\w-]+\s+){0,3}"
+    r"kiist(?:ä|ää|änyt|äneet|etty)\b"
+)
+_PENDING_CHARGING_DECISION_RE = re.compile(
+    r"\b(?:ei|eivät)\s+ole\s+(?:vielä\s+)?(?:tehnyt|tehneet|antanut|antaneet)\s+"
+    r"(?:syyteratkaisu\w*|syyteharkintaratkaisu\w*)\b"
+)
+
+
+def _contains_denial(text: str, *, public: bool = False) -> bool:
+    """Bounded cues, not Finnish NLP or speaker/proposition verification.
+
+    Negated kiistää is not denial. Limit its scope to three intervening words
+    and a clause; retain an independent positive denial elsewhere. Exclude
+    only the named unfinished charging-decision construction, not denials of
+    acts or commitments. Other historical cues remain unchanged. Long
+    negations, quotes, coordination and mismatched speakers remain ambiguous
+    and require editorial review, as do other unfinished-action objects.
+    This does not establish semantic truth.
+    """
+    markers = PUBLIC_DENIAL_CONTEXT_MARKERS if public else DENIAL_MARKERS
+    for clause in re.split(r"[.!?;:,\n]|\b(?:mutta|vaan)\b", (text or "").lower()):
+        clause = _norm(clause)
+        positive = _NEGATED_FINNISH_DENIAL_RE.sub(" ", clause)
+        positive = _PENDING_CHARGING_DECISION_RE.sub(" ", positive)
+        if (_FINNISH_DENIAL_RE.search(positive)
+                or _contains_any(positive, markers)):
+            return True
+    return False
 
 
 def _contains_high_stakes_keyword(text: str) -> bool:
@@ -191,11 +227,11 @@ def source_confidence_issues(article: dict) -> list[str]:
     title, summary, lead = _public_surfaces(article)
     public_all = " ".join([title, summary, lead])
     source_has_state_claim = _contains_any(source_text, STATE_ACTOR_CLAIM_MARKERS)
-    source_has_denial = _contains_any(source_text, DENIAL_MARKERS)
+    source_has_denial = _contains_denial(source_text)
 
     if source_has_state_claim and source_has_denial:
         surfaces_have_denial = all(
-            _contains_any(surface, PUBLIC_DENIAL_CONTEXT_MARKERS)
+            _contains_denial(surface, public=True)
             for surface in (title, summary, lead)
         )
         surfaces_have_attribution = all(
