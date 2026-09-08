@@ -5,6 +5,13 @@ no queue, credentials, provider, subprocess or filesystem mutation is allowed.
 """
 import sys
 
+# CPython supplies its actual standard-library directory, including hosted CI.
+# Fail closed if unavailable; never widen this to a general /opt or /home root.
+_STDLIB_DIR = getattr(sys, '_stdlib_dir', None)
+if not isinstance(_STDLIB_DIR, str) or not _STDLIB_DIR.startswith('/'):
+    raise RuntimeError('absolute CPython standard-library directory required')
+_STDLIB_PREFIX = _STDLIB_DIR.rstrip('/') + '/'
+
 # Install before consumer/test-library imports. Source reads are allowlisted.
 def _audit(event, args):
     if event == 'open':
@@ -16,7 +23,7 @@ def _audit(event, args):
         source_dir = __file__.rsplit('/', 1)[0]
         allowed = {source_dir + '/' + name for name in (
             'staged_publish.py', 'monica_writer.py', 'test_editorial_decline_feedback.py')}
-        if path not in allowed and not path.startswith(('/usr/lib/python', '/usr/local/lib/python')):
+        if path not in allowed and not path.startswith(_STDLIB_PREFIX):
             raise PermissionError('nonfixture read denied')
         if '/site-packages/' in path or '/dist-packages/' in path:
             raise PermissionError('third-party import denied')
