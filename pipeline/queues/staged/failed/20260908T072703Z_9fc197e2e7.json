@@ -223,5 +223,36 @@
       }
     ],
     "source_url": "https://www.uudenkaupunginsanomat.fi/2026/09/linja-autojen-valmistus-kaynnistyy-valmet-automotivella/"
-  }
+  },
+  "quality_gate_rejected_at": "2026-09-08T07:54:50.484486+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260908T072703Z_9fc197e2e7",
+    "category": "Kotimaa",
+    "selected_source_words": 238,
+    "selected_source_blocks": 2,
+    "story_confidence": 0.9,
+    "quality_total": 40,
+    "quality_normalized": 8.0,
+    "quality_reasons": [
+      "length under target (267 words)",
+      "missing: image",
+      "unsourced numbers",
+      "central unsourced number(s): 2027",
+      "unsourced_numbers: 2025, 2027"
+    ],
+    "hard_fails": [
+      "central unsourced number(s): 2027"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 2025, 2027"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_thin_source",
+    "fail_closed": true,
+    "source_backed": false,
+    "article_words": 267,
+    "title": "Linja-autojen tuotanto käynnistyi Uudessakaupungissa – ensimmäisten määrä valmistua tänä vuonna"
+  },
+  "failure": "quality_gate_rejected: length under target (267 words); missing: image; unsourced numbers; central unsourced number(s): 2027; unsourced_numbers: 2025, 2027"
 }
