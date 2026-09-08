@@ -247,6 +247,249 @@
         "url": "https://yle.fi/a/74-20239716?origin=rss"
       }
     ],
-    "source_url": "https://yle.fi/a/74-20239716?origin=rss"
+    "source_url": "https://yle.fi/a/74-20239716?origin=rss",
+    "image_provider_results": [
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "unsplash",
+        "attempted": false,
+        "succeeded": false,
+        "outcome": "empty_search",
+        "reason": "no_grounded_stock_queries",
+        "query_count": 0,
+        "candidate_count": 0,
+        "fresh_candidate_count": 0,
+        "rejected_count": 0,
+        "accepted_count": 0,
+        "fault_count": 0,
+        "semantic_accepted": false,
+        "attribution_complete": false,
+        "delivery_mode": "none",
+        "delivery_attempted": false,
+        "delivery_succeeded": false,
+        "thumbnail_delivery_succeeded": false,
+        "tracking_attempted": false,
+        "tracking_succeeded": false
+      },
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "pexels",
+        "attempted": false,
+        "succeeded": false,
+        "outcome": "empty_search",
+        "reason": "no_grounded_stock_queries",
+        "query_count": 0,
+        "candidate_count": 0,
+        "fresh_candidate_count": 0,
+        "rejected_count": 0,
+        "accepted_count": 0,
+        "fault_count": 0,
+        "semantic_accepted": false,
+        "attribution_complete": false,
+        "delivery_mode": "none",
+        "delivery_attempted": false,
+        "delivery_succeeded": false,
+        "thumbnail_delivery_succeeded": false,
+        "tracking_attempted": false,
+        "tracking_succeeded": false
+      }
+    ],
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "stock",
+        "reason": "stock_rejection",
+        "outcome": "empty_search",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false,
+        "provider": "unsplash"
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "stock",
+        "reason": "stock_rejection",
+        "outcome": "empty_search",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false,
+        "provider": "pexels"
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "generated",
+        "reason": "pre_safety_reject",
+        "outcome": "policy_reject",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "fallback",
+        "reason": "category_fallback",
+        "outcome": "selected",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      }
+    ],
+    "image_generation_terminal": {
+      "schema": "uutistenlukija.image_terminal.v1",
+      "stage": "generated",
+      "reason": "pre_safety_reject",
+      "outcome": "policy_reject",
+      "provider_fault": false,
+      "provider_attempted": false,
+      "provider_succeeded": false
+    },
+    "image_category_fallback": true,
+    "image": "/images/categories/ulkomaat.jpg",
+    "image_thumb": "/images/categories/ulkomaat.jpg",
+    "image_alt": "Ulkomaat-uutiset",
+    "image_credit": "",
+    "image_source_url": "",
+    "image_caption": "",
+    "image_hotlink": false,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_asset_identity": "",
+    "image_decision_reason": "final category fallback after pre_safety_reject",
+    "image_prompt_version": "image-flow-v3-grounded-2026-09-02",
+    "image_visual_judge_score": 0,
+    "image_decision": {
+      "source": "category_fallback",
+      "accepted": true,
+      "reason": "final category fallback after pre_safety_reject",
+      "prompt_version": "image-flow-v3-grounded-2026-09-02"
+    }
+  },
+  "image_enriched_at": "2026-09-08T05:04:52.749095+00:00",
+  "image_enrichment": {
+    "image": "/images/categories/ulkomaat.jpg",
+    "image_thumb": "/images/categories/ulkomaat.jpg",
+    "image_category_fallback": true,
+    "image_source": "category_fallback",
+    "image_source_type": "category_fallback",
+    "image_decision_reason": "final category fallback after pre_safety_reject",
+    "image_concept": null,
+    "image_query": null,
+    "image_candidate_id": null,
+    "image_candidate_url": null,
+    "image_asset_identity": "",
+    "image_visual_judge_score": 0,
+    "image_accepted_reasons": null,
+    "image_rejected_reasons": null,
+    "image_provider": null,
+    "image_model": null,
+    "image_prompt_version": "image-flow-v3-grounded-2026-09-02",
+    "image_provider_results": [
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "unsplash",
+        "attempted": false,
+        "succeeded": false,
+        "outcome": "empty_search",
+        "reason": "no_grounded_stock_queries",
+        "query_count": 0,
+        "candidate_count": 0,
+        "fresh_candidate_count": 0,
+        "rejected_count": 0,
+        "accepted_count": 0,
+        "fault_count": 0,
+        "semantic_accepted": false,
+        "attribution_complete": false,
+        "delivery_mode": "none",
+        "delivery_attempted": false,
+        "delivery_succeeded": false,
+        "thumbnail_delivery_succeeded": false,
+        "tracking_attempted": false,
+        "tracking_succeeded": false
+      },
+      {
+        "schema": "uutistenlukija.image_provider_result.v1",
+        "provider": "pexels",
+        "attempted": false,
+        "succeeded": false,
+        "outcome": "empty_search",
+        "reason": "no_grounded_stock_queries",
+        "query_count": 0,
+        "candidate_count": 0,
+        "fresh_candidate_count": 0,
+        "rejected_count": 0,
+        "accepted_count": 0,
+        "fault_count": 0,
+        "semantic_accepted": false,
+        "attribution_complete": false,
+        "delivery_mode": "none",
+        "delivery_attempted": false,
+        "delivery_succeeded": false,
+        "thumbnail_delivery_succeeded": false,
+        "tracking_attempted": false,
+        "tracking_succeeded": false
+      }
+    ],
+    "image_generation_terminal": {
+      "schema": "uutistenlukija.image_terminal.v1",
+      "stage": "generated",
+      "reason": "pre_safety_reject",
+      "outcome": "policy_reject",
+      "provider_fault": false,
+      "provider_attempted": false,
+      "provider_succeeded": false
+    },
+    "image_terminal_reasons": [
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "stock",
+        "reason": "stock_rejection",
+        "outcome": "empty_search",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false,
+        "provider": "unsplash"
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "stock",
+        "reason": "stock_rejection",
+        "outcome": "empty_search",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false,
+        "provider": "pexels"
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "generated",
+        "reason": "pre_safety_reject",
+        "outcome": "policy_reject",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      },
+      {
+        "schema": "uutistenlukija.image_terminal.v1",
+        "stage": "fallback",
+        "reason": "category_fallback",
+        "outcome": "selected",
+        "provider_fault": false,
+        "provider_attempted": false,
+        "provider_succeeded": false
+      }
+    ]
+  },
+  "published_at": "2026-09-08T05:08:21.591107+00:00",
+  "created_files": [
+    "/home/runner/work/uutistenlukija-fi/uutistenlukija-fi/content/posts/2026-09-08-hassan-herzallah-sai-opiskelupaikan-helsingista-mutta-on-yha.md"
+  ],
+  "category_trace": {
+    "packet_id": "20260908T045700Z_630e26f675",
+    "decisions": {
+      "guard": "Ulkomaat",
+      "writer": "Ulkomaat",
+      "publisher": "Ulkomaat"
+    },
+    "disagreement": false
   }
 }
