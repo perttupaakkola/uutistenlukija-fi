@@ -1,4 +1,5 @@
-{{- /* Compatibility entry point: publication time never freezes as relative age. */ -}}
+{{- /* Absolute Helsinki fallback remains visible, with optional live age. */ -}}
 {{- $publishedAt := .Date -}}
 {{- with .Params.published_at }}{{ $publishedAt = time.AsTime . }}{{ end -}}
-{{- partial "absolute-date.html" $publishedAt -}}
+{{- $local := time.In "Europe/Helsinki" $publishedAt -}}
+<time datetime="{{ $local.Format "2006-01-02T15:04:05Z07:00" }}" data-relative-date>{{ $local.Format "2.1.2006 klo 15:04" }} (Suomen aikaa)<span data-relative-label hidden></span></time>

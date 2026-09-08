@@ -1,0 +1,33 @@
+<script id="relative-date-enhancement">
+(function () {
+  'use strict';
+  function refresh() {
+    var now = Date.now();
+    document.querySelectorAll('time[data-relative-date]').forEach(function (time) {
+      var label = time.querySelector('[data-relative-label]');
+      if (!label) return;
+      var age = now - Date.parse(time.getAttribute('datetime'));
+      var text = '';
+      // Future, invalid and older timestamps keep only the absolute fallback.
+      if (Number.isFinite(age) && age >= 0 && age < 7 * 86400000) {
+        if (age < 60000) text = 'alle minuutti sitten';
+        else if (age < 3600000) text = Math.floor(age / 60000) + ' min sitten';
+        else if (age < 86400000) text = Math.floor(age / 3600000) + ' t sitten';
+        else text = Math.floor(age / 86400000) + ' pv sitten';
+      }
+      label.textContent = text ? ' · ' + text : '';
+      label.hidden = !text;
+    });
+  }
+  function start() {
+    refresh();
+    window.setInterval(refresh, 30000);
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden) refresh();
+    });
+    window.addEventListener('pageshow', refresh);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, {once: true});
+  else start();
+})();
+</script>

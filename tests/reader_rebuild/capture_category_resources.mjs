@@ -68,6 +68,8 @@ try {
   await call('Network.setCacheDisabled',{cacheDisabled:true});
   await call('Network.setBypassServiceWorker',{bypass:true});
   await call('Fetch.enable',{patterns:[{urlPattern:'*'}]});
+  const relativeEpoch=Date.parse(process.env.UL_RELATIVE_CLOCK || '');
+  if(Number.isFinite(relativeEpoch)) await call('Page.addScriptToEvaluateOnNewDocument',{source:`window.__relativeClock=${relativeEpoch}; Date.now=()=>window.__relativeClock;`});
   const categories=['kotimaa','talous','ulkomaat','kulttuuri','teknologia','tiede','urheilu'];
   const routes=categories.map(cat=>'categories/'+cat+'/').concat(['','posts/talous-2/','posts/ulkomaat-1/','component-cases/']);
   for(const width of [390,1366]) for(const theme of ['light','dark']) for(const route of routes) {
@@ -101,6 +103,20 @@ try {
     }
     assert.equal(dom.theme,theme,'Wrong rendered theme '+route);
     assert(dom.scrollWidth <= width,'Horizontal overflow '+route);
+    if(Number.isFinite(relativeEpoch)) {
+      const readTimes=`[...document.querySelectorAll('time[data-relative-date]')].map(t=>({absolute:t.firstChild.textContent,stamp:t.dateTime,label:t.querySelector('[data-relative-label]').textContent,hidden:t.querySelector('[data-relative-label]').hidden}))`;
+      const before=await evaluate(readTimes);
+      assert(before.length>0,'Missing progressive times '+route);
+      assert(before.every(t=>t.absolute.includes('(Suomen aikaa)') && !t.hidden && t.label.includes('min sitten')));
+      await evaluate(`window.__relativeClock += 3600000; window.dispatchEvent(new Event('pageshow'))`);
+      const after=await evaluate(readTimes);
+      assert.equal(after.length,before.length);
+      for(let i=0;i<after.length;i++) {
+        assert.equal(after[i].absolute,before[i].absolute);assert.equal(after[i].stamp,before[i].stamp);
+        assert.equal(after[i].label,' · 1 t sitten');
+      }
+      dom.relativeElapsed={before,after};
+    }
     pages.push({route,width,theme,htmlSha256:hash(readFileSync(join(root,route,'index.html'))),dom,resources:images,exceptions:exceptions.slice(errorStart)});
     writeFileSync(join(out,'browser-resources.json'),JSON.stringify({pages,blocked,exceptions},null,2));
     if(route==='categories/talous/'||route==='categories/ulkomaat/') {

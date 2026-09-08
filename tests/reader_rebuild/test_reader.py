@@ -171,10 +171,20 @@ Fixture article text.
             self.assertTrue(stamp in html, stamp)
         self.assertIn('Suomen aikaa', html)
         self.assertIn('Actual image caption', html)
-        self.assertNotIn('sitten', html)
+        # No static relative age in markup: executable script may contain labels.
+        self.assertNotIn('sitten', re.sub(r'<script\b[^>]*>.*?</script>', '', html, flags=re.S))
         for path in self.output.rglob('*.html'):
             parser = TimeParser(); parser.feed(path.read_text())
             self.assertFalse(parser.nested, str(path))
+
+    def test_unmodified_rendered_relative_script_elapsed_time(self):
+        html = (self.output / 'time-cases/index.html').read_text()
+        result = subprocess.run(['node', str(ROOT / 'tests/reader_rebuild/check_relative_date.mjs')],
+                                input=html, capture_output=True, text=True, timeout=15)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        receipt = json.loads(result.stdout)
+        self.assertEqual(receipt['elapsedBoundaryChecks'], 14)
+        (SCRATCH / 'relative-date-elapsed.json').write_text(result.stdout)
 
     def test_article_schema_sources_and_disclosure(self):
         for slug in ARTICLES:
