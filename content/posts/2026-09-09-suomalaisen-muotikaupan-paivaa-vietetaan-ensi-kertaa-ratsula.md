@@ -49,7 +49,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/100-vuotiaan-muotitavaratalon-johtaja-herattelee-suosimaan-kotimaista-kuluttajien-kaytos-heilahtelee-kuin-porssisahko"
-briefing: true
 draft: false
 ---
 
