@@ -261,5 +261,36 @@
       }
     ],
     "source_url": "https://www.yrittajat.fi/uutiset/henri-levander-joi-firmansa-konkurssiin-menetti-perheensa-ja-harkitsi-itsemurhaa-yksi-juhannus-muutti-kaiken-pidin-elamaa-itsestaanselvyytena/"
-  }
+  },
+  "quality_gate_rejected_at": "2026-09-09T17:14:52.062120+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260909T171216Z_a519adad61",
+    "category": "Talous",
+    "selected_source_words": 372,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 8.01,
+    "quality_reasons": [
+      "length under target (273 words)",
+      "missing: image",
+      "unsourced numbers",
+      "central unsourced number(s): 2014",
+      "unsourced_numbers: 2014"
+    ],
+    "hard_fails": [
+      "central unsourced number(s): 2014"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 2014"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 273,
+    "title": "Henri Levander kertoo alkoholin vieneen työkyvyn ja yrityksen talouden"
+  },
+  "failure": "quality_gate_rejected: length under target (273 words); missing: image; unsourced numbers; central unsourced number(s): 2014; unsourced_numbers: 2014"
 }
