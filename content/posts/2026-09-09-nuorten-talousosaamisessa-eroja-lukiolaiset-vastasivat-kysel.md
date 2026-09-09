@@ -49,7 +49,6 @@ source_domain: "yle.fi"
 source_attributions:
   - name: "Yle Uutiset"
     url: "https://yle.fi/a/74-20242841?origin=rss"
-briefing: true
 draft: false
 ---
 
