@@ -298,5 +298,38 @@
       }
     ],
     "source_url": "https://yle.fi/a/74-20242573"
-  }
+  },
+  "quality_gate_rejected_at": "2026-09-09T13:04:58.323015+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260909T125719Z_1157fd74f9",
+    "category": "Kotimaa",
+    "selected_source_words": 508,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 6.75,
+    "quality_reasons": [
+      "language borderline Finnish signal (10.0%)",
+      "length under target (267 words)",
+      "missing: image",
+      "moderate duplication similarity (0.75)",
+      "unsourced numbers",
+      "source_confidence_denial_context_missing",
+      "unsourced_numbers: 2025"
+    ],
+    "hard_fails": [
+      "source_confidence_denial_context_missing"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 2025"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 267,
+    "title": "Rolf Nordmoa kuultiin hovioikeudessa Janne Puhakan henkirikoksesta"
+  },
+  "failure": "quality_gate_rejected: language borderline Finnish signal (10.0%); length under target (267 words); missing: image; moderate duplication similarity (0.75); unsourced numbers; source_confidence_denial_context_missing; unsourced_numbers: 2025"
 }
