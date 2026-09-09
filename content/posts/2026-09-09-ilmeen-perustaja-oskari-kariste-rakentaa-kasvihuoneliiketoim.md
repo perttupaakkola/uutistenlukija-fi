@@ -51,7 +51,6 @@ source_domain: "yrittajat.fi"
 source_attributions:
   - name: "Suomen Yrittäjät"
     url: "https://yrittajat.fi/uutiset/lahtelaisesta-mainostoimistoyrittajasta-tuli-kasvihuonepioneeri-floridassa-en-olisi-villeimmissa-kuvitelmissanikaan-ajatellut"
-briefing: true
 draft: false
 ---
 
