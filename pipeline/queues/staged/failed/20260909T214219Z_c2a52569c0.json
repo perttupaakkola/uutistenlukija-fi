@@ -263,5 +263,36 @@
       }
     ],
     "source_url": "https://www.stara.fi/2026/07/11/tuore-tilasto-suomi-on-ainoa-eu-maa-jossa-asuntojen-hinnat-laskivat/"
-  }
+  },
+  "quality_gate_rejected_at": "2026-09-09T21:44:45.849472+00:00",
+  "quality_gate_rejected": true,
+  "quality_gate_feedback": {
+    "packet_id": "20260909T214219Z_c2a52569c0",
+    "category": "Talous",
+    "selected_source_words": 384,
+    "selected_source_blocks": 4,
+    "story_confidence": 0.98,
+    "quality_total": 40,
+    "quality_normalized": 7.97,
+    "quality_reasons": [
+      "length under target (261 words)",
+      "missing: image",
+      "unsourced numbers",
+      "central unsourced number(s): 2026, 2027",
+      "unsourced_numbers: 2026, 2027"
+    ],
+    "hard_fails": [
+      "central unsourced number(s): 2026, 2027"
+    ],
+    "soft_warnings": [
+      "unsourced_numbers: 2026, 2027"
+    ],
+    "repair_eligible": false,
+    "retry_classification": "fail_closed_quality_gate",
+    "fail_closed": true,
+    "source_backed": true,
+    "article_words": 261,
+    "title": "OP ennustaa asuntojen hintojen nousevan kolme prosenttia ensi vuonna"
+  },
+  "failure": "quality_gate_rejected: length under target (261 words); missing: image; unsourced numbers; central unsourced number(s): 2026, 2027; unsourced_numbers: 2026, 2027"
 }
