@@ -11,11 +11,11 @@ author_image: ""
 description: "Toimitettujen häätöjen määrä kasvoi alkuvuonna koko maassa, mutta häätöjä ehkäisevään kokeiluun osallistuneissa kaupungeissa kehitys oli toisenlaista."
 summary: "Toimitettujen häätöjen määrä kasvoi alkuvuonna koko maassa, mutta häätöjä ehkäisevään kokeiluun osallistuneissa kaupungeissa kehitys oli toisenlaista."
 summary_bullets:
-  - "Toimitettujen häätöjen määrä kasvoi koko maassa tammi–kesäkuussa seitsemän prosenttiyksikköä."
+  - "Toimitettujen häätöjen määrä kasvoi koko maassa tammi–kesäkuussa seitsemän prosenttia."
   - "Häätöjen määrä väheni Jyväskylässä, Vantaalla ja Lahdessa, joissa tehdään häätöjä ehkäisevää yhteistyötä."
   - "Ville Kupiainen oli oman häätönsä jälkeen asunnoton noin kolme vuotta."
 key_points:
-  - "Toimitettujen häätöjen määrä kasvoi koko maassa tammi–kesäkuussa seitsemän prosenttiyksikköä."
+  - "Toimitettujen häätöjen määrä kasvoi koko maassa tammi–kesäkuussa seitsemän prosenttia."
   - "Häätöjen määrä väheni Jyväskylässä, Vantaalla ja Lahdessa, joissa tehdään häätöjä ehkäisevää yhteistyötä."
   - "Ville Kupiainen oli oman häätönsä jälkeen asunnoton noin kolme vuotta."
 journalist_note: |
@@ -53,13 +53,13 @@ source_attributions:
 draft: false
 ---
 
-Toimitettujen häätöjen määrä kasvoi Suomessa tammi–kesäkuussa seitsemän prosenttiyksikköä viime vuoden vastaavaan aikaan verrattuna. Kehitys ei kuitenkaan ollut kaikkialla sama: neljässä kaupungissa häädöt vähenivät alkuvuonna, ja laskua havaittiin muun muassa Jyväskylässä, Vantaalla ja Lahdessa, joissa on tehty häätöjä ehkäisevää yhteistyötä. Kaupunkien väliset erot olivat huomattavia.
+Toimitettujen häätöjen määrä kasvoi Suomessa tammi–kesäkuussa seitsemän prosenttia viime vuoden vastaavaan aikaan verrattuna. Kehitys ei kuitenkaan ollut kaikkialla sama: neljässä kaupungissa häädöt vähenivät alkuvuonna, ja laskua havaittiin muun muassa Jyväskylässä, Vantaalla ja Lahdessa, joissa on tehty häätöjä ehkäisevää yhteistyötä. Kaupunkien väliset erot olivat huomattavia.
 
 ## Kaupunkien kehityksessä suuria eroja
 
-Kymmenen suurimman kaupungin vertailussa voimakkain kasvu kirjattiin Turussa, jossa häätöjen määrä nousi lähes 45 prosenttiyksikköä. Oulussa kasvua oli yli 35 prosenttiyksikköä ja Porissa 30 prosenttiyksikköä. Valtakunnanvouti Veikko Minkkisen mukaan Turun tilanteeseen voi vaikuttaa esimerkiksi yksittäinen suuri vuokranantaja, joka on tehostanut vuokrarästien seurantaa ja perintää.
+Kymmenen suurimman kaupungin vertailussa voimakkain kasvu kirjattiin Turussa, jossa häätöjen määrä nousi lähes 45 prosenttia. Oulussa kasvua oli yli 35 prosenttia ja Porissa 30 prosenttia. Valtakunnanvouti Veikko Minkkisen mukaan Turun tilanteeseen voi vaikuttaa esimerkiksi yksittäinen suuri vuokranantaja, joka on tehostanut vuokrarästien seurantaa ja perintää.
 
-Kokeiluun osallistuvissa kaupungeissa suunta oli toinen. Häätöjen määrä laski Jyväskylässä 9,4 prosenttiyksikköä, Vantaalla kahdeksan prosenttiyksikköä ja Lahdessa 5,6 prosenttiyksikköä tammi–kesäkuussa. Kokeilu alkoi runsas vuosi sitten sen jälkeen, kun ulosotossa oli havahduttu häätöjen määrän kasvuun. Luvut osoittavat, ettei valtakunnallinen nousu kuvaa kaikkien kaupunkien kehitystä.
+Kokeiluun osallistuvissa kaupungeissa suunta oli toinen. Häätöjen määrä laski Jyväskylässä 9,4 prosenttia, Vantaalla kahdeksan prosenttia ja Lahdessa 5,6 prosenttia tammi–kesäkuussa. Kokeilu alkoi runsas vuosi sitten sen jälkeen, kun ulosotossa oli havahduttu häätöjen määrän kasvuun. Luvut osoittavat, ettei valtakunnallinen nousu kuvaa kaikkien kaupunkien kehitystä.
 
 ## Häädön seuraukset voivat jatkua vuosia
 
