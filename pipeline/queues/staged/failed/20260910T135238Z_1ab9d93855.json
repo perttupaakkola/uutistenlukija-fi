@@ -143,5 +143,21 @@
       "candidate_source_words": 352,
       "candidate_blocks": 4
     }
+  },
+  "failed_at": "2026-09-10T13:53:03.180472+00:00",
+  "failure": "weak_talous_ready_promotional",
+  "ready_quality_feedback": {
+    "action": "fail",
+    "reason": "weak_talous_ready_promotional",
+    "source_words": 352,
+    "source_blocks": 4,
+    "story_confidence": 0.98,
+    "org_guardrail": {
+      "applies": true,
+      "classification": "ok_company_profile",
+      "penalty": 0,
+      "requires_attribution": false
+    },
+    "fail_closed": true
   }
 }
