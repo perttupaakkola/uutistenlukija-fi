@@ -1,6 +1,6 @@
 {
   "hours": 24,
-  "generated_at": "2026-09-12T19:27:52+00:00",
+  "generated_at": "2026-09-12T21:48:26+00:00",
   "status": "ok",
   "is_stale": false,
   "stale_threshold_minutes": 90,
@@ -23,10 +23,10 @@
   },
   "articles": {
     "attempted": 0,
-    "published": 2,
+    "published": 3,
     "rejected": 0,
     "publish_rate": 0,
-    "last_published_ts": "2026-09-12T19:24:40.632073+00:00",
+    "last_published_ts": "2026-09-12T21:44:53.046874+00:00",
     "production_truth_scope": "rolling_24h_published_content"
   },
   "reject_reasons": {},
@@ -44,6 +44,10 @@
       6
     ],
     [
+      "vuoden",
+      6
+    ],
+    [
       "vanhanen",
       6
     ],
@@ -53,10 +57,6 @@
     ],
     [
       "myyntipaikan",
-      5
-    ],
-    [
-      "vuoden",
       5
     ]
   ],
@@ -83,7 +83,7 @@
     "maxPacketsPerCycle": 3,
     "rawOutboxRemainingCycles": 0,
     "publishableRemainingCycles": 0,
-    "recentPublishedPackets": 2,
+    "recentPublishedPackets": 3,
     "worstCaseRemainingCycles": 0,
     "replenishmentState": "end_to_end_enabled",
     "severity": "ok",
