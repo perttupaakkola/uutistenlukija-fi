@@ -1,0 +1,268 @@
+{
+  "repository": "perttupaakkola/uutistenlukija-fi",
+  "project": "uutistenlukija-fi",
+  "domain": "https://uutistenlukija.fi/",
+  "baseline_remote_main": "b46852109192ec63948540fda15a268146c5ecfb",
+  "inventory_sha256": "31c29e379a97f898d28150de020a4f4bcc20bb122e248dece6892ace40338b0b",
+  "crontab_lines": [
+    "*/10 * * * * /home/pertt/.openclaw/bin/check-github-actions.sh >> /home/pertt/.openclaw/logs/gh-actions-monitor.log 2>&1",
+    "*/10 * * * * /home/pertt/.openclaw/bin/host-bridge.sh 2>> /home/pertt/.openclaw/logs/host-bridge.log",
+    "*/15 * * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name health-monitor -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh bash scripts/health_monitor.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/health-monitor.log 2>&1",
+    "*/15 * * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name uptime-monitor -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh bash scripts/uptime_monitor.sh >> pipeline/logs/uptime-monitor.log 2>&1",
+    "*/30 * * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name pipeline-health -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/pipeline-health-check.sh --alert-only >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/health-check.log 2>&1",
+    "0 */6 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name pipeline-silence -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh bash scripts/check_pipeline_silence.sh >> pipeline/logs/pipeline-silence.log 2>&1",
+    "15 */6 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name analytics-check -- bash pipeline/check-analytics.sh >> pipeline/logs/analytics.log 2>&1",
+    "0 2 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name content-backup -- python3 pipeline/content_backup.py >> pipeline/logs/content-backup.log 2>&1",
+    "0 5 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name rss-health -- python3 pipeline/rss_health.py >> pipeline/logs/rss-health.log 2>&1",
+    "5 6 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name metrics-history -- python3 pipeline/metrics_history.py >> pipeline/logs/metrics_history.log 2>&1",
+    "0 6 * * * /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name metrics-cron -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/metrics_cron.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/metrics-cron.log 2>&1",
+    "0 17 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name daily-briefing -- python3 pipeline/daily_briefing.py >> pipeline/logs/daily-briefing.log 2>&1",
+    "0 5,8,11,14,17,20 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name x-auto-poster -- python3 pipeline/x_auto_poster.py --max-posts 1 >> pipeline/logs/x-poster.log 2>&1",
+    "0 6 * * 0 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name rotate-logs -- bash scripts/rotate_logs.sh >> pipeline/logs/rotate_logs.log 2>&1",
+    "0 7 * * 0 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name dead-link -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh bash pipeline/dead_link_cron.sh >> pipeline/logs/dead-link-cron.log 2>&1",
+    "30 7 * * 0 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name validate-articles -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh python3 pipeline/validate_articles.py >> pipeline/logs/validate-articles.log 2>&1",
+    "0 6 * * 1 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name feed-health -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh python3 pipeline/feed_health_report.py --live >> pipeline/logs/feed-health.log 2>&1",
+    "0 7 * * 1 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name weekly-digest -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh python3 pipeline/weekly_digest.py >> pipeline/logs/weekly_digest.log 2>&1",
+    "0 7 * * 1 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name weekly-metrics-digest -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh python3 scripts/weekly-metrics-digest.py >> pipeline/logs/weekly-metrics-digest.log 2>&1",
+    "0 8 * * 1 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name ctr-gap-report -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh python3 scripts/ctr_gap_report.py --post-discord >> pipeline/logs/ctr-gap-report.log 2>&1",
+    "0 8 * * 1 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name weekly-top-articles -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh python3 scripts/weekly_top_articles.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/weekly-top-articles.log 2>&1",
+    "0 20 * * 0 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name weekly-ops-report -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh bash scripts/weekly-ops-report.sh --post >> pipeline/logs/weekly-ops-report.log 2>&1",
+    "10 6 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name pipeline-error-tracker -- python3 scripts/pipeline_error_tracker.py >> pipeline/logs/pipeline-error-tracker.log 2>&1",
+    "0 9 * * 1 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name pipeline-error-weekly -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh python3 scripts/pipeline_error_weekly_report.py >> pipeline/logs/pipeline-error-weekly.log 2>&1",
+    "0 7 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name source-stats -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh python3 pipeline/source_stats.py >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/source-stats.log 2>&1",
+    "30 6 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name fetch-search-console -- python3 scripts/fetch_search_console.py >> pipeline/logs/fetch-search-console.log 2>&1",
+    "30 7 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name category-distribution -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh python3 scripts/category_distribution.py --post-discord >> pipeline/logs/category-distribution.log 2>&1",
+    "0 7 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name daily-traffic-card -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh python3 scripts/daily_traffic_card.py >> pipeline/logs/daily-traffic-card.log 2>&1",
+    "30 8 * * 1 cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name retention-trend -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh python3 scripts/retention_trend.py >> pipeline/logs/retention-trend.log 2>&1",
+    "0 */6 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name disk-monitor -- bash scripts/disk_space_monitor.sh --no-alert >> pipeline/logs/disk_monitor.log 2>&1",
+    "0 */12 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name cron-health -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/run_with_project_env.sh python3 scripts/cron_health_monitor.py >> pipeline/logs/cron-health-monitor.log 2>&1",
+    "3,13,23,33,43,53 * * * * /home/pertt/.openclaw/bin/safe-job-runner.sh --name uutis-monica-worker --timeout 1800 --cpu-load-max 2.0 --min-disk-free-mb 4096 --cpu-quota 50\\% --memory-max 1800M --log /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/staged-monica-worker.log -- bash -lc 'cd /home/pertt/.openclaw/workers/uutistenlukija-staged-monica && MONICA_OPENCLAW_LOCAL=0 MONICA_WRITER_TIMEOUT_SECONDS=360 bash pipeline/staged_monica_worker_cron.sh'",
+    "10 12 * * * /home/pertt/.openclaw/bin/safe-job-runner.sh --name uutis-quality-review-script --timeout 120 --cpu-load-max 2.5 --min-disk-free-mb 2048 --log /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/quality-review-script.log -- bash -lc 'cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name quality-review -- python3 scripts/quality_review_script.py --post'",
+    "17 */6 * * * cd /home/pertt/.openclaw/workspace/projects/uutistenlukija && /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name visual-qa -- node scripts/visual_qa_monitor.js --post-discord >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/visual-qa-monitor.log 2>&1",
+    "*/5 * * * * /home/pertt/.openclaw/workspace/scripts/uutistenlukija_current_main_job.py --name deploy-monitor -- /home/pertt/.openclaw/workspace/projects/uutistenlukija/scripts/monitor_deploys.sh >> /home/pertt/.openclaw/workspace/projects/uutistenlukija/pipeline/logs/deploy-monitor.log 2>&1"
+  ],
+  "openclaw_news_jobs": [
+    {
+      "id": "22b26704-74e6-4706-befb-035d6b410cba",
+      "name": "Felix afternoon mission work",
+      "enabled": false
+    },
+    {
+      "id": "f240bc1c-6ebc-4d02-9a93-67e16cc2e58b",
+      "name": "Felix night mission work",
+      "enabled": true
+    },
+    {
+      "id": "0e736c87-10d8-480a-af85-7d8ed96b0236",
+      "name": "Felix 3am autonomous improvement",
+      "enabled": false
+    },
+    {
+      "id": "0ce1569f-da67-44fe-a168-c88a7bcbd97e",
+      "name": "Felix 3:30am autonomous improvement catch-up",
+      "enabled": false
+    },
+    {
+      "id": "0e2e5a04-7009-4ff2-9746-10c332afe091",
+      "name": "Felix 5am daily self-review",
+      "enabled": true
+    },
+    {
+      "id": "e469b29b-b12a-4fc5-9847-6ada06dfd096",
+      "name": "flywheel",
+      "enabled": false
+    },
+    {
+      "id": "3c709281-5cff-4aee-ba9b-e0da346d7797",
+      "name": "daily-improvement",
+      "enabled": false
+    },
+    {
+      "id": "18a7af38-fdb7-4381-a699-9b925f0183a2",
+      "name": "weekly-review",
+      "enabled": true
+    },
+    {
+      "id": "9bb569e7-c435-4f0f-8adc-f4288c2b3468",
+      "name": "quality-review",
+      "enabled": false
+    },
+    {
+      "id": "a8ec4307-e30b-4a49-b39b-e1095736999b",
+      "name": "disk-space-monitor",
+      "enabled": false
+    },
+    {
+      "id": "d94051c4-6697-4f49-b9a9-8891c41aec3c",
+      "name": "Felix Linear OPE reconciliation cycle",
+      "enabled": false
+    },
+    {
+      "id": "a7bc787a-7f0f-424a-b832-60f6e6decd55",
+      "name": "Iris OPE-435 100-PV decision gate",
+      "enabled": false
+    },
+    {
+      "id": "9cc5af71-e0d6-40a6-ac1c-1b1bd195aaa9",
+      "name": "Iris OPE-405 D+28 sponsor-path decision",
+      "enabled": false
+    },
+    {
+      "id": "7a210f50-4509-4e83-a174-c6cb51969507",
+      "name": "Max OPE-465 scheduled canary gate",
+      "enabled": false
+    },
+    {
+      "id": "b19ffcbb-0329-4f61-9931-88e46276ac7d",
+      "name": "Iris OPE-367 100-view silent guard",
+      "enabled": false
+    },
+    {
+      "id": "09c81c20-d07a-4be2-a410-95427c645653",
+      "name": "Iris OPE-367 D+14 hard checkpoint",
+      "enabled": false
+    },
+    {
+      "id": "bf4f0171-c035-4f8e-8885-aec583e3a71e",
+      "name": "OPE-465 post-backup recovery gate",
+      "enabled": false
+    },
+    {
+      "id": "7f221493-4a43-4a37-9d7e-9b1c35111869",
+      "name": "Felix OPE-465 post-backup checkpoint",
+      "enabled": false
+    },
+    {
+      "id": "5e9f71ee-36a0-4502-a610-4fba0a589c18",
+      "name": "Iris OPE-435 current-traffic recirculation D+7 read",
+      "enabled": false
+    },
+    {
+      "id": "eeabc44b-ae58-47c9-ad9d-4e151cedcf06",
+      "name": "heartbeat-felix",
+      "enabled": false
+    },
+    {
+      "id": "8057c8ec-4618-469f-91b5-b5200f2d4d06",
+      "name": "heartbeat-alex",
+      "enabled": false
+    },
+    {
+      "id": "cc2ffafc-4d15-4aa1-8dbc-81306b5a0379",
+      "name": "heartbeat-monica",
+      "enabled": false
+    },
+    {
+      "id": "6ca905de-01c3-4f79-8d7b-56ba987f6e6f",
+      "name": "heartbeat-sara",
+      "enabled": false
+    },
+    {
+      "id": "8124a224-dcc8-487e-b7b3-18a0f85f036d",
+      "name": "heartbeat-max",
+      "enabled": false
+    },
+    {
+      "id": "20ad42c1-e28c-411f-a3c3-efb132e93458",
+      "name": "heartbeat-iris",
+      "enabled": false
+    },
+    {
+      "id": "fdaac749-2063-41d8-998a-d5a0b84be74b",
+      "name": "Iris OPE-508 D+28 finality guard v1",
+      "enabled": false
+    },
+    {
+      "id": "4b7b1af0-1263-4cdc-a4d5-70c3da40b1f3",
+      "name": "Iris OPE-510 D+28 finality guard v1",
+      "enabled": false
+    },
+    {
+      "id": "02cb6258-5790-4fca-9c82-192e1b1a1db6",
+      "name": "OPE-498 Magnus D+28 provider-final read",
+      "enabled": true
+    },
+    {
+      "id": "aabc5ef4-9baf-4c17-b16e-09b471079af8",
+      "name": "OPE-498 Magnus conditional D+56 provider-final read",
+      "enabled": true
+    },
+    {
+      "id": "efc6551f-9b24-49b2-83f1-b25a92366b7b",
+      "name": "OPE-514 Mäntyharju D+28 provider-final guard",
+      "enabled": true
+    },
+    {
+      "id": "c3d3c7fe-eb94-4d86-ab99-78cdd3d76e99",
+      "name": "OPE-526 BMW EGR post-deploy recrawl guard",
+      "enabled": true
+    },
+    {
+      "id": "f730687e-9f22-41f0-bc98-c0b9eaf82880",
+      "name": "skill-collection-review-alex",
+      "enabled": true
+    },
+    {
+      "id": "68ffa188-19c5-4c70-886c-1cf2ea006d2c",
+      "name": "skill-collection-review-monica",
+      "enabled": true
+    },
+    {
+      "id": "87744da0-9e41-490b-bb18-9af15ca69ef0",
+      "name": "skill-collection-review-sara",
+      "enabled": true
+    },
+    {
+      "id": "af0f0e47-8d26-472c-88ee-a99f4244c0f0",
+      "name": "skill-collection-review-max",
+      "enabled": true
+    },
+    {
+      "id": "8f6e2aeb-565c-4aca-8e0d-5fa113e64130",
+      "name": "skill-collection-review-iris",
+      "enabled": true
+    }
+  ],
+  "systemd_news_units": [
+    {
+      "name": "openclaw-contract-mirrors.service",
+      "prior_enabled": "static"
+    },
+    {
+      "name": "openclaw-contract-mirrors.timer",
+      "prior_enabled": "enabled"
+    },
+    {
+      "name": "openclaw-linear-ope-watchdog.service",
+      "prior_enabled": "static"
+    },
+    {
+      "name": "openclaw-linear-ope-watchdog.timer",
+      "prior_enabled": "enabled"
+    },
+    {
+      "name": "uutistenlukija-image-pipeline-codex-goal.service",
+      "prior_enabled": "disabled"
+    },
+    {
+      "name": "uutistenlukija-staged-pipeline-recovery.service",
+      "prior_enabled": "static"
+    },
+    {
+      "name": "uutistenlukija-staged-pipeline-recovery.timer",
+      "prior_enabled": "enabled"
+    }
+  ],
+  "disable_workflow_ids": [
+    318792330,
+    246481423,
+    318792331,
+    318982239
+  ],
+  "preserve_workflow_ids": [
+    261239113,
+    352261407
+  ],
+  "preserve_hermes_jobs": "all; obsolete observer stays paused; current reviewer stays enabled",
+  "preserve_credentials_and_personal_runtime": true
+}

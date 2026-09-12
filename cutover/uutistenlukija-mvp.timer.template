@@ -1,0 +1,11 @@
+# Step 5 only: install after old routes are drained and public deployment verified.
+[Unit]
+Description=Single Uutistenlukija controller schedule
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=15min
+Unit=uutistenlukija-mvp.service
+
+[Install]
+WantedBy=timers.target

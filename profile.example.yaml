@@ -1,0 +1,17 @@
+model:
+  default: gpt-6-astra
+  provider: openai-codex
+platform_toolsets:
+  cli: []
+mcp_servers: {}
+agent:
+  max_turns: 1
+  run_budget_seconds: 120
+compression:
+  enabled: false
+memory:
+  memory_enabled: false
+  user_profile_enabled: false
+display:
+  interface: cli
+  tool_progress: 'off'

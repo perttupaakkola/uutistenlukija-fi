@@ -1,0 +1,12 @@
+[Unit]
+Description=Uutistenlukija source, editorial review and sole publisher
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/pertt/work/uutistenlukija
+Environment=HOME=/home/pertt
+Environment=PATH=/home/pertt/.openclaw/tools/node-v22.22.0/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=/home/pertt/.hermes/hermes-agent/venv/bin/python -B -m news_mvp live-tick --config /home/pertt/work/uutistenlukija/config.json
+TimeoutStartSec=12min

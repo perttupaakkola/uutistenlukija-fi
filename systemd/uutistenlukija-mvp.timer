@@ -1,0 +1,10 @@
+[Unit]
+Description=Single Uutistenlukija source and publishing schedule
+
+[Timer]
+OnActiveSec=10s
+OnUnitInactiveSec=15min
+Unit=uutistenlukija-mvp.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,13 @@
+{
+  "enabled": false,
+  "backend": "hermes",
+  "state_dir": "/home/pertt/.local/share/uutistenlukija",
+  "output_dir": "/home/pertt/.local/share/uutistenlukija/private-site",
+  "hermes_executable": "/home/pertt/.hermes/hermes-agent/venv/bin/hermes",
+  "max_attempts": 3,
+  "retry_seconds": 60,
+  "max_source_age_hours": 48,
+  "source_recipes": [
+    "sources/monterrey-2026-09-11.json"
+  ]
+}
