@@ -50,11 +50,11 @@ class Store:
             self.db.execute("""UPDATE jobs SET status=CASE WHEN attempts>=? THEN 'failed' ELSE 'ready' END,
                 error='Interrupted tick; saved draft retained' WHERE status='running'""", (max_attempts,))
 
-    def claim(self, now, max_attempts):
+    def claim(self, now, max_attempts, job_id=None):
         with self.db:
             row = self.db.execute("""SELECT * FROM jobs WHERE status='ready'
-                AND next_attempt<=? AND attempts<? ORDER BY created_at, id LIMIT 1""",
-                (now, max_attempts)).fetchone()
+                AND next_attempt<=? AND attempts<? AND (? IS NULL OR id=?) ORDER BY created_at, id LIMIT 1""",
+                (now, max_attempts, job_id, job_id)).fetchone()
             if row is None:
                 return None
             self.db.execute("UPDATE jobs SET status='running', attempts=attempts+1 WHERE id=?", (row["id"],))

@@ -8,7 +8,7 @@ import urllib.request
 from pathlib import Path
 
 from cutover.check_release import check
-from cutover.prepare import BUNDLE, released
+from .authorization import authorize
 from .editorial import ROOT, digest
 from .site import atomic_write, article_path, esc, page, render_site
 
@@ -36,8 +36,7 @@ def api(path, data=None, method=None):
 def guard(config_path):
     if json.loads(Path(config_path).read_text())['enabled'] is not True:
         raise ValueError('Controller stopped')
-    control=json.loads((BUNDLE/'CONTROL.json').read_text());review=json.loads((BUNDLE/'reviews/04.json').read_text())
-    if not released(control,review,ROOT):raise ValueError('Public release gate closed')
+    authorize(json.loads(Path(config_path).read_text()),cmd('git','rev-parse','HEAD'))
     if cmd('git','status','--porcelain','--untracked-files=no'):
         raise ValueError('Commit source changes before publishing')
     drain=json.loads((Path(json.loads(Path(config_path).read_text())['state_dir'])/'cutover/drain-verified.json').read_text())

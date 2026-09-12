@@ -55,7 +55,7 @@ def ingest(config, packet, now=None):
     return {"id": job_id, "admitted": added}
 
 
-def tick(config_path, model=None, now=None, _already_locked=False):
+def tick(config_path, model=None, now=None, _already_locked=False, target_job_id=None):
     config = load_config(config_path)
     if not config["enabled"]:
         return {"status": "stopped"}
@@ -68,7 +68,7 @@ def tick(config_path, model=None, now=None, _already_locked=False):
             # A render interrupted after review resumes without another model call.
             if any(j["status"] == "approved" for j in store.articles()):
                 return {"status": "rendered", "articles": render_site(store, config["output_dir"], config["state_dir"])}
-            job = store.claim(now.timestamp(), config["max_attempts"])
+            job = store.claim(now.timestamp(), config["max_attempts"], target_job_id)
             if job is None:
                 return {"status": "idle"}
             if model is None:

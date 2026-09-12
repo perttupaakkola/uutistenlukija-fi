@@ -7,7 +7,10 @@
   "max_attempts": 3,
   "retry_seconds": 60,
   "max_source_age_hours": 48,
-  "source_recipes": [
-    "sources/monterrey-2026-09-11.json"
-  ]
+  "source_recipes": [],
+  "discovery": {
+    "family": "nasa-modis",
+    "max_candidates": 5
+  },
+  "authorization_mode": "migration"
 }
