@@ -1,0 +1,53 @@
+{
+  "mode": "official-text-v1",
+  "max_source_age_hours": 48,
+  "providers": {
+    "helsinki": {
+      "publisher": "Helsingin kaupunki",
+      "index": "https://www.hel.fi/fi/uutiset/rss",
+      "rights_url": "https://hri.fi/data/fi/dataset/helsingin-hel-fi-sivuston-avoin-rajapinta-uutisille",
+      "hosts": [
+        "www.hel.fi",
+        "hri.fi"
+      ],
+      "article_pattern": "https://www\\.hel\\.fi/fi/uutiset/[a-z0-9-]+",
+      "rights_text_sha256": "08f2dd0a72b60e5d195af79f7021e604d2e2efb7022d2a4005aed3912e9de5b4"
+    },
+    "stat": {
+      "publisher": "Tilastokeskus",
+      "index": "https://stat.fi/fi",
+      "rights_url": "https://stat.fi/fi/tietoa-meista/tutustu-tilastokeskukseen/lainsaadanto/kayttoehdot",
+      "hosts": [
+        "stat.fi"
+      ],
+      "article_pattern": "https://stat\\.fi/fi/julkaisu/[a-z0-9]+",
+      "rights_text_sha256": "5b00c9f28ad368db93244d3ca359b5d3d9331ff9530225d5719ebb100402e0fd"
+    },
+    "kuntaliitto": {
+      "publisher": "Suomen Kuntaliitto",
+      "index": "https://www.kuntaliitto.fi/ajankohtaista",
+      "rights_url": "https://www.kuntaliitto.fi/kuntaliitto/kayttoehdot",
+      "hosts": [
+        "www.kuntaliitto.fi"
+      ],
+      "article_pattern": "https://www\\.kuntaliitto\\.fi/ajankohtaista/\\d{4}/[a-z0-9-]+",
+      "license": "CC BY 4.0",
+      "timezone": "Europe/Helsinki",
+      "rights_text_sha256": "fc65bcf1631858d361384e05f80f8744dfe3d0f344f5a3aae8f62dfc82b97f87",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "ecb": {
+      "publisher": "European Central Bank",
+      "index": "https://www.ecb.europa.eu/rss/press.html",
+      "rights_url": "https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html",
+      "hosts": [
+        "www.ecb.europa.eu"
+      ],
+      "article_pattern": "https://www\\.ecb\\.europa\\.eu//press/pr/date/\\d{4}/html/ecb\\.(?:pr|mp)\\d{6}~[a-f0-9]+\\.en\\.html",
+      "license": "ECB website reuse conditions: accurate attribution, modifications identified; free source access; named-author works excluded",
+      "timezone": "Europe/Berlin",
+      "rights_text_sha256": "57ee9d76934e9f5e84db28774d672a180db0ebea78a728fc7516212ada9482d9",
+      "notice": "Alkuperäinen tieto on maksutta saatavilla EKP:n sivustolla."
+    }
+  }
+}

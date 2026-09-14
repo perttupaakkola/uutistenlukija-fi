@@ -13,7 +13,7 @@ from .store import database
 def main():
     parser = argparse.ArgumentParser(description="Fresh news MVP — local private workflow")
     sub = parser.add_subparsers(dest="command", required=True)
-    for name in ("init", "ingest", "collect", "tick", "live-tick", "render", "status", "stop"):
+    for name in ("init", "ingest", "discover", "collect", "tick", "live-tick", "render", "status", "stop"):
         p = sub.add_parser(name)
         p.add_argument("--config", type=Path, required=True)
         if name == "ingest":
@@ -50,7 +50,10 @@ def main():
             result = {"status": "stopped"}
         else:
             config = load_config(args.config)
-            if args.command == "collect":
+            if args.command == "discover":
+                from .discovery import discover
+                result = {"recipes": discover(config), "publication_authorized": False}
+            elif args.command == "collect":
                 if config["backend"] != "hermes":
                     raise ValueError("Real source collection requires a live configuration, never fixture mode")
                 packet, receipt = collect(json.loads(args.recipe.read_text()), config["state_dir"])

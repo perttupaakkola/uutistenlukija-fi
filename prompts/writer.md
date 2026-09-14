@@ -19,3 +19,5 @@ This output is Uutistenlukija's AI-assisted editorial draft, not the source
 organisation's text or endorsement. Treat one publisher as one source even if
 it supplies several documents. An institutional press release is not independent
 confirmation of its own claims.
+
+Exact official-text-v1 packets may explicitly use a text-only presentation. Classify the actual topic, not the publisher: services and education are Kotimaa, economic statistics Talous, arts and libraries Kulttuuri. Do not turn a local Helsinki announcement into a national claim. Attribute single-source institutional claims. Text reuse permission does not authorize images; preserve null image and do not invent a photograph.

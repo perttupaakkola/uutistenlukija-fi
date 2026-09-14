@@ -1,0 +1,12 @@
+{
+  "enabled": false,
+  "backend": "hermes",
+  "state_dir": "../private-state",
+  "output_dir": "../private-site",
+  "max_source_age_hours": 48,
+  "discovery": {
+    "family": "finnish-official",
+    "max_candidates": 5
+  },
+  "source_recipes": []
+}

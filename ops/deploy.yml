@@ -32,6 +32,8 @@ jobs:
         run: |
           python3 - <<'PY'
           import json,os,urllib.request
+          from pathlib import Path
+          from news_mvp.release_contract import deployment_record
           url='https://api.cloudflare.com/client/v4/accounts/'+os.environ['CF_ACCOUNT']+'/pages/projects/uutistenlukija-fi'
           req=urllib.request.Request(url,headers={'Authorization':'Bearer '+os.environ['CF_TOKEN']})
           with urllib.request.urlopen(req,timeout=30) as response: result=json.load(response)
@@ -39,9 +41,9 @@ jobs:
           d=result['result']['canonical_deployment']
           assert d['environment']=='production' and d['latest_stage']['status']=='success'
           assert d['deployment_trigger']['metadata']['commit_hash']==os.environ['GITHUB_SHA']
-          receipt=json.load(open('release/release.json'))
-          record={'deployment_id':d['id'],'deployment_url':d['url'],'canonical_origin':'https://uutistenlukija.fi','remote_commit':os.environ['GITHUB_SHA'],'source_commit':receipt['source_commit'],'packet_sha256':receipt['packet_sha256'],'draft_sha256':receipt['draft_sha256'],'image_sha256':receipt['image_sha256'],'job_id':receipt['job_id']}
-          open('live-deployment.json','w').write(json.dumps(record,indent=2)+'\n')
+          receipt=json.loads(Path('release/release.json').read_text())
+          record=deployment_record(receipt,d,os.environ['GITHUB_SHA'])
+          Path('live-deployment.json').write_text(json.dumps(record,indent=2)+'\n')
           print('Verified production deployment',d['id'])
           PY
       - uses: actions/upload-artifact@v4

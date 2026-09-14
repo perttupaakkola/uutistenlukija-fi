@@ -65,6 +65,9 @@ def collect(recipe, state_dir, now=None):
     No inferred licence: the operator supplies the exact credit and permission
     record after inspecting the source and terms. Raw response hashes bind it.
     """
+    if recipe.get('family') == 'finnish-official':
+        from .official import collect as collect_official
+        return collect_official(recipe, state_dir, now)
     now = now or datetime.now(timezone.utc)
     raw, mime, final_url = fetch(recipe["url"], recipe["allowed_hosts"])
     if mime != "text/html":

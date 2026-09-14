@@ -2,6 +2,10 @@
 import hashlib
 import json
 from pathlib import Path
+import sys
+# The actual script invocation starts with cutover/ on sys.path.
+sys.path.insert(0,str(Path(__file__).resolve().parent.parent))
+from news_mvp.release_contract import receipt_media, check_article
 
 
 def check(root, receipt):
@@ -10,6 +14,7 @@ def check(root, receipt):
         raise ValueError('Public release has not been authorized')
     if receipt.get('origin') != 'https://uutistenlukija.fi' or receipt.get('ga4_id') != 'G-35XERS8V6J':
         raise ValueError('Canonical site/analytics identity changed')
+    binding=receipt_media(receipt)
     files=receipt['files']
     if not files or 'index.html' not in files:
         raise ValueError('Missing release files')
@@ -24,6 +29,13 @@ def check(root, receipt):
         data=(root/name).read_text()
         if any(s in data for s in ('noindex,nofollow','Yksityinen esikatselu','keksitty uutinen','example.invalid')):
             raise ValueError('Private or fixture page in public release')
+    if binding['image_sha256'] is not None:
+        image='mvp-assets/'+binding['image_sha256']+'.jpg'
+        if image not in files or files[image]!=binding['image_sha256']:
+            raise ValueError('Required reviewed image missing from bundle')
+    if receipt.get('schema_version')==2:
+        for name in receipt['new_article_files']:
+            check_article((root/name).read_text(),receipt['packet'],receipt['draft'])
     return len(files)
 
 

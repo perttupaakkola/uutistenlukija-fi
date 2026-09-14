@@ -1,72 +1,82 @@
-# Uutistenlukija MVP
+# Uutistenlukija MVP — revision54 candidate, not installed
 
-Fresh Finnish news: one Python controller, SQLite, sequential writer/reviewer
-prompts, static pages, and one Cloudflare Pages deployment workflow. Uses the
-installed shared Hermes runtime and existing Codex OAuth in the news-mvp profile.
-No legacy website data, news queues, agent memories or old pipeline is loaded.
+One Python controller, SQLite dedupe, sequential Finnish writer/reviewer prompts,
+static pages and one existing GitHub/Cloudflare Pages executor. Uses the existing
+shared Hermes runtime, news-mvp profile and Codex OAuth. No old pipeline/history,
+agent roles, extra runtime or publisher. The installed baseline remains the
+previously activated NASA-only release; this isolated candidate has no live authority.
 
-The systemd timer calls:
+`news-reviewed-v2` discovery preserves NASA MODIS and adds two exact official text
+sources: Tilastokeskus Finnish releases and Helsinki news RSS. Relevant terms and
+licence links are pinned in sources/finnish-official.json. VN is not approved:
+attribution does not override its commercial-reuse restriction. No facts-only
+substitution or legal-basis change is implied. Current scope remains two Finnish
+institutional sources plus NASA, not comprehensive world/sports/independent news.
+
+Discovery reads three bounded indices, examines at most 50 official index entries
+per provider and returns at most five recipes. Terminal URLs are removed before
+selection. Provider order rotates after the last admitted provider. Outage/refusal
+of one provider is returned as source_errors and does not suppress other providers.
+At most one new source is admitted per tick. The full collection budget is at most
+18 bounded intake fetch calls (three indices plus up to five three-fetch collections).
+Freshness remains 48 hours and the same timer remains 15 minutes. Completed and
+uncertain-dispatch records cannot cause duplicate editorial work or redispatch.
+
+The new official-text-v1 contract permits image-less articles ONLY for those exact
+providers, rights text/licence, source identity and policy hash. The packet includes
+source-byte and parsed-source hashes; the writer preserves null image, and the
+reviewer checks the exact Finnish draft against its sources. Before release, actual
+stored intake bytes must reproduce the reviewed source and rights. Unknown policy,
+missing/changed provenance, fixture/private-only packet or unreviewed draft refuses
+publication. No dummy image, fabricated hash, logo or automatic image inference.
+
+The same contract reaches public_bundle, cutover/check_release.py, the actual
+ops/deploy.yml deployment-record command and canonical readback. Text-only version2
+receipts bind packet/draft/review/provenance and use JSON null for image_sha256.
+Public pages say they have no image, show source attribution, CC BY link and change
+notice, and do not call accepted public text a draft. Canonical readback checks the
+text and licence notices without requesting a JPEG. Mixed home pages retain existing
+NASA articles/images. Existing imaged receipts retain image hash/JPEG semantics.
+
+The publications schema permits SQL NULL for new text-only image_sha. The tiny
+transactional migration copies existing rows unchanged and refuses unexpected
+columns/indexes/triggers. restore_image_required_schema is a pre-activation rollback
+only: it refuses if any text-only publication exists. Never delete rows to roll back.
+The operator must hold the existing single_tick lock across any install/schema/
+policy transition. There is no installation or activation by this candidate.
+
+A proposed steady-state v2 policy is disabled until separately approved by Hermes;
+it pins the exact source commit, all three providers, text policy digest, canonical
+origin/executor, admission/fetch/freshness limits and 15-minute timer. Existing v1
+NASA authorization remains supported. Source config outside the exact policy,
+dirty source, disabled controller or missing approval fails closed. Keep production
+config/state/profile untouched until a separate reviewed installation boundary.
+
+Private commands:
 
 ```
-/home/pertt/.hermes/hermes-agent/venv/bin/python -B -m news_mvp live-tick --config config.json
+python3 -B -m unittest discover -s tests -v
+node tests/test_analytics.cjs
+python3 -B -m news_mvp discover --config config.private.json
 ```
 
-The same scheduled controller discovers at most five recent image reports from
-NASA's MODIS gallery, admits at most one per tick and fetches the source, exact
-page image and NASA permission evidence automatically. Article date, capture date,
-image filename/title and exact NASA GSFC credit must match; unsupported or stale
-items are skipped. Terminal rejected/failed/deployed items cannot starve later news.
-This is one initial allowlisted family, not a change to the broader Finnish news
-product's purpose. No old backlog or hand-maintained per-article list is required.
+config.private.json is disabled and uses relative private state/output paths.
+`collect` and `tick` remain the same intake/controller interfaces; no model fetches
+sources. `live-tick` for news-reviewed-v2 additionally requires the exact approved
+policy before opening state. A direct publish call is not an operator entrypoint;
+normal scheduling holds the controller lock throughout intake, model and release.
 
-One SQLite jobs table stores drafts/reviews; a publications table binds packet,
-draft, image, source commit, remote commit, Actions run and live deployment. A
-completed source returns idle before fetching, committing or dispatching again.
-A dispatch recorded before its HTTP request is never automatically repeated if
-run visibility is delayed. Inspect the run before manually resolving a failed or
-ambiguous dispatch. No automatic publication retry after an uncertain failure.
+Revision54 includes two real private historical-source experiments with unchanged
+source dates. Both were rejected and are preserved as rejected reports, not approved
+articles. No model retry or self-approval is implied. Current official-source fetches
+found no fresh eligible item overnight. A fresh accepted private article and later
+natural scheduled same-packet live/no-duplicate proof remain required acceptance.
 
-State: `/home/pertt/.local/share/uutistenlukija`. Actual public output is ONLY
-`live-site/`. The abandoned `public-history/` residual is excluded and unused; its
-collector is stopped. Its eventual disposition belongs to a later guarded step.
-The `cutover/` files remain exact reviewed phase4 evidence; the historical-site
-requirements in them were superseded by CONTROL revision7 and the owner amendment.
-The active executor is `ops/deploy.yml`, installed at the existing repository's
-`.github/workflows/deploy.yml`, targeting the existing uutistenlukija-fi project.
-It has no Actions schedule. Existing repository history remains remote; the new
-release uploads only the fresh `public/` tree. Local implementation does not clone
-or import that repository.
-
-Stop admission and publication with `python -B -m news_mvp stop --config config.json`.
-The timer can remain installed; stopped ticks do nothing. During this migration,
-public writes also require the current CONTROL/review gate and committed source.
-The 15-minute timer discovers current allowlisted source items. Step5 verification temporarily
-uses a one-minute interval on the SAME timer, then restores 15 minutes.
-
-Public pages include source links, exact image credit/date/permission, canonical
-URLs, sitemap, an actual 404 page and Finnish consent controls. GA4 G-35XERS8V6J
-loads only on the canonical origin after affirmative cookie_consent_v2 consent.
-Private previews never send analytics. Existing personal helpers and the analytics
-exporter are retained; old news publishing schedules are stopped. The runtime's
-system-owned old-news skill reviews are disabled by the supported
-`skills.workshop.autonomous.mode=off` setting, with no gateway restart.
-
-Checks: `python -B -m unittest discover -s tests -v` and the offline consent test
-`node tests/test_analytics.cjs`. Fixture mode is refused by live scheduling and
-public rendering. Phase receipts live in the separate Hermes plan directory.
-
-Steady-state transition is PREPARED ONLY. `authorization_mode` defaults to
-`migration`, retaining CONTROL step/deadline/stop checks. After independent review,
-the operator can install `state_dir/steady-state-policy.json` for the exact source
-commit, fill its Hermes review reference/approval, set its enabled flag and switch
-config to `steady_state`. The proposal is disabled and is NOT that activation file.
-The steady-state branch uses only that explicit policy and the controller stop
-switch; it does not read the migration bundle. Source commit, family, freshness,
-limits, origin and executor are pinned; any source change needs renewed policy
-approval. Keep the same 15-minute timer. Setting config enabled=false or policy
-enabled=false stops publication. No transition has been activated in step5.
-
-The step5 correction sets a temporary migration_publication_limit of two total
-publications (the existing article plus one unattended canary). It blocks further
-new admission at the review gate. This migration-only cap is not applied by the
-separately approved steady-state policy; that transition remains unactivated.
+Pending-publication priority: under the same controller lock, each tick first reads
+SQLite for nonterminal publications and reconciles at most one. It does not read
+feeds or admit a new provider until the outcome is terminal. Multiple pending rows,
+missing job identity or an unknown commit outcome fail closed for operator review.
+Prepared records may finish their original promotion/dispatch; dispatched/unknown
+records only inspect their existing run and canonical result. A lost external
+response remains unknown and cannot cause another push or dispatch. A successful
+reconciliation owns that entire tick; fresh discovery waits for the next tick.

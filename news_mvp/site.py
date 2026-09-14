@@ -54,8 +54,9 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
     for job in jobs:
         packet, draft, review = (json.loads(job[k]) for k in ("packet", "draft", "review"))
         validate_draft(draft, packet)
-        if public and (packet.get("fixture") is not False or not draft.get("image", {}).get("local_path")):
-            raise ValueError("Public release requires a real article and reviewed local image")
+        if public:
+            from .release_contract import media
+            media(packet, draft)
         validate_review(review, draft)
         if not review["approved"]:
             raise ValueError("Unapproved record cannot be rendered")
@@ -72,8 +73,16 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                              '</span></p>' for p in draft["paragraphs"])
         source_list = "".join(f'<li id="lahde-{i}"><a href="{esc(s["url"])}" rel="noopener noreferrer">{esc(s["publisher"])}: {esc(s["title"])}</a><br><small>Lähteen päiväys: {esc(s["published_at"])}</small></li>'
                               for i, s in enumerate(packet["sources"], 1))
+        for source in packet["sources"]:
+            reuse = source.get("reuse")
+            if reuse:
+                source_list += f'<li>Lähde: {esc(source["publisher"])} · <a href="{esc(reuse["url"])}">{esc(reuse["license"])}</a>. {esc(reuse["changes"])}</li>'
+                if reuse.get('license_url'):
+                    source_list += f'<li><a href="{esc(reuse["license_url"])}">CC BY 4.0</a></li>'
+                if reuse.get('notice'):
+                    source_list += f'<li>{esc(reuse["notice"])}</li>'
         image = draft.get("image")
-        figure = ""
+        figure = "" if image else '<p class="image-note">Tämä uutinen julkaistaan ilman kuvaa.</p>' if public else '<p class="image-note">Ei kuvaa: tekstiversion yksityinen esikatselu.</p>'
         if image:
             image_url = image["url"]
             if image.get("local_path"):
@@ -90,7 +99,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
 <p class="eyebrow">{esc(draft["category"])} · {"" if public else "Luonnos "}{date}</p><h1>{esc(draft["title"])}</h1>
 <p class="lead">{esc(draft["summary"])}</p>{figure}<div class="story-body">{paragraphs}</div>
 <section class="sources"><h2>Lähteet</h2><ol>{source_list}</ol>
-<p>Teksti on laadittu yllä mainittujen lähdekatkelmien perusteella. Lähteiden tiedot ja kuvan käyttöoikeus on tarkastettu.</p></section></article>'''
+<p>Teksti on laadittu yllä mainittujen lähdekatkelmien perusteella. {"Kuvan käyttöoikeustiedot ovat kuvan yhteydessä." if image else "Uutisteksti esitetään ilman kuvaa."}</p></section></article>'''
         atomic_write(output_dir / article_path(job) / "index.html", page(draft["title"], body, link if public else None))
         cards.append(f'<article class="card"><p class="eyebrow">{esc(draft["category"])} · {date}</p><h2><a href="{link}">{esc(draft["title"])}</a></h2><p>{esc(draft["summary"])}</p>{fixture}<a class="read" href="{link}">Lue uutinen <span aria-hidden="true">→</span></a></article>')
     content = "".join(cards) or '<p class="empty">Ei vielä tarkastettuja uutisluonnoksia.</p>'

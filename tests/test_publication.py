@@ -38,9 +38,9 @@ class Publication(unittest.TestCase):
         self.assertFalse((self.root/'public/index.html').exists())
 
     def test_dispatch_visibility_delay_never_dispatches_twice(self):
-        draft=FixtureModel().call('writer',self.packet);draft['image']={'sha256':'a'*64}
-        packet=copy.deepcopy(self.packet);packet['image']=draft['image']
-        job={'id':self.job,'packet':json.dumps(packet),'draft':json.dumps(draft)}
+        draft=FixtureModel().call('writer',self.packet);draft['image']={'sha256':'a'*64,'local_path':'media/'+('a'*64)+'.jpg','url':'https://example.invalid/image.jpg','source_url':'https://example.invalid/story','license_url':'https://example.invalid/rights','license':'isolated test rights','alt':'Test','credit':'Test'}
+        packet=copy.deepcopy(self.packet);packet['image']=draft['image'];packet['fixture']=False
+        job={'id':self.job,'packet':json.dumps(packet),'draft':json.dumps(draft),'review':json.dumps({'approved':True,'draft_sha256':digest(draft),'reasons':['isolated test']})}
         with database(self.config['state_dir']) as store:
             ensure_table(store)
             store.db.execute('INSERT INTO publications(job_id,packet_sha,draft_sha,image_sha,source_commit,remote_commit,status) VALUES(?,?,?,?,?,?,?)',

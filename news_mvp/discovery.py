@@ -21,14 +21,20 @@ class Links(HTMLParser):
         if tag=='a' and a.get('href'):self.links.append(a['href'])
         if tag=='img' and a.get('src'):self.images.append(a)
 
-def discover(config,now=None):
+def discover(config,now=None,excluded=(),errors=None,after_provider=None):
     settings=config.get('discovery')
     if not settings:return []
+    if settings.get('family')=='news-reviewed-v2':
+        return discover_mixed(config,now,excluded,errors,after_provider)
+    if settings.get('family')=='finnish-official':
+        from .official import discover as official_discover
+        return official_discover(config,now,excluded,errors)
     if settings.get('family')!='nasa-modis':raise ValueError('Unknown discovery family')
     limit=settings.get('max_candidates',5)
     if type(limit) is not int or not 1<=limit<=5:raise ValueError('Discovery limit must be 1–5')
     now=now or datetime.now(timezone.utc)
-    raw,mime,_=fetch(INDEX,HOSTS);assert mime=='text/html'
+    raw,mime,_=fetch(INDEX,HOSTS)
+    if mime!='text/html':raise ValueError('Unexpected NASA index response')
     parser=Links();parser.feed(raw.decode('utf-8'))
     found={}
     for link in parser.links:
@@ -37,7 +43,7 @@ def discover(config,now=None):
         if not match:continue
         published=datetime.fromisoformat(match[1]).replace(tzinfo=timezone.utc)
         age=(now-published).total_seconds()
-        if 0<=age<=config['max_source_age_hours']*3600:found[url]={'family':'nasa-modis','url':url}
+        if url not in excluded and 0<=age<=config['max_source_age_hours']*3600:found[url]={'family':'nasa-modis','url':url}
     return [found[url] for url in sorted(found,reverse=True)[:limit]]
 
 def collect_modis(recipe,state_dir,now=None):
@@ -73,3 +79,24 @@ def collect_modis(recipe,state_dir,now=None):
     receipt={'retrieved_at':now.isoformat(),'source_url':url,'source_sha256':hashlib.sha256(raw).hexdigest(),'image_url':expected,'image_sha256':image_sha,'image_bytes':len(image_raw),'rights_sha256':hashlib.sha256(rights_raw).hexdigest(),'discovered_from':INDEX,'fixture':False}
     (directory/'packet.json').write_text(json.dumps(packet,ensure_ascii=False,indent=2)+'\n');(directory/'receipt.json').write_text(json.dumps(receipt,indent=2)+'\n')
     return packet,receipt
+
+
+def discover_mixed(config,now=None,excluded=(),errors=None,after_provider=None):
+    from .official import discover as official_discover
+    errors=errors if errors is not None else []
+    limit=config['discovery'].get('max_candidates',5)
+    if type(limit) is not int or not 1<=limit<=5:raise ValueError('Discovery limit must be 1–5')
+    order=['nasa-modis','helsinki','stat','kuntaliitto','ecb']
+    if after_provider in order:
+        i=order.index(after_provider)+1;order=order[i:]+order[:i]
+    pools={}
+    for provider in order:
+        try:
+            if provider=='nasa-modis':
+                pools[provider]=discover({**config,'discovery':{'family':'nasa-modis','max_candidates':limit}},now,excluded)
+            else:
+                pools[provider]=official_discover(config,now,excluded,errors,provider_only=provider)
+        except (ValueError,OSError) as error:
+            errors.append({'provider':provider,'stage':'discovery','error':type(error).__name__})
+            pools[provider]=[]
+    return [pools[provider][i] for i in range(limit) for provider in order if i<len(pools[provider])][:limit]

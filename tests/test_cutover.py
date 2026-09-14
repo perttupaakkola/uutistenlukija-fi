@@ -124,7 +124,10 @@ class Cutover(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d);(p/'index.html').write_text('Public Finnish article')
             r={'public_release_authorized':True,'hermes_step':5,'origin':'https://uutistenlukija.fi','ga4_id':'G-35XERS8V6J','new_article_files':[],'files':{'index.html':hashlib.sha256((p/'index.html').read_bytes()).hexdigest()}}
-            self.assertEqual(check(p,r),1)
+            r.update(source_commit='a'*40,job_id='job',packet_sha256='b'*64,draft_sha256='c'*64)
+            image=b'\xff\xd8\xffisolated-image';sha=hashlib.sha256(image).hexdigest();name='mvp-assets/'+sha+'.jpg'
+            (p/'mvp-assets').mkdir();(p/name).write_bytes(image);r['image_sha256']=sha;r['files'][name]=sha
+            self.assertEqual(check(p,r),2)
             (p/'index.html').write_text('Yksityinen esikatselu')
             r['files']['index.html']=hashlib.sha256((p/'index.html').read_bytes()).hexdigest()
             with self.assertRaises(ValueError):check(p,r)
