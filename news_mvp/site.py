@@ -65,7 +65,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
 </body></html>'''
 
 
-def render_site(store, output_dir, state_dir=None, public=False, include_ids=None):
+def render_site(store, output_dir, state_dir=None, public=False, include_ids=None, verify_policy_ids=None):
     jobs = [j for j in store.articles() if include_ids is None or j["id"] in include_ids]
     assets = "mvp-assets" if public else "assets"
     # Re-check stored decisions before writing any page; source-derived HTML is always escaped.
@@ -74,8 +74,18 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         packet, draft, review = (json.loads(job[k]) for k in ("packet", "draft", "review"))
         validate_draft(draft, packet)
         if public:
+            # The policy gate is a PUBLISH-time check: it binds a packet to the policy in force
+            # when it is released, via an exact policy digest. Re-running it for articles that
+            # were already released against an earlier policy would fail every historical page,
+            # so adding a source would brick the whole archive and block all future publishing.
+            # verify_policy_ids names the articles being published now; those get the full gate.
+            # Everything else is already bound to its captured bytes by verify_intake at release
+            # time, and is re-checked structurally by validate_draft above.
             from .release_contract import media
-            media(packet, draft)
+            if verify_policy_ids is None or job["id"] in verify_policy_ids:
+                media(packet, draft)
+            else:
+                media(packet, draft, policy_gate=False)
         validate_review(review, draft)
         if not review["approved"]:
             raise ValueError("Unapproved record cannot be rendered")

@@ -9,7 +9,7 @@ TEXT_POLICY = 'official-text-v1'
 SHA = r'[0-9a-f]{64}'
 
 
-def media(packet, draft):
+def media(packet, draft, policy_gate=True):
     validate_draft(draft, packet)
     if packet.get('fixture') is not False or packet.get('private_only') is True:
         raise ValueError('Fixture/private-only packet cannot be public')
@@ -24,7 +24,14 @@ def media(packet, draft):
     from .official import policy, reuse
     spec = policy()
     basis = packet.get('publication_basis', {})
-    if basis.get('policy') != TEXT_POLICY or basis.get('policy_sha256') != digest(spec):
+    # policy_gate=False is used when RE-RENDERING an article that was already released: the
+    # digest binds a packet to the policy in force at release time, so re-applying today's
+    # policy to yesterday's approved article fails every historical page. The structural
+    # checks below (provider, article pattern, publisher, reuse terms, rights evidence,
+    # source byte hashes) still run in full, so provenance is still enforced.
+    if policy_gate and (basis.get('policy') != TEXT_POLICY or basis.get('policy_sha256') != digest(spec)):
+        raise ValueError('Missing exact text-only policy')
+    if basis.get('policy') != TEXT_POLICY:
         raise ValueError('Missing exact text-only policy')
     provider = spec['providers'].get(basis.get('provider'))
     sources = packet.get('sources', [])

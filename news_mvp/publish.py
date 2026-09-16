@@ -89,7 +89,9 @@ def public_bundle(store,job,state):
     binding=media(packet,draft)
     if binding['image_sha256'] is None:verify_intake(packet,state)
     site=Path(state)/'live-site'  # Never reads or overlays the abandoned public-history tree.
-    render_site(store,site,state,public=True,include_ids=ids)
+    # Only the article being published now must satisfy today's policy digest; the archive
+    # was released under the policy in force then and is bound to its captured bytes.
+    render_site(store,site,state,public=True,include_ids=ids,verify_policy_ids={job['id']})
     privacy='''<article class="story"><h1>Tietosuoja ja evästeet</h1><p>Voit käyttää uutispalvelua sallimatta analytiikkaa. Luvallasi käytämme Google Analyticsia sivuston käytön mittaamiseen. Emme käytä mainonnan evästeitä.</p><p>Suostumus tallennetaan selaimeesi. Voit muuttaa valintaasi sivun Evästeasetukset-painikkeella. Analytiikan poistaminen käytöstä poistaa tämän sivuston Google Analytics -evästeet selaimesta.</p><p>Uutiset laaditaan tekoälyn avulla ja tarkastetaan erillisessä lähdearvioinnissa. Alkuperäiset lähteet ja käyttöehdot näkyvät artikkelissa. Uutinen voi olla kuvaton; käytetyn kuvan tekijä ja käyttöoikeus ilmoitetaan kuvan yhteydessä.</p></article>'''
     atomic_write(site/'tietosuoja/index.html',page('Tietosuoja ja evästeet',privacy,'/tietosuoja/'))
     atomic_write(site/'404.html',page('Sivua ei löytynyt','<h1>Sivua ei löytynyt</h1><p><a href="/">Siirry uusimpiin uutisiin</a></p>','/404.html'))
