@@ -9,6 +9,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urljoin
 
+from .diagnostics import safe_error
 from .editorial import ROOT, digest, timestamp, validate_packet, web_url
 from .intake import fetch
 
@@ -107,7 +108,7 @@ def discover(config, now=None, excluded=(), errors=None, provider_only=None):
             raw = response(spec['index'], spec['hosts'])
         except (ValueError,OSError) as error:
             if errors is None:raise
-            errors.append({'provider':provider,'stage':'discovery','error':type(error).__name__})
+            errors.append({'provider':provider,'stage':'discovery','error':safe_error(error)})
             continue
         rows = []
         if provider in ('helsinki', 'ecb'):

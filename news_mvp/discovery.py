@@ -4,6 +4,7 @@ from datetime import datetime,timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urljoin,urlsplit
+from .diagnostics import safe_error
 from .editorial import digest,validate_packet,web_url
 from .intake import ArticleHTML,fetch
 
@@ -53,7 +54,10 @@ def collect_modis(recipe,state_dir,now=None):
     if mime!='text/html' or final!=url:raise ValueError('Unexpected article response')
     source=raw.decode('utf-8');body=ArticleHTML('option');body.feed(source);text=body.article_text()
     date=match[1];display=datetime.fromisoformat(date).strftime('%B %d, %Y').replace(' 0',' ')
-    title_match=re.search(re.escape(display)+r'\s*-\s*([^\n]+)',text)
+    # The gallery heading is `<b>September 16, 2026 - Colors in the Central Caspian Sea</b>`.
+    # Anchor on the tag so the capture stops at the closing markup instead of running on
+    # into the following `<div class="title_in">`.
+    title_match=re.search(re.escape(display)+r'\s*-\s*([^<]+)</b>',source)
     acquired=re.search(r'Date Acquired:\s*(\d{1,2}/\d{1,2}/\d{4})',text)
     credit=re.search(r'Image Credit:\s*([^\n]+)',text)
     if not title_match or not acquired or not credit or credit[1].strip()!=CREDIT:
@@ -63,8 +67,24 @@ def collect_modis(recipe,state_dir,now=None):
     if photo_date>date:raise ValueError('Capture date later than publication')
     links=Links();links.feed(source)
     expected=ORIGIN+'/gallery/images/image'+datetime.fromisoformat(date).strftime('%m%d%Y')+'_main.jpg'
-    images=[i for i in links.images if i['src'].replace('http://','https://')==expected and i.get('alt','').strip()==title]
-    if len(images)!=1:raise ValueError('Image URL/date/title identity mismatch')
+    # NASA's `alt` is a short caption ("Caspian Sea") while the headline is the full
+    # gallery title ("Colors in the Central Caspian Sea"). Demanding exact equality
+    # rejected every real image. Require the same image URL plus a caption that is
+    # genuinely related to the headline, so a wrong-day or wrong-story image still fails.
+    def _normalise(value):
+        return re.sub(r'[^a-z0-9]+',' ',value.lower()).strip()
+    def _related(caption,headline):
+        caption=_normalise(caption);headline=_normalise(headline)
+        if not caption or not headline:return False
+        if caption==headline:return True
+        if len(caption)>=4 and caption in headline:return True
+        caption_words=set(caption.split());headline_words=set(headline.split())
+        return len(caption_words&headline_words)>=1
+    images=[i for i in links.images
+            if i['src'].replace('http://','https://')==expected
+            and _related(i.get('alt',''),title)]
+    if len(images)!=1:
+        raise ValueError(f'Image URL/date/title identity mismatch ({len(images)} candidates for {expected})')
     image_raw,image_mime,image_final=fetch(expected,HOSTS,8000000)
     if image_mime!='image/jpeg' or not image_raw.startswith(b'\xff\xd8\xff') or image_final!=expected:raise ValueError('Expected exact NASA source JPEG')
     rights_raw,_,rights_final=fetch(RIGHTS,HOSTS);rights=ArticleHTML('entry-content');rights.feed(rights_raw.decode('utf-8'))
@@ -97,6 +117,6 @@ def discover_mixed(config,now=None,excluded=(),errors=None,after_provider=None):
             else:
                 pools[provider]=official_discover(config,now,excluded,errors,provider_only=provider)
         except (ValueError,OSError) as error:
-            errors.append({'provider':provider,'stage':'discovery','error':type(error).__name__})
+            errors.append({'provider':provider,'stage':'discovery','error':safe_error(error)})
             pools[provider]=[]
     return [pools[provider][i] for i in range(limit) for provider in order if i<len(pools[provider])][:limit]

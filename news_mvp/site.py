@@ -3,8 +3,10 @@ import html
 import hashlib
 import json
 import re
+from datetime import timezone
 from pathlib import Path
 
+from . import seo
 from .editorial import ROOT, digest, timestamp, validate_draft, validate_review
 
 
@@ -27,16 +29,21 @@ def article_path(job):
     return "uutiset/" + job["id"] + "/"
 
 
-def page(title, body, canonical_path=None):
+def page(title, body, canonical_path=None, head_meta="", readability_present=True):
     public = canonical_path is not None
     head = (f'<link rel="canonical" href="https://uutistenlukija.fi{esc(canonical_path)}">' if public else '<meta name="robots" content="noindex,nofollow">')
+    # `head_meta` carries the description/OG/JSON-LD block for public pages; private
+    # previews stay noindex and get none of it.
+    head += head_meta if public else ""
     assets = "mvp-assets" if public else "assets"
+    # Extra stylesheet links (readability layer), injected after the base sheet.
+    extra_assets = f'<link rel="stylesheet" href="/{assets}/style-readability.css">' if readability_present else ""
     banner = "" if public else '<div class="preview">Yksityinen esikatselu · ei julkaistu</div>'
     consent = ((ROOT / "static/consent.html").read_text() if public else "")
     return f'''<!doctype html>
 <html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 {head}<title>{esc(title)} · Uutistenlukija</title>
-<link rel="stylesheet" href="/{assets}/style.css"></head><body>
+<link rel="stylesheet" href="/{assets}/style.css">{extra_assets}</head><body>
 <a class="skip" href="#sisalto">Siirry sisältöön</a>
 {banner}
 <header><a class="brand" href="/">Uutistenlukija<span>Uutiset selkeästi.</span></a>
@@ -82,6 +89,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                 if reuse.get('notice'):
                     source_list += f'<li>{esc(reuse["notice"])}</li>'
         image = draft.get("image")
+        image_url = None
         figure = "" if image else '<p class="image-note">Tämä uutinen julkaistaan ilman kuvaa.</p>' if public else '<p class="image-note">Ei kuvaa: tekstiversion yksityinen esikatselu.</p>'
         if image:
             image_url = image["url"]
@@ -96,18 +104,46 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                 atomic_write(output_dir / image_url.lstrip("/"), data)
             figure = f'<figure><img src="{esc(image_url)}" alt="{esc(image["alt"])}" referrerpolicy="no-referrer"><figcaption>{esc(image.get("caption", ""))} {esc(image["credit"])} · <a href="{esc(image["license_url"])}">{esc(image["license"])}</a> · <a href="{esc(image["source_url"])}">Kuvan lähde</a></figcaption></figure>'
         body = f'''<article class="story"><a class="back" href="/">← Kaikki uutiset</a>{fixture}
-<p class="eyebrow">{esc(draft["category"])} · {"" if public else "Luonnos "}{date}</p><h1>{esc(draft["title"])}</h1>
+<p class="eyebrow" data-category="{esc(draft["category"])}">{esc(draft["category"])} · {"" if public else "Luonnos "}{date}</p><h1>{esc(draft["title"])}</h1>
 <p class="lead">{esc(draft["summary"])}</p>{figure}<div class="story-body">{paragraphs}</div>
 <section class="sources"><h2>Lähteet</h2><ol>{source_list}</ol>
 <p>Teksti on laadittu yllä mainittujen lähdekatkelmien perusteella. {"Kuvan käyttöoikeustiedot ovat kuvan yhteydessä." if image else "Uutisteksti esitetään ilman kuvaa."}</p></section></article>'''
-        atomic_write(output_dir / article_path(job) / "index.html", page(draft["title"], body, link if public else None))
-        cards.append(f'<article class="card"><p class="eyebrow">{esc(draft["category"])} · {date}</p><h2><a href="{link}">{esc(draft["title"])}</a></h2><p>{esc(draft["summary"])}</p>{fixture}<a class="read" href="{link}">Lue uutinen <span aria-hidden="true">→</span></a></article>')
+        # --- SEO metadata ---------------------------------------------------
+        # Built only for the public build; the private preview stays noindex.
+        head_meta = ""
+        if public:
+            paragraph_text = [p["text"] for p in draft["paragraphs"]]
+            description = seo.meta_description(draft["summary"], paragraph_text)
+            image_for_meta = image_url or None
+            published_iso = timestamp(job["created_at"]).astimezone(timezone.utc).isoformat()
+            head_meta = seo.article_head(
+                seo.meta_title(draft["title"]),
+                description,
+                link,
+                image_url=image_for_meta,
+                published=published_iso,
+            ) + seo.news_article_jsonld(
+                draft["title"],
+                description,
+                link,
+                published=published_iso,
+                modified=published_iso,
+                category=draft.get("category"),
+                image_url=image_for_meta,
+                sources=packet["sources"],
+            )
+        atomic_write(output_dir / article_path(job) / "index.html", page(draft["title"], body, link if public else None, head_meta=head_meta))
+        cards.append(f'<article class="card"><p class="eyebrow" data-category="{esc(draft["category"])}">{esc(draft["category"])} · {date}</p><h2><a href="{link}">{esc(draft["title"])}</a></h2><p>{esc(draft["summary"])}</p>{fixture}<a class="read" href="{link}">Lue uutinen <span aria-hidden="true">→</span></a></article>')
     content = "".join(cards) or '<p class="empty">Ei vielä tarkastettuja uutisluonnoksia.</p>'
     body = f'''<section class="intro"><p class="eyebrow">Kotimaa ja maailma</p><h1>Ajankohtaista,<br>ymmärrettävästi.</h1><p>Uutiset, niiden tausta ja alkuperäiset lähteet samassa paikassa.</p></section>
 <section aria-label="Uusimmat uutiset" class="grid">{content}</section>
 <section id="lahteet" class="principles"><h2>Lähteet näkyviin.</h2><p>Selkeä suomi, perustellut väitteet ja avoimet lähdeviitteet. Epävarma tieto jätetään julkaisematta. {"Julkaisemme vain tarkastetut uutiset." if public else "Sivuston tämä versio sisältää vain yksityisiä luonnoksia."}</p></section>'''
     atomic_write(output_dir / "index.html", page("Uusimmat uutiset", body, "/" if public else None))
     atomic_write(output_dir / assets / "style.css", (ROOT / "static/style.css").read_text())
+    # Reading-quality layer, kept separate so the base design stays untouched.
+    readability = ROOT / "static/style-readability.css"
+    if readability.exists():
+        atomic_write(output_dir / assets / "style-readability.css", readability.read_text())
     if public:
         atomic_write(output_dir / assets / "analytics.js", (ROOT / "cutover/analytics.js").read_text())
         atomic_write(output_dir / assets / "consent.js", (ROOT / "static/consent.js").read_text())

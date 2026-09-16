@@ -2,6 +2,7 @@
 import json
 from pathlib import Path
 
+from .diagnostics import safe_error
 from .controller import ingest, load_config, single_tick, tick
 from .editorial import ROOT, digest, web_url
 from .intake import collect
@@ -57,7 +58,7 @@ def live_tick(config_path):
                         collector=collect_modis if recipe.get('family')=='nasa-modis' else collect
                         packet,intake_receipt=collector(recipe,config['state_dir'])
                     except (ValueError,OSError) as error:
-                        errors.append({'provider':recipe.get('provider',recipe.get('family','explicit')),'stage':'collection','url':recipe['url'],'error':type(error).__name__})
+                        errors.append({'provider':recipe.get('provider',recipe.get('family','explicit')),'stage':'collection','url':recipe['url'],'error':safe_error(error)})
                         continue
                     admission=ingest(config,packet)
                     if admission['id']!=job_id:raise ValueError('Source identity mismatch')

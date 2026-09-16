@@ -41,7 +41,10 @@ def source_fields(raw,provider,url):
   if meta.one('author')!='European Central Bank':raise ValueError('Named author exception')
   date=meta.one('article:published_time');day=datetime.strptime(date,'%Y-%m-%d').date()
   visible=parse(raw,lambda t,a:'ecb-publicationDate' in a.get('class','').split()).text()
-  if visible!=meta.one('citation_online_date') or datetime.strptime(visible,'%d %B %Y').date()!=day or meta.one('citation_title')!=title:raise ValueError('Publication date/title disagreement')
+  # ECB emits trailing whitespace inside citation_title (observed live: "...wage growth ").
+  # Compare normalised titles so a formatting artefact is not read as a content disagreement,
+  # while a genuinely different headline still fails.
+  if visible.strip()!=meta.one('citation_online_date').strip() or datetime.strptime(visible.strip(),'%d %B %Y').date()!=day or meta.one('citation_title').strip()!=title:raise ValueError('Publication date/title disagreement')
   if not re.search(r'ecb\.(?:mp|pr)'+day.strftime('%y%m%d')+r'~',url):raise ValueError('URL date mismatch')
   main=parse(raw,lambda t,a:t=='main').text()
   if not main.startswith('PRESS RELEASE\n') or 'Reproduction is permitted provided that the source is acknowledged.' not in main:raise ValueError('Missing institutional press reuse notice')

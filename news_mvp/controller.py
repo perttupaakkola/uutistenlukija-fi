@@ -6,6 +6,7 @@ from contextlib import contextmanager, nullcontext
 from datetime import datetime, timezone
 from pathlib import Path
 
+from .diagnostics import safe_error
 from .editorial import FixtureModel, HermesModel, text, validate_packet, validate_draft, validate_review
 from .site import render_site
 from .store import database
@@ -92,10 +93,11 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                 review = validate_review(model.call("reviewer", packet, draft), draft)
                 store.finish_review(job["id"], review)
             except (ValueError, TypeError, KeyError, RuntimeError, OSError, subprocess.SubprocessError) as error:
-                # Only exception type is durable; provider output may contain secrets.
+                # Record a bounded, redacted message: a bare class name made every
+                # failure undisagnosable, while raw provider output may hold secrets.
                 store.fail(job["id"], now.timestamp(), config["max_attempts"],
-                           config["retry_seconds"], type(error).__name__)
-                return {"status": store.get(job["id"])["status"], "id": job["id"], "error": type(error).__name__}
+                           config["retry_seconds"], safe_error(error))
+                return {"status": store.get(job["id"])["status"], "id": job["id"], "error": safe_error(error)}
             if not review["approved"]:
                 return {"status": "rejected", "id": job["id"]}
             if not load_config(config_path)["enabled"]:

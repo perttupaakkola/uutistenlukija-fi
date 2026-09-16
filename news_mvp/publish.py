@@ -9,7 +9,8 @@ from pathlib import Path
 
 from cutover.check_release import check
 from .authorization import authorize
-from .editorial import ROOT, digest, validate_review, validate_packet
+from .diagnostics import safe_error
+from .editorial import ROOT, digest, timestamp, validate_review, validate_packet
 from datetime import datetime, timezone
 from .release_contract import media, verify_intake, check_article
 from .site import atomic_write, article_path, esc, page, render_site
@@ -91,7 +92,17 @@ def public_bundle(store,job,state):
     atomic_write(site/'tietosuoja/index.html',page('Tietosuoja ja evästeet',privacy,'/tietosuoja/'))
     atomic_write(site/'404.html',page('Sivua ei löytynyt','<h1>Sivua ei löytynyt</h1><p><a href="/">Siirry uusimpiin uutisiin</a></p>','/404.html'))
     urls=['https://uutistenlukija.fi/','https://uutistenlukija.fi/tietosuoja/']+['https://uutistenlukija.fi/uutiset/'+i+'/' for i in sorted(ids)]
-    atomic_write(site/'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+esc(u)+'</loc></url>' for u in urls)+'</urlset>')
+    # `<lastmod>` tells the crawler a page actually changed; without it every URL looks
+    # equally old, which is one reason a fresh article can sit unrecrawled.
+    article_mod={}
+    for row in store.db.execute('SELECT id,created_at FROM jobs'):
+        try: article_mod[row['id']]=timestamp(row['created_at']).astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00')
+        except Exception: pass
+    def _url_entry(u,mod=None):
+        return '<url><loc>'+esc(u)+'</loc>'+(('<lastmod>'+esc(mod)+'</lastmod>') if mod else '')+'</url>'
+    entries=[_url_entry('https://uutistenlukija.fi/'),_url_entry('https://uutistenlukija.fi/tietosuoja/')]
+    entries+= [_url_entry('https://uutistenlukija.fi/uutiset/'+i+'/', article_mod.get(i)) for i in sorted(ids)]
+    atomic_write(site/'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(entries)+'</urlset>')
     atomic_write(site/'robots.txt','User-agent: *\nAllow: /\nSitemap: https://uutistenlukija.fi/sitemap.xml\n')
     packet,draft=json.loads(job['packet']),json.loads(job['draft'])
     receipt={'public_release_authorized':True,'hermes_step':5,'origin':'https://uutistenlukija.fi','ga4_id':'G-35XERS8V6J',
@@ -200,5 +211,5 @@ def publish(store,job,state,config_path):
     except Exception as error:
         saved=store.db.execute('SELECT status,remote_commit FROM publications WHERE job_id=?',(job['id'],)).fetchone()
         outcome='failed' if saved['status']=='failed' else ('unknown' if external_started or saved['remote_commit'] else 'failed')
-        with store.db:store.db.execute("UPDATE publications SET status=?,error=? WHERE job_id=?",(outcome,type(error).__name__,job['id']))
+        with store.db:store.db.execute("UPDATE publications SET status=?,error=? WHERE job_id=?",(outcome,safe_error(error),job['id']))
         raise
