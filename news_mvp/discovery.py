@@ -102,11 +102,12 @@ def collect_modis(recipe,state_dir,now=None):
 
 
 def discover_mixed(config,now=None,excluded=(),errors=None,after_provider=None):
-    from .official import discover as official_discover
+    from .official import discover as official_discover, PROVIDER_ORDER
     errors=errors if errors is not None else []
     limit=config['discovery'].get('max_candidates',5)
     if type(limit) is not int or not 1<=limit<=5:raise ValueError('Discovery limit must be 1–5')
-    order=['nasa-modis','helsinki','stat','kuntaliitto','ecb']
+    # One shared order, so a newly registered provider cannot be silently skipped here.
+    order=list(PROVIDER_ORDER)
     if after_provider in order:
         i=order.index(after_provider)+1;order=order[i:]+order[:i]
     pools={}

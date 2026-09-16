@@ -51,7 +51,7 @@ def media(packet, draft):
 
 def verify_intake(packet, state):
     """Bind the stored, reviewed text to actual captured upstream bytes before release."""
-    from .official import rights_text, source_fields, policy
+    from .official import rights_text, source_fields, policy, ADDITIONAL_PROVIDERS
     basis = packet['publication_basis'];provider = basis['provider']
     directory = Path(state)/'intake'/digest(packet)
     raw = (directory/'source.html').read_bytes();rights = (directory/'rights.html').read_bytes()
@@ -62,7 +62,7 @@ def verify_intake(packet, state):
     parsed = source_fields(raw,provider,packet['sources'][0]['url'])
     if any(packet['sources'][0].get(k) != v for k,v in parsed.items()):
         raise ValueError('Captured source differs from reviewed packet')
-    if provider in ('kuntaliitto', 'ecb'):
+    if provider in ADDITIONAL_PROVIDERS:
         receipt = json.loads((directory/'receipt.json').read_text())
         expected = {'fixture':False, 'provider':provider, 'source_url':packet['sources'][0]['url'],
                     'source_sha256':basis['source_sha256'], 'packet_sha256':digest(packet),

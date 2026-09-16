@@ -23,6 +23,17 @@ DEPTH_PER_PROVIDER = 3
 # Real articles measured 1,635-5,045 chars; the one hub page seen was 38,371. Kept below
 # editorial.text()'s 20,000 excerpt cap so this check reports the real reason first.
 MAX_ARTICLE_CHARS = 12000
+# Providers whose article extraction and rights capture live in official_additional.py.
+# Kept in one place so adding a source cannot leave a half-wired branch behind.
+ADDITIONAL_PROVIDERS = ('kuntaliitto', 'ecb', 'kuopio', 'vantaa')
+
+# Providers discovered from an RSS index (rather than an HTML link list).
+RSS_PROVIDERS = ('helsinki', 'ecb', 'kuopio', 'vantaa')
+
+# Publication order for round-robin discovery. Every provider in the policy must appear
+# here, or it is silently never discovered.
+PROVIDER_ORDER = ('nasa-modis', 'helsinki', 'stat', 'kuntaliitto', 'ecb', 'kuopio', 'vantaa')
+
 VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'}
 
 
@@ -79,8 +90,36 @@ def policy():
     return data
 
 
+def pdf_text(raw):
+    """Extract text from a licence PDF. Strict: failure must never look like success."""
+    from io import BytesIO
+    from pdfminer.high_level import extract_text
+    try:
+        text = extract_text(BytesIO(raw))
+    except Exception as error:
+        raise ValueError('Municipal reuse document is not readable as text') from error
+    normalised = ' '.join(text.split())
+    if len(normalised) < 200:
+        raise ValueError('Municipal reuse document yielded no substantive text')
+    return normalised
+
+
 def rights_text(raw, provider):
-    if provider in ('kuntaliitto', 'ecb'):
+    if provider == 'kuopio':
+        # Kuopio publishes its reuse licence only as a PDF. Pin the exact document by file
+        # hash (stronger than rendered text: the document is immutable) and require the
+        # commercial-reuse grant to be present in its extractable text, so a swapped or
+        # silently revised licence fails closed.
+        import hashlib
+        document = policy()['providers']['kuopio'].get('rights_document_sha256')
+        if hashlib.sha256(raw).hexdigest() != document:
+            raise ValueError('Municipal reuse document changed; independent review required')
+        text = pdf_text(raw)
+        for required in ('käyttöehdot', 'kaupallisesti'):
+            if required not in text:
+                raise ValueError('Municipal reuse document no longer grants the reviewed rights')
+        return text
+    if provider in ADDITIONAL_PROVIDERS:
         from .official_additional import rights_text as additional_rights
         return additional_rights(raw, provider)
     if provider == 'helsinki':
@@ -96,9 +135,14 @@ def rights_text(raw, provider):
     return page.text() + '\n' + licenses[0]
 
 
-def response(url, hosts):
+def response(url, hosts, allow_pdf=False):
     raw, mime, final = fetch(url, hosts)
-    if final != url or mime not in ('text/html', 'application/rss+xml', 'application/xml', 'text/xml'):
+    allowed = ('text/html', 'application/rss+xml', 'application/xml', 'text/xml')
+    if allow_pdf:
+        # Only the rights fetch may take a PDF (Kuopio publishes its licence that way), and
+        # only by exact document hash. Article fetches never reach this path.
+        allowed += ('application/pdf',)
+    if final != url or mime not in allowed:
         raise ValueError('Unexpected official source response')
     return raw
 
@@ -120,7 +164,7 @@ def discover(config, now=None, excluded=(), errors=None, provider_only=None):
             errors.append({'provider':provider,'stage':'discovery','error':safe_error(error)})
             continue
         rows = []
-        if provider in ('helsinki', 'ecb'):
+        if provider in RSS_PROVIDERS:
             try:
                 items = ET.fromstring(raw).findall('./channel/item')
             except ET.ParseError as error:
@@ -164,7 +208,7 @@ def discover(config, now=None, excluded=(), errors=None, provider_only=None):
 
 
 def source_fields(raw, provider, url=None):
-    if provider in ('kuntaliitto', 'ecb'):
+    if provider in ADDITIONAL_PROVIDERS:
         from .official_additional import source_fields as additional_fields
         return additional_fields(raw, provider, url)
     if provider == 'helsinki':
@@ -201,12 +245,12 @@ def collect(recipe, state_dir, now=None):
     if provider not in providers:
         raise ValueError('Unknown official source')
     spec = providers[provider]
-    if provider in ('kuntaliitto', 'ecb') and (not isinstance(recipe.get('url'), str) or not re.fullmatch(spec['article_pattern'], recipe['url'])):
+    if provider in ADDITIONAL_PROVIDERS and (not isinstance(recipe.get('url'), str) or not re.fullmatch(spec['article_pattern'], recipe['url'])):
         raise ValueError('Unapproved exact article URL token')
     url = web_url(recipe['url'])
     if not re.fullmatch(spec['article_pattern'], url):
         raise ValueError('Not an allowlisted article URL')
-    rights = response(spec['rights_url'], spec['hosts'])
+    rights = response(spec['rights_url'], spec['hosts'], allow_pdf=provider == 'kuopio')
     permission = rights_text(rights, provider)
     if hashlib.sha256(permission.encode()).hexdigest() != spec['rights_text_sha256']:
         raise ValueError('Source reuse terms changed; independent review required')

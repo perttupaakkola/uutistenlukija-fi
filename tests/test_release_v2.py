@@ -137,10 +137,15 @@ class ReleaseV2(unittest.TestCase):
         items=''.join(f'<item><link>https://www.hel.fi/fi/uutiset/a{i}</link><pubDate>{self.now.strftime("%a, %d %b %Y %H:%M:%S +0000")}</pubDate></item>' for i in range(8))
         raw=('<rss><channel>'+items+'</channel></rss>').encode();errors=[];excluded={f'https://www.hel.fi/fi/uutiset/a{i}' for i in range(5)}
         def response(url,hosts):
-            if url.endswith('/rss'):return raw
+            # Helsinki serves a usable feed; every other provider has a source-local outage.
+            if url=='https://www.hel.fi/fi/uutiset/rss':return raw
             raise OSError('source-local outage')
         with patch('news_mvp.discovery.fetch',side_effect=OSError('NASA unavailable')),patch.object(official,'response',side_effect=response):rows=discover(self.config,self.now,excluded,errors,after_provider='stat')
-        self.assertEqual(rows[0]['url'],'https://www.hel.fi/fi/uutiset/a5');self.assertEqual(len(rows),3);self.assertEqual({e['provider'] for e in errors},{'nasa-modis','stat','kuntaliitto','ecb'})
+        self.assertEqual(rows[0]['url'],'https://www.hel.fi/fi/uutiset/a5')
+        self.assertEqual({r['url'] for r in rows},{'https://www.hel.fi/fi/uutiset/a5','https://www.hel.fi/fi/uutiset/a6','https://www.hel.fi/fi/uutiset/a7'})
+        # Every non-Helsinki provider fails for its own reason; assert the set is exactly the
+        # configured providers minus the one that answered.
+        self.assertEqual({e['provider'] for e in errors},set(official.PROVIDER_ORDER)-{'helsinki'})
     def test_one_real_controller_editorial_sequence_only_one_admission(self):
         calls=[]
         class Model:
@@ -173,7 +178,7 @@ class ReleaseV2(unittest.TestCase):
         with self.assertRaises(ValueError):check(site,receipt)
     def test_provider_rotation_and_source_failure_reports(self):
         with patch('news_mvp.discovery.fetch',side_effect=OSError('nasa outage')),patch.object(official,'response',side_effect=OSError('official outage')):
-            errors=[];self.assertEqual(discover(self.config,self.now,errors=errors),[]);self.assertEqual(len(errors),5)
+            errors=[];self.assertEqual(discover(self.config,self.now,errors=errors),[]);self.assertEqual(len(errors),len(official.PROVIDER_ORDER))
         with patch('news_mvp.discovery.fetch',return_value=(b'not html','application/json','https://modis.gsfc.nasa.gov/gallery/showall.php')),patch.object(official,'response',return_value=b'<rss><channel/></rss>'):
             errors=[];discover(self.config,self.now,errors=errors);self.assertIn('nasa-modis',{e['provider'] for e in errors})
         nasa=b'<a href="individual.php?db_date='+self.now.date().isoformat().encode()+b'">story</a>'

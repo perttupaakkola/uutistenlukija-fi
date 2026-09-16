@@ -48,6 +48,34 @@
       "timezone": "Europe/Berlin",
       "rights_text_sha256": "57ee9d76934e9f5e84db28774d672a180db0ebea78a728fc7516212ada9482d9",
       "notice": "Alkuperäinen tieto on maksutta saatavilla EKP:n sivustolla."
+    },
+    "kuopio": {
+      "publisher": "Kuopion kaupunki",
+      "index": "https://www.kuopio.fi/feed/",
+      "rights_url": "https://www.kuopio.fi/app/uploads/2023/04/avoin-data-kayttoehdot-kuopion-kaupunki.pdf",
+      "hosts": [
+        "www.kuopio.fi"
+      ],
+      "article_pattern": "https://www\\.kuopio\\.fi/\\d{4}/\\d{2}/\\d{2}/[a-z0-9-]+/?",
+      "license": "Kuopion kaupungin avoimen datan käyttöehdot: maailmanlaajuinen, maksuton, peruuttamaton käyttöoikeus kopioida, levittää, muokata ja hyödyntää kaupallisesti ja ei-kaupallisesti; koskee myös tekstejä",
+      "timezone": "Europe/Helsinki",
+      "rights_text_sha256": "a6118830dcae14c4a8cd0ef3e34c55f9478bcc6416b0fe8a7feb4a53b42fb6ff",
+      "rights_document_sha256": "aa2474253e1b74dd3fc1a6342553e332e7bd9fe6ab36c901fcf449c09a6cbf98",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "vantaa": {
+      "publisher": "Vantaan kaupunki",
+      "index": "https://www.vantaa.fi/fi/rss",
+      "rights_url": "https://hri.fi/fi/kayttoehdot/",
+      "hosts": [
+        "www.vantaa.fi",
+        "hri.fi"
+      ],
+      "article_pattern": "https://www\\.vantaa\\.fi/fi/ajankohtaista/(?:tiedote|uutinen)/[a-z0-9-]+",
+      "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
+      "timezone": "Europe/Helsinki",
+      "rights_text_sha256": "5daa42d6c78f42311fc609754559434d8926909d1da39fd262ecab75eb2abe2c",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     }
   }
 }

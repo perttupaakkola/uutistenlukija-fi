@@ -38,6 +38,6 @@ def proposed_policy(source_commit):
 def proposed_policy_v2(source_commit):
     from .official import policy
     return {**proposed_policy(source_commit),'schema_version':2,'source_family':'news-reviewed-v2',
-            'source_families':['nasa-modis','helsinki','stat','kuntaliitto','ecb'],'text_only_policy':'official-text-v1',
+            'source_families':['nasa-modis','helsinki','stat','kuntaliitto','ecb','kuopio','vantaa'],'text_only_policy':'official-text-v1',
             'text_only_policy_sha256':digest(policy()),'max_index_entries_per_official_source':50,
             'max_fetch_calls_per_tick':20}
