@@ -113,10 +113,14 @@ def discover_mixed(config,now=None,excluded=(),errors=None,after_provider=None):
     for provider in order:
         try:
             if provider=='nasa-modis':
-                pools[provider]=discover({**config,'discovery':{'family':'nasa-modis','max_candidates':limit}},now,excluded)
+                pools[provider]=discover({**config,'discovery':{'family':'nasa-modis','max_candidates':max(limit,3)}},now,excluded)
             else:
                 pools[provider]=official_discover(config,now,excluded,errors,provider_only=provider)
         except (ValueError,OSError) as error:
             errors.append({'provider':provider,'stage':'discovery','error':safe_error(error)})
             pools[provider]=[]
-    return [pools[provider][i] for i in range(limit) for provider in order if i<len(pools[provider])][:limit]
+    # Same depth rationale as official.discover: the tick needs alternates to fall back to
+    # when a candidate proves stale, so do not truncate the merged list to `limit`. The
+    # caller still admits at most max_admissions_per_tick, and collection re-verifies each
+    # candidate's freshness and rights before anything is used.
+    return [pools[provider][i] for i in range(limit) for provider in order if i<len(pools[provider])]

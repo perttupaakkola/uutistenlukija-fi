@@ -54,7 +54,13 @@ class Official(unittest.TestCase):
         items=''.join(f'<item><link>https://www.hel.fi/fi/uutiset/a{i}</link><pubDate>Fri, 11 Sep 2026 13:00:00 +0300</pubDate></item>' for i in range(8))
         feed=('<rss><channel>'+items+items+'</channel></rss>').encode();index=''.join(f'<a href="/fi/julkaisu/a{i}">item</a>' for i in range(8)).encode()
         with patch.object(official,'response',side_effect=lambda url,hosts:feed if url.endswith(('/rss', '/press.html')) else index):rows=discover(self.config,NOW)
-        self.assertEqual(len(rows),5);self.assertEqual([r['provider'] for r in rows],['helsinki','stat','helsinki','stat','helsinki']);self.assertEqual(len({r['url'] for r in rows}),5)
+        # Discovery now returns fallback depth rather than exactly one candidate per provider,
+        # so a stale lead item cannot consume a provider's whole tick. The invariants that
+        # matter are: no duplicate URLs, and the result stays bounded.
+        self.assertGreater(len(rows),5)
+        self.assertLessEqual(len(rows),official.DEPTH_PER_PROVIDER*2,'bounded per provider')
+        self.assertEqual(len({r['url'] for r in rows}),len(rows),'discovery must not repeat a URL')
+        self.assertEqual({r['provider'] for r in rows},{'helsinki','stat'})
         with patch.object(official,'response',side_effect=OSError('Unavailable')),self.assertRaises(OSError):discover(self.config,NOW)
     def test_sqlite_dedupe_single_job(self):
         p=self.packet();a=ingest(load_config(self.cfg),p,NOW);b=ingest(load_config(self.cfg),p,NOW);self.assertTrue(a['admitted']);self.assertFalse(b['admitted']);self.assertEqual(a['id'],b['id'])

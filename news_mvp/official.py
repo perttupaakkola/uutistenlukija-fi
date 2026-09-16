@@ -14,6 +14,15 @@ from .editorial import ROOT, digest, timestamp, validate_packet, web_url
 from .intake import fetch
 
 POLICY = Path(__file__).resolve().parents[1] / 'sources/finnish-official.json'
+
+# Candidate depth retained per provider so a stale or failing lead item does not consume the
+# provider's whole tick. The one-admission-per-tick cap is enforced by the caller, not here.
+DEPTH_PER_PROVIDER = 3
+
+# An extracted body longer than this is an aggregator/hub page, not one news article.
+# Real articles measured 1,635-5,045 chars; the one hub page seen was 38,371. Kept below
+# editorial.text()'s 20,000 excerpt cap so this check reports the real reason first.
+MAX_ARTICLE_CHARS = 12000
 VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'}
 
 
@@ -133,13 +142,25 @@ def discover(config, now=None, excluded=(), errors=None, provider_only=None):
                 url = urljoin(spec['index'], a['href'])
                 if url not in excluded and re.fullmatch(spec['article_pattern'], url):
                     rows.append({'family': 'finnish-official', 'provider': provider, 'url': url})
-        pools.append(list({r['url']: r for r in rows}.values())[:limit])
+        # Keep candidate depth per provider (bounded), not just the first index entry, so a
+        # stale lead item does not consume the provider's whole tick.
+        pools.append(list({r['url']: r for r in rows}.values())[:DEPTH_PER_PROVIDER])
     result = []
-    for i in range(limit):
+    # Pool depth matters more than breadth here. The tick consumes one admission and skips
+    # candidates that turn out stale or fail collection, so returning exactly `limit` items
+    # (one per provider, always index 0) means a single stale index entry wastes that
+    # provider for the whole tick. Measured 2026-09-16: Helsinki had 9 fresh candidates but
+    # only one was ever tried, and kuntaliitto's index position 0 was a six-day-old item,
+    # so every tick reported "Source is stale or future-dated" and went idle. Emit several
+    # candidates per provider so the caller keeps falling back; the caller still enforces
+    # the one-admission cap, and collection re-verifies freshness and rights for whichever
+    # candidate it finally uses.
+    depth = limit
+    for i in range(depth):
         for rows in pools:
             if i < len(rows):
                 result.append(rows[i])
-    return result[:limit]
+    return result
 
 
 def source_fields(raw, provider, url=None):
@@ -161,6 +182,13 @@ def source_fields(raw, provider, url=None):
     title = page.meta.get('og:title', '').split(' | ')[0].strip()
     if not title or not published or len(page.text()) < 200:
         raise ValueError('Missing substantive source text, title or date')
+    # A hub/landing page is not a news item: it aggregates many updates for one topic and
+    # extracts to tens of thousands of characters (measured: 38,371 vs 1,635-5,045 for real
+    # articles). Publishing one would present a project index as a single story, and the
+    # excerpt validator rejects it anyway. Refuse it here with a diagnosable reason rather
+    # than as a misleading "Invalid source excerpt".
+    if len(page.text()) > MAX_ARTICLE_CHARS:
+        raise ValueError('Source is an aggregator/hub page, not a single article')
     if re.search(r'all rights reserved|kaikki oikeudet pidätetään|tekijänoikeu|copyright|©', page.text(), re.I):
         raise ValueError('Article-specific rights statement requires manual review')
     return {'id': 'A', 'title': title, 'published_at': published, 'text': page.text()}
