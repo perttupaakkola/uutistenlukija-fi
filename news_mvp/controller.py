@@ -85,6 +85,22 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                     reason = text(draft.get("reason"), "withholding reason", 2000)
                     store.finish_review(job["id"], {"approved": False, "reasons": [reason], "draft_sha256": None})
                     return {"status": "rejected", "id": job["id"]}
+                # Attach an illustration generated from the reviewed draft's own verified facts.
+                # Best effort by design: imagery.build_image returns None on any failure or an
+                # unsafe subject, and the article then ships text-only. The image belongs to the
+                # packet contract, so the independent reviewer sees it and may reject it.
+                if config.get("illustrations", True) and not packet.get("image"):
+                    try:
+                        from .imagery import build_image
+                        illustration = build_image(draft, config["state_dir"],
+                                                   category=draft.get("category", ""))
+                    except Exception:
+                        illustration = None
+                    if illustration is not None:
+                        packet = {**packet, "image": illustration}
+                        job = {**job, "packet": json.dumps(packet)}
+                        store.save_packet(job["id"], packet)
+                draft["image"] = packet.get("image")
                 validate_draft(draft, packet)
                 store.save_draft(job["id"], draft, model.name)
                 if not load_config(config_path)["enabled"]:

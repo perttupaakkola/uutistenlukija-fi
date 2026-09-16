@@ -18,11 +18,26 @@ def media(packet, draft, policy_gate=True):
         raise ValueError('Fixture/private-only packet cannot be public')
     image = draft.get('image')
     if image is not None:
-        if packet.get('publication_basis') is not None:
-            raise ValueError('Text-only policy cannot authorize an image')
+        # An official text source cannot authorise a third-party IMAGE: its reuse terms cover
+        # its text, not its photography, so a scraped source image has no licence basis.
+        # A GENERATED illustration is different in kind - it depicts no real person, event or
+        # copyrighted work, so there is no third-party right to authorise. It is admitted only
+        # when it carries the full generation provenance recorded by news_mvp/imagery.py, and
+        # it is always labelled as an AI illustration rather than documentary evidence.
+        generated = image.get('generated') is True
+        if packet.get('publication_basis') is not None and not generated:
+            raise ValueError('Text-only policy cannot authorize a third-party image')
         sha = image.get('sha256', '')
         if not re.fullmatch(SHA, sha) or image.get('local_path') != f'media/{sha}.jpg':
             raise ValueError('Required reviewed local image is absent')
+        if generated:
+            for field in ('model', 'prompt_sha256', 'prompt_version', 'subject'):
+                if not image.get(field):
+                    raise ValueError(f'Generated image is missing its {field} provenance')
+            if not re.fullmatch(SHA, str(image.get('prompt_sha256'))):
+                raise ValueError('Generated image prompt hash is malformed')
+            if 'AI' not in str(image.get('credit', '')):
+                raise ValueError('Generated image must be credited as AI-generated')
         return {'image_sha256': sha}
     from .official import policy, reuse
     spec = policy()

@@ -64,6 +64,23 @@ class Store:
         with self.db:
             self.db.execute("UPDATE jobs SET draft=?, adapter=? WHERE id=?", (encode(draft), adapter, job_id))
 
+    def save_packet(self, job_id, packet):
+        """Attach reviewed evidence (currently the generated illustration) to a stored packet.
+
+        Only the packet's own identity fields are preserved; story_key and source_url drive
+        admission and must not change. Used by the controller after the writer returns, so the
+        draft and packet agree on the image record and the reviewer sees the same contract.
+        """
+        with self.db:
+            row = self.db.execute("SELECT story_key, source_url FROM jobs WHERE id=?", (job_id,)).fetchone()
+            if row is None:
+                raise ValueError("Cannot attach a packet to an unknown job")
+            if packet.get("story_key") != row["story_key"]:
+                raise ValueError("Attached packet must keep the job's story identity")
+            if (packet.get("sources") or [{}])[0].get("url") != row["source_url"]:
+                raise ValueError("Attached packet must keep the job's primary source")
+            self.db.execute("UPDATE jobs SET packet=? WHERE id=?", (encode(packet), job_id))
+
     def finish_review(self, job_id, review):
         with self.db:
             self.db.execute("UPDATE jobs SET review=?, status=?, error=NULL WHERE id=?",
