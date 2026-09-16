@@ -7,6 +7,9 @@ from .editorial import digest, validate_draft, validate_review
 
 TEXT_POLICY = 'official-text-v1'
 SHA = r'[0-9a-f]{64}'
+# Mirrors validate_packet's hard cap: the official source plus up to 7 related corroborating
+# sources. Kept here too so the release contract does not depend on the editor module.
+MAX_PACKET_SOURCES = 8
 
 
 def media(packet, draft, policy_gate=True):
@@ -35,13 +38,36 @@ def media(packet, draft, policy_gate=True):
         raise ValueError('Missing exact text-only policy')
     provider = spec['providers'].get(basis.get('provider'))
     sources = packet.get('sources', [])
-    if provider is None or len(sources) != 1:
+    if provider is None or not sources:
         raise ValueError('Unapproved text-only provider/source count')
+    # Source A is the official source itself and carries the provenance that matters: its URL
+    # must match the approved article pattern and its reuse record must equal the provider's
+    # pinned terms. Related sources (B..H) are corroboration found by search, so they are not
+    # required to come from this provider - but each one is still structurally checked below
+    # (real HTTPS URL, publisher, title, substantive text, freshness) by validate_packet, and
+    # they can never be the basis of the release on their own.
     source = sources[0]
     if (not re.fullmatch(provider['article_pattern'], source['url']) or
-        packet['story_key'] != 'url:'+source['url'] or source['publisher'] != provider['publisher'] or
-        source.get('reuse') != reuse(provider)):
+        packet['story_key'] != 'url:'+source['url'] or source['publisher'] != provider['publisher']):
         raise ValueError('Source/reuse policy mismatch')
+    # The reuse record is policy-coupled: it is generated from the provider's declared licence,
+    # so editing a provider's terms (or adding one) changes it for every historical article.
+    # policy_gate=False means "this article was already released under the policy in force then",
+    # so its captured reuse record must not be re-derived from today's policy - the same reason
+    # the digest check is skipped. Structural provenance above still runs, and verify_intake
+    # binds the article to its captured bytes. Re-running this gate for the archive is what
+    # made every historical page fail to render after a licence edit, blocking all publishing.
+    if policy_gate and source.get('reuse') != reuse(provider):
+        raise ValueError('Source/reuse policy mismatch')
+    if len(sources) > MAX_PACKET_SOURCES:
+        raise ValueError('Too many sources for a reviewed release')
+    for extra in sources[1:]:
+        if not extra.get('related'):
+            raise ValueError('Additional sources must be marked as related corroboration')
+        if not str(extra.get('url', '')).startswith('https://'):
+            raise ValueError('Related source must be a real HTTPS URL')
+        if extra.get('publisher') == provider['publisher']:
+            raise ValueError('A publisher cannot corroborate itself')
     docs = packet.get('supporting_documents', [])
     if len(docs) != 1:
         raise ValueError('Missing exact rights evidence')

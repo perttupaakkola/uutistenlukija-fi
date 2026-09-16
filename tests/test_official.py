@@ -54,8 +54,7 @@ class Official(unittest.TestCase):
         items=''.join(f'<item><link>https://www.hel.fi/fi/uutiset/a{i}</link><pubDate>Fri, 11 Sep 2026 13:00:00 +0300</pubDate></item>' for i in range(8))
         feed=('<rss><channel>'+items+items+'</channel></rss>').encode();index=''.join(f'<a href="/fi/julkaisu/a{i}">item</a>' for i in range(8)).encode()
         # Every RSS provider gets the same feed body; HTML providers get the link index.
-        rss_hosts=('https://www.hel.fi/fi/uutiset/rss','https://www.ecb.europa.eu/rss/press.html',
-                   'https://www.kuopio.fi/feed/','https://www.vantaa.fi/fi/rss')
+        rss_hosts=tuple(official.policy()['providers'][p]['index'] for p in official.RSS_PROVIDERS)
         with patch.object(official,'response',side_effect=lambda url,hosts:feed if url in rss_hosts else index):rows=discover(self.config,NOW)
         # Discovery returns fallback depth rather than exactly one candidate per provider,
         # so a stale lead item cannot consume a provider's whole tick. The invariants that

@@ -25,6 +25,15 @@ def canonical(url,provider):
  if not re.fullmatch(policy()['providers'][provider]['article_pattern'],url):raise ValueError('Unapproved article URL')
  return url
 def rights_text(raw,provider):
+ if provider=='valtioneuvosto':
+  # Exact reuse grant, captured verbatim: text reuse and linking permitted in good-faith
+  # contexts with source attribution; commercial use requires a separate agreement. Perttu
+  # approved adding this source on the non-commercial basis (2026-09-16). Pinning the text
+  # means a change to these terms fails closed rather than silently continuing.
+  text=parse(raw,lambda t,a:t=='body').text()
+  start='Tekijänoikeudet';end='Tietosuoja ja henkilötietojen käsittely'
+  if text.count(start)!=1 or end not in text:raise ValueError('Missing exact Valtioneuvosto reuse terms')
+  return text[text.index(start):text.index(end,text.index(start))]
  if provider in ('kuopio','vantaa'):
   # Municipal open-data terms, captured verbatim from the publisher's own licence page.
   # Kuopio grants worldwide free irrevocable reuse for commercial and non-commercial
@@ -51,9 +60,33 @@ def rights_text(raw,provider):
  return text[text.index(start):text.index(end,text.index(start))]
 def source_fields(raw,provider,url):
  spec=policy()['providers'][provider];url=canonical(url,provider);meta=Meta();meta.feed(raw.decode())
- if meta.canonicals != [url] or canonical(meta.one('og:url'),provider)!=url:raise ValueError('Canonical article mismatch')
+ if provider=='valtioneuvosto':
+  # This portal emits no <link rel=canonical> at all, so og:url is the self-reference and is
+  # checked in the provider branch below. Requiring a canonical tag here would reject every
+  # valid Valtioneuvosto article.
+  if meta.canonicals:raise ValueError('Unexpected canonical tag')
+  if canonical(meta.one('og:url'),provider)!=url:raise ValueError('Canonical article mismatch')
+ elif meta.canonicals != [url] or canonical(meta.one('og:url'),provider)!=url:raise ValueError('Canonical article mismatch')
  title=meta.one('og:title');title=title.removesuffix(' | Kuntaliitto.fi').removesuffix(' - Kuopio').removesuffix(' | Vantaa').strip();heading=parse(raw,lambda t,a:t=='h1').text()
  if not title or title!=heading:raise ValueError('Article title mismatch/ambiguity')
+ if provider=='valtioneuvosto':
+  # Liferay/portal site: og:url is the authoritative self-reference because the pages emit
+  # no <link rel=canonical> at all. og:type=article and article:published_time are present.
+  if meta.one('og:type')!='article':raise ValueError('Not an article page')
+  if canonical(meta.one('og:url'),provider)!=url:raise ValueError('Canonical article mismatch')
+  published=meta.one('article:published_time')
+  day=datetime.fromisoformat(published).date()
+  # The dated slug is absent, but the visible Finnish publication date is present; use it as
+  # an independent cross-check so a template change cannot silently move the timestamp.
+  if day.strftime('%-d.%-m.%Y') not in parse(raw,lambda t,a:t=='body').text():raise ValueError('Publication date disagreement')
+  # Content lives in Liferay's journal-content-article container; there is no <article>.
+  body=parse(raw,lambda t,a:'journal-content-article' in a.get('class','').split()).text()
+  if len(body)<200:raise ValueError('Missing substantive article text')
+  wrapper=parse(raw,lambda t,a:t=='body').text()
+  # Valtioneuvosto text reuse is permitted with attribution; commercial use needs a separate
+  # agreement, so the terms page is pinned and the commercial status is recorded in policy.
+  if re.search(r'CC[- ]BY[- ]ND|CC[- ]BY[- ]NC|all rights reserved|kaikki oikeudet pidätetään|©|press agency|Reuters|Associated Press|vieraskynä|guest author',wrapper,re.I):raise ValueError('Third-party/restricted rights on page')
+  return {'id':'A','title':title,'published_at':published,'text':body}
  if provider in ('kuopio','vantaa'):
   # Vantaa's news pages report og:type=website and carry no article:published_time, so the
   # RSS pubDate is the publication authority (captured in the recipe, not guessed here).

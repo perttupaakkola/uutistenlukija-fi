@@ -25,14 +25,14 @@ DEPTH_PER_PROVIDER = 3
 MAX_ARTICLE_CHARS = 12000
 # Providers whose article extraction and rights capture live in official_additional.py.
 # Kept in one place so adding a source cannot leave a half-wired branch behind.
-ADDITIONAL_PROVIDERS = ('kuntaliitto', 'ecb', 'kuopio', 'vantaa')
-
+ADDITIONAL_PROVIDERS = ('kuntaliitto', 'ecb', 'kuopio', 'vantaa', 'valtioneuvosto')
 # Providers discovered from an RSS index (rather than an HTML link list).
-RSS_PROVIDERS = ('helsinki', 'ecb', 'kuopio', 'vantaa')
+RSS_PROVIDERS = ('helsinki', 'ecb', 'kuopio', 'vantaa', 'valtioneuvosto')
 
 # Publication order for round-robin discovery. Every provider in the policy must appear
 # here, or it is silently never discovered.
-PROVIDER_ORDER = ('nasa-modis', 'helsinki', 'stat', 'kuntaliitto', 'ecb', 'kuopio', 'vantaa')
+PROVIDER_ORDER = ('nasa-modis', 'helsinki', 'stat', 'kuntaliitto', 'ecb', 'kuopio', 'vantaa',
+                  'valtioneuvosto')
 
 VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'}
 
@@ -238,7 +238,12 @@ def source_fields(raw, provider, url=None):
     return {'id': 'A', 'title': title, 'published_at': published, 'text': page.text()}
 
 
-def collect(recipe, state_dir, now=None):
+def collect(recipe, state_dir, now=None, search=None):
+    """Collect one source into a packet.
+
+    `search` is an optional callable (query, limit) -> [{'url','title'}] used to find related
+    coverage. Omitted (the default), collection behaves exactly as before: one source.
+    """
     now = now or datetime.now(timezone.utc)
     providers = policy()['providers']
     provider = recipe.get('provider')
@@ -257,10 +262,30 @@ def collect(recipe, state_dir, now=None):
     raw = response(url, spec['hosts'])
     source = {**source_fields(raw, provider, url), 'url': url, 'publisher': spec['publisher'],
               'reuse': reuse(spec)}
+    sources = [source]
+    # Corroboration. The originating official release is source A; independent coverage of the
+    # same story becomes B, C... so the writer can synthesise instead of restating one
+    # publisher. This is strictly best-effort: any failure leaves the single-source packet,
+    # which is the previous behaviour and always safe. `search` is injected by the caller so
+    # the pipeline stays testable and no backend is hardcoded here.
+    related_count = 0
+    if search is not None:
+        try:
+            from .related import find_related
+            found = find_related(source['title'], url, search,
+                                 exclude_titles={source['title']})
+            for item in found:
+                if len(sources) >= 8:  # validate_packet's hard cap
+                    break
+                sources.append(item)
+            related_count = len(sources) - 1
+        except Exception:
+            related_count = 0
     packet = {'story_key': 'url:'+url, 'fixture': False,
               'publication_basis': {'policy': 'official-text-v1', 'policy_sha256': digest(policy()),
-                  'provider': provider, 'source_sha256': hashlib.sha256(raw).hexdigest(), 'source_fields_sha256': digest(source)},
-              'sources': [source], 'image': None,
+                  'provider': provider, 'source_sha256': hashlib.sha256(raw).hexdigest(), 'source_fields_sha256': digest(source),
+                  'related_sources': related_count},
+              'sources': sources, 'image': None,
               'image_note': 'Ei kuvaa: uutiskohtaista kuvaa ja sen käyttöoikeuksia ei ole varmennettu.',
               'supporting_documents': [{'id': 'RIGHTS', 'purpose': 'text reuse permission; not news or image evidence',
                   'url': spec['rights_url'], 'retrieved_at': now.isoformat(), 'text': permission,
@@ -279,7 +304,14 @@ def collect(recipe, state_dir, now=None):
 
 
 def reuse(spec):
-    result = {'license': spec.get('license', 'CC BY 4.0'), 'url': spec['rights_url'],
+    # The licence is never invented. A provider that does not declare one is a defect, since a
+    # defaulted "CC BY 4.0" can contradict the publisher's actual terms - the reviewer caught
+    # exactly that on Valtioneuvosto, whose terms require a separate agreement for commercial
+    # use. Requiring the field fails closed instead of publishing a false licence claim.
+    license_text = spec.get('license')
+    if not license_text:
+        raise ValueError('Provider must declare its exact reuse licence')
+    result = {'license': license_text, 'url': spec['rights_url'],
               'changes': 'Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.'}
     for field in ('license_url', 'notice'):
         if field in spec: result[field] = spec[field]

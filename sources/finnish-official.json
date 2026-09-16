@@ -11,7 +11,9 @@
         "hri.fi"
       ],
       "article_pattern": "https://www\\.hel\\.fi/fi/uutiset/[a-z0-9-]+",
-      "rights_text_sha256": "08f2dd0a72b60e5d195af79f7021e604d2e2efb7022d2a4005aed3912e9de5b4"
+      "rights_text_sha256": "08f2dd0a72b60e5d195af79f7021e604d2e2efb7022d2a4005aed3912e9de5b4",
+      "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     "stat": {
       "publisher": "Tilastokeskus",
@@ -21,7 +23,9 @@
         "stat.fi"
       ],
       "article_pattern": "https://stat\\.fi/fi/julkaisu/[a-z0-9]+",
-      "rights_text_sha256": "5b00c9f28ad368db93244d3ca359b5d3d9331ff9530225d5719ebb100402e0fd"
+      "rights_text_sha256": "5b00c9f28ad368db93244d3ca359b5d3d9331ff9530225d5719ebb100402e0fd",
+      "license": "Creative Commons Nimeä 4.0 Kansainvälinen (CC BY 4.0): kopiointi, muokkaus ja edelleenjako sallittu, myös kaupallisiin tarkoituksiin; koskee tekstejä, taulukoita ja tilastokuvioita; lähde merkittävä (Lähde: Tilastokeskus)",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     "kuntaliitto": {
       "publisher": "Suomen Kuntaliitto",
@@ -76,6 +80,23 @@
       "timezone": "Europe/Helsinki",
       "rights_text_sha256": "5daa42d6c78f42311fc609754559434d8926909d1da39fd262ecab75eb2abe2c",
       "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "valtioneuvosto": {
+      "publisher": "Valtioneuvoston kanslia",
+      "index": "https://valtioneuvosto.fi/staattiset-feedit/-/asset_publisher/6KLhMPTNqHRd/rss",
+      "rights_url": "https://valtioneuvosto.fi/tietoa-sivustosta",
+      "hosts": [
+        "valtioneuvosto.fi"
+      ],
+      "timezone": "Europe/Helsinki",
+      "article_pattern": "https://valtioneuvosto\\.fi/-/(?:[0-9]+/)?[a-z0-9-]{5,}/?",
+      "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
+      "text_only": true,
+      "commercial_use": false,
+      "commercial_basis": "Added 2026-09-16 on Perttu's explicit non-commercial approval. Revisit if sponsorship/paid placement activates.",
+      "rights_text_sha256": "8a671df626ab7ee0b92a6bdbb4c894becc4fd5b9252b99840015c818ca99aa49",
+      "license": "Valtioneuvoston sivuston käyttöehdot: tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan; aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen",
+      "license_url": "https://valtioneuvosto.fi/tietoa-sivustosta"
     }
   }
 }

@@ -57,7 +57,7 @@ class Correction(unittest.TestCase):
             with database(self.state) as store:
                 store.db.execute("INSERT INTO publications(job_id,packet_sha,draft_sha,image_sha,source_commit,remote_commit,status) VALUES(?,?,?,?,?,?,'dispatched')",(job['id'],digest(packet),digest(draft),receipt['image_sha256'],COMMIT,REMOTE));store.db.commit()
             article=site/(article_path(job)+"index.html");original=article.read_text()
-            label='CC BY 4.0' if kind=='text' else draft['image']['license']
+            label=packet['sources'][0]['reuse']['license'] if kind=='text' else draft['image']['license']
             for field,replacement in [(draft['summary'],''),(draft['summary'],'Changed summary'),(label,''),(label,'Wrong licence')]:
                 html=original.replace(field,replacement);self.assertNotEqual(html,original)
                 def response(request,**kwargs):

@@ -10,6 +10,36 @@ from .discovery import discover,collect_modis
 from .publish import ensure_table, publish, guard
 from .store import database
 
+_RELATED_SEARCHER = None
+
+
+def _related_searcher():
+    """Lazily build the search backend used for related-coverage lookups.
+
+    Returns None when no backend is importable, in which case collection proceeds with a
+    single source exactly as before. Cached so a tick does not rebuild the client per story.
+    """
+    global _RELATED_SEARCHER
+    if _RELATED_SEARCHER is not None:
+        return _RELATED_SEARCHER or None
+    try:
+        from ddgs import DDGS
+    except ImportError:
+        _RELATED_SEARCHER = False
+        return None
+
+    def search(query, limit):
+        results = []
+        with DDGS() as client:
+            for item in client.text(query, max_results=limit):
+                url = item.get("href") or item.get("url")
+                if url:
+                    results.append({"url": url, "title": item.get("title") or ""})
+        return results
+
+    _RELATED_SEARCHER = search
+    return search
+
 
 def live_tick(config_path):
     config=load_config(config_path)
@@ -56,7 +86,16 @@ def live_tick(config_path):
                         if store.db.execute("SELECT count(*) FROM publications WHERE status='deployed'").fetchone()[0]>=cap:continue
                     try:
                         collector=collect_modis if recipe.get('family')=='nasa-modis' else collect
-                        packet,intake_receipt=collector(recipe,config['state_dir'])
+                        # Related-coverage search turns the single-source packet into a
+                        # multi-source one so the writer synthesises instead of restating one
+                        # publisher. Best-effort by design: no searcher (or a failing one)
+                        # leaves the packet exactly as it was.
+                        collector_options = {}
+                        if collector is collect and config.get('related_sources', True):
+                            searcher = _related_searcher()
+                            if searcher is not None:
+                                collector_options['search'] = searcher
+                        packet,intake_receipt=collector(recipe,config['state_dir'],**collector_options)
                     except (ValueError,OSError) as error:
                         errors.append({'provider':recipe.get('provider',recipe.get('family','explicit')),'stage':'collection','url':recipe['url'],'error':safe_error(error)})
                         continue

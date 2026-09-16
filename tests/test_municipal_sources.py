@@ -63,5 +63,60 @@ class MunicipalSources(unittest.TestCase):
                         'hub-page check must fire before editorial.text() excerpt cap')
 
 
+class ValtioneuvostoSource(unittest.TestCase):
+    """Valtioneuvosto is the highest-volume source; pin the properties that admit it."""
+
+    def setUp(self):
+        from news_mvp import official
+        self.official = official
+        self.spec = official.policy()['providers']['valtioneuvosto']
+
+    def test_is_registered_for_rss_discovery(self):
+        self.assertIn('valtioneuvosto', self.official.RSS_PROVIDERS)
+        self.assertIn('valtioneuvosto', self.official.ADDITIONAL_PROVIDERS)
+        self.assertIn('valtioneuvosto', self.official.PROVIDER_ORDER)
+
+    def test_reuse_terms_are_pinned_and_record_the_commercial_limits(self):
+        """Text reuse is permitted with attribution; commercial use needs a separate deal."""
+        self.assertRegex(self.spec.get('rights_text_sha256', ''), r'^[a-f0-9]{64}$')
+        self.assertTrue(self.spec.get('rights_url'))
+        self.assertIn('valtioneuvosto.fi', self.spec['hosts'])
+        self.assertEqual(self.spec.get('timezone'), 'Europe/Helsinki')
+        # The non-commercial basis is explicit, with the reason, so it cannot be silently
+        # treated as unrestricted reuse if sponsorship activates later.
+        self.assertFalse(self.spec.get('commercial_use'))
+        self.assertIn('non-commercial', self.spec.get('commercial_basis', '').lower())
+
+    def test_article_pattern_accepts_both_url_forms_and_rejects_hubs(self):
+        import re
+        pattern = self.spec['article_pattern']
+        self.assertTrue(re.fullmatch(pattern, 'https://valtioneuvosto.fi/-/ministeri-tavio-vierailee-virossa'))
+        self.assertTrue(re.fullmatch(pattern, 'https://valtioneuvosto.fi/-/1410877/pk-yritysbarometri-1'))
+        self.assertFalse(re.fullmatch(pattern, 'https://valtioneuvosto.fi/ajankohtaista/uutiset'))
+        self.assertFalse(re.fullmatch(pattern, 'https://valtioneuvosto.fi/tietoa-sivustosta'))
+        # A lookalike host must not satisfy the pattern.
+        self.assertFalse(re.fullmatch(pattern, 'https://evil-valtioneuvosto.fi/-/some-slug'))
+
+
+class ReuseLicenceIsNeverInvented(unittest.TestCase):
+    def test_every_provider_declares_its_own_licence(self):
+        """A defaulted licence can contradict the publisher's terms, as it did on
+        Valtioneuvosto (claimed CC BY 4.0; terms require a separate commercial agreement)."""
+        from news_mvp.official import policy
+        for provider, spec in policy()['providers'].items():
+            self.assertTrue(spec.get('license'), f'{provider} must declare its exact licence')
+
+    def test_missing_licence_is_refused_rather_than_defaulted(self):
+        from news_mvp.official import reuse
+        with self.assertRaises(ValueError):
+            reuse({'rights_url': 'https://example.fi/terms'})
+
+    def test_valtioneuvosto_licence_records_the_commercial_limit(self):
+        from news_mvp.official import policy
+        spec = policy()['providers']['valtioneuvosto']
+        self.assertIn('kaupalliseen', spec['license'])
+        self.assertNotIn('CC BY 4.0', spec['license'])
+
+
 if __name__ == '__main__':
     unittest.main()

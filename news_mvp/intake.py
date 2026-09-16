@@ -59,15 +59,18 @@ class ArticleHTML(HTMLParser):
         return "\n".join(" ".join(line.split()) for line in "".join(self.parts).splitlines() if line.strip())
 
 
-def collect(recipe, state_dir, now=None):
+def collect(recipe, state_dir, now=None, search=None):
     """Fetch a configured public article and its operator-verified image/rights.
 
     No inferred licence: the operator supplies the exact credit and permission
     record after inspecting the source and terms. Raw response hashes bind it.
+
+    `search` is forwarded only to the official-source collector, where it is used to find
+    related coverage of the same story (best effort; see news_mvp/related.py).
     """
     if recipe.get('family') == 'finnish-official':
         from .official import collect as collect_official
-        return collect_official(recipe, state_dir, now)
+        return collect_official(recipe, state_dir, now, search=search)
     now = now or datetime.now(timezone.utc)
     raw, mime, final_url = fetch(recipe["url"], recipe["allowed_hosts"])
     if mime != "text/html":
