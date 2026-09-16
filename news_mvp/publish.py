@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import subprocess
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -212,7 +213,19 @@ def publish(store,job,state,config_path):
         url='https://uutistenlukija.fi/'+article_path(job)
         def read(url):
             with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=25) as r:return r.read()
-        html=read(url)
+        # URL-scheme migration: a deployment dispatched before slugs shipped published the
+        # article at the hash path, and the slug now 404s until a slug-built bundle deploys.
+        # Read whichever form this exact deployment actually produced, and record which one,
+        # so reconciliation is not wedged by the scheme change. The canonical URL written to
+        # the receipt is still the slug, which is what the site will serve going forward.
+        legacy_url='https://uutistenlukija.fi/uutiset/'+job['id']+'/'
+        try:
+            html=read(url)
+        except urllib.error.HTTPError as error:
+            if error.code!=404 or url==legacy_url:
+                raise
+            html=read(legacy_url)
+            url=legacy_url
         image_sha=None
         if row['image_sha'] is not None:
             image=read('https://uutistenlukija.fi/mvp-assets/'+row['image_sha']+'.jpg')
