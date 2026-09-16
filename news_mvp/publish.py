@@ -14,6 +14,7 @@ from .editorial import ROOT, digest, timestamp, validate_review, validate_packet
 from datetime import datetime, timezone
 from .release_contract import media, verify_intake, check_article
 from .site import atomic_write, article_path, esc, page, render_site
+from . import slugs
 
 REPO='perttupaakkola/uutistenlukija-fi'
 WORKFLOW='246481423'
@@ -91,19 +92,33 @@ def public_bundle(store,job,state):
     privacy='''<article class="story"><h1>Tietosuoja ja evästeet</h1><p>Voit käyttää uutispalvelua sallimatta analytiikkaa. Luvallasi käytämme Google Analyticsia sivuston käytön mittaamiseen. Emme käytä mainonnan evästeitä.</p><p>Suostumus tallennetaan selaimeesi. Voit muuttaa valintaasi sivun Evästeasetukset-painikkeella. Analytiikan poistaminen käytöstä poistaa tämän sivuston Google Analytics -evästeet selaimesta.</p><p>Uutiset laaditaan tekoälyn avulla ja tarkastetaan erillisessä lähdearvioinnissa. Alkuperäiset lähteet ja käyttöehdot näkyvät artikkelissa. Uutinen voi olla kuvaton; käytetyn kuvan tekijä ja käyttöoikeus ilmoitetaan kuvan yhteydessä.</p></article>'''
     atomic_write(site/'tietosuoja/index.html',page('Tietosuoja ja evästeet',privacy,'/tietosuoja/'))
     atomic_write(site/'404.html',page('Sivua ei löytynyt','<h1>Sivua ei löytynyt</h1><p><a href="/">Siirry uusimpiin uutisiin</a></p>','/404.html'))
-    urls=['https://uutistenlukija.fi/','https://uutistenlukija.fi/tietosuoja/']+['https://uutistenlukija.fi/uutiset/'+i+'/' for i in sorted(ids)]
-    # `<lastmod>` tells the crawler a page actually changed; without it every URL looks
-    # equally old, which is one reason a fresh article can sit unrecrawled.
+    # One pass over the store builds the slug/mtime maps used by the sitemap and redirects.
     article_mod={}
-    for row in store.db.execute('SELECT id,created_at FROM jobs'):
+    title_by_id={}
+    for row in store.db.execute('SELECT id,created_at,draft FROM jobs'):
+        title_by_id[row['id']]=row['draft']
         try: article_mod[row['id']]=timestamp(row['created_at']).astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00')
         except Exception: pass
+    def _slug_for(identifier):
+        return article_path({'id':identifier,'draft':title_by_id.get(identifier)})
     def _url_entry(u,mod=None):
         return '<url><loc>'+esc(u)+'</loc>'+(('<lastmod>'+esc(mod)+'</lastmod>') if mod else '')+'</url>'
     entries=[_url_entry('https://uutistenlukija.fi/'),_url_entry('https://uutistenlukija.fi/tietosuoja/')]
-    entries+= [_url_entry('https://uutistenlukija.fi/uutiset/'+i+'/', article_mod.get(i)) for i in sorted(ids)]
+    entries+= [_url_entry('https://uutistenlukija.fi/'+_slug_for(i), article_mod.get(i)) for i in sorted(ids)]
     atomic_write(site/'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(entries)+'</urlset>')
     atomic_write(site/'robots.txt','User-agent: *\nAllow: /\nSitemap: https://uutistenlukija.fi/sitemap.xml\n')
+    # Every article that ever existed under a bare hash URL keeps working: the readable
+    # slug is additive, and the 301 preserves whatever ranking signal the old URL earned.
+    # Built from the store, so it covers retired articles too, not only the current ids.
+    redirect_lines=[]
+    for identifier in title_by_id:
+        if slugs.is_legacy_hash_path(identifier):
+            redirect_lines.append(slugs.redirect_line('uutiset/'+identifier, _slug_for(identifier)))
+    # Retired monetization surfaces (owner directive) still 404 today; carry the intent
+    # into the published bundle so those paths resolve instead of dead-ending.
+    redirect_lines += ['/mainosta/* / 301', '/perustajakumppanuus/* / 301']
+    if redirect_lines:
+        atomic_write(site/'_redirects','\n'.join(sorted(set(redirect_lines)))+'\n')
     packet,draft=json.loads(job['packet']),json.loads(job['draft'])
     receipt={'public_release_authorized':True,'hermes_step':5,'origin':'https://uutistenlukija.fi','ga4_id':'G-35XERS8V6J',
         'source_commit':cmd('git','rev-parse','HEAD'),'job_id':job['id'],'packet_sha256':digest(packet),

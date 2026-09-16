@@ -13,8 +13,8 @@ from news_mvp.discovery import discover
 from news_mvp.editorial import ROOT,digest
 from news_mvp.live import live_tick
 from news_mvp.publish import ensure_table,public_bundle,publish,restore_image_required_schema
+from news_mvp.site import article_path, render_site
 from news_mvp.release_contract import media,receipt_media,verify_intake
-from news_mvp.site import render_site
 from news_mvp.store import database
 from cutover.check_release import check
 COMMIT='a'*40
@@ -96,7 +96,7 @@ class ReleaseV2(unittest.TestCase):
             site,receipt=public_bundle(store,job,self.state);check(site,receipt)
             after=tuple(store.db.execute('SELECT * FROM publications WHERE job_id=?',(old['id'],)).fetchone());self.assertEqual(before,after)
             home=(site/'index.html').read_text();self.assertIn(self.draft['title'],home);self.assertIn('NASA synthetic image story',home)
-            text=(site/f"uutiset/{job['id']}/index.html").read_text();self.assertNotIn('Luonnos',text);self.assertNotIn('<img',text);self.assertIn('CC BY 4.0',text);self.assertIn('Tämä uutinen julkaistaan ilman kuvaa.',text);self.assertTrue((site/f'mvp-assets/{sha}.jpg').exists())
+            text=(site/(article_path(job)+"index.html")).read_text();self.assertNotIn('Luonnos',text);self.assertNotIn('<img',text);self.assertIn('CC BY 4.0',text);self.assertIn('Tämä uutinen julkaistaan ilman kuvaa.',text);self.assertTrue((site/f'mvp-assets/{sha}.jpg').exists())
     def test_wrong_missing_policy_rights_private_fixture_packet_refused(self):
         for mutation in ['policy','rights','private','fixture','source','image-required']:
             packet=copy.deepcopy(self.packet)

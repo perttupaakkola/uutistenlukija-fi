@@ -5,6 +5,7 @@ import test_release_v2 as base
 COMMIT,REMOTE=base.COMMIT,base.REMOTE
 from news_mvp.editorial import digest
 from news_mvp.publish import public_bundle,publish
+from news_mvp.site import article_path
 from news_mvp.store import database
 from cutover.check_release import check
 class Correction(unittest.TestCase):
@@ -55,7 +56,7 @@ class Correction(unittest.TestCase):
             packet=json.loads(job['packet']);draft=json.loads(job['draft'])
             with database(self.state) as store:
                 store.db.execute("INSERT INTO publications(job_id,packet_sha,draft_sha,image_sha,source_commit,remote_commit,status) VALUES(?,?,?,?,?,?,'dispatched')",(job['id'],digest(packet),digest(draft),receipt['image_sha256'],COMMIT,REMOTE));store.db.commit()
-            article=site/f"uutiset/{job['id']}/index.html";original=article.read_text()
+            article=site/(article_path(job)+"index.html");original=article.read_text()
             label='CC BY 4.0' if kind=='text' else draft['image']['license']
             for field,replacement in [(draft['summary'],''),(draft['summary'],'Changed summary'),(label,''),(label,'Wrong licence')]:
                 html=original.replace(field,replacement);self.assertNotEqual(html,original)

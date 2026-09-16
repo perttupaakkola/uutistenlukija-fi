@@ -6,7 +6,7 @@ import re
 from datetime import timezone
 from pathlib import Path
 
-from . import seo
+from . import seo, slugs
 from .editorial import ROOT, digest, timestamp, validate_draft, validate_review
 
 
@@ -26,7 +26,19 @@ def atomic_write(path, value):
 
 
 def article_path(job):
-    return "uutiset/" + job["id"] + "/"
+    """Readable slug URL; the job id remains the stable suffix identity."""
+    return "uutiset/" + slugs.article_slug(job["id"], _job_title(job)) + "/"
+
+
+def _job_title(job):
+    """Best-effort headline for slug derivation; never fails the render."""
+    try:
+        draft = job["draft"]
+        if isinstance(draft, (str, bytes)):
+            draft = json.loads(draft)
+        return draft.get("title", "")
+    except (ValueError, TypeError, KeyError):
+        return ""
 
 
 def page(title, body, canonical_path=None, head_meta="", readability_present=True):
