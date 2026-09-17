@@ -97,6 +97,10 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                     except Exception:
                         illustration = None
                     if illustration is not None:
+                        # Drop the collection-time "no image" note: it must never coexist with
+                        # an actual image, or the reviewer rightly reads the packet as
+                        # self-contradictory.
+                        packet = {k: v for k, v in packet.items() if k != "image_note"}
                         packet = {**packet, "image": illustration}
                         job = {**job, "packet": json.dumps(packet)}
                         store.save_packet(job["id"], packet)

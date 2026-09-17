@@ -98,4 +98,22 @@ class Official(unittest.TestCase):
     def test_live_tick_refuses_before_state_or_model(self):
         with self.assertRaisesRegex(ValueError,'private preparation'):live_tick(self.cfg)
         self.assertFalse((self.root/'state').exists())
+    def test_heading_with_kicker_prefix_is_accepted(self):
+        """Portal templates may prepend a rubric to the <h1>.
+
+        Observed on a Valtioneuvosto budget story: og:title was "Orpon hallitus: Talous kasvaa,
+        ja hallitus vauhdittaa kasvua täsmätoiminnoilla" while the <h1> read
+        "Hallituksen talousarvioesitys vuodelle 2027 " + that title. Requiring exact equality
+        rejected a valid article outright.
+        """
+        title='Orpon hallitus: Talous kasvaa, ja hallitus vauhdittaa kasvua täsmätoimilla'
+        heading='Hallituksen talousarvioesitys vuodelle 2027 '+title
+        self.assertTrue(title==heading or heading.endswith(title))
+
+    def test_unrelated_heading_is_still_refused(self):
+        """The relaxation must not admit a different article."""
+        title='Orpon hallitus: Talous kasvaa'
+        for heading in ('A completely different story','','Talous kasvaa'):
+            with self.subTest(heading=heading):
+                self.assertFalse(title==heading or heading.endswith(title))
 if __name__=='__main__':unittest.main()

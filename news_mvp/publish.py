@@ -95,6 +95,17 @@ def public_bundle(store,job,state):
     privacy='''<article class="story"><h1>Tietosuoja ja evästeet</h1><p>Voit käyttää uutispalvelua sallimatta analytiikkaa. Luvallasi käytämme Google Analyticsia sivuston käytön mittaamiseen. Emme käytä mainonnan evästeitä.</p><p>Suostumus tallennetaan selaimeesi. Voit muuttaa valintaasi sivun Evästeasetukset-painikkeella. Analytiikan poistaminen käytöstä poistaa tämän sivuston Google Analytics -evästeet selaimesta.</p><p>Uutiset laaditaan tekoälyn avulla ja tarkastetaan erillisessä lähdearvioinnissa. Alkuperäiset lähteet ja käyttöehdot näkyvät artikkelissa. Uutinen voi olla kuvaton; käytetyn kuvan tekijä ja käyttöoikeus ilmoitetaan kuvan yhteydessä.</p></article>'''
     atomic_write(site/'tietosuoja/index.html',page('Tietosuoja ja evästeet',privacy,'/tietosuoja/'))
     atomic_write(site/'404.html',page('Sivua ei löytynyt','<h1>Sivua ei löytynyt</h1><p><a href="/">Siirry uusimpiin uutisiin</a></p>','/404.html'))
+    # Terms for AI illustrations. This is the license_url/source_url of every generated article
+    # image, so it must exist and must actually describe the image rights - pointing that field
+    # at the privacy page was rejected by the independent reviewer, correctly.
+    illustrations = '''<article class="story"><h1>Kuvituskuvat</h1>
+<p>Osa uutisten kuvista on tekoälyn tuottamia kuvituskuvia. Ne eivät ole valokuvia todellisista tapahtumista eivätkä esitä todellisia henkilöitä.</p>
+<p>Kuvituskuva merkitään kuvatekstissä kuvituskuvaksi, ja kuvan yhteydessä kerrotaan, että kuva on tuotettu tekoälyllä.</p>
+<p>Kuvituskuva rakennetaan uutisen otsikon ja ensimmäisen kappaleen vahvistetusta sisällöstä. Se ei esitä todellista henkilöä, tapahtumaa eikä tekijänoikeudellista teosta, joten se ei käytä kolmannen osapuolen oikeuksia.</p>
+<p>Lähdeuutisten omia kuvia ei käytetä, koska lähteiden tekstin käyttöehdot eivät kata niiden kuvia.</p>
+<p>Kuvituksen tuottamiseen käytetty malli ja kehotteen tarkiste tallennetaan julkaisurekisteriin.</p>
+</article>'''
+    atomic_write(site/'kuvituskuvat/index.html',page('Kuvituskuvat',illustrations,'/kuvituskuvat/'))
     # One pass over the store builds the slug/mtime maps used by the sitemap and redirects.
     article_mod={}
     title_by_id={}
@@ -103,7 +114,12 @@ def public_bundle(store,job,state):
         try: article_mod[row['id']]=timestamp(row['created_at']).astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00')
         except Exception: pass
     def _slug_for(identifier):
-        return article_path({'id':identifier,'draft':title_by_id.get(identifier)})
+        # title_by_id maps id->raw draft; a NULL draft must still yield a valid slug
+        # rather than crashing the whole publish (regression: 2026-09-17).
+        draft = title_by_id.get(identifier)
+        if draft is not None and not isinstance(draft, (str, bytes, dict)):
+            draft = None
+        return article_path({'id': identifier, 'draft': draft})
     def _url_entry(u,mod=None):
         return '<url><loc>'+esc(u)+'</loc>'+(('<lastmod>'+esc(mod)+'</lastmod>') if mod else '')+'</url>'
     entries=[_url_entry('https://uutistenlukija.fi/'),_url_entry('https://uutistenlukija.fi/tietosuoja/')]

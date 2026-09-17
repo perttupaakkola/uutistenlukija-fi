@@ -156,9 +156,13 @@ class HermesModel:
         if draft is not None:
             request.update(draft=draft, draft_sha256=digest(draft))
         prompt = (ROOT / "prompts" / (role + ".md")).read_text() + "\n\nINPUT JSON:\n" + encode(request)
-        # No shell interpolation, resume flag, legacy memories or personal profile.
+        # Provider is inherited from the news-mvp profile's own config.yaml. It used to be
+        # pinned here to --provider openai-codex, which failed the moment those credits were
+        # exhausted (HTTP 429, "usage limit has been reached") and silently stopped all
+        # drafting. The profile now runs the same provider as the rest of Hermes, so switching
+        # model backing is a profile-config change rather than a code edit.
         command = [self.executable, "--profile", "news-mvp", "chat", "--cli", "--quiet",
-                   "--oneshot", "--ignore-rules", "--provider", "openai-codex",
+                   "--oneshot", "--ignore-rules",
                    "--run-budget", "120", "--max-turns", "1", "--query-file", "-"]
         # Do not inherit personal keys, task/goal flags or routing overrides.
         # Supported profile auth fallback reads the existing shared OAuth store.

@@ -286,7 +286,13 @@ def collect(recipe, state_dir, now=None, search=None):
                   'provider': provider, 'source_sha256': hashlib.sha256(raw).hexdigest(), 'source_fields_sha256': digest(source),
                   'related_sources': related_count},
               'sources': sources, 'image': None,
-              'image_note': 'Ei kuvaa: uutiskohtaista kuvaa ja sen käyttöoikeuksia ei ole varmennettu.',
+              # Explains the ABSENCE of a source image at collection time. The controller may
+              # later attach a generated illustration, which replaces this note (see
+              # controller.py) - a note claiming "no image" must never survive alongside an
+              # image, which is exactly what the independent reviewer caught and rejected.
+              'image_note': ('Ei lähdekuvaa: lähteen omaa kuvaa ei käytetä, koska tekstin '
+                             'käyttöehdot eivät kata kuvia. Kuvitus saatetaan liittää myöhemmin '
+                             'tekoälyllä tuotettuna.'),
               'supporting_documents': [{'id': 'RIGHTS', 'purpose': 'text reuse permission; not news or image evidence',
                   'url': spec['rights_url'], 'retrieved_at': now.isoformat(), 'text': permission,
                   'sha256': hashlib.sha256(rights).hexdigest()}]}

@@ -3,6 +3,7 @@ import re
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from .official import Page
+from .official import MAX_ARTICLE_CHARS
 
 def policy():
  from .official import policy as current_policy
@@ -68,7 +69,13 @@ def source_fields(raw,provider,url):
   if canonical(meta.one('og:url'),provider)!=url:raise ValueError('Canonical article mismatch')
  elif meta.canonicals != [url] or canonical(meta.one('og:url'),provider)!=url:raise ValueError('Canonical article mismatch')
  title=meta.one('og:title');title=title.removesuffix(' | Kuntaliitto.fi').removesuffix(' - Kuopio').removesuffix(' | Vantaa').strip();heading=parse(raw,lambda t,a:t=='h1').text()
- if not title or title!=heading:raise ValueError('Article title mismatch/ambiguity')
+ # Some portal templates prepend a rubric/kicker to the <h1>, so the heading reads
+ # "<kicker> <title>" (observed: "Hallituksen talousarvioesitys vuodelle 2027 Orpon hallitus:
+ # Talous kasvaa, ja hallitus vauhdittaa kasvua täsmätoimilla"). Accept a heading that ENDS
+ # with the metadata title; the title must still match exactly, so this cannot smuggle a
+ # different article in, and a heading that neither equals nor ends with it is still refused.
+ if not title or (title!=heading and not heading.endswith(title)):
+  raise ValueError('Article title mismatch/ambiguity')
  if provider=='valtioneuvosto':
   # Liferay/portal site: og:url is the authoritative self-reference because the pages emit
   # no <link rel=canonical> at all. og:type=article and article:published_time are present.
@@ -82,6 +89,14 @@ def source_fields(raw,provider,url):
   # Content lives in Liferay's journal-content-article container; there is no <article>.
   body=parse(raw,lambda t,a:'journal-content-article' in a.get('class','').split()).text()
   if len(body)<200:raise ValueError('Missing substantive article text')
+  # Liferay emits the site menu inside the content container on some renders, sometimes with no
+  # separators at all ("liikenne- ja viestintäministeriömaa- ja metsätalousministeriö...", the
+  # list of every ministry). Left in, the writer treats the menu as source text and the body can
+  # exceed the excerpt limit - a real budget article failed with "Invalid source excerpt".
+  from .related import strip_navigation
+  stripped=strip_navigation(body)
+  if len(stripped)>=200:body=stripped
+  if len(body)>MAX_ARTICLE_CHARS:raise ValueError('Source is an aggregator/hub page, not a single article')
   wrapper=parse(raw,lambda t,a:t=='body').text()
   # Valtioneuvosto text reuse is permitted with attribution; commercial use needs a separate
   # agreement, so the terms page is pinned and the commercial status is recorded in policy.

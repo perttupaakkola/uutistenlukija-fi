@@ -120,6 +120,173 @@ class RasterVerification(unittest.TestCase):
             verify(b'not an image at all')
 
 
+class LegibleTextRejection(unittest.TestCase):
+    """Observed on a police story: the model wrote 'POLIIISI' across an officer's back, and on
+    another attempt put legible lettering on a police car. The prompt forbids text; the model
+    still produces it, so the output is checked."""
+
+    def test_reported_text_is_flagged(self):
+        from news_mvp.imagery import has_legible_text
+        for description in ('The image shows a police car with legible text on the door.',
+                            'A street with visible text on a sign.',
+                            'An officer with lettering on the back of his jacket.',
+                            'The sign reads POLIISI.',
+                            'The image contains a logo on the wall.'):
+            with self.subTest(description=description):
+                self.assertTrue(has_legible_text(description))
+
+    def test_quoted_word_is_flagged(self):
+        """Real phrasing that slipped past a first version matching only 'legible text'."""
+        from news_mvp.imagery import has_legible_text
+        self.assertTrue(has_legible_text(
+            'The image shows a police officer in a uniform with the word "POLIISI" on the back, '
+            'standing on a street with a drone in front of him.'))
+
+    def test_explicit_absence_of_text_is_not_flagged(self):
+        from news_mvp.imagery import has_legible_text
+        for description in ('The image shows a police officer standing on a street. '
+                            'There is no legible text or identifiable person.',
+                            'A drone hovers above an empty street with no text visible.'):
+            with self.subTest(description=description):
+                self.assertFalse(has_legible_text(description))
+
+    def test_missing_description_is_not_flagged(self):
+        """The checker is best effort; a missing description must not block an image."""
+        from news_mvp.imagery import has_legible_text
+        self.assertFalse(has_legible_text(None))
+        self.assertFalse(has_legible_text(''))
+
+    def test_build_image_retries_past_a_texty_candidate(self):
+        import news_mvp.imagery as imagery
+        draft = {'title': 'Hallitus esittää poliisille laajempia valtuuksia',
+                 'paragraphs': [{'text': 'Lakiesitys laajentaisi valtuuksia.', 'source_ids': ['A']}]}
+        good = _structured_png()
+        calls = {'n': 0}
+
+        def fake_generate(*args, **kwargs):
+            calls['n'] += 1
+            return good, 'prompt', 'fake-model'
+
+        descriptions = iter(['The image shows legible text on a police car.', 'A street.'])
+
+        original_generate = imagery.generate
+        original_describe = imagery.describe
+        imagery.generate = fake_generate
+        imagery.describe = lambda raw: next(descriptions)
+        try:
+            import tempfile
+            result = imagery.build_image(draft, tempfile.mkdtemp())
+        finally:
+            imagery.generate = original_generate
+            imagery.describe = original_describe
+        self.assertIsNotNone(result, 'a clean retry must be accepted')
+        self.assertEqual(result['attempts'], 2)
+        self.assertEqual(calls['n'], 2)
+
+    def test_build_image_gives_up_when_every_candidate_has_text(self):
+        import news_mvp.imagery as imagery
+        draft = {'title': 'Hallitus esittää poliisille laajempia valtuuksia',
+                 'paragraphs': [{'text': 'Lakiesitys laajentaisi valtuuksia.', 'source_ids': ['A']}]}
+        good = _structured_png()
+
+        original_generate = imagery.generate
+        original_describe = imagery.describe
+        imagery.generate = lambda *a, **k: (good, 'prompt', 'fake-model')
+        imagery.describe = lambda raw: 'The image shows legible text on a police car.'
+        try:
+            import tempfile
+            result = imagery.build_image(draft, tempfile.mkdtemp(), attempts=2)
+        finally:
+            imagery.generate = original_generate
+            imagery.describe = original_describe
+        self.assertIsNone(result, 'text must never ship, even at the cost of no image')
+
+
+def _structured_png(size=(800, 600)):
+    """A non-blank raster that passes verify()."""
+    from PIL import Image
+    image = Image.new('RGB', size, (120, 140, 160))
+    for index, x in enumerate(range(0, size[0], size[0] // 4)):
+        for y in range(0, size[1], size[1] // 4):
+            shade = (40, 90, 200) if (index + y) % 2 else (230, 210, 120)
+            for dx in range(size[0] // 4):
+                for dy in range(size[1] // 4):
+                    image.putpixel(((x + dx) % size[0], (y + dy) % size[1]), shade)
+    buffer = io.BytesIO()
+    image.save(buffer, format='PNG')
+    return buffer.getvalue()
+
+
+class ReleaseContractIntegration(unittest.TestCase):
+    """An image record must satisfy validate_draft, validate_packet and media() together.
+
+    Found the hard way: build_image set `url` to a relative /media/<sha>.jpg, which
+    validate_draft rejects because web_url() requires an absolute HTTPS URL. The renderer
+    substitutes the local path itself, so the record only ever needs the public URL.
+    """
+
+    def _record(self):
+        import hashlib
+        from news_mvp.imagery import PUBLIC_BASE
+        sha = 'a' * 64
+        return {
+            'url': f'{PUBLIC_BASE}/media/{sha}.jpg',
+            'local_path': f'media/{sha}.jpg',
+            'sha256': sha,
+            'alt': 'Kuvituskuva: esimerkki',
+            'caption': 'Kuvituskuva. Kuva on luotu tekoälyllä, ei valokuva tapahtumasta.',
+            'credit': 'AI-kuvitus (gpt-image-1-mini)',
+            'license': 'AI-generated illustration',
+            'license_url': f'{PUBLIC_BASE}/kuvituskuvat/',
+            'source_url': f'{PUBLIC_BASE}/kuvituskuvat/',
+            'generated': True,
+            'model': 'gpt-image-1-mini',
+            'prompt_sha256': 'b' * 64,
+            'prompt_version': 'imagery-v1',
+            'subject': 'Esimerkki',
+        }
+
+    def test_url_fields_are_absolute_https(self):
+        from news_mvp.editorial import web_url
+        record = self._record()
+        for field in ('url', 'source_url', 'license_url'):
+            web_url(record[field])   # raises if not an absolute https URL
+
+    def test_relative_url_is_rejected(self):
+        """The exact regression: a relative media path cannot pass the contract."""
+        from news_mvp.editorial import web_url
+        with self.assertRaises(ValueError):
+            web_url('/media/' + 'a' * 64 + '.jpg')
+
+    def test_generated_record_requires_ai_credit_and_illustration_caption(self):
+        import json
+        from news_mvp.editorial import validate_draft
+        record = self._record()
+
+        def draft_with(image):
+            return {'title': 'Esimerkki uutinen', 'summary': 'Yhteenveto.', 'category': 'Kotimaa',
+                    'paragraphs': [{'text': 'Ensimmäinen kappale.', 'source_ids': ['A']},
+                                   {'text': 'Toinen kappale.', 'source_ids': ['A']}],
+                    'image': image}
+
+        packet = {'story_key': 'url:https://www.hel.fi/fi/uutiset/esimerkki',
+                  'fixture': False, 'image': record,
+                  'sources': [{'id': 'A', 'url': 'https://www.hel.fi/fi/uutiset/esimerkki',
+                               'publisher': 'Helsingin kaupunki', 'title': 'Esimerkki',
+                               'text': 'x' * 400,
+                               'published_at': '2026-09-16T10:00:00+03:00'}],
+                  'supporting_documents': [{'id': 'RIGHTS'}]}
+        validate_draft(draft_with(record), packet)
+
+        no_credit = {**record, 'credit': 'Kuvitus'}
+        with self.assertRaises(ValueError):
+            validate_draft(draft_with(no_credit), packet)
+
+        no_caption_mark = {**record, 'caption': 'Tekoälyn tuottama kuva.'}
+        with self.assertRaises(ValueError):
+            validate_draft(draft_with(no_caption_mark), packet)
+
+
 class FailClosed(unittest.TestCase):
     def test_build_image_returns_none_when_generation_fails(self):
         """No image is always acceptable; a wrong or unverifiable image never is."""

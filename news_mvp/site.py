@@ -36,8 +36,12 @@ def _job_title(job):
         draft = job["draft"]
         if isinstance(draft, (str, bytes)):
             draft = json.loads(draft)
-        return draft.get("title", "")
-    except (ValueError, TypeError, KeyError):
+        if not isinstance(draft, dict):
+            # Jobs with a NULL/unparsed draft (e.g. intake that failed before the
+            # writer ran) still need a slug; fall back to id-only identity.
+            return ""
+        return draft.get("title", "") or ""
+    except (ValueError, TypeError, KeyError, AttributeError):
         return ""
 
 
@@ -124,7 +128,15 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                     raise ValueError("Local image does not match reviewed rights record")
                 image_url = f"/{assets}/{sha}.jpg"
                 atomic_write(output_dir / image_url.lstrip("/"), data)
-            figure = f'<figure><img src="{esc(image_url)}" alt="{esc(image["alt"])}" referrerpolicy="no-referrer"><figcaption>{esc(image.get("caption", ""))} {esc(image["credit"])} · <a href="{esc(image["license_url"])}">{esc(image["license"])}</a> · <a href="{esc(image["source_url"])}">Kuvan lähde</a></figcaption></figure>'
+            # A generated illustration must not claim a "source" - there is no source work. It
+            # links to the illustration terms instead, and never presents itself as a photograph.
+            if image.get("generated") is True:
+                figure = (f'<figure><img src="{esc(image_url)}" alt="{esc(image["alt"])}" '
+                          f'referrerpolicy="no-referrer"><figcaption>{esc(image.get("caption", ""))} '
+                          f'{esc(image["credit"])} · <a href="{esc(image["license_url"])}">'
+                          f'Kuvituskuvien käyttöehdot</a></figcaption></figure>')
+            else:
+                figure = f'<figure><img src="{esc(image_url)}" alt="{esc(image["alt"])}" referrerpolicy="no-referrer"><figcaption>{esc(image.get("caption", ""))} {esc(image["credit"])} · <a href="{esc(image["license_url"])}">{esc(image["license"])}</a> · <a href="{esc(image["source_url"])}">Kuvan lähde</a></figcaption></figure>'
         body = f'''<article class="story"><a class="back" href="/">← Kaikki uutiset</a>{fixture}
 <p class="eyebrow" data-category="{esc(draft["category"])}">{esc(draft["category"])} · {"" if public else "Luonnos "}{date}</p><h1>{esc(draft["title"])}</h1>
 <p class="lead">{esc(draft["summary"])}</p>{figure}<div class="story-body">{paragraphs}</div>

@@ -36,6 +36,9 @@ DEFAULT_SIZE = '1536x1024'          # 3:2, a normal editorial lead-image ratio
 GENERATION_TIMEOUT = 240
 PROMPT_VERSION = 'imagery-v1'
 MAX_PROMPT_CHARS = 900
+# Public origin for the image record's `url`, which the release contract requires to be an
+# absolute HTTPS URL. Kept in step with editorial.SITE / the sitemap host.
+PUBLIC_BASE = 'https://uutistenlukija.fi'
 
 # Words that must never become the subject of a generated photograph: they invite depictions of
 # identifiable people, real violence or tragedy. A generic illustration of the story's setting
@@ -75,6 +78,13 @@ def _prompt_for(subject, category=''):
         "uniforms, badges and any era-specific or situation-specific prop that would assert "
         "a fact the subject does not state. Prefer environment, architecture, objects and "
         "atmosphere over staged human activity. "
+        # Vehicles are the single most reliable source of unwanted lettering: observed
+        # "POLIISI" written across an officer's back and "P...SI" on a police car, both of which
+        # a vision description then reported as having no legible text. Avoid branded or
+        # lettered objects rather than relying on detecting the text afterwards.
+        "Do not include vehicles with markings, uniform lettering, signage or branded "
+        "equipment; represent institutions through buildings, architecture and settings "
+        "instead. Keep all surfaces free of any depicted writing. "
         "The image must work as a neutral visual summary of the subject."
     )[:MAX_PROMPT_CHARS]
 
@@ -243,48 +253,92 @@ def _jpg(raw):
     return buffer.getvalue()
 
 
-def build_image(draft, state_dir, category='', model=DEFAULT_MODEL):
+def has_legible_text(description):
+    """Whether an independent description reports readable text in the raster.
+
+    Text is a genuine defect, not a cosmetic one: observed on a police story, the model wrote
+    "POLIISI" across an officer's back, and on another attempt put legible lettering on a police
+    car. Published text can be misspelled, can imply a trademark or official marking, and reads
+    as a real photograph rather than an illustration. The prompt forbids text and the model still
+    produces it, sometimes, so this is checked on the actual output.
+
+    The patterns cover how a vision model actually phrases this, which is more varied than
+    "legible text": it also writes `the word "POLIISI" on the back` and `a sign that reads X`.
+    An early version matched only the literal phrase and let a real "POLIISI" through.
+    """
+    if not description:
+        return False
+    lowered = description.lower()
+    # An explicit statement of absence must win, or the negation itself trips the patterns.
+    if re.search(r'\bno (legible |visible |readable )?text\b|\bwithout (any )?(visible |legible )?'
+                 r'(text|lettering|words)\b|\bno lettering\b|\bno words\b', lowered):
+        return False
+    return bool(re.search(
+        r'legible text|readable text|visible text|text on|text (?:is|are|reads)\b|'
+        r'lettering|logo|\bthe word\b|\bwords?\b[^.]{0,20}\bon\b|'
+        r'sign (?:that )?reads|writing on|label(?:led|ed)?\b|inscription|'
+        r'"[A-ZÅÄÖ][A-ZÅÄÖa-zåäö]{2,}"',      # a quoted token, e.g. the word "POLIISI"
+        description))
+
+
+def build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3):
     """Produce a verifiable image record for a draft, or None to ship text-only.
 
     Returns a dict matching what the site renderer's <figure> needs, plus the review fields the
-    release contract binds. The caller stores the JPEG at media/<sha256>.jpg under state_dir.
+    release contract binds. The JPEG is stored at media/<sha256>.jpg under state_dir.
+
+    Up to `attempts` generations are tried, because a model sometimes writes text into an
+    otherwise good illustration. The first candidate that verifies and carries no legible text
+    wins; if none does, the article ships without an image.
     """
     from pathlib import Path
     subject = subject_from_draft(draft)
     if not subject:
         return None
-    try:
-        raw, prompt, used_model = generate(subject, category, model=model)
-        facts = verify(raw)
-    except GenerationError:
-        return None
 
-    jpeg = _jpg(raw)
-    sha = hashlib.sha256(jpeg).hexdigest()
-    media = Path(state_dir) / 'media'
-    media.mkdir(parents=True, exist_ok=True)
-    (media / f'{sha}.jpg').write_bytes(jpeg)
+    for attempt in range(max(1, attempts)):
+        try:
+            raw, prompt, used_model = generate(subject, category, model=model)
+            facts = verify(raw)
+        except GenerationError:
+            continue
+        description = describe(raw)
+        if has_legible_text(description):
+            continue   # retry: text in a published illustration is not acceptable
 
-    description = describe(raw)
-    return {
-        'url': f'/media/{sha}.jpg',
-        'local_path': f'media/{sha}.jpg',
-        'sha256': sha,
-        'alt': f'Kuvituskuva: {draft.get("title", "").strip()[:120]}',
-        'caption': 'Kuvituskuva. Kuva on luotu tekoälyllä, ei valokuva tapahtumasta.',
-        'credit': f'AI-kuvitus ({used_model})',
-        'license': 'AI-generated illustration',
-        'license_url': 'https://uutistenlukija.fi/tietosuoja/',
-        'source_url': 'https://uutistenlukija.fi/tietosuoja/',
-        'generated': True,
-        'model': used_model,
-        'prompt_sha256': hashlib.sha256(prompt.encode()).hexdigest(),
-        'prompt_version': PROMPT_VERSION,
-        'subject': subject,
-        'pixels': facts,
-        'depicted': description,
-        # Context for the independent editorial review; never evidence of correctness.
-        'review_note': ('Tekoälyn tuottama kuvitus, joka on rakennettu otsikon ja ensimmäisen '
-                        'kappaleen vahvistetusta sisällöstä. Kuva ei esitä todellista '
-                        'henkilöä, tapahtumaa eikä tekijänoikeudellista teosta.'),
-    }
+        jpeg = _jpg(raw)
+        sha = hashlib.sha256(jpeg).hexdigest()
+        media = Path(state_dir) / 'media'
+        media.mkdir(parents=True, exist_ok=True)
+        (media / f'{sha}.jpg').write_bytes(jpeg)
+
+        return {
+            # `url` must be a full public HTTPS URL: validate_draft requires web_url() for it,
+            # and the renderer substitutes the local /media/<sha>.jpg path when local_path is
+            # set. A relative path here fails the release contract.
+            'url': f'{PUBLIC_BASE}/media/{sha}.jpg',
+            'local_path': f'media/{sha}.jpg',
+            'sha256': sha,
+            'alt': f'Kuvituskuva: {draft.get("title", "").strip()[:120]}',
+            'caption': 'Kuvituskuva. Kuva on luotu tekoälyllä, ei valokuva tapahtumasta.',
+            'credit': f'AI-kuvitus ({used_model})',
+            'license': 'AI-generated illustration',
+            # Must point at the terms that explain AI illustrations. Pointing this at the
+            # privacy page was rejected by the independent reviewer, correctly: a privacy page
+            # evidences no right to the image.
+            'license_url': f'{PUBLIC_BASE}/kuvituskuvat/',
+            'source_url': f'{PUBLIC_BASE}/kuvituskuvat/',
+            'generated': True,
+            'model': used_model,
+            'prompt_sha256': hashlib.sha256(prompt.encode()).hexdigest(),
+            'prompt_version': PROMPT_VERSION,
+            'subject': subject,
+            'pixels': facts,
+            'depicted': description,
+            'attempts': attempt + 1,
+            # Context for the independent editorial review; never evidence of correctness.
+            'review_note': ('Tekoälyn tuottama kuvitus, joka on rakennettu otsikon ja ensimmäisen '
+                            'kappaleen vahvistetusta sisällöstä. Kuva ei esitä todellista '
+                            'henkilöä, tapahtumaa eikä tekijänoikeudellista teosta.'),
+        }
+    return None

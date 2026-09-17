@@ -173,6 +173,44 @@ def strip_navigation(body):
     # Only strip a leading menu: the first real prose word must come after it.
     if best_end:
         body = " ".join(words[best_end:]).strip()
+    # Trailing keyword/tag clouds are metadata, not prose: a Liferay article ends with dozens of
+    # one-word topic labels ("Kestävä julkinen talous\nOrpon hallitusohjelma\nNATO\nSyyttäjälaitos
+    # \nUkraina\n..."). They inflate the excerpt past the limit and would be read as article text.
+    lines = [line.strip() for line in body.split("\n")]
+    if len(lines) >= 6:
+        tail = 0
+        for line in reversed(lines):
+            # A tag line is a short label with no sentence punctuation.
+            if line and len(line) <= 60 and not re.search(r"[.!?:;]$", line):
+                tail += 1
+            else:
+                break
+        if tail >= 5:
+            body = "\n".join(lines[: len(lines) - tail]).strip()
+
+    # Some Liferay/portal renders concatenate the menu with NO separators at all, so the
+    # whitespace walk above cannot see it:
+    #   "... talousarvioesitys vuodelle 2027\nOrpon hallitus: ...\nliikenne- ja
+    #    viestintäministeriömaa- ja metsätalousministeriöoikeusministeriö..."
+    # (observed on a Valtioneuvosto budget article). The run is not anchored at the start, so
+    # find a long concatenated streak of organisation names and cut from its beginning through
+    # to the point where real prose resumes.
+    streak = re.compile(
+        r"(?:[a-zäöå]+[-\s]*(?:ja\s+)?)?(?:ministeriö|ministeriön|kanslia|valtioneuvoston kanslia"
+        r"|virasto|liitto|yhdistys|laitos)", re.I)
+    matches = list(streak.finditer(body))
+    if len(matches) >= 5:
+        # Walk forward while matches remain close together (a genuine menu is contiguous).
+        end = matches[0].end()
+        for match in matches:
+            if match.start() - end > 60:      # a real gap means prose resumed
+                break
+            end = match.end()
+        # The last match must be followed by a newline or a sentence, i.e. the story body.
+        tail = body[end:]
+        cut = re.search(r"\n(?=[A-ZÄÖÅ])|\n{2,}|(?<=[a-zäöå])\s{2,}(?=[A-ZÄÖÅ])", tail)
+        if cut:
+            body = tail[cut.end():].strip()
     return body.strip()
 
 
