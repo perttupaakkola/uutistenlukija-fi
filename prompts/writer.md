@@ -7,6 +7,7 @@ Jos aineisto ei riitä uutiseen, palauta {"withhold": true, "reason": "täsmäll
 Palauta vain JSON ilman markdown-aitoja:
 {"title":"uutisotsikko", "summary":"yksi tiivis ingressi", "category":"Kotimaa|Maailma|Talous|Tiede|Kulttuuri|Urheilu", "paragraphs":[{"text":"kappale", "source_ids":["lähteen id"]}], "image":null}
 Kirjoita 2–20 tarkoituksenmukaista kappaletta, jokaisella lähdeviite. Älä täytä tilaa turhalla tekstillä.
+Otsikko: enintään 60 merkkiä, tärkein substantiivi (paikka, toimija tai päätös) heti alkuun. Älä käytä alaotsikko-ketjuja, täytesanoja, huutomerkkejä tai kysymysmerkkejä.
 Jos lähdepaketissa on image, säilytä sen objekti muuttumattomana. Jos ei ole, image on null.
 # Useita lähteitä koskevat säännöt
 

@@ -4,9 +4,10 @@ import hashlib
 import json
 import re
 from datetime import timezone
+from email.utils import format_datetime
 from pathlib import Path
 
-from . import seo, slugs
+from . import indexing, seo, slugs
 from .editorial import ROOT, digest, timestamp, validate_draft, validate_review
 
 
@@ -48,6 +49,9 @@ def _job_title(job):
 def page(title, body, canonical_path=None, head_meta="", readability_present=True):
     public = canonical_path is not None
     head = (f'<link rel="canonical" href="https://uutistenlukija.fi{esc(canonical_path)}">' if public else '<meta name="robots" content="noindex,nofollow">')
+    # Public pages advertise the RSS feed so readers and aggregators can find it.
+    if public:
+        head += '<link rel="alternate" type="application/rss+xml" title="Uutistenlukija" href="/rss.xml">'
     # `head_meta` carries the description/OG/JSON-LD block for public pages; private
     # previews stay noindex and get none of it.
     head += head_meta if public else ""
@@ -96,6 +100,16 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         articles.append((job, packet, draft, review))
     cards = []
     output_dir = Path(output_dir)
+    # "Lue myös": newest-first links between rendered articles (same category preferred).
+    # Gives readers somewhere to go next and gives crawlers a real internal link graph.
+    related_for = {}
+    for job, _, draft, _ in articles:
+        others = [(j, d) for j, _, d, _ in articles if j["id"] != job["id"]]
+        same = [x for x in others if x[1].get("category") == draft.get("category")]
+        picks = same[:3]
+        if len(picks) < 3:
+            picks += [x for x in others if x not in same][:3 - len(picks)]
+        related_for[job["id"]] = picks
     for job, packet, draft, review in articles:
         link = "/" + article_path(job)
         date = timestamp(job["created_at"]).strftime("%d.%m.%Y")
@@ -137,11 +151,16 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                           f'Kuvituskuvien käyttöehdot</a></figcaption></figure>')
             else:
                 figure = f'<figure><img src="{esc(image_url)}" alt="{esc(image["alt"])}" referrerpolicy="no-referrer"><figcaption>{esc(image.get("caption", ""))} {esc(image["credit"])} · <a href="{esc(image["license_url"])}">{esc(image["license"])}</a> · <a href="{esc(image["source_url"])}">Kuvan lähde</a></figcaption></figure>'
+        picks = related_for[job["id"]]
+        related_html = ""
+        if picks:
+            related_items = "".join(f'<li><a href="/{article_path(j)}">{esc(d["title"])}</a></li>' for j, d in picks)
+            related_html = f'<section class="related"><h2>Lue myös</h2><ul>{related_items}</ul></section>'
         body = f'''<article class="story"><a class="back" href="/">← Kaikki uutiset</a>{fixture}
 <p class="eyebrow" data-category="{esc(draft["category"])}">{esc(draft["category"])} · {"" if public else "Luonnos "}{date}</p><h1>{esc(draft["title"])}</h1>
 <p class="lead">{esc(draft["summary"])}</p>{figure}<div class="story-body">{paragraphs}</div>
 <section class="sources"><h2>Lähteet</h2><ol>{source_list}</ol>
-<p>Teksti on laadittu yllä mainittujen lähdekatkelmien perusteella. {"Kuvan käyttöoikeustiedot ovat kuvan yhteydessä." if image else "Uutisteksti esitetään ilman kuvaa."}</p></section></article>'''
+<p>Teksti on laadittu yllä mainittujen lähdekatkelmien perusteella. {"Kuvan käyttöoikeustiedot ovat kuvan yhteydessä." if image else "Uutisteksti esitetään ilman kuvaa."}</p></section>{related_html}</article>'''
         # --- SEO metadata ---------------------------------------------------
         # Built only for the public build; the private preview stays noindex.
         head_meta = ""
@@ -181,5 +200,22 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
     if public:
         atomic_write(output_dir / assets / "analytics.js", (ROOT / "cutover/analytics.js").read_text())
         atomic_write(output_dir / assets / "consent.js", (ROOT / "static/consent.js").read_text())
+        # IndexNow key file: proves site ownership to participating search engines.
+        atomic_write(output_dir / indexing.key_name(), indexing.INDEXNOW_KEY)
+    # RSS feed: a standard discovery surface for readers and aggregators, built from the
+    # same reviewed records as the pages. Newest first (articles order).
+    feed_items = []
+    for job, _, draft, _ in articles:
+        item_link = "https://uutistenlukija.fi/" + article_path(job)
+        feed_items.append(
+            '<item><title>' + esc(draft["title"]) + '</title><link>' + esc(item_link) +
+            '</link><guid isPermaLink="true">' + esc(item_link) + '</guid><pubDate>' +
+            format_datetime(timestamp(job["created_at"])) + '</pubDate><description>' +
+            esc(draft["summary"]) + '</description></item>')
+    feed = ('<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel>'
+            '<title>Uutistenlukija</title><link>https://uutistenlukija.fi/</link>'
+            '<description>Selkeä suomenkielinen uutispalvelu.</description><language>fi</language>'
+            + "".join(feed_items) + '</channel></rss>')
+    atomic_write(output_dir / "rss.xml", feed)
     store.mark_rendered([j["id"] for j, _, _, _ in articles])
     return len(articles)

@@ -10,6 +10,7 @@ This module closes that loop:
   attribute() -> join per-article performance back to published article metadata
   diagnose()  -> turn the joined evidence into ranked, checkable hypotheses
   ledger()    -> persist every experiment and its verdict so learning survives sessions
+  record_action() -> log concrete changes so a later review can attribute movement
 
 Every number originates from `news_analytics.py`; nothing here fabricates or estimates a
 metric. When a window carries too little traffic to support a claim, the honest output is
@@ -242,6 +243,18 @@ def record(entry, learning_dir=LEARNING_DIR):
     return row
 
 
+def record_action(description, lane=None, learning_dir=LEARNING_DIR):
+    """Append one concrete change made since the last review.
+
+    Without this the weekly loop re-ranks the same hypotheses forever; with it, a later
+    review can attribute metric movement to what was actually tried.
+    """
+    entry = {"kind": "action", "description": str(description)[:400]}
+    if lane:
+        entry["lane"] = lane
+    return record(entry, learning_dir)
+
+
 def history(learning_dir=LEARNING_DIR, limit=200):
     path = ledger_path(learning_dir)
     if not path.exists():
@@ -269,15 +282,36 @@ def review(state_dir=STATE_DIR, learning_dir=LEARNING_DIR):
     data = measured["data"]
     goal = goal_status(data)
     hypotheses = diagnose(data, articles)
+    # What changed since the previous review, and what did it move. Without this the loop
+    # re-ranks the same hypotheses instead of closing them out.
+    prior = [row for row in history(learning_dir) if row.get("kind") == "review"]
+    previous = prior[-1] if prior else None
+    actions = []
+    delta = None
+    if previous:
+        actions = [row for row in history(learning_dir)
+                   if row.get("kind") == "action"
+                   and row.get("recorded_at", "") > previous.get("recorded_at", "")]
+        previous_goal = previous.get("goal") or {}
+        delta = {}
+        for key in ("views", "users"):
+            old, new = previous_goal.get(key), goal.get(key)
+            delta[key] = (new - old) if isinstance(old, (int, float)) and isinstance(new, (int, float)) else None
+        old_articles = previous.get("articles_published")
+        delta["articles"] = (len(articles) - old_articles) if isinstance(old_articles, int) else None
     record({
         "kind": "review",
         "goal": goal,
         "articles_published": len(articles),
+        "actions_since_last_review": [{"description": row.get("description"), "lane": row.get("lane")}
+                                      for row in actions[-10:]],
+        "delta": delta,
         "hypotheses": [{"lane": h["lane"], "confidence": h["confidence"], "hypothesis": h["hypothesis"]}
                        for h in hypotheses],
     }, learning_dir)
     return {"ok": True, "goal": goal, "articles": len(articles),
-            "hypotheses": hypotheses, "generated_at": _now().isoformat()}
+            "hypotheses": hypotheses, "actions": actions[-10:], "delta": delta,
+            "generated_at": _now().isoformat()}
 
 
 def format_report(result):
@@ -291,6 +325,19 @@ def format_report(result):
         f"{goal['users']} / {goal['users_target']} users ({goal['users_pct']}%)",
         f"Published articles: {result['articles']}",
     ]
+    if result.get("delta"):
+        delta = result["delta"]
+
+        def motion(value):
+            return "n/a" if value is None else f"{value:+d}"
+
+        lines.append(f"Since last review: views {motion(delta.get('views'))}, "
+                     f"users {motion(delta.get('users'))}, articles {motion(delta.get('articles'))}")
+    if result.get("actions"):
+        lines.append("")
+        lines.append("Changes recorded since last review:")
+        for action in result["actions"]:
+            lines.append(f"- {str(action.get('description') or '')[:140]}")
     if result["hypotheses"]:
         lines.append("")
         lines.append("Ranked hypotheses:")
@@ -305,6 +352,10 @@ def format_report(result):
 
 if __name__ == "__main__":
     import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "action":
+        row = record_action(" ".join(sys.argv[2:]).strip())
+        print(json.dumps(row, ensure_ascii=False))
+        raise SystemExit(0)
     outcome = review()
     print(format_report(outcome))
     raise SystemExit(0 if outcome.get("ok") else 1)

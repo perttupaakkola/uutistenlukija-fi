@@ -13,7 +13,8 @@ from .store import database
 def main():
     parser = argparse.ArgumentParser(description="Fresh news MVP — local private workflow")
     sub = parser.add_subparsers(dest="command", required=True)
-    for name in ("init", "ingest", "discover", "collect", "tick", "live-tick", "render", "status", "stop"):
+    for name in ("init", "ingest", "discover", "collect", "tick", "live-tick", "render", "status", "stop",
+                 "requeue-failed"):
         p = sub.add_parser(name)
         p.add_argument("--config", type=Path, required=True)
         if name == "ingest":
@@ -21,6 +22,8 @@ def main():
         if name == "collect":
             p.add_argument("recipe", type=Path)
             p.add_argument("--revise-rejected", action="store_true", help="Explicit evidence amendment; retain saved draft and archive prior rejection")
+        if name == "requeue-failed":
+            p.add_argument("--job", help="Requeue one exact failed publication; default all failed")
     p = sub.add_parser("demo", help="Run a clearly labelled fabricated local example, no model/network")
     p.add_argument("--output", type=Path, default=Path(".demo"))
     args = parser.parse_args()
@@ -70,6 +73,12 @@ def main():
                 result = live_tick(args.config)
             elif args.command == "tick":
                 result = tick(args.config)
+            elif args.command == "requeue-failed":
+                from .publish import requeue_failed
+                with single_tick(config["state_dir"]) as locked:
+                    if not locked:
+                        raise ValueError("Another tick is running; retry shortly")
+                    result = requeue_failed(config, getattr(args, "job", None))
             elif args.command == "render":
                 with single_tick(config["state_dir"]) as locked:
                     if not locked:

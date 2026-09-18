@@ -15,6 +15,7 @@ from .editorial import ROOT, digest, timestamp, validate_review, validate_packet
 from datetime import datetime, timezone
 from .release_contract import media, verify_intake, check_article
 from .site import atomic_write, article_path, esc, page, render_site
+from .store import database
 from . import slugs
 
 REPO='perttupaakkola/uutistenlukija-fi'
@@ -253,9 +254,52 @@ def publish(store,job,state,config_path):
         live.update(canonical_article=url,live_html_sha256=hashlib.sha256(html).hexdigest(),live_image_sha256=image_sha)
         atomic_write(receipt_dir/'live-readback.json',json.dumps(live,indent=2)+'\n')
         with store.db:store.db.execute("UPDATE publications SET status='deployed' WHERE job_id=?",(job['id'],))
+        # Best-effort search-engine ping; must never affect the publication outcome.
+        try:
+            from .indexing import ping
+            ping([url,'https://uutistenlukija.fi/'])
+        except Exception:
+            pass
         return {'status':'deployed','job_id':job['id'],'run_id':run['databaseId'],'remote_commit':row['remote_commit'],'deployment_id':live['deployment_id']}
     except Exception as error:
         saved=store.db.execute('SELECT status,remote_commit FROM publications WHERE job_id=?',(job['id'],)).fetchone()
         outcome='failed' if saved['status']=='failed' else ('unknown' if external_started or saved['remote_commit'] else 'failed')
         with store.db:store.db.execute("UPDATE publications SET status=?,error=? WHERE job_id=?",(outcome,safe_error(error),job['id']))
         raise
+
+
+def requeue_failed(config, job_id=None):
+    """Reset failed publications to 'preparing' so live ticks can retry them.
+
+    'failed' is normally terminal: it records a confirmed bad outcome. This operator
+    path exists for the other class - outcomes that failed because of a since-fixed
+    pipeline bug. It re-derives packet/draft/image hashes from the stored records (a
+    failed attempt may predate an attached illustration) and clears run state; the
+    normal publish path then re-validates everything before anything reaches the
+    public site.
+    """
+    state=config['state_dir']
+    reset,skipped=[],[]
+    with database(state) as store:
+        ensure_table(store)
+        query="SELECT job_id FROM publications WHERE status='failed'"
+        rows=store.db.execute(query+(" AND job_id=?" if job_id else "")+" ORDER BY rowid",
+                              ((job_id,) if job_id else ())).fetchall()
+        for row in rows:
+            identifier=row['job_id']
+            job=store.get(identifier)
+            if job is None or not job.get('draft') or not job.get('review'):
+                skipped.append({'job_id':identifier,'reason':'No reviewed draft'})
+                continue
+            try:
+                packet,draft=json.loads(job['packet']),json.loads(job['draft'])
+                binding=media(packet,draft)
+            except (ValueError,TypeError,KeyError) as error:
+                skipped.append({'job_id':identifier,'reason':safe_error(error)})
+                continue
+            with store.db:
+                store.db.execute("UPDATE publications SET packet_sha=?,draft_sha=?,image_sha=?,status='preparing',attempts=0,remote_commit=NULL,run_id=NULL,error=NULL WHERE job_id=?",
+                                 (digest(packet),digest(draft),binding['image_sha256'],identifier))
+            reset.append(identifier)
+        remaining=store.db.execute("SELECT count(*) FROM publications WHERE status='failed'").fetchone()[0]
+    return {'reset':reset,'skipped':skipped,'remaining_failed':remaining}

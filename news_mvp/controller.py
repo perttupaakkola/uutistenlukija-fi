@@ -56,6 +56,27 @@ def ingest(config, packet, now=None):
     return {"id": job_id, "admitted": added}
 
 
+def repair_title(model, packet, draft):
+    """Ask the model once to fit an over-long headline into the 60-character budget.
+
+    The writer is instructed to stay within 60 characters; when it misses, one bounded
+    repair call trims the title without adding claims. A repair that fails, returns
+    something unusable, or still exceeds the budget leaves the original title in place —
+    the reviewer then judges the final draft exactly as it appears.
+    """
+    title = draft.get("title") or ""
+    if len(title) <= 60:
+        return draft
+    try:
+        value = model.call("titler", packet, draft)
+    except (ValueError, TypeError, KeyError, RuntimeError, OSError, subprocess.SubprocessError):
+        return draft
+    candidate = value.get("title") if isinstance(value, dict) else None
+    if isinstance(candidate, str) and 0 < len(candidate.strip()) <= 60:
+        return {**draft, "title": candidate.strip()}
+    return draft
+
+
 def tick(config_path, model=None, now=None, _already_locked=False, target_job_id=None):
     config = load_config(config_path)
     if not config["enabled"]:
@@ -85,6 +106,9 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                     reason = text(draft.get("reason"), "withholding reason", 2000)
                     store.finish_review(job["id"], {"approved": False, "reasons": [reason], "draft_sha256": None})
                     return {"status": "rejected", "id": job["id"]}
+                # Fit an over-long headline into the SERP budget before the reviewer and the
+                # illustration step see the draft; both use the final title.
+                draft = repair_title(model, packet, draft)
                 # Attach an illustration generated from the reviewed draft's own verified facts.
                 # Best effort by design: imagery.build_image returns None on any failure or an
                 # unsafe subject, and the article then ships text-only. The image belongs to the

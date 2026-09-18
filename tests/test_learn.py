@@ -101,5 +101,30 @@ class Report(unittest.TestCase):
         self.assertIn("seo", text)
 
 
+class Actions(unittest.TestCase):
+    def test_record_action_appends_to_the_ledger(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            row = learn.record_action("Enabled generated images", lane="publishing_quality",
+                                      learning_dir=Path(tmp))
+            self.assertEqual(row["kind"], "action")
+            self.assertEqual(learn.history(Path(tmp))[0]["description"], "Enabled generated images")
+
+    def test_report_shows_delta_and_actions_when_present(self):
+        result = {"ok": True, "goal": {"views": 70, "views_target": 10000, "views_pct": 0.7,
+                                       "users": 55, "users_target": 1000, "users_pct": 5.5},
+                  "articles": 20, "hypotheses": [],
+                  "delta": {"views": 4, "users": 2, "articles": 1},
+                  "actions": [{"description": "Enabled generated images", "lane": "publishing_quality"}]}
+        text = learn.format_report(result)
+        self.assertIn("Since last review", text)
+        self.assertIn("Enabled generated images", text)
+
+    def test_report_without_delta_stays_compatible(self):
+        result = {"ok": True, "goal": {"views": 1, "views_target": 10000, "views_pct": 0.01,
+                                       "users": 1, "users_target": 1000, "users_pct": 0.1},
+                  "articles": 1, "hypotheses": []}
+        self.assertNotIn("Since last review", learn.format_report(result))
+
+
 if __name__ == "__main__":
     unittest.main()

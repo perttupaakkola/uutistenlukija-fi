@@ -135,6 +135,8 @@ class FixtureModel:
         data = json.loads((ROOT / "fixtures/model-output.json").read_text())
         if role == "writer":
             return data["draft"]
+        if role == "titler":
+            return {"title": data["draft"]["title"]}
         return {**data["review"], "draft_sha256": digest(draft)}
 
 

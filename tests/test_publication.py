@@ -61,4 +61,41 @@ class Publication(unittest.TestCase):
             self.assertEqual(live_tick(self.config_path),{'status':'idle','publications':1})
 
 
+class RequeueFailed(unittest.TestCase):
+    def setUp(self):
+        self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup);self.root=Path(self.tmp.name)
+        self.config_path=self.root/'config.json';self.config_path.write_text(json.dumps({'enabled':True,'backend':'fixture','state_dir':str(self.root/'state'),'output_dir':str(self.root/'private')}))
+        self.config=load_config(self.config_path);self.packet=json.loads((ROOT/'fixtures/source-packet.json').read_text())
+        self.job=ingest(self.config,self.packet,datetime(2026,9,12,12,tzinfo=timezone.utc))['id']
+
+    def test_resets_hashes_and_clears_run_state_for_reconciliation(self):
+        from news_mvp.publish import requeue_failed
+        draft=FixtureModel().call('writer',self.packet)
+        with database(self.config['state_dir']) as store:
+            store.save_draft(self.job,draft,'fixture')
+            store.finish_review(self.job,{'approved':True,'draft_sha256':digest(draft),'reasons':['isolated test']})
+            ensure_table(store)
+            store.db.execute("INSERT INTO publications(job_id,packet_sha,draft_sha,image_sha,source_commit,remote_commit,status,attempts,error) VALUES(?,?,?,?,?,?,?,?,?)",
+                             (self.job,'old','old','old','source','remote','failed',2,'AttributeError'))
+            store.db.commit()
+        with patch('news_mvp.publish.media',return_value={'image_sha256':None}):
+            result=requeue_failed(self.config)
+        self.assertEqual(result['reset'],[self.job])
+        with database(self.config['state_dir']) as store:
+            row=store.db.execute("SELECT * FROM publications WHERE job_id=?",(self.job,)).fetchone()
+            self.assertEqual((row['status'],row['attempts'],row['remote_commit'],row['error']),('preparing',0,None,None))
+            self.assertEqual(row['draft_sha'],digest(json.loads(store.get(self.job)['draft'])))
+
+    def test_skips_records_without_a_reviewed_draft(self):
+        from news_mvp.publish import requeue_failed
+        with database(self.config['state_dir']) as store:
+            ensure_table(store)
+            store.db.execute("INSERT INTO publications(job_id,packet_sha,draft_sha,image_sha,source_commit,status) VALUES(?,?,?,?,?,?)",
+                             (self.job,'p','d','i','s','failed'))
+            store.db.commit()
+        result=requeue_failed(self.config)
+        self.assertEqual(result['reset'],[])
+        self.assertTrue(result['skipped'])
+
+
 if __name__=='__main__':unittest.main()
