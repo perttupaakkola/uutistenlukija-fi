@@ -190,5 +190,25 @@ class GeneratedImageReadback(unittest.TestCase):
             check_article(self._html(with_caption=False), packet(), self._draft())
 
 
+class TextOnlyPreviewMarker(unittest.TestCase):
+    """'Luonnos' as a bare word is not a preview marker: a cited source title can
+    legitimately contain it ("Luonnos yritystukien vaikuttavuutta parantavasta laista
+    lausuntokierrokselle", first hit 2026-09-18). The marker that matters is the
+    private-preview banner."""
+
+    def test_source_title_with_luonnos_word_passes(self):
+        block = ('<script type="application/ld+json">{"@type":"NewsArticle","citation":'
+                 '[{"@type":"CreativeWork","name":"Luonnos yritystukien vaikuttavuutta '
+                 'parantavasta laista lausuntokierrokselle"}]}</script>')
+        html = plain_public_html(PARAGRAPH).replace("</body>", block + "</body>")
+        check_article(html, packet(), draft_with(PARAGRAPH))  # must not raise
+
+    def test_preview_page_still_fails(self):
+        html = plain_public_html(PARAGRAPH).replace(
+            "<body>", '<body><div class="preview">Yksityinen esikatselu · ei julkaistu</div>')
+        with self.assertRaises(ValueError):
+            check_article(html, packet(), draft_with(PARAGRAPH))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -207,7 +207,10 @@ def check_article(html,packet,draft,canonical=None):
                 raise ValueError('Missing direct reuse licence link')
     image=draft.get('image')
     if image is None:
-        if '<img' in html or 'Tämä uutinen julkaistaan ilman kuvaa.' not in html or 'Luonnos' in html:
+        # 'Luonnos' as a bare word is not a marker: a cited source title can legitimately
+        # contain it ("Luonnos yritystukien ...", a draft-bill name in the citation JSON-LD,
+        # first hit 2026-09-18). The private-preview marker that matters is the banner.
+        if '<img' in html or 'Tämä uutinen julkaistaan ilman kuvaa.' not in html or 'Yksityinen esikatselu' in html:
             raise ValueError('Dishonest text-only public page')
     else:
         required += [image['license_url']]
