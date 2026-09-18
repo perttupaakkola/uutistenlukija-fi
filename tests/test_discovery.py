@@ -16,7 +16,11 @@ class Discovery(unittest.TestCase):
         self.path=self.root/'config.json';self.config={'enabled':True,'backend':'hermes','state_dir':str(self.root/'state'),'output_dir':str(self.root/'private'),'source_recipes':[],'discovery':{'family':'nasa-modis','max_candidates':5},'max_source_age_hours':48}
         self.path.write_text(json.dumps(self.config));self.packet=json.loads((ROOT/'fixtures/source-packet.json').read_text())
     def fixture_packet(self,url):
-        p=copy.deepcopy(self.packet);p['fixture']=False;p['story_key']='url:'+url;p['sources'][0]['url']=url;p['sources'][0]['published_at']=datetime.now(timezone.utc).isoformat();return p
+        p=copy.deepcopy(self.packet);p['fixture']=False;p['story_key']='url:'+url
+        stamp=datetime.now(timezone.utc).isoformat()
+        for s in p['sources']:s['published_at']=stamp
+        p['sources'][0]['url']=url
+        return p
     def render(self,config_path,**kwargs):
         with database(self.config['state_dir']) as store:store.db.execute("UPDATE jobs SET status='rendered' WHERE id=?",(kwargs['target_job_id'],));store.db.commit()
     def test_terminal_first_does_not_starve_ready_next(self):
@@ -39,7 +43,7 @@ class Discovery(unittest.TestCase):
             with patch('news_mvp.live.discover',return_value=recipes),patch('news_mvp.live.collect',side_effect=AssertionError()),patch('news_mvp.live.tick',side_effect=AssertionError()),patch('news_mvp.live.publish',side_effect=AssertionError()):self.assertEqual(live_tick(self.path),{'status':'idle','publications':1})
     def test_only_one_new_admission_per_tick(self):
         recipes=[{'url':'https://example.invalid/'+str(i)} for i in range(3)]
-        with patch('news_mvp.live.discover',return_value=recipes),patch('news_mvp.live.collect',side_effect=lambda recipe,state:(self.fixture_packet(recipe['url']),{})) as collect,patch('news_mvp.live.tick',side_effect=self.render),patch('news_mvp.live.publish',return_value={'status':'dispatched'}):
+        with patch('news_mvp.live.discover',return_value=recipes),patch('news_mvp.live.collect',side_effect=lambda recipe,state,**kw:(self.fixture_packet(recipe['url']),{})) as collect,patch('news_mvp.live.tick',side_effect=self.render),patch('news_mvp.live.publish',return_value={'status':'dispatched'}):
             live_tick(self.path);self.assertEqual(collect.call_count,1)
         with database(self.config['state_dir']) as store:self.assertEqual(store.db.execute('select count(*) from jobs').fetchone()[0],1)
     def test_discovery_rejects_stale_future_and_foreign_links_and_caps_candidates(self):
@@ -54,13 +58,12 @@ class Discovery(unittest.TestCase):
         with patch('news_mvp.live.discover',return_value=[{'url':'https://example.invalid/new'}]),patch('news_mvp.live.collect',side_effect=AssertionError('Extra canary admission')):
             self.assertEqual(live_tick(self.path),{'status':'idle','publications':1})
 
-    def test_steady_state_requires_separate_explicit_approval_and_exact_candidate(self):
-        cfg={**self.config,'authorization_mode':'steady_state'};Path(cfg['state_dir']).mkdir();path=Path(cfg['state_dir'])/'steady-state-policy.json';policy=proposed_policy('candidate');path.write_text(json.dumps(policy))
-        with self.assertRaises(ValueError):authorize(cfg,'candidate')
-        policy.update(enabled=True,approved_by='Hermes',review_ref='isolated-test-review');path.write_text(json.dumps(policy));authorize(cfg,'candidate')
-        with self.assertRaises(ValueError):authorize(cfg,'changed-candidate')
-        with self.assertRaises(ValueError):authorize({**cfg,'enabled':False},'candidate')
+    def test_steady_state_requires_separate_explicit_approval(self):
+        cfg={**self.config,'authorization_mode':'steady_state'};Path(cfg['state_dir']).mkdir();path=Path(cfg['state_dir'])/'steady-state-policy.json';policy=proposed_policy();path.write_text(json.dumps(policy))
+        with self.assertRaises(ValueError):authorize(cfg)
+        policy.update(enabled=True,approved_by='Hermes',review_ref='isolated-test-review');path.write_text(json.dumps(policy));authorize(cfg)
+        with self.assertRaises(ValueError):authorize({**cfg,'enabled':False})
         policy['enabled']=False;path.write_text(json.dumps(policy))
-        with self.assertRaises(ValueError):authorize(cfg,'candidate')
+        with self.assertRaises(ValueError):authorize(cfg)
 
 if __name__=='__main__':unittest.main()

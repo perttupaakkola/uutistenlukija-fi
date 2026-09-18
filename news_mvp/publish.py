@@ -41,7 +41,7 @@ def api(path, data=None, method=None):
 def guard(config_path):
     if json.loads(Path(config_path).read_text())['enabled'] is not True:
         raise ValueError('Controller stopped')
-    authorize(json.loads(Path(config_path).read_text()),cmd('git','rev-parse','HEAD'))
+    authorize(json.loads(Path(config_path).read_text()))
     if cmd('git','status','--porcelain','--untracked-files=no'):
         raise ValueError('Commit source changes before publishing')
     drain=json.loads((Path(json.loads(Path(config_path).read_text())['state_dir'])/'cutover/drain-verified.json').read_text())

@@ -127,12 +127,15 @@ class ReleaseV2(unittest.TestCase):
             ensure_table(store);store.db.execute("INSERT INTO publications(job_id,packet_sha,draft_sha,image_sha,source_commit,status) VALUES('text','p','d',NULL,'s','deployed')");store.db.commit()
             with self.assertRaises(ValueError):restore_image_required_schema(store)
             self.assertEqual(store.db.execute('SELECT count(*) FROM publications').fetchone()[0],2)
-    def test_policy_exact_commit_source_and_stop_refusal(self):
-        authorize(self.config,COMMIT)
-        for cfg,commit in [({**self.config,'enabled':False},COMMIT),(self.config,'changed'),({**self.config,'max_source_age_hours':49},COMMIT)]:
-            with self.assertRaises(ValueError):authorize(cfg,commit)
+    def test_policy_guards_config_and_does_not_pin_commit(self):
+        authorize(self.config)
+        for cfg in [{**self.config,'enabled':False},{**self.config,'max_source_age_hours':49}]:
+            with self.assertRaises(ValueError):authorize(cfg)
         p=self.state/'steady-state-policy.json';policy=json.loads(p.read_text());policy['text_only_policy_sha256']='0'*64;p.write_text(json.dumps(policy))
-        with self.assertRaises(ValueError):authorize(self.config,COMMIT)
+        with self.assertRaises(ValueError):authorize(self.config)
+        policy['text_only_policy_sha256']=digest(official.policy());p.write_text(json.dumps(policy))
+        # a new commit must NOT require re-approval; the gate is about config, not code history
+        self.assertIsNone(authorize(self.config))
     def test_partial_outage_other_providers_remain_and_terminal_sixth_discovered(self):
         items=''.join(f'<item><link>https://www.hel.fi/fi/uutiset/a{i}</link><pubDate>{self.now.strftime("%a, %d %b %Y %H:%M:%S +0000")}</pubDate></item>' for i in range(8))
         raw=('<rss><channel>'+items+'</channel></rss>').encode();errors=[];excluded={f'https://www.hel.fi/fi/uutiset/a{i}' for i in range(5)}

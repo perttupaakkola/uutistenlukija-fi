@@ -151,10 +151,52 @@ def receipt_media(receipt):
     return expected
 
 
+def _denormalize_cdn_email_obfuscation(html):
+    """Undo a CDN's automatic e-mail obfuscation so reviewed text can be compared.
+
+    Cloudflare rewrites any plain address in served HTML into
+    ``<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="...">[email&#160;protected]</a>``,
+    encoding the original with a reversible single-byte XOR (first byte = key).
+    The canonical readback fetches the *live* page, so without this the verifier
+    compares reviewed prose against proxy-rewritten markup and fails even though
+    the published article is byte-correct — which stalled publication on every
+    article whose body cites an address.
+
+    Only this well-known, reversible transform is undone. Any other difference
+    still fails the content contract.
+    """
+    import re as _re
+
+    pattern = _re.compile(
+        r'<a[^>]*\bdata-cfemail="([0-9a-fA-F]+)"[^>]*>.*?</a>',
+        _re.DOTALL,
+    )
+
+    def restore(match):
+        encoded = match.group(1)
+        try:
+            raw = bytes.fromhex(encoded)
+        except ValueError:
+            return match.group(0)
+        if len(raw) < 2:
+            return match.group(0)
+        key = raw[0]
+        try:
+            return "".join(chr(byte ^ key) for byte in raw[1:])
+        except ValueError:
+            return match.group(0)
+
+    return pattern.sub(restore, html)
+
+
 def check_article(html,packet,draft,canonical=None):
     """Same reviewed content contract for bundle validation and canonical readback."""
     from html import escape
     esc=lambda value:escape(str(value),quote=True)
+    # Live readback goes through the CDN, which obfuscates plain addresses in
+    # served markup. Compare against the de-obfuscated copy so the contract
+    # checks reviewed content rather than proxy rewriting.
+    html=_denormalize_cdn_email_obfuscation(html)
     required=[draft['title'],draft['summary']]+[p['text'] for p in draft['paragraphs']]
     for source in packet['sources']:
         required.append(source['url'])
