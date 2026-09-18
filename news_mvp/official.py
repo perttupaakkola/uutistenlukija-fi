@@ -25,14 +25,14 @@ DEPTH_PER_PROVIDER = 3
 MAX_ARTICLE_CHARS = 12000
 # Providers whose article extraction and rights capture live in official_additional.py.
 # Kept in one place so adding a source cannot leave a half-wired branch behind.
-ADDITIONAL_PROVIDERS = ('kuntaliitto', 'ecb', 'kuopio', 'vantaa', 'valtioneuvosto')
+ADDITIONAL_PROVIDERS = ('kuntaliitto', 'ecb', 'kuopio', 'vantaa', 'valtioneuvosto', 'oulu')
 # Providers discovered from an RSS index (rather than an HTML link list).
-RSS_PROVIDERS = ('helsinki', 'ecb', 'kuopio', 'vantaa', 'valtioneuvosto')
+RSS_PROVIDERS = ('helsinki', 'ecb', 'kuopio', 'vantaa', 'valtioneuvosto', 'oulu')
 
 # Publication order for round-robin discovery. Every provider in the policy must appear
 # here, or it is silently never discovered.
 PROVIDER_ORDER = ('nasa-modis', 'helsinki', 'stat', 'kuntaliitto', 'ecb', 'kuopio', 'vantaa',
-                  'valtioneuvosto')
+                  'valtioneuvosto', 'oulu')
 
 VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'}
 

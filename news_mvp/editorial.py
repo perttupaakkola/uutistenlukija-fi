@@ -144,7 +144,9 @@ class HermesModel:
     """Fresh news-mvp profile only. Live profile/OAuth qualification is phase 3."""
     name = "hermes"
 
-    def __init__(self, executable, timeout=180):
+    def __init__(self, executable, timeout=300):
+        # 300s default: a real render measured 208s end to end on 2026-09-18, and the old
+        # 180s cap killed the writer call on substantive articles ("TimeoutExpired").
         self.executable, self.timeout = executable, timeout
         self.receipts = []
 

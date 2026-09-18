@@ -98,6 +98,36 @@ class ValtioneuvostoSource(unittest.TestCase):
         self.assertFalse(re.fullmatch(pattern, 'https://evil-valtioneuvosto.fi/-/some-slug'))
 
 
+class OuluSource(unittest.TestCase):
+    """Oulu: RSS news feed + the city's CC BY site terms; pin what admits it."""
+
+    def setUp(self):
+        from news_mvp import official
+        self.official = official
+        self.spec = official.policy()['providers']['oulu']
+
+    def test_registered_for_rss_discovery_and_additional_parsing(self):
+        self.assertIn('oulu', self.official.RSS_PROVIDERS)
+        self.assertIn('oulu', self.official.ADDITIONAL_PROVIDERS)
+        self.assertIn('oulu', self.official.PROVIDER_ORDER)
+
+    def test_terms_are_pinned_and_grant_reuse(self):
+        self.assertRegex(self.spec.get('rights_text_sha256', ''), r'^[a-f0-9]{64}$')
+        self.assertIn('Nimeä', self.spec['license'])
+        self.assertEqual(self.spec.get('timezone'), 'Europe/Helsinki')
+        self.assertTrue(self.spec['rights_url'].startswith('https://www.ouka.fi/'))
+        self.assertTrue(self.spec['index'].startswith('https://www.ouka.fi/news/feed'))
+
+    def test_article_pattern_accepts_articles_and_rejects_indexes(self):
+        import re
+        pattern = self.spec['article_pattern']
+        self.assertTrue(re.fullmatch(
+            pattern, 'https://www.ouka.fi/uutiset/businessoulu-aloittaa-nuorille-tyonhakijoille-uuden-tapahtumasarjan'))
+        self.assertFalse(re.fullmatch(pattern, 'https://www.ouka.fi/rss'))
+        self.assertFalse(re.fullmatch(pattern, 'https://www.ouka.fi/uutiset/'))
+        self.assertFalse(re.fullmatch(pattern, 'https://evil-ouka.fi/uutiset/x'))
+
+
 class ReuseLicenceIsNeverInvented(unittest.TestCase):
     def test_every_provider_declares_its_own_licence(self):
         """A defaulted licence can contradict the publisher's terms, as it did on

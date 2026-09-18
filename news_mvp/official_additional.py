@@ -52,6 +52,14 @@ def rights_text(raw,provider):
    start='Käyttöoikeus';end='Palvelun tuottajat'
   if text.count(start)<1 or end not in text:raise ValueError('Missing exact municipal reuse terms')
   return text[text.index(start):text.index(end,text.index(start))]
+ if provider=='oulu':
+  # ouka.fi/kayttoehdot resolves to the city's Avoin data terms: Nimeä (CC BY 4.0),
+  # including commercial use, with attribution. Pinned verbatim; a terms change fails closed.
+  text=parse(raw,lambda t,a:t=='main').text() or parse(raw,lambda t,a:t=='body').text()
+  start='Oulun kaupungin julkaiseman avoimen datan käyttö edellyttää Nimeä-lisenssin noudattamista'
+  end='Lisätietoja'
+  if text.count(start)!=1 or end not in text:raise ValueError('Missing exact municipal reuse terms')
+  return text[text.index(start):text.index(end,text.index(start))]
  text=parse(raw,lambda t,a:t=='main').text()
  if provider=='ecb':
   start='Copyright\nCopyright ©';end='\nUse of name and logos'
@@ -131,6 +139,21 @@ def source_fields(raw,provider,url):
   wrapper=parse(raw,lambda t,a:t=='main').text() or body
   if len(body)<200 or re.search(r'CC[- ]BY[- ]ND|CC[- ]BY[- ]NC|all rights reserved|kaikki oikeudet pidätetään|copyright|©|press agency|Reuters|Associated Press|vieraskynä|guest author|tekijänoikeu',wrapper,re.I):raise ValueError('Missing text or third-party/restricted rights')
   return {'id':'A','title':title,'published_at':datetime.combine(day,datetime.min.time(),ZoneInfo(spec['timezone'])).isoformat(),'text':body}
+ if provider=='oulu':
+  # Drupal portal: no article:published_time; the page's own 'published' element carries
+  # the date and the <article> body repeats the h1 as its first line. Strip it.
+  stamps=parse(raw,lambda t,a:'published' in a.get('class','').split()).text().splitlines()
+  if not stamps:raise ValueError('Missing publication date')
+  day=datetime.strptime(stamps[0].strip(),'%d.%m.%Y').date()
+  body=parse(raw,lambda t,a:t=='article').text()
+  first,_,rest=body.partition('\n')
+  if first.strip()==title:body=rest.strip()
+  if len(body)<200:raise ValueError('Missing substantive article text')
+  if len(body)>MAX_ARTICLE_CHARS:raise ValueError('Source is an aggregator/hub page, not a single article')
+  wrapper=parse(raw,lambda t,a:t=='main').text()
+  if re.search(r'CC[- ]BY[- ]ND|CC[- ]BY[- ]NC|all rights reserved|kaikki oikeudet pidätetään|copyright|©|press agency|Reuters|Associated Press|vieraskynä|guest author|tekijänoikeu',wrapper,re.I):raise ValueError('Third-party/restricted rights on page')
+  stamp=datetime.combine(day,datetime.min.time(),ZoneInfo(spec['timezone'])).isoformat()
+  return {'id':'A','title':title,'published_at':stamp,'text':body}
  if provider=='ecb':
   if meta.one('author')!='European Central Bank':raise ValueError('Named author exception')
   date=meta.one('article:published_time');day=datetime.strptime(date,'%Y-%m-%d').date()
