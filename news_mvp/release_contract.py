@@ -210,7 +210,16 @@ def check_article(html,packet,draft,canonical=None):
         if '<img' in html or 'Tämä uutinen julkaistaan ilman kuvaa.' not in html or 'Luonnos' in html:
             raise ValueError('Dishonest text-only public page')
     else:
-        required += [image['license_url'],image['license']]
+        required += [image['license_url']]
+        if image.get('generated') is True:
+            # A generated illustration presents its licence through the /kuvituskuvat/ terms
+            # link plus the AI credit and illustration caption; the internal label
+            # ("AI-generated illustration") is intentionally not reader-visible. The first
+            # generated-image release failed the live readback only because this check
+            # still demanded that internal label (2026-09-18).
+            required += [image['credit'], image['caption']]
+        else:
+            required += [image['license']]
     if any(esc(value) not in html for value in required):
         raise ValueError('Public article differs from reviewed content/licence')
     if canonical is not None and ('href="'+esc(canonical)+'"') not in html:

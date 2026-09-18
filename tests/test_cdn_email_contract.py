@@ -127,5 +127,68 @@ class CdnEmailObfuscation(unittest.TestCase):
         self.assertEqual(_denormalize_cdn_email_obfuscation(broken), broken)
 
 
+GENERATED_IMAGE = {
+    "url": "https://uutistenlukija.fi/media/" + "a" * 64 + ".jpg",
+    "source_url": "https://uutistenlukija.fi/kuvituskuvat/",
+    "license_url": "https://uutistenlukija.fi/kuvituskuvat/",
+    "license": "AI-generated illustration",
+    "alt": "Kuvituskuva: esimerkki",
+    "caption": "Kuvituskuva. Kuva on luotu tekoälyllä, ei valokuva tapahtumasta.",
+    "credit": "AI-kuvitus (gpt-image-1-mini)",
+    "sha256": "a" * 64,
+    "local_path": "media/" + "a" * 64 + ".jpg",
+    "generated": True,
+    "model": "gpt-image-1-mini",
+    "prompt_sha256": "b" * 64,
+    "prompt_version": "imagery-v1",
+    "subject": "Esimerkki",
+}
+
+
+class GeneratedImageReadback(unittest.TestCase):
+    """The first generated-image release (2026-09-18) failed its live readback only
+    because the check demanded the internal label "AI-generated illustration", which
+    the rendered figure intentionally never shows. The reader-visible licence proof
+    is the terms link, the AI credit and the illustration caption."""
+
+    def _draft(self):
+        draft = draft_with(PARAGRAPH)
+        draft["image"] = GENERATED_IMAGE
+        return draft
+
+    def _html(self, with_credit=True, with_caption=True):
+        draft = self._draft()
+        caption = GENERATED_IMAGE["caption"] if with_caption else ""
+        credit = GENERATED_IMAGE["credit"] + " · " if with_credit else ""
+        source_items = "".join(
+            f'<li><a href="{escape(s["url"])}">{escape(s["publisher"])}: '
+            f'{escape(s["title"])}</a></li>'
+            for s in packet()["sources"])
+        return (
+            "<!doctype html><html><body>"
+            f"<h1>{escape(draft['title'])}</h1>"
+            f"<p>{escape(draft['summary'])}</p>"
+            f"<p>{escape(PARAGRAPH)}</p>"
+            '<figure><img src="/mvp-assets/' + "a" * 64 + '.jpg">'
+            f"<figcaption>{caption} {credit}"
+            '<a href="https://uutistenlukija.fi/kuvituskuvat/">Kuvituskuvien käyttöehdot</a>'
+            "</figcaption></figure>"
+            f"<ul>{source_items}</ul>"
+            "</body></html>")
+
+    def test_generated_figure_without_internal_label_passes(self):
+        html = self._html()
+        self.assertNotIn(GENERATED_IMAGE["license"], html)
+        check_article(html, packet(), self._draft())  # must not raise
+
+    def test_missing_credit_fails(self):
+        with self.assertRaises(ValueError):
+            check_article(self._html(with_credit=False), packet(), self._draft())
+
+    def test_missing_caption_fails(self):
+        with self.assertRaises(ValueError):
+            check_article(self._html(with_caption=False), packet(), self._draft())
+
+
 if __name__ == "__main__":
     unittest.main()
