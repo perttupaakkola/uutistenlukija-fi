@@ -24,14 +24,20 @@ figure img,img{aspect-ratio:attr(width) / attr(height)}
 .story-body,.card h2,.lead{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
 
 /* Category eyebrow colours: give each section a stable hue so a reader can tell
-   sections apart at a glance without relying on position alone. */
+   sections apart at a glance without relying on position alone. These are the
+   light-paper values (6.0-8.8:1 on #fffdf6); dark mode re-declares every one of
+   them below against the dark card, because a hue tuned for light paper lands
+   around 2:1 on #1a201c. `Maailma` is emitted by editorial.CATEGORIES and needs
+   a rule of its own; `Ulkomaat`/`Teknologia` are retained so older renders and
+   any legacy data keep a colour rather than falling back to the accent. */
 .eyebrow[data-category="Kotimaa"]{color:#a34422}
+.eyebrow[data-category="Maailma"]{color:#1f4b7a}
 .eyebrow[data-category="Talous"]{color:#1d5c46}
-.eyebrow[data-category="Ulkomaat"]{color:#1f4b7a}
 .eyebrow[data-category="Tiede"]{color:#5b3f86}
-.eyebrow[data-category="Teknologia"]{color:#0f6470}
 .eyebrow[data-category="Kulttuuri"]{color:#8a3b5c}
 .eyebrow[data-category="Urheilu"]{color:#3d6b1f}
+.eyebrow[data-category="Ulkomaat"]{color:#1f4b7a}
+.eyebrow[data-category="Teknologia"]{color:#0f6470}
 
 /* Respect the user's system colour preference instead of forcing light paper. */
 :root{color-scheme:light}
@@ -45,6 +51,18 @@ figure img,img{aspect-ratio:attr(width) / attr(height)}
   .consent-settings{background:#1a201c;color:var(--ink);border-color:#3a453d}
   dialog button{background:#232b26;color:var(--ink);border-color:#3a453d}
   dialog #consent-accept{background:var(--accent);color:#131815}
+  /* Same hues, re-tuned for #1a201c. Every value below is >=7.6:1, so the 12px
+     uppercase eyebrow clears the 4.5:1 normal-text bar with margin to spare.
+     Declared after the light rules and inside this block, so source order alone
+     wins the cascade without needing higher specificity. */
+  .eyebrow[data-category="Kotimaa"]{color:#f0a074}
+  .eyebrow[data-category="Maailma"]{color:#8ab4e8}
+  .eyebrow[data-category="Talous"]{color:#63c9a1}
+  .eyebrow[data-category="Tiede"]{color:#bfa3f0}
+  .eyebrow[data-category="Kulttuuri"]{color:#f098b8}
+  .eyebrow[data-category="Urheilu"]{color:#a8d46a}
+  .eyebrow[data-category="Ulkomaat"]{color:#8ab4e8}
+  .eyebrow[data-category="Teknologia"]{color:#5fc4cf}
 }
 
 /* Tap targets: the nav links and read-more affordance should stay comfortable
