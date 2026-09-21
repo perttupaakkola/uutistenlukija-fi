@@ -48,8 +48,10 @@ figure img,img{aspect-ratio:attr(width) / attr(height)}
 }
 
 /* Tap targets: the nav links and read-more affordance should stay comfortable
-   on touch screens without changing the visual design. */
+   on touch screens without changing the visual design. min-height is an explicit
+   guarantee so a later line-height/font-size change cannot shrink them below 44px
+   again; box-sizing:border-box is global, so padding is included in the box. */
 @media(max-width:620px){
-  nav a{display:inline-block;padding:.35rem 0}
-  .read{display:inline-block;padding:.35rem 0}
+  nav a{display:inline-block;min-height:44px;padding:.7rem 0}
+  .read{display:inline-block;min-height:44px;padding:.7rem 0}
 }
