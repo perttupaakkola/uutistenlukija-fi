@@ -14,7 +14,7 @@ from .diagnostics import safe_error
 from .editorial import ROOT, digest, timestamp, validate_review, validate_packet
 from datetime import datetime, timezone
 from .release_contract import media, verify_intake, check_article
-from .site import atomic_write, article_path, esc, page, render_site
+from .site import atomic_write, article_path, esc, missing_page, page, render_site
 from .store import database
 from . import slugs
 
@@ -95,7 +95,6 @@ def public_bundle(store,job,state):
     render_site(store,site,state,public=True,include_ids=ids,verify_policy_ids={job['id']})
     privacy='''<article class="story"><h1>Tietosuoja ja evästeet</h1><p>Voit käyttää uutispalvelua sallimatta analytiikkaa. Luvallasi käytämme Google Analyticsia sivuston käytön mittaamiseen. Emme käytä mainonnan evästeitä.</p><p>Suostumus tallennetaan selaimeesi. Voit muuttaa valintaasi sivun Evästeasetukset-painikkeella. Analytiikan poistaminen käytöstä poistaa tämän sivuston Google Analytics -evästeet selaimesta.</p><p>Uutiset laaditaan tekoälyn avulla ja tarkastetaan erillisessä lähdearvioinnissa. Alkuperäiset lähteet ja käyttöehdot näkyvät artikkelissa. Uutinen voi olla kuvaton; käytetyn kuvan tekijä ja käyttöoikeus ilmoitetaan kuvan yhteydessä.</p></article>'''
     atomic_write(site/'tietosuoja/index.html',page('Tietosuoja ja evästeet',privacy,'/tietosuoja/'))
-    atomic_write(site/'404.html',page('Sivua ei löytynyt','<h1>Sivua ei löytynyt</h1><p><a href="/">Siirry uusimpiin uutisiin</a></p>','/404.html'))
     # Terms for AI illustrations. This is the license_url/source_url of every generated article
     # image, so it must exist and must actually describe the image rights - pointing that field
     # at the privacy page was rejected by the independent reviewer, correctly.
@@ -137,6 +136,10 @@ def public_bundle(store,job,state):
             index=child/'index.html'
             if index.is_symlink() or not index.is_file(): continue
             archive_pages.append(int(child.name))
+    # The public 404 body is a real page with usable exits, not a bare stub. It always
+    # names the newest listing, and names /sivu/2/ only when that archive page really
+    # exists in this bundle, judged by the same archive_pages validation the sitemap uses.
+    atomic_write(site/'404.html',missing_page('/sivu/2/' if 2 in archive_pages else '/'))
     entries+=[_url_entry('https://uutistenlukija.fi/sivu/'+str(n)+'/') for n in sorted(archive_pages)]
     atomic_write(site/'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(entries)+'</urlset>')
     atomic_write(site/'robots.txt','User-agent: *\nAllow: /\nSitemap: https://uutistenlukija.fi/sitemap.xml\n')

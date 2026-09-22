@@ -12,23 +12,43 @@ This module closes that loop:
   ledger()    -> persist every experiment and its verdict so learning survives sessions
   record_action() -> log concrete changes so a later review can attribute movement
 
-Every number originates from `news_analytics.py`; nothing here fabricates or estimates a
-metric. When a window carries too little traffic to support a claim, the honest output is
-`no_evidence`, and that is what the code returns.
+Only verified, joined evidence can produce a readership diagnosis. `diagnose` requires a
+complete measurement (`measurement_status == "ok"`, `truncated is False`) whose per-article
+GSC rows are deployed articles on this site's canonical URL prefix. A deployed article with
+no GSC row is unknown coverage: it is excluded from every measured sum rather than read as
+zero. Anything less - a domain-level total, an unverified article list, an invalid or
+malformed observed row, a truncated pull - yields a single `insufficient_evidence` verdict
+instead of a guess. Nothing here fabricates or estimates a metric, and no diagnosis is
+extrapolated from article shape alone.
 """
 
 import json
+import math
 import os
 import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
+from .measurement import normalize_url
+
 ANALYTICS = "/home/pertt/.local/share/lean-support/bin/news_analytics.py"
 
-# A hypothesis is only meaningful with enough signal behind it. Below this many GSC
-# impressions on the affected pages, a CTR claim is noise, so the verdict is no_evidence.
+# A hypothesis is only meaningful with enough signal behind it. The threshold applies to the
+# summed GSC impressions of the joined deployed articles, never to domain-level totals.
 MIN_IMPRESSIONS_FOR_CTR = 100
-MIN_CLICKS_FOR_CTR = 5
+# An exposed cohort below this CTR is worth a tentative, explicitly non-causal look.
+LOW_CTR_THRESHOLD = 2.0
+# Impression-weighted average position at or below this points at title/query intent, above it
+# at ranking/visibility. Neither is a snippet failure.
+LOW_POSITION_MAX = 10.0
+# "medium" confidence needs both volume and breadth of exposed articles; "high" is never claimed.
+COHORT_MEDIUM_MIN_IMPRESSIONS = 1000
+COHORT_MEDIUM_MIN_URLS = 3
+MAX_EVIDENCE_URLS = 6
+CANONICAL_ORIGIN = "https://uutistenlukija.fi"
+CANONICAL_PATH_PREFIX = "/uutiset/"
+CANONICAL_ARTICLE_PREFIX = CANONICAL_ORIGIN + CANONICAL_PATH_PREFIX
+METADATA_COMPONENTS = ("description", "og", "jsonld")
 TARGET_VIEWS = 10000
 TARGET_USERS = 1000
 STATE_DIR = Path("/home/pertt/.local/share/uutistenlukija")
@@ -107,121 +127,218 @@ def goal_status(data):
     }
 
 
-def diagnose(data, articles):
-    """Ranked, checkable hypotheses from measured evidence.
+def _is_number(value):
+    """Finite real number, explicitly not a bool (True would pass isinstance(int))."""
+    if not isinstance(value, (int, float)) or isinstance(value, bool):
+        return False
+    try:
+        return math.isfinite(value)
+    except OverflowError:
+        return False
 
-    Each hypothesis names the evidence it rests on and the metric that would confirm or
-    refute it, so a later run can close it out rather than re-asserting it.
+
+def _has_id(value):
+    if isinstance(value, bool) or value is None:
+        return False
+    if isinstance(value, str):
+        return bool(value.strip())
+    return isinstance(value, int)
+
+
+def _insufficient(reason):
+    """The single honest verdict whenever the evidence gate cannot be satisfied."""
+    return [{
+        "lane": "measurement",
+        "priority": 1,
+        "verdict": "insufficient_evidence",
+        "hypothesis": "No readership diagnosis is supported: verified joined article evidence "
+                      "is missing or untrustworthy.",
+        "evidence": f"Evidence gate failed: {reason}.",
+        "metric": "GSC clicks/impressions/position joined to deployed article URLs",
+        "target": f">= {MIN_IMPRESSIONS_FOR_CTR} verified impressions across a valid, "
+                  f"unambiguous deployed-article cohort",
+        "action": "Hold every readership hypothesis until a complete measurement + join pass "
+                  "exists for this window.",
+        "confidence": "no_evidence",
+    }]
+
+
+def _metadata_gaps(cohort):
+    """Explicitly missing vs merely unrecorded metadata components, per affected URL."""
+    missing, unknown = {}, {}
+    for component in METADATA_COMPONENTS:
+        for row in cohort:
+            value = row["metadata"].get(component)
+            if value is False:
+                missing.setdefault(component, []).append(row["url"])
+            elif value is not True:
+                unknown.setdefault(component, []).append(row["url"])
+    return missing, unknown
+
+
+def _name_urls(urls):
+    shown = ", ".join(urls[:MAX_EVIDENCE_URLS])
+    if len(urls) > MAX_EVIDENCE_URLS:
+        shown += f", +{len(urls) - MAX_EVIDENCE_URLS} more"
+    return shown
+
+
+def diagnose(data, articles=None):
+    """Ranked, checkable hypotheses from verified joined evidence, or nothing.
+
+    Every readership verdict must pass an explicit evidence gate: the measurement must be
+    complete and untruncated, and every row must be an exactly deployed article carrying a
+    valid, non-duplicate URL on this site. A single invalid or malformed observed row fails
+    the whole diagnosis closed. A deployed article with no GSC row is unknown coverage: it is
+    excluded from every measured sum and never read as zero. `articles` (structural facts
+    about published drafts) is kept for API compatibility and deliberately ignored: article
+    shape is not readership evidence.
     """
-    hypotheses = []
-    if not data:
-        return hypotheses
+    if not isinstance(data, dict):
+        return _insufficient("no measurement payload was provided")
+    if data.get("measurement_status") != "ok":
+        return _insufficient("measurement_status is not 'ok'")
+    if data.get("truncated") is not False:
+        return _insufficient("the measurement is truncated or its completeness is unverified")
 
-    goal = goal_status(data)
-    gsc = data.get("gsc", {}) or {}
-    impressions = gsc.get("impressions")
-    clicks = gsc.get("clicks")
-    ctr = None
-    if isinstance(impressions, int) and isinstance(clicks, int) and impressions > 0:
-        ctr = 100.0 * clicks / impressions
+    rows = data.get("article_performance")
+    if not isinstance(rows, list) or not rows:
+        return _insufficient("no joined deployed-article rows were provided")
 
-    # --- SEO: the dominant signal -------------------------------------------------
-    if ctr is not None:
-        evidence = f"{clicks} clicks / {impressions} impressions = {ctr:.2f}% CTR"
-        enough = impressions >= MIN_IMPRESSIONS_FOR_CTR and clicks >= MIN_CLICKS_FOR_CTR
-        if enough and ctr < 2.0:
-            hypotheses.append({
-                "lane": "seo",
-                "priority": 1,
-                "hypothesis": "Search snippets win impressions but not clicks; titles and "
-                              "meta descriptions do not match query intent.",
-                "evidence": evidence,
-                "metric": "GSC CTR on the same query/URL set",
-                "target": "CTR >= 3% at equal or higher impressions",
-                "action": "Ship description/OG/JSON-LD, then rewrite titles toward the "
-                          "queries that already produce impressions.",
-                "confidence": "high" if impressions >= 1000 else "medium",
-            })
-        elif not enough:
-            hypotheses.append({
-                "lane": "seo",
-                "priority": 3,
-                "hypothesis": "Too little search exposure to judge snippet quality.",
-                "evidence": evidence,
-                "metric": "GSC impressions",
-                "target": f">= {MIN_IMPRESSIONS_FOR_CTR} impressions",
-                "action": "Grow breadth/freshness first; hold SEO verdicts.",
-                "confidence": "no_evidence",
-            })
-
-    # --- Volume: the goal is far away, so throughput matters -----------------------
-    views = goal.get("views")
-    if isinstance(views, int):
-        hypotheses.append({
-            "lane": "volume",
-            "priority": 2 if views < 500 else 4,
-            "hypothesis": "Publishing volume is the binding constraint on reaching the "
-                          "10,000 views / 1,000 users goal.",
-            "evidence": f"{views} views in the measured 30-day window vs {TARGET_VIEWS} target "
-                        f"({goal['views_pct']}%)",
-            "metric": "GA4 views per rolling 30 days",
-            "target": "sustained week-over-week growth",
-            "action": "Fix idle ticks (source collection) and raise the per-tick publication "
-                      "ceiling so fresh material actually ships.",
-            "confidence": "high",
+    cohort, unknown, seen_urls = [], [], set()
+    for row in rows:
+        if not isinstance(row, dict):
+            return _insufficient("a joined article row is not a mapping")
+        url = row.get("canonical_url")
+        path = normalize_url(url)
+        if (path is None or not path.startswith(CANONICAL_PATH_PREFIX)
+                or len(path) <= len(CANONICAL_PATH_PREFIX)
+                or url != CANONICAL_ORIGIN + path):
+            return _insufficient("a row does not carry this site's canonical article URL")
+        if url in seen_urls:
+            return _insufficient(f"duplicate canonical rows make the cohort ambiguous ({url})")
+        seen_urls.add(url)
+        if row.get("deployed") is not True:
+            return _insufficient("a row is not an exactly deployed article")
+        if not _has_id(row.get("id")):
+            return _insufficient("a row does not carry an article id")
+        gsc = row.get("gsc")
+        if gsc is None:
+            unknown.append(url)
+            continue
+        if not isinstance(gsc, dict):
+            return _insufficient("a row's GSC payload is not a mapping")
+        status = gsc.get("status")
+        if status == "missing":
+            # The analytics pull has no GSC row for this deployed article: that is unknown
+            # coverage, and its placeholder metrics must never be summed as zero.
+            unknown.append(url)
+            continue
+        if status is None:
+            if any(key in gsc for key in ("clicks", "impressions", "position")):
+                return _insufficient("a row's observed GSC metrics carry no 'ok' status")
+            unknown.append(url)
+            continue
+        if status != "ok":
+            return _insufficient("a row's GSC status is not 'ok'")
+        clicks, impressions, position = (gsc.get("clicks"), gsc.get("impressions"),
+                                        gsc.get("position"))
+        if not all(_is_number(value) for value in (clicks, impressions)):
+            return _insufficient("a row carries a non-finite or non-numeric GSC value")
+        if clicks < 0 or impressions < 0:
+            return _insufficient("a row carries a negative GSC value")
+        if clicks > impressions:
+            return _insufficient("a row reports more clicks than impressions")
+        if impressions > 0:
+            # Any row that carries impressions must carry a finite position >= 1.
+            if not _is_number(position) or position < 1:
+                return _insufficient("a row with impressions carries no finite position >= 1")
+        elif position is not None and (not _is_number(position) or position < 1):
+            return _insufficient("a row carries a position below 1")
+        # Zero impressions with no position is a valid unexposed row: nothing is imputed, and
+        # the row is excluded from position-weighted evidence, breadth and metadata advice.
+        metadata = row.get("metadata")
+        cohort.append({
+            "url": url,
+            "clicks": clicks,
+            "impressions": impressions,
+            "position": position,
+            "metadata": metadata if isinstance(metadata, dict) else {},
         })
 
-    # --- Coverage: are categories and images balanced? ----------------------------
-    if articles:
-        without_image = [a for a in articles if not a["has_image"]]
-        if len(without_image) > len(articles) // 2:
-            hypotheses.append({
-                "lane": "publishing_quality",
-                "priority": 3,
-                "hypothesis": "Most articles ship without an image, weakening both click "
-                              "appeal in listings and social/snippet previews.",
-                "evidence": f"{len(without_image)} of {len(articles)} published articles have no image",
-                "metric": "share of published articles with a verified image",
-                "target": ">= 50% with a rights-verified image",
-                "action": "Repair the NASA image lane and add image-capable sources.",
-                "confidence": "medium",
-            })
-        categories = {}
-        for a in articles:
-            categories[a["category"]] = categories.get(a["category"], 0) + 1
-        if categories and max(categories.values()) > 0.6 * len(articles):
-            top = max(categories, key=categories.get)
-            hypotheses.append({
-                "lane": "coverage",
-                "priority": 3,
-                "hypothesis": "Coverage is concentrated in one category, limiting the set of "
-                              "queries the site can rank for.",
-                "evidence": f"{categories[top]} of {len(articles)} articles in '{top}'",
-                "metric": "distinct categories with >= 3 published articles",
-                "target": ">= 3 categories represented",
-                "action": "Rebalance discovery across providers/categories.",
-                "confidence": "medium",
-            })
+    unknown_coverage = len(unknown)
+    measured_urls = len(cohort)
+    total_clicks = sum(row["clicks"] for row in cohort)
+    total_impressions = sum(row["impressions"] for row in cohort)
+    if total_impressions < MIN_IMPRESSIONS_FOR_CTR:
+        return _insufficient(
+            f"joined deployed articles carry only {total_impressions} measured GSC impressions "
+            f"across {measured_urls} measured URL(s) with {unknown_coverage} missing GSC "
+            f"row(s), below the {MIN_IMPRESSIONS_FOR_CTR} needed for a CTR read")
 
-    # --- Titles: length is a cheap, checkable property ---------------------------
-    if articles:
-        long_titles = [a for a in articles if a["title_length"] > 60]
-        if long_titles:
-            longest = max(a["title_length"] for a in articles)
-            hypotheses.append({
-                "lane": "seo",
-                "priority": 2,
-                "hypothesis": "Titles exceed the width a SERP/social card displays, so the "
-                              "distinctive words may be cut off.",
-                "evidence": f"{len(long_titles)} of {len(articles)} titles exceed 60 characters "
-                            f"(max {longest})",
-                "metric": "GSC CTR for the affected URLs",
-                "target": "titles <= 60 chars without losing the key noun",
-                "action": "Tighten headline generation to front-load the distinctive term.",
-                "confidence": "medium",
-            })
+    # Exposure, breadth and metadata advice are defined only on positive-impression URLs; rows
+    # with zero impressions are valid unexposed rows, but they add no signal of their own.
+    exposed = [row for row in cohort if row["impressions"] > 0]
+    exposure = (f"coverage: {total_impressions} measured impressions across {len(exposed)} "
+                f"exposed URL(s) of {measured_urls} measured row(s), {unknown_coverage} deployed "
+                f"article(s) with a missing GSC row (excluded, never counted as zero)")
+    ctr = 100.0 * total_clicks / total_impressions
+    if ctr >= LOW_CTR_THRESHOLD:
+        return []
 
-    hypotheses.sort(key=lambda h: (h["priority"], {"high": 0, "medium": 1, "no_evidence": 2}[h["confidence"]]))
+    weighted_position = (sum(row["impressions"] * row["position"] for row in exposed)
+                         / total_impressions)
+    if weighted_position <= LOW_POSITION_MAX:
+        position_note = ("Average position is on page one, so investigate title/meta intent "
+                         "alignment before assuming a snippet failure.")
+        action = ("Investigate query/title intent for the affected URLs: impressions arrive "
+                  "and the titles/descriptions may not match that intent.")
+    else:
+        position_note = ("Average position is beyond page one, so investigate "
+                         "ranking/visibility drivers before assuming a snippet failure.")
+        action = ("Investigate ranking/visibility for the affected URLs (indexing, freshness, "
+                  "internal links) rather than treating this as a snippet failure.")
+    missing, unknown_metadata = _metadata_gaps(exposed)
+    if missing:
+        action += (" Audit/fill the explicitly missing metadata component(s): "
+                   + "; ".join(f"{component} on {_name_urls(urls)}"
+                               for component, urls in missing.items()) + ".")
+    if unknown_metadata:
+        action += (" Verify first where not recorded: "
+                   + "; ".join(f"{component} on {_name_urls(urls)}"
+                               for component, urls in unknown_metadata.items())
+                   + "; do not assume it is present or missing.")
+
+    ranked = sorted(exposed, key=lambda row: row["impressions"], reverse=True)
+    shown = ranked[:MAX_EVIDENCE_URLS]
+    details = "; ".join(
+        f"{row['url']} ({row['clicks']} clicks/{row['impressions']} impressions/"
+        f"position {row['position']:g})" for row in shown
+    )
+    if len(ranked) > len(shown):
+        details += f"; +{len(ranked) - len(shown)} more URL(s)"
+
+    # "medium" needs both exposure and breadth; "high" is never claimed unconditionally.
+    confidence = "medium" if (total_impressions >= COHORT_MEDIUM_MIN_IMPRESSIONS
+                              and len(exposed) >= COHORT_MEDIUM_MIN_URLS) else "low"
+    hypotheses = [{
+        "lane": "seo",
+        "priority": 1,
+        "verdict": "tentative",
+        "hypothesis": f"Tentative association, not causal proof: {total_clicks} clicks from "
+                      f"{total_impressions} impressions ({ctr:.2f}% CTR) on this deployed "
+                      f"cohort ({len(exposed)} exposed URL(s), {measured_urls} measured row(s), "
+                      f"{unknown_coverage} missing). {position_note}",
+        "evidence": f"{total_clicks} clicks / {total_impressions} impressions = {ctr:.2f}% CTR; "
+                    f"impression-weighted position {weighted_position:.1f}; {exposure}; "
+                    f"URL set: {details}",
+        "metric": "GSC CTR and impression-weighted position on this exact URL set",
+        "target": "CTR >= 3% at equal or higher verified impressions on the same URLs",
+        "action": action,
+        "confidence": confidence,
+    }]
+    hypotheses.sort(key=lambda h: (h["priority"],
+                                   {"high": 0, "medium": 1, "low": 2, "no_evidence": 3}[h["confidence"]]))
     return hypotheses
 
 
@@ -346,7 +463,7 @@ def format_report(result):
             lines.append(f"   evidence: {h['evidence']}")
             lines.append(f"   test: {h['metric']} -> {h['target']}")
     else:
-        lines.append("No hypotheses: insufficient measured evidence.")
+        lines.append("No hypotheses raised for this window.")
     return "\n".join(lines)
 
 
