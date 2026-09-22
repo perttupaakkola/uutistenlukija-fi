@@ -6,6 +6,7 @@ import os
 import subprocess
 import urllib.error
 import urllib.request
+from html.parser import HTMLParser
 from pathlib import Path
 
 from cutover.check_release import check
@@ -13,7 +14,7 @@ from .authorization import authorize
 from .diagnostics import safe_error
 from .editorial import ROOT, digest, timestamp, validate_review, validate_packet
 from datetime import datetime, timezone
-from .release_contract import media, verify_intake, check_article
+from .release_contract import media, verify_intake, check_article, load_legacy_redirects, legacy_redirect_lines
 from .site import atomic_write, article_path, esc, missing_page, page, render_site
 from .store import database
 from . import slugs
@@ -84,12 +85,155 @@ def restore_image_required_schema(store):
     _image_constraint(store,required=True)
 
 
+class _CanonicalLinks(HTMLParser):
+    """Collect the `<link rel="canonical">` hrefs of a public page.
+
+    A page is only a usable redirect target when it names exactly one canonical and that
+    URL is exactly its own path, so every other shape - no link, several links, a
+    valueless or duplicated href, a duplicated attribute - is recorded as an unusable
+    value instead of being guessed at.
+    """
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.hrefs=[]
+
+    def handle_starttag(self,tag,attrs):
+        if tag!='link':return
+        values={}
+        duplicated=False
+        for name,value in attrs:
+            name=name.lower()
+            duplicated=duplicated or name in values
+            values[name]=value
+        # `rel` may itself be spelled more than once, so a canonical claim is judged from
+        # the raw attribute values: a value the dict overwrote is still a claim, and the
+        # element is unusable either way because no single rel/href pair can be trusted
+        # while the markup is ambiguous. A duplicated attribute is recorded as an unusable
+        # href rather than discarded, so an earlier valid canonical can never keep an
+        # ambiguous page eligible.
+        rels=[value for name,value in attrs if name.lower()=='rel']
+        if not any('canonical' in (value or '').lower().split() for value in rels):
+            return
+        if duplicated:
+            self.hrefs.append('')
+            return
+        href=values.get('href')
+        self.hrefs.append(href if isinstance(href,str) else '')
+
+
+def _canonical_links(html):
+    """Canonical hrefs of a page in document order; unparseable markup fails closed."""
+    parser=_CanonicalLinks()
+    try:
+        parser.feed(html)
+        parser.close()
+    except Exception:
+        return []
+    return parser.hrefs
+
+
+def _bundle_index(site,path):
+    """The real `index.html` for a bundle-relative `path`, or None when there is none.
+
+    Every node between the real bundle root and the file must be a real directory: the
+    root, each ancestor directory and the file itself must not be symlinks, so a link can
+    never make a file outside the bundle pass as a published page. Absolute paths and
+    traversal segments are refused outright.
+    """
+    relative=Path(path)
+    if relative.is_absolute() or not relative.parts or '..' in relative.parts:
+        return None
+    if site.is_symlink() or not site.is_dir():
+        return None
+    node=site
+    for part in relative.parts:
+        node=node/part
+        if node.is_symlink():
+            return None
+    if not node.is_dir():
+        return None
+    index=node/'index.html'
+    if index.is_symlink() or not index.is_file():
+        return None
+    return index
+
+
+def _published_page(site,path):
+    """True when this bundle serves `path` as a real page that canonicalises to itself."""
+    index=_bundle_index(site,path)
+    if index is None:
+        return False
+    try:
+        html=index.read_text(encoding='utf-8')
+    except (OSError,UnicodeDecodeError):
+        return False
+    return _canonical_links(html)==['https://uutistenlukija.fi/'+path]
+
+
+def _bundle_content(site):
+    """Every public name in the bundle: real file paths and the directories serving a page.
+
+    Symlinked names are recorded but never followed, so a link can neither hide content
+    behind it nor take the scan outside the bundle. Only a real (or symlinked)
+    `index.html` marks a directory as a page.
+    """
+    files,pages=set(),set()
+    if site.is_symlink() or not site.is_dir():
+        return files,pages
+    stack=[(site,'')]
+    while stack:
+        node,prefix=stack.pop()
+        try:
+            entries=list(os.scandir(node))
+        except OSError:
+            continue
+        if any(entry.name=='index.html' and (entry.is_symlink() or entry.is_file()) for entry in entries) and prefix:
+            pages.add(prefix.rstrip('/'))
+        for entry in entries:
+            relative=prefix+entry.name
+            if entry.is_symlink():
+                files.add(relative)
+            elif entry.is_dir():
+                stack.append((Path(entry.path),relative+'/'))
+            else:
+                files.add(relative)
+    return files,pages
+
+
+def _serves_public_content(source,files,pages):
+    """True when a reviewed mapping source already is, holds or sits under public content.
+
+    A redirect may not take over a path a reader can already reach: a real file
+    (`404.html`, `rss.xml`, an asset), a directory page (`/tietosuoja/`,
+    `/kuvituskuvat/`, `/sivu/N/`, an article), a source underneath such a page (its
+    subtree), or an ancestor of real content (`/sivu/` above `/sivu/2/`, `/uutiset/`
+    above every article). The homepage is always content and can never be a source.
+    """
+    segments=source.split('/')[1:-1]
+    if not segments:
+        return True  # the homepage always serves content; never a redirect source
+    for depth in range(1,len(segments)+1):
+        prefix='/'.join(segments[:depth])
+        if prefix in files or prefix in pages:
+            return True
+    source_path='/'.join(segments)
+    if source_path in files:
+        return True  # `/mvp-assets/style.css/` next to the real asset file
+    return any(path.startswith(source_path+'/') for path in files)
+
+
 def public_bundle(store,job,state):
     ids={r[0] for r in store.db.execute("SELECT job_id FROM publications WHERE status='deployed'")}|{job['id']}
     packet,draft=json.loads(job['packet']),json.loads(job['draft'])
     binding=media(packet,draft)
     if packet.get('publication_basis') is not None:verify_intake(packet,state)
     site=Path(state)/'live-site'  # Never reads or overlays the abandoned public-history tree.
+    # The reviewed legacy demand inventory is loaded before anything is written: a missing
+    # or malformed inventory fails the release closed rather than producing a bundle whose
+    # redirects silently lost the reviewed mappings. Eligibility of each mapping is judged
+    # later, against the pages this render actually wrote.
+    mappings=load_legacy_redirects()['mappings']
     # Only the article being published now must satisfy today's policy digest; the archive
     # was released under the policy in force then and is bound to its captured bytes.
     render_site(store,site,state,public=True,include_ids=ids,verify_policy_ids={job['id']})
@@ -143,18 +287,56 @@ def public_bundle(store,job,state):
     entries+=[_url_entry('https://uutistenlukija.fi/sivu/'+str(n)+'/') for n in sorted(archive_pages)]
     atomic_write(site/'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(entries)+'</urlset>')
     atomic_write(site/'robots.txt','User-agent: *\nAllow: /\nSitemap: https://uutistenlukija.fi/sitemap.xml\n')
-    # Every article that ever existed under a bare hash URL keeps working: the readable
-    # slug is additive, and the 301 preserves whatever ranking signal the old URL earned.
-    # Built from the store, so it covers retired articles too, not only the current ids.
-    redirect_lines=[]
-    for identifier in title_by_id:
-        if slugs.is_legacy_hash_path(identifier):
-            redirect_lines.append(slugs.redirect_line('uutiset/'+identifier, _slug_for(identifier)))
-    # Retired monetization surfaces (owner directive) still 404 today; carry the intent
-    # into the published bundle so those paths resolve instead of dead-ending.
-    redirect_lines += ['/mainosta/* / 301', '/perustajakumppanuus/* / 301']
-    if redirect_lines:
-        atomic_write(site/'_redirects','\n'.join(sorted(set(redirect_lines)))+'\n')
+    # --- Redirects: reviewed legacy mappings plus same-article hash aliases -----
+    # Eligibility is what THIS render actually wrote: the current job plus deployed ids
+    # render_site selected, each confirmed as a real, non-symlink index.html inside the
+    # real bundle root whose single canonical is exactly its own path. A deployed id this
+    # render did not write, or whose page is missing, linked or mis-canonical, is not a
+    # working 301 target and must never get a rule.
+    written=[]
+    for candidate in store.articles():
+        if candidate['id'] not in ids:
+            continue
+        path=article_path(candidate)
+        if _published_page(site,path):
+            written.append((candidate['id'],path))
+    eligible=['/'+path for _,path in written]
+    # Reviewed legacy demand is data-driven and fail-closed: a malformed inventory, or a
+    # mapping that is not a reviewed equivalence onto a page this bundle serves, fails the
+    # release. An invalid mapping is never dropped so that a release can proceed without it.
+    # A source that is, holds or lives under real public content (privacy, illustrations,
+    # archive listings, article files, any ancestor or descendant of them) is refused: the
+    # bundle already owns that path and a rule there would hijack what readers can reach.
+    if mappings:
+        files,pages=_bundle_content(site)
+        for mapping in mappings:
+            source=mapping['source']
+            if _serves_public_content(source,files,pages):
+                raise ValueError('Legacy mapping source already serves public content: '+source)
+    # Bare hash URLs for the eligible articles get an additive 301 to their readable slug.
+    # These are generated, not editorial: the source is the article's own legacy hash
+    # identity and the target is the canonical path this same render wrote for that same id.
+    # They deliberately skip the public-content check - the bundle may hold content at the
+    # legacy path (an alias page or a leftover) and the rule is still that article's old URL
+    # resolving to its new one - but the union below still refuses duplicates, chains and
+    # loops, and no rule may ever target the homepage or a wildcard.
+    aliases=[]
+    for identifier,path in written:
+        if not slugs.is_legacy_hash_path(identifier):
+            continue
+        source='/uutiset/'+identifier+'/'
+        if source=='/'+path:
+            continue  # a self-alias is not a redirect
+        aliases.append((source,'/'+path))
+    lines=legacy_redirect_lines(mappings,eligible,aliases)
+    if lines:
+        atomic_write(site/'_redirects','\n'.join(lines)+'\n')
+    else:
+        # No rules is not the same as no file: a leftover _redirects from an earlier
+        # release would keep serving retired wildcards/paths this release does not own.
+        stale=site/'_redirects'
+        if stale.is_symlink() or stale.exists():
+            stale.unlink()
     packet,draft=json.loads(job['packet']),json.loads(job['draft'])
     receipt={'public_release_authorized':True,'hermes_step':5,'origin':'https://uutistenlukija.fi','ga4_id':'G-35XERS8V6J',
         'source_commit':cmd('git','rev-parse','HEAD'),'job_id':job['id'],'packet_sha256':digest(packet),
