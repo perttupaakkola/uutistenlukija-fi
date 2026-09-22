@@ -6,7 +6,7 @@ the file a reader would receive, not a fixture copy. The archive link appears on
 when the bundle really contains /sivu/2/, judged by the same archive_pages scan the
 sitemap uses; a symlinked archive page is not a real page.
 """
-import hashlib,json,unittest
+import hashlib,json,re,unittest
 from pathlib import Path
 from unittest.mock import patch
 import test_release_v2 as base
@@ -39,6 +39,17 @@ class BundleMissingPage(unittest.TestCase):
         self.assertIn('action="'+GOOGLE+'"',body)
         self.assertIn('name="sitesearch" value="uutistenlukija.fi"',body)
         self.assertIn('Hae Googlesta',body)
+        search_forms=re.findall(r'<form\b[^>]*role="search"[^>]*>(.*?)</form>',body,re.S)
+        self.assertEqual(len(search_forms),2)
+        form_ids=re.findall(r'<form\b[^>]*\bid="([^"]+)"[^>]*role="search"',body,re.S)
+        self.assertEqual(form_ids,['header-search-form','missing-search-form'])
+        input_ids=re.findall(r'<input\b(?=[^>]*\btype="search")[^>]*\bid="([^"]+)"',body,re.S)
+        self.assertEqual(input_ids,['header-search-input','missing-search-input'])
+        self.assertEqual(sorted(re.findall(r'<label\b[^>]*for="([^"]+)"',body)),
+                         ['header-search-input','missing-search-input'])
+        self.assertEqual(body.count('name="sitesearch" value="uutistenlukija.fi"'),2)
+        self.assertIn('aria-describedby="header-search-note"',body)
+        self.assertIn('aria-describedby="missing-search-note"',body)
         self.assertIn('Siirry uusimpiin uutisiin',body)
         self.assertIn('Tätä osoitetta ei löytynyt',body)
         # No archive 2 in this bundle, so the 404 falls back to the latest listing.

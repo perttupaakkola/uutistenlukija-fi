@@ -1,7 +1,7 @@
 """Actual consumers; only upstream/model/deployment boundaries are simulated.
 All source/publication records here are synthetic and confined to temporary state.
 """
-import copy,hashlib,io,json,os,subprocess,sys,tempfile,textwrap,unittest
+import copy,hashlib,io,json,os,re,subprocess,sys,tempfile,textwrap,unittest
 from contextlib import ExitStack
 from datetime import datetime,timezone
 from pathlib import Path
@@ -17,13 +17,14 @@ from news_mvp.site import article_path, render_site
 from news_mvp.release_contract import media,receipt_media,verify_intake
 from news_mvp.store import database
 from cutover.check_release import check
+from image_helpers import editorial_images, scan
 COMMIT='a'*40
 REMOTE='b'*40
 TEXT='Helsingin kaupunki kertoo uuden kirjaston avaamisesta syyskuussa. Kirjastossa voi lainata kirjoja ja käyttää lukutiloja. Kaupunki kertoo palveluista omilla verkkosivuillaan. Tämä synteettinen testitiedote koskee paikallisia kirjastopalveluja.'
 class ReleaseV2(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup);self.root=Path(self.tmp.name);self.state=self.root/'state';self.state.mkdir()
-        self.config={'enabled':True,'backend':'hermes','state_dir':str(self.state),'output_dir':str(self.root/'private'),'max_source_age_hours':48,'authorization_mode':'steady_state','source_recipes':[],'discovery':{'family':'news-reviewed-v2','max_candidates':5}}
+        self.config={'enabled':True,'backend':'hermes','state_dir':str(self.state),'output_dir':str(self.root/'private'),'max_source_age_hours':48,'illustrations':False,'authorization_mode':'steady_state','source_recipes':[],'discovery':{'family':'news-reviewed-v2','max_candidates':5}}
         self.cfg=self.root/'config.json';self.cfg.write_text(json.dumps(self.config))
         policy=proposed_policy_v2(COMMIT);policy.update(enabled=True,approved_by='Hermes',review_ref='isolated-test-approval')
         (self.state/'steady-state-policy.json').write_text(json.dumps(policy));(self.state/'cutover').mkdir();(self.state/'cutover/drain-verified.json').write_text(json.dumps({'legacy_processes_active':False,'legacy_actions_active':False}))
@@ -96,7 +97,11 @@ class ReleaseV2(unittest.TestCase):
             site,receipt=public_bundle(store,job,self.state);check(site,receipt)
             after=tuple(store.db.execute('SELECT * FROM publications WHERE job_id=?',(old['id'],)).fetchone());self.assertEqual(before,after)
             home=(site/'index.html').read_text();self.assertIn(self.draft['title'],home);self.assertIn('NASA synthetic image story',home)
-            text=(site/(article_path(job)+"index.html")).read_text();self.assertNotIn('Luonnos',text);self.assertNotIn('<img',text);self.assertIn('CC BY 4.0',text);self.assertIn('Tämä uutinen julkaistaan ilman kuvaa.',text);self.assertTrue((site/f'mvp-assets/{sha}.jpg').exists())
+            text=(site/(article_path(job)+"index.html")).read_text();self.assertNotIn('Luonnos',text)
+            # A text-only page must not carry an editorial picture; the exact brand logo
+            # in shell chrome is allowed, so only non-branding images fail here.
+            self.assertEqual(editorial_images(scan(text)),[])
+            self.assertIn('CC BY 4.0',text);self.assertIn('Tämä uutinen julkaistaan ilman kuvaa.',text);self.assertTrue((site/f'mvp-assets/{sha}.jpg').exists())
     def test_wrong_missing_policy_rights_private_fixture_packet_refused(self):
         for mutation in ['policy','rights','private','fixture','source','image-required']:
             packet=copy.deepcopy(self.packet)

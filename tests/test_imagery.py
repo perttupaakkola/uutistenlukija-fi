@@ -1,11 +1,10 @@
-"""Article imagery: generation from verified fact, and independent raster verification.
+"""Article imagery: provider chain, generation fallback, and independent raster verification.
 
-The design rule under test: an image is constructed from a fact the reviewed draft already
-states, so correspondence holds by construction and there is no post-hoc "is this stock photo
-relevant?" judgement to get wrong. The predecessor system searched stock providers by keyword
-and retrofitted a justification; the canonical failure (commit 9318ea23c) illustrated a story
-about cocaine in Finnish wastewater with "scenic aerial view of snowy Finnish landscape",
-accepted because "metadata matches finnish, landscape".
+Stock candidates are independently relevant and verified before generation is attempted; the
+generation fallback is still constructed from a fact the reviewed draft already states. The
+canonical predecessor failure (commit 9318ea23c) illustrated a story about cocaine in Finnish
+wastewater with "scenic aerial view of snowy Finnish landscape", accepted because "metadata
+matches finnish, landscape".
 
 These tests cover the two properties that made the old approach unsafe: (1) no image is
 produced for subjects that would invite depicting real people, tragedy or violence, and
@@ -13,7 +12,9 @@ produced for subjects that would invite depicting real people, tragedy or violen
 """
 
 import io
+import tempfile
 import unittest
+from unittest import mock
 
 
 class SubjectDerivation(unittest.TestCase):
@@ -124,6 +125,16 @@ class LegibleTextRejection(unittest.TestCase):
     """Observed on a police story: the model wrote 'POLIIISI' across an officer's back, and on
     another attempt put legible lettering on a police car. The prompt forbids text; the model
     still produces it, so the output is checked."""
+
+    def setUp(self):
+        # Generation behavior is isolated from optional stock providers. Dedicated stock tests
+        # mock their transports explicitly, so these tests never read runtime credentials.
+        self._unsplash = mock.patch('news_mvp.imagery.fetch_unsplash', return_value=None)
+        self._pexels = mock.patch('news_mvp.imagery.fetch_pexels', return_value=None)
+        self._unsplash.start()
+        self._pexels.start()
+        self.addCleanup(self._unsplash.stop)
+        self.addCleanup(self._pexels.stop)
 
     def test_reported_text_is_flagged(self):
         from news_mvp.imagery import has_legible_text
@@ -288,6 +299,15 @@ class ReleaseContractIntegration(unittest.TestCase):
 
 
 class FailClosed(unittest.TestCase):
+    def setUp(self):
+        # This class tests generation fallback and safety gates, not provider availability.
+        self._unsplash = mock.patch('news_mvp.imagery.fetch_unsplash', return_value=None)
+        self._pexels = mock.patch('news_mvp.imagery.fetch_pexels', return_value=None)
+        self._unsplash.start()
+        self._pexels.start()
+        self.addCleanup(self._unsplash.stop)
+        self.addCleanup(self._pexels.stop)
+
     def test_build_image_returns_none_when_generation_fails(self):
         """No image is always acceptable; a wrong or unverifiable image never is."""
         import news_mvp.imagery as imagery
@@ -303,6 +323,68 @@ class FailClosed(unittest.TestCase):
             self.assertIsNone(imagery.build_image(draft, '/tmp'))
         finally:
             imagery.generate = original
+
+
+class ProviderChainIntegration(unittest.TestCase):
+    DRAFT = {
+        'title': 'Hallitus esittää poliisille laajempia valtuuksia',
+        'paragraphs': [{'text': 'Lakiesitys laajentaisi valtuuksia.', 'source_ids': ['A']}],
+    }
+
+    def test_provider_order_and_pexels_short_circuit_generation(self):
+        import news_mvp.imagery as imagery
+        unsplash = {'generated': False, 'provider': 'unsplash'}
+        pexels = {'generated': False, 'provider': 'pexels'}
+        calls = []
+        with tempfile.TemporaryDirectory() as state, \
+             mock.patch.object(imagery, 'fetch_unsplash',
+                               side_effect=lambda draft: calls.append('unsplash') or None), \
+             mock.patch.object(imagery, 'fetch_pexels',
+                               side_effect=lambda draft, state_dir: calls.append('pexels') or pexels), \
+             mock.patch.object(imagery, 'generate', side_effect=AssertionError('generation')):
+            result = imagery.build_image(self.DRAFT, state)
+        self.assertIs(result, pexels)
+        self.assertEqual(calls, ['unsplash', 'pexels'])
+
+        calls.clear()
+        with tempfile.TemporaryDirectory() as state, \
+             mock.patch.object(imagery, 'fetch_unsplash',
+                               side_effect=lambda draft: calls.append('unsplash') or unsplash), \
+             mock.patch.object(imagery, 'fetch_pexels',
+                               side_effect=lambda draft, state_dir: calls.append('pexels') or pexels), \
+             mock.patch.object(imagery, 'generate', side_effect=AssertionError('generation')):
+            result = imagery.build_image(self.DRAFT, state)
+        self.assertIs(result, unsplash)
+        self.assertEqual(calls, ['unsplash'])
+
+    def test_absent_stock_providers_fall_back_to_ai_and_keep_model_provenance(self):
+        import news_mvp.imagery as imagery
+        with tempfile.TemporaryDirectory() as state, \
+             mock.patch.object(imagery, 'fetch_unsplash', return_value=None), \
+             mock.patch.object(imagery, 'fetch_pexels', return_value=None), \
+             mock.patch.object(imagery, 'generate',
+                               return_value=(_structured_png(), 'prompt', 'test-model')), \
+             mock.patch.object(imagery, 'describe', return_value=None):
+            result = imagery.build_image(self.DRAFT, state)
+        self.assertIsNotNone(result)
+        self.assertTrue(result['generated'])
+        self.assertEqual(result['credit'], 'AI-kuvitus (test-model)')
+        self.assertEqual(result['model'], 'test-model')
+
+    def test_unsafe_subject_remains_text_only_before_provider_chain(self):
+        import news_mvp.imagery as imagery
+        with tempfile.TemporaryDirectory() as state, \
+             mock.patch.object(imagery, 'fetch_unsplash') as unsplash, \
+             mock.patch.object(imagery, 'fetch_pexels') as pexels, \
+             mock.patch.object(imagery, 'generate') as generate:
+            result = imagery.build_image({
+                'title': 'Onnettomuudessa kuoli kaksi ihmistä',
+                'paragraphs': [{'text': 'Turma vaati uhreja.', 'source_ids': ['A']}],
+            }, state)
+        self.assertIsNone(result)
+        unsplash.assert_not_called()
+        pexels.assert_not_called()
+        generate.assert_not_called()
 
     def test_build_image_returns_none_for_unsafe_subject(self):
         import news_mvp.imagery as imagery

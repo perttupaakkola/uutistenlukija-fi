@@ -1,27 +1,98 @@
-:root{--ink:#17302c;--muted:#59645d;--paper:#f6f3eb;--accent:#a34422;--line:#d7d8cd;--card:#fffdf6}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 system-ui,sans-serif;overflow-wrap:anywhere}a{color:inherit;text-underline-offset:.2em}a:hover{color:var(--accent)}a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.skip{position:absolute;left:1rem;top:-100px;background:white;padding:1rem;z-index:2}.skip:focus{top:1rem}
-.preview{background:var(--ink);color:white;text-align:center;padding:.45rem 1rem;font-size:.8rem;letter-spacing:.06em}header,main,footer{max-width:1120px;margin:auto;padding:2rem}header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);gap:1rem}.brand{font-family:Georgia,serif;font-weight:bold;font-size:1.9rem;text-decoration:none;letter-spacing:-.05em}.brand span{display:block;font:12px/1.4 system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase}nav{display:flex;gap:1.4rem;font-size:.9rem}nav a{text-decoration:none}
-h1,h2{font-family:Georgia,serif;font-weight:normal;line-height:1.1;letter-spacing:-.035em}h1{font-size:clamp(2.5rem,6vw,4.8rem);margin:.5rem 0 1.4rem}h2{font-size:1.85rem}p{margin:0 0 1.3rem}.intro{max-width:800px;padding:2rem 0 3rem}.intro>p:last-child{max-width:570px;color:var(--muted);font-size:1.15rem}.eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}.card{background:#fffdf6;border-top:3px solid var(--ink);padding:1.75rem}.card h2{margin:.5rem 0 1rem}.card h2 a{text-decoration:none}.card>p{color:var(--muted)}.read{font-size:.85rem;font-weight:bold}.fixture{font-size:.8rem;color:#714014!important;border:1px solid #bf956f;background:#fff4dc;padding:.6rem}.principles{margin-top:4rem;border-top:1px solid var(--line);padding-top:1.4rem;max-width:760px}.principles p,footer{font-size:.9rem;color:var(--muted)}footer{margin-top:2rem;border-top:1px solid var(--line)}
-.story{max-width:760px;margin:1rem auto}.story h1{font-size:clamp(2.3rem,5vw,3.6rem)}.back{display:inline-block;font-size:.9rem;margin-bottom:2rem}.lead{font-size:1.3rem;color:var(--muted);line-height:1.6}.story-body{font-size:1.12rem;line-height:1.85}.citations{font-size:.75em}.sources{border-top:1px solid var(--line);margin-top:3rem;padding-top:1rem;font-size:.9rem}.sources h2{font-size:1.5rem}.sources li{padding-bottom:1rem}.sources p{color:var(--muted)}img{width:100%;height:auto;display:block}figure{margin:2rem 0}figcaption{font-size:.8rem;color:var(--muted);margin-top:.5rem}.empty{padding:2rem 0}
-@media(max-width:620px){header,main,footer{padding:1.25rem}header{align-items:flex-start;flex-direction:column}.brand{font-size:1.7rem}nav{font-size:.85rem;gap:1rem}nav a,.back{padding:.7rem 0}.intro{padding:1.5rem 0 1rem}.grid{grid-template-columns:1fr;margin-top:1.2rem}.card{padding:1.3rem}.lead-story{padding:1.3rem;gap:1.2rem}.lead-headline{font-size:1.7rem}.lead-summary{font-size:1.05rem}.lead{font-size:1.15rem}.story-body{font-size:1.05rem}.principles{margin-top:2.5rem}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-.consent-settings{display:block;margin:1rem auto 2rem;background:#fff;color:#183f31;border:1px solid #183f31;border-radius:5px;padding:.7rem 1rem;cursor:pointer}dialog{max-width:min(34rem,calc(100vw - 2rem));border:1px solid #ccd2c8;border-radius:12px;padding:1.5rem;color:#24372d;background:#fffcf4}dialog::backdrop{background:#14241b77}dialog button{font:inherit;margin:.3rem .3rem .3rem 0;padding:.65rem .8rem;border:1px solid #183f31;border-radius:5px;background:#f3f0e6;color:#183f31;cursor:pointer}dialog #consent-accept{background:#183f31;color:white}
-.related{border-top:1px solid var(--line);margin-top:2.5rem;padding-top:1rem}.related h2{font-size:1.5rem}.related ul{list-style:none;padding:0;margin:0}.related li{padding:.4rem 0;border-bottom:1px solid var(--line)}.related li:last-child{border-bottom:0}.related a{font-weight:600;text-decoration:none}
-/* Homepage lead + card images. Compact intro heading, strongest story first.
-   The lead uses the theme's own surface colour so dark mode stays inherited. */
-.intro{max-width:none;padding:1.6rem 0 1.2rem}
-/* Compact page heading: without an explicit size the inherited h1 clamp stays larger
-   than the lead headline, so the section label would outrank the newest story. */
-.intro h1{margin:0;font-size:1.4rem;letter-spacing:-.01em}
-.lead-story{background:var(--card);border-top:3px solid var(--accent);padding:1.75rem;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:2rem;align-items:start}
-.lead-story--text-only{grid-template-columns:minmax(0,1fr)}.lead-story .card-image{margin:0}
-.lead-text{display:flex;flex-direction:column;align-items:flex-start}
-.lead-headline{font-size:clamp(1.9rem,3.4vw,3rem);margin:.4rem 0 1rem}.lead-headline a{text-decoration:none}
-.lead-summary{font-size:1.15rem;color:var(--muted);max-width:62ch}
-.grid{margin-top:1.5rem}.card .card-image{margin:0 0 1.3rem}
-.pager{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.2rem;margin-top:2.5rem;border-top:1px solid var(--line);padding-top:1.4rem;font-size:.9rem}
-.pager a{display:inline-flex;align-items:center;gap:.4rem;min-height:44px;padding:.6rem 1rem;border:1px solid var(--line);border-radius:5px;text-decoration:none;font-weight:600}
-.pager .page-current{color:var(--muted)}
-@media(max-width:900px){.lead-story{grid-template-columns:minmax(0,1fr)}}
-@media(max-width:620px){.intro{padding:1.2rem 0 1rem}.lead-story{padding:1.3rem;gap:1.2rem}.lead-headline{font-size:1.7rem}.lead-summary{font-size:1.05rem}}
-@media(prefers-color-scheme:dark){.lead-story{background:#1a201c}}
+/* Compatibility layer for the ported portal shell. It loads after every imported
+   theme sheet, so it only adds the missing measured rules and accessibility states.
+   Colours come from the native theme tokens and therefore follow light/dark mode. */
+
+/* Skip link: clear the sticky header and stay above it when focused. */
+.skip,.skip-to-content{position:absolute;left:-999px;top:0;z-index:10000;background:var(--bg,#fff);color:var(--text,#1a1a1a);padding:.75rem 1rem;font-weight:700;text-decoration:none;border-radius:0 0 6px 0}
+.skip:focus,.skip:focus-visible,.skip-to-content:focus,.skip-to-content:focus-visible{left:1rem;top:1rem;z-index:10000;outline:3px solid var(--accent,#c0392b);outline-offset:2px}
+/* The imported dark-mode selector has equal/higher specificity than the generic
+   rule above; redeclare both portal colours for every skip-link state so the
+   unfocused and focused link use the native dark surface and ink. */
+:root[data-theme="dark"] .skip,:root[data-theme="dark"] .skip:focus,:root[data-theme="dark"] .skip:focus-visible,:root[data-theme="dark"] .skip-to-content,:root[data-theme="dark"] .skip-to-content:focus,:root[data-theme="dark"] .skip-to-content:focus-visible{background:var(--portal-bg,#101214);color:var(--portal-ink,#f3f5f7)}
+
+/* Consent: native reset sheets remove the UA dialog centering, so restore it. */
+.consent-settings{display:block;margin:1rem auto 2rem;min-height:44px;background:var(--bg,#fff);color:var(--text,#1a1a1a);border:1px solid var(--portal-line,#d8dee8);border-radius:6px;padding:.6rem 1rem;font:inherit;cursor:pointer}
+.consent-settings:hover{border-color:var(--portal-ink,#071329)}
+dialog{max-width:min(34rem,calc(100vw - 2rem));margin:auto;border:1px solid var(--portal-line,#d8dee8);border-radius:10px;padding:1.5rem;background:var(--bg,#fff);color:var(--text,#1a1a1a)}
+dialog::backdrop{background:rgba(7,19,41,.55)}
+dialog button{font:inherit;min-height:44px;margin:.3rem .3rem .3rem 0;padding:.6rem .9rem;border:1px solid var(--portal-line,#d8dee8);border-radius:6px;background:transparent;color:var(--text,#1a1a1a);cursor:pointer}
+:root[data-theme="dark"] .consent-settings,:root[data-theme="dark"] dialog{background:var(--portal-bg,#101214);color:var(--portal-ink,#f3f5f7)}
+:root[data-theme="dark"] dialog button{color:var(--portal-ink,#f3f5f7)}
+dialog #consent-accept{background:var(--portal-blue,#082867);border-color:var(--portal-blue,#082867);color:#fff}
+dialog button:focus-visible{outline:3px solid var(--accent,#c0392b);outline-offset:2px}
+
+/* Every visible shell control keeps a 44px target at both widths. */
+.portal-icon-button,.hamburger-btn,.theme-toggle-btn,.search-toggle-btn,.portal-action,.main-nav a,.site-search__submit,.site-footer-consent-button,.site-footer-links li a,.consent-settings{min-height:44px}
+.portal-icon-button,.hamburger-btn,.theme-toggle-btn,.search-toggle-btn,.site-search__submit{min-width:44px}
+.portal-icon-button,.portal-action,.main-nav a,.site-footer-links a,.site-footer-consent-button{display:inline-flex;align-items:center}
+.main-nav a{min-height:44px}
+.site-search__submit{width:44px;height:44px}
+:root[data-theme="dark"] .site-search__submit,:root[data-theme="dark"] .site-search__submit svg{color:var(--portal-ink,#f3f5f7)}
+.search button{min-height:44px}
+
+/* The old preview's no-image row rules are intentionally exact: without a thumb,
+   the headline occupies the whole native row at desktop and mobile. */
+.portal-teaser.portal-teaser--no-image{grid-template-columns:minmax(0,1fr)}
+.portal-teaser.portal-teaser--no-image>div{grid-column:1/-1;min-width:0}
+
+/* Text-only lead: keep the original native variant and its natural height. */
+.portal-front-grid--image-free-lead .portal-lead{min-height:0}
+.portal-front-grid--image-free-lead .portal-lead__body{position:relative;left:auto;right:auto;bottom:auto;padding:24px}
+
+/* Image labels/credits sit above the native lead gradient and have a dark surface
+   with white text, comfortably exceeding normal-text contrast requirements. */
+.portal-lead__image-label,.portal-lead__credit{position:absolute;z-index:3;max-width:calc(100% - 24px);padding:.35rem .55rem;border-radius:4px;background:rgba(7,19,41,.92);color:#fff;font:700 12px/1.25 var(--font-sans,system-ui,sans-serif);text-shadow:none}
+.portal-lead__credit a,.portal-lead__credit a:hover{color:#fff;text-decoration:underline}
+.portal-lead__image-label{top:12px;left:12px}
+.portal-lead__credit{right:12px;bottom:12px;overflow-wrap:anywhere;text-align:right}
+.article-hero{position:relative}
+.article-hero .portal-lead__image-label{top:12px;left:12px}
+@media(min-width:901px){
+  .portal-lead__image .portal-lead__credit{top:48px;right:12px;bottom:auto}
+}
+@media(max-width:900px){
+  .portal-lead__image{position:relative}
+  .portal-front-grid--image-free-lead .portal-lead__body{position:relative;left:auto;right:auto;bottom:auto;padding:0}
+}
+
+/* Native category/latest feed: time first, then a body column, with no thumbnail. */
+.portal-feed-item.portal-feed-item--no-image{grid-template-columns:max-content minmax(0,1fr)}
+.portal-feed-item--no-image .portal-feed-item__time{grid-column:1;white-space:nowrap}
+.portal-feed-item--no-image .portal-feed-item__body{grid-column:2;min-width:0;max-width:100%}
+.portal-feed-item--no-image h3,.portal-feed-item--no-image p{min-width:0;max-width:100%;overflow-wrap:anywhere}
+.portal-feed-item--no-image>.fixture{grid-column:1/-1}
+
+/* Archive pager only renders on /sivu/N/; keep its links useful after the retired
+   root card sheet was removed, using the native theme tokens. */
+.pager{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem;margin-top:2rem;border-top:1px solid var(--portal-line,#d8dee8);padding-top:1rem;color:var(--portal-muted,#647084)}
+.pager a,.pager .page-current{display:inline-flex;align-items:center;min-height:44px;padding:.5rem .8rem}
+.pager a{border:1px solid var(--portal-line,#d8dee8);border-radius:5px;color:var(--portal-ink,#071329);font-weight:650;text-decoration:none}
+.pager a:hover{border-color:var(--portal-blue,#082867);text-decoration:underline}
+
+/* Theme control in the mobile menu: hidden on desktop and only occupies space once
+   the native nav has been opened, so the reference header remains one row tall. */
+.theme-menu-item{display:none}
+@media(max-width:900px){
+  .main-nav.nav-open .theme-menu-item{display:block}
+  .main-nav.nav-open .theme-menu-item .theme-toggle-btn{display:flex!important;height:44px!important;min-height:44px;align-items:center;gap:.5rem;width:100%;padding:0 4px;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--portal-ink,#071329);font:650 15px/1.2 var(--font-sans,system-ui,sans-serif);text-align:left;cursor:pointer}
+}
+
+/* Keep one action icon visible for each resolved theme, including before the
+   deferred theme script has attached a data-theme attribute. */
+.theme-icon--dark{display:inline}
+.theme-icon--light{display:none}
+:root[data-theme="light"] .theme-icon--dark{display:inline}
+:root[data-theme="light"] .theme-icon--light{display:none}
+:root[data-theme="dark"] .theme-icon--dark{display:none}
+:root[data-theme="dark"] .theme-icon--light{display:inline}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme]) .theme-icon--dark{display:none}
+  :root:not([data-theme]) .theme-icon--light{display:inline}
+}
+
+/* Native portal metadata has no text node between adjacent spans. */
+.portal-row-card__meta{display:flex;align-items:center;gap:10px}
+.portal-row-card__category{flex-shrink:0;white-space:nowrap}
+@media(max-width:900px){
+  .portal-lead .portal-kicker{margin-right:10px}
+}

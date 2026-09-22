@@ -15,7 +15,8 @@ from .diagnostics import safe_error
 from .editorial import ROOT, digest, timestamp, validate_review, validate_packet
 from datetime import datetime, timezone
 from .release_contract import media, verify_intake, check_article, load_legacy_redirects, legacy_redirect_lines
-from .site import atomic_write, article_path, esc, missing_page, page, render_site
+from .site import (CATEGORY_PAGES, LATEST_PATH, OPPAAT_PATH, atomic_write, article_path,
+                   esc, missing_page, page, render_site)
 from .store import database
 from . import slugs
 
@@ -285,6 +286,13 @@ def public_bundle(store,job,state):
     # exists in this bundle, judged by the same archive_pages validation the sitemap uses.
     atomic_write(site/'404.html',missing_page('/sivu/2/' if 2 in archive_pages else '/'))
     entries+=[_url_entry('https://uutistenlukija.fi/sivu/'+str(n)+'/') for n in sorted(archive_pages)]
+    # Category/latest/guides routes are sitemap entries only when the bundle really
+    # contains a page whose canonical points back to that exact route. This keeps a
+    # stale or tampered directory out without changing article/archive/legacy checks.
+    listing_paths = [f'categories/{slug}/' for slug, _display in CATEGORY_PAGES]
+    listing_paths += [LATEST_PATH.lstrip('/'), OPPAAT_PATH.lstrip('/')]
+    entries += [_url_entry('https://uutistenlukija.fi/'+path)
+                for path in listing_paths if _published_page(site, path)]
     atomic_write(site/'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(entries)+'</urlset>')
     atomic_write(site/'robots.txt','User-agent: *\nAllow: /\nSitemap: https://uutistenlukija.fi/sitemap.xml\n')
     # --- Redirects: reviewed legacy mappings plus same-article hash aliases -----
@@ -425,6 +433,9 @@ def publish(store,job,state,config_path):
             cmd('gh','run','download',str(run['databaseId']),'--repo',REPO,'--name','live-deployment','--dir',str(receipt_dir))
         live=json.loads((receipt_dir/'live-deployment.json').read_text())
         assert live['remote_commit']==row['remote_commit'] and live['packet_sha256']==row['packet_sha'] and live['draft_sha256']==row['draft_sha'] and live['image_sha256']==row['image_sha']
+        if (('stock_image' in live) != ('stock_image' in binding) or
+                live.get('stock_image') != binding.get('stock_image')):
+            raise ValueError('Deployment stock binding mismatch')
         if live.get('text_only') != binding.get('text_only'):
             raise ValueError('Deployment text policy/provenance mismatch')
         # Legacy image deployment records predate text_provenance, so only new

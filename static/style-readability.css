@@ -1,75 +1,12 @@
-/* Reading-quality and Core Web Vitals refinements.
-   Appended after style.css so it can only add, never restyle the existing design.
-   Every rule here targets a measured gap: headline widows, image layout shift,
-   anchor targets hidden behind the header, and dark-mode/prefers-color-scheme. */
+/* Accessibility refinements only. The imported portal theme owns all colour,
+   typography, card and grid styling; nothing here may restyle the design, so the
+   sheet stays palette-free and keeps to two measured gaps: anchor targets that
+   would otherwise land under the sticky header, and long compounds overflowing
+   narrow screens. */
 
-/* Balanced headline wrapping; `pretty` on body copy avoids single-word last lines.
-   Both degrade harmlessly where unsupported. */
-h1,h2,h3{text-wrap:balance}
-.story-body p,.lead,.card>p{text-wrap:pretty}
-
-/* Reserve image space so late-loading images cannot shift the article (CLS). */
-figure img,img{aspect-ratio:attr(width) / attr(height)}
-
-/* Pin the reserved box to the source dimensions once known, and stop long first
-   paints from blocking interaction on article pages. */
-.story-body img,figure img{height:auto}
-
-/* Anchor targets must not hide under the header, and citations should land with
-   a little breathing room rather than flush against the viewport top. */
+/* In-page anchors (citations, section links, #sisalto) must clear the sticky header. */
 [id]{scroll-margin-top:5rem}
 .sources li{scroll-margin-top:6rem}
 
-/* Long Finnish compounds: allow a break rather than overflowing narrow screens. */
-.story-body,.card h2,.lead{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
-
-/* Category eyebrow colours: give each section a stable hue so a reader can tell
-   sections apart at a glance without relying on position alone. These are the
-   light-paper values (6.0-8.8:1 on #fffdf6); dark mode re-declares every one of
-   them below against the dark card, because a hue tuned for light paper lands
-   around 2:1 on #1a201c. `Maailma` is emitted by editorial.CATEGORIES and needs
-   a rule of its own; `Ulkomaat`/`Teknologia` are retained so older renders and
-   any legacy data keep a colour rather than falling back to the accent. */
-.eyebrow[data-category="Kotimaa"]{color:#a34422}
-.eyebrow[data-category="Maailma"]{color:#1f4b7a}
-.eyebrow[data-category="Talous"]{color:#1d5c46}
-.eyebrow[data-category="Tiede"]{color:#5b3f86}
-.eyebrow[data-category="Kulttuuri"]{color:#8a3b5c}
-.eyebrow[data-category="Urheilu"]{color:#3d6b1f}
-.eyebrow[data-category="Ulkomaat"]{color:#1f4b7a}
-.eyebrow[data-category="Teknologia"]{color:#0f6470}
-
-/* Respect the user's system colour preference instead of forcing light paper. */
-:root{color-scheme:light}
-@media(prefers-color-scheme:dark){
-  :root{--ink:#e8ece7;--muted:#b3bcb4;--paper:#131815;--accent:#e6a07c;--line:#2c352f;color-scheme:dark}
-  .card{background:#1a201c}
-  .card>p{color:var(--muted)}
-  .principles p,footer{color:var(--muted)}
-  a:hover{color:var(--accent)}
-  dialog{background:#1a201c;color:var(--ink);border-color:#3a453d}
-  .consent-settings{background:#1a201c;color:var(--ink);border-color:#3a453d}
-  dialog button{background:#232b26;color:var(--ink);border-color:#3a453d}
-  dialog #consent-accept{background:var(--accent);color:#131815}
-  /* Same hues, re-tuned for #1a201c. Every value below is >=7.6:1, so the 12px
-     uppercase eyebrow clears the 4.5:1 normal-text bar with margin to spare.
-     Declared after the light rules and inside this block, so source order alone
-     wins the cascade without needing higher specificity. */
-  .eyebrow[data-category="Kotimaa"]{color:#f0a074}
-  .eyebrow[data-category="Maailma"]{color:#8ab4e8}
-  .eyebrow[data-category="Talous"]{color:#63c9a1}
-  .eyebrow[data-category="Tiede"]{color:#bfa3f0}
-  .eyebrow[data-category="Kulttuuri"]{color:#f098b8}
-  .eyebrow[data-category="Urheilu"]{color:#a8d46a}
-  .eyebrow[data-category="Ulkomaat"]{color:#8ab4e8}
-  .eyebrow[data-category="Teknologia"]{color:#5fc4cf}
-}
-
-/* Tap targets: the nav links and read-more affordance should stay comfortable
-   on touch screens without changing the visual design. min-height is an explicit
-   guarantee so a later line-height/font-size change cannot shrink them below 44px
-   again; box-sizing:border-box is global, so padding is included in the box. */
-@media(max-width:620px){
-  nav a{display:inline-block;min-height:44px;padding:.7rem 0}
-  .read{display:inline-block;min-height:44px;padding:.7rem 0}
-}
+/* Finnish compounds: break rather than force a horizontal scrollbar at 320px. */
+.story-body,.lead{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}

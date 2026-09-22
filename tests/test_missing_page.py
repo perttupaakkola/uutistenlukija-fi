@@ -161,22 +161,26 @@ class MissingPage(unittest.TestCase):
         self.assertIn('<a href="/tietosuoja/">Tietosuoja</a>', self.html)
 
     def test_search_form_is_labelled_google_search_scoped_to_the_site(self):
-        form = elements(self.doc, "form")
-        self.assertEqual(len(form), 1)
-        self.assertEqual(form[0]["action"], GOOGLE)
-        self.assertEqual(form[0]["method"].lower(), "get")
-        self.assertEqual(form[0]["role"], "search")
+        form = elements(self.doc, "form", role="search")
+        self.assertEqual(len(form), 2)
+        for attrs in form:
+            self.assertEqual(attrs["action"], GOOGLE)
+            self.assertEqual(attrs["method"].lower(), "get")
+            self.assertEqual(attrs["role"], "search")
         query = elements(self.doc, "input", name="q")
-        self.assertEqual(len(query), 1)
-        self.assertEqual(query[0]["type"], "search")
-        self.assertEqual(query[0].get("value", ""), "")
-        self.assertEqual(query[0]["id"], "q")
-        labels = elements(self.doc, "label", **{"for": "q"})
-        self.assertEqual(len(labels), 1)
+        self.assertEqual(len(query), 2)
+        self.assertEqual({attrs["type"] for attrs in query}, {"search"})
+        self.assertEqual({attrs.get("value", "") for attrs in query}, {""})
+        self.assertEqual({attrs["id"] for attrs in query},
+                         {"header-search-input", "missing-search-input"})
+        labels = [attrs for attrs in elements(self.doc, "label")
+                  if attrs.get("for") in {"header-search-input", "missing-search-input"}]
+        self.assertEqual(len(labels), 2)
         self.assertIn("Hae uutisia Googlesta", self.text)
         self.assertIn("Googlen omalla sivulla", self.text)
         self.assertEqual(elements(self.doc, "input", type="hidden"),
-                         [{"type": "hidden", "name": "sitesearch", "value": "uutistenlukija.fi"}])
+                         [{"type": "hidden", "name": "sitesearch", "value": "uutistenlukija.fi"},
+                          {"type": "hidden", "name": "sitesearch", "value": "uutistenlukija.fi"}])
         self.assertEqual(site.SEARCH_SITE, "uutistenlukija.fi")
         self.assertNotIn("q=", self.html)
 

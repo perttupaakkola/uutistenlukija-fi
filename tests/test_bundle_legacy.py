@@ -23,7 +23,12 @@ from news_mvp.release_contract import (LEGACY_REDIRECTS,legacy_inventory,legacy_
 from news_mvp.site import article_path
 from news_mvp.store import database
 
-SOURCE='/oppaat/kauppojen-aukioloajat/'
+# A guide path with no page in the bundle. The old fixture used /oppaat/... and the
+# renderer now writes a real /oppaat/ index, which makes any path under it public
+# content the release refuses to redirect; the intended case here is the opposite (a
+# reviewed mapping onto a path the bundle does not serve), so the source moves to a
+# top-level guide tree no page occupies.
+SOURCE='/aiemmat-oppaat/kauppojen-aukioloajat/'
 FOREIGN='/uutiset/foreign-canonical-abcdef123456/'
 
 
@@ -105,8 +110,8 @@ class BundleLegacyRedirects(unittest.TestCase):
         self.assertEqual(receipt['files']['_redirects'],hashlib.sha256(text.encode()).hexdigest())
         self.assertEqual(check(site,receipt),len(receipt['files']))
         # The legacy source is a redirect, never a page this bundle serves.
-        self.assertFalse((self.site/'oppaat/kauppojen-aukioloajat/index.html').exists())
-        self.assertNotIn('oppaat/kauppojen-aukioloajat/index.html',receipt['files'])
+        self.assertFalse((self.site/'aiemmat-oppaat/kauppojen-aukioloajat/index.html').exists())
+        self.assertNotIn('aiemmat-oppaat/kauppojen-aukioloajat/index.html',receipt['files'])
 
     def test_unmatched_reviewed_inventory_stays_dead_with_helpful_404(self):
         # The committed document: 20 measured 404 paths, no reviewed equivalent. No fixture
@@ -248,7 +253,7 @@ class BundleLegacyRedirects(unittest.TestCase):
         article=article_path(clones[0])
         self.assertNotEqual('/'+article,self.canonical())
         collisions=['/tietosuoja/','/kuvituskuvat/','/sivu/2/','/sivu/','/uutiset/','/'+article,
-                    '/mvp-assets/','/404.html/']
+                    '/mvp-assets/','/404.html/','/oppaat/','/oppaat/kauppojen-aukioloajat/']
         for source in collisions:
             with self.subTest(source=source),self.loader(self.reviewed([mapping(source=source,target=self.canonical())])),self.assertRaises(ValueError):
                 self.bundle()

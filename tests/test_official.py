@@ -1,4 +1,4 @@
-import copy, hashlib, json, tempfile, unittest
+import copy, hashlib, json, re, tempfile, unittest
 from datetime import datetime, timezone
 from pathlib import Path
 from unittest.mock import patch
@@ -10,6 +10,7 @@ from news_mvp.intake import collect
 from news_mvp.live import live_tick
 from news_mvp.site import render_site
 from news_mvp.store import database
+from image_helpers import editorial_images, scan
 NOW = datetime(2026, 9, 11, 15, tzinfo=timezone.utc)
 TEXT = 'Helsingin kaupunki kertoo, että uusi kirjasto avataan syyskuussa. Kirjaston palveluihin kuuluvat kirjojen lainaus ja lukutilat. Kaupunki tiedottaa palveluista verkkosivuillaan. Tiedote koskee Helsingin asukkaille suunnattuja palveluita.'
 def article(date='2026-09-11T13:00:00+03:00'):
@@ -21,7 +22,7 @@ class Official(unittest.TestCase):
         self.rights=b'<div class="notes"><p>Official dataset permission</p></div><a rel="dc:rights" href="https://creativecommons.org/licenses/by/4.0/">CC</a><a rel="dc:rights" href="https://creativecommons.org/licenses/by/4.0/deed.fi">CC</a>'
         self.spec['providers']['helsinki']['rights_text_sha256']=hashlib.sha256(official.rights_text(self.rights,'helsinki').encode()).hexdigest()
         self.recipe={'family':'finnish-official','provider':'helsinki','url':'https://www.hel.fi/fi/uutiset/uusi-kirjasto'}
-        self.config={'enabled':True,'backend':'hermes','state_dir':str(self.root/'state'),'output_dir':str(self.root/'site'),'max_source_age_hours':48,'discovery':{'family':'finnish-official','max_candidates':5}}
+        self.config={'enabled':True,'backend':'hermes','state_dir':str(self.root/'state'),'output_dir':str(self.root/'site'),'max_source_age_hours':48,'illustrations':False,'discovery':{'family':'finnish-official','max_candidates':5}}
         self.cfg=self.root/'config.json';self.cfg.write_text(json.dumps(self.config))
     def packet(self,raw=None):
         def fetch(url,hosts):return (self.rights if url==self.spec['providers']['helsinki']['rights_url'] else raw or article(),'text/html',url)
@@ -87,7 +88,9 @@ class Official(unittest.TestCase):
     def test_private_imageless_render_with_attribution(self):
         self.assertEqual(self.run_editorial(True)['status'],'rendered');html=next((self.root/'site/uutiset').glob('*/index.html')).read_text()
         for word in ['Ei kuvaa:','CC BY 4.0','tietoja on tiivistetty','noindex,nofollow']:self.assertIn(word,html)
-        self.assertNotIn('<img',html);self.assertNotIn('kuvan käyttöoikeus on tarkastettu',html)
+        # No editorial picture on a text-only page; branding chrome is a separate concern.
+        self.assertEqual(editorial_images(scan(html)),[])
+        self.assertNotIn('kuvan käyttöoikeus on tarkastettu',html)
         with database(self.config['state_dir']) as store,self.assertRaises(ValueError):render_site(store,self.root/'public',self.root/'state',public=True)
         self.assertFalse((self.root/'public').exists())
     def test_review_rejection_has_no_render(self):
