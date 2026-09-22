@@ -205,7 +205,7 @@ def diagnose(data, articles=None):
     if not isinstance(rows, list) or not rows:
         return _insufficient("no joined deployed-article rows were provided")
 
-    cohort, unknown, seen_urls = [], [], set()
+    cohort, unknown, seen_urls, seen_ids = [], [], set(), set()
     for row in rows:
         if not isinstance(row, dict):
             return _insufficient("a joined article row is not a mapping")
@@ -222,6 +222,14 @@ def diagnose(data, articles=None):
             return _insufficient("a row is not an exactly deployed article")
         if not _has_id(row.get("id")):
             return _insufficient("a row does not carry an article id")
+        # Identity is global, not per URL: the same article id on two rows - whatever their URLs
+        # or GSC coverage, including unknown/missing and zero-impression rows - would let one
+        # article pad the measured cohort as two evidence units, so it fails the gate closed.
+        article_id = str(row["id"]).strip()
+        if article_id in seen_ids:
+            return _insufficient(
+                f"duplicate article ids make the cohort ambiguous ({article_id})")
+        seen_ids.add(article_id)
         gsc = row.get("gsc")
         if gsc is None:
             unknown.append(url)
@@ -268,8 +276,15 @@ def diagnose(data, articles=None):
 
     unknown_coverage = len(unknown)
     measured_urls = len(cohort)
-    total_clicks = sum(row["clicks"] for row in cohort)
-    total_impressions = sum(row["impressions"] for row in cohort)
+    try:
+        total_clicks = sum(row["clicks"] for row in cohort)
+        total_impressions = sum(row["impressions"] for row in cohort)
+    except OverflowError:
+        return _insufficient("the summed GSC clicks/impressions overflow the numeric range")
+    # Individually valid rows can still sum past the finite float range; an inf/nan aggregate
+    # is not evidence, so the diagnosis abstains instead of reporting it.
+    if not (_is_number(total_clicks) and _is_number(total_impressions)):
+        return _insufficient("the summed GSC clicks/impressions are not finite")
     if total_impressions < MIN_IMPRESSIONS_FOR_CTR:
         return _insufficient(
             f"joined deployed articles carry only {total_impressions} measured GSC impressions "
@@ -282,12 +297,24 @@ def diagnose(data, articles=None):
     exposure = (f"coverage: {total_impressions} measured impressions across {len(exposed)} "
                 f"exposed URL(s) of {measured_urls} measured row(s), {unknown_coverage} deployed "
                 f"article(s) with a missing GSC row (excluded, never counted as zero)")
-    ctr = 100.0 * total_clicks / total_impressions
+    # Scale after dividing so a huge-but-finite clicks total cannot overflow the intermediate
+    # 100*clicks into +inf and masquerade as a healthy CTR.
+    try:
+        ctr = 100.0 * (total_clicks / total_impressions)
+    except OverflowError:
+        return _insufficient("the CTR ratio overflows the numeric range")
+    if not _is_number(ctr):
+        return _insufficient("the CTR ratio is not finite")
     if ctr >= LOW_CTR_THRESHOLD:
         return []
 
-    weighted_position = (sum(row["impressions"] * row["position"] for row in exposed)
-                         / total_impressions)
+    try:
+        weighted_total = sum(row["impressions"] * row["position"] for row in exposed)
+        weighted_position = weighted_total / total_impressions
+    except OverflowError:
+        return _insufficient("the impression-weighted position overflows the numeric range")
+    if not _is_number(weighted_position):
+        return _insufficient("the impression-weighted position is not finite")
     if weighted_position <= LOW_POSITION_MAX:
         position_note = ("Average position is on page one, so investigate title/meta intent "
                          "alignment before assuming a snippet failure.")

@@ -6,6 +6,8 @@ must abstain with `insufficient_evidence` and `no_evidence` rather than guess. A
 alone is never readership evidence, and the ceiling is never raised from a shortfall.
 """
 import json
+import math
+import re
 import tempfile
 import unittest
 from pathlib import Path
@@ -75,6 +77,15 @@ class Diagnose(unittest.TestCase):
             self.assertIn(key, verdict)
         return verdict
 
+    def _assert_no_nonfinite_leaks(self, hypothesis):
+        """An abstention or verdict must never carry inf/nan into its own report text."""
+        for key, value in hypothesis.items():
+            if isinstance(value, float):
+                self.assertTrue(math.isfinite(value), f"{key} is not finite: {value!r}")
+            elif isinstance(value, str):
+                self.assertIsNone(re.search(r"\b(?:inf|nan)\b", value, re.IGNORECASE),
+                                  f"{key} exposes a non-finite value: {value!r}")
+
     def test_tiny_cohort_abstains(self):
         rows = [self._row(gsc={"clicks": 0, "impressions": 40, "position": 6.0})]
         self._assert_abstains(self._data(rows))
@@ -141,6 +152,63 @@ class Diagnose(unittest.TestCase):
 
     def test_duplicate_canonical_rows_abstain(self):
         self._assert_abstains(self._data([self._row(slug="same"), self._row(slug="same")]))
+
+    def test_aggregate_overflow_from_individually_valid_rows_abstains(self):
+        # Two rows are each valid on their own (clicks 0 <= impressions 1e308, position 5),
+        # but their impressions sum past the finite float range. The aggregate is not
+        # evidence, so it must abstain rather than emit an inf/nan-bearing hypothesis.
+        rows = [self._row(slug="huge-a", gsc={"clicks": 0, "impressions": 1e308,
+                                             "position": 5.0}),
+                self._row(slug="huge-b", gsc={"clicks": 0, "impressions": 1e308,
+                                              "position": 5.0})]
+        verdict = self._assert_abstains(self._data(rows))
+        self.assertIn("not finite", verdict["evidence"])
+        self._assert_no_nonfinite_leaks(verdict)
+
+    def test_huge_finite_click_ratio_is_not_falsely_healthy(self):
+        # 100 * clicks overflows to +inf for huge-but-valid clicks, which used to make a
+        # 1.9% cohort look like a healthy CTR and suppress the verdict entirely.
+        row = self._row(slug="huge-clicks", gsc={"clicks": 1.9e306, "impressions": 1e308,
+                                                 "position": 1.0})
+        hypotheses = learn.diagnose(self._data([row]), [])
+        self.assertEqual(len(hypotheses), 1, hypotheses)
+        self.assertEqual(hypotheses[0]["verdict"], "tentative")
+        self.assertIn("1.90% CTR", hypotheses[0]["evidence"])
+        self._assert_no_nonfinite_leaks(hypotheses[0])
+        # A genuinely healthy ratio on the same huge scale still yields no verdict.
+        healthy = self._row(slug="huge-healthy", gsc={"clicks": 5e306, "impressions": 1e308,
+                                                      "position": 1.0})
+        self.assertEqual(learn.diagnose(self._data([healthy]), []), [])
+
+    def test_overflowing_weighted_position_abstains_rather_than_reporting_nan(self):
+        row = self._row(slug="huge-position", gsc={"clicks": 1, "impressions": 1e308,
+                                                   "position": 5.0})
+        verdict = self._assert_abstains(self._data([row]))
+        self._assert_no_nonfinite_leaks(verdict)
+
+    def test_duplicate_article_ids_with_distinct_urls_abstain(self):
+        first = self._row(slug="same-id", gsc={"clicks": 1, "impressions": 500, "position": 5.0})
+        second = self._row(slug="same-id", gsc={"clicks": 1, "impressions": 500, "position": 5.0})
+        second["canonical_url"] = "https://uutistenlukija.fi/uutiset/same-id-second"
+        verdict = self._assert_abstains(self._data([first, second]))
+        self.assertIn("duplicate article ids", verdict["evidence"])
+
+    def test_duplicate_article_ids_cannot_pad_evidence_with_missing_or_zero_rows(self):
+        measured = self._row(slug="dup", gsc={"clicks": 1, "impressions": 1000,
+                                              "position": 8.0})
+        missing = self._missing_row("dup")
+        missing["canonical_url"] = "https://uutistenlukija.fi/uutiset/dup-missing"
+        self._assert_abstains(self._data([measured, missing]))
+        quiet = self._row(slug="dup", gsc={"clicks": 0, "impressions": 0, "position": None})
+        quiet["canonical_url"] = "https://uutistenlukija.fi/uutiset/dup-quiet"
+        self._assert_abstains(self._data([measured, quiet]))
+
+    def test_distinct_ids_on_distinct_urls_remain_tentative(self):
+        rows = [self._row(slug="one", gsc={"clicks": 1, "impressions": 500, "position": 5.0}),
+                self._row(slug="two", gsc={"clicks": 1, "impressions": 500, "position": 5.0})]
+        hypotheses = learn.diagnose(self._data(rows), [])
+        self.assertEqual(len(hypotheses), 1, hypotheses)
+        self.assertEqual(hypotheses[0]["verdict"], "tentative")
 
     def test_missing_gsc_row_does_not_discard_the_measured_cohort(self):
         """Normal complete analytics: some deployed articles simply have no GSC row."""
