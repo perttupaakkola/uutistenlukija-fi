@@ -16,6 +16,11 @@ def media(packet, draft, policy_gate=True):
     validate_draft(draft, packet)
     if packet.get('fixture') is not False or packet.get('private_only') is True:
         raise ValueError('Fixture/private-only packet cannot be public')
+    # An official release is a packet carrying a text publication_basis. It must satisfy the
+    # full text policy/provider/source/reuse/rights contract below whether or not the draft
+    # also carries an image, so a generated illustration can never displace text provenance.
+    official = packet.get('publication_basis') is not None
+    image_sha256 = None
     image = draft.get('image')
     if image is not None:
         # An official text source cannot authorise a third-party IMAGE: its reuse terms cover
@@ -25,7 +30,7 @@ def media(packet, draft, policy_gate=True):
         # when it carries the full generation provenance recorded by news_mvp/imagery.py, and
         # it is always labelled as an AI illustration rather than documentary evidence.
         generated = image.get('generated') is True
-        if packet.get('publication_basis') is not None and not generated:
+        if official and not generated:
             raise ValueError('Text-only policy cannot authorize a third-party image')
         sha = image.get('sha256', '')
         if not re.fullmatch(SHA, sha) or image.get('local_path') != f'media/{sha}.jpg':
@@ -38,7 +43,11 @@ def media(packet, draft, policy_gate=True):
                 raise ValueError('Generated image prompt hash is malformed')
             if 'AI' not in str(image.get('credit', '')):
                 raise ValueError('Generated image must be credited as AI-generated')
-        return {'image_sha256': sha}
+        if not official:
+            # The packet claims no text policy, so it has no text provenance to bind; the
+            # image-only binding is labelled as such instead of leaving the field absent.
+            return {'image_sha256': sha, 'text_provenance': 'not-applicable'}
+        image_sha256 = sha
     from .official import policy, reuse
     spec = policy()
     basis = packet.get('publication_basis', {})
@@ -93,8 +102,42 @@ def media(packet, draft, policy_gate=True):
         not re.fullmatch(SHA, basis.get('source_sha256','')) or
         basis.get('source_fields_sha256') != digest(source)):
         raise ValueError('Rights/source provenance mismatch')
-    return {'image_sha256': None, 'text_only': {'policy':TEXT_POLICY,'policy_sha256':digest(spec),
+    return {'image_sha256': image_sha256, 'text_only': {'policy':TEXT_POLICY,'policy_sha256':digest(spec),
             'provenance_sha256':digest({'basis':basis,'sources':sources,'rights':docs})}}
+
+
+def _original_intake(packet, root):
+    """Find the unique stored text-only original behind a generated illustration.
+
+    The controller replaces a captured original (``image`` None, ``image_note`` present)
+    with the reviewed generated image and drops ``image_note``, so the packet digest no
+    longer names the intake directory that holds the captured bytes. Identity is the
+    original directory name plus a full projection match: every key/value except ``image``
+    and ``image_note`` must be equal, so a changed source/rights/policy/corroboration
+    field can never match. Malformed unrelated candidates are skipped, never matched.
+    """
+    current = {key: value for key, value in packet.items() if key not in ('image', 'image_note')}
+    try:
+        children = sorted(root.iterdir())
+    except OSError:
+        children = []
+    matches = []
+    for child in children:
+        if not child.is_dir():
+            continue
+        try:
+            candidate = json.loads((child/'packet.json').read_text())
+        except (OSError, ValueError):
+            continue
+        if not isinstance(candidate, dict) or candidate.get('image') is not None:
+            continue
+        projected = {key: value for key, value in candidate.items() if key not in ('image', 'image_note')}
+        if projected != current or child.name != digest(candidate):
+            continue
+        matches.append((child, candidate))
+    if len(matches) != 1:
+        raise ValueError('Generated intake original is missing or ambiguous')
+    return matches[0]
 
 
 def verify_intake(packet, state):
@@ -102,6 +145,9 @@ def verify_intake(packet, state):
     from .official import rights_text, source_fields, policy, ADDITIONAL_PROVIDERS
     basis = packet['publication_basis'];provider = basis['provider']
     directory = Path(state)/'intake'/digest(packet)
+    intake_packet = packet
+    if not directory.is_dir() and isinstance(packet.get('image'), dict) and packet['image'].get('generated') is True:
+        directory, intake_packet = _original_intake(packet, Path(state)/'intake')
     raw = (directory/'source.html').read_bytes();rights = (directory/'rights.html').read_bytes()
     if hashlib.sha256(raw).hexdigest() != basis['source_sha256'] or hashlib.sha256(rights).hexdigest() != packet['supporting_documents'][0]['sha256']:
         raise ValueError('Captured intake bytes changed')
@@ -113,13 +159,13 @@ def verify_intake(packet, state):
     if provider in ADDITIONAL_PROVIDERS:
         receipt = json.loads((directory/'receipt.json').read_text())
         expected = {'fixture':False, 'provider':provider, 'source_url':packet['sources'][0]['url'],
-                    'source_sha256':basis['source_sha256'], 'packet_sha256':digest(packet),
+                    'source_sha256':basis['source_sha256'], 'packet_sha256':digest(intake_packet),
                     'rights_url':packet['supporting_documents'][0]['url'],
                     'rights_sha256':packet['supporting_documents'][0]['sha256'],
                     'rights_text_sha256':policy()['providers'][provider]['rights_text_sha256'],
                     'publication_basis':basis, 'image_status':'explicit-text-only',
                     'retrieved_at':packet['supporting_documents'][0]['retrieved_at']}
-        if receipt != expected or json.loads((directory/'packet.json').read_text()) != packet:
+        if receipt != expected or json.loads((directory/'packet.json').read_text()) != intake_packet:
             raise ValueError('Captured intake receipt/packet identity mismatch')
 
 
@@ -146,6 +192,19 @@ def receipt_media(receipt):
     expected=media(packet,draft)
     actual={'image_sha256':receipt['image_sha256']}
     if 'text_only' in receipt:actual['text_only']=receipt['text_only']
+    if 'text_provenance' in receipt:
+        if receipt['text_provenance']!='not-applicable':
+            raise ValueError('Unexpected text provenance')
+        actual['text_provenance']=receipt['text_provenance']
+    if 'text_only' not in receipt and 'text_provenance' not in receipt:
+        # v2 image-only receipts predate text provenance. They stay admissible only for packets
+        # that claim no official publication_basis, whose media binding is exactly the image
+        # hash; an official packet missing its text binding is rejected, never inferred.
+        if packet.get('publication_basis') is not None:
+            raise ValueError('Official receipt is missing its text binding')
+        if set(expected)!={'image_sha256','text_provenance'}:
+            raise ValueError('Receipt media/provenance mismatch')
+        expected={'image_sha256':expected['image_sha256']}
     if expected!=actual:
         raise ValueError('Receipt media/provenance mismatch')
     return expected

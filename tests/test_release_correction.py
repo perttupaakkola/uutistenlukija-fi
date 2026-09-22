@@ -40,8 +40,12 @@ class Correction(unittest.TestCase):
                 with self.assertRaises(ValueError):check(site,bad)
                 with self.assertRaises(ValueError):self.workflow(bad)
     def test_actual_legacy_and_v2_imaged_and_mismatch(self):
-        job,sha=self.image_job();site,legacy=self.bundle(job)
-        self.assertNotIn('schema_version',legacy);check(site,legacy);self.assertEqual(self.workflow(legacy)['image_sha256'],sha)
+        job,sha=self.image_job();site,receipt=self.bundle(job)
+        self.assertEqual(receipt['schema_version'],2);self.assertEqual(receipt['text_provenance'],'not-applicable')
+        check(site,receipt);self.assertEqual(self.workflow(receipt)['image_sha256'],sha)
+        legacy={key:value for key,value in receipt.items() if key not in ('schema_version','packet','draft','review','text_provenance')}
+        self.assertNotIn('schema_version',legacy)
+        check(site,legacy);self.assertEqual(self.workflow(legacy)['image_sha256'],sha)
         v2={**legacy,'schema_version':2,'packet':json.loads(job['packet']),'draft':json.loads(job['draft']),'review':json.loads(job['review'])}
         check(site,v2);self.assertEqual(self.workflow(v2)['image_sha256'],sha)
         for bad in [{**legacy,'packet':v2['packet']},{**legacy,'schema_version':1},{**v2,'image_sha256':'0'*64},{**v2,'text_only':None}]:

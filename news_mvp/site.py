@@ -11,8 +11,116 @@ from . import indexing, seo, slugs
 from .editorial import ROOT, digest, timestamp, validate_draft, validate_review
 
 
+SITE_NAME = "Uutistenlukija"
+SITE_URL = "https://uutistenlukija.fi/"
+HOME_DESCRIPTION = "Uutiset, niiden tausta ja alkuperäiset lähteet samassa paikassa."
+GENERATED_IMAGE_FALLBACK = (1536, 1024)
+# Exact licence URLs whose short name is CC BY 4.0. Trailing-slash variants are
+# the same canonical document, so they are normalised before matching.
+CC_BY_40_URLS = frozenset({
+    "https://creativecommons.org/licenses/by/4.0",
+    "https://creativecommons.org/licenses/by/4.0/deed.fi",
+})
+
+
+def short_license_label(license_url):
+    """Standard short name for a licence URL, or "" when the URL is not that licence.
+
+    This never invents terms: the stored licence text stays the label unless the
+    record points at the exact known CC BY 4.0 document.
+    """
+    normalized = str(license_url or "").strip().rstrip("/")
+    return "CC BY 4.0" if normalized in CC_BY_40_URLS else ""
+
+
 def esc(value):
     return html.escape(str(value), quote=True)
+
+
+def _positive_int(value):
+    if isinstance(value, bool) or not isinstance(value, int):
+        return None
+    return value if value > 0 else None
+
+
+def image_dimensions(image):
+    """Intrinsic (width, height) for an <img>, or None when the record has none.
+
+    Generated illustrations predate recorded pixel metadata in legacy records, so
+    they fall back to the generator's known output size. Source photographs without
+    recorded dimensions must not claim a size they never had.
+    """
+    pixels = image.get("pixels")
+    if isinstance(pixels, dict):
+        width, height = _positive_int(pixels.get("width")), _positive_int(pixels.get("height"))
+        if width and height:
+            return width, height
+    width, height = _positive_int(image.get("width")), _positive_int(image.get("height"))
+    if width and height:
+        return width, height
+    if image.get("generated") is True:
+        return GENERATED_IMAGE_FALLBACK
+    return None
+
+
+def image_size_attributes(image):
+    """`width`/`height` (when known) and `decoding` attributes for an <img>."""
+    dimensions = image_dimensions(image)
+    size = f' width="{dimensions[0]}" height="{dimensions[1]}"' if dimensions else ""
+    return size + ' decoding="async"'
+
+
+def jsonld_script(payload):
+    """JSON-LD script tag; `<` is escaped so record text cannot close the tag."""
+    data = json.dumps(payload, ensure_ascii=False)
+    for char, replacement in (("<", "\\u003c"), (">", "\\u003e"), ("&", "\\u0026")):
+        data = data.replace(char, replacement)
+    return f'<script type="application/ld+json">{data}</script>'
+
+
+def website_jsonld():
+    return {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": SITE_NAME,
+        "url": SITE_URL,
+        "description": HOME_DESCRIPTION,
+        "inLanguage": "fi",
+    }
+
+
+def home_item_list_jsonld(articles):
+    """ItemList naming exactly the stories listed on the homepage, in that order."""
+    return {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": position,
+                "url": SITE_URL + article_path(job),
+                "name": draft["title"],
+            }
+            for position, (job, _, draft, _) in enumerate(articles, 1)
+        ],
+    }
+
+
+def homepage_head_meta(articles):
+    """Description/OG/Twitter/JSON-LD block for the public homepage only."""
+    title = f"Uusimmat uutiset · {SITE_NAME}"
+    metas = (
+        f'<meta name="description" content="{esc(HOME_DESCRIPTION)}">'
+        f'<meta property="og:site_name" content="{esc(SITE_NAME)}">'
+        f'<meta property="og:type" content="website">'
+        f'<meta property="og:title" content="{esc(title)}">'
+        f'<meta property="og:url" content="{esc(SITE_URL)}">'
+        f'<meta property="og:description" content="{esc(HOME_DESCRIPTION)}">'
+        f'<meta name="twitter:card" content="summary">'
+        f'<meta name="twitter:title" content="{esc(title)}">'
+        f'<meta name="twitter:description" content="{esc(HOME_DESCRIPTION)}">'
+    )
+    return metas + jsonld_script(website_jsonld()) + jsonld_script(home_item_list_jsonld(articles))
 
 
 def atomic_write(path, value):
@@ -60,6 +168,13 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
     extra_assets = f'<link rel="stylesheet" href="/{assets}/style-readability.css">' if readability_present else ""
     banner = "" if public else '<div class="preview">Yksityinen esikatselu · ei julkaistu</div>'
     consent = ((ROOT / "static/consent.html").read_text() if public else "")
+    # Public pages link their privacy notice and RSS feed; the private preview has
+    # neither, so it must not advertise pages that were never published.
+    if public:
+        footer_tagline = ('Suomenkielinen uutispalvelu.<br><a href="/tietosuoja/">Tietosuoja</a> · '
+                          '<a href="/#lahteet">Lähteet ja toimitus</a> · <a href="/rss.xml">RSS-syöte</a>')
+    else:
+        footer_tagline = "Tämä paikallinen versio on tarkastelua varten."
     return f'''<!doctype html>
 <html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 {head}<title>{esc(title)} · Uutistenlukija</title>
@@ -69,7 +184,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
 <header><a class="brand" href="/">Uutistenlukija<span>Uutiset selkeästi.</span></a>
 <nav aria-label="Päänavigaatio"><a href="/">Uusimmat</a><a href="/#lahteet">Lähteet ja toimitus</a></nav></header>
 <main id="sisalto">{body}</main>
-<footer>Uutistenlukija · selkeä suomenkielinen uutispalvelu<br>{"Suomenkielinen uutispalvelu." if public else "Tämä paikallinen versio on tarkastelua varten."}</footer>{consent}
+<footer>Uutistenlukija · selkeä suomenkielinen uutispalvelu<br>{footer_tagline}</footer>{consent}
 </body></html>'''
 
 
@@ -123,9 +238,15 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         for source in packet["sources"]:
             reuse = source.get("reuse")
             if reuse:
-                source_list += f'<li>Lähde: {esc(source["publisher"])} · <a href="{esc(reuse["url"])}">{esc(reuse["license"])}</a>. {esc(reuse["changes"])}</li>'
+                # The stored license string is the only authority for the label on both the
+                # source link and its terms link; a link alone never implies a named licence.
+                license_label = str(reuse.get("license") or "").strip() or "Käyttöehdot: lähdekohtaiset"
+                source_list += f'<li>Lähde: {esc(source["publisher"])} · <a href="{esc(reuse["url"])}">{esc(license_label)}</a>. {esc(reuse["changes"])}</li>'
                 if reuse.get('license_url'):
-                    source_list += f'<li><a href="{esc(reuse["license_url"])}">CC BY 4.0</a></li>'
+                    # Only the second (terms) link may show the standard short name, and
+                    # only when the URL is the known CC BY 4.0 document itself.
+                    terms_label = short_license_label(reuse["license_url"]) or license_label
+                    source_list += f'<li><a href="{esc(reuse["license_url"])}">{esc(terms_label)}</a></li>'
                 if reuse.get('notice'):
                     source_list += f'<li>{esc(reuse["notice"])}</li>'
         image = draft.get("image")
@@ -144,21 +265,36 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                 atomic_write(output_dir / image_url.lstrip("/"), data)
             # A generated illustration must not claim a "source" - there is no source work. It
             # links to the illustration terms instead, and never presents itself as a photograph.
+            img_attrs = image_size_attributes(image)
             if image.get("generated") is True:
                 figure = (f'<figure><img src="{esc(image_url)}" alt="{esc(image["alt"])}" '
-                          f'referrerpolicy="no-referrer"><figcaption>{esc(image.get("caption", ""))} '
+                          f'{img_attrs} referrerpolicy="no-referrer"><figcaption>{esc(image.get("caption", ""))} '
                           f'{esc(image["credit"])} · <a href="{esc(image["license_url"])}">'
                           f'Kuvituskuvien käyttöehdot</a></figcaption></figure>')
             else:
-                figure = f'<figure><img src="{esc(image_url)}" alt="{esc(image["alt"])}" referrerpolicy="no-referrer"><figcaption>{esc(image.get("caption", ""))} {esc(image["credit"])} · <a href="{esc(image["license_url"])}">{esc(image["license"])}</a> · <a href="{esc(image["source_url"])}">Kuvan lähde</a></figcaption></figure>'
+                figure = (f'<figure><img src="{esc(image_url)}" alt="{esc(image["alt"])}" '
+                          f'{img_attrs} referrerpolicy="no-referrer"><figcaption>{esc(image.get("caption", ""))} '
+                          f'{esc(image["credit"])} · <a href="{esc(image["license_url"])}">{esc(image["license"])}</a> '
+                          f'· <a href="{esc(image["source_url"])}">Kuvan lähde</a></figcaption></figure>')
         picks = related_for[job["id"]]
         related_html = ""
         if picks:
             related_items = "".join(f'<li><a href="/{article_path(j)}">{esc(d["title"])}</a></li>' for j, d in picks)
             related_html = f'<section class="related"><h2>Lue myös</h2><ul>{related_items}</ul></section>'
+        # Method disclosure: states plainly how the text was made and names the source
+        # publishers it was checked against, without inventing an editor or any metrics.
+        publishers = []
+        for source in packet["sources"]:
+            name = str(source.get("publisher") or "").strip()
+            if name and name not in publishers:
+                publishers.append(name)
+        publisher_list = ", ".join(esc(name) for name in publishers)
+        method_line = ('<p>Teksti on tuotettu tekoälyn avulla ja tarkastettu erillisessä '
+                       'lähdetarkistuksessa.' + (f' Lähdetietojen julkaisijat: {publisher_list}.' if publisher_list else "") + '</p>')
         body = f'''<article class="story"><a class="back" href="/">← Kaikki uutiset</a>{fixture}
 <p class="eyebrow" data-category="{esc(draft["category"])}">{esc(draft["category"])} · {"" if public else "Luonnos "}{date}</p><h1>{esc(draft["title"])}</h1>
 <p class="lead">{esc(draft["summary"])}</p>{figure}<div class="story-body">{paragraphs}</div>
+{method_line}
 <section class="sources"><h2>Lähteet</h2><ol>{source_list}</ol>
 <p>Teksti on laadittu yllä mainittujen lähdekatkelmien perusteella. {"Kuvan käyttöoikeustiedot ovat kuvan yhteydessä." if image else "Uutisteksti esitetään ilman kuvaa."}</p></section>{related_html}</article>'''
         # --- SEO metadata ---------------------------------------------------
@@ -191,7 +327,8 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
     body = f'''<section class="intro"><p class="eyebrow">Kotimaa ja maailma</p><h1>Ajankohtaista,<br>ymmärrettävästi.</h1><p>Uutiset, niiden tausta ja alkuperäiset lähteet samassa paikassa.</p></section>
 <section aria-label="Uusimmat uutiset" class="grid">{content}</section>
 <section id="lahteet" class="principles"><h2>Lähteet näkyviin.</h2><p>Selkeä suomi, perustellut väitteet ja avoimet lähdeviitteet. Epävarma tieto jätetään julkaisematta. {"Julkaisemme vain tarkastetut uutiset." if public else "Sivuston tämä versio sisältää vain yksityisiä luonnoksia."}</p></section>'''
-    atomic_write(output_dir / "index.html", page("Uusimmat uutiset", body, "/" if public else None))
+    home_head_meta = homepage_head_meta(articles) if public else ""
+    atomic_write(output_dir / "index.html", page("Uusimmat uutiset", body, "/" if public else None, head_meta=home_head_meta))
     atomic_write(output_dir / assets / "style.css", (ROOT / "static/style.css").read_text())
     # Reading-quality layer, kept separate so the base design stays untouched.
     readability = ROOT / "static/style-readability.css"

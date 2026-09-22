@@ -88,7 +88,7 @@ def public_bundle(store,job,state):
     ids={r[0] for r in store.db.execute("SELECT job_id FROM publications WHERE status='deployed'")}|{job['id']}
     packet,draft=json.loads(job['packet']),json.loads(job['draft'])
     binding=media(packet,draft)
-    if binding['image_sha256'] is None:verify_intake(packet,state)
+    if packet.get('publication_basis') is not None:verify_intake(packet,state)
     site=Path(state)/'live-site'  # Never reads or overlays the abandoned public-history tree.
     # Only the article being published now must satisfy today's policy digest; the archive
     # was released under the policy in force then and is bound to its captured bytes.
@@ -145,7 +145,7 @@ def public_bundle(store,job,state):
         'draft_sha256':digest(draft),**binding,
         'new_article_files':[article_path(job)+'index.html'],
         'files':{str(p.relative_to(site)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(site.rglob('*')) if p.is_file()}}
-    if binding['image_sha256'] is None:
+    if binding.get('text_only') or binding.get('text_provenance'):
         receipt.update(schema_version=2,packet=packet,draft=draft,review=json.loads(job['review']))
     check(site,receipt)
     atomic_write(Path(state)/'release.json',json.dumps(receipt,ensure_ascii=False,indent=2)+'\n')
@@ -179,7 +179,7 @@ def publish(store,job,state,config_path):
     if not validate_review(json.loads(job['review']),draft)['approved']:raise ValueError('Unapproved publication')
     if store.db.execute('SELECT 1 FROM publications WHERE job_id=?',(job['id'],)).fetchone() is None:
         validate_packet(packet,datetime.now(timezone.utc),48)
-    if binding['image_sha256'] is None:verify_intake(packet,state)
+    if packet.get('publication_basis') is not None:verify_intake(packet,state)
     with store.db:
         store.db.execute('INSERT OR IGNORE INTO publications(job_id,packet_sha,draft_sha,image_sha,source_commit,status) VALUES(?,?,?,?,?,?)',
             (job['id'],digest(packet),digest(draft),binding['image_sha256'],cmd('git','rev-parse','HEAD'),'preparing'))
@@ -228,6 +228,10 @@ def publish(store,job,state,config_path):
         live=json.loads((receipt_dir/'live-deployment.json').read_text())
         assert live['remote_commit']==row['remote_commit'] and live['packet_sha256']==row['packet_sha'] and live['draft_sha256']==row['draft_sha'] and live['image_sha256']==row['image_sha']
         if live.get('text_only') != binding.get('text_only'):
+            raise ValueError('Deployment text policy/provenance mismatch')
+        # Legacy image deployment records predate text_provenance, so only new
+        # receipts carrying the additive marker must match it exactly.
+        if 'text_provenance' in live and live['text_provenance'] != binding.get('text_provenance'):
             raise ValueError('Deployment text policy/provenance mismatch')
         url='https://uutistenlukija.fi/'+article_path(job)
         def read(url):
