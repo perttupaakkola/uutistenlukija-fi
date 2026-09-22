@@ -12,7 +12,8 @@ from unittest.mock import patch
 import test_release_v2 as base
 COMMIT=base.COMMIT
 from news_mvp.editorial import digest
-from news_mvp.publish import public_bundle
+from news_mvp import official
+from news_mvp.publish import public_bundle,publish
 from news_mvp.release_contract import media,receipt_media,verify_intake
 from news_mvp.store import database
 from cutover.check_release import check
@@ -86,4 +87,51 @@ class GeneratedIntegrity(unittest.TestCase):
         path.write_text(json.dumps(stored))
         with self.assertRaises(ValueError):verify_intake(packet,self.state)
         path.write_bytes(raw);verify_intake(packet,self.state)
+    def test_generated_additional_provider_receipt_identity_branch(self):
+        # Receipt-branch isolation, not an end-to-end additional-provider parser test: this
+        # keeps the existing synthetic Helsinki capture and only forces provider dispatch
+        # through the ADDITIONAL_PROVIDERS branch, with the two parser entry points pinned to
+        # the genuine values already parsed from those captured bytes. verify_intake's real
+        # byte/hash/receipt checks therefore run unchanged.
+        packet,draft=self.generated()
+        directory=self.state/'intake'/digest(self.packet)
+        raw=(directory/'source.html').read_bytes();rights=(directory/'rights.html').read_bytes()
+        url=self.packet['sources'][0]['url']
+        real_rights=official.rights_text(rights,'helsinki');real_fields=official.source_fields(raw,'helsinki',url)
+        self.assertEqual(real_rights,self.packet['supporting_documents'][0]['text'])
+        self.assertEqual(real_fields,{k:self.packet['sources'][0][k] for k in real_fields})
+        self.assertEqual(json.loads((directory/'receipt.json').read_text())['image_status'],'explicit-text-only')
+        with patch.object(official,'ADDITIONAL_PROVIDERS',official.ADDITIONAL_PROVIDERS+('helsinki',)),\
+             patch.object(official,'rights_text',return_value=real_rights),\
+             patch.object(official,'source_fields',return_value=real_fields):
+            verify_intake(packet,self.state)
+            path=directory/'receipt.json';receipt=path.read_bytes()
+            changed=json.loads(receipt);changed['packet_sha256']=digest(packet)
+            path.write_text(json.dumps(changed))
+            with self.assertRaises(ValueError):verify_intake(packet,self.state)
+            path.write_bytes(receipt)
+            changed=json.loads(receipt);changed['image_status']='generated-image'
+            path.write_text(json.dumps(changed))
+            with self.assertRaises(ValueError):verify_intake(packet,self.state)
+            path.write_bytes(receipt);verify_intake(packet,self.state)
+    def test_generated_publication_stops_on_captured_source_tamper(self):
+        packet,draft=self.generated();job=self.ready(packet,draft)
+        verify_intake(packet,self.state)
+        source=self.state/'intake'/digest(self.packet)/'source.html';raw=source.read_bytes()
+        source.write_bytes(raw+b'changed')
+        try:
+            with database(self.state) as store,patch('news_mvp.publish.cmd',return_value=COMMIT):
+                with self.assertRaises(ValueError) as caught:public_bundle(store,job,self.state)
+            self.assertIn('Captured intake bytes changed',str(caught.exception))
+            with database(self.state) as store,patch('news_mvp.publish.cmd',return_value=COMMIT),\
+                 patch('news_mvp.publish.guard'),\
+                 patch('news_mvp.publish.api',side_effect=AssertionError('external api reached')) as api,\
+                 patch('news_mvp.publish.make_commit',side_effect=AssertionError('commit boundary reached')) as commit,\
+                 patch('news_mvp.publish.matching_runs',side_effect=AssertionError('run lookup reached')) as runs:
+                with self.assertRaises(ValueError) as caught:publish(store,job,self.state,str(self.cfg))
+                self.assertIn('Captured intake bytes changed',str(caught.exception))
+            api.assert_not_called();commit.assert_not_called();runs.assert_not_called()
+        finally:
+            source.write_bytes(raw)
+        verify_intake(packet,self.state)
 if __name__=='__main__':unittest.main()

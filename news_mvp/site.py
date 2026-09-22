@@ -15,6 +15,9 @@ SITE_NAME = "Uutistenlukija"
 SITE_URL = "https://uutistenlukija.fi/"
 HOME_DESCRIPTION = "Uutiset, niiden tausta ja alkuperäiset lähteet samassa paikassa."
 GENERATED_IMAGE_FALLBACK = (1536, 1024)
+# Hard cap on stories per listing. Page 1 promotes its newest story to a lead, and
+# that lead counts as one of the 30; later pages need no promoted lead.
+PAGE_SIZE = 30
 # Exact licence URLs whose short name is CC BY 4.0. Trailing-slash variants are
 # the same canonical document, so they are normalised before matching.
 CC_BY_40_URLS = frozenset({
@@ -70,6 +73,26 @@ def image_size_attributes(image):
     return size + ' decoding="async"'
 
 
+def homepage_image_figure(image, image_url, lazy):
+    """Homepage <figure> for a reviewed image, sized like the article page.
+
+    Only images below the fold are lazy-loaded, so the lead never delays its own
+    paint. There are no srcset variants: exactly one reviewed asset is served.
+    """
+    loading = ' loading="lazy"' if lazy else ""
+    credit = str(image.get("credit") or "").strip()
+    if image.get("generated") is True:
+        # "Kuvituskuva" is required: an illustration must never read as a photo.
+        caption = "Kuvituskuva" + (f" · {esc(credit)}" if credit else "")
+    else:
+        text = " · ".join(part for part in (str(image.get("caption") or "").strip(), credit) if part)
+        caption = esc(text)
+    caption_html = f"<figcaption>{caption}</figcaption>" if caption else ""
+    return (f'<figure class="card-image"><img src="{esc(image_url)}" alt="{esc(image["alt"])}" '
+            f'{image_size_attributes(image)}{loading} referrerpolicy="no-referrer">'
+            f'{caption_html}</figure>')
+
+
 def jsonld_script(payload):
     """JSON-LD script tag; `<` is escaped so record text cannot close the tag."""
     data = json.dumps(payload, ensure_ascii=False)
@@ -89,8 +112,42 @@ def website_jsonld():
     }
 
 
-def home_item_list_jsonld(articles):
-    """ItemList naming exactly the stories listed on the homepage, in that order."""
+def listing_page_path(page_number):
+    """Public path of one listing page: page 1 is the homepage, page N is /sivu/N/."""
+    return "/" if page_number == 1 else f"/sivu/{page_number}/"
+
+
+def pagination_nav(page_number, page_count):
+    """Prev/next anchors for one listing page, or "" when there is only one page.
+
+    The links are real paths and the Finnish labels name the page they lead to. The
+    first page has no previous link and the last page has no next link, so no anchor
+    ever points at a page that does not exist.
+    """
+    if page_count <= 1:
+        return ""
+    links = []
+    if page_number > 1:
+        links.append(f'<a class="page-prev" rel="prev" href="{listing_page_path(page_number - 1)}" '
+                     f'aria-label="Edellinen sivu: sivu {page_number - 1}">'
+                     f'<span aria-hidden="true">←</span> Edellinen sivu</a>')
+    links.append(f'<span class="page-current" aria-current="page">Sivu {page_number} / {page_count}</span>')
+    if page_number < page_count:
+        links.append(f'<a class="page-next" rel="next" href="{listing_page_path(page_number + 1)}" '
+                     f'aria-label="Seuraava sivu: sivu {page_number + 1}">'
+                     f'Seuraava sivu <span aria-hidden="true">→</span></a>')
+    return f'<nav class="pager" aria-label="Sivujen selaus">{"".join(links)}</nav>'
+
+
+def home_item_list_jsonld(articles, start_position=1):
+    """ItemList naming exactly the stories on one listing page, in rendered order.
+
+    Callers pass one page's slice of listing items, never the whole archive, so
+    positions stay honest for that page. `start_position` continues the count across
+    pages (page 2 starts at 31), so no position claims a rank the story does not hold
+    in the listing. Each item is (job, draft, link, ...); the link is the same URL the
+    page itself rendered.
+    """
     return {
         "@context": "https://schema.org",
         "@type": "ItemList",
@@ -98,29 +155,35 @@ def home_item_list_jsonld(articles):
             {
                 "@type": "ListItem",
                 "position": position,
-                "url": SITE_URL + article_path(job),
-                "name": draft["title"],
+                "url": SITE_URL.rstrip("/") + item[2],
+                "name": item[1]["title"],
             }
-            for position, (job, _, draft, _) in enumerate(articles, 1)
+            for position, item in enumerate(articles, start_position)
         ],
     }
 
 
-def homepage_head_meta(articles):
-    """Description/OG/Twitter/JSON-LD block for the public homepage only."""
-    title = f"Uusimmat uutiset · {SITE_NAME}"
+def homepage_head_meta(articles, path="/", page_title="Uusimmat uutiset", start_position=1):
+    """Description/OG/Twitter/JSON-LD block for one public listing page.
+
+    `path` is that page's own URL and `articles` is exactly the slice rendered on it,
+    so the OG URL and the ItemList describe this page rather than the whole archive.
+    The WebSite JSON-LD stays site-level and keeps naming the site root.
+    """
+    title = f"{page_title} · {SITE_NAME}"
+    url = SITE_URL.rstrip("/") + path
     metas = (
         f'<meta name="description" content="{esc(HOME_DESCRIPTION)}">'
         f'<meta property="og:site_name" content="{esc(SITE_NAME)}">'
         f'<meta property="og:type" content="website">'
         f'<meta property="og:title" content="{esc(title)}">'
-        f'<meta property="og:url" content="{esc(SITE_URL)}">'
+        f'<meta property="og:url" content="{esc(url)}">'
         f'<meta property="og:description" content="{esc(HOME_DESCRIPTION)}">'
         f'<meta name="twitter:card" content="summary">'
         f'<meta name="twitter:title" content="{esc(title)}">'
         f'<meta name="twitter:description" content="{esc(HOME_DESCRIPTION)}">'
     )
-    return metas + jsonld_script(website_jsonld()) + jsonld_script(home_item_list_jsonld(articles))
+    return metas + jsonld_script(website_jsonld()) + jsonld_script(home_item_list_jsonld(articles, start_position))
 
 
 def atomic_write(path, value):
@@ -132,6 +195,69 @@ def atomic_write(path, value):
     else:
         temporary.write_text(value, encoding="utf-8")
     temporary.replace(path)
+
+
+def prune_stale_listing_pages(output_dir, page_count):
+    """Delete generated /sivu/N/index.html pages this render did not produce.
+
+    Page 1 is the homepage and later pages run 2..page_count, so any other numeric
+    archive directory is a leftover from a longer earlier render (or from a renderer
+    that also wrote a /sivu/1/ duplicate) and must not survive. Only exact numeric
+    names are touched, and only real directories inside `output_dir`: a symlinked
+    `sivu` root or numeric child is skipped before it is traversed, so a link can
+    never take the prune outside the output tree. A numeric regular file is skipped
+    entirely, and only a directory our own removal left empty is cleaned up.
+    """
+    sivu_dir = Path(output_dir) / "sivu"
+    if sivu_dir.is_symlink() or not sivu_dir.is_dir():
+        return
+    for child in sivu_dir.iterdir():
+        if not re.fullmatch(r"[1-9][0-9]*", child.name):
+            continue
+        if 2 <= int(child.name) <= page_count:
+            continue
+        # Skip links and plain files: following a numeric symlink would delete a
+        # generated-looking page outside the output tree, and rmdir on a regular
+        # file is not something a stale-page cleanup should attempt at all.
+        if child.is_symlink() or not child.is_dir():
+            continue
+        page_file = child / "index.html"
+        if page_file.is_file() and not page_file.is_symlink():
+            page_file.unlink()
+        try:
+            child.rmdir()
+        except OSError:
+            # Keep any directory that still holds something we did not generate.
+            pass
+
+
+def listing_page_html(page_items, page_number, page_count):
+    """Rendered listing for one page: lead (page 1 only), grid cards and pager.
+
+    Image rules keep the original intent: the lead paints immediately, the top few
+    grid cards lazy-load, and verified dimensions keep every box reserved.
+    """
+    if not page_items:
+        return '<p class="empty">Ei vielä tarkastettuja uutisluonnoksia.</p>'
+    lead_html = ""
+    cards = []
+    for index, (job, draft, link, date, fixture, image, image_url) in enumerate(page_items):
+        if page_number == 1 and index == 0:
+            lead_figure = homepage_image_figure(image, image_url, lazy=False) if image else ""
+            lead_class = "lead-story" if image else "lead-story lead-story--text-only"
+            lead_html = (f'<article class="{lead_class}"><div class="lead-text">'
+                         f'<p class="eyebrow" data-category="{esc(draft["category"])}">Uusin uutinen · {esc(draft["category"])} · {date}</p>'
+                         f'<h2 class="lead-headline"><a href="{link}">{esc(draft["title"])}</a></h2>'
+                         f'<p class="lead-summary">{esc(draft["summary"])}</p>{fixture}'
+                         f'<a class="read" href="{link}">Lue uutinen <span aria-hidden="true">→</span></a></div>{lead_figure}</article>')
+            continue
+        card_figure = homepage_image_figure(image, image_url, lazy=True) if image and index <= 3 else ""
+        cards.append(f'<article class="card"><p class="eyebrow" data-category="{esc(draft["category"])}">{esc(draft["category"])} · {date}</p><h2><a href="{link}">{esc(draft["title"])}</a></h2><p>{esc(draft["summary"])}</p>{fixture}{card_figure}<a class="read" href="{link}">Lue uutinen <span aria-hidden="true">→</span></a></article>')
+    listing = lead_html
+    if cards:
+        section = f'<section aria-label="Muut uutiset" class="grid">{"".join(cards)}</section>'
+        listing += section
+    return listing + pagination_nav(page_number, page_count)
 
 
 def article_path(job):
@@ -213,7 +339,10 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         if not review["approved"]:
             raise ValueError("Unapproved record cannot be rendered")
         articles.append((job, packet, draft, review))
-    cards = []
+    # Listing cards are collected while the article pages are written, then split into
+    # pages of at most PAGE_SIZE stories. Page 1 promotes its newest story to a lead
+    # (the lead counts toward that page's 30); later pages need no promoted lead.
+    listing_items = []
     output_dir = Path(output_dir)
     # "Lue myös": newest-first links between rendered articles (same category preferred).
     # Gives readers somewhere to go next and gives crawlers a real internal link graph.
@@ -322,13 +451,23 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                 sources=packet["sources"],
             )
         atomic_write(output_dir / article_path(job) / "index.html", page(draft["title"], body, link if public else None, head_meta=head_meta))
-        cards.append(f'<article class="card"><p class="eyebrow" data-category="{esc(draft["category"])}">{esc(draft["category"])} · {date}</p><h2><a href="{link}">{esc(draft["title"])}</a></h2><p>{esc(draft["summary"])}</p>{fixture}<a class="read" href="{link}">Lue uutinen <span aria-hidden="true">→</span></a></article>')
-    content = "".join(cards) or '<p class="empty">Ei vielä tarkastettuja uutisluonnoksia.</p>'
-    body = f'''<section class="intro"><p class="eyebrow">Kotimaa ja maailma</p><h1>Ajankohtaista,<br>ymmärrettävästi.</h1><p>Uutiset, niiden tausta ja alkuperäiset lähteet samassa paikassa.</p></section>
-<section aria-label="Uusimmat uutiset" class="grid">{content}</section>
+        listing_items.append((job, draft, link, date, fixture, image, image_url))
+    pages = [listing_items[offset:offset + PAGE_SIZE] for offset in range(0, len(listing_items), PAGE_SIZE)] or [[]]
+    page_count = len(pages)
+    # A render with fewer stories must not leave its retired archive pages behind.
+    prune_stale_listing_pages(output_dir, page_count)
+    for page_number, page_items in enumerate(pages, 1):
+        path = listing_page_path(page_number)
+        page_title = "Uusimmat uutiset" if page_number == 1 else f"Uusimmat uutiset – sivu {page_number}"
+        listing = listing_page_html(page_items, page_number, page_count)
+        body = f'''<section class="intro"><h1>{esc(page_title)}</h1></section>
+{listing}
 <section id="lahteet" class="principles"><h2>Lähteet näkyviin.</h2><p>Selkeä suomi, perustellut väitteet ja avoimet lähdeviitteet. Epävarma tieto jätetään julkaisematta. {"Julkaisemme vain tarkastetut uutiset." if public else "Sivuston tämä versio sisältää vain yksityisiä luonnoksia."}</p></section>'''
-    home_head_meta = homepage_head_meta(articles) if public else ""
-    atomic_write(output_dir / "index.html", page("Uusimmat uutiset", body, "/" if public else None, head_meta=home_head_meta))
+        # JSON-LD/OG describe this page's own slice and URL; the private preview keeps none.
+        head_meta = homepage_head_meta(page_items, path=path, page_title=page_title,
+                                       start_position=(page_number - 1) * PAGE_SIZE + 1) if public else ""
+        listing_path = "index.html" if page_number == 1 else f"sivu/{page_number}/index.html"
+        atomic_write(output_dir / listing_path, page(page_title, body, path if public else None, head_meta=head_meta))
     atomic_write(output_dir / assets / "style.css", (ROOT / "static/style.css").read_text())
     # Reading-quality layer, kept separate so the base design stays untouched.
     readability = ROOT / "static/style-readability.css"
