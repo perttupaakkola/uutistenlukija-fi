@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-22",
+  "review": {
+    "rationale": "Planner review of the top 20 legacy demand rows against all 109 deployed article titles/summaries and the live sitemap found no reviewed equivalent for any row: historical posts cover different events, places, people and dates than the reboot catalog, dated daily digests have no matching preserved digest, and the old economy-category landing and shop-opening-hours guide have no reviewed replacement. Matching a generic topic alone is insufficient. No content restoration and no redirect is approved, so mappings stays empty; genuinely equivalent successors would need a fresh editorial review.",
+    "evidence": [
+      "gsc-inventory-source.json",
+      "legacy-http-evidence.json",
+      "deployed-review-catalog.json",
+      "live-sitemap.xml"
+    ],
+    "report": "LEGACY-INVENTORY.md",
+    "deployed_catalog_size": 109
+  },
+  "window": {
+    "source": "Google Search Console final web/page rows",
+    "start": "2026-08-20",
+    "end": "2026-09-18",
+    "timezone": "Pacific",
+    "final": true,
+    "lag_days": 3
+  },
+  "bound": {
+    "source_row_cap": 250,
+    "cap_reached": true,
+    "exhaustive": false,
+    "selection": "first 20 provider rows in descending clicks; ties left in provider order",
+    "note": "Bounded demand triage of a capped source, not an exhaustive domain inventory."
+  },
+  "totals": {
+    "rows": 20,
+    "clicks": 57,
+    "impressions": 2676
+  },
+  "inventory": [
+    {"source": "/posts/2026-09-09-tampere-irtisanoo-liikuntapalvelujen-paallikon-hakametsan-ep/", "clicks": 13, "impressions": 141, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/posts/2026-09-07-jyvaskyla-vaatii-20-metrisen-huvialuksen-pois-muuratsalon-ui/", "clicks": 4, "impressions": 49, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/paivan-kooste/2026-08-26/", "clicks": 3, "impressions": 9, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/paivan-kooste/2026-08-29/", "clicks": 3, "impressions": 11, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/posts/2026-05-08-isanmaan-toivot-sarjan-toni-wahlstrom-on-jatkanut-uraansa-te/", "clicks": 3, "impressions": 1838, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/posts/2026-07-17-salla-sivula-siirtyy-kalpasta-naisten-mestikseen/", "clicks": 3, "impressions": 9, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/posts/2026-07-19-uusi-futuro-talo-valmistuu-pieksamaella-vuosikymmenten-tauon/", "clicks": 3, "impressions": 53, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/posts/2026-09-11-junni-selvittaisi-tietulleja-jarvikare-arvioi-polttoainevero/", "clicks": 3, "impressions": 6, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/posts/2026-03-20-hamkn-koulutus-yhdistaa-luontoymparistot-ja-hyvinvointipalve/", "clicks": 2, "impressions": 2, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/posts/2026-05-12-kesko-osti-enemmiston-kontulan-ostoskeskuksen-uudesta-puoles/", "clicks": 2, "impressions": 14, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/posts/2026-05-30-karhuhavainnot-ovat-yleistyneet-lieksassa-ja-pohjois-savossa/", "clicks": 2, "impressions": 22, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/posts/2026-06-04-hbo-max-poistaa-kesakuun-lopulla-superman-ja-final-destinati/", "clicks": 2, "impressions": 16, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/posts/2026-06-08-nuori-perunanviljelija-avaa-somerolle-itsepalvelukontin-joss/", "clicks": 2, "impressions": 21, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/posts/2026-06-16-kemin-polttopuuautomaatti-vahensi-puiden-kulutusta-nuotiopai/", "clicks": 2, "impressions": 16, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/posts/2026-06-18-kemin-keskustassa-loukutetaan-jalleen-rottia-yrittajan-makea/", "clicks": 2, "impressions": 7, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/posts/2026-07-03-nelja-laakaria-polkee-vantaalta-kohti-team-rynkebyn-pariisin/", "clicks": 2, "impressions": 8, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/posts/2026-07-12-kallis-alkoholi-vahentaa-ravintolamyyntia-ruoan-merkitys-kas/", "clicks": 2, "impressions": 8, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/posts/2026-07-16-nokia-300-power-bank-yhdistaa-peruspuhelimen-ja-varavirtalah/", "clicks": 2, "impressions": 38, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/kategoriat/talous/", "clicks": 1, "impressions": 8, "http_status": 404, "equivalence": "no-reviewed-equivalent"},
+    {"source": "/oppaat/kauppojen-aukioloajat/", "clicks": 1, "impressions": 400, "http_status": 404, "equivalence": "no-reviewed-equivalent"}
+  ],
+  "mappings": []
+}

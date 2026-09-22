@@ -280,9 +280,19 @@ def _job_title(job):
         return ""
 
 
-def page(title, body, canonical_path=None, head_meta="", readability_present=True):
+def page(title, body, canonical_path=None, head_meta="", readability_present=True, canonical=True):
+    """Full public page shell. `canonical_path` alone selects the public build.
+
+    `canonical=False` keeps the public shell (public assets and the consent/privacy
+    UI) but drops the canonical link, for a public page that must not claim a URL of
+    its own; such a page is served noindex like a private preview, but without the
+    private-preview banner and without the private asset paths.
+    """
     public = canonical_path is not None
-    head = (f'<link rel="canonical" href="https://uutistenlukija.fi{esc(canonical_path)}">' if public else '<meta name="robots" content="noindex,nofollow">')
+    # Only a page that owns its URL gets a canonical link; public pages that must not
+    # claim one (the 404 body) keep the public shell but stay noindex.
+    head = (f'<link rel="canonical" href="https://uutistenlukija.fi{esc(canonical_path)}">'
+            if public and canonical else '<meta name="robots" content="noindex,nofollow">')
     # Public pages advertise the RSS feed so readers and aggregators can find it.
     if public:
         head += '<link rel="alternate" type="application/rss+xml" title="Uutistenlukija" href="/rss.xml">'
@@ -312,6 +322,73 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
 <main id="sisalto">{body}</main>
 <footer>Uutistenlukija · selkeä suomenkielinen uutispalvelu<br>{footer_tagline}</footer>{consent}
 </body></html>'''
+
+
+# The one place search is offered: Google, scoped to this site by default. The hidden
+# field is a fixed default scope, never caller text, and the visible label says plainly
+# which engine opens. No other search endpoint is advertised.
+SEARCH_ACTION = "https://www.google.com/search"
+SEARCH_SITE = "uutistenlukija.fi"
+# Callers may name the archive listing the old link most plausibly belonged to. Only the
+# exact paths the renderer itself writes are accepted, so nothing else can be linked.
+ARCHIVE_PATH_RE = re.compile(r"/sivu/([0-9]+)/\Z")
+
+
+def archive_page_path(archive_path="/"):
+    """The caller-supplied listing path if it is a real page, else the homepage.
+
+    Only "/" and "/sivu/<n>/" with n >= 2 and no leading zero are archive pages the
+    renderer writes; anything else is a bug in the caller and is rejected instead of
+    being rendered as a link readers cannot use.
+    """
+    value = "/" if archive_path is None else archive_path
+    if isinstance(value, str) and value == "/":
+        return value
+    match = ARCHIVE_PATH_RE.fullmatch(value) if isinstance(value, str) else None
+    if match and match.group(1)[0] != "0" and int(match.group(1)) >= 2:
+        return value
+    raise ValueError(f"Invalid archive path: {archive_path!r}")
+
+
+def search_form_html():
+    """Site-scoped Google search form with an explicit Finnish label.
+
+    The query input is user-visible and escaped. The hidden `sitesearch` field only
+    sets the default site scope for the search; it does not stop a reader from changing
+    that scope. Submitting opens Google's own search results page; nothing on this site
+    pretends to search.
+    """
+    return ('<form class="search" action="' + esc(SEARCH_ACTION) + '" method="get" role="search">'
+            '<label for="q">Hae uutisia Googlesta. Haku on rajattu sivustoon uutistenlukija.fi.</label>'
+            '<input type="search" id="q" name="q" placeholder="Etsi uutisia">'
+            '<input type="hidden" name="sitesearch" value="' + esc(SEARCH_SITE) + '">'
+            '<button type="submit">Hae Googlesta</button>'
+            '<p class="search-note">Haku avautuu Googlen omalla sivulla.</p></form>')
+
+
+def missing_page(archive_path="/"):
+    """Public 404 body for URLs this site no longer serves.
+
+    The copy says plainly that the page is missing and the old link may be stale, then
+    points at routes that do exist: the newest listing, the caller-named archive page
+    when there is one, and a site-scoped Google search. It renders through the ordinary
+    public page shell, so the assets and consent/privacy UI are the same as every other
+    public page.
+    """
+    archive = archive_page_path(archive_path)
+    if archive == "/":
+        archive_link = ""
+        destinations = "uusimmat uutiset ja haku"
+    else:
+        number = esc(archive.split("/")[2])
+        archive_link = f'<li><a href="{esc(archive)}">Arkiston sivu {number}</a></li>'
+        destinations = "uusimmat uutiset, arkiston sivu {0} ja haku".format(number)
+    body = f'''<section class="intro missing"><h1>Sivua ei löytynyt</h1>
+<p>Tätä osoitetta ei löytynyt. Vanha linkki voi viitata sisältöön, jota ei enää julkaista.</p>
+<p>Voit jatkaa täältä: {destinations}.</p>
+<ul class="missing-links"><li><a href="/">Siirry uusimpiin uutisiin</a></li>{archive_link}</ul>
+{search_form_html()}</section>'''
+    return page("Sivua ei löytynyt", body, "/404.html", canonical=False)
 
 
 def render_site(store, output_dir, state_dir=None, public=False, include_ids=None, verify_policy_ids=None):
