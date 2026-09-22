@@ -125,6 +125,19 @@ def public_bundle(store,job,state):
         return '<url><loc>'+esc(u)+'</loc>'+(('<lastmod>'+esc(mod)+'</lastmod>') if mod else '')+'</url>'
     entries=[_url_entry('https://uutistenlukija.fi/'),_url_entry('https://uutistenlukija.fi/tietosuoja/')]
     entries+= [_url_entry('https://uutistenlukija.fi/'+_slug_for(i), article_mod.get(i)) for i in sorted(ids)]
+    # Rendered archive pages are published pages too; the sitemap must list them.
+    # Symlinked roots/directories/index files and nonnumeric or leading-zero names are not pages.
+    archive_root=site/'sivu'
+    archive_pages=[]
+    if not archive_root.is_symlink() and archive_root.is_dir():
+        for child in archive_root.iterdir():
+            if child.is_symlink() or not child.is_dir(): continue
+            if not (child.name.isascii() and child.name.isdigit()) or child.name.startswith('0'): continue
+            if int(child.name)<2: continue
+            index=child/'index.html'
+            if index.is_symlink() or not index.is_file(): continue
+            archive_pages.append(int(child.name))
+    entries+=[_url_entry('https://uutistenlukija.fi/sivu/'+str(n)+'/') for n in sorted(archive_pages)]
     atomic_write(site/'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(entries)+'</urlset>')
     atomic_write(site/'robots.txt','User-agent: *\nAllow: /\nSitemap: https://uutistenlukija.fi/sitemap.xml\n')
     # Every article that ever existed under a bare hash URL keeps working: the readable
