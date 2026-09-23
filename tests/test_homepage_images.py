@@ -52,41 +52,48 @@ class HomepageImages(unittest.TestCase):
         case=generated.GeneratedIntegrity(SEED);case.setUp();self.addCleanup(case.doCleanups)
         packet,draft=case.generated();job=case.ready(packet,draft)
         stored=json.loads(job['packet'])['image'];sha=stored['sha256']
-        jobs=self.jobs(job,4,'homepage-images')
+        jobs=self.jobs(job,6,'homepage-images')
         self.assertTrue(all(isinstance(j[f],str) for j in jobs for f in ('packet','draft','review')))
         for cloned in jobs:
             for field in ('packet','draft','review'):
                 json.loads(cloned[field])
-        self.assertEqual(len({j['id'] for j in jobs}),4)
+        self.assertEqual(len({j['id'] for j in jobs}),6)
         self.assertTrue(all(len(j['id'])==64 for j in jobs))
         self.assertEqual([j['created_at'] for j in jobs],sorted((j['created_at'] for j in jobs),reverse=True))
         output=Path(tempfile.mkdtemp(dir=case.root))
-        self.assertEqual(site.render_site(FakeStore(jobs),output,case.state,public=True),4)
+        self.assertEqual(site.render_site(FakeStore(jobs),output,case.state,public=True),6)
         home=(output/'index.html').read_text()
         entries=[(cls,body) for cls,body in ARTICLE_RE.findall(home)]
         links=[LINK_RE.search(body).group(1) for _,body in entries]
         self.assertEqual(links,['/'+site.article_path(j) for j in jobs])
-        self.assertEqual(len(set(links)),4)
+        self.assertEqual(len(set(links)),6)
         self.assertEqual([sum('lead-story' in cls for cls,_ in entries),
-                          sum(cls.startswith('portal-teaser') for cls,_ in entries)],[1,3])
+                          sum(cls.startswith('portal-teaser') for cls,_ in entries),
+                          sum(cls.startswith('portal-row-card') for cls,_ in entries)],
+                         [1, min(len(jobs) - 1, site.HOMEPAGE_CENTER_ROWS),
+                          max(0, len(jobs) - 1 - site.HOMEPAGE_CENTER_ROWS)])
         lead=images(entries[0][1])[0]
         self.assertEqual((lead['src'],lead['width'],lead['height'],lead['decoding']),
                          (f'/mvp-assets/{sha}.jpg','1536','1024','async'))
         self.assertEqual(lead['alt'],stored['alt'])
         self.assertNotIn('loading',lead)
         for cls,body in entries[1:]:
-            self.assertEqual(images(body),[])
+            thumbs=images(body)
+            self.assertEqual(len(thumbs),1)
+            self.assertEqual(thumbs[0]['src'],f'/mvp-assets/{sha}.jpg')
+            self.assertEqual(thumbs[0]['alt'],stored['alt'])
+            self.assertEqual(thumbs[0]['loading'],'lazy')
             self.assertTrue(cls.startswith('portal-teaser') or cls.startswith('portal-row-card'),cls)
-            self.assertIn('--no-image',cls)
+            self.assertNotIn('--no-image',cls)
         parsed=scan(home)
-        self.assertEqual(len(editorial_images(parsed)),1)
+        self.assertEqual(len(editorial_images(parsed)),6)
         self.assertEqual(parsed.captions,[])
         self.assertNotIn('<figcaption',home)
         self.assertNotIn('<article class="card"',home)
         self.assertNotIn('<section class="grid"',home)
-        self.assertEqual(home.count('<article class="'),4)
-        self.assertEqual(sum('Kuvituskuva' in text for text in parsed.text),1)
-        self.assertEqual(sum('tekoälyllä luotu' in text for text in parsed.text),1)
+        self.assertEqual(home.count('<article class="'),6)
+        self.assertEqual(sum('Kuvituskuva' in text for text in parsed.text),6)
+        self.assertEqual(sum('tekoälyllä luotu' in text for text in parsed.text),6)
         self.assertIn('Seuraa uutisia',home)
         self.assertIn('href="/rss.xml"',home)
         self.assertIn('portal-right-rail',home)
@@ -100,6 +107,48 @@ class HomepageImages(unittest.TestCase):
             self.assertEqual([attrs['src'] for attrs in editorial_images(article)],[f'/mvp-assets/{sha}.jpg'])
             self.assertEqual([attrs['alt'] for attrs in editorial_images(article)],[stored['alt']])
             self.assertTrue(any('Kuvituskuva' in text for text in article.text))
+
+    def test_mixed_image_slots_keep_text_only_stories_in_native_layout(self):
+        case=generated.GeneratedIntegrity(SEED);case.setUp();self.addCleanup(case.doCleanups)
+        packet,draft=case.generated();template=case.ready(packet,draft)
+        jobs=self.jobs(template,6,'homepage-mixed')
+        for index,job in enumerate(jobs):
+            if index == 1:
+                continue
+            text_packet=json.loads(job['packet']);text_draft=json.loads(job['draft'])
+            text_packet['image']=None;text_draft['image']=None
+            job['packet']=json.dumps(text_packet);job['draft']=json.dumps(text_draft)
+            review=json.loads(job['review']);review['draft_sha256']=generated.digest(text_draft)
+            job['review']=json.dumps(review)
+        output=Path(tempfile.mkdtemp(dir=case.root))
+        self.assertEqual(site.render_site(FakeStore(jobs),output,case.state,public=True),6)
+        home=(output/'index.html').read_text()
+        entries=[(cls,body) for cls,body in ARTICLE_RE.findall(home)]
+        self.assertEqual(len(entries),6)
+        self.assertIn('portal-front-grid--image-free-lead',home)
+        self.assertEqual(home.count('<img'),2)  # logo plus the one reviewed teaser image
+        self.assertEqual(home.count('portal-teaser__thumb'),1)
+        self.assertNotIn('portal-row-card__thumb',home)
+        self.assertNotIn('portal-teaser--no-image',entries[1][0])
+        self.assertIn('portal-teaser--no-image',entries[2][0])
+        self.assertIn('portal-teaser--no-image',entries[5][0])
+        self.assertNotIn('portal-row-card--no-image',entries[5][0])
+        self.assertIn('portal-right-rail',home)
+
+    def test_front_page_removes_the_filler_and_keeps_the_sources_page(self):
+        case=generated.GeneratedIntegrity(SEED);case.setUp();self.addCleanup(case.doCleanups)
+        job=case.ready()
+        output=Path(tempfile.mkdtemp(dir=case.root))
+        self.assertEqual(site.render_site(FakeStore([job]),output,case.state,public=True),1)
+        home=(output/'index.html').read_text()
+        filler=('Lähteet näkyviin. Selkeä suomi, perustellut väitteet ja avoimet lähdeviitteet. '
+                'Epävarma tieto jätetään julkaisematta. Julkaisemme vain tarkastetut uutiset.')
+        self.assertNotIn(filler,home)
+        self.assertNotIn('id="lahteet"',home)
+        self.assertIn('href="/lahteet/"',home)
+        sources=(output/'lahteet/index.html').read_text()
+        self.assertIn('<h1>Lähteet ja toimitus</h1>',sources)
+        self.assertNotIn('Lähteet näkyviin.',sources)
 
     def test_generated_image_alt_and_credit_stay_escaped_text(self):
         case=generated.GeneratedIntegrity(SEED);case.setUp();self.addCleanup(case.doCleanups)
@@ -117,14 +166,14 @@ class HomepageImages(unittest.TestCase):
         self.assertNotIn('<b>',home)
         self.assertNotIn('<i>',home)
         self.assertNotIn('<script>alert(1)</script>',home)
-        self.assertEqual(home.count('<img'),2)
+        self.assertEqual(home.count('<img'),5)
         parsed=scan(home)
-        self.assertEqual([attrs['alt'] for attrs in editorial_images(parsed)],[alt])
-        self.assertEqual([attrs['src'] for attrs in editorial_images(parsed)],[f'/mvp-assets/{sha}.jpg'])
+        self.assertEqual([attrs['alt'] for attrs in editorial_images(parsed)],[alt]*4)
+        self.assertEqual([attrs['src'] for attrs in editorial_images(parsed)],[f'/mvp-assets/{sha}.jpg']*4)
         self.assertEqual(parsed.captions,[])
         self.assertNotIn(credit,home)
-        self.assertEqual(sum('Kuvituskuva' in text for text in parsed.text),1)
-        self.assertEqual(sum('tekoälyllä luotu' in text for text in parsed.text),1)
+        self.assertEqual(sum('Kuvituskuva' in text for text in parsed.text),4)
+        self.assertEqual(sum('tekoälyllä luotu' in text for text in parsed.text),4)
         self.assertNotIn('AI-kuvitus',home)
         self.assertNotIn('synthetic',home)
         self.assertNotIn('explicit-offline-test-double',home)
@@ -156,8 +205,10 @@ class HomepageImages(unittest.TestCase):
         entries_second=[(cls,body) for cls,body in ARTICLE_RE.findall(second)]
         self.assertEqual([sum('lead-story' in cls for cls,_ in entries_first),len(entries_first)],[1,30])
         self.assertEqual([sum('lead-story' in cls for cls,_ in entries_second),len(entries_second)],[0,1])
-        self.assertEqual(sum(cls.startswith('portal-teaser') for cls,_ in entries_first),4)
-        self.assertEqual(sum(cls.startswith('portal-row-card') for cls,_ in entries_first),25)
+        self.assertEqual(sum(cls.startswith('portal-teaser') for cls,_ in entries_first),
+                         site.HOMEPAGE_CENTER_ROWS)
+        self.assertEqual(sum(cls.startswith('portal-row-card') for cls,_ in entries_first),
+                         30 - 1 - site.HOMEPAGE_CENTER_ROWS)
         self.assertIn('portal-front-grid',first)
         self.assertIn('portal-right-rail',first)
         self.assertNotIn('portal-right-rail',second)

@@ -310,7 +310,7 @@ class PortalShell(unittest.TestCase):
         for generic in ("grid", "col"):
             self.assertNotIn(generic, classes, f"generic {generic!r} override leaked into the footer")
         self.assertIn('role="contentinfo"', footer)
-        for required in ("/tietosuoja/", "/#lahteet", "/rss.xml"):
+        for required in ("/tietosuoja/", "/lahteet/", "/rss.xml"):
             self.assertIn(required, footer)
 
     def test_imported_assets_are_copied_byte_for_byte(self):

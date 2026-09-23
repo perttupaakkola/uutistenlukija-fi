@@ -1,7 +1,7 @@
 """Pagination counts, story identity and per-page metadata for the public homepage.
 
-The homepage keeps the portal shape: one promoted lead, the first four remaining
-stories as center teaser rows inside the top grid, and every later story as a
+The homepage keeps the portal shape: one promoted lead, the first configured
+remaining stories as center teaser rows inside the top grid, and every later story as a
 text-only river row outside it. Archive pages keep plain text rows and their pager.
 """
 import copy,hashlib,json,re,tempfile,unittest
@@ -61,13 +61,15 @@ class HomepagePagination(unittest.TestCase):
                         self.assertIn('portal-front-grid',html)
                         self.assertIn('portal-right-rail',html)
                         remaining=min(count,30)-1
-                        self.assertEqual(sum(cls.startswith('portal-teaser') for cls,_ in entries),min(remaining,4))
-                        self.assertEqual(sum(cls.startswith('portal-row-card') for cls,_ in entries),max(0,remaining-4))
+                        self.assertEqual(sum(cls.startswith('portal-teaser') for cls,_ in entries),
+                                         min(remaining,site.HOMEPAGE_CENTER_ROWS))
+                        self.assertEqual(sum(cls.startswith('portal-row-card') for cls,_ in entries),
+                                         max(0,remaining-site.HOMEPAGE_CENTER_ROWS))
                         # Only the lead carries an image; river rows are text-only and
                         # never present a hidden thumbnail slot.
                         self.assertEqual(images_in(html),[f'/mvp-assets/images/logo.png'])
                         self.assertNotIn('portal-row-card__thumb',html)
-                        if remaining>4:
+                        if remaining>site.HOMEPAGE_CENTER_ROWS:
                             self.assertIn('portal-river',html)
                             self.assertIn('portal-river__grid',html)
                         else:
@@ -118,10 +120,12 @@ class HomepagePagination(unittest.TestCase):
         self.assertNotIn('Maailma',html)
         self.assertIn('>Ulkomaat<',html)
         story_labels=(html.count('>Ulkomaat<')
-                      - html.count('<a href="/categories/ulkomaat/">Ulkomaat</a>'))
+                      - html.count('<a href="/categories/ulkomaat/">Ulkomaat</a>')
+                      - html.count('portal-topic-card__label'))
         self.assertEqual(story_labels,6)
         self.assertIn('portal-teaser__category--ulkomaat',html)
-        self.assertIn('portal-row-card__category--ulkomaat',html)
+        if len(jobs) - 1 > site.HOMEPAGE_CENTER_ROWS:
+            self.assertIn('portal-row-card__category--ulkomaat',html)
         for clone in jobs:
             self.assertEqual(json.loads(clone['draft'])['category'],'Maailma')
         self.assertEqual(json.loads(job['draft'])['category'],'Maailma')

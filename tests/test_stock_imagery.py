@@ -312,7 +312,7 @@ class StockImageryTests(unittest.TestCase):
         self.assertIs(record['hotlink'], True)
         self.assertEqual(record['license'], 'Unsplash License')
         self.assertEqual(record['license_url'], 'https://unsplash.com/license')
-        self.assertEqual(record['caption'], 'Arkistokuva. Kuva ei esitä uutisen tapahtumaa.')
+        self.assertEqual(record['caption'], imagery.STOCK_CAPTION)
         self.assertEqual(record['credit'], 'Photo by Matti Meikalainen on Unsplash')
         self.assertEqual(record['alt'], 'Arkistokuva: a police car parked in the snow')
         self.assertEqual(record['depicted'], 'a police car parked in the snow')

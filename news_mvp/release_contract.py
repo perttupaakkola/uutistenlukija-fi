@@ -172,6 +172,11 @@ def _stock_photo_id(value, provider):
                 not re.fullmatch(r'[A-Za-z0-9_-]{6,40}', value)):
             raise ValueError('Invalid stock photo_id')
         return value
+    if provider in ('wikimedia', 'google'):
+        if (not isinstance(value, str) or not value.strip() or value != value.strip() or
+                not re.fullmatch(r'[A-Za-z0-9_-]{6,64}', value)):
+            raise ValueError('Invalid open-source photo_id')
+        return value
     if isinstance(value, bool) or (not isinstance(value, (int, str))):
         raise ValueError('Invalid stock photo_id')
     if isinstance(value, int):
@@ -184,28 +189,40 @@ def _stock_photo_id(value, provider):
 
 
 def _stock_profile_url(value, host, field, provider):
-    parsed = _stock_utm(value, host, field) if provider == 'unsplash' else _stock_https(
-        value, host, field
-    )
-    if not re.fullmatch(r'/@[A-Za-z0-9._-]+/?', parsed.path):
+    if provider == 'unsplash':
+        parsed = _stock_utm(value, host, field)
+        valid = re.fullmatch(r'/@[A-Za-z0-9._-]+/?', parsed.path)
+    elif provider in ('wikimedia', 'google'):
+        parsed = _stock_https(value, host, field)
+        valid = bool(parsed.path and parsed.path != '/')
+    else:
+        parsed = _stock_https(value, host, field)
+        valid = bool(re.fullmatch(r'/@[A-Za-z0-9._-]+/?', parsed.path))
+    if not valid:
         raise ValueError(f'Invalid stock {field} identity')
     return parsed
 
 
 def _stock_photo_url(value, host, photo_id, provider):
     parsed = _stock_utm(value, host, 'photo_url') if provider == 'unsplash' else _stock_https(
-        value, host, 'photo_url'
-    )
+        value, host, 'photo_url')
     path = parsed.path.rstrip('/')
     if provider == 'unsplash':
         prefix = '/photos/'
-    else:
+        slug = path[len(prefix):] if path.startswith(prefix) else ''
+        valid = bool(slug and '/' not in slug and (slug == photo_id or slug.endswith('-' + photo_id)))
+    elif provider == 'pexels':
         prefix = '/photo/'
-    if not path.startswith(prefix) or not path[len(prefix):] or '/' in path[len(prefix):]:
+        slug = path[len(prefix):] if path.startswith(prefix) else ''
+        valid = bool(slug and '/' not in slug and (slug == photo_id or slug.endswith('-' + photo_id)))
+    elif provider == 'wikimedia':
+        valid = path.startswith('/wiki/File:') and len(path) > len('/wiki/File:')
+    else:
+        # Google Custom Search links are the reviewed source page and may use any public HTTPS
+        # path; the separate image URL and licence URL still have to be recorded below.
+        valid = bool(path and path != '/')
+    if not valid:
         raise ValueError('Invalid stock photo_url identity')
-    slug = path[len(prefix):]
-    if slug != photo_id and not slug.endswith('-' + photo_id):
-        raise ValueError('Stock photo identity mismatch')
     return parsed
 
 
@@ -260,36 +277,57 @@ def stock_binding(image):
         raise ValueError('Missing stock image provenance')
     provenance = image['stock_provenance']
     provider = provenance.get('provider')
-    if provider not in ('unsplash', 'pexels'):
+    if provider not in ('unsplash', 'pexels', 'wikimedia', 'google'):
         raise ValueError('Unsupported stock image provider')
 
     expected_provenance = set(_STOCK_PROVENANCE_COMMON)
     if provider == 'unsplash':
         expected_provenance.add('download_tracking')
+    elif provider in ('wikimedia', 'google'):
+        expected_provenance.update({'license', 'license_url'})
     if set(provenance) != expected_provenance:
         raise ValueError('Unexpected stock provenance fields')
 
     photo_id = _stock_photo_id(provenance['photo_id'], provider)
     photographer = _stock_nonempty(provenance['photographer'], 'photographer')
-    _stock_profile_url(
-        provenance['photographer_url'],
-        'unsplash.com' if provider == 'unsplash' else 'www.pexels.com',
-        'photographer_url',
-        provider,
-    )
+    profile_parts = urlsplit(provenance['photographer_url'])
+    profile_host = profile_parts.hostname
+    if provider == 'unsplash':
+        profile_host = 'unsplash.com'
+    elif provider == 'pexels':
+        profile_host = 'www.pexels.com'
+    elif provider == 'wikimedia':
+        profile_host = 'commons.wikimedia.org'
+    _stock_profile_url(provenance['photographer_url'], profile_host, 'photographer_url', provider)
+    photo_parts = urlsplit(provenance['photo_url'])
+    photo_host = photo_parts.hostname
+    if provider == 'unsplash':
+        photo_host = 'unsplash.com'
+    elif provider == 'pexels':
+        photo_host = 'www.pexels.com'
+    elif provider == 'wikimedia':
+        photo_host = 'commons.wikimedia.org'
     _stock_photo_url(
         provenance['photo_url'],
-        'unsplash.com' if provider == 'unsplash' else 'www.pexels.com',
+        photo_host,
         photo_id,
         provider,
     )
     _stock_nonempty(provenance['query'], 'query')
     _stock_retrieved_at(provenance['retrieved_at'])
-    _stock_image_url(
-        provenance['image_url'],
-        'images.unsplash.com' if provider == 'unsplash' else 'images.pexels.com',
-        'image_url',
-    )
+    image_parts = urlsplit(provenance['image_url'])
+    image_host = image_parts.hostname
+    if provider == 'unsplash':
+        image_host = 'images.unsplash.com'
+    elif provider == 'pexels':
+        image_host = 'images.pexels.com'
+    elif provider == 'wikimedia':
+        image_host = 'upload.wikimedia.org'
+    _stock_image_url(provenance['image_url'], image_host, 'image_url')
+    if provider in ('wikimedia', 'google'):
+        _stock_nonempty(provenance['license'], 'provenance license')
+        _stock_https(provenance['license_url'], urlsplit(provenance['license_url']).hostname,
+                     'provenance license_url')
 
     if provider == 'unsplash':
         tracking = provenance['download_tracking']
@@ -308,12 +346,23 @@ def stock_binding(image):
     if image['stock_provenance_sha256'] != digest(provenance):
         raise ValueError('Stock provenance hash mismatch')
 
+    review_fields = set(image) & {'classifier_output', 'relevance_check'}
+    if review_fields and review_fields != {'classifier_output', 'relevance_check'}:
+        raise ValueError('Incomplete image classifier provenance')
+    if provider in ('wikimedia', 'google') and review_fields != {
+            'classifier_output', 'relevance_check'}:
+        raise ValueError('Open-source image lacks classifier provenance')
+    if review_fields:
+        from .imagery import validate_image_decision, validate_relevance_record
+        validate_image_decision(image['classifier_output'])
+        validate_relevance_record(image['relevance_check'])
     if provider == 'unsplash':
         expected_image = _STOCK_IMAGE_COMMON | {'hotlink'}
     else:
         expected_image = _STOCK_IMAGE_COMMON | {'local_path', 'sha256'}
         if 'hotlink' in image:
             expected_image.add('hotlink')
+    expected_image |= review_fields
     if set(image) != expected_image:
         raise ValueError('Unexpected stock image fields')
     if image['generated'] is not False:
@@ -324,9 +373,16 @@ def stock_binding(image):
         _stock_nonempty(image[field], field)
     if image['source_url'] != provenance['photo_url']:
         raise ValueError('Stock source URL mismatch')
-    if image['caption'] != 'Arkistokuva. Kuva ei esitä uutisen tapahtumaa.':
+    if image['caption'] not in {
+            'Arkistokuva artikkelin aiheesta.',
+            'Arkistokuva. Kuva ei esitä uutisen tapahtumaa.',
+    }:
         raise ValueError('Stock image caption is invalid')
-    if image['credit'] != f'Photo by {photographer} on {provider.title()}':
+    provider_label = {
+        'unsplash': 'Unsplash', 'pexels': 'Pexels', 'wikimedia': 'Wikimedia Commons',
+        'google': 'Google Custom Search',
+    }[provider]
+    if image['credit'] != f'Photo by {photographer} on {provider_label}':
         raise ValueError('Stock image credit is invalid')
 
     if provider == 'unsplash':
@@ -335,14 +391,23 @@ def stock_binding(image):
         if image['url'] != provenance['image_url'] or image['hotlink'] is not True:
             raise ValueError('Unsplash image URL/hotlink mismatch')
     else:
-        if image['license'] != 'Pexels License' or image['license_url'] != 'https://www.pexels.com/license/':
+        if provider == 'pexels' and (
+                image['license'] != 'Pexels License' or
+                image['license_url'] != 'https://www.pexels.com/license/'):
             raise ValueError('Pexels license is invalid')
+        if provider in ('wikimedia', 'google'):
+            _stock_nonempty(image['license'], 'open-source license')
+            _stock_https(image['license_url'], urlsplit(image['license_url']).hostname,
+                         'open-source license_url')
+            if (image['license'] != provenance['license'] or
+                    image['license_url'] != provenance['license_url']):
+                raise ValueError('Open-source licence provenance mismatch')
         if not isinstance(image['sha256'], str) or not re.fullmatch(SHA, image['sha256']):
-            raise ValueError('Pexels local image hash is invalid')
+            raise ValueError('Local open-source image hash is invalid')
         if image['local_path'] != f"media/{image['sha256']}.jpg":
-            raise ValueError('Pexels local image path is invalid')
+            raise ValueError('Local open-source image path is invalid')
         if image['url'] != f"https://uutistenlukija.fi/media/{image['sha256']}.jpg":
-            raise ValueError('Pexels local image URL is invalid')
+            raise ValueError('Local open-source image URL is invalid')
         if 'hotlink' in image and image['hotlink'] is not False:
             raise ValueError('Pexels image must not be hotlinked')
 
@@ -803,6 +868,10 @@ def _check_rendered_stock(html, image):
 
     rendered_image = rendered.images[editorial_index]
     provider = image['stock_provenance']['provider']
+    provider_text = {
+        'unsplash': 'Unsplash', 'pexels': 'Pexels', 'wikimedia': 'Wikimedia Commons',
+        'google': 'Google Custom Search',
+    }.get(provider, provider.title())
     expected_src = (image['url'] if provider == 'unsplash'
                     else f'/mvp-assets/{image["sha256"]}.jpg')
     if rendered_image['src'] != expected_src:
@@ -817,7 +886,7 @@ def _check_rendered_stock(html, image):
     visible = _stock_visible_text(''.join(rendered.visible))
     expected_credit = image['credit']
     for required in (image['caption'], image['license'], image['stock_provenance']['photographer'],
-                     provider.title(), expected_credit):
+                     provider_text, expected_credit):
         if _stock_visible_text(required) not in visible:
             raise ValueError('Missing visible stock attribution')
     hero_labels = [_stock_visible_text(''.join(item['text'])) for item in rendered.overlays
@@ -829,7 +898,6 @@ def _check_rendered_stock(html, image):
 
     photographer = image['stock_provenance']['photographer']
     photographer_url = image['stock_provenance']['photographer_url']
-    provider_text = provider.title()
     hero_anchors = [anchor for anchor in rendered.anchors if anchor['hero']]
     rights_anchors = [anchor for anchor in rendered.anchors if anchor['rights']]
     required_hero = [(image['source_url'], provider_text)]

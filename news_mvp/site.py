@@ -18,6 +18,10 @@ GENERATED_IMAGE_FALLBACK = (1536, 1024)
 # Hard cap on stories per listing. Page 1 promotes its newest story to a lead, and
 # that lead counts as one of the 30; later pages need no promoted lead.
 PAGE_SIZE = 30
+# The imported portal theme has room for a denser headline column than the old four-row slice.
+# Lower topic cards are separately capped by the fixed taxonomy below.
+HOMEPAGE_CENTER_ROWS = 8
+HOMEPAGE_TOPIC_LIMIT = 7
 # Exact licence URLs whose short name is CC BY 4.0. Trailing-slash variants are
 # the same canonical document, so they are normalised before matching.
 CC_BY_40_URLS = frozenset({
@@ -76,7 +80,12 @@ def image_credit_html(image):
         if provider == "unsplash":
             return (f'Photo by <a href="{esc(provenance["photographer_url"])}">{photographer}</a> '
                     f'on <a href="{photo_url}">Unsplash</a>')
-        return f'Photo by {photographer} on <a href="{photo_url}">Pexels</a>'
+        provider_label = {
+            "pexels": "Pexels",
+            "wikimedia": "Wikimedia Commons",
+            "google": "Google Custom Search",
+        }.get(provider, provider.title())
+        return f'Photo by {photographer} on <a href="{photo_url}">{provider_label}</a>'
     return esc(image.get("credit", ""))
 
 
@@ -85,6 +94,18 @@ def image_size_attributes(image):
     dimensions = image_dimensions(image)
     size = f' width="{dimensions[0]}" height="{dimensions[1]}"' if dimensions else ""
     return size + ' decoding="async"'
+
+
+def image_overlay_html(image, include_credit=True):
+    """Reader-visible image labels and reviewed stock credit for a portal slot."""
+    generated = image.get("generated") is True
+    stock = bool(image.get("stock_provenance"))
+    label = "Kuvituskuva · tekoälyllä luotu" if generated else "Arkistokuva"
+    label_html = f'<span class="portal-lead__image-label">{label}</span>' if generated or stock else ""
+    credit_html = ""
+    if include_credit and not generated and (stock or image.get("credit")):
+        credit_html = f'<span class="portal-lead__credit">{image_credit_html(image)}</span>'
+    return label_html + credit_html
 
 
 def homepage_image_figure(image, image_url, lazy):
@@ -98,17 +119,19 @@ def homepage_image_figure(image, image_url, lazy):
     overlay. No caption is rendered under the image.
     """
     loading = ' loading="lazy"' if lazy else ""
-    generated = image.get("generated") is True
-    stock = bool(image.get("stock_provenance"))
-    label = "Kuvituskuva · tekoälyllä luotu" if generated else "Arkistokuva"
-    label_html = f'<span class="portal-lead__image-label">{label}</span>' if generated or stock else ""
-    credit_html = ""
-    if not generated and (stock or image.get("credit")):
-        credit_html = f'<span class="portal-lead__credit">{image_credit_html(image)}</span>'
     return (f'<div class="portal-lead__image">'
             f'<img src="{esc(image_url)}" alt="{esc(image["alt"])}" '
             f'{image_size_attributes(image)}{loading} referrerpolicy="no-referrer">'
-            f'{label_html}{credit_html}</div>')
+            f'{image_overlay_html(image)}</div>')
+
+
+def listing_image_slot(image, image_url, slot, lazy=True):
+    """Render one of the theme's existing thumbnail slots for a reviewed image."""
+    loading = ' loading="lazy"' if lazy else ""
+    return (f'<div class="{slot}">'
+            f'<img src="{esc(image_url)}" alt="{esc(image["alt"])}" '
+            f'{image_size_attributes(image)}{loading} referrerpolicy="no-referrer">'
+            f'{image_overlay_html(image)}</div>')
 
 
 def jsonld_script(payload):
@@ -286,6 +309,7 @@ CATEGORY_PAGES = (
 CATEGORY_ALIASES = {"maailma": "ulkomaat"}
 LATEST_PATH = "/tuoreimmat/"
 OPPAAT_PATH = "/oppaat/"
+SOURCES_PATH = "/lahteet/"
 
 
 def category_page_slug(category):
@@ -320,15 +344,9 @@ def article_hero_figure(image, image_url):
     prose, so no caption ever hangs directly below the picture. The short generated
     label is an overlay inside the figure; it does not expose the internal model name.
     """
-    generated = image.get("generated") is True
-    stock = bool(image.get("stock_provenance"))
-    label = "Kuvituskuva · tekoälyllä luotu" if generated else "Arkistokuva"
-    label_html = f'<span class="portal-lead__image-label">{label}</span>' if generated or stock else ""
-    credit_html = (f'<span class="portal-lead__credit">{image_credit_html(image)}</span>'
-                   if stock else "")
     return (f'<figure class="article-hero"><img src="{esc(image_url)}" alt="{esc(image["alt"])}" '
             f'{image_size_attributes(image)} referrerpolicy="no-referrer">'
-            f'{label_html}{credit_html}</figure>')
+            f'{image_overlay_html(image, include_credit=bool(image.get("stock_provenance")))}</figure>')
 
 
 def image_rights_html(image):
@@ -354,13 +372,15 @@ def image_rights_html(image):
 def listing_feed_html(items, empty_text):
     """Text rows for a category/latest page in the native portal feed markup."""
     rows = []
-    for job, draft, link, date, fixture, _image, _image_url in items:
+    for job, draft, link, date, fixture, image, image_url in items:
         published = esc(timestamp(job["created_at"]).isoformat())
-        rows.append(f'<article class="portal-feed-item portal-feed-item--no-image">'
+        modifier = "" if image else " portal-feed-item--no-image"
+        thumb = listing_image_slot(image, image_url, "portal-feed-item__thumb") if image else ""
+        rows.append(f'<article class="portal-feed-item{modifier}">'
                     f'<time class="portal-feed-item__time" datetime="{published}">{date}</time>'
                     f'<div class="portal-feed-item__body">'
                     f'<h3><a href="{link}">{esc(draft["title"])}</a></h3>'
-                    f'<p>{esc(draft["summary"])}</p></div>{fixture}</article>')
+                    f'<p>{esc(draft["summary"])}</p></div>{thumb}{fixture}</article>')
     if not rows:
         return f'<div class="portal-list-feed"><p class="empty">{esc(empty_text)}</p></div>'
     return f'<div class="portal-list-feed">{"".join(rows)}</div>'
@@ -373,16 +393,70 @@ def category_page_body(title, note, items, empty_text):
             f'{listing_feed_html(items, empty_text)}</div>')
 
 
-def listing_page_html(page_items, page_number, page_count):
+def sources_page_body():
+    """The real editorial-method page linked from the shell footer."""
+    return ('<div class="portal-list-page">'
+            '<header class="portal-list-header"><h1>Lähteet ja toimitus</h1>'
+            '<p>Uutisten lähteet, tarkistus ja kuvitusten käyttöoikeudet.</p></header>'
+            '<div class="portal-list-feed">'
+            '<section class="portal-feed-item"><div class="portal-feed-item__body">'
+            '<h2>Alkuperäiset lähteet</h2>'
+            '<p>Jokaisen uutisen lähteet ja niihin liittyvät käyttöehdot näkyvät jutun yhteydessä. '
+            'Teksti perustuu tarkastettuihin lähdekatkelmiin.</p></div></section>'
+            '<section class="portal-feed-item"><div class="portal-feed-item__body">'
+            '<h2>Kuvat</h2>'
+            '<p>Valokuvien tekijä, lähde ja käyttöoikeus ilmoitetaan kuvan yhteydessä. '
+            'Tekoälyllä tehdyt kuvitukset merkitään kuvituskuviksi.</p></div></section>'
+            '<section class="portal-feed-item"><div class="portal-feed-item__body">'
+            '<h2>Toimitus</h2>'
+            '<p>Uutiset laaditaan tekoälyn avulla ja tarkastetaan erillisessä lähdetarkistuksessa. '
+            'Epävarmaa tietoa ei julkaista.</p></div></section>'
+            '</div></div>')
+
+
+def homepage_topic_strip(items):
+    """Render one native topic card per category from the already loaded archive.
+
+    This deliberately consumes ``listing_items`` rather than fetching or inventing content. The
+    first item in each taxonomy bucket is newest because the store is already newest-first. A
+    fixed seven-card cap keeps the homepage render fast even when the archive grows.
+    """
+    latest = {}
+    for item in items:
+        draft = item[1]
+        slug = category_page_slug(draft.get("category"))
+        if slug and slug not in latest:
+            latest[slug] = item
+    cards = []
+    for slug, display in CATEGORY_PAGES[:HOMEPAGE_TOPIC_LIMIT]:
+        item = latest.get(slug)
+        if item is None:
+            continue
+        job, draft, link, date = item[:4]
+        published = esc(timestamp(job["created_at"]).isoformat())
+        cards.append(
+            f'<div class="portal-topic-card portal-topic-card--{esc(slug)}">'
+            f'<a class="portal-topic-card__label" href="/categories/{esc(slug)}/">{esc(display)}</a>'
+            f'<h3><a href="{link}">{esc(draft["title"])}</a></h3>'
+            f'<time class="portal-topic-card__time" datetime="{published}">{esc(date)}</time>'
+            f'</div>')
+    if not cards:
+        return ""
+    return (f'<section class="portal-topic-strip" aria-labelledby="front-topics-title">'
+            f'<div class="portal-module-head"><h2 id="front-topics-title">Aiheet</h2>'
+            f'<a href="{LATEST_PATH}">Kaikki uutiset</a></div>'
+            f'<div class="portal-topic-strip__grid">{"".join(cards)}</div></section>')
+
+
+def listing_page_html(page_items, page_number, page_count, archive_items=None):
     """Rendered listing for one page in the portal theme.
 
-    Page 1 is the homepage: one promoted lead, the first four remaining stories
-    as center teaser rows, the right rail, and every later story as a text row
-    in the river outside the top grid. Homepage rows never carry an image or a
-    card, and the homepage deliberately has no pager. Archive pages keep their
-    plain text rows plus the existing pager. Only the lead carries an image, and
-    it paints eagerly with verified dimensions so its box is reserved before the
-    bytes arrive.
+    Page 1 is the homepage: one promoted lead, the first eight remaining stories
+    as center teaser rows, the right rail, and every later story as a row in the
+    river outside the top grid. Reviewed images use the theme's existing thumbnail
+    slots; text-only stories keep the matching no-image variant. The lead paints
+    eagerly with verified dimensions so its box is reserved before the bytes arrive.
+    The homepage also carries the branch's bounded, archive-backed topic strip.
     """
     if not page_items:
         return '<p class="empty">Ei vielä tarkastettuja uutisluonnoksia.</p>'
@@ -401,10 +475,12 @@ def listing_page_html(page_items, page_number, page_count):
         return esc(display), esc(category_slug(display))
 
     def teaser_row(item):
-        job, draft, link, date, fixture = item[:5]
+        job, draft, link, date, fixture, image, image_url = item[:7]
         category, slug = row_category(draft)
         published = esc(timestamp(job["created_at"]).isoformat())
-        return (f'<article class="portal-teaser portal-teaser--no-image"><div>'
+        modifier = "" if image else " portal-teaser--no-image"
+        thumb = listing_image_slot(image, image_url, "portal-teaser__thumb") if image else ""
+        return (f'<article class="portal-teaser{modifier}">{thumb}<div>'
                 f'<div class="portal-teaser__meta">'
                 f'<span class="portal-kicker portal-teaser__category portal-teaser__category--{slug}">{category}</span>'
                 f'<span>Julkaistu <time datetime="{published}">{date}</time></span></div>'
@@ -412,11 +488,13 @@ def listing_page_html(page_items, page_number, page_count):
                 f'{fixture}</article>')
 
     def river_row(item):
-        """River row: plain text, no image and no card, outside the top grid."""
-        job, draft, link, date, fixture = item[:5]
+        """River row: use its native thumbnail slot when a reviewed image exists."""
+        job, draft, link, date, fixture, image, image_url = item[:7]
         category, slug = row_category(draft)
         published = esc(timestamp(job["created_at"]).isoformat())
-        return (f'<article class="portal-row-card portal-row-card--no-image"><div>'
+        modifier = "" if image else " portal-row-card--no-image"
+        thumb = listing_image_slot(image, image_url, "portal-row-card__thumb") if image else ""
+        return (f'<article class="portal-row-card{modifier}">{thumb}<div>'
                 f'<div class="portal-row-card__meta">'
                 f'<span class="portal-kicker portal-row-card__category portal-row-card__category--{slug}">{category}</span>'
                 f'<span class="portal-row-card__time">Julkaistu <time datetime="{published}">{date}</time></span></div>'
@@ -444,8 +522,8 @@ def listing_page_html(page_items, page_number, page_count):
                      f'<a class="portal-save-link" href="{link}" aria-label="Lue juttu: {esc(draft["title"])}">Lue juttu</a>'
                      f'<span>{minutes} min lukuaika</span>'
                      f'</div></div></article>')
-        rows = [teaser_row(item) for item in page_items[1:5]]
-        river_rows = [river_row(item) for item in page_items[5:]]
+        rows = [teaser_row(item) for item in page_items[1:1 + HOMEPAGE_CENTER_ROWS]]
+        river_rows = [river_row(item) for item in page_items[1 + HOMEPAGE_CENTER_ROWS:]]
     else:
         rows = [teaser_row(item) for item in page_items]
     if not is_homepage:
@@ -467,11 +545,13 @@ def listing_page_html(page_items, page_number, page_count):
     if is_homepage and page_items[0][5] is None:
         grid_class += " portal-front-grid--image-free-lead"
     grid = f'<section class="{grid_class}"{grid_label}>{lead_html}{center}{rail}</section>'
-    if not river_rows:
-        return grid
-    return (f'{grid}<section class="portal-river" aria-labelledby="front-latest-title">'
-            f'<div class="portal-module-head"><h2 id="front-latest-title">Tuoreimmat</h2></div>'
-            f'<div class="portal-river__grid">{"".join(river_rows)}</div></section>')
+    river = ""
+    if river_rows:
+        river = (f'<section class="portal-river" aria-labelledby="front-latest-title">'
+                 f'<div class="portal-module-head"><h2 id="front-latest-title">Tuoreimmat</h2></div>'
+                 f'<div class="portal-river__grid">{"".join(river_rows)}</div></section>')
+    topics = homepage_topic_strip(archive_items if archive_items is not None else page_items)
+    return grid + river + topics
 
 
 def article_path(job):
@@ -530,9 +610,9 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
     # neither, so it must not advertise pages that were never published.
     if public:
         footer_tagline = ('Suomenkielinen uutispalvelu.<br><a href="/tietosuoja/">Tietosuoja</a> · '
-                          '<a href="/#lahteet">Lähteet ja toimitus</a> · <a href="/rss.xml">RSS-syöte</a>')
+                          '<a href="/lahteet/">Lähteet ja toimitus</a> · <a href="/rss.xml">RSS-syöte</a>')
         footer_columns = ('<div class="site-footer-col"><h3>Toimitus</h3><ul class="site-footer-links">'
-                          '<li><a href="/#lahteet">Lähteet ja toimitus</a></li>'
+                          '<li><a href="/lahteet/">Lähteet ja toimitus</a></li>'
                           '<li><a href="/">Uusimmat uutiset</a></li></ul></div>'
                           '<div class="site-footer-col"><h3>Tietoa</h3><ul class="site-footer-links">'
                           '<li><a href="/tietosuoja/">Tietosuoja</a></li>'
@@ -581,7 +661,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
 </div>
 <div class="portal-actions" aria-label="Pikatoiminnot">
 <span class="portal-weather" aria-label="Sää ei ole saatavilla"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="27" height="27" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><span><strong>-- °C</strong><small>Helsinki · sää ei saatavilla</small></span></span>
-<a class="portal-action portal-action--desktop" href="/#lahteet">Lähteet</a>
+<a class="portal-action portal-action--desktop" href="{SOURCES_PATH}">Lähteet</a>
 {theme_button}
 <button id="hamburger" class="portal-icon-button hamburger-btn" type="button" aria-label="Avaa valikko" aria-expanded="false" aria-controls="main-nav-menu"><svg class="portal-menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="portal-mobile-label">Valikko</span></button>
 </div>
@@ -813,11 +893,12 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
     for page_number, page_items in enumerate(pages, 1):
         path = listing_page_path(page_number)
         page_title = "Uusimmat uutiset" if page_number == 1 else f"Uusimmat uutiset – sivu {page_number}"
-        listing = listing_page_html(page_items, page_number, page_count)
+        listing = listing_page_html(
+            page_items, page_number, page_count,
+            archive_items=listing_items if page_number == 1 else None)
         intro_class = "intro homepage-intro visually-hidden" if page_number == 1 else "intro"
         body = f'''<section class="{intro_class}"><h1>{esc(page_title)}</h1></section>
-{listing}
-<section id="lahteet" class="principles"><h2>Lähteet näkyviin.</h2><p>Selkeä suomi, perustellut väitteet ja avoimet lähdeviitteet. Epävarma tieto jätetään julkaisematta. {"Julkaisemme vain tarkastetut uutiset." if public else "Sivuston tämä versio sisältää vain yksityisiä luonnoksia."}</p></section>'''
+{listing}'''
         # JSON-LD/OG describe this page's own slice and URL; the private preview keeps none.
         head_meta = homepage_head_meta(page_items, path=path, page_title=page_title,
                                        start_position=(page_number - 1) * PAGE_SIZE + 1) if public else ""
@@ -848,6 +929,9 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
     guides_meta = homepage_head_meta([], path=OPPAAT_PATH, page_title=guides_title) if public else ""
     atomic_write(output_dir / "oppaat/index.html",
                  page(guides_title, guides_body, OPPAAT_PATH if public else None, head_meta=guides_meta))
+    sources_title = "Lähteet ja toimitus"
+    atomic_write(output_dir / "lahteet/index.html",
+                 page(sources_title, sources_page_body(), SOURCES_PATH if public else None))
 
     # Shell assets. The imported theme and everything it loads relatively is copied
     # byte-for-byte into the current assets namespace, so the CSS keeps resolving its

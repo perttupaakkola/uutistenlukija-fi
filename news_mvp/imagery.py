@@ -1,10 +1,10 @@
-"""Article imagery: Unsplash hotlink, then local Pexels, then generated fallback.
+"""Article imagery: subject classifier, licensed provider tree, then generated fallback.
 
 Stock metadata is treated as a hint rather than proof: a candidate needs positive overlap with
-the reviewed story, its raster is independently checked, and Pexels candidates are copied into
-the site's content-addressed media directory. If no safe stock image is available, the existing
-generated-illustration path remains the final fallback. The returned record is therefore either
-an Unsplash hotlink or a local Pexels/generated JPEG.
+the classifier decision, its raster is independently checked, and downloaded candidates are
+copied into the site's content-addressed media directory. If no safe stock image is available,
+the generated-illustration path remains the final fallback. The returned record is therefore
+either an attributed provider image or a local generated JPEG.
 
 The independent pixel check is shared by all three paths: a prompt, filename, or provider
 description is never evidence that the raster is usable.
@@ -49,8 +49,134 @@ _FORBIDDEN_SUBJECT = re.compile(
 _PERSON_RISK = re.compile(r'\b(presidentti|ministeri|pääministeri)\b', re.I)
 
 
-def _prompt_for(subject, category=''):
-    """A constrained illustration prompt: no text, no real people, editorial register."""
+# Closed contract stored with every newly selected image. Keeping it here means the model
+# cannot silently add arbitrary search instructions or an unbounded prompt fragment.
+IMAGE_DECISION_KEYS = frozenset({
+    'subject', 'depictable_scene', 'must_show', 'must_avoid', 'search_queries', 'category',
+})
+MAX_DECISION_TEXT = 500
+MAX_DECISION_ITEMS = 8
+MAX_SEARCH_QUERIES = 5
+MAX_PROVIDER_QUERIES = 3
+MAX_RELEVANCE_CANDIDATES = 5
+RELEVANCE_EVIDENCE_LIMIT = 500
+_GENERIC_QUERY_WORDS = frozenset({
+    'photo', 'image', 'picture', 'news', 'uutinen', 'uutiset', 'kuva', 'kuvitus',
+    'person', 'people', 'ihminen', 'ihmiset', 'event', 'tapahtuma',
+})
+
+
+def _decision_text(value, field, maximum=MAX_DECISION_TEXT):
+    if (not isinstance(value, str) or not value.strip() or value != value.strip() or
+            len(value) > maximum):
+        raise ValueError(f'Invalid image classifier {field}')
+    return value
+
+
+def _decision_list(value, field, minimum=0, maximum=MAX_DECISION_ITEMS):
+    if not isinstance(value, list) or not minimum <= len(value) <= maximum:
+        raise ValueError(f'Invalid image classifier {field}')
+    result = []
+    seen = set()
+    for item in value:
+        item = _decision_text(item, field, 180)
+        key = item.casefold()
+        if key in seen:
+            raise ValueError(f'Duplicate image classifier {field}')
+        seen.add(key)
+        result.append(item)
+    return result
+
+
+def _concrete_query(value):
+    tokens = re.findall(r'[A-Za-zÅÄÖåäö0-9]+', value)
+    meaningful = [token.casefold() for token in tokens
+                  if token.casefold() not in _GENERIC_QUERY_WORDS and len(token) >= 3]
+    return len(tokens) >= 2 and len(meaningful) >= 2
+
+
+def validate_image_decision(value, draft=None):
+    """Validate the exact six-field JSON returned by the image classifier."""
+    if isinstance(value, str):
+        try:
+            value = json.loads(value)
+        except (TypeError, ValueError) as error:
+            raise ValueError('Image classifier output is not JSON') from error
+    if not isinstance(value, dict) or set(value) != IMAGE_DECISION_KEYS:
+        raise ValueError('Image classifier output has the wrong JSON shape')
+    subject = _decision_text(value['subject'], 'subject', 240)
+    scene = _decision_text(value['depictable_scene'], 'depictable_scene', 500)
+    must_show = _decision_list(value['must_show'], 'must_show', minimum=1)
+    must_avoid = _decision_list(value['must_avoid'], 'must_avoid')
+    queries = _decision_list(value['search_queries'], 'search_queries', minimum=3,
+                             maximum=MAX_SEARCH_QUERIES)
+    if any(not _concrete_query(query) for query in queries):
+        raise ValueError('Image classifier search queries must be concrete phrases')
+    category = _decision_text(value['category'], 'category', 40)
+    try:
+        from .editorial import CATEGORIES
+    except ImportError:
+        CATEGORIES = ('Kotimaa', 'Maailma', 'Talous', 'Tiede', 'Kulttuuri', 'Urheilu')
+    if category not in CATEGORIES:
+        raise ValueError('Image classifier category is unsupported')
+    if isinstance(draft, dict) and draft.get('category') and category != draft.get('category'):
+        raise ValueError('Image classifier category does not match the reviewed draft')
+    if isinstance(draft, dict):
+        story_parts = [draft.get('title', ''), draft.get('summary', '')]
+        story_parts.extend(
+            paragraph.get('text', '') for paragraph in draft.get('paragraphs', ())
+            if isinstance(paragraph, dict))
+        story_tokens = _semantic_tokens(' '.join(str(part) for part in story_parts))
+        subject_tokens = _semantic_tokens(subject)
+        if not subject_tokens.intersection(story_tokens):
+            raise ValueError('Image classifier subject is not grounded in the reviewed draft')
+        query_context = _semantic_tokens(' '.join([subject, scene] + must_show))
+        if any(not _semantic_tokens(query).intersection(query_context) for query in queries):
+            raise ValueError('Image classifier query is not grounded in its subject decision')
+    return {
+        'subject': subject,
+        'depictable_scene': scene,
+        'must_show': must_show,
+        'must_avoid': must_avoid,
+        'search_queries': queries,
+        'category': category,
+    }
+
+
+def _fallback_image_decision(draft, category=''):
+    """Compatibility decision for direct callers without a model adapter."""
+    subject = subject_from_draft(draft)
+    if not subject:
+        raise ValueError('Draft has no depictable subject')
+    terms = stock_query(draft).split()
+    terms = terms[:4] or [word for word in re.findall(r'[A-Za-zÅÄÖåä]+', subject)
+                          if len(word) >= 4][:2]
+    if not terms:
+        raise ValueError('Draft has no searchable subject')
+    phrase = ' '.join(terms)
+    decision = {
+        'subject': subject,
+        'depictable_scene': f'A neutral documentary scene about {subject}',
+        'must_show': terms[:2],
+        'must_avoid': ['legible text', 'logos', 'identifiable people'],
+        'search_queries': [phrase, f'{phrase} meeting', f'{phrase} public setting'],
+        'category': category or (draft.get('category') if isinstance(draft, dict) else '') or 'Kotimaa',
+    }
+    return validate_image_decision(
+        decision, draft if isinstance(draft, dict) and draft.get('category') else None)
+
+
+def classify_draft(draft, model=None, packet=None):
+    """Run the existing model adapter once and return its validated image decision."""
+    if model is None:
+        return _fallback_image_decision(
+            draft, draft.get('category', '') if isinstance(draft, dict) else '')
+    raw = model.call('image_classifier', packet or {}, draft)
+    return validate_image_decision(raw, draft)
+
+
+def _prompt_for(subject, category='', depictable_scene='', must_show=(), must_avoid=()):
+    """A constrained illustration prompt built from the classifier's subject decision."""
     category_hint = {
         'Kotimaa': 'Finnish civic and everyday setting',
         'Talous': 'neutral business and economics setting',
@@ -59,8 +185,12 @@ def _prompt_for(subject, category=''):
         'Kulttuuri': 'culture and arts setting',
         'Urheilu': 'sports setting',
     }.get(category, 'generic Nordic news setting')
+    show = ', '.join(str(item) for item in must_show)[:260]
+    avoid = ', '.join(str(item) for item in must_avoid)[:220]
+    scene = depictable_scene or subject
     return (
-        f"Editorial news illustration, {category_hint}. Subject: {subject[:280]}. "
+        f"Editorial news illustration, {category_hint}. Subject: {subject[:240]}. "
+        f"Depictable scene: {scene[:300]}. Must show: {show}. Must avoid: {avoid}. "
         "Photorealistic, natural daylight, calm documentary register, wide 3:2 composition "
         "with clear space. Strictly no text, no lettering, no signage, no logos, no watermarks, "
         "no charts, no captions, no borders. No recognisable faces or identifiable real people. "
@@ -116,9 +246,12 @@ def _api_key():
     return key
 
 
-def generate(subject, category='', model=DEFAULT_MODEL, size=DEFAULT_SIZE):
+def generate(subject, category='', model=DEFAULT_MODEL, size=DEFAULT_SIZE, decision=None):
     """Generate one image and return (raw_bytes, prompt, model)."""
-    prompt = _prompt_for(subject, category)
+    decision = decision or {}
+    prompt = _prompt_for(subject, category,
+                         decision.get('depictable_scene', ''),
+                         decision.get('must_show', ()), decision.get('must_avoid', ()))
     body = json.dumps({'model': model, 'prompt': prompt, 'size': size, 'n': 1}).encode()
     request = urllib.request.Request(
         'https://api.openai.com/v1/images/generations', data=body,
@@ -275,41 +408,70 @@ def has_legible_text(description):
         description))
 
 
-def build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3):
-    """Select an Unsplash hotlink, local Pexels image, or generated local JPEG for a draft.
+def build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3, decision=None,
+                allow_open_sources=True):
+    """Run the subject-driven image tree and return a reviewed image record or ``None``.
 
-    The provider order is Unsplash hotlink, Pexels copied into media/<sha256>.jpg, then the
-    existing generated-illustration path. Returns a dict matching what the site renderer's
-    <figure> needs, plus the review fields the release contract binds, or None to ship text-only.
-
-    Up to `attempts` generations are tried, because a model sometimes writes text into an
-    otherwise good illustration. The first candidate that verifies and carries no legible text
-    wins; if none does, the article ships without an image.
+    The controller supplies the model-produced ``decision``. The optional deterministic decision
+    is retained only for older direct library callers; the Commons and Google branches are enabled
+    only for the model path, so a legacy caller cannot accidentally make an unbounded live search.
+    Provider order is Pexels, Unsplash, Wikimedia Commons, Google CSE, then generation.
     """
     from pathlib import Path
     subject = subject_from_draft(draft)
     if not subject:
         return None
+    model_decision = decision is not None
+    try:
+        decision = (validate_image_decision(decision, draft) if model_decision else
+                    _fallback_image_decision(draft, category))
+    except (TypeError, ValueError):
+        return None
+    search_category = decision['category']
 
-    # Stock is preferred when a provider can prove both relevance and usable pixels. Providers
-    # own the English query derivation; the Finnish generation subject is never passed into a
-    # stock search. A provider outage or malformed result must leave the next provider available.
+    def selected(stock):
+        if not stock:
+            return None
+        if not model_decision:
+            return stock
+        # Provider helpers normally add these. The small compatibility enrichment makes the
+        # model output impossible to lose when an older integration adapter returns a record.
+        if 'classifier_output' not in stock:
+            stock = {**stock, 'classifier_output': decision}
+        if 'relevance_check' not in stock:
+            stock = {**stock, 'relevance_check': {
+                'accepted': True, 'method': 'provider', 'evidence': stock.get('depicted') or '',
+                'matched': list(decision['must_show']), 'reason': 'provider adapter accepted candidate',
+            }}
+        return stock
+
+    # A provider outage, malformed result, licence gap, or failed relevance check leaves the
+    # next provider available. The order is intentionally part of the owner-facing policy.
     try:
-        stock = fetch_unsplash(draft)
+        stock = fetch_pexels(draft, state_dir, decision=decision) if model_decision else fetch_pexels(draft, state_dir)
     except Exception:
         stock = None
     if stock:
-        return stock
+        return selected(stock)
     try:
-        stock = fetch_pexels(draft, state_dir)
+        stock = fetch_unsplash(draft, decision=decision) if model_decision else fetch_unsplash(draft)
     except Exception:
         stock = None
     if stock:
-        return stock
+        return selected(stock)
+    if model_decision and allow_open_sources:
+        for provider in (fetch_wikimedia, fetch_google):
+            try:
+                stock = provider(draft, state_dir, decision=decision)
+            except Exception:
+                stock = None
+            if stock:
+                return selected(stock)
 
     for attempt in range(max(1, attempts)):
         try:
-            raw, prompt, used_model = generate(subject, category, model=model)
+            raw, prompt, used_model = generate(subject, search_category, model=model,
+                                                decision=decision)
             facts = verify(raw)
         except GenerationError:
             continue
@@ -330,26 +492,30 @@ def build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3):
             'url': f'{PUBLIC_BASE}/media/{sha}.jpg',
             'local_path': f'media/{sha}.jpg',
             'sha256': sha,
-            'alt': f'Kuvituskuva: {draft.get("title", "").strip()[:120]}',
+            'alt': f'Kuvituskuva: {decision["subject"][:120]}',
             'caption': 'Kuvituskuva. Kuva on luotu tekoälyllä, ei valokuva tapahtumasta.',
-            'credit': f'AI-kuvitus ({used_model})',
+            # The internal model is retained in provenance for audit, but never exposed as the
+            # reader-facing credit: the honest label is simply AI-kuvitus.
+            'credit': 'AI-kuvitus',
             'license': 'AI-generated illustration',
-            # Must point at the terms that explain AI illustrations. Pointing this at the
-            # privacy page was rejected by the independent reviewer, correctly: a privacy page
-            # evidences no right to the image.
             'license_url': f'{PUBLIC_BASE}/kuvituskuvat/',
             'source_url': f'{PUBLIC_BASE}/kuvituskuvat/',
             'generated': True,
             'model': used_model,
             'prompt_sha256': hashlib.sha256(prompt.encode()).hexdigest(),
             'prompt_version': PROMPT_VERSION,
-            'subject': subject,
+            'subject': decision['subject'],
+            'classifier_output': decision,
+            'relevance_check': {
+                'accepted': True, 'method': 'generation',
+                'evidence': decision['depictable_scene'][:RELEVANCE_EVIDENCE_LIMIT],
+                'matched': list(decision['must_show']), 'reason': 'generated from the accepted scene',
+            },
             'pixels': facts,
             'depicted': description,
             'attempts': attempt + 1,
-            # Context for the independent editorial review; never evidence of correctness.
-            'review_note': ('Tekoälyn tuottama kuvitus, joka on rakennettu otsikon ja ensimmäisen '
-                            'kappaleen vahvistetusta sisällöstä. Kuva ei esitä todellista '
+            'review_note': ('Tekoälyn tuottama kuvitus, joka on rakennettu luokitellusta '
+                            'aiheesta ja sen kuvattavasta kohtauksesta. Kuva ei esitä todellista '
                             'henkilöä, tapahtumaa eikä tekijänoikeudellista teosta.'),
         }
     return None
@@ -376,6 +542,7 @@ CREDENTIAL_PROJECT = ('projects', 'uutistenlukija', '.env')
 PROVIDER_ENV = {
     'unsplash': ('UNSPLASH_ACCESS_KEY',),
     'pexels': ('PEXELS_API_KEY',),
+    'google': ('GOOGLE_CSE_API_KEY', 'GOOGLE_CUSTOM_SEARCH_API_KEY'),
 }
 
 UNSPLASH_API_HOST = 'api.unsplash.com'
@@ -388,7 +555,8 @@ UNSPLASH_PER_PAGE = 10
 MAX_IMAGE_BYTES = 12 * 1024 * 1024
 MAX_QUERY_TERMS = 6
 
-STOCK_CAPTION = 'Arkistokuva. Kuva ei esitä uutisen tapahtumaa.'
+STOCK_CAPTION = 'Arkistokuva artikkelin aiheesta.'
+LEGACY_STOCK_CAPTION = 'Arkistokuva. Kuva ei esitä uutisen tapahtumaa.'
 STOCK_LICENSE = 'Unsplash License'
 STOCK_UTM = (('utm_source', 'uutistenlukija'), ('utm_medium', 'referral'))
 STOCK_USER_AGENT = 'uutistenlukija/1.0 (https://uutistenlukija.fi)'
@@ -406,6 +574,23 @@ PEXELS_QUOTA_FILENAME = 'pexels-quota.json'
 # Tests may point this at a temporary file. In normal operation the path is derived from XDG's
 # cache directory and is deliberately unrelated to the news state directory.
 PEXELS_QUOTA_PATH = None
+
+WIKIMEDIA_API_HOST = 'commons.wikimedia.org'
+WIKIMEDIA_IMAGE_HOST = 'upload.wikimedia.org'
+WIKIMEDIA_API_URL = 'https://commons.wikimedia.org/w/api.php'
+WIKIMEDIA_TIMEOUT = 30
+WIKIMEDIA_PER_PAGE = 10
+GOOGLE_API_HOST = 'www.googleapis.com'
+GOOGLE_SEARCH_URL = 'https://www.googleapis.com/customsearch/v1'
+GOOGLE_TIMEOUT = 30
+GOOGLE_PER_PAGE = 10
+GOOGLE_CX_ENV = ('GOOGLE_CSE_CX', 'GOOGLE_CUSTOM_SEARCH_CX')
+PROVIDER_LABELS = {
+    'unsplash': 'Unsplash',
+    'pexels': 'Pexels',
+    'wikimedia': 'Wikimedia Commons',
+    'google': 'Google Custom Search',
+}
 
 _PHOTO_ID = re.compile(r'[A-Za-z0-9_-]{6,40}')
 _PEXELS_ID = re.compile(r'[1-9][0-9]{0,18}')
@@ -464,6 +649,18 @@ _FI_EN = {
     'tekoäly': 'artificial intelligence', 'suomi': 'finland', 'ruotsi': 'sweden',
     'venäjä': 'russia', 'ukraina': 'ukraine', 'kiina': 'china', 'eurooppa': 'europe',
     'yhdysvallat': 'united states',
+}
+
+# Extra inflected forms used only for classifier/story grounding. They deliberately do not feed
+# ``stock_query``: the legacy compatibility path has its own conservative vocabulary and its
+# existing query shape is part of the release fixtures.
+_GROUNDING_FI_EN = {
+    'kunta': 'municipality', 'kuntien': 'municipal',
+    'kuntajohtaja': 'municipal leader', 'kuntajohtajat': 'municipal leaders',
+    'kokous': 'meeting', 'kokouks': 'meeting', 'pohjoismais': 'nordic',
+    'yhteisty': 'cooperation', 'ohjaus': 'governance',
+    'kirjasto': 'library', 'lukusali': 'reading room', 'kaupungin': 'city',
+    'pidennetty': 'extended', 'ilta': 'evening', 'aukiolo': 'opening hours',
 }
 
 
@@ -533,6 +730,28 @@ def provider_key(name, credential_root=None):
     return None
 
 
+def _credential_value(names, credential_root=None):
+    """Read one non-secret credential value from env or the shared project env files."""
+    for name in names:
+        value = os.environ.get(name) or ''
+        if value.strip():
+            return value.strip()
+    root = DEFAULT_CREDENTIAL_ROOT if credential_root is None else credential_root
+    for path in _credential_env_files(root):
+        for name in names:
+            value = _read_env_value(path, name)
+            if value:
+                return value
+    return None
+
+
+def google_credentials(credential_root=None):
+    """Return ``(api_key, cx)`` only when both Google CSE values exist."""
+    key = provider_key('google', credential_root)
+    cx = _credential_value(GOOGLE_CX_ENV, credential_root)
+    return (key, cx) if key and cx else (None, None)
+
+
 def _english_term(token):
     """The English search term for one Finnish token, or None when nothing usable is there."""
     if token in _KEEP_TOKENS:
@@ -543,6 +762,13 @@ def _english_term(token):
         if token == stem or (len(stem) >= 5 and token.startswith(stem)):
             return _FI_EN[stem]
     return None
+
+
+def _semantic_english_term(token):
+    for stem in sorted(_GROUNDING_FI_EN, key=len, reverse=True):
+        if token == stem or (len(stem) >= 5 and token.startswith(stem)):
+            return _GROUNDING_FI_EN[stem]
+    return _english_term(token)
 
 
 def stock_query(draft):
@@ -571,6 +797,101 @@ def stock_query(draft):
             if len(terms) >= MAX_QUERY_TERMS:
                 return ' '.join(terms)
     return ' '.join(terms)
+
+
+def _semantic_tokens(text):
+    """Tokens for the relevance gate, including the small Finnish/English vocabulary."""
+    if not isinstance(text, str):
+        return set()
+    tokens = set(_TOKEN.findall(text.lower()))
+    for token in tuple(tokens):
+        english = _semantic_english_term(token)
+        if english:
+            tokens.update(_TOKEN.findall(english.lower()))
+    tokens.update(_ENGLISH_WORD.findall(text.lower()))
+    return {token for token in tokens
+            if token not in _STOPWORDS and token not in _GENERIC_QUERY_WORDS and len(token) >= 3}
+
+
+def _decision_queries(decision, draft):
+    queries = decision.get('search_queries') if isinstance(decision, dict) else None
+    if isinstance(queries, list):
+        return [query for query in queries[:MAX_PROVIDER_QUERIES] if isinstance(query, str)]
+    fallback = stock_query(draft)
+    return [fallback] if fallback else []
+
+
+def _decision_tokens(decision, query=''):
+    if not isinstance(decision, dict):
+        return set()
+    parts = [decision.get('subject', ''), decision.get('depictable_scene', ''), query]
+    parts.extend(decision.get('must_show') or [])
+    return _semantic_tokens(' '.join(str(part) for part in parts))
+
+
+def relevance_check(evidence, decision, method='metadata'):
+    """Compare visible candidate evidence with all required/forbidden subject hints.
+
+    This is the bounded non-vision fallback. A candidate must hit every meaningful token in every
+    ``must_show`` phrase and may not hit a meaningful ``must_avoid`` phrase. Requiring the whole
+    phrase prevents a generic "municipal" result from passing a requirement for a municipal
+    leaders' meeting. The result is persisted so the release record explains why the selected
+    asset passed.
+    """
+    evidence = re.sub(r'\s+', ' ', str(evidence or '')).strip()[:RELEVANCE_EVIDENCE_LIMIT]
+    evidence_tokens = _semantic_tokens(evidence)
+    # Vision descriptions commonly say "no legible text" when the candidate is clean. That
+    # sentence must satisfy a must_avoid requirement rather than make it look like the image
+    # contains the forbidden thing. Keep the original evidence in the release record, but remove
+    # explicitly negated clauses only for the avoid-token comparison.
+    positive_evidence = re.sub(
+        r"\b(?:no|without|free of|does not contain|doesn't contain|does not show|doesn't show|"
+        r"contains no|includes no|not visible)\b[^.;!?]*",
+        ' ', evidence, flags=re.I)
+    positive_avoid_tokens = _semantic_tokens(positive_evidence)
+    matched = []
+    missing = []
+    for phrase in decision.get('must_show', ()):
+        required = _semantic_tokens(phrase)
+        hits = sorted(required & evidence_tokens)
+        if required and required <= evidence_tokens:
+            matched.extend(hits)
+        else:
+            missing.append(phrase)
+    avoided = []
+    for phrase in decision.get('must_avoid', ()):
+        hits = sorted(_semantic_tokens(phrase) & positive_avoid_tokens)
+        avoided.extend(hits)
+    accepted = not missing and not avoided
+    if missing:
+        reason = 'missing must_show: ' + ', '.join(missing[:3])
+    elif avoided:
+        reason = 'matched must_avoid: ' + ', '.join(sorted(set(avoided))[:5])
+    else:
+        reason = 'all must_show requirements matched'
+    return {
+        'accepted': accepted,
+        'method': method if method in ('vision', 'metadata') else 'metadata',
+        'evidence': evidence,
+        'matched': sorted(set(matched)),
+        'reason': reason,
+    }
+
+
+def validate_relevance_record(value):
+    """Validate the bounded relevance decision stored with a selected image."""
+    if not isinstance(value, dict) or set(value) != {'accepted', 'method', 'evidence', 'matched', 'reason'}:
+        raise ValueError('Malformed image relevance record')
+    if value['accepted'] is not True:
+        raise ValueError('Selected image relevance record is not positive')
+    if value['method'] not in ('vision', 'metadata', 'generation', 'provider'):
+        raise ValueError('Unsupported image relevance method')
+    _decision_text(value['evidence'], 'relevance evidence', RELEVANCE_EVIDENCE_LIMIT)
+    if (not isinstance(value['matched'], list) or
+            any(not isinstance(item, str) or not item.strip() for item in value['matched'])):
+        raise ValueError('Malformed image relevance matches')
+    _decision_text(value['reason'], 'relevance reason', 300)
+    return value
 
 
 def _exact_https(url, host):
@@ -742,8 +1063,14 @@ def _relevance(description, item, tokens):
     Zero means the metadata says nothing about the subject: the photo is in the results because
     the API returned it, not because anything in it belongs to this story.
     """
-    metadata = _token_set(f'{description} {item.get("alt_description") or item.get("alt") or ""}')
+    metadata = _semantic_tokens(
+        f'{description} {item.get("alt_description") or item.get("alt") or ""}')
     return len((metadata & tokens) - _PLACE_TOKENS)
+
+
+def _candidate_evidence(candidate):
+    return ' '.join(str(candidate.get(key) or '') for key in
+                    ('description', 'title', 'tags', 'alt', 'metadata'))
 
 
 def _photo_candidate(item, tokens):
@@ -796,7 +1123,8 @@ def _digest(value):
     return editorial.digest(value)
 
 
-def _stock_record(candidate, query, pixels, depicted, retrieved_at):
+def _stock_record(candidate, query, pixels, depicted, retrieved_at, decision=None,
+                  relevance_result=None):
     provenance = {
         'provider': 'unsplash',
         'photo_id': candidate['photo_id'],
@@ -809,7 +1137,7 @@ def _stock_record(candidate, query, pixels, depicted, retrieved_at):
         'download_tracking': {'url': candidate['download'], 'successful': True},
     }
     alt = f'Arkistokuva: {depicted}' if depicted else f'Arkistokuva aiheesta {query}'
-    return {
+    record = {
         'url': candidate['hotlink'],
         'alt': alt[:250],
         'caption': STOCK_CAPTION,
@@ -824,9 +1152,13 @@ def _stock_record(candidate, query, pixels, depicted, retrieved_at):
         'stock_provenance': provenance,
         'stock_provenance_sha256': _digest(provenance),
     }
+    if decision is not None:
+        record['classifier_output'] = decision
+        record['relevance_check'] = relevance_result
+    return record
 
 
-def fetch_unsplash(draft, subject=None):
+def fetch_unsplash(draft, subject=None, decision=None):
     """Select one relevant Unsplash photograph as a hotlink-only record, or None.
 
     The raster behind the hotlink is fetched once so `verify` can judge the pixels and `describe`
@@ -841,51 +1173,55 @@ def fetch_unsplash(draft, subject=None):
     key = provider_key('unsplash')
     if not key:
         return None
-    query = re.sub(r'\s+', ' ', subject).strip() if isinstance(subject, str) else ''
-    if not query:
-        query = stock_query(draft)
-    if not query:
-        return None
-    search_url = UNSPLASH_SEARCH_URL + '?' + urllib.parse.urlencode(
-        {'query': query, 'orientation': 'landscape', 'per_page': UNSPLASH_PER_PAGE})
-    payload = _get_json(search_url, UNSPLASH_API_HOST,
-                        {'Authorization': 'Client-ID ' + key, 'Accept-Version': 'v1'})
-    if not isinstance(payload, dict):
-        return None
-    results = payload.get('results')
-    if not isinstance(results, list) or not results:
-        return None
-    tokens = _draft_tokens(draft, query)
-    # Zero-relevance metadata is dropped, not merely sorted last: a photo the provider happened
-    # to return is not evidence that it belongs to this story, and a place-name match alone is
-    # exactly the failure mode that put a snowy landscape on a drug-policy article.
-    candidates = [candidate for candidate in (_photo_candidate(item, tokens) for item in results)
-                  if candidate is not None and candidate['relevance'] > 0]
-    if not candidates:
-        return None
-    candidates.sort(key=lambda candidate: candidate['relevance'], reverse=True)
-    for candidate in candidates:
-        try:
-            raw = _get_bytes(candidate['hotlink'], UNSPLASH_IMAGE_HOST)
-            if raw is None:
-                continue
-            try:
-                pixels = verify(raw)
-            except GenerationError:
-                continue
-            # describe() is best effort: a vision failure must not discard a candidate whose
-            # pixels already verified, so the record keeps the candidate and reports no
-            # depicted subject.
-            try:
-                depicted = describe(raw)
-            except Exception:
-                depicted = None
-            if not _track_download(candidate['download'], candidate['photo_id'], key):
-                return None
-            return _stock_record(candidate, query, pixels, depicted,
-                                 datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
-        except Exception:
+    queries = ([re.sub(r'\s+', ' ', subject).strip()]
+               if isinstance(subject, str) and subject.strip()
+               else _decision_queries(decision, draft))
+    for query in queries:
+        if not query:
             continue
+        search_url = UNSPLASH_SEARCH_URL + '?' + urllib.parse.urlencode(
+            {'query': query, 'orientation': 'landscape', 'per_page': UNSPLASH_PER_PAGE})
+        payload = _get_json(search_url, UNSPLASH_API_HOST,
+                            {'Authorization': 'Client-ID ' + key, 'Accept-Version': 'v1'})
+        if not isinstance(payload, dict):
+            continue
+        results = payload.get('results')
+        if not isinstance(results, list) or not results:
+            continue
+        tokens = _draft_tokens(draft, query) | _decision_tokens(decision, query)
+        # Zero-relevance metadata is dropped: a provider result is not evidence that it belongs
+        # to this story, and a place-name match alone is the historical failure mode.
+        candidates = [candidate for candidate in (_photo_candidate(item, tokens) for item in results)
+                      if candidate is not None and candidate['relevance'] > 0]
+        candidates.sort(key=lambda candidate: candidate['relevance'], reverse=True)
+        for candidate in candidates[:MAX_RELEVANCE_CANDIDATES]:
+            try:
+                raw = _get_bytes(candidate['hotlink'], UNSPLASH_IMAGE_HOST)
+                if raw is None:
+                    continue
+                try:
+                    pixels = verify(raw)
+                except GenerationError:
+                    continue
+                try:
+                    depicted = describe(raw)
+                except Exception:
+                    depicted = None
+                relevance_result = None
+                if decision is not None:
+                    evidence = depicted or _candidate_evidence(candidate)
+                    relevance_result = relevance_check(
+                        evidence, decision, 'vision' if depicted else 'metadata')
+                    if not relevance_result['accepted']:
+                        continue
+                if not _track_download(candidate['download'], candidate['photo_id'], key):
+                    continue
+                return _stock_record(
+                    candidate, query, pixels, depicted,
+                    datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+                    decision, relevance_result)
+            except Exception:
+                continue
     return None
 
 
@@ -1162,7 +1498,8 @@ def _pexels_candidate(item, tokens):
             'description': description or None, 'relevance': relevance}
 
 
-def _pexels_record(candidate, query, sha, local_path, pixels, depicted, retrieved_at):
+def _pexels_record(candidate, query, sha, local_path, pixels, depicted, retrieved_at,
+                   decision=None, relevance_result=None):
     provenance = {
         'provider': 'pexels',
         'photo_id': candidate['photo_id'],
@@ -1174,7 +1511,7 @@ def _pexels_record(candidate, query, sha, local_path, pixels, depicted, retrieve
         'image_url': candidate['image_url'],
     }
     alt = f"Arkistokuva: {depicted}" if depicted else f'Arkistokuva aiheesta {query}'
-    return {
+    record = {
         'url': f'{PUBLIC_BASE}/{local_path}',
         'local_path': local_path,
         'sha256': sha,
@@ -1191,35 +1528,286 @@ def _pexels_record(candidate, query, sha, local_path, pixels, depicted, retrieve
         'stock_provenance': provenance,
         'stock_provenance_sha256': _digest(provenance),
     }
+    if decision is not None:
+        record['classifier_output'] = decision
+        record['relevance_check'] = relevance_result
+    return record
 
 
-def fetch_pexels(draft, state_dir, subject=None):
+def fetch_pexels(draft, state_dir, subject=None, decision=None):
     """Fetch, verify, and persist one relevant Pexels photograph, or return None."""
     try:
         key = provider_key('pexels')
         if not key:
             return None
-        query = re.sub(r'\s+', ' ', subject).strip() if isinstance(subject, str) else ''
-        if not query:
-            query = stock_query(draft)
-        if not query:
-            return None
-        payload = _pexels_search(query, key)
-        if not isinstance(payload, dict):
-            return None
-        results = payload.get('photos')
-        if not isinstance(results, list) or not results:
-            return None
-        tokens = _draft_tokens(draft, query)
-        candidates = [candidate for candidate in (_pexels_candidate(item, tokens)
-                      for item in results)
-                      if candidate is not None and candidate['relevance'] > 0]
-        if not candidates:
-            return None
-        candidates.sort(key=lambda candidate: candidate['relevance'], reverse=True)
+        queries = ([re.sub(r'\s+', ' ', subject).strip()]
+                   if isinstance(subject, str) and subject.strip()
+                   else _decision_queries(decision, draft))
         from pathlib import Path
-        for candidate in candidates:
-            raw = _get_bytes(candidate['image_url'], PEXELS_IMAGE_HOST)
+        for query in queries:
+            if not query:
+                continue
+            payload = _pexels_search(query, key)
+            if not isinstance(payload, dict):
+                continue
+            results = payload.get('photos')
+            if not isinstance(results, list) or not results:
+                continue
+            tokens = _draft_tokens(draft, query) | _decision_tokens(decision, query)
+            candidates = [candidate for candidate in (_pexels_candidate(item, tokens)
+                          for item in results)
+                          if candidate is not None and candidate['relevance'] > 0]
+            candidates.sort(key=lambda candidate: candidate['relevance'], reverse=True)
+            for candidate in candidates[:MAX_RELEVANCE_CANDIDATES]:
+                raw = _get_bytes(candidate['image_url'], PEXELS_IMAGE_HOST)
+                if raw is None:
+                    continue
+                try:
+                    verify(raw)
+                except GenerationError:
+                    continue
+                try:
+                    depicted = describe(raw)
+                except Exception:
+                    depicted = None
+                relevance_result = None
+                if decision is not None:
+                    evidence = depicted or _candidate_evidence(candidate)
+                    relevance_result = relevance_check(
+                        evidence, decision, 'vision' if depicted else 'metadata')
+                    if not relevance_result['accepted']:
+                        continue
+                jpeg = _jpg(raw)
+                try:
+                    pixels = verify(jpeg)
+                except GenerationError:
+                    continue
+                sha = hashlib.sha256(jpeg).hexdigest()
+                local_path = f'media/{sha}.jpg'
+                media = Path(state_dir) / 'media'
+                media.mkdir(parents=True, exist_ok=True)
+                (media / f'{sha}.jpg').write_bytes(jpeg)
+                return _pexels_record(
+                    candidate, query, sha, local_path, pixels, depicted,
+                    datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+                    decision, relevance_result)
+    except Exception:
+        return None
+    return None
+
+
+# ---------------------------------------------------------------------------
+# Wikimedia Commons and Google Custom Search branches.
+
+def _plain_metadata(value):
+    if not isinstance(value, str):
+        return ''
+    import html
+    return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]*>', ' ', value))).strip()[:500]
+
+
+def _safe_external_https(url):
+    """Accept a public HTTPS URL for an open-source result, never credentials or local hosts."""
+    if not isinstance(url, str) or not url:
+        return None
+    try:
+        parts = urllib.parse.urlsplit(url)
+        port = parts.port
+    except ValueError:
+        return None
+    if (parts.scheme != 'https' or not parts.hostname or parts.username or parts.password or
+            parts.fragment or port not in (None, 443)):
+        return None
+    host = parts.hostname.lower()
+    if host in {'localhost', 'localhost.localdomain'} or host.endswith('.localhost'):
+        return None
+    try:
+        import ipaddress
+        address = ipaddress.ip_address(host)
+        if address.is_private or address.is_loopback or address.is_link_local or address.is_reserved:
+            return None
+    except ValueError:
+        pass
+    return parts
+
+
+def _get_external_bytes(url, timeout=30):
+    parts = _safe_external_https(url)
+    if parts is None:
+        return None
+    try:
+        with _open(urllib.request.Request(url, headers={'Accept': 'image/*'}), parts.hostname,
+                   timeout=timeout, credentialed=False) as response:
+            if _safe_external_https(response.geturl()) is None:
+                return None
+            if not 200 <= getattr(response, 'status', 200) < 300:
+                return None
+            raw = response.read(MAX_IMAGE_BYTES + 1)
+    except Exception:
+        return None
+    return raw if raw and len(raw) <= MAX_IMAGE_BYTES else None
+
+
+def _persist_verified_image(raw, state_dir):
+    """Verify and persist one local open-source image, returning its release identity."""
+    from pathlib import Path
+    try:
+        verify(raw)
+        jpeg = _jpg(raw)
+        pixels = verify(jpeg)
+    except GenerationError:
+        return None
+    sha = hashlib.sha256(jpeg).hexdigest()
+    local_path = f'media/{sha}.jpg'
+    media = Path(state_dir) / 'media'
+    media.mkdir(parents=True, exist_ok=True)
+    (media / f'{sha}.jpg').write_bytes(jpeg)
+    return sha, local_path, pixels
+
+
+def _open_source_record(provider, candidate, query, state_dir, pixels, sha, local_path,
+                        depicted, decision, relevance_result, retrieved_at):
+    label = PROVIDER_LABELS[provider]
+    provenance = {
+        'provider': provider,
+        'photo_id': candidate['photo_id'],
+        'photographer': candidate['name'],
+        'photographer_url': candidate['profile'],
+        'photo_url': candidate['photo_page'],
+        'query': query,
+        'retrieved_at': retrieved_at,
+        'image_url': candidate['image_url'],
+        'license': candidate['license'],
+        'license_url': candidate['license_url'],
+    }
+    alt = f'Arkistokuva: {depicted}' if depicted else f'Arkistokuva aiheesta {query}'
+    return {
+        'url': f'{PUBLIC_BASE}/{local_path}',
+        'local_path': local_path,
+        'sha256': sha,
+        'alt': alt[:250],
+        'caption': STOCK_CAPTION,
+        'credit': f"Photo by {candidate['name']} on {label}",
+        'license': candidate['license'],
+        'license_url': candidate['license_url'],
+        'source_url': candidate['photo_page'],
+        'generated': False,
+        'pixels': pixels,
+        'depicted': depicted,
+        'hotlink': False,
+        'stock_provenance': provenance,
+        'stock_provenance_sha256': _digest(provenance),
+        'classifier_output': decision,
+        'relevance_check': relevance_result,
+    }
+
+
+def _commons_value(metadata, name):
+    value = metadata.get(name) if isinstance(metadata, dict) else None
+    if isinstance(value, dict):
+        value = value.get('value')
+    return _plain_metadata(value)
+
+
+def _commons_free_license(name, url):
+    if not name or not url or re.search(r'all rights reserved|fair use|non[- ]free', name, re.I):
+        return False
+    parts = _safe_external_https(url)
+    if parts is None:
+        return False
+    return (parts.hostname == 'creativecommons.org' and
+            ('/licenses/' in parts.path or '/publicdomain/' in parts.path) or
+            parts.hostname in {'publicdomain.org', 'www.publicdomain.org'} or
+            parts.hostname == 'commons.wikimedia.org' and '/wiki/' in parts.path)
+
+
+def _commons_candidate(page):
+    if not isinstance(page, dict):
+        return None
+    info = page.get('imageinfo')
+    if isinstance(info, list):
+        info = info[0] if info else None
+    if not isinstance(info, dict):
+        return None
+    image_url = info.get('url')
+    if _exact_https(image_url, WIKIMEDIA_IMAGE_HOST) is None:
+        return None
+    metadata = info.get('extmetadata') if isinstance(info.get('extmetadata'), dict) else {}
+    name = _commons_value(metadata, 'Artist') or _commons_value(metadata, 'Credit')
+    license_name = (_commons_value(metadata, 'LicenseShortName') or
+                    _commons_value(metadata, 'UsageTerms'))
+    license_url = _commons_value(metadata, 'LicenseUrl')
+    if not _commons_free_license(license_name, license_url) or not name:
+        return None
+    page_url = page.get('canonicalurl')
+    if not _exact_https(page_url, WIKIMEDIA_API_HOST):
+        title = page.get('title')
+        if not isinstance(title, str) or not title.startswith('File:'):
+            return None
+        page_url = f'https://{WIKIMEDIA_API_HOST}/wiki/{urllib.parse.quote(title, safe=":()/_-.,")}'
+    if not _exact_https(page_url, WIKIMEDIA_API_HOST):
+        return None
+    author_match = re.search(r'href=["\'](https://commons\.wikimedia\.org/[^"\']+)',
+                             str(metadata.get('Artist', {}).get('value', '')
+                                 if isinstance(metadata.get('Artist'), dict) else ''))
+    profile = author_match.group(1) if author_match else page_url
+    profile_parts = _exact_https(profile, WIKIMEDIA_API_HOST)
+    if profile_parts is None:
+        profile = page_url
+    description = (_commons_value(metadata, 'ImageDescription') or
+                   _plain_metadata(page.get('title')))
+    raw_id = page.get('pageid')
+    if isinstance(raw_id, bool) or not isinstance(raw_id, (int, str)):
+        return None
+    photo_id = f'wikimedia-{raw_id}'
+    return {
+        'photo_id': photo_id,
+        'photo_page': page_url,
+        'profile': profile,
+        'name': name,
+        'image_url': image_url,
+        'description': description or None,
+        'license': license_name,
+        'license_url': license_url,
+        'relevance': 0,
+    }
+
+
+def _wikimedia_search(query):
+    params = {
+        'action': 'query', 'generator': 'search', 'gsrsearch': query,
+        'gsrnamespace': 6, 'gsrlimit': WIKIMEDIA_PER_PAGE,
+        'prop': 'imageinfo', 'iiprop': 'url|extmetadata|size', 'iiurlwidth': 1536,
+        'format': 'json', 'formatversion': 2,
+    }
+    url = WIKIMEDIA_API_URL + '?' + urllib.parse.urlencode(params)
+    return _get_json(url, WIKIMEDIA_API_HOST, {'Accept': 'application/json'})
+
+
+def fetch_wikimedia(draft, state_dir, subject=None, decision=None):
+    """Search Commons for a licensed, attributable candidate after stock providers fail."""
+    if decision is None:
+        return None
+    for query in ([subject] if isinstance(subject, str) and subject.strip()
+                  else _decision_queries(decision, draft)):
+        payload = _wikimedia_search(query)
+        pages = (payload or {}).get('query', {}).get('pages') if isinstance(payload, dict) else None
+        if isinstance(pages, dict):
+            pages = list(pages.values())
+        if not isinstance(pages, list):
+            continue
+        tokens = _decision_tokens(decision, query)
+        candidates = []
+        for page in pages:
+            candidate = _commons_candidate(page)
+            if candidate is None:
+                continue
+            candidate['relevance'] = _relevance(candidate['description'], candidate, tokens)
+            if candidate['relevance'] > 0:
+                candidates.append(candidate)
+        candidates.sort(key=lambda item: item['relevance'], reverse=True)
+        for candidate in candidates[:MAX_RELEVANCE_CANDIDATES]:
+            raw = _get_bytes(candidate['image_url'], WIKIMEDIA_IMAGE_HOST)
             if raw is None:
                 continue
             try:
@@ -1230,19 +1818,128 @@ def fetch_pexels(draft, state_dir, subject=None):
                 depicted = describe(raw)
             except Exception:
                 depicted = None
-            jpeg = _jpg(raw)
+            evidence = depicted or _candidate_evidence(candidate)
+            relevance_result = relevance_check(
+                evidence, decision, 'vision' if depicted else 'metadata')
+            if not relevance_result['accepted']:
+                continue
+            persisted = _persist_verified_image(raw, state_dir)
+            if persisted is None:
+                continue
+            sha, local_path, pixels = persisted
+            return _open_source_record(
+                'wikimedia', candidate, query, state_dir, pixels, sha, local_path,
+                depicted, decision, relevance_result,
+                datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
+    return None
+
+
+def _google_item_value(item, keys):
+    for key in keys:
+        value = item.get(key) if isinstance(item, dict) else None
+        if isinstance(value, str) and value.strip():
+            return _plain_metadata(value)
+    page_map = item.get('pagemap') if isinstance(item, dict) else {}
+    for group in ('imageobject', 'metatags'):
+        values = page_map.get(group) if isinstance(page_map, dict) else None
+        if not isinstance(values, list):
+            continue
+        for value in values:
+            if not isinstance(value, dict):
+                continue
+            for key in keys:
+                candidate = value.get(key)
+                if isinstance(candidate, str) and candidate.strip():
+                    return _plain_metadata(candidate)
+    return ''
+
+
+def _google_candidate(item):
+    if not isinstance(item, dict):
+        return None
+    image = item.get('image') if isinstance(item.get('image'), dict) else {}
+    image_url = item.get('link')
+    source_url = item.get('contextLink') or image.get('contextLink')
+    if _safe_external_https(image_url) is None or _safe_external_https(source_url) is None:
+        return None
+    name = _google_item_value(item, ('author', 'creator', 'photographer', 'artist'))
+    license_name = _google_item_value(item, ('license', 'rights', 'usageTerms'))
+    license_url = _google_item_value(item, ('license_url', 'licenseUrl', 'licenseurl', 'og:license'))
+    if not name or not license_name or _safe_external_https(license_url) is None:
+        return None
+    # Custom Search has no stable asset id; this digest is only the reviewed identity key and is
+    # derived from the two URLs supplied by the source, never presented as an author claim.
+    photo_id = 'google-' + _digest({'source_url': source_url, 'image_url': image_url})[:24]
+    description = _google_item_value(item, ('title', 'snippet', 'alt'))
+    return {
+        'photo_id': photo_id,
+        'photo_page': source_url,
+        'profile': source_url,
+        'name': name,
+        'image_url': image_url,
+        'description': description or None,
+        'license': license_name,
+        'license_url': license_url,
+        'relevance': 0,
+    }
+
+
+def _google_search(query, key, cx):
+    params = {
+        'key': key, 'cx': cx, 'q': query, 'searchType': 'image',
+        'rights': 'cc_publicdomain,cc_attribute,cc_sharealike',
+        'safe': 'active', 'num': GOOGLE_PER_PAGE, 'imgSize': 'large',
+    }
+    url = GOOGLE_SEARCH_URL + '?' + urllib.parse.urlencode(params)
+    return _get_json(url, GOOGLE_API_HOST, {'Accept': 'application/json'})
+
+
+def fetch_google(draft, state_dir, subject=None, decision=None):
+    """Use Google CSE only with credentials and only when licence/author metadata is present."""
+    if decision is None:
+        return None
+    key, cx = google_credentials()
+    if not key or not cx:
+        return None
+    for query in ([subject] if isinstance(subject, str) and subject.strip()
+                  else _decision_queries(decision, draft)):
+        payload = _google_search(query, key, cx)
+        results = payload.get('items') if isinstance(payload, dict) else None
+        if not isinstance(results, list):
+            continue
+        tokens = _decision_tokens(decision, query)
+        candidates = []
+        for item in results:
+            candidate = _google_candidate(item)
+            if candidate is None:
+                continue
+            candidate['relevance'] = _relevance(candidate['description'], candidate, tokens)
+            if candidate['relevance'] > 0:
+                candidates.append(candidate)
+        candidates.sort(key=lambda item: item['relevance'], reverse=True)
+        for candidate in candidates[:MAX_RELEVANCE_CANDIDATES]:
+            raw = _get_external_bytes(candidate['image_url'], GOOGLE_TIMEOUT)
+            if raw is None:
+                continue
             try:
-                pixels = verify(jpeg)
+                verify(raw)
             except GenerationError:
                 continue
-            sha = hashlib.sha256(jpeg).hexdigest()
-            local_path = f'media/{sha}.jpg'
-            media = Path(state_dir) / 'media'
-            media.mkdir(parents=True, exist_ok=True)
-            (media / f'{sha}.jpg').write_bytes(jpeg)
-            return _pexels_record(
-                candidate, query, sha, local_path, pixels, depicted,
+            try:
+                depicted = describe(raw)
+            except Exception:
+                depicted = None
+            evidence = depicted or _candidate_evidence(candidate)
+            relevance_result = relevance_check(
+                evidence, decision, 'vision' if depicted else 'metadata')
+            if not relevance_result['accepted']:
+                continue
+            persisted = _persist_verified_image(raw, state_dir)
+            if persisted is None:
+                continue
+            sha, local_path, pixels = persisted
+            return _open_source_record(
+                'google', candidate, query, state_dir, pixels, sha, local_path,
+                depicted, decision, relevance_result,
                 datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
-    except Exception:
-        return None
     return None

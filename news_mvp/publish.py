@@ -267,7 +267,9 @@ def public_bundle(store,job,state):
         return article_path({'id': identifier, 'draft': draft})
     def _url_entry(u,mod=None):
         return '<url><loc>'+esc(u)+'</loc>'+(('<lastmod>'+esc(mod)+'</lastmod>') if mod else '')+'</url>'
-    entries=[_url_entry('https://uutistenlukija.fi/'),_url_entry('https://uutistenlukija.fi/tietosuoja/')]
+    entries=[_url_entry('https://uutistenlukija.fi/'),
+             _url_entry('https://uutistenlukija.fi/tietosuoja/'),
+             _url_entry('https://uutistenlukija.fi/lahteet/')]
     entries+= [_url_entry('https://uutistenlukija.fi/'+_slug_for(i), article_mod.get(i)) for i in sorted(ids)]
     # Rendered archive pages are published pages too; the sitemap must list them.
     # Symlinked roots/directories/index files and nonnumeric or leading-zero names are not pages.

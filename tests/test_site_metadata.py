@@ -80,7 +80,7 @@ class SiteMetadata(unittest.TestCase):
         hrefs = self._footer_hrefs(text)
         self.assertTrue(hrefs, "public page footer has no links")
         self.assertGreaterEqual(len(set(hrefs)), 3, f"public footer links: {hrefs}")
-        for required in ("/tietosuoja/", "/#lahteet", "/rss.xml"):
+        for required in ("/tietosuoja/", "/lahteet/", "/rss.xml"):
             self.assertIn(required, hrefs, f"public footer is missing {required}: {hrefs}")
 
     def _render_public(self):

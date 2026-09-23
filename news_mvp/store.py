@@ -86,6 +86,54 @@ class Store:
             self.db.execute("UPDATE jobs SET review=?, status=?, error=NULL WHERE id=?",
                             (encode(review), "approved" if review["approved"] else "rejected", job_id))
 
+    def save_reviewed_image(self, job_id, packet, draft, review,
+                            previous_packet_sha, previous_draft_sha):
+        """Atomically attach a freshly reviewed image, including a deployed correction.
+
+        A backfill is allowed to change only the image-bearing packet/draft pair that the
+        publication row already names. If the stored hashes moved underneath the controller,
+        or the job has another unresolved publication, the transaction fails closed. A deployed
+        row is then put back through the ordinary publication state machine with the new hashes;
+        the old public bundle remains live until that release passes its normal checks.
+        """
+        image = packet.get("image")
+        image_sha = (image.get("sha256") if isinstance(image, dict) and image.get("local_path")
+                     else None)
+        packet_json, draft_json, review_json = encode(packet), encode(draft), encode(review)
+        with self.db:
+            row = self.db.execute("SELECT packet,draft,status FROM jobs WHERE id=?",
+                                  (job_id,)).fetchone()
+            if row is None:
+                raise ValueError("Cannot attach an image to an unknown job")
+            if digest(json.loads(row["packet"])) != previous_packet_sha:
+                raise ValueError("Image backfill packet changed during preparation")
+            if digest(json.loads(row["draft"])) != previous_draft_sha:
+                raise ValueError("Image backfill draft changed during preparation")
+            if row["status"] not in ("approved", "rendered"):
+                raise ValueError("Image backfill requires a rendered or approved story")
+
+            publication_table = self.db.execute(
+                "SELECT 1 FROM sqlite_master WHERE type='table' AND name='publications'"
+            ).fetchone()
+            publication = (self.db.execute(
+                "SELECT * FROM publications WHERE job_id=?", (job_id,)).fetchone()
+                           if publication_table else None)
+            if publication is not None and publication["status"] != "deployed":
+                raise ValueError("Image backfill cannot change an unresolved publication")
+            if publication is not None:
+                if (publication["packet_sha"] != previous_packet_sha or
+                        publication["draft_sha"] != previous_draft_sha or
+                        publication["image_sha"] is not None):
+                    raise ValueError("Image backfill publication identity changed")
+
+            self.db.execute("UPDATE jobs SET packet=?,draft=?,review=?,status='approved',error=NULL "
+                            "WHERE id=?", (packet_json, draft_json, review_json, job_id))
+            if publication is not None:
+                self.db.execute(
+                    "UPDATE publications SET packet_sha=?,draft_sha=?,image_sha=?,status='preparing',"
+                    "attempts=0,remote_commit=NULL,run_id=NULL,error=NULL WHERE job_id=?",
+                    (digest(packet), digest(draft), image_sha, job_id))
+
     def fail(self, job_id, now, max_attempts, retry_seconds, error):
         row = self.get(job_id)
         with self.db:

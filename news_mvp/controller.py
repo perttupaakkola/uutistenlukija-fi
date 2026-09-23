@@ -7,9 +7,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .diagnostics import safe_error
-from .editorial import FixtureModel, HermesModel, text, validate_packet, validate_draft, validate_review
+from .editorial import (FixtureModel, HermesModel, digest, text, validate_packet,
+                        validate_draft, validate_review)
 from .site import render_site
 from .store import database
+
+
+# Image provider calls are deliberately bounded per scheduler tick. A failed candidate remains
+# text-only and can be retried by a later tick; no separate backfill script is needed.
+IMAGE_BACKFILL_LIMIT = 3
 
 
 def load_config(path):
@@ -77,7 +83,120 @@ def repair_title(model, packet, draft):
     return draft
 
 
-def tick(config_path, model=None, now=None, _already_locked=False, target_job_id=None):
+def _publication_status(store, job_id):
+    """Return a publication status when the live publication table exists."""
+    db = getattr(store, "db", None)
+    if db is None:
+        return None
+    try:
+        table = db.execute(
+            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='publications'"
+        ).fetchone()
+        if table is None:
+            return None
+        row = db.execute("SELECT status FROM publications WHERE job_id=?", (job_id,)).fetchone()
+        return row["status"] if row is not None else None
+    except Exception:
+        # A provider must never be called for an unverifiable publication state.
+        return "unreadable"
+
+
+def _missing_image_jobs(store):
+    """Yield reviewed/rendered jobs whose packet and draft are both text-only."""
+    for job in store.articles():
+        if job.get("status") not in (None, "approved", "rendered"):
+            continue
+        try:
+            packet, draft = json.loads(job["packet"]), json.loads(job["draft"])
+        except (TypeError, ValueError, KeyError):
+            continue
+        # A mismatched packet/draft is a structural failure, not an invitation to fetch a new
+        # provider image. render_site/release validation remains the authority for that case.
+        if packet.get("image") is not None or draft.get("image") is not None:
+            continue
+        publication_status = _publication_status(store, job["id"])
+        if publication_status not in (None, "deployed"):
+            continue
+        yield job, packet, draft
+
+
+def has_missing_images(store):
+    """Whether this store has at least one safe, reviewed text-only candidate."""
+    return next(_missing_image_jobs(store), None) is not None
+
+
+def backfill_missing_images(store, state_dir, model, limit=IMAGE_BACKFILL_LIMIT):
+    """Attach up to three independently reviewed images to existing text-only stories.
+
+    ``imagery.build_image`` owns the provider order and all provenance/media checks. This
+    function only supplies the normal reviewed draft to it, asks the independent reviewer to
+    approve the resulting image-bearing draft, and persists the complete pair atomically.
+    """
+    if model is None:
+        return []
+    try:
+        budget = max(0, min(IMAGE_BACKFILL_LIMIT, int(limit)))
+    except (TypeError, ValueError, OverflowError):
+        budget = IMAGE_BACKFILL_LIMIT
+    if budget == 0:
+        return []
+
+    from . import imagery
+
+    attached = []
+    for job, packet, draft in list(_missing_image_jobs(store))[:budget]:
+        try:
+            image = imagery.build_image(draft, state_dir, category=draft.get("category", ""))
+        except Exception:
+            # Provider outages, malformed responses and an unavailable generator are all
+            # best-effort failures. The reviewed text remains publishable without a picture.
+            continue
+        if image is None:
+            continue
+
+        image_packet = {key: value for key, value in packet.items() if key != "image_note"}
+        image_packet["image"] = image
+        image_draft = {**draft, "image": image}
+        try:
+            validate_draft(image_draft, image_packet)
+            review = validate_review(model.call("reviewer", image_packet, image_draft), image_draft)
+        except Exception:
+            # A new image is never attached without a fresh review bound to its exact record.
+            continue
+        if not review["approved"]:
+            continue
+
+        # The hashes are captured before any mutation. Store.save_reviewed_image uses them to
+        # prove that a deployed story changed only through this image-backfill path.
+        previous_packet_sha = digest(packet)
+        previous_draft_sha = digest(draft)
+        if hasattr(store, "save_reviewed_image"):
+            store.save_reviewed_image(job["id"], image_packet, image_draft, review,
+                                      previous_packet_sha, previous_draft_sha)
+        else:
+            # Small in-memory test doubles from the renderer suites predate the durable method.
+            store.save_packet(job["id"], image_packet)
+            store.save_draft(job["id"], image_draft, getattr(model, "name", "image-backfill"))
+            store.finish_review(job["id"], review)
+        attached.append(store.get(job["id"]) if hasattr(store, "get") else {
+            **job, "packet": json.dumps(image_packet), "draft": json.dumps(image_draft),
+            "review": json.dumps(review), "status": "approved",
+        })
+    return attached
+
+
+def _run_image_backfill(config, store, state_dir, model=None, limit=IMAGE_BACKFILL_LIMIT):
+    """Run the bounded backfill only when the configured imagery path is enabled."""
+    if not config.get("illustrations", True) or not has_missing_images(store):
+        return []
+    if model is None:
+        model = (FixtureModel() if config["backend"] == "fixture" else HermesModel(
+            config.get("hermes_executable", "/home/pertt/.hermes/hermes-agent/venv/bin/hermes")))
+    return backfill_missing_images(store, state_dir, model, limit=limit)
+
+
+def tick(config_path, model=None, now=None, _already_locked=False, target_job_id=None,
+         image_backfill_limit=IMAGE_BACKFILL_LIMIT):
     config = load_config(config_path)
     if not config["enabled"]:
         return {"status": "stopped"}
@@ -89,9 +208,21 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
             store.recover(config["max_attempts"])
             # A render interrupted after review resumes without another model call.
             if any(j["status"] == "approved" for j in store.articles()):
+                backfilled = _run_image_backfill(config, store, config["state_dir"], model,
+                                                 limit=image_backfill_limit)
+                if backfilled:
+                    return {"status": "rendered", "articles": render_site(
+                        store, config["output_dir"], config["state_dir"]),
+                            "image_backfilled": len(backfilled)}
                 return {"status": "rendered", "articles": render_site(store, config["output_dir"], config["state_dir"])}
             job = store.claim(now.timestamp(), config["max_attempts"], target_job_id)
             if job is None:
+                backfilled = _run_image_backfill(config, store, config["state_dir"], model,
+                                                 limit=image_backfill_limit)
+                if backfilled:
+                    return {"status": "rendered", "articles": render_site(
+                        store, config["output_dir"], config["state_dir"]),
+                            "image_backfilled": len(backfilled)}
                 return {"status": "idle"}
             if model is None:
                 model = FixtureModel() if config["backend"] == "fixture" else HermesModel(
@@ -109,15 +240,20 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                 # Fit an over-long headline into the SERP budget before the reviewer and the
                 # illustration step see the draft; both use the final title.
                 draft = repair_title(model, packet, draft)
-                # Attach an illustration generated from the reviewed draft's own verified facts.
-                # Best effort by design: imagery.build_image returns None on any failure or an
-                # unsafe subject, and the article then ships text-only. The image belongs to the
-                # packet contract, so the independent reviewer sees it and may reject it.
-                if config.get("illustrations", True) and not packet.get("image"):
+                # Understand the complete reviewed draft before searching for an image. The
+                # classifier and provider tree are best effort: malformed model output, a provider
+                # outage, a licence gap, or failed relevance simply leaves this article text-only.
+                # Fixture packets are deliberately network-free; their model adapter is only a
+                # contract test and must never make a provider or generation request.
+                if (config.get("illustrations", True) and not packet.get("image") and
+                        not packet.get("fixture", False)):
                     try:
-                        from .imagery import build_image
+                        from .imagery import build_image, classify_draft
+                        image_decision = classify_draft(draft, model=model, packet=packet)
                         illustration = build_image(draft, config["state_dir"],
-                                                   category=draft.get("category", ""))
+                                                   category=draft.get("category", ""),
+                                                   decision=image_decision,
+                                                   allow_open_sources=not packet.get("fixture", False))
                     except Exception:
                         illustration = None
                     if illustration is not None:

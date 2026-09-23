@@ -344,18 +344,18 @@ class ProviderChainIntegration(unittest.TestCase):
              mock.patch.object(imagery, 'generate', side_effect=AssertionError('generation')):
             result = imagery.build_image(self.DRAFT, state)
         self.assertIs(result, pexels)
-        self.assertEqual(calls, ['unsplash', 'pexels'])
+        self.assertEqual(calls, ['pexels'])
 
         calls.clear()
         with tempfile.TemporaryDirectory() as state, \
              mock.patch.object(imagery, 'fetch_unsplash',
                                side_effect=lambda draft: calls.append('unsplash') or unsplash), \
              mock.patch.object(imagery, 'fetch_pexels',
-                               side_effect=lambda draft, state_dir: calls.append('pexels') or pexels), \
+                               side_effect=lambda draft, state_dir: calls.append('pexels') or None), \
              mock.patch.object(imagery, 'generate', side_effect=AssertionError('generation')):
             result = imagery.build_image(self.DRAFT, state)
         self.assertIs(result, unsplash)
-        self.assertEqual(calls, ['unsplash'])
+        self.assertEqual(calls, ['pexels', 'unsplash'])
 
     def test_absent_stock_providers_fall_back_to_ai_and_keep_model_provenance(self):
         import news_mvp.imagery as imagery
@@ -368,7 +368,7 @@ class ProviderChainIntegration(unittest.TestCase):
             result = imagery.build_image(self.DRAFT, state)
         self.assertIsNotNone(result)
         self.assertTrue(result['generated'])
-        self.assertEqual(result['credit'], 'AI-kuvitus (test-model)')
+        self.assertEqual(result['credit'], 'AI-kuvitus')
         self.assertEqual(result['model'], 'test-model')
 
     def test_unsafe_subject_remains_text_only_before_provider_chain(self):

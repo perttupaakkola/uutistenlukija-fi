@@ -101,6 +101,15 @@ def validate_draft(draft, packet):
             web_url(image.get(key))
         for key in ("alt", "credit", "license"):
             text(image.get(key), "image " + key, 500)
+        if "classifier_output" in image:
+            # The provider record is not enough: keep the exact subject decision and the positive
+            # relevance result bound to the reviewed draft so a later release cannot silently
+            # replace a rejected candidate.
+            from .imagery import validate_image_decision, validate_relevance_record
+            validate_image_decision(image["classifier_output"], draft)
+            if "relevance_check" not in image:
+                raise ValueError("Image classifier decision lacks relevance check")
+            validate_relevance_record(image["relevance_check"])
         # A generated illustration must be labelled as such in the reader-visible caption, so
         # a reader can never mistake it for a photograph of the event described.
         if image.get("generated") is True:
@@ -137,6 +146,10 @@ class FixtureModel:
             return data["draft"]
         if role == "titler":
             return {"title": data["draft"]["title"]}
+        if role == "image_classifier":
+            # Keep the classifier fixture separate from the reviewer fixture so tests exercise
+            # the same strict JSON contract as the live model path.
+            return json.loads((ROOT / "fixtures/image-classifier-output.json").read_text())
         return {**data["review"], "draft_sha256": digest(draft)}
 
 

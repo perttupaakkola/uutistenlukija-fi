@@ -3,8 +3,9 @@ import json
 from pathlib import Path
 
 from .diagnostics import safe_error
-from .controller import ingest, load_config, single_tick, tick
-from .editorial import ROOT, digest, web_url
+from .controller import (backfill_missing_images, has_missing_images, ingest, load_config,
+                          single_tick, tick)
+from .editorial import HermesModel, ROOT, digest, web_url
 from .intake import collect
 from .discovery import discover,collect_modis
 from .publish import ensure_table, publish, guard
@@ -103,7 +104,10 @@ def live_tick(config_path):
                     if admission['id']!=job_id:raise ValueError('Source identity mismatch')
                     job=store.get(job_id)
                 if job['status'] in ('ready','running','approved'):
-                    tick(config_path,_already_locked=True,target_job_id=job_id)
+                    # Public publication state is one-row-at-a-time; keep any image backfill
+                    # attached to this live tick inside the same atomic release.
+                    tick(config_path,_already_locked=True,target_job_id=job_id,
+                         image_backfill_limit=1)
                     job=store.get(job_id)
                 if job['status'] in ('rendered','approved'):
                     result=publish(store,job,config['state_dir'],config_path)
@@ -112,6 +116,16 @@ def live_tick(config_path):
                 result={'status':job['status'],'job_id':job_id}
                 if errors:result['source_errors']=errors
                 return result
+            # Existing published/text-only stories use the same reviewed image chain as new
+            # stories. A live release tracks one publication row at a time; the private
+            # controller may fill up to three, but the public tick attaches one atomically.
+            if config.get('illustrations', True) and has_missing_images(store):
+                model=HermesModel(config.get('hermes_executable','/home/pertt/.hermes/hermes-agent/venv/bin/hermes'))
+                backfilled=backfill_missing_images(store,config['state_dir'],model,limit=1)
+                if backfilled:
+                    result=publish(store,backfilled[0],config['state_dir'],config_path)
+                    result['image_backfilled']=len(backfilled)
+                    return result
             result={'status':'idle','publications':store.db.execute("SELECT count(*) FROM publications WHERE status='deployed'").fetchone()[0]}
             if errors:result['source_errors']=errors
             return result

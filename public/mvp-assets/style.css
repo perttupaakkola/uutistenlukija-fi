@@ -45,6 +45,9 @@ dialog button:focus-visible{outline:3px solid var(--accent,#c0392b);outline-offs
 .portal-lead__credit a,.portal-lead__credit a:hover{color:#fff;text-decoration:underline}
 .portal-lead__image-label{top:12px;left:12px}
 .portal-lead__credit{right:12px;bottom:12px;overflow-wrap:anywhere;text-align:right}
+.portal-teaser__thumb,.portal-row-card__thumb,.portal-feed-item__thumb{position:relative}
+.portal-teaser__thumb .portal-lead__image-label,.portal-row-card__thumb .portal-lead__image-label,.portal-feed-item__thumb .portal-lead__image-label{top:4px;left:4px;max-width:calc(100% - 8px);padding:2px 3px;font-size:9px;line-height:1.15}
+.portal-teaser__thumb .portal-lead__credit,.portal-row-card__thumb .portal-lead__credit,.portal-feed-item__thumb .portal-lead__credit{right:4px;bottom:4px;left:4px;max-width:calc(100% - 8px);padding:2px 3px;overflow:hidden;font-size:9px;line-height:1.15;text-align:left;text-overflow:ellipsis;white-space:nowrap}
 .article-hero{position:relative}
 .article-hero .portal-lead__image-label{top:12px;left:12px}
 @media(min-width:901px){
@@ -75,6 +78,7 @@ dialog button:focus-visible{outline:3px solid var(--accent,#c0392b);outline-offs
 @media(max-width:900px){
   .main-nav.nav-open .theme-menu-item{display:block}
   .main-nav.nav-open .theme-menu-item .theme-toggle-btn{display:flex!important;height:44px!important;min-height:44px;align-items:center;gap:.5rem;width:100%;padding:0 4px;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--portal-ink,#071329);font:650 15px/1.2 var(--font-sans,system-ui,sans-serif);text-align:left;cursor:pointer}
+  .portal-teaser > .portal-teaser__thumb,.portal-row-card > .portal-row-card__thumb{grid-column:2;grid-row:1}
 }
 
 /* Keep one action icon visible for each resolved theme, including before the
