@@ -6,7 +6,7 @@ to what was read, so nothing could learn.
 
 This module closes that loop:
 
-  measure()   -> pull GA4 + GSC through the read-only analytics CLI
+  measure()   -> pull GA4 + GSC through the measurement collector
   attribute() -> join per-article performance back to published article metadata
   diagnose()  -> turn the joined evidence into ranked, checkable hypotheses
   ledger()    -> persist every experiment and its verdict so learning survives sessions
@@ -25,13 +25,10 @@ extrapolated from article shape alone.
 import json
 import math
 import os
-import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
 from .measurement import normalize_url
-
-ANALYTICS = "/home/pertt/.local/share/lean-support/bin/news_analytics.py"
 
 # A hypothesis is only meaningful with enough signal behind it. The threshold applies to the
 # summed GSC impressions of the joined deployed articles, never to domain-level totals.
@@ -59,21 +56,21 @@ def _now():
     return datetime.now(timezone.utc)
 
 
-def measure(timeout=180):
-    """Read-only GA4 + GSC totals. Returns {'ok': bool, 'data'|'error': ...}."""
+def measure(timeout=180, *, state_dir=STATE_DIR):
+    """Read-only GA4 + GSC measurement. Returns {'ok': bool, 'data'|'error': ...}.
+
+    A report of any status, error or incomplete included, is passed through verbatim so
+    `diagnose` can abstain on it. Collector failures stay classified: no exception detail
+    (a credential, a URL, a stack message) is copied into the returned error.
+    """
+    from .measurement import collect
     try:
-        proc = subprocess.run(
-            [ANALYTICS],
-            text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=timeout,
-        )
-    except (OSError, subprocess.SubprocessError) as error:
-        return {"ok": False, "error": f"{type(error).__name__}: {error}"}
-    if proc.returncode != 0:
-        return {"ok": False, "error": f"analytics exit {proc.returncode}: {proc.stderr[-300:]}"}
-    try:
-        return {"ok": True, "data": json.loads(proc.stdout)}
-    except ValueError as error:
-        return {"ok": False, "error": f"analytics returned invalid JSON: {error}"}
+        report = collect(state_dir=state_dir, timeout=timeout)
+    except Exception:
+        return {"ok": False, "error": "measurement collection failed"}
+    if not isinstance(report, dict):
+        return {"ok": False, "error": "invalid measurement report"}
+    return {"ok": True, "data": report}
 
 
 def read_published(state_dir=STATE_DIR):
@@ -112,18 +109,43 @@ def read_published(state_dir=STATE_DIR):
     return out
 
 
+def _verified_dimension_free_ga4(data):
+    """The separately verified dimension-free GA4 totals, or None.
+
+    The collector report's GA4 rows are grouped by session landing page, so they are
+    dimensioned cohort rows rather than domain totals. Only a source that carries its
+    own explicit dimension-free declaration and an ok status may feed the goal.
+    """
+    if not isinstance(data, dict):
+        return None
+    candidates = [data.get("ga4")]
+    domain_totals = data.get("domain_totals")
+    if isinstance(domain_totals, dict):
+        candidates.extend((domain_totals, domain_totals.get("ga4")))
+    for source in candidates:
+        if (isinstance(source, dict) and source.get("dimension_free") is True
+                and source.get("status") == "ok"):
+            return source
+    return None
+
+
 def goal_status(data):
-    """Distance to the standing goal, from measured values only."""
-    ga4 = data.get("ga4", {}) if data else {}
-    views = ga4.get("views")
-    users = ga4.get("active_users")
+    """Distance to the standing goal, from verified domain totals only.
+
+    Without a separately verified dimension-free GA4 source the goal stays unknown:
+    landing-cohort views and users are never summed into domain totals, and active
+    users are never summed at all.
+    """
+    ga4 = _verified_dimension_free_ga4(data) or {}
+    views = ga4.get("views") if _is_number(ga4.get("views")) else None
+    users = ga4.get("active_users") if _is_number(ga4.get("active_users")) else None
     return {
         "views": views,
         "users": users,
         "views_target": TARGET_VIEWS,
         "users_target": TARGET_USERS,
-        "views_pct": round(100.0 * views / TARGET_VIEWS, 3) if isinstance(views, (int, float)) else None,
-        "users_pct": round(100.0 * users / TARGET_USERS, 3) if isinstance(users, (int, float)) else None,
+        "views_pct": round(100.0 * views / TARGET_VIEWS, 3) if views is not None else None,
+        "users_pct": round(100.0 * users / TARGET_USERS, 3) if users is not None else None,
     }
 
 
@@ -417,13 +439,17 @@ def history(learning_dir=LEARNING_DIR, limit=200):
 
 def review(state_dir=STATE_DIR, learning_dir=LEARNING_DIR):
     """One full loop iteration: measure, attribute, diagnose, persist, report."""
-    measured = measure()
-    articles = read_published(state_dir)
+    measured = measure(state_dir=state_dir)
     if not measured["ok"]:
         record({"kind": "review_failed", "error": measured["error"]}, learning_dir)
         return {"ok": False, "error": measured["error"]}
 
     data = measured["data"]
+    # The joined collector report is the only article source for a review: the structural
+    # publication table carries no readership evidence and may be stale.
+    articles = data.get("article_performance") if isinstance(data, dict) else None
+    if not isinstance(articles, list):
+        articles = []
     goal = goal_status(data)
     hypotheses = diagnose(data, articles)
     # What changed since the previous review, and what did it move. Without this the loop
@@ -450,12 +476,12 @@ def review(state_dir=STATE_DIR, learning_dir=LEARNING_DIR):
         "actions_since_last_review": [{"description": row.get("description"), "lane": row.get("lane")}
                                       for row in actions[-10:]],
         "delta": delta,
-        "hypotheses": [{"lane": h["lane"], "confidence": h["confidence"], "hypothesis": h["hypothesis"]}
-                       for h in hypotheses],
+        "hypotheses": list(hypotheses),
+        "measurement": data,
     }, learning_dir)
     return {"ok": True, "goal": goal, "articles": len(articles),
             "hypotheses": hypotheses, "actions": actions[-10:], "delta": delta,
-            "generated_at": _now().isoformat()}
+            "measurement": data, "generated_at": _now().isoformat()}
 
 
 def format_report(result):

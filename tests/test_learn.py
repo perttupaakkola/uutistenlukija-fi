@@ -11,16 +11,62 @@ import re
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 from news_mvp import learn
 
 
+class Measure(unittest.TestCase):
+    """The collector seam: parameter forwarding, verbatim reports, classified failures."""
+
+    def _collect(self, **kwargs):
+        with mock.patch("news_mvp.measurement.collect", create=True, **kwargs) as collect:
+            result = learn.measure(timeout=17, state_dir=Path("/tmp/state"))
+        return collect, result
+
+    def test_forwards_timeout_and_state_dir_to_the_collector(self):
+        collect, result = self._collect(return_value={"measurement_status": "ok"})
+        collect.assert_called_once_with(timeout=17, state_dir=Path("/tmp/state"))
+        self.assertEqual(result, {"ok": True, "data": {"measurement_status": "ok"}})
+
+    def test_incomplete_report_is_preserved_verbatim(self):
+        report = {"measurement_status": "incomplete", "truncated": True, "notes": ["quota"]}
+        _, result = self._collect(return_value=report)
+        self.assertEqual(result, {"ok": True, "data": report})
+
+    def test_non_dict_report_is_classified_as_invalid(self):
+        for report in (None, "report", 42, ["ga4"]):
+            with self.subTest(report=report):
+                _, result = self._collect(return_value=report)
+                self.assertEqual(result, {"ok": False, "error": "invalid measurement report"})
+
+    def test_exception_details_are_not_leaked(self):
+        secret = "Bearer sk-live-supersecret"
+        _, result = self._collect(side_effect=RuntimeError(f"collector rejected {secret}"))
+        self.assertEqual(result, {"ok": False, "error": "measurement collection failed"})
+        self.assertNotIn(secret, json.dumps(result))
+
+
 class GoalStatus(unittest.TestCase):
     def test_derives_percentages_from_measured_values(self):
-        status = learn.goal_status({"ga4": {"views": 500, "active_users": 50}})
+        status = learn.goal_status({"ga4": {"views": 500, "active_users": 50,
+                                            "dimension_free": True, "status": "ok"}})
         self.assertEqual(status["views_pct"], 5.0)
         self.assertEqual(status["users_pct"], 5.0)
         self.assertEqual(status["views_target"], learn.TARGET_VIEWS)
+
+    def test_unverified_or_cohort_ga4_totals_stay_unknown(self):
+        cohort = {"views": 500, "active_users": 50, "status": "ok"}
+        for data in ({}, {"ga4": cohort}, {"ga4": {"views": 500, "active_users": 50,
+                                                  "dimension_free": False, "status": "ok"}},
+                     {"ga4": {"views": 500, "active_users": 50, "dimension_free": True,
+                              "status": "incomplete"}}):
+            with self.subTest(data=data):
+                status = learn.goal_status(data)
+                self.assertIsNone(status["views"])
+                self.assertIsNone(status["users"])
+                self.assertIsNone(status["views_pct"])
+                self.assertIsNone(status["users_pct"])
 
     def test_missing_ga4_does_not_crash(self):
         status = learn.goal_status({})
@@ -469,6 +515,121 @@ class Ledger(unittest.TestCase):
                 learn.record({"kind": "review", "n": i}, Path(tmp))
             rows = learn.history(Path(tmp))
             self.assertEqual([r["n"] for r in rows], [0, 1, 2])
+
+    def test_old_review_rows_stay_readable_after_the_measurement_seam(self):
+        """Pre-seam rows carry no hypotheses/measurement; history and delta must not break."""
+        with tempfile.TemporaryDirectory() as tmp:
+            learn.record({"kind": "review", "goal": {"views": 1, "users": 1},
+                          "articles_published": 2}, Path(tmp))
+            with mock.patch.object(learn, "measure") as measure, \
+                    mock.patch.object(learn, "read_published"):
+                measure.return_value = {"ok": True, "data": {
+                    "measurement_status": "ok", "truncated": False,
+                    "article_performance": [],
+                    "ga4": {"views": 3, "active_users": 1, "dimension_free": True,
+                            "status": "ok"}}}
+                result = learn.review(state_dir=Path("/tmp/state"), learning_dir=Path(tmp))
+            rows = learn.history(Path(tmp))
+            self.assertTrue(result["ok"])
+            self.assertEqual(rows[0]["kind"], "review")
+            self.assertEqual(rows[1]["delta"], {"views": 2, "users": 0, "articles": -2})
+
+
+class ReviewSeam(unittest.TestCase):
+    """review() must consume the joined collector report and persist it whole."""
+
+    def _measure(self, data):
+        patcher = mock.patch.object(learn, "measure")
+        measure = patcher.start()
+        self.addCleanup(patcher.stop)
+        measure.return_value = {"ok": True, "data": data}
+        return measure
+
+    def _forbid_structural_reads(self):
+        patcher = mock.patch.object(learn, "read_published",
+                                    side_effect=AssertionError("review must not read published"))
+        patcher.start()
+        self.addCleanup(patcher.stop)
+
+    def _row(self, slug, **kw):
+        row = {"id": slug,
+               "canonical_url": f"https://uutistenlukija.fi/uutiset/{slug}",
+               "deployed": True,
+               "gsc": {"status": "ok", "clicks": 1, "impressions": 500, "position": 5.0},
+               "metadata": {"description": True, "og": True, "jsonld": True}}
+        row.update(kw)
+        return row
+
+    def test_forwards_state_dir_and_uses_the_joined_report_only(self):
+        state_dir = Path("/tmp/review-state")
+        rows = [self._row(f"art-{i}") for i in range(3)]
+        data = {"measurement_status": "ok", "truncated": False,
+                "article_performance": rows,
+                "ga4": {"views": 5, "active_users": 2},
+                "windows": {"gsc": "28d", "ga4": "28d"},
+                "providers": ["ga4", "gsc"],
+                "cohorts": [{"name": "landing", "rows": 3}],
+                "limitations": ["cohort rows are landing-page grouped"],
+                "coverage": {"measured": 3, "missing": 0}}
+        measure = self._measure(data)
+        self._forbid_structural_reads()
+        with tempfile.TemporaryDirectory() as tmp:
+            result = learn.review(state_dir=state_dir, learning_dir=Path(tmp))
+            persisted = learn.history(Path(tmp))[-1]
+        measure.assert_called_once_with(state_dir=state_dir)
+        self.assertTrue(result["ok"])
+        self.assertEqual(result["articles"], 3)
+        self.assertEqual(result["hypotheses"][0]["verdict"], "tentative")
+        self.assertEqual(result["measurement"], data)
+        self.assertEqual(persisted["hypotheses"], result["hypotheses"])
+        self.assertEqual(persisted["measurement"], data)
+        self.assertEqual(persisted["kind"], "review")
+
+    def test_missing_or_nonlist_article_performance_yields_insufficient(self):
+        cases = {"absent": "absent", "null": None, "string": "rows",
+                 "mapping": {"id": "a"}, "empty": []}
+        for label, rows in cases.items():
+            with self.subTest(case=label):
+                data = {"measurement_status": "ok", "truncated": False}
+                if rows != "absent":
+                    data["article_performance"] = rows
+                self._measure(data)
+                self._forbid_structural_reads()
+                with tempfile.TemporaryDirectory() as tmp:
+                    result = learn.review(state_dir=Path("/tmp/state"), learning_dir=Path(tmp))
+                    persisted = learn.history(Path(tmp))[-1]
+                self.assertEqual(result["articles"], 0)
+                self.assertEqual(result["hypotheses"][0]["verdict"], "insufficient_evidence")
+                self.assertEqual(persisted["measurement"], data)
+
+    def test_tiny_and_truncated_reports_persist_insufficient_verdict(self):
+        tiny = {"measurement_status": "ok", "truncated": False,
+                "article_performance": [self._row("small", gsc={"status": "ok", "clicks": 0,
+                                                              "impressions": 40, "position": 6.0})]}
+        truncated = {"measurement_status": "ok", "truncated": True,
+                     "article_performance": [self._row("art-0")]}
+        for data in (tiny, truncated):
+            with self.subTest(data=data):
+                self._measure(data)
+                self._forbid_structural_reads()
+                with tempfile.TemporaryDirectory() as tmp:
+                    result = learn.review(state_dir=Path("/tmp/state"), learning_dir=Path(tmp))
+                    persisted = learn.history(Path(tmp))[-1]
+                self.assertEqual(result["hypotheses"][0]["verdict"], "insufficient_evidence")
+                self.assertEqual(persisted["hypotheses"], result["hypotheses"])
+                self.assertEqual(persisted["measurement"], data)
+
+    def test_error_report_is_not_measured_into_a_ledger_review(self):
+        measure = mock.patch.object(learn, "measure",
+                                    return_value={"ok": False, "error": "boom"})
+        measure.start()
+        self.addCleanup(measure.stop)
+        self._forbid_structural_reads()
+        with tempfile.TemporaryDirectory() as tmp:
+            result = learn.review(state_dir=Path("/tmp/state"), learning_dir=Path(tmp))
+            rows = learn.history(Path(tmp))
+        self.assertFalse(result["ok"])
+        self.assertEqual(rows[-1]["kind"], "review_failed")
 
 
 class Report(unittest.TestCase):
