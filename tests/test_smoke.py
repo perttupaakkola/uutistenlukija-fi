@@ -29,6 +29,19 @@ class Smoke(unittest.TestCase):
     def admit(self):
         return ingest(self.config, self.packet, self.now)["id"]
 
+    def test_editorial_timeout_config_is_bounded(self):
+        self.assertEqual(self.config["editorial_timeout_seconds"], 300)
+        for value in (59, 1801, 300.0, True):
+            self.config_path.write_text(json.dumps({"enabled": True, "backend": "fixture",
+                                                    "state_dir": "state", "output_dir": "site",
+                                                    "editorial_timeout_seconds": value}))
+            with self.subTest(value=value), self.assertRaisesRegex(ValueError, "editorial_timeout_seconds"):
+                load_config(self.config_path)
+        self.config_path.write_text(json.dumps({"enabled": True, "backend": "fixture",
+                                                "state_dir": "state", "output_dir": "site",
+                                                "editorial_timeout_seconds": 480}))
+        self.assertEqual(load_config(self.config_path)["editorial_timeout_seconds"], 480)
+
     def test_intake_draft_review_render_and_duplicate_tick(self):
         first = ingest(self.config, self.packet, self.now)
         again = ingest(self.config, self.packet, self.now)

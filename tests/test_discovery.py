@@ -46,6 +46,13 @@ class Discovery(unittest.TestCase):
         with patch('news_mvp.live.discover',return_value=recipes),patch('news_mvp.live.collect',side_effect=lambda recipe,state,**kw:(self.fixture_packet(recipe['url']),{})) as collect,patch('news_mvp.live.tick',side_effect=self.render),patch('news_mvp.live.publish',return_value={'status':'dispatched'}):
             live_tick(self.path);self.assertEqual(collect.call_count,1)
         with database(self.config['state_dir']) as store:self.assertEqual(store.db.execute('select count(*) from jobs').fetchone()[0],1)
+    def test_due_ready_backlog_precedes_fresh_discovery(self):
+        old='https://example.invalid/due-retry';identity=digest('url:'+old)
+        with database(self.config['state_dir']) as store:
+            store.admit(self.fixture_packet(old),datetime.now(timezone.utc).isoformat())
+        with patch('news_mvp.live.discover',side_effect=AssertionError('retry must precede discovery')),patch('news_mvp.live.collect',side_effect=AssertionError()),patch('news_mvp.live.tick',side_effect=self.render) as model,patch('news_mvp.live.publish',return_value={'status':'dispatched'}):
+            self.assertEqual(live_tick(self.path)['status'],'dispatched')
+        self.assertEqual(model.call_args.kwargs['target_job_id'],identity)
     def test_discovery_rejects_stale_future_and_foreign_links_and_caps_candidates(self):
         links=['individual.php?db_date=2026-09-'+f'{day:02d}' for day in range(1,20)]+['https://evil.invalid/gallery/individual.php?db_date=2026-09-12']
         html=''.join('<a href="'+x+'">x</a>' for x in links).encode();cfg={**self.config,'max_source_age_hours':168}

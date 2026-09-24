@@ -32,9 +32,21 @@ def load_config(path):
         config[key] = config.get(key, default)
         if type(config[key]) is not int or not 1 <= config[key] <= maximum:
             raise ValueError("Invalid " + key)
+    config["editorial_timeout_seconds"] = config.get("editorial_timeout_seconds", 300)
+    if (type(config["editorial_timeout_seconds"]) is not int or
+            not 60 <= config["editorial_timeout_seconds"] <= 1800):
+        raise ValueError("Invalid editorial_timeout_seconds")
     if config.get("backend") not in ("fixture", "hermes"):
         raise ValueError("Choose fixture or hermes backend")
     return config
+
+
+def hermes_model(config):
+    """Build the live adapter with this installation's bounded call budget."""
+    return HermesModel(
+        config.get("hermes_executable", "/home/pertt/.hermes/hermes-agent/venv/bin/hermes"),
+        timeout=config["editorial_timeout_seconds"],
+    )
 
 
 @contextmanager
@@ -190,8 +202,7 @@ def _run_image_backfill(config, store, state_dir, model=None, limit=IMAGE_BACKFI
     if not config.get("illustrations", True) or not has_missing_images(store):
         return []
     if model is None:
-        model = (FixtureModel() if config["backend"] == "fixture" else HermesModel(
-            config.get("hermes_executable", "/home/pertt/.hermes/hermes-agent/venv/bin/hermes")))
+        model = FixtureModel() if config["backend"] == "fixture" else hermes_model(config)
     return backfill_missing_images(store, state_dir, model, limit=limit)
 
 
@@ -225,8 +236,7 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                             "image_backfilled": len(backfilled)}
                 return {"status": "idle"}
             if model is None:
-                model = FixtureModel() if config["backend"] == "fixture" else HermesModel(
-                    config.get("hermes_executable", "/home/pertt/.hermes/hermes-agent/venv/bin/hermes"))
+                model = FixtureModel() if config["backend"] == "fixture" else hermes_model(config)
             try:
                 packet = json.loads(job["packet"])
                 validate_packet(packet, now, config["max_source_age_hours"])

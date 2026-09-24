@@ -1,17 +1,33 @@
 """One scheduled controller: explicit source recipes -> draft/review -> one publisher."""
 import json
+import time
 from pathlib import Path
 
 from .diagnostics import safe_error
-from .controller import (backfill_missing_images, has_missing_images, ingest, load_config,
-                          single_tick, tick)
-from .editorial import HermesModel, ROOT, digest, web_url
+from .controller import (backfill_missing_images, has_missing_images, hermes_model, ingest,
+                          load_config, single_tick, tick)
+from .editorial import ROOT, digest, web_url
 from .intake import collect
 from .discovery import discover,collect_modis
 from .publish import ensure_table, publish, guard
 from .store import database
 
 _RELATED_SEARCHER = None
+
+
+def _advance_job(store, job, config, config_path, errors=None):
+    """Advance one admitted job before considering another discovery candidate."""
+    if job['status'] in ('ready', 'running', 'approved'):
+        tick(config_path, _already_locked=True, target_job_id=job['id'],
+             image_backfill_limit=1)
+        job = store.get(job['id'])
+    if job['status'] in ('rendered', 'approved'):
+        result = publish(store, job, config['state_dir'], config_path)
+    else:
+        result = {'status': job['status'], 'job_id': job['id']}
+    if errors:
+        result['source_errors'] = errors
+    return result
 
 
 def _related_searcher():
@@ -63,6 +79,24 @@ def live_tick(config_path):
                 if job is None:
                     return {'status':'publication_blocked','job_id':pending[0]['job_id'],'reason':'Missing pending publication job'}
                 return publish(store,job,config['state_dir'],config_path)
+            # A timed-out/interrupted article must retain queue priority even if it has fallen
+            # out of the newest discovery window. Without this step, fresh candidates can strand
+            # a due retry forever.
+            store.recover(config['max_attempts'])
+            retry = None
+            for candidate in store.db.execute(
+                    "SELECT id,packet FROM jobs WHERE status='ready' AND next_attempt<=? "
+                    "AND attempts<? ORDER BY created_at, id",
+                    (time.time(), config['max_attempts'])):
+                try:
+                    fixture = json.loads(candidate['packet']).get('fixture') is True
+                except (TypeError, ValueError):
+                    fixture = False
+                if not fixture:
+                    retry = candidate
+                    break
+            if retry:
+                return _advance_job(store, store.get(retry['id']), config, config_path)
             recipes=[json.loads((ROOT/path).read_text()) for path in config.get('source_recipes',[])]
             errors=[]
             if config.get('discovery',{}).get('family')=='news-reviewed-v2':
@@ -103,24 +137,14 @@ def live_tick(config_path):
                     admission=ingest(config,packet)
                     if admission['id']!=job_id:raise ValueError('Source identity mismatch')
                     job=store.get(job_id)
-                if job['status'] in ('ready','running','approved'):
-                    # Public publication state is one-row-at-a-time; keep any image backfill
-                    # attached to this live tick inside the same atomic release.
-                    tick(config_path,_already_locked=True,target_job_id=job_id,
-                         image_backfill_limit=1)
-                    job=store.get(job_id)
-                if job['status'] in ('rendered','approved'):
-                    result=publish(store,job,config['state_dir'],config_path)
-                    if errors:result['source_errors']=errors
-                    return result
-                result={'status':job['status'],'job_id':job_id}
-                if errors:result['source_errors']=errors
-                return result
+                # Public publication state is one-row-at-a-time; keep any image backfill
+                # attached to this live tick inside the same atomic release.
+                return _advance_job(store, job, config, config_path, errors)
             # Existing published/text-only stories use the same reviewed image chain as new
             # stories. A live release tracks one publication row at a time; the private
             # controller may fill up to three, but the public tick attaches one atomically.
             if config.get('illustrations', True) and has_missing_images(store):
-                model=HermesModel(config.get('hermes_executable','/home/pertt/.hermes/hermes-agent/venv/bin/hermes'))
+                model=hermes_model(config)
                 backfilled=backfill_missing_images(store,config['state_dir'],model,limit=1)
                 if backfilled:
                     result=publish(store,backfilled[0],config['state_dir'],config_path)
