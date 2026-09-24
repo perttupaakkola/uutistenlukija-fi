@@ -7,7 +7,7 @@ from datetime import timezone
 from email.utils import format_datetime
 from pathlib import Path
 
-from . import indexing, seo, slugs
+from . import frontpage, indexing, seo, slugs
 from .editorial import ROOT, digest, timestamp, validate_draft, validate_review
 
 
@@ -22,6 +22,32 @@ PAGE_SIZE = 30
 # Lower topic cards are separately capped by the fixed taxonomy below.
 HOMEPAGE_CENTER_ROWS = 8
 HOMEPAGE_TOPIC_LIMIT = 7
+# Visually audited 2026-09-24: a South African waste truck does not illustrate
+# the Nordic municipal-governance meeting. Retain the source record for audit.
+EXCLUDED_IMAGES = {'e30285f7354046d1034767b63a4ef9089678b245442ac406c133694a311c4958'}
+IMAGE_ALT_CORRECTIONS = {
+    '264c57353d9b25dc92b699b12ef724269a820b833bb5b8778d85e8ae5d2e7aec': 'Arkistokuva: matkustajakoneen siipi pilvien yllä.',
+    'c4411f82b0001b9f6099f01b680fa02e29becf51c18a88a785ce489ec5111e0e': 'Arkistokuva: tuulivoimaloita ilta-auringossa.',
+}
+
+
+def display_image(image):
+    if not image or image.get('sha256') in EXCLUDED_IMAGES:
+        return None
+    alt = IMAGE_ALT_CORRECTIONS.get(image.get('sha256'))
+    return {**image, 'alt': alt} if alt else image
+
+
+def homepage_order(items):
+    """Feature one recent reviewed image, keeping every newest headline once."""
+    items = list(items)
+    if not items or items[0][5]:
+        return items
+    newest = timestamp(items[0][0]['created_at'])
+    for index, item in enumerate(items[1:9], 1):
+        if item[5] and (newest - timestamp(item[0]['created_at'])).total_seconds() <= 172800:
+            return [items[index]] + items[:index] + items[index + 1:]
+    return items
 # Exact licence URLs whose short name is CC BY 4.0. Trailing-slash variants are
 # the same canonical document, so they are normalised before matching.
 CC_BY_40_URLS = frozenset({
@@ -131,7 +157,13 @@ def listing_image_slot(image, image_url, slot, lazy=True):
     return (f'<div class="{slot}">'
             f'<img src="{esc(image_url)}" alt="{esc(image["alt"])}" '
             f'{image_size_attributes(image)}{loading} referrerpolicy="no-referrer">'
-            f'{image_overlay_html(image)}</div>')
+            f'{image_overlay_html(image, include_credit=False)}</div>')
+
+
+def card_credit(image):
+    if not image or image.get('generated'):
+        return ''
+    return f'<div class="card-image-credit">{image_credit_html(image)}</div>'
 
 
 def jsonld_script(payload):
@@ -380,7 +412,7 @@ def listing_feed_html(items, empty_text):
                     f'<time class="portal-feed-item__time" datetime="{published}">{date}</time>'
                     f'<div class="portal-feed-item__body">'
                     f'<h3><a href="{link}">{esc(draft["title"])}</a></h3>'
-                    f'<p>{esc(draft["summary"])}</p></div>{thumb}{fixture}</article>')
+                    f'<p>{esc(draft["summary"])}</p>{card_credit(image)}</div>{thumb}{fixture}</article>')
     if not rows:
         return f'<div class="portal-list-feed"><p class="empty">{esc(empty_text)}</p></div>'
     return f'<div class="portal-list-feed">{"".join(rows)}</div>'
@@ -448,7 +480,7 @@ def homepage_topic_strip(items):
             f'<div class="portal-topic-strip__grid">{"".join(cards)}</div></section>')
 
 
-def listing_page_html(page_items, page_number, page_count, archive_items=None):
+def listing_page_html(page_items, page_number, page_count, archive_items=None, snapshot=None):
     """Rendered listing for one page in the portal theme.
 
     Page 1 is the homepage: one promoted lead, the first eight remaining stories
@@ -461,6 +493,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None):
     if not page_items:
         return '<p class="empty">Ei vielä tarkastettuja uutisluonnoksia.</p>'
     is_homepage = page_number == 1
+    newest_time = max(timestamp(item[0]['created_at']) for item in page_items)
 
     def row_category(draft):
         """Visible category label and colour slug, mapped without touching the draft.
@@ -484,7 +517,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None):
                 f'<div class="portal-teaser__meta">'
                 f'<span class="portal-kicker portal-teaser__category portal-teaser__category--{slug}">{category}</span>'
                 f'<span>Julkaistu <time datetime="{published}">{date}</time></span></div>'
-                f'<h3><a href="{link}">{esc(draft["title"])}</a></h3></div>'
+                f'<h3><a href="{link}">{esc(draft["title"])}</a></h3>{card_credit(image)}</div>'
                 f'{fixture}</article>')
 
     def river_row(item):
@@ -498,7 +531,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None):
                 f'<div class="portal-row-card__meta">'
                 f'<span class="portal-kicker portal-row-card__category portal-row-card__category--{slug}">{category}</span>'
                 f'<span class="portal-row-card__time">Julkaistu <time datetime="{published}">{date}</time></span></div>'
-                f'<h3><a href="{link}">{esc(draft["title"])}</a></h3></div>'
+                f'<h3><a href="{link}">{esc(draft["title"])}</a></h3>{card_credit(image)}</div>'
                 f'{fixture}</article>')
 
     lead_html = ""
@@ -511,10 +544,11 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None):
         figure_html = homepage_image_figure(image, image_url, lazy=False) if image else ""
         lead_classes = "portal-lead lead-story" + ("" if image else " lead-story--text-only")
         minutes = reading_time_minutes(draft)
+        lead_label = 'Uusin juttu' if timestamp(job['created_at']) == newest_time else 'Kuvassa'
         lead_html = (f'<article class="{lead_classes}">{figure_html}'
                      f'<div class="portal-lead__body">'
                      f'<span class="portal-kicker">{category}</span>'
-                     f'<a class="portal-lead__time" href="{link}">Uusin juttu · julkaistu '
+                     f'<a class="portal-lead__time" href="{link}">{lead_label} · julkaistu '
                      f'<time datetime="{published}">{date}</time></a>'
                      f'<h2 id="front-lead-title"><a href="{link}">{esc(draft["title"])}</a></h2>'
                      f'<p>{esc(draft["summary"])}</p>{fixture}'
@@ -532,14 +566,11 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None):
               f'<div class="portal-mobile-section-head"><span>Etusivu</span>'
               f'<h2 id="front-top-stories-title">Uusimmat otsikot</h2></div>'
               f'{"".join(rows)}</div>') if rows else ""
-    rail = ('<aside class="portal-right-rail" aria-label="Sivupalkki">'
+    rail = ('<aside class="portal-right-rail" aria-label="Sää, markkinat ja RSS">'
+            + frontpage.modules(snapshot) +
             '<section class="portal-newsletter"><h2>Seuraa uutisia</h2>'
             '<p>Lue uusimmat jutut verkkosivulla tai seuraa RSS-syötettä.</p>'
-            '<a href="/rss.xml">RSS-syöte</a></section>'
-            '<section class="portal-market"><div class="portal-module-head">'
-            '<h2>Markkinat</h2></div>'
-            '<p class="portal-market__note">Markkinatiedot eivät ole vielä saatavilla.</p>'
-            '</section></aside>')
+            '<a href="/rss.xml">RSS-syöte</a></section></aside>')
     grid_label = ' aria-labelledby="front-lead-title"' if lead_html else ""
     grid_class = "portal-front-grid"
     if is_homepage and page_items[0][5] is None:
@@ -551,7 +582,10 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None):
                  f'<div class="portal-module-head"><h2 id="front-latest-title">Tuoreimmat</h2></div>'
                  f'<div class="portal-river__grid">{"".join(river_rows)}</div></section>')
     topics = homepage_topic_strip(archive_items if archive_items is not None else page_items)
-    return grid + river + topics
+    shortcuts = ('<nav class="front-shortcuts" aria-label="Etusivun palvelut">'
+                 '<a href="#saa">Sää</a><a href="#markkinat">Markkinat</a>'
+                 '<a href="/rss.xml">RSS-syöte</a></nav>')
+    return shortcuts + grid + river + topics
 
 
 def article_path(job):
@@ -660,7 +694,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
 <p id="header-search-note" class="search-note visually-hidden">Haku avautuu Googlen omalla sivulla.</p>
 </div>
 <div class="portal-actions" aria-label="Pikatoiminnot">
-<span class="portal-weather" aria-label="Sää ei ole saatavilla"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="27" height="27" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><span><strong>-- °C</strong><small>Helsinki · sää ei saatavilla</small></span></span>
+<a class="portal-weather" href="/#saa">Sää Suomessa</a>
 <a class="portal-action portal-action--desktop" href="{SOURCES_PATH}">Lähteet</a>
 {theme_button}
 <button id="hamburger" class="portal-icon-button hamburger-btn" type="button" aria-label="Avaa valikko" aria-expanded="false" aria-controls="main-nav-menu"><svg class="portal-menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="portal-mobile-label">Valikko</span></button>
@@ -750,7 +784,7 @@ def missing_page(archive_path="/"):
     return page("Sivua ei löytynyt", body, "/404.html", canonical=False)
 
 
-def render_site(store, output_dir, state_dir=None, public=False, include_ids=None, verify_policy_ids=None):
+def render_site(store, output_dir, state_dir=None, public=False, include_ids=None, verify_policy_ids=None, snapshot=None):
     jobs = [j for j in store.articles() if include_ids is None or j["id"] in include_ids]
     assets = "mvp-assets" if public else "assets"
     # Re-check stored decisions before writing any page; source-derived HTML is always escaped.
@@ -814,7 +848,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                     source_list += f'<li><a href="{esc(reuse["license_url"])}">{esc(terms_label)}</a></li>'
                 if reuse.get('notice'):
                     source_list += f'<li>{esc(reuse["notice"])}</li>'
-        image = draft.get("image")
+        image = display_image(draft.get("image"))
         image_url = None
         # Without a reviewed image the page states that plainly after the ingress; the
         # hero slot stays empty rather than holding a note between headline and summary.
@@ -891,11 +925,13 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
     # A render with fewer stories must not leave its retired archive pages behind.
     prune_stale_listing_pages(output_dir, page_count)
     for page_number, page_items in enumerate(pages, 1):
+        if page_number == 1:
+            page_items = homepage_order(page_items)
         path = listing_page_path(page_number)
         page_title = "Uusimmat uutiset" if page_number == 1 else f"Uusimmat uutiset – sivu {page_number}"
         listing = listing_page_html(
             page_items, page_number, page_count,
-            archive_items=listing_items if page_number == 1 else None)
+            archive_items=listing_items if page_number == 1 else None, snapshot=snapshot)
         intro_class = "intro homepage-intro visually-hidden" if page_number == 1 else "intro"
         body = f'''<section class="{intro_class}"><h1>{esc(page_title)}</h1></section>
 {listing}'''

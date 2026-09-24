@@ -67,6 +67,9 @@ def live_tick(config_path):
     if config.get('discovery',{}).get('family')=='news-reviewed-v2':guard(config_path)
     with single_tick(config['state_dir']) as locked:
         if not locked:return {'status':'busy'}
+        if config.get('frontpage_snapshots', False):
+            from .frontpage import refresh
+            refresh(config['state_dir'])
         with database(config['state_dir']) as store:
             ensure_table(store)
             # Publication reconciliation owns the tick, even after its source disappears

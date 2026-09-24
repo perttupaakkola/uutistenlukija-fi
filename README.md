@@ -44,3 +44,21 @@ the in-pipeline chain below, and every decision is recorded in the plans docs.
   operator review instead of guessing.
 - State lives in `/home/pertt/.local/share/uutistenlukija` (`jobs.sqlite`, `media/`,
   `learning/`).
+
+## Front-page snapshots
+
+The existing live controller refreshes four MET Norway location forecasts and ECB daily
+EUR reference rates when `frontpage_snapshots` is enabled in the local config. Data is
+cached in state `frontpage-data.json` (weather: one hour; currencies: six hours), then
+embedded in the normal static release. Requests have an identifying User-Agent, an
+8-second timeout and a size limit; upstream failures preserve the last snapshot. There
+is no client API key, third-party page-load request or additional service. The browser
+selects the nearest forecast hour and suppresses forecasts older than 18 hours or rates
+older than seven days; source/model timestamps and the forecast/reference-rate labels
+stay visible. Provider outages do not stop article publication.
+
+The homepage may feature the newest illustrated article among the first nine stories
+when it is within 48 hours of the newest article, labelled “Kuvassa”. All 30 recent
+stories remain present and RSS/latest listings retain chronological order. Known
+visually audited image exclusions and descriptive alt corrections are presentation-only
+in `site.py`; original reviewed records remain intact.

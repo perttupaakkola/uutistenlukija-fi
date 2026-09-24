@@ -125,15 +125,35 @@ class HomepageImages(unittest.TestCase):
         home=(output/'index.html').read_text()
         entries=[(cls,body) for cls,body in ARTICLE_RE.findall(home)]
         self.assertEqual(len(entries),6)
-        self.assertIn('portal-front-grid--image-free-lead',home)
+        self.assertNotIn('portal-front-grid--image-free-lead',home)
+        self.assertIn('Kuvassa · julkaistu', home)
         self.assertEqual(home.count('<img'),2)  # logo plus the one reviewed teaser image
-        self.assertEqual(home.count('portal-teaser__thumb'),1)
+        self.assertEqual(home.count('portal-teaser__thumb'),0)
         self.assertNotIn('portal-row-card__thumb',home)
-        self.assertNotIn('portal-teaser--no-image',entries[1][0])
+        self.assertIn('portal-teaser--no-image',entries[1][0])
+        links = [LINK_RE.search(body).group(1) for _, body in entries]
+        self.assertEqual(links, ['/' + site.article_path(jobs[i]) for i in (1,0,2,3,4,5)])
+        self.assertEqual(len(set(links)), 6)
         self.assertIn('portal-teaser--no-image',entries[2][0])
         self.assertIn('portal-teaser--no-image',entries[5][0])
         self.assertNotIn('portal-row-card--no-image',entries[5][0])
         self.assertIn('portal-right-rail',home)
+
+    def test_excluded_asset_is_absent_from_article_home_and_metadata(self):
+        from unittest.mock import patch
+        case=generated.GeneratedIntegrity(SEED);case.setUp();self.addCleanup(case.doCleanups)
+        packet,draft=case.generated();job=case.ready(packet,draft)
+        sha=json.loads(job['packet'])['image']['sha256']
+        output=Path(tempfile.mkdtemp(dir=case.root))
+        with patch.object(site, 'EXCLUDED_IMAGES', {sha}):
+            site.render_site(FakeStore([job]), output, case.state, public=True)
+        article=(output/site.article_path(job)/'index.html').read_text()
+        home=(output/'index.html').read_text()
+        self.assertNotIn(sha, article)
+        self.assertNotIn(sha, home)
+        self.assertEqual(editorial_images(scan(article)), [])
+        self.assertNotIn('property="og:image"', article)
+        self.assertEqual(json.loads(job['packet'])['image']['sha256'], sha)
 
     def test_front_page_removes_the_filler_and_keeps_the_sources_page(self):
         case=generated.GeneratedIntegrity(SEED);case.setUp();self.addCleanup(case.doCleanups)

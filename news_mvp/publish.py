@@ -237,7 +237,9 @@ def public_bundle(store,job,state):
     mappings=load_legacy_redirects()['mappings']
     # Only the article being published now must satisfy today's policy digest; the archive
     # was released under the policy in force then and is bound to its captured bytes.
-    render_site(store,site,state,public=True,include_ids=ids,verify_policy_ids={job['id']})
+    from .frontpage import load
+    snapshot = load(state)
+    render_site(store,site,state,public=True,include_ids=ids,verify_policy_ids={job['id']},snapshot=snapshot)
     privacy='''<article class="story"><h1>Tietosuoja ja evästeet</h1><p>Voit käyttää uutispalvelua sallimatta analytiikkaa. Luvallasi käytämme Google Analyticsia sivuston käytön mittaamiseen. Emme käytä mainonnan evästeitä.</p><p>Suostumus tallennetaan selaimeesi. Voit muuttaa valintaasi sivun Evästeasetukset-painikkeella. Analytiikan poistaminen käytöstä poistaa tämän sivuston Google Analytics -evästeet selaimesta.</p><p>Uutiset laaditaan tekoälyn avulla ja tarkastetaan erillisessä lähdearvioinnissa. Alkuperäiset lähteet ja käyttöehdot näkyvät artikkelissa. Uutinen voi olla kuvaton; käytetyn kuvan tekijä ja käyttöoikeus ilmoitetaan kuvan yhteydessä.</p></article>'''
     atomic_write(site/'tietosuoja/index.html',page('Tietosuoja ja evästeet',privacy,'/tietosuoja/'))
     # Terms for AI illustrations. This is the license_url/source_url of every generated article

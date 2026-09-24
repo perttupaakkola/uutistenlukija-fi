@@ -283,12 +283,13 @@ class PortalShell(unittest.TestCase):
         self.assertIn("Hae uutisia Googlesta", home)
         self.assertIn("Haku avautuu Googlen omalla sivulla.", home)
         # Weather is stated as unavailable instead of showing an invented reading.
-        self.assertIn("sää ei saatavilla", home)
+        self.assertIn("Sääennuste ei ole nyt saatavilla", home)
         self.assertNotIn("data-weather-widget", home)
-        weather = re.search(r'<span class="portal-weather"[^>]*>', home)
-        self.assertIsNotNone(weather, "weather placeholder is missing")
-        self.assertNotIn("href", weather.group(0), "unavailable weather must not be a link")
-        self.assertNotIn("onclick", weather.group(0), "unavailable weather must not be a fake action")
+        self.assertIn('class="portal-weather" href="/#saa"', home)
+        self.assertIn('id="saa"', home)
+        self.assertIn('Sääennuste ei ole nyt saatavilla.', home)
+        self.assertIn('id="markkinat"', home)
+        self.assertIn('Valuuttakurssit eivät ole nyt saatavilla.', home)
         # Theme toggle and mobile menu button.
         self.assertIn('id="theme-toggle"', home)
         self.assertIn('id="theme-toggle-menu"', home)
