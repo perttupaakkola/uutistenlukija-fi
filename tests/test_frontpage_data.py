@@ -87,3 +87,23 @@ class FrontpageData(unittest.TestCase):
         self.assertEqual(site.homepage_order(old), old)
         distant = [row(n) for n in range(9)]+[row(9,True)]
         self.assertEqual(site.homepage_order(distant), distant)
+
+    def test_asset_urls_change_with_content_and_version_all_shell_dependencies(self):
+        from unittest.mock import patch
+        import re
+        first = site.page('T', 'Body', '/')
+        urls = re.findall(r'(?:src|href)="([^"]+\.(?:css|js)[^"]*)"', first)
+        self.assertEqual(len(urls), 13)
+        self.assertTrue(all(re.search(r'\?v=[0-9a-f]{12}$', url) for url in urls))
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root/'static').mkdir()
+            path = root/'static/style.css'
+            path.write_text('before')
+            with patch.object(site, 'ROOT', root):
+                before = site.asset_url('mvp-assets', 'style.css')
+                self.assertEqual(before, site.asset_url('mvp-assets', 'style.css'))
+                path.write_text('after')
+                after = site.asset_url('mvp-assets', 'style.css')
+                self.assertNotEqual(before, after)
+                self.assertEqual(before.split('?')[0], after.split('?')[0])

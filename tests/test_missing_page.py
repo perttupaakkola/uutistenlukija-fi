@@ -73,7 +73,7 @@ def consent_elements(parser):
     """Consent/privacy UI of a page, as parsed elements."""
     return [(tag, attrs) for tag, attrs in parser.tags
             if attrs.get("id") in CONSENT_IDS
-            or attrs.get("src", "").split("/")[-1] in ("consent.js", "analytics.js")]
+            or attrs.get("src", "").split("?")[0].split("/")[-1] in ("consent.js", "analytics.js")]
 
 
 class MissingPage(unittest.TestCase):
@@ -157,7 +157,10 @@ class MissingPage(unittest.TestCase):
                          elements(public, "link", rel="stylesheet"))
         for asset in ("/mvp-assets/style.css", "/mvp-assets/consent.js", "/mvp-assets/analytics.js"):
             self.assertIn(asset, self.html)
-        self.assertIn((site.ROOT / "static/consent.html").read_text(), self.html)
+        template = (site.ROOT / "static/consent.html").read_text()
+        for name in ('analytics.js', 'consent.js'):
+            template = template.replace('/mvp-assets/' + name, site.asset_url('mvp-assets', name))
+        self.assertIn(template, self.html)
         self.assertIn('<a href="/tietosuoja/">Tietosuoja</a>', self.html)
 
     def test_search_form_is_labelled_google_search_scoped_to_the_site(self):

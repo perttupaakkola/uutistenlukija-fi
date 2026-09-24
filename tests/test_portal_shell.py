@@ -258,13 +258,13 @@ class PortalShell(unittest.TestCase):
     def test_page_links_original_sheets_then_compatibility_layer(self):
         public = site.page("Uusimmat uutiset", "<p>x</p>", "/")
         self.assertEqual(
-            SHEET_RE.findall(public),
+            [url.split("?")[0] for url in SHEET_RE.findall(public)],
             [f"/mvp-assets/css/{name}" for name in SHEETS]
             + ["/mvp-assets/style.css", "/mvp-assets/style-readability.css"],
         )
         private = site.page("Luonnos", "<p>x</p>", readability_present=False)
         self.assertEqual(
-            SHEET_RE.findall(private),
+            [url.split("?")[0] for url in SHEET_RE.findall(private)],
             [f"/assets/css/{name}" for name in SHEETS] + ["/assets/style.css"],
         )
 
@@ -438,8 +438,8 @@ class PortalShell(unittest.TestCase):
                 self.assertIn("src", attrs, f"script has no src: {tag}")
                 self.assertTrue(attrs["src"].startswith(prefix), tag)
             self.assertNotIn(forbidden, text)
-        self.assertIn('src="/mvp-assets/portal.js"', public)
-        self.assertIn('src="/assets/portal.js"', private)
+        self.assertIn('src="/mvp-assets/portal.js?v=', public)
+        self.assertIn('src="/assets/portal.js?v=', private)
 
     def test_portal_js_initialises_resolved_theme_and_toggles(self):
         # First load with no stored choice follows the OS preference.
@@ -507,7 +507,7 @@ class PortalShell(unittest.TestCase):
         self.assertIn('/assets/portal.js', private)
         public = site.page("T", "<p>x</p>", "/")
         self.assertIn('rel="canonical" href="https://uutistenlukija.fi/"', public)
-        self.assertIn('src="/mvp-assets/consent.js"', public)
+        self.assertIn('src="/mvp-assets/consent.js?v=', public)
 
     def test_private_render_copies_assets_without_public_only_files(self):
         root = self._site_root(self._render_private("portal-private"))

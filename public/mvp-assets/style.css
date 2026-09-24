@@ -171,3 +171,5 @@ dialog button{font:inherit;min-height:44px;margin:0;padding:.7rem 1rem;border:1p
 @media(max-width:760px){
   .portal-front-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
 }
+/* The masthead logo is also a standalone navigation target. */
+.portal-logo{display:flex;align-items:center;min-height:44px}

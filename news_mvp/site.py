@@ -608,6 +608,13 @@ def _job_title(job):
         return ""
 
 
+def asset_url(assets, name):
+    """Stable content version: returning browsers must not mix release assets."""
+    source = ROOT / ('cutover' if name == 'analytics.js' else 'static') / name
+    version = hashlib.sha256(source.read_bytes()).hexdigest()[:12]
+    return f'/{assets}/{name}?v={version}'
+
+
 def page(title, body, canonical_path=None, head_meta="", readability_present=True, canonical=True):
     """Full public page shell. `canonical_path` alone selects the public build.
 
@@ -634,12 +641,15 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
     sheet_names = ("css/style.css", "css/homepage-polish.css", "css/article.css",
                    "css/category.css", "css/category-hero.css", "css/empty-state.css",
                    "css/search.css", "css/portal-overhaul.css")
-    style_links = "".join(f'<link rel="stylesheet" href="/{assets}/{name}">' for name in sheet_names)
-    style_links += f'<link rel="stylesheet" href="/{assets}/style.css">'
+    style_links = "".join(f'<link rel="stylesheet" href="{asset_url(assets, name)}">' for name in sheet_names)
+    style_links += f'<link rel="stylesheet" href="{asset_url(assets, "style.css")}">'
     if readability_present:
-        style_links += f'<link rel="stylesheet" href="/{assets}/style-readability.css">'
+        style_links += f'<link rel="stylesheet" href="{asset_url(assets, "style-readability.css")}">'
     banner = "" if public else '<div class="preview">Yksityinen esikatselu · ei julkaistu</div>'
     consent = ((ROOT / "static/consent.html").read_text() if public else "")
+    if public:
+        for name in ('analytics.js', 'consent.js'):
+            consent = consent.replace(f'/{assets}/{name}', asset_url(assets, name))
     # Public pages link their privacy notice and RSS feed; the private preview has
     # neither, so it must not advertise pages that were never published.
     if public:
@@ -713,7 +723,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
 <div class="site-footer-copyright"><div class="container"><p>{footer_tagline}</p></div></div>
 </footer>
 {consent}
-<script src="/{assets}/portal.js" defer></script>
+<script src="{asset_url(assets, 'portal.js')}" defer></script>
 </body></html>'''
 
 
