@@ -20,6 +20,25 @@ def digest(value):
     return hashlib.sha256(encode(value).encode()).hexdigest()
 
 
+def current_default_model_args():
+    """Read the one current Hermes default at call time; never pin a profile-specific model."""
+    import yaml
+
+    config = yaml.safe_load((Path.home() / ".hermes/config.yaml").read_text()) or {}
+    model = config.get("model") or {}
+    if not isinstance(model, dict):
+        raise ValueError("Hermes default model configuration is missing")
+    provider = str(model.get("provider") or "").strip()
+    name = str(model.get("default") or model.get("model") or "").strip()
+    effort = str(model.get("reasoning_effort") or "").strip()
+    if not provider or not name:
+        raise ValueError("Hermes default model and provider must be configured")
+    args = ["--model", name, "--provider", provider]
+    if effort:
+        args.extend(("--reasoning", effort))
+    return args
+
+
 def text(value, label, maximum=20000):
     if not isinstance(value, str) or not value.strip() or len(value) > maximum:
         raise ValueError(f"Invalid {label}")
@@ -173,13 +192,11 @@ class HermesModel:
         if draft is not None:
             request.update(draft=draft, draft_sha256=digest(draft))
         prompt = (ROOT / "prompts" / (role + ".md")).read_text() + "\n\nINPUT JSON:\n" + encode(request)
-        # Provider is inherited from the news-mvp profile's own config.yaml. It used to be
-        # pinned here to --provider openai-codex, which failed the moment those credits were
-        # exhausted (HTTP 429, "usage limit has been reached") and silently stopped all
-        # drafting. The profile now runs the same provider as the rest of Hermes, so switching
-        # model backing is a profile-config change rather than a code edit.
+        # The isolated editorial profile carries no model choice. Resolve the one current
+        # default from the main Hermes config at call time, so future model changes require
+        # no profile, prompt, worker, or code edits.
         command = [self.executable, "--profile", "news-mvp", "chat", "--cli", "--quiet",
-                   "--oneshot", "--ignore-rules",
+                   "--oneshot", "--ignore-rules", *current_default_model_args(),
                    "--run-budget", "120", "--max-turns", "1", "--query-file", "-"]
         # Do not inherit personal keys, task/goal flags or routing overrides.
         # Supported profile auth fallback reads the existing shared OAuth store.

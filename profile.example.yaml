@@ -1,6 +1,4 @@
-model:
-  default: gpt-6-astra
-  provider: openai-codex
+# Model/provider are supplied from the current main Hermes default at call time.
 platform_toolsets:
   cli: []
 mcp_servers: {}

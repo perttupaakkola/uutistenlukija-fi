@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from unittest.mock import patch
 
-from news_mvp.editorial import ROOT, FixtureModel, HermesModel, parse_hermes_output
+from news_mvp.editorial import ROOT, FixtureModel, HermesModel, current_default_model_args, parse_hermes_output
 from news_mvp.intake import ArticleHTML, collect
 from news_mvp.history import preserve_article
 
@@ -20,6 +20,19 @@ class LiveBoundary(unittest.TestCase):
         for value in ('log: {"ok":true}', '{"ok":true}\n{"another":true}', '[]', '{"ok":true}\nunknown wrapper'):
             with self.assertRaises(ValueError):
                 parse_hermes_output(value)
+
+    def test_editorial_profile_resolves_the_current_main_default_at_call_time(self):
+        with tempfile.TemporaryDirectory() as temp:
+            home = Path(temp)
+            (home / '.hermes').mkdir()
+            (home / '.hermes/config.yaml').write_text(
+                'model:\n  provider: chosen-provider\n  default: chosen-model\n  reasoning_effort: chosen-effort\n'
+            )
+            with patch('news_mvp.editorial.Path.home', return_value=home):
+                self.assertEqual(current_default_model_args(), [
+                    '--model', 'chosen-model', '--provider', 'chosen-provider',
+                    '--reasoning', 'chosen-effort',
+                ])
 
     def test_fixture_and_live_adapters_refuse_crossing_the_boundary(self):
         with patch('news_mvp.editorial.subprocess.run') as run:
