@@ -197,7 +197,11 @@ class HermesModel:
         # no profile, prompt, worker, or code edits.
         command = [self.executable, "--profile", "news-mvp", "chat", "--cli", "--quiet",
                    "--oneshot", "--ignore-rules", *current_default_model_args(),
-                   "--run-budget", "120", "--max-turns", "1", "--query-file", "-"]
+                   # Keep Hermes's internal no-response watchdog inside the same bounded
+                   # budget as this adapter. A fixed 120-second run budget halves the
+                   # watchdog to 60 seconds, killing legitimate high-effort editorial
+                   # responses long before the configured subprocess timeout.
+                   "--run-budget", str(self.timeout), "--max-turns", "1", "--query-file", "-"]
         # Do not inherit personal keys, task/goal flags or routing overrides.
         # Supported profile auth fallback reads the existing shared OAuth store.
         env = {k: os.environ[k] for k in ("HOME", "PATH", "LANG", "LC_ALL", "TZ", "TERM") if k in os.environ}

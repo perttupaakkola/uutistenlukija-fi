@@ -2,6 +2,7 @@ import copy
 import hashlib
 import json
 import tempfile
+import subprocess
 import unittest
 from datetime import datetime, timezone
 from pathlib import Path
@@ -41,6 +42,23 @@ class LiveBoundary(unittest.TestCase):
             run.assert_not_called()
         with self.assertRaises(ValueError):
             FixtureModel().call('writer', {"fixture": False})
+
+    def test_live_adapter_gives_hermes_the_configured_editorial_budget(self):
+        packet = {"fixture": False, "story_key": "real-packet"}
+        with tempfile.TemporaryDirectory() as temp:
+            home = Path(temp)
+            (home / '.hermes/profiles/news-mvp').mkdir(parents=True)
+            (home / '.hermes/profiles/news-mvp/config.yaml').write_text('{}\n')
+            (home / '.hermes/config.yaml').write_text(
+                'model:\n  provider: chosen-provider\n  default: chosen-model\n'
+            )
+            completed = subprocess.CompletedProcess([], 0, stdout='{"ok":true}', stderr='')
+            with patch('news_mvp.editorial.Path.home', return_value=home), \
+                    patch('news_mvp.editorial.subprocess.run', return_value=completed) as run:
+                self.assertEqual(HermesModel('/hermes', timeout=480).call('writer', packet), {"ok": True})
+            command = run.call_args.args[0]
+            self.assertEqual(command[command.index('--run-budget') + 1], '480')
+            self.assertEqual(run.call_args.kwargs['timeout'], 480)
 
     def test_html_intake_uses_published_metadata_and_binds_real_image_bytes(self):
         recipe = json.loads((ROOT/'sources/nasa-artemis.json').read_text())
