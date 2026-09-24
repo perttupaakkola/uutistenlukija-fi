@@ -41,13 +41,21 @@
 <div class="site-footer-copyright"><div class="container"><p>Suomenkielinen uutispalvelu.<br><a href="/tietosuoja/">Tietosuoja</a> · <a href="/lahteet/">Lähteet ja toimitus</a> · <a href="/rss.xml">RSS-syöte</a></p></div></div>
 </footer>
 <button class="consent-settings" id="consent-settings" type="button">Evästeasetukset</button>
-<dialog id="consent-dialog" aria-labelledby="consent-title">
-<h2 id="consent-title">Evästeasetukset</h2>
-<p>Välttämättömät evästeet pitävät sivuston toiminnassa. Luvallasi Google Analytics auttaa meitä ymmärtämään sivuston käyttöä. Emme ota mainonnan evästeitä käyttöön.</p>
-<p><a href="/tietosuoja/">Tietosuojaseloste</a></p>
+<dialog id="consent-dialog" aria-labelledby="consent-title" aria-describedby="consent-description" tabindex="-1">
+<div class="consent-dialog__inner">
+<div class="consent-dialog__heading">
+<span class="consent-dialog__mark" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3 5.5 5.7v5.7c0 4.2 2.6 7.9 6.5 9.6 3.9-1.7 6.5-5.4 6.5-9.6V5.7L12 3Zm0 3.1 3.7 1.5v3.8c0 2.7-1.4 5.2-3.7 6.7-2.3-1.5-3.7-4-3.7-6.7V7.6L12 6.1Z"/></svg></span>
+<div><span class="consent-dialog__eyebrow">Yksityisyys</span><h2 id="consent-title">Evästeasetukset</h2></div>
+</div>
+<p id="consent-description" class="consent-dialog__copy">Välttämättömät evästeet pitävät sivuston toiminnassa. Luvallasi Google Analytics auttaa meitä ymmärtämään, miten Uutistenlukijaa käytetään.</p>
+<p class="consent-dialog__note">Emme käytä mainonnan evästeitä.</p>
+<div class="consent-dialog__actions">
 <button id="consent-accept" type="button">Salli analytiikka</button>
 <button id="consent-reject" type="button">Vain välttämättömät</button>
-<button id="consent-close" type="button">Sulje</button>
+</div>
+<a class="consent-dialog__privacy" href="/tietosuoja/">Lue tietosuojaseloste <span aria-hidden="true">→</span></a>
+<button class="consent-dialog__close" id="consent-close" type="button" aria-label="Sulje evästeasetukset"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6.4 5 5.6 5.6L17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19 5 17.6l5.6-5.6L5 6.4 6.4 5Z"/></svg></button>
+</div>
 </dialog>
 <script src="/mvp-assets/analytics.js" defer></script><script src="/mvp-assets/consent.js" defer></script>
 

@@ -313,6 +313,20 @@ class PortalShell(unittest.TestCase):
         for required in ("/tietosuoja/", "/lahteet/", "/rss.xml"):
             self.assertIn(required, footer)
 
+    def test_consent_dialog_has_a_compact_accessible_choice_layout(self):
+        fragment = (site.ROOT / "static/consent.html").read_text(encoding="utf-8")
+        self.assertIn('aria-describedby="consent-description"', fragment)
+        self.assertIn('tabindex="-1"', fragment)
+        self.assertIn('class="consent-dialog__actions"', fragment)
+        self.assertIn('class="consent-dialog__privacy"', fragment)
+        self.assertIn('aria-label="Sulje evästeasetukset"', fragment)
+        self.assertLess(fragment.index('id="consent-accept"'), fragment.index('id="consent-reject"'))
+        script = (site.ROOT / "static/consent.js").read_text(encoding="utf-8")
+        self.assertIn("box.focus({ preventScroll: true })", script)
+        styles = (site.ROOT / "static/style.css").read_text(encoding="utf-8")
+        self.assertIn(".consent-dialog__actions{display:grid", styles)
+        self.assertIn("@media(max-width:520px)", styles)
+
     def test_imported_assets_are_copied_byte_for_byte(self):
         root = self._site_root(self._render_public())
         static = site.ROOT / "static"
