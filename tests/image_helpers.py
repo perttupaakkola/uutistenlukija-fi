@@ -115,3 +115,13 @@ def scan(text):
 def editorial_images(page):
     """Images that are not exact outer header/footer branding."""
     return [attrs for attrs, branding in page.image_records if not branding]
+
+
+def approved_pixel_review(raw, draft, generated=False):
+    """Explicit offline model boundary; binds synthetic pixels to exact test prose."""
+    import hashlib, json
+    article={k:draft[k] for k in ('title','summary','category','paragraphs')}
+    return {'approved':True,'no_people':True,'description':'Synthetic library objects',
+            'reason':'Isolated test fixture','image_sha256':hashlib.sha256(raw).hexdigest(),
+            'article_text_sha256':hashlib.sha256(json.dumps(article,ensure_ascii=False,sort_keys=True).encode()).hexdigest(),
+            'model':'offline-test-double','reviewed_at':'2026-09-25T00:00:00+00:00'}

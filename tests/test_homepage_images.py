@@ -108,7 +108,7 @@ class HomepageImages(unittest.TestCase):
             self.assertEqual([attrs['alt'] for attrs in editorial_images(article)],[stored['alt']])
             self.assertTrue(any('Kuvituskuva' in text for text in article.text))
 
-    def test_mixed_image_slots_keep_text_only_stories_in_native_layout(self):
+    def test_public_missing_image_refused_and_private_preview_never_promotes_older_story(self):
         case=generated.GeneratedIntegrity(SEED);case.setUp();self.addCleanup(case.doCleanups)
         packet,draft=case.generated();template=case.ready(packet,draft)
         jobs=self.jobs(template,6,'homepage-mixed')
@@ -121,18 +121,21 @@ class HomepageImages(unittest.TestCase):
             review=json.loads(job['review']);review['draft_sha256']=generated.digest(text_draft)
             job['review']=json.dumps(review)
         output=Path(tempfile.mkdtemp(dir=case.root))
-        self.assertEqual(site.render_site(FakeStore(jobs),output,case.state,public=True),6)
+        with self.assertRaisesRegex(ValueError,'requires a reviewed relevant image'):
+            site.render_site(FakeStore(jobs),output,case.state,public=True)
+        self.assertEqual(site.render_site(FakeStore(jobs),output,case.state,public=False),6)
         home=(output/'index.html').read_text()
         entries=[(cls,body) for cls,body in ARTICLE_RE.findall(home)]
         self.assertEqual(len(entries),6)
-        self.assertNotIn('portal-front-grid--image-free-lead',home)
-        self.assertIn('Kuvassa · julkaistu', home)
+        self.assertIn('portal-front-grid--image-free-lead',home)
+        self.assertNotIn('Kuvassa', home)
+        self.assertNotIn('front-shortcuts', home)
         self.assertEqual(home.count('<img'),2)  # logo plus the one reviewed teaser image
-        self.assertEqual(home.count('portal-teaser__thumb'),0)
+        self.assertEqual(home.count('portal-teaser__thumb'),1)
         self.assertNotIn('portal-row-card__thumb',home)
-        self.assertIn('portal-teaser--no-image',entries[1][0])
+        self.assertNotIn('portal-teaser--no-image',entries[1][0])
         links = [LINK_RE.search(body).group(1) for _, body in entries]
-        self.assertEqual(links, ['/' + site.article_path(jobs[i]) for i in (1,0,2,3,4,5)])
+        self.assertEqual(links, ['/' + site.article_path(job) for job in jobs])
         self.assertEqual(len(set(links)), 6)
         self.assertIn('portal-teaser--no-image',entries[2][0])
         self.assertIn('portal-teaser--no-image',entries[5][0])
@@ -146,7 +149,9 @@ class HomepageImages(unittest.TestCase):
         sha=json.loads(job['packet'])['image']['sha256']
         output=Path(tempfile.mkdtemp(dir=case.root))
         with patch.object(site, 'EXCLUDED_IMAGES', {sha}):
-            site.render_site(FakeStore([job]), output, case.state, public=True)
+            with self.assertRaisesRegex(ValueError,'requires a reviewed relevant image'):
+                site.render_site(FakeStore([job]), output, case.state, public=True)
+            site.render_site(FakeStore([job]), output, case.state, public=False)
         article=(output/site.article_path(job)/'index.html').read_text()
         home=(output/'index.html').read_text()
         self.assertNotIn(sha, article)
@@ -206,7 +211,7 @@ class HomepageImages(unittest.TestCase):
 
     def test_private_archive_pages_stay_noindex_and_image_free(self):
         case=generated.GeneratedIntegrity(SEED);case.setUp();self.addCleanup(case.doCleanups)
-        template=case.ready()
+        template=case.ready(case.packet,case.draft)
         self.assertIsNone(json.loads(template['draft'])['image'])
         jobs=self.jobs(template,31,'homepage-private')
         output=Path(tempfile.mkdtemp(dir=case.root))

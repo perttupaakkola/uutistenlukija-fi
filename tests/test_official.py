@@ -74,8 +74,17 @@ class Official(unittest.TestCase):
         with self.assertRaises(ValueError):validate_draft(bad,p)
         bad=self.draft(p);bad['image']={'url':'https://example.invalid/generic.jpg'}
         with self.assertRaises(ValueError):validate_draft(bad,p)
-    def run_editorial(self,approved):
-        p=self.packet();ingest(load_config(self.cfg),p,NOW);draft=self.draft(p)
+    def run_editorial(self,approved,with_image=True):
+        p=self.packet();draft=self.draft(p)
+        if with_image:
+            from test_generated_integrity import GeneratedIntegrity
+            case=GeneratedIntegrity('test_generated_binding_keeps_text_provenance_and_not_applicable_marker')
+            case.setUp();self.addCleanup(case.doCleanups)
+            imaged,_=case.generated();image=imaged['image']
+            destination=self.root/'state'/image['local_path'];destination.parent.mkdir(parents=True,exist_ok=True)
+            destination.write_bytes((case.state/image['local_path']).read_bytes())
+            p.pop('image_note',None);p['image']=image;draft['image']=image
+        ingest(load_config(self.cfg),p,NOW)
         if not approved:draft['paragraphs'][0]['text']='Kaikki Suomen kirjastot avataan samana päivänä.'
         class OfflineModel:
             name='explicit-offline-test-double'
@@ -84,15 +93,21 @@ class Official(unittest.TestCase):
                 self.calls.append(role)
                 if role=='writer':return draft
                 return {'approved':approved,'draft_sha256':digest(draft_arg),'reasons':['A supports Helsinki library facts' if approved else 'A does not support nationwide opening claim']}
-        model=OfflineModel();result=tick(self.cfg,model=model,now=NOW);self.assertEqual(model.calls,['writer','reviewer']);return result
-    def test_private_imageless_render_with_attribution(self):
-        self.assertEqual(self.run_editorial(True)['status'],'rendered');html=next((self.root/'site/uutiset').glob('*/index.html')).read_text()
-        for word in ['Ei kuvaa:','CC BY 4.0','tietoja on tiivistetty','noindex,nofollow']:self.assertIn(word,html)
-        # No editorial picture on a text-only page; branding chrome is a separate concern.
-        self.assertEqual(editorial_images(scan(html)),[])
-        self.assertNotIn('kuvan käyttöoikeus on tarkastettu',html)
-        with database(self.config['state_dir']) as store,self.assertRaises(ValueError):render_site(store,self.root/'public',self.root/'state',public=True)
-        self.assertFalse((self.root/'public').exists())
+        from image_helpers import approved_pixel_review
+        model=OfflineModel()
+        with patch('news_mvp.imagery.review_pixels',side_effect=approved_pixel_review):
+            result=tick(self.cfg,model=model,now=NOW)
+        self.assertEqual(model.calls,['writer','reviewer'] if with_image else ['writer']);return result
+    def test_missing_image_is_retryable_and_never_rendered(self):
+        result=self.run_editorial(True,with_image=False)
+        self.assertEqual(result['status'],'image_pending');self.assertTrue(result['retryable'])
+        self.assertFalse((self.root/'site').exists())
+        with database(self.config['state_dir']) as store:
+            job=store.get(result['id'])
+            self.assertEqual(job['status'],'ready')
+            self.assertEqual(job['attempts'],0)
+            self.assertGreaterEqual(job['next_attempt'],NOW.timestamp()+900)
+            self.assertEqual(json.loads(job['draft'])['title'],'Helsinkiin avataan kirjasto')
     def test_review_rejection_has_no_render(self):
         self.assertEqual(self.run_editorial(False)['status'],'rejected');self.assertFalse((self.root/'site').exists())
     def test_draft_hash_change_invalidates_review(self):

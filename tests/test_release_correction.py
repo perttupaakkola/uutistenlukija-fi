@@ -19,7 +19,7 @@ class Correction(unittest.TestCase):
         with database(self.state) as store,patch('news_mvp.publish.cmd',return_value=COMMIT):return public_bundle(store,job,self.state)
     def test_actual_consumers_schema_first_and_downgrade_matrix(self):
         job=self.ready();site,receipt=self.bundle(job)
-        check(site,receipt);self.assertIsNone(self.workflow(receipt)['image_sha256'])
+        check(site,receipt);self.assertEqual(self.workflow(receipt)['image_sha256'],receipt['image_sha256'])
         bad_cases=[]
         for variant in [True,False,'2',2.0,3,None,1]:
             bad=copy.deepcopy(receipt);bad['schema_version']=variant;bad_cases.append((str(variant),bad))

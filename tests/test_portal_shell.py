@@ -285,10 +285,11 @@ class PortalShell(unittest.TestCase):
         # Weather is stated as unavailable instead of showing an invented reading.
         self.assertIn("Sääennuste ei ole nyt saatavilla", home)
         self.assertNotIn("data-weather-widget", home)
-        self.assertIn('class="portal-weather" href="/#saa"', home)
-        self.assertIn('id="saa"', home)
+        self.assertIn('class="portal-weather" href="https://www.met.no/', home)
+        self.assertNotIn('id="saa"', home)
         self.assertIn('Sääennuste ei ole nyt saatavilla.', home)
-        self.assertIn('id="markkinat"', home)
+        self.assertIn('class="portal-market"', home)
+        self.assertNotIn('front-shortcuts', home)
         self.assertIn('Valuuttakurssit eivät ole nyt saatavilla.', home)
         # Theme toggle and mobile menu button.
         self.assertIn('id="theme-toggle"', home)
@@ -435,6 +436,9 @@ class PortalShell(unittest.TestCase):
             for tag in scripts:
                 attrs = self._attrs(tag)
                 self.assertNotIn("href", attrs, f"script uses href instead of src: {tag}")
+                if attrs.get('type') == 'application/json':
+                    self.assertEqual(attrs.get('id'), 'frontpage-data')
+                    continue
                 self.assertIn("src", attrs, f"script has no src: {tag}")
                 self.assertTrue(attrs["src"].startswith(prefix), tag)
             self.assertNotIn(forbidden, text)

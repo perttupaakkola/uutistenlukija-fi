@@ -25,14 +25,14 @@ class SubjectDerivation(unittest.TestCase):
     def test_ordinary_civic_story_is_illustratable(self):
         self.assertIsNotNone(self._subject('Kuopio kokeili koulunkäyntiä väestönsuojassa'))
 
-    def test_named_person_is_refused(self):
+    def test_named_person_retains_subject_for_safe_scene(self):
         """A generated photograph of a real, named individual is not ours to produce."""
-        self.assertIsNone(self._subject('Presidentti Stubb vierailee Saksassa'))
+        self.assertIsNotNone(self._subject('Presidentti Stubb vierailee Saksassa'))
 
-    def test_minister_is_refused(self):
-        self.assertIsNone(self._subject('Ministeri Tavio vierailee Virossa'))
+    def test_minister_retains_subject_for_safe_scene(self):
+        self.assertIsNotNone(self._subject('Ministeri Tavio vierailee Virossa'))
 
-    def test_tragedy_is_refused_for_every_inflection(self):
+    def test_sensitive_subjects_require_safe_scene_not_missing_image(self):
         """Finnish inflects heavily: matching only nominative forms let tragedy through."""
         for title in ('Onnettomuudessa kuoli kaksi ihmistä',
                       'Kaksi kuoli rajussa turmassa',
@@ -40,7 +40,7 @@ class SubjectDerivation(unittest.TestCase):
                       'Mies menehtyi sairauskohtauksen jälkeen',
                       'Mies tuomittiin murhasta'):
             with self.subTest(title=title):
-                self.assertIsNone(self._subject(title))
+                self.assertIsNotNone(self._subject(title))
 
     def test_ordinary_words_do_not_trip_the_safety_filter(self):
         """Over-blocking silently removes images from legitimate stories."""
@@ -186,7 +186,7 @@ class LegibleTextRejection(unittest.TestCase):
         imagery.describe = lambda raw: next(descriptions)
         try:
             import tempfile
-            result = imagery.build_image(draft, tempfile.mkdtemp())
+            result = imagery.build_image(draft, tempfile.mkdtemp(), require_pixel_review=False)
         finally:
             imagery.generate = original_generate
             imagery.describe = original_describe
@@ -206,7 +206,7 @@ class LegibleTextRejection(unittest.TestCase):
         imagery.describe = lambda raw: 'The image shows legible text on a police car.'
         try:
             import tempfile
-            result = imagery.build_image(draft, tempfile.mkdtemp(), attempts=2)
+            result = imagery.build_image(draft, tempfile.mkdtemp(), attempts=2, require_pixel_review=False)
         finally:
             imagery.generate = original_generate
             imagery.describe = original_describe
@@ -320,7 +320,7 @@ class FailClosed(unittest.TestCase):
 
         imagery.generate = boom
         try:
-            self.assertIsNone(imagery.build_image(draft, '/tmp'))
+            self.assertIsNone(imagery.build_image(draft, '/tmp', require_pixel_review=False))
         finally:
             imagery.generate = original
 
@@ -342,7 +342,7 @@ class ProviderChainIntegration(unittest.TestCase):
              mock.patch.object(imagery, 'fetch_pexels',
                                side_effect=lambda draft, state_dir: calls.append('pexels') or pexels), \
              mock.patch.object(imagery, 'generate', side_effect=AssertionError('generation')):
-            result = imagery.build_image(self.DRAFT, state)
+            result = imagery.build_image(self.DRAFT, state, require_pixel_review=False)
         self.assertIs(result, pexels)
         self.assertEqual(calls, ['pexels'])
 
@@ -353,7 +353,7 @@ class ProviderChainIntegration(unittest.TestCase):
              mock.patch.object(imagery, 'fetch_pexels',
                                side_effect=lambda draft, state_dir: calls.append('pexels') or None), \
              mock.patch.object(imagery, 'generate', side_effect=AssertionError('generation')):
-            result = imagery.build_image(self.DRAFT, state)
+            result = imagery.build_image(self.DRAFT, state, require_pixel_review=False)
         self.assertIs(result, unsplash)
         self.assertEqual(calls, ['pexels', 'unsplash'])
 
@@ -365,32 +365,26 @@ class ProviderChainIntegration(unittest.TestCase):
              mock.patch.object(imagery, 'generate',
                                return_value=(_structured_png(), 'prompt', 'test-model')), \
              mock.patch.object(imagery, 'describe', return_value=None):
-            result = imagery.build_image(self.DRAFT, state)
+            result = imagery.build_image(self.DRAFT, state, require_pixel_review=False)
         self.assertIsNotNone(result)
         self.assertTrue(result['generated'])
         self.assertEqual(result['credit'], 'AI-kuvitus')
         self.assertEqual(result['model'], 'test-model')
 
-    def test_unsafe_subject_remains_text_only_before_provider_chain(self):
-        import news_mvp.imagery as imagery
-        with tempfile.TemporaryDirectory() as state, \
-             mock.patch.object(imagery, 'fetch_unsplash') as unsplash, \
-             mock.patch.object(imagery, 'fetch_pexels') as pexels, \
-             mock.patch.object(imagery, 'generate') as generate:
-            result = imagery.build_image({
-                'title': 'Onnettomuudessa kuoli kaksi ihmistä',
-                'paragraphs': [{'text': 'Turma vaati uhreja.', 'source_ids': ['A']}],
-            }, state)
-        self.assertIsNone(result)
-        unsplash.assert_not_called()
-        pexels.assert_not_called()
-        generate.assert_not_called()
-
-    def test_build_image_returns_none_for_unsafe_subject(self):
+    def test_sensitive_story_attempts_stock_then_safe_illustration(self):
         import news_mvp.imagery as imagery
         draft = {'title': 'Onnettomuudessa kuoli kaksi ihmistä',
                  'paragraphs': [{'text': 'Turma vaati uhreja.', 'source_ids': ['A']}]}
-        self.assertIsNone(imagery.build_image(draft, '/tmp'))
+        with tempfile.TemporaryDirectory() as state, \
+             mock.patch.object(imagery, 'fetch_unsplash', return_value=None) as unsplash, \
+             mock.patch.object(imagery, 'fetch_pexels', return_value=None) as pexels, \
+             mock.patch.object(imagery, 'generate', return_value=(_structured_png(), 'safe prompt', 'test-model')) as generate, \
+             mock.patch.object(imagery, 'describe', return_value=None):
+            result = imagery.build_image(draft, state, require_pixel_review=False)
+        self.assertTrue(result['generated'])
+        pexels.assert_called_once()
+        unsplash.assert_called_once()
+        generate.assert_called_once()
 
 
 if __name__ == '__main__':

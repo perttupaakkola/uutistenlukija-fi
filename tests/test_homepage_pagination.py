@@ -65,10 +65,9 @@ class HomepagePagination(unittest.TestCase):
                                          min(remaining,site.HOMEPAGE_CENTER_ROWS))
                         self.assertEqual(sum(cls.startswith('portal-row-card') for cls,_ in entries),
                                          max(0,remaining-site.HOMEPAGE_CENTER_ROWS))
-                        # Only the lead carries an image; river rows are text-only and
-                        # never present a hidden thumbnail slot.
-                        self.assertEqual(images_in(html),[f'/mvp-assets/images/logo.png'])
-                        self.assertNotIn('portal-row-card__thumb',html)
+                        # Every illustrated story uses its original native image slot.
+                        self.assertEqual(len(images_in(html)),1 + len(entries))
+                        self.assertEqual(images_in(html)[0],'/mvp-assets/images/logo.png')
                         if remaining>site.HOMEPAGE_CENTER_ROWS:
                             self.assertIn('portal-river',html)
                             self.assertIn('portal-river__grid',html)
@@ -103,8 +102,9 @@ class HomepagePagination(unittest.TestCase):
 
     def test_maailma_shows_ulkomaat_without_changing_the_reviewed_draft(self):
         case=base.ReleaseV2('source_fetch');case.setUp();self.addCleanup(case.doCleanups)
-        draft=copy.deepcopy(case.draft);draft['category']='Maailma'
-        job=case.ready(case.packet,draft)
+        template=case.ready()
+        draft=json.loads(template['draft']);draft['category']='Maailma'
+        job=case.ready(json.loads(template['packet']),draft)
         self.assertEqual(json.loads(job['draft'])['category'],'Maailma')
         jobs=[]
         for index in range(6):

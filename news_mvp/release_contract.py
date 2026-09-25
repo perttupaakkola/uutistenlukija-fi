@@ -363,6 +363,10 @@ def stock_binding(image):
         if 'hotlink' in image:
             expected_image.add('hotlink')
     expected_image |= review_fields
+    if 'pixel_review' in image:
+        from .imagery import validate_pixel_review
+        validate_pixel_review(image)
+        expected_image.add('pixel_review')
     if set(image) != expected_image:
         raise ValueError('Unexpected stock image fields')
     if image['generated'] is not False:
@@ -376,6 +380,7 @@ def stock_binding(image):
     if image['caption'] not in {
             'Arkistokuva artikkelin aiheesta.',
             'Arkistokuva. Kuva ei esitä uutisen tapahtumaa.',
+            'Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.',
     }:
         raise ValueError('Stock image caption is invalid')
     provider_label = {
@@ -554,7 +559,23 @@ def _original_intake(packet, root):
     return matches[0]
 
 
-def verify_intake(packet, state):
+def _archived_source_matches(raw, provider, source, parsed):
+    """Recognise only the exact pre-51d01695 Valtioneuvosto extraction.
+
+    New intake still requires today's extraction. Image-only archive corrections
+    retain the already reviewed text, including historical headings/tag clouds.
+    Every character must reproduce from the same hash-bound captured HTML.
+    """
+    if provider != 'valtioneuvosto' or any(source.get(k) != v for k,v in parsed.items() if k != 'text'):
+        return False
+    from .official import parse
+    from .related import strip_navigation
+    historical = parse(raw, lambda t,a:'journal-content-article' in a.get('class','').split()).text()
+    return (source.get('text') == historical and
+            parsed.get('text') == strip_navigation(historical))
+
+
+def verify_intake(packet, state, *, archive_image_only=False):
     """Bind the stored, reviewed text to actual captured upstream bytes before release."""
     from .official import rights_text, source_fields, policy, ADDITIONAL_PROVIDERS
     basis = packet['publication_basis'];provider = basis['provider']
@@ -577,7 +598,8 @@ def verify_intake(packet, state):
         raise ValueError('Captured rights text changed')
     parsed = source_fields(raw,provider,packet['sources'][0]['url'])
     if any(packet['sources'][0].get(k) != v for k,v in parsed.items()):
-        raise ValueError('Captured source differs from reviewed packet')
+        if not (archive_image_only and _archived_source_matches(raw, provider, packet['sources'][0], parsed)):
+            raise ValueError('Captured source differs from reviewed packet')
     if provider in ADDITIONAL_PROVIDERS:
         receipt = json.loads((directory/'receipt.json').read_text())
         expected = {'fixture':False, 'provider':provider, 'source_url':packet['sources'][0]['url'],
@@ -975,10 +997,15 @@ def deployment_record(receipt, deployment, commit):
     binding = receipt_media(receipt)
     if deployment['environment'] != 'production' or deployment['latest_stage']['status'] != 'success' or deployment['deployment_trigger']['metadata']['commit_hash'] != commit:
         raise ValueError('Deployment identity mismatch')
-    return {'deployment_id':deployment['id'],'deployment_url':deployment['url'],
+    record = {'deployment_id':deployment['id'],'deployment_url':deployment['url'],
             'canonical_origin':'https://uutistenlukija.fi','remote_commit':commit,
             'source_commit':receipt['source_commit'],'packet_sha256':receipt['packet_sha256'],
             'draft_sha256':receipt['draft_sha256'],'job_id':receipt['job_id'],**binding}
+    if receipt.get('image_backfill'):
+        if digest(receipt['image_backfill']) != receipt.get('image_backfill_sha256'):
+            raise ValueError('Archive correction deployment binding mismatch')
+        record['image_backfill_sha256'] = receipt['image_backfill_sha256']
+    return record
 
 # --- Deliberate legacy redirect inventory and pure validation -----------------
 #

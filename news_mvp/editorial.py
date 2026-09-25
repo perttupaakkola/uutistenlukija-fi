@@ -120,6 +120,9 @@ def validate_draft(draft, packet):
             web_url(image.get(key))
         for key in ("alt", "credit", "license"):
             text(image.get(key), "image " + key, 500)
+        if image.get('pixel_review') is not None:
+            from .imagery import validate_pixel_review
+            validate_pixel_review(image, draft)
         if "classifier_output" in image:
             # The provider record is not enough: keep the exact subject decision and the positive
             # relevance result bound to the reviewed draft so a later release cannot silently
@@ -145,6 +148,9 @@ def validate_review(review, draft):
         raise ValueError("Review needs a boolean decision")
     if review.get("draft_sha256") != digest(draft):
         raise ValueError("Review is not bound to this exact draft")
+    if 'image_retryable' in review and (type(review['image_retryable']) is not bool or
+                                      (review['approved'] and review['image_retryable'])):
+        raise ValueError('Image retry requires an explicit image-only rejection')
     reasons = review.get("reasons")
     if not isinstance(reasons, list) or not reasons:
         raise ValueError("Review must explain its source-grounded decision")
@@ -182,13 +188,15 @@ class HermesModel:
         self.executable, self.timeout = executable, timeout
         self.receipts = []
 
-    def call(self, role, packet, draft=None):
+    def call(self, role, packet, draft=None, *, context=None):
         if packet.get("fixture"):
             raise ValueError("Live adapter refuses fabricated source packets")
         profile = Path.home() / ".hermes/profiles/news-mvp/config.yaml"
         if not profile.is_file():
             raise ValueError("Configure the fresh news-mvp profile in the private-article phase first")
         request = {"source_packet": packet}
+        if context is not None:
+            request['context'] = context
         if draft is not None:
             request.update(draft=draft, draft_sha256=digest(draft))
         prompt = (ROOT / "prompts" / (role + ".md")).read_text() + "\n\nINPUT JSON:\n" + encode(request)
@@ -221,6 +229,27 @@ class HermesModel:
                               "response_sha256": digest(value),
                               "stdout_sha256": hashlib.sha256(result.stdout.encode()).hexdigest()})
         return value
+
+    def call_archive_review(self, packet, draft, original_draft, published_at, original_review):
+        """Compose the retained text approval with a fresh exact-image approval.
+
+        This does not issue a new editorial approval for historical article text.
+        The archive installer separately requires the exact deployed predecessor.
+        """
+        projection = lambda value: {k:v for k,v in value.items() if k not in ('image','image_note')}
+        if projection(draft) != projection(original_draft):
+            raise ValueError('Archive review cannot authorize changed article text')
+        if not validate_review(original_review, original_draft)['approved']:
+            raise ValueError('Archive image review requires the original text approval')
+        timestamp(published_at)
+        context = {
+            'operation': 'image_only_archive_correction', 'original_published_at': published_at,
+            'original_draft_sha256': digest(original_draft),
+            'original_review_sha256': digest(original_review),
+            'unchanged_text_sha256': digest(projection(original_draft)),
+            'article_text_unchanged': True}
+        result = self.call('archive_image_reviewer', packet, draft, context=context)
+        return {**result, 'archive_image_only': context}
 
 
 def parse_hermes_output(stdout):

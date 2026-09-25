@@ -15,6 +15,10 @@ def check(root, receipt):
     if receipt.get('origin') != 'https://uutistenlukija.fi' or receipt.get('ga4_id') != 'G-35XERS8V6J':
         raise ValueError('Canonical site/analytics identity changed')
     binding=receipt_media(receipt)
+    # Historical text-only receipts remain readable by release_contract, but the
+    # deployment entrypoint may never authorize a new text-only publication.
+    if receipt.get('schema_version') == 2 and not receipt['draft'].get('image'):
+        raise ValueError('Text-only publication is prohibited; image preparation must retry')
     files=receipt['files']
     if not files or 'index.html' not in files:
         raise ValueError('Missing release files')
@@ -36,6 +40,12 @@ def check(root, receipt):
     if receipt.get('schema_version')==2:
         for name in receipt['new_article_files']:
             check_article((root/name).read_text(),receipt['packet'],receipt['draft'])
+    if receipt.get('image_backfill'):
+        from news_mvp.backfill import validate_records
+        from news_mvp.editorial import digest
+        if digest(receipt['image_backfill'])!=receipt.get('image_backfill_sha256'):
+            raise ValueError('Archive correction receipt changed')
+        validate_records(root,receipt['image_backfill'])
     return len(files)
 
 

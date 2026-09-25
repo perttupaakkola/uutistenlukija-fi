@@ -31,6 +31,11 @@ class Reviewer:
 
     def call(self, role, packet, draft=None):
         self.calls.append(role)
+        if role == 'image_classifier':
+            return {'subject': draft['title'], 'depictable_scene': 'public library building',
+                    'must_show': ['library building'], 'must_avoid': ['people'],
+                    'search_queries': ['public library building', 'library building exterior', 'library interior shelves'],
+                    'category': draft['category']}
         return {"approved": True, "draft_sha256": digest(draft),
                 "reasons": ["Reviewed image coverage fixture"]}
 
@@ -81,7 +86,7 @@ class ImageBackfill(unittest.TestCase):
                                                limit=99)
         self.assertEqual(len(attached), 3)
         self.assertEqual(build.call_count, 3)
-        self.assertEqual(reviewer.calls, ["reviewer"] * 3)
+        self.assertEqual(reviewer.calls, ["image_classifier", "reviewer"] * 3)
         self.assertEqual(sum(json.loads(job["packet"]).get("image") is not None for job in jobs), 3)
 
     def test_failed_chain_keeps_story_text_only(self):
@@ -97,7 +102,7 @@ class ImageBackfill(unittest.TestCase):
         with patch("news_mvp.imagery.build_image", return_value=None):
             self.assertEqual(backfill_missing_images(MemoryStore([job]), tempfile.mkdtemp(), reviewer), [])
         self.assertIsNone(json.loads(job["packet"]).get("image"))
-        self.assertEqual(reviewer.calls, [])
+        self.assertEqual(reviewer.calls, ["image_classifier"])
 
     def test_deployed_text_only_story_is_reset_only_for_a_reviewed_image(self):
         case = generated.GeneratedIntegrity("test_generated_binding_keeps_text_provenance_and_not_applicable_marker")

@@ -44,7 +44,7 @@ class BundleLegacyRedirects(unittest.TestCase):
     def setUp(self):
         case=base.ReleaseV2('source_fetch');case.setUp();self.addCleanup(case.doCleanups)
         self.case=case
-        self.current=case.ready()
+        self.current=case.ready();case.packet=json.loads(self.current["packet"]);case.draft=json.loads(self.current["draft"])
         self.state=case.state
         self.root=case.root
         self.site=Path(self.state)/'live-site'

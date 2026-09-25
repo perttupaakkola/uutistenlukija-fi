@@ -110,49 +110,44 @@
   }
 })();
 
-/* Cached forecasts advance with the reader's clock; no third-party requests. */
+/* Refresh only the original header forecast and existing market panel. */
 (function () {
   'use strict';
   var source = document.getElementById('frontpage-data');
   if (!source) return;
   var data;
   try { data = JSON.parse(source.textContent); } catch (_) { return; }
-  var city = document.getElementById('weather-city');
-  var value = document.getElementById('weather-value');
-  var time = document.getElementById('weather-time');
   function fiDate(raw) {
     return new Intl.DateTimeFormat('fi-FI', { timeZone: 'Europe/Helsinki', day: 'numeric', month: 'numeric', hour: '2-digit', minute: '2-digit' }).format(new Date(raw));
   }
   function update() {
-    var now = Date.now();
-    var weather = data[city.value] || {};
+    var now = Date.now(), weather = data.helsinki || {};
     var age = now - Date.parse(weather.updated_at);
-    var hours = weather.hours || [];
-    var hour = hours.reduce(function (best, item) {
+    var hour = (weather.hours || []).reduce(function (best, item) {
       return !best || Math.abs(Date.parse(item.time) - now) < Math.abs(Date.parse(best.time) - now) ? item : best;
     }, null);
-    if (hour && age >= 0 && age <= 18 * 3600000 && Math.abs(Date.parse(hour.time) - now) <= 5400000) {
-      value.textContent = Math.round(hour.temperature) + ' °C · tuuli ' + Math.round(hour.wind) + ' m/s';
-      time.textContent = 'Ennuste ' + fiDate(hour.time) + ' · päivitetty ' + fiDate(weather.updated_at) + ' (Suomen aikaa)';
-    } else {
-      value.textContent = 'Sääennuste ei ole nyt saatavilla.';
-      time.textContent = 'Tallennettu ennuste puuttuu tai on vanhentunut. Yritä myöhemmin uudelleen.';
+    var value = document.getElementById('weather-value'), time = document.getElementById('weather-time');
+    if (value && time) {
+      var detail = 'Sääennuste ei ole nyt saatavilla.';
+      if (hour && age >= 0 && age <= 18 * 3600000 && Math.abs(Date.parse(hour.time) - now) <= 5400000) {
+        value.textContent = Math.round(hour.temperature) + ' °C';
+        time.textContent = 'Helsinki · ennuste';
+        detail = 'Ennuste ' + fiDate(hour.time) + ' · päivitetty ' + fiDate(weather.updated_at) + ' · MET Norway, CC BY 4.0';
+      } else {
+        value.textContent = '-- °C';
+        time.textContent = 'Helsinki · sää ei saatavilla';
+      }
+      var surface = value.closest('.portal-weather');
+      surface.title = detail;
+      surface.setAttribute('aria-label', value.textContent + ', ' + time.textContent + '. ' + detail);
     }
-    var market = data.markets || {};
+    var market = data.markets || {}, values = document.getElementById('market-values'), label = document.getElementById('market-time');
     var marketAge = Math.floor(now / 86400000) - Math.floor(Date.parse(market.date) / 86400000);
-    if (!(marketAge >= 0 && marketAge <= 7)) {
-      document.getElementById('market-values').textContent = '';
-      document.getElementById('market-time').textContent = 'Valuuttakurssit eivät ole nyt saatavilla.';
+    if (values && label && !(marketAge >= 0 && marketAge <= 7)) {
+      values.textContent = '';
+      label.textContent = 'Valuuttakurssit eivät ole nyt saatavilla.';
     }
   }
-  try {
-    var saved = localStorage.getItem('uutistenlukija-weather-city');
-    if (['helsinki', 'tampere', 'oulu', 'rovaniemi'].indexOf(saved) !== -1) city.value = saved;
-  } catch (_) { /* Forecast selection works without storage. */ }
-  city.addEventListener('change', function () {
-    try { localStorage.setItem('uutistenlukija-weather-city', city.value); } catch (_) {}
-    update();
-  });
   update();
   setInterval(update, 60000);
 })();

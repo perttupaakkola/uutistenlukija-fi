@@ -141,6 +141,13 @@ class Store:
                             ("failed" if row["attempts"] >= max_attempts else "ready",
                              now + retry_seconds * row["attempts"], error, job_id))
 
+    def defer_image(self, job_id, now, retry_seconds, error):
+        """A bounded image attempt is not terminal editorial failure; retain its draft."""
+        with self.db:
+            self.db.execute("UPDATE jobs SET status='ready', attempts=MAX(0,attempts-1), "
+                            "next_attempt=?, error=? WHERE id=?",
+                            (now + retry_seconds, error, job_id))
+
     def get(self, job_id):
         row = self.db.execute("SELECT * FROM jobs WHERE id=?", (job_id,)).fetchone()
         return dict(row) if row else None

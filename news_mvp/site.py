@@ -22,6 +22,11 @@ PAGE_SIZE = 30
 # Lower topic cards are separately capped by the fixed taxonomy below.
 HOMEPAGE_CENTER_ROWS = 8
 HOMEPAGE_TOPIC_LIMIT = 7
+# Exact licence URLs whose short name is CC BY 4.0; trailing slashes are normalised.
+CC_BY_40_URLS = frozenset({
+    "https://creativecommons.org/licenses/by/4.0",
+    "https://creativecommons.org/licenses/by/4.0/deed.fi",
+})
 # Visually audited 2026-09-24: a South African waste truck does not illustrate
 # the Nordic municipal-governance meeting. Retain the source record for audit.
 EXCLUDED_IMAGES = {'e30285f7354046d1034767b63a4ef9089678b245442ac406c133694a311c4958'}
@@ -36,24 +41,6 @@ def display_image(image):
         return None
     alt = IMAGE_ALT_CORRECTIONS.get(image.get('sha256'))
     return {**image, 'alt': alt} if alt else image
-
-
-def homepage_order(items):
-    """Feature one recent reviewed image, keeping every newest headline once."""
-    items = list(items)
-    if not items or items[0][5]:
-        return items
-    newest = timestamp(items[0][0]['created_at'])
-    for index, item in enumerate(items[1:9], 1):
-        if item[5] and (newest - timestamp(item[0]['created_at'])).total_seconds() <= 172800:
-            return [items[index]] + items[:index] + items[index + 1:]
-    return items
-# Exact licence URLs whose short name is CC BY 4.0. Trailing-slash variants are
-# the same canonical document, so they are normalised before matching.
-CC_BY_40_URLS = frozenset({
-    "https://creativecommons.org/licenses/by/4.0",
-    "https://creativecommons.org/licenses/by/4.0/deed.fi",
-})
 
 
 def short_license_label(license_url):
@@ -157,13 +144,7 @@ def listing_image_slot(image, image_url, slot, lazy=True):
     return (f'<div class="{slot}">'
             f'<img src="{esc(image_url)}" alt="{esc(image["alt"])}" '
             f'{image_size_attributes(image)}{loading} referrerpolicy="no-referrer">'
-            f'{image_overlay_html(image, include_credit=False)}</div>')
-
-
-def card_credit(image):
-    if not image or image.get('generated'):
-        return ''
-    return f'<div class="card-image-credit">{image_credit_html(image)}</div>'
+            f'{image_overlay_html(image)}</div>')
 
 
 def jsonld_script(payload):
@@ -412,7 +393,7 @@ def listing_feed_html(items, empty_text):
                     f'<time class="portal-feed-item__time" datetime="{published}">{date}</time>'
                     f'<div class="portal-feed-item__body">'
                     f'<h3><a href="{link}">{esc(draft["title"])}</a></h3>'
-                    f'<p>{esc(draft["summary"])}</p>{card_credit(image)}</div>{thumb}{fixture}</article>')
+                    f'<p>{esc(draft["summary"])}</p></div>{thumb}{fixture}</article>')
     if not rows:
         return f'<div class="portal-list-feed"><p class="empty">{esc(empty_text)}</p></div>'
     return f'<div class="portal-list-feed">{"".join(rows)}</div>'
@@ -493,7 +474,6 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
     if not page_items:
         return '<p class="empty">Ei vielä tarkastettuja uutisluonnoksia.</p>'
     is_homepage = page_number == 1
-    newest_time = max(timestamp(item[0]['created_at']) for item in page_items)
 
     def row_category(draft):
         """Visible category label and colour slug, mapped without touching the draft.
@@ -517,7 +497,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
                 f'<div class="portal-teaser__meta">'
                 f'<span class="portal-kicker portal-teaser__category portal-teaser__category--{slug}">{category}</span>'
                 f'<span>Julkaistu <time datetime="{published}">{date}</time></span></div>'
-                f'<h3><a href="{link}">{esc(draft["title"])}</a></h3>{card_credit(image)}</div>'
+                f'<h3><a href="{link}">{esc(draft["title"])}</a></h3></div>'
                 f'{fixture}</article>')
 
     def river_row(item):
@@ -531,7 +511,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
                 f'<div class="portal-row-card__meta">'
                 f'<span class="portal-kicker portal-row-card__category portal-row-card__category--{slug}">{category}</span>'
                 f'<span class="portal-row-card__time">Julkaistu <time datetime="{published}">{date}</time></span></div>'
-                f'<h3><a href="{link}">{esc(draft["title"])}</a></h3>{card_credit(image)}</div>'
+                f'<h3><a href="{link}">{esc(draft["title"])}</a></h3></div>'
                 f'{fixture}</article>')
 
     lead_html = ""
@@ -544,11 +524,10 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
         figure_html = homepage_image_figure(image, image_url, lazy=False) if image else ""
         lead_classes = "portal-lead lead-story" + ("" if image else " lead-story--text-only")
         minutes = reading_time_minutes(draft)
-        lead_label = 'Uusin juttu' if timestamp(job['created_at']) == newest_time else 'Kuvassa'
         lead_html = (f'<article class="{lead_classes}">{figure_html}'
                      f'<div class="portal-lead__body">'
                      f'<span class="portal-kicker">{category}</span>'
-                     f'<a class="portal-lead__time" href="{link}">{lead_label} · julkaistu '
+                     f'<a class="portal-lead__time" href="{link}">Uusin juttu · julkaistu '
                      f'<time datetime="{published}">{date}</time></a>'
                      f'<h2 id="front-lead-title"><a href="{link}">{esc(draft["title"])}</a></h2>'
                      f'<p>{esc(draft["summary"])}</p>{fixture}'
@@ -566,11 +545,11 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
               f'<div class="portal-mobile-section-head"><span>Etusivu</span>'
               f'<h2 id="front-top-stories-title">Uusimmat otsikot</h2></div>'
               f'{"".join(rows)}</div>') if rows else ""
-    rail = ('<aside class="portal-right-rail" aria-label="Sää, markkinat ja RSS">'
-            + frontpage.modules(snapshot) +
+    rail = ('<aside class="portal-right-rail" aria-label="Sivupalkki">'
             '<section class="portal-newsletter"><h2>Seuraa uutisia</h2>'
             '<p>Lue uusimmat jutut verkkosivulla tai seuraa RSS-syötettä.</p>'
-            '<a href="/rss.xml">RSS-syöte</a></section></aside>')
+            '<a href="/rss.xml">RSS-syöte</a></section>'
+            + frontpage.markets(snapshot) + '</aside>')
     grid_label = ' aria-labelledby="front-lead-title"' if lead_html else ""
     grid_class = "portal-front-grid"
     if is_homepage and page_items[0][5] is None:
@@ -582,10 +561,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
                  f'<div class="portal-module-head"><h2 id="front-latest-title">Tuoreimmat</h2></div>'
                  f'<div class="portal-river__grid">{"".join(river_rows)}</div></section>')
     topics = homepage_topic_strip(archive_items if archive_items is not None else page_items)
-    shortcuts = ('<nav class="front-shortcuts" aria-label="Etusivun palvelut">'
-                 '<a href="#saa">Sää</a><a href="#markkinat">Markkinat</a>'
-                 '<a href="/rss.xml">RSS-syöte</a></nav>')
-    return shortcuts + grid + river + topics
+    return grid + river + topics
 
 
 def article_path(job):
@@ -615,7 +591,7 @@ def asset_url(assets, name):
     return f'/{assets}/{name}?v={version}'
 
 
-def page(title, body, canonical_path=None, head_meta="", readability_present=True, canonical=True):
+def page(title, body, canonical_path=None, head_meta="", readability_present=True, canonical=True, snapshot=None):
     """Full public page shell. `canonical_path` alone selects the public build.
 
     `canonical=False` keeps the public shell (public assets and the consent/privacy
@@ -704,7 +680,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
 <p id="header-search-note" class="search-note visually-hidden">Haku avautuu Googlen omalla sivulla.</p>
 </div>
 <div class="portal-actions" aria-label="Pikatoiminnot">
-<a class="portal-weather" href="/#saa">Sää Suomessa</a>
+{frontpage.weather(snapshot)}
 <a class="portal-action portal-action--desktop" href="{SOURCES_PATH}">Lähteet</a>
 {theme_button}
 <button id="hamburger" class="portal-icon-button hamburger-btn" type="button" aria-label="Avaa valikko" aria-expanded="false" aria-controls="main-nav-menu"><svg class="portal-menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="portal-mobile-label">Valikko</span></button>
@@ -723,6 +699,7 @@ def page(title, body, canonical_path=None, head_meta="", readability_present=Tru
 <div class="site-footer-copyright"><div class="container"><p>{footer_tagline}</p></div></div>
 </footer>
 {consent}
+{frontpage.data_script(snapshot)}
 <script src="{asset_url(assets, 'portal.js')}" defer></script>
 </body></html>'''
 
@@ -803,6 +780,8 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         packet, draft, review = (json.loads(job[k]) for k in ("packet", "draft", "review"))
         validate_draft(draft, packet)
         if public:
+            if not display_image(draft.get('image')):
+                raise ValueError('Published article requires a reviewed relevant image')
             # The policy gate is a PUBLISH-time check: it binds a packet to the policy in force
             # when it is released, via an exact policy digest. Re-running it for articles that
             # were already released against an earlier policy would fail every historical page,
@@ -860,12 +839,9 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                     source_list += f'<li>{esc(reuse["notice"])}</li>'
         image = display_image(draft.get("image"))
         image_url = None
-        # Without a reviewed image the page states that plainly after the ingress; the
-        # hero slot stays empty rather than holding a note between headline and summary.
+        # A missing image is allowed only in the private draft preview.
         figure = ""
-        image_note = ("" if image else
-                      '<p class="image-note">Tämä uutinen julkaistaan ilman kuvaa.</p>' if public else
-                      '<p class="image-note">Ei kuvaa: tekstiversion yksityinen esikatselu.</p>')
+        image_note = "" if image else '<p class="image-note">Ei kuvaa: tekstiversion yksityinen esikatselu.</p>'
         if image:
             image_url = image["url"]
             if image.get("local_path"):
@@ -928,15 +904,13 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                 image_url=image_for_meta,
                 sources=packet["sources"],
             )
-        atomic_write(output_dir / article_path(job) / "index.html", page(draft["title"], body, link if public else None, head_meta=head_meta))
+        atomic_write(output_dir / article_path(job) / "index.html", page(draft["title"], body, link if public else None, head_meta=head_meta, snapshot=snapshot))
         listing_items.append((job, draft, link, date, fixture, image, image_url))
     pages = [listing_items[offset:offset + PAGE_SIZE] for offset in range(0, len(listing_items), PAGE_SIZE)] or [[]]
     page_count = len(pages)
     # A render with fewer stories must not leave its retired archive pages behind.
     prune_stale_listing_pages(output_dir, page_count)
     for page_number, page_items in enumerate(pages, 1):
-        if page_number == 1:
-            page_items = homepage_order(page_items)
         path = listing_page_path(page_number)
         page_title = "Uusimmat uutiset" if page_number == 1 else f"Uusimmat uutiset – sivu {page_number}"
         listing = listing_page_html(
@@ -949,7 +923,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         head_meta = homepage_head_meta(page_items, path=path, page_title=page_title,
                                        start_position=(page_number - 1) * PAGE_SIZE + 1) if public else ""
         listing_path = "index.html" if page_number == 1 else f"sivu/{page_number}/index.html"
-        atomic_write(output_dir / listing_path, page(page_title, body, path if public else None, head_meta=head_meta))
+        atomic_write(output_dir / listing_path, page(page_title, body, path if public else None, head_meta=head_meta, snapshot=snapshot))
     # Category, latest and guides pages share the reviewed listing items: no story is
     # re-fetched, and an empty category says so honestly instead of hiding itself.
     for slug, display in CATEGORY_PAGES:
@@ -961,23 +935,23 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                                  "Ei vielä tarkastettuja uutisia tässä kategoriassa.")
         head_meta = homepage_head_meta(items, path=path, page_title=title) if public else ""
         atomic_write(output_dir / f"categories/{slug}/index.html",
-                     page(title, body, path if public else None, head_meta=head_meta))
+                     page(title, body, path if public else None, head_meta=head_meta, snapshot=snapshot))
     latest_path = LATEST_PATH
     latest_title = "Tuoreimmat uutiset"
     latest_body = category_page_body("Tuoreimmat", "Kaikki tarkastetut uutiset uusimmasta vanhimpaan.",
                                      listing_items, "Ei vielä tarkastettuja uutisia.")
     latest_meta = homepage_head_meta(listing_items, path=latest_path, page_title=latest_title) if public else ""
     atomic_write(output_dir / "tuoreimmat/index.html",
-                 page(latest_title, latest_body, latest_path if public else None, head_meta=latest_meta))
+                 page(latest_title, latest_body, latest_path if public else None, head_meta=latest_meta, snapshot=snapshot))
     guides_title = "Oppaat"
     guides_body = category_page_body("Oppaat", "Toimitukselliset oppaat ja taustat.",
                                      [], "Oppaita ei ole vielä julkaistu.")
     guides_meta = homepage_head_meta([], path=OPPAAT_PATH, page_title=guides_title) if public else ""
     atomic_write(output_dir / "oppaat/index.html",
-                 page(guides_title, guides_body, OPPAAT_PATH if public else None, head_meta=guides_meta))
+                 page(guides_title, guides_body, OPPAAT_PATH if public else None, head_meta=guides_meta, snapshot=snapshot))
     sources_title = "Lähteet ja toimitus"
     atomic_write(output_dir / "lahteet/index.html",
-                 page(sources_title, sources_page_body(), SOURCES_PATH if public else None))
+                 page(sources_title, sources_page_body(), SOURCES_PATH if public else None, snapshot=snapshot))
 
     # Shell assets. The imported theme and everything it loads relatively is copied
     # byte-for-byte into the current assets namespace, so the CSS keeps resolving its

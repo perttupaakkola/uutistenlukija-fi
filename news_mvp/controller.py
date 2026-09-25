@@ -14,8 +14,12 @@ from .store import database
 
 
 # Image provider calls are deliberately bounded per scheduler tick. A failed candidate remains
-# text-only and can be retried by a later tick; no separate backfill script is needed.
+# unpublished and can be retried by a later tick.
 IMAGE_BACKFILL_LIMIT = 3
+
+
+class ImagePending(RuntimeError):
+    """Keep the saved draft retryable; never publish a missing image."""
 
 
 def load_config(path):
@@ -158,10 +162,12 @@ def backfill_missing_images(store, state_dir, model, limit=IMAGE_BACKFILL_LIMIT)
     attached = []
     for job, packet, draft in list(_missing_image_jobs(store))[:budget]:
         try:
-            image = imagery.build_image(draft, state_dir, category=draft.get("category", ""))
+            decision = imagery.classify_draft(draft, model=model, packet=packet)
+            image = imagery.build_image(draft, state_dir, category=draft.get("category", ""),
+                                        decision=decision)
         except Exception:
             # Provider outages, malformed responses and an unavailable generator are all
-            # best-effort failures. The reviewed text remains publishable without a picture.
+            # retryable failures. The archive correction remains pending.
             continue
         if image is None:
             continue
@@ -171,7 +177,9 @@ def backfill_missing_images(store, state_dir, model, limit=IMAGE_BACKFILL_LIMIT)
         image_draft = {**draft, "image": image}
         try:
             validate_draft(image_draft, image_packet)
-            review = validate_review(model.call("reviewer", image_packet, image_draft), image_draft)
+            raw_review = (model.call_archive_review(image_packet, image_draft, draft, job['created_at'], json.loads(job['review']))
+                          if isinstance(model, HermesModel) else model.call('reviewer', image_packet, image_draft))
+            review = validate_review(raw_review, image_draft)
         except Exception:
             # A new image is never attached without a fresh review bound to its exact record.
             continue
@@ -250,9 +258,18 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                 # Fit an over-long headline into the SERP budget before the reviewer and the
                 # illustration step see the draft; both use the final title.
                 draft = repair_title(model, packet, draft)
+                # Keep the completed writing work across image-provider outages.
+                store.save_draft(job["id"], draft, model.name)
+                if packet.get('image') and not packet.get('fixture'):
+                    from .imagery import reviewed_image
+                    try:
+                        image = reviewed_image(packet['image'], draft, config['state_dir'])
+                    except (ValueError, KeyError, RuntimeError, OSError):
+                        image = None
+                    packet = {**packet, 'image': image}
+                    store.save_packet(job['id'], packet)
                 # Understand the complete reviewed draft before searching for an image. The
-                # classifier and provider tree are best effort: malformed model output, a provider
-                # outage, a licence gap, or failed relevance simply leaves this article text-only.
+                # classifier and provider tree must produce a reviewed relevant image.
                 # Fixture packets are deliberately network-free; their model adapter is only a
                 # contract test and must never make a provider or generation request.
                 if (config.get("illustrations", True) and not packet.get("image") and
@@ -275,6 +292,8 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                         job = {**job, "packet": json.dumps(packet)}
                         store.save_packet(job["id"], packet)
                 draft["image"] = packet.get("image")
+                if not packet.get('fixture') and not draft['image']:
+                    raise ImagePending('Image pending: no relevant reviewed candidate; publication withheld')
                 validate_draft(draft, packet)
                 store.save_draft(job["id"], draft, model.name)
                 if not load_config(config_path)["enabled"]:
@@ -282,6 +301,19 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                     return {"status": "stopped", "id": job["id"]}
                 review = validate_review(model.call("reviewer", packet, draft), draft)
                 store.finish_review(job["id"], review)
+                if review.get('image_retryable') is True:
+                    # Retain the refused exact candidate and review before retrying imagery.
+                    from .site import atomic_write
+                    history = Path(config['state_dir'])/'image-rejections'/job['id']/(digest(draft)+'.json')
+                    atomic_write(history,json.dumps({'packet':packet,'draft':draft,'review':review},ensure_ascii=False)+'\n')
+                    from .imagery import discard_generated_candidate
+                    discard_generated_candidate(draft.get('image'), draft, config['state_dir'])
+                    packet={**packet,'image':None};draft={**draft,'image':None}
+                    store.save_packet(job['id'],packet);store.save_draft(job['id'],draft,model.name)
+                    raise ImagePending('Image pending: editorial image-only rejection; candidate retained for audit')
+            except ImagePending as error:
+                store.defer_image(job['id'], now.timestamp(), max(900, config['retry_seconds']), str(error))
+                return {'status': 'image_pending', 'id': job['id'], 'retryable': True}
             except (ValueError, TypeError, KeyError, RuntimeError, OSError, subprocess.SubprocessError) as error:
                 # Record a bounded, redacted message: a bare class name made every
                 # failure undisagnosable, while raw provider output may hold secrets.

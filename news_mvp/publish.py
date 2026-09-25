@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import subprocess
+import time
 import urllib.error
 import urllib.request
 from html.parser import HTMLParser
@@ -38,7 +39,23 @@ def api(path, data=None, method=None):
     credential=dict(line.split('=',1) for line in result.stdout.splitlines() if '=' in line)
     request=urllib.request.Request(f'https://api.github.com/repos/{REPO}/{path}',data=json.dumps(data).encode(),
         headers={'Authorization':'Bearer '+credential['password'],'User-Agent':'Uutistenlukija-MVP','Content-Type':'application/json'},method=method or 'POST')
-    with urllib.request.urlopen(request,timeout=30) as response:return json.load(response)
+    # Git blobs/trees are content addressed: retrying identical bytes creates no
+    # second object. Commits, refs and dispatch retain their uncertain-outcome
+    # handling and are never automatically replayed here.
+    attempts = 3 if path in ('git/blobs','git/trees') and request.method == 'POST' else 1
+    for attempt in range(attempts):
+        try:
+            with urllib.request.urlopen(request,timeout=30) as response:return json.load(response)
+        except urllib.error.HTTPError as error:
+            if error.code not in (502,503,504) or attempt+1 == attempts:
+                detail = ''
+                try:
+                    body=json.loads(error.read(8000))
+                    detail=safe_error(ValueError(json.dumps({k:body[k] for k in ('message','errors') if k in body})))
+                except (ValueError,TypeError,AttributeError):
+                    pass
+                raise RuntimeError(f'GitHub {request.method} {path}: HTTP {error.code} {detail}') from None
+            time.sleep(2 ** attempt)
 
 
 def guard(config_path):
@@ -226,9 +243,12 @@ def _serves_public_content(source,files,pages):
 
 def public_bundle(store,job,state):
     ids={r[0] for r in store.db.execute("SELECT job_id FROM publications WHERE status='deployed'")}|{job['id']}
+    from .backfill import release_records
+    corrections = release_records(store,job['id'])
+    ids.update(r['job_id'] for r in corrections)
     packet,draft=json.loads(job['packet']),json.loads(job['draft'])
     binding=media(packet,draft)
-    if packet.get('publication_basis') is not None:verify_intake(packet,state)
+    if packet.get('publication_basis') is not None:verify_intake(packet,state,archive_image_only=bool(corrections))
     site=Path(state)/'live-site'  # Never reads or overlays the abandoned public-history tree.
     # The reviewed legacy demand inventory is loaded before anything is written: a missing
     # or malformed inventory fails the release closed rather than producing a bundle whose
@@ -240,19 +260,19 @@ def public_bundle(store,job,state):
     from .frontpage import load
     snapshot = load(state)
     render_site(store,site,state,public=True,include_ids=ids,verify_policy_ids={job['id']},snapshot=snapshot)
-    privacy='''<article class="story"><h1>Tietosuoja ja evästeet</h1><p>Voit käyttää uutispalvelua sallimatta analytiikkaa. Luvallasi käytämme Google Analyticsia sivuston käytön mittaamiseen. Emme käytä mainonnan evästeitä.</p><p>Suostumus tallennetaan selaimeesi. Voit muuttaa valintaasi sivun Evästeasetukset-painikkeella. Analytiikan poistaminen käytöstä poistaa tämän sivuston Google Analytics -evästeet selaimesta.</p><p>Uutiset laaditaan tekoälyn avulla ja tarkastetaan erillisessä lähdearvioinnissa. Alkuperäiset lähteet ja käyttöehdot näkyvät artikkelissa. Uutinen voi olla kuvaton; käytetyn kuvan tekijä ja käyttöoikeus ilmoitetaan kuvan yhteydessä.</p></article>'''
-    atomic_write(site/'tietosuoja/index.html',page('Tietosuoja ja evästeet',privacy,'/tietosuoja/'))
+    privacy='''<article class="story"><h1>Tietosuoja ja evästeet</h1><p>Voit käyttää uutispalvelua sallimatta analytiikkaa. Luvallasi käytämme Google Analyticsia sivuston käytön mittaamiseen. Emme käytä mainonnan evästeitä.</p><p>Suostumus tallennetaan selaimeesi. Voit muuttaa valintaasi sivun Evästeasetukset-painikkeella. Analytiikan poistaminen käytöstä poistaa tämän sivuston Google Analytics -evästeet selaimesta.</p><p>Uutiset laaditaan tekoälyn avulla ja tarkastetaan erillisessä lähdearvioinnissa. Alkuperäiset lähteet ja käyttöehdot näkyvät artikkelissa. Jokaisella uutisella on tarkastettu aiheeseen liittyvä kuva; käytetyn kuvan tekijä ja käyttöoikeus ilmoitetaan kuvan yhteydessä.</p></article>'''
+    atomic_write(site/'tietosuoja/index.html',page('Tietosuoja ja evästeet',privacy,'/tietosuoja/',snapshot=snapshot))
     # Terms for AI illustrations. This is the license_url/source_url of every generated article
     # image, so it must exist and must actually describe the image rights - pointing that field
     # at the privacy page was rejected by the independent reviewer, correctly.
     illustrations = '''<article class="story"><h1>Kuvituskuvat</h1>
 <p>Osa uutisten kuvista on tekoälyn tuottamia kuvituskuvia. Ne eivät ole valokuvia todellisista tapahtumista eivätkä esitä todellisia henkilöitä.</p>
 <p>Kuvituskuva merkitään kuvatekstissä kuvituskuvaksi, ja kuvan yhteydessä kerrotaan, että kuva on tuotettu tekoälyllä.</p>
-<p>Kuvituskuva rakennetaan uutisen otsikon ja ensimmäisen kappaleen vahvistetusta sisällöstä. Se ei esitä todellista henkilöä, tapahtumaa eikä tekijänoikeudellista teosta, joten se ei käytä kolmannen osapuolen oikeuksia.</p>
+<p>Kuvituskuva rakennetaan uutisen tarkastetun tekstin vahvistetusta sisällöstä. Se ei esitä todellista henkilöä, tapahtumaa eikä tekijänoikeudellista teosta, joten se ei käytä kolmannen osapuolen oikeuksia.</p>
 <p>Lähdeuutisten omia kuvia ei käytetä, koska lähteiden tekstin käyttöehdot eivät kata niiden kuvia.</p>
 <p>Kuvituksen tuottamiseen käytetty malli ja kehotteen tarkiste tallennetaan julkaisurekisteriin.</p>
 </article>'''
-    atomic_write(site/'kuvituskuvat/index.html',page('Kuvituskuvat',illustrations,'/kuvituskuvat/'))
+    atomic_write(site/'kuvituskuvat/index.html',page('Kuvituskuvat',illustrations,'/kuvituskuvat/',snapshot=snapshot))
     # One pass over the store builds the slug/mtime maps used by the sitemap and redirects.
     article_mod={}
     title_by_id={}
@@ -357,14 +377,28 @@ def public_bundle(store,job,state):
         'files':{str(p.relative_to(site)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(site.rglob('*')) if p.is_file()}}
     if binding.get('text_only') or binding.get('text_provenance'):
         receipt.update(schema_version=2,packet=packet,draft=draft,review=json.loads(job['review']))
+    if corrections:
+        receipt.update(image_backfill=corrections,image_backfill_sha256=digest(corrections))
     check(site,receipt)
     atomic_write(Path(state)/'release.json',json.dumps(receipt,ensure_ascii=False,indent=2)+'\n')
     return site,receipt
 
 
+def upload_blob(site,data):
+    expected=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
+    checkpoint=Path(site).parent/'uploaded-git-blobs'/expected
+    if checkpoint.exists():
+        if checkpoint.read_text()!=expected+'\n':raise ValueError('Uploaded Git blob checkpoint changed')
+        return expected
+    actual=api('git/blobs',{'content':base64.b64encode(data).decode(),'encoding':'base64'})['sha']
+    if actual!=expected:raise ValueError('Uploaded Git blob identity mismatch')
+    atomic_write(checkpoint,expected+'\n')
+    return expected
+
+
 def make_commit(site,receipt):
     parent=api('git/ref/heads/main')['object']['sha'];base=api('git/commits/'+parent)['tree']['sha']
-    def blob(data):return api('git/blobs',{'content':base64.b64encode(data).decode(),'encoding':'base64'})['sha']
+    def blob(data):return upload_blob(site,data)
     public_tree=api('git/trees',{'tree':[{'path':name,'mode':'100644','type':'blob','sha':blob((site/name).read_bytes())} for name in receipt['files']]})['sha']
     paths=cmd('git','ls-files').splitlines()
     entries=[{'path':name,'mode':'100644','type':'blob','sha':blob((ROOT/name).read_bytes())} for name in paths]
@@ -385,11 +419,16 @@ def matching_runs(commit):
 def publish(store,job,state,config_path):
     ensure_table(store);guard(config_path)
     packet,draft=json.loads(job['packet']),json.loads(job['draft'])
+    from .site import display_image
+    if not display_image(draft.get('image')):
+        return {'status': 'image_pending', 'job_id': job['id'], 'retryable': True}
     binding=media(packet,draft)
     if not validate_review(json.loads(job['review']),draft)['approved']:raise ValueError('Unapproved publication')
     if store.db.execute('SELECT 1 FROM publications WHERE job_id=?',(job['id'],)).fetchone() is None:
         validate_packet(packet,datetime.now(timezone.utc),48)
-    if packet.get('publication_basis') is not None:verify_intake(packet,state)
+    if packet.get('publication_basis') is not None:
+        from .backfill import active
+        verify_intake(packet,state,archive_image_only=active(store,job['id']) is not None)
     with store.db:
         store.db.execute('INSERT OR IGNORE INTO publications(job_id,packet_sha,draft_sha,image_sha,source_commit,status) VALUES(?,?,?,?,?,?)',
             (job['id'],digest(packet),digest(draft),binding['image_sha256'],cmd('git','rev-parse','HEAD'),'preparing'))
@@ -446,6 +485,10 @@ def publish(store,job,state,config_path):
         # receipts carrying the additive marker must match it exactly.
         if 'text_provenance' in live and live['text_provenance'] != binding.get('text_provenance'):
             raise ValueError('Deployment text policy/provenance mismatch')
+        from .backfill import release_records, complete as complete_backfill
+        corrections=release_records(store,job['id'])
+        if corrections and live.get('image_backfill_sha256')!=digest(corrections):
+            raise ValueError('Deployment archive correction binding mismatch')
         url='https://uutistenlukija.fi/'+article_path(job)
         def read(url):
             with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=25) as r:return r.read()
@@ -468,6 +511,7 @@ def publish(store,job,state,config_path):
             image_sha=hashlib.sha256(image).hexdigest()
             assert image_sha==row['image_sha']
         check_article(html.decode(),packet,draft,canonical=url)
+        complete_backfill(store,job['id'],row['remote_commit'],run['databaseId'],read)
         live.update(canonical_article=url,live_html_sha256=hashlib.sha256(html).hexdigest(),live_image_sha256=image_sha)
         atomic_write(receipt_dir/'live-readback.json',json.dumps(live,indent=2)+'\n')
         with store.db:store.db.execute("UPDATE publications SET status='deployed' WHERE job_id=?",(job['id'],))

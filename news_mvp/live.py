@@ -74,7 +74,8 @@ def live_tick(config_path):
             ensure_table(store)
             # Publication reconciliation owns the tick, even after its source disappears
             # or ages out. Never rotate providers while an outcome is unresolved.
-            pending=store.db.execute("SELECT job_id,status FROM publications WHERE status NOT IN ('deployed','failed') ORDER BY rowid LIMIT 2").fetchall()
+            from .backfill import pending as pending_publications
+            pending=pending_publications(store)
             if pending:
                 if len(pending)!=1:
                     return {'status':'publication_blocked','reason':'Multiple unresolved publications require operator reconciliation'}

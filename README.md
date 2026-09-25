@@ -24,9 +24,20 @@ the in-pipeline chain below, and every decision is recorded in the plans docs.
 - Text releases bind packet/source/rights hashes; before release, stored intake bytes
   must reproduce the reviewed source and rights, and live-page readback must match the
   reviewed text (reversible CDN e-mail obfuscation excepted).
-- Generated illustrations (`news_mvp/imagery.py`) are built from the reviewed draft's
-  own title/lead, pixel-verified, screened for legible text, credited as AI, and linked
-  to the `/kuvituskuvat/` terms. Source images are never used.
+- Every new public article needs one relevant reviewed image. Verified licensed real
+  imagery is attempted first; otherwise the complete draft grounds a clearly labelled AI
+  illustration. Actual pixels are checked independently against the final article and
+  bound by hash. Sensitive and named-person stories use safe objects, places or processes;
+  generated illustrations contain no people, likenesses or invented documentary events.
+  Official text permissions never imply permission to reuse the source's photography.
+- Image-provider failures retain the saved draft for a later attempt. An image-only
+  editorial rejection preserves the refused candidate and review in `image-rejections/`
+  and retries imagery. Public rendering and publication both refuse missing images.
+- Archive image corrections preserve old job/publication records in
+  `image_backfill_batches`. One guarded batch has one deployment anchor; every corrected
+  article and exact image must pass immutable-release and live readback checks before
+  the batch completes. Historical nullable image fields remain provenance, not permission
+  to publish a new text-only page.
 - Headlines target ≤60 characters: the writer is instructed, one bounded repair call
   fits over-long ones, and the reviewer checks the final draft.
 - The public bundle includes RSS (`/rss.xml`), sitemap, canonical links, OG/Twitter/
@@ -44,6 +55,18 @@ the in-pipeline chain below, and every decision is recorded in the plans docs.
   operator review instead of guessing.
 - State lives in `/home/pertt/.local/share/uutistenlukija` (`jobs.sqlite`, `media/`,
   `learning/`).
+- Image generation and pixel review can use the already configured private routes with
+  `UUTIS_IMAGE_PROVIDER=google` and `UUTIS_VISION_PROVIDER=google`. These select Google
+  `gemini-3.1-flash-image` and the separate `gemini-2.5-flash` pixel reviewer. Selecting
+  image provider `kie` uses its `nano-banana-2` task API; the default remains OpenAI when unset.
+  Existing host-only project credentials supply `KIE_API_KEY`; Google reads the existing
+  `GOOGLE_API_KEY`/`GEMINI_API_KEY` or the host's Hermes environment file. Credentials
+  never enter source, public assets, receipts or request diagnostics. The licensed-real
+  provider order remains Pexels, Unsplash, Wikimedia Commons, then Google image search.
+  `image-provider-requests/` retains task identities and exact cached pixels, so a pending
+  task or temporary review outage resumes without another paid generation. Explicitly
+  rejected pixels require a fresh task. `image-provider-attempts/` records request hosts,
+  HTTP outcomes and the accepted image hash without request queries or response bodies.
 
 ## Front-page snapshots
 
@@ -57,8 +80,10 @@ selects the nearest forecast hour and suppresses forecasts older than 18 hours o
 older than seven days; source/model timestamps and the forecast/reference-rate labels
 stay visible. Provider outages do not stop article publication.
 
-The homepage may feature the newest illustrated article among the first nine stories
-when it is within 48 hours of the newest article, labelled “Kuvassa”. All 30 recent
-stories remain present and RSS/latest listings retain chronological order. Known
-visually audited image exclusions and descriptive alt corrections are presentation-only
-in `site.py`; original reviewed records remain intact.
+The newest story always occupies the original dark overlaid lead. The layout and CSS
+retain baseline `3b55192d7818214090f350fe7a210ddd84a05284`: weather uses the compact header
+surface, markets use the existing panel after the newsletter, and RSS uses the existing
+newsletter/footer/feed metadata. There is no extra shortcut row or older-story promotion.
+The original mobile ordering and visibility rules remain intact. Known image exclusions
+and accurate alt corrections preserve the original source records; excluded imagery
+requires replacement before a public release can render.

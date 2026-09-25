@@ -239,7 +239,8 @@ class SiteMetadata(unittest.TestCase):
         self.assertIn(government["license"], private)
         self.assertIn(government["license_url"], private)
         self.assertEqual(site.short_license_label(government["license_url"]), "")
-        self.assertNotIn("CC BY 4.0", private)
+        # Header weather attribution is independent of article text reuse terms.
+        self.assertNotIn("CC BY 4.0", private.split('<main',1)[1].split('</main>',1)[0])
 
 
 if __name__ == "__main__":

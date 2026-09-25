@@ -23,6 +23,8 @@ REMOTE='b'*40
 TEXT='Helsingin kaupunki kertoo uuden kirjaston avaamisesta syyskuussa. Kirjastossa voi lainata kirjoja ja käyttää lukutiloja. Kaupunki kertoo palveluista omilla verkkosivuillaan. Tämä synteettinen testitiedote koskee paikallisia kirjastopalveluja.'
 class ReleaseV2(unittest.TestCase):
     def setUp(self):
+        from image_helpers import approved_pixel_review
+        pixels=patch("news_mvp.imagery.review_pixels",side_effect=approved_pixel_review);pixels.start();self.addCleanup(pixels.stop)
         self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup);self.root=Path(self.tmp.name);self.state=self.root/'state';self.state.mkdir()
         self.config={'enabled':True,'backend':'hermes','state_dir':str(self.state),'output_dir':str(self.root/'private'),'max_source_age_hours':48,'illustrations':False,'authorization_mode':'steady_state','source_recipes':[],'discovery':{'family':'news-reviewed-v2','max_candidates':5}}
         self.cfg=self.root/'config.json';self.cfg.write_text(json.dumps(self.config))
@@ -36,6 +38,11 @@ class ReleaseV2(unittest.TestCase):
         self.draft={'title':'Helsinki avaa kirjaston','summary':'Kaupunki kertoo kirjastopalveluista.','category':'Kulttuuri','paragraphs':[{'text':'Helsingin kaupungin mukaan uusi kirjasto avataan syyskuussa.','source_ids':['A']},{'text':'Kirjastossa voi lainata kirjoja ja käyttää lukutiloja.','source_ids':['A']}],'image':None}
     def source_fetch(self,url,hosts):return (self.rights if url==official.policy()['providers']['helsinki']['rights_url'] else self.raw,'text/html',url)
     def ready(self,packet=None,draft=None):
+        # Current publication fixtures require imagery; explicit arguments still build
+        # historical text-only records for provenance and migration refusal tests.
+        if packet is None and draft is None:
+            from test_generated_integrity import GeneratedIntegrity
+            packet,draft=GeneratedIntegrity.generated(self)
         packet=packet or self.packet;draft=draft or self.draft;identity=ingest(load_config(self.cfg),packet,self.now)['id']
         with database(self.state) as store:
             ensure_table(store);store.save_draft(identity,draft,'isolated-model-boundary');store.finish_review(identity,{'approved':True,'draft_sha256':digest(draft),'reasons':['Synthetic isolated review']});return store.get(identity)
@@ -87,7 +94,7 @@ class ReleaseV2(unittest.TestCase):
                 with database(self.state) as store,patch('news_mvp.publish.cmd',side_effect=self.shell(calls)),patch('news_mvp.publish.api',return_value={'object':{'sha':REMOTE}}),patch('news_mvp.publish.matching_runs',return_value=[{'databaseId':123,'status':'completed','conclusion':'success'}]),patch('urllib.request.urlopen',side_effect=read):
                     self.assertEqual(publish(store,job,self.state,self.cfg)['status'],'deployed')
                     self.assertEqual(publish(store,job,self.state,self.cfg)['status'],'idle')
-                self.assertEqual(any(u.endswith('.jpg') for u in requested),kind=='image')
+                self.assertTrue(any(u.endswith('.jpg') for u in requested))
                 readback=json.loads((deployment/'live-readback.json').read_text());self.assertEqual(readback['live_image_sha256'],binding['image_sha256'])
     def test_mixed_home_retains_old_image_receipt_and_honest_text(self):
         old,sha=self.image_job();job=self.ready()
@@ -98,10 +105,8 @@ class ReleaseV2(unittest.TestCase):
             after=tuple(store.db.execute('SELECT * FROM publications WHERE job_id=?',(old['id'],)).fetchone());self.assertEqual(before,after)
             home=(site/'index.html').read_text();self.assertIn(self.draft['title'],home);self.assertIn('NASA synthetic image story',home)
             text=(site/(article_path(job)+"index.html")).read_text();self.assertNotIn('Luonnos',text)
-            # A text-only page must not carry an editorial picture; the exact brand logo
-            # in shell chrome is allowed, so only non-branding images fail here.
-            self.assertEqual(editorial_images(scan(text)),[])
-            self.assertIn('CC BY 4.0',text);self.assertIn('Tämä uutinen julkaistaan ilman kuvaa.',text);self.assertTrue((site/f'mvp-assets/{sha}.jpg').exists())
+            self.assertEqual(len(editorial_images(scan(text))),1)
+            self.assertIn('CC BY 4.0',text);self.assertNotIn('Tämä uutinen julkaistaan ilman kuvaa.',text);self.assertTrue((site/f'mvp-assets/{sha}.jpg').exists())
     def test_wrong_missing_policy_rights_private_fixture_packet_refused(self):
         for mutation in ['policy','rights','private','fixture','source','image-required']:
             packet=copy.deepcopy(self.packet)
@@ -155,6 +160,9 @@ class ReleaseV2(unittest.TestCase):
         # configured providers minus the one that answered.
         self.assertEqual({e['provider'] for e in errors},set(official.PROVIDER_ORDER)-{'helsinki'})
     def test_one_real_controller_editorial_sequence_only_one_admission(self):
+        from test_generated_integrity import GeneratedIntegrity
+        self.packet,self.draft=GeneratedIntegrity.generated(self)
+        collector=patch('news_mvp.live.collect',return_value=(self.packet,{}));collector.start();self.addCleanup(collector.stop)
         calls=[]
         class Model:
             name='isolated-model-boundary'
@@ -217,6 +225,9 @@ class ReleaseV2(unittest.TestCase):
 
 
     def pending_case(self,mode):
+        from test_generated_integrity import GeneratedIntegrity
+        self.packet,self.draft=GeneratedIntegrity.generated(self)
+        collector=patch('news_mvp.live.collect',return_value=(self.packet,{}));collector.start();self.addCleanup(collector.stop)
         model_calls=[];commands=[];promotions=[]
         class Model:
             name='isolated-model-boundary'

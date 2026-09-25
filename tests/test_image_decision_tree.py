@@ -118,7 +118,7 @@ class ProviderTree(unittest.TestCase):
                 mock.patch.object(imagery, "fetch_google",
                                   side_effect=lambda *args, **kwargs: calls.append("google") or None), \
                 mock.patch.object(imagery, "generate", side_effect=AssertionError("fallback")):
-            result = imagery.build_image(DRAFT, state, decision=DECISION)
+            result = imagery.build_image(DRAFT, state, decision=DECISION, require_pixel_review=False)
         self.assertEqual(calls, ["pexels", "unsplash", "wikimedia"])
         self.assertEqual(result["classifier_output"], DECISION)
         self.assertTrue(result["relevance_check"]["accepted"])
@@ -177,7 +177,7 @@ class GenerationFallback(unittest.TestCase):
                 mock.patch.object(imagery, "generate",
                                   return_value=(structured_png(), "decision prompt", "mock-generator")), \
                 mock.patch.object(imagery, "describe", return_value=None):
-            result = imagery.build_image(DRAFT, state, decision=DECISION)
+            result = imagery.build_image(DRAFT, state, decision=DECISION, require_pixel_review=False)
         self.assertTrue(result["generated"])
         self.assertEqual(result["credit"], "AI-kuvitus")
         self.assertNotIn("mock-generator", result["credit"])

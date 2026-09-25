@@ -136,30 +136,34 @@ def current_markets(item, now):
         return False
 
 
-def modules(snapshot=None, now=None):
+def weather(snapshot=None, now=None):
+    """Populate the original compact Helsinki header surface; no extra module."""
     snapshot = snapshot or {}
     now = now or datetime.now(timezone.utc)
-    weather = snapshot.get('helsinki') or {}
-    hour = current_weather(weather, now)
-    weather_text = 'Sääennuste ei ole nyt saatavilla.'
-    if hour:
-        weather_text = f'{hour["temperature"]:.0f} °C · tuuli {hour["wind"]:.0f} m/s'
-    weather_time = ('Ennuste ' + date(hour['time']).astimezone(FI).strftime('%d.%m. klo %H.%M') +
-                    ' · päivitetty ' + date(weather['updated_at']).astimezone(FI).strftime('%d.%m. klo %H.%M')) if hour else 'Yritä myöhemmin uudelleen.'
-    options = ''.join(f'<option value="{key}">{name}</option>' for key, (name, _, _) in CITIES.items())
-    market = snapshot.get('markets') or {}
+    item = snapshot.get('helsinki') or {}
+    hour = current_weather(item, now)
+    value = f'{hour["temperature"]:.0f} °C' if hour else '-- °C'
+    label = 'Helsinki · ennuste' if hour else 'Helsinki · sää ei saatavilla'
+    detail = ('Ennuste ' + date(hour['time']).astimezone(FI).strftime('%d.%m. klo %H.%M') +
+              ' · päivitetty ' + date(item['updated_at']).astimezone(FI).strftime('%d.%m. klo %H.%M') +
+              ' · MET Norway, CC BY 4.0') if hour else 'Sääennuste ei ole nyt saatavilla. MET Norway, CC BY 4.0.'
+    return (f'<a class="portal-weather" href="https://www.met.no/en/free-meteorological-data/Licensing-and-crediting" title="{html.escape(detail)}" aria-label="{html.escape(value + ", " + label + ". " + detail)}">'
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="27" height="27" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>'
+            f'<span><strong id="weather-value">{value}</strong><small id="weather-time">{label}</small></span></a>')
+
+
+def markets(snapshot=None, now=None):
+    """Use the existing market panel and its original theme classes."""
+    market = (snapshot or {}).get('markets') or {}
+    now = now or datetime.now(timezone.utc)
     values = ''
     if current_markets(market, now):
-        values = '<dl class="market-rates">' + ''.join(
-            f'<div><dt>EUR / {symbol}</dt><dd>{market["rates"][symbol]:.4f} {symbol}</dd></div>' for symbol in ('USD','SEK','GBP')) + '</dl>'
-    market_time = ('Kurssipäivä ' + datetime.strptime(market['date'], '%Y-%m-%d').strftime('%d.%m.%Y')) if values else 'Valuuttakurssit eivät ole nyt saatavilla.'
-    data = json.dumps(snapshot, ensure_ascii=False).replace('<', '\\u003c').replace('&', '\\u0026')
-    return (f'<section id="saa" class="front-weather" aria-labelledby="weather-title"><h2 id="weather-title">Sää Suomessa</h2>'
-            f'<label for="weather-city">Paikkakunta</label><select id="weather-city">{options}</select>'
-            f'<p id="weather-value" aria-live="polite">{html.escape(weather_text)}</p><p id="weather-time" class="snapshot-note">{html.escape(weather_time)} (Suomen aikaa)</p>'
-            '<a href="https://www.met.no/en/free-meteorological-data/Licensing-and-crediting">MET Norway · CC BY 4.0</a></section>'
-            '<section id="markkinat" class="portal-market" aria-labelledby="market-title"><h2 id="market-title">Markkinat</h2>'
-            '<p>Valuutat · 1 euro (EUR)</p><div id="market-values">' + values + '</div>'
-            f'<p id="market-time" class="snapshot-note">{html.escape(market_time)}</p><p class="snapshot-note">EKP:n viitekurssit, ei reaaliaikainen. Päivitys arkipäivisin.</p>'
-            f'<a href="{ECB_SOURCE}">Euroopan keskuspankki</a></section>'
-            f'<script type="application/json" id="frontpage-data">{data}</script>')
+        values = '<dl>' + ''.join(f'<div><dt>EUR / {symbol}</dt><dd>{market["rates"][symbol]:.4f}</dd></div>' for symbol in ('USD','SEK','GBP')) + '</dl>'
+    label = ('EKP · 1 euro · ' + datetime.strptime(market['date'], '%Y-%m-%d').strftime('%d.%m.%Y') + ' · päiväkurssit, ei reaaliaikainen') if values else 'Valuuttakurssit eivät ole nyt saatavilla.'
+    return ('<section class="portal-market"><div class="portal-module-head"><h2>Markkinat</h2></div>'
+            f'<div id="market-values">{values}</div><p class="portal-market__note"><a id="market-time" href="{ECB_SOURCE}">{html.escape(label)}</a></p></section>')
+
+
+def data_script(snapshot=None):
+    data = json.dumps(snapshot or {}, ensure_ascii=False).replace('<', '\\u003c').replace('&', '\\u0026')
+    return f'<script type="application/json" id="frontpage-data">{data}</script>'

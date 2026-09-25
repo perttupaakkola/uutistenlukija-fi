@@ -39,7 +39,7 @@ class FrontpageData(unittest.TestCase):
         self.assertTrue(f.current_markets(market, NOW + timedelta(days=2)))
         self.assertFalse(f.current_markets(market, NOW + timedelta(days=8)))
         self.assertFalse(f.current_markets(market, NOW - timedelta(days=1)))
-        text = f.modules({'helsinki': item, 'markets': market}, NOW + timedelta(days=8))
+        text = (lambda data, now: f.weather(data, now)+f.markets(data, now)+f.data_script(data))({'helsinki': item, 'markets': market}, NOW + timedelta(days=8))
         self.assertIn('Sääennuste ei ole nyt saatavilla', text)
         self.assertIn('Valuuttakurssit eivät ole nyt saatavilla', text)
         self.assertNotIn('<dd>', text)
@@ -50,21 +50,22 @@ class FrontpageData(unittest.TestCase):
         with self.assertRaises(ValueError): f.parse_weather(json.dumps(broken))
         with self.assertRaises(ValueError): f.parse_markets(MARKETS.replace(b'1.13', b'NaN'))
         with self.assertRaises(ValueError): f.parse_markets(b'<Envelope/>')
-        text = f.modules({'unexpected': '</script><script>alert(1)</script>'}, NOW)
+        text = (lambda data, now: f.weather(data, now)+f.markets(data, now)+f.data_script(data))({'unexpected': '</script><script>alert(1)</script>'}, NOW)
         self.assertNotIn('<script>alert', text)
         self.assertIn('MET Norway', text)
-        self.assertIn('1 euro (EUR)', text)
-        self.assertIn('ei reaaliaikainen', text)
-        self.assertIn('value="rovaniemi"', text)
+        self.assertIn('Valuuttakurssit eivät ole nyt saatavilla', text)
+        self.assertNotIn('weather-city', text)
 
     def test_readable_real_values_with_source_date(self):
-        text = f.modules({'helsinki': f.parse_weather(json.dumps(WEATHER)), 'markets': f.parse_markets(MARKETS)}, NOW)
+        text = (lambda data, now: f.weather(data, now)+f.markets(data, now)+f.data_script(data))({'helsinki': f.parse_weather(json.dumps(WEATHER)), 'markets': f.parse_markets(MARKETS)}, NOW)
         self.assertIn('°C', text)
-        self.assertIn('tuuli 3 m/s', text)
+        self.assertIn('Helsinki · ennuste', text)
         self.assertIn('24.09.2026', text)
-        self.assertIn('1.1300 USD', text)
-        self.assertIn('11.2600 SEK', text)
-        self.assertIn('0.8500 GBP', text)
+        self.assertIn('1.1300', text)
+        self.assertIn('11.2600', text)
+        self.assertIn('0.8500', text)
+        self.assertIn('1 euro', text)
+        self.assertIn('ei reaaliaikainen', text)
 
     def test_audited_wrong_image_excluded_without_mutating_provenance(self):
         image = {'sha256': next(iter(site.EXCLUDED_IMAGES)), 'alt': 'municipality'}
@@ -75,18 +76,6 @@ class FrontpageData(unittest.TestCase):
         shown = site.display_image(image)
         self.assertEqual(shown['credit'], image['credit'])
         self.assertNotEqual(shown['alt'], image['alt'])
-
-    def test_feature_never_reaches_past_recent_eight_or_duplicates_stories(self):
-        def row(n, image=False, age=0):
-            return ({'created_at': (NOW-timedelta(hours=age)).isoformat()}, {}, '/'+str(n), '', '', {'sha256': str(n)} if image else None, '/image')
-        rows = [row(0), row(1), row(2,True)]
-        ordered = site.homepage_order(rows)
-        self.assertEqual([r[2] for r in ordered], ['/2','/0','/1'])
-        self.assertEqual([r[2] for r in rows], ['/0','/1','/2'])
-        old = [row(0), row(1,True,72)]
-        self.assertEqual(site.homepage_order(old), old)
-        distant = [row(n) for n in range(9)]+[row(9,True)]
-        self.assertEqual(site.homepage_order(distant), distant)
 
     def test_asset_urls_change_with_content_and_version_all_shell_dependencies(self):
         from unittest.mock import patch

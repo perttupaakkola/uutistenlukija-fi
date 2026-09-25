@@ -114,6 +114,20 @@ class GeneratedIntegrity(unittest.TestCase):
             path.write_text(json.dumps(changed))
             with self.assertRaises(ValueError):verify_intake(packet,self.state)
             path.write_bytes(receipt);verify_intake(packet,self.state)
+    def test_historical_parser_compatibility_requires_explicit_archive_scope(self):
+        packet,_=self.generated()
+        fields={k:packet['sources'][0][k] for k in ('id','title','published_at','text')}
+        fields['text']='Current parser omits historical tags'
+        with patch.object(official,'source_fields',return_value=fields), \
+             patch('news_mvp.release_contract._archived_source_matches',return_value=True) as archived:
+            with self.assertRaisesRegex(ValueError,'Captured source differs'):
+                verify_intake(packet,self.state)
+            archived.assert_not_called()
+            verify_intake(packet,self.state,archive_image_only=True)
+            archived.assert_called_once()
+            archived.return_value=False
+            with self.assertRaisesRegex(ValueError,'Captured source differs'):
+                verify_intake(packet,self.state,archive_image_only=True)
     def test_generated_publication_stops_on_captured_source_tamper(self):
         packet,draft=self.generated();job=self.ready(packet,draft)
         verify_intake(packet,self.state)
