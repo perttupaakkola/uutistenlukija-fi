@@ -55,8 +55,18 @@ the in-pipeline chain below, and every decision is recorded in the plans docs.
   operator review instead of guessing.
 - State lives in `/home/pertt/.local/share/uutistenlukija` (`jobs.sqlite`, `media/`,
   `learning/`).
-- Image generation and pixel review can use the already configured private routes with
-  `UUTIS_IMAGE_PROVIDER=google` and `UUTIS_VISION_PROVIDER=google`. These select Google
+- Prefer `UUTIS_IMAGE_PROVIDER=codex-oauth` with the existing ChatGPT-authenticated Codex
+  CLI. This uses one ephemeral, read-only `gpt-6-astra`/`xhigh` image-only invocation;
+  no API key, publishing tools, shell, apps or paid image fallback is passed to it.
+  Set `UUTIS_CODEX_BINARY` when the installed executable is outside the normal PATH.
+  Exact fresh native image bytes, prompt, invocation events and receipts are retained
+  under `codex-image-requests/`; prose success alone is refused. Cached output survives
+  reviewer outages, completed interrupted requests reconcile without regeneration,
+  and failures back off while publication remains image-pending. The documented
+  built-in image model is `gpt-image-2`; receipts distinguish this from returned model
+  telemetry. The existing independent pixel reviewer remains separately configured.
+  The preserved alternative settings are `UUTIS_IMAGE_PROVIDER=google` and
+  `UUTIS_VISION_PROVIDER=google`. These select Google
   `gemini-3.1-flash-image` and the separate `gemini-2.5-flash` pixel reviewer. Selecting
   image provider `kie` uses its `nano-banana-2` task API; the default remains OpenAI when unset.
   Existing host-only project credentials supply `KIE_API_KEY`; Google reads the existing

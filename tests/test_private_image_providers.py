@@ -70,10 +70,11 @@ class PrivateImageProviders(unittest.TestCase):
     def test_configured_google_review_binds_exact_pixels_and_full_article(self):
         raw=_structured_png();draft={'title':'Library','summary':'New shelves','category':'Kotimaa','paragraphs':[{'text':'Books in a library.'}]}
         with patch.dict('os.environ',{'UUTIS_VISION_PROVIDER':'google'}),patch.object(providers,'google_vision',
-                return_value={'approved':True,'no_people':True,'description':'Books and shelves','reason':'Illustrates the library'}) as vision:
+                return_value={'approved':True,'no_people':True,'description':'Books and shelves','reason':'Illustrates the library','alt_fi':'Kirjoja kirjaston hyllyillä.'}) as vision:
             review=imagery.review_pixels(raw,draft,generated=True)
             self.assertEqual(review['image_sha256'],hashlib.sha256(raw).hexdigest())
             self.assertEqual(review['model'],'google:'+providers.VISION_MODEL)
+            self.assertEqual(review['alt_fi'],'Kirjoja kirjaston hyllyillä.')
             self.assertIn('Books in a library.',vision.call_args.args[1])
             self.assertIn('no faces/likenesses',vision.call_args.args[1])
         with patch.dict('os.environ',{'UUTIS_VISION_PROVIDER':'google'}),patch.object(providers,'google_vision',return_value={'approved':True}):

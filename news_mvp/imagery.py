@@ -189,7 +189,8 @@ def _prompt_for(subject, category='', depictable_scene='', must_show=(), must_av
     avoid = ', '.join(str(item) for item in must_avoid)[:220]
     scene = depictable_scene or subject
     return (
-        "Clearly illustrated editorial artwork, never documentary photography. "
+        "Flat two-dimensional editorial drawing with visible ink outlines and matte gouache colour. "
+        "Clearly illustrated editorial artwork, never documentary photography or a photorealistic 3D render. "
         "No people, faces, human likenesses, victims, violence, text, logos or signage. "
         "Use only safe article-grounded objects, architecture, places or processes. "
         f"Context: {category_hint}. "
@@ -253,6 +254,9 @@ def generate(subject, category='', model=DEFAULT_MODEL, size=DEFAULT_SIZE, decis
                          decision.get('depictable_scene', ''),
                          decision.get('must_show', ()), decision.get('must_avoid', ()))
     provider = os.environ.get('UUTIS_IMAGE_PROVIDER', 'openai')
+    if provider == 'codex-oauth':
+        from .codex_images import generate_codex
+        return generate_codex(subject, prompt, state_dir)
     if provider == 'kie':
         from .image_providers import generate_kie
         return generate_kie(subject, prompt, state_dir)
@@ -424,10 +428,10 @@ def review_pixels(raw, draft, generated=False):
         'appropriate for a sensitive or named-person story; it must not pretend to document it. '
         + ('This is labelled AI illustration: require clearly illustrated artwork, no people, '
            'no faces/likenesses, no violence/victims, no readable text/logos. '
-           if generated else 'This is licensed real imagery; judge relevance from visible content. '
-           'Also return alt_fi: one complete concise Finnish sentence (12-200 characters) '
+           if generated else 'This is licensed real imagery; judge relevance from visible content. ')
+        + 'Also return alt_fi: one complete concise Finnish sentence (12-200 characters) '
            'describing only visible objects, without guessed location, event, person identity or uncertainty. '
-           'Do not copy the article title, add a prefix, or truncate a sentence. ')
+           'Do not copy the article title, add a prefix, or truncate a sentence. '
         + 'ARTICLE JSON: ' + article_json)
     body = json.dumps({'model': 'gpt-4o-mini', 'temperature': 0, 'max_tokens': 400,
         'response_format': {'type': 'json_object'}, 'messages': [{'role': 'user', 'content': [
@@ -453,11 +457,11 @@ def review_pixels(raw, draft, generated=False):
                 not isinstance(value.get('description'), str) or not value['description'].strip() or
                 not isinstance(value.get('reason'), str) or not value['reason'].strip()):
             raise ValueError('Malformed pixel review')
-        if not generated:
+        if value['approved']:
             _stock_alt(value)
     except Exception as error:
         raise GenerationError('Pixel review unavailable or malformed') from error
-    return {**({'alt_fi': value['alt_fi'].strip()} if not generated else {}),
+    return {'alt_fi': value.get('alt_fi', '').strip(),
         'approved': value['approved'] and (not generated or value['no_people']),
         'description': value['description'][:1000], 'reason': value['reason'][:1000],
         'no_people': value['no_people'], 'image_sha256': hashlib.sha256(raw).hexdigest(),
@@ -498,7 +502,7 @@ def reviewed_image(image, draft, state_dir):
     actual = hashlib.sha256(raw).hexdigest()
     if image.get('sha256') and image['sha256'] != actual:
         raise GenerationError('Intake image bytes changed')
-    if actual in _other_article_images(draft, state_dir):
+    if actual in _other_article_images(draft, state_dir) | _rejected_image_hashes(state_dir):
         raise GenerationError('Image already belongs to a different article; choose fresh imagery')
     try:
         review = validate_pixel_review(image, draft)
@@ -538,7 +542,7 @@ def _other_article_images(draft, state_dir):
 
 def discard_generated_candidate(image, draft, state_dir):
     """Retry an explicitly rejected private candidate without reusing cached pixels."""
-    if image and str(image.get('model', '')).startswith(('kie:', 'google:')):
+    if image and str(image.get('model', '')).startswith(('kie:', 'google:', 'codex-oauth:')):
         decision = image['classifier_output']
         subject = subject_from_draft(draft)
         prompt = _prompt_for(subject, decision['category'], decision['depictable_scene'],
@@ -546,9 +550,27 @@ def discard_generated_candidate(image, draft, state_dir):
         _reject_generated(image['model'], subject, prompt, state_dir)
 
 
+def _rejected_image_hashes(state_dir):
+    """Previously refused pixels stay excluded across provider upgrades/restarts."""
+    from pathlib import Path
+    result = set()
+    try:
+        for path in (Path(state_dir) / 'image-rejections').glob('*/*.json'):
+            value = json.loads(path.read_text())
+            review = value['review']; image = value['draft'].get('image') or {}
+            if review.get('approved') is False and review.get('image_retryable') is True and image.get('sha256'):
+                result.add(image['sha256'])
+    except (OSError, ValueError, TypeError, KeyError):
+        raise GenerationError('Prior image refusals unavailable; retry image preparation') from None
+    return result
+
+
 def _reject_generated(model, subject, prompt, state_dir):
     from .image_providers import reject_kie, reject_google
-    if model and model.startswith('kie:'):
+    if model and model.startswith('codex-oauth:'):
+        from .codex_images import reject_codex
+        reject_codex(subject, prompt, state_dir)
+    elif model and model.startswith('kie:'):
         reject_kie(subject, prompt, state_dir)
     elif model and model.startswith('google:'):
         reject_google(subject, prompt, state_dir)
@@ -614,7 +636,7 @@ def _build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3,
     except (TypeError, ValueError):
         return None
     search_category = decision['category']
-    used_images = _other_article_images(draft, state_dir)
+    used_images = _other_article_images(draft, state_dir) | _rejected_image_hashes(state_dir)
 
     def selected(stock):
         if not stock:
@@ -721,7 +743,8 @@ def _build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3,
             'url': f'{PUBLIC_BASE}/media/{sha}.jpg',
             'local_path': f'media/{sha}.jpg',
             'sha256': sha,
-            'alt': f'Kuvituskuva: {decision["depictable_scene"][:180]}',
+            'alt': ('Kuvituskuva: ' + pixel_review['alt_fi'] if pixel_review
+                    else f'Kuvituskuva: {decision["depictable_scene"][:180]}'),
             'caption': 'Kuvituskuva. Kuva on luotu tekoälyllä, ei valokuva tapahtumasta.',
             # The internal model is retained in provenance for audit, but never exposed as the
             # reader-facing credit: the honest label is simply AI-kuvitus.
