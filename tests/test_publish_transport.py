@@ -7,10 +7,47 @@ import urllib.error
 from pathlib import Path
 from unittest.mock import patch
 
-from news_mvp.publish import api,upload_blob
+from news_mvp.publish import (api,upload_blob,incremental_tree,make_commit,
+                              UncommittedPreparationError)
 
 
 class GitObjectTransport(unittest.TestCase):
+    def test_chunked_nested_tree_matches_real_git_and_preserves_base(self):
+        with tempfile.TemporaryDirectory() as directory:
+            def git(*args, data=None):
+                return subprocess.check_output(['git','-C',directory,*args],input=data,text=True,stderr=subprocess.DEVNULL).strip()
+            git('init','-q')
+            blob=git('hash-object','-w','--stdin',data='fixture bytes')
+            requests=[]
+            def tree_api(path,request):
+                self.assertEqual(path,'git/trees');self.assertLessEqual(len(request['tree']),64)
+                requests.append(request)
+                if 'base_tree' in request:git('read-tree',request['base_tree'])
+                else:git('read-tree','--empty')
+                for item in request['tree']:
+                    git('update-index','--add','--cacheinfo',item['mode'],item['sha'],item['path'])
+                return {'sha':git('write-tree')}
+            entries=[{'path':f'uutiset/story-{n:04d}/index.html','mode':'100644','type':'blob','sha':blob} for n in range(193)]
+            with patch('news_mvp.publish.api',side_effect=tree_api):
+                tree=incremental_tree(entries)
+                self.assertEqual(len(requests),4)
+                self.assertEqual(git('ls-tree','-r','--name-only',tree).splitlines(),sorted(x['path'] for x in entries))
+                extra={'path':'existing-source.py','mode':'100644','type':'blob','sha':blob}
+                updated=incremental_tree([extra],tree)
+                self.assertEqual(len(git('ls-tree','-r','--name-only',updated).splitlines()),194)
+            git('read-tree','--empty')
+            for item in entries:git('update-index','--add','--cacheinfo',item['mode'],item['sha'],item['path'])
+            self.assertEqual(tree,git('write-tree'))
+
+    def test_preparation_failure_is_distinct_from_uncertain_commit(self):
+        with patch('news_mvp.publish.prepare_commit_tree',side_effect=RuntimeError('tree timeout')),patch('news_mvp.publish.api') as request:
+            with self.assertRaises(UncommittedPreparationError):make_commit(None,{'job_id':'fixture'})
+            request.assert_not_called()
+        with patch('news_mvp.publish.prepare_commit_tree',return_value=('parent','tree')),patch('news_mvp.publish.api',side_effect=RuntimeError('commit response lost')) as request:
+            with self.assertRaises(RuntimeError) as caught:make_commit(None,{'job_id':'fixture'})
+            self.assertNotIsInstance(caught.exception,UncommittedPreparationError)
+            self.assertEqual(request.call_count,1)
+
     def call(self, path, responses, method=None):
         credential=subprocess.CompletedProcess([],0,'username=test\npassword=synthetic-only\n','')
         with patch('news_mvp.publish.subprocess.run',return_value=credential), \

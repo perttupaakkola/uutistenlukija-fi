@@ -396,17 +396,49 @@ def upload_blob(site,data):
     return expected
 
 
-def make_commit(site,receipt):
+class UncommittedPreparationError(RuntimeError):
+    """Only content-addressed objects were attempted; no commit/ref/dispatch."""
+
+
+def incremental_tree(entries, base=None):
+    """Bound GitHub's nested-path work while retaining every preceding chunk."""
+    # Full public trees contain hundreds of nested article/image paths. GitHub
+    # can reject one large request with a 422 server processing timeout.
+    # A base tree makes successive chunks an exact cumulative tree; it does not
+    # update a branch. Preserve last-entry replacement semantics for workflows.
+    entries = {entry['path']: entry for entry in entries}
+    ordered = [entries[path] for path in sorted(entries)]
+    for offset in range(0, len(ordered), 64):
+        request = {'tree': ordered[offset:offset+64]}
+        if base is not None:
+            request['base_tree'] = base
+        base = api('git/trees', request)['sha']
+    if base is None:
+        raise ValueError('Refuse an empty release tree')
+    return base
+
+
+def prepare_commit_tree(site,receipt):
     parent=api('git/ref/heads/main')['object']['sha'];base=api('git/commits/'+parent)['tree']['sha']
     def blob(data):return upload_blob(site,data)
-    public_tree=api('git/trees',{'tree':[{'path':name,'mode':'100644','type':'blob','sha':blob((site/name).read_bytes())} for name in receipt['files']]})['sha']
+    public_tree=incremental_tree([{'path':name,'mode':'100644','type':'blob','sha':blob((site/name).read_bytes())} for name in receipt['files']])
     paths=cmd('git','ls-files').splitlines()
     entries=[{'path':name,'mode':'100644','type':'blob','sha':blob((ROOT/name).read_bytes())} for name in paths]
     entries += [{'path':'public','mode':'040000','type':'tree','sha':public_tree},
         {'path':'release/release.json','mode':'100644','type':'blob','sha':blob(json.dumps(receipt,ensure_ascii=False,indent=2).encode())},
         {'path':'.github/workflows/deploy.yml','mode':'100644','type':'blob','sha':blob((ROOT/'ops/deploy.yml').read_bytes())},
         {'path':'.github/workflows/source-validation.yml','mode':'100644','type':'blob','sha':blob((ROOT/'ops/source-validation.yml').read_bytes())}]
-    tree=api('git/trees',{'base_tree':base,'tree':entries})['sha']
+    tree=incremental_tree(entries,base)
+    return parent,tree
+
+
+def make_commit(site,receipt):
+    try:
+        parent,tree=prepare_commit_tree(site,receipt)
+    except Exception as error:
+        raise UncommittedPreparationError(safe_error(error)) from error
+    # Beyond this point an uncertain response must remain blocked. Never replay
+    # a commit, ref update or workflow dispatch as a preparation retry.
     return api('git/commits',{'message':'Fresh MVP reviewed article '+receipt['job_id'][:12], 'tree':tree,'parents':[parent],
                             'author':{'name':'Uutistenlukija MVP','email':'news-mvp@localhost'}})['sha']
 
@@ -525,6 +557,8 @@ def publish(store,job,state,config_path):
     except Exception as error:
         saved=store.db.execute('SELECT status,remote_commit FROM publications WHERE job_id=?',(job['id'],)).fetchone()
         outcome='failed' if saved['status']=='failed' else ('unknown' if external_started or saved['remote_commit'] else 'failed')
+        if isinstance(error,UncommittedPreparationError) and not saved['remote_commit']:
+            outcome='preparing'
         with store.db:store.db.execute("UPDATE publications SET status=?,error=? WHERE job_id=?",(outcome,safe_error(error),job['id']))
         raise
 
