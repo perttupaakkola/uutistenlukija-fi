@@ -25,6 +25,9 @@ Säännöt:
   (construction sign) tai maanrakennustyö (earthworks); älä vaadi samalla ajoneuvoja,
   tiettyä tien geometriaa ja esikuormituspengertä. Paikan tarkkuus kuuluu erisnimihakuun,
   ei jokaisen käyttökelpoisen arkistokuvan välttämättömiin näkyviin ominaisuuksiin.
+  Älä vaadi esineen satunnaista asentoa, väriä tai tilaa, ellei se ole jutun asia:
+  lakivalmistelua voi havainnollistaa lakikirja (law book); kirjan ei tarvitse olla
+  juuri suljettu tai tietynvärinen. Mahdollinen sommittelu kuuluu depictable_sceneen.
 - must_avoid sisältää asiat, joita kuva ei saa näyttää tai vihjata, kuten toiseen aiheeseen kuuluvat
   ajoneuvot, teksti, logot, uhrit tai tunnistettavat henkilöt.
   Lisää rajoitus vain, jos se on uutisen kannalta tarpeellinen. Älä sulje pois oikeaa

@@ -206,6 +206,25 @@ class ClassifierContract(unittest.TestCase):
             {'must_show': ['bicycle'], 'must_avoid': ['snow']}, 'vision')['accepted'])
         self.assertFalse(imagery.relevance_check('brass', {'must_show': ['bras']})['accepted'])
 
+    def test_law_books_plural_preserves_required_subject_and_safety(self):
+        decision = {'must_show': ['law book'], 'must_avoid': ['people']}
+        # Observed description of Pexels 8850748; plural books must not force AI.
+        visible = ('Two books are visible on a plain white surface. The book on the left '
+                   'is black. The red book has the word LAW on its cover. '
+                   'There are no identifiable people in the image.')
+        self.assertTrue(imagery.relevance_check(visible, decision, 'vision')['accepted'])
+        self.assertTrue(imagery.relevance_check(
+            'Two closed law books on a table; no people.', decision, 'vision')['accepted'])
+        for unrelated in ('Two cookbooks on a table.', 'A bookshelf.', 'People reading law books.'):
+            self.assertFalse(imagery.relevance_check(unrelated, decision, 'vision')['accepted'])
+
+    def test_required_closed_book_state_must_still_be_visible(self):
+        decision = {'must_show': ['closed law book'], 'must_avoid': ['people']}
+        self.assertTrue(imagery.relevance_check(
+            'Two closed law books on a white surface. No people.', decision, 'vision')['accepted'])
+        for missing in ('Two open law books.', 'Two law books.', 'Closed books about cooking.'):
+            self.assertFalse(imagery.relevance_check(missing, decision, 'vision')['accepted'])
+
 
 class ProviderTree(unittest.TestCase):
     def test_file_specific_required_museum_credit_is_preserved(self):

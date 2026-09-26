@@ -369,7 +369,10 @@ def describe(raw):
         from .image_providers import google_vision
         try:
             value = google_vision(raw, 'Describe only visible content of these pixels. Do not infer a filename, '
-                'prompt or event. State if there is readable text or identifiable people. Return JSON with description (string).', 400)
+                'prompt or event. State if there is readable text or identifiable people. '
+                'Describe the visible state of principal objects when unambiguous; for books, '
+                'say whether they are closed or open. Do not guess obscured details. '
+                'Return JSON with description (string).', 400)
             return re.sub(r'\s+', ' ', value['description'])[:500]
         except (GenerationError, KeyError, TypeError):
             return None
@@ -1182,7 +1185,7 @@ def _semantic_tokens(text, *, preserve_people=False):
                    'bike': 'bicycle', 'bicycles': 'bicycle',
                    'buildings': 'building', 'desks': 'desk', 'beams': 'beam',
                    'faucet': 'tap', 'faucets': 'tap', 'taps': 'tap',
-                   'snowy': 'snow', 'rusty': 'rust'}
+                   'snowy': 'snow', 'rusty': 'rust', 'books': 'book'}
     tokens = {equivalents.get(token, token) for token in tokens}
     # A visible steel object is metal; the converse is deliberately not true.
     if 'steel' in tokens:
