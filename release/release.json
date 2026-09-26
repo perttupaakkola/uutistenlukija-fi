@@ -4,101 +4,102 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "01aee345c29240e6ed0f5ceedebcfd501163a463",
-  "job_id": "2218f9c8bbdef01b4e5d0f4e7ac53ff9c1cc5e53a2b52876020ec1f5e7ed24ff",
-  "packet_sha256": "d62f6f2dbb9e418820001b8389995396d2191ae6875fc7933a27704ec4279716",
-  "draft_sha256": "13010172bc00a224de837e14fa1ee53192a99ab15844b5a2d0ec027a7b22958a",
-  "image_sha256": "8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360",
+  "job_id": "c1124443e5729a96eed55f2422fec75a1aeaf45a6040452b8a2103551b937c30",
+  "packet_sha256": "bd4cec6b8a76b04ddeb36fce74ebdc2f5a486a448d00f8036fb7eb701e9fd777",
+  "draft_sha256": "b46486c15af4bb7843a89ee267797b9bbbe38e3d64ead2a6ac452cc720cd7e56",
+  "image_sha256": "5256f2eb32fb9df2985d31a96b9599a57b9acea34691ca895e5e94e60ae87c2f",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "c87aeb355f7e8236a273d70556572a0b0b1cc80da4e98e9e4cb9640e7e6a062a"
+    "provenance_sha256": "24d74c3c188148fa218d6d37ece818d060ca597ce831fb6a458a816d8a9cf826"
   },
   "stock_image": {
-    "alt": "Arkistokuva: Useita erivärisiä pillereitä ja kapseleita sisältäviä läpipainopakkauksia on levitettynä puupinnalle.",
-    "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
+    "alt": "Arkistokuva: Neljä lippua liehuu salkoissa sinistä taivasta vasten, vasemmalta kaksi Ukrainan lippua, Euroopan unionin lippu ja Viron lippu.",
+    "caption": "Arkistokuva artikkelin aiheesta.",
     "classifier_output": {
-      "category": "Kotimaa",
-      "depictable_scene": "Pöydällä näkyvät lääkepakkaukset ja tablettien läpipainopakkaukset laskimen ja tyhjien lomakepaperien vieressä.",
+      "category": "Maailma",
+      "depictable_scene": "Suomen ja Viron pöytäliput vierekkäin vaalealla pöydällä neutraalia seinää vasten.",
       "must_avoid": [
-        "people",
-        "faces"
+        "tunnistettavat henkilöt tai kasvot",
+        "keksitty ministeritapaaminen tai lehdistötilaisuus",
+        "sotilas-, ase- tai tuhokuvasto"
       ],
       "must_show": [
-        "blister packs"
+        "Finnish and Estonian table flags"
       ],
       "search_queries": [
-        "medicine blister packs",
-        "blister packs medicine costs",
-        "blister packs pills"
+        "Suomen Viron pöytäliput",
+        "Finnish Estonian table flags",
+        "Helsinki Suomen Viron pöytäliput"
       ],
-      "subject": "lääkehoidon kustannusvastuun selvittely ja Kelan korvaushakemusten käsittely"
+      "subject": "Viron ulkoministeri Margus Tsahkna vierailee Helsingissä"
     },
-    "credit": "Photo by Tima Miroshnichenko on Pexels",
-    "depicted": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
+    "credit": "Photo by Paolo Rossa on Pexels",
+    "depicted": "Four flags are visible against a bright blue sky with wispy white clouds. From left to right, the first flag is blue and yellow, with the blue portion on the left and the yellow on the right. The second flag is also blue and yellow, with the blue on the left and the yellow on the right. The third flag is dark blue with a circle of yellow stars. The fourth flag has three horizontal stripes: black on top, blue in the middle, and white on the bottom. All flags are flying from tall, light-colored fl",
     "generated": false,
     "hotlink": false,
     "license": "Pexels License",
     "license_url": "https://www.pexels.com/license/",
-    "local_path": "media/8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360.jpg",
+    "local_path": "media/5256f2eb32fb9df2985d31a96b9599a57b9acea34691ca895e5e94e60ae87c2f.jpg",
     "pixel_review": {
-      "alt_fi": "Useita erivärisiä pillereitä ja kapseleita sisältäviä läpipainopakkauksia on levitettynä puupinnalle.",
+      "alt_fi": "Neljä lippua liehuu salkoissa sinistä taivasta vasten, vasemmalta kaksi Ukrainan lippua, Euroopan unionin lippu ja Viron lippu.",
       "approved": true,
-      "article_text_sha256": "b67e79a3a64046384af30d34538d81cf7b6fceaa766225448eeb2b7b39c28539",
-      "description": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
-      "image_sha256": "8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360",
+      "article_text_sha256": "f84a38f69039b35045bbd452a90039c7368aba8b1ab22bc4edde3fc59b9ba899",
+      "description": "Four flags on poles against a blue sky with wispy clouds. From left to right, two Ukrainian flags, one European Union flag, and one Estonian flag are visible. Bare tree branches and some evergreen trees are visible at the bottom.",
+      "image_sha256": "5256f2eb32fb9df2985d31a96b9599a57b9acea34691ca895e5e94e60ae87c2f",
       "model": "google:gemini-2.5-flash",
       "no_people": true,
-      "reason": "The article discusses 'lääkehoidon kustannusvastuu' (cost responsibility for medical treatment) and 'lääkekustannusten kasvusta' (growth in pharmaceutical costs). The image directly illustrates 'lääkehoito' (medical treatment) and 'lääkevalmisteet' (pharmaceutical products) through the depiction of various pills and capsules, which are concrete subjects of the article.",
-      "reviewed_at": "2026-09-26T18:06:10.939590+00:00"
+      "reason": "The article discusses a meeting between the foreign ministers of Estonia and Finland, and mentions support for Ukraine and other foreign and security policy issues. The image visibly shows the flags of Ukraine, the European Union, and Estonia, directly illustrating the countries and organizations central to the article's subject matter.",
+      "reviewed_at": "2026-09-26T18:53:12.798524+00:00"
     },
     "pixels": {
       "height": 627,
       "mode": "RGB",
-      "variance": 4967.6,
+      "variance": 5273.7,
       "width": 940
     },
     "relevance_check": {
       "accepted": true,
-      "evidence": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
+      "evidence": "Four flags on poles against a blue sky with wispy clouds. From left to right, two Ukrainian flags, one European Union flag, and one Estonian flag are visible. Bare tree branches and some evergreen trees are visible at the bottom.",
       "matched": [
-        "blister",
-        "packs"
+        "estonian",
+        "flags"
       ],
       "method": "vision",
-      "reason": "all must_show requirements matched"
+      "reason": "Exact-pixel full-article review approved licensed subject; search composition gate: missing must_show: Finnish and Estonian table flags"
     },
-    "sha256": "8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360",
-    "source_url": "https://www.pexels.com/photo/assorted-packs-of-pills-on-a-wooden-table-5452239/",
+    "sha256": "5256f2eb32fb9df2985d31a96b9599a57b9acea34691ca895e5e94e60ae87c2f",
+    "source_url": "https://www.pexels.com/photo/national-flags-waving-in-a-clear-blue-sky-37125634/",
     "stock_provenance": {
-      "image_url": "https://images.pexels.com/photos/5452239/pexels-photo-5452239.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "photo_id": "5452239",
-      "photo_url": "https://www.pexels.com/photo/assorted-packs-of-pills-on-a-wooden-table-5452239/",
-      "photographer": "Tima Miroshnichenko",
-      "photographer_url": "https://www.pexels.com/@tima-miroshnichenko",
+      "image_url": "https://images.pexels.com/photos/37125634/pexels-photo-37125634.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "photo_id": "37125634",
+      "photo_url": "https://www.pexels.com/photo/national-flags-waving-in-a-clear-blue-sky-37125634/",
+      "photographer": "Paolo Rossa",
+      "photographer_url": "https://www.pexels.com/@paolo-rossa-1121474291",
       "provider": "pexels",
-      "query": "medicine blister packs calculator",
-      "retrieved_at": "2026-09-26T17:54:51Z"
+      "query": "Suomen Viron pöytäliput",
+      "retrieved_at": "2026-09-26T18:53:10Z"
     },
-    "stock_provenance_sha256": "9ed5745fea5067620e37e3c33e25a83844fc15757fc11516a107b4445e74e1fa",
-    "url": "https://uutistenlukija.fi/media/8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360.jpg"
+    "stock_provenance_sha256": "8b61b63cedcb09504aa2c32c610916637dada3af42965ff4e9ee328dceb271cc",
+    "url": "https://uutistenlukija.fi/media/5256f2eb32fb9df2985d31a96b9599a57b9acea34691ca895e5e94e60ae87c2f.jpg"
   },
   "new_article_files": [
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html"
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "c5a6762ea8db0d92d86ecaf5427faf7f6ec9b6fffb130eb2dfaa0c8d59006c05",
-    "_redirects": "4452275111bc744ee1bc4828bfeca0572cc54d960d75d00686f7e7fd4eb42565",
-    "ai-kuvat/index.html": "c87dfb1bcecbb0d55afaa670db105feaea7a35f6abbf7f6bea964f7f982b2ec2",
-    "categories/kotimaa/index.html": "49e252e30df246f2c5ac981419b5a73147100788c69ed8e4eb17c65732ad3e48",
-    "categories/kulttuuri/index.html": "dadf4b757b7601c86c1d74faacf95df23b60b2d972e6f4cd05345c6dbc09971c",
-    "categories/talous/index.html": "b5b9fb82e561b57e7c1559fe2c79f17cbf640ce2474f58871bfffd8cc309ddd3",
-    "categories/teknologia/index.html": "310c7bc0ca62d2b4799203f47b5b874a82c840be11749a49d2c89b30161f6fe5",
-    "categories/tiede/index.html": "1ed48e1d6f4671d45a4e0cc887e4795866a1eb9350eef5fa4ca8b686da515394",
-    "categories/ulkomaat/index.html": "0581634f50dc768e310ab11a6f6ecec7ab2f6261c8e89cf497f039b9e7e58500",
-    "categories/urheilu/index.html": "51e10a4afa9a92fa0ac0f1cd4975b971f62e218103d4fde5549c7c06e2f64a41",
-    "index.html": "bf3df22ee7b424afc09479504af09dc051d462f94557ee2bfc1bb5d66dcc948e",
-    "lahteet/index.html": "6ff2ade16c784212b8c4903fa93f68d9e542f9ded250b8f3725955afc9bc43f7",
+    "_redirects": "868b6da14aa0c9cb2771b9df0c5a762c7f65d30d9ff273bcb0ef915ad8c317f7",
+    "ai-kuvat/index.html": "93a2b312d0e8ecbc4446f4ac5b98a42c5ea26c95802bc1f1c0143348fd360c54",
+    "categories/kotimaa/index.html": "6bb4c9368aacdfe1190b9992efa13528fed5170b88c00fb4e10b3c92172d4805",
+    "categories/kulttuuri/index.html": "f6fe99076f3dbfaecfda313ba40019e7fd64155978050611d08d928964ba21b8",
+    "categories/talous/index.html": "7506363ee46832f2ee8c151c7f81f3f9c9e8abd570ab1cb787f10e0477a8caee",
+    "categories/teknologia/index.html": "62164c2ad1a4a5b3a15f126734da55cbf6f4bd694bd031fefd0dfaf3ebcb3f27",
+    "categories/tiede/index.html": "740a990d73b784abebee7503587641a3de115d0efd4b0b254b1b791da0824552",
+    "categories/ulkomaat/index.html": "98b3dc7b880ff6983553328c4efbfa6f0839e0be55a4149b855d619eb018d208",
+    "categories/urheilu/index.html": "750c16070018d44b8065b58015c54c83edb026e0cdbe4d0877a44f8637cdc00f",
+    "index.html": "02d89d2772e18e83f2b221e7832f83cd413b3acbb9a5b8f91e4c92d94945aff8",
+    "lahteet/index.html": "74e03693d41a66c2dc9e5cb7ddf42fb50fdc54931f20778806643dee96ccfbee",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -231,6 +232,7 @@
     "mvp-assets/4ff88885a9a6f0a807c61a26d88d5018dff5aef44756c0db248184aa6a7f7a83.jpg": "4ff88885a9a6f0a807c61a26d88d5018dff5aef44756c0db248184aa6a7f7a83",
     "mvp-assets/5122e954680784df5432de6b12884ad34becc344bbf4806017fca0d4140d1c06.jpg": "5122e954680784df5432de6b12884ad34becc344bbf4806017fca0d4140d1c06",
     "mvp-assets/5148a183dbf0c6fe87ee27b53c287bf1f34aed8ca966c5e1bac222181f7d037d.jpg": "5148a183dbf0c6fe87ee27b53c287bf1f34aed8ca966c5e1bac222181f7d037d",
+    "mvp-assets/5256f2eb32fb9df2985d31a96b9599a57b9acea34691ca895e5e94e60ae87c2f.jpg": "5256f2eb32fb9df2985d31a96b9599a57b9acea34691ca895e5e94e60ae87c2f",
     "mvp-assets/5289899fd05aec8b42cb5c02af5e5b8f550ee04f7e474fc27b93fa629f42ebf7.jpg": "5289899fd05aec8b42cb5c02af5e5b8f550ee04f7e474fc27b93fa629f42ebf7",
     "mvp-assets/535e52396043b7f0f34295a2093fb6e23e6535173b018473f9d713f6e9ebe766.jpg": "535e52396043b7f0f34295a2093fb6e23e6535173b018473f9d713f6e9ebe766",
     "mvp-assets/53885bd16d8e1c650f9d89f95a8bf869b6a3546f265ab4423fd1b609467b3f25.jpg": "53885bd16d8e1c650f9d89f95a8bf869b6a3546f265ab4423fd1b609467b3f25",
@@ -544,18 +546,18 @@
     "mvp-assets/portal.js": "17dcc8a25306b1900ee898c13e74168d09ab29df3a217b113fb72e50f4a573e3",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "06977c522e593feb623259fd8b766e9481ed37cdd61602ca761c3aaad89c35a0",
-    "oppaat/index.html": "a69626b2d6173ff64c9681a0a3dbd4b2c629f6ad0ada5f4755d1fdfc88f1f05f",
+    "oppaat/index.html": "bae510476157f83d50881db84d2909d3357a01c587574dd6f4e1bb9b474c146e",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "de990c9d309f863f802cf42760c038901694bccc156ec3e2f1d9995c4d840887",
-    "sitemap.xml": "31b43bbf4ff8f41fde626465927c78693dff80abe2d2c68ba229db5c96040da5",
-    "sivu/2/index.html": "ffa979220293a16375bc6165021cf677877e6c8d843eb792fad801dd7da77efe",
-    "sivu/3/index.html": "750b0986d7f3ec0f442c151b8b984d8648d50d78b0d45a59274cae44aa9044b3",
-    "sivu/4/index.html": "74332f1b016c27706238b5185725e247309957d1e312d6a720be1a83f3527c07",
-    "sivu/5/index.html": "98d50ae6b8f83c6dbd9a631563bc8158d6dd5b301c973af4f3652b738adadfe7",
-    "sivu/6/index.html": "8406f4b34d5c3a134ed74c07dc11b321896dc90f99c82fbf632f95121e1de3c8",
-    "sivu/7/index.html": "2a40e45ce0fbf9d984793ef8426e11803a80fa099693c85bbf1cc418096a3832",
-    "tietosuoja/index.html": "6350fd19a534b063d21eaf01f48f6c3794c76ecf500b0b4a4ce848cfa4107d0f",
-    "tuoreimmat/index.html": "3ddfea4a1cf6b12151cce056493f0f6fdfac7da84aaed3590d446e085d90226c",
+    "rss.xml": "0f092ae5c399336c91001bc63660563324db3ce90ffd993a6d343bd5c647ade4",
+    "sitemap.xml": "d65a5fb0c04900f520bc401b985c4fe70c8d678e11005c7b3a0af9d70b2e58ab",
+    "sivu/2/index.html": "9676162bc45959ce0f8c3005037f16849837e3abf73a6221700d9e1d8297f528",
+    "sivu/3/index.html": "b15902bebd2ef12250312be5c12fc43b6d8749aadcbea0055bc407de64973e59",
+    "sivu/4/index.html": "800b79805e85ebaf98d2a90c6f44e4a6e15fbae4faaa7210cdcb1e7cd176cb90",
+    "sivu/5/index.html": "f764bcd90fe5bd7af507be8900c7aaad9ce129364b88865dec5f048ee120df11",
+    "sivu/6/index.html": "a0366ecfb7600ecdd5402d9cf88dda0cca73cbf589f0c3a09cf6c9ab548692aa",
+    "sivu/7/index.html": "110d217f61d601dc270511c1f607272423b4522ac390074da9616a2ddb524e27",
+    "tietosuoja/index.html": "13fb56fcbf46312e574a6d06d38fcfc32f0284d09b5f7bd8742106418ab3c75d",
+    "tuoreimmat/index.html": "16632e5086fdd98821cc945f2648ac7611186794ec4246ea9beeaccb1a3c2fc1",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -569,292 +571,294 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "6dbe936dd12175efee427a9f62cad610f8c510eb5bde2f97bf7e4e6432124704",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "75853236e87dbd537f4f479b2121626a41129fccddaa71f3bb363ef5bb3b9bc1",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "a6e3f1a31e53253ba72809abdf0dcf26405c4a5f8901ad6bd96fd610d459ab00",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "ee7e7bfe70e2e3ce3fe1c2f46d3d6f632ed2c2db6cd5eb4ab02730291a5f106a",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "267f6da2f9ef697aa300de0c37b9de2ba74a172180e791fc20d55d7c99564f45",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "cb94ed6b234e0c462a3d684e21c809813a4494c36756daceccba14933a26078d",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "770e29f1de0d2446dfc4d952a5fa968a9aa77fffc7f316dbbdbce0d3b47cc7af",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "11471828bcb0c550730cf5343a144bc8e2d04f40652a8b12deb690be0937c4dd",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "594acacfce48d1598ce39c0a4480341d1858ab7cacd6f54e34e0c6fa7b1c49e1",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "fbc56e63f84e251e190cb3028622ffa418d8cb6ca9d05145c9ecc706f28c53ce",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "fe40d224306098183df6b3cb9a079a1efb9f183f1a151f69b6d29da8a6dee318",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "3220da118d663985de9711878d039689f712d5ba19ac9cc4e84dc1a11e24a7ca",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "3e72fc0b83fad6c38c167be8688fbaa29802c7344befab8a421a15daa4a1ed88",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "2fd26955d33c4417b3264dbaac84b81769b6b88cbbe2f5f2e64676a41c8523a8",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "b47469986f442feea0b516daf1dcad089170ee28674a043da18bd85362cc37e1",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "428de5e711742f1aee92184251deed5e9efcc2a14c601e163ea23fd287ea05d8",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "837882e12e2b4749d923730417b217985e08e448923ab2220102133fd5e5a6b0",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "58a305d396aa2abbddfaf4efee324e76b9f41dcbf8dbe6ddb0786a95a1180c96",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "9222ef8c7523df632e1d66e5dcf1d85b6229f030578ff3aad41bc64801e5cb42",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "9b2bb59d359b0973480b0d090af1ad84f282f152f938d075f0bf4a2a6ea7a5ca",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "180149535b7a164012f314b09ddb558d73f59b99d5fa61166993b8f76eca93f9",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "5b799d1568979ced35e78726a3227f0aa8f98e5db2261222b820f7818268b63c",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "2e590280a656dca3f653a8fd6b8c3ab2f0e8d19bacb7f741ae7f9b0d430dbd20",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "e643ab2078338a60a3daf5775ba4d1b854b7ad31150ee9a68c79bf46d44c6cb0",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "7e0699678ec6689af09df8466ca088db12de6e46aa5c929faeb69701131b5a9a",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "efe18e576085d0da4268aeede3dcca7e88a38e6892cf69d55097defae28fb5e7",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "8317853571b4f5067f1852f05b006246b4fc22b3910fd1b9c91e2024f8aa3fe1",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "66e196e25875cd45767a57b210bcbee1e71030ec17033226cbf098a302d0e995",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "732f563b6f9f82745480d1b2deabbdf9dbd30f5b031847374a4adab4c3114ab8",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "3143adc8391d81116fd3e252006c858f16f92a48bcc4a28b9834e3c625dd2df4",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "911203125e9744630d79c0192dff8ed4784f4e2994d2017a07b62237aef49d1d",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "9ba8a509fa19a2cd7329c867844f3ba8d68cbb1cd44b4be047cccb9098be60eb",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "0c0355b8e35a69d83b70d99ff1582741fd3461f98b30e08652528a8021533b66",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "2ca8a319267f7fedb0d56c663cdb82c272f35db9e60b649c110e970e142eac52",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "dc1c1deb265e3da404a857d6fc895a5b2b04cbee82f69fd20280bae00604ef7a",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "aacdde8778f8c4d8a995890f42b403201fc8b523a213c05ac4b1ab51e3a699ff",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "864af1d88609fd4dacf02e5e24b0f6308f7ed8dcdc53ad979b77d089e41cba4a",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "63df09e4476d738e13702bc5de0c7e5bdaa917e2f836c137ac6d7bf189434d78",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "3d77fed48b44d5c8e0e66ab86287cbe29d6f3c748c69a41048505649054be937",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "e3677395732fbe9a34f097137c4c9fa16f8591f423fa7eed4dfc52fcce4f960b",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "0a188eea97c2a79df698995f1756b817313d569083d42329dc9c9b839ea36ede",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "bd465704015805a3d22891fd9956185daa1081ffc097d4a36ffd18e5600b1f08",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "77bb79d10bc6e8d01492a58ec8249889be39a2d38b493f7cfb3b900dcb258ef0",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "0e4568c304b36ec43bc0b6178545172098114ec9a0f3b91bd362abffcfe9cf4c",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "bdd29a66c523ab7d0be6dd4068b2c9d5ee0a6d37715b3d7d1ff737c4e9c33e6e",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "e5a39c6f913b5777f32499f4798a6f605e00b37ef8dcec957edb43870b7a4337",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "f6699008621b083c5822d5acb43a8da99fca994ddf54b241705e896283d04adc",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "b95e23a4f09591280cf8ca2b110ba36174ad8666dd861e86d334dfc41c197f56",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "2e87baea16451978afc9e3431f5f759fdbad04eca6695a155fc2773d2a217668",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "19758e0530481bc8dc7e0c710327b5f9c41a50da3f89b280a0ee33374dd83859",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "804e7456c916862ed8da5bd60aa8ebc395e980998f9e28632c2035d11e5b6781",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "c95a7cb096a7ad16ba4912983f668e18edb41ba0767cff6956b3d6e8b9cc03a7",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "18cb92f27c818f6992657d3aef42d23deb329fce85451af1a87ac16e352119f0",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "02ff4aa805cf1d571a6d19159badfa7a9072a6568213eab4e0a32a4530607b89",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "30268e4ae545a6d72b42adde2729b568c3c3344248a02cd6520515d0ccf42fd6",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "0ef7dc1cccb7d606815a715be5ce31bab40ec7e3fc37ee911482a7366e5769a4",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "dddef4f1c4228ea6deaa661526d0bf8445bb042ce178f43f19ec912a1e571c60",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "0df5905f078ab59a04dc1e3890dea6452f81b44162a5202e5100767eb98c66f1",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "2b6414753ac2c1fe0f428c92d9c634574e020cb61df61ffa4014af1472eedc1d",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "0f5d59e58ba7e2ff07e5168a8619a84437ec29301d2e5935dfabd780538242f2",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "a45c5c4fb70a2983275625cb0666c600f3821466074e433ad5e610d8707c5d0f",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "ff2385f46a92e3809f12b0e5807b5d29602fea7555f056b647ffc9c779e50742",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "ec346fc3509bac5d5c60a7a29d2ca7819053fc37418c79690d0b3fc016d3ce0d",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "717837138861244bae6db1bc004a71f7838eb652760a4ed88545d2d4148df2bb",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "755410eb3a606a0d88703d85272c3bbeda39665449ee856d0069498d85cd6131",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "39a2c1d09b399319ceeac64aab5b40046b83efe8735ae01a4e96db3b5e3f2478",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "5867559ebf91d8c2a679baf7a3a55980da296634230723dbe60c9bad2dfb112d",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "0bb3e57af18336a50518aab3febf5219ca10ccaf67d3561b0c1980f09c4356df",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "70afa4f76b8143aba21068d6cf1cd44b22440ebc95e2cd7672204a19297838c3",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "4079596f5b72896dd06f2a95b6268864d6d37ecfb6d1b6d6c148ba58446c8683",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "27b1f094195944374a0f506cea8e94d46fc9ec2ba2aed0f5a14bb2f86c801a73",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "956b50b2cb1654d57516ac0e0d31fd5bcadc1cb5f53fb7f2023721b74fe64642",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "dfa0f30a7a88c6980bf9f5dde3abbcb84c817426f9ad17ea1dad77293031b126",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "3d5b57bc3bf5cd258f128953b83aee123867065ddca7ab768dd460b485c2a388",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "71cb162d1d61799492c4a58db8ab6b2a264a2a0d13037b700b1b36208f34f2b1",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "eeda4bfeb949532f2da6c8f5130918a3e2656358d3b76377921917b25ae724ed",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "a5389dd353194372575c42edcdcbee93c8cfd9d8725b2a57bfa72a5e78c39842",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "195a9891cb29d7f5ea13594cc22ff36860da0d3dafef9a9d294c7d8ba1518ddd",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "abbc1173465d4ccd1cbc055d8cb1bdb4258615bbc4222da6b1d37841b9682f9c",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "fab7c882b82d32b44ca3049c0c251f7b3af0eb69344286ce6302f9710e46c669",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "dbabe0bdf32163dd19775e4a02a8f48180d36e4339ab777442a1c1a50f97a779",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "442782eb76dd86a00ba7dac1e4d964f87d568b48454ea727fdcd8af64e735db7",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "6e583a723215c7d60181c6a8b814c625b7dc9cd2d2e883743306de1be5d67811",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "bd22cb7dd1c48621dd43a197cb84b5e236d4f1dc4638cd0250e51e38144fdc4c",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "f47c2280e0760cb3b5fb8723ad9d55fffe26a49948aaa7263a7dc3f38d401ce6",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "e468b44730b4086195e789fa99c8f606e7ce2b572515fc6a095494ad6a752324",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "812ec2df110799e593541ce675e80867c8c5c4e394c094713575139a60fa6803",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "e97ca3368e9cec8309ae26125a3956c024ca68cecc2ea2fe050733fa53364eb9",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "a611dc1eef50f1123697a51fd7c5a787e303b578ef73060e6a564171b0534144",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "4d693dc0f1c5c7c5531fbaf1cf1f728e2626e3a5a063a176067077d9853e29c7",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "31f015686a22d974342ea0a6285bb9905e80d1c7a50ada00645228d98f92cc6c",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "f39d34b94a8136cfd117e42118ab49692da73c9028919de1edf9cedbdaeb2d09",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "6cacd875cf0925f7c16c8e8f90af567e78bb1c65de779d8a28e784f3252cb3c1",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "bafc3e1f239e00f37ebf482f842f355a8a5b67acc24ac38941592782e5d660ac",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "a391a2e07afc35cf7f44cc056fd5fcc215c83e51cba0e6e1335b47125954ed00",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "a451390ec2dfc8a7889c99c23ed1c8930f42b6be7dbbb4696cc4c0960d6045a5",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "aceb77881cddca48d2daf7fbb02ec3f6ed9d2a519406c7927b2584596f4e0c0e",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "947afcb5539bec09db54204ff7ac4cfbb67ba7fe47b6907e47608a8a41a02ea0",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "cd5829f885b81dd9b9d30a19c541e08e145f72bd3068cad24519db6c4ef8eb50",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "cde464920e971cf83e2842d3aea8b467e7c9fb04138206f0e43feced674b503b",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "e80d0e5605f451715043dd1f0aca90b5f161287610e6486ccd62512e560f6c1a",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "1df6ecc2aa61ae862e68371f23ee4cc7d6567c96a7d5fe69a1fbdbb3c54778b7",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "ffff90fae68d44192a2acf4090a739e390110d0a6a4842bba89f2d276a84760f",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "efc1cc83a789e6110811904359096fdfa1dce0c0c027f42220f02e11f3564f29",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "b814ba7f9e5b57ab45a7b612ee456530f57147f4405a779246a06be09a3196ac",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "fe5280241b241e141d6f1b3b1c34c1eb203a6f0fd9702b2a13784b7291c1a31e",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "f19cfc9e7fcec65e5fdbad930bf37f501f2ce3d511b2219731e695e096cbf4cc",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "a57729c2d0f2985edbdffcb6e21732294cd5bc9dd2ee882fde90a96d9c3ed4ed",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "903230adb515c72c9cc3b6f32203261ad4ce2b3c03f04340a219adacf03c74cf",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "472e88ebf08952a3b4937fd3544fdcc98a59b2bc396d6de433ba5a300d2b25c5",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "fd718de162de5612cffa970e584cd52e649691ebfd7c7b4b5a958586398bc520",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "d85c0cb9c856d3acf0ce0926abae43d427bc725ede240139d4f4d712c170af57",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "050b65b866d0c4fd873f03de901476f17a3e725296257e4e7991c959615d1214",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "a9ac809e236a3582672485418a2d9e55a33099cfa91b1edca058fcfd12f96d5d",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "5dd6ac9ec18aa04217101bc673578bb516872e7f5c94adcc89678975dc2cfbbb",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "cd84e48dbecf741d0aa6e70fa1dc6c1c26bc1f4a9c8bd2169d7606caaca3f355",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "d1d5a1f1f97df527b7298d1fbbebbaa9d3b18edee72a8fb55f1601006942ba56",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "de139264b883a2175da297a91fbfdfa1ecd5949613659cd8e1149537d3ed05dc",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "a07b155b091a619dbde8fce7adb52150fdbf06d9bcba08017fb8c08e655a9617",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "b6b15c35d75638a0b8424c3af77d0febb7f3c26562cd8750e4003a9d5afbd8c1",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "a1566afff768bf1eadc1de65eeee59ce44fdbd57d9c1c748c1b1382b407d441e",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "b8dbaec10f95ff8276ab2a9fe472e5d085dc69c257c3dc26574a96fcb75a12d7",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "8778080c9f3ff7cfaddff93fb38c0ce45d0fe86bb6bf66a114df8e0e64061dc1",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "deabfcdeae297c57b4c9a7d034d88fb1de012f64bdad7097e8190b8749a534f8",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "456c65f12de7fbd76d4d1e86f36242764f005016da50dbb55307bc23b986be41",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "815111323ffceba52adb3f96f9f2f42d5b4f046d2961162e786ff05872f40ad8",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "98a7a2b11396b78ebae29262b9a0892fe754295108a73a5bcd91d82a7110fb66",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "e26ad8afaa8f258f860e2d3419797d224538c1581a2d7ceed4f922cb1c1c0123",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "18442a35649ca7ffc1db0d1e551847fd07e37caf648cff66a20c5f8cbb42ec62",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "f7cc7f2896bd3435dbae5ea63ba42604205faf6f94c1039157b7284466f9e8a9",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "9935b8ce6dc32d48d5355de21c44fa0093315507f5f08301eb59ad213af097f7",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "e3dc538bcbb38824e6f0c4ef52ec7395dccfe3b83da8d276a812fcbd74bc73a4",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "80b3cb911f2b9443537fccbf83a50fb75dcac3253bf4dfbd5d73824517208e07",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "2feb9c002dff7efa680d32ce83a0e6cb1ae906ab0529d5e7e5521cee985dce85",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "b45262241f4b6c266260d4be1f5bd198005e19e8cafac7186960c203255d04df",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "dd4df5d8ddbccde4800106da855d7b09d181ed991806f0e508360ecd3a4d866f",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "05a52398b756e07ed3e866e9428e3253d0d80f280fcef2e10163c7777d1d9ed6",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "e964db2ddf78e39d0af5f2857c26f9f24f0e6a92dcaec59146b65c7d9f8dee23",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "ea6d20ac99c616ef680ef20986a8628d415e945844089a662d229a7f86bdc11a",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "704cc541f258d228552d35d81011c1cd64fd06c5665bc02cf6cff6ab7d5f4009",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "92b22ba8e5edc7265b5956784ba5f422a1b2e4a17b7e49688f66cf7a478cbec7",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "5c39c935b0d9464c4634239a2e87c089bda51c1ea7ec442b2ad9d680768c476b",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "b400942ec804700f463c0e1e77c2165696a436c55b4cf49bf35b44131a34d5be",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "a0ec348833f9d817084e5546be9d0ed96570ecf6d56b38571506f4bab013d6f9",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "81d03c255ba831ad6c72121d5ad8939d09862f0306592887ceb8677f4a22b367",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "599bb87f099b6d273f926a07c59ce8711bfcbf9d76d643e654ffd6ad490f51ad",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "2f731126a0f669f5b825605b40f5cf312b39e654ee4d6109fb97074969aeb279",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "a016e33d17dbed474675ca1c88fd480fd2c1d82277bd3ab162cf8e7f4392a06e",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "f7f7f24f3681ee841e56495b5dc6dec9963bc5d5823d73bcbfb9bc1f51441b5f",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "ee081ac1b95d6155d6baf3e717e68766bc0be1686c9bdaf696a886122315305c",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "dcd515c2ed3b2e631e67d8cf48e3c93737b7a49a3f46a9f2110e1b0af3fe5087",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "18c0aed6f720c91b969b5a8c28270084aacb2429908249713ab1263e24ad7765",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "53d34709c5209d7cceba3be2cc7c017ccaf5ecb907c3d4001c9bd83d28d7f05a",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "83c4a4213b6c5f6ecf8a232c5f935311a11394e50cdb6144bb75e7709d87cfba",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "e265d0081934e9c4aec09a3b42153691a4aa7f8f7bc8aa4188e727456530af47",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "a2c7ec8ebcab534f92b588c2402d5181b9434cee91d93a91c2062e57bfe3dad2",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "afc43305341f5f6812c2257a0c88e3911f2f3e648aaf0f7acb4e8e630497d6c7",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "f89b27e2d8c0ff8278e74b5c2c45c5bf57a39028a766d1ace66240eab751185c",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "0de39dee1e20502845409f867e64912b32e27bd5407999390a6cb557e4a06a6f",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "4f4b4a4bdd9a3f1029e8173a7620d42696226c06b5fb9189342dfde1575f880a",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "c96fce304f338d3ec5084a922fc2cc4acf2e2d5b73b115da2768b27c630e0468",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "890e7f8a182f62e722f5252f70f3989a1f3a2a1fd331533c37cd441152687b5f",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "4a2cd34a373fdd7d4cffe5deb1c0eb63d8eb954877c3d4e167006ad2afb9eed2",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "35b3239df40dc97dc37418eed6625ca751200df54abde7c70bd54f4595e06aeb",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "85be0ddf13e39246cbe0148e876a1e37427f977179089a602971d63751561cec",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "bbb637eca2e2cc5e506117de3354f232b5e34521c727180bd8061d6f86b5fd3a",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "cde569c38b4e6e548cd9d0324b2530e24f373c311cbadddac6b05470f18b58fa",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "d06bb944d8150f589d9f92578d31030818247bb28feb7f5f01f24315c968d225",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "b0cc8ad39a68d5e905d39bc10555e86cf1d85ee60eb138c76356f36cfdcd8c74",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "80e9ed0ecca54165a9e398f883effbee92017a980ef1535552fa0a7bda1ebdb2",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "f0e42ff4abd23a17a7e2de42f81c43239d45fdecfa455737b58b8c4528c747f3",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "5e53841dfc85a7d3720b60bf7e171a3efc4e49bcd8c664001f3b503aec2a6e4e",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "8c95dc73817324d94ab5abcab6d97128d36154ff84eaa95c996c4ff9ba5231a8",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "0c5c2a036d34d11aedb5fd64456b43f7391c471e5217948baedee52a133fbaf3",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "16542f2f9b9ad97f0e180171a511825423fdc88befe41883d8f1492d3aede729",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "6c355e87482348322c4205b471c6db483a32736be81d41fa40edf39fc6466ada",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "1549023b682786707168967fde88a6ce2537867603ee0f87db39fafc801cac0e",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "def0c60ec35ae27724ec38922592312e4f92c34f92573d60302f4525ac8cac36",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "25cfefd643ff4c547efac866af79db595c901cc3d287b6b7ada1d643b8fb294a",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "c0e399b6ca6e04061afc029809c3c4d0297fdadac6f6d6939d4d3bf62677fb82",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "b38d7820744d3004dab8378c5126ec0efc143753c266b55e8b6fd3d7a2429912",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "6dfa1ee054b87195125dd31a1e4f81b5e28e1e217e832adfa3819529c2e3609b",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "e5c1cbf4f4304fac72548e6ac40db5d99a8547803da1577839daaf036e5f339b",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "68c66d61be017c1892e117966d835da795e6289a00cc804dec63306bfd2dbd81",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "f04a5f7d21c242b4799ea34fc7a97c2039ea1b08155f5e23047186580576f29d",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "f35c4677e05968e1abf38f160ea21d19967779b8d718d281d519b1f6fada3747",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "8df146ac2eb9559ee5919ffa4f1a37c0f124391746b102143e4d47230c917f8d",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "86440f295ea6ae507e9d5f9e6c7229e61b2eeb54d5295fbddc37cfe0532ec2a5",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "12362742c9f588053a61c21448e97f30ce03e16c2cca9c0e16f966a1e3f13dca",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "69551b4bdbacf86bc436339319aa5088ff99e02ac74e23545a6b2854fa70aea3",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "7885d6e88d85d622fdd405db01f8b8c6ad89ad366d7fca40d55dfdd1caaad0f3",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "0904a2b2b11767fc5e8e69104cb8cd9a48d949a74e8e0b4b54d378355cc7f3cd",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "6a7a4907628405555e2ad23641ab917a7c123ae13b9297b6bab0e702b17d5ade",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "e80115621ef85a058515b2c3695d254ea5b4cd55ab43427a8c70bc682434e83a",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "05cabb21beb4273da0d6ecaa216a411228bb068880c668be2d691ff3fa71d52c",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "5a609c4bef5dd69b0fe00b20797923aa8e64a1671ff778a8975ada6066660ddd",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "809018c2f141b241d710f8fedda4bdc04540e3e353a2b5ddeb99c757abe313e9",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "6afef94387cc7713ebdf07cf069609f1b325599e1c687a9b33c436c44dc036c9",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "a5531bf4dcd626e58cce98c43d0a07a433e5d3dac0394e077a61a64fe39f02b4",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "5275e8ab55fb151fbfe11d3f8a8592da261785e7599033082461d59e31c14670",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "0663afbdb4fd7faed3edd56f8f526a08767b19b6060dfc474ba43702d26d21c6",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "0b41eb6bd33feaf96bdfcbae351aac7cbdf01e801de1da023a91fc7886c7e71f",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "58d3ac2333ab26cd1f21074aa8a455673d06b695df8c2e09ee1b8b47619605ab",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "13cd285048fcc262f2c66a0ce0341ba1bec36c8535104f46ba1a53ddf26fd2ff",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "8b8237c4bf84df7d710f9e34c98c3b175794af120d7704a202a4db8ad9defde1",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "f979c70d3b6d2f7f99c4620044e9a588a973ec34bdc9d5988c0d4e37ff91a643",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "05832fb7350e5cf36ae62c9671dd3434ea885ec6db29fcaedfe4755781ecf06b",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "190f74a3aeae605f723d1bdc8fd8010a663a840afad4511d7aa538f6159b8b7f",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "a3b91816c3263e1f9b4c54ff47f76c806d56332952dffa1b562d2ed31d881440",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "956573d4a424fcaca62b5c58abdba57fd9896d6005a5d81ae7bb743246c2ad16",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "8d77cd64d4dd97313b45d846510b7592b8f72418113f4b9a3a8ce09a6b0cf48e",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "303c73a84db7b5598f242dbf7df42adf1021e4d9a257b7a4281f431b212b8eea",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "4d205c13c0405b4ee870a925ff6f8a1ef551aee00afde0be4154cc7517fae2ba",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "6a3c2585340bf8a5b43b4fb1ea7c5d1a700e45e05fb671f79fe12e2f08d7cb06"
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "ce8dd7cc1d7abfaa3482f72cdf1740cc7795c021cf645177cdca2a3a67ff47ff",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "18027eda07efd59f08155f543c01406ea5b974953296d026b51f7e6f86b892b2",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "db5ddccfaedbdd9ce1c21bc1a5fcaa749f285cef5eb8c18979ecf08a145459c6",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "e543e43b6d432445005ca70b1df12cfe2c121e12de108cb20e3397ab7137ab8a",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "2bd9c0870d1ae42f52f343c91284268a2a1dabf6e61496a8263fdff99a2bf965",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "fcf42165f42867c9ee573dc164a44cbbbc5142361808b0e177c94794187a3da0",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "eda574d2e8f4a16bde1fabeb33bd828c84db4f266be08f10d1078945d5a0e5a2",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "b2e052d971c11856fec02072781b77fd3bee5ab9fbe9a44aa53bb4f6c40fa5d4",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "64812dd122a5183228bb7e887ec43711f75d41ae9bb5bf0f47624f4bce8789b4",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "74ddbacc2b8d813f46dac910cf20bbd078139d06acbe38b682247968121e9e11",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "9d0a830e66c15116a77845996a922b3cd1bffc8765acff1c09c99dd88f82c7a4",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "c6b2395c8c1b1a96fa8b8072226d1b827fe7d8b4c435df57b34463a19c78a61f",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "1a0d6d7119aacf64e1bcde988faa73a316696bcf50a508a982888af136ebed96",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "8d55c127e61f743eed78571b197617be8ab741306ac63d830ff6d6ec2ba9987d",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "32e16326e9f681eb9101075024501ed9c49add6648cfeaa670506f5f48c63776",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "1eb74c33a73ac0ab61f517bb125b379c722a991aaffd2764893fd6fb426724a5",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "211c140dcdc1b85d6ede4ce8eb24cbc57c54212cb3486f6bc1af5723eab9ff08",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "85b70bfbd586265d4b877c8d73e3b10f7a224e395c6317f13443909d62b50a0a",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "ca48422136b345283d65369f4620ba8de33f5ece0bba70a25cb3385191031752",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "821b6b129f823f7b9ff57f374e8b9e46db24404dd80054caddc80c0b2e72a2b1",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "4d8d64a3270ef3de8161c55cc06c45ba930093871dc0d536988d77e49bb36247",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "aaf9432e4bc1cf6275c13b381aa78f1fa26ffe9fbf7c38617dd18ef5144880d3",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "1050ecd5c04a21bf3eca9b36a9e6bc7f638a3593b18ea13367eee5bc9344204a",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "9e9a1fa1fcb649eaeb0a8e015f8e6f9756ead496436d3ed552be8357f838a676",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "5ae084d866311110bdd819e97a34c251ce1d495d9c6fef18279e12335c23faa6",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "8f92795563de81765c155dadda35c3ee3db9b9a3a1b2011a76de6c527cb31800",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "3e87a42cf3ce79877b4ba5a550d220df3eae019160b03fb04fe346202e105510",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "eb8e56c1cee928714cc6627ad2a93b1afe2f1c40778ad7f50629d11bc310e642",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "2366f13ba8c5dabbd6a0265fa5450cd90d98d1ee6202ea42ed5bc9d45e449956",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "fcfcac8f17d534b1592382feed5009bbfa6a55f569fb1b3844467d6a632694eb",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "7595257bf34d2e3ebad697c63a7c2a0d6767fdbd04955a4b826304616e446995",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "0d5aa8f1d32152661de6eae89a4c3897fee03632fa4e1aafa033a81a0dd18191",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "db20500c73e791fa01b0c290c6e44751071afa241e395e1adf7082aad295767b",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "a6af50671b04d38d93b416a605bf3091a527284c91326d7376b96112ef5a70f1",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "99bb436c2a5cbf309820ea197bf36964fc2b4a3d29fcf8e69317527e72664537",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "ca6cd43d779dcc5b3dd475e4d31d7a836cf71255a62143fab0d06a6651af24b3",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "d12c030ae96b6a62e340a1c3550ee841de365b8a8279571bedf4de3203dd2fd3",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "c8f7f63fbc1b636df2acc1078ff0e9ecd27a8d94957ab25d391f53611c28e086",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "bef604aed054219ec41da246a8abc1137204630de3b70a5d8d47699bcb52cfd1",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "2024b66c79ec0f99fd64430e9f9e2b66cd058a6857bced5e0629f72f807643d3",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "c3579752431adf01231b92fd4d693603d436092e49fee8e73ba8c49e534b577d",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "0b6055b7ed10083d97b42c47c82ea474a719dc6ed0df76f56bf83fb5a47f65d5",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "404fff0eae186c08a28106a135cf53cf40a0a94bdb43791ee12ab68dd3e5a32a",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "c5745aaf71643ecbe17a4fe14195c0f9118bacfdb62108f4fdae391c128bda13",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "3bfec23afee8d2fcd782f5125e238bce6d85c5e33422a9a2599601710e03f905",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "cb35b479eb088146e7d697187419411b6b7de7fcf9f552644b3acae7748f711e",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "62209f5f224aafcd58ad456e77b1c34d36eb2516d66661f3edb77f71edf05cab",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "58d358249b3b7f6d817554354f3e3fe0e3c745ee210df245ff6b75811b699399",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "f9219ad358b4013368e62e3fb4a791107967272a7c995771c79db6e175197e42",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "94c619761d439eaad8deb584a184413d1f7e71f1adc4f3a1df2e338ce68ec54d",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "376aef06616cb748485ab737b3511d35a6c77e0ef99b02892c43983d5251a6f9",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "237068e935f2ac06c5a85f681d6196fddce4e35e352639931407ca7c7c89778f",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "bed49960ea59addc1620b4c274b92ee7f6bfdee4d108f851d426d05ddfc2a77b",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "ae6c52f0445af76aa0aae7b5f9527489de31bfdb681f3c407e00669018be9799",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "4a2281415c01fdf8999293588ae91964970cce2c91a5efb25d18b5cfe756ca73",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "686b6ded1b3bb38ee9a982a8929cd9298bc437dd8772aafaad97c0dde10e7a32",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "b18af95d64ea39ae4d3114be951ac4b31fb8f1a8e067c23108fa50f942840cd7",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "4de95f1e01b5d56a785de73fba5590142b9a8a6cf885329728b0d58db4485a8b",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "691b7229c1788b0b2ba5dd7baba50cfca1414da83ea32b8c2b3257c9fd9149e4",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "f2e70d91d2f39aeb81af0199f7f6d5d7bdcc467b6176a2883cf2ee84503ce156",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "da7787f4cc697955bed126aaeb61cdb49d2baf3c7dff3780c998e3187b982606",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "079985422ce4c5e653d16f3f1577ee72006bbce66ed5e277738dbdceca27aacc",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "d0da8dcaeb8c3b044aa4eb08c043a1bb51ac7b3b7bd85fcac1136c46128a70b3",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "f8e8d6bb99b3dfc05de59b8bd48b4753ad85db3f7246edf83657152d291e152c",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "5db7228225448239b013867606114b36c98864b43aeed16005d053a4ba1227a1",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "61a89cd37225a2e7e680af0ee7e2ce7417ca4cef5a258d4df25d0126c136f2f6",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "70eb2d0ebd92baa9eeee46c3fdcbf5abd9e7b3d5be8ea81b13a43715f173d699",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "58f1740cde6bc96680e7377c2daf813ae565fcdbb76858e0230e8cd6529e5943",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "1ea78ff7ec34e79f115353ee8c097db861d1638fe211caeb1c07d43d7e1e3f51",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "a0d4aa42aaa9f02cfe9bc56e8b9101648e7d6b049d1b63a9278c28b912c2baa2",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "4fe197ccd29cd40bfb2c621be0fc9119c64f48c850664f1f66cb6451921c49eb",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "44a4443d72c50717bad4058752ef87017cc3e5d639298ea6682b9005c613ae4a",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "ded14caafad679033c318f41e3399b04a18233bab7aea72fe1ecca61429c01ad",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "fee7a59014a72e844f1a9f417ea5e8b78ac53d7e82302d3d5d168978c6053b6e",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "2d0f88fcedc624bcc8872ead4a8e5e6c7f51609e5924cafc9eab0d6e92b75043",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "55dc7bd592f9a69a2fc1073fae8e98548681790cde2759e546a0eaeb16416b98",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "2cb85ef2fca4ec6448fc0cdf9678cd7ffdde4d853a0f667bbcbad573d1cc2bc3",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "2342b7b1d8d49291ff71e9fb94fc4f68ec004e2cf7710b5fc0957d2d9d9615be",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "c9b75a4955e745ef2dc3f38cb67d832616a4e31d81e61a6147e08be2cd8fc6f0",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "67408888905cf4619cfd239b75a078a1cdb0bdfa323d763b1eca7d281b9827d3",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "61604bca96a7f8837d1cd4cf96b01de62085cc29a8f2b29f5e5177087e62ae95",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "8805709c681c0c084425e56ff2e3786dd4c3622e7031cf37658a2ed024157f45",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "a1ba7bc4fc4f4f0d63d2cbd7d132e4bab7167ab9f75be50d31c4c58cf16721c2",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "2f52bd38acdb05cd19213182ff001c1ee82af6ec3d98e9d9556d6d3a86c7d020",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "edd0c98451b8ca88d7930afecd96700a809416ef6bf2f1a84c73782860ee02b8",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "55fb3ed7c10e96e8dcc673f06692a2b8e8eab03062ad629fc97f7d60f73ddc7b",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "59bf483e588d8b8e01f418379439e047c8935e38c0eefcd5afe15da39005f640",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "59c6f6cb87775c0ec4aa570fa1f823bf2c5b2197e6c4564f19e8d5190845876f",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "ef7992bb3fc89f62b4a3235bbe79de46df1a9e80cf852d9edf6ede3551c7605f",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "4a63be54803ee371a6933b7072b359e3032d2339e3878b1b248e2914967ecf91",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "9280d5cc5f934d1b6e9bc19fa32c9b1e1051148af3bfacbc801f7766c1f9760d",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "8abad6273ba2b2e5d9a2b74e6489ed73fc99d46c33444126e32d9c20e3666d6c",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "e33d475f2a4114177f8024464b44e1a996aaa358b661fa6533a2fdf3c9b74d30",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "fa2dccedd1eb2a3c0b5e65da19431b2242bc46125efcf1b166047126a4eb69d5",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "f32cd5b2e85e83083908e2e43afdc1659e13ea59bcac0cd0f999397c8b7e7c69",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "14bcfa7bddaa4ccec642a11c31fe517f95b14aba386e0bf4645118659875cfc8",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "d8ca57e5cc8e41ecc57ee9506199141e188446d655902bc668f420b90689c5ac",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "8d563d22e8ec60d9aac47f54546ef5b076e6737b15112caed21dbbbfbb02a4bc",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "a336bf7bb469590ba332b9292749d0c4dc803b3351d4d2fba9d621542ddd2423",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "9fbe07e71efe9ed9e3b03008133f933cb6466fe3e855fdb07fc974c65c4f03f4",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "e17581e1055768d042c13c0452571bc9a3f9c621c115fbb42772bc4309954996",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "f502f92f71e78b687ce9c18d5270a9eddd157ba1c54aae87b63341548de14f9b",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "00a4a6b9c6a86c9cc2d10b687d08641bbfb4c49d75826652258fb145627ea0c0",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "53808783e318a65bf4071315bacc5eba0976297fe46b2fde806c3aaa286523c7",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "5fc0e51d2156a36f0f83a23a19f2c52f986cf6d410e621ec13b9f17d42b74770",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "ce1d6ccc420f1e229cbc9527c4d0e70cff187fad38363588b269304e63e29dcf",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "1d02ebd95412a9786e88da9b4a1e545d6010d1cd58ab80e3b405d3dfad0c6cb5",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "2f22da2a4c5f287b5ebd7e635ce8c21ef796f4b54bb99a76cca3fdda9b38ae4f",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "8c51cf5fcfc2758f3fa23ce879f47239c91ee46211b66276b46b6945f2242591",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "b96ff555cc9abf4bd1502be03a29b867fd00b25ef4a126614939c35dc546d270",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "13784ab1f16b0e2674f73d5e164b36f8c30fd703d542cb71cdb85d8f4a7c20c0",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "8cb4a5c0bfa2c656070c09ce5d1d2aff657373fdd69d8c75ce065dcb358cb4cc",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "3819d676118322fc3d515d62f66cc7697ad050ac76cb8b509b89dd34b390c2d8",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "cf48c0a9f8204b30060a1a604822a4e9820e76d759798414baad1bb5f1d4f561",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "24eb3f0fff9c2852c989a4be536c4e77ae5a064fc345016b138566d5de63badb",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "83a8d2dd882482f86ca009948396e435b2bcf61814e61eabb8345b8f29105d2b",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "6612b5e499ad503650f8f8a30f79eb7432578acede1fa4eadf1947d859480455",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "b7dbba8eba5bf5902edcd2fb823ab8183597b597c5d6a1c678ce2e8cdfe569db",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "a637bc7769b81881a8c2af1babe26dd62867c75772d9afae529d1b664609c04d",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "997a17ffba10e44100425e23f4ad6abe016a8021a13a58b8dbaf43c223169fac",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "5ce0defe505c04c3e7433adce0c1aa531083ee6b7559394d530853ffb0322551",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "17495e1b9381773565ab4db87ba89167f6b066b07e611f83e2070c6ca3777bd9",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "4da3b1cfaf96e0af33d31c431aec2ce5042c571daa092fd2b477494ce0f9971f",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "8febe59c10e9f7f4309d66a3c2ec611c92a748047c888f31c1f2b9e5c7edf424",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "aec97f3e607d556cb55c91b6e15bbcb269ca872d33517e2a743633921a272379",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "a83f8756993e6cd5512e889ecadbab4140a517ba9cf28504b5b10972f80ed423",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "645f39939ce9a2ae33d32373302ab3a4d894107db40c93ee6d71089f313f03f6",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "7752d281d8a00c4b85771cca124cb604468c4fc70ce1ef9f809a480797c75a04",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "1705a60bae273c12f778542da9d121bfccabfae8405a858c4a75b0e88809175b",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "ecdca97a706854d921c74dfde40267c898ca06f3ac84f9eeadb0428e31b9c26b",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "879c391b386b54192229a719e675a8b1f581c52406c43025f8ce3ce7929dbc7c",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "cc4123dba2a7627a8e7e8c2a1b36d91a58df52e7d7a97c141a0b6378b8be1e02",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "4ae2308079d8633f0e7b96084e6eb70fb4f0534408989e68c38fe4a8e0969112",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "a6196388bd63fa1f6ac6faf9e2270e74d796ebf60336247e18a44005eaeb8910",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "ee2ab630a8bdd537cad213147c8a32f76081f5c3bfc656c9a1fb8a096e6c568b",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "b679e106515e858ca7236567f5cb6f35f187568c98f980bb12354aabcff1b710",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "8db4ccb5029a863d181c84008c89f8fe52eec1e4691f542fbb6a7a6820554c6c",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "7be66fd78c12244b9d9207882ff6c181a4e7c7bdd0f3daffe8a6290f6389fb13",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "24f74dd5037e5b5797e1b93c33a18b9188a7bd3e522f7aa8cda3e8c9f21f525c",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "6022d44eb8c7c8b6208634ea49decb47beda86569e9a6f50052faebd3e28e217",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "fae5c773701acda0f15280ef11d1c4624c5120892cf995a4e584084bd592a88b",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "c2755467c2f3fd4799c142543bb633d253097f3ae2989ab43321ace6c0dd691e",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "353872183f796229c9ebd6395d5e71c302dd45180c15223a76a11c47acd7a1ea",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "3e27053a620f253686719999d7e7587a81dc8b31d210fdaa8a54d14f04a42bde",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "1b141104a41ef05f98a51ed33a394a6e69b553d6601732dcc5ec0e2f75b64841",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "cc008abe1d101963cc57fd63fb2816f52cb12c95369f63db82bd8e55d1d78052",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "a7e287b1c14fa4060dadeab792e5349da2fa8645ff308295f149a2aee1aeabf9",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "2a6e90ba63f819a4d2aee72b2db109f12c62e01616e364a62c61b23238e0db2c",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "dc42de27614747001c27c043237270500e7f0b0c80d642e75917a465b5cb98ca",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "27e6a1b69b4654dee047bb0b919cc15324e3f9d0739778eea6691d5fbf0e8bfa",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "16dee6843210d48856db180b74532c24e6c60023034663520624fd1bac3248b6",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "014fb6615a08bd6710099a0641df982cf5136ae3c7a59943287226c00ac7a0b3",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "2d03b92464071ee88485025eb027bf2e532aeb77d1fcb4e02b4d45a2d38eebe1",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "589bd32b4b139432137fb9c89922fe760a8b2f8fa37dcf13bc410f68824c92f2",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "d478b4feda85c50ccefc9dcd8c21de91e2eb555aa966942f49ebc198000c8b2f",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "f75ae0dad16395fea12e1a0e833507e6e18620d1e5e1103061009895bf0d0738",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "120622a492158305400d1d08706cd458b4b91c22de4f47b4863339196a590e32",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "c8dba44f6d578f2dfe1a38dc8edb77b85774ab9de8a8bc9090883de312df087b",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "f7a03236745cd2457307fd61b18c991ca64102dc3f08a0d5dccf61f0a252e1c9",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "9dea0f89e7ded020fe1a8c467ed41bd05e4ff0a7a1817790b1ef7484539d6590",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "27d44c9cd9f426735143d39e8052e333e9419176bdf0a258a7b7ec055626d194",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "35360b1b67558664f87f7d3a5f47bfd1d849a5662c03fbfd6f19495f095a22ac",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "ff052161073d066bcfb1836cc7f88df670668c32273686ebc0e5ee2b8b346735",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "22bd71e59d0a83cb7aff11a1289012220779648ac2e1083ba11d096a54e9d581",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "3aed169cf83ec83d8938805c709473b6133362fccc8358fcb63bffb97c4050dd",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "1d0e5f70ecef38a1f3fc402c6b21cf09093698b0b1c9561e1dd80ff53a030584",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "384dc221e4dcccc7f09446baa9c012e33c3b5a9579f1adae3d285027a4131718",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "1472e8b24f26e1b4df8ffaceb63a7930c69066f6c2628763cde4ad6fd947a876",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "238bf889cdab2bef82d1ce43889ec036ab2cb7862676fe9af3b5fd1450dcd6a9",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "8de19bca5c9591f53dc62f716259ca9e40b8a3cd0846a621c59f51c4ce486719",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "7714b107ef7afb473942aae50803ef9fb65aae954368e051e0d42d3aa4b8c179",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "c49ad8a0eee5e0cd79adcad5742bcc0e0855924b16d81ede0fd7623e7da1bdac",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "6fa7f41df0243389ca6d790931d2ba6bc2775a567d7413f111a222df686b9d35",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "39517678db9ae578a8287bb2e311dfa662dc133a0c66aa21e475a11f201ff4af",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "60d45cd910afb77975a362012ebc2110deb4372b989a37165b7127e11087e024"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Useita erivärisiä pillereitä ja kapseleita sisältäviä läpipainopakkauksia on levitettynä puupinnalle.",
-      "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
+      "alt": "Arkistokuva: Neljä lippua liehuu salkoissa sinistä taivasta vasten, vasemmalta kaksi Ukrainan lippua, Euroopan unionin lippu ja Viron lippu.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Kotimaa",
-        "depictable_scene": "Pöydällä näkyvät lääkepakkaukset ja tablettien läpipainopakkaukset laskimen ja tyhjien lomakepaperien vieressä.",
+        "category": "Maailma",
+        "depictable_scene": "Suomen ja Viron pöytäliput vierekkäin vaalealla pöydällä neutraalia seinää vasten.",
         "must_avoid": [
-          "people",
-          "faces"
+          "tunnistettavat henkilöt tai kasvot",
+          "keksitty ministeritapaaminen tai lehdistötilaisuus",
+          "sotilas-, ase- tai tuhokuvasto"
         ],
         "must_show": [
-          "blister packs"
+          "Finnish and Estonian table flags"
         ],
         "search_queries": [
-          "medicine blister packs",
-          "blister packs medicine costs",
-          "blister packs pills"
+          "Suomen Viron pöytäliput",
+          "Finnish Estonian table flags",
+          "Helsinki Suomen Viron pöytäliput"
         ],
-        "subject": "lääkehoidon kustannusvastuun selvittely ja Kelan korvaushakemusten käsittely"
+        "subject": "Viron ulkoministeri Margus Tsahkna vierailee Helsingissä"
       },
-      "credit": "Photo by Tima Miroshnichenko on Pexels",
-      "depicted": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
+      "credit": "Photo by Paolo Rossa on Pexels",
+      "depicted": "Four flags are visible against a bright blue sky with wispy white clouds. From left to right, the first flag is blue and yellow, with the blue portion on the left and the yellow on the right. The second flag is also blue and yellow, with the blue on the left and the yellow on the right. The third flag is dark blue with a circle of yellow stars. The fourth flag has three horizontal stripes: black on top, blue in the middle, and white on the bottom. All flags are flying from tall, light-colored fl",
       "generated": false,
       "hotlink": false,
       "license": "Pexels License",
       "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360.jpg",
+      "local_path": "media/5256f2eb32fb9df2985d31a96b9599a57b9acea34691ca895e5e94e60ae87c2f.jpg",
       "pixel_review": {
-        "alt_fi": "Useita erivärisiä pillereitä ja kapseleita sisältäviä läpipainopakkauksia on levitettynä puupinnalle.",
+        "alt_fi": "Neljä lippua liehuu salkoissa sinistä taivasta vasten, vasemmalta kaksi Ukrainan lippua, Euroopan unionin lippu ja Viron lippu.",
         "approved": true,
-        "article_text_sha256": "b67e79a3a64046384af30d34538d81cf7b6fceaa766225448eeb2b7b39c28539",
-        "description": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
-        "image_sha256": "8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360",
+        "article_text_sha256": "f84a38f69039b35045bbd452a90039c7368aba8b1ab22bc4edde3fc59b9ba899",
+        "description": "Four flags on poles against a blue sky with wispy clouds. From left to right, two Ukrainian flags, one European Union flag, and one Estonian flag are visible. Bare tree branches and some evergreen trees are visible at the bottom.",
+        "image_sha256": "5256f2eb32fb9df2985d31a96b9599a57b9acea34691ca895e5e94e60ae87c2f",
         "model": "google:gemini-2.5-flash",
         "no_people": true,
-        "reason": "The article discusses 'lääkehoidon kustannusvastuu' (cost responsibility for medical treatment) and 'lääkekustannusten kasvusta' (growth in pharmaceutical costs). The image directly illustrates 'lääkehoito' (medical treatment) and 'lääkevalmisteet' (pharmaceutical products) through the depiction of various pills and capsules, which are concrete subjects of the article.",
-        "reviewed_at": "2026-09-26T18:06:10.939590+00:00"
+        "reason": "The article discusses a meeting between the foreign ministers of Estonia and Finland, and mentions support for Ukraine and other foreign and security policy issues. The image visibly shows the flags of Ukraine, the European Union, and Estonia, directly illustrating the countries and organizations central to the article's subject matter.",
+        "reviewed_at": "2026-09-26T18:53:12.798524+00:00"
       },
       "pixels": {
         "height": 627,
         "mode": "RGB",
-        "variance": 4967.6,
+        "variance": 5273.7,
         "width": 940
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
+        "evidence": "Four flags on poles against a blue sky with wispy clouds. From left to right, two Ukrainian flags, one European Union flag, and one Estonian flag are visible. Bare tree branches and some evergreen trees are visible at the bottom.",
         "matched": [
-          "blister",
-          "packs"
+          "estonian",
+          "flags"
         ],
         "method": "vision",
-        "reason": "all must_show requirements matched"
+        "reason": "Exact-pixel full-article review approved licensed subject; search composition gate: missing must_show: Finnish and Estonian table flags"
       },
-      "sha256": "8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360",
-      "source_url": "https://www.pexels.com/photo/assorted-packs-of-pills-on-a-wooden-table-5452239/",
+      "sha256": "5256f2eb32fb9df2985d31a96b9599a57b9acea34691ca895e5e94e60ae87c2f",
+      "source_url": "https://www.pexels.com/photo/national-flags-waving-in-a-clear-blue-sky-37125634/",
       "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/5452239/pexels-photo-5452239.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "5452239",
-        "photo_url": "https://www.pexels.com/photo/assorted-packs-of-pills-on-a-wooden-table-5452239/",
-        "photographer": "Tima Miroshnichenko",
-        "photographer_url": "https://www.pexels.com/@tima-miroshnichenko",
+        "image_url": "https://images.pexels.com/photos/37125634/pexels-photo-37125634.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "37125634",
+        "photo_url": "https://www.pexels.com/photo/national-flags-waving-in-a-clear-blue-sky-37125634/",
+        "photographer": "Paolo Rossa",
+        "photographer_url": "https://www.pexels.com/@paolo-rossa-1121474291",
         "provider": "pexels",
-        "query": "medicine blister packs calculator",
-        "retrieved_at": "2026-09-26T17:54:51Z"
+        "query": "Suomen Viron pöytäliput",
+        "retrieved_at": "2026-09-26T18:53:10Z"
       },
-      "stock_provenance_sha256": "9ed5745fea5067620e37e3c33e25a83844fc15757fc11516a107b4445e74e1fa",
-      "url": "https://uutistenlukija.fi/media/8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360.jpg"
+      "stock_provenance_sha256": "8b61b63cedcb09504aa2c32c610916637dada3af42965ff4e9ee328dceb271cc",
+      "url": "https://uutistenlukija.fi/media/5256f2eb32fb9df2985d31a96b9599a57b9acea34691ca895e5e94e60ae87c2f.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
       "provider": "valtioneuvosto",
       "related_sources": 0,
-      "source_fields_sha256": "cfb2d19edca86bea4491dc45ee1783737e2b94fbd0c2bef13ecf915b3b46b61b",
-      "source_sha256": "23d0ef78d171b9299aac69ca95402f139b7ac29892a4c893da3bb007be823693"
+      "source_fields_sha256": "f837e1351b64e3364ac4a00107a164cd28acdbe179a15ecbaf37337555bbac52",
+      "source_sha256": "9f7b05222b2daff6359a1171c13111aa846eb627117f891f9f735a88b6190991"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-09-25T10:15+0300",
+        "published_at": "2026-09-25T08:25+0300",
         "publisher": "Valtioneuvoston kanslia",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
@@ -863,469 +867,120 @@
           "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
           "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
         },
-        "text": "Julkaisuajankohta 25.9.2026 10.15\nTyyppi:Tiedote\nSosiaali- ja terveysministeriö järjesti 21.9.2026 pyöreän pöydän keskustelun lääkehoidon kustannusvastuusta hyvinvointialueiden ja Kelan välillä. Tapaamisessa selvennettiin tulkintoja kustannusvastuusta ja tunnistettiin lainsäädännön soveltamiseen liittyviä haasteita, joihin pyritään löytämään ratkaisuja yhteistyössä.\nKesän aikana on käyty keskustelua lääkehoidon kustannusvastuun jakautumisesta hyvinvointialueiden ja Kelan välillä. Keskustelua herättivät erityisesti Kelan heinäkuun alussa käyttöön ottamat uudet menettelyt tiettyjen lääkevalmisteiden korvaushakemusten käsittelyssä. Kelan menettelyt perustuvat sosiaali- ja terveysministeriön huhtikuussa antamaan ohjausasiakirjaan, jossa muistutettiin voimassa olevan lainsäädännön mukaisesta lääkehoidon kustannusvastuusta hyvinvointialueilla.\nJulkisessa keskustelussa on noussut esiin huolia hyvinvointialueiden lääkekustannusten kasvusta sekä potilaiden yhdenvertaisen lääkehoidon toteutumisesta. Keskustelussa on esitetty myös sellaisia huolenaiheita, joille ei sosiaali- ja terveysministeriön ohjauksen tai Kelan käytäntöjen perusteella ole aihetta. Potilaiden tarvitsema lääkehoito turvataan riippumatta siitä, miten kustannusvastuu eri toimijoiden välillä kohdentuu.\nSosiaali- ja terveysministeriö järjesti lääkehoidon kustannusvastuuta käsittelevän pyöreän pöydän keskustelun, johon osallistuivat hyvinvointialueiden, Helsingin kaupungin, HUS-yhtymän, sosiaali- ja terveysministeriön, valtiovarainministeriön sekä Kelan edustajat. Tapaamisessa selvennettiin kustannusvastuuseen liittyviä tulkintoja sekä luotiin yhteistä ymmärrystä Kelan korvaushakemusten käsittelyä koskevien menettelyjen käytännön vaikutuksista. Lisäksi keskustelussa tunnistettiin lainsäädännön soveltamiseen liittyviä käytännön haasteita. Osapuolet nostivat esiin useita kysymyksiä, joihin pyritään etsimään ratkaisuja yhteistyössä.\n\"Keskustelua käytiin hyvässä ja rakentavassa hengessä, ja kaikki tahot jakavat yhteisen tavoitteen toteuttaa potilaiden tarvitsema lääkehoito saumattomasti”, sanoo osastopäällikkö Anna Cantell-Forsbom. “Jatkamme yhteistyötä sen varmistamiseksi, että lääkehoidon lainsäädäntö ja ohjaus sekä korvauskäytännöt näyttäytyvät selkeinä palvelunjärjestäjille, terveydenhuollon ammattilaisille ja potilaille.\"\nSosiaali- ja terveysministeriö käy seuraavaksi läpi hyvinvointialueilta esiin nousseet kysymykset ja tarvittaessa tarkentaa antamaansa ohjausta. Lääkehoidon kustannusvastuuseen liittyvää vuoropuhelua jatketaan hyvinvointialueiden kanssa sekä avoinna olevien kysymysten ratkaisemiseksi, että lääkehoidon pitkäjänteisen kehittämisen tueksi.\nLisätietoja\nHallitussihteeri Kaisa-Maria Kimmel, p. 029 5163551\nOsastopäällikkö Anna Cantell-Forsbom, p. 029 5163351\nSähköpostisoitteet ovat muotoa [email protected]\nPotilaan oikeus laadukkaaseen ja vaikuttavaan hoitoon ei ole muuttunut (Tiedote 17.7.2026)\nhyvinvointialueet keskustelu lääkehoito lääkekorvaukset lääkkeet puheviestintä terveys terveyspalvelut",
-        "title": "Lääkehoidon kustannusvastuusta käyty vuoropuhelu jatkuu hyvinvointialueiden kanssa",
-        "url": "https://valtioneuvosto.fi/-/1271139/laakehoidon-kustannusvastuusta-kayty-vuoropuhelu-jatkuu-hyvinvointialueiden-kanssa"
+        "text": "Viron ulkoministeri Tsahkna vierailee Helsingissä\nulkoministeriö\nJulkaisuajankohta 25.9.2026 8.25\nTyyppi:Tiedote\nViron ulkoministeri Margus Tsahkna vierailee Helsingissä ja tapaa ulkoministeri Elina Valtosen 29. syyskuuta.\nUlkoministerit keskustelevat Suomen ja Viron kahdenvälisistä suhteista, Ukrainan tukemisesta sekä muista ajankohtaisista ulko- ja turvallisuuspoliittisista kysymyksistä.\n“Suomi ja Viro ovat läheisiä ystäviä ja liittolaisia. Maidemme välinen yhteistyöon erinomainen esimerkki myös siitä, miten lähimmät naapurit voivat tukea Ukrainaa ja vahvistaa koko Euroopan turvallisuutta. Lisäksi yritystemme yhteistyössä on vielä paljon hyödyntämättömiä mahdollisuuksia,”, ulkoministeri Valtonen toteaa.\nLisätietoja\nMatilda af Hällström, ulkoministerin erityisavustaja, puh. 050 476 9575\nKirsi Lipponen, lähetystöneuvos, Euroatlanttinen osasto, puh. 0295 351 145\nUlkoministeriön sähköpostiosoitteet ovat muotoa [email protected]\nUuden aikakauden ulko- ja turvallisuuspolitiikka\nViro ulko- ja turvallisuuspolitiikka",
+        "title": "Viron ulkoministeri Tsahkna vierailee Helsingissä",
+        "url": "https://valtioneuvosto.fi/-/viron-ulkoministeri-tsahkna-vierailee-helsingissa"
       }
     ],
-    "story_key": "url:https://valtioneuvosto.fi/-/1271139/laakehoidon-kustannusvastuusta-kayty-vuoropuhelu-jatkuu-hyvinvointialueiden-kanssa",
+    "story_key": "url:https://valtioneuvosto.fi/-/viron-ulkoministeri-tsahkna-vierailee-helsingissa",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-09-26T17:49:03.609641+00:00",
-        "sha256": "154e55c2b5f88fc981d8fedf524ab47a6d56d66054b72814d360f3429aaf5bb2",
+        "retrieved_at": "2026-09-26T18:32:10.078129+00:00",
+        "sha256": "69c58bfcbc271a29222dd34b7aebe5139c3cd4ea77a5a6f0ff2caceb0ab705e6",
         "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
         "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
       }
     ]
   },
   "draft": {
-    "category": "Kotimaa",
+    "category": "Maailma",
     "image": {
-      "alt": "Arkistokuva: Useita erivärisiä pillereitä ja kapseleita sisältäviä läpipainopakkauksia on levitettynä puupinnalle.",
-      "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
+      "alt": "Arkistokuva: Neljä lippua liehuu salkoissa sinistä taivasta vasten, vasemmalta kaksi Ukrainan lippua, Euroopan unionin lippu ja Viron lippu.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Kotimaa",
-        "depictable_scene": "Pöydällä näkyvät lääkepakkaukset ja tablettien läpipainopakkaukset laskimen ja tyhjien lomakepaperien vieressä.",
+        "category": "Maailma",
+        "depictable_scene": "Suomen ja Viron pöytäliput vierekkäin vaalealla pöydällä neutraalia seinää vasten.",
         "must_avoid": [
-          "people",
-          "faces"
+          "tunnistettavat henkilöt tai kasvot",
+          "keksitty ministeritapaaminen tai lehdistötilaisuus",
+          "sotilas-, ase- tai tuhokuvasto"
         ],
         "must_show": [
-          "blister packs"
+          "Finnish and Estonian table flags"
         ],
         "search_queries": [
-          "medicine blister packs",
-          "blister packs medicine costs",
-          "blister packs pills"
+          "Suomen Viron pöytäliput",
+          "Finnish Estonian table flags",
+          "Helsinki Suomen Viron pöytäliput"
         ],
-        "subject": "lääkehoidon kustannusvastuun selvittely ja Kelan korvaushakemusten käsittely"
+        "subject": "Viron ulkoministeri Margus Tsahkna vierailee Helsingissä"
       },
-      "credit": "Photo by Tima Miroshnichenko on Pexels",
-      "depicted": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
+      "credit": "Photo by Paolo Rossa on Pexels",
+      "depicted": "Four flags are visible against a bright blue sky with wispy white clouds. From left to right, the first flag is blue and yellow, with the blue portion on the left and the yellow on the right. The second flag is also blue and yellow, with the blue on the left and the yellow on the right. The third flag is dark blue with a circle of yellow stars. The fourth flag has three horizontal stripes: black on top, blue in the middle, and white on the bottom. All flags are flying from tall, light-colored fl",
       "generated": false,
       "hotlink": false,
       "license": "Pexels License",
       "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360.jpg",
+      "local_path": "media/5256f2eb32fb9df2985d31a96b9599a57b9acea34691ca895e5e94e60ae87c2f.jpg",
       "pixel_review": {
-        "alt_fi": "Useita erivärisiä pillereitä ja kapseleita sisältäviä läpipainopakkauksia on levitettynä puupinnalle.",
+        "alt_fi": "Neljä lippua liehuu salkoissa sinistä taivasta vasten, vasemmalta kaksi Ukrainan lippua, Euroopan unionin lippu ja Viron lippu.",
         "approved": true,
-        "article_text_sha256": "b67e79a3a64046384af30d34538d81cf7b6fceaa766225448eeb2b7b39c28539",
-        "description": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
-        "image_sha256": "8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360",
+        "article_text_sha256": "f84a38f69039b35045bbd452a90039c7368aba8b1ab22bc4edde3fc59b9ba899",
+        "description": "Four flags on poles against a blue sky with wispy clouds. From left to right, two Ukrainian flags, one European Union flag, and one Estonian flag are visible. Bare tree branches and some evergreen trees are visible at the bottom.",
+        "image_sha256": "5256f2eb32fb9df2985d31a96b9599a57b9acea34691ca895e5e94e60ae87c2f",
         "model": "google:gemini-2.5-flash",
         "no_people": true,
-        "reason": "The article discusses 'lääkehoidon kustannusvastuu' (cost responsibility for medical treatment) and 'lääkekustannusten kasvusta' (growth in pharmaceutical costs). The image directly illustrates 'lääkehoito' (medical treatment) and 'lääkevalmisteet' (pharmaceutical products) through the depiction of various pills and capsules, which are concrete subjects of the article.",
-        "reviewed_at": "2026-09-26T18:06:10.939590+00:00"
+        "reason": "The article discusses a meeting between the foreign ministers of Estonia and Finland, and mentions support for Ukraine and other foreign and security policy issues. The image visibly shows the flags of Ukraine, the European Union, and Estonia, directly illustrating the countries and organizations central to the article's subject matter.",
+        "reviewed_at": "2026-09-26T18:53:12.798524+00:00"
       },
       "pixels": {
         "height": 627,
         "mode": "RGB",
-        "variance": 4967.6,
+        "variance": 5273.7,
         "width": 940
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
+        "evidence": "Four flags on poles against a blue sky with wispy clouds. From left to right, two Ukrainian flags, one European Union flag, and one Estonian flag are visible. Bare tree branches and some evergreen trees are visible at the bottom.",
         "matched": [
-          "blister",
-          "packs"
+          "estonian",
+          "flags"
         ],
         "method": "vision",
-        "reason": "all must_show requirements matched"
+        "reason": "Exact-pixel full-article review approved licensed subject; search composition gate: missing must_show: Finnish and Estonian table flags"
       },
-      "sha256": "8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360",
-      "source_url": "https://www.pexels.com/photo/assorted-packs-of-pills-on-a-wooden-table-5452239/",
+      "sha256": "5256f2eb32fb9df2985d31a96b9599a57b9acea34691ca895e5e94e60ae87c2f",
+      "source_url": "https://www.pexels.com/photo/national-flags-waving-in-a-clear-blue-sky-37125634/",
       "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/5452239/pexels-photo-5452239.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "5452239",
-        "photo_url": "https://www.pexels.com/photo/assorted-packs-of-pills-on-a-wooden-table-5452239/",
-        "photographer": "Tima Miroshnichenko",
-        "photographer_url": "https://www.pexels.com/@tima-miroshnichenko",
+        "image_url": "https://images.pexels.com/photos/37125634/pexels-photo-37125634.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "37125634",
+        "photo_url": "https://www.pexels.com/photo/national-flags-waving-in-a-clear-blue-sky-37125634/",
+        "photographer": "Paolo Rossa",
+        "photographer_url": "https://www.pexels.com/@paolo-rossa-1121474291",
         "provider": "pexels",
-        "query": "medicine blister packs calculator",
-        "retrieved_at": "2026-09-26T17:54:51Z"
+        "query": "Suomen Viron pöytäliput",
+        "retrieved_at": "2026-09-26T18:53:10Z"
       },
-      "stock_provenance_sha256": "9ed5745fea5067620e37e3c33e25a83844fc15757fc11516a107b4445e74e1fa",
-      "url": "https://uutistenlukija.fi/media/8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360.jpg"
+      "stock_provenance_sha256": "8b61b63cedcb09504aa2c32c610916637dada3af42965ff4e9ee328dceb271cc",
+      "url": "https://uutistenlukija.fi/media/5256f2eb32fb9df2985d31a96b9599a57b9acea34691ca895e5e94e60ae87c2f.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "STM kertoo 25. syyskuuta julkaistussa tiedotteessaan järjestäneensä 21. syyskuuta keskustelun hyvinvointialueiden ja Kelan välisestä lääkehoidon kustannusvastuusta. Mukana oli edustajia hyvinvointialueilta, Helsingistä, HUS-yhtymästä, Kelasta sekä sosiaali- ja terveysministeriöstä ja valtiovarainministeriöstä."
+        "text": "Valtioneuvoston julkaiseman ulkoministeriön tiedotteen mukaan Viron ulkoministeri Margus Tsahkna vierailee Helsingissä 29. syyskuuta. Vierailun yhteydessä hänen on määrä tavata Suomen ulkoministeri Elina Valtonen."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Ministeriön mukaan keskustelun taustalla ovat Kelan heinäkuun alussa käyttöön ottamat menettelyt tiettyjen lääkevalmisteiden korvaushakemusten käsittelyssä. STM kertoo niiden perustuvan huhtikuussa antamaansa ohjaukseen voimassa olevan lainsäädännön mukaisesta kustannusvastuusta."
-      },
-      {
-        "source_ids": [
-          "A"
-        ],
-        "text": "Ministeriön mukaan julkisuudessa on kannettu huolta hyvinvointialueiden lääkekustannusten kasvusta ja potilaiden yhdenvertaisesta hoidosta. STM:n mukaan potilaiden tarvitsema lääkehoito turvataan kustannusvastuun jakautumisesta riippumatta."
-      },
-      {
-        "source_ids": [
-          "A"
-        ],
-        "text": "Tapaamisessa tunnistettiin tiedotteen mukaan lainsäädännön soveltamiseen liittyviä käytännön ongelmia ja avoimia kysymyksiä. Tiedotteessa ei yksilöidä kysymyksiä eikä kerrota kokouksessa tehdyistä ratkaisuista."
-      },
-      {
-        "source_ids": [
-          "A"
-        ],
-        "text": "STM kertoo käyvänsä seuraavaksi läpi hyvinvointialueiden esittämät kysymykset ja täsmentävänsä tarvittaessa ohjaustaan. Vuoropuhelua alueiden kanssa on määrä jatkaa."
+        "text": "Ministerien on tiedotteen mukaan tarkoitus keskustella Suomen ja Viron kahdenvälisistä suhteista, Ukrainan tukemisesta sekä muista ajankohtaisista ulko- ja turvallisuuspoliittisista kysymyksistä."
       }
     ],
-    "summary": "Sosiaali- ja terveysministeriö kertoo selvittävänsä hyvinvointialueiden kanssa lääkehoidon kustannusvastuuta ja Kelan korvaushakemusten käsittelyä koskevia avoimia kysymyksiä.",
-    "title": "STM: Lääkehoidon kustannusvastuun selvittely jatkuu"
+    "summary": "Ulkoministeriön mukaan Viron ulkoministeri Margus Tsahkna vierailee Helsingissä 29. syyskuuta ja tapaa ulkoministeri Elina Valtosen.",
+    "title": "Tsahkna vierailee Helsingissä, kertoo ulkoministeriö"
   },
   "review": {
     "approved": true,
-    "archive_image_only": {
-      "article_text_unchanged": true,
-      "operation": "image_only_archive_correction",
-      "original_draft_sha256": "1ccbed058f6e2e774d4b32d8aad0669ff8e5a0c84afb6c5b36f068b046a76f95",
-      "original_published_at": "2026-09-26T17:49:10.608151+00:00",
-      "original_review_sha256": "9c7ecf50f515b60ee40e37386b6cc6bdaa325470a460378d443fc4a713044adc",
-      "unchanged_text_sha256": "da0671e9c4f17c0351845430c0693782e9340c83af37ce5e12a066b80a2cecf6"
-    },
-    "draft_sha256": "13010172bc00a224de837e14fa1ee53192a99ab15844b5a2d0ec027a7b22958a",
-    "historical_text_observations": [],
+    "draft_sha256": "b46486c15af4bb7843a89ee267797b9bbbe38e3d64ead2a6ac452cc720cd7e56",
     "reasons": [
-      "Kuvan SHA-256-tunniste (8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360) vastaa toimitettua kuvaa.",
-      "Kuvan sisältö (erivärisiä pillereitä ja kapseleita sisältäviä läpipainopakkauksia) on suoraan relevantti artikkelin aiheeseen, joka käsittelee lääkehoidon kustannusvastuuta ja lääkekustannuksia.",
-      "Kuvan alt-teksti \"Arkistokuva: Useita erivärisiä pillereitä ja kapseleita sisältäviä läpipainopakkauksia on levitettynä puupinnalle.\" kuvaa tarkasti kuvan näkyvää sisältöä.",
-      "Kuvateksti \"Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.\" on asianmukainen ja informatiivinen.",
-      "Kuva on lisensoitu Pexels License -lisenssillä (Photo by Tima Miroshnichenko on Pexels), joka sallii käytön ja provenienssi on selkeä.",
-      "Pixel_review on hyväksynyt kuvan ja sen perustelu relevanssista on pätevä.",
-      "Kuva ei sisällä ihmisiä tai kasvoja, mikä on turvallista lääkehoitoon liittyvässä aiheessa."
+      "Lähde A tukee täsmällisesti nimeä Margus Tsahkna, vierailupaikkaa Helsinki, päivämäärää 29. syyskuuta, tapaamista ulkoministeri Elina Valtosen kanssa sekä keskusteluaiheita: kahdenväliset suhteet, Ukrainan tukeminen ja muut ajankohtaiset ulko- ja turvallisuuspoliittiset kysymykset.",
+      "Otsikko, ingressi ja molemmat kappaleet ilmaisevat asian ulkoministeriön tiedotteeseen perustuvana tulevana tapahtumana eivätkä väitä sille riippumatonta vahvistusta. Tekstissä ei ole lähteen ulkopuolisia syy-seurauspäätelmiä tai valtakunnallisia yleistyksiä.",
+      "Otsikko on 52 merkkiä pitkä eli tavoiterajan sisällä, ja tärkein uutinen – Tsahknan vierailu Helsingissä – on alussa. Teksti on neutraalia, ymmärrettävää ja lähteestä itsenäisesti muotoiltua suomea. Lähde A on julkaistu 25.9.2026 ja koskee 29.9.2026 suunniteltua vierailua, joten aineisto on ajankohtainen.",
+      "Kuva liittyy jutussa mainittuihin Viroon ja Ukrainan tukemiseen: näkyvissä ovat Viron, Ukrainan ja EU:n liput. Se on merkitty arkistokuvaksi eikä sitä väitetä kuvaksi tulevasta tapaamisesta. Alt-teksti vastaa toimitettua pikselikuvausta. Luonnoksen ja lähdepaketin kuvatiedot sekä kuvan SHA-256 5256f2eb32fb9df2985d31a96b9599a57b9acea34691ca895e5e94e60ae87c2f ovat yhtenevät, ja yksilöity Pexels-kuvasivu, kuvaaja Paolo Rossa, kuvatunnus 37125634 sekä Pexels-lisenssi muodostavat riittävän käyttöoikeusnäytön."
     ]
-  },
-  "image_backfill": [
-    {
-      "article_file": "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html",
-      "draft": {
-        "category": "Kotimaa",
-        "image": {
-          "alt": "Arkistokuva: Useita erivärisiä pillereitä ja kapseleita sisältäviä läpipainopakkauksia on levitettynä puupinnalle.",
-          "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
-          "classifier_output": {
-            "category": "Kotimaa",
-            "depictable_scene": "Pöydällä näkyvät lääkepakkaukset ja tablettien läpipainopakkaukset laskimen ja tyhjien lomakepaperien vieressä.",
-            "must_avoid": [
-              "people",
-              "faces"
-            ],
-            "must_show": [
-              "blister packs"
-            ],
-            "search_queries": [
-              "medicine blister packs",
-              "blister packs medicine costs",
-              "blister packs pills"
-            ],
-            "subject": "lääkehoidon kustannusvastuun selvittely ja Kelan korvaushakemusten käsittely"
-          },
-          "credit": "Photo by Tima Miroshnichenko on Pexels",
-          "depicted": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
-          "generated": false,
-          "hotlink": false,
-          "license": "Pexels License",
-          "license_url": "https://www.pexels.com/license/",
-          "local_path": "media/8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360.jpg",
-          "pixel_review": {
-            "alt_fi": "Useita erivärisiä pillereitä ja kapseleita sisältäviä läpipainopakkauksia on levitettynä puupinnalle.",
-            "approved": true,
-            "article_text_sha256": "b67e79a3a64046384af30d34538d81cf7b6fceaa766225448eeb2b7b39c28539",
-            "description": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
-            "image_sha256": "8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360",
-            "model": "google:gemini-2.5-flash",
-            "no_people": true,
-            "reason": "The article discusses 'lääkehoidon kustannusvastuu' (cost responsibility for medical treatment) and 'lääkekustannusten kasvusta' (growth in pharmaceutical costs). The image directly illustrates 'lääkehoito' (medical treatment) and 'lääkevalmisteet' (pharmaceutical products) through the depiction of various pills and capsules, which are concrete subjects of the article.",
-            "reviewed_at": "2026-09-26T18:06:10.939590+00:00"
-          },
-          "pixels": {
-            "height": 627,
-            "mode": "RGB",
-            "variance": 4967.6,
-            "width": 940
-          },
-          "relevance_check": {
-            "accepted": true,
-            "evidence": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
-            "matched": [
-              "blister",
-              "packs"
-            ],
-            "method": "vision",
-            "reason": "all must_show requirements matched"
-          },
-          "sha256": "8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360",
-          "source_url": "https://www.pexels.com/photo/assorted-packs-of-pills-on-a-wooden-table-5452239/",
-          "stock_provenance": {
-            "image_url": "https://images.pexels.com/photos/5452239/pexels-photo-5452239.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-            "photo_id": "5452239",
-            "photo_url": "https://www.pexels.com/photo/assorted-packs-of-pills-on-a-wooden-table-5452239/",
-            "photographer": "Tima Miroshnichenko",
-            "photographer_url": "https://www.pexels.com/@tima-miroshnichenko",
-            "provider": "pexels",
-            "query": "medicine blister packs calculator",
-            "retrieved_at": "2026-09-26T17:54:51Z"
-          },
-          "stock_provenance_sha256": "9ed5745fea5067620e37e3c33e25a83844fc15757fc11516a107b4445e74e1fa",
-          "url": "https://uutistenlukija.fi/media/8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360.jpg"
-        },
-        "paragraphs": [
-          {
-            "source_ids": [
-              "A"
-            ],
-            "text": "STM kertoo 25. syyskuuta julkaistussa tiedotteessaan järjestäneensä 21. syyskuuta keskustelun hyvinvointialueiden ja Kelan välisestä lääkehoidon kustannusvastuusta. Mukana oli edustajia hyvinvointialueilta, Helsingistä, HUS-yhtymästä, Kelasta sekä sosiaali- ja terveysministeriöstä ja valtiovarainministeriöstä."
-          },
-          {
-            "source_ids": [
-              "A"
-            ],
-            "text": "Ministeriön mukaan keskustelun taustalla ovat Kelan heinäkuun alussa käyttöön ottamat menettelyt tiettyjen lääkevalmisteiden korvaushakemusten käsittelyssä. STM kertoo niiden perustuvan huhtikuussa antamaansa ohjaukseen voimassa olevan lainsäädännön mukaisesta kustannusvastuusta."
-          },
-          {
-            "source_ids": [
-              "A"
-            ],
-            "text": "Ministeriön mukaan julkisuudessa on kannettu huolta hyvinvointialueiden lääkekustannusten kasvusta ja potilaiden yhdenvertaisesta hoidosta. STM:n mukaan potilaiden tarvitsema lääkehoito turvataan kustannusvastuun jakautumisesta riippumatta."
-          },
-          {
-            "source_ids": [
-              "A"
-            ],
-            "text": "Tapaamisessa tunnistettiin tiedotteen mukaan lainsäädännön soveltamiseen liittyviä käytännön ongelmia ja avoimia kysymyksiä. Tiedotteessa ei yksilöidä kysymyksiä eikä kerrota kokouksessa tehdyistä ratkaisuista."
-          },
-          {
-            "source_ids": [
-              "A"
-            ],
-            "text": "STM kertoo käyvänsä seuraavaksi läpi hyvinvointialueiden esittämät kysymykset ja täsmentävänsä tarvittaessa ohjaustaan. Vuoropuhelua alueiden kanssa on määrä jatkaa."
-          }
-        ],
-        "summary": "Sosiaali- ja terveysministeriö kertoo selvittävänsä hyvinvointialueiden kanssa lääkehoidon kustannusvastuuta ja Kelan korvaushakemusten käsittelyä koskevia avoimia kysymyksiä.",
-        "title": "STM: Lääkehoidon kustannusvastuun selvittely jatkuu"
-      },
-      "draft_sha256": "13010172bc00a224de837e14fa1ee53192a99ab15844b5a2d0ec027a7b22958a",
-      "image_sha256": "8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360",
-      "job_id": "2218f9c8bbdef01b4e5d0f4e7ac53ff9c1cc5e53a2b52876020ec1f5e7ed24ff",
-      "packet": {
-        "fixture": false,
-        "image": {
-          "alt": "Arkistokuva: Useita erivärisiä pillereitä ja kapseleita sisältäviä läpipainopakkauksia on levitettynä puupinnalle.",
-          "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
-          "classifier_output": {
-            "category": "Kotimaa",
-            "depictable_scene": "Pöydällä näkyvät lääkepakkaukset ja tablettien läpipainopakkaukset laskimen ja tyhjien lomakepaperien vieressä.",
-            "must_avoid": [
-              "people",
-              "faces"
-            ],
-            "must_show": [
-              "blister packs"
-            ],
-            "search_queries": [
-              "medicine blister packs",
-              "blister packs medicine costs",
-              "blister packs pills"
-            ],
-            "subject": "lääkehoidon kustannusvastuun selvittely ja Kelan korvaushakemusten käsittely"
-          },
-          "credit": "Photo by Tima Miroshnichenko on Pexels",
-          "depicted": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
-          "generated": false,
-          "hotlink": false,
-          "license": "Pexels License",
-          "license_url": "https://www.pexels.com/license/",
-          "local_path": "media/8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360.jpg",
-          "pixel_review": {
-            "alt_fi": "Useita erivärisiä pillereitä ja kapseleita sisältäviä läpipainopakkauksia on levitettynä puupinnalle.",
-            "approved": true,
-            "article_text_sha256": "b67e79a3a64046384af30d34538d81cf7b6fceaa766225448eeb2b7b39c28539",
-            "description": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
-            "image_sha256": "8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360",
-            "model": "google:gemini-2.5-flash",
-            "no_people": true,
-            "reason": "The article discusses 'lääkehoidon kustannusvastuu' (cost responsibility for medical treatment) and 'lääkekustannusten kasvusta' (growth in pharmaceutical costs). The image directly illustrates 'lääkehoito' (medical treatment) and 'lääkevalmisteet' (pharmaceutical products) through the depiction of various pills and capsules, which are concrete subjects of the article.",
-            "reviewed_at": "2026-09-26T18:06:10.939590+00:00"
-          },
-          "pixels": {
-            "height": 627,
-            "mode": "RGB",
-            "variance": 4967.6,
-            "width": 940
-          },
-          "relevance_check": {
-            "accepted": true,
-            "evidence": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
-            "matched": [
-              "blister",
-              "packs"
-            ],
-            "method": "vision",
-            "reason": "all must_show requirements matched"
-          },
-          "sha256": "8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360",
-          "source_url": "https://www.pexels.com/photo/assorted-packs-of-pills-on-a-wooden-table-5452239/",
-          "stock_provenance": {
-            "image_url": "https://images.pexels.com/photos/5452239/pexels-photo-5452239.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-            "photo_id": "5452239",
-            "photo_url": "https://www.pexels.com/photo/assorted-packs-of-pills-on-a-wooden-table-5452239/",
-            "photographer": "Tima Miroshnichenko",
-            "photographer_url": "https://www.pexels.com/@tima-miroshnichenko",
-            "provider": "pexels",
-            "query": "medicine blister packs calculator",
-            "retrieved_at": "2026-09-26T17:54:51Z"
-          },
-          "stock_provenance_sha256": "9ed5745fea5067620e37e3c33e25a83844fc15757fc11516a107b4445e74e1fa",
-          "url": "https://uutistenlukija.fi/media/8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360.jpg"
-        },
-        "publication_basis": {
-          "policy": "official-text-v1",
-          "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-          "provider": "valtioneuvosto",
-          "related_sources": 0,
-          "source_fields_sha256": "cfb2d19edca86bea4491dc45ee1783737e2b94fbd0c2bef13ecf915b3b46b61b",
-          "source_sha256": "23d0ef78d171b9299aac69ca95402f139b7ac29892a4c893da3bb007be823693"
-        },
-        "sources": [
-          {
-            "id": "A",
-            "published_at": "2026-09-25T10:15+0300",
-            "publisher": "Valtioneuvoston kanslia",
-            "reuse": {
-              "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-              "license": "Valtioneuvoston sivuston käyttöehdot: tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan; aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen",
-              "license_url": "https://valtioneuvosto.fi/tietoa-sivustosta",
-              "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
-              "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
-            },
-            "text": "Julkaisuajankohta 25.9.2026 10.15\nTyyppi:Tiedote\nSosiaali- ja terveysministeriö järjesti 21.9.2026 pyöreän pöydän keskustelun lääkehoidon kustannusvastuusta hyvinvointialueiden ja Kelan välillä. Tapaamisessa selvennettiin tulkintoja kustannusvastuusta ja tunnistettiin lainsäädännön soveltamiseen liittyviä haasteita, joihin pyritään löytämään ratkaisuja yhteistyössä.\nKesän aikana on käyty keskustelua lääkehoidon kustannusvastuun jakautumisesta hyvinvointialueiden ja Kelan välillä. Keskustelua herättivät erityisesti Kelan heinäkuun alussa käyttöön ottamat uudet menettelyt tiettyjen lääkevalmisteiden korvaushakemusten käsittelyssä. Kelan menettelyt perustuvat sosiaali- ja terveysministeriön huhtikuussa antamaan ohjausasiakirjaan, jossa muistutettiin voimassa olevan lainsäädännön mukaisesta lääkehoidon kustannusvastuusta hyvinvointialueilla.\nJulkisessa keskustelussa on noussut esiin huolia hyvinvointialueiden lääkekustannusten kasvusta sekä potilaiden yhdenvertaisen lääkehoidon toteutumisesta. Keskustelussa on esitetty myös sellaisia huolenaiheita, joille ei sosiaali- ja terveysministeriön ohjauksen tai Kelan käytäntöjen perusteella ole aihetta. Potilaiden tarvitsema lääkehoito turvataan riippumatta siitä, miten kustannusvastuu eri toimijoiden välillä kohdentuu.\nSosiaali- ja terveysministeriö järjesti lääkehoidon kustannusvastuuta käsittelevän pyöreän pöydän keskustelun, johon osallistuivat hyvinvointialueiden, Helsingin kaupungin, HUS-yhtymän, sosiaali- ja terveysministeriön, valtiovarainministeriön sekä Kelan edustajat. Tapaamisessa selvennettiin kustannusvastuuseen liittyviä tulkintoja sekä luotiin yhteistä ymmärrystä Kelan korvaushakemusten käsittelyä koskevien menettelyjen käytännön vaikutuksista. Lisäksi keskustelussa tunnistettiin lainsäädännön soveltamiseen liittyviä käytännön haasteita. Osapuolet nostivat esiin useita kysymyksiä, joihin pyritään etsimään ratkaisuja yhteistyössä.\n\"Keskustelua käytiin hyvässä ja rakentavassa hengessä, ja kaikki tahot jakavat yhteisen tavoitteen toteuttaa potilaiden tarvitsema lääkehoito saumattomasti”, sanoo osastopäällikkö Anna Cantell-Forsbom. “Jatkamme yhteistyötä sen varmistamiseksi, että lääkehoidon lainsäädäntö ja ohjaus sekä korvauskäytännöt näyttäytyvät selkeinä palvelunjärjestäjille, terveydenhuollon ammattilaisille ja potilaille.\"\nSosiaali- ja terveysministeriö käy seuraavaksi läpi hyvinvointialueilta esiin nousseet kysymykset ja tarvittaessa tarkentaa antamaansa ohjausta. Lääkehoidon kustannusvastuuseen liittyvää vuoropuhelua jatketaan hyvinvointialueiden kanssa sekä avoinna olevien kysymysten ratkaisemiseksi, että lääkehoidon pitkäjänteisen kehittämisen tueksi.\nLisätietoja\nHallitussihteeri Kaisa-Maria Kimmel, p. 029 5163551\nOsastopäällikkö Anna Cantell-Forsbom, p. 029 5163351\nSähköpostisoitteet ovat muotoa [email protected]\nPotilaan oikeus laadukkaaseen ja vaikuttavaan hoitoon ei ole muuttunut (Tiedote 17.7.2026)\nhyvinvointialueet keskustelu lääkehoito lääkekorvaukset lääkkeet puheviestintä terveys terveyspalvelut",
-            "title": "Lääkehoidon kustannusvastuusta käyty vuoropuhelu jatkuu hyvinvointialueiden kanssa",
-            "url": "https://valtioneuvosto.fi/-/1271139/laakehoidon-kustannusvastuusta-kayty-vuoropuhelu-jatkuu-hyvinvointialueiden-kanssa"
-          }
-        ],
-        "story_key": "url:https://valtioneuvosto.fi/-/1271139/laakehoidon-kustannusvastuusta-kayty-vuoropuhelu-jatkuu-hyvinvointialueiden-kanssa",
-        "supporting_documents": [
-          {
-            "id": "RIGHTS",
-            "purpose": "text reuse permission; not news or image evidence",
-            "retrieved_at": "2026-09-26T17:49:03.609641+00:00",
-            "sha256": "154e55c2b5f88fc981d8fedf524ab47a6d56d66054b72814d360f3429aaf5bb2",
-            "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
-            "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
-          }
-        ]
-      },
-      "packet_sha256": "d62f6f2dbb9e418820001b8389995396d2191ae6875fc7933a27704ec4279716",
-      "review": {
-        "approved": true,
-        "archive_image_only": {
-          "article_text_unchanged": true,
-          "operation": "image_only_archive_correction",
-          "original_draft_sha256": "1ccbed058f6e2e774d4b32d8aad0669ff8e5a0c84afb6c5b36f068b046a76f95",
-          "original_published_at": "2026-09-26T17:49:10.608151+00:00",
-          "original_review_sha256": "9c7ecf50f515b60ee40e37386b6cc6bdaa325470a460378d443fc4a713044adc",
-          "unchanged_text_sha256": "da0671e9c4f17c0351845430c0693782e9340c83af37ce5e12a066b80a2cecf6"
-        },
-        "draft_sha256": "13010172bc00a224de837e14fa1ee53192a99ab15844b5a2d0ec027a7b22958a",
-        "historical_text_observations": [],
-        "reasons": [
-          "Kuvan SHA-256-tunniste (8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360) vastaa toimitettua kuvaa.",
-          "Kuvan sisältö (erivärisiä pillereitä ja kapseleita sisältäviä läpipainopakkauksia) on suoraan relevantti artikkelin aiheeseen, joka käsittelee lääkehoidon kustannusvastuuta ja lääkekustannuksia.",
-          "Kuvan alt-teksti \"Arkistokuva: Useita erivärisiä pillereitä ja kapseleita sisältäviä läpipainopakkauksia on levitettynä puupinnalle.\" kuvaa tarkasti kuvan näkyvää sisältöä.",
-          "Kuvateksti \"Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.\" on asianmukainen ja informatiivinen.",
-          "Kuva on lisensoitu Pexels License -lisenssillä (Photo by Tima Miroshnichenko on Pexels), joka sallii käytön ja provenienssi on selkeä.",
-          "Pixel_review on hyväksynyt kuvan ja sen perustelu relevanssista on pätevä.",
-          "Kuva ei sisällä ihmisiä tai kasvoja, mikä on turvallista lääkehoitoon liittyvässä aiheessa."
-        ]
-      },
-      "stock_image": {
-        "alt": "Arkistokuva: Useita erivärisiä pillereitä ja kapseleita sisältäviä läpipainopakkauksia on levitettynä puupinnalle.",
-        "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
-        "classifier_output": {
-          "category": "Kotimaa",
-          "depictable_scene": "Pöydällä näkyvät lääkepakkaukset ja tablettien läpipainopakkaukset laskimen ja tyhjien lomakepaperien vieressä.",
-          "must_avoid": [
-            "people",
-            "faces"
-          ],
-          "must_show": [
-            "blister packs"
-          ],
-          "search_queries": [
-            "medicine blister packs",
-            "blister packs medicine costs",
-            "blister packs pills"
-          ],
-          "subject": "lääkehoidon kustannusvastuun selvittely ja Kelan korvaushakemusten käsittely"
-        },
-        "credit": "Photo by Tima Miroshnichenko on Pexels",
-        "depicted": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
-        "generated": false,
-        "hotlink": false,
-        "license": "Pexels License",
-        "license_url": "https://www.pexels.com/license/",
-        "local_path": "media/8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360.jpg",
-        "pixel_review": {
-          "alt_fi": "Useita erivärisiä pillereitä ja kapseleita sisältäviä läpipainopakkauksia on levitettynä puupinnalle.",
-          "approved": true,
-          "article_text_sha256": "b67e79a3a64046384af30d34538d81cf7b6fceaa766225448eeb2b7b39c28539",
-          "description": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
-          "image_sha256": "8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360",
-          "model": "google:gemini-2.5-flash",
-          "no_people": true,
-          "reason": "The article discusses 'lääkehoidon kustannusvastuu' (cost responsibility for medical treatment) and 'lääkekustannusten kasvusta' (growth in pharmaceutical costs). The image directly illustrates 'lääkehoito' (medical treatment) and 'lääkevalmisteet' (pharmaceutical products) through the depiction of various pills and capsules, which are concrete subjects of the article.",
-          "reviewed_at": "2026-09-26T18:06:10.939590+00:00"
-        },
-        "pixels": {
-          "height": 627,
-          "mode": "RGB",
-          "variance": 4967.6,
-          "width": 940
-        },
-        "relevance_check": {
-          "accepted": true,
-          "evidence": "Several blister packs of various pills and capsules are scattered on a wooden surface. The pills are white, pink, yellow, and dark red.",
-          "matched": [
-            "blister",
-            "packs"
-          ],
-          "method": "vision",
-          "reason": "all must_show requirements matched"
-        },
-        "sha256": "8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360",
-        "source_url": "https://www.pexels.com/photo/assorted-packs-of-pills-on-a-wooden-table-5452239/",
-        "stock_provenance": {
-          "image_url": "https://images.pexels.com/photos/5452239/pexels-photo-5452239.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-          "photo_id": "5452239",
-          "photo_url": "https://www.pexels.com/photo/assorted-packs-of-pills-on-a-wooden-table-5452239/",
-          "photographer": "Tima Miroshnichenko",
-          "photographer_url": "https://www.pexels.com/@tima-miroshnichenko",
-          "provider": "pexels",
-          "query": "medicine blister packs calculator",
-          "retrieved_at": "2026-09-26T17:54:51Z"
-        },
-        "stock_provenance_sha256": "9ed5745fea5067620e37e3c33e25a83844fc15757fc11516a107b4445e74e1fa",
-        "url": "https://uutistenlukija.fi/media/8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360.jpg"
-      },
-      "text_only": {
-        "policy": "official-text-v1",
-        "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-        "provenance_sha256": "c87aeb355f7e8236a273d70556572a0b0b1cc80da4e98e9e4cb9640e7e6a062a"
-      }
-    }
-  ],
-  "image_backfill_sha256": "a490a55592c353afa3c64ce3248c390bac00a4c871abb4cdc185ce89356a8aec"
+  }
 }
