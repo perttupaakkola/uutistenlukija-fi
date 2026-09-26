@@ -917,7 +917,12 @@ def _check_rendered_stock(html, image):
                     else f'/mvp-assets/{image["sha256"]}.jpg')
     if rendered_image['src'] != expected_src:
         raise ValueError('Stock article image URL mismatch')
-    if rendered_image['alt'] != image['alt']:
+    # Two older retained photographs have exact, reviewed Finnish display-alt
+    # corrections in the renderer. Preserve their stored provenance while
+    # requiring that one canonical presentation, not either arbitrary alt.
+    from .site import display_image
+    displayed = display_image(image)
+    if displayed is None or rendered_image['alt'] != displayed['alt']:
         raise ValueError('Stock article image alt mismatch')
     pixels = image['pixels']
     if (rendered_image['width'] != str(pixels['width']) or

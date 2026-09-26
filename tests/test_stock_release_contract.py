@@ -351,6 +351,19 @@ class StockReleaseContract(unittest.TestCase):
         check_article(article, packet, draft, canonical='https://uutistenlukija.fi/' + article_path(job))
         self.assert_positive_publish_readback(job, image)
 
+    def test_exact_reviewed_display_alt_is_required_for_retained_stock(self):
+        from news_mvp.site import IMAGE_ALT_CORRECTIONS
+        image = self.helper_pexels_image()
+        corrected = 'Arkistokuva: matkustajakoneen siipi pilvien yllä.'
+        with patch.dict(IMAGE_ALT_CORRECTIONS, {image['sha256']:corrected}):
+            packet,draft,job,site,receipt,article,home = self.render_public_stock(image)
+            self.assertEqual(draft['image']['alt'], image['alt'])
+            self.assertIn(corrected, article)
+            check_article(article,packet,draft)
+            for wrong in (image['alt'], 'Unreviewed replacement description'):
+                with self.subTest(alt=wrong),self.assertRaisesRegex(ValueError,'alt mismatch'):
+                    check_article(article.replace(corrected,wrong),packet,draft)
+
     def test_mocked_pexels_output_copies_verified_local_bytes_and_rejects_corruption(self):
         image = self.helper_pexels_image()
         _packet, _draft, _job, site, receipt, article, home = self.render_public_stock(image)
