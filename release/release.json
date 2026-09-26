@@ -4,105 +4,32 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "b12c1cd79f9d25a1fd78625b7e4a4a8b108e88d2",
-  "job_id": "c190474290f6251e902db88ec60156d270c37775c1376b97b6272ec17059f3a7",
-  "packet_sha256": "3e90e447a4db1202dfc89416ed216d141c13835600ea572b851fe097c74cc9d1",
-  "draft_sha256": "177b7cd8d3026518271af35b27fb5fd91852358b6fa705200de4b2075957044b",
-  "image_sha256": "082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa",
+  "job_id": "231d1af5e7f4af72d8f25e8536d3e3634f468cd59540ab746f54ba847c8d7280",
+  "packet_sha256": "493ca3e85c42253c8010a960305ada54c7406b8456ef83941248e8d268276e7e",
+  "draft_sha256": "2962e6665f64dc4cc1bac978493d86ec908b986b13fce2d090c77cd287b43846",
+  "image_sha256": "2a484f1308c8cc7bc41314bf9312f0239201834f90129426c4de357fdf090268",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "1e8b177c2a73059204095b209baf1d602915ee919a1af84e49be0405af752241"
-  },
-  "stock_image": {
-    "alt": "Arkistokuva: Kuvassa on Yhdistyneiden Kansakuntien kestävän kehityksen tavoitteiden logo ja 17 yksittäistä tavoitetta, joista jokainen on esitetty numeroidulla, värillisellä neliöllä, jossa on kuvake ja teksti.",
-    "caption": "Arkistokuva artikkelin aiheesta.",
-    "classifier_output": {
-      "category": "Kotimaa",
-      "depictable_scene": "YK:n 17 kestävän kehityksen tavoitetta esittävä virallinen kuvitus.",
-      "must_avoid": [
-        "unrelated national flag",
-        "unrelated city",
-        "identifiable people"
-      ],
-      "must_show": [
-        "Sustainable Development Goals"
-      ],
-      "search_queries": [
-        "Sustainable Development Goals",
-        "SDG icon wheel",
-        "United Nations sustainable development goals"
-      ],
-      "subject": "YK:n kestävän kehityksen tavoitteet (SDG)"
-    },
-    "credit": "Photo by UNDP on Wikimedia Commons",
-    "depicted": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
-    "generated": false,
-    "hotlink": false,
-    "license": "Public domain",
-    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-    "local_path": "media/082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa.jpg",
-    "pixel_review": {
-      "alt_fi": "Kuvassa on Yhdistyneiden Kansakuntien kestävän kehityksen tavoitteiden logo ja 17 yksittäistä tavoitetta, joista jokainen on esitetty numeroidulla, värillisellä neliöllä, jossa on kuvake ja teksti.",
-      "approved": true,
-      "article_text_sha256": "c9ebed6c6020b1dde31bd178d4fc2d48d97f9a12c7c2f925486ea08892d2307a",
-      "description": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
-      "image_sha256": "082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa",
-      "model": "google:gemini-2.5-flash",
-      "no_people": true,
-      "reason": "The article explicitly mentions the 'kestävän kehityksen tavoitteiden eli SDG-tavoitteiden lippu' and the 'YK:n kestävän kehityksen tavoitteiden'. This image directly illustrates the SDG goals, which are a central subject of the article, making it highly relevant.",
-      "reviewed_at": "2026-09-26T09:32:41.430297+00:00"
-    },
-    "pixels": {
-      "height": 1600,
-      "mode": "RGB",
-      "variance": 10423.3,
-      "width": 2560
-    },
-    "relevance_check": {
-      "accepted": true,
-      "evidence": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
-      "matched": [
-        "development",
-        "goals",
-        "sustainable"
-      ],
-      "method": "vision",
-      "reason": "all must_show requirements matched"
-    },
-    "sha256": "082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-    "stock_provenance": {
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Sustainable_Development_Goals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "license": "Public domain",
-      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-      "photo_id": "wikimedia-52672594",
-      "photo_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-      "photographer": "UNDP",
-      "photographer_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-      "provider": "wikimedia",
-      "query": "Sustainable Development Goals",
-      "retrieved_at": "2026-09-26T09:32:41Z"
-    },
-    "stock_provenance_sha256": "e48aca0a3c73b175298a2bb34ea3bc9fe8e8f8b7ba85c1c5f99061091b79f3cd",
-    "url": "https://uutistenlukija.fi/media/082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa.jpg"
+    "provenance_sha256": "d288b013043b468454c12745c7755045683e7954eb7050d58a573453ed743940"
   },
   "new_article_files": [
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html"
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "c5a6762ea8db0d92d86ecaf5427faf7f6ec9b6fffb130eb2dfaa0c8d59006c05",
-    "_redirects": "59bcb166cb388ff808b7f38e07daac5ae3ff6835a87d177428a368760f54c986",
-    "categories/kotimaa/index.html": "4cc478b31f2f379df036d1970504b837be37b300bd15f5c5db8f0c3dcb345512",
-    "categories/kulttuuri/index.html": "c59904bfed6609304403259bd13e43756212eeb211445fab8d15169eff4a6098",
-    "categories/talous/index.html": "f24f200ecc85a4b48ed594ccb168e197c2ba6eaea3160fc05a830729cd2029a3",
-    "categories/teknologia/index.html": "d442b6aec15c288c56c21c2d353fa74d21bc4f4abce6980b5d72a87c3ad027e8",
-    "categories/tiede/index.html": "01573e86f9cb84b6eba9c6c48244d8ace377cf2f026c1ceb37ce29c31266df91",
-    "categories/ulkomaat/index.html": "1fb1e18ecc75a26bb16ed91032e48b16e5d9483e02740f6d8a23a27e7f433173",
-    "categories/urheilu/index.html": "28a489206f446d91f942d6101ef41a8380169e25bd5f681a75fbb5327b5c4ff1",
-    "index.html": "19105218e512e4c296b15d64731044159762b09d71e45a4a645931ebbae25a2e",
-    "kuvituskuvat/index.html": "d0dafe5fc467894d50be436d54e67b5d0c8982542151350c9b39dd8b8e4373a1",
-    "lahteet/index.html": "b04e5b888aeef5eca925e44d0716d99d4432be2e2affae490bc7b8b880c90ffd",
+    "_redirects": "db2377c9ecce82901acc71aa3bf74a7dd907ceff27eda7b12509855f591f4efa",
+    "categories/kotimaa/index.html": "123b3ad49d21d6240251eba8faa8b25e9a32faf658826912cb688ca748526d89",
+    "categories/kulttuuri/index.html": "66dbf0e7ffe3175f1524af81b6f70cde31b8ae21ddfd9b6423a64de687a2dc09",
+    "categories/talous/index.html": "266028d2e8910b59c3a57499ba0bca93f42dc702965615d012b77393414e14c7",
+    "categories/teknologia/index.html": "d3905466672ace4768f8fe7fde16c150913abe7e2ae40bd46aa3db12e21fa1ae",
+    "categories/tiede/index.html": "b9927c739f13c30b7dc7c2f98fc0591adf7e83f1e0c6426908e0d3398b93c1e0",
+    "categories/ulkomaat/index.html": "9921c920d1c92c3be023bf4528b93d63500fddfa5ec0692e950b6eed77b90822",
+    "categories/urheilu/index.html": "da3c29555a11b26f05fd79b74090277eddea705cc0bb5e68dabf419081f2350a",
+    "index.html": "b69c59b82f03a044a175072ad49021e91152999ad762150f37d451150e3b3e14",
+    "kuvituskuvat/index.html": "75f67b2076938c8121e47b81890eaeda0d24955ce2191f12fef74cc10f3e068f",
+    "lahteet/index.html": "ab17e43cce7d29797399d62b18cca32367704c2041f2da0be5a69e871a53e675",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
     "mvp-assets/02a4950ee3931af5ab21d44c01b679c1893319296030714ef69ef52fd2c1bf84.jpg": "02a4950ee3931af5ab21d44c01b679c1893319296030714ef69ef52fd2c1bf84",
@@ -141,6 +68,7 @@
     "mvp-assets/271536af40ec324066799a3773e72c3eee18cac26952c036faf76a04a1085441.jpg": "271536af40ec324066799a3773e72c3eee18cac26952c036faf76a04a1085441",
     "mvp-assets/2751e358aafa1fd7448639c027daa1b774770cf2b73526f484dacadd0e976f28.jpg": "2751e358aafa1fd7448639c027daa1b774770cf2b73526f484dacadd0e976f28",
     "mvp-assets/2823c8d09c7c39d5bfbad5389bb282ae6382f34c432b99b1cfd44cafdca11930.jpg": "2823c8d09c7c39d5bfbad5389bb282ae6382f34c432b99b1cfd44cafdca11930",
+    "mvp-assets/2a484f1308c8cc7bc41314bf9312f0239201834f90129426c4de357fdf090268.jpg": "2a484f1308c8cc7bc41314bf9312f0239201834f90129426c4de357fdf090268",
     "mvp-assets/2b3ee2a5b1f598dbf443a0c6ce9603f78f86f207e723945265f189edb5a6a2a0.jpg": "2b3ee2a5b1f598dbf443a0c6ce9603f78f86f207e723945265f189edb5a6a2a0",
     "mvp-assets/2c37d821e82ef06f5094fe9dfc9a4ebc04da114afb104b44b3bc860b0538122c.jpg": "2c37d821e82ef06f5094fe9dfc9a4ebc04da114afb104b44b3bc860b0538122c",
     "mvp-assets/2c6d218ce0cd6f64dd5ca98529efbe29883890006f0ad776047d33eb5bba8bef.jpg": "2c6d218ce0cd6f64dd5ca98529efbe29883890006f0ad776047d33eb5bba8bef",
@@ -374,18 +302,18 @@
     "mvp-assets/portal.js": "17dcc8a25306b1900ee898c13e74168d09ab29df3a217b113fb72e50f4a573e3",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "06977c522e593feb623259fd8b766e9481ed37cdd61602ca761c3aaad89c35a0",
-    "oppaat/index.html": "8cdcdc9a455e106cfb41b8bd20c3e51bea5e8f28234ffa10faf263d14129a0b0",
+    "oppaat/index.html": "5b91f384d2f023623f991a3a93acda25acd6f7fbd0aa80fc8935b92c4a2965c0",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "3445bb1238e3aad42e4344d980d56fa4efeadf56378b7a4339b1f153d73c768c",
-    "sitemap.xml": "0f8a1cb32c963e06f08d6a60823b186d40d2598dd7eb5620cee10d717d3924e1",
-    "sivu/2/index.html": "e702edfd63d63ce2c10a735b95aada2c32f3bda63a6bf7df6b8fa619d72559dc",
-    "sivu/3/index.html": "ca186ddb9781dfd39f9baa075da66dc9023c456cd33cef8cd8587047eeb0204a",
-    "sivu/4/index.html": "b10ac9d067751b3c4d595be111249e3e4c2b5471f135b8affc094ae757002e45",
-    "sivu/5/index.html": "106cd061b0ef99ee3e635a373786081a3c2c975f439b597188abb3c1e77ddb49",
-    "sivu/6/index.html": "469dbda7e17586b7d867a029c1a7fd6bff7eebb5b91f928ab66da25ff9c8e44a",
-    "sivu/7/index.html": "fa7612bb22477db7c2a7d0b923d265f07d285ca3ffe5c4c64df31ae164b897ec",
-    "tietosuoja/index.html": "d15577c21434f486676b5125b4e36e67af63a5515dcbb7f2aa34408ddbb73019",
-    "tuoreimmat/index.html": "596cf2a63e2c97b59b571ca3b80d022fe8a10afea7377cbe7019dfbe797fd507",
+    "rss.xml": "e23bbd60d8c793004640ed6a32bddfb8e9bacfa170bab9ee886ca1f211f135a4",
+    "sitemap.xml": "6000e5f1885a2b10dd6c97a52e1c1c6965e9c51c7f35917c57a0d2ff7a591d43",
+    "sivu/2/index.html": "ab9e1ce37b242d3c3d213fb925936840f9f5641decced21035ac2408262696ad",
+    "sivu/3/index.html": "864e74f1e0e010c47ff614484735de7b23e707eef3a84d4c2fc6ea93e9f1fa70",
+    "sivu/4/index.html": "54b95b6f5417eb906ccac4e88099abbc899843323e7e8018001db167af6ef092",
+    "sivu/5/index.html": "637e5d7f319008684f50b5b2def4f698db5a838e131d09411ace40803d0f8841",
+    "sivu/6/index.html": "f7021b72baf85bf546805614ab40728d2b114fd004081e61fb33ad5b0c734269",
+    "sivu/7/index.html": "01105cc73fc527ab05d07cbdde7275e084808afd7a65aca013df29aff7a1fe34",
+    "tietosuoja/index.html": "66ae6104e1f3a0d66f41bf8aa4c57c46e01098bf883bfd5604150a86d88d5aa4",
+    "tuoreimmat/index.html": "0e3ef62b3fa105abb339afc2d9ba940ad714ba5e3c2caa29d2d1630b77187eba",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -399,749 +327,432 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "e9f6cc9c5547440b42c9222f38e8cf9ac0e9b5b30b2e8da4da3dd72997089fe5",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "efacaf4faa055179f32c2bf8627777b5999a045e6c99864d9dd3c1337ec21de8",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "c7a07d7a518330c8b0fdb6aeda51efd68ee458d5bf27df80c45cfa429929c536",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "1ad8db44faa3466773a6724bf758f36248d90c072280068563f7f4238a9d770b",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "f2b464081aea6867936a29501ffb1859b4ce3d4aa6079600cdf644aad87e145a",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "638f4cfab1adff4dbed4b58904766c1830499e2b605eda29823d299e2e2b56de",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "9e37ff8fd3bc313042deb04f979a1b81a9abac6c55c67bfa615d09e7f897c7e5",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "bc92ae949593523a308c0f767a6a443d1446fb5e2149017b897ea3eb68cdc94e",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "fae4ddcb6e6888f24e4678610855837dd217ad9f18e3f71cea9de07381498492",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "8f84e118f82088ce366a4632d7ef9467d81e665e912d38c826397568eb02d476",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "eb7a9acd6f9b557fe3321f1a3043a080a07314b43229ced2cde1fa0a33d4f244",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "d9e4bd009437859e61426eff1648d935f0cb756ad04e4cfc6634e6a0ee9a1665",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "26e53232cae78a90a6afc6647f9fb77f2a575b2e314b28c50cbe40c3ef217ac6",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "62cd1ee4310e8255534c751dbaa518254884b1b580e99040637922d1c2ba0e77",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "a45749e705d26a11e848ba911b6c66f17c6eb7691d242c8a7b578e80b49fa3fd",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "9f2cc3f1243acfe9e2724bd6c5170b4d4a58a19d441982ed205d4a8068be338c",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "e00fd82cd61ad05f6cd1b4ae4477142e8f4114a46431f27b6508ac243532612c",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "3cb47ad285a70ed857fd112ebd022828b6c48a9cd71362acb9c241eeced273fd",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "9817f37266730c1406cdf08bb8707548418d1361aee925a14357fcdf9398452e",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "9fd96ae5077d7209a0bcdaba2159551222f9fc4ef6bfde9a4b52f4922b80efe1",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "6a67670cbb0dbf8eb2cd6ba74b024fe93cd07b3d610226cf685aee66e3ad9363",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "c6677d7595c5edafb5733ca148d7b38b13f5c70ecf10e5ad9bee3a066ad3ec1e",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "3acced866cff52e02cd132da9f9c5f4ab22a7de6a10bafca6da2ad0730745622",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "820b85f09daeed6a1e35b41c4d0f21eb29d51ea362257f29919182bb17c45ed3",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "eb22096d2bde633b4ae8d18454343f0d25be409a69c657eceb150c907ac4fbbe",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "ea075527c78ab5a70935631415ef724b7f2d99d73f80443e88dd7dafe819433d",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "f165dbab9f6c44fcb0a4bd8fc2c295f8a711769a3e62676f8f8751b8b47e1544",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "c393e1cb477d6c68ae0dccf20199fd46cb0def659325be5e70edbec3ec3df520",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "6f51536fa0f9de7f3382128e0c9ad36de1e2db81b31a1338d1b69836d5e1f6b6",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "05d005993932a7d553cf8d5c3674ff4a28862d07caaa1c1a5ea9e19d2eea8ae2",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "8492eef4f5cfe4616b7159458612abbf7dca2f02f211bb2b36b9d1c7b01297af",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "029ceffe3624c34da7097c4643142b764b6637ce784e0894372b60c46befec10",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "711909594f6e1aecda14b170b63418900c87ddd39935c8772070cdea6f263140",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "2073758331ee58ddb00b4c96aa6732541b4131d5c65db04f22769d316ff4a03f",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "3cb1e5794b48ddbf2a92cd2531eb14f6701a8885408fc40fe916b8848a980957",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "bdf6e7173b5adfcf2be7efd5e314e6334df2fdf5cd58f2f9233738020094f6b4",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "8c83137a10f49ad71c8397de4fff7df9de80640501905db528f93f6a2637c530",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "f93debbfd0ea4c8e255674325cd2b1600a72844f2336d6d772939a3bbe8bb59e",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "16552744681dd1bbbbd6b3303ee2bf0f9c5e0ff17c0294823cbb83c648f4effb",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "da095ec55d62eec65942d87f2a219bf95c6716d2fb4840dd5ca74fbf15bd0208",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "f9ba02357de68237ee57d3166228eb1f750f9d601b71db6bf659b8d31fb268c9",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "a95c13e12ae9d43232988df927345ff48477a11444fcbd1cfb69653486abda71",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "00b3b4b7eb746abfa6336e948e983fa0235bfc88fc73b15da0ff0b3ec95088be",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "0515660aea23f197efa356eaf226b2f62de40cf8f9fc311e43db9fe2addb6e3d",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "fedaefadfa75c8f205e00428ca35ab9b957d9270c17287ef4ea805cb14f7248b",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "145e05ba0175857732bc1ba8c96aabb9e66c59f7345b7f75d150fe9df663fc20",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "f917952628f27b7976005cf8d4b6d1872951c42f0f8a29b61931a1f23e7eabfb",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "9ca2c10f32b78d4ff84597d1e36cd3085b8a791198f91a14f10d0b7639858215",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "6bf8524543c29e7d454ee537d4b0a58b3cfb4c5cc355f38ecc5384fd508446e8",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "88675c2300795c3a7a86b7a903aed33cb119d4add8cfd14986669f57f883aa23",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "0200f4918f8e3914db389f563977459cd985e398f514fce18fb8b68c02493aea",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "30b8b207428788ea668eda83e8f14257111a75064555b767462c0ddd4f4a6014",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "051903c394df35b021365ea80ca411bbea8c6f765be2a713c973706f4e46f76a",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "62c7f605fbbfdbd09797216d1183acaef860646b2b493a7714f649bda6c393c7",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "85894515fb7692c812502d55a39d7084ddf9f1ad4eb45f796b821ffbd76878a0",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "73694daeed9fdd09d8f1cfa62cbd213085676802390592f17f9b08d59c5bdbff",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "ff1a53225d2a25e12e4d6343f4c561cdfcf4d65bf8ccec14ce3ea6aeb5c8c6ea",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "a96c2826d704d124e19a2c1128dbbd9a87c48addcb29023d61dfb5c95debf819",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "54251f2fe372225c6277d23b7448d7707e7d2d9050ad39c960e3a9b3b8770689",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "2ba5f140f05eb61974eb8ea9b039750fdbcf3bcb56c873d47df6b0f79188fb4e",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "908ac7bc41c3cd7f9e82134134839da1773c3accb147e31c2736eeed6631ec32",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "10bc10a9ae030408ea7a05003c58abe07337884a5b3d25126d0d5dbb4db99a9c",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "e43a9ae91ddbcb336f18962d9f37dfd6442c00f1ec7fdba27d6725e8e292d71a",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "8880fd89df96c1baf90316f3ea17693c9e793c1d15325bc1a95a099b08fdf5ed",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "d0d433a2f4b51ffbbf8bd28c5b3c938d61851efebbae10c7cbd0ad4a38b485f2",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "f4868db244ccb5cce1444f610c5ebb71923a97839d19339568f76c6a55013c96",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "ac1ff4867966327d4bd848a97d39aab3aa8df35546c0c75c5e0d61252fb02418",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "1ab3bb31c14618481e111246091a48c7b83cc530da5540c3624ded0a6b342b72",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "847c1bb1f574997e2dbd32eec145e11032fdde6c0f02b801453785b9117350cf",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "05eb7737a00684d6cc2ac8822cb3bfc4ac5a6bb155cc18a312c7f4925598dc13",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "ca8a9dbbaf89c12b1d16c37baa42ebac5bb2b20bafc603849bfe45547dccbbf6",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "ee94f8e299c18d4b3188b86a2b0e5f0cd3575f45ac5cf07dae19bff7ba073ba4",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "c59b0a97de889d094e744782a72762483c0ea6b934b0c8fdee5b66d098c5e494",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "847de34023e60ccdb18fe7aab699d19ad08488ddb54c80daec9a7c9a94eee046",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "ddfd6b46bfee242b10f1b8b07ad262921ea0d0945d37544e7ef32dd8726d55f3",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "64d5dd0886bf4e01d891af8f61d4e6c6514e7a450a3456137fd618117c12985b",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "c9a4f5e22fb5bb62269482f0653c3bc0cbea318caabebd65e96c0e9c8b2c069d",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "577ad9a5547b29d78fda99646e649dec21f5f5c42ba088160c456676f1367bf6",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "9c9a0b3323e5b97e8f81740903cb5aa201406be70fd06acdfa56eca15fad4732",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "bab4f7bf152b8c9bc708a006b370b8b5e985019aeb818e1bca293c431a90834a",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "6fc8577799f7dad9086b2f58584c015512a688a9f4e817c5b1f3765f000037b0",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "1bd0a112a6e21d2eda16d9ae85ea9527e49d2cbf856f8e6223bf5aed10c232bc",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "dc26acdf4c5777ec96d56a5d8a78cc5d6ae4af7868ac63319d3af08fff3844e6",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "c08944ca50b59374087451266bf8ff03ae10de8023b938600b02d7fc3980863c",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "b82d89c3286e7b487315e50123bbc3b3da2351e675557965876e4fe5c3bafd1b",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "12087a5fb4c7ed64adb5388242d20cbdccd6045e7ea9c79a61a80284aa22128c",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "9c9130afb5810830fde87180a059ec9461f8b3fb09dbee097967148baccdd4af",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "6da17bea224d2e8b69181c7701e0d4eee04eec51dfe2b996fdfa41043227c55c",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "b1b91820692a0db965a0904fc90a1a5c71fdc475c93737edffc542a6dcf533a5",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "4c7911d5a5912af974406380460be46f8613bd006c7e7489ba7015cf83c1e73d",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "f2c7f1b6fad5d8a3e236c2d79c9e0b707d77ee1ae20185973831fce0e9527f25",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "525d2a33828966759b2621f08e016525dcf71e22af312360b0842a998f9bc762",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "0a6dd7955444ed81e6131227729bc9ee9ca39b91fb58d8f35e6692c132f50bbd",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "4acdece95cbd579a2d31282931b8a3c85a72d0c54012d4a79f096240bac281fd",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "55608b3cfc478bc001c13ddbeab6968546fa852d522704b0e7a86e1b7fa9f243",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "cdf89af64581ed0842f058f6073e538f759fd483c413cd2202d8173c6cbf889f",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "aeaf0fb0fff0b0d22dbdb037777e8421a652a8e0e35b54f660ad1bff2c5a048a",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "6ffcac189a52b872c36de62ba3a457351af84b3949275e065f18bb8fb1b1699f",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "2559b1fad8feedad602a18275f88964bed08105477a675c1c0552645f0f683f9",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "0ef3ea9e9442c50d8243055413957318863ae4eddc1b7fbf7da3a7b5046dbb8e",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "caf9eeb0fcf3eaa24440c939cbbae3746fd02b5a883edf24529bf646da482cb7",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "637cf7a89aaf7a7caba9ee968b941eda8e9ed1aa9e843a4464fb5112fa500555",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "231e90fb48fc55230107bcb4f9af637b78dd4590fdc9bf97d82cec59668a5c9a",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "1d03f8de86e00992bb4158293c0ca942359e85324aefe1990cd1866d5b550294",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "b1bd6c8a856bd66a894dbfb4801aa8c4c8d4cc92160a4f5231b92167003b9178",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "3880bd50a79ee3a9b182878d0cbaef7409dbd2c2ed0140969260ec3091dcb0bd",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "8c5314c7a89b2cb42af2c5101dfb899e331696bc69c649cdf7c4814b5cfc6f6c",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "5cd6a4b4793e8430720b05f60825cfb6e77273224921db0ee176f457cfcb1c78",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "46a49ba200445994286ed739295061b5040ff5cda1ea45ece2836a2a5438c6e3",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "59b3566467fe82dfb63572923e679ce06fa81e8ae0a61efa4a12bc4cf4d42d89",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "d83df294d48bce553d0159881a33bc940ec9a4a4e42ac2edc062085a7b2851f0",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "78af360f488dc4ceebddea39354cb6fa5bf313f0de0d3b914d99f71d05d7c1f9",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "b8c2b0fd6c5b7dc54caafbbf6357943061243a6f6c900366ae05b6eb5d19ee0a",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "68410f01c60f7c7f9b929a7d5a9899f4480a46b94f21f7878a4c79f99dde9c00",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "cc3abd625bdf425d2e8d7f09e3bb42b698d31ed39401c6986bcd6ee8c231e7b8",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "84ad661ebf96c3a56ded37db9d886f5c3f64715414acb94961d24440b91dc267",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "bdf5fc51aa7b7ad3008e58d24f931577b60105d19dad1c4e488483ed4ceccb49",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "a939c28c6aa85a1606c104c5c0c4235c474cfe8b09e2c726e6ea8f663ed5eb89",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "cd1c0fda560e344190c1450ef126f7516cb2df24e0c25ad2fb47918e4959afff",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "b079ab34d2c677ee931ead169bd8131f494fe60ec6a120cf32daaf0eb1e27ee7",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "73a260ed405cffe2f05ef73820dbccec8c1485abeadb1485fde4f33913f6ab57",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "8c4a52b2e7f9489a7aa83f99992c8b77dbcdac5c0ef919546283c932749bad9c",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "04032bfab82614f9772032087d9964e6a993e0a6ee56cbb8f3d403e473cf0af3",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "a5e46affcf366119c48c4704a526489b8b69c44faa9dcfd5779d8fdbdfa69882",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "c224ad9a0c0e8f04124b4f347deb956505184283ce3631fb933a623b497e3df5",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "62ffe31c252929da1e1a3089c15c39cd5d7693d268b012dbf69b4cad01032621",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "760ba40c871b88469e3a0287e42a6464ed89e689e7537c2ed4bd5e723a95bbd8",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "45bf05ade8c3c8d66b80eda45e77fd322042c0dd410f50f7f2189cc7ac4d2f48",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "121727d13b28880a99ea9beef02b2d05e320cabf8024a305d02750b60c6ad68c",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "6d5c967ab4140767ba6e98b1957918615abab1fb557fdcc64420cb064cc8a2f2",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "1c5007bedfc46e10e2ad46ee9d40148bdac08c1c02c661f58fff1628470b6e57",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "600f9d401668a0b07bd5b302716b8225e9e2be9a578d7e39ff708fd1e5c0c102",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "461c830c0eee43d985314b641934359348caa0f983bd0dbb517cc43322d6e1b2",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "56a6e60951987c4c13ea9be1cc8e24999c6024691e87d7387f5b6cdef83aa62e",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "d8e57b40d3a5ad47a2394c1df8f75d85fd7090f5e6ee713176da5612de48dd37",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "661b331c94c94438e524441a2a92caada178237c16762595c64dd11b8fba747c",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "d539236f08b211d8af9111de496d7f4df164832dfc976298d278bbb01c0994b4",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "9ff736f4e2d887553d0f48d2c09037189df3f41424e1350a2e36e39e600a10ed",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "bfa9f21d82ffb687fd8e1f41e967d064f8caec8591f5d228b5a3bcd21ffe79e3",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "fbcedb5b1e8ffd21d2326563e84ee6028e27807f6037c879d85e33436862201b",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "86cb655be6fd5b9204e77c334fd325413c7043a380f3601dca09192c6cd9457b",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "fca7aef122c3f500e9b4394736dc9382bedd7c00f30e1a2700f00684034431d3",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "ce77639b82147a06af345c68970ccf8cfd8d077fc8114b8f14dca134e416df25",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "657d8971b60f180216200e171b1275c044f69c4ad1f8d851f1ae77e27c75ab12",
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "e5c3675e7597869f64059128fa6148a175a81048eb39cd3b1d5f850def10c2e0",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "f518cbb46dff542e2f7e32496d682804bc414d8b1f6ac791efb2599735726313",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "17763c29a087d35a8590b5805b4c5c53a1eb47909fa4bc211c57844ff8d39fa1",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "f1272085cc203d95b2bc802e3813b54cd33d9f2e074b8c9d5314ca890040985e",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "2bf6cc5dc0b992cafb6e9a1ef529b5d76d5b5b4832f4f8c5d8b677cc959242b5",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "516df384113741b19f98b46cd83bd8517daa0a2689dbfe583f990788ad06fdd6",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "8f07d347db5ba4577ccdc6fb944e91aa4d19b26db69c4b144828527caf430692",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "ed7668821a4216c9fc8575d66c419fed87aa43dd9e873ba7d0cf9e0cd9a67238",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "add7a2062d0cbff397fc1fa65e499e18e799aac7aaa059e26d7eb0827cbb0016",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "a1398ed27b890ae25ec1667d607b9b1b2722f51774c791c170caa3a20dd8fd9f",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "552b617e5cf3c21264dbea0b4945b8e22f4e9be6ed0794c8fc62b035815e7178",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "31e5db8edd7edb39b8a36b796c538ecb726c69da9d403ae03a597bc1366730c6",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "ebbb31b27bf81de85764fca632c4244b463c043f2d61aa6e5949cd2188f8acd9",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "a17e6a9bac5903161e4e506d29a92e9efc071a8fcf3d6f210654d585bc9aedd0",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "5f37db62098755134ca3a7b71a0a7538b03a81bb6ce717d418f1bc6476a98eb1",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "dbc2fd5e8615da35381bcb89b6bf1500eaf25ab084769226d1eb474270ac1b11",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "66d0a5fa70afd8d6262f3960869bb089909ba34a129401632d7704cb5ea29bb4",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "aa969eeffa1836cebfdad20c6fa501454374923aacba3527339855112f124f20",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "a1c7773a372b5af3b535a976708f2a010cd19d7a632cf1bfc9077f07cd659327",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "ce008777231ae407803206a49d716573db6996dfad9e708b795a6926a114540a",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "9b326f7888c6cc3123655607225521cf76a6b5ee3f66150a5c82f82eafed572c",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "72c2e5271a4fa904dd5961d739d2fff6c0b0a5e933153a51db44bf8bb4ab6026",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "c09097f17a21c63fb47894657b51786d979e07abb4e235d83a18cedaae0002b8",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "03bc147bf0d2d7619461d94031f59e990047007792dd00cd5ada8c08e30bd3bd",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "ce33f38dd318e4cf8fb8ac7f4a058a0ae6a40635ec4c8663185fe5ff2d1fb5fe",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "a751ad0742e8792bd8f8ca4d4c5aaecc995ee410816f12d838cae6ad0655d594",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "314c596c7f4abf1aab85a3e8713acb49d3efafcb1030b0e3b6e6c62910d61882",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "bbfafe4c74d63e89eb91c587fd0e03e97fac56f219dc1f53d24b922bd50f0223",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "d66e77aa2bc9d5689806876d4eb601b6fb3d2d354b0740610b1a36aa0adb417e",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "6ec83662410c65012290a12a9255f5001830432dd92baabc630166180533edce",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "5d9b56beab1d9cc9f2076e5fc2012a62f661a889b03fad126923cb2fb6aa8cf1",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "e672aeb9097c3b71b0380b10ded8db556b661dd0468c64ac005d230af6687d85",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "0c1b6d5eba454676ce24f89dbc664f3af4a2c9882bfa568cfefd1248652c27be",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "bcedd15a65ca98202308dec9b79a6dc9a1123b3d6e29c4a7dc81e880aa169e4a",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "6c84ab3aad2697f5a36f645f2c4bccf697345fbb0829cbf051cab079ab6572c1",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "ab2f98c75d35cb13f16370f3d0bbce695904a892f5f02c131cc5058417e3e6d4",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "811f451b8a1aec1ec916e4fb2d574dbdbf98c055f983bbc6baa4f0ed8affb5dc",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "613a1b78416db2d092045903c2ee502c371b8b40d25cd6e2795b105aa385956e",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "38aaaf4f8c6f78caddd014380b46d95b540bacffb02123a6929e9c0e26673b55",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "3063c218d48e629761cf17961c6f9cad7c6503eb093af0fced591a3404f5553e",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "de91cf7a598a6940d09ce404b78c6c02fd616837b577266ccdac3c4b8a3b7f0e",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "aa015fdf02a57963ab9597c06bed9615e17bbb2eaeaff3ee1aba96cdb8d43ad6",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "9c8b985f8759c43552c55e6296181d195e35af1354e09d201627281f8d268b7a",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "99a2652826e42f93685d2c62c020e9d98386b74b3e47454d0f545f5c97b978d5",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "e0feb0e959ecc6c29df54dc3656594c37aa584796164a6050259a3fdc69125ed",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "cbb3c4dc895841c19685458126fae0c2d3f1bafba2ed6becbadcb515912ae741",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "df90af421943c37668b7015f3a51410c00598a09804823bc426f67987199e60c",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "622b61b1fa70c2df3d35b66a5c5234275928498f6e779405e67b441eb0fd7654",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "4e3680ac413cde06205ef6f15b09e2f0486ac6610e07b7a1e06b27e7c36400b1",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "c2b3c51d4cd1efd0a7d17862b1f395604ed1822f942b0ec2282592699a9a1ff7",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "bf04da1ca0b94f1976aa260cfaea3677796d423d24eb3f74f840f8086151138c",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "4dfb72a637bf8a07b85c23375ab3f56a71936dbfe6df98d921fb7258c6aa9fad",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "a3720befde5548789afea8301f23df7bca9480117824f1c4980f7648942f05e1",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "962fa983bd1a46530e81e5b9ac772ae711d00fe6d92c16c28b86b16682b7651f",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "b1f0d68f231d4cc0164c1d9024a40ba4ef96af5e4a67fa54b3c9b5a31c369988",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "a006b5e96b526ce1b70144ab44beb0cad253390628d3b1d947742eb814e1ed58",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "32bbac3b3f13650c53090ccabe83e31d0b85a179d094ac09d442ad2e131d83a2",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "e35cf5f53633488e6e446ed8cd91b53d98fdbf154c1b36b4a0ced6590491c254",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "a2397cbe6a74d24ed8be0f40bc4efeb4359325f50d706de1188e3d315dc77541",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "359a9024778f4c40a836035157ea733d717595aa93e2aa48c6c967843ad3bd73",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "3d1953078bc215c1f134dad3c62ec915cb484e1e19c3e6f362c3eb79962a9bec",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "e05ec9a5c3d095b7ac12498e54e6869afedd02f03f77f3d909792d8ac497965c",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "7edf38a318b5a9a014b23bc475c618068a350ff0f255a70b622d1af8ea8e9381",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "78de2d8fd6db5bb7b7f3da6791ddbb20300150ed008f665ace3f4712ee4fc436",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "3cb8314a8004dff598975fb8d5e793cdfa98f5792dd97215debf1743561fed12",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "c350072c3748d5e0fa40d62f44b9a0fca7089c2b896ae00c0d8e480045f3c7b8",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "05cda90ed31a3a28c3a798e17a166c9cd642c8fe779584ab994e2a4300ec6b79",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "65359f3186f45d07aae3a1d85b394707e65e95d83d77844f460020caf65700ae",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "617b36ca84bbe412009979e0abb443c137dd5f2fc4c2e303238f0685c6523230",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "466e86df8321a2aebc3d9f8919082b44c8348041768d1ba486d479d487cad2d6",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "16fa8cde1d06d6222a6530fc2cde0c283afac632f228d208a07fcb997383baea",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "01e714a7a3ed722bf4fe4568c3ed158df6c6a1a437779b3bc1555225f94dc3bf",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "902712472078144bacbf815dfbb31fa5ded3b6839718eb32f130fe89bda4a750",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "4094cf85cf749ca981f4c3d9c902fff43ba48f42c24c2ecc6ecfc6644ff042c8",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "f1b2215f39c5e1bb62733119d47a06104c9a25553048907a6bf5d42e30416b10",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "f98f3defab6476b2dc517f899150f1223da5c7fce1701e6f3bc49d8073ecf71c",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "6a3d3c3ab9da07ae8e9e976360a3cfcb9557347136c55d8d22680909cb056ac0",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "9b9891b3fcf1929c74ca5d2b05b49f58c90e4fc5bc724cf22173a4982ce2d4eb",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "30db22cebc0fa8fe04c4c5dfd225864cdd3c1c05a3c1e7cefe86f8a1fc8b8de1",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "ed5b4d5ceb6f0eba50bcba97b75507784251aab4c7fb914e081199a5a4ccae2e",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "b038b80801e4a5abd61c0ad1ba61b6b832f7b7ad65de0621121ca5bf59ade833",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "4585702d2d8bf6b1b8c414af8686109a005754534cb82671f72d777ec818e40e",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "a474bb7299ede6bbee8a879ec323458e3af2eec88581110fbdfa1c6425e683cf",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "6f7d2f8476f1e458fffc83e10f3f6df501bf376dd38e7c3b9eb0fe789a5009d3",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "58059e818474597baf880f5090ba398587c5265c5cee511c20cd215a46e3821a",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "469141fb56d6215df27acef43c0f3145ee47e2f15a3ddd1770e792ff1144958a",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "1bd946caf0df4f809ba33a18bf12c5055d396ae2fc21223a8d709820b1b4f477",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "82cb08ebdcb0e3105a3ed52b95cabf1613d3a20f974f607ad308b6047f4c6c9d",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "b465c8c9e7c79a5d16abe5132f1510648ddba5c4198d0887fd4ddb120c45bd17",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "9f67d0513e276651964dbab4f8a2617a0904e761ef6fcec4ae766d4f6df3796f",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "58d6c91bdaedb2fb6356597299e3db3abb64ca31a93f9004b6b5fa1925b6e9dc",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "75e4502cf651fee71db1c56957364fcc85d9a71bfa894e28215694b346b22afb",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "2917d8fa27905617a39d7018e1caddb7b08c2d0c3c602f0b39d4f03c89d84ecc",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "aa99ec78104833ab5ca07cfd4d3f7bc47b7b0fbcc8825a195ba8d5a13fe4ef75",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "e23df9b68655351f5ab3edf2028da12446a8a2760b32f654fca6e296eef3861a",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "57a70e3aa04d9c34627b2d38221adef3aac1e47162e9d62c2c9176f60fae69c4",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "df78450a68f1fa31960a64d81e777c23dfae99dde87d467b9a2fe47417645a28",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "741ee4869e357748d24f2f1c2688143d5615c53c442da6841b5748d44c5e81a1",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "f21f85a367f4cc1b5338068c2ba412d5790940e93b39c761d5eb9296a567f758",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "51ad2a835591616a188e5ce9736d81e77907cc7384709a3ad8de3307f2083cf9",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "536ec0e779501d8d74e4b617abb8c297724466f6bd26a619084cf4ec7d6c9cbf",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "efa63d96e23af4c1b29c9f8a747e5976848d2de4ee34e05ea8c1f7f78a7bb908",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "20ab0fc0eac0a5a68ea35b7c61ac18ecd9943a562010df8e4c088979f66ec7cc",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "a929ba5b36b96941e3e3a048bbe43f3db45c3f881c2185d1bf368f1b290a28d7",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "d5ec0d0840e7bbe4b7aa913fb3732c45854dff00cd4896d02c4013cd6ab21ac4",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "6e0ad3eb8484a649a1f815b14e3e1925876302c72798f880d53425c3c677be39",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "84af7fbd23c8a7255317736cd83b4b1482fd060694f2e892dffb886240ff7298",
     "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "51011aaa2cb07974b3abd88b73bff285f7706b9b8b48a3ab9f691e04b187200e",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "8a380d2bceeb8665bfc57e8a8850259adb53f38b9ebb7a69de1cf1479771d7b5",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "f272ad18cd128c3104def37f626ddf4eb2f289ff8d6f615c86159cd04c4eef5a",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "a72dbc71ed808394415211c24b4e6b772709682978d656dba39a91f191cadb51",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "2e0019b0aa33b57746b18cbe13fc37ef20276429efcde4051b1ed8c8c8c44151",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "5e742a14a96373e511df79febe0ae00b926412583d51e71322b0ef76ea1f0bd4",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "2d6194f6639d37c4aa48feab5d92686a103c31ff4c7f5c8145871d69c152ba40",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "40c129ff2fbe394086d2a09e2d1448a789bd1ba044b70166e233897135df92a9",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "5eb2fdb96dd44e513b327cf74c05fd7942a0312fecd5f4a2f0478c19873b404c",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "460ae154bc1ec74071b0736b7c99134b1e5dbda60b498006b2bf006f00bd46af",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "ebae63780166b11b8c98641e92533c369f7cf1800ead0fb9d0b8b70bdc86abb2",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "b1ff9bbab213703df525ddf7254172e7acd067c2aa4aaa01aa8bcbcc9af52084",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "d4b16437bad2073040a1396ea4237aa3f2acbaceeeb4eef11b472ae65b69b7bd",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "06f0491025b74b16b875e1ec81e1275681fb71d4867d90f164eeb46edff0f986",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "de50b433930fbfd2cc6c9bc47ff2211dea88e481a14dd9b3aa8e1d9158956c71",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "8530606c51b612a84fcfc88d5b2282f54b30bfd4d084147d91eaa839e081d427",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "4aee852dfa9d2777ced8b788d37b5e14ec13e2889fa2f7898c0be64476c679af",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "f2c72be4cbf76dc69f824814b26e2f8bc751be11a84f8b02b5755b7d07e1adae",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "352bd942c21311fcf4c1006a04b80760a7b0fed4dd88a93cfbaf80240ad3a515",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "17b1d2c98e0fe28e1c964f4513196f538a5c933a198f26e77bd8feac70505135",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "36705df9578e7ea725350d18ea0d11d6de22c3e1b7153bd9d331fcaf44fbdb41",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "be52159c38f6848082f77f1f20bcb09538b2285d999fde4a932e79be1337376c",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "293389ef09a8393c9d1b576490200153e2a9a50c0ff68c0ce31de270822963e0",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "6fe01e17dc732938a5975e30dff2324671cc4e326703aeda304ef84058de617d",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "82a8ca02fda2115550c9c3c120e458d61a15a2d4e5d22f464819c628b0767cad",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "354b30a9b44ac580406a4dc0473fe28891557bff91462e0fed6261731e96c6b6",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "ac6226398e1d06e1d511c5a05926743f6279ac3dc64b10906a211931dab88ea4",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "5eab564ff3a9584d6c6993666c45b98597bfe25260c546c0444cc59b6a8aa3f8",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "5c47115f17e7ed6333b4fe64e673d53c7b01c8a1d21478b32564b29e264142c7",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "54b01b3f000bfc22abe74d1697af53e9ddaeb0cb6486e45be4410464b40adf6e",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "a6ded90f7c9d32caa6aad65a52ef547db5ab04be05c81a8e51a2d773ec4001c7",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "33871fffd4f99971ef8b7f474ee4e36cc19df3551015b4f6ca5ef9f5f0d9b4d6",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "25a9ea94cea2eb7840700821d5bb8bba8c46efdf6dab808dd230efdc90cd33ac",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "a546a7864f9be459534767a5861903c1b28098c4a3fede5a62f952c6d92c7786",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "7c4c1ce6090baae015140a93b7d6250d851dd60a3747263b4862d42ad9c8ee02",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "ba5b5dff863501145d9148534808af9842610b25ebd74b482d03a62586b228b1",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "d5f8b1bd2c8e55941ac97e208a22ff58fbd12671b76af4f223df4ae564f1d8a3",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "1ade2729ef8d08bceead545b1693d46da9b676081cb480680a35df2d8b21ee63",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "e622e7744b773969541833fe856b38c0ae2e7a7913e61f2fc202ba854fc0a1b6",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "d5344d4d3a8f7af7101980905f6acd4e5e84185a3b3a37e1da1696a39ea7f73d",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "39f4f27124a6005eca42076869c87a9be3f59325979443d92e3be02ff189a60f",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "40e527699004c8b39da33e0917d1e37c3111ad4c45b16b6c8f67a7a88c37368f",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "cbc787a6a0b8d4272663bf7f1acdcdb9f83af2a2e0a433950f42caaf7a0d4acd",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "d2c96130ef03605b2d8edcd5d2f33dccd3e1ff22ce5c54c0950563fc9a17773c",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "ecb40e95fde24e4912b5877ead11abcdaae35f36f1a859619af157610b704572",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "a6294a55f90fd4088bfbf66826302d2614be4851e3a3326d01a27cdd65a0e29d",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "09fed3d5617bfec6ca08c56d5de4a99f9fe3d687459ea6b6b88a59705a173009",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "0d22c654024166372407770dcde19106672eb5bcf6adefcad9c5260114874c5a",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "390c0ed2d4f93b4b50458393e153e49beded1d2fc50289df4aa0e7db7b604753",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "325364e42b1280133a2cb5fc2ba45adadb836883ec011086cec7351be4b0534c",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "7b3f40178aa82dd4b8ac0c99b820f33b0651c8c04e9ea1e0d10c88749f22788a",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "fcb4fa3dab3c46bc2e89d977396f3bea730b9d8d66abb5334a9cc4869a79db84",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "21befe66e137ce278ed57bd17f1baf50a8dc6b30ca67feaa99723767f28d3aa8",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "abeaea2d5f3e89182cad39370b36337cb2cab62b9bec36ad5477d4513ed8d09e",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "f5c2a1c949199a22023578267b003bc182b26d8231efa8d0eb90d3545c13d75b",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "78b241715734821418d242bf2e774c9258f452f6d11b1b65277be72352a4c08b",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "680eb7585f8ba1ff34697f766d922c5c060a7a7e36c861fbc6cf82263acff053",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "3189e8b54e9f31ceecd30136328f415fc4872f97ac1d116a0fc05b756309b1f6",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "deee5f2df3276d3ff865e38122710ff0fee1a89513b02e12579165a55dbcd3bf",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "4abb633a9ec1ec43a422de595b678f56384a172991d744bccdf3a6ddfc1406f3",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "e7a0c1072af8588f3cba381f9420cde5371a94ebb0751aaecfe90ed383f041d7",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "7bb697b3123726b158796dc15b36021ff94e9d5f7e284211ae4c90a476267bbc",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "5a20892b2bb39f795797ce2f727a6423f8e118307b500b6f73ddcefdda777213"
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "5f5ff30f02e2f76b973499b08685853e94472f88412455dd85a2472ca2481072",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "e9dd6fb8ff200902e9152538c4bf3f76b22b12d074da3e3d71ae453dc87abbd8",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "75570c568ca932e70f4c132bd4ae52ca6991e5484c89cc005d99425666af31f7",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "750e7e02f61214dac01d725a2507a76cb92a63b40b09ceb192a02dc326ea44f0",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "49db5e189c9301decee2c09d6f023fbf969c8f77dd9b185f5ba12be5c435a085",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "bc60a936bac0b6db1848fe6193081c191008fc6cad58ae43a261bcc596750a0b",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "064517064832d6ac75308f626d448ebda7ba1e6328b473654de5684592e89ed6",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "b88d2201c742daed10c15ef809d99bf4be2d3febcc1674b77c87fa85d78161f8",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "96cfc0697e8308c171ef750f31d993e6a05ead41eb48364a1a315fb9c9304654",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "fb877c1157d90be2c3f384d4ffdc0522c0f29403175a7ed557276d4ff644ab34",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "1672eb55884bbbd9224f7b8aefe35de8173669e1b69472c72272e4686c7a3f2b",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "27edfd682ee60e0304f350a4348f4b553d30190d01f582eb4f1cb127002676ad",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "fcfd40a38b6b162ad38e346ed0fa482f4fbf43efdf66ff26a21d379391e4a863",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "1256378514b682095dfd2bd50428b4e3fbaf2e1fcd36d90671131346ed0bab5a",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "34d0b8177d0f148be316c3c91f353fe9488f736911d25fc037261a165c5d9133",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "1ac9e93e59cab5cd0b92d566a7a4f714678e9442bdc5d17141963d866cd2ee96",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "b224f51b14706af997fea4a298df6ec9520a29db03de12508ee33fb81a572830",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "1bc06728b4931ee6379f8f4e2d076c9e1c5411edc7546553532f4864b5fbe88e",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "1561f6b1b95379a248b6cdb1cad07659cb01ba2e7f485bb104f470bed57a115a",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "ce8b6ada26f725ca1b4aeee73b21d81a8037bd1f697a08a4375b57b774e3c589",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "f1b61d2414e7a0c438727bc1e2d8139b35ab19fe8cee9944c04f0c3ee5ea58db",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "91db90441913a490e2fb222c80b14be6920209094a377a81e8fb6e80a0898652",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "bcccf8d706a0050500c992de7578cf43ebe9617387ad898761747437a686922d",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "4b23f869756d3e4a2c7e883caa168a65eb07885308aa6a5451e3b5dda64060eb",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "db9bdb5d93e2b614bb58ef2fd202c41d799c87999ff776d98e42b487a6cfa087",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "7e2f98be3c4de25f37be3266069bcae68f24695e0000dd4e550ad878402ae8c4",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "aaca208c7ac5d46bcce98ff53c49054a97bdc6875f7a99413aa081f8ff2a86fb",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "96b1124005dc8014423b2399022af2bada6a0f85d33d2e4e13577332c60e3422",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "2fe4df2ee92c06ca8813415268a69654be82d8e3010e8e88fc06ef17fd71b219",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "7b765c9293888bb4d21a20c104049235505e9700ef25dd0ca4e100ada7169e50",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "0881c070f4e094da59e53c4c289d0d66fd64edd8bd7cec1cd399f04d25ac31b1",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "34aed54b15f8150aa2383b8ee6299671dc248294b7b1bd52513b4d1aa10970e2",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "be9332699054a2648d4915deb5827be8b0210351e625b2e2e9cf01537ce51051",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "69dfab15ac4f1f41d19d4705464549d549c0250b5223906143635961bba9f37d",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "4aa03366d2da324b15a34a9c625908490d6c62b10e5e6dad66163d5297794468",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "1b1d09be0bfcd04dca596f5e1b1d929fcd377552500ceb25ae880ad2a14b3447",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "0c076210c8f409e2c47d8d957e6357a1dd51bd36e3bc0445b337112ca6044c65",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "09368b7729194e5f6d94775acf41a788ae4dfc559edefde57153a949e478a777",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "0be774fab08dbab0ed20e3894dee6740bddfa8389b8ec3985335859246d82d91",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "4a19c7528714f954cdc3dd7d371b6a09d284ce356d3eb26f8d91f3c8a67367f8",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "76dfdddd848977beaec9dd5a6f797db5382121542c42c9622b6dab9721817add",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "3f0d430885a4d46da579864534791593d2c9ecd1e7a6be5dbb36e59e4add53a2",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "8dbae31e316ddd38189360363e8617d2077ef40f90d62156a569f4085c18da81",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "d41d5ac5b6b8c38d16dc5b3d7aee18e622e331f46d24387b0c8a0c23abd73304",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "2323ff6233b35eb930ab108ae40657c4b364162a34ecc5df725255dcc0c116c4",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "04c53a51a515d94ecb9eed0dcc4aec706a14889b61e6272eb27a8df128646529",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "cef69b20ef8a62faa2f9eb59c5150ca57676ede3c2fcf2e3140c9ac76454fe02",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "0a67ce96fa834e17561d27b3f44f11342464314aee4f50951197f4f294963de7",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "164bef9790bf2f01d54be387a16ba93987619544a7078801e9eefa029abc7aab",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "618bed0c557fcd34c1875ad5b612ddf44bf185ae29d8a0a7482e77f9bd48c261",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "08d9b558ef7a9768b02c6abb6e0c9a6ba852b9a7fc188110b36d09a26373076b",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "168a9aec4250e3d726a460bf9743642ab055e1ea735f317a970af0a3f0cba4ee",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "c0d9b8a83a1def8a8e2938124381c6513b5902e0ec75d1c8b5043c8ae7e97661",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "97d649b4160d46102a841cfa44cc313416bbc9b8d404fa5f4f87ecf175f00ad2",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "60a6eedeeae50a88c6d8c889076297fd3eeb7eca57eb71b81437fff2bb51d6c5",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "682cc8ab8e10487a9f69431572039efca3073669bd6a08a3e8be7663e513cb47",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "9d4a2b28ec1be4dff41cc9cacdf0395d5c0ffd85db73814144af9fdf888387bd",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "fb6930a1ce8ed9e5c27c96b87681741999098992ea6c0a66d6c77a4db84d3e74",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "559fda4f947090bebd9f11ad6fa4caea98789e46dec6c0c9649621d4db2ab197",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "bcd7b2cd94c3f8902feb1f6757819917f19c12eecc574b0622176312ef3a2730",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "27cfe02dc199f1df606397162935c48e43d26167ea8c9734cd02d462e41a76d8",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "edeebce4c6c00a4e50ed577deab85a45f1f42e8ae85c0679e600f4164dbedd11"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Kuvassa on Yhdistyneiden Kansakuntien kestävän kehityksen tavoitteiden logo ja 17 yksittäistä tavoitetta, joista jokainen on esitetty numeroidulla, värillisellä neliöllä, jossa on kuvake ja teksti.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "Kuvituskuva: Kuvassa on palvelinkaappi, josta lähtee sinisiä kaapeleita tietokoneen näytölle, jossa näkyy verkkokaavio.",
+      "attempts": 1,
+      "caption": "Kuvituskuva. Kuva on luotu tekoälyllä, ei valokuva tapahtumasta.",
       "classifier_output": {
         "category": "Kotimaa",
-        "depictable_scene": "YK:n 17 kestävän kehityksen tavoitetta esittävä virallinen kuvitus.",
+        "depictable_scene": "Selvästi piirretty kuvitus palvelintelineestä ja tietokonenäytöstä, joita yhdistävät verkkokaapelit; näytöllä on tekstittömiä verkostosolmuja.",
         "must_avoid": [
-          "unrelated national flag",
-          "unrelated city",
-          "identifiable people"
+          "tunnistettavat ihmiset tai kasvot",
+          "luettava teksti näytöllä",
+          "viranomaisten tai yritysten logot",
+          "humanoidirobotit",
+          "valvontakamerat tai biometrinen tunnistus",
+          "Säätytalon keksitty ulkoasu",
+          "kokouksen fotorealistinen toisinto"
         ],
         "must_show": [
-          "Sustainable Development Goals"
+          "server rack",
+          "computer monitor",
+          "network cables"
         ],
         "search_queries": [
-          "Sustainable Development Goals",
-          "SDG icon wheel",
-          "United Nations sustainable development goals"
+          "server rack public administration artificial intelligence",
+          "computer monitor government digital public services AI",
+          "network cables interoperable public sector AI systems"
         ],
-        "subject": "YK:n kestävän kehityksen tavoitteet (SDG)"
+        "subject": "julkishallinnon tekoälyn käyttöönotto"
       },
-      "credit": "Photo by UNDP on Wikimedia Commons",
-      "depicted": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
-      "generated": false,
-      "hotlink": false,
-      "license": "Public domain",
-      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-      "local_path": "media/082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa.jpg",
+      "credit": "AI-kuvitus",
+      "depicted": "An AI illustration shows a server rack with blue cables connected to a computer monitor displaying a network diagram. The server rack is on the left, and a wooden desk with a computer, keyboard, and mouse is on the right. A window in the background shows green trees and a building. Two potted plants are visible, one on each side of the image.",
+      "generated": true,
+      "license": "AI-generated illustration",
+      "license_url": "https://uutistenlukija.fi/kuvituskuvat/",
+      "local_path": "media/2a484f1308c8cc7bc41314bf9312f0239201834f90129426c4de357fdf090268.jpg",
+      "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Kuvassa on Yhdistyneiden Kansakuntien kestävän kehityksen tavoitteiden logo ja 17 yksittäistä tavoitetta, joista jokainen on esitetty numeroidulla, värillisellä neliöllä, jossa on kuvake ja teksti.",
+        "alt_fi": "Kuvassa on palvelinkaappi, josta lähtee sinisiä kaapeleita tietokoneen näytölle, jossa näkyy verkkokaavio.",
         "approved": true,
-        "article_text_sha256": "c9ebed6c6020b1dde31bd178d4fc2d48d97f9a12c7c2f925486ea08892d2307a",
-        "description": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
-        "image_sha256": "082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa",
+        "article_text_sha256": "05cabea4ef5a4bcb991fc81d70bb19b7302a1378bae9e73adb279b6522099499",
+        "description": "An AI illustration shows a server rack with blue cables connected to a computer monitor displaying a network diagram. The server rack is on the left, and a wooden desk with a computer, keyboard, and mouse is on the right. A window in the background shows green trees and a building. Two potted plants are visible, one on each side of the image.",
+        "image_sha256": "2a484f1308c8cc7bc41314bf9312f0239201834f90129426c4de357fdf090268",
         "model": "google:gemini-2.5-flash",
         "no_people": true,
-        "reason": "The article explicitly mentions the 'kestävän kehityksen tavoitteiden eli SDG-tavoitteiden lippu' and the 'YK:n kestävän kehityksen tavoitteiden'. This image directly illustrates the SDG goals, which are a central subject of the article, making it highly relevant.",
-        "reviewed_at": "2026-09-26T09:32:41.430297+00:00"
+        "reason": "The image is an AI illustration that meets all specified requirements: no people, faces, violence, or readable text/logos. The visible subjects—a server rack, computer, and network diagram—directly illustrate the article's subject of AI and its implementation in public administration, representing the infrastructure and interconnectedness involved in such systems. The image avoids invented documentary claims and provides a concrete, relevant visual without being a mere metaphor.",
+        "reviewed_at": "2026-09-26T09:57:33.691593+00:00"
       },
       "pixels": {
-        "height": 1600,
+        "height": 1024,
         "mode": "RGB",
-        "variance": 10423.3,
-        "width": 2560
+        "variance": 8273.3,
+        "width": 1536
       },
+      "prompt_sha256": "f3d770ca6db6a851a54936254c5796e45e9c0945bf6ff4d492360d6f8bdb9719",
+      "prompt_version": "imagery-v2-safe-scene",
       "relevance_check": {
         "accepted": true,
-        "evidence": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
+        "evidence": "Selvästi piirretty kuvitus palvelintelineestä ja tietokonenäytöstä, joita yhdistävät verkkokaapelit; näytöllä on tekstittömiä verkostosolmuja.",
         "matched": [
-          "development",
-          "goals",
-          "sustainable"
+          "server rack",
+          "computer monitor",
+          "network cables"
         ],
-        "method": "vision",
-        "reason": "all must_show requirements matched"
+        "method": "generation",
+        "reason": "generated from the accepted scene"
       },
-      "sha256": "082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-      "stock_provenance": {
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Sustainable_Development_Goals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "license": "Public domain",
-        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-        "photo_id": "wikimedia-52672594",
-        "photo_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-        "photographer": "UNDP",
-        "photographer_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-        "provider": "wikimedia",
-        "query": "Sustainable Development Goals",
-        "retrieved_at": "2026-09-26T09:32:41Z"
-      },
-      "stock_provenance_sha256": "e48aca0a3c73b175298a2bb34ea3bc9fe8e8f8b7ba85c1c5f99061091b79f3cd",
-      "url": "https://uutistenlukija.fi/media/082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa.jpg"
+      "review_note": "Tekoälyn tuottama kuvitus, joka on rakennettu luokitellusta aiheesta ja sen kuvattavasta kohtauksesta. Kuva ei esitä todellista henkilöä, tapahtumaa eikä tekijänoikeudellista teosta.",
+      "sha256": "2a484f1308c8cc7bc41314bf9312f0239201834f90129426c4de357fdf090268",
+      "source_url": "https://uutistenlukija.fi/kuvituskuvat/",
+      "subject": "julkishallinnon tekoälyn käyttöönotto",
+      "url": "https://uutistenlukija.fi/media/2a484f1308c8cc7bc41314bf9312f0239201834f90129426c4de357fdf090268.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "vantaa",
+      "provider": "valtioneuvosto",
       "related_sources": 0,
-      "source_fields_sha256": "a2015aa98896e22bd61baf649379542a634542c7a20337b03c3554998c712491",
-      "source_sha256": "ff30f39a77fe18469c512ade287a55ddb20d0358d582452f630088c7bd78332c"
+      "source_fields_sha256": "edeb7a4adf363d4fad3c25fa12be89e6c3c3a4b71089b93fd6553361e1a6d368",
+      "source_sha256": "692e9dc90b9b21070b8023444eda7064957e769478af984a22de36d5d2ca1914"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-09-25T00:00:00+03:00",
-        "publisher": "Vantaan kaupunki",
+        "published_at": "2026-09-25T12:44+0300",
+        "publisher": "Valtioneuvoston kanslia",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
-          "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://hri.fi/fi/kayttoehdot/"
+          "license": "Valtioneuvoston sivuston käyttöehdot: tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan; aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen",
+          "license_url": "https://valtioneuvosto.fi/tietoa-sivustosta",
+          "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
+          "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
         },
-        "text": "Vantaa liputtaa perjantaina 25.9.2026 kestävän kehityksen tavoitteiden (Sustainable Development Goals, SDG) lipulla osana maailmanlaajuista kampanjaa. Vantaa on sitoutunut kestävän kehityksen tavoitteiden edistämiseen kaikessa toiminnassaan, ja tämä sitoumus on kirjattu kaupungin strategiaan. Vantaa raportoi YK:lle tavoitteiden edistymisestä joka toinen vuosi.\nSyyskuun 25. päivänä tulee kuluneeksi yksitoista vuotta siitä, kun YK:n 193 jäsenvaltiota sopivat kestävän kehityksen tavoitteista ja Agenda 2030 -toimintaohjelmasta. Nämä 17 tavoitetta ohjaavat koko maailman kestävän kehityksen työtä vuosina 2016–2030. Kestävän kehityksen eteen tehtävässä työssä kaupungeilla on merkittävä rooli, ja Vantaa haluaa omalla toiminnallaan tehdä kestävän kehityksen eteen tehtävää työtä tunnetuksi.\nSDG-liput nousevat salkoon Vantaan lisäksi myös muissa Suomen suurissa kaupungeissa ja Kuntaliitossa. Suomen suurimmat kaupungit tekevät tiivistä yhteistyötä kestävän kehityksen tavoitteiden eteen, mikä vahvistaa niiden roolia kestävän kehityksen edelläkävijöinä ja mahdollistaa hyvien käytäntöjen jakamisen.\nLisätietoja\nLotta Alajoki\nVastuullisuusasiantuntija\nAvainsanat\nVastuullisuus\nKestävä kehitys\n…\nShow all keywords",
-        "title": "Tänään Vantaan kaupungintalon salossa liehuu kestävän kehityksen lippu",
-        "url": "https://www.vantaa.fi/fi/ajankohtaista/uutinen/tanaan-vantaan-kaupungintalon-salossa-liehuu-kestavan-kehityksen-lippu"
+        "text": "Julkinen sektori valmistautuu tekoälyn laajamittaiseen hyödyntämiseen\nvaltiovarainministeriö\nJulkaisuajankohta\n25.9.2026\n12.44\nTyyppi:Tiedote\nValtionhallinnon, hyvinvointialueiden ja kuntien johto kokoontui Säätytalolle 25. syyskuuta käynnistämään tekoälymuutoksen toimeenpanoa tiiviissä yhteistyössä. Muutoksen tavoitteena on varmistaa Suomen julkisen sektorin edelläkävijyyttä tekoälyn vastuullisessa hyödyntämisessä, parantaa kansalaisten palvelujen laatua ja sujuvuutta sekä lisätä tuottavuutta. Samalla muutos mahdollistaa osaltaan julkisen talouden vakauttamisen.\nTalouspoliittinen ministerivaliokunta linjasi kesäkuussa 2026 julkisen hallinnon tekoälymuutoksen kiihdyttämisestä ja organisoinnista. Nyt pidetty tilaisuus toimi julkisen hallinnon tekoälymuutoksen uuden vaiheen avauksena. Tavoitteena on ylimmän johdon sitoutuminen kautta linjan ja organisoitu yhteistyö.\n\"Harvoin yhden sukupolven aikana tulee vastaan teknologinen murros, joka haastaa yhtä aikaa työn tekemisen tavat, palvelut, johtamisen, osaamisen ja jopa käsityksemme siitä, miten julkisen hallinnon pitäisi jatkossa toimia. Nyt olemme tällaisen murroksen keskellä. Kysymys ei enää ole siitä, tuleeko tekoäly osaksi julkista hallintoa. Kysymys on siitä, miten hyödynnämme sen mahdollisuudet tavalla, joka vahvistaa palveluja, tuottavuutta ja kansalaisten luottamusta sekä turvaa kansalaisten oikeusturvan ja kielelliset oikeudet\", sanoi kunta- ja alueministeri Anna-Kaisa Ikonen avauspuheenvuorossaan.\nMuutos onnistuu vain yhteistyöllä\nSuomi on osaava, teknologisesti hyvin kehittynyt maa, jolla on kykyä uudistua. Tekoälyn avulla voidaan julkisella sektorilla tehdä nyt sellaisia uudistuksia, jotka eivät ole aiemmin olleet mahdollisia. Parhaimmillaan tekoäly auttaa turvaamaan kansalaisten palvelut myös tulevaisuudessa ja jopa parantaa niitä. Tekoäly mahdollistaa palvelujen paremman löydettävyyden ja kohdentamisen, kun yhteiskunta muuttuu yhä monimuotoisemmaksi. Uudistukset on kuitenkin tehtävä vastuullisesti ja työssä on huomioitava kaikki tekoälyyn liittyvät riskit.\nTekoälymuutosta tehdään tiiviissä yhteistyössä julkisen sektorin toimijoiden, Suomen itsenäisyyden juhlarahaston (Sitra) sekä muiden yhteistyökumppanien kanssa. Suomen on rakennettava yhteisiä, yhteen toimivia ja skaalautuvia ratkaisuja, joita voidaan ottaa käyttöön laajasti koko julkisessa hallinnossa. Valtiovarainministeriö ohjaa tätä työtä.\nKoko julkisen sektorin kattavaa sidosryhmätyötä on tehty jo pitkään. Tämän vuoden alussa avautui valtionhallinnon tekoälyinvestointiohjelma, joka edistää tekoäly- ja automaatioratkaisuja. Sitra taas on omalla työllään vauhdittanut merkittävää tuottavuusloikkaa julkisella sektorilla. Myös monilla virastoilla, hyvinvointialueilla ja kunnilla on omia hankkeitaan.\nValtiovarainministeriö ja Sitra sopivat myös syksyn alussa yhteistyöstä uudistuksissa, joilla pyritään turvaamaan laadukkaat julkiset palvelut Suomessa tulevaisuudessakin.\nLisätietoja:\nKehittämisjohtaja Riitta Aejmelaeus, puh. 0295 530 471, riitta.aejmelaeus(at)gov.fi\nTietohallintoneuvos, yksikön päällikkö Katja Väänänen, puh. 0295 530 245, katja.vaananen(at)gov.fi\nJohtava asiantuntija Aleksi Kopponen, puh. 0295 530 216, [email protected]\nTiedote 9.9.2026: Laaja yhteistyö uudistamaan julkista sektoria",
+        "title": "Julkinen sektori valmistautuu tekoälyn laajamittaiseen hyödyntämiseen",
+        "url": "https://valtioneuvosto.fi/-/10623/julkinen-sektori-valmistautuu-tekoalyn-laajamittaiseen-hyodyntamiseen"
       }
     ],
-    "story_key": "url:https://www.vantaa.fi/fi/ajankohtaista/uutinen/tanaan-vantaan-kaupungintalon-salossa-liehuu-kestavan-kehityksen-lippu",
+    "story_key": "url:https://valtioneuvosto.fi/-/10623/julkinen-sektori-valmistautuu-tekoalyn-laajamittaiseen-hyodyntamiseen",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-09-26T09:02:26.574728+00:00",
-        "sha256": "aaf30bbd7f2efc9db44e2022be600cd581aeff3dccb5b666bfeebe8497059ce8",
-        "text": "Käyttöoikeus määritellyin ehdoin hyödynnettävissä. Datan käytön lisäksi Palvelussa on mahdollisuus keskusteluun.\nKäyttöoikeus\nPalvelu sisältää dataa useasta eri lähteestä: julkisyhteisöjen tuottamia datoja ja niiden metatietoja, Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja ja Palvelun ylläpitäjien tuottamia artikkeleja ja muita kirjoituksia. Pääsääntöisesti näihin kaikkiin on laaja käyttöoikeus Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Poikkeukset on kerrottu erikseen kunkin aineiston kohdalla.\nAvoin data\nPalvelussa olevien datojen (tietoaineistojen) omistus- ja immateriaalioikeudet kuuluvat kunkin datan tekijälle.\nPääsääntöisesti Palvelun käyttäjillä on laaja käyttöoikeus datoihin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Datoja saa vapaasti kopioida, levittää, näyttää ja esittää sekä käyttää datoja osana muuta teosta. Datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin.\nEhtona käytölle on, että datan tekijä (ylläpitäjä) on ilmoitettava. Datan tekijän pyynnöstä tämä viittaus on poistettava. Datan tekijä on kerrottu kunkin datan metadatassa.\nDatan tekijää ei saa ilmoittaa siten, että ilmoitus viittaisi datan tekijän tai Palvelun tukevan datan käyttäjää tai datan käyttötapaa.\nDatojen metatietojen yhteydessä on mainittu kyseisen datan käyttöoikeusehdot. Joissakin tapauksissa käyttöoikeusehdot voivat poiketa yllä mainitusta.\nKeskustelu\nPalvelun käyttäjät voivat keskusteluosiossa lisätä sivuille kirjoituksia ja kommentoida toisten käyttäjien kirjoituksia. Palvelun käyttäjä antaa kirjoituksiinsa ja kommentteihinsa vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nMikäli käyttäjä liittää kirjoitukseensa tai kommenttiinsa kuvia, tulee hänellä olla tekijänoikeudet kuvaan. Lisäksi hänellä tulee olla kuvassa esiintyvien henkilöiden lupa kuvan julkaisemiseen internetissä. Palvelun käyttäjä antaa kuviin vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nKeskustelun tulee olla hyvän tavan ja Suomen lainsäädännön mukaista. Käyttäjät ovat vastuussa lisäämistään kirjoituksista ja kommenteista.\nKaikenlainen mainonta keskustelussa on kielletty.\nPalvelun tarjoajat voivat tarvittaessa muokata kirjoituksia ja kommentteja sekä poistaa hyvän tavan tai lainsäädännön vastaisia tai muutoin sopimattomia kirjoituksia.\nMikäli käyttäjä havaitsee käyttöehtojen vastaisia kirjoituksia, pyydetään tästä ilmoittamaan ylläpidolle.\nToistuva käyttöehtojen rikkominen tai niiden vakava rikkominen voi johtaa väliaikaiseen tai pysyvään Palvelun käyttöoikeuden peruuttamiseen.\nSovellusgalleria\nSovellusgalleriassa esitellyt sovellukset eivät ole HRI:n tekemiä ja niiden tekijänoikeudet kuuluvat sovellusten tekijöille. Creative Commons 4.0 -lisenssi ei koske sovelluksia, eikä niitä ole lupa vapaasti kopioida, levittää, muokata tai yhdistellä, ellei erikseen sovelluksen kohdalla ole toisin mainittu tai sovelluksen tekijä muutoin ole tähän antanut lupaa.\nMuut palvelussa olevat kirjoitukset\nPalvelun tuottajien Palvelussa julkaisemien kirjoitusten, kuten artikkelien ja blogikirjoitusten omistus- ja tekijänoikeudet kuuluvat niiden kirjoittajille. Palvelun käyttäjillä on laaja käyttöoikeus näihin kirjoituksiin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nPalvelun ulkoasu, tekninen toteutus, tavaramerkit ja logot\nPalvelun teknisen toteutuksen lähdekoodit on saatavilla avoimesti GitHubista. Palvelun kopiointi sellaisenaan on kielletty. Palvelussa esiintyvien tavaramerkkien ja logojen tavaramerkkioikeudet kuuluvat niiden oikeudenhaltijoille. Mikäli tavaramerkkien ja logojen muu käyttö on sallittu, on tästä ja käytön ehdoista ilmoitettu ko. tavaramerkkien ja logojen kohdalla.\nTietosuoja\nhri.fi-palvelua ylläpitää Helsingin kaupunki. Kaupunki on sitoutunut suojaamaan verkkopalveluidensa käyttäjien yksityisyyttä Tietosuojalain (2018), EU:n tietosuoja-asetuksen (2016/679) sekä muun soveltuvan lainsäädännön mukaisesti.\nHelsingin kaupungin tietosuojasivut\nVastuuvapaus\nPalvelu sisältää sekä julkisyhteisöjen tuottamaa avointa dataa ja metadataa että Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja. Palvelun tarjoajat eivät vastaa Palvelussa olevien tietojen oikeellisuudesta. Palvelun käyttäjä käyttää Palvelussa olevaa avointa dataa omalla vastuullaan. Palvelun tarjoajat eivät vastaa mistään välittömistä tai välillisistä vahingoista, jotka aiheutuvat datan käytöstä. ",
-        "url": "https://hri.fi/fi/kayttoehdot/"
+        "retrieved_at": "2026-09-26T09:53:21.684742+00:00",
+        "sha256": "dd7ac1065a95f48dc119ceb372919ff94b1e86c846c6cf4e657cb56e9b03b297",
+        "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
+        "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
       }
     ]
   },
   "draft": {
     "category": "Kotimaa",
     "image": {
-      "alt": "Arkistokuva: Kuvassa on Yhdistyneiden Kansakuntien kestävän kehityksen tavoitteiden logo ja 17 yksittäistä tavoitetta, joista jokainen on esitetty numeroidulla, värillisellä neliöllä, jossa on kuvake ja teksti.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "Kuvituskuva: Kuvassa on palvelinkaappi, josta lähtee sinisiä kaapeleita tietokoneen näytölle, jossa näkyy verkkokaavio.",
+      "attempts": 1,
+      "caption": "Kuvituskuva. Kuva on luotu tekoälyllä, ei valokuva tapahtumasta.",
       "classifier_output": {
         "category": "Kotimaa",
-        "depictable_scene": "YK:n 17 kestävän kehityksen tavoitetta esittävä virallinen kuvitus.",
+        "depictable_scene": "Selvästi piirretty kuvitus palvelintelineestä ja tietokonenäytöstä, joita yhdistävät verkkokaapelit; näytöllä on tekstittömiä verkostosolmuja.",
         "must_avoid": [
-          "unrelated national flag",
-          "unrelated city",
-          "identifiable people"
+          "tunnistettavat ihmiset tai kasvot",
+          "luettava teksti näytöllä",
+          "viranomaisten tai yritysten logot",
+          "humanoidirobotit",
+          "valvontakamerat tai biometrinen tunnistus",
+          "Säätytalon keksitty ulkoasu",
+          "kokouksen fotorealistinen toisinto"
         ],
         "must_show": [
-          "Sustainable Development Goals"
+          "server rack",
+          "computer monitor",
+          "network cables"
         ],
         "search_queries": [
-          "Sustainable Development Goals",
-          "SDG icon wheel",
-          "United Nations sustainable development goals"
+          "server rack public administration artificial intelligence",
+          "computer monitor government digital public services AI",
+          "network cables interoperable public sector AI systems"
         ],
-        "subject": "YK:n kestävän kehityksen tavoitteet (SDG)"
+        "subject": "julkishallinnon tekoälyn käyttöönotto"
       },
-      "credit": "Photo by UNDP on Wikimedia Commons",
-      "depicted": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
-      "generated": false,
-      "hotlink": false,
-      "license": "Public domain",
-      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-      "local_path": "media/082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa.jpg",
+      "credit": "AI-kuvitus",
+      "depicted": "An AI illustration shows a server rack with blue cables connected to a computer monitor displaying a network diagram. The server rack is on the left, and a wooden desk with a computer, keyboard, and mouse is on the right. A window in the background shows green trees and a building. Two potted plants are visible, one on each side of the image.",
+      "generated": true,
+      "license": "AI-generated illustration",
+      "license_url": "https://uutistenlukija.fi/kuvituskuvat/",
+      "local_path": "media/2a484f1308c8cc7bc41314bf9312f0239201834f90129426c4de357fdf090268.jpg",
+      "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Kuvassa on Yhdistyneiden Kansakuntien kestävän kehityksen tavoitteiden logo ja 17 yksittäistä tavoitetta, joista jokainen on esitetty numeroidulla, värillisellä neliöllä, jossa on kuvake ja teksti.",
+        "alt_fi": "Kuvassa on palvelinkaappi, josta lähtee sinisiä kaapeleita tietokoneen näytölle, jossa näkyy verkkokaavio.",
         "approved": true,
-        "article_text_sha256": "c9ebed6c6020b1dde31bd178d4fc2d48d97f9a12c7c2f925486ea08892d2307a",
-        "description": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
-        "image_sha256": "082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa",
+        "article_text_sha256": "05cabea4ef5a4bcb991fc81d70bb19b7302a1378bae9e73adb279b6522099499",
+        "description": "An AI illustration shows a server rack with blue cables connected to a computer monitor displaying a network diagram. The server rack is on the left, and a wooden desk with a computer, keyboard, and mouse is on the right. A window in the background shows green trees and a building. Two potted plants are visible, one on each side of the image.",
+        "image_sha256": "2a484f1308c8cc7bc41314bf9312f0239201834f90129426c4de357fdf090268",
         "model": "google:gemini-2.5-flash",
         "no_people": true,
-        "reason": "The article explicitly mentions the 'kestävän kehityksen tavoitteiden eli SDG-tavoitteiden lippu' and the 'YK:n kestävän kehityksen tavoitteiden'. This image directly illustrates the SDG goals, which are a central subject of the article, making it highly relevant.",
-        "reviewed_at": "2026-09-26T09:32:41.430297+00:00"
+        "reason": "The image is an AI illustration that meets all specified requirements: no people, faces, violence, or readable text/logos. The visible subjects—a server rack, computer, and network diagram—directly illustrate the article's subject of AI and its implementation in public administration, representing the infrastructure and interconnectedness involved in such systems. The image avoids invented documentary claims and provides a concrete, relevant visual without being a mere metaphor.",
+        "reviewed_at": "2026-09-26T09:57:33.691593+00:00"
       },
       "pixels": {
-        "height": 1600,
+        "height": 1024,
         "mode": "RGB",
-        "variance": 10423.3,
-        "width": 2560
+        "variance": 8273.3,
+        "width": 1536
       },
+      "prompt_sha256": "f3d770ca6db6a851a54936254c5796e45e9c0945bf6ff4d492360d6f8bdb9719",
+      "prompt_version": "imagery-v2-safe-scene",
       "relevance_check": {
         "accepted": true,
-        "evidence": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
+        "evidence": "Selvästi piirretty kuvitus palvelintelineestä ja tietokonenäytöstä, joita yhdistävät verkkokaapelit; näytöllä on tekstittömiä verkostosolmuja.",
         "matched": [
-          "development",
-          "goals",
-          "sustainable"
+          "server rack",
+          "computer monitor",
+          "network cables"
         ],
-        "method": "vision",
-        "reason": "all must_show requirements matched"
+        "method": "generation",
+        "reason": "generated from the accepted scene"
       },
-      "sha256": "082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-      "stock_provenance": {
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Sustainable_Development_Goals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "license": "Public domain",
-        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-        "photo_id": "wikimedia-52672594",
-        "photo_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-        "photographer": "UNDP",
-        "photographer_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-        "provider": "wikimedia",
-        "query": "Sustainable Development Goals",
-        "retrieved_at": "2026-09-26T09:32:41Z"
-      },
-      "stock_provenance_sha256": "e48aca0a3c73b175298a2bb34ea3bc9fe8e8f8b7ba85c1c5f99061091b79f3cd",
-      "url": "https://uutistenlukija.fi/media/082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa.jpg"
+      "review_note": "Tekoälyn tuottama kuvitus, joka on rakennettu luokitellusta aiheesta ja sen kuvattavasta kohtauksesta. Kuva ei esitä todellista henkilöä, tapahtumaa eikä tekijänoikeudellista teosta.",
+      "sha256": "2a484f1308c8cc7bc41314bf9312f0239201834f90129426c4de357fdf090268",
+      "source_url": "https://uutistenlukija.fi/kuvituskuvat/",
+      "subject": "julkishallinnon tekoälyn käyttöönotto",
+      "url": "https://uutistenlukija.fi/media/2a484f1308c8cc7bc41314bf9312f0239201834f90129426c4de357fdf090268.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Vantaan kaupungin mukaan kaupungintalon salkoon nostettiin kestävän kehityksen tavoitteiden eli SDG-tavoitteiden lippu. Liputus oli osa maailmanlaajuista kampanjaa."
+        "text": "Valtionhallinnon, hyvinvointialueiden ja kuntien johtoa kokoontui Säätytalolle 25. syyskuuta käynnistämään julkishallinnon tekoälymuutoksen uutta vaihetta. Valtiovarainministeriön mukaan tarkoituksena on sitouttaa organisaatioiden ylin johto muutokseen ja järjestää toimijoiden yhteistyö nykyistä tiiviimmin."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Vantaa kertoo kirjanneensa YK:n kestävän kehityksen tavoitteiden edistämisen kaupunkistrategiaansa. Kaupunki ilmoittaa raportoivansa tavoitteiden edistymisestä YK:lle joka toinen vuosi."
+        "text": "Tiedotteen mukaan valmistelu perustuu talouspoliittisen ministerivaliokunnan kesäkuussa 2026 tekemään linjaukseen tekoälymuutoksen vauhdittamisesta ja organisoinnista."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kaupungin tiedotteen mukaan liputuspäivänä tuli kuluneeksi 11 vuotta siitä, kun YK:n 193 jäsenvaltiota sopivat 17 kestävän kehityksen tavoitteesta ja Agenda 2030 -ohjelmasta. Tavoitteet koskevat vuosia 2016–2030."
+        "text": "Ministeriö nimeää muutoksen tavoitteiksi palvelujen laadun ja sujuvuuden parantamisen, tuottavuuden lisäämisen ja julkisen talouden vakauttamisen tukemisen. Samalla se korostaa tekoälyn riskien huomioimista sekä kansalaisten oikeusturvan ja kielellisten oikeuksien turvaamista."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Vantaa kertoo, että SDG-lippuja nostettiin myös muissa Suomen suurissa kaupungeissa ja Kuntaliitossa."
+        "text": "Valtiovarainministeriö ohjaa työtä, jota tehdään julkisen sektorin toimijoiden, Sitran ja muiden kumppanien kanssa. Tavoitteena ovat yhteentoimivat ratkaisut, joita voitaisiin käyttää laajasti julkishallinnossa."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Valtionhallinnon tekoälyinvestointiohjelma avattiin tiedotteen mukaan vuoden 2026 alussa. Lisäksi virastoilla, hyvinvointialueilla ja kunnilla on omia hankkeitaan. Tiedotteessa ei yksilöidä uuden vaiheen aikataulua, kustannuksia tai käyttöön otettavia järjestelmiä."
       }
     ],
-    "summary": "Vantaan kaupungin mukaan kaupungintalolla liputettiin perjantaina 25. syyskuuta 2026 osana maailmanlaajuista SDG-kampanjaa.",
-    "title": "Vantaa kertoi liputtaneensa kestävän kehityksen puolesta"
+    "summary": "Valtiovarainministeriön mukaan valtionhallinto, hyvinvointialueet ja kunnat tiivistävät yhteistyötään tekoälyn käytön laajentamiseksi julkisissa palveluissa.",
+    "title": "Julkishallinto vauhdittaa tekoälyn käyttöönottoa"
   },
   "review": {
     "approved": true,
-    "archive_image_only": {
-      "original_draft_sha256": "215d5af0d330556d913058e36c8f371f2a721fbbd2fb1637ba66772d17756434",
-      "original_published_at": "2026-09-26T09:02:30.222795+00:00",
-      "original_review_sha256": "115d7798fd0a59b551d6da9d6327da472e5de1283b557767a1c734edee2c5599",
-      "unchanged_text_sha256": "16fec800e45f7efff4d69aa87c88312d0a7ca63fd33ce6d3f1f57b05978284ea"
-    },
-    "draft_sha256": "177b7cd8d3026518271af35b27fb5fd91852358b6fa705200de4b2075957044b",
+    "draft_sha256": "2962e6665f64dc4cc1bac978493d86ec908b986b13fce2d090c77cd287b43846",
     "reasons": [
-      "Kuva esittää YK:n kestävän kehityksen tavoitteita, joista artikkelin SDG-liputus kertoo.",
-      "Wikimedia Commons vahvistaa UNDP:n kuvan olevan public domain -aineistoa; kuva ei väitä esittävänsä Vantaan tapahtumaa.",
-      "Pikselitarkastus hyväksyi kuvan artikkeliin sopivaksi."
+      "Lähde A, valtiovarainministeriön 25.9.2026 julkaistu tiedote, tukee otsikkoa, ingressiä ja ensimmäistä kappaletta: valtionhallinnon, hyvinvointialueiden ja kuntien johto kokoontui Säätytalolle 25. syyskuuta avaamaan tekoälymuutoksen uutta vaihetta, ja tavoitteeksi ilmoitettiin ylimmän johdon sitoutuminen sekä organisoitu ja tiivis yhteistyö.",
+      "Lähde A tukee kesäkuuta 2026 koskevaa tietoa talouspoliittisen ministerivaliokunnan linjauksesta sekä kappaleissa 3–4 lueteltuja ministeriön tavoitteita, riskien huomioimista, oikeusturvaa, kielellisiä oikeuksia, Sitran ja muiden kumppanien osallistumista, valtiovarainministeriön ohjausroolia ja yhteentoimivien ratkaisujen tavoitetta. Tavoitellut vaikutukset esitetään ministeriön tavoitteina, ei riippumattomasti todistettuina tuloksina.",
+      "Lähde A tukee vuoden 2026 alussa avattua tekoälyinvestointiohjelmaa ja eri julkisten toimijoiden omia hankkeita. Luonnoksen huomio siitä, ettei tiedote yksilöi uuden vaiheen aikataulua, kustannuksia tai järjestelmiä, vastaa toimitettua lähdekatkelmaa. Päivämäärissä, vuosiluvuissa tai nimissä ei ole ristiriitaa.",
+      "Yksi ajantasainen ensisijainen viranomaislähde riittää kertomaan viranomaisen omasta tilaisuudesta, linjauksista ja tavoitteista, kun väitteet on luonnoksen tavoin pääosin osoitettu valtiovarainministeriön tai tiedotteen tiedoiksi eikä riippumatonta vahvistusta väitetä. Kotimaa-luokka ja valtakunnallinen maantieteellinen rajaus vastaavat lähdettä.",
+      "Otsikko on 48 merkkiä pitkä, tärkein aihe eli julkishallinto on alussa, ja muotoilu vastaa lähteen kuvaamaa toimeenpanon käynnistämistä ja tekoälymuutoksen kiihdyttämistä. Teksti on itsenäisesti muotoiltua, neutraalia ja ymmärrettävää suomea.",
+      "Luonnoksen ja lähdepaketin kuvatietueet ovat yhtenevät, ja kuvan SHA-256 on molemmissa 2a484f1308c8cc7bc41314bf9312f0239201834f90129426c4de357fdf090268. Näkyväksi kuvattu palvelinkaappi, verkkokaapelit ja verkkokaavio liittyvät tekoälyratkaisujen infrastruktuuriin ja yhteentoimivuuteen. Kuvassa ei kuvauksen ja riippumattoman pikselitarkastuksen mukaan ole ihmisiä, logoja tai luettavaa tekstiä. Caption ilmoittaa selvästi kuvan olevan tekoälyllä luotu kuvitus eikä tapahtumavalokuva, ja käyttöperustetta tukevat pelkän lisenssitekstin lisäksi kuvan generointi-, malli-, prompt- ja tarkistushashit."
     ]
-  },
-  "image_backfill": [
-    {
-      "article_file": "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html",
-      "draft": {
-        "category": "Kotimaa",
-        "image": {
-          "alt": "Arkistokuva: Kuvassa on Yhdistyneiden Kansakuntien kestävän kehityksen tavoitteiden logo ja 17 yksittäistä tavoitetta, joista jokainen on esitetty numeroidulla, värillisellä neliöllä, jossa on kuvake ja teksti.",
-          "caption": "Arkistokuva artikkelin aiheesta.",
-          "classifier_output": {
-            "category": "Kotimaa",
-            "depictable_scene": "YK:n 17 kestävän kehityksen tavoitetta esittävä virallinen kuvitus.",
-            "must_avoid": [
-              "unrelated national flag",
-              "unrelated city",
-              "identifiable people"
-            ],
-            "must_show": [
-              "Sustainable Development Goals"
-            ],
-            "search_queries": [
-              "Sustainable Development Goals",
-              "SDG icon wheel",
-              "United Nations sustainable development goals"
-            ],
-            "subject": "YK:n kestävän kehityksen tavoitteet (SDG)"
-          },
-          "credit": "Photo by UNDP on Wikimedia Commons",
-          "depicted": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
-          "generated": false,
-          "hotlink": false,
-          "license": "Public domain",
-          "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-          "local_path": "media/082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa.jpg",
-          "pixel_review": {
-            "alt_fi": "Kuvassa on Yhdistyneiden Kansakuntien kestävän kehityksen tavoitteiden logo ja 17 yksittäistä tavoitetta, joista jokainen on esitetty numeroidulla, värillisellä neliöllä, jossa on kuvake ja teksti.",
-            "approved": true,
-            "article_text_sha256": "c9ebed6c6020b1dde31bd178d4fc2d48d97f9a12c7c2f925486ea08892d2307a",
-            "description": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
-            "image_sha256": "082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa",
-            "model": "google:gemini-2.5-flash",
-            "no_people": true,
-            "reason": "The article explicitly mentions the 'kestävän kehityksen tavoitteiden eli SDG-tavoitteiden lippu' and the 'YK:n kestävän kehityksen tavoitteiden'. This image directly illustrates the SDG goals, which are a central subject of the article, making it highly relevant.",
-            "reviewed_at": "2026-09-26T09:32:41.430297+00:00"
-          },
-          "pixels": {
-            "height": 1600,
-            "mode": "RGB",
-            "variance": 10423.3,
-            "width": 2560
-          },
-          "relevance_check": {
-            "accepted": true,
-            "evidence": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
-            "matched": [
-              "development",
-              "goals",
-              "sustainable"
-            ],
-            "method": "vision",
-            "reason": "all must_show requirements matched"
-          },
-          "sha256": "082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa",
-          "source_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-          "stock_provenance": {
-            "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Sustainable_Development_Goals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-            "license": "Public domain",
-            "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-            "photo_id": "wikimedia-52672594",
-            "photo_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-            "photographer": "UNDP",
-            "photographer_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-            "provider": "wikimedia",
-            "query": "Sustainable Development Goals",
-            "retrieved_at": "2026-09-26T09:32:41Z"
-          },
-          "stock_provenance_sha256": "e48aca0a3c73b175298a2bb34ea3bc9fe8e8f8b7ba85c1c5f99061091b79f3cd",
-          "url": "https://uutistenlukija.fi/media/082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa.jpg"
-        },
-        "paragraphs": [
-          {
-            "source_ids": [
-              "A"
-            ],
-            "text": "Vantaan kaupungin mukaan kaupungintalon salkoon nostettiin kestävän kehityksen tavoitteiden eli SDG-tavoitteiden lippu. Liputus oli osa maailmanlaajuista kampanjaa."
-          },
-          {
-            "source_ids": [
-              "A"
-            ],
-            "text": "Vantaa kertoo kirjanneensa YK:n kestävän kehityksen tavoitteiden edistämisen kaupunkistrategiaansa. Kaupunki ilmoittaa raportoivansa tavoitteiden edistymisestä YK:lle joka toinen vuosi."
-          },
-          {
-            "source_ids": [
-              "A"
-            ],
-            "text": "Kaupungin tiedotteen mukaan liputuspäivänä tuli kuluneeksi 11 vuotta siitä, kun YK:n 193 jäsenvaltiota sopivat 17 kestävän kehityksen tavoitteesta ja Agenda 2030 -ohjelmasta. Tavoitteet koskevat vuosia 2016–2030."
-          },
-          {
-            "source_ids": [
-              "A"
-            ],
-            "text": "Vantaa kertoo, että SDG-lippuja nostettiin myös muissa Suomen suurissa kaupungeissa ja Kuntaliitossa."
-          }
-        ],
-        "summary": "Vantaan kaupungin mukaan kaupungintalolla liputettiin perjantaina 25. syyskuuta 2026 osana maailmanlaajuista SDG-kampanjaa.",
-        "title": "Vantaa kertoi liputtaneensa kestävän kehityksen puolesta"
-      },
-      "draft_sha256": "177b7cd8d3026518271af35b27fb5fd91852358b6fa705200de4b2075957044b",
-      "image_sha256": "082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa",
-      "job_id": "c190474290f6251e902db88ec60156d270c37775c1376b97b6272ec17059f3a7",
-      "packet": {
-        "fixture": false,
-        "image": {
-          "alt": "Arkistokuva: Kuvassa on Yhdistyneiden Kansakuntien kestävän kehityksen tavoitteiden logo ja 17 yksittäistä tavoitetta, joista jokainen on esitetty numeroidulla, värillisellä neliöllä, jossa on kuvake ja teksti.",
-          "caption": "Arkistokuva artikkelin aiheesta.",
-          "classifier_output": {
-            "category": "Kotimaa",
-            "depictable_scene": "YK:n 17 kestävän kehityksen tavoitetta esittävä virallinen kuvitus.",
-            "must_avoid": [
-              "unrelated national flag",
-              "unrelated city",
-              "identifiable people"
-            ],
-            "must_show": [
-              "Sustainable Development Goals"
-            ],
-            "search_queries": [
-              "Sustainable Development Goals",
-              "SDG icon wheel",
-              "United Nations sustainable development goals"
-            ],
-            "subject": "YK:n kestävän kehityksen tavoitteet (SDG)"
-          },
-          "credit": "Photo by UNDP on Wikimedia Commons",
-          "depicted": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
-          "generated": false,
-          "hotlink": false,
-          "license": "Public domain",
-          "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-          "local_path": "media/082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa.jpg",
-          "pixel_review": {
-            "alt_fi": "Kuvassa on Yhdistyneiden Kansakuntien kestävän kehityksen tavoitteiden logo ja 17 yksittäistä tavoitetta, joista jokainen on esitetty numeroidulla, värillisellä neliöllä, jossa on kuvake ja teksti.",
-            "approved": true,
-            "article_text_sha256": "c9ebed6c6020b1dde31bd178d4fc2d48d97f9a12c7c2f925486ea08892d2307a",
-            "description": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
-            "image_sha256": "082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa",
-            "model": "google:gemini-2.5-flash",
-            "no_people": true,
-            "reason": "The article explicitly mentions the 'kestävän kehityksen tavoitteiden eli SDG-tavoitteiden lippu' and the 'YK:n kestävän kehityksen tavoitteiden'. This image directly illustrates the SDG goals, which are a central subject of the article, making it highly relevant.",
-            "reviewed_at": "2026-09-26T09:32:41.430297+00:00"
-          },
-          "pixels": {
-            "height": 1600,
-            "mode": "RGB",
-            "variance": 10423.3,
-            "width": 2560
-          },
-          "relevance_check": {
-            "accepted": true,
-            "evidence": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
-            "matched": [
-              "development",
-              "goals",
-              "sustainable"
-            ],
-            "method": "vision",
-            "reason": "all must_show requirements matched"
-          },
-          "sha256": "082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa",
-          "source_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-          "stock_provenance": {
-            "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Sustainable_Development_Goals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-            "license": "Public domain",
-            "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-            "photo_id": "wikimedia-52672594",
-            "photo_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-            "photographer": "UNDP",
-            "photographer_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-            "provider": "wikimedia",
-            "query": "Sustainable Development Goals",
-            "retrieved_at": "2026-09-26T09:32:41Z"
-          },
-          "stock_provenance_sha256": "e48aca0a3c73b175298a2bb34ea3bc9fe8e8f8b7ba85c1c5f99061091b79f3cd",
-          "url": "https://uutistenlukija.fi/media/082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa.jpg"
-        },
-        "publication_basis": {
-          "policy": "official-text-v1",
-          "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-          "provider": "vantaa",
-          "related_sources": 0,
-          "source_fields_sha256": "a2015aa98896e22bd61baf649379542a634542c7a20337b03c3554998c712491",
-          "source_sha256": "ff30f39a77fe18469c512ade287a55ddb20d0358d582452f630088c7bd78332c"
-        },
-        "sources": [
-          {
-            "id": "A",
-            "published_at": "2026-09-25T00:00:00+03:00",
-            "publisher": "Vantaan kaupunki",
-            "reuse": {
-              "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-              "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
-              "license_url": "https://creativecommons.org/licenses/by/4.0/",
-              "url": "https://hri.fi/fi/kayttoehdot/"
-            },
-            "text": "Vantaa liputtaa perjantaina 25.9.2026 kestävän kehityksen tavoitteiden (Sustainable Development Goals, SDG) lipulla osana maailmanlaajuista kampanjaa. Vantaa on sitoutunut kestävän kehityksen tavoitteiden edistämiseen kaikessa toiminnassaan, ja tämä sitoumus on kirjattu kaupungin strategiaan. Vantaa raportoi YK:lle tavoitteiden edistymisestä joka toinen vuosi.\nSyyskuun 25. päivänä tulee kuluneeksi yksitoista vuotta siitä, kun YK:n 193 jäsenvaltiota sopivat kestävän kehityksen tavoitteista ja Agenda 2030 -toimintaohjelmasta. Nämä 17 tavoitetta ohjaavat koko maailman kestävän kehityksen työtä vuosina 2016–2030. Kestävän kehityksen eteen tehtävässä työssä kaupungeilla on merkittävä rooli, ja Vantaa haluaa omalla toiminnallaan tehdä kestävän kehityksen eteen tehtävää työtä tunnetuksi.\nSDG-liput nousevat salkoon Vantaan lisäksi myös muissa Suomen suurissa kaupungeissa ja Kuntaliitossa. Suomen suurimmat kaupungit tekevät tiivistä yhteistyötä kestävän kehityksen tavoitteiden eteen, mikä vahvistaa niiden roolia kestävän kehityksen edelläkävijöinä ja mahdollistaa hyvien käytäntöjen jakamisen.\nLisätietoja\nLotta Alajoki\nVastuullisuusasiantuntija\nAvainsanat\nVastuullisuus\nKestävä kehitys\n…\nShow all keywords",
-            "title": "Tänään Vantaan kaupungintalon salossa liehuu kestävän kehityksen lippu",
-            "url": "https://www.vantaa.fi/fi/ajankohtaista/uutinen/tanaan-vantaan-kaupungintalon-salossa-liehuu-kestavan-kehityksen-lippu"
-          }
-        ],
-        "story_key": "url:https://www.vantaa.fi/fi/ajankohtaista/uutinen/tanaan-vantaan-kaupungintalon-salossa-liehuu-kestavan-kehityksen-lippu",
-        "supporting_documents": [
-          {
-            "id": "RIGHTS",
-            "purpose": "text reuse permission; not news or image evidence",
-            "retrieved_at": "2026-09-26T09:02:26.574728+00:00",
-            "sha256": "aaf30bbd7f2efc9db44e2022be600cd581aeff3dccb5b666bfeebe8497059ce8",
-            "text": "Käyttöoikeus määritellyin ehdoin hyödynnettävissä. Datan käytön lisäksi Palvelussa on mahdollisuus keskusteluun.\nKäyttöoikeus\nPalvelu sisältää dataa useasta eri lähteestä: julkisyhteisöjen tuottamia datoja ja niiden metatietoja, Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja ja Palvelun ylläpitäjien tuottamia artikkeleja ja muita kirjoituksia. Pääsääntöisesti näihin kaikkiin on laaja käyttöoikeus Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Poikkeukset on kerrottu erikseen kunkin aineiston kohdalla.\nAvoin data\nPalvelussa olevien datojen (tietoaineistojen) omistus- ja immateriaalioikeudet kuuluvat kunkin datan tekijälle.\nPääsääntöisesti Palvelun käyttäjillä on laaja käyttöoikeus datoihin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Datoja saa vapaasti kopioida, levittää, näyttää ja esittää sekä käyttää datoja osana muuta teosta. Datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin.\nEhtona käytölle on, että datan tekijä (ylläpitäjä) on ilmoitettava. Datan tekijän pyynnöstä tämä viittaus on poistettava. Datan tekijä on kerrottu kunkin datan metadatassa.\nDatan tekijää ei saa ilmoittaa siten, että ilmoitus viittaisi datan tekijän tai Palvelun tukevan datan käyttäjää tai datan käyttötapaa.\nDatojen metatietojen yhteydessä on mainittu kyseisen datan käyttöoikeusehdot. Joissakin tapauksissa käyttöoikeusehdot voivat poiketa yllä mainitusta.\nKeskustelu\nPalvelun käyttäjät voivat keskusteluosiossa lisätä sivuille kirjoituksia ja kommentoida toisten käyttäjien kirjoituksia. Palvelun käyttäjä antaa kirjoituksiinsa ja kommentteihinsa vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nMikäli käyttäjä liittää kirjoitukseensa tai kommenttiinsa kuvia, tulee hänellä olla tekijänoikeudet kuvaan. Lisäksi hänellä tulee olla kuvassa esiintyvien henkilöiden lupa kuvan julkaisemiseen internetissä. Palvelun käyttäjä antaa kuviin vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nKeskustelun tulee olla hyvän tavan ja Suomen lainsäädännön mukaista. Käyttäjät ovat vastuussa lisäämistään kirjoituksista ja kommenteista.\nKaikenlainen mainonta keskustelussa on kielletty.\nPalvelun tarjoajat voivat tarvittaessa muokata kirjoituksia ja kommentteja sekä poistaa hyvän tavan tai lainsäädännön vastaisia tai muutoin sopimattomia kirjoituksia.\nMikäli käyttäjä havaitsee käyttöehtojen vastaisia kirjoituksia, pyydetään tästä ilmoittamaan ylläpidolle.\nToistuva käyttöehtojen rikkominen tai niiden vakava rikkominen voi johtaa väliaikaiseen tai pysyvään Palvelun käyttöoikeuden peruuttamiseen.\nSovellusgalleria\nSovellusgalleriassa esitellyt sovellukset eivät ole HRI:n tekemiä ja niiden tekijänoikeudet kuuluvat sovellusten tekijöille. Creative Commons 4.0 -lisenssi ei koske sovelluksia, eikä niitä ole lupa vapaasti kopioida, levittää, muokata tai yhdistellä, ellei erikseen sovelluksen kohdalla ole toisin mainittu tai sovelluksen tekijä muutoin ole tähän antanut lupaa.\nMuut palvelussa olevat kirjoitukset\nPalvelun tuottajien Palvelussa julkaisemien kirjoitusten, kuten artikkelien ja blogikirjoitusten omistus- ja tekijänoikeudet kuuluvat niiden kirjoittajille. Palvelun käyttäjillä on laaja käyttöoikeus näihin kirjoituksiin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nPalvelun ulkoasu, tekninen toteutus, tavaramerkit ja logot\nPalvelun teknisen toteutuksen lähdekoodit on saatavilla avoimesti GitHubista. Palvelun kopiointi sellaisenaan on kielletty. Palvelussa esiintyvien tavaramerkkien ja logojen tavaramerkkioikeudet kuuluvat niiden oikeudenhaltijoille. Mikäli tavaramerkkien ja logojen muu käyttö on sallittu, on tästä ja käytön ehdoista ilmoitettu ko. tavaramerkkien ja logojen kohdalla.\nTietosuoja\nhri.fi-palvelua ylläpitää Helsingin kaupunki. Kaupunki on sitoutunut suojaamaan verkkopalveluidensa käyttäjien yksityisyyttä Tietosuojalain (2018), EU:n tietosuoja-asetuksen (2016/679) sekä muun soveltuvan lainsäädännön mukaisesti.\nHelsingin kaupungin tietosuojasivut\nVastuuvapaus\nPalvelu sisältää sekä julkisyhteisöjen tuottamaa avointa dataa ja metadataa että Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja. Palvelun tarjoajat eivät vastaa Palvelussa olevien tietojen oikeellisuudesta. Palvelun käyttäjä käyttää Palvelussa olevaa avointa dataa omalla vastuullaan. Palvelun tarjoajat eivät vastaa mistään välittömistä tai välillisistä vahingoista, jotka aiheutuvat datan käytöstä. ",
-            "url": "https://hri.fi/fi/kayttoehdot/"
-          }
-        ]
-      },
-      "packet_sha256": "3e90e447a4db1202dfc89416ed216d141c13835600ea572b851fe097c74cc9d1",
-      "review": {
-        "approved": true,
-        "archive_image_only": {
-          "original_draft_sha256": "215d5af0d330556d913058e36c8f371f2a721fbbd2fb1637ba66772d17756434",
-          "original_published_at": "2026-09-26T09:02:30.222795+00:00",
-          "original_review_sha256": "115d7798fd0a59b551d6da9d6327da472e5de1283b557767a1c734edee2c5599",
-          "unchanged_text_sha256": "16fec800e45f7efff4d69aa87c88312d0a7ca63fd33ce6d3f1f57b05978284ea"
-        },
-        "draft_sha256": "177b7cd8d3026518271af35b27fb5fd91852358b6fa705200de4b2075957044b",
-        "reasons": [
-          "Kuva esittää YK:n kestävän kehityksen tavoitteita, joista artikkelin SDG-liputus kertoo.",
-          "Wikimedia Commons vahvistaa UNDP:n kuvan olevan public domain -aineistoa; kuva ei väitä esittävänsä Vantaan tapahtumaa.",
-          "Pikselitarkastus hyväksyi kuvan artikkeliin sopivaksi."
-        ]
-      },
-      "stock_image": {
-        "alt": "Arkistokuva: Kuvassa on Yhdistyneiden Kansakuntien kestävän kehityksen tavoitteiden logo ja 17 yksittäistä tavoitetta, joista jokainen on esitetty numeroidulla, värillisellä neliöllä, jossa on kuvake ja teksti.",
-        "caption": "Arkistokuva artikkelin aiheesta.",
-        "classifier_output": {
-          "category": "Kotimaa",
-          "depictable_scene": "YK:n 17 kestävän kehityksen tavoitetta esittävä virallinen kuvitus.",
-          "must_avoid": [
-            "unrelated national flag",
-            "unrelated city",
-            "identifiable people"
-          ],
-          "must_show": [
-            "Sustainable Development Goals"
-          ],
-          "search_queries": [
-            "Sustainable Development Goals",
-            "SDG icon wheel",
-            "United Nations sustainable development goals"
-          ],
-          "subject": "YK:n kestävän kehityksen tavoitteet (SDG)"
-        },
-        "credit": "Photo by UNDP on Wikimedia Commons",
-        "depicted": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
-        "generated": false,
-        "hotlink": false,
-        "license": "Public domain",
-        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-        "local_path": "media/082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa.jpg",
-        "pixel_review": {
-          "alt_fi": "Kuvassa on Yhdistyneiden Kansakuntien kestävän kehityksen tavoitteiden logo ja 17 yksittäistä tavoitetta, joista jokainen on esitetty numeroidulla, värillisellä neliöllä, jossa on kuvake ja teksti.",
-          "approved": true,
-          "article_text_sha256": "c9ebed6c6020b1dde31bd178d4fc2d48d97f9a12c7c2f925486ea08892d2307a",
-          "description": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
-          "image_sha256": "082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa",
-          "model": "google:gemini-2.5-flash",
-          "no_people": true,
-          "reason": "The article explicitly mentions the 'kestävän kehityksen tavoitteiden eli SDG-tavoitteiden lippu' and the 'YK:n kestävän kehityksen tavoitteiden'. This image directly illustrates the SDG goals, which are a central subject of the article, making it highly relevant.",
-          "reviewed_at": "2026-09-26T09:32:41.430297+00:00"
-        },
-        "pixels": {
-          "height": 1600,
-          "mode": "RGB",
-          "variance": 10423.3,
-          "width": 2560
-        },
-        "relevance_check": {
-          "accepted": true,
-          "evidence": "The image displays the United Nations Sustainable Development Goals (SDG) logo and the 17 individual goals, each represented by a numbered, colored square with an icon and text. The overall title 'SUSTAINABLE DEVELOPMENT GOALS' is prominently featured at the top, with the UN emblem to its left.",
-          "matched": [
-            "development",
-            "goals",
-            "sustainable"
-          ],
-          "method": "vision",
-          "reason": "all must_show requirements matched"
-        },
-        "sha256": "082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa",
-        "source_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-        "stock_provenance": {
-          "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Sustainable_Development_Goals.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-          "license": "Public domain",
-          "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-          "photo_id": "wikimedia-52672594",
-          "photo_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-          "photographer": "UNDP",
-          "photographer_url": "https://commons.wikimedia.org/wiki/File:Sustainable%20Development%20Goals.jpg",
-          "provider": "wikimedia",
-          "query": "Sustainable Development Goals",
-          "retrieved_at": "2026-09-26T09:32:41Z"
-        },
-        "stock_provenance_sha256": "e48aca0a3c73b175298a2bb34ea3bc9fe8e8f8b7ba85c1c5f99061091b79f3cd",
-        "url": "https://uutistenlukija.fi/media/082130744e6bd9bf5ecc4e51eea15f33e38b9eade276fa0e2f8eac91492bf3aa.jpg"
-      },
-      "text_only": {
-        "policy": "official-text-v1",
-        "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-        "provenance_sha256": "1e8b177c2a73059204095b209baf1d602915ee919a1af84e49be0405af752241"
-      }
-    }
-  ],
-  "image_backfill_sha256": "633894ce1a39b8fe735b7c0d5ee800915ec268395ec45230c9e0fb5ac9156aef"
+  }
 }
