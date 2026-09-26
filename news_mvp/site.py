@@ -90,6 +90,8 @@ def image_credit_html(image):
         photographer = esc(provenance["photographer"])
         photo_url = esc(provenance["photo_url"])
         provider = provenance["provider"]
+        if provider == 'statfi':
+            return f'Lähde: <a href="{photo_url}">Tilastokeskus</a>'
         if provider == "unsplash":
             return (f'Photo by <a href="{esc(provenance["photographer_url"])}">{photographer}</a> '
                     f'on <a href="{photo_url}">Unsplash</a>')
@@ -373,11 +375,16 @@ def image_rights_html(image):
     caption = esc(image.get("caption", ""))
     if image.get("generated") is True:
         body = (f'{caption} AI-kuvitus · <a href="{esc(image["license_url"])}">'
-                f'Kuvituskuvien käyttöehdot</a>')
+                f'AI-kuvien käyttöehdot</a>')
     else:
         body = (f'{caption} {image_credit_html(image)} · '
                 f'<a href="{esc(image["license_url"])}">{esc(image["license"])}</a> · '
                 f'<a href="{esc(image["source_url"])}">Kuvan lähde</a>')
+        attribution = image.get('stock_provenance', {}).get('attribution')
+        if attribution:
+            body += f' · {esc(attribution["title"])}. {esc(attribution["changes"])}'
+            if attribution.get('source_credit'):
+                body += f' {esc(attribution["source_credit"])}.'
     return f'<section class="image-rights"><h2>Kuvan käyttöoikeudet</h2><p>{body}</p></section>'
 
 
@@ -418,7 +425,7 @@ def sources_page_body():
             '<section class="portal-feed-item"><div class="portal-feed-item__body">'
             '<h2>Kuvat</h2>'
             '<p>Valokuvien tekijä, lähde ja käyttöoikeus ilmoitetaan kuvan yhteydessä. '
-            'Tekoälyllä tehdyt kuvitukset merkitään kuvituskuviksi.</p></div></section>'
+            'Tekoälyllä tehtyjen kuvien alla artikkelissa lukee AI-generoitu kuva.</p></div></section>'
             '<section class="portal-feed-item"><div class="portal-feed-item__body">'
             '<h2>Toimitus</h2>'
             '<p>Uutiset laaditaan tekoälyn avulla ja tarkastetaan erillisessä lähdetarkistuksessa. '

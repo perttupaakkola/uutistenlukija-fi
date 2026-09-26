@@ -130,7 +130,7 @@ class RequiredImages(unittest.TestCase):
             result=imagery.build_image(draft,c.state,attempts=1,decision=self.decision,allow_open_sources=False)
         self.assertTrue(result['generated']);self.assertEqual(reviews,[False,True])
         imagery.validate_pixel_review(result,draft)
-        self.assertEqual(result['alt'],'Kuvituskuva: Kirjoja kirjaston hyllyillä.')
+        self.assertEqual(result['alt'],'AI-generoitu kuva: Kirjoja kirjaston hyllyillä.')
 
     def test_sensitive_named_person_is_not_copied_into_safe_scene_prompt(self):
         prompt=imagery._prompt_for('Named politician facing a violent crime investigation',

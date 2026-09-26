@@ -47,6 +47,7 @@ class _ImageSources(HTMLParser):
         values = {name.lower(): value for name, value in attrs}
         self.images.append({
             'src': values.get('src'),
+            'alt': values.get('alt'),
             'srcset': values.get('srcset'),
             'chrome': any(tag in _BRANDING_SECTIONS for tag, _blocks in self._open_elements)
                       and not blocked,
@@ -172,7 +173,7 @@ def _stock_photo_id(value, provider):
                 not re.fullmatch(r'[A-Za-z0-9_-]{6,40}', value)):
             raise ValueError('Invalid stock photo_id')
         return value
-    if provider in ('wikimedia', 'google'):
+    if provider in ('wikimedia', 'google', 'statfi'):
         if (not isinstance(value, str) or not value.strip() or value != value.strip() or
                 not re.fullmatch(r'[A-Za-z0-9_-]{6,64}', value)):
             raise ValueError('Invalid open-source photo_id')
@@ -192,7 +193,7 @@ def _stock_profile_url(value, host, field, provider):
     if provider == 'unsplash':
         parsed = _stock_utm(value, host, field)
         valid = re.fullmatch(r'/@[A-Za-z0-9._-]+/?', parsed.path)
-    elif provider in ('wikimedia', 'google'):
+    elif provider in ('wikimedia', 'google', 'statfi'):
         parsed = _stock_https(value, host, field)
         valid = bool(parsed.path and parsed.path != '/')
     else:
@@ -277,16 +278,30 @@ def stock_binding(image):
         raise ValueError('Missing stock image provenance')
     provenance = image['stock_provenance']
     provider = provenance.get('provider')
-    if provider not in ('unsplash', 'pexels', 'wikimedia', 'google'):
+    if provider not in ('unsplash', 'pexels', 'wikimedia', 'google', 'statfi'):
         raise ValueError('Unsupported stock image provider')
 
     expected_provenance = set(_STOCK_PROVENANCE_COMMON)
     if provider == 'unsplash':
         expected_provenance.add('download_tracking')
-    elif provider in ('wikimedia', 'google'):
+    elif provider in ('wikimedia', 'google', 'statfi'):
         expected_provenance.update({'license', 'license_url'})
+        if 'attribution' in provenance:
+            expected_provenance.add('attribution')
+            attribution = provenance['attribution']
+            if (not isinstance(attribution, dict) or
+                    set(attribution) not in ({'title', 'changes'}, {'title','changes','source_credit'})):
+                raise ValueError('Incomplete open-source attribution notice')
+            for field in attribution:
+                if len(_stock_nonempty(attribution[field], 'attribution '+field)) > 500:
+                    raise ValueError('Oversized open-source attribution notice')
+    if provider == 'statfi':
+        expected_provenance.add('chart_evidence')
     if set(provenance) != expected_provenance:
         raise ValueError('Unexpected stock provenance fields')
+    if provider == 'statfi':
+        from .source_charts import validate_provenance
+        validate_provenance(provenance)
 
     photo_id = _stock_photo_id(provenance['photo_id'], provider)
     photographer = _stock_nonempty(provenance['photographer'], 'photographer')
@@ -324,7 +339,7 @@ def stock_binding(image):
     elif provider == 'wikimedia':
         image_host = 'upload.wikimedia.org'
     _stock_image_url(provenance['image_url'], image_host, 'image_url')
-    if provider in ('wikimedia', 'google'):
+    if provider in ('wikimedia', 'google', 'statfi'):
         _stock_nonempty(provenance['license'], 'provenance license')
         _stock_https(provenance['license_url'], urlsplit(provenance['license_url']).hostname,
                      'provenance license_url')
@@ -349,7 +364,7 @@ def stock_binding(image):
     review_fields = set(image) & {'classifier_output', 'relevance_check'}
     if review_fields and review_fields != {'classifier_output', 'relevance_check'}:
         raise ValueError('Incomplete image classifier provenance')
-    if provider in ('wikimedia', 'google') and review_fields != {
+    if provider in ('wikimedia', 'google', 'statfi') and review_fields != {
             'classifier_output', 'relevance_check'}:
         raise ValueError('Open-source image lacks classifier provenance')
     if review_fields:
@@ -377,7 +392,11 @@ def stock_binding(image):
         _stock_nonempty(image[field], field)
     if image['source_url'] != provenance['photo_url']:
         raise ValueError('Stock source URL mismatch')
-    if image['caption'] not in {
+    if provider == 'statfi':
+        from .source_charts import CAPTION, CREDIT
+        if image['caption'] != CAPTION or image['credit'] != CREDIT:
+            raise ValueError('Invalid source-chart credit or caption')
+    elif image['caption'] not in {
             'Arkistokuva artikkelin aiheesta.',
             'Arkistokuva. Kuva ei esitä uutisen tapahtumaa.',
             'Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.',
@@ -385,9 +404,9 @@ def stock_binding(image):
         raise ValueError('Stock image caption is invalid')
     provider_label = {
         'unsplash': 'Unsplash', 'pexels': 'Pexels', 'wikimedia': 'Wikimedia Commons',
-        'google': 'Google Custom Search',
+        'google': 'Google Custom Search', 'statfi': 'Tilastokeskus',
     }[provider]
-    if image['credit'] != f'Photo by {photographer} on {provider_label}':
+    if provider != 'statfi' and image['credit'] != f'Photo by {photographer} on {provider_label}':
         raise ValueError('Stock image credit is invalid')
 
     if provider == 'unsplash':
@@ -400,7 +419,7 @@ def stock_binding(image):
                 image['license'] != 'Pexels License' or
                 image['license_url'] != 'https://www.pexels.com/license/'):
             raise ValueError('Pexels license is invalid')
-        if provider in ('wikimedia', 'google'):
+        if provider in ('wikimedia', 'google', 'statfi'):
             _stock_nonempty(image['license'], 'open-source license')
             _stock_https(image['license_url'], urlsplit(image['license_url']).hostname,
                          'open-source license_url')
@@ -892,7 +911,7 @@ def _check_rendered_stock(html, image):
     provider = image['stock_provenance']['provider']
     provider_text = {
         'unsplash': 'Unsplash', 'pexels': 'Pexels', 'wikimedia': 'Wikimedia Commons',
-        'google': 'Google Custom Search',
+        'google': 'Google Custom Search', 'statfi': 'Tilastokeskus',
     }.get(provider, provider.title())
     expected_src = (image['url'] if provider == 'unsplash'
                     else f'/mvp-assets/{image["sha256"]}.jpg')
@@ -911,6 +930,9 @@ def _check_rendered_stock(html, image):
                      provider_text, expected_credit):
         if _stock_visible_text(required) not in visible:
             raise ValueError('Missing visible stock attribution')
+    for required in image['stock_provenance'].get('attribution', {}).values():
+        if _stock_visible_text(required) not in visible:
+            raise ValueError('Missing visible open-source title/change notice')
     hero_labels = [_stock_visible_text(''.join(item['text'])) for item in rendered.overlays
                    if item['kind'] == 'label' and item['hero']]
     hero_credits = [_stock_visible_text(''.join(item['text'])) for item in rendered.overlays
@@ -972,15 +994,18 @@ def check_article(html,packet,draft,canonical=None):
             stock = stock_binding(image)
         required += [image['license_url']]
         if image.get('generated') is True:
-            # A generated illustration presents its licence through the /kuvituskuvat/ terms
-            # link plus the AI credit and illustration caption. The reader credit is now
-            # normalised to 'AI-kuvitus'; the stored legacy credit stays admissible so pages
-            # already published against it remain valid. The stored model name is internal
-            # and is never required in reader markup. The first generated-image release
-            # failed live readback only because this check still demanded an internal label
-            # (2026-09-18).
+            from .image_wording import validate_generated_wording, contains_retired_word
+            validate_generated_wording(image)
+            if contains_retired_word(html):
+                raise ValueError('Public article contains retired image vocabulary')
+            parsed_images = _ImageSources()
+            parsed_images.feed(html)
+            heroes = [item for item in parsed_images.images if not item['chrome']]
+            if len(heroes) != 1 or heroes[0]['alt'] != image['alt']:
+                raise ValueError('Generated article must expose the exact reviewed image alt')
+            # Model/vendor remains internal; only normalized credit is reader-facing.
             required += [image['caption']]
-            if esc(GENERATED_READER_CREDIT) not in html and esc(image['credit']) not in html:
+            if esc(GENERATED_READER_CREDIT) not in html:
                 raise ValueError('Missing generated illustration credit')
         elif stock is not None:
             _check_rendered_stock(html, stock)

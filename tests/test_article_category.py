@@ -55,9 +55,9 @@ class ArticleAndCategoryRendering(unittest.TestCase):
         case=generated.GeneratedIntegrity(SEED);case.setUp();self.addCleanup(case.doCleanups)
         self.case=case
         self.packet,self.draft=case.generated()
-        self.packet['image']['credit']=CREDIT_FROM_MODEL
+        self.packet['image']['credit']='AI-kuvitus'
         self.packet['image']['model']=IMAGE_MODEL
-        self.packet['image']['alt']='Kuvituskuva: kirjasto'
+        self.packet['image']['alt']='AI-generoitu kuva: Kirjaston hyllyt ja lukupöytä.'
         self.draft['image']=self.packet['image']
         self.template=case.ready(self.packet,self.draft)
 
@@ -115,7 +115,7 @@ class ArticleAndCategoryRendering(unittest.TestCase):
         self.assertIn('width="',hero.group(1));self.assertIn('height="',hero.group(1))
         self.assertIn('referrerpolicy="no-referrer"',hero.group(1))
         self.assertNotIn('portal-lead__image-label',hero.group(1))
-        self.assertNotIn('Kuvituskuva · tekoälyllä luotu',html)
+        self.assertNotIn('AI-generoitu kuva · tekoälyllä luotu',html)
         prose_end=html.index('</div>',html.index('<div class="content">'))
         rights=html.index('<section class="image-rights">')
         sources=html.index('<section class="sources">')
@@ -124,7 +124,7 @@ class ArticleAndCategoryRendering(unittest.TestCase):
         self.assertLess(sources,rights,'image rights sit alongside the sources')
         self.assertLess(rights,related)
         self.assertIn('AI-kuvitus',html)
-        self.assertIn('Kuvituskuvien käyttöehdot',html)
+        self.assertIn('AI-kuvien käyttöehdot',html)
         # The complete honest caption and the licence terms link both stay.
         self.assertIn(self.packet['image']['caption'],html)
         self.assertIn(self.packet['image']['license_url'],html)
@@ -278,7 +278,7 @@ class BrandingImageContract(unittest.TestCase):
 
 
 class GeneratedCreditContract(unittest.TestCase):
-    """AI-kuvitus is the normalized reader credit; legacy exact credit stays valid."""
+    """AI-kuvitus is the required normalized reader credit."""
 
     def _draft(self):
         from test_cdn_email_contract import GENERATED_IMAGE,draft_with,PARAGRAPH
@@ -291,15 +291,15 @@ class GeneratedCreditContract(unittest.TestCase):
         source_items="".join(f'<li><a href="{escape(s["url"])}">{escape(s["publisher"])}: {escape(s["title"])}</a></li>' for s in p['sources'])
         return ('<!doctype html><html><body>'
                 f'<h1>{escape(draft["title"])}</h1><p>{escape(draft["summary"])}</p><p>{escape(PARAGRAPH)}</p>'
-                f'<figure><img src="/mvp-assets/{"a"*64}.jpg"></figure>'
+                f'<figure><img src="/mvp-assets/{"a"*64}.jpg" alt="{escape(GENERATED_IMAGE["alt"])}"></figure>'
                 f'<p>{escape(GENERATED_IMAGE["caption"])} {escape(credit)} · '
-                f'<a href="{escape(GENERATED_IMAGE["license_url"])}">Kuvituskuvien käyttöehdot</a></p>'
+                f'<a href="{escape(GENERATED_IMAGE["license_url"])}">AI-kuvien käyttöehdot</a></p>'
                 f'<ul>{source_items}</ul></body></html>')
 
     def test_normalized_ai_kuvitus_credit_passes(self):
         check_article(self._html('AI-kuvitus'),self._packet_for(),self._draft())
 
-    def test_legacy_exact_credit_passes_and_wrong_credit_fails(self):
+    def test_stored_normalized_credit_passes_and_wrong_credit_fails(self):
         from test_cdn_email_contract import GENERATED_IMAGE
         check_article(self._html(GENERATED_IMAGE['credit']),self._packet_for(),self._draft())
         with self.assertRaises(ValueError):

@@ -56,7 +56,7 @@ def pending(store):
     return anchors
 
 
-def install(store, entries, prepared_dir, state, source_commit):
+def install(store, entries, prepared_dir, state, source_commit, *, archive_evidence=None, live_read=None):
     """Caller owns controller.lock; apply only exact reviewed image-only changes."""
     if not entries or len(entries) > 250 or pending(store):
         raise ValueError('Archive correction needs a bounded batch and an idle publisher')
@@ -70,8 +70,12 @@ def install(store, entries, prepared_dir, state, source_commit):
         seen.add(identifier)
         job = store.get(identifier)
         publication = store.db.execute('SELECT * FROM publications WHERE job_id=?', (identifier,)).fetchone()
-        if not job or not publication or publication['status'] != 'deployed':
+        if not job or not publication:
             raise ValueError('Only deployed articles can be backfilled')
+        canonical_proof = None
+        if publication['status'] != 'deployed':
+            from .archive_publication import verify
+            canonical_proof = verify(store, job, publication, archive_evidence, live_read)
         before_packet, before_draft = json.loads(job['packet']), json.loads(job['draft'])
         packet, draft, review = entry['packet'], entry['draft'], entry['review']
         if (digest(before_packet) != entry['previous_packet_sha'] or digest(before_draft) != entry['previous_draft_sha'] or
@@ -113,6 +117,8 @@ def install(store, entries, prepared_dir, state, source_commit):
             'packet_sha256':digest(packet), 'draft_sha256':digest(draft), **binding,
             'article_file':article_path(job)+'index.html',
             'previous_job':job, 'previous_publication':dict(publication)})
+        if canonical_proof is not None:
+            records[-1]['canonical_archive_recovery'] = canonical_proof
     anchor = max(records, key=lambda r:(r['previous_job']['created_at'], r['job_id']))['job_id']
     batch_id = digest(records)
     with store.db:

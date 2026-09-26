@@ -135,11 +135,8 @@ def validate_draft(draft, packet):
         # A generated illustration must be labelled as such in the reader-visible caption, so
         # a reader can never mistake it for a photograph of the event described.
         if image.get("generated") is True:
-            if "AI" not in str(image.get("credit", "")):
-                raise ValueError("Generated image must be credited as AI-generated")
-            text(image.get("caption"), "image caption", 500)
-            if "Kuvituskuva" not in str(image.get("caption", "")):
-                raise ValueError("Generated image caption must mark it as an illustration")
+            from .image_wording import validate_generated_wording
+            validate_generated_wording(image)
     return draft
 
 

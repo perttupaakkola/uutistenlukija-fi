@@ -120,6 +120,33 @@ class RasterVerification(unittest.TestCase):
         with self.assertRaises(GenerationError):
             verify(b'not an image at all')
 
+    def test_camera_orientation_survives_metadata_free_jpeg_conversion(self):
+        """Commons portrait armour was published sideways after EXIF was dropped."""
+        from PIL import Image
+        from news_mvp.imagery import _persist_verified_image, verify
+        from pathlib import Path
+        import hashlib
+        raster = Image.new('RGB', (1200, 800), (200, 30, 20))
+        raster.paste((20, 30, 200), (600, 0, 1200, 800))
+        exif = Image.Exif()
+        exif[274] = 6
+        exif[270] = 'Untrusted camera description'
+        buffer = io.BytesIO()
+        raster.save(buffer, 'JPEG', exif=exif)
+        raw = buffer.getvalue()
+        facts = verify(raw)
+        self.assertEqual((facts['width'], facts['height']), (800, 1200))
+        with tempfile.TemporaryDirectory() as state:
+            sha, path, facts = _persist_verified_image(raw, state)
+            jpeg = (Path(state) / path).read_bytes()
+            self.assertEqual(hashlib.sha256(jpeg).hexdigest(), sha)
+            with Image.open(io.BytesIO(jpeg)) as result:
+                self.assertEqual(result.size, (800, 1200))
+                self.assertFalse(result.getexif())
+                self.assertGreater(result.getpixel((400, 200))[0], 150)
+                self.assertGreater(result.getpixel((400, 1000))[2], 150)
+            self.assertEqual(facts, verify(jpeg))
+
 
 class LegibleTextRejection(unittest.TestCase):
     """Observed on a police story: the model wrote 'POLIIISI' across an officer's back, and on
@@ -244,12 +271,12 @@ class ReleaseContractIntegration(unittest.TestCase):
             'url': f'{PUBLIC_BASE}/media/{sha}.jpg',
             'local_path': f'media/{sha}.jpg',
             'sha256': sha,
-            'alt': 'Kuvituskuva: esimerkki',
-            'caption': 'Kuvituskuva. Kuva on luotu tekoälyllä, ei valokuva tapahtumasta.',
-            'credit': 'AI-kuvitus (gpt-image-1-mini)',
+            'alt': 'AI-generoitu kuva: Kirjoja kirjaston hyllyillä.',
+            'caption': 'AI-generoitu kuva. Ei valokuva tapahtumasta.',
+            'credit': 'AI-kuvitus',
             'license': 'AI-generated illustration',
-            'license_url': f'{PUBLIC_BASE}/kuvituskuvat/',
-            'source_url': f'{PUBLIC_BASE}/kuvituskuvat/',
+            'license_url': f'{PUBLIC_BASE}/ai-kuvat/',
+            'source_url': f'{PUBLIC_BASE}/ai-kuvat/',
             'generated': True,
             'model': 'gpt-image-1-mini',
             'prompt_sha256': 'b' * 64,
@@ -338,9 +365,9 @@ class ProviderChainIntegration(unittest.TestCase):
         calls = []
         with tempfile.TemporaryDirectory() as state, \
              mock.patch.object(imagery, 'fetch_unsplash',
-                               side_effect=lambda draft: calls.append('unsplash') or None), \
+                               side_effect=lambda draft, **kwargs: calls.append('unsplash') or None), \
              mock.patch.object(imagery, 'fetch_pexels',
-                               side_effect=lambda draft, state_dir: calls.append('pexels') or pexels), \
+                               side_effect=lambda draft, state_dir, **kwargs: calls.append('pexels') or pexels), \
              mock.patch.object(imagery, 'generate', side_effect=AssertionError('generation')):
             result = imagery.build_image(self.DRAFT, state, require_pixel_review=False)
         self.assertIs(result, pexels)
@@ -349,9 +376,9 @@ class ProviderChainIntegration(unittest.TestCase):
         calls.clear()
         with tempfile.TemporaryDirectory() as state, \
              mock.patch.object(imagery, 'fetch_unsplash',
-                               side_effect=lambda draft: calls.append('unsplash') or unsplash), \
+                               side_effect=lambda draft, **kwargs: calls.append('unsplash') or unsplash), \
              mock.patch.object(imagery, 'fetch_pexels',
-                               side_effect=lambda draft, state_dir: calls.append('pexels') or None), \
+                               side_effect=lambda draft, state_dir, **kwargs: calls.append('pexels') or None), \
              mock.patch.object(imagery, 'generate', side_effect=AssertionError('generation')):
             result = imagery.build_image(self.DRAFT, state, require_pixel_review=False)
         self.assertIs(result, unsplash)

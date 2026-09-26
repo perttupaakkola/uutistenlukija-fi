@@ -80,6 +80,25 @@ the in-pipeline chain below, and every decision is recorded in the plans docs.
 
 ## Front-page snapshots
 
+Generated-image accessibility uses `AI-generoitu kuva: ` followed by a useful,
+reviewed Finnish description of the actual pixels. The small article-only caption
+is `AI-generoitu kuva. Ei valokuva tapahtumasta.` The rights section uses `AI-kuvitus`
+and `/ai-kuvat/`; generator details stay in internal provenance. Listing images have
+no generated-image badge, overlay or disclosure. The validator checks all current
+generated metadata, not only the visible alt. Archive wording corrections retain
+the original image record in batch history, preserve image bytes and prompt hashes,
+and require exact-image plus unchanged-text archive approval before activation.
+
+Real-image selection still comes first. Commons searches reserve their bounded
+window for raster files; an explicit historical HTTP Creative Commons identifier
+is canonicalized only to the same official HTTPS grant. Missing or conflicting
+rights never become permission. New Commons records retain the work title and a
+JPEG reproduction notice in the article's existing rights section. A historical
+failed publication can enter image-only archive correction only when a later
+successful, locally reconciled release and Pages receipt bind its exact canonical
+HTML and image bytes on the live host. Its failed history remains in the batch;
+no old dispatch is replayed.
+
 The existing live controller refreshes four MET Norway location forecasts and ECB daily
 EUR reference rates when `frontpage_snapshots` is enabled in the local config. Data is
 cached in state `frontpage-data.json` (weather: one hour; currencies: six hours), then

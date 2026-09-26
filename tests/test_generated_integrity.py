@@ -27,9 +27,9 @@ class GeneratedIntegrity(unittest.TestCase):
         sha=hashlib.sha256(SYNTHETIC).hexdigest()
         packet=copy.deepcopy(self.packet);packet.pop('image_note',None)
         image={'url':f'https://uutistenlukija.fi/media/{sha}.jpg','local_path':f'media/{sha}.jpg','sha256':sha,
-               'source_url':'https://uutistenlukija.fi/kuvituskuvat/','license_url':'https://uutistenlukija.fi/kuvituskuvat/',
-               'license':'AI-generated illustration','credit':'AI synthetic','alt':'Kuvituskuva: synthetic library',
-               'caption':'Kuvituskuva. Kuva on luotu tekoälyllä, ei valokuva tapahtumasta.','generated':True,
+               'source_url':'https://uutistenlukija.fi/ai-kuvat/','license_url':'https://uutistenlukija.fi/ai-kuvat/',
+               'license':'AI-generated illustration','credit':'AI-kuvitus','alt':'AI-generoitu kuva: synthetic library',
+               'caption':'AI-generoitu kuva. Ei valokuva tapahtumasta.','generated':True,
                'model':'synthetic','prompt_sha256':'a'*64,'prompt_version':'test','subject':'synthetic'}
         packet['image']=image
         draft=copy.deepcopy(self.draft);draft['image']=image

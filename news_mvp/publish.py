@@ -224,7 +224,7 @@ def _serves_public_content(source,files,pages):
 
     A redirect may not take over a path a reader can already reach: a real file
     (`404.html`, `rss.xml`, an asset), a directory page (`/tietosuoja/`,
-    `/kuvituskuvat/`, `/sivu/N/`, an article), a source underneath such a page (its
+    `/ai-kuvat/`, `/sivu/N/`, an article), a source underneath such a page (its
     subtree), or an ancestor of real content (`/sivu/` above `/sivu/2/`, `/uutiset/`
     above every article). The homepage is always content and can never be a source.
     """
@@ -265,14 +265,26 @@ def public_bundle(store,job,state):
     # Terms for AI illustrations. This is the license_url/source_url of every generated article
     # image, so it must exist and must actually describe the image rights - pointing that field
     # at the privacy page was rejected by the independent reviewer, correctly.
-    illustrations = '''<article class="story"><h1>Kuvituskuvat</h1>
-<p>Osa uutisten kuvista on tekoälyn tuottamia kuvituskuvia. Ne eivät ole valokuvia todellisista tapahtumista eivätkä esitä todellisia henkilöitä.</p>
-<p>Kuvituskuva merkitään kuvatekstissä kuvituskuvaksi, ja kuvan yhteydessä kerrotaan, että kuva on tuotettu tekoälyllä.</p>
-<p>Kuvituskuva rakennetaan uutisen tarkastetun tekstin vahvistetusta sisällöstä. Se ei esitä todellista henkilöä, tapahtumaa eikä tekijänoikeudellista teosta, joten se ei käytä kolmannen osapuolen oikeuksia.</p>
-<p>Lähdeuutisten omia kuvia ei käytetä, koska lähteiden tekstin käyttöehdot eivät kata niiden kuvia.</p>
+    illustrations = '''<article class="story"><h1>AI-generoidut kuvat</h1>
+<p>Osa uutisten kuvista on tekoälyn tuottamia. Ne eivät ole valokuvia todellisista tapahtumista eivätkä esitä todellisia henkilöitä.</p>
+<p>Artikkelin kuvan alla lukee: AI-generoitu kuva. Ei valokuva tapahtumasta.</p>
+<p>AI-generoitu kuva perustuu tarkastetun uutisen sisältöön. Se näyttää aiheeseen liittyviä esineitä, paikkoja tai prosesseja ilman keksittyjä henkilöitä tai tapahtumatilanteita.</p>
+<p>Ensisijaisesti käytämme aiheeseen liittyvää oikeaa kuvaa, jonka käyttöoikeus on erikseen varmistettu. Lähdetekstin käyttöehdot eivät yksin anna oikeutta lähteen valokuviin. Kuvan tekijä, lähde ja käyttöehdot ilmoitetaan artikkelin käyttöoikeusosiossa.</p>
 <p>Kuvituksen tuottamiseen käytetty malli ja kehotteen tarkiste tallennetaan julkaisurekisteriin.</p>
 </article>'''
-    atomic_write(site/'kuvituskuvat/index.html',page('Kuvituskuvat',illustrations,'/kuvituskuvat/',snapshot=snapshot))
+    atomic_write(site/'ai-kuvat/index.html',page('AI-generoidut kuvat',illustrations,'/ai-kuvat/',snapshot=snapshot))
+    # A reused build directory must not re-publish the superseded generated
+    # terms page. Remove only that known derived page after verifying its own
+    # canonical identity; protected source/state/history is never touched.
+    from .image_wording import RETIRED_IMAGE_STEM
+    retired_terms = RETIRED_IMAGE_STEM + 'at/'
+    retired_index = site/retired_terms/'index.html'
+    if retired_index.is_symlink() or (site/retired_terms).is_symlink():
+        raise ValueError('Refuse a linked retired image terms page')
+    if retired_index.exists():
+        if not _published_page(site, retired_terms):
+            raise ValueError('Retired image terms page has an unexpected identity')
+        retired_index.unlink()
     # One pass over the store builds the slug/mtime maps used by the sitemap and redirects.
     article_mod={}
     title_by_id={}

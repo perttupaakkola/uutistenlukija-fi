@@ -14,8 +14,11 @@ Tarkista uuden kuvan relevanssi, täsmällinen kuvahash ja riippumaton pixel_rev
 näkyvän sisällön vastaavuus alt-tekstiin ja kuvatekstiin, provenienssi ja käyttöoikeus.
 Lisenssiteksti, lähdemaininta tai kirjoittajan varmuus eivät yksin todista kuvan oikeuksia
  tai relevanssia. Kuva ei saa olla yleiskuva, joka liittyy vain väljästi uutiskategoriaan.
-Oikean kuvan on oltava lisensoitu. AI-kuvan on oltava selvästi merkitty kuvitukseksi,
-joka ei ole valokuva tapahtumasta, ja sen on perustuttava artikkelin konkreettiseen
+Oikean kuvan on oltava lisensoitu. AI-kuvan alt alkaa "AI-generoitu kuva: " ja jatkuu
+hyödyllisellä, tiiviillä suomenkielisellä näkyvän kuvan kuvauksella. Artikkelin kuvan
+alapuolinen kuvateksti on täsmälleen "AI-generoitu kuva. Ei valokuva tapahtumasta."
+Kuvan krediitti on "AI-kuvitus", ja malli/toimittaja jää sisäiseen provenienssiin.
+AI-kuvan on perustuttava artikkelin konkreettiseen
 aiheeseen. Nimetyn henkilön tai arkaluonteisen aiheen kuvituksessa ei saa olla ihmisiä,
 kasvoja tai henkilön näköisyyttä: käytä aiheeseen liittyviä turvallisia esineitä,
 paikkoja, materiaaleja tai prosesseja. Keksitty tunnistettavan taideteoksen tai rakennuksen

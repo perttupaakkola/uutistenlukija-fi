@@ -21,6 +21,7 @@ GOOGLE_IMAGE_MODEL = 'gemini-3.1-flash-image'
 VISION_MODEL = 'gemini-2.5-flash'
 GOOGLE_ENV = Path.home() / '.hermes/.env'
 REQUEST_EVENTS = ContextVar('image_provider_request_events', default=None)
+CANDIDATE_EVENTS = ContextVar('image_provider_candidate_events', default=None)
 
 
 def request_event(host, status=None, error=None):
@@ -29,14 +30,37 @@ def request_event(host, status=None, error=None):
         events.append({'host': host, 'http_status': status, 'error_type': error})
 
 
+def candidate_event(stock, image_sha256, outcome):
+    """Record bounded identity/gate outcomes, never URLs, keys or provider bodies."""
+    events = CANDIDATE_EVENTS.get()
+    if events is None or len(events) >= 100:
+        return
+    provenance = stock.get('stock_provenance') or {}
+    provider = provenance.get('provider')
+    identity = str(provenance.get('photo_id', ''))
+    if provider not in {'pexels', 'unsplash', 'wikimedia', 'google'}:
+        return
+    if not re.fullmatch(r'[A-Za-z0-9_-]{1,150}', identity):
+        return
+    if not re.fullmatch(r'[0-9a-f]{64}', image_sha256 or ''):
+        return
+    if outcome not in {'duplicate_refused', 'pixel_refused', 'review_unavailable', 'accepted'}:
+        return
+    event = {'provider':provider, 'photo_id':identity,
+             'image_sha256':image_sha256, 'outcome':outcome}
+    if event not in events:
+        events.append(event)
+
+
 @contextmanager
 def image_attempt(draft, state_dir):
     """Record actual HTTP outcomes without queries, URLs, credentials or bodies."""
     from .site import atomic_write
     events = []; token = REQUEST_EVENTS.set(events)
+    candidates = []; candidate_token = CANDIDATE_EVENTS.set(candidates)
     article_hash = hashlib.sha256(json.dumps(draft, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
     receipt = {'started_at': datetime.now(timezone.utc).isoformat(), 'input_draft_sha256': article_hash,
-               'requests': events, 'outcome': 'image_pending'}
+               'requests': events, 'candidates':candidates, 'outcome': 'image_pending'}
     try:
         yield receipt
     finally:
@@ -46,6 +70,7 @@ def image_attempt(draft, state_dir):
             atomic_write(path, json.dumps(receipt, sort_keys=True))
         finally:
             REQUEST_EVENTS.reset(token)
+            CANDIDATE_EVENTS.reset(candidate_token)
 
 
 def _json(url, host, headers, body=None, timeout=60):

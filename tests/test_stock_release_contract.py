@@ -303,6 +303,37 @@ class StockReleaseContract(unittest.TestCase):
         self.assertEqual(binding['stock_image'], draft['image'])
         self.assertEqual(receipt_media(self.receipt_for(packet, draft)), binding)
 
+    def test_commons_work_title_and_jpeg_notice_survive_bundle_and_readback(self):
+        local = self.helper_pexels_image()
+        decision = {'subject':self.draft['title'], 'depictable_scene':'Library book shelves',
+            'must_show':['book'], 'must_avoid':['people'],
+            'search_queries':['library book','reading book','book shelves'],
+            'category':self.draft['category']}
+        candidate = {'photo_id':'wikimedia-1234','photo_page':'https://commons.wikimedia.org/wiki/File:Library.jpg',
+            'profile':'https://commons.wikimedia.org/wiki/User:Photographer','name':'Test Photographer',
+            'image_url':'https://upload.wikimedia.org/wikipedia/commons/a/ab/Library.jpg',
+            'title':'Library shelves (archive)', 'license':'CC BY-SA 3.0',
+            'attribution_credit':'Helsingin kaupunginmuseo',
+            'license_url':'https://creativecommons.org/licenses/by-sa/3.0/'}
+        image = imagery._open_source_record('wikimedia',candidate,'library book',self.state,
+            local['pixels'],local['sha256'],local['local_path'],'Library book shelves',decision,
+            imagery.relevance_check('Library book shelves',decision),'2026-09-26T00:00:00Z')
+        packet,draft,job,root,receipt,article,home = self.render_public_stock(image)
+        notice = image['stock_provenance']['attribution']
+        self.assertIn(notice['title'],article)
+        self.assertIn(notice['changes'],article)
+        self.assertIn(notice['source_credit'],article)
+        self.assertNotIn(notice['changes'],home)
+        for field in ('title','changes','source_credit'):
+            with self.subTest(field=field):
+                with self.assertRaisesRegex(ValueError,'title/change notice'):
+                    check_article(article.replace(notice[field],''),packet,draft)
+                if field in ('title','changes'):
+                    changed=copy.deepcopy(image)
+                    del changed['stock_provenance']['attribution'][field]
+                    changed['stock_provenance_sha256']=digest(changed['stock_provenance'])
+                    with self.assertRaisesRegex(ValueError,'attribution notice'):stock_binding(changed)
+
     def test_mocked_provider_output_renders_full_unsplash_release_and_readback(self):
         image = self.helper_unsplash_image()
         packet, draft, job, site, receipt, article, home = self.render_public_stock(image)
@@ -436,11 +467,11 @@ class StockReleaseContract(unittest.TestCase):
         self.assertNotIn('stock_image', text_receipt)
 
         generated = {
-            'url': '', 'source_url': 'https://uutistenlukija.fi/kuvituskuvat/',
-            'license_url': 'https://uutistenlukija.fi/kuvituskuvat/',
-            'license': 'AI-generated illustration', 'alt': 'Kuvituskuva: esimerkki',
-            'caption': 'Kuvituskuva. Kuva on luotu tekoälyllä, ei valokuva tapahtumasta.',
-            'credit': 'AI-kuvitus (gpt-image-1-mini)', 'sha256': '', 'local_path': '',
+            'url': '', 'source_url': 'https://uutistenlukija.fi/ai-kuvat/',
+            'license_url': 'https://uutistenlukija.fi/ai-kuvat/',
+            'license': 'AI-generated illustration', 'alt': 'AI-generoitu kuva: Kirjoja kirjaston hyllyillä.',
+            'caption': 'AI-generoitu kuva. Ei valokuva tapahtumasta.',
+            'credit': 'AI-kuvitus', 'sha256': '', 'local_path': '',
             'generated': True, 'model': 'gpt-image-1-mini', 'prompt_sha256': 'b' * 64,
             'prompt_version': 'imagery-v1', 'subject': 'Esimerkki',
         }

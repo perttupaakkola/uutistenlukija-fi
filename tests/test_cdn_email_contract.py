@@ -129,12 +129,12 @@ class CdnEmailObfuscation(unittest.TestCase):
 
 GENERATED_IMAGE = {
     "url": "https://uutistenlukija.fi/media/" + "a" * 64 + ".jpg",
-    "source_url": "https://uutistenlukija.fi/kuvituskuvat/",
-    "license_url": "https://uutistenlukija.fi/kuvituskuvat/",
+    "source_url": "https://uutistenlukija.fi/ai-kuvat/",
+    "license_url": "https://uutistenlukija.fi/ai-kuvat/",
     "license": "AI-generated illustration",
-    "alt": "Kuvituskuva: esimerkki",
-    "caption": "Kuvituskuva. Kuva on luotu tekoälyllä, ei valokuva tapahtumasta.",
-    "credit": "AI-kuvitus (gpt-image-1-mini)",
+    "alt": "AI-generoitu kuva: Kirjoja kirjaston hyllyillä.",
+    "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+    "credit": "AI-kuvitus",
     "sha256": "a" * 64,
     "local_path": "media/" + "a" * 64 + ".jpg",
     "generated": True,
@@ -169,9 +169,9 @@ class GeneratedImageReadback(unittest.TestCase):
             f"<h1>{escape(draft['title'])}</h1>"
             f"<p>{escape(draft['summary'])}</p>"
             f"<p>{escape(PARAGRAPH)}</p>"
-            '<figure><img src="/mvp-assets/' + "a" * 64 + '.jpg">'
+            '<figure><img src="/mvp-assets/' + "a" * 64 + '.jpg" alt="' + escape(GENERATED_IMAGE['alt']) + '">'
             f"<figcaption>{caption} {credit}"
-            '<a href="https://uutistenlukija.fi/kuvituskuvat/">Kuvituskuvien käyttöehdot</a>'
+            '<a href="https://uutistenlukija.fi/ai-kuvat/">AI-kuvien käyttöehdot</a>'
             "</figcaption></figure>"
             f"<ul>{source_items}</ul>"
             "</body></html>")

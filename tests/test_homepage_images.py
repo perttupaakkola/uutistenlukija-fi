@@ -92,7 +92,7 @@ class HomepageImages(unittest.TestCase):
         self.assertNotIn('<article class="card"',home)
         self.assertNotIn('<section class="grid"',home)
         self.assertEqual(home.count('<article class="'),6)
-        self.assertEqual(sum('Kuvituskuva' in text for text in parsed.text),0)
+        self.assertEqual(sum('AI-generoitu kuva' in text for text in parsed.text),0)
         self.assertEqual(sum('tekoälyllä luotu' in text for text in parsed.text),0)
         self.assertIn('Seuraa uutisia',home)
         self.assertIn('href="/rss.xml"',home)
@@ -178,9 +178,9 @@ class HomepageImages(unittest.TestCase):
     def test_generated_image_alt_and_credit_stay_escaped_text(self):
         case=generated.GeneratedIntegrity(SEED);case.setUp();self.addCleanup(case.doCleanups)
         packet,draft=case.generated()
-        alt='Kuvituskuva <b>AI</b> & "lainaus" <script>alert(1)</script>'
+        alt='AI-generoitu kuva: <b>AI</b> & "lainaus" <script>alert(1)</script>'
         credit='AI <i>synthetic</i> & "credit" <img src=x onerror=alert(1)>'
-        image=dict(packet['image']);image['alt']=alt;image['credit']=credit
+        image=dict(packet['image']);image['alt']=alt;image['credit']='AI-kuvitus';image['model']=credit
         packet['image']=image;draft['image']=copy.deepcopy(image)
         job=case.ready(packet,draft)
         sha=json.loads(job['packet'])['image']['sha256']
@@ -197,7 +197,7 @@ class HomepageImages(unittest.TestCase):
         self.assertEqual([attrs['src'] for attrs in editorial_images(parsed)],[f'/mvp-assets/{sha}.jpg']*4)
         self.assertEqual(parsed.captions,[])
         self.assertNotIn(credit,home)
-        self.assertEqual(sum('Kuvituskuva' in text for text in parsed.text),0)
+        self.assertEqual(sum('AI-generoitu kuva' in text for text in parsed.text),0)
         self.assertEqual(sum('tekoälyllä luotu' in text for text in parsed.text),0)
         self.assertNotIn('AI-kuvitus',home)
         self.assertNotIn('synthetic',home)

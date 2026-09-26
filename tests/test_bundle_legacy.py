@@ -91,6 +91,22 @@ class BundleLegacyRedirects(unittest.TestCase):
     def lines(self):
         return (self.site/'_redirects').read_text().splitlines()
 
+    def test_reused_bundle_retires_only_old_generated_terms_page(self):
+        from news_mvp.image_wording import RETIRED_IMAGE_STEM
+        relative=RETIRED_IMAGE_STEM+'at/index.html'
+        old=self.site/relative
+        old.parent.mkdir(parents=True,exist_ok=True)
+        old.write_text('<link rel="canonical" href="https://uutistenlukija.fi/'+relative.removesuffix('index.html')+'"><p>Old terms</p>')
+        unrelated=self.site/'preserved.txt';unrelated.write_text('Protected unrelated content')
+        site,receipt=self.bundle()
+        self.assertNotIn(relative,receipt['files'])
+        self.assertFalse(old.exists())
+        self.assertTrue((site/'ai-kuvat/index.html').exists())
+        self.assertEqual(unrelated.read_text(),'Protected unrelated content')
+        old.write_text('<link rel="canonical" href="https://example.org/other/">')
+        with self.assertRaisesRegex(ValueError,'unexpected identity'):self.bundle()
+        self.assertTrue(old.exists())
+
     def test_reviewed_mapping_emits_exact_301_and_hashed_receipt(self):
         document=self.reviewed([mapping(target=self.canonical())])
         with self.loader(document):
@@ -252,7 +268,7 @@ class BundleLegacyRedirects(unittest.TestCase):
         self.insert(clones,deployed={row['id'] for row in clones})
         article=article_path(clones[0])
         self.assertNotEqual('/'+article,self.canonical())
-        collisions=['/tietosuoja/','/kuvituskuvat/','/sivu/2/','/sivu/','/uutiset/','/'+article,
+        collisions=['/tietosuoja/','/ai-kuvat/','/sivu/2/','/sivu/','/uutiset/','/'+article,
                     '/mvp-assets/','/404.html/','/oppaat/','/oppaat/kauppojen-aukioloajat/']
         for source in collisions:
             with self.subTest(source=source),self.loader(self.reviewed([mapping(source=source,target=self.canonical())])),self.assertRaises(ValueError):
@@ -262,7 +278,7 @@ class BundleLegacyRedirects(unittest.TestCase):
         site,receipt=self.bundle()
         self.assertTrue((site/'sivu/2/index.html').is_file())
         self.assertTrue((site/'tietosuoja/index.html').is_file())
-        self.assertTrue((site/'kuvituskuvat/index.html').is_file())
+        self.assertTrue((site/'ai-kuvat/index.html').is_file())
         self.assertTrue((site/article/'index.html').is_file())
         self.assertTrue((site/self.canonical().strip('/')/'index.html').is_file())
         self.assertEqual(check(site,receipt),len(receipt['files']))
