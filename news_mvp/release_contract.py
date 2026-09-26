@@ -173,7 +173,7 @@ def _stock_photo_id(value, provider):
                 not re.fullmatch(r'[A-Za-z0-9_-]{6,40}', value)):
             raise ValueError('Invalid stock photo_id')
         return value
-    if provider in ('wikimedia', 'google', 'statfi'):
+    if provider in ('wikimedia', 'google', 'statfi', 'helsinki'):
         if (not isinstance(value, str) or not value.strip() or value != value.strip() or
                 not re.fullmatch(r'[A-Za-z0-9_-]{6,64}', value)):
             raise ValueError('Invalid open-source photo_id')
@@ -193,7 +193,7 @@ def _stock_profile_url(value, host, field, provider):
     if provider == 'unsplash':
         parsed = _stock_utm(value, host, field)
         valid = re.fullmatch(r'/@[A-Za-z0-9._-]+/?', parsed.path)
-    elif provider in ('wikimedia', 'google', 'statfi'):
+    elif provider in ('wikimedia', 'google', 'statfi', 'helsinki'):
         parsed = _stock_https(value, host, field)
         valid = bool(parsed.path and parsed.path != '/')
     else:
@@ -278,13 +278,13 @@ def stock_binding(image):
         raise ValueError('Missing stock image provenance')
     provenance = image['stock_provenance']
     provider = provenance.get('provider')
-    if provider not in ('unsplash', 'pexels', 'wikimedia', 'google', 'statfi'):
+    if provider not in ('unsplash', 'pexels', 'wikimedia', 'google', 'statfi', 'helsinki'):
         raise ValueError('Unsupported stock image provider')
 
     expected_provenance = set(_STOCK_PROVENANCE_COMMON)
     if provider == 'unsplash':
         expected_provenance.add('download_tracking')
-    elif provider in ('wikimedia', 'google', 'statfi'):
+    elif provider in ('wikimedia', 'google', 'statfi', 'helsinki'):
         expected_provenance.update({'license', 'license_url'})
         if 'attribution' in provenance:
             expected_provenance.add('attribution')
@@ -297,10 +297,15 @@ def stock_binding(image):
                     raise ValueError('Oversized open-source attribution notice')
     if provider == 'statfi':
         expected_provenance.add('chart_evidence')
+    if provider == 'helsinki':
+        expected_provenance.add('news_evidence')
     if set(provenance) != expected_provenance:
         raise ValueError('Unexpected stock provenance fields')
     if provider == 'statfi':
         from .source_charts import validate_provenance
+        validate_provenance(provenance)
+    if provider == 'helsinki':
+        from .source_news_images import validate_provenance
         validate_provenance(provenance)
 
     photo_id = _stock_photo_id(provenance['photo_id'], provider)
@@ -339,7 +344,7 @@ def stock_binding(image):
     elif provider == 'wikimedia':
         image_host = 'upload.wikimedia.org'
     _stock_image_url(provenance['image_url'], image_host, 'image_url')
-    if provider in ('wikimedia', 'google', 'statfi'):
+    if provider in ('wikimedia', 'google', 'statfi', 'helsinki'):
         _stock_nonempty(provenance['license'], 'provenance license')
         _stock_https(provenance['license_url'], urlsplit(provenance['license_url']).hostname,
                      'provenance license_url')
@@ -364,7 +369,7 @@ def stock_binding(image):
     review_fields = set(image) & {'classifier_output', 'relevance_check'}
     if review_fields and review_fields != {'classifier_output', 'relevance_check'}:
         raise ValueError('Incomplete image classifier provenance')
-    if provider in ('wikimedia', 'google', 'statfi') and review_fields != {
+    if provider in ('wikimedia', 'google', 'statfi', 'helsinki') and review_fields != {
             'classifier_output', 'relevance_check'}:
         raise ValueError('Open-source image lacks classifier provenance')
     if review_fields:
@@ -414,9 +419,11 @@ def stock_binding(image):
         raise ValueError('Stock image caption is invalid')
     provider_label = {
         'unsplash': 'Unsplash', 'pexels': 'Pexels', 'wikimedia': 'Wikimedia Commons',
-        'google': 'Google Custom Search', 'statfi': 'Tilastokeskus',
+        'google': 'Google Custom Search', 'statfi': 'Tilastokeskus', 'helsinki': 'Helsingin kaupunki',
     }[provider]
-    if provider != 'statfi' and image['credit'] != f'Photo by {photographer} on {provider_label}':
+    if provider == 'helsinki' and image['credit'] != f'Kuva: Helsingin kaupunki / {photographer}':
+        raise ValueError('Related-news source and photographer credit required')
+    if provider not in ('statfi','helsinki') and image['credit'] != f'Photo by {photographer} on {provider_label}':
         raise ValueError('Stock image credit is invalid')
 
     if provider == 'unsplash':
@@ -431,7 +438,7 @@ def stock_binding(image):
                 image['license'] != 'Pexels License' or
                 image['license_url'] != 'https://www.pexels.com/license/'):
             raise ValueError('Pexels license is invalid')
-        if provider in ('wikimedia', 'google', 'statfi'):
+        if provider in ('wikimedia', 'google', 'statfi', 'helsinki'):
             _stock_nonempty(image['license'], 'open-source license')
             _stock_https(image['license_url'], urlsplit(image['license_url']).hostname,
                          'open-source license_url')
@@ -464,6 +471,9 @@ def media(packet, draft, policy_gate=True):
     if image is not None:
         if 'stock_provenance' in image or 'stock_provenance_sha256' in image:
             stock = stock_binding(image)
+            if stock['stock_provenance']['provider'] == 'helsinki':
+                from .source_news_images import validate_relation
+                validate_relation(stock['stock_provenance'], packet, draft)
         # An official text source cannot authorise a third-party IMAGE: its reuse terms cover
         # its text, not its photography, so a scraped source image has no licence basis.
         # A GENERATED illustration is different in kind - it depicts no real person, event or
@@ -923,7 +933,7 @@ def _check_rendered_stock(html, image):
     provider = image['stock_provenance']['provider']
     provider_text = {
         'unsplash': 'Unsplash', 'pexels': 'Pexels', 'wikimedia': 'Wikimedia Commons',
-        'google': 'Google Custom Search', 'statfi': 'Tilastokeskus',
+        'google': 'Google Custom Search', 'statfi': 'Tilastokeskus', 'helsinki': 'Helsingin kaupunki',
     }.get(provider, provider.title())
     expected_src = (image['url'] if provider == 'unsplash'
                     else f'/mvp-assets/{image["sha256"]}.jpg')

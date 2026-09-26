@@ -164,7 +164,7 @@ def backfill_missing_images(store, state_dir, model, limit=IMAGE_BACKFILL_LIMIT)
         try:
             decision = imagery.classify_draft(draft, model=model, packet=packet)
             image = imagery.build_image(draft, state_dir, category=draft.get("category", ""),
-                                        decision=decision)
+                                        decision=decision, packet=packet)
         except Exception:
             # Provider outages, malformed responses and an unavailable generator are all
             # retryable failures. The archive correction remains pending.
@@ -280,6 +280,7 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                         illustration = build_image(draft, config["state_dir"],
                                                    category=draft.get("category", ""),
                                                    decision=image_decision,
+                                                   packet=packet,
                                                    allow_open_sources=not packet.get("fixture", False))
                     except Exception:
                         illustration = None

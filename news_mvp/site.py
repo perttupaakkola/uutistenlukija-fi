@@ -92,6 +92,8 @@ def image_credit_html(image):
         provider = provenance["provider"]
         if provider == 'statfi':
             return f'Lähde: <a href="{photo_url}">Tilastokeskus</a>'
+        if provider == 'helsinki':
+            return f'Kuva: <a href="{photo_url}">Helsingin kaupunki</a> / {photographer}'
         if provider == "unsplash":
             return (f'Photo by <a href="{esc(provenance["photographer_url"])}">{photographer}</a> '
                     f'on <a href="{photo_url}">Unsplash</a>')

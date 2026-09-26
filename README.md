@@ -89,6 +89,13 @@ the in-pipeline chain below, and every decision is recorded in the plans docs.
   no API key is sent to either page route. Exact photo, author and image-path matches
   are required. Unknown/conflicting grants and rate limits fail closed. Hashed public
   response bytes and a one-day verified cache are retained under `pexels-rights/`.
+  Helsinki's main news photograph is also eligible under its separate, explicit
+  HRI image grant. This permits reuse only with the related news, with city/source
+  and creator credit; it is not labelled with the feed's text CC licence. The
+  exact source page, main-photo URL/credit, original pixels and image grant are
+  hashed. Publication must cite that same Helsinki source. Missing/conflicting
+  credits, ambiguous main photos, login pages, mismatched sources and failed
+  pixel reviews fail closed before the ordinary stock-provider/AI sequence.
 
 ## Front-page snapshots
 

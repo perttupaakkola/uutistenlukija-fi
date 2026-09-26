@@ -38,7 +38,7 @@ def candidate_event(stock, image_sha256, outcome):
     provenance = stock.get('stock_provenance') or {}
     provider = provenance.get('provider')
     identity = str(provenance.get('photo_id', ''))
-    if provider not in {'pexels', 'unsplash', 'wikimedia', 'google'}:
+    if provider not in {'pexels', 'unsplash', 'wikimedia', 'google', 'statfi', 'helsinki'}:
         return
     if not re.fullmatch(r'[A-Za-z0-9_-]{1,150}', identity):
         return

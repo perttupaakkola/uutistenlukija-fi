@@ -440,6 +440,11 @@ def commons_pixel_context(candidate, image_sha):
 
 def _record_pixel_context(image):
     provenance = image.get('stock_provenance') or {}
+    if provenance.get('provider') == 'helsinki':
+        from .source_news_images import pixel_context
+        if image.get('stock_provenance_sha256') != _digest(provenance):
+            raise ValueError('News image provenance changed')
+        return pixel_context(provenance, image['sha256'])
     if provenance.get('provider') != 'wikimedia' or not provenance.get('attribution', {}).get('title'):
         return None
     from .editorial import digest
@@ -461,10 +466,14 @@ def review_pixels(raw, draft, generated=False, *, source_context=None):
     article = {k: draft[k] for k in ('title', 'summary', 'category', 'paragraphs')}
     article_json = json.dumps(article, ensure_ascii=False, sort_keys=True)
     if source_context is not None:
-        expected = commons_pixel_context({'photo_id': source_context['photo_id'],
-            'photo_page': source_context['photo_url'], 'title': source_context['title'],
-            'name': source_context['photographer'], 'license': source_context['license'],
-            'license_url': source_context['license_url']}, hashlib.sha256(raw).hexdigest())
+        if source_context.get('provider') == 'helsinki':
+            from .source_news_images import pixel_context
+            expected = pixel_context(source_context['provenance'], hashlib.sha256(raw).hexdigest())
+        else:
+            expected = commons_pixel_context({'photo_id': source_context['photo_id'],
+                'photo_page': source_context['photo_url'], 'title': source_context['title'],
+                'name': source_context['photographer'], 'license': source_context['license'],
+                'license_url': source_context['license_url']}, hashlib.sha256(raw).hexdigest())
         if generated or expected != source_context:
             raise ValueError('Pixel-context identity or exact bytes mismatch')
     raster = _pixels(raw)
@@ -492,6 +501,9 @@ def review_pixels(raw, draft, generated=False, *, source_context=None):
         + 'Also return alt_fi: one complete concise Finnish sentence (12-200 characters) '
            'aiming for 80-140 characters and only the main visible subject, not every detail, '
            'describing only visible objects, without guessed location, event, person identity or uncertainty. '
+           'Omit place/institution names from alt_fi even when file context identifies them. '
+           'Do not infer an installation stage, purpose of bags/covers, or the exact function of '
+           'an unfamiliar control or component. Prefer the visible general object and omit minor details. '
            'For flags, describe visible colours, patterns, poles and setting in alt_fi, '
            'without country or organization names. A blue-yellow flag with an emblem '
            'must not be called Ukrainian merely because those colours occur in the article. '
@@ -697,11 +709,11 @@ def has_legible_text(description):
 
 
 def build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3, decision=None,
-                allow_open_sources=True, require_pixel_review=True):
+                allow_open_sources=True, require_pixel_review=True, packet=None):
     from .image_providers import image_attempt
     with image_attempt(draft, state_dir) as receipt:
         image = _build_image(draft, state_dir, category, model, attempts, decision,
-                             allow_open_sources, require_pixel_review)
+                             allow_open_sources, require_pixel_review, packet)
         if image:
             receipt.update(outcome='accepted', generated=image.get('generated') is True,
                 image_sha256=image.get('sha256') or (image.get('pixel_review') or {}).get('image_sha256'))
@@ -709,13 +721,13 @@ def build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3, 
 
 
 def _build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3, decision=None,
-                allow_open_sources=True, require_pixel_review=True):
+                allow_open_sources=True, require_pixel_review=True, packet=None):
     """Run the subject-driven image tree and return a reviewed image record or ``None``.
 
     The controller supplies the model-produced ``decision``. The optional deterministic decision
     is retained only for older direct library callers; the Commons and Google branches are enabled
     only for the model path, so a legacy caller cannot accidentally make an unbounded live search.
-    Provider order is Pexels, Unsplash, Wikimedia Commons, Google CSE, then generation.
+    Explicit related-source image grants precede Pexels, Unsplash, Commons, Google and AI.
     """
     from pathlib import Path
     subject = subject_from_draft(draft)
@@ -792,6 +804,15 @@ def _build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3,
                 'matched': list(decision['must_show']), 'reason': 'provider adapter accepted candidate',
             }}
         return stock
+
+    if packet and model_decision and allow_open_sources and require_pixel_review:
+        from .source_news_images import fetch as fetch_source_news
+        try:
+            stock = fetch_source_news(packet, draft, state_dir, decision, selected)
+        except Exception:
+            stock = None
+        if stock:
+            return stock  # The source adapter requires the exact selected() review callback.
 
     # A provider outage, malformed result, licence gap, or failed relevance check leaves the
     # next provider available. The order is intentionally part of the owner-facing policy.
@@ -983,6 +1004,7 @@ PROVIDER_LABELS = {
     'wikimedia': 'Wikimedia Commons',
     'google': 'Google Custom Search',
     'statfi': 'Tilastokeskus',
+    'helsinki': 'Helsingin kaupunki',
 }
 
 _PHOTO_ID = re.compile(r'[A-Za-z0-9_-]{6,40}')
@@ -2137,6 +2159,8 @@ def _open_source_record(provider, candidate, query, state_dir, pixels, sha, loca
     }
     if provider == 'statfi':
         provenance['chart_evidence'] = candidate['chart_evidence']
+    if provider == 'helsinki':
+        provenance['news_evidence'] = candidate['news_evidence']
     if candidate.get('title'):
         provenance['attribution'] = {'title':candidate['title'],
             'changes':'Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.'}
@@ -2166,6 +2190,10 @@ def _open_source_record(provider, candidate, query, state_dir, pixels, sha, loca
         from .source_charts import CAPTION, CREDIT, validate_provenance
         validate_provenance(provenance)
         record.update(caption=CAPTION, credit=CREDIT)
+    if provider == 'helsinki':
+        from .source_news_images import validate_provenance
+        validate_provenance(provenance)
+        record['credit'] = f"Kuva: Helsingin kaupunki / {candidate['name']}"
     return record
 
 
