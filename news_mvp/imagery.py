@@ -756,6 +756,20 @@ def _build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3,
                     candidate_event(stock, image_sha, 'pixel_refused')
                     return None
                 stock = {**stock, 'pixel_review': review, 'alt': _stock_alt(review)}
+                search_gate = stock.get('relevance_check')
+                if search_gate is not None and search_gate.get('accepted') is not True:
+                    # A proposed illustration composition is not the article's
+                    # visual truth. Only this exact-byte, full-article review may
+                    # accept a licensed subject missing a composition detail.
+                    validate_pixel_review(stock, draft)
+                    stock['relevance_check'] = {
+                        'accepted': True, 'method': 'vision',
+                        'evidence': review['description'][:RELEVANCE_EVIDENCE_LIMIT],
+                        'matched': sorted(_semantic_tokens(review['description']) &
+                                          _decision_tokens(decision)),
+                        'reason': ('Exact-pixel full-article review approved licensed subject; '
+                                   'search composition gate: ' + search_gate['reason'])[:300],
+                    }
                 candidate_event(stock, image_sha, 'accepted')
             except (GenerationError, OSError, ValueError, KeyError, TypeError):
                 candidate_event(stock, image_sha, 'review_unavailable')
@@ -776,7 +790,8 @@ def _build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3,
     # A provider outage, malformed result, licence gap, or failed relevance check leaves the
     # next provider available. The order is intentionally part of the owner-facing policy.
     try:
-        stock = (fetch_pexels(draft, state_dir, decision=decision, accept=selected) if model_decision
+        stock = (fetch_pexels(draft, state_dir, decision=decision, accept=selected,
+                             article_review_fallback=require_pixel_review) if model_decision
                  else fetch_pexels(draft, state_dir, accept=selected))
     except Exception:
         stock = None
@@ -785,7 +800,8 @@ def _build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3,
         if accepted:
             return accepted
     try:
-        stock = (fetch_unsplash(draft, decision=decision, accept=selected) if model_decision
+        stock = (fetch_unsplash(draft, decision=decision, accept=selected,
+                               article_review_fallback=require_pixel_review) if model_decision
                  else fetch_unsplash(draft, accept=selected))
     except Exception:
         stock = None
@@ -796,7 +812,8 @@ def _build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3,
     if model_decision and allow_open_sources:
         for provider in (fetch_wikimedia, fetch_google):
             try:
-                stock = provider(draft, state_dir, decision=decision, accept=selected)
+                stock = provider(draft, state_dir, decision=decision, accept=selected,
+                                 article_review_fallback=require_pixel_review)
             except Exception:
                 stock = None
             if stock:
@@ -1282,6 +1299,26 @@ def validate_relevance_record(value):
     return value
 
 
+def _can_review_stock_composition(result, evidence, decision, accept, enabled):
+    """Defer only composition refusals to an exact full-article pixel review.
+
+    This grants no approval. Standalone provider calls keep their strict gate;
+    the publishing image tree explicitly enables the subsequent review. A
+    forbidden visible subject is never deferred by this path.
+    """
+    if result['accepted']:
+        return True
+    return bool(enabled and accept is not None and relevance_check(evidence,
+        {'must_show': [], 'must_avoid': decision.get('must_avoid', [])})['accepted'])
+
+
+def _accepted_stock(record, accept):
+    record = accept(record) if accept is not None else record
+    if record is not None and record.get('relevance_check') is not None:
+        validate_relevance_record(record['relevance_check'])
+    return record
+
+
 def _exact_https(url, host):
     """Parse `url` only when it is HTTPS on exactly `host`; otherwise None."""
     if not isinstance(url, str) or not url:
@@ -1553,7 +1590,7 @@ def _stock_record(candidate, query, pixels, depicted, retrieved_at, decision=Non
     return record
 
 
-def fetch_unsplash(draft, subject=None, decision=None, *, accept=None):
+def fetch_unsplash(draft, subject=None, decision=None, *, accept=None, article_review_fallback=False):
     """Select one relevant Unsplash photograph as a hotlink-only record, or None.
 
     The raster behind the hotlink is fetched once so `verify` can judge the pixels and `describe`
@@ -1607,13 +1644,14 @@ def fetch_unsplash(draft, subject=None, decision=None, *, accept=None):
                     evidence = depicted or _candidate_evidence(candidate)
                     relevance_result = relevance_check(
                         evidence, decision, 'vision' if depicted else 'metadata')
-                    if not relevance_result['accepted']:
+                    if not _can_review_stock_composition(relevance_result, evidence, decision,
+                                                         accept, article_review_fallback):
                         continue
                 record = _stock_record(
                     candidate, query, pixels, depicted,
                     datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
                     decision, relevance_result)
-                record = accept(record) if accept is not None else record
+                record = _accepted_stock(record, accept)
                 if record is None:
                     continue
                 if not _track_download(candidate['download'], candidate['photo_id'], key):
@@ -1933,7 +1971,7 @@ def _pexels_record(candidate, query, sha, local_path, pixels, depicted, retrieve
     return record
 
 
-def fetch_pexels(draft, state_dir, subject=None, decision=None, *, accept=None):
+def fetch_pexels(draft, state_dir, subject=None, decision=None, *, accept=None, article_review_fallback=False):
     """Fetch, verify, and persist one relevant Pexels photograph, or return None."""
     try:
         key = provider_key('pexels')
@@ -1974,7 +2012,8 @@ def fetch_pexels(draft, state_dir, subject=None, decision=None, *, accept=None):
                     evidence = depicted or _candidate_evidence(candidate)
                     relevance_result = relevance_check(
                         evidence, decision, 'vision' if depicted else 'metadata')
-                    if not relevance_result['accepted']:
+                    if not _can_review_stock_composition(relevance_result, evidence, decision,
+                                                         accept, article_review_fallback):
                         continue
                 jpeg = _jpg(raw)
                 try:
@@ -1990,7 +2029,7 @@ def fetch_pexels(draft, state_dir, subject=None, decision=None, *, accept=None):
                     candidate, query, sha, local_path, pixels, depicted,
                     datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
                     decision, relevance_result)
-                record = accept(record) if accept is not None else record
+                record = _accepted_stock(record, accept)
                 if record is not None:
                     return record
     except Exception:
@@ -2241,7 +2280,7 @@ def _wikimedia_search(query):
     return _get_json(url, WIKIMEDIA_API_HOST, {'Accept': 'application/json'})
 
 
-def fetch_wikimedia(draft, state_dir, subject=None, decision=None, *, accept=None):
+def fetch_wikimedia(draft, state_dir, subject=None, decision=None, *, accept=None, article_review_fallback=False):
     """Search Commons for a licensed, attributable candidate after stock providers fail."""
     if decision is None:
         return None
@@ -2278,7 +2317,8 @@ def fetch_wikimedia(draft, state_dir, subject=None, decision=None, *, accept=Non
             evidence = depicted or _candidate_evidence(candidate)
             relevance_result = relevance_check(
                 evidence, decision, 'vision' if depicted else 'metadata')
-            if not relevance_result['accepted']:
+            if not _can_review_stock_composition(relevance_result, evidence, decision,
+                                                 accept, article_review_fallback):
                 continue
             persisted = _persist_verified_image(raw, state_dir)
             if persisted is None:
@@ -2288,7 +2328,7 @@ def fetch_wikimedia(draft, state_dir, subject=None, decision=None, *, accept=Non
                 'wikimedia', candidate, query, state_dir, pixels, sha, local_path,
                 depicted, decision, relevance_result,
                 datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
-            record = accept(record) if accept is not None else record
+            record = _accepted_stock(record, accept)
             if record is not None:
                 return record
     return None
@@ -2354,7 +2394,7 @@ def _google_search(query, key, cx):
     return _get_json(url, GOOGLE_API_HOST, {'Accept': 'application/json'})
 
 
-def fetch_google(draft, state_dir, subject=None, decision=None, *, accept=None):
+def fetch_google(draft, state_dir, subject=None, decision=None, *, accept=None, article_review_fallback=False):
     """Use Google CSE only with credentials and only when licence/author metadata is present."""
     if decision is None:
         return None
@@ -2392,7 +2432,8 @@ def fetch_google(draft, state_dir, subject=None, decision=None, *, accept=None):
             evidence = depicted or _candidate_evidence(candidate)
             relevance_result = relevance_check(
                 evidence, decision, 'vision' if depicted else 'metadata')
-            if not relevance_result['accepted']:
+            if not _can_review_stock_composition(relevance_result, evidence, decision,
+                                                 accept, article_review_fallback):
                 continue
             persisted = _persist_verified_image(raw, state_dir)
             if persisted is None:
@@ -2402,7 +2443,7 @@ def fetch_google(draft, state_dir, subject=None, decision=None, *, accept=None):
                 'google', candidate, query, state_dir, pixels, sha, local_path,
                 depicted, decision, relevance_result,
                 datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
-            record = accept(record) if accept is not None else record
+            record = _accepted_stock(record, accept)
             if record is not None:
                 return record
     return None

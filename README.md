@@ -77,6 +77,12 @@ the in-pipeline chain below, and every decision is recorded in the plans docs.
   task or temporary review outage resumes without another paid generation. Explicitly
   rejected pixels require a fresh task. `image-provider-attempts/` records request hosts,
   HTTP outcomes and the accepted image hash without request queries or response bodies.
+  Licensed candidates that miss a proposed composition detail can reach the mandatory
+  exact-pixel review against the full final article. For example, a relevant medicine
+  photograph need not also contain a calculator. This path cannot override forbidden
+  visible subjects, missing rights, duplicate pixels or a failed/unavailable review.
+  The accepted relevance receipt records the original composition refusal and the
+  independent article review; standalone provider calls retain the strict search gate.
 
 ## Front-page snapshots
 
