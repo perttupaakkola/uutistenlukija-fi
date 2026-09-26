@@ -1998,6 +1998,11 @@ def _commons_candidate(page):
     license_name = (_commons_value(metadata, 'LicenseShortName') or
                     _commons_value(metadata, 'UsageTerms'))
     license_url = _commons_value(metadata, 'LicenseUrl')
+    # Commons often omits LicenseUrl for files explicitly marked public domain.
+    # Preserve the exact public-domain status while supplying its canonical rights URI;
+    # otherwise valid UN/government imagery is silently discarded before review.
+    if not license_url and re.fullmatch(r'public domain', license_name, re.I):
+        license_url = 'https://creativecommons.org/publicdomain/mark/1.0/'
     if not _commons_free_license(license_name, license_url) or not name:
         return None
     page_url = page.get('canonicalurl')

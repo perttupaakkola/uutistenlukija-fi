@@ -104,18 +104,18 @@ class ArticleAndCategoryRendering(unittest.TestCase):
         self.assertNotIn('story-body',body)
         self.assertNotIn('Luonnos',html)
 
-    def test_article_hero_has_no_figcaption_and_rights_sit_after_prose(self):
+    def test_article_hero_has_small_generated_caption_and_rights_sit_after_prose(self):
         jobs,output,_=self.render([('Kulttuuri','a'),('Kulttuuri','b')])
         html=self.article_text(output,jobs[0])
         hero=HERO_RE.search(html)
         self.assertIsNotNone(hero,'hero must be figure.article-hero')
-        self.assertNotIn('<figcaption',hero.group(1))
-        self.assertNotIn('<figcaption',html)
+        self.assertIn('<figcaption class="article-hero-caption">',hero.group(1))
         scan=PageScan();scan.feed(html)
-        self.assertEqual(scan.captions,[])
+        self.assertEqual(scan.captions,[self.packet['image']['caption']])
         self.assertIn('width="',hero.group(1));self.assertIn('height="',hero.group(1))
         self.assertIn('referrerpolicy="no-referrer"',hero.group(1))
-        self.assertIn('Kuvituskuva · tekoälyllä luotu',hero.group(1))
+        self.assertNotIn('portal-lead__image-label',hero.group(1))
+        self.assertNotIn('Kuvituskuva · tekoälyllä luotu',html)
         prose_end=html.index('</div>',html.index('<div class="content">'))
         rights=html.index('<section class="image-rights">')
         sources=html.index('<section class="sources">')

@@ -136,6 +136,27 @@ class ProviderTree(unittest.TestCase):
         self.assertEqual(bound["stock_provenance"]["photographer"], "Author Example")
         self.assertEqual(bound["source_url"], candidate["photo_page"])
 
+    def test_commons_public_domain_without_license_url_is_admitted(self):
+        page = {
+            "pageid": 123,
+            "title": "File:Sustainable Development Goals.jpg",
+            "canonicalurl": "https://commons.wikimedia.org/wiki/File:Sustainable_Development_Goals.jpg",
+            "imageinfo": [{
+                "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Sustainable_Development_Goals.jpg",
+                "extmetadata": {
+                    "Artist": {"value": "UNDP"},
+                    "LicenseShortName": {"value": "Public domain"},
+                    "LicenseUrl": {"value": ""},
+                    "ImageDescription": {"value": "The Sustainable Development Goals"},
+                },
+            }],
+        }
+        candidate = imagery._commons_candidate(page)
+        self.assertIsNotNone(candidate)
+        self.assertEqual(candidate["license"], "Public domain")
+        self.assertEqual(candidate["license_url"],
+                         "https://creativecommons.org/publicdomain/mark/1.0/")
+
     def test_candidate_that_misses_must_show_is_skipped(self):
         def pexels(photo_id, alt):
             return {

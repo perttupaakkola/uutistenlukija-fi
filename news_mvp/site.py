@@ -110,13 +110,15 @@ def image_size_attributes(image):
 
 
 def image_overlay_html(image, include_credit=True):
-    """Reader-visible image labels and reviewed stock credit for a portal slot."""
-    generated = image.get("generated") is True
+    """Reader-visible archive-photo labels and reviewed stock credit for a portal slot.
+
+    Generated-image disclosure belongs below the image on the article page, never on
+    homepage or listing thumbnails.
+    """
     stock = bool(image.get("stock_provenance"))
-    label = "Kuvituskuva · tekoälyllä luotu" if generated else "Arkistokuva"
-    label_html = f'<span class="portal-lead__image-label">{label}</span>' if generated or stock else ""
+    label_html = '<span class="portal-lead__image-label">Arkistokuva</span>' if stock else ""
     credit_html = ""
-    if include_credit and not generated and (stock or image.get("credit")):
+    if include_credit and stock:
         credit_html = f'<span class="portal-lead__credit">{image_credit_html(image)}</span>'
     return label_html + credit_html
 
@@ -126,10 +128,9 @@ def homepage_image_figure(image, image_url, lazy):
 
     Only images below the fold are lazy-loaded, so the lead never delays its own
     paint. There are no srcset variants: exactly one reviewed asset is served.
-    A generated illustration carries a visible overlay label above the gradient
-    so it can never read as a photo; the label never names the model that drew
-    it. Stock photographs carry the reviewed linked credit and an ``Arkistokuva``
-    overlay. No caption is rendered under the image.
+    Generated illustrations carry no listing overlay or caption. Their disclosure is
+    rendered beneath the hero on the article page. Stock photographs retain the reviewed
+    linked credit and an ``Arkistokuva`` overlay.
     """
     loading = ' loading="lazy"' if lazy else ""
     return (f'<div class="portal-lead__image">'
@@ -351,15 +352,13 @@ def category_display(category):
 
 
 def article_hero_figure(image, image_url):
-    """Article hero with intrinsic dimensions and an optional generated-image label.
-
-    Credit, caption, licence and source live in the image-rights section after the
-    prose, so no caption ever hangs directly below the picture. The short generated
-    label is an overlay inside the figure; it does not expose the internal model name.
-    """
+    """Article hero with intrinsic dimensions and honest, quiet image disclosure."""
+    caption = (f'<figcaption class="article-hero-caption">{esc(image["caption"])}</figcaption>'
+               if image.get("generated") is True else "")
     return (f'<figure class="article-hero"><img src="{esc(image_url)}" alt="{esc(image["alt"])}" '
             f'{image_size_attributes(image)} referrerpolicy="no-referrer">'
-            f'{image_overlay_html(image, include_credit=bool(image.get("stock_provenance")))}</figure>')
+            f'{image_overlay_html(image, include_credit=bool(image.get("stock_provenance")))}'
+            f'{caption}</figure>')
 
 
 def image_rights_html(image):
