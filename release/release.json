@@ -4,64 +4,61 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "7d332f6e41ec16e1b45038be91a7550b976fa930",
-  "job_id": "7d6a15176a04058f2278fe1b116de6f60525108d9c683a076d272bf56bb559a8",
-  "packet_sha256": "bdea4cfa938ef6634ceec2ff6fbdc0a2590d32712652ed1d577a480fb8b6f4bf",
-  "draft_sha256": "388224ecf7432024a89adef8aa64fc0e0397e23044b2da7908cd3e0ed6b52a14",
-  "image_sha256": "902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d",
+  "job_id": "8e7e3e585fec2f4f95004b8381157998b79bef7982b928fd9727ff4c998dd4bd",
+  "packet_sha256": "4058daf4e1f3d13c7d9b13dfe64c546432a3b45ab8c99f73137c2ab20125b3e0",
+  "draft_sha256": "c0668340e72800eeb2533f2a5b967e6de2957650032df745047f3f97358d9f18",
+  "image_sha256": "a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "4087c1d4c3bc77ab318772c4600c5a8c9bc86b14701ac4ce5b3142ca81c4ee34"
+    "provenance_sha256": "f54f241b150d9f21747e3d0c143938f0cbd999d156e683c66af63af53646c9fa"
   },
   "stock_image": {
-    "alt": "Arkistokuva: Punainen LAW-merkitty kirja ja musta kirja ovat valkoisella pinnalla.",
-    "caption": "Arkistokuva artikkelin aiheesta.",
+    "alt": "Arkistokuva: Punaisen kirjan kannessa lukee LAW, ja sen alta näkyy osa tummansinistä kirjaa.",
+    "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
     "classifier_output": {
       "category": "Kotimaa",
-      "depictable_scene": "Neutraalilla pöytäpinnalla on suljettu lakikirja, paperisia lausuntoasiakirjoja ja kynä.",
+      "depictable_scene": "Lakivalmistelua havainnollistava lakikirja neutraalilla pinnalla.",
       "must_avoid": [
-        "people, including children, faces, or human silhouettes",
-        "violence, conflict, or threatening gestures",
-        "injuries, blood, weapons, or victims",
-        "domestic interior staged as an abuse scene"
+        "people"
       ],
       "must_show": [
         "law book"
       ],
       "search_queries": [
+        "law book cover",
         "closed law book",
-        "law book desk",
         "lakikirja pöydällä"
       ],
-      "subject": "Oikeusministeriön lausuntokierros lapsirauharikoksesta eli rikoslakiin ehdotetusta koventamisperusteesta"
+      "subject": "Hallitus esittää muutoksia sote-lakien palveluhankintaan"
     },
     "credit": "Photo by Tara Winstead on Pexels",
-    "depicted": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
+    "depicted": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
     "generated": false,
     "hotlink": false,
     "license": "Pexels License",
     "license_url": "https://www.pexels.com/license/",
-    "local_path": "media/902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d.jpg",
+    "local_path": "media/a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b.jpg",
     "pixel_review": {
-      "alt_fi": "Musta ja punainen kirja, jossa lukee \"LAW\", ovat valkoisella pinnalla.",
+      "alt_fi": "Punaisen kirjan kannessa on puukirjaimin kirjoitettu sana LAW, ja sen alla näkyy osittain tummansininen kirja.",
       "approved": true,
-      "article_text_sha256": "3b1a9931f683ccfd079d682877f7b275b550d33717d98918706f25af7336b5b4",
-      "description": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
-      "image_sha256": "902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d",
+      "article_text_sha256": "3be34497eba93a2f7103f696b88eeabc41b68ab17b6ee010c0c415fe46ba1ddd",
+      "description": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
+      "image_sha256": "a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b",
       "model": "google:gemini-2.5-flash",
       "no_people": true,
-      "reason": "The article discusses proposed changes to criminal law, specifically a new basis for aggravating punishment related to child peace. The image directly illustrates the concept of 'law' through the visible word on the book, which is relevant to the article's subject matter of legal reforms.",
-      "reviewed_at": "2026-09-26T16:59:33.063418+00:00"
+      "reason": "The article discusses proposed changes to social and healthcare laws. The image directly illustrates the concept of 'law' through the prominent word on the book, making it relevant to the article's subject matter.",
+      "reviewed_at": "2026-09-26T17:20:39.347537+00:00"
     },
     "pixels": {
       "height": 627,
       "mode": "RGB",
-      "variance": 12682.6,
+      "variance": 9754.1,
       "width": 940
     },
     "relevance_check": {
       "accepted": true,
-      "evidence": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
+      "evidence": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
       "matched": [
         "book",
         "law"
@@ -69,32 +66,32 @@
       "method": "vision",
       "reason": "all must_show requirements matched"
     },
-    "sha256": "902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d",
-    "source_url": "https://www.pexels.com/photo/top-view-of-notebooks-with-a-text-law-on-the-cover-8850748/",
+    "sha256": "a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b",
+    "source_url": "https://www.pexels.com/photo/close-up-of-books-with-a-word-law-on-the-top-8850747/",
     "stock_provenance": {
-      "image_url": "https://images.pexels.com/photos/8850748/pexels-photo-8850748.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "photo_id": "8850748",
-      "photo_url": "https://www.pexels.com/photo/top-view-of-notebooks-with-a-text-law-on-the-cover-8850748/",
+      "image_url": "https://images.pexels.com/photos/8850747/pexels-photo-8850747.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "photo_id": "8850747",
+      "photo_url": "https://www.pexels.com/photo/close-up-of-books-with-a-word-law-on-the-top-8850747/",
       "photographer": "Tara Winstead",
       "photographer_url": "https://www.pexels.com/@tara-winstead",
       "provider": "pexels",
       "query": "closed law book",
       "retrieved_at": "2026-09-26T16:50:29Z"
     },
-    "stock_provenance_sha256": "fa142c8f2dc0df1fa1f39db29cc76500bb3e1cdf58db5f5d86e4276841489f70",
-    "url": "https://uutistenlukija.fi/media/902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d.jpg"
+    "stock_provenance_sha256": "3a7ed2567b72c77c48b71500fe93726aa16e4de99a84e86ebaa829229beb5f92",
+    "url": "https://uutistenlukija.fi/media/a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b.jpg"
   },
   "new_article_files": [
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html"
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "c5a6762ea8db0d92d86ecaf5427faf7f6ec9b6fffb130eb2dfaa0c8d59006c05",
     "_redirects": "aca523d4c51af72a58b0972e54c5b3c8bd0e6682c486b5c65c08ceaf3e4953c5",
     "ai-kuvat/index.html": "f8fb7d1bc9a01449cf02d5096f64b29aacb4f1a2ddbfffa6ea291cb596ef3e73",
-    "categories/kotimaa/index.html": "7487a10456282b60f9974a86d1aa21dcc9d241ec9dfe98252162a88891c7bf51",
+    "categories/kotimaa/index.html": "16d3deca13736baf41e50473eb2da75ff914ebb23dc283cccc92ebee12287a1d",
     "categories/kulttuuri/index.html": "06a65f204aee85fe082683ab2eab843908d01ff2683e82b6d604fb45b64c46ca",
-    "categories/talous/index.html": "b1cfcc791394e52948d7f532bb176efdacf604b2f55f9b5ea0a5d60149b9f350",
+    "categories/talous/index.html": "ee2a62dc94f6787c43f569be2d78384b57c677e0bc7990cf1caba9e98da9d457",
     "categories/teknologia/index.html": "4334d13ce7693fe0c9d5117e71ed280d817401d3f3df9532efe94cc3888df491",
     "categories/tiede/index.html": "da45c8ace7123ba7bb1ab23ba078d01b05408716c1ff40a49f9661fc581da02f",
     "categories/ulkomaat/index.html": "92c9c7c7a0f97e0099f575726d6a26c9aa06fc8888c269e2fa5ef580adea50db",
@@ -333,6 +330,7 @@
     "mvp-assets/8d501db972848e135cb8d81c6858cae9ae0e184fd3b8e1f92fd95bad1d9f6b4d.jpg": "8d501db972848e135cb8d81c6858cae9ae0e184fd3b8e1f92fd95bad1d9f6b4d",
     "mvp-assets/8dc04ad182625f5df4519317f8f2fcdab93c3dc655b3d229811e9844ad8ee0fb.jpg": "8dc04ad182625f5df4519317f8f2fcdab93c3dc655b3d229811e9844ad8ee0fb",
     "mvp-assets/8e18ef1f229317243cf8c592fe38985de57713488c8e2806c1ee5f3cddd72832.jpg": "8e18ef1f229317243cf8c592fe38985de57713488c8e2806c1ee5f3cddd72832",
+    "mvp-assets/8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d.jpg": "8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d",
     "mvp-assets/8ee4f5f934ed492339052d09ee0887f302b33611deeac0319de09866a3e8e04d.jpg": "8ee4f5f934ed492339052d09ee0887f302b33611deeac0319de09866a3e8e04d",
     "mvp-assets/8ff618fc73d8bd6683c8772605c6a898cbe7abc58a1743d4d6c07e61d785912e.jpg": "8ff618fc73d8bd6683c8772605c6a898cbe7abc58a1743d4d6c07e61d785912e",
     "mvp-assets/902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d.jpg": "902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d",
@@ -365,6 +363,7 @@
     "mvp-assets/9fd8189f41079b829f50c78212829723bc22c22d66b9ad719fcbb23b6d82d625.jpg": "9fd8189f41079b829f50c78212829723bc22c22d66b9ad719fcbb23b6d82d625",
     "mvp-assets/a0c02deec1ac407b43371c66f5628a98dcbe3925833d0c5f297a57520366d915.jpg": "a0c02deec1ac407b43371c66f5628a98dcbe3925833d0c5f297a57520366d915",
     "mvp-assets/a1354f8c4ab16a95f0fe21a1e44cf99888a352052652508fef1fb028a123b4af.jpg": "a1354f8c4ab16a95f0fe21a1e44cf99888a352052652508fef1fb028a123b4af",
+    "mvp-assets/a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b.jpg": "a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b",
     "mvp-assets/a1727f3be871c63f1df37fb5c4e41a5297e261947768567dbaaf84cf2ee5105b.jpg": "a1727f3be871c63f1df37fb5c4e41a5297e261947768567dbaaf84cf2ee5105b",
     "mvp-assets/a2db1d31a1fdf67729990d0a0dd6512912f689f619065dd9d4bf60b3d631afb3.jpg": "a2db1d31a1fdf67729990d0a0dd6512912f689f619065dd9d4bf60b3d631afb3",
     "mvp-assets/a394614d747fafdef6f96df5fadc64dc0c1da065f12dc3704008374ab508955e.jpg": "a394614d747fafdef6f96df5fadc64dc0c1da065f12dc3704008374ab508955e",
@@ -386,6 +385,7 @@
     "mvp-assets/b09d59ccc8d6546d227f94befae0c71bc1d1adb3d74c02fc987feb5197fc8c27.jpg": "b09d59ccc8d6546d227f94befae0c71bc1d1adb3d74c02fc987feb5197fc8c27",
     "mvp-assets/b2375fd25ae3df3da0d265065f6afcd28edd8fb07dd1e51fa5916477ea6f34ba.jpg": "b2375fd25ae3df3da0d265065f6afcd28edd8fb07dd1e51fa5916477ea6f34ba",
     "mvp-assets/b270a0334b90c6cd2eec92b321b33ff529860ed3db766f697321782cd8386c1c.jpg": "b270a0334b90c6cd2eec92b321b33ff529860ed3db766f697321782cd8386c1c",
+    "mvp-assets/b3bad76723c362b0fd4da4620b8b562634c81915f7ae4ff6cbc2ffd9f4d6b74b.jpg": "b3bad76723c362b0fd4da4620b8b562634c81915f7ae4ff6cbc2ffd9f4d6b74b",
     "mvp-assets/b40f453c77a8570d229be75c149d72ed2f43925a926df286ea510f72701e3719.jpg": "b40f453c77a8570d229be75c149d72ed2f43925a926df286ea510f72701e3719",
     "mvp-assets/b4cf0d83cf31ff340219e845648f79ca3e7561909f4a1cfd0a16ad0dd9a378f0.jpg": "b4cf0d83cf31ff340219e845648f79ca3e7561909f4a1cfd0a16ad0dd9a378f0",
     "mvp-assets/b5ebf9849001857d15d95b9fdf4710ee90f2554c963f4fe13cf90410b64936d0.jpg": "b5ebf9849001857d15d95b9fdf4710ee90f2554c963f4fe13cf90410b64936d0",
@@ -546,13 +546,13 @@
     "rss.xml": "91bf019218a9f78c104ba69bcc1a10a7f8c1cd70f820f64eafab1aef0c73adb9",
     "sitemap.xml": "7230d87ee1db380df923690f69083ccb3ea0851ec07bf5a9531cff10c59fbbf1",
     "sivu/2/index.html": "b6ae342c8ddfd198b80c558f7550b7c4f2a913388bedfbd9ba12e40bb91c309e",
-    "sivu/3/index.html": "d004459a880c40e16e283285a6beeca9dffc35d14d7641f962e45e32a25c5d41",
+    "sivu/3/index.html": "918a78626185affd7ac60708eb604ee8deaa15176c157b5ce4f67b016b863da4",
     "sivu/4/index.html": "2af0fd97ecaeedec99844592c36eb4c9f98a44c24e558dedd88abe660ab32168",
-    "sivu/5/index.html": "f2508d844556e22170ab2eba7a015728058650a9f7bf4d1f422b94ce97747a69",
-    "sivu/6/index.html": "a60bfd4eae6f1a7c9bd5d8831745f7aae4729ab6d0db6c028c72de3e3ac0c8dd",
+    "sivu/5/index.html": "86cc1158fdbf2c2bf5b73058331e01464cb2d2d2b1b33bf873a9362f5b390591",
+    "sivu/6/index.html": "ae63924d9dabc5eb68f39244acd20e7190881c67b3e3ece5772885a47b23cfa7",
     "sivu/7/index.html": "ce4508bd633f4d0507be3d3767ec2ddffbb4a1cc87a39a16befbe8dd4a4dd818",
     "tietosuoja/index.html": "01101978fc20e30604e8e7c5400062e51b4cccf77a2e4bc737a0bfe55ad096cd",
-    "tuoreimmat/index.html": "d9f4662100cc9ed98df75843d9bc9f6c2c47e85fa4d1fe39fe8d97693860c3f1",
+    "tuoreimmat/index.html": "787a259f98de52aaeadc0faaa0fcccafaae9ef41b2de918f8427fa3a56e219fd",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -598,7 +598,7 @@
     "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "dd3efd3946df331c21d0fabf607ce5185602450d6a280ff3e8b6ee30d8c614a0",
     "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "11672b272c906ed74bfc87a3f218ea28ef3d143991bf876d6951d0162cf5554d",
     "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "9d7d6ff610a77e41553b283b0acfe4b873ca0974490777635f3939d37643c814",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "bf52819dc1cb9729202b1611a8e7399d2decfc53cc864884618ed5dc7df325c0",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "d40ed0bfaad89c5c0ca9a7b3c14ba0d49d5535ce5e906ee244c73c9769eda914",
     "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "c62ab5557abc2a536fdd612d37f1720dcd21587e085bc944f51730968c24d0e8",
     "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "06ad09ea16ffb54c7dc3104f6057f8d81dc6bc76f4ae465a665b89a529b66142",
     "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "5a47aefa652dd68791cc62d08d4b49a1055ebda39f18b9b85d04fb13622f250d",
@@ -708,7 +708,7 @@
     "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "a6c7c69350dd8ca761af6e001e51980622f91707b4df140f99611f4ec538bba3",
     "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "bc9ae2f3fc1a3a5502d5b60fda582ddaf415946d9c59e494355e77cd5c658909",
     "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "dcb5b1102c1e79fb70d14bea0da9350fb113caf399868a3a45a1f9f260174915",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "27fffd6de78a314ba3377b680dd6e7ae7d14be889f52944a28c9aa77dda98bac",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "e60c34c251ce663f54fcad0942d7b1f476f74eceee0198a2a665171fba11244f",
     "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "1c25e132534d65334d4bf6afbb06fb85648ba8057bdaba913e9fff9a8a2af0af",
     "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "201f9c48e1ca80d9920e1152035ba5b244fb2892e08e908692d51db71e403620",
     "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "9289d0f1de0d592f99673ea0324289383cd3278d0da3e62567cc68d3af563246",
@@ -724,7 +724,7 @@
     "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "8489a20a1fd0cb1c8aede6b327cdf51496db8bd190289e18dbe0494dd738432b",
     "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "32edf342e0b3858dece2f5ca3325c306d116a45878741ce278f45dcd21f87d46",
     "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "b11bf62e31267171329c61c1672e39a7f5bf410dc7ae28b1c074c7f1757b2215",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "49f54e2e53ae76bc3bbcc4506de082a852daa3594dfab98adf00c8e59419a812",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "0d3910a02f27b6686538d5fd61622b0c766cd4d6a9a18f9591196158eb900be5",
     "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "b0f3b711de8e4cb2161f42f4698f6992608fb6c874b29b1ebd2f452a06fa7888",
     "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "8b770003bd5d815ed5e73c1ed79069ba7d4451c0c8be8921f1018d39ff90de82",
     "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "37f25dc7d618659b7c3b4e5055e98486f16e22bf669c85c4fd9e13d05ac29bcc",
@@ -771,54 +771,51 @@
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Punainen LAW-merkitty kirja ja musta kirja ovat valkoisella pinnalla.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "Arkistokuva: Punaisen kirjan kannessa lukee LAW, ja sen alta näkyy osa tummansinistä kirjaa.",
+      "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
       "classifier_output": {
         "category": "Kotimaa",
-        "depictable_scene": "Neutraalilla pöytäpinnalla on suljettu lakikirja, paperisia lausuntoasiakirjoja ja kynä.",
+        "depictable_scene": "Lakivalmistelua havainnollistava lakikirja neutraalilla pinnalla.",
         "must_avoid": [
-          "people, including children, faces, or human silhouettes",
-          "violence, conflict, or threatening gestures",
-          "injuries, blood, weapons, or victims",
-          "domestic interior staged as an abuse scene"
+          "people"
         ],
         "must_show": [
           "law book"
         ],
         "search_queries": [
+          "law book cover",
           "closed law book",
-          "law book desk",
           "lakikirja pöydällä"
         ],
-        "subject": "Oikeusministeriön lausuntokierros lapsirauharikoksesta eli rikoslakiin ehdotetusta koventamisperusteesta"
+        "subject": "Hallitus esittää muutoksia sote-lakien palveluhankintaan"
       },
       "credit": "Photo by Tara Winstead on Pexels",
-      "depicted": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
+      "depicted": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
       "generated": false,
       "hotlink": false,
       "license": "Pexels License",
       "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d.jpg",
+      "local_path": "media/a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b.jpg",
       "pixel_review": {
-        "alt_fi": "Musta ja punainen kirja, jossa lukee \"LAW\", ovat valkoisella pinnalla.",
+        "alt_fi": "Punaisen kirjan kannessa on puukirjaimin kirjoitettu sana LAW, ja sen alla näkyy osittain tummansininen kirja.",
         "approved": true,
-        "article_text_sha256": "3b1a9931f683ccfd079d682877f7b275b550d33717d98918706f25af7336b5b4",
-        "description": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
-        "image_sha256": "902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d",
+        "article_text_sha256": "3be34497eba93a2f7103f696b88eeabc41b68ab17b6ee010c0c415fe46ba1ddd",
+        "description": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
+        "image_sha256": "a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b",
         "model": "google:gemini-2.5-flash",
         "no_people": true,
-        "reason": "The article discusses proposed changes to criminal law, specifically a new basis for aggravating punishment related to child peace. The image directly illustrates the concept of 'law' through the visible word on the book, which is relevant to the article's subject matter of legal reforms.",
-        "reviewed_at": "2026-09-26T16:59:33.063418+00:00"
+        "reason": "The article discusses proposed changes to social and healthcare laws. The image directly illustrates the concept of 'law' through the prominent word on the book, making it relevant to the article's subject matter.",
+        "reviewed_at": "2026-09-26T17:20:39.347537+00:00"
       },
       "pixels": {
         "height": 627,
         "mode": "RGB",
-        "variance": 12682.6,
+        "variance": 9754.1,
         "width": 940
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
+        "evidence": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
         "matched": [
           "book",
           "law"
@@ -826,33 +823,33 @@
         "method": "vision",
         "reason": "all must_show requirements matched"
       },
-      "sha256": "902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d",
-      "source_url": "https://www.pexels.com/photo/top-view-of-notebooks-with-a-text-law-on-the-cover-8850748/",
+      "sha256": "a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b",
+      "source_url": "https://www.pexels.com/photo/close-up-of-books-with-a-word-law-on-the-top-8850747/",
       "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/8850748/pexels-photo-8850748.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "8850748",
-        "photo_url": "https://www.pexels.com/photo/top-view-of-notebooks-with-a-text-law-on-the-cover-8850748/",
+        "image_url": "https://images.pexels.com/photos/8850747/pexels-photo-8850747.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "8850747",
+        "photo_url": "https://www.pexels.com/photo/close-up-of-books-with-a-word-law-on-the-top-8850747/",
         "photographer": "Tara Winstead",
         "photographer_url": "https://www.pexels.com/@tara-winstead",
         "provider": "pexels",
         "query": "closed law book",
         "retrieved_at": "2026-09-26T16:50:29Z"
       },
-      "stock_provenance_sha256": "fa142c8f2dc0df1fa1f39db29cc76500bb3e1cdf58db5f5d86e4276841489f70",
-      "url": "https://uutistenlukija.fi/media/902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d.jpg"
+      "stock_provenance_sha256": "3a7ed2567b72c77c48b71500fe93726aa16e4de99a84e86ebaa829229beb5f92",
+      "url": "https://uutistenlukija.fi/media/a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
       "provider": "valtioneuvosto",
-      "related_sources": 1,
-      "source_fields_sha256": "bbeaa220ae51cf4a653ce87796967443a003d30f02162dcd21b53cd50cdc60cb",
-      "source_sha256": "ca99f1878faa423e6a6405d7252c83f4f3005f98482890474d24d497359018f0"
+      "related_sources": 0,
+      "source_fields_sha256": "07caa501985620b2a9617ec24c2a46db3278322a6e181d6e09fb01d9c9b81e08",
+      "source_sha256": "93f6fbd8ecc788b3f7f8d034b81610e066c5fc078a726d48b68f42d399035c34"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-09-25T11:16+0300",
+        "published_at": "2026-09-21T14:16+0300",
         "publisher": "Valtioneuvoston kanslia",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
@@ -861,27 +858,18 @@
           "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
           "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
         },
-        "text": "Lapsirauharikos lausuntokierroksella\noikeusministeriö\nJulkaisuajankohta\n25.9.2026\n11.16\nTyyppi:Tiedote\nOikeusministeriö pyytää lausuntoja 15. lokakuuta mennessä ehdotuksesta, jonka mukaan rikoslakiin lisättäisiin rangaistuksen koventamisperusteeksi niin sanottu lapsirauharikos.\nYleisesti lapsirauha tarkoittaa lapsen oikeutta kasvaa ja kehittyä turvassa ilman, että hän joutuu kokemaan, näkemään tai todistamaan väkivaltaa.\nUutta rangaistuksen koventamisperustetta käytettäisiin, kun henkeen, terveyteen tai vapauteen kohdistuva rikos tehdään lähisuhteessa oman tai rikoksen uhrin lapsen läsnä ollessa taikka lapsen nähden tai kuullen. Lisäksi perustetta sovellettaisiin, kun henkirikos tai törkeä pahoinpitely on tapahtunut uhrin lapsen läsnä ollessa tai tämän kuullen tai nähden.\nKoventamisperuste säädetään naisiin kohdistuvan väkivallan ja lähisuhdeväkivallan torjuntaa koskevan direktiivin täytäntöönpanoa koskevan esityksen yhteydessä.\nLisätietoja:\nerityisasiantuntija Venus Mahmood, p. 0295 150 013, [email protected]\nyksikönpäällikkö Jussi Matikkala, p. 0295 150 486, [email protected]\nLausuntopyyntö\nTiedote 3.7.2026: Lapsirauhaa koskeva rangaistuksen koventamisperuste valmistellaan\nNaisiin kohdistuvan väkivallan ja perheväkivallan torjumisesta annetun direktiivin (NKV-direktiivi) täytäntöönpano",
-        "title": "Lapsirauharikos lausuntokierroksella",
-        "url": "https://valtioneuvosto.fi/-/1410853/lapsirauharikos-lausuntokierroksella"
-      },
-      {
-        "id": "B",
-        "published_at": "2026-09-25T11:16:00+03:00",
-        "publisher": "oikeusministerio.fi",
-        "related": true,
-        "text": "Lapsirauharikos lausuntokierroksella oikeusministeriö Julkaisuajankohta 25.9.2026 11.16 Tyyppi:Tiedote Oikeusministeriö pyytää lausuntoja 15. lokakuuta mennessä ehdotuksesta, jonka mukaan rikoslakiin lisättäisiin rangaistuksen koventamisperusteeksi niin sanottu lapsirauharikos. Yleisesti lapsirauha tarkoittaa lapsen oikeutta kasvaa ja kehittyä turvassa ilman, että hän joutuu kokemaan, näkemään tai todistamaan väkivaltaa. Uutta rangaistuksen koventamisperustetta käytettäisiin, kun henkeen, terveyteen tai vapauteen kohdistuva rikos tehdään lähisuhteessa oman tai rikoksen uhrin lapsen läsnä ollessa taikka lapsen nähden tai kuullen. Lisäksi perustetta sovellettaisiin, kun henkirikos tai törkeä pahoinpitely on tapahtunut uhrin lapsen läsnä ollessa tai tämän kuullen tai nähden. Koventamisperuste säädetään naisiin kohdistuvan väkivallan ja lähisuhdeväkivallan torjuntaa koskevan direktiivin täytäntöönpanoa koskevan esityksen yhteydessä. Lisätietoja: erityisasiantuntija Venus Mahmood, p. 0295 150 013, [email protected] yksikönpäällikkö Jussi Matikkala, p. 0295 150 486, [email protected] Lausuntopyyntö Tiedote 3.7.2026: Lapsirauhaa koskeva rangaistuksen koventamisperuste valmistellaan Naisiin kohdistuvan väkivallan ja perheväkivallan torjumisesta annetun direktiivin (NKV-direktiivi) täytäntöönpano oikeus perheväkivalta rikoksen uhrit rikoksentorjunta rikosoikeus",
-        "title": "Lapsirauharikos lausuntokierroksella - Oikeusministeriö",
-        "url": "https://oikeusministerio.fi/-/lapsirauharikos-lausuntokierroksella"
+        "text": "Hallitus esittää muutoksia sosiaali- ja terveydenhuollon järjestämisestä annettuun lakiin ja terveydenhuoltolakiin\nsosiaali- ja terveysministeriö\nJulkaisuajankohta 21.9.2026 14.16\nTyyppi:Tiedote\nHallituksen esityksen mukaan sosiaali- ja terveydenhuollon järjestämisestä annetun lain hyvinvointialueen järjestämisvastuuta ja johtamista sekä sosiaali- ja terveyspalvelujen hankintaa koskevaa sääntelyä muutettaisiin. Muutosten taustalla on pääministeri Petteri Orpon hallitusohjelman tavoite purkaa lainsäädännöstä monituottajuuden esteitä.\nLakimuutoksilla hallitus haluaa parantaa hyvinvointialueen edellytyksiä hankkia sosiaali- ja terveyspalveluja yksityisiltä palveluntuottajilta. Tämä antaisi hyvinvointialueelle mahdollisuuden päättää tarkoituksenmukaisesta ja alueensa väestön tarpeiden mukaisesta palvelujen tuottamistavasta aiempaa laajemmin.\nHyvinvointialueen riittävää omaa palvelutuotantoa koskevaa sääntelyä muutettaisiin. Lisäksi sote-järjestämislakia muutettaisiin siten, että hoidon tarpeen arviointia sekä eräiden päivystysten palvelujen hankintaa koskevia nykyisiä sote-järjestämislain rajoitteita lievennettäisiin. Aiemmasta sääntelystä poiketen yksityinen palveluntuottaja voisi jatkossa päättää myös potilaan ottamisesta erikoissairaanhoitoon hyvinvointialueen niin päättäessä. Muilta osin hoidon tarpeen arvioinnin sääntely säilyisi pääosin ennallaan.\nHyvinvointialueen sosiaali- ja terveydenhuollon johtamiseen liittyvää sääntelyä selkeytettäisiin. Ehdotuksen mukaan hyvinvointialueen johtamisessa sekä sen toiminnan ohjauksessa ja valvonnassa olisi oltava lääketieteen, sosiaalitieteiden ja hoitotieteen asiantuntemusta.\nTerveydenhuoltolaissa täsmennettäisiin hyvinvointialueen vastaavan lääkärin vastuisiin ja tehtäviin liittyvää sääntelyä. Muutoksilla korostettaisiin vastaavan lääkärin roolia terveydenhuollon sisällöllisessä johtamisessa, ohjauksessa ja valvonnassa erityisesti toiminnan lainmukaisuuteen, laatuun, potilasturvallisuuteen ja vaikuttavuuteen liittyen.\nTerveydenhuoltolakiin lisättäisiin hyvinvointialueelle velvoite aktiivisesti informoida asiakasta terveydenhuoltolaissa säädetyistä vaihtoehtoisista tavoista päästä tutkimukseen, hoitoon tai kuntoutukseen, jos hyvinvointialue ei voi tuottaa palvelua itse hoitotakuun määräaikojen rajoissa. Vaihtoehtoisia tapoja olisivat yhteistoiminnassa toisen hyvinvointialueen kanssa tuotettu palvelu, ostopalvelu tai palveluseteli.\nHallituksen esitys oli lausuntokierroksella 25.5.-3.7.2026. Ehdotetut lait on tarkoitettu tulemaan voimaan 1.1.2027.\nHallituksen esitys eduskunnalle laeiksi sosiaali- ja terveydenhuollon järjestämisestä annetun lain ja terveydenhuoltolain 54 ja 57 §:n muuttamisesta\nLisätiedot:\nHallitusneuvos Erkki Papunen, p. 0295 163 298\nLääkintöneuvos Sirkku Pikkujämsä, p. 0295 163 014\nsähköpostit ovat muotoa [email protected]\nerikoissairaanhoito hoito huolto hyvinvointi hyvinvointiala hyvinvointialueet johtaminen lainsäädäntö organisaatiot palvelusetelit palvelutuotanto potilasturvallisuus sairaanhoito terveydenhuolto terveydenhuolto toimialat tuotanto tuotanto",
+        "title": "Hallitus esittää muutoksia sosiaali- ja terveydenhuollon järjestämisestä annettuun lakiin ja terveydenhuoltolakiin",
+        "url": "https://valtioneuvosto.fi/-/1271139/hallitus-esittaa-muutoksia-sosiaali-ja-terveydenhuollon-jarjestamisesta-annettuun-lakiin-ja-terveydenhuoltolakiin"
       }
     ],
-    "story_key": "url:https://valtioneuvosto.fi/-/1410853/lapsirauharikos-lausuntokierroksella",
+    "story_key": "url:https://valtioneuvosto.fi/-/1271139/hallitus-esittaa-muutoksia-sosiaali-ja-terveydenhuollon-jarjestamisesta-annettuun-lakiin-ja-terveydenhuoltolakiin",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-09-26T16:45:13.727956+00:00",
-        "sha256": "fd2fefa6b4ad8d445f1665673a5f11174e3bc933d74c154ec0e5591b74bcdb2d",
+        "retrieved_at": "2026-09-22T02:04:35.456405+00:00",
+        "sha256": "5eecb31067667b11d41fd35ce522f2212a5a24eb1ef4b5666edc0a5ffe7911cf",
         "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
         "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
       }
@@ -890,54 +878,51 @@
   "draft": {
     "category": "Kotimaa",
     "image": {
-      "alt": "Arkistokuva: Punainen LAW-merkitty kirja ja musta kirja ovat valkoisella pinnalla.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "Arkistokuva: Punaisen kirjan kannessa lukee LAW, ja sen alta näkyy osa tummansinistä kirjaa.",
+      "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
       "classifier_output": {
         "category": "Kotimaa",
-        "depictable_scene": "Neutraalilla pöytäpinnalla on suljettu lakikirja, paperisia lausuntoasiakirjoja ja kynä.",
+        "depictable_scene": "Lakivalmistelua havainnollistava lakikirja neutraalilla pinnalla.",
         "must_avoid": [
-          "people, including children, faces, or human silhouettes",
-          "violence, conflict, or threatening gestures",
-          "injuries, blood, weapons, or victims",
-          "domestic interior staged as an abuse scene"
+          "people"
         ],
         "must_show": [
           "law book"
         ],
         "search_queries": [
+          "law book cover",
           "closed law book",
-          "law book desk",
           "lakikirja pöydällä"
         ],
-        "subject": "Oikeusministeriön lausuntokierros lapsirauharikoksesta eli rikoslakiin ehdotetusta koventamisperusteesta"
+        "subject": "Hallitus esittää muutoksia sote-lakien palveluhankintaan"
       },
       "credit": "Photo by Tara Winstead on Pexels",
-      "depicted": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
+      "depicted": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
       "generated": false,
       "hotlink": false,
       "license": "Pexels License",
       "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d.jpg",
+      "local_path": "media/a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b.jpg",
       "pixel_review": {
-        "alt_fi": "Musta ja punainen kirja, jossa lukee \"LAW\", ovat valkoisella pinnalla.",
+        "alt_fi": "Punaisen kirjan kannessa on puukirjaimin kirjoitettu sana LAW, ja sen alla näkyy osittain tummansininen kirja.",
         "approved": true,
-        "article_text_sha256": "3b1a9931f683ccfd079d682877f7b275b550d33717d98918706f25af7336b5b4",
-        "description": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
-        "image_sha256": "902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d",
+        "article_text_sha256": "3be34497eba93a2f7103f696b88eeabc41b68ab17b6ee010c0c415fe46ba1ddd",
+        "description": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
+        "image_sha256": "a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b",
         "model": "google:gemini-2.5-flash",
         "no_people": true,
-        "reason": "The article discusses proposed changes to criminal law, specifically a new basis for aggravating punishment related to child peace. The image directly illustrates the concept of 'law' through the visible word on the book, which is relevant to the article's subject matter of legal reforms.",
-        "reviewed_at": "2026-09-26T16:59:33.063418+00:00"
+        "reason": "The article discusses proposed changes to social and healthcare laws. The image directly illustrates the concept of 'law' through the prominent word on the book, making it relevant to the article's subject matter.",
+        "reviewed_at": "2026-09-26T17:20:39.347537+00:00"
       },
       "pixels": {
         "height": 627,
         "mode": "RGB",
-        "variance": 12682.6,
+        "variance": 9754.1,
         "width": 940
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
+        "evidence": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
         "matched": [
           "book",
           "law"
@@ -945,129 +930,158 @@
         "method": "vision",
         "reason": "all must_show requirements matched"
       },
-      "sha256": "902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d",
-      "source_url": "https://www.pexels.com/photo/top-view-of-notebooks-with-a-text-law-on-the-cover-8850748/",
+      "sha256": "a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b",
+      "source_url": "https://www.pexels.com/photo/close-up-of-books-with-a-word-law-on-the-top-8850747/",
       "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/8850748/pexels-photo-8850748.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "8850748",
-        "photo_url": "https://www.pexels.com/photo/top-view-of-notebooks-with-a-text-law-on-the-cover-8850748/",
+        "image_url": "https://images.pexels.com/photos/8850747/pexels-photo-8850747.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "8850747",
+        "photo_url": "https://www.pexels.com/photo/close-up-of-books-with-a-word-law-on-the-top-8850747/",
         "photographer": "Tara Winstead",
         "photographer_url": "https://www.pexels.com/@tara-winstead",
         "provider": "pexels",
         "query": "closed law book",
         "retrieved_at": "2026-09-26T16:50:29Z"
       },
-      "stock_provenance_sha256": "fa142c8f2dc0df1fa1f39db29cc76500bb3e1cdf58db5f5d86e4276841489f70",
-      "url": "https://uutistenlukija.fi/media/902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d.jpg"
+      "stock_provenance_sha256": "3a7ed2567b72c77c48b71500fe93726aa16e4de99a84e86ebaa829229beb5f92",
+      "url": "https://uutistenlukija.fi/media/a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
-          "A",
-          "B"
+          "A"
         ],
-        "text": "Oikeusministeriön mukaan rikoslakiin esitetään uutta rangaistuksen koventamisperustetta, josta käytetään nimitystä lapsirauharikos. Ehdotuksesta pyydetään lausuntoja 15. lokakuuta mennessä."
+        "text": "Valtioneuvoston kanslian 21.9.2026 julkaiseman tiedotteen mukaan hallitus esittää muutoksia sosiaali- ja terveydenhuollon järjestämisestä annettuun lakiin ja terveydenhuoltolakiin. Esityksen taustalla kerrotaan olevan pääministeri Petteri Orpon hallitusohjelman tavoite purkaa lainsäädännöstä monituottajuuden esteitä."
       },
       {
         "source_ids": [
-          "A",
-          "B"
+          "A"
         ],
-        "text": "Perustetta sovellettaisiin ehdotuksen mukaan, kun henkeen, terveyteen tai vapauteen kohdistuva rikos tehdään lähisuhteessa tekijän tai uhrin lapsen ollessa paikalla tai nähdessä tai kuullessa teon."
+        "text": "Tiedotteen mukaan muutokset kohdistuisivat hyvinvointialueen järjestämisvastuuta ja johtamista sekä sosiaali- ja terveyspalvelujen hankintaa koskevaan sääntelyyn. Hallitus haluaa esityksen mukaan parantaa hyvinvointialueen edellytyksiä hankkia sosiaali- ja terveyspalveluja yksityisiltä palveluntuottajilta, mikä antaisi alueelle aiempaa laajemman mahdollisuuden päättää palvelujen tuottamistavasta väestönsä tarpeiden mukaisesti."
       },
       {
         "source_ids": [
-          "A",
-          "B"
+          "A"
         ],
-        "text": "Koventamisperuste voisi tulla sovellettavaksi myös henkirikokseen tai törkeään pahoinpitelyyn, jos uhrin lapsi on läsnä taikka näkee tai kuulee teon."
+        "text": "Esityksessä muutettaisiin hyvinvointialueen riittävää omaa palvelutuotantoa koskevaa sääntelyä. Lisäksi sote-järjestämislakia muutettaisiin siten, että hoidon tarpeen arviointia ja eräiden päivystysten palvelujen hankintaa koskevia nykyisiä rajoitteita lievennettäisiin. Tiedotteen mukaan hoidon tarpeen arvioinnin sääntely säilyisi muilta osin pääosin ennallaan."
       },
       {
         "source_ids": [
-          "A",
-          "B"
+          "A"
         ],
-        "text": "Ministeriö kuvaa lapsirauhaa lapsen oikeudeksi kasvaa turvallisesti ilman väkivallan kokemista tai todistamista. Muutos valmistellaan osana naisiin kohdistuvan väkivallan ja lähisuhdeväkivallan torjuntaa koskevan direktiivin täytäntöönpanoa."
+        "text": "Aiemmasta sääntelystä poiketen yksityinen palveluntuottaja voisi tiedotteen mukaan jatkossa päättää myös potilaan ottamisesta erikoissairaanhoitoon, jos hyvinvointialue niin päättää."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Hyvinvointialueen sosiaali- ja terveydenhuollon johtamiseen liittyvää sääntelyä selkeytettäisiin. Ehdotuksen mukaan hyvinvointialueen johtamisessa sekä toiminnan ohjauksessa ja valvonnassa olisi oltava lääketieteen, sosiaalitieteiden ja hoitotieteen asiantuntemusta."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Terveydenhuoltolaissa täsmennettäisiin hyvinvointialueen vastaavan lääkärin vastuisiin ja tehtäviin liittyvää sääntelyä. Muutoksilla korostettaisiin tiedotteen mukaan vastaavan lääkärin roolia terveydenhuollon sisällöllisessä johtamisessa, ohjauksessa ja valvonnassa erityisesti toiminnan lainmukaisuuteen, laatuun, potilasturvallisuuteen ja vaikuttavuuteen liittyen."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Terveydenhuoltolakiin lisättäisiin hyvinvointialueelle velvoite informoida asiakasta aktiivisesti vaihtoehtoisista tavoista päästä tutkimukseen, hoitoon tai kuntoutukseen, jos hyvinvointialue ei voi tuottaa palvelua itse hoitotakuun määräaikojen rajoissa. Vaihtoehtoisia tapoja olisivat yhteistoiminnassa toisen hyvinvointialueen kanssa tuotettu palvelu, ostopalvelu tai palveluseteli."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Hallituksen esitys oli tiedotteen mukaan lausuntokierroksella 25.5.–3.7.2026 ja ehdotetut lait on tarkoitettu tulemaan voimaan 1.1.2027."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Tiedotteen mukaan kyse on esityksestä eduskunnalle laeiksi sosiaali- ja terveydenhuollon järjestämisestä annetun lain ja terveydenhuoltolain 54 ja 57 §:n muuttamisesta."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Asiasta kertoo toistaiseksi vain yksi lähde, valtioneuvoston tiedote, joka välittää hallituksen oman esityksen sisältöä. Tiedotteen kuvaamia muutoksia ja niiden vaikutuksia ei ole tässä aineistossa vahvistettu riippumattomasta lähteestä."
       }
     ],
-    "summary": "Ehdotuksessa lapsen läsnäolo tai rikoksen näkeminen tai kuuleminen voisi koventaa rangaistusta tietyissä lähisuhde- ja väkivaltarikoksissa.",
-    "title": "Oikeusministeriö pyytää lausuntoja lapsirauharikoksesta"
+    "summary": "Hallitus esittää muutoksia sosiaali- ja terveydenhuollon järjestämisestä annettuun lakiin ja terveydenhuoltolakiin; esityksen taustalla on hallitusohjelman tavoite purkaa monituottajuuden esteitä. Muutosten on tarkoitus tulla voimaan 1.1.2027.",
+    "title": "Hallitus esittää muutoksia sote-lakien palveluhankintaan"
   },
   "review": {
     "approved": true,
     "archive_image_only": {
       "article_text_unchanged": true,
       "operation": "image_only_archive_correction",
-      "original_draft_sha256": "f1fb1f8aede0d91a7356434319267205f28ef39eb7cd23aa4c88087241f4457b",
-      "original_published_at": "2026-09-26T16:45:21.865900+00:00",
-      "original_review_sha256": "cafdb6bc2b275d7b9664246b3b4b6b17bca9fd9022e4fd695a4d8c9230c7ef56",
-      "unchanged_text_sha256": "7aced8cda41816824a422dd8c8fe8e9a09b9baf47380ad4dbf1c23880a6b701d"
+      "original_draft_sha256": "a379aacafeef7839e99213197121471f50d90b718ca9b55850c04221cbdea15e",
+      "original_published_at": "2026-09-22T02:04:40.494597+00:00",
+      "original_review_sha256": "adc26534a0b6433f316b1e8dd8df6cedd5e04467c26b4e3f7ae6fc60f621727f",
+      "unchanged_text_sha256": "42f384ab5b6a3aff99da8c06c491ff703772918f4aad760d87da195de2afde2f"
     },
-    "draft_sha256": "388224ecf7432024a89adef8aa64fc0e0397e23044b2da7908cd3e0ed6b52a14",
+    "draft_sha256": "c0668340e72800eeb2533f2a5b967e6de2957650032df745047f3f97358d9f18",
     "historical_text_observations": [],
     "reasons": [
-      "Kuva esittää lakikirjaa, jossa on selkeästi sana \"LAW\", mikä on erittäin relevantti oikeusministeriön lapsirauharikosta ja rikoslain muutoksia käsittelevälle artikkelille.",
-      "Kuvan alt-teksti \"Arkistokuva: Punainen LAW-merkitty kirja ja musta kirja ovat valkoisella pinnalla.\" kuvaa tarkasti ja hyödyllisesti kuvan näkyvän sisällön suomeksi.",
-      "Kuvateksti \"Arkistokuva artikkelin aiheesta.\" on asianmukainen ja vastaa kuvan sisältöä ja relevanssia.",
-      "Kuva on peräisin Pexelsistä, ja sen lisenssi (Pexels License) sallii käytön. Krediitti \"Photo by Tara Winstead on Pexels\" on oikein.",
-      "Kuva ei ole AI-generoitu, eikä se sisällä ihmisiä, kasvoja tai arkaluonteisia elementtejä, jotka olisivat kiellettyjä artikkelin aiheen kontekstissa.",
-      "Kaikki annetut SHA-256-tunnisteet vastaavat toimitettua tietoa."
+      "Kuva esittää lakikirjaa, jonka kannessa lukee selkeästi 'LAW', mikä on erittäin relevantti artikkeliin, joka käsittelee sosiaali- ja terveydenhuollon lakimuutoksia.",
+      "Kuvan alt-teksti \"Arkistokuva: Punaisen kirjan kannessa lukee LAW, ja sen alta näkyy osa tummansinistä kirjaa.\" kuvaa tarkasti kuvan näkyvää sisältöä.",
+      "Kuvateksti \"Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.\" on asianmukainen ja informatiivinen.",
+      "Kuvan provenienssi (Pexels, Tara Winstead) ja lisenssi (Pexels License) ovat asianmukaiset ja sallivat kuvan käytön.",
+      "Kuvan sha256-tunniste (a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b) vastaa pixel_review'n vahvistamaa tunnustetta.",
+      "Pixel_review on hyväksynyt kuvan relevanssin ja sisällön."
     ]
   },
   "image_backfill": [
     {
-      "article_file": "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html",
+      "article_file": "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html",
       "draft": {
         "category": "Kotimaa",
         "image": {
-          "alt": "Arkistokuva: Punainen LAW-merkitty kirja ja musta kirja ovat valkoisella pinnalla.",
-          "caption": "Arkistokuva artikkelin aiheesta.",
+          "alt": "Arkistokuva: Punaisen kirjan kannessa lukee LAW, ja sen alta näkyy osa tummansinistä kirjaa.",
+          "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
           "classifier_output": {
             "category": "Kotimaa",
-            "depictable_scene": "Neutraalilla pöytäpinnalla on suljettu lakikirja, paperisia lausuntoasiakirjoja ja kynä.",
+            "depictable_scene": "Lakivalmistelua havainnollistava lakikirja neutraalilla pinnalla.",
             "must_avoid": [
-              "people, including children, faces, or human silhouettes",
-              "violence, conflict, or threatening gestures",
-              "injuries, blood, weapons, or victims",
-              "domestic interior staged as an abuse scene"
+              "people"
             ],
             "must_show": [
               "law book"
             ],
             "search_queries": [
+              "law book cover",
               "closed law book",
-              "law book desk",
               "lakikirja pöydällä"
             ],
-            "subject": "Oikeusministeriön lausuntokierros lapsirauharikoksesta eli rikoslakiin ehdotetusta koventamisperusteesta"
+            "subject": "Hallitus esittää muutoksia sote-lakien palveluhankintaan"
           },
           "credit": "Photo by Tara Winstead on Pexels",
-          "depicted": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
+          "depicted": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
           "generated": false,
           "hotlink": false,
           "license": "Pexels License",
           "license_url": "https://www.pexels.com/license/",
-          "local_path": "media/902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d.jpg",
+          "local_path": "media/a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b.jpg",
           "pixel_review": {
-            "alt_fi": "Musta ja punainen kirja, jossa lukee \"LAW\", ovat valkoisella pinnalla.",
+            "alt_fi": "Punaisen kirjan kannessa on puukirjaimin kirjoitettu sana LAW, ja sen alla näkyy osittain tummansininen kirja.",
             "approved": true,
-            "article_text_sha256": "3b1a9931f683ccfd079d682877f7b275b550d33717d98918706f25af7336b5b4",
-            "description": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
-            "image_sha256": "902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d",
+            "article_text_sha256": "3be34497eba93a2f7103f696b88eeabc41b68ab17b6ee010c0c415fe46ba1ddd",
+            "description": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
+            "image_sha256": "a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b",
             "model": "google:gemini-2.5-flash",
             "no_people": true,
-            "reason": "The article discusses proposed changes to criminal law, specifically a new basis for aggravating punishment related to child peace. The image directly illustrates the concept of 'law' through the visible word on the book, which is relevant to the article's subject matter of legal reforms.",
-            "reviewed_at": "2026-09-26T16:59:33.063418+00:00"
+            "reason": "The article discusses proposed changes to social and healthcare laws. The image directly illustrates the concept of 'law' through the prominent word on the book, making it relevant to the article's subject matter.",
+            "reviewed_at": "2026-09-26T17:20:39.347537+00:00"
           },
           "pixels": {
             "height": 627,
             "mode": "RGB",
-            "variance": 12682.6,
+            "variance": 9754.1,
             "width": 940
           },
           "relevance_check": {
             "accepted": true,
-            "evidence": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
+            "evidence": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
             "matched": [
               "book",
               "law"
@@ -1075,108 +1089,137 @@
             "method": "vision",
             "reason": "all must_show requirements matched"
           },
-          "sha256": "902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d",
-          "source_url": "https://www.pexels.com/photo/top-view-of-notebooks-with-a-text-law-on-the-cover-8850748/",
+          "sha256": "a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b",
+          "source_url": "https://www.pexels.com/photo/close-up-of-books-with-a-word-law-on-the-top-8850747/",
           "stock_provenance": {
-            "image_url": "https://images.pexels.com/photos/8850748/pexels-photo-8850748.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-            "photo_id": "8850748",
-            "photo_url": "https://www.pexels.com/photo/top-view-of-notebooks-with-a-text-law-on-the-cover-8850748/",
+            "image_url": "https://images.pexels.com/photos/8850747/pexels-photo-8850747.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "photo_id": "8850747",
+            "photo_url": "https://www.pexels.com/photo/close-up-of-books-with-a-word-law-on-the-top-8850747/",
             "photographer": "Tara Winstead",
             "photographer_url": "https://www.pexels.com/@tara-winstead",
             "provider": "pexels",
             "query": "closed law book",
             "retrieved_at": "2026-09-26T16:50:29Z"
           },
-          "stock_provenance_sha256": "fa142c8f2dc0df1fa1f39db29cc76500bb3e1cdf58db5f5d86e4276841489f70",
-          "url": "https://uutistenlukija.fi/media/902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d.jpg"
+          "stock_provenance_sha256": "3a7ed2567b72c77c48b71500fe93726aa16e4de99a84e86ebaa829229beb5f92",
+          "url": "https://uutistenlukija.fi/media/a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b.jpg"
         },
         "paragraphs": [
           {
             "source_ids": [
-              "A",
-              "B"
+              "A"
             ],
-            "text": "Oikeusministeriön mukaan rikoslakiin esitetään uutta rangaistuksen koventamisperustetta, josta käytetään nimitystä lapsirauharikos. Ehdotuksesta pyydetään lausuntoja 15. lokakuuta mennessä."
+            "text": "Valtioneuvoston kanslian 21.9.2026 julkaiseman tiedotteen mukaan hallitus esittää muutoksia sosiaali- ja terveydenhuollon järjestämisestä annettuun lakiin ja terveydenhuoltolakiin. Esityksen taustalla kerrotaan olevan pääministeri Petteri Orpon hallitusohjelman tavoite purkaa lainsäädännöstä monituottajuuden esteitä."
           },
           {
             "source_ids": [
-              "A",
-              "B"
+              "A"
             ],
-            "text": "Perustetta sovellettaisiin ehdotuksen mukaan, kun henkeen, terveyteen tai vapauteen kohdistuva rikos tehdään lähisuhteessa tekijän tai uhrin lapsen ollessa paikalla tai nähdessä tai kuullessa teon."
+            "text": "Tiedotteen mukaan muutokset kohdistuisivat hyvinvointialueen järjestämisvastuuta ja johtamista sekä sosiaali- ja terveyspalvelujen hankintaa koskevaan sääntelyyn. Hallitus haluaa esityksen mukaan parantaa hyvinvointialueen edellytyksiä hankkia sosiaali- ja terveyspalveluja yksityisiltä palveluntuottajilta, mikä antaisi alueelle aiempaa laajemman mahdollisuuden päättää palvelujen tuottamistavasta väestönsä tarpeiden mukaisesti."
           },
           {
             "source_ids": [
-              "A",
-              "B"
+              "A"
             ],
-            "text": "Koventamisperuste voisi tulla sovellettavaksi myös henkirikokseen tai törkeään pahoinpitelyyn, jos uhrin lapsi on läsnä taikka näkee tai kuulee teon."
+            "text": "Esityksessä muutettaisiin hyvinvointialueen riittävää omaa palvelutuotantoa koskevaa sääntelyä. Lisäksi sote-järjestämislakia muutettaisiin siten, että hoidon tarpeen arviointia ja eräiden päivystysten palvelujen hankintaa koskevia nykyisiä rajoitteita lievennettäisiin. Tiedotteen mukaan hoidon tarpeen arvioinnin sääntely säilyisi muilta osin pääosin ennallaan."
           },
           {
             "source_ids": [
-              "A",
-              "B"
+              "A"
             ],
-            "text": "Ministeriö kuvaa lapsirauhaa lapsen oikeudeksi kasvaa turvallisesti ilman väkivallan kokemista tai todistamista. Muutos valmistellaan osana naisiin kohdistuvan väkivallan ja lähisuhdeväkivallan torjuntaa koskevan direktiivin täytäntöönpanoa."
+            "text": "Aiemmasta sääntelystä poiketen yksityinen palveluntuottaja voisi tiedotteen mukaan jatkossa päättää myös potilaan ottamisesta erikoissairaanhoitoon, jos hyvinvointialue niin päättää."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Hyvinvointialueen sosiaali- ja terveydenhuollon johtamiseen liittyvää sääntelyä selkeytettäisiin. Ehdotuksen mukaan hyvinvointialueen johtamisessa sekä toiminnan ohjauksessa ja valvonnassa olisi oltava lääketieteen, sosiaalitieteiden ja hoitotieteen asiantuntemusta."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Terveydenhuoltolaissa täsmennettäisiin hyvinvointialueen vastaavan lääkärin vastuisiin ja tehtäviin liittyvää sääntelyä. Muutoksilla korostettaisiin tiedotteen mukaan vastaavan lääkärin roolia terveydenhuollon sisällöllisessä johtamisessa, ohjauksessa ja valvonnassa erityisesti toiminnan lainmukaisuuteen, laatuun, potilasturvallisuuteen ja vaikuttavuuteen liittyen."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Terveydenhuoltolakiin lisättäisiin hyvinvointialueelle velvoite informoida asiakasta aktiivisesti vaihtoehtoisista tavoista päästä tutkimukseen, hoitoon tai kuntoutukseen, jos hyvinvointialue ei voi tuottaa palvelua itse hoitotakuun määräaikojen rajoissa. Vaihtoehtoisia tapoja olisivat yhteistoiminnassa toisen hyvinvointialueen kanssa tuotettu palvelu, ostopalvelu tai palveluseteli."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Hallituksen esitys oli tiedotteen mukaan lausuntokierroksella 25.5.–3.7.2026 ja ehdotetut lait on tarkoitettu tulemaan voimaan 1.1.2027."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Tiedotteen mukaan kyse on esityksestä eduskunnalle laeiksi sosiaali- ja terveydenhuollon järjestämisestä annetun lain ja terveydenhuoltolain 54 ja 57 §:n muuttamisesta."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Asiasta kertoo toistaiseksi vain yksi lähde, valtioneuvoston tiedote, joka välittää hallituksen oman esityksen sisältöä. Tiedotteen kuvaamia muutoksia ja niiden vaikutuksia ei ole tässä aineistossa vahvistettu riippumattomasta lähteestä."
           }
         ],
-        "summary": "Ehdotuksessa lapsen läsnäolo tai rikoksen näkeminen tai kuuleminen voisi koventaa rangaistusta tietyissä lähisuhde- ja väkivaltarikoksissa.",
-        "title": "Oikeusministeriö pyytää lausuntoja lapsirauharikoksesta"
+        "summary": "Hallitus esittää muutoksia sosiaali- ja terveydenhuollon järjestämisestä annettuun lakiin ja terveydenhuoltolakiin; esityksen taustalla on hallitusohjelman tavoite purkaa monituottajuuden esteitä. Muutosten on tarkoitus tulla voimaan 1.1.2027.",
+        "title": "Hallitus esittää muutoksia sote-lakien palveluhankintaan"
       },
-      "draft_sha256": "388224ecf7432024a89adef8aa64fc0e0397e23044b2da7908cd3e0ed6b52a14",
-      "image_sha256": "902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d",
-      "job_id": "7d6a15176a04058f2278fe1b116de6f60525108d9c683a076d272bf56bb559a8",
+      "draft_sha256": "c0668340e72800eeb2533f2a5b967e6de2957650032df745047f3f97358d9f18",
+      "image_sha256": "a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b",
+      "job_id": "8e7e3e585fec2f4f95004b8381157998b79bef7982b928fd9727ff4c998dd4bd",
       "packet": {
         "fixture": false,
         "image": {
-          "alt": "Arkistokuva: Punainen LAW-merkitty kirja ja musta kirja ovat valkoisella pinnalla.",
-          "caption": "Arkistokuva artikkelin aiheesta.",
+          "alt": "Arkistokuva: Punaisen kirjan kannessa lukee LAW, ja sen alta näkyy osa tummansinistä kirjaa.",
+          "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
           "classifier_output": {
             "category": "Kotimaa",
-            "depictable_scene": "Neutraalilla pöytäpinnalla on suljettu lakikirja, paperisia lausuntoasiakirjoja ja kynä.",
+            "depictable_scene": "Lakivalmistelua havainnollistava lakikirja neutraalilla pinnalla.",
             "must_avoid": [
-              "people, including children, faces, or human silhouettes",
-              "violence, conflict, or threatening gestures",
-              "injuries, blood, weapons, or victims",
-              "domestic interior staged as an abuse scene"
+              "people"
             ],
             "must_show": [
               "law book"
             ],
             "search_queries": [
+              "law book cover",
               "closed law book",
-              "law book desk",
               "lakikirja pöydällä"
             ],
-            "subject": "Oikeusministeriön lausuntokierros lapsirauharikoksesta eli rikoslakiin ehdotetusta koventamisperusteesta"
+            "subject": "Hallitus esittää muutoksia sote-lakien palveluhankintaan"
           },
           "credit": "Photo by Tara Winstead on Pexels",
-          "depicted": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
+          "depicted": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
           "generated": false,
           "hotlink": false,
           "license": "Pexels License",
           "license_url": "https://www.pexels.com/license/",
-          "local_path": "media/902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d.jpg",
+          "local_path": "media/a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b.jpg",
           "pixel_review": {
-            "alt_fi": "Musta ja punainen kirja, jossa lukee \"LAW\", ovat valkoisella pinnalla.",
+            "alt_fi": "Punaisen kirjan kannessa on puukirjaimin kirjoitettu sana LAW, ja sen alla näkyy osittain tummansininen kirja.",
             "approved": true,
-            "article_text_sha256": "3b1a9931f683ccfd079d682877f7b275b550d33717d98918706f25af7336b5b4",
-            "description": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
-            "image_sha256": "902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d",
+            "article_text_sha256": "3be34497eba93a2f7103f696b88eeabc41b68ab17b6ee010c0c415fe46ba1ddd",
+            "description": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
+            "image_sha256": "a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b",
             "model": "google:gemini-2.5-flash",
             "no_people": true,
-            "reason": "The article discusses proposed changes to criminal law, specifically a new basis for aggravating punishment related to child peace. The image directly illustrates the concept of 'law' through the visible word on the book, which is relevant to the article's subject matter of legal reforms.",
-            "reviewed_at": "2026-09-26T16:59:33.063418+00:00"
+            "reason": "The article discusses proposed changes to social and healthcare laws. The image directly illustrates the concept of 'law' through the prominent word on the book, making it relevant to the article's subject matter.",
+            "reviewed_at": "2026-09-26T17:20:39.347537+00:00"
           },
           "pixels": {
             "height": 627,
             "mode": "RGB",
-            "variance": 12682.6,
+            "variance": 9754.1,
             "width": 940
           },
           "relevance_check": {
             "accepted": true,
-            "evidence": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
+            "evidence": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
             "matched": [
               "book",
               "law"
@@ -1184,33 +1227,33 @@
             "method": "vision",
             "reason": "all must_show requirements matched"
           },
-          "sha256": "902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d",
-          "source_url": "https://www.pexels.com/photo/top-view-of-notebooks-with-a-text-law-on-the-cover-8850748/",
+          "sha256": "a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b",
+          "source_url": "https://www.pexels.com/photo/close-up-of-books-with-a-word-law-on-the-top-8850747/",
           "stock_provenance": {
-            "image_url": "https://images.pexels.com/photos/8850748/pexels-photo-8850748.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-            "photo_id": "8850748",
-            "photo_url": "https://www.pexels.com/photo/top-view-of-notebooks-with-a-text-law-on-the-cover-8850748/",
+            "image_url": "https://images.pexels.com/photos/8850747/pexels-photo-8850747.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "photo_id": "8850747",
+            "photo_url": "https://www.pexels.com/photo/close-up-of-books-with-a-word-law-on-the-top-8850747/",
             "photographer": "Tara Winstead",
             "photographer_url": "https://www.pexels.com/@tara-winstead",
             "provider": "pexels",
             "query": "closed law book",
             "retrieved_at": "2026-09-26T16:50:29Z"
           },
-          "stock_provenance_sha256": "fa142c8f2dc0df1fa1f39db29cc76500bb3e1cdf58db5f5d86e4276841489f70",
-          "url": "https://uutistenlukija.fi/media/902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d.jpg"
+          "stock_provenance_sha256": "3a7ed2567b72c77c48b71500fe93726aa16e4de99a84e86ebaa829229beb5f92",
+          "url": "https://uutistenlukija.fi/media/a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b.jpg"
         },
         "publication_basis": {
           "policy": "official-text-v1",
           "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
           "provider": "valtioneuvosto",
-          "related_sources": 1,
-          "source_fields_sha256": "bbeaa220ae51cf4a653ce87796967443a003d30f02162dcd21b53cd50cdc60cb",
-          "source_sha256": "ca99f1878faa423e6a6405d7252c83f4f3005f98482890474d24d497359018f0"
+          "related_sources": 0,
+          "source_fields_sha256": "07caa501985620b2a9617ec24c2a46db3278322a6e181d6e09fb01d9c9b81e08",
+          "source_sha256": "93f6fbd8ecc788b3f7f8d034b81610e066c5fc078a726d48b68f42d399035c34"
         },
         "sources": [
           {
             "id": "A",
-            "published_at": "2026-09-25T11:16+0300",
+            "published_at": "2026-09-21T14:16+0300",
             "publisher": "Valtioneuvoston kanslia",
             "reuse": {
               "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
@@ -1219,103 +1262,91 @@
               "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
               "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
             },
-            "text": "Lapsirauharikos lausuntokierroksella\noikeusministeriö\nJulkaisuajankohta\n25.9.2026\n11.16\nTyyppi:Tiedote\nOikeusministeriö pyytää lausuntoja 15. lokakuuta mennessä ehdotuksesta, jonka mukaan rikoslakiin lisättäisiin rangaistuksen koventamisperusteeksi niin sanottu lapsirauharikos.\nYleisesti lapsirauha tarkoittaa lapsen oikeutta kasvaa ja kehittyä turvassa ilman, että hän joutuu kokemaan, näkemään tai todistamaan väkivaltaa.\nUutta rangaistuksen koventamisperustetta käytettäisiin, kun henkeen, terveyteen tai vapauteen kohdistuva rikos tehdään lähisuhteessa oman tai rikoksen uhrin lapsen läsnä ollessa taikka lapsen nähden tai kuullen. Lisäksi perustetta sovellettaisiin, kun henkirikos tai törkeä pahoinpitely on tapahtunut uhrin lapsen läsnä ollessa tai tämän kuullen tai nähden.\nKoventamisperuste säädetään naisiin kohdistuvan väkivallan ja lähisuhdeväkivallan torjuntaa koskevan direktiivin täytäntöönpanoa koskevan esityksen yhteydessä.\nLisätietoja:\nerityisasiantuntija Venus Mahmood, p. 0295 150 013, [email protected]\nyksikönpäällikkö Jussi Matikkala, p. 0295 150 486, [email protected]\nLausuntopyyntö\nTiedote 3.7.2026: Lapsirauhaa koskeva rangaistuksen koventamisperuste valmistellaan\nNaisiin kohdistuvan väkivallan ja perheväkivallan torjumisesta annetun direktiivin (NKV-direktiivi) täytäntöönpano",
-            "title": "Lapsirauharikos lausuntokierroksella",
-            "url": "https://valtioneuvosto.fi/-/1410853/lapsirauharikos-lausuntokierroksella"
-          },
-          {
-            "id": "B",
-            "published_at": "2026-09-25T11:16:00+03:00",
-            "publisher": "oikeusministerio.fi",
-            "related": true,
-            "text": "Lapsirauharikos lausuntokierroksella oikeusministeriö Julkaisuajankohta 25.9.2026 11.16 Tyyppi:Tiedote Oikeusministeriö pyytää lausuntoja 15. lokakuuta mennessä ehdotuksesta, jonka mukaan rikoslakiin lisättäisiin rangaistuksen koventamisperusteeksi niin sanottu lapsirauharikos. Yleisesti lapsirauha tarkoittaa lapsen oikeutta kasvaa ja kehittyä turvassa ilman, että hän joutuu kokemaan, näkemään tai todistamaan väkivaltaa. Uutta rangaistuksen koventamisperustetta käytettäisiin, kun henkeen, terveyteen tai vapauteen kohdistuva rikos tehdään lähisuhteessa oman tai rikoksen uhrin lapsen läsnä ollessa taikka lapsen nähden tai kuullen. Lisäksi perustetta sovellettaisiin, kun henkirikos tai törkeä pahoinpitely on tapahtunut uhrin lapsen läsnä ollessa tai tämän kuullen tai nähden. Koventamisperuste säädetään naisiin kohdistuvan väkivallan ja lähisuhdeväkivallan torjuntaa koskevan direktiivin täytäntöönpanoa koskevan esityksen yhteydessä. Lisätietoja: erityisasiantuntija Venus Mahmood, p. 0295 150 013, [email protected] yksikönpäällikkö Jussi Matikkala, p. 0295 150 486, [email protected] Lausuntopyyntö Tiedote 3.7.2026: Lapsirauhaa koskeva rangaistuksen koventamisperuste valmistellaan Naisiin kohdistuvan väkivallan ja perheväkivallan torjumisesta annetun direktiivin (NKV-direktiivi) täytäntöönpano oikeus perheväkivalta rikoksen uhrit rikoksentorjunta rikosoikeus",
-            "title": "Lapsirauharikos lausuntokierroksella - Oikeusministeriö",
-            "url": "https://oikeusministerio.fi/-/lapsirauharikos-lausuntokierroksella"
+            "text": "Hallitus esittää muutoksia sosiaali- ja terveydenhuollon järjestämisestä annettuun lakiin ja terveydenhuoltolakiin\nsosiaali- ja terveysministeriö\nJulkaisuajankohta 21.9.2026 14.16\nTyyppi:Tiedote\nHallituksen esityksen mukaan sosiaali- ja terveydenhuollon järjestämisestä annetun lain hyvinvointialueen järjestämisvastuuta ja johtamista sekä sosiaali- ja terveyspalvelujen hankintaa koskevaa sääntelyä muutettaisiin. Muutosten taustalla on pääministeri Petteri Orpon hallitusohjelman tavoite purkaa lainsäädännöstä monituottajuuden esteitä.\nLakimuutoksilla hallitus haluaa parantaa hyvinvointialueen edellytyksiä hankkia sosiaali- ja terveyspalveluja yksityisiltä palveluntuottajilta. Tämä antaisi hyvinvointialueelle mahdollisuuden päättää tarkoituksenmukaisesta ja alueensa väestön tarpeiden mukaisesta palvelujen tuottamistavasta aiempaa laajemmin.\nHyvinvointialueen riittävää omaa palvelutuotantoa koskevaa sääntelyä muutettaisiin. Lisäksi sote-järjestämislakia muutettaisiin siten, että hoidon tarpeen arviointia sekä eräiden päivystysten palvelujen hankintaa koskevia nykyisiä sote-järjestämislain rajoitteita lievennettäisiin. Aiemmasta sääntelystä poiketen yksityinen palveluntuottaja voisi jatkossa päättää myös potilaan ottamisesta erikoissairaanhoitoon hyvinvointialueen niin päättäessä. Muilta osin hoidon tarpeen arvioinnin sääntely säilyisi pääosin ennallaan.\nHyvinvointialueen sosiaali- ja terveydenhuollon johtamiseen liittyvää sääntelyä selkeytettäisiin. Ehdotuksen mukaan hyvinvointialueen johtamisessa sekä sen toiminnan ohjauksessa ja valvonnassa olisi oltava lääketieteen, sosiaalitieteiden ja hoitotieteen asiantuntemusta.\nTerveydenhuoltolaissa täsmennettäisiin hyvinvointialueen vastaavan lääkärin vastuisiin ja tehtäviin liittyvää sääntelyä. Muutoksilla korostettaisiin vastaavan lääkärin roolia terveydenhuollon sisällöllisessä johtamisessa, ohjauksessa ja valvonnassa erityisesti toiminnan lainmukaisuuteen, laatuun, potilasturvallisuuteen ja vaikuttavuuteen liittyen.\nTerveydenhuoltolakiin lisättäisiin hyvinvointialueelle velvoite aktiivisesti informoida asiakasta terveydenhuoltolaissa säädetyistä vaihtoehtoisista tavoista päästä tutkimukseen, hoitoon tai kuntoutukseen, jos hyvinvointialue ei voi tuottaa palvelua itse hoitotakuun määräaikojen rajoissa. Vaihtoehtoisia tapoja olisivat yhteistoiminnassa toisen hyvinvointialueen kanssa tuotettu palvelu, ostopalvelu tai palveluseteli.\nHallituksen esitys oli lausuntokierroksella 25.5.-3.7.2026. Ehdotetut lait on tarkoitettu tulemaan voimaan 1.1.2027.\nHallituksen esitys eduskunnalle laeiksi sosiaali- ja terveydenhuollon järjestämisestä annetun lain ja terveydenhuoltolain 54 ja 57 §:n muuttamisesta\nLisätiedot:\nHallitusneuvos Erkki Papunen, p. 0295 163 298\nLääkintöneuvos Sirkku Pikkujämsä, p. 0295 163 014\nsähköpostit ovat muotoa [email protected]\nerikoissairaanhoito hoito huolto hyvinvointi hyvinvointiala hyvinvointialueet johtaminen lainsäädäntö organisaatiot palvelusetelit palvelutuotanto potilasturvallisuus sairaanhoito terveydenhuolto terveydenhuolto toimialat tuotanto tuotanto",
+            "title": "Hallitus esittää muutoksia sosiaali- ja terveydenhuollon järjestämisestä annettuun lakiin ja terveydenhuoltolakiin",
+            "url": "https://valtioneuvosto.fi/-/1271139/hallitus-esittaa-muutoksia-sosiaali-ja-terveydenhuollon-jarjestamisesta-annettuun-lakiin-ja-terveydenhuoltolakiin"
           }
         ],
-        "story_key": "url:https://valtioneuvosto.fi/-/1410853/lapsirauharikos-lausuntokierroksella",
+        "story_key": "url:https://valtioneuvosto.fi/-/1271139/hallitus-esittaa-muutoksia-sosiaali-ja-terveydenhuollon-jarjestamisesta-annettuun-lakiin-ja-terveydenhuoltolakiin",
         "supporting_documents": [
           {
             "id": "RIGHTS",
             "purpose": "text reuse permission; not news or image evidence",
-            "retrieved_at": "2026-09-26T16:45:13.727956+00:00",
-            "sha256": "fd2fefa6b4ad8d445f1665673a5f11174e3bc933d74c154ec0e5591b74bcdb2d",
+            "retrieved_at": "2026-09-22T02:04:35.456405+00:00",
+            "sha256": "5eecb31067667b11d41fd35ce522f2212a5a24eb1ef4b5666edc0a5ffe7911cf",
             "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
             "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
           }
         ]
       },
-      "packet_sha256": "bdea4cfa938ef6634ceec2ff6fbdc0a2590d32712652ed1d577a480fb8b6f4bf",
+      "packet_sha256": "4058daf4e1f3d13c7d9b13dfe64c546432a3b45ab8c99f73137c2ab20125b3e0",
       "review": {
         "approved": true,
         "archive_image_only": {
           "article_text_unchanged": true,
           "operation": "image_only_archive_correction",
-          "original_draft_sha256": "f1fb1f8aede0d91a7356434319267205f28ef39eb7cd23aa4c88087241f4457b",
-          "original_published_at": "2026-09-26T16:45:21.865900+00:00",
-          "original_review_sha256": "cafdb6bc2b275d7b9664246b3b4b6b17bca9fd9022e4fd695a4d8c9230c7ef56",
-          "unchanged_text_sha256": "7aced8cda41816824a422dd8c8fe8e9a09b9baf47380ad4dbf1c23880a6b701d"
+          "original_draft_sha256": "a379aacafeef7839e99213197121471f50d90b718ca9b55850c04221cbdea15e",
+          "original_published_at": "2026-09-22T02:04:40.494597+00:00",
+          "original_review_sha256": "adc26534a0b6433f316b1e8dd8df6cedd5e04467c26b4e3f7ae6fc60f621727f",
+          "unchanged_text_sha256": "42f384ab5b6a3aff99da8c06c491ff703772918f4aad760d87da195de2afde2f"
         },
-        "draft_sha256": "388224ecf7432024a89adef8aa64fc0e0397e23044b2da7908cd3e0ed6b52a14",
+        "draft_sha256": "c0668340e72800eeb2533f2a5b967e6de2957650032df745047f3f97358d9f18",
         "historical_text_observations": [],
         "reasons": [
-          "Kuva esittää lakikirjaa, jossa on selkeästi sana \"LAW\", mikä on erittäin relevantti oikeusministeriön lapsirauharikosta ja rikoslain muutoksia käsittelevälle artikkelille.",
-          "Kuvan alt-teksti \"Arkistokuva: Punainen LAW-merkitty kirja ja musta kirja ovat valkoisella pinnalla.\" kuvaa tarkasti ja hyödyllisesti kuvan näkyvän sisällön suomeksi.",
-          "Kuvateksti \"Arkistokuva artikkelin aiheesta.\" on asianmukainen ja vastaa kuvan sisältöä ja relevanssia.",
-          "Kuva on peräisin Pexelsistä, ja sen lisenssi (Pexels License) sallii käytön. Krediitti \"Photo by Tara Winstead on Pexels\" on oikein.",
-          "Kuva ei ole AI-generoitu, eikä se sisällä ihmisiä, kasvoja tai arkaluonteisia elementtejä, jotka olisivat kiellettyjä artikkelin aiheen kontekstissa.",
-          "Kaikki annetut SHA-256-tunnisteet vastaavat toimitettua tietoa."
+          "Kuva esittää lakikirjaa, jonka kannessa lukee selkeästi 'LAW', mikä on erittäin relevantti artikkeliin, joka käsittelee sosiaali- ja terveydenhuollon lakimuutoksia.",
+          "Kuvan alt-teksti \"Arkistokuva: Punaisen kirjan kannessa lukee LAW, ja sen alta näkyy osa tummansinistä kirjaa.\" kuvaa tarkasti kuvan näkyvää sisältöä.",
+          "Kuvateksti \"Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.\" on asianmukainen ja informatiivinen.",
+          "Kuvan provenienssi (Pexels, Tara Winstead) ja lisenssi (Pexels License) ovat asianmukaiset ja sallivat kuvan käytön.",
+          "Kuvan sha256-tunniste (a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b) vastaa pixel_review'n vahvistamaa tunnustetta.",
+          "Pixel_review on hyväksynyt kuvan relevanssin ja sisällön."
         ]
       },
       "stock_image": {
-        "alt": "Arkistokuva: Punainen LAW-merkitty kirja ja musta kirja ovat valkoisella pinnalla.",
-        "caption": "Arkistokuva artikkelin aiheesta.",
+        "alt": "Arkistokuva: Punaisen kirjan kannessa lukee LAW, ja sen alta näkyy osa tummansinistä kirjaa.",
+        "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
         "classifier_output": {
           "category": "Kotimaa",
-          "depictable_scene": "Neutraalilla pöytäpinnalla on suljettu lakikirja, paperisia lausuntoasiakirjoja ja kynä.",
+          "depictable_scene": "Lakivalmistelua havainnollistava lakikirja neutraalilla pinnalla.",
           "must_avoid": [
-            "people, including children, faces, or human silhouettes",
-            "violence, conflict, or threatening gestures",
-            "injuries, blood, weapons, or victims",
-            "domestic interior staged as an abuse scene"
+            "people"
           ],
           "must_show": [
             "law book"
           ],
           "search_queries": [
+            "law book cover",
             "closed law book",
-            "law book desk",
             "lakikirja pöydällä"
           ],
-          "subject": "Oikeusministeriön lausuntokierros lapsirauharikoksesta eli rikoslakiin ehdotetusta koventamisperusteesta"
+          "subject": "Hallitus esittää muutoksia sote-lakien palveluhankintaan"
         },
         "credit": "Photo by Tara Winstead on Pexels",
-        "depicted": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
+        "depicted": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
         "generated": false,
         "hotlink": false,
         "license": "Pexels License",
         "license_url": "https://www.pexels.com/license/",
-        "local_path": "media/902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d.jpg",
+        "local_path": "media/a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b.jpg",
         "pixel_review": {
-          "alt_fi": "Musta ja punainen kirja, jossa lukee \"LAW\", ovat valkoisella pinnalla.",
+          "alt_fi": "Punaisen kirjan kannessa on puukirjaimin kirjoitettu sana LAW, ja sen alla näkyy osittain tummansininen kirja.",
           "approved": true,
-          "article_text_sha256": "3b1a9931f683ccfd079d682877f7b275b550d33717d98918706f25af7336b5b4",
-          "description": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
-          "image_sha256": "902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d",
+          "article_text_sha256": "3be34497eba93a2f7103f696b88eeabc41b68ab17b6ee010c0c415fe46ba1ddd",
+          "description": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
+          "image_sha256": "a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b",
           "model": "google:gemini-2.5-flash",
           "no_people": true,
-          "reason": "The article discusses proposed changes to criminal law, specifically a new basis for aggravating punishment related to child peace. The image directly illustrates the concept of 'law' through the visible word on the book, which is relevant to the article's subject matter of legal reforms.",
-          "reviewed_at": "2026-09-26T16:59:33.063418+00:00"
+          "reason": "The article discusses proposed changes to social and healthcare laws. The image directly illustrates the concept of 'law' through the prominent word on the book, making it relevant to the article's subject matter.",
+          "reviewed_at": "2026-09-26T17:20:39.347537+00:00"
         },
         "pixels": {
           "height": 627,
           "mode": "RGB",
-          "variance": 12682.6,
+          "variance": 9754.1,
           "width": 940
         },
         "relevance_check": {
           "accepted": true,
-          "evidence": "Two books, one black and one red, are placed on a white surface. The red book has the word \"LAW\" spelled out in white letters on its cover.",
+          "evidence": "The image shows a red book with the word \"LAW\" spelled out in wooden letters on its cover, partially overlapping a dark blue book underneath, all against a white background.",
           "matched": [
             "book",
             "law"
@@ -1323,27 +1354,657 @@
           "method": "vision",
           "reason": "all must_show requirements matched"
         },
-        "sha256": "902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d",
-        "source_url": "https://www.pexels.com/photo/top-view-of-notebooks-with-a-text-law-on-the-cover-8850748/",
+        "sha256": "a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b",
+        "source_url": "https://www.pexels.com/photo/close-up-of-books-with-a-word-law-on-the-top-8850747/",
         "stock_provenance": {
-          "image_url": "https://images.pexels.com/photos/8850748/pexels-photo-8850748.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-          "photo_id": "8850748",
-          "photo_url": "https://www.pexels.com/photo/top-view-of-notebooks-with-a-text-law-on-the-cover-8850748/",
+          "image_url": "https://images.pexels.com/photos/8850747/pexels-photo-8850747.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "photo_id": "8850747",
+          "photo_url": "https://www.pexels.com/photo/close-up-of-books-with-a-word-law-on-the-top-8850747/",
           "photographer": "Tara Winstead",
           "photographer_url": "https://www.pexels.com/@tara-winstead",
           "provider": "pexels",
           "query": "closed law book",
           "retrieved_at": "2026-09-26T16:50:29Z"
         },
-        "stock_provenance_sha256": "fa142c8f2dc0df1fa1f39db29cc76500bb3e1cdf58db5f5d86e4276841489f70",
-        "url": "https://uutistenlukija.fi/media/902cdd57c935de45a6136fbc1193b71b4f4bf6f95b589c907c3f79612f70539d.jpg"
+        "stock_provenance_sha256": "3a7ed2567b72c77c48b71500fe93726aa16e4de99a84e86ebaa829229beb5f92",
+        "url": "https://uutistenlukija.fi/media/a1597ceb123b9ddc3f73625c30bee38e5f107313ef0aa8aa95bbd6663be8d36b.jpg"
       },
       "text_only": {
         "policy": "official-text-v1",
         "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-        "provenance_sha256": "4087c1d4c3bc77ab318772c4600c5a8c9bc86b14701ac4ce5b3142ca81c4ee34"
+        "provenance_sha256": "f54f241b150d9f21747e3d0c143938f0cbd999d156e683c66af63af53646c9fa"
+      }
+    },
+    {
+      "article_file": "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html",
+      "draft": {
+        "category": "Kotimaa",
+        "image": {
+          "alt": "Arkistokuva: Punainen LAW-merkitty kirja on tummansinisen kirjan päällä valkoisella pinnalla.",
+          "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
+          "classifier_output": {
+            "category": "Kotimaa",
+            "depictable_scene": "Lakivalmistelua havainnollistava lakikirja neutraalilla pinnalla.",
+            "must_avoid": [
+              "people"
+            ],
+            "must_show": [
+              "law book"
+            ],
+            "search_queries": [
+              "law book cover",
+              "closed law book",
+              "lakikirja pöydällä"
+            ],
+            "subject": "Sisäministeriö lähetti ulkomaalaislain muutokset lausuntokierrokselle"
+          },
+          "credit": "Photo by Tara Winstead on Pexels",
+          "depicted": "Two books are stacked on a white surface. The top book is red with the word \"LAW\" in white letters on its spine. The bottom book is dark blue.",
+          "generated": false,
+          "hotlink": false,
+          "license": "Pexels License",
+          "license_url": "https://www.pexels.com/license/",
+          "local_path": "media/b3bad76723c362b0fd4da4620b8b562634c81915f7ae4ff6cbc2ffd9f4d6b74b.jpg",
+          "pixel_review": {
+            "alt_fi": "Punainen kirja, jonka selässä lukee \"LAW\", on asetettu tummansinisen kirjan päälle valkoisella pinnalla.",
+            "approved": true,
+            "article_text_sha256": "836298f6ff4bf882da555df659646b65a56ee9c67fe9a8075f1a477655659f81",
+            "description": "Two books are stacked on a white surface. The top book is red with the word \"LAW\" in white letters on its spine. The bottom book is dark blue.",
+            "image_sha256": "b3bad76723c362b0fd4da4620b8b562634c81915f7ae4ff6cbc2ffd9f4d6b74b",
+            "model": "google:gemini-2.5-flash",
+            "no_people": true,
+            "reason": "The article discusses proposed changes to the Aliens Act, which is a legal matter. The image of a book titled \"LAW\" directly illustrates the subject of law and legislation, making it concretely relevant to the article's content.",
+            "reviewed_at": "2026-09-26T17:20:38.089366+00:00"
+          },
+          "pixels": {
+            "height": 627,
+            "mode": "RGB",
+            "variance": 8531.3,
+            "width": 940
+          },
+          "relevance_check": {
+            "accepted": true,
+            "evidence": "Two books are stacked on a white surface. The top book is red with the word \"LAW\" in white letters on its spine. The bottom book is dark blue.",
+            "matched": [
+              "book",
+              "law"
+            ],
+            "method": "vision",
+            "reason": "all must_show requirements matched"
+          },
+          "sha256": "b3bad76723c362b0fd4da4620b8b562634c81915f7ae4ff6cbc2ffd9f4d6b74b",
+          "source_url": "https://www.pexels.com/photo/books-on-a-white-background-8850741/",
+          "stock_provenance": {
+            "image_url": "https://images.pexels.com/photos/8850741/pexels-photo-8850741.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "photo_id": "8850741",
+            "photo_url": "https://www.pexels.com/photo/books-on-a-white-background-8850741/",
+            "photographer": "Tara Winstead",
+            "photographer_url": "https://www.pexels.com/@tara-winstead",
+            "provider": "pexels",
+            "query": "closed law book",
+            "retrieved_at": "2026-09-26T16:50:29Z"
+          },
+          "stock_provenance_sha256": "3443e27777aebe7bd3412f8f3750cf15450ab74282ad34b0739c7dec17e137fd",
+          "url": "https://uutistenlukija.fi/media/b3bad76723c362b0fd4da4620b8b562634c81915f7ae4ff6cbc2ffd9f4d6b74b.jpg"
+        },
+        "paragraphs": [
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Sisäministeriö kertoo lähettäneensä lausuntokierrokselle esitysluonnoksen ulkomaalaislain muuttamiseksi. Muutoksia ehdotetaan muun muassa säilöönoton perusteisiin ja pääsyn epäämistä koskevaan muutoksenhakuun. Lausuntokierros päättyy 16.10.2026. Tiedote on julkaistu 18.9.2026."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Sisäministeriön mukaan esityksen taustalla ovat EU:n paluuasetus, vastaanottodirektiivi ja Schengenin rajasäännöstö."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Esitysluonnoksen mukaan säilöönottoa voitaisiin jatkossa jatkaa myös silloin, kun henkilö hakee kansainvälistä suojelua ensimmäistä kertaa palautusvaiheessa. Näin voitaisiin ministeriön mukaan toimia, jos henkilö hakee kansainvälistä suojelua palautuksen viivyttämiseksi tai estämiseksi, vaikka hänellä on ollut aiemmin mahdollisuus hakea kansainvälistä suojelua. Nykyisin säilössä pitäminen on mahdollista vain myöhemmän hakemuksen kohdalla. Muutoksen kerrotaan yhdenmukaistavan sääntelyä vastaanottodirektiivin kanssa."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Lisäksi kolmannen maan kansalaisen pääsyn epäämistä ulkorajoilla koskevaa muutoksenhakusääntelyä yhtenäistettäisiin Schengenin rajasäännöstön kanssa."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Tiedotteen mukaan Suomen turvapaikanhakujärjestelmää on hallitusohjelman mukaisesti tehostettu ja käyttöön otetaan parhaita käytänteitä, jotka tukevat tavoitetta tiukentaa turvapaikkapolitiikkaa. Kielteisen päätöksen saaneiden kerrotaan palaavan tai tulevan palautetuiksi lähtömaihin mahdollisimman nopeasti. Nämä ovat ministeriön esittämiä tavoitteita, eivät itsenäisesti vahvistettuja tuloksia."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Luonnoksessa tehtäisiin myös EU:n paluuasetukseen liittyviä muutoksia pakenemisvaaran arviointiin. Ministeriön mukaan palautettavien henkilöiden pakeneminen vaikeuttaa palautusten toteuttamista jäsenvaltioissa, minkä vuoksi paluuasetuksessa määritellään yhteiset perusteet pakenemisen vaaran arvioinnille. Arviointiperusteilla pyritään tunnistamaan paremmin pakenemisen vaara ja estämään pakenemisia. Ulkomaalaislakiin säilytettäisiin kansalliseen liikkumavaraan kuuluvasti sellaiset perusteet, joita paluuasetus ei sisällä."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Paluuasetuksesta saavutettiin ministeriön mukaan alustava poliittinen yhteisymmärrys 1.6.2026. Asetuksen täytäntöönpano alkaa syksyllä 2026, jolloin aletaan soveltaa osaa säännöksistä, ja soveltaminen alkaa pääosin syksyllä 2027. Tiedotteen mukaan tämän hallituskauden aikana ei ehditä valmistella täysimääräisesti kaikkia paluuasetuksen mahdollistaman kansallisen liikkumavaran edellyttämiä lainsäädäntömuutoksia, vaan ne valmistellaan erillisessä hankkeessa."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Lausuntopyyntö on tiedotteen mukaan lausuntopalvelu.fi-palvelussa. Lisätietoja antaa erityisasiantuntija Emma Rimmanen sisäministeriöstä."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Kuvaus perustuu yksinomaan sisäministeriön tiedotteeseen, joten esityksen sisältöä ja sen taustalla esitettyjä tavoitteita koskevat tiedot ovat ministeriön omia väitteitä. Asian käsittely jatkuu lausuntokierroksella."
+          }
+        ],
+        "summary": "Sisäministeriö on antanut lausunnoille esitysluonnoksen, joka muuttaisi muun muassa säilöönoton perusteita ja pääsyn epäämistä koskevaa muutoksenhakua. Lausuntokierros päättyy 16.10.2026.",
+        "title": "Sisäministeriö lähetti ulkomaalaislain muutokset lausuntokierrokselle"
+      },
+      "draft_sha256": "957358118f31cfed1a2ca17de11534e1eef98d8833ee5c2ed0aea0f140dad770",
+      "image_sha256": "b3bad76723c362b0fd4da4620b8b562634c81915f7ae4ff6cbc2ffd9f4d6b74b",
+      "job_id": "4c675026386afcc3169b9401400171ddb156d26c011c4c0d18b9c8e6545e15ca",
+      "packet": {
+        "fixture": false,
+        "image": {
+          "alt": "Arkistokuva: Punainen LAW-merkitty kirja on tummansinisen kirjan päällä valkoisella pinnalla.",
+          "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
+          "classifier_output": {
+            "category": "Kotimaa",
+            "depictable_scene": "Lakivalmistelua havainnollistava lakikirja neutraalilla pinnalla.",
+            "must_avoid": [
+              "people"
+            ],
+            "must_show": [
+              "law book"
+            ],
+            "search_queries": [
+              "law book cover",
+              "closed law book",
+              "lakikirja pöydällä"
+            ],
+            "subject": "Sisäministeriö lähetti ulkomaalaislain muutokset lausuntokierrokselle"
+          },
+          "credit": "Photo by Tara Winstead on Pexels",
+          "depicted": "Two books are stacked on a white surface. The top book is red with the word \"LAW\" in white letters on its spine. The bottom book is dark blue.",
+          "generated": false,
+          "hotlink": false,
+          "license": "Pexels License",
+          "license_url": "https://www.pexels.com/license/",
+          "local_path": "media/b3bad76723c362b0fd4da4620b8b562634c81915f7ae4ff6cbc2ffd9f4d6b74b.jpg",
+          "pixel_review": {
+            "alt_fi": "Punainen kirja, jonka selässä lukee \"LAW\", on asetettu tummansinisen kirjan päälle valkoisella pinnalla.",
+            "approved": true,
+            "article_text_sha256": "836298f6ff4bf882da555df659646b65a56ee9c67fe9a8075f1a477655659f81",
+            "description": "Two books are stacked on a white surface. The top book is red with the word \"LAW\" in white letters on its spine. The bottom book is dark blue.",
+            "image_sha256": "b3bad76723c362b0fd4da4620b8b562634c81915f7ae4ff6cbc2ffd9f4d6b74b",
+            "model": "google:gemini-2.5-flash",
+            "no_people": true,
+            "reason": "The article discusses proposed changes to the Aliens Act, which is a legal matter. The image of a book titled \"LAW\" directly illustrates the subject of law and legislation, making it concretely relevant to the article's content.",
+            "reviewed_at": "2026-09-26T17:20:38.089366+00:00"
+          },
+          "pixels": {
+            "height": 627,
+            "mode": "RGB",
+            "variance": 8531.3,
+            "width": 940
+          },
+          "relevance_check": {
+            "accepted": true,
+            "evidence": "Two books are stacked on a white surface. The top book is red with the word \"LAW\" in white letters on its spine. The bottom book is dark blue.",
+            "matched": [
+              "book",
+              "law"
+            ],
+            "method": "vision",
+            "reason": "all must_show requirements matched"
+          },
+          "sha256": "b3bad76723c362b0fd4da4620b8b562634c81915f7ae4ff6cbc2ffd9f4d6b74b",
+          "source_url": "https://www.pexels.com/photo/books-on-a-white-background-8850741/",
+          "stock_provenance": {
+            "image_url": "https://images.pexels.com/photos/8850741/pexels-photo-8850741.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "photo_id": "8850741",
+            "photo_url": "https://www.pexels.com/photo/books-on-a-white-background-8850741/",
+            "photographer": "Tara Winstead",
+            "photographer_url": "https://www.pexels.com/@tara-winstead",
+            "provider": "pexels",
+            "query": "closed law book",
+            "retrieved_at": "2026-09-26T16:50:29Z"
+          },
+          "stock_provenance_sha256": "3443e27777aebe7bd3412f8f3750cf15450ab74282ad34b0739c7dec17e137fd",
+          "url": "https://uutistenlukija.fi/media/b3bad76723c362b0fd4da4620b8b562634c81915f7ae4ff6cbc2ffd9f4d6b74b.jpg"
+        },
+        "publication_basis": {
+          "policy": "official-text-v1",
+          "policy_sha256": "4c1c168a45556fc0e7c35622c1139dfb71fd8298ea8cf655fe9ba2d0c9837de2",
+          "provider": "valtioneuvosto",
+          "related_sources": 0,
+          "source_fields_sha256": "0a8561bfe3dfaa2e4d7003e72d45c44bd52813ec96a12a2327335ee31eeb8390",
+          "source_sha256": "c806bd0ac074988dcb2001e6d662a5ff0460522b2bc750b83bea1a4a2452eb92"
+        },
+        "sources": [
+          {
+            "id": "A",
+            "published_at": "2026-09-18T09:06+0300",
+            "publisher": "Valtioneuvoston kanslia",
+            "reuse": {
+              "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
+              "license": "Valtioneuvoston sivuston käyttöehdot: tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan; aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen",
+              "license_url": "https://valtioneuvosto.fi/tietoa-sivustosta",
+              "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
+              "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
+            },
+            "text": "Säilöönottoon ja pääsyn epäämiseen liittyviä ulkomaalaislain muutoksia lausuntokierrokselle\nsisäministeriö\nJulkaisuajankohta 18.9.2026 9.06\nTyyppi:Tiedote\nSisäministeriö on lähettänyt lausuntokierrokselle esitysluonnoksen ulkomaalaislain muuttamiseksi. Muutoksia ehdotetaan muun muassa säilöönoton perusteisiin ja pääsyn epäämistä koskevaan muutoksenhakuun. Esityksen taustalla ovat EU:n paluuasetus, vastaanottodirektiivi ja Schengenin rajasäännöstö. Lausuntokierros päättyy 16.10.2026.\nJatkossa säilöönottoa voitaisiin jatkaa myös silloin, kun henkilö hakee kansainvälistä suojelua ensimmäistä kertaa palautusvaiheessa. Näin voitaisiin toimia, jos henkilö hakee kansainvälistä suojelua palautuksen viivyttämiseksi tai estämiseksi, vaikka hänellä on ollut aiemmin mahdollisuus hakea kansainvälistä suojelua. Nykyisin säilössä pitäminen on mahdollista vain myöhemmän hakemuksen kohdalla. Muutos yhdenmukaistaisi sääntelyä vastaanottodirektiivin kanssa.\nLisäksi kolmannen maan kansalaisen pääsyn epäämistä ulkorajoilla koskevaa muutoksenhakusääntelyä yhtenäistettäisiin Schengenin rajasäännöstön kanssa.\nHallitusohjelman mukaisesti Suomen turvapaikanhakujärjestelmää on tehostettu. Käyttöön otetaan parhaat käytänteet, jotka tukevat tavoitetta tiukentaa turvapaikkapolitiikkaa. Kielteisen päätöksen saaneet palaavat tai heidät palautetaan lähtömaihin mahdollisimman nopeasti.\nPaluuasetus tehostaa laittomasti EU:ssa oleskelevien palautuksia\nEsityksessä tehtäisiin myös EU:n paluuasetukseen liittyviä muutoksia pakenemisvaaran arviointiin. Palautettavien henkilöiden pakeneminen vaikeuttaa palautusten toteuttamista EU:n jäsenvaltioissa, minkä vuoksi paluuasetuksessa määritellään yhteiset perusteet sen arvioinnille. Arviointiperusteilla pyritään tunnistamaan paremmin pakenemisen vaaran olemassaolo ja estämään pakenemisia. Ulkomaalaislaissa säilytettäisiin kuitenkin kansalliseen liikkumavaraan kuuluvasti sellaiset perusteet, joita paluuasetus ei sisällä.\nEU:n paluuasetuksesta saavutettiin alustava poliittinen yhteisymmärrys 1.6.2026. Asetuksen täytäntöönpano alkaa syksyllä 2026, jolloin aletaan soveltaa osaa säännöksistä. Soveltaminen alkaa pääosin syksyllä 2027. Tämän hallituskauden aikana ei ehditä valmistella täysimääräisesti kaikkia paluuasetuksen mahdollistaman kansallisen liikkumavaran edellyttämiä lainsäädäntömuutoksia, vaan ne valmistellaan erillisessä hankkeessa.\nLisätietoja:\nerityisasiantuntija Emma Rimmanen, p. 0295 488 325, [email protected]\nLausuntopyyntö | lausuntopalvelu.fi\nPaluuasetuksen kansallinen liikkumavara\nOrpon hallitusohjelma Turvallinen ja kriisinkestävä oikeusvaltio\nhallitusohjelmat maahanmuutto säilöönotto turvapaikanhakijat",
+            "title": "Säilöönottoon ja pääsyn epäämiseen liittyviä ulkomaalaislain muutoksia lausuntokierrokselle",
+            "url": "https://valtioneuvosto.fi/-/1410869/sailoonottoon-ja-paasyn-epaamiseen-liittyvia-ulkomaalaislain-muutoksia-lausuntokierrokselle"
+          }
+        ],
+        "story_key": "url:https://valtioneuvosto.fi/-/1410869/sailoonottoon-ja-paasyn-epaamiseen-liittyvia-ulkomaalaislain-muutoksia-lausuntokierrokselle",
+        "supporting_documents": [
+          {
+            "id": "RIGHTS",
+            "purpose": "text reuse permission; not news or image evidence",
+            "retrieved_at": "2026-09-18T06:24:01.924075+00:00",
+            "sha256": "ca4af04c47958de64ccc3f4f93606e7d33912a92a7be64e57675c98ebf4e327a",
+            "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
+            "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
+          }
+        ]
+      },
+      "packet_sha256": "b77cbd6a78696d6ea34dd2453510cfe74de7ee55919b0d4d351e6cff535b10e4",
+      "review": {
+        "approved": true,
+        "archive_image_only": {
+          "article_text_unchanged": true,
+          "operation": "image_only_archive_correction",
+          "original_draft_sha256": "ab6b3e5e35fecb3b86e304af59cc8e36d30a3d1e3b408f50f40dcef29fe8b97b",
+          "original_published_at": "2026-09-18T06:24:19.721227+00:00",
+          "original_review_sha256": "7548dbda84e5a44afd7fb85024b50f93c6eb30ed8a02eec3553c696101404cec",
+          "unchanged_text_sha256": "9ad23c8e46373e8f514774eea21c5df1727e9b51ce9605311ad04eb2bd5998ab"
+        },
+        "draft_sha256": "957358118f31cfed1a2ca17de11534e1eef98d8833ee5c2ed0aea0f140dad770",
+        "historical_text_observations": [],
+        "reasons": [
+          "Kuva esittää lakikirjaa, jonka selässä lukee \"LAW\", mikä on suoraan relevantti artikkelin aiheeseen, joka käsittelee ulkomaalaislain muutoksia.",
+          "Kuvan alt-teksti \"Arkistokuva: Punainen LAW-merkitty kirja on tummansinisen kirjan päällä valkoisella pinnalla.\" kuvaa tarkasti kuvan näkyvän sisällön.",
+          "Kuvateksti \"Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.\" on asianmukainen ja selventää kuvan luonteen.",
+          "Kuva on peräisin Pexels-palvelusta (Tara Winstead), ja sen lisenssi (Pexels License) sallii käytön.",
+          "Kuva ei ole AI-generoitu, eikä se sisällä ihmisiä tai arkaluonteisia elementtejä, jotka olisivat ristiriidassa artikkelin aiheen kanssa.",
+          "Pixel_review on hyväksytty ja sen tiedot vastaavat toimitettua kuvaa ja artikkelin kontekstia.",
+          "Kaikki hash-tarkistukset (draft_sha256, image_sha256, article_text_sha256) ovat validit ja vastaavat toimitettuja arvoja."
+        ]
+      },
+      "stock_image": {
+        "alt": "Arkistokuva: Punainen LAW-merkitty kirja on tummansinisen kirjan päällä valkoisella pinnalla.",
+        "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
+        "classifier_output": {
+          "category": "Kotimaa",
+          "depictable_scene": "Lakivalmistelua havainnollistava lakikirja neutraalilla pinnalla.",
+          "must_avoid": [
+            "people"
+          ],
+          "must_show": [
+            "law book"
+          ],
+          "search_queries": [
+            "law book cover",
+            "closed law book",
+            "lakikirja pöydällä"
+          ],
+          "subject": "Sisäministeriö lähetti ulkomaalaislain muutokset lausuntokierrokselle"
+        },
+        "credit": "Photo by Tara Winstead on Pexels",
+        "depicted": "Two books are stacked on a white surface. The top book is red with the word \"LAW\" in white letters on its spine. The bottom book is dark blue.",
+        "generated": false,
+        "hotlink": false,
+        "license": "Pexels License",
+        "license_url": "https://www.pexels.com/license/",
+        "local_path": "media/b3bad76723c362b0fd4da4620b8b562634c81915f7ae4ff6cbc2ffd9f4d6b74b.jpg",
+        "pixel_review": {
+          "alt_fi": "Punainen kirja, jonka selässä lukee \"LAW\", on asetettu tummansinisen kirjan päälle valkoisella pinnalla.",
+          "approved": true,
+          "article_text_sha256": "836298f6ff4bf882da555df659646b65a56ee9c67fe9a8075f1a477655659f81",
+          "description": "Two books are stacked on a white surface. The top book is red with the word \"LAW\" in white letters on its spine. The bottom book is dark blue.",
+          "image_sha256": "b3bad76723c362b0fd4da4620b8b562634c81915f7ae4ff6cbc2ffd9f4d6b74b",
+          "model": "google:gemini-2.5-flash",
+          "no_people": true,
+          "reason": "The article discusses proposed changes to the Aliens Act, which is a legal matter. The image of a book titled \"LAW\" directly illustrates the subject of law and legislation, making it concretely relevant to the article's content.",
+          "reviewed_at": "2026-09-26T17:20:38.089366+00:00"
+        },
+        "pixels": {
+          "height": 627,
+          "mode": "RGB",
+          "variance": 8531.3,
+          "width": 940
+        },
+        "relevance_check": {
+          "accepted": true,
+          "evidence": "Two books are stacked on a white surface. The top book is red with the word \"LAW\" in white letters on its spine. The bottom book is dark blue.",
+          "matched": [
+            "book",
+            "law"
+          ],
+          "method": "vision",
+          "reason": "all must_show requirements matched"
+        },
+        "sha256": "b3bad76723c362b0fd4da4620b8b562634c81915f7ae4ff6cbc2ffd9f4d6b74b",
+        "source_url": "https://www.pexels.com/photo/books-on-a-white-background-8850741/",
+        "stock_provenance": {
+          "image_url": "https://images.pexels.com/photos/8850741/pexels-photo-8850741.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "photo_id": "8850741",
+          "photo_url": "https://www.pexels.com/photo/books-on-a-white-background-8850741/",
+          "photographer": "Tara Winstead",
+          "photographer_url": "https://www.pexels.com/@tara-winstead",
+          "provider": "pexels",
+          "query": "closed law book",
+          "retrieved_at": "2026-09-26T16:50:29Z"
+        },
+        "stock_provenance_sha256": "3443e27777aebe7bd3412f8f3750cf15450ab74282ad34b0739c7dec17e137fd",
+        "url": "https://uutistenlukija.fi/media/b3bad76723c362b0fd4da4620b8b562634c81915f7ae4ff6cbc2ffd9f4d6b74b.jpg"
+      },
+      "text_only": {
+        "policy": "official-text-v1",
+        "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
+        "provenance_sha256": "7aa5fba48a57fc67b02fa5b93725cd3039851990812752ae0fe64f96eed62043"
+      }
+    },
+    {
+      "article_file": "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html",
+      "draft": {
+        "category": "Talous",
+        "image": {
+          "alt": "Arkistokuva: Kädet kirjoittavat kynällä papereihin ja käyttävät laskinta pöydällä, taustalla on kahvikuppi.",
+          "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
+          "classifier_output": {
+            "category": "Talous",
+            "depictable_scene": "Yritystukien taloudellista arviointia havainnollistava laskin ja raporttipaperit.",
+            "must_avoid": [],
+            "must_show": [
+              "calculator"
+            ],
+            "search_queries": [
+              "financial documents calculator",
+              "business finance calculator",
+              "calculator financial report"
+            ],
+            "subject": "TEM pyytää lausuntoja yritystukien kriteerien muuttamisesta"
+          },
+          "credit": "Photo by Mikhail Nilov on Pexels",
+          "depicted": "A person's hands are visible at a desk, one holding a pen and writing on a stack of papers, the other operating a calculator. A coffee cup and documents are in the background.",
+          "generated": false,
+          "hotlink": false,
+          "license": "Pexels License",
+          "license_url": "https://www.pexels.com/license/",
+          "local_path": "media/8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d.jpg",
+          "pixel_review": {
+            "alt_fi": "Kädet kirjoittavat kynällä papereihin ja käyttävät laskinta pöydällä, taustalla on kahvikuppi.",
+            "approved": true,
+            "article_text_sha256": "ce3115d6356065a73169d0a08be4f1931c7023b1f0f473e5b93d5bbd9ac4fed2",
+            "description": "A person's hands are visible at a desk, one holding a pen and writing on a stack of papers, the other operating a calculator. A coffee cup and documents are in the background.",
+            "image_sha256": "8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d",
+            "model": "google:gemini-2.5-flash",
+            "no_people": false,
+            "reason": "The image depicts a person engaged in administrative or financial work, which is relevant to the article's subject of economic activity, financial support, and changes in criteria for business subsidies. The visible elements like papers, pen, and calculator concretely illustrate the kind of work related to financial documentation and calculations discussed in the article.",
+            "reviewed_at": "2026-09-26T17:20:05.945464+00:00"
+          },
+          "pixels": {
+            "height": 627,
+            "mode": "RGB",
+            "variance": 14266.7,
+            "width": 940
+          },
+          "relevance_check": {
+            "accepted": true,
+            "evidence": "A person's hands are visible at a desk, one holding a pen and writing on a stack of papers, the other operating a calculator. A coffee cup and documents are in the background.",
+            "matched": [
+              "calculator"
+            ],
+            "method": "vision",
+            "reason": "all must_show requirements matched"
+          },
+          "sha256": "8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d",
+          "source_url": "https://www.pexels.com/photo/person-in-long-sleeve-shirt-holding-a-calculator-8297031/",
+          "stock_provenance": {
+            "image_url": "https://images.pexels.com/photos/8297031/pexels-photo-8297031.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "photo_id": "8297031",
+            "photo_url": "https://www.pexels.com/photo/person-in-long-sleeve-shirt-holding-a-calculator-8297031/",
+            "photographer": "Mikhail Nilov",
+            "photographer_url": "https://www.pexels.com/@mikhail-nilov",
+            "provider": "pexels",
+            "query": "financial documents calculator",
+            "retrieved_at": "2026-09-26T17:14:32Z"
+          },
+          "stock_provenance_sha256": "3da21c76170ec44a384815ce0fd675fadb8c8264481557c8108d088366fcf376",
+          "url": "https://uutistenlukija.fi/media/8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d.jpg"
+        },
+        "paragraphs": [
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Työ- ja elinkeinoministeriö kertoo avanneensa lausuntokierroksen lakiluonnoksesta, jolla muutettaisiin taloudelliseen toimintaan myönnettävien tukien yleisiä edellytyksiä. Ministeriön 15. syyskuuta julkaiseman tiedotteen mukaan lausunnot on annettava viimeistään 5. lokakuuta 2026."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Luonnoksessa tukien myöntämisperusteissa annettaisiin aiempaa enemmän painoa hankkeiden vaikuttavuudelle, niiden Suomeen tuomille taloudellisille vaikutuksille sekä yksityisen rahoituksen osuudelle. Ministeriön tavoitteena on suunnata yritystukia uudistumiseen ja tuottavuuden parantamiseen pitkällä aikavälillä. Kyse on ehdotetuista muutoksista, ei jo voimassa olevista säännöistä."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Ministeriön mukaan myös yritystukineuvottelukunnan tehtäväkenttää laajennettaisiin: sen lausuntomenettelyn piiriin tulisivat verotuet. Lakiluonnos perustuu hallituksen vuoden 2026 budjettiriihessä tekemään kirjaukseen yritystukien vaikuttavuuden parantamisesta."
+          }
+        ],
+        "summary": "Työ- ja elinkeinoministeriön lakiluonnoksessa yritystukien myöntämisessä korostettaisiin hankkeiden vaikuttavuutta, Suomeen kohdistuvia talousvaikutuksia ja yksityistä rahoitusta. Lausuntojen määräaika on 5. lokakuuta 2026.",
+        "title": "TEM pyytää lausuntoja yritystukien kriteerien muuttamisesta"
+      },
+      "draft_sha256": "ecdcac673e6b5779161e0264c8952800b4e7c01359b231f8f90719c577b68ca5",
+      "image_sha256": "8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d",
+      "job_id": "df3aa3cca842cb3442ffcc65e74c1765abd250ef8d65a6a8748c3528332206eb",
+      "packet": {
+        "fixture": false,
+        "image": {
+          "alt": "Arkistokuva: Kädet kirjoittavat kynällä papereihin ja käyttävät laskinta pöydällä, taustalla on kahvikuppi.",
+          "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
+          "classifier_output": {
+            "category": "Talous",
+            "depictable_scene": "Yritystukien taloudellista arviointia havainnollistava laskin ja raporttipaperit.",
+            "must_avoid": [],
+            "must_show": [
+              "calculator"
+            ],
+            "search_queries": [
+              "financial documents calculator",
+              "business finance calculator",
+              "calculator financial report"
+            ],
+            "subject": "TEM pyytää lausuntoja yritystukien kriteerien muuttamisesta"
+          },
+          "credit": "Photo by Mikhail Nilov on Pexels",
+          "depicted": "A person's hands are visible at a desk, one holding a pen and writing on a stack of papers, the other operating a calculator. A coffee cup and documents are in the background.",
+          "generated": false,
+          "hotlink": false,
+          "license": "Pexels License",
+          "license_url": "https://www.pexels.com/license/",
+          "local_path": "media/8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d.jpg",
+          "pixel_review": {
+            "alt_fi": "Kädet kirjoittavat kynällä papereihin ja käyttävät laskinta pöydällä, taustalla on kahvikuppi.",
+            "approved": true,
+            "article_text_sha256": "ce3115d6356065a73169d0a08be4f1931c7023b1f0f473e5b93d5bbd9ac4fed2",
+            "description": "A person's hands are visible at a desk, one holding a pen and writing on a stack of papers, the other operating a calculator. A coffee cup and documents are in the background.",
+            "image_sha256": "8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d",
+            "model": "google:gemini-2.5-flash",
+            "no_people": false,
+            "reason": "The image depicts a person engaged in administrative or financial work, which is relevant to the article's subject of economic activity, financial support, and changes in criteria for business subsidies. The visible elements like papers, pen, and calculator concretely illustrate the kind of work related to financial documentation and calculations discussed in the article.",
+            "reviewed_at": "2026-09-26T17:20:05.945464+00:00"
+          },
+          "pixels": {
+            "height": 627,
+            "mode": "RGB",
+            "variance": 14266.7,
+            "width": 940
+          },
+          "relevance_check": {
+            "accepted": true,
+            "evidence": "A person's hands are visible at a desk, one holding a pen and writing on a stack of papers, the other operating a calculator. A coffee cup and documents are in the background.",
+            "matched": [
+              "calculator"
+            ],
+            "method": "vision",
+            "reason": "all must_show requirements matched"
+          },
+          "sha256": "8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d",
+          "source_url": "https://www.pexels.com/photo/person-in-long-sleeve-shirt-holding-a-calculator-8297031/",
+          "stock_provenance": {
+            "image_url": "https://images.pexels.com/photos/8297031/pexels-photo-8297031.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "photo_id": "8297031",
+            "photo_url": "https://www.pexels.com/photo/person-in-long-sleeve-shirt-holding-a-calculator-8297031/",
+            "photographer": "Mikhail Nilov",
+            "photographer_url": "https://www.pexels.com/@mikhail-nilov",
+            "provider": "pexels",
+            "query": "financial documents calculator",
+            "retrieved_at": "2026-09-26T17:14:32Z"
+          },
+          "stock_provenance_sha256": "3da21c76170ec44a384815ce0fd675fadb8c8264481557c8108d088366fcf376",
+          "url": "https://uutistenlukija.fi/media/8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d.jpg"
+        },
+        "publication_basis": {
+          "policy": "official-text-v1",
+          "policy_sha256": "4c1c168a45556fc0e7c35622c1139dfb71fd8298ea8cf655fe9ba2d0c9837de2",
+          "provider": "valtioneuvosto",
+          "related_sources": 0,
+          "source_fields_sha256": "ce3c406699c06852756d0c136a635ed029ef63645a5c1b5f2e150399e3c8fd30",
+          "source_sha256": "5134e6138fb80111a33acba2a7b227b0a71e5f9987dc4318ba5b30d0264050ba"
+        },
+        "sources": [
+          {
+            "id": "A",
+            "published_at": "2026-09-15T12:39+0300",
+            "publisher": "Valtioneuvoston kanslia",
+            "reuse": {
+              "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
+              "license": "Valtioneuvoston sivuston käyttöehdot: tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan; aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen",
+              "license_url": "https://valtioneuvosto.fi/tietoa-sivustosta",
+              "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
+              "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
+            },
+            "text": "Luonnos yritystukien vaikuttavuutta parantavasta laista lausuntokierrokselle\ntyö- ja elinkeinoministeriö\nJulkaisuajankohta 15.9.2026 12.39\nTyyppi:Tiedote\nTEM pyytää lausuntoa luonnoksesta hallituksen esitykseksi eduskunnalle laiksi taloudelliseen toimintaan myönnettävän tuen yleisistä edellytyksistä annetun lain muuttamisesta. Lausuntoa pyydetään antamaan viimeistään 5.10.2026.\nTavoitteena on parantaa yritystukien vaikuttavuutta ja ohjata niitä nykyistä tehokkaammin osaksi julkista kasvurahoitusta. Tukikriteereissä painotettaisiin nykyistä enemmän hankkeiden vaikuttavuutta, taloudellisten vaikutusten kohdentumista Suomeen sekä yksityisen rahoituksen osuutta.\nMuutoksilla vahvistettaisiin tukien kohdentumista uudistumiseen ja pitkän aikavälin tuottavuuden parantamiseen. Esityksellä vahvistettaisiin myös yritystukineuvottelukunnan mandaattia. Sen lausuntomenettely laajennettaisiin koskemaan myös verotukia.\nEsitys perustuu hallituksen vuoden 2026 budjettiriihessä tekemään kirjaukseen yritystukien vaikuttavuuden parantamisesta.\nLisätiedot:\njohtava asiantuntija Anne Rothovius, TEM, p. 029 506 3532\nLausuntopyyntö: Luonnos hallituksen esitykseksi eduskunnalle laiksi taloudelliseen toimintaan myönnettävän tuen yleisistä edellytyksistä annetun lain muuttamisesta\nHallituksen esitys eduskunnalle laiksi taloudelliseen toimintaan myönnettävän tuen yleisistä edellytyksistä annetun lain muuttamisesta\nyritykset yritysrahoitus yritystuet",
+            "title": "Luonnos yritystukien vaikuttavuutta parantavasta laista lausuntokierrokselle",
+            "url": "https://valtioneuvosto.fi/-/1410877/luonnos-yritystukien-vaikuttavuutta-parantavasta-laista-lausuntokierrokselle"
+          }
+        ],
+        "story_key": "url:https://valtioneuvosto.fi/-/1410877/luonnos-yritystukien-vaikuttavuutta-parantavasta-laista-lausuntokierrokselle",
+        "supporting_documents": [
+          {
+            "id": "RIGHTS",
+            "purpose": "text reuse permission; not news or image evidence",
+            "retrieved_at": "2026-09-16T20:04:21.599736+00:00",
+            "sha256": "3d6b9ea95ae0d92f4fef57d62b8bd69b47c7dc132d4f48c838ffa4567ef46f05",
+            "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
+            "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
+          }
+        ]
+      },
+      "packet_sha256": "13f37624f3be45326048c0531913b37365e307e6f70868026c24ffe019b51d00",
+      "review": {
+        "approved": true,
+        "archive_image_only": {
+          "article_text_unchanged": true,
+          "operation": "image_only_archive_correction",
+          "original_draft_sha256": "ab50ee237c3a473548717257f62df9b0b490ad411b34a58ff80dd03cc4526164",
+          "original_published_at": "2026-09-16T20:04:24.930456+00:00",
+          "original_review_sha256": "e6188d0e13f983a6e1caf276749fcf4d9d078c84803dd0ee8ca8d440b97e5916",
+          "unchanged_text_sha256": "d56ae5cad01cfa11cc704d618cb6e5e2bf3919d085223a5784c00642dabde796"
+        },
+        "draft_sha256": "ecdcac673e6b5779161e0264c8952800b4e7c01359b231f8f90719c577b68ca5",
+        "historical_text_observations": [],
+        "reasons": [
+          "Kuva on relevantti artikkeliin, joka käsittelee yritystukien kriteerien muutoksia ja taloudellista arviointia. Kuva esittää käsiä kirjoittamassa papereihin ja käyttämässä laskinta, mikä havainnollistaa konkreettisesti artikkelin aihepiiriä.",
+          "Kuva ei ole AI-generoitu, ja sen provenienssi (Pexels, Mikhail Nilov) on selkeä ja lisensoitu (Pexels License).",
+          "Alt-teksti \"Arkistokuva: Kädet kirjoittavat kynällä papereihin ja käyttävät laskinta pöydällä, taustalla on kahvikuppi.\" kuvaa tarkasti kuvan näkyvän sisällön suomeksi.",
+          "Kuvateksti \"Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.\" on asianmukainen ja informatiivinen.",
+          "Kuvassa ei ole tunnistettavia henkilöitä tai arkaluonteisia aiheita, jotka edellyttäisivät ihmisten välttämistä.",
+          "Kuvahash (8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d) vastaa toimitettua kuvaa ja pixel_review on hyväksytty."
+        ]
+      },
+      "stock_image": {
+        "alt": "Arkistokuva: Kädet kirjoittavat kynällä papereihin ja käyttävät laskinta pöydällä, taustalla on kahvikuppi.",
+        "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
+        "classifier_output": {
+          "category": "Talous",
+          "depictable_scene": "Yritystukien taloudellista arviointia havainnollistava laskin ja raporttipaperit.",
+          "must_avoid": [],
+          "must_show": [
+            "calculator"
+          ],
+          "search_queries": [
+            "financial documents calculator",
+            "business finance calculator",
+            "calculator financial report"
+          ],
+          "subject": "TEM pyytää lausuntoja yritystukien kriteerien muuttamisesta"
+        },
+        "credit": "Photo by Mikhail Nilov on Pexels",
+        "depicted": "A person's hands are visible at a desk, one holding a pen and writing on a stack of papers, the other operating a calculator. A coffee cup and documents are in the background.",
+        "generated": false,
+        "hotlink": false,
+        "license": "Pexels License",
+        "license_url": "https://www.pexels.com/license/",
+        "local_path": "media/8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d.jpg",
+        "pixel_review": {
+          "alt_fi": "Kädet kirjoittavat kynällä papereihin ja käyttävät laskinta pöydällä, taustalla on kahvikuppi.",
+          "approved": true,
+          "article_text_sha256": "ce3115d6356065a73169d0a08be4f1931c7023b1f0f473e5b93d5bbd9ac4fed2",
+          "description": "A person's hands are visible at a desk, one holding a pen and writing on a stack of papers, the other operating a calculator. A coffee cup and documents are in the background.",
+          "image_sha256": "8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d",
+          "model": "google:gemini-2.5-flash",
+          "no_people": false,
+          "reason": "The image depicts a person engaged in administrative or financial work, which is relevant to the article's subject of economic activity, financial support, and changes in criteria for business subsidies. The visible elements like papers, pen, and calculator concretely illustrate the kind of work related to financial documentation and calculations discussed in the article.",
+          "reviewed_at": "2026-09-26T17:20:05.945464+00:00"
+        },
+        "pixels": {
+          "height": 627,
+          "mode": "RGB",
+          "variance": 14266.7,
+          "width": 940
+        },
+        "relevance_check": {
+          "accepted": true,
+          "evidence": "A person's hands are visible at a desk, one holding a pen and writing on a stack of papers, the other operating a calculator. A coffee cup and documents are in the background.",
+          "matched": [
+            "calculator"
+          ],
+          "method": "vision",
+          "reason": "all must_show requirements matched"
+        },
+        "sha256": "8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d",
+        "source_url": "https://www.pexels.com/photo/person-in-long-sleeve-shirt-holding-a-calculator-8297031/",
+        "stock_provenance": {
+          "image_url": "https://images.pexels.com/photos/8297031/pexels-photo-8297031.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "photo_id": "8297031",
+          "photo_url": "https://www.pexels.com/photo/person-in-long-sleeve-shirt-holding-a-calculator-8297031/",
+          "photographer": "Mikhail Nilov",
+          "photographer_url": "https://www.pexels.com/@mikhail-nilov",
+          "provider": "pexels",
+          "query": "financial documents calculator",
+          "retrieved_at": "2026-09-26T17:14:32Z"
+        },
+        "stock_provenance_sha256": "3da21c76170ec44a384815ce0fd675fadb8c8264481557c8108d088366fcf376",
+        "url": "https://uutistenlukija.fi/media/8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d.jpg"
+      },
+      "text_only": {
+        "policy": "official-text-v1",
+        "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
+        "provenance_sha256": "d2413ff00e0261964ef4ad96f35af58777c0d2e7c7c309e8ee495857e2c6add0"
       }
     }
   ],
-  "image_backfill_sha256": "8e0526e9ea8ff7a1edbba8115be769d7679cb3e8b38a906f6d4c0effa70e9c53"
+  "image_backfill_sha256": "b9ba84dfb1f0aa5993b6d5548626e1f87e152ca43f85be5da93d131d54ceaf73"
 }
