@@ -14,10 +14,17 @@ Tarkista uuden kuvan relevanssi, täsmällinen kuvahash ja riippumaton pixel_rev
 näkyvän sisällön vastaavuus alt-tekstiin ja kuvatekstiin, provenienssi ja käyttöoikeus.
 Lisenssiteksti, lähdemaininta tai kirjoittajan varmuus eivät yksin todista kuvan oikeuksia
  tai relevanssia. Kuva ei saa olla yleiskuva, joka liittyy vain väljästi uutiskategoriaan.
+Lisensoidun valokuvan classifier_output.must_show kuvaa ehdotettua hakusommittelua,
+ei itsessään artikkelin tosiasiavaatimuksia. Arvioi näkyvien konkreettisten kohteiden
+yhteys koko lopulliseen artikkeliin myös silloin, kun relevance_check kirjaa puuttuvan
+sommitteluelementin. Puuttuva rekvisiitta ei yksin hylkää relevanttia todellista kuvaa;
+pelkkä yleinen kategoria- tai paikkayhteys ei riitä. Must_avoid-turvarajat säilyvät.
 Oikean kuvan on oltava lisensoitu. AI-kuvan alt alkaa "AI-generoitu kuva: " ja jatkuu
-hyödyllisellä, tiiviillä suomenkielisellä näkyvän kuvan kuvauksella. Artikkelin kuvan
+hyödyllisellä, tiiviillä suomenkielisellä näkyvän kuvan kuvauksella. AI-artikkelikuvan
 alapuolinen kuvateksti on täsmälleen "AI-generoitu kuva. Ei valokuva tapahtumasta."
-Kuvan krediitti on "AI-kuvitus", ja malli/toimittaja jää sisäiseen provenienssiin.
+AI-kuvan krediitti on "AI-kuvitus", ja malli/toimittaja jää sisäiseen provenienssiin.
+Näitä AI-sanamuotoja ei vaadita todelliselta valokuvalta (generated=false), jonka
+arkistokuvamerkinnän, alt-tekstin, krediitin ja täsmällisen lisenssin on oltava totuudenmukaiset.
 AI-kuvan on perustuttava artikkelin konkreettiseen
 aiheeseen. Nimetyn henkilön tai arkaluonteisen aiheen kuvituksessa ei saa olla ihmisiä,
 kasvoja tai henkilön näköisyyttä: käytä aiheeseen liittyviä turvallisia esineitä,

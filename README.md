@@ -83,6 +83,12 @@ the in-pipeline chain below, and every decision is recorded in the plans docs.
   visible subjects, missing rights, duplicate pixels or a failed/unavailable review.
   The accepted relevance receipt records the original composition refusal and the
   independent article review; standalone provider calls retain the strict search gate.
+  Pexels selections read the identified photo's explicit licence metadata: ordinary
+  Pexels grants and legacy CC0 grants retain their distinct names and links. Public
+  page requests use the existing Jina Reader route if direct access is unavailable;
+  no API key is sent to either page route. Exact photo, author and image-path matches
+  are required. Unknown/conflicting grants and rate limits fail closed. Hashed public
+  response bytes and a one-day verified cache are retained under `pexels-rights/`.
 
 ## Front-page snapshots
 

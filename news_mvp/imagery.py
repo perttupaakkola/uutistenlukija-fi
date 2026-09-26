@@ -1943,6 +1943,8 @@ def _pexels_candidate(item, tokens):
 
 def _pexels_record(candidate, query, sha, local_path, pixels, depicted, retrieved_at,
                    decision=None, relevance_result=None):
+    from .pexels_rights import validate
+    rights = validate(candidate['license_evidence'], candidate)
     provenance = {
         'provider': 'pexels',
         'photo_id': candidate['photo_id'],
@@ -1961,8 +1963,9 @@ def _pexels_record(candidate, query, sha, local_path, pixels, depicted, retrieve
         'alt': alt[:250],
         'caption': STOCK_CAPTION,
         'credit': f"Photo by {candidate['name']} on Pexels",
-        'license': 'Pexels License',
-        'license_url': PEXELS_LICENSE_URL,
+        'license': rights['license'],
+        'license_url': rights['license_url'],
+        'license_evidence': rights,
         'source_url': candidate['photo_page'],
         'generated': False,
         'pixels': pixels,
@@ -2031,6 +2034,11 @@ def fetch_pexels(draft, state_dir, subject=None, decision=None, *, accept=None, 
                 media = Path(state_dir) / 'media'
                 media.mkdir(parents=True, exist_ok=True)
                 (media / f'{sha}.jpg').write_bytes(jpeg)
+                from .pexels_rights import fetch as fetch_rights
+                rights = fetch_rights(candidate, state_dir)
+                if rights is None:
+                    continue
+                candidate = {**candidate, 'license_evidence': rights}
                 record = _pexels_record(
                     candidate, query, sha, local_path, pixels, depicted,
                     datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),

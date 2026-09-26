@@ -5,6 +5,11 @@ Tarkista jokainen keskeinen väite lähdekatkelmista: nimet, numerot, aika, syy-
 Tarkista otsikon pituus: tavoite on enintään 60 merkkiä ja tärkein asia alussa. Perustele perusteluissa, miksi yli 60 merkin otsikko on hyväksyttävä; yli 100 merkin otsikko on hylkäysperuste.
 Tarkista lähteiden riittävyys, ajankohtaisuus, oma muotoilu, neutraali ymmärrettävä suomi ja kuvaoikeudet.
 Kuvan pitää koskea tätä uutista; lisenssiteksti tai lähdemaininta yksin ei todista käyttöoikeutta tai relevanssia.
+Lisensoidun valokuvan classifier_output.must_show kuvaa ehdotettua hakusommittelua,
+ei itsessään artikkelin tosiasiavaatimuksia. Arvioi näkyvien konkreettisten kohteiden
+yhteys koko lopulliseen artikkeliin myös silloin, kun relevance_check kirjaa puuttuvan
+sommitteluelementin. Puuttuva rekvisiitta ei yksin hylkää relevanttia todellista kuvaa;
+pelkkä yleinen kategoria- tai paikkayhteys ei riitä. Must_avoid-turvarajat säilyvät.
 Hylkää epäselvät, ohuet, perusteettomat tai arkaluonteiset väitteet, jos riittävä näyttö puuttuu. Älä korjaa luonnosta hyväksynnän yhteydessä.
 Palauta {"approved":true tai false, "draft_sha256":"INPUT JSONin täsmällinen draft_sha256", "reasons":["yksilöity lähteisiin ja lopulliseen tekstiin sidottu perustelu"]}.
 Jos hylkäyksen ainoa syy on kuva, kuvan oikeudet, kuvateksti tai kuvan relevanssi ja teksti

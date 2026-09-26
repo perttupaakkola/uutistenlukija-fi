@@ -378,6 +378,16 @@ def stock_binding(image):
         if 'hotlink' in image:
             expected_image.add('hotlink')
     expected_image |= review_fields
+    if provider == 'pexels' and 'license_evidence' in image:
+        from .pexels_rights import validate as validate_pexels_rights
+        rights = validate_pexels_rights(image['license_evidence'], {
+            'photo_id': photo_id, 'photo_page': provenance['photo_url'],
+            'name': photographer, 'profile': provenance['photographer_url'],
+            'image_url': provenance['image_url'],
+        })
+        if (image['license'], image['license_url']) != (rights['license'], rights['license_url']):
+            raise ValueError('Pexels exact-file licence mismatch')
+        expected_image.add('license_evidence')
     if 'pixel_review' in image:
         from .imagery import validate_pixel_review
         validate_pixel_review(image)
@@ -415,7 +425,9 @@ def stock_binding(image):
         if image['url'] != provenance['image_url'] or image['hotlink'] is not True:
             raise ValueError('Unsplash image URL/hotlink mismatch')
     else:
-        if provider == 'pexels' and (
+        # Existing reviewed Pexels records retain their legacy shape. Every new
+        # selection carries exact-file evidence; CC0 may never use the old shape.
+        if provider == 'pexels' and 'license_evidence' not in image and (
                 image['license'] != 'Pexels License' or
                 image['license_url'] != 'https://www.pexels.com/license/'):
             raise ValueError('Pexels license is invalid')

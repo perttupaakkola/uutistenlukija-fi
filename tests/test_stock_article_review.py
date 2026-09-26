@@ -8,6 +8,7 @@ from unittest import mock
 from news_mvp import imagery
 from news_mvp.release_contract import stock_binding
 from test_image_decision_tree import structured_png
+from pexels_fixtures import grant
 
 
 DRAFT = {'title': 'STM: Lääkehoidon kustannusvastuun selvittely jatkuu',
@@ -38,6 +39,7 @@ class StockArticleReview(unittest.TestCase):
 
     def build(self, review, description=None, photo=None):
         with tempfile.TemporaryDirectory() as state, \
+                mock.patch('news_mvp.pexels_rights.fetch', side_effect=grant), \
                 mock.patch.object(imagery, 'provider_key', return_value='fixture-key'), \
                 mock.patch.object(imagery, '_pexels_search', return_value={'photos': [photo or PHOTO]}), \
                 mock.patch.object(imagery, '_get_bytes', return_value=self.raw), \

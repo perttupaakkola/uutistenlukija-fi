@@ -24,6 +24,7 @@ from unittest import mock
 from PIL import Image, ImageDraw
 
 from news_mvp import editorial, imagery
+from pexels_fixtures import grant
 
 KEY = 'test-access-key-value'
 SECRET_MARKER = 'KEY-MUST-NOT-APPEAR'
@@ -179,6 +180,7 @@ class StockImageryTests(unittest.TestCase):
         self.addCleanup(env_patcher.stop)
 
         for patcher in (
+            mock.patch('news_mvp.pexels_rights.fetch', side_effect=grant),
             mock.patch.object(urllib.request, 'build_opener', build_opener),
             mock.patch.object(imagery, 'describe',
                               lambda raw: 'a police car parked in the snow'),

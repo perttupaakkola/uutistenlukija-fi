@@ -12,6 +12,7 @@ from unittest import mock
 
 from PIL import Image, ImageDraw
 
+from pexels_fixtures import grant
 from news_mvp import imagery, site
 from news_mvp.editorial import ROOT, digest
 from news_mvp.release_contract import stock_binding
@@ -256,6 +257,7 @@ class ProviderTree(unittest.TestCase):
             with self.subTest(refusal=refusal), tempfile.TemporaryDirectory() as state, \
                     mock.patch.object(imagery, 'provider_key', return_value='fixture-key'), \
                     mock.patch.object(imagery, '_pexels_search', return_value={'photos': photos}), \
+                mock.patch('news_mvp.pexels_rights.fetch', side_effect=grant), \
                     mock.patch.object(imagery, '_get_bytes', side_effect=[first, second]), \
                     mock.patch.object(imagery, 'describe',
                         return_value='Nordic cooperation municipal leaders meeting'), \
@@ -423,6 +425,7 @@ class ProviderTree(unittest.TestCase):
                 mock.patch.object(imagery, "provider_key", return_value="fixture-key"), \
                 mock.patch.object(imagery, "_reserve_pexels_request", return_value=True), \
                 mock.patch.object(imagery, "_pexels_search", return_value={"photos": [bad, good]}), \
+                mock.patch('news_mvp.pexels_rights.fetch', side_effect=grant), \
                 mock.patch.object(imagery, "_get_bytes", return_value=structured_png()), \
                 mock.patch.object(imagery, "describe", side_effect=[
                     "a trash truck at a municipal depot",

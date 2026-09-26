@@ -196,7 +196,9 @@ class StockReleaseContract(unittest.TestCase):
             'PEXELS_API_KEY': 'mock-pexels-key',
             'PEXELS_CACHE_DIR': str(self.state / 'pexels-cache'),
         }
+        from pexels_fixtures import grant
         with patch.dict(os.environ, env), \
+                patch('news_mvp.pexels_rights.fetch', side_effect=grant), \
                 patch.object(imagery, 'describe', return_value='a library interior'), \
                 patch.object(urllib.request, 'build_opener', side_effect=opener):
             image = (imagery.fetch_unsplash(self.draft) if provider == 'unsplash' else
