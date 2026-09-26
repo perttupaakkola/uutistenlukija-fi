@@ -20,6 +20,11 @@ Säännöt:
   kuvassa ei samalla näkyisi koko energiaverkkoa. Piirretty tyyli koskee vain AI-varavaihtoehtoa.
   Lisää toinen asia vain, jos kuvan aihetta ei voi tunnistaa ilman sitä. Kyselyä koskevassa
   uutisessa älypuhelin voi riittää; älä vaadi samalla kannettavaa tietokonetta ja kyselylomaketta.
+  Älä pakkaa kokonaista tapahtumajärjestelyä yhdeksi pitkäksi must_show-kohdaksi.
+  Esimerkiksi liikennejärjestelyjä koskevaa uutista voi havainnollistaa tietyömerkki
+  (construction sign) tai maanrakennustyö (earthworks); älä vaadi samalla ajoneuvoja,
+  tiettyä tien geometriaa ja esikuormituspengertä. Paikan tarkkuus kuuluu erisnimihakuun,
+  ei jokaisen käyttökelpoisen arkistokuvan välttämättömiin näkyviin ominaisuuksiin.
 - must_avoid sisältää asiat, joita kuva ei saa näyttää tai vihjata, kuten toiseen aiheeseen kuuluvat
   ajoneuvot, teksti, logot, uhrit tai tunnistettavat henkilöt.
   Lisää rajoitus vain, jos se on uutisen kannalta tarpeellinen. Älä sulje pois oikeaa
@@ -46,8 +51,12 @@ Säännöt:
 - Jokainen juttu tarvitsee aiheeseen liittyvän kuvan. Nimettyä ihmistä, väkivaltaa, onnettomuutta
   tai muuta arkaluonteista aihetta ei kuvata henkilön tai tapahtuman keksittynä toisintona.
   Valitse luonnoksessa mainittu turvallinen esine, rakennus, paikka, instituutio tai prosessi.
-  depictable_scene ja must_show kuvaavat vain tätä konkreettista turvallista aihetta. Ei ihmisiä,
-  kasvoja, henkilön nimeä näkyvänä aiheena, uhreja tai väkivaltaa. Ei yleistä satunnaista maisemaa.
+  depictable_scene ja must_show kuvaavat vain tätä konkreettista turvallista aihetta.
+  Arkaluonteisessa jutussa ei ihmisiä, kasvoja, henkilön nimeä näkyvänä aiheena, uhreja tai
+  väkivaltaa. Tavallisen katu- tai rakennustyöuutisen lisensoitua valokuvaa ei tarvitse
+  hylätä vain taustan satunnaisten ohikulkijoiden vuoksi, kun kuva ei liitä heihin mitään
+  arkaluonteista väitettä. AI-generointi kieltää ihmiset erikseen kaikissa aiheissa.
+  Ei yleistä satunnaista maisemaa.
 - Generoitu kuva on selvästi piirretty kuvitus, ei dokumentaarinen valokuva tapahtumasta.
   Generoidun kuvan nimeämiseen käytetään vain ilmaisua "AI-generoitu kuva".
   Kirjoita kuvaus näkyvistä esineistä ja ympäristöstä ilman kuvaa luokittelevaa etuliitettä.

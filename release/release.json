@@ -3,15 +3,81 @@
   "hermes_step": 5,
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
-  "source_commit": "11cf6c484d8f5c65363c2e8f9e80def135b7e76c",
+  "source_commit": "3ee3764d043fc901d96d3f250ceae304100641a8",
   "job_id": "28cb5bdd8d549e91893822af87751ef198b650456fff3abfb1b7962b9fc7330a",
-  "packet_sha256": "3014e450dc202bf766e214d45c6354469ad1484d4e644de63eefefb39ba016d0",
-  "draft_sha256": "11a2185087c5fc5728c672adbb3280e4f999feaefb38d2f0b6cc180c648e3aaf",
-  "image_sha256": "4f1d9ea26a70774aea527857b4e69483fb48e243236b462d71e55da1e0f78ed1",
+  "packet_sha256": "aac660d9e7846b12b73afd5ff29fa0d5a12e7afea865d69d947bd97007837163",
+  "draft_sha256": "f4411637fdc7130e4b95c7c292ed6e6b21e69ccb5c71c2817956d85f2eca1b3b",
+  "image_sha256": "b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
     "provenance_sha256": "f30feb4faae0ebdebd4936975e01007bedea7158ed43ac6786c2ab69b3aca9e1"
+  },
+  "stock_image": {
+    "alt": "Arkistokuva: Keltainen tietyömerkki ja vaaleat reunakivet sorapohjaisella työmaa-alueella.",
+    "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
+    "classifier_output": {
+      "category": "Kotimaa",
+      "depictable_scene": "Keihästien liikennejärjestelyjä havainnollistava tietyömerkki ja keskeneräinen katuympäristö.",
+      "must_avoid": [],
+      "must_show": [
+        "construction sign"
+      ],
+      "search_queries": [
+        "construction sign road works",
+        "street construction sign",
+        "road construction sign"
+      ],
+      "subject": "Vantaan mukaan Keihästien järjestelyt muuttuvat"
+    },
+    "credit": "Photo by Sergei Starostin on Pexels",
+    "depicted": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
+    "generated": false,
+    "hotlink": false,
+    "license": "Pexels License",
+    "license_url": "https://www.pexels.com/license/",
+    "local_path": "media/b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795.jpg",
+    "pixel_review": {
+      "alt_fi": "Keltainen kolmionmuotoinen tietyömaa-merkki on pystytetty rakennustyömaalle, jossa asennetaan uusia betonireunuksia.",
+      "approved": true,
+      "article_text_sha256": "0b67540c503ce57b8d66e21a8c01e3c4d7a082196b60e521f63dacb6fda8313d",
+      "description": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
+      "image_sha256": "b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795",
+      "model": "google:gemini-2.5-flash",
+      "no_people": false,
+      "reason": "The image genuinely illustrates a construction site with road work, which directly relates to the article's subject of changing traffic arrangements and ongoing water utility work in Vantaa. The visible elements like the construction sign and new curbs concretely represent the described activities.",
+      "reviewed_at": "2026-09-26T16:15:41.935474+00:00"
+    },
+    "pixels": {
+      "height": 627,
+      "mode": "RGB",
+      "variance": 5009.6,
+      "width": 940
+    },
+    "relevance_check": {
+      "accepted": true,
+      "evidence": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
+      "matched": [
+        "construction",
+        "sign"
+      ],
+      "method": "vision",
+      "reason": "all must_show requirements matched"
+    },
+    "sha256": "b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795",
+    "source_url": "https://www.pexels.com/photo/traffic-signs-27134571/",
+    "stock_provenance": {
+      "image_url": "https://images.pexels.com/photos/27134571/pexels-photo-27134571.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "photo_id": "27134571",
+      "photo_url": "https://www.pexels.com/photo/traffic-signs-27134571/",
+      "photographer": "Sergei Starostin",
+      "photographer_url": "https://www.pexels.com/@sejio402",
+      "provider": "pexels",
+      "query": "road embankment construction traffic",
+      "retrieved_at": "2026-09-26T16:09:23Z"
+    },
+    "stock_provenance_sha256": "74cdf7691920c30ec87874e8284c7bba4c0daba7ba5d37c4ead3d22a498e48eb",
+    "url": "https://uutistenlukija.fi/media/b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795.jpg"
   },
   "new_article_files": [
     "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html"
@@ -21,14 +87,14 @@
     "404.html": "c5a6762ea8db0d92d86ecaf5427faf7f6ec9b6fffb130eb2dfaa0c8d59006c05",
     "_redirects": "65bef7fa02ca8cb7f616a575ad54fbcb982c82d2074d375f7352f35f2de087bb",
     "ai-kuvat/index.html": "a00fd6b719368bddde46978e72b0bd9fa5a0041479fc02cbccfa128a19e4e345",
-    "categories/kotimaa/index.html": "b0d9518f784971cb8ff4113c489586f001c489c3658fd74401030043799dcb8c",
+    "categories/kotimaa/index.html": "9944cdd4db64d821821ad9bc4d23b1995d959f84d0b14150707f18cbe9073b8c",
     "categories/kulttuuri/index.html": "77858a34f29714542827046b31714d768fb2fcdcfcf9b2c571130bc292b22ede",
     "categories/talous/index.html": "0e2eb4a5e7aa1587926f13fb6042ad4e01ae00d3fa85d6512f30f7952cbaf5dc",
     "categories/teknologia/index.html": "f277c4c51327b0a74641738163a850c553b1eab07d22da2e302c6a2d08e96827",
     "categories/tiede/index.html": "fe2d2aa5a329ff5e5c67fde1dc8d5b6e2efcc8d4237f5b928766e9c2df74d646",
     "categories/ulkomaat/index.html": "07b7cedc74e0065b4eb1c0679d483c0d71c7ce7d071c89a31acb01533a78dfe4",
     "categories/urheilu/index.html": "66744a8530615769ff9f476255df13017f65ea1d34e9660e6376369d3583a732",
-    "index.html": "11cb45aff35228f8345b208631ac82150e5c4ba78f46c228eb5b6cc96ca1cba3",
+    "index.html": "4c716c11341c2ed0bb2a92b793b8d3cc50170a8f1dfe06b34439fda0825cb88f",
     "lahteet/index.html": "de6957827ec9f54776c779a701818b1777b04cad8912e7da3964ca9b28401138",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
@@ -317,6 +383,7 @@
     "mvp-assets/b4cf0d83cf31ff340219e845648f79ca3e7561909f4a1cfd0a16ad0dd9a378f0.jpg": "b4cf0d83cf31ff340219e845648f79ca3e7561909f4a1cfd0a16ad0dd9a378f0",
     "mvp-assets/b5ebf9849001857d15d95b9fdf4710ee90f2554c963f4fe13cf90410b64936d0.jpg": "b5ebf9849001857d15d95b9fdf4710ee90f2554c963f4fe13cf90410b64936d0",
     "mvp-assets/b6bd56cb85255f0b657910355f5ae6da3a63227daf7e70cee1181dc82c4f6cfc.jpg": "b6bd56cb85255f0b657910355f5ae6da3a63227daf7e70cee1181dc82c4f6cfc",
+    "mvp-assets/b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795.jpg": "b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795",
     "mvp-assets/baa05737aa9e01f078a57539d94160db0a01bc82c6abeb7e149c68b15206e2fb.jpg": "baa05737aa9e01f078a57539d94160db0a01bc82c6abeb7e149c68b15206e2fb",
     "mvp-assets/baa222fae7b674f28a7a6d26c2a794f93dfdccafb3ed2df72df8490832cf4b6d.jpg": "baa222fae7b674f28a7a6d26c2a794f93dfdccafb3ed2df72df8490832cf4b6d",
     "mvp-assets/bbeb13a80cf0681fe984740385b5de98b3df3efdebd46ea60a3ecaa9a55366a3.jpg": "bbeb13a80cf0681fe984740385b5de98b3df3efdebd46ea60a3ecaa9a55366a3",
@@ -478,7 +545,7 @@
     "sivu/6/index.html": "11459547ac85e6e28b07a6d9235699bef0397c99b885b8305d48f60ce2242aea",
     "sivu/7/index.html": "c779c20c31d55965ed19007ba73fcd4d38b38312489faae3cb3f3dee4eb59557",
     "tietosuoja/index.html": "5e216ababf8ea57fcc4f16b93f94947ae2e6855b0c9aa4dfc6583205928fc5d7",
-    "tuoreimmat/index.html": "1276ea773198724ced67b39ead42b3980f38e3fc1656684f7325581ea040487f",
+    "tuoreimmat/index.html": "a80a74d9f165811427b30382caff810855927930196b674d5ed10369d0e7f960",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -682,7 +749,7 @@
     "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "8bad431a8c65f7bb198f98afa210d5b9b3f3021d8dcd493ad481ab3c915055d9",
     "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "bfa3072b9277e61eea08e59b649be5447e8fb49e6ee355d9c74e84534359e776",
     "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "b05867879a6ec677fbdd3a21261191901fe4eaf1774adda13b03670d4a49d05c",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "40634e3a635e82602890b1e605c9154c151a81712e16f5181a5a7f602ee01ad0",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "052a713d3fdfcf99cdd5da8eccd77e5b2754051420bd7aa3f25e2eee3fd81c0c",
     "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "dc03d7080d65f6b4d7b0c29af92c9bfb07384c91fa6f36a48aae0f392b2e749d",
     "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "281ac3e643795511ae6217955a3eb78c5d2f8df389babf4052504b4bf559c11d",
     "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "2f98953d5eebc7f483e44c76f60cf54bfcc56cb95eaf04f4d361fe5b4d1de8a3",
@@ -696,68 +763,70 @@
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "AI-generoitu kuva: Kuvassa on tie penkereellä laajan maanrakennusalueen vieressä, ja taustalla näkyy kerrostaloja puiden lomassa.",
-      "attempts": 1,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Keltainen tietyömerkki ja vaaleat reunakivet sorapohjaisella työmaa-alueella.",
+      "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
       "classifier_output": {
         "category": "Kotimaa",
-        "depictable_scene": "Länsimäentien ja Pallastunturintien risteysalueella ajoväylä kulkee rakennetun esikuormituspenkereen päällä työalueen vieressä.",
-        "must_avoid": [
-          "people or faces",
-          "traffic collision, emergency vehicles, or damaged cars",
-          "tram or railway tracks"
-        ],
+        "depictable_scene": "Keihästien liikennejärjestelyjä havainnollistava tietyömerkki ja keskeneräinen katuympäristö.",
+        "must_avoid": [],
         "must_show": [
-          "roadway on construction embankment"
+          "construction sign"
         ],
         "search_queries": [
-          "Keihästien ja Länsimäentien risteysalue",
-          "roadway on construction embankment",
-          "Länsimäentien ja Pallastunturintien risteysalue",
-          "esikuormituspenger ajoväylä työmaa"
+          "construction sign road works",
+          "street construction sign",
+          "road construction sign"
         ],
-        "subject": "Keihästien ja Länsimäentien risteysalueen liikennejärjestelyt"
+        "subject": "Vantaan mukaan Keihästien järjestelyt muuttuvat"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "An illustration shows a road on an embankment next to a large area of disturbed earth with piles of soil. In the background, apartment buildings are visible among trees.",
-      "generated": true,
-      "license": "AI-generated illustration",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/4f1d9ea26a70774aea527857b4e69483fb48e243236b462d71e55da1e0f78ed1.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by Sergei Starostin on Pexels",
+      "depicted": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
+      "generated": false,
+      "hotlink": false,
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "local_path": "media/b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795.jpg",
       "pixel_review": {
-        "alt_fi": "Kuvassa on tie penkereellä laajan maanrakennusalueen vieressä, ja taustalla näkyy kerrostaloja puiden lomassa.",
+        "alt_fi": "Keltainen kolmionmuotoinen tietyömaa-merkki on pystytetty rakennustyömaalle, jossa asennetaan uusia betonireunuksia.",
         "approved": true,
         "article_text_sha256": "0b67540c503ce57b8d66e21a8c01e3c4d7a082196b60e521f63dacb6fda8313d",
-        "description": "An illustration shows a road on an embankment next to a large area of disturbed earth with piles of soil. In the background, apartment buildings are visible among trees.",
-        "image_sha256": "4f1d9ea26a70774aea527857b4e69483fb48e243236b462d71e55da1e0f78ed1",
+        "description": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
+        "image_sha256": "b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795",
         "model": "google:gemini-2.5-flash",
-        "no_people": true,
-        "reason": "The image clearly illustrates a road construction site with an embankment and disturbed earth, which directly relates to the article's discussion of traffic arrangements, road closures, and the construction of an 'esikuormituspenkereen' (pre-loading embankment). The illustration style is appropriate for AI illustration requirements, showing no people, faces, violence, or readable text/logos.",
-        "reviewed_at": "2026-09-26T16:07:44.720368+00:00"
+        "no_people": false,
+        "reason": "The image genuinely illustrates a construction site with road work, which directly relates to the article's subject of changing traffic arrangements and ongoing water utility work in Vantaa. The visible elements like the construction sign and new curbs concretely represent the described activities.",
+        "reviewed_at": "2026-09-26T16:15:41.935474+00:00"
       },
       "pixels": {
-        "height": 1024,
+        "height": 627,
         "mode": "RGB",
-        "variance": 4852.1,
-        "width": 1536
+        "variance": 5009.6,
+        "width": 940
       },
-      "prompt_sha256": "45dd623ce45bf0d6366ec4dc70bf639fd004d6117c026ef57a89000a28e707e7",
-      "prompt_version": "imagery-v2-safe-scene",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Länsimäentien ja Pallastunturintien risteysalueella ajoväylä kulkee rakennetun esikuormituspenkereen päällä työalueen vieressä.",
+        "evidence": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
         "matched": [
-          "roadway on construction embankment"
+          "construction",
+          "sign"
         ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "method": "vision",
+        "reason": "all must_show requirements matched"
       },
-      "review_note": "Tekoälyn tuottama kuvitus, joka on rakennettu luokitellusta aiheesta ja sen kuvattavasta kohtauksesta. Kuva ei esitä todellista henkilöä, tapahtumaa eikä tekijänoikeudellista teosta.",
-      "sha256": "4f1d9ea26a70774aea527857b4e69483fb48e243236b462d71e55da1e0f78ed1",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "Keihästien ja Länsimäentien risteysalueen liikennejärjestelyt",
-      "url": "https://uutistenlukija.fi/media/4f1d9ea26a70774aea527857b4e69483fb48e243236b462d71e55da1e0f78ed1.jpg"
+      "sha256": "b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795",
+      "source_url": "https://www.pexels.com/photo/traffic-signs-27134571/",
+      "stock_provenance": {
+        "image_url": "https://images.pexels.com/photos/27134571/pexels-photo-27134571.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "27134571",
+        "photo_url": "https://www.pexels.com/photo/traffic-signs-27134571/",
+        "photographer": "Sergei Starostin",
+        "photographer_url": "https://www.pexels.com/@sejio402",
+        "provider": "pexels",
+        "query": "road embankment construction traffic",
+        "retrieved_at": "2026-09-26T16:09:23Z"
+      },
+      "stock_provenance_sha256": "74cdf7691920c30ec87874e8284c7bba4c0daba7ba5d37c4ead3d22a498e48eb",
+      "url": "https://uutistenlukija.fi/media/b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
@@ -798,68 +867,70 @@
   "draft": {
     "category": "Kotimaa",
     "image": {
-      "alt": "AI-generoitu kuva: Kuvassa on tie penkereellä laajan maanrakennusalueen vieressä, ja taustalla näkyy kerrostaloja puiden lomassa.",
-      "attempts": 1,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Keltainen tietyömerkki ja vaaleat reunakivet sorapohjaisella työmaa-alueella.",
+      "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
       "classifier_output": {
         "category": "Kotimaa",
-        "depictable_scene": "Länsimäentien ja Pallastunturintien risteysalueella ajoväylä kulkee rakennetun esikuormituspenkereen päällä työalueen vieressä.",
-        "must_avoid": [
-          "people or faces",
-          "traffic collision, emergency vehicles, or damaged cars",
-          "tram or railway tracks"
-        ],
+        "depictable_scene": "Keihästien liikennejärjestelyjä havainnollistava tietyömerkki ja keskeneräinen katuympäristö.",
+        "must_avoid": [],
         "must_show": [
-          "roadway on construction embankment"
+          "construction sign"
         ],
         "search_queries": [
-          "Keihästien ja Länsimäentien risteysalue",
-          "roadway on construction embankment",
-          "Länsimäentien ja Pallastunturintien risteysalue",
-          "esikuormituspenger ajoväylä työmaa"
+          "construction sign road works",
+          "street construction sign",
+          "road construction sign"
         ],
-        "subject": "Keihästien ja Länsimäentien risteysalueen liikennejärjestelyt"
+        "subject": "Vantaan mukaan Keihästien järjestelyt muuttuvat"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "An illustration shows a road on an embankment next to a large area of disturbed earth with piles of soil. In the background, apartment buildings are visible among trees.",
-      "generated": true,
-      "license": "AI-generated illustration",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/4f1d9ea26a70774aea527857b4e69483fb48e243236b462d71e55da1e0f78ed1.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by Sergei Starostin on Pexels",
+      "depicted": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
+      "generated": false,
+      "hotlink": false,
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "local_path": "media/b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795.jpg",
       "pixel_review": {
-        "alt_fi": "Kuvassa on tie penkereellä laajan maanrakennusalueen vieressä, ja taustalla näkyy kerrostaloja puiden lomassa.",
+        "alt_fi": "Keltainen kolmionmuotoinen tietyömaa-merkki on pystytetty rakennustyömaalle, jossa asennetaan uusia betonireunuksia.",
         "approved": true,
         "article_text_sha256": "0b67540c503ce57b8d66e21a8c01e3c4d7a082196b60e521f63dacb6fda8313d",
-        "description": "An illustration shows a road on an embankment next to a large area of disturbed earth with piles of soil. In the background, apartment buildings are visible among trees.",
-        "image_sha256": "4f1d9ea26a70774aea527857b4e69483fb48e243236b462d71e55da1e0f78ed1",
+        "description": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
+        "image_sha256": "b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795",
         "model": "google:gemini-2.5-flash",
-        "no_people": true,
-        "reason": "The image clearly illustrates a road construction site with an embankment and disturbed earth, which directly relates to the article's discussion of traffic arrangements, road closures, and the construction of an 'esikuormituspenkereen' (pre-loading embankment). The illustration style is appropriate for AI illustration requirements, showing no people, faces, violence, or readable text/logos.",
-        "reviewed_at": "2026-09-26T16:07:44.720368+00:00"
+        "no_people": false,
+        "reason": "The image genuinely illustrates a construction site with road work, which directly relates to the article's subject of changing traffic arrangements and ongoing water utility work in Vantaa. The visible elements like the construction sign and new curbs concretely represent the described activities.",
+        "reviewed_at": "2026-09-26T16:15:41.935474+00:00"
       },
       "pixels": {
-        "height": 1024,
+        "height": 627,
         "mode": "RGB",
-        "variance": 4852.1,
-        "width": 1536
+        "variance": 5009.6,
+        "width": 940
       },
-      "prompt_sha256": "45dd623ce45bf0d6366ec4dc70bf639fd004d6117c026ef57a89000a28e707e7",
-      "prompt_version": "imagery-v2-safe-scene",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Länsimäentien ja Pallastunturintien risteysalueella ajoväylä kulkee rakennetun esikuormituspenkereen päällä työalueen vieressä.",
+        "evidence": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
         "matched": [
-          "roadway on construction embankment"
+          "construction",
+          "sign"
         ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "method": "vision",
+        "reason": "all must_show requirements matched"
       },
-      "review_note": "Tekoälyn tuottama kuvitus, joka on rakennettu luokitellusta aiheesta ja sen kuvattavasta kohtauksesta. Kuva ei esitä todellista henkilöä, tapahtumaa eikä tekijänoikeudellista teosta.",
-      "sha256": "4f1d9ea26a70774aea527857b4e69483fb48e243236b462d71e55da1e0f78ed1",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "Keihästien ja Länsimäentien risteysalueen liikennejärjestelyt",
-      "url": "https://uutistenlukija.fi/media/4f1d9ea26a70774aea527857b4e69483fb48e243236b462d71e55da1e0f78ed1.jpg"
+      "sha256": "b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795",
+      "source_url": "https://www.pexels.com/photo/traffic-signs-27134571/",
+      "stock_provenance": {
+        "image_url": "https://images.pexels.com/photos/27134571/pexels-photo-27134571.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "27134571",
+        "photo_url": "https://www.pexels.com/photo/traffic-signs-27134571/",
+        "photographer": "Sergei Starostin",
+        "photographer_url": "https://www.pexels.com/@sejio402",
+        "provider": "pexels",
+        "query": "road embankment construction traffic",
+        "retrieved_at": "2026-09-26T16:09:23Z"
+      },
+      "stock_provenance_sha256": "74cdf7691920c30ec87874e8284c7bba4c0daba7ba5d37c4ead3d22a498e48eb",
+      "url": "https://uutistenlukija.fi/media/b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795.jpg"
     },
     "paragraphs": [
       {
@@ -886,13 +957,320 @@
   },
   "review": {
     "approved": true,
-    "draft_sha256": "11a2185087c5fc5728c672adbb3280e4f999feaefb38d2f0b6cc180c648e3aaf",
+    "archive_image_only": {
+      "article_text_unchanged": true,
+      "operation": "image_only_archive_correction",
+      "original_draft_sha256": "11a2185087c5fc5728c672adbb3280e4f999feaefb38d2f0b6cc180c648e3aaf",
+      "original_published_at": "2026-09-26T16:04:14.931427+00:00",
+      "original_review_sha256": "3374ecd5eb15a42b55e82e41e08a0924dd3657922d2b596165e55d25f9c1e8c3",
+      "unchanged_text_sha256": "9c280e43dda8ff6b30af225d8f0c7565bd5eb6124667d096ddc9a4c49ffaad41"
+    },
+    "draft_sha256": "f4411637fdc7130e4b95c7c292ed6e6b21e69ccb5c71c2817956d85f2eca1b3b",
+    "historical_text_observations": [],
     "reasons": [
-      "Lähde A tukee otsikon ja ingressin keskeisiä tietoja: liikennejärjestelyt muuttuvat 28.9.2026 ja Keihästien liikennekatko päättyy 12.10.2026. Väitteet on asianmukaisesti liitetty Vantaan kaupungin ilmoitukseen eikä niitä esitetä riippumattomasti vahvistettuina.",
-      "Kaikkien kolmen kappaleen source_ids-merkintä A on oikea. Lähde A kertoo liikenteen siirtämisestä esikuormituspenkereelle, Länsimäentien reuna-alueen muuttamisesta työalueeksi, uuden penkereen yhdistämisestä käytössä olevaan penkereeseen sekä risteyksen avaamisesta ja vesihuoltotöiden jatkumisesta.",
-      "Kyse on Vantaan paikallisesta liikennejärjestelystä, eikä luonnos tee siitä valtakunnallista yleistystä tai lisää lähteettömiä syy-seurauspäätelmiä. Kaupungin tuore ilmoitus on riittävä ensisijainen lähde kaupungin omien töiden aikataululle, kun tieto esitetään kaupungin ilmoituksena.",
-      "Otsikko on 47 merkkiä pitkä, alittaa 60 merkin tavoitteen ja tuo Keihästien muuttuvat järjestelyt heti esiin. Teksti on neutraalia, ymmärrettävää ja itsenäisesti muotoiltua.",
-      "Kuvan SHA-256 4f1d9ea26a70774aea527857b4e69483fb48e243236b462d71e55da1e0f78ed1 on yhdenmukainen koko kuva-aineistossa. Erillinen pikseliarvio koskee samaa tiivistettä ja kuvailee artikkeliin liittyvää tietä esikuormituspenkereellä työalueen vieressä. Kuva on merkitty sekä kuvatekstissä että krediitissä tekoälykuvitukseksi ja erotettu selvästi tapahtumavalokuvasta; siinä ei kuvauksen ja pikseliarvion mukaan ole ihmisiä tai henkilöhahmoja."
+      "Kuva esittää tietyömaata, jossa on keltainen tietyömerkki ja uusia reunakiviä, mikä on suoraan relevantti artikkelin aiheeseen Vantaan Keihästien liikennejärjestelyjen muutoksista ja vesihuoltotöistä.",
+      "Kuvan sha256-tunniste b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795 vastaa toimitettua kuvaa.",
+      "Pixel_review on hyväksytty ja sen article_text_sha256 0b67540c503ce57b8d66e21a8c01e3c4d7a082196b60e521f63dacb6fda8313d vastaa artikkelin tekstiä.",
+      "Alt-teksti \"Arkistokuva: Keltainen tietyömerkki ja vaaleat reunakivet sorapohjaisella työmaa-alueella.\" kuvaa tarkasti kuvan näkyvää sisältöä.",
+      "Kuvateksti \"Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.\" on asianmukainen ja selventää kuvan luonnetta.",
+      "Kuvan lisenssi (Pexels License) ja provenienssi (Sergei Starostin Pexelsissä) ovat asianmukaiset ja mahdollistavat kuvan käytön."
     ]
-  }
+  },
+  "image_backfill": [
+    {
+      "article_file": "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html",
+      "draft": {
+        "category": "Kotimaa",
+        "image": {
+          "alt": "Arkistokuva: Keltainen tietyömerkki ja vaaleat reunakivet sorapohjaisella työmaa-alueella.",
+          "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
+          "classifier_output": {
+            "category": "Kotimaa",
+            "depictable_scene": "Keihästien liikennejärjestelyjä havainnollistava tietyömerkki ja keskeneräinen katuympäristö.",
+            "must_avoid": [],
+            "must_show": [
+              "construction sign"
+            ],
+            "search_queries": [
+              "construction sign road works",
+              "street construction sign",
+              "road construction sign"
+            ],
+            "subject": "Vantaan mukaan Keihästien järjestelyt muuttuvat"
+          },
+          "credit": "Photo by Sergei Starostin on Pexels",
+          "depicted": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
+          "generated": false,
+          "hotlink": false,
+          "license": "Pexels License",
+          "license_url": "https://www.pexels.com/license/",
+          "local_path": "media/b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795.jpg",
+          "pixel_review": {
+            "alt_fi": "Keltainen kolmionmuotoinen tietyömaa-merkki on pystytetty rakennustyömaalle, jossa asennetaan uusia betonireunuksia.",
+            "approved": true,
+            "article_text_sha256": "0b67540c503ce57b8d66e21a8c01e3c4d7a082196b60e521f63dacb6fda8313d",
+            "description": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
+            "image_sha256": "b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795",
+            "model": "google:gemini-2.5-flash",
+            "no_people": false,
+            "reason": "The image genuinely illustrates a construction site with road work, which directly relates to the article's subject of changing traffic arrangements and ongoing water utility work in Vantaa. The visible elements like the construction sign and new curbs concretely represent the described activities.",
+            "reviewed_at": "2026-09-26T16:15:41.935474+00:00"
+          },
+          "pixels": {
+            "height": 627,
+            "mode": "RGB",
+            "variance": 5009.6,
+            "width": 940
+          },
+          "relevance_check": {
+            "accepted": true,
+            "evidence": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
+            "matched": [
+              "construction",
+              "sign"
+            ],
+            "method": "vision",
+            "reason": "all must_show requirements matched"
+          },
+          "sha256": "b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795",
+          "source_url": "https://www.pexels.com/photo/traffic-signs-27134571/",
+          "stock_provenance": {
+            "image_url": "https://images.pexels.com/photos/27134571/pexels-photo-27134571.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "photo_id": "27134571",
+            "photo_url": "https://www.pexels.com/photo/traffic-signs-27134571/",
+            "photographer": "Sergei Starostin",
+            "photographer_url": "https://www.pexels.com/@sejio402",
+            "provider": "pexels",
+            "query": "road embankment construction traffic",
+            "retrieved_at": "2026-09-26T16:09:23Z"
+          },
+          "stock_provenance_sha256": "74cdf7691920c30ec87874e8284c7bba4c0daba7ba5d37c4ead3d22a498e48eb",
+          "url": "https://uutistenlukija.fi/media/b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795.jpg"
+        },
+        "paragraphs": [
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Kaupungin mukaan Länsimäentien ja Pallastunturintien risteysalueen liikenne ohjataan katkon ajaksi rakennetun esikuormituspenkereen päälle. Järjestelyllä Länsimäentien reuna-alue vapautetaan työalueeksi."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Keihästieltä rakennetaan katkon aikana esikuormituspengertä, joka yhdistetään myöhemmin käytössä olevaan penkereeseen."
+          },
+          {
+            "source_ids": [
+              "A"
+            ],
+            "text": "Vantaan kaupungin ilmoituksen mukaan katko päättyy 12. lokakuuta, jolloin risteys avataan jälleen Keihästien suuntaan. Vesihuoltotyöt jatkuvat tämän jälkeen alueen länsireunalla."
+          }
+        ],
+        "summary": "Keihästien ja Länsimäentien risteysalueen liikennejärjestelyt muuttuvat Vantaan kaupungin mukaan maanantaina 28. syyskuuta, ja Keihästien liikennekatkon on määrä päättyä 12. lokakuuta.",
+        "title": "Vantaan mukaan Keihästien järjestelyt muuttuvat"
+      },
+      "draft_sha256": "f4411637fdc7130e4b95c7c292ed6e6b21e69ccb5c71c2817956d85f2eca1b3b",
+      "image_sha256": "b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795",
+      "job_id": "28cb5bdd8d549e91893822af87751ef198b650456fff3abfb1b7962b9fc7330a",
+      "packet": {
+        "fixture": false,
+        "image": {
+          "alt": "Arkistokuva: Keltainen tietyömerkki ja vaaleat reunakivet sorapohjaisella työmaa-alueella.",
+          "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
+          "classifier_output": {
+            "category": "Kotimaa",
+            "depictable_scene": "Keihästien liikennejärjestelyjä havainnollistava tietyömerkki ja keskeneräinen katuympäristö.",
+            "must_avoid": [],
+            "must_show": [
+              "construction sign"
+            ],
+            "search_queries": [
+              "construction sign road works",
+              "street construction sign",
+              "road construction sign"
+            ],
+            "subject": "Vantaan mukaan Keihästien järjestelyt muuttuvat"
+          },
+          "credit": "Photo by Sergei Starostin on Pexels",
+          "depicted": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
+          "generated": false,
+          "hotlink": false,
+          "license": "Pexels License",
+          "license_url": "https://www.pexels.com/license/",
+          "local_path": "media/b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795.jpg",
+          "pixel_review": {
+            "alt_fi": "Keltainen kolmionmuotoinen tietyömaa-merkki on pystytetty rakennustyömaalle, jossa asennetaan uusia betonireunuksia.",
+            "approved": true,
+            "article_text_sha256": "0b67540c503ce57b8d66e21a8c01e3c4d7a082196b60e521f63dacb6fda8313d",
+            "description": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
+            "image_sha256": "b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795",
+            "model": "google:gemini-2.5-flash",
+            "no_people": false,
+            "reason": "The image genuinely illustrates a construction site with road work, which directly relates to the article's subject of changing traffic arrangements and ongoing water utility work in Vantaa. The visible elements like the construction sign and new curbs concretely represent the described activities.",
+            "reviewed_at": "2026-09-26T16:15:41.935474+00:00"
+          },
+          "pixels": {
+            "height": 627,
+            "mode": "RGB",
+            "variance": 5009.6,
+            "width": 940
+          },
+          "relevance_check": {
+            "accepted": true,
+            "evidence": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
+            "matched": [
+              "construction",
+              "sign"
+            ],
+            "method": "vision",
+            "reason": "all must_show requirements matched"
+          },
+          "sha256": "b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795",
+          "source_url": "https://www.pexels.com/photo/traffic-signs-27134571/",
+          "stock_provenance": {
+            "image_url": "https://images.pexels.com/photos/27134571/pexels-photo-27134571.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "photo_id": "27134571",
+            "photo_url": "https://www.pexels.com/photo/traffic-signs-27134571/",
+            "photographer": "Sergei Starostin",
+            "photographer_url": "https://www.pexels.com/@sejio402",
+            "provider": "pexels",
+            "query": "road embankment construction traffic",
+            "retrieved_at": "2026-09-26T16:09:23Z"
+          },
+          "stock_provenance_sha256": "74cdf7691920c30ec87874e8284c7bba4c0daba7ba5d37c4ead3d22a498e48eb",
+          "url": "https://uutistenlukija.fi/media/b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795.jpg"
+        },
+        "publication_basis": {
+          "policy": "official-text-v1",
+          "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
+          "provider": "vantaa",
+          "related_sources": 0,
+          "source_fields_sha256": "2906214cb242a643b2774b399d21d792382e4e6cde816ee80e0afe407c624895",
+          "source_sha256": "b61ef8c1183d54dd9310bd33c43ffd4c51a2da73b3d298438f52f24170d3fa35"
+        },
+        "sources": [
+          {
+            "id": "A",
+            "published_at": "2026-09-26T00:00:00+03:00",
+            "publisher": "Vantaan kaupunki",
+            "reuse": {
+              "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
+              "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "url": "https://hri.fi/fi/kayttoehdot/"
+            },
+            "text": "Katkon aikana Länsimäentien ja Pallastunturintien risteysalueen liikenne siirretään kulkemaan paikalle rakennetun esikuormituspenkereen päällä. Järjestely mahdollistaa Länsimäentien reuna-alueen muuttamisen työalueeksi.\nKeihästien liikennekatkon aikana rakennamme Keihästieltä esikuormituspengertä siten, että se yhdistyy myöhemmin olemassa olevaan liikennöityyn penkereeseen.\nKeihästien katko päättyy 12.10.2026, jolloin risteysalue avataan jälleen myös Keihästien suuntaan. Alueen länsireunalla jatketaan vielä tämän jälkeen vesihuoltotöitä.\nPahoittelemme työstä ja liikennejärjestelyistä aiheutuvaa häiriötä.\nAlla olevaan kuvaan on merkitty tulevat ajoväylät Keihästien katkon jälkeen.\nAvainsanat\nRatikka Kuninkaala - Mellunmäki\nRatikka\n…\nShow all keywords",
+            "title": "Liikennejärjestelyt muuttuvat Keihästien ja Länsimäentien risteysalueella maanantaista 28.9.2026 alkaen",
+            "url": "https://www.vantaa.fi/fi/ajankohtaista/uutinen/liikennejarjestelyt-muuttuvat-keihastien-ja-lansimaentien-risteysalueella-maanantaista-2892026-alkaen"
+          }
+        ],
+        "story_key": "url:https://www.vantaa.fi/fi/ajankohtaista/uutinen/liikennejarjestelyt-muuttuvat-keihastien-ja-lansimaentien-risteysalueella-maanantaista-2892026-alkaen",
+        "supporting_documents": [
+          {
+            "id": "RIGHTS",
+            "purpose": "text reuse permission; not news or image evidence",
+            "retrieved_at": "2026-09-26T16:04:04.601373+00:00",
+            "sha256": "142dc309ffb30becbfd7d20a95e3541ea966de5f17f17e0819f6644227e6cc02",
+            "text": "Käyttöoikeus määritellyin ehdoin hyödynnettävissä. Datan käytön lisäksi Palvelussa on mahdollisuus keskusteluun.\nKäyttöoikeus\nPalvelu sisältää dataa useasta eri lähteestä: julkisyhteisöjen tuottamia datoja ja niiden metatietoja, Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja ja Palvelun ylläpitäjien tuottamia artikkeleja ja muita kirjoituksia. Pääsääntöisesti näihin kaikkiin on laaja käyttöoikeus Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Poikkeukset on kerrottu erikseen kunkin aineiston kohdalla.\nAvoin data\nPalvelussa olevien datojen (tietoaineistojen) omistus- ja immateriaalioikeudet kuuluvat kunkin datan tekijälle.\nPääsääntöisesti Palvelun käyttäjillä on laaja käyttöoikeus datoihin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Datoja saa vapaasti kopioida, levittää, näyttää ja esittää sekä käyttää datoja osana muuta teosta. Datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin.\nEhtona käytölle on, että datan tekijä (ylläpitäjä) on ilmoitettava. Datan tekijän pyynnöstä tämä viittaus on poistettava. Datan tekijä on kerrottu kunkin datan metadatassa.\nDatan tekijää ei saa ilmoittaa siten, että ilmoitus viittaisi datan tekijän tai Palvelun tukevan datan käyttäjää tai datan käyttötapaa.\nDatojen metatietojen yhteydessä on mainittu kyseisen datan käyttöoikeusehdot. Joissakin tapauksissa käyttöoikeusehdot voivat poiketa yllä mainitusta.\nKeskustelu\nPalvelun käyttäjät voivat keskusteluosiossa lisätä sivuille kirjoituksia ja kommentoida toisten käyttäjien kirjoituksia. Palvelun käyttäjä antaa kirjoituksiinsa ja kommentteihinsa vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nMikäli käyttäjä liittää kirjoitukseensa tai kommenttiinsa kuvia, tulee hänellä olla tekijänoikeudet kuvaan. Lisäksi hänellä tulee olla kuvassa esiintyvien henkilöiden lupa kuvan julkaisemiseen internetissä. Palvelun käyttäjä antaa kuviin vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nKeskustelun tulee olla hyvän tavan ja Suomen lainsäädännön mukaista. Käyttäjät ovat vastuussa lisäämistään kirjoituksista ja kommenteista.\nKaikenlainen mainonta keskustelussa on kielletty.\nPalvelun tarjoajat voivat tarvittaessa muokata kirjoituksia ja kommentteja sekä poistaa hyvän tavan tai lainsäädännön vastaisia tai muutoin sopimattomia kirjoituksia.\nMikäli käyttäjä havaitsee käyttöehtojen vastaisia kirjoituksia, pyydetään tästä ilmoittamaan ylläpidolle.\nToistuva käyttöehtojen rikkominen tai niiden vakava rikkominen voi johtaa väliaikaiseen tai pysyvään Palvelun käyttöoikeuden peruuttamiseen.\nSovellusgalleria\nSovellusgalleriassa esitellyt sovellukset eivät ole HRI:n tekemiä ja niiden tekijänoikeudet kuuluvat sovellusten tekijöille. Creative Commons 4.0 -lisenssi ei koske sovelluksia, eikä niitä ole lupa vapaasti kopioida, levittää, muokata tai yhdistellä, ellei erikseen sovelluksen kohdalla ole toisin mainittu tai sovelluksen tekijä muutoin ole tähän antanut lupaa.\nMuut palvelussa olevat kirjoitukset\nPalvelun tuottajien Palvelussa julkaisemien kirjoitusten, kuten artikkelien ja blogikirjoitusten omistus- ja tekijänoikeudet kuuluvat niiden kirjoittajille. Palvelun käyttäjillä on laaja käyttöoikeus näihin kirjoituksiin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nPalvelun ulkoasu, tekninen toteutus, tavaramerkit ja logot\nPalvelun teknisen toteutuksen lähdekoodit on saatavilla avoimesti GitHubista. Palvelun kopiointi sellaisenaan on kielletty. Palvelussa esiintyvien tavaramerkkien ja logojen tavaramerkkioikeudet kuuluvat niiden oikeudenhaltijoille. Mikäli tavaramerkkien ja logojen muu käyttö on sallittu, on tästä ja käytön ehdoista ilmoitettu ko. tavaramerkkien ja logojen kohdalla.\nTietosuoja\nhri.fi-palvelua ylläpitää Helsingin kaupunki. Kaupunki on sitoutunut suojaamaan verkkopalveluidensa käyttäjien yksityisyyttä Tietosuojalain (2018), EU:n tietosuoja-asetuksen (2016/679) sekä muun soveltuvan lainsäädännön mukaisesti.\nHelsingin kaupungin tietosuojasivut\nVastuuvapaus\nPalvelu sisältää sekä julkisyhteisöjen tuottamaa avointa dataa ja metadataa että Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja. Palvelun tarjoajat eivät vastaa Palvelussa olevien tietojen oikeellisuudesta. Palvelun käyttäjä käyttää Palvelussa olevaa avointa dataa omalla vastuullaan. Palvelun tarjoajat eivät vastaa mistään välittömistä tai välillisistä vahingoista, jotka aiheutuvat datan käytöstä. ",
+            "url": "https://hri.fi/fi/kayttoehdot/"
+          }
+        ]
+      },
+      "packet_sha256": "aac660d9e7846b12b73afd5ff29fa0d5a12e7afea865d69d947bd97007837163",
+      "review": {
+        "approved": true,
+        "archive_image_only": {
+          "article_text_unchanged": true,
+          "operation": "image_only_archive_correction",
+          "original_draft_sha256": "11a2185087c5fc5728c672adbb3280e4f999feaefb38d2f0b6cc180c648e3aaf",
+          "original_published_at": "2026-09-26T16:04:14.931427+00:00",
+          "original_review_sha256": "3374ecd5eb15a42b55e82e41e08a0924dd3657922d2b596165e55d25f9c1e8c3",
+          "unchanged_text_sha256": "9c280e43dda8ff6b30af225d8f0c7565bd5eb6124667d096ddc9a4c49ffaad41"
+        },
+        "draft_sha256": "f4411637fdc7130e4b95c7c292ed6e6b21e69ccb5c71c2817956d85f2eca1b3b",
+        "historical_text_observations": [],
+        "reasons": [
+          "Kuva esittää tietyömaata, jossa on keltainen tietyömerkki ja uusia reunakiviä, mikä on suoraan relevantti artikkelin aiheeseen Vantaan Keihästien liikennejärjestelyjen muutoksista ja vesihuoltotöistä.",
+          "Kuvan sha256-tunniste b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795 vastaa toimitettua kuvaa.",
+          "Pixel_review on hyväksytty ja sen article_text_sha256 0b67540c503ce57b8d66e21a8c01e3c4d7a082196b60e521f63dacb6fda8313d vastaa artikkelin tekstiä.",
+          "Alt-teksti \"Arkistokuva: Keltainen tietyömerkki ja vaaleat reunakivet sorapohjaisella työmaa-alueella.\" kuvaa tarkasti kuvan näkyvää sisältöä.",
+          "Kuvateksti \"Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.\" on asianmukainen ja selventää kuvan luonnetta.",
+          "Kuvan lisenssi (Pexels License) ja provenienssi (Sergei Starostin Pexelsissä) ovat asianmukaiset ja mahdollistavat kuvan käytön."
+        ]
+      },
+      "stock_image": {
+        "alt": "Arkistokuva: Keltainen tietyömerkki ja vaaleat reunakivet sorapohjaisella työmaa-alueella.",
+        "caption": "Arkistokuva artikkelin aiheesta. Kuva ei esitä uutisen tapahtumapaikkaa.",
+        "classifier_output": {
+          "category": "Kotimaa",
+          "depictable_scene": "Keihästien liikennejärjestelyjä havainnollistava tietyömerkki ja keskeneräinen katuympäristö.",
+          "must_avoid": [],
+          "must_show": [
+            "construction sign"
+          ],
+          "search_queries": [
+            "construction sign road works",
+            "street construction sign",
+            "road construction sign"
+          ],
+          "subject": "Vantaan mukaan Keihästien järjestelyt muuttuvat"
+        },
+        "credit": "Photo by Sergei Starostin on Pexels",
+        "depicted": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
+        "generated": false,
+        "hotlink": false,
+        "license": "Pexels License",
+        "license_url": "https://www.pexels.com/license/",
+        "local_path": "media/b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795.jpg",
+        "pixel_review": {
+          "alt_fi": "Keltainen kolmionmuotoinen tietyömaa-merkki on pystytetty rakennustyömaalle, jossa asennetaan uusia betonireunuksia.",
+          "approved": true,
+          "article_text_sha256": "0b67540c503ce57b8d66e21a8c01e3c4d7a082196b60e521f63dacb6fda8313d",
+          "description": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
+          "image_sha256": "b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795",
+          "model": "google:gemini-2.5-flash",
+          "no_people": false,
+          "reason": "The image genuinely illustrates a construction site with road work, which directly relates to the article's subject of changing traffic arrangements and ongoing water utility work in Vantaa. The visible elements like the construction sign and new curbs concretely represent the described activities.",
+          "reviewed_at": "2026-09-26T16:15:41.935474+00:00"
+        },
+        "pixels": {
+          "height": 627,
+          "mode": "RGB",
+          "variance": 5009.6,
+          "width": 940
+        },
+        "relevance_check": {
+          "accepted": true,
+          "evidence": "A construction site with a yellow triangular road sign depicting a worker shoveling. New concrete curbs are being installed along a curved path, with fresh cement and gravel visible. In the background, there are buildings, parked cars, and two people walking.",
+          "matched": [
+            "construction",
+            "sign"
+          ],
+          "method": "vision",
+          "reason": "all must_show requirements matched"
+        },
+        "sha256": "b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795",
+        "source_url": "https://www.pexels.com/photo/traffic-signs-27134571/",
+        "stock_provenance": {
+          "image_url": "https://images.pexels.com/photos/27134571/pexels-photo-27134571.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "photo_id": "27134571",
+          "photo_url": "https://www.pexels.com/photo/traffic-signs-27134571/",
+          "photographer": "Sergei Starostin",
+          "photographer_url": "https://www.pexels.com/@sejio402",
+          "provider": "pexels",
+          "query": "road embankment construction traffic",
+          "retrieved_at": "2026-09-26T16:09:23Z"
+        },
+        "stock_provenance_sha256": "74cdf7691920c30ec87874e8284c7bba4c0daba7ba5d37c4ead3d22a498e48eb",
+        "url": "https://uutistenlukija.fi/media/b9285a83e434390227ef90db58cc2b443252c364662798baca214c7bc29b8795.jpg"
+      },
+      "text_only": {
+        "policy": "official-text-v1",
+        "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
+        "provenance_sha256": "f30feb4faae0ebdebd4936975e01007bedea7158ed43ac6786c2ab69b3aca9e1"
+      }
+    }
+  ],
+  "image_backfill_sha256": "eff0eadcb71a48480f5a63a09cf7a048d6dc12fcddab5c4b943c8b0f7874e349"
 }
