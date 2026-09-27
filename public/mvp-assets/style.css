@@ -151,8 +151,13 @@ dialog button{font:inherit;min-height:44px;margin:0;padding:.7rem 1rem;border:1p
 .article-breadcrumb li{display:inline-flex;align-items:center;min-width:0;overflow-wrap:anywhere}
 .article-breadcrumb li+li::before{content:'›';margin-right:8px;color:var(--portal-muted,#647084)}
 .article-breadcrumb a{display:inline-flex;align-items:center;min-height:44px;min-width:44px;color:var(--portal-blue,#082867);text-decoration:underline;text-underline-offset:3px}
+:root[data-theme="dark"] .article-breadcrumb a{color:#8ab4ff}
 .article-breadcrumb [aria-current="page"]{font-weight:500;color:var(--portal-muted,#647084)}
 .article-breadcrumb a:focus-visible,.related-story a:focus-visible{outline:3px solid var(--accent,#c0392b);outline-offset:2px}
+
+/* Make publication sources and image rights discoverable without changing copy. */
+.single-article .sources a,.single-article .image-rights a{text-decoration:underline;text-underline-offset:3px}
+.single-article .sources a:focus-visible,.single-article .image-rights a:focus-visible{outline:3px solid var(--accent,#c0392b);outline-offset:2px}
 
 /* Keep the disclosure attached to the picture and separate the reading blocks. */
 .single-article > .lead{margin:20px 0 20px}
