@@ -87,7 +87,8 @@ def verify(store, job, publication, evidence, live_read):
     parser = _ImageSources()
     parser.feed(html)
     parser.close()
-    heroes = [item for item in parser.images if not item['chrome']]
+    # Reused related-story thumbnails are not additional historical hero candidates.
+    heroes = [item for item in parser.images if not item['chrome'] and not item['related']]
     if (len(heroes) != 1 or heroes[0]['src'] != '/' + asset or heroes[0]['alt'] != image['alt'] or
             parser.has_alternative or any(i['duplicate'] or i['srcset'] or i['alternative'] for i in parser.images)):
         raise ValueError('Historical canonical image identity/alt is ambiguous')

@@ -117,6 +117,14 @@ def editorial_images(page):
     return [attrs for attrs, branding in page.image_records if not branding]
 
 
+def article_hero_images(html):
+    """The article's reviewed hero, excluding linked related-story thumbnails."""
+    from news_mvp.release_contract import _ImageSources
+    parsed = _ImageSources()
+    parsed.feed(html)
+    return [item for item in parsed.images if item['hero']]
+
+
 def approved_pixel_review(raw, draft, generated=False):
     """Explicit offline model boundary; binds synthetic pixels to exact test prose."""
     import hashlib, json

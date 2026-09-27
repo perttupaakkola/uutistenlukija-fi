@@ -129,3 +129,49 @@ dialog button{font:inherit;min-height:44px;margin:0;padding:.7rem 1rem;border:1p
 @media(max-width:900px){
   .portal-lead .portal-kicker{margin-right:10px}
 }
+
+/* Round 1: give full Finnish dates their own space on category and latest rows. */
+.portal-feed-item{grid-template-columns:max-content minmax(0,1fr) 132px}
+.portal-feed-item__time{white-space:nowrap}
+@media(max-width:600px){
+  .portal-feed-item,.portal-feed-item.portal-feed-item--no-image{
+    grid-template-columns:minmax(0,1fr) 78px;
+    column-gap:10px;
+    row-gap:4px;
+  }
+  .portal-feed-item__time,.portal-feed-item--no-image .portal-feed-item__time{grid-column:1;grid-row:1}
+  .portal-feed-item__body,.portal-feed-item--no-image .portal-feed-item__body{grid-column:1;grid-row:2}
+  .portal-feed-item__thumb{grid-column:2;grid-row:1/span 2}
+  .portal-feed-item--no-image>.fixture{grid-column:1/-1}
+}
+
+/* A single semantic trail replaces the two competing article back controls. */
+.single-article .article-breadcrumb{margin:0 0 14px;color:var(--portal-muted,#647084);font:600 14px/1.45 var(--font-sans,system-ui,sans-serif)}
+.article-breadcrumb ol{display:flex;flex-wrap:wrap;align-items:center;column-gap:8px;row-gap:0;list-style:none;margin:0;padding:0}
+.article-breadcrumb li{display:inline-flex;align-items:center;min-width:0;overflow-wrap:anywhere}
+.article-breadcrumb li+li::before{content:'›';margin-right:8px;color:var(--portal-muted,#647084)}
+.article-breadcrumb a{display:inline-flex;align-items:center;min-height:44px;min-width:44px;color:var(--portal-blue,#082867);text-decoration:underline;text-underline-offset:3px}
+.article-breadcrumb [aria-current="page"]{font-weight:500;color:var(--portal-muted,#647084)}
+.article-breadcrumb a:focus-visible,.related-story a:focus-visible{outline:3px solid var(--accent,#c0392b);outline-offset:2px}
+
+/* Keep the disclosure attached to the picture and separate the reading blocks. */
+.single-article > .lead{margin:20px 0 20px}
+
+/* Reuse existing reviewed assets in quiet, accessible related-story rows. */
+.single-article .related ul{list-style:none;margin:0;padding:0}
+.single-article .related-story{border-top:1px solid var(--portal-line,#d8dee8);padding:14px 0}
+.single-article .related-story__link{display:grid;grid-template-columns:112px minmax(0,1fr);align-items:center;gap:14px;min-height:76px;color:var(--portal-ink,#071329);text-decoration:none}
+.single-article .related-story__link:hover .related-story__title{text-decoration:underline;text-underline-offset:3px}
+.related-story__thumb{display:block;width:112px;height:76px;overflow:hidden;border-radius:4px;background:var(--portal-soft,#eef1f5)}
+.related-story__thumb img{display:block;width:100%;height:100%;object-fit:cover}
+.related-story__title{font-weight:700;font-size:17px;line-height:1.3;overflow-wrap:anywhere}
+.related-story__credit{display:block;margin:5px 0 0 126px;color:var(--portal-muted,#647084);font:400 11px/1.4 var(--font-sans,system-ui,sans-serif);overflow-wrap:anywhere}
+.related-story__credit a{color:inherit;text-decoration:underline}
+.related-story--text>a{display:inline-flex;align-items:center;min-height:44px}
+@media(max-width:600px){
+  .single-article .related-story__link{grid-template-columns:88px minmax(0,1fr);gap:10px;min-height:66px}
+  .related-story__thumb{width:88px;height:66px}
+  .related-story__credit{margin-left:98px}
+  /* These are standalone story entry points, never inline citations or rights. */
+  .portal-logo,.portal-save-link,.portal-teaser h3>a,.portal-row-card h3>a,.portal-feed-item h3>a{display:inline-flex;align-items:center;min-width:44px;min-height:44px}
+}

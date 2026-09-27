@@ -19,7 +19,7 @@ from pathlib import Path
 from news_mvp import site
 from news_mvp.release_contract import _only_branding_images
 import test_generated_integrity as generated
-from image_helpers import BRANDING_SRCS, editorial_images, scan, PageScan
+from image_helpers import BRANDING_SRCS, editorial_images, article_hero_images, scan, PageScan
 
 ARTICLE_RE=re.compile(r'<article class="([^"]*)">(.*?)</article>',re.S)
 H2_RE=re.compile(r'<h[23][^>]*>\s*<a href="([^"]+)"')
@@ -103,9 +103,11 @@ class HomepageImages(unittest.TestCase):
         self.assertEqual(hashlib.sha256(data).hexdigest(),sha)
         self.assertEqual(data,generated.SYNTHETIC)
         for link in links:
-            article=scan((output/link.lstrip('/')/'index.html').read_text())
-            self.assertEqual([attrs['src'] for attrs in editorial_images(article)],[f'/mvp-assets/{sha}.jpg'])
-            self.assertEqual([attrs['alt'] for attrs in editorial_images(article)],[stored['alt']])
+            html=(output/link.lstrip('/')/'index.html').read_text()
+            article=scan(html)
+            self.assertEqual([attrs['src'] for attrs in article_hero_images(html)],[f'/mvp-assets/{sha}.jpg'])
+            self.assertEqual([attrs['alt'] for attrs in article_hero_images(html)],[stored['alt']])
+            self.assertEqual(len(editorial_images(article)),4)
             self.assertEqual(article.captions,[stored['caption']])
 
     def test_public_missing_image_refused_and_private_preview_never_promotes_older_story(self):
@@ -138,8 +140,8 @@ class HomepageImages(unittest.TestCase):
         self.assertEqual(links, ['/' + site.article_path(job) for job in jobs])
         self.assertEqual(len(set(links)), 6)
         self.assertIn('portal-teaser--no-image',entries[2][0])
-        self.assertIn('portal-teaser--no-image',entries[5][0])
-        self.assertNotIn('portal-row-card--no-image',entries[5][0])
+        self.assertIn('portal-row-card--no-image',entries[5][0])
+        self.assertNotIn('portal-teaser--no-image',entries[5][0])
         self.assertIn('portal-right-rail',home)
 
     def test_excluded_asset_is_absent_from_article_home_and_metadata(self):

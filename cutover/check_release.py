@@ -5,7 +5,7 @@ from pathlib import Path
 import sys
 # The actual script invocation starts with cutover/ on sys.path.
 sys.path.insert(0,str(Path(__file__).resolve().parent.parent))
-from news_mvp.release_contract import receipt_media, check_article
+from news_mvp.release_contract import receipt_media, check_article, check_related_thumbnails
 
 
 def check(root, receipt):
@@ -40,6 +40,14 @@ def check(root, receipt):
     if receipt.get('schema_version')==2:
         for name in receipt['new_article_files']:
             check_article((root/name).read_text(),receipt['packet'],receipt['draft'])
+    def related_target(href):
+        name = href.lstrip('/')+'index.html'
+        if name not in files:
+            raise ValueError('Related story is absent from release')
+        return (root/name).read_text()
+    for name in files:
+        if name.startswith('uutiset/') and name.endswith('/index.html'):
+            check_related_thumbnails((root/name).read_text(),related_target)
     if receipt.get('image_backfill'):
         from news_mvp.backfill import validate_records
         from news_mvp.editorial import digest

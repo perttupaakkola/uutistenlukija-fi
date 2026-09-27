@@ -10,7 +10,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 from news_mvp import site
-from news_mvp.release_contract import check_article
+from news_mvp.release_contract import check_article, check_related_thumbnails
 import test_generated_integrity as generated
 
 SEED='test_generated_binding_keeps_text_provenance_and_not_applicable_marker'
@@ -18,7 +18,9 @@ IMAGE_MODEL='synthetic-model-x'  # stored model name; must never reach reader ma
 CREDIT_FROM_MODEL='AI-kuvitus ('+IMAGE_MODEL+')'
 ARTICLE_RE=re.compile(r'<article class="([^"]*)">(.*?)</article>',re.S)
 SINGLE_RE=re.compile(r'<article class="([^"]*\bsingle-article\b[^"]*)">(.*?)</article>',re.S)
-CATEGORY_LINK_RE=re.compile(r'<a class="category-label category-label--badge" href="([^"]+)"[^>]*>([^<]*)</a>')
+CATEGORY_LINK_RE=re.compile(r'<nav class="article-breadcrumb" aria-label="Murupolku"><ol>'
+                            r'<li><a href="/">Etusivu</a></li><li><a href="([^"]+)">([^<]*)</a></li>'
+                            r'<li aria-current="page">([^<]*)</li></ol></nav>')
 H1_RE=re.compile(r'<h1[^>]*>(.*?)</h1>',re.S)
 HERO_RE=re.compile(r'<figure class="article-hero">(.*?)</figure>',re.S)
 CANON_RE=re.compile(r'<link rel="canonical" href="([^"]+)"')
@@ -104,6 +106,18 @@ class ArticleAndCategoryRendering(unittest.TestCase):
         self.assertNotIn('story-body',body)
         self.assertNotIn('Luonnos',html)
 
+    def test_related_thumbnail_matches_destination_hero_and_tampering_fails(self):
+        jobs,output,_=self.render([('Kulttuuri','a'),('Kulttuuri','b')])
+        html=self.article_text(output,jobs[0])
+        related=html[html.index('<section class="related">'):]
+        self.assertEqual(related.count('class="related-story__thumb"'),1)
+        self.assertIn('AI-generoitu kuva. Ei valokuva tapahtumasta.',related)
+        target=lambda href:(output/href.lstrip('/')/'index.html').read_text()
+        check_related_thumbnails(html,target)
+        changed=html[:html.index('<section class="related">')]+related.replace('alt="','alt="Väärä ',1)
+        with self.assertRaisesRegex(ValueError,'Related thumbnail differs'):
+            check_related_thumbnails(changed,target)
+
     def test_article_hero_has_small_generated_caption_and_rights_sit_after_prose(self):
         jobs,output,_=self.render([('Kulttuuri','a'),('Kulttuuri','b')])
         html=self.article_text(output,jobs[0])
@@ -132,7 +146,7 @@ class ArticleAndCategoryRendering(unittest.TestCase):
         self.assertNotIn(IMAGE_MODEL,html)
         self.assertNotIn(CREDIT_FROM_MODEL,html)
 
-    def test_article_badge_links_its_category_page_with_display_name(self):
+    def test_article_breadcrumb_links_its_category_page_with_display_name(self):
         for stored,slug,display in [('Kotimaa','kotimaa','Kotimaa'),('Maailma','ulkomaat','Ulkomaat')]:
             with self.subTest(category=stored):
                 jobs,output,_=self.render([(stored,'badge-'+slug)])
@@ -141,6 +155,8 @@ class ArticleAndCategoryRendering(unittest.TestCase):
                 self.assertIsNotNone(match)
                 self.assertEqual(match.group(1),f'/categories/{slug}/')
                 self.assertEqual(match.group(2),display)
+                self.assertEqual(match.group(3),json.loads(jobs[0]['draft'])['title'])
+                self.assertNotIn('class="back"',html)
 
     def test_category_pages_filter_and_map_maailma_and_show_empty_honestly(self):
         jobs,output,_=self.render([('Maailma','m1'),('Talous','t1'),('Tiede','x1')])

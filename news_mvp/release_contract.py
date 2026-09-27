@@ -49,8 +49,14 @@ class _ImageSources(HTMLParser):
             'src': values.get('src'),
             'alt': values.get('alt'),
             'srcset': values.get('srcset'),
-            'chrome': any(tag in _BRANDING_SECTIONS for tag, _blocks in self._open_elements)
+            'chrome': any(tag in _BRANDING_SECTIONS for tag, _blocks, _classes in self._open_elements)
                       and not blocked,
+            'related': any(tag == 'section' and 'related' in classes
+                           for tag, _blocks, classes in self._open_elements),
+            'hero': any(tag == 'figure' and 'article-hero' in classes
+                        for tag, _blocks, classes in self._open_elements),
+            'width': values.get('width'),
+            'height': values.get('height'),
             'duplicate': len(names) != len(set(names)),
             'alternative': self._picture > 0 or self.has_alternative,
         })
@@ -70,7 +76,7 @@ class _ImageSources(HTMLParser):
             self._record(attrs, self._blocked + blocks > 0)
 
         if tag not in _HTML_VOID_ELEMENTS and not self_closing:
-            self._open_elements.append((tag, blocks))
+            self._open_elements.append((tag, blocks, classes))
             self._blocked += blocks
             if tag == 'picture':
                 self._picture += 1
@@ -87,7 +93,7 @@ class _ImageSources(HTMLParser):
             return
         if self._open_elements[-1][0] != tag:
             return
-        _tag, blocks = self._open_elements.pop()
+        _tag, blocks, _classes = self._open_elements.pop()
         self._blocked -= blocks
         if tag == 'picture':
             self._picture -= 1
@@ -912,7 +918,8 @@ def _check_rendered_stock(html, image):
             len(sources.images) != len(rendered.images)):
         raise ValueError('Malformed stock article markup')
 
-    editorial = [index for index, item in enumerate(sources.images) if not item['chrome']]
+    editorial = [index for index, item in enumerate(sources.images)
+                 if not item['chrome'] and not item['related']]
     if len(editorial) != 1:
         raise ValueError('Stock article must have exactly one editorial image')
     editorial_index = editorial[0]
@@ -924,7 +931,7 @@ def _check_rendered_stock(html, image):
         if item['chrome']:
             if item['src'] not in BRANDING_LOGO_SRCS:
                 raise ValueError('Stock article has an unapproved branding image')
-        elif index != editorial_index:
+        elif not item['related'] and index != editorial_index:
             raise ValueError('Stock article has an unexpected editorial image')
     if any(item['srcset'] is not None for item in sources.images):
         raise ValueError('Stock article has an alternate image source')
@@ -985,6 +992,60 @@ def _check_rendered_stock(html, image):
         raise ValueError('Stock article attribution link mismatch')
 
 
+class _RelatedThumbnailLinks(HTMLParser):
+    """Associate each related thumbnail with its enclosing story link."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.stack = []
+        self.images = []
+
+    def handle_starttag(self, tag, attrs):
+        values = dict(attrs)
+        if tag == 'img' and any(t == 'section' and 'related' in a.get('class', '').split()
+                                for t, a in self.stack):
+            link = next((a.get('href') for t, a in reversed(self.stack) if t == 'a'), None)
+            story = any(t == 'li' and 'related-story' in a.get('class', '').split()
+                        for t, a in self.stack)
+            self.images.append((link if story else None, values))
+        if tag not in _HTML_VOID_ELEMENTS:
+            self.stack.append((tag, values))
+
+    def handle_endtag(self, tag):
+        if self.stack and self.stack[-1][0] == tag:
+            self.stack.pop()
+
+
+def check_related_thumbnails(html, target_pages=None):
+    """Keep related images tied to their actual reviewed destination heroes.
+
+    The local release supplies destination bytes; live article checks still enforce
+    the strict one-hero contract and the structure of every reused thumbnail.
+    """
+    sources = _ImageSources()
+    sources.feed(html)
+    related = [item for item in sources.images if item['related']]
+    links = _RelatedThumbnailLinks()
+    links.feed(html)
+    if len(related) != len(links.images) or len(related) > 3:
+        raise ValueError('Unexpected related thumbnail count')
+    seen = set()
+    for item, (href, markup) in zip(related, links.images):
+        if (not isinstance(href, str) or not re.fullmatch(r'/uutiset/[a-z0-9-]+/', href)
+                or href in seen or item['duplicate'] or item['alternative'] or item['srcset'] is not None
+                or not item['src'] or not item['alt'] or bool(item['width']) != bool(item['height'])):
+            raise ValueError('Invalid related thumbnail identity')
+        seen.add(href)
+        if target_pages is not None:
+            target = target_pages(href)
+            target_images = _ImageSources()
+            target_images.feed(target)
+            heroes = [image for image in target_images.images if image['hero']]
+            if (len(heroes) != 1 or any(item[key] != heroes[0][key]
+                                        for key in ('src', 'alt', 'width', 'height'))):
+                raise ValueError('Related thumbnail differs from destination hero')
+
+
 def check_article(html,packet,draft,canonical=None):
     """Same reviewed content contract for bundle validation and canonical readback."""
     from html import escape
@@ -993,6 +1054,7 @@ def check_article(html,packet,draft,canonical=None):
     # served markup. Compare against the de-obfuscated copy so the contract
     # checks reviewed content rather than proxy rewriting.
     html=_denormalize_cdn_email_obfuscation(html)
+    check_related_thumbnails(html)
     required=[draft['title'],draft['summary']]+[p['text'] for p in draft['paragraphs']]
     for source in packet['sources']:
         required.append(source['url'])
@@ -1027,7 +1089,7 @@ def check_article(html,packet,draft,canonical=None):
                 raise ValueError('Public article contains retired image vocabulary')
             parsed_images = _ImageSources()
             parsed_images.feed(html)
-            heroes = [item for item in parsed_images.images if not item['chrome']]
+            heroes = [item for item in parsed_images.images if not item['chrome'] and not item['related']]
             if len(heroes) != 1 or heroes[0]['alt'] != image['alt']:
                 raise ValueError('Generated article must expose the exact reviewed image alt')
             # Model/vendor remains internal; only normalized credit is reader-facing.

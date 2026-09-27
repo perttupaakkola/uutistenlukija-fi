@@ -17,7 +17,7 @@ from news_mvp.site import article_path, render_site
 from news_mvp.release_contract import media,receipt_media,verify_intake
 from news_mvp.store import database
 from cutover.check_release import check
-from image_helpers import editorial_images, scan
+from image_helpers import article_hero_images, editorial_images, scan
 COMMIT='a'*40
 REMOTE='b'*40
 TEXT='Helsingin kaupunki kertoo uuden kirjaston avaamisesta syyskuussa. Kirjastossa voi lainata kirjoja ja käyttää lukutiloja. Kaupunki kertoo palveluista omilla verkkosivuillaan. Tämä synteettinen testitiedote koskee paikallisia kirjastopalveluja.'
@@ -105,7 +105,8 @@ class ReleaseV2(unittest.TestCase):
             after=tuple(store.db.execute('SELECT * FROM publications WHERE job_id=?',(old['id'],)).fetchone());self.assertEqual(before,after)
             home=(site/'index.html').read_text();self.assertIn(self.draft['title'],home);self.assertIn('NASA synthetic image story',home)
             text=(site/(article_path(job)+"index.html")).read_text();self.assertNotIn('Luonnos',text)
-            self.assertEqual(len(editorial_images(scan(text))),1)
+            self.assertEqual(len(article_hero_images(text)),1)
+            self.assertEqual(len(editorial_images(scan(text))),2)
             self.assertIn('CC BY 4.0',text);self.assertNotIn('Tämä uutinen julkaistaan ilman kuvaa.',text);self.assertTrue((site/f'mvp-assets/{sha}.jpg').exists())
     def test_wrong_missing_policy_rights_private_fixture_packet_refused(self):
         for mutation in ['policy','rights','private','fixture','source','image-required']:

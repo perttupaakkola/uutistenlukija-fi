@@ -20,7 +20,7 @@ GENERATED_IMAGE_FALLBACK = (1536, 1024)
 PAGE_SIZE = 30
 # The imported portal theme has room for a denser headline column than the old four-row slice.
 # Lower topic cards are separately capped by the fixed taxonomy below.
-HOMEPAGE_CENTER_ROWS = 8
+HOMEPAGE_CENTER_ROWS = 4
 HOMEPAGE_TOPIC_LIMIT = 7
 # Exact licence URLs whose short name is CC BY 4.0; trailing slashes are normalised.
 CC_BY_40_URLS = frozenset({
@@ -363,6 +363,45 @@ def article_hero_figure(image, image_url):
             f'{image_size_attributes(image)} referrerpolicy="no-referrer">'
             f'{image_overlay_html(image, include_credit=bool(image.get("stock_provenance")))}'
             f'{caption}</figure>')
+
+
+def resolved_image_url(image, state_dir, output_dir, assets):
+    """Reuse the article's reviewed image bytes and public URL in every placement."""
+    image_url = image['url']
+    if image.get('local_path'):
+        sha = image.get('sha256', '')
+        if state_dir is None or not re.fullmatch(r'[0-9a-f]{64}', sha) or image['local_path'] != f'media/{sha}.jpg':
+            raise ValueError('Invalid local image identity')
+        data = (Path(state_dir) / image['local_path']).read_bytes()
+        if hashlib.sha256(data).hexdigest() != sha:
+            raise ValueError('Local image does not match reviewed rights record')
+        image_url = f'/{assets}/{sha}.jpg'
+        atomic_write(Path(output_dir) / image_url.lstrip('/'), data)
+    return image_url
+
+
+def related_story_html(job, draft, state_dir, output_dir, assets):
+    """One quiet image-backed link, with the image's existing attribution alongside."""
+    href = '/' + article_path(job)
+    image = display_image(draft.get('image'))
+    if not image:
+        return f'<li class="related-story related-story--text"><a href="{href}">{esc(draft["title"])}</a></li>'
+    image_url = resolved_image_url(image, state_dir, output_dir, assets)
+    thumbnail = (f'<span class="related-story__thumb"><img src="{esc(image_url)}" '
+                 f'alt="{esc(image["alt"])}" {image_size_attributes(image)} '
+                 'loading="lazy" referrerpolicy="no-referrer"></span>')
+    if image.get('generated') is True:
+        credit = (f'{esc(image["caption"])} · AI-kuvitus · '
+                  f'<a href="{esc(image["license_url"])}">AI-kuvien käyttöehdot</a>')
+    else:
+        # The full source/author links remain in the destination article's image
+        # rights section. A quiet text credit here keeps this row's only story
+        # link unambiguous while retaining the reviewed credit and licence.
+        credit = (f'{esc(image.get("credit", ""))} · '
+                  f'<a href="{esc(image["license_url"])}">{esc(image["license"])}</a>')
+    return (f'<li class="related-story"><a class="related-story__link" href="{href}">'
+            f'{thumbnail}<span class="related-story__title">{esc(draft["title"])}</span></a>'
+            f'<small class="related-story__credit">{credit}</small></li>')
 
 
 def image_rights_html(image):
@@ -846,29 +885,15 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
                 if reuse.get('notice'):
                     source_list += f'<li>{esc(reuse["notice"])}</li>'
         image = display_image(draft.get("image"))
-        image_url = None
+        image_url = resolved_image_url(image, state_dir, output_dir, assets) if image else None
         # A missing image is allowed only in the private draft preview.
-        figure = ""
+        figure = article_hero_figure(image, image_url) if image else ""
         image_note = "" if image else '<p class="image-note">Ei kuvaa: tekstiversion yksityinen esikatselu.</p>'
-        if image:
-            image_url = image["url"]
-            if image.get("local_path"):
-                sha = image.get("sha256", "")
-                if state_dir is None or not re.fullmatch(r"[0-9a-f]{64}", sha) or image["local_path"] != f"media/{sha}.jpg":
-                    raise ValueError("Invalid local image identity")
-                data = (Path(state_dir) / image["local_path"]).read_bytes()
-                if hashlib.sha256(data).hexdigest() != sha:
-                    raise ValueError("Local image does not match reviewed rights record")
-                image_url = f"/{assets}/{sha}.jpg"
-                atomic_write(output_dir / image_url.lstrip("/"), data)
-            # Hero picture only: credit and licence terms render in the image-rights
-            # section after the prose, next to the source list.
-            figure = article_hero_figure(image, image_url)
         image_rights = image_rights_html(image)
         picks = related_for[job["id"]]
         related_html = ""
         if picks:
-            related_items = "".join(f'<li><a href="/{article_path(j)}">{esc(d["title"])}</a></li>' for j, d in picks)
+            related_items = "".join(related_story_html(j, d, state_dir, output_dir, assets) for j, d in picks)
             related_html = f'<section class="related"><h2>Lue myös</h2><ul>{related_items}</ul></section>'
         # Method disclosure: states plainly how the text was made and names the source
         # publishers it was checked against, without inventing an editor or any metrics.
@@ -880,10 +905,12 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         publisher_list = ", ".join(esc(name) for name in publishers)
         method_line = ('<p>Teksti on tuotettu tekoälyn avulla ja tarkastettu erillisessä '
                        'lähdetarkistuksessa.' + (f' Lähdetietojen julkaisijat: {publisher_list}.' if publisher_list else "") + '</p>')
-        badge = (f'<a class="category-label category-label--badge" '
-                 f'href="{esc(category_route(draft["category"]))}">{esc(category_display(draft["category"]))}</a>')
-        body = f'''<article class="story single-article"><a class="back" href="/">← Kaikki uutiset</a>{fixture}
-{badge}<p class="eyebrow article-date" data-category="{esc(draft["category"])}">{"" if public else "Luonnos "}{date}</p><h1>{esc(draft["title"])}</h1>
+        breadcrumb = (f'<nav class="article-breadcrumb" aria-label="Murupolku"><ol>'
+                      f'<li><a href="/">Etusivu</a></li>'
+                      f'<li><a href="{esc(category_route(draft["category"]))}">{esc(category_display(draft["category"]))}</a></li>'
+                      f'<li aria-current="page">{esc(draft["title"])}</li></ol></nav>')
+        body = f'''<article class="story single-article">{breadcrumb}{fixture}
+<p class="eyebrow article-date" data-category="{esc(draft["category"])}">{"" if public else "Luonnos "}{date}</p><h1>{esc(draft["title"])}</h1>
 {figure}<p class="lead">{esc(draft["summary"])}</p>{image_note}<div class="content">{paragraphs}</div>
 {method_line}
 <section class="sources"><h2>Lähteet</h2><ol>{source_list}</ol>
