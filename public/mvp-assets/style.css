@@ -76,6 +76,7 @@ dialog button{font:inherit;min-height:44px;margin:0;padding:.7rem 1rem;border:1p
 .portal-lead__credit{right:12px;bottom:12px;overflow-wrap:anywhere;text-align:right}
 .portal-teaser__thumb,.portal-row-card__thumb,.portal-feed-item__thumb{position:relative}
 .portal-teaser__thumb .portal-lead__image-label,.portal-row-card__thumb .portal-lead__image-label,.portal-feed-item__thumb .portal-lead__image-label{top:4px;left:4px;max-width:calc(100% - 8px);padding:2px 3px;font-size:9px;line-height:1.15}
+.portal-teaser__thumb .portal-lead__image-label,.portal-row-card__thumb .portal-lead__image-label,.portal-feed-item__thumb .portal-lead__image-label{pointer-events:none}
 .portal-teaser__thumb .portal-lead__credit,.portal-row-card__thumb .portal-lead__credit,.portal-feed-item__thumb .portal-lead__credit{right:4px;bottom:4px;left:4px;max-width:calc(100% - 8px);padding:2px 3px;overflow:hidden;font-size:9px;line-height:1.15;text-align:left;text-overflow:ellipsis;white-space:nowrap}
 .article-hero{position:relative}
 .article-hero .portal-lead__image-label{top:12px;left:12px}
