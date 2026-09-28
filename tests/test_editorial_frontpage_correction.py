@@ -47,15 +47,16 @@ class EditorialFrontpageCorrection(unittest.TestCase):
         for slug in ('kotimaa','ulkomaat','talous','tiede','kulttuuri','urheilu'):
             self.assertIn('portal-topic-card--'+slug,strip)
 
-    def test_ai_fallback_prompt_is_naturalistic_and_non_documentary(self):
+    def test_ai_fallback_prompt_allows_photographic_exact_concept(self):
         prompt = imagery._prompt_for('Suomen koulu','Kotimaa','yleinen koulutila',['school books'],[])
-        self.assertIn('Naturalistic, realistic editorial artwork',prompt)
-        self.assertIn('Visibly non-documentary',prompt)
+        self.assertIn('exact visual match',prompt)
+        self.assertIn('photographic editorial aesthetic is allowed',prompt)
         self.assertIn('No cartoon',prompt)
         self.assertIn('flat vector',prompt)
         self.assertIn('watercolor',prompt)
         self.assertIn('glossy 3D',prompt)
         self.assertIn('identifiable real building',prompt)
+        self.assertNotIn('Visibly non-documentary',prompt)
         self.assertNotIn('Flat two-dimensional editorial drawing',prompt)
         self.assertNotIn('matte gouache',prompt)
 

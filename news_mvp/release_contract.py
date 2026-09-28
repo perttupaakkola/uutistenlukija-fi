@@ -403,6 +403,12 @@ def stock_binding(image):
         from .imagery import validate_pixel_review
         validate_pixel_review(image)
         expected_image.add('pixel_review')
+    if image.get('classifier_output', {}).get('version') == 'article-first-v1':
+        from .imagery import validate_selection_evidence
+        validate_selection_evidence(image)
+        expected_image.add('selection_evidence')
+    elif 'selection_evidence' in image:
+        raise ValueError('Archive image cannot claim a new selection audit')
     if set(image) != expected_image:
         raise ValueError('Unexpected stock image fields')
     if image['generated'] is not False:
@@ -482,10 +488,10 @@ def media(packet, draft, policy_gate=True):
                 validate_relation(stock['stock_provenance'], packet, draft)
         # An official text source cannot authorise a third-party IMAGE: its reuse terms cover
         # its text, not its photography, so a scraped source image has no licence basis.
-        # A GENERATED illustration is different in kind - it depicts no real person, event or
-        # copyrighted work, so there is no third-party right to authorise. It is admitted only
+        # A generated image is different in kind: it has no third-party photograph right to
+        # infer from the source text. It is admitted only
         # when it carries the full generation provenance recorded by news_mvp/imagery.py, and
-        # it is always labelled as an AI illustration rather than documentary evidence.
+        # its article carries the exact AI disclosure, even for photographic rendering.
         generated = image.get('generated') is True
         if official and not generated and stock is None:
             raise ValueError('Text-only policy cannot authorize a third-party image')

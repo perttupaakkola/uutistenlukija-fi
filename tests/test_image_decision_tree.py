@@ -161,14 +161,20 @@ class ClassifierContract(unittest.TestCase):
 
     def test_existing_model_call_path_is_used(self):
         calls = []
+        ranked = {'version':'article-first-v1','category':'Kotimaa','concepts':[
+            {'rank':1,'safe_to_generate':True,
+             **{key:DECISION[key] for key in imagery.IMAGE_DECISION_KEYS if key!='category'}},
+            {'rank':2,'safe_to_generate':False,
+             **{key:DECISION[key] for key in imagery.IMAGE_DECISION_KEYS if key!='category'},
+             'depictable_scene':'A verified municipal meeting room with desks and chairs'}]}
 
         class Model:
             def call(self, role, packet, draft):
                 calls.append((role, packet, draft))
-                return DECISION
+                return ranked
 
         result = imagery.classify_draft(DRAFT, model=Model(), packet={"story_key": "x"})
-        self.assertEqual(result, DECISION)
+        self.assertEqual(result, ranked)
         self.assertEqual(calls[0][0], "image_classifier")
 
     def test_explicitly_absent_must_avoid_content_is_not_rejected(self):

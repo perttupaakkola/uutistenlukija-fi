@@ -132,6 +132,11 @@ def validate_draft(draft, packet):
             if "relevance_check" not in image:
                 raise ValueError("Image classifier decision lacks relevance check")
             validate_relevance_record(image["relevance_check"])
+            if image['classifier_output'].get('version') == 'article-first-v1':
+                from .imagery import validate_selection_evidence
+                validate_selection_evidence(image, draft)
+            elif 'selection_evidence' in image:
+                raise ValueError('Archive image cannot claim a new selection audit')
         # A generated illustration must be labelled as such in the reader-visible caption, so
         # a reader can never mistake it for a photograph of the event described.
         if image.get("generated") is True:

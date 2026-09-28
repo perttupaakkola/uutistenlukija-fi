@@ -14,11 +14,14 @@ Tarkista uuden kuvan relevanssi, täsmällinen kuvahash ja riippumaton pixel_rev
 näkyvän sisällön vastaavuus alt-tekstiin ja kuvatekstiin, provenienssi ja käyttöoikeus.
 Lisenssiteksti, lähdemaininta tai kirjoittajan varmuus eivät yksin todista kuvan oikeuksia
  tai relevanssia. Kuva ei saa olla yleiskuva, joka liittyy vain väljästi uutiskategoriaan.
-Lisensoidun valokuvan classifier_output.must_show kuvaa ehdotettua hakusommittelua,
-ei itsessään artikkelin tosiasiavaatimuksia. Arvioi näkyvien konkreettisten kohteiden
-yhteys koko lopulliseen artikkeliin myös silloin, kun relevance_check kirjaa puuttuvan
-sommitteluelementin. Puuttuva rekvisiitta ei yksin hylkää relevanttia todellista kuvaa;
-pelkkä yleinen kategoria- tai paikkayhteys ei riitä. Must_avoid-turvarajat säilyvät.
+Uuden päätöksen classifier_output.concepts sisältää 2–3 järjestettyä konkreettista kuva-aihetta.
+Valitun konseptin must_show sisältää olennaiset näkyvät elementit, ei artikkelin uusia
+tosiasiaväitteitä. Arvioi näkyvien konkreettisten kohteiden yhteys koko lopulliseen
+artikkeliin. Jos jokin must_show-elementti puuttuu itse pikseleistä tai tarkka nimetty
+rakennus päätellään vain kadunnimestä, kuva ei saa 8/10. Uuden oikean kuvan täsmälliseen
+pikseli- ja artikkeliarvioon sidotun osuvuuspisteen on oltava vähintään 8/10.
+Pelkkä yleinen kategoria- tai paikkayhteys ei riitä.
+Must_avoid-turvarajat säilyvät.
 Oikean kuvan on oltava lisensoitu. AI-kuvan alt alkaa "AI-generoitu kuva: " ja jatkuu
 hyödyllisellä, tiiviillä suomenkielisellä näkyvän kuvan kuvauksella. AI-artikkelikuvan
 alapuolinen kuvateksti on täsmälleen "AI-generoitu kuva. Ei valokuva tapahtumasta."
@@ -29,7 +32,9 @@ AI-kuvan on perustuttava artikkelin konkreettiseen
 aiheeseen. Nimetyn henkilön tai arkaluonteisen aiheen kuvituksessa ei saa olla ihmisiä,
 kasvoja tai henkilön näköisyyttä: käytä aiheeseen liittyviä turvallisia esineitä,
 paikkoja, materiaaleja tai prosesseja. Keksitty tunnistettavan taideteoksen tai rakennuksen
-tarkka toisinto ja valheellinen dokumentaarinen vaikutelma on hylättävä. Null-kuva hylätään.
+tarkka toisinto ja keksitty tapahtumatilanne on hylättävä. Realistista tai valokuvamaista
+AI-kuvaa ei hylätä pelkän tyylin vuoksi, kun artikkelin täsmällinen AI-ilmoitus on näkyvissä.
+Null-kuva hylätään.
 
 Kuvapäätös ei muuta alkuperäistä toimituspäätöstä eikä vahvista vanhaa tekstiä uudestaan.
 Älä hylkää uutta kuvaa siksi, että vanhan uutisen tapahtuma on nyt ohi tai että havaitsit

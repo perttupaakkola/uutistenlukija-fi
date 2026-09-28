@@ -32,10 +32,15 @@ class Reviewer:
     def call(self, role, packet, draft=None):
         self.calls.append(role)
         if role == 'image_classifier':
-            return {'subject': draft['title'], 'depictable_scene': 'public library building',
-                    'must_show': ['library building'], 'must_avoid': ['people'],
-                    'search_queries': ['public library building', 'library building exterior', 'library interior shelves'],
-                    'category': draft['category']}
+            return {'version': 'article-first-v1', 'category': draft['category'], 'concepts': [
+                {'rank': 1, 'safe_to_generate': True, 'subject': draft['title'],
+                 'depictable_scene': 'public library building', 'must_show': ['library building'],
+                 'must_avoid': ['people'], 'search_queries': ['public library building',
+                     'library building exterior', 'library interior shelves']},
+                {'rank': 2, 'safe_to_generate': True, 'subject': draft['title'],
+                 'depictable_scene': 'public library book shelves', 'must_show': ['book shelves'],
+                 'must_avoid': ['people'], 'search_queries': ['public library shelves',
+                     'library book shelves', 'library interior books']} ]}
         return {"approved": True, "draft_sha256": digest(draft),
                 "reasons": ["Reviewed image coverage fixture"]}
 

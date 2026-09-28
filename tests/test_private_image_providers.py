@@ -76,7 +76,7 @@ class PrivateImageProviders(unittest.TestCase):
             self.assertEqual(review['model'],'google:'+providers.VISION_MODEL)
             self.assertEqual(review['alt_fi'],'Kirjoja kirjaston hyllyillä.')
             self.assertIn('Books in a library.',vision.call_args.args[1])
-            self.assertIn('no faces/likenesses',vision.call_args.args[1])
+            self.assertIn('no unauthorized person likenesses',vision.call_args.args[1])
         with patch.dict('os.environ',{'UUTIS_VISION_PROVIDER':'google'}),patch.object(providers,'google_vision',return_value={'approved':True}):
             with self.assertRaises(imagery.GenerationError):imagery.review_pixels(raw,draft,generated=True)
 
