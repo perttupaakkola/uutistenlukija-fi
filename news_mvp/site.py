@@ -93,7 +93,8 @@ def image_credit_html(image):
         if provider == 'statfi':
             return f'Lähde: <a href="{photo_url}">Tilastokeskus</a>'
         if provider == 'helsinki':
-            return f'Kuva: <a href="{photo_url}">Helsingin kaupunki</a> / {photographer}'
+            return (f'Kuva: <a href="{photo_url}">Helsingin kaupunki</a> / '
+                    f'<a href="{esc(provenance["photographer_url"])}">{photographer}</a>')
         if provider == "unsplash":
             return (f'Photo by <a href="{esc(provenance["photographer_url"])}">{photographer}</a> '
                     f'on <a href="{photo_url}">Unsplash</a>')
@@ -102,7 +103,8 @@ def image_credit_html(image):
             "wikimedia": "Wikimedia Commons",
             "google": "Google Custom Search",
         }.get(provider, provider.title())
-        return f'Photo by {photographer} on <a href="{photo_url}">{provider_label}</a>'
+        return (f'Photo by <a href="{esc(provenance["photographer_url"])}">{photographer}</a> '
+                f'on <a href="{photo_url}">{provider_label}</a>')
     return esc(image.get("credit", ""))
 
 
@@ -113,45 +115,27 @@ def image_size_attributes(image):
     return size + ' decoding="async"'
 
 
-def image_overlay_html(image, include_credit=True):
-    """Reader-visible archive-photo labels and reviewed stock credit for a portal slot.
-
-    Generated-image disclosure belongs below the image on the article page, never on
-    homepage or listing thumbnails.
-    """
-    stock = bool(image.get("stock_provenance"))
-    label_html = '<span class="portal-lead__image-label">Arkistokuva</span>' if stock else ""
-    credit_html = ""
-    if include_credit and stock:
-        credit_html = f'<span class="portal-lead__credit">{image_credit_html(image)}</span>'
-    return label_html + credit_html
-
-
 def homepage_image_figure(image, image_url, lazy):
     """Homepage image wrapper for a reviewed image, sized like the article page.
 
     Only images below the fold are lazy-loaded, so the lead never delays its own
     paint. There are no srcset variants: exactly one reviewed asset is served.
-    Generated illustrations carry no listing overlay or caption. Their disclosure is
-    rendered beneath the hero on the article page. Stock photographs retain the reviewed
-    linked credit and an ``Arkistokuva`` overlay.
+    The image has no listing credit; full real-image rights live inside its article.
     """
     loading = ' loading="lazy"' if lazy else ""
     return (f'<div class="portal-lead__image">'
             f'<img src="{esc(image_url)}" alt="{esc(image["alt"])}" '
-            f'{image_size_attributes(image)}{loading} referrerpolicy="no-referrer">'
-            f'{image_overlay_html(image)}</div>')
+            f'{image_size_attributes(image)}{loading} referrerpolicy="no-referrer"></div>')
 
 
 def listing_image_slot(image, image_url, slot, story_url, story_title, lazy=True):
-    """Link a reviewed thumbnail to its story, leaving its credit links separate."""
+    """Link a reviewed thumbnail to its story; rights remain in the article."""
     loading = ' loading="lazy"' if lazy else ""
     return (f'<div class="{slot}">'
             f'<a class="portal-thumb__story" href="{esc(story_url)}" '
             f'aria-label="Lue juttu: {esc(story_title)}">'
             f'<img src="{esc(image_url)}" alt="{esc(image["alt"])}" '
-            f'{image_size_attributes(image)}{loading} referrerpolicy="no-referrer"></a>'
-            f'{image_overlay_html(image)}</div>')
+            f'{image_size_attributes(image)}{loading} referrerpolicy="no-referrer"></a></div>')
 
 
 def jsonld_script(payload):
@@ -363,7 +347,6 @@ def article_hero_figure(image, image_url):
                if image.get("generated") is True else "")
     return (f'<figure class="article-hero"><img src="{esc(image_url)}" alt="{esc(image["alt"])}" '
             f'{image_size_attributes(image)} referrerpolicy="no-referrer">'
-            f'{image_overlay_html(image, include_credit=bool(image.get("stock_provenance")))}'
             f'{caption}</figure>')
 
 
@@ -383,7 +366,7 @@ def resolved_image_url(image, state_dir, output_dir, assets):
 
 
 def related_story_html(job, draft, state_dir, output_dir, assets):
-    """One quiet image-backed link, with the image's existing attribution alongside."""
+    """One quiet image-backed story link; its article contains the image rights."""
     href = '/' + article_path(job)
     image = display_image(draft.get('image'))
     if not image:
@@ -392,18 +375,8 @@ def related_story_html(job, draft, state_dir, output_dir, assets):
     thumbnail = (f'<span class="related-story__thumb"><img src="{esc(image_url)}" '
                  f'alt="{esc(image["alt"])}" {image_size_attributes(image)} '
                  'loading="lazy" referrerpolicy="no-referrer"></span>')
-    if image.get('generated') is True:
-        credit = (f'{esc(image["caption"])} · AI-kuvitus · '
-                  f'<a href="{esc(image["license_url"])}">AI-kuvien käyttöehdot</a>')
-    else:
-        # The full source/author links remain in the destination article's image
-        # rights section. A quiet text credit here keeps this row's only story
-        # link unambiguous while retaining the reviewed credit and licence.
-        credit = (f'{esc(image.get("credit", ""))} · '
-                  f'<a href="{esc(image["license_url"])}">{esc(image["license"])}</a>')
     return (f'<li class="related-story"><a class="related-story__link" href="{href}">'
-            f'{thumbnail}<span class="related-story__title">{esc(draft["title"])}</span></a>'
-            f'<small class="related-story__credit">{credit}</small></li>')
+            f'{thumbnail}<span class="related-story__title">{esc(draft["title"])}</span></a></li>')
 
 
 def image_rights_html(image):
@@ -415,12 +388,11 @@ def image_rights_html(image):
     """
     if not image:
         return ""
-    caption = esc(image.get("caption", ""))
     if image.get("generated") is True:
-        body = (f'{caption} AI-kuvitus · <a href="{esc(image["license_url"])}">'
+        body = (f'AI-kuvitus · <a href="{esc(image["license_url"])}">'
                 f'AI-kuvien käyttöehdot</a>')
     else:
-        body = (f'{caption} {image_credit_html(image)} · '
+        body = (f'{esc(image.get("caption", ""))} {image_credit_html(image)} · '
                 f'<a href="{esc(image["license_url"])}">{esc(image["license"])}</a> · '
                 f'<a href="{esc(image["source_url"])}">Kuvan lähde</a>')
         attribution = image.get('stock_provenance', {}).get('attribution')
@@ -450,8 +422,10 @@ def listing_feed_html(items, empty_text):
 
 def category_page_body(title, note, items, empty_text):
     """Native portal-list page: header plus a feed of text rows, never a card grid."""
+    slug = category_page_slug(title)
+    modifier = f' portal-list-header--{esc(slug)}' if slug else ''
     return (f'<div class="portal-list-page">'
-            f'<header class="portal-list-header"><h1>{esc(title)}</h1><p>{esc(note)}</p></header>'
+            f'<header class="portal-list-header{modifier}"><h1>{esc(title)}</h1><p>{esc(note)}</p></header>'
             f'{listing_feed_html(items, empty_text)}</div>')
 
 
@@ -467,7 +441,7 @@ def sources_page_body():
             'Teksti perustuu tarkastettuihin lähdekatkelmiin.</p></div></section>'
             '<section class="portal-feed-item"><div class="portal-feed-item__body">'
             '<h2>Kuvat</h2>'
-            '<p>Valokuvien tekijä, lähde ja käyttöoikeus ilmoitetaan kuvan yhteydessä. '
+            '<p>Valokuvien tekijä, lähde ja käyttöoikeus ilmoitetaan artikkelin kuvan käyttöoikeudet -osiossa. '
             'Tekoälyllä tehtyjen kuvien alla artikkelissa lukee AI-generoitu kuva.</p></div></section>'
             '<section class="portal-feed-item"><div class="portal-feed-item__body">'
             '<h2>Toimitus</h2>'
@@ -568,14 +542,14 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
     river_rows = []
     if is_homepage:
         job, draft, link, date, fixture, image, image_url = page_items[0]
-        category, _slug = row_category(draft)
+        category, slug = row_category(draft)
         published = esc(timestamp(job["created_at"]).isoformat())
         figure_html = homepage_image_figure(image, image_url, lazy=False) if image else ""
         lead_classes = "portal-lead lead-story" + ("" if image else " lead-story--text-only")
         minutes = reading_time_minutes(draft)
         lead_html = (f'<article class="{lead_classes}">{figure_html}'
                      f'<div class="portal-lead__body">'
-                     f'<span class="portal-kicker">{category}</span>'
+                     f'<span class="portal-kicker portal-lead__category portal-lead__category--{slug}">{category}</span>'
                      f'<a class="portal-lead__time" href="{link}">Uusin juttu · julkaistu '
                      f'<time datetime="{published}">{date}</time></a>'
                      f'<h2 id="front-lead-title"><a href="{link}">{esc(draft["title"])}</a></h2>'

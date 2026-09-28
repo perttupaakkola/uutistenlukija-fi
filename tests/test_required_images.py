@@ -138,7 +138,7 @@ class RequiredImages(unittest.TestCase):
             ['courthouse doorway','legal files'],['people','text'])
         self.assertNotIn('Named politician',prompt)
         self.assertIn('No people, faces, human likenesses',prompt)
-        self.assertIn('never documentary photography',prompt)
+        self.assertIn('never present this as a photograph of a real event or venue',prompt)
         self.assertIn('courthouse doorway',prompt)
         self.assertNotIn('People, if shown',prompt)
 

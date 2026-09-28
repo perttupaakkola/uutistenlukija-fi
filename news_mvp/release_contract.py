@@ -753,6 +753,8 @@ class _RenderedStockMarkup(HTMLParser):
         self.images = []
         self.anchors = []
         self.visible = []
+        self.rights_visible = []
+        self.outside_rights_visible = []
         self.overlays = []
         self._anchor_stack = []
         self._overlay_stack = []
@@ -880,6 +882,7 @@ class _RenderedStockMarkup(HTMLParser):
         if self._ignored or self._hidden:
             return
         self.visible.append(data)
+        (self.rights_visible if self._rights_depth else self.outside_rights_visible).append(data)
         for record in self._anchor_stack:
             record['text'].append(data)
         for _tag, record in self._overlay_stack:
@@ -958,7 +961,8 @@ def _check_rendered_stock(html, image):
             rendered_image['height'] != str(pixels['height'])):
         raise ValueError('Stock article image dimensions mismatch')
 
-    visible = _stock_visible_text(''.join(rendered.visible))
+    visible = _stock_visible_text(''.join(rendered.rights_visible))
+    outside_rights = _stock_visible_text(''.join(rendered.outside_rights_visible))
     expected_credit = image['credit']
     for required in (image['caption'], image['license'], image['stock_provenance']['photographer'],
                      provider_text, expected_credit):
@@ -967,27 +971,20 @@ def _check_rendered_stock(html, image):
     for required in image['stock_provenance'].get('attribution', {}).values():
         if _stock_visible_text(required) not in visible:
             raise ValueError('Missing visible open-source title/change notice')
-    hero_labels = [_stock_visible_text(''.join(item['text'])) for item in rendered.overlays
-                   if item['kind'] == 'label' and item['hero']]
-    hero_credits = [_stock_visible_text(''.join(item['text'])) for item in rendered.overlays
-                    if item['kind'] == 'credit' and item['hero']]
-    if hero_labels.count('Arkistokuva') != 1 or _stock_visible_text(expected_credit) not in hero_credits:
-        raise ValueError('Missing stock hero overlay attribution')
+    if (rendered.overlays or _stock_visible_text(expected_credit) in outside_rights or
+            visible.count(_stock_visible_text(expected_credit)) != 1):
+        raise ValueError('Stock attribution must appear once inside image rights, without overlays')
 
     photographer = image['stock_provenance']['photographer']
     photographer_url = image['stock_provenance']['photographer_url']
     hero_anchors = [anchor for anchor in rendered.anchors if anchor['hero']]
     rights_anchors = [anchor for anchor in rendered.anchors if anchor['rights']]
-    required_hero = [(image['source_url'], provider_text)]
     required_rights = [(image['license_url'], image['license']),
                        (image['source_url'], provider_text),
                        (image['source_url'], 'Kuvan lähde')]
-    if provider == 'unsplash':
-        required_hero.append((photographer_url, photographer))
+    if provider != 'statfi':
         required_rights.append((photographer_url, photographer))
-    if (any(not _stock_has_anchor(hero_anchors, href, text, 'hero')
-            for href, text in required_hero) or
-            any(not _stock_has_anchor(rights_anchors, href, text, 'rights')
+    if (hero_anchors or any(not _stock_has_anchor(rights_anchors, href, text, 'rights')
                 for href, text in required_rights)):
         raise ValueError('Stock article attribution link mismatch')
 

@@ -345,7 +345,7 @@ class StockReleaseContract(unittest.TestCase):
         self.assertIn(f'<meta property="og:image" content="{escaped_url}">', article)
         self.assertIn(f'<img src="{escaped_url}"', home)
         self.assertIn(f'<meta property="og:image" content="{escaped_url}">', home)
-        self.assertEqual(article.count('>Arkistokuva</span>'), 1)
+        self.assertNotIn('>Arkistokuva</span>', article)
         self.assertIn('image-rights', article)
         self.assertNotIn('<figcaption', article)
         record = base.ReleaseV2.workflow(self, receipt)
@@ -412,14 +412,14 @@ class StockReleaseContract(unittest.TestCase):
                                 f'src="{image["url"].replace("&", "&amp;")}"', 1),
                 draft,
             ),
-            'hidden credit attribute': (
-                article.replace('<span class="portal-lead__credit">',
-                                '<span class="portal-lead__credit" hidden>', 1),
+            'obsolete hero overlay': (
+                article.replace('</figure>',
+                                '<span class="portal-lead__image-label">Arkistokuva</span></figure>', 1),
                 draft,
             ),
-            'hidden label style': (
-                article.replace('<span class="portal-lead__image-label">',
-                                '<span class="portal-lead__image-label" style="display:none">', 1),
+            'visible hero credit outside rights': (
+                article.replace('</figure>',
+                                '<span class="portal-lead__credit">Photo by '+image['stock_provenance']['photographer']+' on Unsplash</span></figure>', 1),
                 draft,
             ),
             'hidden rights section': (
@@ -427,20 +427,16 @@ class StockReleaseContract(unittest.TestCase):
                                 '<section class="image-rights" hidden>', 1),
                 draft,
             ),
-            'hidden credit ancestor': (
-                article.replace('<span class="portal-lead__credit">',
-                                '<span aria-hidden="true"><span class="portal-lead__credit">', 1)
-                .replace('</span></figure>', '</span></span></figure>', 1),
+            'missing rights credit': (
+                article.replace('Photo by ', '', 1),
                 draft,
             ),
-            'visually hidden label': (
-                article.replace('<span class="portal-lead__image-label">',
-                                '<span class="portal-lead__image-label visually-hidden">', 1),
+            'duplicate rights credit': (
+                article.replace('</section>', '<p>'+image['credit']+'</p></section>', 1),
                 draft,
             ),
-            'collapsed credit': (
-                article.replace('<span class="portal-lead__credit">',
-                                '<span class="portal-lead__credit" style="visibility:collapse">', 1),
+            'hidden rights credit': (
+                article.replace('Photo by ', '<span hidden>Photo by </span>', 1),
                 draft,
             ),
         }
@@ -454,11 +450,7 @@ class StockReleaseContract(unittest.TestCase):
                 check_article(html, packet, candidate,
                               canonical='https://uutistenlukija.fi/' + article_path(job))
 
-        nested_label = article.replace(
-            '<span class="portal-lead__image-label">Arkistokuva</span>',
-            '<span class="portal-lead__image-label"><span><span>Arkistokuva</span></span></span>',
-            1)
-        check_article(nested_label, packet, draft,
+        check_article(article, packet, draft,
                       canonical='https://uutistenlukija.fi/' + article_path(job))
 
     def test_captured_source_tamper_full_manifest_and_compatibility_paths(self):

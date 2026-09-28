@@ -108,7 +108,14 @@ def live_tick(config_path):
                 last=store.db.execute('SELECT packet FROM jobs ORDER BY created_at DESC,rowid DESC LIMIT 1').fetchone()
                 previous=json.loads(last[0]) if last else {}
                 after=previous.get('publication_basis',{}).get('provider') or ('nasa-modis' if previous.get('sources') and 'nasa.gov' in previous['sources'][0]['url'] else None)
-                recipes+=discover(config,excluded=excluded,errors=errors,after_provider=after)
+                recent_categories=[]
+                for row in store.db.execute(
+                    "SELECT jobs.draft FROM jobs JOIN publications ON publications.job_id=jobs.id "
+                    "WHERE publications.status='deployed' ORDER BY jobs.created_at DESC,jobs.id DESC LIMIT 4"):
+                    try: recent_categories.append(json.loads(row[0])['category'])
+                    except (TypeError,ValueError,KeyError): recent_categories.append(None)
+                recipes+=discover(config,excluded=excluded,errors=errors,after_provider=after,
+                                  recent_categories=recent_categories)
             else:recipes+=discover(config)
             seen=set()
             for recipe in recipes:

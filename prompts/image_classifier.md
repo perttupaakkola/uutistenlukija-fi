@@ -16,7 +16,7 @@ Säännöt:
   sitä käytetään tarkastetun kuvan alt-tekstissä. Älä toista uutisotsikkoa tai näkymättömiä väitteitä.
 - must_show sisältää ensisijaisesti yhden välttämättömän konkreettisen asian, jonka relevantti valokuva voi
   näyttää. Valitse uutisen olennainen kuvallinen aihe, älä vaadi kaikkia jutun aiheita samaan
-  kuvaan tai vaadi piirrettyä tyyliä valokuvalta. Esimerkiksi patteri kuvaa lämmitystä, vaikka
+  kuvaan tai vaadi AI-varakuvan tyyliä valokuvalta. Esimerkiksi patteri kuvaa lämmitystä, vaikka
   kuvassa ei samalla näkyisi koko energiaverkkoa. Piirretty tyyli koskee vain AI-varavaihtoehtoa.
   Lisää toinen asia vain, jos kuvan aihetta ei voi tunnistaa ilman sitä. Kyselyä koskevassa
   uutisessa älypuhelin voi riittää; älä vaadi samalla kannettavaa tietokonetta ja kyselylomaketta.
@@ -60,7 +60,7 @@ Säännöt:
   hylätä vain taustan satunnaisten ohikulkijoiden vuoksi, kun kuva ei liitä heihin mitään
   arkaluonteista väitettä. AI-generointi kieltää ihmiset erikseen kaikissa aiheissa.
   Ei yleistä satunnaista maisemaa.
-- Generoitu kuva on selvästi piirretty kuvitus, ei dokumentaarinen valokuva tapahtumasta.
+- Generoitu varakuva on naturalistinen mutta selvästi ei-dokumentaarinen kuvitus, ei valokuva tapahtumasta.
   Generoidun kuvan nimeämiseen käytetään vain ilmaisua "AI-generoitu kuva".
   Kirjoita kuvaus näkyvistä esineistä ja ympäristöstä ilman kuvaa luokittelevaa etuliitettä.
   Älä keksi nimetyn taideteoksen, rakennuksen tai muun yksilöidyn kohteen ulkoasua.

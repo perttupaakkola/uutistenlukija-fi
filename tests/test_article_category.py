@@ -111,7 +111,8 @@ class ArticleAndCategoryRendering(unittest.TestCase):
         html=self.article_text(output,jobs[0])
         related=html[html.index('<section class="related">'):]
         self.assertEqual(related.count('class="related-story__thumb"'),1)
-        self.assertIn('AI-generoitu kuva. Ei valokuva tapahtumasta.',related)
+        self.assertNotIn('AI-generoitu kuva. Ei valokuva tapahtumasta.',related)
+        self.assertNotIn('related-story__credit',related)
         target=lambda href:(output/href.lstrip('/')/'index.html').read_text()
         check_related_thumbnails(html,target)
         changed=html[:html.index('<section class="related">')]+related.replace('alt="','alt="Väärä ',1)

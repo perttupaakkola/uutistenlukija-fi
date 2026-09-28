@@ -47,7 +47,7 @@ class SourceNewsImages(unittest.TestCase):
         with tempfile.TemporaryDirectory() as state:record,_=self.record(state)
         stock_binding(record);news.validate_relation(record['stock_provenance'],PACKET,DRAFT)
         html=site.image_rights_html(record)
-        self.assertIn('Helsingin kaupunki</a> / Fixture Photographer',html)
+        self.assertIn('Helsingin kaupunki</a> / <a href="'+URL+'">Fixture Photographer</a>',html)
         self.assertIn(news.LICENSE,html);self.assertNotIn('CC BY',html)
         article='<article>'+site.article_hero_figure(record,f'/mvp-assets/{record["sha256"]}.jpg')+html+'</article>'
         _check_rendered_stock(article,record)
@@ -112,9 +112,11 @@ class SourceNewsImages(unittest.TestCase):
         with tempfile.TemporaryDirectory() as state:
             record,_=self.record(state)
             with mock.patch.object(news,'_read_html',return_value=b'<p>Only texts are reusable</p>'), \
+                    mock.patch.object(imagery,'fetch_wikimedia',return_value=None) as local, \
                     mock.patch.object(imagery,'fetch_pexels',return_value=record) as stock, \
                     mock.patch.object(imagery,'review_pixels',return_value=record['pixel_review']):
                 self.assertIsNotNone(imagery.build_image(DRAFT,state,decision=DECISION,packet=PACKET))
+                local.assert_called_once()
                 stock.assert_called_once()
 
     def test_source_pixel_context_refuses_changed_exact_bytes(self):

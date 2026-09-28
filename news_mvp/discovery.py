@@ -22,11 +22,11 @@ class Links(HTMLParser):
         if tag=='a' and a.get('href'):self.links.append(a['href'])
         if tag=='img' and a.get('src'):self.images.append(a)
 
-def discover(config,now=None,excluded=(),errors=None,after_provider=None):
+def discover(config,now=None,excluded=(),errors=None,after_provider=None,recent_categories=()):
     settings=config.get('discovery')
     if not settings:return []
     if settings.get('family')=='news-reviewed-v2':
-        return discover_mixed(config,now,excluded,errors,after_provider)
+        return discover_mixed(config,now,excluded,errors,after_provider,recent_categories)
     if settings.get('family')=='finnish-official':
         from .official import discover as official_discover
         return official_discover(config,now,excluded,errors)
@@ -101,7 +101,7 @@ def collect_modis(recipe,state_dir,now=None):
     return packet,receipt
 
 
-def discover_mixed(config,now=None,excluded=(),errors=None,after_provider=None):
+def discover_mixed(config,now=None,excluded=(),errors=None,after_provider=None,recent_categories=()):
     from .official import discover as official_discover, PROVIDER_ORDER
     errors=errors if errors is not None else []
     limit=config['discovery'].get('max_candidates',5)
@@ -120,6 +120,12 @@ def discover_mixed(config,now=None,excluded=(),errors=None,after_provider=None):
         except (ValueError,OSError) as error:
             errors.append({'provider':provider,'stage':'discovery','error':safe_error(error)})
             pools[provider]=[]
+    # The published timeline is never reordered or relabelled. After four consecutive
+    # civic stories, try any fresh statistical/science source before another municipal
+    # one; collection, rights checks and the writer still decide whether it is usable.
+    if tuple(recent_categories[:4]) == ('Kotimaa',) * 4:
+        alternate = [p for p in order if p in {'stat', 'ecb', 'nasa-modis'} and pools[p]]
+        order = alternate + [p for p in order if p not in alternate]
     # Same depth rationale as official.discover: the tick needs alternates to fall back to
     # when a candidate proves stale, so do not truncate the merged list to `limit`. The
     # caller still admits at most max_admissions_per_tick, and collection re-verifies each

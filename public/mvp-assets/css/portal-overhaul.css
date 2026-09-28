@@ -255,18 +255,6 @@ main.container { padding-top: 0; padding-bottom: 48px; }
 .portal-teaser__thumb { width: 136px; height: 104px; border-radius: 7px; overflow: hidden; background: var(--portal-soft); }
 .portal-teaser__thumb img { width: 100%; height: 100%; object-fit: cover; }
 .portal-teaser__meta { display: flex; gap: 10px; align-items: center; margin: 0 0 7px; color: var(--portal-muted); font-size: 13px; }
-.portal-teaser__category {
-  --portal-teaser-category: #0b49ad;
-  --portal-teaser-category-dark: #8ab4ff;
-}
-.portal-teaser__category--kotimaa { --portal-teaser-category: #1f5f8b; --portal-teaser-category-dark: #75bce8; }
-.portal-teaser__category--ulkomaat { --portal-teaser-category: #a93226; --portal-teaser-category-dark: #ff8a7a; }
-.portal-teaser__category--talous { --portal-teaser-category: #8b5b00; --portal-teaser-category-dark: #f1c75b; }
-.portal-teaser__category--teknologia { --portal-teaser-category: #6f3c8f; --portal-teaser-category-dark: #d8a2f0; }
-.portal-teaser__category--urheilu { --portal-teaser-category: #1e6f43; --portal-teaser-category-dark: #79d5a5; }
-.portal-teaser__category--kulttuuri { --portal-teaser-category: #8a4b00; --portal-teaser-category-dark: #f0b76a; }
-.portal-teaser__category--tiede { --portal-teaser-category: #0f6b5c; --portal-teaser-category-dark: #65d1bd; }
-.portal-teaser__meta .portal-teaser__category { color: var(--portal-teaser-category) !important; }
 .portal-teaser h3 { margin: 0 0 9px; font-size: 17px; line-height: 1.2; letter-spacing: -.01em; }
 .portal-right-rail { display: grid; grid-column: 3; grid-row: 1 / span 2; gap: 20px; }
 .portal-newsletter, .portal-market, .portal-most-read, .portal-editorials {
@@ -482,12 +470,12 @@ main.container { padding-top: 0; padding-bottom: 48px; }
 }
 .portal-topic-card {
   padding: 16px;
-  border-top: 3px solid var(--portal-red);
+  border-top: 3px solid var(--category-accent, var(--portal-blue));
   background: #fff;
   box-shadow: inset 0 0 0 1px var(--portal-line);
 }
 .portal-topic-card__label {
-  color: var(--portal-red);
+  color: var(--category-accent, var(--portal-blue));
   font-size: 12px;
   font-weight: 880;
   letter-spacing: .04em;
@@ -1316,9 +1304,6 @@ main.container { padding-top: 0; padding-bottom: 48px; }
 [data-theme="dark"] .portal-section-label {
   color: #d7cfc3 !important;
 }
-[data-theme="dark"] .portal-teaser__meta .portal-teaser__category {
-  color: var(--portal-teaser-category-dark) !important;
-}
 [data-theme="dark"] .portal-lead .portal-kicker {
   background: #0b49ad;
   color: #fff !important;
@@ -1495,3 +1480,27 @@ main.container { padding-top: 0; padding-bottom: 48px; }
 }
 .ai-disclosure a { color: inherit; text-decoration: underline; }
 .ai-disclosure a:hover { color: var(--accent, #c0392b); }
+
+/* One restrained desk palette, shared by native listing, lead and topic markup. */
+:is(.portal-teaser__category,.portal-row-card__category,.portal-lead__category,.portal-topic-card,.portal-list-header) {
+  --category-accent: var(--category-accent-light, #1f5f8b);
+}
+[data-theme="dark"] :is(.portal-teaser__category,.portal-row-card__category,.portal-lead__category,.portal-topic-card,.portal-list-header) {
+  --category-accent: var(--category-accent-dark, #75bce8);
+}
+:is(.portal-teaser__category--kotimaa,.portal-row-card__category--kotimaa,.portal-lead__category--kotimaa,.portal-topic-card--kotimaa,.portal-list-header--kotimaa) { --category-accent-light:#1f5f8b; --category-accent-dark:#75bce8; }
+:is(.portal-teaser__category--ulkomaat,.portal-row-card__category--ulkomaat,.portal-lead__category--ulkomaat,.portal-topic-card--ulkomaat,.portal-list-header--ulkomaat) { --category-accent-light:#a93226; --category-accent-dark:#ff8a7a; }
+:is(.portal-teaser__category--talous,.portal-row-card__category--talous,.portal-lead__category--talous,.portal-topic-card--talous,.portal-list-header--talous) { --category-accent-light:#8b5b00; --category-accent-dark:#f1c75b; }
+:is(.portal-teaser__category--teknologia,.portal-row-card__category--teknologia,.portal-lead__category--teknologia,.portal-topic-card--teknologia,.portal-list-header--teknologia) { --category-accent-light:#6f3c8f; --category-accent-dark:#d8a2f0; }
+:is(.portal-teaser__category--urheilu,.portal-row-card__category--urheilu,.portal-lead__category--urheilu,.portal-topic-card--urheilu,.portal-list-header--urheilu) { --category-accent-light:#1e6f43; --category-accent-dark:#79d5a5; }
+:is(.portal-teaser__category--kulttuuri,.portal-row-card__category--kulttuuri,.portal-lead__category--kulttuuri,.portal-topic-card--kulttuuri,.portal-list-header--kulttuuri) { --category-accent-light:#704777; --category-accent-dark:#dbaee9; }
+:is(.portal-teaser__category--tiede,.portal-row-card__category--tiede,.portal-lead__category--tiede,.portal-topic-card--tiede,.portal-list-header--tiede) { --category-accent-light:#0f6b5c; --category-accent-dark:#65d1bd; }
+:is(.portal-teaser__category,.portal-row-card__category,.portal-topic-card__label) { color:var(--category-accent)!important; }
+[data-theme="dark"] .portal-teaser .portal-teaser__category,
+[data-theme="dark"] .portal-row-card .portal-row-card__category,
+[data-theme="dark"] .portal-topic-card .portal-topic-card__label { color:var(--category-accent)!important; }
+.portal-list-header[class*="portal-list-header--"] h1 { color:var(--category-accent)!important; }
+.portal-lead .portal-lead__category { background:var(--category-accent-light)!important; color:#fff!important; }
+@media(max-width:900px) {
+  .portal-lead .portal-lead__category { background:transparent!important; color:var(--category-accent)!important; }
+}

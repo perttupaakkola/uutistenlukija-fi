@@ -11,15 +11,23 @@ NOW = datetime(2026, 9, 24, 12, tzinfo=timezone.utc)
 WEATHER = {'properties': {'meta': {'updated_at': NOW.isoformat(), 'units': {'air_temperature': 'celsius'}},
                          'timeseries': [{'time': NOW.isoformat(), 'data': {'instant': {'details': {'air_temperature': 8.5, 'wind_speed': 3}}}}]}}
 MARKETS = b'<Envelope><Cube><Cube time="2026-09-24"><Cube currency="USD" rate="1.13"/><Cube currency="SEK" rate="11.26"/><Cube currency="GBP" rate="0.85"/></Cube></Cube></Envelope>'
+FINNISH_INFLATION = {'class':'dataset','source':'Statistics Finland, consumer price index',
+    'id':['timeperiod_m','contentscode'],'size':[1,1],
+    'dimension':{'timeperiod_m':{'category':{'index':{'2026M08':0}}},
+                 'contentscode':{'category':{'index':{'Vuosimuutos':0},
+                                             'unit':{'Vuosimuutos':{'base':'per cent'}}}}},
+    'updated':NOW.isoformat(),'value':[2.2]}
 
 
 class FrontpageData(unittest.TestCase):
     def test_snapshots_cache_source_times_and_survive_provider_failure(self):
         with tempfile.TemporaryDirectory() as state:
-            reader = Mock(side_effect=lambda url: MARKETS if url == f.ECB_URL else json.dumps(WEATHER).encode())
+            reader = Mock(side_effect=lambda url: MARKETS if url == f.ECB_URL else
+                          json.dumps(FINNISH_INFLATION if url == f.STATFI_URL else WEATHER).encode())
             snapshot = f.refresh(state, NOW, reader)
-            self.assertEqual(reader.call_count, 5)
+            self.assertEqual(reader.call_count, 6)
             self.assertEqual(snapshot['markets']['date'], '2026-09-24')
+            self.assertEqual(snapshot['finnish_inflation']['value'], 2.2)
             self.assertEqual(snapshot['helsinki']['updated_at'], NOW.isoformat())
             reader.reset_mock()
             self.assertEqual(f.refresh(state, NOW + timedelta(minutes=30), reader), snapshot)
@@ -39,6 +47,10 @@ class FrontpageData(unittest.TestCase):
         self.assertTrue(f.current_markets(market, NOW + timedelta(days=2)))
         self.assertFalse(f.current_markets(market, NOW + timedelta(days=8)))
         self.assertFalse(f.current_markets(market, NOW - timedelta(days=1)))
+        inflation = f.parse_inflation(json.dumps(FINNISH_INFLATION))
+        self.assertTrue(f.current_inflation(inflation, NOW))
+        self.assertFalse(f.current_inflation(inflation, NOW + timedelta(days=51)))
+        self.assertFalse(f.current_inflation(inflation, NOW - timedelta(days=1)))
         text = (lambda data, now: f.weather(data, now)+f.markets(data, now)+f.data_script(data))({'helsinki': item, 'markets': market}, NOW + timedelta(days=8))
         self.assertIn('Sääennuste ei ole nyt saatavilla', text)
         self.assertIn('Valuuttakurssit eivät ole nyt saatavilla', text)
@@ -50,6 +62,10 @@ class FrontpageData(unittest.TestCase):
         with self.assertRaises(ValueError): f.parse_weather(json.dumps(broken))
         with self.assertRaises(ValueError): f.parse_markets(MARKETS.replace(b'1.13', b'NaN'))
         with self.assertRaises(ValueError): f.parse_markets(b'<Envelope/>')
+        bad = json.loads(json.dumps(FINNISH_INFLATION));bad['source'] = 'untrusted'
+        with self.assertRaises(ValueError): f.parse_inflation(json.dumps(bad))
+        bad = json.loads(json.dumps(FINNISH_INFLATION));bad['value'] = [float('nan')]
+        with self.assertRaises(ValueError): f.parse_inflation(json.dumps(bad))
         text = (lambda data, now: f.weather(data, now)+f.markets(data, now)+f.data_script(data))({'unexpected': '</script><script>alert(1)</script>'}, NOW)
         self.assertNotIn('<script>alert', text)
         self.assertIn('MET Norway', text)
@@ -57,7 +73,7 @@ class FrontpageData(unittest.TestCase):
         self.assertNotIn('weather-city', text)
 
     def test_readable_real_values_with_source_date(self):
-        text = (lambda data, now: f.weather(data, now)+f.markets(data, now)+f.data_script(data))({'helsinki': f.parse_weather(json.dumps(WEATHER)), 'markets': f.parse_markets(MARKETS)}, NOW)
+        text = (lambda data, now: f.weather(data, now)+f.markets(data, now)+f.data_script(data))({'helsinki': f.parse_weather(json.dumps(WEATHER)), 'markets': f.parse_markets(MARKETS), 'finnish_inflation':f.parse_inflation(json.dumps(FINNISH_INFLATION))}, NOW)
         self.assertIn('°C', text)
         self.assertIn('Helsinki · ennuste', text)
         self.assertIn('24.09.2026', text)
@@ -66,6 +82,10 @@ class FrontpageData(unittest.TestCase):
         self.assertIn('0.8500', text)
         self.assertIn('1 euro', text)
         self.assertIn('ei reaaliaikainen', text)
+        self.assertIn('Suomen inflaatio', text)
+        self.assertIn('2,2 %', text)
+        self.assertIn('Tilastokeskus', text)
+        self.assertIn('CC BY 4.0', text)
 
     def test_audited_wrong_image_excluded_without_mutating_provenance(self):
         image = {'sha256': next(iter(site.EXCLUDED_IMAGES)), 'alt': 'municipality'}

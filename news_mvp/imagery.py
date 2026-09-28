@@ -26,11 +26,11 @@ from datetime import datetime, timezone
 from .image_wording import (AI_ALT_PREFIX, AI_CAPTION, AI_CREDIT, AI_TERMS_URL,
                            validate_generated_wording)
 
-# gpt-image-1-mini is the cheap tier and is sufficient for a flat editorial illustration.
+# Existing fallback generator; the prompt keeps its output restrained and non-documentary.
 DEFAULT_MODEL = 'gpt-image-1-mini'
 DEFAULT_SIZE = '1536x1024'          # 3:2, a normal editorial lead-image ratio
 GENERATION_TIMEOUT = 240
-PROMPT_VERSION = 'imagery-v2-safe-scene'
+PROMPT_VERSION = 'imagery-v3-natural-editorial'
 MAX_PROMPT_CHARS = 2000
 # Public origin for the image record's `url`, which the release contract requires to be an
 # absolute HTTPS URL. Kept in step with editorial.SITE / the sitemap host.
@@ -191,16 +191,18 @@ def _prompt_for(subject, category='', depictable_scene='', must_show=(), must_av
     avoid = ', '.join(str(item) for item in must_avoid)[:220]
     scene = depictable_scene or subject
     return (
-        "Flat two-dimensional editorial drawing with visible ink outlines and matte gouache colour. "
-        "Clearly illustrated editorial artwork, never documentary photography or a photorealistic 3D render. "
+        "Naturalistic, realistic editorial artwork with believable material texture, soft daylight "
+        "and restrained Nordic colours. Visibly non-documentary through quiet compositional "
+        "abstraction; never present this as a photograph of a real event or venue. "
+        "No cartoon, children's-book, flat vector, watercolor, comic or glossy 3D style. "
         "No people, faces, human likenesses, victims, violence, text, logos or signage. "
         "Use only safe article-grounded objects, architecture, places or processes. "
         f"Context: {category_hint}. "
         f"Depictable scene: {scene[:300]}. Must show: {show}. Must avoid: {avoid}. "
-        "Recognisably drawn illustration, natural daylight, wide 3:2 composition "
-        "with clear space. Strictly no text, no lettering, no signage, no logos, no watermarks, "
+        "Wide 3:2 composition with clear space and editorial restraint. "
+        "Strictly no text, no lettering, no signage, no logos, no watermarks, "
         "no charts, no captions, no borders. No recognisable faces or identifiable real people. "
-        "Do not depict violence, victims, or any real named individual. "
+        "Do not depict violence, victims, any real named individual, or an identifiable real building. "
         # Invented period- or context-specific props assert facts the article never stated.
         # Observed on the first real generation: a face mask appeared in a school-shelter story,
         # implying a pandemic context that was not in the source.
@@ -485,8 +487,10 @@ def review_pixels(raw, draft, generated=False, *, source_context=None):
         'Return JSON only with approved (boolean), description (plain visible facts in English), reason '
         '(concrete relationship to article and any defects), no_people (boolean). '
         'Approve only a relevant image whose visible subject genuinely illustrates a concrete '
-        'article subject, without invented documentary claims. Unrelated stock, place-only '
-        'matches and mere metaphor are insufficient. '
+        'article subject, without invented documentary claims. A licensed photograph of a '
+        'verified exact venue or planning area may illustrate a municipal story where that '
+        'place is central, even if it does not document the new event; a generic city skyline, '
+        'unrelated stock and mere metaphor are insufficient. '
         'Never identify a flag from its colours alone: municipal and organizational flags '
         'may share national colours. Inspect emblems and stripe arrangements; unsupported '
         'national identities must not support relevance. A relevant object/process/building is '
@@ -495,11 +499,12 @@ def review_pixels(raw, draft, generated=False, *, source_context=None):
         'a specific material explicitly discussed in the article may illustrate that material '
         'without reproducing victims or the artwork. Judge that concrete material relationship, '
         'not whether the photo recreates the artwork; arbitrary decorative textures still fail. '
-        + ('This is labelled AI illustration: require clearly illustrated artwork, no people, '
-           'no faces/likenesses, no violence/victims, no readable text/logos. '
+        + ('This is labelled AI illustration: require naturalistic yet visibly non-documentary '
+           'editorial artwork, no people, no faces/likenesses, no violence/victims, '
+           'no readable text/logos or fabricated depiction of a real event or building. '
            if generated else 'This is licensed real imagery; judge relevance from visible content. ')
-        + 'Also return alt_fi: one complete concise Finnish sentence (12-200 characters) '
-           'aiming for 80-140 characters and only the main visible subject, not every detail, '
+        + 'Also return alt_fi: one complete concise Finnish sentence of 80-140 characters '
+           '(hard maximum 140; never add a second sentence) and only the main visible subject, '
            'describing only visible objects, without guessed location, event, person identity or uncertainty. '
            'Omit place/institution names from alt_fi even when file context identifies them. '
            'Do not infer an installation stage, purpose of bags/covers, or the exact function of '
@@ -814,6 +819,21 @@ def _build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3,
         if stock:
             return stock  # The source adapter requires the exact selected() review callback.
 
+    # For municipal stories, try file-licensed local/venue imagery before generic stock.
+    # The exact file-level rights and pixels still pass the same independent gates.
+    municipal = ((packet or {}).get('publication_basis') or {}).get('provider') in {
+        'helsinki', 'oulu', 'kuopio', 'vantaa'}
+    if municipal and model_decision and allow_open_sources:
+        try:
+            stock = fetch_wikimedia(draft, state_dir, decision=decision, accept=selected,
+                                    article_review_fallback=require_pixel_review)
+        except Exception:
+            stock = None
+        if stock:
+            accepted = selected(stock)
+            if accepted:
+                return accepted
+
     # A provider outage, malformed result, licence gap, or failed relevance check leaves the
     # next provider available. The order is intentionally part of the owner-facing policy.
     try:
@@ -837,7 +857,7 @@ def _build_image(draft, state_dir, category='', model=DEFAULT_MODEL, attempts=3,
         if accepted:
             return accepted
     if model_decision and allow_open_sources:
-        for provider in (fetch_wikimedia, fetch_google):
+        for provider in ((fetch_google,) if municipal else (fetch_wikimedia, fetch_google)):
             try:
                 stock = provider(draft, state_dir, decision=decision, accept=selected,
                                  article_review_fallback=require_pixel_review)
