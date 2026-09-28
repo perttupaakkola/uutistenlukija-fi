@@ -720,7 +720,8 @@ main.container { padding-top: 0; padding-bottom: 48px; }
     border-bottom-color: var(--portal-cyan);
   }
 
-  .portal-market { display: none; }
+  .portal-market { display: block; padding: 16px; }
+  .portal-market dl { gap: 8px; font-size: 13px; }
   .portal-livebar {
     min-height: 0;
     grid-template-columns: auto minmax(0,1fr);
