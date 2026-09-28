@@ -76,6 +76,7 @@ dialog button{font:inherit;min-height:44px;margin:0;padding:.7rem 1rem;border:1p
 .portal-lead__credit{right:12px;bottom:12px;overflow-wrap:anywhere;text-align:right}
 .portal-teaser__thumb,.portal-row-card__thumb,.portal-feed-item__thumb{position:relative}
 .portal-teaser__thumb .portal-lead__image-label,.portal-row-card__thumb .portal-lead__image-label,.portal-feed-item__thumb .portal-lead__image-label{top:4px;left:4px;max-width:calc(100% - 8px);padding:2px 3px;font-size:9px;line-height:1.15}
+.portal-teaser__thumb .portal-lead__image-label,.portal-row-card__thumb .portal-lead__image-label,.portal-feed-item__thumb .portal-lead__image-label{pointer-events:none}
 .portal-teaser__thumb .portal-lead__credit,.portal-row-card__thumb .portal-lead__credit,.portal-feed-item__thumb .portal-lead__credit{right:4px;bottom:4px;left:4px;max-width:calc(100% - 8px);padding:2px 3px;overflow:hidden;font-size:9px;line-height:1.15;text-align:left;text-overflow:ellipsis;white-space:nowrap}
 .article-hero{position:relative}
 .article-hero .portal-lead__image-label{top:12px;left:12px}
@@ -151,8 +152,13 @@ dialog button{font:inherit;min-height:44px;margin:0;padding:.7rem 1rem;border:1p
 .article-breadcrumb li{display:inline-flex;align-items:center;min-width:0;overflow-wrap:anywhere}
 .article-breadcrumb li+li::before{content:'›';margin-right:8px;color:var(--portal-muted,#647084)}
 .article-breadcrumb a{display:inline-flex;align-items:center;min-height:44px;min-width:44px;color:var(--portal-blue,#082867);text-decoration:underline;text-underline-offset:3px}
+:root[data-theme="dark"] .article-breadcrumb a{color:#8ab4ff}
 .article-breadcrumb [aria-current="page"]{font-weight:500;color:var(--portal-muted,#647084)}
 .article-breadcrumb a:focus-visible,.related-story a:focus-visible{outline:3px solid var(--accent,#c0392b);outline-offset:2px}
+
+/* Make publication sources and image rights discoverable without changing copy. */
+.single-article .sources a,.single-article .image-rights a{text-decoration:underline;text-underline-offset:3px}
+.single-article .sources a:focus-visible,.single-article .image-rights a:focus-visible{outline:3px solid var(--accent,#c0392b);outline-offset:2px}
 
 /* Keep the disclosure attached to the picture and separate the reading blocks. */
 .single-article > .lead{margin:20px 0 20px}

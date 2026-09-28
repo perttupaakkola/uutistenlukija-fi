@@ -143,12 +143,14 @@ def homepage_image_figure(image, image_url, lazy):
             f'{image_overlay_html(image)}</div>')
 
 
-def listing_image_slot(image, image_url, slot, lazy=True):
-    """Render one of the theme's existing thumbnail slots for a reviewed image."""
+def listing_image_slot(image, image_url, slot, story_url, story_title, lazy=True):
+    """Link a reviewed thumbnail to its story, leaving its credit links separate."""
     loading = ' loading="lazy"' if lazy else ""
     return (f'<div class="{slot}">'
+            f'<a class="portal-thumb__story" href="{esc(story_url)}" '
+            f'aria-label="Lue juttu: {esc(story_title)}">'
             f'<img src="{esc(image_url)}" alt="{esc(image["alt"])}" '
-            f'{image_size_attributes(image)}{loading} referrerpolicy="no-referrer">'
+            f'{image_size_attributes(image)}{loading} referrerpolicy="no-referrer"></a>'
             f'{image_overlay_html(image)}</div>')
 
 
@@ -435,7 +437,7 @@ def listing_feed_html(items, empty_text):
     for job, draft, link, date, fixture, image, image_url in items:
         published = esc(timestamp(job["created_at"]).isoformat())
         modifier = "" if image else " portal-feed-item--no-image"
-        thumb = listing_image_slot(image, image_url, "portal-feed-item__thumb") if image else ""
+        thumb = listing_image_slot(image, image_url, "portal-feed-item__thumb", link, draft["title"]) if image else ""
         rows.append(f'<article class="portal-feed-item{modifier}">'
                     f'<time class="portal-feed-item__time" datetime="{published}">{date}</time>'
                     f'<div class="portal-feed-item__body">'
@@ -539,7 +541,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
         category, slug = row_category(draft)
         published = esc(timestamp(job["created_at"]).isoformat())
         modifier = "" if image else " portal-teaser--no-image"
-        thumb = listing_image_slot(image, image_url, "portal-teaser__thumb") if image else ""
+        thumb = listing_image_slot(image, image_url, "portal-teaser__thumb", link, draft["title"]) if image else ""
         return (f'<article class="portal-teaser{modifier}">{thumb}<div>'
                 f'<div class="portal-teaser__meta">'
                 f'<span class="portal-kicker portal-teaser__category portal-teaser__category--{slug}">{category}</span>'
@@ -553,7 +555,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
         category, slug = row_category(draft)
         published = esc(timestamp(job["created_at"]).isoformat())
         modifier = "" if image else " portal-row-card--no-image"
-        thumb = listing_image_slot(image, image_url, "portal-row-card__thumb") if image else ""
+        thumb = listing_image_slot(image, image_url, "portal-row-card__thumb", link, draft["title"]) if image else ""
         return (f'<article class="portal-row-card{modifier}">{thumb}<div>'
                 f'<div class="portal-row-card__meta">'
                 f'<span class="portal-kicker portal-row-card__category portal-row-card__category--{slug}">{category}</span>'
