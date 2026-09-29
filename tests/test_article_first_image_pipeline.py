@@ -1,12 +1,15 @@
 """The public image path searches every ranked concept before exact fallback."""
 import hashlib
 import io
+import json
 import tempfile
 import unittest
 from pathlib import Path
 from unittest import mock
 
 from news_mvp import imagery
+from news_mvp.controller import article_first_image
+from news_mvp.discovery import CREDIT, INDEX, ORIGIN, RIGHTS, verify_modis_intake
 from news_mvp.editorial import digest
 from PIL import Image
 
@@ -32,6 +35,92 @@ DECISION = {'version':'article-first-v1','category':'Kotimaa','concepts':[
 
 
 class ArticleFirstPipeline(unittest.TestCase):
+    def test_nasa_intake_photo_requires_captured_source_and_photo_rights(self):
+        with tempfile.TemporaryDirectory() as state:
+            source_url = ORIGIN+'/gallery/individual.php?db_date=2026-09-28'
+            image_url = ORIGIN+'/gallery/images/image09282026_main.jpg'
+            source_raw = b'<div class="option">MODIS source article</div>'
+            rights_text = 'NASA media guidelines permit informational use with NASA credit. ' * 5
+            rights_text = rights_text.strip()
+            rights_raw = ('<div class="entry-content">'+rights_text+'</div>').encode()
+            image_raw = b'isolated-source-photo'
+            packet = {'story_key':'url:'+source_url,
+                'sources':[{'url':source_url}],
+                'image':{'url':image_url, 'source_url':source_url, 'sha256':hashlib.sha256(image_raw).hexdigest(),
+                    'license_url':RIGHTS,
+                    'license':'NASA media guidelines: informational/editorial use with NASA credit; no endorsement',
+                    'credit':CREDIT},
+                'supporting_documents':[{'id':'RIGHTS','url':RIGHTS,
+                    'sha256':hashlib.sha256(rights_raw).hexdigest(),
+                    'text':rights_text}]}
+            folder = Path(state)/'intake'/digest(packet)
+            folder.mkdir(parents=True)
+            (folder/'source.html').write_bytes(source_raw)
+            (folder/'rights.html').write_bytes(rights_raw)
+            (folder/'packet.json').write_text(json.dumps(packet))
+            (folder/'receipt.json').write_text(json.dumps({'fixture':False,
+                'source_sha256':hashlib.sha256(source_raw).hexdigest(),
+                'rights_sha256':hashlib.sha256(rights_raw).hexdigest(),
+                'source_url':source_url,'image_url':image_url,
+                'image_sha256':packet['image']['sha256'],'discovered_from':INDEX}))
+            self.assertTrue(verify_modis_intake(packet,state))
+            (folder/'rights.html').write_bytes(rights_raw+b'changed')
+            with self.assertRaisesRegex(ValueError, 'bytes changed'):
+                verify_modis_intake(packet,state)
+            changed = {**packet,'image':{**packet['image'],'source_url':'https://example.org/wrong'}}
+            with self.assertRaisesRegex(ValueError, 'identity changed'):
+                verify_modis_intake(changed,state)
+
+    def test_intake_photo_is_only_a_candidate_after_text_first_classification(self):
+        source = {'generated':False, 'sha256':'a'*64}
+        packet = {'sources':[{'id':'A'}], 'image':source}
+        draft = {**DRAFT, 'image':source}
+        chosen = {'sha256':'b'*64}
+        with mock.patch.object(imagery, 'classify_draft', return_value=DECISION) as classify, \
+                mock.patch.object(imagery, 'build_image', return_value=chosen) as build:
+            self.assertIs(article_first_image(draft, packet, '/tmp/isolated-state', object()), chosen)
+        self.assertNotIn('image', classify.call_args.args[0])
+        self.assertNotIn('image', classify.call_args.kwargs['packet'])
+        self.assertEqual(build.call_args.args[0]['image'], source)
+        self.assertEqual(build.call_args.kwargs['packet']['image'], source)
+        self.assertEqual(build.call_args.kwargs['decision'], DECISION)
+
+    def test_rights_pinned_intake_photo_is_scored_for_each_concept(self):
+        with tempfile.TemporaryDirectory() as state:
+            path = Path(state)/'media/source.jpg'
+            path.parent.mkdir()
+            raw = b'intake-source-pixels'
+            path.write_bytes(raw)
+            source = {'sha256':hashlib.sha256(raw).hexdigest(),
+                'local_path':'media/source.jpg', 'url':'https://example.org/source.jpg',
+                'source_url':'https://example.org/story', 'license_url':'https://example.org/rights',
+                'license':'Explicit photo rights', 'credit':'Source photographer',
+                'alt':'Source photo', 'caption':'Source photo caption'}
+            packet = {'sources':[{'id':'A'}], 'image':source}
+            scores = []
+            def review(pixels, article, generated=False, concept=None, **kwargs):
+                scores.append(concept['subject'])
+                return {'approved':True, 'fit_score':9 if concept['subject']==DECISION['concepts'][0]['subject'] else 5,
+                    'must_show_visible':[True]*len(concept['must_show']),
+                    'image_sha256':hashlib.sha256(pixels).hexdigest(),
+                    'article_text_sha256':imagery._article_text_sha(article),
+                    'concept_sha256':digest(concept), 'alt_fi':'Päiväkodin sisäänkäynti näkyy kuvassa.',
+                    'description':'Real daycare exterior.', 'reason':'Full article fit.', 'no_people':True}
+            with mock.patch.object(imagery, 'fetch_pexels', return_value=None), \
+                    mock.patch.object(imagery, 'fetch_unsplash', return_value=None), \
+                    mock.patch.object(imagery, 'review_pixels', side_effect=review), \
+                    mock.patch('news_mvp.release_contract.media') as media, \
+                    mock.patch('news_mvp.discovery.verify_modis_intake') as intake, \
+                    mock.patch('news_mvp.image_providers.candidate_event'):
+                chosen = imagery._build_image_article_first({**DRAFT,'image':source}, state,
+                    'Kotimaa', 'fixture', 1, DECISION, False, True, packet)
+            self.assertIsNot(chosen.get('generated'), True)
+            self.assertEqual(chosen['sha256'], source['sha256'])
+            self.assertEqual(scores, [x['subject'] for x in DECISION['concepts']])
+            self.assertEqual(chosen['selection_evidence']['selected']['fit_score'], 9)
+            self.assertTrue(media.called)
+            self.assertTrue(intake.called)
+
     def test_street_name_alone_cannot_prove_an_exact_numbered_building(self):
         concept = {'subject':'Turunlinnantie 12',
             'depictable_scene':'Turunlinnantie 12 building exterior',
@@ -149,6 +238,7 @@ class ArticleFirstPipeline(unittest.TestCase):
                     'source_url':f'https://www.pexels.com/photo/{rank}/',
                     'license':'Pexels License','sha256':sha,
                     'local_path':f'media/candidate{rank}.jpg',
+                    'stock_provenance':{'provider':'pexels'},
                     'relevance_check':{'accepted':True,'method':'metadata',
                         'evidence':'preschool','matched':['preschool'],'reason':'fixture'},
                     'classifier_output':decision})

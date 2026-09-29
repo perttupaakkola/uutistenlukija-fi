@@ -214,6 +214,18 @@ def _run_image_backfill(config, store, state_dir, model=None, limit=IMAGE_BACKFI
     return backfill_missing_images(store, state_dir, model, limit=limit)
 
 
+def article_first_image(draft, packet, state_dir, model):
+    """Rank the final article before considering even an intake-supplied photograph."""
+    from .imagery import build_image, classify_draft
+    text_draft = {key: value for key, value in draft.items() if key != 'image'}
+    text_packet = {key: value for key, value in packet.items() if key != 'image'}
+    decision = classify_draft(text_draft, model=model, packet=text_packet)
+    # The rights-pinned intake photo is only one candidate in the ranked search.
+    candidate_draft = {**text_draft, 'image': packet.get('image')}
+    return build_image(candidate_draft, state_dir, category=draft.get('category', ''),
+                       decision=decision, packet=packet, allow_open_sources=True)
+
+
 def tick(config_path, model=None, now=None, _already_locked=False, target_job_id=None,
          image_backfill_limit=IMAGE_BACKFILL_LIMIT):
     config = load_config(config_path)
@@ -260,28 +272,13 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                 draft = repair_title(model, packet, draft)
                 # Keep the completed writing work across image-provider outages.
                 store.save_draft(job["id"], draft, model.name)
-                if packet.get('image') and not packet.get('fixture'):
-                    from .imagery import reviewed_image
-                    try:
-                        image = reviewed_image(packet['image'], draft, config['state_dir'])
-                    except (ValueError, KeyError, RuntimeError, OSError):
-                        image = None
-                    packet = {**packet, 'image': image}
-                    store.save_packet(job['id'], packet)
                 # Understand the complete reviewed draft before searching for an image. The
                 # classifier and provider tree must produce a reviewed relevant image.
                 # Fixture packets are deliberately network-free; their model adapter is only a
                 # contract test and must never make a provider or generation request.
-                if (config.get("illustrations", True) and not packet.get("image") and
-                        not packet.get("fixture", False)):
+                if config.get("illustrations", True) and not packet.get("fixture", False):
                     try:
-                        from .imagery import build_image, classify_draft
-                        image_decision = classify_draft(draft, model=model, packet=packet)
-                        illustration = build_image(draft, config["state_dir"],
-                                                   category=draft.get("category", ""),
-                                                   decision=image_decision,
-                                                   packet=packet,
-                                                   allow_open_sources=not packet.get("fixture", False))
+                        illustration = article_first_image(draft, packet, config["state_dir"], model)
                     except Exception:
                         illustration = None
                     if illustration is not None:
@@ -292,6 +289,17 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                         packet = {**packet, "image": illustration}
                         job = {**job, "packet": json.dumps(packet)}
                         store.save_packet(job["id"], packet)
+                elif packet.get('image') and not packet.get('fixture', False):
+                    # Retain the explicitly disabled legacy controller mode used by
+                    # isolated migration tests. The live production config enables
+                    # illustrations and always takes the ranked article-first path.
+                    from .imagery import reviewed_image
+                    try:
+                        packet = {**packet, 'image': reviewed_image(
+                            packet['image'], draft, config['state_dir'])}
+                    except (ValueError, KeyError, RuntimeError, OSError):
+                        packet = {**packet, 'image': None}
+                    store.save_packet(job['id'], packet)
                 draft["image"] = packet.get("image")
                 if not packet.get('fixture') and not draft['image']:
                     raise ImagePending('Image pending: no relevant reviewed candidate; publication withheld')

@@ -943,6 +943,15 @@ def _article_text_sha(draft):
     return hashlib.sha256(json.dumps(article, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
 
 
+def _verify_attached_source_image(packet, state_dir):
+    if packet.get('publication_basis') is not None:
+        from .release_contract import verify_intake
+        verify_intake(packet, state_dir)
+    else:
+        from .discovery import verify_modis_intake
+        verify_modis_intake(packet, state_dir)
+
+
 def validate_selection_evidence(image, draft=None):
     """Require an auditable full-article search before a new real or generated image."""
     evidence = image.get('selection_evidence')
@@ -1032,7 +1041,7 @@ def _build_image_article_first(draft, state_dir, category, model, attempts, deci
         rank = concept['rank']
         providers = []
         existing = (packet or {}).get('image')
-        if (isinstance(existing, dict) and existing.get('generated') is False and
+        if (isinstance(existing, dict) and existing.get('generated') is not True and
                 existing == draft.get('image')):
             providers.append(('archive-image', lambda accept, image=existing: accept(image)))
         if allow_open_sources and packet and municipal:
@@ -1094,13 +1103,20 @@ def _build_image_article_first(draft, state_dir, category, model, attempts, deci
                         return None
                     result = {**stock, 'pixel_review':review, 'alt':_stock_alt(review)}
                     gate = result.get('relevance_check')
-                    if gate is not None and gate.get('accepted') is not True:
+                    if not isinstance(gate, dict) or gate.get('accepted') is not True:
                         result['relevance_check'] = {'accepted':True,'method':'vision',
                             'evidence':review['description'][:RELEVANCE_EVIDENCE_LIMIT],
                             'matched':sorted(_semantic_tokens(review['description']) &
                                              _decision_tokens(single)),
                             'reason':'Exact-pixel full-article score meets the 8/10 threshold'}
-                    stock_binding(result)  # Existing exact-file rights/provenance gate.
+                    if 'stock_provenance' in result:
+                        stock_binding(result)  # Exact-file stock rights/provenance gate.
+                    else:
+                        # An intake-supplied source photo has no stock schema. Its own
+                        # captured rights/bytes must still pass the normal release gates.
+                        from .release_contract import media
+                        media({**packet, 'image': result}, {**draft, 'image': result})
+                        _verify_attached_source_image(packet, state_dir)
                     validate_pixel_review(result, draft)
                     candidate_event(result, image_sha, 'accepted')
                     return result
@@ -1132,7 +1148,12 @@ def _build_image_article_first(draft, state_dir, category, model, attempts, deci
                 'searches':searches,'selected':{'kind':'real','concept_rank':rank,
                     'fit_score':score,'image_sha256':chosen['pixel_review']['image_sha256']}}}
         validate_selection_evidence(chosen, draft)
-        stock_binding(chosen)
+        if 'stock_provenance' in chosen:
+            stock_binding(chosen)
+        else:
+            from .release_contract import media
+            media({**packet, 'image': chosen}, {**draft, 'image': chosen})
+            _verify_attached_source_image(packet, state_dir)
         return chosen
     safest = next(concept for concept in decision['concepts'] if concept['safe_to_generate'])
     best = concept_decision(decision, safest)

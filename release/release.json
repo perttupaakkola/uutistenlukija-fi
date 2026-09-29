@@ -4,114 +4,421 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "f1f10c33bc1a7c97537d54a3297491a76e0ece09",
-  "job_id": "81e510f0302fea94166325b395936505d059dcad581766209e3e90f4ce5e654b",
-  "packet_sha256": "028481508f82119b25a4c21928d5344e074fc87a4ca892f15b4a1cc48b352192",
-  "draft_sha256": "b46ca381170c58021ccf534fe23eb967382d7756af33c11792ab9c670c714762",
-  "image_sha256": "af5860f62bf1bc8bf102be7007fb7456130dad98ed9f0c53467b379bda3a57eb",
+  "job_id": "7026a3950494d88b75fa9c49d72c6626f4d9bc97346be7c86cce12c8a9211778",
+  "packet_sha256": "eae23bbbd33efb637b684d3897863997e3cc69324f4794d0a9d64183cc093ae2",
+  "draft_sha256": "4b9af1b1ed72685502ae15c8944061b56a5f8ffa374f3778cb825081ffadc18a",
+  "image_sha256": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "3ced2baf273660eed5d90835c7b5c0be5807a9a6934a5dd5c9578367204ad1d3"
+    "provenance_sha256": "94dd2098b732f7ec3eb03c3d5a9ab226a744a9a08d429c405e231c3e65e7a571"
   },
   "stock_image": {
-    "alt": "Arkistokuva: Rahalaskuri syöttää nopeasti 50 euron seteleitä, jotka näkyvät liikkeen vuoksi sumeina, ja vihreä näyttö näyttää tietoja.",
+    "alt": "Arkistokuva: Kuopion kaupungintalo on kuvattu päiväsaikaan, sen edessä on vilkas katu, jossa on autoja, busseja ja jalankulkijoita.",
     "caption": "Arkistokuva artikkelin aiheesta.",
     "classifier_output": {
-      "category": "Talous",
-      "depictable_scene": "Laskimen vieressä on erikorkuisia eurokolikkopinoja neutraalilla työpöydällä.",
-      "must_avoid": [
-        "pörssikurssit tai osakekaupan näytöt",
-        "kryptovaluutat",
-        "virheelliset tai keksityt prosentit ja euromäärät"
+      "category": "Kotimaa",
+      "concepts": [
+        {
+          "depictable_scene": "Lisensoitu dokumentaarinen valokuva Kuopion kaupungin todellisesta LVV26-harjoitustyöskentelystä, jossa viranomaiset työskentelevät sisätilassa yhteisen tilannekuvanäytön ääressä.",
+          "must_avoid": [
+            "staged street evacuation",
+            "combat or destruction"
+          ],
+          "must_show": [
+            "officials in a coordination room",
+            "situation-display screens"
+          ],
+          "rank": 1,
+          "safe_to_generate": false,
+          "search_queries": [
+            "Kuopio LVV26 valmiusharjoitus",
+            "LVV26 harjoitus kuvat",
+            "Lupa- ja valvontavirasto LVV26",
+            "LVV26 emergency coordination room"
+          ],
+          "subject": "Kuopion kaupunki LVV26-valmiusharjoituksessa"
+        },
+        {
+          "depictable_scene": "Ylhäältä kuvattu paikantamaton harjoituspöytä, jolla on nimetön kuvitteellinen tieverkkokartta ja muutama neutraali reittimerkki ilman ihmisiä.",
+          "must_avoid": [
+            "people, hands or body parts",
+            "recognizable real-place geography or readable labels",
+            "combat or disaster damage"
+          ],
+          "must_show": [
+            "unlabeled road-network map",
+            "neutral route markers"
+          ],
+          "rank": 2,
+          "safe_to_generate": true,
+          "search_queries": [
+            "väestönsiirto harjoituskartta",
+            "valmiusharjoitus karttapöytä",
+            "tilannekuva reittikartta",
+            "emergency route planning map"
+          ],
+          "subject": "kaupunki ja maan sisäisiä väestönsiirtoja havainnollistava pöytäharjoituskartta"
+        },
+        {
+          "depictable_scene": "Lisensoitu päiväkuva aidon Kuopion kaupungintalon tunnistettavasta ulkojulkisivusta ja sitä ympäröivästä kaupunkiympäristöstä ilman lavastettua harjoitustoimintaa.",
+          "must_avoid": [
+            "staged evacuation activity",
+            "military presence"
+          ],
+          "must_show": [
+            "authentic Kuopio City Hall facade",
+            "surrounding civic setting"
+          ],
+          "rank": 3,
+          "safe_to_generate": false,
+          "search_queries": [
+            "Kuopion kaupungintalo ulkokuva",
+            "Kuopio kaupungintalo",
+            "Kuopio City Hall exterior",
+            "Kuopio City Hall facade"
+          ],
+          "subject": "Kuopion kaupunki – kaupungintalon ulkokuva"
+        }
       ],
-      "must_show": [
-        "euro coin stacks"
-      ],
-      "search_queries": [
-        "Suomessa toimivien luottolaitosten rahoituskate",
-        "euro coin stacks calculator",
-        "eurokolikkopinoja laskimen vieressä"
-      ],
-      "subject": "Suomessa toimivien luottolaitosten rahoituskate vuonna 2025"
+      "version": "article-first-v1"
     },
-    "credit": "Photo by Pixabay on Pexels",
-    "depicted": "The image shows a close-up, high-angle view of a money counting machine in operation. A stack of 50 Euro banknotes is visible, with the top notes blurred due to motion as they are being processed by the machine. The machine itself is light blue-gray, with a textured surface. On the right side of the image, a green digital display screen is visible, showing text that includes \"DENOM SORT,\" \"A> 50€,\" \"B>AUTO,\" \"C>AUTO,\" \"D>AUTO,\" \"TOTAL:\", and \"B100 TO M2.\" There are no identifiable people in the ",
+    "credit": "Photo by Matti Mattila on Wikimedia Commons",
+    "depicted": "The image shows a street scene on a clear, sunny day with a large, ornate building in the background. The building is light-colored with a grey roof and a small cupola on top. There are numerous windows and decorative architectural details. In front of the building, there are several trees with green foliage. A wide street with a crosswalk is in the foreground and middle ground. Several vehicles are visible, including buses, cars, and taxis. One bus is yellow and brown, another is white and blue",
     "generated": false,
     "hotlink": false,
-    "license": "CC0 1.0",
-    "license_evidence": {
-      "image_path": "/photos/164688/pexels-photo-164688.jpeg",
-      "license": "CC0 1.0",
-      "license_code": "CC0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "photo_id": "164688",
-      "photo_url": "https://www.pexels.com/photo/gray-auto-bill-counter-164688/",
-      "photographer": "Pixabay",
-      "photographer_url": "https://www.pexels.com/@pixabay",
-      "response_sha256": "fb35baa36855f64e695ce6827ef033c1699cfcdba2d429145bde47e167c7bc39",
-      "retrieved_at": "2026-09-28T20:53:03.165794+00:00",
-      "transport": "jina_reader",
-      "version": 1
-    },
-    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-    "local_path": "media/af5860f62bf1bc8bf102be7007fb7456130dad98ed9f0c53467b379bda3a57eb.jpg",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "local_path": "media/8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0.jpg",
     "pixel_review": {
-      "alt_fi": "Rahalaskuri syöttää nopeasti 50 euron seteleitä, jotka näkyvät liikkeen vuoksi sumeina, ja vihreä näyttö näyttää tietoja.",
+      "alt_fi": "Kuopion kaupungintalo on kuvattu päiväsaikaan, sen edessä on vilkas katu, jossa on autoja, busseja ja jalankulkijoita.",
       "approved": true,
-      "article_text_sha256": "8395fb8b0cc9bcaf56a8a10b507d7f76faa30e0488f1f24a32754b256b64a9a4",
-      "description": "A close-up, high-angle view shows a stack of 50 Euro banknotes being rapidly fed through a grey money counting machine. The banknotes are blurred due to motion, but the 50 Euro denomination is visible on some. To the right, a green digital display shows text including \"DENOM SORT\", \"50€\", and \"TOTAL:\".",
-      "image_sha256": "af5860f62bf1bc8bf102be7007fb7456130dad98ed9f0c53467b379bda3a57eb",
+      "article_text_sha256": "2052e307d0a02d99300b32976e2ea2969f1e8915f0ca571ea733c00fd2286f21",
+      "concept_sha256": "d089083599a11f691158086a0c0976287e09810e26070596b53c6026ec7ccdcd",
+      "description": "A wide-angle, slightly faded color photograph shows a large, ornate building with a central tower and multiple windows, identified as Kuopio Town Hall. In front of the building, there is a busy street with cars, buses, and pedestrians. The street features a crosswalk, traffic signs, and streetlights. Trees line the street and are visible around the building. The sky is clear blue.",
+      "fit_score": 9,
+      "image_sha256": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
       "model": "google:gemini-2.5-flash",
-      "no_people": true,
-      "reason": "The article discusses financial topics such as interest income, interest expenses, and operating profits of credit institutions. The image of money being counted by a machine directly illustrates the handling and processing of money, which is a concrete and relevant subject to the financial data presented in the article.",
-      "reviewed_at": "2026-09-28T20:53:06.901572+00:00"
+      "must_show_visible": [
+        true,
+        true
+      ],
+      "no_people": false,
+      "reason": "The image clearly depicts the Kuopio Town Hall facade and its surrounding civic setting, which directly matches the selected concept. The article discusses an exercise involving the city of Kuopio, making an image of its city hall highly relevant as a concrete representation of the city.",
+      "reviewed_at": "2026-09-28T23:53:18.505779+00:00",
+      "source_context": {
+        "image_sha256": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "photo_id": "wikimedia-9096110",
+        "photo_url": "https://commons.wikimedia.org/wiki/File:Kuopio%20Town%20Hall%201989.jpg",
+        "photographer": "Matti Mattila",
+        "provider": "wikimedia",
+        "title": "Kuopio Town Hall 1989.jpg"
+      },
+      "source_context_sha256": "1a9119a2f7ccb81e662220522c4d6151df0654a54abd7062471fc57ef78a738b"
     },
     "pixels": {
-      "height": 625,
+      "height": 1191,
       "mode": "RGB",
-      "variance": 8148.7,
-      "width": 940
+      "variance": 7504.3,
+      "width": 1744
     },
     "relevance_check": {
       "accepted": true,
-      "evidence": "A close-up, high-angle view shows a stack of 50 Euro banknotes being rapidly fed through a grey money counting machine. The banknotes are blurred due to motion, but the 50 Euro denomination is visible on some. To the right, a green digital display shows text including \"DENOM SORT\", \"50€\", and \"TOTAL:\".",
+      "evidence": "A wide-angle, slightly faded color photograph shows a large, ornate building with a central tower and multiple windows, identified as Kuopio Town Hall. In front of the building, there is a busy street with cars, buses, and pedestrians. The street features a crosswalk, traffic signs, and streetlights. Trees line the street and are visible around the building. The sky is clear blue.",
       "matched": [
-        "euro"
+        "hall",
+        "kuopio"
       ],
       "method": "vision",
-      "reason": "Exact-pixel full-article review approved licensed subject; search composition gate: missing must_show: euro coin stacks"
+      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
     },
-    "sha256": "af5860f62bf1bc8bf102be7007fb7456130dad98ed9f0c53467b379bda3a57eb",
-    "source_url": "https://www.pexels.com/photo/gray-auto-bill-counter-164688/",
+    "selection_evidence": {
+      "article_text_sha256": "2052e307d0a02d99300b32976e2ea2969f1e8915f0ca571ea733c00fd2286f21",
+      "decision_sha256": "962a25f1d4a2aca1c42118b1c9114b778b170ba2aa3b15ded0059e1a561a5da6",
+      "minimum_real_fit": 8,
+      "searches": [
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "source-news",
+          "queries": [
+            "cited source image"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "wikimedia",
+          "queries": [
+            "Kuopio LVV26 valmiusharjoitus",
+            "LVV26 harjoitus kuvat",
+            "Lupa- ja valvontavirasto LVV26"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "9b487857de4be4644e175a39bb2432b44919f0e86b9f45f0d56a0249a7314174",
+              "license": "Pexels License",
+              "reason": "The image shows an aerial view of a city, which is too generic to illustrate the specific concept of officials working in a coordination room with situation-display screens for a readiness exercise. The article mentions Kuopio, but this image does not specifically depict Kuopio or any aspect of the LVV26 exercise. The selected concept requires a sp",
+              "source_url": "https://www.pexels.com/photo/aerial-view-of-vaxjo-city-with-forests-and-lakes-33815093/"
+            },
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "2e720e197af4553ba4a8e21df38513a57037f2b1d420506f5dc76aa0d542b274",
+              "license": "Pexels License",
+              "reason": "The article discusses a preparedness exercise in Kuopio, focusing on coordination and internal population transfers. The selected concept specifically requires a licensed documentary photograph of officials working in a coordination room with situation-display screens. The provided image is an aerial landscape view of a city, which does not show an",
+              "source_url": "https://www.pexels.com/photo/drone-shot-of-urban-area-19128876/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "47e82fdc91a4cc9b11906a5dbfd136040ef66c04228fe14b30144c9872af4179",
+              "license": "Pexels License",
+              "reason": "The image shows a city skyline, which is a generic view and does not depict the specific concept of officials in a coordination room with situation-display screens, nor does it relate to the LVV26 exercise described in the article. The article explicitly states that the exercise will not be visible on the streets. One or more required concept eleme",
+              "source_url": "https://www.pexels.com/photo/stockholm-suburb-with-scenic-forest-view-31899541/"
+            },
+            {
+              "approved": false,
+              "fit_score": 3,
+              "image_sha256": "1f926326deaad51baae7030e9ccb5ffd1f9b5fb7c2f58728387d59b017f00076",
+              "license": "CC0 1.0",
+              "reason": "The article discusses a preparedness exercise in Kuopio involving officials working in a coordination room with situation-display screens. The image shows an outdoor city square at night, with no visible officials, coordination rooms, or situation-display screens. It does not depict the specific concept of officials working indoors on a preparednes",
+              "source_url": "https://www.pexels.com/photo/kohtaa-koko-maailma-signage-at-a-building-with-different-lights-at-night-804462/"
+            }
+          ],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "Kuopio LVV26 valmiusharjoitus",
+            "LVV26 harjoitus kuvat",
+            "Lupa- ja valvontavirasto LVV26"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "unsplash",
+          "queries": [
+            "Kuopio LVV26 valmiusharjoitus",
+            "LVV26 harjoitus kuvat",
+            "Lupa- ja valvontavirasto LVV26"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "google",
+          "queries": [
+            "Kuopio LVV26 valmiusharjoitus",
+            "LVV26 harjoitus kuvat",
+            "Lupa- ja valvontavirasto LVV26"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "source-news",
+          "queries": [
+            "cited source image"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "wikimedia",
+          "queries": [
+            "väestönsiirto harjoituskartta",
+            "valmiusharjoitus karttapöytä",
+            "tilannekuva reittikartta"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "9da836fd6a89e0dfefa13aadb7ad026387001829d0510dc3923c46ba83c3a2bf",
+              "license": "Pexels License",
+              "reason": "The article discusses a readiness exercise involving population transfers and planning, which the selected concept specifies as an unlabeled road-network map with neutral route markers on a table, without people. This image shows a person holding a map, which includes a road network and some blue markers, but it is not on a table and clearly shows ",
+              "source_url": "https://www.pexels.com/photo/girl-holding-map-inside-vehicle-1037890/"
+            },
+            {
+              "approved": false,
+              "fit_score": 3,
+              "image_sha256": "64de79eb8fc184084bd4269b9a72ab620b076c4647cae3270cfde7b72c3c31f6",
+              "license": "Pexels License",
+              "reason": "The image shows a car's navigation system with a real-world map, which does not match the concept of an unlabeled, fictional road-network map for a tabletop exercise. The map is not a neutral route marker but a detailed street map with specific place names. The article discusses a preparedness exercise involving population transfers, but this image",
+              "source_url": "https://www.pexels.com/photo/dashboard-with-gps-navigator-inside-car-on-road-6044782/"
+            },
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "32b72e8d2f4f309c9c9d6b51b3f6825bc739bacc2b815bbfa3e7d9b8e1b6cbb4",
+              "license": "Pexels License",
+              "reason": "The image shows a map, which broadly relates to the concept of a 'road-network map' for 'väestönsiirto harjoituskartta'. However, the map is not clearly an 'unlabeled road-network map' as specified in the must_show elements; it appears to be a nautical chart with depth soundings and coastal features, not a road network. Furthermore, there are no 'n",
+              "source_url": "https://www.pexels.com/photo/map-in-a-wooden-storage-10807979/"
+            },
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "464b5a9fbc851e4b59744b1f3d1ef84cb0e068c2b036069db3d1a45bd549ec6b",
+              "license": "Pexels License",
+              "reason": "The image shows a map, but it is not a road-network map, nor does it have any route markers. The map is a generic, unlabelled, folded paper map, not a specific planning map for an exercise. The article discusses a preparedness exercise involving population transfers and situation assessment, which the concept aims to illustrate with a specific type",
+              "source_url": "https://www.pexels.com/photo/paper-map-and-globe-on-wooden-table-7634706/"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "väestönsiirto harjoituskartta",
+            "valmiusharjoitus karttapöytä",
+            "tilannekuva reittikartta"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "8605714bf86bb888cdb4393ae7ca1d2a9cbc5b31d8abea09343b2bc7293bdb90",
+              "license": "Unsplash License",
+              "reason": "The image shows a real-world map with specific place names and geographical features, which contradicts the 'unlabeled road-network map' and 'recognizable real-place geography or readable labels' must_avoid criteria. The map is not a generic, unlabeled exercise map. One or more required concept elements are not visible.",
+              "source_url": "https://unsplash.com/photos/map-vXKgrTrerj0?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "5683ba32184515d4032524914da2e5b958f094b94959a3e4a0a908537701b987",
+              "license": "Unsplash License",
+              "reason": "The article discusses a national preparedness exercise in Kuopio, Finland, involving internal population transfers and scenario planning. The selected concept describes an unlabeled, fictional road-network map with neutral route markers for a tabletop exercise. The image shows a detailed, labeled, real-world map of Japan, which is a specific geogra",
+              "source_url": "https://unsplash.com/photos/a-close-up-of-a-map-of-the-united-states-Kvho-NaljgI?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "ece63291ebff15ce8d195a5ab554e6476233ea8ffd8ec159d0958bebfbfc8b20",
+              "license": "Unsplash License",
+              "reason": "The image shows a real-world road map with recognizable place names and geographical features, which contradicts the 'unlabeled road-network map' and 'no recognizable real-place geography or readable labels' requirements of the selected concept. It also lacks neutral route markers. One or more required concept elements are not visible.",
+              "source_url": "https://unsplash.com/photos/close-up-photography-of-map-yg8Cz-i5U30?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 3,
+              "image_sha256": "c093d2c17f86a28c669c1643f042d75e7dc298e74e7bedf126bcf8b20c51ee7d",
+              "license": "Unsplash License",
+              "reason": "The article discusses a national preparedness exercise in Finland, including internal population transfers. The selected concept describes an unlabeled road-network map with neutral route markers for a table exercise. The image shows a real-world, labeled map of Japan, which is not an unlabeled road-network map and does not contain neutral route ma",
+              "source_url": "https://unsplash.com/photos/a-close-up-of-a-map-with-a-pin-in-it-CC3RZJ2C86A?utm_source=uutistenlukija&utm_medium=referral"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "unsplash",
+          "queries": [
+            "väestönsiirto harjoituskartta",
+            "valmiusharjoitus karttapöytä",
+            "tilannekuva reittikartta"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "google",
+          "queries": [
+            "väestönsiirto harjoituskartta",
+            "valmiusharjoitus karttapöytä",
+            "tilannekuva reittikartta"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 3,
+          "outcome": "no_qualifying_candidate",
+          "provider": "source-news",
+          "queries": [
+            "cited source image"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": true,
+              "fit_score": 9,
+              "image_sha256": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
+              "license": "CC BY 2.0",
+              "reason": "The image clearly depicts the Kuopio Town Hall facade and its surrounding civic setting, which directly matches the selected concept. The article discusses an exercise involving the city of Kuopio, making an image of its city hall highly relevant as a concrete representation of the city.",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Kuopio%20Town%20Hall%201989.jpg"
+            }
+          ],
+          "concept_rank": 3,
+          "outcome": "accepted",
+          "provider": "wikimedia",
+          "queries": [
+            "Kuopion kaupungintalo ulkokuva",
+            "Kuopio kaupungintalo",
+            "Kuopio City Hall exterior"
+          ]
+        }
+      ],
+      "selected": {
+        "concept_rank": 3,
+        "fit_score": 9,
+        "image_sha256": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
+        "kind": "real"
+      },
+      "version": "article-first-v1"
+    },
+    "sha256": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kuopio%20Town%20Hall%201989.jpg",
     "stock_provenance": {
-      "image_url": "https://images.pexels.com/photos/164688/pexels-photo-164688.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "photo_id": "164688",
-      "photo_url": "https://www.pexels.com/photo/gray-auto-bill-counter-164688/",
-      "photographer": "Pixabay",
-      "photographer_url": "https://www.pexels.com/@pixabay",
-      "provider": "pexels",
-      "query": "Suomessa toimivien luottolaitosten rahoituskate",
-      "retrieved_at": "2026-09-28T20:53:03Z"
+      "attribution": {
+        "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
+        "title": "Kuopio Town Hall 1989.jpg"
+      },
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Kuopio_Town_Hall_1989.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "photo_id": "wikimedia-9096110",
+      "photo_url": "https://commons.wikimedia.org/wiki/File:Kuopio%20Town%20Hall%201989.jpg",
+      "photographer": "Matti Mattila",
+      "photographer_url": "https://commons.wikimedia.org/wiki/File:Kuopio%20Town%20Hall%201989.jpg",
+      "provider": "wikimedia",
+      "query": "Kuopio kaupungintalo",
+      "retrieved_at": "2026-09-28T23:53:16Z"
     },
-    "stock_provenance_sha256": "f3f3f67db05e0d219a386516bd2fbdda3594a1945f7a72579531f6b589759ab3",
-    "url": "https://uutistenlukija.fi/media/af5860f62bf1bc8bf102be7007fb7456130dad98ed9f0c53467b379bda3a57eb.jpg"
+    "stock_provenance_sha256": "cc4569c7d9966d58250354120c715d86619a4c20c6a46d2f8bcb216b10bf9a49",
+    "url": "https://uutistenlukija.fi/media/8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0.jpg"
   },
   "new_article_files": [
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html"
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "ed4c78920cc55da2b0b20e8c5df26ddba4fbc639cec3898080f4dd5f23e9900e",
-    "_redirects": "4258b901d1b4e5440e6235d09cf2acef5ab3843d93b5d8c8256b8e7a57c7ccf8",
+    "_redirects": "9e844e165d01aef179e6c86aa238e5c021f65218d128f68cbb80f6ca56f889a2",
     "ai-kuvat/index.html": "ab37565adec885a8798133d8891195d7dc28c35b5f41bb616d5d7d60d07e333a",
-    "categories/kotimaa/index.html": "7d39b0406882fdde2e0fcb796840df36cfa5da4a183f82e0e2b301922a017a96",
+    "categories/kotimaa/index.html": "b83d5437c8c7fbe08b4649ea850461033acda7bd176398d10917d4d65e12cb59",
     "categories/kulttuuri/index.html": "acc81bf6e5db264f57a3bd8684f1ac9376b3a871e24e926bca7b1263ba3dcc3c",
     "categories/talous/index.html": "3e70c7425a3d3cc2d61889a664ac30e0ebe623b5d0cf03c801d9e3237efeca54",
     "categories/teknologia/index.html": "499a662c741a628cebebd3b7c6de8aa162ba5eabcc9f95c1141c00c79cdec237",
     "categories/tiede/index.html": "79841a770c65d9d14a3471e1af84d9b1d5affe0626bd3e4e05b283e1a143eeaf",
     "categories/ulkomaat/index.html": "a57940fa42149140997da107a76ad4fa2b1f25b88cdaff9fe4a1b17e4219d61c",
     "categories/urheilu/index.html": "e0fc545a979539c150d25080255d2ef163b5bd2339f4ed6842bc93a6b0d082a7",
-    "index.html": "e8a6b0348f561af57d3b753ba6fdfca6dedb6649dd5ed8fb4175121b63b416f9",
+    "index.html": "99d6c1fbeb384c9a0bef19eee1b5dea86c617a476701314fdd6b60854d16c018",
     "lahteet/index.html": "96b3c307de4ab39deda228086a03c796f4372310ed2c1b935b75ba65c04d1927",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
@@ -359,6 +666,7 @@
     "mvp-assets/8bd6b7f29b2647f833705aa831f2a7c5eb0f1a94d8d3ceec79f8b993246eff09.jpg": "8bd6b7f29b2647f833705aa831f2a7c5eb0f1a94d8d3ceec79f8b993246eff09",
     "mvp-assets/8ca528ce87ca8865d3da05a6a3bd756b4d8c2639991618dbfd4bf905e20762b2.jpg": "8ca528ce87ca8865d3da05a6a3bd756b4d8c2639991618dbfd4bf905e20762b2",
     "mvp-assets/8d501db972848e135cb8d81c6858cae9ae0e184fd3b8e1f92fd95bad1d9f6b4d.jpg": "8d501db972848e135cb8d81c6858cae9ae0e184fd3b8e1f92fd95bad1d9f6b4d",
+    "mvp-assets/8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0.jpg": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
     "mvp-assets/8dc04ad182625f5df4519317f8f2fcdab93c3dc655b3d229811e9844ad8ee0fb.jpg": "8dc04ad182625f5df4519317f8f2fcdab93c3dc655b3d229811e9844ad8ee0fb",
     "mvp-assets/8e18ef1f229317243cf8c592fe38985de57713488c8e2806c1ee5f3cddd72832.jpg": "8e18ef1f229317243cf8c592fe38985de57713488c8e2806c1ee5f3cddd72832",
     "mvp-assets/8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d.jpg": "8e6770929d7374c1ff3d4933e892f68379199010e7ef0e8e5bf9a3862a21d11d",
@@ -584,16 +892,17 @@
     "mvp-assets/style.css": "6b3d4bfb8e6aebb8496dfa3ec2fb6c9846b18b85b0b7cf98bdbfee64787365fa",
     "oppaat/index.html": "5f192afb3f3ad616c05e907acf98595ce3b28112d757c01ee1801dd423a7ecd6",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "97004be847b57d8f30a438ce52b06265dae75d79e6596d8bbf059d1b5fb6333c",
-    "sitemap.xml": "092c64be0873fd167c70e2127904172ada7a94edce40f0c4c2780fcb0f818023",
-    "sivu/2/index.html": "5f917c72bc4419691d1ae3317a2e9f03515cc8a5e8677883f45516e7df797449",
-    "sivu/3/index.html": "4f3f3987833c0b949788a29789026b047652dd75a0222ba70b5e79b1486d4d08",
-    "sivu/4/index.html": "7c4fca2153784e70bd890e3db4fd132096736ebe1bf0c9487db542af8c6419a7",
-    "sivu/5/index.html": "21888f9d89c3917264ec00b65c042a710a5953610499bb2391226afe4769aede",
-    "sivu/6/index.html": "ad9b91a2724d4f41bc0b57276b01c00694a762e30d2ee35a89a87675520f3258",
-    "sivu/7/index.html": "948a3dc7810ebe7325fabdee6d3783cb6c2aa9a5b104f48de4ebbebd0f813f59",
+    "rss.xml": "7ca0a885001e38ff16f6c734f0b6caedc5c76c455c2e2068df0138eca2eed5e0",
+    "sitemap.xml": "51de3bbead2fe4b9d282189a904c480999f0cf0be84d0f9bc3a9d126e1e1e5db",
+    "sivu/2/index.html": "e207ccfc962b77a2aaa087207f5b3a6f09742d02df8873cfa4656dbfa5f89725",
+    "sivu/3/index.html": "d3149fb0fe8e3e8bfcc247a0c3eb35ca5058b3f9db87a9987b4d4beeea1a2494",
+    "sivu/4/index.html": "6011fa657e215c00958cdeed7e72a207b12f4342377398e7763c7e8be29980ad",
+    "sivu/5/index.html": "44544ca1cb4d263776d17b2f1bd75bb351ffc879fee73f5d8f8047212c4d297d",
+    "sivu/6/index.html": "dadbdbcebf83d81268c6436751e6d810e6200ef1bbd8b707070119de294ecf06",
+    "sivu/7/index.html": "240f10bd9237ad7e529811e37e72cbd7289864350e6421af4349eb11aa2bdf87",
+    "sivu/8/index.html": "79f3a4b802fdecb3df6917f31761023bf3e8ffee43f83d1a25495478469850cf",
     "tietosuoja/index.html": "416f7d263e074967ca1629e15e38ff5223e40469cf5b1e4d6c66adfe2035700e",
-    "tuoreimmat/index.html": "2841a2667bd4019456743dceead1dc60e6612e4dce236e9f8dff0e3c1fe6da84",
+    "tuoreimmat/index.html": "ece1649a721412924881742e00294d843b4a121e9448a38d2e617fc8f240d76f",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -607,221 +916,222 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "781ffb30578d08edb07effe6a394ed6d2e8751b43ca68ce6a46a5b2be6dc2e41",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "f26f00ca43aa4383fe84303b39e8217c848f1b166d4fe8bd51b1224c87634023",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "b09136184523538ff378ae05a4bc16fae26b646698fdb8eea3083bae63956985",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "cdd804a0ebbb01f468e016aac4985c1c7ab5eaa8200c2c8603027608c6c75474",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "fbc94e23b42e922706fe763560db473d4494c679b9d06362526758cdcd6d48ab",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "4873dbe2197fd7da6203bfd961f1f05015fbe15f460b40b1bea401b0be3ca535",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "c2477f1d4aa7f93354509ff875d8572d971a0ccd461cf09be5179c93ad23f55e",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "c7b9478ccb897b31ac245534fa8d3f3ce3228f579c36bca4a2e68f85dc703f23",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "a7a98d6f239d48a0ffba9768aa810c798c11acbc14e44e5eab739d50efa6799e",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "2799a48d03c9c14f3178ccd559cca1886cf045290fedade85e4cca3ddd2cd9ba",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "7c0af81228343058dcdf65a18d7cdebfcdf88c039d515d63b6f7c434f43f43d1",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "d229c65cbde14aeda33b25e310d8116f20ddb2e86f8e8fd882cd7b634faebbed",
     "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "18a52f15ca2d25e8d1ff6e7c6252ff82c2c7689d8bf216da147ba013a27049af",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
     "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "32c53114b9005bf81880ee5038d6de9bba25b223b1d9ed64d98d0ec71817fca5",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "1aac274138ebcdd659b60c656b078ae47eea6973cb2da4fa28d79ce5d862ab11",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "dd1089c5740ac89c99f6223f257ee43f9f5b93020ddd9dd2303c7c6370cd14b8",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "bce0eaeaf711e7353a68a8a62ddba2e0934dc766629199c7b30a36d99a5f6e16",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "19163461b1624e74698cde8524de1760a48ace150f9a9cf53c36082ed8cf6547",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "758b5b538bf03563053b46d177775b6cb8844485ed6d986b6eb0d8bc29ad55b9",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "a148ae82b15ace4223c4d197ef50dc10d9ac2b22eccbac82495d6283e1b894dc",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
     "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "38cbf95f16aded2e7831dfeeaaf526792a2d2d904931a303f75dc39b8503d9bd",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "c24cb7b59f157583f7f5038c0e57c97d8c3db6f0fbb0acf777c0c8f5ab20f0b5",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "d64303d6ea93ac9db300d026d011def924cc93a74a7875f34c0ce76a6d7b5618",
     "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "87c752c6e0c52e53abbf5bb10e98755978d0e8f934c9089e9b8e2c9f18073f84",
     "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "69059d7ac88c35e55cae0b7556b69af2478b144a203e410ad5431794813d47a2",
     "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "70cfa73967b6269f1a19d7e148d77ff0966895f3c6a446d0c98bfe19181099b4",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "7efd746016bb39c9f31767d96f8c96e4c9ba746ef50003d5a5c8590a3282c04f",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "d33131d5cf63dd533194d62a496f4693b3aaafc36ef4e49736950b27ba3ec8df",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "1c7e0cd0f6361d48a67b2491b0da5de33072e55333a652c8b44849ee5b9eb1af",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "7c3977c67307de4c86652922fcc0c59d72c7189e7a247217323cf5d1561ae2b0",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "a08c5472fce42db1c76809e999a2a9bffc3b0f3be77eba964e163c546c4fc947",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "f949ae202551dc327337b3395a2c52660b5d7a11e10779c8419d3e31a4e140ae",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "b2eb650c0a3213d5941abe2e7adaf88f0eca32fbc22837fd882ebcc2390d3756",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "aa94d9669a64eed8fc55613639e667843e1f78a29c426d480209ba552c288c6c",
     "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "0c9dcf138c4e2a02fcd468dea9e2c59acc9cfd055f7ea13a430a79ae5a4b7c0b",
     "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "67a23587700c0bb518b7fafdd73a64d711d7afb2a9c6d3cde19c0f0460c2492c",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
     "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "4378f642c2034880b8cd2ae0ace7cbf08eeffd392a53a8d95ddaa07a64375c6a",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
     "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "968aa4ffb964de2b40886a350058b0645eb887794d5639c91c40528b5308d549",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "d649d2a0de241aa977b4d64c7c0e08fd0dd67b765d4ed2c25ec5460e787f49fa",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "01b344dd4408f4a968c565f4ef92098659d81f8a531407990ba68fed62dfb4c0",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "5823351cbc0a35f8404c577d425b2397584b5192ebdb4a83dc3a4de2fd875219",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "9b509ccfb6735fb422855a7d4251eedc7a7bdb08ed6362d3906648d13d925685",
     "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "985090052462659c10c4b1a13ab97c598b68f4d7575f69eb98c37e8df5e3e165",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "23ae5f1f539428dc8cbc8b5073e0a4f67550b407e4e9ecc196f6acc215d22811",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "d2521ab6dd2800ae0086776c6fadbee75acd47e8e68dc1836b1e91ca4513f1b6",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "35cbdc0aeddfd758f76e7e70f6fc5e1f9b7020188dffba2db9e477e12c9d2e90",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "b4655f60d9deeeb353c4467d06d9cb58bd52eea92ca667b9da51621fbaa6b736",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "9b6e4ed9b9b6f1cbe7e56e6d5e3fda7986adaad2978c04647cfca4d3704594a2",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "db23669baa9ba43129571c01d133140ddb63b1b8e1264c2eda8fff9fe80376d1",
     "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "b330fe5972798a22ecb8dab0cc07d111c4639c9a14d380e96248fd7727e1ae15",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "dce0a063ea4c57aa7f8627b3e6b3fcf0a371eb4e86b3478e04a6b8226daf4029",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "a293bd95fb0f543395b6f33fb2bdd9097b0d936c4d22457a6ba13ffb4e3de356",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "7eeaa6eb3a36d1c41e8eee07dd5f37d93e65608b12242be3b41364ab6217b0e2",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "707bc2527a4bddd871bdf0fca6cc6cdc871a714165606febacabbfacb9da815e",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "b17e2ef18855c659f703bd176c04bd223d77e2c1e094e06412430bcac37ba8b7",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "e26ab2c36934b29c51e4a587636fa64686a388106d43ca13597925646250f4e3",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "bc3779228c112a104a1dd5ca13264967f6baa8ec25a44a711ed7d4fb3d1a0656",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "c1449be2bda4aff235262fbb7bffe1562c562515014ce794d47e842635aa9f79",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "cceaadf9f95b91688fc6c9bd5005e30c3a75dcc0562bbec178bc37b1c2cf59a1",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "b2fe640642f863fea4b62fd8b0aab93ff240c01453ee93ec5e604c5f332c68e3",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "b20024b90fd47ce90167c5f081a9d95c328ce4c8b1439512a78a53f5214c0fdb",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "0feccc69411d0ba339ac03dbd95255e9fb8599dd98a6c43e6d9c5891eb7428e5",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "f373f59651fb555f324023558fd22a9fd6c64f38d531d69fefbf7e11fbb32e22",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "7cada54d503f964ba030ad73ca7cc69872f921083108c764954719b50a14bf6e",
     "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "81f6344556397ea333ae027b0c1fdffe37a51f59e740dac1adbf1b51d5af4b67",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "dc8ed1582cfc2d576611776fa12e96796d5bb39c82d4e7220bdda2841ad807d1",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "4048cbf201fd9b9a12e1aee9e8f34b3928fa89e1bc92427bb494838e7d7fd34d",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "3487dd803a981b8706407ffa6449efa1a643cbefbf32c50689923a97eff84028",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "7536cbecf5e966158db86451490f0e618f8d56c972b38f4ae2ab7a2e3117ba01",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "8860e3eb1da79117178732f2e706ac1a6da20e2c714ce843df66e58fe67c6de8",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "7de3617d11b70bcea9e3f47520ed197a5069b25664e0afab68404677745d7d19",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "753bf00a8df7cdd5bae8ed6aa5199037f38d514205e3b1047408272d78367f58",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "e9a061087f3e46281455de391e7338ea42833b486890e02abc614b5afda62932",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "a900c9f95a422aa44c350179884a5c715be8e219d90b43a655dbf7089a618c23",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "14c940f6f9200e163e4a8c30e867b61bd83875d16b5de64da71f8ad20d444461",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "888c97726811e5e88c8c2d60a281135e73f3675ba504a9023e15976c5910fdc6",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "e9a5e8b636e80156221f75c79a36aef06f86853d0eb3a6e823ab69d7f29d601a",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "8d429778002ffb64be0ed020229b2be597847d1da2933d9230ba528bf3b8a2fa",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "ba8b7dc9537a966799321a9f051552e50a1f4d98883633af80ca342adb879c99",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "d71ceaea3bd08272804d65b4782dbefaf24bfbe80bc7bf794a2e003b4f3afed2",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "e9048f8d7c96529f83e1813bbe54770f5303bd59af585ef5bca7b93aef39c776",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "2f6de4c9851856d1079f639e5aff48358bd1ab91dfbb510aa5d9f009895223d1",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "212249ac0371df5836f3aa99d798a765407a005dc9181f7ebfa9716cf396fcb9",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "effe690e613869aead0253035506db140855a767b675f24c07a1133596cbdbed",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "48a0a099e4355ae01737246e0a05454158c7e42cf8b55ebc61de3d23aa22e0ba",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "4440d32e292d83cf30ec908f4bcff1550a0d466b3e20e28aa529328ced1d3998",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "b38a627da05e4bdff903af5dcf7911faccae38505bdbc3049e1140db41ac9181",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "28b3eda0db516dce9994701ba365c29bc048895f9955f252d3ca5dd9d8c32de4",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "fecb6da622cc11b4645376bf7009aa74918e97be16910c557ea1e01a9dff99da",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "76cc3baaea32de1f8f60a80eb560ccaddc06a6c024032ed6a67970079206ef52",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "217ba2d9f183376c24eab82f448f7bf202fefa5f4c223dc40d696cae429ca3a4",
     "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "a527e8d441b858d613d32fea670528eb82a975dad0a21174b5dec0b11e7cab89",
     "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "1ce2ce147f26d75cba825a653920862227e544582ee8b5a34ef8aed9db05fdf6",
     "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "34c42496d0851e6fc441086f85a0bb137af4da89e0f82090ebf0df27f78cc871",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "0014ac503a684f1ec47f9e6494aaa2190511393f1dbce3ddbb2aafee3d197824",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "d86dda11206d6f5a0cdef6d7c6d58af89be6855b5064191c675e4b6869037a8f",
     "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "854f6bb3338190f05ef7e922116cfd5a9f6190232ad69f4176da539d870b0a55",
     "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "78e45026ae242341972c471e155feb7f80ad620ce8c7546915d9077736efbe5f",
     "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "d032b9e3f7395c4d6b2cfcd259dec926b79a16706f80d24b0606a70a7f94d2d6",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "a03e003714b0a565c1021875f031e1ecd91e6242e30906b3ee5ec48f6cb42eca",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "4488f40ad9d7297469f710d74b1bf1efeeffd4465cdd6d294d759c0653111381",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "fc81db1de3663d8f0694e3125d8ffb78b745ed73516d1c2fcd983d8b90a7ba75",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "d1414baf5977ae22da618219fbe7a77bf98d577f76d01f4bfc3a96eeaccf5d6d",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "a34ae2ef0f9401aef3fac3b760bc2da01e6f422ac60c5b3666f19b3ff30d7577",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "9e5cee6c8427e8c8182d19c6118cf03ee2f3386e8b33a060a72b710e90f22fa1",
     "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "0e937a0f56759c573a0710471e329c1ec52826cc2a3d48a882dc4ff89fce3f45",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "cd6f21c60ba9091997cb881ba598e596c96c1a47c8415f29b8150deac1bfb992",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "e2c69a70913e17b1200620ff86f191f20a046a826a81d799a139ea3599e7df13",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "993b28656c6cf1d0fda880f98865808784443f0715d1262518ab4e040584663e",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "5875b580921724bd8d6d8249dc024a6615c51d2b0b531a79441cdc8d248664f1",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "96d3039a6ab0e581575f344714f943314cc4ea3561aa62229cfc76c06009a477",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "664cd716e4807efae18d88e2baf665e14a0c1d42930fbfee06e0e667126a95c5",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "d9366f40e70cc52d6d9f1a7ff93b76174bf42438db76bbabb260e326c862489b",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "ff89079b0d50d3978c3ee0078b3a89d64f9581d11d029478147b10b1906acea9",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "a11f6f910be4868ac3466d139271293c63fc55d36cd2d911b63f9546f4aea009",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "ab59ddc3ee09540ad869be0fbe8e008e270cf0bc184b1df88513bccbe0357b17",
     "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "3839eb0b94cd8ba5624c3cbd3e1b1a2ef11239059775c06a10e46511099af76e",
     "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "d92debb74de476eaa6c75bf7378613aacc50366333d43f559bc021219ac02f07",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "55c33ac9fd897afe6806634aca72e7015399370a6c41d5dd6ff32c3c65b06a02",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "d0cbde992e506bcc095b00aecbf67c0e101afd6b9372e62252bd32737a1bfea2",
     "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "49e6464c5183cf2608f48df415ee5eda74c938ad863b3f21afe14d80085c64f9",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "de03febdcae453f902164db870767ad12b1a99f3107d8f4946f46d01a6a22b96",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "8ade8df340ecd80425939329d24324e3292e627717ead6ff43179d426db6a485",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "6ba480e2632d08f2e86ed51212f9bc06441310ce887242e77114b6dd126b55ab",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "b38bf804db05d278f7b0e411dc414f80315913a764f5da5c314f065d06824ac2",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "f7b0e112d5aff10ad09588200cdaf2006499293eeffb21e64e17139fb8aad295",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "9582af8189e070757180f1bf4a9a085d51331767235e67c2fb7009c55e459501",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "6c537a0ee5675bbc56a6f35315fdffcfcceda434e24d4250fbe65c89f0181df5",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "449ab7ee4048269389f7bd4040ca35c857105d3f57a2add3fa5ef8658b8511b3",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "228d417a7133828869d3cb1cd20745180326a60e6e4800b61d46cbe5968d6d2b",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "34eff1094cf1552d3e2ce30b5524b4e43bf708948b0d612bc0b822a264d0b299",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "99408e1d601224e5432e5b0a05e42d1c2f3113d6a550d936a9d5ba862b28e604",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "4d2190a9ae6b288bd17ac76e286a9684df6183c978babb366f6a39fe033d672e",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "21bbe9c084e60db50c9fbb169106e336ce42dfad630d5789709b8a4352b6ce92",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "ff1c0c5aae6c0682b2066afa186edfd1862954f3ffd8ca730ad06e2c89a3250d",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "efdecb514846b9ec3642a3665be6525d975934dd2d16cb3484e7c328ff165588",
     "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "17c08e54007f07f38701a62ae2be1ea612a2fda8ce6ebe22b0fa5132ca1c99f9",
     "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "bb69f301e316ade06679f5d83bf8ef6a802855f14dab81a93477366418740fda",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "adf33aa57c068a5433221f85783d38341dd161034509c71e441a3e1c5efad481",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "651c27f5f6139f13bffbefd334755d69931808edbe3a99b9d4f373da7143a0aa",
     "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "663aa2e132f671e0cd7317e6cd5090772b88b760c6869ba6138d2f12244c8cf1",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "4bb97e57a95704da226f59af32aa5a2035240f4bb485ebdcfea48c728449a453",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "b9ad2701a5959b034b7fab64ad72f44763257a5cdea2654519dd08815326631d",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "2a58f9137055d330ba5f74277c0d5e6f07a1ab6cd38ae2393c82113dd47e6591",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "71ce92383fc524051878f85ec99024d4f2649b34d69bf776aad47b2e68b473b1",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "a4afe2c3a7d6d7254b5c0f9c2a9177111a2330a1c52868073d764e1e256d5945",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "2e4f87fb3fec54034ee93d0c54108d9238ae812f618e865b7a5bbf01092e262f",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "6380a76e96ca5636cbbda87e43f2fc4c2aa35e7b98c37062e62dab7a7a0facfe",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "986a3cefe47e78e51cb2832b1d8602870bdc60441f9bce09f4e5abaea354f347",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "c97d14b11ce98a3305f74e323e0a1d5fe72a14b3c1dec6ed1a5393fa3593d800",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "e1bb22087c72469c9d45b40e65060e3eb5c230d8c0ef2d206b0fd9c7188ca013",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "6393f6bc35c030bc35440553c19f980586f8490524dfb87837cf2a91088b2412",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "c56f0d531034277acf90a3fb1f3df4f4ad96f020a4473e13ca48cbd8925b236d",
     "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "c7f5e482503179355fb9b68b85b44643f8895f2ea63fad1799a5dc8965d4b566",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "ad7c13368e9a3613069b851e823e40af891b77c49690ae7151507669aaed3dfe",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "a63c30c2a471a65d17faaca5c53eab8392dcf1657e8e0a41f57ce24a8bde36be",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "2159994f2abc6f1a2355a09aab0d9a7cca943cc09e1c3589b0bc418ec5f43d6a",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "81c826b12c53c70e6f2521ff48a400a3cf52ad1257b23a77c8c8fdcfce5ef274",
     "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "3d70468c15ecad41c4c9638f40c92028562a9c2424714bebd54f4595fdfe8073",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "232b325074aa6bf91a4bb023392938f8eb565bf9859ff211a54a2e4a51ef5091",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "dc934398371ebdfe62020621237fc5b25b4516f432d1f474952088c18a1ce748",
     "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "d047cecaa9c4c1df24b68e2842538c2e34109869caac0225d8016ec29ffb98db",
     "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "2fe5760a15d4a969ed8561ef46496a66659ed4ed33e859dd20d2c0285888cc96",
     "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "2c6ef7699f71f052fd4ac3d5489e69739c6570d8005aec8c7b6c7e7a6cf38c12",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "9cf0dec7b10f7ed820e7fd887e5b48ca49c234f713ceb257499c70917909fd1f",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "fdca852fbe4475917a3c6fac41b2d88ddf305799787daeabe8c907d4d1405b20",
     "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "e6639ed5d519478c7370c1769274c2c74b64cccc2be12f947ff5dde5d8285e7b",
     "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "2e3d10fa5d6c0e6af93abf9f51cbe4eb233700b7b6634859589a78e052a7b87e",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "255e0a0d002e5adfb4e8152fc78bc2534597129d4acbce2f2d28e5354e2ef4ee",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "22ebe67102e67d18f963fb19b976a846127ba3253d0c01e37f4871b98211cc3d",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "dea5751d32c52e70734a8106f0a45421325d9fa174a3d959005fe622523b3ffa",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "106e96f0ab273cd2c5d17f13c80b0ca9ac28a3607191daf79d727f39ec61eef5",
     "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "e3a04099be9b5080b0206439971f7a81b37f83a7c5e28b938c27902b58f2768b",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "fdd2db3d431a76ddf828c2106239e03f4a2539a246102eff2cafb45c5a8df324",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "f911dc4db811a7a4ab69c553e0fbc8644502e25f7f977652133e859e482ec099",
     "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "46f04630ee038a10d7cadd75e4f66438cce70249b05a2d44717b236ef13a0549",
     "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "55b6bc98cd72885fcf19352c7ef3db0ae481df8ca967a38969f53568efb6db46",
     "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "9e276f91b59ef1b4c6df855c7cd1a45ec0e9919d48e8b1e857da9284241058bb",
     "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "84be0faf4f10c6a1e7650b853f85c7260f96f3a50aa120532846948c41adb7cc",
     "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "139a62dd56973a81295a8170c8db554a385f28c2a7f6b295dadc9210d0762740",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "c6e1ee1de8b0f84082da1867a8e2e218917e4c27a9177a5eaee74be41de2a7b2",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "1068e76443e53acb6bc11198873e80b2be04a735d4daa0097e6969078b578c5a",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "f16a296469340b6c76e70871f6a49dc6b9dec5c93f0413c37dd0b0c6d49c5bcb",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "cefd7a5949b326585b54a08d04ef496cbbe7207db773680c102435fc5c0d46f0",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "df76889ac1da00c34f078a154cf0ef506ae108cd994dfbb9cca017436c05fd60",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "bbc50d259461abd6edc7efe6864879cfd4bef6fad1c5b929b2afcc321a03c5ff",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "b032d8fc6538e74b2af6bf95111a8a827b927dee4afc15f2be53cd82914eea2e",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "fc6fe9deab143bc065a2c02c3ae8bdaf54f6539fdf5d7cc61703c2254321d813",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "14fceb3aa43e568184200e59422b1287fe33842983bc54b046abbb8ddde82a64",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "e5b0798e53310b513b4cab8d5dafa2f880d1b3475462a86c9e76f147d1c4798a",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "8daa06bec9b6cc13061b8a1ea4de387bf4392d20897e322d18e58c54b9557314",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "09f02efa8e469acfc6adc6e994632b8ff1f876fd5ea2ab9e7df8d7f824405902",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "49b5196f1667ddee772ab9af3e5bc84237a19bc1727e08b201e4904293b5a971",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "354462d4d8fa76d1c0c91cf5c4c5273fd17e71430a06280ecbca754ea91bb2a1",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "95a65837e247c2b60c681a5cb583c839e14e66e750cf5934ff31054f19a3a5da",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "deef1fea6ab59708efd8733700779f471607479ec64182613851816ba2dae4ed",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "cabb7ef6ac9fec3e66a9f1bc419242e4c6808b91c77bea24d5954035138ec3a2",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "eae539b7a7e27f004927102ff13ed3515fff27d00cfcda8c6bca4f294f3fabf3",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "dfdb27023820c1b52d6f56753e0a026d43fb46f7dc58973e014d55ed40c9b5c7",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "4a17c0aa4c11635f76340a61af3b21c76a8fb29998e39b1a88c61e9f11f5a7df",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "e6a79c480b92f3001caddb15b08e545e9b2568f1d44300c0393eb0d83ceea2bc",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "85032da6983c97808b2a2ea9384dddad82e0dfc525b46949f7d1e51576e2f27f",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "a9ac2282bb540e4e9222e3e5dd384442294646bd9dbdd173c0db3912d9a8d471",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "d2eb7689f01df3afa608a6217744bf13e6c142fcec1584fe62deff1f93fdb41c",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "542cfdd50bdef9a25ba0a8a0c7c6f23371cd42f2b28a9de64e9aa09ed09fc5ec",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "39fcfec7d76a16ffa65770e8067b6f5c57b5bfcfdc4498c98df96d25e4f3d6de",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "4df12e262250d8e3dc27ebca2921f24663c00f14b5d186da837a75c8e55eb0b4",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "cfbde78a32d15a47ef5185288e6878ac80a39e4f1ed3f230f67b24953329abba",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "8d7aa5682e8371df6d536cb214b471c707bc3c8643753cde4f594d8f10a1687d",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "5ee8dfcce059e1a2089970a46831a324f42df05003be0a313855d6c152836fe1",
     "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "ada48e6051f9136018b4b494d452d4937e203312404c8c6fff002f5f72d4c439",
     "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "aa1b6b7d2b5ac3dc764eb6081e39af548d7235b20bcbf10c2d8ba420f59672a0",
     "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "f57d65ca3930018a92c199d713a4742b75da0da8b0f9612b6bc694a76185c213",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "0f0a1b96953feabd4305238e8588ede3330d50c83c29e83f04708b84eaa780d3",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "3348c144560a595948773aa358b3a77fc9892b2f9a9dd7709f99a54045a5a6a4",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "69322770b9f026f3800f1ad38376d3200bef272ce624705be2114951e898a6eb",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "6055f0790d6d3beabafbcf6501404cc5d666f7055e0b80881270c13d4fa98a8d",
     "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "2357f42a5b16ad0895a2705b4879610b6e29a6d53003e50774d7a091d91be0c4",
     "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "d2473327b6b87a0ba2deb638838547ba52ff065a7a071e84d8daa9d10c69ee90",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "10f49501b50c5e07bb5934483447d51246b5010aa5350daa0f1d5ad68d707428",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "cafdff39a0a7c270bcf5c64f1d47dec982dd4d582ccefc847a85ed475c70a792",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "c99a1eb44f7eb183a403b9094a7921ddb22e07a1d1405a6b9ee6a7245dae726b",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "b7343a3e66ad9b9c50081ebbbba532cc37c4b94c6e65436ed73594b5b8800d18",
     "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "2bede3d43857469c9061f148fb93fcc28cf5c8e6aff9db8d59fb8796f7e61766",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "fa5fc96b5b8b2c0ab8f4e25a0d33522c5080a0e94729fd9d7b3b313754013b73",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "7cccb59b60fab03d30c5dc9ba259d0650c46056c27a154ec6a813838d3c38580",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "53bb381a45aa3d93fa5160658fa6b9f67301c764c8a4a2d66707e74f35bf4ac8",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "68b28a74d0a8dc654da84de9b088ea2aeb6bac7cab6960065c8bacd11dc20c03",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "4deaf512b541ce7a76b34e0e84821bef3c6ed06de68b8843c642c20271c57090",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "64b177b905d70a22b311b3879b4a569692b406a457840649c15ea493ee210d83",
     "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "1a51b9043e2dbb0e78ec418b2c66f984b6e958cb9cc2681685cd240a4e4fd304",
     "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "95eda9fbe130dea56b1c362bb6dcfc7ec9ed545a21b0f42020dccbbee94e489b",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "434ed6719c750acedc1d8d075ae36fe244473f2287bab5469347425dcd436ec5",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "5d2a6cb46a4e79d74049ec41e17648c0fa3cc4b8e0efac2866f3a06f08992ae7",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "a7d4befa99519bfa8b561dbb4a6a9d418d64562b7f6a430e28e685dad83a09c4",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "9eebf90bb3ccdf638d4feaeb106cb52945f92e9b12f9a1e190d6b67c9de6bd20",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "909448662b47183304ace04fb882ee8d7d63949098b9c9bc293cc34d7e3f8149",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "1f9932f35082035bccf31b38e5a9586d577f9b2a12849712cf38461c29c218b8",
     "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "43cbda35545fffc357b72d75406df651f681742fa73d8822a159bef3bbc92eb2",
     "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "fd1fb0e0da2ea9b09c84da5616e09d3602d1c9fceab574d39b737ed6cee22363",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "30a16ca571918bdd9d98e66947ccdeae9b769626a4aec28735262fd2e1297c08",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "a8b2de7a7e2e88f9914623e37f00e7d22a8355df14a0114545148319c31e7c73",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "0ccd4cf7b02b13c566ddc6196f4c07a0311c208cf5473e958571b7223f49e7c6",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "24416b58296f887f03a34dc6cd15924fd7943385a363106874ec9ceb77de77c6",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "2cbf75ca20dfacc47e0b72a4283cc08bcb50e78fe6c305d30919dd928dc49f4a",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "e669af6474c2e329e827da56420f79f9f20dde8735394aba87a6c6d02c7c50b7",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "50bb9f83a8b5e49f3b82a23b2123e893bc93804aab36a955ac46226c42950031",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "9efd2ba7a031de6dad960a9d8974c1cf35e06345f269bdc2ebdcb5ebf79805db",
     "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "fb59223be4fea50bdb87e12575466efa20807ed78c9f01b3c301fd5fd17088fc",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "a0ff33f5d60ec0340023cedcbaab4af910235fdf95739a63c73f5d4c1b94bd06",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "60a9b9b237ed62fef65b940a368590e73273825eccd8cf3b79bb0939cbc99e13",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "c129c0a9a112102d413ffe289458a5103f3bb7f39bbce5db1cf7c65b40d52236",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "6c434d3e84d5bd41dc314bb8baabc3b044371399c2b19b422a0f9c4880624209",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "c996237fc12bd934c926013a87fa63480f6e1e740777c9add7747ba47c6bfef1",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "dc1782aa092ed397a6973a1bdef1c14e82ffdc351a4222088632bd0271fd6a6f",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "2d5789b33af1eba56bfd7ca88640dc3b4dc84b26cad8c721069a92c4fb01ebe3",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "7ad9e203dfb02d019929623aa9a601e4da094d5c8257338b961ea89d1f064cba",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "95ea01c1da226d5716f3af888a80d948ee6e2f935188a1da891d56fa26dd4ad5",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "47f3f0157e97ea5aa83b02ed38fee65b32bbcc18edd899c6b8299a336e7524d3",
     "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "1710b7f688c9c11665e636548fe54269cd50e980174d8c6499428b06385bc94d",
     "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "018fb337bc2eaa3d038755df1d0bea7118d22de78b7a2bcb18b26a0562c7834d",
     "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "2ed839996c18475d89034f7f1d75c227ce14d7a463afcf3a6d52975d79375826",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "874093674b583b83ccad1bcc2277ccde2041d8c9f3ba90eb0a99548acac4e3ba",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "90055d0b19d38e5c714765ccb3b0f01a1381297d1bfdfea0e0fdc6638ef1bd6d",
     "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "eb6582d5b8fab88f72af8f6a7a0395945465e5092773b85db547d54c494a8600",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "5b992592a578582abf876ced2945c10d4c1201b40ad9460467d9e842d6288ac9",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "458af0976d2258e7db17584017ce76e57ce05b913cf602f090fdbbfc4f272515",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "ea11ba7a67f61f4313e80addf2e8f4a62a8e7923b015f5b9ca51f0878e9cd7f6",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "c6d2690f16eadc39a52e05946208de2094e1ea7e65e6c78aae715faf14cb5cb3",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "87acbb151206252e2ecdd4b890a2411086fb0dfe15e6d37dbcdcc4d401b1acf7",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "c6241f0f1c13c664c51b79a2688eaf443005b4e2211bbf10dbf263e9ae1ea0b3",
     "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "26d1b61b02e827c49a44920b1629b526bbffdfee45952987dc10b7b773344e01",
     "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "ffc0e5c980e0675bfd11e854f8b0748e4f7f9842854ee2168271bd5da27fdf28",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "d3b3e9cefbb09d4c1c67fefc333e5d5f7ca24c5b56c641bc36d54e523071869c",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "add41ce799192a81c0584f9b2fecbcc0f09224d06397991ab4c3d7d5e17539a5",
     "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "3d05fbba16fd724e4f74fd60639397ef2d4f1106dc97bf1f8d0e9594104c6e56",
     "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "1a544a4c7539dd00ff8573180fa12961b6de821798f79c7952b27b6558d72a01",
     "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "698d7b679fe00bbe312606da41e44ca0cf8911e4f98522c8f3b656d849b96916",
     "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "4373f5338ff842a3145a2f180ecf02dcbf466041054fd722f05ee264a5d2905b",
     "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "7b68ead0996829c7c0940b449ec3c2b8c773cfc387ce8b5506e9d8ecfcc4ed78",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "b9ec290996eab2dd24878a3ea1140f83fe66a60e4ef37681f25713c062ae15cb",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "a20c52370312dabf95c0431240d633b8e9ac96fa8bd35a349eea75d51e85cceb",
     "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "76c77300e33f86d6eea29632c0b86a3be5242a8047d10cf40d624d0d6661a74e",
     "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "baf2af4bf879c877fcc93af12b981716bf30c20489c0a0becec390b2da6b67a4",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "99115e6cb1703058cfda6416b753717f6fb153ee140b1f9b446e2f0b488d82e6",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "a4331bf830e86c37106f18cfb95bf26986768bf9d09277cac3ce9e4678f195e3",
     "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "970c687bac4657b1e925348c8905f7215b64d4bf02b270fd4f84f3531e95e93b",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "1ec2bf5889ef340df2f529a143b06f87d0d5c4e1f00e7fa6f7e26ce62b1e2db4",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "95a5c30b706519d6b5fb50e2478dc1e28346e3294eeafd5e9ff722031697732e",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "1fd6786bec1ccf056bfa054514370b694b601fc182f5994adec73b582c90b69b",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "d4566fa11aea04e0b43a993fd019eced970c6eee6926e4e02adc1cb0b14e85a4",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "1b741ec7507f68ed04ce8deff9bdd6c54e672313ccefcd6f8c89e8e4647284ae",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "1b8ca649bd39cd25c944b0061c864f93c973451a6e37b4e053135b6ba7a1f157",
     "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "1be40dc82cad1430d9c30a7e987cc98773cca2cc9d0d4cbce9a566b6fc207974",
     "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "88fcfebb645f6f9000586ab71dac556c37f8416c6ec617a14218fd62b65d4803",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "73cb94698932951b7b0db619bf88374c8a108e699f161f4c23107e573a350da3",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "f57458157c7bacbdfb056c4c61774e00d2479b539f69db4af8aa794fd7cb314f",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "5cbc4b630e09bf0a6dfe4e167702becad213a4ddc4ec467c412a30e6185c0079",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "0ac38c6c010e00fb794dc7df5af8be03bcbd23d230b4b13e71fe1116f4228287",
     "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "d7e4b5b452fcdd34fa09e3702d4bf7afd8f0fadb68eedd817f240c2149678773",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "b5408e08c1cd7b9acf7552df74063c5f2f8a3690c07b606991c65a1e38b8c962",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "2634a15ecede64ab6d1536712c24df540aa3ba1189d9a1c24c636d7d23cb2dec",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "bc42227cd61aea8d9cccbe3056a79e7170f31f527b6e35606a063adc0a1fbf90",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "17be24e8a762160c93f7897c8d70e8bba3e5364b8fcfd48e32a01f5fc6170252",
     "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "0e0261eb143af715a2964fc1094c91689b6b850026cb9404bc95638ee822d65b",
     "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "22e47d7f4a7f1f60281b85a78bcffc97cdf675812c908a0a25a3f1c4428d11c8",
     "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "6df5a045e05970b8e50082673e81cc97e6fdd6facbfea1e77a06ab05165ad65a",
     "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "ac678c6575cae7056c709af3afe55430a027a4bb5dc7be275ff9d01bdc17002a",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "8163afea230797ab2f7e39444fe49309c49e8a34893ba6ab8494e7be4b2f7ac6",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "88fabf9deb929faf20d207535e2e794c31d48bc58343c7ce49436038cc4cfa08",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "d63388ca8ef33555bfb0a9f7651970ed432519737709caf11fb24730e63c28b5",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "709bdf4c0874b1da6b2e39c836b069e9f99bbe369c0bfa81d3c7492258b0b606",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "7a6fcbecad047c324234435b41cf4cba8553fd754d8929bbc37d02a27c278b7b",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "af8919aede52730c9be3be68c6c0da34b70de022951aa1b2d07ce6bb2e147fc8",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "93946dcbcb4e52630167389f4d9167ce7b614ee21f079c4c04e27ef2355a2ffb",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "9e51be98bec1c927b1a5ff20213ad77b44c737990d0bf6a83a3ba4d6361bb05c",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "5adb5567e4c2d1d4c4d402753e75e23a4fc25a410816ce7655425da3fda00cc1",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "717606091393617053cdd8e2a5ef94c86b12607b2a0040dff964ae1b0b616650",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "061bb1967ab09583ba5cb120fdad6e70a551bd6a02d016ce78b957dad6b62051",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "43cc80750a8e893aff0631548b7723f95795172361cbc30757f8439a9a9d819d",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "d0f725d57d4a7f5c5f28a0f79103460f550596c3bd5105a89bf719e161709107",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "d6397dc9cd29fffe1af4cc5c4f34c78ea7e2b19ef92198b68dbab8d275e9927b",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "778b610eb6649013e261572c9e03dd338967a25d199aa4bed72a9a688f20032b",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "8d793629cbbde3ba2c27717d41be3ea15437c4cea84b418ec0e237abf2be1256",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "5baa0537403b41afb336a173ed281b1980faab7b08bf41d45accd23bdeef141e",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "df6cc4650519b6a27b8c4965472c65116c0898fcda10397d53aebb1a56fc5c3e",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "2916d59aab3ddbc02d7266159101dccb05de663ddee0605c93aefbbb46a44c0a",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "965b240fff5f97fd2ba4e92d3d935b533c1632198f62993dbdd84d699867458c",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "b1e15ffb7174f0dc162d4c51e1649bb954646ecadb84df2920e22fc2ef2289ed",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "1b04b29dde9c7703c1cf722554cee883880e3a098c22560ed4bc703a7cf998c5",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "9852aaefbe1bea32f159bffb1d494091ae983fb8d15e157bdda6a6c80ba99806",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "da1346a4679950483790c0820d5e3521602fd74e0d85a2f0e4ad5a07263857b9",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "3a2949a34574ef107b7d755a9b4f826441565d159dd30fd0af3722db32b3fe27",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "2225850ec14beb45daad1f41ce8c91512d92a99a380954adf8209796c9117fb0",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "c30e281c6aaed751dac282f4d757c21f6b8b794e45789d24fc132918b61fb6dd",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "62b53cb3c02ae961b051a49e28de11359e4c01394696868b84829f67a3f51914",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "21130b53eeb00d477c0b6ec4cae85daf57b0867317b211f0c19a34f602d695a3",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "b5e03929f98f060c31aa7cad5ebf34524a7353aa93bc11d604b59e39fe040bb9",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "7ed30717aa46b42ef0f89292b00babf568847507d701e5893f6ed75546940f20",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "f33327c2df336269b68140817c7948b498eb997e9dad308a478783cefa4d5ec7",
     "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "4b275efda73ac59473f1bb970712281d2c6a199327c44c8ac1f47b4ce254ab88",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "fc4e59d4ab71b184902a0751f22e6329214b78500b9d123a6397c8caf1707f39",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "eeee688038426b35bf316bba6c3c056228d8771d94b4570c99038fc784edd850",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "d45085f2c6177411affa6deb91d69c2dff1cf23679327bb23cd2c6366888dbd8",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "a225bd87289a02eacfbf35b41721d8f89892d17c115e555c4e0708a5241b31d0",
     "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "16c5dcf27e8e6c3ebde21f1400d5d02fb7b0b8080defd8010da41c4c56bdb53f",
     "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "4907692fad79350291cee7c14b11022d43a89c06190dbec1c57c523212976efe"
   },
@@ -829,247 +1139,861 @@
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Rahalaskuri syöttää nopeasti 50 euron seteleitä, jotka näkyvät liikkeen vuoksi sumeina, ja vihreä näyttö näyttää tietoja.",
+      "alt": "Arkistokuva: Kuopion kaupungintalo on kuvattu päiväsaikaan, sen edessä on vilkas katu, jossa on autoja, busseja ja jalankulkijoita.",
       "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Talous",
-        "depictable_scene": "Laskimen vieressä on erikorkuisia eurokolikkopinoja neutraalilla työpöydällä.",
-        "must_avoid": [
-          "pörssikurssit tai osakekaupan näytöt",
-          "kryptovaluutat",
-          "virheelliset tai keksityt prosentit ja euromäärät"
+        "category": "Kotimaa",
+        "concepts": [
+          {
+            "depictable_scene": "Lisensoitu dokumentaarinen valokuva Kuopion kaupungin todellisesta LVV26-harjoitustyöskentelystä, jossa viranomaiset työskentelevät sisätilassa yhteisen tilannekuvanäytön ääressä.",
+            "must_avoid": [
+              "staged street evacuation",
+              "combat or destruction"
+            ],
+            "must_show": [
+              "officials in a coordination room",
+              "situation-display screens"
+            ],
+            "rank": 1,
+            "safe_to_generate": false,
+            "search_queries": [
+              "Kuopio LVV26 valmiusharjoitus",
+              "LVV26 harjoitus kuvat",
+              "Lupa- ja valvontavirasto LVV26",
+              "LVV26 emergency coordination room"
+            ],
+            "subject": "Kuopion kaupunki LVV26-valmiusharjoituksessa"
+          },
+          {
+            "depictable_scene": "Ylhäältä kuvattu paikantamaton harjoituspöytä, jolla on nimetön kuvitteellinen tieverkkokartta ja muutama neutraali reittimerkki ilman ihmisiä.",
+            "must_avoid": [
+              "people, hands or body parts",
+              "recognizable real-place geography or readable labels",
+              "combat or disaster damage"
+            ],
+            "must_show": [
+              "unlabeled road-network map",
+              "neutral route markers"
+            ],
+            "rank": 2,
+            "safe_to_generate": true,
+            "search_queries": [
+              "väestönsiirto harjoituskartta",
+              "valmiusharjoitus karttapöytä",
+              "tilannekuva reittikartta",
+              "emergency route planning map"
+            ],
+            "subject": "kaupunki ja maan sisäisiä väestönsiirtoja havainnollistava pöytäharjoituskartta"
+          },
+          {
+            "depictable_scene": "Lisensoitu päiväkuva aidon Kuopion kaupungintalon tunnistettavasta ulkojulkisivusta ja sitä ympäröivästä kaupunkiympäristöstä ilman lavastettua harjoitustoimintaa.",
+            "must_avoid": [
+              "staged evacuation activity",
+              "military presence"
+            ],
+            "must_show": [
+              "authentic Kuopio City Hall facade",
+              "surrounding civic setting"
+            ],
+            "rank": 3,
+            "safe_to_generate": false,
+            "search_queries": [
+              "Kuopion kaupungintalo ulkokuva",
+              "Kuopio kaupungintalo",
+              "Kuopio City Hall exterior",
+              "Kuopio City Hall facade"
+            ],
+            "subject": "Kuopion kaupunki – kaupungintalon ulkokuva"
+          }
         ],
-        "must_show": [
-          "euro coin stacks"
-        ],
-        "search_queries": [
-          "Suomessa toimivien luottolaitosten rahoituskate",
-          "euro coin stacks calculator",
-          "eurokolikkopinoja laskimen vieressä"
-        ],
-        "subject": "Suomessa toimivien luottolaitosten rahoituskate vuonna 2025"
+        "version": "article-first-v1"
       },
-      "credit": "Photo by Pixabay on Pexels",
-      "depicted": "The image shows a close-up, high-angle view of a money counting machine in operation. A stack of 50 Euro banknotes is visible, with the top notes blurred due to motion as they are being processed by the machine. The machine itself is light blue-gray, with a textured surface. On the right side of the image, a green digital display screen is visible, showing text that includes \"DENOM SORT,\" \"A> 50€,\" \"B>AUTO,\" \"C>AUTO,\" \"D>AUTO,\" \"TOTAL:\", and \"B100 TO M2.\" There are no identifiable people in the ",
+      "credit": "Photo by Matti Mattila on Wikimedia Commons",
+      "depicted": "The image shows a street scene on a clear, sunny day with a large, ornate building in the background. The building is light-colored with a grey roof and a small cupola on top. There are numerous windows and decorative architectural details. In front of the building, there are several trees with green foliage. A wide street with a crosswalk is in the foreground and middle ground. Several vehicles are visible, including buses, cars, and taxis. One bus is yellow and brown, another is white and blue",
       "generated": false,
       "hotlink": false,
-      "license": "CC0 1.0",
-      "license_evidence": {
-        "image_path": "/photos/164688/pexels-photo-164688.jpeg",
-        "license": "CC0 1.0",
-        "license_code": "CC0",
-        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-        "photo_id": "164688",
-        "photo_url": "https://www.pexels.com/photo/gray-auto-bill-counter-164688/",
-        "photographer": "Pixabay",
-        "photographer_url": "https://www.pexels.com/@pixabay",
-        "response_sha256": "fb35baa36855f64e695ce6827ef033c1699cfcdba2d429145bde47e167c7bc39",
-        "retrieved_at": "2026-09-28T20:53:03.165794+00:00",
-        "transport": "jina_reader",
-        "version": 1
-      },
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "local_path": "media/af5860f62bf1bc8bf102be7007fb7456130dad98ed9f0c53467b379bda3a57eb.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "local_path": "media/8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0.jpg",
       "pixel_review": {
-        "alt_fi": "Rahalaskuri syöttää nopeasti 50 euron seteleitä, jotka näkyvät liikkeen vuoksi sumeina, ja vihreä näyttö näyttää tietoja.",
+        "alt_fi": "Kuopion kaupungintalo on kuvattu päiväsaikaan, sen edessä on vilkas katu, jossa on autoja, busseja ja jalankulkijoita.",
         "approved": true,
-        "article_text_sha256": "8395fb8b0cc9bcaf56a8a10b507d7f76faa30e0488f1f24a32754b256b64a9a4",
-        "description": "A close-up, high-angle view shows a stack of 50 Euro banknotes being rapidly fed through a grey money counting machine. The banknotes are blurred due to motion, but the 50 Euro denomination is visible on some. To the right, a green digital display shows text including \"DENOM SORT\", \"50€\", and \"TOTAL:\".",
-        "image_sha256": "af5860f62bf1bc8bf102be7007fb7456130dad98ed9f0c53467b379bda3a57eb",
+        "article_text_sha256": "2052e307d0a02d99300b32976e2ea2969f1e8915f0ca571ea733c00fd2286f21",
+        "concept_sha256": "d089083599a11f691158086a0c0976287e09810e26070596b53c6026ec7ccdcd",
+        "description": "A wide-angle, slightly faded color photograph shows a large, ornate building with a central tower and multiple windows, identified as Kuopio Town Hall. In front of the building, there is a busy street with cars, buses, and pedestrians. The street features a crosswalk, traffic signs, and streetlights. Trees line the street and are visible around the building. The sky is clear blue.",
+        "fit_score": 9,
+        "image_sha256": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
         "model": "google:gemini-2.5-flash",
-        "no_people": true,
-        "reason": "The article discusses financial topics such as interest income, interest expenses, and operating profits of credit institutions. The image of money being counted by a machine directly illustrates the handling and processing of money, which is a concrete and relevant subject to the financial data presented in the article.",
-        "reviewed_at": "2026-09-28T20:53:06.901572+00:00"
+        "must_show_visible": [
+          true,
+          true
+        ],
+        "no_people": false,
+        "reason": "The image clearly depicts the Kuopio Town Hall facade and its surrounding civic setting, which directly matches the selected concept. The article discusses an exercise involving the city of Kuopio, making an image of its city hall highly relevant as a concrete representation of the city.",
+        "reviewed_at": "2026-09-28T23:53:18.505779+00:00",
+        "source_context": {
+          "image_sha256": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
+          "license": "CC BY 2.0",
+          "license_url": "https://creativecommons.org/licenses/by/2.0",
+          "photo_id": "wikimedia-9096110",
+          "photo_url": "https://commons.wikimedia.org/wiki/File:Kuopio%20Town%20Hall%201989.jpg",
+          "photographer": "Matti Mattila",
+          "provider": "wikimedia",
+          "title": "Kuopio Town Hall 1989.jpg"
+        },
+        "source_context_sha256": "1a9119a2f7ccb81e662220522c4d6151df0654a54abd7062471fc57ef78a738b"
       },
       "pixels": {
-        "height": 625,
+        "height": 1191,
         "mode": "RGB",
-        "variance": 8148.7,
-        "width": 940
+        "variance": 7504.3,
+        "width": 1744
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "A close-up, high-angle view shows a stack of 50 Euro banknotes being rapidly fed through a grey money counting machine. The banknotes are blurred due to motion, but the 50 Euro denomination is visible on some. To the right, a green digital display shows text including \"DENOM SORT\", \"50€\", and \"TOTAL:\".",
+        "evidence": "A wide-angle, slightly faded color photograph shows a large, ornate building with a central tower and multiple windows, identified as Kuopio Town Hall. In front of the building, there is a busy street with cars, buses, and pedestrians. The street features a crosswalk, traffic signs, and streetlights. Trees line the street and are visible around the building. The sky is clear blue.",
         "matched": [
-          "euro"
+          "hall",
+          "kuopio"
         ],
         "method": "vision",
-        "reason": "Exact-pixel full-article review approved licensed subject; search composition gate: missing must_show: euro coin stacks"
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "sha256": "af5860f62bf1bc8bf102be7007fb7456130dad98ed9f0c53467b379bda3a57eb",
-      "source_url": "https://www.pexels.com/photo/gray-auto-bill-counter-164688/",
+      "selection_evidence": {
+        "article_text_sha256": "2052e307d0a02d99300b32976e2ea2969f1e8915f0ca571ea733c00fd2286f21",
+        "decision_sha256": "962a25f1d4a2aca1c42118b1c9114b778b170ba2aa3b15ded0059e1a561a5da6",
+        "minimum_real_fit": 8,
+        "searches": [
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
+            "queries": [
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Kuopio LVV26 valmiusharjoitus",
+              "LVV26 harjoitus kuvat",
+              "Lupa- ja valvontavirasto LVV26"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "9b487857de4be4644e175a39bb2432b44919f0e86b9f45f0d56a0249a7314174",
+                "license": "Pexels License",
+                "reason": "The image shows an aerial view of a city, which is too generic to illustrate the specific concept of officials working in a coordination room with situation-display screens for a readiness exercise. The article mentions Kuopio, but this image does not specifically depict Kuopio or any aspect of the LVV26 exercise. The selected concept requires a sp",
+                "source_url": "https://www.pexels.com/photo/aerial-view-of-vaxjo-city-with-forests-and-lakes-33815093/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "2e720e197af4553ba4a8e21df38513a57037f2b1d420506f5dc76aa0d542b274",
+                "license": "Pexels License",
+                "reason": "The article discusses a preparedness exercise in Kuopio, focusing on coordination and internal population transfers. The selected concept specifically requires a licensed documentary photograph of officials working in a coordination room with situation-display screens. The provided image is an aerial landscape view of a city, which does not show an",
+                "source_url": "https://www.pexels.com/photo/drone-shot-of-urban-area-19128876/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "47e82fdc91a4cc9b11906a5dbfd136040ef66c04228fe14b30144c9872af4179",
+                "license": "Pexels License",
+                "reason": "The image shows a city skyline, which is a generic view and does not depict the specific concept of officials in a coordination room with situation-display screens, nor does it relate to the LVV26 exercise described in the article. The article explicitly states that the exercise will not be visible on the streets. One or more required concept eleme",
+                "source_url": "https://www.pexels.com/photo/stockholm-suburb-with-scenic-forest-view-31899541/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "1f926326deaad51baae7030e9ccb5ffd1f9b5fb7c2f58728387d59b017f00076",
+                "license": "CC0 1.0",
+                "reason": "The article discusses a preparedness exercise in Kuopio involving officials working in a coordination room with situation-display screens. The image shows an outdoor city square at night, with no visible officials, coordination rooms, or situation-display screens. It does not depict the specific concept of officials working indoors on a preparednes",
+                "source_url": "https://www.pexels.com/photo/kohtaa-koko-maailma-signage-at-a-building-with-different-lights-at-night-804462/"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "Kuopio LVV26 valmiusharjoitus",
+              "LVV26 harjoitus kuvat",
+              "Lupa- ja valvontavirasto LVV26"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Kuopio LVV26 valmiusharjoitus",
+              "LVV26 harjoitus kuvat",
+              "Lupa- ja valvontavirasto LVV26"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Kuopio LVV26 valmiusharjoitus",
+              "LVV26 harjoitus kuvat",
+              "Lupa- ja valvontavirasto LVV26"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
+            "queries": [
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "väestönsiirto harjoituskartta",
+              "valmiusharjoitus karttapöytä",
+              "tilannekuva reittikartta"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "9da836fd6a89e0dfefa13aadb7ad026387001829d0510dc3923c46ba83c3a2bf",
+                "license": "Pexels License",
+                "reason": "The article discusses a readiness exercise involving population transfers and planning, which the selected concept specifies as an unlabeled road-network map with neutral route markers on a table, without people. This image shows a person holding a map, which includes a road network and some blue markers, but it is not on a table and clearly shows ",
+                "source_url": "https://www.pexels.com/photo/girl-holding-map-inside-vehicle-1037890/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "64de79eb8fc184084bd4269b9a72ab620b076c4647cae3270cfde7b72c3c31f6",
+                "license": "Pexels License",
+                "reason": "The image shows a car's navigation system with a real-world map, which does not match the concept of an unlabeled, fictional road-network map for a tabletop exercise. The map is not a neutral route marker but a detailed street map with specific place names. The article discusses a preparedness exercise involving population transfers, but this image",
+                "source_url": "https://www.pexels.com/photo/dashboard-with-gps-navigator-inside-car-on-road-6044782/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "32b72e8d2f4f309c9c9d6b51b3f6825bc739bacc2b815bbfa3e7d9b8e1b6cbb4",
+                "license": "Pexels License",
+                "reason": "The image shows a map, which broadly relates to the concept of a 'road-network map' for 'väestönsiirto harjoituskartta'. However, the map is not clearly an 'unlabeled road-network map' as specified in the must_show elements; it appears to be a nautical chart with depth soundings and coastal features, not a road network. Furthermore, there are no 'n",
+                "source_url": "https://www.pexels.com/photo/map-in-a-wooden-storage-10807979/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "464b5a9fbc851e4b59744b1f3d1ef84cb0e068c2b036069db3d1a45bd549ec6b",
+                "license": "Pexels License",
+                "reason": "The image shows a map, but it is not a road-network map, nor does it have any route markers. The map is a generic, unlabelled, folded paper map, not a specific planning map for an exercise. The article discusses a preparedness exercise involving population transfers and situation assessment, which the concept aims to illustrate with a specific type",
+                "source_url": "https://www.pexels.com/photo/paper-map-and-globe-on-wooden-table-7634706/"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "väestönsiirto harjoituskartta",
+              "valmiusharjoitus karttapöytä",
+              "tilannekuva reittikartta"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "8605714bf86bb888cdb4393ae7ca1d2a9cbc5b31d8abea09343b2bc7293bdb90",
+                "license": "Unsplash License",
+                "reason": "The image shows a real-world map with specific place names and geographical features, which contradicts the 'unlabeled road-network map' and 'recognizable real-place geography or readable labels' must_avoid criteria. The map is not a generic, unlabeled exercise map. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/map-vXKgrTrerj0?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "5683ba32184515d4032524914da2e5b958f094b94959a3e4a0a908537701b987",
+                "license": "Unsplash License",
+                "reason": "The article discusses a national preparedness exercise in Kuopio, Finland, involving internal population transfers and scenario planning. The selected concept describes an unlabeled, fictional road-network map with neutral route markers for a tabletop exercise. The image shows a detailed, labeled, real-world map of Japan, which is a specific geogra",
+                "source_url": "https://unsplash.com/photos/a-close-up-of-a-map-of-the-united-states-Kvho-NaljgI?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "ece63291ebff15ce8d195a5ab554e6476233ea8ffd8ec159d0958bebfbfc8b20",
+                "license": "Unsplash License",
+                "reason": "The image shows a real-world road map with recognizable place names and geographical features, which contradicts the 'unlabeled road-network map' and 'no recognizable real-place geography or readable labels' requirements of the selected concept. It also lacks neutral route markers. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/close-up-photography-of-map-yg8Cz-i5U30?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "c093d2c17f86a28c669c1643f042d75e7dc298e74e7bedf126bcf8b20c51ee7d",
+                "license": "Unsplash License",
+                "reason": "The article discusses a national preparedness exercise in Finland, including internal population transfers. The selected concept describes an unlabeled road-network map with neutral route markers for a table exercise. The image shows a real-world, labeled map of Japan, which is not an unlabeled road-network map and does not contain neutral route ma",
+                "source_url": "https://unsplash.com/photos/a-close-up-of-a-map-with-a-pin-in-it-CC3RZJ2C86A?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "väestönsiirto harjoituskartta",
+              "valmiusharjoitus karttapöytä",
+              "tilannekuva reittikartta"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "väestönsiirto harjoituskartta",
+              "valmiusharjoitus karttapöytä",
+              "tilannekuva reittikartta"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
+            "queries": [
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
+                "license": "CC BY 2.0",
+                "reason": "The image clearly depicts the Kuopio Town Hall facade and its surrounding civic setting, which directly matches the selected concept. The article discusses an exercise involving the city of Kuopio, making an image of its city hall highly relevant as a concrete representation of the city.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Kuopio%20Town%20Hall%201989.jpg"
+              }
+            ],
+            "concept_rank": 3,
+            "outcome": "accepted",
+            "provider": "wikimedia",
+            "queries": [
+              "Kuopion kaupungintalo ulkokuva",
+              "Kuopio kaupungintalo",
+              "Kuopio City Hall exterior"
+            ]
+          }
+        ],
+        "selected": {
+          "concept_rank": 3,
+          "fit_score": 9,
+          "image_sha256": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
+          "kind": "real"
+        },
+        "version": "article-first-v1"
+      },
+      "sha256": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kuopio%20Town%20Hall%201989.jpg",
       "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/164688/pexels-photo-164688.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "164688",
-        "photo_url": "https://www.pexels.com/photo/gray-auto-bill-counter-164688/",
-        "photographer": "Pixabay",
-        "photographer_url": "https://www.pexels.com/@pixabay",
-        "provider": "pexels",
-        "query": "Suomessa toimivien luottolaitosten rahoituskate",
-        "retrieved_at": "2026-09-28T20:53:03Z"
+        "attribution": {
+          "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
+          "title": "Kuopio Town Hall 1989.jpg"
+        },
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Kuopio_Town_Hall_1989.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "photo_id": "wikimedia-9096110",
+        "photo_url": "https://commons.wikimedia.org/wiki/File:Kuopio%20Town%20Hall%201989.jpg",
+        "photographer": "Matti Mattila",
+        "photographer_url": "https://commons.wikimedia.org/wiki/File:Kuopio%20Town%20Hall%201989.jpg",
+        "provider": "wikimedia",
+        "query": "Kuopio kaupungintalo",
+        "retrieved_at": "2026-09-28T23:53:16Z"
       },
-      "stock_provenance_sha256": "f3f3f67db05e0d219a386516bd2fbdda3594a1945f7a72579531f6b589759ab3",
-      "url": "https://uutistenlukija.fi/media/af5860f62bf1bc8bf102be7007fb7456130dad98ed9f0c53467b379bda3a57eb.jpg"
+      "stock_provenance_sha256": "cc4569c7d9966d58250354120c715d86619a4c20c6a46d2f8bcb216b10bf9a49",
+      "url": "https://uutistenlukija.fi/media/8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "stat",
+      "provider": "kuopio",
       "related_sources": 0,
-      "source_fields_sha256": "e1f3e2e91da38d03d01cbf4c42c85f5c3133f1bc705733184ea1d4f30ac28c6a",
-      "source_sha256": "a9751c2235196cbc14e7bc9ddac3afc4d5edcd3127074ef8613e6ece7c3ff5d5"
+      "source_fields_sha256": "456b8339f25af29690a106715036ba24df321f97fbbf15bb17e7706d3bb07dc8",
+      "source_sha256": "5b122753c39b934562cbbe7c4bf4fba256f9cb5d71bba11b1b223bc18cfadf60"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-09-28T05:00:00+00:00",
-        "publisher": "Tilastokeskus",
+        "published_at": "2026-09-28T00:00:00+03:00",
+        "publisher": "Kuopion kaupunki",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Creative Commons Nimeä 4.0 Kansainvälinen (CC BY 4.0): kopiointi, muokkaus ja edelleenjako sallittu, myös kaupallisiin tarkoituksiin; koskee tekstejä, taulukoita ja tilastokuvioita; lähde merkittävä (Lähde: Tilastokeskus)",
+          "license": "Kuopion kaupungin avoimen datan käyttöehdot: maailmanlaajuinen, maksuton, peruuttamaton käyttöoikeus kopioida, levittää, muokata ja hyödyntää kaupallisesti ja ei-kaupallisesti; koskee myös tekstejä",
           "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://stat.fi/fi/tietoa-meista/tutustu-tilastokeskukseen/lainsaadanto/kayttoehdot"
+          "url": "https://www.kuopio.fi/app/uploads/2023/04/avoin-data-kayttoehdot-kuopion-kaupunki.pdf"
         },
-        "text": "Tilastokeskuksen mukaan vuonna 2025 Suomessa toimivien luottolaitosten korkotuotot laskivat vuodesta 2024 yhteensä 28,1 %, ollen 18,3 miljardia euroa. Korkokuluja kertyi vastaavasti 12,4 miljardia euroa. Korkotuottojen ja -kulujen erotus, eli rahoituskate, oli 5,8 miljardia euroa, joka oli 7,1 % vähemmän kuin vuonna 2024.\nSisältöä ladataan\nKeskeisiä poimintoja\nSuomessa toimivien luottolaitosten korkotuottojen ja -kulujen erotus, eli rahoituskate, pieneni 7,1 % vuonna 2025.\nVuonna 2025 Suomessa toimivien luottolaitosten liikevoitto oli 5,7 miljardia euroa.\nVuonna 2025 Suomessa toimivien luottolaitosten hallintokulut olivat 5,6 miljardia euroa.\nVuonna 2025 henkivakuutusyhtiöiden maksamat korvaukset olivat 4,9 miljardia euroa.\nLuottolaitosten liikevoitto kasvoi 2,8 % vuodesta 2024\nLuottolaitosten liiketoiminnan tuotot olivat 10,5 miljardia euroa vuonna 2025, eli 4,7 % vähemmän kuin edellisvuonna. Samanaikaisesti luottolaitosten suurin kuluerä, hallinnon kulut, oli 5,6 miljardia euroa, eli 4,9 % enemmän kuin vuonna 2024. Luottolaitosten liikevoitoksi muodostui 5,7 miljardia euroa, joka oli 2,8 % edellisvuotta enemmän.\nHenki- ja vahinkovakuutusyhtiöiden vakuutusmaksutulot kasvoivat vuonna 2025\nHenkivakuutusyhtiöiden vakuutusmaksutulot ensivakuutuksesta kasvoivat 12,5 % vuonna 2025. Vakuutusmaksutulot kasvoivat edellisvuoden 5,5 miljardista 6,1 miljardiin euroon. Myös maksetut korvaukset kasvoivat. Maksettuja korvauksia kertyi 4,9 miljardia euroa vuonna 2025, kun edellisvuonna korvauksia kertyi 4,7 miljardia euroa.\nMyös vahinkovakuutusyhtiöiden vakuutusmaksutulot kasvoivat vuonna 2025. Vakuutusmaksutulot kasvoivat vuodentakaisesta 4,4 miljardista eurosta 4,6 miljardiin euroon, eli yhteensä 5,0 %. Vahinkovakuutusyhtiöiden maksamat korvaukset sen sijaan vähenivät 1,4 % edellisvuodesta, korvausten tason pysyessä noin 3,4 miljardissa eurossa.",
-        "title": "Suomessa toimivien luottolaitosten rahoituskate oli 5,8 miljardia euroa vuonna 2025",
-        "url": "https://stat.fi/fi/julkaisu/cmfqopl7q04br08vyx1dwu3sp"
+        "text": "Näin Suomi harjoittelee väestönsuojelua – myös Kuopion kaupunki mukana LVV26-valmiusharjoituksessa\n28.09.2026\nTurvallisuus\nUutiset\nLupa- ja valvontavirasto järjestää valtakunnallisen valmiusharjoituksen LVV26, joka huipentuu syys-lokakuun vaihteessa järjestettävään pääharjoitteluvaiheeseen. Laajaan ja vaikutuksiltaan merkittävään harjoitukseen osallistuu yli 400 keskeistä valtionhallinnon, alueellisen ja paikallisen varautumisen ja turvallisuuden toimijaa eri puolilta maata. Myös Kuopion kaupunki harjoittelee muiden organisaatioiden mukana harjoituksen teemaa, väestönsuojelua. Harjoitus vahvistaa yhteiskunnan kykyä toimia normaaliolojen häiriötilanteissa ja poikkeusoloissa.\nHarjoitus parantaa yhteistä valmiutta väestönsuojeluun\nValmiusharjoitus perustuu kuvitteelliseen kansainväliseen tilanteeseen, jossa yhteiskunnan turvallisuustilanne heikkenee, kriittisen infrastruktuurin toiminta häiriintyy ja sotilaallisen voimankäytön uhka kasvaa merkittävästi. Harjoituksen edetessä osallistujaorganisaatiot harjoittelevat väestön siirtämistä maan sisällä tilanteen kehittymisen edellyttämällä tavalla.\n“LVV26 on yksi merkittävimmistä tähänastisista yhteisistä valmiusharjoituksista, jossa testaamme toimintakykyämme koko maan laajuisessa, väestönsiirtoihin johtavassa tilanteessa. Vaikka harjoitus ei näy kaduilla, eikä kansalaisia tosiasiallisesti siirretä, antaa harjoitus meille arvokasta tietoa omasta osaamisestamme ja kyvystämme toimia yhdessä”, kertoo harjoituksen päävalmistelija, pelastusylitarkastaja Markku Hutka Lupa- ja valvontavirastosta.\nHarjoituksessa painotetaan väestönsuojeluun liittyviä valmiuksia, erityisesti evakuointien ja väestönsiirtojen järjestelyjen osalta, sekä poikkeusolojen aikaista johtamista ja viestintää. Tällä tarkoitetaan muun muassa:\ntilannearviointi- ja toimeenpanokykyä\ntilannekuvan muodostamista ja välittämistä\npoikkeusolojen viestintää\norganisaatioiden välistä yhteistoimintaa\nHarjoitus on suunnattu erityisesti viranomaisille, kunnille, varautumisen yhteistoiminta-alueiden ja maakuntien yhteistoimintarakenteille, elinkeinoelämän toimijoille sekä seurakunnille ja tietyille järjestöille.\nValmiutta testataan syksyllä harjoituksen päävaiheessa\nLVV26-valmiusharjoitus koostuu osallistuvien organisaatioiden taustakoulutuksesta, valmistautumisesta ja harjoittelusta, jotka huipentuvat 29.9.–1.10.2026 järjestettävään pääharjoitusvaiheeseen.\n”Pääharjoitusvaiheessa testaamme valmiuttamme laajasti. Olemme erittäin tyytyväisiä siihen, kuinka laajalla osallistujajoukolla ja monialaisesti tällä hetkellä valmiutta kehitetään ja osaamista vahvistetaan yhdessä väestön suojelemiseksi”, Hutka kertoo.\nValmiusharjoitustoiminta jatkuu saumattomasti järjestämisvastuun siirryttyä aluehallintovirastoilta Lupa- ja valvontavirastolle 1.1.2026.",
+        "title": "Näin Suomi harjoittelee väestönsuojelua – myös Kuopion kaupunki mukana LVV26-valmiusharjoituksessa",
+        "url": "https://www.kuopio.fi/2026/09/28/nain-suomi-harjoittelee-vaestonsuojelua-myos-kuopion-kaupunki-mukana-lvv26-valmiusharjoituksessa/"
       }
     ],
-    "story_key": "url:https://stat.fi/fi/julkaisu/cmfqopl7q04br08vyx1dwu3sp",
+    "story_key": "url:https://www.kuopio.fi/2026/09/28/nain-suomi-harjoittelee-vaestonsuojelua-myos-kuopion-kaupunki-mukana-lvv26-valmiusharjoituksessa/",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-09-28T20:50:31.938022+00:00",
-        "sha256": "b3747f78303af4d1a0be4c23bb2e9d735a0efcdd493bfb09ad3de106f32b3d7e",
-        "text": "Käyttöehdot\nMiten voit käyttää Tilastokeskuksen tietoja?\nPääperiaate: Voit käyttää Tilastokeskuksen tilastotietoja ja tekstejä, kunhan mainitset lähteeksi Tilastokeskuksen.\nTilastokeskuksen avoimen datan aineistoja ja verkkopalvelun julkisia sisältöjä koskee Creative Commons Nimeä 4.0 Kansainvälinen -käyttölupa. Luvan mukaisesti saat kopioida, muokata ja jakaa näitä aineistojamme edelleen joko alkuperäisessä tai muokatussa muodossa. Saat myös yhdistää aineistoja muihin aineistoihin ja käyttää aineistoja myös kaupallisiin tarkoituksiin. Tämä lupa koskee esimerkiksi tekstejä, taulukoita ja tilastokuvioita.\nKun käytät näitä aineistoja tai jaat niitä eteenpäin, merkitse lähteeksi vähintään Tilastokeskus (Lähde: Tilastokeskus).\nLisätietoa CC BY Nimeä 4.0 Kansainvälinen -käyttöluvasta (creativecommons.org)\nMitä lupa ei koske?\nLupa ei koske\nTilastokeskuksen sivuilla julkaistavia muiden organisaatioiden tuottamia tietoja. Ne ovat kunkin tiedontuottajan omien käyttöehtojen alaisia.\nvalokuvien ja kuvituskuvien käyttöä. Niiden tekijänoikeudet ovat joko kuvien tekijöillä tai Tilastokeskuksella. Tällaisen materiaalin käytöstä on aina sovittava erikseen.\ntoimeksiantoina ja maksullisina palveluina tuotettavia tietoja. Niiden käyttöehdot ovat sopimuskohtaisia.\nAineistojen oikeudet\nTilastokeskus on aineistojen tuottaja ja tekijänoikeuden haltija, ellei tuotteen, tiedon tai palvelun yhteydessä erikseen toisin ilmoiteta.\nMiten voit viitata aineistoon?\nLähdeviittauksen laajuus riippuu käyttöyhteydestä. Mainitse kuitenkin aina vähintään Tilastokeskus.\nKunkin tilaston sivulla on yksityiskohtainen kopioitava viittausohje kyseiseen tilastoon.\nKatso viittausohje-esimerkki väestörakennetilaston sivulta.\nEsimerkkejä viittaustavoista\nLähde: Tilastokeskus\nLähde: Tilastokeskus, väestörakenne\nSuomen virallinen tilasto (SVT): Kotimaan vesiliikenne [verkkojulkaisu]. Viiteajankohta: 2022, syyskuu. ISSN=2670-1952. Helsinki: Tilastokeskus [Viitattu: 21.5.2025]. Saantitapa: https://www.stat.fi/julkaisu/cktyfj0i028h80b50qy1up5dz\nSuomen virallinen tilasto (SVT): Väestörakenne [verkkojulkaisu]. ISSN = 1797-5379. Taulukko: 11rc -- Väestö iän (5-v.) ja sukupuolen mukaan, 1865-2024. Helsinki: Tilastokeskus [Viitattu 21.5.2025]. Saantitapa: https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__vaerak/statfin_vaerak_pxt_11rc.px/\nPostinumeroaluerajat, Tilastokeskus. Aineisto on ladattu Tilastokeskuksen rajapintapalvelusta 13.10.2024 lisenssillä CC BY 4.0.\nhttps://creativecommons.org/licenses/by/4.0/deed.fi",
-        "url": "https://stat.fi/fi/tietoa-meista/tutustu-tilastokeskukseen/lainsaadanto/kayttoehdot"
+        "retrieved_at": "2026-09-28T23:12:56.441053+00:00",
+        "sha256": "aa2474253e1b74dd3fc1a6342553e332e7bd9fe6ab36c901fcf449c09a6cbf98",
+        "text": "Kuopion kaupunki Konsernipalvelu Tietohallinto Käyttöehdot 4.12.2016 Kuopion kaupungin avoimen datan käyttöehdot 1. Yleistä Nämä käyttöehdot koskevat Kuopion kaupungin www-sivustoilla ja niihin liitettyjen palvelujen avoimesti jaettuja aineistojen (avoimen datan) käyttöä. Käyttäjällä tarkoitetaan henkilöä tai organisaatiota, joka ottaa tämän lisenssin (lisenssi jäljempänä myös \"käyttöoikeus\") alaisen aineiston käyttöönsä. Aineistojen tuottaja ja tekijänoikeuden tai tietokantasuojan haltija on Kuopion kaupunki, ellei aineiston, tiedon tai palvelun yhteydessä erikseen toisin ilmoiteta. Käyttöehdot koskevat palveluissa olevia paikkatietoaineistoja, taulukoita, tilastokuvioita, tekstejä sekä muuta tietoaineistoa. Kuopion kaupunki ei peri käyttöehtojen mukaisen aineiston käytöstä maksua. 2. Käyttöoikeuden ehdot Vastaanottamalla aineistoa käyttäjä hyväksyy olla olevat ehdot. Aineistoa käytettäessä on aineiston tai sitä sisältävän tai hyödyntävän palvelun yhteyteen liitettävä maininta alkuperäislähteestä ja aineistoversion ajankohta, esimerkiksi: [aineisto] © Kuopion kaupunki, [vuosiluku, päiväys] tai o o sisältää Kuopion kaupungin [aineiston nimi] aineistoa, [vuosiluku] 2.1 Käyttöoikeudet Tämä on Kuopion kaupungin myöntämä maailmanlaajuisen, maksuttoman, peruuttamattoman rinnakkaisen käyttöoikeuden myöntävä lisenssi, jolla edellä mainittua aineistoa voi vapaasti: · kopioida ja levittää · muokata ja hyödyntää kaupallisesti ja ei-kaupallisesti jatkolisensoimalla · yhdistellä muihin tuotteisiin ja · käyttää osana sovellusta tai palvelua. 2.2 Aineiston tuottajan velvollisuudet ja vastuut Aineisto on lisensoitu sellaisenaan eikä Kuopion kaupunki vastaa aineistossa mahdollisesti esiintyvistä virheistä eikä aineiston käytöstä aiheutuvista välittömistä tai välillisistä vahingoista. Kuopion kaupunki ei myönnä aineistolle tai siinä olevien tietojen oikeellisuudelle tai ajantasaisuudelle takuuta. Kuopion kaupunki ei takaa, että aineisto olisi jatkuvasti saatavilla ja Kuopion kaupunki voi lopettaa aineiston jakelun ennalta ilmoittamatta. 2.3 Käyttäjän velvollisuudet ja vastuut Käyttäjän on aineistoa tai siitä tehtyjä tuotteita käyttäessään ja edelleen luovuttaessaan · mainittava Kuopion kaupungin tekijän- tai muu oikeus ko. aineistoon · vaadittava nimeämiskäytännön noudattamista myöntäessään lisenssejä tuotteeseen tai · palveluun, jossa käytetään näiden ehtojen alaista aineistoa tai sen osaa Ilmoitettava onko aineisto esitetty/käytetty muuttamattomana/ kokonaisuudessaan/ käsiteltynä · poistettava maininta alkuperäislähteestä, mikäli Kuopion kaupunki sitä erikseen vaatii Käyttäjän ja Kuopion kaupungin välillä ei tämän lisenssin myötä synny yhteistyö- tai liikesuhdetta. Käyttäjä ei saa aineiston käytön yhteydessä ilmaista, että Kuopion kaupunki tukisi tai suosittelisi kyseistä aineiston käyttötapaa. 3. Sovellettava laki Tähän lisenssiin/käyttöoikeuteen sovelletaan Suomen lakia. 4. Muutokset tähän lisenssiin Kuopion kaupunki voi milloin tahansa muuttaa lisenssin ehtoja tai soveltaa aineistoon eri lisenssiä. Tämän lisenssin ehtoja sovelletaan kuitenkin edelleen niihin aineistoihin, jotka on otettu käyttöön tämän lisenssin voimassa ollessa. Lisätietoja: Jari Torvinen, tietohallintopäällikkö jari.torvinen(at)kuopio.fi",
+        "url": "https://www.kuopio.fi/app/uploads/2023/04/avoin-data-kayttoehdot-kuopion-kaupunki.pdf"
       }
     ]
   },
   "draft": {
-    "category": "Talous",
+    "category": "Kotimaa",
     "image": {
-      "alt": "Arkistokuva: Rahalaskuri syöttää nopeasti 50 euron seteleitä, jotka näkyvät liikkeen vuoksi sumeina, ja vihreä näyttö näyttää tietoja.",
+      "alt": "Arkistokuva: Kuopion kaupungintalo on kuvattu päiväsaikaan, sen edessä on vilkas katu, jossa on autoja, busseja ja jalankulkijoita.",
       "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Talous",
-        "depictable_scene": "Laskimen vieressä on erikorkuisia eurokolikkopinoja neutraalilla työpöydällä.",
-        "must_avoid": [
-          "pörssikurssit tai osakekaupan näytöt",
-          "kryptovaluutat",
-          "virheelliset tai keksityt prosentit ja euromäärät"
+        "category": "Kotimaa",
+        "concepts": [
+          {
+            "depictable_scene": "Lisensoitu dokumentaarinen valokuva Kuopion kaupungin todellisesta LVV26-harjoitustyöskentelystä, jossa viranomaiset työskentelevät sisätilassa yhteisen tilannekuvanäytön ääressä.",
+            "must_avoid": [
+              "staged street evacuation",
+              "combat or destruction"
+            ],
+            "must_show": [
+              "officials in a coordination room",
+              "situation-display screens"
+            ],
+            "rank": 1,
+            "safe_to_generate": false,
+            "search_queries": [
+              "Kuopio LVV26 valmiusharjoitus",
+              "LVV26 harjoitus kuvat",
+              "Lupa- ja valvontavirasto LVV26",
+              "LVV26 emergency coordination room"
+            ],
+            "subject": "Kuopion kaupunki LVV26-valmiusharjoituksessa"
+          },
+          {
+            "depictable_scene": "Ylhäältä kuvattu paikantamaton harjoituspöytä, jolla on nimetön kuvitteellinen tieverkkokartta ja muutama neutraali reittimerkki ilman ihmisiä.",
+            "must_avoid": [
+              "people, hands or body parts",
+              "recognizable real-place geography or readable labels",
+              "combat or disaster damage"
+            ],
+            "must_show": [
+              "unlabeled road-network map",
+              "neutral route markers"
+            ],
+            "rank": 2,
+            "safe_to_generate": true,
+            "search_queries": [
+              "väestönsiirto harjoituskartta",
+              "valmiusharjoitus karttapöytä",
+              "tilannekuva reittikartta",
+              "emergency route planning map"
+            ],
+            "subject": "kaupunki ja maan sisäisiä väestönsiirtoja havainnollistava pöytäharjoituskartta"
+          },
+          {
+            "depictable_scene": "Lisensoitu päiväkuva aidon Kuopion kaupungintalon tunnistettavasta ulkojulkisivusta ja sitä ympäröivästä kaupunkiympäristöstä ilman lavastettua harjoitustoimintaa.",
+            "must_avoid": [
+              "staged evacuation activity",
+              "military presence"
+            ],
+            "must_show": [
+              "authentic Kuopio City Hall facade",
+              "surrounding civic setting"
+            ],
+            "rank": 3,
+            "safe_to_generate": false,
+            "search_queries": [
+              "Kuopion kaupungintalo ulkokuva",
+              "Kuopio kaupungintalo",
+              "Kuopio City Hall exterior",
+              "Kuopio City Hall facade"
+            ],
+            "subject": "Kuopion kaupunki – kaupungintalon ulkokuva"
+          }
         ],
-        "must_show": [
-          "euro coin stacks"
-        ],
-        "search_queries": [
-          "Suomessa toimivien luottolaitosten rahoituskate",
-          "euro coin stacks calculator",
-          "eurokolikkopinoja laskimen vieressä"
-        ],
-        "subject": "Suomessa toimivien luottolaitosten rahoituskate vuonna 2025"
+        "version": "article-first-v1"
       },
-      "credit": "Photo by Pixabay on Pexels",
-      "depicted": "The image shows a close-up, high-angle view of a money counting machine in operation. A stack of 50 Euro banknotes is visible, with the top notes blurred due to motion as they are being processed by the machine. The machine itself is light blue-gray, with a textured surface. On the right side of the image, a green digital display screen is visible, showing text that includes \"DENOM SORT,\" \"A> 50€,\" \"B>AUTO,\" \"C>AUTO,\" \"D>AUTO,\" \"TOTAL:\", and \"B100 TO M2.\" There are no identifiable people in the ",
+      "credit": "Photo by Matti Mattila on Wikimedia Commons",
+      "depicted": "The image shows a street scene on a clear, sunny day with a large, ornate building in the background. The building is light-colored with a grey roof and a small cupola on top. There are numerous windows and decorative architectural details. In front of the building, there are several trees with green foliage. A wide street with a crosswalk is in the foreground and middle ground. Several vehicles are visible, including buses, cars, and taxis. One bus is yellow and brown, another is white and blue",
       "generated": false,
       "hotlink": false,
-      "license": "CC0 1.0",
-      "license_evidence": {
-        "image_path": "/photos/164688/pexels-photo-164688.jpeg",
-        "license": "CC0 1.0",
-        "license_code": "CC0",
-        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-        "photo_id": "164688",
-        "photo_url": "https://www.pexels.com/photo/gray-auto-bill-counter-164688/",
-        "photographer": "Pixabay",
-        "photographer_url": "https://www.pexels.com/@pixabay",
-        "response_sha256": "fb35baa36855f64e695ce6827ef033c1699cfcdba2d429145bde47e167c7bc39",
-        "retrieved_at": "2026-09-28T20:53:03.165794+00:00",
-        "transport": "jina_reader",
-        "version": 1
-      },
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "local_path": "media/af5860f62bf1bc8bf102be7007fb7456130dad98ed9f0c53467b379bda3a57eb.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "local_path": "media/8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0.jpg",
       "pixel_review": {
-        "alt_fi": "Rahalaskuri syöttää nopeasti 50 euron seteleitä, jotka näkyvät liikkeen vuoksi sumeina, ja vihreä näyttö näyttää tietoja.",
+        "alt_fi": "Kuopion kaupungintalo on kuvattu päiväsaikaan, sen edessä on vilkas katu, jossa on autoja, busseja ja jalankulkijoita.",
         "approved": true,
-        "article_text_sha256": "8395fb8b0cc9bcaf56a8a10b507d7f76faa30e0488f1f24a32754b256b64a9a4",
-        "description": "A close-up, high-angle view shows a stack of 50 Euro banknotes being rapidly fed through a grey money counting machine. The banknotes are blurred due to motion, but the 50 Euro denomination is visible on some. To the right, a green digital display shows text including \"DENOM SORT\", \"50€\", and \"TOTAL:\".",
-        "image_sha256": "af5860f62bf1bc8bf102be7007fb7456130dad98ed9f0c53467b379bda3a57eb",
+        "article_text_sha256": "2052e307d0a02d99300b32976e2ea2969f1e8915f0ca571ea733c00fd2286f21",
+        "concept_sha256": "d089083599a11f691158086a0c0976287e09810e26070596b53c6026ec7ccdcd",
+        "description": "A wide-angle, slightly faded color photograph shows a large, ornate building with a central tower and multiple windows, identified as Kuopio Town Hall. In front of the building, there is a busy street with cars, buses, and pedestrians. The street features a crosswalk, traffic signs, and streetlights. Trees line the street and are visible around the building. The sky is clear blue.",
+        "fit_score": 9,
+        "image_sha256": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
         "model": "google:gemini-2.5-flash",
-        "no_people": true,
-        "reason": "The article discusses financial topics such as interest income, interest expenses, and operating profits of credit institutions. The image of money being counted by a machine directly illustrates the handling and processing of money, which is a concrete and relevant subject to the financial data presented in the article.",
-        "reviewed_at": "2026-09-28T20:53:06.901572+00:00"
+        "must_show_visible": [
+          true,
+          true
+        ],
+        "no_people": false,
+        "reason": "The image clearly depicts the Kuopio Town Hall facade and its surrounding civic setting, which directly matches the selected concept. The article discusses an exercise involving the city of Kuopio, making an image of its city hall highly relevant as a concrete representation of the city.",
+        "reviewed_at": "2026-09-28T23:53:18.505779+00:00",
+        "source_context": {
+          "image_sha256": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
+          "license": "CC BY 2.0",
+          "license_url": "https://creativecommons.org/licenses/by/2.0",
+          "photo_id": "wikimedia-9096110",
+          "photo_url": "https://commons.wikimedia.org/wiki/File:Kuopio%20Town%20Hall%201989.jpg",
+          "photographer": "Matti Mattila",
+          "provider": "wikimedia",
+          "title": "Kuopio Town Hall 1989.jpg"
+        },
+        "source_context_sha256": "1a9119a2f7ccb81e662220522c4d6151df0654a54abd7062471fc57ef78a738b"
       },
       "pixels": {
-        "height": 625,
+        "height": 1191,
         "mode": "RGB",
-        "variance": 8148.7,
-        "width": 940
+        "variance": 7504.3,
+        "width": 1744
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "A close-up, high-angle view shows a stack of 50 Euro banknotes being rapidly fed through a grey money counting machine. The banknotes are blurred due to motion, but the 50 Euro denomination is visible on some. To the right, a green digital display shows text including \"DENOM SORT\", \"50€\", and \"TOTAL:\".",
+        "evidence": "A wide-angle, slightly faded color photograph shows a large, ornate building with a central tower and multiple windows, identified as Kuopio Town Hall. In front of the building, there is a busy street with cars, buses, and pedestrians. The street features a crosswalk, traffic signs, and streetlights. Trees line the street and are visible around the building. The sky is clear blue.",
         "matched": [
-          "euro"
+          "hall",
+          "kuopio"
         ],
         "method": "vision",
-        "reason": "Exact-pixel full-article review approved licensed subject; search composition gate: missing must_show: euro coin stacks"
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "sha256": "af5860f62bf1bc8bf102be7007fb7456130dad98ed9f0c53467b379bda3a57eb",
-      "source_url": "https://www.pexels.com/photo/gray-auto-bill-counter-164688/",
+      "selection_evidence": {
+        "article_text_sha256": "2052e307d0a02d99300b32976e2ea2969f1e8915f0ca571ea733c00fd2286f21",
+        "decision_sha256": "962a25f1d4a2aca1c42118b1c9114b778b170ba2aa3b15ded0059e1a561a5da6",
+        "minimum_real_fit": 8,
+        "searches": [
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
+            "queries": [
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Kuopio LVV26 valmiusharjoitus",
+              "LVV26 harjoitus kuvat",
+              "Lupa- ja valvontavirasto LVV26"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "9b487857de4be4644e175a39bb2432b44919f0e86b9f45f0d56a0249a7314174",
+                "license": "Pexels License",
+                "reason": "The image shows an aerial view of a city, which is too generic to illustrate the specific concept of officials working in a coordination room with situation-display screens for a readiness exercise. The article mentions Kuopio, but this image does not specifically depict Kuopio or any aspect of the LVV26 exercise. The selected concept requires a sp",
+                "source_url": "https://www.pexels.com/photo/aerial-view-of-vaxjo-city-with-forests-and-lakes-33815093/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "2e720e197af4553ba4a8e21df38513a57037f2b1d420506f5dc76aa0d542b274",
+                "license": "Pexels License",
+                "reason": "The article discusses a preparedness exercise in Kuopio, focusing on coordination and internal population transfers. The selected concept specifically requires a licensed documentary photograph of officials working in a coordination room with situation-display screens. The provided image is an aerial landscape view of a city, which does not show an",
+                "source_url": "https://www.pexels.com/photo/drone-shot-of-urban-area-19128876/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "47e82fdc91a4cc9b11906a5dbfd136040ef66c04228fe14b30144c9872af4179",
+                "license": "Pexels License",
+                "reason": "The image shows a city skyline, which is a generic view and does not depict the specific concept of officials in a coordination room with situation-display screens, nor does it relate to the LVV26 exercise described in the article. The article explicitly states that the exercise will not be visible on the streets. One or more required concept eleme",
+                "source_url": "https://www.pexels.com/photo/stockholm-suburb-with-scenic-forest-view-31899541/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "1f926326deaad51baae7030e9ccb5ffd1f9b5fb7c2f58728387d59b017f00076",
+                "license": "CC0 1.0",
+                "reason": "The article discusses a preparedness exercise in Kuopio involving officials working in a coordination room with situation-display screens. The image shows an outdoor city square at night, with no visible officials, coordination rooms, or situation-display screens. It does not depict the specific concept of officials working indoors on a preparednes",
+                "source_url": "https://www.pexels.com/photo/kohtaa-koko-maailma-signage-at-a-building-with-different-lights-at-night-804462/"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "Kuopio LVV26 valmiusharjoitus",
+              "LVV26 harjoitus kuvat",
+              "Lupa- ja valvontavirasto LVV26"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Kuopio LVV26 valmiusharjoitus",
+              "LVV26 harjoitus kuvat",
+              "Lupa- ja valvontavirasto LVV26"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Kuopio LVV26 valmiusharjoitus",
+              "LVV26 harjoitus kuvat",
+              "Lupa- ja valvontavirasto LVV26"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
+            "queries": [
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "väestönsiirto harjoituskartta",
+              "valmiusharjoitus karttapöytä",
+              "tilannekuva reittikartta"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "9da836fd6a89e0dfefa13aadb7ad026387001829d0510dc3923c46ba83c3a2bf",
+                "license": "Pexels License",
+                "reason": "The article discusses a readiness exercise involving population transfers and planning, which the selected concept specifies as an unlabeled road-network map with neutral route markers on a table, without people. This image shows a person holding a map, which includes a road network and some blue markers, but it is not on a table and clearly shows ",
+                "source_url": "https://www.pexels.com/photo/girl-holding-map-inside-vehicle-1037890/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "64de79eb8fc184084bd4269b9a72ab620b076c4647cae3270cfde7b72c3c31f6",
+                "license": "Pexels License",
+                "reason": "The image shows a car's navigation system with a real-world map, which does not match the concept of an unlabeled, fictional road-network map for a tabletop exercise. The map is not a neutral route marker but a detailed street map with specific place names. The article discusses a preparedness exercise involving population transfers, but this image",
+                "source_url": "https://www.pexels.com/photo/dashboard-with-gps-navigator-inside-car-on-road-6044782/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "32b72e8d2f4f309c9c9d6b51b3f6825bc739bacc2b815bbfa3e7d9b8e1b6cbb4",
+                "license": "Pexels License",
+                "reason": "The image shows a map, which broadly relates to the concept of a 'road-network map' for 'väestönsiirto harjoituskartta'. However, the map is not clearly an 'unlabeled road-network map' as specified in the must_show elements; it appears to be a nautical chart with depth soundings and coastal features, not a road network. Furthermore, there are no 'n",
+                "source_url": "https://www.pexels.com/photo/map-in-a-wooden-storage-10807979/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "464b5a9fbc851e4b59744b1f3d1ef84cb0e068c2b036069db3d1a45bd549ec6b",
+                "license": "Pexels License",
+                "reason": "The image shows a map, but it is not a road-network map, nor does it have any route markers. The map is a generic, unlabelled, folded paper map, not a specific planning map for an exercise. The article discusses a preparedness exercise involving population transfers and situation assessment, which the concept aims to illustrate with a specific type",
+                "source_url": "https://www.pexels.com/photo/paper-map-and-globe-on-wooden-table-7634706/"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "väestönsiirto harjoituskartta",
+              "valmiusharjoitus karttapöytä",
+              "tilannekuva reittikartta"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "8605714bf86bb888cdb4393ae7ca1d2a9cbc5b31d8abea09343b2bc7293bdb90",
+                "license": "Unsplash License",
+                "reason": "The image shows a real-world map with specific place names and geographical features, which contradicts the 'unlabeled road-network map' and 'recognizable real-place geography or readable labels' must_avoid criteria. The map is not a generic, unlabeled exercise map. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/map-vXKgrTrerj0?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "5683ba32184515d4032524914da2e5b958f094b94959a3e4a0a908537701b987",
+                "license": "Unsplash License",
+                "reason": "The article discusses a national preparedness exercise in Kuopio, Finland, involving internal population transfers and scenario planning. The selected concept describes an unlabeled, fictional road-network map with neutral route markers for a tabletop exercise. The image shows a detailed, labeled, real-world map of Japan, which is a specific geogra",
+                "source_url": "https://unsplash.com/photos/a-close-up-of-a-map-of-the-united-states-Kvho-NaljgI?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "ece63291ebff15ce8d195a5ab554e6476233ea8ffd8ec159d0958bebfbfc8b20",
+                "license": "Unsplash License",
+                "reason": "The image shows a real-world road map with recognizable place names and geographical features, which contradicts the 'unlabeled road-network map' and 'no recognizable real-place geography or readable labels' requirements of the selected concept. It also lacks neutral route markers. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/close-up-photography-of-map-yg8Cz-i5U30?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "c093d2c17f86a28c669c1643f042d75e7dc298e74e7bedf126bcf8b20c51ee7d",
+                "license": "Unsplash License",
+                "reason": "The article discusses a national preparedness exercise in Finland, including internal population transfers. The selected concept describes an unlabeled road-network map with neutral route markers for a table exercise. The image shows a real-world, labeled map of Japan, which is not an unlabeled road-network map and does not contain neutral route ma",
+                "source_url": "https://unsplash.com/photos/a-close-up-of-a-map-with-a-pin-in-it-CC3RZJ2C86A?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "väestönsiirto harjoituskartta",
+              "valmiusharjoitus karttapöytä",
+              "tilannekuva reittikartta"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "väestönsiirto harjoituskartta",
+              "valmiusharjoitus karttapöytä",
+              "tilannekuva reittikartta"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
+            "queries": [
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
+                "license": "CC BY 2.0",
+                "reason": "The image clearly depicts the Kuopio Town Hall facade and its surrounding civic setting, which directly matches the selected concept. The article discusses an exercise involving the city of Kuopio, making an image of its city hall highly relevant as a concrete representation of the city.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Kuopio%20Town%20Hall%201989.jpg"
+              }
+            ],
+            "concept_rank": 3,
+            "outcome": "accepted",
+            "provider": "wikimedia",
+            "queries": [
+              "Kuopion kaupungintalo ulkokuva",
+              "Kuopio kaupungintalo",
+              "Kuopio City Hall exterior"
+            ]
+          }
+        ],
+        "selected": {
+          "concept_rank": 3,
+          "fit_score": 9,
+          "image_sha256": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
+          "kind": "real"
+        },
+        "version": "article-first-v1"
+      },
+      "sha256": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kuopio%20Town%20Hall%201989.jpg",
       "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/164688/pexels-photo-164688.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "164688",
-        "photo_url": "https://www.pexels.com/photo/gray-auto-bill-counter-164688/",
-        "photographer": "Pixabay",
-        "photographer_url": "https://www.pexels.com/@pixabay",
-        "provider": "pexels",
-        "query": "Suomessa toimivien luottolaitosten rahoituskate",
-        "retrieved_at": "2026-09-28T20:53:03Z"
+        "attribution": {
+          "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
+          "title": "Kuopio Town Hall 1989.jpg"
+        },
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Kuopio_Town_Hall_1989.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "photo_id": "wikimedia-9096110",
+        "photo_url": "https://commons.wikimedia.org/wiki/File:Kuopio%20Town%20Hall%201989.jpg",
+        "photographer": "Matti Mattila",
+        "photographer_url": "https://commons.wikimedia.org/wiki/File:Kuopio%20Town%20Hall%201989.jpg",
+        "provider": "wikimedia",
+        "query": "Kuopio kaupungintalo",
+        "retrieved_at": "2026-09-28T23:53:16Z"
       },
-      "stock_provenance_sha256": "f3f3f67db05e0d219a386516bd2fbdda3594a1945f7a72579531f6b589759ab3",
-      "url": "https://uutistenlukija.fi/media/af5860f62bf1bc8bf102be7007fb7456130dad98ed9f0c53467b379bda3a57eb.jpg"
+      "stock_provenance_sha256": "cc4569c7d9966d58250354120c715d86619a4c20c6a46d2f8bcb216b10bf9a49",
+      "url": "https://uutistenlukija.fi/media/8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Luottolaitosten korkotuotot vähenivät Tilastokeskuksen mukaan 28,1 prosenttia edellisvuodesta ja olivat 18,3 miljardia euroa. Korkokuluja kertyi 12,4 miljardia euroa. Niiden erotuksena muodostunut rahoituskate pieneni 7,1 prosenttia 5,8 miljardiin euroon."
+        "text": "Kuopion kaupunki kertoo osallistuvansa Lupa- ja valvontaviraston LVV26-valmiusharjoitukseen. Kaupungin tiedotteen mukaan harjoituksen päävaihe järjestetään 29. syyskuuta–1. lokakuuta 2026."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Luottolaitosten liiketoiminnan tuotot laskivat 4,7 prosenttia 10,5 miljardiin euroon. Hallintokulut puolestaan kasvoivat 4,9 prosenttia 5,6 miljardiin euroon. Tilastokeskuksen mukaan liikevoitto nousi 2,8 prosenttia ja oli 5,7 miljardia euroa."
+        "text": "Tiedotteen mukaan harjoitukseen osallistuu yli 400 valtionhallinnon sekä alueellisen ja paikallisen varautumisen ja turvallisuuden toimijaa. Se on suunnattu muun muassa viranomaisille, kunnille, elinkeinoelämän toimijoille, seurakunnille ja järjestöille."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Henkivakuutusyhtiöiden ensivakuutuksesta saamat vakuutusmaksutulot kasvoivat 12,5 prosenttia ja nousivat 5,5 miljardista 6,1 miljardiin euroon. Maksetut korvaukset kasvoivat 4,7 miljardista 4,9 miljardiin euroon."
+        "text": "Kuvitteellisessa tilanteessa turvallisuustilanne heikkenee, kriittisen infrastruktuurin toiminta häiriintyy ja sotilaallisen voimankäytön uhka kasvaa. Osallistujat harjoittelevat muun muassa maan sisäisiä väestönsiirtoja, tilannekuvan muodostamista, johtamista, viestintää ja organisaatioiden yhteistyötä."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Vahinkovakuutusyhtiöiden vakuutusmaksutulot kasvoivat Tilastokeskuksen mukaan 5,0 prosenttia 4,6 miljardiin euroon. Maksetut korvaukset vähenivät 1,4 prosenttia ja pysyivät noin 3,4 miljardissa eurossa."
+        "text": "Kaupungin mukaan harjoitus ei näy kaduilla eikä ihmisiä siirretä todellisuudessa. Harjoituksella on tarkoitus arvioida organisaatioiden toimintakykyä normaaliolojen häiriötilanteissa ja poikkeusoloissa."
       }
     ],
-    "summary": "Tilastokeskuksen mukaan Suomessa toimivien luottolaitosten rahoituskate laski 5,8 miljardiin euroon vuonna 2025, mutta liikevoitto kasvoi.",
-    "title": "Luottolaitosten rahoituskate pieneni 7,1 prosenttia"
+    "summary": "Kuopion kaupungin mukaan valtakunnallisessa harjoituksessa testataan väestönsuojelua ja väestönsiirtojen järjestelyjä 29. syyskuuta–1. lokakuuta.",
+    "title": "Kuopio kertoo osallistuvansa LVV26-harjoitukseen"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "b46ca381170c58021ccf534fe23eb967382d7756af33c11792ab9c670c714762",
+    "draft_sha256": "4b9af1b1ed72685502ae15c8944061b56a5f8ffa374f3778cb825081ffadc18a",
     "reasons": [
-      "Otsikko ja ingressi vastaavat lähdettä A: Suomessa toimivien luottolaitosten rahoituskate pieneni vuonna 2025 7,1 prosenttia 5,8 miljardiin euroon ja liikevoitto kasvoi. Otsikko on 51 merkkiä pitkä, tärkein asia on alussa eikä otsikko ylitä 60 merkin tavoitetta.",
-      "Kaikkien neljän kappaleen source_ids-merkintä A on oikea. Lähde A tukee täsmällisesti korkotuottojen lukuja 28,1 prosenttia ja 18,3 miljardia euroa, 12,4 miljardin korkokuluja, liiketoiminnan tuottojen 4,7 prosentin laskua 10,5 miljardiin, hallintokulujen 4,9 prosentin kasvua 5,6 miljardiin sekä liikevoiton 2,8 prosentin kasvua 5,7 miljardiin euroon. Se tukee myös henki- ja vahinkovakuutusyhtiöitä koskevia prosentteja ja euromääriä. Luonnos ei lisää lähteestä puuttuvia syy-seurausväitteitä eikä häivytä ristiriitoja.",
-      "Lähde A on 28.9.2026 julkaistu Tilastokeskuksen suora tilastojulkaisu vuoden 2025 tiedoista, joten se on riittävä ja ajankohtainen lähde tätä lähteen tietoja referoivaa uutista varten. Luonnos ei väitä saavansa riippumatonta vahvistusta toisesta lähteestä. Teksti on asiallisesti uudelleen muotoiltu, neutraalia ja ymmärrettävää suomea, ja Tilastokeskus on nimetty lähteeksi.",
-      "Luonnoksen ja lähdepaketin kuvatiedot ovat samat, ja kuvan SHA-256 on molemmissa af5860f62bf1bc8bf102be7007fb7456130dad98ed9f0c53467b379bda3a57eb. Pikselikuvauksen ja alt-tekstin mukainen rahalaskuri sekä 50 euron setelit liittyvät konkreettisesti jutun kaikissa kappaleissa käsiteltyihin euromääräisiin rahoitus-, vakuutusmaksu- ja korvausvirtoihin. Kuvateksti ilmaisee kuvan arkistokuvaksi eikä väitä sen dokumentoivan vuoden 2025 tilastotapahtumaa. Ehdotetusta hakusommittelusta puuttuvat kolikkopinot eivät yksin heikennä todellisen kuvan relevanssia, eikä kuvassa ole must_avoid-listan sisältöä.",
-      "Kuvan käyttöoikeudesta on yksilöity CC0 1.0 -lisenssi, Pexelsin kuvasivu ja kuvatunnus 164688, kuvaaja Pixabay sekä paikallinen alkuperä- ja tarkistesumma. Credit-merkintä vastaa provenance-tietoja, eikä kuvaa hotlinkata."
+      "Kuopion kaupungin 28.9.2026 julkaisema lähde A tukee otsikon ja ingressin keskeisiä tietoja: Kuopion osallistumista, harjoituksen valtakunnallisuutta, väestönsuojelu- ja väestönsiirtopainotusta sekä päävaiheen ajankohtaa 29.9.–1.10.2026.",
+      "Kaikkien neljän kappaleen source_ids-merkintä A on asianmukainen. Lähde A tukee yli 400 osallistujan määrää ja osallistujaryhmiä, kuvitteellisen tilanteen piirteitä, harjoiteltavia toimintoja, katutoiminnan ja todellisten väestönsiirtojen puuttumista sekä toimintakyvyn testaamista häiriö- ja poikkeusoloissa.",
+      "Yksi ajantasainen viranomaislähde riittää rajattuun uutiseen kaupungin omasta osallistumisesta ja ilmoitetuista harjoitusjärjestelyistä. Luonnos ilmaisee lähdeasetelman kaupungin kertomana eikä väitä riippumatonta vahvistusta tai tee tiedotetta laajempia valtakunnallisia johtopäätöksiä.",
+      "Otsikko on 48 merkkiä pitkä, alittaa 60 merkin tavoitteen ja aloittaa jutun tärkeimmästä paikallisesta tiedosta. Teksti on neutraalia, ymmärrettävää ja lähteestä itsenäisesti tiivistettyä suomea; Kotimaa-luokka sopii valtakunnalliseen harjoitukseen.",
+      "Valittu oikea valokuva esittää Kuopion kaupungintaloa, joka liittyy konkreettisesti jutun nimettyyn osallistujaan Kuopion kaupunkiin eikä ole vain yleinen paikkakuva. Arkistoluonne on ilmaistu, eikä kuvateksti väitä kuvan esittävän LVV26-harjoitusta. Kuvarekordi sisältää kolme arvioitua konseptia ja niitä koskevat haut, täsmällisen pikselitarkastuksen pistemäärällä 9/10 sekä erillisen CC BY 2.0 -käyttöoikeuden, kuvaajan Matti Mattilan, teoksen nimen, lähde- ja lisenssilinkit ja muutosmerkinnän; luonnoksen ja lähdepaketin kuvarekordit ovat yhtenevät."
     ]
   }
 }

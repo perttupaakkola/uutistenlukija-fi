@@ -101,6 +101,41 @@ def collect_modis(recipe,state_dir,now=None):
     return packet,receipt
 
 
+def verify_modis_intake(packet, state_dir):
+    """Pin a selected NASA source photo to its captured article, rights and bytes."""
+    source = (packet.get('sources') or [{}])[0]
+    image = packet.get('image') or {}
+    rights = (packet.get('supporting_documents') or [{}])[0]
+    match = re.fullmatch(PATTERN, source.get('url', ''))
+    if not match or packet.get('story_key') != 'url:'+source['url']:
+        raise ValueError('Source image has no eligible NASA MODIS article')
+    expected = ORIGIN+'/gallery/images/image'+datetime.fromisoformat(match[1]).strftime('%m%d%Y')+'_main.jpg'
+    license = 'NASA media guidelines: informational/editorial use with NASA credit; no endorsement'
+    if (image.get('url') != expected or image.get('source_url') != source['url'] or
+            image.get('license_url') != RIGHTS or image.get('license') != license or
+            image.get('credit') != CREDIT or rights.get('url') != RIGHTS or
+            rights.get('id') != 'RIGHTS' or image.get('generated') is True):
+        raise ValueError('NASA source-image rights or exact article identity changed')
+    directory = Path(state_dir)/'intake'/digest(packet)
+    source_raw = (directory/'source.html').read_bytes()
+    rights_raw = (directory/'rights.html').read_bytes()
+    receipt = json.loads((directory/'receipt.json').read_text())
+    if (json.loads((directory/'packet.json').read_text()) != packet or
+            hashlib.sha256(source_raw).hexdigest() != receipt.get('source_sha256') or
+            hashlib.sha256(rights_raw).hexdigest() != rights.get('sha256') or
+            rights.get('sha256') != receipt.get('rights_sha256') or
+            receipt.get('source_url') != source['url'] or
+            receipt.get('image_url') != image['url'] or
+            receipt.get('image_sha256') != image.get('sha256') or
+            receipt.get('discovered_from') != INDEX or receipt.get('fixture') is not False):
+        raise ValueError('Captured NASA source/photo/rights bytes changed')
+    extracted = ArticleHTML('entry-content')
+    extracted.feed(rights_raw.decode('utf-8'))
+    if len(extracted.article_text()) < 200 or rights.get('text') != extracted.article_text()[:20000]:
+        raise ValueError('Captured NASA photo rights text changed')
+    return True
+
+
 def discover_mixed(config,now=None,excluded=(),errors=None,after_provider=None,recent_categories=()):
     from .official import discover as official_discover, PROVIDER_ORDER
     errors=errors if errors is not None else []
