@@ -4,140 +4,148 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "a8032138a2ed3ae106c80cebdedc37e57e54f48a",
-  "job_id": "414e3cacf8056de695817a0ad03bc2e74b6652f5c04e6841c4963ee5070c63c6",
-  "packet_sha256": "a77a12e80bc4bfdba9431748bc4210ec78dc08d47905356af3a1eb3351bbfb0d",
-  "draft_sha256": "d0a6fed00a3a5ccec5229cf6e2f4ae2e7b52fbd8cf2f485bfdc8b36cb46e0637",
-  "image_sha256": "e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037",
+  "job_id": "763dffd702f201ec3633245a519e37f5dc8aa1915d551a6984bc5963051f8a32",
+  "packet_sha256": "d767e131d0a6801ab30e359779a1241857e9d055bfb9b122c1edbb9b1cd05fa9",
+  "draft_sha256": "397ab79c9cb2dbc2f2664991f537dd169d2f7eafd6ca65138a45cf3a89366aff",
+  "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "b37bf088660c343eabe3781039b5b53e8751ec6ad50dc81dc5c0c463e070381c"
+    "provenance_sha256": "c3e561339aaf6df94ceda7aa87101ba69ff5cdfb4e094e5319e0121576a97170"
   },
   "stock_image": {
-    "alt": "Arkistokuva: Käsi painaa mustan laskimen näppäimiä pöydällä, vieressä papereita, joissa on punamustia kaavioita ja avoin muistikirja.",
+    "alt": "Arkistokuva: Valkoinen kippiauto keltaisella lavalla ajaa pölyisellä, kaivetulla alueella, taustalla näkyy metsää.",
     "caption": "Arkistokuva artikkelin aiheesta.",
     "classifier_output": {
-      "category": "Talous",
+      "category": "Kotimaa",
       "concepts": [
         {
-          "depictable_scene": "Katutasoinen päiväkuva todellisen Kuopion kaupungintalon julkisivusta ja rakennusta ympäröivästä kaupunkiympäristöstä.",
+          "depictable_scene": "Todellinen lisensoitu valokuva Rivieranraitin keskeneräisestä katutyömaasta Vantaalla, jossa näkyvät louhittu kallioleikkaus ja kuljetusta odottava louhekasa.",
           "must_avoid": [
-            "fictionalized façade",
-            "unrelated municipal building"
+            "completed tram line",
+            "active blasting"
           ],
           "must_show": [
-            "actual Kuopio City Hall exterior",
-            "urban surroundings"
+            "excavated rock face",
+            "road construction site"
           ],
           "rank": 1,
           "safe_to_generate": false,
           "search_queries": [
-            "Kuopion kaupungintalo",
-            "Kuopio City Hall exterior",
-            "Kuopion kaupungintalo julkisivu",
-            "Kuopio kaupungintalo valokuva"
+            "Rivieranraitti louhintatyöt",
+            "Rivieranraitti työmaa Vantaa",
+            "Vantaan ratikka Rivieranraitti",
+            "excavated rock roadworks"
           ],
-          "subject": "Kuopion kaupungin taloushallinto kaupungintalolla"
+          "subject": "Rivieranraitin louhinta"
         },
         {
-          "depictable_scene": "Lähikuva pöydälle avatusta tunnuksettomasta talousraportista, jonka sivuilla näkyy abstrakteja taulukoita ja pylväskaavioita ilman luettavaa tekstiä tai numeroita, vieressä tavallinen laskin.",
+          "depictable_scene": "Nimetön kaupunkirakentamisen työmaa ilman ihmisiä, jossa tunnukseton kippiauto kuljettaa louhetta maaleikatulla tiepohjalla.",
           "must_avoid": [
-            "readable invented figures",
-            "logos or municipal emblems"
+            "people or body parts",
+            "readable text or logos",
+            "tram tracks"
           ],
           "must_show": [
-            "unbranded financial report",
-            "calculator"
+            "unbranded dump truck",
+            "excavated rock"
           ],
           "rank": 2,
           "safe_to_generate": true,
           "search_queries": [
-            "Kuopio kuukausiraportti 2026",
-            "municipal finance report calculator",
-            "Kuopion talousennuste 2026",
-            "budget report papers calculator"
+            "Rivieranraitti louheen kuljetus",
+            "louheen kuljetus työmaa",
+            "maaleikkaus katutyömaa",
+            "dump truck excavated rock"
           ],
-          "subject": "Kuopion tammi–elokuun kuukausiraportin talousennuste"
+          "subject": "louheen kuljetuksia ja maaleikkaustöitä"
         },
         {
-          "depictable_scene": "Pöydällä on geneerisen pohjoismaisen sosiaali- ja terveyspalvelurakennuksen pienoismalli ja sen vieressä yksi metallinen avain; mallissa ei ole nimiä, kylttejä tai tunnuksia.",
+          "depictable_scene": "Nimetön avoin työmaakaivanto ilman ihmisiä, jossa rinnakkain asetetut kaapelisuojaputket lepäävät tasaisella sorapedillä.",
           "must_avoid": [
-            "identifiable real property",
-            "logos or readable signs"
+            "people or body parts",
+            "readable text or logos",
+            "completed tram tracks"
           ],
           "must_show": [
-            "generic healthcare building model",
-            "single metal key"
+            "cable conduit pipes",
+            "open utility trench"
           ],
           "rank": 3,
           "safe_to_generate": true,
           "search_queries": [
-            "Kuopio sote-kiinteistöt",
-            "healthcare building model key",
-            "Kuopion sote-kiinteistöjen omistusjärjestely",
-            "miniature clinic metal key"
+            "Rivieranraitti kaapelisuojaputket",
+            "kaapelisuojaputket kaivanto",
+            "kaapeliputkien asennus työmaa",
+            "cable conduit trench"
           ],
-          "subject": "sote-kiinteistöjen omistusjärjestelyt"
+          "subject": "kaapelisuojaputkien asentaminen"
         }
       ],
       "version": "article-first-v1"
     },
-    "credit": "Photo by RDNE Stock project on Pexels",
-    "depicted": "The image shows a close-up of a person's dark-skinned hand operating a black calculator. The hand is positioned over the calculator, with a finger pressing the equals sign button. The calculator has a digital display showing '256' and numerous black buttons with white numbers and symbols. To the left of the calculator, an open spiral-bound notebook with lined pages is visible. Some handwritten numbers and calculations in red ink are present on the notebook page. Below the calculator and notebook",
+    "credit": "Photo by Just a Dream Pictures on Pexels",
+    "depicted": "A white dump truck with a yellow bed is driving from left to right across a dirt field, kicking up a large cloud of dust behind it. The truck appears to be moving at a moderate speed. The bed of the truck contains what looks like rocks or debris. In the background, a dense line of green trees forms a horizon under a light, overcast sky. There is no readable text or identifiable people in the image.",
     "generated": false,
     "hotlink": false,
     "license": "Pexels License",
     "license_evidence": {
-      "image_path": "/photos/5915236/pexels-photo-5915236.jpeg",
+      "image_path": "/photos/14821922/pexels-photo-14821922.jpeg",
       "license": "Pexels License",
       "license_code": "Pexels",
       "license_url": "https://www.pexels.com/license/",
-      "photo_id": "5915236",
-      "photo_url": "https://www.pexels.com/photo/person-using-black-desk-calculator-5915236/",
-      "photographer": "RDNE Stock project",
-      "photographer_url": "https://www.pexels.com/@rdne",
-      "response_sha256": "19209bfd99b1ea0cd204cf0b08700f8bd551a4eb760cf639499a235fd9f66667",
-      "retrieved_at": "2026-09-29T15:18:06.350548+00:00",
+      "photo_id": "14821922",
+      "photo_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
+      "photographer": "Just a Dream Pictures",
+      "photographer_url": "https://www.pexels.com/@just-a-dream-pictures-393935092",
+      "response_sha256": "a7c96cbfd0acd0f732934a9ef32617733bfb1d273383a1c07c96f84e61f75b90",
+      "retrieved_at": "2026-09-29T18:13:49.142438+00:00",
       "transport": "jina_reader",
       "version": 1
     },
     "license_url": "https://www.pexels.com/license/",
-    "local_path": "media/e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037.jpg",
+    "local_path": "media/550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a.jpg",
     "pixel_review": {
-      "alt_fi": "Käsi painaa mustan laskimen näppäimiä pöydällä, vieressä papereita, joissa on punamustia kaavioita ja avoin muistikirja.",
+      "alt_fi": "Valkoinen kippiauto keltaisella lavalla ajaa pölyisellä, kaivetulla alueella, taustalla näkyy metsää.",
       "approved": true,
-      "article_text_sha256": "1e4b7c8e403656c65257c10e425cdfc672fd765ceb44718756d89f9e2b789ea7",
-      "concept_sha256": "24fff91659c5093e5e3cbf8df5b49a341c1e1cd344b8a5d9ac74efecbdb58cf2",
-      "description": "A person's hand operates a black calculator on a desk, next to papers displaying various red and black charts and graphs, and an open notebook with handwritten notes.",
+      "article_text_sha256": "ac62bfae0cfcd593d6886a5be3c0a871bf9fc3f3e93aaff552b74a607d5d2c99",
+      "concept_sha256": "e41892d1b3ecbea02d63b89f58d4aedee6e186990fc312ec11f343a9c4040b68",
+      "description": "A white dump truck with a yellow bed drives across a dusty, excavated area with trees in the background. The truck is kicking up a significant amount of dust.",
       "fit_score": 9,
-      "image_sha256": "e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037",
+      "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
       "model": "google:gemini-2.5-flash",
       "must_show_visible": [
         true,
         true
       ],
-      "no_people": false,
-      "reason": "The image clearly shows a calculator and papers with financial-looking charts, which aligns with the concept of an unbranded financial report and a calculator. The charts are abstract and do not contain readable text or numbers, avoiding the 'must_avoid' criteria.",
-      "reviewed_at": "2026-09-29T15:18:08.297318+00:00"
+      "no_people": true,
+      "reason": "The image clearly shows an unbranded dump truck carrying excavated material (likely rock, given the article context of 'louheen kuljetuksia') on a dusty, excavated site, which directly illustrates the article's subject of 'louheen kuljetuksia ja maaleikkaustöitä'. There are no people, readable text, logos, or tram tracks visible, aligning with the 'must_avoid' criteria.",
+      "reviewed_at": "2026-09-29T18:13:52.158339+00:00",
+      "text_audit": {
+        "examples": [],
+        "readable_text_present": false
+      }
     },
     "pixels": {
-      "height": 627,
+      "height": 623,
       "mode": "RGB",
-      "variance": 13367.6,
+      "variance": 11793.7,
       "width": 940
     },
     "relevance_check": {
       "accepted": true,
-      "evidence": "A person's hand operates a black calculator on a desk, next to papers displaying various red and black charts and graphs, and an open notebook with handwritten notes.",
+      "evidence": "A white dump truck with a yellow bed drives across a dusty, excavated area with trees in the background. The truck is kicking up a significant amount of dust.",
       "matched": [
-        "calculator"
+        "dump",
+        "excavated",
+        "truck"
       ],
       "method": "vision",
       "reason": "Exact-pixel full-article score meets the 8/10 threshold"
     },
     "selection_evidence": {
-      "article_text_sha256": "1e4b7c8e403656c65257c10e425cdfc672fd765ceb44718756d89f9e2b789ea7",
-      "decision_sha256": "cc32cdc245b1c6e9e811c334a067100c60b57c98e05f66a722ed79f7196df300",
+      "article_text_sha256": "ac62bfae0cfcd593d6886a5be3c0a871bf9fc3f3e93aaff552b74a607d5d2c99",
+      "decision_sha256": "f6dbb3e5232a613ca45bfd5dc9f0f2bd7fd2b93bfabc2a5638aafa764e3f3fce",
       "minimum_real_fit": 8,
       "searches": [
         {
@@ -155,31 +163,49 @@
           "outcome": "no_qualifying_candidate",
           "provider": "wikimedia",
           "queries": [
-            "Kuopion kaupungintalo",
-            "Kuopio City Hall exterior",
-            "Kuopion kaupungintalo julkisivu"
+            "Rivieranraitti louhintatyöt",
+            "Rivieranraitti työmaa Vantaa",
+            "Vantaan ratikka Rivieranraitti"
           ]
         },
         {
-          "candidates": [],
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "941de5c16ff921facb932ec7b45deec623da549becdd60b3f769fc51dff55a23",
+              "license": "Pexels License",
+              "reason": "The image shows a construction site with buildings and roads, but it does not clearly depict an excavated rock face or a road construction site that specifically relates to rock excavation and transport as described in the article. While there are areas of disturbed earth, there is no clear rock face or large pile of excavated rock (louhekasa) that",
+              "source_url": "https://www.pexels.com/photo/aerial-view-of-swedish-residential-development-site-36955202/"
+            }
+          ],
           "concept_rank": 1,
           "outcome": "no_qualifying_candidate",
           "provider": "pexels",
           "queries": [
-            "Kuopion kaupungintalo",
-            "Kuopio City Hall exterior",
-            "Kuopion kaupungintalo julkisivu"
+            "Rivieranraitti louhintatyöt",
+            "Rivieranraitti työmaa Vantaa",
+            "Vantaan ratikka Rivieranraitti"
           ]
         },
         {
-          "candidates": [],
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "ddff690e0000bf99f2bccb35827c6c4e3bd0f49e1f28b163f4073b8cf12a70a8",
+              "license": "Unsplash License",
+              "reason": "The article discusses excavation work for a road construction site related to a tram line. The image shows a natural rock formation and a house, not an excavated rock face or a road construction site. Therefore, it does not depict the concrete subject of the article or the selected concept. One or more required concept elements are not visible.",
+              "source_url": "https://unsplash.com/photos/man-in-black-t-shirt-and-blue-denim-jeans-sitting-on-brown-rock-during-daytime-0fSKV4NcBkM?utm_source=uutistenlukija&utm_medium=referral"
+            }
+          ],
           "concept_rank": 1,
           "outcome": "no_qualifying_candidate",
           "provider": "unsplash",
           "queries": [
-            "Kuopion kaupungintalo",
-            "Kuopio City Hall exterior",
-            "Kuopion kaupungintalo julkisivu"
+            "Rivieranraitti louhintatyöt",
+            "Rivieranraitti työmaa Vantaa",
+            "Vantaan ratikka Rivieranraitti"
           ]
         },
         {
@@ -188,9 +214,9 @@
           "outcome": "no_qualifying_candidate",
           "provider": "google",
           "queries": [
-            "Kuopion kaupungintalo",
-            "Kuopio City Hall exterior",
-            "Kuopion kaupungintalo julkisivu"
+            "Rivieranraitti louhintatyöt",
+            "Rivieranraitti työmaa Vantaa",
+            "Vantaan ratikka Rivieranraitti"
           ]
         },
         {
@@ -208,29 +234,45 @@
           "outcome": "no_qualifying_candidate",
           "provider": "wikimedia",
           "queries": [
-            "Kuopio kuukausiraportti 2026",
-            "municipal finance report calculator",
-            "Kuopion talousennuste 2026"
+            "Rivieranraitti louheen kuljetus",
+            "louheen kuljetus työmaa",
+            "maaleikkaus katutyömaa"
           ]
         },
         {
           "candidates": [
             {
+              "approved": false,
+              "fit_score": 3,
+              "image_sha256": "213aa9300d127a9bc58df93264ba21b922bfdd1e19a39243c36dad020c15e54c",
+              "license": "Pexels License",
+              "reason": "The article discusses excavation and earth-cutting work for a tram connection in Vantaa, involving dump trucks and excavated rock. The image shows a coastal road with a truck, but it is not a dump truck, nor is there any visible excavation work or excavated rock. The scene does not depict a construction site or the specific activities mentioned in ",
+              "source_url": "https://www.pexels.com/photo/scenic-coastal-road-at-sunset-with-ocean-view-32821932/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "179f85937f2448a1ab23bd976219f93c46377c55588b0f644f9a6b5f0155c95c",
+              "license": "Pexels License",
+              "reason": "The article discusses excavation and earth-cutting work for a future tram connection in Vantaa, involving dump trucks and excavated rock. The image shows tugboats, a cruise ship, and a city harbor, which is completely unrelated to the article's subject matter of urban construction and earthworks. The selected concept specifically requires a dump tr",
+              "source_url": "https://www.pexels.com/photo/tugboats-docked-near-a-cruise-ship-10231086/"
+            },
+            {
               "approved": true,
               "fit_score": 9,
-              "image_sha256": "e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037",
+              "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
               "license": "Pexels License",
-              "reason": "The image clearly shows a calculator and papers with financial-looking charts, which aligns with the concept of an unbranded financial report and a calculator. The charts are abstract and do not contain readable text or numbers, avoiding the 'must_avoid' criteria.",
-              "source_url": "https://www.pexels.com/photo/person-using-black-desk-calculator-5915236/"
+              "reason": "The image clearly shows an unbranded dump truck carrying excavated material (likely rock, given the article context of 'louheen kuljetuksia') on a dusty, excavated site, which directly illustrates the article's subject of 'louheen kuljetuksia ja maaleikkaustöitä'. There are no people, readable text, logos, or tram tracks visible, aligning with the ",
+              "source_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/"
             }
           ],
           "concept_rank": 2,
           "outcome": "accepted",
           "provider": "pexels",
           "queries": [
-            "Kuopio kuukausiraportti 2026",
-            "municipal finance report calculator",
-            "Kuopion talousennuste 2026"
+            "Rivieranraitti louheen kuljetus",
+            "louheen kuljetus työmaa",
+            "maaleikkaus katutyömaa"
           ]
         },
         {
@@ -248,97 +290,64 @@
           "outcome": "no_qualifying_candidate",
           "provider": "wikimedia",
           "queries": [
-            "Kuopio sote-kiinteistöt",
-            "healthcare building model key",
-            "Kuopion sote-kiinteistöjen omistusjärjestely"
+            "Rivieranraitti kaapelisuojaputket",
+            "kaapelisuojaputket kaivanto",
+            "kaapeliputkien asennus työmaa"
           ]
         },
         {
           "candidates": [
             {
               "approved": false,
+              "fit_score": 3,
+              "image_sha256": "09cc888eafbcdca1e00547fe90b159cd2a914d6bba7d14a181a048ec52410edd",
+              "license": "Pexels License",
+              "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The selected concept specifically requires 'cable conduit pipes' and an 'open utility trench'. The image shows pipes, but they are clearly attached to a vertical wall or facade, not lying in an open trench. Therefore, it does not de",
+              "source_url": "https://www.pexels.com/photo/wall-with-pipes-23414767/"
+            },
+            {
+              "approved": false,
+              "fit_score": 3,
+              "image_sha256": "54646f042c0293c5dd026cb7d020e5f7cec3dd3ba5e49f08f797ffd11f1ddf1f",
+              "license": "Pexels License",
+              "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The image shows a person installing pipes, but these are clearly visible as water/heating pipes (copper and white plastic pipes with clamps) on a wall, not cable conduit pipes in an open trench. The image also contains a person, whi",
+              "source_url": "https://www.pexels.com/photo/skilled-worker-adjusting-pipes-with-precision-39885422/"
+            },
+            {
+              "approved": false,
               "fit_score": 6,
-              "image_sha256": "3c3f9c5e55a3dc4b4da122a2daf597e3fabbe4eeaa1e0fb221108bceb2bdb8d6",
+              "image_sha256": "8e76d715d45886fbaf05c9530be7ef943a9ec974ec28adad4de0881faa2916ef",
               "license": "Pexels License",
-              "reason": "The image shows a generic house model and a key, which broadly relates to property and ownership. However, the concept specifically requires a 'generic healthcare building model' and the visible model is clearly a generic house, not a healthcare building. Therefore, it does not meet the 'must_show' criteria for the specific concept. One or more req",
-              "source_url": "https://www.pexels.com/photo/real-estate-business-finance-background-template-cross-section-building-27920235/"
+              "reason": "The article discusses the installation of cable conduit pipes as part of a tram connection project. The image shows cable conduit pipes, which aligns with the 'cable conduit pipes' must_show element. However, the concept also requires an 'open utility trench', which is not visible in the image. The image is a close-up of pipes only, without any con",
+              "source_url": "https://www.pexels.com/photo/close-up-photo-of-red-pipes-8414059/"
             },
             {
               "approved": false,
-              "fit_score": 0,
-              "image_sha256": "f88400e51b708ab36f767b0fe45271bbfa1b0638236fb62b11abc5c512c1b785",
+              "fit_score": 3,
+              "image_sha256": "fd30eb81c7cbe4f48d8b6e2260be567c56dd8dc36300c8a39ff0e2644ac98265",
               "license": "Pexels License",
-              "reason": "The article discusses financial forecasts and a one-time sales gain from social and healthcare property ownership arrangements. The selected concept describes a miniature model of a generic healthcare building with a single metal key. The actual pixels show a real, full-sized modern building, not a miniature model, and there is no key visible. Ther",
-              "source_url": "https://www.pexels.com/photo/sidewalk-under-victorian-heart-hospital-in-australia-17292192/"
-            },
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "936711dcfab48b1e3f0bcb34d3fe632537b7c9f435da019fa754f04b1940605a",
-              "license": "Pexels License",
-              "reason": "The article discusses financial forecasts and a one-time sales gain from social and healthcare property ownership arrangements in Kuopio. The selected concept specifies a miniature model of a generic Nordic social and healthcare building with a single metal key. The actual pixels show a real, identifiable large building complex, not a miniature mod",
-              "source_url": "https://www.pexels.com/photo/aerial-view-of-hospital-building-at-sunset-36078152/"
-            },
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "b429fdde5ad5620667ffd5bb91a5dbd5fcaa4bdaa6760d6ab69164a9d2f4fd21",
-              "license": "Pexels License",
-              "reason": "The article discusses financial forecasts and property ownership arrangements in Kuopio. The selected concept specifies a miniature model of a generic healthcare building and a single metal key. The image shows a real building, not a miniature model, and there is no key visible. Therefore, it does not depict the concrete subject of the selected con",
-              "source_url": "https://www.pexels.com/photo/historic-brick-building-with-green-roof-under-blue-sky-39654601/"
+              "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The image shows large metal pipes, but they are clearly part of a hydroelectric power generation system, not cable conduits for a tramway. The pipes are also not in an open utility trench for a tramway project, but rather integrated",
+              "source_url": "https://www.pexels.com/photo/hydroelectric-power-pipes-in-rodberg-norway-31502428/"
             }
           ],
           "concept_rank": 3,
           "outcome": "no_qualifying_candidate",
           "provider": "pexels",
           "queries": [
-            "Kuopio sote-kiinteistöt",
-            "healthcare building model key",
-            "Kuopion sote-kiinteistöjen omistusjärjestely"
+            "Rivieranraitti kaapelisuojaputket",
+            "kaapelisuojaputket kaivanto",
+            "kaapeliputkien asennus työmaa"
           ]
         },
         {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "8ea505cb2cf71e845b2307d32edb221ab2e0b9eb8b2abe0112c95ec40b7483bb",
-              "license": "Unsplash License",
-              "reason": "The image shows a generic building model, which partially fits the 'generic healthcare building model' must_show element. However, it completely lacks the 'single metal key' element, which is crucial for the selected concept. Therefore, it cannot be approved and the fit score is capped. One or more required concept elements are not visible.",
-              "source_url": "https://unsplash.com/photos/brown-wooden-building-scale-model-panPsvU_y0Q?utm_source=uutistenlukija&utm_medium=referral"
-            },
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "d4345ffcd39e0d0dff17aa0ea73db83feb98a5eec995694aeefbc68e0c4ac3f8",
-              "license": "Unsplash License",
-              "reason": "The image shows a generic building model, which aligns with the 'generic healthcare building model' must_show element. However, the 'single metal key' must_show element is entirely absent from the visible pixels. Therefore, the image cannot be approved for this concept. One or more required concept elements are not visible.",
-              "source_url": "https://unsplash.com/photos/white-concrete-building-during-daytime-zj5cI6Ei4Lw?utm_source=uutistenlukija&utm_medium=referral"
-            },
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "1e4e7a9d02d21f8bbfb43a981554f150cf5a979c7d6c839bd825ebfbc307152f",
-              "license": "Unsplash License",
-              "reason": "The image shows an architectural model of a city, which broadly relates to urban development and finances mentioned in the article. However, the selected concept specifically requires a generic healthcare building model and a single metal key. Neither of these elements is visible in the actual pixels. The model does not depict a healthcare building",
-              "source_url": "https://unsplash.com/photos/white-concrete-building-during-daytime-K3kjy0BcvO4?utm_source=uutistenlukija&utm_medium=referral"
-            },
-            {
-              "approved": false,
-              "fit_score": 3,
-              "image_sha256": "7a8321a4f5036f6ed799df9b6f772155f5abf687f1d8ec724d222c0f9eec8256",
-              "license": "Unsplash License",
-              "reason": "The image shows a miniature building model, which aligns with the 'building model' aspect of the concept. However, the building is clearly a 'Restaurant' as indicated by a visible sign, not a 'generic healthcare building model'. Furthermore, the concept explicitly requires a 'single metal key' to be present, which is entirely absent from the image.",
-              "source_url": "https://unsplash.com/photos/a-model-of-a-large-house-with-a-lot-of-trees-in-front-of-it-WK7Bj7w1Rgk?utm_source=uutistenlukija&utm_medium=referral"
-            }
-          ],
+          "candidates": [],
           "concept_rank": 3,
           "outcome": "no_qualifying_candidate",
           "provider": "unsplash",
           "queries": [
-            "Kuopio sote-kiinteistöt",
-            "healthcare building model key",
-            "Kuopion sote-kiinteistöjen omistusjärjestely"
+            "Rivieranraitti kaapelisuojaputket",
+            "kaapelisuojaputket kaivanto",
+            "kaapeliputkien asennus työmaa"
           ]
         },
         {
@@ -347,52 +356,52 @@
           "outcome": "no_qualifying_candidate",
           "provider": "google",
           "queries": [
-            "Kuopio sote-kiinteistöt",
-            "healthcare building model key",
-            "Kuopion sote-kiinteistöjen omistusjärjestely"
+            "Rivieranraitti kaapelisuojaputket",
+            "kaapelisuojaputket kaivanto",
+            "kaapeliputkien asennus työmaa"
           ]
         }
       ],
       "selected": {
         "concept_rank": 2,
         "fit_score": 9,
-        "image_sha256": "e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037",
+        "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
         "kind": "real"
       },
       "version": "article-first-v1"
     },
-    "sha256": "e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037",
-    "source_url": "https://www.pexels.com/photo/person-using-black-desk-calculator-5915236/",
+    "sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
+    "source_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
     "stock_provenance": {
-      "image_url": "https://images.pexels.com/photos/5915236/pexels-photo-5915236.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "photo_id": "5915236",
-      "photo_url": "https://www.pexels.com/photo/person-using-black-desk-calculator-5915236/",
-      "photographer": "RDNE Stock project",
-      "photographer_url": "https://www.pexels.com/@rdne",
+      "image_url": "https://images.pexels.com/photos/14821922/pexels-photo-14821922.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "photo_id": "14821922",
+      "photo_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
+      "photographer": "Just a Dream Pictures",
+      "photographer_url": "https://www.pexels.com/@just-a-dream-pictures-393935092",
       "provider": "pexels",
-      "query": "municipal finance report calculator",
-      "retrieved_at": "2026-09-29T15:18:06Z"
+      "query": "louheen kuljetus työmaa",
+      "retrieved_at": "2026-09-29T18:13:49Z"
     },
-    "stock_provenance_sha256": "50a16dacae7b3cac492d3bc317aa0f40f305683e96c4df78818e996cbdb9e814",
-    "url": "https://uutistenlukija.fi/media/e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037.jpg"
+    "stock_provenance_sha256": "8edd9f5df7063571cead4f8bad17dc1e102f3bed5170dcbcb7a2d5dfc0fba9bc",
+    "url": "https://uutistenlukija.fi/media/550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a.jpg"
   },
   "new_article_files": [
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html"
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "989fbc51eb71105f60b601d18ed9e917a8416cfefd8055d93fc1afcab845212b",
-    "_redirects": "5b7c23b0535d3b13344caa50e1817621176daf145870a4c2d4ea48f84bb32fd4",
-    "ai-kuvat/index.html": "96847cfe2aad9bcd1af355e9ce24b647247e7910181713ad4f53031ebf93b83a",
-    "categories/kotimaa/index.html": "82f87580425a4b20a5dd44d19a46609332fdd7766f3c428e9514c3302d43ddfc",
-    "categories/kulttuuri/index.html": "a872c0e1227c557d337f0862a2e1b51d074c6006e37a636dbbbc572aefcb0a75",
-    "categories/talous/index.html": "c73255081653f906c68de380dffbb6232ae9f56ecc428a041a224895e9520f24",
-    "categories/teknologia/index.html": "d13a7cefc81bc13dc873d13bf8c1865c13cbc533708435b1964223b3ba603201",
-    "categories/tiede/index.html": "a3b32c87264f4fe693eb112ead154b8fbba4635cee7e9ad53f5ff8412763c89c",
-    "categories/ulkomaat/index.html": "70ac8bd7fbf3d4bfb7932824abdeec4a3b45723823ce8b0bd688afbab61f838c",
-    "categories/urheilu/index.html": "db322f98f7ecdf7dacbf7f540289a3b597e64a72026505f2f9d405b77b6b90f6",
-    "index.html": "42a5d2b5b589f2620c62547e98cff8479f771064672a88e7c171bc6d7b5f61a0",
-    "lahteet/index.html": "c7e77547b48392805b20a1d3e435090db016138ace9d018334afbf9c72584169",
+    "_redirects": "e92bb6d13fe9e0ad424faaaf81d4921301c739611f4da41688925d19fc40228d",
+    "ai-kuvat/index.html": "db16051094637de4cf7927ad305b8cc2021333d436f8175a827661dc69c12e5b",
+    "categories/kotimaa/index.html": "37a29c6836919a44f99ac45fdd52676db8b83a73d685d0936a9a1809cea58627",
+    "categories/kulttuuri/index.html": "a0789b22a07720d41cab0a78c9d9878d169b1097329a66c700d23ee1f9b0b60f",
+    "categories/talous/index.html": "9790407bb5b363d95b93e55bcc272603f03b0801df60598f734d1d40fe4e859d",
+    "categories/teknologia/index.html": "2cfd12a43c26184cef5fdb87afa43f684c76207316a761003209564a98f7a29d",
+    "categories/tiede/index.html": "4c76d36fab25aca69cb0ba42e0f4b36c71ade120ec908291681ae9dccb465509",
+    "categories/ulkomaat/index.html": "f0a29b057ef5911630585746f0a75b6eba31d10f845ae08912017f714629fe7b",
+    "categories/urheilu/index.html": "4aa5a075dc2dc7551f8cc1789b94d32238e5c66e2cac5286c371e7bed7b0218d",
+    "index.html": "bbfa595791d55c428747fbdfa953487b3bc0e2a05f15f05020b1a65a7f8c858e",
+    "lahteet/index.html": "91d2b9c0155d6d9d6f49eed803d30d6b29f535570d7afaffd1d5da11e70c918f",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -550,6 +559,7 @@
     "mvp-assets/54d920bcffe22654cefcca7db3994c2bd4d6148835f04390134f91187934c36e.jpg": "54d920bcffe22654cefcca7db3994c2bd4d6148835f04390134f91187934c36e",
     "mvp-assets/54e0f1b2038996c81dc5f3f69322d6bdcf3fd7d55ef8d8b0651acc740f12268b.jpg": "54e0f1b2038996c81dc5f3f69322d6bdcf3fd7d55ef8d8b0651acc740f12268b",
     "mvp-assets/55065a2a885d582440f8f37da169e9a5870987fb3677e5fe8ed94769305d05fc.jpg": "55065a2a885d582440f8f37da169e9a5870987fb3677e5fe8ed94769305d05fc",
+    "mvp-assets/550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a.jpg": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
     "mvp-assets/56b99a327875202a865ff053ff7ac5fdf126bcb75683fca31d475592bc663aa2.jpg": "56b99a327875202a865ff053ff7ac5fdf126bcb75683fca31d475592bc663aa2",
     "mvp-assets/56bcc57ff32df1a4eced677487ed45c4d172bf08a9904e19e923e62d7c255084.jpg": "56bcc57ff32df1a4eced677487ed45c4d172bf08a9904e19e923e62d7c255084",
     "mvp-assets/57aac7a38ad68af3bac5ceca34ee105de3a067b859a33fa7afc11daa478483f5.jpg": "57aac7a38ad68af3bac5ceca34ee105de3a067b859a33fa7afc11daa478483f5",
@@ -869,19 +879,19 @@
     "mvp-assets/portal.js": "17dcc8a25306b1900ee898c13e74168d09ab29df3a217b113fb72e50f4a573e3",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "6b3d4bfb8e6aebb8496dfa3ec2fb6c9846b18b85b0b7cf98bdbfee64787365fa",
-    "oppaat/index.html": "593fc17c309afd4f458fb78c1e11c0941ba509227f2159e5311087d4185baf40",
+    "oppaat/index.html": "8973d777e175dd589c33a4fc57fa3657fe535bbb33b62893b8080541e96d2157",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "c71addd4e9b320b90e1813db667c88deb9f19f2ec16d4e8d8d1994e387c7fd0c",
-    "sitemap.xml": "8b991fe4a7eb31c57a27051fde72a3e93489d913013113f1fb4d4821b84e56c9",
-    "sivu/2/index.html": "08e7768c739733e215dee5f8964f9fedd1cb8ec8c9c7380507cb1d02aaa08017",
-    "sivu/3/index.html": "bc6cb3c7ce2b4bf2b89b25a379e4c7680403c4445918e9bfe156650dad0c9027",
-    "sivu/4/index.html": "359ed7ed5c3f73bc3c478a33366e528046a76e296cc7dc76c112dfd3a851e205",
-    "sivu/5/index.html": "2fa168f47aba22fa0fb00f9178fecba48bae84eb1f73925020439485859b8e29",
-    "sivu/6/index.html": "298307c2604ed0634b195c41a5aee360f7aa47a80ed641688f70420b658007f8",
-    "sivu/7/index.html": "cb39c2115638fa5af06fde062cecdc5fccf55fdd3a2580ad50da36094672bdbc",
-    "sivu/8/index.html": "8d335c6bb12416c69e9103ba8236d50ebeef06ae3903048f752bcc6351856128",
-    "tietosuoja/index.html": "193606704267d43565908e05013d1d07feb0c5790b997b59534ee99f1bbffc15",
-    "tuoreimmat/index.html": "685d43e27f1e6b15ec6e743d5d6b80a0c683fab25771b0af37a55311248a585f",
+    "rss.xml": "3ae8378ee577888ca863906342daf666d6de4a0a76c2b7884d9621f1c590046d",
+    "sitemap.xml": "4c74c881bc175559e6556c72e01465e2e6678b8753724ed3073ad9d631d4e38b",
+    "sivu/2/index.html": "f04d9b31414151a8f180a854876a5e4fce61bf6b1edfd450a47a28a88301d957",
+    "sivu/3/index.html": "16441fe70282a1cc77ccfbb5e0f692b4789892d1168efadde91ba6c94c2c5fa9",
+    "sivu/4/index.html": "9e9191d6b24c37f922119413639b7c07dfe3e72ad626532f15822a8a62e62cec",
+    "sivu/5/index.html": "1a773971794c691261f637fe6b13b911a6d138026aeff347e187ff37cd055513",
+    "sivu/6/index.html": "59254b1befc4f37cccfb7f23063aacb12863932565a3cc545fdf24a1b68ea3f0",
+    "sivu/7/index.html": "9f6187f0e32f983a72b718de8cd1358f29e24cae09f38d64f6dd361e704f4464",
+    "sivu/8/index.html": "45ba06a4a0eacb404a6f6e80651f40fd94d84bcf29adf9ff6fdd9f90dff77774",
+    "tietosuoja/index.html": "fc9788cbe0e760e283eb4be356fae840ec3be581caa0b1abaf9ea14083f81527",
+    "tuoreimmat/index.html": "09e769d65f6bf610222a4e3612a8a726390753adf6d54962ccf6c8e3f48dd028",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -895,359 +905,368 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "595497b6957c6341cea2d708fb4d251be702bf56e6a17f562c5d814e4f75e591",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "7de5de2433906c6a74d63ac6e293986afe32ecedc35184bf2e30e5d60109326c",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "cde62211df02fbb6bd784470a845002ee4c7c5a0eb703473309e28de820cdb4a",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "4488b1ccfca072a268c9f1bd1f22602928e54b7c365310fc6654421bef52410e",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "3c4bd1892c4ac795d5f3f75cc2a6649e744cef3f2b834946e19d841ee5201710",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "6ae7c3675efc6cde809a7f9058e318a9d1a9594a7f829cf42cf3910424a0488c",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "80b13d3789f660fa1459b5b92c107f238bdfa67f1adc43cf01f847701a82bf65",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "089858af0d8f5ed6335f1779cf2f56ec23de83047d4504a80d6f99f6e44c4e85",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "35c7e535bd95a77225080574724545ba2a1fe8116e6e86e1137025b41bd5ab67",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "0dd17ffd78d35ca972d9d6c4d558e8edb93d8c75584a52a2318c3bae32def93e",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "4de45cb4a7ad52d19abfe4fa9c5da80b0f3186dd83a1425eb16c5a5f491e6e63",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "0387ad2a0cf43127da3efb172b7a65da1799df8b414048567975ef736f930ae5",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "ad546b6416a188eafa5a6ea185886ef9201d9241aff9b530aa97bb7d5fe5dfa0",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "367719bcf5e9d41ac6ca1edded54125232c63b76392b3525617d5696fbaedf71",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "e113e6d7509a8dfe9fd4d0717db3be5e8aaf9497c4710918ac3e182d437fc8f6",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "b7c6b3fe5f604ed36f819044f1ca854879aff95e75fbba58b40dd7d2fc2b9db5",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "355aa44fe8b47e6b7025deda4725341d14b4015222bce31995a1c0bf6ec5ded2",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "1455fee1d1faf6799f88fdf7b3a0235e8992480407fca00534ed239ef546be92",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "e5d6013ae2a33db81ac30cc11a096fd9b43d538d609b3f0ec19ede13bd2eb872",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "ead426292ffc47965f5ee9fad521ab64f6344548686ec95388851d54d799902f",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "cb65f9c22b464003eb481195861ace69318c157d410833948ea22a63b590b87c",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "daafa5d96e0ecef17571594fa90891f5d69e23ec4a7b88f5d27781fece280b59",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "6cd96eff22a28b909ca5683a1afcdeb58f9fd32ef84829c3a9824137e5879d40",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "9913008c6f1a2b1314ab47b67fef8e117cb57b63af43378b249182efcb54dc09",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "e9c6944224920e56df2eba06d51a786015cb37fe2e6889a3216c68bdf87a9d99",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "787e17597570714b9ac4cfa656153805647791731179710585106340677de938",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "6200439511a819334358eba32f19757053cf37fb25bfb7a41e98dc2651bd1729",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "a156943de7b3a8300c6d8bf4ef93bb252ee8a99ab3c19d91cecbd611d2d5c9ff",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "9f465999c2d26d76146ee636df92a0fcd84c93f23be419de4de8cc345930c38a",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "6a8644571b460bde200ea6012245e758f18465590a0542337af80ea88429a328",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "48b766eb6072464340aa458138bf688d753dbaf90c7f5a086c5d0508aa98c6c1",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "54e47d1e33b420c0dd5cc06306f7ab1bde16f3ec58d0738131a75a9efa85a693",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "bad2c262cda19e9bf856c1726d1d6a19cff8dcea68ad7ffdc97d12fdb51d3601",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "592dd979637828536fa47a4824a20e6fa7c9a59f3751818df2bf8e126e49555e",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "2f9f8eb61410a137de418ae3b49255f86a60571f4d7a41a2f00d8d98c65aa122",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "935e12f01e686534a1db64cfab298226d80b4a2c587d6cadca6955ed4388b860",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "c12060bcac97099f1afd4ab6d6361baf7833c0b5e45a9089a573a340f23c7133",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "8ba7f548458d2631b2a2a6c27ccf221e40ec02b73cdbaf0d57d27e0d4eb0ff1a",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "a7752095146593f69f7df65080a863c94cce5ba977611a40ec0a975bf46b192d",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "773a227317809f310f284d0c48d4f2ebe03a18e4a7ee9aa9fa5b4a450568fca1",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "d6189e55b4b2cf31a33b533d191172e2e6cae8037a64982260bd325f815af1ea",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "e698427f5e968488848e14876286b8f5c2c269e74faa59da97a85bba9fa6b252",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "701660558ce0dcda6126f10b9bef26857b10cac93cd7bbcb741f848abef4b543",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "17bf31f2d5ce4c31769e748cb0befcd94dc4c5057384733833315ed7ac227988",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "39529a617e044d04025c7e96fa2a3b5206a433bf09ffb14229bbf01f7dde0ce9",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "e0c08bfa8a8f66996e1f70f966c77e6eb2d585b4852ddf887ea2ee249f37abb2",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "50fd9049374a5fc9dfa29adc70f18f7d3d8de0e00d6e2abc93d1a122b3b36242",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "62eea0750ce0a1b0235898cb8e51f8daed06ffcd885df92b5ac6762be1ad1158",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "3570a05e69f02880a2f222af970bf3e4b91c82d601d1132697664d430758b7c4",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "c361d4ded2c20efa0a33125d538430946a3a1b39dd1e132c7b93ee9d8ffed491",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "5c67ecc868d3bec55d649dbef9277a3e0a2a7cc6b8e6845b3ea6442059378677",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "32117d66f95af0ef881bcc1c7d51d56e640e21f8078805aaa30cb35f59b731ff",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "31636b578696fe9f176b6b1b86d4385f341b291a5f1fad833902209521f842b0",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "71ecd390fbec1dfb641b0f5a78344a273b26887845894bab82dbbabcb67e9e84",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "eed7d651f25390f86fbd192a5815e3b2e74ff16af3fd925925c66ec0f20dfe5c",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "bb8ea4ca6179faca9e94ec246f728aeaf20707012e496524678e982f7dd86cb2",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "0916716034f64ffe6077dcad1f4a919c34453dde8d79891764c41bce6e983fc4",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "0d411f9a236605f9c4c63baeac07b86efaf056c6fc47426cf61280f0ec1f47a0",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "9197baff770e7e3967214a44ecb5c754e20c00f52d857f575b8a5bf90b66b4e8",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "453b3904cdb24ee40ba4798890eba9d4bfbeb856b0ba770dd98e1e569c0b6919",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "f7239a622db6784e68c373f4aee6b7e78b82b1935ae7e07b22310efa4fda1003",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "7ccde1ee8ecb74eef18f42cd58ab18d88584c6ccef871068dbe4ca6146a3d293",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "3239490e2977ec711bfaaae047933b996bf25a0b0becf8eb6f3223ead8eb2dd5",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "2647378ebd98d02c1af30b12138ebc278041efd4c4a452c89ad5cc3465afcfa8",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "8ef8214898b4d5b0a96dcdfd8f26ff28f99da32adaf009716b7078433dc4ee92",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "590c7770e5347ec7d7c6bfe41cedfbdef6680f6bf95393ddc09b42bb824b37bf",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "2a1e791d2e96e82626d9f439d8bc340cc01336493debd4745d10e5fd8edd3542",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "a763a2ed258fd8f0ee801ab4def815ec57eb6144e1dfdee675d547c3094bdb4a",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "79cd2ff1ec0bca1d77baa0568057f409f067ae854c7b811952aeed8a1611dc05",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "840e9727bfd62eb9ff97d30e31d1efab1e25c55002b4a3c658858786a2c05512",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "68488e60b35b2f90fc18f0f4adae6f5b277d291f1ef591dc2df816e1bd4af0a0",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "389157b623784a1c628673a2709fc733f189cd3cd12d0a3f6175bb4ec04c1894",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "e3582eac374fd72428739f44c4b084775d5e00508510dfb51e7a3abed83f9749",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "56a6ae2a0f98b0e846b183a2d9f693e39648e74b88e93fe4e4fb6d626db72eaf",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "c297de339f9c09ec0b9352d0c2b04070711462045b91b14ca52158a675239e8a",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "afa20fc87781a58d7568069639db89c5986580c0ca5854e737e8bed610868fdb",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "b7d95f42de36cef6ae51b16935877830af5cf710ad71b61a9262515918e37077",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "a5c18069808a65cfeb77fc509cbe9027106d404d971807f6f22e6c8c2d8409c1",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "36289f531e16e838dbcaa226447beea12181836ff5bb4e9b745f611b8afee5cf",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "05c70a6c5c1b3efb76e68d0001e42cad36ece8663cbce65a60de81fc3460b387",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "6f900143789c3a19b27ffcbe0b7f966a1654ac7d49583198476ab40a6ded4eea",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "ca4faca865400c75892b202d22d1546dd72ca9965ca1a39e119472e36e70da76",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "0f0bd1e5bc7b8a63f5e275b8c58705bad901ff192729a53c5078826afbe7bffc",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "e5fc4f5b219d79d82983b639699ad1e86691192bf6ac6f03f3e7156b0ec84411",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "4496dcc7000edea2e95aea57a98148c0217e3ac330e9fc2d52d63a76c87d38da",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "f841fd6e158fdadbf29649289335aec0c7c75d691d0cd04893adf313cdb9c527",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "86c3003f021247e6723fb9e00bcb595bc15a92e7e767389556d1fd6b7e591c27",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "35169681b345f523a2d237bce8af5a28697754d449fa413f45976b4f850484ad",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "a4cdd6a2202bde7326ccef94632bf0b8057580df5a1e10541f0dd21a1bf515a5",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "e65423a57786f1ca89be6c115e6c7111cae2fbdb7890935fa1bbe7ad8eb14543",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "85346625a3de1de61971d93fc81cd73c3b4397c2ce978f4da9a6c7a1d2b040c6",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "821f9cd61ab45c8b46bc6df9507d351dfbbc4b24cb3f54d6557f2e9e3d07ea2b",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "928d45983293ef104efdb92fa0ccc8f24fd896be8996525c6e74b22438ef2c5b",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "4fc3d4097a68f99a67ad82ea2e963eb5928b15c568b28d7fbf8b35793836e313",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "f614f62d7b27276ea717b8e180c306f45157222fca1712bba9e5e3428a98515a",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "d881e001a47c35d7b21e4f5ef8c23d9213900e9723a618b0e492cbf6cb7316be",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "14cad5b92038a3d8cd7b87ee68f80606da1927b704d3ed454487d2394a16263d",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "9a70b0f06613392df213418b55177fbfd8edf1f49ba4e407599a7e44e33f5ca0",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "44db757c2fe2ef14f4f3756cdd922ec2e643823e00881e60c0208168f7166419",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "b1139ede23718d252e826fd793f66ad8cbb96ea6e01f603670d40a2a1bba9fcc",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "579284845e81ddd625767b5e35a5aa95d6591de41a466db0fc12331fb161ce57",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "7856bfab9eb3c1986ca95fb7cf015b0a6d4b3526e536bddd4eae0418f0d7219e",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "087e7dac3834c69a7950dbdb143cdbc04d01cf37adeff4de6c7e2c99410eca16",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "8bcad1325ea4b40bc9eaefc452fd8f8a557a19155260e00bb38fd14c78749680",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "f03fd9815a17183712c347b2aa9aa4c2fafeeafca7e0f1c2d6a8b8239b905596",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "2a2f20633424d3e972f8c3dbb98b3998f09d6a2717a55b7ecd12e23f489703db",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "7d4aa875525b311cacd8b7e2c48c5a91964f5517aa265768d80d833fceb3d21b",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "7e8f6e871c29cf8032b4b7efca07d9c59ac161c889cb9c8ff008a9f2e57c4f08",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "4e9b14ead3a61f8c8d29752b71e77f9c8adab914289ea131b12f90f1a704ebd8",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "d91e49e2d073fc46e90aa9151873564a072955abceb0a92687a6dba0ec52fc67",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "66b9013d8dea33b34ee42024c779300465a29fc8eed41a7091051d22b897e6a2",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "98a055c4d8a2c2349e49a5e4f3202998c0131f5f80ba3aae3e886a5e451538bc",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "47ba026a660adfeb879b370b52a0965426f25d9f83edadaf035b36729932abfb",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "14ecfa23713e01989441403c6968a952fbd706452a76573d633076b1d44123a3",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "e9363945aa7fd395cc106b3a359b2998f4d9023be1162dd56233ee051096505c",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "f4da3b97559bab360e17975d564eb7cffaa802a458b717dd0f33d4564bfd2355",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "107f97940e567afba842d21e01c002761b03d0377d7ba42a1a605c0d61cd7892",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "627328f1ee338daa570787f866994bd21f6d19b43d1fe68cf243547f2b899f78",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "1d6453d9560521ae05f6f386806a7de74f8b601e0da76d16ee303a346737f073",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "7db191f88a034ef195eeec15d591851eb6e6e020f88f42d047e0662c3093e084",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "52f11a78f9f89bfd74d85f537740596268ff698d997d4cc10ab0bfb9f19eadc1",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "3372c99a7a2159ac093e36a188a691626e0212bf2d35da62a9fea9c8a09ee259",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "4f40c45add9f043edd7d383db8797764eb3cf5d0e6dee793669e8703edf508f0",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "1957abb2ce6a501622082ba278674d935fa6a86b3bf7b3f737087ff5920c040f",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "0d9edf3491671df0e11b6de7c43707b6f43eac5a94ab2f8548ca6235d4f75714",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "f35e0dd18ee16dab3b63de264cac6968160e7d1de3afc1312091b3d64bd59aae",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "9c6dcbc6d1d88188771ca8d6f7445cabba6732a2312dec472f1bb8f8b39a582c",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "6a5f3f0d1db719cf8f8088990cb435a9910641229f720c03459177e9a2bc8ca7",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "b7c234d0474fbfc13fde8208ef81545b19418020244d59b9a4a4c6056e94698f",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "a5170a11df19db328fa0fc2e007fc50cd6147a988785349ae6456d27de449167",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "ffb3b2b7353366d73510e8dd0fe62d927e53040411a2d388c8215d9329b96c42",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "32606aefcd531460a65d5a6d6953863e7d559263238b6171ef6e8e694d1f0153",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "f92722f2b43917de1aced411337203c14a7971f72d259c2f115843c644124d3d",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "865c995a479fc4744470f103f2560c686618da759a41a6832dfbe75e5325df07",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "02514eb4163bef0d58567b0f309b9476dc1777859fb05c3ffe754b39c6c9ab2c",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "ad66c7ef91fd8027943b7c47dd73fd9c8c190c5531b18d37322e19d8651fc49f",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "566165519c815969093dccd84992bb4361c51be8f5e05397e1772c4577a9e49c",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "e4acd42101675330cc49c64916ac075f080614993264496e0afb598f19d97d5c",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "c7583fd5e86681563d363439a2fe98f5440cbab282cae1e610445f3e2ac4a4bf",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "80c8ac74fa570c2e55263f599000235cc22b07a7785e023bc1be5a75090eb5ff",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "1ed7cf49b09cab564db3c40372a55d52971be6715d564ce6369c87978d3564f4",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "c9076b7d5e38756b280d7895ed9eec80971eafce833ca4988aed41d2be56bfbc",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "89853697ce8f422b354b83c840aac9b7e16ad01fcd636b2189b4155feebb6b04",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "a0aa165d4d0ddce3df6e3913d17184d5ca0452d6a835de617d88fea256adc7ec",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "2ba0bc89bce8e32e8c48bd06aa25813f92c050c4fa39e015f29ce52ba71b8f17",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "c7da6810589d79a1c05c797adb87c5079c360c8bfc5c0712a3c2b52875c26753",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "3779999f723187a8f251fa5fb21278bae424cad8d5544f2e6907e3f4c87ca3ae",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "f53995507529af93270285aeba7e71f3c8cc82d52a78b87c57762970c6aa268f",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "5a968cd26de4459ddec4c523ebbe444a7c55755bbf96d572773fae7b5421be67",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "7dc31f2700f455917a87599b7d5d8353b30f19a4e1640d4c65f135c62c87fb56",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "e5a60edb80a0535612c4bb8de8f15169d1b8685a8527699e4a9ce690d499540d",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "55bbf0050ec24b546a3f1e7c406fd30a934598575f79400ed26d663cbae31d56",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "b3e8024dad1832c37dce2d2f3b5ed7ebd024c7ee6dd94ac170a3f74c95c706ca",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "2c8ad494358b5b61be7b8946b009573c90b1c68b252692ead95db46c82b37847",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "3439ae79e81277de3500b1161c8c67074ed269b21549f3f185c18533324f939a",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "37bbfc28a250b3046623f96ff746d44d078bf4a81e609098f8c90c1051b7f0a3",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "a80164c008c1dab331da2a65197a913708326262160c2e9f898ea00528c104e9",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "2e71a55a59216853289a9a9577ea6f7fbe234d18db05d769dd3094cf638f786a",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "a4aa1bb28c34c260a4421ac2f029bad2164b2a46f77813984fb737b4831437ad",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "27c465374bfd20bf64ed24af61220d9c46cd8a8ebcfe58bb1be2dd7896249ce4",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "9b8ba9ef92b11e506ce12b1f73f367b6d942068e26f1029510eb2855287f505d",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "c4178d74b4a5e1342b747b451d761e7d691b5fa86014d405afd1eb533f315967",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "8dd462afbdaff12249d126f9105ffbd609b403bb141bc9fd9fa1288e7fc0d69e",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "6293325834e9832972bbdfed5122a20d18bea0645f6403d64e807a82778f3a57",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "4ebfa671b1c8612cf279e0077b2c06866f27d70fff5228d98e9e7ca549181161",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "77690cc23477564b8ff90baa2232f904a6ff3dfb3949b799f316d8cb6ad9d7fe",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "fa64a092346d233dc7c3b5ea3f50a6ced19e60e949ddedfafefefc8f606d8aac",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "c9e1840ac555cc585915924237d9622441973b4c8b949a190e0b4c4f016f4d74",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "8934567941c0010db8078b5579611432bea0ffcc3a690765bfbd55bc5fbb196c",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "2a6f0a5d8eee3b3876b2974db89218e932d14b454d01d41fda107d93f4b3a9ee",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "ecf66e7189e28b3df392b45ee951d53412fda5a62650b715b2081826bb8abd13",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "df03df247e1a4959849ec58a0407c3e0b000455d7e68adb0371fa6f52e435c95",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "ad324c9d1d31bedbfa8bad994a02be7dd588c94481d42f13eee10ddc659c42ad",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "6bee3089c780eef452eb58bd51ff26ed3e0c4c8f96826fd91f7d75b99b74fe52",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "a9b21266b6ed9ab062670ee03dc67aeaacc7c1ef4c0122ec6e5390fea86f585a",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "55026f9a59b253ac9a90a5499f6f887fa094b84bf9635b152b8364d6c6381886",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "5ccdacdc1b2b05f1396e1be1f549f79c573889cdf24e08ac48d20726b17a859b",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "56d4aeb70dcee3d4d1f4ae61e73f8d7799ed65a56fcc5b9514ebe8e40134ba5d",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "da6ef862dc85bd58da9670b6851b93ac1aeac1c185208a77d1d8bb45a0c79737",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "4a816e5e0b5a614ede62983eac2f4860c2af5a743083334a81a0af2045ef03b0",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "33ddc40bc87edaab31c896a3403e40d4aaa4d91ee40842fd6d9d2018c121cf44",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "0d70a35ed138b6cc54e1dd5aea2d27b700c2d26bfb4bca6aadbd0ed5800fb943",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "9a2601e99037a7a245484ca06f3b8b53290e2851b291e9e5b1e46f232954bced",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "b7b220774015d7843351d23539d3aa6a6a7bf511825b7126bc06c0dfb4cf582d",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "15783f6509b3b89d45ceb3f714fbc1d7de071c77e3f11d8c0c2249e333d5ba0a",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "6b7d46eebfd204a578fab0c7c6a4d85b7676b1ce28a71d036d5b89b27a9caa7d",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "5534053c7d545e6bccadfa4687aa0b55bdbd70df0a584ec79049567ff0510f5a",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "eced72c72ca04b6fe8bcdbcad8e773681f6ac4086829e774f927873a20276d1c",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "248c5b530cb19454c30d38377d069da303f83834bcfde52974883f0d87d92b77",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "54299d9fd55f0eca0d7f8dae936dc92860cedd6707dc42a66efe0bb575ac871d",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "bdc3e1c1234986b3094529217bec94857b44b2080dbdd90cf1ca18fba53f8e92",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "447cc25b4329d7b93484976f8967408d15f1b681dba646babde1dc26d60ece33",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "1b169fa7c2fe2601cdd4272a604916f2894a21aa72a9faa09bdee07f3f260f08",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "98a712e94a50bbe2cf951b08d38ac639c17dc6bb95bc5991041f950d18868317",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "2114a7d37df4ebb380ed3dcc44df0463af2a798cf298f87fa2c84a280756a782",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "f0b53a9c6e6ffd394ff65af463bd1caf388e3707a92c6f60030936fad5b07b30",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "6b25807f9260cf234b320d2206d08d4672fb2ad5ea950c8c2dcf3b21e0553b64",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "d0d17752356c3cf4e42b3ad0f815c968337b786b551dc12762a20607cda11268",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "f5788efc3c102e43ad7441e96948b1a590ea6b9c408309bc89e509e582ad7d89",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "f101167cc12c3c2b548506fbcc0e2393194a8b2f21c1371dfddb4ddb4633a8d9",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "0bc69f1121e6b8665cbd9b7483dba280dcca34d324ecece7e193ded9c5d04df6",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "31642c7467db0c03cb60973d4c75aeeb4d629921cc47085b6f8c0e4ce6c810a1",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "e8cd4c8ee6990ac206e8c0b4ffa369ec7270c569ca27cbf9e678ac6690e9183e",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "44ec747b8b2ea32c5bfcf980214eb91c18bc9c52ab0e310a1036403bb1edafa1",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "823c5ccf23c891925644bc45d3c6ee85df008514aaf2d2d374ac0ed50634ed0b",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "b1c370d5fc08851b723a0eccf367d2a36ac64c3fa79a78acad156fa184224e57",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "b34354e93823e40f7b48b2efaed3e136d20b4c6b487b200db53836f84a1da601",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "d7be813da16af8527d2992da03593aec0293c95555ea5fd52bbe3950eda28111",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "5db41d986ff7efbbd57e8e7dd8bd12398a6adcf6e996763b1edb34e2b5821126",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "5b8a7ba08f10b80e42809bfcbc0b63ab006cb73086770fd2f56456ae0238649a",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "c672f6bc8171e25a9649688a965c044917e3e089c3b73b7cf9f9fb2b702958f7",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "680a22dca9060b57fcbdb6dbbc8c936812ef94dcab76f88ef154c4dadd5a6d56",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "ea34643098eafc1649114a3eb0dfc371e93df5d71c8154b79ac601b0f85aa8eb",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "5271623b95431a6d84828e7de91c9345e52d42571f9f21915d8dd73e6f2d511f",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "8239efec9afb62040016bc475fe068d407fdc6bee2c73c7cc35e7f6327481b63",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "fb2b468ddb40dc20b0c184415906de95e066cdf3feef3fe09b6acd013a24272c",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "26d1fbb75f9999232071d151dd1356323c5ef3006f5990823094bda0f225fde2",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "4f4d23aa489b7264b66e6a327ab6b17da1dd780363ed430389407e77d80171c2",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "7d61c2caf360d86dccedd2ca953c3764a9b2e38c5a8da6216d8956f1363eb675",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "d2d815f4703922f447a9ad497430ca088ae6105d5cb627764719f4f00e1287ab",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "f2bce0bccecd773e381f8ef073e7e1120395c6edd1cd608a00d562d8663ee28e",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "1cde6a89e9dfe6b08b1730177e87f146b3c1385639730d0b7036fc964e3b46e8",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "58fba2195114c7d19483ba242939d358c4b59a3afdf002e9913736f1b41642e8",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "58e7d2f740dc21f620910691950f42dbc8252764b90271a851f1d0b4e116eb50",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "c287f1e113dbfd5bd0de6c04065d9523fda34448e462df3e459a0d7aadac6276",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "8f0efe06b0d6a5034a13207158f90479db68b2c80f3c06ffe9e0527a0053fd62",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "393242a0be0ff116538060b90358882ddd3def5286e9a040ba99d9b2705a0df1",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "3cb4aa5f91d44ed2c39c788bf7a627420cc0f24e2e56fb799c59855f2fba0a17",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "79ec879cbe71af274201b2b3c33756a3eb3b627227f9996924d97ba71dd6aaa0",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "24db210f711c8663078c732fb06c00aa4625083a0a58efddc145cf564ee954cd",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "3434d127fede9e2b48e76aebe715312cc3de394b3ed13065f7d10305a0d955a7",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "03221ebd3f51800b318637c65a85071fba70afcb6fc3f0efcd7fec7e6076903a",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "64aae56cae130cf770c3e99e7b063442bef5b0952dd619c6beb737c6bff881e4",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "4b2315a46ef9b95a9558919d40d4a963d698b5cbd0ae6c3b23e1a74068433f08",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "55fd92b639e7fdf94cef1e0f13f035cf9f058d933c91dbe818135a2edeb8bccb",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "bf8b4910606adcef4a6fbb6a1559af2f75fe3aae15734ae73c80a5f23542fcd8",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "1b2504e6f5b489ba7cb394b2fc2b573a1d4684e61b5ee3c5ea08a8a02ddcf619",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "332e371c92395e69d482fd8b2a9a83f8480589c9811f74fc569e89d02448d768",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "9e06e5f6e39c5eb8a4bf1d23f41ebc6845a950f1ff3e363e0656ad5270814a4c",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "5a7d890a40cf49fb323959562c05d6c5759d3b566672f758271df3a37212273d",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "909da8f156692c30a11ed74d339c29d5930db40a1c93a92391e9f5932eb8fd10",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "c4a7bc876288b262c07d7e81adde1a01cd629d687bef6ee823a02d0ef890304d"
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "3f8562d296c585e8d87c7ffe47f66318368d68ed7a3bcd6b3abb8e2fa64bdf06",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "bba9b97e1e604d1eb885b9e08ea43f39f13bac51e93530aa13490b162e224dd1",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "1d63cc669bdf740a2a3003f13a2b803e5742b1e68c74819e8e3724817dc3529c",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "fdeac0a75b47cd7c77e86e3921b6878e5613ba5b01fd69b51c2b916c59b7be9d",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "b243fdfaf4c88e678b2e34991162d2582683ecaa22ec0d1236cc2d8a8db95b61",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "f62d5361929ac29d569e8bcf9800a840b750eccb4a7463fc6de262827d59c6c5",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "60fdc458c02b661d497c70794eb8ee10f3fedc1875fc3668a3aaaa3cbd12f69c",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "1e4242d7dee15f85731b3cfba5711cd80ab56d509823fc64a8ce0d56af182bf3",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "4182e72014fd66112d21008f5a5b72e3cca72b4f484d0d4092eff290e754bc46",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "eaa3460d99847ab1c773c3fdca439fb386fbb7a2aeba5f7cddc985caa322d1ac",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "773d07b0b8dccc1104d11c3df699e7a464657a466630c036b73f670dccd93241",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "c4a4a9e6da6485118ca0ff2dd19730f228a64cc02677a2b5cd96f76a058dcd1f",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "4bdb9ed39bb4e0212d45ee2b12b0bf076bee4a89112726e914ea75ca0100c825",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "45ea0ff1c11b07bab453b6b6915d6ac6b9f0a2d545afa088c42155a32a087e11",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "1314ef81b45790e5433a7b84ba7abd5cb88b4ff6bee59ffb91bd1b2505967c4b",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "3a1f87a5b7b284bb2089b4df1ee557a70f298795ee931e14c59817343f53ea87",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "0fc40ed2db273c83d577313ea20772a90be5667441742a5276557e43a54244df",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "63071ca1775faa93ba3a2a68d9bda66926fce80b051392adc1395cbac2da38c3",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "ec2c7d7d057bc55704b2ef8a8d0da8e236e2f9cd9f40fbdbd48eef827c615cce",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "443f119b4d9a83accf8e08059d1d46cbc5b082150a0bc29b8317c82271dba8f9",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "1241f5d30f60b1701cd0ff405abee13ff796c35564b6dfeece1421832e3b603c",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "1068247bb8c71904df87adbf55d7d97ca0fa80c2bb4c8be95485fdcfee1cbc81",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "de5370a9c406a6883dc6fcf2c09b60fd48aacb587ed74c271966d49c9bacebd8",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "81117a58e5775562c92e7d76e198cd6828f55ea860f29b34348fc688c293eb5c",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "398388d9e062067efa65c2b41b66e481fce8122a253d38bb2670f473340e56ed",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "16b2071ec8b079bc8354dd38179f3b8b0d321e4cd812c3c6da36d6638984feab",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "018dfa0c300f4dc06a0878e218f945d3fb752d37c2d5303fadd3fd8f266a7a26",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "ba539504d0341b48c5a9c6767a9c0ef38b331dab3b902effc87d8d1a152815c3",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "1b7a372a48b04554b2372f51a061ae714a9dc4e9e95118182c644446cc1e5a07",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "97761eed279f9d6a097c3f238ef40de049579062322d68a7c9f2a5cdb18731ce",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "5f467d3314e29bd3b9f74997d3731dc5cd822e16adb4dbf5e2175ba4646e957c",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "0e11dca46e684ea046146b95061be9ac034bd6fb8571f9675d07d06828980d91",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "1c28fb3ca6799c6531e0d090a2f7a32a9a31554c119d7b5560052537d03bff46",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "4c48334a00379203664e02ffb1298332cd47d97d641f423f134f10609d8907ab",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "c05d81115a1fed150eeb9bcee6b4851cddeea3d0583927b6a24133decee3d5b9",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "aa52d3fa4d02b9170a330e12b00f926bcc76fd7343713e066d2ff7773a101c6b",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "2b37d562ba6e2a66a8c6d1f9c77334d1b074ebf8c1f1915d85aad64261f25cb3",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "d40b5c5c3b24800363f6d52852dfac416f0eef756912943b57e7e107d45bfe8a",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "287da17e130a3c629bcca923c8503879d9cdfb14c560c54b82905196db11c67d",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "526e918ffb2e8398a89e086740535e6a3ea38e8b429b147c991028447ad55f64",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "bca9bbab82bfd8675f795a53f6b48f45e4fe3f221f43223a1f71693dca0c09c0",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "a42c2fd5472862e73e6a2b90466fa043d031588b7f24d25dde63bcaf43214867",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "da64bb0be7ced23e92f601e274acab316aad9593c4fb8bb6ce9fe6755a894407",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "a980c47b7b90e75691d96c8878a43e556cc97e44bb753cd80adb4df7aeb2e4a7",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "8a47b9d4f5f43a7f9980d9efb80a3356e9b012824b25bc9e2254692c4c1c7067",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "9344b594c2a23e6af5f4b2eb8393342c97d0415b52e9bec28c131e656b144225",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "8cfd2cb35fe85e467b402b010881442ea5b6b73f15d92ee83d0f6727b6a54f74",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "be6941dff24974f691962b4daa49b89aa11c13446adf1664dde35b68a2c32d04",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "f01382a68aadf526c7ee77199145499fcac7f160404f61b3b3f371a79b9b64ec",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "c1bab78449fe60430e27e004358cd7bd04e618249516b0753ed248c7f9d4bc2d",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "20fd19cdb535293f384373a4e3caadf2b308b5fff09d905adc0eaef828931976",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "4566d07f215adb36228f2a51c156274d85f19f46e9b1bc1cc66bb8a32df6f052",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "a8504a0decc3bbf9ca046cb4c070dbe607089f05930dc137181444d117b9c633",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "db2cd64e11cc23ce49223ccdd54742059693bc82cd655374e13c92b921badbf3",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "f378ef4773838c98c26b7fa5e45a4e112cd65ddfab6b71c46ea0489d4597bea7",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "947e1e05baf5ac9a1c22c7089b7a6d6aa3f0e56f09e8935fd2486f607a6fb570",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "11319db3fb12fbf026515df851e079e8b9291e8ea86b2ddc9788f139b7635e36",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "fe9c967ee4efdbac6c034af0e9713eff7de1a0c080a947980e6bebec3be32a0d",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "75000ffe1ac24680ce7677392a9c9040f1ede396c0f209b6d4b1ae8acd963b32",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "dc3129b366056afa20d2b745ebcb79962ce2f58db111e09a3997e0e4bb944e03",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "7e250aa3f9c34e62c5aed38dbd10a9086c926e43b7d3716a374dcca4b760a34c",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "84044b007be60fa5f53b07ff6861108aeb741c30f66b932bd73e5bb186c6b740",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "9f32c982089d720fd9fe7ff85d94ab1b73c1177078dff0fdb85e5ee3e39be014",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "7da96410b7eeb69af4ea21a7b1d0d46a24239d7a321e0c5a9e3d49cf5f3f1a59",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "30965f039b0671a4b054600f84dc05c4d1e6f41efe91c235e9006480c5615230",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "0ead46a56d2964a8db30e01245490b96b2288d93b22349db9451362f50071f01",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "a4d4117e4f7c3fb268bfc55519ad6842d00e5783238bead83530651272206d55",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "26bfb33403c4e36a8267bbbad77b2c1163f01997c8979023ff872a0a5bef69d0",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "88ee8102ee099a72b0f7f98953a61334b6ed5610b1137e29a8db307f083892b3",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "0340c7cbaedd67f8a23267235280025d2a0e288d669b1db044c5c815f34aa203",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "9977d126f72062a5524a15d5d1391ac537db41ad26159a6c2c8937136a30f766",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "f9b1119ebef40e9e1517a18c5d343401580078fdc328b06ded6b7f540be4c0ae",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "ffe6b06c93f8517fa6fbc5ea14a2b6c3a034d9c66e0c6190a1b343e8605536f2",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "707d67f00c48fd48135cddb76ad992eb41eaaa20e500480849c332c464374798",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "071f679c78096e2fbe6a4d2968a3746731ffd95eb9dfa07a88e23052365cb98f",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "f67b852b2ddad6166981f9239ee1d1eaa5483190b2a4f134554fc38a86ca72b1",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "c119c2c4c4201a9a69a36e5a64b91871d9fd2bca2ab76134bd1b5d7a3d991f11",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "3a6c7b5698dfe1c925b606cbd69a8b44ecac69dc0995694cb764beaa3d7557e1",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "c4fcfe91db3fabcb8c52d81df8ba415032f7144e192ccba94cf03984f1c011ed",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "2ab5ca4c4011be82ceb6cab262d0d899fa39a437154ab863fac3db385d2325ae",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "6861fcdafde0148452f99be499c0382d4ffe66eb2db43fba89ef03817f83db5e",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "d14919c03ebe91f352aa3b36ec8226f0825de697c30c590abbabdfd62a994ff5",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "4d64537124401b869795b3696fda7fe3a8787eb61e5e859dfbc89dc3f7d2312c",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "f943716a2161370b0e29f1d97dba196632ba8e8512d5c8a6a8399a6f736b8f23",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "44804207c5ac065eebe5cbf52c0feb3d7fbcbc7841e2112bf42d4f139aa8f11f",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "989403b14cc891575e6f63872100d1225b76f3de519f79232b419b4468cc27bc",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "398a565aa30fc61a2c8f34642a32a347066915d7c7f1339d70340540f5b9823e",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "f843b317aa59ee9651a5d197b603983d2b96049899005186d2abcdde5dd64424",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "7c6d85e0aec9fbe2a23b7944c96aa24ba0e6c860167f251efc3f64464905741e",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "8a75d3e79679db435de99458162fdf772c09182421d11942fb4352275b24996a",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "d9a1775084c7c6e1d1e6f7a19ec728482b4722982ef230da77ea7b8b2dae46f2",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "d0169b5a29e30e476ff21a178beb25e099fe89766b54e740ab9bf2801e65acef",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "7359b5bab021723e892cc3ae47a82677cec5f3577c7cc9a1507a96c7abfd21f8",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "e568c6344953c99157f48306e488f4cfd905aa2b3268467ca30320985ee81b82",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "790f4b3daf062e9ce4bf89ec4528320cc1263aecfe8228a7468d8f9cd154159b",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "4a92cefdda90e43933a55aa50db6ebc002c6c7c9f056089129cdc966d36171f8",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "5db8b42bbda8dee5b69b9e98070bd339d36a09b0d8555e607a8ca121fedfaa53",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "9ec8d5ef0335869331e85bddad69666b416f5fb26baf0310396c3da4f074659a",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "3b2c2a9682b12929e9f144c81640efb41a8771ecd36601605ee42361beb58cf3",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "92391a5c06ba4b08988a1ac6baa05268df444c93f612a205c46b57a06035eeec",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "e1c015ae202b2a140c78c9edf36b17f5ce25b92c949675fa632192058ca7988e",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "922af369793646eccdb0bc999ddb1db77ce8f6e0290529e5aee9241e9dac3f4c",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "b06e1674d0f6779b50782d370f07c423a6ed8a5139958e076fc42b4b99db68e2",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "568e6ee4bdbd98f3080e51f2085460eb030c94ccf3534eb52a85b2197738f656",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "2147594d841b2d54c888c227b785aa62403c6a678b4cb18c2afdfc4c4f5982eb",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "d3f60f42514eba54d1664b65d469dd9149de6cd27541d1700be192ebb4fc46ca",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "9d87e6c2248679eb96e989dfa13206430a31e3161c7af4c3029bfc0a5da27c48",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "2decea975aabfefa5b2135ecdd66808f5bb16f39165db4935ff14739c9cb19e2",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "f6c51f850052a1cbd723504bab2c2b39ecb4366e914a20ef6527452a7d8d68c0",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "0414595a1900e7e4c8d8c25cc5b91307f9e1fc7a3be46afbeb9ab51c54ec53a7",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "c87b1fac80a7a42e1ef1128b488957c3b61b4022ceac27781b51e4544852a610",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "4fae68b8bf9c93770996678d4da308273fd6add929b42fd81fa07bfbbb3865d5",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "c8c131a0d9c81190bb1c2571d6185a0b8e828ce57be6b3b50600326b5f187e0b",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "f2913b146e394febcb18bc842d8dd21340bf89c0327fa3c1e6c1417303669f1b",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "faa33b5ba94215dbcd7b1793eabb3ff9c2e8ef8c91c39812b756a7e7e7fb3912",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "9a984823742855c7a722596773a245e65cf9266f5504ec5e7f9759ffebae7fc6",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "ec1f0dd4d6fe4147bfc6379b190128ae57a2cf9814e1d68bc49be1e98e9316c1",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "1384d071c894f3dc466463972e6724ac4967adac0a7c921a580e59468e64bd0a",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "393c4dfda54bdcf7562b8bf68b2329fc67e373f13be66cd9c73aba4e95eaf5e7",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "650026f060378b07ec9e191e7c609cad9f86bfed7fc5780d43af244a670ef8b1",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "d3adf540d2cadd08d167d577700415d0a7519ecd3e4a03d9f235b849d6dd3663",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "99c2ec5574e39475a2d9e0d61d71a0970d4f376b2a719a22bd0a48dbba74b5a7",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "c6dc91dfc310d8471e287cf44873c901f4e06af7b26081180c9f722b6ac9f468",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "dcd9ee4e3e8ab0dd010f5fe08f6d81ca28301f639bc64fd9088c9866596d1092",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "5b7473e434242d97a82cb556272e8ac38401753c3255feef4f531f73d17ea7af",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "9382a3a4b8a276c6b7aca4359030489e613f0f359edd4f780e650ab6a0d9345a",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "8ff2152c31bdb8264003195675e47de3b4c8a8d3a8e51dd27fa6ac1e26fffe6e",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "3f150a7b36b4fb4207ba26bf07b47b59abb336a21e5588b7bcc49ed2b98725fe",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "d258e1d501d81217400ed1169342e7580211ff2383bcdeed3e59f4be7c3f7893",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "ffdd80922dc9a1a62b0c070e776a7abbb4f2871d897ba37731511e16e7be5d47",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "f0780f076a886450508e3957b06d720d5c2bc807f31173abf4c627eb34f3f5b1",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "ec2edf418c96ec81b7a349a26dbd1c9843e6d32265e092d32da6e4834f1321ad",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "2828876a1534e5625551985570212e1fd6e8a56e2dcb780857f83fccdef35fae",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "240d59371c7faaeea6f81efccd9043a4d3ef2d68d35008f8a5e763f243f5f870",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "8040b8898f2b137e0657e2e7aec67c7cb59f4adc50127541bcbaed55b4dfcbe9",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "0873539d15ec299fbe62290055ccee88b55a984e2a0c5368ef09402d5e6d7a9d",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "536f55fb67ba187a3d3a32b42b8d4658a0f320de44cf5aacd1127e5543353803",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "23fcb07649b1657d32a31e44d91916cc5d14a2b8e463d05264bbf184123f8e2a",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "00957ab4d83bbf0cfd648664ecbe79cfee02ca3e67808f4c95d60cb460162e0d",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "f24292a915989550ed4f9bb76c3ce28f0dc203217f8b255aeb93b77a07f50688",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "82dad4df2f168391e93a7e5e29303499723dacfec080da618c10051d15680681",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "33a704962810eb31794e1947ebe24efdaa37316811230ca20a89368d56065e51",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "55ac06ec1b186ba2429193446a128df74fc2240c8ebc5629e40a158ed10fd705",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "ed692344fdfab9f81fbbe9a7e3b35fe8211b8611bb1d452acacb22a4b576b47b",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "d64c1085f8ff9283e3a4589126d39fe29f713e6210daaf9239a713e401fac897",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "9d1632ebe8f804cfd57ea542a04aaaa17c26c67ddeb86390efa781d58f3c39f8",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "b4b2fd78277af8ed92515498288f5964b829dc15f5ab0769e3965e739c44abec",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "e2d95b098f72e110ce3e120fc9b8b9314b783ca7e1b566d310eb276aeaab1255",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "828f81f0a2f13feb42669b4c59ac8a1f6e139233e2ffbb970dccc46c7eeeb00f",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "25bd93a2b24804795637c195d5074c17d264f363b5555ac158668630aa9f02b1",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "d6a02d2ae5f3945b419c1a0059c7658d4841223cb98c53b4bf0b3a0f5449de6e",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "bd550c31eddaaa1840df6924ba2e3857451c9f0749162ea5342f4f1398cc59b8",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "05b3c4602bf7186c8c695bd59974f3deeaa3a8a1ee491f2bff8c96bfe2c75b9f",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "83b85c2d478eb46743eccf32b1712a79d727f0b5b6514c806e3eab97c781ffd7",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "537ae6eb925f8d82aecc429e135075e06791798cc7d1a50c991763068f7dcf83",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "0f830f2fcdb615be0c5185ef8b461e1f30111c265c4f22f776848c9efe35a17e",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "d6c034443c7fab9329d6bc79b00de91c647d6d5bb1f7abe76e5b3f7e3d4bd98c",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "d483524b4a4cb96d459e54e705e8d4e584fc97edbf908fab999635a81ef4c91c",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "6307949a3297501ec6cf9f2401cff3419bf6b100a1e57c9a689314836b4f7a79",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "4d8568e80a7bf7cfbd95cd430e02d14440c2d2a010213835b53f1642c52e0d32",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "8f4948cb5a2fa72aae1bbcd0dfc576657d736729f4c624efd960266f9030db7c",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "1bcba3edccadc56d71c11280da96e1b95b15c96d75b5061a53b5a520e5a95767",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "a3bdf402b6fc6799e689b3e546ec9948adff2e2f9461f9a3731775b143df0f99",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "036c60fd4ec1fff5553cc2c8c21b33116e0d741191377649dc7e0cdfc9d4a401",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "19da7ff4daf16e94bfab2ae74e11d17888cea3b6459cb2354df52e608d1df65a",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "20fa52b8f68d4f67ad918a1116802c7de2eb210c2d6d72d5a4c4f9c9806e1ecf",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "030e8eedf63827618125b5efc3ee0cb9a5e5fde1a8102c4b693e0a2aebb2d5de",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "0a2646481b35458bb4f1cfb60ca9592a1034f63be156a02ae397bf51bd7bd4c8",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "340f5986f086c5c8e39b62d31193c8145804841259ecaed0c52a063e022f87f0",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "053825531b13e29f108875e37769c08cdd6d17d940a38326fbc154bb2448ae82",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "f4e97a6807d2c485ab980e934d041956de649d59485ba7696bc14bbfd61d9098",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "74f073ebef8bb8f1156dd7ad55ce1a9df1b4afb5e311ecd3c30d190922fe3b07",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "8c9ce78f346c86c0cfeb24b51325f1f0673d701734df95a279551150b5aac181",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "7e804b6a992c9ac793cba175528ca012a054e3ec8d1a21c05ad589d337039c00",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "c96e4bc6737b0ecaf81c466f3ca2679a2bd0521651c4917f52654e6d6e68e4c7",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "4eea1d205e133d746623778e6b5879fa7c0795ac1c7886efcca3d5da3c16295b",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "2198547f3450ee81a6a8ba91bb3d125ebdc3e922be3bbefea6885f048029dba0",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "6b3b0e535377f7407aa0aa5add3644ddef9d86688b880c0fe452310cd7c6a7dc",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "edec866622b4079907e91aad8462959bed3a48fcfd580a715d0b1d9a81a02eae",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "769b6f8a509afbf5fc1b1540a670c44d4cea8356f7ffdb1dc23df3e25ca08328",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "a3a9f17b4b3c915f1a09408f97d40162d5d1d6f296d19637062c5d49dc499883",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "249777a9f0cd05a20f13703ed68157ea64250b042e461d416473767cb32efcdf",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "600b66841373c9ed47f4375d87a00a86c22d86483f0202fdf5711ec2fbfa563b",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "a6a6aaba4da95a760d98ea5b12c95472c6dea4cc2dc8be81f6c19e38b78692cf",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "0200a2d59e0a0f7c06ef6786d705afe2c1964816c85aa2f58d34f4cd66a23725",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "4649bf2a08619d31ae6e6b5fb36c7ae245c4eb643037067bb889f463b726423c",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "830ab4f51a4e619b60a314e7941172feeb094a605bfbfc53336490b1c0a1de33",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "90e2dda8e279d7de22b87b4e5e970e76f104d7fb55ad442281a2be984f63bd55",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "c7e210f139fca3229a8fd6744e93ec61bf6cf2bb3d612a309c659978ed92a6fe",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "c1015980f744aba1086f3313492d065391d466c5a10497635debc2f643c03d05",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "383cd40118df7eb6ff45d46a680125b6146934f088009d7185f477a7bc785b9f",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "0ab2928fe601df9e0bb33d99e62a08aa4d8d7f08b8874195fbea0ab979eaf08a",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "ddd5484d84f95bf0c40cbd2dea121c13c808af808b5fc0a21232e2641b3131b2"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Käsi painaa mustan laskimen näppäimiä pöydällä, vieressä papereita, joissa on punamustia kaavioita ja avoin muistikirja.",
+      "alt": "Arkistokuva: Valkoinen kippiauto keltaisella lavalla ajaa pölyisellä, kaivetulla alueella, taustalla näkyy metsää.",
       "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Talous",
+        "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Katutasoinen päiväkuva todellisen Kuopion kaupungintalon julkisivusta ja rakennusta ympäröivästä kaupunkiympäristöstä.",
+            "depictable_scene": "Todellinen lisensoitu valokuva Rivieranraitin keskeneräisestä katutyömaasta Vantaalla, jossa näkyvät louhittu kallioleikkaus ja kuljetusta odottava louhekasa.",
             "must_avoid": [
-              "fictionalized façade",
-              "unrelated municipal building"
+              "completed tram line",
+              "active blasting"
             ],
             "must_show": [
-              "actual Kuopio City Hall exterior",
-              "urban surroundings"
+              "excavated rock face",
+              "road construction site"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "Kuopion kaupungintalo",
-              "Kuopio City Hall exterior",
-              "Kuopion kaupungintalo julkisivu",
-              "Kuopio kaupungintalo valokuva"
+              "Rivieranraitti louhintatyöt",
+              "Rivieranraitti työmaa Vantaa",
+              "Vantaan ratikka Rivieranraitti",
+              "excavated rock roadworks"
             ],
-            "subject": "Kuopion kaupungin taloushallinto kaupungintalolla"
+            "subject": "Rivieranraitin louhinta"
           },
           {
-            "depictable_scene": "Lähikuva pöydälle avatusta tunnuksettomasta talousraportista, jonka sivuilla näkyy abstrakteja taulukoita ja pylväskaavioita ilman luettavaa tekstiä tai numeroita, vieressä tavallinen laskin.",
+            "depictable_scene": "Nimetön kaupunkirakentamisen työmaa ilman ihmisiä, jossa tunnukseton kippiauto kuljettaa louhetta maaleikatulla tiepohjalla.",
             "must_avoid": [
-              "readable invented figures",
-              "logos or municipal emblems"
+              "people or body parts",
+              "readable text or logos",
+              "tram tracks"
             ],
             "must_show": [
-              "unbranded financial report",
-              "calculator"
+              "unbranded dump truck",
+              "excavated rock"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "Kuopio kuukausiraportti 2026",
-              "municipal finance report calculator",
-              "Kuopion talousennuste 2026",
-              "budget report papers calculator"
+              "Rivieranraitti louheen kuljetus",
+              "louheen kuljetus työmaa",
+              "maaleikkaus katutyömaa",
+              "dump truck excavated rock"
             ],
-            "subject": "Kuopion tammi–elokuun kuukausiraportin talousennuste"
+            "subject": "louheen kuljetuksia ja maaleikkaustöitä"
           },
           {
-            "depictable_scene": "Pöydällä on geneerisen pohjoismaisen sosiaali- ja terveyspalvelurakennuksen pienoismalli ja sen vieressä yksi metallinen avain; mallissa ei ole nimiä, kylttejä tai tunnuksia.",
+            "depictable_scene": "Nimetön avoin työmaakaivanto ilman ihmisiä, jossa rinnakkain asetetut kaapelisuojaputket lepäävät tasaisella sorapedillä.",
             "must_avoid": [
-              "identifiable real property",
-              "logos or readable signs"
+              "people or body parts",
+              "readable text or logos",
+              "completed tram tracks"
             ],
             "must_show": [
-              "generic healthcare building model",
-              "single metal key"
+              "cable conduit pipes",
+              "open utility trench"
             ],
             "rank": 3,
             "safe_to_generate": true,
             "search_queries": [
-              "Kuopio sote-kiinteistöt",
-              "healthcare building model key",
-              "Kuopion sote-kiinteistöjen omistusjärjestely",
-              "miniature clinic metal key"
+              "Rivieranraitti kaapelisuojaputket",
+              "kaapelisuojaputket kaivanto",
+              "kaapeliputkien asennus työmaa",
+              "cable conduit trench"
             ],
-            "subject": "sote-kiinteistöjen omistusjärjestelyt"
+            "subject": "kaapelisuojaputkien asentaminen"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by RDNE Stock project on Pexels",
-      "depicted": "The image shows a close-up of a person's dark-skinned hand operating a black calculator. The hand is positioned over the calculator, with a finger pressing the equals sign button. The calculator has a digital display showing '256' and numerous black buttons with white numbers and symbols. To the left of the calculator, an open spiral-bound notebook with lined pages is visible. Some handwritten numbers and calculations in red ink are present on the notebook page. Below the calculator and notebook",
+      "credit": "Photo by Just a Dream Pictures on Pexels",
+      "depicted": "A white dump truck with a yellow bed is driving from left to right across a dirt field, kicking up a large cloud of dust behind it. The truck appears to be moving at a moderate speed. The bed of the truck contains what looks like rocks or debris. In the background, a dense line of green trees forms a horizon under a light, overcast sky. There is no readable text or identifiable people in the image.",
       "generated": false,
       "hotlink": false,
       "license": "Pexels License",
       "license_evidence": {
-        "image_path": "/photos/5915236/pexels-photo-5915236.jpeg",
+        "image_path": "/photos/14821922/pexels-photo-14821922.jpeg",
         "license": "Pexels License",
         "license_code": "Pexels",
         "license_url": "https://www.pexels.com/license/",
-        "photo_id": "5915236",
-        "photo_url": "https://www.pexels.com/photo/person-using-black-desk-calculator-5915236/",
-        "photographer": "RDNE Stock project",
-        "photographer_url": "https://www.pexels.com/@rdne",
-        "response_sha256": "19209bfd99b1ea0cd204cf0b08700f8bd551a4eb760cf639499a235fd9f66667",
-        "retrieved_at": "2026-09-29T15:18:06.350548+00:00",
+        "photo_id": "14821922",
+        "photo_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
+        "photographer": "Just a Dream Pictures",
+        "photographer_url": "https://www.pexels.com/@just-a-dream-pictures-393935092",
+        "response_sha256": "a7c96cbfd0acd0f732934a9ef32617733bfb1d273383a1c07c96f84e61f75b90",
+        "retrieved_at": "2026-09-29T18:13:49.142438+00:00",
         "transport": "jina_reader",
         "version": 1
       },
       "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037.jpg",
+      "local_path": "media/550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a.jpg",
       "pixel_review": {
-        "alt_fi": "Käsi painaa mustan laskimen näppäimiä pöydällä, vieressä papereita, joissa on punamustia kaavioita ja avoin muistikirja.",
+        "alt_fi": "Valkoinen kippiauto keltaisella lavalla ajaa pölyisellä, kaivetulla alueella, taustalla näkyy metsää.",
         "approved": true,
-        "article_text_sha256": "1e4b7c8e403656c65257c10e425cdfc672fd765ceb44718756d89f9e2b789ea7",
-        "concept_sha256": "24fff91659c5093e5e3cbf8df5b49a341c1e1cd344b8a5d9ac74efecbdb58cf2",
-        "description": "A person's hand operates a black calculator on a desk, next to papers displaying various red and black charts and graphs, and an open notebook with handwritten notes.",
+        "article_text_sha256": "ac62bfae0cfcd593d6886a5be3c0a871bf9fc3f3e93aaff552b74a607d5d2c99",
+        "concept_sha256": "e41892d1b3ecbea02d63b89f58d4aedee6e186990fc312ec11f343a9c4040b68",
+        "description": "A white dump truck with a yellow bed drives across a dusty, excavated area with trees in the background. The truck is kicking up a significant amount of dust.",
         "fit_score": 9,
-        "image_sha256": "e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037",
+        "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
-        "no_people": false,
-        "reason": "The image clearly shows a calculator and papers with financial-looking charts, which aligns with the concept of an unbranded financial report and a calculator. The charts are abstract and do not contain readable text or numbers, avoiding the 'must_avoid' criteria.",
-        "reviewed_at": "2026-09-29T15:18:08.297318+00:00"
+        "no_people": true,
+        "reason": "The image clearly shows an unbranded dump truck carrying excavated material (likely rock, given the article context of 'louheen kuljetuksia') on a dusty, excavated site, which directly illustrates the article's subject of 'louheen kuljetuksia ja maaleikkaustöitä'. There are no people, readable text, logos, or tram tracks visible, aligning with the 'must_avoid' criteria.",
+        "reviewed_at": "2026-09-29T18:13:52.158339+00:00",
+        "text_audit": {
+          "examples": [],
+          "readable_text_present": false
+        }
       },
       "pixels": {
-        "height": 627,
+        "height": 623,
         "mode": "RGB",
-        "variance": 13367.6,
+        "variance": 11793.7,
         "width": 940
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "A person's hand operates a black calculator on a desk, next to papers displaying various red and black charts and graphs, and an open notebook with handwritten notes.",
+        "evidence": "A white dump truck with a yellow bed drives across a dusty, excavated area with trees in the background. The truck is kicking up a significant amount of dust.",
         "matched": [
-          "calculator"
+          "dump",
+          "excavated",
+          "truck"
         ],
         "method": "vision",
         "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
       "selection_evidence": {
-        "article_text_sha256": "1e4b7c8e403656c65257c10e425cdfc672fd765ceb44718756d89f9e2b789ea7",
-        "decision_sha256": "cc32cdc245b1c6e9e811c334a067100c60b57c98e05f66a722ed79f7196df300",
+        "article_text_sha256": "ac62bfae0cfcd593d6886a5be3c0a871bf9fc3f3e93aaff552b74a607d5d2c99",
+        "decision_sha256": "f6dbb3e5232a613ca45bfd5dc9f0f2bd7fd2b93bfabc2a5638aafa764e3f3fce",
         "minimum_real_fit": 8,
         "searches": [
           {
@@ -1265,31 +1284,49 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Kuopion kaupungintalo",
-              "Kuopio City Hall exterior",
-              "Kuopion kaupungintalo julkisivu"
+              "Rivieranraitti louhintatyöt",
+              "Rivieranraitti työmaa Vantaa",
+              "Vantaan ratikka Rivieranraitti"
             ]
           },
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "941de5c16ff921facb932ec7b45deec623da549becdd60b3f769fc51dff55a23",
+                "license": "Pexels License",
+                "reason": "The image shows a construction site with buildings and roads, but it does not clearly depict an excavated rock face or a road construction site that specifically relates to rock excavation and transport as described in the article. While there are areas of disturbed earth, there is no clear rock face or large pile of excavated rock (louhekasa) that",
+                "source_url": "https://www.pexels.com/photo/aerial-view-of-swedish-residential-development-site-36955202/"
+              }
+            ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Kuopion kaupungintalo",
-              "Kuopio City Hall exterior",
-              "Kuopion kaupungintalo julkisivu"
+              "Rivieranraitti louhintatyöt",
+              "Rivieranraitti työmaa Vantaa",
+              "Vantaan ratikka Rivieranraitti"
             ]
           },
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "ddff690e0000bf99f2bccb35827c6c4e3bd0f49e1f28b163f4073b8cf12a70a8",
+                "license": "Unsplash License",
+                "reason": "The article discusses excavation work for a road construction site related to a tram line. The image shows a natural rock formation and a house, not an excavated rock face or a road construction site. Therefore, it does not depict the concrete subject of the article or the selected concept. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/man-in-black-t-shirt-and-blue-denim-jeans-sitting-on-brown-rock-during-daytime-0fSKV4NcBkM?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "Kuopion kaupungintalo",
-              "Kuopio City Hall exterior",
-              "Kuopion kaupungintalo julkisivu"
+              "Rivieranraitti louhintatyöt",
+              "Rivieranraitti työmaa Vantaa",
+              "Vantaan ratikka Rivieranraitti"
             ]
           },
           {
@@ -1298,9 +1335,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "Kuopion kaupungintalo",
-              "Kuopio City Hall exterior",
-              "Kuopion kaupungintalo julkisivu"
+              "Rivieranraitti louhintatyöt",
+              "Rivieranraitti työmaa Vantaa",
+              "Vantaan ratikka Rivieranraitti"
             ]
           },
           {
@@ -1318,29 +1355,45 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Kuopio kuukausiraportti 2026",
-              "municipal finance report calculator",
-              "Kuopion talousennuste 2026"
+              "Rivieranraitti louheen kuljetus",
+              "louheen kuljetus työmaa",
+              "maaleikkaus katutyömaa"
             ]
           },
           {
             "candidates": [
               {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "213aa9300d127a9bc58df93264ba21b922bfdd1e19a39243c36dad020c15e54c",
+                "license": "Pexels License",
+                "reason": "The article discusses excavation and earth-cutting work for a tram connection in Vantaa, involving dump trucks and excavated rock. The image shows a coastal road with a truck, but it is not a dump truck, nor is there any visible excavation work or excavated rock. The scene does not depict a construction site or the specific activities mentioned in ",
+                "source_url": "https://www.pexels.com/photo/scenic-coastal-road-at-sunset-with-ocean-view-32821932/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "179f85937f2448a1ab23bd976219f93c46377c55588b0f644f9a6b5f0155c95c",
+                "license": "Pexels License",
+                "reason": "The article discusses excavation and earth-cutting work for a future tram connection in Vantaa, involving dump trucks and excavated rock. The image shows tugboats, a cruise ship, and a city harbor, which is completely unrelated to the article's subject matter of urban construction and earthworks. The selected concept specifically requires a dump tr",
+                "source_url": "https://www.pexels.com/photo/tugboats-docked-near-a-cruise-ship-10231086/"
+              },
+              {
                 "approved": true,
                 "fit_score": 9,
-                "image_sha256": "e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037",
+                "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
                 "license": "Pexels License",
-                "reason": "The image clearly shows a calculator and papers with financial-looking charts, which aligns with the concept of an unbranded financial report and a calculator. The charts are abstract and do not contain readable text or numbers, avoiding the 'must_avoid' criteria.",
-                "source_url": "https://www.pexels.com/photo/person-using-black-desk-calculator-5915236/"
+                "reason": "The image clearly shows an unbranded dump truck carrying excavated material (likely rock, given the article context of 'louheen kuljetuksia') on a dusty, excavated site, which directly illustrates the article's subject of 'louheen kuljetuksia ja maaleikkaustöitä'. There are no people, readable text, logos, or tram tracks visible, aligning with the ",
+                "source_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/"
               }
             ],
             "concept_rank": 2,
             "outcome": "accepted",
             "provider": "pexels",
             "queries": [
-              "Kuopio kuukausiraportti 2026",
-              "municipal finance report calculator",
-              "Kuopion talousennuste 2026"
+              "Rivieranraitti louheen kuljetus",
+              "louheen kuljetus työmaa",
+              "maaleikkaus katutyömaa"
             ]
           },
           {
@@ -1358,97 +1411,64 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Kuopio sote-kiinteistöt",
-              "healthcare building model key",
-              "Kuopion sote-kiinteistöjen omistusjärjestely"
+              "Rivieranraitti kaapelisuojaputket",
+              "kaapelisuojaputket kaivanto",
+              "kaapeliputkien asennus työmaa"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
+                "fit_score": 3,
+                "image_sha256": "09cc888eafbcdca1e00547fe90b159cd2a914d6bba7d14a181a048ec52410edd",
+                "license": "Pexels License",
+                "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The selected concept specifically requires 'cable conduit pipes' and an 'open utility trench'. The image shows pipes, but they are clearly attached to a vertical wall or facade, not lying in an open trench. Therefore, it does not de",
+                "source_url": "https://www.pexels.com/photo/wall-with-pipes-23414767/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "54646f042c0293c5dd026cb7d020e5f7cec3dd3ba5e49f08f797ffd11f1ddf1f",
+                "license": "Pexels License",
+                "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The image shows a person installing pipes, but these are clearly visible as water/heating pipes (copper and white plastic pipes with clamps) on a wall, not cable conduit pipes in an open trench. The image also contains a person, whi",
+                "source_url": "https://www.pexels.com/photo/skilled-worker-adjusting-pipes-with-precision-39885422/"
+              },
+              {
+                "approved": false,
                 "fit_score": 6,
-                "image_sha256": "3c3f9c5e55a3dc4b4da122a2daf597e3fabbe4eeaa1e0fb221108bceb2bdb8d6",
+                "image_sha256": "8e76d715d45886fbaf05c9530be7ef943a9ec974ec28adad4de0881faa2916ef",
                 "license": "Pexels License",
-                "reason": "The image shows a generic house model and a key, which broadly relates to property and ownership. However, the concept specifically requires a 'generic healthcare building model' and the visible model is clearly a generic house, not a healthcare building. Therefore, it does not meet the 'must_show' criteria for the specific concept. One or more req",
-                "source_url": "https://www.pexels.com/photo/real-estate-business-finance-background-template-cross-section-building-27920235/"
+                "reason": "The article discusses the installation of cable conduit pipes as part of a tram connection project. The image shows cable conduit pipes, which aligns with the 'cable conduit pipes' must_show element. However, the concept also requires an 'open utility trench', which is not visible in the image. The image is a close-up of pipes only, without any con",
+                "source_url": "https://www.pexels.com/photo/close-up-photo-of-red-pipes-8414059/"
               },
               {
                 "approved": false,
-                "fit_score": 0,
-                "image_sha256": "f88400e51b708ab36f767b0fe45271bbfa1b0638236fb62b11abc5c512c1b785",
+                "fit_score": 3,
+                "image_sha256": "fd30eb81c7cbe4f48d8b6e2260be567c56dd8dc36300c8a39ff0e2644ac98265",
                 "license": "Pexels License",
-                "reason": "The article discusses financial forecasts and a one-time sales gain from social and healthcare property ownership arrangements. The selected concept describes a miniature model of a generic healthcare building with a single metal key. The actual pixels show a real, full-sized modern building, not a miniature model, and there is no key visible. Ther",
-                "source_url": "https://www.pexels.com/photo/sidewalk-under-victorian-heart-hospital-in-australia-17292192/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "936711dcfab48b1e3f0bcb34d3fe632537b7c9f435da019fa754f04b1940605a",
-                "license": "Pexels License",
-                "reason": "The article discusses financial forecasts and a one-time sales gain from social and healthcare property ownership arrangements in Kuopio. The selected concept specifies a miniature model of a generic Nordic social and healthcare building with a single metal key. The actual pixels show a real, identifiable large building complex, not a miniature mod",
-                "source_url": "https://www.pexels.com/photo/aerial-view-of-hospital-building-at-sunset-36078152/"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "b429fdde5ad5620667ffd5bb91a5dbd5fcaa4bdaa6760d6ab69164a9d2f4fd21",
-                "license": "Pexels License",
-                "reason": "The article discusses financial forecasts and property ownership arrangements in Kuopio. The selected concept specifies a miniature model of a generic healthcare building and a single metal key. The image shows a real building, not a miniature model, and there is no key visible. Therefore, it does not depict the concrete subject of the selected con",
-                "source_url": "https://www.pexels.com/photo/historic-brick-building-with-green-roof-under-blue-sky-39654601/"
+                "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The image shows large metal pipes, but they are clearly part of a hydroelectric power generation system, not cable conduits for a tramway. The pipes are also not in an open utility trench for a tramway project, but rather integrated",
+                "source_url": "https://www.pexels.com/photo/hydroelectric-power-pipes-in-rodberg-norway-31502428/"
               }
             ],
             "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Kuopio sote-kiinteistöt",
-              "healthcare building model key",
-              "Kuopion sote-kiinteistöjen omistusjärjestely"
+              "Rivieranraitti kaapelisuojaputket",
+              "kaapelisuojaputket kaivanto",
+              "kaapeliputkien asennus työmaa"
             ]
           },
           {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "8ea505cb2cf71e845b2307d32edb221ab2e0b9eb8b2abe0112c95ec40b7483bb",
-                "license": "Unsplash License",
-                "reason": "The image shows a generic building model, which partially fits the 'generic healthcare building model' must_show element. However, it completely lacks the 'single metal key' element, which is crucial for the selected concept. Therefore, it cannot be approved and the fit score is capped. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/brown-wooden-building-scale-model-panPsvU_y0Q?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "d4345ffcd39e0d0dff17aa0ea73db83feb98a5eec995694aeefbc68e0c4ac3f8",
-                "license": "Unsplash License",
-                "reason": "The image shows a generic building model, which aligns with the 'generic healthcare building model' must_show element. However, the 'single metal key' must_show element is entirely absent from the visible pixels. Therefore, the image cannot be approved for this concept. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/white-concrete-building-during-daytime-zj5cI6Ei4Lw?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "1e4e7a9d02d21f8bbfb43a981554f150cf5a979c7d6c839bd825ebfbc307152f",
-                "license": "Unsplash License",
-                "reason": "The image shows an architectural model of a city, which broadly relates to urban development and finances mentioned in the article. However, the selected concept specifically requires a generic healthcare building model and a single metal key. Neither of these elements is visible in the actual pixels. The model does not depict a healthcare building",
-                "source_url": "https://unsplash.com/photos/white-concrete-building-during-daytime-K3kjy0BcvO4?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "7a8321a4f5036f6ed799df9b6f772155f5abf687f1d8ec724d222c0f9eec8256",
-                "license": "Unsplash License",
-                "reason": "The image shows a miniature building model, which aligns with the 'building model' aspect of the concept. However, the building is clearly a 'Restaurant' as indicated by a visible sign, not a 'generic healthcare building model'. Furthermore, the concept explicitly requires a 'single metal key' to be present, which is entirely absent from the image.",
-                "source_url": "https://unsplash.com/photos/a-model-of-a-large-house-with-a-lot-of-trees-in-front-of-it-WK7Bj7w1Rgk?utm_source=uutistenlukija&utm_medium=referral"
-              }
-            ],
+            "candidates": [],
             "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "Kuopio sote-kiinteistöt",
-              "healthcare building model key",
-              "Kuopion sote-kiinteistöjen omistusjärjestely"
+              "Rivieranraitti kaapelisuojaputket",
+              "kaapelisuojaputket kaivanto",
+              "kaapeliputkien asennus työmaa"
             ]
           },
           {
@@ -1457,198 +1477,206 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "Kuopio sote-kiinteistöt",
-              "healthcare building model key",
-              "Kuopion sote-kiinteistöjen omistusjärjestely"
+              "Rivieranraitti kaapelisuojaputket",
+              "kaapelisuojaputket kaivanto",
+              "kaapeliputkien asennus työmaa"
             ]
           }
         ],
         "selected": {
           "concept_rank": 2,
           "fit_score": 9,
-          "image_sha256": "e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037",
+          "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
           "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037",
-      "source_url": "https://www.pexels.com/photo/person-using-black-desk-calculator-5915236/",
+      "sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
+      "source_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
       "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/5915236/pexels-photo-5915236.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "5915236",
-        "photo_url": "https://www.pexels.com/photo/person-using-black-desk-calculator-5915236/",
-        "photographer": "RDNE Stock project",
-        "photographer_url": "https://www.pexels.com/@rdne",
+        "image_url": "https://images.pexels.com/photos/14821922/pexels-photo-14821922.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "14821922",
+        "photo_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
+        "photographer": "Just a Dream Pictures",
+        "photographer_url": "https://www.pexels.com/@just-a-dream-pictures-393935092",
         "provider": "pexels",
-        "query": "municipal finance report calculator",
-        "retrieved_at": "2026-09-29T15:18:06Z"
+        "query": "louheen kuljetus työmaa",
+        "retrieved_at": "2026-09-29T18:13:49Z"
       },
-      "stock_provenance_sha256": "50a16dacae7b3cac492d3bc317aa0f40f305683e96c4df78818e996cbdb9e814",
-      "url": "https://uutistenlukija.fi/media/e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037.jpg"
+      "stock_provenance_sha256": "8edd9f5df7063571cead4f8bad17dc1e102f3bed5170dcbcb7a2d5dfc0fba9bc",
+      "url": "https://uutistenlukija.fi/media/550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "kuopio",
+      "provider": "vantaa",
       "related_sources": 0,
-      "source_fields_sha256": "d47e37606e4408c8d5fa707680b63ab7ab025db001795583635fe7e692eaf9c0",
-      "source_sha256": "6a77edd0fb03756d63d30873e10d0aa49f97351cb1a0b341ef719da0264fe077"
+      "source_fields_sha256": "fb42add52249714b4278e38f472e834bebf177ed586fe388f0465c9ab9257264",
+      "source_sha256": "79b69baed6a30b5c2d58718dfd31588410fd989fbc7877ea5d5ee6c8302a53cb"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-09-28T00:00:00+03:00",
-        "publisher": "Kuopion kaupunki",
+        "published_at": "2026-09-29T00:00:00+03:00",
+        "publisher": "Vantaan kaupunki",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Kuopion kaupungin avoimen datan käyttöehdot: maailmanlaajuinen, maksuton, peruuttamaton käyttöoikeus kopioida, levittää, muokata ja hyödyntää kaupallisesti ja ei-kaupallisesti; koskee myös tekstejä",
+          "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
           "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://www.kuopio.fi/app/uploads/2023/04/avoin-data-kayttoehdot-kuopion-kaupunki.pdf"
+          "url": "https://hri.fi/fi/kayttoehdot/"
         },
-        "text": "Kuopion kaupunginhallituksen päätöstiedote 28.9.2026\n28.09.2026\nPäätöksenteko\nUutiset\nKuukausiraportti tammi-elokuu 2026\nKuukausiraportti sisältää talouden toteuman ja henkilöstöraportoinnin 31.8. tilanteesta sekä tilinpäätösennusteen koko vuodelle.\nKaupungin talouden arvioidaan olevan vuoden 2026 tilinpäätöksessä 8,5 milj. euroa ylijäämäinen. Ylijäämälukuun sisältyy vuoden alussa toteutettujen nk. sote-kiinteistöjen omistusjärjestelyjen tuoma 9,0 miljoonan euron satunnainen myyntivoitto. Kun tilinpäätösennuste muutetaan vertailukelpoiseksi alkuperäiseen talousarvioon (-2,5 miljoonaa euroa alijäämää) nähden, se on -0,5 miljoonaa euroa alijäämäinen.\nYleisen taloustilanteen käänne luo odotusta, että loppuvuonna käänne näkyy jo kuntataloudessakin ja tilinpäätöksessä voidaan kertoa ennustetta paremmasta kaupungin talouden toteumasta.\nVerotulot ovat kehittymässä kesäkuussa muutetun talousarvion mukaisesti, yhteensä 313,6 milj. euron suuruisina. Yhteisöveron kertymä näyttää kuitenkin paranevan koko maan tasolla, kun yritykset ovat maksaneet enemmän kuukausittaisia ennakkoveroja. Kun työllisyystilanne on jatkunut heikkona ja asuntorakentamisessa ei näy elpymisen merkkejä, ei verotuloissakaan näy liikahdusta parempaan. Kunnallisveron kasvu syntyy käytännössä ainoastaan palkankorotuksien vaikutuksesta, ei veropohjan laajenemisesta.\nKaupungin rahoitustarpeen arvioidaan jäävän 70 milj. euroon, mikä merkitsee 20 milj. euroa talousarviossa suunniteltua pienempää velanottoa. Kaupungin pitkäaikaisten lainojen kokonaismäärä vähentyisi vuoden 2025 tilinpäätökseen verrattuna ja olisi vuoden 2026 lopussa 3975 euroa/asukas.\nKatso koko kuukausiraportti kokouslistan liitteessä: https://kuopio.oncloudos.com/cgi/DREQUEST.PHP?page=meetingitem&id=2026777-3\nKaupunginhallitukselle esitetään, että se merkitsee kuukausiraportin tiedoksi.\nKaupunginhallitus hyväksyi esityksen.\nWaltti Solutions Oy:n yhtiöjärjestyksen ja osakassopimuksen muuttaminen\nWaltti Solutions Oy on joukkoliikenteen toimivaltaisten viranomaisten omistama sidosyksikköyhtiö, joka tuottaa omistajilleen joukkoliikenteen lippu-, maksu- ja matkustajainformaatiopalveluita sekä niihin liittyviä asiantuntija- ja tukipalveluita. Kuopion kaupunki on yksi yhtiön 19 omistajasta 4,58 % omistusosuudella ja hankkii yhtiöltä joukkoliikenteen järjestämisessä tarvittavia palveluita sidosyksikköhankintoina.\nWaltti Solutions Oy:ssä on vuosien 2025–2026 oikeuskäytännön sekä erityisesti yhtiötä koskeneen markkinaoikeusratkaisun johdosta arvioitu omistajien määräysvallan toteutumista. Arvioinnissa on tunnistettu tarve vahvistaa osakkaiden tosiasiallista määräysvaltaa sekä päivittää yhtiön hallintorakennetta siten, että erityisalojen hankintalainsäädännön sidosyksikköedellytysten täyttyminen voidaan osoittaa nykyistä selkeämmin. Tätä varten yhtiö on valmistellut uuden yhtiöjärjestyksen, osakassopimuksen ja yhtiön hallintomallin.\nKeskeisenä tavoitteena on vahvistaa omistajien tosiasiallisen määräysvallan toteutumista ja siten turvata Waltti Solutions Oy:n asema erityisalojen hankintalain mukaisena sidosyksikkönä. Uusi hallintomalli perustuu siihen, että omistajat käyttävät vaikutusvaltaansa yhtiökokouksen lisäksi nimitystoimikunnan, hallituksen ja ohjausryhmien kautta.\nKaupunginhallitukselle esitetään, että se:\nhyväksyy Waltti Solutions Oy:n muutetun osakassopimuksen, johon voidaan tarvittaessa tehdä vähäisiä muutoksia kansliatoimenpitein\nvaltuuttaa hallintojohtajan allekirjoittamaan muutetun osakassopimuksen.\nKaupunginhallitus hyväksyi esityksen.\nEronpyyntö tarkastuslautakunnan varajäsenyydestä\nJessika Koivisto-Kajaan (vas.) on 8.9.2026 toimittanut eronpyynnön tarkastuslautakunnan varajäsenyydestä, jossa hän toteaa menettäneensä vaalikelpoisuuden tarkastuslautakunnan varajäsenyyteen aloittaessaan työsuhteen Kuopion kaupungilla.\nKuntalain mukaan vaalikelpoinen tarkastuslautakuntaan ei ole henkilö, joka on kunnan tai kunnan määräysvallassa olevan yhteisön tai säätiön palveluksessa taikka toimitusjohtajana tai sitä vastaavassa asemassa kunnan määräysvallassa olevassa yhteisössä tai säätiössä.\nKaupunginhallitukselle esitetään, että se ehdottaa kaupunginvaltuustolle, että se\ntoteaa Jessika Koivisto-Kajaanin menettäneen vaalikelpoisuuden tarkastuslautakuntaan\nnimeää tarkastuslautakuntaan uuden varajäsenen jäljellä olevaksi toimikaudeksi\nKaupunginhallitus hyväksyi esityksen.\nKaupunginvaltuuston päätösten 21.9.2026 täytäntöönpanot\nKaupunginhallitus toteaa, että kaupunginvaltuuston 21.9.2026 tekemät päätökset ovat syntyneet lainmukaisessa järjestyksessä ja valtuuston toimivallan puitteissa ja ehdottaa, että ne saataisiin välittömästi panna täytäntöön, mikäli kysymys ei ole pöydälle pannuista asioista, tai sellaisista asioista, joissa täytäntöönpano tekisi mahdollisen valituksen mitättömäksi sekä viimeksi mainittujen asioiden osalta sen jälkeen, kun ne ovat saavuttaneet lainvoiman.\nKaupunginhallitus hyväksyi esityksen.\n—\nKaupunginhallituksen kokouslista liitteineen on luettavissa kokonaisuudessaan osoitteessa: https://kuopio.oncloudos.com/cgi/DREQUEST.PHP?page=meeting&id=2026777\n—",
-        "title": "Kuopion kaupunginhallituksen päätöstiedote 28.9.2026",
-        "url": "https://www.kuopio.fi/2026/09/28/kuopion-kaupunginhallituksen-paatostiedote-28-9-2026/"
+        "text": "Ensi viikolla alueella jatketaan louheen kuljetuksia sekä maaleikkaustöitä. Näiden valmistuttua aloitetaan pohjavedensuojausten sekä kaapelisuojaputkien asennukset. Työt etenevät suunnitellusti, ja samalla otetaan jälleen yksi askel kohti tulevaa raitiotieyhteyttä.\nSuosittelemme sinulle myös\nVantaan ratikka\nErityistä melua aiheuttavat poraus- ja louhintatyöt alkavat Rivieranraitiolla\nAvainsanat\nRatikka\nRatikka Kuninkaala - Mellunmäki\n…\nShow all keywords",
+        "title": "Louhintatyöt valmistuvat Rivieranraitiolla",
+        "url": "https://www.vantaa.fi/fi/ajankohtaista/uutinen/louhintatyot-valmistuvat-rivieranraitiolla"
       }
     ],
-    "story_key": "url:https://www.kuopio.fi/2026/09/28/kuopion-kaupunginhallituksen-paatostiedote-28-9-2026/",
+    "story_key": "url:https://www.vantaa.fi/fi/ajankohtaista/uutinen/louhintatyot-valmistuvat-rivieranraitiolla",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-09-29T12:15:21.089764+00:00",
-        "sha256": "aa2474253e1b74dd3fc1a6342553e332e7bd9fe6ab36c901fcf449c09a6cbf98",
-        "text": "Kuopion kaupunki Konsernipalvelu Tietohallinto Käyttöehdot 4.12.2016 Kuopion kaupungin avoimen datan käyttöehdot 1. Yleistä Nämä käyttöehdot koskevat Kuopion kaupungin www-sivustoilla ja niihin liitettyjen palvelujen avoimesti jaettuja aineistojen (avoimen datan) käyttöä. Käyttäjällä tarkoitetaan henkilöä tai organisaatiota, joka ottaa tämän lisenssin (lisenssi jäljempänä myös \"käyttöoikeus\") alaisen aineiston käyttöönsä. Aineistojen tuottaja ja tekijänoikeuden tai tietokantasuojan haltija on Kuopion kaupunki, ellei aineiston, tiedon tai palvelun yhteydessä erikseen toisin ilmoiteta. Käyttöehdot koskevat palveluissa olevia paikkatietoaineistoja, taulukoita, tilastokuvioita, tekstejä sekä muuta tietoaineistoa. Kuopion kaupunki ei peri käyttöehtojen mukaisen aineiston käytöstä maksua. 2. Käyttöoikeuden ehdot Vastaanottamalla aineistoa käyttäjä hyväksyy olla olevat ehdot. Aineistoa käytettäessä on aineiston tai sitä sisältävän tai hyödyntävän palvelun yhteyteen liitettävä maininta alkuperäislähteestä ja aineistoversion ajankohta, esimerkiksi: [aineisto] © Kuopion kaupunki, [vuosiluku, päiväys] tai o o sisältää Kuopion kaupungin [aineiston nimi] aineistoa, [vuosiluku] 2.1 Käyttöoikeudet Tämä on Kuopion kaupungin myöntämä maailmanlaajuisen, maksuttoman, peruuttamattoman rinnakkaisen käyttöoikeuden myöntävä lisenssi, jolla edellä mainittua aineistoa voi vapaasti: · kopioida ja levittää · muokata ja hyödyntää kaupallisesti ja ei-kaupallisesti jatkolisensoimalla · yhdistellä muihin tuotteisiin ja · käyttää osana sovellusta tai palvelua. 2.2 Aineiston tuottajan velvollisuudet ja vastuut Aineisto on lisensoitu sellaisenaan eikä Kuopion kaupunki vastaa aineistossa mahdollisesti esiintyvistä virheistä eikä aineiston käytöstä aiheutuvista välittömistä tai välillisistä vahingoista. Kuopion kaupunki ei myönnä aineistolle tai siinä olevien tietojen oikeellisuudelle tai ajantasaisuudelle takuuta. Kuopion kaupunki ei takaa, että aineisto olisi jatkuvasti saatavilla ja Kuopion kaupunki voi lopettaa aineiston jakelun ennalta ilmoittamatta. 2.3 Käyttäjän velvollisuudet ja vastuut Käyttäjän on aineistoa tai siitä tehtyjä tuotteita käyttäessään ja edelleen luovuttaessaan · mainittava Kuopion kaupungin tekijän- tai muu oikeus ko. aineistoon · vaadittava nimeämiskäytännön noudattamista myöntäessään lisenssejä tuotteeseen tai · palveluun, jossa käytetään näiden ehtojen alaista aineistoa tai sen osaa Ilmoitettava onko aineisto esitetty/käytetty muuttamattomana/ kokonaisuudessaan/ käsiteltynä · poistettava maininta alkuperäislähteestä, mikäli Kuopion kaupunki sitä erikseen vaatii Käyttäjän ja Kuopion kaupungin välillä ei tämän lisenssin myötä synny yhteistyö- tai liikesuhdetta. Käyttäjä ei saa aineiston käytön yhteydessä ilmaista, että Kuopion kaupunki tukisi tai suosittelisi kyseistä aineiston käyttötapaa. 3. Sovellettava laki Tähän lisenssiin/käyttöoikeuteen sovelletaan Suomen lakia. 4. Muutokset tähän lisenssiin Kuopion kaupunki voi milloin tahansa muuttaa lisenssin ehtoja tai soveltaa aineistoon eri lisenssiä. Tämän lisenssin ehtoja sovelletaan kuitenkin edelleen niihin aineistoihin, jotka on otettu käyttöön tämän lisenssin voimassa ollessa. Lisätietoja: Jari Torvinen, tietohallintopäällikkö jari.torvinen(at)kuopio.fi",
-        "url": "https://www.kuopio.fi/app/uploads/2023/04/avoin-data-kayttoehdot-kuopion-kaupunki.pdf"
+        "retrieved_at": "2026-09-29T15:57:21.328556+00:00",
+        "sha256": "37e3e4988a099fc7921ed9f02a2f423c0474321466ca0495b6fcf7819b56a7ed",
+        "text": "Käyttöoikeus määritellyin ehdoin hyödynnettävissä. Datan käytön lisäksi Palvelussa on mahdollisuus keskusteluun.\nKäyttöoikeus\nPalvelu sisältää dataa useasta eri lähteestä: julkisyhteisöjen tuottamia datoja ja niiden metatietoja, Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja ja Palvelun ylläpitäjien tuottamia artikkeleja ja muita kirjoituksia. Pääsääntöisesti näihin kaikkiin on laaja käyttöoikeus Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Poikkeukset on kerrottu erikseen kunkin aineiston kohdalla.\nAvoin data\nPalvelussa olevien datojen (tietoaineistojen) omistus- ja immateriaalioikeudet kuuluvat kunkin datan tekijälle.\nPääsääntöisesti Palvelun käyttäjillä on laaja käyttöoikeus datoihin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Datoja saa vapaasti kopioida, levittää, näyttää ja esittää sekä käyttää datoja osana muuta teosta. Datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin.\nEhtona käytölle on, että datan tekijä (ylläpitäjä) on ilmoitettava. Datan tekijän pyynnöstä tämä viittaus on poistettava. Datan tekijä on kerrottu kunkin datan metadatassa.\nDatan tekijää ei saa ilmoittaa siten, että ilmoitus viittaisi datan tekijän tai Palvelun tukevan datan käyttäjää tai datan käyttötapaa.\nDatojen metatietojen yhteydessä on mainittu kyseisen datan käyttöoikeusehdot. Joissakin tapauksissa käyttöoikeusehdot voivat poiketa yllä mainitusta.\nKeskustelu\nPalvelun käyttäjät voivat keskusteluosiossa lisätä sivuille kirjoituksia ja kommentoida toisten käyttäjien kirjoituksia. Palvelun käyttäjä antaa kirjoituksiinsa ja kommentteihinsa vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nMikäli käyttäjä liittää kirjoitukseensa tai kommenttiinsa kuvia, tulee hänellä olla tekijänoikeudet kuvaan. Lisäksi hänellä tulee olla kuvassa esiintyvien henkilöiden lupa kuvan julkaisemiseen internetissä. Palvelun käyttäjä antaa kuviin vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nKeskustelun tulee olla hyvän tavan ja Suomen lainsäädännön mukaista. Käyttäjät ovat vastuussa lisäämistään kirjoituksista ja kommenteista.\nKaikenlainen mainonta keskustelussa on kielletty.\nPalvelun tarjoajat voivat tarvittaessa muokata kirjoituksia ja kommentteja sekä poistaa hyvän tavan tai lainsäädännön vastaisia tai muutoin sopimattomia kirjoituksia.\nMikäli käyttäjä havaitsee käyttöehtojen vastaisia kirjoituksia, pyydetään tästä ilmoittamaan ylläpidolle.\nToistuva käyttöehtojen rikkominen tai niiden vakava rikkominen voi johtaa väliaikaiseen tai pysyvään Palvelun käyttöoikeuden peruuttamiseen.\nSovellusgalleria\nSovellusgalleriassa esitellyt sovellukset eivät ole HRI:n tekemiä ja niiden tekijänoikeudet kuuluvat sovellusten tekijöille. Creative Commons 4.0 -lisenssi ei koske sovelluksia, eikä niitä ole lupa vapaasti kopioida, levittää, muokata tai yhdistellä, ellei erikseen sovelluksen kohdalla ole toisin mainittu tai sovelluksen tekijä muutoin ole tähän antanut lupaa.\nMuut palvelussa olevat kirjoitukset\nPalvelun tuottajien Palvelussa julkaisemien kirjoitusten, kuten artikkelien ja blogikirjoitusten omistus- ja tekijänoikeudet kuuluvat niiden kirjoittajille. Palvelun käyttäjillä on laaja käyttöoikeus näihin kirjoituksiin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nPalvelun ulkoasu, tekninen toteutus, tavaramerkit ja logot\nPalvelun teknisen toteutuksen lähdekoodit on saatavilla avoimesti GitHubista. Palvelun kopiointi sellaisenaan on kielletty. Palvelussa esiintyvien tavaramerkkien ja logojen tavaramerkkioikeudet kuuluvat niiden oikeudenhaltijoille. Mikäli tavaramerkkien ja logojen muu käyttö on sallittu, on tästä ja käytön ehdoista ilmoitettu ko. tavaramerkkien ja logojen kohdalla.\nTietosuoja\nhri.fi-palvelua ylläpitää Helsingin kaupunki. Kaupunki on sitoutunut suojaamaan verkkopalveluidensa käyttäjien yksityisyyttä Tietosuojalain (2018), EU:n tietosuoja-asetuksen (2016/679) sekä muun soveltuvan lainsäädännön mukaisesti.\nHelsingin kaupungin tietosuojasivut\nVastuuvapaus\nPalvelu sisältää sekä julkisyhteisöjen tuottamaa avointa dataa ja metadataa että Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja. Palvelun tarjoajat eivät vastaa Palvelussa olevien tietojen oikeellisuudesta. Palvelun käyttäjä käyttää Palvelussa olevaa avointa dataa omalla vastuullaan. Palvelun tarjoajat eivät vastaa mistään välittömistä tai välillisistä vahingoista, jotka aiheutuvat datan käytöstä. ",
+        "url": "https://hri.fi/fi/kayttoehdot/"
       }
     ]
   },
   "draft": {
-    "category": "Talous",
+    "category": "Kotimaa",
     "image": {
-      "alt": "Arkistokuva: Käsi painaa mustan laskimen näppäimiä pöydällä, vieressä papereita, joissa on punamustia kaavioita ja avoin muistikirja.",
+      "alt": "Arkistokuva: Valkoinen kippiauto keltaisella lavalla ajaa pölyisellä, kaivetulla alueella, taustalla näkyy metsää.",
       "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Talous",
+        "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Katutasoinen päiväkuva todellisen Kuopion kaupungintalon julkisivusta ja rakennusta ympäröivästä kaupunkiympäristöstä.",
+            "depictable_scene": "Todellinen lisensoitu valokuva Rivieranraitin keskeneräisestä katutyömaasta Vantaalla, jossa näkyvät louhittu kallioleikkaus ja kuljetusta odottava louhekasa.",
             "must_avoid": [
-              "fictionalized façade",
-              "unrelated municipal building"
+              "completed tram line",
+              "active blasting"
             ],
             "must_show": [
-              "actual Kuopio City Hall exterior",
-              "urban surroundings"
+              "excavated rock face",
+              "road construction site"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "Kuopion kaupungintalo",
-              "Kuopio City Hall exterior",
-              "Kuopion kaupungintalo julkisivu",
-              "Kuopio kaupungintalo valokuva"
+              "Rivieranraitti louhintatyöt",
+              "Rivieranraitti työmaa Vantaa",
+              "Vantaan ratikka Rivieranraitti",
+              "excavated rock roadworks"
             ],
-            "subject": "Kuopion kaupungin taloushallinto kaupungintalolla"
+            "subject": "Rivieranraitin louhinta"
           },
           {
-            "depictable_scene": "Lähikuva pöydälle avatusta tunnuksettomasta talousraportista, jonka sivuilla näkyy abstrakteja taulukoita ja pylväskaavioita ilman luettavaa tekstiä tai numeroita, vieressä tavallinen laskin.",
+            "depictable_scene": "Nimetön kaupunkirakentamisen työmaa ilman ihmisiä, jossa tunnukseton kippiauto kuljettaa louhetta maaleikatulla tiepohjalla.",
             "must_avoid": [
-              "readable invented figures",
-              "logos or municipal emblems"
+              "people or body parts",
+              "readable text or logos",
+              "tram tracks"
             ],
             "must_show": [
-              "unbranded financial report",
-              "calculator"
+              "unbranded dump truck",
+              "excavated rock"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "Kuopio kuukausiraportti 2026",
-              "municipal finance report calculator",
-              "Kuopion talousennuste 2026",
-              "budget report papers calculator"
+              "Rivieranraitti louheen kuljetus",
+              "louheen kuljetus työmaa",
+              "maaleikkaus katutyömaa",
+              "dump truck excavated rock"
             ],
-            "subject": "Kuopion tammi–elokuun kuukausiraportin talousennuste"
+            "subject": "louheen kuljetuksia ja maaleikkaustöitä"
           },
           {
-            "depictable_scene": "Pöydällä on geneerisen pohjoismaisen sosiaali- ja terveyspalvelurakennuksen pienoismalli ja sen vieressä yksi metallinen avain; mallissa ei ole nimiä, kylttejä tai tunnuksia.",
+            "depictable_scene": "Nimetön avoin työmaakaivanto ilman ihmisiä, jossa rinnakkain asetetut kaapelisuojaputket lepäävät tasaisella sorapedillä.",
             "must_avoid": [
-              "identifiable real property",
-              "logos or readable signs"
+              "people or body parts",
+              "readable text or logos",
+              "completed tram tracks"
             ],
             "must_show": [
-              "generic healthcare building model",
-              "single metal key"
+              "cable conduit pipes",
+              "open utility trench"
             ],
             "rank": 3,
             "safe_to_generate": true,
             "search_queries": [
-              "Kuopio sote-kiinteistöt",
-              "healthcare building model key",
-              "Kuopion sote-kiinteistöjen omistusjärjestely",
-              "miniature clinic metal key"
+              "Rivieranraitti kaapelisuojaputket",
+              "kaapelisuojaputket kaivanto",
+              "kaapeliputkien asennus työmaa",
+              "cable conduit trench"
             ],
-            "subject": "sote-kiinteistöjen omistusjärjestelyt"
+            "subject": "kaapelisuojaputkien asentaminen"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by RDNE Stock project on Pexels",
-      "depicted": "The image shows a close-up of a person's dark-skinned hand operating a black calculator. The hand is positioned over the calculator, with a finger pressing the equals sign button. The calculator has a digital display showing '256' and numerous black buttons with white numbers and symbols. To the left of the calculator, an open spiral-bound notebook with lined pages is visible. Some handwritten numbers and calculations in red ink are present on the notebook page. Below the calculator and notebook",
+      "credit": "Photo by Just a Dream Pictures on Pexels",
+      "depicted": "A white dump truck with a yellow bed is driving from left to right across a dirt field, kicking up a large cloud of dust behind it. The truck appears to be moving at a moderate speed. The bed of the truck contains what looks like rocks or debris. In the background, a dense line of green trees forms a horizon under a light, overcast sky. There is no readable text or identifiable people in the image.",
       "generated": false,
       "hotlink": false,
       "license": "Pexels License",
       "license_evidence": {
-        "image_path": "/photos/5915236/pexels-photo-5915236.jpeg",
+        "image_path": "/photos/14821922/pexels-photo-14821922.jpeg",
         "license": "Pexels License",
         "license_code": "Pexels",
         "license_url": "https://www.pexels.com/license/",
-        "photo_id": "5915236",
-        "photo_url": "https://www.pexels.com/photo/person-using-black-desk-calculator-5915236/",
-        "photographer": "RDNE Stock project",
-        "photographer_url": "https://www.pexels.com/@rdne",
-        "response_sha256": "19209bfd99b1ea0cd204cf0b08700f8bd551a4eb760cf639499a235fd9f66667",
-        "retrieved_at": "2026-09-29T15:18:06.350548+00:00",
+        "photo_id": "14821922",
+        "photo_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
+        "photographer": "Just a Dream Pictures",
+        "photographer_url": "https://www.pexels.com/@just-a-dream-pictures-393935092",
+        "response_sha256": "a7c96cbfd0acd0f732934a9ef32617733bfb1d273383a1c07c96f84e61f75b90",
+        "retrieved_at": "2026-09-29T18:13:49.142438+00:00",
         "transport": "jina_reader",
         "version": 1
       },
       "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037.jpg",
+      "local_path": "media/550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a.jpg",
       "pixel_review": {
-        "alt_fi": "Käsi painaa mustan laskimen näppäimiä pöydällä, vieressä papereita, joissa on punamustia kaavioita ja avoin muistikirja.",
+        "alt_fi": "Valkoinen kippiauto keltaisella lavalla ajaa pölyisellä, kaivetulla alueella, taustalla näkyy metsää.",
         "approved": true,
-        "article_text_sha256": "1e4b7c8e403656c65257c10e425cdfc672fd765ceb44718756d89f9e2b789ea7",
-        "concept_sha256": "24fff91659c5093e5e3cbf8df5b49a341c1e1cd344b8a5d9ac74efecbdb58cf2",
-        "description": "A person's hand operates a black calculator on a desk, next to papers displaying various red and black charts and graphs, and an open notebook with handwritten notes.",
+        "article_text_sha256": "ac62bfae0cfcd593d6886a5be3c0a871bf9fc3f3e93aaff552b74a607d5d2c99",
+        "concept_sha256": "e41892d1b3ecbea02d63b89f58d4aedee6e186990fc312ec11f343a9c4040b68",
+        "description": "A white dump truck with a yellow bed drives across a dusty, excavated area with trees in the background. The truck is kicking up a significant amount of dust.",
         "fit_score": 9,
-        "image_sha256": "e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037",
+        "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
-        "no_people": false,
-        "reason": "The image clearly shows a calculator and papers with financial-looking charts, which aligns with the concept of an unbranded financial report and a calculator. The charts are abstract and do not contain readable text or numbers, avoiding the 'must_avoid' criteria.",
-        "reviewed_at": "2026-09-29T15:18:08.297318+00:00"
+        "no_people": true,
+        "reason": "The image clearly shows an unbranded dump truck carrying excavated material (likely rock, given the article context of 'louheen kuljetuksia') on a dusty, excavated site, which directly illustrates the article's subject of 'louheen kuljetuksia ja maaleikkaustöitä'. There are no people, readable text, logos, or tram tracks visible, aligning with the 'must_avoid' criteria.",
+        "reviewed_at": "2026-09-29T18:13:52.158339+00:00",
+        "text_audit": {
+          "examples": [],
+          "readable_text_present": false
+        }
       },
       "pixels": {
-        "height": 627,
+        "height": 623,
         "mode": "RGB",
-        "variance": 13367.6,
+        "variance": 11793.7,
         "width": 940
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "A person's hand operates a black calculator on a desk, next to papers displaying various red and black charts and graphs, and an open notebook with handwritten notes.",
+        "evidence": "A white dump truck with a yellow bed drives across a dusty, excavated area with trees in the background. The truck is kicking up a significant amount of dust.",
         "matched": [
-          "calculator"
+          "dump",
+          "excavated",
+          "truck"
         ],
         "method": "vision",
         "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
       "selection_evidence": {
-        "article_text_sha256": "1e4b7c8e403656c65257c10e425cdfc672fd765ceb44718756d89f9e2b789ea7",
-        "decision_sha256": "cc32cdc245b1c6e9e811c334a067100c60b57c98e05f66a722ed79f7196df300",
+        "article_text_sha256": "ac62bfae0cfcd593d6886a5be3c0a871bf9fc3f3e93aaff552b74a607d5d2c99",
+        "decision_sha256": "f6dbb3e5232a613ca45bfd5dc9f0f2bd7fd2b93bfabc2a5638aafa764e3f3fce",
         "minimum_real_fit": 8,
         "searches": [
           {
@@ -1666,31 +1694,49 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Kuopion kaupungintalo",
-              "Kuopio City Hall exterior",
-              "Kuopion kaupungintalo julkisivu"
+              "Rivieranraitti louhintatyöt",
+              "Rivieranraitti työmaa Vantaa",
+              "Vantaan ratikka Rivieranraitti"
             ]
           },
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "941de5c16ff921facb932ec7b45deec623da549becdd60b3f769fc51dff55a23",
+                "license": "Pexels License",
+                "reason": "The image shows a construction site with buildings and roads, but it does not clearly depict an excavated rock face or a road construction site that specifically relates to rock excavation and transport as described in the article. While there are areas of disturbed earth, there is no clear rock face or large pile of excavated rock (louhekasa) that",
+                "source_url": "https://www.pexels.com/photo/aerial-view-of-swedish-residential-development-site-36955202/"
+              }
+            ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Kuopion kaupungintalo",
-              "Kuopio City Hall exterior",
-              "Kuopion kaupungintalo julkisivu"
+              "Rivieranraitti louhintatyöt",
+              "Rivieranraitti työmaa Vantaa",
+              "Vantaan ratikka Rivieranraitti"
             ]
           },
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "ddff690e0000bf99f2bccb35827c6c4e3bd0f49e1f28b163f4073b8cf12a70a8",
+                "license": "Unsplash License",
+                "reason": "The article discusses excavation work for a road construction site related to a tram line. The image shows a natural rock formation and a house, not an excavated rock face or a road construction site. Therefore, it does not depict the concrete subject of the article or the selected concept. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/man-in-black-t-shirt-and-blue-denim-jeans-sitting-on-brown-rock-during-daytime-0fSKV4NcBkM?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "Kuopion kaupungintalo",
-              "Kuopio City Hall exterior",
-              "Kuopion kaupungintalo julkisivu"
+              "Rivieranraitti louhintatyöt",
+              "Rivieranraitti työmaa Vantaa",
+              "Vantaan ratikka Rivieranraitti"
             ]
           },
           {
@@ -1699,9 +1745,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "Kuopion kaupungintalo",
-              "Kuopio City Hall exterior",
-              "Kuopion kaupungintalo julkisivu"
+              "Rivieranraitti louhintatyöt",
+              "Rivieranraitti työmaa Vantaa",
+              "Vantaan ratikka Rivieranraitti"
             ]
           },
           {
@@ -1719,29 +1765,45 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Kuopio kuukausiraportti 2026",
-              "municipal finance report calculator",
-              "Kuopion talousennuste 2026"
+              "Rivieranraitti louheen kuljetus",
+              "louheen kuljetus työmaa",
+              "maaleikkaus katutyömaa"
             ]
           },
           {
             "candidates": [
               {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "213aa9300d127a9bc58df93264ba21b922bfdd1e19a39243c36dad020c15e54c",
+                "license": "Pexels License",
+                "reason": "The article discusses excavation and earth-cutting work for a tram connection in Vantaa, involving dump trucks and excavated rock. The image shows a coastal road with a truck, but it is not a dump truck, nor is there any visible excavation work or excavated rock. The scene does not depict a construction site or the specific activities mentioned in ",
+                "source_url": "https://www.pexels.com/photo/scenic-coastal-road-at-sunset-with-ocean-view-32821932/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "179f85937f2448a1ab23bd976219f93c46377c55588b0f644f9a6b5f0155c95c",
+                "license": "Pexels License",
+                "reason": "The article discusses excavation and earth-cutting work for a future tram connection in Vantaa, involving dump trucks and excavated rock. The image shows tugboats, a cruise ship, and a city harbor, which is completely unrelated to the article's subject matter of urban construction and earthworks. The selected concept specifically requires a dump tr",
+                "source_url": "https://www.pexels.com/photo/tugboats-docked-near-a-cruise-ship-10231086/"
+              },
+              {
                 "approved": true,
                 "fit_score": 9,
-                "image_sha256": "e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037",
+                "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
                 "license": "Pexels License",
-                "reason": "The image clearly shows a calculator and papers with financial-looking charts, which aligns with the concept of an unbranded financial report and a calculator. The charts are abstract and do not contain readable text or numbers, avoiding the 'must_avoid' criteria.",
-                "source_url": "https://www.pexels.com/photo/person-using-black-desk-calculator-5915236/"
+                "reason": "The image clearly shows an unbranded dump truck carrying excavated material (likely rock, given the article context of 'louheen kuljetuksia') on a dusty, excavated site, which directly illustrates the article's subject of 'louheen kuljetuksia ja maaleikkaustöitä'. There are no people, readable text, logos, or tram tracks visible, aligning with the ",
+                "source_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/"
               }
             ],
             "concept_rank": 2,
             "outcome": "accepted",
             "provider": "pexels",
             "queries": [
-              "Kuopio kuukausiraportti 2026",
-              "municipal finance report calculator",
-              "Kuopion talousennuste 2026"
+              "Rivieranraitti louheen kuljetus",
+              "louheen kuljetus työmaa",
+              "maaleikkaus katutyömaa"
             ]
           },
           {
@@ -1759,97 +1821,64 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Kuopio sote-kiinteistöt",
-              "healthcare building model key",
-              "Kuopion sote-kiinteistöjen omistusjärjestely"
+              "Rivieranraitti kaapelisuojaputket",
+              "kaapelisuojaputket kaivanto",
+              "kaapeliputkien asennus työmaa"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
+                "fit_score": 3,
+                "image_sha256": "09cc888eafbcdca1e00547fe90b159cd2a914d6bba7d14a181a048ec52410edd",
+                "license": "Pexels License",
+                "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The selected concept specifically requires 'cable conduit pipes' and an 'open utility trench'. The image shows pipes, but they are clearly attached to a vertical wall or facade, not lying in an open trench. Therefore, it does not de",
+                "source_url": "https://www.pexels.com/photo/wall-with-pipes-23414767/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "54646f042c0293c5dd026cb7d020e5f7cec3dd3ba5e49f08f797ffd11f1ddf1f",
+                "license": "Pexels License",
+                "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The image shows a person installing pipes, but these are clearly visible as water/heating pipes (copper and white plastic pipes with clamps) on a wall, not cable conduit pipes in an open trench. The image also contains a person, whi",
+                "source_url": "https://www.pexels.com/photo/skilled-worker-adjusting-pipes-with-precision-39885422/"
+              },
+              {
+                "approved": false,
                 "fit_score": 6,
-                "image_sha256": "3c3f9c5e55a3dc4b4da122a2daf597e3fabbe4eeaa1e0fb221108bceb2bdb8d6",
+                "image_sha256": "8e76d715d45886fbaf05c9530be7ef943a9ec974ec28adad4de0881faa2916ef",
                 "license": "Pexels License",
-                "reason": "The image shows a generic house model and a key, which broadly relates to property and ownership. However, the concept specifically requires a 'generic healthcare building model' and the visible model is clearly a generic house, not a healthcare building. Therefore, it does not meet the 'must_show' criteria for the specific concept. One or more req",
-                "source_url": "https://www.pexels.com/photo/real-estate-business-finance-background-template-cross-section-building-27920235/"
+                "reason": "The article discusses the installation of cable conduit pipes as part of a tram connection project. The image shows cable conduit pipes, which aligns with the 'cable conduit pipes' must_show element. However, the concept also requires an 'open utility trench', which is not visible in the image. The image is a close-up of pipes only, without any con",
+                "source_url": "https://www.pexels.com/photo/close-up-photo-of-red-pipes-8414059/"
               },
               {
                 "approved": false,
-                "fit_score": 0,
-                "image_sha256": "f88400e51b708ab36f767b0fe45271bbfa1b0638236fb62b11abc5c512c1b785",
+                "fit_score": 3,
+                "image_sha256": "fd30eb81c7cbe4f48d8b6e2260be567c56dd8dc36300c8a39ff0e2644ac98265",
                 "license": "Pexels License",
-                "reason": "The article discusses financial forecasts and a one-time sales gain from social and healthcare property ownership arrangements. The selected concept describes a miniature model of a generic healthcare building with a single metal key. The actual pixels show a real, full-sized modern building, not a miniature model, and there is no key visible. Ther",
-                "source_url": "https://www.pexels.com/photo/sidewalk-under-victorian-heart-hospital-in-australia-17292192/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "936711dcfab48b1e3f0bcb34d3fe632537b7c9f435da019fa754f04b1940605a",
-                "license": "Pexels License",
-                "reason": "The article discusses financial forecasts and a one-time sales gain from social and healthcare property ownership arrangements in Kuopio. The selected concept specifies a miniature model of a generic Nordic social and healthcare building with a single metal key. The actual pixels show a real, identifiable large building complex, not a miniature mod",
-                "source_url": "https://www.pexels.com/photo/aerial-view-of-hospital-building-at-sunset-36078152/"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "b429fdde5ad5620667ffd5bb91a5dbd5fcaa4bdaa6760d6ab69164a9d2f4fd21",
-                "license": "Pexels License",
-                "reason": "The article discusses financial forecasts and property ownership arrangements in Kuopio. The selected concept specifies a miniature model of a generic healthcare building and a single metal key. The image shows a real building, not a miniature model, and there is no key visible. Therefore, it does not depict the concrete subject of the selected con",
-                "source_url": "https://www.pexels.com/photo/historic-brick-building-with-green-roof-under-blue-sky-39654601/"
+                "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The image shows large metal pipes, but they are clearly part of a hydroelectric power generation system, not cable conduits for a tramway. The pipes are also not in an open utility trench for a tramway project, but rather integrated",
+                "source_url": "https://www.pexels.com/photo/hydroelectric-power-pipes-in-rodberg-norway-31502428/"
               }
             ],
             "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Kuopio sote-kiinteistöt",
-              "healthcare building model key",
-              "Kuopion sote-kiinteistöjen omistusjärjestely"
+              "Rivieranraitti kaapelisuojaputket",
+              "kaapelisuojaputket kaivanto",
+              "kaapeliputkien asennus työmaa"
             ]
           },
           {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "8ea505cb2cf71e845b2307d32edb221ab2e0b9eb8b2abe0112c95ec40b7483bb",
-                "license": "Unsplash License",
-                "reason": "The image shows a generic building model, which partially fits the 'generic healthcare building model' must_show element. However, it completely lacks the 'single metal key' element, which is crucial for the selected concept. Therefore, it cannot be approved and the fit score is capped. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/brown-wooden-building-scale-model-panPsvU_y0Q?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "d4345ffcd39e0d0dff17aa0ea73db83feb98a5eec995694aeefbc68e0c4ac3f8",
-                "license": "Unsplash License",
-                "reason": "The image shows a generic building model, which aligns with the 'generic healthcare building model' must_show element. However, the 'single metal key' must_show element is entirely absent from the visible pixels. Therefore, the image cannot be approved for this concept. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/white-concrete-building-during-daytime-zj5cI6Ei4Lw?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "1e4e7a9d02d21f8bbfb43a981554f150cf5a979c7d6c839bd825ebfbc307152f",
-                "license": "Unsplash License",
-                "reason": "The image shows an architectural model of a city, which broadly relates to urban development and finances mentioned in the article. However, the selected concept specifically requires a generic healthcare building model and a single metal key. Neither of these elements is visible in the actual pixels. The model does not depict a healthcare building",
-                "source_url": "https://unsplash.com/photos/white-concrete-building-during-daytime-K3kjy0BcvO4?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "7a8321a4f5036f6ed799df9b6f772155f5abf687f1d8ec724d222c0f9eec8256",
-                "license": "Unsplash License",
-                "reason": "The image shows a miniature building model, which aligns with the 'building model' aspect of the concept. However, the building is clearly a 'Restaurant' as indicated by a visible sign, not a 'generic healthcare building model'. Furthermore, the concept explicitly requires a 'single metal key' to be present, which is entirely absent from the image.",
-                "source_url": "https://unsplash.com/photos/a-model-of-a-large-house-with-a-lot-of-trees-in-front-of-it-WK7Bj7w1Rgk?utm_source=uutistenlukija&utm_medium=referral"
-              }
-            ],
+            "candidates": [],
             "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "Kuopio sote-kiinteistöt",
-              "healthcare building model key",
-              "Kuopion sote-kiinteistöjen omistusjärjestely"
+              "Rivieranraitti kaapelisuojaputket",
+              "kaapelisuojaputket kaivanto",
+              "kaapeliputkien asennus työmaa"
             ]
           },
           {
@@ -1858,75 +1887,63 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "Kuopio sote-kiinteistöt",
-              "healthcare building model key",
-              "Kuopion sote-kiinteistöjen omistusjärjestely"
+              "Rivieranraitti kaapelisuojaputket",
+              "kaapelisuojaputket kaivanto",
+              "kaapeliputkien asennus työmaa"
             ]
           }
         ],
         "selected": {
           "concept_rank": 2,
           "fit_score": 9,
-          "image_sha256": "e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037",
+          "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
           "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037",
-      "source_url": "https://www.pexels.com/photo/person-using-black-desk-calculator-5915236/",
+      "sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
+      "source_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
       "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/5915236/pexels-photo-5915236.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "5915236",
-        "photo_url": "https://www.pexels.com/photo/person-using-black-desk-calculator-5915236/",
-        "photographer": "RDNE Stock project",
-        "photographer_url": "https://www.pexels.com/@rdne",
+        "image_url": "https://images.pexels.com/photos/14821922/pexels-photo-14821922.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "14821922",
+        "photo_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
+        "photographer": "Just a Dream Pictures",
+        "photographer_url": "https://www.pexels.com/@just-a-dream-pictures-393935092",
         "provider": "pexels",
-        "query": "municipal finance report calculator",
-        "retrieved_at": "2026-09-29T15:18:06Z"
+        "query": "louheen kuljetus työmaa",
+        "retrieved_at": "2026-09-29T18:13:49Z"
       },
-      "stock_provenance_sha256": "50a16dacae7b3cac492d3bc317aa0f40f305683e96c4df78818e996cbdb9e814",
-      "url": "https://uutistenlukija.fi/media/e417210feefbf420ef471784f8ad303b84cc61ee65805000eb73424f77e62037.jpg"
+      "stock_provenance_sha256": "8edd9f5df7063571cead4f8bad17dc1e102f3bed5170dcbcb7a2d5dfc0fba9bc",
+      "url": "https://uutistenlukija.fi/media/550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kuopion kaupungin tammi–elokuun kuukausiraportin mukaan koko vuoden tilinpäätös olisi 8,5 miljoonaa euroa ylijäämäinen. Ennusteeseen sisältyy alkuvuoden sote-kiinteistöjen omistusjärjestelyistä saatu 9 miljoonan euron satunnainen myyntivoitto."
+        "text": "Vantaan kaupungin mukaan Rivieranraitin alueen louhintatyöt ovat valmistumassa. Alueella jatketaan ensi viikolla louheen kuljetuksia ja maaleikkaustöitä."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kun myyntivoiton vaikutus poistetaan vertailua varten, kaupunki arvioi tuloksen jäävän 0,5 miljoonaa euroa alijäämäiseksi. Alkuperäisessä talousarviossa alijäämäksi arvioitiin 2,5 miljoonaa euroa."
-      },
-      {
-        "source_ids": [
-          "A"
-        ],
-        "text": "Verotuloja arvioidaan kertyvän 313,6 miljoonaa euroa kesäkuussa muutetun talousarvion mukaisesti. Kaupungin mukaan heikko työllisyystilanne ja asuntorakentamisen vaisuus jarruttavat veropohjan vahvistumista, vaikka yhteisöveron kertymä näyttää paranevan valtakunnallisesti."
-      },
-      {
-        "source_ids": [
-          "A"
-        ],
-        "text": "Rahoitustarpeeksi ennustetaan 70 miljoonaa euroa, minkä arvioidaan merkitsevän 20 miljoonaa euroa suunniteltua pienempää velanottoa. Pitkäaikaista lainaa olisi vuoden lopussa kaupungin arvion mukaan 3 975 euroa asukasta kohden, ja lainojen kokonaismäärä vähenisi vuoden 2025 tilinpäätöksestä. Kaupunginhallitus merkitsi raportin tiedoksi 28. syyskuuta."
+        "text": "Näiden töiden jälkeen on määrä aloittaa pohjavedensuojausten ja kaapelisuojaputkien asentaminen. Kaupunki kertoo töiden etenevän suunnitellusti osana tulevaa raitiotieyhteyttä."
       }
     ],
-    "summary": "Kaupungin ennusteessa vuoden 2026 tulos on 8,5 miljoonaa euroa ylijäämäinen, mutta siihen sisältyy 9 miljoonan euron kertaluonteinen myyntivoitto.",
-    "title": "Kuopio ennustaa 8,5 miljoonan euron ylijäämää"
+    "summary": "Vantaan kaupungin mukaan alueella jatketaan ensi viikolla louheen kuljetuksia ja maaleikkausta ennen seuraavia rakennusvaiheita.",
+    "title": "Rivieranraitin louhinta valmistuu Vantaan mukaan"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "d0a6fed00a3a5ccec5229cf6e2f4ae2e7b52fbd8cf2f485bfdc8b36cb46e0637",
+    "draft_sha256": "397ab79c9cb2dbc2f2664991f537dd169d2f7eafd6ca65138a45cf3a89366aff",
     "reasons": [
-      "Otsikko on 45 merkkiä pitkä, alittaa 60 merkin tavoitteen ja kertoo tärkeimmän asian heti. Sana ”ennustaa” ilmaisee oikein, ettei 8,5 miljoonan euron ylijäämä ole vielä toteutunut tulos.",
-      "Lähde A tukee otsikon, ingressin ja kahden ensimmäisen kappaleen lukuja: vuoden 2026 ennuste on 8,5 miljoonaa euroa ylijäämäinen, siihen sisältyy 9,0 miljoonan euron sote-kiinteistöjärjestelyjen myyntivoitto, vertailukelpoinen tulos on 0,5 miljoonaa euroa alijäämäinen ja alkuperäisen talousarvion alijäämä 2,5 miljoonaa euroa.",
-      "Kolmannen kappaleen 313,6 miljoonan euron verotuloennuste sekä työllisyyttä, asuntorakentamista ja valtakunnallista yhteisöverokertymää koskevat väitteet vastaavat lähdettä A. Luonnos rajaa väitteet kaupungin arvioiksi eikä tee Kuopion tiedotteesta perusteettomia valtakunnallisia päätelmiä.",
-      "Neljännen kappaleen 70 miljoonan euron rahoitustarve, 20 miljoonaa euroa suunniteltua pienempi velanotto, 3 975 euroa asukasta kohti laskettu pitkäaikainen laina ja väheneminen vuoden 2025 tilinpäätökseen verrattuna ovat lähteen A mukaisia. Myös tieto kaupunginhallituksen hyväksymästä tiedoksi merkitsemisestä 28.9.2026 perustuu lähteeseen A.",
-      "Kaikkien kappaleiden source_ids-merkintä A on oikea. A on yksi ajankohtainen virallislähde eikä riippumaton vahvistus, mutta se riittää uutisoimaan kaupungin omasta talousennusteesta, koska lopullinen teksti esittää tiedot johdonmukaisesti ennusteina ja kaupungin arvioina.",
-      "Teksti on neutraalia ja ymmärrettävää suomea, tiivistää lähteen omin sanoin eikä sisällä lähdekatkelmista puuttuvia nimiä, lukuja tai syy-seurausväitteitä.",
-      "Valittu Pexels-valokuva liittyy jutun keskeiseen talousennusteeseen näkyvien laskimen ja talousraporttia muistuttavien kaaviopapereiden kautta, ja arkistokuvateksti estää tulkitsemasta sitä aidoksi Kuopion raportiksi. Pexels-lisenssi, kuvatunnus 5915236, kuvaaja, lähdeosoite ja paikallisen kuvan SHA-256 on yksilöity; täsmällisten pikselien soveltuvuuspiste on 9/10. Kolme kuvakonseptia on asetettu järjestykseen ja haettu, ja luonnoksen sekä lähdepaketin kuvatietueet vastaavat toisiaan."
+      "Lähde A tukee otsikkoa ja ensimmäistä kappaletta: Vantaan kaupungin 29.9.2026 julkaistun tiedotteen otsikon mukaan louhintatyöt valmistuvat Rivieranraitiolla, ja lähdetekstin mukaan alueella jatketaan ensi viikolla louheen kuljetuksia sekä maaleikkaustöitä.",
+      "Lähde A tukee toista kappaletta: louheen kuljetusten ja maaleikkaustöiden valmistuttua aloitetaan pohjavedensuojausten ja kaapelisuojaputkien asennukset, työt etenevät kaupungin mukaan suunnitellusti ja liittyvät tulevaan raitiotieyhteyteen. Molempien kappaleiden source_ids-merkintä A on siten asianmukainen.",
+      "Luonnos ei väitä kaupungin tiedotetta riippumattomasti vahvistetuksi, vaan keskeiset tiedot on asianmukaisesti liitetty Vantaan kaupungin ilmoitukseen. Teksti pysyy Rivieranraitin ja Vantaan rajatussa maantieteellisessä yhteydessä eikä tee valtakunnallisia yleistyksiä.",
+      "Otsikko on 48 merkkiä pitkä, alittaa 60 merkin tavoitteen ja kertoo heti paikan sekä pääasian. Ingressin ensi viikkoa koskeva aikamääre vastaa 29.9.2026 julkaistun lähteen sanamuotoa. Luonnoksessa ei ole lähteen kanssa ristiriitaisia nimiä tai numeroita.",
+      "Teksti on neutraalia ja ymmärrettävää suomea sekä riittävästi itsenäisesti muotoiltu. Tiiviin viranomaisuutisen keskeiset väitteet voidaan perustaa tähän yhteen ajankohtaiseen alkuperäislähteeseen, kun lähdeasema ilmaistaan kuten luonnoksessa.",
+      "Valittu aito kuva esittää tunnuksetonta kippiautoa pölyisellä, kaivetulla alueella ja liittyy konkreettisesti jutussa mainittuihin louheen kuljetuksiin ja maaleikkaustöihin; sitä ei väitetä Rivieranraitilla otetuksi. Täsmällisen kuvatiedoston toimituksellinen sopivuusarvio on 9/10, kaikkia kolmea kuvatyyppiä on haettu, ja kuva- sekä lähdepaketin kuvatiedot vastaavat toisiaan.",
+      "Pexels-kuvan oikeuksista on yksilöity valokuva, kuvaaja, kuvasivu, lisenssi ja lisenssilinkki. Kuvateksti ilmaisee kuvan arkistokuvaksi, alt-teksti vastaa näkyvää sisältöä eikä kuva sisällä tunnistettavia henkilöitä, tekstejä tai logoja."
     ]
   }
 }
