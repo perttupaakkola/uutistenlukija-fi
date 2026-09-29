@@ -584,7 +584,7 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
                  f'<div class="portal-module-head"><h2 id="front-latest-title">Tuoreimmat</h2></div>'
                  f'<div class="portal-river__grid">{"".join(river_rows)}</div></section>')
     topics = homepage_topic_strip(archive_items if archive_items is not None else page_items)
-    return grid + river + topics
+    return grid + topics + river
 
 
 def article_path(job):
