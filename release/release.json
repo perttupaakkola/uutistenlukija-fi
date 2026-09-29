@@ -4,404 +4,32 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "a8032138a2ed3ae106c80cebdedc37e57e54f48a",
-  "job_id": "763dffd702f201ec3633245a519e37f5dc8aa1915d551a6984bc5963051f8a32",
-  "packet_sha256": "d767e131d0a6801ab30e359779a1241857e9d055bfb9b122c1edbb9b1cd05fa9",
-  "draft_sha256": "397ab79c9cb2dbc2f2664991f537dd169d2f7eafd6ca65138a45cf3a89366aff",
-  "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
+  "job_id": "092c43fb123ec49398bfd6bcdf23b81ac94acd1eb511c7a6d39b418d3ab29434",
+  "packet_sha256": "b6f099959820b058901dde69ed075fcd6a17de931b203f9fbade583270df7900",
+  "draft_sha256": "bb366bc4030ec7fba3f034a2dbde8ea9765e6570e15269c02a0338535a7f7cb8",
+  "image_sha256": "38cacd32d66f833886bc79483c18412bbd1eec6090401462e62fb567212e6cfc",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "c3e561339aaf6df94ceda7aa87101ba69ff5cdfb4e094e5319e0121576a97170"
-  },
-  "stock_image": {
-    "alt": "Arkistokuva: Valkoinen kippiauto keltaisella lavalla ajaa pölyisellä, kaivetulla alueella, taustalla näkyy metsää.",
-    "caption": "Arkistokuva artikkelin aiheesta.",
-    "classifier_output": {
-      "category": "Kotimaa",
-      "concepts": [
-        {
-          "depictable_scene": "Todellinen lisensoitu valokuva Rivieranraitin keskeneräisestä katutyömaasta Vantaalla, jossa näkyvät louhittu kallioleikkaus ja kuljetusta odottava louhekasa.",
-          "must_avoid": [
-            "completed tram line",
-            "active blasting"
-          ],
-          "must_show": [
-            "excavated rock face",
-            "road construction site"
-          ],
-          "rank": 1,
-          "safe_to_generate": false,
-          "search_queries": [
-            "Rivieranraitti louhintatyöt",
-            "Rivieranraitti työmaa Vantaa",
-            "Vantaan ratikka Rivieranraitti",
-            "excavated rock roadworks"
-          ],
-          "subject": "Rivieranraitin louhinta"
-        },
-        {
-          "depictable_scene": "Nimetön kaupunkirakentamisen työmaa ilman ihmisiä, jossa tunnukseton kippiauto kuljettaa louhetta maaleikatulla tiepohjalla.",
-          "must_avoid": [
-            "people or body parts",
-            "readable text or logos",
-            "tram tracks"
-          ],
-          "must_show": [
-            "unbranded dump truck",
-            "excavated rock"
-          ],
-          "rank": 2,
-          "safe_to_generate": true,
-          "search_queries": [
-            "Rivieranraitti louheen kuljetus",
-            "louheen kuljetus työmaa",
-            "maaleikkaus katutyömaa",
-            "dump truck excavated rock"
-          ],
-          "subject": "louheen kuljetuksia ja maaleikkaustöitä"
-        },
-        {
-          "depictable_scene": "Nimetön avoin työmaakaivanto ilman ihmisiä, jossa rinnakkain asetetut kaapelisuojaputket lepäävät tasaisella sorapedillä.",
-          "must_avoid": [
-            "people or body parts",
-            "readable text or logos",
-            "completed tram tracks"
-          ],
-          "must_show": [
-            "cable conduit pipes",
-            "open utility trench"
-          ],
-          "rank": 3,
-          "safe_to_generate": true,
-          "search_queries": [
-            "Rivieranraitti kaapelisuojaputket",
-            "kaapelisuojaputket kaivanto",
-            "kaapeliputkien asennus työmaa",
-            "cable conduit trench"
-          ],
-          "subject": "kaapelisuojaputkien asentaminen"
-        }
-      ],
-      "version": "article-first-v1"
-    },
-    "credit": "Photo by Just a Dream Pictures on Pexels",
-    "depicted": "A white dump truck with a yellow bed is driving from left to right across a dirt field, kicking up a large cloud of dust behind it. The truck appears to be moving at a moderate speed. The bed of the truck contains what looks like rocks or debris. In the background, a dense line of green trees forms a horizon under a light, overcast sky. There is no readable text or identifiable people in the image.",
-    "generated": false,
-    "hotlink": false,
-    "license": "Pexels License",
-    "license_evidence": {
-      "image_path": "/photos/14821922/pexels-photo-14821922.jpeg",
-      "license": "Pexels License",
-      "license_code": "Pexels",
-      "license_url": "https://www.pexels.com/license/",
-      "photo_id": "14821922",
-      "photo_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
-      "photographer": "Just a Dream Pictures",
-      "photographer_url": "https://www.pexels.com/@just-a-dream-pictures-393935092",
-      "response_sha256": "a7c96cbfd0acd0f732934a9ef32617733bfb1d273383a1c07c96f84e61f75b90",
-      "retrieved_at": "2026-09-29T18:13:49.142438+00:00",
-      "transport": "jina_reader",
-      "version": 1
-    },
-    "license_url": "https://www.pexels.com/license/",
-    "local_path": "media/550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a.jpg",
-    "pixel_review": {
-      "alt_fi": "Valkoinen kippiauto keltaisella lavalla ajaa pölyisellä, kaivetulla alueella, taustalla näkyy metsää.",
-      "approved": true,
-      "article_text_sha256": "ac62bfae0cfcd593d6886a5be3c0a871bf9fc3f3e93aaff552b74a607d5d2c99",
-      "concept_sha256": "e41892d1b3ecbea02d63b89f58d4aedee6e186990fc312ec11f343a9c4040b68",
-      "description": "A white dump truck with a yellow bed drives across a dusty, excavated area with trees in the background. The truck is kicking up a significant amount of dust.",
-      "fit_score": 9,
-      "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
-      "model": "google:gemini-2.5-flash",
-      "must_show_visible": [
-        true,
-        true
-      ],
-      "no_people": true,
-      "reason": "The image clearly shows an unbranded dump truck carrying excavated material (likely rock, given the article context of 'louheen kuljetuksia') on a dusty, excavated site, which directly illustrates the article's subject of 'louheen kuljetuksia ja maaleikkaustöitä'. There are no people, readable text, logos, or tram tracks visible, aligning with the 'must_avoid' criteria.",
-      "reviewed_at": "2026-09-29T18:13:52.158339+00:00",
-      "text_audit": {
-        "examples": [],
-        "readable_text_present": false
-      }
-    },
-    "pixels": {
-      "height": 623,
-      "mode": "RGB",
-      "variance": 11793.7,
-      "width": 940
-    },
-    "relevance_check": {
-      "accepted": true,
-      "evidence": "A white dump truck with a yellow bed drives across a dusty, excavated area with trees in the background. The truck is kicking up a significant amount of dust.",
-      "matched": [
-        "dump",
-        "excavated",
-        "truck"
-      ],
-      "method": "vision",
-      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
-    },
-    "selection_evidence": {
-      "article_text_sha256": "ac62bfae0cfcd593d6886a5be3c0a871bf9fc3f3e93aaff552b74a607d5d2c99",
-      "decision_sha256": "f6dbb3e5232a613ca45bfd5dc9f0f2bd7fd2b93bfabc2a5638aafa764e3f3fce",
-      "minimum_real_fit": 8,
-      "searches": [
-        {
-          "candidates": [],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "source-news",
-          "queries": [
-            "cited source image"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "wikimedia",
-          "queries": [
-            "Rivieranraitti louhintatyöt",
-            "Rivieranraitti työmaa Vantaa",
-            "Vantaan ratikka Rivieranraitti"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "941de5c16ff921facb932ec7b45deec623da549becdd60b3f769fc51dff55a23",
-              "license": "Pexels License",
-              "reason": "The image shows a construction site with buildings and roads, but it does not clearly depict an excavated rock face or a road construction site that specifically relates to rock excavation and transport as described in the article. While there are areas of disturbed earth, there is no clear rock face or large pile of excavated rock (louhekasa) that",
-              "source_url": "https://www.pexels.com/photo/aerial-view-of-swedish-residential-development-site-36955202/"
-            }
-          ],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "pexels",
-          "queries": [
-            "Rivieranraitti louhintatyöt",
-            "Rivieranraitti työmaa Vantaa",
-            "Vantaan ratikka Rivieranraitti"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "ddff690e0000bf99f2bccb35827c6c4e3bd0f49e1f28b163f4073b8cf12a70a8",
-              "license": "Unsplash License",
-              "reason": "The article discusses excavation work for a road construction site related to a tram line. The image shows a natural rock formation and a house, not an excavated rock face or a road construction site. Therefore, it does not depict the concrete subject of the article or the selected concept. One or more required concept elements are not visible.",
-              "source_url": "https://unsplash.com/photos/man-in-black-t-shirt-and-blue-denim-jeans-sitting-on-brown-rock-during-daytime-0fSKV4NcBkM?utm_source=uutistenlukija&utm_medium=referral"
-            }
-          ],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "unsplash",
-          "queries": [
-            "Rivieranraitti louhintatyöt",
-            "Rivieranraitti työmaa Vantaa",
-            "Vantaan ratikka Rivieranraitti"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "google",
-          "queries": [
-            "Rivieranraitti louhintatyöt",
-            "Rivieranraitti työmaa Vantaa",
-            "Vantaan ratikka Rivieranraitti"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "source-news",
-          "queries": [
-            "cited source image"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "wikimedia",
-          "queries": [
-            "Rivieranraitti louheen kuljetus",
-            "louheen kuljetus työmaa",
-            "maaleikkaus katutyömaa"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 3,
-              "image_sha256": "213aa9300d127a9bc58df93264ba21b922bfdd1e19a39243c36dad020c15e54c",
-              "license": "Pexels License",
-              "reason": "The article discusses excavation and earth-cutting work for a tram connection in Vantaa, involving dump trucks and excavated rock. The image shows a coastal road with a truck, but it is not a dump truck, nor is there any visible excavation work or excavated rock. The scene does not depict a construction site or the specific activities mentioned in ",
-              "source_url": "https://www.pexels.com/photo/scenic-coastal-road-at-sunset-with-ocean-view-32821932/"
-            },
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "179f85937f2448a1ab23bd976219f93c46377c55588b0f644f9a6b5f0155c95c",
-              "license": "Pexels License",
-              "reason": "The article discusses excavation and earth-cutting work for a future tram connection in Vantaa, involving dump trucks and excavated rock. The image shows tugboats, a cruise ship, and a city harbor, which is completely unrelated to the article's subject matter of urban construction and earthworks. The selected concept specifically requires a dump tr",
-              "source_url": "https://www.pexels.com/photo/tugboats-docked-near-a-cruise-ship-10231086/"
-            },
-            {
-              "approved": true,
-              "fit_score": 9,
-              "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
-              "license": "Pexels License",
-              "reason": "The image clearly shows an unbranded dump truck carrying excavated material (likely rock, given the article context of 'louheen kuljetuksia') on a dusty, excavated site, which directly illustrates the article's subject of 'louheen kuljetuksia ja maaleikkaustöitä'. There are no people, readable text, logos, or tram tracks visible, aligning with the ",
-              "source_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/"
-            }
-          ],
-          "concept_rank": 2,
-          "outcome": "accepted",
-          "provider": "pexels",
-          "queries": [
-            "Rivieranraitti louheen kuljetus",
-            "louheen kuljetus työmaa",
-            "maaleikkaus katutyömaa"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 3,
-          "outcome": "no_qualifying_candidate",
-          "provider": "source-news",
-          "queries": [
-            "cited source image"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 3,
-          "outcome": "no_qualifying_candidate",
-          "provider": "wikimedia",
-          "queries": [
-            "Rivieranraitti kaapelisuojaputket",
-            "kaapelisuojaputket kaivanto",
-            "kaapeliputkien asennus työmaa"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 3,
-              "image_sha256": "09cc888eafbcdca1e00547fe90b159cd2a914d6bba7d14a181a048ec52410edd",
-              "license": "Pexels License",
-              "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The selected concept specifically requires 'cable conduit pipes' and an 'open utility trench'. The image shows pipes, but they are clearly attached to a vertical wall or facade, not lying in an open trench. Therefore, it does not de",
-              "source_url": "https://www.pexels.com/photo/wall-with-pipes-23414767/"
-            },
-            {
-              "approved": false,
-              "fit_score": 3,
-              "image_sha256": "54646f042c0293c5dd026cb7d020e5f7cec3dd3ba5e49f08f797ffd11f1ddf1f",
-              "license": "Pexels License",
-              "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The image shows a person installing pipes, but these are clearly visible as water/heating pipes (copper and white plastic pipes with clamps) on a wall, not cable conduit pipes in an open trench. The image also contains a person, whi",
-              "source_url": "https://www.pexels.com/photo/skilled-worker-adjusting-pipes-with-precision-39885422/"
-            },
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "8e76d715d45886fbaf05c9530be7ef943a9ec974ec28adad4de0881faa2916ef",
-              "license": "Pexels License",
-              "reason": "The article discusses the installation of cable conduit pipes as part of a tram connection project. The image shows cable conduit pipes, which aligns with the 'cable conduit pipes' must_show element. However, the concept also requires an 'open utility trench', which is not visible in the image. The image is a close-up of pipes only, without any con",
-              "source_url": "https://www.pexels.com/photo/close-up-photo-of-red-pipes-8414059/"
-            },
-            {
-              "approved": false,
-              "fit_score": 3,
-              "image_sha256": "fd30eb81c7cbe4f48d8b6e2260be567c56dd8dc36300c8a39ff0e2644ac98265",
-              "license": "Pexels License",
-              "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The image shows large metal pipes, but they are clearly part of a hydroelectric power generation system, not cable conduits for a tramway. The pipes are also not in an open utility trench for a tramway project, but rather integrated",
-              "source_url": "https://www.pexels.com/photo/hydroelectric-power-pipes-in-rodberg-norway-31502428/"
-            }
-          ],
-          "concept_rank": 3,
-          "outcome": "no_qualifying_candidate",
-          "provider": "pexels",
-          "queries": [
-            "Rivieranraitti kaapelisuojaputket",
-            "kaapelisuojaputket kaivanto",
-            "kaapeliputkien asennus työmaa"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 3,
-          "outcome": "no_qualifying_candidate",
-          "provider": "unsplash",
-          "queries": [
-            "Rivieranraitti kaapelisuojaputket",
-            "kaapelisuojaputket kaivanto",
-            "kaapeliputkien asennus työmaa"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 3,
-          "outcome": "no_qualifying_candidate",
-          "provider": "google",
-          "queries": [
-            "Rivieranraitti kaapelisuojaputket",
-            "kaapelisuojaputket kaivanto",
-            "kaapeliputkien asennus työmaa"
-          ]
-        }
-      ],
-      "selected": {
-        "concept_rank": 2,
-        "fit_score": 9,
-        "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
-        "kind": "real"
-      },
-      "version": "article-first-v1"
-    },
-    "sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
-    "source_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
-    "stock_provenance": {
-      "image_url": "https://images.pexels.com/photos/14821922/pexels-photo-14821922.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "photo_id": "14821922",
-      "photo_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
-      "photographer": "Just a Dream Pictures",
-      "photographer_url": "https://www.pexels.com/@just-a-dream-pictures-393935092",
-      "provider": "pexels",
-      "query": "louheen kuljetus työmaa",
-      "retrieved_at": "2026-09-29T18:13:49Z"
-    },
-    "stock_provenance_sha256": "8edd9f5df7063571cead4f8bad17dc1e102f3bed5170dcbcb7a2d5dfc0fba9bc",
-    "url": "https://uutistenlukija.fi/media/550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a.jpg"
+    "provenance_sha256": "85ff901d0bd9f8675488c9d2a47a1987a150ca274d9b1b3690f1a2585ff9fbc8"
   },
   "new_article_files": [
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html"
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "989fbc51eb71105f60b601d18ed9e917a8416cfefd8055d93fc1afcab845212b",
-    "_redirects": "e92bb6d13fe9e0ad424faaaf81d4921301c739611f4da41688925d19fc40228d",
-    "ai-kuvat/index.html": "db16051094637de4cf7927ad305b8cc2021333d436f8175a827661dc69c12e5b",
-    "categories/kotimaa/index.html": "37a29c6836919a44f99ac45fdd52676db8b83a73d685d0936a9a1809cea58627",
-    "categories/kulttuuri/index.html": "a0789b22a07720d41cab0a78c9d9878d169b1097329a66c700d23ee1f9b0b60f",
-    "categories/talous/index.html": "9790407bb5b363d95b93e55bcc272603f03b0801df60598f734d1d40fe4e859d",
-    "categories/teknologia/index.html": "2cfd12a43c26184cef5fdb87afa43f684c76207316a761003209564a98f7a29d",
-    "categories/tiede/index.html": "4c76d36fab25aca69cb0ba42e0f4b36c71ade120ec908291681ae9dccb465509",
-    "categories/ulkomaat/index.html": "f0a29b057ef5911630585746f0a75b6eba31d10f845ae08912017f714629fe7b",
-    "categories/urheilu/index.html": "4aa5a075dc2dc7551f8cc1789b94d32238e5c66e2cac5286c371e7bed7b0218d",
-    "index.html": "bbfa595791d55c428747fbdfa953487b3bc0e2a05f15f05020b1a65a7f8c858e",
-    "lahteet/index.html": "91d2b9c0155d6d9d6f49eed803d30d6b29f535570d7afaffd1d5da11e70c918f",
+    "_redirects": "2ab76e3418d1109f110cdcbe42906153413cb6c57c760fc141deb43a4aba3f27",
+    "ai-kuvat/index.html": "7d3272e4e6cecd09285adfc2b19113a615c3072ae8ed6bed1be520cd20eee44d",
+    "categories/kotimaa/index.html": "f01435d238c2370d6ceedb4af0281b8eaacc530bf63f1adcf271bb160a57d466",
+    "categories/kulttuuri/index.html": "75fef2879ce3deee4df278e4df9e77523106fc4a535d825149d0e9fa0203a3ca",
+    "categories/talous/index.html": "826fc086ef7586ba2ee22499a90a7907970e96c8fc499398a83ebbf5dbb9de09",
+    "categories/teknologia/index.html": "d311563aba9e5f13ae4317697c906ca9dda6ae7ea55d4ba511b62e4d36c91c29",
+    "categories/tiede/index.html": "a35d8146ba2943d50914aa53237857822f5e8f7b64a43c7b6c57b8ccb01fa0e4",
+    "categories/ulkomaat/index.html": "bb904822e00a9b75cbd4ad54ffaaed6efdbae74545f112344d4d38b5e4f94e45",
+    "categories/urheilu/index.html": "de151e63183da35b146c911b01513198e1caf1af19b18b80e2b2214de739a39d",
+    "index.html": "2cf1c8aaf0d14050f5e2f8b5ebf76f777fa24ef25bebe18f74bab64537e416f6",
+    "lahteet/index.html": "d6c8d318d58b91e252b26224012a188d3004da7fcbaaff06a042ee96d8dd670f",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -500,6 +128,7 @@
     "mvp-assets/36f8cccab0c7a2ff4fe96c567c97a60ef850ac6ee825888f7e7c0952cdabc17c.jpg": "36f8cccab0c7a2ff4fe96c567c97a60ef850ac6ee825888f7e7c0952cdabc17c",
     "mvp-assets/3748519f3b12b48fdeb21dcbf4e2900845b3d1939e8f909219ec9a8df9d31f7f.jpg": "3748519f3b12b48fdeb21dcbf4e2900845b3d1939e8f909219ec9a8df9d31f7f",
     "mvp-assets/37c1cbe804f014300e0c346b19d4808dc3fe3339cba6f1ee6a7b7eafcb500c5e.jpg": "37c1cbe804f014300e0c346b19d4808dc3fe3339cba6f1ee6a7b7eafcb500c5e",
+    "mvp-assets/38cacd32d66f833886bc79483c18412bbd1eec6090401462e62fb567212e6cfc.jpg": "38cacd32d66f833886bc79483c18412bbd1eec6090401462e62fb567212e6cfc",
     "mvp-assets/3912de92caa112d8758c7f24782da62cf3381f0ae2a6bb26c072a2e92b9a9016.jpg": "3912de92caa112d8758c7f24782da62cf3381f0ae2a6bb26c072a2e92b9a9016",
     "mvp-assets/3933277368619fd8214f2e065f3f5a41ea0754fb1226690962a41c42215b5857.jpg": "3933277368619fd8214f2e065f3f5a41ea0754fb1226690962a41c42215b5857",
     "mvp-assets/395c52bdcdf514a7e2f9531e4e7190cb18c4027d037e6a5f7f423683e806f661.jpg": "395c52bdcdf514a7e2f9531e4e7190cb18c4027d037e6a5f7f423683e806f661",
@@ -879,19 +508,19 @@
     "mvp-assets/portal.js": "17dcc8a25306b1900ee898c13e74168d09ab29df3a217b113fb72e50f4a573e3",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "6b3d4bfb8e6aebb8496dfa3ec2fb6c9846b18b85b0b7cf98bdbfee64787365fa",
-    "oppaat/index.html": "8973d777e175dd589c33a4fc57fa3657fe535bbb33b62893b8080541e96d2157",
+    "oppaat/index.html": "9adb1708bc24d2676eab43195b09d50204d875701189ee12707885f070b99f05",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "3ae8378ee577888ca863906342daf666d6de4a0a76c2b7884d9621f1c590046d",
-    "sitemap.xml": "4c74c881bc175559e6556c72e01465e2e6678b8753724ed3073ad9d631d4e38b",
-    "sivu/2/index.html": "f04d9b31414151a8f180a854876a5e4fce61bf6b1edfd450a47a28a88301d957",
-    "sivu/3/index.html": "16441fe70282a1cc77ccfbb5e0f692b4789892d1168efadde91ba6c94c2c5fa9",
-    "sivu/4/index.html": "9e9191d6b24c37f922119413639b7c07dfe3e72ad626532f15822a8a62e62cec",
-    "sivu/5/index.html": "1a773971794c691261f637fe6b13b911a6d138026aeff347e187ff37cd055513",
-    "sivu/6/index.html": "59254b1befc4f37cccfb7f23063aacb12863932565a3cc545fdf24a1b68ea3f0",
-    "sivu/7/index.html": "9f6187f0e32f983a72b718de8cd1358f29e24cae09f38d64f6dd361e704f4464",
-    "sivu/8/index.html": "45ba06a4a0eacb404a6f6e80651f40fd94d84bcf29adf9ff6fdd9f90dff77774",
-    "tietosuoja/index.html": "fc9788cbe0e760e283eb4be356fae840ec3be581caa0b1abaf9ea14083f81527",
-    "tuoreimmat/index.html": "09e769d65f6bf610222a4e3612a8a726390753adf6d54962ccf6c8e3f48dd028",
+    "rss.xml": "22505ac04aa8ce9a6ed5f95373a42867f3d1981b888d46099ae7343432444d74",
+    "sitemap.xml": "2ddc9c94d5e2c1151023c3c2cc14e972706c2d8328d4afa099d6ec70dcddd070",
+    "sivu/2/index.html": "992c1671afbf5576aa4bad2d50fb5d5ffe0fa689d913465c1f66771b252564bb",
+    "sivu/3/index.html": "c3ac68e981cfad07e3f481ee0e2d252ff85b993533a505dbd5f081e9dd7f84d8",
+    "sivu/4/index.html": "13bf484896c17193ce9ea3072330fccf3ce4ff6898cb40bd2ed66216edc9bffb",
+    "sivu/5/index.html": "d47afda98b18dbbc725edbdf97342a5ad498767633aaf1783f1386c0cf293867",
+    "sivu/6/index.html": "e4b857a99192bf10075d796245f1f32a81305d6553ca627191ff1a4eefd39c7b",
+    "sivu/7/index.html": "ba7eba8962c827bad2b47d96befeb433a75ce0eed5c04ea0f8916e24d81010dc",
+    "sivu/8/index.html": "a809c9d20666175b91744d614ce7d52d0415d69bd8bebf8d2f58f6eb40e57e33",
+    "tietosuoja/index.html": "fedce0c68df9eec05f61c8768b27d89306950bab1c9f5cb69c9672ef847b7b53",
+    "tuoreimmat/index.html": "457be87835891d24cb3375970fd3cc0a7194fe19496da5d4ac2982846daca237",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -905,388 +534,442 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "7de5de2433906c6a74d63ac6e293986afe32ecedc35184bf2e30e5d60109326c",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "f0fbf348854c3ac472dba183290acea906a1dd7b652c2e5ad0dec0be790d944c",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "35c7e535bd95a77225080574724545ba2a1fe8116e6e86e1137025b41bd5ab67",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "0dd17ffd78d35ca972d9d6c4d558e8edb93d8c75584a52a2318c3bae32def93e",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "4de45cb4a7ad52d19abfe4fa9c5da80b0f3186dd83a1425eb16c5a5f491e6e63",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "0387ad2a0cf43127da3efb172b7a65da1799df8b414048567975ef736f930ae5",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "ad546b6416a188eafa5a6ea185886ef9201d9241aff9b530aa97bb7d5fe5dfa0",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "367719bcf5e9d41ac6ca1edded54125232c63b76392b3525617d5696fbaedf71",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "081fa65bb1ac4001884b49607efadf98f89f6ac0e71a65088ee082f27ea1e27b",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "c1c3537cf07254c0968a80c66e97ed8f5091e598da7b7bb872929d1b99e6108b",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "c252d00a6897f7575dd5a1b8c71be3364b453c77a13b073ba74208d775cab3f1",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "30be13201f1824b85247376d643dcd7fdd68b1c1a1b68be7be3eed12549d90bd",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "083e4359b1284d2aed0f16b29cebff546a91cd710314e3a33c66f657de7fffcc",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "e71eaa9f42e3a51f52c37a579b3258cc5b724a80ee4a66774a42e84bb3c2b74f",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "e5d6013ae2a33db81ac30cc11a096fd9b43d538d609b3f0ec19ede13bd2eb872",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "ead426292ffc47965f5ee9fad521ab64f6344548686ec95388851d54d799902f",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "cb65f9c22b464003eb481195861ace69318c157d410833948ea22a63b590b87c",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "daafa5d96e0ecef17571594fa90891f5d69e23ec4a7b88f5d27781fece280b59",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "70b6a5a053510ef305098551f440250c0c8e91263f67865c32dd1219eb736fd5",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "a3c3759811eb9374271361d39d1c4ab2ec8238b2ba93d46529dc3f5747807d0d",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "7d20b655f59f6f3c1e20ba2a36f959435874fd890c77208d7a8758d0693feba1",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "2bef62abf690364bae82f48a54df0983c4932325e1c235f63f7e96d042a5980e",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "9913008c6f1a2b1314ab47b67fef8e117cb57b63af43378b249182efcb54dc09",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "368d6eb9bbb23c8339e5bdf9f01fbe63ecb633c27f1eb96b9f60475a7b20c33d",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "c12060bcac97099f1afd4ab6d6361baf7833c0b5e45a9089a573a340f23c7133",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "8ba7f548458d2631b2a2a6c27ccf221e40ec02b73cdbaf0d57d27e0d4eb0ff1a",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "a7752095146593f69f7df65080a863c94cce5ba977611a40ec0a975bf46b192d",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "773a227317809f310f284d0c48d4f2ebe03a18e4a7ee9aa9fa5b4a450568fca1",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "d6189e55b4b2cf31a33b533d191172e2e6cae8037a64982260bd325f815af1ea",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "e698427f5e968488848e14876286b8f5c2c269e74faa59da97a85bba9fa6b252",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "701660558ce0dcda6126f10b9bef26857b10cac93cd7bbcb741f848abef4b543",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "17bf31f2d5ce4c31769e748cb0befcd94dc4c5057384733833315ed7ac227988",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "39529a617e044d04025c7e96fa2a3b5206a433bf09ffb14229bbf01f7dde0ce9",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "e0c08bfa8a8f66996e1f70f966c77e6eb2d585b4852ddf887ea2ee249f37abb2",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "50fd9049374a5fc9dfa29adc70f18f7d3d8de0e00d6e2abc93d1a122b3b36242",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "62eea0750ce0a1b0235898cb8e51f8daed06ffcd885df92b5ac6762be1ad1158",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "9a6aa8fc736e622bca15ece06e42a51fa08bc3d65d1f13e4a26f9ed5443bbfce",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "71cb271f7b51b017aefc6d3b58f0befb71e0e9e3f3ce1e3168b688032caa6222",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "6e4508da489d36f811283c5997df8f3892c784a823b2e60515e8ef25c27eda90",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "b5e02aa6264cd1248c34a4eba23d4c05a2b3b07c87356bad4d437087248be251",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "d0e64a27547bd3c70bd022005d71c0eac0565cb6921b1352d3fa1fb081cd0083",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "ec9276bb8015b53401fa8a9ecaf1aa49547a2af7ef8615393d02859abf683a77",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "7f1dacd3386abc13e1b81c97f23a3752deadaca0c32bc26a687a37915663ab53",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "43c7071b5ca9a6bb44bd38a7cc238403be35d7dcb0d3de79b0afb35ac7326ab7",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "5bb32ca67e852eb29fa0fe90880a2c572abd81ae76dc3c73e638c6f22d641919",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "f98166f121e3d19dc4d8e786f6bc8ce136e353f7da4daa92cb5f11adbe8cfae3",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "9b8d3c144bea0165e0be6e2a70a9201d0f8aa453ec7aa5c964d6868b43f45fba",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "f8937645f0ff0b17c141b1621f76c4dad2e9a16bdea6cd3b2b266e305d58806c",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "c361d4ded2c20efa0a33125d538430946a3a1b39dd1e132c7b93ee9d8ffed491",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "d2559ef276a5736148519401cbb6199b592c582027a4f8f263588ab906b70b4e",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "3f8562d296c585e8d87c7ffe47f66318368d68ed7a3bcd6b3abb8e2fa64bdf06",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "bba9b97e1e604d1eb885b9e08ea43f39f13bac51e93530aa13490b162e224dd1",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "1d63cc669bdf740a2a3003f13a2b803e5742b1e68c74819e8e3724817dc3529c",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "fdeac0a75b47cd7c77e86e3921b6878e5613ba5b01fd69b51c2b916c59b7be9d",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "b243fdfaf4c88e678b2e34991162d2582683ecaa22ec0d1236cc2d8a8db95b61",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "f62d5361929ac29d569e8bcf9800a840b750eccb4a7463fc6de262827d59c6c5",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "60fdc458c02b661d497c70794eb8ee10f3fedc1875fc3668a3aaaa3cbd12f69c",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "1e4242d7dee15f85731b3cfba5711cd80ab56d509823fc64a8ce0d56af182bf3",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "4182e72014fd66112d21008f5a5b72e3cca72b4f484d0d4092eff290e754bc46",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "eaa3460d99847ab1c773c3fdca439fb386fbb7a2aeba5f7cddc985caa322d1ac",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "773d07b0b8dccc1104d11c3df699e7a464657a466630c036b73f670dccd93241",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "c4a4a9e6da6485118ca0ff2dd19730f228a64cc02677a2b5cd96f76a058dcd1f",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "4bdb9ed39bb4e0212d45ee2b12b0bf076bee4a89112726e914ea75ca0100c825",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "45ea0ff1c11b07bab453b6b6915d6ac6b9f0a2d545afa088c42155a32a087e11",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "1314ef81b45790e5433a7b84ba7abd5cb88b4ff6bee59ffb91bd1b2505967c4b",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "3a1f87a5b7b284bb2089b4df1ee557a70f298795ee931e14c59817343f53ea87",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "0fc40ed2db273c83d577313ea20772a90be5667441742a5276557e43a54244df",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "63071ca1775faa93ba3a2a68d9bda66926fce80b051392adc1395cbac2da38c3",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "ec2c7d7d057bc55704b2ef8a8d0da8e236e2f9cd9f40fbdbd48eef827c615cce",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "443f119b4d9a83accf8e08059d1d46cbc5b082150a0bc29b8317c82271dba8f9",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "1241f5d30f60b1701cd0ff405abee13ff796c35564b6dfeece1421832e3b603c",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "1068247bb8c71904df87adbf55d7d97ca0fa80c2bb4c8be95485fdcfee1cbc81",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "de5370a9c406a6883dc6fcf2c09b60fd48aacb587ed74c271966d49c9bacebd8",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "81117a58e5775562c92e7d76e198cd6828f55ea860f29b34348fc688c293eb5c",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "398388d9e062067efa65c2b41b66e481fce8122a253d38bb2670f473340e56ed",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "16b2071ec8b079bc8354dd38179f3b8b0d321e4cd812c3c6da36d6638984feab",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "018dfa0c300f4dc06a0878e218f945d3fb752d37c2d5303fadd3fd8f266a7a26",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "ba539504d0341b48c5a9c6767a9c0ef38b331dab3b902effc87d8d1a152815c3",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "1b7a372a48b04554b2372f51a061ae714a9dc4e9e95118182c644446cc1e5a07",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "97761eed279f9d6a097c3f238ef40de049579062322d68a7c9f2a5cdb18731ce",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "5f467d3314e29bd3b9f74997d3731dc5cd822e16adb4dbf5e2175ba4646e957c",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "0e11dca46e684ea046146b95061be9ac034bd6fb8571f9675d07d06828980d91",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "1c28fb3ca6799c6531e0d090a2f7a32a9a31554c119d7b5560052537d03bff46",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "4c48334a00379203664e02ffb1298332cd47d97d641f423f134f10609d8907ab",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "c05d81115a1fed150eeb9bcee6b4851cddeea3d0583927b6a24133decee3d5b9",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "aa52d3fa4d02b9170a330e12b00f926bcc76fd7343713e066d2ff7773a101c6b",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "2b37d562ba6e2a66a8c6d1f9c77334d1b074ebf8c1f1915d85aad64261f25cb3",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "d40b5c5c3b24800363f6d52852dfac416f0eef756912943b57e7e107d45bfe8a",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "287da17e130a3c629bcca923c8503879d9cdfb14c560c54b82905196db11c67d",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "526e918ffb2e8398a89e086740535e6a3ea38e8b429b147c991028447ad55f64",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "bca9bbab82bfd8675f795a53f6b48f45e4fe3f221f43223a1f71693dca0c09c0",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "a42c2fd5472862e73e6a2b90466fa043d031588b7f24d25dde63bcaf43214867",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "da64bb0be7ced23e92f601e274acab316aad9593c4fb8bb6ce9fe6755a894407",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "a980c47b7b90e75691d96c8878a43e556cc97e44bb753cd80adb4df7aeb2e4a7",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "8a47b9d4f5f43a7f9980d9efb80a3356e9b012824b25bc9e2254692c4c1c7067",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "9344b594c2a23e6af5f4b2eb8393342c97d0415b52e9bec28c131e656b144225",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "8cfd2cb35fe85e467b402b010881442ea5b6b73f15d92ee83d0f6727b6a54f74",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "be6941dff24974f691962b4daa49b89aa11c13446adf1664dde35b68a2c32d04",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "f01382a68aadf526c7ee77199145499fcac7f160404f61b3b3f371a79b9b64ec",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "c1bab78449fe60430e27e004358cd7bd04e618249516b0753ed248c7f9d4bc2d",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "20fd19cdb535293f384373a4e3caadf2b308b5fff09d905adc0eaef828931976",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "4566d07f215adb36228f2a51c156274d85f19f46e9b1bc1cc66bb8a32df6f052",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "a8504a0decc3bbf9ca046cb4c070dbe607089f05930dc137181444d117b9c633",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "db2cd64e11cc23ce49223ccdd54742059693bc82cd655374e13c92b921badbf3",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "f378ef4773838c98c26b7fa5e45a4e112cd65ddfab6b71c46ea0489d4597bea7",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "947e1e05baf5ac9a1c22c7089b7a6d6aa3f0e56f09e8935fd2486f607a6fb570",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "11319db3fb12fbf026515df851e079e8b9291e8ea86b2ddc9788f139b7635e36",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "fe9c967ee4efdbac6c034af0e9713eff7de1a0c080a947980e6bebec3be32a0d",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "75000ffe1ac24680ce7677392a9c9040f1ede396c0f209b6d4b1ae8acd963b32",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "dc3129b366056afa20d2b745ebcb79962ce2f58db111e09a3997e0e4bb944e03",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "7e250aa3f9c34e62c5aed38dbd10a9086c926e43b7d3716a374dcca4b760a34c",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "84044b007be60fa5f53b07ff6861108aeb741c30f66b932bd73e5bb186c6b740",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "9f32c982089d720fd9fe7ff85d94ab1b73c1177078dff0fdb85e5ee3e39be014",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "7da96410b7eeb69af4ea21a7b1d0d46a24239d7a321e0c5a9e3d49cf5f3f1a59",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "30965f039b0671a4b054600f84dc05c4d1e6f41efe91c235e9006480c5615230",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "0ead46a56d2964a8db30e01245490b96b2288d93b22349db9451362f50071f01",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "a4d4117e4f7c3fb268bfc55519ad6842d00e5783238bead83530651272206d55",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "26bfb33403c4e36a8267bbbad77b2c1163f01997c8979023ff872a0a5bef69d0",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "88ee8102ee099a72b0f7f98953a61334b6ed5610b1137e29a8db307f083892b3",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "0340c7cbaedd67f8a23267235280025d2a0e288d669b1db044c5c815f34aa203",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "9977d126f72062a5524a15d5d1391ac537db41ad26159a6c2c8937136a30f766",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "f9b1119ebef40e9e1517a18c5d343401580078fdc328b06ded6b7f540be4c0ae",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "ffe6b06c93f8517fa6fbc5ea14a2b6c3a034d9c66e0c6190a1b343e8605536f2",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "707d67f00c48fd48135cddb76ad992eb41eaaa20e500480849c332c464374798",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "071f679c78096e2fbe6a4d2968a3746731ffd95eb9dfa07a88e23052365cb98f",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "f67b852b2ddad6166981f9239ee1d1eaa5483190b2a4f134554fc38a86ca72b1",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "c119c2c4c4201a9a69a36e5a64b91871d9fd2bca2ab76134bd1b5d7a3d991f11",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "3a6c7b5698dfe1c925b606cbd69a8b44ecac69dc0995694cb764beaa3d7557e1",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "c4fcfe91db3fabcb8c52d81df8ba415032f7144e192ccba94cf03984f1c011ed",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "2ab5ca4c4011be82ceb6cab262d0d899fa39a437154ab863fac3db385d2325ae",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "6861fcdafde0148452f99be499c0382d4ffe66eb2db43fba89ef03817f83db5e",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "d14919c03ebe91f352aa3b36ec8226f0825de697c30c590abbabdfd62a994ff5",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "4d64537124401b869795b3696fda7fe3a8787eb61e5e859dfbc89dc3f7d2312c",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "f943716a2161370b0e29f1d97dba196632ba8e8512d5c8a6a8399a6f736b8f23",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "44804207c5ac065eebe5cbf52c0feb3d7fbcbc7841e2112bf42d4f139aa8f11f",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "989403b14cc891575e6f63872100d1225b76f3de519f79232b419b4468cc27bc",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "398a565aa30fc61a2c8f34642a32a347066915d7c7f1339d70340540f5b9823e",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "f843b317aa59ee9651a5d197b603983d2b96049899005186d2abcdde5dd64424",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "7c6d85e0aec9fbe2a23b7944c96aa24ba0e6c860167f251efc3f64464905741e",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "8a75d3e79679db435de99458162fdf772c09182421d11942fb4352275b24996a",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "d9a1775084c7c6e1d1e6f7a19ec728482b4722982ef230da77ea7b8b2dae46f2",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "d0169b5a29e30e476ff21a178beb25e099fe89766b54e740ab9bf2801e65acef",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "7359b5bab021723e892cc3ae47a82677cec5f3577c7cc9a1507a96c7abfd21f8",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "e568c6344953c99157f48306e488f4cfd905aa2b3268467ca30320985ee81b82",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "790f4b3daf062e9ce4bf89ec4528320cc1263aecfe8228a7468d8f9cd154159b",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "4a92cefdda90e43933a55aa50db6ebc002c6c7c9f056089129cdc966d36171f8",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "5db8b42bbda8dee5b69b9e98070bd339d36a09b0d8555e607a8ca121fedfaa53",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "9ec8d5ef0335869331e85bddad69666b416f5fb26baf0310396c3da4f074659a",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "3b2c2a9682b12929e9f144c81640efb41a8771ecd36601605ee42361beb58cf3",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "92391a5c06ba4b08988a1ac6baa05268df444c93f612a205c46b57a06035eeec",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "e1c015ae202b2a140c78c9edf36b17f5ce25b92c949675fa632192058ca7988e",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "922af369793646eccdb0bc999ddb1db77ce8f6e0290529e5aee9241e9dac3f4c",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "b06e1674d0f6779b50782d370f07c423a6ed8a5139958e076fc42b4b99db68e2",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "568e6ee4bdbd98f3080e51f2085460eb030c94ccf3534eb52a85b2197738f656",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "2147594d841b2d54c888c227b785aa62403c6a678b4cb18c2afdfc4c4f5982eb",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "d3f60f42514eba54d1664b65d469dd9149de6cd27541d1700be192ebb4fc46ca",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "9d87e6c2248679eb96e989dfa13206430a31e3161c7af4c3029bfc0a5da27c48",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "2decea975aabfefa5b2135ecdd66808f5bb16f39165db4935ff14739c9cb19e2",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "f6c51f850052a1cbd723504bab2c2b39ecb4366e914a20ef6527452a7d8d68c0",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "0414595a1900e7e4c8d8c25cc5b91307f9e1fc7a3be46afbeb9ab51c54ec53a7",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "c87b1fac80a7a42e1ef1128b488957c3b61b4022ceac27781b51e4544852a610",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "4fae68b8bf9c93770996678d4da308273fd6add929b42fd81fa07bfbbb3865d5",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "c8c131a0d9c81190bb1c2571d6185a0b8e828ce57be6b3b50600326b5f187e0b",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "f2913b146e394febcb18bc842d8dd21340bf89c0327fa3c1e6c1417303669f1b",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "faa33b5ba94215dbcd7b1793eabb3ff9c2e8ef8c91c39812b756a7e7e7fb3912",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "9a984823742855c7a722596773a245e65cf9266f5504ec5e7f9759ffebae7fc6",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "ec1f0dd4d6fe4147bfc6379b190128ae57a2cf9814e1d68bc49be1e98e9316c1",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "1384d071c894f3dc466463972e6724ac4967adac0a7c921a580e59468e64bd0a",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "393c4dfda54bdcf7562b8bf68b2329fc67e373f13be66cd9c73aba4e95eaf5e7",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "650026f060378b07ec9e191e7c609cad9f86bfed7fc5780d43af244a670ef8b1",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "d3adf540d2cadd08d167d577700415d0a7519ecd3e4a03d9f235b849d6dd3663",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "99c2ec5574e39475a2d9e0d61d71a0970d4f376b2a719a22bd0a48dbba74b5a7",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "c6dc91dfc310d8471e287cf44873c901f4e06af7b26081180c9f722b6ac9f468",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "dcd9ee4e3e8ab0dd010f5fe08f6d81ca28301f639bc64fd9088c9866596d1092",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "5b7473e434242d97a82cb556272e8ac38401753c3255feef4f531f73d17ea7af",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "9382a3a4b8a276c6b7aca4359030489e613f0f359edd4f780e650ab6a0d9345a",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "8ff2152c31bdb8264003195675e47de3b4c8a8d3a8e51dd27fa6ac1e26fffe6e",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "3f150a7b36b4fb4207ba26bf07b47b59abb336a21e5588b7bcc49ed2b98725fe",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "d258e1d501d81217400ed1169342e7580211ff2383bcdeed3e59f4be7c3f7893",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "ffdd80922dc9a1a62b0c070e776a7abbb4f2871d897ba37731511e16e7be5d47",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "f0780f076a886450508e3957b06d720d5c2bc807f31173abf4c627eb34f3f5b1",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "ec2edf418c96ec81b7a349a26dbd1c9843e6d32265e092d32da6e4834f1321ad",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "2828876a1534e5625551985570212e1fd6e8a56e2dcb780857f83fccdef35fae",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "240d59371c7faaeea6f81efccd9043a4d3ef2d68d35008f8a5e763f243f5f870",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "8040b8898f2b137e0657e2e7aec67c7cb59f4adc50127541bcbaed55b4dfcbe9",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "0873539d15ec299fbe62290055ccee88b55a984e2a0c5368ef09402d5e6d7a9d",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "536f55fb67ba187a3d3a32b42b8d4658a0f320de44cf5aacd1127e5543353803",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "23fcb07649b1657d32a31e44d91916cc5d14a2b8e463d05264bbf184123f8e2a",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "00957ab4d83bbf0cfd648664ecbe79cfee02ca3e67808f4c95d60cb460162e0d",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "f24292a915989550ed4f9bb76c3ce28f0dc203217f8b255aeb93b77a07f50688",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "82dad4df2f168391e93a7e5e29303499723dacfec080da618c10051d15680681",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "33a704962810eb31794e1947ebe24efdaa37316811230ca20a89368d56065e51",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "55ac06ec1b186ba2429193446a128df74fc2240c8ebc5629e40a158ed10fd705",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "ed692344fdfab9f81fbbe9a7e3b35fe8211b8611bb1d452acacb22a4b576b47b",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "d64c1085f8ff9283e3a4589126d39fe29f713e6210daaf9239a713e401fac897",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "9d1632ebe8f804cfd57ea542a04aaaa17c26c67ddeb86390efa781d58f3c39f8",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "b4b2fd78277af8ed92515498288f5964b829dc15f5ab0769e3965e739c44abec",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "e2d95b098f72e110ce3e120fc9b8b9314b783ca7e1b566d310eb276aeaab1255",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "828f81f0a2f13feb42669b4c59ac8a1f6e139233e2ffbb970dccc46c7eeeb00f",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "25bd93a2b24804795637c195d5074c17d264f363b5555ac158668630aa9f02b1",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "d6a02d2ae5f3945b419c1a0059c7658d4841223cb98c53b4bf0b3a0f5449de6e",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "bd550c31eddaaa1840df6924ba2e3857451c9f0749162ea5342f4f1398cc59b8",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "05b3c4602bf7186c8c695bd59974f3deeaa3a8a1ee491f2bff8c96bfe2c75b9f",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "83b85c2d478eb46743eccf32b1712a79d727f0b5b6514c806e3eab97c781ffd7",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "537ae6eb925f8d82aecc429e135075e06791798cc7d1a50c991763068f7dcf83",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "0f830f2fcdb615be0c5185ef8b461e1f30111c265c4f22f776848c9efe35a17e",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "d6c034443c7fab9329d6bc79b00de91c647d6d5bb1f7abe76e5b3f7e3d4bd98c",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "d483524b4a4cb96d459e54e705e8d4e584fc97edbf908fab999635a81ef4c91c",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "6307949a3297501ec6cf9f2401cff3419bf6b100a1e57c9a689314836b4f7a79",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "4d8568e80a7bf7cfbd95cd430e02d14440c2d2a010213835b53f1642c52e0d32",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "8f4948cb5a2fa72aae1bbcd0dfc576657d736729f4c624efd960266f9030db7c",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "1bcba3edccadc56d71c11280da96e1b95b15c96d75b5061a53b5a520e5a95767",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "a3bdf402b6fc6799e689b3e546ec9948adff2e2f9461f9a3731775b143df0f99",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "036c60fd4ec1fff5553cc2c8c21b33116e0d741191377649dc7e0cdfc9d4a401",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "19da7ff4daf16e94bfab2ae74e11d17888cea3b6459cb2354df52e608d1df65a",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "20fa52b8f68d4f67ad918a1116802c7de2eb210c2d6d72d5a4c4f9c9806e1ecf",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "030e8eedf63827618125b5efc3ee0cb9a5e5fde1a8102c4b693e0a2aebb2d5de",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "0a2646481b35458bb4f1cfb60ca9592a1034f63be156a02ae397bf51bd7bd4c8",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "340f5986f086c5c8e39b62d31193c8145804841259ecaed0c52a063e022f87f0",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "053825531b13e29f108875e37769c08cdd6d17d940a38326fbc154bb2448ae82",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "f4e97a6807d2c485ab980e934d041956de649d59485ba7696bc14bbfd61d9098",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "74f073ebef8bb8f1156dd7ad55ce1a9df1b4afb5e311ecd3c30d190922fe3b07",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "8c9ce78f346c86c0cfeb24b51325f1f0673d701734df95a279551150b5aac181",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "7e804b6a992c9ac793cba175528ca012a054e3ec8d1a21c05ad589d337039c00",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "c96e4bc6737b0ecaf81c466f3ca2679a2bd0521651c4917f52654e6d6e68e4c7",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "4eea1d205e133d746623778e6b5879fa7c0795ac1c7886efcca3d5da3c16295b",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "2198547f3450ee81a6a8ba91bb3d125ebdc3e922be3bbefea6885f048029dba0",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "6b3b0e535377f7407aa0aa5add3644ddef9d86688b880c0fe452310cd7c6a7dc",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "edec866622b4079907e91aad8462959bed3a48fcfd580a715d0b1d9a81a02eae",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "769b6f8a509afbf5fc1b1540a670c44d4cea8356f7ffdb1dc23df3e25ca08328",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "a3a9f17b4b3c915f1a09408f97d40162d5d1d6f296d19637062c5d49dc499883",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "249777a9f0cd05a20f13703ed68157ea64250b042e461d416473767cb32efcdf",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "600b66841373c9ed47f4375d87a00a86c22d86483f0202fdf5711ec2fbfa563b",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "a6a6aaba4da95a760d98ea5b12c95472c6dea4cc2dc8be81f6c19e38b78692cf",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "0200a2d59e0a0f7c06ef6786d705afe2c1964816c85aa2f58d34f4cd66a23725",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "4649bf2a08619d31ae6e6b5fb36c7ae245c4eb643037067bb889f463b726423c",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "830ab4f51a4e619b60a314e7941172feeb094a605bfbfc53336490b1c0a1de33",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "90e2dda8e279d7de22b87b4e5e970e76f104d7fb55ad442281a2be984f63bd55",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "c7e210f139fca3229a8fd6744e93ec61bf6cf2bb3d612a309c659978ed92a6fe",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "c1015980f744aba1086f3313492d065391d466c5a10497635debc2f643c03d05",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "383cd40118df7eb6ff45d46a680125b6146934f088009d7185f477a7bc785b9f",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "0ab2928fe601df9e0bb33d99e62a08aa4d8d7f08b8874195fbea0ab979eaf08a",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "ddd5484d84f95bf0c40cbd2dea121c13c808af808b5fc0a21232e2641b3131b2"
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "7bb8abe84a4a429b36d8b1879d25ec015af6507357f46bde2e11cf8f0d296539",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "d43c21186e5bc90fe44ec6a693a306dcd00742e305af2f32b3ba2a55701cfbf8",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "034d219909fbf72478a46cedec7300bdc21797ba863b6485d872026c87b1e07e",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "a56c743eb72d41b5adec43f94b382e012d89b54fc83f6bcc672000268327fcba",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "542a14548b1b058ad96e715bb31870f003fb4aa887972ae2e46299783d3b354d",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "7b360bcf56fec61b2e0bfffacbc4cc78ae494454121ce777fe19a6ca87ecd5ed",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "895e06fbcc094661152b715cb5a515e0107249a3adc245f028fbb3834f37a67c",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "87055f80df54c41a1054f74eef85a985e2d949f94289e2adb97c87b14c4f2acc",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "bc344aea12105de9239d9f8b9e92a442cb94afd2cf83195b9efc9f7503b10dca",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "3c36643cd2711261375824c6485747ea64ff8429c48bc020b5e16ab17f78f72a",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "a1c8c3c78e35b8642552b310901418542aaa9cf19e80b68d09401eece7d920ee",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "e0a74c38e9c6db516f440fd3869e1dd1b31df07cb240373596a896f7353eaaeb",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "9013b03370980f3ffd950d4fabfad7ee0adfb0c2096bf655e3fafa0b826bfe7e",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "2af6d928bea063da69efd13962bd5cc6e3ba031bc414c8f98001318981cc3406",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "72f0759b995c1aa1ad9105f6d758eef3da5a37c338a8d350a60b1258b4e60782",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "20a6e214bbfa14351093c0da454df3fe2b17c76815b8020444522315823650e2",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "fcbfcdd97dc1d0a502210fecdbc7890b2318ef86bbff8708afdaf74ce7da333b",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "bb4827eed82b09193fe1d4af9819a1a451c6f9123a58bb9eef66fe7fbff57f0b",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "6b162f24b9e190249de6a35de8274d5c6352a4b9001d4314ca4f3ab40c1b94eb",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "bebff981b4e06143e49f940e548146c39c3ce3855ad4ff7b4ac382b644721156",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "8935402d484bcd84cf7b77bf4b4c92ef390ea702dafc66d9bb75ee5752a5f776",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "1497e3a7c12d840aea58960a99d813da597f40e122ceea5dc9b30dfae8451656",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "8013e6d87a01ca2e4632ee732f9042210ae8c7e029fa444427ca5f0a7d5ed527",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "0c111a1d1bcd300cd8e8df3ffe075907d913b606b2b64cd4044189e11993081c",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "80d986f2e8c0d91664f8a1c229be4756d3ae0dffc3ae7a57ce8ebf4519d48165",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "b17e6c2bdf768c4901869ea28f12ea77494917a97f4447f38aa2a8de0dccb1fc",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "c3492bba038068e8c40cdabdaa458a64af66c3e94841ff32f3cf82676ea1e583",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "a95523b192afc684906df3da83700e2753a7543d9674a3be4a90e4a620f123b2",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "b5c3b1de457d9e6563937f9fbb5a8a565666802dc796e5d2c3d27d4d7433fee3",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "d410fa1bc995e35166976391f2484adaf3b08516e1f7b828b0c72cf7bff85c12",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "9656853b0daf782ef714226419e3a04a9fab4b40b8b088d7cd562beeb44b7b73",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "fd0d7fcc7a11bde47d052f75d4b5ba45af4a2594fb2cb583aa0caa2edaafdc59",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "f24be3cfbaf0658949b9535812d0c03a968917af272bfeea74b8bfe595362ba2",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "21441db205ac7df83c8328e7a4dc467cf8641bcf308e4d7375103b1188cc3e70",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "8d558bc5deb6928abfcf1e4977c661258c33b9591dfbad7f19b4e87b6c11f57f",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "1a0e6e611f46d3334accc179d8a461a24919cf8ad3c0e11996393f1578a42219",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "d3b5d0174cb6edec5dfa33d5f62f138a878415e78b1c4460d008d752d507e80c",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "76ebd114bc7a4daf49e3987f103346fea6259b6e6593987bd80abffd4560e9d6",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "6e0500b662984fb6397840ea0c2b5178ef10d0d973a6a10751c5f9fe385056f9",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "4f8523b49594f3410f4f451e49aabd47514044ea6bd82b3fed481d06f4222398",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "acd2218955ed4f9df761c72b7d55a34f465102beaec23d43922cbed515f39db6",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "472064b4ec6fc26306d0f5b5c8e84cbc0a06b95d57ec650e360471aafd88c139",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "896ee92a7b518ab4f59748258a70110b2243535a2a63b0c92add99ecc51c9946",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "f57cbb29e66ad9ecf611636dfe2c77b43d96f1613411a6338a15b62ffeb63eb9",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "b0ddd7b1e5511088b19719e8fa2ac5cac6308da51b15963caf3156dfa4de64d3",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "3617f94f16b6c4c8df59068fdb2e7b56822baf974b7bc496538d639b97854439",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "7051dcfddcc36e074fee44fc606ea9c834cabc83cd31a25b4caa16bf42dfc964",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "18e2494ba0e14f81c0b4dc89f7f94504cda6cd17014880256a46a4b3255fd968",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "12faacd566f46d58150877f9e875733f3219df92aa17b1a553c30a9476cd7d11",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "dfe8d9b32f8f1b99f09416a8756363e4c08e147cc5054386a926d93f39795f47",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "412ab612112a58ceaf833eef0200ff85ff5c31bb3ad253f19f88160b54b8993d",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "7a135de13510675d78e51328a3fbb634f8933c95c5cbfa59a2ac8dfaaa39efa4",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "284582649f48b990d3bb031253e8c6161ca92d94084f65331733802c0b2437e5",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "19e597d6e3fc53780ff5e2d8a39222a36a739b9a751546aec82ec86df2edf8f1",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "4e761282c35c89090548a0db420d282283f0599ba19fff232c1ffe7ed9dad964",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "7d948453fddd1cffa5c26f411c5e3af9589e7063bec8aded54371b1da5ee7120",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "3825b3f8cd0ca62d7ccae1cb0cbb315ac3900ac4c97e2dee1688a132ea4b2675",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "08d819f18dac81a32db5e181fbf7f8fbbbd6e2916aed8beb0971e96f722f5a59",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "b45f2aa9b265c41bf636f82fcdb2675565919d03e262c8c906e4cc3c878eca0d",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "07858a65d5f04781233db46746c6de374c61afc481cbb003bc096821f466701d",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "fab08b46ccc8ae1e008553c205b8b46ba572f55d7f97bacb778773483639b112",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "b8c15bc73694e7297fe07d1b7c7a06de6a1129a4d010da36c952d871c12baa12",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "738dbb6095500250681f0b2a77f7d51a2cb9e024999d6b2a061922ba226a4da1",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "805a4684cbed99df9db012d5744594da04a951f50752a5a53a57eec02865a6c8",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "3d2f1cc9329b654524bca295641058715a4add030d919e36f56c96f3e3380aa9",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "0cf24ca42e79c538fbde779826db06a9f8553f35be4ae9f1aa2c034fadf58b80",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "085cd072542c41ce606879e3bfbcdda1e274a65bacf24f4a981f320501684014",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "c3a2b235851592c9ef7d5d13f26702d0d4984265ecc60b74703c6e8f9678d7ea",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "f787e17f76e69aec43946db16c6626a234e8cb04b813f0d8253a7a9d408a713d",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "6662fc7846fa453d9adb61380c99c7a41f4af04a9d8b0d7b4e265168930f7189",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "6b75c42974d575c1a539a3784dd0bf65464ebcd27f548dd754df2b4382aad670",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "45f479fea57e8434cb81a76d1b1b676c3fa2cf85f9eb222adda23beb57d4c526",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "7d0e3b533c764f97795e33533d3c1b7b49c91ce5d6c54ce7d515c6bef034ef0e",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "2860c34c8884aeff60b3981dc78b507f4dfa6d492c143c544dfe67cdbc5fe29d",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "61f89fd207b5685f863a655e6e45984cce517c6876c9bae2897a3dcb2383c60e",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "27aae73e5309cf632cabc77caef7e75f809aae8c10365ed65bc5e93d8907a83d",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "a3ae20104aeeae5161eeabc93ceb903d4b0c24f05d8370ec2554df607129f757",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "47b3f7c93f2e9a4e218e1a7c6e5841dd862ad41ae8960499e14ca6db00bf145c",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "cae495e64bd381d8e0228968750e73963239af43c3b86879c3459b51fefdd4cd",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "43f43f044d84acfafb52f20bc7d8a3b9f7de6d3597f33009062ea272cebd7b91",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "8d84fb2ece36c7b90ba1a989d443abad06c9f344c7baa7b59b2314a4c1cc66b7",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "0b4c5a864f29523a12f608c270367f601bba5449b2f2dece52a3a5c1ef7a8be1",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "96064f4a24d420bca932ca95a68e0c1d6cf61c7eda53949b8830ae76e11dbbe9",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "c44ca941580b995dd3537fd33d714b570a87bf6cdb3b3dcbe2b8d4077b870557",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "59a2e1a96088be0ee0b76a629f377829d499ac28716f44779639de18554f099c",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "71af83a135d34d7834fe3a84b85b01bba17aa4f3bbf18aafb62c08e4cf679d8c",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "c8c11fb706ee3241cb66f4ca6fb49c98741cde2d9a9f1897a6d56573d329040b",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "de7fbacd6963ffc0c761228ae492b92ea3122c499c54322a8426c41b723cbc6e",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "2b016ef29aee786dd1aee7fd05f3cef8e89727ecb42666e15db01e220c448cb8",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "bfde232785d9377ea924a510d86d0eefc975664e9a7ead4c233e87cdb5d72dc2",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "99ee2a196cb75bb81a885befc6655a40a066b24f4de87277420e2e7bcc320e20",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "0249ebed7cdb86473ff53e322bafece6995c626706635f988ce2e242c324b1b9",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "af166f440fbe7de42df948db0e5d9c157dc035bad24cba6294699f76dbe77a5b",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "6ed195f0edbab7e07492d1ca9c9564397d31fd2be5361f8f10f53d99384adc23",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "fa819656021936a3325751a70dfd84fcd4533e94b2c22c8975b2cc1c6673e480",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "b527701e6063154ad8c2a0a043022685445c65a9a65872b8ad1774aaabceb3cb",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "40e424054f8056c3fd691015d0cf25ae5c12a017c9a99b5d82bec107a708401a",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "28c172dcaeec13f8035ab78f3445b51de13fed87d9c506e1ba26c24e921d7468",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "91f0a94bdad39d673042d4b0caeaa3250d5f0194fa8af7d574f086555d8c042f",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "1c184445bd3088246d441b9d0237452c37915f0dd9215d6fef988452c37cb9ed",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "8111ef9dcf05c64b7bd1e5bebb8e8b3670972d0269083fe570f8ef0242c0de5c",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "4c65613737c5aadd081062234a147b5a8c6cad0c7d32ff3438b64c961a70849f",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "d631788c5af7fb8bb5f881253a8635f2f8d77c09232a79472fd60bc78e50de00",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "5d0ed907e5437d6a3a3f4150d4b0eb71193d5e6e9447291d0d505191b2db4304",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "a2bd4afc365c2c1945f6998e0ff70e5d7ccffddf6a70a34364f04d607b2b446d",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "05231e92734ac4c2254468aaf57ebd75ec4d89e63eea7f96a72c3fd071151c68",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "cd1eb0db2faf3548dd143c6c9cc6d29edd96491db7aefe779dad527cd11b7da6",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "123fd38f254a077a5fd855f11fd3a9f45b51f9a709f6335545f3c929fddf1d4f",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "16554f779ecfbb171b99da2c50b9c0453aa91a7d54f904ebb96287ae1d3a96f0",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "0a667c547b74270f07dbbfed07914be668e7b3af9d0d92ddf79cfeabf15214d9",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "ff8799556d25f8168f243c562332185627e8720eca422115691b5759733745ea",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "2b26e4561326f97712b482a0dbd7198ef6e318ac3d06a3d7653ba7bc8a88849e",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "2bb9e29bb60728d4777d699cccdab59e36ff98ffe337e35cd242ebd9a9ee59e9",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "ec405eca447e4f465545c65bbe2f626ee5956ef0fef22c91e672989b09da637c",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "f6613b0dc7d51613b1d556afe18cd284bb262815cea8ca9d0d7160e5a081ad3f",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "0c3fb5ab59b49e9f6216e8d251611a71153ee4072b3dcfadd4c6deb1377033f9",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "0bec5be9c105080ba1cd4559dc39eac4b464590c74b5a636d62176a31b81153f",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "4a56526b602964cf0311d1a9315ce833ee7d18dcd3789d69c6ee4b282e0d93b0",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "612b336d170c78b8c520094cf5111f42a5bc6eec1017a86356e51fba87722db9",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "8c1a99482c459dde4b21e65c1ba12c3263338f1fae24061d7dca1ca606f49f67",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "4365d50a882139557c913c6cd467f61b70442162897e21dc4e08dfcb1ddc64a0",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "1411f10d8a21d3ddc40a87523c0bcbfbeb656d186c404c25b4b31d0c9a2b87b9",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "619c87b37881502ddeb8560389d8e807a9349ba9c220b6e9e4bf08088dabc356",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "9ee7d9493c19b9af286b1287b3f71a5cf44c0aa4c062fefbdd5d129a0bddab6b",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "dd0016df449a9f36644f24d8aa9b6aa82e01cd3d70836cae0b712ff870cf1877",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "f25294055c02766d41031043b4f2959bde849b6eb24b0b9f180f0ed947dba25d",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "4e7e122de87722a46199bc0d00e5a00306ea8d636faccbb3d633b8735a41d4c2",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "5e417be966639f3b7ccd5b0cbf29a4b7cb210d530a5ca8ea13c8798af4c50cf0",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "33ad3d22099f635d4f2b72e176771585ccb5e99d506af20306744ee72b740d8b",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "b85e530379a1cf53de032e5ad7f8afff0b1d309c5f0cbf12f164c5e029272d10",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "50bd6032c80c792ae9a7891171e74b9c126a183938f595d30c6b77df13314354",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "e51bdd5539727a6bb2ddb2e55695e2a067c3f20862354f3ea6fad5f1be4df445",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "1d0b8dc314785a4ba35b17a19e86433ba66682bd6dd3dbe30cb8f58b31558241",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "1f1b59da8a25cc0764d7a4829ff1e0b9e578d13d149012ff0694bd7e69f4ec73",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "9d08ed419d07edfb002174a9a8ab3a04c4bd648a95ed9c2ab0b08aa0a4f49d97",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "04fdedad2c6cb72c9c9eccc4cafff02daf630e70886c8f898a560c8e90436e07",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "7927f60d1b203c5a4527c2db66e5eb0ee1a94db0fe15cf1dd5f3366b015b3292",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "a438d71168dd0a8e84fee33a4108fe7193832915df467b5739ec466f3a01144c",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "b473365987a50932f18b1f738bf0bb28235b877785f5a1f889d4bbd59c612d58",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "ca0cc993047133ac7d08dd4f4eb73ad97600ee2e5a4e7b5f1d35ed96001a0c11",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "3b6b7ff91be1b349d61ea7f669c5dafd3bbd64063b01afc59c1bae52a6527f09",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "06753811c19b0f3dd2ad8fa471288597beec5ada77b09816d73032820443368b",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "c00feb53988ce06cb33fe3cfc98b2d35d7970e1bc8ec0e7a962a6661bb014c0f",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "1103f8bad4a61ad6b2bd2b8ad0db925b3566ed1d5dbeaddc18309ffe4cba5cf3",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "63b756d6072b045aaa8b0b4b3cb5d3701d0d3b222b63d914a7d3ce9d44358bfd",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "9b60fa4b544e751191a2d991c8d3b4a04524855aa1a57d51a8f7b9e90e4a915f",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "102cba88146dcf40b87dcc2ac78d59a0408f9ffd4ac8a7ecabc72460a2276f6c",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "779b901f38555f766b2f3ae9e4e9c44d7c6304ad5c6731a9e2cf5095fa4380f0",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "16bd7c1a8ab9071d26f322222c70bd181184b693b773a93326f16d3ac9859e68",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "ca3bc76c4a4ca325b17a2b81f258d60f1123cbfbf70fab2bb44fa555369df9cd",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "1a1ff0c19363965ef0e799fd8290ee4c5c6277faef6e4fbdd04679cbcb299b6a",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "07b7a2df558fa0d188b20025a27c5c68644942ab2352f8acff4ad6f4c1636f35",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "d255d203ccf3311159410ee867129dba8d892aacd0e52df36823bcf381d38d85",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "1f8eadd9edcc2a4f90eda815612dc59199331db32b6c1adba25ef4d337dc6ddf",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "13d3f1806c53757fc757e345142d6613c2fff83bfb5d7fe608bec5dce7dd9a44",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "48810786ff8fbbdf73fae4c6864c73a7e50d37d28d3ceec752c7a2f598ea7b11",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "12fefc83acd3d8e037eb350f2e995a41a75317ba6a02d2485bed545b2483d119",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "7a8cd2d4a35fbb0c28a7a18bbef59ce58e97e96376f9bf670d64f3852aa27b56",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "2b02550c3ca6a38f579dd958cfd3038261f8b05f0b64aa49c68d35dde52552cc",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "3abb474390002818a8e1b90907ac1209126d144180d1fd5bcb7bf287f8c11095",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "e645088dda9cb74421a2b52979519c31ff3c3e2de207ca07293e4401496fa5f8",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "1fbf3b5c9b9d95dbbb5301685bfe70838088b975264f0cbc82598d2959b12d1b",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "4299448e04bf2a852fc99812c91f12a32625356df7387d5370274e725b889e38",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "c102919c854d4463a07e35a3bc97c1cc94edde389d07babeb7bce0b5035319c3",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "f8ceae0a5aaa315e91042e9a11193616c13153d14775a30a5888d201bb6a675c",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "596ab360b5fb2e3b61f37fc75c04f627599bd14255eef61afd00aa594eb9ece5",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "dcb705c5c6e1365f2dfd294698987a0f98150b244bda4436d4c4f50622914d3f",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "5c1776671a8fcd65d4fde6bd56ba6f79e7145bb5a3985cced12696a4f3d5a08c",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "d427e19b557a36273517d98b167b4d5aa0430c30a51de09b2eb578c965237fce",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "02109b193bb12f88cd0ba4f4f62e3692c12305e531246a2de58d7867124dd6c7",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "d639bfed6fe877f28ad3c5ce22ea91e7a4c90395490a7a890d4f56c8ffde4e75",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "28b714f8612e2698c76ca700c899e5f274e75ba881dc37f315c36dc9be0f1bb8",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "7cf26f0e4aaab581e0651358d58176316e823a41974283abb8958df8ccc74968",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "b20641355d1a2e7cc4802e60e2c9dc3cb987a35c4d4e155030c4928b60612153",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "8f3c51f56f9334ab8397ae6a6b0e79900a76dbe9a686bef4d4d9aa475e8fda3e",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "e9480f9220c5672fb6c7c13545c825ff75f67abec4ce6519d5005507c0294d0a",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "457d03d6534d5fdb2ff554342aec7a8011d9bac2ece56c87416c37a74756b077",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "9fb9bd285839ec204851c821005c988dd4e5948e59f2e5d2725d4d0a4d96b4c3",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "b948ef22f255b662bf01e7dae76aca79534c77f47d38e40e0436c6545041e601",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "c049aa724c02ca331e2c4c267b83d2eb0c4b591940622100e1ca1b8e0f2b96c3",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "118169354a25e072ab412815aad6f207f2f68539b5d3dc6cd11e8a17edb914b2",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "5f5595ab3b0be67ce3311d1bd226644d1cbc85c888764b0bb27cf5237924ef72",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "e6d97c06b38fc9c0cedf4ac0d25c3b3f033c732456b24325cf00e5e7e13b3e54",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "f84db9b680c661c9c87d6a9934d0fdced5ae8793cf33ae897147a78cd16b3942",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "932ed16c8821b067c5863c580e764e731b8e7a48f141620f41c98a5a11b1a448",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "b8e6e4bed28e28209a021040ee11b965c6896a6e380f28110d97f74f82844ae2",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "dfe3d4019a017b1eb404710ff7bc10b4818031886cc6c093115994492450f153",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "68f8c0d395c5f4d4f1094e723098b16263c1eeb9ab59fb60335c2083662b5fad",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "3934aff2da38e1dbf1811b07beb64fe821fb6b145a8542a29418e40d77edf189",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "68b35d07138119cff7d2a8ce1c21f83038a519cf1f1f082af4206b52c4b04158",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "1cf87810c90c6dd01746ea14efc3454aee2cd921422365995491ec0c8d9659d7",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "a60f414535bc174d68ab0a7dcfe2eaefe4b58d8908c53c021fd4a7eeb015cf13",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "8f401b35f91149e7b5c55b0304d450233f238a85cd17af415928da86aa7cb780",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "f66f2330c90c089bf657f32306e5593988b9954d05e77616c2b9b8a8937c889a"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Valkoinen kippiauto keltaisella lavalla ajaa pölyisellä, kaivetulla alueella, taustalla näkyy metsää.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "AI-generoitu kuva: Nykyaikainen kaupallinen kalastusalus on kiinnitettynä betonilaituriin, ja sen kannella on suuri verkkokela vihreine ja oranssine kalastusverkkoineen.",
+      "attempts": 1,
+      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
       "classifier_output": {
-        "category": "Kotimaa",
+        "category": "Maailma",
         "concepts": [
           {
-            "depictable_scene": "Todellinen lisensoitu valokuva Rivieranraitin keskeneräisestä katutyömaasta Vantaalla, jossa näkyvät louhittu kallioleikkaus ja kuljetusta odottava louhekasa.",
+            "depictable_scene": "Sari Essayah ja Costas Kadis vierekkäin EU-neuvoston kokousympäristössä, taustalla neuvottelusalin pöytiä ja mikrofoneja.",
             "must_avoid": [
-              "completed tram line",
-              "active blasting"
+              "unrelated council meeting",
+              "synthetic likenesses"
             ],
             "must_show": [
-              "excavated rock face",
-              "road construction site"
+              "Sari Essayah",
+              "Costas Kadis"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "Rivieranraitti louhintatyöt",
-              "Rivieranraitti työmaa Vantaa",
-              "Vantaan ratikka Rivieranraitti",
-              "excavated rock roadworks"
+              "Sari Essayah Costas Kadis September 2026",
+              "Sari Essayah Costas Kadis",
+              "Sari Essayah council microphone",
+              "EU Agriculture Fisheries Council 2026"
             ],
-            "subject": "Rivieranraitin louhinta"
+            "subject": "Sari Essayah neuvoston kokouksessa"
           },
           {
-            "depictable_scene": "Nimetön kaupunkirakentamisen työmaa ilman ihmisiä, jossa tunnukseton kippiauto kuljettaa louhetta maaleikatulla tiepohjalla.",
+            "depictable_scene": "Yksi nykyaikainen kaupallinen kalastusalus kiinnitettynä nimettömään laituriin, tyhjällä kannella suuri verkkokela ja tavanomaisia työvarusteita.",
             "must_avoid": [
               "people or body parts",
-              "readable text or logos",
-              "tram tracks"
+              "logos or readable text"
             ],
             "must_show": [
-              "unbranded dump truck",
-              "excavated rock"
+              "commercial fishing vessel",
+              "deck net reel"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "Rivieranraitti louheen kuljetus",
-              "louheen kuljetus työmaa",
-              "maaleikkaus katutyömaa",
-              "dump truck excavated rock"
+              "kalastusalusten kehittäminen rahoitus",
+              "commercial fishing vessel",
+              "fishing vessel net reel",
+              "modern fishing boat quay"
             ],
-            "subject": "louheen kuljetuksia ja maaleikkaustöitä"
+            "subject": "kalastusalusten kehittäminen"
           },
           {
-            "depictable_scene": "Nimetön avoin työmaakaivanto ilman ihmisiä, jossa rinnakkain asetetut kaapelisuojaputket lepäävät tasaisella sorapedillä.",
+            "depictable_scene": "Nimetön viljapelto, jossa halkeillut kuiva maa ja harva, ruskeaksi kuivunut viljakasvusto täyttävät kuvan ilman ihmisiä tai rakennuksia.",
             "must_avoid": [
               "people or body parts",
-              "readable text or logos",
-              "completed tram tracks"
+              "lush green crop"
             ],
             "must_show": [
-              "cable conduit pipes",
-              "open utility trench"
+              "cracked dry soil",
+              "withered cereal stalks"
             ],
             "rank": 3,
             "safe_to_generate": true,
             "search_queries": [
-              "Rivieranraitti kaapelisuojaputket",
-              "kaapelisuojaputket kaivanto",
-              "kaapeliputkien asennus työmaa",
-              "cable conduit trench"
+              "Etelä-Eurooppa kuivuus satovahingot",
+              "drought damaged wheat field",
+              "cracked soil cereal crop",
+              "European crop drought 2026"
             ],
-            "subject": "kaapelisuojaputkien asentaminen"
+            "subject": "satovahinkoja kuivuudesta kärsineellä viljapellolla"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Just a Dream Pictures on Pexels",
-      "depicted": "A white dump truck with a yellow bed is driving from left to right across a dirt field, kicking up a large cloud of dust behind it. The truck appears to be moving at a moderate speed. The bed of the truck contains what looks like rocks or debris. In the background, a dense line of green trees forms a horizon under a light, overcast sky. There is no readable text or identifiable people in the image.",
-      "generated": false,
-      "hotlink": false,
-      "license": "Pexels License",
-      "license_evidence": {
-        "image_path": "/photos/14821922/pexels-photo-14821922.jpeg",
-        "license": "Pexels License",
-        "license_code": "Pexels",
-        "license_url": "https://www.pexels.com/license/",
-        "photo_id": "14821922",
-        "photo_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
-        "photographer": "Just a Dream Pictures",
-        "photographer_url": "https://www.pexels.com/@just-a-dream-pictures-393935092",
-        "response_sha256": "a7c96cbfd0acd0f732934a9ef32617733bfb1d273383a1c07c96f84e61f75b90",
-        "retrieved_at": "2026-09-29T18:13:49.142438+00:00",
-        "transport": "jina_reader",
-        "version": 1
-      },
-      "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a.jpg",
+      "credit": "AI-kuvitus",
+      "depicted": "A modern commercial fishing vessel is docked at a concrete pier under an overcast sky. The vessel has a blue hull and white superstructure, with a large net reel on its deck containing green and orange fishing nets. Mountains are visible in the background across the water.",
+      "generated": true,
+      "license": "AI-generated image",
+      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "local_path": "media/38cacd32d66f833886bc79483c18412bbd1eec6090401462e62fb567212e6cfc.jpg",
+      "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Valkoinen kippiauto keltaisella lavalla ajaa pölyisellä, kaivetulla alueella, taustalla näkyy metsää.",
+        "alt_fi": "Nykyaikainen kaupallinen kalastusalus on kiinnitettynä betonilaituriin, ja sen kannella on suuri verkkokela vihreine ja oranssine kalastusverkkoineen.",
         "approved": true,
-        "article_text_sha256": "ac62bfae0cfcd593d6886a5be3c0a871bf9fc3f3e93aaff552b74a607d5d2c99",
-        "concept_sha256": "e41892d1b3ecbea02d63b89f58d4aedee6e186990fc312ec11f343a9c4040b68",
-        "description": "A white dump truck with a yellow bed drives across a dusty, excavated area with trees in the background. The truck is kicking up a significant amount of dust.",
+        "article_text_sha256": "6a5f86677c8ba800c888a4e717e7077776ad1f299424ff5e36bde28f69e712d8",
+        "concept_sha256": "e47ee972374429e933d9c9196e7381c19caf4d47c610119d131acea634f695c1",
+        "description": "A modern commercial fishing vessel is docked at a concrete pier under an overcast sky. The vessel has a blue hull and white superstructure, with a large net reel on its deck containing green and orange fishing nets. Mountains are visible in the background across the water.",
         "fit_score": 9,
-        "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
+        "image_sha256": "38cacd32d66f833886bc79483c18412bbd1eec6090401462e62fb567212e6cfc",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly shows an unbranded dump truck carrying excavated material (likely rock, given the article context of 'louheen kuljetuksia') on a dusty, excavated site, which directly illustrates the article's subject of 'louheen kuljetuksia ja maaleikkaustöitä'. There are no people, readable text, logos, or tram tracks visible, aligning with the 'must_avoid' criteria.",
-        "reviewed_at": "2026-09-29T18:13:52.158339+00:00",
+        "reason": "The image clearly depicts a modern commercial fishing vessel with a prominent net reel on its deck, directly matching the selected concept. The article discusses EU funding for the development of fishing vessels and the fishing sector, making the image highly relevant.",
+        "reviewed_at": "2026-09-29T18:59:58.418355+00:00",
         "text_audit": {
           "examples": [],
           "readable_text_present": false
         }
       },
       "pixels": {
-        "height": 623,
+        "height": 1024,
         "mode": "RGB",
-        "variance": 11793.7,
-        "width": 940
+        "variance": 11681.5,
+        "width": 1536
       },
+      "prompt_sha256": "57fabccde8749ac9ae74ab5bd5afdbf10c81a59e3c91af1eb42bd9d4428e2a57",
+      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "A white dump truck with a yellow bed drives across a dusty, excavated area with trees in the background. The truck is kicking up a significant amount of dust.",
+        "evidence": "Yksi nykyaikainen kaupallinen kalastusalus kiinnitettynä nimettömään laituriin, tyhjällä kannella suuri verkkokela ja tavanomaisia työvarusteita.",
         "matched": [
-          "dump",
-          "excavated",
-          "truck"
+          "commercial fishing vessel",
+          "deck net reel"
         ],
-        "method": "vision",
-        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+        "method": "generation",
+        "reason": "generated from the accepted scene"
       },
+      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "ac62bfae0cfcd593d6886a5be3c0a871bf9fc3f3e93aaff552b74a607d5d2c99",
-        "decision_sha256": "f6dbb3e5232a613ca45bfd5dc9f0f2bd7fd2b93bfabc2a5638aafa764e3f3fce",
+        "article_text_sha256": "6a5f86677c8ba800c888a4e717e7077776ad1f299424ff5e36bde28f69e712d8",
+        "decision_sha256": "061e031730ace252d0d9aab830bc5525196cfcb1beef0a198f5cc61bcc2f0d43",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "9b70781652b40baac9ae85532df5b1b31fc9f9a36921932967ec66a7c0b95a3d",
+                "license": "Pexels License",
+                "reason": "The image shows a woman in traditional attire, which is completely unrelated to the article about the EU Agriculture and Fisheries Council or the selected concept of Sari Essayah and Costas Kadis in a council meeting environment. Neither Sari Essayah nor Costas Kadis are visible in the image. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/indian-woman-in-traditional-red-sari-outdoors-38246585/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "489c54ab1e37b4d4d05408f71e036b6584ac5c42690f700c67dbe67658aebdac",
+                "license": "Pexels License",
+                "reason": "The image shows a microphone in a conference setting, which broadly relates to the article's theme of council meetings. However, the selected concept specifically requires Sari Essayah and Costas Kadis to be visible, neither of whom are present in the image. Therefore, it does not meet the specific requirements of the concept. One or more required ",
+                "source_url": "https://www.pexels.com/photo/black-microphone-in-light-conference-hall-4331578/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "3d9ecbec955a12b996aab5b54d50f8306fed8949957d85fb3b49391b7f1ab74f",
+                "license": "Pexels License",
+                "reason": "The article discusses an EU council meeting where Sari Essayah was present. The selected concept specifically requires Sari Essayah and Costas Kadis to be visible in a council meeting environment. The image shows only a microphone, which is a generic object that could be present in a meeting but does not depict the required individuals or a clear c",
+                "source_url": "https://www.pexels.com/photo/close-up-of-a-microphone-in-a-music-studio-16497546/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "bad5f06517aa92308ad4f234c29976173d0edbb88e5e4359bc9e21efa1d2ba79",
+                "license": "Pexels License",
+                "reason": "The image does not show Sari Essayah or Costas Kadis, nor does it depict an EU council meeting environment. The visible subject is a woman in a recording studio, which is entirely unrelated to the article about the EU Agriculture and Fisheries Council and its discussions. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/side-view-of-a-woman-in-a-music-studio-7086729/"
+              }
+            ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
+            "provider": "pexels",
             "queries": [
-              "cited source image"
+              "Sari Essayah Costas Kadis September 2026",
+              "Sari Essayah Costas Kadis",
+              "Sari Essayah council microphone"
             ]
           },
           {
             "candidates": [],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Sari Essayah Costas Kadis September 2026",
+              "Sari Essayah Costas Kadis",
+              "Sari Essayah council microphone"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "4678060ce1cd339582eaabc6f32987e0b16779455fada84ebb462a977e7d44fe",
+                "license": "CC BY 4.0",
+                "reason": "The article discusses the EU Agriculture and Fisheries Council, including fisheries funding and policy. The image shows people on a boat with a fish, which broadly relates to fisheries. However, the selected concept specifically requires Sari Essayah and Costas Kadis in a council meeting environment, with tables and microphones. The visible scene d",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Visit%20of%20Costas%20Kadis,%20European%20Commissoner,%20to%20Finland%20(P-067272-00-48).jpg"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Rivieranraitti louhintatyöt",
-              "Rivieranraitti työmaa Vantaa",
-              "Vantaan ratikka Rivieranraitti"
+              "Sari Essayah Costas Kadis September 2026",
+              "Sari Essayah Costas Kadis",
+              "Sari Essayah council microphone"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Sari Essayah Costas Kadis September 2026",
+              "Sari Essayah Costas Kadis",
+              "Sari Essayah council microphone"
             ]
           },
           {
@@ -1294,181 +977,178 @@
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "941de5c16ff921facb932ec7b45deec623da549becdd60b3f769fc51dff55a23",
+                "image_sha256": "97643b2dac4f09b98cf4643afa337b2eb2bc448fb96096e95793e60ce0017f21",
                 "license": "Pexels License",
-                "reason": "The image shows a construction site with buildings and roads, but it does not clearly depict an excavated rock face or a road construction site that specifically relates to rock excavation and transport as described in the article. While there are areas of disturbed earth, there is no clear rock face or large pile of excavated rock (louhekasa) that",
-                "source_url": "https://www.pexels.com/photo/aerial-view-of-swedish-residential-development-site-36955202/"
+                "reason": "The article discusses the financing of the fisheries sector and the development of fishing vessels. The selected concept describes a modern commercial fishing vessel with a deck net reel, docked at a quay. The image shows a commercial fishing vessel, but it is actively deploying a net at sea, not docked at a quay. Furthermore, while there is a net,",
+                "source_url": "https://www.pexels.com/photo/boat-with-fishing-net-11183913/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "4b75c4250696a31d4e29a79c1d7a1efd21495dcac9f8d4fa66614875d31f5240",
+                "license": "Pexels License",
+                "reason": "The image shows fishing lures and a part of a reel, which are related to fishing, but it does not clearly depict a commercial fishing vessel or a deck net reel as required by the concept. The visible elements are too generic to confirm the specific type of vessel or the presence of a large net reel. One or more required concept elements are not vis",
+                "source_url": "https://www.pexels.com/photo/close-up-of-bracelets-9470907/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "97643b2dac4f09b98cf4643afa337b2eb2bc448fb96096e95793e60ce0017f21",
+                "license": "Pexels License",
+                "reason": "The article discusses the financing of the fisheries sector and the development of fishing vessels. The selected concept describes a modern commercial fishing vessel with a deck net reel, docked at a quay. The image shows a commercial fishing vessel, which aligns with the 'commercial fishing vessel' must_show element. However, the vessel is at sea,",
+                "source_url": "https://www.pexels.com/photo/boat-with-fishing-net-11183913/"
               }
             ],
-            "concept_rank": 1,
+            "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Rivieranraitti louhintatyöt",
-              "Rivieranraitti työmaa Vantaa",
-              "Vantaan ratikka Rivieranraitti"
+              "kalastusalusten kehittäminen rahoitus",
+              "commercial fishing vessel",
+              "fishing vessel net reel"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 0,
-                "image_sha256": "ddff690e0000bf99f2bccb35827c6c4e3bd0f49e1f28b163f4073b8cf12a70a8",
+                "fit_score": 7,
+                "image_sha256": "daeccc9623f08102c172f158ae38405df51285f87d4d1731e7fd2b25f0a64e80",
                 "license": "Unsplash License",
-                "reason": "The article discusses excavation work for a road construction site related to a tram line. The image shows a natural rock formation and a house, not an excavated rock face or a road construction site. Therefore, it does not depict the concrete subject of the article or the selected concept. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/man-in-black-t-shirt-and-blue-denim-jeans-sitting-on-brown-rock-during-daytime-0fSKV4NcBkM?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The image shows a commercial fishing vessel, which is relevant to the article's discussion of fisheries funding and development. However, the selected concept specifically requires a 'deck net reel' to be clearly present, which is not visible on this vessel. Therefore, the image does not fully meet the concept's requirements. One or more required c",
+                "source_url": "https://unsplash.com/photos/a-fishing-boat-in-the-water-near-a-light-house-gEnuJC5oEyo?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
-            "concept_rank": 1,
+            "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "Rivieranraitti louhintatyöt",
-              "Rivieranraitti työmaa Vantaa",
-              "Vantaan ratikka Rivieranraitti"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "Rivieranraitti louhintatyöt",
-              "Rivieranraitti työmaa Vantaa",
-              "Vantaan ratikka Rivieranraitti"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Rivieranraitti louheen kuljetus",
-              "louheen kuljetus työmaa",
-              "maaleikkaus katutyömaa"
+              "kalastusalusten kehittäminen rahoitus",
+              "commercial fishing vessel",
+              "fishing vessel net reel"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 3,
-                "image_sha256": "213aa9300d127a9bc58df93264ba21b922bfdd1e19a39243c36dad020c15e54c",
-                "license": "Pexels License",
-                "reason": "The article discusses excavation and earth-cutting work for a tram connection in Vantaa, involving dump trucks and excavated rock. The image shows a coastal road with a truck, but it is not a dump truck, nor is there any visible excavation work or excavated rock. The scene does not depict a construction site or the specific activities mentioned in ",
-                "source_url": "https://www.pexels.com/photo/scenic-coastal-road-at-sunset-with-ocean-view-32821932/"
+                "fit_score": 6,
+                "image_sha256": "5b93dd61f07be4988a115c5a9b373de1eb00b8ed1b866082c9241e41b41e3079",
+                "license": "Public domain",
+                "reason": "The article discusses EU funding for fisheries and the development of fishing vessels. The selected concept specifies a modern commercial fishing vessel docked at a quay with a deck net reel. The image shows a commercial fishing vessel at sea, not docked, and it does not clearly show a deck net reel. The vessel also appears to be older, not necessa",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Pacific%20ocean-fishing%20for%20tuna-commercial%20trolling%20vessel.jpg"
               },
               {
                 "approved": false,
-                "fit_score": 0,
-                "image_sha256": "179f85937f2448a1ab23bd976219f93c46377c55588b0f644f9a6b5f0155c95c",
-                "license": "Pexels License",
-                "reason": "The article discusses excavation and earth-cutting work for a future tram connection in Vantaa, involving dump trucks and excavated rock. The image shows tugboats, a cruise ship, and a city harbor, which is completely unrelated to the article's subject matter of urban construction and earthworks. The selected concept specifically requires a dump tr",
-                "source_url": "https://www.pexels.com/photo/tugboats-docked-near-a-cruise-ship-10231086/"
+                "fit_score": 4,
+                "image_sha256": "226e4468e48778ea8bf8e03abd15781c30a22841394ea7fe953d8ce5b219818c",
+                "license": "Public domain",
+                "reason": "The article discusses modern EU fishing policy and the development of fishing vessels. The selected concept specifies a modern commercial fishing vessel with a deck net reel. The image depicts historical sailing ships and scows, which are not modern commercial fishing vessels, and no net reel is visible. Therefore, it does not meet the specific req",
+                "source_url": "https://commons.wikimedia.org/wiki/File:FMIB%2034768%20Cannery%20Ship,%20Salmon%20Scow,%20and%20Tender,%20Bristol%20Bay.jpeg"
               },
               {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
-                "license": "Pexels License",
-                "reason": "The image clearly shows an unbranded dump truck carrying excavated material (likely rock, given the article context of 'louheen kuljetuksia') on a dusty, excavated site, which directly illustrates the article's subject of 'louheen kuljetuksia ja maaleikkaustöitä'. There are no people, readable text, logos, or tram tracks visible, aligning with the ",
-                "source_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/"
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "db30e305d14a536321e2dcd186ab210e7d2a8acc45318d229d96a34feab3d73f",
+                "license": "Public domain",
+                "reason": "The article discusses the EU's fisheries policy and financing for the development of fishing vessels. The selected concept specifies a modern commercial fishing vessel with a deck net reel. The image shows people on what appears to be a recreational fishing boat, not a commercial vessel, and there is no visible deck net reel. The presence of people",
+                "source_url": "https://commons.wikimedia.org/wiki/File:15th%20MEU%20Gone%20Fishing%20140626-M-ST621-126.jpg"
               }
             ],
             "concept_rank": 2,
-            "outcome": "accepted",
-            "provider": "pexels",
-            "queries": [
-              "Rivieranraitti louheen kuljetus",
-              "louheen kuljetus työmaa",
-              "maaleikkaus katutyömaa"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Rivieranraitti kaapelisuojaputket",
-              "kaapelisuojaputket kaivanto",
-              "kaapeliputkien asennus työmaa"
+              "kalastusalusten kehittäminen rahoitus",
+              "commercial fishing vessel",
+              "fishing vessel net reel"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "kalastusalusten kehittäminen rahoitus",
+              "commercial fishing vessel",
+              "fishing vessel net reel"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 3,
-                "image_sha256": "09cc888eafbcdca1e00547fe90b159cd2a914d6bba7d14a181a048ec52410edd",
+                "fit_score": 7,
+                "image_sha256": "09f463ac3b776be2c5c5a33d9b9535652eff0a83274e04ea72b6973710da1a56",
                 "license": "Pexels License",
-                "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The selected concept specifically requires 'cable conduit pipes' and an 'open utility trench'. The image shows pipes, but they are clearly attached to a vertical wall or facade, not lying in an open trench. Therefore, it does not de",
-                "source_url": "https://www.pexels.com/photo/wall-with-pipes-23414767/"
+                "reason": "The image shows withered cereal stalks, which aligns with the concept. However, the 'cracked dry soil' element is not visible in the actual pixels, which is a mandatory element for approval. The article mentions drought causing crop damage, making the withered stalks relevant, but the absence of cracked soil prevents full approval for this specific",
+                "source_url": "https://www.pexels.com/photo/brown-wheat-field-10123493/"
+              }
+            ],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "Etelä-Eurooppa kuivuus satovahingot",
+              "drought damaged wheat field",
+              "cracked soil cereal crop"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "9fe79b65fb4b1ab5b0a0f7f1f99ed145c996433d19f62d9d64004fd26b7ac7b5",
+                "license": "Unsplash License",
+                "reason": "The image shows withered cereal stalks, which aligns with one 'must_show' element. However, the crucial 'cracked dry soil' element is not visible in the actual pixels, making the image an incomplete fit for the selected concept. The article mentions drought causing crop damage, which this image broadly illustrates, but it fails to meet the specific",
+                "source_url": "https://unsplash.com/photos/brown-wheat-field-during-daytime-DXy0ppGM_3g?utm_source=uutistenlukija&utm_medium=referral"
               },
               {
                 "approved": false,
-                "fit_score": 3,
-                "image_sha256": "54646f042c0293c5dd026cb7d020e5f7cec3dd3ba5e49f08f797ffd11f1ddf1f",
-                "license": "Pexels License",
-                "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The image shows a person installing pipes, but these are clearly visible as water/heating pipes (copper and white plastic pipes with clamps) on a wall, not cable conduit pipes in an open trench. The image also contains a person, whi",
-                "source_url": "https://www.pexels.com/photo/skilled-worker-adjusting-pipes-with-precision-39885422/"
+                "fit_score": 7,
+                "image_sha256": "fc0722f47a25221fd6cced7ee59d40d81a8fba2f9fb56e607fe80defab4849ce",
+                "license": "Unsplash License",
+                "reason": "The image clearly shows cracked dry soil, which is one of the 'must_show' elements. However, it completely lacks 'withered cereal stalks', which is another required element for the selected concept. Therefore, it does not fully meet the concept's requirements. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/brown-dried-leaves-on-brown-soil-zwy0l1XBIaE?utm_source=uutistenlukija&utm_medium=referral"
               },
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "8e76d715d45886fbaf05c9530be7ef943a9ec974ec28adad4de0881faa2916ef",
-                "license": "Pexels License",
-                "reason": "The article discusses the installation of cable conduit pipes as part of a tram connection project. The image shows cable conduit pipes, which aligns with the 'cable conduit pipes' must_show element. However, the concept also requires an 'open utility trench', which is not visible in the image. The image is a close-up of pipes only, without any con",
-                "source_url": "https://www.pexels.com/photo/close-up-photo-of-red-pipes-8414059/"
-              },
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "fd30eb81c7cbe4f48d8b6e2260be567c56dd8dc36300c8a39ff0e2644ac98265",
-                "license": "Pexels License",
-                "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The image shows large metal pipes, but they are clearly part of a hydroelectric power generation system, not cable conduits for a tramway. The pipes are also not in an open utility trench for a tramway project, but rather integrated",
-                "source_url": "https://www.pexels.com/photo/hydroelectric-power-pipes-in-rodberg-norway-31502428/"
+                "image_sha256": "85c9e2fd96d4f46c830e90569ecb491edc247ecd46a98e34f88c58885042d41a",
+                "license": "Unsplash License",
+                "reason": "The article discusses drought causing crop damage in Southern and Central Europe. The selected concept specifically requests a withered cereal crop in a field with cracked dry soil. While the image clearly shows cracked dry soil, it completely lacks any visible cereal stalks or other vegetation, which is a 'must_show' element. Therefore, it does no",
+                "source_url": "https://unsplash.com/photos/a-black-and-white-photo-of-a-cracked-surface-YeZHDQJDEX8?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
             "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
+            "provider": "unsplash",
             "queries": [
-              "Rivieranraitti kaapelisuojaputket",
-              "kaapelisuojaputket kaivanto",
-              "kaapeliputkien asennus työmaa"
+              "Etelä-Eurooppa kuivuus satovahingot",
+              "drought damaged wheat field",
+              "cracked soil cereal crop"
             ]
           },
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "778c395d38e7cf929321f2e31009c18fc561882f0ff583eee6904fab00617e6d",
+                "license": "Public domain",
+                "reason": "The article discusses crop damage due to drought in Southern and Central Europe. The selected concept specifies a close-up view of a field with cracked dry soil and withered cereal stalks. The provided image is a satellite map showing a large geographical area with brown coloration, which could indicate drought, but it does not show cracked soil or",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Severe%20Drought%20in%20Southern%20Russia%202010177%20lrg.jpg"
+              }
+            ],
             "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
+            "provider": "wikimedia",
             "queries": [
-              "Rivieranraitti kaapelisuojaputket",
-              "kaapelisuojaputket kaivanto",
-              "kaapeliputkien asennus työmaa"
+              "Etelä-Eurooppa kuivuus satovahingot",
+              "drought damaged wheat field",
+              "cracked soil cereal crop"
             ]
           },
           {
@@ -1477,226 +1157,270 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "Rivieranraitti kaapelisuojaputket",
-              "kaapelisuojaputket kaivanto",
-              "kaapeliputkien asennus työmaa"
+              "Etelä-Eurooppa kuivuus satovahingot",
+              "drought damaged wheat field",
+              "cracked soil cereal crop"
             ]
           }
         ],
         "selected": {
           "concept_rank": 2,
           "fit_score": 9,
-          "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
-          "kind": "real"
+          "image_sha256": "38cacd32d66f833886bc79483c18412bbd1eec6090401462e62fb567212e6cfc",
+          "kind": "generated"
         },
         "version": "article-first-v1"
       },
-      "sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
-      "source_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
-      "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/14821922/pexels-photo-14821922.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "14821922",
-        "photo_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
-        "photographer": "Just a Dream Pictures",
-        "photographer_url": "https://www.pexels.com/@just-a-dream-pictures-393935092",
-        "provider": "pexels",
-        "query": "louheen kuljetus työmaa",
-        "retrieved_at": "2026-09-29T18:13:49Z"
-      },
-      "stock_provenance_sha256": "8edd9f5df7063571cead4f8bad17dc1e102f3bed5170dcbcb7a2d5dfc0fba9bc",
-      "url": "https://uutistenlukija.fi/media/550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a.jpg"
+      "sha256": "38cacd32d66f833886bc79483c18412bbd1eec6090401462e62fb567212e6cfc",
+      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "subject": "kalastusalusten kehittäminen",
+      "url": "https://uutistenlukija.fi/media/38cacd32d66f833886bc79483c18412bbd1eec6090401462e62fb567212e6cfc.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "vantaa",
+      "provider": "valtioneuvosto",
       "related_sources": 0,
-      "source_fields_sha256": "fb42add52249714b4278e38f472e834bebf177ed586fe388f0465c9ab9257264",
-      "source_sha256": "79b69baed6a30b5c2d58718dfd31588410fd989fbc7877ea5d5ee6c8302a53cb"
+      "source_fields_sha256": "cdbc1c6cd6e4f6e3081cb5eb109cf74f91ddc298262ff675623979635ae4f534",
+      "source_sha256": "e8d5db40a1f956bb8f12f7831ef32faf4a9fe31f74a6ef25c2a82548938f9aec"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-09-29T00:00:00+03:00",
-        "publisher": "Vantaan kaupunki",
+        "published_at": "2026-09-29T18:45+0300",
+        "publisher": "Valtioneuvoston kanslia",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
-          "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://hri.fi/fi/kayttoehdot/"
+          "license": "Valtioneuvoston sivuston käyttöehdot: tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan; aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen",
+          "license_url": "https://valtioneuvosto.fi/tietoa-sivustosta",
+          "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
+          "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
         },
-        "text": "Ensi viikolla alueella jatketaan louheen kuljetuksia sekä maaleikkaustöitä. Näiden valmistuttua aloitetaan pohjavedensuojausten sekä kaapelisuojaputkien asennukset. Työt etenevät suunnitellusti, ja samalla otetaan jälleen yksi askel kohti tulevaa raitiotieyhteyttä.\nSuosittelemme sinulle myös\nVantaan ratikka\nErityistä melua aiheuttavat poraus- ja louhintatyöt alkavat Rivieranraitiolla\nAvainsanat\nRatikka\nRatikka Kuninkaala - Mellunmäki\n…\nShow all keywords",
-        "title": "Louhintatyöt valmistuvat Rivieranraitiolla",
-        "url": "https://www.vantaa.fi/fi/ajankohtaista/uutinen/louhintatyot-valmistuvat-rivieranraitiolla"
+        "text": "Julkaisuajankohta 29.9.2026 18.45\nTyyppi:Tiedote\nVasemmalta: maa- ja metsätalousministeri Sari Essayah ja Euroopan komission kalastus- ja meriasioista vastaava komissaari Costas Kadis.\nEU:n maatalous- ja kalastusneuvosto keskusteli 28.–29. syyskuuta yhteisen maatalouspolitiikan tulevaisuudesta, maatalouden markkinatilanteesta sekä kalatalousalan rahoituksesta osana EU:n seuraavaa monivuotista rahoituskehystä. Suomi antoi myös päivityksen afrikkalaisen sikaruton tilanteesta. Kokouksessa Suomea edusti maa- ja metsätalousministeri Sari Essayah.\nMaatalous- ja kalastusneuvoston kokouksessa jäsenvaltiot keskustelivat EU:n tulevasta yhteisestä maatalouspolitiikasta. Ministerit suhtautuivat myönteisesti puheenjohtajavaltion tavoitteeseen muodostaa neuvoston kanta asiasta lokakuun maatalous- ja kalastusneuvostossa. Keskusteluissa kiitettiin jäsenvaltioille ehdotettujen joustomahdollisuuksien lisäämistä, mutta samalla useat maat toivoivat lainsäädäntöehdotukseen vielä lisää joustavuutta. Jäsenvaltiot esittivät myös useita ehdotuksia tekstin jatkovalmisteluun.\nMinisterit keskustelivat lisäksi maatalouden markkinatilanteesta. Kokoukseen kutsuttu Ukrainan maatalousministeri Taras Vysotskyi kuvasi Ukrainan maataloussektorin tilannetta Venäjän hyökkäyssodan aikana. Maa- ja metsätalousministeri Sari Essayah korosti EU:n jatkuvan tuen merkitystä Ukrainalle myös kaupan keinoin. Keskustelussa tuotiin esiin myös maatalousmarkkinoihin vaikuttaneet poikkeukselliset sääolosuhteet. Erityisesti kuivuus Etelä- ja Keski-Euroopan jäsenvaltioissa aiheutti satovahinkoja ja haasteita maataloudelle.\nKalatalousalan rahoitussäännöistä osittainen yleisnäkemys\nNeuvosto hyväksyi osittaisen yleisnäkemyksen kalatalousalan ja meripolitiikan rahoittamista koskeviksi säännöiksi osana EU:n vuosien 2028–2034 monivuotista rahoituskehystä. Suomen näkemyksen mukaan rahoituksella on tärkeä merkitys kalatalousalan kilpailukyvyn ja toiminnan jatkuvuuden turvaamisessa. Nykyisen rahoituskauden sääntöihin verrattuna, osittainen yleisnäkemys yksinkertaistaisi rahoituksen sääntöjä sekä parantaisi mahdollisuuksia edistää kalastuksen sukupolvenvaihdoksia ja kalastusalusten kehittämistä.\nNeuvosto käsitteli myös komission ehdotusta Euroopan meri-, kalatalous- ja vesiviljelyrahastoa koskevan asetuksen muuttamiseksi. Suomi korosti tarvetta tukea nykyistä paremmin kalastuksen energiasiirtymää ja sukupolvenvaihdoksia sekä helpottaa lainarahoituksen käyttöä energiasiirtymän edistämiseksi. Jäsenvaltiot korostivat myös muutosten ripeän käsittelyn tarvetta ohjelmakauden lähestyessä loppuaan.\nLisäksi Suomi antoi neuvostolle päivityksen afrikkalaisen sikaruton tilanteesta. Ensimmäiset tautitapaukset todettiin Suomessa villisioissa 30.7.2026, ja tähän mennessä tartunta on varmistettu 45 villisiassa.\nLisätietoja:\nElinkeinokalatalousyksikön päällikkö Timo Halonen, maa- ja metsätalousministeriö\nErityisasiantuntija Kari Valonen, maa- ja metsätalousministeriö\nMinisterin erityisavustaja (viestintä) Tommi Terä, maa- ja metsätalousministeriö\nSähköpostit maa- ja metsätalousministeriössä ovat muotoa [email protected]\nEU ja kansainväliset asiat\nEU EU-maat maatalous maatalouspolitiikka rahoitus",
+        "title": "EU:n maatalousministerit keskustelivat tulevasta maatalouspolitiikasta ja markkinatilanteesta",
+        "url": "https://valtioneuvosto.fi/-/1410837/eu-n-maatalousministerit-keskustelivat-tulevasta-maatalouspolitiikasta-ja-markkinatilanteesta"
       }
     ],
-    "story_key": "url:https://www.vantaa.fi/fi/ajankohtaista/uutinen/louhintatyot-valmistuvat-rivieranraitiolla",
+    "story_key": "url:https://valtioneuvosto.fi/-/1410837/eu-n-maatalousministerit-keskustelivat-tulevasta-maatalouspolitiikasta-ja-markkinatilanteesta",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-09-29T15:57:21.328556+00:00",
-        "sha256": "37e3e4988a099fc7921ed9f02a2f423c0474321466ca0495b6fcf7819b56a7ed",
-        "text": "Käyttöoikeus määritellyin ehdoin hyödynnettävissä. Datan käytön lisäksi Palvelussa on mahdollisuus keskusteluun.\nKäyttöoikeus\nPalvelu sisältää dataa useasta eri lähteestä: julkisyhteisöjen tuottamia datoja ja niiden metatietoja, Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja ja Palvelun ylläpitäjien tuottamia artikkeleja ja muita kirjoituksia. Pääsääntöisesti näihin kaikkiin on laaja käyttöoikeus Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Poikkeukset on kerrottu erikseen kunkin aineiston kohdalla.\nAvoin data\nPalvelussa olevien datojen (tietoaineistojen) omistus- ja immateriaalioikeudet kuuluvat kunkin datan tekijälle.\nPääsääntöisesti Palvelun käyttäjillä on laaja käyttöoikeus datoihin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Datoja saa vapaasti kopioida, levittää, näyttää ja esittää sekä käyttää datoja osana muuta teosta. Datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin.\nEhtona käytölle on, että datan tekijä (ylläpitäjä) on ilmoitettava. Datan tekijän pyynnöstä tämä viittaus on poistettava. Datan tekijä on kerrottu kunkin datan metadatassa.\nDatan tekijää ei saa ilmoittaa siten, että ilmoitus viittaisi datan tekijän tai Palvelun tukevan datan käyttäjää tai datan käyttötapaa.\nDatojen metatietojen yhteydessä on mainittu kyseisen datan käyttöoikeusehdot. Joissakin tapauksissa käyttöoikeusehdot voivat poiketa yllä mainitusta.\nKeskustelu\nPalvelun käyttäjät voivat keskusteluosiossa lisätä sivuille kirjoituksia ja kommentoida toisten käyttäjien kirjoituksia. Palvelun käyttäjä antaa kirjoituksiinsa ja kommentteihinsa vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nMikäli käyttäjä liittää kirjoitukseensa tai kommenttiinsa kuvia, tulee hänellä olla tekijänoikeudet kuvaan. Lisäksi hänellä tulee olla kuvassa esiintyvien henkilöiden lupa kuvan julkaisemiseen internetissä. Palvelun käyttäjä antaa kuviin vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nKeskustelun tulee olla hyvän tavan ja Suomen lainsäädännön mukaista. Käyttäjät ovat vastuussa lisäämistään kirjoituksista ja kommenteista.\nKaikenlainen mainonta keskustelussa on kielletty.\nPalvelun tarjoajat voivat tarvittaessa muokata kirjoituksia ja kommentteja sekä poistaa hyvän tavan tai lainsäädännön vastaisia tai muutoin sopimattomia kirjoituksia.\nMikäli käyttäjä havaitsee käyttöehtojen vastaisia kirjoituksia, pyydetään tästä ilmoittamaan ylläpidolle.\nToistuva käyttöehtojen rikkominen tai niiden vakava rikkominen voi johtaa väliaikaiseen tai pysyvään Palvelun käyttöoikeuden peruuttamiseen.\nSovellusgalleria\nSovellusgalleriassa esitellyt sovellukset eivät ole HRI:n tekemiä ja niiden tekijänoikeudet kuuluvat sovellusten tekijöille. Creative Commons 4.0 -lisenssi ei koske sovelluksia, eikä niitä ole lupa vapaasti kopioida, levittää, muokata tai yhdistellä, ellei erikseen sovelluksen kohdalla ole toisin mainittu tai sovelluksen tekijä muutoin ole tähän antanut lupaa.\nMuut palvelussa olevat kirjoitukset\nPalvelun tuottajien Palvelussa julkaisemien kirjoitusten, kuten artikkelien ja blogikirjoitusten omistus- ja tekijänoikeudet kuuluvat niiden kirjoittajille. Palvelun käyttäjillä on laaja käyttöoikeus näihin kirjoituksiin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nPalvelun ulkoasu, tekninen toteutus, tavaramerkit ja logot\nPalvelun teknisen toteutuksen lähdekoodit on saatavilla avoimesti GitHubista. Palvelun kopiointi sellaisenaan on kielletty. Palvelussa esiintyvien tavaramerkkien ja logojen tavaramerkkioikeudet kuuluvat niiden oikeudenhaltijoille. Mikäli tavaramerkkien ja logojen muu käyttö on sallittu, on tästä ja käytön ehdoista ilmoitettu ko. tavaramerkkien ja logojen kohdalla.\nTietosuoja\nhri.fi-palvelua ylläpitää Helsingin kaupunki. Kaupunki on sitoutunut suojaamaan verkkopalveluidensa käyttäjien yksityisyyttä Tietosuojalain (2018), EU:n tietosuoja-asetuksen (2016/679) sekä muun soveltuvan lainsäädännön mukaisesti.\nHelsingin kaupungin tietosuojasivut\nVastuuvapaus\nPalvelu sisältää sekä julkisyhteisöjen tuottamaa avointa dataa ja metadataa että Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja. Palvelun tarjoajat eivät vastaa Palvelussa olevien tietojen oikeellisuudesta. Palvelun käyttäjä käyttää Palvelussa olevaa avointa dataa omalla vastuullaan. Palvelun tarjoajat eivät vastaa mistään välittömistä tai välillisistä vahingoista, jotka aiheutuvat datan käytöstä. ",
-        "url": "https://hri.fi/fi/kayttoehdot/"
+        "retrieved_at": "2026-09-29T18:50:21.290375+00:00",
+        "sha256": "abcf16b5ba482eb4929856bb3f5554dc5bcdb0a775c51d6e125f57e7b66bf92b",
+        "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
+        "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
       }
     ]
   },
   "draft": {
-    "category": "Kotimaa",
+    "category": "Maailma",
     "image": {
-      "alt": "Arkistokuva: Valkoinen kippiauto keltaisella lavalla ajaa pölyisellä, kaivetulla alueella, taustalla näkyy metsää.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "AI-generoitu kuva: Nykyaikainen kaupallinen kalastusalus on kiinnitettynä betonilaituriin, ja sen kannella on suuri verkkokela vihreine ja oranssine kalastusverkkoineen.",
+      "attempts": 1,
+      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
       "classifier_output": {
-        "category": "Kotimaa",
+        "category": "Maailma",
         "concepts": [
           {
-            "depictable_scene": "Todellinen lisensoitu valokuva Rivieranraitin keskeneräisestä katutyömaasta Vantaalla, jossa näkyvät louhittu kallioleikkaus ja kuljetusta odottava louhekasa.",
+            "depictable_scene": "Sari Essayah ja Costas Kadis vierekkäin EU-neuvoston kokousympäristössä, taustalla neuvottelusalin pöytiä ja mikrofoneja.",
             "must_avoid": [
-              "completed tram line",
-              "active blasting"
+              "unrelated council meeting",
+              "synthetic likenesses"
             ],
             "must_show": [
-              "excavated rock face",
-              "road construction site"
+              "Sari Essayah",
+              "Costas Kadis"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "Rivieranraitti louhintatyöt",
-              "Rivieranraitti työmaa Vantaa",
-              "Vantaan ratikka Rivieranraitti",
-              "excavated rock roadworks"
+              "Sari Essayah Costas Kadis September 2026",
+              "Sari Essayah Costas Kadis",
+              "Sari Essayah council microphone",
+              "EU Agriculture Fisheries Council 2026"
             ],
-            "subject": "Rivieranraitin louhinta"
+            "subject": "Sari Essayah neuvoston kokouksessa"
           },
           {
-            "depictable_scene": "Nimetön kaupunkirakentamisen työmaa ilman ihmisiä, jossa tunnukseton kippiauto kuljettaa louhetta maaleikatulla tiepohjalla.",
+            "depictable_scene": "Yksi nykyaikainen kaupallinen kalastusalus kiinnitettynä nimettömään laituriin, tyhjällä kannella suuri verkkokela ja tavanomaisia työvarusteita.",
             "must_avoid": [
               "people or body parts",
-              "readable text or logos",
-              "tram tracks"
+              "logos or readable text"
             ],
             "must_show": [
-              "unbranded dump truck",
-              "excavated rock"
+              "commercial fishing vessel",
+              "deck net reel"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "Rivieranraitti louheen kuljetus",
-              "louheen kuljetus työmaa",
-              "maaleikkaus katutyömaa",
-              "dump truck excavated rock"
+              "kalastusalusten kehittäminen rahoitus",
+              "commercial fishing vessel",
+              "fishing vessel net reel",
+              "modern fishing boat quay"
             ],
-            "subject": "louheen kuljetuksia ja maaleikkaustöitä"
+            "subject": "kalastusalusten kehittäminen"
           },
           {
-            "depictable_scene": "Nimetön avoin työmaakaivanto ilman ihmisiä, jossa rinnakkain asetetut kaapelisuojaputket lepäävät tasaisella sorapedillä.",
+            "depictable_scene": "Nimetön viljapelto, jossa halkeillut kuiva maa ja harva, ruskeaksi kuivunut viljakasvusto täyttävät kuvan ilman ihmisiä tai rakennuksia.",
             "must_avoid": [
               "people or body parts",
-              "readable text or logos",
-              "completed tram tracks"
+              "lush green crop"
             ],
             "must_show": [
-              "cable conduit pipes",
-              "open utility trench"
+              "cracked dry soil",
+              "withered cereal stalks"
             ],
             "rank": 3,
             "safe_to_generate": true,
             "search_queries": [
-              "Rivieranraitti kaapelisuojaputket",
-              "kaapelisuojaputket kaivanto",
-              "kaapeliputkien asennus työmaa",
-              "cable conduit trench"
+              "Etelä-Eurooppa kuivuus satovahingot",
+              "drought damaged wheat field",
+              "cracked soil cereal crop",
+              "European crop drought 2026"
             ],
-            "subject": "kaapelisuojaputkien asentaminen"
+            "subject": "satovahinkoja kuivuudesta kärsineellä viljapellolla"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Just a Dream Pictures on Pexels",
-      "depicted": "A white dump truck with a yellow bed is driving from left to right across a dirt field, kicking up a large cloud of dust behind it. The truck appears to be moving at a moderate speed. The bed of the truck contains what looks like rocks or debris. In the background, a dense line of green trees forms a horizon under a light, overcast sky. There is no readable text or identifiable people in the image.",
-      "generated": false,
-      "hotlink": false,
-      "license": "Pexels License",
-      "license_evidence": {
-        "image_path": "/photos/14821922/pexels-photo-14821922.jpeg",
-        "license": "Pexels License",
-        "license_code": "Pexels",
-        "license_url": "https://www.pexels.com/license/",
-        "photo_id": "14821922",
-        "photo_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
-        "photographer": "Just a Dream Pictures",
-        "photographer_url": "https://www.pexels.com/@just-a-dream-pictures-393935092",
-        "response_sha256": "a7c96cbfd0acd0f732934a9ef32617733bfb1d273383a1c07c96f84e61f75b90",
-        "retrieved_at": "2026-09-29T18:13:49.142438+00:00",
-        "transport": "jina_reader",
-        "version": 1
-      },
-      "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a.jpg",
+      "credit": "AI-kuvitus",
+      "depicted": "A modern commercial fishing vessel is docked at a concrete pier under an overcast sky. The vessel has a blue hull and white superstructure, with a large net reel on its deck containing green and orange fishing nets. Mountains are visible in the background across the water.",
+      "generated": true,
+      "license": "AI-generated image",
+      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "local_path": "media/38cacd32d66f833886bc79483c18412bbd1eec6090401462e62fb567212e6cfc.jpg",
+      "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Valkoinen kippiauto keltaisella lavalla ajaa pölyisellä, kaivetulla alueella, taustalla näkyy metsää.",
+        "alt_fi": "Nykyaikainen kaupallinen kalastusalus on kiinnitettynä betonilaituriin, ja sen kannella on suuri verkkokela vihreine ja oranssine kalastusverkkoineen.",
         "approved": true,
-        "article_text_sha256": "ac62bfae0cfcd593d6886a5be3c0a871bf9fc3f3e93aaff552b74a607d5d2c99",
-        "concept_sha256": "e41892d1b3ecbea02d63b89f58d4aedee6e186990fc312ec11f343a9c4040b68",
-        "description": "A white dump truck with a yellow bed drives across a dusty, excavated area with trees in the background. The truck is kicking up a significant amount of dust.",
+        "article_text_sha256": "6a5f86677c8ba800c888a4e717e7077776ad1f299424ff5e36bde28f69e712d8",
+        "concept_sha256": "e47ee972374429e933d9c9196e7381c19caf4d47c610119d131acea634f695c1",
+        "description": "A modern commercial fishing vessel is docked at a concrete pier under an overcast sky. The vessel has a blue hull and white superstructure, with a large net reel on its deck containing green and orange fishing nets. Mountains are visible in the background across the water.",
         "fit_score": 9,
-        "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
+        "image_sha256": "38cacd32d66f833886bc79483c18412bbd1eec6090401462e62fb567212e6cfc",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly shows an unbranded dump truck carrying excavated material (likely rock, given the article context of 'louheen kuljetuksia') on a dusty, excavated site, which directly illustrates the article's subject of 'louheen kuljetuksia ja maaleikkaustöitä'. There are no people, readable text, logos, or tram tracks visible, aligning with the 'must_avoid' criteria.",
-        "reviewed_at": "2026-09-29T18:13:52.158339+00:00",
+        "reason": "The image clearly depicts a modern commercial fishing vessel with a prominent net reel on its deck, directly matching the selected concept. The article discusses EU funding for the development of fishing vessels and the fishing sector, making the image highly relevant.",
+        "reviewed_at": "2026-09-29T18:59:58.418355+00:00",
         "text_audit": {
           "examples": [],
           "readable_text_present": false
         }
       },
       "pixels": {
-        "height": 623,
+        "height": 1024,
         "mode": "RGB",
-        "variance": 11793.7,
-        "width": 940
+        "variance": 11681.5,
+        "width": 1536
       },
+      "prompt_sha256": "57fabccde8749ac9ae74ab5bd5afdbf10c81a59e3c91af1eb42bd9d4428e2a57",
+      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "A white dump truck with a yellow bed drives across a dusty, excavated area with trees in the background. The truck is kicking up a significant amount of dust.",
+        "evidence": "Yksi nykyaikainen kaupallinen kalastusalus kiinnitettynä nimettömään laituriin, tyhjällä kannella suuri verkkokela ja tavanomaisia työvarusteita.",
         "matched": [
-          "dump",
-          "excavated",
-          "truck"
+          "commercial fishing vessel",
+          "deck net reel"
         ],
-        "method": "vision",
-        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+        "method": "generation",
+        "reason": "generated from the accepted scene"
       },
+      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "ac62bfae0cfcd593d6886a5be3c0a871bf9fc3f3e93aaff552b74a607d5d2c99",
-        "decision_sha256": "f6dbb3e5232a613ca45bfd5dc9f0f2bd7fd2b93bfabc2a5638aafa764e3f3fce",
+        "article_text_sha256": "6a5f86677c8ba800c888a4e717e7077776ad1f299424ff5e36bde28f69e712d8",
+        "decision_sha256": "061e031730ace252d0d9aab830bc5525196cfcb1beef0a198f5cc61bcc2f0d43",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "9b70781652b40baac9ae85532df5b1b31fc9f9a36921932967ec66a7c0b95a3d",
+                "license": "Pexels License",
+                "reason": "The image shows a woman in traditional attire, which is completely unrelated to the article about the EU Agriculture and Fisheries Council or the selected concept of Sari Essayah and Costas Kadis in a council meeting environment. Neither Sari Essayah nor Costas Kadis are visible in the image. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/indian-woman-in-traditional-red-sari-outdoors-38246585/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "489c54ab1e37b4d4d05408f71e036b6584ac5c42690f700c67dbe67658aebdac",
+                "license": "Pexels License",
+                "reason": "The image shows a microphone in a conference setting, which broadly relates to the article's theme of council meetings. However, the selected concept specifically requires Sari Essayah and Costas Kadis to be visible, neither of whom are present in the image. Therefore, it does not meet the specific requirements of the concept. One or more required ",
+                "source_url": "https://www.pexels.com/photo/black-microphone-in-light-conference-hall-4331578/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "3d9ecbec955a12b996aab5b54d50f8306fed8949957d85fb3b49391b7f1ab74f",
+                "license": "Pexels License",
+                "reason": "The article discusses an EU council meeting where Sari Essayah was present. The selected concept specifically requires Sari Essayah and Costas Kadis to be visible in a council meeting environment. The image shows only a microphone, which is a generic object that could be present in a meeting but does not depict the required individuals or a clear c",
+                "source_url": "https://www.pexels.com/photo/close-up-of-a-microphone-in-a-music-studio-16497546/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "bad5f06517aa92308ad4f234c29976173d0edbb88e5e4359bc9e21efa1d2ba79",
+                "license": "Pexels License",
+                "reason": "The image does not show Sari Essayah or Costas Kadis, nor does it depict an EU council meeting environment. The visible subject is a woman in a recording studio, which is entirely unrelated to the article about the EU Agriculture and Fisheries Council and its discussions. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/side-view-of-a-woman-in-a-music-studio-7086729/"
+              }
+            ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
+            "provider": "pexels",
             "queries": [
-              "cited source image"
+              "Sari Essayah Costas Kadis September 2026",
+              "Sari Essayah Costas Kadis",
+              "Sari Essayah council microphone"
             ]
           },
           {
             "candidates": [],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Sari Essayah Costas Kadis September 2026",
+              "Sari Essayah Costas Kadis",
+              "Sari Essayah council microphone"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "4678060ce1cd339582eaabc6f32987e0b16779455fada84ebb462a977e7d44fe",
+                "license": "CC BY 4.0",
+                "reason": "The article discusses the EU Agriculture and Fisheries Council, including fisheries funding and policy. The image shows people on a boat with a fish, which broadly relates to fisheries. However, the selected concept specifically requires Sari Essayah and Costas Kadis in a council meeting environment, with tables and microphones. The visible scene d",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Visit%20of%20Costas%20Kadis,%20European%20Commissoner,%20to%20Finland%20(P-067272-00-48).jpg"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Rivieranraitti louhintatyöt",
-              "Rivieranraitti työmaa Vantaa",
-              "Vantaan ratikka Rivieranraitti"
+              "Sari Essayah Costas Kadis September 2026",
+              "Sari Essayah Costas Kadis",
+              "Sari Essayah council microphone"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Sari Essayah Costas Kadis September 2026",
+              "Sari Essayah Costas Kadis",
+              "Sari Essayah council microphone"
             ]
           },
           {
@@ -1704,181 +1428,178 @@
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "941de5c16ff921facb932ec7b45deec623da549becdd60b3f769fc51dff55a23",
+                "image_sha256": "97643b2dac4f09b98cf4643afa337b2eb2bc448fb96096e95793e60ce0017f21",
                 "license": "Pexels License",
-                "reason": "The image shows a construction site with buildings and roads, but it does not clearly depict an excavated rock face or a road construction site that specifically relates to rock excavation and transport as described in the article. While there are areas of disturbed earth, there is no clear rock face or large pile of excavated rock (louhekasa) that",
-                "source_url": "https://www.pexels.com/photo/aerial-view-of-swedish-residential-development-site-36955202/"
+                "reason": "The article discusses the financing of the fisheries sector and the development of fishing vessels. The selected concept describes a modern commercial fishing vessel with a deck net reel, docked at a quay. The image shows a commercial fishing vessel, but it is actively deploying a net at sea, not docked at a quay. Furthermore, while there is a net,",
+                "source_url": "https://www.pexels.com/photo/boat-with-fishing-net-11183913/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "4b75c4250696a31d4e29a79c1d7a1efd21495dcac9f8d4fa66614875d31f5240",
+                "license": "Pexels License",
+                "reason": "The image shows fishing lures and a part of a reel, which are related to fishing, but it does not clearly depict a commercial fishing vessel or a deck net reel as required by the concept. The visible elements are too generic to confirm the specific type of vessel or the presence of a large net reel. One or more required concept elements are not vis",
+                "source_url": "https://www.pexels.com/photo/close-up-of-bracelets-9470907/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "97643b2dac4f09b98cf4643afa337b2eb2bc448fb96096e95793e60ce0017f21",
+                "license": "Pexels License",
+                "reason": "The article discusses the financing of the fisheries sector and the development of fishing vessels. The selected concept describes a modern commercial fishing vessel with a deck net reel, docked at a quay. The image shows a commercial fishing vessel, which aligns with the 'commercial fishing vessel' must_show element. However, the vessel is at sea,",
+                "source_url": "https://www.pexels.com/photo/boat-with-fishing-net-11183913/"
               }
             ],
-            "concept_rank": 1,
+            "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Rivieranraitti louhintatyöt",
-              "Rivieranraitti työmaa Vantaa",
-              "Vantaan ratikka Rivieranraitti"
+              "kalastusalusten kehittäminen rahoitus",
+              "commercial fishing vessel",
+              "fishing vessel net reel"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 0,
-                "image_sha256": "ddff690e0000bf99f2bccb35827c6c4e3bd0f49e1f28b163f4073b8cf12a70a8",
+                "fit_score": 7,
+                "image_sha256": "daeccc9623f08102c172f158ae38405df51285f87d4d1731e7fd2b25f0a64e80",
                 "license": "Unsplash License",
-                "reason": "The article discusses excavation work for a road construction site related to a tram line. The image shows a natural rock formation and a house, not an excavated rock face or a road construction site. Therefore, it does not depict the concrete subject of the article or the selected concept. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/man-in-black-t-shirt-and-blue-denim-jeans-sitting-on-brown-rock-during-daytime-0fSKV4NcBkM?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The image shows a commercial fishing vessel, which is relevant to the article's discussion of fisheries funding and development. However, the selected concept specifically requires a 'deck net reel' to be clearly present, which is not visible on this vessel. Therefore, the image does not fully meet the concept's requirements. One or more required c",
+                "source_url": "https://unsplash.com/photos/a-fishing-boat-in-the-water-near-a-light-house-gEnuJC5oEyo?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
-            "concept_rank": 1,
+            "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "Rivieranraitti louhintatyöt",
-              "Rivieranraitti työmaa Vantaa",
-              "Vantaan ratikka Rivieranraitti"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "Rivieranraitti louhintatyöt",
-              "Rivieranraitti työmaa Vantaa",
-              "Vantaan ratikka Rivieranraitti"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Rivieranraitti louheen kuljetus",
-              "louheen kuljetus työmaa",
-              "maaleikkaus katutyömaa"
+              "kalastusalusten kehittäminen rahoitus",
+              "commercial fishing vessel",
+              "fishing vessel net reel"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 3,
-                "image_sha256": "213aa9300d127a9bc58df93264ba21b922bfdd1e19a39243c36dad020c15e54c",
-                "license": "Pexels License",
-                "reason": "The article discusses excavation and earth-cutting work for a tram connection in Vantaa, involving dump trucks and excavated rock. The image shows a coastal road with a truck, but it is not a dump truck, nor is there any visible excavation work or excavated rock. The scene does not depict a construction site or the specific activities mentioned in ",
-                "source_url": "https://www.pexels.com/photo/scenic-coastal-road-at-sunset-with-ocean-view-32821932/"
+                "fit_score": 6,
+                "image_sha256": "5b93dd61f07be4988a115c5a9b373de1eb00b8ed1b866082c9241e41b41e3079",
+                "license": "Public domain",
+                "reason": "The article discusses EU funding for fisheries and the development of fishing vessels. The selected concept specifies a modern commercial fishing vessel docked at a quay with a deck net reel. The image shows a commercial fishing vessel at sea, not docked, and it does not clearly show a deck net reel. The vessel also appears to be older, not necessa",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Pacific%20ocean-fishing%20for%20tuna-commercial%20trolling%20vessel.jpg"
               },
               {
                 "approved": false,
-                "fit_score": 0,
-                "image_sha256": "179f85937f2448a1ab23bd976219f93c46377c55588b0f644f9a6b5f0155c95c",
-                "license": "Pexels License",
-                "reason": "The article discusses excavation and earth-cutting work for a future tram connection in Vantaa, involving dump trucks and excavated rock. The image shows tugboats, a cruise ship, and a city harbor, which is completely unrelated to the article's subject matter of urban construction and earthworks. The selected concept specifically requires a dump tr",
-                "source_url": "https://www.pexels.com/photo/tugboats-docked-near-a-cruise-ship-10231086/"
+                "fit_score": 4,
+                "image_sha256": "226e4468e48778ea8bf8e03abd15781c30a22841394ea7fe953d8ce5b219818c",
+                "license": "Public domain",
+                "reason": "The article discusses modern EU fishing policy and the development of fishing vessels. The selected concept specifies a modern commercial fishing vessel with a deck net reel. The image depicts historical sailing ships and scows, which are not modern commercial fishing vessels, and no net reel is visible. Therefore, it does not meet the specific req",
+                "source_url": "https://commons.wikimedia.org/wiki/File:FMIB%2034768%20Cannery%20Ship,%20Salmon%20Scow,%20and%20Tender,%20Bristol%20Bay.jpeg"
               },
               {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
-                "license": "Pexels License",
-                "reason": "The image clearly shows an unbranded dump truck carrying excavated material (likely rock, given the article context of 'louheen kuljetuksia') on a dusty, excavated site, which directly illustrates the article's subject of 'louheen kuljetuksia ja maaleikkaustöitä'. There are no people, readable text, logos, or tram tracks visible, aligning with the ",
-                "source_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/"
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "db30e305d14a536321e2dcd186ab210e7d2a8acc45318d229d96a34feab3d73f",
+                "license": "Public domain",
+                "reason": "The article discusses the EU's fisheries policy and financing for the development of fishing vessels. The selected concept specifies a modern commercial fishing vessel with a deck net reel. The image shows people on what appears to be a recreational fishing boat, not a commercial vessel, and there is no visible deck net reel. The presence of people",
+                "source_url": "https://commons.wikimedia.org/wiki/File:15th%20MEU%20Gone%20Fishing%20140626-M-ST621-126.jpg"
               }
             ],
             "concept_rank": 2,
-            "outcome": "accepted",
-            "provider": "pexels",
-            "queries": [
-              "Rivieranraitti louheen kuljetus",
-              "louheen kuljetus työmaa",
-              "maaleikkaus katutyömaa"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Rivieranraitti kaapelisuojaputket",
-              "kaapelisuojaputket kaivanto",
-              "kaapeliputkien asennus työmaa"
+              "kalastusalusten kehittäminen rahoitus",
+              "commercial fishing vessel",
+              "fishing vessel net reel"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "kalastusalusten kehittäminen rahoitus",
+              "commercial fishing vessel",
+              "fishing vessel net reel"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 3,
-                "image_sha256": "09cc888eafbcdca1e00547fe90b159cd2a914d6bba7d14a181a048ec52410edd",
+                "fit_score": 7,
+                "image_sha256": "09f463ac3b776be2c5c5a33d9b9535652eff0a83274e04ea72b6973710da1a56",
                 "license": "Pexels License",
-                "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The selected concept specifically requires 'cable conduit pipes' and an 'open utility trench'. The image shows pipes, but they are clearly attached to a vertical wall or facade, not lying in an open trench. Therefore, it does not de",
-                "source_url": "https://www.pexels.com/photo/wall-with-pipes-23414767/"
+                "reason": "The image shows withered cereal stalks, which aligns with the concept. However, the 'cracked dry soil' element is not visible in the actual pixels, which is a mandatory element for approval. The article mentions drought causing crop damage, making the withered stalks relevant, but the absence of cracked soil prevents full approval for this specific",
+                "source_url": "https://www.pexels.com/photo/brown-wheat-field-10123493/"
+              }
+            ],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "Etelä-Eurooppa kuivuus satovahingot",
+              "drought damaged wheat field",
+              "cracked soil cereal crop"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "9fe79b65fb4b1ab5b0a0f7f1f99ed145c996433d19f62d9d64004fd26b7ac7b5",
+                "license": "Unsplash License",
+                "reason": "The image shows withered cereal stalks, which aligns with one 'must_show' element. However, the crucial 'cracked dry soil' element is not visible in the actual pixels, making the image an incomplete fit for the selected concept. The article mentions drought causing crop damage, which this image broadly illustrates, but it fails to meet the specific",
+                "source_url": "https://unsplash.com/photos/brown-wheat-field-during-daytime-DXy0ppGM_3g?utm_source=uutistenlukija&utm_medium=referral"
               },
               {
                 "approved": false,
-                "fit_score": 3,
-                "image_sha256": "54646f042c0293c5dd026cb7d020e5f7cec3dd3ba5e49f08f797ffd11f1ddf1f",
-                "license": "Pexels License",
-                "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The image shows a person installing pipes, but these are clearly visible as water/heating pipes (copper and white plastic pipes with clamps) on a wall, not cable conduit pipes in an open trench. The image also contains a person, whi",
-                "source_url": "https://www.pexels.com/photo/skilled-worker-adjusting-pipes-with-precision-39885422/"
+                "fit_score": 7,
+                "image_sha256": "fc0722f47a25221fd6cced7ee59d40d81a8fba2f9fb56e607fe80defab4849ce",
+                "license": "Unsplash License",
+                "reason": "The image clearly shows cracked dry soil, which is one of the 'must_show' elements. However, it completely lacks 'withered cereal stalks', which is another required element for the selected concept. Therefore, it does not fully meet the concept's requirements. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/brown-dried-leaves-on-brown-soil-zwy0l1XBIaE?utm_source=uutistenlukija&utm_medium=referral"
               },
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "8e76d715d45886fbaf05c9530be7ef943a9ec974ec28adad4de0881faa2916ef",
-                "license": "Pexels License",
-                "reason": "The article discusses the installation of cable conduit pipes as part of a tram connection project. The image shows cable conduit pipes, which aligns with the 'cable conduit pipes' must_show element. However, the concept also requires an 'open utility trench', which is not visible in the image. The image is a close-up of pipes only, without any con",
-                "source_url": "https://www.pexels.com/photo/close-up-photo-of-red-pipes-8414059/"
-              },
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "fd30eb81c7cbe4f48d8b6e2260be567c56dd8dc36300c8a39ff0e2644ac98265",
-                "license": "Pexels License",
-                "reason": "The article discusses the installation of cable conduit pipes in an open utility trench as part of a tramway project. The image shows large metal pipes, but they are clearly part of a hydroelectric power generation system, not cable conduits for a tramway. The pipes are also not in an open utility trench for a tramway project, but rather integrated",
-                "source_url": "https://www.pexels.com/photo/hydroelectric-power-pipes-in-rodberg-norway-31502428/"
+                "image_sha256": "85c9e2fd96d4f46c830e90569ecb491edc247ecd46a98e34f88c58885042d41a",
+                "license": "Unsplash License",
+                "reason": "The article discusses drought causing crop damage in Southern and Central Europe. The selected concept specifically requests a withered cereal crop in a field with cracked dry soil. While the image clearly shows cracked dry soil, it completely lacks any visible cereal stalks or other vegetation, which is a 'must_show' element. Therefore, it does no",
+                "source_url": "https://unsplash.com/photos/a-black-and-white-photo-of-a-cracked-surface-YeZHDQJDEX8?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
             "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
+            "provider": "unsplash",
             "queries": [
-              "Rivieranraitti kaapelisuojaputket",
-              "kaapelisuojaputket kaivanto",
-              "kaapeliputkien asennus työmaa"
+              "Etelä-Eurooppa kuivuus satovahingot",
+              "drought damaged wheat field",
+              "cracked soil cereal crop"
             ]
           },
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "778c395d38e7cf929321f2e31009c18fc561882f0ff583eee6904fab00617e6d",
+                "license": "Public domain",
+                "reason": "The article discusses crop damage due to drought in Southern and Central Europe. The selected concept specifies a close-up view of a field with cracked dry soil and withered cereal stalks. The provided image is a satellite map showing a large geographical area with brown coloration, which could indicate drought, but it does not show cracked soil or",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Severe%20Drought%20in%20Southern%20Russia%202010177%20lrg.jpg"
+              }
+            ],
             "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
+            "provider": "wikimedia",
             "queries": [
-              "Rivieranraitti kaapelisuojaputket",
-              "kaapelisuojaputket kaivanto",
-              "kaapeliputkien asennus työmaa"
+              "Etelä-Eurooppa kuivuus satovahingot",
+              "drought damaged wheat field",
+              "cracked soil cereal crop"
             ]
           },
           {
@@ -1887,63 +1608,77 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "Rivieranraitti kaapelisuojaputket",
-              "kaapelisuojaputket kaivanto",
-              "kaapeliputkien asennus työmaa"
+              "Etelä-Eurooppa kuivuus satovahingot",
+              "drought damaged wheat field",
+              "cracked soil cereal crop"
             ]
           }
         ],
         "selected": {
           "concept_rank": 2,
           "fit_score": 9,
-          "image_sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
-          "kind": "real"
+          "image_sha256": "38cacd32d66f833886bc79483c18412bbd1eec6090401462e62fb567212e6cfc",
+          "kind": "generated"
         },
         "version": "article-first-v1"
       },
-      "sha256": "550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a",
-      "source_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
-      "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/14821922/pexels-photo-14821922.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "14821922",
-        "photo_url": "https://www.pexels.com/photo/a-dump-truck-on-the-dirt-ground-near-the-trees-14821922/",
-        "photographer": "Just a Dream Pictures",
-        "photographer_url": "https://www.pexels.com/@just-a-dream-pictures-393935092",
-        "provider": "pexels",
-        "query": "louheen kuljetus työmaa",
-        "retrieved_at": "2026-09-29T18:13:49Z"
-      },
-      "stock_provenance_sha256": "8edd9f5df7063571cead4f8bad17dc1e102f3bed5170dcbcb7a2d5dfc0fba9bc",
-      "url": "https://uutistenlukija.fi/media/550cdc0584ba41a77cab6f747550fe1e957f7a2495d49107c6cfd301d34cab9a.jpg"
+      "sha256": "38cacd32d66f833886bc79483c18412bbd1eec6090401462e62fb567212e6cfc",
+      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "subject": "kalastusalusten kehittäminen",
+      "url": "https://uutistenlukija.fi/media/38cacd32d66f833886bc79483c18412bbd1eec6090401462e62fb567212e6cfc.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Vantaan kaupungin mukaan Rivieranraitin alueen louhintatyöt ovat valmistumassa. Alueella jatketaan ensi viikolla louheen kuljetuksia ja maaleikkaustöitä."
+        "text": "Valtioneuvoston tiedotteen mukaan EU:n maatalous- ja kalastusneuvosto kokoontui 28.–29. syyskuuta käsittelemään yhteisen maatalouspolitiikan tulevaisuutta, maatalousmarkkinoita ja kalatalousalan rahoitusta. Suomea edusti maa- ja metsätalousministeri Sari Essayah."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Näiden töiden jälkeen on määrä aloittaa pohjavedensuojausten ja kaapelisuojaputkien asentaminen. Kaupunki kertoo töiden etenevän suunnitellusti osana tulevaa raitiotieyhteyttä."
+        "text": "Tiedotteen mukaan jäsenmaat suhtautuivat myönteisesti puheenjohtajavaltion tavoitteeseen muodostaa neuvoston kanta tulevaan yhteiseen maatalouspolitiikkaan lokakuussa. Useat maat toivoivat lainsäädäntöehdotukseen lisää joustavuutta."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Maatalousmarkkinoita koskevassa keskustelussa käsiteltiin tiedotteen mukaan Ukrainan maatalouden tilannetta Venäjän hyökkäyssodan aikana sekä poikkeuksellisten sääolojen vaikutuksia. Kuivuuden kerrottiin aiheuttaneen satovahinkoja ja muita vaikeuksia Etelä- ja Keski-Euroopassa. Essayah painotti EU:n tuen jatkamista Ukrainalle myös kaupan keinoin."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Neuvosto hyväksyi tiedotteen mukaan osittaisen yleisnäkemyksen kalatalousalan ja meripolitiikan rahoitussäännöistä osana EU:n vuosien 2028–2034 rahoituskehystä. Suomen arvion mukaan linja yksinkertaistaisi sääntöjä ja parantaisi mahdollisuuksia edistää kalastuksen sukupolvenvaihdoksia sekä kalastusalusten kehittämistä."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Tiedotteen mukaan neuvosto käsitteli myös komission ehdotusta nykyisen meri-, kalatalous- ja vesiviljelyrahaston asetuksen muuttamisesta. Suomi esitti vahvempaa tukea kalastuksen energiasiirtymälle ja sukupolvenvaihdoksille sekä lainarahoituksen käytön helpottamista."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Suomi antoi kokouksessa myös tilannekatsauksen afrikkalaisesta sikarutosta. Valtioneuvoston mukaan ensimmäiset tapaukset todettiin Suomessa villisioissa 30. heinäkuuta 2026, ja tartunta oli 29. syyskuuta mennessä varmistettu 45 villisiassa."
       }
     ],
-    "summary": "Vantaan kaupungin mukaan alueella jatketaan ensi viikolla louheen kuljetuksia ja maaleikkausta ennen seuraavia rakennusvaiheita.",
-    "title": "Rivieranraitin louhinta valmistuu Vantaan mukaan"
+    "summary": "Valtioneuvoston tiedotteen mukaan EU:n maatalous- ja kalastusneuvosto hyväksyi osittaisen yleisnäkemyksen vuosien 2028–2034 kalatalousrahoituksen sääntöihin ja käsitteli tulevaa maatalouspolitiikkaa.",
+    "title": "Valtioneuvosto: EU-neuvosto linjasi kalatalousrahoitusta"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "397ab79c9cb2dbc2f2664991f537dd169d2f7eafd6ca65138a45cf3a89366aff",
+    "draft_sha256": "bb366bc4030ec7fba3f034a2dbde8ea9765e6570e15269c02a0338535a7f7cb8",
     "reasons": [
-      "Lähde A tukee otsikkoa ja ensimmäistä kappaletta: Vantaan kaupungin 29.9.2026 julkaistun tiedotteen otsikon mukaan louhintatyöt valmistuvat Rivieranraitiolla, ja lähdetekstin mukaan alueella jatketaan ensi viikolla louheen kuljetuksia sekä maaleikkaustöitä.",
-      "Lähde A tukee toista kappaletta: louheen kuljetusten ja maaleikkaustöiden valmistuttua aloitetaan pohjavedensuojausten ja kaapelisuojaputkien asennukset, työt etenevät kaupungin mukaan suunnitellusti ja liittyvät tulevaan raitiotieyhteyteen. Molempien kappaleiden source_ids-merkintä A on siten asianmukainen.",
-      "Luonnos ei väitä kaupungin tiedotetta riippumattomasti vahvistetuksi, vaan keskeiset tiedot on asianmukaisesti liitetty Vantaan kaupungin ilmoitukseen. Teksti pysyy Rivieranraitin ja Vantaan rajatussa maantieteellisessä yhteydessä eikä tee valtakunnallisia yleistyksiä.",
-      "Otsikko on 48 merkkiä pitkä, alittaa 60 merkin tavoitteen ja kertoo heti paikan sekä pääasian. Ingressin ensi viikkoa koskeva aikamääre vastaa 29.9.2026 julkaistun lähteen sanamuotoa. Luonnoksessa ei ole lähteen kanssa ristiriitaisia nimiä tai numeroita.",
-      "Teksti on neutraalia ja ymmärrettävää suomea sekä riittävästi itsenäisesti muotoiltu. Tiiviin viranomaisuutisen keskeiset väitteet voidaan perustaa tähän yhteen ajankohtaiseen alkuperäislähteeseen, kun lähdeasema ilmaistaan kuten luonnoksessa.",
-      "Valittu aito kuva esittää tunnuksetonta kippiautoa pölyisellä, kaivetulla alueella ja liittyy konkreettisesti jutussa mainittuihin louheen kuljetuksiin ja maaleikkaustöihin; sitä ei väitetä Rivieranraitilla otetuksi. Täsmällisen kuvatiedoston toimituksellinen sopivuusarvio on 9/10, kaikkia kolmea kuvatyyppiä on haettu, ja kuva- sekä lähdepaketin kuvatiedot vastaavat toisiaan.",
-      "Pexels-kuvan oikeuksista on yksilöity valokuva, kuvaaja, kuvasivu, lisenssi ja lisenssilinkki. Kuvateksti ilmaisee kuvan arkistokuvaksi, alt-teksti vastaa näkyvää sisältöä eikä kuva sisällä tunnistettavia henkilöitä, tekstejä tai logoja."
+      "Lähde A tukee otsikkoa ja ingressiä: neuvosto hyväksyi osittaisen yleisnäkemyksen kalatalousalan ja meripolitiikan rahoitussäännöistä vuosien 2028–2034 rahoituskehykseen ja käsitteli tulevaa yhteistä maatalouspolitiikkaa. Muotoilu ei väitä sääntöjä lopullisesti hyväksytyiksi.",
+      "Kaikkien kappaleiden source_ids-merkintä A on oikea. Lähde A tukee kokouspäiviä 28.–29. syyskuuta, Sari Essayahin edustajaroolia, jäsenmaiden suhtautumista ja joustotoiveita, Ukrainaa ja kuivuusvahinkoja koskevaa keskustelua, Suomen kalatalousrahoitusta koskevia kantoja sekä afrikkalaisen sikaruton tilannekatsausta.",
+      "Päivämäärät ja luvut vastaavat lähdettä A: rahoituskehys on 2028–2034, ensimmäiset sikaruttotapaukset todettiin villisioissa 30.7.2026 ja tiedotteen julkaisuhetkeen 29.9.2026 mennessä tartunta oli varmistettu 45 villisiassa. Suomen arviot on esitetty arvioina eikä varmoina vaikutuksina.",
+      "Paketti sisältää vain yhden uutislähteen, mutta se on samana päivänä julkaistu virallinen ensisijaislähde. Luonnos ilmaisee tiedot johdonmukaisesti Valtioneuvoston tiedotteen tai Suomen näkemyksen mukaisina eikä väitä niiden saaneen riippumatonta vahvistusta.",
+      "Otsikko on 56 merkkiä pitkä, joten se alittaa 60 merkin tavoitteen. Keskeinen asia, EU-neuvoston kalatalousrahoitusta koskeva linjaus, on heti lähdeattribuution jälkeen. Teksti on neutraalia ja ymmärrettävää omaa tiivistystä.",
+      "Kuva on uutista varten generoitu eikä ulkopuolinen valokuva: generointimalli, kuvan SHA-256 ja alkuperä on kirjattu, ja luonnoksen sekä lähdepaketin kuvarekisterit vastaavat toisiaan. Kuvateksti kertoo täsmällisesti, että kyse on AI-generoidusta kuvasta eikä tapahtumakuvasta.",
+      "Valittu kuva vastaa korkeimmalle sijoitettua turvallisesti generoitavaa konseptia: ensimmäinen konsepti sisältää tunnistettavia henkilöitä ja on merkitty turvattomaksi generoida, kun taas valittu rankin 2 kalastusalus ja verkkokela liittyvät suoraan jutun kalastusalusten kehittämistä koskevaan kohtaan sekä otsikon kalatalousrahoitukseen. Kaikille kolmelle konseptille on dokumentoitu haut, ja valitun kuvan riippumaton tarkka pikseliarvio antaa koko artikkelin sopivuudeksi 9/10 sekä vahvistaa molemmat vaaditut kohteet ilman henkilöitä tai luettavaa tekstiä."
     ]
   }
 }
