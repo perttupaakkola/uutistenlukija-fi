@@ -4,344 +4,142 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "21b23c3ecbe7706746029d6952391a9bc79122a1",
-  "job_id": "482c01da18bfc4f5c9291877c76edfcdac35b37e2ca58aba90c2e89def1b75fd",
-  "packet_sha256": "99df0bb4c0fc2450a28cff42c1db49f2ed060c4865164d1b1dd533fa9a96d7e8",
-  "draft_sha256": "69a067c0ff30667183bbf8b924a56a8f200d5bb4264fcf5da698ee9a2c82ccb0",
-  "image_sha256": "f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06",
+  "job_id": "3201487f4521cfce759d6a991eaf097f1212d2313325cafecfeab2f51072d885",
+  "packet_sha256": "2f07d82750c42e9f670e57c15638efa95ac734899a77d3e9751188c146243a51",
+  "draft_sha256": "cd7e22cf47ca219840d1b4af5464b3bf10228e4cc3325b6b4a39191824a361fe",
+  "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "314544bb568e6a164eb6821378baa5c05f44c755df9c3c16bd61b27ff195b587"
+    "provenance_sha256": "c773165a927caeb45b81f3f8b6178997c3191a1b220f0566b07c93b5584139a3"
   },
   "stock_image": {
-    "alt": "Arkistokuva: Flyygeli avoimella kannella ja kaksi mikrofonia telineineen puisessa konserttisalissa, jossa on myös puiset portaat.",
+    "alt": "Arkistokuva: Neljä sähkömittaria ja sähkökaappia on asennettu graffitein peittämälle betoniseinälle, ja niitä yhdistävät mustat johdot.",
     "caption": "Arkistokuva artikkelin aiheesta.",
     "classifier_output": {
-      "category": "Kulttuuri",
+      "category": "Talous",
       "concepts": [
         {
-          "depictable_scene": "Todellinen yhteinen promootiovalokuva, jossa Robin Packalen, Iiro Rantala ja Atte Kilpinen näkyvät samassa kuvassa.",
+          "depictable_scene": "Lähikuva asunnon sähkökaappiin asennetusta sähkömittarista. Mittarin kotelo ja sen vieressä olevat sulakkeet näkyvät, mutta näytön lukemat ja laitemerkinnät eivät ole luettavissa.",
           "must_avoid": [
-            "Fabricated likenesses or composite group portraits",
-            "Presenting the image as documentation of the upcoming February 2027 concert"
+            "People or body parts",
+            "Invented readable meter readings, prices or logos"
           ],
           "must_show": [
-            "Robin Packalen, Iiro Rantala and Atte Kilpinen",
-            "Shared artist portrait"
+            "Residential electricity meter",
+            "Domestic electrical panel"
           ],
           "rank": 1,
-          "safe_to_generate": false,
-          "search_queries": [
-            "Robin Packalen Iiro Rantala Atte Kilpinen promokuva",
-            "Robin Packalen Iiro Rantala",
-            "Atte Kilpinen yhteiskuva",
-            "Iiro Rantala grand piano"
-          ],
-          "subject": "Robin Packalen, Iiro Rantala ja Atte Kilpinen yhteisessä artistikuvassa"
-        },
-        {
-          "depictable_scene": "Todellinen valokuva Kuopion Musiikkikeskuksen konserttisalista, jossa näkyvät esiintymislava ja sitä kohti suunnatut katsomopaikat.",
-          "must_avoid": [
-            "Invented venue architecture",
-            "Presenting an unrelated performance as the announced concert"
-          ],
-          "must_show": [
-            "Actual Kuopio Music Centre concert hall",
-            "Stage and auditorium seating"
-          ],
-          "rank": 2,
-          "safe_to_generate": false,
-          "search_queries": [
-            "Kuopion Musiikkikeskus konserttisali",
-            "Kuopion Musiikkikeskus näyttämö",
-            "Kuopio Music Centre auditorium",
-            "concert hall stage seating"
-          ],
-          "subject": "Kuopion Musiikkikeskuksen konserttisalissa oleva esiintymislava"
-        },
-        {
-          "depictable_scene": "Nimeämättömän konserttitilan tyhjällä lavalla on flyygeli ja sen vieressä mikrofoniteline mikrofoneineen. Soitinten edessä näkyy avointa lavalattiaa.",
-          "must_avoid": [
-            "People, faces, hands or other body parts",
-            "Recognizable Kuopio Music Centre architecture",
-            "Readable text or logos",
-            "Presenting the scene as the actual announced concert"
-          ],
-          "must_show": [
-            "Grand piano and microphone on a stand",
-            "Empty stage with open floor space"
-          ],
-          "rank": 3,
           "safe_to_generate": true,
           "search_queries": [
-            "flyygeli mikrofoni lava",
-            "grand piano microphone",
-            "empty stage grand piano",
-            "tyhjä konserttilava flyygeli"
+            "kotitalouden sähkömittari",
+            "asunnon sähkökaappi",
+            "residential electricity meter",
+            "domestic electrical meter closeup"
           ],
-          "subject": "jazzpiano ja poplaulu tyhjällä esiintymislavalla"
+          "subject": "Kotitalouden sähkön kulutuksen mittaus"
+        },
+        {
+          "depictable_scene": "Tavallisen asunnon ikkunan alla oleva seinään kiinnitetty sähköpatteri kuvattuna tyhjässä huoneessa. Patterin säätönuppi ja sähköjohto näkyvät ilman luettavia merkintöjä.",
+          "must_avoid": [
+            "People or body parts",
+            "Luxury-home framing that implies who receives support",
+            "Readable invented text or logos"
+          ],
+          "must_show": [
+            "Wall-mounted electric radiator",
+            "Domestic room interior"
+          ],
+          "rank": 2,
+          "safe_to_generate": true,
+          "search_queries": [
+            "sähköpatteri ikkunan alla",
+            "kodin sähköpatteri",
+            "wall mounted electric radiator",
+            "electric radiator domestic interior"
+          ],
+          "subject": "Kotitalouksien sähkön kulutus lämmityksessä"
         }
       ],
       "version": "article-first-v1"
     },
-    "credit": "Photo by Enricguaus on Wikimedia Commons",
-    "depicted": "The image shows a grand piano with its lid open, revealing the strings and internal mechanisms. Two microphones on stands are positioned above the piano strings. The piano is black and highly reflective. In the background, there are wooden paneled walls and a set of wooden stairs. A dark, thick support beam extends diagonally from the upper right towards the lower left, partially obscuring the background. There is no readable text or identifiable people in the image.",
+    "credit": "Photo by AV on Pexels",
+    "depicted": "The image shows a concrete wall with multiple utility boxes and electrical wiring. From left to right, there is a gray utility box with a white circular sticker on its lower left side, and a small white padlock hanging from its bottom. To its right, a blue transparent utility box is visible, revealing internal components and a digital display. Next, there is a damaged white metal utility box with its door slightly ajar at the bottom, secured by a small brass-colored padlock. Further to the right",
     "generated": false,
     "hotlink": false,
-    "license": "CC BY-SA 4.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    "local_path": "media/f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06.jpg",
+    "license": "Pexels License",
+    "license_evidence": {
+      "image_path": "/photos/10065200/pexels-photo-10065200.jpeg",
+      "license": "Pexels License",
+      "license_code": "Pexels",
+      "license_url": "https://www.pexels.com/license/",
+      "photo_id": "10065200",
+      "photo_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
+      "photographer": "AV",
+      "photographer_url": "https://www.pexels.com/@av-49217877",
+      "response_sha256": "1361560deceb60e5cf8ff2b3eb3f6d0d7070b0a11a0e04eb74dce3dba218eb31",
+      "retrieved_at": "2026-09-30T13:20:57.463400+00:00",
+      "transport": "jina_reader",
+      "version": 1
+    },
+    "license_url": "https://www.pexels.com/license/",
+    "local_path": "media/e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1.jpg",
     "pixel_review": {
-      "alt_fi": "Flyygeli avoimella kannella ja kaksi mikrofonia telineineen puisessa konserttisalissa, jossa on myös puiset portaat.",
+      "alt_fi": "Neljä sähkömittaria ja sähkökaappia on asennettu graffitein peittämälle betoniseinälle, ja niitä yhdistävät mustat johdot.",
       "approved": true,
-      "article_text_sha256": "affaca341a8fae4d461d8e8000d261e6ce71f648235f3a4e018498b41722fd49",
-      "concept_sha256": "bf2e3563184ba9794de3a7843994a3e308fe6899cc1fe5710ad2477be8ba2c8f",
-      "description": "A grand piano with its lid open, revealing the strings and internal mechanisms. Two microphones on stands are positioned near the piano. The background features wooden paneling and a set of wooden stairs, suggesting a concert hall or performance space.",
+      "article_text_sha256": "7648c2bc9c3cd7833493e181a0e7ca3ec476f6e3fb07741728c945347b1285f6",
+      "concept_sha256": "df6d55e165b549104e041334572427d655e2a442fb3330d11490bf1e3ebe73ad",
+      "description": "Four electricity meters and electrical panels are mounted on a concrete wall with graffiti. Two of the meters are grey, one is in a blue transparent casing, and one is in an open, damaged white casing. Wires connect the units.",
       "fit_score": 9,
-      "image_sha256": "f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06",
+      "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
       "model": "google:gemini-2.5-flash",
       "must_show_visible": [
         true,
         true
       ],
       "no_people": true,
-      "reason": "The image clearly depicts a grand piano and microphones on stands within what appears to be an empty stage or performance area, directly matching the selected concept of 'Grand piano and microphone on a stand' and 'Empty stage with open floor space'. The article discusses a concert featuring a pianist and singer, making the visual subject highly relevant.",
-      "reviewed_at": "2026-09-30T12:42:54.342815+00:00",
-      "source_context": {
-        "image_sha256": "f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "photo_id": "wikimedia-89157762",
-        "photo_url": "https://commons.wikimedia.org/wiki/File:Grand%20piano%20microphone%20setup%2001%20sala4%20LAuditori%20ESMUC.jpg",
-        "photographer": "Enricguaus",
-        "provider": "wikimedia",
-        "title": "Grand piano microphone setup 01 sala4 LAuditori ESMUC.jpg"
-      },
-      "source_context_sha256": "8e7053f810b0f6eba08a68b6aca6e68d8012ed9787af7bb91872f891541b5e89",
-      "text_audit": {
-        "examples": [],
-        "readable_text_present": false
-      }
+      "reason": "The image clearly depicts multiple electricity meters and electrical panels, which directly illustrates the concept of 'Kotitalouden sähkön kulutuksen mittaus' (Household electricity consumption measurement) and is highly relevant to the article's discussion of electricity price regulation and household electricity costs.",
+      "reviewed_at": "2026-09-30T13:20:59.634682+00:00"
     },
     "pixels": {
-      "height": 1200,
+      "height": 627,
       "mode": "RGB",
-      "variance": 7696.3,
-      "width": 1600
+      "variance": 6322.1,
+      "width": 940
     },
     "relevance_check": {
       "accepted": true,
-      "evidence": "A grand piano with its lid open, revealing the strings and internal mechanisms. Two microphones on stands are positioned near the piano. The background features wooden paneling and a set of wooden stairs, suggesting a concert hall or performance space.",
+      "evidence": "Four electricity meters and electrical panels are mounted on a concrete wall with graffiti. Two of the meters are grey, one is in a blue transparent casing, and one is in an open, damaged white casing. Wires connect the units.",
       "matched": [
-        "grand",
-        "open",
-        "piano",
-        "space"
+        "electrical",
+        "electricity"
       ],
       "method": "vision",
       "reason": "Exact-pixel full-article score meets the 8/10 threshold"
     },
     "selection_evidence": {
-      "article_text_sha256": "affaca341a8fae4d461d8e8000d261e6ce71f648235f3a4e018498b41722fd49",
-      "decision_sha256": "77db241f2fd9312218c3bd63dcbf7612266224ca188d15d0beb47284c3ac091e",
+      "article_text_sha256": "7648c2bc9c3cd7833493e181a0e7ca3ec476f6e3fb07741728c945347b1285f6",
+      "decision_sha256": "7d0d30a9ef5ed40cafecb2fc999c2ea25d2373bc568e05c6f8248d1697f2556f",
       "minimum_real_fit": 8,
       "searches": [
         {
-          "candidates": [],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "source-news",
-          "queries": [
-            "cited source image"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "wikimedia",
-          "queries": [
-            "Robin Packalen Iiro Rantala Atte Kilpinen promokuva",
-            "Robin Packalen Iiro Rantala",
-            "Atte Kilpinen yhteiskuva"
-          ]
-        },
-        {
           "candidates": [
             {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "9deb26580bdd0d0ecd0792fb9add431e9c98caee8522f6289cc8eb2ef042f309",
+              "approved": true,
+              "fit_score": 9,
+              "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
               "license": "Pexels License",
-              "reason": "The image depicts deer in a natural setting, which is entirely unrelated to the article about musicians Robin Packalen, Iiro Rantala, and dancer Atte Kilpinen performing together. The selected concept specifically requires a promotional photograph of these three artists together, none of whom are visible in the image. One or more required concept e",
-              "source_url": "https://www.pexels.com/photo/deers-sitting-on-a-grass-4757467/"
-            },
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "c5269a85faafe924619e5904dfb0b5e5a45a7f7d6091a4b57f7ba93e43e3e126",
-              "license": "Pexels License",
-              "reason": "The article discusses a concert featuring Robin Packalen, Iiro Rantala, and Atte Kilpinen. The selected concept requires a promotional photo showing all three artists together. This image shows only two young men, neither of whom can be identified as any of the named artists, and it does not include Iiro Rantala. Therefore, it fails to meet the 'mu",
-              "source_url": "https://www.pexels.com/photo/two-men-wearing-caps-4816752/"
-            },
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "d86a2b012f57e2b85c1f401aa53495f3fb739376b3d469b1515a5688a1e4734a",
-              "license": "Pexels License",
-              "reason": "The article discusses a concert featuring Robin Packalen, Iiro Rantala, and Atte Kilpinen. The selected concept requires a shared promotional photograph showing all three artists together. The image only shows one man, who is not identifiable as any of the named artists from visible features alone, and it does not depict a shared artist portrait wi",
-              "source_url": "https://www.pexels.com/photo/man-in-leather-jacket-by-lake-in-the-hague-28458584/"
-            },
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "09cba57261aceaa23c7e1ba87dffda06e482866761b9c0ea0ee05b98b49046af",
-              "license": "Pexels License",
-              "reason": "The article discusses a concert featuring Robin Packalen, Iiro Rantala, and Atte Kilpinen. The selected concept requires a shared promotional photograph showing all three artists. The image provided shows only one man, who cannot be definitively identified as any of the named artists, and certainly not all three in a shared portrait. Therefore, it ",
-              "source_url": "https://www.pexels.com/photo/selective-focus-photo-of-man-wearing-polo-shirt-3228853/"
+              "reason": "The image clearly depicts multiple electricity meters and electrical panels, which directly illustrates the concept of 'Kotitalouden sähkön kulutuksen mittaus' (Household electricity consumption measurement) and is highly relevant to the article's discussion of electricity price regulation and household electricity costs.",
+              "source_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/"
             }
           ],
           "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
+          "outcome": "accepted",
           "provider": "pexels",
           "queries": [
-            "Robin Packalen Iiro Rantala Atte Kilpinen promokuva",
-            "Robin Packalen Iiro Rantala",
-            "Atte Kilpinen yhteiskuva"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "b6af3df97f60c9df4919e538113580a04fbd23c5b99464aa9c40c699d8418ec2",
-              "license": "Unsplash License",
-              "reason": "The image depicts a robin, which shares a name with one of the artists (Robin Packalen) mentioned in the article. However, the article is about a concert featuring human performers, not birds. The selected concept specifically requires a promotional photograph of the three artists together. This image does not show any of the named individuals, nor",
-              "source_url": "https://unsplash.com/photos/a-robin-perched-on-a-snow-dusted-tree-branch-KVr-tTZ6oyU?utm_source=uutistenlukija&utm_medium=referral"
-            },
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "551ccdbff12e3bc37d80b7d66c72e1baf47c3bc0ece92211f383ee98d974f4be",
-              "license": "Unsplash License",
-              "reason": "The article is about three Finnish performing artists: Robin Packalen, Iiro Rantala, and Atte Kilpinen. The selected concept is a shared promotional photograph of these three individuals. The image shows a bird, which is completely unrelated to the article's subject matter or the selected concept. The bird's species, a robin, shares a name with one",
-              "source_url": "https://unsplash.com/photos/a-robin-is-perched-on-the-ground-Z6NDLsDLX0M?utm_source=uutistenlukija&utm_medium=referral"
-            }
-          ],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "unsplash",
-          "queries": [
-            "Robin Packalen Iiro Rantala Atte Kilpinen promokuva",
-            "Robin Packalen Iiro Rantala",
-            "Atte Kilpinen yhteiskuva"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "google",
-          "queries": [
-            "Robin Packalen Iiro Rantala Atte Kilpinen promokuva",
-            "Robin Packalen Iiro Rantala",
-            "Atte Kilpinen yhteiskuva"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "source-news",
-          "queries": [
-            "cited source image"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "wikimedia",
-          "queries": [
-            "Kuopion Musiikkikeskus konserttisali",
-            "Kuopion Musiikkikeskus näyttämö",
-            "Kuopio Music Centre auditorium"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "e8fc047f4e16eb065f7795240e36b8994eeca0e7bd842b88f86801b587ce7b2c",
-              "license": "Pexels License",
-              "reason": "The article discusses a concert at Kuopion Musiikkikeskus, and the selected concept specifically requests an actual photo of the Kuopio Music Centre concert hall, showing the stage and auditorium seating. While the image shows a stage and musicians, there is no visual evidence to confirm this is the Kuopio Music Centre. The image also does not clea",
-              "source_url": "https://www.pexels.com/photo/a-group-of-people-playing-musical-instruments-on-stage-7095836/"
-            },
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "4dfd5f762887299d5b21d58ae7226fe0fc6a29833101094df7298a3aec964cb1",
-              "license": "Pexels License",
-              "reason": "The article discusses a concert at Kuopio Music Centre, specifically mentioning the concert hall, stage, and auditorium seating. The image shows a performance with a stage, but it does not depict the Kuopio Music Centre concert hall or auditorium seating. Therefore, it does not meet the 'Actual Kuopio Music Centre concert hall' or 'Stage and audito",
-              "source_url": "https://www.pexels.com/photo/a-woman-playing-an-electronic-keyboard-in-a-band-8512195/"
-            },
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "596ba891b09514c186976e9602b5aaf759a77f83d0b8eec358a3832c800cbdd8",
-              "license": "Pexels License",
-              "reason": "The article discusses a concert at Kuopio Music Centre's concert hall, which is a large, formal venue. The image shows a small, informal stage setup in what appears to be a rehearsal space or a small private venue, not a concert hall. It does not depict the Kuopio Music Centre concert hall or auditorium seating. One or more required concept element",
-              "source_url": "https://www.pexels.com/photo/black-and-white-music-studio-7802300/"
-            },
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "e31d88051ac3aa81d441e6f2760a517ca7e65dd4a3d3586699ba26337099c2a1",
-              "license": "Pexels License",
-              "reason": "The article discusses a concert at Kuopio Music Centre's concert hall. The image shows a band performing on an outdoor stage, which is not the specific indoor venue mentioned in the article. The image does not depict the Kuopio Music Centre concert hall or its auditorium seating. One or more required concept elements are not visible.",
-              "source_url": "https://www.pexels.com/photo/man-in-white-long-sleeves-playing-guitar-in-front-of-people-9298953/"
-            }
-          ],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "pexels",
-          "queries": [
-            "Kuopion Musiikkikeskus konserttisali",
-            "Kuopion Musiikkikeskus näyttämö",
-            "Kuopio Music Centre auditorium"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "unsplash",
-          "queries": [
-            "Kuopion Musiikkikeskus konserttisali",
-            "Kuopion Musiikkikeskus näyttämö",
-            "Kuopio Music Centre auditorium"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "google",
-          "queries": [
-            "Kuopion Musiikkikeskus konserttisali",
-            "Kuopion Musiikkikeskus näyttämö",
-            "Kuopio Music Centre auditorium"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 3,
-          "outcome": "no_qualifying_candidate",
-          "provider": "source-news",
-          "queries": [
-            "cited source image"
+            "kotitalouden sähkömittari",
+            "asunnon sähkökaappi",
+            "residential electricity meter"
           ]
         },
         {
@@ -349,58 +147,52 @@
             {
               "approved": true,
               "fit_score": 9,
-              "image_sha256": "f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06",
-              "license": "CC BY-SA 4.0",
-              "reason": "The image clearly depicts a grand piano and microphones on stands within what appears to be an empty stage or performance area, directly matching the selected concept of 'Grand piano and microphone on a stand' and 'Empty stage with open floor space'. The article discusses a concert featuring a pianist and singer, making the visual subject highly re",
-              "source_url": "https://commons.wikimedia.org/wiki/File:Grand%20piano%20microphone%20setup%2001%20sala4%20LAuditori%20ESMUC.jpg"
+              "image_sha256": "70d1709148cf86a7ea568a53e1b0b3d4407ec9c26ef6554ca5cd611bca664b70",
+              "license": "Pexels License",
+              "reason": "The image clearly shows a wall-mounted radiator in a domestic room interior, which directly matches the 'must_show' elements of the selected concept. The article discusses household electricity consumption for heating, making the radiator a relevant subject.",
+              "source_url": "https://www.pexels.com/photo/apartment-interior-with-table-and-chairs-near-window-6447395/"
             }
           ],
-          "concept_rank": 3,
+          "concept_rank": 2,
           "outcome": "accepted",
-          "provider": "wikimedia",
+          "provider": "pexels",
           "queries": [
-            "flyygeli mikrofoni lava",
-            "grand piano microphone",
-            "empty stage grand piano"
+            "sähköpatteri ikkunan alla",
+            "kodin sähköpatteri",
+            "wall mounted electric radiator"
           ]
         }
       ],
       "selected": {
-        "concept_rank": 3,
+        "concept_rank": 1,
         "fit_score": 9,
-        "image_sha256": "f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06",
+        "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
         "kind": "real"
       },
       "version": "article-first-v1"
     },
-    "sha256": "f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Grand%20piano%20microphone%20setup%2001%20sala4%20LAuditori%20ESMUC.jpg",
+    "sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
+    "source_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
     "stock_provenance": {
-      "attribution": {
-        "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
-        "title": "Grand piano microphone setup 01 sala4 LAuditori ESMUC.jpg"
-      },
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Grand_piano_microphone_setup_01_sala4_LAuditori_ESMUC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-      "photo_id": "wikimedia-89157762",
-      "photo_url": "https://commons.wikimedia.org/wiki/File:Grand%20piano%20microphone%20setup%2001%20sala4%20LAuditori%20ESMUC.jpg",
-      "photographer": "Enricguaus",
-      "photographer_url": "https://commons.wikimedia.org/wiki/File:Grand%20piano%20microphone%20setup%2001%20sala4%20LAuditori%20ESMUC.jpg",
-      "provider": "wikimedia",
-      "query": "grand piano microphone",
-      "retrieved_at": "2026-09-30T12:42:51Z"
+      "image_url": "https://images.pexels.com/photos/10065200/pexels-photo-10065200.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "photo_id": "10065200",
+      "photo_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
+      "photographer": "AV",
+      "photographer_url": "https://www.pexels.com/@av-49217877",
+      "provider": "pexels",
+      "query": "kotitalouden sähkömittari",
+      "retrieved_at": "2026-09-30T13:20:57Z"
     },
-    "stock_provenance_sha256": "976e193b41e5aae6ce634f73df1f91ce9ed8ce68498ebc49b70d1c2b99d73a30",
-    "url": "https://uutistenlukija.fi/media/f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06.jpg"
+    "stock_provenance_sha256": "123758867959cf5cce020ab0eb7fd1a08924beeb763087eb41e8953332433388",
+    "url": "https://uutistenlukija.fi/media/e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1.jpg"
   },
   "new_article_files": [
-    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html"
+    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "911b1a97b001af435deaed56caca26dcbf66eea4c1d1a9d011f1d1e30276509a",
-    "_redirects": "c0b4a1e0a33bac5f0745dc7abe5f1bf646d64e6dec0bc90abe1859412bd1db54",
+    "_redirects": "e69f1d1edd0164dd22bfbd18370130dec2b0379b6ffb563be5acb30e5edd6582",
     "ai-kuvat/index.html": "704384abe7307d1ba4fd611a736a8b982bf2d50533bc1feda579cf365d538276",
     "categories/kotimaa/index.html": "e932dd1ce16f21a3f2e4b2593a3290e2afbe2522f43435258ad20a3ee9cec3d0",
     "categories/kotimaa/sivu/2/index.html": "beb94632e5afe85b2754e8a041ac22ccddfe25c0f95e2ce8667c3ff66f505578",
@@ -408,13 +200,13 @@
     "categories/kotimaa/sivu/4/index.html": "550faa12c2f024df3629835e4808af7261c4fac10e222ebea83df0e4bb1fe881",
     "categories/kotimaa/sivu/5/index.html": "97fce13c41b1b578db31eb5a53d15cbf1b986a4691ec58d2d0d14e4add372048",
     "categories/kulttuuri/index.html": "254e2d49c9196262775cdd280dffda6007263cb4dcf5fca2d5df9db1f5d8698d",
-    "categories/talous/index.html": "afad985dbdb157391e2d0d0ee278700f2b2cfbb73da310301bdd283c83a09d87",
-    "categories/talous/sivu/2/index.html": "fda6aa425973d09bebb4902029f29c097cb90a34c48f0910fe78068df10341f1",
+    "categories/talous/index.html": "006db353d5319b94738b2d8c20827dfdefa1b1f454d37be35872d95c90be3110",
+    "categories/talous/sivu/2/index.html": "38d69de8a3c4139375085d39b3a48ead5cae3fa14cbea155bd98de6ac9ade27d",
     "categories/teknologia/index.html": "49b3632b19b6a9404278d26b1dbcf3fb2b5b4970f9b196cd8f94d6af15da714f",
     "categories/tiede/index.html": "92e7fcdd11aa9f7debc7dc7279a4326ab7cfa8984fc3edb0fc2598884d43f65d",
     "categories/ulkomaat/index.html": "6035026292116f5c1580af8c0d7f65cd72887878926de576e727400ff23ea3f9",
     "categories/urheilu/index.html": "c21339d83ac375c85a31b60fd566223e8b1eb0e5ab22ae8188ad962f5af98026",
-    "index.html": "80000288fd77aa18ecfee36b3c2e28107c43afc280187caae435910d487524f0",
+    "index.html": "24f282d9c28bfd1c9e3407d19617d7f550ba13627abf5287696bfc7db27a6795",
     "lahteet/index.html": "88f2c5ad41bd0c3dcf03996166451b197e9f69e43ac8355bf8d63d45a5e6640a",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
@@ -831,6 +623,7 @@
     "mvp-assets/e53372f5780a0ac1cc28c8a5ec6339ba409f0674e3038daff50a32706e530b23.jpg": "e53372f5780a0ac1cc28c8a5ec6339ba409f0674e3038daff50a32706e530b23",
     "mvp-assets/e59f6fa6aa493b868ad8ffe53b360716573139cf14ba2a7aa93a5a45ac94aab5.jpg": "e59f6fa6aa493b868ad8ffe53b360716573139cf14ba2a7aa93a5a45ac94aab5",
     "mvp-assets/e5f621b4c387091ea44e9c2d3fb8c45ce5f867601449ee9d28bc402ea7853a56.jpg": "e5f621b4c387091ea44e9c2d3fb8c45ce5f867601449ee9d28bc402ea7853a56",
+    "mvp-assets/e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1.jpg": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
     "mvp-assets/e720187c22eddbe0e86412b1887ecc4fcae5c941a47cc06d6e2fa854a17cc30e.jpg": "e720187c22eddbe0e86412b1887ecc4fcae5c941a47cc06d6e2fa854a17cc30e",
     "mvp-assets/e77a076119fae071bc00c26bcc32ed05c35697ecfa6e925ae638e7fbec94a228.jpg": "e77a076119fae071bc00c26bcc32ed05c35697ecfa6e925ae638e7fbec94a228",
     "mvp-assets/e7e05620d17e6a89dcbaa0c6a34eebb4b27fc5cf385eb9a4648030e7cf845bd4.jpg": "e7e05620d17e6a89dcbaa0c6a34eebb4b27fc5cf385eb9a4648030e7cf845bd4",
@@ -910,25 +703,25 @@
     "mvp-assets/style.css": "824285d22d372ae6fff003cbc089ce72cee3764d3b381f9fd7874aac92aeedc9",
     "oppaat/index.html": "c3404863fb526f22190c6dc1dca5d36b80ed33b7dc9f695ba84441a5889cf3a2",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "5d9f1c57f5724bca334fdd03e38b7d0db4f5a6eede4e1f2ab6f89ea0cd357fae",
-    "sitemap.xml": "1e268c9fe729b44e965d54bf7689f80f548408d9fe89c1717fe2ac659f2116b5",
-    "sivu/2/index.html": "e0ea34c44c8df47c5880507792dc90ea2d0a4ce2fd3c45f54906674d2cee2d85",
-    "sivu/3/index.html": "5eb1437c5eefadd3115a69049c7f60cd565e923f418e97723e7409584e9373e1",
-    "sivu/4/index.html": "d9812cd04c1106f674a4e4fce623faee2efbcd437b0e8da6337c236e2612c38e",
-    "sivu/5/index.html": "ec2222ea0c54cef38866d6ba35971923d9441a958983d2614857cfa25920260b",
-    "sivu/6/index.html": "ca2686298a56983f4e0f9209133455e277c949c06544f5170c78ab674147448a",
-    "sivu/7/index.html": "17a4622bd688ca9717ea400a9aeb19dc19a8f9e6fd8d4f06cbe25841f4753fff",
-    "sivu/8/index.html": "3868f916b48e6ea0e0da35a641c6f1d78f3bc39f077db7ba66a6dae8875b70cb",
+    "rss.xml": "5cd6015134679edbdb717578f1b478df92b28682a039c697e5d20564458e1533",
+    "sitemap.xml": "4e464e018a50082e69ce67bd4214624d97bf02f5cfa583c88a1f61d1a861adb9",
+    "sivu/2/index.html": "fcd9c814da5c187d16bd193cac6154c48590d36d8a40d487ab6de8aa6c141da0",
+    "sivu/3/index.html": "db00d1af741335a49d3fb3674c1eb567597466635bb9e961bc492d6a6487cffe",
+    "sivu/4/index.html": "e381b5337ce979ba12a59977bef445a02ea048e6db932172ad921cc3d34073a1",
+    "sivu/5/index.html": "3131fd2f296e9d0a2dd2e80d565e9218fe9e44312bdb0122a9e80db78c23e525",
+    "sivu/6/index.html": "a14624d8cde74d1e6d45fd645bc9362f552fbe326cc7242823f03e4e84f3f16b",
+    "sivu/7/index.html": "c9e8d6947c51585f4267b4ab78256eaf14dc614d54e064f744dd80b63ec4d5b5",
+    "sivu/8/index.html": "bb93e3930cc8322ca81f1c25535c1fccd1677397d0395b8666c4823e3d13d8ee",
     "tietoja/index.html": "18cbeed6fd7ace4eaf53992ab8a926eea4fed1f1e9b5bf0bdc241a8acb93c60e",
     "tietosuoja/index.html": "be3fdf321bafa99484ea1258c8ee57fdbd471aa33b084269d8844b55d8d4b095",
-    "tuoreimmat/index.html": "21abfa18b7fffefc450e0f69c3f6851e756b0c8b3a04465308585a0936ef6e66",
-    "tuoreimmat/sivu/2/index.html": "b86f91c6d4190ec44ea136685247b5a1c072051616f6bd19247f0ca3faadb6e1",
-    "tuoreimmat/sivu/3/index.html": "8fea7a8c13f9007be44e61bdf716dd77153bec0addb4f6a22a77c9c3f619b1c0",
-    "tuoreimmat/sivu/4/index.html": "b1a2af8d26d7a9e6477709d1fa6e27dab9ac06a8b11dd3ec6cacc656610fe442",
-    "tuoreimmat/sivu/5/index.html": "ada6ad74080491f6d43f149f1df480d58b3c77959c00bbeadbc01d20c4688da8",
-    "tuoreimmat/sivu/6/index.html": "8a8babe5581478a8561975f4ebb72f4030f20b15ac83fedea29e3986a46e0026",
-    "tuoreimmat/sivu/7/index.html": "ba639a79045a40a48637ac8d61d834b63a575dc12387fef068e7d530cdc93e58",
-    "tuoreimmat/sivu/8/index.html": "3b6d517e4fed66ec09b6e071d982fb47620b92105cb3b238ecfb372153909586",
+    "tuoreimmat/index.html": "8eb3bffe232f040114898d16e4a6a26b3ee58e256803b93f7482156a400cd01a",
+    "tuoreimmat/sivu/2/index.html": "8748597a64c2c43f455a89616cb35a8edc5f27aecc09712770cc394a994f3036",
+    "tuoreimmat/sivu/3/index.html": "b20c2a9ea6f75e24a7ba8cad89444ca49b10f7a8c273e2745ddf4da0d9836e9a",
+    "tuoreimmat/sivu/4/index.html": "ccb3e932fb30c0a6ad4b449ccf022ef35f948211624bf5dd2c839223d0a1d8be",
+    "tuoreimmat/sivu/5/index.html": "d345d8321733e0ba1f39c90c873e9e678c6b5d01497f25aa5f433ce0586f34dc",
+    "tuoreimmat/sivu/6/index.html": "74240f05dc679f025e9138e88e16f6c6f8570aaad034df1fb82587e7a0674257",
+    "tuoreimmat/sivu/7/index.html": "ac9c591ae15cb945260b2d37d4fbe6a32fef9a23c0175168560c4927f43106f4",
+    "tuoreimmat/sivu/8/index.html": "8b7347415aa6d00d110155c06743663c222de8755309676434d916d468243093",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -1109,6 +902,7 @@
     "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "c4c7aa052858880b7b668f012c681c3aa74cdce831eedfe26f3691462b8de113",
     "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "f137901dfbe94d17f9a2a703cdfb1c5309add179ffabc3d49976d947f69ebac4",
     "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "3794dca77f6fbbfb1d9029e8819fcd2483e6b427337ec989b98ec3f4f7b0be3f",
+    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "42ec68faa2f62384514b74c8f04c23cce8bc2b1785100a670cdc8c10681212c9",
     "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "c8dc36d809e231ffc96c587bf81c62a1054401fe437749505feea485c08c3a5a",
     "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "5c565885bd2096f8642054fd8f337de283d6401276d6b331d5cd87907b54d3e7",
     "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "52c59be0de94264d2521d18294cd89c48e8ab83d7adee2ca6149d60d746cfa5e",
@@ -1187,334 +981,132 @@
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Flyygeli avoimella kannella ja kaksi mikrofonia telineineen puisessa konserttisalissa, jossa on myös puiset portaat.",
+      "alt": "Arkistokuva: Neljä sähkömittaria ja sähkökaappia on asennettu graffitein peittämälle betoniseinälle, ja niitä yhdistävät mustat johdot.",
       "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Kulttuuri",
+        "category": "Talous",
         "concepts": [
           {
-            "depictable_scene": "Todellinen yhteinen promootiovalokuva, jossa Robin Packalen, Iiro Rantala ja Atte Kilpinen näkyvät samassa kuvassa.",
+            "depictable_scene": "Lähikuva asunnon sähkökaappiin asennetusta sähkömittarista. Mittarin kotelo ja sen vieressä olevat sulakkeet näkyvät, mutta näytön lukemat ja laitemerkinnät eivät ole luettavissa.",
             "must_avoid": [
-              "Fabricated likenesses or composite group portraits",
-              "Presenting the image as documentation of the upcoming February 2027 concert"
+              "People or body parts",
+              "Invented readable meter readings, prices or logos"
             ],
             "must_show": [
-              "Robin Packalen, Iiro Rantala and Atte Kilpinen",
-              "Shared artist portrait"
+              "Residential electricity meter",
+              "Domestic electrical panel"
             ],
             "rank": 1,
-            "safe_to_generate": false,
-            "search_queries": [
-              "Robin Packalen Iiro Rantala Atte Kilpinen promokuva",
-              "Robin Packalen Iiro Rantala",
-              "Atte Kilpinen yhteiskuva",
-              "Iiro Rantala grand piano"
-            ],
-            "subject": "Robin Packalen, Iiro Rantala ja Atte Kilpinen yhteisessä artistikuvassa"
-          },
-          {
-            "depictable_scene": "Todellinen valokuva Kuopion Musiikkikeskuksen konserttisalista, jossa näkyvät esiintymislava ja sitä kohti suunnatut katsomopaikat.",
-            "must_avoid": [
-              "Invented venue architecture",
-              "Presenting an unrelated performance as the announced concert"
-            ],
-            "must_show": [
-              "Actual Kuopio Music Centre concert hall",
-              "Stage and auditorium seating"
-            ],
-            "rank": 2,
-            "safe_to_generate": false,
-            "search_queries": [
-              "Kuopion Musiikkikeskus konserttisali",
-              "Kuopion Musiikkikeskus näyttämö",
-              "Kuopio Music Centre auditorium",
-              "concert hall stage seating"
-            ],
-            "subject": "Kuopion Musiikkikeskuksen konserttisalissa oleva esiintymislava"
-          },
-          {
-            "depictable_scene": "Nimeämättömän konserttitilan tyhjällä lavalla on flyygeli ja sen vieressä mikrofoniteline mikrofoneineen. Soitinten edessä näkyy avointa lavalattiaa.",
-            "must_avoid": [
-              "People, faces, hands or other body parts",
-              "Recognizable Kuopio Music Centre architecture",
-              "Readable text or logos",
-              "Presenting the scene as the actual announced concert"
-            ],
-            "must_show": [
-              "Grand piano and microphone on a stand",
-              "Empty stage with open floor space"
-            ],
-            "rank": 3,
             "safe_to_generate": true,
             "search_queries": [
-              "flyygeli mikrofoni lava",
-              "grand piano microphone",
-              "empty stage grand piano",
-              "tyhjä konserttilava flyygeli"
+              "kotitalouden sähkömittari",
+              "asunnon sähkökaappi",
+              "residential electricity meter",
+              "domestic electrical meter closeup"
             ],
-            "subject": "jazzpiano ja poplaulu tyhjällä esiintymislavalla"
+            "subject": "Kotitalouden sähkön kulutuksen mittaus"
+          },
+          {
+            "depictable_scene": "Tavallisen asunnon ikkunan alla oleva seinään kiinnitetty sähköpatteri kuvattuna tyhjässä huoneessa. Patterin säätönuppi ja sähköjohto näkyvät ilman luettavia merkintöjä.",
+            "must_avoid": [
+              "People or body parts",
+              "Luxury-home framing that implies who receives support",
+              "Readable invented text or logos"
+            ],
+            "must_show": [
+              "Wall-mounted electric radiator",
+              "Domestic room interior"
+            ],
+            "rank": 2,
+            "safe_to_generate": true,
+            "search_queries": [
+              "sähköpatteri ikkunan alla",
+              "kodin sähköpatteri",
+              "wall mounted electric radiator",
+              "electric radiator domestic interior"
+            ],
+            "subject": "Kotitalouksien sähkön kulutus lämmityksessä"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Enricguaus on Wikimedia Commons",
-      "depicted": "The image shows a grand piano with its lid open, revealing the strings and internal mechanisms. Two microphones on stands are positioned above the piano strings. The piano is black and highly reflective. In the background, there are wooden paneled walls and a set of wooden stairs. A dark, thick support beam extends diagonally from the upper right towards the lower left, partially obscuring the background. There is no readable text or identifiable people in the image.",
+      "credit": "Photo by AV on Pexels",
+      "depicted": "The image shows a concrete wall with multiple utility boxes and electrical wiring. From left to right, there is a gray utility box with a white circular sticker on its lower left side, and a small white padlock hanging from its bottom. To its right, a blue transparent utility box is visible, revealing internal components and a digital display. Next, there is a damaged white metal utility box with its door slightly ajar at the bottom, secured by a small brass-colored padlock. Further to the right",
       "generated": false,
       "hotlink": false,
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-      "local_path": "media/f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06.jpg",
+      "license": "Pexels License",
+      "license_evidence": {
+        "image_path": "/photos/10065200/pexels-photo-10065200.jpeg",
+        "license": "Pexels License",
+        "license_code": "Pexels",
+        "license_url": "https://www.pexels.com/license/",
+        "photo_id": "10065200",
+        "photo_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
+        "photographer": "AV",
+        "photographer_url": "https://www.pexels.com/@av-49217877",
+        "response_sha256": "1361560deceb60e5cf8ff2b3eb3f6d0d7070b0a11a0e04eb74dce3dba218eb31",
+        "retrieved_at": "2026-09-30T13:20:57.463400+00:00",
+        "transport": "jina_reader",
+        "version": 1
+      },
+      "license_url": "https://www.pexels.com/license/",
+      "local_path": "media/e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1.jpg",
       "pixel_review": {
-        "alt_fi": "Flyygeli avoimella kannella ja kaksi mikrofonia telineineen puisessa konserttisalissa, jossa on myös puiset portaat.",
+        "alt_fi": "Neljä sähkömittaria ja sähkökaappia on asennettu graffitein peittämälle betoniseinälle, ja niitä yhdistävät mustat johdot.",
         "approved": true,
-        "article_text_sha256": "affaca341a8fae4d461d8e8000d261e6ce71f648235f3a4e018498b41722fd49",
-        "concept_sha256": "bf2e3563184ba9794de3a7843994a3e308fe6899cc1fe5710ad2477be8ba2c8f",
-        "description": "A grand piano with its lid open, revealing the strings and internal mechanisms. Two microphones on stands are positioned near the piano. The background features wooden paneling and a set of wooden stairs, suggesting a concert hall or performance space.",
+        "article_text_sha256": "7648c2bc9c3cd7833493e181a0e7ca3ec476f6e3fb07741728c945347b1285f6",
+        "concept_sha256": "df6d55e165b549104e041334572427d655e2a442fb3330d11490bf1e3ebe73ad",
+        "description": "Four electricity meters and electrical panels are mounted on a concrete wall with graffiti. Two of the meters are grey, one is in a blue transparent casing, and one is in an open, damaged white casing. Wires connect the units.",
         "fit_score": 9,
-        "image_sha256": "f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06",
+        "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts a grand piano and microphones on stands within what appears to be an empty stage or performance area, directly matching the selected concept of 'Grand piano and microphone on a stand' and 'Empty stage with open floor space'. The article discusses a concert featuring a pianist and singer, making the visual subject highly relevant.",
-        "reviewed_at": "2026-09-30T12:42:54.342815+00:00",
-        "source_context": {
-          "image_sha256": "f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06",
-          "license": "CC BY-SA 4.0",
-          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-          "photo_id": "wikimedia-89157762",
-          "photo_url": "https://commons.wikimedia.org/wiki/File:Grand%20piano%20microphone%20setup%2001%20sala4%20LAuditori%20ESMUC.jpg",
-          "photographer": "Enricguaus",
-          "provider": "wikimedia",
-          "title": "Grand piano microphone setup 01 sala4 LAuditori ESMUC.jpg"
-        },
-        "source_context_sha256": "8e7053f810b0f6eba08a68b6aca6e68d8012ed9787af7bb91872f891541b5e89",
-        "text_audit": {
-          "examples": [],
-          "readable_text_present": false
-        }
+        "reason": "The image clearly depicts multiple electricity meters and electrical panels, which directly illustrates the concept of 'Kotitalouden sähkön kulutuksen mittaus' (Household electricity consumption measurement) and is highly relevant to the article's discussion of electricity price regulation and household electricity costs.",
+        "reviewed_at": "2026-09-30T13:20:59.634682+00:00"
       },
       "pixels": {
-        "height": 1200,
+        "height": 627,
         "mode": "RGB",
-        "variance": 7696.3,
-        "width": 1600
+        "variance": 6322.1,
+        "width": 940
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "A grand piano with its lid open, revealing the strings and internal mechanisms. Two microphones on stands are positioned near the piano. The background features wooden paneling and a set of wooden stairs, suggesting a concert hall or performance space.",
+        "evidence": "Four electricity meters and electrical panels are mounted on a concrete wall with graffiti. Two of the meters are grey, one is in a blue transparent casing, and one is in an open, damaged white casing. Wires connect the units.",
         "matched": [
-          "grand",
-          "open",
-          "piano",
-          "space"
+          "electrical",
+          "electricity"
         ],
         "method": "vision",
         "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
       "selection_evidence": {
-        "article_text_sha256": "affaca341a8fae4d461d8e8000d261e6ce71f648235f3a4e018498b41722fd49",
-        "decision_sha256": "77db241f2fd9312218c3bd63dcbf7612266224ca188d15d0beb47284c3ac091e",
+        "article_text_sha256": "7648c2bc9c3cd7833493e181a0e7ca3ec476f6e3fb07741728c945347b1285f6",
+        "decision_sha256": "7d0d30a9ef5ed40cafecb2fc999c2ea25d2373bc568e05c6f8248d1697f2556f",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Robin Packalen Iiro Rantala Atte Kilpinen promokuva",
-              "Robin Packalen Iiro Rantala",
-              "Atte Kilpinen yhteiskuva"
-            ]
-          },
-          {
             "candidates": [
               {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "9deb26580bdd0d0ecd0792fb9add431e9c98caee8522f6289cc8eb2ef042f309",
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
                 "license": "Pexels License",
-                "reason": "The image depicts deer in a natural setting, which is entirely unrelated to the article about musicians Robin Packalen, Iiro Rantala, and dancer Atte Kilpinen performing together. The selected concept specifically requires a promotional photograph of these three artists together, none of whom are visible in the image. One or more required concept e",
-                "source_url": "https://www.pexels.com/photo/deers-sitting-on-a-grass-4757467/"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "c5269a85faafe924619e5904dfb0b5e5a45a7f7d6091a4b57f7ba93e43e3e126",
-                "license": "Pexels License",
-                "reason": "The article discusses a concert featuring Robin Packalen, Iiro Rantala, and Atte Kilpinen. The selected concept requires a promotional photo showing all three artists together. This image shows only two young men, neither of whom can be identified as any of the named artists, and it does not include Iiro Rantala. Therefore, it fails to meet the 'mu",
-                "source_url": "https://www.pexels.com/photo/two-men-wearing-caps-4816752/"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "d86a2b012f57e2b85c1f401aa53495f3fb739376b3d469b1515a5688a1e4734a",
-                "license": "Pexels License",
-                "reason": "The article discusses a concert featuring Robin Packalen, Iiro Rantala, and Atte Kilpinen. The selected concept requires a shared promotional photograph showing all three artists together. The image only shows one man, who is not identifiable as any of the named artists from visible features alone, and it does not depict a shared artist portrait wi",
-                "source_url": "https://www.pexels.com/photo/man-in-leather-jacket-by-lake-in-the-hague-28458584/"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "09cba57261aceaa23c7e1ba87dffda06e482866761b9c0ea0ee05b98b49046af",
-                "license": "Pexels License",
-                "reason": "The article discusses a concert featuring Robin Packalen, Iiro Rantala, and Atte Kilpinen. The selected concept requires a shared promotional photograph showing all three artists. The image provided shows only one man, who cannot be definitively identified as any of the named artists, and certainly not all three in a shared portrait. Therefore, it ",
-                "source_url": "https://www.pexels.com/photo/selective-focus-photo-of-man-wearing-polo-shirt-3228853/"
+                "reason": "The image clearly depicts multiple electricity meters and electrical panels, which directly illustrates the concept of 'Kotitalouden sähkön kulutuksen mittaus' (Household electricity consumption measurement) and is highly relevant to the article's discussion of electricity price regulation and household electricity costs.",
+                "source_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/"
               }
             ],
             "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "accepted",
             "provider": "pexels",
             "queries": [
-              "Robin Packalen Iiro Rantala Atte Kilpinen promokuva",
-              "Robin Packalen Iiro Rantala",
-              "Atte Kilpinen yhteiskuva"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "b6af3df97f60c9df4919e538113580a04fbd23c5b99464aa9c40c699d8418ec2",
-                "license": "Unsplash License",
-                "reason": "The image depicts a robin, which shares a name with one of the artists (Robin Packalen) mentioned in the article. However, the article is about a concert featuring human performers, not birds. The selected concept specifically requires a promotional photograph of the three artists together. This image does not show any of the named individuals, nor",
-                "source_url": "https://unsplash.com/photos/a-robin-perched-on-a-snow-dusted-tree-branch-KVr-tTZ6oyU?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "551ccdbff12e3bc37d80b7d66c72e1baf47c3bc0ece92211f383ee98d974f4be",
-                "license": "Unsplash License",
-                "reason": "The article is about three Finnish performing artists: Robin Packalen, Iiro Rantala, and Atte Kilpinen. The selected concept is a shared promotional photograph of these three individuals. The image shows a bird, which is completely unrelated to the article's subject matter or the selected concept. The bird's species, a robin, shares a name with one",
-                "source_url": "https://unsplash.com/photos/a-robin-is-perched-on-the-ground-Z6NDLsDLX0M?utm_source=uutistenlukija&utm_medium=referral"
-              }
-            ],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Robin Packalen Iiro Rantala Atte Kilpinen promokuva",
-              "Robin Packalen Iiro Rantala",
-              "Atte Kilpinen yhteiskuva"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "Robin Packalen Iiro Rantala Atte Kilpinen promokuva",
-              "Robin Packalen Iiro Rantala",
-              "Atte Kilpinen yhteiskuva"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Kuopion Musiikkikeskus konserttisali",
-              "Kuopion Musiikkikeskus näyttämö",
-              "Kuopio Music Centre auditorium"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "e8fc047f4e16eb065f7795240e36b8994eeca0e7bd842b88f86801b587ce7b2c",
-                "license": "Pexels License",
-                "reason": "The article discusses a concert at Kuopion Musiikkikeskus, and the selected concept specifically requests an actual photo of the Kuopio Music Centre concert hall, showing the stage and auditorium seating. While the image shows a stage and musicians, there is no visual evidence to confirm this is the Kuopio Music Centre. The image also does not clea",
-                "source_url": "https://www.pexels.com/photo/a-group-of-people-playing-musical-instruments-on-stage-7095836/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "4dfd5f762887299d5b21d58ae7226fe0fc6a29833101094df7298a3aec964cb1",
-                "license": "Pexels License",
-                "reason": "The article discusses a concert at Kuopio Music Centre, specifically mentioning the concert hall, stage, and auditorium seating. The image shows a performance with a stage, but it does not depict the Kuopio Music Centre concert hall or auditorium seating. Therefore, it does not meet the 'Actual Kuopio Music Centre concert hall' or 'Stage and audito",
-                "source_url": "https://www.pexels.com/photo/a-woman-playing-an-electronic-keyboard-in-a-band-8512195/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "596ba891b09514c186976e9602b5aaf759a77f83d0b8eec358a3832c800cbdd8",
-                "license": "Pexels License",
-                "reason": "The article discusses a concert at Kuopio Music Centre's concert hall, which is a large, formal venue. The image shows a small, informal stage setup in what appears to be a rehearsal space or a small private venue, not a concert hall. It does not depict the Kuopio Music Centre concert hall or auditorium seating. One or more required concept element",
-                "source_url": "https://www.pexels.com/photo/black-and-white-music-studio-7802300/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "e31d88051ac3aa81d441e6f2760a517ca7e65dd4a3d3586699ba26337099c2a1",
-                "license": "Pexels License",
-                "reason": "The article discusses a concert at Kuopio Music Centre's concert hall. The image shows a band performing on an outdoor stage, which is not the specific indoor venue mentioned in the article. The image does not depict the Kuopio Music Centre concert hall or its auditorium seating. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/man-in-white-long-sleeves-playing-guitar-in-front-of-people-9298953/"
-              }
-            ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "Kuopion Musiikkikeskus konserttisali",
-              "Kuopion Musiikkikeskus näyttämö",
-              "Kuopio Music Centre auditorium"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Kuopion Musiikkikeskus konserttisali",
-              "Kuopion Musiikkikeskus näyttämö",
-              "Kuopio Music Centre auditorium"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "Kuopion Musiikkikeskus konserttisali",
-              "Kuopion Musiikkikeskus näyttämö",
-              "Kuopio Music Centre auditorium"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
+              "kotitalouden sähkömittari",
+              "asunnon sähkökaappi",
+              "residential electricity meter"
             ]
           },
           {
@@ -1522,427 +1114,211 @@
               {
                 "approved": true,
                 "fit_score": 9,
-                "image_sha256": "f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06",
-                "license": "CC BY-SA 4.0",
-                "reason": "The image clearly depicts a grand piano and microphones on stands within what appears to be an empty stage or performance area, directly matching the selected concept of 'Grand piano and microphone on a stand' and 'Empty stage with open floor space'. The article discusses a concert featuring a pianist and singer, making the visual subject highly re",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Grand%20piano%20microphone%20setup%2001%20sala4%20LAuditori%20ESMUC.jpg"
+                "image_sha256": "70d1709148cf86a7ea568a53e1b0b3d4407ec9c26ef6554ca5cd611bca664b70",
+                "license": "Pexels License",
+                "reason": "The image clearly shows a wall-mounted radiator in a domestic room interior, which directly matches the 'must_show' elements of the selected concept. The article discusses household electricity consumption for heating, making the radiator a relevant subject.",
+                "source_url": "https://www.pexels.com/photo/apartment-interior-with-table-and-chairs-near-window-6447395/"
               }
             ],
-            "concept_rank": 3,
+            "concept_rank": 2,
             "outcome": "accepted",
-            "provider": "wikimedia",
+            "provider": "pexels",
             "queries": [
-              "flyygeli mikrofoni lava",
-              "grand piano microphone",
-              "empty stage grand piano"
+              "sähköpatteri ikkunan alla",
+              "kodin sähköpatteri",
+              "wall mounted electric radiator"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 3,
+          "concept_rank": 1,
           "fit_score": 9,
-          "image_sha256": "f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06",
+          "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
           "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Grand%20piano%20microphone%20setup%2001%20sala4%20LAuditori%20ESMUC.jpg",
+      "sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
+      "source_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
       "stock_provenance": {
-        "attribution": {
-          "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
-          "title": "Grand piano microphone setup 01 sala4 LAuditori ESMUC.jpg"
-        },
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Grand_piano_microphone_setup_01_sala4_LAuditori_ESMUC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "photo_id": "wikimedia-89157762",
-        "photo_url": "https://commons.wikimedia.org/wiki/File:Grand%20piano%20microphone%20setup%2001%20sala4%20LAuditori%20ESMUC.jpg",
-        "photographer": "Enricguaus",
-        "photographer_url": "https://commons.wikimedia.org/wiki/File:Grand%20piano%20microphone%20setup%2001%20sala4%20LAuditori%20ESMUC.jpg",
-        "provider": "wikimedia",
-        "query": "grand piano microphone",
-        "retrieved_at": "2026-09-30T12:42:51Z"
+        "image_url": "https://images.pexels.com/photos/10065200/pexels-photo-10065200.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "10065200",
+        "photo_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
+        "photographer": "AV",
+        "photographer_url": "https://www.pexels.com/@av-49217877",
+        "provider": "pexels",
+        "query": "kotitalouden sähkömittari",
+        "retrieved_at": "2026-09-30T13:20:57Z"
       },
-      "stock_provenance_sha256": "976e193b41e5aae6ce634f73df1f91ce9ed8ce68498ebc49b70d1c2b99d73a30",
-      "url": "https://uutistenlukija.fi/media/f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06.jpg"
+      "stock_provenance_sha256": "123758867959cf5cce020ab0eb7fd1a08924beeb763087eb41e8953332433388",
+      "url": "https://uutistenlukija.fi/media/e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "kuopio",
-      "related_sources": 1,
-      "source_fields_sha256": "f158397c7f63a875f66ad922b85c18552618204a93cea078af93a262d2868a53",
-      "source_sha256": "7320d659b378d9b4cd32d9c3f64765d299215196d40a514f771738ad0a6f2735"
+      "provider": "valtioneuvosto",
+      "related_sources": 0,
+      "source_fields_sha256": "23c66fce16767d6ee222748673c2d64758672a037475917476e22515a403f6cf",
+      "source_sha256": "67e76d238ed840236b36b559118da7058a2fab9752e83dfc3b9167eebf6464be"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-09-30T00:00:00+03:00",
-        "publisher": "Kuopion kaupunki",
+        "published_at": "2026-09-30T14:53+0300",
+        "publisher": "Valtioneuvoston kanslia",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Kuopion kaupungin avoimen datan käyttöehdot: maailmanlaajuinen, maksuton, peruuttamaton käyttöoikeus kopioida, levittää, muokata ja hyödyntää kaupallisesti ja ei-kaupallisesti; koskee myös tekstejä",
-          "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://www.kuopio.fi/app/uploads/2023/04/avoin-data-kayttoehdot-kuopion-kaupunki.pdf"
+          "license": "Valtioneuvoston sivuston käyttöehdot: tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan; aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen",
+          "license_url": "https://valtioneuvosto.fi/tietoa-sivustosta",
+          "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
+          "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
         },
-        "text": "Robin Packalen, Iiro Rantala ja Atte Kilpinen kohtaavat Kuopion Musiikkikeskuksessa 7.2.\n30.09.2026\nTapahtumat\nUutiset\nSunnuntaina 7.2.2027 klo 16 koetaan Kuopion Musiikkikeskuksen Konserttisalissa jotain aivan ainutlaatuista, kun laulaja Robin Packalen, pianisti Iiro Rantala ja tanssija Atte Kilpinen yhdistävät voimansa uniikissa konsertissa. Esitys on kolmen huippuartistin yhteinen juhla, jossa kohtaavat pop, jazz ja tanssi. Esityksen lipunmyynti alkaa keskiviikkona 30.9. klo 14.\nRobinin, Iiron ja Aten konsertissa 7.2. kuullaan energisiä soolopianoteoksia, Rantalan ja Packalenin sykähdyttäviä duoja sekä kokonaisuuden kruunaavaa Kilpisen omaleimaista liikekieltä. ”Ajatus poplaulajan, jazzpianistin ja balettitanssijan yhteisestä show’sta saattaa kuulostaa paperilla täysin odottamattomalta, mutta kun kysyin Robinia ja Attea mukaan, he sanoivat ’tahdon’ ennen kuin ehdin selittää idean loppuun”, Rantala kertoo.\nIiro Rantalan ja Robin Packalenin yhteistyö alkoi jo vuonna 2014, kun Iiro vieraili solistina Robinin Olympiastadionin keikalla. Myöhemmin Robin kävi fiittaamassa Iiron konserttisarjassa Kansallisoopperalla ja kaksi titaania Turusta kohtasivat: Matti Salmisen ja Robinin yhdessä esittämä Bohemian Rhapsody piirtyi syvälle mieliin. Iiron ja Robinin yhteistyö syveni yhteiseen Benefits-kappaleeseen 2021.\nAtte Kilpisen ja Iiro Rantalan yhteistyö alkoi uudella tanssiesityksellä Aleksanterin Teatterissa kaksi vuotta sitten. Iiro kertoo: ”Toki olin nähnyt Aten tanssivan aikaisemminkin, mutta samalla lavalla esiintyessä tuli selväksi, että Atte on poikkeuksellisen vaikuttava tanssija. Hänellä on myös mainio kyky mukautua erilaisiin tilanteisiin ja tyyleihin!”.\nSäveltäjä ja pianisti Iiro Rantalaon todennäköisesti maamme kansainvälisesti tunnetuin jazzmuusikko. Maailmanmaineeseen 1990-luvulla nousseen Trio Töykeät – yhtyeen jälkeen hän on jatkanut loisteliasta uraansa soolokonserttien, klassisen musiikin, näytelmien, musikaalien ja uusimpana aluevaltauksena myös oopperoiden säveltämisen parissa.\nRobin Packalenon ollut koko 12-vuotisen uransa ajan yksi Suomen suurimpia pop-tähtiä. Packalenin tuotantoa on kuunneltu yhteensä yli 560 miljoonaa kertaa suoratoistoalustoilla, ja viisi hänen seitsemästä pitkäsoitostaan ovat debytoineet Suomen virallisen albumilistan ykkösenä. Jokainen levyistä on myös myynyt moninkertaista platinaa.\nTanssija Atte Kilpinenon Suomen Kansallisbaletin 1. solistitanssija, tanssitaiteilija ja koreografi. Uransa aikana hän on työskennellyt useissa merkittävissä ryhmissä ja instituutioissa, Kansallisbaletin lisäksi muun muassa Hampurin baletissa, Tero Saarinen Companyssä ja Susanna Leinonen Companyssä. Hänen koreografioitaan Kohtauksia punaisesta Jumalasta ja Kreutzersonaatti on esitetty laajasti eri puolilla Suomea.\nKonsertin kesto on noin 1 tunti 40 minuuttia, sis. väliajan.\nJärjestäjä: Kuopion Musiikkikeskus\nLiput: 49 € perushinta / 44,50 € eläkeläiset, opiskelijat, työttömät, lapset alle 16 v.\nMyynti: Kuopion Musiikkikeskus ti-pe klo 13-17 tai esityksen alkuun, viikonloppuisin 1 h ennen esitystä, puh. 0600 96 100 (1,98 €/min + pvm). Kuopion kaupunginteatteri (Niiralankatu 2, ks. aukioloajat kaupunginteatterin www-sivuilta), puh. 0600 41 31 43 (1,98 €/min + pvm + pmp). Kulttuurikulma (Kauppakeskus Apaja, ma-pe klo 11-17.30) sekä muut Lippupisteen myyntipisteet kautta maan. eLiput Lippupisteen verkkokaupasta.\nKUOPION MUSIIKKIKESKUS\nTuottaja-tiedottaja Elina Prepula, puh. 044 718 2364, elina.prepula(at)kuopio.fi\nwww.kuopionmusiikkikeskus.fi | Facebook: KuopionMusiikkikeskus | Instagram: kuopionmusiikkikeskus",
-        "title": "Robin Packalen, Iiro Rantala ja Atte Kilpinen kohtaavat Kuopion Musiikkikeskuksessa 7.2.",
-        "url": "https://www.kuopio.fi/2026/09/30/robin-packalen-iiro-rantala-ja-atte-kilpinen-kohtaavat-kuopion-musiikkikeskuksessa-7-2/"
-      },
-      {
-        "id": "B",
-        "published_at": "2026-09-30T11:00:32+00:00",
-        "publisher": "kuopionmusiikkikeskus.fi",
-        "related": true,
-        "text": "Huippuartistit Robin Packalen, Iiro Rantala ja Atte Kilpinen kohtaavat Kuopion Musiikkikeskuksen esityksessä 7.2.2027 Facebook Twitter Julkaistu 30.09.2026 klo 14:00 Esityksen lipunmyynti alkaa 30.9. klo 14 Sunnuntaina 7.2.2027 klo 16 koetaan Kuopion Musiikkikeskuksen Konserttisalissa jotain aivan ainutlaatuista, kun laulaja Robin Packalen, pianisti Iiro Rantala ja tanssija Atte Kilpinen yhdistävät voimansa uniikissa konsertissa. Esitys on kolmen huippuartistin yhteinen juhla, jossa kohtaavat pop, jazz ja tanssi. Esityksen lipunmyynti alkaa keskiviikkona 30.9. klo 14. Robinin, Iiron ja Aten konsertissa 7.2. kuullaan energisiä soolopianoteoksia, Rantalan ja Packalenin sykähdyttäviä duoja sekä kokonaisuuden kruunaavaa Kilpisen omaleimaista liikekieltä. ”Ajatus poplaulajan, jazzpianistin ja balettitanssijan yhteisestä show’sta saattaa kuulostaa paperilla täysin odottamattomalta, mutta kun kysyin Robinia ja Attea mukaan, he sanoivat ’tahdon’ ennen kuin ehdin selittää idean loppuun”, Rantala kertoo. Iiro Rantalan ja Robin Packalenin yhteistyö alkoi jo vuonna 2014, kun Iiro vieraili solistina Robinin Olympiastadionin keikalla. Myöhemmin Robin kävi fiittaamassa Iiron konserttisarjassa Kansallisoopperalla ja kaksi titaania Turusta kohtasivat: Matti Salmisen ja Robinin yhdessä esittämä Bohemian Rhapsody piirtyi syvälle mieliin. Iiron ja Robinin yhteistyö syveni yhteiseen Benefits-kappaleeseen 2021. Atte Kilpisen ja Iiro Rantalan yhteistyö alkoi uudella tanssiesityksellä Aleksanterin Teatterissa kaksi vuotta sitten. Iiro kertoo: ”Toki olin nähnyt Aten tanssivan aikaisemminkin, mutta samalla lavalla esiintyessä tuli selväksi, että Atte on poikkeuksellisen vaikuttava tanssija. Hänellä on myös mainio kyky mukautua erilaisiin tilanteisiin ja tyyleihin!”. Säveltäjä ja pianisti Iiro Rantala on todennäköisesti maamme kansainvälisesti tunnetuin jazzmuusikko. Maailmanmaineeseen 1990-luvulla nousseen Trio Töykeät – yhtyeen jälkeen hän on jatkanut loisteliasta uraansa soolokonserttien, klassisen musiikin, näytelmien, musikaalien ja uusimpana aluevaltauksena myös oopperoiden säveltämisen parissa. Robin Packalen on ollut koko 12-vuotisen uransa ajan yksi Suomen suurimpia pop-tähtiä. Packalenin tuotantoa on kuunneltu yhteensä yli 560 miljoonaa kertaa suoratoistoalustoilla, ja viisi hänen seitsemästä pitkäsoitostaan ovat debytoineet Suomen virallisen albumilistan ykkösenä. Jokainen levyistä on myös myynyt moninkertaista platinaa. Tanssija Atte Kilpinen on Suomen Kansallisbaletin 1. solistitanssija, tanssitaiteilija ja koreografi. Uransa aikana hän on työskennellyt useissa merkittävissä ryhmissä ja instituutioissa, Kansallisbaletin lisäksi muun muassa Hampurin baletissa, Tero Saarinen Companyssä ja Susanna Leinonen Companyssä. Hänen koreografioitaan Kohtauksia punaisesta Jumalasta ja Kreutzersonaatti on esitetty laajasti eri puolilla Suomea. Konsertin kesto on noin 1 tunti 40 minuuttia, sis. väliajan. Järjestäjä: Kuopion Musiikkikeskus Liput: 49 € perushinta / 44,50 € eläkeläiset, opiskelijat, työttömät, lapset alle 16 v. Myynti: Kuopion Musiikkikeskus ti-pe klo 13-17 tai esityksen alkuun, viikonloppuisin 1 h ennen esitystä, puh. 0600 96 100 (1,98 €/min + pvm). Kuopion kaupunginteatteri (Niiralankatu 2, ks. aukioloajat kaupunginteatterin www-sivuilta), puh. 0600 41 31 43 (1,98 €/min + pvm + pmp). Kulttuurikulma (Kauppakeskus Apaja, ma-pe klo 11-17.30) sekä muut Lippupisteen myyntipisteet kautta maan. eLiput Lippupisteen verkkokaupasta. KUOPION MUSIIKKIKESKUS Tuottaja-tiedottaja Elina Prepula, puh. 044 718 2364, elina.prepula(at)kuopio.fi www.kuopionmusiikkikeskus.fi | Facebook: KuopionMusiikkikeskus | Instagram: kuopionmusiikkikeskus",
-        "title": "Huippuartistit Robin Packalen, Iiro Rantala ja Atte Kilpinen ...",
-        "url": "https://www.kuopionmusiikkikeskus.fi/uutinen/huippuartistit-robin-packalen-iiro-rantala-ja-atte-kilpinen-kohtaavat-kuopion-musiikkikeskuksen-esityksessa-7-2-2027/"
+        "text": "Julkaisuajankohta 30.9.2026 14.53\nTyyppi:Tiedote\nLainsäädännön arviointineuvosto on antanut lausunnon työ- ja elinkeinoministeriölle lakiehdotuksesta, joka mahdollistaa sähkön vähittäismyynnin hintasääntelyn sähkön hintakriisin aikana. Esityksen vaikutuksia on arvioitu pääsääntöisesti hyvin, mutta hintasääntelyn vaikutuksia kotitalouksiin olisi hyvä tarkentaa.\nLakiehdotuksessa ehdotetaan säädettäväksi laki, joka mahdollistaa sähkön vähittäismyynnin hintasääntelyn sähkön hintakriisin aikana. Esityksen tavoitteena on turvata kotitalouksille kohtuuhintaisen energian saatavuutta sähkön hintakriisin aikana. Hintasääntelyn soveltamisajasta säädettäisiin erikseen lailla. Laki hintasääntelyn soveltamisesta voitaisiin säätää, kun Euroopan unionin neuvosto on julistanut Suomea koskevan alueellisen tai unionin laajuisen sähkön hintakriisin.\nSähkön vähittäishintojen sääntelyä koskeva lakiehdotus sisältää tiiviin kuvauksen esityksen taustasta, tavoitteista ja keskeisistä ehdotuksista. Alustavia taloudellisia vaikutuksia kotitalouksille, sähkön vähittäismyyjille ja julkiselle taloudelle on arvioitu pääosin hyvin. Esitysluonnoksessa käsitellään erilaisia vaihtoehtoisia tukimuotoja sekä käytännön ongelmia niiden toteuttamiseksi.\nLakiehdotuksessa on kuvattu erilaisia vaihtoehtoja sähkön loppukäyttäjien tukemiseksi sekä haasteita näiden mallien toteuttamisessa. Esitysluonnoksessa todetaan avoimesti, että ehdotettu tuki tulee kohdentumaan myös ei-välttämättömään kulutukseen ja loppukäyttäjille, joiden tuen tarve on taloudellisen aseman vuoksi vähäisempi. Arviointineuvosto tuo esille, että EU:n sähkömarkkinadirektiivissä todetaan, että jäsenvaltioiden tulisi antaa kohdennettua tukea. Esitysluonnoksen perusteella jää käsitys, että ehdotettu tuki ei aivan tavoita direktiivin ajatusta kohdennetusta tuesta.\nEsitysluonnoksessa on arvioitu kotitalouksille kohdentuvien tukien mittaluokkaa ja merkitystä. Lisäksi todetaan, että tarkempi arvio loppukäyttäjien saamasta hyödystä pystytään tekemään vasta hintasääntelyn käyttöönoton yhteydessä, kun määritellään perushinnan, tukikaton ja tuetun kulutuksen osuuden taso sekä tiedetään vallitseva markkinatilanne. Vaikutuksia kotitalouksille on arvioitu pääsääntöisesti hyvin, mutta lakiehdotuksessa olisi hyvä tarkentaa, mikä osuus tuotannosta kohdentuisi ei-välttämättömään kulutukseen.\nLainsäädännön arviointineuvoston lausunto on annettu sähkön vähittäismyyntihintojen sääntelystä sähkön hintakriisin aikana ja Energiavirastosta annetun lain 1 §:n muuttamisesta (hankenumero: TEM081:00/2025), jonka työ- ja elinkeinoministeriö toimitti arviointineuvoston käyttöön sähköpostitse 16.9.2026. Lausunto on julkinen.\nArviointineuvosto katsoo, että hallituksen esitysluonnos täyttää hyvin lainvalmistelun vaikutusarviointiohjeen vaatimukset. Arviointineuvosto suosittelee, että hallituksen esitysluonnosta täydennetään neuvoston lausunnon mukaisesti ennen hallituksen esityksen antamista.\nLisätietoja: arviointineuvos Meri Virolainen, lainsäädännön arviointineuvoston pääsihteeri, p. 0295 160 202\nLainsäädännön arviointineuvosto on itsenäinen ja riippumaton toimielin, joka antaa lausuntoja hallituksen esitysluonnoksista ja niiden vaikutusarvioinneista. Se ei ota kantaa ehdotusten kannatettavuuteen tai poliittisiin ratkaisuihin. Lainsäädännön arviointineuvosto toimii valtioneuvoston kanslian yhteydessä.\nArviointineuvoston lausunto sähkön vähittäismyynnin hintasääntelystä\narviointi energia hinnoittelu kognitio lainsäädäntö sähkö valtioneuvoston kanslia",
+        "title": "Sähkön vähittäishinnan hintasääntelyn vaikutuksia arvioitu pääsääntöisesti hyvin",
+        "url": "https://valtioneuvosto.fi/-/sahkon-vahittaishinnan-hintasaantelyn-vaikutuksia-arvioitu-paasaantoisesti-hyvin"
       }
     ],
-    "story_key": "url:https://www.kuopio.fi/2026/09/30/robin-packalen-iiro-rantala-ja-atte-kilpinen-kohtaavat-kuopion-musiikkikeskuksessa-7-2/",
+    "story_key": "url:https://valtioneuvosto.fi/-/sahkon-vahittaishinnan-hintasaantelyn-vaikutuksia-arvioitu-paasaantoisesti-hyvin",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-09-30T12:38:00.848068+00:00",
-        "sha256": "aa2474253e1b74dd3fc1a6342553e332e7bd9fe6ab36c901fcf449c09a6cbf98",
-        "text": "Kuopion kaupunki Konsernipalvelu Tietohallinto Käyttöehdot 4.12.2016 Kuopion kaupungin avoimen datan käyttöehdot 1. Yleistä Nämä käyttöehdot koskevat Kuopion kaupungin www-sivustoilla ja niihin liitettyjen palvelujen avoimesti jaettuja aineistojen (avoimen datan) käyttöä. Käyttäjällä tarkoitetaan henkilöä tai organisaatiota, joka ottaa tämän lisenssin (lisenssi jäljempänä myös \"käyttöoikeus\") alaisen aineiston käyttöönsä. Aineistojen tuottaja ja tekijänoikeuden tai tietokantasuojan haltija on Kuopion kaupunki, ellei aineiston, tiedon tai palvelun yhteydessä erikseen toisin ilmoiteta. Käyttöehdot koskevat palveluissa olevia paikkatietoaineistoja, taulukoita, tilastokuvioita, tekstejä sekä muuta tietoaineistoa. Kuopion kaupunki ei peri käyttöehtojen mukaisen aineiston käytöstä maksua. 2. Käyttöoikeuden ehdot Vastaanottamalla aineistoa käyttäjä hyväksyy olla olevat ehdot. Aineistoa käytettäessä on aineiston tai sitä sisältävän tai hyödyntävän palvelun yhteyteen liitettävä maininta alkuperäislähteestä ja aineistoversion ajankohta, esimerkiksi: [aineisto] © Kuopion kaupunki, [vuosiluku, päiväys] tai o o sisältää Kuopion kaupungin [aineiston nimi] aineistoa, [vuosiluku] 2.1 Käyttöoikeudet Tämä on Kuopion kaupungin myöntämä maailmanlaajuisen, maksuttoman, peruuttamattoman rinnakkaisen käyttöoikeuden myöntävä lisenssi, jolla edellä mainittua aineistoa voi vapaasti: · kopioida ja levittää · muokata ja hyödyntää kaupallisesti ja ei-kaupallisesti jatkolisensoimalla · yhdistellä muihin tuotteisiin ja · käyttää osana sovellusta tai palvelua. 2.2 Aineiston tuottajan velvollisuudet ja vastuut Aineisto on lisensoitu sellaisenaan eikä Kuopion kaupunki vastaa aineistossa mahdollisesti esiintyvistä virheistä eikä aineiston käytöstä aiheutuvista välittömistä tai välillisistä vahingoista. Kuopion kaupunki ei myönnä aineistolle tai siinä olevien tietojen oikeellisuudelle tai ajantasaisuudelle takuuta. Kuopion kaupunki ei takaa, että aineisto olisi jatkuvasti saatavilla ja Kuopion kaupunki voi lopettaa aineiston jakelun ennalta ilmoittamatta. 2.3 Käyttäjän velvollisuudet ja vastuut Käyttäjän on aineistoa tai siitä tehtyjä tuotteita käyttäessään ja edelleen luovuttaessaan · mainittava Kuopion kaupungin tekijän- tai muu oikeus ko. aineistoon · vaadittava nimeämiskäytännön noudattamista myöntäessään lisenssejä tuotteeseen tai · palveluun, jossa käytetään näiden ehtojen alaista aineistoa tai sen osaa Ilmoitettava onko aineisto esitetty/käytetty muuttamattomana/ kokonaisuudessaan/ käsiteltynä · poistettava maininta alkuperäislähteestä, mikäli Kuopion kaupunki sitä erikseen vaatii Käyttäjän ja Kuopion kaupungin välillä ei tämän lisenssin myötä synny yhteistyö- tai liikesuhdetta. Käyttäjä ei saa aineiston käytön yhteydessä ilmaista, että Kuopion kaupunki tukisi tai suosittelisi kyseistä aineiston käyttötapaa. 3. Sovellettava laki Tähän lisenssiin/käyttöoikeuteen sovelletaan Suomen lakia. 4. Muutokset tähän lisenssiin Kuopion kaupunki voi milloin tahansa muuttaa lisenssin ehtoja tai soveltaa aineistoon eri lisenssiä. Tämän lisenssin ehtoja sovelletaan kuitenkin edelleen niihin aineistoihin, jotka on otettu käyttöön tämän lisenssin voimassa ollessa. Lisätietoja: Jari Torvinen, tietohallintopäällikkö jari.torvinen(at)kuopio.fi",
-        "url": "https://www.kuopio.fi/app/uploads/2023/04/avoin-data-kayttoehdot-kuopion-kaupunki.pdf"
+        "retrieved_at": "2026-09-30T13:03:28.281682+00:00",
+        "sha256": "42538c58d488190fc0952c29de044d046ba30839e42cdcda7d0a4aaece9e5cd8",
+        "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
+        "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
       }
     ]
   },
   "draft": {
-    "category": "Kulttuuri",
+    "category": "Talous",
     "image": {
-      "alt": "Arkistokuva: Flyygeli avoimella kannella ja kaksi mikrofonia telineineen puisessa konserttisalissa, jossa on myös puiset portaat.",
+      "alt": "Arkistokuva: Neljä sähkömittaria ja sähkökaappia on asennettu graffitein peittämälle betoniseinälle, ja niitä yhdistävät mustat johdot.",
       "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Kulttuuri",
+        "category": "Talous",
         "concepts": [
           {
-            "depictable_scene": "Todellinen yhteinen promootiovalokuva, jossa Robin Packalen, Iiro Rantala ja Atte Kilpinen näkyvät samassa kuvassa.",
+            "depictable_scene": "Lähikuva asunnon sähkökaappiin asennetusta sähkömittarista. Mittarin kotelo ja sen vieressä olevat sulakkeet näkyvät, mutta näytön lukemat ja laitemerkinnät eivät ole luettavissa.",
             "must_avoid": [
-              "Fabricated likenesses or composite group portraits",
-              "Presenting the image as documentation of the upcoming February 2027 concert"
+              "People or body parts",
+              "Invented readable meter readings, prices or logos"
             ],
             "must_show": [
-              "Robin Packalen, Iiro Rantala and Atte Kilpinen",
-              "Shared artist portrait"
+              "Residential electricity meter",
+              "Domestic electrical panel"
             ],
             "rank": 1,
-            "safe_to_generate": false,
-            "search_queries": [
-              "Robin Packalen Iiro Rantala Atte Kilpinen promokuva",
-              "Robin Packalen Iiro Rantala",
-              "Atte Kilpinen yhteiskuva",
-              "Iiro Rantala grand piano"
-            ],
-            "subject": "Robin Packalen, Iiro Rantala ja Atte Kilpinen yhteisessä artistikuvassa"
-          },
-          {
-            "depictable_scene": "Todellinen valokuva Kuopion Musiikkikeskuksen konserttisalista, jossa näkyvät esiintymislava ja sitä kohti suunnatut katsomopaikat.",
-            "must_avoid": [
-              "Invented venue architecture",
-              "Presenting an unrelated performance as the announced concert"
-            ],
-            "must_show": [
-              "Actual Kuopio Music Centre concert hall",
-              "Stage and auditorium seating"
-            ],
-            "rank": 2,
-            "safe_to_generate": false,
-            "search_queries": [
-              "Kuopion Musiikkikeskus konserttisali",
-              "Kuopion Musiikkikeskus näyttämö",
-              "Kuopio Music Centre auditorium",
-              "concert hall stage seating"
-            ],
-            "subject": "Kuopion Musiikkikeskuksen konserttisalissa oleva esiintymislava"
-          },
-          {
-            "depictable_scene": "Nimeämättömän konserttitilan tyhjällä lavalla on flyygeli ja sen vieressä mikrofoniteline mikrofoneineen. Soitinten edessä näkyy avointa lavalattiaa.",
-            "must_avoid": [
-              "People, faces, hands or other body parts",
-              "Recognizable Kuopio Music Centre architecture",
-              "Readable text or logos",
-              "Presenting the scene as the actual announced concert"
-            ],
-            "must_show": [
-              "Grand piano and microphone on a stand",
-              "Empty stage with open floor space"
-            ],
-            "rank": 3,
             "safe_to_generate": true,
             "search_queries": [
-              "flyygeli mikrofoni lava",
-              "grand piano microphone",
-              "empty stage grand piano",
-              "tyhjä konserttilava flyygeli"
+              "kotitalouden sähkömittari",
+              "asunnon sähkökaappi",
+              "residential electricity meter",
+              "domestic electrical meter closeup"
             ],
-            "subject": "jazzpiano ja poplaulu tyhjällä esiintymislavalla"
+            "subject": "Kotitalouden sähkön kulutuksen mittaus"
+          },
+          {
+            "depictable_scene": "Tavallisen asunnon ikkunan alla oleva seinään kiinnitetty sähköpatteri kuvattuna tyhjässä huoneessa. Patterin säätönuppi ja sähköjohto näkyvät ilman luettavia merkintöjä.",
+            "must_avoid": [
+              "People or body parts",
+              "Luxury-home framing that implies who receives support",
+              "Readable invented text or logos"
+            ],
+            "must_show": [
+              "Wall-mounted electric radiator",
+              "Domestic room interior"
+            ],
+            "rank": 2,
+            "safe_to_generate": true,
+            "search_queries": [
+              "sähköpatteri ikkunan alla",
+              "kodin sähköpatteri",
+              "wall mounted electric radiator",
+              "electric radiator domestic interior"
+            ],
+            "subject": "Kotitalouksien sähkön kulutus lämmityksessä"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Enricguaus on Wikimedia Commons",
-      "depicted": "The image shows a grand piano with its lid open, revealing the strings and internal mechanisms. Two microphones on stands are positioned above the piano strings. The piano is black and highly reflective. In the background, there are wooden paneled walls and a set of wooden stairs. A dark, thick support beam extends diagonally from the upper right towards the lower left, partially obscuring the background. There is no readable text or identifiable people in the image.",
+      "credit": "Photo by AV on Pexels",
+      "depicted": "The image shows a concrete wall with multiple utility boxes and electrical wiring. From left to right, there is a gray utility box with a white circular sticker on its lower left side, and a small white padlock hanging from its bottom. To its right, a blue transparent utility box is visible, revealing internal components and a digital display. Next, there is a damaged white metal utility box with its door slightly ajar at the bottom, secured by a small brass-colored padlock. Further to the right",
       "generated": false,
       "hotlink": false,
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-      "local_path": "media/f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06.jpg",
+      "license": "Pexels License",
+      "license_evidence": {
+        "image_path": "/photos/10065200/pexels-photo-10065200.jpeg",
+        "license": "Pexels License",
+        "license_code": "Pexels",
+        "license_url": "https://www.pexels.com/license/",
+        "photo_id": "10065200",
+        "photo_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
+        "photographer": "AV",
+        "photographer_url": "https://www.pexels.com/@av-49217877",
+        "response_sha256": "1361560deceb60e5cf8ff2b3eb3f6d0d7070b0a11a0e04eb74dce3dba218eb31",
+        "retrieved_at": "2026-09-30T13:20:57.463400+00:00",
+        "transport": "jina_reader",
+        "version": 1
+      },
+      "license_url": "https://www.pexels.com/license/",
+      "local_path": "media/e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1.jpg",
       "pixel_review": {
-        "alt_fi": "Flyygeli avoimella kannella ja kaksi mikrofonia telineineen puisessa konserttisalissa, jossa on myös puiset portaat.",
+        "alt_fi": "Neljä sähkömittaria ja sähkökaappia on asennettu graffitein peittämälle betoniseinälle, ja niitä yhdistävät mustat johdot.",
         "approved": true,
-        "article_text_sha256": "affaca341a8fae4d461d8e8000d261e6ce71f648235f3a4e018498b41722fd49",
-        "concept_sha256": "bf2e3563184ba9794de3a7843994a3e308fe6899cc1fe5710ad2477be8ba2c8f",
-        "description": "A grand piano with its lid open, revealing the strings and internal mechanisms. Two microphones on stands are positioned near the piano. The background features wooden paneling and a set of wooden stairs, suggesting a concert hall or performance space.",
+        "article_text_sha256": "7648c2bc9c3cd7833493e181a0e7ca3ec476f6e3fb07741728c945347b1285f6",
+        "concept_sha256": "df6d55e165b549104e041334572427d655e2a442fb3330d11490bf1e3ebe73ad",
+        "description": "Four electricity meters and electrical panels are mounted on a concrete wall with graffiti. Two of the meters are grey, one is in a blue transparent casing, and one is in an open, damaged white casing. Wires connect the units.",
         "fit_score": 9,
-        "image_sha256": "f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06",
+        "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts a grand piano and microphones on stands within what appears to be an empty stage or performance area, directly matching the selected concept of 'Grand piano and microphone on a stand' and 'Empty stage with open floor space'. The article discusses a concert featuring a pianist and singer, making the visual subject highly relevant.",
-        "reviewed_at": "2026-09-30T12:42:54.342815+00:00",
-        "source_context": {
-          "image_sha256": "f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06",
-          "license": "CC BY-SA 4.0",
-          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-          "photo_id": "wikimedia-89157762",
-          "photo_url": "https://commons.wikimedia.org/wiki/File:Grand%20piano%20microphone%20setup%2001%20sala4%20LAuditori%20ESMUC.jpg",
-          "photographer": "Enricguaus",
-          "provider": "wikimedia",
-          "title": "Grand piano microphone setup 01 sala4 LAuditori ESMUC.jpg"
-        },
-        "source_context_sha256": "8e7053f810b0f6eba08a68b6aca6e68d8012ed9787af7bb91872f891541b5e89",
-        "text_audit": {
-          "examples": [],
-          "readable_text_present": false
-        }
+        "reason": "The image clearly depicts multiple electricity meters and electrical panels, which directly illustrates the concept of 'Kotitalouden sähkön kulutuksen mittaus' (Household electricity consumption measurement) and is highly relevant to the article's discussion of electricity price regulation and household electricity costs.",
+        "reviewed_at": "2026-09-30T13:20:59.634682+00:00"
       },
       "pixels": {
-        "height": 1200,
+        "height": 627,
         "mode": "RGB",
-        "variance": 7696.3,
-        "width": 1600
+        "variance": 6322.1,
+        "width": 940
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "A grand piano with its lid open, revealing the strings and internal mechanisms. Two microphones on stands are positioned near the piano. The background features wooden paneling and a set of wooden stairs, suggesting a concert hall or performance space.",
+        "evidence": "Four electricity meters and electrical panels are mounted on a concrete wall with graffiti. Two of the meters are grey, one is in a blue transparent casing, and one is in an open, damaged white casing. Wires connect the units.",
         "matched": [
-          "grand",
-          "open",
-          "piano",
-          "space"
+          "electrical",
+          "electricity"
         ],
         "method": "vision",
         "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
       "selection_evidence": {
-        "article_text_sha256": "affaca341a8fae4d461d8e8000d261e6ce71f648235f3a4e018498b41722fd49",
-        "decision_sha256": "77db241f2fd9312218c3bd63dcbf7612266224ca188d15d0beb47284c3ac091e",
+        "article_text_sha256": "7648c2bc9c3cd7833493e181a0e7ca3ec476f6e3fb07741728c945347b1285f6",
+        "decision_sha256": "7d0d30a9ef5ed40cafecb2fc999c2ea25d2373bc568e05c6f8248d1697f2556f",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Robin Packalen Iiro Rantala Atte Kilpinen promokuva",
-              "Robin Packalen Iiro Rantala",
-              "Atte Kilpinen yhteiskuva"
-            ]
-          },
-          {
             "candidates": [
               {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "9deb26580bdd0d0ecd0792fb9add431e9c98caee8522f6289cc8eb2ef042f309",
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
                 "license": "Pexels License",
-                "reason": "The image depicts deer in a natural setting, which is entirely unrelated to the article about musicians Robin Packalen, Iiro Rantala, and dancer Atte Kilpinen performing together. The selected concept specifically requires a promotional photograph of these three artists together, none of whom are visible in the image. One or more required concept e",
-                "source_url": "https://www.pexels.com/photo/deers-sitting-on-a-grass-4757467/"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "c5269a85faafe924619e5904dfb0b5e5a45a7f7d6091a4b57f7ba93e43e3e126",
-                "license": "Pexels License",
-                "reason": "The article discusses a concert featuring Robin Packalen, Iiro Rantala, and Atte Kilpinen. The selected concept requires a promotional photo showing all three artists together. This image shows only two young men, neither of whom can be identified as any of the named artists, and it does not include Iiro Rantala. Therefore, it fails to meet the 'mu",
-                "source_url": "https://www.pexels.com/photo/two-men-wearing-caps-4816752/"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "d86a2b012f57e2b85c1f401aa53495f3fb739376b3d469b1515a5688a1e4734a",
-                "license": "Pexels License",
-                "reason": "The article discusses a concert featuring Robin Packalen, Iiro Rantala, and Atte Kilpinen. The selected concept requires a shared promotional photograph showing all three artists together. The image only shows one man, who is not identifiable as any of the named artists from visible features alone, and it does not depict a shared artist portrait wi",
-                "source_url": "https://www.pexels.com/photo/man-in-leather-jacket-by-lake-in-the-hague-28458584/"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "09cba57261aceaa23c7e1ba87dffda06e482866761b9c0ea0ee05b98b49046af",
-                "license": "Pexels License",
-                "reason": "The article discusses a concert featuring Robin Packalen, Iiro Rantala, and Atte Kilpinen. The selected concept requires a shared promotional photograph showing all three artists. The image provided shows only one man, who cannot be definitively identified as any of the named artists, and certainly not all three in a shared portrait. Therefore, it ",
-                "source_url": "https://www.pexels.com/photo/selective-focus-photo-of-man-wearing-polo-shirt-3228853/"
+                "reason": "The image clearly depicts multiple electricity meters and electrical panels, which directly illustrates the concept of 'Kotitalouden sähkön kulutuksen mittaus' (Household electricity consumption measurement) and is highly relevant to the article's discussion of electricity price regulation and household electricity costs.",
+                "source_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/"
               }
             ],
             "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "accepted",
             "provider": "pexels",
             "queries": [
-              "Robin Packalen Iiro Rantala Atte Kilpinen promokuva",
-              "Robin Packalen Iiro Rantala",
-              "Atte Kilpinen yhteiskuva"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "b6af3df97f60c9df4919e538113580a04fbd23c5b99464aa9c40c699d8418ec2",
-                "license": "Unsplash License",
-                "reason": "The image depicts a robin, which shares a name with one of the artists (Robin Packalen) mentioned in the article. However, the article is about a concert featuring human performers, not birds. The selected concept specifically requires a promotional photograph of the three artists together. This image does not show any of the named individuals, nor",
-                "source_url": "https://unsplash.com/photos/a-robin-perched-on-a-snow-dusted-tree-branch-KVr-tTZ6oyU?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "551ccdbff12e3bc37d80b7d66c72e1baf47c3bc0ece92211f383ee98d974f4be",
-                "license": "Unsplash License",
-                "reason": "The article is about three Finnish performing artists: Robin Packalen, Iiro Rantala, and Atte Kilpinen. The selected concept is a shared promotional photograph of these three individuals. The image shows a bird, which is completely unrelated to the article's subject matter or the selected concept. The bird's species, a robin, shares a name with one",
-                "source_url": "https://unsplash.com/photos/a-robin-is-perched-on-the-ground-Z6NDLsDLX0M?utm_source=uutistenlukija&utm_medium=referral"
-              }
-            ],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Robin Packalen Iiro Rantala Atte Kilpinen promokuva",
-              "Robin Packalen Iiro Rantala",
-              "Atte Kilpinen yhteiskuva"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "Robin Packalen Iiro Rantala Atte Kilpinen promokuva",
-              "Robin Packalen Iiro Rantala",
-              "Atte Kilpinen yhteiskuva"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Kuopion Musiikkikeskus konserttisali",
-              "Kuopion Musiikkikeskus näyttämö",
-              "Kuopio Music Centre auditorium"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "e8fc047f4e16eb065f7795240e36b8994eeca0e7bd842b88f86801b587ce7b2c",
-                "license": "Pexels License",
-                "reason": "The article discusses a concert at Kuopion Musiikkikeskus, and the selected concept specifically requests an actual photo of the Kuopio Music Centre concert hall, showing the stage and auditorium seating. While the image shows a stage and musicians, there is no visual evidence to confirm this is the Kuopio Music Centre. The image also does not clea",
-                "source_url": "https://www.pexels.com/photo/a-group-of-people-playing-musical-instruments-on-stage-7095836/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "4dfd5f762887299d5b21d58ae7226fe0fc6a29833101094df7298a3aec964cb1",
-                "license": "Pexels License",
-                "reason": "The article discusses a concert at Kuopio Music Centre, specifically mentioning the concert hall, stage, and auditorium seating. The image shows a performance with a stage, but it does not depict the Kuopio Music Centre concert hall or auditorium seating. Therefore, it does not meet the 'Actual Kuopio Music Centre concert hall' or 'Stage and audito",
-                "source_url": "https://www.pexels.com/photo/a-woman-playing-an-electronic-keyboard-in-a-band-8512195/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "596ba891b09514c186976e9602b5aaf759a77f83d0b8eec358a3832c800cbdd8",
-                "license": "Pexels License",
-                "reason": "The article discusses a concert at Kuopio Music Centre's concert hall, which is a large, formal venue. The image shows a small, informal stage setup in what appears to be a rehearsal space or a small private venue, not a concert hall. It does not depict the Kuopio Music Centre concert hall or auditorium seating. One or more required concept element",
-                "source_url": "https://www.pexels.com/photo/black-and-white-music-studio-7802300/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "e31d88051ac3aa81d441e6f2760a517ca7e65dd4a3d3586699ba26337099c2a1",
-                "license": "Pexels License",
-                "reason": "The article discusses a concert at Kuopio Music Centre's concert hall. The image shows a band performing on an outdoor stage, which is not the specific indoor venue mentioned in the article. The image does not depict the Kuopio Music Centre concert hall or its auditorium seating. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/man-in-white-long-sleeves-playing-guitar-in-front-of-people-9298953/"
-              }
-            ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "Kuopion Musiikkikeskus konserttisali",
-              "Kuopion Musiikkikeskus näyttämö",
-              "Kuopio Music Centre auditorium"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Kuopion Musiikkikeskus konserttisali",
-              "Kuopion Musiikkikeskus näyttämö",
-              "Kuopio Music Centre auditorium"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "Kuopion Musiikkikeskus konserttisali",
-              "Kuopion Musiikkikeskus näyttämö",
-              "Kuopio Music Centre auditorium"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
+              "kotitalouden sähkömittari",
+              "asunnon sähkökaappi",
+              "residential electricity meter"
             ]
           },
           {
@@ -1950,88 +1326,83 @@
               {
                 "approved": true,
                 "fit_score": 9,
-                "image_sha256": "f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06",
-                "license": "CC BY-SA 4.0",
-                "reason": "The image clearly depicts a grand piano and microphones on stands within what appears to be an empty stage or performance area, directly matching the selected concept of 'Grand piano and microphone on a stand' and 'Empty stage with open floor space'. The article discusses a concert featuring a pianist and singer, making the visual subject highly re",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Grand%20piano%20microphone%20setup%2001%20sala4%20LAuditori%20ESMUC.jpg"
+                "image_sha256": "70d1709148cf86a7ea568a53e1b0b3d4407ec9c26ef6554ca5cd611bca664b70",
+                "license": "Pexels License",
+                "reason": "The image clearly shows a wall-mounted radiator in a domestic room interior, which directly matches the 'must_show' elements of the selected concept. The article discusses household electricity consumption for heating, making the radiator a relevant subject.",
+                "source_url": "https://www.pexels.com/photo/apartment-interior-with-table-and-chairs-near-window-6447395/"
               }
             ],
-            "concept_rank": 3,
+            "concept_rank": 2,
             "outcome": "accepted",
-            "provider": "wikimedia",
+            "provider": "pexels",
             "queries": [
-              "flyygeli mikrofoni lava",
-              "grand piano microphone",
-              "empty stage grand piano"
+              "sähköpatteri ikkunan alla",
+              "kodin sähköpatteri",
+              "wall mounted electric radiator"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 3,
+          "concept_rank": 1,
           "fit_score": 9,
-          "image_sha256": "f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06",
+          "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
           "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Grand%20piano%20microphone%20setup%2001%20sala4%20LAuditori%20ESMUC.jpg",
+      "sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
+      "source_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
       "stock_provenance": {
-        "attribution": {
-          "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
-          "title": "Grand piano microphone setup 01 sala4 LAuditori ESMUC.jpg"
-        },
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Grand_piano_microphone_setup_01_sala4_LAuditori_ESMUC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "photo_id": "wikimedia-89157762",
-        "photo_url": "https://commons.wikimedia.org/wiki/File:Grand%20piano%20microphone%20setup%2001%20sala4%20LAuditori%20ESMUC.jpg",
-        "photographer": "Enricguaus",
-        "photographer_url": "https://commons.wikimedia.org/wiki/File:Grand%20piano%20microphone%20setup%2001%20sala4%20LAuditori%20ESMUC.jpg",
-        "provider": "wikimedia",
-        "query": "grand piano microphone",
-        "retrieved_at": "2026-09-30T12:42:51Z"
+        "image_url": "https://images.pexels.com/photos/10065200/pexels-photo-10065200.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "10065200",
+        "photo_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
+        "photographer": "AV",
+        "photographer_url": "https://www.pexels.com/@av-49217877",
+        "provider": "pexels",
+        "query": "kotitalouden sähkömittari",
+        "retrieved_at": "2026-09-30T13:20:57Z"
       },
-      "stock_provenance_sha256": "976e193b41e5aae6ce634f73df1f91ce9ed8ce68498ebc49b70d1c2b99d73a30",
-      "url": "https://uutistenlukija.fi/media/f89a907dc8f257c4940b09777d035c6beb522cd324917e82723199d509263c06.jpg"
+      "stock_provenance_sha256": "123758867959cf5cce020ab0eb7fd1a08924beeb763087eb41e8953332433388",
+      "url": "https://uutistenlukija.fi/media/e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
-          "A",
-          "B"
+          "A"
         ],
-        "text": "Laulaja Robin Packalenin, pianisti Iiro Rantalan ja tanssija Atte Kilpisen konsertti järjestetään Kuopion Musiikkikeskuksen konserttisalissa sunnuntaina 7. helmikuuta 2027 kello 16, kertoo Musiikkikeskus. Ohjelmaan on ilmoitettu pianonsoolonumeroita, Rantalan ja Packalenin duoja sekä Kilpisen tanssia."
+        "text": "Lainsäädännön arviointineuvosto pitää sähkön hintasääntelyä koskevan lakiluonnoksen vaikutusarvioita pääosin hyvinä, mutta suosittelee täydentämään niitä ennen hallituksen esityksen antamista. Valtioneuvoston kanslian tiedotteen mukaan neuvosto kaipaa tarkennusta siihen, mikä osuus tuotannosta kohdistuisi ei-välttämättömään kulutukseen."
       },
       {
         "source_ids": [
-          "A",
-          "B"
+          "A"
         ],
-        "text": "Tiedotteen mukaan Rantalan ja Packalenin yhteistyö alkoi vuonna 2014 Rantalan esiintyessä Packalenin Olympiastadionin-keikalla. He julkaisivat yhteisen Benefits-kappaleen vuonna 2021. Kilpisen kanssa Rantala aloitti yhteistyön Aleksanterin teatterin tanssiesityksessä kaksi vuotta ennen nyt julkaistua tiedotetta."
+        "text": "Lakiluonnoksen tavoitteena on turvata kotitalouksille kohtuuhintainen sähkö hintakriisin aikana. Tiedotteen mukaan hintasääntelyn soveltamisesta säädettäisiin erillisellä lailla, joka voitaisiin säätää EU:n neuvoston julistettua Suomea koskevan alueellisen tai koko unionin sähkön hintakriisin. Kyse ei siis ole hintasääntelyn käynnistämisestä nyt."
       },
       {
         "source_ids": [
-          "A",
-          "B"
+          "A"
         ],
-        "text": "Järjestäjän ilmoittama esityksen kesto on väliaikoineen noin tunti ja 40 minuuttia. Peruslippu maksaa 49 euroa ja eläkeläisten, opiskelijoiden, työttömien sekä alle 16-vuotiaiden lippu 44,50 euroa. Lippuja myydään muun muassa Musiikkikeskuksessa ja Lippupisteen verkkokaupassa."
+        "text": "Tuen kohdentuminen on neuvoston keskeinen huoli. Tiedotteen mukaan esitysluonnoksessa tunnistetaan, että tukea saisivat myös taloudellisesti vähemmän apua tarvitsevat kotitaloudet. Neuvosto katsoo, ettei ehdotettu malli täysin vastaa EU:n sähkömarkkinadirektiivin ajatusta kohdennetusta tuesta."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Kotitalouksien saamaa hyötyä ei tiedotteen mukaan voida vielä arvioida tarkasti. Arvio täsmentyisi vasta hintasääntelyn käyttöönoton yhteydessä, kun perushinta, tukikatto ja tuetun kulutuksen osuus määriteltäisiin ja vallitseva markkinatilanne olisi tiedossa."
       }
     ],
-    "summary": "Kuopion Musiikkikeskuksen mukaan helmikuun 2027 yhteisesityksessä yhdistyvät poplaulu, jazzpiano ja tanssi. Lipunmyynti alkaa 30. syyskuuta kello 14.",
-    "title": "Packalen, Rantala ja Kilpinen esiintyvät yhdessä Kuopiossa"
+    "summary": "Lainsäädännön arviointineuvosto suosittelee täsmentämään kotitalousvaikutuksia lakiluonnoksessa, joka mahdollistaisi sähkön hintasääntelyn hintakriisissä. Neuvoston mukaan ehdotettu tuki ulottuisi myös kulutukseen, joka ei ole välttämätöntä.",
+    "title": "Sähkön hintasääntelyyn kaivataan tarkempaa vaikutusarviota"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "69a067c0ff30667183bbf8b924a56a8f200d5bb4264fcf5da698ee9a2c82ccb0",
+    "draft_sha256": "cd7e22cf47ca219840d1b4af5464b3bf10228e4cc3325b6b4a39191824a361fe",
     "reasons": [
-      "Otsikko on 58 merkkiä eli alle 60 merkin tavoiterajan. Esiintyjät ja yhteisesitys ovat alussa, ja Kuopio on oikea tapahtumapaikka lähteiden A ja B mukaan.",
-      "Lähteet A ja B tukevat ingressin ja ensimmäisen kappaleen esiintyjänimiä, popin, jazzpianon ja tanssin yhdistämistä, konserttipaikkaa sekä ajankohtaa sunnuntaina 7.2.2027 kello 16. Myös lipunmyynnin aloitus 30.9.2026 kello 14 ja ilmoitetut pianonsoolot, duot ja tanssi sisältyvät molempiin lähteisiin.",
-      "Toisen kappaleen yhteistyöhistoria vastaa lähteitä A ja B: Packalenin ja Rantalan yhteistyö alkoi vuoden 2014 Olympiastadionin-keikalla, yhteinen Benefits-kappale on vuodelta 2021 ja Kilpisen ja Rantalan yhteistyö alkoi Aleksanterin teatterin tanssiesityksessä. Ilmaus kaksi vuotta ennen tiedotetta säilyttää lähteiden suhteellisen ajoituksen eikä keksi tarkkaa päivämäärää.",
-      "Kolmannen kappaleen noin tunnin ja 40 minuutin kesto väliaikoineen, 49 euron perushinta, 44,50 euron alennushinta ja luetellut alennusryhmät sekä myyntikanavat löytyvät sekä A:sta että B:stä. Kaikkien kolmen kappaleen source_ids-merkinnät ovat sisällöllisesti tuettuja.",
-      "A ja B julkaisevat saman järjestäjätiedotteen eivätkä ole riippumatonta vahvistusta. Luonnos ei väitä niitä riippumattomiksi, vaan nimeää tiedonantajaksi Musiikkikeskuksen tai järjestäjän. Päivätyt lähteet 30.9.2026 riittävät tämän paikallisen tapahtumailmoituksen arviointiin; tekstissä ei ole valtakunnallisia yleistyksiä, perusteettomia syy-seurausväitteitä tai lähteiden mainosluonnehdintoja. Kulttuuri on oikea aiheluokka, ja teksti on omaa, neutraalia ja ymmärrettävää suomea.",
-      "Kuvan koko tietue vastaa lähdepaketin kuvatietuetta. Kolme kuvakonseptia on asetettu järjestykseen ja jokaisesta on kirjattu hakuja. Valitun todellisen kuvan pikseliarvio on sidottu kuvan SHA-256-tunnisteeseen ja artikkelitekstiin, ja koko artikkelin sopivuusarvio on 9/10. Kuvattu flyygeli ja mikrofonit liittyvät konkreettisesti jutun pianonsoittoon ja musiikkiesitykseen, eivät vain yleiseen kulttuurikategoriaan. Mahdollinen avoimen lavalattian puuttuminen ei yksin estä hyväksyntää. Arkistokuvateksti ei esitä kuvaa Kuopion salina tai tulevan konsertin dokumenttina.",
-      "Kuvan käyttöoikeusnäyttö sisältää yksilöidyn Wikimedia Commons -tiedostosivun, tekijän Enricguaus, CC BY-SA 4.0 -lisenssin linkkeineen ja muutosmerkinnän; tiedot ovat keskenään yhtenevät. Kuvassa ei tietueen mukaan ole tunnistettavia henkilöitä tai luettavaa tekstiä. RIGHTS-asiakirjaa käytetään vain tekstin uudelleenkäytön oikeusnäyttönä, ei uutisväitteiden tai valokuvan oikeuksien todisteena."
+      "Otsikko on 58 merkkiä eli tavoiterajan sisällä, ja sähkön hintasääntely on sen alussa. Lähde A tukee otsikon ja ingressin väitteitä vaikutusarvioiden tarkentamistarpeesta sekä tuen kohdistumisesta myös ei-välttämättömään kulutukseen.",
+      "Kaikkien neljän kappaleen source_ids-merkintä A on asianmukainen. A tukee vaikutusarvioiden pääosin myönteistä arviota, täydentämissuositusta ennen hallituksen esityksen antamista, EU:n neuvoston kriisijulistusta soveltamislain edellytyksenä sekä tuen kohdentumista koskevaa huolta. Teksti erottaa lakiluonnoksen nykyisestä hintasääntelyn käyttöönotosta eikä väitä sääntelyn alkavan nyt.",
+      "Viimeisen kappaleen epävarmuus vastaa lähdettä A: hyödyn tarkempi arvio riippuu käyttöönotossa määriteltävistä perushinnasta, tukikatosta, tuetun kulutuksen osuudesta ja markkinatilanteesta. Neuvoston näkemys kohdennetusta tuesta esitetään neuvoston arviona, ei todettuna direktiivirikkomuksena.",
+      "Lähde A on Valtioneuvoston kanslian 30.9.2026 julkaisema tiedote ja riittää samana päivänä laadittuun, rajattuun uutiseen neuvoston lausunnosta. Riippumatonta vahvistusta ei väitetä. Valtakunnallinen soveltamisala ja Talous-luokitus vastaavat aihetta. Suomenkielinen teksti on neutraali, ymmärrettävä ja itsenäisesti tiivistetty.",
+      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Molemmille järjestetyille kuvakonsepteille on kirjattu haut, ja valitulle todelliselle kuvalle on pikselikohtainen koko artikkelin sopivuusarvio 9/10. Kuvauksessa näkyvät sähkömittarit ja sähkökaapit liittyvät konkreettisesti jutun sähkönkulutukseen ja tuetun kulutuksen määrittelyyn; yhteys ei perustu vain Talous-kategoriaan. Arkistokuvamerkintä ei väitä kuvan esittävän ajankohtaista tapahtumaa tai suomalaisia kotitalouksia. Kuvakohtainen Pexels-tunniste, lähdeosoite, kuvaaja AV ja lisenssitietue tukevat käyttöoikeutta erillään tekstin käyttöehdoista. Kuvauksissa ei ilmene must_avoid-rajojen vastaista sisältöä."
     ]
   }
 }
