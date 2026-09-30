@@ -4,221 +4,32 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "a8032138a2ed3ae106c80cebdedc37e57e54f48a",
-  "job_id": "d62554b951bba5996dfffce022ba55cc92c553ebbbca0da27a237248712f0711",
-  "packet_sha256": "a37b39309eb3c8a38da1352a97a5066c723a4a92789b5cd8ed117b0ab86c9e9e",
-  "draft_sha256": "fca2e839f6ccbf048f1b3aebac2035bd1ee62a4458909cc971f3f6f54f78f0a5",
-  "image_sha256": "b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c",
+  "job_id": "a659c4d75a687f3d13b05f10de0167f8016d26c70dd6ba21e8d35ac5417b25a9",
+  "packet_sha256": "de7f477881911f5e0d5c38c42fadf9a19fe32fe99c989987e69f1b98ba720c82",
+  "draft_sha256": "ed548ab90b29aa3b80516904b5646903f789d21680ba96d3037e9f07b21639e5",
+  "image_sha256": "ca371bb5714641a78666599bf36f81a4f09c99d71195f6c0140547c24f2a45e0",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "43a31ecba858a4f7b7905cdf5e966036fc02c4b78028210b4795e88dcde77db8"
-  },
-  "stock_image": {
-    "alt": "Arkistokuva: Kerrostalon julkisivu, jossa on useita ruskeakehyksisiä ikkunoita ja mustakaiteisia parvekkeita vaaleilla seinillä.",
-    "caption": "Arkistokuva artikkelin aiheesta.",
-    "classifier_output": {
-      "category": "Kotimaa",
-      "concepts": [
-        {
-          "depictable_scene": "Tavanomaisen suomalaisen kerrostalon julkisivu pihan puolelta. Kuvassa näkyy useiden asuntojen ikkunoita ja parvekkeita sekä yhteinen sisäänkäynti. Rakennus ei esitä mitään tiettyä todellista taloyhtiötä.",
-          "must_avoid": [
-            "People or body parts",
-            "Invented readable text or logos",
-            "Signs of damage or abandonment implying a specific housing company is in trouble"
-          ],
-          "must_show": [
-            "Apartment building facade",
-            "Multiple residential windows and balconies"
-          ],
-          "rank": 1,
-          "safe_to_generate": true,
-          "search_queries": [
-            "suomalainen kerrostalo julkisivu",
-            "taloyhtiö kerrostalo piha",
-            "Finnish apartment building exterior",
-            "residential building balconies"
-          ],
-          "subject": "Taloyhtiö ja kerrostalon asuinhuoneistot"
-        },
-        {
-          "depictable_scene": "Tyhjä kerrostalon porraskäytävä, jonka tasanteella näkyy suljettu asunnon ovi ja portaiden kaide. Ovessa on tavallinen lukko, mutta ei luettavaa nimeä tai huoneiston numeroa. Kuva ei esitä häiriötilannetta eikä tiettyä todellista asuntoa.",
-          "must_avoid": [
-            "People or body parts",
-            "Readable resident names or invented notices",
-            "Forced entry damage or eviction staging"
-          ],
-          "must_show": [
-            "Closed apartment entrance door",
-            "Shared stairwell landing"
-          ],
-          "rank": 2,
-          "safe_to_generate": true,
-          "search_queries": [
-            "kerrostalon porraskäytävä ovi",
-            "asunnon ovi porrastasanne",
-            "apartment door stairwell",
-            "residential stairwell landing"
-          ],
-          "subject": "asunnon sisäänkäynti yhteisessä porraskäytävässä"
-        }
-      ],
-      "version": "article-first-v1"
-    },
-    "credit": "Photo by Vlado Paunovic on Pexels",
-    "depicted": "The image shows the exterior of a building with multiple windows and balconies. The building has a light cream-colored facade on the upper levels and a darker tan or light brown color on the lower levels and around some windows. Most windows have dark brown frames and are closed, reflecting the sky and surrounding environment. One window on the upper left side is slightly ajar. There are two balconies with black metal railings, one above the other, on the right side of the building. The upper ba",
-    "generated": false,
-    "hotlink": false,
-    "license": "Pexels License",
-    "license_evidence": {
-      "image_path": "/photos/26928682/pexels-photo-26928682.jpeg",
-      "license": "Pexels License",
-      "license_code": "Pexels",
-      "license_url": "https://www.pexels.com/license/",
-      "photo_id": "26928682",
-      "photo_url": "https://www.pexels.com/photo/building-with-apartments-and-balcony-26928682/",
-      "photographer": "Vlado Paunovic",
-      "photographer_url": "https://www.pexels.com/@vlado-paunovic-1567547",
-      "response_sha256": "5f6fd4dd0e9b127f913d4f6c8c2f78d48c9ecfaf39a90f93acf7f750410bba60",
-      "retrieved_at": "2026-09-30T04:38:58.208220+00:00",
-      "transport": "jina_reader",
-      "version": 1
-    },
-    "license_url": "https://www.pexels.com/license/",
-    "local_path": "media/b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c.jpg",
-    "pixel_review": {
-      "alt_fi": "Kerrostalon julkisivu, jossa on useita ruskeakehyksisiä ikkunoita ja mustakaiteisia parvekkeita vaaleilla seinillä.",
-      "approved": true,
-      "article_text_sha256": "7362def26bb54e943abdb3d9995d494aee29e754b89d2193fb791c597be7065e",
-      "concept_sha256": "fac3fbb67a732e504e229ec3cd24ee21d0fb0de361f34a030c1b367ff4b85f93",
-      "description": "A close-up view of the facade of a multi-story apartment building, featuring numerous windows with brown frames and several balconies with black railings. The building has light-colored walls with some sections in a darker beige or light brown, and decorative architectural elements around some windows.",
-      "fit_score": 9,
-      "image_sha256": "b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c",
-      "model": "google:gemini-2.5-flash",
-      "must_show_visible": [
-        true,
-        true
-      ],
-      "no_people": true,
-      "reason": "The image clearly depicts the facade of an apartment building with multiple windows and balconies, which directly matches the selected concept of a typical Finnish apartment building facade. The article discusses changes to the housing company law, making an image of a residential building highly relevant.",
-      "reviewed_at": "2026-09-30T04:39:01.102914+00:00",
-      "text_audit": {
-        "examples": [],
-        "readable_text_present": false
-      }
-    },
-    "pixels": {
-      "height": 627,
-      "mode": "RGB",
-      "variance": 11746.6,
-      "width": 940
-    },
-    "relevance_check": {
-      "accepted": true,
-      "evidence": "A close-up view of the facade of a multi-story apartment building, featuring numerous windows with brown frames and several balconies with black railings. The building has light-colored walls with some sections in a darker beige or light brown, and decorative architectural elements around some windows.",
-      "matched": [
-        "apartment",
-        "balconies",
-        "building",
-        "facade",
-        "windows"
-      ],
-      "method": "vision",
-      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
-    },
-    "selection_evidence": {
-      "article_text_sha256": "7362def26bb54e943abdb3d9995d494aee29e754b89d2193fb791c597be7065e",
-      "decision_sha256": "e6a68756f844d0521f0f254104c545ec5d18fc8bcaf90ba1532bc768ad549866",
-      "minimum_real_fit": 8,
-      "searches": [
-        {
-          "candidates": [
-            {
-              "approved": true,
-              "fit_score": 9,
-              "image_sha256": "b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c",
-              "license": "Pexels License",
-              "reason": "The image clearly depicts the facade of an apartment building with multiple windows and balconies, which directly matches the selected concept of a typical Finnish apartment building facade. The article discusses changes to the housing company law, making an image of a residential building highly relevant.",
-              "source_url": "https://www.pexels.com/photo/building-with-apartments-and-balcony-26928682/"
-            }
-          ],
-          "concept_rank": 1,
-          "outcome": "accepted",
-          "provider": "pexels",
-          "queries": [
-            "suomalainen kerrostalo julkisivu",
-            "taloyhtiö kerrostalo piha",
-            "Finnish apartment building exterior"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "9e958600cdc456ffdbf40c5bbae820261cdf9ce485e222442e5ce6804a6a5677",
-              "license": "Pexels License",
-              "reason": "The image shows an apartment entrance door, but it is clearly an interior hallway, not a shared stairwell landing as required by the concept. The article discusses apartment building law and issues in shared spaces, making the interior hallway an unsuitable illustration. One or more required concept elements are not visible.",
-              "source_url": "https://www.pexels.com/photo/door-in-a-hall-19866475/"
-            },
-            {
-              "approved": true,
-              "fit_score": 9,
-              "image_sha256": "bb861dd77bfab6ade06025ab181c9a4a04e9036203d4dd442515c82dcca013ae",
-              "license": "Pexels License",
-              "reason": "The image clearly depicts a closed apartment entrance door and a shared stairwell landing, which are the core elements of the selected concept. The scene is an empty residential stairwell, fitting the article's theme of apartment building regulations without showing any prohibited elements.",
-              "source_url": "https://www.pexels.com/photo/elegant-wooden-spiral-staircase-in-historic-building-37593217/"
-            }
-          ],
-          "concept_rank": 2,
-          "outcome": "accepted",
-          "provider": "pexels",
-          "queries": [
-            "kerrostalon porraskäytävä ovi",
-            "asunnon ovi porrastasanne",
-            "apartment door stairwell"
-          ]
-        }
-      ],
-      "selected": {
-        "concept_rank": 1,
-        "fit_score": 9,
-        "image_sha256": "b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c",
-        "kind": "real"
-      },
-      "version": "article-first-v1"
-    },
-    "sha256": "b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c",
-    "source_url": "https://www.pexels.com/photo/building-with-apartments-and-balcony-26928682/",
-    "stock_provenance": {
-      "image_url": "https://images.pexels.com/photos/26928682/pexels-photo-26928682.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "photo_id": "26928682",
-      "photo_url": "https://www.pexels.com/photo/building-with-apartments-and-balcony-26928682/",
-      "photographer": "Vlado Paunovic",
-      "photographer_url": "https://www.pexels.com/@vlado-paunovic-1567547",
-      "provider": "pexels",
-      "query": "suomalainen kerrostalo julkisivu",
-      "retrieved_at": "2026-09-30T04:38:58Z"
-    },
-    "stock_provenance_sha256": "a8d0b5824bfb095100871e39b52ead998dd60b116f0af0ddee9e3f88700a891a",
-    "url": "https://uutistenlukija.fi/media/b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c.jpg"
+    "provenance_sha256": "6081c22931c87a22c5de6b22fb07e805e533fde761c7af8a63c0bf859a63b642"
   },
   "new_article_files": [
-    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html"
+    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "989fbc51eb71105f60b601d18ed9e917a8416cfefd8055d93fc1afcab845212b",
-    "_redirects": "e90d36deeb50322bf2446957a257e0f34b282b0ebd2ed810aefe28ac18fc21b8",
-    "ai-kuvat/index.html": "0e76fbaf1071b852fc50f199e2f024f924f70c61c6c9e3ea9965f05349f670df",
-    "categories/kotimaa/index.html": "a1041fd5fa246b7db1c125a9544366b9f83c28db5218b5956566682bf58533ab",
-    "categories/kulttuuri/index.html": "6e14f1f14d5aa79a2da138b4416af592107c7c4510d80c2b7bb8e51549d713e4",
-    "categories/talous/index.html": "228d31052d4bf40a551a4ddbae3252473d14300fde22d0c8416f8e455a199a19",
-    "categories/teknologia/index.html": "4e91bfc304f8ac9a9a33d5e4dd0635d32f50e76f81fc5bd2e5f07fbea93f3c5f",
-    "categories/tiede/index.html": "56f05bee23e624af3cc1c456fc9f3c0383c22067781f8de3ccaa9343586ad5d2",
-    "categories/ulkomaat/index.html": "7523f56b6c28dfcf8ace3e6f31b649eff5d23697dda3179446d999de34c94723",
-    "categories/urheilu/index.html": "85b73ab2d55b564baa0c31df59299bc2204ad141f90776c364f42145f1741933",
-    "index.html": "5ec9b3e972e676b13a1095f9729e69d1619b5fd2ba9770189ecc60763ee2d415",
-    "lahteet/index.html": "4a486a80c4cf9c39c93b62e05f983bea970a720205ee77233e9f72dd698e128c",
+    "_redirects": "c6d8da80553705aff33121c95f01fee591797dc17392c65c056bb239782be8fa",
+    "ai-kuvat/index.html": "bb30e6a17211df96164413957a3340a93438994ac375635008ac13bf6de44a17",
+    "categories/kotimaa/index.html": "79e81e56cb361fe18c7f23f88048fc6fed4eab99352e9bdc7fdb24c51bf193c4",
+    "categories/kulttuuri/index.html": "c75f9065b15eff9411b3716b43a020afc994ab36b1a64652b008873e96d5f1f8",
+    "categories/talous/index.html": "a1bea175f6442f6c90bd7a6f181b50cb3af2ee8529c8129d46b6f25724e36ea0",
+    "categories/teknologia/index.html": "0595941a70cd98461c3fc667e337def6419f41f232174981821cf69b2912804c",
+    "categories/tiede/index.html": "6f357959b2006425814dfb09e7a10a5ec200f2233939f16be7e8925225dc2fdd",
+    "categories/ulkomaat/index.html": "27dd611f0ec7a773690f6cdce1676f3526617e7bce891467ce4f1a51e5e96b9e",
+    "categories/urheilu/index.html": "c159977714fe0dc7845a0a59292b56bda30c31be08ec9563f23efc314b481c82",
+    "index.html": "0884b7dc23a4eee6169b3983976e59f3390a3a4d4bc6271cffef22a8e8ff6292",
+    "lahteet/index.html": "8dc1f8a627fee7b36b53b5f77a068d43df487baa67755b604033f74666eb10cd",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -580,6 +391,7 @@
     "mvp-assets/c92665ffe2f07c2a846c6d6de66f1a2aa86a04f872e00a54a84b40d131ebadc8.jpg": "c92665ffe2f07c2a846c6d6de66f1a2aa86a04f872e00a54a84b40d131ebadc8",
     "mvp-assets/c98259f1a0d200e52577d8930908cab4cd7d849a5ae92155a6bf5133c676b8f9.jpg": "c98259f1a0d200e52577d8930908cab4cd7d849a5ae92155a6bf5133c676b8f9",
     "mvp-assets/c9f987b60bed9b80e5a5d0b55aa943b0e54a44285e54b6e8400976ac5115786d.jpg": "c9f987b60bed9b80e5a5d0b55aa943b0e54a44285e54b6e8400976ac5115786d",
+    "mvp-assets/ca371bb5714641a78666599bf36f81a4f09c99d71195f6c0140547c24f2a45e0.jpg": "ca371bb5714641a78666599bf36f81a4f09c99d71195f6c0140547c24f2a45e0",
     "mvp-assets/ca9f1f7d365019ec44a878ac8133a3aaa81ca8fbd6b3bf2f612f02659b2b2045.jpg": "ca9f1f7d365019ec44a878ac8133a3aaa81ca8fbd6b3bf2f612f02659b2b2045",
     "mvp-assets/cae6beeb4c80d1621605eae136586f81ebb81ca5750a5241fd19c537f472386d.jpg": "cae6beeb4c80d1621605eae136586f81ebb81ca5750a5241fd19c537f472386d",
     "mvp-assets/cb2fc7ece869ad2ae3d4d667f1c227e1344fcca29c0b4d607de05393e08973eb.jpg": "cb2fc7ece869ad2ae3d4d667f1c227e1344fcca29c0b4d607de05393e08973eb",
@@ -704,19 +516,19 @@
     "mvp-assets/portal.js": "17dcc8a25306b1900ee898c13e74168d09ab29df3a217b113fb72e50f4a573e3",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "6b3d4bfb8e6aebb8496dfa3ec2fb6c9846b18b85b0b7cf98bdbfee64787365fa",
-    "oppaat/index.html": "b909bc89881aaac1bf87cd4313138e4d734ae9ec9768ea41acfbb031bbd937bc",
+    "oppaat/index.html": "c8e388e4c67148165154fc98e6b4def2d60da4e7f26b1a2e0c645e7f76c526c4",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "a4820d72cf7491ef241e6d4cfe964002c4670219fb59be5e1b046e4d8c692a54",
-    "sitemap.xml": "b47ca6755d9c5ea3390e0ec1c22fcaa43beac4fd1a2e4ca424a228bb5c36af39",
-    "sivu/2/index.html": "e360890ffdb1c00cea5048b179bbc99c10193c7b0c8b28647b6be521de402a93",
-    "sivu/3/index.html": "406eaadf70ef5efe894b9cb9c1707295accafda5acacb05c262aa7c13b5b8539",
-    "sivu/4/index.html": "e77b0625a76a8250d657baea4b0104b3f6e7a53fce7a8ce38f2e9e2ff40afabf",
-    "sivu/5/index.html": "8cf4b03348313c5399f8ef378b8cd9cc188d82907b29d99210ff69e4ec9081f0",
-    "sivu/6/index.html": "1a5d3911428736ad1c75362d0f66db3fbf24809ebd8171da094038507015b8ef",
-    "sivu/7/index.html": "7529e70b9603b224fe26ed8ab1ac865a24ae01216654881a73e50ad482f84bd6",
-    "sivu/8/index.html": "ab73d2b49125908f18e9b4ae0d14d99062027e027250c3d5b30d54517ee9ff15",
-    "tietosuoja/index.html": "07b8cd66b98687cd34823c6b06001e670fee61e94a4e35c05b96bd30602b32f8",
-    "tuoreimmat/index.html": "4c3baa756e6a93fbba26c7e88397283469a8bc9f567943417b0064f54aa858ab",
+    "rss.xml": "a8c409b4ecbed259cccea9daa07a7d42645394e493fbe756f8ccb8a27aaa951f",
+    "sitemap.xml": "01c520703e7a28f4163d97369b976db04f24b4df49e499511425844500a737cc",
+    "sivu/2/index.html": "e1fbe14eec1503fd64626ea247cf439f55e714b435c56184b5c7e991a253aa3d",
+    "sivu/3/index.html": "abe9eae8472b85572ec2e075081cc3fc61ffb82b477e3ae7d5317df7eeb5326c",
+    "sivu/4/index.html": "7974bff5999f0c814db251f323c94bc64a1b95ac0b86156546fd1db0c6ecc562",
+    "sivu/5/index.html": "b4839a786c6c6cb09f9558861ff52be059ad63f46420fb5f47262d34db0d755a",
+    "sivu/6/index.html": "f097cf965ddba2b2f2d56709cd5abfac23421abb0ab4b0c6627665e098afe174",
+    "sivu/7/index.html": "69e8a4c29265270fdb04c4473bbc1e84bf65eb1029c325a659b433088c79cdbd",
+    "sivu/8/index.html": "d7522ceb1e699d05b3b8fa6eda130f609e44c15e0033a20d21bb1b485525bc2a",
+    "tietosuoja/index.html": "c05bc8d6d16c1b22268cebb93e10ce6dd396ff7c50ab9ff38e5a809585c0bd7e",
+    "tuoreimmat/index.html": "f559d50efde2b18960589f1473987a7fc80f81cd0a4574d0fc2b5cde32b3abf7",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -730,698 +542,1067 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "27f73a5e25878d0454e2aba57e815a8b5a83fce2ddcddfdc1b496b9a9ce5e004",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "59425cebbced930aeecf7276118dc988333366478f1f392b820fcb651865f12e",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "bff0ff7af394101fb5ea606947a957602c8932d3d868b31801025c536d885b83",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "2b1dbe10756cf6ea23c105ee282e15be16574e88acb2328589d133298fccb920",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "e8ff7a7ba38f72c05f2acd3379e127472013e92fff902f57e048962db44089ce",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "dbcf05b2e9ef5092f5e9b1c7663ad7433fd8fe1c159190c7c9d709cb4219af9f",
-    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "5131bd38012e5f363957d0dbd789b018b90ccab09f2cff0deab8fe64299f5ddd",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "855152fd375e8355091d80901c3df04900857e11ed990f5937a9fd2f907490fc",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "4bf3dd1db5749e4b09355128bfe19649a0f0bb7b1e2d4e8c733dd44e5954ee85",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "07dfbca28fb8803d5686fb5a753af42a985384a0abef9d6baf181da3f2b93f8d",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "095d6613c51ef8ce2b94c405ad7a9d8870aef7b80e009374d8f9039da0d141d5",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "284ebc09723f4582b798350b77ebf2a3389ab865bc9775dce29b861d66b21de5",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "199930472c835ff2ef174b45a4505790b0b3e4ce1a699875d701a54f92bb362d",
+    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "73bb692bad4f06281768c30fa5076668b29161188dafd3856f82f1dd3dcdef34",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "d2a3cb27d947a92bbef760644d41bee2fbf5f7b1d14f2baba7e1f97ce7ccda86",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "26804515261bbd2251df0628dcca0d5980ffb05533cffaea72485f982071d208",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "cb4b5981383210c2c8c7e67bce6c21baa6bf11ef14fc7225840eb682d4632ea3",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "c073441640ecec760c3eb6087e5e0546af1f35bc8dd194001937949274b5fa6e",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "00c473145992ec2f78c7511d70038d5ecd28efde9eff6b118671fda9854203b8",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "c9d86898f4f4eb45f9984ac0c838ec7df70a26ef0f82bd84ced0697359966a63",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "85e56a4bfbd07e2b1ca55967185e738815d807f1d35831bfde662d29604a5e74",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "13b222f130f6a77d050364498107e8820124826a01609aa5d556354c47291b3e",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "782d9b7e5f70c6cdc2b3ceb6dc901bdc1a9ad251078c5a28a233f812c0205cdf",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "ad3da3f8c27402c104a6fcf8aa0886f98a118c8770b8a5e295fb02da24b960db",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "3bfbc342a0028c58cc18dac247fdfa61e07a64c17b05539d523c60a2fba484cb",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "c81b2164190d8e7d554ed1ff8abeb31ff841e1e0017c2145f2d6d545d4515211",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "280f6f321e1985e591ce6d66de76da7745b3d491538a078435986e85434cf6aa",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "20ff40f1a50811b42a2a913d004df130169f4988bb67c6e3abadec1bf14abac0",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "6b361eda1d0ca90892e201e593821740afe32d988b443015cbb9ebb18bfaaac3",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "2ac2015988415bc2da704d3f6d8a3c8ebbcd74c6689dbb2711737db694c57190",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "8b98367a581bae1d7ac15aa9c62a017f7fdab5b015e30239955e1e7027404dbb",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "2e2c29c8488ebe567757f718ac9de254ec50e9c86274f2042ea651e66a93667e",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "215f5201e5a3fa065fd4aa0d619eca1de3e76588dce9eab0564c20623dcc9c1d",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "cd59a639e962a581df3fcbd328eccf841915d6d83b91acb4bdb9d1e3b7ed09c1",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "6fd85e68595993ddbb73b9861c9dcf63597dae11e0887a3ab607bb463eb41ba7",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "e709722ccff7af6c55efaade081a3fec54a987d4ca25905169729c88c9e0bea8",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "ffacb93cef98466513f8877c80f2251a95734fe9b630e241aec350a7a84b1042",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "59f5b971b514a4811762ba151ba72305607c6584d226368a4466e254e199825c",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "8729e958ec6f5aae2b6f7b243b199178a3f43db47f1d008f1ae4ce46a33f3132",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "c39e5c2f61019daf61f2cc0a1e3c973728304bb28f7efadb0e8268281ad8e01b",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "f2c5b4f28064859a7b3e4484d2c7bb63c9ae376c2f11833c211859f0f470cc43",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "9200bca58fffbf148602aaa24b9fa8b9d834e38160cdc5725a931460bb1bff0d",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "9e4c8ae6d48eae7d528045bd2280c7d24d25bd6a4b158118205a8b5d5e8d356b",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "c98b96c923f41d9a78b92e6cc62b070f2cff310c42b1f10031fb64c10b096863",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "1c449112cc2a7c9810abd86a1e2c7b9950bbc0e637d21399f7b63d3561076d70",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "31e69352f4f2d7b21afdb269256330613ca2e5202572b4867a6eb945266aa3c4",
+    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "7320327914f18b0e10dc7b295625bea8dad4088d2a3dca3974010cf90131de9c",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "6d435431dd5faba937a08c0e35698e482be3aca54100ffdd2f4fab9befe727a7",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "99061a355d2d4c5d5b33912a72671de262c92a4231b64362b0686d3ca81745cc",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "a92427f35e24606ba0f64b970c794ffd49b9a0167c8d41dd8561e512cb496156",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "fc8d4aae7010e3715b20070b2cf766d91ad4f2fdb7b41dd3e67aa2cb18b33365",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "ce40dce388bda786cbe109a1c2790193666c9eac9cf89b895751a653ed0b5819",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "58e364553c09cd20d2f2f892870130242f9ce0a1c5c1db4f904b97560f8fcbf2",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "23bd1f514977071ea5abbaedeb80ae7e16dc5b696c6d13222289d210b4eaa533",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "2e7eff9d4d619b185cc49ae01eb552bf5e1b4907a3e0b3583f9434c1472d1192",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "35d6f4a067e889a3d0b58c7cd6d5ce89352c2b8a5415aefc2c84aef80f212f93",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "f7dca5c0353b1b5c631df2861f6e0a7470f0a4e42e6454d455969067e9f246ff",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "ee20527b58ef9a9d98bc07182f37c542484dffe27a0f928b2cd752d3bf6ca9b1",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "56df7919298be15c4ee56222cce07700311c304d5340755f465aa2450ff4ceaa",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "bc53e3bb7a62861b1c77b02310ed638b2ff43d4b01a1a709192c367defacacc2",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "94d59c71c57f7ef1ba8e006fdfd9b7b53aacb028503218d8e649a6625119e4d7",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "11725414f567e324d5eca793eca72b0d63842be25d072ac1fa37fb1405966562",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "7aab65dd07fb861c2c411f7c3e1603efe17deabae6c094e1ae2a92ea740dc0f7",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "d07982e33f1eeb50b15e67f17e8975de2c0b8df408d13c1532caf39a47e7e683",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "0ad5406ca2f1441cd1360e0f97bd6b1095cd5d9abed1cb59756ad4ef70f73235",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "80fe4c1095b170c31616565d5c28131b447ca7f6faf3f10cfc58642b0badf3c1",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "d443a488c742a8d725876152833403c90f4633ac954dd88cde6d87029c9795ce",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "bf9223c8caffbc4b8c88a620b66026e01c9f80cd370e247bcc0d8ab667fd2e77",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "c837a8ad5fc2285c54ba19a67456126320925dfd210fe908fec217d6dcc9f0d4",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "71a94d87f28c91f8dc1445efbd575d17b9ebe96d9183780c981ac95f3c792df3",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "b55cd4a407f181556c023090da9d214efcb9f1d7a853c7ca08281f98c0d6baf6",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "1adbb36ea2da92721a9d717a3893bee50b39b8daebdaa8cf0841579a11451cf2",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "2c66502a0e1b0a5bcb9e7fca349eaef4ee4aeed4e32b2fcd6c6f0f615b7f6876",
-    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "547399937336fb75b679408eaa10cbb68c228870b53fb9c6b3827b3a6b16d720",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "158028e854a74ec96a488d00e04282a5f6ae9232a35dc71d00d1cecd0a1e1882",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "5d774edc5ccf2f37624e91c6151e5bbf11ed0cb06c192acb0e9d58916c5b3c1a",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "cd47d67596a46712cb2430368193d909ac7d87ccd95d6305cef9329878705290",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "c71244f8af80f4b41f452b79b86e85545f77a28223695ac3743dff02532931cf",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "a21e07e31214c6b5e659c4f5717f4c227e892058cff26f5a5889cbccd0a5e37b",
-    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "ca593e1475f673ec1307075bf19b702e92df51adf948f5797b689b920f4d222b",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "06f9357bc38c3b47f3e94f5d7c18677d38a010fbac9a517641eced5482bad454",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "964f9993dd11680216d7c8a55254fcf42cae3c959496268282d13e2b647c9395",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "2355621d43bcc7f8523721ee607b6673fb16bfdf3cf68a7cf46c0a346ee8b5d2",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "d2a7749d0e03bf637921690c58699577ef2a9c09455ee6663f109c6dcda9a63b",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "d5254bf19d25bc0cfbd52acf119555a1c690a95f75757fb756b416ec7fafca9d",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "8bd6f740eb07e8e033e1a8508de2a1b382bd66bbd7efdbb16bd3e0686e158db1",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "87c79ae28d84b9a099e067017e6c0d49d4368f3688fa80cb97579ff60ca2e6ae",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "66ec299dd36a1781b736b4e6c596b6ab2fb86955bfbc0d05dae5a1581117e3c6",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "2c47a896d4369bdab9ed9b268c9685b3f76ba58577e3df9f6d83beb133dd6b10",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "efb15310c19bc111baaf64913c61e4532da1c1c54f6bdad89a297b9df175cc3c",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "8541614b78509ececf13404dd55247a88466e8f3b4ce12844b7fdb801ed61a33",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "3b3e7c996bd9fcb242c3ccc9b21482d9fb0ea566f31308662bee598d69799812",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "a6b863a1ed6a2e349a986df920cd888fb90b5de951d0bc93ba91176a97a73463",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "d0cd20c37286d2dca77dd671753da87f44372581c432fcde3c4d2efd15b79fff",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "9730a3f4320b21501fc32e985dd96434e9502f07dafbd42b64dd515e70673b3e",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "d4e0d35319cc331f4c08b7beb615a2dad0ac3d362d0238bfe945b9db40fcd33c",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "6d33cdc6855d9a1b1c50abc3c92c6cba4e3ae136920d554f76450897dd237152",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "100a374c704c049b17875b5c690ac298bafce67342b5f0906b4700d16996a0d2",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "369f7f9ce1e14f6257f2bad50312a1f8b2c1ce4d331945c9aef5d559335c5f72",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "e4d297b74225c87fcad3439c89ed3f734ca438db0cc1dd476451f77a4d224264",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "d1a4af7eb09cf0f9b67d52325db2ad5580ff546f8dda7647a1f7e7ce606a8e91",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "488e36f0887275736958dc4f47fe15690028fee0b43f035792fb10ea5800cb2a",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "866e878126786158ad6fe2d3b8b71d50cec89dec3960211c433a27ebbaaca077",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "6d644202b53d0ca7704d6d13965247dd68aac6ee4848ce34861105b5576e62b7",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "1f8b34d82f933c5a58cab10d7a2e88a68c65321bd46c3a8d330e8adc78794f09",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "2dcb1ed883d07f44774aae5d21389d0233b1dc4d3e652f197cf9caf236c757de",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "52497e49f0038f98f7304bde894d8a02e22086f7a33fcf197b4f25c8cfb15eec",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "33670907b4fce6b8113783e6d55d695c417518bca2b44ff1474141eb61b0f9b3",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "f8e18564692bddcd219660482d692e26531c6641520e76c8eb8689cfc5d57c49",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "4ad6391d8cf5b4088f7504feb9d68d9196cd812e2fe6950a303cd5211b35d4d4",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "d43e5d0969f83fbe0e6022ce93f5198c3ddd177752facf012448182f6798c17a",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "5ec3cce09933d9a309c8376fa3a3c66d0da316d88fb5eb0543dca690be7660ee",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "c86d1026dc3c7697a859c761ad94d0fc6103a39a7123947cc61afe44b5a42138",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "77b4966ce7d9425bf916ab6804ceaeb22142ff2683e99a0e9aa1154a64c543e8",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "06a29f110d306a7460a305b932dd9af710205d0a3e108f336fbd4951a3250295",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "2dd6e7894325eadd2ccceb74e5fb3d387bec8b9f42ae735f2acfcb8f000941a2",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "07099dfeb8e5ddb34e7ac9918b7aa9030ed47f21fd59ca753fd2890fa7043915",
-    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "398e176848365e65a9f82535f99ad58df419d878c9fcac08cd7eb16706961cc0",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "e7abebd384ea2eb7ba42784c35f810d2534f8629186a293247f5ac25f8010666",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "d37de9d7074bf003b2ef1294358ba1d275f4078af3e5d74c10a5e05d86e2ccaa",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "3451500950ff379f66071fd44cde8d838fbc6d4b207bbb7af65d4d92d9f1443e",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "f09cb4a03cce711fb95d6055dc048be6a3dc9113e6fed346cd246d886485cf3c",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "e25503c16f5a5cb5b3a69d8494a851bc3d92bac6db855c520f034b9a7b7d5b16",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "2880bf963f64bc95e026a3ac46de85a38107b7c569173a0747dc6b35847b4559",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "4fc1b51d4b345ad209f1e0577c5283881d78f9cb36a52bd2eba986ae6236c15d",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "c1aa79665d730ab4deabc4cfe2d51c77cb1c08e1bdaa67b5c79c607f2d6310d9",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "3bc98322b1d58c2ed93bec2194c83dcc3db4ff430aeedf766b9d3e17391d9788",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "31f75adb7bcfa161883eb53be73bb994bb60b7474d10cc14e0e557161aa12c52",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "969404cfc90e415991f563d32e0fb09ddeab052fb9432c5d1e73cf8f0acb14db",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "2c8ea82f14f79883e5dcb0b13661076b9bc87fab02686392232c63fd00468c6b",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "555d724aa99cf74214b50918bb95f8cd9592d9a4c322c10407046b5e176b0e47",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "426523cf09755311c95cd05190c4c57a05f11fabba0e80c74a585f94e2da3dfa",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "8398e54cfc7817c9b44df829e14b8880c1704b6fb3c1b36de314bcfe0566ac18",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "2802bf845535b8caeeb84618842a4db440dd97679391c855b563674af92628fa",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "a46b548aa35146565b17bb1e1da442142e4811bd09f68498d143134a606236b8",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "9e1271268e646efd44cbfe70f18d33c7649d2ccc3570090464a5327be311f203",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "cc1d99e3214f763d37b549f8c8a055f39eb762b9d145a6212989c115d1953356",
-    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "f9399b4300faf0890d27cdc4ee932cbe47b6f0375c155c87936f26eff6dfe2c0",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "60de5d380c2ddbe81822fd38d9dabe79c4e500658f6745c98650502293ea4d9d",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "5c0865ff47f87bf30bf142d6c8e25e2d63796bd73a0f74fbc91b918da1c5af8a",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "5ffea148444516b74c40c9ea89a000a60acff958a108379608999259d96108d4",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "9af9ca746b80b376d595737eb56d85343b9de2721da274b3b9f3ed030e7535d3",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "e2ccca341aa53ae82669ef3ea8331c37c0ecd8500978cb8aba4d76c2437344c8",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "5ada0a4368098400241f53dd1e5c3a1f5b1bd1f3ce5319f91d4b9a1c7da15bfa",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "032e785f078405ca419a1805e829814835c861fe6d6154b645eac586e0f11113",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "a550f19d9a86e8b3e77e04185e60f7887eb45f65582b1a8d795969ef8be613d8",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "857acbdd796bd9c193d0ce988a82bfa4f2311fab376d13e4e71d817562c35b21",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "76aaf4729e07341396b318b3eae199f475e8ffcfddb67cd49fbf6ba8972d402e",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "baca57c5791cc89bb3b5dea93d8f20642496cb21042412c0e9da613b6c0389d9",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "d7d7c005aadb2fba12c713cf42a5bceaa245b68ed164151dce791fc90374c7e5",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "06846b15d7d48319dd49405b8b7fb6e0635c839270ab24a52dd10f9caf8eb177",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "d06fa9ce5cd4ab7ed568483c388cecba21943d6325d2fd86621306cbf04800a9",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "4f6d1f535e5a302a9bda7fb40ed2423cb2f0f975b4e36cf4b34c09457b9be878",
-    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "4d81193a14b776877f8593f4cbffa13893b7bc2f074238aab8c180f044f8482a",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "e9135bb41441037d10f9196f1f9ac3b697e2ec14895422b6667a7cac157e292d",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "505e0526840367fe70beaac1d980c47d755e35d54e5a79ca3d0dcf6ee8708c19",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "70ca12fee0497932b55779282ed58903037ec9171f90a457bd1b8a944f20bc8b",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "b1e9627e42806b42fcae0839be2a5f90ade37921f548e5c02725ce118192ca2c",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "9b5c8fe816d4a032732bd3c813d1cb36ae62d3612c62d42c3d8617dbfed0c6b6",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "dec013c396990c9dc98a6512c6434b48db27ac6b40a4208984675d1368918c6d",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "5b890bf6b1b9c82db60a524422a1a8892e115d0f6113b9219243cd78af75349e",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "e6d2fa5b1167edb6b4217d72639d4efc03d5ea172b3b01198ded96680920f570",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "c52743a753ddbd64766ef97df251fde57eebeab1daebfdbe52ed98632230d2f1",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "5a918b46fdfe3438698ff57fa8a8254c484aaf1a1f97bb95728adb85ab627abc",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "128a925551396b5d657b30febe3f7a77361821496330769c95b243e47d843fca",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "bc596289ce8c23f41c4dce084683c83d61bc41883a81195f157144942a223068",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "e0e0159eced718e3f22edd160f480a7382006c93efc899fc31b5b615f1323c33",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "b8b2e2c03fe4df1ec50d75b023ae6d68d924179472f4bf503a632f5f35f9bc3e",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "d641571732d2e6e34ca1fae7b3ce965d57643d78a6a8bdec1c3d12c8a2e4bfe3",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "0a31224bf1a21a395620865e07471fbcc7a052745911f7b4f6be78b3f8fcc7ed",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "e26b9f18aee912d6cc6e96f0dfd6cc45354164dc7a075a904e604c9d658b39e1",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "c21fe55a99ee6f44ff67fdc669fcd960f39409aa390de9608775185647b54457",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "7b8f70cd375e44a35bc0e21cd894df287e73ab5e4ee1975a053d7e5186aed7b7",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "ed709b3143b028c23d0583fb7605a4b046677049d506b3de32e4d9382f71fe82",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "b7bcc052f7ba183374369f622b0953d4ee0de0b443ef295c3355a0a6bfcfa6bb",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "aa97a4b51e6540ce1f580114873b6730ae04a5a47dd6e8ad2b72fdbedf28ef19",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "91dc8e0e2f54b0c9f68c912b7ef0144713185d00d98a6c924d2dd43de68553ef",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "d9a515eb62b7eeb377d4a5f91978333b2ecd4d7944c075c854d64cc4e0e3a299",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "c8d7608303b28a0a1d1823f34c967d9d2f57296414ab308acd2b35e8efb55a39",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "2910f1c8719d5b8be908e0940f211b4d9a3cc9e2dd5ccdeb4945f368e798516a",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "d10cabcfd61b3ffb24d34dba7571b92b0e5efb57b9e4792104f7a3c874b39f6e",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "b940934bbd272d92da355172621266179b37a2198cd850dbd38cf5b05122914d",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "414b7ef34bd193a99ca857c0572be371675f8f025c05522dc199c7f930c7607c",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "9ff460d6a16264aacc45f77dcd6f8d97ae4945f81810e444fb7f8ab3ec0114d7",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "3663b0ad77cc831ba3e30ccef7e5df000e2526de3147b8ea037fc8c65bc80513",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "d8edc34b8158c2e5d0135cb1668c983d4debcdef637d1f7c34f294e183938097",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "6b5a7d21783ee9c77b25f374c8b90e779833f0ab3e07b5e1cf5c43cbaacb6499",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "a23e40b4a59785543670590045237fa6b7d7c8f93400c82a4c3d0fa61b8a2e65",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "495e97a71330575d2736c828d3380885161b0d8e3af434eaec9be60dba922358",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "8f2bf75f476cb7a096a3883f9ceff895534c5ed5bdc141ee33223072d46d0cd4",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "d74132dfeb918c503e3a53c1ad3d0ebcb9930ad1ad99096a46362acc9cf75c0d",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "5b80336ca271125c1f5d4cb4ca11bedb524a9490992c38bc1c978238c587f225",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "0067fbf3b59ae8bbe278ffd58e6fa2d7d6696cc9f43fb94b0258346039aca1c8",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "b46049e74f9a45b78788cbbf7c8775767231045f18f4375f4e1273eb2b7ecd5b",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "70a6b39efb3e0e1be736784a558ec64dc1e2d7a6fbb34e01837f4a1257b9db07",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "2d68228025f170a03bb7124d5aced647152b76ff3c5863df90408dec0a2f555b",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "40bb2ae3b0b87699ebfa29e19762f96fe5cf4d41d1b0d2d066ae86726102229b",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "c0f7e63424bbc458e27002a2838819cb49ab9028f40cf1c4b8d5da6662cb9fb4",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "8365af84c246c8d45d72b4c4c23ea964301eaf9a450e50e9928b8557be6d3168",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "50053adf64841ea8b76f728e04d750ec94e8d2e85c47932246e5c90542625471",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "741af201eb20b80a3568df33541191b47824e893b040c295f69062ca8f8bbf9e",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "44fe06e75ac60e995cc4ee4eb72d52c2bbd4a92eaea88028ead6752a59b53816",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "064de33432f5df2e7e1ba010f5783d24caa6c121b188a35c9c8c9d937c7576a2",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "714503d415ad0b7c026babffaee361fe12c4de14c3f85ef102e882655da0bbb6",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "beebc85c02b53fc31ac81eaf3349a639f37f1a19a2af82d3b4581948c6fcebfc",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "0158d51fbcdd7911a161bc4c379ca162bdb22f6acebce3b3eb2077b7998357c9",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "4f5cd6ca295d4bef27098af7d7346e621ab01305e67281160e868cc864080a3d",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "28d239d02b5915e29472881d39d6d4ab162ced428dd4ecbcbff3cd11a1c8e637",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "d7c77d3773dd2361360cac2d978cb7eeadde2022281b701d29482b29681c0dba",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "e5d97a41c6a04b1c8079e2f65ac598f311b1347f3ee5be340bd7c372505b9025",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "a0b913347e9de0d12b92b5db9bd3bd0e4980044703d48214c2ae065e8768bc94",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "c7848ce1894dece56f0640325b7c6be0c00e5d33a0f15d8ff38c75dff0f9d977",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "23bcbc1883746ee51a5d97474efedc1b8e615f3104c2774aedbae9cd0d7aa070",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "4b4174edcfe1bc99f35426165c2dc44124fd82500921805ffcc974c0206929a9",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "3fb43e7ff96ae17205372b4e3ab5978c54533aad47e315a7dfe27c38cdb55a84",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "163313ceb6a4b98ae84096609dff2c70c82002de88875f48df218652834c36ec",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "a71313f004941f973a23b279fcf49419bcb6de9dfb490cdf6fd2421093bdbe27",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "3d4633355f31325023fd58695887ca3771fbba748b5c36f277ebbd681d5dde53",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "f0c827b31e203d04345961eb36aa698430465e5ffaa40bf0fd5c929a44efb8bd",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "8b6aedb57c4a20e1046e9823a155247aa2a21670a4e60e476c32911d8ca3943d",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "3ebe330d2faab311dc583212d6cc9648d14802d691f626ce83f421595254d76a",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "6e4a0976cb0c3422e0b21c4081d7c7a07ce9a87571c008d5031df0db1a246969",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "69530f29b03ead2745ea2c933aa6f9ccdb0496c32218187db13dfd2b0ea41aef",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "cb56a6017cc90621a1fd5f264c398b7196674f8b95ba02f25376536c7680b954",
-    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "cf8815f0fb174d47e178e8be982e2b50074aee11fe6940f4545b493cce3cbbd3",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "366c564ea5043c54d5cbb1578ea91527410bc7d7c837a2b777abc89c4fecdea6",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "ac07618b6d70475bb27886bedb04c4e8197ce0b4d443208344b9f05f586222d3",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "f85fefc014dc5b33b6206feeddf547ac700edad48366efcd05c1d0208e2bd886",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "25adc7e568a67bd964bb4e2a0fdf8d5e47818ff21d709c9a92270c0163a8c844",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "f1812fb25a5904bf21018fea1cd2b8cebfa5de1635dbdcbe4a185066e31c9688",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "be94ebd8095c2795f3c7fdb13e53e5be8ad5fea6298b4aa5997d8298e7470a53",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "0b0a14d57854868b79f78b759e3078ff2defb373d5650625f0fb0a53254ab635",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "4c07f6c33b072732de7340b7e150adc2daf27a518d2c3b0d73b449bddd745e75",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "54b44c57beceb8f9616d74890172d47da9551c7a337f5c297333d0bcdf59d3ae",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "9dbff1c66c0a3d77fdeb5079a57fdf1d2031743df8494bf26c1cebd2b1f20931",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "4078102b09698cf89fcd2ada999a4b166d7f99e2f9e3b22312e8832fe6dbcdb6",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "1af438b701c808e2475e874ad23f74caeef0a96b9b822d8ca36581f978c7dee0",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "cc13c412c926b2f31e7e02e4b3ee035a302d4ea8bb452cc62d316973712093be",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "f5a915e38530c15363f7d1eb598412f4b63a13cbc5cafd6458b306f6ed54b0e0",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "7dc8f5585653cdeeea74717756b830b49bb697d3e6ff66551221fd94eee197dd",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "669b47d82c187e2c8409cb6f9a997a4daf23d5ea66e0af6d407b77f1456aabca",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "66ea44de2311f9847539cdc15de01e971e25c3568c8aca578de1bfee79154c99",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "7979e6f59d5dd5ba5265df7fe2535651a6555853430828fcd1eff704735a70b3",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "015d1ad9bac357634856c5f92397a7f5699dd2181b6f299dbda9d22870d081dd",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "d2a62665b234a648efbc90c3eb72e56672d809fdffb0a7d0005eec4f62635262",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "86c5e080571b2322959d6fe09afd4ceccfc3b3caddce95271286c5a2d38c762d",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "188dce536ecbbe0bbf8848b81803e7edcbebad82ae24c88a0b28e5c24c5c0c47",
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "dbc2d60a3c753a27c77ea65e4e01e64616b845e54869741355494700acb08fd3",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "c20e9497a2040494b6a0dcbed347265a06d8f6efd5d95d174f16de92fb694b76",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "b7029526d3828d3d99b3722e2213bd5056dd885a21edcd15b5065a526b94518a",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "22d84ed92ca04dca510952e33762f3118976a7b15f69287305c3d10b8a0c4b86",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "4582e8d4bf199f232751cfeded656a22335d08261a6985be22d90fd901015678",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "f80973deef3f6e50e9548f84096986c80188c7a3953a4a98a1eb449176a1a864"
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "157b78ed94347f4962d0ade4ff6b0e1376dc7f9c5f44992bde92583a9d1da085",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "ba4b12ae91534af8b50ad92c555aee7ab32d415f34afa3bcb88d1e6d7229e281",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "ea35dbe39a2ab90d51a85c07a762594ca1a6bbf11227ed588e717ec86e3b1132",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "659e1c922acb3ea8709c93b438f545afb92cc30c8af0a12b871b03bb8560fcc8",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "f6bdd5256f5e15b73e20d595ce591a13ae0a7ad25ec3e09e8a83ee5ac1ff95f1",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "4ad49400e9195f22bf15d64c35b58d4a58a6b3a166a7b775c402169084fe2975",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "8adb6738e53fcff850b4613a605b30f305fadc4cdc5c2d38e4d109a6c8efbe08",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "8bc5d34766bbde218eae9859c0cf6b2aa9b8d2fdf1f7e8e7ca5377d4193b1c77",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "0f354b40b8c01faf5d6cf95bb3a01beb2b706fbdac3a92d6ef316d774a7797b2",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "4ec0b6e2b6a3cafe7a64fe8ca844be9f1d78926b6da552f0f6e3b821c50be611",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "49ae74deb76f5c7251e3af76dd6ba9c12657a0676cc58a1ef74237c5b1fb5cab",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "6785c7e450be46aa5c46c192c17c8e8071f58f4d59713b6c0f4488cec7ba95ab",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "8fcf406d437060e7430ec13ac686bd970a13910f80397180fa08195642eb77ed",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "1e18ce25a71bab7c2bbe51ae85ba95c455483143f846a6cfae04f01e71ee8d3d",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "f84235dafe010b4f38e7311dfbe189ad58bb23921feae2519e42680bbe512126",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "ca7f9a1046eabcd002f9812790c575fb9740d87b293689ccf3434a7009b1da94",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "05923306f7085cdbb023ce01c50eef6460a95f38fe3f55e1eedb8e73b8a01d83",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "52e97a00718cdc4e76d6d9e25648d32b34c0b6dca189ac24394484a1c71680c8",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "ba6ab1e1927e67fa13deff4183b191f0b9336deab33dc030fb18a32afb533901",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "3514c0cfc398e56d91aca87814d91922914c89df96082df061e7a6f9cffec153",
+    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "0f907f7ff14510c0c4fe3b843a6a466c074f2f7dbe7ac7e8751c28159b0583ab",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "d31fa99cf908f1c29af130d2448a9230f5201f707dec970effe797f3f3460a18",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "8222fd991c02df56b2efb06f4729421ef0a4d08fb147147ae1abd0b26fc7aaf4",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "eadbf40e1605f682cf81daf76abbdcec091a2358893a79b39c611fd267d5435c",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "c4c291268ce30ec4848c2696e2121eed20e808054209096080cef0332df69e2f",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "862c5b91919f8d29304a9a01606bc2bfeb594e88d5bfc1cde55fd7dabd0cd5dc",
+    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "be76c19757a7906617ba08686d56aea16089028a129f1deb345903e40bc7eaf9",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "c2aa8db29d1af69ad9f22b7432a28e765ddaff4c1c9eeccb06a097363a452e50",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "9a1a12ac9da25e8ae55169a26882742e2c97ff866095ecc21bee90906b39209f",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "092426fe9c21069f17d606eea740067be58928a4b0f90f501d6dbdb5fc683678",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "36f96d08037506ffa3ad1126229b44a19f8b46ef41edace7534adc38590bc82b",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "455ea80789b0a3b5c4c0d26d16157a89addf2dde9df342f158c809fa69f41547",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "3f5cb316ecd98ec43f88ccc877516b198107aa913dca8b83b67aad587bebcada",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "3922be76208c59e3f316ba7e4ea4b9f6f3353bc1df9dfcff7c1809a68f2649a8",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "9e4636ec46b5c7b3e2f628a12ff8692db5be7a66af0fce221d24963d3bfecf1c",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "c1ead9e792757679cf4d045c742868ceac29c846ede7aee61f0bfcd11f0fa843",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "f7081fa865033a3093c0e1d6662b29f74533455ad9942cdf821464e827fbd549",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "f2020e95cb306175c49079116e2560dfcb49f3fab299aa7b8d977cb129af58ae",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "306e0746dcf30ce428cbefa8663f1ff9308201b4155932209c14dfd2546773df",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "ec82fe75a71781e13a5b6b1b74b70dbcede21c39a97468cd29ed0da0d04d9c85",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "a7e0747c4c0dcb628e47aca6636e89b1a9d6acf61bbedf7fde81d086d25adf92",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "6450466b73a73c62d566c70c64c8983d2af82e9d678ac1924929d3f6926fa364",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "b83747ee29c9fd43188d467a3e0ca73105699e9499910fd6a2cf07a28191b78e",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "4e35e37d9b04097036f33ee84c3c505e0376ac0c7bee21e6edadf97a955ac79c",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "f9b39e6e5e2444ade7bf86a25214555b65c1064c67e820847796b2a615f46d49",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "128c81152ed91bd6e117fa2b009807f6904e408c29e435cc5c672ca5ef4aed88",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "c3ca54d898de750e409ea167e46b2f5ff3c2eb41832bd6c085bfc7a8967f908d",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "cee3f8006f353ac648ac8606d4eb78aed82a29245bead02aff486b7c1a07fcdd",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "3a66b5c8abbf970fdea45f47d16ad621dd637b67c75fc59c827fac51feb38e15",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "8f1d9129dff83d32f4172c76841cfddb443f87c231b8620bad640d3678c81121",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "112326379a3610db28ae60831ccfc7f1ca21c9b6e5e1b1f48adcf24cc02f87d4",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "483759dab59afe7b7ac47659c3d35ef82d1ca90d3929a8159f183c19b4b6ae5b",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "40359c8f31b260d104e989139cb93311f8ef5cead0c1aeaf203cb943228c6cfc",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "7925ed117301716844d78a2f7264aed4c279ff0f5bf54d2387bc6579bf132832",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "b46a0d4320d177d11a39662bcd4b6a3c5796d08a81ddc2364e59bf0ce290268d",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "82a8d67a189f7eeb03437f0a00378ae3e13106aa9e4547f9d5b35f93dd4a00b7",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "9aea382815e7c13aeae98a0a0573fa2c2583f1e0fe69543b36d25feb80fc56a1",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "2f642aafb531f4f94ed9d573a5cfe72dec11a078d13d2308317ef68630baaca2",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "48d283632a5414e67648d9775c6bda0c63d77a9a568a439158cbc1f99a46d95b",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "e2695fe93ff5dada6f99ddfcd5f52c0abe7a489fdb1313ddb4702edd669b6b92",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "51d016928c66b0ebfa507e48db830acc973d9f9d72ca641f2ac20e92863f08a5",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "f233ab17101ccd5af8896542b4ad234a93b3ffd7f5d4c456b1656eb137ed0c6b",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "236c4060a30c54c11f7997043cf1daf87eb1d62889ad892a5c7984a1252c795b",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "2aa450adb63567b6accd95e0d48c2a0bb5263d3d83e58352f2a34d4588117e67",
+    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "3ecdf924d9bb7e2aae02159c5703d3363cef3c045ffa27910c46b90b53fca16e",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "8eb96a92b5e64390536f97f444d21f2bbba31c6bea2432df08cac8b78823e4f8",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "abfd4fc9fabc50a976e8609d5999ee1d29696150c146231f1c982af92ee9e0da",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "07f0dea1b8efd2065162bd2f45e499847dca3e04cb1f4884332c875fa111d292",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "fafcd5c7488e3ab5eb2e771d02c779259131700dd5d315ff72cf4ab1ce086df3",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "1efcd86a9efa65b280a694d747c2a1c332d3009ba29fd87555e5bc58d1bfe585",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "4164945bd217fcfdb974b5ef351f57c505ef0b885e095263981fb86b5f9049b1",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "0487fbc8243b1c30f09bea19038112580af46e37a6cbbd06fa8beabb98fc9854",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "aa1ea0d6e400e054dd7426031afa833e5cfce9a1753aafb07794c2064d8a8477",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "28f096507bed1f2661dbaa7f5bfef8e2269a44a966e7315f4b800fa9cb7c8570",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "570f60b5d450e81f7728251730315ec4e0ebdbd061889096b384954442092a99",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "a344924da8fc29ae5ba3b546607063d36db57dc3cffbfc9048b129c4aeeeeee6",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "3cb376c4e6010545226f0eefacd9081262d24b43c1493ba4d48780f4daafcb56",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "8eeef5d24b9e26f613e56dcfd70e85a655c0bab9af0084d7c32c035803db1738",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "ceab2de721e24df264e4ec70d1f3eb61a8e0f28ccbc9559c05e74fe5ad3f868a",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "474ccfb813f07230e85c6e1c3558d630b91a06608fa6250c8480435cd3d629eb",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "01e4ef7c690d12f47c534d5e9a59ac34a5c05d9680741cecb7b55eef3e30c493",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "ef7c1938b5a43c8500f928c3368975050f2f2325dc0ddab2a1d162250f682608",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "b3f4989a94689b461af78d222114c9fd44fe0e2038236af2725282c76f3fe601",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "9298107ec5459d8b0c71f5d886493b6685d290dd70632dafb65df14bdc35254d",
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "2fdad0e65007469003fa77dc168b34bfc538dd8ae3b63a12e5bcad5fc6fcdc81",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "a97e17d16a4d4a6cf78d842e34b7ab9f33cfcf34249ae87dd30fe80d4b3d4536",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "a2fbb7c1760b8def5b7a6083284bdffde6a00fede71533e67fbb28dd90f6f0c5",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "5c4f9caea886da64e4311822938f3366a6ddabc6e90aa48ba1dd237cdec809b2",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "81ef1a29e9486f92baf4b7ea7ec5a5b80dbf1668a0b3a195c039505822a8e3e3",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "43c349d6993857c864769a0e37a993d345132b8044b85b1e33faaf95d02e14b7",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "a732327ab63335dfcdfc7d6366cc3660804ec5e3dec6b8edb1f1df34e973791a",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "62de89a942c83e0ac3446a9736729915fd39925b78ae66951ff160f3f6f97323",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "02a76bde920bf73f90dc0ad3ea4e1e6038c8c941388faad53874b49327fced61",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "589c245378897a5c38cc07426445f049569935bb963da172165eaff40e213ec7",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "623f7fedaa499687a3147e259e6b3f2484eed463ea79931fc4e94d5d073694d4",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "23a505ccb522c16a5d6ffcdbfb49f308209cf09eee2ef84eedad1cd9ac21a83e",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "a2264ca7761e8f5a2385f9caf274cc9b23c59d6bd31d4fb32c77234e784906d2",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "3cb53a4ff507554b7588c2fe0668e386557f00d06d7495c760228104ad2bfc7e",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "e46c7905b966f4d444bce95ae09605da28310e23dd5fbfe0fc5749d695228fd5",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "5ad67de800b849b3b459ef2fa636e0cb8e53d7e955b410f869f789a32ac212ec",
+    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "9e0ce82f2a9dfdb015008c961e382729bf8708fc5f711c37dc2bbaed39daabab",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "e53b25b55710701857e93c9affe93fdbe77569c4c2886158d52f9b2982172f42",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "dbdd4a97d3144a8da437a9b82f8f22b6051266d52dd19302d46a5a7e50b7d50b",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "8ed72bca93b64c92f5336e356954decb3f69b38e47a116e9a958e3f73e6812f8",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "ee9c17f0bcfdbedeaba219f048be3329cce4a722406d53432fc510951dcd89e1",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "1ba85e9b2d11f5206d181db08e88cd9c905a6a0418ed73c1fd0b0281717acba8",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "f61588624143ee3a28455879970b882311cbda85e6a125e598172ff01ee1bbb3",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "4a0e6c549068a149ccb26f64fdd33cc7116d07bb8f15c4591bd0646f3739bef2",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "9d9dfa95dd17f71870096265a2a53436063e8aa2089e0edaf0199a05a0abb13f",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "813addab2ed09e7fa5bd2be2a2bc0b81a693cf870593399f15186cd58a2ba13d",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "d569666783eb97f379e7ed3a448703a334b81c1fd693c6866520d37dd7de592f",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "a0da38718dd71d8d67fec033f6501132fa2521e10038825c6800b6c5871c9911",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "cd53a54956deebe4a7649f8aa04d51a57d5cf9dac2daf9b993a3bd0ff38daa9c",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "b09e1c1d0b78cd9af1e8255e97f98c9f2a9a165a98caba42c558bd9b79e0bd5c",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "724d7fcbfc477ac14029bd06e1800d6e081bb1fc1075da334d8c40e2f3b08660",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "0d7033a5a378a7068ec4ec63b730aefd7e4b2ee36ca87047e65516f7e95e009a",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "b7f4faffb1c1643786f3d5486d399fff9c597d3b53b242da9ff751ba9f5d597b",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "73e06a353c59ab977b4571567ab0022fa9f7c6298307a58047493a5db5586cd4",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "1177397db75b370f81a81856660ebf05b927a2d64d854dfb1170c959f7c6150e",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "28bea18b8b519835451d0ad8c9a79c8479bb6bd3f6a22c1596e221d26c10ef62",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "b0465e37f63903ec7c72abfafeffb1ab34d0f0db15a4376e3f01a7a3c5ec5b4d",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "7d684813a2e16eba6f1ba71e801b3a653c08fa11d62bce3de22c91d16ea22ef3",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "1dd5e531e8217d4295f0d39273cee60823032e88836d2ca31c41d56a2680f944",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "45727ab902c3e6ad3fc11fd0a92c832a2e5a5735b0e377a8da0191271df37e5f",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "b047d7671cca5ae7bf1ceb22ce42ae6665c2ee06c4abe4708dce55e54cc16bd4",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "254f4974d849b950cd2792c0e19584b32970ddc93d6b1df982c71bd64e8bd139",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "51b284c023b19e80c12462b7e471a4dc180c8e81431bf9d2fb794fcdea9ffc88",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "e53b8839784c103cd9725115fc80c02c8e8cf435c23fb934e63001350fe1199e",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "77573c803239d88ac81f2dd7d150dd62845a75fc09f9ae65ceee6306d2193e2d",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "62c2caa2dfd99d7b86f215d96020c35ae46050cb64311b76f4e9caf61fb348be",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "62799cff9988aaf3961706280a7848afe766deac2207dadab86652eb3cc266b1",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "516236a2ab4d213256aa0e2612938eccd923dc5eceb2b692f8ba64bd43ae27fb",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "46e6820b19f2da3299ee227063721cb344acffc3035575e9c8fb8883a6381af7",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "a43919d742510b569204080b9baac97d05a38899aeb644e3498ff1796fb3a9de",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "82cfb5bb8941bfa52d6c14c0c2c707aeeba6ed05a4ba17741759250beef3439b",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "c1025a7890a5df01ee28f3acf579ac14a6c092e9eb2e93541ccce73cdf7c1fa2",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "1de75b5b0e6555c0ec4693eac1896f14766ef31ec7812035ab05dd5a2b160cee",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "942d90b4f24c39bb20c7bbd7f8a9c7f4552f7bb924579bfa6eb02571d0bfd38d",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "f135d3f03384789b9a4ddf7e32a2493b8ef034956e8cc4bef018b6900f673690",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "133f0dc8bab7fdd7d1a5751f44c859052bfb1356f1fc93ad6b4ba64182f8d21b",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "ececff71dbb38bfadd8608eca0aeebebdb112ba6dd38c66bc33c833ef6415e11",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "6f70df124b89a0fb06a0315afe2b294036bec1e7837becbfaf2f9c1a3dcd7ec8",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "8aacd6ea2dbdd555fd3edac15594c68f9d23b8a6409310d5ae8f1873260de387",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "0c8c7e17eb7a7020f1956d290c9879deb8daa68b9fec9e752409a8b97a954fbc",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "27169fd48d2e9ad65c23efe757b3379f4ec03054ae6d879bd1b4cf044d16bf37",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "bf0f2fd95a2a121fcf32cf64868f374ae1956a1df3ced23e9f592710d4e9e03c",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "930d0a4192c21ed35cf2bf526dddae51ec7990e24eb51920998bac9a3f280d54",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "f65e9824ef1dfdce1b41d9cf3aa700bc375cb0902c5d181189ad853388b19fba",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "253ed51ccd7690aaded75d6f3dafa6eb2575ef9f5d8855c9fbc5845d6330d355",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "309efceb66af2b885b5b08e4ea7540d74c712716e025fc4381d11392bf1a54f5",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "114dbf10825711bd94422106811ae69d84bc1a7d9ad245b25d960902653b2b97",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "150b12f17155dcf0c07f46931e1f0670ef4cc7a21bc906105e10b5d16c18e32d",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "ede2944d7d5524937b4fbb04c9cb8a975d50c9fca6eb886915ac6a282f0baf34",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "afee44eacf0ebe4c7d8854edbdcc17411de91c7318c8dd4449b91f3b6c2c78af",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "0f9bfa742848ab2c7ec03d55c836b6f08823653b8cdf4d75ff6301d595e9677d",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "800d6522315884106d4c1523cc7abec0b1aaca64d2dc1fe0aaad63eb163842fb",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "6306cb1f069d66e1d49f97a6a1af480421c067c8c8ab616eee90e8129072c510",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "c42b9ff8d715e62e71b2f083ad06774ab8dc3efd7611d9fc44989348f2efab3a",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "4ec59d97eb2ad22b64f5cbabf63850cb28acc6a756ddbf8bc20213de6b2b21ec",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "ea839e53d9aadabfb2ae4037561f5c3df04d24455d21177caf1ea642e1a58d8d",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "295963638e0db2eec50446582205c93c3f14c16f65790f12651876aaed7ae233",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "5aab7a51534148ae7326a0a8c86c48d034337bbb2d243ceb1233993d7c1d1e89",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "748172a8b381768e56b2afd7f1d25d89cd418ecd88cc5fc548d045345ab072c6",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "b5019175877484fa7f1768141872f4c0a0e2ed36858838dd722fd674032e073f",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "ef958d124e7a41012e737209dec0f851e891f1dc466b6d1cf0c63f9debc84524",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "8ba30d373b331caa38d74680b89aa9567db30521b7207bc5cab2fc58cd1f98b7",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "e8da983cd6319f7b9bb6c55e567ed6833cc19c83e61afdd19b44f82afb797ed2",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "14159f85877001934a3468eb781231d8cafa97672d41c2e85a8eea25495792a6",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "e6e943f64b1e8e9b4f69fa693c9c2a297f4ac7da00edebfc166adb28fbfa4999",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "a2be8303e6ab1da97466a43b0fc054b531c15a3a4e5e8c8ecf8e73771982e4fe",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "29d347757c6def995ed807cf7adfaaf52146fa607619407661dc794755c84200",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "c318376c72b3cf78edd66ae67f0dab97fe94532086fa998946912b20d9031323",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "e93725bed125dd8ad75e4e2e28e7a706db8fa7e18d28f7a73b6e8601b0e50dfe",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "e26d38a158d7561c75dc38cbc88168a895f308b58766d1b0cf250436443f82d5",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "7537169fb3ffa2e4b9d6b2d94eb230a37248a1f4dea23b21730d0ba35a3c11f1",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "3d33a00a788b6cb463128f8e72cf68fcef2f8cce27b33f4ac3f4e23b44c58e4a",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "026419ebf860ed09d940a44de7e194375b2f4c59eb1c7a48de70d7418f6f6d37",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "53687051a49ac0d7bf96cb24ba1aaa36f92216f97d00faa60f44971f496104cc",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "153ce30935978bdbcc5d3dfda08f3ae29dd0179c26ed2b6362824537f002a515",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "6e28189a7d3d391f7912b8cd40ab00562b9fafe855cb46b5976eb890ab6a4de9",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "0b5b848be24b8ea923c7cf2983113c23c16ef89e17f55ee18a62e5b91fe39341",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "1df8f25863c04d24ab433882d60ccf778b8b12ab64d202bef6cd14c9c59ab7d6",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "ccc338a84c9a5dcd325f0bb02a98af381b5c77d368a20a2afb67d24b46571c75",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "a53efb3eff0a30bc21fee2638574bf02115ecb98471c44a7c48dd0ef07cd331d",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "d22a8673c37a714363f8d33b1f3d5e797de644d4753f25fd700743380c371777",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "0d91ade21c64ef28f67cb396c06414370d3347b317aacf22e2d6587443c5c97f",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "6edd799fe56d7817ce2e92b0bb66195862341aab99f8706d9b0b6499409567c3",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "4ebfd26c8394d830fd4f19696e7bb3d516358e358edc68c96e44564761b2e3c5",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "95886ce4829e317c8fd0e1fa386c40a41674eea639762713620fdd72f0e75885",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "3aa09595967a522f89dfdcf2d2b3d7cb0b2cb09afafe895865d3ac4f254e3f8b",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "e69f09c5a0f980bade4f9d926d61318dbf3cbb6aef0a1d0d2e53452141a28971",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "27b985313fcf03ae5ec37509dc3542cce28cd39e146e56550a5a37371b2c600a",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "3da6234dc54d34883bb89d3bb6d142f63fa31ba54250a1f0b4c564450cc5d318",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "90b6734388ed557c7598bb3e03bb4c535d8403ae47e5da3bc57951b73acf9319",
+    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "abe3b8148f8f87fa9e9555a3dce4c817ee68c7936f4045c05c99e78d8a99309e",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "123529e444bbf02f8ee8f084f1a7495bb510b297caa848d017c1a35ba7334560",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "e491629f80d417145cd7ed701d43d01e7c0f896f1b725ce8b377bd9f430ea66b",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "997cfd90a012e753fbe7a9429a7920d4a6157afcad8337aa7895db34e0b2acb9",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "6b0325e432c91cd1a1dd297b67133673d1cb7835990a35950ce52a5d4bb6e367",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "80c11daa3f38ec34aa495703669fbf572e76297a653972fe85c0792a26bb9efd"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Kerrostalon julkisivu, jossa on useita ruskeakehyksisiä ikkunoita ja mustakaiteisia parvekkeita vaaleilla seinillä.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "AI-generoitu kuva: Tyhjä kaupunkikatu hämärässä, jossa liikennevalopylvään vieressä on aidattu työmaa ja purettuja kivetyksiä työvalon alla.",
+      "attempts": 1,
+      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
       "classifier_output": {
         "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Tavanomaisen suomalaisen kerrostalon julkisivu pihan puolelta. Kuvassa näkyy useiden asuntojen ikkunoita ja parvekkeita sekä yhteinen sisäänkäynti. Rakennus ei esitä mitään tiettyä todellista taloyhtiötä.",
+            "depictable_scene": "Todellinen valokuva Eteläesplanadin työmaa-alueesta jonkin jutussa mainitun risteyksen kohdalla: rajattu katualue ja liikennevalot näkyvät ilta- tai yövalaistuksessa.",
             "must_avoid": [
-              "People or body parts",
-              "Invented readable text or logos",
-              "Signs of damage or abandonment implying a specific housing company is in trouble"
+              "Unrelated construction site presented as Eteläesplanadi",
+              "Completed cycleway presented as ongoing construction"
             ],
             "must_show": [
-              "Apartment building facade",
-              "Multiple residential windows and balconies"
+              "Actual Eteläesplanadi street construction",
+              "Intersection traffic lights"
             ],
             "rank": 1,
-            "safe_to_generate": true,
+            "safe_to_generate": false,
             "search_queries": [
-              "suomalainen kerrostalo julkisivu",
-              "taloyhtiö kerrostalo piha",
-              "Finnish apartment building exterior",
-              "residential building balconies"
+              "Eteläesplanadi pyörätietyömaa",
+              "Eteläesplanadi yötyöt",
+              "Eteläesplanadi roadworks traffic lights",
+              "Eteläesplanadi Fabianinkatu työmaa"
             ],
-            "subject": "Taloyhtiö ja kerrostalon asuinhuoneistot"
+            "subject": "Eteläesplanadin pyörätietyömaa ilta- tai yövalaistuksessa"
           },
           {
-            "depictable_scene": "Tyhjä kerrostalon porraskäytävä, jonka tasanteella näkyy suljettu asunnon ovi ja portaiden kaide. Ovessa on tavallinen lukko, mutta ei luettavaa nimeä tai huoneiston numeroa. Kuva ei esitä häiriötilannetta eikä tiettyä todellista asuntoa.",
+            "depictable_scene": "Nimeämättömän kaupunkikadun tyhjä risteys hämärässä: liikennevalopylvään vieressä on työmaa-aidalla rajattu, osittain purettu kivipintainen väylä, jota valaisee työmaavalaisin. Rajaus ei näytä tunnistettavia rakennuksia.",
             "must_avoid": [
               "People or body parts",
-              "Readable resident names or invented notices",
-              "Forced entry damage or eviction staging"
+              "Recognizable Eteläesplanadi buildings or invented local landmarks",
+              "Invented readable text or logos"
             ],
             "must_show": [
-              "Closed apartment entrance door",
-              "Shared stairwell landing"
+              "Traffic light beside fenced street works",
+              "Partially dismantled paving under work lighting"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "kerrostalon porraskäytävä ovi",
-              "asunnon ovi porrastasanne",
-              "apartment door stairwell",
-              "residential stairwell landing"
+              "liikennevalot katutyömaa yö",
+              "pyörätie työmaa hämärä",
+              "traffic light roadworks night",
+              "street paving construction lighting"
             ],
-            "subject": "asunnon sisäänkäynti yhteisessä porraskäytävässä"
+            "subject": "Liikennevaloihin liittyvä työmaa ja rakenteilla oleva pyörätie"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Vlado Paunovic on Pexels",
-      "depicted": "The image shows the exterior of a building with multiple windows and balconies. The building has a light cream-colored facade on the upper levels and a darker tan or light brown color on the lower levels and around some windows. Most windows have dark brown frames and are closed, reflecting the sky and surrounding environment. One window on the upper left side is slightly ajar. There are two balconies with black metal railings, one above the other, on the right side of the building. The upper ba",
-      "generated": false,
-      "hotlink": false,
-      "license": "Pexels License",
-      "license_evidence": {
-        "image_path": "/photos/26928682/pexels-photo-26928682.jpeg",
-        "license": "Pexels License",
-        "license_code": "Pexels",
-        "license_url": "https://www.pexels.com/license/",
-        "photo_id": "26928682",
-        "photo_url": "https://www.pexels.com/photo/building-with-apartments-and-balcony-26928682/",
-        "photographer": "Vlado Paunovic",
-        "photographer_url": "https://www.pexels.com/@vlado-paunovic-1567547",
-        "response_sha256": "5f6fd4dd0e9b127f913d4f6c8c2f78d48c9ecfaf39a90f93acf7f750410bba60",
-        "retrieved_at": "2026-09-30T04:38:58.208220+00:00",
-        "transport": "jina_reader",
-        "version": 1
-      },
-      "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c.jpg",
+      "credit": "AI-kuvitus",
+      "depicted": "An empty city street intersection at dusk with a red traffic light. Next to the traffic light pole, a construction site is fenced off, showing partially dismantled paving stones illuminated by a work light.",
+      "generated": true,
+      "license": "AI-generated image",
+      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "local_path": "media/ca371bb5714641a78666599bf36f81a4f09c99d71195f6c0140547c24f2a45e0.jpg",
+      "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Kerrostalon julkisivu, jossa on useita ruskeakehyksisiä ikkunoita ja mustakaiteisia parvekkeita vaaleilla seinillä.",
+        "alt_fi": "Tyhjä kaupunkikatu hämärässä, jossa liikennevalopylvään vieressä on aidattu työmaa ja purettuja kivetyksiä työvalon alla.",
         "approved": true,
-        "article_text_sha256": "7362def26bb54e943abdb3d9995d494aee29e754b89d2193fb791c597be7065e",
-        "concept_sha256": "fac3fbb67a732e504e229ec3cd24ee21d0fb0de361f34a030c1b367ff4b85f93",
-        "description": "A close-up view of the facade of a multi-story apartment building, featuring numerous windows with brown frames and several balconies with black railings. The building has light-colored walls with some sections in a darker beige or light brown, and decorative architectural elements around some windows.",
+        "article_text_sha256": "d910177c6535969437b04c5af5dd96b10464e5afc35abefd524d6cb9211c8f3b",
+        "concept_sha256": "58dbb95ea2dfcd789f925fb7bbffb403a5f91e042504509ef324ba0e64310be8",
+        "description": "An empty city street intersection at dusk with a red traffic light. Next to the traffic light pole, a construction site is fenced off, showing partially dismantled paving stones illuminated by a work light.",
         "fit_score": 9,
-        "image_sha256": "b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c",
+        "image_sha256": "ca371bb5714641a78666599bf36f81a4f09c99d71195f6c0140547c24f2a45e0",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts the facade of an apartment building with multiple windows and balconies, which directly matches the selected concept of a typical Finnish apartment building facade. The article discusses changes to the housing company law, making an image of a residential building highly relevant.",
-        "reviewed_at": "2026-09-30T04:39:01.102914+00:00",
+        "reason": "The image accurately depicts a traffic light beside fenced street works with partially dismantled paving under work lighting, matching the selected concept and the article's description of evening/night work on traffic lights and bicycle paths.",
+        "reviewed_at": "2026-09-30T06:04:57.516298+00:00",
         "text_audit": {
           "examples": [],
           "readable_text_present": false
         }
       },
       "pixels": {
-        "height": 627,
+        "height": 1024,
         "mode": "RGB",
-        "variance": 11746.6,
-        "width": 940
+        "variance": 7051.5,
+        "width": 1536
       },
+      "prompt_sha256": "a6312642a2e84bfb043cc7d2d71da3f37b978a1279a2301b3e292fa91d0d6871",
+      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "A close-up view of the facade of a multi-story apartment building, featuring numerous windows with brown frames and several balconies with black railings. The building has light-colored walls with some sections in a darker beige or light brown, and decorative architectural elements around some windows.",
+        "evidence": "Nimeämättömän kaupunkikadun tyhjä risteys hämärässä: liikennevalopylvään vieressä on työmaa-aidalla rajattu, osittain purettu kivipintainen väylä, jota valaisee työmaavalaisin. Rajaus ei näytä tunnistettavia rakennuksia.",
         "matched": [
-          "apartment",
-          "balconies",
-          "building",
-          "facade",
-          "windows"
+          "Traffic light beside fenced street works",
+          "Partially dismantled paving under work lighting"
         ],
-        "method": "vision",
-        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+        "method": "generation",
+        "reason": "generated from the accepted scene"
       },
+      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "7362def26bb54e943abdb3d9995d494aee29e754b89d2193fb791c597be7065e",
-        "decision_sha256": "e6a68756f844d0521f0f254104c545ec5d18fc8bcaf90ba1532bc768ad549866",
+        "article_text_sha256": "d910177c6535969437b04c5af5dd96b10464e5afc35abefd524d6cb9211c8f3b",
+        "decision_sha256": "addea5812264deab9409ecd8f68b88c8ca3826055f8f18fe7a0a81f680b34e7c",
         "minimum_real_fit": 8,
         "searches": [
           {
             "candidates": [
               {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c",
-                "license": "Pexels License",
-                "reason": "The image clearly depicts the facade of an apartment building with multiple windows and balconies, which directly matches the selected concept of a typical Finnish apartment building facade. The article discusses changes to the housing company law, making an image of a residential building highly relevant.",
-                "source_url": "https://www.pexels.com/photo/building-with-apartments-and-balcony-26928682/"
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "2ac436af418d5e09b436baac80bb777cb62e6c63c8a9e06f77a78812bbf1e755",
+                "license": "Helsingin kaupungin uutiskuvan käyttöoikeus",
+                "reason": "The image shows a person on a city bike on a street, which broadly relates to cycling and urban infrastructure. However, it does not depict any visible construction work, an intersection, or traffic lights, which are key elements of the selected concept and the article's focus on roadworks and traffic light-controlled crossings. The image appears t",
+                "source_url": "https://www.hel.fi/fi/uutiset/etelaesplanadin-pyoratieta-parannetaan-yotoita-29-syyskuuta-lahtien"
               }
             ],
             "concept_rank": 1,
-            "outcome": "accepted",
-            "provider": "pexels",
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
             "queries": [
-              "suomalainen kerrostalo julkisivu",
-              "taloyhtiö kerrostalo piha",
-              "Finnish apartment building exterior"
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Eteläesplanadi pyörätietyömaa",
+              "Eteläesplanadi yötyöt",
+              "Eteläesplanadi roadworks traffic lights"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "9e958600cdc456ffdbf40c5bbae820261cdf9ce485e222442e5ce6804a6a5677",
+                "fit_score": 3,
+                "image_sha256": "f9164d2b485e2e90196e51ef2101f4efeff856e3665dc721d1fb100fff2f877b",
                 "license": "Pexels License",
-                "reason": "The image shows an apartment entrance door, but it is clearly an interior hallway, not a shared stairwell landing as required by the concept. The article discusses apartment building law and issues in shared spaces, making the interior hallway an unsuitable illustration. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/door-in-a-hall-19866475/"
+                "reason": "The image shows a street scene at night with bicycles and decorative lights, but there is no visible construction work or traffic lights related to the article's subject of Eteläesplanadi's cycleway construction. The visible elements do not match the 'must_show' requirements of actual street construction or intersection traffic lights. One or more ",
+                "source_url": "https://www.pexels.com/photo/a-bicycles-parked-on-the-street-at-night-11803508/"
               },
               {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "bb861dd77bfab6ade06025ab181c9a4a04e9036203d4dd442515c82dcca013ae",
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "8e05322b89968254010734178a04b5dcd69c501d288edad3c49a849c95bed752",
                 "license": "Pexels License",
-                "reason": "The image clearly depicts a closed apartment entrance door and a shared stairwell landing, which are the core elements of the selected concept. The scene is an empty residential stairwell, fitting the article's theme of apartment building regulations without showing any prohibited elements.",
-                "source_url": "https://www.pexels.com/photo/elegant-wooden-spiral-staircase-in-historic-building-37593217/"
+                "reason": "The image shows a busy city intersection with traffic lights, but there is no visible construction work related to a cycleway or any other roadworks. The article specifically discusses construction work on Eteläesplanadi in Helsinki, and this image does not depict that specific location or activity. The image is a generic city intersection, not a c",
+                "source_url": "https://www.pexels.com/photo/aerial-view-of-busy-urban-intersection-in-wroclaw-29406959/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "06eb82abfd51312abe9b86adc7768678f01f5538395cf55111c6626b35b0f72c",
+                "license": "Pexels License",
+                "reason": "The image shows a person cycling on a street with a bike lane and traffic lights, but there is no visible construction work related to the Eteläesplanadi project. The street sign visible in the background indicates a Polish street name, not Eteläesplanadi in Helsinki. The image does not depict actual Eteläesplanadi street construction or an interse",
+                "source_url": "https://www.pexels.com/photo/cyclist-crossing-urban-street-intersection-in-summer-33628390/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "8b690073c498556cf30fb2627523f48f454a0e57d9e7ec63d22111cd42862320",
+                "license": "Pexels License",
+                "reason": "The image does not depict Eteläesplanadi street construction or an intersection with traffic lights in an evening or night setting, as required by the concept. The visible scene is a generic street with traffic, and there is no evidence of construction work. The license plate on the bus indicates Riga, Latvia, not Helsinki, Finland. One or more req",
+                "source_url": "https://www.pexels.com/photo/vehicles-on-the-road-7437923/"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "Eteläesplanadi pyörätietyömaa",
+              "Eteläesplanadi yötyöt",
+              "Eteläesplanadi roadworks traffic lights"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "57f5d1afe671fc9a695f8655c0baae338a4fa07326e91ef030ee31ca605c55b7",
+                "license": "Unsplash License",
+                "reason": "The image shows traffic lights, which are mentioned in the article as being part of the construction work. However, the image does not show any actual construction work or a street scene, nor does it depict the Eteläesplanadi area. The concept specifically requires 'Actual Eteläesplanadi street construction' and 'Intersection traffic lights' in an ",
+                "source_url": "https://unsplash.com/photos/three-traffic-lights-on-a-pole-against-a-yellow-wall-08LzDYe5rfg?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "b9091a78dde4a594c3a55be25938be5094b03e218fa0d9e3300caa277f8d6379",
+                "license": "Unsplash License",
+                "reason": "The image shows a generic traffic light at night, which is only broadly related to the article's mention of traffic lights in the context of construction work on Eteläesplanadi. It does not depict the actual Eteläesplanadi street construction or any specific intersection mentioned in the article. The image is too generic to meet the specific requir",
+                "source_url": "https://unsplash.com/photos/black-traffic-light-turned-on-during-night-time-iJ-uantQb9I?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "a1d0bae68572cc90280015a762e8276a79fc6ec2b5b178c78efb8aa4aebb290f",
+                "license": "Unsplash License",
+                "reason": "The image shows a traffic light, which is mentioned in the article, but it does not depict a construction site or the specific Eteläesplanadi location. The article discusses construction work related to traffic lights and a new cycleway, but this image shows only a generic traffic light setup, not a construction area. The 'Actual Eteläesplanadi str",
+                "source_url": "https://unsplash.com/photos/traffic-light-with-red-light-PN-YnI5stdQ?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 5,
+                "image_sha256": "c9b051883cffce7ccc890c6917584a68125c2949a796d865f25a78eaaedb6594",
+                "license": "Unsplash License",
+                "reason": "The image shows a generic traffic light, which is a component mentioned in the article's description of intersection work. However, it does not depict an actual construction site on Eteläesplanadi or any specific intersection, nor does it show the context of night or evening work. It is a generic representation of a traffic light, not the specific ",
+                "source_url": "https://unsplash.com/photos/a-traffic-light-hanging-from-a-metal-pole-LYG3fjpKTI4?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Eteläesplanadi pyörätietyömaa",
+              "Eteläesplanadi yötyöt",
+              "Eteläesplanadi roadworks traffic lights"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Eteläesplanadi pyörätietyömaa",
+              "Eteläesplanadi yötyöt",
+              "Eteläesplanadi roadworks traffic lights"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
+            "queries": [
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 5,
+                "image_sha256": "03c45f8b49cb105b50b6ac428672361a5110e5b5bc50c27b90df03040b88f1b2",
+                "license": "CC BY-SA 2.0",
+                "reason": "The image shows roadworks at night, which broadly aligns with the article's theme of night work on Eteläesplanadi. However, the selected concept specifies a 'traffic light beside fenced street works' and 'partially dismantled paving under work lighting' on a 'city street'. This image depicts a highway, not a city street, and lacks a visible traffic",
+                "source_url": "https://commons.wikimedia.org/wiki/File:M4%20night-time%20roadworks,%20near%20Peaks%20Downs%20(2)%20-%20geograph.org.uk%20-%20325814.jpg"
               }
             ],
             "concept_rank": 2,
-            "outcome": "accepted",
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "liikennevalot katutyömaa yö",
+              "pyörätie työmaa hämärä",
+              "traffic light roadworks night"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "8435ab45d5e202dc9ccb10a691c60e86407ece9d8669e52a23a211505acfd5e7",
+                "license": "Pexels License",
+                "reason": "The image shows a city street at dusk with traffic light trails, but it does not depict any visible street works, fenced areas, or dismantled paving under work lighting as required by the concept. The article discusses specific construction work for a new bike path and traffic light adjustments, which are not visually represented here. The image is",
+                "source_url": "https://www.pexels.com/photo/city-street-with-light-trails-16284851/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "42fb410f0cd2083c6dea1825ca68c83dc42c3e604664d76cf0a62dfd4a1b4f48",
+                "license": "Pexels License",
+                "reason": "The image depicts a city street at night with vehicle light trails, streetlights, and overhead wires. It does not show any visible street works, fencing, partially dismantled paving, or work lighting as required by the concept. There are no traffic lights visible, only a 'no entry' sign. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/breathtaking-view-of-road-at-night-4037900/"
+              },
+              {
+                "approved": false,
+                "fit_score": 5,
+                "image_sha256": "8bcdf44db27ccc1e5fe4e1d9f751c991a829dcad8a43085a94b99e6024e50f7b",
+                "license": "Pexels License",
+                "reason": "The image depicts a city street at night with traffic lights and vehicle light trails, which broadly aligns with the article's theme of night work on traffic lights and a new bike path. However, the selected concept specifically requires visible street works with fencing and partially dismantled paving under work lighting. This image does not show ",
+                "source_url": "https://www.pexels.com/photo/urban-intersection-at-night-with-light-trails-35400467/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "94308ad07938c9f1cf232325321bc43904447eebeeb14a251cc2e1929887e0e1",
+                "license": "Pexels License",
+                "reason": "The image is too blurry to clearly show any specific details of a construction site, fenced street works, or partially dismantled paving. While it depicts a street at night with traffic lights, it lacks the concrete elements required by the concept, such as a clearly visible construction area or work lighting. The article discusses specific constru",
+                "source_url": "https://www.pexels.com/photo/cars-on-road-during-night-time-5735669/"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "kerrostalon porraskäytävä ovi",
-              "asunnon ovi porrastasanne",
-              "apartment door stairwell"
+              "liikennevalot katutyömaa yö",
+              "pyörätie työmaa hämärä",
+              "traffic light roadworks night"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "f3d427234465083fe9cb8f56c3a689416886a5df5b25b9361ba525739e4d35d9",
+                "license": "Unsplash License",
+                "reason": "The image does not show a traffic light, fenced street works, or partially dismantled paving under work lighting. While it depicts a street at night, it lacks the specific elements required by the concept. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/elderly-man-with-cart-on-city-street-at-night-qHBSlF1baLI?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "982ec2042187844868ce2d758ebd7ab1ca4be2e3da1531a8b2646601e1b264f2",
+                "license": "Unsplash License",
+                "reason": "The image depicts a residential street in autumn, which does not align with the article's subject of traffic light-related construction work and a new bike path in Eteläesplanadi, Helsinki. The concept specifically requires a traffic light beside fenced street works and partially dismantled paving under work lighting, none of which are visible in t",
+                "source_url": "https://unsplash.com/photos/an-empty-street-with-houses-and-trees-in-the-background-rIAZICGWhdY?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "b9091a78dde4a594c3a55be25938be5094b03e218fa0d9e3300caa277f8d6379",
+                "license": "Unsplash License",
+                "reason": "The image shows a traffic light at night, which broadly relates to the article's mention of traffic light-related construction work and night work. However, it completely lacks any visible street works, fencing, dismantled paving, or work lighting, which are all explicit 'must_show' elements for the selected concept. Therefore, it does not depict t",
+                "source_url": "https://unsplash.com/photos/black-traffic-light-turned-on-during-night-time-iJ-uantQb9I?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "1f3a17d6b38c52dd528f6ad2f193c3ca325369c5e6867dd3e6638b816dd9d835",
+                "license": "Unsplash License",
+                "reason": "The image shows a street intersection with traffic lights at night, which broadly relates to the article's theme of night work on traffic lights and road construction. However, the selected concept specifically requires visible street works with fencing and partially dismantled paving under work lighting. This image does not show any visible constr",
+                "source_url": "https://unsplash.com/photos/traffic-light-gHkKgHX0fbE?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "liikennevalot katutyömaa yö",
+              "pyörätie työmaa hämärä",
+              "traffic light roadworks night"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "liikennevalot katutyömaa yö",
+              "pyörätie työmaa hämärä",
+              "traffic light roadworks night"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 1,
+          "concept_rank": 2,
           "fit_score": 9,
-          "image_sha256": "b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c",
-          "kind": "real"
+          "image_sha256": "ca371bb5714641a78666599bf36f81a4f09c99d71195f6c0140547c24f2a45e0",
+          "kind": "generated"
         },
         "version": "article-first-v1"
       },
-      "sha256": "b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c",
-      "source_url": "https://www.pexels.com/photo/building-with-apartments-and-balcony-26928682/",
-      "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/26928682/pexels-photo-26928682.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "26928682",
-        "photo_url": "https://www.pexels.com/photo/building-with-apartments-and-balcony-26928682/",
-        "photographer": "Vlado Paunovic",
-        "photographer_url": "https://www.pexels.com/@vlado-paunovic-1567547",
-        "provider": "pexels",
-        "query": "suomalainen kerrostalo julkisivu",
-        "retrieved_at": "2026-09-30T04:38:58Z"
-      },
-      "stock_provenance_sha256": "a8d0b5824bfb095100871e39b52ead998dd60b116f0af0ddee9e3f88700a891a",
-      "url": "https://uutistenlukija.fi/media/b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c.jpg"
+      "sha256": "ca371bb5714641a78666599bf36f81a4f09c99d71195f6c0140547c24f2a45e0",
+      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "subject": "Liikennevaloihin liittyvä työmaa ja rakenteilla oleva pyörätie",
+      "url": "https://uutistenlukija.fi/media/ca371bb5714641a78666599bf36f81a4f09c99d71195f6c0140547c24f2a45e0.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "valtioneuvosto",
+      "provider": "helsinki",
       "related_sources": 0,
-      "source_fields_sha256": "c30159809a30a30b7942c6a09f0d9157e18308b6d30ba5e0872888c5c43160ac",
-      "source_sha256": "67ce628329386063ed6e093a3b1db84e8c6bcf0985bdb52700fd6336d79b3589"
+      "source_fields_sha256": "2624c81ad716ccdcb59cb56b6f583ffba26f5a103a5ceded2372703e3a4f1400",
+      "source_sha256": "d20d6fb732151cca475e9ba4e2a5e9dfee0a7590175bc68bce8cd9200b8f2180"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-09-29T15:56+0300",
-        "publisher": "Valtioneuvoston kanslia",
+        "published_at": "2026-09-29T16:37:23+0300",
+        "publisher": "Helsingin kaupunki",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Valtioneuvoston sivuston käyttöehdot: tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan; aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen",
-          "license_url": "https://valtioneuvosto.fi/tietoa-sivustosta",
-          "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
-          "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
+          "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "url": "https://hri.fi/data/fi/dataset/helsingin-hel-fi-sivuston-avoin-rajapinta-uutisille"
         },
-        "text": "Asunto-osakeyhtiölain uudistus helpottaa taloyhtiöiden häiriötilanteisiin puuttumista\noikeusministeriö\nJulkaisuajankohta 29.9.2026 15.56\nTyyppi:Tiedote\nAsunto-osakeyhtiölaki uudistuu lokakuun alussa. Uudistuksella ajantasaistetaan sääntelyä ja mahdollistetaan taloyhtiöille vahvempi puuttuminen häiriöihin. Samalla selkeytetään lyhytaikaisen vuokrauksen pelisääntöjä.\nTaloyhtiö voi jatkossa puuttua lyhytvuokrauksesta aiheutuviin haittoihin ottamalla asunnon määräajaksi hallintaansa, jos lyhytvuokrauksesta aiheutuu yhtiölle tai osakkeenomistajille lisäkustannuksia tai haittaa.\nHallintaanottoon liittyvät varoitukset ja päätökset voidaan jatkossa toimittaa osakkaille ja vuokralaisille sähköisesti.\nTaloyhtiö voi myös puuttua helpommin ulkopuolisten henkilöiden aiheuttamiin toistuviin häiriöihin, mikä helpottaa erityisesti lyhytvuokrauksesta aiheutuvien ongelmien käsittelyä. Lisäksi asunnon vuokranneen osakkaan tulee huolehtia siitä, että hänellä on tarvittavat tiedot vuokralaisesta. Näin taloyhtiöllä on paremmat mahdollisuudet selvittää mahdollista vahinkoa.\nUusia keinoja rakennemuutokseen vastaamiseksi\nAlueellinen kehitys ja yhteiskunnan rakennemuutokset ovat muuttaneet taloyhtiöiden toimintaympäristöä. Jatkossa taloyhtiön toiminnan päättäminen on aiempaa helpompaa, sillä selvitystilaan asettamista koskevaa päätöksentekoa on kevennetty. Myös asunto-osakeyhtiöiden konkurssin vaikutukset osakkeenomistajien ja vuokralaisten asemaan huomioidaan laissa aiempaa paremmin. Päätös konkurssiin hakemisesta tehdään osakkaita kuullen yhtiökokouksessa.\nTaloyhtiöiden mahdollisuuksia vastata rakennemuutokseen parannetaan helpottamalla yhtiövastikeperusteen muuttamista erityisesti muutettaessa huoneistoja liikehuoneistoista asuinhuoneistoiksi. Lisäksi yhtiön omien osakkeiden hankinnan edellytyksiä selvennetään. Tarkoituksena on mahdollistaa puuttuminen huoneistojen vajaakäyttöön liittyviin ongelmiin.\nTietopaketti uudistuksen pääkohdista\nLisätietoja: lainsäädäntöneuvos Markus Tervonen, p. 0295 150 371, [email protected]\nAsunto-osakeyhtiölain tarkistaminen\nKasvun kaava Orpon hallitusohjelma\nasunto-osakeyhtiöt lyhytvuokraus oikeus yhtiöoikeus",
-        "title": "Asunto-osakeyhtiölain uudistus helpottaa taloyhtiöiden häiriötilanteisiin puuttumista",
-        "url": "https://valtioneuvosto.fi/-/1410853/asunto-osakeyhtiolain-uudistus-helpottaa-taloyhtioiden-hairiotilanteisiin-puuttumista"
+        "text": "Jalankulun ja pyöräilyn olosuhteita Eteläesplanadilla parannetaan eriyttämällä molemmat kulkumuodot omille väylilleen. Fabianinkadun ja Korkeavuorenkadun välille rakennetaan uusi pyörätie, ja nykyinen pyörätie muutetaan jalkakäytäväksi.\nEteläesplanadilla tehdään rakennustöitä iltaisin ja öisin 29.9.–5.10.\nTyöt tehdään arki-iltoina/öinä ja koskevat Korkeavuorenkadun, Kasarmikadun, Fabianinkadun ja Unioninkadun risteyksiä. Risteysalueilla tehdään liikennevaloihin liittyviä töitä, kuten kiveyksien purkamista, kaapelisuojaputkien kaivuuta, kivien asennusta sekä liikennevalojen kaapelointityötä.\nTyöt tehdään iltaisin ja öisin liikennehaitan minimimoiseksi.\nPyöräliikenne otetaan suojatieylitysten kohdalla liikennevalo-ohjaukseen, mikä selkeyttää jalankulkijaylityksiä ja parantaa risteysten turvallisuutta. Nyt rakennettava uusi pyörätie tulee olemaan paikallaan 2030-luvun alkupuolelle, jolloin koko Eteläesplanadin alueella alkaa laaja peruskorjaus.\nPyörätien rakennushankkeessa ajoradan vanhoja kiveyksiä puretaan ja hyödynnetään uusiin rakenteisiin. Ylimääräiset purettavat kivet varastoidaan tulevaa käyttöä varten.\nTyöt alkavat elokuun viimeisellä viikolla ja valmistuvat arviolta lokakuun lopussa. Töitä tehdään arkisin kello 7–22. Muuna aikana tehtävistä töistä tiedotetaan erikseen.\nTyömaan järjestelyt aiheuttavat väliaikaisia muuttuvia liikennejärjestelyitä sekä jalankulkijoille ja pyöräilijöille että autoilijoille.\nUrakoitsija on GRK Suomi Oy.",
+        "title": "Eteläesplanadin pyörätietä parannetaan ‒ yötöitä 29. syyskuuta lähtien",
+        "url": "https://www.hel.fi/fi/uutiset/etelaesplanadin-pyoratieta-parannetaan-yotoita-29-syyskuuta-lahtien"
       }
     ],
-    "story_key": "url:https://valtioneuvosto.fi/-/1410853/asunto-osakeyhtiolain-uudistus-helpottaa-taloyhtioiden-hairiotilanteisiin-puuttumista",
+    "story_key": "url:https://www.hel.fi/fi/uutiset/etelaesplanadin-pyoratieta-parannetaan-yotoita-29-syyskuuta-lahtien",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-09-30T02:58:31.977630+00:00",
-        "sha256": "20796ecdee450051a3e3d133c308ad6521abb2f021d421f92ef219cd3c0dd22b",
-        "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
-        "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
+        "retrieved_at": "2026-09-30T05:37:22.041855+00:00",
+        "sha256": "15e6c6406c4a02ed84d70885fba482f9929f7518e1ebd718f9ac19bd46b8ce51",
+        "text": "Helsingin kaupungin hel.fi-sivuston kaikki uutiset ovat saatavissa avoimena datana RSS-syötteenä. Sivuston sisällöstä vastaa Helsingin kaupunginkanslian viestintä.\nSyötteen sisältöä voi muokata uutissivulla olevilla suodattimilla. Räätälöity RSS-syöte muodostetaan automaattisesti valittujen suodattimien pohjalta ja sen voi tilata uutissivulta.\nHuomioitavaa: Helsingin kaupungilla on uutisissa käytettyihin kuviin kaikki oikeudet. Kuvaa / kuvia saa käyttää ainoastaan siihen liittyvän uutisen yhteydessä. Kuvien käyttäminen tähän tarkoitukseen on käyttäjälle ilmaista. Kuvan käyttö tai siirto muihin tarkoituksiin on kielletty. Kuvia käytettäessä on ehdottomasti mainittava kuvien lähde ja kuvaaja.\nhttps://creativecommons.org/licenses/by/4.0/",
+        "url": "https://hri.fi/data/fi/dataset/helsingin-hel-fi-sivuston-avoin-rajapinta-uutisille"
       }
     ]
   },
   "draft": {
     "category": "Kotimaa",
     "image": {
-      "alt": "Arkistokuva: Kerrostalon julkisivu, jossa on useita ruskeakehyksisiä ikkunoita ja mustakaiteisia parvekkeita vaaleilla seinillä.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "AI-generoitu kuva: Tyhjä kaupunkikatu hämärässä, jossa liikennevalopylvään vieressä on aidattu työmaa ja purettuja kivetyksiä työvalon alla.",
+      "attempts": 1,
+      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
       "classifier_output": {
         "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Tavanomaisen suomalaisen kerrostalon julkisivu pihan puolelta. Kuvassa näkyy useiden asuntojen ikkunoita ja parvekkeita sekä yhteinen sisäänkäynti. Rakennus ei esitä mitään tiettyä todellista taloyhtiötä.",
+            "depictable_scene": "Todellinen valokuva Eteläesplanadin työmaa-alueesta jonkin jutussa mainitun risteyksen kohdalla: rajattu katualue ja liikennevalot näkyvät ilta- tai yövalaistuksessa.",
             "must_avoid": [
-              "People or body parts",
-              "Invented readable text or logos",
-              "Signs of damage or abandonment implying a specific housing company is in trouble"
+              "Unrelated construction site presented as Eteläesplanadi",
+              "Completed cycleway presented as ongoing construction"
             ],
             "must_show": [
-              "Apartment building facade",
-              "Multiple residential windows and balconies"
+              "Actual Eteläesplanadi street construction",
+              "Intersection traffic lights"
             ],
             "rank": 1,
-            "safe_to_generate": true,
+            "safe_to_generate": false,
             "search_queries": [
-              "suomalainen kerrostalo julkisivu",
-              "taloyhtiö kerrostalo piha",
-              "Finnish apartment building exterior",
-              "residential building balconies"
+              "Eteläesplanadi pyörätietyömaa",
+              "Eteläesplanadi yötyöt",
+              "Eteläesplanadi roadworks traffic lights",
+              "Eteläesplanadi Fabianinkatu työmaa"
             ],
-            "subject": "Taloyhtiö ja kerrostalon asuinhuoneistot"
+            "subject": "Eteläesplanadin pyörätietyömaa ilta- tai yövalaistuksessa"
           },
           {
-            "depictable_scene": "Tyhjä kerrostalon porraskäytävä, jonka tasanteella näkyy suljettu asunnon ovi ja portaiden kaide. Ovessa on tavallinen lukko, mutta ei luettavaa nimeä tai huoneiston numeroa. Kuva ei esitä häiriötilannetta eikä tiettyä todellista asuntoa.",
+            "depictable_scene": "Nimeämättömän kaupunkikadun tyhjä risteys hämärässä: liikennevalopylvään vieressä on työmaa-aidalla rajattu, osittain purettu kivipintainen väylä, jota valaisee työmaavalaisin. Rajaus ei näytä tunnistettavia rakennuksia.",
             "must_avoid": [
               "People or body parts",
-              "Readable resident names or invented notices",
-              "Forced entry damage or eviction staging"
+              "Recognizable Eteläesplanadi buildings or invented local landmarks",
+              "Invented readable text or logos"
             ],
             "must_show": [
-              "Closed apartment entrance door",
-              "Shared stairwell landing"
+              "Traffic light beside fenced street works",
+              "Partially dismantled paving under work lighting"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "kerrostalon porraskäytävä ovi",
-              "asunnon ovi porrastasanne",
-              "apartment door stairwell",
-              "residential stairwell landing"
+              "liikennevalot katutyömaa yö",
+              "pyörätie työmaa hämärä",
+              "traffic light roadworks night",
+              "street paving construction lighting"
             ],
-            "subject": "asunnon sisäänkäynti yhteisessä porraskäytävässä"
+            "subject": "Liikennevaloihin liittyvä työmaa ja rakenteilla oleva pyörätie"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Vlado Paunovic on Pexels",
-      "depicted": "The image shows the exterior of a building with multiple windows and balconies. The building has a light cream-colored facade on the upper levels and a darker tan or light brown color on the lower levels and around some windows. Most windows have dark brown frames and are closed, reflecting the sky and surrounding environment. One window on the upper left side is slightly ajar. There are two balconies with black metal railings, one above the other, on the right side of the building. The upper ba",
-      "generated": false,
-      "hotlink": false,
-      "license": "Pexels License",
-      "license_evidence": {
-        "image_path": "/photos/26928682/pexels-photo-26928682.jpeg",
-        "license": "Pexels License",
-        "license_code": "Pexels",
-        "license_url": "https://www.pexels.com/license/",
-        "photo_id": "26928682",
-        "photo_url": "https://www.pexels.com/photo/building-with-apartments-and-balcony-26928682/",
-        "photographer": "Vlado Paunovic",
-        "photographer_url": "https://www.pexels.com/@vlado-paunovic-1567547",
-        "response_sha256": "5f6fd4dd0e9b127f913d4f6c8c2f78d48c9ecfaf39a90f93acf7f750410bba60",
-        "retrieved_at": "2026-09-30T04:38:58.208220+00:00",
-        "transport": "jina_reader",
-        "version": 1
-      },
-      "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c.jpg",
+      "credit": "AI-kuvitus",
+      "depicted": "An empty city street intersection at dusk with a red traffic light. Next to the traffic light pole, a construction site is fenced off, showing partially dismantled paving stones illuminated by a work light.",
+      "generated": true,
+      "license": "AI-generated image",
+      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "local_path": "media/ca371bb5714641a78666599bf36f81a4f09c99d71195f6c0140547c24f2a45e0.jpg",
+      "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Kerrostalon julkisivu, jossa on useita ruskeakehyksisiä ikkunoita ja mustakaiteisia parvekkeita vaaleilla seinillä.",
+        "alt_fi": "Tyhjä kaupunkikatu hämärässä, jossa liikennevalopylvään vieressä on aidattu työmaa ja purettuja kivetyksiä työvalon alla.",
         "approved": true,
-        "article_text_sha256": "7362def26bb54e943abdb3d9995d494aee29e754b89d2193fb791c597be7065e",
-        "concept_sha256": "fac3fbb67a732e504e229ec3cd24ee21d0fb0de361f34a030c1b367ff4b85f93",
-        "description": "A close-up view of the facade of a multi-story apartment building, featuring numerous windows with brown frames and several balconies with black railings. The building has light-colored walls with some sections in a darker beige or light brown, and decorative architectural elements around some windows.",
+        "article_text_sha256": "d910177c6535969437b04c5af5dd96b10464e5afc35abefd524d6cb9211c8f3b",
+        "concept_sha256": "58dbb95ea2dfcd789f925fb7bbffb403a5f91e042504509ef324ba0e64310be8",
+        "description": "An empty city street intersection at dusk with a red traffic light. Next to the traffic light pole, a construction site is fenced off, showing partially dismantled paving stones illuminated by a work light.",
         "fit_score": 9,
-        "image_sha256": "b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c",
+        "image_sha256": "ca371bb5714641a78666599bf36f81a4f09c99d71195f6c0140547c24f2a45e0",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts the facade of an apartment building with multiple windows and balconies, which directly matches the selected concept of a typical Finnish apartment building facade. The article discusses changes to the housing company law, making an image of a residential building highly relevant.",
-        "reviewed_at": "2026-09-30T04:39:01.102914+00:00",
+        "reason": "The image accurately depicts a traffic light beside fenced street works with partially dismantled paving under work lighting, matching the selected concept and the article's description of evening/night work on traffic lights and bicycle paths.",
+        "reviewed_at": "2026-09-30T06:04:57.516298+00:00",
         "text_audit": {
           "examples": [],
           "readable_text_present": false
         }
       },
       "pixels": {
-        "height": 627,
+        "height": 1024,
         "mode": "RGB",
-        "variance": 11746.6,
-        "width": 940
+        "variance": 7051.5,
+        "width": 1536
       },
+      "prompt_sha256": "a6312642a2e84bfb043cc7d2d71da3f37b978a1279a2301b3e292fa91d0d6871",
+      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "A close-up view of the facade of a multi-story apartment building, featuring numerous windows with brown frames and several balconies with black railings. The building has light-colored walls with some sections in a darker beige or light brown, and decorative architectural elements around some windows.",
+        "evidence": "Nimeämättömän kaupunkikadun tyhjä risteys hämärässä: liikennevalopylvään vieressä on työmaa-aidalla rajattu, osittain purettu kivipintainen väylä, jota valaisee työmaavalaisin. Rajaus ei näytä tunnistettavia rakennuksia.",
         "matched": [
-          "apartment",
-          "balconies",
-          "building",
-          "facade",
-          "windows"
+          "Traffic light beside fenced street works",
+          "Partially dismantled paving under work lighting"
         ],
-        "method": "vision",
-        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+        "method": "generation",
+        "reason": "generated from the accepted scene"
       },
+      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "7362def26bb54e943abdb3d9995d494aee29e754b89d2193fb791c597be7065e",
-        "decision_sha256": "e6a68756f844d0521f0f254104c545ec5d18fc8bcaf90ba1532bc768ad549866",
+        "article_text_sha256": "d910177c6535969437b04c5af5dd96b10464e5afc35abefd524d6cb9211c8f3b",
+        "decision_sha256": "addea5812264deab9409ecd8f68b88c8ca3826055f8f18fe7a0a81f680b34e7c",
         "minimum_real_fit": 8,
         "searches": [
           {
             "candidates": [
               {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c",
-                "license": "Pexels License",
-                "reason": "The image clearly depicts the facade of an apartment building with multiple windows and balconies, which directly matches the selected concept of a typical Finnish apartment building facade. The article discusses changes to the housing company law, making an image of a residential building highly relevant.",
-                "source_url": "https://www.pexels.com/photo/building-with-apartments-and-balcony-26928682/"
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "2ac436af418d5e09b436baac80bb777cb62e6c63c8a9e06f77a78812bbf1e755",
+                "license": "Helsingin kaupungin uutiskuvan käyttöoikeus",
+                "reason": "The image shows a person on a city bike on a street, which broadly relates to cycling and urban infrastructure. However, it does not depict any visible construction work, an intersection, or traffic lights, which are key elements of the selected concept and the article's focus on roadworks and traffic light-controlled crossings. The image appears t",
+                "source_url": "https://www.hel.fi/fi/uutiset/etelaesplanadin-pyoratieta-parannetaan-yotoita-29-syyskuuta-lahtien"
               }
             ],
             "concept_rank": 1,
-            "outcome": "accepted",
-            "provider": "pexels",
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
             "queries": [
-              "suomalainen kerrostalo julkisivu",
-              "taloyhtiö kerrostalo piha",
-              "Finnish apartment building exterior"
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Eteläesplanadi pyörätietyömaa",
+              "Eteläesplanadi yötyöt",
+              "Eteläesplanadi roadworks traffic lights"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "9e958600cdc456ffdbf40c5bbae820261cdf9ce485e222442e5ce6804a6a5677",
+                "fit_score": 3,
+                "image_sha256": "f9164d2b485e2e90196e51ef2101f4efeff856e3665dc721d1fb100fff2f877b",
                 "license": "Pexels License",
-                "reason": "The image shows an apartment entrance door, but it is clearly an interior hallway, not a shared stairwell landing as required by the concept. The article discusses apartment building law and issues in shared spaces, making the interior hallway an unsuitable illustration. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/door-in-a-hall-19866475/"
+                "reason": "The image shows a street scene at night with bicycles and decorative lights, but there is no visible construction work or traffic lights related to the article's subject of Eteläesplanadi's cycleway construction. The visible elements do not match the 'must_show' requirements of actual street construction or intersection traffic lights. One or more ",
+                "source_url": "https://www.pexels.com/photo/a-bicycles-parked-on-the-street-at-night-11803508/"
               },
               {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "bb861dd77bfab6ade06025ab181c9a4a04e9036203d4dd442515c82dcca013ae",
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "8e05322b89968254010734178a04b5dcd69c501d288edad3c49a849c95bed752",
                 "license": "Pexels License",
-                "reason": "The image clearly depicts a closed apartment entrance door and a shared stairwell landing, which are the core elements of the selected concept. The scene is an empty residential stairwell, fitting the article's theme of apartment building regulations without showing any prohibited elements.",
-                "source_url": "https://www.pexels.com/photo/elegant-wooden-spiral-staircase-in-historic-building-37593217/"
+                "reason": "The image shows a busy city intersection with traffic lights, but there is no visible construction work related to a cycleway or any other roadworks. The article specifically discusses construction work on Eteläesplanadi in Helsinki, and this image does not depict that specific location or activity. The image is a generic city intersection, not a c",
+                "source_url": "https://www.pexels.com/photo/aerial-view-of-busy-urban-intersection-in-wroclaw-29406959/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "06eb82abfd51312abe9b86adc7768678f01f5538395cf55111c6626b35b0f72c",
+                "license": "Pexels License",
+                "reason": "The image shows a person cycling on a street with a bike lane and traffic lights, but there is no visible construction work related to the Eteläesplanadi project. The street sign visible in the background indicates a Polish street name, not Eteläesplanadi in Helsinki. The image does not depict actual Eteläesplanadi street construction or an interse",
+                "source_url": "https://www.pexels.com/photo/cyclist-crossing-urban-street-intersection-in-summer-33628390/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "8b690073c498556cf30fb2627523f48f454a0e57d9e7ec63d22111cd42862320",
+                "license": "Pexels License",
+                "reason": "The image does not depict Eteläesplanadi street construction or an intersection with traffic lights in an evening or night setting, as required by the concept. The visible scene is a generic street with traffic, and there is no evidence of construction work. The license plate on the bus indicates Riga, Latvia, not Helsinki, Finland. One or more req",
+                "source_url": "https://www.pexels.com/photo/vehicles-on-the-road-7437923/"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "Eteläesplanadi pyörätietyömaa",
+              "Eteläesplanadi yötyöt",
+              "Eteläesplanadi roadworks traffic lights"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "57f5d1afe671fc9a695f8655c0baae338a4fa07326e91ef030ee31ca605c55b7",
+                "license": "Unsplash License",
+                "reason": "The image shows traffic lights, which are mentioned in the article as being part of the construction work. However, the image does not show any actual construction work or a street scene, nor does it depict the Eteläesplanadi area. The concept specifically requires 'Actual Eteläesplanadi street construction' and 'Intersection traffic lights' in an ",
+                "source_url": "https://unsplash.com/photos/three-traffic-lights-on-a-pole-against-a-yellow-wall-08LzDYe5rfg?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "b9091a78dde4a594c3a55be25938be5094b03e218fa0d9e3300caa277f8d6379",
+                "license": "Unsplash License",
+                "reason": "The image shows a generic traffic light at night, which is only broadly related to the article's mention of traffic lights in the context of construction work on Eteläesplanadi. It does not depict the actual Eteläesplanadi street construction or any specific intersection mentioned in the article. The image is too generic to meet the specific requir",
+                "source_url": "https://unsplash.com/photos/black-traffic-light-turned-on-during-night-time-iJ-uantQb9I?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "a1d0bae68572cc90280015a762e8276a79fc6ec2b5b178c78efb8aa4aebb290f",
+                "license": "Unsplash License",
+                "reason": "The image shows a traffic light, which is mentioned in the article, but it does not depict a construction site or the specific Eteläesplanadi location. The article discusses construction work related to traffic lights and a new cycleway, but this image shows only a generic traffic light setup, not a construction area. The 'Actual Eteläesplanadi str",
+                "source_url": "https://unsplash.com/photos/traffic-light-with-red-light-PN-YnI5stdQ?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 5,
+                "image_sha256": "c9b051883cffce7ccc890c6917584a68125c2949a796d865f25a78eaaedb6594",
+                "license": "Unsplash License",
+                "reason": "The image shows a generic traffic light, which is a component mentioned in the article's description of intersection work. However, it does not depict an actual construction site on Eteläesplanadi or any specific intersection, nor does it show the context of night or evening work. It is a generic representation of a traffic light, not the specific ",
+                "source_url": "https://unsplash.com/photos/a-traffic-light-hanging-from-a-metal-pole-LYG3fjpKTI4?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Eteläesplanadi pyörätietyömaa",
+              "Eteläesplanadi yötyöt",
+              "Eteläesplanadi roadworks traffic lights"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Eteläesplanadi pyörätietyömaa",
+              "Eteläesplanadi yötyöt",
+              "Eteläesplanadi roadworks traffic lights"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
+            "queries": [
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 5,
+                "image_sha256": "03c45f8b49cb105b50b6ac428672361a5110e5b5bc50c27b90df03040b88f1b2",
+                "license": "CC BY-SA 2.0",
+                "reason": "The image shows roadworks at night, which broadly aligns with the article's theme of night work on Eteläesplanadi. However, the selected concept specifies a 'traffic light beside fenced street works' and 'partially dismantled paving under work lighting' on a 'city street'. This image depicts a highway, not a city street, and lacks a visible traffic",
+                "source_url": "https://commons.wikimedia.org/wiki/File:M4%20night-time%20roadworks,%20near%20Peaks%20Downs%20(2)%20-%20geograph.org.uk%20-%20325814.jpg"
               }
             ],
             "concept_rank": 2,
-            "outcome": "accepted",
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "liikennevalot katutyömaa yö",
+              "pyörätie työmaa hämärä",
+              "traffic light roadworks night"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "8435ab45d5e202dc9ccb10a691c60e86407ece9d8669e52a23a211505acfd5e7",
+                "license": "Pexels License",
+                "reason": "The image shows a city street at dusk with traffic light trails, but it does not depict any visible street works, fenced areas, or dismantled paving under work lighting as required by the concept. The article discusses specific construction work for a new bike path and traffic light adjustments, which are not visually represented here. The image is",
+                "source_url": "https://www.pexels.com/photo/city-street-with-light-trails-16284851/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "42fb410f0cd2083c6dea1825ca68c83dc42c3e604664d76cf0a62dfd4a1b4f48",
+                "license": "Pexels License",
+                "reason": "The image depicts a city street at night with vehicle light trails, streetlights, and overhead wires. It does not show any visible street works, fencing, partially dismantled paving, or work lighting as required by the concept. There are no traffic lights visible, only a 'no entry' sign. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/breathtaking-view-of-road-at-night-4037900/"
+              },
+              {
+                "approved": false,
+                "fit_score": 5,
+                "image_sha256": "8bcdf44db27ccc1e5fe4e1d9f751c991a829dcad8a43085a94b99e6024e50f7b",
+                "license": "Pexels License",
+                "reason": "The image depicts a city street at night with traffic lights and vehicle light trails, which broadly aligns with the article's theme of night work on traffic lights and a new bike path. However, the selected concept specifically requires visible street works with fencing and partially dismantled paving under work lighting. This image does not show ",
+                "source_url": "https://www.pexels.com/photo/urban-intersection-at-night-with-light-trails-35400467/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "94308ad07938c9f1cf232325321bc43904447eebeeb14a251cc2e1929887e0e1",
+                "license": "Pexels License",
+                "reason": "The image is too blurry to clearly show any specific details of a construction site, fenced street works, or partially dismantled paving. While it depicts a street at night with traffic lights, it lacks the concrete elements required by the concept, such as a clearly visible construction area or work lighting. The article discusses specific constru",
+                "source_url": "https://www.pexels.com/photo/cars-on-road-during-night-time-5735669/"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "kerrostalon porraskäytävä ovi",
-              "asunnon ovi porrastasanne",
-              "apartment door stairwell"
+              "liikennevalot katutyömaa yö",
+              "pyörätie työmaa hämärä",
+              "traffic light roadworks night"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "f3d427234465083fe9cb8f56c3a689416886a5df5b25b9361ba525739e4d35d9",
+                "license": "Unsplash License",
+                "reason": "The image does not show a traffic light, fenced street works, or partially dismantled paving under work lighting. While it depicts a street at night, it lacks the specific elements required by the concept. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/elderly-man-with-cart-on-city-street-at-night-qHBSlF1baLI?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "982ec2042187844868ce2d758ebd7ab1ca4be2e3da1531a8b2646601e1b264f2",
+                "license": "Unsplash License",
+                "reason": "The image depicts a residential street in autumn, which does not align with the article's subject of traffic light-related construction work and a new bike path in Eteläesplanadi, Helsinki. The concept specifically requires a traffic light beside fenced street works and partially dismantled paving under work lighting, none of which are visible in t",
+                "source_url": "https://unsplash.com/photos/an-empty-street-with-houses-and-trees-in-the-background-rIAZICGWhdY?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "b9091a78dde4a594c3a55be25938be5094b03e218fa0d9e3300caa277f8d6379",
+                "license": "Unsplash License",
+                "reason": "The image shows a traffic light at night, which broadly relates to the article's mention of traffic light-related construction work and night work. However, it completely lacks any visible street works, fencing, dismantled paving, or work lighting, which are all explicit 'must_show' elements for the selected concept. Therefore, it does not depict t",
+                "source_url": "https://unsplash.com/photos/black-traffic-light-turned-on-during-night-time-iJ-uantQb9I?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "1f3a17d6b38c52dd528f6ad2f193c3ca325369c5e6867dd3e6638b816dd9d835",
+                "license": "Unsplash License",
+                "reason": "The image shows a street intersection with traffic lights at night, which broadly relates to the article's theme of night work on traffic lights and road construction. However, the selected concept specifically requires visible street works with fencing and partially dismantled paving under work lighting. This image does not show any visible constr",
+                "source_url": "https://unsplash.com/photos/traffic-light-gHkKgHX0fbE?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "liikennevalot katutyömaa yö",
+              "pyörätie työmaa hämärä",
+              "traffic light roadworks night"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "liikennevalot katutyömaa yö",
+              "pyörätie työmaa hämärä",
+              "traffic light roadworks night"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 1,
+          "concept_rank": 2,
           "fit_score": 9,
-          "image_sha256": "b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c",
-          "kind": "real"
+          "image_sha256": "ca371bb5714641a78666599bf36f81a4f09c99d71195f6c0140547c24f2a45e0",
+          "kind": "generated"
         },
         "version": "article-first-v1"
       },
-      "sha256": "b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c",
-      "source_url": "https://www.pexels.com/photo/building-with-apartments-and-balcony-26928682/",
-      "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/26928682/pexels-photo-26928682.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "26928682",
-        "photo_url": "https://www.pexels.com/photo/building-with-apartments-and-balcony-26928682/",
-        "photographer": "Vlado Paunovic",
-        "photographer_url": "https://www.pexels.com/@vlado-paunovic-1567547",
-        "provider": "pexels",
-        "query": "suomalainen kerrostalo julkisivu",
-        "retrieved_at": "2026-09-30T04:38:58Z"
-      },
-      "stock_provenance_sha256": "a8d0b5824bfb095100871e39b52ead998dd60b116f0af0ddee9e3f88700a891a",
-      "url": "https://uutistenlukija.fi/media/b0e6e10d36c55879eb9f17c0a4a196ffd0bd7e32a31b8e7559401b8a11b4997c.jpg"
+      "sha256": "ca371bb5714641a78666599bf36f81a4f09c99d71195f6c0140547c24f2a45e0",
+      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "subject": "Liikennevaloihin liittyvä työmaa ja rakenteilla oleva pyörätie",
+      "url": "https://uutistenlukija.fi/media/ca371bb5714641a78666599bf36f81a4f09c99d71195f6c0140547c24f2a45e0.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Oikeusministeriön tiedotteen mukaan asunto-osakeyhtiölain uudistus tulee voimaan lokakuun alussa. Taloyhtiö voi jatkossa ottaa asunnon määräajaksi hallintaansa, jos lyhytvuokraus aiheuttaa yhtiölle tai osakkeenomistajille haittaa tai lisäkustannuksia."
+        "text": "Helsingin kaupunki kertoo, että Eteläesplanadilla tehdään liikennevaloihin liittyviä rakennustöitä arki-iltaisin ja -öisin 29. syyskuuta–5. lokakuuta. Työt koskevat Korkeavuorenkadun, Kasarmikadun, Fabianinkadun ja Unioninkadun risteyksiä. Ilta- ja yötyöllä pyritään vähentämään liikenteelle aiheutuvaa haittaa."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Ministeriön mukaan uudistus helpottaa myös puuttumista ulkopuolisten henkilöiden aiheuttamiin toistuviin häiriöihin. Hallintaanottoa koskevat varoitukset ja päätökset voidaan toimittaa osakkaille ja vuokralaisille sähköisesti. Asuntoaan vuokraavan osakkaan on huolehdittava siitä, että hänellä on tarvittavat tiedot vuokralaisesta."
+        "text": "Kaupungin mukaan Fabianinkadun ja Korkeavuorenkadun välille rakennetaan uusi pyörätie ja nykyinen pyörätie muutetaan jalkakäytäväksi. Pyöräliikenne siirretään suojatieylitysten kohdalla liikennevalo-ohjaukseen. Kaupunki arvioi tämän selkeyttävän jalankulkijoiden ylityksiä ja parantavan risteysten turvallisuutta."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Taloyhtiön toiminnan päättämistä helpotetaan keventämällä selvitystilaan asettamista koskevaa päätöksentekoa. Tiedotteen mukaan konkurssiin hakemisesta päätetään yhtiökokouksessa osakkaita kuullen, ja laissa huomioidaan aiempaa paremmin konkurssin vaikutukset osakkaiden ja vuokralaisten asemaan."
+        "text": "Pyörätiehankkeen arvioidaan kaupungin tiedotteen mukaan valmistuvan lokakuun lopussa. Työmaalla on väliaikaisia, muuttuvia liikennejärjestelyjä kaikille kulkumuodoille. Tavanomainen työaika on arkisin kello 7–22, ja muina aikoina tehtävistä töistä tiedotetaan erikseen."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Uudistus helpottaa ministeriön mukaan myös yhtiövastikkeen määräytymisperusteen muuttamista erityisesti silloin, kun liikehuoneistoja muutetaan asunnoiksi. Lisäksi taloyhtiön omien osakkeiden hankinnan ehtoja selvennetään. Näillä muutoksilla pyritään helpottamaan huoneistojen vajaakäytöstä aiheutuvien ongelmien ratkaisemista."
+        "text": "Kaupunki kertoo uuden pyörätien olevan käytössä 2030-luvun alkupuolelle asti, jolloin Eteläesplanadin laajan peruskorjauksen on määrä alkaa. Rakentamisessa käytetään uudelleen ajoradasta purettavia vanhoja kiviä, ja ylimääräiset kivet varastoidaan myöhempää käyttöä varten."
       }
     ],
-    "summary": "Oikeusministeriön mukaan taloyhtiöt saavat lokakuun alussa uusia keinoja puuttua lyhytvuokrauksen haittoihin ja toistuviin häiriöihin. Uudistus muuttaa myös taloyhtiöiden toiminnan päättämistä koskevia sääntöjä.",
-    "title": "Asunto-osakeyhtiölaki uudistuu lokakuun alussa"
+    "summary": "Helsingin kaupungin mukaan Eteläesplanadin risteyksissä tehdään ilta- ja yötöitä 29. syyskuuta–5. lokakuuta. Pyörätien rakentaminen aiheuttaa muuttuvia liikennejärjestelyjä kävelijöille, pyöräilijöille ja autoilijoille.",
+    "title": "Eteläesplanadin pyörätietyömaalla tehdään yötöitä"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "fca2e839f6ccbf048f1b3aebac2035bd1ee62a4458909cc971f3f6f54f78f0a5",
+    "draft_sha256": "ed548ab90b29aa3b80516904b5646903f789d21680ba96d3037e9f07b21639e5",
     "reasons": [
-      "Otsikko on 46 merkkiä eli alle 60 merkin tavoiterajan, ja lakimuutos on alussa. Lähde A, oikeusministeriön 29.9.2026 julkaistu tiedote, tukee otsikon ja ingressin tietoa uudistuksen voimaantulosta lokakuun alussa. Tiedote on arviointihetkellä 30.9.2026 ajankohtainen.",
-      "Ensimmäisen ja toisen kappaleen source_ids-merkinnät ovat oikein: A tukee määräaikaista hallintaanottoa lyhytvuokrauksen aiheuttaman haitan tai lisäkustannusten vuoksi, ulkopuolisten aiheuttamiin toistuviin häiriöihin puuttumista, varoitusten ja päätösten sähköistä toimittamista sekä vuokraavan osakkaan velvollisuutta pitää tarvittavat vuokralaistiedot. Luonnos ei lisää lähteeseen kuulumattomia määräaikoja, henkilöitä tai ehtoja.",
-      "Kolmannen ja neljännen kappaleen väitteet perustuvat lähteeseen A: selvitystilaan asettamisen päätöksentekoa kevennetään, konkurssiin hakemisesta päätetään yhtiökokouksessa osakkaita kuullen, osakkaiden ja vuokralaisten asema huomioidaan aiempaa paremmin, vastikeperusteen muuttamista helpotetaan ja omien osakkeiden hankinnan edellytyksiä selvennetään. Vajaakäyttöongelmien ratkaiseminen esitetään muutosten tavoitteena, ei osoitettuna vaikutuksena.",
-      "Yksi tuore viranomaistiedote riittää tämän rajatun lakimuutosuutisen lähteeksi. Ministeriön tiedot erotetaan riippumattomasta vahvistuksesta lähdeviittauksilla, eikä luonnos väitä usean lähteen vahvistavan tietoja. Kotimaa-luokitus ja valtakunnallinen soveltamisala sopivat asunto-osakeyhtiölakiin. Teksti on neutraalia, ymmärrettävää ja itsenäisesti tiivistettyä suomea; RIGHTS-aineistoa ei käytetä uutisväitteiden tai kuvaoikeuksien näyttönä.",
-      "Kuvatietue on sama luonnoksessa ja lähdepaketissa. Pexels-kuva 26928682 on yksilöity kuva- ja kuvaajasivuineen, ja kuvakohtainen license_evidence yhdistää sen Pexels License -lisenssiin ja Vlado Paunovicin tekijätietoon. Molemmille järjestetyille kuvakonsepteille on kirjattu haut, ja valitulle kuvalle on kirjattu koko artikkeliin sidottu täsmällisten kuvapikselien arvio 9/10. Kuvauksen kerrostalojulkisivu, useiden asuntojen ikkunat ja parvekkeet liittyvät jutun käsittelemiin asuinhuoneistoihin, taloyhtiöihin ja huoneistojen käyttötarkoituksiin, eivät vain Kotimaa-kategoriaan. Kuvateksti ei väitä kuvaa uutistapahtumasta tai tietystä suomalaisesta taloyhtiöstä, alt-teksti vastaa kuvattuja kohteita, eikä tietueessa ilmene henkilöitä, luettavia tunnisteita tai vahinkotilannetta."
+      "Otsikko on 49 merkkiä eli alle 60 merkin tavoiterajan. Eteläesplanadin työmaa ja yötyöt ovat heti otsikon alussa, ja lähde A tukee otsikon sekä ingressin keskeisiä tietoja.",
+      "Ensimmäisen kappaleen source_ids-merkintä A on oikea: lähteessä ilmoitetaan arki-iltaisin ja -öisin tehtävien liikennevalotöiden ajaksi 29.9.–5.10. ja nimetään Korkeavuorenkadun, Kasarmikadun, Fabianinkadun ja Unioninkadun risteykset. Liikennehaitan vähentäminen esitetään työn tavoitteena, ei todennettuna vaikutuksena.",
+      "Lähde A tukee toisen kappaleen uuden pyörätien sijaintia Fabianinkadun ja Korkeavuorenkadun välillä, nykyisen pyörätien muuttamista jalkakäytäväksi sekä pyöräliikenteen liikennevalo-ohjausta suojatieylityksissä. Turvallisuuden paraneminen ja ylitysten selkeytyminen on asianmukaisesti rajattu kaupungin arvioksi.",
+      "Kolmannen ja neljännen kappaleen lähdemerkinnät A ovat perusteltuja: lokakuun lopun valmistuminen säilyy arviona, työaika on arkisin kello 7–22 ja muuttuvat liikennejärjestelyt koskevat kaikkia mainittuja kulkumuotoja. Myös 2030-luvun alkupuolen peruskorjaus sekä vanhojen kivien uudelleenkäyttö ja varastointi löytyvät lähteestä.",
+      "Lähde A on Helsingin kaupungin 29.9.2026 julkaisema, arviointihetkeen nähden ajankohtainen tiedote kaupungin omasta katuhankkeesta. Yksi ensisijainen lähde riittää tähän rajattuun uutiseen; luonnos ei väitä riippumatonta vahvistusta eikä yleistä paikallisia tietoja valtakunnallisiksi. Kotimaa-luokitus on sopiva, ja teksti on neutraalia, ymmärrettävää sekä itsenäisesti tiivistettyä. RIGHTS-asiakirjaa käytetään vain tekstin käyttöoikeuden näyttönä.",
+      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Paketissa on kaksi järjestettyä kuvakonseptia ja haut kummallekin. Valittu generoitu kuva vastaa korkeimmalle sijoitettua turvallisesti generoitavaa konseptia: liikennevalot, aidattu katutyömaa, purettu kiveys ja työvalaistus liittyvät lähteen A kuvaamiin töihin. Erillisen mallin tarkkapikseliarvio on sidottu samaan kuvatunnisteeseen ja artikkelitekstin tunnisteeseen, antaa sopivuudeksi 9/10 eikä ilmoita ihmisiä tai luettavaa tekstiä. Kuvateksti on täsmälleen 'AI-generoitu kuva. Ei valokuva tapahtumasta.', joten kuvaa ei esitetä todellisena Eteläesplanadin tapahtumakuvana. Tekstin käyttöoikeutta ei ole käytetty valokuvan käyttöluvan korvikkeena."
     ]
   }
 }
