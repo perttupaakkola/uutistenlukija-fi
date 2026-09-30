@@ -3,211 +3,38 @@
   "hermes_step": 5,
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
-  "source_commit": "21b23c3ecbe7706746029d6952391a9bc79122a1",
-  "job_id": "3201487f4521cfce759d6a991eaf097f1212d2313325cafecfeab2f51072d885",
-  "packet_sha256": "2f07d82750c42e9f670e57c15638efa95ac734899a77d3e9751188c146243a51",
-  "draft_sha256": "cd7e22cf47ca219840d1b4af5464b3bf10228e4cc3325b6b4a39191824a361fe",
-  "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
+  "source_commit": "1ea75f183c41095e05ce462c02706ef53a37ab21",
+  "job_id": "ed01e64009e6cc1e37c2051b47c120914e57f475ea4a8fd41144514f468fe5a0",
+  "packet_sha256": "ebecf41d830fd386e0e74494159a1b14c75375097ff4cf451d2d34c11fe83f20",
+  "draft_sha256": "f4c4bde268c59b8c5232faab80527ce2b8edb888c69783dff8f2cc544d672798",
+  "image_sha256": "c3ce5cfc37823d30a2f18e085a0ed564f78bf3f80f6a8a5b3d77c0161958f22a",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "c773165a927caeb45b81f3f8b6178997c3191a1b220f0566b07c93b5584139a3"
-  },
-  "stock_image": {
-    "alt": "Arkistokuva: Neljä sähkömittaria ja sähkökaappia on asennettu graffitein peittämälle betoniseinälle, ja niitä yhdistävät mustat johdot.",
-    "caption": "Arkistokuva artikkelin aiheesta.",
-    "classifier_output": {
-      "category": "Talous",
-      "concepts": [
-        {
-          "depictable_scene": "Lähikuva asunnon sähkökaappiin asennetusta sähkömittarista. Mittarin kotelo ja sen vieressä olevat sulakkeet näkyvät, mutta näytön lukemat ja laitemerkinnät eivät ole luettavissa.",
-          "must_avoid": [
-            "People or body parts",
-            "Invented readable meter readings, prices or logos"
-          ],
-          "must_show": [
-            "Residential electricity meter",
-            "Domestic electrical panel"
-          ],
-          "rank": 1,
-          "safe_to_generate": true,
-          "search_queries": [
-            "kotitalouden sähkömittari",
-            "asunnon sähkökaappi",
-            "residential electricity meter",
-            "domestic electrical meter closeup"
-          ],
-          "subject": "Kotitalouden sähkön kulutuksen mittaus"
-        },
-        {
-          "depictable_scene": "Tavallisen asunnon ikkunan alla oleva seinään kiinnitetty sähköpatteri kuvattuna tyhjässä huoneessa. Patterin säätönuppi ja sähköjohto näkyvät ilman luettavia merkintöjä.",
-          "must_avoid": [
-            "People or body parts",
-            "Luxury-home framing that implies who receives support",
-            "Readable invented text or logos"
-          ],
-          "must_show": [
-            "Wall-mounted electric radiator",
-            "Domestic room interior"
-          ],
-          "rank": 2,
-          "safe_to_generate": true,
-          "search_queries": [
-            "sähköpatteri ikkunan alla",
-            "kodin sähköpatteri",
-            "wall mounted electric radiator",
-            "electric radiator domestic interior"
-          ],
-          "subject": "Kotitalouksien sähkön kulutus lämmityksessä"
-        }
-      ],
-      "version": "article-first-v1"
-    },
-    "credit": "Photo by AV on Pexels",
-    "depicted": "The image shows a concrete wall with multiple utility boxes and electrical wiring. From left to right, there is a gray utility box with a white circular sticker on its lower left side, and a small white padlock hanging from its bottom. To its right, a blue transparent utility box is visible, revealing internal components and a digital display. Next, there is a damaged white metal utility box with its door slightly ajar at the bottom, secured by a small brass-colored padlock. Further to the right",
-    "generated": false,
-    "hotlink": false,
-    "license": "Pexels License",
-    "license_evidence": {
-      "image_path": "/photos/10065200/pexels-photo-10065200.jpeg",
-      "license": "Pexels License",
-      "license_code": "Pexels",
-      "license_url": "https://www.pexels.com/license/",
-      "photo_id": "10065200",
-      "photo_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
-      "photographer": "AV",
-      "photographer_url": "https://www.pexels.com/@av-49217877",
-      "response_sha256": "1361560deceb60e5cf8ff2b3eb3f6d0d7070b0a11a0e04eb74dce3dba218eb31",
-      "retrieved_at": "2026-09-30T13:20:57.463400+00:00",
-      "transport": "jina_reader",
-      "version": 1
-    },
-    "license_url": "https://www.pexels.com/license/",
-    "local_path": "media/e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1.jpg",
-    "pixel_review": {
-      "alt_fi": "Neljä sähkömittaria ja sähkökaappia on asennettu graffitein peittämälle betoniseinälle, ja niitä yhdistävät mustat johdot.",
-      "approved": true,
-      "article_text_sha256": "7648c2bc9c3cd7833493e181a0e7ca3ec476f6e3fb07741728c945347b1285f6",
-      "concept_sha256": "df6d55e165b549104e041334572427d655e2a442fb3330d11490bf1e3ebe73ad",
-      "description": "Four electricity meters and electrical panels are mounted on a concrete wall with graffiti. Two of the meters are grey, one is in a blue transparent casing, and one is in an open, damaged white casing. Wires connect the units.",
-      "fit_score": 9,
-      "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
-      "model": "google:gemini-2.5-flash",
-      "must_show_visible": [
-        true,
-        true
-      ],
-      "no_people": true,
-      "reason": "The image clearly depicts multiple electricity meters and electrical panels, which directly illustrates the concept of 'Kotitalouden sähkön kulutuksen mittaus' (Household electricity consumption measurement) and is highly relevant to the article's discussion of electricity price regulation and household electricity costs.",
-      "reviewed_at": "2026-09-30T13:20:59.634682+00:00"
-    },
-    "pixels": {
-      "height": 627,
-      "mode": "RGB",
-      "variance": 6322.1,
-      "width": 940
-    },
-    "relevance_check": {
-      "accepted": true,
-      "evidence": "Four electricity meters and electrical panels are mounted on a concrete wall with graffiti. Two of the meters are grey, one is in a blue transparent casing, and one is in an open, damaged white casing. Wires connect the units.",
-      "matched": [
-        "electrical",
-        "electricity"
-      ],
-      "method": "vision",
-      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
-    },
-    "selection_evidence": {
-      "article_text_sha256": "7648c2bc9c3cd7833493e181a0e7ca3ec476f6e3fb07741728c945347b1285f6",
-      "decision_sha256": "7d0d30a9ef5ed40cafecb2fc999c2ea25d2373bc568e05c6f8248d1697f2556f",
-      "minimum_real_fit": 8,
-      "searches": [
-        {
-          "candidates": [
-            {
-              "approved": true,
-              "fit_score": 9,
-              "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
-              "license": "Pexels License",
-              "reason": "The image clearly depicts multiple electricity meters and electrical panels, which directly illustrates the concept of 'Kotitalouden sähkön kulutuksen mittaus' (Household electricity consumption measurement) and is highly relevant to the article's discussion of electricity price regulation and household electricity costs.",
-              "source_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/"
-            }
-          ],
-          "concept_rank": 1,
-          "outcome": "accepted",
-          "provider": "pexels",
-          "queries": [
-            "kotitalouden sähkömittari",
-            "asunnon sähkökaappi",
-            "residential electricity meter"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": true,
-              "fit_score": 9,
-              "image_sha256": "70d1709148cf86a7ea568a53e1b0b3d4407ec9c26ef6554ca5cd611bca664b70",
-              "license": "Pexels License",
-              "reason": "The image clearly shows a wall-mounted radiator in a domestic room interior, which directly matches the 'must_show' elements of the selected concept. The article discusses household electricity consumption for heating, making the radiator a relevant subject.",
-              "source_url": "https://www.pexels.com/photo/apartment-interior-with-table-and-chairs-near-window-6447395/"
-            }
-          ],
-          "concept_rank": 2,
-          "outcome": "accepted",
-          "provider": "pexels",
-          "queries": [
-            "sähköpatteri ikkunan alla",
-            "kodin sähköpatteri",
-            "wall mounted electric radiator"
-          ]
-        }
-      ],
-      "selected": {
-        "concept_rank": 1,
-        "fit_score": 9,
-        "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
-        "kind": "real"
-      },
-      "version": "article-first-v1"
-    },
-    "sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
-    "source_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
-    "stock_provenance": {
-      "image_url": "https://images.pexels.com/photos/10065200/pexels-photo-10065200.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "photo_id": "10065200",
-      "photo_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
-      "photographer": "AV",
-      "photographer_url": "https://www.pexels.com/@av-49217877",
-      "provider": "pexels",
-      "query": "kotitalouden sähkömittari",
-      "retrieved_at": "2026-09-30T13:20:57Z"
-    },
-    "stock_provenance_sha256": "123758867959cf5cce020ab0eb7fd1a08924beeb763087eb41e8953332433388",
-    "url": "https://uutistenlukija.fi/media/e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1.jpg"
+    "provenance_sha256": "dee80b18aee93530b06ab6257c307904aac00f149f2c4a7b57291df88f3c5953"
   },
   "new_article_files": [
-    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html"
+    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "911b1a97b001af435deaed56caca26dcbf66eea4c1d1a9d011f1d1e30276509a",
-    "_redirects": "e69f1d1edd0164dd22bfbd18370130dec2b0379b6ffb563be5acb30e5edd6582",
-    "ai-kuvat/index.html": "704384abe7307d1ba4fd611a736a8b982bf2d50533bc1feda579cf365d538276",
-    "categories/kotimaa/index.html": "e932dd1ce16f21a3f2e4b2593a3290e2afbe2522f43435258ad20a3ee9cec3d0",
-    "categories/kotimaa/sivu/2/index.html": "beb94632e5afe85b2754e8a041ac22ccddfe25c0f95e2ce8667c3ff66f505578",
-    "categories/kotimaa/sivu/3/index.html": "3a49055724f0f617ebf61f7daf2b3fe9b8b095b1bd6451dc688fa7a91d2ab63f",
-    "categories/kotimaa/sivu/4/index.html": "550faa12c2f024df3629835e4808af7261c4fac10e222ebea83df0e4bb1fe881",
-    "categories/kotimaa/sivu/5/index.html": "97fce13c41b1b578db31eb5a53d15cbf1b986a4691ec58d2d0d14e4add372048",
-    "categories/kulttuuri/index.html": "254e2d49c9196262775cdd280dffda6007263cb4dcf5fca2d5df9db1f5d8698d",
-    "categories/talous/index.html": "006db353d5319b94738b2d8c20827dfdefa1b1f454d37be35872d95c90be3110",
-    "categories/talous/sivu/2/index.html": "38d69de8a3c4139375085d39b3a48ead5cae3fa14cbea155bd98de6ac9ade27d",
-    "categories/teknologia/index.html": "49b3632b19b6a9404278d26b1dbcf3fb2b5b4970f9b196cd8f94d6af15da714f",
-    "categories/tiede/index.html": "92e7fcdd11aa9f7debc7dc7279a4326ab7cfa8984fc3edb0fc2598884d43f65d",
-    "categories/ulkomaat/index.html": "6035026292116f5c1580af8c0d7f65cd72887878926de576e727400ff23ea3f9",
-    "categories/urheilu/index.html": "c21339d83ac375c85a31b60fd566223e8b1eb0e5ab22ae8188ad962f5af98026",
-    "index.html": "24f282d9c28bfd1c9e3407d19617d7f550ba13627abf5287696bfc7db27a6795",
-    "lahteet/index.html": "88f2c5ad41bd0c3dcf03996166451b197e9f69e43ac8355bf8d63d45a5e6640a",
+    "_redirects": "8513e3e63707854e09026c93897a2617af03e989e99f6aa8ba8fb3816f23c414",
+    "ai-kuvat/index.html": "53c0ec211150871a6348862731640d85a9fa48109af6c9dec8a6e8918b57b1ee",
+    "categories/kotimaa/index.html": "13744da5b79d4ba788bdab0ef06fd7cc86446783dda4acda38367fa64af41852",
+    "categories/kotimaa/sivu/2/index.html": "195ba3bb8e78649ff0fdd54cee73e76b50a533d8e0f73c4f47a86ef213f73c1d",
+    "categories/kotimaa/sivu/3/index.html": "33bad770f59df63f5e816de3ad242b3b3ee2e63c2cae8bb42ea63b2584ec666d",
+    "categories/kotimaa/sivu/4/index.html": "51b763e0501bc2b2034e3c68a2f361ac582a4bdeb45945d04e74e3ff353c9c18",
+    "categories/kotimaa/sivu/5/index.html": "881ab2952a343a1d59196424d6908136d5521696fad612f36079160f68f04c05",
+    "categories/kulttuuri/index.html": "1f55f859155c55c889365f96e60fd2946088b1a7f668d0495f5ec1973708f166",
+    "categories/talous/index.html": "3b31d5d949870b1c8c939e85c7fa66c82dfcb3b8ac4b462744e771fab6b6ce93",
+    "categories/talous/sivu/2/index.html": "f0645e5b2d69bd4085df2820463172bfcff01ad48c332924f363552942d6b5f5",
+    "categories/teknologia/index.html": "ea2a330b7a3d65ed896c1be6e7da9b6ec91022aacde4c3f015725fc5f5bb7977",
+    "categories/tiede/index.html": "b7d00cdb0dcfedc366d87effd3bc57e7b71fff8c78860a2c630825f8df66f792",
+    "categories/ulkomaat/index.html": "1238fba638fff197723950789035853d64cfb604cb34b6c487293ff7093dbbae",
+    "categories/urheilu/index.html": "9f86324512b065c856d67121ccb8f141cfd76184e37399092289a2b652388bde",
+    "index.html": "548bae540489fe48ea7df3aee8b1211ed5cf19f98ef05211345e7f4aab7d42d9",
+    "lahteet/index.html": "58182f7e6342361e876bcb28515c7aa46969b8b9df05395eeb2863405297f2f9",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -560,6 +387,7 @@
     "mvp-assets/c28d7b6954239ba7d7c86e39cc098e562ab8dfa1a54dcdc14fb65cc5d230f20a.jpg": "c28d7b6954239ba7d7c86e39cc098e562ab8dfa1a54dcdc14fb65cc5d230f20a",
     "mvp-assets/c2906ee2530b41ad6fc1ce81e4d1a777adf98cc271d6051f3e17892dab8bbae8.jpg": "c2906ee2530b41ad6fc1ce81e4d1a777adf98cc271d6051f3e17892dab8bbae8",
     "mvp-assets/c364cc0375596263caa12f65a87a21efc7f1afadfbca7798cc7ca805cfaef921.jpg": "c364cc0375596263caa12f65a87a21efc7f1afadfbca7798cc7ca805cfaef921",
+    "mvp-assets/c3ce5cfc37823d30a2f18e085a0ed564f78bf3f80f6a8a5b3d77c0161958f22a.jpg": "c3ce5cfc37823d30a2f18e085a0ed564f78bf3f80f6a8a5b3d77c0161958f22a",
     "mvp-assets/c4411f82b0001b9f6099f01b680fa02e29becf51c18a88a785ce489ec5111e0e.jpg": "c4411f82b0001b9f6099f01b680fa02e29becf51c18a88a785ce489ec5111e0e",
     "mvp-assets/c4775495121711ad21088d90decac484546fca79d016c4bacf47ad9644ecc929.jpg": "c4775495121711ad21088d90decac484546fca79d016c4bacf47ad9644ecc929",
     "mvp-assets/c4a56b6b73dd83bd89521dbaa444d2a3be18da45f399a8ca728abfc6f7c46dc8.jpg": "c4a56b6b73dd83bd89521dbaa444d2a3be18da45f399a8ca728abfc6f7c46dc8",
@@ -701,27 +529,27 @@
     "mvp-assets/portal.js": "224136faa34405efbb79ccd090bf52b2f75731f94bd68457153234cc4c02ee11",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "824285d22d372ae6fff003cbc089ce72cee3764d3b381f9fd7874aac92aeedc9",
-    "oppaat/index.html": "c3404863fb526f22190c6dc1dca5d36b80ed33b7dc9f695ba84441a5889cf3a2",
+    "oppaat/index.html": "0e0e2bdc36e6f883ac73009c34d1ebc9cb525dd8b9e1603ae086ff5418390d4e",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "5cd6015134679edbdb717578f1b478df92b28682a039c697e5d20564458e1533",
-    "sitemap.xml": "4e464e018a50082e69ce67bd4214624d97bf02f5cfa583c88a1f61d1a861adb9",
-    "sivu/2/index.html": "fcd9c814da5c187d16bd193cac6154c48590d36d8a40d487ab6de8aa6c141da0",
-    "sivu/3/index.html": "db00d1af741335a49d3fb3674c1eb567597466635bb9e961bc492d6a6487cffe",
-    "sivu/4/index.html": "e381b5337ce979ba12a59977bef445a02ea048e6db932172ad921cc3d34073a1",
-    "sivu/5/index.html": "3131fd2f296e9d0a2dd2e80d565e9218fe9e44312bdb0122a9e80db78c23e525",
-    "sivu/6/index.html": "a14624d8cde74d1e6d45fd645bc9362f552fbe326cc7242823f03e4e84f3f16b",
-    "sivu/7/index.html": "c9e8d6947c51585f4267b4ab78256eaf14dc614d54e064f744dd80b63ec4d5b5",
-    "sivu/8/index.html": "bb93e3930cc8322ca81f1c25535c1fccd1677397d0395b8666c4823e3d13d8ee",
-    "tietoja/index.html": "18cbeed6fd7ace4eaf53992ab8a926eea4fed1f1e9b5bf0bdc241a8acb93c60e",
-    "tietosuoja/index.html": "be3fdf321bafa99484ea1258c8ee57fdbd471aa33b084269d8844b55d8d4b095",
-    "tuoreimmat/index.html": "8eb3bffe232f040114898d16e4a6a26b3ee58e256803b93f7482156a400cd01a",
-    "tuoreimmat/sivu/2/index.html": "8748597a64c2c43f455a89616cb35a8edc5f27aecc09712770cc394a994f3036",
-    "tuoreimmat/sivu/3/index.html": "b20c2a9ea6f75e24a7ba8cad89444ca49b10f7a8c273e2745ddf4da0d9836e9a",
-    "tuoreimmat/sivu/4/index.html": "ccb3e932fb30c0a6ad4b449ccf022ef35f948211624bf5dd2c839223d0a1d8be",
-    "tuoreimmat/sivu/5/index.html": "d345d8321733e0ba1f39c90c873e9e678c6b5d01497f25aa5f433ce0586f34dc",
-    "tuoreimmat/sivu/6/index.html": "74240f05dc679f025e9138e88e16f6c6f8570aaad034df1fb82587e7a0674257",
-    "tuoreimmat/sivu/7/index.html": "ac9c591ae15cb945260b2d37d4fbe6a32fef9a23c0175168560c4927f43106f4",
-    "tuoreimmat/sivu/8/index.html": "8b7347415aa6d00d110155c06743663c222de8755309676434d916d468243093",
+    "rss.xml": "347c8c9af0f76e3dfaaa5ed7ab6727af458eeb97a8ab503e5e5276b43022b82c",
+    "sitemap.xml": "aa3c694024d0a2118f9588a8e767bcc3449bd86ad86c5189d27f47325d88870c",
+    "sivu/2/index.html": "0aa03171eb9249b34f8c78691d72d42b92f1ebbe1cc712452b73a012fe2812e1",
+    "sivu/3/index.html": "66a22077e79bbdfed325826bbf8896b6824538a74530589f5902a639705582c9",
+    "sivu/4/index.html": "0c49ab08f32ca7e80b3430d8aea54d92eda3e6612492bbc6e951d8df705914ef",
+    "sivu/5/index.html": "e777ca8ca59704d411411ca41f97cb07ec44a565646dd801b24dd28a944567ee",
+    "sivu/6/index.html": "83f466940802840a63d8357e3d7d6727bc9f52f8e68c47ded8df42d45dce2729",
+    "sivu/7/index.html": "b4e8d414b366e98e5f33903c90c73759f918e499602bce20627a2e87b75411ad",
+    "sivu/8/index.html": "9d8310eec073b652d69e21496c9c17a2d85efacd26f0c406b6df3a5ea0f0eae0",
+    "tietoja/index.html": "0de27b3bdc49b50446063fcf8107a13cab0b49b49b084bc601e0d8d49c3c7007",
+    "tietosuoja/index.html": "c203ea19d2dbe04e9f45c1425aaed3b8a935bdc02c2afac9c2b102336b46a1da",
+    "tuoreimmat/index.html": "ebc3b1f154728040eebf1400b344bce08ee78ed042f3a232694c781c72a04a52",
+    "tuoreimmat/sivu/2/index.html": "8e1d3e4c4bce18ab4ad7930b21dcf2b02d076c298b5e49dbbafdd9335306a525",
+    "tuoreimmat/sivu/3/index.html": "142ed09ea478631ca421c6563b1a683503e38b631ccdda7615c04bf280f59232",
+    "tuoreimmat/sivu/4/index.html": "e5311211b7bde70d258936a8dac0bcb8c68c7624ba500a3131df144b17ec47a7",
+    "tuoreimmat/sivu/5/index.html": "fc1adf272c3a9daf2096af4a160008e69ee259a17b2a774637f402d0d09f89b3",
+    "tuoreimmat/sivu/6/index.html": "3251d27e04000036282cea581e1f57d637e2c45ae3bec0e11bde1deeb34fc17b",
+    "tuoreimmat/sivu/7/index.html": "119941133a67c3b372887ea993f57d42c23e5f67b619c3182cd96a58195c091a",
+    "tuoreimmat/sivu/8/index.html": "59d8e3f35273ad6e897eb8c33d6f63aa4c283cc9a81b55883a6ed44af3321c37",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -735,674 +563,1284 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "6eac8e762e987171583abef0ce3a2bb653337721c69293db2289362627d72a9b",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "e505b038e40d1144c8d79b28f29c3e985803d39f521a99e281e855b9cd942108",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "00254174038f8e5b65bb331e091c56193385bd6f9a10cb47b3997a96811c8259",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "4cf08ed5c0498185e2c7bba9c28bc7acf2ff0e19f2491ab149dbb18cfad31eb0",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "d91d5c6c5b828decc3e25db8f92d16950030a4a97fc0e93d28aad5950ba44f79",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "cbd4a5c6f274890a3d9f8eba8e351db6480b17c47333c970c4099c389dbbf3e1",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "4ef97d0db3de8b1294bd618a87649900d9dab7e8c9b30a2e8a61bbb154290486",
-    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "84597f5eaf8e945f6a9e369ed293af04ef542430fd3b900a582ef179e26048e7",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "b181a4650a3aad0d2a02844e2b50963af7d75ca851a233f00c1febc071742f54",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "9f226b28da7a28cc74bbd0ab0e638a32e7ae6c322ed714e267d0df4aa76317a0",
+    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "450e16d1583024160fb5ad1e9732c47b689f87ed3cb2f6aff05789b6e7a28502",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "146f3839b458fa9c7d65bc6bb5c58c0f421492db8543e6fa49cda76a414d2079",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "dc4480919e98c6f99ef25c459a6bf4201614410ed8c219caac2ed973e63f98d2",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "9850e040870722b83d836e4aa212bd66ba37948d94bd0c3d5228a4b55c1fcb34",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "e9616ddf11fffbe5acf6c51778a570dd6984b146b5e8b225c9934494784ca839",
+    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "f9ef1c9e2836a35ae440ddbc93ac04eb3ae342473e2ea5d5409e96cf1e527114",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "12477295575d9249fdc101e48c50128b82a11897680301d91cbe1149bde26c47",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "e9673a80a7eb3535d621bad414d40f7526b7e073459a7aacd62655ea7d264dd7",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "44c3b390437deb8ee7de4702e57d2c46e7d5a2ccca1c2b8d8bbe18a79f6e5b67",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "923fdd8ed436f5e80152dcb091b974260c5322733b3649a272ee19db8eef2ab0",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "323c03adeda767276144a719f4cec506579f34d9bf88098a40c4f43a85b30cc0",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "905b38881c35137b10c4f411a5ad62cbc0ec460eb71e64603d20253acc4176ad",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "302d2e9882bb5bf43eb8381ae3503cb369b01a604a110417e6a53154b20749be",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "65e5c91e01dec3dfa905d6b479b14c9e13e3ecfa184d422d7d739ef91ed1ef33",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "842572ed57fb8128eb6a71fb7f5483f94728b37a8a0894358d499c86d6e9b68d",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "922386d4c0dc4bb71707c2372cf5f4f43da122c6f367fa45edd4526cc27bc406",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "517a70677d37ad016bd17867a12bdddaeed855c6efa1fe12f9d68cd87eaa7d38",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "8882fa2b8d9f11d3556e8ad59c31c9e28a60c26cf3e68812c9bffc7922f6e9b1",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "01ac9ed85aad5c9fdda87e1b0fd34160df39eb6050bd4f69b488027eec19459b",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "0183ac6acdced3bf45cdcd8f7fe2bd4eea2b5cb515eca1d30d1beeac401d1afd",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "a53b236383a4baae698a6468861825b53be2f3e543199b096160340d5e367b15",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "731b95c3405b45c8e138c44fe6e77a16c45b9b78c0166146d4e17473837d0550",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "db92305315b4110ba61595907e1dc346b42d99bbc7077d3009591707bf391512",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "51bb9f4ac7bfa8de0aacafb15ce639f67c1bd7a3503387752971c685c4b7a6fc",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "3e331a77235447556784862e07469ab26db37a054f80a30fc12bafe24cf906a4",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "9c220a31cb242504e3313b77d47bd0d0db8f5021f1196fc689ff69b99a723acb",
-    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "74298b4e6260fbe3e208c4f0b75523c713f5694e9ed05c683b66c4666b5161b5",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "ec213dd15434a2f6bd8d0437b378ae96519375cd2ffe8fa277d431afa3672493",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "99c576d2d92c31dc580746b9ff6e9e07685813327c28ec9f569b1be4e6f9c6f6",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "44f7ca1efaf3d161558b4f0dff97360b8c3b9835fdd61f5b935edcedaa12cdb7",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "4729d7a9a967b1d5b9405742d1ff7a55d37e188642f4ab469d27df2bcd3f8dfd",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "afbd65cd0aaf9ef6f8878863047c39594b273a8389b0b4b17d466b4960acf4bb",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "9a226293892d2713302d5182f44c054591a9afc573dbf985d2f88e617813de4e",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "c3c3102f2570dd1eb231dfbdac0ed6abc07be2c2f6530c940025db803110e93c",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "09dc0f31985f8417f69c3e0fba4616e987f7919db222dc560858dac25e9e9d6a",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "3c2a544a267c3196b167acdbdad34b7d445876c09b2596f2fd8064058e7f0e64",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "b401c2f0b6f88f5941c8778636495e034c5b6737a7ebcfecd0ed73f0f5df986d",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "661403cb17d1c532d99d25f3be0c75931f1ba4c7a2df7b321003e0fcceb8a755",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "954b754819602f46ffe3ac61e57f627b9b7f0953995c118620298f4ff9223fb5",
+    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "c2152b929fbd50e65181efdb5206bd1318aaa974d25aab6a53dc60eafc3456e4",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "ba723e9531019c1203a6222cff1a38da52048a259565eafc2bb3d0dcf1379f64",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "ad2bf0339af040632a4fec723c9d9471c502aab423c4a74b2badab793e2e5a95",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "8263d4b8f4b457f27ccc3509c60ebf4f81da326ddc9715b4b670ae82b55e7122",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "bf9437fcac647d099879771028a63cf2dbdf06dbab7ca3d91bafed2b34eb71c3",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "76a4d17bb62d9e31e9e87f2fd43a891935f2e77bb2153ae3a3f8d16200f2e493",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "2a1a00d812a5af3a742440b3fae0d3e1a6f41cb1674cbe0e2e62191bcca563ff",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "af6d36c1550dc942e8a5c658145f06a3fef50d8a6d0fbea8f02f9d78044a45c5",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "d7f3e088add613fbf18c2f82e9ebb8a1b9cbebaa07033b13cf07281210dc1ae1",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "099f5f561336f48b474ea92fcc9231119a79f4255060d0493fd93e1a01ca85b0",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "65910983af2490ab98cf5fde9b3f7ffdf10ce569f75a88b08a8c680f27514b42",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "36e8540e52195e36f00504bd04733ed6e128309e0fdfeaa34e13fcf0f7880a94",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "cb9aad43d0befe17fc70d11aeb3dda71f93cb8b60fcb3560c185a6320ee900f7",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "69cfb51b70553aa2e181cee7d11d491859a6fb09c98edd096f0a828907804d09",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "1fa3e477bb82ba8e480cdd7aa2d315d3742566a4da01c4a4e6ffdc166a4f1d26",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "236879a482b29df93b2a459c95b6e3e06a838ddbbae6df78c06637a7a94f1b36",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "642d852eca6e38a70b8c739c898e3677dd876e14ce2596dd65b54ecdb8eba889",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "080badec84aa2c835bffd6348bb22d3327c5696de70008c6a3a5b9aa3a6d9328",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "e7b855bfd967832b00a70d65f385d3f78135f7b9a562b0a42c1858de1b7c2298",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "2d5b7809345f7cfd857861579f29ad1e5b5309c4fd2609a39436d573f9daedb4",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "0a666629b91b7f629c889fc35092be3c4dfdab9b0ab70d3229daa66d2e46ee60",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "b0ecfabd5ffd2fbd152e88b034485d4fd73d54ac54a2498bd4c0b89b89f45e92",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "99674147a1e945e3880c8eeea2646a8927bf6a227cb1ca73a9061ff3deec578c",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "730c1aa3b78dc13a361a29c80b4a32e19574f7ceb9fee5cdfe47784bb86324b5",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "fd52dc5927965f73634e2c645cd14fea0e10e11737f16f1063dbfe13c5e468f3",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "c3d9f89c9298cb38eeb9e119b7bf2d8dc9ebe3237da7795a95eb4c296fb580d6",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "c1075a8620e54cade2efda2d0c0d20a5609765ab588d899560f087ba8446d4bf",
-    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "c164dc0b54bb3c4d4834fb7e1106d071d411ac849a2831ad69d85ca223f87bb3",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "7164ed54acd9f2b39873d636ab60683129b5b2e183526358e1d7e687e27e7bb1",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "cfa84a6c89c86399f0089799d0f689cce29d594ac7c06ca82601033f4936f45b",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "7be414b5bee797888fd75002cd5439a8bf030c713b3b262bd469f617dc1666b3",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "62d0e33193a59cbaaa72df86fbfaaefd6436e9b089d841b51753ea2911fedc04",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "47a5fa0e167e5fe6a171a023916f4e2835be81b652c39a4e1f9faf7b73cdedb9",
-    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "52a46ed4413abb76acdc4130ae93cc6b943f8537eae96f49dcd7a064cd59d749",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "2ff745f01f8ea0f19639b9df856af1e6f4bbfc907325f1f6307469d6114ad917",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "90c89e01b71a06aec41e02a2d912b3ebc35bd27659c924adddcd8806dcf380b5",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "9f1ec6d8c578806a16b48e69c572bc795dfedc5b391eb37d7b344df39468033c",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "06e2ce7d3b827b115b02e161c87b2f9c6c0c66a9196f6300f41ada1c35ed1d6c",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "ce4bb28ac6b956ad0f2a61bf3a74d6c33c981e5ae730460608bb01c904e979fd",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "84fc087b3675e722c02f8876d16c35f3c12f64117f0be7d142e40c996b22f7f3",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "f8ed83e6af73dfbe11e92a858007bdea12481e1a0efed93d2e6ee591f1209b12",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "80445afd19ce9a46d64714d1564a4a09a07fe99d6cb1006b4e9ca655f5e61fef",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "0254f438dae5a588407cf524d0ecb4e48446e25aa2ede28fc613b1b863d17ca1",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "18e5d0cd0ba3d84a78b9384b4401627dc63a4d5bf817b46a1967ca7dbaef9c3f",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "fc2712a06abe09ea4e570a0f198af0c9079ece27537cffeec0e9f8b2952781ca",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "7fffb775b1e8cc35625e6353099af7d02dfc4c1668882ba7a798ccf57b77e13b",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "00c211203f085004c7ef8b26bfc2a45eedd2c87d76014fbfa5d02feebb9668a0",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "9172e41a8abb6073a130293b27d14a5f69afc5fe8df237e16a6891ad597c2a5e",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "da91af107e3dbb3f4c8fb3579ada4f3fa37ef0bb7ada816b4a53326ccd8fba2e",
-    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "b65fbabcfcfd40a2b3ee5451a4aa03e3d061d1618942fb8d6fac93d467167360",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "b048f78ffcf35117451d790fed9399d5501d63553fc2fee64d472a1c63d17e9b",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "e3ed339a94e5b98ce1c56e52a3775c644df755517fb8827dfb7e368f1596e133",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "b4e3f1a637064f8d6aefe74c4e8aae08fc12482fecbab104a6a31f015d3b1a62",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "6acc5a7c72a1ba24976ddab4e6992e0aefb7be9ae06f097294c703495e3b5a55",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "3551310fd4dbee4eb0a98e79db7c1a5624d964965e81fcc2d3eaa389dffde438",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "61082ff35ec8e214b94459484fcb3d818d3f271528cc29c05eb29753f483cca3",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "1f36ff21cb29dab9d12ba3ffd2bd10333fa3740972a19c311574591b06e38b06",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "de649171b73a70fe5daec4494ea83c11e1142204b26d0e07e0d13104be8977eb",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "1fd6041c73131e3960b617940fa5510b7312492ccd0936abe623be83c0f108c8",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "d37fcf39211ed3914b0ee147d5f4a975edc3f7949028b8f4317814bb6b3fae63",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "1e48264c2a85b9ef25323e42bd28b92b4f34fd8c8c733e7558f427207785b9ed",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "e10df1d3303af6435f7d4ce8856c80a173d8da03935c7bd5b17a4154b7623903",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "216b1c8cd917b56dd39f2b0c73f942b00d6ceae3c3e4daddabca76589caca41b",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "f5c34a2f19fd6dc7ec6a1bd4ff9e2f67190d96143bc0b7362c5d92a275752e22",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "4797aeac7ba5b7ddeaab15be1195d631d0c81e733a4a370918cddbafc4161dac",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "a71a266f44c6b2e1388a66f397d0bf2868182486133907aae7d6ff5400419952",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "f19ae73256c86ea50cf492137a85e52d89e166f10fd975bb4b60f29fd7222ed7",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "f961cf5f424e5a88055d922d1dac46418bdff0cb91a8a795c498aa6e59ba5a90",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "18aed8371ae2aee5474af197da80ef0d743a2f9eb14ca22957746ad85ae64c92",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "624ad51be79a9b6ce0cdb67ae99d0425985a8c14a5439f67e305d3878bcefdcd",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "59a67690ddd0bb8dbba99c075ddd11ad99fdcfb4b545f11a78ac1589ec794416",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "4840371e02847b2a48782af879fa7feb978caaeae781a8a147667f8c3c97cdbd",
-    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "c846a5a4fb7d92af716acf78bb2a83c8188e7bf7c838555bd96731acb2593a01",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "92e3f95d30a50363860232688557aeec7ab10899e346b5d7e7781d6871a2e212",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "e0e55112ac12f1cdd1376b5873d972cb4e9cd78af560afaa5222ae6182206aa8",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "95ca4010f9937130876ed2a830d85eb1d6467fe43ab0d5d9d41315e3a7879226",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "059743ac63751da84b830d2467938ff53ee2a3c9f521dd92bf47e74ddfcd0214",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "363d5abf41c4677ad1ba49dd65f832e5f5fdf4dc5a912017e5ee19b5ad41815b",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "63d33150e701b7c53a573240afc2a9844afaac54e2c177a0336b37c61cd6de4b",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "4eacce342e9b82879eb25f0e1f1c0e338034ee3a79d36ffdf7911230d5028c09",
-    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "6ac28d331b6c6c99ba551c8ad3e8ee514600dfc5a8d558306162ec8514fc6a37",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "7186f37263936aa316957c04a2f238cacbc791a073d367faa308f17a4f2d5ed8",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "677faeb57199b483b2be8eaae21eb594cef7bb7bc1c32ddeccd566f87768a566",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "29a79cf94181e7c255cbeaec91f3e1a5e53a22d4cc7e9ac8532ef62e7316a6c4",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "7b98dd70f9f40356f46e701e7840ecabccd2ade7e89c19f2dcc707d4c24b3e38",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "31cd5c0242c99cf40e0329b8a2d75d04d373f0abb591cc48bb9ddd58cd227ef6",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "edc3ff33b374b5b2c87091ce5c4536206f402bab8ea1eb927fe9ad2029fffec6",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "9cf871fb3c9bf4594387728539f14cc878a50773698037e587c8672064bc71b0",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "b18e8d8d1d908e2727dead3e3f6808c8cccdca34361c453de82c60b946a5fa65",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "cbd28b4b7fed2e123f5daf953d3ee1e3c78726ba09825e87b118f407c10384b6",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "b7d962def185bbbb8e30ab98a7b6bead66af86aff854d39a35b26805cbec09db",
-    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "a249611ddbe9292353cd7836bde861bb7eb6c669a737b25d7714e9800b84a759",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "17ac90ca48fe6279be48cb1fbdb4d371d4b62e17774ef6d017ab6def7af36120",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "978bae9b7ced15f2d08812a257809b02a989e1d3a43601a8bff41a325062ec05",
-    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "8a0160bd86947c08e05f445b6f88e3731c1412f526313a4bbbcf922cb46db759",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "83ff01c3d1ab14feccd2e8fcee5c4ea5c80f4b6750fc142bc24b956aad5ed273",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "6809388b5466ba2126de5b0b6aa772d6a193d03350408665f884c9b8e40530d5",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "92de87025db6d16a4afb59d36726cac0e3f41b746efe2edcaeeb751023752e64",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "b1234b8880130b5527ea1bc1113486e8ee996e55934774fca5ac4e6d3b099f26",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "67c83d2b6b72d3eb979b78d4f9dbba033d3e305ef5d458cc351cfe5429b09f42",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "689c55dff77416871f20bb02f98db4650135e8a670f9061e8e0946c78c9494e1",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "45b47abcab4b431f672aa6066c304469e2ec52b7edc211bcc79d23374779c810",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "c2c8726e4379096095e49f69ef1d143eb99414cb32d902d08ff4dd6ed70d76b6",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "db3e4e824224d411d7dcd9f922f3291c6eb67f8fd81a77eb2c0c9fcbe63ccc96",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "0dd185c90ca61d971f4818c70b8048e4c3cbff6d35884535f48ba01ab360adaa",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "f0f7db8883cf870ab1539e3e6d4f3b1c533f5a76bc388f36015066fa136fe545",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "1413e4e24520147c6a46f1cd54414ae452a60ee9115607a977accfbd0b72df3e",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "01db55547228cf6065892a899e64fb7e3eea2a8b0b4ed84308018ccd2169e3ba",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "f78256240bbd4082efd2ecb8943ddb4b0b1d54e8011f37d1e6f51cbdb7747021",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "6ce5465bd5f460cb53bb58662f98a9801ef594f742db6fb1d8ef8b3ec59680ca",
-    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "01672d29bee5d57a84f2abdf00172f90d2697db6fd6fa4869946a55b7d3f5747",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "90d6aaf8c4e78d0b943b74f0cae93741165a1f91ec0c3cde39b8dceaf3f0cfed",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "a74cb48c32098297d04673105e33956d824fb901bd9124b1cc74f13158fabd99",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "f94ad3b87e9ba76260519894ac02812c8de81de6bd1d1a832b282c2595ae0dd5",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "3633eb304a45bab9515ece0a7c395ca762a27f58728db7c310c835c41d730e44",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "fb597f1525f571ebc7f92404ba53adccd7ec8fa859f74f7ead7920f2c4f60f67",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "8b33486266e6c67d38a62845ce3aab1329b7c811946fdbd0b753a94bcaf88e61",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "8a1a07bd951feab4b02c950a13b59fd655dcf3719c79811fa110aa98f6b2a572",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "e46a3efb3c93e3aadd802f01f31ca392719fd978f4b4386ce3764ab108de7532",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "3d945f0e41efad1cb83f0507c0695b992c2e55f65c20ab566228cb9fe848ff03",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "3c283665a45aeafbc30272c9b6719cfcd359cdf90d11bc0cca2c6d5b3dcce07d",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "93446b038b84215299e4048b1250003cb28daadbdb73b17ff1800960d82c54c4",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "4bcab0fc4f29355d3a1d065f5b8c80658f105d880050cfd585da3b168aac7fda",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "a6b9e22f1a36e4ab6df6c746dfad933b47a596a252748698e1c01382d9b5e3b9",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "066369f3bda0b8996dcc9828feecd9df46f8d3d903ddd8af42167db9dc8067b0",
-    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "15da998b034d13768a2e4fc9789bb85c67d8a815b71447a860d3d38dd85d7fd1",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "d41fb076785a4acebbe263590147d822acf3a1933c7607d33488708ee73dd4f9",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "d6297d9bd0c572ae62a523458b883e352b85cd5a0887c594b3be37fdffbfd3f7",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "0620341711e264f8e89ef5425c205cbf9e8e303246b0cfb041ade3022bc7127e",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "9615fa50185bf24fc5d80ed3fdde748479ab117eeea2400307baeece177b9d1e",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "5461e2fe60ee22637fff4818959ea2094af07c8e5570094c7e8eefbe19addd4d",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "caa5e8b85102b159ebc60c3732db6bccb062406b844bae2d95e8313a3fa1e4e2",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "ef325614474b22e8de41852c8fce74d57aff455f6a5ce5c2e40ea1a5536ae705",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "2bde4421a80512bb861b35455572434daa0fc55790c926346b6d353b71a9c754",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "e445541e5c933a5852b9f03493ff01ba92a9a7195d975c9bed21a68bbc56683d",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "76f704cccd566ef28d6b91b22999f4e589a6a6fd6ecb380acfb9857259db4cf9",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "c4c7aa052858880b7b668f012c681c3aa74cdce831eedfe26f3691462b8de113",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "f137901dfbe94d17f9a2a703cdfb1c5309add179ffabc3d49976d947f69ebac4",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "3794dca77f6fbbfb1d9029e8819fcd2483e6b427337ec989b98ec3f4f7b0be3f",
-    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "42ec68faa2f62384514b74c8f04c23cce8bc2b1785100a670cdc8c10681212c9",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "c8dc36d809e231ffc96c587bf81c62a1054401fe437749505feea485c08c3a5a",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "5c565885bd2096f8642054fd8f337de283d6401276d6b331d5cd87907b54d3e7",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "52c59be0de94264d2521d18294cd89c48e8ab83d7adee2ca6149d60d746cfa5e",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "2b47b2b8a9fceec9f14ec4be51e56fbd824f7887ba453726f0eec78dfe4f9b60",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "36c84517c67453696c3d63baf2e267bbfea6b29c4b77f6261dfbaf15cdf20666",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "2d654ac372096d5d379021ab3b6151a3675b362ac5fee87492e4a58389634b9d",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "c56d5fb9d3a14a7e9ecb347d87dd7addfad338da9bd8d74d0878a13f0e96b92b",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "0b920a3b39ee33c22499671d0f68b2c3506df3a287c6df915dbddcde794ad53b",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "fce81322ff3a779746b0bed3216c4af6548ffd6142824b07e17b7cd0a50a0ee0",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "2cbff4b9523231d7ac8625980569f1761c5a259774121d90f1eea037339d46b1",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "f4b9816229a1eca6f81168c34d12d9b807467f39cce88a1f320d2734e2ab4f0c",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "42d6d19bc0becd36de41a57ca53a23f68b0be7615a4fd4a643c39fd39600c86e",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "6907b341746d7c334e48c17ff1c74cf117ce025c7bda62228620eadc979ee84d",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "bbf7d36de3e6a665cf2714357f33464aaafeeb96bf4657e2ef58b2f3ff2ab69d",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "0d7e9260e68fccb1141a026025b979ea7bc218505b1748db34041491bb086360",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "4f98763dd95a88f270daca7527d199df6da23ec326f5ed8c293f8f7d6c4feb81",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "620b20f3e57dd3508b450519d3996ac6b99826374f5f2f0db1c0340c6c9efb6e",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "bcf37c2cf65695b237f1a6962dc308002a7bbfa424206e0011d1b26cd5b4a74a",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "806fc63a00a3aa8197449fc11b271610e39b75951a7882cd113e11d169c6846e",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "793b41b7fab565aa696bc16562dcb904b5b79e22670c3d8d6b33926ad3f225bd",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "d9fc4c58f7cc415b22583e90c51aed3cf21b57d7c8a022effe9b04b26517ad71",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "a2df0ec9c7344e752b21adfb755ffaf85f5cca1ed8322253c9a6bd820e376a94",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "bbfb356b97cc52e5ccb0da079d2c88c955d4dc8a0f5d39f99bfa8307c2071660",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "b88d39dfdcc031e36e96ad2b6b125e3835b6be1d99d08a07576c1c97a5c168ee",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "537c4732f7d56702a8facafe00a54365d00166c551f09f745a31d79b65412140",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "7a424eace9c3b85ce7892208cb9224a8b49f271d7d54baddb9b9fba8d13e1a92",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "987d83956653a6b3e55dbf1ef550473b428aa92c40d8d0904b11df18072899ca",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "20bffffcb0c1ee0b8ac8ae05e35745a38ea5e104147df6ec0e5ab47fc3ab5232",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "f7d0ac9c85aeb8e4958d8f688171047123a9cfd6bc28e309136cc8971506c728",
-    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "436c03220c3504af0ba9186eaf9931954bb6ecbe8c90f0695960a4bff3603d5e",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "f22039e31d212504814689c3cd4b65fb6ed08f4bdc90d3c861f6506dd432f9d2",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "1ecf22d397ce44b819d0d58d623d63fa13bb54e98e6ab1079dba8e22a586cb7c",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "50e409ffa3348bfd28f71ed9ad7632b90d4e0a1efbf86ea9214b17bf6d292f75",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "83941c07581191a1e59c4ff468966d0b1c76d6b25e89df51e1ae1114b12e918a",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "bbe0f87395db7bd6701d844cf70d7778bce0627f51166bc4d3c61a6df0ec5c50",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "a25f6809b7c0fc3466822ea07aa639a1ef1ea9113d13b6ad8cb96a9c17c71b88",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "8d6f321bb025dfe3f0be3695c19b67bf27ab52fc21f83f046be69e49664dddbd",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "df3ec33241c0efc177957a4218b924ef46f2c253ce263e05748f5da004416eee",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "e72723d3cbae1f0ed00533b5c23a0f5720cb07ad9278d0f8b9f1ea25da2fd50a",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "3168076169ce5a0e67ad4ea448e0d362e77786e91788a7d349e11ae6d0431035",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "0ff04a0069cff04944209057143afdc4fbcddaa839bf37a27eceea52fbdda254",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "5b57bba49c72da4d25f8589d67934d47a908583de9d9d7daeaedb7558e11252d",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "b77d39f324cc93279ee2b221fffffb6db0fd3e80df179075f3cf07258571e5ba",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "6062803d31ff9773d506a61ecdf7fe03d6fc08f4b6d94ac35504da7796974d5e",
-    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "9c95569fb2ba36e7b3a101024d92b6f7397dcce124d795d6425b481bcf60e053",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "80ffd13650ccf8394c22af662bda37b9ed424f4d131607d4a8e7caca54f88b0d",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "5e77bc3b6d27803cdd167aee72c6d300049c0dbf27bf72a609f67ab1f489dfb3",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "b39418ea3c46e111db425ceb07534cdcc1f70c389b49d0dff2b9c1981a4f2cca",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "df4373e8d095471f3203bc04e42ca80ef28798d0d15dcb6f3ce64eaaef37c4cc",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "271d814a1f6059e1abc607cd72aff5fc0009c2660e0813ad770abf5b9f0e5f7a",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "5e81a4d5290f2e331e63e44570ff73199fed65003d0be6e6940d0e6d3869f715",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "473bb31991b05567fcd676cdd56ab22c2e3a3c12094fcf4e22861cbc6c72ae74",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "8abcfcf204f69e308de96c2a7dfa850ec5aba45e32f7bc87181ed758c7c768b2",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "d8444b7606e3814bad1596034c465de6d1cb5e1af945930adb928c4c4568bdd9",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "3b66fa3122e5fbc12978d335c28891371fe7936a4b8c99b4fa2903e9b4a5d9b6",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "626cdd9ff3fe2c88aca928dfb0a0a0a45685012ba07b0776f5554068d0c0a334",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "5f0831342c96168d36860710f4edd5966a12f9a9f83b017b93114f3933389fc2",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "df92f95ba709b6361720e03ef6df759948bcf4185eaf51cf1a5e32a4a2f4669c",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "a41aee9fc1f54bccb29842f714981a8d51a995d00610f6ca5c6c388c20f288df",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "7fe93b72c0a22c17767b36ea167142a56d85626378c029d2e041dc3ad194f8f5",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "8ae3e8ac01db01c973a18a412cf4f20240c875ff41dab27b0285b18861713839",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "1236fd8aea38b0286b5e9bc9791dd27455cdd787208d9e622889d585f3e9bca3",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "1f6457235a7e9f5bdb709ffcc6842db386880b8f679670b77e62e1313ccde22e",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "941a2f003667713a9c1da6d3dea3641b2745917d24c72f378f91e6a15b5368dc",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "1b528cacc82343ea8837418675bc15b36ddfce1ca966e7ef0aa9629ab6eff938",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "1700436ba57abea59e195cb8c4d321fda04ce32c3059bda5f5dfc0b287605116",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "dbbe4133c3f4f5789c84522d8b6651c4f4d0bd489389d3db34a24adca605c1c9",
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "9fec07c20cb7cce9da650468e07b8f8f74bd29be66045dcc3f7209e83ec5a364",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "da8be29a26a60ff753dd3c78634f7997c6eb0f8450c794f813275125817b8da5",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "25447247818dc3f435432f9132c674f54d275a70b7d26cfbed2c1a9e2fed57d3",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "8a14d275e1ff1872083397062eb5a176b115f35c1404c89b99bb131edd62754e",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "8e140781eb9ec3352882fb7fd9bb8c451acf2558ace9c5a62c23bb110a68a9af",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "9c36b4412c67654cfb1e6d2c6d94d79b0fe9044c2ba16181e4e87b6929a6155b"
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "e7ad4ea65c49467e18862ddbc0144aa5db664c7233fd264d0b65329084fb715a",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "45e571346b981b19f93bcc2e4039d6110bfaa30a7a0755d5a3619fdc206d5bd8",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "d80c76407474315adec723e2847b4567b403fe4b7a9f3cc75dc63e486082ff89",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "ee63a97a5e36612dd9e43a36410241bd7d66be60565475363cdca0b547fb9114",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "69319e0638a642e6e06adbdce6db3de71c3a0618c46620a5e5fb0319d74da6d1",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "de13e814dd0ccb1db1c306192079c5482cb9d3adcf30178f7923aa34424fd005",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "3fbc2bd127d73dc0ed54717b8bf2755291b563774d4fa1157f415d2f2b62d5fe",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "3fbe17545f260c995e0d457753b9592f0e8b563c85204b8644c61b2649376a2a",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "d9fe4ee894077213a30eaa55651dda8028b7ebd226fd62a6623690cdabae3918",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "2724d50cf9381c8b49f6a90211f99b3696bacd00e86bb47cd774736b0a10e908",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "3e748090c61a105967871367affaeec898de554a4619b6b6561d549d82cae016",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "47f5c587fcbf336e4aa6f46369b86738e859e985b32816acd4f69f4c4ccdb402",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "c3f974e8122ee740ca4d4498b760e0cf9e67e759ebc00c23fe8ba090042b1e07",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "6812a075aaee6dc83b0cf15d19b35d8cfb1ae4564d9cb29828661cf1702ccac8",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "4f761bbe9bebbc29a5434f0da872e2b1141c9145914201cdfdf509f172eb58d2",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "d6a9a6810b64c6e0277ba381db559016e8911df236b496f9f7a0d5ce74d5cccf",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "d7c5b0e5845ed77cae90c92a4e6e7650de8a7ad6374536813560f47546e4e8ec",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "c3a1c958a8f5b328ba8c9ba263df3a54dbb1346a82bea14065cdda1e55956ec2",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "a6c911da8124c78597303f3446e3561740998f77b0a56deabd4963658cac8855",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "f74f3a25736fdd02f7c44c32ed68bd255eb636b48e0d211ec185b8e4f3cac798",
+    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "7ac951b61d8e1d70f35b662453d00fd35987c7419620d99389a0a0b47ec2cac4",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "c1d108ea384bd011b6db2313c558317959312d1a699926f445f7c8a99fb62efe",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "135f4bd58304a71793806df1b5cafbc3f3f543710c9e0f6c6e4681384121e937",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "9061c066a8a37149637f4ba56155649b0439c7b422b5da0882a2a27bd431722f",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "eb26149466bb357210d3a359828477afab5a1a97a0f96076ecc230d4148c9bfc",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "a171b1f529e2a037b3b554954e2b8ff0534c7353347ac73b129ca4643c4382ae",
+    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "150b4d33d440e395e8dbfd46251cc2fd4262462d65d8c9f5b57948ef6e68de2b",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "5cb94bc0d0423e97be614678f612b6268ddabe98cda2e6df2112c47f3e05d2cc",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "608c46d476d2519ef1613000757be59a3efe59cae320c95bfc3e0fb68ea79c23",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "c284421c1b6e0003863cde7b432e3a9471b63da949d6a34b2c49006a88af15a1",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "cb9800a5c3e8e7bef4930d3c462437c68ed5bd0ce210d069858cbbc65791abfa",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "9eb906248724090845e7f13fb27659b5d7dad26196a1235b7921f5507e0ed240",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "057234b441407ed584021f32c9b128f6aa4c33a2796e0e2cba2a568a85c2b070",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "8231ef7966e8ab9eea8e2d5a6bf914dc92188879951ead6e75470977cd72103c",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "ce2160d68d736a3d00c1a211079aa90701595ced5bca2c98becec9254b0d9ca2",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "d662ed8c679acb931aa033e4d363492598a794d6212e30fb2e56c801dfd62d76",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "e8b883845895803dd6b2d0e6e8f37041398a00397d7e8109d7525e5f8c45192b",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "715e897aa53e1066b0749cf4764cb30e1e803fe5e1a6d8e38d5a4b746ea8c76d",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "dfe8d5917f06c5acdbd27d852e11b5fbfc8cc2722f231413775623f815e6b9f3",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "a4f159c0a580350a36f6186f79219c1742c3442320149baa01336ff41052d486",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "cd7e2d34cc205bbfcba12833d7263ced497a1f45e5e4c379a61ec16e344898f8",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "3e6bdd07b5f04f3c606a9769dd8176859d3b3be203adc720a37f7d8cc84c674d",
+    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "b68e5929ff572e0ddeca7d491df72a1dc5bba4cdd612eefbc4d11a15d5aef958",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "10f85e2546d406eff166870ab19b91d90829011f7af849f2fa17928cb56ae8f3",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "966191b66c9f2c8c33ab669cb6bf94f43bb799f18257dbe927e304619af070e2",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "a41e8c436c24d89c2886355bee4ca971bc404f044b664395d218792aa41508aa",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "8e75d98212b09b8e0ba3eac476998052f2a1c526db30f80411706eb296421517",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "30a2bebeac5d694a5a51e508456263d1ecbb0caca38a9a71cc7334300612d99f",
+    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "13cd355f86c7c80a726cf471f31b240bf50b101b9081e7138f19b3a7998a9504",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "149484d22a6f6c2f8bb0379b16571570a384092c4e7c15b279745e9a764331da",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "1a9c084a9299f3f5fd498b755240382e18224e7fbe6f85aec445b83afb00cd3d",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "9a66e50d0e65b23df7774b28177ddae2905dfc41fa41f8a14bc97de3c2486b64",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "e19601305cb622109bbf4894ae9a4cc33660003f2cbcab857c8788b04cc8637c",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "9108f84c765cdbabf4c2b1cbd35603017ecf36ee93303fd6e826a0a8727c2a88",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "3f4997f04090a3737a6daa640419d18410b4ef0ffb42a421db1ea3277886d9a0",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "887b0c5a19742fd2c07a6c00aa9b66b32116c2a7be87c5df9e85d7185e4ef827",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "159ea9166ed568cc173938beb2335788434d6400ec85ec184626bddc4033ad2a",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "39cf0e4f7383f88418126a4a3df263b75215ec31d42c936c542f0130ee398ccb",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "e38890dffb076a237b6a937182c1c359187c08bd27cfb465229a1754941b3c72",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "2606b58e09961768906b603cc674d49bf26f1e532384bbc138ab92f8b1e0c0b8",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "46f81ef61e9f330a301660ec0ed7d8b4edc62b545ec96e8856e4a4463d37b13d",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "ce34b6e37784766df84817fbe72c1c62d564d61e82e773d5f34ad88f1e3fdca8",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "ba6bec5654a73ebba02341ec9bfc7b28af7a8c1bfea81f0e04489b92f8139166",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "5e250498a263c355f8b823e6a5446badf31ab0431b7f95e92d39a1473627e661",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "53941186d47c641ec777c52b72e3b8ff1da96ada96b65452b7c3212283009697",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "2d245b4d5bcf059bed88b291ac77de659a592ba64d56dc748eabdf2b62007247",
+    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "e09321f99193ef36e06675a4a75a4b6dd38d8b21f59abc42a84c1aaeb2d81ae3",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "f5751816a967ff50eba28024c336ed5a3c4d1319bcb8ea4457447463c0238b2f",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "0ef576aa7561e3e344af4e0ef8e156e2c9a3dc497b56e96c960cae59e039e78e",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "5a775fe2a518796b6abc5a503275e64694c66efc36359639a645e84ae2b68327",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "927e2f1afa80d2ff2b74b0a8e2e42a0cc122f8710e1e3a3e5ffb6ed74d56344d",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "18a216098316d96be599396898ef0d92fe1b0aa7c0d1dba07c220045e42d5253",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "f82c75355ad41e268fbb0a0f2466121a2ee98bba681fbf5933fa7d1c7fa0c1bc",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "42b06077688a9f22d151788ee862473ff6206e61b52c49a3baf36011e592ca01",
+    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "bd6a045d7d857e4e521d13e6b7639ac53ad77392baddf7a54825f9efd1c0d73d",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "0b920ddc39a0cdee7cf7636e99490da99db950627ece09fd7a982df14b08354a",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "8e06a12409d03f6e4d8effba2c73585205a5235ec522d92aa5de5fd51b23ddaf",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "b09d209002a92b420709c839ce643b0dd17e932736ae64bba5413aebde5c9d8c",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "061807ffeaf6b527afa72bf5d7481c5f25f3fb9fa4c4d65891aa11f08f1e7596",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "44f78a03edd89c3fa92137672948ecf4158e230e18615d2b7cdaa87437f05085",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "1ce6efa633c71564d86f7bae77081e1b22c00d0940b651feb8532262c594039f",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "cbf9df78254f821cdc016b0953f14dd85922d730a17cbfda2b0939f3aa642cc5",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "741308cbb14b84c98b4e27ae36e23fbe08bddc17719686838efd2347194daf00",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "1061d56f7fd07ede1023598307f4b61aaa4cd974113503efcef37e18a55283be",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "96b47d9428543d20feda7186f11774c16c13fa82a601e2f12b47cc031ef7df5a",
+    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "5d9daa6b982bd45a40232dcd71b18a83f771dfe6f2130d9e69386301051142e6",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "14eabeae462926de8278e586dbc81d454aae8f8edaddcba07bd85a380b540da0",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "c5c5a63c76c1d7afc9461b89b0fe43d74c75a257cc769590486a5d2716dc6637",
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "ea93073157e4bd0a624bb87f8bf3e70fe9581ce03377ac36bde1766b33195a47",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "a7ead7fdd49e2af654efe3fb9efb1ddd04c3aeebf40ff3022ef94fc2c2c52ff0",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "43501e890cba87eea1ac2661ce83ade701b3b10095f681dc0f8369c4abe9a129",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "fc722ba69bad94228c90ddb820442ad08220b5ec188adaa8e6e1e72d61cca2e2",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "5679d6c8752684a912a54289f8c75922c9d9b520bf6dee3f17812b87a069dbe1",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "5d9ae0f1547134ffdb3fde332f95b385132e4331b08b9fceb72f98f90efad274",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "df1a0ddd9c6a289e633150b5d6736b734b32ae38b0cd29d8fbc85f74147e76b7",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "8e26a383323d2c08c2aa816e6d913cb4880727c9ed143fa0736024d54e77436b",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "839ed9239d25a0084c0104b951889ef85df26f0d87ab52d77dc425d0b1782397",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "0b1091e0be5cd0fd61df835474d4e9f7b9e0307135834884d258297376173040",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "b088ba1798c57f651af0d142e2b9b5fcd50e14ff2d78be71a9813a3f41864fbb",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "3f5e0ba9e924da5fdf3984dd4644882f756b6a0d493a06df75ebb5b59c6d9cdd",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "43fb55a821930b57a6a452420dd1a74c7fff94241f6dda9c20d9facaa85cdb30",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "bd5672022fe8bff477e88151cde24c09a334f867bfaf656834ccdead7638638e",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "eae29f58cc7aaf436c971116d5da65b917febfeb27e5c54c9721d16692163429",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "c0e5e2835b77ef0e196ec092acff9064a83b3af63f05f3048a0142ecf22a8d92",
+    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "b1a3f2ee69189bac73ff48e124c0178b849035287e215957ba281b0ccaee5523",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "b86fb1e063bc83c74591a0c41c3da98eea7a8e4b2d36ea06cef59bc25ef316f1",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "c404d35c0fecf0bcf40135f6767dd37b927966071aca69d435f21974251e6aba",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "1cf817dee1b5921907ffc0cc4e5d2c36c2ba1de0231388fbcdffd4f1a3a7f1ff",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "b4270ee40ea46491cb06eab1f80c1546ff4f1f3c4ced62d2718f36515180abe7",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "673a296173375706f959ddc929b3b9849dbc2bec8485ec7eeeef5557116de26e",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "a5202f7ed39eba99f19acff439bef6b1a67f5e6f9d0d2a7c1112a666fd3353c2",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "44644e7f3262e64dc3bf03365513aa73ac09dc757a5c0392ee0ff2c16350b037",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "eeb1e3bb776a966a54c1d0b0a05afdfedb657e31420a435452915ff0795d915e",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "fcae968a82035661f1de9458fc1762b0604de4958e3964fb0029ffb67e61969b",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "144ea30f2a8c03c04e8bb13ae9a2adbb24b5cdd6b02af2f0ef16df129a020c70",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "9bb63f22381a0c3749902718c24980eacb44b5ea19e38ee4cac32f45240290f0",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "a4e6ebe21a3d17e222420a875e874bb411a9484499106f10badd2f81741ae925",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "09c355267e28f5a7f2500de0be45ae3aea24ba9f806a7bf7c85e738c253149eb",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "79318d8782e92f93d5a2b6b171de7ba31831a9f74c37e34da1a02da1cb598686",
+    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "efda2ec0591305596c907a0274c3ca6297b63857fc05fa817e9bf2d14a19650b",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "ae606576784556844f91231a0d4eb8e6ead678059930212b2f504d701f23f3c9",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "96ea13ffb35144a042da8ac39e4d9284a7b0cea4537e86c1aa1d973ff00cf5b2",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "7290fb2d46a8a2d81a1c050d723dd89cfe1a482b5fed691318d567255d70cf1a",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "00a96675d37688790b98dc0be06055ed2e2648dce8ac9a917f8aca29af48e07f",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "df3d362a19b62aa73bd08b3fea4e871f34fb609680203504f1528a9edd139218",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "6a91025addce3e68e886aeb3e7859deb96a8019a163f4e5d5e6912b3bcb4cc53",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "6d5fcc071b759aac699951cbc234f30e2abd763074f9696726285330e69cdbab",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "c53f2218bfe9f10752f6130f93f21f650713adbecef2164dc7f52decd37380be",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "e92c7dcff8b89e07ba480757e07304ae7ba44e5fd7ca1e8c60e5e83795005f35",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "5264600ab0f0e6aa06a24a4cc54ea45efa46bd1a172c1fd05fa67b681fa6e2e5",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "ba3e7c9aa912d40cd552e532697a46193f4cb0f009171a339b0338468d5a4acd",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "d7f781b2c6d95f27d7e85c5e682eef57428814098941edb55ca3c4d3c8cdb818",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "e00763f1a031a852b549b2f56784a365ebb378252eb19e0ed184e515588b2229",
+    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "e6e47c422c710af80ff36be2cd91bbf0471843a0e92b906ef004a510461f162f",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "62246f7f12bae24e3f6265c50307e98eeea9189217e89adfe3185072743b9c07",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "410f0906e577f9cd0b884437decd7fe73c01a208e37c09b4fa7722d5a426b44b",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "6d7232927fa7748d359d88560890df5d6ee9332db6c51f8e4434c48f874305b6",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "4acde19cfbc6300d6191eb8a2685fe4dd13a5b5fe5f8e0bd759bad7bdb754b61",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "cb8a15c9623761283fc273438ef814c77cfa65532389a1f16b74a8939fb34fd4",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "2097df6bb93e1b5d058d8ce77956e3601d39eff63afcd543da2ce2a37b844952",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "b942e3921d71785269c805e41bfbbafca6a6e2d586f876311676f63a499e8b82",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "c29ad8f2536354a7413dbaeb644caf8f2fbd0710bb806658f581b6d0c678ed86",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "36b77c36c84b3bbd7a22999629425821ed9df26b37f44624f285347f561a508c",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "7cafc90d88052f2906d54483215e574ac2a5784d4e507413cfaf55cc3568ed85",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "00112a43755c0ad5492c636765c21158caed1cc6b9bb65b4db1f319f001e4ddd",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "5a1d7d1c1280aa65d2583e16712f665e1bb4a71ad9ffb7aad2adc681bfc54c8b",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "ee64a28c256f5750b3220538a2ebff614e86748ddbbf98e6edbd97dd030b7bc9",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "cc91d3201870c595d139d1d3478d512c056ebed9e50652827a95acceca8f2dac",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "51c7afde922116b23db59a470c4ddac9fb8963c611c506bdf000328a668acab3",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "e8ec1e9ccbf1eb618dcce64861ea6309e49dd8afd56233fc9a48f72133063733",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "41b285aa3054444c6247f1e6db7c949198eb626a0c0bc1d19d6449b9f188dda0",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "19ff2bf6b0c41443aede350366230a9bb6ac999d066b332e68d88ca564f22fe0",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "d08bbb59d98e1659e5f66d291e42b01adcaf1fb8a56d2364507130c47cd21bae",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "30f0c71089618468804b86b9f4644c78710ef46a302f1269a03fc4771753eff3",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "2452f03b4868f856f7b498594c648f63ed6dca272c6341f14adda3367184f1c5",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "9e892937d89db22329af0f410ed59ebe38685b8c425b87e125c01ec3a98ea7e3",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "66a2a0c12a15a4523a1a8c2d44cadea21f338514a3470aef4cf15c654b3ae968",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "f9c3717021acf78a2a3919db1d0c93f20e24dcdacabe8994bd70d9d602fedf80",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "80295f6b1b62387eeafba63f3d3f4b50e70a4a3f845edabf9e4ddb6764122439",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "9bd36c663c2f6db2aac8b13bf38ae6719b7427320d94261767a8ab89335e254d",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "a08bf96c38144867cbf001118e5c6a4300f3124729da724f2284ddc5648d7a54",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "4da289630229fb2d27a65a7052bd2facd8aa02526be6c0138d8a7f250d84eef8",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "4ea5c71ae272c5390b84e179a8ddc2e68f9ff21db58f44767f2b6893abdf2e83",
+    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "8c72d6440f66bb937f9b5ca9049c844916869836ac2f2d53f582c881a9285f11",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "2d935f5f426736c8d0cc1a4173c1bcf64f108037cc26d1581f2c3023cc042ceb",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "02e6b45e49e5c95bd0eedf61091d2749bdcf2fd2762d2f0dfb2fa0d17f0d933d",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "e4063f786a693dc4a88ed1036e2bf6fce1c1fe63d9a0ecd68eeec678dfa4c37a",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "1765fad37e634adfb26a59e59da007bdbed3b70bcb2e9364aae6c06bd1908c47",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "0faf2e0811815b181fe550a33b70957c936460ed99b41192cbb69939e0e6e95b",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "f17de71e07180c41c99953278c4afcdc01cc0e4a912ad084203a3c397789e241",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "58a62b8f22eef8f52bf3437d50c764362b822566762c66ab3d59dc251bbb0aa2",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "b7ea13c4d2e163ef4cc5e0cc4d28542aa466c20c433502806b10c9cf938a90a2",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "5504f59d4be4d860413435e69d9210b44add10c1dfc0f5f599b5e8bb95a2898c",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "5844a12d54b98cee2f608101d3e2f1b1fe48d09b956b9ba9294f843e38609249",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "55a654103ae552beedc985cea8492e8715b717558a73640f2c621e1ed2eb6f90",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "84cb6fb79d5e73b9df6d72e8062be89ad34c131323983c92f018847a13987ff4",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "8b43490e00f414a2ad380706cba66d71e574fe64a1487692a545ada24979dba3",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "9fac8c8d9b85f9bac19d3618cb517f04c9844ffe85fb451c5f2e0edf94fcb65d",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "64e796e827bd5fb2dd81d377d1b2335c7c91788b25c121306bdd5980b10f0f91",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "71f6c20308202ff600d19e221ab57f825c80aadffb2695fbe87d55afdfa86bb9",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "21787d3c06ce3d1578d718826f2aefbae6e5bb4c0a63996a9c046e59d7cbc7f2",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "d9ca7a451ecee54dd36d356d9d4c9c6ee3379f18fa71442ef7e8e2bb7216a37c",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "05fce8241b248b9bc5539bbb4774838d9dd32a167dedccaa0a6f360717c742c0",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "d83e15cc0e001bb456f70e2be83863bd933b8d097d1660392e65c89fc1cb7453",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "d9592906b94bfb1dc3e1ba4ac9a838c1c7d35721ae51dc754ffcf84361a40dbf",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "4432f123c0c79657e4502d91f148116a8a68c4c0a4b5ecbf481c86cc9692172e",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "b1bd8fb1556da1d812eab677f7fdc1f32a16921ec92971405a008103aee96f4d",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "720c1dbccc4b4e23465fc5652dee1b740c91548569b347d85f9a33aec8c636f9",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "9dc7233c8263e67c247504fa6686091745d0f618dc96e4b147ca779ee02bbf9b",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "cb1424290a91dc1d6f81c7f61f87ac898ee2ea68a82d65ecbdeff80b39c14ad9",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "70fdd7c041788145b654bce8f3bf480ffd52204aa0bda8ef47cb0cb94f7ec123",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "5e0e9c58fbaf7d1f342b7d6663ce9241f515591599b70c9cc1551164271e9091",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "0f2a238f49dcdd06c31824d5044595a8cb116b88cba25710d224b15e9834e011",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "8d6306e4f6389b8d4ff499dfad784b05f24e51bad99fd67003c8bd4cf2072226",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "b98b4582a20afa13bf22a73977c493b57445a6fbc2aa9b786336acbfa7652403",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "176475a6a48d28a7280034d3048a4835eb0925a502f0ddcbf2f7393f7010a2cb",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "9a09b545ea92f4a9644399ce0f873a96f338602232b00924bbd4d96d1127c955",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "69b2930276b29fa20e5043a4c3888080e26d54d8d5d2ec4caaa2c4da24fb62a9",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "8160ef28923928a02bd576a136fb1892c6680416d09fb5c97c5918b9aeefe45a",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "881d3e2f1677513dff51f94ddc426bcb5b424186082ecd3c4179fb5ccc419785",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "267ed80551499e2caa1c5072dffa126df846bbbe516072ad9c2e505feb496553",
+    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "656309567dec3330e2698679139488faf3c3a5f9b3b7aab3fd57b69f72804373",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "3330597c3c79c434054262e5b9a9c7822d9f0dfd9544ed0196135fcc6afd243c",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "cb838600de7357f983261583650a18f544464b1d9274f49d6118cd89939e5e2d",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "23ffb788a08cb6a5da85aed9a17f8689da249d1a8fce9cae9ff2bf43aa2547b0",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "a3d991fcecfbc162f103a7864e7f780ff0e22f4088ad632f26f754e3012381d8",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "8d5e062cb5efbe490cdafbb915ba8f32d51008138f8fea18027df3ee74b1fdd3"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Neljä sähkömittaria ja sähkökaappia on asennettu graffitein peittämälle betoniseinälle, ja niitä yhdistävät mustat johdot.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "AI-generoitu kuva: Hopeinen kannettava tietokone on vaalealla puupöydällä, ja sen näytöllä näkyy virtuaalinen näyttelytila.",
+      "attempts": 1,
+      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
       "classifier_output": {
-        "category": "Talous",
+        "category": "Kulttuuri",
         "concepts": [
           {
-            "depictable_scene": "Lähikuva asunnon sähkökaappiin asennetusta sähkömittarista. Mittarin kotelo ja sen vieressä olevat sulakkeet näkyvät, mutta näytön lukemat ja laitemerkinnät eivät ole luettavissa.",
+            "depictable_scene": "Tietokone pöydällä, näytöllä todellinen Kotilon selainpalvelu ja sen mallinnettu Ystävän talo -näyttelytila. Kuvassa ei ole käyttäjää.",
             "must_avoid": [
-              "People or body parts",
-              "Invented readable meter readings, prices or logos"
+              "Keksitty Kotilon käyttöliittymä tai näyttelysisältö",
+              "VR-lasit selainpalvelun sijasta"
             ],
             "must_show": [
-              "Residential electricity meter",
-              "Domestic electrical panel"
+              "Computer displaying the actual Kotilo virtual tour",
+              "Virtual exhibition interior on screen"
             ],
             "rank": 1,
-            "safe_to_generate": true,
+            "safe_to_generate": false,
             "search_queries": [
-              "kotitalouden sähkömittari",
-              "asunnon sähkökaappi",
-              "residential electricity meter",
-              "domestic electrical meter closeup"
+              "Kotilo virtuaalikierros",
+              "Virtuaalinen Kotilo tietokone",
+              "Kotilo virtual tour laptop",
+              "Ystävän talo virtuaalinäyttely"
             ],
-            "subject": "Kotitalouden sähkön kulutuksen mittaus"
+            "subject": "Kotilon virtuaalikierros tietokoneen näytöllä"
           },
           {
-            "depictable_scene": "Tavallisen asunnon ikkunan alla oleva seinään kiinnitetty sähköpatteri kuvattuna tyhjässä huoneessa. Patterin säätönuppi ja sähköjohto näkyvät ilman luettavia merkintöjä.",
+            "depictable_scene": "Todellinen valokuva Ystävän talo -näyttelyn sisätilasta Lastenkulttuurikeskus Kotilossa keskustakirjasto Saaren neljännessä kerroksessa; näyttelyrakenteet ja niiden sijoittelu näkyvät huoneessa.",
             "must_avoid": [
-              "People or body parts",
-              "Luxury-home framing that implies who receives support",
-              "Readable invented text or logos"
+              "Toisen näyttelyn esittäminen Ystävän talo -näyttelynä",
+              "Keksitty näyttelytila tai teosten ulkoasu"
             ],
             "must_show": [
-              "Wall-mounted electric radiator",
-              "Domestic room interior"
+              "Actual Ystävän talo exhibition interior"
             ],
             "rank": 2,
+            "safe_to_generate": false,
+            "search_queries": [
+              "Kotilo Ystävän talo",
+              "Lastenkulttuurikeskus Kotilo näyttely",
+              "Kotilo exhibition interior",
+              "Ystävän talo näyttely Saari"
+            ],
+            "subject": "Ystävän talo -näyttely Kotilon tiloissa"
+          },
+          {
+            "depictable_scene": "Kannettava tietokone rauhallisella pöydällä. Näytöllä on selaimessa avautuva yleisluonteinen kolmiulotteinen näyttelyhuone, jossa näkyy vaaleita seiniä, avoin kulkuaukko ja tyhjiä näyttelyjalustoja. Huone ei jäljittele Kotilon tiloja tai Ystävän talo -näyttelyä, eikä ruudulla ole luettavaa tekstiä.",
+            "must_avoid": [
+              "Ihmiset, kasvot, kädet ja muut ruumiinosat",
+              "Kotilon tai Ystävän talo -näyttelyn keksitty toisinto",
+              "Luettava teksti ja logot",
+              "VR-lasit"
+            ],
+            "must_show": [
+              "Laptop on a desk",
+              "Generic virtual gallery interior on screen"
+            ],
+            "rank": 3,
             "safe_to_generate": true,
             "search_queries": [
-              "sähköpatteri ikkunan alla",
-              "kodin sähköpatteri",
-              "wall mounted electric radiator",
-              "electric radiator domestic interior"
+              "laptop virtual gallery",
+              "virtual exhibition browser",
+              "kannettava virtuaalinen näyttely",
+              "tietokone verkkonäyttely pöydällä"
             ],
-            "subject": "Kotitalouksien sähkön kulutus lämmityksessä"
+            "subject": "Näyttelyyn tutustuminen verkkoselaimessa"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by AV on Pexels",
-      "depicted": "The image shows a concrete wall with multiple utility boxes and electrical wiring. From left to right, there is a gray utility box with a white circular sticker on its lower left side, and a small white padlock hanging from its bottom. To its right, a blue transparent utility box is visible, revealing internal components and a digital display. Next, there is a damaged white metal utility box with its door slightly ajar at the bottom, secured by a small brass-colored padlock. Further to the right",
-      "generated": false,
-      "hotlink": false,
-      "license": "Pexels License",
-      "license_evidence": {
-        "image_path": "/photos/10065200/pexels-photo-10065200.jpeg",
-        "license": "Pexels License",
-        "license_code": "Pexels",
-        "license_url": "https://www.pexels.com/license/",
-        "photo_id": "10065200",
-        "photo_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
-        "photographer": "AV",
-        "photographer_url": "https://www.pexels.com/@av-49217877",
-        "response_sha256": "1361560deceb60e5cf8ff2b3eb3f6d0d7070b0a11a0e04eb74dce3dba218eb31",
-        "retrieved_at": "2026-09-30T13:20:57.463400+00:00",
-        "transport": "jina_reader",
-        "version": 1
-      },
-      "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1.jpg",
+      "credit": "AI-kuvitus",
+      "depicted": "A silver laptop sits on a light wooden desk near a window. The laptop screen displays a generic virtual gallery interior with white walls, an open archway, and several empty white display pedestals. The browser interface is visible at the top of the screen.",
+      "generated": true,
+      "license": "AI-generated image",
+      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "local_path": "media/c3ce5cfc37823d30a2f18e085a0ed564f78bf3f80f6a8a5b3d77c0161958f22a.jpg",
+      "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Neljä sähkömittaria ja sähkökaappia on asennettu graffitein peittämälle betoniseinälle, ja niitä yhdistävät mustat johdot.",
+        "alt_fi": "Hopeinen kannettava tietokone on vaalealla puupöydällä, ja sen näytöllä näkyy virtuaalinen näyttelytila.",
         "approved": true,
-        "article_text_sha256": "7648c2bc9c3cd7833493e181a0e7ca3ec476f6e3fb07741728c945347b1285f6",
-        "concept_sha256": "df6d55e165b549104e041334572427d655e2a442fb3330d11490bf1e3ebe73ad",
-        "description": "Four electricity meters and electrical panels are mounted on a concrete wall with graffiti. Two of the meters are grey, one is in a blue transparent casing, and one is in an open, damaged white casing. Wires connect the units.",
-        "fit_score": 9,
-        "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
+        "article_text_sha256": "ad7d210dd2f5bde8e39695db70f9014c6ea491a7584a6a83d63c11982f32e541",
+        "concept_sha256": "389e28235476d9a8e51aec02f5f75f4c9a2d82f6273f6b89d398c28cf94b4f5f",
+        "description": "A silver laptop sits on a light wooden desk near a window. The laptop screen displays a generic virtual gallery interior with white walls, an open archway, and several empty white display pedestals. The browser interface is visible at the top of the screen.",
+        "fit_score": 10,
+        "image_sha256": "c3ce5cfc37823d30a2f18e085a0ed564f78bf3f80f6a8a5b3d77c0161958f22a",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts multiple electricity meters and electrical panels, which directly illustrates the concept of 'Kotitalouden sähkön kulutuksen mittaus' (Household electricity consumption measurement) and is highly relevant to the article's discussion of electricity price regulation and household electricity costs.",
-        "reviewed_at": "2026-09-30T13:20:59.634682+00:00"
+        "reason": "The image directly depicts a laptop on a desk with a generic virtual gallery interior on its screen, which perfectly matches the selected concept. The article discusses a virtual tour of a children's cultural center exhibition accessible via web browser, and this image illustrates the general concept of accessing a virtual exhibition online.",
+        "reviewed_at": "2026-09-30T14:01:14.289781+00:00",
+        "text_audit": {
+          "examples": [],
+          "readable_text_present": false
+        }
       },
       "pixels": {
-        "height": 627,
+        "height": 1024,
         "mode": "RGB",
-        "variance": 6322.1,
-        "width": 940
+        "variance": 8516.0,
+        "width": 1536
       },
+      "prompt_sha256": "c17e68bc44f2552f55b4006d58fe67865d7797fbd33b2504c2947875784d0145",
+      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Four electricity meters and electrical panels are mounted on a concrete wall with graffiti. Two of the meters are grey, one is in a blue transparent casing, and one is in an open, damaged white casing. Wires connect the units.",
+        "evidence": "Kannettava tietokone rauhallisella pöydällä. Näytöllä on selaimessa avautuva yleisluonteinen kolmiulotteinen näyttelyhuone, jossa näkyy vaaleita seiniä, avoin kulkuaukko ja tyhjiä näyttelyjalustoja. Huone ei jäljittele Kotilon tiloja tai Ystävän talo -näyttelyä, eikä ruudulla ole luettavaa tekstiä.",
         "matched": [
-          "electrical",
-          "electricity"
+          "Laptop on a desk",
+          "Generic virtual gallery interior on screen"
         ],
-        "method": "vision",
-        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+        "method": "generation",
+        "reason": "generated from the accepted scene"
       },
+      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "7648c2bc9c3cd7833493e181a0e7ca3ec476f6e3fb07741728c945347b1285f6",
-        "decision_sha256": "7d0d30a9ef5ed40cafecb2fc999c2ea25d2373bc568e05c6f8248d1697f2556f",
+        "article_text_sha256": "ad7d210dd2f5bde8e39695db70f9014c6ea491a7584a6a83d63c11982f32e541",
+        "decision_sha256": "2b9a04c1de53c65ccaa0c8c416c85088d89af1b99b23af5b5df05cc3547892c5",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [
-              {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
-                "license": "Pexels License",
-                "reason": "The image clearly depicts multiple electricity meters and electrical panels, which directly illustrates the concept of 'Kotitalouden sähkön kulutuksen mittaus' (Household electricity consumption measurement) and is highly relevant to the article's discussion of electricity price regulation and household electricity costs.",
-                "source_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/"
-              }
-            ],
+            "candidates": [],
             "concept_rank": 1,
-            "outcome": "accepted",
-            "provider": "pexels",
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
             "queries": [
-              "kotitalouden sähkömittari",
-              "asunnon sähkökaappi",
-              "residential electricity meter"
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Kotilo virtuaalikierros",
+              "Virtuaalinen Kotilo tietokone",
+              "Kotilo virtual tour laptop"
             ]
           },
           {
             "candidates": [
               {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "70d1709148cf86a7ea568a53e1b0b3d4407ec9c26ef6554ca5cd611bca664b70",
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "d51010d65ec20687adde4f6238ee62a80b66ace712a3b9affb1cf9242e4750f8",
                 "license": "Pexels License",
-                "reason": "The image clearly shows a wall-mounted radiator in a domestic room interior, which directly matches the 'must_show' elements of the selected concept. The article discusses household electricity consumption for heating, making the radiator a relevant subject.",
-                "source_url": "https://www.pexels.com/photo/apartment-interior-with-table-and-chairs-near-window-6447395/"
+                "reason": "The article describes a browser-based virtual tour accessible on computers, tablets, and smartphones. The selected concept specifies a computer displaying the virtual tour. The image shows VR controllers, which are explicitly listed in 'must_avoid' for the concept ('VR-lasit selainpalvelun sijasta'). Therefore, the image does not fit the concept or",
+                "source_url": "https://www.pexels.com/photo/close-up-photo-of-person-holding-vr-controllers-7046696/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "c44f347dae79c09cc68825d2e88b922a589460610685ccdd4464d193457ecb5f",
+                "license": "Pexels License",
+                "reason": "The article describes a browser-based virtual tour accessible on computers, tablets, and smartphones, explicitly stating 'ilman erillistä sovellusta' (without a separate application) and 'VR-lasit selainpalvelun sijasta' (VR glasses instead of a browser service) is a 'must_avoid'. The image shows a person wearing VR glasses, which directly contradi",
+                "source_url": "https://www.pexels.com/photo/woman-sitting-in-front-of-a-laptop-and-wearing-vr-goggles-5207234/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "e0bfc51c854eddaaf1f724fe6ccd5dd0a315a5184f2ff53a408efafd2750ebd5",
+                "license": "Pexels License",
+                "reason": "The article describes a browser-based virtual tour accessible on computers, tablets, and smartphones, without requiring a separate application. The selected concept specifically requests a computer displaying the actual Kotilo virtual tour and virtual exhibition interior on screen, and explicitly states 'must avoid VR-lasit selainpalvelun sijasta' ",
+                "source_url": "https://www.pexels.com/photo/person-sitting-in-front-of-a-laptop-wearing-vr-headset-5207240/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "528be24e2ef7c68f6b24179c6e1d3b09ae3688f61c0cfa7bd54d163e785c67a3",
+                "license": "Pexels License",
+                "reason": "The article describes a virtual tour accessible via web browser on computers, tablets, and smartphones, and explicitly states 'VR-lasit selainpalvelun sijasta' (VR glasses instead of a browser service) as something to avoid. The image shows a person wearing a VR headset, which directly contradicts the 'must_avoid' instruction and the nature of the ",
+                "source_url": "https://www.pexels.com/photo/elegant-woman-wearing-vr-goggles-and-holding-a-tablet-while-standing-in-an-empty-room-8730033/"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "Kotilo virtuaalikierros",
+              "Virtuaalinen Kotilo tietokone",
+              "Kotilo virtual tour laptop"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Kotilo virtuaalikierros",
+              "Virtuaalinen Kotilo tietokone",
+              "Kotilo virtual tour laptop"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Kotilo virtuaalikierros",
+              "Virtuaalinen Kotilo tietokone",
+              "Kotilo virtual tour laptop"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
+            "queries": [
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Kotilo Ystävän talo",
+              "Lastenkulttuurikeskus Kotilo näyttely",
+              "Kotilo exhibition interior"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "813da246fdac569974f4b4b5c76ab406117556cbd99e2a12c013807007adf50f",
+                "license": "Pexels License",
+                "reason": "The image depicts two women in old houses, which does not relate to the article about a virtual exhibition of children's culture. The selected concept specifically requires an interior view of the 'Ystävän talo' exhibition, which is not present in the image. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/women-looking-outside-the-window-8889723/"
+              },
+              {
+                "approved": false,
+                "fit_score": 5,
+                "image_sha256": "c400a81beb989793040b3ac32ad0098993211f270bf38a75ecf9ff8f37ed80ac",
+                "license": "Pexels License",
+                "reason": "The image shows a library interior, which could be the general venue mentioned in the article (central library Saari), but it does not depict the specific 'Ystävän talo' exhibition interior as required by the concept. There are no visible exhibition structures or elements that would identify it as the described children's cultural exhibition. One o",
+                "source_url": "https://www.pexels.com/photo/white-ipad-on-white-wooden-table-6333859/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "a796a508e712cf5437d4385fc02cd57e922efe5c9f30726dc069d7fdaaebc4ae",
+                "license": "Pexels License",
+                "reason": "The article discusses a digital environment for the 'Ystävän talo' exhibition at Lastenkulttuurikeskus Kotilo. The image shows a traditional, rustic interior that does not appear to be a modern exhibition space, nor does it visibly represent the 'Ystävän talo' exhibition or any specific exhibition structures mentioned in the concept. It is a generi",
+                "source_url": "https://www.pexels.com/photo/a-room-with-a-bed-and-a-table-and-chairs-27408998/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "ce7fc027252bc4f217e23b9ecb6effe39cebabc9a81b81375ae3b2c38f6a28e8",
+                "license": "Pexels License",
+                "reason": "The article discusses a children's cultural center exhibition and its virtual tour. The image shows a generic library interior with tables, chairs, and bookshelves, which does not depict the 'Ystävän talo' exhibition interior or any specific exhibition structures mentioned in the concept. While the exhibition is in a library, this image does not sh",
+                "source_url": "https://www.pexels.com/photo/wooden-tables-inside-the-library-6333732/"
               }
             ],
             "concept_rank": 2,
-            "outcome": "accepted",
+            "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "sähköpatteri ikkunan alla",
-              "kodin sähköpatteri",
-              "wall mounted electric radiator"
+              "Kotilo Ystävän talo",
+              "Lastenkulttuurikeskus Kotilo näyttely",
+              "Kotilo exhibition interior"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "1e9abd10c39d7a7fd53e0ce5f9f6f93e3d16741bc43662002d1c332149510a4c",
+                "license": "Unsplash License",
+                "reason": "The image depicts an interior with decorative elements and framed pictures, which could be part of an exhibition. However, there is no visible evidence that this is specifically the 'Ystävän talo' exhibition or any part of the Lastenkulttuurikeskus Kotilo. The visible content does not match the specific exhibition described in the article or the se",
+                "source_url": "https://unsplash.com/photos/interior-design-display-with-furniture-and-decor-_DMAQOJxFyo?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "b395833f09b6bd8d7f417e55c76cad8db47c8f6b2782cdf2fd8a839396ebf597",
+                "license": "Unsplash License",
+                "reason": "The image shows an art exhibition interior, but there is no visual evidence to confirm it is specifically the 'Ystävän talo' exhibition or located in Lastenkulttuurikeskus Kotilo or keskustakirjasto Saari. The visible content is a generic art exhibition. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/art-exhibition-with-sculptures-and-paintings-onlooking-visitors-Gy1_xPpc9wk?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Kotilo Ystävän talo",
+              "Lastenkulttuurikeskus Kotilo näyttely",
+              "Kotilo exhibition interior"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Kotilo Ystävän talo",
+              "Lastenkulttuurikeskus Kotilo näyttely",
+              "Kotilo exhibition interior"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
+            "queries": [
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "0a1e859754869aad05de9dde3420938fb025981b9d4ad1e2b85c97f8a1dc46a1",
+                "license": "Public domain",
+                "reason": "The image shows a laptop and a person, but the environment is clearly a spacecraft interior, not a calm desk. The laptop screen displays a complex interface that appears to be a control system or a map, not a generic virtual gallery interior. The presence of a person and the specific content on the screen contradict the 'must_avoid' and 'must_show'",
+                "source_url": "https://commons.wikimedia.org/wiki/File:NASA%20astronaut%20Jonny%20Kim%20tests%20space-to-ground%20robotic%20controlling%20methods%20(iss073e0416906).jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "125954558f7343c6edda05004ffcdb5119937002c8823a788d33d9f084159fae",
+                "license": "Public domain",
+                "reason": "The article discusses a virtual tour of a children's cultural center accessible via web browser on a computer, tablet, or smartphone. The selected concept specifies a laptop on a desk with a generic virtual gallery interior on screen. This image shows a person using a VR headset and controller in a highly technical, non-domestic environment, which ",
+                "source_url": "https://commons.wikimedia.org/wiki/File:ISS-50%20Shane%20Kimbrough%20uses%20a%20virtual%20reality%20headset%20in%20the%20Destiny%20lab.jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "d99dc5bf8e1d90e70d971b5baa1c49e2e54d426577fa3804d107a7b2c409786d",
+                "license": "Public domain",
+                "reason": "The article discusses a virtual exhibition accessible via a web browser on a computer, tablet, or smartphone. The selected concept specifies a laptop on a desk with a generic virtual gallery interior on screen. While a laptop is visible in the image, it is mounted on a wall in a highly technical, cluttered environment, not on a desk. The screen con",
+                "source_url": "https://commons.wikimedia.org/wiki/File:ISS-65%20Pesquet%20sets%20up%20cinematic%20VR%20camera.jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "3905773cc6bdf169d18aef7df9143a22b7dedc5fc44bbc75a92c4d156019306e",
+                "license": "CC BY-SA 4.0",
+                "reason": "The article discusses a virtual exhibition for a children's cultural center. The selected concept describes a laptop on a desk showing a generic virtual gallery interior. The actual pixels show a person, which is explicitly forbidden by the 'must_avoid' list. Additionally, the screens display code and a presentation, not a virtual gallery interior.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:WikiConference%20North%20America%202021%20gallery%20photo%20selfie.jpg"
+              }
+            ],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "laptop virtual gallery",
+              "virtual exhibition browser",
+              "kannettava virtuaalinen näyttely"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 5,
+                "image_sha256": "f6ae63c5a5abbd6e345a455c026daa0a492c24c7716d86e2229914d2506e5672",
+                "license": "Pexels License",
+                "reason": "The image shows a laptop on a desk, but the screen content does not depict a generic virtual gallery interior. Instead, it shows a grid of diverse photographs, which does not match the 'Generic virtual gallery interior on screen' must_show element. The article discusses a virtual exhibition, but the image does not visually represent this specific c",
+                "source_url": "https://www.pexels.com/photo/person-using-laptop-computer-during-daytime-196655/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "6256d062d4c8ae0f2c229be24d182cc6fcf5e89bcb7cca455901a5b7d837c9cb",
+                "license": "Pexels License",
+                "reason": "The image shows a laptop on a desk, which matches one 'must_show' element. However, the screen is completely blank, not displaying a 'Generic virtual gallery interior on screen' as required by the concept. Therefore, the image does not fully illustrate the selected concept. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/white-screen-of-a-laptop-4884107/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "887a7cccbeff7f4cc68c1b84ed0d25c35812ecf2bd4e171c0050b08be8d63610",
+                "license": "Pexels License",
+                "reason": "The article discusses a virtual tour of a children's cultural center exhibition. The selected concept describes a laptop showing a generic virtual gallery interior. The actual pixels show a laptop displaying a video conference with people, which does not match the concept of a virtual gallery interior and explicitly violates the 'must_avoid' rule r",
+                "source_url": "https://www.pexels.com/photo/online-class-in-a-laptop-7013900/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "df7f50162ac7674c3e7a7ef21a3032a62df5d2e8f4a04d70746d127157da6143",
+                "license": "Pexels License",
+                "reason": "The image shows a laptop on a desk, which matches one 'must_show' element. However, the screen displays a person in a video call or recording, not a 'generic virtual gallery interior'. The presence of a person on screen also violates the 'must_avoid' element of 'Ihmiset, kasvot, kädet ja muut ruumiinosat'. Therefore, the image does not align with t",
+                "source_url": "https://www.pexels.com/photo/online-yoga-class-6697233/"
+              }
+            ],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "laptop virtual gallery",
+              "virtual exhibition browser",
+              "kannettava virtuaalinen näyttely"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 5,
+                "image_sha256": "e59a850ae4793096546ca921874e1a9f73047817e7db2e08bb7c3b0a049d3897",
+                "license": "Unsplash License",
+                "reason": "The image shows a laptop on a desk, which matches one 'must_show' element. However, the screen displays an abstract, colorful pattern that resembles a keyboard or a brick wall, not a 'generic virtual gallery interior'. The article discusses a virtual exhibition, and the concept specifically requires a virtual gallery interior on the screen. The ima",
+                "source_url": "https://unsplash.com/photos/laptop-with-colorful-glowing-screen-lzh3hPtJz9c?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "2b6d9638989b0159dc280a3ff8eeece74896d828aae34aa3fc589ef7800f379b",
+                "license": "Unsplash License",
+                "reason": "The image shows a laptop on a desk, which matches one 'must_show' element. However, the screen displays a sunset scene, not a 'Generic virtual gallery interior', which is a required 'must_show' element. Therefore, the image does not fully meet the concept's requirements. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/gray-and-black-laptop-computer-on-surface-Im7lZjxeLhg?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "99223a6c35e2e54682c5c4fa678593a797bfa89a63ddb5a41d4da3caaa22abe3",
+                "license": "Unsplash License",
+                "reason": "The article discusses a virtual exhibition for a children's cultural center, accessible via web browser on various devices. The selected concept specifies a laptop on a desk with a generic virtual gallery interior on the screen. While the image shows a laptop on a table, the screen displays a city scene and weather forecast, not a virtual gallery i",
+                "source_url": "https://unsplash.com/photos/laptop-on-white-table-Gi3iUJ1FwxI?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "0e4c053f09e0210fbf5a9b93da006c7f5a3323e96c753c56ae9a6a9262c82e41",
+                "license": "Unsplash License",
+                "reason": "The image shows a laptop, but it is not on a desk as required by the concept. More importantly, the screen does not display a generic virtual gallery interior; instead, it shows an abstract, colorful pattern that does not resemble an exhibition room. Therefore, the image fails to meet a key 'must_show' element. One or more required concept elements",
+                "source_url": "https://unsplash.com/photos/photo-of-half-flipped-laptop-WecngmAT-KY?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "laptop virtual gallery",
+              "virtual exhibition browser",
+              "kannettava virtuaalinen näyttely"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "laptop virtual gallery",
+              "virtual exhibition browser",
+              "kannettava virtuaalinen näyttely"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 1,
-          "fit_score": 9,
-          "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
-          "kind": "real"
+          "concept_rank": 3,
+          "fit_score": 10,
+          "image_sha256": "c3ce5cfc37823d30a2f18e085a0ed564f78bf3f80f6a8a5b3d77c0161958f22a",
+          "kind": "generated"
         },
         "version": "article-first-v1"
       },
-      "sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
-      "source_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
-      "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/10065200/pexels-photo-10065200.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "10065200",
-        "photo_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
-        "photographer": "AV",
-        "photographer_url": "https://www.pexels.com/@av-49217877",
-        "provider": "pexels",
-        "query": "kotitalouden sähkömittari",
-        "retrieved_at": "2026-09-30T13:20:57Z"
-      },
-      "stock_provenance_sha256": "123758867959cf5cce020ab0eb7fd1a08924beeb763087eb41e8953332433388",
-      "url": "https://uutistenlukija.fi/media/e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1.jpg"
+      "sha256": "c3ce5cfc37823d30a2f18e085a0ed564f78bf3f80f6a8a5b3d77c0161958f22a",
+      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "subject": "Näyttelyyn tutustuminen verkkoselaimessa",
+      "url": "https://uutistenlukija.fi/media/c3ce5cfc37823d30a2f18e085a0ed564f78bf3f80f6a8a5b3d77c0161958f22a.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "valtioneuvosto",
+      "provider": "oulu",
       "related_sources": 0,
-      "source_fields_sha256": "23c66fce16767d6ee222748673c2d64758672a037475917476e22515a403f6cf",
-      "source_sha256": "67e76d238ed840236b36b559118da7058a2fab9752e83dfc3b9167eebf6464be"
+      "source_fields_sha256": "d5dfa33c739eead02c25b1c7c2611e56b11bbca2503fb7112ff25cacf3b79e33",
+      "source_sha256": "15642c115254c7aa3b001fd06e962f3f2230e263e73b509e08ca717e5c5203e9"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-09-30T14:53+0300",
-        "publisher": "Valtioneuvoston kanslia",
+        "published_at": "2026-09-30T00:00:00+03:00",
+        "publisher": "Oulun kaupunki",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Valtioneuvoston sivuston käyttöehdot: tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan; aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen",
-          "license_url": "https://valtioneuvosto.fi/tietoa-sivustosta",
-          "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
-          "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
+          "license": "Oulun kaupungin käyttöehdot (avoin data): Nimeä-lisenssi (CC BY 4.0) — kopiointi, levittäminen, esittäminen ja muokkaaminen sallittu, myös kaupallisesti, kun lähde mainitaan.",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "url": "https://www.ouka.fi/avoin-data/kayttoehdot"
         },
-        "text": "Julkaisuajankohta 30.9.2026 14.53\nTyyppi:Tiedote\nLainsäädännön arviointineuvosto on antanut lausunnon työ- ja elinkeinoministeriölle lakiehdotuksesta, joka mahdollistaa sähkön vähittäismyynnin hintasääntelyn sähkön hintakriisin aikana. Esityksen vaikutuksia on arvioitu pääsääntöisesti hyvin, mutta hintasääntelyn vaikutuksia kotitalouksiin olisi hyvä tarkentaa.\nLakiehdotuksessa ehdotetaan säädettäväksi laki, joka mahdollistaa sähkön vähittäismyynnin hintasääntelyn sähkön hintakriisin aikana. Esityksen tavoitteena on turvata kotitalouksille kohtuuhintaisen energian saatavuutta sähkön hintakriisin aikana. Hintasääntelyn soveltamisajasta säädettäisiin erikseen lailla. Laki hintasääntelyn soveltamisesta voitaisiin säätää, kun Euroopan unionin neuvosto on julistanut Suomea koskevan alueellisen tai unionin laajuisen sähkön hintakriisin.\nSähkön vähittäishintojen sääntelyä koskeva lakiehdotus sisältää tiiviin kuvauksen esityksen taustasta, tavoitteista ja keskeisistä ehdotuksista. Alustavia taloudellisia vaikutuksia kotitalouksille, sähkön vähittäismyyjille ja julkiselle taloudelle on arvioitu pääosin hyvin. Esitysluonnoksessa käsitellään erilaisia vaihtoehtoisia tukimuotoja sekä käytännön ongelmia niiden toteuttamiseksi.\nLakiehdotuksessa on kuvattu erilaisia vaihtoehtoja sähkön loppukäyttäjien tukemiseksi sekä haasteita näiden mallien toteuttamisessa. Esitysluonnoksessa todetaan avoimesti, että ehdotettu tuki tulee kohdentumaan myös ei-välttämättömään kulutukseen ja loppukäyttäjille, joiden tuen tarve on taloudellisen aseman vuoksi vähäisempi. Arviointineuvosto tuo esille, että EU:n sähkömarkkinadirektiivissä todetaan, että jäsenvaltioiden tulisi antaa kohdennettua tukea. Esitysluonnoksen perusteella jää käsitys, että ehdotettu tuki ei aivan tavoita direktiivin ajatusta kohdennetusta tuesta.\nEsitysluonnoksessa on arvioitu kotitalouksille kohdentuvien tukien mittaluokkaa ja merkitystä. Lisäksi todetaan, että tarkempi arvio loppukäyttäjien saamasta hyödystä pystytään tekemään vasta hintasääntelyn käyttöönoton yhteydessä, kun määritellään perushinnan, tukikaton ja tuetun kulutuksen osuuden taso sekä tiedetään vallitseva markkinatilanne. Vaikutuksia kotitalouksille on arvioitu pääsääntöisesti hyvin, mutta lakiehdotuksessa olisi hyvä tarkentaa, mikä osuus tuotannosta kohdentuisi ei-välttämättömään kulutukseen.\nLainsäädännön arviointineuvoston lausunto on annettu sähkön vähittäismyyntihintojen sääntelystä sähkön hintakriisin aikana ja Energiavirastosta annetun lain 1 §:n muuttamisesta (hankenumero: TEM081:00/2025), jonka työ- ja elinkeinoministeriö toimitti arviointineuvoston käyttöön sähköpostitse 16.9.2026. Lausunto on julkinen.\nArviointineuvosto katsoo, että hallituksen esitysluonnos täyttää hyvin lainvalmistelun vaikutusarviointiohjeen vaatimukset. Arviointineuvosto suosittelee, että hallituksen esitysluonnosta täydennetään neuvoston lausunnon mukaisesti ennen hallituksen esityksen antamista.\nLisätietoja: arviointineuvos Meri Virolainen, lainsäädännön arviointineuvoston pääsihteeri, p. 0295 160 202\nLainsäädännön arviointineuvosto on itsenäinen ja riippumaton toimielin, joka antaa lausuntoja hallituksen esitysluonnoksista ja niiden vaikutusarvioinneista. Se ei ota kantaa ehdotusten kannatettavuuteen tai poliittisiin ratkaisuihin. Lainsäädännön arviointineuvosto toimii valtioneuvoston kanslian yhteydessä.\nArviointineuvoston lausunto sähkön vähittäismyynnin hintasääntelystä\narviointi energia hinnoittelu kognitio lainsäädäntö sähkö valtioneuvoston kanslia",
-        "title": "Sähkön vähittäishinnan hintasääntelyn vaikutuksia arvioitu pääsääntöisesti hyvin",
-        "url": "https://valtioneuvosto.fi/-/sahkon-vahittaishinnan-hintasaantelyn-vaikutuksia-arvioitu-paasaantoisesti-hyvin"
+        "text": "Kaikilla lapsilla ja perheillä ei ole mahdollisuutta vierailla Lastenkulttuurikeskus Kotilossa paikan päällä. Virtuaalinen Kotilo tuo Lastenkulttuurikeskus Kotilon yhä useamman saataville asuinpaikasta, elämäntilanteesta tai liikkumismahdollisuuksista riippumatta.\n30.09.2026\nLastenkulttuurikeskus Kotilosta on nyt tehty digitaalinen kaksonen, jossa Kotilon tila on mallinnettu tietokonegrafiikaksi. Virtuaalinen Kotilo kutsuu lapset ja perheet tutkimaan, oppimaan ja seikkailemaan digitaalisessa ympäristössä. Virtuaalikierroksella kävijät liikkuvat Kotilon tiloissa ja etsivät tilaan piilotettuja kotiloita.\nVirtuaalinen seikkailu sijoittuu Kotilon Galleriassa esillä olevaan Ystävän talo -näyttelyyn. Näyttelyyn voikin nyt tutustua sekä paikan päällä keskustakirjasto Saaren neljännessä kerroksessa että verkossa, mikä tekee lastenkulttuurin kokemisen mahdolliseksi yhä useammalle lapselle ja perheelle.\nSaavutettavuus ja esteettömyys keskiössä\nVirtuaalinen Kotilo toimii tavallisella verkkoselaimella ilman erillisiä sovelluksia tai erityisiä laitevaatimuksia. Palvelua voi käyttää sekä suomeksi että englanniksi tietokoneella, tabletilla tai älypuhelimella.\nDigitaalinen ympäristö tarjoaa rauhallisen ja turvallisen tavan tutustua Kotilon tiloihin käyttäjän omassa tahdissa. Se voi helpottaa osallistumista erityisesti silloin, kun fyysiseen tilaan saapuminen on haastavaa esimerkiksi pitkien välimatkojen, liikkumisen esteiden tai aistiherkkyyksien vuoksi. Virtuaalinen Kotilo tarjoaa myös mahdollisuuden tutustua tilaan ennakkoon ennen vierailua, mikä voi helpottaa uuteen ympäristöön saapumista ja tukea vierailuun valmistautumista.\n– Haluamme, että mahdollisimman moni lapsi ja perhe voi tutustua Kotiloon omalla tavallaan. Virtuaalinen Kotilo tarjoaa uuden saavutettavan väylän kokea lastenkulttuuria, osallistua ja innostua myös silloin, kun paikan päälle tuleminen ei ole mahdollista, sanoo Kotilon vastaava tuottaja Tommi Nevala.\nPelillisyyttä kulttuurikasvatuksen tueksi – yhteistyössä\nVirtuaalisen Kotilon sisällöt on suunniteltu lapsilähtöisesti. Pelillisyyttä ja kulttuurikasvatusta yhdistävä kokonaisuus kannustaa lapsia tutkimaan ympäristöä aktiivisesti, tekemään havaintoja ja oppimaan uutta seikkailun lomassa.\nVirtuaalinen Kotilo soveltuu hyvin myös varhaiskasvatuksen ja koulujen kulttuurikasvatuksen tueksi. Digitaalinen ympäristö tarjoaa uudenlaisen välineen tutustua paikalliseen lastenkulttuuriin sekä keskustella lasten kanssa kulttuurista, taiteesta ja omasta lähiympäristöstä.\nVirtuaalinen Kotilo on toteutettu yhteistyössä Oulun ammattikorkeakoulun, MetaPilot Factory -hankkeen ja LudoCraft Oy:n kanssa.\nVirtuaalinen Kotilo\nSiirry Virtuaalinen Kotilo-sivulle\nlapset ja lapsiperheet\nkulttuuri",
+        "title": "Virtuaalinen Kotilo tuo Lastenkulttuurikeskus Kotilon yhä useamman saataville",
+        "url": "https://www.ouka.fi/uutiset/virtuaalinen-kotilo-tuo-lastenkulttuurikeskus-kotilon-yha-useamman-saataville"
       }
     ],
-    "story_key": "url:https://valtioneuvosto.fi/-/sahkon-vahittaishinnan-hintasaantelyn-vaikutuksia-arvioitu-paasaantoisesti-hyvin",
+    "story_key": "url:https://www.ouka.fi/uutiset/virtuaalinen-kotilo-tuo-lastenkulttuurikeskus-kotilon-yha-useamman-saataville",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-09-30T13:03:28.281682+00:00",
-        "sha256": "42538c58d488190fc0952c29de044d046ba30839e42cdcda7d0a4aaece9e5cd8",
-        "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
-        "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
+        "retrieved_at": "2026-09-30T13:53:21.264811+00:00",
+        "sha256": "6353c294987059090aa73a8485c589fe366ccb7196825fdb1fcc999a72467066",
+        "text": "Oulun kaupungin julkaiseman avoimen datan käyttö edellyttää Nimeä-lisenssin noudattamista. Lisenssi on tyyliltään salliva, ja sillä halutaan edistää tiedon hyödyntämistä, läpinäkyvyyttä ja innovaatioita.\nLisenssi mahdollistaa avoimen datan kopioimisen, levittämisen, näyttämisen ja esittämisen julkisesti. Aineistosta saa luoda johdannaisteoksia, kunhan aineiston tuottajan tai oikeuden omistajan nimi mainitaan asianmukaisesti. Alkuperäisen aineiston omistusoikeus säilyy aineiston tuottajalla. Lisenssi perustuu Creative Commons-lisenssiin (CC 4.0 BY, ByAttribution).\nLisenssi sallii\njakaa, kopioida ja levittää aineistoa edelleen missä tahansa välineessä ja muodossa.\nmuunnella, yhdistellä ja muokata aineistoa sekä luoda sen pohjalta uusia aineistoja.\nkäyttää aineistoa missä tahansa tarkoituksessa, myös kaupallisesti.\nLisenssinantaja ei voi peruuttaa näitä oikeuksia niin kauan kuin noudatat lisenssin ehtoja.\nLisenssin ehdot\nNimeä. Sinun on mainittava lähde asianmukaisesti, tarjottava linkki lisenssiin sekä merkittävä, mikäli olet tehnyt muutoksia. Voit tehdä yllä olevan millä tahansa kohtuullisella tavalla, mutta et siten, että annat ymmärtää lisenssinantajan suosittelevan sinua tai teoksen käyttöäsi. Lisenssin myöntäjällä on oikeus pyytää aineiston julkaisijaa poistamaan maininnan aineiston tuottajasta.\nEi muita rajoituksia. Et voi asettaa sellaisia oikeudellisia ehtoja tai teknisiä estoja, jotka estävät oikeudellisesti muita tekemästä mitään sellaista, minkä lisenssi sallii.\n",
+        "url": "https://www.ouka.fi/avoin-data/kayttoehdot"
       }
     ]
   },
   "draft": {
-    "category": "Talous",
+    "category": "Kulttuuri",
     "image": {
-      "alt": "Arkistokuva: Neljä sähkömittaria ja sähkökaappia on asennettu graffitein peittämälle betoniseinälle, ja niitä yhdistävät mustat johdot.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "AI-generoitu kuva: Hopeinen kannettava tietokone on vaalealla puupöydällä, ja sen näytöllä näkyy virtuaalinen näyttelytila.",
+      "attempts": 1,
+      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
       "classifier_output": {
-        "category": "Talous",
+        "category": "Kulttuuri",
         "concepts": [
           {
-            "depictable_scene": "Lähikuva asunnon sähkökaappiin asennetusta sähkömittarista. Mittarin kotelo ja sen vieressä olevat sulakkeet näkyvät, mutta näytön lukemat ja laitemerkinnät eivät ole luettavissa.",
+            "depictable_scene": "Tietokone pöydällä, näytöllä todellinen Kotilon selainpalvelu ja sen mallinnettu Ystävän talo -näyttelytila. Kuvassa ei ole käyttäjää.",
             "must_avoid": [
-              "People or body parts",
-              "Invented readable meter readings, prices or logos"
+              "Keksitty Kotilon käyttöliittymä tai näyttelysisältö",
+              "VR-lasit selainpalvelun sijasta"
             ],
             "must_show": [
-              "Residential electricity meter",
-              "Domestic electrical panel"
+              "Computer displaying the actual Kotilo virtual tour",
+              "Virtual exhibition interior on screen"
             ],
             "rank": 1,
-            "safe_to_generate": true,
+            "safe_to_generate": false,
             "search_queries": [
-              "kotitalouden sähkömittari",
-              "asunnon sähkökaappi",
-              "residential electricity meter",
-              "domestic electrical meter closeup"
+              "Kotilo virtuaalikierros",
+              "Virtuaalinen Kotilo tietokone",
+              "Kotilo virtual tour laptop",
+              "Ystävän talo virtuaalinäyttely"
             ],
-            "subject": "Kotitalouden sähkön kulutuksen mittaus"
+            "subject": "Kotilon virtuaalikierros tietokoneen näytöllä"
           },
           {
-            "depictable_scene": "Tavallisen asunnon ikkunan alla oleva seinään kiinnitetty sähköpatteri kuvattuna tyhjässä huoneessa. Patterin säätönuppi ja sähköjohto näkyvät ilman luettavia merkintöjä.",
+            "depictable_scene": "Todellinen valokuva Ystävän talo -näyttelyn sisätilasta Lastenkulttuurikeskus Kotilossa keskustakirjasto Saaren neljännessä kerroksessa; näyttelyrakenteet ja niiden sijoittelu näkyvät huoneessa.",
             "must_avoid": [
-              "People or body parts",
-              "Luxury-home framing that implies who receives support",
-              "Readable invented text or logos"
+              "Toisen näyttelyn esittäminen Ystävän talo -näyttelynä",
+              "Keksitty näyttelytila tai teosten ulkoasu"
             ],
             "must_show": [
-              "Wall-mounted electric radiator",
-              "Domestic room interior"
+              "Actual Ystävän talo exhibition interior"
             ],
             "rank": 2,
+            "safe_to_generate": false,
+            "search_queries": [
+              "Kotilo Ystävän talo",
+              "Lastenkulttuurikeskus Kotilo näyttely",
+              "Kotilo exhibition interior",
+              "Ystävän talo näyttely Saari"
+            ],
+            "subject": "Ystävän talo -näyttely Kotilon tiloissa"
+          },
+          {
+            "depictable_scene": "Kannettava tietokone rauhallisella pöydällä. Näytöllä on selaimessa avautuva yleisluonteinen kolmiulotteinen näyttelyhuone, jossa näkyy vaaleita seiniä, avoin kulkuaukko ja tyhjiä näyttelyjalustoja. Huone ei jäljittele Kotilon tiloja tai Ystävän talo -näyttelyä, eikä ruudulla ole luettavaa tekstiä.",
+            "must_avoid": [
+              "Ihmiset, kasvot, kädet ja muut ruumiinosat",
+              "Kotilon tai Ystävän talo -näyttelyn keksitty toisinto",
+              "Luettava teksti ja logot",
+              "VR-lasit"
+            ],
+            "must_show": [
+              "Laptop on a desk",
+              "Generic virtual gallery interior on screen"
+            ],
+            "rank": 3,
             "safe_to_generate": true,
             "search_queries": [
-              "sähköpatteri ikkunan alla",
-              "kodin sähköpatteri",
-              "wall mounted electric radiator",
-              "electric radiator domestic interior"
+              "laptop virtual gallery",
+              "virtual exhibition browser",
+              "kannettava virtuaalinen näyttely",
+              "tietokone verkkonäyttely pöydällä"
             ],
-            "subject": "Kotitalouksien sähkön kulutus lämmityksessä"
+            "subject": "Näyttelyyn tutustuminen verkkoselaimessa"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by AV on Pexels",
-      "depicted": "The image shows a concrete wall with multiple utility boxes and electrical wiring. From left to right, there is a gray utility box with a white circular sticker on its lower left side, and a small white padlock hanging from its bottom. To its right, a blue transparent utility box is visible, revealing internal components and a digital display. Next, there is a damaged white metal utility box with its door slightly ajar at the bottom, secured by a small brass-colored padlock. Further to the right",
-      "generated": false,
-      "hotlink": false,
-      "license": "Pexels License",
-      "license_evidence": {
-        "image_path": "/photos/10065200/pexels-photo-10065200.jpeg",
-        "license": "Pexels License",
-        "license_code": "Pexels",
-        "license_url": "https://www.pexels.com/license/",
-        "photo_id": "10065200",
-        "photo_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
-        "photographer": "AV",
-        "photographer_url": "https://www.pexels.com/@av-49217877",
-        "response_sha256": "1361560deceb60e5cf8ff2b3eb3f6d0d7070b0a11a0e04eb74dce3dba218eb31",
-        "retrieved_at": "2026-09-30T13:20:57.463400+00:00",
-        "transport": "jina_reader",
-        "version": 1
-      },
-      "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1.jpg",
+      "credit": "AI-kuvitus",
+      "depicted": "A silver laptop sits on a light wooden desk near a window. The laptop screen displays a generic virtual gallery interior with white walls, an open archway, and several empty white display pedestals. The browser interface is visible at the top of the screen.",
+      "generated": true,
+      "license": "AI-generated image",
+      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "local_path": "media/c3ce5cfc37823d30a2f18e085a0ed564f78bf3f80f6a8a5b3d77c0161958f22a.jpg",
+      "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Neljä sähkömittaria ja sähkökaappia on asennettu graffitein peittämälle betoniseinälle, ja niitä yhdistävät mustat johdot.",
+        "alt_fi": "Hopeinen kannettava tietokone on vaalealla puupöydällä, ja sen näytöllä näkyy virtuaalinen näyttelytila.",
         "approved": true,
-        "article_text_sha256": "7648c2bc9c3cd7833493e181a0e7ca3ec476f6e3fb07741728c945347b1285f6",
-        "concept_sha256": "df6d55e165b549104e041334572427d655e2a442fb3330d11490bf1e3ebe73ad",
-        "description": "Four electricity meters and electrical panels are mounted on a concrete wall with graffiti. Two of the meters are grey, one is in a blue transparent casing, and one is in an open, damaged white casing. Wires connect the units.",
-        "fit_score": 9,
-        "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
+        "article_text_sha256": "ad7d210dd2f5bde8e39695db70f9014c6ea491a7584a6a83d63c11982f32e541",
+        "concept_sha256": "389e28235476d9a8e51aec02f5f75f4c9a2d82f6273f6b89d398c28cf94b4f5f",
+        "description": "A silver laptop sits on a light wooden desk near a window. The laptop screen displays a generic virtual gallery interior with white walls, an open archway, and several empty white display pedestals. The browser interface is visible at the top of the screen.",
+        "fit_score": 10,
+        "image_sha256": "c3ce5cfc37823d30a2f18e085a0ed564f78bf3f80f6a8a5b3d77c0161958f22a",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts multiple electricity meters and electrical panels, which directly illustrates the concept of 'Kotitalouden sähkön kulutuksen mittaus' (Household electricity consumption measurement) and is highly relevant to the article's discussion of electricity price regulation and household electricity costs.",
-        "reviewed_at": "2026-09-30T13:20:59.634682+00:00"
+        "reason": "The image directly depicts a laptop on a desk with a generic virtual gallery interior on its screen, which perfectly matches the selected concept. The article discusses a virtual tour of a children's cultural center exhibition accessible via web browser, and this image illustrates the general concept of accessing a virtual exhibition online.",
+        "reviewed_at": "2026-09-30T14:01:14.289781+00:00",
+        "text_audit": {
+          "examples": [],
+          "readable_text_present": false
+        }
       },
       "pixels": {
-        "height": 627,
+        "height": 1024,
         "mode": "RGB",
-        "variance": 6322.1,
-        "width": 940
+        "variance": 8516.0,
+        "width": 1536
       },
+      "prompt_sha256": "c17e68bc44f2552f55b4006d58fe67865d7797fbd33b2504c2947875784d0145",
+      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Four electricity meters and electrical panels are mounted on a concrete wall with graffiti. Two of the meters are grey, one is in a blue transparent casing, and one is in an open, damaged white casing. Wires connect the units.",
+        "evidence": "Kannettava tietokone rauhallisella pöydällä. Näytöllä on selaimessa avautuva yleisluonteinen kolmiulotteinen näyttelyhuone, jossa näkyy vaaleita seiniä, avoin kulkuaukko ja tyhjiä näyttelyjalustoja. Huone ei jäljittele Kotilon tiloja tai Ystävän talo -näyttelyä, eikä ruudulla ole luettavaa tekstiä.",
         "matched": [
-          "electrical",
-          "electricity"
+          "Laptop on a desk",
+          "Generic virtual gallery interior on screen"
         ],
-        "method": "vision",
-        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+        "method": "generation",
+        "reason": "generated from the accepted scene"
       },
+      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "7648c2bc9c3cd7833493e181a0e7ca3ec476f6e3fb07741728c945347b1285f6",
-        "decision_sha256": "7d0d30a9ef5ed40cafecb2fc999c2ea25d2373bc568e05c6f8248d1697f2556f",
+        "article_text_sha256": "ad7d210dd2f5bde8e39695db70f9014c6ea491a7584a6a83d63c11982f32e541",
+        "decision_sha256": "2b9a04c1de53c65ccaa0c8c416c85088d89af1b99b23af5b5df05cc3547892c5",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [
-              {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
-                "license": "Pexels License",
-                "reason": "The image clearly depicts multiple electricity meters and electrical panels, which directly illustrates the concept of 'Kotitalouden sähkön kulutuksen mittaus' (Household electricity consumption measurement) and is highly relevant to the article's discussion of electricity price regulation and household electricity costs.",
-                "source_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/"
-              }
-            ],
+            "candidates": [],
             "concept_rank": 1,
-            "outcome": "accepted",
-            "provider": "pexels",
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
             "queries": [
-              "kotitalouden sähkömittari",
-              "asunnon sähkökaappi",
-              "residential electricity meter"
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Kotilo virtuaalikierros",
+              "Virtuaalinen Kotilo tietokone",
+              "Kotilo virtual tour laptop"
             ]
           },
           {
             "candidates": [
               {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "70d1709148cf86a7ea568a53e1b0b3d4407ec9c26ef6554ca5cd611bca664b70",
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "d51010d65ec20687adde4f6238ee62a80b66ace712a3b9affb1cf9242e4750f8",
                 "license": "Pexels License",
-                "reason": "The image clearly shows a wall-mounted radiator in a domestic room interior, which directly matches the 'must_show' elements of the selected concept. The article discusses household electricity consumption for heating, making the radiator a relevant subject.",
-                "source_url": "https://www.pexels.com/photo/apartment-interior-with-table-and-chairs-near-window-6447395/"
+                "reason": "The article describes a browser-based virtual tour accessible on computers, tablets, and smartphones. The selected concept specifies a computer displaying the virtual tour. The image shows VR controllers, which are explicitly listed in 'must_avoid' for the concept ('VR-lasit selainpalvelun sijasta'). Therefore, the image does not fit the concept or",
+                "source_url": "https://www.pexels.com/photo/close-up-photo-of-person-holding-vr-controllers-7046696/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "c44f347dae79c09cc68825d2e88b922a589460610685ccdd4464d193457ecb5f",
+                "license": "Pexels License",
+                "reason": "The article describes a browser-based virtual tour accessible on computers, tablets, and smartphones, explicitly stating 'ilman erillistä sovellusta' (without a separate application) and 'VR-lasit selainpalvelun sijasta' (VR glasses instead of a browser service) is a 'must_avoid'. The image shows a person wearing VR glasses, which directly contradi",
+                "source_url": "https://www.pexels.com/photo/woman-sitting-in-front-of-a-laptop-and-wearing-vr-goggles-5207234/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "e0bfc51c854eddaaf1f724fe6ccd5dd0a315a5184f2ff53a408efafd2750ebd5",
+                "license": "Pexels License",
+                "reason": "The article describes a browser-based virtual tour accessible on computers, tablets, and smartphones, without requiring a separate application. The selected concept specifically requests a computer displaying the actual Kotilo virtual tour and virtual exhibition interior on screen, and explicitly states 'must avoid VR-lasit selainpalvelun sijasta' ",
+                "source_url": "https://www.pexels.com/photo/person-sitting-in-front-of-a-laptop-wearing-vr-headset-5207240/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "528be24e2ef7c68f6b24179c6e1d3b09ae3688f61c0cfa7bd54d163e785c67a3",
+                "license": "Pexels License",
+                "reason": "The article describes a virtual tour accessible via web browser on computers, tablets, and smartphones, and explicitly states 'VR-lasit selainpalvelun sijasta' (VR glasses instead of a browser service) as something to avoid. The image shows a person wearing a VR headset, which directly contradicts the 'must_avoid' instruction and the nature of the ",
+                "source_url": "https://www.pexels.com/photo/elegant-woman-wearing-vr-goggles-and-holding-a-tablet-while-standing-in-an-empty-room-8730033/"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "Kotilo virtuaalikierros",
+              "Virtuaalinen Kotilo tietokone",
+              "Kotilo virtual tour laptop"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Kotilo virtuaalikierros",
+              "Virtuaalinen Kotilo tietokone",
+              "Kotilo virtual tour laptop"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Kotilo virtuaalikierros",
+              "Virtuaalinen Kotilo tietokone",
+              "Kotilo virtual tour laptop"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
+            "queries": [
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Kotilo Ystävän talo",
+              "Lastenkulttuurikeskus Kotilo näyttely",
+              "Kotilo exhibition interior"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "813da246fdac569974f4b4b5c76ab406117556cbd99e2a12c013807007adf50f",
+                "license": "Pexels License",
+                "reason": "The image depicts two women in old houses, which does not relate to the article about a virtual exhibition of children's culture. The selected concept specifically requires an interior view of the 'Ystävän talo' exhibition, which is not present in the image. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/women-looking-outside-the-window-8889723/"
+              },
+              {
+                "approved": false,
+                "fit_score": 5,
+                "image_sha256": "c400a81beb989793040b3ac32ad0098993211f270bf38a75ecf9ff8f37ed80ac",
+                "license": "Pexels License",
+                "reason": "The image shows a library interior, which could be the general venue mentioned in the article (central library Saari), but it does not depict the specific 'Ystävän talo' exhibition interior as required by the concept. There are no visible exhibition structures or elements that would identify it as the described children's cultural exhibition. One o",
+                "source_url": "https://www.pexels.com/photo/white-ipad-on-white-wooden-table-6333859/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "a796a508e712cf5437d4385fc02cd57e922efe5c9f30726dc069d7fdaaebc4ae",
+                "license": "Pexels License",
+                "reason": "The article discusses a digital environment for the 'Ystävän talo' exhibition at Lastenkulttuurikeskus Kotilo. The image shows a traditional, rustic interior that does not appear to be a modern exhibition space, nor does it visibly represent the 'Ystävän talo' exhibition or any specific exhibition structures mentioned in the concept. It is a generi",
+                "source_url": "https://www.pexels.com/photo/a-room-with-a-bed-and-a-table-and-chairs-27408998/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "ce7fc027252bc4f217e23b9ecb6effe39cebabc9a81b81375ae3b2c38f6a28e8",
+                "license": "Pexels License",
+                "reason": "The article discusses a children's cultural center exhibition and its virtual tour. The image shows a generic library interior with tables, chairs, and bookshelves, which does not depict the 'Ystävän talo' exhibition interior or any specific exhibition structures mentioned in the concept. While the exhibition is in a library, this image does not sh",
+                "source_url": "https://www.pexels.com/photo/wooden-tables-inside-the-library-6333732/"
               }
             ],
             "concept_rank": 2,
-            "outcome": "accepted",
+            "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "sähköpatteri ikkunan alla",
-              "kodin sähköpatteri",
-              "wall mounted electric radiator"
+              "Kotilo Ystävän talo",
+              "Lastenkulttuurikeskus Kotilo näyttely",
+              "Kotilo exhibition interior"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "1e9abd10c39d7a7fd53e0ce5f9f6f93e3d16741bc43662002d1c332149510a4c",
+                "license": "Unsplash License",
+                "reason": "The image depicts an interior with decorative elements and framed pictures, which could be part of an exhibition. However, there is no visible evidence that this is specifically the 'Ystävän talo' exhibition or any part of the Lastenkulttuurikeskus Kotilo. The visible content does not match the specific exhibition described in the article or the se",
+                "source_url": "https://unsplash.com/photos/interior-design-display-with-furniture-and-decor-_DMAQOJxFyo?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "b395833f09b6bd8d7f417e55c76cad8db47c8f6b2782cdf2fd8a839396ebf597",
+                "license": "Unsplash License",
+                "reason": "The image shows an art exhibition interior, but there is no visual evidence to confirm it is specifically the 'Ystävän talo' exhibition or located in Lastenkulttuurikeskus Kotilo or keskustakirjasto Saari. The visible content is a generic art exhibition. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/art-exhibition-with-sculptures-and-paintings-onlooking-visitors-Gy1_xPpc9wk?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Kotilo Ystävän talo",
+              "Lastenkulttuurikeskus Kotilo näyttely",
+              "Kotilo exhibition interior"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Kotilo Ystävän talo",
+              "Lastenkulttuurikeskus Kotilo näyttely",
+              "Kotilo exhibition interior"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
+            "queries": [
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "0a1e859754869aad05de9dde3420938fb025981b9d4ad1e2b85c97f8a1dc46a1",
+                "license": "Public domain",
+                "reason": "The image shows a laptop and a person, but the environment is clearly a spacecraft interior, not a calm desk. The laptop screen displays a complex interface that appears to be a control system or a map, not a generic virtual gallery interior. The presence of a person and the specific content on the screen contradict the 'must_avoid' and 'must_show'",
+                "source_url": "https://commons.wikimedia.org/wiki/File:NASA%20astronaut%20Jonny%20Kim%20tests%20space-to-ground%20robotic%20controlling%20methods%20(iss073e0416906).jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "125954558f7343c6edda05004ffcdb5119937002c8823a788d33d9f084159fae",
+                "license": "Public domain",
+                "reason": "The article discusses a virtual tour of a children's cultural center accessible via web browser on a computer, tablet, or smartphone. The selected concept specifies a laptop on a desk with a generic virtual gallery interior on screen. This image shows a person using a VR headset and controller in a highly technical, non-domestic environment, which ",
+                "source_url": "https://commons.wikimedia.org/wiki/File:ISS-50%20Shane%20Kimbrough%20uses%20a%20virtual%20reality%20headset%20in%20the%20Destiny%20lab.jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "d99dc5bf8e1d90e70d971b5baa1c49e2e54d426577fa3804d107a7b2c409786d",
+                "license": "Public domain",
+                "reason": "The article discusses a virtual exhibition accessible via a web browser on a computer, tablet, or smartphone. The selected concept specifies a laptop on a desk with a generic virtual gallery interior on screen. While a laptop is visible in the image, it is mounted on a wall in a highly technical, cluttered environment, not on a desk. The screen con",
+                "source_url": "https://commons.wikimedia.org/wiki/File:ISS-65%20Pesquet%20sets%20up%20cinematic%20VR%20camera.jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "3905773cc6bdf169d18aef7df9143a22b7dedc5fc44bbc75a92c4d156019306e",
+                "license": "CC BY-SA 4.0",
+                "reason": "The article discusses a virtual exhibition for a children's cultural center. The selected concept describes a laptop on a desk showing a generic virtual gallery interior. The actual pixels show a person, which is explicitly forbidden by the 'must_avoid' list. Additionally, the screens display code and a presentation, not a virtual gallery interior.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:WikiConference%20North%20America%202021%20gallery%20photo%20selfie.jpg"
+              }
+            ],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "laptop virtual gallery",
+              "virtual exhibition browser",
+              "kannettava virtuaalinen näyttely"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 5,
+                "image_sha256": "f6ae63c5a5abbd6e345a455c026daa0a492c24c7716d86e2229914d2506e5672",
+                "license": "Pexels License",
+                "reason": "The image shows a laptop on a desk, but the screen content does not depict a generic virtual gallery interior. Instead, it shows a grid of diverse photographs, which does not match the 'Generic virtual gallery interior on screen' must_show element. The article discusses a virtual exhibition, but the image does not visually represent this specific c",
+                "source_url": "https://www.pexels.com/photo/person-using-laptop-computer-during-daytime-196655/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "6256d062d4c8ae0f2c229be24d182cc6fcf5e89bcb7cca455901a5b7d837c9cb",
+                "license": "Pexels License",
+                "reason": "The image shows a laptop on a desk, which matches one 'must_show' element. However, the screen is completely blank, not displaying a 'Generic virtual gallery interior on screen' as required by the concept. Therefore, the image does not fully illustrate the selected concept. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/white-screen-of-a-laptop-4884107/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "887a7cccbeff7f4cc68c1b84ed0d25c35812ecf2bd4e171c0050b08be8d63610",
+                "license": "Pexels License",
+                "reason": "The article discusses a virtual tour of a children's cultural center exhibition. The selected concept describes a laptop showing a generic virtual gallery interior. The actual pixels show a laptop displaying a video conference with people, which does not match the concept of a virtual gallery interior and explicitly violates the 'must_avoid' rule r",
+                "source_url": "https://www.pexels.com/photo/online-class-in-a-laptop-7013900/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "df7f50162ac7674c3e7a7ef21a3032a62df5d2e8f4a04d70746d127157da6143",
+                "license": "Pexels License",
+                "reason": "The image shows a laptop on a desk, which matches one 'must_show' element. However, the screen displays a person in a video call or recording, not a 'generic virtual gallery interior'. The presence of a person on screen also violates the 'must_avoid' element of 'Ihmiset, kasvot, kädet ja muut ruumiinosat'. Therefore, the image does not align with t",
+                "source_url": "https://www.pexels.com/photo/online-yoga-class-6697233/"
+              }
+            ],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "laptop virtual gallery",
+              "virtual exhibition browser",
+              "kannettava virtuaalinen näyttely"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 5,
+                "image_sha256": "e59a850ae4793096546ca921874e1a9f73047817e7db2e08bb7c3b0a049d3897",
+                "license": "Unsplash License",
+                "reason": "The image shows a laptop on a desk, which matches one 'must_show' element. However, the screen displays an abstract, colorful pattern that resembles a keyboard or a brick wall, not a 'generic virtual gallery interior'. The article discusses a virtual exhibition, and the concept specifically requires a virtual gallery interior on the screen. The ima",
+                "source_url": "https://unsplash.com/photos/laptop-with-colorful-glowing-screen-lzh3hPtJz9c?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "2b6d9638989b0159dc280a3ff8eeece74896d828aae34aa3fc589ef7800f379b",
+                "license": "Unsplash License",
+                "reason": "The image shows a laptop on a desk, which matches one 'must_show' element. However, the screen displays a sunset scene, not a 'Generic virtual gallery interior', which is a required 'must_show' element. Therefore, the image does not fully meet the concept's requirements. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/gray-and-black-laptop-computer-on-surface-Im7lZjxeLhg?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "99223a6c35e2e54682c5c4fa678593a797bfa89a63ddb5a41d4da3caaa22abe3",
+                "license": "Unsplash License",
+                "reason": "The article discusses a virtual exhibition for a children's cultural center, accessible via web browser on various devices. The selected concept specifies a laptop on a desk with a generic virtual gallery interior on the screen. While the image shows a laptop on a table, the screen displays a city scene and weather forecast, not a virtual gallery i",
+                "source_url": "https://unsplash.com/photos/laptop-on-white-table-Gi3iUJ1FwxI?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "0e4c053f09e0210fbf5a9b93da006c7f5a3323e96c753c56ae9a6a9262c82e41",
+                "license": "Unsplash License",
+                "reason": "The image shows a laptop, but it is not on a desk as required by the concept. More importantly, the screen does not display a generic virtual gallery interior; instead, it shows an abstract, colorful pattern that does not resemble an exhibition room. Therefore, the image fails to meet a key 'must_show' element. One or more required concept elements",
+                "source_url": "https://unsplash.com/photos/photo-of-half-flipped-laptop-WecngmAT-KY?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "laptop virtual gallery",
+              "virtual exhibition browser",
+              "kannettava virtuaalinen näyttely"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "laptop virtual gallery",
+              "virtual exhibition browser",
+              "kannettava virtuaalinen näyttely"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 1,
-          "fit_score": 9,
-          "image_sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
-          "kind": "real"
+          "concept_rank": 3,
+          "fit_score": 10,
+          "image_sha256": "c3ce5cfc37823d30a2f18e085a0ed564f78bf3f80f6a8a5b3d77c0161958f22a",
+          "kind": "generated"
         },
         "version": "article-first-v1"
       },
-      "sha256": "e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1",
-      "source_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
-      "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/10065200/pexels-photo-10065200.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "10065200",
-        "photo_url": "https://www.pexels.com/photo/high-voltage-electricity-on-junction-boxes-10065200/",
-        "photographer": "AV",
-        "photographer_url": "https://www.pexels.com/@av-49217877",
-        "provider": "pexels",
-        "query": "kotitalouden sähkömittari",
-        "retrieved_at": "2026-09-30T13:20:57Z"
-      },
-      "stock_provenance_sha256": "123758867959cf5cce020ab0eb7fd1a08924beeb763087eb41e8953332433388",
-      "url": "https://uutistenlukija.fi/media/e6e293b0a19df3ad227cbc9f461e6361102ddc06037d40eb1ffcdd32690c0fd1.jpg"
+      "sha256": "c3ce5cfc37823d30a2f18e085a0ed564f78bf3f80f6a8a5b3d77c0161958f22a",
+      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "subject": "Näyttelyyn tutustuminen verkkoselaimessa",
+      "url": "https://uutistenlukija.fi/media/c3ce5cfc37823d30a2f18e085a0ed564f78bf3f80f6a8a5b3d77c0161958f22a.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Lainsäädännön arviointineuvosto pitää sähkön hintasääntelyä koskevan lakiluonnoksen vaikutusarvioita pääosin hyvinä, mutta suosittelee täydentämään niitä ennen hallituksen esityksen antamista. Valtioneuvoston kanslian tiedotteen mukaan neuvosto kaipaa tarkennusta siihen, mikä osuus tuotannosta kohdistuisi ei-välttämättömään kulutukseen."
+        "text": "Oulun kaupunki kertoo mallintaneensa Lastenkulttuurikeskus Kotilon tilat digitaaliseksi ympäristöksi. Virtuaalikierroksella voi liikkua näyttelytilassa ja etsiä sinne piilotettuja kotiloita. Kierros sijoittuu Ystävän talo -näyttelyyn, joka on esillä myös keskustakirjasto Saaren neljännessä kerroksessa."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Lakiluonnoksen tavoitteena on turvata kotitalouksille kohtuuhintainen sähkö hintakriisin aikana. Tiedotteen mukaan hintasääntelyn soveltamisesta säädettäisiin erillisellä lailla, joka voitaisiin säätää EU:n neuvoston julistettua Suomea koskevan alueellisen tai koko unionin sähkön hintakriisin. Kyse ei siis ole hintasääntelyn käynnistämisestä nyt."
+        "text": "Kaupungin mukaan palvelu toimii verkkoselaimessa tietokoneella, tabletilla ja älypuhelimella ilman erillistä sovellusta. Käyttökielinä ovat suomi ja englanti."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Tuen kohdentuminen on neuvoston keskeinen huoli. Tiedotteen mukaan esitysluonnoksessa tunnistetaan, että tukea saisivat myös taloudellisesti vähemmän apua tarvitsevat kotitaloudet. Neuvosto katsoo, ettei ehdotettu malli täysin vastaa EU:n sähkömarkkinadirektiivin ajatusta kohdennetusta tuesta."
+        "text": "Kaupungin mukaan verkkokierros voi helpottaa näyttelyyn tutustumista esimerkiksi pitkien välimatkojen, liikkumisen esteiden tai aistiherkkyyksien vuoksi. Sitä voi käyttää myös tiloihin tutustumiseen ennen paikan päällä tehtävää vierailua."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kotitalouksien saamaa hyötyä ei tiedotteen mukaan voida vielä arvioida tarkasti. Arvio täsmentyisi vasta hintasääntelyn käyttöönoton yhteydessä, kun perushinta, tukikatto ja tuetun kulutuksen osuus määriteltäisiin ja vallitseva markkinatilanne olisi tiedossa."
+        "text": "Kaupunki esittää virtuaaliympäristöä myös varhaiskasvatuksen ja koulujen kulttuurikasvatuksen välineeksi. Toteutuksessa ovat olleet mukana Oulun ammattikorkeakoulu, MetaPilot Factory -hanke ja LudoCraft Oy."
       }
     ],
-    "summary": "Lainsäädännön arviointineuvosto suosittelee täsmentämään kotitalousvaikutuksia lakiluonnoksessa, joka mahdollistaisi sähkön hintasääntelyn hintakriisissä. Neuvoston mukaan ehdotettu tuki ulottuisi myös kulutukseen, joka ei ole välttämätöntä.",
-    "title": "Sähkön hintasääntelyyn kaivataan tarkempaa vaikutusarviota"
+    "summary": "Oulun kaupungin mukaan lastenkulttuurikeskuksen uusi selainpalvelu antaa lapsille ja perheille mahdollisuuden tutustua Ystävän talo -näyttelyyn myös silloin, kun vierailu paikan päällä ei onnistu.",
+    "title": "Kotilon lastenkulttuurinäyttelyyn voi tutustua verkossa"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "cd7e22cf47ca219840d1b4af5464b3bf10228e4cc3325b6b4a39191824a361fe",
+    "draft_sha256": "f4c4bde268c59b8c5232faab80527ce2b8edb888c69783dff8f2cc544d672798",
     "reasons": [
-      "Otsikko on 58 merkkiä eli tavoiterajan sisällä, ja sähkön hintasääntely on sen alussa. Lähde A tukee otsikon ja ingressin väitteitä vaikutusarvioiden tarkentamistarpeesta sekä tuen kohdistumisesta myös ei-välttämättömään kulutukseen.",
-      "Kaikkien neljän kappaleen source_ids-merkintä A on asianmukainen. A tukee vaikutusarvioiden pääosin myönteistä arviota, täydentämissuositusta ennen hallituksen esityksen antamista, EU:n neuvoston kriisijulistusta soveltamislain edellytyksenä sekä tuen kohdentumista koskevaa huolta. Teksti erottaa lakiluonnoksen nykyisestä hintasääntelyn käyttöönotosta eikä väitä sääntelyn alkavan nyt.",
-      "Viimeisen kappaleen epävarmuus vastaa lähdettä A: hyödyn tarkempi arvio riippuu käyttöönotossa määriteltävistä perushinnasta, tukikatosta, tuetun kulutuksen osuudesta ja markkinatilanteesta. Neuvoston näkemys kohdennetusta tuesta esitetään neuvoston arviona, ei todettuna direktiivirikkomuksena.",
-      "Lähde A on Valtioneuvoston kanslian 30.9.2026 julkaisema tiedote ja riittää samana päivänä laadittuun, rajattuun uutiseen neuvoston lausunnosta. Riippumatonta vahvistusta ei väitetä. Valtakunnallinen soveltamisala ja Talous-luokitus vastaavat aihetta. Suomenkielinen teksti on neutraali, ymmärrettävä ja itsenäisesti tiivistetty.",
-      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Molemmille järjestetyille kuvakonsepteille on kirjattu haut, ja valitulle todelliselle kuvalle on pikselikohtainen koko artikkelin sopivuusarvio 9/10. Kuvauksessa näkyvät sähkömittarit ja sähkökaapit liittyvät konkreettisesti jutun sähkönkulutukseen ja tuetun kulutuksen määrittelyyn; yhteys ei perustu vain Talous-kategoriaan. Arkistokuvamerkintä ei väitä kuvan esittävän ajankohtaista tapahtumaa tai suomalaisia kotitalouksia. Kuvakohtainen Pexels-tunniste, lähdeosoite, kuvaaja AV ja lisenssitietue tukevat käyttöoikeutta erillään tekstin käyttöehdoista. Kuvauksissa ei ilmene must_avoid-rajojen vastaista sisältöä."
+      "Otsikko on 55 merkkiä eli alle 60 merkin tavoitteen. Kotilon näyttely ja verkkotutustuminen ovat otsikon pääasia. Lähde A tukee sekä otsikkoa että ingressin tietoja uudesta selainpalvelusta, Ystävän talo -näyttelystä ja lasten ja perheiden etätutustumisesta.",
+      "Kaikkien neljän kappaleen source_ids-merkintä A on asianmukainen. A tukee tilojen digitaalista mallinnusta, piilotettujen kotiloiden etsimistä, Ystävän talo -näyttelyn sijaintia keskustakirjasto Saaren neljännessä kerroksessa, selainkäyttöä ilman erillistä sovellusta, kolmea mainittua laitetyyppiä sekä suomen ja englannin käyttökieliä.",
+      "Lähde A tukee mainittuja osallistumisen esteitä, ennakkotutustumista ja kulttuurikasvatuskäyttöä. Luonnos esittää mahdolliset hyödyt kaupungin arvioina eikä todennettuina vaikutuksina. Yhteistyökumppanit Oulun ammattikorkeakoulu, MetaPilot Factory -hanke ja LudoCraft Oy vastaavat lähdettä.",
+      "A on Oulun kaupungin 30.9.2026 julkaisema saman päivän ensisijainen tiedote, joka riittää tämän rajatun palvelu-uutisen lähteeksi. Luonnos ei väitä riippumatonta vahvistusta, yleistä paikallista ilmoitusta valtakunnalliseksi eikä toista tiedotteen markkinointikieltä. Kulttuuri-luokitus on perusteltu, ja teksti on neutraalia, ymmärrettävää ja itsenäisesti tiivistettyä suomea. RIGHTS-aineisto koskee tekstin käyttöehtoja, ei uutisväitteiden todistamista tai valokuvien oikeuksia.",
+      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Kolme järjestettyä kuvakonseptia ja haut jokaiselle on dokumentoitu. Valittu generoitu kuva vastaa korkeimmalle sijoitettua turvallisesti generoitavaa konseptia: kannettavan näytöllä on yleisluonteinen virtuaalinäyttely, ei väitetty toisinto Kotilosta. Erillisen mallin pikseliarvio on sidottu samaan kuvatunnisteeseen ja artikkelitekstin tunnisteeseen; sen sopivuusarvio on 10/10 eikä siinä raportoida ihmisiä tai luettavaa tekstiä. Kuvateksti sisältää täsmällisen ilmoituksen 'AI-generoitu kuva. Ei valokuva tapahtumasta.' Kuvaa käytetään selainpohjaisen näyttelyvierailun kuvituksena, ei todisteena todellisesta näyttelytilasta."
     ]
   }
 }

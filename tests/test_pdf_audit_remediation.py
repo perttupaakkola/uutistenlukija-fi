@@ -198,6 +198,53 @@ class PdfAuditRemediation(unittest.TestCase):
         unrelated_html = (output / site.article_path(unrelated) / "index.html").read_text()
         self.assertNotIn('<section class="related">', unrelated_html)
 
+    def test_related_render_requires_topic_before_category_publisher_and_host_boosts(self):
+        shared = {"publisher": "Example municipality", "category": "Kotimaa"}
+        anchor = self.clone(
+            11,
+            title="Kirjaston remontti alkaa lokakuussa",
+            source_url="https://example.invalid/news/a",
+            **shared,
+        )
+        unrelated = self.clone(
+            12,
+            title="Jalkapallojoukkue voitti mestaruuden",
+            source_url="https://example.invalid/news/b",
+            **shared,
+        )
+        related = self.clone(
+            13,
+            title="Kirjaston remontti valmistuu keväällä",
+            source_url="https://example.invalid/news/c",
+            **shared,
+        )
+
+        def record(job):
+            return json.loads(job["packet"]), json.loads(job["draft"])
+
+        packet, draft = record(anchor)
+        unrelated_packet, unrelated_draft = record(unrelated)
+        related_packet, related_draft = record(related)
+        self.assertEqual(
+            site.related_story_score(packet, draft, unrelated_packet, unrelated_draft),
+            0,
+        )
+        self.assertGreaterEqual(
+            site.related_story_score(packet, draft, related_packet, related_draft),
+            4,
+        )
+
+        output = self.render([anchor, unrelated, related], public=False)
+        anchor_html = (output / site.article_path(anchor) / "index.html").read_text()
+        anchor_related = anchor_html.split('<section class="related">', 1)[1].split(
+            "</section>", 1
+        )[0]
+        self.assertIn("/" + site.article_path(related), anchor_related)
+        self.assertNotIn("/" + site.article_path(unrelated), anchor_related)
+
+        unrelated_html = (output / site.article_path(unrelated) / "index.html").read_text()
+        self.assertNotIn('<section class="related">', unrelated_html)
+
     def test_about_and_actions_do_not_publish_an_unverified_contact(self):
         output = self.render([self.template])
         rendered = "\n".join(path.read_text() for path in output.rglob("*.html"))
