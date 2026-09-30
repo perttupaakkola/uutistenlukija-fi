@@ -256,6 +256,38 @@ class PdfAuditRemediation(unittest.TestCase):
         self.assertIn('href="/tietoja/#korjaukset"', article)
         self.assertIn('data-share-url="https://uutistenlukija.fi/', article)
 
+    def test_scoped_normal_text_contrast_rules_exceed_four_point_five(self):
+        compatibility = (site.ROOT / "static/style.css").read_text()
+        portal = (site.ROOT / "static/css/portal-overhaul.css").read_text()
+        theme = (site.ROOT / "static/css/style.css").read_text()
+        self.assertIn(
+            ':root[data-theme="dark"] .portal-feed-item__meta a{color:#8ab4ff}',
+            compatibility,
+        )
+        self.assertIn(
+            '[data-theme="dark"] .portal-river .portal-module-head a { color: #8ab4ff; }',
+            portal,
+        )
+        self.assertRegex(
+            theme,
+            r"\.site-footer-copyright\s*\{[^}]*background:\s*#0a0b0d;[^}]*color:\s*#808080;",
+        )
+
+        def luminance(rgb):
+            channels = [value / 255 for value in rgb]
+            linear = [value / 12.92 if value <= 0.04045
+                      else ((value + 0.055) / 1.055) ** 2.4
+                      for value in channels]
+            return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2]
+
+        def contrast(foreground, background):
+            lighter, darker = sorted((luminance(foreground), luminance(background)),
+                                     reverse=True)
+            return (lighter + 0.05) / (darker + 0.05)
+
+        self.assertGreaterEqual(contrast((138, 180, 255), (16, 18, 20)), 4.5)
+        self.assertGreaterEqual(contrast((128, 128, 128), (10, 11, 13)), 4.5)
+
     def test_datetime_uses_utc_machine_value_and_helsinki_dst(self):
         self.assertEqual(site.semantic_datetime("2026-03-29T00:30:00Z"),
                          ("2026-03-29T00:30:00Z", "29.3.2026 klo 02.30"))
