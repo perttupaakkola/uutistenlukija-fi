@@ -4,297 +4,32 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "a8032138a2ed3ae106c80cebdedc37e57e54f48a",
-  "job_id": "d8d916de41e04c9af7ee4d4bf3fe39f91e703aa94f892e786e5642e555e4703b",
-  "packet_sha256": "daabbc6ee9d5fc27fa9a0df685f21166de771d1bc74b86f0942ab0ca7bd5e64f",
-  "draft_sha256": "533d98fc67a9dcffc67cd89bbdd1da4099eabd5030591bf5e1aebe19183b31c8",
-  "image_sha256": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
+  "job_id": "1fc73b45c1727e36b8283ed678be965d1c656b51016c257cc65d8966efb030bb",
+  "packet_sha256": "a51a73f2250b4b0ec4d00000f63a080a6dcc1e8e4711618055272386fbdaf428",
+  "draft_sha256": "cbdf4b553b29bed26b62979f475552f3e60c722e3513d91eeb11ee3a01606c22",
+  "image_sha256": "de2e8779bc5d466e6aa9d35b71aa1cf59d806a87b4cf8fb8c7c63ebd913ec290",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "4a301528d6099f68ac143838ef630a48b889b140ab2543df7db8adc54ea0cb73"
-  },
-  "stock_image": {
-    "alt": "Arkistokuva: Kapea kuiva oja, jossa on ruskeaa kasvillisuutta ja lehtiä, kulkee vihreän nurmikentän läpi pienten puskien ja puiden ympäröimänä.",
-    "caption": "Arkistokuva artikkelin aiheesta.",
-    "classifier_output": {
-      "category": "Kotimaa",
-      "concepts": [
-        {
-          "depictable_scene": "Todellinen valokuva Hämevaaran Viikatepuistosta kohdasta, jossa Multaojan uoma ja sitä reunustava puistoympäristö näkyvät samassa näkymässä.",
-          "must_avoid": [
-            "Presenting planned park improvements as already completed",
-            "Unverified depiction of the announced resident meeting"
-          ],
-          "must_show": [
-            "Multaoja stream channel",
-            "surrounding Viikatepuisto park landscape"
-          ],
-          "rank": 1,
-          "safe_to_generate": false,
-          "search_queries": [
-            "Viikatepuisto Multaoja",
-            "Viikatepuisto Hämevaara",
-            "Multaoja stream banks",
-            "Viikatepuisto Vantaa puisto"
-          ],
-          "subject": "Viikatepuiston nykyinen puistoympäristö ja Multaoja"
-        },
-        {
-          "depictable_scene": "Nimeämätön suomalainen puistoympäristö, jossa kapea avo-oja kulkee nurmi- ja puustoalueen läpi. Uoman vesi ja loivat kasvillisuuden peittämät penkat näkyvät selvästi; kuvassa ei ole rakennustöitä eikä valmista uutta reittiä.",
-          "must_avoid": [
-            "People or body parts",
-            "Recognizable recreation of Viikatepuisto or Multaoja",
-            "Completed new route or invented flood damage",
-            "Invented readable text or logos"
-          ],
-          "must_show": [
-            "narrow open drainage channel",
-            "vegetated banks in a park"
-          ],
-          "rank": 2,
-          "safe_to_generate": true,
-          "search_queries": [
-            "puiston avo-oja",
-            "kasvillisuuden peittämä ojanpenkka",
-            "park drainage ditch",
-            "vegetated drainage channel"
-          ],
-          "subject": "Puiston ojan varteen suunniteltava ulkoilureitti"
-        }
-      ],
-      "version": "article-first-v1"
-    },
-    "credit": "Photo by Bill Boaden on Wikimedia Commons",
-    "depicted": "The image shows a wide-angle view of a grassy field under a clear blue sky. A line of trees with bare branches forms a dense background on the left side of the image, extending towards the center. In the middle ground, a narrow ditch or dry stream bed runs diagonally from the lower left to the upper right, filled with dry, light brown grass and some fallen leaves. A vibrant green bush with small leaves is situated on the left bank of this ditch, casting a shadow to its right. On the right side o",
-    "generated": false,
-    "hotlink": false,
-    "license": "CC BY-SA 2.0",
-    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-    "local_path": "media/13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26.jpg",
-    "pixel_review": {
-      "alt_fi": "Kapea kuiva oja, jossa on ruskeaa kasvillisuutta ja lehtiä, kulkee vihreän nurmikentän läpi pienten puskien ja puiden ympäröimänä.",
-      "approved": true,
-      "article_text_sha256": "0380147d6312390072492c12b1238896758e2adc9dd63c84f28d1ffe89e060c1",
-      "concept_sha256": "babf91bd12ada78caab48efc7d6a3aab1cabf9cfe4c8a793d1f54733a2953b0d",
-      "description": "A narrow, dry drainage ditch with brown vegetation and fallen leaves runs through a green grassy field. A small green bush grows on one bank of the ditch. In the background, there are several trees with bare branches and a line of trees forming a forest edge under a clear blue sky.",
-      "fit_score": 9,
-      "image_sha256": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
-      "model": "google:gemini-2.5-flash",
-      "must_show_visible": [
-        true,
-        true
-      ],
-      "no_people": true,
-      "reason": "The image clearly depicts a narrow open drainage channel with vegetated banks in a park-like setting, which directly matches the selected concept. The article discusses addressing flood problems in Multaoja and creating a new outdoor route along the stream, making this image highly relevant as a generic illustration of such a feature.",
-      "reviewed_at": "2026-09-30T00:45:36.086387+00:00",
-      "source_context": {
-        "image_sha256": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "photo_id": "wikimedia-129101551",
-        "photo_url": "https://commons.wikimedia.org/wiki/File:Drainage%20ditch%20in%20Ickworth%20Park%20-%20geograph.org.uk%20-%204464991.jpg",
-        "photographer": "Bill Boaden",
-        "provider": "wikimedia",
-        "title": "Drainage ditch in Ickworth Park - geograph.org.uk - 4464991.jpg"
-      },
-      "source_context_sha256": "6fc59e663d62020a6890109a7200d6276f6bcf189bfe98b0f019f72aa915b96a",
-      "text_audit": {
-        "examples": [],
-        "readable_text_present": false
-      }
-    },
-    "pixels": {
-      "height": 4000,
-      "mode": "RGB",
-      "variance": 7733.0,
-      "width": 6000
-    },
-    "relevance_check": {
-      "accepted": true,
-      "evidence": "A narrow, dry drainage ditch with brown vegetation and fallen leaves runs through a green grassy field. A small green bush grows on one bank of the ditch. In the background, there are several trees with bare branches and a line of trees forming a forest edge under a clear blue sky.",
-      "matched": [
-        "drainage",
-        "narrow"
-      ],
-      "method": "vision",
-      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
-    },
-    "selection_evidence": {
-      "article_text_sha256": "0380147d6312390072492c12b1238896758e2adc9dd63c84f28d1ffe89e060c1",
-      "decision_sha256": "d7fd0515063bdbf0b0a30ff75eebee87d429a422dc8510b96139b94b9af336bc",
-      "minimum_real_fit": 8,
-      "searches": [
-        {
-          "candidates": [],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "source-news",
-          "queries": [
-            "cited source image"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "wikimedia",
-          "queries": [
-            "Viikatepuisto Multaoja",
-            "Viikatepuisto Hämevaara",
-            "Multaoja stream banks"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "8e0b144653c937f6dc3e5319e892227edfa2296cbf6dcfde957630662bb37213",
-              "license": "Pexels License",
-              "reason": "The image depicts a forest landscape with mossy rocks and trees, which could be a park environment. However, it does not visibly show a stream channel (Multaoja) as required by the concept. Therefore, it fails to meet a key 'must_show' element. One or more required concept elements are not visible.",
-              "source_url": "https://www.pexels.com/photo/moss-covered-rocks-in-lush-nordic-forest-36964282/"
-            },
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "d018e77910866ff6b4cdd0a194630e623105c347ff15237e0189a2205bfc21d8",
-              "license": "Pexels License",
-              "reason": "The article discusses the Viikatepuisto park and the Multaoja stream within it, focusing on flood problems and planned improvements. The selected concept specifically requires a visible depiction of the Multaoja stream channel and the surrounding park landscape. The image shows a forest landscape with rocks and heather, which could be a park, but t",
-              "source_url": "https://www.pexels.com/photo/scenic-forest-with-stone-structures-and-pines-39065801/"
-            },
-            {
-              "approved": false,
-              "fit_score": 3,
-              "image_sha256": "f4ae997f4823bb2632b24701541b1489012a1fdde228ef49b6eba7a25caf4390",
-              "license": "Pexels License",
-              "reason": "The image depicts a snowy, rocky landscape with trees, but it does not show a stream channel or a park landscape that could be identified as Viikatepuisto or Multaoja. The visible content does not match the specific elements required by the concept. One or more required concept elements are not visible.",
-              "source_url": "https://www.pexels.com/photo/photo-of-rocks-with-snow-near-trees-11249108/"
-            },
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "1faf01d39cba8aba3735be90f247d799daf774df640c5c2c43414ae1c15a83be",
-              "license": "Pexels License",
-              "reason": "The article discusses the planning and development of Viikatepuisto park in Vantaa, Finland, focusing on a stream, walking paths, and playgrounds. The image shows a statue in a natural, forested, and rocky landscape, but it does not depict Viikatepuisto, Multaoja stream, or any park-like features relevant to the article's subject. The visible conte",
-              "source_url": "https://www.pexels.com/photo/the-statue-of-madonna-with-the-child-in-trillemarka-norway-9606480/"
-            }
-          ],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "pexels",
-          "queries": [
-            "Viikatepuisto Multaoja",
-            "Viikatepuisto Hämevaara",
-            "Multaoja stream banks"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "unsplash",
-          "queries": [
-            "Viikatepuisto Multaoja",
-            "Viikatepuisto Hämevaara",
-            "Multaoja stream banks"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "google",
-          "queries": [
-            "Viikatepuisto Multaoja",
-            "Viikatepuisto Hämevaara",
-            "Multaoja stream banks"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "source-news",
-          "queries": [
-            "cited source image"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 3,
-              "image_sha256": "0ad64614c7d269ed9484b1f2dcc804e8c261dd2d245bb6c28824af22ee15816a",
-              "license": "CC BY-SA 2.0",
-              "reason": "The image shows a ditch with vegetated banks, but it is clearly in a rural or agricultural setting, not a park environment as specified in the concept. The article discusses a park in an urban area (Vantaa) and flood problems in a stream within that park, with plans for recreational routes. The visible scene does not match the 'park environment' or",
-              "source_url": "https://commons.wikimedia.org/wiki/File:Drainage%20Ditch%20-%20geograph.org.uk%20-%20587540.jpg"
-            },
-            {
-              "approved": true,
-              "fit_score": 9,
-              "image_sha256": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
-              "license": "CC BY-SA 2.0",
-              "reason": "The image clearly depicts a narrow open drainage channel with vegetated banks in a park-like setting, which directly matches the selected concept. The article discusses addressing flood problems in Multaoja and creating a new outdoor route along the stream, making this image highly relevant as a generic illustration of such a feature.",
-              "source_url": "https://commons.wikimedia.org/wiki/File:Drainage%20ditch%20in%20Ickworth%20Park%20-%20geograph.org.uk%20-%204464991.jpg"
-            }
-          ],
-          "concept_rank": 2,
-          "outcome": "accepted",
-          "provider": "wikimedia",
-          "queries": [
-            "puiston avo-oja",
-            "kasvillisuuden peittämä ojanpenkka",
-            "park drainage ditch"
-          ]
-        }
-      ],
-      "selected": {
-        "concept_rank": 2,
-        "fit_score": 9,
-        "image_sha256": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
-        "kind": "real"
-      },
-      "version": "article-first-v1"
-    },
-    "sha256": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Drainage%20ditch%20in%20Ickworth%20Park%20-%20geograph.org.uk%20-%204464991.jpg",
-    "stock_provenance": {
-      "attribution": {
-        "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
-        "source_credit": "Drainage ditch in Ickworth Park by Bill Boaden",
-        "title": "Drainage ditch in Ickworth Park - geograph.org.uk - 4464991.jpg"
-      },
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Drainage_ditch_in_Ickworth_Park_-_geograph.org.uk_-_4464991.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "license": "CC BY-SA 2.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-      "photo_id": "wikimedia-129101551",
-      "photo_url": "https://commons.wikimedia.org/wiki/File:Drainage%20ditch%20in%20Ickworth%20Park%20-%20geograph.org.uk%20-%204464991.jpg",
-      "photographer": "Bill Boaden",
-      "photographer_url": "https://commons.wikimedia.org/wiki/File:Drainage%20ditch%20in%20Ickworth%20Park%20-%20geograph.org.uk%20-%204464991.jpg",
-      "provider": "wikimedia",
-      "query": "park drainage ditch",
-      "retrieved_at": "2026-09-30T00:45:31Z"
-    },
-    "stock_provenance_sha256": "0c3aff5243535d8197a340bec7416bffe1aae3a62906b3a1895e0753aaf48201",
-    "url": "https://uutistenlukija.fi/media/13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26.jpg"
+    "provenance_sha256": "ed4bed8e02d31b118b61cf18f99cf2c22586862e18ed1e7f9852138d149f9d43"
   },
   "new_article_files": [
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html"
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "989fbc51eb71105f60b601d18ed9e917a8416cfefd8055d93fc1afcab845212b",
-    "_redirects": "0fddd94adffa29fdb6c20d54be413c2f767b91be38f94b765d469e15cadb60bf",
-    "ai-kuvat/index.html": "898d9cc9226f02a5dbd97bb88251d947e5c7b301671ff8ab62d521d23ac184eb",
-    "categories/kotimaa/index.html": "3326b80e3b1c39c2aaa77ede571485fd3b3c49602d3cd862fdd9669f35585d1a",
-    "categories/kulttuuri/index.html": "53b5eca027f0ba3ae14e8eb031c78f9629220a6161f285711b0e72cdf203e847",
-    "categories/talous/index.html": "4596b67fde86bc45fbed0c95b9be004d6962fab75c6f57218ad12baf0c156406",
-    "categories/teknologia/index.html": "1cca4b92881f40ada74c5519e8f5888ae2b775a8e24d51f1d5009fb8d8471c88",
-    "categories/tiede/index.html": "07bee5f4eaef532aa09dc8f7d5e8b36352bf6a9bdf7cbf7f424a96778b5a2858",
-    "categories/ulkomaat/index.html": "f4bb6b62ee10954f455100d389e58835ce45c214d0a01ac56a7e4db2a94f1d26",
-    "categories/urheilu/index.html": "129298be32d059f67ffce453cb3303d0c1ebeaf3d35e5f5d95eda7c3988da799",
-    "index.html": "1337f33f0636086e2bf47b53ac7bcc1f046bc65d9efed68ffbb6c73b665477ca",
-    "lahteet/index.html": "aef3708e2ceef2176fdccd5af3c8b9bc3938a0812a5496f3adb94f7679381c73",
+    "_redirects": "4c2c2e304fc8cd1bc62b2d436616674fc8562b26b42e101bc6e0b6d4626493db",
+    "ai-kuvat/index.html": "1583078223959e7f8a2d07ae93d450fb599425ca28ca231b5a12ad90244c198f",
+    "categories/kotimaa/index.html": "ae215968a34ebee401c53173181d8f80f61baee2386610360bec986c5e56d3fd",
+    "categories/kulttuuri/index.html": "47d2a6868d7abe899f9eafc31aa48d0be364177605b55a835056fc9607ae38b4",
+    "categories/talous/index.html": "8cc08a457356ef6376c412b35545168a204700d5bcd7b2eccba7faf4f193f037",
+    "categories/teknologia/index.html": "a2374cb0a537ea2601f6389da76e151831ae59a96ec504adcee8b06278d1f654",
+    "categories/tiede/index.html": "8cb86c401af95599cf095c202fd16199ae535cb6965aaa2e83681f3931497ea3",
+    "categories/ulkomaat/index.html": "611694740a0699658ffbf7807cb08e594fe4b4c2bd61cc9bd684a99f13faaa99",
+    "categories/urheilu/index.html": "7162450a353a6086d8d8f42350b8255a8f79b9429cdc3690570323dd03dd3e87",
+    "index.html": "1ba338120d353fe0fa67f475f4003dba498baf5019ed796db6ea5c4dd00fff69",
+    "lahteet/index.html": "d876f7d1dfa76c4d4c1eeda1a7259a9d70944b9f638d1bea492b4c4dcbb66cf1",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -693,6 +428,7 @@
     "mvp-assets/dcac35966eebaa4bb71bb2bd7b5b5534a0a90f106e912af46043208230713a37.jpg": "dcac35966eebaa4bb71bb2bd7b5b5534a0a90f106e912af46043208230713a37",
     "mvp-assets/dceb74e30728afa619a3e1cf98fcbf59a15bd572d8eb99f73e488b7a0c8839f3.jpg": "dceb74e30728afa619a3e1cf98fcbf59a15bd572d8eb99f73e488b7a0c8839f3",
     "mvp-assets/ddd0a52f7e77384981e33d4c54ac6e7ee5b694d615c4a8a4c973a440e838bbc4.jpg": "ddd0a52f7e77384981e33d4c54ac6e7ee5b694d615c4a8a4c973a440e838bbc4",
+    "mvp-assets/de2e8779bc5d466e6aa9d35b71aa1cf59d806a87b4cf8fb8c7c63ebd913ec290.jpg": "de2e8779bc5d466e6aa9d35b71aa1cf59d806a87b4cf8fb8c7c63ebd913ec290",
     "mvp-assets/de56efa2977032648cfe56a0fee1510a6c34dce15bade634fdf7e9734d8f827c.jpg": "de56efa2977032648cfe56a0fee1510a6c34dce15bade634fdf7e9734d8f827c",
     "mvp-assets/df22061ea5e12cc2743823970e9c8f23c007146e0935b2882ccc32bdad4aeb3e.jpg": "df22061ea5e12cc2743823970e9c8f23c007146e0935b2882ccc32bdad4aeb3e",
     "mvp-assets/e30285f7354046d1034767b63a4ef9089678b245442ac406c133694a311c4958.jpg": "e30285f7354046d1034767b63a4ef9089678b245442ac406c133694a311c4958",
@@ -777,19 +513,19 @@
     "mvp-assets/portal.js": "17dcc8a25306b1900ee898c13e74168d09ab29df3a217b113fb72e50f4a573e3",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "6b3d4bfb8e6aebb8496dfa3ec2fb6c9846b18b85b0b7cf98bdbfee64787365fa",
-    "oppaat/index.html": "82d99dc2d6868c4fcb314011acbfb53e6ea6786ba2e797ad67ecc21517e52a9b",
+    "oppaat/index.html": "ebc49352d983634a1829249aa8ca3822a6605916cd18f3b31dc20a7bae0cdd8f",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "2dcf374351199e227785317aebb41f0fa1f1181f22c11ca8426b27a7b5ec547a",
-    "sitemap.xml": "9063b22d37c06b351f88bec67912ff0aca1c6f2c176aa93eaad75b572436ef24",
-    "sivu/2/index.html": "df5951165f5cd98a76e7c46d72fea5bb621675e43cb6656b69350a238a68ec80",
-    "sivu/3/index.html": "117153193e83e874255f9d1f23848058a2a91fdc2d64f2768f6c740f12180d8f",
-    "sivu/4/index.html": "b3e0d1eef9cb1c96c8e438d07b1467d77a3e3d88fa478e3402f0f8b4af32ef88",
-    "sivu/5/index.html": "3c87094af6496c25606d19c01721f41a2aa876fc15a92d48a559a7d081307915",
-    "sivu/6/index.html": "d151c1813def3889c21b1fd1e8569d84a82def5191ab201b2dfb82f243634e9d",
-    "sivu/7/index.html": "12cfb69b9448833ffc3eaa5cd4327b56f37f8b99b6df2383b836cd200287fd57",
-    "sivu/8/index.html": "0609facb83c37b81d8d40c1635d34cb04907beaae8cc48bb61426111d923d90b",
-    "tietosuoja/index.html": "f538e774b071fcbb8e11dc67679d01cd3003a0a540677a656e2686a166c54088",
-    "tuoreimmat/index.html": "0c809258e24af7d0ab13620b24a99166df6c5db22bd8280eb25df7bc8bf490bc",
+    "rss.xml": "446446ca340cabffeccc929cf43af88fa27b2297444c3e48d1d9dfbdc2199328",
+    "sitemap.xml": "e03e7c256e9dbcc181ce337249524e56e42410855f372f3955508c431baa5326",
+    "sivu/2/index.html": "e256d8b5a874fa10ba48db5e7ff989c4be6291958771933239249a786d51337a",
+    "sivu/3/index.html": "bd84e59f2ca924394c7b33bdbcfa28f42308d20c9cb9e3f496429bc5942cb9d6",
+    "sivu/4/index.html": "78cbc16787844753e935dbd2cda8dd546711f026382aa07df219be61396a5106",
+    "sivu/5/index.html": "64ee1b391c46435aeef2c8500d2f68116755c9f1a36fb77c7be46b6c2769ae4c",
+    "sivu/6/index.html": "882dedac4b507523be003d2855d8c2dd21cf4368b03b39a652ee7fd5b32da432",
+    "sivu/7/index.html": "f4a82a3dd172f392cddd757b981559f5dcf5d23c8ae75150d71973856bfab04f",
+    "sivu/8/index.html": "f0b3fcc05da3c0285e3e42960899ccd7ba6a3989fd7eb44a90faa597cfe5a55a",
+    "tietosuoja/index.html": "dcfcc92d748dfa5f4ffd25e14df6158dc2ebc2f4734a8a234090ef2a51dc3d08",
+    "tuoreimmat/index.html": "0d9e8ec78b3e5cc0ee5dc95b563c240e256688a57fb530e358ece03219f98d26",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -803,413 +539,377 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "a57df90d689bc1b835836bf59abb7c04c6d73a375d8b105f51693b9b140c888a",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "878267c32bb45f45a594bd78c4cd33251c66be05fb1fca6a9c74d4471e510b2a",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "2dcf87d97cdc097830a315dae4f8970a11eb06533d7e48858bc5da2b09b655f5",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "5dd6932d7d07ac61ffc84366a8b282115b15d61e8f7b0c9d8076d6f00d86652d",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "37d7662772ad06b41d9dbe548d7cf957757fd14fe9225a4127bca3e29b57609d",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "08a494bcfc3abfb90b6940d3011f5698cd5f40ab1a6fd3721a693f08a9e3d0a5",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "5815cafea8935e5bb12e763de0b80162b00356eb5db374c233ca23f838c0ccab",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "96cbb6e8496c9ce73d8d2b00ccd18f0b3bf68d8f997f7bad1ce177da49403531",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "43e7b95443266e279948559df0473c100a388d03af115d5bae988edfa7b1bb7a",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "f2e457f9131f2a1ae2f45070b852af09a1926438638091bbb28c225a652e14e9",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "cf28f59a5930b5da688ab029f844a69c5334e615372a4cfc27f1ebc1832f9fbe",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "030cd9e3fff3e3eff07db6ffd95b671dc53646a442013a626ed978ca81118002",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "12c3fbb3192db2311ba049b5ada358fccdfb47d5479e791704abebcc1947ff4b",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "8e2270bedec14abec5143ea741edd11215e229e8efc813573c6fd3656088ba88",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "c8d9942b98a1e089e3787030ffe914c1cfbcd875fd6c5c245df48fb59721e286",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "5afc3a781e11cd9953da1bc0e5398dfaa4b9e12a800ff399f351740a00583d45",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "94c4c943628fc5547e8b2819f2e0a54f1f7e624701f1479cb8714f1d5f90a657",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "7f1da1d3dac10da24638d88f9853aaf7e4f86d6fbb3661b361ec37ab19a3a816",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "feb8c9d7428c151cc6e9a02a0c30d297ab3504b8e56b1ee0d2fa0b59399a31d1",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "d703e210460324f154f83cdedb9ad95a7630789465781893fef1a70e8ec52a80",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "d3736ce8189fae504f49882056400fecb12e88aa5bb653667d9ad3d94ced84b7",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "41ea34a96fa192a5d8cfe92c6dd3ba6777cb6e5f755b57b954bfcfffd2041098",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "b0fbc299a22ec95be9d98b811c986b6f1417c14ae50644effa5c9d2a0d1599f6",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "6a16a40246c043bb73b5280f98dfb9ec053f299072ec5d318c0d25a093d8844d",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "bff3b81989c65a6e7c86c1b697a11654ba7e9c69aa803d09b405b9ae1ce435fb",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "aef2314432b0892601364d822db5acf360aeccf238e9ce3a59598740b4a629c5",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "b461dbd6de3c3c1a46c5edea19b9d590b396f7a96d51d74a80ffa187019b65b9",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "c29f011aa75042b9f61ba45305b96aa055bc45f47f14d81499b75d98bb717aeb",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "b2c26f8fa775d2e5ce373bf771fbc919eb14aeb793cec0eade1d0ffeec2ab54b",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "3a512e3fa812c42a446754e6c7db3cfed282c8d9f8651f0e0654d9063d54540f",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "c88bf1356c25b613e62401066157fef3183b27984f515cd85a62a8e7d2db9fc8",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "1b373d51764d57fbe5a43c06eb08247ff1fabcbaf40e5bfc53134cd261c8e2ee",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "02af2f40bd5bbcaab76800c48095bd13aa1a2758ed942675999b9edf75287c91",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "f1eeb36663c630572b179b61e01f13a0427744cd54b592d2e537331fc3064dbe",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "2a587be9f6bf0177028143e8e0ca8436700dbf22d653d4ee2406295a5bc8a976",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "61b94551f6a4d17d2d94b42074f63321ff5b0a20ec87222c7f21bf4952e684f2",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "0d90b627961190e6a9265055630cb5e246dccf3ad08fce73c59d0b66c755f308",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "dbf20e3c3d36a003dee0a11951e379ff161f08987c1bcd60a3472234fa5cbcfc",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "325e1f3598533b93d7828fe1b0d5d1a8d79f2d5a589fec1b60666c5900c03286",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "160961fee7d9172f327f485d9d70861b390460099bedef05e71336117af23ac0",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "e0208fb2ce670c33f9782cddc681ed71f58211d84b4b257bbbb86b36470bc922",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "09934a5961c7b9bdccae159aff8c3ea6adb40a3e11539aefeab0b3d6eb88aa42",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "01f0050b27b3157c9ef75a06693c3cd277bfcb4868c18932b069375b2949507e",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "83e155239945dfcad6824fe2b39c6395fd22288b314f81d6970500bb2db3bda5",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "9341b8827725c5f6022364c1c2ee4dc7b727dfcc70bff1a1cf19c80c603d41bd",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "646d8b288e69671a0461ebbc9ada4acbb7d5b635d055dafa0761552b1cc2e8bf",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "7ec2cee7cdca507fb4dd2152148a690a57a10dfd95807796a443a35481c68f8d",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "fdf8c07aeea266ccb92f238fcb4e130da1bb403c8e6918363e21e2900963120d",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "b67b516bedd188cf9e6eb824367c6b12f960beef73d5ff1c5963b56818c12cc9",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "3afc64ae122c4408683e70ec79a200e6d836b8fa217bccc60d585869e62d4ce3",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "1f7f21ceea185e42eaace12791083d4d9aca7117151bba186307243ad0b26264",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "22bbad625afaf23d7ec7b3b15e1355b219395ed0c8ea6cf0136a25108127c580",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "16b2c47f80b22ab81f4df8ce09432dcf58186e9566a39c87a297a835b091ba69",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "4a53c9a46bb68c1a8559e70762db2095cab80234c4214468da0a7d67ee408763",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "68420c6410eab462a43c32af1d6248b05d9c66aa93486d356fb0bc16fa7883a6",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "2a75a50059cc7cb28baa0134ebf35c7df2b81bf09e75fa911b2a9a540d983f6a",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "6163be48642035db555921d1fa31408f0c11af306a9523a4951fdd55a3bb5c9e",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "2e329ecf52149f14eaea548007dce5df32ed320a47f9963cfb1f09923fb5d43e",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "9c46169c68ca3418d171520577c683175c2e2a402ada23c077f2e7b23775f6f3",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "d4e3e4d8f6db362b31fff100635f43de7a75bbcc269d5ecbcb1ee48ebe243c34",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "c887c60708f6b0b39e1e400b656f92cc026f9d64da41ca9b6a7f5da94256fc45",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "bba4acf55be81d6b07a7efd5e8bf83bac9b39500eaf02d101349bca81d0e3b40",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "0d3af4e4c82e6daa8acb6601606824b0ce46f5220007d4d105aa96866e9bfb62",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "8a3c54a8794be3cabc96cb7ae9a8fcf749333c71f0e3a70d98817f796463a251",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "aeb67f10939a658385a193df5ecbd5be91126f5e0e524f1b9b1b4c27e0d8b1b2",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "f610d3b7152b10d4152566e1530af7e5df451d10ea17cd08ed851aee60366cc1",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "f3c22d084eb27cb74341968f5e206c207214de8568407b894758bf3e134e9466",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "dbdfdebdbdde728a3e99b9cd8973bc3ca3a03a9db03ea035468dc3636a979396",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "aa3f0047e777357e59f88282719d15e5c4e008a261aa3fee6ad3635a0be653ea",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "8f73794b003cac34c43c49082d254635c4edf97c481449493bdbec9fc1e078b4",
-    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "494cb2dda0b441cb1c37c4cb87e66cb53cdada6ad985c33e39205334a720feb6",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "cc127eddc4287c1685736831d6f1c5d2cc1386be7be8e9685f2d89c49b4f6e94",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "652300a33949ef56c1fb44d5a96282c6dd55fa9a792cd9893920fc271642dae8",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "4a8863cf2a2d19369f324a62a329f6d928187352bff91d6a85a9915d5272ac0e",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "cd973494fbaae4b9a56f03fc1e5ebb9597d4dcf990ef74f76aed7b2b3a621339",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "cd9f8eb81b9bed0d83292501a11d68bdc19de700b74ebe08ff8e1e55904c1c1e",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "0fdf533ea39063a2be287eae570cd549182f5a3f7b6cce7823e5c68e743ac86a",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "3ba9fb283726a8f5061719f34c03df56493a826a56b5ddd975c057d62c89f432",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "2053d8da9b243af635b02f952406287d96032304bb56286facc018e30a2cd839",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "917b1a8e1aade32cd27cbcb827933c36d03c4a1bbc3eed4fb1adbc13407f3866",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "595cd9c7d6ed5f1b2f299171136a4a8aae6f6508c67c92d9274522ae31e287b9",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "6c7d534307d67046b372a06a0f4d7581aac12a57ccb38a60f0a8e9c6c6494010",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "7584ad3118313e2f4eb2a2aa7f4e1e5c3fc13f7e8c564e416e50f94de26ad246",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "35e9bc5f693f28aeba2f52b8914b41674eca71c23fa187f60696833fefc6804e",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "1429464e0a255e8d638b78dbcd19b4730b3da3f5dbd86e704c4ca82e3d9dee0f",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "92f1213906d876b956684a0150a0ed10239c18c22a5bfc4281fbee54b9546997",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "04534a784bd7962f5eacc1d9692bb50800c646e09386bfbe3ee8fba13472ec6a",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "d1c100619badca41b0557f73e20bc44970ea260816f2753ed8338bbaa376f3f2",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "58152b28d6b2f55f12a5280fbb41fc3c8fd7c89bf6fa3852bd7e4b373157ce34",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "3d1834b02f7f19747d7e90dd9382245c1633de305b70ae00c6eb08202b2c8b1c",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "68562293f80efc084ef56b089ef2600a76daf83b08c0aee206b38a6329798e1b",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "6592929c73d90182c4ce0e667e0519d5e23ec76c2a3bf4225ec21908d1983b87",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "d17beb0e98c729c07ba3ea526e8de2badd89c57bb0244d8bed2f44b45ba13986",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "b8a3e271dcc01d2bcd9110df4ba48517f78a8809d898903daa430a86e6a2b5ba",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "407e6e22cd43a7b05e8b3d4d74cb93d3167bd688f417907e6252824aa76ee4f5",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "d7aa21705c30c1a1aad9e69dc4f6d2013896278b5e2eb6d453d1a6c8e0030b7e",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "42580601fb2b8d5b9d516f7da90a174abd7f8c3daab2b067c5e772139ad5c6ea",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "8b9f0bb146c9096c6a2add7c8ab7d2490809f40200518e5d51c98285257bce27",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "e9f63d91fc6d73ad0ecec5c252e6c77413110d78905cb0a78f6d6a0c96290b65",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "a9e11010ca1b6e4041aa9aa9b98002d964c2d66e1b6df662466bd2e951635a3a",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "7453c753c5079e424bd8072f90c5e162e8e709dafd75c53d379ccdf133bed41f",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "4733555e461115605d4f8b44dc1e677a4e5e84a23d642121319bcdb6a2959009",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "92db2b89fe397058a06b0474e5f49ee74b1c1e5bdbcc4e2e280e7ed0c0c130dc",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "2dc306ee0372cd5d084ab519c73d644e02dce68ae9da1a3a4537ca9944e43291",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "d3b4d82b4ee5f56d744a1ad5307388bddd41a22544ba1decbf59ac7dc3ccb2cf",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "e77d0a158132c04355718d01a2e50c701215388332990866e82cfd742c77f0de",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "72220612b479d20d08014e7ef3afd3392c681c187c9333c195ddf83fdae0be2a",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "704ceab714727d584b852b075001cfe1ac94d847510edc731d1fe6a0f65282a6",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "2fcb1c85c90fa8b3d54ac618cebd99888e39cf785e010092cf89c117a09d4239",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "9b98de59823af1edc99b737eceedf05ccccc9d774ae4a2e27b3448900f39fce5",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "835cef00abc73e90147386e999cf152f03f58e40398e8218bb1cd2580b5a791e",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "e04df03102d890cf7487a01a3a5100d1b98b67ef7dc6607b1be6961852fc246a",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "c1b18f3529cf457cbb15f4fbb0608e5214dcee5ec913d5e139b65c79afd9223a",
-    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "a05cfec65b49d936a4af41738237425b5f29f89994b67a2d472e44bd899d3f22",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "a627c4379bd972fb877a5df8b9af84a85ea8073210f0db86dfaf3ab95866d305",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "eefd93a768f3ee6dd9a6d459daf044aa9c1b42df481cc546d29ae0616682e5b2",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "692ee42402ad8ceba400883e1933f7fbf6e97d75721f898ebf0726cfaab9d9b7",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "1e1421b79ac75866fcc2e8a1af6ff39e8ac633d05dadf88cc314cfc1142e1682",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "2cce4a023bab81b8d2326159599286898e8c0cf9a2bc52f47b052f4b2b26b5a5",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "22e1f1e422254ac84f7af596542febb49114a3d5bbf521424dcf06c9071dfc23",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "cf86ae53aba5337b4a6c7b5381d98b1b3d31b57e6780ff852fb87e7a10c652cf",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "0984829e487132566abe189b3e543ce4a3f2f6ba1e5536e2722db1c4a68aaa97",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "50ff01a04d6c9218ee7e7229725ef575d0c0fbbc23712d684e82a3db396fd415",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "d85b916716dec568830a790505d60af31bccdb9ef745a9c884426cf3e342dbcd",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "a99447053189c63ffdeb8b5cc0424d0225471be61438136b9ef3af30c171f82c",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "1dc421e2856bedc02c75876e35a7f518b0d8d70c5964ba05a8ef80fa5b55ac05",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "cd74577c46f891855d47fb272a18a862cec19f4a63d7cddb7fafd103b15778af",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "fabeb188856656d7e78f97aada2c479eb2bf53ef6fd3c576e7f62e9fc4128624",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "2ac5207410e19294f81521576543d3f8b1c5bdacb7f70051cb2538725e187fc9",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "8c3235d61f5c086a89d84dbec000dd45c1585f5f302cacfccf9e19ea11a5803e",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "39d43524a5540cef905a8bbfd01a297112720798a510dae0fc802887314f61c9",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "4d15afd540fa496ee7b7a6c53d1e5c2fdbcd6af320588c5cb3d39cd1cd654eae",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "a6c5ead2cd3bde4ca89de9d1335d52be5f55e1a8e0da2a77c86feee479bc1ee0",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "1cd0d500aadc14916987370f301b87f0bb8663a6115298d5f459af060653bd4f",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "1223e01b0517a9331a89cdad0de89238e56c4509772012a363140df1d17b4190",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "5ca1ea54a03b8101e0bb28f66a384d64f8936746ff2d048908526c1554cf7140",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "4751580b5d4cdaf213f4f09c9e58eb59b6e06afb4fb439dd2ba4bc97a328bb22",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "b2f4555b54b3f603426bc032ef5d8c73bbd1b21acee75f249d115732fd3ff6eb",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "b1ff03201fe0b046cdde241c55be65acff52a18bb681aa8cc0b34bb0a06e6030",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "370365c1978436c21e15c5b8753476ba3b2b7d9268ebd4e0eee2a6601525888c",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "06e7f664bbf510cd369eabed355e518c5b98be195dfde7b680cf9fa73bd44c83",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "04e05d22508162666f87a83fd9c9e4314c1e292e0e6264533bbe7452c8ed63da",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "3dfad95864321f519ce032c6f2346d57095acf549775119268fe1268d0b0a785",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "ae93803970a6095e92197de7b1608eac4b4b0f26c76df753d27804490e93eb84",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "25a2af4f96e19d94a872dff04f0d307690406db3f1d089699ae12d69d066428c",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "3c7a72847786afd38516d8332ffd29389a4d021cb3d46d05e97d22293c48db69",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "e25661e57e9a7835bd3dbf0cea0365a7ea4da53835c4b3c69f940a4744971e54",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "3bbbad8440828501b7fa5da610be139cc9c9d569232403c311a5442105f7b82e",
-    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "911fa0c847f5330c066186ca99e40b9ec47f3e8a4e39e54562dc1427c640d8d6",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "db53df47fb4be5800333b553021bdd32886b2af45d832557ab963160cc49da39",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "7ef57df33cae0f8976712570e16f30748e49a486379f861b95560175cb759ae0",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "6e94e395f9d779dcf83c4210ecc689e477d75d35ae0b04a1852e6c4582913b2e",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "bdcd1ea494b17913dde157a2f88418c4624a8659321741d4a32f191f7af80382",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "547d595010e291dcbfceaa5fcf0b03347b6bcb2e9a5d93a0f11fa33c4f374363",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "d6848827a73a9575aa431c630675bc4bd4c1c168d78b8c40389c0336667612bd",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "91d70df8d04b93e3b05172ac0701b075befbd2d24e0eadafdda51ba500ddd296",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "0e385f2319a75b74894a757875f49d3e67ac1450261bddf2fdad840b8fd127a7",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "4d45678a5b684a0c117c32ce0dd6ca0ce71f35ec53616c0f7c07aefc712f1b6f",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "fef60ed0e1e7640a7efb5e4a9e5c39b33717cab7a81d7a4ef12d086b622a8a9c",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "b8d82020ad50d2dac87189ce34b5f98e7cf0f298fcd47716e1b06151336c2d8f",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "90ef4f8819b0ff8e3034c3cf836bd9ae01b27822f0825b83f10b4c88a14da0ca",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "51af7dde27a6c8de16fb8d0ff35d242b79cc9eb52c28a5111df3f0af29161a7e",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "65340982afb64f2317403be563b53337a56bc27e5accbddeabb2e6770f94fc62",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "c8ead79b3a881ec0950525671413cc01b5f19cd57352e4ef2d6006962599c0f1",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "ec5cbb0844a2e83d8d6548dc75589cb959bdfd7de413cf94a090fbf786d58d12",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "fc462449f39895c50533bf828804914eda56a4c932169226893f71484fd334ab",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "fd17bc9fac089d3913071be6eedb93162dbe6f46022618a74295b2bfff91698e",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "aeb93b705be6fb98ac6b3ee81abaac485825edc4747e4db5e5119264289803fe",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "f7b95d7eafdad96d81987bc8258473a4f163c8cc02b6a1cc4424821614e3da19",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "d81f6c23ac3258300e8dc6c354c098659ce3800fe19e6961e1019900ad71b297",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "2e7a669e8d27ec887c28e677c77953660ee9c11ee84a7e65f9455fe19d89e09e",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "c7cecd79f57b5ad2fdea3ac0e6d0f1991c25c5ce8d1ebabd22565c11f5686c89",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "1dafdc2b0fdfaaeaddc7571dcbcd03968670096ec42a4e1e4a64363b73308a60",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "885ed1f89ba89c6ffb76a13c12a7544a7ae9d19270864b2c51915f8b71c7a730",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "458ea933b2df41ce60893cbcd166d2ca64c87eb86d689e780d5b65de2c48cef7",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "f9ea277a29ea1719e7b7588def3a6f680b355eaa7c32081ae603c73d45b8795b",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "62efb31a3199f28d246ab2dc7036fef0f7dc9b11eae2b729ae609a948b3b6088",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "af8b62cf2d0995efa59b090fa98be1f6008dbb2f4f100fcacd4ebe462d7f5fb2",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "532122cec14b3c665a93b5934562b32c5fa52ea3dca3f0d24519cb91facdbc0b",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "c1137ac402a5ec1ec54238c2a5fca3b391f4cc98ee47f49ea7bf991c61ef8cd8",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "29061cefb3466c55b481d145189bde81846d6de5cfe5cc97f1c823ce724150ff",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "211ae690a2f20c624f14535103b0726b3304550f67b55de2b52282fac151eaf4",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "b3cfdb2dd0d0387115e75f9906f148b4b3232f00e521dd69c6a548b3128f7d4c",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "d4d1dbcab66c93f9ba2588f52d7878c476ebc7a5a33e648330d31c49e8f546c3",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "29f922d53cb7919a2ac417c18e22a75e4e842435314b0ffb6c5565cdd2652ce6",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "cd68cca7535f62db6cc20a75ccea407e983a58b910e9874c3157c43be7640622",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "eccac65bca408dbe80823dad96c5a4ff723cfe5ffcb4f470b5dd0b1dd37283a6",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "425798c7d80dd343b17d3d0de148e70af4ef969b1774e30e4b7f46e27a53c2e4",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "e7b26f95817a4cb8b2f8cf259b7fa1630cb8f6ea9083973448ad2b1fca75652f",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "d7363716c1a2392b716bad390b696e88936b9226e73e8c538c9f0f5fad762d8c",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "f12efa1f1323accdc6434a89fb3743ee43e48c9cca88491b2b9ccd3f2f515053",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "29f744f6f6bc019b93716bcb76f4d92edf720832248729e3f4aa58d4a0467f14",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "3aa556752514b97c8ba80589494b092d3dd236056152d4ed943f42139dc313fb",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "0d82e68423fa99447fbb53082b6c816ee7590ebe9ade4284f2c484118812264f",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "0460929e8b9528765657d2b347b60e7207f84fde335c2026535f0128917e140c",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "c101bcaea97d4bd5588bab5f8a1a754d3b92886cb3c4720b1a910321e1436300",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "518ee49c94bcd3c9dc6138c5d620c2db13286bb7475752d9446905ab32a8e5d3",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "f2b675afd654c13be6f8e19f1990e476f6633998960a87927fc8da86cabf426c",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "c4446bd280b7b85af75b5d2d8b10bdf580af81be4f620392fdb8b734f23b2595",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "70eab8368ab253b8d9a689e801472b0ce12b29106d930fa141cab9e783aaea65",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "c2ec51c236570b7bf11488a1fa6ca845d821c7b3cb4ef808ba096d5f1c94610c",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "339d5fac990e217f8c8a385a657c0db7278b42448ca3609ae8cef3924e97d871",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "11561d006aa947d89c24b7945b6fac2eae9e885bbd9dec39616b5287cef8b401",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "98e9c65303109790a674f398c98c5e16ef4f26eff6649c00e92e985332404129",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "e48c2dfbd66e2d69a10fcf49e761361cc60672dd4fd73d27bd99ce81e94f7372",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "62aec3d0b94c6753289cb1101e26c3098c49c03f20de14a9e401f1bda3475da3",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "f1d7a3947fe0995a3262a5ac525e0e4323e5ffa09366a03ad4693528d4590f95",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "dc950603c6fe468816d250b2417b3c2d2a610e3ee984126f3e1d1b37a68f30a7",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "c5a4d5d5ade9fc6d7f8b21648c179fb5d8e3b045f780904e48dcafb444e59a9d",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "2c0dd980f6bda74fd9ca1b35df7c5e48c4732001c91011a9c8b4151f31a33700",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "4deb7b3dae01ec6658291b00e9df41f61aef498005949f0e857d4c88b9022623",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "419167eb23a1b9aa708f300de49fef514ab948f11956216acde50287fda6431a",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "3a615c37f5659f15b42189414d4d3b3dc173875846bfabf71c7d82476118eb72",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "2db130150e6e54fddc1997341756e4857655d6675b692b92cd42a024e95e8c3a",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "51e6316ae54a8430606384784f9768114c6920d86f376d19eb3ec800d826d67e",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "513832e6d952c3c83fab236b9c555137028eb2ddfc0b2aab6337fdc353456a8b",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "3a00a5a2f178c50d03cc379b2a7ed480cd19d237d9851da27039bbd46b31b69b",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "41b783c05b970b8511d37b2bbe9c63a2b125f6a05284a6035a1d685572c48064",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "484ae4587232e9b438537a5c22f7a1c92f4a16bd4ac5a151039784489031ddc9",
-    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "cc081dd302406f733419e647b4a0bf117970972c01311066193b97534273d471",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "86de3456e436f49c98f1f58839897267c0f4a24fac71b2ee0171db728ee5609b",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "28719e199cc6e665af8e98363425b57de06f157e99e327a19507936cb642478f",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "faa48481a1a4b3497cff22abef612399f878bb4d8417c43c88d9cfebb6994f33",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "b69d9acd815ad8baa55944d4b860511016f6fe353977e5780033c48b6e70b51e",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "1764133aaae8ed8329d737de1e79ee109307ea12ce6e406b9c5d2f52faeb8e34",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "bc1a6250e38586df0d30519e16766a3f1e7a8634a82f0c74a99823db5488d05a",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "0691faa48d70ebd94aff251d3b3f75ecb0ffcc44b88cff1c90a15a1f8646e97a",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "45d6d52cdd659623809e148b8e007fae54008546db1fc068f35f593eb817aa14",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "83f6666943a0b3a94cae76f85126c4e452e1cc391908da9871ac5d2201f14191",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "c84e49d9319a1d43e5c9efadfb1c926c77fba1be94f948040b8eaf422580f234",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "b810cac0b2da267defd213ad2d327f5def410eaa89d1aafd768e815259aa8c64",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "683919a9a46e9779e2f8742d9413d5dacb7ecc44fba9755d804a915c520e5cb1",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "4f38436a05ffb6e6ee5f2534bb60ba819189d39f3510d9483ada32a119dc80a3",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "81986aeca898bc90d71a3506730e94d3c270dbfc45bc341189d1c7cb6c4e05a8",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "87965a84f93e78fd75fc5230061f26304a2446e20860bf6b2041ad4a9a9ccff0",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "f8468b703180984e685242e88febbc4bda3a84c89096b9656bf7bb3594e8185d",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "27d6759f61fff56dabf6c7bb5b554ef7cd2cee89cc6b0a3f6eb118b664a162db",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "7c4ccba32b97047508017192c4cc92c0c277ad087ee7b4c1dc46963f497eb5a2",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "25ddb159ca6016ebf9b9d435b8a522ac832a21eeb1b025ba0d03fca576ab70d2",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "dd7c85449816ba9703facf0f11c158e1ddfddce0f325da6b2b15d6493b4308cc",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "72ea1ab5997d287cac40b647a2fa7e6666fe48b3aad0c5e0cb7840e88e4e18dc",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "eea4c6118343c556f410d36e71474326399e1cccb333998294472ae57e87a11c",
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "b3a8ce7e308b3b714cb6c56c567ad8a8c79a9b1ed39fd5382f0917b6b4f4b056",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "e9026b6a5b0f9a1125da707af70ce34ee00ae45d08ba495e2302e7733fad565f",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "2878c08191ff050eebaa2c470dc66c0512b3dec99a8a99aa56d28253f8e62d38",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "fcec134170c1f7d4eb72cc2e04d52268f90f73f638e818644b3d968826f88d15",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "acaf5a10520dd0e14f154104c0d37ac8411409115e97fd01089966364202da3b",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "59e07118e235e6f80e01a7617897ab35f5e07e47b1c6fea96f5a0dc1681fe3a8"
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "3d607848b143bd332b4eec19a8bf306727ab1c6f0e86d33f82b3ae274638eb11",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "100f4465e7a5035d446bfcabcbfdccbadcc0a84942169597c88596c174f35c38",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "b6bd8bd7e2d751ab371b227edeaadb0c326677ff3f2be67e367041fa045027c0",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "e3040623b6dc4bc04c88586e48ec6e3803c8e5704c8335cc2eab5c23e0e12bbe",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "25760d91d38bd1c305fbad52bf332490560b1f3ddaed958ad072f18bc7ac7202",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "24dae61b822900f508e7ad2258da246bc07fa3293ac2a7eb5f68a257323ac3b7",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "230454697f67a71a06ca5c3ca82a08c0e78c0a28025d9d287e0cb2aba28c16b9",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "a9caadca0ffb7be67bf914dd1275b8e36d633843c10284227b67b59790b8f036",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "fc9fcbb16f08c2a1704e6615c0e0007d160db2276e2bee6a95932d0267d1344c",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "57252c57339c0285334e820d6cf9c79cc24079fae546ffa31ea02620ed5f4792",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "c65744c97e03227ecc317a89567ba5209c098c81c4c2beea93ec3450cf56f151",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "4cc738ccb8b7b55d61dd0bf9e28dc22378ee4911f6d61bfdea0b900b0008bd8d",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "c3c10b2825c35773ec636b5a6ec840f0f8b04721c79a090ac6724b47fd428cb9",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "696a9b160c3eb346775ee28e8460309e89f8761d5fc68ea9a6ae92df6407fade",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "8083a32f41618ba357fa36a9d769f316c058ae0345075059284ddd2d0a0b7032",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "2ed6882e5de249792430bd66dd1ff27bffea8d8852b4a6c39c9adb59d3b989b6",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "e9b7bff7d96e96915ef57465d826664dd54f3305710dd900ea3cb099a3a5a7b1",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "b868adb1b335d323ee68e8194b232bcda389e844972866a672c9243bc71d7c93",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "c581b2d035fd8e7fdd8db851de17273d5705625c4f8831b39b6745addb41e431",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "4d7cbc89fb293ba792bd90333272b7e7299a8fd83a1b403f0867d4d847000941",
+    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "2ae55189b1d2e3b33a0dde0a216a7cd5a5354f92a64a991df6c25607752d4530",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "926d0131c21513afdd4bae020160fac27a46a04c9f9a70b80052266a540a70e7",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "5bb0541d795936125ff066c780056b6880713e178eb9f0ec07f1e6112334b1d2",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "a5a5ee260630ea3cfa51365d010aba9488e4b0d23ac921cf6628a0c780373058",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "3494b3866dde119182fcfb2ddcd266a3b1ca63da35fe3b74f8ec7a44428983b5",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "9635c05648daa5ee0bff80dd4b99c0c712593c70a5b5f0bd5f56a0f4c678a8cd",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "b7983bc843804725b38f86a6ae593bcd26e30cbc4666788893e54c687fe2d032",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "b6c521d17b54b8ee1feb812e1760ab2d0b739fcadc4426f0436ccb08f6072050",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "2cd67b0714194fb2945f0a0f0260ad9ce76c451ebe7f289fa5c6b63d42783385",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "8328ef7fa83f97e4b2e99469e87b4f52058839f6e4f73c5c7cad4186ca87248d",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "1b2b4431868b30e32cff98ff09b934767c923cb777b8eddaba8819fe3ac1d860",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "0aff76cd5c4d852f40bd14e4997889785836020dddaa5a8c1fb6ecac7536b63e",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "0eb1ecefddd231c314fa44bdc47ec522962612a319758fcc7883415c698286a8",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "f31518a84c6029f750d9bb3ad3b51f34d7528f0aed831477ab29dac28cfb044a",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "78fdcc056ec2373d53dfd9bd367d2bd2c1f1e144de0fe5a4040cf93751d9d1c0",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "c98bc99266396fd0a0f611f7084d5836ab01586b6764ac66167b1d42fc7281d4",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "2fd35f6d48f265bcbb59c1e214f6a316771cb28e0504b007fca6ebf2bc718183",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "3cd55aabd18d09a76d6da2ac7a0bd243cad0ba998487fa3d06b7c3beeb889c4d",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "64e8f59c840910d05d782e515f7a8c33abd29b1cfb6cf267e096336e30ec76c5",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "e3b9621f7892dd13981484b1ff1d6c62f552d3b2a2de526120ad17c96aa9f45c",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "d9930bbbdba43bdeedca2ce1d4ccaf3d531c7c0ce06389b5db4e004fd3ed57a8",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "a0cea57b26c02b4d589ce2b879bf7a48825e6191d508fedf6d8045555f2dcc2b",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "d5a94e755835413414a5b626bfe40454e2601aaab5843a0dc6f21e2982f85387",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "d3b90693df9e2eb615fbc08b55c85bc97bb13af483ab5b311cd08ba97b3ebcae",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "ae0c90d42cda515a0663c130d260f5dd5c0ddb8804bb0a02d1ef362dd67b59a6",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "89360e10726c99e715a427cdf9816fa1a5c368d91462cb75ca495a85c5609e08",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "71bc5288827e21e78b7508ae2500389657f5c57ba392f75698524d817df8385b",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "3aec3d6c0497a5308657daa013c71e360ebf6ab67b35aafa1215f39f0f708187",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "591f77e85f020f4cf6b8cf95884a9c282e91856d23fe29bfada504d8f16eb756",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "1eae5373cc9b1715a071fea295e42767d1d84959fb0da0ddb860b3f87895b073",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "7019308dea1b9f2ae672db8be471b89d9d3408fe9d7beda096d76d650e842441",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "500ddaa69d64e158642d295402f5796bbe664ebdee180fae0b7d7a33dd75cddb",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "6563e18490c6aed07763039319efc517c76f15739516caba053f6d81004689d3",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "782f45021993f92fb020ba626d3263f3551a443eb0085682d7142f77196ee8a2",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "92dac81efcfb46c6f610d4b81afec14e2b362875dc5d6bda83cfa47b1e5d5418",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "b4e419eae3a80589fbf5925ee86b9a974c5f9e6b40176190c09553e1011cebf8",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "f9aabd17118f1fa78d4b4dc4f5131d31eb1fe7b5e0111a168051bfb0927a295d",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "8670bbef89e98c3210c623a1930f43fe1e13def5a700bed7be534223541b8998",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "85d80f6f1d72c4c7371b8687849979fda7aea43ce2f8fa023e1765ae4ba3be4e",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "f685ad101ea79e1916ae199d080e2d96f5ab617e27aef998cd0533cedeacf536",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "283ddc608afb468b848945800e6a0ffae6913b2d27a52dd1a875906eca3860d5",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "3506a6efb598974cca0d19fd80b43e13e02a340357748079d938947049bbe60d",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "32ad509893fc150952dd0e065acd030b3de72badb4516ff75c13e8e38b931fb8",
+    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "6ac7e11a594fd3e54c55f4a688b8079031ffe7ea05a99052c5ef0a18570bd0d6",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "b1a0f60cc6f20df60d0268a48ca6c34248e55b3ffd1dd5ffde7679e9a587748d",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "c67d602e7d813495c3481d6a8ccbeba9348825062849bc80c9654deabe04acf4",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "73aa4f4bd319c6e6425142427b02f0b063656a1dd1938184d80db0088a0c8d5d",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "02c1d47d0d9d5d16383f193d813971d230148d1168b5e11d9e329583509859ef",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "fb0993fc2c8534a9e6b6ae2b7596fb2e8438f9d69205ad008d069d739162feea",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "4976c700649bd9a2128fd7994ad55dad220a250986531eed38dc3a6616f472b8",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "70512f6b5ce927078f1b343bb19404fd67700b77b51b0037368e7240199ae70e",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "630b13e4329a8440cd7df6d85d471c619171fb7e229398d74063238817ccbb90",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "cce62d5269ab44a9adc82cf667001896fc63d76b54c6700540f6728480772e35",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "1563013d070957988fdf0f81f5097b947fe5c0aac74bd03d5b148359b413a362",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "883d01e50f2484a3e8823c918cad6d1fdf2e651b5b403b767151b9a392eaa5d3",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "63410ee052868c6eb978dd6e5e4c3b6a92612e2400b35cb0071d0348f1f15d11",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "d074ea2f0b1fcd66fbcebe3ae7cbd375b41289fc6c32a67956743cfb59b7eaa7",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "5e75c77dcc0926f2c54dbeb664e93796325d33acdbefbad0eb258ef8944122b8",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "6af6b069a59e5e5c6d79b2c992698e7c7bfcb0fbcdd7086be6331eda56cd3f6c",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "8e4439d5ff84f1b6190f00bf7f062f726c9521a843ee35143559afde15def6ac",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "bb355d79d6c32401fc4286a7a4cc87bdd42bec56224059df4365a3d97aa0d124",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "78b7ab50047db9fc9585f829e03b5ed8a9db9083081e466ce050f7233f17ce1c",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "b1559aff444ee4ff2b7c6720794be1edc0a8b81d4a9aadae4e055fc0ac089684",
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "e7aced5c35bfb09a02ce21f645b9a26bd8396997745857dd16ac73497a6d00bf",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "d257bb9f01c0874290a8e8f156ead34f3b8853f7176595adcd981492e4bee1ef",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "4d3ed5c0c1888ea5f5b98ab541c6eb8f064bd8b00a7721a51b75877660b2e3ea",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "462e5eb88b5e10026298bd673ab4d08f1fd458148e0786d34969d431c57fac8e",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "868f42fc45f552b115506ce9dbd0069203acb11fd658c88783f1969f1fc9dd53",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "a471b7d1f5536ae24d689115a9fba83b9b76ef682c154be8686463f3fa6c3ae5",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "cf0d6c6c5d35715f5e4de2504dda83807240fa29002c92e924d8520342137acf",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "686c129fc1a83bbefb1b045aad25ae8c9b492c4f49c571138b95702f6dec5ac9",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "da3a9651ca1988005126be10db3b02d559150b67876ad5e2bfb81b9a19a35de3",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "899f3e8e0a266fc41a0cdd57e57dc29535dcc461db425775615caf3e9b1f1ac5",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "c77a69423d28ad2383d99c24f900fe6bf74e89d47f0ba17a53bb421f3fd54a0b",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "d216378140d78df5edee45520bca1b00c042a95cbc0605bf4d69a43388d8954f",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "5f6ae7bcbd3cdcb92cab851a79e6f32da0bb5178313657f7f44d5637d11dc52d",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "21ac0014514a879150b1055b222fbc733f84970745d35bdc89f2e18ea9be9699",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "f4d856370bf9d06513b848d5f893013c53943fc028f1f373873c5661273b05dd",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "fbfaf30287511aeea7ce0c186a598effb59bc517c02854b463abe505c839973b",
+    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "98fd7f4ef5c375ecd6c578d977c0614eb005cb627d344f7355929111b47c7770",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "3f0bed4e5edce4165ef055b609f9908e2b4226fb22d763501e9e9e7940d24f3b",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "6ae6e04f5300563ddc2d18496ce60b792a4a32fd68f5201e9cf78347a10dccbc",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "51dfe19693f440109762a4a6b3824fd6e093dc7b8611feae7bb2f8fc645c0551",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "e03eb696bc66f60f61acf8e300bd1cf73bbed20a78982df029301336b3cbef3c",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "7d4bfe26179bf8a198f9e5befe41994ebe97242c60e96247a66e56ede8d97125",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "2d87f0a01711b52a04df2ce46de1ad10688fb0d7ea1dc2f9112b1b3e74aa2018",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "15c5d0373067b7cae4921914a9fba8082a2778be9c654974fb9640c7ab25a254",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "fc79b96f58f071e1f3b8d83155c367ffe530b20555f57c48d65b351b43a0c9a7",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "283ae3c541d38ccab7e1ad58fbea7c002420b2b835ddb08edb85e7f41b8698dc",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "9aabab8811d3634a26350c65da715a550a2fa936184f0b69e9eb4f24c3410ecf",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "d26986853b853a968ed8efa943b6385adec31d49aa346bbab2625c9614cc42f4",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "39ded57fe174c5028872c350a5d30db9b8cbfc8c10daabc823b9c3bbd627bfda",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "8eb80a925fe2593169661dc90a96cdcc05baf59415139aaa67be894a282ca4ad",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "9539c45f43e332adb49b8d450c892db7c188f7dbf4fa3353ebe9546a061934d9",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "e250b13b446dd3369aa8ed7e300fff9c4722d420a7beedacbf1f3d282e0dcb4e",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "0786cfc29fee51912bee4ea26332f344abaeeb9e44fb2388582a698c08ef3a47",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "6baef5a453f1dfdc75867ca7c6e4b20be42e5f07a4a236a445b2e7e52cc39ecf",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "ad28cfec54db4d47aae3030e51b14796ae755702b24035e9b91de88e9a0d097d",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "cba1da8d60713c3bbf9db710a956f6e3a78f4f104d8fff09929f5f4611f48656",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "6110655e717f3a9eb25113b5808fda4b54827eac16694c315653ae771a184161",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "d8310b1c73492632068e170eb046a7c94d540d32cf0b3bce729668a22e61077e",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "71b08b1622d618161a048eb582493d14d59ce957d60ed47f663d17d47af88236",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "a4f7adf071c744d4113474a126ece06c369796e4ef1ba1ef0b594d79406361a8",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "90e9a45eae9944a62a776f27dccd55a4b7824f36d37477d66a12ab61e6137580",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "8ba17c97ba90c5ef0c0220d00d9f1ff01912d6a6ce93f859df936c307ff2414e",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "1833a7a8c2264d2e538d6f6313defa973a8e833520a772b8f8631c947fa9f852",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "2e343e2c73649dad4a249ab21d17f2f0bd6f39c758a7a4e16b502334e44c46ef",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "394fdc4ea92375abd21406b6e5b6c6db1bb6871905516066e3aae0950e22cccd",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "a2b078a052e23cfdfcb92c4ca4e92630c2e2f2c95311d10a23ed53033f3e1ddb",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "54b100aec6ca863b66f7ff43aba07769ab9d0851c5b5e9c25cee2fa8e3cabe38",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "344c92a9f00613c4db2ceade16ea66168a9309fa30e5e439ad84802caa4bee3a",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "2dc7cb97aa2aa874c91a01bef671e6be6cbcb50cba63920ae8fb2aa263cdbce2",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "daea3ea98393cbcfc25e1e172392ff43ea213e01a4114e6758cb50faa5e2a3d3",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "dab7bfb2b69c118882ecf7fd783d83e0b8ce85e13e90b5ca073c6951569d0a9d",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "519d16fa132b6f92088206a7ca8618d1a0c763c904676fd3b9e3c577f8cf1544",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "75a543eaae20fc64fda843cc432bba3415bb19c16e0adcc6bc4c84f850244eb1",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "b17f8b6976c060f7de62573467f3fc193c5adc96134ceb5358085a881666e9ea",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "12868b3b3f96a719d87948d89569fe26db49d149ddba263dfc569edc4c640b38",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "5532f80e07fff3f17f3430e690f4b9c58118ee20318ba64d1527acc6b27e5eef",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "d5fa2d4d1c9afccfb56e8f1f983c7b45bcc96ed6e7364a18ff5c0349af7267ee",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "66ff87bf2415ded34bb5ba8aca09aa5a29f8f780928549f6a17852b6fb70e084",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "3a3ac5cd0f4aaa30d672600c29dc7050bb465939fa1fd2d59025efdf76c3d4ed",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "23176967f41df06c9caa245f409691c1aae43e4f39928b070a369a056289c5b9",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "ec67deb17f75896dd004367c53146a80c538365f44a3a9c69d34fd4f07cc4927",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "715164d20bf7fb9e4cd86bbe2cfe4125f88c0f8631e3b704c9b373130e1c442f",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "5a43cccfa75bc36d44dd84223a4838426c6bc85659efe490d9f1b0beb6efb805",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "949119ffc464c4ea6eb8c312fc445064f4145cb827eead8713e6cacf62c7854a",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "b9f9e016c9752fef726ab0dca747e3623eace4f5fad5926149c6260d94011454",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "064b41d58cff97799846596a6ffe817aa3b8e95a5a5e0c7a885a6a563bc36390",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "25e782468056deb927cdd6dba0b39ce952407f9df9bd54b95dc82124d6504282",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "9c93967e0900dd502e792a01a272fcc68545ebd390a2effa3460e9bd3df0d23f",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "9d685fd5dc5d33eea0887a1d2c475004ad90aaf5a68e8bf384e77f131eb75f4c",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "780b60c3124caafa8c559b3372929be6947d1156b0fda0f6566638b965948f55",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "456f4e3494fb8450b1c38956dc51ec3e2d11263c5f47c7b3bec96f463daa2d38",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "a19382f1924099d7e2d70eea1dc57d7b7191dfc251154784ad0d62da4056c2db",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "96843a22dcf2ef06f4d19bd731eae3036fab25cc41bd82627a09b9c785fe040c",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "06556b9cfad75fa83ef3cb988ab302a16e3de9d8d45ff52b2472bb0f0c60d692",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "b99f25d319a640f92b75edf7e804539d4321e0a5927db0a7bfeb521483f3473f",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "443d7d40a3cd3ad3d3514a673a876dd5457d401980c16e4a57a1d385a1d633a1",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "b4cbbfc77ac61e78c3b0abb7f1e76252f5b306287679e7c7a8428287203f2eb2",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "143d791da46326eaf27ad3ce4d27c5dac818853c251ea130764221cc346beaec",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "aeb02d12160419e0a71cab50e6b7f49695c60da54e54eaa6715905cf15ba82d9",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "b7088685db181a1f0dd8507bc733c0922ed851907df039c9af20732b9895f1bb",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "a9bc4cc4022d63083be141025425c47c27343601b0cf858021eddb295ad9629b",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "115e89114e9a315feb04414bef76468585c341d7e755d94c08402fbb0f383fad",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "c1a9af50e94d69470cca4fa65950261f30e83360a7476e92ce72df28c3b26b45",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "3a5a033c344dea1c21097a322b5965be4124b9151509ebb90800f029669a3782",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "b425c584172f5fb33af1e905ac0e92c392d07e5dd4a49f1c26d17d99c26b4166",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "858d4b41300f3804e27916c7ab016c8716ee06090d190bf372acbc323bc91341",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "5d5339a265876d627c25d3700dc2e75faa019bef1ce5ca6d8ab7a23b4e90c7c8",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "bb2f76a85f9715dc4c1e133a4d1d10ac18d802053e4670e9d7e33099aad6a3dc",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "48e3c5a8ebd7dc0d580bc27a42e0e61a3b6ee8b8c4f1144cf9bb43582c0b9ce7",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "745d686021fc9187b9b32cbee261976e3f1f7bb360540758beea42d8cb2354e5",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "c18e10f78398ecf5b95b9729fa70e6c32d13c678bf12e3b8170a0e51532f05e9",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "5e80f11175f47604fd416b4d78b43994c93ed1a99ad92fc344c3f60c8b2debcc",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "e12798979fe66b8fcb046207b42292cf1446e2901a3d90481f1ca22029a93a39",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "d64c7882dd41f802835be1384c36ac21213b6c63a44c341e451df762c6ff0460",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "b9dedf5e25a157a7fb95d8d4dee579c89d47e918abcb72803d79dc51dae950fa",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "d3b78641c3572a945faba21872b024d89ffa15b6ebf99c945eb4095ff971284e",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "0c45ea41837ee081e96b54e28ddef765cc6fe4c27c1564f8a639773be4e368ee",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "2956e1fe6201b77e63909f27f36f22f16969bc3579619f4ed711efcf4f7f4b7f",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "f8efc4c0db087d7e565311580aa36cbe51a7ab14437f5abcbe748819dc6f24d3",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "b41ddc9665553b780aeff11fcb8ac09aaa2430139acc8ecfe481aa0fca541f3e",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "7bf25b88d70abbf4d0a28ca44dece9ac4985cb80c4538527e343abd47104235c",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "76df62ce5a11b20da41f3e1636dd75d71827bdc638c0bcd3d25d566233b1aea0",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "73f5dc6848eaddc03fe37baf36e04050f085e65d9c43af03a8fffb7167b1e2d3",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "83f44e4fcc1d557357cead11920dc6320710c37fe600016e4b2d97169d0c2f9a",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "b27e7a96a0fbafb0d9fb5f8da2f130a1d793a4d4549efeaaed8611510e4ae2b0",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "faddfb89486e31b1f0107ee0074657c91b674d5b3a17cbb97f3c6cdd9ec01522",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "fbb857000fec1387bb570f7dd240577824c329f7d493b4e664fb96c5e0f2d2e3",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "7df782eaf3ab6549b41d2a0945f9789fc641a0321f56e28fb5a080ee859cd993",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "a725ce73430666ed7c4d96c757e5ae0fed1cafaac27015a1b0e3bef8969ea2be",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "8f2b47affa3ffbd8db9cad850cac8a8244b6a962c34b480853b2bcebd601818c",
+    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "3104f15f442dd0af72c636fbf4b6e252c8390450fbd5f688b43e6f49616515bf",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "3b4a57320a6ab430641f07ce13fa604bfc0419f95783e6f758d53ea077e5da15",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "02fbcbfa466c442ce7630c159be258a9d5459ba610286f9ef6bd21f4c69a3a49",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "ff040af1387edd250e1cd89980b735f5a56f620de79cef3357efd2a84822a956",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "8b60f8d567035c0e4416293e4d23791f0f09e30e678058fbcdb3a5cbad928466",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "4ca9e348dea5b401ae57148c4081194e8f46cb371cafecc7c0b08f144e55a84d"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Kapea kuiva oja, jossa on ruskeaa kasvillisuutta ja lehtiä, kulkee vihreän nurmikentän läpi pienten puskien ja puiden ympäröimänä.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "AI-generoitu kuva: Teräksinen matkaviestinverkon tukiasemamasto kohoaa metsäisessä maisemassa, jossa näkyy myös järvi ja kaukaisia kukkuloita.",
+      "attempts": 1,
+      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
       "classifier_output": {
-        "category": "Kotimaa",
+        "category": "Talous",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva Hämevaaran Viikatepuistosta kohdasta, jossa Multaojan uoma ja sitä reunustava puistoympäristö näkyvät samassa näkymässä.",
+            "depictable_scene": "Teräsrakenteinen tukiasemamasto kohoaa metsäisessä ympäristössä. Maston yläosassa näkyy pystysuuntaisia paneeliantenneja ja niiden kaapelointeja. Kohtaus ei esitä tiettyä nimettyä mastoa tai paikkakuntaa.",
             "must_avoid": [
-              "Presenting planned park improvements as already completed",
-              "Unverified depiction of the announced resident meeting"
+              "people or body parts",
+              "readable text or operator logos",
+              "broadcast-only tower or satellite dish as the main subject"
             ],
             "must_show": [
-              "Multaoja stream channel",
-              "surrounding Viikatepuisto park landscape"
+              "cellular antenna panels",
+              "steel telecommunications mast"
             ],
             "rank": 1,
-            "safe_to_generate": false,
-            "search_queries": [
-              "Viikatepuisto Multaoja",
-              "Viikatepuisto Hämevaara",
-              "Multaoja stream banks",
-              "Viikatepuisto Vantaa puisto"
-            ],
-            "subject": "Viikatepuiston nykyinen puistoympäristö ja Multaoja"
-          },
-          {
-            "depictable_scene": "Nimeämätön suomalainen puistoympäristö, jossa kapea avo-oja kulkee nurmi- ja puustoalueen läpi. Uoman vesi ja loivat kasvillisuuden peittämät penkat näkyvät selvästi; kuvassa ei ole rakennustöitä eikä valmista uutta reittiä.",
-            "must_avoid": [
-              "People or body parts",
-              "Recognizable recreation of Viikatepuisto or Multaoja",
-              "Completed new route or invented flood damage",
-              "Invented readable text or logos"
-            ],
-            "must_show": [
-              "narrow open drainage channel",
-              "vegetated banks in a park"
-            ],
-            "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "puiston avo-oja",
-              "kasvillisuuden peittämä ojanpenkka",
-              "park drainage ditch",
-              "vegetated drainage channel"
+              "matkaviestinverkon tukiasemamasto",
+              "tukiasemamasto paneeliantennit",
+              "cellular antenna tower",
+              "mobile network mast forest"
             ],
-            "subject": "Puiston ojan varteen suunniteltava ulkoilureitti"
+            "subject": "Matkaviestinverkkojen tukiasemamasto"
+          },
+          {
+            "depictable_scene": "Todellinen valokuva Liikenne- ja viestintäministeriön käytössä olevan toimitilarakennuksen ulkojulkisivusta ja sisäänkäynnistä. Rajaus keskittyy rakennukseen, ei ohikulkijoihin.",
+            "must_avoid": [
+              "invented ministry building",
+              "staged licensing decision or signing ceremony"
+            ],
+            "must_show": [
+              "actual ministry office exterior"
+            ],
+            "rank": 2,
+            "safe_to_generate": false,
+            "search_queries": [
+              "Liikenne- ja viestintäministeriö rakennus",
+              "Liikenne- ja viestintäministeriö julkisivu",
+              "Finnish transport ministry building",
+              "Ministry of Transport and Communications Finland entrance"
+            ],
+            "subject": "Liikenne- ja viestintäministeriö toimilupien valmistelijana"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Bill Boaden on Wikimedia Commons",
-      "depicted": "The image shows a wide-angle view of a grassy field under a clear blue sky. A line of trees with bare branches forms a dense background on the left side of the image, extending towards the center. In the middle ground, a narrow ditch or dry stream bed runs diagonally from the lower left to the upper right, filled with dry, light brown grass and some fallen leaves. A vibrant green bush with small leaves is situated on the left bank of this ditch, casting a shadow to its right. On the right side o",
-      "generated": false,
-      "hotlink": false,
-      "license": "CC BY-SA 2.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-      "local_path": "media/13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26.jpg",
+      "credit": "AI-kuvitus",
+      "depicted": "A steel telecommunications mast with multiple cellular antenna panels at its top stands tall amidst a dense forest. In the background, a lake is visible, surrounded by more forested hills under a partly cloudy sky.",
+      "generated": true,
+      "license": "AI-generated image",
+      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "local_path": "media/de2e8779bc5d466e6aa9d35b71aa1cf59d806a87b4cf8fb8c7c63ebd913ec290.jpg",
+      "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Kapea kuiva oja, jossa on ruskeaa kasvillisuutta ja lehtiä, kulkee vihreän nurmikentän läpi pienten puskien ja puiden ympäröimänä.",
+        "alt_fi": "Teräksinen matkaviestinverkon tukiasemamasto kohoaa metsäisessä maisemassa, jossa näkyy myös järvi ja kaukaisia kukkuloita.",
         "approved": true,
-        "article_text_sha256": "0380147d6312390072492c12b1238896758e2adc9dd63c84f28d1ffe89e060c1",
-        "concept_sha256": "babf91bd12ada78caab48efc7d6a3aab1cabf9cfe4c8a793d1f54733a2953b0d",
-        "description": "A narrow, dry drainage ditch with brown vegetation and fallen leaves runs through a green grassy field. A small green bush grows on one bank of the ditch. In the background, there are several trees with bare branches and a line of trees forming a forest edge under a clear blue sky.",
-        "fit_score": 9,
-        "image_sha256": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
+        "article_text_sha256": "f2284b035532ce4af73c459b81880084017204e2cc50a3dd03039df9f2e364b4",
+        "concept_sha256": "c9161c66cb89cd66b340c0121e55d3a45cf2be6c858db81ddfeacb2be98bbd39",
+        "description": "A steel telecommunications mast with multiple cellular antenna panels at its top stands tall amidst a dense forest. In the background, a lake is visible, surrounded by more forested hills under a partly cloudy sky.",
+        "fit_score": 10,
+        "image_sha256": "de2e8779bc5d466e6aa9d35b71aa1cf59d806a87b4cf8fb8c7c63ebd913ec290",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts a narrow open drainage channel with vegetated banks in a park-like setting, which directly matches the selected concept. The article discusses addressing flood problems in Multaoja and creating a new outdoor route along the stream, making this image highly relevant as a generic illustration of such a feature.",
-        "reviewed_at": "2026-09-30T00:45:36.086387+00:00",
-        "source_context": {
-          "image_sha256": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
-          "license": "CC BY-SA 2.0",
-          "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-          "photo_id": "wikimedia-129101551",
-          "photo_url": "https://commons.wikimedia.org/wiki/File:Drainage%20ditch%20in%20Ickworth%20Park%20-%20geograph.org.uk%20-%204464991.jpg",
-          "photographer": "Bill Boaden",
-          "provider": "wikimedia",
-          "title": "Drainage ditch in Ickworth Park - geograph.org.uk - 4464991.jpg"
-        },
-        "source_context_sha256": "6fc59e663d62020a6890109a7200d6276f6bcf189bfe98b0f019f72aa915b96a",
+        "reason": "The image directly depicts a steel telecommunications mast with cellular antenna panels in a forested environment, which is the exact subject described in the selected concept and highly relevant to the article about mobile network license preparations.",
+        "reviewed_at": "2026-09-30T01:24:34.452415+00:00",
         "text_audit": {
           "examples": [],
           "readable_text_present": false
         }
       },
       "pixels": {
-        "height": 4000,
+        "height": 1024,
         "mode": "RGB",
-        "variance": 7733.0,
-        "width": 6000
+        "variance": 11873.0,
+        "width": 1536
       },
+      "prompt_sha256": "742c6d32a694fc0118d44d5e5a8ef6204ce478b728f25b45ba3ba5cce5a886d3",
+      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "A narrow, dry drainage ditch with brown vegetation and fallen leaves runs through a green grassy field. A small green bush grows on one bank of the ditch. In the background, there are several trees with bare branches and a line of trees forming a forest edge under a clear blue sky.",
+        "evidence": "Teräsrakenteinen tukiasemamasto kohoaa metsäisessä ympäristössä. Maston yläosassa näkyy pystysuuntaisia paneeliantenneja ja niiden kaapelointeja. Kohtaus ei esitä tiettyä nimettyä mastoa tai paikkakuntaa.",
         "matched": [
-          "drainage",
-          "narrow"
+          "cellular antenna panels",
+          "steel telecommunications mast"
         ],
-        "method": "vision",
-        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+        "method": "generation",
+        "reason": "generated from the accepted scene"
       },
+      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "0380147d6312390072492c12b1238896758e2adc9dd63c84f28d1ffe89e060c1",
-        "decision_sha256": "d7fd0515063bdbf0b0a30ff75eebee87d429a422dc8510b96139b94b9af336bc",
+        "article_text_sha256": "f2284b035532ce4af73c459b81880084017204e2cc50a3dd03039df9f2e364b4",
+        "decision_sha256": "57f6fd362575609a816f77780b1177623a57a1b617d49d54405ea8673b768765",
         "minimum_real_fit": 8,
         "searches": [
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Viikatepuisto Multaoja",
-              "Viikatepuisto Hämevaara",
-              "Multaoja stream banks"
-            ]
-          },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "8e0b144653c937f6dc3e5319e892227edfa2296cbf6dcfde957630662bb37213",
+                "fit_score": 0,
+                "image_sha256": "0a1ae34c7010935b48cb476a076a28a37c04b49259d3a6648105d27c662530d8",
                 "license": "Pexels License",
-                "reason": "The image depicts a forest landscape with mossy rocks and trees, which could be a park environment. However, it does not visibly show a stream channel (Multaoja) as required by the concept. Therefore, it fails to meet a key 'must_show' element. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/moss-covered-rocks-in-lush-nordic-forest-36964282/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "d018e77910866ff6b4cdd0a194630e623105c347ff15237e0189a2205bfc21d8",
-                "license": "Pexels License",
-                "reason": "The article discusses the Viikatepuisto park and the Multaoja stream within it, focusing on flood problems and planned improvements. The selected concept specifically requires a visible depiction of the Multaoja stream channel and the surrounding park landscape. The image shows a forest landscape with rocks and heather, which could be a park, but t",
-                "source_url": "https://www.pexels.com/photo/scenic-forest-with-stone-structures-and-pines-39065801/"
-              },
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "f4ae997f4823bb2632b24701541b1489012a1fdde228ef49b6eba7a25caf4390",
-                "license": "Pexels License",
-                "reason": "The image depicts a snowy, rocky landscape with trees, but it does not show a stream channel or a park landscape that could be identified as Viikatepuisto or Multaoja. The visible content does not match the specific elements required by the concept. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/photo-of-rocks-with-snow-near-trees-11249108/"
+                "reason": "The article discusses the preparation of new mobile network licenses and the subject concept is a cellular antenna tower. The image shows an aerial view of a winter landscape from an airplane, which is unrelated to the concrete subject of the article or the selected concept. There are no visible cellular antenna panels or steel telecommunications m",
+                "source_url": "https://www.pexels.com/photo/plane-flying-over-snowy-terrain-with-trees-and-lake-at-sundown-6158625/"
               },
               {
                 "approved": false,
                 "fit_score": 0,
-                "image_sha256": "1faf01d39cba8aba3735be90f247d799daf774df640c5c2c43414ae1c15a83be",
+                "image_sha256": "0d5419fe2d94f07fc85610dd4c053c59a8c5b73cddd1238be13099f691ee8ee0",
                 "license": "Pexels License",
-                "reason": "The article discusses the planning and development of Viikatepuisto park in Vantaa, Finland, focusing on a stream, walking paths, and playgrounds. The image shows a statue in a natural, forested, and rocky landscape, but it does not depict Viikatepuisto, Multaoja stream, or any park-like features relevant to the article's subject. The visible conte",
-                "source_url": "https://www.pexels.com/photo/the-statue-of-madonna-with-the-child-in-trillemarka-norway-9606480/"
+                "reason": "The article discusses the preparation of new mobile network operating licenses. The selected concept describes a cellular antenna tower. The image shows a snowy forest scene through a window, with a ladder-like structure visible outside. This structure is not clearly identifiable as a telecommunications mast or cellular antenna panels, and therefor",
+                "source_url": "https://www.pexels.com/photo/table-next-to-a-window-in-the-kitchen-with-the-view-of-a-snowy-forest-16658029/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "941de5c16ff921facb932ec7b45deec623da549becdd60b3f769fc51dff55a23",
+                "license": "Pexels License",
+                "reason": "The article discusses the preparation of new mobile network operating licenses. The selected concept describes a steel telecommunications mast with cellular antenna panels. The provided image shows residential buildings and construction, with no visible telecommunications mast or cellular antennas. Therefore, it does not depict the concrete subject",
+                "source_url": "https://www.pexels.com/photo/aerial-view-of-swedish-residential-development-site-36955202/"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Viikatepuisto Multaoja",
-              "Viikatepuisto Hämevaara",
-              "Multaoja stream banks"
+              "matkaviestinverkon tukiasemamasto",
+              "tukiasemamasto paneeliantennit",
+              "cellular antenna tower"
             ]
           },
           {
@@ -1218,9 +918,20 @@
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "Viikatepuisto Multaoja",
-              "Viikatepuisto Hämevaara",
-              "Multaoja stream banks"
+              "matkaviestinverkon tukiasemamasto",
+              "tukiasemamasto paneeliantennit",
+              "cellular antenna tower"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "matkaviestinverkon tukiasemamasto",
+              "tukiasemamasto paneeliantennit",
+              "cellular antenna tower"
             ]
           },
           {
@@ -1229,290 +940,244 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "Viikatepuisto Multaoja",
-              "Viikatepuisto Hämevaara",
-              "Multaoja stream banks"
+              "matkaviestinverkon tukiasemamasto",
+              "tukiasemamasto paneeliantennit",
+              "cellular antenna tower"
             ]
           },
           {
             "candidates": [],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
+            "provider": "pexels",
             "queries": [
-              "cited source image"
+              "Liikenne- ja viestintäministeriö rakennus",
+              "Liikenne- ja viestintäministeriö julkisivu",
+              "Finnish transport ministry building"
             ]
           },
           {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "0ad64614c7d269ed9484b1f2dcc804e8c261dd2d245bb6c28824af22ee15816a",
-                "license": "CC BY-SA 2.0",
-                "reason": "The image shows a ditch with vegetated banks, but it is clearly in a rural or agricultural setting, not a park environment as specified in the concept. The article discusses a park in an urban area (Vantaa) and flood problems in a stream within that park, with plans for recreational routes. The visible scene does not match the 'park environment' or",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Drainage%20Ditch%20-%20geograph.org.uk%20-%20587540.jpg"
-              },
-              {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
-                "license": "CC BY-SA 2.0",
-                "reason": "The image clearly depicts a narrow open drainage channel with vegetated banks in a park-like setting, which directly matches the selected concept. The article discusses addressing flood problems in Multaoja and creating a new outdoor route along the stream, making this image highly relevant as a generic illustration of such a feature.",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Drainage%20ditch%20in%20Ickworth%20Park%20-%20geograph.org.uk%20-%204464991.jpg"
-              }
-            ],
+            "candidates": [],
             "concept_rank": 2,
-            "outcome": "accepted",
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Liikenne- ja viestintäministeriö rakennus",
+              "Liikenne- ja viestintäministeriö julkisivu",
+              "Finnish transport ministry building"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "puiston avo-oja",
-              "kasvillisuuden peittämä ojanpenkka",
-              "park drainage ditch"
+              "Liikenne- ja viestintäministeriö rakennus",
+              "Liikenne- ja viestintäministeriö julkisivu",
+              "Finnish transport ministry building"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Liikenne- ja viestintäministeriö rakennus",
+              "Liikenne- ja viestintäministeriö julkisivu",
+              "Finnish transport ministry building"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 2,
-          "fit_score": 9,
-          "image_sha256": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
-          "kind": "real"
+          "concept_rank": 1,
+          "fit_score": 10,
+          "image_sha256": "de2e8779bc5d466e6aa9d35b71aa1cf59d806a87b4cf8fb8c7c63ebd913ec290",
+          "kind": "generated"
         },
         "version": "article-first-v1"
       },
-      "sha256": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Drainage%20ditch%20in%20Ickworth%20Park%20-%20geograph.org.uk%20-%204464991.jpg",
-      "stock_provenance": {
-        "attribution": {
-          "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
-          "source_credit": "Drainage ditch in Ickworth Park by Bill Boaden",
-          "title": "Drainage ditch in Ickworth Park - geograph.org.uk - 4464991.jpg"
-        },
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Drainage_ditch_in_Ickworth_Park_-_geograph.org.uk_-_4464991.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "photo_id": "wikimedia-129101551",
-        "photo_url": "https://commons.wikimedia.org/wiki/File:Drainage%20ditch%20in%20Ickworth%20Park%20-%20geograph.org.uk%20-%204464991.jpg",
-        "photographer": "Bill Boaden",
-        "photographer_url": "https://commons.wikimedia.org/wiki/File:Drainage%20ditch%20in%20Ickworth%20Park%20-%20geograph.org.uk%20-%204464991.jpg",
-        "provider": "wikimedia",
-        "query": "park drainage ditch",
-        "retrieved_at": "2026-09-30T00:45:31Z"
-      },
-      "stock_provenance_sha256": "0c3aff5243535d8197a340bec7416bffe1aae3a62906b3a1895e0753aaf48201",
-      "url": "https://uutistenlukija.fi/media/13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26.jpg"
+      "sha256": "de2e8779bc5d466e6aa9d35b71aa1cf59d806a87b4cf8fb8c7c63ebd913ec290",
+      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "subject": "Matkaviestinverkkojen tukiasemamasto",
+      "url": "https://uutistenlukija.fi/media/de2e8779bc5d466e6aa9d35b71aa1cf59d806a87b4cf8fb8c7c63ebd913ec290.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "vantaa",
+      "provider": "valtioneuvosto",
       "related_sources": 0,
-      "source_fields_sha256": "c49f9709fbf6b18469af15d0bef9729bed982d06a717926fa7dcfdc5aab6661b",
-      "source_sha256": "1888178824e429869b421057f735f34b8d932935892aba38aff0dce22e2c2453"
+      "source_fields_sha256": "84aeadd6866cd107f665b7cd8d6a94741e19a2709f3ba81c648adc6b8a077c28",
+      "source_sha256": "912b539009c4d389e2ec2f7a2768bde08cf3ae926ef1bb5e96d9373bd5414075"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-09-29T00:00:00+03:00",
-        "publisher": "Vantaan kaupunki",
+        "published_at": "2026-09-29T16:41+0300",
+        "publisher": "Valtioneuvoston kanslia",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
-          "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://hri.fi/fi/kayttoehdot/"
+          "license": "Valtioneuvoston sivuston käyttöehdot: tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan; aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen",
+          "license_url": "https://valtioneuvosto.fi/tietoa-sivustosta",
+          "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
+          "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
         },
-        "text": "Voit nyt vaikuttaa Viikatepuiston suunnitteluun. Viikatepuisto sijaitsee Hämevaarassa Gubbmossenin luonnonsuojelualueen kupeessa. Puiston läpi virtaava Multaoja jatkuu Espoon puolella Monikonpurona.\nTavoitteena on ratkaista Multaojan tulvaongelmat ja rakentaa uusi ulkoilureitti Multaojan varrelle. Lisäksi suunnitellaan valaistu ja talvikunnossapidettävä ulkoilureitti, joka vie Viikatetieltä Espoon puolelle.\nValinkauhantien huonokuntoinen leikkipaikka aiotaan purkaa lähivuosina. Se on tarkoitus korvata uudella turvallisemmalla leikkipaikalla, joka rakennetaan Viikatepuistoon. Nykyisen pelikentän laidalle suunnitellaan uusi pieni ulkokuntoilupaikka.\nViikatepuisto kartalla\nMitä sinä toivoisit Viikatepuistoon?\nTervetuloa keskustelemaan puiston kehittämisestä asukastilaisuuteen. Tilaisuus järjestetään keskiviikkona 7.10.2026 kello 16–18 Viikatepuistossa.\nLisätietoa Viikatepuiston asukaskävelystä Vantaan tapahtumakalenterissa\nVoit myös vastata asukaskyselyyn Osallistuva Vantaa -sivustolla 18. lokakuuta mennessä.\nVastaa kyselyyn!\nSuosittelemme sinulle myös\nKadut ja puistot\nPuistokenttä Hämevaaran kenttä\nAvainsanat\nPuistot\nOsallistuminen ja vaikuttaminen\nAsukastilaisuus\nKyselyt\nHämevaara\n…\nShow all keywords",
-        "title": "Miten Hämevaaran Viikatepuistoa pitäisi kehittää? Osallistu asukastilaisuuteen tai vastaa kyselyyn",
-        "url": "https://www.vantaa.fi/fi/ajankohtaista/uutinen/miten-hamevaaran-viikatepuistoa-pitaisi-kehittaa-osallistu-asukastilaisuuteen-tai-vastaa-kyselyyn"
+        "text": "Julkaisuajankohta 29.9.2026 16.41\nTyyppi:Tiedote\nNainen puhuu puhelimessa (Kuva: Mika Pakarinen / Keksi)\nLiikenne- ja viestintäministeriö käynnistää Manner-Suomen ja Ahvenanmaan maakunnan matkaviestinverkkojen vuodesta 2034 alkavan verkkotoimilupakauden valmistelun. Valmistelu aloitetaan hyvissä ajoin, jotta tulevat toimiluvat voidaan myöntää ajoissa ja teleyrityksillä on mahdollisuus ennakoida ja suunnitella verkkoihin tarvittavia investointeja.\nNykyisin Manner-Suomessa voimassa olevat sähköisten verkkopalvelujen tarjontaan myönnetyt verkkotoimiluvat päättyvät vuoden 2033 lopussa 700 MHz:n, 800 MHz:n, 900 MHz:n, 1800 MHz:n, 2 GHz:n, 3,5 GHz:n ja 26 GHz:n taajuusalueilla. Myös Ahvenanmaalla teletoimintaan myönnetyt verkkotoimiluvat päättyvät samanaikaisesti. Liikenne- ja viestintäministeriön hankkeissa valmisteltaisiin ja myönnettäisiin verkkotoimiluvat uudelle toimilupakaudelle vuodesta 2034 alkaen.\nTulevan toimilupakauden valmistelussa arvioidaan muun muassa toimilupien myöntämismenetelmää, toimilupakauden pituutta ja toimilupien määrää sekä toimilupaehtoja, kuten kattavuutta ja palvelujen laatua koskevia vaatimuksia.\nValmistelua tehdään yhteistyössä viranomaisten kanssa ja sen aikana kuullaan laajasti sidosryhmiä. Keskeiset poliittiset ja strategiset linjaukset sekä päätökset toimilupien myöntämisestä tehdään seuraavalla hallituskaudella.\n2,6 GHz:n toimilupien hakuilmoitus lausuntokierrokselle\nMuiden matkaviestinverkkojen taajuusalueista poiketen Manner-Suomen 2,6 GHz:n nykyiset verkkotoimiluvat päättyvät jo 16.12.2029. Liikenne- ja viestintäministeriö pyytää lausuntoja uusien toimilupien hakuilmoituksesta. Lausuntoja voi antaa 2.11.2026 asti.\nUudet toimiluvat 2,6 GHz:n taajuusalueelle ehdotetaan myönnettäviksi ajalle 17.12.2029–31.12.2033. Näin niiden voimassaolo päättyisi samaan aikaan muiden matkaviestinverkkojen toimilupien kanssa, ja 2,6 GHz:n taajuusaluetta voitaisiin tarkastella osana vuodesta 2034 alkavaa laajempaa toimilupakokonaisuutta.\nToimiluvat myönnettäisiin vertailevalla menettelyllä. Koska kyse olisi noin neljän vuoden toimilupakaudesta, uudet toimiluvat vastaisivat ehdoiltaan lähtökohtaisesti nykyisiä toimilupia. Hakuilmoitusluonnoksessa ehdotetaan rajausta niin, että yhdelle toimijalle voitaisiin myöntää 2,6 GHz:n taajuusalueelta enintään kaksi verkkotoimilupaa.\nMitä seuraavaksi?\nMatkaviestinverkkojen vuodesta 2034 alkavien toimilupakausien valmistelu käynnistyy viranomaisyhteistyöllä ja sidosryhmien kuulemisella. Tarkemmasta aikataulusta ja hankkeen linjauksista päätetään seuraavalla hallituskaudella.\nLausunnon 2,6 GHz:n taajuusalueen verkkotoimilupien hakuilmoitusluonnoksesta voi antaa osoitteessa Lausuntopalvelu.fi 2.11.2026 asti. Lausuntokierroksen jälkeen 2,6 GHz:n toimiluvat on tarkoitus julistaa haettaviksi. Uudet toimiluvat on tarkoitus myöntää alkuvuodesta 2027, ja ne tulisivat voimaan nykyisten toimilupien päättyessä joulukuussa 2029.\nLisätietoja:\nhallitusneuvos Katariina Säynäjärvi, p. 0295 342 214, [email protected]\nviestintäneuvos Mirka Meres-Wuori, p. 0295 342 061, [email protected]\nylitarkastaja Jaakko Laamanen, p. 0295 342 206, [email protected]\nLiikenne- ja viestintäministeriön verkkosivu: Toimilupa-asiat\nLausuntopalvelu.fi: 2,6 GHz taajuusalueen verkkotoimilupien myöntäminen (VN/26487/2026)\nTiedote 17.6.2026: Viestintäverkkojen kokonaiskuva valmistunut: Laadukkaat yhteydet turvallisuuden ja kasvun perustana\ntaajuusalueet toimiluvat viestintä viestintäverkot",
+        "title": "Matkaviestinverkkojen vuoden 2034 toimilupakauden valmistelu käynnistyy",
+        "url": "https://valtioneuvosto.fi/-/1410829/matkaviestinverkkojen-vuoden-2034-toimilupakauden-valmistelu-kaynnistyy"
       }
     ],
-    "story_key": "url:https://www.vantaa.fi/fi/ajankohtaista/uutinen/miten-hamevaaran-viikatepuistoa-pitaisi-kehittaa-osallistu-asukastilaisuuteen-tai-vastaa-kyselyyn",
+    "story_key": "url:https://valtioneuvosto.fi/-/1410829/matkaviestinverkkojen-vuoden-2034-toimilupakauden-valmistelu-kaynnistyy",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-09-29T23:51:01.646245+00:00",
-        "sha256": "a06a2406e01d73494fc4ebbbe9d7e6044b97780baf553fd25b2b64bf52c467ee",
-        "text": "Käyttöoikeus määritellyin ehdoin hyödynnettävissä. Datan käytön lisäksi Palvelussa on mahdollisuus keskusteluun.\nKäyttöoikeus\nPalvelu sisältää dataa useasta eri lähteestä: julkisyhteisöjen tuottamia datoja ja niiden metatietoja, Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja ja Palvelun ylläpitäjien tuottamia artikkeleja ja muita kirjoituksia. Pääsääntöisesti näihin kaikkiin on laaja käyttöoikeus Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Poikkeukset on kerrottu erikseen kunkin aineiston kohdalla.\nAvoin data\nPalvelussa olevien datojen (tietoaineistojen) omistus- ja immateriaalioikeudet kuuluvat kunkin datan tekijälle.\nPääsääntöisesti Palvelun käyttäjillä on laaja käyttöoikeus datoihin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Datoja saa vapaasti kopioida, levittää, näyttää ja esittää sekä käyttää datoja osana muuta teosta. Datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin.\nEhtona käytölle on, että datan tekijä (ylläpitäjä) on ilmoitettava. Datan tekijän pyynnöstä tämä viittaus on poistettava. Datan tekijä on kerrottu kunkin datan metadatassa.\nDatan tekijää ei saa ilmoittaa siten, että ilmoitus viittaisi datan tekijän tai Palvelun tukevan datan käyttäjää tai datan käyttötapaa.\nDatojen metatietojen yhteydessä on mainittu kyseisen datan käyttöoikeusehdot. Joissakin tapauksissa käyttöoikeusehdot voivat poiketa yllä mainitusta.\nKeskustelu\nPalvelun käyttäjät voivat keskusteluosiossa lisätä sivuille kirjoituksia ja kommentoida toisten käyttäjien kirjoituksia. Palvelun käyttäjä antaa kirjoituksiinsa ja kommentteihinsa vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nMikäli käyttäjä liittää kirjoitukseensa tai kommenttiinsa kuvia, tulee hänellä olla tekijänoikeudet kuvaan. Lisäksi hänellä tulee olla kuvassa esiintyvien henkilöiden lupa kuvan julkaisemiseen internetissä. Palvelun käyttäjä antaa kuviin vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nKeskustelun tulee olla hyvän tavan ja Suomen lainsäädännön mukaista. Käyttäjät ovat vastuussa lisäämistään kirjoituksista ja kommenteista.\nKaikenlainen mainonta keskustelussa on kielletty.\nPalvelun tarjoajat voivat tarvittaessa muokata kirjoituksia ja kommentteja sekä poistaa hyvän tavan tai lainsäädännön vastaisia tai muutoin sopimattomia kirjoituksia.\nMikäli käyttäjä havaitsee käyttöehtojen vastaisia kirjoituksia, pyydetään tästä ilmoittamaan ylläpidolle.\nToistuva käyttöehtojen rikkominen tai niiden vakava rikkominen voi johtaa väliaikaiseen tai pysyvään Palvelun käyttöoikeuden peruuttamiseen.\nSovellusgalleria\nSovellusgalleriassa esitellyt sovellukset eivät ole HRI:n tekemiä ja niiden tekijänoikeudet kuuluvat sovellusten tekijöille. Creative Commons 4.0 -lisenssi ei koske sovelluksia, eikä niitä ole lupa vapaasti kopioida, levittää, muokata tai yhdistellä, ellei erikseen sovelluksen kohdalla ole toisin mainittu tai sovelluksen tekijä muutoin ole tähän antanut lupaa.\nMuut palvelussa olevat kirjoitukset\nPalvelun tuottajien Palvelussa julkaisemien kirjoitusten, kuten artikkelien ja blogikirjoitusten omistus- ja tekijänoikeudet kuuluvat niiden kirjoittajille. Palvelun käyttäjillä on laaja käyttöoikeus näihin kirjoituksiin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nPalvelun ulkoasu, tekninen toteutus, tavaramerkit ja logot\nPalvelun teknisen toteutuksen lähdekoodit on saatavilla avoimesti GitHubista. Palvelun kopiointi sellaisenaan on kielletty. Palvelussa esiintyvien tavaramerkkien ja logojen tavaramerkkioikeudet kuuluvat niiden oikeudenhaltijoille. Mikäli tavaramerkkien ja logojen muu käyttö on sallittu, on tästä ja käytön ehdoista ilmoitettu ko. tavaramerkkien ja logojen kohdalla.\nTietosuoja\nhri.fi-palvelua ylläpitää Helsingin kaupunki. Kaupunki on sitoutunut suojaamaan verkkopalveluidensa käyttäjien yksityisyyttä Tietosuojalain (2018), EU:n tietosuoja-asetuksen (2016/679) sekä muun soveltuvan lainsäädännön mukaisesti.\nHelsingin kaupungin tietosuojasivut\nVastuuvapaus\nPalvelu sisältää sekä julkisyhteisöjen tuottamaa avointa dataa ja metadataa että Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja. Palvelun tarjoajat eivät vastaa Palvelussa olevien tietojen oikeellisuudesta. Palvelun käyttäjä käyttää Palvelussa olevaa avointa dataa omalla vastuullaan. Palvelun tarjoajat eivät vastaa mistään välittömistä tai välillisistä vahingoista, jotka aiheutuvat datan käytöstä. ",
-        "url": "https://hri.fi/fi/kayttoehdot/"
+        "retrieved_at": "2026-09-30T01:20:27.102302+00:00",
+        "sha256": "c266f1add980416dbdba7c279c6e62fe474eb9d253917f5450f490c5c9fee973",
+        "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
+        "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
       }
     ]
   },
   "draft": {
-    "category": "Kotimaa",
+    "category": "Talous",
     "image": {
-      "alt": "Arkistokuva: Kapea kuiva oja, jossa on ruskeaa kasvillisuutta ja lehtiä, kulkee vihreän nurmikentän läpi pienten puskien ja puiden ympäröimänä.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "AI-generoitu kuva: Teräksinen matkaviestinverkon tukiasemamasto kohoaa metsäisessä maisemassa, jossa näkyy myös järvi ja kaukaisia kukkuloita.",
+      "attempts": 1,
+      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
       "classifier_output": {
-        "category": "Kotimaa",
+        "category": "Talous",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva Hämevaaran Viikatepuistosta kohdasta, jossa Multaojan uoma ja sitä reunustava puistoympäristö näkyvät samassa näkymässä.",
+            "depictable_scene": "Teräsrakenteinen tukiasemamasto kohoaa metsäisessä ympäristössä. Maston yläosassa näkyy pystysuuntaisia paneeliantenneja ja niiden kaapelointeja. Kohtaus ei esitä tiettyä nimettyä mastoa tai paikkakuntaa.",
             "must_avoid": [
-              "Presenting planned park improvements as already completed",
-              "Unverified depiction of the announced resident meeting"
+              "people or body parts",
+              "readable text or operator logos",
+              "broadcast-only tower or satellite dish as the main subject"
             ],
             "must_show": [
-              "Multaoja stream channel",
-              "surrounding Viikatepuisto park landscape"
+              "cellular antenna panels",
+              "steel telecommunications mast"
             ],
             "rank": 1,
-            "safe_to_generate": false,
-            "search_queries": [
-              "Viikatepuisto Multaoja",
-              "Viikatepuisto Hämevaara",
-              "Multaoja stream banks",
-              "Viikatepuisto Vantaa puisto"
-            ],
-            "subject": "Viikatepuiston nykyinen puistoympäristö ja Multaoja"
-          },
-          {
-            "depictable_scene": "Nimeämätön suomalainen puistoympäristö, jossa kapea avo-oja kulkee nurmi- ja puustoalueen läpi. Uoman vesi ja loivat kasvillisuuden peittämät penkat näkyvät selvästi; kuvassa ei ole rakennustöitä eikä valmista uutta reittiä.",
-            "must_avoid": [
-              "People or body parts",
-              "Recognizable recreation of Viikatepuisto or Multaoja",
-              "Completed new route or invented flood damage",
-              "Invented readable text or logos"
-            ],
-            "must_show": [
-              "narrow open drainage channel",
-              "vegetated banks in a park"
-            ],
-            "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "puiston avo-oja",
-              "kasvillisuuden peittämä ojanpenkka",
-              "park drainage ditch",
-              "vegetated drainage channel"
+              "matkaviestinverkon tukiasemamasto",
+              "tukiasemamasto paneeliantennit",
+              "cellular antenna tower",
+              "mobile network mast forest"
             ],
-            "subject": "Puiston ojan varteen suunniteltava ulkoilureitti"
+            "subject": "Matkaviestinverkkojen tukiasemamasto"
+          },
+          {
+            "depictable_scene": "Todellinen valokuva Liikenne- ja viestintäministeriön käytössä olevan toimitilarakennuksen ulkojulkisivusta ja sisäänkäynnistä. Rajaus keskittyy rakennukseen, ei ohikulkijoihin.",
+            "must_avoid": [
+              "invented ministry building",
+              "staged licensing decision or signing ceremony"
+            ],
+            "must_show": [
+              "actual ministry office exterior"
+            ],
+            "rank": 2,
+            "safe_to_generate": false,
+            "search_queries": [
+              "Liikenne- ja viestintäministeriö rakennus",
+              "Liikenne- ja viestintäministeriö julkisivu",
+              "Finnish transport ministry building",
+              "Ministry of Transport and Communications Finland entrance"
+            ],
+            "subject": "Liikenne- ja viestintäministeriö toimilupien valmistelijana"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Bill Boaden on Wikimedia Commons",
-      "depicted": "The image shows a wide-angle view of a grassy field under a clear blue sky. A line of trees with bare branches forms a dense background on the left side of the image, extending towards the center. In the middle ground, a narrow ditch or dry stream bed runs diagonally from the lower left to the upper right, filled with dry, light brown grass and some fallen leaves. A vibrant green bush with small leaves is situated on the left bank of this ditch, casting a shadow to its right. On the right side o",
-      "generated": false,
-      "hotlink": false,
-      "license": "CC BY-SA 2.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-      "local_path": "media/13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26.jpg",
+      "credit": "AI-kuvitus",
+      "depicted": "A steel telecommunications mast with multiple cellular antenna panels at its top stands tall amidst a dense forest. In the background, a lake is visible, surrounded by more forested hills under a partly cloudy sky.",
+      "generated": true,
+      "license": "AI-generated image",
+      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "local_path": "media/de2e8779bc5d466e6aa9d35b71aa1cf59d806a87b4cf8fb8c7c63ebd913ec290.jpg",
+      "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Kapea kuiva oja, jossa on ruskeaa kasvillisuutta ja lehtiä, kulkee vihreän nurmikentän läpi pienten puskien ja puiden ympäröimänä.",
+        "alt_fi": "Teräksinen matkaviestinverkon tukiasemamasto kohoaa metsäisessä maisemassa, jossa näkyy myös järvi ja kaukaisia kukkuloita.",
         "approved": true,
-        "article_text_sha256": "0380147d6312390072492c12b1238896758e2adc9dd63c84f28d1ffe89e060c1",
-        "concept_sha256": "babf91bd12ada78caab48efc7d6a3aab1cabf9cfe4c8a793d1f54733a2953b0d",
-        "description": "A narrow, dry drainage ditch with brown vegetation and fallen leaves runs through a green grassy field. A small green bush grows on one bank of the ditch. In the background, there are several trees with bare branches and a line of trees forming a forest edge under a clear blue sky.",
-        "fit_score": 9,
-        "image_sha256": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
+        "article_text_sha256": "f2284b035532ce4af73c459b81880084017204e2cc50a3dd03039df9f2e364b4",
+        "concept_sha256": "c9161c66cb89cd66b340c0121e55d3a45cf2be6c858db81ddfeacb2be98bbd39",
+        "description": "A steel telecommunications mast with multiple cellular antenna panels at its top stands tall amidst a dense forest. In the background, a lake is visible, surrounded by more forested hills under a partly cloudy sky.",
+        "fit_score": 10,
+        "image_sha256": "de2e8779bc5d466e6aa9d35b71aa1cf59d806a87b4cf8fb8c7c63ebd913ec290",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts a narrow open drainage channel with vegetated banks in a park-like setting, which directly matches the selected concept. The article discusses addressing flood problems in Multaoja and creating a new outdoor route along the stream, making this image highly relevant as a generic illustration of such a feature.",
-        "reviewed_at": "2026-09-30T00:45:36.086387+00:00",
-        "source_context": {
-          "image_sha256": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
-          "license": "CC BY-SA 2.0",
-          "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-          "photo_id": "wikimedia-129101551",
-          "photo_url": "https://commons.wikimedia.org/wiki/File:Drainage%20ditch%20in%20Ickworth%20Park%20-%20geograph.org.uk%20-%204464991.jpg",
-          "photographer": "Bill Boaden",
-          "provider": "wikimedia",
-          "title": "Drainage ditch in Ickworth Park - geograph.org.uk - 4464991.jpg"
-        },
-        "source_context_sha256": "6fc59e663d62020a6890109a7200d6276f6bcf189bfe98b0f019f72aa915b96a",
+        "reason": "The image directly depicts a steel telecommunications mast with cellular antenna panels in a forested environment, which is the exact subject described in the selected concept and highly relevant to the article about mobile network license preparations.",
+        "reviewed_at": "2026-09-30T01:24:34.452415+00:00",
         "text_audit": {
           "examples": [],
           "readable_text_present": false
         }
       },
       "pixels": {
-        "height": 4000,
+        "height": 1024,
         "mode": "RGB",
-        "variance": 7733.0,
-        "width": 6000
+        "variance": 11873.0,
+        "width": 1536
       },
+      "prompt_sha256": "742c6d32a694fc0118d44d5e5a8ef6204ce478b728f25b45ba3ba5cce5a886d3",
+      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "A narrow, dry drainage ditch with brown vegetation and fallen leaves runs through a green grassy field. A small green bush grows on one bank of the ditch. In the background, there are several trees with bare branches and a line of trees forming a forest edge under a clear blue sky.",
+        "evidence": "Teräsrakenteinen tukiasemamasto kohoaa metsäisessä ympäristössä. Maston yläosassa näkyy pystysuuntaisia paneeliantenneja ja niiden kaapelointeja. Kohtaus ei esitä tiettyä nimettyä mastoa tai paikkakuntaa.",
         "matched": [
-          "drainage",
-          "narrow"
+          "cellular antenna panels",
+          "steel telecommunications mast"
         ],
-        "method": "vision",
-        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+        "method": "generation",
+        "reason": "generated from the accepted scene"
       },
+      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "0380147d6312390072492c12b1238896758e2adc9dd63c84f28d1ffe89e060c1",
-        "decision_sha256": "d7fd0515063bdbf0b0a30ff75eebee87d429a422dc8510b96139b94b9af336bc",
+        "article_text_sha256": "f2284b035532ce4af73c459b81880084017204e2cc50a3dd03039df9f2e364b4",
+        "decision_sha256": "57f6fd362575609a816f77780b1177623a57a1b617d49d54405ea8673b768765",
         "minimum_real_fit": 8,
         "searches": [
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Viikatepuisto Multaoja",
-              "Viikatepuisto Hämevaara",
-              "Multaoja stream banks"
-            ]
-          },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "8e0b144653c937f6dc3e5319e892227edfa2296cbf6dcfde957630662bb37213",
+                "fit_score": 0,
+                "image_sha256": "0a1ae34c7010935b48cb476a076a28a37c04b49259d3a6648105d27c662530d8",
                 "license": "Pexels License",
-                "reason": "The image depicts a forest landscape with mossy rocks and trees, which could be a park environment. However, it does not visibly show a stream channel (Multaoja) as required by the concept. Therefore, it fails to meet a key 'must_show' element. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/moss-covered-rocks-in-lush-nordic-forest-36964282/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "d018e77910866ff6b4cdd0a194630e623105c347ff15237e0189a2205bfc21d8",
-                "license": "Pexels License",
-                "reason": "The article discusses the Viikatepuisto park and the Multaoja stream within it, focusing on flood problems and planned improvements. The selected concept specifically requires a visible depiction of the Multaoja stream channel and the surrounding park landscape. The image shows a forest landscape with rocks and heather, which could be a park, but t",
-                "source_url": "https://www.pexels.com/photo/scenic-forest-with-stone-structures-and-pines-39065801/"
-              },
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "f4ae997f4823bb2632b24701541b1489012a1fdde228ef49b6eba7a25caf4390",
-                "license": "Pexels License",
-                "reason": "The image depicts a snowy, rocky landscape with trees, but it does not show a stream channel or a park landscape that could be identified as Viikatepuisto or Multaoja. The visible content does not match the specific elements required by the concept. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/photo-of-rocks-with-snow-near-trees-11249108/"
+                "reason": "The article discusses the preparation of new mobile network licenses and the subject concept is a cellular antenna tower. The image shows an aerial view of a winter landscape from an airplane, which is unrelated to the concrete subject of the article or the selected concept. There are no visible cellular antenna panels or steel telecommunications m",
+                "source_url": "https://www.pexels.com/photo/plane-flying-over-snowy-terrain-with-trees-and-lake-at-sundown-6158625/"
               },
               {
                 "approved": false,
                 "fit_score": 0,
-                "image_sha256": "1faf01d39cba8aba3735be90f247d799daf774df640c5c2c43414ae1c15a83be",
+                "image_sha256": "0d5419fe2d94f07fc85610dd4c053c59a8c5b73cddd1238be13099f691ee8ee0",
                 "license": "Pexels License",
-                "reason": "The article discusses the planning and development of Viikatepuisto park in Vantaa, Finland, focusing on a stream, walking paths, and playgrounds. The image shows a statue in a natural, forested, and rocky landscape, but it does not depict Viikatepuisto, Multaoja stream, or any park-like features relevant to the article's subject. The visible conte",
-                "source_url": "https://www.pexels.com/photo/the-statue-of-madonna-with-the-child-in-trillemarka-norway-9606480/"
+                "reason": "The article discusses the preparation of new mobile network operating licenses. The selected concept describes a cellular antenna tower. The image shows a snowy forest scene through a window, with a ladder-like structure visible outside. This structure is not clearly identifiable as a telecommunications mast or cellular antenna panels, and therefor",
+                "source_url": "https://www.pexels.com/photo/table-next-to-a-window-in-the-kitchen-with-the-view-of-a-snowy-forest-16658029/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "941de5c16ff921facb932ec7b45deec623da549becdd60b3f769fc51dff55a23",
+                "license": "Pexels License",
+                "reason": "The article discusses the preparation of new mobile network operating licenses. The selected concept describes a steel telecommunications mast with cellular antenna panels. The provided image shows residential buildings and construction, with no visible telecommunications mast or cellular antennas. Therefore, it does not depict the concrete subject",
+                "source_url": "https://www.pexels.com/photo/aerial-view-of-swedish-residential-development-site-36955202/"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Viikatepuisto Multaoja",
-              "Viikatepuisto Hämevaara",
-              "Multaoja stream banks"
+              "matkaviestinverkon tukiasemamasto",
+              "tukiasemamasto paneeliantennit",
+              "cellular antenna tower"
             ]
           },
           {
@@ -1521,9 +1186,20 @@
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "Viikatepuisto Multaoja",
-              "Viikatepuisto Hämevaara",
-              "Multaoja stream banks"
+              "matkaviestinverkon tukiasemamasto",
+              "tukiasemamasto paneeliantennit",
+              "cellular antenna tower"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "matkaviestinverkon tukiasemamasto",
+              "tukiasemamasto paneeliantennit",
+              "cellular antenna tower"
             ]
           },
           {
@@ -1532,117 +1208,113 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "Viikatepuisto Multaoja",
-              "Viikatepuisto Hämevaara",
-              "Multaoja stream banks"
+              "matkaviestinverkon tukiasemamasto",
+              "tukiasemamasto paneeliantennit",
+              "cellular antenna tower"
             ]
           },
           {
             "candidates": [],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
+            "provider": "pexels",
             "queries": [
-              "cited source image"
+              "Liikenne- ja viestintäministeriö rakennus",
+              "Liikenne- ja viestintäministeriö julkisivu",
+              "Finnish transport ministry building"
             ]
           },
           {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "0ad64614c7d269ed9484b1f2dcc804e8c261dd2d245bb6c28824af22ee15816a",
-                "license": "CC BY-SA 2.0",
-                "reason": "The image shows a ditch with vegetated banks, but it is clearly in a rural or agricultural setting, not a park environment as specified in the concept. The article discusses a park in an urban area (Vantaa) and flood problems in a stream within that park, with plans for recreational routes. The visible scene does not match the 'park environment' or",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Drainage%20Ditch%20-%20geograph.org.uk%20-%20587540.jpg"
-              },
-              {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
-                "license": "CC BY-SA 2.0",
-                "reason": "The image clearly depicts a narrow open drainage channel with vegetated banks in a park-like setting, which directly matches the selected concept. The article discusses addressing flood problems in Multaoja and creating a new outdoor route along the stream, making this image highly relevant as a generic illustration of such a feature.",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Drainage%20ditch%20in%20Ickworth%20Park%20-%20geograph.org.uk%20-%204464991.jpg"
-              }
-            ],
+            "candidates": [],
             "concept_rank": 2,
-            "outcome": "accepted",
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Liikenne- ja viestintäministeriö rakennus",
+              "Liikenne- ja viestintäministeriö julkisivu",
+              "Finnish transport ministry building"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "puiston avo-oja",
-              "kasvillisuuden peittämä ojanpenkka",
-              "park drainage ditch"
+              "Liikenne- ja viestintäministeriö rakennus",
+              "Liikenne- ja viestintäministeriö julkisivu",
+              "Finnish transport ministry building"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Liikenne- ja viestintäministeriö rakennus",
+              "Liikenne- ja viestintäministeriö julkisivu",
+              "Finnish transport ministry building"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 2,
-          "fit_score": 9,
-          "image_sha256": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
-          "kind": "real"
+          "concept_rank": 1,
+          "fit_score": 10,
+          "image_sha256": "de2e8779bc5d466e6aa9d35b71aa1cf59d806a87b4cf8fb8c7c63ebd913ec290",
+          "kind": "generated"
         },
         "version": "article-first-v1"
       },
-      "sha256": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Drainage%20ditch%20in%20Ickworth%20Park%20-%20geograph.org.uk%20-%204464991.jpg",
-      "stock_provenance": {
-        "attribution": {
-          "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
-          "source_credit": "Drainage ditch in Ickworth Park by Bill Boaden",
-          "title": "Drainage ditch in Ickworth Park - geograph.org.uk - 4464991.jpg"
-        },
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Drainage_ditch_in_Ickworth_Park_-_geograph.org.uk_-_4464991.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "photo_id": "wikimedia-129101551",
-        "photo_url": "https://commons.wikimedia.org/wiki/File:Drainage%20ditch%20in%20Ickworth%20Park%20-%20geograph.org.uk%20-%204464991.jpg",
-        "photographer": "Bill Boaden",
-        "photographer_url": "https://commons.wikimedia.org/wiki/File:Drainage%20ditch%20in%20Ickworth%20Park%20-%20geograph.org.uk%20-%204464991.jpg",
-        "provider": "wikimedia",
-        "query": "park drainage ditch",
-        "retrieved_at": "2026-09-30T00:45:31Z"
-      },
-      "stock_provenance_sha256": "0c3aff5243535d8197a340bec7416bffe1aae3a62906b3a1895e0753aaf48201",
-      "url": "https://uutistenlukija.fi/media/13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26.jpg"
+      "sha256": "de2e8779bc5d466e6aa9d35b71aa1cf59d806a87b4cf8fb8c7c63ebd913ec290",
+      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "subject": "Matkaviestinverkkojen tukiasemamasto",
+      "url": "https://uutistenlukija.fi/media/de2e8779bc5d466e6aa9d35b71aa1cf59d806a87b4cf8fb8c7c63ebd913ec290.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Vantaan kaupungin mukaan Viikatepuiston suunnitelmista voi keskustella puistossa järjestettävässä asukastilaisuudessa keskiviikkona 7. lokakuuta 2026 kello 16–18. Näkemyksiä voi antaa myös Osallistuva Vantaa -sivuston kyselyssä 18. lokakuuta mennessä."
+        "text": "Liikenne- ja viestintäministeriö kertoo aloittavansa matkaviestinverkkojen seuraavan toimilupakauden valmistelun. Useimpien nykyisten taajuusalueiden luvat päättyvät vuoden 2033 lopussa. Ministeriön mukaan ennakointi antaa teleyrityksille aikaa suunnitella verkkoinvestointejaan."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kaupungin tavoitteena on puuttua puiston läpi kulkevan Multaojan tulvaongelmiin ja tehdä ojan varteen uusi ulkoilureitti. Lisäksi suunnitteilla on Viikatetieltä Espoon puolelle johtava reitti, jossa olisi valaistus ja talvikunnossapito."
+        "text": "Valmistelussa arvioidaan ministeriön mukaan lupien myöntämistapaa, lukumäärää ja voimassaoloaikaa sekä verkkojen kattavuudelle ja palvelujen laadulle asetettavia ehtoja. Viranomaiset ja sidosryhmät osallistuvat valmisteluun, mutta keskeiset linjaukset ja lupapäätökset jäävät seuraavalle hallituskaudelle."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kaupunki aikoo purkaa Valinkauhantien huonokuntoisen leikkipaikan lähivuosina ja korvata sen Viikatepuistoon rakennettavalla leikkipaikalla. Nykyisen pelikentän viereen suunnitellaan myös pientä ulkokuntoilualuetta."
+        "text": "Manner-Suomen 2,6 GHz:n taajuusalueella nykyiset luvat päättyvät muita aiemmin, 16. joulukuuta 2029. Ministeriö ehdottaa uusien lupien voimassaoloajaksi 17.12.2029–31.12.2033, jotta taajuusalue voitaisiin sisällyttää vuonna 2034 alkavaan yhteiseen lupakokonaisuuteen."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kaupungin tiedotteen mukaan Viikatepuisto sijaitsee Hämevaarassa Gubbmossenin luonnonsuojelualueen vieressä. Multaoja jatkuu Espoon puolella Monikonpurona."
+        "text": "Hakuilmoitusluonnoksen mukaan välikauden luvat jaettaisiin vertailevalla menettelyllä ja niiden ehdot säilyisivät pääosin nykyisen kaltaisina. Yhdelle toimijalle ehdotetaan enintään kahta lupaa 2,6 GHz:n taajuusalueelta. Kyse on vielä ehdotuksesta, ei päätetyistä lupaehdoista."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Ministeriön mukaan hakuilmoitusluonnoksesta voi antaa lausunnon Lausuntopalvelu.fi-palvelussa 2. marraskuuta 2026 asti. Luvat on tarkoitus avata haettaviksi lausuntokierroksen jälkeen ja myöntää alkuvuodesta 2027. Ne tulisivat voimaan joulukuussa 2029 nykyisten lupien päättyessä."
       }
     ],
-    "summary": "Vantaan kaupunki kerää näkemyksiä Hämevaaran Viikatepuiston kehittämisestä. Suunnittelussa tavoitellaan Multaojan tulvaongelmien ratkaisemista sekä uusia ulkoilu- ja leikkipaikkoja.",
-    "title": "Viikatepuiston suunnitteluun haetaan asukkaiden näkemyksiä"
+    "summary": "Liikenne- ja viestintäministeriön mukaan vuonna 2034 alkavan toimilupakauden valmistelu käynnistyy Manner-Suomessa ja Ahvenanmaalla. Erillinen ehdotus 2,6 GHz:n taajuusalueen välikauden luvista on lausuttavana 2. marraskuuta asti.",
+    "title": "Matkaviestinverkkojen uusia toimilupia valmistellaan"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "533d98fc67a9dcffc67cd89bbdd1da4099eabd5030591bf5e1aebe19183b31c8",
+    "draft_sha256": "cbdf4b553b29bed26b62979f475552f3e60c722e3513d91eeb11ee3a01606c22",
     "reasons": [
-      "Otsikko on 58 merkkiä eli alle 60 merkin tavoiterajan. Viikatepuiston suunnittelu on alussa, ja asukkaiden näkemysten kerääminen saa tuen lähteen A asukastilaisuudesta ja kyselystä. Myös ingressin kehittämistavoitteet perustuvat lähteeseen A.",
-      "Kaikkien neljän kappaleen source_ids-merkintä A on asianmukainen. Lähde A tukee tilaisuuden paikkaa, keskiviikon 7.10.2026 ajankohtaa ja kellonaikaa 16–18 sekä kyselyn määräpäivää 18. lokakuuta. Se tukee myös Multaojan tulvaongelmia koskevaa tavoitetta, ojanvarsireittiä ja Viikatetieltä Espooseen suunniteltavaa valaistua, talvikunnossapidettävää reittiä.",
-      "Lähde A tukee Valinkauhantien leikkipaikan suunniteltua purkamista lähivuosina ja korvaamista Viikatepuiston leikkipaikalla, pelikentän viereistä pientä ulkokuntoilualuetta sekä Hämevaaran, Gubbmossenin ja Monikonpuron paikannimiä ja yhteyksiä. Luonnos säilyttää suunnitelmien epävarmuuden eikä esitä hankkeita toteutuneina tai lisää perusteettomia syy-seuraussuhteita.",
-      "Vantaan kaupungin 29.9.2026 julkaisema lähde A on 30.9.2026 arvioituna ajankohtainen ja riittävä kaupungin omista osallistumismahdollisuuksista ja suunnittelutavoitteista kertovaan paikallisuutiseen. Kaupungin tiedot erotetaan riippumattomasta vahvistuksesta lähdeattribuutioilla. Kotimaa-luokitus sopii aiheeseen, teksti pysyy paikallisessa laajuudessa ja on neutraalia, ymmärrettävää omaa muotoilua. RIGHTS-asiakirjaa ei käytetä uutisväitteiden tai kuvan oikeuksien näyttönä.",
-      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Molemmille järjestetyille kuvakonsepteille on kirjattu haut. Valitun valokuvan tiedostokohtainen alkuperätietue yksilöi Bill Boadenin Ickworth Parkissa ottaman kuvan, Commons-lähdesivun, CC BY-SA 2.0 -lisenssin ja tallennusmuutoksen; oikeusnäyttö ei jää pelkäksi irralliseksi lisenssimaininnaksi. Täsmälliseen kuvatiedostoon sidottu koko artikkelin pikseliarvio on 9/10. Kuvauksen konkreettinen avo-oja kasvillisuuspenkkoineen liittyy artikkelin keskeiseen ojanvarsireitin suunnitteluun, ei vain yleiseen puistokategoriaan. Kuiva uoma ei yksin estä käyttöä, eikä kuva esitä tulvavahinkoja, toteutettuja uusia reittejä tai asukastilaisuutta. Arkistokuvamerkintä ei väitä kuvaa Viikatepuistossa otetuksi; alt-teksti vastaa annettua pikselikuvausta."
+      "Otsikko on 52 merkkiä eli alle 60 merkin tavoitteen. Matkaviestinverkkojen toimilupien valmistelu on sen alussa, ja väite vastaa lähdettä A. Ingressin vuodesta 2034 alkava lupakausi, Manner-Suomen ja Ahvenanmaan kattava valmistelu sekä lausuntojen määräpäivä 2.11.2026 ovat lähteen A tukemia.",
+      "Kaikkien viiden kappaleen source_ids-merkintä A on asianmukainen. Lähde A tukee nykyisten lupien päättymistä vuoden 2033 lopussa, valmistelussa arvioitavia ehtoja, viranomaisten ja sidosryhmien osallistumista sekä keskeisten linjausten ja lupapäätösten ajoittamista seuraavalle hallituskaudelle. Investointien ennakointia koskeva perustelu esitetään ministeriön näkemyksenä, ei itsenäisesti osoitettuna vaikutuksena.",
+      "Lähde A vahvistaa Manner-Suomen 2,6 GHz:n nykyisten lupien päättymispäivän 16.12.2029 ja ehdotetun lupakauden 17.12.2029–31.12.2033. Vertaileva menettely, pääosin nykyisen kaltaiset ehdot ja enintään kaksi lupaa toimijaa kohti säilyvät luonnoksessa ehdotuksina. Myöntäminen alkuvuodesta 2027 ja voimaantulo joulukuussa 2029 esitetään suunnitelmina, eivät päätettyinä tapahtumina.",
+      "Lähteen A tiedote on julkaistu 29.9.2026, joten se on arviointiajankohtaan 30.9.2026 nähden tuore ja riittävä ministeriön oman valmistelun ja lausuntokierroksen uutisointiin. Luonnos ei väitä riippumatonta vahvistusta, laajenna alueellista soveltamisalaa perusteettomasti eikä lisää lähteettömiä syy-seuraussuhteita. Suomen kieli on neutraalia, ymmärrettävää ja itsenäisesti tiivistettyä; Talous-luokka sopii toimilupia ja verkkoinvestointeja käsittelevään aiheeseen. RIGHTS-asiakirja koskee tekstin käyttöehtoja, ei uutisväitteiden todentamista tai kuvaoikeuksia.",
+      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Paketissa on kaksi järjestettyä kuvakonseptia ja dokumentoidut haut molemmille. Valittu tekoälykuva vastaa ensimmäistä turvallista konseptia: matkaviestinverkon teräsmasto ja paneeliantennit liittyvät konkreettisesti jutun verkkotoimilupiin. Erillisen mallin kuvakohtaiseen SHA256-tunnisteeseen sidottu pikseliarvio raportoi sopivuudeksi 10/10, molemmat vaaditut kohteet näkyviksi sekä henkilöt ja luettavan tekstin puuttuviksi. Alt-teksti vastaa raportoitua sisältöä, eikä kuvaa väitetä tietyn paikan tai tapahtuman valokuvaksi. Kuvateksti sisältää täsmällisen ilmoituksen: AI-generoitu kuva. Ei valokuva tapahtumasta. Valinnassa ei käytetä lähteen valokuvan tai hylättyjen kuvapankkikuvien käyttöoikeuksia."
     ]
   }
 }
