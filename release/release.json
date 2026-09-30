@@ -4,32 +4,430 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "a8032138a2ed3ae106c80cebdedc37e57e54f48a",
-  "job_id": "a24ef4286ebe92ec81b2935e1b1ff9db9f3df275eea00dce5addaee019e02ffa",
-  "packet_sha256": "3d7cc1616bab594a742196bb09b5f1e0a0a7e3d45753e463cfdeee1b527db532",
-  "draft_sha256": "62933e365f9935baccae2f57c335b5922c6e3ee0c8c82c9ecba7346b692b6c4e",
-  "image_sha256": "55ccede5a91088ecc85f303497dd43e1975bb90761a3c2993d600e98a4cba5ac",
+  "job_id": "b7a9132e4a5260fac019692de9cc47053adbae3350ad4cf206a2292ba04ab00d",
+  "packet_sha256": "3e7fa6f9adaf4db0f9c52a8f03ad3b0fac2e7b210c37d6050cba5e19c09d93a4",
+  "draft_sha256": "783eff13cfc8a2312357ef2ab73c034d08075f717d75e66e4ecae994c8cc3d2b",
+  "image_sha256": "fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "dda78c512793cd18ef2acb7eecb50fcd0ff6442203658ee1e982eb4fd4d1dd59"
+    "provenance_sha256": "b6252455afad7f71398c1bd06e6814f1dc4ec6d4bf5192801949ba332189bbed"
+  },
+  "stock_image": {
+    "alt": "Arkistokuva: Kapea asfalttitie kulkee metsän ja pellon välissä, ja sen pinnassa näkyy halkeamia ja kuluneita merkintöjä.",
+    "caption": "Arkistokuva artikkelin aiheesta.",
+    "classifier_output": {
+      "category": "Kotimaa",
+      "concepts": [
+        {
+          "depictable_scene": "Nimeämätön kapea asfalttitie kulkee suomalaisessa maaseutumaisemassa metsän ja pellon välissä. Etualalla näkyy päällysteen halkeamia, kuluneita paikkauksia ja pieni reunavaurio. Tie on tyhjä.",
+          "must_avoid": [
+            "People or body parts",
+            "Motorways or urban streets",
+            "Invented readable text or logos",
+            "Exaggerated collapse or disaster damage"
+          ],
+          "must_show": [
+            "Cracked asphalt surface",
+            "Narrow rural road"
+          ],
+          "rank": 1,
+          "safe_to_generate": true,
+          "search_queries": [
+            "halkeillut asfaltti maaseututie",
+            "Suomen seututie päällystevauriot",
+            "cracked rural asphalt road",
+            "worn asphalt road Finland"
+          ],
+          "subject": "Maaseudun päällystettyjen teiden kulunut pinta"
+        },
+        {
+          "depictable_scene": "Nimeämätön kapea soratie jatkuu metsänreunaa pitkin maaseudulla. Etualan sorapinnassa näkyy ajouria ja matalia kuoppia, ja tien reunoilla on ruohoa. Kuvassa ei ole liikennettä.",
+          "must_avoid": [
+            "People or body parts",
+            "Paved highways",
+            "Invented readable text or logos",
+            "Impassable disaster damage"
+          ],
+          "must_show": [
+            "Rutted gravel road",
+            "Rural roadside vegetation"
+          ],
+          "rank": 2,
+          "safe_to_generate": true,
+          "search_queries": [
+            "soratie kuopat ajourat",
+            "Suomen yksityistie sorapinta",
+            "rutted rural gravel road",
+            "Finnish gravel road potholes"
+          ],
+          "subject": "Maaseudun yksityistiet ja sorapinnan kuluminen"
+        },
+        {
+          "depictable_scene": "Lähikuva nimeämättömän maaseututien pinnasta, jossa tumma suorakulmainen asfalttipaikka erottuu vanhemmasta harmaasta ja halkeilleesta päällysteestä. Rajauksessa näkyy myös tien sorainen piennar, mutta ei työntekijöitä tai koneita.",
+          "must_avoid": [
+            "People or body parts",
+            "Invented readable text or logos",
+            "Pristine newly paved highway"
+          ],
+          "must_show": [
+            "Asphalt repair patch",
+            "Cracked surrounding pavement"
+          ],
+          "rank": 3,
+          "safe_to_generate": true,
+          "search_queries": [
+            "asfalttipaikkaus maaseututie",
+            "paikattu tien päällyste",
+            "rural road asphalt patch",
+            "asphalt patch cracked pavement"
+          ],
+          "subject": "Päällystettyjen teiden korjauksiin käytettävä asfalttipaikkaus"
+        }
+      ],
+      "version": "article-first-v1"
+    },
+    "credit": "Photo by Frank Fritsch on Pexels",
+    "depicted": "The image shows a long, winding asphalt road stretching into the distance under a hazy sky. The road has white dashed lines on the right side and solid white lines on the left side, with some areas of the asphalt appearing lighter due to sunlight or moisture. On both sides of the road, there are green grassy verges, beyond which are dense lines of dark green trees. The trees on the left appear closer and more defined, while those on the right are further away and partially obscured by mist or ha",
+    "generated": false,
+    "hotlink": false,
+    "license": "Pexels License",
+    "license_evidence": {
+      "image_path": "/photos/32963980/pexels-photo-32963980.jpeg",
+      "license": "Pexels License",
+      "license_code": "Pexels",
+      "license_url": "https://www.pexels.com/license/",
+      "photo_id": "32963980",
+      "photo_url": "https://www.pexels.com/photo/scenic-misty-road-through-forested-countryside-32963980/",
+      "photographer": "Frank Fritsch",
+      "photographer_url": "https://www.pexels.com/@frank-fritsch-1741901",
+      "response_sha256": "267d629f0932146aa750ec424af114b7e8abe5d5df024df4097c8acca5dace60",
+      "retrieved_at": "2026-09-30T07:46:44.308890+00:00",
+      "transport": "jina_reader",
+      "version": 1
+    },
+    "license_url": "https://www.pexels.com/license/",
+    "local_path": "media/fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69.jpg",
+    "pixel_review": {
+      "alt_fi": "Kapea asfalttitie kulkee metsän ja pellon välissä, ja sen pinnassa näkyy halkeamia ja kuluneita merkintöjä.",
+      "approved": true,
+      "article_text_sha256": "4aa52b1b995b41382e672ff6837f57366f8406f8acbc208a080dcaab7b30b254",
+      "concept_sha256": "4a7fe340499d144c4e1eaee9066d1e424dede7aad0a6e6cd12fee5af80f1a3d7",
+      "description": "A narrow asphalt road stretches into the distance, flanked by green grass and trees. The road surface shows signs of wear, with visible cracks and faded markings. Mist hangs in the air further down the road.",
+      "fit_score": 9,
+      "image_sha256": "fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69",
+      "model": "google:gemini-2.5-flash",
+      "must_show_visible": [
+        true,
+        true
+      ],
+      "no_people": true,
+      "reason": "The image clearly depicts a narrow rural asphalt road with visible cracks and wear on its surface, directly matching the 'Cracked asphalt surface' and 'Narrow rural road' must-show elements of the selected concept. This aligns well with the article's focus on the deteriorating condition and repair debt of regional and private roads.",
+      "reviewed_at": "2026-09-30T07:46:47.404744+00:00",
+      "text_audit": {
+        "examples": [],
+        "readable_text_present": false
+      }
+    },
+    "pixels": {
+      "height": 650,
+      "mode": "RGB",
+      "variance": 10746.6,
+      "width": 867
+    },
+    "relevance_check": {
+      "accepted": true,
+      "evidence": "A narrow asphalt road stretches into the distance, flanked by green grass and trees. The road surface shows signs of wear, with visible cracks and faded markings. Mist hangs in the air further down the road.",
+      "matched": [
+        "asphalt",
+        "narrow",
+        "road",
+        "surface"
+      ],
+      "method": "vision",
+      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+    },
+    "selection_evidence": {
+      "article_text_sha256": "4aa52b1b995b41382e672ff6837f57366f8406f8acbc208a080dcaab7b30b254",
+      "decision_sha256": "dfae8ee944962115f21230b1374e6d6eec7bf710e4b9d8f006e4f47784b93c06",
+      "minimum_real_fit": 8,
+      "searches": [
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "5c64f964212b721e806c81f245cdc77c1aeab7074c88ad2be0cfadc867f97bb1",
+              "license": "Pexels License",
+              "reason": "The image shows a narrow rural road, which aligns with the 'Narrow rural road' must_show element. However, the 'Cracked asphalt surface' must_show element is not clearly present; the road appears to be in relatively good condition with only minor puddles and surface irregularities, not significant cracks or worn patchings as described in the concep",
+              "source_url": "https://www.pexels.com/photo/photo-of-roadway-in-between-green-trees-14420645/"
+            },
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "bfff54b0457589b795fe0313f66e5c6e3665455cbba9ce492646e7379a1fb6c8",
+              "license": "Pexels License",
+              "reason": "The article discusses the repair debt of regional and private paved roads. The selected concept specifically requires a cracked asphalt surface and a narrow rural road. The image shows a dirt road, not an asphalt road, and therefore does not meet the 'cracked asphalt surface' requirement. It also lacks any visible damage to the road surface that wo",
+              "source_url": "https://www.pexels.com/photo/serene-dirt-road-in-green-forest-landscape-34185071/"
+            },
+            {
+              "approved": true,
+              "fit_score": 9,
+              "image_sha256": "fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69",
+              "license": "Pexels License",
+              "reason": "The image clearly depicts a narrow rural asphalt road with visible cracks and wear on its surface, directly matching the 'Cracked asphalt surface' and 'Narrow rural road' must-show elements of the selected concept. This aligns well with the article's focus on the deteriorating condition and repair debt of regional and private roads.",
+              "source_url": "https://www.pexels.com/photo/scenic-misty-road-through-forested-countryside-32963980/"
+            }
+          ],
+          "concept_rank": 1,
+          "outcome": "accepted",
+          "provider": "pexels",
+          "queries": [
+            "halkeillut asfaltti maaseututie",
+            "Suomen seututie päällystevauriot",
+            "cracked rural asphalt road"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "d9a21387c5ceaa84b022b051083c9707b1401f9ac1d72df86e9b160fd39e3a0f",
+              "license": "Pexels License",
+              "reason": "The article discusses the poor condition of regional and private roads, specifically rutted gravel roads. The image shows a gravel driveway, which is not a road, and it does not exhibit any signs of rutting or potholes as described in the concept. The visible subject does not genuinely illustrate the concrete article subject. One or more required c",
+              "source_url": "https://www.pexels.com/photo/row-of-yellow-garages-in-a-forest-setting-39725510/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "941de5c16ff921facb932ec7b45deec623da549becdd60b3f769fc51dff55a23",
+              "license": "Pexels License",
+              "reason": "The article discusses the poor condition and repair debt of regional and private gravel roads in Finland. The selected concept specifically describes a 'rutted gravel road' with 'rural roadside vegetation'. The image, however, shows a developed area with paved roads and multi-story buildings, which does not match the concept of a rutted gravel road",
+              "source_url": "https://www.pexels.com/photo/aerial-view-of-swedish-residential-development-site-36955202/"
+            },
+            {
+              "approved": false,
+              "fit_score": 3,
+              "image_sha256": "7d3b722f9862cd39835cda8f7d22108220256269d1fa087c446c54150d505f64",
+              "license": "Pexels License",
+              "reason": "The image depicts a forest scene with trees and undergrowth, which is a generic rural setting. However, it does not show a road, gravel surface, ruts, or potholes, which are central to the selected concept of a 'rutted gravel road' and 'rural roadside vegetation' (specifically implying a road). Therefore, it fails to meet the 'must_show' criteria. ",
+              "source_url": "https://www.pexels.com/photo/trees-growing-in-green-forest-17980352/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "70c4b63f8b13efb08912b6edb668df4da3eecb3d8be7a452728a8cafad38a328",
+              "license": "Pexels License",
+              "reason": "The image depicts a forest scene with a tree trunk and foliage, which does not show a rutted gravel road or any indication of a road, as required by the selected concept. Therefore, it fails to meet the 'must_show' criteria. One or more required concept elements are not visible.",
+              "source_url": "https://www.pexels.com/photo/lichen-covered-tree-trunk-in-a-forest-23229115/"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "soratie kuopat ajourat",
+            "Suomen yksityistie sorapinta",
+            "rutted rural gravel road"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 3,
+              "image_sha256": "d84ff4eecd94b4dcf63a41b0d525db54a66d43fc9c7b143a8de5e54b6a8cc6e3",
+              "license": "Unsplash License",
+              "reason": "The article discusses the poor condition of regional and private gravel roads, with a focus on potholes and rutting. The selected concept specifically describes a rutted gravel road with rural roadside vegetation. The image, however, shows an asphalt road in good condition, a bus stop, and houses, which does not match the concept of a rutted gravel",
+              "source_url": "https://unsplash.com/photos/a-small-wooden-building-sitting-on-the-side-of-a-road-ZqqgJ_7WjQ4?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "b242389bbebebd00bd1f0585e24493c2260b2344209b24bd75451a3897fb3c6f",
+              "license": "Unsplash License",
+              "reason": "The image shows a gravel road and rural vegetation, which broadly aligns with the article's theme of regional and private roads. However, the selected concept specifically requires a 'rutted gravel road' with 'ajouria ja matalia kuoppia' (ruts and shallow potholes). The visible gravel road in the image appears to be in good condition, without clear",
+              "source_url": "https://unsplash.com/photos/gravel-road-through-grassy-field-NUWGIVW32H8?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": true,
+              "fit_score": 8,
+              "image_sha256": "67e645c01c9804f9f275cc05d8a143be1509ff8ad918ca66d97b77a8a3081967",
+              "license": "Unsplash License",
+              "reason": "The image depicts a gravel road in a rural setting, which aligns with the article's discussion of regional and private roads and their condition. The road shows some wear, consistent with the concept of 'rutted gravel road' and 'sorapinnan kuluminen'. The surrounding fields and distant trees represent rural roadside vegetation.",
+              "source_url": "https://unsplash.com/photos/green-tree-beside-road-WEfsBSEd_LE?utm_source=uutistenlukija&utm_medium=referral"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "accepted",
+          "provider": "unsplash",
+          "queries": [
+            "soratie kuopat ajourat",
+            "Suomen yksityistie sorapinta",
+            "rutted rural gravel road"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 7,
+              "image_sha256": "dcaf459e3a9c702145e4cbb64afebdf5f9ef07b3640b938d769143e045d2ff74",
+              "license": "Pexels License",
+              "reason": "The image shows cracked pavement, which is relevant to the article's theme of road network deterioration and repair debt. However, it does not show an asphalt repair patch, which is a 'must_show' element for the selected concept. Therefore, it cannot be approved for this specific concept. One or more required concept elements are not visible.",
+              "source_url": "https://www.pexels.com/photo/black-and-white-textured-cracked-pavement-33421228/"
+            },
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "7027fa882aea03a7a6226de907c791b60d39724283ade44de17d3e8332ff2211",
+              "license": "Pexels License",
+              "reason": "The article discusses the repair debt of regional road networks and the concept specifically requests an image showing an asphalt repair patch and cracked surrounding pavement. The provided image shows only a generic asphalt surface without any visible repair patches or significant cracks, therefore it does not meet the 'must_show' criteria. One or",
+              "source_url": "https://www.pexels.com/photo/little-stones-of-gray-wet-asphalt-road-7245520/"
+            },
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "50915fe50d6ac09045824b7bfa7a898ea43643db8c94033aaf7e2487ca4c5431",
+              "license": "Pexels License",
+              "reason": "The article discusses the repair debt of regional road networks, and the selected concept specifically requests a close-up of an asphalt repair patch on a rural road with cracked surrounding pavement, without workers or machinery. This image shows road construction machinery and workers, and a police car, which are explicitly excluded by the concep",
+              "source_url": "https://www.pexels.com/photo/from-above-of-repair-of-road-at-night-4394364/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "c039f743c39c525c381ae66fc6fa19e6a3212163514178fa8d2a1574342cd41c",
+              "license": "Pexels License",
+              "reason": "The image depicts food items, specifically garlic and wrapped bundles, displayed on trays. This content is entirely unrelated to the article's subject of regional road network repair debt and asphalt patching. The selected concept specifically requires an asphalt repair patch and cracked pavement, neither of which are present in the image. One or m",
+              "source_url": "https://www.pexels.com/photo/a-tray-of-garlic-on-a-table-next-to-a-red-stool-28117107/"
+            }
+          ],
+          "concept_rank": 3,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "asfalttipaikkaus maaseututie",
+            "paikattu tien päällyste",
+            "rural road asphalt patch"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "13c001b0ea9f81e6441c0f1887707dc1b6cdca8bcb49c0c4f206451b997313fc",
+              "license": "Unsplash License",
+              "reason": "The article discusses the repair debt of regional road networks and asphalt patching. The selected concept specifically requests a close-up of an asphalt repair patch on a rural road, showing cracked surrounding pavement and a gravel shoulder, without workers or machinery. The actual pixels show an asphalt milling machine actively removing asphalt,",
+              "source_url": "https://unsplash.com/photos/a-milling-machine-removes-asphalt-next-to-an-orange-truck--ILmHp_MdE8?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "1ad05adbe7589804e4e0f070bd22be41268e8f19719808aeb65dd3cf5b40b6f0",
+              "license": "Unsplash License",
+              "reason": "The image shows a road, which is broadly related to the article's topic of regional road network condition and repair debt. However, the selected concept specifically requires a close-up view of an asphalt repair patch contrasting with cracked surrounding pavement. This image shows a road with a lighter strip, which could be a repair, but it is not",
+              "source_url": "https://unsplash.com/photos/an-empty-asphalt-road-stretches-to-the-horizon-dD9UGE0GhpA?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "7700d9db6cc4cf747a2a31db76272bbe94e7ab76e7fb89aa2056a9c34f6220bf",
+              "license": "Unsplash License",
+              "reason": "The article discusses the repair debt of regional road networks and the concept specifies an asphalt repair patch on a cracked pavement. The image shows a road that appears to be in good condition, without any visible asphalt repair patches or cracked pavement. Therefore, it does not depict the specific concept requested. One or more required conce",
+              "source_url": "https://unsplash.com/photos/an-empty-asphalt-road-stretches-through-green-hills-0CGpbp8ec2k?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "67e645c01c9804f9f275cc05d8a143be1509ff8ad918ca66d97b77a8a3081967",
+              "license": "Unsplash License",
+              "reason": "The article discusses the repair debt of regional road networks, specifically focusing on asphalt repairs. The selected concept describes a close-up of an asphalt repair patch on a rural road. The image, however, shows a gravel road, not an asphalt road, and there are no visible asphalt repair patches or cracked pavement. Therefore, it does not fit",
+              "source_url": "https://unsplash.com/photos/green-tree-beside-road-WEfsBSEd_LE?utm_source=uutistenlukija&utm_medium=referral"
+            }
+          ],
+          "concept_rank": 3,
+          "outcome": "no_qualifying_candidate",
+          "provider": "unsplash",
+          "queries": [
+            "asfalttipaikkaus maaseututie",
+            "paikattu tien päällyste",
+            "rural road asphalt patch"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "04dfeb9e172c51fabdbe03d3e02ac9f0da42e4d73e1c567aa69579eb5a6056f8",
+              "license": "CC BY-SA 3.0",
+              "reason": "The article discusses the repair debt of regional road networks and the concept specifically asks for a close-up of an asphalt repair patch on a rural road with cracked surrounding pavement. This image shows a rural road, but it is a wide shot, not a close-up, and there are no visible asphalt repair patches or clearly cracked pavement as described ",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Belarus,%20Homjel,%20Narovlja%20-%20Viarbovichy%20WMID2188159.jpg"
+            }
+          ],
+          "concept_rank": 3,
+          "outcome": "no_qualifying_candidate",
+          "provider": "wikimedia",
+          "queries": [
+            "asfalttipaikkaus maaseututie",
+            "paikattu tien päällyste",
+            "rural road asphalt patch"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 3,
+          "outcome": "no_qualifying_candidate",
+          "provider": "google",
+          "queries": [
+            "asfalttipaikkaus maaseututie",
+            "paikattu tien päällyste",
+            "rural road asphalt patch"
+          ]
+        }
+      ],
+      "selected": {
+        "concept_rank": 1,
+        "fit_score": 9,
+        "image_sha256": "fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69",
+        "kind": "real"
+      },
+      "version": "article-first-v1"
+    },
+    "sha256": "fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69",
+    "source_url": "https://www.pexels.com/photo/scenic-misty-road-through-forested-countryside-32963980/",
+    "stock_provenance": {
+      "image_url": "https://images.pexels.com/photos/32963980/pexels-photo-32963980.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "photo_id": "32963980",
+      "photo_url": "https://www.pexels.com/photo/scenic-misty-road-through-forested-countryside-32963980/",
+      "photographer": "Frank Fritsch",
+      "photographer_url": "https://www.pexels.com/@frank-fritsch-1741901",
+      "provider": "pexels",
+      "query": "halkeillut asfaltti maaseututie",
+      "retrieved_at": "2026-09-30T07:46:44Z"
+    },
+    "stock_provenance_sha256": "aa787711ccb3a4edadf28302345557cd1f466bcc90849f376251b3f511acd911",
+    "url": "https://uutistenlukija.fi/media/fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69.jpg"
   },
   "new_article_files": [
-    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html"
+    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "989fbc51eb71105f60b601d18ed9e917a8416cfefd8055d93fc1afcab845212b",
-    "_redirects": "49655c3918249e3a62191184d03552b326531f014bd4bb62a099b7cfac217926",
-    "ai-kuvat/index.html": "66b22450992cb5351779bada13deffc061a4398f7d83cfc01fc5d099439974c5",
-    "categories/kotimaa/index.html": "cb859b828824809b997deb9b800f33e9c6e24989155551942c0abbbaa86df6df",
-    "categories/kulttuuri/index.html": "b0d7822af6d446347ce6f6f83bf1364047c73258cecc550ffc773b13fc322efa",
-    "categories/talous/index.html": "d44c57d97f266111be4ab533a799011b7a8ad7343722e262faba55d298e25bc6",
-    "categories/teknologia/index.html": "0ca636ba7c08dd71ef6e902627c38655f4d06e985e605bdf91dea34e1b0a95b9",
-    "categories/tiede/index.html": "ed9f362b46855c5af478f41c81b5ca8d90ff6322c7ad17d28fde166b949de927",
-    "categories/ulkomaat/index.html": "ebb2e9da52e9b9e99634236bb35bf200db7b4cacf7d4551d0ee3c1cf3b424eec",
-    "categories/urheilu/index.html": "7611b623f6cdfc5460d0c1065fecdf328d65d53912f8c4a18bdc2d7d8eeb7241",
-    "index.html": "1e13e36d69e778f252b5a3c46d589339f3b240b963bee940fbca6c2b59457974",
-    "lahteet/index.html": "c46e00a3f2d795ff4c9608a0a7b27db41f5511a06fb733103b62e3a7c2150b87",
+    "_redirects": "19daf92c39b5ca9a913addc63f52be2589fb12331c78d92df446bcaccf8c7f24",
+    "ai-kuvat/index.html": "ea34fcb0dd53374c46cad6d43b5de25e17cd5e099dac0cd38b196949e48739a3",
+    "categories/kotimaa/index.html": "fcb034a725b951d4d8801f64da8cf92733a866c6e09eae5f3454381ed73ed158",
+    "categories/kulttuuri/index.html": "1b63dbfc9794ef6e467a011991676fa6de46dc7794c89daa1b726df08a1d22e9",
+    "categories/talous/index.html": "e68c83e1734991fc7a7aec5588017457732f6e5f59a4b5cf492cd3096ff8fd4a",
+    "categories/teknologia/index.html": "ec90f0c89bbfd9f477bc798724b1c5cbf150ef4919166070f2df545b96fc5fda",
+    "categories/tiede/index.html": "c72a7afe95780e22ae506f06574ebb76dabf18ec2ea75827fd2f952f338d7c02",
+    "categories/ulkomaat/index.html": "9becfef8f75f05262a06d9e886150a6524e16902ef6d38d1769e12cdc79315ee",
+    "categories/urheilu/index.html": "fb582df8200beb8c73aa00698b73b59f1ec4c883b8d8871f3b7c050c73ea0870",
+    "index.html": "15d150ec54524776cbcf52977fbb0c4749e3a8c92c333a26c05303e95786e9b3",
+    "lahteet/index.html": "bf7e841d0fb878b19d656b23f302bf5eed7a826f310485adf0487b088c8bea41",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -490,6 +888,7 @@
     "mvp-assets/fca9d081a150a08215553961ab541667f98ea4bf8c9dd8219921bd1825d78a37.jpg": "fca9d081a150a08215553961ab541667f98ea4bf8c9dd8219921bd1825d78a37",
     "mvp-assets/fcbf696251a6392b6a8cfd0deecb16dc04bede4533967834556265c3e757d380.jpg": "fcbf696251a6392b6a8cfd0deecb16dc04bede4533967834556265c3e757d380",
     "mvp-assets/fdbed42a25eea1dd85947ecf402361bb5ee055a28ea0779ab03ecb6785a99dbf.jpg": "fdbed42a25eea1dd85947ecf402361bb5ee055a28ea0779ab03ecb6785a99dbf",
+    "mvp-assets/fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69.jpg": "fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69",
     "mvp-assets/fe2167068a4495728a4f9b7864c61c164d2c4d4e480755fd3f163e181cc65f3f.jpg": "fe2167068a4495728a4f9b7864c61c164d2c4d4e480755fd3f163e181cc65f3f",
     "mvp-assets/fe271648272475e2b833781c147af3a6c7e812278c12d583b388d905525ae678.jpg": "fe271648272475e2b833781c147af3a6c7e812278c12d583b388d905525ae678",
     "mvp-assets/fe7ed2f389d1001a7a16bcfaf49f1c51926b699f34c480072b6cbe9153d24807.jpg": "fe7ed2f389d1001a7a16bcfaf49f1c51926b699f34c480072b6cbe9153d24807",
@@ -517,19 +916,19 @@
     "mvp-assets/portal.js": "17dcc8a25306b1900ee898c13e74168d09ab29df3a217b113fb72e50f4a573e3",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "6b3d4bfb8e6aebb8496dfa3ec2fb6c9846b18b85b0b7cf98bdbfee64787365fa",
-    "oppaat/index.html": "a8fce2deed5619f864e4edeb93a74cb72cbdc8c6cabdd4dc4f9dd22454422259",
+    "oppaat/index.html": "1e8ca172e1e6bffff4b9cee46bfdec2c29ae6b5b96f5479c1b73c06d63778f61",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "4a9044a2881177b3486fcd239fbd9a4fe0babb18467826dbfca12e584b58455b",
-    "sitemap.xml": "65ad15f0525e37e88b7aa1dfd561d67fe19605462d62398f316b9e36b9287520",
-    "sivu/2/index.html": "d988bcdbc00e787e88962ead0b31d92ac29539a1542031b46fe007f193a039aa",
-    "sivu/3/index.html": "26c59f04f055882f52a2a6ec85b328c60f9e38c21a8dcec540f6df977f40dff3",
-    "sivu/4/index.html": "cbc2c76846997ac765b57c6d073e46ead88b84692c7b9f06af3a8d24ac8e6a18",
-    "sivu/5/index.html": "8e8aaa4133f4f8a56a621ab93f0d7ea24ca6796a5f85ba7aa92442b00608ac33",
-    "sivu/6/index.html": "c8e7d5212c931f03b0c9f299cd29e43c4f818ede410d41bc25872db5849b6641",
-    "sivu/7/index.html": "289771d567f78ad36d2911f761cb0db0db2a10928fc049e40091a92e14f49c4e",
-    "sivu/8/index.html": "cb3102c466be984e30cbb4c8a8e8618fd38cdf6585299a46c6d4e41f8abb0165",
-    "tietosuoja/index.html": "07bfffec5da75d82ceabdfee51149be60dae945d1da305c2185a9c061f650e33",
-    "tuoreimmat/index.html": "2a0f784c329f1a2c41e0042a84016bb77bd0ce8e882cd7d80379501485e77ad1",
+    "rss.xml": "4f21d8dea9b30b4fc453922bc857e92a8c58983123d2b54ad9c9139f618d4130",
+    "sitemap.xml": "cb09b213b01baee7afb91794ff45b4d7446596030e9e8327ec258566a8476de7",
+    "sivu/2/index.html": "a0a6a2a651a0701f334bf118cd19f089d876e632af4696cec0e6b88df4ff8983",
+    "sivu/3/index.html": "f85b6f7d817abeab1fd1622e043f90306660c2cbd08579652c336d4d8bce01e4",
+    "sivu/4/index.html": "0f43f9a45fa1621e6b3d1ca1fd6c3cfed60dc1764a0e236ff8ed085ff2d0ea33",
+    "sivu/5/index.html": "85c40c5ac1a4a4a6b39e49f6f811d7acb7502f990a6547f755c59dcf630b8887",
+    "sivu/6/index.html": "0d0ca0dd54d02e2f40b2191f86c447d27229505dd87a795fd7c660ee25a8f12e",
+    "sivu/7/index.html": "6ffd9fb13a5151a572821415a99cf48d42402de2bf0344b3ab31d6b84b8561ce",
+    "sivu/8/index.html": "aad8925d1d6ca05cc56497d0eb74b831c6b0202b3c7b3370cd8632636b104161",
+    "tietosuoja/index.html": "f074f50da2caa30eb16106550bb66c42c899194946afec2b42b4dfa98f984534",
+    "tuoreimmat/index.html": "d05a3cce0373104060ce3203e665f754f2d80e5e09acd439855435e140fcae64",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -543,777 +942,1125 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "d9180c593eba445f73ad412a820e535b77ef6dfe86106814b793fc19195156ef",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "e099d4b99c7e1da19ebc538ff0a588393b79af409fe93458627c9e8aeb591481",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "53b8bb40655fe31f22146477c7ba056e01b56c7059d17321cc1f17ac83bf31b4",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "144b044c0950a7ae5975b73867122b764991f2307d5502ca8624dbe2b56dc39d",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "ec20a6b679ce6f34bdc5002e6362ee7233aaa42d687bed1eaafd5857d98f74e1",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "da0849d6dbe3511b62f65ffab5dd28e956ea2bb3e598258eef07acb94c6a6b01",
-    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "0b7ceb77682d5338dc24f5e75ad004dbc895485100a4aca5b0124311f469551d",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "04f387bc4be93d18554e66f06a6a22e10e855dff1cfe788a7445392d35d8d0ac",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "4aabfab0a45914bd69968b9bc26bf7d4460bd804d2528dcf827888a4fd53c416",
+    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "bb147b7bfece7c20c74fc3dd50ab5bb2fe93242416f339c955535412519e6bda",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "ef16f66facd77b0383c7fe728d9a9df8b6c934094841e254a25489eb614de61b",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "d022e56773d4b657c26b7c130fe4020eee9e4d15fe4432b487872f94aaaa4730",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "e7dd97676058abba759b042163a699980d62196bbd3495db006b1e561618f30c",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "22b768669de39092e30874dc97c555a3e924b2e4a0a3d8e25741705530e7a59f",
+    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "f9cd6979557b86762a68aea5b7768829e99151d79f2bd4048f74ee9117cd6fe2",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "9e365f336ead6b38a56b4daf83253705a7a93b85318c33577d15d281ab09b851",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "736f5a3dc273148efc56a4470e3230012117bc9a6462a6e6ccababf5321e8343",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "b88f61c30bfbd9629e2cfd57fb5ba32b701df737cc1fab659e07f9d0122fe800",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "b1d917c19f54c2cf493f5c68a95122f95e9861b1ff86431bc7752b352f452077",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "76fe7c5872262bf5978a5af7cd445f58683f6310bd6c6127b87f86f2db4c27c7",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "10c2e7ae7f57b0c732e184af342900579e2c33edf5b1be6b14d59dedef01fbf5",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "f0a15ea019a77523b15df679f519224db66b052addcd52162c5fdab58a98d2ad",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "56c2351a17e565f35bf8e9d93f29d0949ff6fa634315b0cabf8e299cd61c5b0e",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "6652aec1554a4d421ea4d02f5dca87976c4f2eaed51e1ebde77ffce90ad3f0f8",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "755aef93bbb5e7ac73072b2266e6c3c2fe5d41990cae2607ff5d009555feb086",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "3e1614819abf156465e00b647273f65bd01f990f14ddc435e47f124313a88433",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "839770f706a90a4c38d460e05f73bc4ba78ac26e2915d73bb2aacf76d5150c07",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "0ec7b27bc380dd950086ff0180e775b04880b2316b4010617f4fbd3327dccffb",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "a8300e8009955a73aa73c7822874385f2e1b88c2d75aa7998b12723c446b97a6",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "19b61a62cad6f804601142d2254f47ab3ea436e34fc9336947640428e651bb9e",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "b069ea2e693569f25feb51487d68b359ac4936e4312e80e493a80f890218ae18",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "796fe328a0a5b4dc19e899852d7e063bfc7e3ba87443e4486e511e885c0c1e8d",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "85ad8dcbd89802726e67af54c6e698e049e271f55aa1959422f6923b8aaf0ca4",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "c98fd00ebe533ce6efd77b76fdaa1bdb049274e52698be8b6fc7ec33fb4f4df6",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "78709eacf6590f5db82c1215b0dc7d0996bcfd1b4a3aa6dd723c97c441794e62",
-    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "45c388a31fdea24b7f163750c3dea060b9abb9febad27bad6f465e6bcf3f11f7",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "a303e8699a5d9d9f9ba35348d3f9a210d122eda16951b4099f3c4424842681ff",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "e048e2e9183cf49bd8b82f2a2795e44fe26b4afd8c8ec694cd99d9b31ad6b2c5",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "f995b07a1b49593d064d8bf9657b84ffe950ebcb97cb5a046896346ec2c7e763",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "05ab65eefff45aad22c5eb59ad3a1803a02256dd694cc5bc2f2993b61b2e480c",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "e19b2ad078101c5eeea5cbc9a3dbd0c6bdfe54af7bfb739235ccf94a9737bcc8",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "e143fcddbe3c45f4b2db61cb1aee9be69e7899240b31d5c74d70e0a08bdf8ead",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "f86c4f9fe566d063e91e359421d23281bc8e1bec3bd21a700142ad8c1eaab80d",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "1054b883dfe08ff36ca80e5d08006141727017d793f89770468371fbcec7d111",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "e50b9e9c23f7f286475f856ff6a859890974a9bb2cdd599195a5e5d2c6494333",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "f77ca3e2284885ce41cee86ec02a238c22128cf95d1e16e7d5d2aaee15b4ab4d",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "944bbcd62a4157e233231d6bdeb0dd3fcd1ccbbfd18f62d55dfde6c818f57c96",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "cb688fe42a1e51441da97f6e6b9cb65bf9ef16083d35d12c161fae23d68d812a",
+    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "4e73f444dc9ecd6250332a774c1ae4931a4f401fe6ae8024ebd10f78c1c11290",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "29fa622f9344138687c9bc7c0716ad13c7bdc2c7a0e03a8a66ca36697ee4d255",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "3e89dea96802ad29422c1c5d42afbc79e13de787676cbed140c50cab70f93517",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "af7fd4e8eca86d50afc7c8c2591f29052d15a47e31d8bee403a982c5ca75b738",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "c0fb1b606ea30a46956a30901d7b555ad510de554df943afae9c4948327cf984",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "6190d1b5b10301406691e90e6ad4437a2cfd28ab70ae5feffa61bc8e0de0cd03",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "c8da437576e24345a0bd4e46a6ba9003aaca8f8688094f9d583e6c63ed8c6514",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "0e6bd824083aea978a0f3ec58cfe8cebb781860c2217049f1d6978de14be11eb",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "42f7fb62340cbd0b01090debec2d4202e720c91f7710cca240a912bc0e6a2059",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "ec50b8196956205077aa91db791de4fc4c4f122168faefaaab603cf62bcea1d7",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "bcbd0bb27b2bf8b1832f7817ab74e9d2cf154d71227223854eefef0591f02903",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "9aa461f54c069e46caf26e800a08f5c587ab77e1e2d313ed5909816623fa7877",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "351d55b719e6be5f28e93946b1640f66b8d3941d1c2fd45150f5ec1f90455ada",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "062b9a05c72d4bece2c3d83cc9e80594bee17800aa83f2092d057ffe3d3c73d5",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "59e178ccaae222a96ba5974fab04cbe1c442eff97318a0d4cc26f68a2a93f0d5",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "c2a925d4ead0aeccbc74ccb82fce5ba1d4c5d53225779928573a7aaf6911ccbb",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "b79b6a30f9c0f320dae48cf66e487cabf728e47083d335f6bc856cc284f96b3a",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "4cb722cbc60519ef2322fdf325cdcd58e2a4e61b82d498893dc710dd759b65b8",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "3727cc2b0b7ef8e1142b2592ef54e676cb32cc0afcf6efaad80c8c2180dd5dbe",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "418c9e863a10eef1cf6aa91e2c96a0318e2a1d4ac2cc29f41b96266be7b2a3a6",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "e8df97ab71e0b024dcd39ea778d71caef15d619bb0a396c29c10acd1e008b9e7",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "b33b57d94c9c2226e7a77e0bf5f23ed56d3e07740dbf564fa1ac5df4414830ef",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "4340f6dde67864070eae916de7b4cd7eec4a731458b3b6931ccb75de281fbadf",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "64b2f601608f715fd960914f06902bdc79a57192fcbe3c82abd5fa4fae3f2aa8",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "34e6645c98b3ba0a9f7966abe5af2056299bb0fe89a488d68aee7d5cc59626ef",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "2ad0dce641ba1748c94cab53344b591481e49fa11604299e61fec8eb231b9fbd",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "10cc8b85c32a9b7d7973fa42bbccd8bfa4b949054d6641b070b54d6a56e43c8b",
-    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "104e93b1dedafad5effe77ef59436e1a86a17f93707060572ec006bc22fae39a",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "c75b2e3499f1ba708a2c89151bd48e0b8cb92cda8e0a578676af003694a41455",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "2eba2c333a98cc4a5d4dbe686d4161a05d44a7f28a8a997fba39d22ad161c8ac",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "d48ca69b15ccf39c45e476efe8e2cd0eb5b6341f22bdf08ad200e6d01ebf704b",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "0a31c30d03bb7c43b2b71938dcb940f117183f186b4778a996862418d5dcfbeb",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "213e91b1e96f8fee6f4be7f8d0d7de29f23371b68d2dfb6f47273fbf6283882c",
-    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "63d7db1eec0139ba065d6152092c1433c9dd3d20e2652b69fe6f43a33278b0f9",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "cbe6e8226d963db26a09b41209cc9f1b6d76fa20a833db14c68efced45341b69",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "91aa50b58556fb0cbd72610e34c7342cac965fbefa31be33cb70c2e400f8888e",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "f1384690d9e8580bf781919e2f8edb79b9dc33abb60153615a295f8d79c2519f",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "f3c65965213a5c40414eeb5587053524216bdcb0c6569119aff4dd6a6958bd06",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "e85f6f794b718b4cd94c5aff2bcc5bfeb0056fa0c3bc5d451b104c619adf0ba1",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "292a7f79ecb7c4dd897f5c82c3490a5ff67b3a5ed6fd480a11ca62e292141800",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "ac740124aa35dabbacc2197bfdd38ff647ffcda7b5605689b7e80ec6f43c77fd",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "d7c4cea0b1faf2c7c3733af9f60b32b353b3402e977d001274b3944e3d88fd00",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "ffc7332f9bad0277791452a515856ce8426402dcfc9ca40e16809564ef8583a0",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "568583ec71f84532ff5b5cdd98433155198303573cb3593bb56be5f55517eae2",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "07fbd00bbf3f216bccfbe701d8cbd998395c6f4e864e6a98bd7221b726340293",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "9d7731458fe66a8c49b0799b8aceccc63477e6768acfd723be24b5ff9144fdb3",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "81ba708c582db199331707f0d167778362cb32e96f44e80643323efef0af201d",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "b84ff136a757400df84f30876a87f5dc09e551752b35f298c3ec05657c4a0a28",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "95e5b229c8056944cdefc3ce6f55c4e61da862eb46ab57e8cc70bcf6d972ee2e",
-    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "b4206d41516b2ae83b41e3f26fa8afcdada6b4a531e776947b5a6e367c6c0175",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "201469793d28adc046f223d1986e48f0b8b2c1e47338d6c135fd75be57c93e6c",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "02790250e1fd8262deac6f9e206f0e20652c73e56f366c29d68be0e1babcb4ba",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "cd6c5a60bf5302c25ab479b5cd35042073a3a6f5adaaa7a22ae5acd210fd89a0",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "f94927b2f6168e38389aae31086c0a40d93583fe3939470b5c7b462b19cf96df",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "0eb5cd14c5b3a104dcb1a92845e10df9663034bb3bac52dd98093717de92a481",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "fec7626ced1030d89cb691dc6eaf5479eb94bec72b2871c8ce96b590a8ddad7d",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "916273acc8dd0f26d17058a74a167854cd8bb502fd144d7cf3d08ffa0688e34d",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "9a7a6900e56151abec6619dd1763e1012a14309bcb6a23a06f774078a3263e17",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "3ef3c3d67821ed83d1b2662b7c2db039721042db599e851dc3942f909f9a40ec",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "79e2deba75ddb9f33b899df3b98897207b9df57aec1ef3f934d38c2a36d19a8c",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "6e29a2c9099aafb88ac05a389ad1ca911ccaf3c8fd8a2117d844054111dd15b4",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "6c71ce3c4a38315e6cb54f2394d2e86b3fe7a9fd5789f32e8a42547c2d3a0908",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "fe7eb808bd2370b80585ea2291ff2b43f3d40136b33009a6d70e78223bae59b7",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "2c0250288bd5150acee59e4c5e386f12879a4bf282b76e4a3804295e2e30aec4",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "c778e260672d81b44dd1762b1c17f61c90ab775a48f6c49cef0903cb4b082da8",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "a1e6b0e2801421f18be2196ceebd46af5e4b04cdccafa96a79c67cae940a87ee",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "98c99282ec97f33bb82ac28cdfcd6a718ded2319feae5586822b0e00538eb2f1",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "95e3a126f76ea7d52c15aa312efb99ac452a13c473a48bb2b20e9e61f93b9c91",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "bb1e09061f4339d41092fdaf78660825484b125094d90f0af3ef34b543500b01",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "ca4df63ecd231fddd81529e964365b02788bbe1a92e79973e52795de454b5b4a",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "e3e16cda58c3babb9d53298f632e556641a0552c15a4b84c65271f4c8130b17d",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "3045d0136df874607e0a05c9ecdb64948d63fb6dad96eeaf4311881b58808c53",
-    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "af6c69ebe2fc5eb32db6b7bbbd5730f1e9d3c0468087a8697ee65e600e09044c",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "177a1ce84befddb6946ddecf751e8864245048a66245a5c88b95ea95bb30d642",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "ea6aa1e00152f6c8bb1d97321e6e1e626b488b77375ab77562d26831f265e808",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "0d9ff3c03f62f54eb53f920463876e572e9e4a451109cf22293a6b6a23abcf13",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "4cfef37984038f594689386695256bfd2d752b5be392cb297658e922f4eb2fa5",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "d8d80ef2b14de3afdde43f8181942c3c26241c77134aaf6308df833ba65a5355",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "96d6917b9312fee8ce19542b49e4e9faf1587b5543386957931749b9dff950c3",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "57cc9ebeec12678d145b2ce52f432c491e773786598967725d9c9242994d03bc",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "389ae649b4a7242e9f0fd54aaedaf7582c01055c5ffd8ccb3aca4d2b1d73191b",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "b7fef9b70eca9ec33f9de1cf06d8608f7ddd6999d1d1d52ead971378209a2a21",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "15e6b20382e792e77f6fe7623948aac3f17680e95ae9cca50a8860e7c3788af4",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "c1dee29aa8f502bd529fceb40810263400ca45b9d956e16b5862c82efa01b1d3",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "50e49a4fa8fbb9ba7fdec5f442a2b50ade91c4c86708bfdf7d31363d353a00ed",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "aafab9c47218fdbdb7b6e2f8180870ff69ec7d916d3ec562acbea34e6382aed0",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "d25050a3370a12f31cf4e460c841254e66458de1789832478c3f929a7c6107eb",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "e0d3d73305663c00f9970bef4b65b6ebc6c4a097a6aad36e57e33fe407b58fae",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "bf8adbcbfa9e5bcb284ebfbc655a6a466169bc024e14d07d80a5880c4affe3aa",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "30d26d8831fc88bdcf3ad87f2437759715048394cd878fec9d0f9df9b1116b76",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "9643641c6b196e7398770abf5d46f6e38a15d85b558684c1f037ab235a95229a",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "ed045dd0bd7afb5142c6163595740f22cbd9c5c9727d1d43aa99d36dfda85d73",
-    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "7378581389ac29ac7670f204e19edfa388fa7ff684942a935d124508387989a6",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "27b4d4e18af1c8a98546ac1c74893641a885dc7cfb913cc2ac8a5b0f92d14743",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "56fc9f3f8789ddf7bf5f094ebff8c1396f82993a795f00c03c6ad9f68806661f",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "b4ad8c795c75532d644762c274062dbf1fbe843e0ada9dbeb1d2b8ecc48999c3",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "c78b28d59ef17fbff311cf89a3c8cb787e19a4d25caa3f6dddbf8825fd4d0683",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "6bf94ba916aaf6b41a3a9e502356602179ab82226f81d49b28228ffb48df8a17",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "2f79db8ad6bcba23363ad73e1a7e5a495a40521ed087cfeb4e2d70764a51f38b",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "c419c329decf2becfea4cb7b66fc87708639e300316497ee15900e5473c24ecb",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "31f4498ac0db3d047460cfecf9ee4dcd7f8d0204a256212e54faace7b4cb37dd",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "2ae8cf9862f51945672b5543374b6659ddde27948a622b4ddb1e0126a6d5f304",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "a0e97e29c6af9a73dbeaad24ab5b492546a538ef4a9e350db9955ab39ec17dfd",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "054d86e2454111ded5677e4b000d3201f93f69de9288e9d433055c1f4bc85307",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "0d317ecfc50dec3326fab0373b14e6c7d0d56fc68759671ad19388f6fa3bf5ab",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "825531c04e820bb19a3fef76515c5c4ca63989062bcf89137998e314218d0226",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "7564829ca930085db34953bf1269600b3bb50807ae7bf808086ab0b28dc9fbc4",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "fdb157f27c4b68da5a6b379f43828ecd0c592e73455a1da340d8192755f61e0f",
-    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "6410ea8d929e58654689e2f29e4c483fa496ff6c83c5e5e7881863ac1efd6cc6",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "ca4cb518446ab1f8e6ef1c39fd3860082435a3fac2b781a9276c46ce3599176a",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "7ba3d68d3bdd6d9d8dc3b73159ea5b0799bb73f579d02afd86cbfdd0e8a5276c",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "afb65f8c3c674f5dd697d6e5bf244cabc18ecf7700c1cdb53897ebfb344d8086",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "c10b5ac71b96014610b87d6a8d1202c3a1c8e78c6c761ce4050beab18453eac9",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "bb2acdb1d618367837784feb043c47ccff5d68d8adb40555d6efffe82b44286d",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "df61bb4fe24470ef020912d8b32cdd0922dca19a5da42cf4735c66dcdf953e0c",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "be64899c43afe62ec32855e108cc932e5b6d33924c8dd24d36c7f2982ccdaae2",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "60eacfa3af4caaf3b12470adb72d7a4eee294c24d7637945c7d2791b93e19033",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "6ef1f049a9d8db90e8c387241982fa9bb57380184182adac752e2c5b99478c2a",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "d616de449178f825465d1aed6016b1f5a8b75bf3b1a92b4b5db30b78b2cef59b",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "f00754c525a066555137d14bd46bcb7096b4dc78126045c46a5cfaaceba1a7c9",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "7614e801aa62e47aa3a8e864e49012ca2e378d2f9c93dbeb5d17eee146d032b5",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "42d825ef8f6d571e38c35bb96a663508920d54b35a4c71018b033c0b1edc1322",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "999787422f68472153539eb5fb7afaea6fea0eec0fe59640755fe864be356389",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "b0a49d83fa3a50bcb5b27e85df91fa381032cf6fd977772fa8bbbf5826069abb",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "4f0d502b58ba25b36c0431d5513efea8f80b3e98cba3153e3d54c662b7ea1a2a",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "ef30b952f1abf4537a1ef4c75028229fd6938ba97d7dde044e170200fea2eb9b",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "be64abf35c2fe5541e97d6541488b4fbca691c6ac3ed050cc267f1ff7d0f0437",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "61fc69c819195424b2f679c3c5a7ceb014cd9fb9d5367bf985b800b9069b14ea",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "abebc1fa160774ecde8c4ca9752d06657c3f51a9f3333cf11ba2d658c40d94ff",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "7947545f2827fae561f283cdd65cdf7e35c56cd779050d023980a3a6f2430738",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "f1eecd22fbc6824bbe3172ff1df45800ca75c2ba4470fb19bf9514c9a5661494",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "fbe16e0601645b79d5c9773fba4e3c6fc69112c44b6f1e7db6ae8e4d0da998c8",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "ad7f9d7fca095a94c133f69930441b3e74c0fc78f7b923ac2bb2839636c6370c",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "33e2331b2c60fd13ef60482fb92d3f55dd665f6fd8ba59ea461d93251754a728",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "dae172ccba5f30161b0c6f3d94b168fcce977e23b0f98dd35a53ab8d48f0c0b4",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "21956f92049648c913bfd1543cfb1001796290ee1d05e53b8b45a441c1f82193",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "e5e34c2bee921b2f990ebbefb3215cd35f40bdb06ade76e05c5e9c3cae5da2b2",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "ae248d2d67630879a1ca8b76c2b60570891a8dddd2c2fd3c64a004586e222919",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "13bbfd678d522bfc1aaa262db78a11bb5fb8b69f4cfb31f861a1fdaedc62188e",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "0b2a3059edffe5272dbef85f5cfddb2ec275f5c97392b5595a3cc708a6fc08d6",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "641eecebf9b3014651bb03d353031b429096179a8bc2d9929e7a15865a9e6abf",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "5f4405fe696b33acde4ca7ce9919cb53f8a051eb5d5ff6ee9d6a23d933f62201",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "c8f1a5701cd3c1ddf03230960acde69a84b2e0e135ee0514c0ba797e32be4b2e",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "89fb20704ece6ba11878b954cd2cc75e2902ea08f248b02a4d98a4d6c7e28446",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "9e21be7244f6ecf19577275655dc2f8205d63a2dc90a2e70d9bc9dfb04758a46",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "a590e80b0832e949b89a4801a650d3914af9dd0789703d62021f7990440f50ea",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "e639b2e0126ff6c04539d23b2c206305c70fdb63bdcbbaa4380d3b1175cd6a21",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "304e0cc142bbc807dd68eaab243a6a88a0ec54b4f1fa67129ab5955518cc6364",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "22d80ca7da00a7304e61a3a87c43ac97986af6a3c0a09c31856f0db096fa0863",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "ee7dcaae98ca7b126cef9b6bc231b8e3102a8f12f5e6627d58541fd7f58a1cdb",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "fae4f59c3f186ae09d03210079ca3b78c03b6ec0c97db1fd65969bff6ac8981b",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "16a1a865ee449efadefe8e5bf2e97046fbcef4f60388bce664656b333d5fe6de",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "4aff7736f27e4d7fc7cdec8e1f7c3ffb7e89e783c062d0b3574ae530f792427a",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "f20d65f7b7cda0e356910a4b5206860e5f66c617e81983dc2f4d5e454e202058",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "85ebabe31c25b6a5bdd0236820aafbeceb67ced2624c83cc12b6af269f8cf3c2",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "fa44a5c6155b070e41652bfa12767e6ca611959cd888c6990625ac78a491f181",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "37fb3b97c6804cc3a367f89fd3635ef3938f177400169932fb8d00fc12c28060",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "dae8b38db0c787e9c316b68253467bd2246a37255a38cc95ffa964dc839978e5",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "5249b6f8ffc09a473eb6c905ea8f71c0f2bc9e26039083706c21f3ea593f84c7",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "1a192debcfef54074c9a54647aecf860098fbd0b6ef4c132cc9f1985fd5aefff",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "86630000b11f700e3089c78bcb072cb1dfbe64ecf6397e1f742347a756511a8d",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "f7283d75844ea7331ae9ac26536f94e434e1d21e0e66027c7465fcb3cef2ab96",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "f19f2b76a12cf06c53185858f476114effdad7b389f2921f809baa1268365f06",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "7b0c363d404feb5dc6c6d88ca3359fc2a084c4febbb98e3febc9f7455277bd4a",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "d843d06a0aa5f2c1a7fa8c90b544acf445554941f168a8f5e1f1358452499f39",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "2ce1c07753e841ce726f3668c9fc740f3d923b577f8b07a815dc226431fb5a61",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "e0b3d3bb6e019f93669ae448881e2ee67fd4172d39cd7875d63392393b3c7550",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "ee3ea66f6adecbe2b0c07ded000f0227780eaeecbce4cee26cfdd52d9600c12c",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "eadfbe565aa2f789f40bcba10c71298e1ad7d1db108435fe4e55fcaabc1f7893",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "d5e79cdebf78f01f110065de9c0809e969ed22ff29e362f2be5a84c7231982be",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "ca14be89b4691fd5fd91521c0dfabd40dbd2b25108649e56bb64b755b2274b3a",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "a8ceddd149670d2cc2abc62ea257a0315891fd5009a875d7dcf905c83554c5be",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "8cc932ad2c18e677a2c1d9344da9a0588ced85a1cfe95448f4777a3f9f08e5d5",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "70559498fc5f76f1bea97b0ae598786d755ad6bc1f48026070fed954f5088c2c",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "51bb04438fa000f388e755aae323edc99300cf6916cc82f6699c52302fbe3c74",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "ee722753748a2e5d452c651a5a4bcf4269430c2ec693dd117fd91c9221883936",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "6a52e521b74a1a4425219f362cb6966e93e255e8d3cefc5fc060465cae858fe1",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "9702a38c692201032724781a2cd909708410cb84c9aa559e95d6f1785caa6fd6",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "e6799dafdbe204d44c4e086e021c7f8b7530337cb58af503d508182c0263c43c",
-    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "eec701ee497ff496e6a6149f495e0ca4ed9bf21700543c534ba116b53c89ca94",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "1a4462f872a6f63d02f7a8697e0acb4da3c5c76f1372756f7a52d2ba81fad62e",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "ecb68fde8bf10acf6600f71ffa901f15c3550d14c7f6979c4523ba1c7c0d91e3",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "c0746924aec22cd924b04ece3918e11e6aff881ddf261f0fa4a7efea3b1d31d3",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "df2b556835f8ef6c7278e06e8f27ed781518fe448792951c0d6038bdbae0e9a0",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "1087a6cc3a24c77eb3ec94c1b5b57decba16c6b7892da4483f8ec807c6175e9f",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "0dfdec1434b7326a7ab1597c2cd87faa3ba34b57c8acab15d93207e18c0cef36",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "5cd25a2c42ad4ce293e904726b99e4660b1c895439c59ad5783cfc79add57901",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "b298ff31be7cdc66fd0277d90a55219cb6324d8694513df0434a60b8b10e9d6b",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "523e35233feb98ef1ad2d8dee1ba83f81a9e8b21b44a7e2d3c20d9859e69ea64",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "f24b894e39084bf7497e21443ba730aff63488a4ccb9e94e544689ebd06cdac1",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "c26da12f732c6ec36b4d3b0b15e21a2c8366891d10d26734623ebf330ab6a526",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "8b26c96da4e9dd7d4ce22424e3503061babc5b2ebd3b2ab2c2868d7408268a17",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "8bd0a524daf4d47cce2ef8c872acfabd40fd018a10f1078092d195ff7f2a2413",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "1a7d34d9e4deeb9c329d740aeeaf273dccdcfd6f26edcae28ff0e7b4ecb6197d",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "c2c11f02d554d501a42527c605699815a16e75f5a54eece71541eb39f0f8e315",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "1e6129a64ae967fc0ba5cf592a3eaad8cddf44905e54f3e8a6b960466a656177",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "5de6cb262890feaa1008b402bcacf2228b71e37aa7bf787bdfebde227f31bfd9",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "2088261e454c1269394abeff6535abf5625e92f7d4a9dded4ca309399541ee2c",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "bf6276a501f387b114405003a61cd175b84bbf9f976367bc64bd314a4a5a3115",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "47417caeaa614ebbc4b9392118cff8330d67df6148ff25d6418d0031791ea803",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "7e18ac6d5da6e6fad3ca31f050b7e438c880da54767b0f001f7518f7ca5ea1b4",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "34bb9e796916404a9b19cc7a042e211cf966268db6a7b6f2ea4e11df12aca1bd",
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "9d5cc01f37f743c4d6bb70f76bc10f2252abc8209ed9d326b66fbc4f7910f335",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "a9e6e3b40a5ca830c133aa2af9dd1cc591a6e9ae8e28981c4421f8b686759de4",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "91b80cff355a17e817575d4ca27485d6914ad7148017cb4b46817833cf90c2f5",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "b6b991c006603867ea7bf605db73681f5eedff470f996e05d0f3cad89bfab764",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "791be697bac80f0e6b4c66e3c6e6dc53a719ed66be5dac1e48b281ce7c9395e3",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "96aedc376aea149be97c24cf5a80c12a141f2a6b778a0f5e2f071df3572aa5a9"
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "733fd55bececd4b5fe4d878a0a15cbef1d89526b653a7ecd6296ecb72ff3d619",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "db5e27204dbc12caf6135f247a0039395efe1274e79bda6888eec4955d9cedaa",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "bbcbdbc27924a9d5f350599ad384488d4878ecfafd91556172403d64ff891fdd",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "c214e1f7e87bd3bffdbefec803ccd2e36052fa139115322e18c0022219659243",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "dcb9a69f0e7478c937d9b1426a24172d32ffbbae5137e2c018aa5a379a5f9fe5",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "a17cc8e031d447e58081bbb353f4a21fcb2f1a8b07e6e1079a0099428e3cdebe",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "f1d4384108e8c3786ed67812178e54bbc789222350d8dccf0f80dcc70a572b57",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "803ea6d813a20871022e15cf49bd6d1fa69301bf4b96478f56b6955adb226403",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "48427faeea050de84bb5fa7ad4c513438e1baa6d844af78f26d63d2ea76678a0",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "c7291d67effc36f44cf42af61d6be30f75783ecdb752ee11af2d3ceeb21f5670",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "580ac6af35d17b03c5a84a75f0ed3d6a87297df302759883e5fee436bc9fa3c8",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "5157d1c66927c3130d0dd6815ffb1d370fd6e2f554629b7c547ff7263d528690",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "ad40ec0b9c539966c0add66006aa47f3e01172d4e143b326a010b7e0fd96b4ce",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "3a3d8cea0fdd659472902a3a0ca1af1455ec9dc3186c3b1b4bf66853ed781079",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "7fb890b85a87529428b687243487fa5f82c6be86668d039284e86a83e280e8e2",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "dbdac0825c15f4726d28f712e585d6a2cbf72606b791a4bdf029a8f006e4e480",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "5c479de1fe2d4238e2c90c1cec034920e2f8be23fd155c8100aa2608d68b3504",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "cd32c10e8304ba74d2e11465c10ed1d3126f681ac82c595c82618e280c5d5a56",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "760431c9d1cf3028014dae9542905b8f31360cae29d99b4f595e881ce6631d36",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "3382f8118ec419014103e9fe59820631451621b238e12e5fa7add0c4b83b44fc",
+    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "5bb3a72269145cdf61942c0f2d6905f48ddca4882df1e936a7f8ea04ab11c84d",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "646490565b1e69d7dbecfb93405d4b9de0f67a9199a7934b466aa817e18da8ee",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "dd7e001cc0805f26ee1589f15ed72eff69b8efb8a4103e0ee79ba402c0e9e32e",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "d85f1b1ceabaad9a9d9f3abb03f588ff6b1bc8ba704150e21d2e2ecae6a0d56e",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "be0411d40f4caeba31ec25e2359342c0ed97214235e88d7ac1042e5406c050ef",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "ef45bc2e4b9ba192bcbd54a3ec43300fc6e37c8b971c04a083cf64fd427152a8",
+    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "ffc31159e9787a54b80176dd9e98b649be275572822c5fd7a06e41093cf0e2ad",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "f5cf0f88001ae6dffd8eb1ac01c018ee0538721a308afb0b103c968db9d3bafe",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "b30873eb1c17284a753145dcabedc7f5a571d2dd5bd8c62b62540810b3ef4441",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "404a980e82c0e6bcbc1eff5bf0b8cd3929d669a1b9f6057f988c4dc91db47943",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "530523a7be1227e94cb074fb7dd0e262dce93c76e4553dd2ff583084935043f2",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "d94657ed48c85ff1c00a9d9d3ba536e1958482cb933fa4a3741af13b3f48bba6",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "e2a5d3ebd20d51ee84a5733372a4e0e03efac9c57f85b348989a611134152dd2",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "22969c05d2916e36918f56affd31ff55365e04fb8e23aef52a195c74d4c5a846",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "edc724d2ed93c9eed8400007ef64e618b42a932819c589029dc65424ea039ba0",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "eb5a0d119b203bd22eadfd10310ab62ab16e559b35959a9472d91aa102e648d0",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "44d8933c36dd9fdfb6239ce6a9076757dea6b6ecddca73fbd8051ff1517b4b12",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "e05f7d5a22f8089bf7a0c8cc734e44b6989361db4e35531027acadcb4b8d3fa9",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "54f23bbff7f1e21ab6aed36b64358d258063f83c30bc1b4723963d8d04896226",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "642a35c6f81713bce1203373ade304bac20df5f0fbaf2e950a11e53a95d4215f",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "eacf6bb9afd1e926aefd98a4e7fd4425e6b922713059883fa5aff5f808c7b937",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "f31c3ad3ee585f8de8bdc94cc604d286d681341ed526cfb89cd193f4870f6774",
+    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "b44ce89dcf97ed1f3c3f5b99c3bb7b7735c50c5b21b97762e9e1a5e189126f86",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "af756298f4cc00253125f41160f92aa96393a2835676a4fe14545dec874b5f91",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "5956841f8af0617d787cae6b6ac4f871a9b43d9ed149b239259d68a12fb6374c",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "a16f115d90cb0ea37a98668957cbc70d40d35383b482c66d7a8e14a527f33d88",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "fa3320c0512aab3548cf37cc577349b92b48c01df5a9c13eef0ec0c0966c59d3",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "f3011f577d9842e980d5f896ba47050ebc0cf11e88f04951dc90af98df5bd92c",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "63958255b5b9d13c16a4007fd7c2312262692c6e45ab577a4f2ca5342a6b588f",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "a4c36fe9d258ef68015727db45c141acdb61727e1697d42c8d745836a2657564",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "f785708f1070723a33e2a2b4f9b18a7c4b6c5ea37d05fc36db2e6d385c6238ab",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "cc3c946bf143f8e60d42f36e56add7bbefa1d784b3bb20e510135711d105f8b5",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "14abd7d453a9e861e93940bf24a686ada95a1e22171125560333dcb5b9a34242",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "6d23d21f4863336ca5b82fa7bdb64b22c946903e28860b19d1a7896a6677a843",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "6b9a4f4dde1743c5bcc1e5dd02b62ab49cf288b11d35d48a74db47b1dbd5ef01",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "618abe47ca78bfb942585a5b3a8118316921fd8b0cd241dc1584c2604f43892a",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "031a8e074ddd8342efe45febb74a6b144215fcedae2e86d46e8a7d183a16ca73",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "3e61907b0ba0209dc2db487c4bcd74c2982b35addfdded4b426b551ff58bd04f",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "419129d1056574f7fd4b02620830c7459a06e65be677bd881827197dd4d5344e",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "8251cb8a263f9f4856f2a2a7f4e9bb15c7c4680536068ae406ef8717553f1e91",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "47d020035e508c5af05ea1a8fe55f38b32229d599e16805836cca6bb9d8fffa9",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "ff746d1523bc740033bc17a3679ddfd44553d7a4ecf36af41d543386bc48accf",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "c78470e3bbb6de38174b2bfd624f5d4760c396567166f7eaeecb51f7ed6c3e82",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "0e3da96c9283ae2a7aa5a4985420a3f85f1f66eee75a853a8077cc1101a78290",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "aec6d0ccddf0e69894071c23ad2e0eb604cedcc955c86652c21e4ccf6b90fc57",
+    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "b27898101c818bc3ac237b9a37d360f67b4953795a010ce23c52902e3968aafa",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "dcafceb9484f15a56f7a5a65f73466c507941e39ba13bb9ed268187fc90788de",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "b3d808ce3436df19b8e1e9c581c3b76d3f24b4044789c7230d93b4e6de7cf3f9",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "29111e7d66230a22465cce0f8581affef4f2ec10a26fc5551993118c2b06aa90",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "406d559c57eff9431c097347e1ea21daa128a7f1d5d86a708693825f2f97e70b",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "5831e2240240ad5407ee83c8e51b7c4213cffa8d7c8a9c87d1bd53d4c42c65bc",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "9e3f7674f2c2eac129046f5b128a6e7cdf3e02e836da7f49c02f64d74aece335",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "c8d1e6e7733f49eedbbf8a652d802322893d9417f32d20ac02f8b769932a5749",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "ecf61610f6332f69cf678f153f6a5f93a13f8455029c52e3cc85a832eabf4c45",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "8be15f8410015d71280434066977983f0222577910ac8eef126c3b4b2f89246d",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "418a5cf42d9fc5f093bc25a908a772ebefd11e5e20949b0a0e5f41f4acc59bad",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "591a8b139c72f030e946fb3de60d59039d4435f3b5c5d953de3b702f86e32cf3",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "67c61747334f009a7e72f9aec0fe61d18664506e596a7c58443be6356380eb2c",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "70d43fd7fb559a77e158fc7836297eea71f808e4616942535feb48fc13801129",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "77ffb3f5fa39be5dfc5a86b51f1c41a0b84efb67b645f3542f85500aa91bc2e6",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "98b0a36d95b7da5f2aa7eb45cd629d52ae525a1315abbdd3b044b0e9e729d756",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "9c7beb00617701d32fa4bcb89092f95ec99c9368201d413691d276c9837a1a0b",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "569db89276524433768b449599296b8bb7f887eafc6b981c2d47b7f170bf4c9e",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "fad39a7b60fd1c085cf47410612bfd9df98641611a1e602c2074f477b7dd78f0",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "764bceea7164ff76ae980407240938a6615a6d7ea7723374c0ffd4e9bbe5d74f",
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "ae4ded66ad3177981c3de917399f6bf8841f1310d76ca92d61872aab377aaea7",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "6614fa670b05473005e3ed280e14387cad502d635417c167826a9337f5f12b6e",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "736c974dd42a5923cedf2649cb7a518325c0f1e491d6e877e0a123ae261513e7",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "ee29cfc530cd248060155226b9a1d068606e2b2eb0186038f3b29ac90d679460",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "70d7ba7f90bf3cc440ff3a747dd970ce8f837c59196887d871d9f5b51819db1f",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "69b830a10670cc66411567e3a16fdd97e7a5b9b7d94201bbdb5d69c8070be3f5",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "f86ec67a41717d1ac450e64fb14960acd852fe17f5ac6773ab917b6714ece9ed",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "47b186344d7a4b694afdc7a31a5124ce46b13c8fefdbc8ddf95dfdbe0dfb6260",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "db7fb695cba4f88cc4bd4c70af2ffe8f8214a4e86c38688baefa4fe5f210bb45",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "4e03b2433d7e9564080195b8f69f53acfb4223e75bd39294cbd03a2aee7e21b6",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "98ca53d01f727a93721adf7364a3f6d5a1a2defd7f1a276c1570daeac0ae82e2",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "ac567f550aa8f0ee7c1bb107037e99ae877516e9ed0c4c3728364917a9733e6f",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "b3f5ce985a40170a8cc8f2f16b591df836271c9e1900819f936c5b1f7c468d8f",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "d098ec8a8e85deaf55e038bed5dd68dd5e5f6cf7dcc077b339620a575c5a9005",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "ffd14f98326172da56e30873369c8148ff529ae1c43358bbe1b6cb0b61fc0bf8",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "2f0fbf11361499fc9b2a43129db84143d67947ec0940bb3632aad2df39e1ddcb",
+    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "1e1db6ea95b758dd9391101089551139285340ff43e5e9a240a7d4b8be098f40",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "228000f89ba5ea12c328d3a97bd8296225b74289f8dcdf40737f10fda7486f51",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "bc84b65650bbca9e45f1f835013f65f2772d24de30148ac1d2f0a46d3c0096cf",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "0376c3b78ffca1467d8873e1d24da2de384cbebdf8e65006ded83bcfc2c263d5",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "d343c00d7e0ac14315c2f66ddbaeb001d39d3ee64ccbff55a12441434ceb451e",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "0dcf610e6d142cb732e53cf4b1095723215d376806a660a4c62cba6ac04cab47",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "23d426eb4ad682008e0c08e2b19395086ff5ad02ca36e7edb2d6590f40379b6b",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "ff91a562c078320e310277edec8c0a550a721303484263c9f17dcc3102777153",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "251329297f3284a015a551f3f1ea4c03d21a1a8d57873855b821dc68c378972d",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "5652473a01605ee23d22c3b17a070de3d2e78882180d5d1b95eb021136d194ec",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "eafb440992503919f65e23c70dd6d2dfc213170fe6bc5ab17049d0eab47801ce",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "3ca62448c7b4a68cf78fb153deca0c6db4ac4f766eec2b88c8caf2a754faefaa",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "20ce8332a518229d6098141c6cb73f07a6f66eec7a3572637a177355a0986af0",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "25e21c7d92237022dad8035592719871d5c8a633d5cf7851aec6c579d46e724c",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "da6a301a425aa9230e6b93269ab351e13974a888d984817c6e4c55617cd60ccd",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "4ceef27f58614d78150e8f3a654d025587d49f8b1c2141b0bebfbb16d12fcc46",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "534813393655ea7bfc736aec37023eec6505c799fb7904c600617fd8da19f5b7",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "7f3ca0509db6e8d41a38295024c3ce737d167b797d2c7dbb40de01f4653e1364",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "ee767b28208351ec0594a1a766097b0935a3064cf647712ba129c79d1efeb008",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "ed92b56130bc6c120585c0eb13f27868e6a3dfcbf2d5a440efeec21ee12f4874",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "2abbb9f9edd247f281cb40f74bd2b433647fdb438a476b0d381772fbc8c8a9a9",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "c271834b642f7786367e647e5b0ba6156fed8a6fdeb75ad7c1fb3b3a7761535a",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "b84c79af8988d988b81de180915b42c81c2368f333f1f595bc0aa7b23c0929e0",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "2b2dfc96fd6baba18ca6c5e59af01fea0da73fe86d171968dbb92ff21770e503",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "708fb2589a0a11c8e8f51ee3b07715b6a7072383d4a5022f5e626d9a9f207126",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "a2bc47259d41d173a6708a51c8d8817dc467893af8faedf99ec324cc017fa826",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "a88e9c1e070d507ec60c6debd8efca15dc8295a21cf028d85cfa03ce970ed2c5",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "c02331a9420a31e45657cebb558ace74bbd85f13aa674336c3af0d08ecdd4a0d",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "3b55c9a7f3b274cd9913d58a03e329ae42d142efcd15c7a6fc131731b34293b0",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "2c83f93a7ff52f6fdda9a31be75e37d8ede959741fa59f48781ce4967e434fbc",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "8c81d7772bf2ab16d2b5a5da2bc2b7f020605ad63c6e98cea2976338e17f0d53",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "02766fb95915186d9a8932484adbf3a8a527337725841ddda0a25d51513ed3a0",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "94a92eb2682bb9619bce7aefe0914a5c4a3db0f47e823f38a87cf6e5d8472a48",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "71451e2d09a8d5ad04c3859bad5a614408f55ffeaa47053b1086e3343eaef7d0",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "277e9a4d6cc67c896833b5b6c397cee07a8149bb068389163a193c96baf693c9",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "f4b49f1335cd1912dbfcbb99edf8397bc2e64960a9163e3d0c84f2a23721c56d",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "5f8f7d45f63e47b2d987d035606274ecd9abee0daf4d2188a5b6028ef292bd53",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "c7f1f92be280eb73115e3c8512be4ca4fa0aa52436e1e0c7c2b1611367580bb6",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "c72bc2b3ec4ab023602d5550b865e4e12105b33970892fa756309d6eebda448c",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "0a54e8c197b9530de967952243244328ab1f96f674938690e0a2cbcddd2a2efd",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "309999e5379119c50edbf741857e3547dcd840990d97acf231d62a9a5bf13c34",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "d969b4a73823a11b6c098d616769bf13fca82ac12af5a09938a604b54cf3eb05",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "6946d969fc036ca4363b79324439f55792d2609183678a8b7062ee28060ddbde",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "2e4dfe695cc501d7211afec2dd3136afb82ea77721bc4f184de098f09f350c57",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "33aa1f17a31dd243eeffc58e311bee9d761247389206dec03e6d2b3b4f80f421",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "8dd0450c71baacd28ccb6eb56c0bf27db067e7d2538485246e0dfaba668ea8ff",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "50c6ba7cdf4efc0d0338a5d510bbfce5767f9a744604c22e7fb073bb3a192b3a",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "652b23aa9889b84e51eea549fa29bb0215c07ec634ae532da4ec45af3fe06088",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "56ab33a417ece951c7daa179d6e85fe410694905280270a315339d7354dce570",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "781e2a694647d9ed4f5745e7a0b1e59e7f432d8af524a2c1e7da717d5bd4c594",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "1ed72007c5b1aa5a4bbabbe93ab097ee2765dbab4334d8c86bfd31ea8098982a",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "63564b076ffc60545f39d2eacfb70aff86183d75a98b51e9e5c2aecf243dff6e",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "7ba5f9681e0b92233231355b93d8223454d9391205d09d4b321a42511504ff7f",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "8b9e82a34de06c02dd73cd02b977363208f55a4c1da493dd74971e6bff6b3642",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "7dae1c57a0496299270b0b8219fae58ce09197bae1e69261b7d5b4e38e916482",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "589eda5521ca3579f84a004a2f85371562b6bb5fb54488cf13945e27c1880f0c",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "7b28a4379c861bfa18923049cfbd1919fd8d80c44294fed002904699f755259e",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "397e810f4671a2e9f4bcc0314fa284fa89d66d7e3b05d5f21b986c31960f21f1",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "a35ebeef8a33ecc95b1924c2f279d64178741929563005cf7262b956d955fb06",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "1ecd3ebd2e3a0aded224fafdd972c996ce76a2b080d74b6edf55405995b01035",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "a3aebaf1a6f2fb881065c7fef541597094daf3621be7702771c45e1159c4aab9",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "825bcbc9a5090032c92d75506c2c7cf4ffe9a85642aab7160248857e84f615f5",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "be32098fe88c60bc090c97438c688a063618e048a9592d328603b31c66b909b5",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "ebddba3b004f8b6ba5b5a2ba34b795875d9d8a3d2ef2cc9679f7e1a722339a65",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "a68024b34e8e765bf342c09324031b58446a0972d8e420bd90d94c7f9cd3b236",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "5d812d5cd654984ce3d08842a33410f39e4657a82d92acd9df97a59b33aea2ab",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "b1f57d009703d01ebe656583de5f36fbaec44d7ecc56cef47e71f9f3a60b64cd",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "11161b5b6ad964079cb0f5af2b6436936b47f3e7fde494fc304dcd8462ade153",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "0fc69f0691e34039f48650141b607da1e886f7148da5a311fb334adf5af73866",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "e21aff40e36bde27c0c71c393f82d02ed0e92bf70414404c2db5a8bf8a038e53",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "7d9563e147936ece83014e7ca26aedaaf1fee4564d11f690a2c514b04f91a399",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "0c0c5ba412d71ddc201b3b963bd947a8902cb606367188334130f14dd5b5425f",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "37303276f7d1ddb07fb1cc68be7240e985954bdb76b292526b35a91009839838",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "c55e66a77b02afaea4611ae6e06a1636cad55a527805aa756ac6a0c4704af016",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "b73308e51a4228cc53ae0e47635b054723eb9d44fe392f5df7e988f4b446b763",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "ca9b1866ff9226b5cec574abb3fc1399a6bf6bb4f7286a68deede86ed9ca192d",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "15c8894915eb5a84f7d7edd0dc44a30ca6217df0c828479c570584a5c0d17268",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "34064c7f65e280aa4954fff365e3792a6e89e1732eb3ca976d119728f3885b03",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "e7d042f1622b02511dbfdf5652f53e7d3f8bc71bb9c192845dbfc66cf6385ef9",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "0961c00cfbe1ff3d0772dadc494cb14ec1a0d0fb59ed485b6b7806b1e68bb539",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "4b56ec1962a9767457c88664f3ea429b4697a97f604430f0f5d43502d7801dcd",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "9b51b2703215c34e169e63b6832e7972d576727375dfd7b657621371cd50c03a",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "be262674ab20d4a2c227c4547f84282a000cef4d360cbb89182c7469cc2f79c9",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "6018cda463638aaf7be7fb11fee5503c23ff3a0c11fc369bc334e6bd62b844b3",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "14e03848ee01d1e167483ad2524672eeb342180b75093bd9fce239e752487b0e",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "dcc867283d411be1d5f4ba18af15248f5eabdcd847d57038c3b909a2d5377b7f",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "93a99c61109727820f13720e25bfa7eed559a4c0e713bd048e0609d70121dfbb",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "b3662199edad7dfe6683fa05b1eecf3b01902a6bb14f7bdb398ea8243fb77a40",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "061ade88145832363a4099f2a5a1c8216634fd7640563dca759bf612186765f0",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "6e016b55b7effebcdd875114b9639cb991eef3baeb9d0351f9da2af4db1a063a",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "ebf4ed3638d99736e49b34026f2423a94c3cbaa94b70f394524f2d14219c3a4b",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "3835b2a01114647b9a493c497021ca7374b9ae6f27cecc32defa909998a53c1a",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "c65fcf78403993f5a50f66dbf011b75c75f32cdc648cabc4391887ca0ca9d4b2",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "0183d9dd2825e8830f668c58480cf28a4062b791045e09517b016944b242d7ab",
+    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "8fd51ec54ef82f4f13a9a0af1d56d3c330b45dccf2a03d01c6045718be6d8bdb",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "4b1529a4653057e291dcff71b3fb9efbc21a006504ff0abb06421379f4dae446",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "c62f60a561bfd78259427778167e7549cc562cd317c87188dd98056cc8df526d",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "ba718966d10e748726989830634bc88d084cff3970e340914141c7d6fd7bc8ad",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "34cc2ab5aedd70052f2a5bf6ebbecbeb8b7ddbded9530606af375abda2194c16",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "aa76b1148583664c507c3f09baa024c343b15c19a7862d56adb8b9d68cb784dd"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "AI-generoitu kuva: Neljä erikokoista eurokolikkopinoa on aseteltu vaaleanharmaalle neutraalille pöytäpinnalle.",
-      "attempts": 2,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Kapea asfalttitie kulkee metsän ja pellon välissä, ja sen pinnassa näkyy halkeamia ja kuluneita merkintöjä.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Talous",
+        "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva valtiovarainministeriön päärakennuksen julkisivusta Helsingin Snellmaninkadulla, rajattuna rakennukseen ja sen sisäänkäyntiin.",
+            "depictable_scene": "Nimeämätön kapea asfalttitie kulkee suomalaisessa maaseutumaisemassa metsän ja pellon välissä. Etualalla näkyy päällysteen halkeamia, kuluneita paikkauksia ja pieni reunavaurio. Tie on tyhjä.",
             "must_avoid": [
-              "Fabricated or misidentified government building",
-              "Staged crisis or protest scene"
+              "People or body parts",
+              "Motorways or urban streets",
+              "Invented readable text or logos",
+              "Exaggerated collapse or disaster damage"
             ],
             "must_show": [
-              "Actual Finnish Ministry of Finance building",
-              "Recognizable facade"
+              "Cracked asphalt surface",
+              "Narrow rural road"
             ],
             "rank": 1,
-            "safe_to_generate": false,
+            "safe_to_generate": true,
             "search_queries": [
-              "Valtiovarainministeriö Snellmaninkatu julkisivu",
-              "Valtiovarainministeriö Helsinki rakennus",
-              "Finnish Ministry of Finance building"
+              "halkeillut asfaltti maaseututie",
+              "Suomen seututie päällystevauriot",
+              "cracked rural asphalt road",
+              "worn asphalt road Finland"
             ],
-            "subject": "valtionhallinnon velka ja valtiovarainministeriön rakennus"
+            "subject": "Maaseudun päällystettyjen teiden kulunut pinta"
           },
           {
-            "depictable_scene": "Lähikuva muutamasta erikorkuisesta eurokolikkopinosta neutraalilla pöytäpinnalla. Kuvassa näkyvät vain kolikot ja alusta, ilman numeroita tai tilastografiikkaa.",
+            "depictable_scene": "Nimeämätön kapea soratie jatkuu metsänreunaa pitkin maaseudulla. Etualan sorapinnassa näkyy ajouria ja matalia kuoppia, ja tien reunoilla on ruohoa. Kuvassa ei ole liikennettä.",
             "must_avoid": [
-              "People, faces, hands or other body parts",
-              "Invented text, logos or numerical labels",
-              "Coin stacks presented as an accurate statistical chart"
+              "People or body parts",
+              "Paved highways",
+              "Invented readable text or logos",
+              "Impassable disaster damage"
             ],
             "must_show": [
-              "Euro coins",
-              "Coin stacks on a neutral surface"
+              "Rutted gravel road",
+              "Rural roadside vegetation"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "eurokolikot pinot",
-              "euro coins stacks",
-              "euro coin stacks closeup"
+              "soratie kuopat ajourat",
+              "Suomen yksityistie sorapinta",
+              "rutted rural gravel road",
+              "Finnish gravel road potholes"
             ],
-            "subject": "Julkisyhteisöjen velka: euroa havainnollistavat kolikkopinot"
+            "subject": "Maaseudun yksityistiet ja sorapinnan kuluminen"
+          },
+          {
+            "depictable_scene": "Lähikuva nimeämättömän maaseututien pinnasta, jossa tumma suorakulmainen asfalttipaikka erottuu vanhemmasta harmaasta ja halkeilleesta päällysteestä. Rajauksessa näkyy myös tien sorainen piennar, mutta ei työntekijöitä tai koneita.",
+            "must_avoid": [
+              "People or body parts",
+              "Invented readable text or logos",
+              "Pristine newly paved highway"
+            ],
+            "must_show": [
+              "Asphalt repair patch",
+              "Cracked surrounding pavement"
+            ],
+            "rank": 3,
+            "safe_to_generate": true,
+            "search_queries": [
+              "asfalttipaikkaus maaseututie",
+              "paikattu tien päällyste",
+              "rural road asphalt patch",
+              "asphalt patch cracked pavement"
+            ],
+            "subject": "Päällystettyjen teiden korjauksiin käytettävä asfalttipaikkaus"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "Four stacks of euro coins, some taller than others, are arranged on a light grey, neutral surface. The coins are gold and silver in color.",
-      "generated": true,
-      "license": "AI-generated image",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/55ccede5a91088ecc85f303497dd43e1975bb90761a3c2993d600e98a4cba5ac.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by Frank Fritsch on Pexels",
+      "depicted": "The image shows a long, winding asphalt road stretching into the distance under a hazy sky. The road has white dashed lines on the right side and solid white lines on the left side, with some areas of the asphalt appearing lighter due to sunlight or moisture. On both sides of the road, there are green grassy verges, beyond which are dense lines of dark green trees. The trees on the left appear closer and more defined, while those on the right are further away and partially obscured by mist or ha",
+      "generated": false,
+      "hotlink": false,
+      "license": "Pexels License",
+      "license_evidence": {
+        "image_path": "/photos/32963980/pexels-photo-32963980.jpeg",
+        "license": "Pexels License",
+        "license_code": "Pexels",
+        "license_url": "https://www.pexels.com/license/",
+        "photo_id": "32963980",
+        "photo_url": "https://www.pexels.com/photo/scenic-misty-road-through-forested-countryside-32963980/",
+        "photographer": "Frank Fritsch",
+        "photographer_url": "https://www.pexels.com/@frank-fritsch-1741901",
+        "response_sha256": "267d629f0932146aa750ec424af114b7e8abe5d5df024df4097c8acca5dace60",
+        "retrieved_at": "2026-09-30T07:46:44.308890+00:00",
+        "transport": "jina_reader",
+        "version": 1
+      },
+      "license_url": "https://www.pexels.com/license/",
+      "local_path": "media/fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69.jpg",
       "pixel_review": {
-        "alt_fi": "Neljä erikokoista eurokolikkopinoa on aseteltu vaaleanharmaalle neutraalille pöytäpinnalle.",
+        "alt_fi": "Kapea asfalttitie kulkee metsän ja pellon välissä, ja sen pinnassa näkyy halkeamia ja kuluneita merkintöjä.",
         "approved": true,
-        "article_text_sha256": "52545ffbb092d2d1ce665549e5d5bf3c5de3cb6b50178ec6a62aa75eb25b5609",
-        "concept_sha256": "aee59bfd8152f92f871483e3cb184773eebc0e7dc31610915af52808a9de6757",
-        "description": "Four stacks of euro coins, some taller than others, are arranged on a light grey, neutral surface. The coins are gold and silver in color.",
-        "fit_score": 10,
-        "image_sha256": "55ccede5a91088ecc85f303497dd43e1975bb90761a3c2993d600e98a4cba5ac",
+        "article_text_sha256": "4aa52b1b995b41382e672ff6837f57366f8406f8acbc208a080dcaab7b30b254",
+        "concept_sha256": "4a7fe340499d144c4e1eaee9066d1e424dede7aad0a6e6cd12fee5af80f1a3d7",
+        "description": "A narrow asphalt road stretches into the distance, flanked by green grass and trees. The road surface shows signs of wear, with visible cracks and faded markings. Mist hangs in the air further down the road.",
+        "fit_score": 9,
+        "image_sha256": "fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image directly depicts euro coin stacks on a neutral surface, which perfectly matches the selected concept for illustrating public debt in euros. The article discusses public debt in euros, and the image provides a concrete visual representation of currency.",
-        "reviewed_at": "2026-09-30T07:08:48.765328+00:00",
+        "reason": "The image clearly depicts a narrow rural asphalt road with visible cracks and wear on its surface, directly matching the 'Cracked asphalt surface' and 'Narrow rural road' must-show elements of the selected concept. This aligns well with the article's focus on the deteriorating condition and repair debt of regional and private roads.",
+        "reviewed_at": "2026-09-30T07:46:47.404744+00:00",
         "text_audit": {
           "examples": [],
           "readable_text_present": false
         }
       },
       "pixels": {
-        "height": 1024,
+        "height": 650,
         "mode": "RGB",
-        "variance": 4087.9,
-        "width": 1536
+        "variance": 10746.6,
+        "width": 867
       },
-      "prompt_sha256": "6569e5d1055fe5f56bc5109583067badb6b4ed4a4e814e7ae679aa0bbb9b2e09",
-      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Lähikuva muutamasta erikorkuisesta eurokolikkopinosta neutraalilla pöytäpinnalla. Kuvassa näkyvät vain kolikot ja alusta, ilman numeroita tai tilastografiikkaa.",
+        "evidence": "A narrow asphalt road stretches into the distance, flanked by green grass and trees. The road surface shows signs of wear, with visible cracks and faded markings. Mist hangs in the air further down the road.",
         "matched": [
-          "Euro coins",
-          "Coin stacks on a neutral surface"
+          "asphalt",
+          "narrow",
+          "road",
+          "surface"
         ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "method": "vision",
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "52545ffbb092d2d1ce665549e5d5bf3c5de3cb6b50178ec6a62aa75eb25b5609",
-        "decision_sha256": "adb518e7f1317b0ea432a3771e8e46d2fdf378d94431010dd20b0f21a68f51e9",
+        "article_text_sha256": "4aa52b1b995b41382e672ff6837f57366f8406f8acbc208a080dcaab7b30b254",
+        "decision_sha256": "dfae8ee944962115f21230b1374e6d6eec7bf710e4b9d8f006e4f47784b93c06",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "5c64f964212b721e806c81f245cdc77c1aeab7074c88ad2be0cfadc867f97bb1",
+                "license": "Pexels License",
+                "reason": "The image shows a narrow rural road, which aligns with the 'Narrow rural road' must_show element. However, the 'Cracked asphalt surface' must_show element is not clearly present; the road appears to be in relatively good condition with only minor puddles and surface irregularities, not significant cracks or worn patchings as described in the concep",
+                "source_url": "https://www.pexels.com/photo/photo-of-roadway-in-between-green-trees-14420645/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "bfff54b0457589b795fe0313f66e5c6e3665455cbba9ce492646e7379a1fb6c8",
+                "license": "Pexels License",
+                "reason": "The article discusses the repair debt of regional and private paved roads. The selected concept specifically requires a cracked asphalt surface and a narrow rural road. The image shows a dirt road, not an asphalt road, and therefore does not meet the 'cracked asphalt surface' requirement. It also lacks any visible damage to the road surface that wo",
+                "source_url": "https://www.pexels.com/photo/serene-dirt-road-in-green-forest-landscape-34185071/"
+              },
+              {
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69",
+                "license": "Pexels License",
+                "reason": "The image clearly depicts a narrow rural asphalt road with visible cracks and wear on its surface, directly matching the 'Cracked asphalt surface' and 'Narrow rural road' must-show elements of the selected concept. This aligns well with the article's focus on the deteriorating condition and repair debt of regional and private roads.",
+                "source_url": "https://www.pexels.com/photo/scenic-misty-road-through-forested-countryside-32963980/"
+              }
+            ],
             "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "accepted",
             "provider": "pexels",
             "queries": [
-              "Valtiovarainministeriö Snellmaninkatu julkisivu",
-              "Valtiovarainministeriö Helsinki rakennus",
-              "Finnish Ministry of Finance building"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Valtiovarainministeriö Snellmaninkatu julkisivu",
-              "Valtiovarainministeriö Helsinki rakennus",
-              "Finnish Ministry of Finance building"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Valtiovarainministeriö Snellmaninkatu julkisivu",
-              "Valtiovarainministeriö Helsinki rakennus",
-              "Finnish Ministry of Finance building"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "Valtiovarainministeriö Snellmaninkatu julkisivu",
-              "Valtiovarainministeriö Helsinki rakennus",
-              "Finnish Ministry of Finance building"
+              "halkeillut asfaltti maaseututie",
+              "Suomen seututie päällystevauriot",
+              "cracked rural asphalt road"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
+                "fit_score": 4,
+                "image_sha256": "d9a21387c5ceaa84b022b051083c9707b1401f9ac1d72df86e9b160fd39e3a0f",
+                "license": "Pexels License",
+                "reason": "The article discusses the poor condition of regional and private roads, specifically rutted gravel roads. The image shows a gravel driveway, which is not a road, and it does not exhibit any signs of rutting or potholes as described in the concept. The visible subject does not genuinely illustrate the concrete article subject. One or more required c",
+                "source_url": "https://www.pexels.com/photo/row-of-yellow-garages-in-a-forest-setting-39725510/"
+              },
+              {
+                "approved": false,
                 "fit_score": 0,
-                "image_sha256": "32343af1fa8818cdd6f73fb92a5793d11fdf8fd8e22a5f9943e1028f61eb12f9",
+                "image_sha256": "941de5c16ff921facb932ec7b45deec623da549becdd60b3f769fc51dff55a23",
                 "license": "Pexels License",
-                "reason": "The image shows a bottle and glass of wine, which is completely unrelated to the article about public debt and the selected concept of euro coin stacks. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/close-up-photo-of-wine-bottle-near-wine-glass-15194430/"
+                "reason": "The article discusses the poor condition and repair debt of regional and private gravel roads in Finland. The selected concept specifically describes a 'rutted gravel road' with 'rural roadside vegetation'. The image, however, shows a developed area with paved roads and multi-story buildings, which does not match the concept of a rutted gravel road",
+                "source_url": "https://www.pexels.com/photo/aerial-view-of-swedish-residential-development-site-36955202/"
               },
               {
                 "approved": false,
-                "fit_score": 7,
-                "image_sha256": "a464faf28b559a86b642bab57ab1c5900094f9e0726e71d81fd3db63a14770f8",
+                "fit_score": 3,
+                "image_sha256": "7d3b722f9862cd39835cda8f7d22108220256269d1fa087c446c54150d505f64",
                 "license": "Pexels License",
-                "reason": "The image shows euro coins on a neutral surface, which aligns with the 'must_show' elements. However, the concept specifically requests 'a close-up of a few euro coin stacks of different heights', and this image primarily features a large, scattered pile of coins with only a few short stacks, not a clear arrangement of 'different heights'. The imag",
-                "source_url": "https://www.pexels.com/photo/a-pile-of-coins-9648243/"
+                "reason": "The image depicts a forest scene with trees and undergrowth, which is a generic rural setting. However, it does not show a road, gravel surface, ruts, or potholes, which are central to the selected concept of a 'rutted gravel road' and 'rural roadside vegetation' (specifically implying a road). Therefore, it fails to meet the 'must_show' criteria. ",
+                "source_url": "https://www.pexels.com/photo/trees-growing-in-green-forest-17980352/"
               },
               {
                 "approved": false,
-                "fit_score": 7,
-                "image_sha256": "a464faf28b559a86b642bab57ab1c5900094f9e0726e71d81fd3db63a14770f8",
+                "fit_score": 0,
+                "image_sha256": "70c4b63f8b13efb08912b6edb668df4da3eecb3d8be7a452728a8cafad38a328",
                 "license": "Pexels License",
-                "reason": "The image shows euro coins on a neutral surface, which aligns with the 'Euro coins' and 'Coin stacks on a neutral surface' must_show elements. However, the concept specifically requests 'Lähikuva muutamasta erikorkuisesta eurokolikkopinosta' (Close-up of a few euro coin stacks of different heights), and this image primarily features a large, sprawl",
-                "source_url": "https://www.pexels.com/photo/a-pile-of-coins-9648243/"
+                "reason": "The image depicts a forest scene with a tree trunk and foliage, which does not show a rutted gravel road or any indication of a road, as required by the selected concept. Therefore, it fails to meet the 'must_show' criteria. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/lichen-covered-tree-trunk-in-a-forest-23229115/"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "eurokolikot pinot",
-              "euro coins stacks",
-              "euro coin stacks closeup"
+              "soratie kuopat ajourat",
+              "Suomen yksityistie sorapinta",
+              "rutted rural gravel road"
             ]
           },
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "d84ff4eecd94b4dcf63a41b0d525db54a66d43fc9c7b143a8de5e54b6a8cc6e3",
+                "license": "Unsplash License",
+                "reason": "The article discusses the poor condition of regional and private gravel roads, with a focus on potholes and rutting. The selected concept specifically describes a rutted gravel road with rural roadside vegetation. The image, however, shows an asphalt road in good condition, a bus stop, and houses, which does not match the concept of a rutted gravel",
+                "source_url": "https://unsplash.com/photos/a-small-wooden-building-sitting-on-the-side-of-a-road-ZqqgJ_7WjQ4?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "b242389bbebebd00bd1f0585e24493c2260b2344209b24bd75451a3897fb3c6f",
+                "license": "Unsplash License",
+                "reason": "The image shows a gravel road and rural vegetation, which broadly aligns with the article's theme of regional and private roads. However, the selected concept specifically requires a 'rutted gravel road' with 'ajouria ja matalia kuoppia' (ruts and shallow potholes). The visible gravel road in the image appears to be in good condition, without clear",
+                "source_url": "https://unsplash.com/photos/gravel-road-through-grassy-field-NUWGIVW32H8?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": true,
+                "fit_score": 8,
+                "image_sha256": "67e645c01c9804f9f275cc05d8a143be1509ff8ad918ca66d97b77a8a3081967",
+                "license": "Unsplash License",
+                "reason": "The image depicts a gravel road in a rural setting, which aligns with the article's discussion of regional and private roads and their condition. The road shows some wear, consistent with the concept of 'rutted gravel road' and 'sorapinnan kuluminen'. The surrounding fields and distant trees represent rural roadside vegetation.",
+                "source_url": "https://unsplash.com/photos/green-tree-beside-road-WEfsBSEd_LE?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
             "concept_rank": 2,
+            "outcome": "accepted",
+            "provider": "unsplash",
+            "queries": [
+              "soratie kuopat ajourat",
+              "Suomen yksityistie sorapinta",
+              "rutted rural gravel road"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "dcaf459e3a9c702145e4cbb64afebdf5f9ef07b3640b938d769143e045d2ff74",
+                "license": "Pexels License",
+                "reason": "The image shows cracked pavement, which is relevant to the article's theme of road network deterioration and repair debt. However, it does not show an asphalt repair patch, which is a 'must_show' element for the selected concept. Therefore, it cannot be approved for this specific concept. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/black-and-white-textured-cracked-pavement-33421228/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "7027fa882aea03a7a6226de907c791b60d39724283ade44de17d3e8332ff2211",
+                "license": "Pexels License",
+                "reason": "The article discusses the repair debt of regional road networks and the concept specifically requests an image showing an asphalt repair patch and cracked surrounding pavement. The provided image shows only a generic asphalt surface without any visible repair patches or significant cracks, therefore it does not meet the 'must_show' criteria. One or",
+                "source_url": "https://www.pexels.com/photo/little-stones-of-gray-wet-asphalt-road-7245520/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "50915fe50d6ac09045824b7bfa7a898ea43643db8c94033aaf7e2487ca4c5431",
+                "license": "Pexels License",
+                "reason": "The article discusses the repair debt of regional road networks, and the selected concept specifically requests a close-up of an asphalt repair patch on a rural road with cracked surrounding pavement, without workers or machinery. This image shows road construction machinery and workers, and a police car, which are explicitly excluded by the concep",
+                "source_url": "https://www.pexels.com/photo/from-above-of-repair-of-road-at-night-4394364/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "c039f743c39c525c381ae66fc6fa19e6a3212163514178fa8d2a1574342cd41c",
+                "license": "Pexels License",
+                "reason": "The image depicts food items, specifically garlic and wrapped bundles, displayed on trays. This content is entirely unrelated to the article's subject of regional road network repair debt and asphalt patching. The selected concept specifically requires an asphalt repair patch and cracked pavement, neither of which are present in the image. One or m",
+                "source_url": "https://www.pexels.com/photo/a-tray-of-garlic-on-a-table-next-to-a-red-stool-28117107/"
+              }
+            ],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "asfalttipaikkaus maaseututie",
+              "paikattu tien päällyste",
+              "rural road asphalt patch"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "13c001b0ea9f81e6441c0f1887707dc1b6cdca8bcb49c0c4f206451b997313fc",
+                "license": "Unsplash License",
+                "reason": "The article discusses the repair debt of regional road networks and asphalt patching. The selected concept specifically requests a close-up of an asphalt repair patch on a rural road, showing cracked surrounding pavement and a gravel shoulder, without workers or machinery. The actual pixels show an asphalt milling machine actively removing asphalt,",
+                "source_url": "https://unsplash.com/photos/a-milling-machine-removes-asphalt-next-to-an-orange-truck--ILmHp_MdE8?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "1ad05adbe7589804e4e0f070bd22be41268e8f19719808aeb65dd3cf5b40b6f0",
+                "license": "Unsplash License",
+                "reason": "The image shows a road, which is broadly related to the article's topic of regional road network condition and repair debt. However, the selected concept specifically requires a close-up view of an asphalt repair patch contrasting with cracked surrounding pavement. This image shows a road with a lighter strip, which could be a repair, but it is not",
+                "source_url": "https://unsplash.com/photos/an-empty-asphalt-road-stretches-to-the-horizon-dD9UGE0GhpA?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "7700d9db6cc4cf747a2a31db76272bbe94e7ab76e7fb89aa2056a9c34f6220bf",
+                "license": "Unsplash License",
+                "reason": "The article discusses the repair debt of regional road networks and the concept specifies an asphalt repair patch on a cracked pavement. The image shows a road that appears to be in good condition, without any visible asphalt repair patches or cracked pavement. Therefore, it does not depict the specific concept requested. One or more required conce",
+                "source_url": "https://unsplash.com/photos/an-empty-asphalt-road-stretches-through-green-hills-0CGpbp8ec2k?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "67e645c01c9804f9f275cc05d8a143be1509ff8ad918ca66d97b77a8a3081967",
+                "license": "Unsplash License",
+                "reason": "The article discusses the repair debt of regional road networks, specifically focusing on asphalt repairs. The selected concept describes a close-up of an asphalt repair patch on a rural road. The image, however, shows a gravel road, not an asphalt road, and there are no visible asphalt repair patches or cracked pavement. Therefore, it does not fit",
+                "source_url": "https://unsplash.com/photos/green-tree-beside-road-WEfsBSEd_LE?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "eurokolikot pinot",
-              "euro coins stacks",
-              "euro coin stacks closeup"
+              "asfalttipaikkaus maaseututie",
+              "paikattu tien päällyste",
+              "rural road asphalt patch"
             ]
           },
           {
-            "candidates": [],
-            "concept_rank": 2,
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "04dfeb9e172c51fabdbe03d3e02ac9f0da42e4d73e1c567aa69579eb5a6056f8",
+                "license": "CC BY-SA 3.0",
+                "reason": "The article discusses the repair debt of regional road networks and the concept specifically asks for a close-up of an asphalt repair patch on a rural road with cracked surrounding pavement. This image shows a rural road, but it is a wide shot, not a close-up, and there are no visible asphalt repair patches or clearly cracked pavement as described ",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Belarus,%20Homjel,%20Narovlja%20-%20Viarbovichy%20WMID2188159.jpg"
+              }
+            ],
+            "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "eurokolikot pinot",
-              "euro coins stacks",
-              "euro coin stacks closeup"
+              "asfalttipaikkaus maaseututie",
+              "paikattu tien päällyste",
+              "rural road asphalt patch"
             ]
           },
           {
             "candidates": [],
-            "concept_rank": 2,
+            "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "eurokolikot pinot",
-              "euro coins stacks",
-              "euro coin stacks closeup"
+              "asfalttipaikkaus maaseututie",
+              "paikattu tien päällyste",
+              "rural road asphalt patch"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 2,
-          "fit_score": 10,
-          "image_sha256": "55ccede5a91088ecc85f303497dd43e1975bb90761a3c2993d600e98a4cba5ac",
-          "kind": "generated"
+          "concept_rank": 1,
+          "fit_score": 9,
+          "image_sha256": "fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69",
+          "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "55ccede5a91088ecc85f303497dd43e1975bb90761a3c2993d600e98a4cba5ac",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "Julkisyhteisöjen velka: euroa havainnollistavat kolikkopinot",
-      "url": "https://uutistenlukija.fi/media/55ccede5a91088ecc85f303497dd43e1975bb90761a3c2993d600e98a4cba5ac.jpg"
+      "sha256": "fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69",
+      "source_url": "https://www.pexels.com/photo/scenic-misty-road-through-forested-countryside-32963980/",
+      "stock_provenance": {
+        "image_url": "https://images.pexels.com/photos/32963980/pexels-photo-32963980.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "32963980",
+        "photo_url": "https://www.pexels.com/photo/scenic-misty-road-through-forested-countryside-32963980/",
+        "photographer": "Frank Fritsch",
+        "photographer_url": "https://www.pexels.com/@frank-fritsch-1741901",
+        "provider": "pexels",
+        "query": "halkeillut asfaltti maaseututie",
+        "retrieved_at": "2026-09-30T07:46:44Z"
+      },
+      "stock_provenance_sha256": "aa787711ccb3a4edadf28302345557cd1f466bcc90849f376251b3f511acd911",
+      "url": "https://uutistenlukija.fi/media/fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "stat",
+      "provider": "kuntaliitto",
       "related_sources": 0,
-      "source_fields_sha256": "8104c9997636eda40dc9ef0e900fbedebcde8f18906e2a7e9fae1ab441b7a35f",
-      "source_sha256": "ca81677119eefa68af6ba538b655a23523ea1a66830cba77f572a9b16e4c726f"
+      "source_fields_sha256": "4a086fc2f4c68c446450b63705b4a58fc5cf33c300a895bac95d33ffdd034075",
+      "source_sha256": "9c565137608ecff28bf9c19775add935686a2047fc408abcf17094052b2f8074"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-09-30T05:00:00+00:00",
-        "publisher": "Tilastokeskus",
+        "published_at": "2026-09-30T00:00:00+03:00",
+        "publisher": "Suomen Kuntaliitto",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Creative Commons Nimeä 4.0 Kansainvälinen (CC BY 4.0): kopiointi, muokkaus ja edelleenjako sallittu, myös kaupallisiin tarkoituksiin; koskee tekstejä, taulukoita ja tilastokuvioita; lähde merkittävä (Lähde: Tilastokeskus)",
+          "license": "CC BY 4.0",
           "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://stat.fi/fi/tietoa-meista/tutustu-tilastokeskukseen/lainsaadanto/kayttoehdot"
+          "url": "https://www.kuntaliitto.fi/kuntaliitto/kayttoehdot"
         },
-        "text": "Tilastokeskuksen mukaan julkisyhteisöjen EDP-velka eli nimellishintainen sulautettu bruttovelka oli vuoden 2026 toisella neljänneksellä 259,6 miljardia euroa ja kasvoi neljänneksen aikana 4,8 miljardia euroa. Suhteessa bruttokansantuotteeseen julkisyhteisöjen velka oli 90,3 %. Vuoden takaiseen vastaavaan ajankohtaan verrattuna julkisyhteisöjen velka kasvoi 13,6 miljardia euroa.\nSisältöä ladataan\nKeskeisiä poimintoja\nValtionhallinnon velka kasvoi vuoden 2026 toisella neljänneksellä 4,0 miljardia euroa.\nPaikallishallintosektorin velka kasvoi 0,6 miljardia euroa.\nSosiaaliturvarahastojen velka pieneni 0,1 miljardia euroa.\nValtionhallinnon velka kasvoi 4,0 miljardia euroa\nValtionhallinnon velka kasvoi toisella neljänneksellä 4,0 miljardia euroa ja oli neljänneksen lopussa 220,2 miljardia euroa. Pitkäaikaisten joukkovelkakirjalainojen kanta kasvoi 3,1 miljardia euroa ja lyhytaikaisten maturiteetiltaan alle vuoden mittaisten velkainstrumenttien kanta kasvoi 1,4 miljardia euroa. Lyhytaikaisten lainojen kanta pieneni 0,1 miljardia ja pitkäaikaisten lainojen kanta pieneni 0,5 miljardia euroa.\nPaikallishallintosektorin velka kasvoi 0,6 miljardia euroa\nPaikallishallintosektorin velka kasvoi 0,6 miljardilla eurolla 39,7 miljardiin euroon vuoden 2026 toisella neljänneksellä. Paikallishallintosektorin pitkäaikaisten lainojen kanta kasvoi neljänneksen aikana 0,4 miljardia euroa 36,8 miljardiin euroon.\nSosiaaliturvarahastojen velka pieneni 0,1 miljardia euroa\nSosiaaliturvarahastojen velka pieneni 0,1 miljardia euroa lähinnä lyhytaikaisten velkapaperien vähentymisen myötä ja oli vuoden 2026 toisen neljänneksen lopussa 1,2 miljardia euroa.\nValtionhallinnon EDP-velka eroaa käsitteellisesti Valtiokonttorin julkaisemasta valtionvelasta\nLue lisää EDP-velan määritelmästä.",
-        "title": "Julkisyhteisöjen velka kasvoi 4,8 miljardia euroa vuoden 2026 toisella neljänneksellä",
-        "url": "https://stat.fi/fi/julkaisu/cmfpc3qbubef408urs4gzsvdo"
+        "text": "30.9. julkaistiin kunta-alan ja elinkeinoelämän järjestöjen Destialta tilaama selvitys alueellisen tieverkon tilasta. Selvityksen mukaan alueellisen verkon kunto heikkenee samalla, kun sen merkitys taloudelle, huoltovarmuudelle ja ihmisten arjelle kasvaa. Tähän selvitys tarjoaa ratkaisuja.\nAlueellinen tieverkko on Suomen talouden ja yhteiskunnan toimivuuden kannalta kriittinen. Seutu-, yhdys- ja yksityisteiden muodostama alueellinen tieverkko kattaa 96 prosenttia Suomen tieverkosta. Se on useissa maaseudun kunnissa välttämätön linkki kuntakeskuksen katuverkon ja valtion päätieverkon välillä sen lisäksi, että se palvelee haja-asutusalueen vakinaisia ja vapaa-ajan asukkaita.\nAlueellinen tieverkko on välttämätön lukuisille toimialoille, kuten energiantuotannolle, metsäteollisuudelle, maataloudelle ja matkailulle. Verkon varassa on kymmenien miljardien eurojen liikevaihto sekä yli miljoonan ihmisen arki: palvelut, pelastustoimi, poliisi sekä koulu- ja sote-kuljetukset.\nSelvityksen mukaan valtion tieverkon korjausvelka on 2,6 miljardia euroa, josta 90 prosenttia eli 2,4 miljardia euroa kohdistuu seutu- ja yhdysteihin. Lisäksi yksityisteiden korjausvelaksi arvioidaan 1,3 miljardia euroa.\nTänä vuonna päällystettyjen teiden korjauksiin käytetään Suomessa 279 miljoonaa euroa, mutta jo vuonna 2027 rahoitus putoaa 165 miljoonaan euroon. Rahoituksessa priorisoidaan pääteiden päällysteiden korjauksia, vaikka valtion tieverkon korjausvelasta 90 prosenttia on seutu- ja yhdysteillä. Sama linja jatkuu vuoteen 2029.\nKorjausvelan kasvu vaikeuttaa investointien toteutumista sekä heikentää huoltovarmuutta ja turvallisuutta. Heikossa asemassa ovat etenkin Itä- ja Pohjois-Suomen tiet. Rahoitus täytyy saada kuntoon.\nKuntien vastuulla olevan runsaan 30 000 kilometrin katuverkon korjausvelan on viime vuosikymmenen lopulla arvioitu olleen karkeasti noin 2 miljardia euroa. Kuntaliitto pitää tärkeänä, että kukin väyläverkon omistaja huolehtii vastuullaan olevan verkon kunnosta.\nMiten korjausvelan kasvu pysäytetään?\nSelvityksessä esitetään visio, jolla pysäytetään alueellisen tieverkon korjausvelan kasvu, turvataan sen toimivuus kaikissa oloissa sekä vahvistetaan talouskasvua, huoltovarmuutta ja turvallisuutta.\nSelvityksen visiossa alueellinen tieverkko mahdollistaa kestävän kasvun ja turvaa huoltovarmuutta kaikissa olosuhteissa. Se mahdollistaa ihmisille toimivan ja turvallisen arjen. Korjausvelan kasvu tulee pysäyttää vuoden 2026 tasolle.\nToteutuakseen visio edellyttää pitkäjänteistä parlamentaarista tahtotilaa väylärahoitukselle, EU:n rahoituskanavien parempaa hyödyntämistä, siirtymää oikea-aikaiseen ja ennakoivaan kunnossapitoon sekä tehokkaiden uusien toimintamallien, teknologioiden ja tiedonhallinnan käyttöönottoa.\nAlueellinen tieverkko Suomen toimivuuden, talouskasvun ja turvallisuuden pohjana -selvityksen teettivät INFRA, Koneyrittäjät, Kuntaliitto, Metsäkeskus, Maa- ja metsätaloustuottajain Keskusliitto MTK, Suomen Kuljetus ja Logistiikka SKAL, Suomen Tieyhdistys ja Destia. Selvityksen toteuttamisesta vastasivat diplomi-insinöörit Riku Huhta, Markus Pajarre ja Pertti Virtala sekä johtaja, professori Jorma Mäntynen Destian strategisten liikennejärjestelmien yksiköstä.\nLisätietoa:\nTiedote: Alueellisen tieverkon rahoitus uhkaa romuttua vuonna 2027\nRaportti: Alueellinen tieverkko Suomen toimivuuden, talouskasvun ja turvallisuuden pohjana",
+        "title": "Kunnille tärkeä alueellinen tieverkko murenee – uusi visio tarjoaa ratkaisuja",
+        "url": "https://www.kuntaliitto.fi/ajankohtaista/2026/kunnille-tarkea-alueellinen-tieverkko-murenee-uusi-visio-tarjoaa-ratkaisuja"
       }
     ],
-    "story_key": "url:https://stat.fi/fi/julkaisu/cmfpc3qbubef408urs4gzsvdo",
+    "story_key": "url:https://www.kuntaliitto.fi/ajankohtaista/2026/kunnille-tarkea-alueellinen-tieverkko-murenee-uusi-visio-tarjoaa-ratkaisuja",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-09-30T06:40:27.366256+00:00",
-        "sha256": "b3747f78303af4d1a0be4c23bb2e9d735a0efcdd493bfb09ad3de106f32b3d7e",
-        "text": "Käyttöehdot\nMiten voit käyttää Tilastokeskuksen tietoja?\nPääperiaate: Voit käyttää Tilastokeskuksen tilastotietoja ja tekstejä, kunhan mainitset lähteeksi Tilastokeskuksen.\nTilastokeskuksen avoimen datan aineistoja ja verkkopalvelun julkisia sisältöjä koskee Creative Commons Nimeä 4.0 Kansainvälinen -käyttölupa. Luvan mukaisesti saat kopioida, muokata ja jakaa näitä aineistojamme edelleen joko alkuperäisessä tai muokatussa muodossa. Saat myös yhdistää aineistoja muihin aineistoihin ja käyttää aineistoja myös kaupallisiin tarkoituksiin. Tämä lupa koskee esimerkiksi tekstejä, taulukoita ja tilastokuvioita.\nKun käytät näitä aineistoja tai jaat niitä eteenpäin, merkitse lähteeksi vähintään Tilastokeskus (Lähde: Tilastokeskus).\nLisätietoa CC BY Nimeä 4.0 Kansainvälinen -käyttöluvasta (creativecommons.org)\nMitä lupa ei koske?\nLupa ei koske\nTilastokeskuksen sivuilla julkaistavia muiden organisaatioiden tuottamia tietoja. Ne ovat kunkin tiedontuottajan omien käyttöehtojen alaisia.\nvalokuvien ja kuvituskuvien käyttöä. Niiden tekijänoikeudet ovat joko kuvien tekijöillä tai Tilastokeskuksella. Tällaisen materiaalin käytöstä on aina sovittava erikseen.\ntoimeksiantoina ja maksullisina palveluina tuotettavia tietoja. Niiden käyttöehdot ovat sopimuskohtaisia.\nAineistojen oikeudet\nTilastokeskus on aineistojen tuottaja ja tekijänoikeuden haltija, ellei tuotteen, tiedon tai palvelun yhteydessä erikseen toisin ilmoiteta.\nMiten voit viitata aineistoon?\nLähdeviittauksen laajuus riippuu käyttöyhteydestä. Mainitse kuitenkin aina vähintään Tilastokeskus.\nKunkin tilaston sivulla on yksityiskohtainen kopioitava viittausohje kyseiseen tilastoon.\nKatso viittausohje-esimerkki väestörakennetilaston sivulta.\nEsimerkkejä viittaustavoista\nLähde: Tilastokeskus\nLähde: Tilastokeskus, väestörakenne\nSuomen virallinen tilasto (SVT): Kotimaan vesiliikenne [verkkojulkaisu]. Viiteajankohta: 2022, syyskuu. ISSN=2670-1952. Helsinki: Tilastokeskus [Viitattu: 21.5.2025]. Saantitapa: https://www.stat.fi/julkaisu/cktyfj0i028h80b50qy1up5dz\nSuomen virallinen tilasto (SVT): Väestörakenne [verkkojulkaisu]. ISSN = 1797-5379. Taulukko: 11rc -- Väestö iän (5-v.) ja sukupuolen mukaan, 1865-2024. Helsinki: Tilastokeskus [Viitattu 21.5.2025]. Saantitapa: https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__vaerak/statfin_vaerak_pxt_11rc.px/\nPostinumeroaluerajat, Tilastokeskus. Aineisto on ladattu Tilastokeskuksen rajapintapalvelusta 13.10.2024 lisenssillä CC BY 4.0.\nhttps://creativecommons.org/licenses/by/4.0/deed.fi",
-        "url": "https://stat.fi/fi/tietoa-meista/tutustu-tilastokeskukseen/lainsaadanto/kayttoehdot"
+        "retrieved_at": "2026-09-30T07:45:12.261445+00:00",
+        "sha256": "feae122adcc46f4ee699f63e4b14b9836c4b63dd9b00dcc3a0db6fbcc49d7fd8",
+        "text": "Kuntaliitolla on tekijänoikeudet verkkopalveluidemme sisältöihin ja aineistoihin, ellei muuta mainita. Verkkosivujemme sisältöjen ja aineistojemme hyötykäyttö on kuitenkin mahdollista seuraavin edellytyksin, rajauksin ja tarkennuksin.\nKuntaliitto.fi –sivuston julkinen sisältö ja tietoaineistot on lisensoitu Creative Commons Nimeä 4.0 Kansainvälinen –lisenssillä, (myös: CC-BY 4.0) ellei jäljempänä, palvelun tai aineiston yhteydessä tai sivulla toisin mainita.\nCC-BY 4.0 –lisenssi oikeuttaa sinut jakamaan ja muokkaamaan tietoa. Kuntaliiton hallinnassa olevaa aineistoa hyödyntäessäsi sinun tulee kuitenkin mainita lähde asianmukaisesti, tarjota linkki po. lisenssiin sekä merkittävä toteuttamasi muutokset. Voit tehdä tämän millä tahansa kohtuullisella tavalla, mutta et voi antaa ymmärtää lisenssinantajan suosittelevan sinua tai tuotostasi.\nKuntaliitolla voi olla käytössä samanaikaisesti tai rinnakkain myös muita CC-lisenssejä, kuten CC-BY-ND 4.0 –lisenssi, joka ei salli aineiston tai sen osan muokkaamista ja edelleen jakelua. Lisäksi on syytä huomioida, että kuntaliitto.fi –sivustoilla on hyödynnetty muiden tiedon tuottajien aineistoja, joiden oikeuksien haltija on voinut määritellä alkuperäisaineistolleen käyttöehtoja.\nTässä määritellyt käyttöoikeudet eivät koske\nkonsernin muita verkkopalveluita kuin Kuntaliitto.fi:tä, Kommunforbundet.fi:tä sekä Localfinland.fi:tä, mikäli niiden yhteydessä ei erikseen muuta mainita\nkuvituskuviamme\nkolmansien osapuolten tuottamia aineistoja\nAvoimeen lähdekoodiin perustuvia ratkaisuja jaamme kuntakentän käyttöön Kuntaliiton GitHubissa, ko. palvelulle määritellyin käyttöehdoin.\nPainokelpoiset kuvat asiantuntijoistamme löytyvät kuvapankistamme Flickristä.",
+        "url": "https://www.kuntaliitto.fi/kuntaliitto/kayttoehdot"
       }
     ]
   },
   "draft": {
-    "category": "Talous",
+    "category": "Kotimaa",
     "image": {
-      "alt": "AI-generoitu kuva: Neljä erikokoista eurokolikkopinoa on aseteltu vaaleanharmaalle neutraalille pöytäpinnalle.",
-      "attempts": 2,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Kapea asfalttitie kulkee metsän ja pellon välissä, ja sen pinnassa näkyy halkeamia ja kuluneita merkintöjä.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Talous",
+        "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva valtiovarainministeriön päärakennuksen julkisivusta Helsingin Snellmaninkadulla, rajattuna rakennukseen ja sen sisäänkäyntiin.",
+            "depictable_scene": "Nimeämätön kapea asfalttitie kulkee suomalaisessa maaseutumaisemassa metsän ja pellon välissä. Etualalla näkyy päällysteen halkeamia, kuluneita paikkauksia ja pieni reunavaurio. Tie on tyhjä.",
             "must_avoid": [
-              "Fabricated or misidentified government building",
-              "Staged crisis or protest scene"
+              "People or body parts",
+              "Motorways or urban streets",
+              "Invented readable text or logos",
+              "Exaggerated collapse or disaster damage"
             ],
             "must_show": [
-              "Actual Finnish Ministry of Finance building",
-              "Recognizable facade"
+              "Cracked asphalt surface",
+              "Narrow rural road"
             ],
             "rank": 1,
-            "safe_to_generate": false,
+            "safe_to_generate": true,
             "search_queries": [
-              "Valtiovarainministeriö Snellmaninkatu julkisivu",
-              "Valtiovarainministeriö Helsinki rakennus",
-              "Finnish Ministry of Finance building"
+              "halkeillut asfaltti maaseututie",
+              "Suomen seututie päällystevauriot",
+              "cracked rural asphalt road",
+              "worn asphalt road Finland"
             ],
-            "subject": "valtionhallinnon velka ja valtiovarainministeriön rakennus"
+            "subject": "Maaseudun päällystettyjen teiden kulunut pinta"
           },
           {
-            "depictable_scene": "Lähikuva muutamasta erikorkuisesta eurokolikkopinosta neutraalilla pöytäpinnalla. Kuvassa näkyvät vain kolikot ja alusta, ilman numeroita tai tilastografiikkaa.",
+            "depictable_scene": "Nimeämätön kapea soratie jatkuu metsänreunaa pitkin maaseudulla. Etualan sorapinnassa näkyy ajouria ja matalia kuoppia, ja tien reunoilla on ruohoa. Kuvassa ei ole liikennettä.",
             "must_avoid": [
-              "People, faces, hands or other body parts",
-              "Invented text, logos or numerical labels",
-              "Coin stacks presented as an accurate statistical chart"
+              "People or body parts",
+              "Paved highways",
+              "Invented readable text or logos",
+              "Impassable disaster damage"
             ],
             "must_show": [
-              "Euro coins",
-              "Coin stacks on a neutral surface"
+              "Rutted gravel road",
+              "Rural roadside vegetation"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "eurokolikot pinot",
-              "euro coins stacks",
-              "euro coin stacks closeup"
+              "soratie kuopat ajourat",
+              "Suomen yksityistie sorapinta",
+              "rutted rural gravel road",
+              "Finnish gravel road potholes"
             ],
-            "subject": "Julkisyhteisöjen velka: euroa havainnollistavat kolikkopinot"
+            "subject": "Maaseudun yksityistiet ja sorapinnan kuluminen"
+          },
+          {
+            "depictable_scene": "Lähikuva nimeämättömän maaseututien pinnasta, jossa tumma suorakulmainen asfalttipaikka erottuu vanhemmasta harmaasta ja halkeilleesta päällysteestä. Rajauksessa näkyy myös tien sorainen piennar, mutta ei työntekijöitä tai koneita.",
+            "must_avoid": [
+              "People or body parts",
+              "Invented readable text or logos",
+              "Pristine newly paved highway"
+            ],
+            "must_show": [
+              "Asphalt repair patch",
+              "Cracked surrounding pavement"
+            ],
+            "rank": 3,
+            "safe_to_generate": true,
+            "search_queries": [
+              "asfalttipaikkaus maaseututie",
+              "paikattu tien päällyste",
+              "rural road asphalt patch",
+              "asphalt patch cracked pavement"
+            ],
+            "subject": "Päällystettyjen teiden korjauksiin käytettävä asfalttipaikkaus"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "Four stacks of euro coins, some taller than others, are arranged on a light grey, neutral surface. The coins are gold and silver in color.",
-      "generated": true,
-      "license": "AI-generated image",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/55ccede5a91088ecc85f303497dd43e1975bb90761a3c2993d600e98a4cba5ac.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by Frank Fritsch on Pexels",
+      "depicted": "The image shows a long, winding asphalt road stretching into the distance under a hazy sky. The road has white dashed lines on the right side and solid white lines on the left side, with some areas of the asphalt appearing lighter due to sunlight or moisture. On both sides of the road, there are green grassy verges, beyond which are dense lines of dark green trees. The trees on the left appear closer and more defined, while those on the right are further away and partially obscured by mist or ha",
+      "generated": false,
+      "hotlink": false,
+      "license": "Pexels License",
+      "license_evidence": {
+        "image_path": "/photos/32963980/pexels-photo-32963980.jpeg",
+        "license": "Pexels License",
+        "license_code": "Pexels",
+        "license_url": "https://www.pexels.com/license/",
+        "photo_id": "32963980",
+        "photo_url": "https://www.pexels.com/photo/scenic-misty-road-through-forested-countryside-32963980/",
+        "photographer": "Frank Fritsch",
+        "photographer_url": "https://www.pexels.com/@frank-fritsch-1741901",
+        "response_sha256": "267d629f0932146aa750ec424af114b7e8abe5d5df024df4097c8acca5dace60",
+        "retrieved_at": "2026-09-30T07:46:44.308890+00:00",
+        "transport": "jina_reader",
+        "version": 1
+      },
+      "license_url": "https://www.pexels.com/license/",
+      "local_path": "media/fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69.jpg",
       "pixel_review": {
-        "alt_fi": "Neljä erikokoista eurokolikkopinoa on aseteltu vaaleanharmaalle neutraalille pöytäpinnalle.",
+        "alt_fi": "Kapea asfalttitie kulkee metsän ja pellon välissä, ja sen pinnassa näkyy halkeamia ja kuluneita merkintöjä.",
         "approved": true,
-        "article_text_sha256": "52545ffbb092d2d1ce665549e5d5bf3c5de3cb6b50178ec6a62aa75eb25b5609",
-        "concept_sha256": "aee59bfd8152f92f871483e3cb184773eebc0e7dc31610915af52808a9de6757",
-        "description": "Four stacks of euro coins, some taller than others, are arranged on a light grey, neutral surface. The coins are gold and silver in color.",
-        "fit_score": 10,
-        "image_sha256": "55ccede5a91088ecc85f303497dd43e1975bb90761a3c2993d600e98a4cba5ac",
+        "article_text_sha256": "4aa52b1b995b41382e672ff6837f57366f8406f8acbc208a080dcaab7b30b254",
+        "concept_sha256": "4a7fe340499d144c4e1eaee9066d1e424dede7aad0a6e6cd12fee5af80f1a3d7",
+        "description": "A narrow asphalt road stretches into the distance, flanked by green grass and trees. The road surface shows signs of wear, with visible cracks and faded markings. Mist hangs in the air further down the road.",
+        "fit_score": 9,
+        "image_sha256": "fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image directly depicts euro coin stacks on a neutral surface, which perfectly matches the selected concept for illustrating public debt in euros. The article discusses public debt in euros, and the image provides a concrete visual representation of currency.",
-        "reviewed_at": "2026-09-30T07:08:48.765328+00:00",
+        "reason": "The image clearly depicts a narrow rural asphalt road with visible cracks and wear on its surface, directly matching the 'Cracked asphalt surface' and 'Narrow rural road' must-show elements of the selected concept. This aligns well with the article's focus on the deteriorating condition and repair debt of regional and private roads.",
+        "reviewed_at": "2026-09-30T07:46:47.404744+00:00",
         "text_audit": {
           "examples": [],
           "readable_text_present": false
         }
       },
       "pixels": {
-        "height": 1024,
+        "height": 650,
         "mode": "RGB",
-        "variance": 4087.9,
-        "width": 1536
+        "variance": 10746.6,
+        "width": 867
       },
-      "prompt_sha256": "6569e5d1055fe5f56bc5109583067badb6b4ed4a4e814e7ae679aa0bbb9b2e09",
-      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Lähikuva muutamasta erikorkuisesta eurokolikkopinosta neutraalilla pöytäpinnalla. Kuvassa näkyvät vain kolikot ja alusta, ilman numeroita tai tilastografiikkaa.",
+        "evidence": "A narrow asphalt road stretches into the distance, flanked by green grass and trees. The road surface shows signs of wear, with visible cracks and faded markings. Mist hangs in the air further down the road.",
         "matched": [
-          "Euro coins",
-          "Coin stacks on a neutral surface"
+          "asphalt",
+          "narrow",
+          "road",
+          "surface"
         ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "method": "vision",
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "52545ffbb092d2d1ce665549e5d5bf3c5de3cb6b50178ec6a62aa75eb25b5609",
-        "decision_sha256": "adb518e7f1317b0ea432a3771e8e46d2fdf378d94431010dd20b0f21a68f51e9",
+        "article_text_sha256": "4aa52b1b995b41382e672ff6837f57366f8406f8acbc208a080dcaab7b30b254",
+        "decision_sha256": "dfae8ee944962115f21230b1374e6d6eec7bf710e4b9d8f006e4f47784b93c06",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "5c64f964212b721e806c81f245cdc77c1aeab7074c88ad2be0cfadc867f97bb1",
+                "license": "Pexels License",
+                "reason": "The image shows a narrow rural road, which aligns with the 'Narrow rural road' must_show element. However, the 'Cracked asphalt surface' must_show element is not clearly present; the road appears to be in relatively good condition with only minor puddles and surface irregularities, not significant cracks or worn patchings as described in the concep",
+                "source_url": "https://www.pexels.com/photo/photo-of-roadway-in-between-green-trees-14420645/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "bfff54b0457589b795fe0313f66e5c6e3665455cbba9ce492646e7379a1fb6c8",
+                "license": "Pexels License",
+                "reason": "The article discusses the repair debt of regional and private paved roads. The selected concept specifically requires a cracked asphalt surface and a narrow rural road. The image shows a dirt road, not an asphalt road, and therefore does not meet the 'cracked asphalt surface' requirement. It also lacks any visible damage to the road surface that wo",
+                "source_url": "https://www.pexels.com/photo/serene-dirt-road-in-green-forest-landscape-34185071/"
+              },
+              {
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69",
+                "license": "Pexels License",
+                "reason": "The image clearly depicts a narrow rural asphalt road with visible cracks and wear on its surface, directly matching the 'Cracked asphalt surface' and 'Narrow rural road' must-show elements of the selected concept. This aligns well with the article's focus on the deteriorating condition and repair debt of regional and private roads.",
+                "source_url": "https://www.pexels.com/photo/scenic-misty-road-through-forested-countryside-32963980/"
+              }
+            ],
             "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "accepted",
             "provider": "pexels",
             "queries": [
-              "Valtiovarainministeriö Snellmaninkatu julkisivu",
-              "Valtiovarainministeriö Helsinki rakennus",
-              "Finnish Ministry of Finance building"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Valtiovarainministeriö Snellmaninkatu julkisivu",
-              "Valtiovarainministeriö Helsinki rakennus",
-              "Finnish Ministry of Finance building"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Valtiovarainministeriö Snellmaninkatu julkisivu",
-              "Valtiovarainministeriö Helsinki rakennus",
-              "Finnish Ministry of Finance building"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "Valtiovarainministeriö Snellmaninkatu julkisivu",
-              "Valtiovarainministeriö Helsinki rakennus",
-              "Finnish Ministry of Finance building"
+              "halkeillut asfaltti maaseututie",
+              "Suomen seututie päällystevauriot",
+              "cracked rural asphalt road"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
+                "fit_score": 4,
+                "image_sha256": "d9a21387c5ceaa84b022b051083c9707b1401f9ac1d72df86e9b160fd39e3a0f",
+                "license": "Pexels License",
+                "reason": "The article discusses the poor condition of regional and private roads, specifically rutted gravel roads. The image shows a gravel driveway, which is not a road, and it does not exhibit any signs of rutting or potholes as described in the concept. The visible subject does not genuinely illustrate the concrete article subject. One or more required c",
+                "source_url": "https://www.pexels.com/photo/row-of-yellow-garages-in-a-forest-setting-39725510/"
+              },
+              {
+                "approved": false,
                 "fit_score": 0,
-                "image_sha256": "32343af1fa8818cdd6f73fb92a5793d11fdf8fd8e22a5f9943e1028f61eb12f9",
+                "image_sha256": "941de5c16ff921facb932ec7b45deec623da549becdd60b3f769fc51dff55a23",
                 "license": "Pexels License",
-                "reason": "The image shows a bottle and glass of wine, which is completely unrelated to the article about public debt and the selected concept of euro coin stacks. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/close-up-photo-of-wine-bottle-near-wine-glass-15194430/"
+                "reason": "The article discusses the poor condition and repair debt of regional and private gravel roads in Finland. The selected concept specifically describes a 'rutted gravel road' with 'rural roadside vegetation'. The image, however, shows a developed area with paved roads and multi-story buildings, which does not match the concept of a rutted gravel road",
+                "source_url": "https://www.pexels.com/photo/aerial-view-of-swedish-residential-development-site-36955202/"
               },
               {
                 "approved": false,
-                "fit_score": 7,
-                "image_sha256": "a464faf28b559a86b642bab57ab1c5900094f9e0726e71d81fd3db63a14770f8",
+                "fit_score": 3,
+                "image_sha256": "7d3b722f9862cd39835cda8f7d22108220256269d1fa087c446c54150d505f64",
                 "license": "Pexels License",
-                "reason": "The image shows euro coins on a neutral surface, which aligns with the 'must_show' elements. However, the concept specifically requests 'a close-up of a few euro coin stacks of different heights', and this image primarily features a large, scattered pile of coins with only a few short stacks, not a clear arrangement of 'different heights'. The imag",
-                "source_url": "https://www.pexels.com/photo/a-pile-of-coins-9648243/"
+                "reason": "The image depicts a forest scene with trees and undergrowth, which is a generic rural setting. However, it does not show a road, gravel surface, ruts, or potholes, which are central to the selected concept of a 'rutted gravel road' and 'rural roadside vegetation' (specifically implying a road). Therefore, it fails to meet the 'must_show' criteria. ",
+                "source_url": "https://www.pexels.com/photo/trees-growing-in-green-forest-17980352/"
               },
               {
                 "approved": false,
-                "fit_score": 7,
-                "image_sha256": "a464faf28b559a86b642bab57ab1c5900094f9e0726e71d81fd3db63a14770f8",
+                "fit_score": 0,
+                "image_sha256": "70c4b63f8b13efb08912b6edb668df4da3eecb3d8be7a452728a8cafad38a328",
                 "license": "Pexels License",
-                "reason": "The image shows euro coins on a neutral surface, which aligns with the 'Euro coins' and 'Coin stacks on a neutral surface' must_show elements. However, the concept specifically requests 'Lähikuva muutamasta erikorkuisesta eurokolikkopinosta' (Close-up of a few euro coin stacks of different heights), and this image primarily features a large, sprawl",
-                "source_url": "https://www.pexels.com/photo/a-pile-of-coins-9648243/"
+                "reason": "The image depicts a forest scene with a tree trunk and foliage, which does not show a rutted gravel road or any indication of a road, as required by the selected concept. Therefore, it fails to meet the 'must_show' criteria. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/lichen-covered-tree-trunk-in-a-forest-23229115/"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "eurokolikot pinot",
-              "euro coins stacks",
-              "euro coin stacks closeup"
+              "soratie kuopat ajourat",
+              "Suomen yksityistie sorapinta",
+              "rutted rural gravel road"
             ]
           },
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "d84ff4eecd94b4dcf63a41b0d525db54a66d43fc9c7b143a8de5e54b6a8cc6e3",
+                "license": "Unsplash License",
+                "reason": "The article discusses the poor condition of regional and private gravel roads, with a focus on potholes and rutting. The selected concept specifically describes a rutted gravel road with rural roadside vegetation. The image, however, shows an asphalt road in good condition, a bus stop, and houses, which does not match the concept of a rutted gravel",
+                "source_url": "https://unsplash.com/photos/a-small-wooden-building-sitting-on-the-side-of-a-road-ZqqgJ_7WjQ4?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "b242389bbebebd00bd1f0585e24493c2260b2344209b24bd75451a3897fb3c6f",
+                "license": "Unsplash License",
+                "reason": "The image shows a gravel road and rural vegetation, which broadly aligns with the article's theme of regional and private roads. However, the selected concept specifically requires a 'rutted gravel road' with 'ajouria ja matalia kuoppia' (ruts and shallow potholes). The visible gravel road in the image appears to be in good condition, without clear",
+                "source_url": "https://unsplash.com/photos/gravel-road-through-grassy-field-NUWGIVW32H8?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": true,
+                "fit_score": 8,
+                "image_sha256": "67e645c01c9804f9f275cc05d8a143be1509ff8ad918ca66d97b77a8a3081967",
+                "license": "Unsplash License",
+                "reason": "The image depicts a gravel road in a rural setting, which aligns with the article's discussion of regional and private roads and their condition. The road shows some wear, consistent with the concept of 'rutted gravel road' and 'sorapinnan kuluminen'. The surrounding fields and distant trees represent rural roadside vegetation.",
+                "source_url": "https://unsplash.com/photos/green-tree-beside-road-WEfsBSEd_LE?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
             "concept_rank": 2,
+            "outcome": "accepted",
+            "provider": "unsplash",
+            "queries": [
+              "soratie kuopat ajourat",
+              "Suomen yksityistie sorapinta",
+              "rutted rural gravel road"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "dcaf459e3a9c702145e4cbb64afebdf5f9ef07b3640b938d769143e045d2ff74",
+                "license": "Pexels License",
+                "reason": "The image shows cracked pavement, which is relevant to the article's theme of road network deterioration and repair debt. However, it does not show an asphalt repair patch, which is a 'must_show' element for the selected concept. Therefore, it cannot be approved for this specific concept. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/black-and-white-textured-cracked-pavement-33421228/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "7027fa882aea03a7a6226de907c791b60d39724283ade44de17d3e8332ff2211",
+                "license": "Pexels License",
+                "reason": "The article discusses the repair debt of regional road networks and the concept specifically requests an image showing an asphalt repair patch and cracked surrounding pavement. The provided image shows only a generic asphalt surface without any visible repair patches or significant cracks, therefore it does not meet the 'must_show' criteria. One or",
+                "source_url": "https://www.pexels.com/photo/little-stones-of-gray-wet-asphalt-road-7245520/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "50915fe50d6ac09045824b7bfa7a898ea43643db8c94033aaf7e2487ca4c5431",
+                "license": "Pexels License",
+                "reason": "The article discusses the repair debt of regional road networks, and the selected concept specifically requests a close-up of an asphalt repair patch on a rural road with cracked surrounding pavement, without workers or machinery. This image shows road construction machinery and workers, and a police car, which are explicitly excluded by the concep",
+                "source_url": "https://www.pexels.com/photo/from-above-of-repair-of-road-at-night-4394364/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "c039f743c39c525c381ae66fc6fa19e6a3212163514178fa8d2a1574342cd41c",
+                "license": "Pexels License",
+                "reason": "The image depicts food items, specifically garlic and wrapped bundles, displayed on trays. This content is entirely unrelated to the article's subject of regional road network repair debt and asphalt patching. The selected concept specifically requires an asphalt repair patch and cracked pavement, neither of which are present in the image. One or m",
+                "source_url": "https://www.pexels.com/photo/a-tray-of-garlic-on-a-table-next-to-a-red-stool-28117107/"
+              }
+            ],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "asfalttipaikkaus maaseututie",
+              "paikattu tien päällyste",
+              "rural road asphalt patch"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "13c001b0ea9f81e6441c0f1887707dc1b6cdca8bcb49c0c4f206451b997313fc",
+                "license": "Unsplash License",
+                "reason": "The article discusses the repair debt of regional road networks and asphalt patching. The selected concept specifically requests a close-up of an asphalt repair patch on a rural road, showing cracked surrounding pavement and a gravel shoulder, without workers or machinery. The actual pixels show an asphalt milling machine actively removing asphalt,",
+                "source_url": "https://unsplash.com/photos/a-milling-machine-removes-asphalt-next-to-an-orange-truck--ILmHp_MdE8?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "1ad05adbe7589804e4e0f070bd22be41268e8f19719808aeb65dd3cf5b40b6f0",
+                "license": "Unsplash License",
+                "reason": "The image shows a road, which is broadly related to the article's topic of regional road network condition and repair debt. However, the selected concept specifically requires a close-up view of an asphalt repair patch contrasting with cracked surrounding pavement. This image shows a road with a lighter strip, which could be a repair, but it is not",
+                "source_url": "https://unsplash.com/photos/an-empty-asphalt-road-stretches-to-the-horizon-dD9UGE0GhpA?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "7700d9db6cc4cf747a2a31db76272bbe94e7ab76e7fb89aa2056a9c34f6220bf",
+                "license": "Unsplash License",
+                "reason": "The article discusses the repair debt of regional road networks and the concept specifies an asphalt repair patch on a cracked pavement. The image shows a road that appears to be in good condition, without any visible asphalt repair patches or cracked pavement. Therefore, it does not depict the specific concept requested. One or more required conce",
+                "source_url": "https://unsplash.com/photos/an-empty-asphalt-road-stretches-through-green-hills-0CGpbp8ec2k?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "67e645c01c9804f9f275cc05d8a143be1509ff8ad918ca66d97b77a8a3081967",
+                "license": "Unsplash License",
+                "reason": "The article discusses the repair debt of regional road networks, specifically focusing on asphalt repairs. The selected concept describes a close-up of an asphalt repair patch on a rural road. The image, however, shows a gravel road, not an asphalt road, and there are no visible asphalt repair patches or cracked pavement. Therefore, it does not fit",
+                "source_url": "https://unsplash.com/photos/green-tree-beside-road-WEfsBSEd_LE?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "eurokolikot pinot",
-              "euro coins stacks",
-              "euro coin stacks closeup"
+              "asfalttipaikkaus maaseututie",
+              "paikattu tien päällyste",
+              "rural road asphalt patch"
             ]
           },
           {
-            "candidates": [],
-            "concept_rank": 2,
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "04dfeb9e172c51fabdbe03d3e02ac9f0da42e4d73e1c567aa69579eb5a6056f8",
+                "license": "CC BY-SA 3.0",
+                "reason": "The article discusses the repair debt of regional road networks and the concept specifically asks for a close-up of an asphalt repair patch on a rural road with cracked surrounding pavement. This image shows a rural road, but it is a wide shot, not a close-up, and there are no visible asphalt repair patches or clearly cracked pavement as described ",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Belarus,%20Homjel,%20Narovlja%20-%20Viarbovichy%20WMID2188159.jpg"
+              }
+            ],
+            "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "eurokolikot pinot",
-              "euro coins stacks",
-              "euro coin stacks closeup"
+              "asfalttipaikkaus maaseututie",
+              "paikattu tien päällyste",
+              "rural road asphalt patch"
             ]
           },
           {
             "candidates": [],
-            "concept_rank": 2,
+            "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "eurokolikot pinot",
-              "euro coins stacks",
-              "euro coin stacks closeup"
+              "asfalttipaikkaus maaseututie",
+              "paikattu tien päällyste",
+              "rural road asphalt patch"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 2,
-          "fit_score": 10,
-          "image_sha256": "55ccede5a91088ecc85f303497dd43e1975bb90761a3c2993d600e98a4cba5ac",
-          "kind": "generated"
+          "concept_rank": 1,
+          "fit_score": 9,
+          "image_sha256": "fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69",
+          "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "55ccede5a91088ecc85f303497dd43e1975bb90761a3c2993d600e98a4cba5ac",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "Julkisyhteisöjen velka: euroa havainnollistavat kolikkopinot",
-      "url": "https://uutistenlukija.fi/media/55ccede5a91088ecc85f303497dd43e1975bb90761a3c2993d600e98a4cba5ac.jpg"
+      "sha256": "fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69",
+      "source_url": "https://www.pexels.com/photo/scenic-misty-road-through-forested-countryside-32963980/",
+      "stock_provenance": {
+        "image_url": "https://images.pexels.com/photos/32963980/pexels-photo-32963980.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "32963980",
+        "photo_url": "https://www.pexels.com/photo/scenic-misty-road-through-forested-countryside-32963980/",
+        "photographer": "Frank Fritsch",
+        "photographer_url": "https://www.pexels.com/@frank-fritsch-1741901",
+        "provider": "pexels",
+        "query": "halkeillut asfaltti maaseututie",
+        "retrieved_at": "2026-09-30T07:46:44Z"
+      },
+      "stock_provenance_sha256": "aa787711ccb3a4edadf28302345557cd1f466bcc90849f376251b3f511acd911",
+      "url": "https://uutistenlukija.fi/media/fdfeb9ffd4476a8cb0c0c31704e3a5246b6954c59bb4cadae8097d2ee1e11d69.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Tilastokeskuksen mukaan julkisyhteisöjen velka oli vuoden 2026 toisen neljänneksen lopussa 259,6 miljardia euroa. Velkaa oli 13,6 miljardia euroa enemmän kuin vuotta aiemmin."
+        "text": "Kunta-alan ja elinkeinoelämän järjestöjen teettämä selvitys alueellisen tieverkon tilasta julkaistiin 30. syyskuuta. Kuntaliiton tiedotteen mukaan Destian toteuttama selvitys arvioi verkon kunnon heikkenevän, vaikka sen merkitys taloudelle, huoltovarmuudelle ja arjen liikkumiselle kasvaa."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Velka lisääntyi etenkin valtionhallinnossa. Sen velkamäärä kasvoi Tilastokeskuksen tietojen mukaan neljänneksen aikana 4,0 miljardia euroa ja päätyi 220,2 miljardiin euroon. Pitkäaikaisten joukkovelkakirjalainojen kanta kasvoi 3,1 miljardia euroa."
+        "text": "Seutu-, yhdys- ja yksityistiet muodostavat Kuntaliiton mukaan 96 prosenttia Suomen tieverkosta. Ne yhdistävät maaseudun asutusta ja kuntakeskuksia päätieverkkoon sekä palvelevat muun muassa maa- ja metsätaloutta, energiantuotantoa ja matkailua."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Paikallishallinnon velka kasvoi tilaston mukaan 0,6 miljardia euroa ja oli neljänneksen lopussa 39,7 miljardia euroa. Sosiaaliturvarahastojen velka puolestaan väheni 0,1 miljardia euroa 1,2 miljardiin euroon, pääosin lyhytaikaisten velkapaperien vähentymisen vuoksi."
+        "text": "Selvityksessä valtion teiden korjausvelaksi arvioidaan 2,6 miljardia euroa. Tästä noin 90 prosenttia eli 2,4 miljardia kohdistuu seutu- ja yhdysteihin. Yksityisteiden korjausvelan arvioksi esitetään lisäksi 1,3 miljardia euroa."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Tilaston velkamittari on EDP-velka eli nimellishintainen sulautettu bruttovelka. Tilastokeskus huomauttaa, että valtionhallinnon EDP-velka on käsitteeltään eri asia kuin Valtiokonttorin julkaisema valtionvelka."
+        "text": "Kuntaliiton tiedotteen mukaan päällystettyjen teiden korjauksiin käytetään vuonna 2026 yhteensä 279 miljoonaa euroa, mutta vuonna 2027 rahoitus laskee 165 miljoonaan euroon. Tiedotteen mukaan rahoitus painottuu pääteiden päällysteisiin, ja sama painotus jatkuu vuoteen 2029."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Selvityksessä tavoitteeksi asetetaan alueellisen tieverkon korjausvelan kasvun pysäyttäminen vuoden 2026 tasolle. Keinoiksi esitetään pitkäjänteistä parlamentaarista sitoutumista väylärahoitukseen, EU-rahoituksen parempaa hyödyntämistä sekä kunnossapidon tekemistä ennakoivasti. Myös uusia teknologioita ja parempaa tiedonhallintaa ehdotetaan osaksi ratkaisua."
       }
     ],
-    "summary": "Tilastokeskuksen mukaan julkisyhteisöjen velka kasvoi vuoden 2026 toisella neljänneksellä 4,8 miljardia euroa. Velan suhde bruttokansantuotteeseen oli 90,3 prosenttia.",
-    "title": "Julkisyhteisöjen velka nousi 259,6 miljardiin euroon"
+    "summary": "Kuntaliiton esittelemän selvityksen mukaan seutu- ja yhdysteiden korjausvelka on 2,4 miljardia euroa ja yksityisteiden 1,3 miljardia. Selvityksessä ehdotetaan pitkäjänteistä rahoitusta ja ennakoivaa kunnossapitoa velan kasvun pysäyttämiseksi.",
+    "title": "Alueellisen tieverkon korjausvelka kasvaa selvityksen mukaan"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "62933e365f9935baccae2f57c335b5922c6e3ee0c8c82c9ecba7346b692b6c4e",
+    "draft_sha256": "783eff13cfc8a2312357ef2ab73c034d08075f717d75e66e4ecae994c8cc3d2b",
     "reasons": [
-      "Otsikko on 52 merkkiä pitkä eli alle 60 merkin tavoiterajan, ja tärkein asia on alussa. Lähde A tukee otsikon 259,6 miljardin euron velkamäärää sekä ingressin 4,8 miljardin euron neljänneskasvua ja 90,3 prosentin velkasuhdetta vuoden 2026 toisella neljänneksellä.",
-      "Kaikkien neljän kappaleen source_ids-merkintä A on asianmukainen. A tukee 13,6 miljardin euron vuosikasvua, valtionhallinnon 4,0 miljardin kasvua ja 220,2 miljardin velkamäärää sekä pitkäaikaisten joukkovelkakirjalainojen 3,1 miljardin kasvua. Myös paikallishallinnon 0,6 miljardin kasvu ja 39,7 miljardin velkamäärä sekä sosiaaliturvarahastojen 0,1 miljardin vähennys ja 1,2 miljardin velkamäärä vastaavat lähdettä.",
-      "Sosiaaliturvarahastojen velan vähenemisen yhteys lyhytaikaisten velkapaperien vähentymiseen sekä EDP-velan määritelmä ja käsitteellinen ero Valtiokonttorin valtionvelkaan ovat lähteessä A. Luonnos ei lisää perusteettomia syitä, ennusteita tai riippumatonta vahvistusta koskevia väitteitä.",
-      "A on Tilastokeskuksen 30.9.2026 julkaistu, arviointipäivänä ajankohtainen tilastolähde ja riittää tähän rajattuun tilastouutiseen. Talous-luokitus ja Suomen julkisyhteisöjä koskeva valtakunnallinen laajuus sopivat aineistoon. Teksti on neutraalia ja ymmärrettävää suomea sekä lähteen tietoja tiivistävää omaa muotoilua. RIGHTS tukee tekstin uudelleenkäyttöä lähdemaininnalla, ei uutisväitteitä eikä valokuvien käyttöoikeutta.",
-      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Paketissa on kaksi järjestettyä kuvakonseptia ja haut molemmille; generoitu kolikkokuva vastaa korkeimmalle sijoitettua turvallisesti generoitavaa konseptia. Erillisen mallin kuvatarkastus on sidottu valitun kuvan ja artikkelitekstin tunnisteisiin, antaa sopivuudeksi 10/10 ja kuvaa eurokolikkopinot ilman ihmisiä tai luettavaa tekstiä. Kuvitus liittyy euroissa käsiteltävään velkaan eikä väitä pinoja tilastografiikaksi. Kuvateksti sisältää täsmällisen ilmoituksen 'AI-generoitu kuva. Ei valokuva tapahtumasta.', ja tekijätieto erottaa sen valokuvasta. Tilastokeskuksen tekstilupaa ei käytetä kuvan oikeusperusteena."
+      "Otsikko on 60 merkkiä pitkä, joten se täyttää pituustavoitteen. Keskeinen asia, alueellisen tieverkon korjausvelka, on alussa. Lähde A käsittelee korjausvelan kasvua, ja otsikko rajaa väitteen selvityksen arvioksi.",
+      "Ingressin ja kolmannen kappaleen luvut vastaavat lähdettä A: valtion tieverkon korjausvelka on selvityksen mukaan 2,6 miljardia euroa, seutu- ja yhdysteiden osuus noin 90 prosenttia eli pyöristettynä 2,4 miljardia ja yksityisteiden arvio 1,3 miljardia. Luonnos ei esitä arvioita riippumattomasti varmennettuina mittaustuloksina.",
+      "Ensimmäisen ja toisen kappaleen source_ids-merkinnät ovat asianmukaiset: A tukee julkaisupäivää 30.9.2026, Destian toteuttajaroolia, järjestöjen tilaamaa selvitystä, verkon kunnon heikkenemistä ja merkityksen kasvua sekä 96 prosentin osuutta Suomen tieverkosta. Valtakunnallinen rajaus ja Kotimaa-luokitus vastaavat lähteen käsittelemää aihetta.",
+      "Neljännen ja viidennen kappaleen väitteet saavat tuen lähteestä A: päällystettyjen teiden korjausrahoitus on 279 miljoonaa euroa vuonna 2026 ja 165 miljoonaa vuonna 2027, pääteiden painotus jatkuu vuoteen 2029 ja kasvun pysäyttämisen tavoitetaso on vuosi 2026. Rahoitus, EU-rahoituksen hyödyntäminen, ennakoiva kunnossapito, teknologiat ja tiedonhallinta esitetään selvityksen ehdotuksina, ei toteutuneina ratkaisuina.",
+      "A on arviointipäivänä julkaistu, aiheeseen suoraan liittyvä Kuntaliiton tiedote. Yksi lähde riittää tähän selvästi lähteistetyksi selvitysuutiseksi rajattuun tekstiin; luonnos ei väitä riippumatonta vahvistusta. Suomenkielinen teksti on neutraali, ymmärrettävä ja lähdettä tiivistävä. RIGHTS-asiakirja tukee tekstin CC BY 4.0 -uudelleenkäyttöä, ei uutisväitteitä eikä valokuvan oikeuksia.",
+      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Kolme järjestettyä kuvakonseptia ja haut jokaiselle on dokumentoitu. Valitun Frank Fritschin Pexels-kuvan yksilöity lisenssinäyttö yhdistää Pexels License -lisenssin kuvaan 32963980. Kuvan tarkkaa tiedostotiivistettä koskeva arvio kuvaa halkeillutta ja kulunutta kapeaa maaseudun asfalttitietä ja antaa koko artikkelin soveltuvuudeksi 9/10: konkreettinen kulunut tie liittyy jutun kunto- ja korjausvelka-aiheeseen, ei vain yleiseen Kotimaa-kategoriaan. Kuvateksti ja vaihtoehtoinen teksti erottavat kuvan arkistokuvaksi eivätkä väitä sen esittävän selvityksessä tutkittua tietä tai julkaisupäivän tilannetta. Kuvaa ei ole merkitty generoiduksi, ja kuvatietueen arvio ei osoita turvarajojen rikkomista."
     ]
   }
 }
