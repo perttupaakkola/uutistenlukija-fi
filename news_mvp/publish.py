@@ -16,8 +16,8 @@ from .diagnostics import safe_error
 from .editorial import ROOT, digest, timestamp, validate_review, validate_packet
 from datetime import datetime, timezone
 from .release_contract import media, verify_intake, check_article, load_legacy_redirects, legacy_redirect_lines
-from .site import (CATEGORY_PAGES, LATEST_PATH, OPPAAT_PATH, atomic_write, article_path,
-                   esc, missing_page, page, render_site)
+from .site import (ABOUT_PATH, CATEGORY_PAGES, LATEST_PATH, OPPAAT_PATH, SOURCES_PATH,
+                   atomic_write, article_path, esc, missing_page, page, render_site)
 from .store import database
 from . import slugs
 
@@ -260,14 +260,14 @@ def public_bundle(store,job,state):
     from .frontpage import load
     snapshot = load(state)
     render_site(store,site,state,public=True,include_ids=ids,verify_policy_ids={job['id']},snapshot=snapshot)
-    privacy='''<article class="story"><h1>Tietosuoja ja evästeet</h1><p>Voit käyttää uutispalvelua sallimatta analytiikkaa. Luvallasi käytämme Google Analyticsia sivuston käytön mittaamiseen. Emme käytä mainonnan evästeitä.</p><p>Suostumus tallennetaan selaimeesi. Voit muuttaa valintaasi sivun Evästeasetukset-painikkeella. Analytiikan poistaminen käytöstä poistaa tämän sivuston Google Analytics -evästeet selaimesta.</p><p>Uutiset laaditaan tekoälyn avulla ja tarkastetaan erillisessä lähdearvioinnissa. Alkuperäiset lähteet ja käyttöehdot näkyvät artikkelissa. Jokaisella uutisella on tarkastettu aiheeseen liittyvä kuva; oikean valokuvan tekijä ja käyttöoikeus ilmoitetaan artikkelin kuvan käyttöoikeudet -osiossa.</p></article>'''
+    privacy='''<article class="story"><h1>Tietosuoja ja evästeet</h1><p>Voit käyttää uutispalvelua sallimatta analytiikkaa. Luvallasi käytämme Google Analyticsia sivuston käytön mittaamiseen. Emme käytä mainonnan evästeitä.</p><p>Suostumus tallennetaan selaimeesi. Voit muuttaa valintaasi sivun Evästeasetukset-painikkeella. Analytiikan poistaminen käytöstä poistaa tämän sivuston Google Analytics -evästeet selaimesta.</p><p>Palvelun tuotantotapa ja korjauskäytäntö kuvataan <a href="/tietoja/">Tietoa Uutistenlukijasta</a> -sivulla.</p></article>'''
     atomic_write(site/'tietosuoja/index.html',page('Tietosuoja ja evästeet',privacy,'/tietosuoja/',snapshot=snapshot))
     # Terms for AI images. This is the license_url/source_url of every generated article
     # image, so it must exist and must actually describe the image rights - pointing that field
     # at the privacy page was rejected by the independent reviewer, correctly.
     illustrations = '''<article class="story"><h1>AI-generoidut kuvat</h1>
 <p>Osa uutisten kuvista on tekoälyn tuottamia. Ne eivät ole valokuvia todellisista tapahtumista eivätkä esitä todellisia henkilöitä.</p>
-<p>Artikkelin kuvan alla lukee: AI-generoitu kuva. Ei valokuva tapahtumasta.</p>
+<p>Artikkelissa tekoälyllä tuotettu kuva merkitään suoraan kuvan alla.</p>
 <p>AI-generoitu kuva perustuu tarkastetun uutisen sisältöön ja voi näyttää realistiselta. Se ei esitä keksittyä todellista henkilöä tai uutistapahtumaa.</p>
 <p>Ensin arvioimme 2–3 artikkeliin sopivaa kuva-aihetta ja etsimme niihin käyttöoikeudeltaan varmistettuja oikeita kuvia. Oikea kuva valitaan vain, jos sen näkyvä sisältö vastaa artikkelia vähintään 8/10. Muuten tuotamme parasta turvallista kuva-aihetta vastaavan AI-kuvan ja tarkastamme myös sen. Lähdetekstin käyttöehdot eivät yksin anna oikeutta lähteen valokuviin. Valokuvan tekijä, lähde ja käyttöehdot ilmoitetaan artikkelin käyttöoikeusosiossa.</p>
 <p>AI-kuvan tuottamiseen käytetty malli ja kehotteen tarkiste tallennetaan julkaisurekisteriin.</p>
@@ -303,7 +303,9 @@ def public_bundle(store,job,state):
         return '<url><loc>'+esc(u)+'</loc>'+(('<lastmod>'+esc(mod)+'</lastmod>') if mod else '')+'</url>'
     entries=[_url_entry('https://uutistenlukija.fi/'),
              _url_entry('https://uutistenlukija.fi/tietosuoja/'),
-             _url_entry('https://uutistenlukija.fi/lahteet/')]
+             _url_entry('https://uutistenlukija.fi'+ABOUT_PATH),
+             _url_entry('https://uutistenlukija.fi'+SOURCES_PATH),
+             _url_entry('https://uutistenlukija.fi/ai-kuvat/')]
     entries+= [_url_entry('https://uutistenlukija.fi/'+_slug_for(i), article_mod.get(i)) for i in sorted(ids)]
     # Rendered archive pages are published pages too; the sitemap must list them.
     # Symlinked roots/directories/index files and nonnumeric or leading-zero names are not pages.
@@ -327,6 +329,21 @@ def public_bundle(store,job,state):
     # stale or tampered directory out without changing article/archive/legacy checks.
     listing_paths = [f'categories/{slug}/' for slug, _display in CATEGORY_PAGES]
     listing_paths += [LATEST_PATH.lstrip('/'), OPPAAT_PATH.lstrip('/')]
+    # Category and latest archives use the same finite /sivu/N/ convention as the
+    # homepage. Discover only real, canonical pages under renderer-owned roots;
+    # numeric leftovers, links and mis-canonical files never enter the sitemap.
+    for root in [f'categories/{slug}/' for slug, _display in CATEGORY_PAGES] + [LATEST_PATH.lstrip('/')]:
+        page_root = site/root/'sivu'
+        if page_root.is_symlink() or not page_root.is_dir():
+            continue
+        children=[]
+        for child in page_root.iterdir():
+            if (child.is_symlink() or not child.is_dir() or not child.name.isascii()
+                    or not child.name.isdigit() or child.name.startswith('0')
+                    or int(child.name) < 2):
+                continue
+            children.append(int(child.name))
+        listing_paths += [root+'sivu/'+str(number)+'/' for number in sorted(children)]
     entries += [_url_entry('https://uutistenlukija.fi/'+path)
                 for path in listing_paths if _published_page(site, path)]
     atomic_write(site/'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(entries)+'</urlset>')

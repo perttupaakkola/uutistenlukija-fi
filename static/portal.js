@@ -56,6 +56,7 @@
 
   var menuButton = document.getElementById("hamburger");
   var nav = document.getElementById("main-nav-menu");
+  var menuClose = document.getElementById("menu-close");
   if (menuButton && nav) {
     var setOpen = function (open) {
       nav.classList.toggle("nav-open", open);
@@ -63,7 +64,13 @@
       menuButton.setAttribute("aria-label", open ? "Sulje valikko" : "Avaa valikko");
     };
     menuButton.addEventListener("click", function () {
-      setOpen(!nav.classList.contains("nav-open"));
+      var opening = !nav.classList.contains("nav-open");
+      setOpen(opening);
+      if (opening && menuClose) menuClose.focus();
+    });
+    if (menuClose) menuClose.addEventListener("click", function () {
+      setOpen(false);
+      menuButton.focus();
     });
   }
 
@@ -108,6 +115,68 @@
       }
     });
   }
+})();
+
+/* Page-local reader actions and resilient image failure states. */
+(function () {
+  "use strict";
+  var images = document.querySelectorAll ? document.querySelectorAll("img[data-image-fallback]") : [];
+  Array.prototype.forEach.call(images, function (image) {
+    image.addEventListener("error", function () {
+      if (image.dataset.fallbackApplied === "true") return;
+      image.dataset.fallbackApplied = "true";
+      var surface = image.closest("figure, .portal-lead__image, .portal-feed-item__thumb, .portal-teaser__thumb, .portal-row-card__thumb, .related-story__thumb");
+      if (surface) surface.classList.add("image-unavailable");
+      image.hidden = true;
+      if (image.dataset.imageFallback === "hero" && surface && !surface.querySelector(".image-unavailable__message")) {
+        var caption = surface.querySelector(".article-hero-caption");
+        if (caption) caption.hidden = true;
+        var message = document.createElement("p");
+        message.className = "image-unavailable__message";
+        message.textContent = "Kuva ei ole saatavilla.";
+        surface.insertBefore(message, surface.firstChild);
+      }
+    }, { once: true });
+  });
+
+  function legacyCopy(value) {
+    if (!document.createElement || !document.body) return false;
+    var field = document.createElement("textarea");
+    field.value = value;
+    field.setAttribute("readonly", "");
+    field.style.position = "fixed";
+    field.style.opacity = "0";
+    document.body.appendChild(field);
+    field.select();
+    var copied = false;
+    try { copied = document.execCommand("copy"); } catch (error) { copied = false; }
+    document.body.removeChild(field);
+    return copied;
+  }
+
+  var shareButtons = document.querySelectorAll ? document.querySelectorAll("[data-share-url]") : [];
+  Array.prototype.forEach.call(shareButtons, function (button) {
+    button.addEventListener("click", async function () {
+      var url = button.getAttribute("data-share-url");
+      var feedback = document.getElementById(button.getAttribute("aria-describedby"));
+      try {
+        if (window.navigator && typeof window.navigator.share === "function") {
+          await window.navigator.share({ title: document.title, url: url });
+          if (feedback) feedback.textContent = "Jakaminen avattiin.";
+          return;
+        }
+        if (window.navigator && window.navigator.clipboard && window.isSecureContext) {
+          await window.navigator.clipboard.writeText(url);
+        } else if (!legacyCopy(url)) {
+          throw new Error("copy unavailable");
+        }
+        if (feedback) feedback.textContent = "Linkki kopioitu.";
+      } catch (error) {
+        if (error && error.name === "AbortError") return;
+        if (feedback) feedback.textContent = "Linkin kopiointi ei onnistunut.";
+      }
+    });
+  });
 })();
 
 /* Refresh only the original header forecast and existing market panel. */

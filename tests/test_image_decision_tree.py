@@ -489,7 +489,10 @@ class HomepageModules(unittest.TestCase):
         template = case.ready()
         jobs = []
         categories = ["Kotimaa", "Maailma", "Talous", "Tiede", "Kulttuuri", "Urheilu"]
-        for index in range(12):
+        # Page one consumes 30 stories. Six older archive records then support one
+        # genuinely additional topic card per populated category without repeating
+        # the lead, teaser or river packages above it.
+        for index in range(36):
             job = dict(template)
             draft = json.loads(job["draft"])
             draft["category"] = categories[index % len(categories)]
@@ -503,7 +506,7 @@ class HomepageModules(unittest.TestCase):
             jobs.append(job)
         output = Path(tempfile.mkdtemp(dir=case.root))
         self.addCleanup(lambda: __import__("shutil").rmtree(output, ignore_errors=True))
-        self.assertEqual(site.render_site(self.Store(jobs), output, case.state, public=True), 12)
+        self.assertEqual(site.render_site(self.Store(jobs), output, case.state, public=True), 36)
         html = (output / "index.html").read_text()
         entries = re.findall(r'<article class="([^"]+)"', html)
         self.assertEqual(sum("portal-teaser" in entry for entry in entries), site.HOMEPAGE_CENTER_ROWS)

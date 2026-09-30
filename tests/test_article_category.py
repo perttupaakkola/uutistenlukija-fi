@@ -28,7 +28,7 @@ LD_RE=re.compile(r'<script type="application/ld\+json">(.*?)</script>',re.S)
 OG_RE=re.compile(r'<meta property="og:url" content="([^"]+)"')
 INDEX_LD_RE=re.compile(r'@type": "ItemList"')
 FEED_ITEM_RE=re.compile(r'<article class="portal-feed-item[^"]*">(.*?)</article>',re.S)
-FEED_LINK_RE=re.compile(r'<h3><a href="([^"]+)"')
+FEED_LINK_RE=re.compile(r'<h2><a href="([^"]+)"')
 
 
 class PageScan(HTMLParser):
@@ -71,6 +71,9 @@ class ArticleAndCategoryRendering(unittest.TestCase):
             job['id']=hashlib.sha256(f'article-category:{index}:{tag}'.encode()).hexdigest()
             job['created_at']=(datetime(2026,1,1,tzinfo=timezone.utc)-timedelta(minutes=index)).isoformat()
             draft=copy.deepcopy(self.draft);draft['category']=category
+            # These are distinct synthetic stories, not duplicate captures. Keep a
+            # shared subject for related-story scoring while giving each its own title.
+            draft['title']=f'{draft["title"]} {tag}'
             job['draft']=json.dumps(draft)
             review=json.loads(job['review']);review['draft_sha256']=generated.digest(draft)
             job['review']=json.dumps(review)
@@ -156,7 +159,7 @@ class ArticleAndCategoryRendering(unittest.TestCase):
                 self.assertIsNotNone(match)
                 self.assertEqual(match.group(1),f'/categories/{slug}/')
                 self.assertEqual(match.group(2),display)
-                self.assertEqual(match.group(3),json.loads(jobs[0]['draft'])['title'])
+                self.assertEqual(match.group(3),'Juttu')
                 self.assertNotIn('class="back"',html)
 
     def test_category_pages_filter_and_map_maailma_and_show_empty_honestly(self):

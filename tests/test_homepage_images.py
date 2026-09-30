@@ -107,7 +107,10 @@ class HomepageImages(unittest.TestCase):
             article=scan(html)
             self.assertEqual([attrs['src'] for attrs in article_hero_images(html)],[f'/mvp-assets/{sha}.jpg'])
             self.assertEqual([attrs['alt'] for attrs in article_hero_images(html)],[stored['alt']])
-            self.assertEqual(len(editorial_images(article)),4)
+            # Layout clones have the same headline and are not independent related
+            # stories, so the relevance gate keeps only the article hero.
+            self.assertEqual(len(editorial_images(article)),1)
+            self.assertNotIn('<section class="related">',html)
             self.assertEqual(article.captions,[stored['caption']])
 
     def test_public_missing_image_refused_and_private_preview_never_promotes_older_story(self):
@@ -193,7 +196,9 @@ class HomepageImages(unittest.TestCase):
         self.assertNotIn('<b>',home)
         self.assertNotIn('<i>',home)
         self.assertNotIn('<script>alert(1)</script>',home)
-        self.assertEqual(home.count('<img'),5)
+        # Header and footer use the same approved brand asset; four reviewed story
+        # images remain the only editorial images on the listing.
+        self.assertEqual(home.count('<img'),6)
         parsed=scan(home)
         self.assertEqual([attrs['alt'] for attrs in editorial_images(parsed)],[alt]*4)
         self.assertEqual([attrs['src'] for attrs in editorial_images(parsed)],[f'/mvp-assets/{sha}.jpg']*4)

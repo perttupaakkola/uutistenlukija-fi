@@ -40,6 +40,11 @@ def number(value, low, high):
     return value
 
 
+def fi_decimal(value, digits):
+    """Fixed-precision Finnish decimal without changing the sourced value."""
+    return f"{float(value):.{digits}f}".replace('.', ',')
+
+
 def fetch(url):
     request = urllib.request.Request(url, headers={'User-Agent': UA})
     with urllib.request.urlopen(request, timeout=8) as response:
@@ -195,9 +200,11 @@ def weather(snapshot=None, now=None):
     detail = ('Ennuste ' + date(hour['time']).astimezone(FI).strftime('%d.%m. klo %H.%M') +
               ' · päivitetty ' + date(item['updated_at']).astimezone(FI).strftime('%d.%m. klo %H.%M') +
               ' · MET Norway, CC BY 4.0') if hour else 'Sääennuste ei ole nyt saatavilla. MET Norway, CC BY 4.0.'
-    return (f'<a class="portal-weather" href="https://www.met.no/en/free-meteorological-data/Licensing-and-crediting" title="{html.escape(detail)}" aria-label="{html.escape(value + ", " + label + ". " + detail)}">'
+    return (f'<div class="portal-weather" title="{html.escape(detail)}" aria-label="{html.escape(value + ", " + label + ". " + detail)}">'
             '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="27" height="27" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>'
-            f'<span><strong id="weather-value">{value}</strong><small id="weather-time">{label}</small></span></a>')
+            f'<span><strong id="weather-value">{value}</strong><small id="weather-time">{label}</small></span>'
+            '<a class="portal-weather__source" href="https://www.met.no/en/free-meteorological-data/Licensing-and-crediting" '
+            'aria-label="Säätiedon lähde ja käyttöehdot: MET Norway">Lähde</a></div>')
 
 
 def markets(snapshot=None, now=None):
@@ -208,10 +215,10 @@ def markets(snapshot=None, now=None):
     now = now or datetime.now(timezone.utc)
     rows = ''
     if current_markets(market, now):
-        rows += ''.join(f'<div><dt>EUR / {symbol}</dt><dd>{market["rates"][symbol]:.4f}</dd></div>' for symbol in ('USD','SEK','GBP'))
+        rows += ''.join(f'<div><dt>EUR / {symbol}</dt><dd>{fi_decimal(market["rates"][symbol], 4)}</dd></div>' for symbol in ('USD','SEK','GBP'))
     label = ('EKP · 1 euro · ' + datetime.strptime(market['date'], '%Y-%m-%d').strftime('%d.%m.%Y') + ' · päiväkurssit, ei reaaliaikainen') if rows else 'Valuuttakurssit eivät ole nyt saatavilla.'
     if current_inflation(finnish, now):
-        rows += (f'<div><dt>Suomen inflaatio</dt><dd>{finnish["value"]:.1f}'.replace('.', ',') + ' %</dd></div>')
+        rows += f'<div><dt>Suomen inflaatio</dt><dd>{fi_decimal(finnish["value"], 1)} %</dd></div>'
         month_label = datetime.strptime(finnish['month'], '%YM%m').strftime('%m/%Y')
         inflation_note = (f'<p class="portal-market__note"><a href="{STATFI_SOURCE}">'
                           f'Tilastokeskus · kuluttajahintojen vuosimuutos · {month_label} · CC BY 4.0</a></p>')

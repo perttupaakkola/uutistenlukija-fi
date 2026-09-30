@@ -53,7 +53,8 @@ dialog button{font:inherit;min-height:44px;margin:0;padding:.7rem 1rem;border:1p
 /* Every visible shell control keeps a 44px target at both widths. */
 .portal-icon-button,.hamburger-btn,.theme-toggle-btn,.search-toggle-btn,.portal-action,.main-nav a,.site-search__submit,.site-footer-consent-button,.site-footer-links li a,.consent-settings{min-height:44px}
 .portal-icon-button,.hamburger-btn,.theme-toggle-btn,.search-toggle-btn,.site-search__submit{min-width:44px}
-.portal-icon-button,.portal-action,.main-nav a,.site-footer-links a,.site-footer-consent-button{display:inline-flex;align-items:center}
+.portal-icon-button,.portal-action,.portal-logo,.main-nav a,.site-footer-links a,.site-footer-brand,.site-footer-consent-button{display:inline-flex;align-items:center}
+.portal-logo,.site-footer-brand{min-height:44px}
 .main-nav a{min-height:44px}
 .site-search__submit{width:44px;height:44px}
 :root[data-theme="dark"] .site-search__submit,:root[data-theme="dark"] .site-search__submit svg{color:var(--portal-ink,#f3f5f7)}
@@ -162,4 +163,119 @@ dialog button{font:inherit;min-height:44px;margin:0;padding:.7rem 1rem;border:1p
   .related-story__thumb{width:88px;height:66px}
   /* These are standalone story entry points, never inline citations or rights. */
   .portal-logo,.portal-save-link,.portal-teaser h3>a,.portal-row-card h3>a,.portal-feed-item h3>a{display:inline-flex;align-items:center;min-width:44px;min-height:44px}
+}
+
+/* The primary strip stays compact. The hamburger reveals the complete grouped
+   directory, including intentionally empty desks, service routes and settings. */
+.main-nav{position:relative;overflow:visible}
+.menu-directory{display:none;box-sizing:border-box;background:var(--portal-card,#fff);color:var(--portal-ink,#071329);border:1px solid var(--portal-line,#d8dee8);box-shadow:0 18px 42px rgba(7,19,41,.16)}
+.main-nav.nav-open .menu-directory{position:absolute;z-index:300;top:calc(100% - 8px);left:36px;right:36px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:22px}
+.menu-directory__head{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--portal-line,#d8dee8)}
+.menu-directory__head strong{font:800 1.05rem/1.2 var(--font-sans,system-ui,sans-serif)}
+.menu-close,.menu-consent-settings{min-height:44px;border:1px solid var(--portal-line,#d8dee8);border-radius:5px;background:transparent;color:inherit;padding:.55rem .8rem;font:650 .9rem/1.2 var(--font-sans,system-ui,sans-serif);cursor:pointer}
+.menu-directory__title{margin:0 0 6px;color:var(--portal-muted,#647084);font:800 .75rem/1.2 var(--font-sans,system-ui,sans-serif);letter-spacing:.08em;text-transform:uppercase}
+.main-nav .menu-directory ul{display:grid;gap:0;overflow:visible;margin:0;padding:0;list-style:none}
+.main-nav .menu-directory a,.main-nav .menu-directory .theme-toggle-btn,.main-nav .menu-directory .menu-consent-settings{box-sizing:border-box;width:100%;justify-content:flex-start;border-radius:0;text-transform:none;letter-spacing:0;white-space:normal}
+.main-nav .menu-directory a{padding:0 4px}
+.main-nav.nav-open .theme-menu-item{display:block}
+.main-nav.nav-open .theme-menu-item .theme-toggle-btn{display:flex!important;min-height:44px;align-items:center;gap:.5rem;border:0;border-bottom:3px solid transparent;background:transparent;color:inherit;padding:0 4px;text-align:left;cursor:pointer}
+.menu-close:focus-visible,.menu-consent-settings:focus-visible,.main-nav .menu-directory button:focus-visible{outline:3px solid var(--accent,#c0392b);outline-offset:2px}
+
+/* Search names its external destination in the visible interface. */
+.portal-search .search-note{margin:.35rem 0 0;color:var(--portal-muted,#647084);font:500 .7rem/1.25 var(--font-sans,system-ui,sans-serif)}
+.portal-weather{cursor:default}
+.portal-weather__source{display:inline-flex;align-items:center;min-height:44px;color:var(--portal-blue,#082867);font:700 .72rem/1 var(--font-sans,system-ui,sans-serif);text-decoration:underline;text-underline-offset:2px}
+
+/* Consolidated footer: approved brand asset plus two useful link groups. */
+.site-footer-grid{grid-template-columns:minmax(220px,1.2fr) minmax(150px,.8fr) minmax(190px,1fr)}
+.site-footer-brand__image{display:block;width:min(220px,100%);height:auto;filter:brightness(0) invert(1);opacity:.94}
+.site-footer-brand-col{min-width:0}
+
+/* Category/latest archives are a finite reading column, not a full-width card wall. */
+.portal-list-page{max-width:860px;margin-inline:auto}
+.portal-list-header{margin-bottom:10px}
+.archive-count{font:700 .8rem/1.35 var(--font-sans,system-ui,sans-serif)!important;letter-spacing:.02em}
+.portal-feed-item,.portal-feed-item.portal-feed-item--no-image{grid-template-columns:minmax(0,1fr) 132px;gap:16px;padding:18px 0}
+.portal-feed-item--no-image .portal-feed-item__body,.portal-feed-item__body{grid-column:1;min-width:0}
+.portal-feed-item__thumb{grid-column:2;grid-row:1;align-self:center}
+.portal-feed-item__meta{display:block!important;margin:0 0 5px!important;color:var(--portal-muted,#647084)!important;font:650 .78rem/1.4 var(--font-sans,system-ui,sans-serif)!important}
+.portal-feed-item__meta a{color:var(--category-accent,var(--portal-blue,#082867));text-decoration:none}
+.portal-feed-item h2{margin:3px 0 7px;font-size:21px;line-height:1.22;overflow-wrap:anywhere}
+.portal-feed-item h2 a{color:var(--portal-ink,#071329);text-decoration:none}
+.portal-feed-item h2 a:hover{text-decoration:underline;text-underline-offset:3px}
+.empty-recovery{margin-top:18px;padding-top:16px;border-top:1px solid var(--portal-line,#d8dee8)}
+.empty-recovery h2{margin:0 0 8px;font-size:1rem}
+.empty-recovery ul{display:flex;flex-wrap:wrap;gap:6px 16px;margin:0;padding:0;list-style:none}
+.empty-recovery a{display:inline-flex;align-items:center;min-height:44px;color:var(--portal-blue,#082867);font-weight:700}
+.pager{justify-content:space-between}
+
+/* Article roles: a restrained opening, readable prose and clearly separated lower
+   evidence/process panels. No process label is introduced in the opening. */
+.single-article{max-width:760px}
+.single-article h1{font-size:clamp(2.05rem,4.2vw,3rem);line-height:1.14;letter-spacing:-.018em;margin-bottom:.65rem}
+.single-article>.article-meta{margin:0 0 1.05rem;padding:0 0 .85rem}
+.single-article>.lead{max-width:42rem;margin:0 0 1.35rem;color:var(--portal-ink,#071329);font:500 clamp(1.13rem,2vw,1.3rem)/1.48 var(--font-serif,Georgia,serif)}
+.single-article .article-hero{margin:0 0 1.5rem}
+.single-article .article-hero img{display:block;width:100%;height:auto;border-radius:6px}
+.single-article .article-hero-caption{padding-top:7px;color:var(--portal-muted,#647084);font:500 .76rem/1.4 var(--font-sans,system-ui,sans-serif)}
+.single-article .content{max-width:68ch;font-size:1.125rem;line-height:1.72}
+.single-article .sources,.single-article .source-reuse,.single-article .article-production,.single-article .image-rights,.single-article .related{margin-top:2rem;padding-top:1.15rem;border-top:1px solid var(--portal-line,#d8dee8)}
+.single-article :is(.sources,.source-reuse,.article-production,.image-rights,.related)>h2{margin:0 0 .7rem;font-size:1.15rem;line-height:1.25}
+.single-article :is(.sources,.source-reuse) ul,.single-article .sources ol{padding-left:1.3rem}
+.single-article :is(.sources,.source-reuse) li{margin:.65rem 0;overflow-wrap:anywhere}
+.source-count{color:var(--portal-muted,#647084);font:650 .82rem/1.4 var(--font-sans,system-ui,sans-serif)}
+.article-status{margin:0 0 1.2rem;padding:14px 16px;border-left:4px solid var(--portal-blue,#082867);background:var(--portal-soft,#eef1f5)}
+.article-status h2{margin:0 0 4px;font-size:1rem}
+.article-status p{margin:0}
+.article-status--corrected{border-left-color:#9a6700}
+.article-status--withdrawn{border-left-color:var(--accent,#c0392b)}
+.article-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin-top:2rem;padding-top:1.15rem;border-top:1px solid var(--portal-line,#d8dee8)}
+.article-actions a,.article-share{display:inline-flex;align-items:center;min-height:44px;color:var(--portal-blue,#082867);font:700 .9rem/1.3 var(--font-sans,system-ui,sans-serif);text-decoration:underline;text-underline-offset:3px}
+.article-share{border:1px solid var(--portal-line,#d8dee8);border-radius:5px;background:transparent;padding:.55rem .8rem;cursor:pointer}
+.article-share__feedback{min-height:1.3em;color:var(--portal-muted,#647084);font:600 .82rem/1.3 var(--font-sans,system-ui,sans-serif)}
+.about-page{max-width:760px;margin-inline:auto}
+.about-page li{margin:.55rem 0}
+
+/* Failed remote/local images leave a stable neutral surface. Only an article hero
+   receives explanatory text; listing thumbnails simply disappear without badges. */
+.image-unavailable{display:grid;place-items:center;min-height:88px;background:var(--portal-soft,#eef1f5)}
+.image-unavailable__message{margin:0;padding:24px;color:var(--portal-muted,#647084);font:650 .9rem/1.4 var(--font-sans,system-ui,sans-serif)}
+.article-hero.image-unavailable .article-hero-caption{display:none}
+.portal-thumb__story:has(>img[hidden]){display:none}
+
+:root[data-theme="dark"] .menu-directory,:root[data-theme="dark"] .article-status{background:var(--portal-card,#181b1f);color:var(--portal-ink,#f3f5f7)}
+:root[data-theme="dark"] .portal-feed-item h2 a,:root[data-theme="dark"] .single-article>.lead{color:var(--portal-ink,#f3f5f7)}
+:root[data-theme="dark"] .portal-weather__source,:root[data-theme="dark"] .empty-recovery a,:root[data-theme="dark"] .article-actions a,:root[data-theme="dark"] .article-share{color:#8ab4ff}
+
+@media(max-width:900px){
+  .main-nav.nav-open .main-nav__primary{display:none!important}
+  .main-nav.nav-open .menu-directory{position:static;display:block;border-inline:0;border-bottom:0;box-shadow:none;padding:8px 12px 18px}
+  .menu-directory__head{margin-bottom:10px}
+  .menu-directory__group{margin-top:14px}
+  .main-nav .menu-directory ul{padding:0!important}
+  .main-nav .menu-directory a{padding:0 4px!important}
+  .site-search--collapsed .search-note{display:none}
+  .site-search:not(.site-search--collapsed){padding:10px 10px 36px}
+  .site-search:not(.site-search--collapsed) .search-note{position:absolute;left:12px;right:12px;bottom:7px;margin:0}
+  .site-footer-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:600px){
+  .portal-list-page{max-width:100%}
+  .portal-feed-item,.portal-feed-item.portal-feed-item--no-image{grid-template-columns:minmax(0,1fr) 78px;column-gap:10px;row-gap:4px}
+  .portal-feed-item__body,.portal-feed-item--no-image .portal-feed-item__body{grid-column:1;grid-row:1}
+  .portal-feed-item__thumb{grid-column:2;grid-row:1}
+  .portal-feed-item h2{font-size:17px;line-height:1.28}
+  .portal-feed-item__body>p:not(.portal-feed-item__meta){display:none}
+  .portal-feed-item--no-image{grid-template-columns:minmax(0,1fr)!important}
+  .pager{justify-content:center}
+  .pager .page-current{order:-1;flex-basis:100%;justify-content:center}
+  .single-article{padding:1.25rem .75rem}
+  .single-article h1{font-size:clamp(1.82rem,9vw,2.35rem);line-height:1.16}
+  .single-article .content{font-size:1.0625rem;line-height:1.7}
+  .single-article .article-hero{margin-inline:-.75rem}
+  .single-article .article-hero img{border-radius:0}
+  .single-article .article-hero-caption{padding-inline:.75rem}
+  .article-actions{align-items:flex-start;flex-direction:column}
+  .portal-feed-item h2>a{display:inline-flex;align-items:center;min-width:44px;min-height:44px}
 }

@@ -29,9 +29,14 @@ TAG_CLASS_RE = re.compile(r'class="([^"]*)"')
 ATTR_RE = re.compile(r'([a-zA-Z][\w:-]*)\s*=\s*"([^"]*)"')
 SHEETS = ("style.css", "homepage-polish.css", "article.css", "category.css",
           "category-hero.css", "empty-state.css", "search.css", "portal-overhaul.css")
-NAV_HREFS = ["/", "/categories/kotimaa/", "/categories/ulkomaat/", "/categories/talous/",
-             "/categories/teknologia/", "/categories/urheilu/", "/categories/kulttuuri/",
-             "/categories/tiede/", "/oppaat/", "/tuoreimmat/"]
+PRIMARY_NAV_HREFS = ["/", "/categories/kotimaa/", "/categories/ulkomaat/",
+                     "/categories/talous/", "/categories/kulttuuri/",
+                     "/categories/tiede/", "/tuoreimmat/"]
+DIRECTORY_HREFS = ["/categories/kotimaa/", "/categories/ulkomaat/",
+                   "/categories/talous/", "/categories/teknologia/",
+                   "/categories/urheilu/", "/categories/kulttuuri/",
+                   "/categories/tiede/", "/oppaat/", "/tuoreimmat/",
+                   "/tietoja/", "/tietoja/#korjaukset", "/lahteet/", "/rss.xml"]
 # Theme-native footer structure: the reference's own class names, nothing invented.
 FOOTER_CLASSES = {"site-footer", "container", "site-footer-grid", "site-footer-col",
                   "site-footer-brand-col", "site-footer-brand", "site-footer-slogan",
@@ -280,12 +285,13 @@ class PortalShell(unittest.TestCase):
         # The one search is Google's, explicitly labelled and site-scoped.
         self.assertIn('action="https://www.google.com/search"', home)
         self.assertIn('name="sitesearch" value="uutistenlukija.fi"', home)
-        self.assertIn("Hae uutisia Googlesta", home)
-        self.assertIn("Haku avautuu Googlen omalla sivulla.", home)
+        self.assertIn("Hae sivustolta Googlesta", home)
+        self.assertIn("Tulokset avautuvat Googlen sivulla.", home)
         # Weather is stated as unavailable instead of showing an invented reading.
         self.assertIn("Sääennuste ei ole nyt saatavilla", home)
         self.assertNotIn("data-weather-widget", home)
-        self.assertIn('class="portal-weather" href="https://www.met.no/', home)
+        self.assertIn('<div class="portal-weather"', home)
+        self.assertIn('class="portal-weather__source" href="https://www.met.no/', home)
         self.assertNotIn('id="saa"', home)
         self.assertIn('Sääennuste ei ole nyt saatavilla.', home)
         self.assertIn('class="portal-market"', home)
@@ -301,7 +307,12 @@ class PortalShell(unittest.TestCase):
         self.assertIn('aria-controls="main-nav-menu"', home)
         nav = NAV_RE.search(home)
         self.assertIsNotNone(nav, "masthead nav is missing")
-        self.assertEqual(HREF_RE.findall(nav.group(0)), NAV_HREFS)
+        primary = re.search(r'<ul class="main-nav__primary">(.*?)</ul>', nav.group(0), re.S)
+        directory = re.search(r'<div class="menu-directory".*?</nav>', nav.group(0), re.S)
+        self.assertIsNotNone(primary)
+        self.assertIsNotNone(directory)
+        self.assertEqual(HREF_RE.findall(primary.group(1)), PRIMARY_NAV_HREFS)
+        self.assertEqual(HREF_RE.findall(directory.group(0)), DIRECTORY_HREFS)
         # Footer uses the theme's own classes and keeps the three truthful destinations.
         footer, classes = self._footer_classes(home)
         self.assertTrue(FOOTER_CLASSES <= classes, f"missing footer classes: {FOOTER_CLASSES - classes}")
@@ -394,7 +405,7 @@ class PortalShell(unittest.TestCase):
         compat = (site.ROOT / "static/style.css").read_text(encoding="utf-8")
         self.assertNotIn("grid-template-areas", compat)
         self.assertNotIn(".site-search__form{display:flex !important", compat)
-        self.assertNotIn("site-search:not(.site-search--collapsed)", compat)
+        self.assertNotIn(".site-search:not(.site-search--collapsed) .site-search__form{display:flex!important", compat)
         # Every shell control declares a 44px target outside any media query.
         for selector in TAP_SELECTORS:
             candidates = [

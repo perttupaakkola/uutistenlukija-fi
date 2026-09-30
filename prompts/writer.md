@@ -8,6 +8,9 @@ Palauta vain JSON ilman markdown-aitoja:
 {"title":"uutisotsikko", "summary":"yksi tiivis ingressi", "category":"Kotimaa|Maailma|Talous|Tiede|Kulttuuri|Urheilu", "paragraphs":[{"text":"kappale", "source_ids":["lähteen id"]}], "image":null}
 Kirjoita 2–20 tarkoituksenmukaista kappaletta, jokaisella lähdeviite. Älä täytä tilaa turhalla tekstillä.
 Otsikko: enintään 60 merkkiä, tärkein substantiivi (paikka, toimija tai päätös) heti alkuun. Älä käytä alaotsikko-ketjuja, täytesanoja, huutomerkkejä tai kysymysmerkkejä.
+Älä lisää otsikkoon tai summary-ingressiin tekoälyä, automaatiota, tuotantotapaa tai vastuuvapauslausetta koskevaa merkintää. Sivusto kertoo tuotantotavan erillisessä alemmassa osiossa.
+Summary: yksi tiivis ingressi, joka kertoo lukijalle uuden kehityksen, sen merkityksen ja olennaisen rajauksen silloin kun lähteet tukevat niitä. Älä kertaa otsikkoa eri sanoin.
+Ensimmäinen kappale vie uutista eteenpäin konkreettisella uudella tiedolla. Säilytä lähteiden epävarmuudet, ehdot, aikarajaukset ja attribuutiot; älä vahvista tai laajenna väitettä pelkän sujuvuuden vuoksi.
 Jos lähdepaketissa on image, säilytä sen objekti muuttumattomana. Jos ei ole, image on null.
 # Useita lähteitä koskevat säännöt
 

@@ -106,7 +106,10 @@ class ReleaseV2(unittest.TestCase):
             home=(site/'index.html').read_text();self.assertIn(self.draft['title'],home);self.assertIn('NASA synthetic image story',home)
             text=(site/(article_path(job)+"index.html")).read_text();self.assertNotIn('Luonnos',text)
             self.assertEqual(len(article_hero_images(text)),1)
-            self.assertEqual(len(editorial_images(scan(text))),2)
+            # The unrelated NASA item is not quota-filled into a Helsinki story's
+            # related rail; the reviewed hero remains the sole editorial image.
+            self.assertEqual(len(editorial_images(scan(text))),1)
+            self.assertNotIn('<section class="related">',text)
             self.assertIn('CC BY 4.0',text);self.assertNotIn('Tämä uutinen julkaistaan ilman kuvaa.',text);self.assertTrue((site/f'mvp-assets/{sha}.jpg').exists())
     def test_wrong_missing_policy_rights_private_fixture_packet_refused(self):
         for mutation in ['policy','rights','private','fixture','source','image-required']:
