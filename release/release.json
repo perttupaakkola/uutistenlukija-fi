@@ -4,38 +4,411 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "1a7cd0b8c7f5a4d399e329781127db232beacbc4",
-  "job_id": "5a635efaca1d445998a8492101745de981d672680155e69f5eab3e118861a220",
-  "packet_sha256": "4b44176fd073e6254c22704777d94a0562acbb695bc5aac24fb67cf5464d8251",
-  "draft_sha256": "6576df79c0b6c529c129b7ac832daf5c54c143cfb947dacc93db86fbfae650e2",
-  "image_sha256": "30a6b82064b5bb6cb32bc673e5f5bf085c747f37d6023db82eab74271dd1d849",
+  "job_id": "dbd531c56a766870ef277a3b51fb07aefd063ba3ae3ff73f16659c7451c4cef9",
+  "packet_sha256": "3c329ba107f4b2a2f620718a7173a626842c4a302b286b1dae4d672bf540b78e",
+  "draft_sha256": "1af6818187fa7299257590f00f324d094f46be0663a36c0fa598fba4e010d03f",
+  "image_sha256": null,
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "fd66a75534b8b4466bcaca9e408c7334e69ba812e6729a98584c2eb95f3bce25"
+    "provenance_sha256": "d06b3df67b80e0d97d0e4b271ea865e750d34d4c7cf06c44f39bbb650ddcff80"
+  },
+  "stock_image": {
+    "alt": "Arkistokuva: Tyhjä luokkahuone, jossa on riveittäin pulpetteja ja tuoleja. Etuseinällä on tyhjä valkoinen opetustaulu ja oikealla kaappeja.",
+    "caption": "Arkistokuva artikkelin aiheesta.",
+    "classifier_output": {
+      "category": "Kotimaa",
+      "concepts": [
+        {
+          "depictable_scene": "Nimeämättömän lukion tyhjä luokkahuone, jossa pöydät ja tuolit ovat riveissä ja etuseinällä on tyhjä opetustaulu. Ikkunoista tulee luonnonvaloa.",
+          "must_avoid": [
+            "People or body parts",
+            "Readable text or logos",
+            "Damage or emergency staging"
+          ],
+          "must_show": [
+            "Classroom desks and chairs",
+            "Blank teaching board"
+          ],
+          "rank": 1,
+          "safe_to_generate": true,
+          "search_queries": [
+            "lukion tyhjä luokkahuone",
+            "empty secondary school classroom",
+            "classroom desks chairs"
+          ],
+          "subject": "lukioiden opetusjärjestelyihin liittyvä tyhjä luokkahuone"
+        },
+        {
+          "depictable_scene": "Nimeämättömän ammatillisen oppilaitoksen puutyöluokan tyhjä työpiste, jossa on puinen työpenkki, siihen kiinnitetty ruuvipenkki ja höylättävä puukappale.",
+          "must_avoid": [
+            "People or body parts",
+            "Readable text or logos",
+            "Accident or damage staging"
+          ],
+          "must_show": [
+            "Woodworking bench with vise",
+            "Wooden workpiece"
+          ],
+          "rank": 2,
+          "safe_to_generate": true,
+          "search_queries": [
+            "ammatillinen koulutus puutyöluokka",
+            "woodworking training workbench",
+            "puutyöpenkki ruuvipenkki"
+          ],
+          "subject": "Ammatillisessa koulutuksessa käytettävä työpiste"
+        },
+        {
+          "depictable_scene": "Todellinen valokuva Helsingin Eduskuntatalon pääjulkisivusta: pylväsrivi ja leveät portaat näkyvät rakennuksen edessä.",
+          "must_avoid": [
+            "Invented or altered building architecture",
+            "Protest or emergency scene unrelated to the article"
+          ],
+          "must_show": [
+            "Actual Finnish Parliament House facade",
+            "Columns and entrance steps"
+          ],
+          "rank": 3,
+          "safe_to_generate": false,
+          "search_queries": [
+            "Eduskuntatalo Helsinki julkisivu",
+            "Eduskuntatalo portaat pylväät",
+            "Finnish Parliament House facade"
+          ],
+          "subject": "hallitus antoi eduskunnalle koulutusta koskevat esitykset"
+        }
+      ],
+      "version": "article-first-v1"
+    },
+    "credit": "Photo by Brecht Corbeel on Unsplash",
+    "depicted": "The image shows a classroom with multiple student desks and chairs. The desks have light brown wooden tops and dark gray bases with metal legs. The chairs are dark blue with metal frames. In the foreground, a desk and chair are partially visible. In the midground, there are several rows of desks and chairs, with some chairs tucked under the desks and others pulled out. In the background, there are wooden cabinets with white countertops. Above the cabinets, there are white shelves or structures, ",
+    "generated": false,
+    "hotlink": true,
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "pixel_review": {
+      "alt_fi": "Tyhjä luokkahuone, jossa on riveittäin pulpetteja ja tuoleja. Etuseinällä on tyhjä valkoinen opetustaulu ja oikealla kaappeja.",
+      "approved": true,
+      "article_text_sha256": "263d4af1f1a203680477e70d7872c2e6d0d4b662fe56ac341998c1bcc64d7eaa",
+      "concept_sha256": "97953db45745d5f587219131d7ea3aa7103ea945b636b0e8c6ddff5277760b42",
+      "description": "An empty classroom with rows of desks and chairs. The front wall has a blank white board. Natural light comes from windows on the left. On the right, there are wooden cabinets with some old computer monitors and a sink.",
+      "fit_score": 9,
+      "image_sha256": "ac75af2a9bd33f2eb4ce4cf0427602f4b6a3a47fea61d2e97249976d86642f4d",
+      "model": "google:gemini-2.5-flash",
+      "must_show_visible": [
+        true,
+        true
+      ],
+      "no_people": true,
+      "reason": "The image clearly depicts an empty classroom with desks, chairs, and a blank teaching board, which directly matches the selected concept of an empty high school classroom. This scene is highly relevant to the article's discussion of high school education arrangements during exceptional circumstances.",
+      "reviewed_at": "2026-10-01T12:18:36.774258+00:00",
+      "text_audit": {
+        "examples": [],
+        "readable_text_present": false
+      }
+    },
+    "pixels": {
+      "height": 864,
+      "mode": "RGB",
+      "variance": 4694.7,
+      "width": 1536
+    },
+    "relevance_check": {
+      "accepted": true,
+      "evidence": "An empty classroom with rows of desks and chairs. The front wall has a blank white board. Natural light comes from windows on the left. On the right, there are wooden cabinets with some old computer monitors and a sink.",
+      "matched": [
+        "blank",
+        "board",
+        "chairs",
+        "classroom",
+        "desk"
+      ],
+      "method": "vision",
+      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+    },
+    "selection_evidence": {
+      "article_text_sha256": "263d4af1f1a203680477e70d7872c2e6d0d4b662fe56ac341998c1bcc64d7eaa",
+      "decision_sha256": "ca255c8b734a7f9f40d99312ac41abc49ad88d6f5466023fcc7691dc5bfcf39c",
+      "minimum_real_fit": 8,
+      "searches": [
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "7153fe445442dd932dbd1a4724f4bbe2b273bca566ee334f46657f03ce54c8f2",
+              "license": "Pexels License",
+              "reason": "The image shows a classroom, which broadly relates to the article's topic of education. However, the concept specifies 'Classroom desks and chairs' in rows and a 'Blank teaching board'. The image has a large table in the foreground, not desks in rows, and the board is a cork board with papers, not a blank teaching board. The visible text on the pap",
+              "source_url": "https://www.pexels.com/photo/brown-cork-board-with-white-paper-10211162/"
+            },
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "3e47e0388241362a9f2994f14e4abd1a730a0f94dce1edd2d65827cfbb3ae059",
+              "license": "Pexels License",
+              "reason": "The whiteboard is not blank as required by the concept, and it contains readable text ('Hello School', 'Hoo Ray!'), which is explicitly forbidden by the 'must_avoid' list. The image also contains a small amount of readable text on the wall ('HOW I'). One or more required concept elements are not visible.",
+              "source_url": "https://www.pexels.com/photo/photo-of-a-classroom-8423430/"
+            },
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "569a6e8722f13e91d6032de01a20b5d6f2b77cc633f8ece1d1db7e1b48a32635",
+              "license": "Pexels License",
+              "reason": "The image depicts an empty classroom with desks and chairs, which aligns with the article's theme of education and the concept's request for 'Classroom desks and chairs'. However, the concept also requires a 'Blank teaching board', which is not present in the image. Instead, there is a bulletin board with photos and a drawing with text, which also ",
+              "source_url": "https://www.pexels.com/photo/interior-design-of-a-classroom-8423423/"
+            },
+            {
+              "approved": false,
+              "fit_score": 7,
+              "image_sha256": "88e067be90fb4bb0e6e4acdf7cc535f23a2868f1b1c2b0f6e0b20832aab194f7",
+              "license": "Pexels License",
+              "reason": "The image shows classroom desks and chairs, which aligns with the concept. However, it lacks a visible blank teaching board, which is a 'must_show' element. The article discusses flexibility in secondary education during emergencies, and an empty classroom is a relevant visual, but the missing element reduces the fit score and prevents approval. On",
+              "source_url": "https://www.pexels.com/photo/empty-classroom-desks-in-buenos-aires-university-setting-37822424/"
+            }
+          ],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "lukion tyhjä luokkahuone",
+            "empty secondary school classroom",
+            "classroom desks chairs"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": true,
+              "fit_score": 9,
+              "image_sha256": "ac75af2a9bd33f2eb4ce4cf0427602f4b6a3a47fea61d2e97249976d86642f4d",
+              "license": "Unsplash License",
+              "reason": "The image clearly depicts an empty classroom with desks, chairs, and a blank teaching board, which directly matches the selected concept of an empty high school classroom. This scene is highly relevant to the article's discussion of high school education arrangements during exceptional circumstances.",
+              "source_url": "https://unsplash.com/photos/empty-classroom-with-desks-and-chairs-in-rows-G_-B7DGgvgg?utm_source=uutistenlukija&utm_medium=referral"
+            }
+          ],
+          "concept_rank": 1,
+          "outcome": "accepted",
+          "provider": "unsplash",
+          "queries": [
+            "lukion tyhjä luokkahuone",
+            "empty secondary school classroom",
+            "classroom desks chairs"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "ce222374d4b4f418d92a77f9092a24205e50857d487e879e84770c0180870ace",
+              "license": "Pexels License",
+              "reason": "The article discusses proposed legislative changes to ensure the continuity of secondary education during exceptional circumstances and disruptions, including vocational training and general upper secondary education. The selected concept describes an empty woodworking bench in a vocational school. The actual pixels show several children drawing or",
+              "source_url": "https://www.pexels.com/photo/smiling-children-writing-on-table-9835472/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "a9dfc130545ced9fa1ff30ccceebadd9fd563ca6615f6bfac49aef8188b07c3f",
+              "license": "Pexels License",
+              "reason": "The article discusses proposed legislative changes to ensure the continuity of secondary education during exceptional circumstances and disruptions, focusing on vocational training and high school. The selected concept is a woodworking bench in a vocational school. The image shows an old building and a street scene, which is entirely unrelated to t",
+              "source_url": "https://www.pexels.com/photo/historic-wooden-architecture-in-tallinn-s-kassisaba-district-37998769/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "d8bb3c1691138c83a5d3cd6655bc609650f446b5b0c5a84a307e3a7c37adddc0",
+              "license": "Pexels License",
+              "reason": "The image depicts lockers or cubbies, which are not a woodworking bench with a vise or a wooden workpiece. Therefore, it does not match the selected concept. One or more required concept elements are not visible.",
+              "source_url": "https://www.pexels.com/photo/selective-focus-photography-of-a-metal-hook-screwed-on-a-wall-2675052/"
+            },
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "5f264053212a1890bc5be6c563b49b97c4e31905d4f75e7f2b5913c26d26bebb",
+              "license": "Pexels License",
+              "reason": "The image shows a woodworking scene with wood shavings, a ruler, and a clamp, which broadly relates to vocational training in woodworking. However, the selected concept specifically requires a 'woodworking bench with vise' and a 'wooden workpiece'. The image does not clearly show a woodworking bench with a vise, nor is there a distinct wooden workp",
+              "source_url": "https://www.pexels.com/photo/close-up-shot-of-carpentry-tools-6790034/"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "ammatillinen koulutus puutyöluokka",
+            "woodworking training workbench",
+            "puutyöpenkki ruuvipenkki"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "32b3ec13c461b918dd4f4c3a74e5251d45fd9b491b0f6cf2e6d8e4cd54dabfe9",
+              "license": "Unsplash License",
+              "reason": "The image does not depict a woodworking bench with a vise or a wooden workpiece, which are essential elements of the selected concept. The visible objects are unrelated to the concept of a vocational school woodworking class. One or more required concept elements are not visible.",
+              "source_url": "https://unsplash.com/photos/a-bench-sitting-on-a-wooden-deck-next-to-a-white-building-Z6jGDdv41jw?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "4ed21dc633f61dda499a8c44919c1d9318fd09cf0ee9da7127877a4deb8b852a",
+              "license": "Unsplash License",
+              "reason": "The image depicts a red building with a flag and a person sitting on a bench, which is entirely unrelated to the article's subject of educational reforms or the selected concept of a woodworking bench. The image does not show any elements related to education, vocational training, or woodworking. One or more required concept elements are not visibl",
+              "source_url": "https://unsplash.com/photos/woman-in-white-shirt-sitting-on-gray-concrete-bench-near-brown-concrete-building-during-daytime-nu96-SLn4Mk?utm_source=uutistenlukija&utm_medium=referral"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "unsplash",
+          "queries": [
+            "ammatillinen koulutus puutyöluokka",
+            "woodworking training workbench",
+            "puutyöpenkki ruuvipenkki"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "wikimedia",
+          "queries": [
+            "ammatillinen koulutus puutyöluokka",
+            "woodworking training workbench",
+            "puutyöpenkki ruuvipenkki"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "google",
+          "queries": [
+            "ammatillinen koulutus puutyöluokka",
+            "woodworking training workbench",
+            "puutyöpenkki ruuvipenkki"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "e5ac6f3983374befeacdc05dc0606963f3d53888dceb215a15b05cbf14228b54",
+              "license": "Pexels License",
+              "reason": "The article discusses legislative proposals from the Finnish government to the Parliament. The selected concept specifically requires a photograph of the *exterior facade* of the Finnish Parliament House, showing its columns and entrance steps. The provided image is an interior view of a grand staircase and columns, which does not match the require",
+              "source_url": "https://www.pexels.com/photo/elegant-roman-architectural-interior-with-columns-35709248/"
+            },
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "a75008c94e78ec6d64095a93b94e093a7b4011110b955c154e3a9ce631cc0507",
+              "license": "Pexels License",
+              "reason": "The article discusses legislative proposals presented to the Finnish Parliament. The selected concept specifically requests an actual photograph of the exterior facade of the Finnish Parliament House, showing its columns and entrance steps. The provided image is an interior view of a grand building, not the exterior of the Finnish Parliament House.",
+              "source_url": "https://www.pexels.com/photo/stairs-in-palacio-da-liberdade-16550604/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "9d6dc1490ba1926a121617eab11e52602013fc82dfd625f755661ee276de04b9",
+              "license": "Pexels License",
+              "reason": "The article discusses government proposals related to education. The selected concept is the facade of the Finnish Parliament House. The image shows an interior staircase, not the exterior facade of the Parliament House. Therefore, it does not depict the required subject or any elements of the must_show list. One or more required concept elements a",
+              "source_url": "https://www.pexels.com/photo/wooden-handrails-on-empty-stairs-18431229/"
+            }
+          ],
+          "concept_rank": 3,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "Eduskuntatalo Helsinki julkisivu",
+            "Eduskuntatalo portaat pylväät",
+            "Finnish Parliament House facade"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 3,
+          "outcome": "no_qualifying_candidate",
+          "provider": "unsplash",
+          "queries": [
+            "Eduskuntatalo Helsinki julkisivu",
+            "Eduskuntatalo portaat pylväät",
+            "Finnish Parliament House facade"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 3,
+          "outcome": "no_qualifying_candidate",
+          "provider": "wikimedia",
+          "queries": [
+            "Eduskuntatalo Helsinki julkisivu",
+            "Eduskuntatalo portaat pylväät",
+            "Finnish Parliament House facade"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 3,
+          "outcome": "no_qualifying_candidate",
+          "provider": "google",
+          "queries": [
+            "Eduskuntatalo Helsinki julkisivu",
+            "Eduskuntatalo portaat pylväät",
+            "Finnish Parliament House facade"
+          ]
+        }
+      ],
+      "selected": {
+        "concept_rank": 1,
+        "fit_score": 9,
+        "image_sha256": "ac75af2a9bd33f2eb4ce4cf0427602f4b6a3a47fea61d2e97249976d86642f4d",
+        "kind": "real"
+      },
+      "version": "article-first-v1"
+    },
+    "source_url": "https://unsplash.com/photos/empty-classroom-with-desks-and-chairs-in-rows-G_-B7DGgvgg?utm_source=uutistenlukija&utm_medium=referral",
+    "stock_provenance": {
+      "download_tracking": {
+        "successful": true,
+        "url": "https://api.unsplash.com/photos/G_-B7DGgvgg/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxlbXB0eSUyMHNlY29uZGFyeSUyMHNjaG9vbCUyMGNsYXNzcm9vbXxlbnwwfDB8fHwxNzkwODU3MTExfDA"
+      },
+      "image_url": "https://images.unsplash.com/photo-1784989966321-57af9b304271?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxlbXB0eSUyMHNlY29uZGFyeSUyMHNjaG9vbCUyMGNsYXNzcm9vbXxlbnwwfDB8fHwxNzkwODU3MTExfDA&w=1536&q=80&fm=jpg&fit=crop",
+      "photo_id": "G_-B7DGgvgg",
+      "photo_url": "https://unsplash.com/photos/empty-classroom-with-desks-and-chairs-in-rows-G_-B7DGgvgg?utm_source=uutistenlukija&utm_medium=referral",
+      "photographer": "Brecht Corbeel",
+      "photographer_url": "https://unsplash.com/@brechtcorbeel?utm_source=uutistenlukija&utm_medium=referral",
+      "provider": "unsplash",
+      "query": "empty secondary school classroom",
+      "retrieved_at": "2026-10-01T12:18:33Z"
+    },
+    "stock_provenance_sha256": "00897a263d1903d19bc1a5accf8247b15fdd11c97397ed48676ff400fd6375cf",
+    "url": "https://images.unsplash.com/photo-1784989966321-57af9b304271?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxlbXB0eSUyMHNlY29uZGFyeSUyMHNjaG9vbCUyMGNsYXNzcm9vbXxlbnwwfDB8fHwxNzkwODU3MTExfDA&w=1536&q=80&fm=jpg&fit=crop"
   },
   "new_article_files": [
-    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html"
+    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "7bef39a4293b5cca9a1c3c23f4450be8e3dda40f8c2a076f67586cdcce1b76dd",
-    "_redirects": "b6532596fa3e46bb1e145a399368630f8c84fef9cead85929fd8a227585116da",
-    "ai-kuvat/index.html": "8c9a91efda9ca05798ee63c7bd6b3bbbc4a6aca887d7d48fcfabbc8e3fb36487",
-    "categories/kotimaa/index.html": "5120edaf78ee509e88ca34ade1c85e2862e86431fddc22b0056c43eba7736da4",
-    "categories/kotimaa/sivu/2/index.html": "51312b13c20a8adc2732197a696cd3759cb5b814b92d0a89ed1d8e58ed3c1ddd",
-    "categories/kotimaa/sivu/3/index.html": "cd519c01e87473271f1710cf9563cd0fcbfe6cfbd67fba0fc04730d3da93b868",
-    "categories/kotimaa/sivu/4/index.html": "6dce6c43c0657c35dafc7ad8b5fba7101380e3a0754e376ca8a7c28635bcbdea",
-    "categories/kotimaa/sivu/5/index.html": "61d4c9b481ccd202d380aa09632d4a965c8bae90ee2ea064279ebd0136552982",
-    "categories/kotimaa/sivu/6/index.html": "2465367fcf50babd7f0f2633d2cc4caca8220a0e581dacde14dfed95bea380f1",
-    "categories/kulttuuri/index.html": "ff9c4075ae3a01ad5720c482d244ee2df676532f3aa0435fb772972d444440a2",
-    "categories/talous/index.html": "71c3e4277756646440b0f57d938fd895ead95b9792105d78732d4f619ceb0c68",
-    "categories/talous/sivu/2/index.html": "b1d0ab03f4383f7c82dc4beb7a0f062b86b846b49035a7fba06e1ef4d008d068",
-    "categories/teknologia/index.html": "078475775a37b69b351017bf8e59e294a11d61a2ae72d3d69cec2d6cc9d9fdfc",
-    "categories/tiede/index.html": "44c26a00a06d65552e308cc013c90a984d813a061f8a2e21de1ff3b828cce55e",
-    "categories/ulkomaat/index.html": "be877af8ac0be6f63ef33b4d43bcd165c20d998639a7117a1ae93308091c945a",
-    "categories/urheilu/index.html": "14f4d2cda3a1bfec2cdb206c824481b8ee2d507be71ad60c5812d08bdcc93b92",
-    "index.html": "7b5907dadae615b493159bf8cb656930c7906cad4321af2dda1f7f0bfe82a1cb",
-    "lahteet/index.html": "2eb0c342ef83650f0f3f59bc97f1c69d25a85950e87973b96f7035dafaf95bec",
+    "_redirects": "73ba1ea359031d0dd33c1c28bfddad233b96f2bc4442cf5babbaece0ef7c9584",
+    "ai-kuvat/index.html": "074ce8cce5268ab6729593a4a12fe3c56c53e3b395d5c48494fe59e801895a29",
+    "categories/kotimaa/index.html": "aed86edaa4338d9cb5de32b6c7ad6bf4b1495e76815c222c01f826bf075081b8",
+    "categories/kotimaa/sivu/2/index.html": "fd6974b1f66ee66c2f04a88fad7f8fb62cc4b882fb43ccab95a01eefaf0c4865",
+    "categories/kotimaa/sivu/3/index.html": "ae47279b778cc11f0f8b720923718eaa9fa6c0d3a6d7a93cbc89aaf45fcac2ab",
+    "categories/kotimaa/sivu/4/index.html": "5bf93eac2f5bf5356313fde94df0b32c04263f88715db272cce6c68e354d17e2",
+    "categories/kotimaa/sivu/5/index.html": "4f1be82ef1cfa65d1de69c787dd303812987c50cf243d7be84033852896182f7",
+    "categories/kotimaa/sivu/6/index.html": "7460ec78d641362a563726d65d6c17af4b9b0866dca2402f2b8b7e48e2977f60",
+    "categories/kulttuuri/index.html": "ad22650b2b9435a552e44d385e5a32ed1ba8881d0d5789fe423ec6bd9b4ef58b",
+    "categories/talous/index.html": "79003ad9feb8d2a3abf7738964d0b797b42e294c82d006a43810831eb9af7d29",
+    "categories/talous/sivu/2/index.html": "e88d9e3b4c7a000b4be8a8b3495f115d489c0e1aba5f0211762ecd2dcf50a6a1",
+    "categories/teknologia/index.html": "3984866472bd6fb9a9c1aaac33439936cf02a21717c073797f47278fcabf1d78",
+    "categories/tiede/index.html": "5a96dcfe58ff7a69cc59eb099a010608c1464b7b7961f180a1ac9a5223b5ba8c",
+    "categories/ulkomaat/index.html": "2ee674ff8b1617539f8bf44f229cff7b33eed1ca8cd9386ea9062505d36292a0",
+    "categories/urheilu/index.html": "2a0f00b4f91c3f2197c3d1015c41515c37a409c4ae66740a188b26734dc05c86",
+    "index.html": "ac957e0e4286efeff4b6e0e27cecb992d99b26377a6a347b68b5c8b77f1af65b",
+    "lahteet/index.html": "14ef8852d3a917b4da8e9971cf92594141e2b329a1e6ceb0454485cea9710b1e",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -534,27 +907,27 @@
     "mvp-assets/portal.js": "224136faa34405efbb79ccd090bf52b2f75731f94bd68457153234cc4c02ee11",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "637eaf4fbed4956e14a5ff0c21a902876ebc471c444ecfe0579be588b8e5e25d",
-    "oppaat/index.html": "bae82f66356d0c64d8772774a10e3d76ba3756d55a7e568c52d8871650993459",
+    "oppaat/index.html": "e3d80c724ca9b85de8ae5cee525fee906c9d2b574cc3e23122075478513a78c8",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "4ad60e019950fdca8cd662c625a46f21f81e9e9ee1b2ae36caac7124916303a6",
-    "sitemap.xml": "c7fb74735dc7b46840bd15cd944159bd19eb50815ce84898204f0932df77380f",
-    "sivu/2/index.html": "d781ac17fdb868970a54ce0fedb8b5d72fb723c37d274d57cbe3f30f12243fc5",
-    "sivu/3/index.html": "a416a01103b542a2b8f69dcc12e08643a909fbb75b48c7e486c79ae8bf99da06",
-    "sivu/4/index.html": "eeed3495da7973519542e11a01267722666f4e589e4ff80179cf3882ff2927d7",
-    "sivu/5/index.html": "caac94ae139eaee064ec75d07170f3ec86b8393e3569b5ea0826dde5a7208546",
-    "sivu/6/index.html": "c8cfc9bff4bf07a3fa7a48b4d66e1341663f154bdafe8fcece11d5c020ed6b10",
-    "sivu/7/index.html": "2667ab3b4d3dcef92e1a0c17d73ed835105a1db974edaa4bca617d92394eb4ac",
-    "sivu/8/index.html": "292d6d3f8a610693639d6428a61c3dd3ff83797b90c72bc410b3c36665bd0749",
-    "tietoja/index.html": "397f6b9d064b65ab04c3347b7aab53c689e014d0bbe5cff594e9fe9e68819793",
-    "tietosuoja/index.html": "b2c11a17f52f7bb3ccf99cfb17607e0ad6a5a8246d661419c70f1d734829249c",
-    "tuoreimmat/index.html": "53928031db2d147bdbbe4d6ae04206e2fd876c763dff921d48f4b6476a894e4a",
-    "tuoreimmat/sivu/2/index.html": "781c78a4be8f0532a73ee58194b4c9d079f6523754018e9dff14597e9eaf991b",
-    "tuoreimmat/sivu/3/index.html": "2b9300583ebb5dfb1b2be69e048874eb3474ad771f10718a828534cd9b1def09",
-    "tuoreimmat/sivu/4/index.html": "86701f9b0947645b3e9d32154696997cbf074cf13ecfc7d71c6489b1643eec15",
-    "tuoreimmat/sivu/5/index.html": "218a59fdc3653654f65ccb18d0746fec647c17d9cc401ef131c2a0b52109868d",
-    "tuoreimmat/sivu/6/index.html": "dd50979f03f784fb489f44dbc76783965909587cf1757cd09f925217155cec4b",
-    "tuoreimmat/sivu/7/index.html": "3035b713b03f56b8650b37ff66ce52d3cdcef8c59c9be72786b688fb76b0645b",
-    "tuoreimmat/sivu/8/index.html": "e2af43033f7b922cf88550e228f76b7b41a3adeeb9de93f5bc308738f8c50fa2",
+    "rss.xml": "d1200dc048104c6cfa5c71c4438942a029afb71b0e83159c0aa4d217c72d261e",
+    "sitemap.xml": "62299ba38c2bb19c780effa0fe7bbd54970cbcfd64a95f30940b582a1d678174",
+    "sivu/2/index.html": "5514ffc0c34dc61a45c5b0ccab7906a54073ed99d61ea28c31ce5d660f0944ba",
+    "sivu/3/index.html": "ead79d8273ecbb9aab1123dff0543f4278ff07fc8dd69a36ed7d43212369107e",
+    "sivu/4/index.html": "8a54c5eae7718b17167df556fdd791781dafb4a2d763a1ac5da8c30a75e27f04",
+    "sivu/5/index.html": "3e7f62371264fdc507d058f41bcce4f6f4ba88f68b55e5b1f553c93360323a4a",
+    "sivu/6/index.html": "700b4163ea4d318d43f2476772d929f4d2ca81740bb52bbcf3a6450885af6828",
+    "sivu/7/index.html": "c88c21a742c544813c975c77cb76dfd8260a477f9d85dd957cb0f353d7acfc55",
+    "sivu/8/index.html": "da07a40b4b82f60a0f78eed4b94f778b314aea8bd93fc8c77ee59db033cef217",
+    "tietoja/index.html": "5de0e9214209836110289b83bb37ea5ae902816df9c8dffb18c01d82802e03c0",
+    "tietosuoja/index.html": "0383e3276693b29ee07582b07bb1f702657f1fa4e476dfc4071c5d94aa63da2a",
+    "tuoreimmat/index.html": "f7660efdce9689c0a9f793d14913a1e2cc717f750691b6dafbd1cc8b633497e5",
+    "tuoreimmat/sivu/2/index.html": "762cfd12d7fec6887d5d428682df1eede529a2dd41645ef9804cf8270e447e40",
+    "tuoreimmat/sivu/3/index.html": "5d7c5ae832239eec27147670a3f57e563f71573c24d176a19cc2b40e2c5a89ab",
+    "tuoreimmat/sivu/4/index.html": "fb93641ba22adfd60d666d6fb3ee28bcf01da0bb503dafa534d2c8b9043a022c",
+    "tuoreimmat/sivu/5/index.html": "fdf13724500b5979c342f4ea90590bb2e9a3511a8d0afe7708e8ad6134eedfc0",
+    "tuoreimmat/sivu/6/index.html": "155719199a913434b93cc79f018f5261c0c7e7b6e03edfc6e0114e1c6e9e05b0",
+    "tuoreimmat/sivu/7/index.html": "7de381823b6af2618b3dff35a3abb2d03e0ae26e8b71432d5b8261b4f6d95c19",
+    "tuoreimmat/sivu/8/index.html": "e5ed34e4a45169e752d59a5720d3cd29e00c338561abc8dfc9ba6c4a6baf13af",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -568,468 +941,510 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "319481cb5e76920a981c775189f65efa4b00f2825430fd5978d40bafc981faf9",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "36d70a96c934ee408ac70438f9c5efcc6c8e6625276b582cf5960d1f398a53a8",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "9787eebd72d08c3d727f116aa0deab493decbed21eade367417110d0da6bc616",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "8681272bae316baacf0d481948b97258cdf8db763fec638ed329fa796ed90124",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "de66209b2fe4e6d1955407cd70f5948839260067f4f8e50eb30cf9b3c6fb7085",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "92dc9231b0cb5e65dd8f85611364e9f091566a82e2c970955cf6b03a4bd4900d",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "82e2fdd0fa05915ff0eaf60fa80cf751840bfac52e88628e7de153903830e27e",
-    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "1c711e5ac495ed789978406d367039ffb05981ca94200b3944866ccc0f20f6af",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "c13367b93c7259652bcc9aefacc7819ba5e70f50a36b0858429f6b8d3b4e5137",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "59bf9ba88c61743751b3907c3ffc55a8526b939b11afa4a548191f9d97503212",
+    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "059e48a9ff4de99d7caa3122994bb152e55b046a7a14aded0d46c334dc2fa8f5",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "72c648d6f4ab596fe15e479aeae9fdab3e7f4f69100f7a8fc2a8e7ff97ca85c2",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "929072882bdb7fc25c6543b0afb4f1ac4fad0d595a94348ad2619ee3e623bd1d",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "02299465fdc12e04bf216fe1e307e21b258262388ccb75fbdb9342b75bde0770",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "aef9bcdadcd22cd5420dd049508d84bd104a24025288b5604f284d746986bd46",
+    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "dc9a5615ecde66361d244508a0c145340999cc0001ac6a9199e24c6ebc4e1360",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "91608e4208ea401528169278a1039a7578fdb34fe28eafa90a6d75fe717e0d9a",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "267e0a34c76ae42d45ab173a0753c86fcb2e308bf64477a59c8b98674c40ef1d",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "3940d4fee39169d8b6103465894227c4557278eb5f9f6e2195557552be30cd38",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "74d0cb512aa070f89290acfadbc9a2e35a189ab45e3669291b525df0399c4ef5",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "33afa4572113c1f774d015b2a8d1ea1e4419db8a1f5e12b02a1c628a4ab75714",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "3b90c62063695bfe5493fb1b2fabeb8aeb90339a143dde184dd045d5a976beab",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "e0e7f970567a977c05efa721f38afaab3e5ff8de33bef867a1c014d9badfdacf",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "2de2f664c37fab0a5640340d701cc6e503565e160de277b9a67843ab1c1b3b33",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "a140fac5f0e1fc3707fe1097edef19a28450ac58b71ed65659b49c8c5bd7d47d",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "93a6144f8fd23047d18e4682a35db4dbe4215e8afca21b53e8422febffe15979",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "d92c4a78a185e063fae2c9fab12855df7eaa6e93edf114a942180f24a20a473c",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "927f0a745fef13c2b29aebf48ec4bca46d7cc89caeedda4e6c3189a53f218ef1",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "2a299dee6284a1da3b3a98e8a7e3b1ca2babe73a038728db8fa8dc9ab994b6e7",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "b5b436b23fd661591f5f06b7f25d8875253d0b8ea33fb59ac0379c2f404443d3",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "ceeb5396d614edb6a343b6fc6004e0412d805c4d9ff9061b5ed359f20a5c75b4",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "fa2ced443a0caa7bc99436cd8f5a81fa439f2ee4e94a7b1daa2ae0b9d30b626c",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "673baa87fb77b6f3a234f4f6225f756e57b5cc180d71645fdde613197a9c2e99",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "c697b5634138b513a76ba3697b7f509927bbbdfedf5a45959463cb681738af46",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "6a07d7db444d75d098ba7337b5d4e504d797a2371802e8826156c4292529ddbb",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "543453a3cfae0e1a4cf3edf06b9fba90570677c49a9e7368179ba858a6870ee1",
-    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "7698ba1b36cd38a14433ac2e40f5dcb34adecb3d57e53f0b922455677d0e5446",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "28bda2d5919c94ad6e8c6d89be252e2a09b98ba85dcc41aa3b3fb52bbc234301",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "b3b1f4a4a235586923d3cf1927444bb5b1e145f242f0ca8d2170c4a322ba26c1",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "1e2a477f4aff01e95bb92f059667dd7ec2c7c021d25c5b938655de19c355eb65",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "96382b2a3a6ae5ef1d8dbe42da97c406e10a2bbc617ef7d0009585c034669edb",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "b95123daceaebecb748bd9d5402b53fba73ef06b96e0e4efbbc655f33632b93c",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "fa411ae2d585c3a14291f3ce89344fc20bb3ed7a5f392ed2733568f7c02736c4",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "6e8032f212368dc375a43af76ec69a09633cc092d2644941dc5cc67183059479",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "22833e7776bd6ae6cc6cf4318caec6647c6f5db87418e32bd2bd0c3e62dbbaa1",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "f76474406907d934d4bb4e7d59e262f3f6a01b4dc4456c67ab3cb2ce350a359a",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "3e9ce852cb9c51c1ebf24184c7b029ace7c72d6bf90430c525218d6e99f19106",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "187fbbea69e1ee6d94160ae3f07f3c3bc68dafacc73e20a583463460d6920e2f",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "b80cb034f2dee5557198e228531cf7f13612d924493d23a6a21d4c29df211ada",
+    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "ecb3852dc29d81a0d0556a7b228e0c5ec1e6fa6d1c20d71ba8ba816b51230e17",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "3027543bff3e6a2dd5d5f76d0dd25063d60d0090bf0556b96668bdc978fc878f",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "1fa9679195f335aab3f38c5cf5d2286ef5dcbf70aef715b18e51d98eddb49016",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "35f88c517723e274e0fb8926d52bd95b2f4f39085f631638d1ff0deda43b53c2",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "c74547cffb1da62f57e41906eac3ca99c33b9057b167cc60a59f76fb56591980",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "adfb765047cc8a04c8be7d1417b5c186ea6a7c3b6cd808f0a986eb2a2d2cd6bc",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "cb2b4bc81974d74c597ec83753cf9472fb91ab0a2db511ac86665b6a77956a87",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "a55b7fdf33a75d6d3d5cdf12e311b78311699038c3652959e65bb856c0fdfd80",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "2f89fd6795985ed5701ebdeb6522150aeadc2107fb742cafa61ff00ed521ad4d",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "4bea910884df4d9e4cb9fd6a1da04f601a4cfbd6ec83701f91b4af3e235e8fbe",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "7f2f51282c1d04ba150dbfbc71846d8eac364cd9c95746b1a5b5ac207019a77d",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "11066a22dd0fd50a4d488185814c29436fedf7332491318ae2f7d29fb1bdc56f",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "fe950bc0f0cd24b65d1ff9beee906772d0676ce45ea7f7389b25b11837bc06c7",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "d6b44636eeed72b46addd385917a1b625e2f02a5585f32f37a61f03813a9bce7",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "9fa296f35cf5892c15e4ef59f5f3c1bd1d4db3e1b599e7e6104b864d73d0f597",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "775f754ffda5025723d6b8d07c5b47c59b1ef2028b019d45fb7c864b6002c740",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "be8e0f867edd0f52c5d435616f97530212f894019d5d4bea37d4c95969c2eeef",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "6cc00464a017db2c56c5ba24afd0ec6181ce4dc60d35444eaf62b0cf7fa15f34",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "5ebbbb263e4cc698e4b1e4410acf3e8c2c632049c42025f74c44e3cd839986fc",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "b4e284b2b20be790cf4dffbd1c5143bfcff577ff6691fa0d16a157d2a26745c4",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "9c1451ad8fac51f12e6a4bdf666ba134ac94e72a76d499056455583d6f8e4b68",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "6451abd8c97712afed57030dc2f43a480269c1646e0fe5b2ddff5417fb0192bd",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "be5f5e6781fd97b9ab11232cbb7e6980ce61359c43ddb071c9417084038b02bc",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "7baaea1103f18143b7c01dbd8ed4c6de531913612fe3ebcc81bff30006ea803f",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "6d327edb4e9275cd9f6e2c7aad29cae83ee67ebfe0b26ccfda7a06ea0a02cd2c",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "46c9f887563bc8776deb38ab959d076242cc1c20fc3cde20af4b7bb7f8c0dec1",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "48e3af37747a90bbe66d778d978798ef41b0735c83cc05b15c2d3c1ccd43f1fe",
-    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "68c5691a93c1dd0e1ae5c12bfe707620d36d397496ff9805e85cedfee868eaac",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "2f9f9768783f098300e98c762c3580578f266f8edc4a96007866b3d0a551f4e2",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "62e5fcf25484b6c71c472af16fffbd9a4e53aa838c41cfac1be921955f7afc94",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "4b7b950ecd7534bc59be0479bb9b069165c71537d762dab360556b6e9f269105",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "85ebf53b20038196ce08b98dc34f2cf8cf1b6d74f95b9bcb646e4713854986a6",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "7b345f39b20297d063036b142ad9c0ee705eded38ed89e52d2c437fa2a7350db",
-    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "f0d9c4953bb5da063b9983248a15431f001677a5e5359b4ff9a9c627182d5953",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "27ffd9aaad134d5e36926c802b53a6c1b6ac0907fedc9bf0631c593becdaa972",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "57c27aba0c971f4cfb07a5834d7267c975d147f0e983e2fd24d016e3d2b59cc2",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "70d265df714be1ff6d90551defdf66cda159083590678e2676b22881f2e4250d",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "fc35e10a45c65c91c204d572ab881dac70d0d636d6a636fb56c0259824ee6283",
-    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "a2ea7910c9ad9a1c6f175b07792c0ab2a2d72e44b456b4223e32a584cc11667d",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "a244b26c3d08b1f3232e0c59dcc779cda5a166a39d5d78cc2bcf6a04fe58278d",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "a725ad9efdfdc7eeb11d6f4dc7926b7555db20a9ef02b2dd3871520ddfec83eb",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "4dec0f168bb6c20e997a6930c09d04a7d32bc61e7d4af2a478160f97a98e2edf",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "eecf36e0dfa5c29e6410ae5a96845f5a5cab5539242f3052c47f21f1e7c6ab25",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "74d971a1bc529a47893607a11394b8996eeecc9313dd93ded496b4c777990c85",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "7682034a606732008593c2531ae9edc0eef5b135d94ac373e41580c596440480",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "d7a3b64897252011ce1b8b98f3cda28a24b2ee1ec20db5f66d8b591d02d8f4c0",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "0bf3b69fdfcd68ad34f16ee6e1064f292d7db21b7a47311ed8a012a05379d64b",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "6bdb4c40cd289ffeba2fb4b2b30e411536f0f22fabd1556801af26f8bc0a067e",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "c912166923d5b2ec3241b9459dc40e7f712fab5235b95f9452ac45f5ccee7a05",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "6ea7d19ec28731e99496d1fd9b5dda73fe4341d022b81389a58c114f8a008b2e",
-    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "fd5b33141b6c79de7f595ddbd5348441686bc620f8455705d73789bdc5cd5564",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "b9e814e5f32481ca2adb92ba0cec1752a2c24f3ad961800567d11c2c75fe6096",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "fab15bd56a6490422230a539f05e9a8a4691fd31dfb893d2d759cf185d220e29",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "9b28d345c16dd52018d4554e3d77e237b7327c5ba8aac87be3ccfe79d781750e",
-    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "e7c4df1018ea3048480dcf446934045cf98cd2c141d8ea846f83f7de78c57d95",
-    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "dad96d46bc9997247f5186b5f1a7f91f2d5eed489304d5fde1c82752491015db",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "74754e354484e2be6eb39f7722e925b7ab1bdf868b4b3391648e431754ebe2b5",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "cb524e93d659ab3a4a2d4e5243358bf3b1cb83fc56ef1a423111fcce4cb24aa3",
-    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "48cd2aa84edaff9136f9566d1f3996bf6a99fa457d7e409de107225b8b0b5426",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "d4f8703979dbc3543910f0c46556ef8f6c337ac94c2d4180780aa7b515080260",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "28326d803cd0c3fd213e1cc8221c06abd600500f4d9976d13ffc7f7f71241d97",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "d7f8e54f884a950415fc86d0132649816c13c32f685b719aa8737ab26d5776e3",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "929c3c6d28627d003bbb0daa44101599e0e77f172f4978057ca59bf49396ec5b",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "48d6a9568358edbfc158d8772b5e82889dd875ba16210a628f496a3769fcdf9e",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "f60623ad16eb1520a8e42078b1b7cd0e5aa25da6557be02b3e870c7c347d160a",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "6c5a310ddaaf91166669e851b2ce7369e4096bd3e48f0e3ed7c77c65abbfe8db",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "83e31dddce32efd8664814b2939a77593578595295d79ff46604fc6dc289e159",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "82c684cc4f63597d416b7192eec81c5d5c65d2b8aec1ca74220f7fd09f107c08",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "008866aa2ff7469c8f33a80c68627c545cf9cc60b27a277694eb5e5450bb7e10",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "bd0dbddfa03a7d9173679c842e271f3428d6fa99c27dfecc1c081c89c40543ce",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "078f7b52c7210c8c32147280f5a62e140aa5981a31c602886a4495283987e3af",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "729a2a334f2ec095ac1067d1a2587331b2e8b82dc852480f16054d8a948fc08b",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "a597a8c321573aed2e7fdfef34c7d2eb2955ae419e7fffe7f66cbeaff0b3feab",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "06bf7a0e8ea60eba70214180d3744be2d9d3025b2aeabf8a0872a958a1f1e661",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "dadc628803c8965cf518b57cb15cf6d90a943b81cb1e6b3137406e3a8a2d44a5",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "64e22eca385466f7ff46944835fa0a600da5679fa16446daa821657e6e180b04",
-    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "8446be28fbd23582493b6dbe52aac36544efffb81d8da56d2d68a1cab9372ab9",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "204b366610e58cf5d769bed54dbf434bc78b0802d00878e2973376994bfcf6ea",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "cfc2e0055eb53f5d241bd2208a69e999bf136026573d670c68773f88ee9fa072",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "09932e19a7e7cbd3f1348d125ebb9258c6027fc5b6e3cc121c6b91ce2231413a",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "98635a7f38ed18de2b9f1649b84874e9aca4b99a7a877e2cc26ea655f8778f0a",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "cc09d9ca6c637e1cbf6e12d1ce8adb532b22a68de4f94edc0a9daf59c52eeaee",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "20320df823b69c7f32afc1805162d26186953f0b28cba5892783446690677e1f",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "b12bda3a7755ee7719ac066e656e37719eca03df6ffec6691cf0a96108df1451",
-    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "301fbe4c513c84bfb115339fd2fbd4c548835904724e4f630f1220d0f7a0fd53",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "842af7690cfbba16a17838e3b0a2490f1bf562d6a045146b5e33a60a9d885fd6",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "d6572baefe1dbb8bab7b684c795e2971368921e2e600cfe98fe168f844932701",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "de2bb07b1d50550b47609005973edce5d3e396d9fe2d2483d7cd88ff0483e362",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "86079191f68763afdf6721740c71a477b9acf4170da96542a352fb3029c331af",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "e68aae882c7beb291c2561dafb7fe7bccec3c04353576f0b3f7fc23f55707a7e",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "2cf34370b6b23f2c3875732f8336329167401fb9461c029c60d2b7b4331bb574",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "a7805d2612b99b4d818a87cb0eab68d1f2f6a0e3e30bc26bb744baad07993968",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "3cb17071d305a16dea7d1e4918c514b87ee67d345e52e9318b55c64b6818f221",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "aa5b7861bbd6e0a1f00de3e4413380ab266acc985965ece7cc9be9ba74809846",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "c6ee734e3c28fb56f7ddfe56ffdec6b297667ade80ae72f993780046c8f3fb93",
-    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "fbf71ce1b174a8c0ae9e050b762df16f547be3b752c98e23590d567dc8604494",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "45fa475a7f8c3a73a8282bf504e4697d1f88b794fe8d439cc9cfb89b16d45635",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "eaf4d02a3d8fe5939c9e454f388e9c8d1ca7575fe5ffc2dee1584ec58fbef2a1",
-    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "ab372b86808ae9a98573a8f3fa214bcf2929dd9d77020861b093e0b68ba5b0de",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "6b1897d8dd58661a82a1b0d5775350b0a9d4504244e737748578e56dce686e5f",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "436040e28af05c4c9935f90034abbb513145b6c0d488cc2f4b457c90cf66335d",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "db744e8def4ac320e55e8ec6db396ef78981a03c931515a9a97e8878ed248d58",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "a94a864450a3b22b068747977ba13e2de61270ae812dfa6aac6aca10024e7772",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "a2f8e686be31c13bd6e70b36620df7d145898d57630ee4e2d7e8b33705d77fab",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "76449ca6b2caec01b1726f0729bad363cf0ef5bc05a9345d9c73a1ed82abcae7",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "7927854f6bc99028d63a10f13f65a02a560960c08e639d4539af756e211d635b",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "6c0e2850c3e1949a429cdbd4d8afff363b75f54ed81000dda0ab32b112d30e6d",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "e0b96ce4bed72c8cb3c2e10c85e3edc6756d310a5f0a77acc927cfe4116c4be8",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "80949a8e5443bd67fb8938d7085f1c156da4991cffc5cba954091b697c1fa242",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "9ba2d0b85ac8f2b135962366364a8cf8962c1cbcb9f7a7a7c8c795d346269c21",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "dc6456adf8ce13ac0fd28a5ab4f39602def0ec82c8cabf625d9fd1479396498a",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "439df39697b850c6e931a9850799fadfe46e9308c1aa93084821c7598fbb28ad",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "4f0eab92bbfa9bbe10cf69aae903bb371353700831ef703f607dd3155ce8e200",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "d2571cd95d3115bd5c35fb68498ebbb8cdaa06f345b04be0e7fdd325e4901ddd",
-    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "e70ac862cad389f1665baeca1cab72decd6c30edeec4cb4516e310ab20e71f7f",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "9a68b263f43b47f5d3f6a326bc2205f6a6f579ba9ee5e47264edf816729b5b19",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "e59ec4305c21bb24d9d451e6a829310593ce1f95566f454170ae98032bb6564f",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "c3e8a2ce43f210b02a3a7fd77a42a0d795faf0496f39aca3b2f12ac785008e8d",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "e15a66a952557c14b375de0bd8234ff3af652198c673fb61d45ca1df3723e411",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "4a20fc11b68cb8a5329d59f6a7712433b80875c58f0ebb9d83409b66b97e347d",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "a914e9e6a4c9690eb68794e464f524e7c14f46f6a50dc8a4780ad187dd540f9d",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "29efcc3cb6c6b9e44c71d3565a4c24daefac44df3b39af10e3f288469632ecf3",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "01ba156c109d07ac031e1f67df3ead6f44dd464515cc1d2ca2ccd19734101e44",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "8a09ac27c88bd8a1e57c1fa114ca871cf95ebe0eb46e4052c910a95c1fbaa487",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "dcf9d67d020f0a298b4be4462bc0cebdbea46e18e59328345e336b213da7df7c",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "72157b691e6233c69492451508d3260f5f8ad6d459b66560d4370f1f61d5cac2",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "9c63d3b7453e05afbe2ab1afe80f13c8fc24112a702c8c0d0d2db938a4148993",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "fed1da6b8cfcea80df200f2f60c12d5ab8797c4bb084cdbfc2b21d446b937648",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "1f3d348a9a6a2369aaf741fc978d33202041f2a43a5a76779871796c618dd6dc",
-    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "2a3e3b11599dde95a62b836268656cabc073076ef7248a50e1ba6cd0c8343c58",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "b12c64abf6932543178ea5bfd14c1946ff9f24b8c834288f9f60f054fa050fcf",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "9d23ef92ce892088cf557f902c5384f142d2d6e9088a399c8c4144e210c8b894",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "cc029cbe2354b3b330922a7db4792e4e4e380cd4308a8bf84f1199491ba592be",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "b3f5b3afb7b33013b72bcae84f03953efb148fd9797f09e3682e79d5a2168fa1",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "5248f35f565bb6dcf8e721f65f5d9ec5fcaf290162102c283d3f4542290d3f46",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "ba279ca5f1a93694fa201eba52fa892ccb3bca9984f121e1044a1d429bb5ef5c",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "6b396e19ece05bbaeaa6d132263ddd1826bcccf6b5658dc951da937c9b5da40b",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "97b14febba95965ac3bddfc0a9b44d386c94688b0e3c3a21b7a3a3466106eec0",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "a20c34dc2d028718c92b0d16faeeef3d749dcb3d170cd83b7c3150dd1b0bc6ea",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "20405519e5efbe589230e212a41c35cc8737fb410869e2e45465034e077027d5",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "c8b3536a0170b1dccfc7f94127924922bf588b1114e276b9b74f408b07532705",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "e27eca0b3e20cfd86b3b8ef3a54b43bcfd70d1244ce4194c83a0a56b30669633",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "1f05a24ce4a91ce56f4811dfa21935ff3b12f6d96a073b0845cad345af1f4838",
-    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "3d5326b5d14346d00a7b0adc4bdbe815ca6046f812215c6f19d9742598c6014d",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "655a039a83eee593069e6aa4d86ae1224cb752b109d96c16d459ddf87e6d7b2c",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "341e33382d85a31aa15ac97bbb4df1bf6d807ffb7fcdc5b418f40e5f07bdb2a1",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "f8e7607d50622632a5466f9aed4bc4fd7173fa2116d5aa1f2b9845b140314e82",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "74423ca864c69629506fe83732e667850c3e2882ac14e52c1d61f99e41197e02",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "37c3e589798bdc18a035a36cab1fc10d4017097443e6d310dfa36e4ccd917f06",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "e493c966df3321067f654b88d4dc3c08ae7d72e070b9fb9cbb093785644a4c6e",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "378f21ead9822b748c2e41bd4f2e2acaae55ae2823eb01c4c736e19d9f8cfc9a",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "9c2d1f1c29c6599f27de05eef602c6099c5e5dc0ddf70285daea467a6ea2e788",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "4186cba0d6ee585e261cb5818ab56d268b00a0b2918d53b299fa1b8e1c4c6737",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "6878805613b10096efcfccf6a5ba93c51cbdb333117a2d09dde99df51b955073",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "b39fda6f46ac222df3ea3b5adcccf5f7b3ee130b8099dfeab41ac18b82c70c50",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "489bcc11756db76433f892e2bf5e8417b5f2d8aab1df45b3b6947eeb2767cbad",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "6d4a0c355f8bdd54e95c7fcf38f6c0f53bb59dac1ff8ba02faecc8e34cbd75a0",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "230e0bcd38beb50ead553c662ff7429f4274055058a493feed167cf9c0535eb6",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "3aecf1ce306c9a7d3df5c25d84a41055b0dd9609149b8255db2c9342b5f1bb88",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "6ef81216842bf3aaaf5228ec116b6f9053e0a6bb4deddbd8aa76ef9093adf900",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "fbfde24b5651f871a43eb7533a0ca97e3764ae83b1f77d8dabe9a5c65a63e7d8",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "a4ea4793aab14cf6878c8c64f3ea1aa5861361088da27be99fb504013e23e6c6",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "e7593eadf498d373e798d87c1acfd363f27e275d625f947c3bdd131e77e54e2b",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "e8824c869cc6501deb0e589e8454d69bc49e9ee23244758cddbc9e984edb20e2",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "3202b58192be6acd6e6c6191799e997ed7455c7d3d400aaa7af233d2b3ca78d9",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "13b19d07c28394e9c3201b161d5a3a940f0f48cc3579f9d5c699083022b97cbd",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "47d8d69b4512db322c7ff81bb570b7620d0424c76b1f42622d7e1be8f537cee7",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "bb98154dc0ce9b38801356ddc53f773d2babd4f74924a95204ed115e1b03e701",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "510afa3fb9be8e8dc057fb3161c7aec5812d4104b96202fcc6e878337423b850",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "d95dbc1a9322575eb5565dbcc547871dfab9d6eb18f27fae97d3640c01412638",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "536f7bb4bdfca8eeaa397f9b4f2671f9c4fc8d5c112b81e6f4bee93b5c72c3eb",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "8bbc2a346293fb63fcea3bd05b7da3af357e3d62a4eea4905406d6a9a3e420f7",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "26566e83d63ca8dd98bc5d8fc46e1ec5c75e1957ee908f4b2da513e25c4c2e47",
-    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "6299924b2b87dfeff5909ba0336cf9d8cb530a0776a44ab55ac9b224d08a2261",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "59167943ed42a512e0ac801d7f77ad46db057e7dbe3dd5858087e9cc41cd1191",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "c12846f54b0d7c019c2d678ec6e1f7007bc32f34ee948f612f610f203301f15a",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "e04acb0a06895f9a7202943c590bacac5f32a5419341171fdec735f3c19ece2e",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "b419d4cfd6c45d2c259b367dee90066036e0415834a9aabac0af8ecc1d3e7a5d",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "b7bff1a4a618c03cd5b3310d2f8df5c192080ac2110daa1cfafa20fcd7f84515",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "3908325145a2ddfa085ebba616e055d73ec1d2a7522812b0d930cff569fb510f",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "4ce1c14156ca4725b11d2c9327068a4d937ca26e72e9d501adb6d5a9f8c37031",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "333e356c9156cee945b725e4f9d20422cc6f670669692dd93466905587607277",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "0f7a114324d412a6315979dbd61529dd0acf8d57d09378c8b4d252b9a8ad2f2d",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "10c8b7a9321cca998df3cd442ead86ddf2bfbd0c4651d93e569f348de7ce1a2a",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "ee6d4a6b2dc1011dab2fc077cc7fc9c6c9214a6f63d3668d3382fbea9ca14b8f",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "58df2edf17a1eaaa54355f691ec9c1b8a9a4fa55f3ffd2968d3a4a6d85e3b000",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "3645d400ca67ec56819668ead1d0ed3d53b6a7f0fa960a19eb8fe23661ca3ddf",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "cf6b8d7864ea0c444f6a890607387ef5d771011e4b77db06f33e7ce000dbaddd",
-    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "75e0787662e027c11f0b53aabfd92d940f740d69686649567f7a5b45773e240b",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "edc08f9b60b4292524c83cc4e83a8a4a2cfd31c79cc514da494d450df54f300c",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "a5af5d8ea958f4a2c8df04e51071982c48c40d22de5fd2106380558c5b1d9cf5",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "2c0e906b9c11f4db5fe26d6e2309d1f25331bc78d9ad6b5efb0989a8c41e9a4f",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "c9a2190fd12554b14e6e66e2bb8aeeadd983f64884705603a7d779db52cfe159",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "da9fb736053cfa7ab9041518723be3eeeb57daf69d6e69b02860abb2af12a309",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "e920c26f14eebd6dcc88e8caf81de12305db70089fedd5af97d353476b040e73",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "f8da4e6234bac23f3f9c5bb1a3ddf1da165e7f6b7d5497e3d128089c5f12ef4d",
-    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "84609f551afd9051eaae42a01235e976b31380d9c8f74b38ebe5ea1cabc51661",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "f4161b9575d6f09470425f75e059637ca28d2b49b78d4d095e4e584cc0269037",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "8fdbdbe57d216bcae3649d22c6cd2573b474993a9868283d6de766784909f904",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "b0407845843f76b76451984d9138f32336b82e637cecde48a7ed041de8fa23f0",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "ec89de62e191de1e8046e397cbca8b8c3c56c7dedebe174f74915db42ed6a757",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "7673b9d9f05deb842fdfbafc076ce8d4059e6e7b5e87aa839444a879235959f4",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "5d6b3d72bd794e24305d805a9bf3edfdbfb90ce7ed854e7f85ddc1bda0d15752",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "68fcc8a624450ac78d28d81be2d4c0088a9a54ac161b3b55adde3347291d8c08",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "af991545d5d9f7daee2486a05a406850a8397011bb70eb7e32b9f0cd7e60f944",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "65b5528b8763942b221e07714f5655aed680d0f4391fd847548f7c865d659a99",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "0d3d234e643ae281552d64fa3de2677d8d8d58419331ff68354d56b9f1ba42fe",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "503d6278def66039906f721d8b39336fe7aaf0aea7668b209494f286fb11bd7a",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "336647b9ddb3594c23d8ed760e3506748c481fc87124f15c2a980abbc04cad50",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "17efa68cce232d0b5a6cbd52a8ddc11676de515d5f8df94988f59217dd3db72b",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "27d1432316c721cc4ea8e240ee29b1917b956737c88f001f1197a42a38d33c03",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "826a71822fd6d3b895e65b9cc933a54e83d42aa373680f335cdda95699d5f2e8",
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "212c4966ff094fe0123949b67edaaa44ceaacd3355623ac6eeb0fe3e9941c933",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "2f7f072bad44cdb6a7262129e2884c194fa4d2e1bc0bd432af1844fc3191bc22",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "22939b193340c1af30b4e8653da514561439447184675382beccb8743b2a8f27",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "9a5c8c627290bb0b036d9195ae25025de36907002f2f2dfd23d271b9dd76142a",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "0b7b2fa28a0126e12be2f26d5c8425c6cdee07882f7e9cabb19c8e32353989ee",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "8496d10d8b41e22c6ac750bbcd717c00e31a21959241c395305b3b5ca9118e3f"
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "299fa5e7f25bf2ed28e6f053c31ae2187faa8787c3283516ff052e6a559d8ea7",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "6384f4d6effa7b870bb347849ffe23ddbd8f19823ead65168dc8019ac921ba92",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "c4aa1d39e48efa7cb42cd821d935ccc618ce435710e1629b51052fdd891ab0f4",
+    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "6411b7c8230335f7f067d22e3c62626708ade881fa9d680c61017f74386d5c27",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "6cb43d063ddf805c996a582d0bd7ae5cee318049231cf0c9959d6401ee2b3cd4",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "063f659f3d5b5bd61fdb430552820be63da05346442a8cafc97a271605a569ae",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "5680a131ce56f441e5cd3b01121b3a9dcb8dbde9a3e1bc1bd955c5287ea80455",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "1d019d3ad9b64800a09487dc3f5f5b5b0ef754b4cc40bee9e28e01ebcfdab66c",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "6f60eee3a53becef030f80cf6ace11050f09b322059d4ceb6c66513a4c6f5cdc",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "1fffada6011e54251831afeab680c879cae95e363cc5299ba524886537607254",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "dc608b8a532e069d145ac4c5fd4530b5680bf3622b1b9e116e3bad7561381326",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "4b3d0c057197a63c5438a1331159d309292ef08bd75fe23e0069f40c8b78cde1",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "0df142e59c72ecf909d892499c78c538f8865a9aaf6c5e72f0b5a1fb826aa6fa",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "d7195f22f8a27c4a1e72a42c118cda3221e575f90e6294104848e29e436b57b3",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "746264a7976bfe7c6b3378171b0b0af5432cb9eb19c70cf07f980663b2c42bf5",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "27c37d8f4b723ff3488056a3fffafae251a4c40a6ce7f8b056cb63213245e671",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "d29d74e331882207c7b92d73ad87d3c0997082c04e309ce740d8f27fa3084a47",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "9616cbbf6da68ba90b25a3bd5c31f65a0901da5fa12562c2ef844e96730273a8",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "2b465632e7cb187d4027518c10b6bdbc94eb4b4ebc98c00dde8d719a01bfb0e0",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "a6974cb9c68fd46af7b9b1adc32eef233305e1650cbec8f26f4f4595fb19e56c",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "4ab8e05967a80e6c0e18986efbd07780199ffadc5183f856567f2ddb4949d107",
+    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "8d34114b44855fddce3f9fae88e8813fdd39744cf9ed5ed9e440ded033dfed3e",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "0c5c868c548634e4572cbc31b988d8d15726eadd355ae2575888ea3919310192",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "280e4af60ece5080e0d367c2ec1ec36fd22e143b39dc38b9fbfd5e224fd1bee4",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "ec3cce04a81deefd8152c1f51366b82cb57b2de95734933c45d5bd2be6c4c87b",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "30b55aef863fe5edb81d292c24d114c2a2b632083f146825642065a17c94ebc0",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "951b2e42805d969235e0db218db2efaf9cae4ca37880004b0ec0727a746971fa",
+    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "c2eabc96e35c564494ab81233a1743ad9bbcbc675ab938f68202f1efcec7a701",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "902a21d0e526c2d546bf68b18bf8fe03d0c9c0c89f9f80543694ecfbd6a1210d",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "eddf951ca9ca2f0661f000a2d307718656bda13ce8cb4ba55b6aa83b4a4c2a19",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "5dfd5d62548a364add4a2f3a399c49e1c08435eb89da7a38586ed20f5d22b044",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "1200dac3119424a288ad5b0223bbdd4ce3749af773d18f7a598beb6388efb3ad",
+    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "3537d32986934092e30e7707f2fd4f3ec935da2fe65543a176de6b84b8351aa4",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "38238e612affdf7eeb9580ebc8573f8d7edfef6cfaf961d0faa6f524c172b208",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "7d2a278e8af84778a8c9a773c314251c0bbe2a4daf20ac8e3e82a13ede4aa91c",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "c4092b53bcc2173c5fdfd741cdcb6def2df6d9b4e6d1e4d14d560c13b0b1cef9",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "c184df75881ba8a991076250fa5f1c9a981ff0f310f9238284d55393543afb81",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "88d2a822c4f4ed4f8a6abb74ac9f9c14d1e9b5f183eabf0f2a8bb978a9d08b8e",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "ed5d8e884a4b062774b80c13f4e69f1309d1864252b765f47d6f4227fd6aeb9b",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "8451e3b518492bf0c34a61946b5d9b91253de2d68c27456e93507089c4f97149",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "a4fef60e6539f05909959ebc086aa19ca60767fe92140a47d4b24b120838b3f7",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "0724ae618e312c44f100b653e3b57267f0c3b075834375033d7d5e701e109bd7",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "b7e6d54a712a789b2f126575d4ddd9ca5794afcf8aadeebd520fdbedf6306069",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "cf6435736a31202d7495777dbcacb08388567adc1e80f9e3ed5d13c775fec50f",
+    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "7fbecb797f0e0f90a2f37dfe6fb49db593355c992d29ce19b49db9d7ee0ab68a",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "a7895b32a65c5d3e84b28af25fad5b13b9531e169dcb60b81d5bf617569cf176",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "b912b5ffbfffade72cd1d36097089dcadc7d98e05206a4a72bf530dcef0cb624",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "7a31689874586106c8955adb299ac49c10e817d9ab5d3b034f1c6c5d1e1719aa",
+    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "14f589b0a2e1e9b6f674dd62581c208c6603b555ab91e501a3ebff848d5f218e",
+    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "ad0dc549b1b7c59e9f437dd250e8018d17c50882821f0029b45f135604926e3a",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "baecd565e41eff6600b31bc3ee16d92270ed4d7ef59d31636f4546ee8f653e80",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "a1e6528cb822de04f595b0cc434ea848962989898b0ef4e1986115d8b664142e",
+    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "aa61484032b0c5daffb79271d45257e3c20a0d5e89e5e7103a4ed3853163fd38",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "6e1f8f63de56439da9cf6255d0cacea5d1aa37cc7d4e770855ec51cab7a0f6c9",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "c4ed26492a0d9d1d345f65790e2c8e03897c422bb6a11e3a9fb09f9f0f00a622",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "1cd318901f94cd8aea54c192772e71c59af5664f9fb962de97be8f7cfb439959",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "a7dcdf62c0bc1889b4aa8b210368fd8db885e79ad4f398cae3708c2f3eb29ab8",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "dda5bd7289f9d86c8a124c5e28476223d999e8a8e8d15656350ee07d344b4ffc",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "171f45bc71beb8fbdd57d456f2d5977e1fb4a1e7b25e119982fd54fb3b90523d",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "eb5e9b1eb72e7b8040bd5c01774892e664e1e6c2992a635cbd48b2dd0c25fe79",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "ac7de246580d762b20a76d45e8d0f7e535fbb626f0635fe9a5eb27efb9056426",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "7af3da3e46124ecd364db835d8b7b0fab6ebbb34f5677bda821f43244923ccc6",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "3520db24f11cdf0fd0d75e02f0675c994c055e5992571579ddd6c1a473cdd745",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "0a35cfbe2a0001f3444add25173fe08a8176b179688b7af2acd6a2bac9b91791",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "a40be60548d851a0b4d9590380c52dfa09dfe542020f95ad7181c46ce418f9cc",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "9a9714bfb582d8908213d215c3c45ef1e2736d533a18c3f7b4661f4b0a2224e7",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "f5436d9794a2cfff7e83fa9d4a0bca74c4041e36ceb15e838478278457ff7d35",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "03f1862156b47411b5df856b02a57d9b4ace0770c0d8d2c6388fdd8305656b51",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "d34dac023993eba587cd941a668e8503b3e79f37f1be5944323b817b24ad4f0f",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "ab0cf7f32cf17025501aab6fd4e8790c6305001045c16b616bd5003f132b02ef",
+    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "5bb52a60c373f0e1efef178b2c67c14fd38e663e1e16603dd019679bbb937cea",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "f3051c181710d50dfdc34be3266e4fa54b54f90f052c980ce1b779d8785b53cd",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "fd19cd8b625e0fc203efbf0221be6ac9d4b7040f85d0c33875acec6f46b5e164",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "9170105e9fbb3e5cebbbf8bbcb7f5f0baa564256d1cc02dac550b0c80bc30e55",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "adf7761a17c8758a85ebd4bda55b1919036ecbea30ac922bf80ffd9c8820c860",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "caf504039433d50d917ae0de7ea361777da78d815ac1c488385431bb3eea4e0a",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "de06b5787d178c045803b8082682ea7f2cf87229c5b3d448398968eb6d403118",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "904c4a8caaafa1abd47c0ae768af5d2917fbd7f1afaf360acbf641bc3a881a7c",
+    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "f765340374a1a1cc90ac17bba51037a12a81ebb4a152fca008b6c86239c22c17",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "1dcf82c75d3504b4e43c06b6dfcb551da65cbd758067dd8eccb8a420694075f0",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "8744fd27d30013432b91d6784f21ca2aa92e8a6c20743b53b594af61c5ad828b",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "0ad549f1fe1ff735f1abc756c359a8bdd7bee9450cf64c3a75a90992f9a4a0e8",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "343b65a593804e5e61b0903f272372a60e715868c34c8738309df31af2251dc2",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "0d2eb75eb142cd9b6188293541988da21d82fef0a8a242d91c503911603b38a4",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "02bfd91a1e244d03074d322dcf28286523c56fe4fa27428d7f99cc1414ac52c7",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "0f4917a0bcb48875b5a0fecc0c089af501e701ce8d3c81ab5cda9314cb71c0c0",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "91f4267d54a0e8b1abb9c97674aa2a9b8101c85c87d8a28bd0134d518cbee244",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "8ba6cc068d5baac2f19ce953d4481e8b4973a4b6f43a86b04aeb1f7a36d4fe2e",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "f9197ecbb4f287624a68990a2e702edc6d4c17e5751c2ddeadef98885c377eff",
+    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "28557fa06138825b8056d82e4f11b6f8c722d51cd6e47354a34c1d06ba5dcee5",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "de1ad1eb918ceefc622935bba3774fea45bf3337a5f23ff1ec100a67fda8d5ee",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "7c96ccd3c90ae8c0bc83282cedd8bfdcb623c80bf4254dc3b3d7276e55a1f629",
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "fad172778b795a4dfbea548cdc358bf8a16f4ac8d6b0db7800e32fd6fe062df6",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "d4a9dfdb404ce35f48268892a730cab10b9e0e4974b6a81c140481af535c680a",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "6aac3efabf025359d86666b5ec6582aa1023f6354a98cba0be5012a5672d7ae8",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "a98d64b1dea8ce45f7bd5cc595cb22ec85d1cf270bd443f6a0a0e104dfcb79a3",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "13260789e6b279a2b08ebf83bc94880e44e3865db50da9282224bcdd6d2a2629",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "c4ce73e0ce391263bb6ba50bc94aec01798e566b7fc6dbe73b8a4cb1bc4f6922",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "4dad0cc4e55e027cb7c1ae3df5f9f411dbacfe7da4612fa1f8fc56bb4693897c",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "7a5c079bd47d7c4ab0877d385e4fe19e872737e6f28d88af901afa71a45c176f",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "29cc05adda15dc2ce9e71e70c726988c8b522d26b7cbef91623a5f7c3df3dd82",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "bb648a1392a8c6e7e8d530e0530be096395afb06a69c6a3d16e3865d479aa0f6",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "08570ff6284eb331b85bba9b2b5188a3d5f6493ef7cbdb27b867a6562acfabe6",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "9bcb63f3349bf41fdceb3bb7775dbf14ebd4f585eaca1e7d51960c9c5b8f6c2e",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "377b17a32122c3e1caa30a6d02efcfdce093e49d235f7f7b2bf7c04f62d86ea1",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "0823ca73e6ffd4c3f5c2114859ad6c6ecd728e201a16842313dafa88e778cd5b",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "6eadb2878da8e51276f9527e54ad3fc1bb0f908c734f8220d98ba86098ab110d",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "de2fd445c7b0bd47558a2b1d811840574a435df640ba729fad2481a344a555f4",
+    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "5e24434d26fb3cad07e2af0720d52cbeb6cce12789ae331acf42a0a57b839908",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "5e9a368c844caafc6f2574d5a8e60ec262dae295f7a202a5c72bbbacf0322ca1",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "de2f26621ea673137b5da19f1489989b2e43a81d04dc02d022bfcfe1dfd24d29",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "c238617bd8e15c245b83f947a31afff976db12c44f0af3869d77e434c71ea330",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "f5da523a7810c0fa243ebe4db781d27d475709d9a0e9cf65e5195c1e56d15a8a",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "bf5ea95511e0757ab74fc2e4ddbdbc7e317b988e35745f5be86ca69e27120c1b",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "270cbb5a0ef21b4bb57b6cd2b3569434f1aa69ab1e1d5d3ee9929a5853d31689",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "a37f97362c757837a5bc12727a55a7e099d02941698135517ac8b2b1f85548be",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "d49f0d0d51b3b6af0fa3fa726b966d865f50f6c7e31ae0103c20a28665a74a19",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "923bca6836a31d80c1c7bdf56a7abce66c75a19408fb0528f7091dc42bd8c02a",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "d544c17e7e8823659c33638be2c49f2ea9f8cb66a42f93919df96746a019c802",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "d49892308fb4959df06dfe6668123dfa77b8dcfd3959afc46387481f8674e0a2",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "d80e896b5e5167fd6379962baa3434f9b8d9f9402fd5b182677e0f4f73237a5d",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "ae4e2ee27e4c59f9b0dfcca87fbf03c0b1e5d56c020a89f8efcd77e7881adab4",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "cb0669998cda42f950e2a969d4bfe98f69e80be3ea7aee2f46fef92ab3565a79",
+    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "cdad430c6f929104a0f26a49385132869f843f655231e7eedd4eba4dcadd20a7",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "52f2cbfea7444283286c98d0eec4734acb2a9469f0721cd6960b1129f0bef698",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "683a4d012590263733699a363e6cd66a04980f290327ea8640326f6759a1b096",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "0d6f2a788e259c18091f643d4e307dba76511eb512e89b36501e314b9deb1553",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "31e543e6d98acef5923da9edb459d161eeb9460d9b87b82b56711d2330a730ed",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "5788a0f70016f456e20d2a135100449bb09c2ba425afb16c3c52535c9aa29b6d",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "540a73c531e9f584ca56b786e941bc6e0aa67a2d5c8be6cd5804d66fe9d00601",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "ff32fe37c873ad930638c23fc48504aece2aeb92c2733df37e8cb47b11bbc5cd",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "becc46fd273ff0403a35143ca91a449fa87fa232e1754cef37391ec6a7dd7c08",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "1f33106774daf1054bf4d19a99aa8d5256a1332d5cdeab8a6aea0666c6ec2718",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "1ed0fce593bc7ca6e9e2ff9fb86d72809b0d9bdb4588d0aa77f1dc86a2bda9d1",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "ee1e99832aba7fe38111c8d0c4647364e4762db8859ccb147d3d5ec2118429a4",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "531875e406a8d724a8c50376348442a83b63dc2263d057326491ae2918aaf6c8",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "faba008e58b5b9c5f0894a987215c8b7e67a8949303cde7d4e1b87cedc3e7815",
+    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "3182c05cba82c929c2c0fc98a044a59470c706961067b119baab48e924122e31",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "51f1548703305d612d8af5505f1957cf1935a1b617306abbefe917c84b27116a",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "40d0146375ff3b497319c025e674248940d02218da7d37cbbf02a36d53c91f8c",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "8db9aec8930ccc3b2c55651adc9cdd81f6b2a028121988a822ab8d0358004d9b",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "729191ce97632defa38ebe41315d5898209eda1817ac166deb75b1d21e3605ca",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "8f99c9768072e9fde77c24c548346cd66d94eabba5b4a86ded23b33f9e67daee",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "81b1ab73d6d73bc2c388a6878eca7659afc5ae180e8cec1cdb32de118e754aff",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "41223860db037d15b1a2ef3dc8ef4b4a1a00264a752d29ec419d7935457a1a57",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "6701d56f7cc3ecf1a3e4a66e1e7c3baf556171c49d88d5d254086015395aaed4",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "ba39cb59fc38a3d3ecfc16716f03fb4d9aeaa5d3e429da7aa3091158ca4d6ccf",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "0bfe46115f98d4e40d0986d26f8ef3d8f2222cfc21a0dc5aa735ec4d2beee225",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "ef462e403cdc323483d65a592f00d3720902283e6ceb9d9a8bab92d8a0493621",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "6186ac0c475ef68fdc7ea5c546aa238518c59f99fabccf536a54538c5a202b52",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "2400e0df74a181a78ac268c8a5a830326271c5ffb8ae8df8430a8837709f2ddd",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "9c4c5e03fefe248f03d3e46ed0b038a18a7bafca8675fb96631f3cd1f7328aae",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "bce43d207982d6b032fbce93d62c946ac5dffa802cb1003ee52299e57bfb47a3",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "a78d4cc0f6abe861c5b5c06f7e95d7e77a2d078424744ceb192771da333b86a4",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "51ea9d2ccdbb47588f2653d9d2fc3c93cb07c857fab1b2c17b9b5aecbb17f85a",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "25a4211c0480b0ab58b63445316f8630f10a1c5a12cf17d7c0174508ed8ab12d",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "a835410013ea31e1957335f49b4eb2074ad2e4fc2c84ef0ce8f6a089a1439a95",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "fdf62af9e24e28577675ecad78c58dd7ea020a8da36498b3d356b56d8c62492f",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "3632be58cb79454fa8d227c200d49136e16a3ed08199a4b4c0f1bd99b3e5e620",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "fbb0dfdd648f3b940c6eeca50f80d8cf2cab12be15c8b19272057b1dafdc6a79",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "de69f8589c6ca48b67381f8aae48601f76c8535dd802ed158682146d928737fb",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "e75fccd80668140c5463314124628bf0d598f48f7b6b3e7592cdd2003d18c413",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "91c4caac806ea77a8cbff89439320a2573fedf2b4dcbff09b5ed56ed00b9eba8",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "e904cb0df37c0d2cb6186e330f1efd404de9677c430ac04a4d694f66b240bc3a",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "27a5ab7db3171e2f673dd33a25ab860503d04d289085da86015f9013a63b7301",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "e6cb9e6901e13a76b72abfaa65961bb52e0a2a0ad44344bc660eda767f758570",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "0764b22bcdabdef9d5c83b2c681fe858c2ba2813d5c1132efd228d58f5ba8f40",
+    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "0ad05daed6fc4d36eff4852345e9ea96cda51dab9c2cdecda1533a38d2287b40",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "ea290f9ef80efe4de94d3c9591d573747fa153853875f0e151542fa9a5d185bd",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "25131d784d623e4f2d0777f31f359a79e14c9ce79523f36966830d431b1613ed",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "5ae830d02c10e73b0b364fd8a2da1e09d67a1742c6405ac305434ddc4b02b416",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "aba7dd44ae1996515e60c43f30ce1926e1d1e1ed8d1cbdf59196dfa2f15207ee",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "f22962e8e8491b859eee581593c53a311f64f8f62e6846c363d504daed13a613",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "b2b649a623a8935fa8c98f40d0e600effc29e536bd4fdbcd015d14b10baeb782",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "5847f6157e18119bfafd4f86994cac20b3f7d9058bbfca676a68984fea86cbcf",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "1290630fd074403d8364bc0d5735aec9d4a23b42c0e35d4736f780bdf5913170",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "05341f595905d65386b65bdbe5f87ea88cf23ce492a1ab382f2feb4536a4a8d9",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "25b8294f82d0949be96aa9f5d1ca1ec36262fed0b6a459a77c7780b616ac2334",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "7029f28feee7646d67ec91896f6a087c12af6363ee0b3db4a0e9b7269a091be6",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "dabf0027def35f37f3cceff7a2d3073888ac87cf489bd6cda7628497dd5f75ad",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "7a9bc76923bf87add8ab17165c903a22bacc7ad8988c99bd9da4ace664459b77",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "4fd0e5396b262f3d6fb33f96451d1ac136b192c13d69cf75d04df00397ca868f",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "e84a66be8e61ad1b3f6a4ecd3e93c6b849ee6f46889b8fe652298569896e4ece",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "389b846378b571b2dba806c66ecc695a7336216727f5b0bed7174cff4542d9a8",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "add7a3e1a89567fae2cc0040b571c316424602f14f86c82b2dbc262c7ca5af72",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "dcafda6a07d7570da5b62e07b37aa414fdf99601ff7e0a363be2e8534530e5d1",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "11ae579baf72af1c8e9e94fd4bd2b1bdd6b8760c590a9b9717dc941666344827",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "500e936a606cb7e44ee4eda8308c276f51732efee1a50a645daaea9f40537fd6",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "92714e43ea951e1edb243fbeb3a94470cc9deb4caae578d01e53e33ea3d6bf76",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "e2531cb110b5aef1fc7586b42ded732dca257179ef43526416cfe7e78c2e34d9",
+    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "d3d2d51d64f24ac1bd259257503a06c104c10efc882be38831d5dd71a195c0e9",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "1c26634b1c07cd4ca081635267578949002fba929cfbfc4c0d0026cc15bc4ed9",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "82d4b34577519bae82037fe2fdd0c8ff6ce3d3013de402c9bc5c7f42bec35fc7",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "ea7ca0b4f1e5c11f42787d928f94e01541db84e6ce79872996ed6375c1a70c19",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "93830db1a5f9d5fa46e9b830a8e97a6437c07f9434aa0b997a9e65517d1cc983",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "926a3e0cde5a5dd452d19f01708da5374cf2ab0afc259436ff6649c31b9fdcde",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "524196f9b7e0974760b8a068923998b8b5ec6318af3d10710846b46e94856655",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "88f31e53519b78bef1e94f38190d148f8f9252742853febd8991f24ba44251e1",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "e0c501a5290c661e02be776a37380748ffdadf8b2d406e4608be43fb0f7c87f1",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "c5c85ca827916da4ba49ff1c562fdd08c4845b08afa99c8b5e754d401788d75c",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "59ab82bffcf86724ca74e88ac856aa4321a943cdaec5cd13649008ac3cde2101",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "b8fa7b6402b608482e98c51bf326786768fea53c4feb6d8d3b793e11df346d94",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "9ea7836df57e0cd92d7becb6aeec2f8da96d1d2315688e8db889b1b218da5e46",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "f726a5be9a3e8c01db0a19bf68d7e74d4f36abb45184c693167ffc21a641c79b",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "ed563de12db7fab4eb4f3f384d5148ecc0dcd0065300b4a49e0caf7641131a1b",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "5f5768fd967003b7c31d116449a8de28e308622f488b3db91402be5be4347bed",
+    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "788403a0e7b6e5d796b38001442104831173d2bdfb2bbf40252975316fc4ed74",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "7e13ec8bea26fa996e50477c1e60b79363e8cb2ae53a171acdba6302bd06a91c",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "820752314c5b021d529b77342bf66454403757a5b8e6e40ad4627f407ed6ee79",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "11fe90e2782f1c1e1d993899e4726cc025facb74268d8e1e2064ad63cb2f85ba",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "f244e53fedd25124afd8d740b7c8ce1c0b211bc05425b49471f15661da96bd5a",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "b0993b3ba0daa8eedac758338beb3f03647690ece12dd9fdff3020102ea5d2a7"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "AI-generoitu kuva: Harmaa kannettava tietokone on vaalealla puupöydällä, ja sen näytöllä näkyy verkkokyselylomake valintapainikkeineen.",
-      "attempts": 1,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Tyhjä luokkahuone, jossa on riveittäin pulpetteja ja tuoleja. Etuseinällä on tyhjä valkoinen opetustaulu ja oikealla kaappeja.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
         "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Kannettava tietokone tyhjällä työpöydällä. Näytöllä on yleisluonteinen verkkokyselylomake, jossa näkyy allekkain valintapainikkeiden rivejä ilman luettavaa tekstiä. Näkymä ei jäljittele Vantaan tai Bondatan todellista kyselyä.",
+            "depictable_scene": "Nimeämättömän lukion tyhjä luokkahuone, jossa pöydät ja tuolit ovat riveissä ja etuseinällä on tyhjä opetustaulu. Ikkunoista tulee luonnonvaloa.",
             "must_avoid": [
               "People or body parts",
-              "Readable text, logos or personal data",
-              "Replica of the actual Vantaa or Bondata survey"
+              "Readable text or logos",
+              "Damage or emergency staging"
             ],
             "must_show": [
-              "Laptop on a desk",
-              "On-screen survey with selection circles"
+              "Classroom desks and chairs",
+              "Blank teaching board"
             ],
             "rank": 1,
             "safe_to_generate": true,
             "search_queries": [
-              "asiakastyytyväisyyskysely tietokoneella",
-              "verkkokysely kannettava tietokone",
-              "online survey laptop",
-              "customer feedback questionnaire screen"
+              "lukion tyhjä luokkahuone",
+              "empty secondary school classroom",
+              "classroom desks chairs"
             ],
-            "subject": "Sähköpostitse lähetetty kutsu asiakastyytyväisyyskyselyyn"
+            "subject": "lukioiden opetusjärjestelyihin liittyvä tyhjä luokkahuone"
           },
           {
-            "depictable_scene": "Todellinen valokuva Vantaan työllisyyden ja kotoutumisen palvelujen toimipisteen sisäänkäynnistä. Rajauksessa näkyvät sisäänkäynti ja sitä ympäröivä julkisivu.",
+            "depictable_scene": "Nimeämättömän ammatillisen oppilaitoksen puutyöluokan tyhjä työpiste, jossa on puinen työpenkki, siihen kiinnitetty ruuvipenkki ja höylättävä puukappale.",
             "must_avoid": [
-              "Unrelated municipal building",
-              "Identifiable jobseeker clients"
+              "People or body parts",
+              "Readable text or logos",
+              "Accident or damage staging"
             ],
             "must_show": [
-              "Actual Vantaa employment services entrance"
+              "Woodworking bench with vise",
+              "Wooden workpiece"
             ],
             "rank": 2,
+            "safe_to_generate": true,
+            "search_queries": [
+              "ammatillinen koulutus puutyöluokka",
+              "woodworking training workbench",
+              "puutyöpenkki ruuvipenkki"
+            ],
+            "subject": "Ammatillisessa koulutuksessa käytettävä työpiste"
+          },
+          {
+            "depictable_scene": "Todellinen valokuva Helsingin Eduskuntatalon pääjulkisivusta: pylväsrivi ja leveät portaat näkyvät rakennuksen edessä.",
+            "must_avoid": [
+              "Invented or altered building architecture",
+              "Protest or emergency scene unrelated to the article"
+            ],
+            "must_show": [
+              "Actual Finnish Parliament House facade",
+              "Columns and entrance steps"
+            ],
+            "rank": 3,
             "safe_to_generate": false,
             "search_queries": [
-              "Vantaan työllisyyspalvelut sisäänkäynti",
-              "Vantaa kotoutumispalvelut toimipiste",
-              "Vantaa employment services entrance",
-              "employment office entrance facade"
+              "Eduskuntatalo Helsinki julkisivu",
+              "Eduskuntatalo portaat pylväät",
+              "Finnish Parliament House facade"
             ],
-            "subject": "Vantaan työllisyyden ja kotoutumisen palvelujen toimipiste"
+            "subject": "hallitus antoi eduskunnalle koulutusta koskevat esitykset"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "A grey laptop sits on a light wooden desk. The laptop screen displays a white web page with multiple rows of circular selection buttons, some of which are filled in blue. In the background, a window with a plant on the sill is visible.",
-      "generated": true,
-      "license": "AI-generated image",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/30a6b82064b5bb6cb32bc673e5f5bf085c747f37d6023db82eab74271dd1d849.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by Brecht Corbeel on Unsplash",
+      "depicted": "The image shows a classroom with multiple student desks and chairs. The desks have light brown wooden tops and dark gray bases with metal legs. The chairs are dark blue with metal frames. In the foreground, a desk and chair are partially visible. In the midground, there are several rows of desks and chairs, with some chairs tucked under the desks and others pulled out. In the background, there are wooden cabinets with white countertops. Above the cabinets, there are white shelves or structures, ",
+      "generated": false,
+      "hotlink": true,
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
       "pixel_review": {
-        "alt_fi": "Harmaa kannettava tietokone on vaalealla puupöydällä, ja sen näytöllä näkyy verkkokyselylomake valintapainikkeineen.",
+        "alt_fi": "Tyhjä luokkahuone, jossa on riveittäin pulpetteja ja tuoleja. Etuseinällä on tyhjä valkoinen opetustaulu ja oikealla kaappeja.",
         "approved": true,
-        "article_text_sha256": "64b1353a8daeeda5a94650844b78be5b4936fc359a5af7fe2620cf2af3f20a86",
-        "concept_sha256": "9a4db34260be5308e342f203adab444a8770f5abf9c681a8a58545af72c0ed52",
-        "description": "A grey laptop sits on a light wooden desk. The laptop screen displays a white web page with multiple rows of circular selection buttons, some of which are filled in blue. In the background, a window with a plant on the sill is visible.",
-        "fit_score": 10,
-        "image_sha256": "30a6b82064b5bb6cb32bc673e5f5bf085c747f37d6023db82eab74271dd1d849",
+        "article_text_sha256": "263d4af1f1a203680477e70d7872c2e6d0d4b662fe56ac341998c1bcc64d7eaa",
+        "concept_sha256": "97953db45745d5f587219131d7ea3aa7103ea945b636b0e8c6ddff5277760b42",
+        "description": "An empty classroom with rows of desks and chairs. The front wall has a blank white board. Natural light comes from windows on the left. On the right, there are wooden cabinets with some old computer monitors and a sink.",
+        "fit_score": 9,
+        "image_sha256": "ac75af2a9bd33f2eb4ce4cf0427602f4b6a3a47fea61d2e97249976d86642f4d",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image directly depicts a laptop on a desk with an on-screen survey, matching the selected concept perfectly. The survey form is generic, avoiding any specific branding or readable text, which aligns with the 'must_avoid' criteria. The scene is relevant to the article about an online customer satisfaction survey.",
-        "reviewed_at": "2026-10-01T11:23:53.420895+00:00",
+        "reason": "The image clearly depicts an empty classroom with desks, chairs, and a blank teaching board, which directly matches the selected concept of an empty high school classroom. This scene is highly relevant to the article's discussion of high school education arrangements during exceptional circumstances.",
+        "reviewed_at": "2026-10-01T12:18:36.774258+00:00",
         "text_audit": {
           "examples": [],
           "readable_text_present": false
         }
       },
       "pixels": {
-        "height": 1024,
+        "height": 864,
         "mode": "RGB",
-        "variance": 7888.3,
+        "variance": 4694.7,
         "width": 1536
       },
-      "prompt_sha256": "864185f5430a7309c4cb50ae942effd316f021dd7dd1b35205343d8efa2e2190",
-      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Kannettava tietokone tyhjällä työpöydällä. Näytöllä on yleisluonteinen verkkokyselylomake, jossa näkyy allekkain valintapainikkeiden rivejä ilman luettavaa tekstiä. Näkymä ei jäljittele Vantaan tai Bondatan todellista kyselyä.",
+        "evidence": "An empty classroom with rows of desks and chairs. The front wall has a blank white board. Natural light comes from windows on the left. On the right, there are wooden cabinets with some old computer monitors and a sink.",
         "matched": [
-          "Laptop on a desk",
-          "On-screen survey with selection circles"
+          "blank",
+          "board",
+          "chairs",
+          "classroom",
+          "desk"
         ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "method": "vision",
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "64b1353a8daeeda5a94650844b78be5b4936fc359a5af7fe2620cf2af3f20a86",
-        "decision_sha256": "990e1c2929d1e8ef70a25ef53df8263c23d9f13dbbdaa079e7385c6eba93406a",
+        "article_text_sha256": "263d4af1f1a203680477e70d7872c2e6d0d4b662fe56ac341998c1bcc64d7eaa",
+        "decision_sha256": "ca255c8b734a7f9f40d99312ac41abc49ad88d6f5466023fcc7691dc5bfcf39c",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "asiakastyytyväisyyskysely tietokoneella",
-              "verkkokysely kannettava tietokone",
-              "online survey laptop"
-            ]
-          },
-          {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "b258be35d294a0a098256603d3fab8f1a84a578ce92c2be9c2ff580aba9bec9a",
+                "fit_score": 6,
+                "image_sha256": "7153fe445442dd932dbd1a4724f4bbe2b273bca566ee334f46657f03ce54c8f2",
                 "license": "Pexels License",
-                "reason": "The image shows a laptop on a desk, but the screen does not display a survey with selection circles. Instead, it shows a bar chart. The concept specifically requires an on-screen survey. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/a-man-in-black-suit-jacket-sitting-at-a-desk-with-a-laptop-beside-a-mug-5716019/"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "ecde809c5f757d420d6b35016e8d08fefb723860ccd741756dab67045e38601d",
-                "license": "Pexels License",
-                "reason": "The image shows a laptop on a desk, but the screen is severely damaged and displays no survey or readable content. The concept requires an on-screen survey with selection circles, which is entirely absent. The presence of a person also violates a 'must_avoid' constraint. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/a-woman-with-a-hijab-sitting-at-a-table-with-a-laptop-28380000/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "4c502bbfab943175da57630190e9912503a6641a023f11850cf3302e8c54b848",
-                "license": "Pexels License",
-                "reason": "The article discusses a customer satisfaction survey for employment and integration services. The selected concept describes a laptop on a desk with an on-screen survey. The actual pixels show a laptop on a desk, but the screen is broken and displays colorful static, not a survey. Therefore, the 'on-screen survey with selection circles' must_show e",
-                "source_url": "https://www.pexels.com/photo/a-person-is-using-a-laptop-with-a-broken-screen-28379998/"
+                "reason": "The image shows a classroom, which broadly relates to the article's topic of education. However, the concept specifies 'Classroom desks and chairs' in rows and a 'Blank teaching board'. The image has a large table in the foreground, not desks in rows, and the board is a cork board with papers, not a blank teaching board. The visible text on the pap",
+                "source_url": "https://www.pexels.com/photo/brown-cork-board-with-white-paper-10211162/"
               },
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "9d5350479012e00d1897a8be1490655914cf7b01747d0d136208b28ee4f98769",
+                "image_sha256": "3e47e0388241362a9f2994f14e4abd1a730a0f94dce1edd2d65827cfbb3ae059",
                 "license": "Pexels License",
-                "reason": "The image shows a laptop on a desk, but the screen displays a login prompt, not an on-screen survey with selection circles as required by the concept. Therefore, a key 'must_show' element is missing. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/laptops-in-a-classroom-20432872/"
+                "reason": "The whiteboard is not blank as required by the concept, and it contains readable text ('Hello School', 'Hoo Ray!'), which is explicitly forbidden by the 'must_avoid' list. The image also contains a small amount of readable text on the wall ('HOW I'). One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/photo-of-a-classroom-8423430/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "569a6e8722f13e91d6032de01a20b5d6f2b77cc633f8ece1d1db7e1b48a32635",
+                "license": "Pexels License",
+                "reason": "The image depicts an empty classroom with desks and chairs, which aligns with the article's theme of education and the concept's request for 'Classroom desks and chairs'. However, the concept also requires a 'Blank teaching board', which is not present in the image. Instead, there is a bulletin board with photos and a drawing with text, which also ",
+                "source_url": "https://www.pexels.com/photo/interior-design-of-a-classroom-8423423/"
+              },
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "88e067be90fb4bb0e6e4acdf7cc535f23a2868f1b1c2b0f6e0b20832aab194f7",
+                "license": "Pexels License",
+                "reason": "The image shows classroom desks and chairs, which aligns with the concept. However, it lacks a visible blank teaching board, which is a 'must_show' element. The article discusses flexibility in secondary education during emergencies, and an empty classroom is a relevant visual, but the missing element reduces the fit score and prevents approval. On",
+                "source_url": "https://www.pexels.com/photo/empty-classroom-desks-in-buenos-aires-university-setting-37822424/"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "asiakastyytyväisyyskysely tietokoneella",
-              "verkkokysely kannettava tietokone",
-              "online survey laptop"
+              "lukion tyhjä luokkahuone",
+              "empty secondary school classroom",
+              "classroom desks chairs"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "ac75af2a9bd33f2eb4ce4cf0427602f4b6a3a47fea61d2e97249976d86642f4d",
+                "license": "Unsplash License",
+                "reason": "The image clearly depicts an empty classroom with desks, chairs, and a blank teaching board, which directly matches the selected concept of an empty high school classroom. This scene is highly relevant to the article's discussion of high school education arrangements during exceptional circumstances.",
+                "source_url": "https://unsplash.com/photos/empty-classroom-with-desks-and-chairs-in-rows-G_-B7DGgvgg?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "accepted",
+            "provider": "unsplash",
+            "queries": [
+              "lukion tyhjä luokkahuone",
+              "empty secondary school classroom",
+              "classroom desks chairs"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "ee36c41899040be79f7d40059fc1ef4da862b2f8098255a39104ac96645530d6",
-                "license": "Unsplash License",
-                "reason": "The article discusses a customer satisfaction survey sent via email. The selected concept requires a laptop on a desk with an on-screen survey showing selection circles. The image shows a laptop and hands typing, but the screen is dark and does not display any survey or selection circles. Therefore, it fails to meet the 'On-screen survey with selec",
-                "source_url": "https://unsplash.com/photos/person-using-laptop-vZJdYl5JVXY?utm_source=uutistenlukija&utm_medium=referral"
+                "fit_score": 0,
+                "image_sha256": "ce222374d4b4f418d92a77f9092a24205e50857d487e879e84770c0180870ace",
+                "license": "Pexels License",
+                "reason": "The article discusses proposed legislative changes to ensure the continuity of secondary education during exceptional circumstances and disruptions, including vocational training and general upper secondary education. The selected concept describes an empty woodworking bench in a vocational school. The actual pixels show several children drawing or",
+                "source_url": "https://www.pexels.com/photo/smiling-children-writing-on-table-9835472/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "a9dfc130545ced9fa1ff30ccceebadd9fd563ca6615f6bfac49aef8188b07c3f",
+                "license": "Pexels License",
+                "reason": "The article discusses proposed legislative changes to ensure the continuity of secondary education during exceptional circumstances and disruptions, focusing on vocational training and high school. The selected concept is a woodworking bench in a vocational school. The image shows an old building and a street scene, which is entirely unrelated to t",
+                "source_url": "https://www.pexels.com/photo/historic-wooden-architecture-in-tallinn-s-kassisaba-district-37998769/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "d8bb3c1691138c83a5d3cd6655bc609650f446b5b0c5a84a307e3a7c37adddc0",
+                "license": "Pexels License",
+                "reason": "The image depicts lockers or cubbies, which are not a woodworking bench with a vise or a wooden workpiece. Therefore, it does not match the selected concept. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/selective-focus-photography-of-a-metal-hook-screwed-on-a-wall-2675052/"
               },
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "f4f7a21ebecfc71da2cfaa924bcc5ee5cdfcdf2115d8703e49eee3f74f0c16c5",
-                "license": "Unsplash License",
-                "reason": "The image shows a laptop on a desk, but the screen does not display a survey with selection circles. Instead, it shows a gallery of various images, which does not match the 'On-screen survey with selection circles' must_show element. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/turned-on-acer-laptop-on-table-near-cup-zwsHjakE_iI?utm_source=uutistenlukija&utm_medium=referral"
+                "image_sha256": "5f264053212a1890bc5be6c563b49b97c4e31905d4f75e7f2b5913c26d26bebb",
+                "license": "Pexels License",
+                "reason": "The image shows a woodworking scene with wood shavings, a ruler, and a clamp, which broadly relates to vocational training in woodworking. However, the selected concept specifically requires a 'woodworking bench with vise' and a 'wooden workpiece'. The image does not clearly show a woodworking bench with a vise, nor is there a distinct wooden workp",
+                "source_url": "https://www.pexels.com/photo/close-up-shot-of-carpentry-tools-6790034/"
               }
             ],
-            "concept_rank": 1,
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "ammatillinen koulutus puutyöluokka",
+              "woodworking training workbench",
+              "puutyöpenkki ruuvipenkki"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "32b3ec13c461b918dd4f4c3a74e5251d45fd9b491b0f6cf2e6d8e4cd54dabfe9",
+                "license": "Unsplash License",
+                "reason": "The image does not depict a woodworking bench with a vise or a wooden workpiece, which are essential elements of the selected concept. The visible objects are unrelated to the concept of a vocational school woodworking class. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/a-bench-sitting-on-a-wooden-deck-next-to-a-white-building-Z6jGDdv41jw?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "4ed21dc633f61dda499a8c44919c1d9318fd09cf0ee9da7127877a4deb8b852a",
+                "license": "Unsplash License",
+                "reason": "The image depicts a red building with a flag and a person sitting on a bench, which is entirely unrelated to the article's subject of educational reforms or the selected concept of a woodworking bench. The image does not show any elements related to education, vocational training, or woodworking. One or more required concept elements are not visibl",
+                "source_url": "https://unsplash.com/photos/woman-in-white-shirt-sitting-on-gray-concrete-bench-near-brown-concrete-building-during-daytime-nu96-SLn4Mk?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "asiakastyytyväisyyskysely tietokoneella",
-              "verkkokysely kannettava tietokone",
-              "online survey laptop"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "asiakastyytyväisyyskysely tietokoneella",
-              "verkkokysely kannettava tietokone",
-              "online survey laptop"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
+              "ammatillinen koulutus puutyöluokka",
+              "woodworking training workbench",
+              "puutyöpenkki ruuvipenkki"
             ]
           },
           {
@@ -1038,48 +1453,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Vantaan työllisyyspalvelut sisäänkäynti",
-              "Vantaa kotoutumispalvelut toimipiste",
-              "Vantaa employment services entrance"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "9e958600cdc456ffdbf40c5bbae820261cdf9ce485e222442e5ce6804a6a5677",
-                "license": "Pexels License",
-                "reason": "The image depicts an indoor hallway, likely residential, and does not show the entrance or facade of a Vantaa employment services office. It fails to meet the 'Actual Vantaa employment services entrance' must_show requirement. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/door-in-a-hall-19866475/"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "676f2a65ba089569d6f6cbf95e325a3bd9788cb4f538dc694980236972c72a2d",
-                "license": "Pexels License",
-                "reason": "The image depicts a subway station entrance, which is not related to the Vantaa employment and integration services office entrance described in the concept. The visible text is in Italian, further indicating it is not the specified location. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/empty-subway-station-entrance-modern-design-35590317/"
-              }
-            ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "Vantaan työllisyyspalvelut sisäänkäynti",
-              "Vantaa kotoutumispalvelut toimipiste",
-              "Vantaa employment services entrance"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Vantaan työllisyyspalvelut sisäänkäynti",
-              "Vantaa kotoutumispalvelut toimipiste",
-              "Vantaa employment services entrance"
+              "ammatillinen koulutus puutyöluokka",
+              "woodworking training workbench",
+              "puutyöpenkki ruuvipenkki"
             ]
           },
           {
@@ -1088,275 +1464,399 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "Vantaan työllisyyspalvelut sisäänkäynti",
-              "Vantaa kotoutumispalvelut toimipiste",
-              "Vantaa employment services entrance"
+              "ammatillinen koulutus puutyöluokka",
+              "woodworking training workbench",
+              "puutyöpenkki ruuvipenkki"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "e5ac6f3983374befeacdc05dc0606963f3d53888dceb215a15b05cbf14228b54",
+                "license": "Pexels License",
+                "reason": "The article discusses legislative proposals from the Finnish government to the Parliament. The selected concept specifically requires a photograph of the *exterior facade* of the Finnish Parliament House, showing its columns and entrance steps. The provided image is an interior view of a grand staircase and columns, which does not match the require",
+                "source_url": "https://www.pexels.com/photo/elegant-roman-architectural-interior-with-columns-35709248/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "a75008c94e78ec6d64095a93b94e093a7b4011110b955c154e3a9ce631cc0507",
+                "license": "Pexels License",
+                "reason": "The article discusses legislative proposals presented to the Finnish Parliament. The selected concept specifically requests an actual photograph of the exterior facade of the Finnish Parliament House, showing its columns and entrance steps. The provided image is an interior view of a grand building, not the exterior of the Finnish Parliament House.",
+                "source_url": "https://www.pexels.com/photo/stairs-in-palacio-da-liberdade-16550604/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "9d6dc1490ba1926a121617eab11e52602013fc82dfd625f755661ee276de04b9",
+                "license": "Pexels License",
+                "reason": "The article discusses government proposals related to education. The selected concept is the facade of the Finnish Parliament House. The image shows an interior staircase, not the exterior facade of the Parliament House. Therefore, it does not depict the required subject or any elements of the must_show list. One or more required concept elements a",
+                "source_url": "https://www.pexels.com/photo/wooden-handrails-on-empty-stairs-18431229/"
+              }
+            ],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "Eduskuntatalo Helsinki julkisivu",
+              "Eduskuntatalo portaat pylväät",
+              "Finnish Parliament House facade"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Eduskuntatalo Helsinki julkisivu",
+              "Eduskuntatalo portaat pylväät",
+              "Finnish Parliament House facade"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Eduskuntatalo Helsinki julkisivu",
+              "Eduskuntatalo portaat pylväät",
+              "Finnish Parliament House facade"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Eduskuntatalo Helsinki julkisivu",
+              "Eduskuntatalo portaat pylväät",
+              "Finnish Parliament House facade"
             ]
           }
         ],
         "selected": {
           "concept_rank": 1,
-          "fit_score": 10,
-          "image_sha256": "30a6b82064b5bb6cb32bc673e5f5bf085c747f37d6023db82eab74271dd1d849",
-          "kind": "generated"
+          "fit_score": 9,
+          "image_sha256": "ac75af2a9bd33f2eb4ce4cf0427602f4b6a3a47fea61d2e97249976d86642f4d",
+          "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "30a6b82064b5bb6cb32bc673e5f5bf085c747f37d6023db82eab74271dd1d849",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "Sähköpostitse lähetetty kutsu asiakastyytyväisyyskyselyyn",
-      "url": "https://uutistenlukija.fi/media/30a6b82064b5bb6cb32bc673e5f5bf085c747f37d6023db82eab74271dd1d849.jpg"
+      "source_url": "https://unsplash.com/photos/empty-classroom-with-desks-and-chairs-in-rows-G_-B7DGgvgg?utm_source=uutistenlukija&utm_medium=referral",
+      "stock_provenance": {
+        "download_tracking": {
+          "successful": true,
+          "url": "https://api.unsplash.com/photos/G_-B7DGgvgg/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxlbXB0eSUyMHNlY29uZGFyeSUyMHNjaG9vbCUyMGNsYXNzcm9vbXxlbnwwfDB8fHwxNzkwODU3MTExfDA"
+        },
+        "image_url": "https://images.unsplash.com/photo-1784989966321-57af9b304271?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxlbXB0eSUyMHNlY29uZGFyeSUyMHNjaG9vbCUyMGNsYXNzcm9vbXxlbnwwfDB8fHwxNzkwODU3MTExfDA&w=1536&q=80&fm=jpg&fit=crop",
+        "photo_id": "G_-B7DGgvgg",
+        "photo_url": "https://unsplash.com/photos/empty-classroom-with-desks-and-chairs-in-rows-G_-B7DGgvgg?utm_source=uutistenlukija&utm_medium=referral",
+        "photographer": "Brecht Corbeel",
+        "photographer_url": "https://unsplash.com/@brechtcorbeel?utm_source=uutistenlukija&utm_medium=referral",
+        "provider": "unsplash",
+        "query": "empty secondary school classroom",
+        "retrieved_at": "2026-10-01T12:18:33Z"
+      },
+      "stock_provenance_sha256": "00897a263d1903d19bc1a5accf8247b15fdd11c97397ed48676ff400fd6375cf",
+      "url": "https://images.unsplash.com/photo-1784989966321-57af9b304271?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxlbXB0eSUyMHNlY29uZGFyeSUyMHNjaG9vbCUyMGNsYXNzcm9vbXxlbnwwfDB8fHwxNzkwODU3MTExfDA&w=1536&q=80&fm=jpg&fit=crop"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "vantaa",
+      "provider": "valtioneuvosto",
       "related_sources": 0,
-      "source_fields_sha256": "839432e150079b516f871ff9be54090c92a1e9174d8da88a9d0f6f49ecd5c7cb",
-      "source_sha256": "ac540d60f591b28ba1b35df9efecfdd824051994ea3f45dd8b9d8dae0623b477"
+      "source_fields_sha256": "be2d49b2163f588db0de04e24449d51c3a1a17d46b3b0c91513192eff8515b1a",
+      "source_sha256": "8cb7cf5c60cb7b81a85551b3132f92010b5304d9fade66aaa531c8db1b2054d3"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-10-01T00:00:00+03:00",
-        "publisher": "Vantaan kaupunki",
+        "published_at": "2026-10-01T14:32+0300",
+        "publisher": "Valtioneuvoston kanslia",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
-          "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://hri.fi/fi/kayttoehdot/"
+          "license": "Valtioneuvoston sivuston käyttöehdot: tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan; aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen",
+          "license_url": "https://valtioneuvosto.fi/tietoa-sivustosta",
+          "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
+          "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
         },
-        "text": "Asiakkaiden näkemyksiä palveluista kartoitetaan asiakastyytyväisyyskyselyllä. Kyselyn avulla kerätään tietoa siitä, missä palveluissa on onnistuttu ja millaisia kehittämistarpeita asiakkaat tunnistavat.\nTyönhakija-asiakkaille on lähetty sähköpostiviesti, joka sisältää linkin asiakastyytyväisyyskyselyyn. Kyselyyn vastataan nimettömästi, eikä vastaajaa voida yhdistää annettuun palautteeseen.\nKyselyn toteutuksesta vastaa tutkimusyritys Bondata.\nAvainsanat\nTyöllisyys\nTyöllistäminen\nTyöttömyys\n…\nShow all keywords",
-        "title": "Asiakastyytyväisyyskyselyllä kehitetään Vantaan työllisyyden ja kotoutumisen palvelualuetta",
-        "url": "https://www.vantaa.fi/fi/ajankohtaista/uutinen/asiakastyytyvaisyyskyselylla-kehitetaan-vantaan-tyollisyyden-ja-kotoutumisen-palvelualuetta"
+        "text": "Lakimuutoksilla turvataan toisen asteen koulutus myös poikkeusoloissa ja häiriötilanteissa\nopetus- ja kulttuuriministeriö\nJulkaisuajankohta\n1.10.2026\n14.32\nTyyppi:Tiedote\nAmmatillisesta koulutuksesta annettua lakia, lukiolakia, lakia tutkintokoulutukseen valmentavasta koulutuksesta sekä ylioppilastutkintolakia muutetaan. Laeilla on tarkoitus turvata koulutuksen järjestäminen myös poikkeusoloissa ja häiriötilanteissa. Hallitus antoi lakiesitykset eduskunnalle torstaina 1.10.\nMuutosten tavoitteena on vahvistaa koulutusjärjestelmän toimintakykyä sekä turvata opiskelijoiden mahdollisuudet suorittaa opintoja myös poikkeusoloissa ja häiriötilanteissa.\nEsityksen mukaan ammatillisen koulutuksen ja lukiokoulutuksen yksityisoikeudellisille koulutuksen järjestäjille säädettäisiin velvollisuus varautua poikkeusoloihin ja häiriötilanteisiin. Poikkeusoloilla tarkoitetaan valmiuslain mukaisia poikkeusoloja. Tällaisissa tilanteissa koulutuksen järjestämisessä olisi ensisijaisesti turvattava oppivelvollisuuslain mukainen maksuton koulutus lukioissa, ammatillisessa koulutuksessa ja tutkintokoulutukseen valmentavassa koulutuksessa.\nAmmatillisesta koulutuksesta annettuun lakiin ehdotetaan säännöksiä, jotka mahdollistaisivat osaamisen osoittamisen myös poikkeusoloissa ja häiriötilanteissa sellaisilla käytännön tehtävillä, jotka vastaavat mahdollisimman hyvin aitoja työtilanteita ja työprosesseja. Lisäksi koulutuksen järjestäjä voisi tällaisissa tilanteissa poiketa henkilökohtaisen osaamisen kehittämissuunnitelman laatimiseen ja päivittämiseen liittyvistä yhteistyövelvoitteista.\nLukiolakiin esitetään valtuutusta säätää valtioneuvoston asetuksella poikkeuksia opetusjärjestelyihin, kuten opintojen mitoitukseen, rakenteeseen ja laajuuteen poikkeusoloissa ja häiriötilanteissa.\nTutkintokoulutukseen valmentavasta koulutuksesta annettuun lakiin lisättäisiin säännös, jonka perusteella koulutuksen järjestäjä voisi päättää etäopetukseen siirtymisestä poikkeusoloissa ja häiriötilanteissa.\nLisäksi ylioppilastutkintolakia muutettaisiin siten, että opetus- ja kulttuuriministeriö voisi poikkeusoloissa ja häiriötilanteissa päättää ylioppilastutkinnon kokeiden siirtämisestä enintään kolmella kuukaudella kerrallaan.\nLakimuutosten on tarkoitus tulla voimaan vuoden 2027 alusta.\nLisätietoja: hallitusneuvos Anna Kankaanpää, puh. 02953 30013",
+        "title": "Lakimuutoksilla turvataan toisen asteen koulutus myös poikkeusoloissa ja häiriötilanteissa",
+        "url": "https://valtioneuvosto.fi/-/1410845/lakimuutoksilla-turvataan-toisen-asteen-koulutus-myos-poikkeusoloissa-ja-hairiotilanteissa"
       }
     ],
-    "story_key": "url:https://www.vantaa.fi/fi/ajankohtaista/uutinen/asiakastyytyvaisyyskyselylla-kehitetaan-vantaan-tyollisyyden-ja-kotoutumisen-palvelualuetta",
+    "story_key": "url:https://valtioneuvosto.fi/-/1410845/lakimuutoksilla-turvataan-toisen-asteen-koulutus-myos-poikkeusoloissa-ja-hairiotilanteissa",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-10-01T10:49:42.385878+00:00",
-        "sha256": "998ed617f3e92fbf402f0905e88a7be944512a447550142a50131d8e3f89cf76",
-        "text": "Käyttöoikeus määritellyin ehdoin hyödynnettävissä. Datan käytön lisäksi Palvelussa on mahdollisuus keskusteluun.\nKäyttöoikeus\nPalvelu sisältää dataa useasta eri lähteestä: julkisyhteisöjen tuottamia datoja ja niiden metatietoja, Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja ja Palvelun ylläpitäjien tuottamia artikkeleja ja muita kirjoituksia. Pääsääntöisesti näihin kaikkiin on laaja käyttöoikeus Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Poikkeukset on kerrottu erikseen kunkin aineiston kohdalla.\nAvoin data\nPalvelussa olevien datojen (tietoaineistojen) omistus- ja immateriaalioikeudet kuuluvat kunkin datan tekijälle.\nPääsääntöisesti Palvelun käyttäjillä on laaja käyttöoikeus datoihin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Datoja saa vapaasti kopioida, levittää, näyttää ja esittää sekä käyttää datoja osana muuta teosta. Datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin.\nEhtona käytölle on, että datan tekijä (ylläpitäjä) on ilmoitettava. Datan tekijän pyynnöstä tämä viittaus on poistettava. Datan tekijä on kerrottu kunkin datan metadatassa.\nDatan tekijää ei saa ilmoittaa siten, että ilmoitus viittaisi datan tekijän tai Palvelun tukevan datan käyttäjää tai datan käyttötapaa.\nDatojen metatietojen yhteydessä on mainittu kyseisen datan käyttöoikeusehdot. Joissakin tapauksissa käyttöoikeusehdot voivat poiketa yllä mainitusta.\nKeskustelu\nPalvelun käyttäjät voivat keskusteluosiossa lisätä sivuille kirjoituksia ja kommentoida toisten käyttäjien kirjoituksia. Palvelun käyttäjä antaa kirjoituksiinsa ja kommentteihinsa vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nMikäli käyttäjä liittää kirjoitukseensa tai kommenttiinsa kuvia, tulee hänellä olla tekijänoikeudet kuvaan. Lisäksi hänellä tulee olla kuvassa esiintyvien henkilöiden lupa kuvan julkaisemiseen internetissä. Palvelun käyttäjä antaa kuviin vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nKeskustelun tulee olla hyvän tavan ja Suomen lainsäädännön mukaista. Käyttäjät ovat vastuussa lisäämistään kirjoituksista ja kommenteista.\nKaikenlainen mainonta keskustelussa on kielletty.\nPalvelun tarjoajat voivat tarvittaessa muokata kirjoituksia ja kommentteja sekä poistaa hyvän tavan tai lainsäädännön vastaisia tai muutoin sopimattomia kirjoituksia.\nMikäli käyttäjä havaitsee käyttöehtojen vastaisia kirjoituksia, pyydetään tästä ilmoittamaan ylläpidolle.\nToistuva käyttöehtojen rikkominen tai niiden vakava rikkominen voi johtaa väliaikaiseen tai pysyvään Palvelun käyttöoikeuden peruuttamiseen.\nSovellusgalleria\nSovellusgalleriassa esitellyt sovellukset eivät ole HRI:n tekemiä ja niiden tekijänoikeudet kuuluvat sovellusten tekijöille. Creative Commons 4.0 -lisenssi ei koske sovelluksia, eikä niitä ole lupa vapaasti kopioida, levittää, muokata tai yhdistellä, ellei erikseen sovelluksen kohdalla ole toisin mainittu tai sovelluksen tekijä muutoin ole tähän antanut lupaa.\nMuut palvelussa olevat kirjoitukset\nPalvelun tuottajien Palvelussa julkaisemien kirjoitusten, kuten artikkelien ja blogikirjoitusten omistus- ja tekijänoikeudet kuuluvat niiden kirjoittajille. Palvelun käyttäjillä on laaja käyttöoikeus näihin kirjoituksiin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nPalvelun ulkoasu, tekninen toteutus, tavaramerkit ja logot\nPalvelun teknisen toteutuksen lähdekoodit on saatavilla avoimesti GitHubista. Palvelun kopiointi sellaisenaan on kielletty. Palvelussa esiintyvien tavaramerkkien ja logojen tavaramerkkioikeudet kuuluvat niiden oikeudenhaltijoille. Mikäli tavaramerkkien ja logojen muu käyttö on sallittu, on tästä ja käytön ehdoista ilmoitettu ko. tavaramerkkien ja logojen kohdalla.\nTietosuoja\nhri.fi-palvelua ylläpitää Helsingin kaupunki. Kaupunki on sitoutunut suojaamaan verkkopalveluidensa käyttäjien yksityisyyttä Tietosuojalain (2018), EU:n tietosuoja-asetuksen (2016/679) sekä muun soveltuvan lainsäädännön mukaisesti.\nHelsingin kaupungin tietosuojasivut\nVastuuvapaus\nPalvelu sisältää sekä julkisyhteisöjen tuottamaa avointa dataa ja metadataa että Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja. Palvelun tarjoajat eivät vastaa Palvelussa olevien tietojen oikeellisuudesta. Palvelun käyttäjä käyttää Palvelussa olevaa avointa dataa omalla vastuullaan. Palvelun tarjoajat eivät vastaa mistään välittömistä tai välillisistä vahingoista, jotka aiheutuvat datan käytöstä. ",
-        "url": "https://hri.fi/fi/kayttoehdot/"
+        "retrieved_at": "2026-10-01T12:00:21.686131+00:00",
+        "sha256": "6b96236d2aabe514ac3c1a0759c21a4dde8a35210c04e0f502cfb806161c84ec",
+        "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
+        "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
       }
     ]
   },
   "draft": {
     "category": "Kotimaa",
     "image": {
-      "alt": "AI-generoitu kuva: Harmaa kannettava tietokone on vaalealla puupöydällä, ja sen näytöllä näkyy verkkokyselylomake valintapainikkeineen.",
-      "attempts": 1,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Tyhjä luokkahuone, jossa on riveittäin pulpetteja ja tuoleja. Etuseinällä on tyhjä valkoinen opetustaulu ja oikealla kaappeja.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
         "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Kannettava tietokone tyhjällä työpöydällä. Näytöllä on yleisluonteinen verkkokyselylomake, jossa näkyy allekkain valintapainikkeiden rivejä ilman luettavaa tekstiä. Näkymä ei jäljittele Vantaan tai Bondatan todellista kyselyä.",
+            "depictable_scene": "Nimeämättömän lukion tyhjä luokkahuone, jossa pöydät ja tuolit ovat riveissä ja etuseinällä on tyhjä opetustaulu. Ikkunoista tulee luonnonvaloa.",
             "must_avoid": [
               "People or body parts",
-              "Readable text, logos or personal data",
-              "Replica of the actual Vantaa or Bondata survey"
+              "Readable text or logos",
+              "Damage or emergency staging"
             ],
             "must_show": [
-              "Laptop on a desk",
-              "On-screen survey with selection circles"
+              "Classroom desks and chairs",
+              "Blank teaching board"
             ],
             "rank": 1,
             "safe_to_generate": true,
             "search_queries": [
-              "asiakastyytyväisyyskysely tietokoneella",
-              "verkkokysely kannettava tietokone",
-              "online survey laptop",
-              "customer feedback questionnaire screen"
+              "lukion tyhjä luokkahuone",
+              "empty secondary school classroom",
+              "classroom desks chairs"
             ],
-            "subject": "Sähköpostitse lähetetty kutsu asiakastyytyväisyyskyselyyn"
+            "subject": "lukioiden opetusjärjestelyihin liittyvä tyhjä luokkahuone"
           },
           {
-            "depictable_scene": "Todellinen valokuva Vantaan työllisyyden ja kotoutumisen palvelujen toimipisteen sisäänkäynnistä. Rajauksessa näkyvät sisäänkäynti ja sitä ympäröivä julkisivu.",
+            "depictable_scene": "Nimeämättömän ammatillisen oppilaitoksen puutyöluokan tyhjä työpiste, jossa on puinen työpenkki, siihen kiinnitetty ruuvipenkki ja höylättävä puukappale.",
             "must_avoid": [
-              "Unrelated municipal building",
-              "Identifiable jobseeker clients"
+              "People or body parts",
+              "Readable text or logos",
+              "Accident or damage staging"
             ],
             "must_show": [
-              "Actual Vantaa employment services entrance"
+              "Woodworking bench with vise",
+              "Wooden workpiece"
             ],
             "rank": 2,
+            "safe_to_generate": true,
+            "search_queries": [
+              "ammatillinen koulutus puutyöluokka",
+              "woodworking training workbench",
+              "puutyöpenkki ruuvipenkki"
+            ],
+            "subject": "Ammatillisessa koulutuksessa käytettävä työpiste"
+          },
+          {
+            "depictable_scene": "Todellinen valokuva Helsingin Eduskuntatalon pääjulkisivusta: pylväsrivi ja leveät portaat näkyvät rakennuksen edessä.",
+            "must_avoid": [
+              "Invented or altered building architecture",
+              "Protest or emergency scene unrelated to the article"
+            ],
+            "must_show": [
+              "Actual Finnish Parliament House facade",
+              "Columns and entrance steps"
+            ],
+            "rank": 3,
             "safe_to_generate": false,
             "search_queries": [
-              "Vantaan työllisyyspalvelut sisäänkäynti",
-              "Vantaa kotoutumispalvelut toimipiste",
-              "Vantaa employment services entrance",
-              "employment office entrance facade"
+              "Eduskuntatalo Helsinki julkisivu",
+              "Eduskuntatalo portaat pylväät",
+              "Finnish Parliament House facade"
             ],
-            "subject": "Vantaan työllisyyden ja kotoutumisen palvelujen toimipiste"
+            "subject": "hallitus antoi eduskunnalle koulutusta koskevat esitykset"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "A grey laptop sits on a light wooden desk. The laptop screen displays a white web page with multiple rows of circular selection buttons, some of which are filled in blue. In the background, a window with a plant on the sill is visible.",
-      "generated": true,
-      "license": "AI-generated image",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/30a6b82064b5bb6cb32bc673e5f5bf085c747f37d6023db82eab74271dd1d849.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by Brecht Corbeel on Unsplash",
+      "depicted": "The image shows a classroom with multiple student desks and chairs. The desks have light brown wooden tops and dark gray bases with metal legs. The chairs are dark blue with metal frames. In the foreground, a desk and chair are partially visible. In the midground, there are several rows of desks and chairs, with some chairs tucked under the desks and others pulled out. In the background, there are wooden cabinets with white countertops. Above the cabinets, there are white shelves or structures, ",
+      "generated": false,
+      "hotlink": true,
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
       "pixel_review": {
-        "alt_fi": "Harmaa kannettava tietokone on vaalealla puupöydällä, ja sen näytöllä näkyy verkkokyselylomake valintapainikkeineen.",
+        "alt_fi": "Tyhjä luokkahuone, jossa on riveittäin pulpetteja ja tuoleja. Etuseinällä on tyhjä valkoinen opetustaulu ja oikealla kaappeja.",
         "approved": true,
-        "article_text_sha256": "64b1353a8daeeda5a94650844b78be5b4936fc359a5af7fe2620cf2af3f20a86",
-        "concept_sha256": "9a4db34260be5308e342f203adab444a8770f5abf9c681a8a58545af72c0ed52",
-        "description": "A grey laptop sits on a light wooden desk. The laptop screen displays a white web page with multiple rows of circular selection buttons, some of which are filled in blue. In the background, a window with a plant on the sill is visible.",
-        "fit_score": 10,
-        "image_sha256": "30a6b82064b5bb6cb32bc673e5f5bf085c747f37d6023db82eab74271dd1d849",
+        "article_text_sha256": "263d4af1f1a203680477e70d7872c2e6d0d4b662fe56ac341998c1bcc64d7eaa",
+        "concept_sha256": "97953db45745d5f587219131d7ea3aa7103ea945b636b0e8c6ddff5277760b42",
+        "description": "An empty classroom with rows of desks and chairs. The front wall has a blank white board. Natural light comes from windows on the left. On the right, there are wooden cabinets with some old computer monitors and a sink.",
+        "fit_score": 9,
+        "image_sha256": "ac75af2a9bd33f2eb4ce4cf0427602f4b6a3a47fea61d2e97249976d86642f4d",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image directly depicts a laptop on a desk with an on-screen survey, matching the selected concept perfectly. The survey form is generic, avoiding any specific branding or readable text, which aligns with the 'must_avoid' criteria. The scene is relevant to the article about an online customer satisfaction survey.",
-        "reviewed_at": "2026-10-01T11:23:53.420895+00:00",
+        "reason": "The image clearly depicts an empty classroom with desks, chairs, and a blank teaching board, which directly matches the selected concept of an empty high school classroom. This scene is highly relevant to the article's discussion of high school education arrangements during exceptional circumstances.",
+        "reviewed_at": "2026-10-01T12:18:36.774258+00:00",
         "text_audit": {
           "examples": [],
           "readable_text_present": false
         }
       },
       "pixels": {
-        "height": 1024,
+        "height": 864,
         "mode": "RGB",
-        "variance": 7888.3,
+        "variance": 4694.7,
         "width": 1536
       },
-      "prompt_sha256": "864185f5430a7309c4cb50ae942effd316f021dd7dd1b35205343d8efa2e2190",
-      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Kannettava tietokone tyhjällä työpöydällä. Näytöllä on yleisluonteinen verkkokyselylomake, jossa näkyy allekkain valintapainikkeiden rivejä ilman luettavaa tekstiä. Näkymä ei jäljittele Vantaan tai Bondatan todellista kyselyä.",
+        "evidence": "An empty classroom with rows of desks and chairs. The front wall has a blank white board. Natural light comes from windows on the left. On the right, there are wooden cabinets with some old computer monitors and a sink.",
         "matched": [
-          "Laptop on a desk",
-          "On-screen survey with selection circles"
+          "blank",
+          "board",
+          "chairs",
+          "classroom",
+          "desk"
         ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "method": "vision",
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "64b1353a8daeeda5a94650844b78be5b4936fc359a5af7fe2620cf2af3f20a86",
-        "decision_sha256": "990e1c2929d1e8ef70a25ef53df8263c23d9f13dbbdaa079e7385c6eba93406a",
+        "article_text_sha256": "263d4af1f1a203680477e70d7872c2e6d0d4b662fe56ac341998c1bcc64d7eaa",
+        "decision_sha256": "ca255c8b734a7f9f40d99312ac41abc49ad88d6f5466023fcc7691dc5bfcf39c",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "asiakastyytyväisyyskysely tietokoneella",
-              "verkkokysely kannettava tietokone",
-              "online survey laptop"
-            ]
-          },
-          {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "b258be35d294a0a098256603d3fab8f1a84a578ce92c2be9c2ff580aba9bec9a",
+                "fit_score": 6,
+                "image_sha256": "7153fe445442dd932dbd1a4724f4bbe2b273bca566ee334f46657f03ce54c8f2",
                 "license": "Pexels License",
-                "reason": "The image shows a laptop on a desk, but the screen does not display a survey with selection circles. Instead, it shows a bar chart. The concept specifically requires an on-screen survey. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/a-man-in-black-suit-jacket-sitting-at-a-desk-with-a-laptop-beside-a-mug-5716019/"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "ecde809c5f757d420d6b35016e8d08fefb723860ccd741756dab67045e38601d",
-                "license": "Pexels License",
-                "reason": "The image shows a laptop on a desk, but the screen is severely damaged and displays no survey or readable content. The concept requires an on-screen survey with selection circles, which is entirely absent. The presence of a person also violates a 'must_avoid' constraint. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/a-woman-with-a-hijab-sitting-at-a-table-with-a-laptop-28380000/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "4c502bbfab943175da57630190e9912503a6641a023f11850cf3302e8c54b848",
-                "license": "Pexels License",
-                "reason": "The article discusses a customer satisfaction survey for employment and integration services. The selected concept describes a laptop on a desk with an on-screen survey. The actual pixels show a laptop on a desk, but the screen is broken and displays colorful static, not a survey. Therefore, the 'on-screen survey with selection circles' must_show e",
-                "source_url": "https://www.pexels.com/photo/a-person-is-using-a-laptop-with-a-broken-screen-28379998/"
+                "reason": "The image shows a classroom, which broadly relates to the article's topic of education. However, the concept specifies 'Classroom desks and chairs' in rows and a 'Blank teaching board'. The image has a large table in the foreground, not desks in rows, and the board is a cork board with papers, not a blank teaching board. The visible text on the pap",
+                "source_url": "https://www.pexels.com/photo/brown-cork-board-with-white-paper-10211162/"
               },
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "9d5350479012e00d1897a8be1490655914cf7b01747d0d136208b28ee4f98769",
+                "image_sha256": "3e47e0388241362a9f2994f14e4abd1a730a0f94dce1edd2d65827cfbb3ae059",
                 "license": "Pexels License",
-                "reason": "The image shows a laptop on a desk, but the screen displays a login prompt, not an on-screen survey with selection circles as required by the concept. Therefore, a key 'must_show' element is missing. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/laptops-in-a-classroom-20432872/"
+                "reason": "The whiteboard is not blank as required by the concept, and it contains readable text ('Hello School', 'Hoo Ray!'), which is explicitly forbidden by the 'must_avoid' list. The image also contains a small amount of readable text on the wall ('HOW I'). One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/photo-of-a-classroom-8423430/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "569a6e8722f13e91d6032de01a20b5d6f2b77cc633f8ece1d1db7e1b48a32635",
+                "license": "Pexels License",
+                "reason": "The image depicts an empty classroom with desks and chairs, which aligns with the article's theme of education and the concept's request for 'Classroom desks and chairs'. However, the concept also requires a 'Blank teaching board', which is not present in the image. Instead, there is a bulletin board with photos and a drawing with text, which also ",
+                "source_url": "https://www.pexels.com/photo/interior-design-of-a-classroom-8423423/"
+              },
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "88e067be90fb4bb0e6e4acdf7cc535f23a2868f1b1c2b0f6e0b20832aab194f7",
+                "license": "Pexels License",
+                "reason": "The image shows classroom desks and chairs, which aligns with the concept. However, it lacks a visible blank teaching board, which is a 'must_show' element. The article discusses flexibility in secondary education during emergencies, and an empty classroom is a relevant visual, but the missing element reduces the fit score and prevents approval. On",
+                "source_url": "https://www.pexels.com/photo/empty-classroom-desks-in-buenos-aires-university-setting-37822424/"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "asiakastyytyväisyyskysely tietokoneella",
-              "verkkokysely kannettava tietokone",
-              "online survey laptop"
+              "lukion tyhjä luokkahuone",
+              "empty secondary school classroom",
+              "classroom desks chairs"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "ac75af2a9bd33f2eb4ce4cf0427602f4b6a3a47fea61d2e97249976d86642f4d",
+                "license": "Unsplash License",
+                "reason": "The image clearly depicts an empty classroom with desks, chairs, and a blank teaching board, which directly matches the selected concept of an empty high school classroom. This scene is highly relevant to the article's discussion of high school education arrangements during exceptional circumstances.",
+                "source_url": "https://unsplash.com/photos/empty-classroom-with-desks-and-chairs-in-rows-G_-B7DGgvgg?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "accepted",
+            "provider": "unsplash",
+            "queries": [
+              "lukion tyhjä luokkahuone",
+              "empty secondary school classroom",
+              "classroom desks chairs"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "ee36c41899040be79f7d40059fc1ef4da862b2f8098255a39104ac96645530d6",
-                "license": "Unsplash License",
-                "reason": "The article discusses a customer satisfaction survey sent via email. The selected concept requires a laptop on a desk with an on-screen survey showing selection circles. The image shows a laptop and hands typing, but the screen is dark and does not display any survey or selection circles. Therefore, it fails to meet the 'On-screen survey with selec",
-                "source_url": "https://unsplash.com/photos/person-using-laptop-vZJdYl5JVXY?utm_source=uutistenlukija&utm_medium=referral"
+                "fit_score": 0,
+                "image_sha256": "ce222374d4b4f418d92a77f9092a24205e50857d487e879e84770c0180870ace",
+                "license": "Pexels License",
+                "reason": "The article discusses proposed legislative changes to ensure the continuity of secondary education during exceptional circumstances and disruptions, including vocational training and general upper secondary education. The selected concept describes an empty woodworking bench in a vocational school. The actual pixels show several children drawing or",
+                "source_url": "https://www.pexels.com/photo/smiling-children-writing-on-table-9835472/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "a9dfc130545ced9fa1ff30ccceebadd9fd563ca6615f6bfac49aef8188b07c3f",
+                "license": "Pexels License",
+                "reason": "The article discusses proposed legislative changes to ensure the continuity of secondary education during exceptional circumstances and disruptions, focusing on vocational training and high school. The selected concept is a woodworking bench in a vocational school. The image shows an old building and a street scene, which is entirely unrelated to t",
+                "source_url": "https://www.pexels.com/photo/historic-wooden-architecture-in-tallinn-s-kassisaba-district-37998769/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "d8bb3c1691138c83a5d3cd6655bc609650f446b5b0c5a84a307e3a7c37adddc0",
+                "license": "Pexels License",
+                "reason": "The image depicts lockers or cubbies, which are not a woodworking bench with a vise or a wooden workpiece. Therefore, it does not match the selected concept. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/selective-focus-photography-of-a-metal-hook-screwed-on-a-wall-2675052/"
               },
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "f4f7a21ebecfc71da2cfaa924bcc5ee5cdfcdf2115d8703e49eee3f74f0c16c5",
-                "license": "Unsplash License",
-                "reason": "The image shows a laptop on a desk, but the screen does not display a survey with selection circles. Instead, it shows a gallery of various images, which does not match the 'On-screen survey with selection circles' must_show element. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/turned-on-acer-laptop-on-table-near-cup-zwsHjakE_iI?utm_source=uutistenlukija&utm_medium=referral"
+                "image_sha256": "5f264053212a1890bc5be6c563b49b97c4e31905d4f75e7f2b5913c26d26bebb",
+                "license": "Pexels License",
+                "reason": "The image shows a woodworking scene with wood shavings, a ruler, and a clamp, which broadly relates to vocational training in woodworking. However, the selected concept specifically requires a 'woodworking bench with vise' and a 'wooden workpiece'. The image does not clearly show a woodworking bench with a vise, nor is there a distinct wooden workp",
+                "source_url": "https://www.pexels.com/photo/close-up-shot-of-carpentry-tools-6790034/"
               }
             ],
-            "concept_rank": 1,
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "ammatillinen koulutus puutyöluokka",
+              "woodworking training workbench",
+              "puutyöpenkki ruuvipenkki"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "32b3ec13c461b918dd4f4c3a74e5251d45fd9b491b0f6cf2e6d8e4cd54dabfe9",
+                "license": "Unsplash License",
+                "reason": "The image does not depict a woodworking bench with a vise or a wooden workpiece, which are essential elements of the selected concept. The visible objects are unrelated to the concept of a vocational school woodworking class. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/a-bench-sitting-on-a-wooden-deck-next-to-a-white-building-Z6jGDdv41jw?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "4ed21dc633f61dda499a8c44919c1d9318fd09cf0ee9da7127877a4deb8b852a",
+                "license": "Unsplash License",
+                "reason": "The image depicts a red building with a flag and a person sitting on a bench, which is entirely unrelated to the article's subject of educational reforms or the selected concept of a woodworking bench. The image does not show any elements related to education, vocational training, or woodworking. One or more required concept elements are not visibl",
+                "source_url": "https://unsplash.com/photos/woman-in-white-shirt-sitting-on-gray-concrete-bench-near-brown-concrete-building-during-daytime-nu96-SLn4Mk?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "asiakastyytyväisyyskysely tietokoneella",
-              "verkkokysely kannettava tietokone",
-              "online survey laptop"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "asiakastyytyväisyyskysely tietokoneella",
-              "verkkokysely kannettava tietokone",
-              "online survey laptop"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
+              "ammatillinen koulutus puutyöluokka",
+              "woodworking training workbench",
+              "puutyöpenkki ruuvipenkki"
             ]
           },
           {
@@ -1365,48 +1865,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Vantaan työllisyyspalvelut sisäänkäynti",
-              "Vantaa kotoutumispalvelut toimipiste",
-              "Vantaa employment services entrance"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "9e958600cdc456ffdbf40c5bbae820261cdf9ce485e222442e5ce6804a6a5677",
-                "license": "Pexels License",
-                "reason": "The image depicts an indoor hallway, likely residential, and does not show the entrance or facade of a Vantaa employment services office. It fails to meet the 'Actual Vantaa employment services entrance' must_show requirement. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/door-in-a-hall-19866475/"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "676f2a65ba089569d6f6cbf95e325a3bd9788cb4f538dc694980236972c72a2d",
-                "license": "Pexels License",
-                "reason": "The image depicts a subway station entrance, which is not related to the Vantaa employment and integration services office entrance described in the concept. The visible text is in Italian, further indicating it is not the specified location. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/empty-subway-station-entrance-modern-design-35590317/"
-              }
-            ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "Vantaan työllisyyspalvelut sisäänkäynti",
-              "Vantaa kotoutumispalvelut toimipiste",
-              "Vantaa employment services entrance"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Vantaan työllisyyspalvelut sisäänkäynti",
-              "Vantaa kotoutumispalvelut toimipiste",
-              "Vantaa employment services entrance"
+              "ammatillinen koulutus puutyöluokka",
+              "woodworking training workbench",
+              "puutyöpenkki ruuvipenkki"
             ]
           },
           {
@@ -1415,50 +1876,145 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "Vantaan työllisyyspalvelut sisäänkäynti",
-              "Vantaa kotoutumispalvelut toimipiste",
-              "Vantaa employment services entrance"
+              "ammatillinen koulutus puutyöluokka",
+              "woodworking training workbench",
+              "puutyöpenkki ruuvipenkki"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "e5ac6f3983374befeacdc05dc0606963f3d53888dceb215a15b05cbf14228b54",
+                "license": "Pexels License",
+                "reason": "The article discusses legislative proposals from the Finnish government to the Parliament. The selected concept specifically requires a photograph of the *exterior facade* of the Finnish Parliament House, showing its columns and entrance steps. The provided image is an interior view of a grand staircase and columns, which does not match the require",
+                "source_url": "https://www.pexels.com/photo/elegant-roman-architectural-interior-with-columns-35709248/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "a75008c94e78ec6d64095a93b94e093a7b4011110b955c154e3a9ce631cc0507",
+                "license": "Pexels License",
+                "reason": "The article discusses legislative proposals presented to the Finnish Parliament. The selected concept specifically requests an actual photograph of the exterior facade of the Finnish Parliament House, showing its columns and entrance steps. The provided image is an interior view of a grand building, not the exterior of the Finnish Parliament House.",
+                "source_url": "https://www.pexels.com/photo/stairs-in-palacio-da-liberdade-16550604/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "9d6dc1490ba1926a121617eab11e52602013fc82dfd625f755661ee276de04b9",
+                "license": "Pexels License",
+                "reason": "The article discusses government proposals related to education. The selected concept is the facade of the Finnish Parliament House. The image shows an interior staircase, not the exterior facade of the Parliament House. Therefore, it does not depict the required subject or any elements of the must_show list. One or more required concept elements a",
+                "source_url": "https://www.pexels.com/photo/wooden-handrails-on-empty-stairs-18431229/"
+              }
+            ],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "Eduskuntatalo Helsinki julkisivu",
+              "Eduskuntatalo portaat pylväät",
+              "Finnish Parliament House facade"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Eduskuntatalo Helsinki julkisivu",
+              "Eduskuntatalo portaat pylväät",
+              "Finnish Parliament House facade"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Eduskuntatalo Helsinki julkisivu",
+              "Eduskuntatalo portaat pylväät",
+              "Finnish Parliament House facade"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Eduskuntatalo Helsinki julkisivu",
+              "Eduskuntatalo portaat pylväät",
+              "Finnish Parliament House facade"
             ]
           }
         ],
         "selected": {
           "concept_rank": 1,
-          "fit_score": 10,
-          "image_sha256": "30a6b82064b5bb6cb32bc673e5f5bf085c747f37d6023db82eab74271dd1d849",
-          "kind": "generated"
+          "fit_score": 9,
+          "image_sha256": "ac75af2a9bd33f2eb4ce4cf0427602f4b6a3a47fea61d2e97249976d86642f4d",
+          "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "30a6b82064b5bb6cb32bc673e5f5bf085c747f37d6023db82eab74271dd1d849",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "Sähköpostitse lähetetty kutsu asiakastyytyväisyyskyselyyn",
-      "url": "https://uutistenlukija.fi/media/30a6b82064b5bb6cb32bc673e5f5bf085c747f37d6023db82eab74271dd1d849.jpg"
+      "source_url": "https://unsplash.com/photos/empty-classroom-with-desks-and-chairs-in-rows-G_-B7DGgvgg?utm_source=uutistenlukija&utm_medium=referral",
+      "stock_provenance": {
+        "download_tracking": {
+          "successful": true,
+          "url": "https://api.unsplash.com/photos/G_-B7DGgvgg/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxlbXB0eSUyMHNlY29uZGFyeSUyMHNjaG9vbCUyMGNsYXNzcm9vbXxlbnwwfDB8fHwxNzkwODU3MTExfDA"
+        },
+        "image_url": "https://images.unsplash.com/photo-1784989966321-57af9b304271?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxlbXB0eSUyMHNlY29uZGFyeSUyMHNjaG9vbCUyMGNsYXNzcm9vbXxlbnwwfDB8fHwxNzkwODU3MTExfDA&w=1536&q=80&fm=jpg&fit=crop",
+        "photo_id": "G_-B7DGgvgg",
+        "photo_url": "https://unsplash.com/photos/empty-classroom-with-desks-and-chairs-in-rows-G_-B7DGgvgg?utm_source=uutistenlukija&utm_medium=referral",
+        "photographer": "Brecht Corbeel",
+        "photographer_url": "https://unsplash.com/@brechtcorbeel?utm_source=uutistenlukija&utm_medium=referral",
+        "provider": "unsplash",
+        "query": "empty secondary school classroom",
+        "retrieved_at": "2026-10-01T12:18:33Z"
+      },
+      "stock_provenance_sha256": "00897a263d1903d19bc1a5accf8247b15fdd11c97397ed48676ff400fd6375cf",
+      "url": "https://images.unsplash.com/photo-1784989966321-57af9b304271?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwxfHxlbXB0eSUyMHNlY29uZGFyeSUyMHNjaG9vbCUyMGNsYXNzcm9vbXxlbnwwfDB8fHwxNzkwODU3MTExfDA&w=1536&q=80&fm=jpg&fit=crop"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Vantaan kaupungin mukaan työnhakija-asiakkaille on lähetetty sähköpostitse kutsu asiakastyytyväisyyskyselyyn. Palautteella selvitetään, mitä asiakkaat pitävät palveluissa toimivana ja missä he näkevät parannettavaa."
+        "text": "Opetus- ja kulttuuriministeriön tiedotteen mukaan hallitus antoi eduskunnalle 1. lokakuuta esitykset, jotka muun muassa velvoittaisivat yksityisoikeudelliset lukioiden ja ammatillisen koulutuksen järjestäjät varautumaan poikkeusoloihin ja häiriötilanteisiin. Näissä tilanteissa etusijalla olisi oppivelvollisuuslain mukaisen maksuttoman koulutuksen turvaaminen myös tutkintokoulutukseen valmentavassa koulutuksessa."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kaupunki kertoo, että kyselyyn vastataan nimettömästi eikä palautetta voida yhdistää vastaajaan. Kyselyn toteuttaa tutkimusyritys Bondata."
+        "text": "Ammatillisessa koulutuksessa osaamista voisi esityksen mukaan osoittaa käytännön tehtävillä, jotka vastaisivat mahdollisimman hyvin todellisia työtilanteita ja työprosesseja. Koulutuksen järjestäjä voisi poikkeusoloissa ja häiriötilanteissa myös poiketa henkilökohtaisen osaamisen kehittämissuunnitelman laatimisen ja päivittämisen yhteistyövelvoitteista."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Lukioiden opetusjärjestelyihin voitaisiin esityksen mukaan säätää poikkeuksia valtioneuvoston asetuksella. Ne voisivat koskea esimerkiksi opintojen mitoitusta, rakennetta ja laajuutta. Tutkintokoulutukseen valmentavan koulutuksen järjestäjä puolestaan voisi päättää etäopetukseen siirtymisestä poikkeusoloissa ja häiriötilanteissa."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Ylioppilastutkinnon kokeita opetus- ja kulttuuriministeriö voisi esityksen mukaan siirtää tällaisissa tilanteissa enintään kolme kuukautta kerrallaan. Esityksissä poikkeusoloilla tarkoitetaan valmiuslain mukaisia poikkeusoloja; kyse on ehdotetuista muutoksista, ei vielä voimassa olevista säännöksistä."
       }
     ],
-    "summary": "Vantaan kaupunki kertoo kartoittavansa työllisyyden ja kotoutumisen palvelujen onnistumisia ja kehittämistarpeita kyselyllä, johon työnhakija-asiakkaat ovat saaneet linkin sähköpostitse.",
-    "title": "Vantaa kerää työnhakijoilta palautetta palveluista"
+    "summary": "Lakiesityksillä pyritään turvaamaan toisen asteen opintojen jatkuminen poikkeusoloissa ja häiriötilanteissa. Opetus- ja kulttuuriministeriön mukaan muutosten on tarkoitus tulla voimaan vuoden 2027 alusta.",
+    "title": "Hallitus esittää koulutukseen joustoja häiriötilanteissa"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "6576df79c0b6c529c129b7ac832daf5c54c143cfb947dacc93db86fbfae650e2",
+    "draft_sha256": "1af6818187fa7299257590f00f324d094f46be0663a36c0fa598fba4e010d03f",
     "reasons": [
-      "Otsikko on 50 merkkiä pitkä eli alle 60 merkin tavoitteen, ja tärkein asia on alussa. Lähde A tukee Vantaan työnhakija-asiakkailta keräämää palvelupalautetta; ingressin rajaus työllisyyden ja kotoutumisen palveluihin perustuu lähteen A otsikkoon.",
-      "Molempien kappaleiden source_ids-merkintä A on oikea. Lähde A kertoo sähköpostitse lähetetystä kyselylinkistä, onnistumisten ja kehittämistarpeiden kartoittamisesta, nimettömästä vastaamisesta, palautteen yhdistämättömyydestä vastaajaan sekä tutkimusyritys Bondatan vastuusta. Anonymiteettiväite esitetään asianmukaisesti kaupungin kertomana, ei riippumattomasti varmistettuna tietona.",
-      "Lähteen A julkaisupäivä on 1.10.2026, joten aineisto on arviointipäivänä ajankohtainen. Yksi kaupungin oma lähde riittää tämän rajatun kyselytiedotteen uutisointiin. Teksti on itsenäisesti muotoiltua, neutraalia suomea, eikä siinä ole valtakunnallisia yleistyksiä, perusteettomia vaikutusväitteitä tai lähteestä puuttuvia lukumääriä. Kotimaa-luokitus sopii paikalliseen palvelu-uutiseen.",
-      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Kaksi järjestettyä kuvakonseptia ja kummankin haut on dokumentoitu. Valittu generoitu kuva vastaa ensimmäistä turvallista konseptia: tietokoneen verkkokysely liittyy nimenomaisesti jutun sähköpostitse toimitettuun kyselylinkkiin. Erillisen mallin pikseliarvio on sidottu samaan kuvatunnisteeseen ja artikkelitekstin tunnisteeseen; se toteaa kuvan sopivuudeksi 10/10 sekä henkilöt, luettavan tekstin ja todellisen kyselyn jäljittelyn puuttuviksi. Kuvateksti on täsmälleen 'AI-generoitu kuva. Ei valokuva tapahtumasta.', ja vaihtoehtoinen teksti vastaa dokumentoitua kuva-aihetta. HRI:n tekstikäyttöehdoista ei johdeta kuvan käyttöoikeutta tai uutisväitteiden todistusta."
+      "Otsikko on 55 merkkiä eli alle 60 merkin tavoiterajan. Hallituksen ehdottamat koulutusjoustot ovat alussa, ja ehdotusta kuvaava ilmaus 'esittää' vastaa lähdettä A.",
+      "Lähde A on 1.10.2026 julkaistu opetus- ja kulttuuriministeriön tiedote. Se tukee ingressin tavoitetta turvata toisen asteen opinnot sekä suunniteltua voimaantuloa vuoden 2027 alusta. Yksi ajankohtainen viranomaislähde riittää tämän rajatun esitysuutisen pohjaksi; luonnos ei väitä riippumatonta vahvistusta tai muutosten jo toteutuneen.",
+      "Kaikkien neljän kappaleen source_ids-merkintä A on asianmukainen. A tukee esitysten antamista eduskunnalle 1. lokakuuta, yksityisoikeudellisten koulutuksen järjestäjien varautumisvelvollisuutta, maksuttoman koulutuksen ensisijaisuutta, ammatillisen osaamisen osoittamista ja yhteistyövelvoitteista poikkeamista sekä lukioiden asetusperusteisia poikkeuksia ja valmentavan koulutuksen etäopetusmahdollisuutta. Viimeisen kappaleen enintään kolme kuukautta kerrallaan koskeva koesiirto ja valmiuslain mukainen poikkeusolojen määritelmä vastaavat A:ta.",
+      "Teksti erottaa ehdotetut toimivaltuudet voimassa olevista säännöksistä ja suunnitellun voimaantulon varmistetusta voimaantulosta. Kotimaa-luokitus ja valtakunnallisen lainsäädännön käsittely ovat perusteltuja. Muotoilu on neutraalia, ymmärrettävää ja lähdettä itsenäisesti tiivistävää; mukaan ei ole lisätty näyttöä vaativia vaikutus- tai syy-seurausväitteitä.",
+      "Kuvatietue on toimitetussa luonnoksessa sama kuin lähdepaketissa. Kolme järjestettyä kuvakonseptia ja haut jokaiselle on dokumentoitu. Valitun Unsplash-kuvan yksilöivä tunniste G_-B7DGgvgg, kuvalinkki, kuvaaja Brecht Corbeel ja palvelun hankintatiedot yhdistävät lisenssin juuri valittuun valokuvaan, eivät vain yleiseen lisenssitekstiin. Toimitettu täsmällisten kuvapikselien arvio on 9/10. Kuvatut pulpetit, tuolit ja opetustaulu liittyvät artikkelin konkreettiseen lukioiden opetusjärjestelyjä koskevaan sisältöön; kyse ei ole pelkästä Kotimaa-kategoriayhteydestä. Kuvateksti ja vaihtoehtoinen teksti ilmaisevat kuvan arkistokuvaksi eivätkä väitä sen esittävän uutispäivän tapahtumaa tai tiettyä lukiota. Kuvan arviointitiedoissa ei ole ihmisiä, luettavaa tekstiä tai muita must_avoid-rajojen vastaisia elementtejä."
     ]
   }
 }
