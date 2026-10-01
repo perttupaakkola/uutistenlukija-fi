@@ -3,120 +3,133 @@
   "hermes_step": 5,
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
-  "source_commit": "046163976c4b1ef97d939a5d7ee996ebcd64b8ba",
-  "job_id": "04f5e7c23aeaa40fa535fb0e6a8e3c01460f1e3ee4701e4e2805c86176d785dc",
-  "packet_sha256": "1394b1975ac2d665b3846f74d2995b4b03e627bac5b9e0ce8ee2901fa870a820",
-  "draft_sha256": "1bef6ef9da9771d0342c7c30c692310829a12caa53d4a2a7968bf2eaae4cc351",
-  "image_sha256": "4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e",
+  "source_commit": "1a7cd0b8c7f5a4d399e329781127db232beacbc4",
+  "job_id": "0172ab418392a9e14032bf41088747d18a151d0b44ed36527f5518a3c47d60da",
+  "packet_sha256": "3611cef5e03110bc16ba800ee918344ed48ac727bd849be511f59b07eef7aaea",
+  "draft_sha256": "d24c3cc686afaa6adaf895665991c2828f271d912eac878818ff25e5759c8013",
+  "image_sha256": "4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "58adba8955844014e1895a83f9a687a3ee6dc3fafbeed245b8891af709521af2"
+    "provenance_sha256": "5a9ac1286fa9e1352d2268142111d35e89e9f9dc749590ee927a42159a669108"
   },
   "stock_image": {
-    "alt": "Arkistokuva: Kaivettu rakennustyömaa etualalla, kaivinkone keskellä ja katu rakennuksineen taustalla pilvisenä päivänä.",
+    "alt": "Arkistokuva: Pitkä käytävä vähittäiskaupan myymälässä, jonka molemmin puolin on täynnä hyllyjä erilaisia pakattuja elintarvikkeita.",
     "caption": "Arkistokuva artikkelin aiheesta.",
     "classifier_output": {
-      "category": "Kotimaa",
+      "category": "Talous",
       "concepts": [
         {
-          "depictable_scene": "Todellinen valokuva Hoasin uuden asuntokohteen rakennuspaikasta Gotlanninkadulla: tontti ja sen vieressä näkyvä katu ympäröivine rakennuksineen. Kuvan sijainnin on vastattava juuri artikkelissa käsiteltyä tonttia.",
+          "depictable_scene": "Nimeämättömän tukkukaupan varaston sisätila, jossa kuormalavoille pinotut pahvilaatikot täyttävät metallisia varastohyllyjä leveän, tyhjän käytävän molemmin puolin.",
           "must_avoid": [
-            "Väärän tontin esittäminen kohteen rakennuspaikkana",
-            "Tulevan Hoas-rakennuksen keksitty ulkoasu"
+            "People or body parts",
+            "Invented readable labels or logos",
+            "Charts or symbols implying measured growth"
           ],
           "must_show": [
-            "Actual housing project site",
-            "Adjacent street context"
+            "Palletized cardboard boxes",
+            "Industrial warehouse shelving"
           ],
           "rank": 1,
-          "safe_to_generate": false,
+          "safe_to_generate": true,
           "search_queries": [
-            "Gotlanninkatu Hoas rakennuspaikka",
-            "Gotlanninkatu Itäkeskus tontti",
-            "Gotlanninkatu street view",
-            "Hoas Gotlanninkatu työmaa"
+            "tukkukaupan varasto kuormalavat",
+            "wholesale warehouse pallets",
+            "cardboard boxes warehouse",
+            "tukkuliikkeen varastohyllyt"
           ],
-          "subject": "Gotlanninkadulle suunniteltujen opiskelija-asuntojen rakennuspaikka"
+          "subject": "Tukkukauppa: tavaralavat varastohyllyillä"
         },
         {
-          "depictable_scene": "Pienen, tyhjän yksiön sisätila, jossa samassa huoneessa näkyvät kompakti keittokomero, vuode ja ikkunan vieressä oleva työpöytä. Näkymä on yleinen opiskelija-asumisen kuvitus, ei jäljitelmä Gotlanninkadun kohteen asunnosta.",
+          "depictable_scene": "Nimeämättömän vähittäiskaupan myymälän tyhjä käytävä, jonka molemmin puolin on hyllyillä laatikoituja ja pussitettuja päivittäistavaroita. Kuvan pääaiheena ovat tavarat ja hyllyrivit, eivät hintakyltit.",
           "must_avoid": [
-            "Ihmiset ja ruumiinosat",
-            "Gotlanninkadun todellisen asunnon tai pohjaratkaisun jäljittely",
-            "Luettava teksti ja logot"
+            "People or body parts",
+            "Invented readable prices, brand names or logos",
+            "Sale signs suggesting falling prices"
           ],
           "must_show": [
-            "Compact studio apartment",
-            "Kitchenette in the living space"
+            "Stocked retail shelves",
+            "Empty store aisle"
           ],
           "rank": 2,
           "safe_to_generate": true,
           "search_queries": [
-            "opiskelija-asunto yksiö sisätila",
-            "pieni yksiö keittokomero",
-            "student studio apartment",
-            "compact studio kitchenette"
+            "päivittäistavarakaupan hyllyt",
+            "retail store shelves",
+            "packaged goods aisle",
+            "myymälän tyhjä käytävä"
           ],
-          "subject": "Opiskelija-asunnot ovat enimmäkseen yksiöitä"
+          "subject": "Vähittäiskaupassa: myymälän tavarahyllyt"
         }
       ],
       "version": "article-first-v1"
     },
-    "credit": "Photo by Lasse Keskinen on Wikimedia Commons",
-    "depicted": "The image shows a construction site with a large excavated area in the foreground, filled with dirt and gravel. In the middle ground, an orange and black excavator is visible, along with a white van. A row of orange traffic cones marks a path or boundary. Beyond the construction site, a road with a metal barrier runs horizontally across the image. On the left side of the road, there is a multi-story building with red brick and white sections. A yellow triangular warning sign with a black exclama",
+    "credit": "Photo by ha ha on Pexels",
+    "depicted": "The image shows a long aisle in a grocery store, filled with shelves stacked high with various canned and packaged food items. The shelves are made of metal and are dark gray or black, with lighter gray or silver edges. The products are arranged neatly in rows and columns, with many items appearing to be cans of vegetables, fruits, and other pantry staples. There are also boxes and other types of packaging visible. The lighting is bright, illuminating the products on the shelves. In the far back",
     "generated": false,
     "hotlink": false,
-    "license": "CC BY 4.0",
-    "license_url": "https://creativecommons.org/licenses/by/4.0",
-    "local_path": "media/4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e.jpg",
+    "license": "Pexels License",
+    "license_evidence": {
+      "image_path": "/photos/16211537/pexels-photo-16211537.jpeg",
+      "license": "Pexels License",
+      "license_code": "Pexels",
+      "license_url": "https://www.pexels.com/license/",
+      "photo_id": "16211537",
+      "photo_url": "https://www.pexels.com/photo/shelves-in-grocery-store-16211537/",
+      "photographer": "ha ha",
+      "photographer_url": "https://www.pexels.com/@hhaa",
+      "response_sha256": "a76374aacef6e7c6419145e1f2dd3fe324bbe47a7ff7f36ae5bbad4d37c6dac3",
+      "retrieved_at": "2026-10-01T06:51:03.118346+00:00",
+      "transport": "jina_reader",
+      "version": 1
+    },
+    "license_url": "https://www.pexels.com/license/",
+    "local_path": "media/4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a.jpg",
     "pixel_review": {
-      "alt_fi": "Kaivettu rakennustyömaa etualalla, kaivinkone keskellä ja katu rakennuksineen taustalla pilvisenä päivänä.",
+      "alt_fi": "Pitkä käytävä vähittäiskaupan myymälässä, jonka molemmin puolin on täynnä hyllyjä erilaisia pakattuja elintarvikkeita.",
       "approved": true,
-      "article_text_sha256": "f8e02dcc24bace5c878161c3f693975b18bcbc0a0e3a9ed30ef0b36684d3cdb9",
-      "concept_sha256": "9d842864a26f5103fe243662d617205edf29212dc0721f148293905dedbe9392",
-      "description": "A wide shot of a construction site with an excavated pit in the foreground and an excavator visible in the middle ground. In the background, a street with traffic, various buildings, and trees are visible under a partly cloudy sky.",
-      "fit_score": 9,
-      "image_sha256": "4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e",
+      "article_text_sha256": "a8ed6244948508fc9843c65a8ffdbcc4d7578594f9df4ee8bbbe1ace390ef406",
+      "concept_sha256": "2c0a618f954cdfde208ed0d89aa412261f7ccdf5d60abccea5993c6a3e08ca9c",
+      "description": "Kuva esittää pitkää käytävää vähittäiskaupan myymälässä, jonka molemmin puolin on täynnä hyllyjä erilaisia pakattuja elintarvikkeita, kuten säilykkeitä ja laatikoituja tuotteita. Käytävä on tyhjä, eikä siinä näy ihmisiä. Hyllyt ovat täynnä tavaraa, ja valaistus on kirkas.",
+      "fit_score": 10,
+      "image_sha256": "4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a",
       "model": "google:gemini-2.5-flash",
       "must_show_visible": [
         true,
         true
       ],
       "no_people": true,
-      "reason": "The image clearly depicts a construction site, which aligns with the article's subject of a new housing project being built. The visible street and surrounding buildings provide the adjacent street context requested by the concept. The filename also explicitly identifies the location as the Gotlanninkatu student apartment building construction lot, which matches the article's specific location.",
-      "reviewed_at": "2026-09-30T15:42:49.507071+00:00",
-      "source_context": {
-        "image_sha256": "4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e",
-        "license": "CC BY 4.0",
-        "license_url": "https://creativecommons.org/licenses/by/4.0",
-        "photo_id": "wikimedia-197362922",
-        "photo_url": "https://commons.wikimedia.org/wiki/File:HOAS%20Gotlanninkatu%20student%20apartment%20building%20construction%20lot%20(It%C3%A4keskus,%20Helsinki,%20Finland)%20Aug%2013,%202026.jpg",
-        "photographer": "Lasse Keskinen",
-        "provider": "wikimedia",
-        "title": "HOAS Gotlanninkatu student apartment building construction lot (Itäkeskus, Helsinki, Finland) Aug 13, 2026.jpg"
-      },
-      "source_context_sha256": "54b83b86b19c03c5ca970479d12dff2a9b9b6956b4a6516afe55b1bc54121069"
+      "reason": "Kuva esittää vähittäiskaupan hyllyjä ja tyhjää käytävää, mikä vastaa täysin valitun konseptin kuvausta. Artikkeli käsittelee kaupan liikevaihdon kasvua, ja vähittäiskauppa on yksi mainituista päätoimialoista, joten kuva on relevantti artikkelin aiheeseen.",
+      "reviewed_at": "2026-10-01T06:51:05.389974+00:00"
     },
     "pixels": {
-      "height": 3784,
+      "height": 627,
       "mode": "RGB",
-      "variance": 4203.3,
-      "width": 5045
+      "variance": 3192.8,
+      "width": 940
     },
     "relevance_check": {
       "accepted": true,
-      "evidence": "A wide shot of a construction site with an excavated pit in the foreground and an excavator visible in the middle ground. In the background, a street with traffic, various buildings, and trees are visible under a partly cloudy sky.",
+      "evidence": "Kuva esittää pitkää käytävää vähittäiskaupan myymälässä, jonka molemmin puolin on täynnä hyllyjä erilaisia pakattuja elintarvikkeita, kuten säilykkeitä ja laatikoituja tuotteita. Käytävä on tyhjä, eikä siinä näy ihmisiä. Hyllyt ovat täynnä tavaraa, ja valaistus on kirkas.",
       "matched": [
-        "site",
-        "street"
+        "hitt",
+        "iskaupan",
+        "käytävä",
+        "laatikoituja",
+        "molemmin",
+        "myym",
+        "ovat",
+        "puolin",
+        "tyhj",
+        "tyhjä",
+        "vähittäiskaupan"
       ],
       "method": "vision",
       "reason": "Exact-pixel full-article score meets the 8/10 threshold"
     },
     "selection_evidence": {
-      "article_text_sha256": "f8e02dcc24bace5c878161c3f693975b18bcbc0a0e3a9ed30ef0b36684d3cdb9",
-      "decision_sha256": "ee4a95f03ab6d377e45599c58c92488ab0998350a52e0c62168d7188f2bb4696",
+      "article_text_sha256": "a8ed6244948508fc9843c65a8ffdbcc4d7578594f9df4ee8bbbe1ace390ef406",
+      "decision_sha256": "701bd47d03214fca2543107ac7823597e3f1496cf3f6abe44d0f04fc15e45802",
       "minimum_real_fit": 8,
       "searches": [
         {
@@ -124,137 +137,95 @@
             {
               "approved": false,
               "fit_score": 4,
-              "image_sha256": "674a7022256e158d774375e6223d91c7be9743a3daafa9deb240ce5d8143aa8a",
-              "license": "Helsingin kaupungin uutiskuvan käyttöoikeus",
-              "reason": "The image is an aerial view of a city landscape with various buildings and roads, but it does not depict an actual housing project site under construction or a specific street context that can be identified as Gotlanninkatu. The buildings shown appear to be completed, not a construction site. While it shows a general urban area, it fails to concret",
-              "source_url": "https://www.hel.fi/fi/uutiset/ita-helsinki-houkuttelee-opiskelijoita-hoasilta-174-uutta-asuntoa-itakeskukseen"
-            }
-          ],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "source-news",
-          "queries": [
-            "cited source image"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": true,
-              "fit_score": 9,
-              "image_sha256": "4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e",
-              "license": "CC BY 4.0",
-              "reason": "The image clearly depicts a construction site, which aligns with the article's subject of a new housing project being built. The visible street and surrounding buildings provide the adjacent street context requested by the concept. The filename also explicitly identifies the location as the Gotlanninkatu student apartment building construction lot,",
-              "source_url": "https://commons.wikimedia.org/wiki/File:HOAS%20Gotlanninkatu%20student%20apartment%20building%20construction%20lot%20(It%C3%A4keskus,%20Helsinki,%20Finland)%20Aug%2013,%202026.jpg"
-            }
-          ],
-          "concept_rank": 1,
-          "outcome": "accepted",
-          "provider": "wikimedia",
-          "queries": [
-            "Gotlanninkatu Hoas rakennuspaikka",
-            "Gotlanninkatu Itäkeskus tontti",
-            "Gotlanninkatu street view"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "674a7022256e158d774375e6223d91c7be9743a3daafa9deb240ce5d8143aa8a",
-              "license": "Helsingin kaupungin uutiskuvan käyttöoikeus",
-              "reason": "The article discusses the construction of student apartments, mostly studios, in Itäkeskus. The selected concept specifically requests an interior view of a compact studio apartment with a kitchenette and a bed. The provided image is an aerial exterior view of a large building complex and its surroundings, which does not show any interior space, le",
-              "source_url": "https://www.hel.fi/fi/uutiset/ita-helsinki-houkuttelee-opiskelijoita-hoasilta-174-uutta-asuntoa-itakeskukseen"
-            }
-          ],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "source-news",
-          "queries": [
-            "cited source image"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "7838b8aa25b532d7447cd2e3b62c024182d51e80ea7e18271b6853021ee665e8",
-              "license": "CC BY-SA 4.0",
-              "reason": "The article discusses new student apartments, specifically compact studio apartments with kitchenettes. The selected concept describes a compact studio apartment with a kitchenette, bed, and desk. The image shows a person typing on a typewriter in what appears to be an office or study setting, not a studio apartment. It does not depict a compact st",
-              "source_url": "https://commons.wikimedia.org/wiki/File:Loyola%20Student%20at%20Typewriter%20New%20Orleans%201982.jpg"
+              "image_sha256": "9a61a2f513490a4924eb3a5ed415ec9a531b82671105871ae9845c6413d0cdd3",
+              "license": "Pexels License",
+              "reason": "The image shows cardboard boxes, but they are not palletized, nor are they neatly arranged on industrial warehouse shelving. The scene appears to be a cluttered storage area or an old building entrance, not a modern wholesale warehouse as described in the concept. The 'industrial warehouse shelving' element is completely absent. One or more require",
+              "source_url": "https://www.pexels.com/photo/open-warehouse-doors-with-stacked-cardboard-boxes-29607924/"
             },
             {
               "approved": true,
               "fit_score": 9,
-              "image_sha256": "be691c0cce06b2c8f285fed9ad1fb24f7462bf561d1132a3eadec665d55a2c0c",
-              "license": "CC BY-SA 4.0",
-              "reason": "The image clearly depicts a compact studio apartment with a kitchenette integrated into the living space, directly matching both 'Compact studio apartment' and 'Kitchenette in the living space' elements of the selected concept. The visible elements align well with the article's subject of student studio apartments.",
-              "source_url": "https://commons.wikimedia.org/wiki/File:Twin%20Dolphin%20Hall%20new%20studio%20apartment%201.jpg"
+              "image_sha256": "ab829f4ce20c4aa12f9413e2f82b9ac93451be6c410e33411eac34c8d6fe1c3f",
+              "license": "Pexels License",
+              "reason": "The image clearly depicts an industrial warehouse with shelving and pallets, which directly illustrates the concept of a wholesale warehouse. While not all items are cardboard boxes, a significant number are, and the overall scene strongly matches the article's subject of wholesale trade.",
+              "source_url": "https://www.pexels.com/photo/green-metal-shelves-with-construction-materials-4170172/"
+            }
+          ],
+          "concept_rank": 1,
+          "outcome": "accepted",
+          "provider": "pexels",
+          "queries": [
+            "tukkukaupan varasto kuormalavat",
+            "wholesale warehouse pallets",
+            "cardboard boxes warehouse"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": true,
+              "fit_score": 10,
+              "image_sha256": "4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a",
+              "license": "Pexels License",
+              "reason": "Kuva esittää vähittäiskaupan hyllyjä ja tyhjää käytävää, mikä vastaa täysin valitun konseptin kuvausta. Artikkeli käsittelee kaupan liikevaihdon kasvua, ja vähittäiskauppa on yksi mainituista päätoimialoista, joten kuva on relevantti artikkelin aiheeseen.",
+              "source_url": "https://www.pexels.com/photo/shelves-in-grocery-store-16211537/"
             }
           ],
           "concept_rank": 2,
           "outcome": "accepted",
-          "provider": "wikimedia",
+          "provider": "pexels",
           "queries": [
-            "opiskelija-asunto yksiö sisätila",
-            "pieni yksiö keittokomero",
-            "student studio apartment"
+            "päivittäistavarakaupan hyllyt",
+            "retail store shelves",
+            "packaged goods aisle"
           ]
         }
       ],
       "selected": {
-        "concept_rank": 1,
-        "fit_score": 9,
-        "image_sha256": "4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e",
+        "concept_rank": 2,
+        "fit_score": 10,
+        "image_sha256": "4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a",
         "kind": "real"
       },
       "version": "article-first-v1"
     },
-    "sha256": "4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e",
-    "source_url": "https://commons.wikimedia.org/wiki/File:HOAS%20Gotlanninkatu%20student%20apartment%20building%20construction%20lot%20(It%C3%A4keskus,%20Helsinki,%20Finland)%20Aug%2013,%202026.jpg",
+    "sha256": "4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a",
+    "source_url": "https://www.pexels.com/photo/shelves-in-grocery-store-16211537/",
     "stock_provenance": {
-      "attribution": {
-        "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
-        "title": "HOAS Gotlanninkatu student apartment building construction lot (Itäkeskus, Helsinki, Finland) Aug 13, 2026.jpg"
-      },
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/HOAS_Gotlanninkatu_student_apartment_building_construction_lot_%28It%C3%A4keskus%2C_Helsinki%2C_Finland%29_Aug_13%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "license": "CC BY 4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0",
-      "photo_id": "wikimedia-197362922",
-      "photo_url": "https://commons.wikimedia.org/wiki/File:HOAS%20Gotlanninkatu%20student%20apartment%20building%20construction%20lot%20(It%C3%A4keskus,%20Helsinki,%20Finland)%20Aug%2013,%202026.jpg",
-      "photographer": "Lasse Keskinen",
-      "photographer_url": "https://commons.wikimedia.org/wiki/File:HOAS%20Gotlanninkatu%20student%20apartment%20building%20construction%20lot%20(It%C3%A4keskus,%20Helsinki,%20Finland)%20Aug%2013,%202026.jpg",
-      "provider": "wikimedia",
-      "query": "Gotlanninkatu Itäkeskus tontti",
-      "retrieved_at": "2026-09-30T15:42:46Z"
+      "image_url": "https://images.pexels.com/photos/16211537/pexels-photo-16211537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "photo_id": "16211537",
+      "photo_url": "https://www.pexels.com/photo/shelves-in-grocery-store-16211537/",
+      "photographer": "ha ha",
+      "photographer_url": "https://www.pexels.com/@hhaa",
+      "provider": "pexels",
+      "query": "päivittäistavarakaupan hyllyt",
+      "retrieved_at": "2026-10-01T06:51:03Z"
     },
-    "stock_provenance_sha256": "4a9a45ff58920c7e387c92b1649b25f9c59a5c6388a9a50488da18e7593ae1b3",
-    "url": "https://uutistenlukija.fi/media/4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e.jpg"
+    "stock_provenance_sha256": "90f96de6501aaa72c62be950fa848b71e209139d50f8c0662904956e00a1f9f8",
+    "url": "https://uutistenlukija.fi/media/4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a.jpg"
   },
   "new_article_files": [
-    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html"
+    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
-    "404.html": "ccb20058ad982260a1eb5fa8fca50d2cfc51127f4abb7d870bed7271ca22d122",
-    "_redirects": "bac9cdf70438ad87ade9e9f6b9f846a0d3804946c597e7a3368f5fb0bb28a96e",
-    "ai-kuvat/index.html": "c3b9ed92be03e3fcb0ffc34c56de7720aff3e9cd2bcc3c0dafbf167b7e3229f3",
-    "categories/kotimaa/index.html": "37a371c12d374890a929edcbe7471c2f8236879c2311e6fe5e6d4da1d2a312a3",
-    "categories/kotimaa/sivu/2/index.html": "66c805674840b203155e14820a17994dd4704d9c988ffbae781d79c771f32d77",
-    "categories/kotimaa/sivu/3/index.html": "b050e0bbf5d447a4f99c570271707ab2c7cbb4e3eaa682146c6f8e0d1f2897b3",
-    "categories/kotimaa/sivu/4/index.html": "27dc858d9b8ee1f1624f0c186f15fb6ff871b3b86da4a1fdfd1cf5f72805db63",
-    "categories/kotimaa/sivu/5/index.html": "baebd0d39cd65d7d6a9bfdbee8116271eedf39d0928dff7adb7420536aee8f32",
-    "categories/kulttuuri/index.html": "99e8851cd4d1d9a1e3099aa63d65aeea32215953f0253b724d126841cf6f53f5",
-    "categories/talous/index.html": "4aaaa5364613f88101b83cab3fad990e0f8773ab1754b8f9cfaa4496e20da59e",
-    "categories/talous/sivu/2/index.html": "0d7b78960df2819b60b3dc433e52a7ca197a8937e0969ccde63e88ae211dbf3c",
-    "categories/teknologia/index.html": "f58662f766ac1dfcbcb58257de53d83d4daaa7b9e887923758549dbffe502fe6",
-    "categories/tiede/index.html": "bad4fac1b8371daedde0159dbf920525bac416a9622912925077e0d21019c59b",
-    "categories/ulkomaat/index.html": "8aab3632bb21dadaf14adfd108afe232b92fc2235d1915843674b4a3ec9623e1",
-    "categories/urheilu/index.html": "b2c495767dcf15a1d6bcb16c1aea85bc60801ea6522f80cd484246b56b11d2c8",
-    "index.html": "429e465201b304647fa4745bff031272cdaf7f65b39ac5bb47fcccba280886af",
-    "lahteet/index.html": "262bc2dd8203c4177f2dfeae0ddd77309a106584f910d433dd174794a53aeebc",
+    "404.html": "7bef39a4293b5cca9a1c3c23f4450be8e3dda40f8c2a076f67586cdcce1b76dd",
+    "_redirects": "943176dad235eea10ca951f6cb4370fa44d8e2657075a3665a798d2c92fee93b",
+    "ai-kuvat/index.html": "0378e7b94bc9ac7c95e308f365bf0057bb496127a1bfb147878aab206da68313",
+    "categories/kotimaa/index.html": "8ab88ce8e4c89e0d0bdc1bc08395af991565cf939d519e20d08b40135280c43b",
+    "categories/kotimaa/sivu/2/index.html": "68b3c9ea407504536a4b2f1a18f960d6e70566972c1e0541d19504a064c61b06",
+    "categories/kotimaa/sivu/3/index.html": "b05b6783a5d0bf792e14178576709a4ed55b8af23e1d74972c662fcb71f96d6a",
+    "categories/kotimaa/sivu/4/index.html": "739fc0684fd77737b212d29dce4e421b8ff365ed58675d8460b33f2067bbc820",
+    "categories/kotimaa/sivu/5/index.html": "7d4e026d21d045d84b486fdf858f5a2c6d721e50303b3551e15ebf05b9900cb6",
+    "categories/kulttuuri/index.html": "44b4059d48f562f79fca8cb9fdbcf575ba7c69e081bfcef126eea9bd83428ebc",
+    "categories/talous/index.html": "54ce929b8d233d146fddfbc71e6f5b8aef48a99e53c84d462c1f454d601d0cc1",
+    "categories/talous/sivu/2/index.html": "a72c7a6303407452c9d7cee8e90c4c1610b582e235223546fd19623c597c932b",
+    "categories/teknologia/index.html": "468e95f921e18ad6a64bcc9f2179c9ec95f454903d1d7c52569f61ef7ea07656",
+    "categories/tiede/index.html": "f6b7ecc3dc4b7144b1716da900938514c8f5b2d59244bdc57a13a5d634e901f5",
+    "categories/ulkomaat/index.html": "d8b87a2e9198042bda92c67b25eacce69c4149c25e80e4ee0a6622f3345f1684",
+    "categories/urheilu/index.html": "1e7bac21cd0deca3e3f672c16dc0bfedbf2cca81a47aedfa8c59b80a4d71f7e0",
+    "index.html": "f88fc0932b292d8b9e8a0324e5c2cd147fefc9ed541eddf78b54a7823ce40a15",
+    "lahteet/index.html": "f3ef8a30bae50333a5e259b0e69f0c10f73886811ac92a87b5702a7583684631",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -391,6 +362,7 @@
     "mvp-assets/4bd286a5bf92a124448f9aa93af2247c940bfe20e0f429a485000d5de8cba94f.jpg": "4bd286a5bf92a124448f9aa93af2247c940bfe20e0f429a485000d5de8cba94f",
     "mvp-assets/4d332d05bad1218ec5a94ceaf3e8b9453776189aea8a3f1304cb8f2144f3cdd4.jpg": "4d332d05bad1218ec5a94ceaf3e8b9453776189aea8a3f1304cb8f2144f3cdd4",
     "mvp-assets/4d5380ad084efb52355548052862c8e6bf24ffcfdce1f839c737730f02a3f557.jpg": "4d5380ad084efb52355548052862c8e6bf24ffcfdce1f839c737730f02a3f557",
+    "mvp-assets/4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a.jpg": "4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a",
     "mvp-assets/4dc80023cfca9ab68bbac4a389f30cbe15e817c1507443dca40d2b4cc7e73ae1.jpg": "4dc80023cfca9ab68bbac4a389f30cbe15e817c1507443dca40d2b4cc7e73ae1",
     "mvp-assets/4ddce01619814d29159771bfbdcf5fd55e8bff9a8f4cf1e8e0152cc967dc907c.jpg": "4ddce01619814d29159771bfbdcf5fd55e8bff9a8f4cf1e8e0152cc967dc907c",
     "mvp-assets/4de3a154683a2761a9123dbccbc65e8209016f461f454d72d9f803722ad0e2f1.jpg": "4de3a154683a2761a9123dbccbc65e8209016f461f454d72d9f803722ad0e2f1",
@@ -638,7 +610,7 @@
     "mvp-assets/css/category.css": "210237c0356aa2671e6829aa509fee99706b299be73b06c83de4d578ff1b9356",
     "mvp-assets/css/empty-state.css": "841d05d21642f369285a7dcabd530d3192508ad431b331cf3e07fdd4841957fc",
     "mvp-assets/css/homepage-polish.css": "a4866ca8a61eef46cd41dedba39b7328296ebf74c6f4334dabae27074fc05248",
-    "mvp-assets/css/portal-overhaul.css": "9e958ecf04a54416b21992a9140baeb966bb316d35894c900530faa4dc4d34b2",
+    "mvp-assets/css/portal-overhaul.css": "e9627b7c0f884a410c1444208666382f52b14f7eeae824737430fc7bd83bc1c5",
     "mvp-assets/css/search.css": "5aa6069758883bd3394564216344ae4fbdb6ded877df0227571158dc4b21bf9b",
     "mvp-assets/css/style.css": "d3b2619b02f119588cbeeb1111a4a30e93180a49a9e6318801b226d5a2af317f",
     "mvp-assets/d0cc6144d441aee4be76a6cd0435fe0b2fcf694fb91a6b9833ec6e09bb8c779b.jpg": "d0cc6144d441aee4be76a6cd0435fe0b2fcf694fb91a6b9833ec6e09bb8c779b",
@@ -750,27 +722,27 @@
     "mvp-assets/portal.js": "224136faa34405efbb79ccd090bf52b2f75731f94bd68457153234cc4c02ee11",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "637eaf4fbed4956e14a5ff0c21a902876ebc471c444ecfe0579be588b8e5e25d",
-    "oppaat/index.html": "25f75f307b71ea09781c831a7992351beca482ebbedc8636b0a33e566dd6eecc",
+    "oppaat/index.html": "bc75fd4e3f01ca90f19475eaec53cf96e1f4ff80027d72ed5cc1ce4ce3dc0e41",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "fb1990935d70c712c34cb06d4142af4f7768d0bfccb0b533a51395391bd44912",
-    "sitemap.xml": "4fda1405ff6c6a834d1a52017dd63edb81041a872e184e474a1ca4008e72317f",
-    "sivu/2/index.html": "9619930b892ebc47c9314c0b774ac63334a7d260231fcefe314e6c6ebb6a8810",
-    "sivu/3/index.html": "2626a9272af99c61b27b8d53b019f9d1ae7705557c79798d2d3fbdcb12ba17d0",
-    "sivu/4/index.html": "f6d1aa4582702ff5205c84f58403debcd0597827a0757e9e3b6a51a21af960e9",
-    "sivu/5/index.html": "5cc3a0abc3c9cdc8a2642e49dcc673e9e67bfa8685e74c8c18cc0a2a677f1df7",
-    "sivu/6/index.html": "393ee85b65868dc87c79a0304f76a9e4ff6bd005473afc0ba1a0de547be89c04",
-    "sivu/7/index.html": "28f9d1d607fb156e720c1d84b76df9fe5f47eb7b597242fc9b2284bbf4444df6",
-    "sivu/8/index.html": "5bc854ecf39c07205a07376dc4232c424cca6908892690c2b4b099afcfee326e",
-    "tietoja/index.html": "91245f3b71718e96d88f42a693cfd7f7f8f3d6e6e3f10910e52bdbd1f9045311",
-    "tietosuoja/index.html": "8789464b93bf98df1ff541b5f6f53f5bb72677a2679cd2adb5df49c42d3c8041",
-    "tuoreimmat/index.html": "c7a46fdbd013c8f7006f748d1f8a1ae10bf4276db0c4862cec270efb4240a2cd",
-    "tuoreimmat/sivu/2/index.html": "984c54d0c861f89a4e604a2dedf559feb8f47500695b8f4ea0ee13adad42b587",
-    "tuoreimmat/sivu/3/index.html": "c8401b5346ff51a4ec725b349017ddf379a97cbb9132a15e51a6c2d5887b1a39",
-    "tuoreimmat/sivu/4/index.html": "fcaa6ec0edfdb5f06609a12022540fe245d85f22fad59fca8b35991cb151a61b",
-    "tuoreimmat/sivu/5/index.html": "8d236c4e91a15141271e3a5532cfa5f30217759600ecef11120588ad1028e22a",
-    "tuoreimmat/sivu/6/index.html": "f996a92d1c15bcc5bf837d191ce517d91af79aef32be95245d94caebc0429480",
-    "tuoreimmat/sivu/7/index.html": "aead7f494f8570d1e345ef23b3e51c6c69994754ad3fb0c5ec6097bb40769e99",
-    "tuoreimmat/sivu/8/index.html": "1c0c22aa7821e2449e03df3ed631851c2e897052ee7f7de1283fe8fa516a98b0",
+    "rss.xml": "d7eacbf883d8039904d5925b378217ed07d4ce14a8d07fe8243067c6c7fd7b92",
+    "sitemap.xml": "20c6d82b3888a1e319da7a6d4d7dfd8055b9f164e30119ffeae5f22a6e97ee1e",
+    "sivu/2/index.html": "67086cf7b2dec3d72de94191787cf9317bcce84ece53b3a1fe49b86cb7b45fd8",
+    "sivu/3/index.html": "8b185819fe193db924b68c2f8ef9bcec7d770164999a91ac1e55d68acde860d4",
+    "sivu/4/index.html": "3d4b379b64926e8455113a1eb94663b74810cc19765932b6962b1fc5e6463b74",
+    "sivu/5/index.html": "b156414a77a030799d75822977ac39f1e6ec5c78fdd8c602e740039298c0aa31",
+    "sivu/6/index.html": "81b8bd7f33ec1f4cad663319df0b99e277decf07132c4b7b7d42a3e74ae75c42",
+    "sivu/7/index.html": "3985f602ba1f7dde2e1d23d9624410b6c44e31de2899821bef1429df0448224e",
+    "sivu/8/index.html": "7e72c0516c88968ea9bab606b35775872720509e2535b79edf3b1f9bf288458b",
+    "tietoja/index.html": "96da8484b936039238529ac187490dbf52f0cb67da6a45ca1ae8830c2a49aa97",
+    "tietosuoja/index.html": "d264adaabc09152c91b988ec099a5d9f2189b09285ae095bd06db573ac059d8e",
+    "tuoreimmat/index.html": "ac533fa18ed752128e921fe7a94952643917f844e6898417f3bb099c42e0ec99",
+    "tuoreimmat/sivu/2/index.html": "762dff798c454c6e150f00f550d0f9fc2034fe087bddd87c2bd7bcfdfa8698c2",
+    "tuoreimmat/sivu/3/index.html": "76e242eda41cf2a8a65596a7272313ae3736b97a02e4fd5b0e483888e2ea9dfc",
+    "tuoreimmat/sivu/4/index.html": "3792d9a16edad8a1f51667023f4966ff890a264285b662c62e50e291d8ef876e",
+    "tuoreimmat/sivu/5/index.html": "b6f604e56d7bdd4b017171aca470d49a1eec9a214197291a027faaaf46d79cc4",
+    "tuoreimmat/sivu/6/index.html": "802bd2215b79efd56b1e2ec3b2bddc1ab80ce5eeaeddb7ab20017127dccf5a2e",
+    "tuoreimmat/sivu/7/index.html": "394648fb1602f71c46877f64ff8aced538ba72d5fa6ef5574b17097d3033d2fe",
+    "tuoreimmat/sivu/8/index.html": "4c7c8fd80b1fd97c394c084a6b7951e5f498c95b34304b9a82774406a5bf7b86",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -784,357 +756,371 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "aed4975ab5bf8d40baf49b0a3868cfbae2528b2aa22dcb913a7918c6fd935b61",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "b7e0772e75754227d87edfc9384588f07d3323e14caf385d348cf2631b802121",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "9ab95c612d298860dee6c200367053ad76990e9171a5bfc0a27a35fed58d62a1",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "ea7c1964a267394c0c08938d04d7288adf0344310fa4e4d43cbc4f8282ab74f5",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "03f4328e3a1734f5019fb9332b06ca156dd0c26affb166858d512620e22d2802",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "39b224d3691147c1e74cbc29b1e17b56530d1760d60643d2505bb9312978fdea",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "a15b69a32d12423887331be94406fa5e7380ef60b68dffb9e4d614dd123b3ac2",
-    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "891623a94bc9b26515b431e62d54edc29029b16bd68bee1b98238dd1d6935a2a",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "ccb16a693007941e820c4747c330d7bca3b4b6d7d22f56709b3374954b368aed",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "6cbae6db2d9c2e0b41d2dbf2ec6091465b364846caff15a46c2c4a1545d3f8fd",
+    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "76b51e84be4abe512dc8cce285cf56de9f45d459664ff6029873f5a8584ef4fb",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "13e09910c18ed179da802e991325ee55de834e184145f259a2de6c1c565d884b",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "4769d84e4f9042a7f5002754524f01e99c23126c49d5caa37c6fdb6b33a29814",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "82e30268a7f2d17289f0fca7c7a036e0155ec844a76518f606e96a2e019fded6",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "d8109a4451babc87708a6035e661fba06d16635a91ffa70a3d784782d1181de3",
+    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "1712ba6009859b2bdb55becdfd3f9925f6f9e03f928bae718b5befdda8f3ed0e",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "7d7e53808f87ad44671caa336204fd9b3d1a064df891a3ab67ece57e0eacf6e6",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "6e0c57398dbe39b693d60025fa676f954592c80fed5306af26806dfb0d290fac",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "de7cc18aab6410d8b9d0cf3627b222d260276401811218c19c2cb1937741350f",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "e8e76bb0883fb0943b6d8fb87b25053613822d69d03d3b3c34fc18c0cd8a1d23",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "365d10117ebb6d59a98ec5ec8ecde5576d4dff12d060726c85c07a7811ad000a",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "7dd7c8b67bd259187f3587ac34feef9535ebd466a7f3cfa56ac05e97ed7bac8b",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "84adb47e1c51e2cb8b9cbb587ba3cd92a495d35ec7239fa6ee0d650a8f0d7f65",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "34e31b7b97a34087cfd8f7e421bac5002a323f6a8c762eb8d508aaaf5213b0b2",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "044d128e92d39e8eb9de41e17e41ff2c0f42b44c7c58ab844d158f46b8d8c30c",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "714e430bd7b086431fd25f109e0872b1c2ebe3021438840a88d53a0b26fa80b8",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "a80183e370e399bf6727b49d4336ca797e73eefa294565f31cf84ff18e3da347",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "3d27ef3ccda7e554f226463712930dae04851175b4c5bfb6cc6dbb9c9b0846e0",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "52314f28b66b0ad903d6608e0870d756303fc3f3cec3ade2255b119402a74cfd",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "092de48cd6a56dbda28d6594ad6ac89f19524e9c78d97995fd1ae8d760fdaa5b",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "d0eee326da7d52aea00d714da825b4dddbbd8e54f40d759a5b81e974daabcfa4",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "0847a78f6dcc496285577949968d8c0bac1072b53081a7fb1b080196b26f024b",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "bddc8a5aab691fc5a0c37ea05f978c08e6ecfb24112b043c8093ff2b2c52df9b",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "260c9aae3fbd923452f8dc0d07ab9970bbed3685506b19ede7ace8f02b61c084",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "c686a29c36b23ae9bca5006016b4c1df9904ae9196b350792ab3aeffc5321c71",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "ed476fd082b9006f5dcea73bf8af9f851aba7f0e03f9748f0fb02849000c939d",
-    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "ce33092dd21b444411a239f501e56d02eac60c28c79bec3a0de2497697b632ab",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "7a4f0c46a432149d69dcc3dd3c82f8ad9af180396f1d3bb95bb7659c629ed5b4",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "e1722e700dbb723b88d5f33bcbb9581f9337c21fa65a0adb82dd6f06c49d9e5e",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "5f9736764cc7287179106f9f5790ac0753e979c969fc6e824e9060be2d7db42c",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "01d47780bb7ff2a684a31757e30280144ce615e146b8bad6208a378b0cdb78a1",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "7e869a1883bb790d8bd24efd0bc371a16b43374a0170f95b64cb51521e021942",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "c4c4811799d14ba62840911bd34564028a406a679b2a2540d16b584567bb1d05",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "93539c531f69ae941ea51016bc47f5dbe40bbdfbb4efb6521ad9787efa71f248",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "3a7d568c2a4593ff53cd954b5e8dab60a29310998523cd988cf67fd69e31cc0a",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "b167acd076127cf365f5fae6a248a017f59b2bb0a4fac2daa6d8a10a76ca4999",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "2aee6742e8302734cbba0e597178e2a8541dfede9f5804f0e520e80259f2e7b3",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "278b77f48de7a11f5480a707d79243db4efa409a0abdd212aa1ff8253ff3ea57",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "e3ca263d79a2065b093758f2ce9fc57c276a55dafa83a85646543166e0f048b0",
+    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "a26ef29f4f8f9dbf56a25e9389e426ebd4c7cb293a6805d23e9160016ffd5aae",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "3434502840e3dfd68568e48e589f957f40ab161ffc8f97f055402cf11aee09b4",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "7710d93b008ee135da4eb6e922c8a312507e9a6a2af849ed28754b0f97dcdda4",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "8aa3f6f7f775bfed5347c1e114e6110d2ae83f38162653e7d6010852e581da45",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "b9cc8cb5f14f9611ba5433fa1b97e9163d3bb6c55d62ea8a181616c78a93639e",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "d9e628f198fa92f26f1e08b8aca50b5d07f3a7a28a8372ceb9433d2075826491",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "6bc061cf62ee6e43bed5603313ec6162f1cb462ed57bcd09eef92a3169bf8f97",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "f3197ebccf139d105e7fe9efd5147d7cc8d067bb57131883507ad0d5b220f4cf",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "08f67b4efab48e92eaa472418c3f53de920e43c3c82413439b70e0dbe6f8f109",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "6d839b2f1cde5bca8a338320dc8761adaccc389e5e409f4d8c98103f53e180d8",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "a44beb6fbf7f17a3333257efc8d83e72b8156f6463fb429017905339100b8340",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "09a75f6d86c5468a229dd37f7aac56a79260e57dfc9cf76b97c0f19914403926",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "b86d3a25a34b05a111533ef459149c81dd79293e126c7dab3d412170ae72fbd0",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "f6bc416d0da423a10f20b30f286eb4c138ad5dfaf7dde0684da69e6d7cd487ab",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "805e45ba4f725cb834bd7759a8f54b92aaa916458a5687ce8bb1c60812442039",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "f2a4d6027ec54556d1f54584107b05f08321d50c035a0e8599de28765255a350",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "ffc692de13ff8ab8a4636492c4a7d2ccd06e57fdbcc324f0f4bd10e01e98a3db",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "15571939063a63e90ea4b9d2cfbd1a54b84bedbaeba955a013fb6c9d6f7ea2ef",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "618752c8ac7e4f13e59a471e22a0a935315e5c761ef257a85743925bd56807bd",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "2e06f98996dcff1221cad51d884dc5dac15a6d262ff756c57c18a9e4a6d8b619",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "e2c8d98535c8466ae3b0925cb0d2ad728c89a2539f0e6b15724f15a1fd5ada7b",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "0ccb6e292ae0a721854df03e0d3fab35aee6b4135c356f00f7c75090fc08d808",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "0251de9d0995688a6780c82119f02c4a2ed9b7f5bdfb451ef71ded5a1f4666e7",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "44d13c650abfbbcc7393f8be8a4f064f4623a4724da8e2b6e2417f2568090248",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "255464ab99ffba0765eb49fa3930b166cf89179f97e487d6deac264327a406b7",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "dab23c62eceec6a507b03d3fc2e24e83c173a46035d3cf91629e8047dc1dfa73",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "3260fe640aee4c5a0e15a2bcd64a85968918fb219885dec49f61e496911362b2",
-    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "a7aa85919a82db158949a07e3868a89ae999e848afaaca6def5e3479d7ccd91a",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "c9fb244f44a40f081d8fd3c0ac5cb9aa3f3e87f4c8cd9cdb111ab16966770049",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "7a9b119671d3ad66a1bfce9867180d7ee33b3a1830c2b2330a17fa70d6fb4ae8",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "6d6b6df887158cc6a12666a5f6a0d7aee969ce91a998a4c3f8f0cbd673b6e99d",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "a78ba7b0a43a5bf329e497e80d564f88937b0937f90ccd9077a8320f42d2aa27",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "03c8e0f8740803f2cc4713409d8cba5ae5a32c8aa368e5c78c5db6d783d5829a",
-    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "c3dba0871f6246c61d35bcc41c7a42b0a90020171eb51bb0f6dd36f177610a2b",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "84b0eb39de688faaeb98d9712b58f7a6f2623e3281d11fd573e5d09999564f70",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "9f31c782bb6a5e08884cbea0c3d584ed522c5709ce35a2f984988836389d2752",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "f71ad8f89c89a54c4318ec361a59f0104213fbe3a5540d008929c81c6a693633",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "d639450a6c3e8c6ddec634ee1b08e816d7690ac056a0f95619bb1bb4369cbfaf",
-    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "b32a8dc7620a57bd3df5f81908e58b5da5ce0600a068857ffc9b4ddbeb57bf97",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "7f4c8304ec5b9780e318fb1b39b6e5849a5783a8ef104de7f6724c505cc3d6cb",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "a76eeadba4309e59a0e64ddc24c6322d2778ebf0a5b60613eaf47bdc5733fd6e",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "b4d6d0fea0275a287b862db8facb1677c40bccc966f36a85f572d3b419042bc2",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "2fcb63a7c392ea0d2e34edc0b67b711503c5585505161674b8f02298f1bcfdd6",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "557fca41f7ff132033954a604eea8b5ad30ff143c1e7be3673e6b64aada7029a",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "0a971b6f1f3d037c510df7201f61402e79409d576a493fe9942d9db41637ace1",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "6802ad9b2b2973cb6eb57b9c26d955e559c886c6f956539bb141ce8e8121efcb",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "3fa82a630e73072fb2f709daf8341f9007ed01c7005304af8c94b61e33d98205",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "696733f4a0eff49b99be9f8d9075c108f43e092b95362ffd5eda76f8118fd2f4",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "6ec5fe360476850f5241b09821e384691178f4f9a3f28cbbc0b7d54109911953",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "194b3a8b2d917fa6070190d157ce153d9fb48c3c148628aa7368b6fe98827984",
-    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "c7711379498391ae35ee7e031bef1026043295552b92cb50e821db4336cf3689",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "cae56caa0f2d22af481f0186358ed8098082e4032acce685abf289d648145331",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "d8a4545bde9109c6d605e5f987045573e41fea6178f57d77d2e25ec8ba040f2e",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "dee96a57ea2be74df37e8571ff098ec383f7486ff5036ab41f5f514e4cacb6d1",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "09f8af511c808fdcf9e6aa6399c0751c9a3d03f997a84a4b4465281b4874787c",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "068e33b77cd34a768cf6d67951ad4111895baa94864ba7bd77919b6c4b8e7fe8",
-    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "69872c02529d2aed373cd6b671e43223c0a5a102ac492a9e2388093e86fb5b6b",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "933587bfd5dfde39981e1994e02c4d2a85b4b36544ecda17f27da4f0f2213a22",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "2c0f1fc34732806758be9fa79c8fc33e1dcb2cc099262464c64c42a57c8277db",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "6cf76abe32b865361847f93316ffb31979e06070d1d87c5bce09d94b2cf416c9",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "c8b409ff542c00ff42cffd359a578fef79b8a58989a4ad15a6245980c9bd6e91",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "9e7f49b6c0e1ef150363f702dc2d7dff04bbc89b831369584cff12fc4c6054d0",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "1f622c63eec4c9149d242b0fe762984b383d0001ed00eca62d8f3a18bda9928c",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "e3a17f1350d080fdfb2d1ac271b82e68f020ac842a65add4c3227e9b36444aba",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "f4bcd8ce6f9ff527edba3be488402995c15e0532f86009233ad1a551bbdef931",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "883bd72fb15b0cf9338a833cd9c1cff86be8ca5775bf010ee7d5d4d27d71c20c",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "8626589ca218b92b30ba79b09e73182211cb8ea846cbc0d02682a4de5b4d7f8d",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "b99858f75ba67760c5a3ff620a0d7e08f2719bf701c04d8ee3b44b66d3888a32",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "8bdbce17c07bb4f26ab3f868cc7af174a486bdb5e95905ae589d0e5e2b3ca42f",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "3f90db5cdfd94b72fd8c3ae3779c479e27a7fd5b63e98cf0976f9af22085c531",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "5a86bbbc66aaec01fe8fe92443d81c4a6fa24f3f2c187e52e2083d90f9cdf4f1",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "9cbda5c535b5b9910295327a1822e6c550eb72b5f13652325fa1976cf2525d52",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "52e521c726e6ee6f5f5b3bc817fad3733a78dfb64c7441c61c31e139c815ef49",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "418a04d3431228f99cedef7331c1cfc57f3c5cc97b6f1d63e32a8cfae371d045",
-    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "6a1efb48cdb505141bc3bf6bd6b6843a31473e925f5c72b5d421a31e429658a5",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "a7968df7334c424903011baec2c6a5c501586ec22a5eda80c5b3cdcc1b411afa",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "9fc246be3bbe445ddf1df3338c01c9ce75ac138358fa40943388c6b8d956e5a1",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "c91f000b0e5fd9ca9375531b30ab7bc398d1576b8c55d1cacd935444fb6464aa",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "5ad9b00fb656014066e435a7d27538c3cb97d00fc6ff0562af0ed006fa93bccd",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "e8986312ec3eb4e91524e3cec228bbdc4344f96cfa4b8552036ffd22f753ca1d",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "cf5161c4f6f98ed6963d6d8b9a9e1de088dc23ec4cf7478ea860db44ec7ded88",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "13c968a09071e7448d6afd2cb744f301d2037bd3af47cada29791335451eeab7",
-    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "62874745ab4f0558b3d21d4cc2e39279a15e4203eeea9a1d787273c4864fd15e",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "dc1580ce64bee8f8e2adedbf0b19af3d023706092823c2993065120f3fe2699f",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "95e10dfcfa26769e1fabfafb9a9a086e2edffef042118ba76fcdc0e862ac5390",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "40ee890bf6d19fb6fb58d728529776691ca01e4530de05cc44af45314c59bac9",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "0e9cfcdb5c3f2d1ccbd7fbf6c75c5c4e8d95044cfcf44d504fc0ccf75fce4e32",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "3a3d64a79311be8b068686a4ab0aafa48ba54e1b9725a0d83bffda74c231dbc0",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "ab1ae5c29cfeb0377b222421bb581a432ac3a64afd700858ab3dc799266f7955",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "2a8563dfda4212b1b60f6f16c48ab03b531a870736f82b2e489e8050ed0ab705",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "4b2167fbaca0ad0e2aeac3508f6be7844022132768dd8af122e993dc002b0494",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "7900299698bd74cb1fd336636d9214da2ff7cdb54330a2115361596888e2050e",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "16ed901d1e23ac6ab539003e7c48c79d832b7d1cc42b896f800ada5f601dd176",
-    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "80472c48010fd0bf846ab808f9f5da929a8f0fe43b0f8257c4bd395acd85be75",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "dc58273cc82be8d7668e1a6e935df908fc696aff97598407ccb82c2c144a714e",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "db53cbf395916920ccbc4625622594f39caa1a9c06c19049f6ac99627157fccd",
-    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "4e4700707d2c695097b0c16d29a766f8b477e6740d42b607f758f2bf48ddfa63",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "53cdcd31962d268159ce4fdf9cca049cdb58cb5c3ea7a2a5a764ee2378841ac4",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "61d13f0d443d5481349e22d011b79700f517e08a10ab1d703d268c7f9d85c511",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "1496d7604401e2da55f916e1657b46498d8492da774279b52623d15e7ecf27af",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "0e53337b62386246dabebe01751827b4be845e99b2c7cb0fa9d23ae7ec235f8b",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "8a2961fe9900f3418d7989d6a2560eb6c9605c26a605df656fb27ed392f50c38",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "b2b8e933558db581e5eb062b55bc2033d908371dde1c14913a4a58fd468ba5cd",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "338887b5eb5324bfd8eebd9a2e60368b7e08e2fdfe491ad1444fec8e02c1f093",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "943e0dc30dfe2b74be3e43b2199f900ce5869c889ee79acfca2aa9f97a6de060",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "739fe4dc3029703ec3adcab678719a486f9e7514e883a5142ec019449e6d01d0",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "8151f3f3fcd892a6a6aa25534149747e21e42fbaa56487336df6026aebfd51a0",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "3cb74e4f0b2923634d2e3fcd3ba0eff59b0deb669da3fdd3a17e441a2df63a4f",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "aaa57ac59301604b89b475014a02928dd5b82b2f7608a094ecf720d8cf036de1",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "d18345ac502fb4eb44a9e40c350bd626a792bfa7bc60fb30492bdbdea3e9e54f",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "7c61866b88c40504d75605b74c944753a013b433433d6018a454d5834acf67c9",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "dc1ac15017ebaad7afe21cb4a3dc98633ea0d918173e4ae6f58545ded96f148d",
-    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "655b646525db1f6a927567dcbea4b6c7bf0f14c6e900a6451d3e3ebf220588e3",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "830aa80df093745055ace24e89f6385912e6372653952e57b54cbd0257efe172",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "b1295ec499a7f27c2644ec24faa8961d999806cb61d313a94969c4e88fd6e54d",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "73113c5c27b13ba886627b959da361f42acd1f5030fbf5b1d9816cd1f5564c7c",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "8f106ab958d2b98bdcafc30a5f15e8bb2aa7a0bfbf17228a1c9cfcef844937b1",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "31f09bbf10ce8dc88932864a11fd66f0b38905f7408256280b2df91216f4744b",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "7cf929ead12138dccccefb38829d73df859882522dd5b89b4ebf42380534aefc",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "05b2f0554693adcb717ad84d71b7a49c5e0827d8659b6f45d20922aa8a731f75",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "9c12cd6bed778e586fb4d2d3553bdf1b7d002ef3fee7b4693de74d6e6678dd31",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "6902f64088738ae5880310c6b795b780b3a03a02e21928afc78fecb5236668c3",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "2e102853e9d83fbf4875dee2a13f4623593b67cb8518cfc2f34709eb51a2b490",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "24c67023112949b08cc61fb6f4b8578f26bd270bc8f4b9e697351b1b4a1dfaab",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "0885d944ef7c4f9b2951cd529b4a530fc5fca20bb36b8c447e77477733190d03",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "20c48719cc090efa6a8e5a368a5489f8cde8bae4acc486041a1f0bdcf998d8d2",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "e5557846ca13187c29c133382f477fdcab862c8fdfd952dfe564f93e00c9c4e8",
-    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "c31deaf3cf00df0d1392842358ba0121885f64275436f362b7a27d8a41a5b069",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "0caeb2982d34402942707dc81bc5e50f16de42049910404fe414f11f0a6a87ab",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "9a6766fca0f77654be5a2cc5ad928e1199790a416758a7b66b12ae909eae6673",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "0ef2131b1aed8e45ddddcf71c3e24ad070e507b255daa66a3d0efde3ad305524",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "50a7f266c6c9dd9bfa5c679544db9f6d193c0be348f057f881adb29e5d40514b",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "5d243851a0585388e7809d3b5fc830aa962a40c54b9c2b374d9124f528d51de4",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "00df2f0a30a26ea90c5293d7699111e67b8cd4e78be1ba35f11b1e940f382f65",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "911a1df2bcc5dcb71befd5886002455229a4d288924391d8f9a9874bc0e2e163",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "59b5f8550db43d45fdc329479807a8b42ee645a76c8cc0e333038d185457e7d8",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "d00297ccc33377dbea4d005e982823b6b94c9e6692d1d6ea997dbe665680d4b5",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "3532e904596b3acbbd5d343f39cae37011f1b3394bbdba0a3de9f68dcd283d51",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "e60a748815569333418c3000fb655c60be559c2033b2dcbfad743159b2945247",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "cbfa7842cdc8b6d9a8e647f10c527b44e1ace32122bfaed814283f1d785948aa",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "8d5b15356b9d0b19b3630a4ac128cf8ef4400d48fa17315e1ad211c225f8f026",
-    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "085c82b97173392a506ca92991760943f466bb39d9d5ecb9c6bf15198c52001c",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "55914bece8477e8667cc74ceebd93b25a973f0c36cea5dfcea209a10e5f4f077",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "dfc1d70d0c1ffe618e5b76f1e2190f2fb95f1b62474f51e21f4a20eda492c604",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "80bd06ea861f33260d7c4117e091744bf4abc6af1785d9a50f8cd11b57f2a5a3",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "906f0106a545f3d8ebaae8cdf0bdc07f2d76b05ac1fff82475e8f6e2d23fd548",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "a9a9b0e3af59c2cadb24331ffb21559ae505e2267ef8c814743d3d0f3b55dc9a",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "11804d80e116cf3f9bb5fe7d4e3309de4f04f7c8cd785a8f45efaa9e32587660",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "22459c4364c5e261866e7108ae50c9299e4b2060dc00fa5f7dbd45bb83f966ab",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "ed8d31a8b0ef8374c0ea9a1503034d4698e359854febeb4ab189fb9a061c658c",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "ee2b356d04829ed12701d13e7a64bcce53494c4d1a44fe76ed7acf03a98ea6bf",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "103235096411b24a9322dfaa79ca9b59fb33a02237a0362ed8fbd8741b6a6808",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "9733b3a67444b02c1a378412a71692597c89351ce3c862b5443b47a3a5d5f0a6",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "82b460b3d69f999ad492fd3865cbd47d7fcaa6fa28b56122c1aee13f43e05d9b",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "17c483acc8e1fc9a4c02af41676918dae95d32f185622a0ae031025c273bca6a",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "22b45f62298bec8d70ea822119a40b0a7ff64986b456539dee89251ca276ae87",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "50743cb23c9a80ec510bc3e264d488da6478544966093c7a4fd5f97e5db501a1",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "46bffe7c1fef54c4813976d94dc85b527be02d6bfce0fb197bd352d01ac3ab72",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "9dea5432cd7b85b15db2f1898bb575219b7f13c8e4dd637a8b55bd326a69089e",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "d6d3eadb1ac58156d025f30035046ba191629ed18d861af26199404f77cf2b06",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "45195f8438c14f01fedeb0eb6c7cddee1d5842fc61cd05e705c35ecba7c67467",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "b409b8a3c93b66dfc4d1a9227a56383e95be660bd4f081043e26d9541cc0fa67",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "eda0734b92b4b80b82f2f173a12069eba194a161383bb8c1bf018d51e803f79b",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "0b25eb9b5e9986a4c00b76eef6355478850d8df0db83a43984773751ce7de153",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "713214db4df9e0b3bac8aca514e7cf0b95d900b68b6598847ef46fa11908b9d1",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "7ace341d46f60886b6db71221200eb1c1144120ba3030c93da458597c4eec27b",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "e2eaf506b6ff9e6697a03011a6a82720c687d5a9625ba15afd17871ea76c24a0",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "f3f36f9c9b7400fb01488966a175e38a4af9b69dada757c895250984f355bc0a",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "9548845934a5b95103dc76dee063b6eff49b634175e0bad292e60d4e4cf6b59c",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "043854fadef91d1093ab71ecb47c22c242cd8b3d0f7693b4f9b1def222387fd0",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "b5239c0ac10120bfcbd74403a2a89e1e9da957081af08586243e14afe9139d1e",
-    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "1af170ec73dd0a603c4399eec2e1280701941baf6644bdc27fbb5b926116fbf4",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "df6091cfe9a7291bd2702446486db57e8f9c3e01a5e77d9ce96cca7d0f82daa3",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "a0fd585df89bad108fc74e08f3564ea8d54eb78753ecf4a94405b9e1a9bc969a",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "16a8f2ed4212a34bcbcbcdeb3b195e1852c33bb069818b15a08f13fe3e2347b3",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "c1171ee642b53204de67a8ff6d167f19cb2068ac7441ec3f34873f3f76cfeb91",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "01f5f7e10cf6a13cbac8fab45e08da4bae40a1fd7a139189023a94c7edc406f1",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "3c2f367952f7af63b86244c41bdde5ecb5f59028456a121e39de9ede76fe0a28",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "d84da775fcb96158d450f23f6667041bd1d78c41c0cf9d13b198b1b21df4eae6",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "9db3b186da8ea22a754fb8695e35e331797840f882c149a4eb1450ef04c87ccd",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "82c420e2e282d25f24dce2065d4d65630e9e865b5211faeaa9d25557229d84c7",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "fe9804c264264abd236507a263cae8d0433940455b7e41fbc745cb1ac4f540ba",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "3a73c06a443f1ef05ce3b5e9dfb986887c8cc41f80d084c5a3173e60a0d70310",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "dea7c7937f7225edd65920f3a96d2154f52c6065873ca44ce4fede103bf39a17",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "7796b74e614839d5a970b356323acc988b42f26ccfd73b58c5218870b6950c1a",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "b698ba435ae5edc8dda1715f2cb8d8e56ba2519dfa718d29e10a2e968d5a2fb9",
-    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "e527d6d649adc5098cb38a7223b51d47dd0b0979cb8ec7639102c3dc58d41038",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "4807fc07ee8b3c23b8a0be69007662cfff764b391b4119e2d6031050c8215640",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "89aebafed7fd9a5e576d7c6a6bba2f009abff29c4f8a20c637aa4cebb5af5bbb",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "2fce4363caddc350c106f42ee3b83136a2bbc709895140fd09a59bff28d90ece",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "0869f117edac1b6adffacb2d0d214f98f281d909d1dbe2a504e02869bcd1ccb9",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "284bbc39439a45e3721fb98963d17410d01fbb80d87c78d408dd3ad665c59719",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "a934822209c961fc23d04dc03cabc38da13350be37f9812fb5bca0d5f9f38ed2",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "66624290b7eccdb69491930bba9cc4aa8fcc7056250e6467ed06d3ebc01221f1",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "a49c281acc3187992dbf336ace9c0b2df224561af205351a088a37d9205e689e",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "223c7c5bbdaea0671cac0677325624c03137b6bba61246737554309da396b878",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "8a4ad388e931dd75515cb22ad8befdde6a1d2f5f42a8ab16501da7fea4032a80",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "9cb619e4af3588c527955220e3849abc5a15e70d774690f409b86e3b7d86fbef",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "c9daaa69b32e744d44f5d48ddeda6803a8154cd3c6cded81a538549809a17ec2",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "6015acb9f6ba469cc2685891f2ade84b51609ab7ba939969c6d5c422894a4624",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "5930fb8833cdfe408d84fb971e2f1ff957f39fbebec43aba56afc728d65ec070",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "b0b2c79b07f69a54a780e5c214608d958f6cc33b386a2f5abcb3aebc44c6d31e",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "dd4477702a5238df97105dfb7392fd7e15a2695f7b1d6f8a4a878ecdc496e358",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "10f5635ddb74d0e0269e1b526a6310338a4b3222cb26b25de4574b459caa57a5",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "d296f3daafe2da47277eb83d1ea5944bfb480af7d5b16cf5f53333b828092f4c",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "acd554bc59dc7fd7368d8be3c4f60dd81da8ec165ffda3370594542ecaa0fb00",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "71e177017c3bed572254e5564e593393880ebc8e7281beee8d55a1ebba51460c",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "a6f9a35f592c3759bdb06ac0cb51fe35c6f4d008c2f4eb42a2d8af0296bc8fae",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "641c724ca3540e6fab6fe8e246455bb2c8f1610f7067ed0f5f06fea4337a7a84",
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "815be528d93d0a4d8aff655ba12bcde6f2add39da9c1fc1fbb242bd37c2bc6be",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "94efaaeee1c45d846fc7c8614faa6549875766d9db6452936f894c53505d74f1",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "921de563fe4abaa5f5ed0b70b30bc99c8c193e813e931b28c2f6114db0dcae25",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "82def224d50613662769c9be6b478f2779e78c30ebb75887ac8f2d40d2f64ba4",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "86f0ce05632816a218a4bf3e905544e9914ee063049696156079dbb4708393fc",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "5e1271113b7bd10c46d27c27c4d462c5caa0f29fdb8e62c5119f846ba2321f04"
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "3056393081338524029d19cf523d92eabe9ce86c77660800b69bc96df5fd10bf",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "e0aa049d4fcf1081216dfb68de18ddc45f23ac788b311237e12d761888361e54",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "2d9bc41429d16b21ddf93a25cccf57220c35556932d1c3dbaba446358cb1f112",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "1ed73b794c96aabe83651a81380315d314cb7fcff00b6fc900db7598873ef908",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "b922be53bbad3a02cd6b3600f43fd8e45af5a4c15c682673be9d49535585e7ae",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "22487ede05fec3b1f533447448af2cc71c71fe17c41987de468e80548520b162",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "b89c54a66e674b6deb3f89623dc5cfb277dbd44ffdbcf60578ad5d34367d8805",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "ca3c4bb05288dfe3be020b6403ef2ff1b325239726ab544db69fd2e44ec4d8e3",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "67295e40acea37c279c19f9bcaa7b4db6f4956c72a4607b5d1b1d06a9d6df70e",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "f1daf397e8b70010545b6e275afd9d5b7dba5e9960d151391e13889231633434",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "6d3795342016c3d24c272ed0e9f5e95809e2a3ae1611617088c02db3c5ca0e56",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "57f257bb922186ed0724dd89a3e7c2070bf66491dbf72feb04c6bc2a4b2893fc",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "af2607b709088c6a3423f8b56078829fc6933c791525cb4a156bf89cb4c2c95c",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "45b0eb7184a78b6a53f031f1ab1335566f4f7dba888e067dc13be6dc9b90f0b1",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "29acc1650164b1b01846192109c1581501474bc2db319ef30127c37359c93717",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "10575ed0a4f80a06aadae71f017c29e17b38fab8892f5e751e2fa34ea65b12c5",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "e92ef9f491489568e446a07fcf31eebc009e21023e259c5470aa1c93c35dc0d2",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "ddca16255afc99ee59f8d47ff9fd5bd72c761a085979a59ea696aeb271376bfe",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "1e81c0121f3ab7f9e90e57b30e81faf4da9fc6a2ecc7f02d2eb8003e18ace9c6",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "3a9cb6879f97b3b40c4b3668c884ffd7567347337b0eb484736b2fb8786b65f5",
+    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "4411db07350877fae0ba2718fa238b5904886c8c452b9d2414a94e5a62d8d612",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "0c2e12b34a623a5299cf5d54ad73f0ca8489c79f7db8045915ee5b55a7b09064",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "18a16c2511b7488dbdd7bcf01c4e21013fbf55ec1b283374274e3d63a9ec4ace",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "abb4f2ecf579175d758bf4e6d6d87435ae230d1e3ecef51e0d3ce67e65e35f5b",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "504339cd413340261140233986e6b3ebc7bcd0a99684b7642a8af616a0858d34",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "b78fed50303ab0cf3c8de77b50478511054402733606d39c18f6e6838faf9927",
+    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "6bec087347bac46c3cff4c839a3a027731671d29908e58c3fdea255ccaf36e02",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "351c85653820bfb7797a5a8f95d0a3949d5d48081c59c52050460357b5b42470",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "08d4442b5e44e7ccd013d3b879db9e6b1e3f5bdfa28876d885a0451c6aa41df0",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "866d1f1a069e66ecc023163a8edb210e62a2c7de2eba9fdd5836a1d7b6c9568f",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "9b45da75a918c23f257f151e4932704d64af3db04c74827dc7346920fd09aa0c",
+    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "0818d91932eafd476bedc39d35a9099d6e07d86585523eff1f080461bfcd6fc5",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "a00dd9a5b01df676fc4928e079cba93fd328d2e724fae66dc28e542926aaaee0",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "9170e39568519bc505b5743559635a8923496a678712ea6c53d5d4ba96d73713",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "91e91fa9afa5fb60041f99be5618b6c73db287aa6408cd9e34ba7fb3ff782fa0",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "59e2ef7e84e6df7fa58284d7a32dafe9675c52d2b29912ae342842f834fb5cfd",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "80900063f61b6a6b2810a39be3f7bce4c7c8f4865c7d058a97cfa1b52bb7baee",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "bb92b78826fce124a9d7ffb856b1fe169d50b995344a191f9d1eb4feb49c1fe7",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "2ce54c4951cb73f9a4f933bf59cc46add0a6232870f0af880954fa74f8e8c15a",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "fe62b57fc739715d789525f4cc3c12a1b03181420f824e38f5a814ec3551c17e",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "02a736c513b5718113e34d73d873973b25b8c710b1434db40f363c3f5e6fd586",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "e9c578199cb7f1c8b18829f790f73bcc2f7aadeedd790d2776499243d707c3d4",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "7b9c9f806da03b43aa0f3460b5ba2d0442766b0dd8b31ed8082dbf1b35047516",
+    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "04c26de436b117540fb8f29f53f5ab9e547765ed34b91b4d8e19be36d66fc6e8",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "ff46c3f0ee4c85111eba093ab07bbcb21d0266fa9843fe10ed360c4c2a883108",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "8691a0b4fe93512d6b3ee8cdea89c2e6739ea12b3dd593351a22e6ecd5bc3b34",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "be6bda68538c220d49062a584f9578bdc7032db0662c9b764db00952dd15e740",
+    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "1c9a921dc441d0ec49b32b157dd8cb78585b387d45b1097c855c02e70271db45",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "ef041645a7f03332695871d19a70013ecbf91776c885fb6e81ccae59bf9ffb02",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "0c5b192a88e8ff0fab8e5e880248f9b517e2d565f571727d6d4e839d24a8a16e",
+    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "20af982e94105400d4f2cd4bd86d4cb5bc518a2ac115e99abdaa3c3fb025c2cd",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "173c41249e92a3ced25bc15e916db4a0abb1278cc3773796194bc956bd9af48d",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "6a4225e30444817ee561477c30dd64eb2ed96286596d5bfad696a65a6f954e08",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "fe459d415208826e2882b2697ec1f7ef04a5c9959bb59aa041752dcdf22f21b3",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "c88eb5cfd102e4c46578fb2af19d147bc41350b2895330e9ac858759cf78bd4b",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "63c4884ad5c85b6efcca4abbc13927ac5abfbdbaf8f92d0b4e1da3816baf90a1",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "55b2d7ca38400485b94503aa637a1ee3c67415d7fc2426390cff13a321ee7272",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "28451cb0ed83beeeece33240800ec97ae33b7484b4ab352eba0a6a0b0be2a8df",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "3cae9ff94c082fb73fa19d93fdb406d3155618d4fe8d4aca82fe550fa499382b",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "a86b630a392809eb781b1d7f346924a654f691877b4d41052b30055faae7e3aa",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "cb55ed413a77e77912bf54ec85c1e5ef0d78a05ebbfd7559049bc577a097a56d",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "f549e48f4907675e5b397e4b40ce9f4008973d5dc89a2686a80196274fe6ca96",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "cbb56d356186e43b42925ff089c73a71dbe38355d7e45b427e3cd65be6cf1519",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "5623ff51e3c6c4b035477dfb59678d99d104baf6dd21bfef36d706a6e8d41fb1",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "635fe2ee8411ce72e6f446ca17be1b97d6092390662dfc64fa1a80bb7a66c549",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "1b76c8b7ba771efdc10866b94ef709ee714c8530c1dd3932b6029236d71ffbcd",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "386ee7ac292b9ce7968f3d475d26fe9540fc02116464de1ad8a495c59fd7d8e5",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "5b5689aa76a57ef8fc6428cae693f5ae626971665b05f62c31aef288c2bd0367",
+    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "dea41e7d5128b642a98aecec47334e7d43661d4f430d76c4e813391204f0d323",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "e7e7daa34472af5d51fa32e863b02013219b6272bef7763d1e8c7786abe9dfcf",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "5f572cf6630cf5fa9645ecf6d5f8f5679b308c086da28ee77cc236ba08be6998",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "b268ddaed575887c3cfa3cb42f8fd0879d3870d54efccee06cb19e7775bf2292",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "d65006558fdbddafe2ea399606c41d22871861068f7f1bc7fc28f8cdf6acc7c7",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "6adf94a9d4fe9e5f7584fd37429cb73e7062f182351e389988aa7cfd37c29922",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "7fc490962b8532e90e5dd38f04efbeafc729bb2a521137c756d8d037f9cc1cb7",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "c0adb2a243343ee25b31d5d6caad1b1c5b3c25163227c74ec92686e92e878f4f",
+    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "b70f34a50c6dc3da23114581a9846cbcc9c817e52114ea4572f68a144394f8cc",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "33e3328fd51218eb924606ab3f579028929407eaf4b9d87da0623b39b165ea26",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "bc26ce25879c8c691f8ac86cac9ce2d05d6cf8752e04ed883432f0e86323fc60",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "3adcec3de2a291c3b620e5efa0aab3f610be71167bc5e7ecd196167317a0bbd8",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "3fe3aca31c74621326e1f08be362825a83bf84a58acbe4fb3fabac9b0329e9f1",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "3918714f564ce66673c66a3e485e4b9e34c002dc8f4bd50daaabd7a0c47a752a",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "7ecd4fbe210c9d5ef2ff322d0d775d5c0bec6e252f391a017eb89cf85ab21187",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "5046c54b564402b13e0f8d0263cc7cb120be6f55082fa85ae07b0ed13b14373a",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "4425d2ef75331c1a18ede724b81c3c4f5d704ea58358f376485d84445a4f4252",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "3d5910b8b69500ccfcbf619e745d8c4452186c2a262fee97ef562d01767c7df5",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "3dedc048b6c6a4ad512a07485a4bd879a43cc3a8427e9eacefb07e8c6e3619c3",
+    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "e04b15ce951a7912379835f424d74d1b800428d2fabd460b6812240b559ef226",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "fc847201276c07f0b1317ae0c3fccb4f9d7e9b856dee738c80fac9635e2f5bc9",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "87a83e8a2fe7ae651eb91d5c408237190951a30b2b0559977c7d0b76b449a645",
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "1edd85360c01ea0dd051d4b700d611df5d61810a950c9c444ba5aad60c8ab163",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "ebecc6e83d1e1b6edefdbccff42b623485539408a7f998f2adaba3adbc12c4bd",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "f2c610c97fd583a38687a2520f84c89141f30debdbdccc748c916ed76a2780a8",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "e82f7389090eb9eaa9d6ec79f55848adb14d6cabf0a041a04a0e28a2248a19a0",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "a2108bcbeed786aba05c44b1636dbf9467cbf34ba9f7cba2df75fc6dbf83df9f",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "5162a106e25037b90980345086f913af0171e1a4876509c42926f62b26f9e472",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "7230ceabc6d69bedd7680ab9bb15278122398358f7d8571105e853467d782b11",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "811155d375efda4d8ee166fdd43a36620ca170079ef3a1ccccbabd4ac4279a09",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "cf2301231c931dda86d00c75b7b6b173002bc7742c88acf67f0603ac91bdd0f6",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "48f23b30335c1c3428b8feefe075c0beb641629275c7124a83bc7f87f095b3a5",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "6c696a5632f7830b5f052efd215e5d5d9fbcc6fd71053ebfd188103a2bd3469a",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "df3e5275310c8d4eac6fbe1b51e0c92123b886b9b8e0a92a1ab5f501e715079f",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "605c8d5a1186d8e08806e46b1da600924754331c4614755b95d6e42b11db08c1",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "d932ecbe62b33b8662aeb445cad1fc73cc966be388bdd2639f932fdccc533e0e",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "b5c59e6aff9e55b741c329ef526ed403e4238af77589d8407a20621c8bbb1083",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "49cc4849d79574ec12ac29716f7ca2b301cce991b2fd2e80f24e4043758b2acd",
+    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "2d2b0b53a993b8240bacf05bf44c6ed93d8130bd6ce1a308d219c0e3b157d477",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "81b564822b3dd1e374595d397f4001fc9a98c57e9c23ce13e4438cab473cbe4c",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "59122311bebad5ee224616f6d16f80b80a0581a958a25fb8a7e838be64a3121f",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "4e274e08aff8d5086604b07b7a0a208573d160cd2d9e02a98266d15dd23fd9a4",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "e7d48b49d0c26c30c91ce72d641a516c9541c9ee085cf2dc2ca04ab97d20ab7d",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "18f72e72a5ac24f6e70e9b8e14028eb1a0d3f9a2f264405a66caef1a868e5c15",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "53945a17ab5dc84e6bc2564c5cc61fa8a796c203166c866de215e378042ae4ab",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "fd762ca63512156ca33791a446a1504fc3699c224ae4c80ca243c9ce12973eb4",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "c31944dd6495d09c9d467be5cfee79bfc48eba0ed1e28222fc8b8639a362b39a",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "c4a236fe4ee9f4678d746ea1b5830cc425f42de7d54aabe854a8d491e0cd3cad",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "a3deea5509d5d50539918b8684975e051aa7d1c711e29e3ec8d0ace3358ae91e",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "0c22af073df02899c3af2938166901a363dea2aa17b003ae5c137d1bfeeeff8f",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "000eee1cc973cd5d5234ea8231227f0069a1888082f6be416388e2294e639ef0",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "e2649a69f7820b5782113c57d2d49df87f9e4023348feee6ffd7596eda7d42e5",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "5c30c2601fa53da8a5f9ffef14c70eb7b4f707f9bacd2e0d3a5eb105df050424",
+    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "f2dbee17c9cbca17faecd06305a7da0f63662a7419fc6546c8cd07222decfdf1",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "c379f1a0bf289cc87d6528ff3cf3613736f719fcdca358cae9fa00064a675456",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "248c1181ee2eb84609849e5b61946a10e70dd503d6e6aa4f0d69e85c135f9aef",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "e617aa83fb3d500c06bfc743c5132d5a2d33b5a368ddf8ef2d7c9575b889a4c3",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "0595193998a8f3310d5b29551fb427dd8e96b9c23a790c3f71a0e4993031bb6b",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "835dc4094a53d5ac4af5e6dcd23239262149c4ef2c947dec4d314362ae619792",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "bed55483b23cb1be12cd2c202d11afc99b2a8758b47cf59e12a01841ef811be7",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "e15e66e1b64ee8f8679966fabaf02d57ddab264b6acc0c17f2d3c3b93f843d81",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "e031fc2041c4be6918410413a989845f958044d80c5b7dec8919be3081f827e7",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "7de224ef843285c6c18aca1f2b2e76cd7d1e04a7e0942fb9b529e8df9d1fe97c",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "2e679b9d0084a3e85cb53d429dd2fd39e6079f45daa77e12c686055fe13da9cb",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "e0cb36693600bfa62ba85b65e60e1ff714d08ea110b4147b0929b84034b1de7b",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "a2f83d0d3c1bc6c793f8996d7475d9b6548d26e1b23de69582b7343c2e1078ab",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "7feaff0526a0acedfc4f7d28b79020407e1f8c52b934f80e5529b8e7d86cffcc",
+    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "abc1b6fbd13c468a1ac277cc11eb48b87b1ab7d057df4b25e0c368617bb420bc",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "8857be79fee067145a522465f587768d8428c612ae4ac58d58f43f7b9a67652a",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "19c0ce338296dbeb9234dff1c771431106568bb204b9e9c53f90a7d87fa31d95",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "435d2bd58bcc6accaafb2565106f7f438a74dd178b5064ef98a7bd6927ef09d7",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "75e377d192ee6493f70c42a857f4e07c3ffbd582145840d56871a3257ec026c4",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "699be6be16cffec132a5121cd5160813604bc2f92509408ca0cfc8b6079eb70d",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "4ec7a5afb6441b008bb0f2debccdeb1dde8411856ff084bf2b8885a8c8ad3809",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "67e23023104af18abe451ed4a5e2fc2361d416c916dfa913cc163c59bab855c5",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "ecf4abefaf881f95166fd5bb0f78e290887dc1274ce677b23fe13d2585e62517",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "a8ab30a7417df2ffa323ce010a78847ff919ce5f038f4373d5141390a2de13d7",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "5fab2f422764c10bd2786eb9bb532ec79acbf6ad58b42e89104186cb93459a81",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "136dfeec397d523c1db0fa4c66ca1e54682074f8e7053ae66569bb9f53c6c54f",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "f606e1a053f963408b98a60a4b2e3d4ac0adb8fb73662eddd43d6cbf6667cf2d",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "6d0aab2d8434e70ce311abd36effbbae9207279c1931bba0e7befd07ded8c019",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "87d08768f2389bc92d7e61074620bff8d944e0cda6252785a10f40c3fef70d4f",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "2443b1d561c521c82101d8834828a68a2c1f2d624f4dbd23d9afa32dbdf1c0dd",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "57a83e7a8480b3c13dfb114b70f81a9f461b7f83418f61737f62d9a51bd8bc55",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "d8492ada320622549f153ad64ff2c3801c1bbc72083b0e93b8793c833ca3d08e",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "7fee341d27d72fd6fc5cbb544bdd1d7ed8111e2c7b6a4be96994fbec4771352b",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "5fae365d10c781609365aa94512dcb99ea59bcdf379e4dc1153e64e86e9a98a1",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "c5814a4e66b818cdbcd847c8b7d8622c1b462938f50032c62f200e4259dbe635",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "b80f4c735cb9e43a2a67cdc0760c8e234e5120656ffdb1c3a4c7c5423c4e8593",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "e581074eb1e07aa12fcec0d88546766a9c66e9b068cb8605149bf8a5b141791a",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "d89c8a0985198c9e776580cd9968290c200d2102b43ace0ea7077258b365ab06",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "2d6a243a2223d8d85fd41c06fe9ef88e2e0875d31755250deabdd8ee1878b3b6",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "9bd42ebdda6dfe0241ed1a1f53ecae6d296eac0a46db0f05b9971892fcfd00c4",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "6387c19852167dc24bcb0bcf5407aa592cf901ec6618efc4853d19fcde28537e",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "f2e7d7c3e3e8ccfc7d4dac2951e1084b4cb5e24b3d296b531961f57ac3b88efb",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "9a78af45ed3cfbc795efe6cba1b677e7717b8bbe5bc729836335df02b07d3bc6",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "dee5b0a48caa67a3601cf33009dc32940cf1c79916e0aa55e9002fc419af5e4c",
+    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "171930211f401384804d95a1d55e77ce55c349bab67d9deaa21d73c6c2267f44",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "4ef71b2648c8102dccd7a0aab38d46cad68b3eadb1f8e79ea22c9610ea3da9d8",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "05a95cc69991a36cfe813b6856998b00316a041a4b6770281e599b63751fe2c8",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "bab914d774cdc789318a4c570f6c953e2222dc36a5a4701d4d19d5fe85557004",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "90d180c912875b89610bc89dccb3cd9c7f9e3eb5206f6924cd3c5da0f2dba83e",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "06e625edb8d6a2545a11a0353b02d639f710670731a00d15e96473f5a5b37984",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "8f94f1f33af499fd34db0fa2ad4bc19d3d1ab329304ce35fa60a488c28bd73bb",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "7cadffa2e2dd80f72a36312b3fbb9b17ac80045cbe30a253b71d319d0c4f18bd",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "c7cf1db8711d19494934f5a6acf36bb6817cfb32afda062babcbc1636073595a",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "2ee45d838cad2b12f12dc630ff41b430f26e3f047590a5debbdc9fad300f742b",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "10112305639ae77111195c39fa487a7f0144ff3757f48d16b25f3ac1d185adc1",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "c09dc62efe58536ea7ff46bce25a75e0aa2b6d36cc0893fd410c236ad519981e",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "d697452c711c9e65f599a4f4bdf6cc6d2caa8d905905c78c1f4fc4d07e7fd7a6",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "e0f879fed90455345135bd204a44c4528766a268aabffbf299d8b8ef226fb31f",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "8c8407ed0468e2198f47d9f0742f513f11d1d01ba001f9d9ec9701f644bcf73e",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "7840aa30532516cb144a6263074bcd5db80f2473ed8bbaff660fb60f0931284a",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "b6e875975875cbdd1a87dce7ba692cc189fee86482028b359d60232301b0631d",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "e44e80a3320340f9630780268ac370c6eec51fa187d6902b73943f2ff1125cb4",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "51faec49278e37c61454ffdc5a6c74eaaa6f60dc31bb5b6e9f8a785bc5cd15ee",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "d6776f6c612d05360ee62365860b68513cc25ea7b51bfe06d44df446e9074480",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "b96c0e6b87256d80d2755523451f86d65757bdb673c0f008423409aa10c83c1f",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "244df216186321b675c30d88aeda6530e0a38bb0ec6739469036681aba2a0db2",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "cf9f1b1bb7bfaa4d17e35c49b2e73a719ae6c710a9d1ed0f83e70cd8eca53761",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "36198bb382cf3942cd0f913e080f60734c65f3c64f2b99d9275c5c0b81980e2b",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "3b01d8b1d19ea897776cae1d7afb57ce6fc1dac6b0d0621dd7ea8d7524630d2e",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "2d65e5bff8936fee67588762c6704004e15469447d65fcea83f6fb516e90b81e",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "5ce5dc9ca3ed4c8d8d5fc70967f691a5ed3ff3251f7003ce834371ff67d8038f",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "1043904bc3e81a5ddced68c985c9617f600baf7b8308cbca867db4916ffbac42",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "1fe9333e918d7dde380be623b659f595e2c2f173b32ded2c8a0ea46d9a16d3d1",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "9b07a00e625ca3c0287e0c8179a42d41aa3ff80ea0cf39ec4231bd06a0877e07",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "96fe70498917ac60708b16b94a90b4794f8b84f9e6fe21bb534959c078a242a9",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "27cc917d081dd0c6936449f6ac614536a5f5ea4be289a0215b7fc60edb90fa89",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "3b83bc784ee433903f851f757531e77a70204299605de7777b51c8ecdfd01194",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "b2212365bfcd5698fa80b35792f222780417e3bf1a6e15c85555a01616f8b29e",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "d3f7bd41d51f8e37d8105a9c59e86f41f3970ab8d28734d6166b4ed26db959d0",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "2336c60967bd17c2b92d61de82a5fbef6c75d877a3bb8159b2451f0fa39c6d9b",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "194242ebaa82484b1f93884d1c68b0735820654c77101d2bfecbcf567e01518c",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "d8ae4d3d7d3cf1def4050e5eaafd9a7826511038f9bffed5ce6c8b0c69c4088b",
+    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "e8474741d4e8c41f007576a03079448c2382634008ad0c4ce707b702d38577ae",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "b5dc9e64398f0c84c7bf397f401a8a40e51abb5b4ba8dd54aca6317e1efa1d53",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "bdc6d85f2e555432b26dc5c893f3e9bb11bc6444b8f283c3f59846223f672d29",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "e07841cd49d825500fc778c425a87ed14af5f2d76bd5b92385384a9ebe5185ef",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "dc38a4ad02485326c72fbec627d54b0095728ad3349a907d908694419e3ffc4e",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "6b70b9773efb795eb82c8871be07c688293a481d44929b9a4305263dd9930a50"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Kaivettu rakennustyömaa etualalla, kaivinkone keskellä ja katu rakennuksineen taustalla pilvisenä päivänä.",
+      "alt": "Arkistokuva: Pitkä käytävä vähittäiskaupan myymälässä, jonka molemmin puolin on täynnä hyllyjä erilaisia pakattuja elintarvikkeita.",
       "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Kotimaa",
+        "category": "Talous",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva Hoasin uuden asuntokohteen rakennuspaikasta Gotlanninkadulla: tontti ja sen vieressä näkyvä katu ympäröivine rakennuksineen. Kuvan sijainnin on vastattava juuri artikkelissa käsiteltyä tonttia.",
+            "depictable_scene": "Nimeämättömän tukkukaupan varaston sisätila, jossa kuormalavoille pinotut pahvilaatikot täyttävät metallisia varastohyllyjä leveän, tyhjän käytävän molemmin puolin.",
             "must_avoid": [
-              "Väärän tontin esittäminen kohteen rakennuspaikkana",
-              "Tulevan Hoas-rakennuksen keksitty ulkoasu"
+              "People or body parts",
+              "Invented readable labels or logos",
+              "Charts or symbols implying measured growth"
             ],
             "must_show": [
-              "Actual housing project site",
-              "Adjacent street context"
+              "Palletized cardboard boxes",
+              "Industrial warehouse shelving"
             ],
             "rank": 1,
-            "safe_to_generate": false,
+            "safe_to_generate": true,
             "search_queries": [
-              "Gotlanninkatu Hoas rakennuspaikka",
-              "Gotlanninkatu Itäkeskus tontti",
-              "Gotlanninkatu street view",
-              "Hoas Gotlanninkatu työmaa"
+              "tukkukaupan varasto kuormalavat",
+              "wholesale warehouse pallets",
+              "cardboard boxes warehouse",
+              "tukkuliikkeen varastohyllyt"
             ],
-            "subject": "Gotlanninkadulle suunniteltujen opiskelija-asuntojen rakennuspaikka"
+            "subject": "Tukkukauppa: tavaralavat varastohyllyillä"
           },
           {
-            "depictable_scene": "Pienen, tyhjän yksiön sisätila, jossa samassa huoneessa näkyvät kompakti keittokomero, vuode ja ikkunan vieressä oleva työpöytä. Näkymä on yleinen opiskelija-asumisen kuvitus, ei jäljitelmä Gotlanninkadun kohteen asunnosta.",
+            "depictable_scene": "Nimeämättömän vähittäiskaupan myymälän tyhjä käytävä, jonka molemmin puolin on hyllyillä laatikoituja ja pussitettuja päivittäistavaroita. Kuvan pääaiheena ovat tavarat ja hyllyrivit, eivät hintakyltit.",
             "must_avoid": [
-              "Ihmiset ja ruumiinosat",
-              "Gotlanninkadun todellisen asunnon tai pohjaratkaisun jäljittely",
-              "Luettava teksti ja logot"
+              "People or body parts",
+              "Invented readable prices, brand names or logos",
+              "Sale signs suggesting falling prices"
             ],
             "must_show": [
-              "Compact studio apartment",
-              "Kitchenette in the living space"
+              "Stocked retail shelves",
+              "Empty store aisle"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "opiskelija-asunto yksiö sisätila",
-              "pieni yksiö keittokomero",
-              "student studio apartment",
-              "compact studio kitchenette"
+              "päivittäistavarakaupan hyllyt",
+              "retail store shelves",
+              "packaged goods aisle",
+              "myymälän tyhjä käytävä"
             ],
-            "subject": "Opiskelija-asunnot ovat enimmäkseen yksiöitä"
+            "subject": "Vähittäiskaupassa: myymälän tavarahyllyt"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Lasse Keskinen on Wikimedia Commons",
-      "depicted": "The image shows a construction site with a large excavated area in the foreground, filled with dirt and gravel. In the middle ground, an orange and black excavator is visible, along with a white van. A row of orange traffic cones marks a path or boundary. Beyond the construction site, a road with a metal barrier runs horizontally across the image. On the left side of the road, there is a multi-story building with red brick and white sections. A yellow triangular warning sign with a black exclama",
+      "credit": "Photo by ha ha on Pexels",
+      "depicted": "The image shows a long aisle in a grocery store, filled with shelves stacked high with various canned and packaged food items. The shelves are made of metal and are dark gray or black, with lighter gray or silver edges. The products are arranged neatly in rows and columns, with many items appearing to be cans of vegetables, fruits, and other pantry staples. There are also boxes and other types of packaging visible. The lighting is bright, illuminating the products on the shelves. In the far back",
       "generated": false,
       "hotlink": false,
-      "license": "CC BY 4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0",
-      "local_path": "media/4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e.jpg",
+      "license": "Pexels License",
+      "license_evidence": {
+        "image_path": "/photos/16211537/pexels-photo-16211537.jpeg",
+        "license": "Pexels License",
+        "license_code": "Pexels",
+        "license_url": "https://www.pexels.com/license/",
+        "photo_id": "16211537",
+        "photo_url": "https://www.pexels.com/photo/shelves-in-grocery-store-16211537/",
+        "photographer": "ha ha",
+        "photographer_url": "https://www.pexels.com/@hhaa",
+        "response_sha256": "a76374aacef6e7c6419145e1f2dd3fe324bbe47a7ff7f36ae5bbad4d37c6dac3",
+        "retrieved_at": "2026-10-01T06:51:03.118346+00:00",
+        "transport": "jina_reader",
+        "version": 1
+      },
+      "license_url": "https://www.pexels.com/license/",
+      "local_path": "media/4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a.jpg",
       "pixel_review": {
-        "alt_fi": "Kaivettu rakennustyömaa etualalla, kaivinkone keskellä ja katu rakennuksineen taustalla pilvisenä päivänä.",
+        "alt_fi": "Pitkä käytävä vähittäiskaupan myymälässä, jonka molemmin puolin on täynnä hyllyjä erilaisia pakattuja elintarvikkeita.",
         "approved": true,
-        "article_text_sha256": "f8e02dcc24bace5c878161c3f693975b18bcbc0a0e3a9ed30ef0b36684d3cdb9",
-        "concept_sha256": "9d842864a26f5103fe243662d617205edf29212dc0721f148293905dedbe9392",
-        "description": "A wide shot of a construction site with an excavated pit in the foreground and an excavator visible in the middle ground. In the background, a street with traffic, various buildings, and trees are visible under a partly cloudy sky.",
-        "fit_score": 9,
-        "image_sha256": "4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e",
+        "article_text_sha256": "a8ed6244948508fc9843c65a8ffdbcc4d7578594f9df4ee8bbbe1ace390ef406",
+        "concept_sha256": "2c0a618f954cdfde208ed0d89aa412261f7ccdf5d60abccea5993c6a3e08ca9c",
+        "description": "Kuva esittää pitkää käytävää vähittäiskaupan myymälässä, jonka molemmin puolin on täynnä hyllyjä erilaisia pakattuja elintarvikkeita, kuten säilykkeitä ja laatikoituja tuotteita. Käytävä on tyhjä, eikä siinä näy ihmisiä. Hyllyt ovat täynnä tavaraa, ja valaistus on kirkas.",
+        "fit_score": 10,
+        "image_sha256": "4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts a construction site, which aligns with the article's subject of a new housing project being built. The visible street and surrounding buildings provide the adjacent street context requested by the concept. The filename also explicitly identifies the location as the Gotlanninkatu student apartment building construction lot, which matches the article's specific location.",
-        "reviewed_at": "2026-09-30T15:42:49.507071+00:00",
-        "source_context": {
-          "image_sha256": "4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e",
-          "license": "CC BY 4.0",
-          "license_url": "https://creativecommons.org/licenses/by/4.0",
-          "photo_id": "wikimedia-197362922",
-          "photo_url": "https://commons.wikimedia.org/wiki/File:HOAS%20Gotlanninkatu%20student%20apartment%20building%20construction%20lot%20(It%C3%A4keskus,%20Helsinki,%20Finland)%20Aug%2013,%202026.jpg",
-          "photographer": "Lasse Keskinen",
-          "provider": "wikimedia",
-          "title": "HOAS Gotlanninkatu student apartment building construction lot (Itäkeskus, Helsinki, Finland) Aug 13, 2026.jpg"
-        },
-        "source_context_sha256": "54b83b86b19c03c5ca970479d12dff2a9b9b6956b4a6516afe55b1bc54121069"
+        "reason": "Kuva esittää vähittäiskaupan hyllyjä ja tyhjää käytävää, mikä vastaa täysin valitun konseptin kuvausta. Artikkeli käsittelee kaupan liikevaihdon kasvua, ja vähittäiskauppa on yksi mainituista päätoimialoista, joten kuva on relevantti artikkelin aiheeseen.",
+        "reviewed_at": "2026-10-01T06:51:05.389974+00:00"
       },
       "pixels": {
-        "height": 3784,
+        "height": 627,
         "mode": "RGB",
-        "variance": 4203.3,
-        "width": 5045
+        "variance": 3192.8,
+        "width": 940
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "A wide shot of a construction site with an excavated pit in the foreground and an excavator visible in the middle ground. In the background, a street with traffic, various buildings, and trees are visible under a partly cloudy sky.",
+        "evidence": "Kuva esittää pitkää käytävää vähittäiskaupan myymälässä, jonka molemmin puolin on täynnä hyllyjä erilaisia pakattuja elintarvikkeita, kuten säilykkeitä ja laatikoituja tuotteita. Käytävä on tyhjä, eikä siinä näy ihmisiä. Hyllyt ovat täynnä tavaraa, ja valaistus on kirkas.",
         "matched": [
-          "site",
-          "street"
+          "hitt",
+          "iskaupan",
+          "käytävä",
+          "laatikoituja",
+          "molemmin",
+          "myym",
+          "ovat",
+          "puolin",
+          "tyhj",
+          "tyhjä",
+          "vähittäiskaupan"
         ],
         "method": "vision",
         "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
       "selection_evidence": {
-        "article_text_sha256": "f8e02dcc24bace5c878161c3f693975b18bcbc0a0e3a9ed30ef0b36684d3cdb9",
-        "decision_sha256": "ee4a95f03ab6d377e45599c58c92488ab0998350a52e0c62168d7188f2bb4696",
+        "article_text_sha256": "a8ed6244948508fc9843c65a8ffdbcc4d7578594f9df4ee8bbbe1ace390ef406",
+        "decision_sha256": "701bd47d03214fca2543107ac7823597e3f1496cf3f6abe44d0f04fc15e45802",
         "minimum_real_fit": 8,
         "searches": [
           {
@@ -1142,257 +1128,228 @@
               {
                 "approved": false,
                 "fit_score": 4,
-                "image_sha256": "674a7022256e158d774375e6223d91c7be9743a3daafa9deb240ce5d8143aa8a",
-                "license": "Helsingin kaupungin uutiskuvan käyttöoikeus",
-                "reason": "The image is an aerial view of a city landscape with various buildings and roads, but it does not depict an actual housing project site under construction or a specific street context that can be identified as Gotlanninkatu. The buildings shown appear to be completed, not a construction site. While it shows a general urban area, it fails to concret",
-                "source_url": "https://www.hel.fi/fi/uutiset/ita-helsinki-houkuttelee-opiskelijoita-hoasilta-174-uutta-asuntoa-itakeskukseen"
-              }
-            ],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e",
-                "license": "CC BY 4.0",
-                "reason": "The image clearly depicts a construction site, which aligns with the article's subject of a new housing project being built. The visible street and surrounding buildings provide the adjacent street context requested by the concept. The filename also explicitly identifies the location as the Gotlanninkatu student apartment building construction lot,",
-                "source_url": "https://commons.wikimedia.org/wiki/File:HOAS%20Gotlanninkatu%20student%20apartment%20building%20construction%20lot%20(It%C3%A4keskus,%20Helsinki,%20Finland)%20Aug%2013,%202026.jpg"
-              }
-            ],
-            "concept_rank": 1,
-            "outcome": "accepted",
-            "provider": "wikimedia",
-            "queries": [
-              "Gotlanninkatu Hoas rakennuspaikka",
-              "Gotlanninkatu Itäkeskus tontti",
-              "Gotlanninkatu street view"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "674a7022256e158d774375e6223d91c7be9743a3daafa9deb240ce5d8143aa8a",
-                "license": "Helsingin kaupungin uutiskuvan käyttöoikeus",
-                "reason": "The article discusses the construction of student apartments, mostly studios, in Itäkeskus. The selected concept specifically requests an interior view of a compact studio apartment with a kitchenette and a bed. The provided image is an aerial exterior view of a large building complex and its surroundings, which does not show any interior space, le",
-                "source_url": "https://www.hel.fi/fi/uutiset/ita-helsinki-houkuttelee-opiskelijoita-hoasilta-174-uutta-asuntoa-itakeskukseen"
-              }
-            ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "7838b8aa25b532d7447cd2e3b62c024182d51e80ea7e18271b6853021ee665e8",
-                "license": "CC BY-SA 4.0",
-                "reason": "The article discusses new student apartments, specifically compact studio apartments with kitchenettes. The selected concept describes a compact studio apartment with a kitchenette, bed, and desk. The image shows a person typing on a typewriter in what appears to be an office or study setting, not a studio apartment. It does not depict a compact st",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Loyola%20Student%20at%20Typewriter%20New%20Orleans%201982.jpg"
+                "image_sha256": "9a61a2f513490a4924eb3a5ed415ec9a531b82671105871ae9845c6413d0cdd3",
+                "license": "Pexels License",
+                "reason": "The image shows cardboard boxes, but they are not palletized, nor are they neatly arranged on industrial warehouse shelving. The scene appears to be a cluttered storage area or an old building entrance, not a modern wholesale warehouse as described in the concept. The 'industrial warehouse shelving' element is completely absent. One or more require",
+                "source_url": "https://www.pexels.com/photo/open-warehouse-doors-with-stacked-cardboard-boxes-29607924/"
               },
               {
                 "approved": true,
                 "fit_score": 9,
-                "image_sha256": "be691c0cce06b2c8f285fed9ad1fb24f7462bf561d1132a3eadec665d55a2c0c",
-                "license": "CC BY-SA 4.0",
-                "reason": "The image clearly depicts a compact studio apartment with a kitchenette integrated into the living space, directly matching both 'Compact studio apartment' and 'Kitchenette in the living space' elements of the selected concept. The visible elements align well with the article's subject of student studio apartments.",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Twin%20Dolphin%20Hall%20new%20studio%20apartment%201.jpg"
+                "image_sha256": "ab829f4ce20c4aa12f9413e2f82b9ac93451be6c410e33411eac34c8d6fe1c3f",
+                "license": "Pexels License",
+                "reason": "The image clearly depicts an industrial warehouse with shelving and pallets, which directly illustrates the concept of a wholesale warehouse. While not all items are cardboard boxes, a significant number are, and the overall scene strongly matches the article's subject of wholesale trade.",
+                "source_url": "https://www.pexels.com/photo/green-metal-shelves-with-construction-materials-4170172/"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "accepted",
+            "provider": "pexels",
+            "queries": [
+              "tukkukaupan varasto kuormalavat",
+              "wholesale warehouse pallets",
+              "cardboard boxes warehouse"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": true,
+                "fit_score": 10,
+                "image_sha256": "4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a",
+                "license": "Pexels License",
+                "reason": "Kuva esittää vähittäiskaupan hyllyjä ja tyhjää käytävää, mikä vastaa täysin valitun konseptin kuvausta. Artikkeli käsittelee kaupan liikevaihdon kasvua, ja vähittäiskauppa on yksi mainituista päätoimialoista, joten kuva on relevantti artikkelin aiheeseen.",
+                "source_url": "https://www.pexels.com/photo/shelves-in-grocery-store-16211537/"
               }
             ],
             "concept_rank": 2,
             "outcome": "accepted",
-            "provider": "wikimedia",
+            "provider": "pexels",
             "queries": [
-              "opiskelija-asunto yksiö sisätila",
-              "pieni yksiö keittokomero",
-              "student studio apartment"
+              "päivittäistavarakaupan hyllyt",
+              "retail store shelves",
+              "packaged goods aisle"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 1,
-          "fit_score": 9,
-          "image_sha256": "4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e",
+          "concept_rank": 2,
+          "fit_score": 10,
+          "image_sha256": "4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a",
           "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e",
-      "source_url": "https://commons.wikimedia.org/wiki/File:HOAS%20Gotlanninkatu%20student%20apartment%20building%20construction%20lot%20(It%C3%A4keskus,%20Helsinki,%20Finland)%20Aug%2013,%202026.jpg",
+      "sha256": "4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a",
+      "source_url": "https://www.pexels.com/photo/shelves-in-grocery-store-16211537/",
       "stock_provenance": {
-        "attribution": {
-          "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
-          "title": "HOAS Gotlanninkatu student apartment building construction lot (Itäkeskus, Helsinki, Finland) Aug 13, 2026.jpg"
-        },
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/HOAS_Gotlanninkatu_student_apartment_building_construction_lot_%28It%C3%A4keskus%2C_Helsinki%2C_Finland%29_Aug_13%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "license": "CC BY 4.0",
-        "license_url": "https://creativecommons.org/licenses/by/4.0",
-        "photo_id": "wikimedia-197362922",
-        "photo_url": "https://commons.wikimedia.org/wiki/File:HOAS%20Gotlanninkatu%20student%20apartment%20building%20construction%20lot%20(It%C3%A4keskus,%20Helsinki,%20Finland)%20Aug%2013,%202026.jpg",
-        "photographer": "Lasse Keskinen",
-        "photographer_url": "https://commons.wikimedia.org/wiki/File:HOAS%20Gotlanninkatu%20student%20apartment%20building%20construction%20lot%20(It%C3%A4keskus,%20Helsinki,%20Finland)%20Aug%2013,%202026.jpg",
-        "provider": "wikimedia",
-        "query": "Gotlanninkatu Itäkeskus tontti",
-        "retrieved_at": "2026-09-30T15:42:46Z"
+        "image_url": "https://images.pexels.com/photos/16211537/pexels-photo-16211537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "16211537",
+        "photo_url": "https://www.pexels.com/photo/shelves-in-grocery-store-16211537/",
+        "photographer": "ha ha",
+        "photographer_url": "https://www.pexels.com/@hhaa",
+        "provider": "pexels",
+        "query": "päivittäistavarakaupan hyllyt",
+        "retrieved_at": "2026-10-01T06:51:03Z"
       },
-      "stock_provenance_sha256": "4a9a45ff58920c7e387c92b1649b25f9c59a5c6388a9a50488da18e7593ae1b3",
-      "url": "https://uutistenlukija.fi/media/4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e.jpg"
+      "stock_provenance_sha256": "90f96de6501aaa72c62be950fa848b71e209139d50f8c0662904956e00a1f9f8",
+      "url": "https://uutistenlukija.fi/media/4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "helsinki",
+      "provider": "stat",
       "related_sources": 0,
-      "source_fields_sha256": "463475f47ca06e375a4792fe91788e99673b5b6238f0a921327d22b3e3060a43",
-      "source_sha256": "594f9ec8cd5f8cfb1c8e8bc6258a6dd32fa3c03fd1c8c55743f1ca237afac049"
+      "source_fields_sha256": "05de1040539074a828913a476c3e1f500a329320ca6ee2cf86e7f8acfb287401",
+      "source_sha256": "2338ab55eb75448de1921226c8760735173ab3a91cf33a31c1576852e38c9bd2"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-09-29T15:51:45+0300",
-        "publisher": "Helsingin kaupunki",
+        "published_at": "2026-09-30T05:00:00+00:00",
+        "publisher": "Tilastokeskus",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
+          "license": "Creative Commons Nimeä 4.0 Kansainvälinen (CC BY 4.0): kopiointi, muokkaus ja edelleenjako sallittu, myös kaupallisiin tarkoituksiin; koskee tekstejä, taulukoita ja tilastokuvioita; lähde merkittävä (Lähde: Tilastokeskus)",
           "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://hri.fi/data/fi/dataset/helsingin-hel-fi-sivuston-avoin-rajapinta-uutisille"
+          "url": "https://stat.fi/fi/tietoa-meista/tutustu-tilastokeskukseen/lainsaadanto/kayttoehdot"
         },
-        "text": "Hoas jatkaa opiskelija-asuntojen rakentamista Itä-Helsingissä. Itäkeskuksen Gotlanninkadulle rakennetaan 174 uutta opiskelija-asuntoa lähelle palveluja, metroa ja Metropolian Myllypuron kampusta.\nHelsingin seudun opiskelija-asuntosäätiö Hoasin uusi kohde täydentää Itä-Helsingin opiskelija-asuntotarjontaa. Kohteen arvioidaan valmistuvan helmikuussa 2028. Asunnot ovat pääosin yksiöitä, ja joukossa on myös parviasuntoja.\nHoasin kokemusten mukaan opiskelijat arvostavat asuntoja, joista on sujuvat yhteydet oppilaitoksiin ja palveluihin. Gotlanninkadun kohde sijaitsee Itäkeskuksen metroaseman ja monipuolisten palvelujen lähellä. Alueelta on hyvät yhteydet myös Myllypuron kampukselle.\nMyllypuron kampus on tuonut opiskelijoita Itä-Helsinkiin\nMetropolia Ammattikorkeakoulun Myllypuron kampus on tuonut alueelle opiskelijoita. Kampuksella opiskellaan muun muassa sosiaali- ja terveysalaa sekä rakennus- ja kiinteistöalaa.\nKasvava opiskelijamäärä näkyy myös asumisen kysynnässä. Hoas sai tästä kokemusta, kun Myllypuroon valmistui neljä opiskelija-asuntokohdetta joulukuun 2022 ja helmikuun 2023 välisenä aikana. Uusia koteja rakennettiin Yläkiventielle ja Myllymatkantielle.\nVaikka Myllypuro oli tuolloin Hoasille uusi alue ja asuntoja valmistui lyhyessä ajassa paljon, kaikki asunnot saatiin vuokrattua nopeasti. Itä-Helsingissä on siis kysyntää opiskelija-asumiselle.\nUusissa kodeissa huomioidaan auringonvalo\nGotlanninkadun asunnoissa on kiinnitetty huomiota auringonvaloon eri vuodenaikoina. Etelän ja lännen puoleisiin ikkunoihin suunnitellaan ulkopuoliset varjostimet, jotka suojaavat asuntoja kesäauringolta. Talvella matalammalta paistava aurinko pääsee varjostimien alitse sisään.\nItä-Helsingin keskusta kehittyy\nGotlanninkadun kohde rakentuu osaksi Itä-Helsingin uutta keskustaa. Itäkeskuksen, Puotinharjun ja Puotilan alueille rakennetaan uusia asuntoja. Samalla kehitetään palveluja, julkisia tiloja sekä kävelyn ja pyöräilyn yhteyksiä. Kulttuurikeskus Stoa perusparannetaan ja sitä laajennetaan, ja myös Itäkeskuksen uimahalli perusparannetaan.\nMyös alueen joukkoliikenneyhteyksiä kehitetään. Itäkeskuksen metroasemaa kunnostettiin kesällä 2026 ennen aseman laajempaa uudistamista. Kunnostuksella parannettiin aseman viihtyisyyttä, turvallisuutta ja toimintavarmuutta.\nNykyisen metro- ja bussiaseman paikalle suunnitellaan uutta joukkoliikenneterminaalia, joka kokoaisi metron, bussit ja pikaraitiotien samaan kokonaisuuteen. Pikaraitiolinja 15:n päätepysäkki sijoittuisi uuden terminaalin yhteyteen, mikä tekisi vaihtamisesta nykyistä sujuvampaa. Sekä Stoan uudistamisesta että uudesta joukkoliikenneterminaalista on käynnissä arkkitehtuurikilpailu.",
-        "title": "Itä-Helsinki houkuttelee opiskelijoita – Hoasilta 174 uutta asuntoa Itäkeskukseen",
-        "url": "https://www.hel.fi/fi/uutiset/ita-helsinki-houkuttelee-opiskelijoita-hoasilta-174-uutta-asuntoa-itakeskukseen"
+        "text": "Tilastokeskuksen mukaan koko kaupan työpäiväkorjattu liikevaihto kasvoi vuoden 2026 elokuussa 7,9 % vuodentakaisesta. Koko kaupan työpäiväkorjattu myynnin määrä, josta hintojen muutoksen vaikutus on poistettu, nousi 4,6 %.\nSisältöä ladataan\nKeskeisiä poimintoja\nTyöpäiväkorjattu liikevaihto kasvoi kaikilla kaupan suurimmilla toimialoilla elokuussa 2026.\nKoko kaupan kausitasoitettu liikevaihto kasvoi elokuussa heinäkuuhun verrattuna.\nVähittäiskaupan työpäiväkorjatun liikevaihdon kasvu jatkui elokuussa 2026.\nLiikevaihto kasvoi kaupan päätoimialoista eniten tukkukaupassa\nAutokaupan työpäiväkorjattu liikevaihto kasvoi vuoden 2026 elokuussa 6,7 % vuodentakaisesta. Myynnin määrä nousi 5,5 % vuodentakaisesta.\nLiikevaihdoltaan kaupan suurimman toimialan tukkukaupan työpäiväkorjattu liikevaihto nousi elokuussa 11,1 %, ja myynnin määrä 5,6 % vuodentakaisesta.\nVähittäiskaupan työpäiväkorjattu liikevaihto kasvoi elokuussa 4,6 %, ja myynnin määrä 3,7 % vuodentakaisesta.\nSisältöä ladataan\nKausitasoitettu liikevaihto kasvoi heinäkuuhun verrattuna\nKoko kaupan kausitasoitettu liikevaihto kasvoi vuoden 2026 elokuussa 0,5 % heinäkuuhun verrattuna. Kausitasoitettu myynnin määrä pysyi samalla tasolla. Heinäkuusssa kausitasoitettu liikevaihto kasvoi 1,3 % ja myynnin määrä 0,9 % edeltävään kuukauteen verrattuna.\nSisältöä ladataan",
+        "title": "Kaupan liikevaihto kasvoi 7,9 % vuoden 2026 elokuussa",
+        "url": "https://stat.fi/fi/julkaisu/cmg54g7xppmju07w7x4436t20"
       }
     ],
-    "story_key": "url:https://www.hel.fi/fi/uutiset/ita-helsinki-houkuttelee-opiskelijoita-hoasilta-174-uutta-asuntoa-itakeskukseen",
+    "story_key": "url:https://stat.fi/fi/julkaisu/cmg54g7xppmju07w7x4436t20",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-09-30T14:22:21.417293+00:00",
-        "sha256": "ed9db2b622eee9de459dceab0bba3cbf7e60dcc3eb8e4149b6fda855bb1f47a3",
-        "text": "Helsingin kaupungin hel.fi-sivuston kaikki uutiset ovat saatavissa avoimena datana RSS-syötteenä. Sivuston sisällöstä vastaa Helsingin kaupunginkanslian viestintä.\nSyötteen sisältöä voi muokata uutissivulla olevilla suodattimilla. Räätälöity RSS-syöte muodostetaan automaattisesti valittujen suodattimien pohjalta ja sen voi tilata uutissivulta.\nHuomioitavaa: Helsingin kaupungilla on uutisissa käytettyihin kuviin kaikki oikeudet. Kuvaa / kuvia saa käyttää ainoastaan siihen liittyvän uutisen yhteydessä. Kuvien käyttäminen tähän tarkoitukseen on käyttäjälle ilmaista. Kuvan käyttö tai siirto muihin tarkoituksiin on kielletty. Kuvia käytettäessä on ehdottomasti mainittava kuvien lähde ja kuvaaja.\nhttps://creativecommons.org/licenses/by/4.0/",
-        "url": "https://hri.fi/data/fi/dataset/helsingin-hel-fi-sivuston-avoin-rajapinta-uutisille"
+        "retrieved_at": "2026-09-30T14:49:02.404491+00:00",
+        "sha256": "8e09e59583fe8e0946ee50c56368b2a7026af89e2c9f1ea8a519a1a71caa9bbb",
+        "text": "Käyttöehdot\nMiten voit käyttää Tilastokeskuksen tietoja?\nPääperiaate: Voit käyttää Tilastokeskuksen tilastotietoja ja tekstejä, kunhan mainitset lähteeksi Tilastokeskuksen.\nTilastokeskuksen avoimen datan aineistoja ja verkkopalvelun julkisia sisältöjä koskee Creative Commons Nimeä 4.0 Kansainvälinen -käyttölupa. Luvan mukaisesti saat kopioida, muokata ja jakaa näitä aineistojamme edelleen joko alkuperäisessä tai muokatussa muodossa. Saat myös yhdistää aineistoja muihin aineistoihin ja käyttää aineistoja myös kaupallisiin tarkoituksiin. Tämä lupa koskee esimerkiksi tekstejä, taulukoita ja tilastokuvioita.\nKun käytät näitä aineistoja tai jaat niitä eteenpäin, merkitse lähteeksi vähintään Tilastokeskus (Lähde: Tilastokeskus).\nLisätietoa CC BY Nimeä 4.0 Kansainvälinen -käyttöluvasta (creativecommons.org)\nMitä lupa ei koske?\nLupa ei koske\nTilastokeskuksen sivuilla julkaistavia muiden organisaatioiden tuottamia tietoja. Ne ovat kunkin tiedontuottajan omien käyttöehtojen alaisia.\nvalokuvien ja kuvituskuvien käyttöä. Niiden tekijänoikeudet ovat joko kuvien tekijöillä tai Tilastokeskuksella. Tällaisen materiaalin käytöstä on aina sovittava erikseen.\ntoimeksiantoina ja maksullisina palveluina tuotettavia tietoja. Niiden käyttöehdot ovat sopimuskohtaisia.\nAineistojen oikeudet\nTilastokeskus on aineistojen tuottaja ja tekijänoikeuden haltija, ellei tuotteen, tiedon tai palvelun yhteydessä erikseen toisin ilmoiteta.\nMiten voit viitata aineistoon?\nLähdeviittauksen laajuus riippuu käyttöyhteydestä. Mainitse kuitenkin aina vähintään Tilastokeskus.\nKunkin tilaston sivulla on yksityiskohtainen kopioitava viittausohje kyseiseen tilastoon.\nKatso viittausohje-esimerkki väestörakennetilaston sivulta.\nEsimerkkejä viittaustavoista\nLähde: Tilastokeskus\nLähde: Tilastokeskus, väestörakenne\nSuomen virallinen tilasto (SVT): Kotimaan vesiliikenne [verkkojulkaisu]. Viiteajankohta: 2022, syyskuu. ISSN=2670-1952. Helsinki: Tilastokeskus [Viitattu: 21.5.2025]. Saantitapa: https://www.stat.fi/julkaisu/cktyfj0i028h80b50qy1up5dz\nSuomen virallinen tilasto (SVT): Väestörakenne [verkkojulkaisu]. ISSN = 1797-5379. Taulukko: 11rc -- Väestö iän (5-v.) ja sukupuolen mukaan, 1865-2024. Helsinki: Tilastokeskus [Viitattu 21.5.2025]. Saantitapa: https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__vaerak/statfin_vaerak_pxt_11rc.px/\nPostinumeroaluerajat, Tilastokeskus. Aineisto on ladattu Tilastokeskuksen rajapintapalvelusta 13.10.2024 lisenssillä CC BY 4.0.\nhttps://creativecommons.org/licenses/by/4.0/deed.fi",
+        "url": "https://stat.fi/fi/tietoa-meista/tutustu-tilastokeskukseen/lainsaadanto/kayttoehdot"
       }
     ]
   },
   "draft": {
-    "category": "Kotimaa",
+    "category": "Talous",
     "image": {
-      "alt": "Arkistokuva: Kaivettu rakennustyömaa etualalla, kaivinkone keskellä ja katu rakennuksineen taustalla pilvisenä päivänä.",
+      "alt": "Arkistokuva: Pitkä käytävä vähittäiskaupan myymälässä, jonka molemmin puolin on täynnä hyllyjä erilaisia pakattuja elintarvikkeita.",
       "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Kotimaa",
+        "category": "Talous",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva Hoasin uuden asuntokohteen rakennuspaikasta Gotlanninkadulla: tontti ja sen vieressä näkyvä katu ympäröivine rakennuksineen. Kuvan sijainnin on vastattava juuri artikkelissa käsiteltyä tonttia.",
+            "depictable_scene": "Nimeämättömän tukkukaupan varaston sisätila, jossa kuormalavoille pinotut pahvilaatikot täyttävät metallisia varastohyllyjä leveän, tyhjän käytävän molemmin puolin.",
             "must_avoid": [
-              "Väärän tontin esittäminen kohteen rakennuspaikkana",
-              "Tulevan Hoas-rakennuksen keksitty ulkoasu"
+              "People or body parts",
+              "Invented readable labels or logos",
+              "Charts or symbols implying measured growth"
             ],
             "must_show": [
-              "Actual housing project site",
-              "Adjacent street context"
+              "Palletized cardboard boxes",
+              "Industrial warehouse shelving"
             ],
             "rank": 1,
-            "safe_to_generate": false,
+            "safe_to_generate": true,
             "search_queries": [
-              "Gotlanninkatu Hoas rakennuspaikka",
-              "Gotlanninkatu Itäkeskus tontti",
-              "Gotlanninkatu street view",
-              "Hoas Gotlanninkatu työmaa"
+              "tukkukaupan varasto kuormalavat",
+              "wholesale warehouse pallets",
+              "cardboard boxes warehouse",
+              "tukkuliikkeen varastohyllyt"
             ],
-            "subject": "Gotlanninkadulle suunniteltujen opiskelija-asuntojen rakennuspaikka"
+            "subject": "Tukkukauppa: tavaralavat varastohyllyillä"
           },
           {
-            "depictable_scene": "Pienen, tyhjän yksiön sisätila, jossa samassa huoneessa näkyvät kompakti keittokomero, vuode ja ikkunan vieressä oleva työpöytä. Näkymä on yleinen opiskelija-asumisen kuvitus, ei jäljitelmä Gotlanninkadun kohteen asunnosta.",
+            "depictable_scene": "Nimeämättömän vähittäiskaupan myymälän tyhjä käytävä, jonka molemmin puolin on hyllyillä laatikoituja ja pussitettuja päivittäistavaroita. Kuvan pääaiheena ovat tavarat ja hyllyrivit, eivät hintakyltit.",
             "must_avoid": [
-              "Ihmiset ja ruumiinosat",
-              "Gotlanninkadun todellisen asunnon tai pohjaratkaisun jäljittely",
-              "Luettava teksti ja logot"
+              "People or body parts",
+              "Invented readable prices, brand names or logos",
+              "Sale signs suggesting falling prices"
             ],
             "must_show": [
-              "Compact studio apartment",
-              "Kitchenette in the living space"
+              "Stocked retail shelves",
+              "Empty store aisle"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "opiskelija-asunto yksiö sisätila",
-              "pieni yksiö keittokomero",
-              "student studio apartment",
-              "compact studio kitchenette"
+              "päivittäistavarakaupan hyllyt",
+              "retail store shelves",
+              "packaged goods aisle",
+              "myymälän tyhjä käytävä"
             ],
-            "subject": "Opiskelija-asunnot ovat enimmäkseen yksiöitä"
+            "subject": "Vähittäiskaupassa: myymälän tavarahyllyt"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Lasse Keskinen on Wikimedia Commons",
-      "depicted": "The image shows a construction site with a large excavated area in the foreground, filled with dirt and gravel. In the middle ground, an orange and black excavator is visible, along with a white van. A row of orange traffic cones marks a path or boundary. Beyond the construction site, a road with a metal barrier runs horizontally across the image. On the left side of the road, there is a multi-story building with red brick and white sections. A yellow triangular warning sign with a black exclama",
+      "credit": "Photo by ha ha on Pexels",
+      "depicted": "The image shows a long aisle in a grocery store, filled with shelves stacked high with various canned and packaged food items. The shelves are made of metal and are dark gray or black, with lighter gray or silver edges. The products are arranged neatly in rows and columns, with many items appearing to be cans of vegetables, fruits, and other pantry staples. There are also boxes and other types of packaging visible. The lighting is bright, illuminating the products on the shelves. In the far back",
       "generated": false,
       "hotlink": false,
-      "license": "CC BY 4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0",
-      "local_path": "media/4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e.jpg",
+      "license": "Pexels License",
+      "license_evidence": {
+        "image_path": "/photos/16211537/pexels-photo-16211537.jpeg",
+        "license": "Pexels License",
+        "license_code": "Pexels",
+        "license_url": "https://www.pexels.com/license/",
+        "photo_id": "16211537",
+        "photo_url": "https://www.pexels.com/photo/shelves-in-grocery-store-16211537/",
+        "photographer": "ha ha",
+        "photographer_url": "https://www.pexels.com/@hhaa",
+        "response_sha256": "a76374aacef6e7c6419145e1f2dd3fe324bbe47a7ff7f36ae5bbad4d37c6dac3",
+        "retrieved_at": "2026-10-01T06:51:03.118346+00:00",
+        "transport": "jina_reader",
+        "version": 1
+      },
+      "license_url": "https://www.pexels.com/license/",
+      "local_path": "media/4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a.jpg",
       "pixel_review": {
-        "alt_fi": "Kaivettu rakennustyömaa etualalla, kaivinkone keskellä ja katu rakennuksineen taustalla pilvisenä päivänä.",
+        "alt_fi": "Pitkä käytävä vähittäiskaupan myymälässä, jonka molemmin puolin on täynnä hyllyjä erilaisia pakattuja elintarvikkeita.",
         "approved": true,
-        "article_text_sha256": "f8e02dcc24bace5c878161c3f693975b18bcbc0a0e3a9ed30ef0b36684d3cdb9",
-        "concept_sha256": "9d842864a26f5103fe243662d617205edf29212dc0721f148293905dedbe9392",
-        "description": "A wide shot of a construction site with an excavated pit in the foreground and an excavator visible in the middle ground. In the background, a street with traffic, various buildings, and trees are visible under a partly cloudy sky.",
-        "fit_score": 9,
-        "image_sha256": "4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e",
+        "article_text_sha256": "a8ed6244948508fc9843c65a8ffdbcc4d7578594f9df4ee8bbbe1ace390ef406",
+        "concept_sha256": "2c0a618f954cdfde208ed0d89aa412261f7ccdf5d60abccea5993c6a3e08ca9c",
+        "description": "Kuva esittää pitkää käytävää vähittäiskaupan myymälässä, jonka molemmin puolin on täynnä hyllyjä erilaisia pakattuja elintarvikkeita, kuten säilykkeitä ja laatikoituja tuotteita. Käytävä on tyhjä, eikä siinä näy ihmisiä. Hyllyt ovat täynnä tavaraa, ja valaistus on kirkas.",
+        "fit_score": 10,
+        "image_sha256": "4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts a construction site, which aligns with the article's subject of a new housing project being built. The visible street and surrounding buildings provide the adjacent street context requested by the concept. The filename also explicitly identifies the location as the Gotlanninkatu student apartment building construction lot, which matches the article's specific location.",
-        "reviewed_at": "2026-09-30T15:42:49.507071+00:00",
-        "source_context": {
-          "image_sha256": "4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e",
-          "license": "CC BY 4.0",
-          "license_url": "https://creativecommons.org/licenses/by/4.0",
-          "photo_id": "wikimedia-197362922",
-          "photo_url": "https://commons.wikimedia.org/wiki/File:HOAS%20Gotlanninkatu%20student%20apartment%20building%20construction%20lot%20(It%C3%A4keskus,%20Helsinki,%20Finland)%20Aug%2013,%202026.jpg",
-          "photographer": "Lasse Keskinen",
-          "provider": "wikimedia",
-          "title": "HOAS Gotlanninkatu student apartment building construction lot (Itäkeskus, Helsinki, Finland) Aug 13, 2026.jpg"
-        },
-        "source_context_sha256": "54b83b86b19c03c5ca970479d12dff2a9b9b6956b4a6516afe55b1bc54121069"
+        "reason": "Kuva esittää vähittäiskaupan hyllyjä ja tyhjää käytävää, mikä vastaa täysin valitun konseptin kuvausta. Artikkeli käsittelee kaupan liikevaihdon kasvua, ja vähittäiskauppa on yksi mainituista päätoimialoista, joten kuva on relevantti artikkelin aiheeseen.",
+        "reviewed_at": "2026-10-01T06:51:05.389974+00:00"
       },
       "pixels": {
-        "height": 3784,
+        "height": 627,
         "mode": "RGB",
-        "variance": 4203.3,
-        "width": 5045
+        "variance": 3192.8,
+        "width": 940
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "A wide shot of a construction site with an excavated pit in the foreground and an excavator visible in the middle ground. In the background, a street with traffic, various buildings, and trees are visible under a partly cloudy sky.",
+        "evidence": "Kuva esittää pitkää käytävää vähittäiskaupan myymälässä, jonka molemmin puolin on täynnä hyllyjä erilaisia pakattuja elintarvikkeita, kuten säilykkeitä ja laatikoituja tuotteita. Käytävä on tyhjä, eikä siinä näy ihmisiä. Hyllyt ovat täynnä tavaraa, ja valaistus on kirkas.",
         "matched": [
-          "site",
-          "street"
+          "hitt",
+          "iskaupan",
+          "käytävä",
+          "laatikoituja",
+          "molemmin",
+          "myym",
+          "ovat",
+          "puolin",
+          "tyhj",
+          "tyhjä",
+          "vähittäiskaupan"
         ],
         "method": "vision",
         "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
       "selection_evidence": {
-        "article_text_sha256": "f8e02dcc24bace5c878161c3f693975b18bcbc0a0e3a9ed30ef0b36684d3cdb9",
-        "decision_sha256": "ee4a95f03ab6d377e45599c58c92488ab0998350a52e0c62168d7188f2bb4696",
+        "article_text_sha256": "a8ed6244948508fc9843c65a8ffdbcc4d7578594f9df4ee8bbbe1ace390ef406",
+        "decision_sha256": "701bd47d03214fca2543107ac7823597e3f1496cf3f6abe44d0f04fc15e45802",
         "minimum_real_fit": 8,
         "searches": [
           {
@@ -1400,153 +1357,110 @@
               {
                 "approved": false,
                 "fit_score": 4,
-                "image_sha256": "674a7022256e158d774375e6223d91c7be9743a3daafa9deb240ce5d8143aa8a",
-                "license": "Helsingin kaupungin uutiskuvan käyttöoikeus",
-                "reason": "The image is an aerial view of a city landscape with various buildings and roads, but it does not depict an actual housing project site under construction or a specific street context that can be identified as Gotlanninkatu. The buildings shown appear to be completed, not a construction site. While it shows a general urban area, it fails to concret",
-                "source_url": "https://www.hel.fi/fi/uutiset/ita-helsinki-houkuttelee-opiskelijoita-hoasilta-174-uutta-asuntoa-itakeskukseen"
-              }
-            ],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e",
-                "license": "CC BY 4.0",
-                "reason": "The image clearly depicts a construction site, which aligns with the article's subject of a new housing project being built. The visible street and surrounding buildings provide the adjacent street context requested by the concept. The filename also explicitly identifies the location as the Gotlanninkatu student apartment building construction lot,",
-                "source_url": "https://commons.wikimedia.org/wiki/File:HOAS%20Gotlanninkatu%20student%20apartment%20building%20construction%20lot%20(It%C3%A4keskus,%20Helsinki,%20Finland)%20Aug%2013,%202026.jpg"
-              }
-            ],
-            "concept_rank": 1,
-            "outcome": "accepted",
-            "provider": "wikimedia",
-            "queries": [
-              "Gotlanninkatu Hoas rakennuspaikka",
-              "Gotlanninkatu Itäkeskus tontti",
-              "Gotlanninkatu street view"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "674a7022256e158d774375e6223d91c7be9743a3daafa9deb240ce5d8143aa8a",
-                "license": "Helsingin kaupungin uutiskuvan käyttöoikeus",
-                "reason": "The article discusses the construction of student apartments, mostly studios, in Itäkeskus. The selected concept specifically requests an interior view of a compact studio apartment with a kitchenette and a bed. The provided image is an aerial exterior view of a large building complex and its surroundings, which does not show any interior space, le",
-                "source_url": "https://www.hel.fi/fi/uutiset/ita-helsinki-houkuttelee-opiskelijoita-hoasilta-174-uutta-asuntoa-itakeskukseen"
-              }
-            ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "7838b8aa25b532d7447cd2e3b62c024182d51e80ea7e18271b6853021ee665e8",
-                "license": "CC BY-SA 4.0",
-                "reason": "The article discusses new student apartments, specifically compact studio apartments with kitchenettes. The selected concept describes a compact studio apartment with a kitchenette, bed, and desk. The image shows a person typing on a typewriter in what appears to be an office or study setting, not a studio apartment. It does not depict a compact st",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Loyola%20Student%20at%20Typewriter%20New%20Orleans%201982.jpg"
+                "image_sha256": "9a61a2f513490a4924eb3a5ed415ec9a531b82671105871ae9845c6413d0cdd3",
+                "license": "Pexels License",
+                "reason": "The image shows cardboard boxes, but they are not palletized, nor are they neatly arranged on industrial warehouse shelving. The scene appears to be a cluttered storage area or an old building entrance, not a modern wholesale warehouse as described in the concept. The 'industrial warehouse shelving' element is completely absent. One or more require",
+                "source_url": "https://www.pexels.com/photo/open-warehouse-doors-with-stacked-cardboard-boxes-29607924/"
               },
               {
                 "approved": true,
                 "fit_score": 9,
-                "image_sha256": "be691c0cce06b2c8f285fed9ad1fb24f7462bf561d1132a3eadec665d55a2c0c",
-                "license": "CC BY-SA 4.0",
-                "reason": "The image clearly depicts a compact studio apartment with a kitchenette integrated into the living space, directly matching both 'Compact studio apartment' and 'Kitchenette in the living space' elements of the selected concept. The visible elements align well with the article's subject of student studio apartments.",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Twin%20Dolphin%20Hall%20new%20studio%20apartment%201.jpg"
+                "image_sha256": "ab829f4ce20c4aa12f9413e2f82b9ac93451be6c410e33411eac34c8d6fe1c3f",
+                "license": "Pexels License",
+                "reason": "The image clearly depicts an industrial warehouse with shelving and pallets, which directly illustrates the concept of a wholesale warehouse. While not all items are cardboard boxes, a significant number are, and the overall scene strongly matches the article's subject of wholesale trade.",
+                "source_url": "https://www.pexels.com/photo/green-metal-shelves-with-construction-materials-4170172/"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "accepted",
+            "provider": "pexels",
+            "queries": [
+              "tukkukaupan varasto kuormalavat",
+              "wholesale warehouse pallets",
+              "cardboard boxes warehouse"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": true,
+                "fit_score": 10,
+                "image_sha256": "4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a",
+                "license": "Pexels License",
+                "reason": "Kuva esittää vähittäiskaupan hyllyjä ja tyhjää käytävää, mikä vastaa täysin valitun konseptin kuvausta. Artikkeli käsittelee kaupan liikevaihdon kasvua, ja vähittäiskauppa on yksi mainituista päätoimialoista, joten kuva on relevantti artikkelin aiheeseen.",
+                "source_url": "https://www.pexels.com/photo/shelves-in-grocery-store-16211537/"
               }
             ],
             "concept_rank": 2,
             "outcome": "accepted",
-            "provider": "wikimedia",
+            "provider": "pexels",
             "queries": [
-              "opiskelija-asunto yksiö sisätila",
-              "pieni yksiö keittokomero",
-              "student studio apartment"
+              "päivittäistavarakaupan hyllyt",
+              "retail store shelves",
+              "packaged goods aisle"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 1,
-          "fit_score": 9,
-          "image_sha256": "4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e",
+          "concept_rank": 2,
+          "fit_score": 10,
+          "image_sha256": "4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a",
           "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e",
-      "source_url": "https://commons.wikimedia.org/wiki/File:HOAS%20Gotlanninkatu%20student%20apartment%20building%20construction%20lot%20(It%C3%A4keskus,%20Helsinki,%20Finland)%20Aug%2013,%202026.jpg",
+      "sha256": "4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a",
+      "source_url": "https://www.pexels.com/photo/shelves-in-grocery-store-16211537/",
       "stock_provenance": {
-        "attribution": {
-          "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
-          "title": "HOAS Gotlanninkatu student apartment building construction lot (Itäkeskus, Helsinki, Finland) Aug 13, 2026.jpg"
-        },
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/HOAS_Gotlanninkatu_student_apartment_building_construction_lot_%28It%C3%A4keskus%2C_Helsinki%2C_Finland%29_Aug_13%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "license": "CC BY 4.0",
-        "license_url": "https://creativecommons.org/licenses/by/4.0",
-        "photo_id": "wikimedia-197362922",
-        "photo_url": "https://commons.wikimedia.org/wiki/File:HOAS%20Gotlanninkatu%20student%20apartment%20building%20construction%20lot%20(It%C3%A4keskus,%20Helsinki,%20Finland)%20Aug%2013,%202026.jpg",
-        "photographer": "Lasse Keskinen",
-        "photographer_url": "https://commons.wikimedia.org/wiki/File:HOAS%20Gotlanninkatu%20student%20apartment%20building%20construction%20lot%20(It%C3%A4keskus,%20Helsinki,%20Finland)%20Aug%2013,%202026.jpg",
-        "provider": "wikimedia",
-        "query": "Gotlanninkatu Itäkeskus tontti",
-        "retrieved_at": "2026-09-30T15:42:46Z"
+        "image_url": "https://images.pexels.com/photos/16211537/pexels-photo-16211537.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "16211537",
+        "photo_url": "https://www.pexels.com/photo/shelves-in-grocery-store-16211537/",
+        "photographer": "ha ha",
+        "photographer_url": "https://www.pexels.com/@hhaa",
+        "provider": "pexels",
+        "query": "päivittäistavarakaupan hyllyt",
+        "retrieved_at": "2026-10-01T06:51:03Z"
       },
-      "stock_provenance_sha256": "4a9a45ff58920c7e387c92b1649b25f9c59a5c6388a9a50488da18e7593ae1b3",
-      "url": "https://uutistenlukija.fi/media/4fc5529a5f7fdb72c50df0a4c8e4859841811ae7cfd695c0001075cb06ecfb9e.jpg"
+      "stock_provenance_sha256": "90f96de6501aaa72c62be950fa848b71e209139d50f8c0662904956e00a1f9f8",
+      "url": "https://uutistenlukija.fi/media/4d8bc733e6b5efe8cfc219a9d41e48f154947f126e3c081e63a71a4e19497a8a.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Gotlanninkadulle rakennettavat asunnot ovat Helsingin kaupungin tiedotteen mukaan enimmäkseen yksiöitä, mutta mukana on myös parviasuntoja. Helsingin seudun opiskelija-asuntosäätiö Hoasin kohde sijaitsee lähellä Itäkeskuksen metroasemaa, josta on yhteys Metropolian Myllypuron kampukselle."
+        "text": "Tukkukaupassa liikevaihdon vuosikasvu oli kaupan päätoimialoista nopeinta. Tilastokeskuksen mukaan sen työpäiväkorjattu liikevaihto nousi elokuussa 11,1 prosenttia ja myynnin määrä 5,6 prosenttia vuoden takaisesta. Tukkukauppa on liikevaihdoltaan kaupan suurin toimiala."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kaupunki perustelee opiskelija-asuntojen kysyntää Hoasin aiemmilla kokemuksilla Myllypurosta. Sinne valmistui neljä Hoasin asuntokohdetta joulukuun 2022 ja helmikuun 2023 välillä. Tiedotteen mukaan niiden kaikki asunnot saatiin nopeasti vuokrattua."
+        "text": "Koko kaupan työpäiväkorjattu myynnin määrä kasvoi Tilastokeskuksen mukaan 4,6 prosenttia vuodentakaisesta. Myynnin määrässä hintojen muutosten vaikutus on poistettu, joten sen kasvu jäi liikevaihdon 7,9 prosentin nousua pienemmäksi."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Uuden kohteen etelään ja länteen avautuviin ikkunoihin suunnitellaan ulkopuolisia varjostimia. Kaupungin mukaan niiden tarkoitus on vähentää kesäauringon vaikutusta asuntoihin mutta päästää talvella matalalta tuleva auringonvalo sisään."
+        "text": "Autokaupan työpäiväkorjattu liikevaihto kasvoi tilaston mukaan 6,7 prosenttia ja myynnin määrä 5,5 prosenttia vuotta aiemmasta. Vähittäiskaupassa vastaavat kasvuluvut olivat 4,6 ja 3,7 prosenttia."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Asuntokohde liittyy kaupungin kuvaamaan Itäkeskuksen, Puotinharjun ja Puotilan kehittämiseen. Nykyisen metro- ja bussiaseman paikalle suunnitellaan joukkoliikenneterminaalia, jonka yhteyteen sijoittuisi myös pikaraitiolinja 15:n päätepysäkki. Kaupungin mukaan terminaalista on käynnissä arkkitehtuurikilpailu."
+        "text": "Kuukausivertailussa kasvu oli vuosivertailua maltillisempaa: koko kaupan kausitasoitettu liikevaihto nousi Tilastokeskuksen mukaan elokuussa 0,5 prosenttia heinäkuusta, eikä myynnin määrä muuttunut. Heinäkuussa liikevaihto oli kasvanut 1,3 prosenttia ja myynnin määrä 0,9 prosenttia edellisestä kuukaudesta."
       }
     ],
-    "summary": "Helsingin kaupungin mukaan Gotlanninkadun kohde lisää opiskelija-asuntoja metron ja palvelujen lähellä. Sen arvioidaan valmistuvan helmikuussa 2028.",
-    "title": "Hoas rakentaa 174 opiskelija-asuntoa Itäkeskukseen"
+    "summary": "Tilastokeskuksen mukaan kaupan kasvu ulottui elokuussa 2026 kaikkiin päätoimialoihin. Hintojen vaikutuksesta puhdistettu myynnin määrä nousi vuodentakaisesta, mutta pysyi kausitasoitettuna heinäkuun tasolla.",
+    "title": "Kaupan liikevaihto kasvoi elokuussa 7,9 prosenttia"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "1bef6ef9da9771d0342c7c30c692310829a12caa53d4a2a7968bf2eaae4cc351",
+    "draft_sha256": "d24c3cc686afaa6adaf895665991c2828f271d912eac878818ff25e5759c8013",
     "reasons": [
-      "Otsikko on 50 merkkiä, joten se täyttää 60 merkin tavoitteen ja kertoo tärkeimmän asian alussa. Lähde A tukee Hoasin nimeä, 174 opiskelija-asunnon määrää ja Itäkeskuksen sijaintia. Ingressin Gotlanninkatu, palvelujen ja metron läheisyys sekä arvioitu valmistuminen helmikuussa 2028 vastaavat lähdettä; valmistumisajankohtaa ei esitetä varmana.",
-      "Kaikkien neljän kappaleen source_ids-merkintä A on asianmukainen. A tukee yksiöitä ja parviasuntoja, yhteyttä Metropolian Myllypuron kampukselle, neljän Myllypuron kohteen valmistumista joulukuun 2022 ja helmikuun 2023 välillä sekä asuntojen nopeaa vuokraamista. Kysyntää koskeva päätelmä on selvästi kaupungin perustelu, ei riippumattomasti vahvistettu havainto.",
-      "Lähde A tukee etelän- ja lännenpuoleisten ikkunoiden suunniteltuja varjostimia sekä niiden kesä- ja talviajan tarkoitusta. Myös Itäkeskuksen, Puotinharjun ja Puotilan kehittäminen, suunniteltu joukkoliikenneterminaali, pikaraitiolinja 15:n mahdollinen päätepysäkki ja käynnissä oleva arkkitehtuurikilpailu löytyvät A:sta. Suunnitelmien epävarmuus säilyy luonnoksessa.",
-      "A on Helsingin kaupungin 29.9.2026 julkaisema ajankohtainen ensisijainen lähde, joka riittää tämän rajatun paikallisen rakennushankeuutisen pohjaksi. Teksti on itsenäisesti tiivistettyä, neutraalia ja ymmärrettävää suomea. Kotimaa-luokitus sopii aiheeseen, eikä Helsingin paikallisista tiedoista tehdä valtakunnallisia yleistyksiä. RIGHTS-asiakirjaa käytetään vain tekstin käyttöoikeuden näyttönä.",
-      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Wikimedia-provenienssi yksilöi Lasse Keskisen 13.8.2026 ottaman kuvan juuri Hoasin Gotlanninkadun rakennustontista ja sen CC BY 4.0 -käyttöoikeuden. Dokumentoidussa pikseliarviossa näkyvät kaivettu tontti, kaivinkone ja viereinen katu rakennuksineen; yhteys on siten tähän hankkeeseen eikä pelkkään yleiseen rakentamiskategoriaan. Kahdelle järjestetylle kuvakonseptille on kirjattu haut, ja valitun ensimmäisen konseptin koko artikkeliin sidottu pikseliarvio on 9/10. Arkistokuvamerkintä, vaihtoehtoinen teksti ja kuvaajatieto sopivat aineistoon; kuvaa ei esitetä valmiina rakennuksena tai nykyhetken näkymänä."
+      "Otsikko on 50 merkkiä pitkä, alittaa 60 merkin tavoitteen ja alkaa pääasialla. Lähde A tukee otsikon 7,9 prosentin kasvua sekä ingressin ajankohtaa, elokuuta 2026, kasvua kaikilla kaupan päätoimialoilla ja kausitasoitetun myynnin määrän pysymistä heinäkuun tasolla.",
+      "Kaikkien neljän kappaleen source_ids-merkintä A on asianmukainen. A tukee tukkukaupan kasvulukuja 11,1 ja 5,6 prosenttia ja sen asemaa liikevaihdoltaan suurimpana toimialana; koko kaupan vuosimuutoksia 7,9 ja 4,6 prosenttia; autokaupan lukuja 6,7 ja 5,5 sekä vähittäiskaupan lukuja 4,6 ja 3,7 prosenttia. Myös elokuun kuukausimuutos 0,5 prosenttia, muuttumaton myynnin määrä ja heinäkuun muutokset 1,3 ja 0,9 prosenttia vastaavat A:ta. Vuosivertailun työpäiväkorjaus ja kuukausivertailun kausitasoitus on erotettu oikein. Hintavaikutuksen poistaminen ja määrän liikevaihtoa pienempi kasvu perustuvat A:n määritelmään ja lukuihin.",
+      "A on Tilastokeskuksen 30.9.2026 julkaisema, tarkasteluhetkeen nähden ajankohtainen viranomaislähde ja riittää tämän rajatun tilastouutisen pohjaksi. Teksti nimeää lähteen eikä esitä riippumatonta vahvistusta. Talous-luokitus on asianmukainen, eikä teksti laajenna tietoja perusteettomasti muihin aiheisiin tai alueisiin. Muotoilu on neutraalia, ymmärrettävää ja lähdettä tiivistävää. RIGHTS tukee tekstin uudelleenkäyttöä lähdemaininnalla, ei uutisväitteitä eikä valokuvan käyttöoikeutta.",
+      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Molemmille järjestetyille kuvakonsepteille on dokumentoitu hakuja. Valitun todellisen kuvan täsmälliseen kuvatunnisteeseen ja artikkelitekstiin sidottu pikseliarvio antaa soveltuvuudeksi 10/10. Kuvatut pakattujen elintarvikkeiden hyllyt ja tyhjä myymäläkäytävä liittyvät konkreettisesti jutussa käsiteltyyn vähittäiskauppaan; kuva ei väitä osoittavansa tilastollista kasvua tai elokuun 2026 tapahtumaa. Arkistokuvamerkintä erottaa sen ajankohtaisesta tapahtumakuvasta. Kuvakohtainen Pexels-oikeustietue yksilöi valokuvan 16211537, kuvaajan ha ha ja lisenssin, ja kuvaajamaininta vastaa näitä tietoja. Toimitetuissa kuvatiedoissa ei ole viitettä turvarajojen rikkomisesta."
     ]
   }
 }

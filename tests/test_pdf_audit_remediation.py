@@ -288,6 +288,23 @@ class PdfAuditRemediation(unittest.TestCase):
         self.assertGreaterEqual(contrast((138, 180, 255), (16, 18, 20)), 4.5)
         self.assertGreaterEqual(contrast((128, 128, 128), (10, 11, 13)), 4.5)
 
+    def test_exact_kotilon_teaser_title_uses_global_long_word_wrapping(self):
+        title = "Kotilon lastenkulttuurinäyttelyyn voi tutustua verkossa"
+        lead = self.clone(0, title="Etusivun pääuutinen")
+        teaser = self.clone(1, title=title)
+        output = self.render([lead, teaser], public=False)
+        homepage = (output / "index.html").read_text()
+        teaser_html = re.search(
+            r'<article class="portal-teaser[^>]*>.*?</article>', homepage, re.S
+        ).group(0)
+        self.assertIn(f'<h3><a href="/{site.article_path(teaser)}">{title}</a></h3>',
+                      teaser_html)
+
+        portal = (output / "assets/css/portal-overhaul.css").read_text()
+        global_rule = re.search(r"^\.portal-teaser h3\s*\{([^}]*)\}", portal, re.M)
+        self.assertIsNotNone(global_rule)
+        self.assertRegex(global_rule.group(1), r"overflow-wrap:\s*anywhere")
+
     def test_datetime_uses_utc_machine_value_and_helsinki_dst(self):
         self.assertEqual(site.semantic_datetime("2026-03-29T00:30:00Z"),
                          ("2026-03-29T00:30:00Z", "29.3.2026 klo 02.30"))
