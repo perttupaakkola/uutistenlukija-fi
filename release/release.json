@@ -4,38 +4,300 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "1a7cd0b8c7f5a4d399e329781127db232beacbc4",
-  "job_id": "ab7243f61af14ca52b23145087904bdc150276a4b0d31acb256054b6d9966cc5",
-  "packet_sha256": "011be4fe9f123e4034f945da8dcf4b092ac34469da2a1404aca4925dad2a62f3",
-  "draft_sha256": "2d00661c52b5a8e703283215d9704a6cb94e1321200fb0a924a618b48f979df0",
-  "image_sha256": "969851d82e582066a7d2a65b4502a223e3611b5dd2c8f89ec299b6e7a9150501",
-  "text_only": {
-    "policy": "official-text-v1",
-    "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "17203d95fd987523792b93b4fe4012bfbfa54d4e234b3e172234a1cd99b4a906"
+  "job_id": "58795708c3dd8544e67a536c3ad47928d2df9c8e38cc1989fd2cd4b7053a9d7d",
+  "packet_sha256": "f0f77775749303ca6769ce3e4029bd42632fb73de1621b443ced12f28e6bd44a",
+  "draft_sha256": "3e81ed62045a7ed76f742b1e053b2d7ccd6e988f70a5090f2596654697dbc750",
+  "image_sha256": null,
+  "text_provenance": "not-applicable",
+  "stock_image": {
+    "alt": "Arkistokuva: Asfalttitie on osittain tulvaveden peitossa trooppisessa ympäristössä, ja sen reunoilla on tiheää kasvillisuutta ja puinen aita.",
+    "caption": "Arkistokuva artikkelin aiheesta.",
+    "classifier_output": {
+      "category": "Maailma",
+      "concepts": [
+        {
+          "depictable_scene": "Todellinen Terra-satelliitin MODIS-kuva 29. syyskuuta 2026: Havaijin saariketju merellä, saarista loittonevan Nolon pilvijärjestelmä ja Kauain sekä Niihaun yllä olevat sadevyöhykkeet.",
+          "must_avoid": [
+            "Unrelated hurricane imagery",
+            "Fabricated satellite imagery",
+            "Depiction of hurricane landfall"
+          ],
+          "must_show": [
+            "Hawaiian island chain",
+            "Nolo cloud bands"
+          ],
+          "rank": 1,
+          "safe_to_generate": false,
+          "search_queries": [
+            "Nolo Hawaii MODIS",
+            "Nolo Terra 29 September 2026",
+            "hurricane satellite cloud bands",
+            "NASA MODIS Nolo Hawaii 2026"
+          ],
+          "subject": "Nolo ja Havaijin saaret Terra-satelliitin kuvassa"
+        },
+        {
+          "depictable_scene": "Nimeämättömän trooppisen ympäristön tyhjä asfalttitie, jonka matala ruskehtava tulvavesi peittää osittain. Tien reunoilla näkyy märkää, tiheää kasvillisuutta ja veden pinnalla sadepisaroiden renkaita.",
+          "must_avoid": [
+            "People or body parts",
+            "Recognizable real locations",
+            "Invented text or logos",
+            "Presentation as an authentic photograph of Nolo damage"
+          ],
+          "must_show": [
+            "Floodwater covering an asphalt road",
+            "Wet tropical roadside vegetation"
+          ],
+          "rank": 2,
+          "safe_to_generate": true,
+          "search_queries": [
+            "tropical flooded road",
+            "rain flooded asphalt",
+            "trooppinen tulviva tie",
+            "heavy rain tropical roadside"
+          ],
+          "subject": "Sateet ja tulviva tie trooppisessa ympäristössä"
+        }
+      ],
+      "version": "article-first-v1"
+    },
+    "credit": "Photo by Karl Callwood on Unsplash",
+    "depicted": "The image shows a flooded road or path with murky water, extending into the distance. On the left, a wooden utility pole stands with two signs attached. The top sign is yellow and diamond-shaped with the word \"SLOW\" in black capital letters. Below it, a white rectangular sign reads \"REDUCED SPEED\" in black capital letters, with the number \"10\" below it in a larger font. The pole is surrounded by green foliage. To the right of the pole, a wooden railing or fence is partially submerged in the wate",
+    "generated": false,
+    "hotlink": true,
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "pixel_review": {
+      "alt_fi": "Asfalttitie on osittain tulvaveden peitossa trooppisessa ympäristössä, ja sen reunoilla on tiheää kasvillisuutta ja puinen aita.",
+      "approved": true,
+      "article_text_sha256": "0de491a2bb468405e94a8cce5a595cfab771ef24b7a0e9ad224f772d2bf662e4",
+      "concept_sha256": "e01098231909f4b1ce2d04c37710a20ce686bf3ea948a0adc613623f50f62ffc",
+      "description": "A partially flooded asphalt road in a tropical environment, with a wooden fence and dense green vegetation along its sides. A utility pole with 'SLOW' and 'REDUCED SPEED 10' signs stands on the left. Palm trees are visible in the background under a clear blue sky.",
+      "fit_score": 9,
+      "image_sha256": "82ff0efa07f101b1742cf2670b9f266ef81c358077bd2501abd82d603288ccb0",
+      "model": "google:gemini-2.5-flash",
+      "must_show_visible": [
+        true,
+        true
+      ],
+      "no_people": true,
+      "reason": "The image clearly depicts a flooded asphalt road and wet tropical roadside vegetation, directly matching the selected concept. The article discusses heavy rainfall and flooding in a tropical location (Hawaii), making the image highly relevant to the article's subject.",
+      "reviewed_at": "2026-10-01T19:04:50.968645+00:00"
+    },
+    "pixels": {
+      "height": 864,
+      "mode": "RGB",
+      "variance": 12014.5,
+      "width": 1536
+    },
+    "relevance_check": {
+      "accepted": true,
+      "evidence": "A partially flooded asphalt road in a tropical environment, with a wooden fence and dense green vegetation along its sides. A utility pole with 'SLOW' and 'REDUCED SPEED 10' signs stands on the left. Palm trees are visible in the background under a clear blue sky.",
+      "matched": [
+        "asphalt",
+        "road",
+        "tropical",
+        "vegetation"
+      ],
+      "method": "vision",
+      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+    },
+    "selection_evidence": {
+      "article_text_sha256": "0de491a2bb468405e94a8cce5a595cfab771ef24b7a0e9ad224f772d2bf662e4",
+      "decision_sha256": "08350deb41c6d2852546f755c1d6403a6dff8401d82dec0a29fefd8e070a8cae",
+      "minimum_real_fit": 8,
+      "searches": [
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "0c6d08e16402e3261e2e03f599813da8e6fe56d4a6c26281c46ec2182e00966b",
+              "license": "Pexels License",
+              "reason": "The article discusses a satellite image of the Hawaiian island chain and the Nolo cloud system. The selected concept specifically requires a satellite image showing the Hawaiian island chain, Nolo cloud bands, and rain zones over Kauai and Niihau. The provided image is an aerial photograph of a beach with palm trees and people, which is not a satel",
+              "source_url": "https://www.pexels.com/photo/aerial-view-of-waikiki-beach-honolulu-hawaii-32194277/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "211feec663dcafba96d99a023896a7554da5cec9f0f7aa6b99cfe63d388d739d",
+              "license": "Pexels License",
+              "reason": "The image depicts an aerial view of a landscape with volcanic features and vegetation, which is unrelated to the article's subject of Hurricane Nolo and satellite imagery of the Hawaiian island chain. The image does not show any of the 'must_show' elements: 'Hawaiian island chain' or 'Nolo cloud bands'. One or more required concept elements are not",
+              "source_url": "https://www.pexels.com/photo/birds-eye-view-of-volcanic-soil-16643518/"
+            },
+            {
+              "approved": false,
+              "fit_score": 3,
+              "image_sha256": "7f7e784cadd5441818e2f6368eacd009633c2a9843a24d85ea679fbf5e190db3",
+              "license": "Pexels License",
+              "reason": "The article describes a satellite image of the Hawaiian island chain and the Nolo cloud system. The provided image is an aerial photograph of a beach and coastline, not a satellite image showing the entire island chain or cloud formations. It does not depict the specific subject or perspective requested by the concept. One or more required concept ",
+              "source_url": "https://www.pexels.com/photo/birds-eye-view-of-sea-shore-15988265/"
+            },
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "0a025a0c7d1d81443c7dea4abbfb87cd1ec11c8fd7183337dd6794db61ff2c90",
+              "license": "Pexels License",
+              "reason": "The article and concept describe a satellite image of a hurricane and the Hawaiian island chain. This image is an aerial photograph of a coastline, not a satellite image, and does not show a hurricane or the entire island chain from a satellite perspective. It does not depict the specific concept of a MODIS image of Nolo's cloud system and the Hawa",
+              "source_url": "https://www.pexels.com/photo/green-mountain-near-the-ocean-4321834/"
+            }
+          ],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "Nolo Hawaii MODIS",
+            "Nolo Terra 29 September 2026",
+            "hurricane satellite cloud bands"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "unsplash",
+          "queries": [
+            "Nolo Hawaii MODIS",
+            "Nolo Terra 29 September 2026",
+            "hurricane satellite cloud bands"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "wikimedia",
+          "queries": [
+            "Nolo Hawaii MODIS",
+            "Nolo Terra 29 September 2026",
+            "hurricane satellite cloud bands"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "google",
+          "queries": [
+            "Nolo Hawaii MODIS",
+            "Nolo Terra 29 September 2026",
+            "hurricane satellite cloud bands"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "8a49919de5540485a8091f54626a6a3e1f6b1d1463e16106d229037ceeafab72",
+              "license": "Pexels License",
+              "reason": "The image shows a flooded asphalt road and roadside vegetation, which aligns with the 'must_show' elements. However, the vegetation does not appear tropical, and the presence of a vehicle driving through the floodwater contradicts the 'empty' requirement of the 'depictable_scene'. The article mentions heavy rains and flooding in Hawaii, a tropical ",
+              "source_url": "https://www.pexels.com/photo/jeep-navigating-through-flooded-roadway-31560723/"
+            },
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "a50245f224783c520a4586f6ca30f14fbe74698b909fbff1f34b289b6ed26df6",
+              "license": "Pexels License",
+              "reason": "The article discusses heavy rainfall and flooding in a tropical environment (Hawaii). The selected concept describes an asphalt road partially covered by floodwater with wet tropical roadside vegetation. The image shows a gravel road, not asphalt, and the vegetation does not appear tropical. While it depicts flooding and a closed road, it does not ",
+              "source_url": "https://www.pexels.com/photo/closed-dirt-road-on-lake-17654212/"
+            },
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "3cd2f24267b5143ff9204d5d146bb88a14e02c005a9d4d978f7ba26f29972095",
+              "license": "Pexels License",
+              "reason": "The image shows a flooded asphalt surface, which aligns with the article's mention of flooded roads due to heavy rains. However, it lacks any visible tropical roadside vegetation, which is a 'must_show' element for the selected concept. The water also appears murky and oily, not clear floodwater. The overall scene does not strongly convey a tropica",
+              "source_url": "https://www.pexels.com/photo/wet-concrete-road-in-close-up-photography-8427064/"
+            },
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "2f9d8a19a780ddf884e91289f990cfcad4b91404a8fa61b8f5326bb6b8e9992c",
+              "license": "Pexels License",
+              "reason": "The article discusses heavy rainfall and flooding in a tropical environment, leading to flooded roads and fallen trees. The selected concept specifically requests a flooded asphalt road with wet tropical roadside vegetation. This image shows puddles on a textured surface, reflecting a tree, but it does not clearly depict a flooded asphalt road or t",
+              "source_url": "https://www.pexels.com/photo/wet-uneven-asphalt-road-with-puddles-with-reflection-5707576/"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "tropical flooded road",
+            "rain flooded asphalt",
+            "trooppinen tulviva tie"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": true,
+              "fit_score": 9,
+              "image_sha256": "82ff0efa07f101b1742cf2670b9f266ef81c358077bd2501abd82d603288ccb0",
+              "license": "Unsplash License",
+              "reason": "The image clearly depicts a flooded asphalt road and wet tropical roadside vegetation, directly matching the selected concept. The article discusses heavy rainfall and flooding in a tropical location (Hawaii), making the image highly relevant to the article's subject.",
+              "source_url": "https://unsplash.com/photos/a-flooded-street-next-to-a-wooden-fence-TDp-h-ud09g?utm_source=uutistenlukija&utm_medium=referral"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "accepted",
+          "provider": "unsplash",
+          "queries": [
+            "tropical flooded road",
+            "rain flooded asphalt",
+            "trooppinen tulviva tie"
+          ]
+        }
+      ],
+      "selected": {
+        "concept_rank": 2,
+        "fit_score": 9,
+        "image_sha256": "82ff0efa07f101b1742cf2670b9f266ef81c358077bd2501abd82d603288ccb0",
+        "kind": "real"
+      },
+      "version": "article-first-v1"
+    },
+    "source_url": "https://unsplash.com/photos/a-flooded-street-next-to-a-wooden-fence-TDp-h-ud09g?utm_source=uutistenlukija&utm_medium=referral",
+    "stock_provenance": {
+      "download_tracking": {
+        "successful": true,
+        "url": "https://api.unsplash.com/photos/TDp-h-ud09g/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGZsb29kZWQlMjByb2FkfGVufDB8MHx8fDE3OTA4ODE0ODJ8MA"
+      },
+      "image_url": "https://images.unsplash.com/photo-1646526821474-b2b7a5366ee6?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGZsb29kZWQlMjByb2FkfGVufDB8MHx8fDE3OTA4ODE0ODJ8MA&w=1536&q=80&fm=jpg&fit=crop",
+      "photo_id": "TDp-h-ud09g",
+      "photo_url": "https://unsplash.com/photos/a-flooded-street-next-to-a-wooden-fence-TDp-h-ud09g?utm_source=uutistenlukija&utm_medium=referral",
+      "photographer": "Karl Callwood",
+      "photographer_url": "https://unsplash.com/@climatechangevi?utm_source=uutistenlukija&utm_medium=referral",
+      "provider": "unsplash",
+      "query": "tropical flooded road",
+      "retrieved_at": "2026-10-01T19:04:48Z"
+    },
+    "stock_provenance_sha256": "a4d6cc1f934c11e3cee4c4579b7587c5ff96ec81442462d6680333c6333bdaea",
+    "url": "https://images.unsplash.com/photo-1646526821474-b2b7a5366ee6?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGZsb29kZWQlMjByb2FkfGVufDB8MHx8fDE3OTA4ODE0ODJ8MA&w=1536&q=80&fm=jpg&fit=crop"
   },
   "new_article_files": [
-    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html"
+    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "7bef39a4293b5cca9a1c3c23f4450be8e3dda40f8c2a076f67586cdcce1b76dd",
-    "_redirects": "763d9a92fc64b4d3dd8e631002b56227c74f4cf9b0f42c433ba5617cb295c528",
-    "ai-kuvat/index.html": "e2d62e3894f59fb521b59902634136237efeff8a68319792d2a16d71fc5453db",
-    "categories/kotimaa/index.html": "3916d383d4bf6d9dae844f78b4beb683771fa790e962b935919ca01aca3baf69",
-    "categories/kotimaa/sivu/2/index.html": "59b57ce5218e4a77d513bcd32b4d62232d515b7e3ca8343e2887bea607e4639b",
-    "categories/kotimaa/sivu/3/index.html": "656f17b130c67aeda1e7b78d187be626c832d2d9c062665728fe22ce413eecda",
-    "categories/kotimaa/sivu/4/index.html": "357f16b0dbba41beacc148148fc61fba06104f5d44590d76cbb3540b849eb295",
-    "categories/kotimaa/sivu/5/index.html": "47ad67d926cdef7e8f65b3104f00f602b39684e1702e0ece5c436a99f291cda7",
-    "categories/kotimaa/sivu/6/index.html": "1984636cf87bf34c5fbbd9d9e7f9366b0e380cdc4a6607a9f226f59236b9b329",
-    "categories/kulttuuri/index.html": "79e2d9f57167f9ff755e4297a4456acfcb69778570f8fc1dad72c8657aecd1c9",
-    "categories/talous/index.html": "473abdb91fc1352806545a0ae3f97b8d8fd0cbbf7e13bc92285bf512e7e2ec76",
-    "categories/talous/sivu/2/index.html": "dd9ba626aeb091b13a34331f061f80c9dc09f54d37842a74278edc20370b689e",
-    "categories/teknologia/index.html": "6b4e3047e5a255afaf401153b8034b3ac757f305ceaaf4c254c5b9d7c919aa05",
-    "categories/tiede/index.html": "594c9f653687779f6fa3e387a95b8bae21475ec451c4fa59e35703488a737b43",
-    "categories/ulkomaat/index.html": "ed81d2ea83fe05af7ff23b1f3d954a0e76a7d49a64dda1ec60f1ad98aa6cc855",
-    "categories/urheilu/index.html": "912131b3284cd4f91acfcdffb489f38be28480970ba2844711ea117d14b090a1",
-    "index.html": "5a71b75a5cbfa97da54f34b5dfa0b25b52f06707b97377d3d89bcbc2b2687e5d",
-    "lahteet/index.html": "860aab9b6d40fc5e74ae8f793268aa14978645dc4b055e75348bef8af97a70df",
+    "_redirects": "1be4a57daade9ef87a08bdc3f967996d741392abec81e963d9142322599d530d",
+    "ai-kuvat/index.html": "27aa3f6133f4c3c4f0caeacd410e41c7acde1f9d1ef00c771fb525f6d98e1658",
+    "categories/kotimaa/index.html": "c56af092a2b206a8dcc8c7d44a7937b8d1f0483933fec69b02b729f7fb5f0f0e",
+    "categories/kotimaa/sivu/2/index.html": "f6252fdcd8b0f38f24c9ec0797b3b14cc1695a64b684f281c451ec23cd5cb0b8",
+    "categories/kotimaa/sivu/3/index.html": "74090d98ec7e2fcf7cd4cd4769af187ffc81695dd1a2c8236843b157e6ce1672",
+    "categories/kotimaa/sivu/4/index.html": "ae3415535c86a7615b7fc1eedaa4f75989225bc9939b42fd6bbeb730a1a20a59",
+    "categories/kotimaa/sivu/5/index.html": "440a4c31b3ee71484cb2c386107a3fd826284327832b5f6efc0bc954c7c6f103",
+    "categories/kotimaa/sivu/6/index.html": "f8069cdf5c89fa97aba8193478cde49ffce32f27470e8de7fdad9cd835ed25f5",
+    "categories/kulttuuri/index.html": "05cb6d1cea8cd25a5652f7c3dc53b03f6990908a96afc9ea79277a91aeaf0bd4",
+    "categories/talous/index.html": "8ef8d0b8abea0cb81d52558e297781b0b8e985c218e0ad07916ee285b5c3be23",
+    "categories/talous/sivu/2/index.html": "5dc61028f41f15b3e172cc2ff2b3b8bf94de4685bb81dca52ac21f913e5c4ace",
+    "categories/teknologia/index.html": "db9f31606cc808c1f2371181b375a5d1336694f26aacc0edb5cf3b51b88af2ab",
+    "categories/tiede/index.html": "6f617b1d15c2b396fbd6a5318974873279216dd20566cd6d51d8c1eaefdc3728",
+    "categories/ulkomaat/index.html": "cd6b198adeeedb161e9b6980809344da3b2a4f2e719951205686b1d62046c881",
+    "categories/urheilu/index.html": "e53741dfd13eafe884394e1c5c431d157ff1a865815292b24854dbde246b45a7",
+    "index.html": "a3888b97ede10dcbdab60bab34d210506129e8a5268227e99b5cf56aa7f9fb29",
+    "lahteet/index.html": "731c21b3aa3e5390a48d596d7d729681e81700edddd3b39db44710252cea88c3",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -535,27 +797,29 @@
     "mvp-assets/portal.js": "224136faa34405efbb79ccd090bf52b2f75731f94bd68457153234cc4c02ee11",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "637eaf4fbed4956e14a5ff0c21a902876ebc471c444ecfe0579be588b8e5e25d",
-    "oppaat/index.html": "1af87fef543fe7aa3c8fb60b397218659a6c1d8bc666cfe7a37aa15780cc8416",
+    "oppaat/index.html": "b300328951de81d7542dea0d7ff40d30d0752e12764fb10d36ff74469d5e3049",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "099a775562e9078efa3458efb9c856c2474eb71ae25800eb3d53e799e4cf760c",
-    "sitemap.xml": "1a94e7328b55d60075a4bb81ca97bf32244a935dc1834ad44ba6d734a6ad0ee5",
-    "sivu/2/index.html": "bfd9cdc1650ec45f63b3e1b0ad5f437ebbf7838c60f0c14ace393d84a0459af5",
-    "sivu/3/index.html": "f95d87eaf0a02cce95e870bb8b04de08e1d5d0604014f60f3a807f0b0339df96",
-    "sivu/4/index.html": "0e01c76f4882d966f2fe5b239eb8d5bd7685d0fbac5df2a8acfdb51969acd86a",
-    "sivu/5/index.html": "a4e2b159fcaaaeaff960d9090c6d60987d586d70f25a08331b0bc49f6c4c7fac",
-    "sivu/6/index.html": "52299c20f03891d276cde9917343559741e26dbd2eba1d4e749f1bbad908ea05",
-    "sivu/7/index.html": "4a13e7429f9bc6478f906382fbc2c1781f43b9a4ccbf4a7f2894009478c7bcf7",
-    "sivu/8/index.html": "168e85e2e5c5cce6a6519064fb3666c06dbc3098a2aacdafac9d0316479edd67",
-    "tietoja/index.html": "364c973c31bd0b78adafc961a4156b1c48ca9453bfa16ee65cc7cf2d297ce643",
-    "tietosuoja/index.html": "ebc8b249edd71da6b7f35bd7a46e5eedfe663b87c0e18fbc5f56e64292bf2943",
-    "tuoreimmat/index.html": "91ddfecd57613bf20b6803cfde68c7c53780e18c60e1f04beee6a2ee45a7489e",
-    "tuoreimmat/sivu/2/index.html": "3b739a3e32f4b275506cc987ef8986895debf7d5a66b6c212fdd503cc42190eb",
-    "tuoreimmat/sivu/3/index.html": "05d05d3487fe62d109fa687d7cc0ab5f0b052fe939f3b530bd805791084fa0f1",
-    "tuoreimmat/sivu/4/index.html": "1afbdef50afb16dca6733d58567a284eba4f3699cff3adba454025de8a2c4ab1",
-    "tuoreimmat/sivu/5/index.html": "20ea1d3426a913cb0c524f8d86ca6917e3a69df5bf605283f59691500382d7be",
-    "tuoreimmat/sivu/6/index.html": "80b5a4ebc0fe9d7c9ab3cbb93ba8db439f5d72717d1ce5c7ca72512aadc80f06",
-    "tuoreimmat/sivu/7/index.html": "aaba2673f109725e510e5cff9c5b2eacc3ee22a07eed32fac2db3638ac2f296d",
-    "tuoreimmat/sivu/8/index.html": "db8ab93adcbf176acb57b40d3d00d0f217b8f6fb6e341fe95d045e2f99142d0d",
+    "rss.xml": "3ab9eea314f494e7cbb39335aa0dc9bd54324f75662a2a224adca50a350a7a45",
+    "sitemap.xml": "e7c7f4204ba3f60f6f97dfe589bf4316d16558b8f65a8dbf7e8da70044245c77",
+    "sivu/2/index.html": "f7df09b017a2f958eaa35a55c9e97e5a67a180039a02342795ac641f59b88a55",
+    "sivu/3/index.html": "7c431d10df94e16672c6da3f0f93b8a359d17a1dc79e3651f9a6815e83d2eba6",
+    "sivu/4/index.html": "e5945b0547bd4f211897b04d1afbf6033c0d094c4cc278a2363ca5f6eb486a45",
+    "sivu/5/index.html": "34b927383e4611ab35ce75dd140a1916de02c8b5469d552e168f588fd3c40620",
+    "sivu/6/index.html": "f961dd4548c4dde8573bff964a639a28663a8a3f1764f77758f9e08027b04c9c",
+    "sivu/7/index.html": "eff987a9016cdf46f27597155896fb41d11c2eb108a4034be0ef621e87f9a955",
+    "sivu/8/index.html": "5e33835cdf5424027d9b2e039ae27087cf1405569ea30f04c1daf83da89d18b3",
+    "sivu/9/index.html": "dd47dc20beb771cede5fe0be83da2d1e1b33be2cb4f5e1ee06b5509c40fb124a",
+    "tietoja/index.html": "5cdfa9e20da33e80e5c66b1dd682675ed381d1000f0eba13de642f8e6db0c16c",
+    "tietosuoja/index.html": "73a7ccb1ff05015909c4af4c861e79414b41b2484f07cc69b1585c7b9114e82c",
+    "tuoreimmat/index.html": "f522fee4db9988e39c02920e1e93bb406e0db9a1b549ddbfbe7b61c89669ad49",
+    "tuoreimmat/sivu/2/index.html": "ccb95726366b66e40de649774b485fa6e51b317a614b60cabaf6b54f9fa3b930",
+    "tuoreimmat/sivu/3/index.html": "0e92b96894db0634e7f07c2552a9c6d6a6eb9cb6c3cd1b6889c072037b33b7b6",
+    "tuoreimmat/sivu/4/index.html": "39561249180f09401bedc83c389401211ffcb5eb01de4db597fddb527662abf0",
+    "tuoreimmat/sivu/5/index.html": "91d39e67cac1483cd99f59b6bfb3f33cafba6f77a5fd68e34caca188aa14f671",
+    "tuoreimmat/sivu/6/index.html": "ce2a47e291ce31c04047949d8faef2574f0bbfc5ab14672b5df39c72e6c84ccf",
+    "tuoreimmat/sivu/7/index.html": "abe1a92568f47aa2e765ded62177df09626945c589a15ccb110f5ac65cac72c8",
+    "tuoreimmat/sivu/8/index.html": "bc6180cf36da154486cd0195d1002b12d802e5774a7e98c48b324c78dc5c5470",
+    "tuoreimmat/sivu/9/index.html": "f3b4d9fe5cd297236cc9777d551a31c4611305970c0e1343160e59ae46f2f443",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -569,443 +833,399 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "b55110ee7c53bf38143b301fc5e2c859a7e4bfd7e68e137b3de485e1a9dbc01d",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "46118a96b43d06f342b9b274952cf43266b9ac99baaf1134796d99788b40d601",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "521d332ed45503ae06f01e9d3f7f85929f347a25fcd2b2a652c9e1f5d2114bbe",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "42a1f0c7db9ea3349380123952e85ccfff6ae0d330f38fe2ec40e3040fe66d22",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "4e3257b9e001080abda7ea1674b5cdb271270d110e4e7234348ffbb242479595",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "483b05fe622de3c196ef20c5675cdb63af61ebf6727836c1e65e396e0e7d51e9",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "35961c413a87bb16b2ef83369ae3b27a5bf538abbc3a7a96a6a03cd912c0307c",
-    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "b88210171a62231b2a80ce7c7699b25c777a4e8d065fbb5279c34b7d5bb9599d",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "861a0dfad26a426c7127b270e25c00bdde0e247f79ef55fe43e91f78e308f6c8",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "55c90bf3cac5ab39bcdca9d41f374c8db23c9985b16805567979b4f84e8b5f06",
+    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "ac91ad5039d607e0516506aaba6aec2e7700c0eb9821141b7505fd70dedfe211",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "ec3b54d04ac5280a052a2ec40e8e8374bafd2ce039836b47600d51823c343b1d",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "f49918dba943c364555cbf4c7ed0bd51200869ecbfdb4e8a24842b5d20f7c91b",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "5603b3524160ff2a651065ce2df17a35b5dd48cc81a00e681ea3fc9dd4999632",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "2e06a577cc979e782278ddde1fbcdb898d4bf93f017a4f1e24783fa5cf4183e2",
+    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "daa1ab66bdfcd78c3ff7fd75bbf9757e10d0f761a33919091c4bf7d8f9aeef2c",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "cbaebfa946393547e96c8b21b03a4166c78b84699b5205e44415b100c8116fd0",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "2304ccdffaea8f2e52f12a6a7ab68dc5f30e01b7131096bc3b7f29ba7f260266",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "031e6ab9f18383e4646a939df1194153d8e591a73c9083a0c8a9f9bd83115850",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "c1f96f16790437fb91ba595930aacbc69dd730bfe1dd4799287ee18e0968b82d",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "b3d125d81dd7e727be1cf461a71c7b9b938caa82714307c7b7e987f78b060be8",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "6682b6305530b83276346575f3571719a34c74aa5395fbbe0030a6d5f0c4a613",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "70618c9c2b0b5f13884c5bb061b1659f5a5631b5702cb1c305745f8a6d1b9c8e",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "c9aa652178be0aef21595812c39120299e087dee9ce579015e59a78705d74aa4",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "7c09d30d456ce92468cde59daee825136f60748cc3901d08a974a9a07c10f268",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "32ea6c054d36a5468648488c160f49f158ea6082c7bdfdcf4153027aad4398e5",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "979af449f60d3e4c2a173fcad3676b422d97f2d31cbf6faf547e581ecf4750ab",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "1a3f5af5f381c6ecf0dd4b385865fb992a24e3578449aad12ee21f1b069abafa",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "0c6a2a8ae180a17ca45d08642e100145b8a6874c46df535a54cb895ec14c5047",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "2460c23fc4aabf74f2593bb915c6453c4cd66454965e2ac41c4a09a427e534e0",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "8d4ee8f889a7af9b74e5b585ab9ddd4fa13d0b1641277199e766c13c3b961d2e",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "30301e637be3e1e790e8f7fbaeceb6e7f4303bb697d6d4c79b53a6e6f62e2e5d",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "7f01af1e44b45e986dd2773635ae9b6f9c4ce096f18a288cb0de7505e45d094b",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "cfa319322e20f229ad8db55e8b6f2ddf4a8110571353e96023f7c77b1144d005",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "ede0e60afa11a5dfcf946044b3b1e4ed7d6d98c450b0d0e16bbf49f4ebba4d9b",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "eb23dc44aeb3ecfbef5aada56376f4dfb434c67536e1441c8b5e5688a5cb8c03",
-    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "56ee43b8ffee05bddf831c3b20e15db0ae9f8ab0197b2c289e406f6ec1b4ce57",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "a69ef24dc1dbce3dc6cea113b35bb4d49a7747a7900607514735a71884e74536",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "ecf563c32bcb3f2e27c8c7cdb5fcdeb384019f1ef72830db0e10d7393095dd27",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "378e127ed520e66275ff7058f4b90fa687df65317cec81fb65a9475b5f8094eb",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "400235bee9bc937f7124ece72600a31d11f906cb2f6e22ba85112dc4729e8370",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "743318e81a79b9ab8234ceb12fca6c431ac540373a52b5dc9c5149ea7914b59a",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "5bb3e5deae327edc64cae315fb843a72ec3c91ea11d3238ea1ef1dff2dac374a",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "6e35008efb1a6e7f8047b057acfd0a3ac27f2c4a654a17f908bfaa8be8544b16",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "1a0304940f2ca48671444e4408c1da66297d877c7e228633010ca6ba43bb7b6c",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "cfc94e78e653406fadb418c93f8a4ddb9c107850535bd6a0b5a7767690a3d61d",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "79fb9c8b25cf0673dc1b4f1d314cb50ee9212640b0950ec69af16600ceb489c5",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "72913e23b20981ce39dcdaaddab598909022fcac4b69bd5e19cc7cde62d05c63",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "a0df13de4f45df927bdcb545d37b6ecc061d5666ac3ca837899ff25b1c500915",
+    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "f508a3fb1df8b6d838d39d9d276e95d7182c89c033547dc825522e46566226ae",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "752ff0955cca724930830fa7fd97c2f26466e3dc69eceb138637eaa7cdb767b3",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "e8c9c0ede9c4000aa17e7969148f9218e4f550fb7bf1d2d55d4c63eb6c9852ac",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "5b1b012380666806fdbfd82fde341ceb5e995b55466ed8d13e4600c6e6425b4c",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "062056335f8a40cf0c27fb464cf1443473d0ffeea131b184c21740c651aa4435",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "edc839a56e576c6cd440c7084bc13ae6edabfc54fc84908a7a1ca929831491e9",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "86eb0bafd9fbef94a5f2c54d741c17135d528cb35d2946bc5e3830505ee881da",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "0e857d791d951543a71a9261312902bc549fe34be7a18f6eb942b986ab4d51b3",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "16a653473f5b93b2d3a0bfa65d73408055e543a005c216f9834aaf72a1787ab8",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "1495f1efed5fe4c202717d1998d29f0a154b4bd28130ff12eac296aa33f580aa",
-    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "822e7d822e04d2f428556ccb67211053fb299f3d32d674113a6c32ccaf5c944e",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "572201d656dd7bd6ce35fb8ffcb4ce390fb802e63fc9c266cb8a1fe751bc7134",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "786af861bcdd78e9d839a5fc40da93bccdb08aff38127870f5c5e9a96817440a",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "3c383b0ccbf5baf608567c2b465b7504d111eeb8cee2b89678c845eed69ff4fa",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "8818ee19242fefc05ccd307f3abbe95d0ad39957536187d99b4b680201b940a4",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "f1617282774b0818bb08960231c5ef95e3c4841d9969c5fa00d11c80ac9aeb60",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "41485f43d5fe2626e68fac7a88f44da2b3dcda63c66a67865271962381a02e8a",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "bfeb619716b043eb811b498d6150ee5b3da364b7cb94e4a9d100ce43a73d1668",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "343be82d9d6cbf07d684ba5d0df09bfa3ba3546083f041db73182caa486b793d",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "2de959971b26c1f256558eabf1de97b871b3a9a371ad31ac0ae5ca39d6802626",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "e483cdfb965df030123bba79a99405f51c7c6cda3a09000d7e6b421a1d23cca6",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "b7c8db37704ae95340b7a8969195ba9bc0469ee95fc6c653ba85c8c743fb315a",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "7b4ee5015b9f43ac7e02e800294fceaf1d78ce72f1b345875519b1d072bd0b63",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "dfbd0bd09fc618203edcb2dc7d860e80929de71774c317722d0e6b4de72e59cb",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "4e9580548b951208575ad4363a5346a8f7448bee44bad4542ac6077b13416d37",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "03f1e8e1fdbd242e9293f3970ba68491ef53787608805791be06ff0374281060",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "e07f41c8e22b1a3e0abb8eab2f7070d5e3764da6f56e6a76dfef2f62c8becb48",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "edc4314df4f59f0bcf8aa0f47c7d52b86fc825a90a82445e50809db13fa90862",
-    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "f20ed3f25c19db6f5fee5a5d95e911e2b9fda4d2e319ca9a9739e0ab3c05bf44",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "9e10ca91fa4e0fa42d25776ee00db3c61a76be3c444574e777c00ecefa73befa",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "4dafbc3cdbc6b0f5a3ac833ddd3deb005b76553ffb96fb8913f9f4f3b3667b2a",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "ca66f6c3db8b876a6540ed33fb321498e7ab977f421a187c24cf9c3c2383d8c0",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "a9ec06cb4fd4a3ffa66e7693862a4db643544210154cf7e1167037efef32ddeb",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "ba01274b37dbba3c004e253a88db30ed6fdc1f8f6c32f7b6ef366ef9e3af2c98",
-    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "49ffbd158eb505503b4ca2779eac99ce6ab94cec9cf6e252e8602eb831be50cc",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "4942e97c9e1c47d70a04ded0d3303230e65f8840f150b1f6ead9278d72157571",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "87e55fa7f1b895fa600cd2cc03660f3bb596466ffe85eed58bdb9f205f5ce23d",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "eddac64d5693c77421bdc0100a4f7e6c8c9b2333af136ecc26e5a0d3ecd56ac6",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "6838667361c02eb7ff60d9d2c8702280adb877345625fbbfe5ca63daebd5a75f",
-    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "3c2ed927ab57bbbe33625041cc5283b2f34805cfbf69db9a179c68e370b024e2",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "ebb988846a5f08321dadce433b33ce6cc46fc6bcd5013b9f8b9432bbe80f6c05",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "2c98433f4676b73ff9d495dc5b6f16e474f46b62d59996960d945f55cf0af09f",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "9a978b2e53df4211830f8fdef6f03cba8cefd7f2b44ec3ac22639027907da6de",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "101a8878d9abf66dfe3f3b210cf901840ce28b6939a82d85d5b0a37525858858",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "d7cc61e2dd78c1af0544e431d9c3d54300ff61ae2f63910e4c5d19b3dc5b9505",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "60e00a63052ee9fee0039f23b362a4a341ad8943826103df075583fcab95f195",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "9a3addf1f6e7a13b524ccaf4dda4bcbc7304c47aa64f9f02a3e65d26733e1225",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "4a746d4ac047a50dc7effc522fb69edf1cec3543be3c1b67a07ac92ff7c9260c",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "bb0da2cd7683ec7eb0511c9d710b7f18e85a396129fa0f051b372a42228fee73",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "6d7ef16012bed0462dd05a4278489c4d3b121b9a8f04774bf1822b860b65c7ba",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "fcc1e1dc64b210464ab6a0956592f827a600f346142db2beac04a4c692256503",
-    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "cf76f88086bcf8cb2612edc5cbbf816893d6b113f240fb3ce66ab02e3d615936",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "cfc185b678cdd70b33570963413f363328daaebbb7cdd1522c0bf52a395831d3",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "75b6501ff8f4467202640f6f349f7610839b488f6a7e767528975838dad55ac3",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "6420d218df6d3c29b7359bf5a26c51050fa5048f8293dbf33f0578b9613d078f",
-    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "42e1c3bcc57fe04a033a740d96ac4c68ccd356504c165ff04eba59cacdd46105",
-    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "45468c792dbcea593146b1c10a9e60d39f8e1132137780198112febee045f4f4",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "6b85741424247ab01d8d3ff7a3625aa5a17926dc662aa10715a0a8f7afefd10a",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "d9d978d37484df4670b879026fd9eb841d2677128ce84ccaf9ce0a32c186544f",
-    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "65adc85aaeeb5785c4d8fc16ba9bec540c6d96a554f48560ad5d85dcd1661b4f",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "524bdd4bac3a370637e0d257d49e671b3edb675b44439c660a9b62bb561efcce",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "152d32cfa904d87c34448ffc79bd5b0ad1528f3fdaf133d566b0a9bfd583c935",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "82ea37a92427f524d2a3a926545e6bd0a022b97b5e2dddd3aa68b7a4a0162036",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "800f1194a49fd593fbf053cb32398098fb9858097a7e65bccaa2dfb8d559e906",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "9fe62c69f68589ab5dee0d924c19dfa56d2d0d82d8428cc3f6e013ac4e4cb6c5",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "c07ad089a898c5f8e4eff6dfb257e769b60f086bb2ecc9eac4d09a41bf38ca89",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "63471a93189d0526c2d5c1a3cde57943cbe5c19d715bab0471abadea2a970453",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "d473a7e9537a70414b165e10cab91135d2f4ff22a505bd8c74842293425bf046",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "cd4cb05f50b106761b9e181081f21bba0a543c2576c158e02473b9bc6e119ac2",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "e24adb6430ec65570ad50d8ffa8da13c57a57c5dd0220450a91d3ad8368e6af0",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "9e6042c881ca373ba4bb22b1fdc283cde074245446d1c467d18860307d37a955",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "7948231a1ae8d6ef1248b126517dfc4fb5f6915c32abd1f05fceb0fb97e6f1a4",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "8f92a1538e162695e2f6e85026a564cf0ca118e09f475a1e5d4c445a7140be84",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "484c9e1a7ffb81d49b9975db3f2f24c78a6036c154bc8c13ad3cc27ea57ddf6b",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "a73be04ab14e7f16d302a13a88480c8254b6665e54310641c830032e3bc92c80",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "0a222bef9aeb247bf9a00a336992ceb782e86e3992df95f1bc88c705d11fc9bc",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "98854db43a9b961a0f52564b3da14c3ea74ac90f7b8b60b6c6c25a2e720ede17",
-    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "1243651217873f3433543b2289bd522743ce8ee7ead12ec0811d0c616b915e32",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "a9e185965f312c04ece862eb9d441ced571a210fb9bf4eca323044dbc8b8a17f",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "148464b4424b55596cadbd837e3147f166cea9cff3624d14a810a49b7650b84b",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "bda8523c72077d34784be66f5ec4cba8361458c897d8058f3f9ce08a6d729fc6",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "f04902c6d7a83fb80aee447de540b92ad641ead86c1dcf771eb036d3dc694db2",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "3e9200ade497627e9f2a8ddcb05b6945b224f6e0d08126154adcb2610d04675c",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "5053a1a51fb18d43db6eaf4f81063bcfc7173d15328cab2cab9366b9b475c4f3",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "a906e75db8ba21e91687bd334a30105ecf1c69e21649c3cc7824d84aedbaecdd",
-    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "b07a6c9c3d8c79ab24f036f830dea25c2f781a5dbd6062a35b7c7d3371fea767",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "898d0d539ad772b03fe3a6d27dc791dc963f7166c2a1bf49922fceb1fa2e19fe",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "e6bcfe8c80d991eb30ffb43ab750e040570bef6163a3bd339267c0e49e6b685d",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "bc44170568c215e254c38dedf072cb0759b09206c9f78ede89e4368405bdf8ac",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "02f53afbd483d44bfd33b4cc2a4567d6fa750af34806b9533993723f4a3644ed",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "a4c5f6192355a154e28f970bf009e3207f44fba3881bf06d717b36e56a99682e",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "cc7d6e918a5cf088c159fc921d43f5b667ad6b7df7c420cd831e2618620d3c5c",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "385fdc2de8b64e987c7a8238f0250b9d172cfb9ba1614c3dfd76ce60301bc652",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "f342af63a72dfa462f4c9622b025e633c998370bbe8ac80e2a42024179f04196",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "21258a2d98173a3fe7cc0faa91f79a90c440fc6f0ba5667d28257db65b9166c1",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "b20dc1e9077b7831aed2f47e68eb1e13888f28175000aa6ab7a5e450404ebb6a",
-    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "0cbf2fc0ffaadbe77b6d4e71b3428974ebe569c9d2e4317bca68ff030ac8072b",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "11b430662e8d489dee0bfacd475047c903996158451d8553a854ea32e573eff5",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "83224a9c6fc503884038700345bff8c6df369ed34341c6f0686ed1ba7a2e1ef5",
-    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "7eb4861ec36ff53738c3bbe335e581c3044c17eebf0717cc18ed19300d976b7f",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "abfedbfbb6424879717657bfdbad1d0da0c4b0614b2b161f5b66ae0581848efa",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "28a4449ab87f64143ec6617da877f2a97ae5a252874ec43aafbb2ff5bc2e5c52",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "2b2efee9d58413e9f6e1e40e170c5b912b7a641bdeee19f539fb5f6520d321fc",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "a9dcd821989020fa75b1d9ac0447326b0e476d45b0cd1457407f20c75e44df6d",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "4fbf4ccfbc5338ab7295681419e6de74330a03f27dc4f810958e70a4b49d11ef",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "adc5f97d1e9c4e9007b7e8b6bcb22b8ce288c1488ddc594aae05c7f31c11d775",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "ae0656aa4e738eadd771bc0b909c15440f8d0b326c9f3be8f773d220f5c4ae83",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "685aec846a46574625a13922831769400fb772e0047fbc6f17ee9a91944a2eb9",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "c6c87477ea236126370be8fd792a887d924fc10931563b6c69c347a626cfe268",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "95774d83606162c2ea5e8aab00eef6e40592f13c4a8e4262986e523ec9dc819d",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "aff964f7d8f443a6526604393287912e3d7c082e7aec28ecaf87d2836f0931fa",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "d554e97961cae9b08282dcf00b3838a362bcddc69fd0a73a9acbe98139fa0073",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "2bf63aad91206fa740fe18fc94471999069cab1374cb3bb227ca8a716471c0a9",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "579f8a1387397d0dcdb252708b7a797f5ab9d7c341b344473520c24d0a6beefa",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "af0b3a8e95eff4be581b2785a54841d9d9f68cababe733bb8a0f00212c02c718",
-    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "0f8eb4f04c48968451d2ab1432ac6253d4354cc1e0287405e7c2c4fac1b89707",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "a14ab473b6228060cc2e0ad9184f16207673a3e278f306984b8cd2f2c6e72377",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "8fa30f89191d11b436a1d6baccfaa08f0d79634fd8bd58e37995a2e181dc04ad",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "7c3cbf1965a7326288945437cd7dd1bdea880d05f8d86dfa95fa1fd23ce50550",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "14e791a3dd192e7176cde07eb50fced10ad8b48b27e2a0a30160c1a7223687db",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "f100047a20f1bf51b3eaf7a051a46bed290e33840c755c51b8c96cb59c6307a3",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "3cd4b533b68d63e0d87b3880861e7b8a6406ae093104e7e0f11c5c6186bddc09",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "1fa3d8c579571ae58744b0b06ab53e1cc57a0aaa5637b2023b22fd8c961a0d28",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "95b036942fba82de16e3eb6921861467c7801e38a48574c42e6804c104e44b9d",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "5a7236d80edc4207814e6cc8bc1153a6a9768b899324bb418dfb2b3e37af5cc2",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "6143d4d49d619b519419534b9c39aa7f41bf881c08085b4112d11ecbc7578701",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "bb83919aa2687cf304aa249f5b894a4f95730dfdf167a58cfdd8e52e6e2e8643",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "c80d236d4c1dc53ecf122ee2071bd089c739d707bb9c4f9d2b5df44de3a3a4f3",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "c951f351b2f6a39f2e51cb1e8c3d09d3a011dd9a4b808397a64ab60a21db0b00",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "5e3a01702be7e707da00f0d54c2ff0482e77af8ca6477444ef4f6b5f06fcba4a",
-    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "c10e36f2bad91d2c733457724d45f6b3f26f18b379e32c5aa7d16a4adf3e864d",
-    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "d38d0552b807b3a3d9f72c2a4019b6c8285386e424c2531745a2e19db289b3b1",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "4cd61fa3dac7aaa6554a4617df4ba00b485852d784fd3de0f840ac1e4211e2ce",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "80a5b131ddb54d53034ccbe2adf26bd624e203f5d37c9afd715bd71eb6c8f94c",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "6d98ddeb23794c633261ef192b746119d34735d139b831cdf1328aaac81410f5",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "b26c573db0743a3bddb6972dc2e96108296a4139f8723dfe21a8922453fee651",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "c273aeb2b30e09076b2d8eb806aaef6e2f77449a7a7d6870fa7be83f808d6489",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "c0bf24117c7c1bf6a5f24c3bd00532b35223612ebf6914002c5a0f3fb9c3a698",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "9adf738c16239f903f552875f1b0e60b3f3fc8fd96ac00438fb95f742f390268",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "ff178ff4bfe6301dc9a5b8d81f845a0e0a73c4ee102aea292da965249c0b7501",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "0fcf8244d0a99b8343e27220894137e4fc9e00ef85482fbf287b2c88dd2a43bc",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "d0e74623256d794e959be5ced9ef15ab9086b5682900822c5f4b7b085251119a",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "e9d7ae4f66cc4a5cf017263552393b12fdd37632c656bc4021f989e101f5bb11",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "103bd757512c2a8437a95b23093cd865a1c1ff962a8dad78357264ca15cbd550",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "d547c65919d67d8c565cdd0235dbd4716775a596d072b0dad3b8e07bdb179452",
-    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "cdb9a0f6813437c08434cadb4b86f6c656aabbe6a80d228fba984b352fc08675",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "c8613c6532b9a3feb6e47dfe01bf8a0a4ab6da60fb14474327fdf6550a2c11ca",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "e656174905141ecc881adca31a4a3b393f691c351fe65a5b24d297209dc3eb8b",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "fec18737df4f619adf2eb62ce230c4b33d6d50bf004cc036baa5c2f0ff52e535",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "0a406cebbc24ecb681663dd8434b5fcee2888814fcdcef34b3750b7945da3da5",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "0f1abe47b367656dbbfcdb9eea2491a1a09520b54a00314ce444908f7f24e4af",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "9938a8a4d6bce380339fd7345f121b9da40e84afeb9501e6fa2c38c9ea6b46c7",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "d7531bb017cb9bf1f9a23bf6e586f0a5941d99cc38a50ca41062455bfc65768c",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "ce35335bac093a4fb61501147cd97071e7fa011721cb9e2e83f39b031a3e6b71",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "8121c59790a4b4fc9ef0b076da59622845da10e804564b77248563af4d184453",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "4f92c6a3b8222255fa2fe389c94c004f894d385ab826d6970a3c233df2e590dd",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "48acc5e8aef543a5935452d3e7bc0bda33ffdec1781651919ceb33f8095781e2",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "0afffcd116a81791c08621a383a987fc309ff85d15cbb84dd03bf0e9a90f1025",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "8667221c39bbeedba917bfb1708261bc882f1c3b7f6cd8bba1edd3cfd80fcae8",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "75ca15eab7318de08ec4c7dd0feef48f40399686f67aaeb3b872fd2bd58c4f6d",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "885453f577e661071ab7d5de8d660738ce9dff74695de67740374de95dc19393",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "848b4ae8b21f14ec4f12368f21de1028aaec6000fbe2e454f2a463ef2eea93b1",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "1c9b0521f82b6079237d12de27aa3c942ef512343202f3630630215a8164793c",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "17d20721cfd420c933db836e36c74896ba205c0a482efc1f44cc0a40f87013a1",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "86e74230b8002a42a9f9e92ae54b15e18aeab32c9e8bf39a254c82d35abc3e73",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "39f5d7fb4c1d89c7eef8823f06172b73cef2c1298caa6e26df520138a5299040",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "3c443ba310e022aadf76381cb84d26ffb14e7b16c330444df6e2300a9c20aa37",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "4e32b70e588129c07eeb4e747f516d6b7b94002c13d9aadafad160870de8889f",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "2225ed6cfe40aafaff8ed5ad9757d6d19c581a3a3b7db267b4db9d5ae69b86bd",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "2e6e1cef9664b5a5a4877611db6cd9f41f4423d83bceb1c50e1c764b788900b4",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "bae1f709681ab5a91df814cb92d98c3f27bcf460eb77826de424c486b18d6a8c",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "67b689cb5c376fecdc89c65f795147780520767f569a59309c533385c3e103b2",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "ee17034ed5263cb9dec1555309e0134796bfa08d5fa0b306635ec9b693e27b2b",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "84c2dbd9750d92e81c1cb2fce7e505d0dfd481d384ab40c87b8bd93976a2c5d4",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "0b5f20f02f0931013e656bf7e9feadd678ce6cc909343bb16e35b5098f896538",
-    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "251ff8e3070d05cb22d5e378588589c62204a0561fca92f6cfa102f5da0ac534",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "41321fba20e06d1d0f0a46d25ded93c12f7913336d9a381b1f21bc8aa82acc99",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "4a0993db0c590d25ca829d690b745e47122473287625f97d40b604bfa2a5a704",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "e44e58e65297049426469a10f74ed838f5aa52b1d04a01748dcbc79967844e46",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "32ba4f77eb162172b217b56c70bb1a6d1732e65b3450ffbab76f129583a5a9d9",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "6fdae4134721beacd3d8276406ca31015f64188e27e699595ab9b90469863587",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "b612d032603d3e0cc08c211ea4a2e828e64c249a306c1088263d95cd59344971",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "b698b3ed591b60795681ac3069f8fd9c9ef6ea5a855f26a430dd867b26959f9f",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "867b3bca44ba83b38046179c5247a896ee4e79dc5aeceb928480efc8db9d6dac",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "5e701ea96e72e271c01a1f260a83f646a87e5cfb51e484c2e78f7839fe7512c3",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "86e9f4da3060e53a3354ba66a6501068d47a67481f19e2bc26a8c38d644f94f8",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "ad0865b7b888c949e41f8a1cfd0803be5ed88a9ee8c83d88dd254f90b6a73c22",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "bb4d96ee77d5b4309e48524e3f97a2e17484f17183cbde2afc252076488302e6",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "1cd7a824068b76df6f9564c94a93eeb6c4819cf5ab5a8b60167d760aaf3fc86c",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "76f288592fc370380a702ff9e2c9a14f78e3de7b8278a6e6c8db1062036cf763",
-    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "edf27f2cc5dd426fe129f53da94683deadffd66b1e4e0b570f61013089245138",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "c7a4fab91f8ee517e2c0d435ce17ffae7e85a2c197b22432892ebc4abb88ac51",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "ed59336f6176a0049d77c0745864246778ec41c8a0bddb971bbfd3b869375eab",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "d22f792dbfda7ececd37beb91bcc4c7c48c32780715ff0d9aca09d810f706182",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "b430c01d72c04cc72a0c2e8ff1fe6700a0a15a9218488f5710966db300c2cb2d",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "49f12c3f5f41dc701186955ee6485ea12b9979cef07870c05a0ed529d2c27d3e",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "92cae9a4b9eabe8b11f81239de3581fd0abd446f477304942b4422346f5468bb",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "53b0e7763532c1b03dcdf2c2df707256a5669b804fa843e102fb8e0f1ae39106",
-    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "ef815ab081f1687706248422bfa79211fd00b62461977fd332da1133a0f22357",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "6d66fd6cf52f61c4f65420e997d5ba9c64d7009ec1fca1300db852072dd9fb19",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "2afbfcb633e80f8f6a74d684d1355c64fa2e2343d6131eba95de639696002548",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "d33825de8fe05a17cf13b19b8d5a34b6ecbe111ee828d9709e5aada9a63a1053",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "9d2f836ba33d894cba975eeafb2033b2903f67688bae4b2925302d2c111b5e5b",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "a4eed26b3b94063c8a6a9d20fcf102f66ed54cce1ef567ffda53c9dcf13f7ea5",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "b9fc19af8f4abbbd491895ad6a3a70fd036a1e39cd537fa159ace934074eac69",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "3214fa4e4f549e80811020eafb0975f1d2566860d67aacfb54b8310e4765fd15",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "9c54fe6570c179d477dc6f27f7090ac1a4f1f09b3ab0721d8e00df9e7b0fac2e",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "c6dd7a20305c81403483986fb2dbf99dcd9e0de69f3441de12e8764a36497f81",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "995e94caa2788bb190e0cc273184ee56d9f6a533734b0eb1a6f28c2856935d2f",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "242624f43b8c5649672e209723dd48718ec97f122e10b5d4a99a5a7be4f99375",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "18457c9c9cfba18dfca1f4b4f26b6a2e7d8c95f005f86fa90bcf61d69543be5a",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "49eb8914bad20607442d55e14e0a750ea82274d98ccb3e4f1be537a5eb3824cb",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "c3d4bb9bd394169185f116202cbefacdc4e8e16f934a63390adf2685b4d28917",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "c102ed7f24cb8bdc02ebf4f9125dfea2efaa007f949b3efd258141b1372d95e6",
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "bf6f8d09a60570b87201d1fa61f071cf792e80859e39847e3663de28501f27f3",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "9ad23ff3cbdcadd44cef8d5ea477bcfdea39b4912acc36cc645724d93e51aaaf",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "7748664c77496f57b76c5167a7d5522dfd8a4ff1de66f0174512c335dea9a65d",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "b2142cdab95d05c9014c92e3e4d863bb0b267c6662af113d9638f6a684ca6056",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "16a614a81e63c72c0183b5d022f53d571e3d438eccfda50184dfe7262b8a0714",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "3a310f6a181f791c7ffaeb7f8f550462916e9cbf872b815f345cb7580e293a1b"
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "36c223d0c9e4da95ee4282f1bba8b4d9af6ce88de2ff0acc9d4204caa1ca7c75",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "a8ea9300f8f7cf600da54d769174abd8376d900837a353fbcb4512d7f6f8e9ff",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "6943c83b8879dd8e52e96fc867ae0478651903ddcb18b09aca23a32bd4522e74",
+    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "41e018b16b70c96cf631c5c4d08982e248922ca90c0dc678e4e2ada81b9d1e94",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "05ad22bf7935efb0a8f6434dd7f92e9ac6c5da0ab38b1500dfd6ff49ec7d9b37",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "5c0e6cce5c69b649c048fb2d82c344115dbd5afeac6c954865328700981fcbc9",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "9ea1cb8f3907e08fc292587ce27ac1747e73165139245bcab6f74237a75f9ef4",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "91deb954a1a525861c38cc1552d4a140eed337ea056b36c5b09216c39ee20aea",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "da28ae0692092a28e0ff01b5ec5b1229f4e7bd63ff5634cd02e07920af643807",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "cec2b5cb1f6f00ec297257f1f4571821beaa318329d70656eba4240a2faaa9e8",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "b51bab97e28a121c415ec9ffe860449ac85bee72f3bcb2ef678b7a0893c23281",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "39d2839a6142c0680af109c085855d9135f8a463182da5ecef858400c73db878",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "ea83893352bb4f336fa9158bbd88c98bfd1a18678250917754a8925e843c0b97",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "8f8c663e6d22deb252d321071517e77c007179e4511cbcc931b6b086688e4fe6",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "2ba0dcd9146a5d0f0553fba95e74ff3970732ece7169255b05a31d02b3fba816",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "d5c434e3b5abad4729b0f0b1a61a212bc6ca4e699b7356b57419812e7159664a",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "1144f88c453d57f173d11a62ea588c40a94488bddb58d21a1f3303bee67f377e",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "14093198378320d7dfe4c618d396aa0000e30c787170a2e7a159a52cba12d9a5",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "f2475cbec492fcb011d20d43c270aeba929d09be3fb613646a30f54561cdbd12",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "7c85181fb61614bcb7560c24362fec5721cbdf16481cb0629d85bd4a2c16f8f2",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "b998cd922220838f5bef2720a5c1cd37f04b35783ee4164ed4c5bb49e6d9ef85",
+    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "79e5743d4d0659ec8cc642b0c7f2155aaf7ad9084b378f14d345b64e0f1844a7",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "5a3e114d0ded13eb82def84597e689ded0aaee0d959318bc803bf1a5f698ffb5",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "24846f03f48fa936be21fe71e63bb7d9111f1bf3926561dcf533b7655aa5f313",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "64246d303762913a4432a4556db6e9e8ea69940d26d23107060916fc945f87b7",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "9607ea9b8c0b4e6cb450c53b78b02a61742b146b0c424e0ebaecc5728f40bc6e",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "7f9d65367ed980960e2b062c43f0e73da9adbf64d42ab140490e100537c0fd29",
+    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "f49cb33d36907587220ec9fd3b932da6b27e99dce585008e070fce316efcfbbd",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "4a020b30de1ca53ab0c8164ca2b77aae343ac1d0e2d67eeb07d928a93bc097aa",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "9900e88f836c21057e1ed5a08577ba170d12f7c306bc750654a8b8d90cfafa50",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "f9e11668c27ce0abbc8a6131720d23219828a6c3a51caddf356b4de6687c2bc0",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "770cbc50a462e3bf8cc0a460f5ebdbe6e2a8d89d77261133120bef0579e27725",
+    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "7ed09af41e66635cd9163f0e8a22ec52a21871ebe27761d3540c96438198e799",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "9bf46d393154321bdbe3a655d79f023a7c790a182a6fc206d630e0f36c5bfc72",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "29623b6a925889e1137c1ff502849e9707b32ed8e0d0913d0b12bc02d0863772",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "e0700be6b80c27e776dd6e688b3a32067c835cbb3e5be003d9b2a0645e0f8cb0",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "9b9ed416e7b018875e88a863885e87157fe557caf863263350d57556c232ad36",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "f44f0b934a6878210d6a8b6417fa70306a3917c56d0acce5815e4787bbcbf7af",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "ec7021e53341634f6d4a855e0235dd6c5ef4bbe4fddb5c505eabb559d2395189",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "70413316c2d3463af8394afd14f7d7871426dcf5085865974f99bb8e0099bd6e",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "985bc93574ec79e44828f39bd543652d8318b705541156ca940afb2ad89cbcfd",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "4019e15262239ac332aee1bdb45cb8bfa55918f45763ba0ed3ca9aa6f23c04fc",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "b52d47bd9b089cb4c555d061208f3a296d79136abbc3b8bd4bdd75933a8c736d",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "2fdab5ed487b8ea5f9963b8ff59f1d5c9e9a22f09924c2521b3e7cfdb6387cf2",
+    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "a214b8a6a973034fb696208e82d0ee8e2c0c24f22a9455cd150756b0f3b541d6",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "e96c9b6a3dca8f4580c39a623feb0f88c3618cd90823e4c84818e87ed6e4421b",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "65c1cb1e2409558c107b516952ee6a4b39249e535647cd93d7a79c5802f8df1d",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "8e3f1225435c2ddc7b7b86f411ba023c50eb6539612c99d55d687c7a36a7ed59",
+    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "26ec10090bb148a8a0228bbaaa0a98f27d5d518c7866e71ca71a8b23d8a7eba9",
+    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "a914cf3069865967613212166aaeafa8ef101506ad4874964505fada146f6e87",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "0a3ac23e380884e2f7d5e6345170571366a8bbf5b118e4df090389bf96bf7dc1",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "9dd48c395de8ff88e31aca27c7ca8c7029ba38575b3766a0dc4c768c05038778",
+    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "742d552b20420c8f03946c6409921665994785802a76b87694b4ae6eff604f8a",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "91e0eb59e51faf0fd5a65438a80f00fa0ee9df034e4461eecc99c9c4638f0d68",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "eb5ad11b93321068e1159aa103b2f38a30c4a70cc03a624c794b3813a92e9bee",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "187d1192e6b473d423f40c9cd53eae1f9f81c1f1020381daaa1715b9caea61bd",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "100933b31b1beb8a782eb05f82054936f94c70517902ec703381ca3a81eef386",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "498ce9428ac6ce7ecc9562404fe04605b06ca9c9d9d218bffc9aca3c39db8c03",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "8cdce86eeb124b1e3147e3826267ae762cc6d2d41c505617a86ee71ba8deea40",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "5c6b1c66dc3771a777e77a3aff395ce313eceb90fb2ab9fdf6b62bea28de1c3d",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "782160086f724c905fbc91b0251867f2738438df32bb09ffac7d7246fdcf7d99",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "57ee2c89b0a3f2fe1627b7314321686808992dceb4ec006375b620c6cc703310",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "fd324cd042cc7cc52fda2e3335a816f4e247bf0a2aca97e789048830b4b5da1e",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "f25e1d08658bb79de3b5b448b70f60dd3d9e073184d897946903c0e61f38c48b",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "3ba3079305e3871722c9f101829408883dbec02ca6fc21071da82ed017af1cfe",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "498c44e3293ed219585f23846f12753212f4b58cf27f9262a5d1e5fb43eec746",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "7b8c37e15ceb9a2bcd690f835644f0168392c06c52fcec719675ddc6c1f80822",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "119312f6e2060284a1ddf04896df1ba97fcb8f018109a924f480240035b15653",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "61ff6c3e2060b6a02dfa0df73326020ab6f5bea46432a8ce933607fbb976c405",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "a53ba056b11bb21ee8bd506fdf414ffccd967eea5351fa5fc6b92ea2d4348571",
+    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "0853f8accd228b46be53cdd22e221fb0c67b3982fbf5a082187bca63f8064b14",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "1cedff024541ca89f78fc5cefd99cf72383890d20ca1e2deb5231d535f7343d6",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "5c6f0645375cd9ac7d5ca0103d0b4071a0256164a14e7ba142123db0fecc2261",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "3dabe9e9ae3ac76ce6fa9467f8616021723662c8d72b41546bdd3557b73ddc33",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "37e235852be80bbedca91c7d249c5dfb3bc1cfbb9fd2d33d9270f4efe0d603ca",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "f545ffc4c9d56eac197ab3e716b166d429cbaffcaffe7418b0a85f1b668fe006",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "d5c33d7b2f4739aedcf1c1cf12c11b156bd388c1ecc8a1e06afa43151cd4e07e",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "966ab4d7616bacfcaf2ad5eb8fa2df55a9a2b3ca125b92fa07f32f6afb9f1bfe",
+    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "ea64fbd724a14541880f27e248840de8f359e4763fdf2f6724af62d1db837cb5",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "db8dee9f0796ad7131cee7964e94538dafd8de22260b192c36ddad0fa0bc1a1a",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "ae9a3dfb513b13d102502ed4c3ef038b7072f49436e263e44ec30aeca9c9ece1",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "cbf32d9fa253750978e402fb1c00eb3102581a34d8333d2b8f2d0dc226742447",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "4d605b900fc32bc542f63b410ca18b982d42eb316d74e985036a8f0038408662",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "07d5ae724d1e6e404faf82763502eb4e2200e0354e788fed402df6c7a2d0187e",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "1682d9dae6b0c164acad43dad9682632b72f3c8d7fd8d3438b131b04c284831f",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "cee287354a174eb749da4ac75ac7ee3b5b83dd9ae21a90e92260e970f4140c22",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "5e9520f2fae268e50e926fd95ceb5e5f496b6ab22b07c653dea978d43f2f7190",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "b430325b6cc5a9b66e710825e82f7af317414a5a07607f0d6dff9c8d14f3d399",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "f762f9f517390fdb7f40cc36f57cd3c0af995db04a43c67bcb6189a343dd8b40",
+    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "08c33db1aa4173aa39acc078efa448a8499c22e2c6daf643851293d0bd9905a8",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "657fb83f643c51c720ef30e2dacbe83277b6f5de71b4b0d8bf086db01a82bdb9",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "50e2f1fe3e2ac83b8c29ddba95e15ae6feb721525f62c34e3b31f21a4872468a",
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "ba4e0cd71277ed563f3de5455f7f107def7dd446daae724a8304ad2e9661c845",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "736991726adfdef5e2094791fe1c489e7b72aee4a9ebc1f5ab0858c414d7ff4b",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "3de25f5ec10bda0fc20489bb9f83c89995cda83cd4e5fddc6cde3f9445cf6c96",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "a1387f197983cb87ccf21d93900e133817967e7fdd6727dd651e405a354b2797",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "dd6908b2d44231ff728ad2a66e5e31125cacb26ccda320744d43d9edad7c94cd",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "e6f23563e9f70ee0ace8200de1e1b86ce04f0e3cfa9d4ca1a85aa8bbe5cf689f",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "0bbad8f194987af452a0348461d40c86dd9b4f8644eda3f58cb7667c9ddf5ad2",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "73314d17eb863082105f12f8c584c4506eb3514a4d00ee6a1f636f6c2900f096",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "f0551e3e952ca286c5ba29e840b884da25679788dc0e5c25286f9ccf87dc0139",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "0b16ac859ef9b9727078566625b56f7887bf9c09234d9a10458d10c4cf8bf898",
+    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "76810906e2a4b2e7035cc20185590bd348d7ee286466ea031e6947df9dd2e278",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "6491a1e6571f0786efc5d7dc03e7a30f34bb2ece1151a9b0bea3f76201fe9991",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "710c9a2c3af0d7cad235618c96253893c776877ac4d7b908d9ee71a362162a89",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "912a2b7a2eb61eb5095b5497d771595fc4e24d3fb15d04c59be0b40d364dd18f",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "6728e328816486b52451e098e781bd8dcabe54eb072818067e3de35fdfd1c4f7",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "2248523ea74734ae61b04dbb56cc84813d0fd2a849d0b64dd80bd6b4ad4b0f21",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "1825c3c51c348f3321d5f741de66aa3858e8a0260eb903dacd55c7099b6a1736",
+    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "086488eb28716bb1729943de027b9264228793e1d6c4ca5dd556e5e9c1513537",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "aa863cbea533bc250bcf11bc5dd5a8a0f5f97f8f5094dad4d597344f385a7fa0",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "175fadf16dd3557087a12353bb369004805d98b08add6a00a4ceac10a897ecb3",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "f52ab2b4219683109004b92b0ea50548eaca7720e0856286d2003353f8fb835e",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "8fe4e388937e49da71c572df76b5496fa52c3ac5dd46b5c872c4b5b986314bfb",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "a3392b21f6120baa5a736359c2810f00f0b1734f00e5472e2532f422f1d7c77c",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "a0b7afca668cca37f2b0218fc9dba53fe00ce7516ad7fc3f90e01e18e83a14cc",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "c4204a56827f296c8708ce005594b10e5e14cd5cabcde8a6fecf813f65838eb8",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "0d6fda38c716ca4c087b8dcbfe74c80180982800d806429b9cb73a4efd8a12b2",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "352fb737390b968cb893cb450c0e2a979107d90eaf93f43eb63bf5b8f6e9d1ff",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "e963a543b36f5b3a0839e7a3dc1b9ecc686f9ce356da9ea3eb7f7c6da32bb8a3",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "fd4bc99ae5c58421789795943697530a71eb03896d2bae4258e7ff93e2269ee1",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "bfbaaab0e51275ee5a0c30de72f2f18735a3619b68d6920c574fd8c6c0f49bb4",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "c5ec2edd8bc2c2b5487648fd24f09db5445f4b96e82122fe4a1b7e33150a9e9f",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "62a202bb84d94fd40cf113ba139989309095ed74dde51e1765a6e1c5e99bc115",
+    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "ba547c80725be04fb3d19ed5e2a66ab44cfd1e97ed88accc935d9c4980c40b38",
+    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "eef7cbd6a50d43f00612d950ef2f6686bb7bdb70f0ef6f1de61f78e8ff074283",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "2691f61b679eb14d4b722c7c6b3b3968445e5525f61edf5ef9afb8b1a9f60295",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "68ab96eaac231cb1bdad17d02f57454b9d825db296387efac2de1fd78a1defcc",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "e59b63809354e388421b2cf688619d0e5a559cc7a93e7d92155b4ae20fdb5cef",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "182919d1a9e8bc87e0d2b07ff444581fed0d20da65f6283848687cc26c492ff7",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "1e9973b24469ca67ee9cf4e7c464c021c5fb08c6cc06c0f09cfe670858f3739b",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "c72c48c6eff238d6fb9f3370e2fd4ffa7f0521d3204b6044e3927d941525c324",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "f62f7df0bcf5c8b8249b43d9dc5182cbc67e2348a398fc35feaa5e25571d3e0d",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "a4145fcca6ca232e776946ae6f36e7b19e680d985558e73743c02cd0298ac225",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "9c541c58d6d7ce138adc71f9057b4766192b61ff99b7025d18427884964bbe85",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "40f7812cca361f1b759563712301eb743676a75523973d518fda5e3a7eb9402f",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "b596465df080c8cf0280aa48120a2edebd98e9a5f6cad12e81e4b52d31259abf",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "8815fe8210995a96ab6038d6a13bd06952b2b53913b982286327df5029b0a51f",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "baaeb728d53ba484045a62388bd0f5da389763db782e7f42cdc51f4e9390765b",
+    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "f88c77d4c518839b47431e85903e8ecbefe95949aac394d0cb0675a98a06e0b1",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "d164962c5ca2d660170e43db862a75a78f032722f709b1ba601868f405f84bc4",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "1755e9a4ad39abd18e239de2affab1284254cf56a35716eba9afb38bd0d7d8b6",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "c5a02ef799e20bb99ab0ea513a77109f28aa28602e84e720af6594753251ff3a",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "79b872ac85e66d3f157bc47ac2345cdc5445e5449d225ba5f7df4a10c17a24d2",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "0acfae850bd43afd37ced50f9cf32f054a604207cc061f7595b587167633a1b1",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "d03ea79654d97576935d12a2d1403f8d011ef9c1f01da997fabd564d21c9cb37",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "4a3b686b0e112ade9597d2b81bf731040966bbc7b70dd5ea9497596266e13c06",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "224b487421b81d783f81a79a87813c7a396ffa83e9203db39a8c8fba08a739dc",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "0561870fd566a0240054bbadb4e85b6afbb038d9da4f961342c8d35c438aa6bd",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "8e168b33510acfe2fc8e9562523fbbcf45f875fa5b2049b6842796f61868e4fe",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "745cd4d3d46237227b5abda95918a7a688b6417c994f8b7f86441bfbdb60d35b",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "4c1ddfbda1e58b237092b663a93bf2207ae976f92405c0c9762599caf2a0f432",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "2ea1abc349717392ad43c014ad29033fb0cfe4565b30cc94387d45197ede9d10",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "c38f70726ebe16262bdc22a0a4d08dd07cb7d805e49fee6cc345e6695a84ed1d",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "68f5cc96a5a02d58d5ab56ff824fb6252d0a37a33fd32b1acea0b66e59ff1dd6",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "06e6bb46c28ff0e21a74882b7f1c6d6ba77d9b832df8d0e34f29ad8ab56e6e01",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "47194da83d4c760da47f5c36bfd9698cf95dedcfb66a44b26029c6bafe892ba3",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "b5fb64cd9574bb9ffebc569865e63ef76d0df1d18c6fe02765b00933c6c5a993",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "f4e47e43831acaa812568da9315673d79300e18f218d140f093124b0993ce316",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "916910b7c03129c34201b672b70d87e42f9dae10a8e4747925e06e74054ba293",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "b945293125540f7a9cc8923704c134568c47c33bc6d85d385d3359cbf1f59138",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "d379888d7db6ea43ce7f46b06d739744f484d8751ac196f3eabf1f960bf7fc36",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "40ef3189c6ec8b0741e266ba94d9b80d516372091f659e11d4abe9ee156452bd",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "e46fddbfe48963202a33354ebaebfa0eeb3599073a77c993bde2f1c513088e46",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "54eb8f896830a9c6738d22b38586157953c4fffb5e5ebc5809677b040641dccf",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "b976fddd139b652f5b9d776abf314139a011c0f501abf4e7f4558dc408790c24",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "c224905984c60e24993dc92bdc3e3e07db4ea1f229f6297df8e5f7882bd28687",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "211d8d8c43f061ecf960ed4f6e586dff78d14dbb9fc85f7f3d833a99f7bdf22e",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "78a27905a8f5549fd790b405734a25af5fc343b0583899dae2d463359dc3827a",
+    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "142c1066da42b1284ef29e63abff598e95f288cda16c64c2c02d628f209bb5c0",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "278787e847da6fc97fe999a28701d36a7e00b64d96cdbf814618b37a3bb5fcea",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "071aa03e254fcfa789290e7e69822c896f5b3a0eb5bbb904f6f90b7587015d24",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "0f8c4325853d24d701529f6df97a6ce26f08eab43a625eb29fb5ab0c79b1abf3",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "228b6ab8e17f07a02153f8fdcd8802db12053ccd8f9049090fd818699fdcf1bc",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "d23c757051716001e46875b04b93de49038f2f57214a8afc20f2df37b4a466b7",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "f30964c44e47a09998e2a45227394b0c30179b6fb51615afb08650bc1a562a9a",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "821132edf8a49cb970dbba095601b47f7e9f18a50603ae6052203fec7f7b74ae",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "278cb58150ed044fac26d271bcc60ab8e2b5a33ec7839479badddcaa41d53378",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "77e95a3ed769d24bae22b71f83185d8f2ebb769c205d82449fbc83403984ed5f",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "59146e231fede0ba2cbee2b7850dc70a9d9f6b5e857a014ef283a5a5556679c5",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "7e45ed5aa439dbec93ffb6f73a085e13c5ea5e18fd17ae24c1b319d521458d82",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "a077eaa39dca8ceea9d40a1d0f107238944f6b1043c690598668c56aa03989cf",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "872d8209b5bae008bd8db9ab8ab84ea26139bdeb9e186198955caae36cd9f5bf",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "0dc854d5010b30550836e708b7bea27161a1aec68854a30cf05f58f7e789f9f6",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "3d03a5842dcab162fa31b957a50a144c2676dd52597f9d7346d31a60c84aea98",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "3e1794c5dc7fb7572e44599f8c467e1aa0f9f8f97ecff35be56f15220216ea2a",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "56d9d155905adf0b6c39deb312725706b799f1d9837f6ee6bcbb32d78f0668db",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "c594d91157f5e5ec42be60944a5362547290ba31f3512930bbc2cb04814b1944",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "86f5a9f40b8505f3978651a8be6c3f1ae5610c501146535632ab07eb12e6674a",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "f3cfbe12cca534fad7b9d9e646f9b055b5b5bb07061d5989cecb8adee69a3d44",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "ea6119a1bc8f48b5f5bc4b868caa0737b1200a4583fa5ce4caf08702c431eaeb",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "cb379f2ad5306832ac6beeeedae1307760a1bdd76d25d74e6a06bfabd20a4659",
+    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "5c034023cf329f2d69ad8c47530f2c0007528de91d8d287966ef13ae1e4e15a9",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "d313ac7dc009cefed20623f5027364cc7b685e345c9983fb772441b3a0ef53fe",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "844bcf4abf1edd321de33ce945d6d1950f6c4270a51b9d205dd164ceb8a0e764",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "0b2df50d38c638216683c9e753daac91373af3f3d913b35a16ae39e12f5f38e1",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "b0213018364581fc08f2895b6eb11005dd66c8fef18399f157e7be2c3d8d536f",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "9a7669fe05470f2bb1fc743d315351d34f25ce64d7100f0dec41b4fe3e818dbe",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "2c94d473730e2de2f8376c64f4f1cb2d385e72bab8a67e19cf866fabae88fad0",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "170169ae20f06f3866b1cd40fe0f6b70eb79e5a38508981a2c4da27c9bac6134",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "221ed36dec1bdd5071842027f3c4686815723bf6d4e94a7d16186af99006147e",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "772f7b8acab23d6b198c7cfa425524abc9bd33d1efeeca7675981bbe9f994e96",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "8eac3f5e5205ab283b331900575999aa251e1020d1d84f6628f7eae644267964",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "a76a069c713257b55fc7adeaba52cced95869497388ce9d3af11323f9ae977da",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "c64287ebc95dcfd8db2ef7e1d7cebe9ef5c2899d1c28dcb35ed501edf8549fd2",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "fcefe59361e768750032a8d42f6537a8853361e835bcf6047b27e95219a48b4b",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "ddb01a86570f2ada5175078443e0f8f1fc9c7d8f8e224b67bcdf55931b399c0c",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "a99bece4ad5b62333bd26edcdda9fee53d6a55b7eac704c249f243cdd043e9ee",
+    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "6d79db6776fec39c3a94816b3fd32ebfbc6bab66a25f7a8a08b00d80f976d923",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "7afe4df783135a2b4da6af59981565d42006aae46e27f53bccc6274703f14544",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "d34fb1e39c0f6d22e7f0d88dd140c4a581df956eb24242ca6ec00214b7c61093",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "9d70deaa049cd73350f5477d191637af8280064674a88354b66e78d6dddb3320",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "c9a8b9026a7d143effdadb6ce7b9ae8053b07025c81d936ca9ded4ae6ad4e791",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "8b9e008f57d17c30b02cf4c7105984ffa751573ac882d03f1db1e7dca6be98ed"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "AI-generoitu kuva: Kädessä pidettävä puristusvoimamittari, jossa on digitaalinen näyttö ja metallinen puristuskahva, lepää vaalealla pöydällä.",
-      "attempts": 1,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Asfalttitie on osittain tulvaveden peitossa trooppisessa ympäristössä, ja sen reunoilla on tiheää kasvillisuutta ja puinen aita.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Kotimaa",
+        "category": "Maailma",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva mittaustilanteesta, jossa ikääntynyt osallistuja puristaa kädessä pidettävää puristusvoimamittaria ja fysioterapeutti seuraa suoritusta sisätilassa.",
+            "depictable_scene": "Todellinen Terra-satelliitin MODIS-kuva 29. syyskuuta 2026: Havaijin saariketju merellä, saarista loittonevan Nolon pilvijärjestelmä ja Kauain sekä Niihaun yllä olevat sadevyöhykkeet.",
             "must_avoid": [
-              "Staged fall or injury",
-              "Presenting an unrelated photograph as the announced Oulu event"
+              "Unrelated hurricane imagery",
+              "Fabricated satellite imagery",
+              "Depiction of hurricane landfall"
             ],
             "must_show": [
-              "Handgrip dynamometer in use",
-              "Older adult with supervising physiotherapist"
+              "Hawaiian island chain",
+              "Nolo cloud bands"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "puristusvoiman mittaus ikääntynyt",
-              "fysioterapeutti puristusvoimamittaus",
-              "older adult handgrip dynamometer",
-              "senior grip strength assessment"
+              "Nolo Hawaii MODIS",
+              "Nolo Terra 29 September 2026",
+              "hurricane satellite cloud bands",
+              "NASA MODIS Nolo Hawaii 2026"
             ],
-            "subject": "Ikääntyneen puristusvoiman mittauksia fysioterapeutin ohjauksessa"
+            "subject": "Nolo ja Havaijin saaret Terra-satelliitin kuvassa"
           },
           {
-            "depictable_scene": "Kädessä pidettävä puristusvoimamittari lepää yksin vaalealla pöydällä neutraalissa mittaushuoneessa. Laitteen puristettava kahva ja mittariosan rakenne näkyvät selvästi, mutta asteikon tekstiä tai lukemia ei voi lukea.",
+            "depictable_scene": "Nimeämättömän trooppisen ympäristön tyhjä asfalttitie, jonka matala ruskehtava tulvavesi peittää osittain. Tien reunoilla näkyy märkää, tiheää kasvillisuutta ja veden pinnalla sadepisaroiden renkaita.",
             "must_avoid": [
               "People or body parts",
-              "Invented readable text or logos",
-              "Identifiable event venue"
+              "Recognizable real locations",
+              "Invented text or logos",
+              "Presentation as an authentic photograph of Nolo damage"
             ],
             "must_show": [
-              "Handgrip dynamometer",
-              "Clearly visible squeeze handle"
+              "Floodwater covering an asphalt road",
+              "Wet tropical roadside vegetation"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "puristusvoimamittari pöydällä",
-              "handgrip dynamometer",
-              "grip strength meter",
-              "hand dynamometer on table"
+              "tropical flooded road",
+              "rain flooded asphalt",
+              "trooppinen tulviva tie",
+              "heavy rain tropical roadside"
             ],
-            "subject": "Puristusvoimamittari toimintakykymittauksia varten"
-          },
-          {
-            "depictable_scene": "Todellinen ulkokuva Oulun keskustakirjasto Saaresta Kaarlenväylä 3:ssa. Kuvassa näkyvät kirjaston julkisivu ja sisäänkäynti ympäristöineen.",
-            "must_avoid": [
-              "Invented or substituted library building",
-              "Claiming the photograph shows the scheduled event"
-            ],
-            "must_show": [
-              "Actual Oulu central library Saari exterior",
-              "Library entrance"
-            ],
-            "rank": 3,
-            "safe_to_generate": false,
-            "search_queries": [
-              "Oulu keskustakirjasto Saari",
-              "Saari kirjasto Kaarlenväylä 3",
-              "Oulu Saari library exterior",
-              "Oulun keskustakirjasto sisäänkäynti"
-            ],
-            "subject": "Päätapahtuman paikka keskustakirjasto Saaressa"
+            "subject": "Sateet ja tulviva tie trooppisessa ympäristössä"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "A handgrip dynamometer with a digital display and a textured metal squeeze handle rests on a light-colored table. The background is a plain light wall.",
-      "generated": true,
-      "license": "AI-generated image",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/969851d82e582066a7d2a65b4502a223e3611b5dd2c8f89ec299b6e7a9150501.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by Karl Callwood on Unsplash",
+      "depicted": "The image shows a flooded road or path with murky water, extending into the distance. On the left, a wooden utility pole stands with two signs attached. The top sign is yellow and diamond-shaped with the word \"SLOW\" in black capital letters. Below it, a white rectangular sign reads \"REDUCED SPEED\" in black capital letters, with the number \"10\" below it in a larger font. The pole is surrounded by green foliage. To the right of the pole, a wooden railing or fence is partially submerged in the wate",
+      "generated": false,
+      "hotlink": true,
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
       "pixel_review": {
-        "alt_fi": "Kädessä pidettävä puristusvoimamittari, jossa on digitaalinen näyttö ja metallinen puristuskahva, lepää vaalealla pöydällä.",
+        "alt_fi": "Asfalttitie on osittain tulvaveden peitossa trooppisessa ympäristössä, ja sen reunoilla on tiheää kasvillisuutta ja puinen aita.",
         "approved": true,
-        "article_text_sha256": "b8391ada4af49e6cca21e20d17176b943f676f58d188f1704f6e3373192500c4",
-        "concept_sha256": "d5799d07b36ff3aa02d477adaa206312dde1d0eb28c993147c43fa2431f3c47a",
-        "description": "A handgrip dynamometer with a digital display and a textured metal squeeze handle rests on a light-colored table. The background is a plain light wall.",
-        "fit_score": 10,
-        "image_sha256": "969851d82e582066a7d2a65b4502a223e3611b5dd2c8f89ec299b6e7a9150501",
+        "article_text_sha256": "0de491a2bb468405e94a8cce5a595cfab771ef24b7a0e9ad224f772d2bf662e4",
+        "concept_sha256": "e01098231909f4b1ce2d04c37710a20ce686bf3ea948a0adc613623f50f62ffc",
+        "description": "A partially flooded asphalt road in a tropical environment, with a wooden fence and dense green vegetation along its sides. A utility pole with 'SLOW' and 'REDUCED SPEED 10' signs stands on the left. Palm trees are visible in the background under a clear blue sky.",
+        "fit_score": 9,
+        "image_sha256": "82ff0efa07f101b1742cf2670b9f266ef81c358077bd2501abd82d603288ccb0",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image accurately depicts a handgrip dynamometer, which is explicitly mentioned in the article as a tool for grip strength measurements during the fall prevention events. The visible subject directly matches the selected concept.",
-        "reviewed_at": "2026-10-01T17:22:01.637546+00:00",
-        "text_audit": {
-          "examples": [],
-          "readable_text_present": false
-        }
+        "reason": "The image clearly depicts a flooded asphalt road and wet tropical roadside vegetation, directly matching the selected concept. The article discusses heavy rainfall and flooding in a tropical location (Hawaii), making the image highly relevant to the article's subject.",
+        "reviewed_at": "2026-10-01T19:04:50.968645+00:00"
       },
       "pixels": {
-        "height": 1024,
+        "height": 864,
         "mode": "RGB",
-        "variance": 4034.6,
+        "variance": 12014.5,
         "width": 1536
       },
-      "prompt_sha256": "361ad13754e2f0c0a0084031c7866ce3105276f1636c084542c4db1dcdf18d00",
-      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Kädessä pidettävä puristusvoimamittari lepää yksin vaalealla pöydällä neutraalissa mittaushuoneessa. Laitteen puristettava kahva ja mittariosan rakenne näkyvät selvästi, mutta asteikon tekstiä tai lukemia ei voi lukea.",
+        "evidence": "A partially flooded asphalt road in a tropical environment, with a wooden fence and dense green vegetation along its sides. A utility pole with 'SLOW' and 'REDUCED SPEED 10' signs stands on the left. Palm trees are visible in the background under a clear blue sky.",
         "matched": [
-          "Handgrip dynamometer",
-          "Clearly visible squeeze handle"
+          "asphalt",
+          "road",
+          "tropical",
+          "vegetation"
         ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "method": "vision",
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "b8391ada4af49e6cca21e20d17176b943f676f58d188f1704f6e3373192500c4",
-        "decision_sha256": "ccb5e972af7deab5d45ea604e1f707fd18c3ee5759bfbe04bacbf31943617068",
+        "article_text_sha256": "0de491a2bb468405e94a8cce5a595cfab771ef24b7a0e9ad224f772d2bf662e4",
+        "decision_sha256": "08350deb41c6d2852546f755c1d6403a6dff8401d82dec0a29fefd8e070a8cae",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "puristusvoiman mittaus ikääntynyt",
-              "fysioterapeutti puristusvoimamittaus",
-              "older adult handgrip dynamometer"
-            ]
-          },
-          {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "dfefb8ca7d0afd865f1492360be5247ff84ace716321109a491c0636dd9733b5",
+                "fit_score": 0,
+                "image_sha256": "0c6d08e16402e3261e2e03f599813da8e6fe56d4a6c26281c46ec2182e00966b",
                 "license": "Pexels License",
-                "reason": "The image shows a blood pressure monitor, not a handgrip dynamometer. There is no older adult or supervising physiotherapist visible, only a single hand holding the device. Therefore, it does not match the selected concept's must_show elements. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/close-up-of-person-holding-a-sphygmomanometer-6203469/"
+                "reason": "The article discusses a satellite image of the Hawaiian island chain and the Nolo cloud system. The selected concept specifically requires a satellite image showing the Hawaiian island chain, Nolo cloud bands, and rain zones over Kauai and Niihau. The provided image is an aerial photograph of a beach with palm trees and people, which is not a satel",
+                "source_url": "https://www.pexels.com/photo/aerial-view-of-waikiki-beach-honolulu-hawaii-32194277/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "211feec663dcafba96d99a023896a7554da5cec9f0f7aa6b99cfe63d388d739d",
+                "license": "Pexels License",
+                "reason": "The image depicts an aerial view of a landscape with volcanic features and vegetation, which is unrelated to the article's subject of Hurricane Nolo and satellite imagery of the Hawaiian island chain. The image does not show any of the 'must_show' elements: 'Hawaiian island chain' or 'Nolo cloud bands'. One or more required concept elements are not",
+                "source_url": "https://www.pexels.com/photo/birds-eye-view-of-volcanic-soil-16643518/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "7f7e784cadd5441818e2f6368eacd009633c2a9843a24d85ea679fbf5e190db3",
+                "license": "Pexels License",
+                "reason": "The article describes a satellite image of the Hawaiian island chain and the Nolo cloud system. The provided image is an aerial photograph of a beach and coastline, not a satellite image showing the entire island chain or cloud formations. It does not depict the specific subject or perspective requested by the concept. One or more required concept ",
+                "source_url": "https://www.pexels.com/photo/birds-eye-view-of-sea-shore-15988265/"
               },
               {
                 "approved": false,
                 "fit_score": 4,
-                "image_sha256": "bec7ee72ff68c47aab55d11cb5e1f879315e9e46f9861ba3dfe2d11c51da6aa3",
+                "image_sha256": "0a025a0c7d1d81443c7dea4abbfb87cd1ec11c8fd7183337dd6794db61ff2c90",
                 "license": "Pexels License",
-                "reason": "The article discusses various measurements and exercises for fall prevention, including grip strength measurement. The selected concept specifically requests a handgrip dynamometer in use with an older adult and a supervising physiotherapist. The image shows a man having his blood pressure measured, which is a different type of measurement and does",
-                "source_url": "https://www.pexels.com/photo/a-man-measuring-his-blood-pressure-digitally-12203710/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "636509329b9ba9daaf48e82a019ddeb2255382d66d78a3ec0baf491b687df758",
-                "license": "Pexels License",
-                "reason": "The article discusses events for preventing falls, including grip strength measurements and balance tests for older adults. The selected concept specifically requires a handgrip dynamometer in use by an older adult with a supervising physiotherapist. The image shows a man, who does not appear to be an older adult, undergoing a blood pressure measur",
-                "source_url": "https://www.pexels.com/photo/a-man-measuring-his-blood-pressure-digitally-12203709/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "9e32511a1c22047fd18ac58fe35ae30f5e2a59e345ad6e31c66aa3d51bab67c1",
-                "license": "Pexels License",
-                "reason": "The article discusses various measurements and exercises, including grip strength, balance, and muscle strength. The selected concept specifically requires a handgrip dynamometer in use and an older adult with a supervising physiotherapist. The image shows a physiotherapist supervising a leg exercise, which is a type of muscle strength exercise, bu",
-                "source_url": "https://www.pexels.com/photo/physiotherapist-massaging-leg-20860587/"
+                "reason": "The article and concept describe a satellite image of a hurricane and the Hawaiian island chain. This image is an aerial photograph of a coastline, not a satellite image, and does not show a hurricane or the entire island chain from a satellite perspective. It does not depict the specific concept of a MODIS image of Nolo's cloud system and the Hawa",
+                "source_url": "https://www.pexels.com/photo/green-mountain-near-the-ocean-4321834/"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "puristusvoiman mittaus ikääntynyt",
-              "fysioterapeutti puristusvoimamittaus",
-              "older adult handgrip dynamometer"
+              "Nolo Hawaii MODIS",
+              "Nolo Terra 29 September 2026",
+              "hurricane satellite cloud bands"
             ]
           },
           {
@@ -1014,9 +1234,20 @@
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "puristusvoiman mittaus ikääntynyt",
-              "fysioterapeutti puristusvoimamittaus",
-              "older adult handgrip dynamometer"
+              "Nolo Hawaii MODIS",
+              "Nolo Terra 29 September 2026",
+              "hurricane satellite cloud bands"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Nolo Hawaii MODIS",
+              "Nolo Terra 29 September 2026",
+              "hurricane satellite cloud bands"
             ]
           },
           {
@@ -1025,29 +1256,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "puristusvoiman mittaus ikääntynyt",
-              "fysioterapeutti puristusvoimamittaus",
-              "older adult handgrip dynamometer"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "puristusvoimamittari pöydällä",
-              "handgrip dynamometer",
-              "grip strength meter"
+              "Nolo Hawaii MODIS",
+              "Nolo Terra 29 September 2026",
+              "hurricane satellite cloud bands"
             ]
           },
           {
@@ -1055,349 +1266,256 @@
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "91d920604f8594ca9412de6182e2417bc0854c6e0359c9e71cedd87296e0b69a",
+                "image_sha256": "8a49919de5540485a8091f54626a6a3e1f6b1d1463e16106d229037ceeafab72",
                 "license": "Pexels License",
-                "reason": "The article mentions 'puristusvoiman mittauksia' (grip strength measurements), which is related to the concept of a handgrip dynamometer. However, the visible objects are hand grip strengtheners, not a handgrip dynamometer. The concept specifically requires a 'Handgrip dynamometer' and 'Clearly visible squeeze handle' of such a device, which is not",
-                "source_url": "https://www.pexels.com/photo/two-black-and-blue-hand-grips-45058/"
+                "reason": "The image shows a flooded asphalt road and roadside vegetation, which aligns with the 'must_show' elements. However, the vegetation does not appear tropical, and the presence of a vehicle driving through the floodwater contradicts the 'empty' requirement of the 'depictable_scene'. The article mentions heavy rains and flooding in Hawaii, a tropical ",
+                "source_url": "https://www.pexels.com/photo/jeep-navigating-through-flooded-roadway-31560723/"
               },
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "91d920604f8594ca9412de6182e2417bc0854c6e0359c9e71cedd87296e0b69a",
+                "image_sha256": "a50245f224783c520a4586f6ca30f14fbe74698b909fbff1f34b289b6ed26df6",
                 "license": "Pexels License",
-                "reason": "The article mentions \"puristusvoiman mittauksia\" (grip strength measurements), and the concept specifies a \"Kädessä pidettävä puristusvoimamittari\" (handheld grip strength meter). The visible objects are hand grip strengtheners, which are exercise tools, not measurement devices. Therefore, the image does not depict a handgrip dynamometer as require",
-                "source_url": "https://www.pexels.com/photo/two-black-and-blue-hand-grips-45058/"
+                "reason": "The article discusses heavy rainfall and flooding in a tropical environment (Hawaii). The selected concept describes an asphalt road partially covered by floodwater with wet tropical roadside vegetation. The image shows a gravel road, not asphalt, and the vegetation does not appear tropical. While it depicts flooding and a closed road, it does not ",
+                "source_url": "https://www.pexels.com/photo/closed-dirt-road-on-lake-17654212/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "3cd2f24267b5143ff9204d5d146bb88a14e02c005a9d4d978f7ba26f29972095",
+                "license": "Pexels License",
+                "reason": "The image shows a flooded asphalt surface, which aligns with the article's mention of flooded roads due to heavy rains. However, it lacks any visible tropical roadside vegetation, which is a 'must_show' element for the selected concept. The water also appears murky and oily, not clear floodwater. The overall scene does not strongly convey a tropica",
+                "source_url": "https://www.pexels.com/photo/wet-concrete-road-in-close-up-photography-8427064/"
               },
               {
                 "approved": false,
                 "fit_score": 4,
-                "image_sha256": "a1b1e409e55521a8395c94f7fbf2d702e32390751537b60cc978296eb8b466eb",
+                "image_sha256": "2f9d8a19a780ddf884e91289f990cfcad4b91404a8fa61b8f5326bb6b8e9992c",
                 "license": "Pexels License",
-                "reason": "The image shows hands gripping climbing holds on a climbing wall, which is not a handgrip dynamometer. The article discusses grip strength measurements, but the visible subject does not match the specific concept of a handgrip dynamometer. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/photo-of-assorted-climbing-holds-6689027/"
+                "reason": "The article discusses heavy rainfall and flooding in a tropical environment, leading to flooded roads and fallen trees. The selected concept specifically requests a flooded asphalt road with wet tropical roadside vegetation. This image shows puddles on a textured surface, reflecting a tree, but it does not clearly depict a flooded asphalt road or t",
+                "source_url": "https://www.pexels.com/photo/wet-uneven-asphalt-road-with-puddles-with-reflection-5707576/"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "puristusvoimamittari pöydällä",
-              "handgrip dynamometer",
-              "grip strength meter"
+              "tropical flooded road",
+              "rain flooded asphalt",
+              "trooppinen tulviva tie"
             ]
           },
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "82ff0efa07f101b1742cf2670b9f266ef81c358077bd2501abd82d603288ccb0",
+                "license": "Unsplash License",
+                "reason": "The image clearly depicts a flooded asphalt road and wet tropical roadside vegetation, directly matching the selected concept. The article discusses heavy rainfall and flooding in a tropical location (Hawaii), making the image highly relevant to the article's subject.",
+                "source_url": "https://unsplash.com/photos/a-flooded-street-next-to-a-wooden-fence-TDp-h-ud09g?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
             "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "accepted",
             "provider": "unsplash",
             "queries": [
-              "puristusvoimamittari pöydällä",
-              "handgrip dynamometer",
-              "grip strength meter"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "puristusvoimamittari pöydällä",
-              "handgrip dynamometer",
-              "grip strength meter"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Oulu keskustakirjasto Saari",
-              "Saari kirjasto Kaarlenväylä 3",
-              "Oulu Saari library exterior"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "Oulu keskustakirjasto Saari",
-              "Saari kirjasto Kaarlenväylä 3",
-              "Oulu Saari library exterior"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Oulu keskustakirjasto Saari",
-              "Saari kirjasto Kaarlenväylä 3",
-              "Oulu Saari library exterior"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "Oulu keskustakirjasto Saari",
-              "Saari kirjasto Kaarlenväylä 3",
-              "Oulu Saari library exterior"
+              "tropical flooded road",
+              "rain flooded asphalt",
+              "trooppinen tulviva tie"
             ]
           }
         ],
         "selected": {
           "concept_rank": 2,
-          "fit_score": 10,
-          "image_sha256": "969851d82e582066a7d2a65b4502a223e3611b5dd2c8f89ec299b6e7a9150501",
-          "kind": "generated"
+          "fit_score": 9,
+          "image_sha256": "82ff0efa07f101b1742cf2670b9f266ef81c358077bd2501abd82d603288ccb0",
+          "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "969851d82e582066a7d2a65b4502a223e3611b5dd2c8f89ec299b6e7a9150501",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "Puristusvoimamittari toimintakykymittauksia varten",
-      "url": "https://uutistenlukija.fi/media/969851d82e582066a7d2a65b4502a223e3611b5dd2c8f89ec299b6e7a9150501.jpg"
-    },
-    "publication_basis": {
-      "policy": "official-text-v1",
-      "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "oulu",
-      "related_sources": 0,
-      "source_fields_sha256": "fb9baeba4494a47ec7e179ff3abfeb6ba99ea8ba2da58a411cc47ce2b203cee8",
-      "source_sha256": "ceffc1382afffcab1516496a72d1d611c1a4da0e7e2674d566fe536478865f11"
+      "source_url": "https://unsplash.com/photos/a-flooded-street-next-to-a-wooden-fence-TDp-h-ud09g?utm_source=uutistenlukija&utm_medium=referral",
+      "stock_provenance": {
+        "download_tracking": {
+          "successful": true,
+          "url": "https://api.unsplash.com/photos/TDp-h-ud09g/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGZsb29kZWQlMjByb2FkfGVufDB8MHx8fDE3OTA4ODE0ODJ8MA"
+        },
+        "image_url": "https://images.unsplash.com/photo-1646526821474-b2b7a5366ee6?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGZsb29kZWQlMjByb2FkfGVufDB8MHx8fDE3OTA4ODE0ODJ8MA&w=1536&q=80&fm=jpg&fit=crop",
+        "photo_id": "TDp-h-ud09g",
+        "photo_url": "https://unsplash.com/photos/a-flooded-street-next-to-a-wooden-fence-TDp-h-ud09g?utm_source=uutistenlukija&utm_medium=referral",
+        "photographer": "Karl Callwood",
+        "photographer_url": "https://unsplash.com/@climatechangevi?utm_source=uutistenlukija&utm_medium=referral",
+        "provider": "unsplash",
+        "query": "tropical flooded road",
+        "retrieved_at": "2026-10-01T19:04:48Z"
+      },
+      "stock_provenance_sha256": "a4d6cc1f934c11e3cee4c4579b7587c5ff96ec81442462d6680333c6333bdaea",
+      "url": "https://images.unsplash.com/photo-1646526821474-b2b7a5366ee6?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGZsb29kZWQlMjByb2FkfGVufDB8MHx8fDE3OTA4ODE0ODJ8MA&w=1536&q=80&fm=jpg&fit=crop"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-10-01T00:00:00+03:00",
-        "publisher": "Oulun kaupunki",
-        "reuse": {
-          "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Oulun kaupungin käyttöehdot (avoin data): Nimeä-lisenssi (CC BY 4.0) — kopiointi, levittäminen, esittäminen ja muokkaaminen sallittu, myös kaupallisesti, kun lähde mainitaan.",
-          "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://www.ouka.fi/avoin-data/kayttoehdot"
-        },
-        "text": "01.10.2026\nKaatumisten ehkäisyn teemaviikkoa vietetään viikolla 42. Kaatumiset ovat yksi merkittävimmistä ikääntyneiden terveysriskeistä. Tilastojen mukaan joka kolmas yli 65-​vuotias kaatuu vähintään kerran vuodessa. Kaatumiset voivat johtaa vakaviin seurauksiin, kuten murtumiin, toimintakyvyn heikkenemiseen tai sosiaaliseen eristäytymiseen.\nJokainen meistä voi itse vaikuttaa kaatumisriskiin monin eri tavoin esimerkiksi kotiympäristön turvallisuudella, lihasvoiman ja tasapainon parantamisella sekä syömällä monipuolisesti ja huolehtimalla nesteytyksestä.\nTeemaviikko muistuttaa kaatumisten ehkäisyn tärkeydestä. Se on jokapäiväinen asia, joka tukee iäkkäiden turvallisuutta ja hyvinvointia vuoden jokaisena päivänä. Oulun kaupunki ja Pohde järjestävät yhteistyössä viikon aikana monipuolista ohjelmaa, joihin on vapaa pääsy. Tapahtumista saa tietoa ja ohjausta kaatumisten ehkäisyyn.\nPäätapahtuma 16.10. keskustakirjasto Saaressa\nOulun kaupunki ja Pohde järjestävät yhteistyössä Kaatumisten ehkäisyn teemaviikon päätapahtuman Pysytään pystysä 16.10.2026 klo 10–14 keskuskirjasto Saaren tapahtumatila Laiturissa ja Pakkalan salissa (os. Kaarlenväylä 3)\nPakkalan salissa asiantuntijapuheenvuoroja ja tietoiskuja klo 11–12.30\nRavitsemuksen merkitys toimintakyvyn tukemisessa ja kaatumisten ehkäisyssä\nTanja Seppä, ravitsemusterapeutti, Pohde\nAistivajeet ja kaatumisten ehkäisy\nTiina Pesonen, terveystieteiden tohtori, optometristi (YAMK)\nApuvälineet kaatumisten ehkäisyssä\nTarja Siira, apuvälineasiantuntija, Pohde\nVarmoin askelin kotona (kodin turvallisuus)\nVirpi Pumpanen, fysioterapeutti, Pohde\nJoona Ahonpää, kinestetiikka-asiantuntija, Pohde\nPäivittäisten toimintojen merkitys tasapainon, lihasvoiman ja toimintakyvyn tukemisessa\nMinna Alahuhtala, toimintaterapeutti, Pohde\nOulun kaupungin liikuntapalveluiden toiminnan esittely\nHeidi Holappa, liikunnanohjaaja, Oulun kaupunki\nTapahtumatila Laiturissa klo 10–14 (koko tapahtuman ajan)\nToimintakykymittauksia\nTasapaino- ja lihasvoimaharjoitteita\nPuristus- ja nipistysvoimamittausta\nLattialle ja ylös -harjoitteita sekä seisomaannousun ohjaamista\nIkäneuvolan ja Aino-neuvonnan toiminnan esittelyä\nReittis-hyvinvointisivuston esittelyä\nOulu-opiston ja Luustoliiton esittelypisteet\nTeemaviikon tapahtumat muualla Oulussa\nKiiminki\nma 12.10. klo 12–14, Kiimingin S-market (os. Kauppareitti 2)\nPuristusvoiman mittausta, tasapainotesti, kaatumisvaaran arviointia\nPaikalla asiantuntijoita Oulun kaupungin liikuntapalveluista sekä fysioterapeutteja Pohteen kuntoutuspalveluista.\nHaukipudas\nma 12.10. klo 9–11 sekä ke 14.10. klo 9–11, Haukiputaan sosiaali- ja terveyskeskus (os. Simppulantie 15)\nPohteen fysioterapeutit tekevät toimintakykymittauksia\nke 14.10. klo 10–12, Haukiputaan S-market (os. Kauppakuja 2)\nPuristusvoiman mittausta, tasapainotesti, kaatumisvaaran arviointia\nPaikalla asiantuntijoita Oulun kaupungin liikuntapalveluista\nOulunsalo\nti 13.10. klo 14–16, Oulunsalon liikuntakeskus (os. Tuohikuja 6)\nPuristusvoiman mittausta, tasapainotesti, kaatumisvaaran arviointia\nPaikalla asiantuntijoita Oulun kaupungin liikuntapalveluista ja hyvinvoinnin edistämisen palveluista\nOulun kaupunki jakaa tilaisuuksissa ilmaisia liukuesteitä kenkiin. Tervetuloa!\nikääntyneet",
-        "title": "Pysytään pystysä – Kaatumisten ehkäisyn teemaviikon tapahtumat Oulussa",
-        "url": "https://www.ouka.fi/uutiset/pysytaan-pystysa-kaatumisten-ehkaisyn-teemaviikon-tapahtumat-oulussa"
+        "published_at": "2026-10-01T00:00:00+00:00",
+        "publisher": "NASA GSFC / MODIS",
+        "text": "October 1, 2026 - Hurricane Nolo Drenches Hawaii\nSource article image alternative text: Hurricane Nolo\nTweet\nShare\nAfter giving Hawaii a thorough drenching, Hurricane Nolo was pulling away from the island state on September 29, 2026. The Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Terra satellite acquired this true-color image of the storm on that same day. Skies have cleared over Hawaii (east-most island), Maui, Molokai, Lanai, and Oahu while Kauai and Nihau remain under convective bands on the eastern side of the island.\nHurricane Nolo was the third hurricane this season to pass close to Hawaii. Although it did not make landfall, Nolo dropped more than 12 inches (30 centimeters) of rain on parts of Maui and the Island of Hawaiʻi. The storm flooded roads, toppled trees, and triggered landslides, according to news reports, but the Island of Hawaii was spared some of the more severe effects wrought by Hurricane Lala in mid-August.\nImage Facts\nSatellite:\nTerra\nDate Acquired: 9/29/2026\nResolutions:\n1km (2.2 MB), 500m (6.1 MB), 250m (4.1 MB)\nBands Used: 1,4,3\nImage Credit:\nMODIS Land Rapid Response Team, NASA GSFC\nPublication day from source heading; timestamp uses conservative UTC start of that day.",
+        "title": "Hurricane Nolo Drenches Hawaii",
+        "url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2026-10-01"
       }
     ],
-    "story_key": "url:https://www.ouka.fi/uutiset/pysytaan-pystysa-kaatumisten-ehkaisyn-teemaviikon-tapahtumat-oulussa",
+    "story_key": "url:https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2026-10-01",
     "supporting_documents": [
       {
         "id": "RIGHTS",
-        "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-10-01T12:57:14.395764+00:00",
-        "sha256": "f88373b6ec0c30d7e3ce2a3fbb46234cbeeecc99b1444dfefe1429a477270546",
-        "text": "Oulun kaupungin julkaiseman avoimen datan käyttö edellyttää Nimeä-lisenssin noudattamista. Lisenssi on tyyliltään salliva, ja sillä halutaan edistää tiedon hyödyntämistä, läpinäkyvyyttä ja innovaatioita.\nLisenssi mahdollistaa avoimen datan kopioimisen, levittämisen, näyttämisen ja esittämisen julkisesti. Aineistosta saa luoda johdannaisteoksia, kunhan aineiston tuottajan tai oikeuden omistajan nimi mainitaan asianmukaisesti. Alkuperäisen aineiston omistusoikeus säilyy aineiston tuottajalla. Lisenssi perustuu Creative Commons-lisenssiin (CC 4.0 BY, ByAttribution).\nLisenssi sallii\njakaa, kopioida ja levittää aineistoa edelleen missä tahansa välineessä ja muodossa.\nmuunnella, yhdistellä ja muokata aineistoa sekä luoda sen pohjalta uusia aineistoja.\nkäyttää aineistoa missä tahansa tarkoituksessa, myös kaupallisesti.\nLisenssinantaja ei voi peruuttaa näitä oikeuksia niin kauan kuin noudatat lisenssin ehtoja.\nLisenssin ehdot\nNimeä. Sinun on mainittava lähde asianmukaisesti, tarjottava linkki lisenssiin sekä merkittävä, mikäli olet tehnyt muutoksia. Voit tehdä yllä olevan millä tahansa kohtuullisella tavalla, mutta et siten, että annat ymmärtää lisenssinantajan suosittelevan sinua tai teoksen käyttöäsi. Lisenssin myöntäjällä on oikeus pyytää aineiston julkaisijaa poistamaan maininnan aineiston tuottajasta.\nEi muita rajoituksia. Et voi asettaa sellaisia oikeudellisia ehtoja tai teknisiä estoja, jotka estävät oikeudellisesti muita tekemästä mitään sellaista, minkä lisenssi sallii.\n",
-        "url": "https://www.ouka.fi/avoin-data/kayttoehdot"
+        "purpose": "image permission, not a news event",
+        "retrieved_at": "2026-10-01T17:58:21.361360+00:00",
+        "sha256": "2ddc6bae9ac253eedc5c26de574f661c223c584c53a87e24b77e6801f23e007a",
+        "text": "NASA Brand and CollaborationsHome\nNASA Brand Center\nImages and Media\nBrand CenterBrand Center Hub\nBrand Guidelines\nNASA-Themed Merchandise\nUse of NASA Images and Media\nAdvertising Guidelines\nLinking to NASA Websites\nCollaborating with NASACollaboration Hub\nArtifact Loans and Transfers\nStrategic Partnerships\nExhibit Loans and Collaborations\nFilm and Documentary\nNASA Art Program\nImages and Media\nSource article image alternative text: carina nebula\nThe NASA Insignia, Logotype, identifiers, and imagery are not in the public domain. The use of the Insignia, Logotype and NASA identifiers is protected by law, and imagery is made available for use consistent with Media Usage Guidelines.\nNASA Images and Media Usage Guidelines\nNASA content – images, audio, video, and media files used in the rendition of 3-dimensional models, such as texture maps and polygon data in any format – generally are not subject to copyright in the United States. You may use this material for educational or informational purposes, including photo collections, textbooks, public exhibits, computer graphical simulations and Internet Web pages. This general permission extends to personal Web pages.\nNews outlets, schools, and text-book authors may use NASA content without needing explicit permission, subject to compliance with these guidelines. NASA content used in a factual manner that does not imply endorsement may be used without needing explicit permission. NASA should be acknowledged as the source of the material. NASA occasionally uses copyright-protected material of third parties with permission on its website. Those images will be marked identified as copyright protected with the name of the copyright holder. NASA’s use does not convey any rights to others to use the same material. Those wishing to use copyright protected material of third parties must contact the copyright holder directly.\nNON-COMMERCIAL USE\nFor educational or informational purposes\nNASA content – images, audio, video, related media and files used in the rendition of 3-dimensional models, such as texture maps and polygon data in any format – generally are not subject to copyright in the United States. You may use this material for educational or informational purposes, including photo collections, textbooks, public exhibits, computer graphical simulations and Internet Web pages. This general permission extends to personal Web pages.\nNews outlets, schools, and text-book authors\nNews outlets, schools, and text-book authors may use NASA content without needing explicit permission, subject to compliance with these guidelines. NASA content used in a factual manner that does not imply endorsement may be used without needing explicit permission. NASA should be acknowledged as the source of the material. NASA occasionally uses copyright-protected material of third parties with permission on its website. Those images will be marked identified as copyright protected with the name of the copyright holder. NASA’s use does not convey any rights to others to use the same material. Those wishing to use copyright protected material of third parties must contact the copyright holder directly.\nSource article image alternative text: Panorama of lunar surface with instruments in foreground and astronaut in spacesuit in far right\nThis mini-panorama combines two photographs taken by Apollo 15 lunar module pilot Jim Irwin, from the Apollo Lunar Surface Experiments Package (ALSEP) site, at the end of the second Apollo 15 moonwalk on August 1, 1971. Mission commander David R. Scott is leaning to his right and is putting down the Apollo Lunar Surface drill.\nCOMMERCIAL USE\nFor use of NASA images clearances may be necessary for images that include any NASA logos or NASA employees to be used as cover art or in promotional content. Otherwise, NASA imagery can be generally used editorially within published works that are not promotional in nature.\nIf the NASA material is to be used for commercial purposes, including advertisements, it must not explicitly or implicitly convey NASA’s endorsement of commercial goods or services.\nCommercials and promotional content cannot be filmed on NASA property.\nFor commercial use of NASA’s images, intellectual property, emblems, or logos on merchandise or products refer to the Merchandise Guidelines and Approvals page.\nMedia including Identifiable Persons\nIf a NASA image, audio, video or media includes an identifiable person, using the media for commercial purposes may infringe that person’s right of privacy or publicity, and permission should be obtained from the person.\nAstronauts or employees who are currently employed by NASA cannot have their names, likenesses or other personality traits displayed or position title used on any commercial products, advertisements, promotional material or commercial product packaging.\nFor guidance on commercial use on merchandise please refer to NASA’s Merchandise Guidelines.\nFor more information on using NASA content for commercial purposes, please read NASA Advertising Guidelines and Merchandise Guidelines. Any questions regarding use of NASA content, or any NASA emblems, should be directed to nasa-merchandise-&-brand-team@mail.nasa.gov in NASA’s Office of Communications at NASA Headquarters in Washington.\nAstronauts or NASA employees who are retired from the agency can grant permission for the use of their names, likenesses or other personality traits in their discretion, but their former affiliation with NASA may not be used to promote any product, service or activity. For deceased astronauts or employees, their estates may retain rights in the deceased person’s name, likeness or other personality traits, so permission may still be needed.\nThere are many images (moving and still) which have been made publicly available by NASA featuring astronauts in space suits where the astronauts face may be shielded or not easily recognizable, but where some other aspect of the photo may indicate the astronaut’s identity – like a name tag or simply the historical context of the photo. In such a case, the restrictions set forth above may still be applicable, so permission may still be necessary.\nSource article image alternative text: Note - not yet cleared for publication.\nSpread from The WormCourtesy of Standards Manual\nNon-Fungible Tokens (NFTs) and Cryptocurrency\nAs a U.S. government agency, NASA makes its imagery and video publicly available for educational and information purposes, however, since NFTs are, in essence, digital tokens owned by someone as a “one of a kind” digital asset, NASA doesn’t wish for its materials to be used for these purposes. The agency also doesn’t approve any merchandising applications involving NFTs, and it’s unlawful to falsely claim copyright or other rights in NASA materials.\nNASA will not promote or endorse or appear to promote or endorse a commercial product, service or activity. This includes cryptocurrency.\nFurther, astronauts or employees who are currently employed by NASA cannot have their names, likenesses or other personality traits displayed or position title used on any commercial products, advertisements, promotional material or commercial product packaging.\nArtificial Intelligence (AI) Applications\nArtificial Intelligence (AI) Applications\nNASA is committed to transparency, open science, and making data available to everyone. While a wealth of public information is available for use in artificial intelligence (AI) applications, it’s important to understand the following when using our data for AI development:\nAttribution: NASA cannot verify the accuracy of information once it’s incorporated into a large language model. Therefore, attribution of the information directly to NASA is not permitted. Similarly, NASA does not permit our Insignia (i.e., NASA Meatball, Worm logotype, or Seal) to appear with AI generated imagery or in the training of AI tools. To promote transparency, NASA strongly encourages AI-generated products maintain a marking indicating the product is AI generated.\nSource Disclosure (No Permission Implied): As a statement of fact, you can acknowledge your AI tool includes NASA source material, but do not imply any review or permission was granted by NASA for its specific use.\nAccuracy Disclaimer: It’s important to clarify that NASA is not responsible for the accuracy of the information generated by your AI model.\nAI Model Attribution: All outputs from the AI model should be attributed to the AI product itself, not NASA. References like “according to NASA” or similar are prohibited in AI products.\nEndorsement: Use of NASA content to train AI models does not constitute endorsement by NASA.\nBy following these guidelines, you can ensure transparency and responsible use of our public information in your AI applications.\nIMAGE ACCESS\nNASA has extensive image and video galleries online, including historic images, current missions, astronomy pictures, Earth images and ways to search for NASA images. Generally, each mission and program has a video and image collection on the topic page. For example, Space Station videos can be found at https://www.nasa.gov/mission_pages/station/videos/index.html. Content can also be found on our extensive social media channels.\nEngineers within the Launch Control Center’s Firing Room 1 monitor on overall test of the Apollo 11 space vehicle. JoAnn Morgan can be found near the center of the third row.NASA\nContact\nFor questions about specific images, please call 202-358-1900.\nFor questions about specific video, please call 202-358-0309.\nImage and Media Resources\nNASA’s multimedia resources can be found online here. Below are a condensed list of image, video, audio, data and 3d asset resources.\nNASA Image Libraries:\nNASA Image and Video Library\nNASA Image of the Day\nCatalog of Earth Imagery\nNASA Earth Observatory\nScientific Visualization Studio\nGateway to Astronaut Photography of Earth\nNASA GIPHY\nJPL Photojournal\nJames Webb Space Telescope Imagery\nNASA VR and 360 Multimedia\nHigh Energy Astrophysics Picture of the Week\nSolar Dynamics Observatory\nMODIS Image of the Day\nMars Perseverance Gallery\nLandsat Image Gallery\nHubble Imagery\nHiRISE Imagery\nTrek Galleries\nFaces of NASA\nLROC Lunar Imagery\nNASA Flickr Accounts\nNASA HQ Photo\nGlenn Research Center\nGoddard Space Flight Center\nJet Propulsion Laboratory\nJohnson Space Center\nKennedy Space Center\nLangley Research Center\nMarshall Space Flight Center\nNASA APPEL Knowledge Services\nRobotic Refueling Mission\nNASA on The Commons\nNASA Space Flight Awareness\nChandra X-ray Observatory\nNASA_SDO\nHubble Space Telescope\nJames Webb Space Telescope\nProject Morpheus\nNASA Streaming video:\nNASA+\nNASA YouTube Channel\nNASA Twitch\nNASA DailyMotion\nAudio\nAudio and Ringtones\nNASA Soundcloud\nNASA Podcasts\nNASA Spotify\nData\ndata.nasa.gov\nPlanetary Data System\nNASA’s Physical Oceanography Distributed Active Archive Center\n3D/Tactile\nNASA 3D Resources\n3D Printed Universe\nBlind/Low-Vision Accessible Materials – Chanda X-ray\nTactile Solar System Images\nSocial\nOfficial NASA Social Media Accounts\nAdditional Guidance\nGuidelines for logo usage, merchandising requests, media usage, and advertising requests\nFilm & Documentary\nFrom providing footage to on-site filming learn more about working with NASA on documentary and film projects.\nFilm & DocumentaryMerchandise\nGuidance for companies seeking approval for producing NASA-related merchandise\nMerchandise Approvals\nSource article image alternative text: The Astronaut Snoopy balloon is seen floating along in the Macy's Thanksgiving Day Parade on, Thursday, Nov. 24, 2022, in New York City.\nStrategic Partnerships\nLearn more about how NASA collaborates with brands on engagement opportunities and products.\nStrategic Partnerships\nSource article image alternative text: NASA Meatball\nBrand Guidelines\nGuidance for use of NASA's Insignia (the \"Meatball\"), Logotype (the \"Worm\") and other supporting graphics.\nBrand Guidelines",
+        "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       }
     ]
   },
   "draft": {
-    "category": "Kotimaa",
+    "category": "Maailma",
     "image": {
-      "alt": "AI-generoitu kuva: Kädessä pidettävä puristusvoimamittari, jossa on digitaalinen näyttö ja metallinen puristuskahva, lepää vaalealla pöydällä.",
-      "attempts": 1,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Asfalttitie on osittain tulvaveden peitossa trooppisessa ympäristössä, ja sen reunoilla on tiheää kasvillisuutta ja puinen aita.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Kotimaa",
+        "category": "Maailma",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva mittaustilanteesta, jossa ikääntynyt osallistuja puristaa kädessä pidettävää puristusvoimamittaria ja fysioterapeutti seuraa suoritusta sisätilassa.",
+            "depictable_scene": "Todellinen Terra-satelliitin MODIS-kuva 29. syyskuuta 2026: Havaijin saariketju merellä, saarista loittonevan Nolon pilvijärjestelmä ja Kauain sekä Niihaun yllä olevat sadevyöhykkeet.",
             "must_avoid": [
-              "Staged fall or injury",
-              "Presenting an unrelated photograph as the announced Oulu event"
+              "Unrelated hurricane imagery",
+              "Fabricated satellite imagery",
+              "Depiction of hurricane landfall"
             ],
             "must_show": [
-              "Handgrip dynamometer in use",
-              "Older adult with supervising physiotherapist"
+              "Hawaiian island chain",
+              "Nolo cloud bands"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "puristusvoiman mittaus ikääntynyt",
-              "fysioterapeutti puristusvoimamittaus",
-              "older adult handgrip dynamometer",
-              "senior grip strength assessment"
+              "Nolo Hawaii MODIS",
+              "Nolo Terra 29 September 2026",
+              "hurricane satellite cloud bands",
+              "NASA MODIS Nolo Hawaii 2026"
             ],
-            "subject": "Ikääntyneen puristusvoiman mittauksia fysioterapeutin ohjauksessa"
+            "subject": "Nolo ja Havaijin saaret Terra-satelliitin kuvassa"
           },
           {
-            "depictable_scene": "Kädessä pidettävä puristusvoimamittari lepää yksin vaalealla pöydällä neutraalissa mittaushuoneessa. Laitteen puristettava kahva ja mittariosan rakenne näkyvät selvästi, mutta asteikon tekstiä tai lukemia ei voi lukea.",
+            "depictable_scene": "Nimeämättömän trooppisen ympäristön tyhjä asfalttitie, jonka matala ruskehtava tulvavesi peittää osittain. Tien reunoilla näkyy märkää, tiheää kasvillisuutta ja veden pinnalla sadepisaroiden renkaita.",
             "must_avoid": [
               "People or body parts",
-              "Invented readable text or logos",
-              "Identifiable event venue"
+              "Recognizable real locations",
+              "Invented text or logos",
+              "Presentation as an authentic photograph of Nolo damage"
             ],
             "must_show": [
-              "Handgrip dynamometer",
-              "Clearly visible squeeze handle"
+              "Floodwater covering an asphalt road",
+              "Wet tropical roadside vegetation"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "puristusvoimamittari pöydällä",
-              "handgrip dynamometer",
-              "grip strength meter",
-              "hand dynamometer on table"
+              "tropical flooded road",
+              "rain flooded asphalt",
+              "trooppinen tulviva tie",
+              "heavy rain tropical roadside"
             ],
-            "subject": "Puristusvoimamittari toimintakykymittauksia varten"
-          },
-          {
-            "depictable_scene": "Todellinen ulkokuva Oulun keskustakirjasto Saaresta Kaarlenväylä 3:ssa. Kuvassa näkyvät kirjaston julkisivu ja sisäänkäynti ympäristöineen.",
-            "must_avoid": [
-              "Invented or substituted library building",
-              "Claiming the photograph shows the scheduled event"
-            ],
-            "must_show": [
-              "Actual Oulu central library Saari exterior",
-              "Library entrance"
-            ],
-            "rank": 3,
-            "safe_to_generate": false,
-            "search_queries": [
-              "Oulu keskustakirjasto Saari",
-              "Saari kirjasto Kaarlenväylä 3",
-              "Oulu Saari library exterior",
-              "Oulun keskustakirjasto sisäänkäynti"
-            ],
-            "subject": "Päätapahtuman paikka keskustakirjasto Saaressa"
+            "subject": "Sateet ja tulviva tie trooppisessa ympäristössä"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "A handgrip dynamometer with a digital display and a textured metal squeeze handle rests on a light-colored table. The background is a plain light wall.",
-      "generated": true,
-      "license": "AI-generated image",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/969851d82e582066a7d2a65b4502a223e3611b5dd2c8f89ec299b6e7a9150501.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by Karl Callwood on Unsplash",
+      "depicted": "The image shows a flooded road or path with murky water, extending into the distance. On the left, a wooden utility pole stands with two signs attached. The top sign is yellow and diamond-shaped with the word \"SLOW\" in black capital letters. Below it, a white rectangular sign reads \"REDUCED SPEED\" in black capital letters, with the number \"10\" below it in a larger font. The pole is surrounded by green foliage. To the right of the pole, a wooden railing or fence is partially submerged in the wate",
+      "generated": false,
+      "hotlink": true,
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
       "pixel_review": {
-        "alt_fi": "Kädessä pidettävä puristusvoimamittari, jossa on digitaalinen näyttö ja metallinen puristuskahva, lepää vaalealla pöydällä.",
+        "alt_fi": "Asfalttitie on osittain tulvaveden peitossa trooppisessa ympäristössä, ja sen reunoilla on tiheää kasvillisuutta ja puinen aita.",
         "approved": true,
-        "article_text_sha256": "b8391ada4af49e6cca21e20d17176b943f676f58d188f1704f6e3373192500c4",
-        "concept_sha256": "d5799d07b36ff3aa02d477adaa206312dde1d0eb28c993147c43fa2431f3c47a",
-        "description": "A handgrip dynamometer with a digital display and a textured metal squeeze handle rests on a light-colored table. The background is a plain light wall.",
-        "fit_score": 10,
-        "image_sha256": "969851d82e582066a7d2a65b4502a223e3611b5dd2c8f89ec299b6e7a9150501",
+        "article_text_sha256": "0de491a2bb468405e94a8cce5a595cfab771ef24b7a0e9ad224f772d2bf662e4",
+        "concept_sha256": "e01098231909f4b1ce2d04c37710a20ce686bf3ea948a0adc613623f50f62ffc",
+        "description": "A partially flooded asphalt road in a tropical environment, with a wooden fence and dense green vegetation along its sides. A utility pole with 'SLOW' and 'REDUCED SPEED 10' signs stands on the left. Palm trees are visible in the background under a clear blue sky.",
+        "fit_score": 9,
+        "image_sha256": "82ff0efa07f101b1742cf2670b9f266ef81c358077bd2501abd82d603288ccb0",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image accurately depicts a handgrip dynamometer, which is explicitly mentioned in the article as a tool for grip strength measurements during the fall prevention events. The visible subject directly matches the selected concept.",
-        "reviewed_at": "2026-10-01T17:22:01.637546+00:00",
-        "text_audit": {
-          "examples": [],
-          "readable_text_present": false
-        }
+        "reason": "The image clearly depicts a flooded asphalt road and wet tropical roadside vegetation, directly matching the selected concept. The article discusses heavy rainfall and flooding in a tropical location (Hawaii), making the image highly relevant to the article's subject.",
+        "reviewed_at": "2026-10-01T19:04:50.968645+00:00"
       },
       "pixels": {
-        "height": 1024,
+        "height": 864,
         "mode": "RGB",
-        "variance": 4034.6,
+        "variance": 12014.5,
         "width": 1536
       },
-      "prompt_sha256": "361ad13754e2f0c0a0084031c7866ce3105276f1636c084542c4db1dcdf18d00",
-      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Kädessä pidettävä puristusvoimamittari lepää yksin vaalealla pöydällä neutraalissa mittaushuoneessa. Laitteen puristettava kahva ja mittariosan rakenne näkyvät selvästi, mutta asteikon tekstiä tai lukemia ei voi lukea.",
+        "evidence": "A partially flooded asphalt road in a tropical environment, with a wooden fence and dense green vegetation along its sides. A utility pole with 'SLOW' and 'REDUCED SPEED 10' signs stands on the left. Palm trees are visible in the background under a clear blue sky.",
         "matched": [
-          "Handgrip dynamometer",
-          "Clearly visible squeeze handle"
+          "asphalt",
+          "road",
+          "tropical",
+          "vegetation"
         ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "method": "vision",
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "b8391ada4af49e6cca21e20d17176b943f676f58d188f1704f6e3373192500c4",
-        "decision_sha256": "ccb5e972af7deab5d45ea604e1f707fd18c3ee5759bfbe04bacbf31943617068",
+        "article_text_sha256": "0de491a2bb468405e94a8cce5a595cfab771ef24b7a0e9ad224f772d2bf662e4",
+        "decision_sha256": "08350deb41c6d2852546f755c1d6403a6dff8401d82dec0a29fefd8e070a8cae",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "puristusvoiman mittaus ikääntynyt",
-              "fysioterapeutti puristusvoimamittaus",
-              "older adult handgrip dynamometer"
-            ]
-          },
-          {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "dfefb8ca7d0afd865f1492360be5247ff84ace716321109a491c0636dd9733b5",
+                "fit_score": 0,
+                "image_sha256": "0c6d08e16402e3261e2e03f599813da8e6fe56d4a6c26281c46ec2182e00966b",
                 "license": "Pexels License",
-                "reason": "The image shows a blood pressure monitor, not a handgrip dynamometer. There is no older adult or supervising physiotherapist visible, only a single hand holding the device. Therefore, it does not match the selected concept's must_show elements. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/close-up-of-person-holding-a-sphygmomanometer-6203469/"
+                "reason": "The article discusses a satellite image of the Hawaiian island chain and the Nolo cloud system. The selected concept specifically requires a satellite image showing the Hawaiian island chain, Nolo cloud bands, and rain zones over Kauai and Niihau. The provided image is an aerial photograph of a beach with palm trees and people, which is not a satel",
+                "source_url": "https://www.pexels.com/photo/aerial-view-of-waikiki-beach-honolulu-hawaii-32194277/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "211feec663dcafba96d99a023896a7554da5cec9f0f7aa6b99cfe63d388d739d",
+                "license": "Pexels License",
+                "reason": "The image depicts an aerial view of a landscape with volcanic features and vegetation, which is unrelated to the article's subject of Hurricane Nolo and satellite imagery of the Hawaiian island chain. The image does not show any of the 'must_show' elements: 'Hawaiian island chain' or 'Nolo cloud bands'. One or more required concept elements are not",
+                "source_url": "https://www.pexels.com/photo/birds-eye-view-of-volcanic-soil-16643518/"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "7f7e784cadd5441818e2f6368eacd009633c2a9843a24d85ea679fbf5e190db3",
+                "license": "Pexels License",
+                "reason": "The article describes a satellite image of the Hawaiian island chain and the Nolo cloud system. The provided image is an aerial photograph of a beach and coastline, not a satellite image showing the entire island chain or cloud formations. It does not depict the specific subject or perspective requested by the concept. One or more required concept ",
+                "source_url": "https://www.pexels.com/photo/birds-eye-view-of-sea-shore-15988265/"
               },
               {
                 "approved": false,
                 "fit_score": 4,
-                "image_sha256": "bec7ee72ff68c47aab55d11cb5e1f879315e9e46f9861ba3dfe2d11c51da6aa3",
+                "image_sha256": "0a025a0c7d1d81443c7dea4abbfb87cd1ec11c8fd7183337dd6794db61ff2c90",
                 "license": "Pexels License",
-                "reason": "The article discusses various measurements and exercises for fall prevention, including grip strength measurement. The selected concept specifically requests a handgrip dynamometer in use with an older adult and a supervising physiotherapist. The image shows a man having his blood pressure measured, which is a different type of measurement and does",
-                "source_url": "https://www.pexels.com/photo/a-man-measuring-his-blood-pressure-digitally-12203710/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "636509329b9ba9daaf48e82a019ddeb2255382d66d78a3ec0baf491b687df758",
-                "license": "Pexels License",
-                "reason": "The article discusses events for preventing falls, including grip strength measurements and balance tests for older adults. The selected concept specifically requires a handgrip dynamometer in use by an older adult with a supervising physiotherapist. The image shows a man, who does not appear to be an older adult, undergoing a blood pressure measur",
-                "source_url": "https://www.pexels.com/photo/a-man-measuring-his-blood-pressure-digitally-12203709/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "9e32511a1c22047fd18ac58fe35ae30f5e2a59e345ad6e31c66aa3d51bab67c1",
-                "license": "Pexels License",
-                "reason": "The article discusses various measurements and exercises, including grip strength, balance, and muscle strength. The selected concept specifically requires a handgrip dynamometer in use and an older adult with a supervising physiotherapist. The image shows a physiotherapist supervising a leg exercise, which is a type of muscle strength exercise, bu",
-                "source_url": "https://www.pexels.com/photo/physiotherapist-massaging-leg-20860587/"
+                "reason": "The article and concept describe a satellite image of a hurricane and the Hawaiian island chain. This image is an aerial photograph of a coastline, not a satellite image, and does not show a hurricane or the entire island chain from a satellite perspective. It does not depict the specific concept of a MODIS image of Nolo's cloud system and the Hawa",
+                "source_url": "https://www.pexels.com/photo/green-mountain-near-the-ocean-4321834/"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "puristusvoiman mittaus ikääntynyt",
-              "fysioterapeutti puristusvoimamittaus",
-              "older adult handgrip dynamometer"
+              "Nolo Hawaii MODIS",
+              "Nolo Terra 29 September 2026",
+              "hurricane satellite cloud bands"
             ]
           },
           {
@@ -1406,9 +1524,20 @@
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "puristusvoiman mittaus ikääntynyt",
-              "fysioterapeutti puristusvoimamittaus",
-              "older adult handgrip dynamometer"
+              "Nolo Hawaii MODIS",
+              "Nolo Terra 29 September 2026",
+              "hurricane satellite cloud bands"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Nolo Hawaii MODIS",
+              "Nolo Terra 29 September 2026",
+              "hurricane satellite cloud bands"
             ]
           },
           {
@@ -1417,29 +1546,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "puristusvoiman mittaus ikääntynyt",
-              "fysioterapeutti puristusvoimamittaus",
-              "older adult handgrip dynamometer"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "puristusvoimamittari pöydällä",
-              "handgrip dynamometer",
-              "grip strength meter"
+              "Nolo Hawaii MODIS",
+              "Nolo Terra 29 September 2026",
+              "hurricane satellite cloud bands"
             ]
           },
           {
@@ -1447,170 +1556,123 @@
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "91d920604f8594ca9412de6182e2417bc0854c6e0359c9e71cedd87296e0b69a",
+                "image_sha256": "8a49919de5540485a8091f54626a6a3e1f6b1d1463e16106d229037ceeafab72",
                 "license": "Pexels License",
-                "reason": "The article mentions 'puristusvoiman mittauksia' (grip strength measurements), which is related to the concept of a handgrip dynamometer. However, the visible objects are hand grip strengtheners, not a handgrip dynamometer. The concept specifically requires a 'Handgrip dynamometer' and 'Clearly visible squeeze handle' of such a device, which is not",
-                "source_url": "https://www.pexels.com/photo/two-black-and-blue-hand-grips-45058/"
+                "reason": "The image shows a flooded asphalt road and roadside vegetation, which aligns with the 'must_show' elements. However, the vegetation does not appear tropical, and the presence of a vehicle driving through the floodwater contradicts the 'empty' requirement of the 'depictable_scene'. The article mentions heavy rains and flooding in Hawaii, a tropical ",
+                "source_url": "https://www.pexels.com/photo/jeep-navigating-through-flooded-roadway-31560723/"
               },
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "91d920604f8594ca9412de6182e2417bc0854c6e0359c9e71cedd87296e0b69a",
+                "image_sha256": "a50245f224783c520a4586f6ca30f14fbe74698b909fbff1f34b289b6ed26df6",
                 "license": "Pexels License",
-                "reason": "The article mentions \"puristusvoiman mittauksia\" (grip strength measurements), and the concept specifies a \"Kädessä pidettävä puristusvoimamittari\" (handheld grip strength meter). The visible objects are hand grip strengtheners, which are exercise tools, not measurement devices. Therefore, the image does not depict a handgrip dynamometer as require",
-                "source_url": "https://www.pexels.com/photo/two-black-and-blue-hand-grips-45058/"
+                "reason": "The article discusses heavy rainfall and flooding in a tropical environment (Hawaii). The selected concept describes an asphalt road partially covered by floodwater with wet tropical roadside vegetation. The image shows a gravel road, not asphalt, and the vegetation does not appear tropical. While it depicts flooding and a closed road, it does not ",
+                "source_url": "https://www.pexels.com/photo/closed-dirt-road-on-lake-17654212/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "3cd2f24267b5143ff9204d5d146bb88a14e02c005a9d4d978f7ba26f29972095",
+                "license": "Pexels License",
+                "reason": "The image shows a flooded asphalt surface, which aligns with the article's mention of flooded roads due to heavy rains. However, it lacks any visible tropical roadside vegetation, which is a 'must_show' element for the selected concept. The water also appears murky and oily, not clear floodwater. The overall scene does not strongly convey a tropica",
+                "source_url": "https://www.pexels.com/photo/wet-concrete-road-in-close-up-photography-8427064/"
               },
               {
                 "approved": false,
                 "fit_score": 4,
-                "image_sha256": "a1b1e409e55521a8395c94f7fbf2d702e32390751537b60cc978296eb8b466eb",
+                "image_sha256": "2f9d8a19a780ddf884e91289f990cfcad4b91404a8fa61b8f5326bb6b8e9992c",
                 "license": "Pexels License",
-                "reason": "The image shows hands gripping climbing holds on a climbing wall, which is not a handgrip dynamometer. The article discusses grip strength measurements, but the visible subject does not match the specific concept of a handgrip dynamometer. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/photo-of-assorted-climbing-holds-6689027/"
+                "reason": "The article discusses heavy rainfall and flooding in a tropical environment, leading to flooded roads and fallen trees. The selected concept specifically requests a flooded asphalt road with wet tropical roadside vegetation. This image shows puddles on a textured surface, reflecting a tree, but it does not clearly depict a flooded asphalt road or t",
+                "source_url": "https://www.pexels.com/photo/wet-uneven-asphalt-road-with-puddles-with-reflection-5707576/"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "puristusvoimamittari pöydällä",
-              "handgrip dynamometer",
-              "grip strength meter"
+              "tropical flooded road",
+              "rain flooded asphalt",
+              "trooppinen tulviva tie"
             ]
           },
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "82ff0efa07f101b1742cf2670b9f266ef81c358077bd2501abd82d603288ccb0",
+                "license": "Unsplash License",
+                "reason": "The image clearly depicts a flooded asphalt road and wet tropical roadside vegetation, directly matching the selected concept. The article discusses heavy rainfall and flooding in a tropical location (Hawaii), making the image highly relevant to the article's subject.",
+                "source_url": "https://unsplash.com/photos/a-flooded-street-next-to-a-wooden-fence-TDp-h-ud09g?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
             "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "accepted",
             "provider": "unsplash",
             "queries": [
-              "puristusvoimamittari pöydällä",
-              "handgrip dynamometer",
-              "grip strength meter"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "puristusvoimamittari pöydällä",
-              "handgrip dynamometer",
-              "grip strength meter"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Oulu keskustakirjasto Saari",
-              "Saari kirjasto Kaarlenväylä 3",
-              "Oulu Saari library exterior"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "Oulu keskustakirjasto Saari",
-              "Saari kirjasto Kaarlenväylä 3",
-              "Oulu Saari library exterior"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Oulu keskustakirjasto Saari",
-              "Saari kirjasto Kaarlenväylä 3",
-              "Oulu Saari library exterior"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "Oulu keskustakirjasto Saari",
-              "Saari kirjasto Kaarlenväylä 3",
-              "Oulu Saari library exterior"
+              "tropical flooded road",
+              "rain flooded asphalt",
+              "trooppinen tulviva tie"
             ]
           }
         ],
         "selected": {
           "concept_rank": 2,
-          "fit_score": 10,
-          "image_sha256": "969851d82e582066a7d2a65b4502a223e3611b5dd2c8f89ec299b6e7a9150501",
-          "kind": "generated"
+          "fit_score": 9,
+          "image_sha256": "82ff0efa07f101b1742cf2670b9f266ef81c358077bd2501abd82d603288ccb0",
+          "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "969851d82e582066a7d2a65b4502a223e3611b5dd2c8f89ec299b6e7a9150501",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "Puristusvoimamittari toimintakykymittauksia varten",
-      "url": "https://uutistenlukija.fi/media/969851d82e582066a7d2a65b4502a223e3611b5dd2c8f89ec299b6e7a9150501.jpg"
+      "source_url": "https://unsplash.com/photos/a-flooded-street-next-to-a-wooden-fence-TDp-h-ud09g?utm_source=uutistenlukija&utm_medium=referral",
+      "stock_provenance": {
+        "download_tracking": {
+          "successful": true,
+          "url": "https://api.unsplash.com/photos/TDp-h-ud09g/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGZsb29kZWQlMjByb2FkfGVufDB8MHx8fDE3OTA4ODE0ODJ8MA"
+        },
+        "image_url": "https://images.unsplash.com/photo-1646526821474-b2b7a5366ee6?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGZsb29kZWQlMjByb2FkfGVufDB8MHx8fDE3OTA4ODE0ODJ8MA&w=1536&q=80&fm=jpg&fit=crop",
+        "photo_id": "TDp-h-ud09g",
+        "photo_url": "https://unsplash.com/photos/a-flooded-street-next-to-a-wooden-fence-TDp-h-ud09g?utm_source=uutistenlukija&utm_medium=referral",
+        "photographer": "Karl Callwood",
+        "photographer_url": "https://unsplash.com/@climatechangevi?utm_source=uutistenlukija&utm_medium=referral",
+        "provider": "unsplash",
+        "query": "tropical flooded road",
+        "retrieved_at": "2026-10-01T19:04:48Z"
+      },
+      "stock_provenance_sha256": "a4d6cc1f934c11e3cee4c4579b7587c5ff96ec81442462d6680333c6333bdaea",
+      "url": "https://images.unsplash.com/photo-1646526821474-b2b7a5366ee6?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHx0cm9waWNhbCUyMGZsb29kZWQlMjByb2FkfGVufDB8MHx8fDE3OTA4ODE0ODJ8MA&w=1536&q=80&fm=jpg&fit=crop"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Oulun kaupungin tiedotteen mukaan teemaviikon päätapahtuma järjestetään 16. lokakuuta kello 10–14 keskustakirjasto Saaressa, osoitteessa Kaarlenväylä 3. Pysytään pystysä -tapahtuman ohjelma jakautuu Laituri-tapahtumatilaan ja Pakkalan saliin, ja sinne on vapaa pääsy."
+        "text": "NASAn 1. lokakuuta julkaistun MODIS-kuvaesittelyn mukaan Nolo toi yli 30 senttimetriä sadetta osiin Mauita ja Havaijin saarta. Hurrikaani kulki saarten läheltä nousematta maihin."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Laiturissa on kaupungin ilmoittaman ohjelman mukaan koko tapahtuman ajan toimintakykymittauksia sekä tasapaino- ja lihasvoimaharjoituksia. Osallistujat voivat harjoitella myös lattialta nousemista ja saada ohjausta seisomaan nousuun. Pakkalan salin asiantuntijapuheenvuorot kello 11–12.30 käsittelevät muun muassa ravitsemusta, aistivajeita, apuvälineitä ja kodin turvallisuutta."
+        "text": "Sateet tulvivat teille, ja myrsky kaatoi puita sekä aiheutti maanvyörymiä, kuvaesittely kertoo uutisraportteihin viitaten. Katkelma ei yksilöi näitä raportteja eikä kerro vahinkojen laajuutta."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kiimingin S-marketissa, Kauppareitti 2:ssa, järjestetään 12. lokakuuta kello 12–14 puristusvoiman mittauksia, tasapainotestejä ja kaatumisvaaran arviointia. Vastaavaa ohjelmaa on Oulunsalon liikuntakeskuksessa, Tuohikuja 6:ssa, 13. lokakuuta kello 14–16. Ajat ja paikat käyvät ilmi kaupungin tiedotteesta."
-      },
-      {
-        "source_ids": [
-          "A"
-        ],
-        "text": "Haukiputaan sosiaali- ja terveyskeskuksessa, Simppulantie 15:ssä, Pohteen fysioterapeutit tekevät tiedotteen mukaan toimintakykymittauksia 12. ja 14. lokakuuta kello 9–11. Haukiputaan S-marketissa, Kauppakuja 2:ssa, on lisäksi 14. lokakuuta kello 10–12 puristusvoiman mittauksia, tasapainotestejä ja kaatumisvaaran arviointia."
-      },
-      {
-        "source_ids": [
-          "A"
-        ],
-        "text": "Kaupungin mukaan kaatumisriskiin voi vaikuttaa huolehtimalla kodin turvallisuudesta, harjoittamalla lihasvoimaa ja tasapainoa sekä syömällä monipuolisesti ja juomalla riittävästi. Teemaviikon neuvonta painottuu ikääntyneiden turvallisuuden ja toimintakyvyn tukemiseen."
+        "text": "Terra-satelliitin MODIS-mittalaitteen 29. syyskuuta ottamassa kuvassa myrsky oli NASAn mukaan loittonemassa saarilta. Taivas oli seljennyt useiden saarten yllä, mutta Kauai ja Niihau olivat vielä myrskyn sadevyöhykkeiden alla. Kuva esittää tilannetta kaksi päivää ennen kuvaesittelyn julkaisua."
       }
     ],
-    "summary": "Oulun kaupunki ja Pohde tarjoavat lokakuun teemaviikolla maksuttomia mittauksia ja neuvontaa kaatumisten ehkäisyyn. Kaupungin mukaan tilaisuuksissa jaetaan myös kenkiin kiinnitettäviä liukuesteitä.",
-    "title": "Oulussa järjestetään kaatumisten ehkäisyn tapahtumia"
+    "summary": "Hurrikaani oli väistymässä Havaijilta 29. syyskuuta. NASAn kuvaesittelyn mukaan se ei noussut maihin, mutta toi paikoin yli 30 senttimetriä sadetta ja aiheutti vahinkoja.",
+    "title": "Nolo toi rankkasateita Havaijille NASAn mukaan"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "2d00661c52b5a8e703283215d9704a6cb94e1321200fb0a924a618b48f979df0",
+    "draft_sha256": "3e81ed62045a7ed76f742b1e053b2d7ccd6e988f70a5090f2596654697dbc750",
     "reasons": [
-      "Otsikko on 52 merkkiä eli alle 60 merkin tavoiterajan. Oulun tapahtumat ja kaatumisten ehkäisy käyvät siitä selvästi ilmi. Lähde A tukee otsikkoa ja ingressin tietoja kaupungin ja Pohteen yhteistyöstä, maksuttomasta ohjelmasta sekä kenkiin jaettavista liukuesteistä.",
-      "Kaikkien viiden kappaleen source_ids-merkintä A on asianmukainen. Lähde A vahvistaa päätapahtuman nimen Pysytään pystysä, ajankohdan 16.10.2026 kello 10–14, keskustakirjasto Saaren osoitteen Kaarlenväylä 3 sekä Laiturin ja Pakkalan salin ohjelman. Asiantuntijapuheenvuorojen aika 11–12.30 ja mainitut aiheet vastaavat lähdettä.",
-      "Lähde A tukee myös paikallistapahtumien päivämääriä, kellonaikoja, osoitteita ja sisältöjä: Kiiminki 12.10. kello 12–14, Oulunsalo 13.10. kello 14–16, Haukiputaan sosiaali- ja terveyskeskus 12. ja 14.10. kello 9–11 sekä Haukiputaan S-market 14.10. kello 10–12. Pohteen fysioterapeuttien tehtävä on kuvattu lähteen mukaisesti.",
-      "Lähde A on julkaistu 1.10.2026 ja käsittelee saman lokakuun tulevia tapahtumia. Kaupungin oma tiedote riittää tämän paikallisen tapahtumauutisen lähteeksi; teksti ei väitä riippumatonta vahvistusta. Kaatumisriskiin vaikuttavat keinot esitetään kaupungin mukaan, eikä luonnos lisää perusteettomia terveysvaikutuksia tai valtakunnallisia yleistyksiä. Kotimaa-luokitus sopii aiheeseen, ja teksti on neutraalia, ymmärrettävää ja itsenäisesti tiivistettyä suomea.",
-      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Kolme järjestettyä kuvakonseptia ja haut jokaiselle on dokumentoitu. Generoitu puristusvoimamittari vastaa korkeimmalle sijoitettua turvallisesti generoitavaa konseptia ja liittyy konkreettisesti lähteen A sekä lopullisen tekstin puristusvoimamittauksiin. Toisen mallin dokumentoitu pikseliarvio kohdistuu samaan kuvatunnisteeseen ja artikkelitekstin tunnisteeseen, antaa sopivuudeksi 10/10 eikä havaitse ihmisiä tai luettavaa tekstiä. Kuvateksti sisältää täsmällisen ilmoituksen 'AI-generoitu kuva. Ei valokuva tapahtumasta.' Kuvaa ei esitetä tapahtumavalokuvana, eikä tekstin uudelleenkäyttölupaa käytetä kuvan oikeuksien perusteena."
+      "Otsikko jää alle 60 merkin tavoiterajan, aloittaa Nolon rankkasateista ja ilmaisee tiedon lähteen. Lähde A tukee otsikkoa ja ingressiä: Nolo ohitti Havaijin nousematta maihin, toi osiin Mauita ja Havaijin saarta yli 30 senttimetriä sadetta ja oli loittonemassa 29.9.2026.",
+      "Kaikkien kolmen kappaleen source_ids-merkintä A on asianmukainen. A tukee sademäärää, tulvineita teitä, kaatuneita puita, maanvyörymiä sekä Terra-satelliitin MODIS-kuvan kuvauspäivää 29.9.2026. Julkaisupäivä 1.10.2026 on kaksi päivää myöhemmin. Kauain ja Niihaun sadevyöhykkeet vastaavat lähteen kuvaamia konvektiivisia vyöhykkeitä.",
+      "Teksti erottaa NASAn kuvaesittelyn väitteet riippumattomasta vahvistuksesta: vahinkotiedot esitetään kuvaesittelyn välittäminä uutisraporttitietoina, ja raporttien yksilöimättömyys sekä vahinkojen laajuuden puuttuminen kerrotaan. Yksi ajankohtainen lähde riittää tähän rajattuun lähdeuutiseen. Muotoilu on omaa, neutraalia ja ymmärrettävää, ja Maailma-luokka sekä maantieteellinen rajaus sopivat aiheeseen.",
+      "Luonnoksen koko kuvatietue vastaa lähdepaketin tietuetta. Kahdelle järjestetylle kuvakonseptille on dokumentoitu haut. Valitun valokuvan tarkkapikseliarvio on 9/10, ja kuvattu tulvaveden peittämä tie liittyy konkreettisesti artikkelin tulvineita teitä käsittelevään kappaleeseen, ei vain trooppiseen ympäristöön. Arkistokuvamerkintä ei esitä kuvaa Nolon vahinkokuvana. Kuvakohtainen Unsplash-tunniste, alkuperä- ja lataustiedot, tekijätieto sekä Unsplash License muodostavat käyttöoikeusnäytön; NASAa koskeva RIGHTS-asiakirja ei ole tämän valokuvan lupaperuste."
     ]
   }
 }
