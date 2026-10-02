@@ -4,271 +4,38 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "b4d34c14a2682db7c09ec16c137090d902003849",
-  "job_id": "59c33e8be2a050bf36119e5181915d19312cc4a6e49a1760790e530f365b3725",
-  "packet_sha256": "14b9c4e076592f0b2582e5f477695c93252f9bb3158e978c06e90cc257d3a068",
-  "draft_sha256": "ae165b4d3b84dc89fe9a2f0f1390657185a120bfa34ca94640801426e84f40f4",
-  "image_sha256": "9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe",
+  "job_id": "131bf1f10bae5f4091da28bc040bab276823d01eac7e9941a24b22d250e0f7ce",
+  "packet_sha256": "cd40c8589a8c1c57aea72f164de9e923ce7f06e835ad73ad143a3ba3ff3e129b",
+  "draft_sha256": "13ee1d8358a75b420adc68ecbf5430aa7e5e912d674e802913d30c937c89a9c4",
+  "image_sha256": "1579f75e7484231b76133e363a5ce9f692e166b06ce4650c11a53be98a1aa0c6",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "a14e8cec6099be87f2a3f9a9ac1ffee39738c1090aaf2abbab0b01d4ed7e835b"
-  },
-  "stock_image": {
-    "alt": "Arkistokuva: Kaksi suurta öljytankkeria on vedessä, etualalla näkyy tankkerin putkistoilla varustettu kansi ja sen vieressä punarunkoinen tankkeri.",
-    "caption": "Arkistokuva artikkelin aiheesta.",
-    "classifier_output": {
-      "category": "Talous",
-      "concepts": [
-        {
-          "depictable_scene": "Nimeämätön öljytankkeri kiinnitettynä öljysataman laituriin. Aluksen pitkä kansi putkistoineen ja laiturin lastausvarret näkyvät sivulta, eikä kuvassa ole ihmisiä.",
-          "must_avoid": [
-            "People or body parts",
-            "Readable vessel names, text or logos",
-            "Identifiable real vessel or port reconstruction",
-            "Oil spills, fire or accident imagery"
-          ],
-          "must_show": [
-            "Oil tanker at an oil terminal",
-            "Dockside loading arms"
-          ],
-          "rank": 1,
-          "safe_to_generate": true,
-          "search_queries": [
-            "öljytankkeri öljysatamassa",
-            "crude oil tanker",
-            "oil tanker loading terminal"
-          ],
-          "subject": "raakaöljyn merikuljetus"
-        },
-        {
-          "depictable_scene": "Nimeämättömän öljyterminaalin suuret lieriömäiset terässäiliöt ja niiden juurella kulkeva putkisto päivänvalossa. Näkymä rajautuu säiliöalueeseen ilman ihmisiä.",
-          "must_avoid": [
-            "People or body parts",
-            "Readable text or logos",
-            "Identifiable real terminal reconstruction",
-            "Smoke, fire or oil spills"
-          ],
-          "must_show": [
-            "Large cylindrical oil storage tanks",
-            "Industrial pipework"
-          ],
-          "rank": 2,
-          "safe_to_generate": true,
-          "search_queries": [
-            "öljyterminaali varastosäiliöt",
-            "oil storage tanks",
-            "petroleum terminal tanks"
-          ],
-          "subject": "öljytuotteet varastosäiliöissä"
-        },
-        {
-          "depictable_scene": "Nimeämätön voimajohtokäytävä avoimessa pohjoismaisessa maastossa. Teräsristikkopylväät ja niiden väliset johtimet jatkuvat kaukaisuuteen, eikä kuvassa ole ihmisiä tai rakennuksia.",
-          "must_avoid": [
-            "People or body parts",
-            "Invented border markers, flags or directional trade arrows",
-            "Readable text or logos",
-            "Identifiable real transmission route reconstruction"
-          ],
-          "must_show": [
-            "High-voltage transmission pylons",
-            "Overhead power lines"
-          ],
-          "rank": 3,
-          "safe_to_generate": true,
-          "search_queries": [
-            "voimajohdot maaseutumaisema",
-            "electricity transmission pylons",
-            "high voltage power lines"
-          ],
-          "subject": "Sähkön siirto voimajohdoissa"
-        }
-      ],
-      "version": "article-first-v1"
-    },
-    "credit": "Photo by Oleksiy Yeshtokyn,🌻🇺🇦🌻 on Pexels",
-    "depicted": "The image shows a wide view of three large ships on the water under an overcast sky. In the foreground, the deck of a ship is visible, covered with a complex network of reddish-brown pipes and white structures. Two large white cranes with booms extended upwards are prominent on this ship, with one on the left and one on the right, both angled towards the center. To the right of the foreground ship, a massive red-hulled ship is docked alongside, its side filling a significant portion of the frame",
-    "generated": false,
-    "hotlink": false,
-    "license": "Pexels License",
-    "license_evidence": {
-      "image_path": "/photos/39762819/pexels-photo-39762819.jpeg",
-      "license": "Pexels License",
-      "license_code": "Pexels",
-      "license_url": "https://www.pexels.com/license/",
-      "photo_id": "39762819",
-      "photo_url": "https://www.pexels.com/photo/large-oil-tanker-with-crane-on-open-sea-39762819/",
-      "photographer": "Oleksiy Yeshtokyn,🌻🇺🇦🌻",
-      "photographer_url": "https://www.pexels.com/@oleksiy-yeshtokyn-2147541276",
-      "response_sha256": "c33b97548b42f18011db2ddc4a70ca1c9acfecdd257d1a8f1e150af8ef810ef3",
-      "retrieved_at": "2026-10-02T20:30:34.239792+00:00",
-      "transport": "jina_reader",
-      "version": 1
-    },
-    "license_url": "https://www.pexels.com/license/",
-    "local_path": "media/9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe.jpg",
-    "pixel_review": {
-      "alt_fi": "Kaksi suurta öljytankkeria on vedessä, etualalla näkyy tankkerin putkistoilla varustettu kansi ja sen vieressä punarunkoinen tankkeri.",
-      "approved": true,
-      "article_text_sha256": "b7c03b306fceb32ebdabc6fd39378f3c4acd1b15850a008400b8aa52a4b3ac21",
-      "concept_sha256": "b0fd6ebec0f543f6f4636079661b32af8205601c5eb77d55d9e1343a2eefba2a",
-      "description": "Two large oil tankers are visible on the water under an overcast sky. In the foreground, the deck of a tanker with extensive red and white piping is shown. Next to it, a larger red-hulled tanker is docked, with two white loading arms extending from the foreground tanker towards its side. Another dark-hulled tanker is visible in the distance on the horizon.",
-      "fit_score": 10,
-      "image_sha256": "9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe",
-      "model": "google:gemini-2.5-flash",
-      "must_show_visible": [
-        true,
-        true
-      ],
-      "no_people": true,
-      "reason": "The image clearly depicts oil tankers at what appears to be an oil terminal, with visible loading arms connecting to one of the tankers. This directly illustrates the article's subject of crude oil imports and exports, and specifically matches the selected concept of an oil tanker at an oil terminal with dockside loading arms.",
-      "reviewed_at": "2026-10-02T20:30:36.502404+00:00"
-    },
-    "pixels": {
-      "height": 627,
-      "mode": "RGB",
-      "variance": 18107.3,
-      "width": 940
-    },
-    "relevance_check": {
-      "accepted": true,
-      "evidence": "Two large oil tankers are visible on the water under an overcast sky. In the foreground, the deck of a tanker with extensive red and white piping is shown. Next to it, a larger red-hulled tanker is docked, with two white loading arms extending from the foreground tanker towards its side. Another dark-hulled tanker is visible in the distance on the horizon.",
-      "matched": [
-        "arms",
-        "loading",
-        "oil",
-        "tanker"
-      ],
-      "method": "vision",
-      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
-    },
-    "selection_evidence": {
-      "article_text_sha256": "b7c03b306fceb32ebdabc6fd39378f3c4acd1b15850a008400b8aa52a4b3ac21",
-      "decision_sha256": "7324a92bd2490bf27e138c51935375d086ecabeb6b2edd332e16abe52c841b33",
-      "minimum_real_fit": 8,
-      "searches": [
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 7,
-              "image_sha256": "8ae028ce0227a6271c8671f248ac44f3e138db081ac283ae9556aa1736155cf9",
-              "license": "Pexels License",
-              "reason": "The image clearly shows an oil tanker at sea, which relates to the article's discussion of crude oil imports and exports. However, the selected concept specifically requires the tanker to be 'at an oil terminal' and to show 'dockside loading arms'. The visible image shows the tanker at sea, not docked at a terminal, and there are no visible loading",
-              "source_url": "https://www.pexels.com/photo/oil-tanker-at-sea-during-sunset-36563588/"
-            },
-            {
-              "approved": true,
-              "fit_score": 10,
-              "image_sha256": "9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe",
-              "license": "Pexels License",
-              "reason": "The image clearly depicts oil tankers at what appears to be an oil terminal, with visible loading arms connecting to one of the tankers. This directly illustrates the article's subject of crude oil imports and exports, and specifically matches the selected concept of an oil tanker at an oil terminal with dockside loading arms.",
-              "source_url": "https://www.pexels.com/photo/large-oil-tanker-with-crane-on-open-sea-39762819/"
-            }
-          ],
-          "concept_rank": 1,
-          "outcome": "accepted",
-          "provider": "pexels",
-          "queries": [
-            "öljytankkeri öljysatamassa",
-            "crude oil tanker",
-            "oil tanker loading terminal"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": true,
-              "fit_score": 9,
-              "image_sha256": "a1fc168f8df72c928312cffb9d031c6b5cdc7789bbbd6c6453328e89bcae1e4b",
-              "license": "Pexels License",
-              "reason": "The image directly depicts large cylindrical oil storage tanks and industrial pipework, which are central to the selected concept of an oil terminal. The article discusses the import and export of energy products, particularly crude oil and other oil products, making an oil terminal a highly relevant visual subject.",
-              "source_url": "https://www.pexels.com/photo/silos-near-cargo-train-cars-24244233/"
-            }
-          ],
-          "concept_rank": 2,
-          "outcome": "accepted",
-          "provider": "pexels",
-          "queries": [
-            "öljyterminaali varastosäiliöt",
-            "oil storage tanks",
-            "petroleum terminal tanks"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 7,
-              "image_sha256": "b1dc61c47d0c5ce1dad6b167931287c890836ec6ef1416ef4f213fe0d7a3ca3b",
-              "license": "Pexels License",
-              "reason": "The image depicts high-voltage transmission pylons and overhead power lines, which are relevant to the article's discussion of electricity trade. However, the selected concept specifies an 'avoimessa pohjoismaisessa maastossa' (open Nordic terrain) and 'ei kuvassa ole ihmisiä tai rakennuksia' (no people or buildings in the image). This image clearl",
-              "source_url": "https://www.pexels.com/photo/vibrant-sunset-with-electric-power-lines-35158378/"
-            },
-            {
-              "approved": true,
-              "fit_score": 9,
-              "image_sha256": "1b09293726ce78f554e145087d2078d42eb800c85638bcdeab979c4ab76f441f",
-              "license": "CC0 1.0",
-              "reason": "The image directly depicts high-voltage transmission pylons and overhead power lines, which are central to the concept of 'Sähkön siirto voimajohdoissa' (Electricity transmission in power lines). The article discusses electricity import and export, making the visual representation of electricity transmission highly relevant. The image also adheres ",
-              "source_url": "https://www.pexels.com/photo/electricity-energy-high-voltage-power-lines-7000/"
-            }
-          ],
-          "concept_rank": 3,
-          "outcome": "accepted",
-          "provider": "pexels",
-          "queries": [
-            "voimajohdot maaseutumaisema",
-            "electricity transmission pylons",
-            "high voltage power lines"
-          ]
-        }
-      ],
-      "selected": {
-        "concept_rank": 1,
-        "fit_score": 10,
-        "image_sha256": "9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe",
-        "kind": "real"
-      },
-      "version": "article-first-v1"
-    },
-    "sha256": "9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe",
-    "source_url": "https://www.pexels.com/photo/large-oil-tanker-with-crane-on-open-sea-39762819/",
-    "stock_provenance": {
-      "image_url": "https://images.pexels.com/photos/39762819/pexels-photo-39762819.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "photo_id": "39762819",
-      "photo_url": "https://www.pexels.com/photo/large-oil-tanker-with-crane-on-open-sea-39762819/",
-      "photographer": "Oleksiy Yeshtokyn,🌻🇺🇦🌻",
-      "photographer_url": "https://www.pexels.com/@oleksiy-yeshtokyn-2147541276",
-      "provider": "pexels",
-      "query": "öljytankkeri öljysatamassa",
-      "retrieved_at": "2026-10-02T20:30:34Z"
-    },
-    "stock_provenance_sha256": "bc11ab8e3384acb7d17a96e9bef4d7eb58e261b0fe818ffbe4462999445f5b6d",
-    "url": "https://uutistenlukija.fi/media/9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe.jpg"
+    "provenance_sha256": "4e3152316edf3b3dbc50041de1cb78597460b66012f2bcfd1380bf0999a040a3"
   },
   "new_article_files": [
-    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html"
+    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "3db210d1c35f4915b524621eea1a3ac49474fe34c4ef4cfb3f26a123ea847721",
-    "_redirects": "61eeb0b2455ebf4c655b60062fb9d08cab41903ef03a02e4c586507999927d04",
-    "ai-kuvat/index.html": "11f36a7979380c9893ef07d539e180bc0b7397955a47dcb80cd515ca61bd6427",
-    "categories/kotimaa/index.html": "877f745ab5eea5d82ca3c114a8baaf79303d2c25249bd96e948bfcbf97040fd1",
-    "categories/kotimaa/sivu/2/index.html": "ffa4286ae154e9abcb4524b244c9ea3fa3c4de74fa18cc4b74d718c9af41244e",
-    "categories/kotimaa/sivu/3/index.html": "32a9a5e13bf63536b1c193698787e816dbcb7110a98e414398465b887cca608b",
-    "categories/kotimaa/sivu/4/index.html": "dbb5c8568d43d9ac7da66c163452be50e45e708b08db3380d5b67e67a63feaca",
-    "categories/kotimaa/sivu/5/index.html": "75537ca23d139577f47378ce26756004c284676c0c44b1b27c6521c53d739926",
-    "categories/kotimaa/sivu/6/index.html": "e0a66b0141eb1507341f4f4544514d2617f9fded6157718c1b7f9412970b22dd",
-    "categories/kulttuuri/index.html": "2b349674c406e566daf29e87f191b694ba2eecdd1e555c465cd679e899b7500a",
-    "categories/talous/index.html": "73be550eb1035ff2d7988b4dba7fa293d71741b7179830fa309928fa812fee5a",
-    "categories/talous/sivu/2/index.html": "a6f4fca3d83cfff2641991c52cb5bdebc0ded0d89f21dcecc9bc9268392e6ad0",
-    "categories/teknologia/index.html": "fd3392d4f96357891e1c044a244e084ab39847c7c2739de1f2d7c9f5bae6964c",
-    "categories/tiede/index.html": "d39465ced8aea27f95379ee05ffabea19f351323db73f500cc36977ff9949d7c",
-    "categories/ulkomaat/index.html": "01f7531a6f88364d2289c40e2b34be0b367bf7a1f9ba337ee4fe4389cfa73c18",
-    "categories/urheilu/index.html": "1e77de15f42cbd92541f7b7397531db7030363d56b51f47f42439159d44be7c2",
-    "index.html": "5960e8981dab58d436d5f9d66c4a1c489add4bef962e1d2243e398ee961bea66",
-    "lahteet/index.html": "adc0094fbf3681d60d7fcdd6b9f8c7a9e3e512c78290bc1a8a9ef0da83653c77",
+    "_redirects": "498c004743678a138a5e5962ae55c3504f1823d537dfc9534b753fd43598d558",
+    "ai-kuvat/index.html": "a1a4ef00636fd4dcf911e4f6e2ecf4ce65eab825dfef17db2b9491317899b883",
+    "categories/kotimaa/index.html": "cce2ac8fe8b65881d7359bed5dc0bb473cda87def455debbda6905f395cc5d23",
+    "categories/kotimaa/sivu/2/index.html": "8e8834904fef4d8519f909e59fd62850158f31d4b5a1f7df56038bb4c78e4e5c",
+    "categories/kotimaa/sivu/3/index.html": "a942e9e6df93fdbe78c2f543ef5ce254b4386d17b37d6a7a19d9b7d7307efe10",
+    "categories/kotimaa/sivu/4/index.html": "11aaf41c88ab4f85d10a924b3b1bb2684d0d0d879b09511a3169cfd0acf5305d",
+    "categories/kotimaa/sivu/5/index.html": "e6c3181b35d62407ae7f70adf06c38c1d3a64ea0ad907cc70bcbaf3aecb63644",
+    "categories/kotimaa/sivu/6/index.html": "cd88f72ee033912014f92b4a46b94f5727918d20f4537e2a72695f12da223ade",
+    "categories/kulttuuri/index.html": "4fc866a719138a6a23feabf156f4bdfc41efb0c880203f72535408ce4e099de5",
+    "categories/talous/index.html": "b44acd9f35a91e9e3ccad2250178f48da8bf9376f91a5082ad8d7e400304f297",
+    "categories/talous/sivu/2/index.html": "30b82815dc0361f47b2b18bbf8d15d685660b2702d90ff639359a95ef93f3a80",
+    "categories/teknologia/index.html": "27adcdd19056c5e2640216db221331e6bbe6e4122afbbda3ceec69d123820ded",
+    "categories/tiede/index.html": "c208096683c220ba7b7222f8f6d99956529139a6386ec8ca0fd11166d80b842f",
+    "categories/ulkomaat/index.html": "4375e29453bb199e33c07a66b4606d664e95cfc8267b047ca5096d8d72f5d2d4",
+    "categories/urheilu/index.html": "c783880068456c5651c559231fff615b1279baf1c535a322d06cd8317acc2bea",
+    "index.html": "461671163c6388c8d4cba3bb5f8cda3fb00359a7f76ec4fc888f827d194b9f82",
+    "lahteet/index.html": "e0ad573069abf33b46354266ad43ce752af1fd7ab0e99e52215660f1a7ed3537",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -302,6 +69,7 @@
     "mvp-assets/11a27ea0cf1148dc79db5f2a902b42e4b6f1cfdfd15cc42fc17f58055b4b1fd1.jpg": "11a27ea0cf1148dc79db5f2a902b42e4b6f1cfdfd15cc42fc17f58055b4b1fd1",
     "mvp-assets/13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26.jpg": "13451ae8dcf8b7caac1ad7179b963fa512d6f750b6d3a1e51d6eb2ff3bcbcf26",
     "mvp-assets/1374dd98c1c49a0c95f7aba26b1ab6987cd5be986644391118b78e771c0268b8.jpg": "1374dd98c1c49a0c95f7aba26b1ab6987cd5be986644391118b78e771c0268b8",
+    "mvp-assets/1579f75e7484231b76133e363a5ce9f692e166b06ce4650c11a53be98a1aa0c6.jpg": "1579f75e7484231b76133e363a5ce9f692e166b06ce4650c11a53be98a1aa0c6",
     "mvp-assets/16551607111a2ab57a0d7be71e5e985d0808004cf19a93e446037a5c3fb68c30.jpg": "16551607111a2ab57a0d7be71e5e985d0808004cf19a93e446037a5c3fb68c30",
     "mvp-assets/16c786f1134e0e2d02cb68328ebe22caac4b2540103ee0ee5b38c71bb1356b50.jpg": "16c786f1134e0e2d02cb68328ebe22caac4b2540103ee0ee5b38c71bb1356b50",
     "mvp-assets/16c92b8a2e0940e8b57b0e0678af03955d16fe6eb475cb67997658011ce96c5a.jpg": "16c92b8a2e0940e8b57b0e0678af03955d16fe6eb475cb67997658011ce96c5a",
@@ -769,29 +537,29 @@
     "mvp-assets/portal.js": "ae7a9eee9306242d93362e5d9b19506af0cc9aed46e19b75c1b475bc3727c92a",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "637eaf4fbed4956e14a5ff0c21a902876ebc471c444ecfe0579be588b8e5e25d",
-    "oppaat/index.html": "e79817d151811bacb78aecba161df32f98241c3de7271cc980707f0aa418d8dc",
+    "oppaat/index.html": "88c540fa9098c0130a0493fafa4bbfc131b9fd3763c7264f6b4d2415c898e535",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "fb61d237d6ac18c245ce03a43686bac85344a5945d5d7f40b891e3fb53a6fbc2",
-    "sitemap.xml": "c0d442de9a3ae1beac6a0d65cc7997ccde1987ea9988c7e4aa694f45887559f0",
-    "sivu/2/index.html": "54f172452e3ea3e4221f5c41cff91c2d3b38058a30d9091657afc1d780431c3d",
-    "sivu/3/index.html": "ef1afed5e768ebe773815ff7c81da4c33a658a09e8220c2ce3c5c54011f53652",
-    "sivu/4/index.html": "5661b70edd7dcf5dba276e4d3e42033109deea0a8aafc92718da7865ac9c8ccf",
-    "sivu/5/index.html": "30ee9c0f8064e97c25fc43046c9ec895027f01bf3dd132466719cebf8eda9e4e",
-    "sivu/6/index.html": "f3408c148db1a24c13964d27c12d6b1aff6e53fbd9f18b1574a556cfade32651",
-    "sivu/7/index.html": "ccf07c4639b97135db6a5e493d4cd3ed97523894fb34a2ddfe53eeabc52e2751",
-    "sivu/8/index.html": "d628d8b1ef03d06fc5cb4b85b2f1d1be0de3f8282e3df005f3b9e89a37dbf2bc",
-    "sivu/9/index.html": "75870080cc5a57ccddc858b87f89817d1ee09a0d371aaed24e8f60f3d1494b68",
-    "tietoja/index.html": "59ab5c05b2e34589a124490603d53b9f64de1b022518b01daab05a249e95b24b",
-    "tietosuoja/index.html": "b2e97807128710fafb926e5631d466b9d1b1c892c127bb494dae5a680c475427",
-    "tuoreimmat/index.html": "cd11c57ec7229e76643b0220cdc5c75b336841b760ffd0f42615d56d49666fcc",
-    "tuoreimmat/sivu/2/index.html": "b433ed957b485a65e886ea9fad9f5c23864703c829b173835f3f1b4dd50600ca",
-    "tuoreimmat/sivu/3/index.html": "196aefbe7ec8a54de6a3b6ce3f3610e217f19b8dc905b6d44a87533e07cff7d2",
-    "tuoreimmat/sivu/4/index.html": "bee1bd79d8abd88557e284d9e437c04e848d736fde5d3c24e1621641c183a1ca",
-    "tuoreimmat/sivu/5/index.html": "03256a86e833c263e99ddd8db20ad54bef5267fa5a0f9050c846c6e711626b78",
-    "tuoreimmat/sivu/6/index.html": "8984d20ba0001115bdd8d9064d085574a60b0bed14c1ee79395c8afa96802319",
-    "tuoreimmat/sivu/7/index.html": "000d0ec79fce773ad4836c2cda43f9d3129997c593222b4e4438a036aa416801",
-    "tuoreimmat/sivu/8/index.html": "125b056fc8c26e25203210307e5f4ed1e6f68b5efa7009bcb51bc0b8323a6ecc",
-    "tuoreimmat/sivu/9/index.html": "eb836ea5b811b5ab96c04dc36e5873cf2c1f6c2a4152e5a5e32e93ec611445a3",
+    "rss.xml": "d529990392022e76f9e38a43d6e1a78752a7bc518fa6932ff6589f85f8e3c89b",
+    "sitemap.xml": "0ad524d2cd12140e7e1c4bbdfecfa2966d1ae3a257aebe0989cc93649bee6211",
+    "sivu/2/index.html": "3f5d8d14a338c694ebd21fb58c73503149702706a0b4afbbbaef7e7d04b491fe",
+    "sivu/3/index.html": "e41ff9f9156a3286b3414dc2da0d448531226995d550bf45462453c3c2fc92d3",
+    "sivu/4/index.html": "651529eb713275b0f3926e4bee33d45ef8cb8f3fb86f652cb9fc6454209275e6",
+    "sivu/5/index.html": "ee7677513140b1c520c5dbcaf0618f81233eec4afa9d7c832bb6f15e0cbf4b22",
+    "sivu/6/index.html": "1b5b1540fc8ec29265a19000bca5e30c0c237b2e7ba8402c70e1ddea1ce20285",
+    "sivu/7/index.html": "d7f82adcd7347e664f6a56c75c2fe6921f13609069683bdcdcefd4a6ea5ac094",
+    "sivu/8/index.html": "89e549f2a6998b46efbf7e8f1ea4ac6dc1c04f7612ade98d21427ca7556d3d7d",
+    "sivu/9/index.html": "dec8668fd3da7b03ded37a5a4f3cb432875f961ec314b3fb4c0bc489ea0c16ac",
+    "tietoja/index.html": "8f6a07e0fc5d32926751f8a0f1bba3265c6a25104ae88c9d80c82322c41c48d8",
+    "tietosuoja/index.html": "90232b6b02de4982467c7aedd403926b3d334923ff3ff9a3bb6933400b6755e9",
+    "tuoreimmat/index.html": "a83943f882bccb6612315df607ad10fc183a7c2947a5ebaacc444a505a527ece",
+    "tuoreimmat/sivu/2/index.html": "3d95a263876a0a6d74fe95bbd505c224eb4828e7061153b6ead0bbbb4622ba63",
+    "tuoreimmat/sivu/3/index.html": "0caf1b11c6a2dadc59be0025a3c437cea4c86a2d3a963dad933df4c1454eb0d6",
+    "tuoreimmat/sivu/4/index.html": "3b9cf3ab56cedc3a1b6a41f2d7d16603cfb10d715f8d08c681c966bb9dd6c1a8",
+    "tuoreimmat/sivu/5/index.html": "5fb2388c62dd50637c804dec0a02e6d925f5fca448ef462d6c8d85a306776dda",
+    "tuoreimmat/sivu/6/index.html": "b6c724c30f7fc4bda8db961ef35ead53c16a0151297a7cc93b9332152fd15285",
+    "tuoreimmat/sivu/7/index.html": "5f9f361e4043e1194bf72f6b5a24df46bbff40f93c3033793d3186e63311f80a",
+    "tuoreimmat/sivu/8/index.html": "6848e6bc2f522e5e7cf493174295c77adf355d18dcb9c88319e4e1029691f002",
+    "tuoreimmat/sivu/9/index.html": "82a96273cc3ee91c7b82d45fe338b88b28d2279a44ab06d01a56b5db18919a01",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -805,804 +573,921 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "3c33bfc4b4e9f7776d04a290f49d888f55dfd251046538dc393b0f6c00b436b5",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "c3582ee480db8219ec7145f6935ae85af24ca0953fb4afe595f76babeb7cb841",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "23a75a4fa8e44201f45f556d1d8ae5580ae67fbbf3fe25558d99cb011591a4f3",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "7ec933a917786343fd27d1cfbfb680310ecd090be76e733c6506f26ddf7c8c48",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "276d7eb9c0985d8d6068cc62a50258c5f5008b9e53a7e9911260ff15d4c4f75f",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "55491a3570bdb5832dbb99150d3fecc1defd65f8c42aae6617669e061d85a4a0",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "058928c5c2c3bd241078caa96ebfd8cae31a6159ab50b60f51d188a25ffa4721",
-    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "ce86aa7903750a49575adb999335f5177b3fc2bcc83c646cf7427971ff698197",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "9d6fc7fdf1902138f225fedd5e8ec255563babbe2c91862a2b086f9288d36059",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "27ac6f5252ff9015fb431d939b1c8d2daba139c62a22e3a9e5be20fd7e4896ae",
+    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "79021ab2bda99d17ab5a967fb08d3aef01a6ce4c85d5f1362ebc953aeacad709",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "50982a85a656f4949479a0cbdcd10fc13a356dd427dc011a3dc4ff85681aa9b5",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "b634f7eef1ffc468265d53bc19a8e78f43904ecbbc027f9c2faf567b3d935700",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "e575db20d3a4002a8eb3fafc0baa96225aa56450128e9644727ecc98ef3e701a",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "08129fdbd6f078c0919781163a79850bb5bc36e0dad6867927d612f099a4e5ba",
+    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "c373596e7729a2707bca9f21d387deac4301d20d2d99409734807d0fcda01b1d",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "b28ff83d8f33175c3f0486c850dee192e6a236d7cb6aa1b55d675e7447980abe",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "74888f91dd9fddf44f27a9a5c92461e990ae9da1751b4ae3d27cbb278af9a7cb",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "022faaa118fc7476634a1bec3947e15704c62225c326eff8a57d5b48f3d98814",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "55e41cfd9f2d329b2479ed72fe89bb858ae8bddc1b5784db99bee280ec01a729",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "c777212c7030f8a348adc4e72fb6c9cfc66a5866622e57f95117370d0370eaec",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "5d969522082b51af0ff3376ac46d56e394af39fcefde007c5c89d2d235f7322c",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "a91088b340427e108cd1d6d633299312acc9dd98e52342f05c70f4eaa085a877",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "f188e45afda67c387e90c361f855414598304e127267c0a92d13229695ba8a0e",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "9a48f2fc0abe8b9791ca20e46967ecbd4ba38ef0b45b2fca434bd8301d9b1c29",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "7469bbcfdcd4837b6f00deb5fa385aae103449a1d6cff63e5685466feacef7d3",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "5b8e0115c74644b130e3d3612ebc293afc9bdb31181bb218c8d819746b2b9b75",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "b6843d7d10aa7ed5647aa9383c089e74b7294708634c11f9fe06933e16147052",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "e86f2cf167fe52816e26f0c4d7d417f1859b4827167bced66575167fd2322838",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "f1b5bd7b1aa3a9a74fb8e8e6cc172647fdbe18cdf78f8f24de8051d7933eadf7",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "4c86b5c05f06b642266f3944384108858dc98300c64bbbe5113ca65561d0b406",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "c8fb7f64086dfaa4b0cd9ea0ff7b82add90e9d9db6480b8a3f04963a2fb5f564",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "8815d61f6e512b4df297166d6a3600cea24c697fc78c6b48f412413e81c642f3",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "bf9656386ae73deab8da8b394b8af39ef7c7399735ddc74ca45584abc35a5552",
-    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "167b86db39f04c1e821e874852e1655d927249e73d3b38cfec0830c2e21e867e",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "ada944a3c6b15819045c9ad63a192e5f9543718d68b7f644bedb4761dbb3ef1a",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "6b9cf4410a654032dcad641ccc0d958de2ae7209a557d4e06393d07808af8068",
-    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "d0a069a0affd18ebf2dd74651ece2c193a020254b300c6b23e37802f2b62c1d5",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "db5b5eb3ee2c49b60197fc5dd1f082c64feed862b77300846c238b06b758263d",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "0cef03274a4172aa39049cda1f47c0556657a4ab4ed4487d6d87f8a215704e44",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "486d0a9fe865ab43eeed5d158a75cda6a881bcdbc1222f3f85eb47ebb65278f3",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "470bc0ec79143c63e8f0c67c7563c67717f7952a35c207ca95f769491265cb5d",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "fd2a2579a02578afa79cf4018557bbb8f647e9e792908caa0c5565f272be7584",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "b7dd95f52898ce09d49204273ae56de0c5662957471cbab87035a64f627bf8d3",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "141659708d0e32b6ff301165c6bce741c3db458ccc3f126b6365652b30fa8abd",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "e0ad7468412b983eaa7949fc0b7841da761c94cee13d8803acbd95ce766b9923",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "3852245d5f2324658b0c98a1999a63cce9a08b882257973cce04dae897ac7d36",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "d84d9a8d8b16de8bc91614e4b93445835fd5e4f2862874ba69dfe5ac67f41f27",
+    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "76f44ff6dd76fc3c8f28ff83a21ebfefd352dc5756cc00c6dce9614205b34b05",
+    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "64f43ea3394980143cbdf13090d605e68b6650babab268924b19c592e07a3ef1",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "a0bdc880537d12bee7bf8d8db95b270911ebdf942c5894f477b66b99565acbab",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "6d569787d8b1f4cc9699c68e0b959ac21921112ec4e04b88df6405e4a12778e2",
+    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "2a723818b1d1e83cff01564cccbdb7cd67084bf5e7e1d79a40bdfebcc0d00fb9",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "913c61c77f20ad4a035538afca56b07853898fe1817bbc4210c6251f15fa2c48",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "38fcbba64e29de2f50a04fa554e3e1530b1953fbd3df7f50822c01cf26fc3202",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "3fc13f4e46ebd3d708094a05de595e2b63e2314b71ce732cd2f78924d294544d",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "422c2a646eec58bd870a1c892bf14c2af5677161023e20b8d0815eb37c7b4e29",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "c01889ef30b4f4cef28e024a4dc559607d9b38de889b7bd55fb1d57f5cba5c8d",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "8542d4a50cc25734f320698c2da2650488ce819763cebb9417e3b8a7b104fd09",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "f7348986416f9268430974852500bcb264f9497b62b186887e8681b63d8de2c8",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "9b25e3214e561786ae2685c8ccf32ba140cbfcbbf5370586b529869bcac15abd",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "0b6510cfbb4ce0c13db9ec66026ba90e390c168e3d7c98ec91f243859eb92dc9",
-    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "ab42e0e24765511e13d60aa42fd71ee715b46f9ea615f00d2cb890aa3ebb7e55",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "3d5003361c0b14440b4aa7b4080d27afadd31d890129cd369c4c1e72b7d5513f",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "198a8db941196cb99542b3a3fda18fdd76f5dd1b8d65a3ef6696e67531ba673c",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "6f7bf49414c9fd134b875aaee47e63ddef761a5b8c521e254ac1fd41be84859c",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "e75183912bfdda7420292ad00f9e5bb1546aba70394767f021c57ada2b5c306c",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "2587d98bb4b8ca8bfbb42605e48cec7e41ce56b95ea03784735a1ee9582eaf10",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "3d199c98eb41cc04c4c216a2fd5dbaf3f5bbf5440ece02d698059121b9297b91",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "ad1123a5ea674c83e86c33a2895b6ab3d3d41e7b9bd2af46a9dfe212d6974609",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "b3df232a5827bad829263ab65e3ca2af47ed9a0e95fd528dc36aa7f3e1fed818",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "1b62a1007bf756c82c4ecb0169bc39d36601bb3c7bb66e62bdebc86841e9d8ed",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "a0210d42d3f20f683770d6f32952f934c8b8a4bc4df5bcf443d3d7f0835f3015",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "1fe4df0081a12eec8e7d87a8f8469070779af2e30c03fabd56779242f49e325e",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "8825d853ea62c00e236834c2af0236305303df8cfbb3176ce7f2f3e4919146a2",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "cfdb8e09a397de38ffcd90322f5086f445ef8fae908a9c57d412646416a72797",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "ea36e0472dd58875e5424ec29bad756d80a29885df4f4019da913d2eea64cf89",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "4912cdcfa2d1b863fbd3d1bb46b8e0d23628eeacc08289ff93535c81621d55c2",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "c8799773a9262b1b819a0678e085d417a77010b2a92e0c6513f7e404f69a99c4",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "3c3dcdb1fa5e467dc9d86e7e13a15ee27c1c57d324ee49372f11ea54a03e47f9",
-    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "9c81ced24816c90c6841fe54cbb82324d17b7f8031eac13cc884512dee68369b",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "d181a8df1bf7fd9d5ea6d9c03403065580f6e1a4756deedf21e65dffbf8626b2",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "3679ca5517fad7d5f975601d45356ae29ac27f462bfc8a571e7755565c3177d2",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "1c0d79efdf4185bd6ab23caf2a3c3572eb4fefaa6475f784df39ef7e45df0e9e",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "7cd8b9b8437fe6717212fe737b2a497a64b7a58d3556758dc521057890f4d3b7",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "608cf61e498f54ffe92867991a171c068f146b45c4a74bd96fc22ee9a665ceb2",
-    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "84fb0bece843b0fabac30b8a75a84459c0f1d87e29fb226138ce03db629ed5d8",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "1e555839649afd794b183f40e94ca60fec0c78074e0592ea566a9c72e2bf94c0",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "a707110778eb811bfecc246648c3eb896ec634f4b610cdc6661c289e30ee825b",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "da6c3a89da53dbfaf89050738b340691f6796dd8818731728a9a617c613cf241",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "3b64e79931a35d9a1476bc3d0238076140df6657e99dec38a9df6f223c7bcf59",
-    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "87b1e6877b36a1b941983421cd58b29ad5bd733f372cb36761f46ce6d054da4a",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "2d6dbd93b38f51d0eff5b8252f1afacdf43561e3b4b0205b851d7ae864d78e5e",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "6a69880b3e525be8deca9bdd475a8198fd1f8237ee5c26e2ac9e6d733b493a36",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "b3d114e99884b6c8f4e7698cf5074b4d4c6963f8b6bb87db96d91ae6dd6f55e2",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "69ff1172495bc5af8429af7a2e5293d34d4e5129114ee02839af876e8e4762d1",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "d18e04b8abf6aef363cf4b48e91f947973a729067519f6cef15e47aa5c6cc154",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "e2a5d723d3b8006bb20075cb8c0da08c1cf4b6cf6f1ab07d8cd50d1155e390b0",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "bcfeccdf703a8c4ca826451021e39030032d64088f341ccbe946b50f83bd5065",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "1ff1f5d0cb5aa678ef904af026d0b68a1c1739c55cad85000009f778f8ec14db",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "7f6a0d733f1f3197fab7c46807f758fe590552b2aac79b38ff3db4969460f48e",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "415cf39ce02a8545b90b01d00a596fbd5819edc2faabbefc070acc65baa262de",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "3d88a9351feab302edc8532a30d47e4fcbb1fd469412ee62a106dd05be74c42f",
-    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "0ecec3f2c17167a017f5d5f6b0a0240193d8fc5421a3ef9385c43f0ab3183ce8",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "cc24d051b20602c30e33cd5de9288faa54d21ce9435c651bf984f8c3dd687af4",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "31baa6b8d0be286459458c12e5dc5e140750edc7f59d6ed989cf11c4bd7d0d61",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "181fd32c61c4930014f6ce94a4dc46726dd5ed2e714607c90b08cbae2bc12bd3",
-    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "0f552c198124b58df4588f300a981d6bba949de3884712e8243ef96a22cb3f40",
-    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "fb5526e556e4d3ab0e299c33fc59ca705d7a59c85090e1fbe02d62145e7fd735",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "d167240bff9a0b33c495a86e5017d3b37a18699ddd2756abe7c14b26d6b5ea36",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "529e62885315d8e78e9f0317b6e429504df9859048dc0c301890e553ed2e17b1",
-    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "43191cacacd68d82c3c9a054d0623976046712db333b29d60c4b9acba1972771",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "5528f57a2b5790a7e9c7b0b7b1781513bc78d27a6cb39e5f845fa2ff9949c326",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "e0a06bd4ed762c565e9bb02dc480881acdb7b2a3c00805eaa46b714fca5949e9",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "6d93f16a64ad940484ccaf20c5f04e55157af5fcdef11f098b87b17d35464a98",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "01eb89e13092acb09f1873ee9ac3ab0c14ea7fd62c1dd6816204dcd73d0ddf2f",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "1329dd0ce0c2bdeb7948acb97e25da47e5fb0a7045efdb710e331b5bd3fe5bc7",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "152fbf722da9dcfc13c7550e040e3371798f27c58d072a1992bfc7899c48c26f",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "da95d762a39fab53e609256fff7c30263857812c118ba63312b0222a9cbba632",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "b736ad50472a1373e89a9915d927416c2a77fdded1f22d29c86c166bb7cd1a26",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "50ba5603df20fd138269203ec44913447613d5b5d01a453b89e89d6e3b970fb2",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "4d79efd26e5d84734a4264e13ab0988b664693236182a1ea40f5b718a5e36bee",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "9cf7513f06893c8783ba76ed0bd2a3df0bc8b4581c2b6ce1f7022ac75671448b",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "d5cfcd3e4fb022a3dd8b6574dc31e01997d4a67a32d31928a89b93eba4df05f7",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "e9506d766ca7c5e9e0b7e80bc8e00dc60fe9eab908e07f043fdf1fd355ddd104",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "3c46309d2aafe7a5715f82a9c3c07f0d1af6812f5e8d75099c18059088dec391",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "0edf71545e55b5594bd36fc22705fe3bea7e97296c57ecd34470502e62c93699",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "5be4e8f41a40b6580cab6ac9d7599487d4090a8fa6b8f064093b38fd3d430a49",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "eccb4120c9f6965b8475206b9f97415d5e496366794fc5fd505645947144154e",
-    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "a2dbd76d999f980447c90db5e11a49fd9a4b7911fe7e621187bedcdb6a462d10",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "2648821c8a640289e470dca27b281599ccd61c3c83fa3d2affc4401f27f9b1ed",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "5ded25683f7815bb3e4b84801bd908013a4829dd6ef89412d60dd634d89b5e33",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "b0f63920d4e0ee716cc4cfb353e15dc457d8a3330970c7879d59b1688c12d380",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "932df61dc8cbac8604ab5ed9a3568515f77316e632c7f30ed03970f0b252ed6f",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "df01d933f7173190aff9459fcb59c8e82a7cb0111bfc67b405823d67f341d710",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "18f848c731fc67ffa8e76afc663afadf1bc8901429bf2ead460316e59dfa4b2d",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "0b586d7cb8907e6d09dd965148c930b86d12ba6acadb56dd0cdfe63e94fcef74",
-    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "5d54a8911f47cfa6b7f81d670710f58584648acac5250624e9d8569315085f46",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "7b91319594445e3d41c3ff14af0c546cc324c5a086c3a12d4b4020f0090c4984",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "102c83ea0acce3bf8996437c3adc6534ed695fccdbcda71033718b3fc4bfdf7b",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "a52ff3717edcdfcb4ab3f5b6aa9907a69eaff80b5ecfee3015e15d9041c44469",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "c56b3fc750f8bb2c2a613d0a938512e2c916586436ac4d601f02dabdd3c75837",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "b58ee003771fea0cebf647d99ec355a00d7ed27043b2137a274e1b77aa6763c0",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "222c28b2a2172de96e7dfc824a1389e1bdf6bd62331cebfeb3366b200490df8d",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "6a63b76725ef0ac4df4608a106a14dc3e096b20970bf36d20c3a6d7e88d6fcec",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "665b57642d95be1f4cdfd1c8cda2a11b8fe6467350a900e2466571bd68d36718",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "c3a037ca1b8e9af211ce4e754eb6f05176b0dc1278cc094e913e70788f7b7e73",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "884601db57a9d7f4f836459b6702349fc89c0038929876fb17cb9708010c53f9",
-    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "90a3fcaabb83fa40d92c0f3f70f0ee662f056d9f0321e1d71e2a8358448cbbd1",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "92fa510ef91e0ebfd9f9dffeff898bab6e38d4f294e2f143ef35c5b6ef23aa23",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "0454bba7a317a873871da021271732e7f23839866b08b148acfd23165996162c",
-    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "9af6b84def65445aaf4dc77cc49e639a04e2d0753723a485c63ff250d0c40a11",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "2c219555a1975535acc5dbda6838d612a474e0469a9cf896e7921c8aa4a59d7a",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "67afe9aee6467d903310c27591963965b945debc912bb7f12d1aca3a8f791e15",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "3e7ddfda5c32a59a407c425297999b04bde762b9c1fe5afe55ace3cf9b2bd099",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "798cb62e4a56bee492929a2ec9f4362de880f054fa0b7e8d62ef8cba6d8547c2",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "0e55543ac4deab6568f8a6fd20243e45bf4bfd14e6fc460a1510074f9b2ee79a",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "58ac5a2ab2143fb68cfa8c2240521651a1e68783a230a8d13a4a2e5aa3b268c9",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "b410912881e1003fae92a086f6746c6a7768264b8b9015bf9192fb3e891bf01f",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "c98eae475d55072d7e4a27d37dd86c38c8cd8992c226d193be33f191e0c8a076",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "5eadc1639e6162e1a323f1e8fbe1ecd67f75fbc16d334aee9100f4ad1e74d874",
-    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "6f69cc7f77b6fc3d7639b721e6c9408535e25ccb460267dbfc8f8cf4e9af7141",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "8c997f5c43fe25ddf114f651a81c2d7353f11546756cd340f17bd8157789fd71",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "b075e9fcc932c01a9c837f3c8cacb979788517a27931b2f16c5ea952063e9013",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "b27ee8a8112c34fcc143bc4044693966a802eed75235bf0f9a950b12fc1d1a3f",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "3b2935d39a03bc85f417dff3fef606eea279867fe5e345f716a34f9d89355c50",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "4df1a095bf1e14cf80eeb72bbeffc5e090b7f2f4b56b10e78c08ae8ad284b2e2",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "24f4081e07651d49b9e06ee9f8f1715a653b1f04afb432782e6668b03316d246",
-    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "6c8cb718138aff8a2993ca07dc1732d993cc901a1e1e9f377b90b87fd1585a80",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "d02566dc6168c151b25960443435e8fe3a48bc902028776b772cddeb7a572efb",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "551eb202934495f9dba982f49a6cb95cb40cd7227fd637901cda149aa0c8ce4e",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "20606bc3a602bc643d549ea360a233e4560258e3692f97b0b3072be4888849ef",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "d69c93ea2679895a2f22a8d460c271220b5c749e0aaf03b7c2eb9d8dedc69601",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "fb71ac9004b1545c32bfac751e661e673320369b1b1f48d83f8d8acb4430fc25",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "3de53177afcff474616fb35bdcec6ce30876437cfc33c68291be028535b97fcc",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "78bdd8321fd393f11b8287aafd0b43220f996c6b9d4eda05fc8c9fc9cef02f21",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "b7fae0137654605642fbb2789367980f0100d097f04d2e0aed11009bca4da2f4",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "ea02002422f28476be63f54e107448512d3d5504fcc81158a284dd00ff8e85d5",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "b3d1d3f89dd620b50ba2f80789c96afc45c961d20f16e565382fbdc30097ee42",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "8e3d01c1f440f8aed80efd2845e9fcabc388cad2c22f3d9b776ae4d9337d6cd3",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "ee96fc7e30eba59454a295d8e6455fb138f8a412752fbdea81013ca6e714cd63",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "f0aba097de248e3319629836755b7192e62e5850324108db94b59b69d7e2c96e",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "855cb80d7cc9521e632c9df185d8df4ad4c01a8bbd4d03e40b0f671b945a05e8",
-    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "37c8d7ea0c4671d08c0e1fdea58682208b0fb2d3a1097d8c6d9f201f70200ad8",
-    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "cbca9e93ad61af8b1b53ff7146e71242ce6fdd1ba7aa90e1a7bbb34eb2a38c90",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "9bbfb809060cfd99800687cdb7515d161db2d3d92ea4952793a023ee555b99b6",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "186e2bec921c25990d243fc688ca19c5dee672dad75d4d5ff6e6bc1b934dc0fa",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "8349468bea061b8693ac14679a1a8f269dc85cf55337fc605935d92655a34e8e",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "f320ac5adb8cc90271c713d9586bb3802923359032c89dda33ecf40b6b9a7919",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "f594cd67fae5e41e3806f5657f3b3d3583e079d271b3197887e3f642048ebf91",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "dcd0a70ef5a94943cd4e0e9e403a47e988551f1bca0d8dc9e58ae9d7d051f15f",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "0808e4ac9107788ab05be4cbf2774d456e7bb5e5bd0371d59f04600d05228b26",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "3ff783acb4c12ccb68543446b147cc4ff84a60fb972602392f56a675e53f761c",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "3fe71cc39abb996ebc9be50d5920860cf817a4d013f0af162c20f61d16778f5b",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "ba07b17983b742ca321c97e3a7843747e4c4e3f9b1023197aee0d0f2945d90af",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "03c8e9b46d12a788aeca300658aa24235a49f20c94e15ff679aa44887840e388",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "58ea31a7d5657344fcf3575404879b331204a8e154c76acb720d95d8c0a5cbce",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "47c9a8f8d263eeb0b3d6fef9cb91d69b9e6916906009bef4062840433c389633",
-    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "deefe73abce6333c26290c4dabc92d106e48fc11591d53b4ce6aa5bf0064eb10",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "022fb39e97d6d4d240bf61bc6e19acae5218bfaedf99ebdc2de681a3570f35fe",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "95ce7402d1a5c4c0bdd3c1b1a5b6d7b4676c489510d5a7f447f704381861c87f",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "9281449c70a393470cb35cb3b9220b4d5c62ac15da5969e2aca07fc7c80ef6cc",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "7bde40b3ddc284afa7ad0604a14a2dc9de684ac5a8cfdf02435e6b5e7951e639",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "d6229d7ef525d57a555988af7af0dd6cafd4bb28b20a4001399f1beac6cb2f0a",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "e09b189455fb9a20f3ea3b4773fc8a81c58fb9e93cec85188579233f2f77efff",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "d92c4070ebf053f794d9acf8e3ba5e5ab3066e638ce8e0a9d298967e374b4a3c",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "b6f0d633cfab2d39fff481a65aa91bfa002d31da5f74845f3c8403bd378adbd9",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "62892403b6937cbd0d0ae6a3db82e59dcdf155369bbc662507af1f047dde63ec",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "7310bd653baa0009bc1b253e4355851a75c5c8c89cf55eeaa1d1d984d0d8ed00",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "b039567825a95e631ad4af6b37b58c076da02aec2259fa8f19a0ddcad782b751",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "a0554d309b7524f556ae7a9ecae82b08e42b1ba2421fede0524897b5f66256ce",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "d8d161280586be3fd56fcc6a4a3f9569267ec449582eda0295c439ea9da7d72b",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "625f0acc13328181cb73dfcf8c2042a72645a39af7fd2f5dccb6da825a761256",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "968e401e99eac0140a042292edc7eddce409c853d25c9d3a68d1073c60cb6d61",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "3441949cfcdd8d516282e5c47d4d28bc5b887bf506582f6e4c091671563a99f8",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "8a611b215645c7a8fa53f2b949fe7b95e631a3758a238b7334ce86b65b71b4e4",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "0db995e2ccd88521d5dfa431dc0139f07f706bbd1576da75f8bae287e2e3c11c",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "54e7385f73cb9fc1847f6603adae621ef510b400bf5a31146db03d442ca65a58",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "f2b127da7ed4155772acd8aa2cedd739dcc201f6ffdf9cdff68100b08638855f",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "1922aa626a394d3fd25d8391faafc4f8499b4262af7bd34987521e4fd3be8dde",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "172d78ef769777b5ca803681fa6107cce40fc546aa93695a083ea10439f5a430",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "bc635c9f880fbfa90bdada3bdc87f26753cd78bff616b61e83fb6965527c0b0a",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "9fb8af9cf31a58a25137e26cd8138f1fa5ed8ac5dd62b86a73a0c307a9aab790",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "74dcaecf5bf65986b997013d4fe52a6a609f936f23f06b8baddccf8af7db830c",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "9fcccc822680acacdb97a22012de98096a6c7fbd9dd7abf6b043b55ae08ba832",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "c211d8c4737175f4e04f652971ea9ff3e059aae44d3a017c81826b4592895269",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "62e31d68ea494dc09b9cb6e1808268d6e8e829beec394fe513c97fd76eb3f206",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "75fc89566655c5cd2245b81d22bb711724f5bd74e20e0ff566c5e6449b727b02",
-    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "88c3a5d00fc41388598090392465602836a36cb41d8a85c857a27a35e4ed0ae8",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "d2a2c5bcccfccf882d159cd13e7cd3733133d330098829f58d056c0862b85670",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "e0be7c36572ce50cdf5dc69f873e547bba33ae85f4473e5f59c6d276876c1bf1",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "0d57d815537ee4f0c9cff4102f74dcabafb83058a56dd32eb9ae746099a25add",
-    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "35c021ad568ab8421224121925098e272a915841edde464e1d7e2614f3943efc",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "fa1170077b1dd17570b643a40c985bf8903f154467ead529c08e0149f1ffba1b",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "61884fcee352b057ea8e06ae5746ac7a7d3de1093d9b2b99f82b044f4a0566dd",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "91c48e9d985d18dc0224c9dbb6b4122ebee9c78b5f313e3a7f04ba9b22062553",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "e9d0d75ab67e93a0cbb59248a7f80b99dfb5d14f0071c4f0efcb2e2997c661cc",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "18fef90df491b7de4d18d052afca88acf2bdeb7b5ef335333cebb8e2b8a4bd5c",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "248a0dd9853bc93b2dbafaa769441ba6b82bfe3542e7db03b73daad13f6fc93f",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "e3368db3a268776865168c9e9e7d53cfc7342f355953aeff915277fbfdaee004",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "c6037ed550afa5f12d9530b724465286261f9b25b1420aece9d01462efa747ab",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "3ec13f6d63b0964e0b1ff6fe01ea25a902f449f16e3f32ca988a7d8029e79350",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "94c0add5435428444f1120a2d0f9eed84ce58a3f2e5ffe5dda04d62413a1f5a0",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "ee0a0ffdbf60f132d33dcc6fdc61629d3ca3bab95fd171d185cdd63c742cd459",
-    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "584ac3499a1f124ff60530c45711e204bb1e8c4f54e1739c4c655a9c39242b20",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "9d3a35b82628c1bb1b68ab9d617af468f0c5586c3a874bc1036999ba1889c379",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "89f1769d5164089d4f2f5b2fac7f1092296b1c132f2522d87e0456ac838e8b1f",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "72446a9e61b5f9255b559a99b4deca7b8ab6929f027eee955ffb2205236f1cdf",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "52ef42dfe2a280ed1ac4a10d5b72963f47fc1df83e185edd3954d1ce81a18d10",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "7ab40b2c6751cf76a3969f437201ab0f9756076fa17b80c69163ca85c686a4a9",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "eda1240a7f93e55fd3c7301166337ffcd6b2add1735539e63785ce3bfd69fd4b",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "2e0f715eae981db3aaf36b578a241baede8cf77a72b974bac18fb6817f6ca821",
-    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "1e1f78e1fa102573bf304f6c9a277fe0a9a14cb6cde10aae17efe23efa05eddc",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "40004570bb37df6e6286360c6d8a30a57e6aaaa72607cfc9bc212137292ec663",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "a1064804b1c9a5c87909c5628130536ea1e368eae80e84d8a091d1392ec22561",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "8f1c7ac0ae67761968e1b76584118fe83d60e1fb9cb10b6e71806d1c20c376a0",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "ae43576afaf12b0b8f72fba5553457c17fc11f66cea1bd574d272b4d36490b77",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "d86f2df244f987ea2eb78b92007ca392dea44f4917fa7604f9987d695da9d766",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "d94431068499c23d5f6d9f47ec050e565e9f2a2420ace5a43f3951ba96751584",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "7e188db681f21506c4941db84b967d99d79ec6bcbaa0a5b8c7306d6cbad4af24",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "d26cf644f299352fa5436f17b826f4afd321df146dc2fac8c0d7168d349bf344",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "1554bebfad611deba8a8f95fd248a519d9eb1fa9131fc24f54ae816d4e652005",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "e7b51fe130ba621362af7a08ca1addd660981a4a1094a0d41f93ca29c8d37146",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "5a3ea911ff5cf901f9087e7e43189d9ec5f552b3e96cd87140303001249e153a",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "c678beb4c9b03e15bd1e55dde0cfd2d920ca11460b31ff5fbc12ed43f2ea4684",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "c51b2ec0d9e13453346ae0beb1ca0f967687a556915e2c569593f0b46cdc9749",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "2b640f22aed03f16d2e522f4ff161ba8aee53263d3b8216e8f8114a3163a2ae4",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "58f9df7ee937ddef151db64d9c0cac5477d4a8abaadb7d4e3cb95903179e3105",
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "26bff8924c171aecadb58312ddfaedfd936d20e4a3c2ea60e8ffdfeeeb0a5f48",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "bb52c46ab1edcafe96a3c90c126deaf945b5c3b56925aaedfa6dbd05b552d52d",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "9a382defeae84782ff96a1376cb1ba60509d31328cb62d3c9472fba63ec3a5de",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "7eca06f0325583338ddc9fb7e94f993da733c0f722b8607c35b5980a6717a991",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "452560a61f36186566785bf9a9f7c005fdca611c7fd0d1a3d7838df67a39e23b",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "2b92c7a86e95509e617c655d01e46702c7f947824f813dbd50a0dacaa5ad3472"
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "980e3096254f0065cca77fa9f6ca461000330f8421b359fd32dc7ae920a46e33",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "acf5e721274c66feb8ae6edc13b9597627e2dcbba8d7ea3216609f719d679ea6",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "fd59e732ef7a2428e89033e0c1b7541c2236c8724ee77f0406b07d96839f667a",
+    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "0ee039d78be47b8f102a53f817b53dbc419008e0282b872379c0328c55d060b2",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "f43969f3a54c9b51ff8d859f6eed12e9cce9a2b95fe5db2729aa917498a95064",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "6a3635e8917d00f2bf5c6f6fa64791c64673b7cbfd2ee6a99d4dfbe90a987ca0",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "12458afd22056f5886b37dd0d8e8d7848306e19bc89acbb8688f6dfefa6622ab",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "377be0b055c06ec9efff22478a85944c8e45a60e4515097562d7cbbd34780211",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "335cc01c0a30da6ac402ceb7af902596b38458e6a3a78262673aed2a91ff5bdb",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "753a9089ad6b53f11d1944707de5b5b572205807432ddf5b08bf7ada0d20ee1d",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "e0faf72de463bf268f7efff7a8b543549ed7c7b933d43846899e5d0308d63822",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "6b135ef27f93bc27b6e58273d89da6dda61466477e4a9480f4974461c446d0bd",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "473921e9fd8321cc8da2b1ec8b2d1353297f3c650801523b9b7d4773a739f3e3",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "50059bc49046be4da585ae6eca5ab08c344e751461ce8291d46a354012e84eba",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "460c80b52dfaf5bb658c211f9723cc196f19a8b72ba825ef13afde061832e772",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "35309f68dc55b036e3bd777dba1a204f04b57da1ad92e5563d57b96f1f0efb97",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "8e9ba956560ea7b9819e95950ca3882342d9b228677b18ef0c3690f61e79b4c0",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "831f1f6a86d880f64ca6b425a3cbcc43b0f8c803234f0dce3b31ed1386b332a6",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "257509761c02ea750596072c67448493169de50de53b1a0268dc5744c07e9c4e",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "c4f25175a5ed69fcea2217dcf3ec806f848a1e65ddd64fd306eefc4cade3a133",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "6de2b2704355c791a74c6018141f21e1f3ea5b0ccc51fe67ec901dfa9034e804",
+    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "1c5d63d3575f2c8bf329adbdec15fe384a5945e838b110b48d6ccbc1935d5e15",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "50e28e400a57f2e02a8cbbaa235a61e3a4a099fc83ec2b87f49f20a1ba4ba7a3",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "758f0dc55e6a065d18682309f9ae9706b98a13a87ad7cf7a9c369a12bc8db53c",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "c0b6746cd2ad9e031571a87c4dbd1a9e369750f743f72be4158930bac99a3ad3",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "84e3ccf4b2a8ab2406cee4fd018bba94b1236e2d141612e6ec540ed04d71fbb6",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "99a4032f83da480a8aa9c16527a5bf6090d8ffa56fdb0cb12b944afadede3e38",
+    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "b68b4aff620bd24eaf9881eeec7aac554a618fbadb4d9ae503f4ddf523b7a377",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "a58ffa5b4eb0af1e39c82a6e6779799070b7dedd6dce38676b05a1dca1ceb166",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "359fe678398009a3a7d35c389877e14d3484bc0189e79f90f4363ab17d71d63b",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "c8eb88d6f049ab1b08528f85e796b7a5f481928b85a42a173fd8df062bca0330",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "90715f5299c656fe3762abb8b4a3df1ef2af83d050e0086697996ff1fbb2b34b",
+    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "291064e730ebc585c12b0050136269e0a6a2e2bc98275905949dd06c8c75956f",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "ee70e16954a617886555ac7c2ff27c6c8c2a88ff0d27e6e24421f4350242d0ae",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "fea42c92e55dfaa316cae08c4fca856a415f523161ce1a4b41970c39a468d839",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "36322ed671d06b8adbe9c2212ce194182885fb2b479c771c6a35f71a7125c4de",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "c001101fb7b37407ca89654f7f137b45194db670cb974afd2a3c645ce5042905",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "4a0ea54d9cc8cd75145a95fabde44f48f31ce521e54b26181fa1bfcba0ddb979",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "092db7b6bb8633b7cc2bdd5b086986d5e7d72cde243bca3b727d3d5ead4739b7",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "8d2a169f76b7a42bdc723f562bbefa54688bce22c2c7a441aad74bd32b5784cc",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "2d8ef6eeaa032ff433b015d984349e93918db34535e0ab10764901f0d9f31e8a",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "7c0b65c6a15035977a34e0275716528728ef5f5410faaaabb53044a989897c0d",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "13fc1efaf8dda9e84f840b162e7c04d659176936e530ed41e0848a665dffd04d",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "6c795e348c8be4ec929079e2455a3d1228588c16c73c952b5a015ac8d6a14ca9",
+    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "9ad345c5bdaf3e830da4282dbf379490710aca6ffb651e224d9d19a49a0f8c45",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "ffa9e9345a6bbbb1bd7fca615017b72976737b3976b1997268f69fcfeef5c9e4",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "f2f2390b1259b7cd781294283021ab6aadecea0298758b460493e174f43196bf",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "482993a7f28bcbf7c531502aa10c0fb472f4bfd9e5cd065301fa2d822cb5ba54",
+    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "72b9541b7827b804878e558eeef2f2e72ac227914c979d685d9abf7e7ed8c5e8",
+    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "c3da1521cfcd18bcde3492966a0235a0a37d503df0991100f9511babd6b128f0",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "0e035c531798f3c70e1b72242d1b4c9e809d4b5a232746ea7cc872ec0ea83471",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "f28b76fbc99d4e064959c7a9ccbeb6547f8be4a54325c193ba5d780b26fbb1c7",
+    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "4b34f2975da2eb847506163ceaef0b56e3442fa692770e392e9394f2840f71d6",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "221db3c944e97f106ba14dea0b032618bf488e780fb057b022c0c636b7752cfc",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "135f8feb837cbe3c0fb673eb903f4da69f4615a34a2988794150380e7cc7c8a7",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "7b59002385987afba280cbfad12e346e34981b75efd4155a3005bc25c725e47d",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "99440630d34af6d3eae69ea6fe65806558064d2ea62723f0925424177dae4a28",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "a35ce8904e68c56fa2f67525629e0364495ff91044722020565fa52aed09f521",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "afb81d341fea18768753d51b10399662b25febb0c66314cc873497e92800a1fc",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "9cd363c15dcc3da03cc3a259983b25abaec24baf74db74966a19f3ee7fee9fc4",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "1002f0f6b9cb28dc04523d35dc5afa0f2e9de176bc02ede7de9dca8a91114601",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "7cb4cdde3d0edff839256720f8423ac8c828ec2c1893c3fb9269faa179b6a988",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "493c0d2e01ef417846c5628edad4ccbdfb3966b0a89b990dca0eed1f9ed2f74a",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "9cde93f461c5c547713a51270c5182a7af0fe50004c892a6ddc072aa67aa966a",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "40051396f36c07364e198d7a0c4c83c7f32b02e21988a6674c8fe1bb4993e191",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "b8deb0d1ebaa5145cffdf5842b740f4008936695257e017ba3c5a9454cd8878a",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "4f38fd608864b1760746252551c6d1daed2a4aabc7e878cc2b53fe46439a3169",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "744cf9b330d0c7ec6b4a1e6d91a4399cd22953b7f997f67a4d43c3075d0f1b95",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "1c8ade29088259748457bfd2a12c859ab1cb6713f38f0f431d4853752e74eb95",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "b09275061fb7d943fc33e69e78c09e1e5f01bef7ecd2a75061de7d97dbe20ba7",
+    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "7212a9eb87e167dbc855b1a9c2a0c2b22bcde7d578aa1a92624415fb02527506",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "67ec8b749fb90bf2a580560424aec4ce5c2ad3e597f3adc8bb05d6db2951049a",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "5d4116a79913a44491405259b8b17d323fae5ba099060e1851c3780f65753096",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "d914fa1859af6123827937dbe78b3b2afd458b7827965aa47b0aa81f00cc1ff9",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "b6a4467e07928d8b909081e3571ccf87c608516212e4725cecc07a8bfbd4054f",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "7068407a25e77d691070b3beab2d85cde4f831968d56e223b23e6776bd128c65",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "b1b6ee59a4cb0362eaafb1956fb2cb39e861c77a61b81b690340444cb986d378",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "f238a7ee431800146385c74f45a0fd7a44b41c823069d495aa51dec72159e6c4",
+    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "7bc0e85295010658d35b10c66f3b2c76d04c215708decbbb601e18dc93810a28",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "96b37930c90c6f7bda57ece53c78136e2e2f53d2264d531a217f8f50251acea2",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "6cf3c47b1700dfc891568c71472bcd5d6479ecf462160b26969595f1d42fa78d",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "f25d19a0a0b2daac85eb5475a6f01f4f3c1c6bec21968f5574594f7f6bc8de35",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "f18153079d4feee98c781a14731fb90e1bb2ed14eeecefb83245ac53b76c352f",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "43b18e5a045e64d8243dbdd5ed66a81909a215ca226fc61c58e9117d1a0552de",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "bcba594a25053ce7f6b738ee28e0f56c2dc63c64514836760e517067b4ebf8f6",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "b6b70ba5d9f55bf80c3013c995ecce6f59da876220f2fc48a5187cee8015312c",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "3a0da33977edb2b62bdd47be73453aba23cd4f75f1e9af3d859b2153e7f129bd",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "772183a0cbf91455cb54be77133ead7de0509c5072b395a2ab2db3ea1f008799",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "ea0f54b4a9710112bf8012b5d4333d1a1a795f8bc08592396dbfd96a5e86c053",
+    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "c2c1c989994534ded7a054f0d8bbbb55156abeb161c71783287aa3ce21bc9b59",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "d1ae0b6e140a4063ed26e54cc1bdda7505cecabe01100eeab53b1d687aee4271",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "2c6e249c97e8ed1c12b65126405adac8c23e19dc0ccc2a7601893426bf7f500c",
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "999fec2fcb7fbe66f1e6f1847325ec119f0b9f23657a45ccb6f1bae6bed01977",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "5b93d02b45d7912f887d30b69b935bc530c8fb322a3f3370547db3767549b3a2",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "5dc50af9682d7f99bfc2e6b304f0d843339a05fc83d4827d515d246a549081da",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "ffe3338ac58db0970aaa77bc73aff55c6d66b26e036b9609020741d1436cac0e",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "bd5bfe44ce660715feadf51aa3b531d2acb8f3da9aec4c1817cf42550582e9f4",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "955bc03646550526449fcea07c3cda6a8bff56dd7652df4fae67667fa75447f1",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "131d2ddf6ac0dc1a53037d954d39e6efd85aabdc19768001fa7f70783e5579da",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "4e2019bee3879b21732bd542e105c3b60dc400efc21074f548ab30dc9a6f3f71",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "ab9c76d22b13fca2030afd38df20f0419d2e5d9199286916e3c78fc06ac0e5dc",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "c0e0aefdabe654ddc614cb0792ea1981cf906c56b2b9ffd5b8cea65025de7933",
+    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "674ede6b2d4ac5385c58a05c3e44b570f283f533d9ee3d23b99ee653b6b754a2",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "fdedd65c5d40af6f8a424518e395c675bb8d3b971ce0f434a668746be379b63f",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "fb67b5352c749a65e31cac9ab4c30fa25e86885f3df6ae32e52db68e75a985a7",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "a4eee875f38904c4a021e363034e36be95ac8e9310c841b2ee4d74e660f21af5",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "5171d5123bcb0b407d7c940ddd473ab9f920de55baf6366ed852f2ac3a5b5b4a",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "af8f60400c194b67247de8854e06b1dc790df3c73d91a2156732c105434b36a7",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "c8b06a24dd54fd5382902fa3a4387c4d187035881c35f7203b396f34d9b19d04",
+    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "fe5da6c8ec5e3d4c3f77a0d268fa5316dd3d0e261b200573ac06fff1d3debaee",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "4e8af74fe9826cbda25f15667a9d7dda599132f513631547e2594a078391fdd1",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "02280a25fe45a9ba9be17faad890f45c0ac0dbfcd4e9d0e5a5fef78fcac36297",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "53c38bc997e184f0778acc798e7ce3b5ec8df037b9a7eaf065d6494c1464204b",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "a6290494d8bb12096968b17c39813767e7dc096a6cade3a3276f9072dd3d5a72",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "897c01d50da804d90f82690cfdff4325587db22dff5ba3c2a573d16e2232b18c",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "e08364c6b88face765f7b5695ae6a0e703d475dc8379e9b6bf0e0e68af4d869b",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "21882f9877218167acc7ab759b827195f2b0ec0e87773e8c8a71bfcbb69afdd5",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "83dd5419409436fd00a0a3ba9c2f26aebdec2d883a061af3cae2e7edb161df25",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "0eead83688ed970593dc29b67247c1f85f2ae61e8faaf73c2ae6bcec325a5cb0",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "b3589f92150d710a678cc32d1382231551414a9c8905089215101da7e6003a40",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "c959804c4181588120e76552adec82f8778690c5f3132d4f1a41f01e5a05e75b",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "a67a5f4b13014226a519f2034512f6b1fd21d11c472e78395acc1cd4486ed93f",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "204d378fd6b83041b701af40bcbf41ec61d78d24324f1b764799e16aa5dfe63b",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "d5bffa79d16d54cc27b04224e08730cf06c2ffadc0366c82cc0b884e42d3575d",
+    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "20705e82c4a755a2948921924a0775623572294f72a9c30fd3736fe7d4a6b366",
+    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "76b53e2a56abee9120e17a98431a00cf621c05176ca01a217c965e31473dbfd0",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "cf2a40d26894064f4126f87e89f6dec7779e209447bef26eb37fd229357f1e84",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "fd2afa4d55b5719c444a3735d94ddbce1341793c2f5fe2c07a15c1372e6295e1",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "43f1edc457e3c43be894de633914202c87fe07b14943476b05d65fb4d811b546",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "f608812a1bdd8273e374a5bb3d308335159e2ec3e1575e9ce05cff04b999019c",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "b2791b0f615e924c26f7d583b29658d7495bcaed2a18c96f0eb44461a3510914",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "ec7ac47b08d7984669b8bffd437e05a2fefcf4bfd9bfb53f9c991d08ea43948e",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "b931cbf24dea510f27bca4f32d74da1fb92dc5402758c24b89af86c52470d151",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "4f85acfe57fd84adeae69341bdcd9a402215d535bd687a5052400640971c5f7b",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "e852acefb1b81ad71096078ebb9c4348d80680825145494fc4adc01b71219769",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "501e894f580b0b5eaf59cd614c7b14048fe7970d7ea90bd44b1d925d6f42e034",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "041c83258d6a1023acf7e6db5cee42fcec9c5b294dd23b6f822f76f0df82c2ef",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "ebee07ca027f0a265f27b7f7ed8e5bb73327de4277b9a58060739d88e7a0f99f",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "5ba1ba3970ea5104267f4286a85e49944bfc06d8dff6b858f999f6b0f31b666c",
+    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "0c4c59a9ef0cb1cbe6ef106e79b1e3e23aca6a8d8d53f44936d1f479eed1f3ac",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "935877cddcef46ff3f27c090d3cc6498da3531c9ed90a2a52849afeb6bf0c39b",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "05b08148fcb1ab0f5ead3968852c4c1e069bbe1293a5539c9c170bec43255c5a",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "a29dcb2a36b6fad3b073bd13e0a38cf7b84ba54efa5e0dfea0fe67ea311a991b",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "22391da35a98157f371aaf5e521b6a946ad5b9e92695adc350a2f9542613c072",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "4990b580e22db816e90b0137e07724e58063b5aa7be29d84f67ecf52b2fffb83",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "2157d01bd542de8ad8ab0829414234eb725b7dd91b62a53638d82884634bee98",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "fec442ca9629604429733d2cd7c64e4e4baaed656b4f1b6d1456e3fa23510a4c",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "6e983a854c540430bf3f51d3cbfaa111df8a59278a767ddd04fe7c1ae2418293",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "60d4f66f246bbcb9f71b3742ca3f18ed8b77174c57d9320e18d2aed2090aca4b",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "c5b88d8867f7b738c3a51a878321efd27be29ed2d8691a2cf286e75f4247e32a",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "d49313fb7b752d687bbad7ce8356027a685e2e84b9484a0b5ed9997570804003",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "b412d938baf7a841d6e4c685b4902154388ab9b8668f4f779a14f7203cd6825c",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "6568afb124f633f58204e7703961d52733f55f498b9eeee38404036032a05c80",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "74236d40870a2644c4c8f98529e6cb8a8b2c535e1ee2aa1843c4bdbc606acbc4",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "ca0fb6ac89a0db00b8479d102b1310f5fde98ac5a136c66e8f7dce0754d9ad7c",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "0006c60df0c1e6db4e8cd6f0a668e645063389a4556334ee0ac7dd7174fd7385",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "432c1054cec595eca052ee43a8f34fb446aea7c2e73908b5cae6b6a39f773c8a",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "da48898eb1eae4e40bc7631e00440c6420cb9c10700d9cfa1b2f83c36fb415e6",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "2b5cedcde5924470d559c7de17538fb1f55042de4552fc64199115a5b8153672",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "30156a2bd1d34ea26c213df1bcf1170600a5345b93db63ef550dbcb1891f7d3b",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "946f34c0c67da8a95823661526c1a417beef8b9ffa2f995e7d65b655ff959db0",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "59b4ee38a4056911bd4607b8c1e4c02be3c7e95b208166db716d7358dcfca809",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "5b3287958bb6ecfd777a20539be16524d6ca7fcefb7239fa5931e714bc866224",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "8d83582f779e65bebae685bca63f801b5edddb1c5dc96fd1abc7a54403ced266",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "8142344cbe775c7958cdb0bdf7295e0559bacf4077b59537a2f4be7346ebbfa4",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "de699e9db4651e661e14cb2889d33cf9e755fa726fddc8badbed0b470682cd8d",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "3b31dd2041c009705dbaeb0f89488a8eed5c551d16328dd30832f85c35dab090",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "93a893599754cfe9fb533c8a9965c39bb858ecdda5327d985cbddfb27e83c477",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "815308c85054fade3c0bfa3ff42479130b822de5d8ff8d2851797c91b13bfb61",
+    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "e5666c6309f9d47b8f7869a07bf7104e64916be42f6773e439e196ac35e1a9e3",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "a6e4280d51418d66f86927f51d74b838eb493e6c3945e89abc25b90bc940572d",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "454e6632b9e815056e7370eba79b5da940aee83b342b06546ed8bce25ba731ac",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "6680da24cf0ccfa6306a3f9c787f1e13eb75dac933a59c7ec3856f0e1f026985",
+    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "12fb036c4e2eae79352e0d2afd5146f728cbec039b314b894b5ea5b721f95264",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "0e8e52ac381b10fe73c231625a750e5dafa637971586996f1b0dd9a48dad38b3",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "cd01cfe4d0b352235c18fe32c7675ac2fd145fda5188a096980792b633e8e09f",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "82ed141acf8508d78a0c8bdd7794da88f9375d885f6ec3f9e77448aa081b1ff1",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "912520aced7a4f8f5694c02d2898052c749343a2a5f97adc619dfb07f286a7a8",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "352380665efe3aa43b8a2baaf9d800c3446b81b64bb75d13922a17919a783576",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "227af5ed359903081c176a755594a8ed755e0be4c49e69b9a98f5fb553b7a2b1",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "4bceb2cc77efbcf3aea67f2cb1c062b5f0a3847de49e0b0decdabf19673b9377",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "203a8046b0756a74e24a3672bb42ff9ff20153c6492055320686b1142003437a",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "8ed6356e6cd129da43b38af97eec2dc22df69c2bdc1cd73636b64e17da22c4fb",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "2af627e6c2e6ea3ae10493f8fa5860ea637c5f5338412d31a7fefafa5bfa1fa6",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "330411725a56c6be8e67c764930ffe1b269f9eec84df2014ca31bf16c8f87fb1",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "ec0294309448e3cb0c6d54f0791a243885f566d991e7f6616c807d59d78243b7",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "0a44e65e4c5562d069068da01e2bb66758ec312aeb8b9902625ebc66464b9195",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "de1d18bade69ed9012b6d0dc9ed2e7a519889ff9ebce63ad1fcf2bf2342a59eb",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "4445866c713c9e8bb0b9ffbdbbb30c2e5527eb8fca1b4a162350850ce397fd00",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "1472bda6d8450e352c8bde640dc12b859720c598c33f960a98def5f33da02b02",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "8d31999d3ae5f6d62d4ad4b2d19b8417cf875cfdb5de443affc71e08c23ffc8c",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "7ffd1f9f9202e4650c4d9c937075d4e70942e7ffdf472744b9f877c6d7e20c45",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "2bf6c228a35db4c6f8d4a7917ccdeffca3143da4d55be44978c2fcfd55a813a9",
+    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "94afa225ac97050ebbab96c0e43a525a625d6a8e10ed679537e288b117408dba",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "5e419992943f956dec2ccfd84e148a44297399791ea8ec75a9797512d74c1d52",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "df87129141ac104d74be0eb55c15ccd4ede3c0e62be0a8bfd9aba063ae573f2b",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "9311c9a56b296534797a3ef6c1308515a8e0a8b2881833217a6609510a078f73",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "8b7f998428850e3047792a4ed19f2f504c51ed777af47d2ce129c09c369f7c1e",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "c286ee173c5f15ab1b6c5729afe50b167d8b395aa79a6f55ca7957d1eb0faa6c",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "8a854029c3cb3eb9cb9e50ff769dd2ed46383885d4f7a37274e9721c2fdd0a93",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "ecf392c14c3e302b09b296a93339d52a6c85ff136f6ea694a3a30c5e767c11b6",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "ad4c520082251fa4cb7212aad71c0256203eb729d2227868697ef88b042fe8a7",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "0d3e879d738035b073826d1310bdfd59495e24793a1250a68ad43f40e17c628a",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "d966a04a53354cd502bc9d81b22cf5b554cb11cb6b7cc86eea424580b920f833",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "421b4572ab116118dffbf80ea349944fb4707ce133bdd43da89609efb01b1ac3",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "09eef5e0152e5c5d460275d95437783765a7d0057427f6de83ce488529c08603",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "3cbe0d07b07c95657899f89f169181b122d2f64ddd1ee9eadaadc1bcbb35ab46",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "404e4b1e053c02ad241ff32bf3a8ef653db5c3c7a96b5e4b5b95fb33cb6f82b5",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "317440137fb3ab69ce28cd5f8846cea6c5f9346e5fcb6dad927253849d73f503",
+    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "50e68272e2ca4c74aeb0569b387d16d45afb0f771b06097f6309d6e8594434b5",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "8e97f58bad81e9f50fb7f1f61f2ca46a4e67a340e389d2c0f7221809d42866e6",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "1f720b25f363acc1968ec421bffc6a1b25c46cbbf6312613b8d9c906234e304a",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "ee1ddf97ea56ea631564406c0b3998dcd63909f90267b1a71075dad1f8cdd2fc",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "2fa55322116794394bd106433bd46f661a8714fa9fd04ab54c555801543c61b9",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "c8cd02d70c3c26aa56e7707ac9a83473a5f2ead54e0592fd53ff52cf8743ed9b"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Kaksi suurta öljytankkeria on vedessä, etualalla näkyy tankkerin putkistoilla varustettu kansi ja sen vieressä punarunkoinen tankkeri.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "AI-generoitu kuva: Vaalea puinen kokouspöytä, jonka ympärillä on useita tummanharmaita tuoleja, pöydällä on muistikirjoja ja kasvi.",
+      "attempts": 1,
+      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
       "classifier_output": {
-        "category": "Talous",
+        "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Nimeämätön öljytankkeri kiinnitettynä öljysataman laituriin. Aluksen pitkä kansi putkistoineen ja laiturin lastausvarret näkyvät sivulta, eikä kuvassa ole ihmisiä.",
+            "depictable_scene": "Todellinen valokuva Esa Kohtamäestä Sivistyksen suunta -palkinnon kanssa tai dokumentoidussa palkitsemistilanteessa. Kohtamäki ja mahdollinen palkintoveistos ovat kuvan pääaihe, eivät tapahtuman muut osallistujat.",
             "must_avoid": [
-              "People or body parts",
-              "Readable vessel names, text or logos",
-              "Identifiable real vessel or port reconstruction",
-              "Oil spills, fire or accident imagery"
+              "Invented likeness of Esa Kohtamäki",
+              "Unrelated award recipient or ceremony"
             ],
             "must_show": [
-              "Oil tanker at an oil terminal",
-              "Dockside loading arms"
+              "Esa Kohtamäki as the main subject"
             ],
             "rank": 1,
-            "safe_to_generate": true,
+            "safe_to_generate": false,
             "search_queries": [
-              "öljytankkeri öljysatamassa",
-              "crude oil tanker",
-              "oil tanker loading terminal"
+              "Esa Kohtamäki",
+              "Esa Kohtamäki palkinto",
+              "Esa Kohtamäki award sculpture",
+              "Esa Kohtamäki Sivistyksen suunta 2026"
             ],
-            "subject": "raakaöljyn merikuljetus"
+            "subject": "Esa Kohtamäen palkitseminen"
           },
           {
-            "depictable_scene": "Nimeämättömän öljyterminaalin suuret lieriömäiset terässäiliöt ja niiden juurella kulkeva putkisto päivänvalossa. Näkymä rajautuu säiliöalueeseen ilman ihmisiä.",
+            "depictable_scene": "Tyhjä, vaatimaton kokoushuone, jossa yhteistä pöytää ympäröivät tuolit. Pöydällä on suljettuja muistikirjoja. Kuva rajautuu kokouspöytään ja istumapaikkoihin eikä esitä mitään tunnistettavaa Porin tai Kuntaliiton toimitilaa.",
             "must_avoid": [
               "People or body parts",
               "Readable text or logos",
-              "Identifiable real terminal reconstruction",
-              "Smoke, fire or oil spills"
+              "Claimed depiction of an actual Pori or Kuntaliitto meeting room"
             ],
             "must_show": [
-              "Large cylindrical oil storage tanks",
-              "Industrial pipework"
+              "Shared meeting table",
+              "Chairs around the table"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "öljyterminaali varastosäiliöt",
-              "oil storage tanks",
-              "petroleum terminal tanks"
+              "tyhjä kokoushuone",
+              "kokouspöytä tuolit",
+              "empty meeting room",
+              "municipal meeting table"
             ],
-            "subject": "öljytuotteet varastosäiliöissä"
-          },
-          {
-            "depictable_scene": "Nimeämätön voimajohtokäytävä avoimessa pohjoismaisessa maastossa. Teräsristikkopylväät ja niiden väliset johtimet jatkuvat kaukaisuuteen, eikä kuvassa ole ihmisiä tai rakennuksia.",
-            "must_avoid": [
-              "People or body parts",
-              "Invented border markers, flags or directional trade arrows",
-              "Readable text or logos",
-              "Identifiable real transmission route reconstruction"
-            ],
-            "must_show": [
-              "High-voltage transmission pylons",
-              "Overhead power lines"
-            ],
-            "rank": 3,
-            "safe_to_generate": true,
-            "search_queries": [
-              "voimajohdot maaseutumaisema",
-              "electricity transmission pylons",
-              "high voltage power lines"
-            ],
-            "subject": "Sähkön siirto voimajohdoissa"
+            "subject": "sivistysjohtajien yhteistyön kokoustila"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Oleksiy Yeshtokyn,🌻🇺🇦🌻 on Pexels",
-      "depicted": "The image shows a wide view of three large ships on the water under an overcast sky. In the foreground, the deck of a ship is visible, covered with a complex network of reddish-brown pipes and white structures. Two large white cranes with booms extended upwards are prominent on this ship, with one on the left and one on the right, both angled towards the center. To the right of the foreground ship, a massive red-hulled ship is docked alongside, its side filling a significant portion of the frame",
-      "generated": false,
-      "hotlink": false,
-      "license": "Pexels License",
-      "license_evidence": {
-        "image_path": "/photos/39762819/pexels-photo-39762819.jpeg",
-        "license": "Pexels License",
-        "license_code": "Pexels",
-        "license_url": "https://www.pexels.com/license/",
-        "photo_id": "39762819",
-        "photo_url": "https://www.pexels.com/photo/large-oil-tanker-with-crane-on-open-sea-39762819/",
-        "photographer": "Oleksiy Yeshtokyn,🌻🇺🇦🌻",
-        "photographer_url": "https://www.pexels.com/@oleksiy-yeshtokyn-2147541276",
-        "response_sha256": "c33b97548b42f18011db2ddc4a70ca1c9acfecdd257d1a8f1e150af8ef810ef3",
-        "retrieved_at": "2026-10-02T20:30:34.239792+00:00",
-        "transport": "jina_reader",
-        "version": 1
-      },
-      "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe.jpg",
+      "credit": "AI-kuvitus",
+      "depicted": "A light-colored wooden meeting table with several dark grey chairs around it. On the table are three closed notebooks and a potted plant. Another potted plant sits on a wooden cabinet in the background. A window with white frames and grey curtains is visible on the left.",
+      "generated": true,
+      "license": "AI-generated image",
+      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "local_path": "media/1579f75e7484231b76133e363a5ce9f692e166b06ce4650c11a53be98a1aa0c6.jpg",
+      "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Kaksi suurta öljytankkeria on vedessä, etualalla näkyy tankkerin putkistoilla varustettu kansi ja sen vieressä punarunkoinen tankkeri.",
+        "alt_fi": "Vaalea puinen kokouspöytä, jonka ympärillä on useita tummanharmaita tuoleja, pöydällä on muistikirjoja ja kasvi.",
         "approved": true,
-        "article_text_sha256": "b7c03b306fceb32ebdabc6fd39378f3c4acd1b15850a008400b8aa52a4b3ac21",
-        "concept_sha256": "b0fd6ebec0f543f6f4636079661b32af8205601c5eb77d55d9e1343a2eefba2a",
-        "description": "Two large oil tankers are visible on the water under an overcast sky. In the foreground, the deck of a tanker with extensive red and white piping is shown. Next to it, a larger red-hulled tanker is docked, with two white loading arms extending from the foreground tanker towards its side. Another dark-hulled tanker is visible in the distance on the horizon.",
+        "article_text_sha256": "dd93c81aaae2c9747999e3a8497e89a129e4cd5d39300ce185e1e026eb55b362",
+        "concept_sha256": "f0824c1bb05640429971d99024d7653c3d67b48382be3b3f6ded64c70afb26a4",
+        "description": "A light-colored wooden meeting table with several dark grey chairs around it. On the table are three closed notebooks and a potted plant. Another potted plant sits on a wooden cabinet in the background. A window with white frames and grey curtains is visible on the left.",
         "fit_score": 10,
-        "image_sha256": "9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe",
+        "image_sha256": "1579f75e7484231b76133e363a5ce9f692e166b06ce4650c11a53be98a1aa0c6",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts oil tankers at what appears to be an oil terminal, with visible loading arms connecting to one of the tankers. This directly illustrates the article's subject of crude oil imports and exports, and specifically matches the selected concept of an oil tanker at an oil terminal with dockside loading arms.",
-        "reviewed_at": "2026-10-02T20:30:36.502404+00:00"
+        "reason": "The image clearly depicts an empty, modest meeting room with a shared table and chairs, aligning perfectly with the selected concept for illustrating cooperation and networking among education directors. It avoids people, readable text/logos, and specific identifiable locations, as required.",
+        "reviewed_at": "2026-10-02T23:17:01.100685+00:00",
+        "text_audit": {
+          "examples": [],
+          "readable_text_present": false
+        }
       },
       "pixels": {
-        "height": 627,
+        "height": 1024,
         "mode": "RGB",
-        "variance": 18107.3,
-        "width": 940
+        "variance": 12821.3,
+        "width": 1536
       },
+      "prompt_sha256": "7782848e0b545811cc2e259ffcdd4a2b3acf4f61d2daecc74f6959f1a9290aa5",
+      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Two large oil tankers are visible on the water under an overcast sky. In the foreground, the deck of a tanker with extensive red and white piping is shown. Next to it, a larger red-hulled tanker is docked, with two white loading arms extending from the foreground tanker towards its side. Another dark-hulled tanker is visible in the distance on the horizon.",
+        "evidence": "Tyhjä, vaatimaton kokoushuone, jossa yhteistä pöytää ympäröivät tuolit. Pöydällä on suljettuja muistikirjoja. Kuva rajautuu kokouspöytään ja istumapaikkoihin eikä esitä mitään tunnistettavaa Porin tai Kuntaliiton toimitilaa.",
         "matched": [
-          "arms",
-          "loading",
-          "oil",
-          "tanker"
+          "Shared meeting table",
+          "Chairs around the table"
         ],
-        "method": "vision",
-        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+        "method": "generation",
+        "reason": "generated from the accepted scene"
       },
+      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "b7c03b306fceb32ebdabc6fd39378f3c4acd1b15850a008400b8aa52a4b3ac21",
-        "decision_sha256": "7324a92bd2490bf27e138c51935375d086ecabeb6b2edd332e16abe52c841b33",
+        "article_text_sha256": "dd93c81aaae2c9747999e3a8497e89a129e4cd5d39300ce185e1e026eb55b362",
+        "decision_sha256": "3fb28c7f6140a874fb77377c2642a0eb96e2e1db6633e021271cd5ce0b81f1e7",
         "minimum_real_fit": 8,
         "searches": [
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 7,
-                "image_sha256": "8ae028ce0227a6271c8671f248ac44f3e138db081ac283ae9556aa1736155cf9",
+                "fit_score": 0,
+                "image_sha256": "f4848bb986c2fae582dc5d32e585906c723d377e69afce99b9da11fb8141fbd1",
                 "license": "Pexels License",
-                "reason": "The image clearly shows an oil tanker at sea, which relates to the article's discussion of crude oil imports and exports. However, the selected concept specifically requires the tanker to be 'at an oil terminal' and to show 'dockside loading arms'. The visible image shows the tanker at sea, not docked at a terminal, and there are no visible loading",
-                "source_url": "https://www.pexels.com/photo/oil-tanker-at-sea-during-sunset-36563588/"
+                "reason": "The image shows a metallic object with engraved text, which appears to be a list of scientific concepts. This does not depict Esa Kohtamäki or any award, nor does it relate to the article's subject of a municipal award for educational services. The visible content is entirely unrelated to the selected concept and the article. One or more required c",
+                "source_url": "https://www.pexels.com/photo/close-up-of-text-on-silver-surface-4092757/"
               },
               {
-                "approved": true,
-                "fit_score": 10,
-                "image_sha256": "9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe",
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "0c336d7ffff3038e9bc685389905b4fa3bad271af1b839ea96386c0f77afe62f",
                 "license": "Pexels License",
-                "reason": "The image clearly depicts oil tankers at what appears to be an oil terminal, with visible loading arms connecting to one of the tankers. This directly illustrates the article's subject of crude oil imports and exports, and specifically matches the selected concept of an oil tanker at an oil terminal with dockside loading arms.",
-                "source_url": "https://www.pexels.com/photo/large-oil-tanker-with-crane-on-open-sea-39762819/"
+                "reason": "The article is about Esa Kohtamäki receiving the 'Sivistyksen suunta' award. The selected concept specifically requires a photograph of Esa Kohtamäki as the main subject, ideally with the award. The image shows only a sculpture, which may or may not be the award, but it does not show Esa Kohtamäki. Therefore, it fails to meet the 'must_show' requir",
+                "source_url": "https://www.pexels.com/photo/golden-dragon-tail-15838158/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "ed6b10fca7f2f3a076ae71a514b330f4ab9273e5f4aa6e77a31f2976edf3bc0f",
+                "license": "Pexels License",
+                "reason": "The image shows an abstract metal sculpture and natural rock formations, which bears no visible relation to Esa Kohtamäki or an award ceremony. The selected concept specifically requires a photograph of Esa Kohtamäki with the award. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/architectural-photography-of-brown-wooden-art-3021125/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "a0a34d0c9a1f6a0200403162b226d53e863d62589fc99df6b06df46a6a2e60e0",
+                "license": "Pexels License",
+                "reason": "The article is about Esa Kohtamäki receiving the 'Sivistyksen suunta' award. The selected concept specifically requires a photograph of Esa Kohtamäki with the award or at the award ceremony. The provided image shows an abstract sculpture in a park-like setting and does not depict Esa Kohtamäki, an award, or any award ceremony. Therefore, it does no",
+                "source_url": "https://www.pexels.com/photo/stone-modern-statue-in-park-8809103/"
               }
             ],
             "concept_rank": 1,
-            "outcome": "accepted",
+            "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "öljytankkeri öljysatamassa",
-              "crude oil tanker",
-              "oil tanker loading terminal"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "a1fc168f8df72c928312cffb9d031c6b5cdc7789bbbd6c6453328e89bcae1e4b",
-                "license": "Pexels License",
-                "reason": "The image directly depicts large cylindrical oil storage tanks and industrial pipework, which are central to the selected concept of an oil terminal. The article discusses the import and export of energy products, particularly crude oil and other oil products, making an oil terminal a highly relevant visual subject.",
-                "source_url": "https://www.pexels.com/photo/silos-near-cargo-train-cars-24244233/"
-              }
-            ],
-            "concept_rank": 2,
-            "outcome": "accepted",
-            "provider": "pexels",
-            "queries": [
-              "öljyterminaali varastosäiliöt",
-              "oil storage tanks",
-              "petroleum terminal tanks"
+              "Esa Kohtamäki",
+              "Esa Kohtamäki palkinto",
+              "Esa Kohtamäki award sculpture"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 7,
-                "image_sha256": "b1dc61c47d0c5ce1dad6b167931287c890836ec6ef1416ef4f213fe0d7a3ca3b",
-                "license": "Pexels License",
-                "reason": "The image depicts high-voltage transmission pylons and overhead power lines, which are relevant to the article's discussion of electricity trade. However, the selected concept specifies an 'avoimessa pohjoismaisessa maastossa' (open Nordic terrain) and 'ei kuvassa ole ihmisiä tai rakennuksia' (no people or buildings in the image). This image clearl",
-                "source_url": "https://www.pexels.com/photo/vibrant-sunset-with-electric-power-lines-35158378/"
+                "fit_score": 0,
+                "image_sha256": "cb1e1fcb85c69171ce0030f1d16e037cb2d53549962cb00aef96211ac6e60c1d",
+                "license": "Unsplash License",
+                "reason": "The article is about Esa Kohtamäki receiving an award. The selected concept requires a photograph of Esa Kohtamäki with the award or at the award ceremony. The image shows an outdoor sculpture and buildings, which is completely unrelated to the article's subject or the selected concept. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/modern-sculpture-in-a-snowy-urban-park-eAa2zgPJo3A?utm_source=uutistenlukija&utm_medium=referral"
               },
               {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "1b09293726ce78f554e145087d2078d42eb800c85638bcdeab979c4ab76f441f",
-                "license": "CC0 1.0",
-                "reason": "The image directly depicts high-voltage transmission pylons and overhead power lines, which are central to the concept of 'Sähkön siirto voimajohdoissa' (Electricity transmission in power lines). The article discusses electricity import and export, making the visual representation of electricity transmission highly relevant. The image also adheres ",
-                "source_url": "https://www.pexels.com/photo/electricity-energy-high-voltage-power-lines-7000/"
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "42076dcc92fba38b059fa41633a96ac541ddf76813f9866904498f0815b5458b",
+                "license": "Unsplash License",
+                "reason": "The image does not depict Esa Kohtamäki or any award. It shows an abstract sculpture and buildings in a snowy urban setting, which is unrelated to the article's subject of an award recipient. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/modern-sculpture-in-a-snowy-urban-plaza-nl5htg4BLmA?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "c72d178470ae91a77aa37dce93389b7cb4f5f1ac64cec9efa9ae3cfb35135e5f",
+                "license": "Unsplash License",
+                "reason": "The article is about Esa Kohtamäki receiving the 'Sivistyksen suunta' award. The selected concept specifically requires a photograph of Esa Kohtamäki with the award or in the documented award ceremony. The provided image shows an abstract sculpture, which is not Esa Kohtamäki, nor does it show him with an award. Therefore, it does not meet the 'mus",
+                "source_url": "https://unsplash.com/photos/abstract-sculpture-with-sharp-angles-against-building-_eBTsV1PNkI?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
-            "concept_rank": 3,
-            "outcome": "accepted",
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Esa Kohtamäki",
+              "Esa Kohtamäki palkinto",
+              "Esa Kohtamäki award sculpture"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Esa Kohtamäki",
+              "Esa Kohtamäki palkinto",
+              "Esa Kohtamäki award sculpture"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Esa Kohtamäki",
+              "Esa Kohtamäki palkinto",
+              "Esa Kohtamäki award sculpture"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "voimajohdot maaseutumaisema",
-              "electricity transmission pylons",
-              "high voltage power lines"
+              "tyhjä kokoushuone",
+              "kokouspöytä tuolit",
+              "empty meeting room"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "a471287f98c4d7b9760ee9c5c4f0145090a5d0fa286d9ab5490b7eab58c5edfa",
+                "license": "Unsplash License",
+                "reason": "The article discusses an award for a director of education and the development of municipal education services, focusing on cooperation and networks. The selected concept describes an empty, modest meeting room with a shared table and chairs, without people or identifiable locations. The actual pixels show an outdoor picnic area with a table and be",
+                "source_url": "https://unsplash.com/photos/picnic-table-and-grill-in-an-outdoor-park-setting-ijXIrHZZHYA?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "4d55bdd85aaa13b406fdf57a4bbbe60223d823ffe2fe8d7a17473f0b9e5c60e4",
+                "license": "Unsplash License",
+                "reason": "The image shows an outdoor setting with tables and chairs, but it does not depict an indoor meeting room with a shared meeting table and chairs around it, as specified in the concept. The presence of disposable cups and an outdoor setting further deviates from the concept of a 'tyhjä, vaatimaton kokoushuone'. One or more required concept elements a",
+                "source_url": "https://unsplash.com/photos/two-cups-of-coffee-sit-on-a-tray-on-a-table-e_I8r8_8lp4?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "4793ae4bf7b66c334f8ec1b9c62a1281e4aa1842087687e4261d3862196ff012",
+                "license": "Unsplash License",
+                "reason": "The image depicts two duck figurines on a small table outdoors, which is completely unrelated to the article about an award for a director of education services and the concept of an empty meeting room for collaboration. The image does not show a shared meeting table or chairs around a table, which are the required elements for the selected concept",
+                "source_url": "https://unsplash.com/photos/two-white-birds-sitting-on-top-of-a-wooden-table-pLbNsluGSDs?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "a8fec185b24946a6120f970bc664674cfb5866c6e37a5c7d443a9e2396ba347a",
+                "license": "Unsplash License",
+                "reason": "The article discusses an award for a director of education and the development of municipal education services, emphasizing cooperation and networks. The selected concept is an empty, modest meeting room with a shared table and chairs, symbolizing cooperation. The image shows only a close-up of a wooden tabletop and its legs, which could be part of",
+                "source_url": "https://unsplash.com/photos/brown-table-FR9ChNxPSQc?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "tyhjä kokoushuone",
+              "kokouspöytä tuolit",
+              "empty meeting room"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "tyhjä kokoushuone",
+              "kokouspöytä tuolit",
+              "empty meeting room"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "tyhjä kokoushuone",
+              "kokouspöytä tuolit",
+              "empty meeting room"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 1,
+          "concept_rank": 2,
           "fit_score": 10,
-          "image_sha256": "9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe",
-          "kind": "real"
+          "image_sha256": "1579f75e7484231b76133e363a5ce9f692e166b06ce4650c11a53be98a1aa0c6",
+          "kind": "generated"
         },
         "version": "article-first-v1"
       },
-      "sha256": "9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe",
-      "source_url": "https://www.pexels.com/photo/large-oil-tanker-with-crane-on-open-sea-39762819/",
-      "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/39762819/pexels-photo-39762819.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "39762819",
-        "photo_url": "https://www.pexels.com/photo/large-oil-tanker-with-crane-on-open-sea-39762819/",
-        "photographer": "Oleksiy Yeshtokyn,🌻🇺🇦🌻",
-        "photographer_url": "https://www.pexels.com/@oleksiy-yeshtokyn-2147541276",
-        "provider": "pexels",
-        "query": "öljytankkeri öljysatamassa",
-        "retrieved_at": "2026-10-02T20:30:34Z"
-      },
-      "stock_provenance_sha256": "bc11ab8e3384acb7d17a96e9bef4d7eb58e261b0fe818ffbe4462999445f5b6d",
-      "url": "https://uutistenlukija.fi/media/9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe.jpg"
+      "sha256": "1579f75e7484231b76133e363a5ce9f692e166b06ce4650c11a53be98a1aa0c6",
+      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "subject": "sivistysjohtajien yhteistyön kokoustila",
+      "url": "https://uutistenlukija.fi/media/1579f75e7484231b76133e363a5ce9f692e166b06ce4650c11a53be98a1aa0c6.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "stat",
+      "provider": "kuntaliitto",
       "related_sources": 0,
-      "source_fields_sha256": "9b132a4c3c44387557b6b9a2844cb836bba762b058541ddfb8436920390e4dbd",
-      "source_sha256": "ee598d12a4426d5f59c173d0773a01e299563370e53fe2c8e17466b1e97fb18b"
+      "source_fields_sha256": "68f644c54837e358eacf788bdaa86161d83fc2b39cbb8d8209b6e998d408bebe",
+      "source_sha256": "393aeaa03b65f4bf8ffa52810cf3958010184cc10ca4c2af6740a05f9e1ace04"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-10-01T05:00:00+00:00",
-        "publisher": "Tilastokeskus",
+        "published_at": "2026-10-02T00:00:00+03:00",
+        "publisher": "Suomen Kuntaliitto",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Creative Commons Nimeä 4.0 Kansainvälinen (CC BY 4.0): kopiointi, muokkaus ja edelleenjako sallittu, myös kaupallisiin tarkoituksiin; koskee tekstejä, taulukoita ja tilastokuvioita; lähde merkittävä (Lähde: Tilastokeskus)",
+          "license": "CC BY 4.0",
           "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://stat.fi/fi/tietoa-meista/tutustu-tilastokeskukseen/lainsaadanto/kayttoehdot"
+          "url": "https://www.kuntaliitto.fi/kuntaliitto/kayttoehdot"
         },
-        "text": "Tilastokeskuksen ennakkotietojen mukaan vuoden 2026 toisella neljänneksellä energiatuotteiden tuontiarvo oli 3,6 miljardia euroa, 50 % enemmän kuin vuotta aiemmin. Energiatuotteiden vientiarvo oli 1,8 miljardia euroa eli 36 % suurempi kuin edellisvuoden vastaavana ajankohtana. Energiatuotteiden ulkomaankaupan arvon kasvu johtui pääosin raakaöljyn tuonnin ja viennin arvon lisääntymisestä.\nMuutos\nEnergian tuontia koskevia tietoja tarkennetaan myöhemmin.\nLue lisää muutoksesta\nSisältöä ladataan\nKeskeisiä poimintoja\nVuoden 2026 toisen neljänneksen tärkeimpiä energiatuotteiden tuontimaita arvon perusteella olivat Norja, Ruotsi ja Yhdysvallat. Tärkeimpiä vientimaita olivat Ruotsi, Alankomaat, Yhdysvallat.\nTärkeimpiä energian vientituotteita arvon perusteella olivat keskitisleet, moottoribensiini ja muut öljytuotteet.\nTärkeimpiä energian tuontituotteita arvon perusteella olivat raakaöljy, keskitisleet ja muut öljytuotteet.\nVuoden 2026 huhti-kesäkuussa raakaöljyn tuontimäärä nousi 75 % verrattuna vuotta aikaisempaan vastaavaan ajankohtaan.\nSähkön tuonti vuoden 2026 toisella neljänneksellä oli 2,6 TWh laskien 9 % verrattuna edellisen vuoden vastaavaan ajankohtaan. Sähkön vienti oli 1,8 TWh eli 142 % enemmän kuin edellisen vuoden vastaavana ajankohtana.",
-        "title": "Energian tuonnin ja viennin arvot kasvoivat vuoden 2026 toisella neljänneksellä verrattuna edellisen vuoden vastaavaan ajankohtaan",
-        "url": "https://stat.fi/fi/julkaisu/cmg4rd36rhntm07w7ushpwsnz"
+        "text": "Kuntaliitto ja Opsia ry ovat myöntäneet vuoden 2026 Sivistyksen suunta -palkinnon Porin kaupungin sivistystoimen toimialajohtaja Esa Kohtamäelle. Palkinto myönnetään vuosittain kunta-alan toimijalle, joka on vaikuttanut merkittävästi kuntien sivistyspalvelujen ja sivistystoimen kehittämiseen.\nKohtamäellä on pitkä ja monipuolinen ura kuntien sivistyspalveluissa. Koulutukseltaan hän on kasvatustieteen maisteri ja luokanopettaja. Uransa aikana hän on työskennellyt luokanopettajana, rehtorina ja sivistysjohtajana erilaisissa kunnissa. Vuodesta 2016 lähtien hän on toiminut Porin kaupungin sivistystoimen toimialajohtajana.\nTyöskentely niin pienissä kunnissa, kehyskunnissa kuin maakunnan keskuskaupungissa on tuonut Kohtamäelle laajan näkökulman kuntakentän erilaisiin olosuhteisiin sekä sivistyspalvelujen järjestämisen haasteisiin ja mahdollisuuksiin.\nPalkintoperusteluissa korostuvat Kohtamäen avoin ja aktiivinen ote sivistyspalvelujen kehittämiseen sekä hänen työnsä kuntien välisen yhteistyön ja verkostoitumisen edistämiseksi. Hänet tunnetaan kollegoiden keskuudessa käytännönläheisestä, rennosta ja ratkaisukeskeisestä työskentelytavastaan. Kohtamäki on myös osallistunut pitkään aktiivisesti Kuntaliiton verkostojen ja tapahtumien toimintaan.\n”Sivistysjohtamisessa tarvitaan nyt kykyä uudistaa palveluja, rakentaa yhteistyötä ja löytää ratkaisuja hyvin erilaisissa olosuhteissa. Esa Kohtamäellä on poikkeuksellisen laaja kokemus kuntakentästä ja vahva ote sivistyspalvelujen kehittämiseen. Hän on myös aktiivisesti rakentanut yhteistyötä yli kuntarajojen ja jakanut osaamistaan muiden sivistysjohtajien kanssa, kertoo Kuntaliiton koulutusasioiden johtaja Irmeli Myllymäki.\n”Tämä on tosi merkittävä kiitos. Arvostan tätä valtavasti, koska sivistystoimi on valtavan tehtävän edessä. Sivistystoimen johtajilla on valtava merkitys Suomen sivistyksen edistämisessä”, Esa Kohtamäki sanoo.\nSivistyksen suunta -palkinnolla Kuntaliitto ja Opsia haluavat nostaa esiin sivistystoimen johdossa tehtävää työtä ja antaa tunnustusta sivistyspalvelujen kehittämisestä. Palkinto jaettiin tänä vuonna 15. kerran. Viime vuonna palkinnon sai Limingan kunnan sivistysjohtaja Päivi Mäki.\nPalkinto on taiteilija Samuli Alosen suunnittelema pronssiveistos Kurkiauran kärkilintu. Teos symboloi sivistysjohdon vastuullista ja jatkuvasti muuttuvaa työtä laajan sivistyspalvelujen kokonaisuuden järjestämisessä ja sivistyspoliittisessa vaikuttamisessa.\nLämpimät onnittelut!",
+        "title": "Porin sivistystoimen toimialajohtaja Esa Kohtamäki sai vuoden 2026 Sivistyksen suunta -palkinnon",
+        "url": "https://www.kuntaliitto.fi/ajankohtaista/2026/porin-sivistystoimen-toimialajohtaja-esa-kohtamaki-sai-vuoden-2026-sivistyksen"
       }
     ],
-    "story_key": "url:https://stat.fi/fi/julkaisu/cmg4rd36rhntm07w7ushpwsnz",
+    "story_key": "url:https://www.kuntaliitto.fi/ajankohtaista/2026/porin-sivistystoimen-toimialajohtaja-esa-kohtamaki-sai-vuoden-2026-sivistyksen",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-10-01T20:20:21.362044+00:00",
-        "sha256": "b3747f78303af4d1a0be4c23bb2e9d735a0efcdd493bfb09ad3de106f32b3d7e",
-        "text": "Käyttöehdot\nMiten voit käyttää Tilastokeskuksen tietoja?\nPääperiaate: Voit käyttää Tilastokeskuksen tilastotietoja ja tekstejä, kunhan mainitset lähteeksi Tilastokeskuksen.\nTilastokeskuksen avoimen datan aineistoja ja verkkopalvelun julkisia sisältöjä koskee Creative Commons Nimeä 4.0 Kansainvälinen -käyttölupa. Luvan mukaisesti saat kopioida, muokata ja jakaa näitä aineistojamme edelleen joko alkuperäisessä tai muokatussa muodossa. Saat myös yhdistää aineistoja muihin aineistoihin ja käyttää aineistoja myös kaupallisiin tarkoituksiin. Tämä lupa koskee esimerkiksi tekstejä, taulukoita ja tilastokuvioita.\nKun käytät näitä aineistoja tai jaat niitä eteenpäin, merkitse lähteeksi vähintään Tilastokeskus (Lähde: Tilastokeskus).\nLisätietoa CC BY Nimeä 4.0 Kansainvälinen -käyttöluvasta (creativecommons.org)\nMitä lupa ei koske?\nLupa ei koske\nTilastokeskuksen sivuilla julkaistavia muiden organisaatioiden tuottamia tietoja. Ne ovat kunkin tiedontuottajan omien käyttöehtojen alaisia.\nvalokuvien ja kuvituskuvien käyttöä. Niiden tekijänoikeudet ovat joko kuvien tekijöillä tai Tilastokeskuksella. Tällaisen materiaalin käytöstä on aina sovittava erikseen.\ntoimeksiantoina ja maksullisina palveluina tuotettavia tietoja. Niiden käyttöehdot ovat sopimuskohtaisia.\nAineistojen oikeudet\nTilastokeskus on aineistojen tuottaja ja tekijänoikeuden haltija, ellei tuotteen, tiedon tai palvelun yhteydessä erikseen toisin ilmoiteta.\nMiten voit viitata aineistoon?\nLähdeviittauksen laajuus riippuu käyttöyhteydestä. Mainitse kuitenkin aina vähintään Tilastokeskus.\nKunkin tilaston sivulla on yksityiskohtainen kopioitava viittausohje kyseiseen tilastoon.\nKatso viittausohje-esimerkki väestörakennetilaston sivulta.\nEsimerkkejä viittaustavoista\nLähde: Tilastokeskus\nLähde: Tilastokeskus, väestörakenne\nSuomen virallinen tilasto (SVT): Kotimaan vesiliikenne [verkkojulkaisu]. Viiteajankohta: 2022, syyskuu. ISSN=2670-1952. Helsinki: Tilastokeskus [Viitattu: 21.5.2025]. Saantitapa: https://www.stat.fi/julkaisu/cktyfj0i028h80b50qy1up5dz\nSuomen virallinen tilasto (SVT): Väestörakenne [verkkojulkaisu]. ISSN = 1797-5379. Taulukko: 11rc -- Väestö iän (5-v.) ja sukupuolen mukaan, 1865-2024. Helsinki: Tilastokeskus [Viitattu 21.5.2025]. Saantitapa: https://pxdata.stat.fi/PxWeb/pxweb/fi/StatFin/StatFin__vaerak/statfin_vaerak_pxt_11rc.px/\nPostinumeroaluerajat, Tilastokeskus. Aineisto on ladattu Tilastokeskuksen rajapintapalvelusta 13.10.2024 lisenssillä CC BY 4.0.\nhttps://creativecommons.org/licenses/by/4.0/deed.fi",
-        "url": "https://stat.fi/fi/tietoa-meista/tutustu-tilastokeskukseen/lainsaadanto/kayttoehdot"
+        "retrieved_at": "2026-10-02T20:23:48.210124+00:00",
+        "sha256": "cbac2ecfea8f8275a4b9df7e2574ce3840193d6cdb3782b16243fa62e4dc7072",
+        "text": "Kuntaliitolla on tekijänoikeudet verkkopalveluidemme sisältöihin ja aineistoihin, ellei muuta mainita. Verkkosivujemme sisältöjen ja aineistojemme hyötykäyttö on kuitenkin mahdollista seuraavin edellytyksin, rajauksin ja tarkennuksin.\nKuntaliitto.fi –sivuston julkinen sisältö ja tietoaineistot on lisensoitu Creative Commons Nimeä 4.0 Kansainvälinen –lisenssillä, (myös: CC-BY 4.0) ellei jäljempänä, palvelun tai aineiston yhteydessä tai sivulla toisin mainita.\nCC-BY 4.0 –lisenssi oikeuttaa sinut jakamaan ja muokkaamaan tietoa. Kuntaliiton hallinnassa olevaa aineistoa hyödyntäessäsi sinun tulee kuitenkin mainita lähde asianmukaisesti, tarjota linkki po. lisenssiin sekä merkittävä toteuttamasi muutokset. Voit tehdä tämän millä tahansa kohtuullisella tavalla, mutta et voi antaa ymmärtää lisenssinantajan suosittelevan sinua tai tuotostasi.\nKuntaliitolla voi olla käytössä samanaikaisesti tai rinnakkain myös muita CC-lisenssejä, kuten CC-BY-ND 4.0 –lisenssi, joka ei salli aineiston tai sen osan muokkaamista ja edelleen jakelua. Lisäksi on syytä huomioida, että kuntaliitto.fi –sivustoilla on hyödynnetty muiden tiedon tuottajien aineistoja, joiden oikeuksien haltija on voinut määritellä alkuperäisaineistolleen käyttöehtoja.\nTässä määritellyt käyttöoikeudet eivät koske\nkonsernin muita verkkopalveluita kuin Kuntaliitto.fi:tä, Kommunforbundet.fi:tä sekä Localfinland.fi:tä, mikäli niiden yhteydessä ei erikseen muuta mainita\nkuvituskuviamme\nkolmansien osapuolten tuottamia aineistoja\nAvoimeen lähdekoodiin perustuvia ratkaisuja jaamme kuntakentän käyttöön Kuntaliiton GitHubissa, ko. palvelulle määritellyin käyttöehdoin.\nPainokelpoiset kuvat asiantuntijoistamme löytyvät kuvapankistamme Flickristä.",
+        "url": "https://www.kuntaliitto.fi/kuntaliitto/kayttoehdot"
       }
     ]
   },
   "draft": {
-    "category": "Talous",
+    "category": "Kotimaa",
     "image": {
-      "alt": "Arkistokuva: Kaksi suurta öljytankkeria on vedessä, etualalla näkyy tankkerin putkistoilla varustettu kansi ja sen vieressä punarunkoinen tankkeri.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "AI-generoitu kuva: Vaalea puinen kokouspöytä, jonka ympärillä on useita tummanharmaita tuoleja, pöydällä on muistikirjoja ja kasvi.",
+      "attempts": 1,
+      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
       "classifier_output": {
-        "category": "Talous",
+        "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Nimeämätön öljytankkeri kiinnitettynä öljysataman laituriin. Aluksen pitkä kansi putkistoineen ja laiturin lastausvarret näkyvät sivulta, eikä kuvassa ole ihmisiä.",
+            "depictable_scene": "Todellinen valokuva Esa Kohtamäestä Sivistyksen suunta -palkinnon kanssa tai dokumentoidussa palkitsemistilanteessa. Kohtamäki ja mahdollinen palkintoveistos ovat kuvan pääaihe, eivät tapahtuman muut osallistujat.",
             "must_avoid": [
-              "People or body parts",
-              "Readable vessel names, text or logos",
-              "Identifiable real vessel or port reconstruction",
-              "Oil spills, fire or accident imagery"
+              "Invented likeness of Esa Kohtamäki",
+              "Unrelated award recipient or ceremony"
             ],
             "must_show": [
-              "Oil tanker at an oil terminal",
-              "Dockside loading arms"
+              "Esa Kohtamäki as the main subject"
             ],
             "rank": 1,
-            "safe_to_generate": true,
+            "safe_to_generate": false,
             "search_queries": [
-              "öljytankkeri öljysatamassa",
-              "crude oil tanker",
-              "oil tanker loading terminal"
+              "Esa Kohtamäki",
+              "Esa Kohtamäki palkinto",
+              "Esa Kohtamäki award sculpture",
+              "Esa Kohtamäki Sivistyksen suunta 2026"
             ],
-            "subject": "raakaöljyn merikuljetus"
+            "subject": "Esa Kohtamäen palkitseminen"
           },
           {
-            "depictable_scene": "Nimeämättömän öljyterminaalin suuret lieriömäiset terässäiliöt ja niiden juurella kulkeva putkisto päivänvalossa. Näkymä rajautuu säiliöalueeseen ilman ihmisiä.",
+            "depictable_scene": "Tyhjä, vaatimaton kokoushuone, jossa yhteistä pöytää ympäröivät tuolit. Pöydällä on suljettuja muistikirjoja. Kuva rajautuu kokouspöytään ja istumapaikkoihin eikä esitä mitään tunnistettavaa Porin tai Kuntaliiton toimitilaa.",
             "must_avoid": [
               "People or body parts",
               "Readable text or logos",
-              "Identifiable real terminal reconstruction",
-              "Smoke, fire or oil spills"
+              "Claimed depiction of an actual Pori or Kuntaliitto meeting room"
             ],
             "must_show": [
-              "Large cylindrical oil storage tanks",
-              "Industrial pipework"
+              "Shared meeting table",
+              "Chairs around the table"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "öljyterminaali varastosäiliöt",
-              "oil storage tanks",
-              "petroleum terminal tanks"
+              "tyhjä kokoushuone",
+              "kokouspöytä tuolit",
+              "empty meeting room",
+              "municipal meeting table"
             ],
-            "subject": "öljytuotteet varastosäiliöissä"
-          },
-          {
-            "depictable_scene": "Nimeämätön voimajohtokäytävä avoimessa pohjoismaisessa maastossa. Teräsristikkopylväät ja niiden väliset johtimet jatkuvat kaukaisuuteen, eikä kuvassa ole ihmisiä tai rakennuksia.",
-            "must_avoid": [
-              "People or body parts",
-              "Invented border markers, flags or directional trade arrows",
-              "Readable text or logos",
-              "Identifiable real transmission route reconstruction"
-            ],
-            "must_show": [
-              "High-voltage transmission pylons",
-              "Overhead power lines"
-            ],
-            "rank": 3,
-            "safe_to_generate": true,
-            "search_queries": [
-              "voimajohdot maaseutumaisema",
-              "electricity transmission pylons",
-              "high voltage power lines"
-            ],
-            "subject": "Sähkön siirto voimajohdoissa"
+            "subject": "sivistysjohtajien yhteistyön kokoustila"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Oleksiy Yeshtokyn,🌻🇺🇦🌻 on Pexels",
-      "depicted": "The image shows a wide view of three large ships on the water under an overcast sky. In the foreground, the deck of a ship is visible, covered with a complex network of reddish-brown pipes and white structures. Two large white cranes with booms extended upwards are prominent on this ship, with one on the left and one on the right, both angled towards the center. To the right of the foreground ship, a massive red-hulled ship is docked alongside, its side filling a significant portion of the frame",
-      "generated": false,
-      "hotlink": false,
-      "license": "Pexels License",
-      "license_evidence": {
-        "image_path": "/photos/39762819/pexels-photo-39762819.jpeg",
-        "license": "Pexels License",
-        "license_code": "Pexels",
-        "license_url": "https://www.pexels.com/license/",
-        "photo_id": "39762819",
-        "photo_url": "https://www.pexels.com/photo/large-oil-tanker-with-crane-on-open-sea-39762819/",
-        "photographer": "Oleksiy Yeshtokyn,🌻🇺🇦🌻",
-        "photographer_url": "https://www.pexels.com/@oleksiy-yeshtokyn-2147541276",
-        "response_sha256": "c33b97548b42f18011db2ddc4a70ca1c9acfecdd257d1a8f1e150af8ef810ef3",
-        "retrieved_at": "2026-10-02T20:30:34.239792+00:00",
-        "transport": "jina_reader",
-        "version": 1
-      },
-      "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe.jpg",
+      "credit": "AI-kuvitus",
+      "depicted": "A light-colored wooden meeting table with several dark grey chairs around it. On the table are three closed notebooks and a potted plant. Another potted plant sits on a wooden cabinet in the background. A window with white frames and grey curtains is visible on the left.",
+      "generated": true,
+      "license": "AI-generated image",
+      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "local_path": "media/1579f75e7484231b76133e363a5ce9f692e166b06ce4650c11a53be98a1aa0c6.jpg",
+      "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Kaksi suurta öljytankkeria on vedessä, etualalla näkyy tankkerin putkistoilla varustettu kansi ja sen vieressä punarunkoinen tankkeri.",
+        "alt_fi": "Vaalea puinen kokouspöytä, jonka ympärillä on useita tummanharmaita tuoleja, pöydällä on muistikirjoja ja kasvi.",
         "approved": true,
-        "article_text_sha256": "b7c03b306fceb32ebdabc6fd39378f3c4acd1b15850a008400b8aa52a4b3ac21",
-        "concept_sha256": "b0fd6ebec0f543f6f4636079661b32af8205601c5eb77d55d9e1343a2eefba2a",
-        "description": "Two large oil tankers are visible on the water under an overcast sky. In the foreground, the deck of a tanker with extensive red and white piping is shown. Next to it, a larger red-hulled tanker is docked, with two white loading arms extending from the foreground tanker towards its side. Another dark-hulled tanker is visible in the distance on the horizon.",
+        "article_text_sha256": "dd93c81aaae2c9747999e3a8497e89a129e4cd5d39300ce185e1e026eb55b362",
+        "concept_sha256": "f0824c1bb05640429971d99024d7653c3d67b48382be3b3f6ded64c70afb26a4",
+        "description": "A light-colored wooden meeting table with several dark grey chairs around it. On the table are three closed notebooks and a potted plant. Another potted plant sits on a wooden cabinet in the background. A window with white frames and grey curtains is visible on the left.",
         "fit_score": 10,
-        "image_sha256": "9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe",
+        "image_sha256": "1579f75e7484231b76133e363a5ce9f692e166b06ce4650c11a53be98a1aa0c6",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts oil tankers at what appears to be an oil terminal, with visible loading arms connecting to one of the tankers. This directly illustrates the article's subject of crude oil imports and exports, and specifically matches the selected concept of an oil tanker at an oil terminal with dockside loading arms.",
-        "reviewed_at": "2026-10-02T20:30:36.502404+00:00"
+        "reason": "The image clearly depicts an empty, modest meeting room with a shared table and chairs, aligning perfectly with the selected concept for illustrating cooperation and networking among education directors. It avoids people, readable text/logos, and specific identifiable locations, as required.",
+        "reviewed_at": "2026-10-02T23:17:01.100685+00:00",
+        "text_audit": {
+          "examples": [],
+          "readable_text_present": false
+        }
       },
       "pixels": {
-        "height": 627,
+        "height": 1024,
         "mode": "RGB",
-        "variance": 18107.3,
-        "width": 940
+        "variance": 12821.3,
+        "width": 1536
       },
+      "prompt_sha256": "7782848e0b545811cc2e259ffcdd4a2b3acf4f61d2daecc74f6959f1a9290aa5",
+      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Two large oil tankers are visible on the water under an overcast sky. In the foreground, the deck of a tanker with extensive red and white piping is shown. Next to it, a larger red-hulled tanker is docked, with two white loading arms extending from the foreground tanker towards its side. Another dark-hulled tanker is visible in the distance on the horizon.",
+        "evidence": "Tyhjä, vaatimaton kokoushuone, jossa yhteistä pöytää ympäröivät tuolit. Pöydällä on suljettuja muistikirjoja. Kuva rajautuu kokouspöytään ja istumapaikkoihin eikä esitä mitään tunnistettavaa Porin tai Kuntaliiton toimitilaa.",
         "matched": [
-          "arms",
-          "loading",
-          "oil",
-          "tanker"
+          "Shared meeting table",
+          "Chairs around the table"
         ],
-        "method": "vision",
-        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+        "method": "generation",
+        "reason": "generated from the accepted scene"
       },
+      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "b7c03b306fceb32ebdabc6fd39378f3c4acd1b15850a008400b8aa52a4b3ac21",
-        "decision_sha256": "7324a92bd2490bf27e138c51935375d086ecabeb6b2edd332e16abe52c841b33",
+        "article_text_sha256": "dd93c81aaae2c9747999e3a8497e89a129e4cd5d39300ce185e1e026eb55b362",
+        "decision_sha256": "3fb28c7f6140a874fb77377c2642a0eb96e2e1db6633e021271cd5ce0b81f1e7",
         "minimum_real_fit": 8,
         "searches": [
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 7,
-                "image_sha256": "8ae028ce0227a6271c8671f248ac44f3e138db081ac283ae9556aa1736155cf9",
+                "fit_score": 0,
+                "image_sha256": "f4848bb986c2fae582dc5d32e585906c723d377e69afce99b9da11fb8141fbd1",
                 "license": "Pexels License",
-                "reason": "The image clearly shows an oil tanker at sea, which relates to the article's discussion of crude oil imports and exports. However, the selected concept specifically requires the tanker to be 'at an oil terminal' and to show 'dockside loading arms'. The visible image shows the tanker at sea, not docked at a terminal, and there are no visible loading",
-                "source_url": "https://www.pexels.com/photo/oil-tanker-at-sea-during-sunset-36563588/"
+                "reason": "The image shows a metallic object with engraved text, which appears to be a list of scientific concepts. This does not depict Esa Kohtamäki or any award, nor does it relate to the article's subject of a municipal award for educational services. The visible content is entirely unrelated to the selected concept and the article. One or more required c",
+                "source_url": "https://www.pexels.com/photo/close-up-of-text-on-silver-surface-4092757/"
               },
               {
-                "approved": true,
-                "fit_score": 10,
-                "image_sha256": "9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe",
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "0c336d7ffff3038e9bc685389905b4fa3bad271af1b839ea96386c0f77afe62f",
                 "license": "Pexels License",
-                "reason": "The image clearly depicts oil tankers at what appears to be an oil terminal, with visible loading arms connecting to one of the tankers. This directly illustrates the article's subject of crude oil imports and exports, and specifically matches the selected concept of an oil tanker at an oil terminal with dockside loading arms.",
-                "source_url": "https://www.pexels.com/photo/large-oil-tanker-with-crane-on-open-sea-39762819/"
+                "reason": "The article is about Esa Kohtamäki receiving the 'Sivistyksen suunta' award. The selected concept specifically requires a photograph of Esa Kohtamäki as the main subject, ideally with the award. The image shows only a sculpture, which may or may not be the award, but it does not show Esa Kohtamäki. Therefore, it fails to meet the 'must_show' requir",
+                "source_url": "https://www.pexels.com/photo/golden-dragon-tail-15838158/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "ed6b10fca7f2f3a076ae71a514b330f4ab9273e5f4aa6e77a31f2976edf3bc0f",
+                "license": "Pexels License",
+                "reason": "The image shows an abstract metal sculpture and natural rock formations, which bears no visible relation to Esa Kohtamäki or an award ceremony. The selected concept specifically requires a photograph of Esa Kohtamäki with the award. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/architectural-photography-of-brown-wooden-art-3021125/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "a0a34d0c9a1f6a0200403162b226d53e863d62589fc99df6b06df46a6a2e60e0",
+                "license": "Pexels License",
+                "reason": "The article is about Esa Kohtamäki receiving the 'Sivistyksen suunta' award. The selected concept specifically requires a photograph of Esa Kohtamäki with the award or at the award ceremony. The provided image shows an abstract sculpture in a park-like setting and does not depict Esa Kohtamäki, an award, or any award ceremony. Therefore, it does no",
+                "source_url": "https://www.pexels.com/photo/stone-modern-statue-in-park-8809103/"
               }
             ],
             "concept_rank": 1,
-            "outcome": "accepted",
+            "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "öljytankkeri öljysatamassa",
-              "crude oil tanker",
-              "oil tanker loading terminal"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "a1fc168f8df72c928312cffb9d031c6b5cdc7789bbbd6c6453328e89bcae1e4b",
-                "license": "Pexels License",
-                "reason": "The image directly depicts large cylindrical oil storage tanks and industrial pipework, which are central to the selected concept of an oil terminal. The article discusses the import and export of energy products, particularly crude oil and other oil products, making an oil terminal a highly relevant visual subject.",
-                "source_url": "https://www.pexels.com/photo/silos-near-cargo-train-cars-24244233/"
-              }
-            ],
-            "concept_rank": 2,
-            "outcome": "accepted",
-            "provider": "pexels",
-            "queries": [
-              "öljyterminaali varastosäiliöt",
-              "oil storage tanks",
-              "petroleum terminal tanks"
+              "Esa Kohtamäki",
+              "Esa Kohtamäki palkinto",
+              "Esa Kohtamäki award sculpture"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 7,
-                "image_sha256": "b1dc61c47d0c5ce1dad6b167931287c890836ec6ef1416ef4f213fe0d7a3ca3b",
-                "license": "Pexels License",
-                "reason": "The image depicts high-voltage transmission pylons and overhead power lines, which are relevant to the article's discussion of electricity trade. However, the selected concept specifies an 'avoimessa pohjoismaisessa maastossa' (open Nordic terrain) and 'ei kuvassa ole ihmisiä tai rakennuksia' (no people or buildings in the image). This image clearl",
-                "source_url": "https://www.pexels.com/photo/vibrant-sunset-with-electric-power-lines-35158378/"
+                "fit_score": 0,
+                "image_sha256": "cb1e1fcb85c69171ce0030f1d16e037cb2d53549962cb00aef96211ac6e60c1d",
+                "license": "Unsplash License",
+                "reason": "The article is about Esa Kohtamäki receiving an award. The selected concept requires a photograph of Esa Kohtamäki with the award or at the award ceremony. The image shows an outdoor sculpture and buildings, which is completely unrelated to the article's subject or the selected concept. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/modern-sculpture-in-a-snowy-urban-park-eAa2zgPJo3A?utm_source=uutistenlukija&utm_medium=referral"
               },
               {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "1b09293726ce78f554e145087d2078d42eb800c85638bcdeab979c4ab76f441f",
-                "license": "CC0 1.0",
-                "reason": "The image directly depicts high-voltage transmission pylons and overhead power lines, which are central to the concept of 'Sähkön siirto voimajohdoissa' (Electricity transmission in power lines). The article discusses electricity import and export, making the visual representation of electricity transmission highly relevant. The image also adheres ",
-                "source_url": "https://www.pexels.com/photo/electricity-energy-high-voltage-power-lines-7000/"
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "42076dcc92fba38b059fa41633a96ac541ddf76813f9866904498f0815b5458b",
+                "license": "Unsplash License",
+                "reason": "The image does not depict Esa Kohtamäki or any award. It shows an abstract sculpture and buildings in a snowy urban setting, which is unrelated to the article's subject of an award recipient. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/modern-sculpture-in-a-snowy-urban-plaza-nl5htg4BLmA?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "c72d178470ae91a77aa37dce93389b7cb4f5f1ac64cec9efa9ae3cfb35135e5f",
+                "license": "Unsplash License",
+                "reason": "The article is about Esa Kohtamäki receiving the 'Sivistyksen suunta' award. The selected concept specifically requires a photograph of Esa Kohtamäki with the award or in the documented award ceremony. The provided image shows an abstract sculpture, which is not Esa Kohtamäki, nor does it show him with an award. Therefore, it does not meet the 'mus",
+                "source_url": "https://unsplash.com/photos/abstract-sculpture-with-sharp-angles-against-building-_eBTsV1PNkI?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
-            "concept_rank": 3,
-            "outcome": "accepted",
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Esa Kohtamäki",
+              "Esa Kohtamäki palkinto",
+              "Esa Kohtamäki award sculpture"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Esa Kohtamäki",
+              "Esa Kohtamäki palkinto",
+              "Esa Kohtamäki award sculpture"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Esa Kohtamäki",
+              "Esa Kohtamäki palkinto",
+              "Esa Kohtamäki award sculpture"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "voimajohdot maaseutumaisema",
-              "electricity transmission pylons",
-              "high voltage power lines"
+              "tyhjä kokoushuone",
+              "kokouspöytä tuolit",
+              "empty meeting room"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "a471287f98c4d7b9760ee9c5c4f0145090a5d0fa286d9ab5490b7eab58c5edfa",
+                "license": "Unsplash License",
+                "reason": "The article discusses an award for a director of education and the development of municipal education services, focusing on cooperation and networks. The selected concept describes an empty, modest meeting room with a shared table and chairs, without people or identifiable locations. The actual pixels show an outdoor picnic area with a table and be",
+                "source_url": "https://unsplash.com/photos/picnic-table-and-grill-in-an-outdoor-park-setting-ijXIrHZZHYA?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "4d55bdd85aaa13b406fdf57a4bbbe60223d823ffe2fe8d7a17473f0b9e5c60e4",
+                "license": "Unsplash License",
+                "reason": "The image shows an outdoor setting with tables and chairs, but it does not depict an indoor meeting room with a shared meeting table and chairs around it, as specified in the concept. The presence of disposable cups and an outdoor setting further deviates from the concept of a 'tyhjä, vaatimaton kokoushuone'. One or more required concept elements a",
+                "source_url": "https://unsplash.com/photos/two-cups-of-coffee-sit-on-a-tray-on-a-table-e_I8r8_8lp4?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "4793ae4bf7b66c334f8ec1b9c62a1281e4aa1842087687e4261d3862196ff012",
+                "license": "Unsplash License",
+                "reason": "The image depicts two duck figurines on a small table outdoors, which is completely unrelated to the article about an award for a director of education services and the concept of an empty meeting room for collaboration. The image does not show a shared meeting table or chairs around a table, which are the required elements for the selected concept",
+                "source_url": "https://unsplash.com/photos/two-white-birds-sitting-on-top-of-a-wooden-table-pLbNsluGSDs?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "a8fec185b24946a6120f970bc664674cfb5866c6e37a5c7d443a9e2396ba347a",
+                "license": "Unsplash License",
+                "reason": "The article discusses an award for a director of education and the development of municipal education services, emphasizing cooperation and networks. The selected concept is an empty, modest meeting room with a shared table and chairs, symbolizing cooperation. The image shows only a close-up of a wooden tabletop and its legs, which could be part of",
+                "source_url": "https://unsplash.com/photos/brown-table-FR9ChNxPSQc?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "tyhjä kokoushuone",
+              "kokouspöytä tuolit",
+              "empty meeting room"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "tyhjä kokoushuone",
+              "kokouspöytä tuolit",
+              "empty meeting room"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "tyhjä kokoushuone",
+              "kokouspöytä tuolit",
+              "empty meeting room"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 1,
+          "concept_rank": 2,
           "fit_score": 10,
-          "image_sha256": "9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe",
-          "kind": "real"
+          "image_sha256": "1579f75e7484231b76133e363a5ce9f692e166b06ce4650c11a53be98a1aa0c6",
+          "kind": "generated"
         },
         "version": "article-first-v1"
       },
-      "sha256": "9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe",
-      "source_url": "https://www.pexels.com/photo/large-oil-tanker-with-crane-on-open-sea-39762819/",
-      "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/39762819/pexels-photo-39762819.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "39762819",
-        "photo_url": "https://www.pexels.com/photo/large-oil-tanker-with-crane-on-open-sea-39762819/",
-        "photographer": "Oleksiy Yeshtokyn,🌻🇺🇦🌻",
-        "photographer_url": "https://www.pexels.com/@oleksiy-yeshtokyn-2147541276",
-        "provider": "pexels",
-        "query": "öljytankkeri öljysatamassa",
-        "retrieved_at": "2026-10-02T20:30:34Z"
-      },
-      "stock_provenance_sha256": "bc11ab8e3384acb7d17a96e9bef4d7eb58e261b0fe818ffbe4462999445f5b6d",
-      "url": "https://uutistenlukija.fi/media/9b20789c79b87798f9a13effc24bd37dd730d61fe17cb6c48050c3af80016bbe.jpg"
+      "sha256": "1579f75e7484231b76133e363a5ce9f692e166b06ce4650c11a53be98a1aa0c6",
+      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "subject": "sivistysjohtajien yhteistyön kokoustila",
+      "url": "https://uutistenlukija.fi/media/1579f75e7484231b76133e363a5ce9f692e166b06ce4650c11a53be98a1aa0c6.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Energiatuotteita tuotiin huhti–kesäkuussa 2026 yhteensä 3,6 miljardin euron arvosta ja vietiin 1,8 miljardin euron arvosta, kertovat Tilastokeskuksen ennakkotiedot. Tuonnin arvo kasvoi vuodentakaisesta 50 prosenttia ja viennin arvo 36 prosenttia."
+        "text": "Vuoden 2026 palkinnon perusteluissa nostetaan Kuntaliiton mukaan esiin Kohtamäen työ kuntien yhteistyön ja verkostojen vahvistamiseksi. Hän on myös jakanut osaamistaan muiden sivistysjohtajien kanssa ja osallistunut pitkään Kuntaliiton verkostoihin ja tapahtumiin."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Tilastokeskus arvioi arvon kasvun johtuneen pääosin raakaöljyn tuonnin ja viennin arvon lisääntymisestä. Raakaöljyn tuontimäärä kasvoi samalla 75 prosenttia edellisvuoden huhti–kesäkuuhun verrattuna. Energian tuontia koskevia tietoja tarkennetaan myöhemmin."
+        "text": "Kohtamäki on johtanut Porin sivistystoimen toimialaa vuodesta 2016. Kuntaliiton tiedotteen mukaan hän on koulutukseltaan kasvatustieteen maisteri ja luokanopettaja sekä työskennellyt aiemmin opettajana, rehtorina ja sivistysjohtajana eri kunnissa."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Sähkön ulkomaankaupassa tuonti väheni ja vienti kasvoi. Tilastokeskuksen mukaan sähköä tuotiin toisella vuosineljänneksellä 2,6 terawattituntia, mikä oli 9 prosenttia vähemmän kuin vuotta aiemmin. Vienti oli 1,8 terawattituntia eli 142 prosenttia vuodentakaista suurempi."
-      },
-      {
-        "source_ids": [
-          "A"
-        ],
-        "text": "Energiatuotteiden tärkeimpiin tuontimaihin kuuluivat kaupan arvolla mitattuna Norja, Ruotsi ja Yhdysvallat. Viennissä keskeisiä kohdemaita olivat Ruotsi, Alankomaat ja Yhdysvallat. Tilastokeskuksen mukaan tärkeimpiä tuontituotteita olivat raakaöljy, keskitisleet ja muut öljytuotteet, kun taas viennissä korostuivat keskitisleet, moottoribensiini ja muut öljytuotteet."
+        "text": "Sivistyksen suunta -palkinto myönnetään vuosittain kuntien sivistyspalvelujen kehittämisessä ansioituneelle kunta-alan toimijalle. Kuntaliiton mukaan palkinto jaettiin nyt 15. kerran. Vuonna 2025 sen sai Limingan sivistysjohtaja Päivi Mäki."
       }
     ],
-    "summary": "Tilastokeskuksen mukaan energiatuotteiden ulkomaankaupan arvon kasvu huhti–kesäkuussa 2026 johtui pääosin raakaöljystä. Myös viennin arvo nousi, mutta tuontitietoja tarkennetaan myöhemmin.",
-    "title": "Energiatuonnin arvo kasvoi ennakkotietojen mukaan 50 %"
+    "summary": "Kuntaliitto ja Opsia ry ovat palkinneet Porin sivistystoimen toimialajohtajan Esa Kohtamäen. Kuntaliiton mukaan valinnassa painottuivat sivistyspalvelujen kehittäminen ja kuntien välisen yhteistyön edistäminen.",
+    "title": "Esa Kohtamäelle Sivistyksen suunta -palkinto"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "ae165b4d3b84dc89fe9a2f0f1390657185a120bfa34ca94640801426e84f40f4",
+    "draft_sha256": "13ee1d8358a75b420adc68ecbf5430aa7e5e912d674e802913d30c937c89a9c4",
     "reasons": [
-      "Otsikko on 54 merkkiä eli alle 60 merkin tavoitteen. Tärkein asia, energiatuonnin arvon kasvu, on alussa, ja 50 prosentin kasvu sekä tietojen ennakollisuus perustuvat lähteeseen A.",
-      "Lähde A tukee kaikkien neljän kappaleen source_ids-merkintöjä ja keskeisiä lukuja: huhti–kesäkuun 2026 tuontiarvo 3,6 miljardia euroa ja vientiarvo 1,8 miljardia euroa, niiden vuosikasvut 50 ja 36 prosenttia sekä raakaöljyn tuontimäärän 75 prosentin kasvu. Arvoa ja määrää ei sekoiteta.",
-      "Ingressin ja toisen kappaleen selitys kasvun painottumisesta raakaöljyn tuonnin ja viennin arvoon on lähteen A esittämä selitys ja osoitetaan Tilastokeskuksen tiedoksi, ei riippumattomasti vahvistetuksi syyksi. Tuontitietojen myöhempi tarkentaminen mainitaan sekä ingressissä että tekstissä.",
-      "Lähde A tukee sähkön tuonnin 2,6 terawattituntia ja 9 prosentin laskua sekä viennin 1,8 terawattituntia ja 142 prosentin kasvua. Myös tuonti- ja vientimaat sekä nimetyt öljytuoteryhmät vastaavat lähdettä. Talous-luokitus sopii valtakunnalliseen ulkomaankauppatilastoon; teksti ei lisää paikalliseen tietoon perustuvia yleistyksiä tai lähteettömiä johtopäätöksiä.",
-      "Lähde A on julkaistu 1.10.2026, joten se on arviointihetkellä ajankohtainen, vaikka tilastojakso on vuoden toinen neljännes. Yksi nimetty virallinen tilastolähde riittää näihin selvästi siihen sidottuihin ennakkotietoihin. Luonnos on neutraalia, ymmärrettävää ja tiivistettyä omaa muotoilua. RIGHTS-asiakirja tukee tekstin uudelleenkäyttöä lähdemaininnalla, eikä sitä käytetä uutisväitteiden tai valokuvan oikeuksien todisteena.",
-      "Koko kuvatietue vastaa lähdepaketin kuvatietuetta. Kolme järjestettyä kuvakonseptia ja haut jokaiselle on dokumentoitu. Valitun kuvan tunnisteeseen sidottu pikseliarvio antaa koko artikkelin sopivuudeksi 10/10, ja kuvauksissa näkyvät öljytankkerit sekä kannen putkistot liittyvät konkreettisesti jutun raakaöljy- ja öljytuotekauppaan. Laiturin tai lastausvarsien tulkinta ei ratkaise hyväksyntää, koska ehdotettu sommittelu ei ole jutun tosiasiavaatimus. Alt-teksti ja yleinen arkistokuvateksti eivät väitä kuvan esittävän Suomen vuoden 2026 kauppatapahtumaa. Kuvakohtainen Pexels-lisenssitietue, kuvaajan tiedot ja alkuperäosoite tukevat käyttöoikeutta erillään Tilastokeskuksen tekstiluvasta; aineistossa ei ilmene must_avoid-turvarajan rikkomusta."
+      "Otsikko on 44 merkkiä eli alle 60 merkin tavoitteen, ja palkinnonsaaja on alussa. Lähde A tukee otsikkoa ja ingressiä: Kuntaliitto ja Opsia ry myönsivät vuoden 2026 Sivistyksen suunta -palkinnon Porin sivistystoimen toimialajohtaja Esa Kohtamäelle. Ingressin valintaperusteet vastaavat A:n palkintoperusteluja ja on asianmukaisesti esitetty Kuntaliiton tietoina.",
+      "Kaikkien kolmen kappaleen source_ids-merkintä A on oikea. A tukee yhteistyötä, verkostoja, osaamisen jakamista ja osallistumista koskevia väitteitä sekä toimialajohtajuuden alkamista vuonna 2016, koulutusta ja aiempia tehtäviä. A vahvistaa myös palkinnon vuosittaisuuden ja 15. jakokerran; 2.10.2026 julkaistun lähteen ilmaus viime vuonna tarkoittaa luonnoksessa oikein vuotta 2025, ja edellinen saaja on Päivi Mäki Limingasta.",
+      "Samana päivänä julkaistu järjestäjän tiedote A riittää tähän rajattuun palkintouutiseen. Luonnos ei väitä riippumatonta vahvistusta, lisää perusteettomia syy-seuraussuhteita tai yleistä Porin tietoja koko maahan. Kotimaa-luokitus on perusteltu. Teksti on ymmärrettävää, neutraalia ja lähteestä itsenäisesti tiivistettyä; RIGHTS-asiakirjaa käytetään vain tekstin käyttöoikeuden näyttönä.",
+      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Paketissa on kaksi järjestettyä kuvakonseptia ja haut kummallekin. Valittu generoitu kokouspöytäkuva vastaa korkeimmalle sijoitettua turvallisesti generoitavaa konseptia ja havainnollistaa lopullisen tekstin yhteistyö- ja verkostoteemaa esittämättä Kohtamäen keksittyä henkilökuvaa tai väittämättä tilaa todelliseksi tapahtumapaikaksi. Erillinen pikseliarvio on sidottu valitun kuvan ja artikkelitekstin tiivisteisiin, antaa sopivuudeksi 10/10 ja kirjaa turvarajojen täyttymisen. Alt-teksti vastaa kirjattua kuvasisältöä, krediitti on AI-kuvitus ja kuvateksti sisältää täsmällisen ilmoituksen: AI-generoitu kuva. Ei valokuva tapahtumasta. Kuntaliiton tekstilisenssiä ei ole käytetty valokuvan käyttöoikeuden perusteena."
     ]
   }
 }
