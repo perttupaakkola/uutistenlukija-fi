@@ -868,8 +868,12 @@ def listing_page_html(page_items, page_number, page_count, archive_items=None, s
               f'{"".join(rows)}</div>') if rows else ""
     rail = ('<aside class="portal-right-rail" aria-label="Sivupalkki">'
             '<section class="portal-newsletter"><h2>Seuraa uutisia</h2>'
-            '<p>Lue uusimmat jutut verkkosivulla tai seuraa RSS-syötettä.</p>'
-            '<a href="/rss.xml">RSS-syöte</a></section>'
+            '<p>Lisää syötteen osoite omaan RSS-lukijaasi, niin uudet jutut tulevat samaan paikkaan.</p>'
+            '<a href="/rss.xml">RSS-syöte</a>'
+            '<p class="portal-rss-address">https://uutistenlukija.fi/rss.xml</p>'
+            '<button type="button" class="portal-rss-copy" data-rss-copy-url="https://uutistenlukija.fi/rss.xml" '
+            'aria-describedby="rss-copy-feedback" hidden>Kopioi syötteen osoite</button>'
+            '<p id="rss-copy-feedback" class="portal-rss-feedback" role="status" aria-live="polite"></p></section>'
             + frontpage.markets(snapshot) + '</aside>')
     grid_label = ' aria-labelledby="front-lead-title"' if lead_html else ""
     grid_class = "portal-front-grid"

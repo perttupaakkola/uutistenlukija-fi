@@ -154,6 +154,25 @@
     return copied;
   }
 
+  var rssButtons = document.querySelectorAll ? document.querySelectorAll("[data-rss-copy-url]") : [];
+  Array.prototype.forEach.call(rssButtons, function (button) {
+    button.hidden = false;
+    button.addEventListener("click", async function () {
+      var url = button.getAttribute("data-rss-copy-url");
+      var feedback = document.getElementById(button.getAttribute("aria-describedby"));
+      try {
+        if (window.navigator && window.navigator.clipboard && window.isSecureContext) {
+          await window.navigator.clipboard.writeText(url);
+        } else if (!legacyCopy(url)) {
+          throw new Error("copy unavailable");
+        }
+        if (feedback) feedback.textContent = "Syötteen osoite kopioitu. Lisää se RSS-lukijaasi.";
+      } catch (error) {
+        if (feedback) feedback.textContent = "Kopiointi ei onnistunut. Valitse ja kopioi yllä näkyvä syötteen osoite RSS-lukijaasi.";
+      }
+    });
+  });
+
   var shareButtons = document.querySelectorAll ? document.querySelectorAll("[data-share-url]") : [];
   Array.prototype.forEach.call(shareButtons, function (button) {
     button.addEventListener("click", async function () {

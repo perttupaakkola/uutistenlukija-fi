@@ -65,7 +65,7 @@ ARTICLE_IMAGE_VERSION = 'article-first-v1'
 MIN_REAL_FIT = 8
 MAX_ARTICLE_CANDIDATES_PER_PROVIDER = 4
 _GENERATED_PERSON_SCENE = re.compile(
-    r'\b(?:laps\w*|last\w*|children|kids?|people|persons?|faces?|kasvo\w*|'
+    r'\b(?:laps\w*|last(?:a(?:ni|si|mme|nne|an|nsa)?|en\w*)|children|kids?|people|persons?|faces?|kasvo\w*|'
     r'ihmi\w*|henkil\w*|aiku\w*|nuor\w*|katsoj\w*|opettaj\w*|'
     r'ohjaaj\w*|teacher\w*|k(?:ä|a)si\w*|hands?)\b', re.I)
 
@@ -76,6 +76,14 @@ def _depicts_people(scene):
         r'\b(?:ilman|without|no)\s+(?:ihmi\w*|henkil\w*|people|persons?|'
         r'kasvo\w*|faces?|laps\w*|last\w*|children|hands?|k(?:ä|a)si\w*)\b',
         '', scene, flags=re.I)
+    # Recognise only explicit negative existence clauses, not arbitrary negation.
+    # 'lastausvarret' (cargo loading arms) is not 'lasten' (children's).
+    # Remove the bounded excluded noun only; later positive people remain visible.
+    without_exclusion = re.sub(
+        r'\b(?:ei|eik(?:ä|a))(?:\s+(?:kuvassa|n(?:ä|a)kym(?:ä|a)ss(?:ä|a)))?\s+'
+        r'(?:ole|n(?:ä|a)y)\s+(?:ihmi\w*|henkil\w*|kasvo\w*|laps\w*|'
+        r'last(?:a(?:ni|si|mme|nne|an|nsa)?|en\w*)|k(?:ä|a)si\w*)\b',
+        '', without_exclusion, flags=re.I)
     return bool(_GENERATED_PERSON_SCENE.search(without_exclusion))
 MAX_DECISION_TEXT = 500
 MAX_DECISION_ITEMS = 8

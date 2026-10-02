@@ -279,8 +279,12 @@ def tick(config_path, model=None, now=None, _already_locked=False, target_job_id
                 if config.get("illustrations", True) and not packet.get("fixture", False):
                     try:
                         illustration = article_first_image(draft, packet, config["state_dir"], model)
-                    except Exception:
+                    except Exception as error:
                         illustration = None
+                        # Preserve the exact classified refusal; never hide a parser/provider
+                        # error behind a healthy-looking ready/image-pending loop.
+                        raise ImagePending('Image pending: ' + safe_error(error) +
+                                           '; publication withheld') from error
                     if illustration is not None:
                         # Drop the collection-time "no image" note: it must never coexist with
                         # an actual image, or the reviewer rightly reads the packet as
