@@ -4,29 +4,327 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "d3fd223a418fe7698da53c7774dff65a4f293486",
-  "job_id": "9379acd25d356276182ee16cf356ae1540950417a7b695acbae58e90633ef83d",
-  "packet_sha256": "d1cbe0a9a2b20f23065b3a288100c48531d6b6472b1f76825719297548b18cd8",
-  "draft_sha256": "1fcba3eca43b94de51e4565ae9bc6f7af82455fbdd39936ab1476b091d2252ed",
-  "image_sha256": "29bfd0ea79b04a19e8325820eab389e3d9d9d0acad3118c1c26fb0412f0b3305",
+  "job_id": "aac41588a8b40635f53782f5e25619b492e6010f25e5f7d5490fce8c1d82a76f",
+  "packet_sha256": "e552e20e8bb97d7cbcb11c181e21454a2d774fe17971771cf2e5552f777ff14a",
+  "draft_sha256": "b8d14eb4477e2b1554a1e9a2b63ab9c9dc0b0b84fd7ae40e2e916eeaa7537f6e",
+  "image_sha256": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "29ed932f1faf561fd8e72eed07ec9e4bcd42cdaf3181a893646b6076b7655ccf"
+    "provenance_sha256": "fc1851b7dbaa3b0348c15ff236b3d3d83a6cd6a19eea5b7d5c5c38739522a191"
+  },
+  "stock_image": {
+    "alt": "Arkistokuva: Keltainen uusklassinen rakennus, jossa on valkoisia pylväitä ja koristeellisia yksityiskohtia, kadun varrella on kaksi autoa ja jalankulkija.",
+    "caption": "Arkistokuva artikkelin aiheesta.",
+    "classifier_output": {
+      "category": "Kotimaa",
+      "concepts": [
+        {
+          "depictable_scene": "Todellinen valokuva Valtioneuvoston linnan julkisivusta Helsingin Senaatintorin suunnalta. Rakennus edustaa uutisessa käsiteltyä valtioneuvoston toimintaa; kuva ei esitä lokakuun 2. päivän kokousta eikä väitä sen järjestämispaikkaa.",
+          "must_avoid": [
+            "Fabricated architecture",
+            "Presentation as a photograph of the reported meeting"
+          ],
+          "must_show": [
+            "Actual Government Palace facade in Helsinki"
+          ],
+          "rank": 1,
+          "safe_to_generate": false,
+          "search_queries": [
+            "Valtioneuvoston linna Helsinki",
+            "Valtioneuvoston linna julkisivu",
+            "Government Palace Helsinki facade"
+          ],
+          "subject": "valtioneuvoston ulko- ja turvallisuuspoliittinen päätöksenteko: Valtioneuvoston linna"
+        },
+        {
+          "depictable_scene": "Suomen siniristilippu ja Ukrainan sinikeltaisen kaksivärilippu vierekkäisissä lipputangoissa vaaleaa taivasta vasten. Rajauksessa näkyvät vain liput, tangot ja taivas, ei tunnistettavaa paikkaa tai kokoustilannetta.",
+          "must_avoid": [
+            "People or body parts",
+            "Invented text or logos",
+            "Weapons or combat",
+            "Identifiable meeting venue"
+          ],
+          "must_show": [
+            "Finnish blue-cross flag",
+            "Ukrainian blue-over-yellow flag"
+          ],
+          "rank": 2,
+          "safe_to_generate": true,
+          "search_queries": [
+            "Suomen Ukrainan liput",
+            "Finland Ukraine flags",
+            "Finnish Ukrainian flags flagpoles"
+          ],
+          "subject": "Suomen ja Ukrainan liput"
+        }
+      ],
+      "version": "article-first-v1"
+    },
+    "credit": "Photo by giggel on Wikimedia Commons",
+    "depicted": "The image shows a large, multi-story building with a yellow facade and white architectural details, including columns and decorative trim. The building features numerous windows, some rectangular and some arched, with dark frames. A prominent section of the building has a portico with tall white columns supporting a triangular pediment. A flagpole extends from the roof near the pediment. In front of the building, there is a street with tram tracks, and two cars are parked on the side of the road",
+    "generated": false,
+    "hotlink": false,
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "local_path": "media/7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697.jpg",
+    "pixel_review": {
+      "alt_fi": "Keltainen uusklassinen rakennus, jossa on valkoisia pylväitä ja koristeellisia yksityiskohtia, kadun varrella on kaksi autoa ja jalankulkija.",
+      "approved": true,
+      "article_text_sha256": "5d171aa8e4e3f16266f5e88f88bd7cff53eed335b8db0c1e6c582576c4eaf4cf",
+      "concept_sha256": "ca6756b4917e793c733641ff303d2a671651738995b4edcdcd02894ec26ded1e",
+      "description": "A large, ornate yellow building with white columns and trim, featuring multiple windows and a prominent central portico with a pediment. Two cars are parked on the street in front of the building, and a person stands on the sidewalk to the right. Tram tracks run in the foreground.",
+      "fit_score": 9,
+      "image_sha256": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
+      "model": "google:gemini-2.5-flash",
+      "must_show_visible": [
+        true
+      ],
+      "no_people": false,
+      "reason": "The image clearly depicts the facade of the Government Palace in Helsinki, which is the specific building mentioned in the selected concept as representing the government's activities discussed in the article.",
+      "reviewed_at": "2026-10-03T14:22:49.755273+00:00",
+      "source_context": {
+        "image_sha256": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "photo_id": "wikimedia-54756505",
+        "photo_url": "https://commons.wikimedia.org/wiki/File:Helsinki%20-%20Valtioneuvoston%20Linna%20-%20Government%20Palace%20-%20panoramio.jpg",
+        "photographer": "giggel",
+        "provider": "wikimedia",
+        "title": "Helsinki - Valtioneuvoston Linna - Government Palace - panoramio.jpg"
+      },
+      "source_context_sha256": "5fa1dd1cea0f691901b7f2974764ffa3675cc14bc3ee2fdc09c228918471be44"
+    },
+    "pixels": {
+      "height": 2787,
+      "mode": "RGB",
+      "variance": 7389.9,
+      "width": 4320
+    },
+    "relevance_check": {
+      "accepted": true,
+      "evidence": "A large, ornate yellow building with white columns and trim, featuring multiple windows and a prominent central portico with a pediment. Two cars are parked on the street in front of the building, and a person stands on the sidewalk to the right. Tram tracks run in the foreground.",
+      "matched": [],
+      "method": "vision",
+      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+    },
+    "selection_evidence": {
+      "article_text_sha256": "5d171aa8e4e3f16266f5e88f88bd7cff53eed335b8db0c1e6c582576c4eaf4cf",
+      "decision_sha256": "67f486ee54db0c6afdb25e4e39bb06dedc03327d5a16b0612c2ccfb856a6aec0",
+      "minimum_real_fit": 8,
+      "searches": [
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "2c33264ef8141e5a75f706579efa0d7594a31978199604ff04699ab00ae2b89f",
+              "license": "Pexels License",
+              "reason": "The article discusses the Finnish Government Palace (Valtioneuvoston linna) in Helsinki. The image shows a large, ornate pink building with towers, but it is not the Government Palace in Helsinki. The architecture and color scheme do not match the actual Government Palace, which is a neoclassical building on Senate Square. Therefore, the image does",
+              "source_url": "https://www.pexels.com/photo/birini-palace-in-latvia-20812853/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "fa95a41fd3bba4f21fe4a62612caf34cfb44481f2e30593b9694ee6d6fab1461",
+              "license": "Pexels License",
+              "reason": "The image depicts a grand building with flags, but it is not the Government Palace in Helsinki. The flags visible are the flag of the United States, the flag of Poland, and the flag of the European Union, none of which are the flag of Finland. The architecture does not match the Government Palace in Helsinki. Therefore, it does not show the 'Actual",
+              "source_url": "https://www.pexels.com/photo/facade-of-a-concrete-building-7252071/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "cb9067a0249fd1fe9740f9dc257456a3b47cc243ded1cae2da5182ffa1d4c5da",
+              "license": "Pexels License",
+              "reason": "The article discusses the Finnish Government Palace and its role in foreign and security policy. The selected concept specifically requires an actual photograph of the Government Palace facade in Helsinki. The visible building in the image is clearly not the Finnish Government Palace; it features Cyrillic script and a flag that is not the flag of F",
+              "source_url": "https://www.pexels.com/photo/imposing-neoclassical-building-in-minsk-belarus-37425925/"
+            }
+          ],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "Valtioneuvoston linna Helsinki",
+            "Valtioneuvoston linna julkisivu",
+            "Government Palace Helsinki facade"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "unsplash",
+          "queries": [
+            "Valtioneuvoston linna Helsinki",
+            "Valtioneuvoston linna julkisivu",
+            "Government Palace Helsinki facade"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": true,
+              "fit_score": 9,
+              "image_sha256": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
+              "license": "CC BY 3.0",
+              "reason": "The image clearly depicts the facade of the Government Palace in Helsinki, which is the specific building mentioned in the selected concept as representing the government's activities discussed in the article.",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Helsinki%20-%20Valtioneuvoston%20Linna%20-%20Government%20Palace%20-%20panoramio.jpg"
+            }
+          ],
+          "concept_rank": 1,
+          "outcome": "accepted",
+          "provider": "wikimedia",
+          "queries": [
+            "Valtioneuvoston linna Helsinki",
+            "Valtioneuvoston linna julkisivu",
+            "Government Palace Helsinki facade"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 7,
+              "image_sha256": "ccae34f7ba486640f6cff9716b0deb4db19f78c9f98ea8107f9cfeae46a0079a",
+              "license": "Pexels License",
+              "reason": "The image shows a blue and yellow flag, which could be interpreted as the Ukrainian flag. However, the concept explicitly requires both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag to be clearly present. The Finnish flag is not visible in the image. Therefore, the image does not fully meet the 'must_show' criteria. One or mor",
+              "source_url": "https://www.pexels.com/photo/an-ukrainian-flag-16926225/"
+            },
+            {
+              "approved": false,
+              "fit_score": 7,
+              "image_sha256": "f231d5f24b67c07d0cf674cdcf1f6b119771fb346cde9b93a0fb8c02f44b3ced",
+              "license": "Pexels License",
+              "reason": "The image shows two blue and yellow flags, which could be interpreted as Ukrainian flags. However, the concept explicitly requires both a Finnish blue-cross flag and a Ukrainian blue-over-yellow flag. The Finnish flag is not present in the image, making it an incomplete fit for the selected concept. One or more required concept elements are not vis",
+              "source_url": "https://www.pexels.com/photo/cloudy-sky-over-swaying-flags-11932845/"
+            },
+            {
+              "approved": false,
+              "fit_score": 7,
+              "image_sha256": "cfedd90b9aee79f2b417b0df788e5448f8ac504fcf7ebf8d62cf59e2a8801bc7",
+              "license": "Pexels License",
+              "reason": "The image shows a blue and yellow flag, which matches the description of the Ukrainian flag in the concept. However, it does not show the Finnish blue-cross flag, which is a required element in the 'must_show' list. Therefore, the image does not fully match the selected concept. One or more required concept elements are not visible.",
+              "source_url": "https://www.pexels.com/photo/ukraine-flag-under-the-blue-sky-13156971/"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "Suomen Ukrainan liput",
+            "Finland Ukraine flags",
+            "Finnish Ukrainian flags flagpoles"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "1ab5ac93edf4b475dc5f37b76650fa476c90db7f3fb4ac971cdfc8f809fac353",
+              "license": "Unsplash License",
+              "reason": "The article discusses Finland's support for Ukraine and its relationship with China. The selected concept specifically requires both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag to be present. The image only shows a blue and yellow flag, which is consistent with the Ukrainian flag, but the Finnish flag is entirely absent. The",
+              "source_url": "https://unsplash.com/photos/blue-and-yellow-striped-country-flag-qbc3Zmxw0G8?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 7,
+              "image_sha256": "47eb3ef7ebd950c71e46410cbf2c5b21a7b40a9615752c982a2c5aead4b48a0d",
+              "license": "Unsplash License",
+              "reason": "The article discusses Finland's support for Ukraine. The selected concept requires both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag to be visible. This image only shows the Ukrainian flag, therefore it does not meet the 'must_show' criteria for the Finnish flag. One or more required concept elements are not visible.",
+              "source_url": "https://unsplash.com/photos/a-blue-and-yellow-flag-flying-in-the-wind-IS1cdsWuVGA?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 7,
+              "image_sha256": "53eaa5295a23b2563e479403a235c597b2822d7f4b919fc2bef3f51442e64cad",
+              "license": "Unsplash License",
+              "reason": "The image shows a blue and yellow flag, which matches the description of the Ukrainian flag. However, the selected concept explicitly requires both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag to be present. The Finnish flag is entirely absent from the visible pixels, leading to a failure to meet a 'must_show' requirement. On",
+              "source_url": "https://unsplash.com/photos/a-blue-and-yellow-flag-flying-in-the-sky-zS-ee-D4v2o?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 7,
+              "image_sha256": "e45635dbdf93472f161965acbc2a46eb86f67815da117b0183c89877944d26e9",
+              "license": "Unsplash License",
+              "reason": "The article discusses Finland's support for Ukraine. The selected concept requires both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag to be visible. This image only shows a blue and yellow flag, which is consistent with the Ukrainian flag, but the Finnish flag is absent. Therefore, the image does not fully meet the requirement",
+              "source_url": "https://unsplash.com/photos/a-blue-and-yellow-flag-on-a-flagpole-toZ_svRsxw8?utm_source=uutistenlukija&utm_medium=referral"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "unsplash",
+          "queries": [
+            "Suomen Ukrainan liput",
+            "Finland Ukraine flags",
+            "Finnish Ukrainian flags flagpoles"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": true,
+              "fit_score": 9,
+              "image_sha256": "ff923e1058e522ce85418f5f99cb6729d45ef5f42acaf684048f6b3cf9450cd2",
+              "license": "CC BY 4.0",
+              "reason": "The image clearly depicts both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag, which are central to the selected concept and directly relevant to the article's discussion of Finland's support for Ukraine.",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Liputus%20Suomen%20ja%20Ukrainan%20lipuilla%2024.2.2026%20(55113318416).jpg"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "accepted",
+          "provider": "wikimedia",
+          "queries": [
+            "Suomen Ukrainan liput",
+            "Finland Ukraine flags",
+            "Finnish Ukrainian flags flagpoles"
+          ]
+        }
+      ],
+      "selected": {
+        "concept_rank": 1,
+        "fit_score": 9,
+        "image_sha256": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
+        "kind": "real"
+      },
+      "version": "article-first-v1"
+    },
+    "sha256": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Helsinki%20-%20Valtioneuvoston%20Linna%20-%20Government%20Palace%20-%20panoramio.jpg",
+    "stock_provenance": {
+      "attribution": {
+        "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
+        "source_credit": "giggel",
+        "title": "Helsinki - Valtioneuvoston Linna - Government Palace - panoramio.jpg"
+      },
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Helsinki_-_Valtioneuvoston_Linna_-_Government_Palace_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "photo_id": "wikimedia-54756505",
+      "photo_url": "https://commons.wikimedia.org/wiki/File:Helsinki%20-%20Valtioneuvoston%20Linna%20-%20Government%20Palace%20-%20panoramio.jpg",
+      "photographer": "giggel",
+      "photographer_url": "https://commons.wikimedia.org/wiki/File:Helsinki%20-%20Valtioneuvoston%20Linna%20-%20Government%20Palace%20-%20panoramio.jpg",
+      "provider": "wikimedia",
+      "query": "Valtioneuvoston linna Helsinki",
+      "retrieved_at": "2026-10-03T14:22:47Z"
+    },
+    "stock_provenance_sha256": "e6772a404db9a8be4897e5f171231c7ff99b98b3dcb2575e11b14807441c1ed6",
+    "url": "https://uutistenlukija.fi/media/7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697.jpg"
   },
   "new_article_files": [
-    "uutiset/lemmenkujan-kiertoreitti-kaytossa-viela-viikon-41-9379acd25d35/index.html"
+    "uutiset/tp-utva-kasitteli-ukrainan-tukea-kiina-suhdetta-aac41588a8b4/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "3db210d1c35f4915b524621eea1a3ac49474fe34c4ef4cfb3f26a123ea847721",
-    "_redirects": "3046b6148a7d6f6a0ac34f9f4069f5dff374929788848c75a1cbec5475ac2eae",
+    "_redirects": "02536949307613130928d12e96b31a15a0842668d016b149bd3138c2f5ec2f6a",
     "ai-kuvat/index.html": "864157ca2cb673f80358f4c02fcdb84b97c82d0604ee6a03fa253cbfd29d82e1",
-    "categories/kotimaa/index.html": "9c4a3826c7f202a231fdb3b76cfd7f02685490cffb56635dba0640374c4a0834",
-    "categories/kotimaa/sivu/2/index.html": "3f0fab3320cfe935b0c177179e5d9bbdf7f6d6d7a657580bb0e301a0305a949f",
-    "categories/kotimaa/sivu/3/index.html": "39ac389c06fa9391e025c13195673e2b089e976e7719af6a89657b7410bf30ce",
-    "categories/kotimaa/sivu/4/index.html": "c2c8fc1749159083f86074dc425fb34faf923f352c277d7946354208c4e0590d",
-    "categories/kotimaa/sivu/5/index.html": "62500528097881b1547e31a46770d7f5265adf37cbe6c36d3fe7e0f330171427",
-    "categories/kotimaa/sivu/6/index.html": "5e9ae0c676e5930bb7e9d6953e48a6b87445d10c6126119cbcf4d50dc63bb9dd",
+    "categories/kotimaa/index.html": "077646707657d4ed4519e60ea21dc3bbbcde9f1501fbcc8f0c1a8fbc49359959",
+    "categories/kotimaa/sivu/2/index.html": "43bfdfbbce6d7800cba10641c7c57b058091c57385e1c13a9a5c8d5c9fb7a3c8",
+    "categories/kotimaa/sivu/3/index.html": "5725d0c1c325bdb90f93f61c70764ee32214a02fb082fcf7c97579819527314b",
+    "categories/kotimaa/sivu/4/index.html": "3219bf63a0950f803f774f20229fb22fa91d6ca1b431ffb6cefb769690225591",
+    "categories/kotimaa/sivu/5/index.html": "61b0783e1daa18ef8ca4be52237965c0006f2c3c3d7c74912fa115e2e7abbe51",
+    "categories/kotimaa/sivu/6/index.html": "9c38142d19b39425bcccf4f7a834425803a0caf3c75650725e2314b28aad9385",
     "categories/kulttuuri/index.html": "bdfc4771d559eddd6d659c319d271c577370256ab78beb2bf8b43c393533270b",
     "categories/talous/index.html": "5b076d40f80c33f3188713fd149776189ad7d2886ce8425f0239b2d9222e527a",
     "categories/talous/sivu/2/index.html": "d422fad1763c635c3f7db7fc2235bbd7799c32e57bae6e14b464f0a1a9e54653",
@@ -34,7 +332,7 @@
     "categories/tiede/index.html": "ccb27c43d9e41730e5a0071f573e91179d11c862afd28ecfddebaf01d9121e52",
     "categories/ulkomaat/index.html": "deaf96813c8c634e1edb15c2b6f7956c528cd4051c7ad31220e61dca660aafa7",
     "categories/urheilu/index.html": "213dac7a0d3b566dea29b905fe0c3ca3a909652c7476aee20ae35f3153d526f1",
-    "index.html": "35c47f84aa4a6292bd1e1fe4547864704692b1f965706bda92ef0be465c3fc80",
+    "index.html": "305dbbd0650e6c9d31b0f41223b1a40c2f7cfb6032b1006a4501ed27b9b4da4a",
     "lahteet/index.html": "8f1418cfce3ea2ff833d84a7cf171c95e841cc4115dd82e1a1b95ddf042b5be2",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
@@ -280,6 +578,7 @@
     "mvp-assets/7f0321332619061d7f91119a8640a68094d23f570e9fabd2a9040afa53e68cbe.jpg": "7f0321332619061d7f91119a8640a68094d23f570e9fabd2a9040afa53e68cbe",
     "mvp-assets/7f19eb23757ab2562b90b68840904b983bc4be78ca1aa0bf75330a5023a20c32.jpg": "7f19eb23757ab2562b90b68840904b983bc4be78ca1aa0bf75330a5023a20c32",
     "mvp-assets/7f39d2c3d37db6e02d5fa68b151c0257c70bafd473c1cc0d76667b665552f840.jpg": "7f39d2c3d37db6e02d5fa68b151c0257c70bafd473c1cc0d76667b665552f840",
+    "mvp-assets/7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697.jpg": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
     "mvp-assets/800a9149b56dff3ad75f67c9d2c1f49202dd6e96f81bf3cd049d95434d980399.jpg": "800a9149b56dff3ad75f67c9d2c1f49202dd6e96f81bf3cd049d95434d980399",
     "mvp-assets/80688dfec444a8f312a36f2634ced4cd58f07732da11519a3c8fc5a715398ab6.jpg": "80688dfec444a8f312a36f2634ced4cd58f07732da11519a3c8fc5a715398ab6",
     "mvp-assets/817b4a785e02ff156c96416e31311336a0c68d7a3867bffd1315f8598a735e9d.jpg": "817b4a785e02ff156c96416e31311336a0c68d7a3867bffd1315f8598a735e9d",
@@ -551,27 +850,27 @@
     "mvp-assets/style.css": "637eaf4fbed4956e14a5ff0c21a902876ebc471c444ecfe0579be588b8e5e25d",
     "oppaat/index.html": "28dd5ea2c764e28071e2e3083dd2449aaaad926989477ee206f313b409a0dba4",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "fcfca02c7984c2d14b429ed98d753d868fa2550ec756731c15a2fe30dfe40ccb",
-    "sitemap.xml": "4853842d2f344e81a0f6d4fcf126660b1a8d1708c3e230988a253d74d4d43b43",
-    "sivu/2/index.html": "5d5c72e08b5c0a4b7715715b6074c5bf8e44b9bd5fe10f6d77628b9e850685e8",
-    "sivu/3/index.html": "3207f03e3ab740de7a8c264f99c3c2642786f1e855e746ac69ae92be96dd157b",
-    "sivu/4/index.html": "aa4e7ed582334a3b044f6e0dc324ca3c10f68de926648943bf75e1d9cd3be62f",
-    "sivu/5/index.html": "c57fd2b85fe4ad8790fc74dc2d33a7a38194f4f31c00c9321cd95ecd4a53b37d",
-    "sivu/6/index.html": "e89e4527ee09b3f55acf3a0528f66b0b486472be984ccfa0d7d26c789afe6314",
-    "sivu/7/index.html": "88f5e2a9ba013437c71d2575279352c5b552b3c5e6111bc893ace78075451f90",
-    "sivu/8/index.html": "714d1e98ee56a4ef9d047cc24ad9ae2862cc6c401cecdacd940eec63abc9e61b",
-    "sivu/9/index.html": "c2c109285a1ae88e3d85e31a47e1a3bc13b3b726efd877a5e06441aeb83cead7",
+    "rss.xml": "49c27d86db763fa13d039b15331c81c84dc388cd5610c5f533ef48f78bb0d3eb",
+    "sitemap.xml": "84a8ead07430d5d67d79512fb7687539b8f46681d5750885fa4a93b70ec93a24",
+    "sivu/2/index.html": "84c2eba78b42870708db96db6a8a80a4006c89b823b1889aff62ef2579ce163f",
+    "sivu/3/index.html": "b8f07656cff8a79b6fa01e38ce1dbd44e11d09f11915656e67f008162c6b2305",
+    "sivu/4/index.html": "420ca4b6a570bb67facfc3df69345225c7dcc70f29e6a6f44e3a7cf30b30527a",
+    "sivu/5/index.html": "86f806817d52a7149722309cdf1f25a6e6d5f8cc5dccb6b1268f2c9b4014aaf9",
+    "sivu/6/index.html": "326822ec043101667d60c4ef61e03e1199bb0ae3c7a08d887a0d0e0e965bab73",
+    "sivu/7/index.html": "c6e5c8ed712b495d26ba3ef4a83ca51fd913b10f6f06a0caf24a6afde1ff3983",
+    "sivu/8/index.html": "4cb011cbfa4f2c4f8f9bc3015047dfa4c2aa96fa001113e21a7c6524c78dbbfa",
+    "sivu/9/index.html": "42cbb70ac61c10b92436d1de2dc28a7ff414f15d379129d47026cadd89ce45de",
     "tietoja/index.html": "1f7d965c5a78376db8c975efa95a8370228d61d754797ed2e4dc264d18873d55",
     "tietosuoja/index.html": "9f7804255c80cdedc694bf11fa13ed091343a1ece70796793614b5d56af574f7",
-    "tuoreimmat/index.html": "4003e4fa936a80b716b39f1cafb2ab3fc737446a425c62cc5d2597e7a63580d4",
-    "tuoreimmat/sivu/2/index.html": "a7c3c92dd9f5e984bfa8761d091e226ac165f6d91bf681f9d773aee9f0f9d17c",
-    "tuoreimmat/sivu/3/index.html": "f6c1b8598987176885bd95834abfac392d15ff6e8c34bfa4384d78e75d8ef13d",
-    "tuoreimmat/sivu/4/index.html": "5267d7dcc04fa1d331d724a2e6d97c9415bc50a1b1340ee413f68b6ca50c1ea1",
-    "tuoreimmat/sivu/5/index.html": "64463119f8b6daf60d6d71aae8134c99d54db11f45ef891dcfa43f76d27a9b1b",
-    "tuoreimmat/sivu/6/index.html": "1cfdbe8f4e95e1bd258cbe6037aa31f5556aa39e01e741d82ed0e28188028112",
-    "tuoreimmat/sivu/7/index.html": "b408f73e24c9d766b1b7d6e7a7db5d948258bdc4ab750cf092c3da847242929a",
-    "tuoreimmat/sivu/8/index.html": "5412aafdeb9678b3963dde5693cb4153b7b9320f60755fa32aa282a789827a67",
-    "tuoreimmat/sivu/9/index.html": "7441ab47641c933e2190283529bee797c97f0fd93d2a8b2e86b914d8b3c3b500",
+    "tuoreimmat/index.html": "f52df9eedbbba1960256c80a107b70acc657b5de9560d4a60d23ece1699c7350",
+    "tuoreimmat/sivu/2/index.html": "55a0ff2295b993a2e5907f4dcb21e0c11c199473ffac22790791d2865db7b6bb",
+    "tuoreimmat/sivu/3/index.html": "d10058552d2154ed2f9c3ca619e75d930132e36b0049925765ba41481246bbeb",
+    "tuoreimmat/sivu/4/index.html": "d5ca4f8cdea1efe72fe79af388a22782ff1ddc151cf641ff7b26170ec4c546cf",
+    "tuoreimmat/sivu/5/index.html": "1d3aa8243bddf3d3a6d6b1e36198307e1b19962fe04ffb80cb7c6cf22bf22a0c",
+    "tuoreimmat/sivu/6/index.html": "00b9ec335ac503a45837e927bc2e437f952ba34f0ca5b0372ee41af8a676fb80",
+    "tuoreimmat/sivu/7/index.html": "85703b2809c4de16b5dfe66ed060b0f20feae4b8b81ebb2f4bb5854edd9a3a30",
+    "tuoreimmat/sivu/8/index.html": "9fde72ac6975282306d4be1a2929495a8bb8b124e560bf8a03923ab529d8b2f6",
+    "tuoreimmat/sivu/9/index.html": "e34d330cfe385353639544db69ee8e6688ae652863343b132a0e64b78e72cb5f",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -585,7 +884,7 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "9462e8f6d49790580ab747fb9f2feade5828a4796b31561ccbf6c5c61fe49ba3",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "2ba2c3a5eebeb8f8c8190a12464c4f7b53a5a3c0b938f7253286cb1b43a5f6e4",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
     "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "75b03cbea46455aabe08bc4b67c64d8969a538f1935b236dcc63d4da76e7d369",
     "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "d44bb4cd3351cc1850ba333746ad69331917528b77e3faef46cae58c16d7ee8f",
@@ -785,7 +1084,7 @@
     "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "acaf0e12ae33587f491a2d4cbf6b2ebcb38644c87f44d0cc3238174353a29a84",
     "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "2df04824e664d363e53a1c926f5392a34fbfd67f8495241cd292444a90e4dc95",
     "uutiset/suomi-mukana-maatalouden-eurooppalaisessa-digikonsortiossa-6b30890419a1/index.html": "8437e0da989f416caf2653b87d39a13ccc8e6c7b48b719729215b2e99113b42e",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "965dd1e6dc157481794c59985013b76610fb962ddc2530ffdd04c221d1da289a",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "b892951c18650814dace00538e25b0da530cb77ca123e646c8ddef97ef02d3ad",
     "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "08cbb7420001323cdabad741366246528f631332d02aa2b22c5c9d728d2f8d5c",
     "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "3958cd338f5b7fcf0e3947cffd660b4ae1063b7699c7b7650839a38ab09172f5",
     "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "4f0d105d9ac68312ee3c3d673f5ceb3132271b905a2bfcc83dd38c3d2a9b86fd",
@@ -806,7 +1105,8 @@
     "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "0ed9c572f70390149ba3268249638fa125e890f6e78a2612a325d3230896a030",
     "uutiset/toolonlahden-tulvasuojelutyomaa-palkittiin-helsingissa-c8d9df28ef8c/index.html": "bc791bc4b3afe74d76e2814e3892ead2973a51f1f73fa26c76b9ffcf8d4f9463",
     "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "7c64c9168bc2e77ad28512121b68412643485278e87d1c8371c4b4b5277bdc1f",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "bf349951209162e88c2e50026c1fda82c8a5bc7d884ef16f1d4c26999447fa5c",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukea-kiina-suhdetta-aac41588a8b4/index.html": "e0a5b3bf777b742f42f75eba2d991fa66a977507834fc28cd6a2c0c8497c2248",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "226e60e3973781eea4dcb9a88553b575dc3e0a4dde7999ee5586f577b7cd144e",
     "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "aea49ec34a8b279b87ed9aa08eaf728333b0726484d68034bf14c4b42e3212ea",
     "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "b2290c472df675c9ca25e1b9779544eb9c0508c4ca6bbf62d98d5838e100a22e",
     "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "fd0511e0b48377d0d46cb7b3b9d04eac5546a41c8b5834f50c39ee325c22f34f",
@@ -854,885 +1154,684 @@
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "AI-generoitu kuva: Päällystetty polku kaareutuu vasemmalle, ja sen vieressä on punakeltaiset rakennusesteet sekä keltainen nuolikyltti.",
-      "attempts": 1,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Keltainen uusklassinen rakennus, jossa on valkoisia pylväitä ja koristeellisia yksityiskohtia, kadun varrella on kaksi autoa ja jalankulkija.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
         "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva Länsimäentiellä kulkevasta jalankulun ja pyöräilyn kiertoreitistä, jossa näkyvät kulkuväylä ja työmaan kiertoreittiopasteet.",
+            "depictable_scene": "Todellinen valokuva Valtioneuvoston linnan julkisivusta Helsingin Senaatintorin suunnalta. Rakennus edustaa uutisessa käsiteltyä valtioneuvoston toimintaa; kuva ei esitä lokakuun 2. päivän kokousta eikä väitä sen järjestämispaikkaa.",
             "must_avoid": [
-              "Unrelated roadworks presented as this location",
-              "Motor traffic detour as the main subject"
+              "Fabricated architecture",
+              "Presentation as a photograph of the reported meeting"
             ],
             "must_show": [
-              "Pedestrian and cycle route",
-              "Temporary detour signs"
+              "Actual Government Palace facade in Helsinki"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "Länsimäentie kiertoreitti",
-              "Lemmenkuja Vantaa kiertoreitti",
-              "Länsimäentie pedestrian detour signs",
-              "Länsimäentie jalankulku pyöräily"
+              "Valtioneuvoston linna Helsinki",
+              "Valtioneuvoston linna julkisivu",
+              "Government Palace Helsinki facade"
             ],
-            "subject": "Lemmenkujan kiertoreitti Länsimäentien kautta"
+            "subject": "valtioneuvoston ulko- ja turvallisuuspoliittinen päätöksenteko: Valtioneuvoston linna"
           },
           {
-            "depictable_scene": "Nimeämättömän katutyömaan reunalla tyhjä päällystetty jalankulku- ja pyöräilyväylä kiertää työmaa-aidan. Tilapäinen nuoliopaste osoittaa väylän jatkumissuuntaan. Kuva ei jäljittele Lemmenkujan tai Länsimäentien todellista ympäristöä.",
+            "depictable_scene": "Suomen siniristilippu ja Ukrainan sinikeltaisen kaksivärilippu vierekkäisissä lipputangoissa vaaleaa taivasta vasten. Rajauksessa näkyvät vain liput, tangot ja taivas, ei tunnistettavaa paikkaa tai kokoustilannetta.",
             "must_avoid": [
               "People or body parts",
-              "Invented readable text or logos",
-              "Recognizable recreation of Lemmenkuja or Länsimäentie"
+              "Invented text or logos",
+              "Weapons or combat",
+              "Identifiable meeting venue"
             ],
             "must_show": [
-              "Paved path beside construction barriers",
-              "Temporary directional arrow sign"
+              "Finnish blue-cross flag",
+              "Ukrainian blue-over-yellow flag"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "jalankulun kiertoreitti työmaa",
-              "pyöräilyn kiertoreitti opaste",
-              "pedestrian detour arrow sign",
-              "cycle path construction barriers"
+              "Suomen Ukrainan liput",
+              "Finland Ukraine flags",
+              "Finnish Ukrainian flags flagpoles"
             ],
-            "subject": "Jalankulun ja pyöräilyn kiertoreitti työalueella"
-          },
-          {
-            "depictable_scene": "Nimeämättömällä, tyhjällä katutyömaalla näkyy vastapäällystetty tumma asfalttikaistale reunakiven vieressä ja kaistaleen päässä paikallaan oleva pieni tiejyrä. Ympäristö ei toisinna uutisessa nimettyä työaluetta.",
-            "must_avoid": [
-              "People or body parts",
-              "Invented readable text or logos",
-              "Recognizable recreation of the named worksite",
-              "Major excavation as the main subject"
-            ],
-            "must_show": [
-              "Fresh asphalt beside a curb",
-              "Parked road roller"
-            ],
-            "rank": 3,
-            "safe_to_generate": true,
-            "search_queries": [
-              "katutyömaa tuore asfaltti",
-              "asfaltointi pieni tiejyrä",
-              "fresh asphalt road roller",
-              "asphalt paving curb"
-            ],
-            "subject": "Katutyömaan viimeistely: asfaltointia"
+            "subject": "Suomen ja Ukrainan liput"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "A paved path with a white dividing line curves to the left, bordered by a construction barrier with red and yellow stripes and a yellow arrow sign pointing right. Behind the barrier is a wire fence and a construction site with gravel piles. In the background, there are trees and apartment buildings under an overcast sky.",
-      "generated": true,
-      "license": "AI-generated image",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/29bfd0ea79b04a19e8325820eab389e3d9d9d0acad3118c1c26fb0412f0b3305.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by giggel on Wikimedia Commons",
+      "depicted": "The image shows a large, multi-story building with a yellow facade and white architectural details, including columns and decorative trim. The building features numerous windows, some rectangular and some arched, with dark frames. A prominent section of the building has a portico with tall white columns supporting a triangular pediment. A flagpole extends from the roof near the pediment. In front of the building, there is a street with tram tracks, and two cars are parked on the side of the road",
+      "generated": false,
+      "hotlink": false,
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "local_path": "media/7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697.jpg",
       "pixel_review": {
-        "alt_fi": "Päällystetty polku kaareutuu vasemmalle, ja sen vieressä on punakeltaiset rakennusesteet sekä keltainen nuolikyltti.",
+        "alt_fi": "Keltainen uusklassinen rakennus, jossa on valkoisia pylväitä ja koristeellisia yksityiskohtia, kadun varrella on kaksi autoa ja jalankulkija.",
         "approved": true,
-        "article_text_sha256": "cd964cd1ccfc480465cbca34bc12315b61dadcede214506340d7a26feedb53c6",
-        "concept_sha256": "393e83f33767aba0201207b3e590d54823effc607e44a52a7a04f4ae156a69b7",
-        "description": "A paved path with a white dividing line curves to the left, bordered by a construction barrier with red and yellow stripes and a yellow arrow sign pointing right. Behind the barrier is a wire fence and a construction site with gravel piles. In the background, there are trees and apartment buildings under an overcast sky.",
-        "fit_score": 10,
-        "image_sha256": "29bfd0ea79b04a19e8325820eab389e3d9d9d0acad3118c1c26fb0412f0b3305",
+        "article_text_sha256": "5d171aa8e4e3f16266f5e88f88bd7cff53eed335b8db0c1e6c582576c4eaf4cf",
+        "concept_sha256": "ca6756b4917e793c733641ff303d2a671651738995b4edcdcd02894ec26ded1e",
+        "description": "A large, ornate yellow building with white columns and trim, featuring multiple windows and a prominent central portico with a pediment. Two cars are parked on the street in front of the building, and a person stands on the sidewalk to the right. Tram tracks run in the foreground.",
+        "fit_score": 9,
+        "image_sha256": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
-          true,
           true
         ],
-        "no_people": true,
-        "reason": "The image directly depicts a paved path beside construction barriers and a temporary directional arrow sign, which are the exact elements required by the concept. This strongly illustrates the article's subject of a pedestrian and cycling detour around a construction area.",
-        "reviewed_at": "2026-10-03T13:45:28.591758+00:00",
-        "text_audit": {
-          "examples": [],
-          "readable_text_present": false
-        }
+        "no_people": false,
+        "reason": "The image clearly depicts the facade of the Government Palace in Helsinki, which is the specific building mentioned in the selected concept as representing the government's activities discussed in the article.",
+        "reviewed_at": "2026-10-03T14:22:49.755273+00:00",
+        "source_context": {
+          "image_sha256": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
+          "license": "CC BY 3.0",
+          "license_url": "https://creativecommons.org/licenses/by/3.0",
+          "photo_id": "wikimedia-54756505",
+          "photo_url": "https://commons.wikimedia.org/wiki/File:Helsinki%20-%20Valtioneuvoston%20Linna%20-%20Government%20Palace%20-%20panoramio.jpg",
+          "photographer": "giggel",
+          "provider": "wikimedia",
+          "title": "Helsinki - Valtioneuvoston Linna - Government Palace - panoramio.jpg"
+        },
+        "source_context_sha256": "5fa1dd1cea0f691901b7f2974764ffa3675cc14bc3ee2fdc09c228918471be44"
       },
       "pixels": {
-        "height": 1024,
+        "height": 2787,
         "mode": "RGB",
-        "variance": 4011.6,
-        "width": 1536
+        "variance": 7389.9,
+        "width": 4320
       },
-      "prompt_sha256": "1cc6cb546480b4b7bf1bd771c56f15107ecdd747951a86117bc14a156bd05c0d",
-      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Nimeämättömän katutyömaan reunalla tyhjä päällystetty jalankulku- ja pyöräilyväylä kiertää työmaa-aidan. Tilapäinen nuoliopaste osoittaa väylän jatkumissuuntaan. Kuva ei jäljittele Lemmenkujan tai Länsimäentien todellista ympäristöä.",
-        "matched": [
-          "Paved path beside construction barriers",
-          "Temporary directional arrow sign"
-        ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "evidence": "A large, ornate yellow building with white columns and trim, featuring multiple windows and a prominent central portico with a pediment. Two cars are parked on the street in front of the building, and a person stands on the sidewalk to the right. Tram tracks run in the foreground.",
+        "matched": [],
+        "method": "vision",
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "cd964cd1ccfc480465cbca34bc12315b61dadcede214506340d7a26feedb53c6",
-        "decision_sha256": "a011eb0e5ae362def8df2dcda0945504330b2c09b5002397a0145f1d54419705",
+        "article_text_sha256": "5d171aa8e4e3f16266f5e88f88bd7cff53eed335b8db0c1e6c582576c4eaf4cf",
+        "decision_sha256": "67f486ee54db0c6afdb25e4e39bb06dedc03327d5a16b0612c2ccfb856a6aec0",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Länsimäentie kiertoreitti",
-              "Lemmenkuja Vantaa kiertoreitti",
-              "Länsimäentie pedestrian detour signs"
-            ]
-          },
-          {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "aed9710a24aba97bf2c2ec40139b36353af5020dd4163a7178a37fe062f1c574",
+                "fit_score": 0,
+                "image_sha256": "2c33264ef8141e5a75f706579efa0d7594a31978199604ff04699ab00ae2b89f",
                 "license": "Pexels License",
-                "reason": "The image does not depict a pedestrian and cycle route that is clearly a temporary detour, nor does it show specific temporary detour signs related to roadworks. The signs visible are standard road signs, not temporary detour signage. The text on the archway is not related to the article's subject of Lemmenkuja or Länsimäentie. One or more required",
-                "source_url": "https://www.pexels.com/photo/urban-street-crossing-in-stockholm-sweden-32481110/"
+                "reason": "The article discusses the Finnish Government Palace (Valtioneuvoston linna) in Helsinki. The image shows a large, ornate pink building with towers, but it is not the Government Palace in Helsinki. The architecture and color scheme do not match the actual Government Palace, which is a neoclassical building on Senate Square. Therefore, the image does",
+                "source_url": "https://www.pexels.com/photo/birini-palace-in-latvia-20812853/"
               },
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "dae60d03ee03dc5cfa7ab6de31b23a76c115d35e55f23c677cac38552ca6c920",
+                "fit_score": 0,
+                "image_sha256": "fa95a41fd3bba4f21fe4a62612caf34cfb44481f2e30593b9694ee6d6fab1461",
                 "license": "Pexels License",
-                "reason": "The image shows generic road signs, one of which indicates a pedestrian restriction, and another a right turn. It does not visibly depict a pedestrian and cycle route or temporary detour signs specifically for a detour, nor does it show any identifiable features of Länsimäentie or Lemmenkuja. The signs are not clearly 'detour signs' in the context ",
-                "source_url": "https://www.pexels.com/photo/urban-traffic-signs-in-european-cityscape-33826520/"
+                "reason": "The image depicts a grand building with flags, but it is not the Government Palace in Helsinki. The flags visible are the flag of the United States, the flag of Poland, and the flag of the European Union, none of which are the flag of Finland. The architecture does not match the Government Palace in Helsinki. Therefore, it does not show the 'Actual",
+                "source_url": "https://www.pexels.com/photo/facade-of-a-concrete-building-7252071/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "cb9067a0249fd1fe9740f9dc257456a3b47cc243ded1cae2da5182ffa1d4c5da",
+                "license": "Pexels License",
+                "reason": "The article discusses the Finnish Government Palace and its role in foreign and security policy. The selected concept specifically requires an actual photograph of the Government Palace facade in Helsinki. The visible building in the image is clearly not the Finnish Government Palace; it features Cyrillic script and a flag that is not the flag of F",
+                "source_url": "https://www.pexels.com/photo/imposing-neoclassical-building-in-minsk-belarus-37425925/"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Länsimäentie kiertoreitti",
-              "Lemmenkuja Vantaa kiertoreitti",
-              "Länsimäentie pedestrian detour signs"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "ee15f45a7f66be4f820d62eeeea8bb6ab1c04147d2a000a219c183e42b888476",
-                "license": "Unsplash License",
-                "reason": "The image shows temporary detour signs and a pedestrian route, which aligns with the concept of a pedestrian and cycle route with detour signs. However, the signs are in French, not Finnish, and there is no visible evidence that this is the specific Länsimäentie in Vantaa, Finland, as required by the article. The article is about a specific locatio",
-                "source_url": "https://unsplash.com/photos/construction-signs-reading-trottoir-barre-95Upeu6_6U4?utm_source=uutistenlukija&utm_medium=referral"
-              }
-            ],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Länsimäentie kiertoreitti",
-              "Lemmenkuja Vantaa kiertoreitti",
-              "Länsimäentie pedestrian detour signs"
+              "Valtioneuvoston linna Helsinki",
+              "Valtioneuvoston linna julkisivu",
+              "Government Palace Helsinki facade"
             ]
           },
           {
             "candidates": [],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
-            "provider": "google",
+            "provider": "unsplash",
             "queries": [
-              "Länsimäentie kiertoreitti",
-              "Lemmenkuja Vantaa kiertoreitti",
-              "Länsimäentie pedestrian detour signs"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
+              "Valtioneuvoston linna Helsinki",
+              "Valtioneuvoston linna julkisivu",
+              "Government Palace Helsinki facade"
             ]
           },
           {
             "candidates": [
               {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "dce39c9ac95427895adfa7c92655bb640b26b5ad6cb3c61ae87fd22c11a56b54",
-                "license": "Public domain",
-                "reason": "The image shows a directional sign, but it is not a temporary directional arrow sign for a pedestrian/cycle detour around construction barriers. The sign depicts a winged figure, not a standard pedestrian symbol, and there are no visible construction barriers or a clearly defined paved path for a detour. One or more required concept elements are no",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Angels%20Or%20Demons%20Walk%20Over%20Here.jpg"
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
+                "license": "CC BY 3.0",
+                "reason": "The image clearly depicts the facade of the Government Palace in Helsinki, which is the specific building mentioned in the selected concept as representing the government's activities discussed in the article.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Helsinki%20-%20Valtioneuvoston%20Linna%20-%20Government%20Palace%20-%20panoramio.jpg"
               }
             ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
+            "concept_rank": 1,
+            "outcome": "accepted",
             "provider": "wikimedia",
             "queries": [
-              "jalankulun kiertoreitti työmaa",
-              "pyöräilyn kiertoreitti opaste",
-              "pedestrian detour arrow sign"
+              "Valtioneuvoston linna Helsinki",
+              "Valtioneuvoston linna julkisivu",
+              "Government Palace Helsinki facade"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "7cae956aa95af9e4b1ea2e1afc64ab91e49d2fe43ebae8d5113538db9878f9a5",
+                "fit_score": 7,
+                "image_sha256": "ccae34f7ba486640f6cff9716b0deb4db19f78c9f98ea8107f9cfeae46a0079a",
                 "license": "Pexels License",
-                "reason": "The article discusses a pedestrian and cycling detour around a construction site. The image shows a bicycle sign, which broadly relates to cycling, but it does not depict a paved path beside construction barriers or a temporary directional arrow sign, which are explicit 'must_show' elements for the selected concept. Therefore, it does not fit the s",
-                "source_url": "https://www.pexels.com/photo/illuminated-neon-of-bicycle-14928240/"
+                "reason": "The image shows a blue and yellow flag, which could be interpreted as the Ukrainian flag. However, the concept explicitly requires both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag to be clearly present. The Finnish flag is not visible in the image. Therefore, the image does not fully meet the 'must_show' criteria. One or mor",
+                "source_url": "https://www.pexels.com/photo/an-ukrainian-flag-16926225/"
               },
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "d20993d274a860a8f7a2a56218970878e11b16159e6a0f2a2a2555af60ad29be",
+                "fit_score": 7,
+                "image_sha256": "f231d5f24b67c07d0cf674cdcf1f6b119771fb346cde9b93a0fb8c02f44b3ced",
                 "license": "Pexels License",
-                "reason": "The image shows a temporary directional arrow sign and a newly paved road, which could be part of a construction area. However, it lacks visible construction barriers and a dedicated paved path for pedestrians/cyclists, which are explicit requirements of the concept. The road appears to be for vehicles, not a detour for walking/cycling. One or more",
-                "source_url": "https://www.pexels.com/photo/road-construction-with-directional-sign-29181423/"
+                "reason": "The image shows two blue and yellow flags, which could be interpreted as Ukrainian flags. However, the concept explicitly requires both a Finnish blue-cross flag and a Ukrainian blue-over-yellow flag. The Finnish flag is not present in the image, making it an incomplete fit for the selected concept. One or more required concept elements are not vis",
+                "source_url": "https://www.pexels.com/photo/cloudy-sky-over-swaying-flags-11932845/"
               },
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "3e228d4bd5b7738e26289daa6300af28a22f050faa31c1720c957f638a5f6fd1",
+                "fit_score": 7,
+                "image_sha256": "cfedd90b9aee79f2b417b0df788e5448f8ac504fcf7ebf8d62cf59e2a8801bc7",
                 "license": "Pexels License",
-                "reason": "The image shows a temporary directional arrow sign on a fence, which could be interpreted as a construction barrier. However, there is no paved path beside the fence, which is a required element for the concept. The surface in front of the fence appears to be an unpaved area or parking lot, not a designated pedestrian/cycle path. One or more requir",
-                "source_url": "https://www.pexels.com/photo/directional-sign-on-a-wooden-fence-in-amarillo-39203042/"
+                "reason": "The image shows a blue and yellow flag, which matches the description of the Ukrainian flag in the concept. However, it does not show the Finnish blue-cross flag, which is a required element in the 'must_show' list. Therefore, the image does not fully match the selected concept. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/ukraine-flag-under-the-blue-sky-13156971/"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "jalankulun kiertoreitti työmaa",
-              "pyöräilyn kiertoreitti opaste",
-              "pedestrian detour arrow sign"
+              "Suomen Ukrainan liput",
+              "Finland Ukraine flags",
+              "Finnish Ukrainian flags flagpoles"
             ]
           },
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "1ab5ac93edf4b475dc5f37b76650fa476c90db7f3fb4ac971cdfc8f809fac353",
+                "license": "Unsplash License",
+                "reason": "The article discusses Finland's support for Ukraine and its relationship with China. The selected concept specifically requires both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag to be present. The image only shows a blue and yellow flag, which is consistent with the Ukrainian flag, but the Finnish flag is entirely absent. The",
+                "source_url": "https://unsplash.com/photos/blue-and-yellow-striped-country-flag-qbc3Zmxw0G8?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "47eb3ef7ebd950c71e46410cbf2c5b21a7b40a9615752c982a2c5aead4b48a0d",
+                "license": "Unsplash License",
+                "reason": "The article discusses Finland's support for Ukraine. The selected concept requires both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag to be visible. This image only shows the Ukrainian flag, therefore it does not meet the 'must_show' criteria for the Finnish flag. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/a-blue-and-yellow-flag-flying-in-the-wind-IS1cdsWuVGA?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "53eaa5295a23b2563e479403a235c597b2822d7f4b919fc2bef3f51442e64cad",
+                "license": "Unsplash License",
+                "reason": "The image shows a blue and yellow flag, which matches the description of the Ukrainian flag. However, the selected concept explicitly requires both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag to be present. The Finnish flag is entirely absent from the visible pixels, leading to a failure to meet a 'must_show' requirement. On",
+                "source_url": "https://unsplash.com/photos/a-blue-and-yellow-flag-flying-in-the-sky-zS-ee-D4v2o?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "e45635dbdf93472f161965acbc2a46eb86f67815da117b0183c89877944d26e9",
+                "license": "Unsplash License",
+                "reason": "The article discusses Finland's support for Ukraine. The selected concept requires both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag to be visible. This image only shows a blue and yellow flag, which is consistent with the Ukrainian flag, but the Finnish flag is absent. Therefore, the image does not fully meet the requirement",
+                "source_url": "https://unsplash.com/photos/a-blue-and-yellow-flag-on-a-flagpole-toZ_svRsxw8?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "jalankulun kiertoreitti työmaa",
-              "pyöräilyn kiertoreitti opaste",
-              "pedestrian detour arrow sign"
+              "Suomen Ukrainan liput",
+              "Finland Ukraine flags",
+              "Finnish Ukrainian flags flagpoles"
             ]
           },
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "ff923e1058e522ce85418f5f99cb6729d45ef5f42acaf684048f6b3cf9450cd2",
+                "license": "CC BY 4.0",
+                "reason": "The image clearly depicts both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag, which are central to the selected concept and directly relevant to the article's discussion of Finland's support for Ukraine.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Liputus%20Suomen%20ja%20Ukrainan%20lipuilla%2024.2.2026%20(55113318416).jpg"
+              }
+            ],
             "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "jalankulun kiertoreitti työmaa",
-              "pyöräilyn kiertoreitti opaste",
-              "pedestrian detour arrow sign"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "accepted",
             "provider": "wikimedia",
             "queries": [
-              "katutyömaa tuore asfaltti",
-              "asfaltointi pieni tiejyrä",
-              "fresh asphalt road roller"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "5c64f964212b721e806c81f245cdc77c1aeab7074c88ad2be0cfadc867f97bb1",
-                "license": "Pexels License",
-                "reason": "The article discusses road work, specifically asphalt paving and street light installation, on Lemmenkuja. The selected concept describes a road construction site with fresh asphalt and a parked road roller. The image shows a paved road through a forest, but there is no visible evidence of ongoing or recent road work, no fresh asphalt beside a curb",
-                "source_url": "https://www.pexels.com/photo/photo-of-roadway-in-between-green-trees-14420645/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "50915fe50d6ac09045824b7bfa7a898ea43643db8c94033aaf7e2487ca4c5431",
-                "license": "Pexels License",
-                "reason": "The image shows an asphalt paving operation with an asphalt paver and a road roller, which aligns with the article's mention of asphalting work. However, the concept specifically requires 'fresh asphalt beside a curb' and a 'parked road roller'. While a road roller is present, it is actively involved in paving, not parked. There is also no clearly ",
-                "source_url": "https://www.pexels.com/photo/from-above-of-repair-of-road-at-night-4394364/"
-              },
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "a436810f2668c1d4a346c9bc2af23b9729f8df2c84a2ace8e8081db076254c90",
-                "license": "Pexels License",
-                "reason": "The image shows cracked asphalt, which is not 'fresh asphalt beside a curb' and there is no 'parked road roller' visible. Therefore, it does not meet the 'must_show' criteria of the selected concept. The article discusses asphalt paving and street lighting installation, but this image depicts damaged asphalt, not new construction or finishing work.",
-                "source_url": "https://www.pexels.com/photo/cracked-asphalt-surface-in-black-and-white-33421226/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "e81fa963489f113c3ef783913153e175149be63f4cdd066367d1eb0886a9c17d",
-                "license": "Pexels License",
-                "reason": "The image shows fresh asphalt and a road roller, which aligns with the 'must_show' elements. However, the concept specifies a 'parked road roller' and the image clearly shows a person operating the roller, making it not parked. Additionally, the concept specifies 'no people' in 'must_avoid', but a person is prominently featured operating the machin",
-                "source_url": "https://www.pexels.com/photo/construction-worker-operating-road-roller-near-building-37496805/"
-              }
-            ],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "katutyömaa tuore asfaltti",
-              "asfaltointi pieni tiejyrä",
-              "fresh asphalt road roller"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "f739a1a57835641007fd84ad81f83b2f81071dbd961ffff6304c7be6cea1d87e",
-                "license": "Unsplash License",
-                "reason": "The image shows a parked road roller, which aligns with the 'Parked road roller' must_show element. However, it lacks 'Fresh asphalt beside a curb', which is a required element for approval. The ground around the roller appears to be dirt or gravel, not fresh asphalt. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/a-large-yellow-vehicle-on-a-road-H9WfniKLz-o?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "a87bb9391f7f515a89f2a58d11c73a12d90f7311377c9c37eab3cbfb9c1ebc45",
-                "license": "Unsplash License",
-                "reason": "The image shows a road roller and fresh asphalt, which aligns with the 'Parked road roller' and 'Fresh asphalt beside a curb' must-show elements. However, the concept explicitly states 'Nimeämättömällä, tyhjällä katutyömaalla näkyy... paikallaan oleva pieni tiejyrä' (On an unnamed, empty road construction site... a small road roller in place). The ",
-                "source_url": "https://unsplash.com/photos/yellow-and-black-heavy-equipment-on-road-during-daytime-_P-hKe5H_o4?utm_source=uutistenlukija&utm_medium=referral"
-              }
-            ],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "katutyömaa tuore asfaltti",
-              "asfaltointi pieni tiejyrä",
-              "fresh asphalt road roller"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "katutyömaa tuore asfaltti",
-              "asfaltointi pieni tiejyrä",
-              "fresh asphalt road roller"
+              "Suomen Ukrainan liput",
+              "Finland Ukraine flags",
+              "Finnish Ukrainian flags flagpoles"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 2,
-          "fit_score": 10,
-          "image_sha256": "29bfd0ea79b04a19e8325820eab389e3d9d9d0acad3118c1c26fb0412f0b3305",
-          "kind": "generated"
+          "concept_rank": 1,
+          "fit_score": 9,
+          "image_sha256": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
+          "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "29bfd0ea79b04a19e8325820eab389e3d9d9d0acad3118c1c26fb0412f0b3305",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "Jalankulun ja pyöräilyn kiertoreitti työalueella",
-      "url": "https://uutistenlukija.fi/media/29bfd0ea79b04a19e8325820eab389e3d9d9d0acad3118c1c26fb0412f0b3305.jpg"
+      "sha256": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Helsinki%20-%20Valtioneuvoston%20Linna%20-%20Government%20Palace%20-%20panoramio.jpg",
+      "stock_provenance": {
+        "attribution": {
+          "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
+          "source_credit": "giggel",
+          "title": "Helsinki - Valtioneuvoston Linna - Government Palace - panoramio.jpg"
+        },
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Helsinki_-_Valtioneuvoston_Linna_-_Government_Palace_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "photo_id": "wikimedia-54756505",
+        "photo_url": "https://commons.wikimedia.org/wiki/File:Helsinki%20-%20Valtioneuvoston%20Linna%20-%20Government%20Palace%20-%20panoramio.jpg",
+        "photographer": "giggel",
+        "photographer_url": "https://commons.wikimedia.org/wiki/File:Helsinki%20-%20Valtioneuvoston%20Linna%20-%20Government%20Palace%20-%20panoramio.jpg",
+        "provider": "wikimedia",
+        "query": "Valtioneuvoston linna Helsinki",
+        "retrieved_at": "2026-10-03T14:22:47Z"
+      },
+      "stock_provenance_sha256": "e6772a404db9a8be4897e5f171231c7ff99b98b3dcb2575e11b14807441c1ed6",
+      "url": "https://uutistenlukija.fi/media/7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "vantaa",
-      "related_sources": 0,
-      "source_fields_sha256": "9bcdf1a811788a7eea63204e464b64ab6054f9a90f391c87287f330a4881ed9e",
-      "source_sha256": "2459555bb6a76c78167978b71a74cc5b71f933add206e5bad152b604d54c8439"
+      "provider": "valtioneuvosto",
+      "related_sources": 1,
+      "source_fields_sha256": "097ac17677ee4a8cdb6b4448da03587f16ef5be388ff91a4a5258cbdc21a428c",
+      "source_sha256": "1bdcc153d53fa2aa9f6cf7994b0aa51ef7713fb79cc91ceccf7260c7fb3b348a"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-10-02T00:00:00+03:00",
-        "publisher": "Vantaan kaupunki",
+        "published_at": "2026-10-02T09:37+0300",
+        "publisher": "Valtioneuvoston kanslia",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
-          "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://hri.fi/fi/kayttoehdot/"
+          "license": "Valtioneuvoston sivuston käyttöehdot: tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan; aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen",
+          "license_url": "https://valtioneuvosto.fi/tietoa-sivustosta",
+          "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
+          "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
         },
-        "text": "Työalueella toteutetaan asfaltointia sekä katuvalaisimien asennuksia. Jalankulku ja pyöräily on ohjattu kiertoreitille Länsimäentien kautta, ja reitti on merkitty maastoon opastein. Pahoittelemme työstä aiheutuvaa haittaa ja kiitämme alueella liikkuvia kärsivällisyydestä töiden loppuunsaattamisen ajan.\nSuosittelemme sinulle myös\nVantaan ratikka\nRaitiotien rakentaminen Hakunilasta Fazerilaan\nAvainsanat\nRatikka\nRatikka Kuninkaala - Mellunmäki\n…\nShow all keywords",
-        "title": "Lemmenkujan rakennustyöt viimeistelyvaiheessa, kiertoreitti käytössä vielä viikon 41",
-        "url": "https://www.vantaa.fi/fi/ajankohtaista/uutinen/lemmenkujan-rakennustyot-viimeistelyvaiheessa-kiertoreitti-kaytossa-viela-viikon-41"
+        "text": "TP-UTVA:ssa esillä Ukrainan ajankohtainen tilanne ja Suomen suhde Kiinaan\nvaltioneuvoston kanslia\nJulkaisuajankohta\n2.10.2026\n9.37\nTyyppi:Tiedote\nTasavallan presidentti ja valtioneuvoston ulko- ja turvallisuuspoliittinen ministerivaliokunta keskustelivat perjantaina 2. lokakuuta Ukrainan ajankohtaisesta tilanteesta ja tarpeesta jatkaa vahvaa tukea Ukrainalle sekä lisätä painetta Venäjää kohtaan.\nTP-UTVA keskusteli myös Kiinan globaalista roolista ja Suomen Kiina-suhteesta. Kiina on Suomelle merkittävä kauppakumppani, mutta ponnisteluja kauppasuhteen epätasapainon ja riippuvuuksien vähentämiseksi tulee jatkaa. Kiinan tuki Venäjän hyökkäyssodalle heijastuu kahdenväliseen suhteeseemme ja vaikuttaa negatiivisesti Euroopan turvallisuuteen.\nLisäksi TP-UTVA sai katsauksen lokakuun Eurooppa-neuvoston ulko- ja turvallisuuspoliittisista kysymyksistä.\nLisäksi TP-Utva keskusteli kansanedustajien turvallisuuteen liittyvistä havainnoista. Kuten eduskunta tiedotteessaan totesi, esitutkinnasta tiedottaa poliisi.\nLisätietoja: Osastopäällikkö Petri Hakkarainen, p. 0295 351 130, ulkoministeriö\nValtioneuvoston sähköpostiosoitteet ovat muotoa [email protected].",
+        "title": "TP-UTVA:ssa esillä Ukrainan ajankohtainen tilanne ja Suomen suhde Kiinaan",
+        "url": "https://valtioneuvosto.fi/-/tp-utva-ssa-esilla-ukrainan-ajankohtainen-tilanne-ja-suomen-suhde-kiinaan"
+      },
+      {
+        "id": "B",
+        "published_at": "2026-10-02T06:47:40+00:00",
+        "publisher": "presidentti.fi",
+        "related": true,
+        "text": "Etusivu / Ajankohtaista / … TP-UTVA:ssa esillä Ukrainan ajankohtainen tilanne ja Suomen suhde Kiinaan Tiedotteet 2.10.2026 Jaa Valtioneuvoston viestintäosasto 2.10.2026 Tiedote Tasavallan presidentti ja valtioneuvoston ulko- ja turvallisuuspoliittinen ministerivaliokunta keskustelivat perjantaina 2. lokakuuta Ukrainan ajankohtaisesta tilanteesta ja tarpeesta jatkaa vahvaa tukea Ukrainalle sekä lisätä painetta Venäjää kohtaan. TP-UTVA keskusteli myös Kiinan globaalista roolista ja Suomen Kiina-suhteesta. Kiina on Suomelle merkittävä kauppakumppani, mutta ponnisteluja kauppasuhteen epätasapainon ja riippuvuuksien vähentämiseksi tulee jatkaa. Kiinan tuki Venäjän hyökkäyssodalle heijastuu kahdenväliseen suhteeseemme ja vaikuttaa negatiivisesti Euroopan turvallisuuteen. Lisäksi TP-UTVA sai katsauksen lokakuun Eurooppa-neuvoston ulko- ja turvallisuuspoliittisista kysymyksistä. Lisäksi TP-Utva keskusteli kansanedustajien turvallisuuteen liittyvistä havainnoista. Kuten eduskunta tiedotteessaan totesi, esitutkinnasta tiedottaa poliisi. Lisätietoja: Osastopäällikkö Petri Hakkarainen, p. 0295 351 130, ulkoministeriö Lisää uutisia Lisää uutisia Moldovan presidentti Maia Sandu vieraili Suomessa Uutiset 2.10.2026 Lue lisää: Moldovan presidentti Maia Sandu vieraili Suomessa TP-UTVA:ssa esillä Ukrainan ajankohtainen tilanne ja Suomen suhde Kiinaan Tiedotteet 2.10.2026 Lue lisää: TP-UTVA:ssa esillä Ukrainan ajankohtainen tilanne ja Suomen suhde Kiinaan",
+        "title": "TP-UTVA:ssa esillä Ukrainan ajankohtainen tilanne ja Suomen ...",
+        "url": "https://www.presidentti.fi/tp-utvassa-esilla-ukrainan-ajankohtainen-tilanne-ja-suomen-suhde-kiinaan/"
       }
     ],
-    "story_key": "url:https://www.vantaa.fi/fi/ajankohtaista/uutinen/lemmenkujan-rakennustyot-viimeistelyvaiheessa-kiertoreitti-kaytossa-viela-viikon-41",
+    "story_key": "url:https://valtioneuvosto.fi/-/tp-utva-ssa-esilla-ukrainan-ajankohtainen-tilanne-ja-suomen-suhde-kiinaan",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-10-03T13:40:21.888058+00:00",
-        "sha256": "6973538e83c5b0aced65918a14ab4e872bff99da2aadbe2b576e5be324c25b87",
-        "text": "Käyttöoikeus määritellyin ehdoin hyödynnettävissä. Datan käytön lisäksi Palvelussa on mahdollisuus keskusteluun.\nKäyttöoikeus\nPalvelu sisältää dataa useasta eri lähteestä: julkisyhteisöjen tuottamia datoja ja niiden metatietoja, Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja ja Palvelun ylläpitäjien tuottamia artikkeleja ja muita kirjoituksia. Pääsääntöisesti näihin kaikkiin on laaja käyttöoikeus Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Poikkeukset on kerrottu erikseen kunkin aineiston kohdalla.\nAvoin data\nPalvelussa olevien datojen (tietoaineistojen) omistus- ja immateriaalioikeudet kuuluvat kunkin datan tekijälle.\nPääsääntöisesti Palvelun käyttäjillä on laaja käyttöoikeus datoihin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Datoja saa vapaasti kopioida, levittää, näyttää ja esittää sekä käyttää datoja osana muuta teosta. Datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin.\nEhtona käytölle on, että datan tekijä (ylläpitäjä) on ilmoitettava. Datan tekijän pyynnöstä tämä viittaus on poistettava. Datan tekijä on kerrottu kunkin datan metadatassa.\nDatan tekijää ei saa ilmoittaa siten, että ilmoitus viittaisi datan tekijän tai Palvelun tukevan datan käyttäjää tai datan käyttötapaa.\nDatojen metatietojen yhteydessä on mainittu kyseisen datan käyttöoikeusehdot. Joissakin tapauksissa käyttöoikeusehdot voivat poiketa yllä mainitusta.\nKeskustelu\nPalvelun käyttäjät voivat keskusteluosiossa lisätä sivuille kirjoituksia ja kommentoida toisten käyttäjien kirjoituksia. Palvelun käyttäjä antaa kirjoituksiinsa ja kommentteihinsa vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nMikäli käyttäjä liittää kirjoitukseensa tai kommenttiinsa kuvia, tulee hänellä olla tekijänoikeudet kuvaan. Lisäksi hänellä tulee olla kuvassa esiintyvien henkilöiden lupa kuvan julkaisemiseen internetissä. Palvelun käyttäjä antaa kuviin vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nKeskustelun tulee olla hyvän tavan ja Suomen lainsäädännön mukaista. Käyttäjät ovat vastuussa lisäämistään kirjoituksista ja kommenteista.\nKaikenlainen mainonta keskustelussa on kielletty.\nPalvelun tarjoajat voivat tarvittaessa muokata kirjoituksia ja kommentteja sekä poistaa hyvän tavan tai lainsäädännön vastaisia tai muutoin sopimattomia kirjoituksia.\nMikäli käyttäjä havaitsee käyttöehtojen vastaisia kirjoituksia, pyydetään tästä ilmoittamaan ylläpidolle.\nToistuva käyttöehtojen rikkominen tai niiden vakava rikkominen voi johtaa väliaikaiseen tai pysyvään Palvelun käyttöoikeuden peruuttamiseen.\nSovellusgalleria\nSovellusgalleriassa esitellyt sovellukset eivät ole HRI:n tekemiä ja niiden tekijänoikeudet kuuluvat sovellusten tekijöille. Creative Commons 4.0 -lisenssi ei koske sovelluksia, eikä niitä ole lupa vapaasti kopioida, levittää, muokata tai yhdistellä, ellei erikseen sovelluksen kohdalla ole toisin mainittu tai sovelluksen tekijä muutoin ole tähän antanut lupaa.\nMuut palvelussa olevat kirjoitukset\nPalvelun tuottajien Palvelussa julkaisemien kirjoitusten, kuten artikkelien ja blogikirjoitusten omistus- ja tekijänoikeudet kuuluvat niiden kirjoittajille. Palvelun käyttäjillä on laaja käyttöoikeus näihin kirjoituksiin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nPalvelun ulkoasu, tekninen toteutus, tavaramerkit ja logot\nPalvelun teknisen toteutuksen lähdekoodit on saatavilla avoimesti GitHubista. Palvelun kopiointi sellaisenaan on kielletty. Palvelussa esiintyvien tavaramerkkien ja logojen tavaramerkkioikeudet kuuluvat niiden oikeudenhaltijoille. Mikäli tavaramerkkien ja logojen muu käyttö on sallittu, on tästä ja käytön ehdoista ilmoitettu ko. tavaramerkkien ja logojen kohdalla.\nTietosuoja\nhri.fi-palvelua ylläpitää Helsingin kaupunki. Kaupunki on sitoutunut suojaamaan verkkopalveluidensa käyttäjien yksityisyyttä Tietosuojalain (2018), EU:n tietosuoja-asetuksen (2016/679) sekä muun soveltuvan lainsäädännön mukaisesti.\nHelsingin kaupungin tietosuojasivut\nVastuuvapaus\nPalvelu sisältää sekä julkisyhteisöjen tuottamaa avointa dataa ja metadataa että Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja. Palvelun tarjoajat eivät vastaa Palvelussa olevien tietojen oikeellisuudesta. Palvelun käyttäjä käyttää Palvelussa olevaa avointa dataa omalla vastuullaan. Palvelun tarjoajat eivät vastaa mistään välittömistä tai välillisistä vahingoista, jotka aiheutuvat datan käytöstä. ",
-        "url": "https://hri.fi/fi/kayttoehdot/"
+        "retrieved_at": "2026-10-03T14:20:20.887314+00:00",
+        "sha256": "fb7ea78fb3226f58143c5885cbd8ef4514c7feb30316807a41b3114e9a6d3ab2",
+        "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
+        "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
       }
     ]
   },
   "draft": {
     "category": "Kotimaa",
     "image": {
-      "alt": "AI-generoitu kuva: Päällystetty polku kaareutuu vasemmalle, ja sen vieressä on punakeltaiset rakennusesteet sekä keltainen nuolikyltti.",
-      "attempts": 1,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Keltainen uusklassinen rakennus, jossa on valkoisia pylväitä ja koristeellisia yksityiskohtia, kadun varrella on kaksi autoa ja jalankulkija.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
         "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva Länsimäentiellä kulkevasta jalankulun ja pyöräilyn kiertoreitistä, jossa näkyvät kulkuväylä ja työmaan kiertoreittiopasteet.",
+            "depictable_scene": "Todellinen valokuva Valtioneuvoston linnan julkisivusta Helsingin Senaatintorin suunnalta. Rakennus edustaa uutisessa käsiteltyä valtioneuvoston toimintaa; kuva ei esitä lokakuun 2. päivän kokousta eikä väitä sen järjestämispaikkaa.",
             "must_avoid": [
-              "Unrelated roadworks presented as this location",
-              "Motor traffic detour as the main subject"
+              "Fabricated architecture",
+              "Presentation as a photograph of the reported meeting"
             ],
             "must_show": [
-              "Pedestrian and cycle route",
-              "Temporary detour signs"
+              "Actual Government Palace facade in Helsinki"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "Länsimäentie kiertoreitti",
-              "Lemmenkuja Vantaa kiertoreitti",
-              "Länsimäentie pedestrian detour signs",
-              "Länsimäentie jalankulku pyöräily"
+              "Valtioneuvoston linna Helsinki",
+              "Valtioneuvoston linna julkisivu",
+              "Government Palace Helsinki facade"
             ],
-            "subject": "Lemmenkujan kiertoreitti Länsimäentien kautta"
+            "subject": "valtioneuvoston ulko- ja turvallisuuspoliittinen päätöksenteko: Valtioneuvoston linna"
           },
           {
-            "depictable_scene": "Nimeämättömän katutyömaan reunalla tyhjä päällystetty jalankulku- ja pyöräilyväylä kiertää työmaa-aidan. Tilapäinen nuoliopaste osoittaa väylän jatkumissuuntaan. Kuva ei jäljittele Lemmenkujan tai Länsimäentien todellista ympäristöä.",
+            "depictable_scene": "Suomen siniristilippu ja Ukrainan sinikeltaisen kaksivärilippu vierekkäisissä lipputangoissa vaaleaa taivasta vasten. Rajauksessa näkyvät vain liput, tangot ja taivas, ei tunnistettavaa paikkaa tai kokoustilannetta.",
             "must_avoid": [
               "People or body parts",
-              "Invented readable text or logos",
-              "Recognizable recreation of Lemmenkuja or Länsimäentie"
+              "Invented text or logos",
+              "Weapons or combat",
+              "Identifiable meeting venue"
             ],
             "must_show": [
-              "Paved path beside construction barriers",
-              "Temporary directional arrow sign"
+              "Finnish blue-cross flag",
+              "Ukrainian blue-over-yellow flag"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "jalankulun kiertoreitti työmaa",
-              "pyöräilyn kiertoreitti opaste",
-              "pedestrian detour arrow sign",
-              "cycle path construction barriers"
+              "Suomen Ukrainan liput",
+              "Finland Ukraine flags",
+              "Finnish Ukrainian flags flagpoles"
             ],
-            "subject": "Jalankulun ja pyöräilyn kiertoreitti työalueella"
-          },
-          {
-            "depictable_scene": "Nimeämättömällä, tyhjällä katutyömaalla näkyy vastapäällystetty tumma asfalttikaistale reunakiven vieressä ja kaistaleen päässä paikallaan oleva pieni tiejyrä. Ympäristö ei toisinna uutisessa nimettyä työaluetta.",
-            "must_avoid": [
-              "People or body parts",
-              "Invented readable text or logos",
-              "Recognizable recreation of the named worksite",
-              "Major excavation as the main subject"
-            ],
-            "must_show": [
-              "Fresh asphalt beside a curb",
-              "Parked road roller"
-            ],
-            "rank": 3,
-            "safe_to_generate": true,
-            "search_queries": [
-              "katutyömaa tuore asfaltti",
-              "asfaltointi pieni tiejyrä",
-              "fresh asphalt road roller",
-              "asphalt paving curb"
-            ],
-            "subject": "Katutyömaan viimeistely: asfaltointia"
+            "subject": "Suomen ja Ukrainan liput"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "A paved path with a white dividing line curves to the left, bordered by a construction barrier with red and yellow stripes and a yellow arrow sign pointing right. Behind the barrier is a wire fence and a construction site with gravel piles. In the background, there are trees and apartment buildings under an overcast sky.",
-      "generated": true,
-      "license": "AI-generated image",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/29bfd0ea79b04a19e8325820eab389e3d9d9d0acad3118c1c26fb0412f0b3305.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by giggel on Wikimedia Commons",
+      "depicted": "The image shows a large, multi-story building with a yellow facade and white architectural details, including columns and decorative trim. The building features numerous windows, some rectangular and some arched, with dark frames. A prominent section of the building has a portico with tall white columns supporting a triangular pediment. A flagpole extends from the roof near the pediment. In front of the building, there is a street with tram tracks, and two cars are parked on the side of the road",
+      "generated": false,
+      "hotlink": false,
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "local_path": "media/7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697.jpg",
       "pixel_review": {
-        "alt_fi": "Päällystetty polku kaareutuu vasemmalle, ja sen vieressä on punakeltaiset rakennusesteet sekä keltainen nuolikyltti.",
+        "alt_fi": "Keltainen uusklassinen rakennus, jossa on valkoisia pylväitä ja koristeellisia yksityiskohtia, kadun varrella on kaksi autoa ja jalankulkija.",
         "approved": true,
-        "article_text_sha256": "cd964cd1ccfc480465cbca34bc12315b61dadcede214506340d7a26feedb53c6",
-        "concept_sha256": "393e83f33767aba0201207b3e590d54823effc607e44a52a7a04f4ae156a69b7",
-        "description": "A paved path with a white dividing line curves to the left, bordered by a construction barrier with red and yellow stripes and a yellow arrow sign pointing right. Behind the barrier is a wire fence and a construction site with gravel piles. In the background, there are trees and apartment buildings under an overcast sky.",
-        "fit_score": 10,
-        "image_sha256": "29bfd0ea79b04a19e8325820eab389e3d9d9d0acad3118c1c26fb0412f0b3305",
+        "article_text_sha256": "5d171aa8e4e3f16266f5e88f88bd7cff53eed335b8db0c1e6c582576c4eaf4cf",
+        "concept_sha256": "ca6756b4917e793c733641ff303d2a671651738995b4edcdcd02894ec26ded1e",
+        "description": "A large, ornate yellow building with white columns and trim, featuring multiple windows and a prominent central portico with a pediment. Two cars are parked on the street in front of the building, and a person stands on the sidewalk to the right. Tram tracks run in the foreground.",
+        "fit_score": 9,
+        "image_sha256": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
-          true,
           true
         ],
-        "no_people": true,
-        "reason": "The image directly depicts a paved path beside construction barriers and a temporary directional arrow sign, which are the exact elements required by the concept. This strongly illustrates the article's subject of a pedestrian and cycling detour around a construction area.",
-        "reviewed_at": "2026-10-03T13:45:28.591758+00:00",
-        "text_audit": {
-          "examples": [],
-          "readable_text_present": false
-        }
+        "no_people": false,
+        "reason": "The image clearly depicts the facade of the Government Palace in Helsinki, which is the specific building mentioned in the selected concept as representing the government's activities discussed in the article.",
+        "reviewed_at": "2026-10-03T14:22:49.755273+00:00",
+        "source_context": {
+          "image_sha256": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
+          "license": "CC BY 3.0",
+          "license_url": "https://creativecommons.org/licenses/by/3.0",
+          "photo_id": "wikimedia-54756505",
+          "photo_url": "https://commons.wikimedia.org/wiki/File:Helsinki%20-%20Valtioneuvoston%20Linna%20-%20Government%20Palace%20-%20panoramio.jpg",
+          "photographer": "giggel",
+          "provider": "wikimedia",
+          "title": "Helsinki - Valtioneuvoston Linna - Government Palace - panoramio.jpg"
+        },
+        "source_context_sha256": "5fa1dd1cea0f691901b7f2974764ffa3675cc14bc3ee2fdc09c228918471be44"
       },
       "pixels": {
-        "height": 1024,
+        "height": 2787,
         "mode": "RGB",
-        "variance": 4011.6,
-        "width": 1536
+        "variance": 7389.9,
+        "width": 4320
       },
-      "prompt_sha256": "1cc6cb546480b4b7bf1bd771c56f15107ecdd747951a86117bc14a156bd05c0d",
-      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Nimeämättömän katutyömaan reunalla tyhjä päällystetty jalankulku- ja pyöräilyväylä kiertää työmaa-aidan. Tilapäinen nuoliopaste osoittaa väylän jatkumissuuntaan. Kuva ei jäljittele Lemmenkujan tai Länsimäentien todellista ympäristöä.",
-        "matched": [
-          "Paved path beside construction barriers",
-          "Temporary directional arrow sign"
-        ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "evidence": "A large, ornate yellow building with white columns and trim, featuring multiple windows and a prominent central portico with a pediment. Two cars are parked on the street in front of the building, and a person stands on the sidewalk to the right. Tram tracks run in the foreground.",
+        "matched": [],
+        "method": "vision",
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "cd964cd1ccfc480465cbca34bc12315b61dadcede214506340d7a26feedb53c6",
-        "decision_sha256": "a011eb0e5ae362def8df2dcda0945504330b2c09b5002397a0145f1d54419705",
+        "article_text_sha256": "5d171aa8e4e3f16266f5e88f88bd7cff53eed335b8db0c1e6c582576c4eaf4cf",
+        "decision_sha256": "67f486ee54db0c6afdb25e4e39bb06dedc03327d5a16b0612c2ccfb856a6aec0",
         "minimum_real_fit": 8,
         "searches": [
           {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Länsimäentie kiertoreitti",
-              "Lemmenkuja Vantaa kiertoreitti",
-              "Länsimäentie pedestrian detour signs"
-            ]
-          },
-          {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "aed9710a24aba97bf2c2ec40139b36353af5020dd4163a7178a37fe062f1c574",
+                "fit_score": 0,
+                "image_sha256": "2c33264ef8141e5a75f706579efa0d7594a31978199604ff04699ab00ae2b89f",
                 "license": "Pexels License",
-                "reason": "The image does not depict a pedestrian and cycle route that is clearly a temporary detour, nor does it show specific temporary detour signs related to roadworks. The signs visible are standard road signs, not temporary detour signage. The text on the archway is not related to the article's subject of Lemmenkuja or Länsimäentie. One or more required",
-                "source_url": "https://www.pexels.com/photo/urban-street-crossing-in-stockholm-sweden-32481110/"
+                "reason": "The article discusses the Finnish Government Palace (Valtioneuvoston linna) in Helsinki. The image shows a large, ornate pink building with towers, but it is not the Government Palace in Helsinki. The architecture and color scheme do not match the actual Government Palace, which is a neoclassical building on Senate Square. Therefore, the image does",
+                "source_url": "https://www.pexels.com/photo/birini-palace-in-latvia-20812853/"
               },
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "dae60d03ee03dc5cfa7ab6de31b23a76c115d35e55f23c677cac38552ca6c920",
+                "fit_score": 0,
+                "image_sha256": "fa95a41fd3bba4f21fe4a62612caf34cfb44481f2e30593b9694ee6d6fab1461",
                 "license": "Pexels License",
-                "reason": "The image shows generic road signs, one of which indicates a pedestrian restriction, and another a right turn. It does not visibly depict a pedestrian and cycle route or temporary detour signs specifically for a detour, nor does it show any identifiable features of Länsimäentie or Lemmenkuja. The signs are not clearly 'detour signs' in the context ",
-                "source_url": "https://www.pexels.com/photo/urban-traffic-signs-in-european-cityscape-33826520/"
+                "reason": "The image depicts a grand building with flags, but it is not the Government Palace in Helsinki. The flags visible are the flag of the United States, the flag of Poland, and the flag of the European Union, none of which are the flag of Finland. The architecture does not match the Government Palace in Helsinki. Therefore, it does not show the 'Actual",
+                "source_url": "https://www.pexels.com/photo/facade-of-a-concrete-building-7252071/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "cb9067a0249fd1fe9740f9dc257456a3b47cc243ded1cae2da5182ffa1d4c5da",
+                "license": "Pexels License",
+                "reason": "The article discusses the Finnish Government Palace and its role in foreign and security policy. The selected concept specifically requires an actual photograph of the Government Palace facade in Helsinki. The visible building in the image is clearly not the Finnish Government Palace; it features Cyrillic script and a flag that is not the flag of F",
+                "source_url": "https://www.pexels.com/photo/imposing-neoclassical-building-in-minsk-belarus-37425925/"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Länsimäentie kiertoreitti",
-              "Lemmenkuja Vantaa kiertoreitti",
-              "Länsimäentie pedestrian detour signs"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "ee15f45a7f66be4f820d62eeeea8bb6ab1c04147d2a000a219c183e42b888476",
-                "license": "Unsplash License",
-                "reason": "The image shows temporary detour signs and a pedestrian route, which aligns with the concept of a pedestrian and cycle route with detour signs. However, the signs are in French, not Finnish, and there is no visible evidence that this is the specific Länsimäentie in Vantaa, Finland, as required by the article. The article is about a specific locatio",
-                "source_url": "https://unsplash.com/photos/construction-signs-reading-trottoir-barre-95Upeu6_6U4?utm_source=uutistenlukija&utm_medium=referral"
-              }
-            ],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Länsimäentie kiertoreitti",
-              "Lemmenkuja Vantaa kiertoreitti",
-              "Länsimäentie pedestrian detour signs"
+              "Valtioneuvoston linna Helsinki",
+              "Valtioneuvoston linna julkisivu",
+              "Government Palace Helsinki facade"
             ]
           },
           {
             "candidates": [],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
-            "provider": "google",
+            "provider": "unsplash",
             "queries": [
-              "Länsimäentie kiertoreitti",
-              "Lemmenkuja Vantaa kiertoreitti",
-              "Länsimäentie pedestrian detour signs"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
+              "Valtioneuvoston linna Helsinki",
+              "Valtioneuvoston linna julkisivu",
+              "Government Palace Helsinki facade"
             ]
           },
           {
             "candidates": [
               {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "dce39c9ac95427895adfa7c92655bb640b26b5ad6cb3c61ae87fd22c11a56b54",
-                "license": "Public domain",
-                "reason": "The image shows a directional sign, but it is not a temporary directional arrow sign for a pedestrian/cycle detour around construction barriers. The sign depicts a winged figure, not a standard pedestrian symbol, and there are no visible construction barriers or a clearly defined paved path for a detour. One or more required concept elements are no",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Angels%20Or%20Demons%20Walk%20Over%20Here.jpg"
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
+                "license": "CC BY 3.0",
+                "reason": "The image clearly depicts the facade of the Government Palace in Helsinki, which is the specific building mentioned in the selected concept as representing the government's activities discussed in the article.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Helsinki%20-%20Valtioneuvoston%20Linna%20-%20Government%20Palace%20-%20panoramio.jpg"
               }
             ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
+            "concept_rank": 1,
+            "outcome": "accepted",
             "provider": "wikimedia",
             "queries": [
-              "jalankulun kiertoreitti työmaa",
-              "pyöräilyn kiertoreitti opaste",
-              "pedestrian detour arrow sign"
+              "Valtioneuvoston linna Helsinki",
+              "Valtioneuvoston linna julkisivu",
+              "Government Palace Helsinki facade"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "7cae956aa95af9e4b1ea2e1afc64ab91e49d2fe43ebae8d5113538db9878f9a5",
+                "fit_score": 7,
+                "image_sha256": "ccae34f7ba486640f6cff9716b0deb4db19f78c9f98ea8107f9cfeae46a0079a",
                 "license": "Pexels License",
-                "reason": "The article discusses a pedestrian and cycling detour around a construction site. The image shows a bicycle sign, which broadly relates to cycling, but it does not depict a paved path beside construction barriers or a temporary directional arrow sign, which are explicit 'must_show' elements for the selected concept. Therefore, it does not fit the s",
-                "source_url": "https://www.pexels.com/photo/illuminated-neon-of-bicycle-14928240/"
+                "reason": "The image shows a blue and yellow flag, which could be interpreted as the Ukrainian flag. However, the concept explicitly requires both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag to be clearly present. The Finnish flag is not visible in the image. Therefore, the image does not fully meet the 'must_show' criteria. One or mor",
+                "source_url": "https://www.pexels.com/photo/an-ukrainian-flag-16926225/"
               },
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "d20993d274a860a8f7a2a56218970878e11b16159e6a0f2a2a2555af60ad29be",
+                "fit_score": 7,
+                "image_sha256": "f231d5f24b67c07d0cf674cdcf1f6b119771fb346cde9b93a0fb8c02f44b3ced",
                 "license": "Pexels License",
-                "reason": "The image shows a temporary directional arrow sign and a newly paved road, which could be part of a construction area. However, it lacks visible construction barriers and a dedicated paved path for pedestrians/cyclists, which are explicit requirements of the concept. The road appears to be for vehicles, not a detour for walking/cycling. One or more",
-                "source_url": "https://www.pexels.com/photo/road-construction-with-directional-sign-29181423/"
+                "reason": "The image shows two blue and yellow flags, which could be interpreted as Ukrainian flags. However, the concept explicitly requires both a Finnish blue-cross flag and a Ukrainian blue-over-yellow flag. The Finnish flag is not present in the image, making it an incomplete fit for the selected concept. One or more required concept elements are not vis",
+                "source_url": "https://www.pexels.com/photo/cloudy-sky-over-swaying-flags-11932845/"
               },
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "3e228d4bd5b7738e26289daa6300af28a22f050faa31c1720c957f638a5f6fd1",
+                "fit_score": 7,
+                "image_sha256": "cfedd90b9aee79f2b417b0df788e5448f8ac504fcf7ebf8d62cf59e2a8801bc7",
                 "license": "Pexels License",
-                "reason": "The image shows a temporary directional arrow sign on a fence, which could be interpreted as a construction barrier. However, there is no paved path beside the fence, which is a required element for the concept. The surface in front of the fence appears to be an unpaved area or parking lot, not a designated pedestrian/cycle path. One or more requir",
-                "source_url": "https://www.pexels.com/photo/directional-sign-on-a-wooden-fence-in-amarillo-39203042/"
+                "reason": "The image shows a blue and yellow flag, which matches the description of the Ukrainian flag in the concept. However, it does not show the Finnish blue-cross flag, which is a required element in the 'must_show' list. Therefore, the image does not fully match the selected concept. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/ukraine-flag-under-the-blue-sky-13156971/"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "jalankulun kiertoreitti työmaa",
-              "pyöräilyn kiertoreitti opaste",
-              "pedestrian detour arrow sign"
+              "Suomen Ukrainan liput",
+              "Finland Ukraine flags",
+              "Finnish Ukrainian flags flagpoles"
             ]
           },
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "1ab5ac93edf4b475dc5f37b76650fa476c90db7f3fb4ac971cdfc8f809fac353",
+                "license": "Unsplash License",
+                "reason": "The article discusses Finland's support for Ukraine and its relationship with China. The selected concept specifically requires both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag to be present. The image only shows a blue and yellow flag, which is consistent with the Ukrainian flag, but the Finnish flag is entirely absent. The",
+                "source_url": "https://unsplash.com/photos/blue-and-yellow-striped-country-flag-qbc3Zmxw0G8?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "47eb3ef7ebd950c71e46410cbf2c5b21a7b40a9615752c982a2c5aead4b48a0d",
+                "license": "Unsplash License",
+                "reason": "The article discusses Finland's support for Ukraine. The selected concept requires both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag to be visible. This image only shows the Ukrainian flag, therefore it does not meet the 'must_show' criteria for the Finnish flag. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/a-blue-and-yellow-flag-flying-in-the-wind-IS1cdsWuVGA?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "53eaa5295a23b2563e479403a235c597b2822d7f4b919fc2bef3f51442e64cad",
+                "license": "Unsplash License",
+                "reason": "The image shows a blue and yellow flag, which matches the description of the Ukrainian flag. However, the selected concept explicitly requires both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag to be present. The Finnish flag is entirely absent from the visible pixels, leading to a failure to meet a 'must_show' requirement. On",
+                "source_url": "https://unsplash.com/photos/a-blue-and-yellow-flag-flying-in-the-sky-zS-ee-D4v2o?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "e45635dbdf93472f161965acbc2a46eb86f67815da117b0183c89877944d26e9",
+                "license": "Unsplash License",
+                "reason": "The article discusses Finland's support for Ukraine. The selected concept requires both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag to be visible. This image only shows a blue and yellow flag, which is consistent with the Ukrainian flag, but the Finnish flag is absent. Therefore, the image does not fully meet the requirement",
+                "source_url": "https://unsplash.com/photos/a-blue-and-yellow-flag-on-a-flagpole-toZ_svRsxw8?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "jalankulun kiertoreitti työmaa",
-              "pyöräilyn kiertoreitti opaste",
-              "pedestrian detour arrow sign"
+              "Suomen Ukrainan liput",
+              "Finland Ukraine flags",
+              "Finnish Ukrainian flags flagpoles"
             ]
           },
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "ff923e1058e522ce85418f5f99cb6729d45ef5f42acaf684048f6b3cf9450cd2",
+                "license": "CC BY 4.0",
+                "reason": "The image clearly depicts both the Finnish blue-cross flag and the Ukrainian blue-over-yellow flag, which are central to the selected concept and directly relevant to the article's discussion of Finland's support for Ukraine.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Liputus%20Suomen%20ja%20Ukrainan%20lipuilla%2024.2.2026%20(55113318416).jpg"
+              }
+            ],
             "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "jalankulun kiertoreitti työmaa",
-              "pyöräilyn kiertoreitti opaste",
-              "pedestrian detour arrow sign"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "accepted",
             "provider": "wikimedia",
             "queries": [
-              "katutyömaa tuore asfaltti",
-              "asfaltointi pieni tiejyrä",
-              "fresh asphalt road roller"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "5c64f964212b721e806c81f245cdc77c1aeab7074c88ad2be0cfadc867f97bb1",
-                "license": "Pexels License",
-                "reason": "The article discusses road work, specifically asphalt paving and street light installation, on Lemmenkuja. The selected concept describes a road construction site with fresh asphalt and a parked road roller. The image shows a paved road through a forest, but there is no visible evidence of ongoing or recent road work, no fresh asphalt beside a curb",
-                "source_url": "https://www.pexels.com/photo/photo-of-roadway-in-between-green-trees-14420645/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "50915fe50d6ac09045824b7bfa7a898ea43643db8c94033aaf7e2487ca4c5431",
-                "license": "Pexels License",
-                "reason": "The image shows an asphalt paving operation with an asphalt paver and a road roller, which aligns with the article's mention of asphalting work. However, the concept specifically requires 'fresh asphalt beside a curb' and a 'parked road roller'. While a road roller is present, it is actively involved in paving, not parked. There is also no clearly ",
-                "source_url": "https://www.pexels.com/photo/from-above-of-repair-of-road-at-night-4394364/"
-              },
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "a436810f2668c1d4a346c9bc2af23b9729f8df2c84a2ace8e8081db076254c90",
-                "license": "Pexels License",
-                "reason": "The image shows cracked asphalt, which is not 'fresh asphalt beside a curb' and there is no 'parked road roller' visible. Therefore, it does not meet the 'must_show' criteria of the selected concept. The article discusses asphalt paving and street lighting installation, but this image depicts damaged asphalt, not new construction or finishing work.",
-                "source_url": "https://www.pexels.com/photo/cracked-asphalt-surface-in-black-and-white-33421226/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "e81fa963489f113c3ef783913153e175149be63f4cdd066367d1eb0886a9c17d",
-                "license": "Pexels License",
-                "reason": "The image shows fresh asphalt and a road roller, which aligns with the 'must_show' elements. However, the concept specifies a 'parked road roller' and the image clearly shows a person operating the roller, making it not parked. Additionally, the concept specifies 'no people' in 'must_avoid', but a person is prominently featured operating the machin",
-                "source_url": "https://www.pexels.com/photo/construction-worker-operating-road-roller-near-building-37496805/"
-              }
-            ],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "katutyömaa tuore asfaltti",
-              "asfaltointi pieni tiejyrä",
-              "fresh asphalt road roller"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "f739a1a57835641007fd84ad81f83b2f81071dbd961ffff6304c7be6cea1d87e",
-                "license": "Unsplash License",
-                "reason": "The image shows a parked road roller, which aligns with the 'Parked road roller' must_show element. However, it lacks 'Fresh asphalt beside a curb', which is a required element for approval. The ground around the roller appears to be dirt or gravel, not fresh asphalt. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/a-large-yellow-vehicle-on-a-road-H9WfniKLz-o?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "a87bb9391f7f515a89f2a58d11c73a12d90f7311377c9c37eab3cbfb9c1ebc45",
-                "license": "Unsplash License",
-                "reason": "The image shows a road roller and fresh asphalt, which aligns with the 'Parked road roller' and 'Fresh asphalt beside a curb' must-show elements. However, the concept explicitly states 'Nimeämättömällä, tyhjällä katutyömaalla näkyy... paikallaan oleva pieni tiejyrä' (On an unnamed, empty road construction site... a small road roller in place). The ",
-                "source_url": "https://unsplash.com/photos/yellow-and-black-heavy-equipment-on-road-during-daytime-_P-hKe5H_o4?utm_source=uutistenlukija&utm_medium=referral"
-              }
-            ],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "katutyömaa tuore asfaltti",
-              "asfaltointi pieni tiejyrä",
-              "fresh asphalt road roller"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 3,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "katutyömaa tuore asfaltti",
-              "asfaltointi pieni tiejyrä",
-              "fresh asphalt road roller"
+              "Suomen Ukrainan liput",
+              "Finland Ukraine flags",
+              "Finnish Ukrainian flags flagpoles"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 2,
-          "fit_score": 10,
-          "image_sha256": "29bfd0ea79b04a19e8325820eab389e3d9d9d0acad3118c1c26fb0412f0b3305",
-          "kind": "generated"
+          "concept_rank": 1,
+          "fit_score": 9,
+          "image_sha256": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
+          "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "29bfd0ea79b04a19e8325820eab389e3d9d9d0acad3118c1c26fb0412f0b3305",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "Jalankulun ja pyöräilyn kiertoreitti työalueella",
-      "url": "https://uutistenlukija.fi/media/29bfd0ea79b04a19e8325820eab389e3d9d9d0acad3118c1c26fb0412f0b3305.jpg"
+      "sha256": "7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Helsinki%20-%20Valtioneuvoston%20Linna%20-%20Government%20Palace%20-%20panoramio.jpg",
+      "stock_provenance": {
+        "attribution": {
+          "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
+          "source_credit": "giggel",
+          "title": "Helsinki - Valtioneuvoston Linna - Government Palace - panoramio.jpg"
+        },
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Helsinki_-_Valtioneuvoston_Linna_-_Government_Palace_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "photo_id": "wikimedia-54756505",
+        "photo_url": "https://commons.wikimedia.org/wiki/File:Helsinki%20-%20Valtioneuvoston%20Linna%20-%20Government%20Palace%20-%20panoramio.jpg",
+        "photographer": "giggel",
+        "photographer_url": "https://commons.wikimedia.org/wiki/File:Helsinki%20-%20Valtioneuvoston%20Linna%20-%20Government%20Palace%20-%20panoramio.jpg",
+        "provider": "wikimedia",
+        "query": "Valtioneuvoston linna Helsinki",
+        "retrieved_at": "2026-10-03T14:22:47Z"
+      },
+      "stock_provenance_sha256": "e6772a404db9a8be4897e5f171231c7ff99b98b3dcb2575e11b14807441c1ed6",
+      "url": "https://uutistenlukija.fi/media/7f4bf4c44ee9a1faa265aa9821e3c5098bde992048b0206dd7cc68f048cb0697.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
-          "A"
+          "A",
+          "B"
         ],
-        "text": "Lemmenkujan työalueella tehdään vielä asfaltointia ja asennetaan katuvalaisimia, Vantaan kaupunki kertoo 2. lokakuuta julkaisemassaan tiedotteessa."
+        "text": "Tasavallan presidentti ja valtioneuvoston ulko- ja turvallisuuspoliittinen ministerivaliokunta keskustelivat perjantaina 2. lokakuuta Ukrainan tilanteesta. Valtioneuvoston tiedotteen mukaan keskustelussa oli tarve jatkaa vahvaa tukea Ukrainalle ja kasvattaa Venäjään kohdistuvaa painetta. Tiedotteessa ei kerrota uusista tukitoimista tai päätöksistä."
       },
       {
         "source_ids": [
-          "A"
+          "A",
+          "B"
         ],
-        "text": "Kaupungin mukaan jalankulun ja pyöräilyn kiertoreitti kulkee Länsimäentien kautta ja on merkitty opastein. Kiertoreitti on tiedotteen mukaan käytössä vielä viikon 41."
+        "text": "Kiinan maailmanlaajuista roolia ja Suomen Kiina-suhdetta käsiteltäessä tiedotteessa kuvataan Kiinaa merkittäväksi kauppakumppaniksi. Samalla siinä todetaan, että kauppasuhteen epätasapainon ja riippuvuuksien vähentämistä on jatkettava. Tiedotteen mukaan Kiinan tuki Venäjän hyökkäyssodalle vaikuttaa Suomen ja Kiinan suhteeseen sekä heikentää Euroopan turvallisuutta."
+      },
+      {
+        "source_ids": [
+          "A",
+          "B"
+        ],
+        "text": "TP-UTVA sai myös katsauksen lokakuun Eurooppa-neuvoston ulko- ja turvallisuuspoliittisiin kysymyksiin sekä keskusteli kansanedustajien turvallisuutta koskevista havainnoista. Havaintojen sisältöä ei avata tiedotteessa, joka viittaa eduskunnan ilmoitukseen siitä, että esitutkinnasta tiedottaa poliisi."
       }
     ],
-    "summary": "Vantaan kaupungin mukaan Lemmenkujan rakennustyöt ovat viimeistelyvaiheessa, mutta jalankulkijat ja pyöräilijät ohjataan edelleen Länsimäentien kautta vielä viikon 41 ajan.",
-    "title": "Lemmenkujan kiertoreitti käytössä vielä viikon 41"
+    "summary": "Suomen ulko- ja turvallisuusjohto keskusteli Ukrainan tukemisen jatkamisesta ja Venäjään kohdistuvan paineen lisäämisestä. Valtioneuvoston tiedotteessa nostetaan esiin myös tarve vähentää Kiina-kaupan epätasapainoa ja riippuvuuksia.",
+    "title": "TP-UTVA käsitteli Ukrainan tukea ja Kiina-suhdetta"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "1fcba3eca43b94de51e4565ae9bc6f7af82455fbdd39936ab1476b091d2252ed",
+    "draft_sha256": "b8d14eb4477e2b1554a1e9a2b63ab9c9dc0b0b84fd7ae40e2e916eeaa7537f6e",
     "reasons": [
-      "Otsikko on 49 merkkiä eli alle 60 merkin tavoitteen. Tärkein asia, Lemmenkujan kiertoreitin jatkuminen, on alussa. Lähteen A otsikko tukee sekä viimeistelyvaihetta että kiertoreitin käyttöä vielä viikon 41 ajan.",
-      "Lähteen A tekstikatkelma tukee ensimmäisen kappaleen asfaltointia ja katuvalaisimien asentamista sekä toisen kappaleen jalankulun ja pyöräilyn ohjaamista Länsimäentien kautta opastein merkitylle kiertoreitille. Molempien kappaleiden source_ids-merkintä A on oikea. Julkaisupäivä 2. lokakuuta vastaa lähteen A published_at-tietoa.",
-      "Ingressi vastaa lähteen A otsikkoa ja tekstikatkelmaa. Kaupungin ilmoitukset on tekstissä osoitettu kaupungin tiedoiksi, eikä niille väitetä riippumatonta vahvistusta. Vuoden 2026 lokakuun 2. päivänä julkaistu tiedote on arviointipäivään 3. lokakuuta nähden ajankohtainen; luonnos ei keksi kiertoreitin päättymispäivää tai töiden valmistumisaikaa.",
-      "Yksi suoraan asiaa koskeva kaupungin tiedote riittää tähän rajattuun liikennejärjestelyuutiseen. Teksti on neutraalia, ymmärrettävää ja tiivistetty omin sanoin. Kotimaa-luokitus sopii paikalliseen uutiseen, eikä Vantaan ilmoitusta laajenneta valtakunnalliseksi väitteeksi. RIGHTS-asiakirjaa ei käytetä uutisväitteiden tai kuvan oikeuksien todisteena.",
-      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Kolme järjestettyä kuvakonseptia ja haut jokaiselle on dokumentoitu. Generoitu kuva käyttää korkeimmalle sijoitettua turvallisesti generoitavaa konseptia 2: päällystettyä kiertoväylää, työmaaesteitä ja tilapäistä nuoliopastetta. Erillisen arviointimallin pikseliarvio on sidottu valitun kuvan SHA-256-tunnisteeseen ja artikkelitekstin tunnisteeseen; siinä sopivuus on 10/10 eikä havaita ihmisiä tai luettavaa tekstiä. Kuvateksti on täsmälleen ”AI-generoitu kuva. Ei valokuva tapahtumasta.”, eikä kuvitusta esitetä aitona kuvana Lemmenkujalta. Hyväksyntä perustuu toimitettuun aineistoon, ei kuvan tai lähteen ulkoiseen varmennukseen."
+      "Otsikko on 50 merkkiä eli alle 60 merkin tavoitteen. Se aloittaa uutisen toimijasta ja kertoo keskeiset käsittelyaiheet. Otsikon ja ingressin väitteitä Ukrainan tuesta, Venäjään kohdistuvan paineen lisäämisestä ja Kiina-kaupan epätasapainon sekä riippuvuuksien vähentämisestä tukevat A ja B.",
+      "Kaikkien kolmen kappaleen source_ids-merkinnät A ja B ovat asianmukaiset. Molemmat katkelmat tukevat kokouksen toimijoita, perjantain 2.10.2026 ajankohtaa, Ukraina- ja Kiina-aiheita, lokakuun Eurooppa-neuvoston katsausta sekä kansanedustajien turvallisuutta koskevien havaintojen käsittelyä. Katkelmissa ei kerrota uusista tukipäätöksistä eikä avata turvallisuushavaintojen sisältöä, kuten luonnos toteaa.",
+      "B julkaisee saman valtioneuvoston tiedotteen kuin A eikä ole riippumaton vahvistus. Luonnos ei väitä lähteitä riippumattomiksi, vaan nimeää tiedotteen väitteiden perustaksi. Erityisesti Kiinan Venäjä-tuen vaikutukset kahdenvälisiin suhteisiin ja Euroopan turvallisuuteen esitetään tiedotteen arviona. Arkaluonteisista turvallisuushavainnoista ei lisätä henkilöitä, tapahtumia tai epäilyjä koskevia päätelmiä.",
+      "Lähteet on julkaistu 2.10.2026, joten ne ovat arviointipäivänä 3.10.2026 ajankohtaiset. Teksti on itsenäisesti tiivistettyä, neutraalia suomea, ja Kotimaa-luokka sopii Suomen valtionjohdon toimintaan. Mukana ei ole perusteettomia alueellisia yleistyksiä, ristiriitaisia lukuja tai lähteiden ulkopuolisia syy-seurausväitteitä. RIGHTS koskee tekstin käyttöehtoja, ei uutisväitteiden vahvistamista tai tämän kuvan oikeuksia.",
+      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Kuvakohtainen Wikimedia Commons -alkuperätieto yksilöi Valtioneuvoston linnan kuvan, kuvaajan giggel ja CC BY 3.0 -lisenssin linkkeineen; oikeusnäyttö ei perustu pelkkään yleiseen lisenssimainintaan. Kaksi järjestettyä kuvakonseptia ja haut kummallekin on dokumentoitu. Valitun kuvan tarkkoihin pikseleihin ja artikkelitekstiin sidottu arvio on 9/10. Tunnistettu Valtioneuvoston linna liittyy artikkelin nimenomaiseen valtioneuvostotoimijaan, ei vain yleiseen paikkaan tai uutiskategoriaan. Arkistokuvamerkintä ei väitä kuvaa 2.10.2026 kokouksesta tai sen tapahtumapaikasta; kuvateksti ja vaihtoehtoinen teksti ovat annetun kuvan kuvauksen mukaiset."
     ]
   }
 }
