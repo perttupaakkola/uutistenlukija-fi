@@ -4,303 +4,38 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "d3fd223a418fe7698da53c7774dff65a4f293486",
-  "job_id": "41eea6aee980c2c529d895880ce8921a18eae25a2246fa7422fbc678592539f5",
-  "packet_sha256": "d657cb687921267575b4ef2d2193cd8aa6134d5bf59a8e1d5da30b1e61df3eba",
-  "draft_sha256": "bc10ed3110f8fd7e4b8b546edf3fa45a9e93be06289811f7c67b8252f2591e55",
-  "image_sha256": "266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d",
+  "job_id": "743604e52b6d76f8901f65a664cca36a88323534b4ac431f54383742012b002c",
+  "packet_sha256": "cb39c152a076dfba5710dc636a8a03f455265f5ca18cd02efc07e23f7bd466af",
+  "draft_sha256": "41cac7bdb8fe823630b16c4fde73c43b7e3579b1096d01b4bad1bfc2aca137c7",
+  "image_sha256": "eb447af356216b92ecdd16567f459dcb24771b41f4409f6ba1b2ce8317e6f5de",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "c8a63b7e520215a083de620221fe146d39aa5558e22d299187685530e3cb133b"
-  },
-  "stock_image": {
-    "alt": "Arkistokuva: Suuren kivirakennuksen julkisivu, jossa on useita korkeita pylväitä ja ikkunoita, sekä leveät kiviset portaat.",
-    "caption": "Arkistokuva artikkelin aiheesta.",
-    "classifier_output": {
-      "category": "Kotimaa",
-      "concepts": [
-        {
-          "depictable_scene": "Todellinen valokuva Petteri Orposta eduskunnassa puhumassa toimittajien mikrofoneihin. Ensisijaisesti haetaan artikkelissa mainitun 2. lokakuuta annetun haastattelun kuvaa, vaihtoehtoisesti muuta todellista haastattelukuvaa ilman väitettä samasta tilanteesta.",
-          "must_avoid": [
-            "Fabricated likeness or reconstructed meeting",
-            "Presenting an unrelated photograph as the October 2 interview"
-          ],
-          "must_show": [
-            "Petteri Orpo",
-            "Press microphones"
-          ],
-          "rank": 1,
-          "safe_to_generate": false,
-          "search_queries": [
-            "Petteri Orpo eduskunta haastattelu",
-            "Petteri Orpo microphones",
-            "Petteri Orpo 2.10.2026 Yle"
-          ],
-          "subject": "Pääministeri Petteri Orpo kommentoimassa kansanedustajien turvallisuutta"
-        },
-        {
-          "depictable_scene": "Todellinen ulkokuva Eduskuntatalon pääsisäänkäynnistä Helsingissä: näkyvissä rakennuksen pylväät ja sisäänkäynnille johtavat portaat.",
-          "must_avoid": [
-            "Invented architecture",
-            "Police cordons or an ongoing security incident"
-          ],
-          "must_show": [
-            "Actual Finnish Parliament House",
-            "Entrance and steps"
-          ],
-          "rank": 2,
-          "safe_to_generate": false,
-          "search_queries": [
-            "Eduskuntatalo pääsisäänkäynti",
-            "Eduskuntatalo Helsinki portaat",
-            "Finnish Parliament House entrance"
-          ],
-          "subject": "eduskunta ja kansanedustajien turvallisuus"
-        },
-        {
-          "depictable_scene": "Lähikuva tavallisen, yksilöimättömän asunnon hieman raollaan olevasta ulko-ovesta sisäpuolelta. Oven kahva ja ehjä lukko näkyvät, eikä kuvassa ole ihmisiä tai tunnistettavaa osoitetta.",
-          "must_avoid": [
-            "People or body parts",
-            "Forced-entry damage or burglary tools",
-            "Identifiable home, address or readable text"
-          ],
-          "must_show": [
-            "Slightly ajar apartment entrance door",
-            "Intact door lock"
-          ],
-          "rank": 3,
-          "safe_to_generate": true,
-          "search_queries": [
-            "asunnon ovi raollaan",
-            "apartment door ajar",
-            "intact apartment door lock"
-          ],
-          "subject": "Asunnon ovi ja tunkeutumisepäilyjen taustalla olevat havainnot"
-        }
-      ],
-      "version": "article-first-v1"
-    },
-    "credit": "Photo by Paul G on Pexels",
-    "depicted": "The image shows a large, classical-style building with a facade dominated by numerous tall, light-colored columns. Between the columns, there are multiple rows of windows with dark frames and reflective glass. The building has a stone-like texture. Below the building, a wide set of stone steps descends towards the foreground. A group of approximately ten people is walking in a line across the lower part of the steps, from left to right. One person, wearing a bright yellow or green high-visibilit",
-    "generated": false,
-    "hotlink": false,
-    "license": "Pexels License",
-    "license_evidence": {
-      "image_path": "/photos/13787785/pexels-photo-13787785.jpeg",
-      "license": "Pexels License",
-      "license_code": "Pexels",
-      "license_url": "https://www.pexels.com/license/",
-      "photo_id": "13787785",
-      "photo_url": "https://www.pexels.com/photo/facade-of-the-parliament-house-helsinki-finland-13787785/",
-      "photographer": "Paul G",
-      "photographer_url": "https://www.pexels.com/@polodo",
-      "response_sha256": "57fb006e26e0cc89efbc5944aba88837e046b419a98d10269ae814901db3d2d9",
-      "retrieved_at": "2026-10-03T17:25:13.479368+00:00",
-      "transport": "jina_reader",
-      "version": 1
-    },
-    "license_url": "https://www.pexels.com/license/",
-    "local_path": "media/266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d.jpg",
-    "pixel_review": {
-      "alt_fi": "Suuren kivirakennuksen julkisivu, jossa on useita korkeita pylväitä ja ikkunoita, sekä leveät kiviset portaat.",
-      "approved": true,
-      "article_text_sha256": "1643d45f3a0fd80e97b334598e2c44e0a029ecb256319350bc80ab140227b157",
-      "concept_sha256": "f287b97fa21f2b3b232dc6e458d771faa703fe391639e339d5cc81bb000ee3c2",
-      "description": "The image shows the front facade of a large stone building with numerous tall columns and windows. A wide set of stone steps leads up to the entrance. Several people are walking on the steps, and one person in a high-visibility vest is seated on the steps.",
-      "fit_score": 10,
-      "image_sha256": "266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d",
-      "model": "google:gemini-2.5-flash",
-      "must_show_visible": [
-        true,
-        true
-      ],
-      "no_people": false,
-      "reason": "The image clearly depicts the Finnish Parliament House, including its main entrance and the steps leading up to it, which directly matches the selected concept. The article discusses the security of members of parliament, making the Parliament House a highly relevant subject.",
-      "reviewed_at": "2026-10-03T17:25:15.311834+00:00"
-    },
-    "pixels": {
-      "height": 616,
-      "mode": "RGB",
-      "variance": 5155.8,
-      "width": 940
-    },
-    "relevance_check": {
-      "accepted": true,
-      "evidence": "The image shows the front facade of a large stone building with numerous tall columns and windows. A wide set of stone steps leads up to the entrance. Several people are walking on the steps, and one person in a high-visibility vest is seated on the steps.",
-      "matched": [
-        "entrance",
-        "steps"
-      ],
-      "method": "vision",
-      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
-    },
-    "selection_evidence": {
-      "article_text_sha256": "1643d45f3a0fd80e97b334598e2c44e0a029ecb256319350bc80ab140227b157",
-      "decision_sha256": "f09861aa16e3751ed54079f47497ca54c84754ad614646ac3759ec763e6762fb",
-      "minimum_real_fit": 8,
-      "searches": [
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "34d80ba04ab73717f6ce6498ce2ad8ccc5ad9793f5886050cd36d7110b22480f",
-              "license": "Pexels License",
-              "reason": "The article discusses Prime Minister Petteri Orpo's comments on the security of Members of Parliament, specifically mentioning an interview given to Yle. The selected concept requires a photograph of Petteri Orpo speaking into press microphones. While the image shows microphones, it does not show Petteri Orpo, making it irrelevant to the specific s",
-              "source_url": "https://www.pexels.com/photo/low-angle-shot-of-condenser-microphones-7450049/"
-            },
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "1fc9636cacaa589d2f81800b6e3dd13a4a68e727b5a1199de134ad20a5da574a",
-              "license": "Pexels License",
-              "reason": "The image shows press microphones, which is one of the 'must_show' elements. However, the other 'must_show' element, 'Petteri Orpo', is entirely absent from the image. The article discusses Petteri Orpo's comments on security, and the concept specifically requests a photo of him speaking to microphones. Since Petteri Orpo is not visible, the image ",
-              "source_url": "https://www.pexels.com/photo/podcast-studio-setup-with-microphones-32007691/"
-            }
-          ],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "pexels",
-          "queries": [
-            "Petteri Orpo eduskunta haastattelu",
-            "Petteri Orpo microphones",
-            "Petteri Orpo 2.10.2026 Yle"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "unsplash",
-          "queries": [
-            "Petteri Orpo eduskunta haastattelu",
-            "Petteri Orpo microphones",
-            "Petteri Orpo 2.10.2026 Yle"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": true,
-              "fit_score": 9,
-              "image_sha256": "f5ffcead332b2184c6f704aa038a25c8c625d6b40f6087b40d6defa81362afc3",
-              "license": "CC BY 2.0",
-              "reason": "The image clearly shows Petteri Orpo speaking at a press conference with multiple microphones, which directly matches the selected concept of 'Petteri Orpo eduskunnassa puhumassa toimittajien mikrofoneihin' and the 'must_show' elements. While the exact date of the interview (October 2) cannot be verified from the pixels, it is a credible concrete i",
-              "source_url": "https://commons.wikimedia.org/wiki/File:Hallitusneuvottelut%202023%202023-05-02%2001.jpg"
-            }
-          ],
-          "concept_rank": 1,
-          "outcome": "accepted",
-          "provider": "wikimedia",
-          "queries": [
-            "Petteri Orpo eduskunta haastattelu",
-            "Petteri Orpo microphones",
-            "Petteri Orpo 2.10.2026 Yle"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": true,
-              "fit_score": 10,
-              "image_sha256": "266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d",
-              "license": "Pexels License",
-              "reason": "The image clearly depicts the Finnish Parliament House, including its main entrance and the steps leading up to it, which directly matches the selected concept. The article discusses the security of members of parliament, making the Parliament House a highly relevant subject.",
-              "source_url": "https://www.pexels.com/photo/facade-of-the-parliament-house-helsinki-finland-13787785/"
-            }
-          ],
-          "concept_rank": 2,
-          "outcome": "accepted",
-          "provider": "pexels",
-          "queries": [
-            "Eduskuntatalo pääsisäänkäynti",
-            "Eduskuntatalo Helsinki portaat",
-            "Finnish Parliament House entrance"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "64e492cd39924d1f2d4767ee6f14f3f3271cb98aa44879e5a9232e6e334e4642",
-              "license": "Pexels License",
-              "reason": "The article discusses suspicions of unauthorized entry into MPs' homes, with observations like an open door or lights left on. The selected concept specifically requests a slightly ajar apartment entrance door with an intact lock. The provided image shows a closed, modern door with decorative elements, not an ajar door, and therefore does not match",
-              "source_url": "https://www.pexels.com/photo/door-with-decorative-green-plants-7227640/"
-            },
-            {
-              "approved": false,
-              "fit_score": 7,
-              "image_sha256": "1867db97c11a299abb0af86a2a15ce52d2b3a860d8f7b7621441ffea30a98463",
-              "license": "Pexels License",
-              "reason": "The image directly depicts a slightly ajar door and an intact lock, which aligns with the article's theme of suspected unauthorized entries into homes where no forced entry or theft occurred, but observations like an open door raised suspicions. The image avoids showing people, identifiable addresses, or damage, fitting the 'must_avoid' criteria. R",
-              "source_url": "https://www.pexels.com/photo/a-room-with-white-wooden-door-5743149/"
-            },
-            {
-              "approved": true,
-              "fit_score": 10,
-              "image_sha256": "f3872973fb0d2ce01fc4674c7df94bfac81ba441781ea239088b4c21b5968289",
-              "license": "Pexels License",
-              "reason": "The image directly depicts a slightly ajar door with an intact lock, which aligns perfectly with the article's mention of 'avoimeksi jäänyt ovi' (an open door) and the concept's requirement for a 'slightly ajar apartment entrance door' and 'intact door lock'. There are no people, identifiable addresses, or signs of forced entry, adhering to the 'mu",
-              "source_url": "https://www.pexels.com/photo/close-up-of-rustic-wooden-door-handle-36163644/"
-            }
-          ],
-          "concept_rank": 3,
-          "outcome": "accepted",
-          "provider": "pexels",
-          "queries": [
-            "asunnon ovi raollaan",
-            "apartment door ajar",
-            "intact apartment door lock"
-          ]
-        }
-      ],
-      "selected": {
-        "concept_rank": 2,
-        "fit_score": 10,
-        "image_sha256": "266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d",
-        "kind": "real"
-      },
-      "version": "article-first-v1"
-    },
-    "sha256": "266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d",
-    "source_url": "https://www.pexels.com/photo/facade-of-the-parliament-house-helsinki-finland-13787785/",
-    "stock_provenance": {
-      "image_url": "https://images.pexels.com/photos/13787785/pexels-photo-13787785.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "photo_id": "13787785",
-      "photo_url": "https://www.pexels.com/photo/facade-of-the-parliament-house-helsinki-finland-13787785/",
-      "photographer": "Paul G",
-      "photographer_url": "https://www.pexels.com/@polodo",
-      "provider": "pexels",
-      "query": "Eduskuntatalo pääsisäänkäynti",
-      "retrieved_at": "2026-10-03T17:25:13Z"
-    },
-    "stock_provenance_sha256": "2d22db399b8abebe9a46c3bbb9f50946d132f255776021f957a7c9fa779929df",
-    "url": "https://uutistenlukija.fi/media/266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d.jpg"
+    "provenance_sha256": "aa216d2256abf4624835286da19aecc89669d82b84808b2cf8b94c95ae70d9e4"
   },
   "new_article_files": [
-    "uutiset/orpo-sai-katsauksen-kansanedustajien-turvallisuudesta-41eea6aee980/index.html"
+    "uutiset/lansisataman-pikaraitiotien-hankesuunnitelma-hyvaksyttiin-743604e52b6d/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "3db210d1c35f4915b524621eea1a3ac49474fe34c4ef4cfb3f26a123ea847721",
-    "_redirects": "74439723a01f8ac8aa40751e4eb03dbda5da133637f26e96b08deb8cfc4411f1",
-    "ai-kuvat/index.html": "1c4c19de9f9cabc91736816e8caab8ea9fa018efde3db39a8329e83f3fbcfc0d",
-    "categories/kotimaa/index.html": "74461779f62d404740cf7b4796711fc3cc240a47e857bdbd1521de8906b53364",
-    "categories/kotimaa/sivu/2/index.html": "1f9a4021b656aefbae641e1b1ff040c05136c77cdf1d518013c0f353f7b6361c",
-    "categories/kotimaa/sivu/3/index.html": "b74d402d27672ce536c27d7066206b3f58240b2f13a7102b8c716606c74d480a",
-    "categories/kotimaa/sivu/4/index.html": "b2b6ef44efa26b78b42aa691fce73b42286feff5d6b9b899af815d288afc936f",
-    "categories/kotimaa/sivu/5/index.html": "b0815b43e9a92e888ef85334540a658d58528f391646ebf1e5c7086071d0c4c1",
-    "categories/kotimaa/sivu/6/index.html": "14a5cfe53db2e29e9c7c348e4d001f742348c4d1d5551aaba91b7df4e701db03",
-    "categories/kulttuuri/index.html": "37c22935a7cf93106a050a792222d28c77528c58388d28e8b75fb3ba52eca530",
-    "categories/talous/index.html": "0a3eb8c18dca355a0712e79688c4065d940e7b18a1a23b26c44721c3f4501e23",
-    "categories/talous/sivu/2/index.html": "075dfd81a821d6e7a1899708f6bc5eb5d1326e72fd65f51559f1c70ed01a6be7",
-    "categories/teknologia/index.html": "7cdba7a5bc4684911d7beaf08fba5ee998a6e518da9b2b1206b5ef9c8a62fdbc",
-    "categories/tiede/index.html": "2a29051780145b4743c129f99461cb9237938024e1d7e9ac6e7142b65245dcf8",
-    "categories/ulkomaat/index.html": "e748ecc88b4e95df1f86ea76c9031b437d97ed7bb498ae7500ade17c4a7e973d",
-    "categories/urheilu/index.html": "25fd6910cf40d85eb87a2ca68eede29acf77d62659b95637496c388cdbbd87cc",
-    "index.html": "966e1d9eac28a003a43e5cd49f12a1a4245ed828b0eefd5a90cf990793608913",
-    "lahteet/index.html": "a9c72e2c1d6d60e1a63df7ffa44c228d70b989de70714f0f71be627d9c7a241e",
+    "_redirects": "4d5d54758e9d2286c39ea326ae8c8342080a6b23a40891b1ea370353b7c6b605",
+    "ai-kuvat/index.html": "0ae28550e26927ae581fad1356ee46abbe00d80e1ba76a957246e8692f9e6ccf",
+    "categories/kotimaa/index.html": "88c07811b422df533fe4018fb75f95125c5051ec0a72d3ae98c9a7f8d4eb9d07",
+    "categories/kotimaa/sivu/2/index.html": "595f866010ecc0b3247f2e82220ff1bcc00d50a23c9f64205e83dcadde9f0fac",
+    "categories/kotimaa/sivu/3/index.html": "6aa8c80331f2939cb03b8596aa09f59e1b747ae5a4acf05e34765953f1b88e42",
+    "categories/kotimaa/sivu/4/index.html": "238c9227ce5f624d00c72169097153abe1b7c1a1405e32350ce0ce8ee2e619df",
+    "categories/kotimaa/sivu/5/index.html": "401381fdfab28aeba940dfc6b5da26437a422084b6d342284e9e762a023c65ee",
+    "categories/kotimaa/sivu/6/index.html": "9be65347a746635777a4fb9a0acdd2ee3edf5245a351cbcc09f1a05d2291b610",
+    "categories/kulttuuri/index.html": "6db5e1c6d1348b7a1e37a8e3b37fb93405f3ab92dd56f4aa21780d435c8243dc",
+    "categories/talous/index.html": "a01d710534abf5f9d6d8f1ba257d67e0313ce3c4731792878c185beae1857521",
+    "categories/talous/sivu/2/index.html": "b81fddf7af5d5df347be237e7f4142e037592000996e09d1cbb3d190b2838afa",
+    "categories/teknologia/index.html": "711b86d32c0b5c657837017729ade33e1635959a3e24a25b91ba192b7015cc59",
+    "categories/tiede/index.html": "01aa7c4c0b7882185082e9295a5345bda98c97f8ab3984de0062ee1f60e515d7",
+    "categories/ulkomaat/index.html": "56f614122e0c7bf4ff25d2f310980e929093cf7afae2ee07e87191fff10b66de",
+    "categories/urheilu/index.html": "992f28e096f059c3790e831d56018f98f8f3381fc4fc2f3313c9ade3869b0824",
+    "index.html": "6cf047794ca8d1a3f1b688b58ede7308719f00db84b89d8258b4c34cd605a657",
+    "lahteet/index.html": "6f9f9a7b314480e857c6c1efae27398e2e50f7c2e8e6285f192bc589470469cd",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -752,6 +487,7 @@
     "mvp-assets/ea8730d2cb6343fe23666124731acd96639e046fbcb0d2e0b07916edce45a154.jpg": "ea8730d2cb6343fe23666124731acd96639e046fbcb0d2e0b07916edce45a154",
     "mvp-assets/eac2226cdd2cf38415b51fa37d6a4e2f86da3075aa98c3eca52e584105f3e4dc.jpg": "eac2226cdd2cf38415b51fa37d6a4e2f86da3075aa98c3eca52e584105f3e4dc",
     "mvp-assets/ead6df67ecb3b598c517e5a7dadb6db97fa5359a45d8da3eed54ed9410cc37aa.jpg": "ead6df67ecb3b598c517e5a7dadb6db97fa5359a45d8da3eed54ed9410cc37aa",
+    "mvp-assets/eb447af356216b92ecdd16567f459dcb24771b41f4409f6ba1b2ce8317e6f5de.jpg": "eb447af356216b92ecdd16567f459dcb24771b41f4409f6ba1b2ce8317e6f5de",
     "mvp-assets/eb801842b03ab0ba29ffe486506714fbf833772e63964e7423bf454364c61ca2.jpg": "eb801842b03ab0ba29ffe486506714fbf833772e63964e7423bf454364c61ca2",
     "mvp-assets/ec7865453f2dfe1323cd5d1e1734e3b4ed754bc022a78cedc8c4142edaf62ef0.jpg": "ec7865453f2dfe1323cd5d1e1734e3b4ed754bc022a78cedc8c4142edaf62ef0",
     "mvp-assets/ece101ccef4c03c5ec2df741409216e01279f71a4b6d494a040a1a02af9aa7b2.jpg": "ece101ccef4c03c5ec2df741409216e01279f71a4b6d494a040a1a02af9aa7b2",
@@ -817,29 +553,29 @@
     "mvp-assets/portal.js": "ae7a9eee9306242d93362e5d9b19506af0cc9aed46e19b75c1b475bc3727c92a",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "637eaf4fbed4956e14a5ff0c21a902876ebc471c444ecfe0579be588b8e5e25d",
-    "oppaat/index.html": "01e7afa80810d2424e3da13f37942ecfb801f89cc47923048618b9d3dfa99fbd",
+    "oppaat/index.html": "1947c411f9a451591054bbac75e131efb3d913772256415ec6678bf97a3468b5",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "ea1eba4ac1f7a932beb383d2edb4adc5724b7f0bb4be10850e95f444ac033f34",
-    "sitemap.xml": "4189669611753a3e2d9449dae726bc55f07b994d97a0b5d6116e433b1fffac0f",
-    "sivu/2/index.html": "4313aed3a6198834c4d0233b8cf0e5d0efe95636836db666ded40b2cb87b4257",
-    "sivu/3/index.html": "f1d481d32aff5b8e50dd11bb64d233b0ad5984cdd18d7b2d6864c775b8c89c20",
-    "sivu/4/index.html": "875c8d40ad7e7b37bbf12a664bd819f17c5a7bc1b61600b386043fa2810a1443",
-    "sivu/5/index.html": "9245f1c9f9450a8d21746ebadda6c2dd9d60c4d7853139b48aa0e9b48c2ea050",
-    "sivu/6/index.html": "a7b0fd5d42227d16eca0ab6f8f37c79575ba5db79ac495a05f22038c7e26d672",
-    "sivu/7/index.html": "67a5c557c66e9404b783aa185112d5b3f0a9333889e55ec336400b6b609c55cd",
-    "sivu/8/index.html": "eab03086f45505b40e2103470674bbc02248f2976e16f2cf55499611c5c7dcba",
-    "sivu/9/index.html": "f6e20ab6862a1bdfae6e056778cf2d9625265221b914f9ac144e8190b7f8ab32",
-    "tietoja/index.html": "c55982ce1c452b6306a2945efd589f42d17f2da667ba878ef3027129cc5ae94d",
-    "tietosuoja/index.html": "3fb9c1387a343277b690b11972222f87d3364c2004bc2ce530494a2454a74b63",
-    "tuoreimmat/index.html": "4f14932bb3af54b6c79f49d72c504b46cca4a1ba9d1baace255f2ad9fd5b506c",
-    "tuoreimmat/sivu/2/index.html": "8a3e0a2d238add47f33aa2bfa0184ab5783abf076926db9963dd727598fabbb6",
-    "tuoreimmat/sivu/3/index.html": "661751411da9097ca1ebf40fd6e29827d49d84c7c832ebdc03d4ded6793657c5",
-    "tuoreimmat/sivu/4/index.html": "5f733065dc54c583ba41183c52e249b65764092ce4226e7f78367fd21b654829",
-    "tuoreimmat/sivu/5/index.html": "bee3dc4323d320a5f1e46a9883343d9ee7f65ebf660465fc41888d703cb76baa",
-    "tuoreimmat/sivu/6/index.html": "b59fb89dbbf19451fd6ab588b2a35cbb15d6cc1310a2d81753d12668336fdcb7",
-    "tuoreimmat/sivu/7/index.html": "c062705d565e57c87dfec80c8e3ec3e690dde7cd24cba52113e3467d322a8946",
-    "tuoreimmat/sivu/8/index.html": "db9802957ff033e4564863a6e4603ef3b70256436e97630fa0510b24edc8a65d",
-    "tuoreimmat/sivu/9/index.html": "7180b9a169790678d7c5500054f6e204359693a018fe035951cddc0307834924",
+    "rss.xml": "7dd23774599138215b8c9b915dcdfb2555a3e693981c3f827c3be433c459e627",
+    "sitemap.xml": "f0b2997762b27276e6ba6b3c8a7bf6cffc54045d75e3d150354855a34f2d405f",
+    "sivu/2/index.html": "4c87deca2280635f2ca44e91d9ad2fca0aaf8927c6b3425247aab6eb3d3df74e",
+    "sivu/3/index.html": "48856f1273a5cc05da49eb03bb3711e8a57292c1543a2898327d8e0a004e17f1",
+    "sivu/4/index.html": "6d6d31d0c5c47ccb34b891637023ae5572ff349b64e1102539eed6d4417665c7",
+    "sivu/5/index.html": "62fb48e1ab9342a2dec35e42df3d6154913b3b0b6a0f854e98fe432c6fe0aab8",
+    "sivu/6/index.html": "e20fbe354b35c68466799c4daf397fed9c6bd353714f97fdb696241e68e1c455",
+    "sivu/7/index.html": "67d990ec257403284d1a9e2542b99b793507924dadba3ddadfec47e552c872f5",
+    "sivu/8/index.html": "6bddb1570909633ca336f9f43db55761ec042afdf65648ccab8be40362bdf435",
+    "sivu/9/index.html": "4e428865c436122048b79201e24452ed01201b9029ac0db33d851b0a0edcb46f",
+    "tietoja/index.html": "bee287a5d0723110b713b2f12a6b6862f1ea6a741ebc00f0470a585f8d2a362e",
+    "tietosuoja/index.html": "d27d71a3584801726a77f12a85fc991a60d3ab1ebdc7df79097ff652d00f41dc",
+    "tuoreimmat/index.html": "c3944ce377cf57bd8f4b0efe50b126d3079d55dc4f84ab96896e315f3b6a13a7",
+    "tuoreimmat/sivu/2/index.html": "3fe651af5f90768b4ec2e87131633b9d1060cfc47177b9fc31489b54d984ba36",
+    "tuoreimmat/sivu/3/index.html": "7eeb6de26c670c948339fe17b19b9a0ab05096253ae697052fd54a8810069b99",
+    "tuoreimmat/sivu/4/index.html": "f988d22d53c1179f0ea159cb3df5afe744e6c260bc324ebd06b058c53f1f5eb6",
+    "tuoreimmat/sivu/5/index.html": "845d3a95e1e87a704d8894a4c59c33928a4c8b376d485970a145bcf97238af6a",
+    "tuoreimmat/sivu/6/index.html": "8741046d14964e0f3700c97fe418a3fcd0fca9b4157230e01f7d95613815ebdc",
+    "tuoreimmat/sivu/7/index.html": "77d1b58d40040921ce16234db5f001520e40c79d1b452bd7cb65f07f284dd3e4",
+    "tuoreimmat/sivu/8/index.html": "1b64ff3578b97b0f05eaf1fc3e5a7284c3fa9ff314c26c4d1a8ff46f63a22387",
+    "tuoreimmat/sivu/9/index.html": "674ec2cb20af21e5bd6c8ff46f8457b8a9de9fa4316ec5d428740ca3563e8428",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -853,480 +589,498 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "1974f993367146372bcd6e9c646d8a4f0ec2fbd4b2d488633d4dfd1f97a83824",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "63dea636370eee4fc36fabbf1deccd13de51559f03629dc8f1264d05cef9115a",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "97177bbe31a286e03a3a89c90cfc5f3ca04b1ea00a8b78189aa644af46b98e13",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "b4fe5dfd7f45dfed0e6709b9ecea10acced931d44fb1e2b794ae1601fac06515",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "e835130a87969a784477a2c50726f64499fe31c7759f642062f7b6e9a905206f",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "627df551dd7c8f5cdbaf3aa0977b1342b7ada855bc45928fe323c4a39ff448da",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "4221230174927c26baa97c2cbea5a293eae689d32effba24717d746f295c1108",
-    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "6784a16400b90b04dd26b40753f8a5516901bd06f7f9f39090966f5dc61082fe",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "d541bdb35b72852cc6583b728b1a05eaa7c343b6056be4301d723d3047c4647c",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "09be7b9705da1f9f1ff362a3b67100e2de1fcf2008b55b68b77215c90b8e7164",
+    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "b5ba1c20b18be17ec7320b241e68eeaa04780e21db63a8e3d0d5e0f57f377531",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "dc8baa0b9b18fc24244a0fb6311a698a088ce07c2b6afab6ebd627d0dad2494a",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "d00ccd7b938571f74b9e640689a9e1572b85bb31728ed63c4f4739c347d73afa",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "dbd2907ae9306f8c30b1503f47db9831d53e3ce2f45cfcdcf9dbc173518908d8",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "9b2ec805f4facbae5ded52576042995caad84009453329452bc8129d343e3ec6",
+    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "f3318daf607364a4e515c683643a3a109fe74ec022088489d159ddd90d40d514",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "a3e5997a59aca333d6c9f8f2fff5f0d92d35c66d62937b4549565e4f25a907eb",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "3d72314d4e4664fc053cb392a5d6e0783c582b08ec7f39a6aab3d85cd8592532",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "d5828f3ef73e6485eff28d746e1248221c4300dfa82294d2fe997461c9825b71",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "8a6d935e6f4b08a32694d420dfb40c9864a1f28b80cf39247c597d616972c0cf",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "1439d2a91e788a99c19dd94e674a5476bc55fdbf681c77ea945fc8e7ae3fb5fb",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "6093d507c3d04fc54d379fbb3bd6baa0739e48c5f6d79afeca785d6f8a00c0ee",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "af3f8b59403e2522f38cbeadbf59ca0e20c7672a281dc6b8adbdbcd77fa72360",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "ea9ee6076ad5476252c8f9a4c424e4b6dac8b5a5a73284ef5e5f101b19f6032c",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "769126328762d49fa7dc2d805f542366a4f8019a7f476fe0f3835e4492cb62f5",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "14c55c52a9515ccc98b39a9e72a2dc161c758d360d09107bec701ceeffff5e9f",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "5bca03abe61c39cd628ba57f76d63ac65806bcf2362569612b0f3ce55a527d00",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "5c7c3ef61fd25e7d91e21094d945b8eb531f962cb6112d4c756ed03bb9dd9676",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "f1cde6a43c055714a65d3006e9ed84fc96e3aec6583df9ab56c6746f9bceba53",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "c4b40fd8f02932a397144f2ac232f9d8273a9f5746336535efa421192ffb3d2a",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "00cfbf0aa69f49b98832ca09e651863d9ca64036dc00d8e8f7baa94803d998de",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "4d4b7e0f6c0b4d07de8d61c5351d7cfad2bd26a22e7da7faa1b239fde3546ba7",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "74660f4c4adce971354f71c3dbfd5a19c5676db4d2f821c45ff17918dcf2b19d",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "ce3d4bdf5234a2e73d3a1e5de8db518b6388b5aa50fd977505da2c19cc47432f",
-    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "73c4adbeabe3b1dc4eadb1a637665ebbe5f1694263dade57819e1ddd9a11d815",
-    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "9d64a6b589c9c8081b518936945e0138dab292dd5f5910598e064a028729105f",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "8ae3fdc1c5683d4b0b94bd81f5ccbeb693e4211db638295e7f36a418cc7f4f22",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "f0cbab3ebd40fa76fcf01ce6a17eb56d355edd12ccc7ca8a250d3ea3cd5fb8f3",
-    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "0e2e033452ed827d3fe3c9fbacf3846a4a19280654dae4b169995278a9871d49",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "f34fac453462517b289fa60831de25dfe9174ef032cbc7dc89d4f552a06c0422",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "cba042c87ef081a037a685f317fc57da347b1b6ac9e9165d4412f2e2539e793c",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "2a98a1ef2c9f43220e222b1b54bd9394c36d1da33bb743a4b64fdded522b88b1",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "c7cf8afdc2d461dd59ee9d0850e267ecda4bee7401796b4dd78a7b83cc86663b",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "5b5651dabdefa01ec7141d06b96b6e098e02ee3499770d40651c7a19d0cf0d55",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "ef91319e6ba5a6e2da90258b4974262d0186c6c559be5928d8e58b688c44916e",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "2098c30429480b6088a8155fcd10c7e08aeb0e82ccb6447ee87c0e3ee7ae36ea",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "5fd6db7b4442e97f6bf94ad480c0e30d7eaabbd99d5d676ab8fc8089074bc9a2",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "88147d4aa034be26aaf91645383c57c1ffb209144303649be13f58cab84b2695",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "fae5742026115e439f3ecd90ad65f99ea0c97564f733335992cabba67fb9e23b",
+    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "c57f5b632d585dd6a165afe4eb5eeafa28971260074fd9fe7e5e68ea73e29c5c",
+    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "750615ace2ed7b6dff2dd10a76984924059da129ffbcaa83392000467fbd2ca9",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "49af77812dfb1b8b32eb5bcfd9ce937246df15a44abf533513a03a8f6a86dc81",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "72ab19cffa53fae90f927c6f0aa83adcd5fc2102b5bffe6f0147d4180c67adcd",
+    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "1da3618226876c4ee63fb80f9fd834a99b8ffca36af8759a4c802cf978b3d6ed",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "f46b5b28f2d77c97c5180651b72b9fa508b222240bb03dcee892b700573e6664",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "72f2b7b67edb69e7a5d6ccdeb7b0dc7f8707557ca1e2c758291a6a55fd8eca08",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "f8eaf51fc23dbe69cff5cf2d12675dd4b449f7096947ffdfd7655c28c888519b",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "f9a9e1c30fa438102ac577b99237bca09a8bbdedd2f556934d1017de14fbadbe",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "871dfd4749d3d9882bdad90361d6e86935f60fe0684d1ee0543218289c200749",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "36e1b4c4515d1623ad843e88c075732b2f04eae93b3b2ebfa1aeb1e01aab6b43",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/fredrikintorin-remontti-viivastyy-arviolta-vuoden-loppuun-2a57e16b0903/index.html": "7fc245ed3fca6801c36789896cd2e5e8602b127a318c4c9f170a924341670b6f",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "79964d0a8a15b085c2cfb1f483645c9123e1aaaddd9b1aebc31decd7be1dec36",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "0aebe72518c043a8f5ed0864bf25c2896cb0edb7837cbbe9ceca84056706098d",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "ffa82fbebeeb907883e11e890805c32dc45f3209341f29849dc7811c6a7c0255",
-    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "ac6d2fdc4eb6bb67e0fa3a0ef356ead31929c24cd29517faa55125648a62c932",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "c487b37d8911a139d117b3ac55ff09eeaeb506b7d3d1038aec17528816fcdae4",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "de16932b429833837df34e2f97b4fea2be9b31a003eb59c06ec6e7e058c9e4fb",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "4c29617ec2fb290beace0fcee52012d4312e9a3d16b1fd09a107f1d532734e6b",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "b9070178e34cd7ecebb5ea84e3000ff383e7d49cd1dfa89f332a575d006d1099",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "f8cb462a18fdc8a10ef7f679ecccbe97728ade8b855791ee17a6f477896ffe5a",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "caf833258853cf32715080afce0efca421cec124a60064996221e2cd86bfd592",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "4c6c10f90a9ba815c9b2e98352a463b6e93113df276cd8c0788538c1e239c875",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "0d06a56a4f3452c82bb18a987a3e719ba5c463c97bf9de4e292fe2d4d5f5b340",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "96ffc92d76d636011c99ec3c4e9af21d4f2bfaaf05d553bf6139e57a7d6bb4f9",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "f643f9d2d1eca2954b07575251cc3991591ca4ae9f694505cfa30dc3565dd7ca",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "8d3fcf786d5813d03bdbb77983698c6fc14f169141169d53a410c29c07127e65",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "f5f7e0d24d5e8a075b8a20ec1bf86b1303d78ea007db279f36075686c2f886a1",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "6c450b29073ae10daa3449dd9958a1ca8bb5cbbc9ae9cbfe9b9be5a1d54c5513",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "66808deaf2f21787fe1767091f35807447ea790f1318745dafeba89f8d0e63e3",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "d90561a067487406ce0ce4e30594abfa6f80c23cfe59c57f49a8e0dd5b7b6614",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "487dfe7e16c99b57b2af8486f72b0cb1f93203278308ae6ec6eea43e97e5bde3",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "3477b578cbc7f9fb02c07d430043d50cebe4209960e9be57cc345b80abbb1936",
-    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "3f0173817339e281d60e309c5edeb060a4ad88eb13d0e4c80cfa3a8dc8ecb46b",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "16dd39f45b35d9696c9e54ec044e838eed10c199fcd4b625439799c148be0c98",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "67a63b59224bcfad9c949b1753cd96685a9604b1b833eff35cd1d2f078e57c4e",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "c218ec56b1f320685c5190f009111c1133027ac29262a5b9ba5e906a603a594d",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "940efde27efe65f7e450124fd82bc950790c4baf0feedd16795fa6f312bb304a",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "bede3cf14f33c31235db47a5d34ccdffb857171ba10cd40d516508f805b9b332",
-    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "7bd34cd07645dee1e98a7cae23f3b45a5c3918f3b7c28a8cf807ea56f58280c8",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "61a1b9bc6fd5644081b1675333d525f1015e0f9b54d21cdce633d313d66adb60",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "bb9928a347130767b732988faa0c3d845a9f240549c9db85a861c9a46434d6d6",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "7ac5a75ddd8abec3ef8ade3e93c19b6e07bcdf564580d21b53f62efe8b043730",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "2a09d8228c054ae3ee4aa0a872c43bb817b79fdeeaefe6c6f01028b3a4a5aa3e",
-    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "872367f727b28f52d410a5c003d7dc58119231fc1fa3b720fc35f72ef5e29f75",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "fdd814dd8f3d27b170147915b7a39e7b9d1aa43a13a5d6ead1a0bd40b2e4699b",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "5f344e95667332c456443f05b95748df207854deafaca936be84c3affea90360",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "b737485bf0b4bb96432b0e1de197ad760c820be79b54f40bdae84f2b06429630",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "4c05e3b6d0a9f9f754f43173f1a5efffd8b6d7a58c25c9e59f08121fc38ec335",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "de08936b8d152ef9d5f1f8c44507d7339ad4c7e5024e42ac597874bcc18ea87a",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "fbd7b245a5b634d53ede77f251a8064f70c9388417d186295582fac4ca6e70da",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "1d62e98f5042cdaaae51d20de2622adfcd66ff160b8fb58bd5ac3df3bce8070d",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "9302d6f1c578f4b42b777f48f30c93f00fb380aa960c82d41476756d99349aa5",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "6412b1cb0acfbd0ca181ae2aea559fdf284afbb4ec9de97a2a06903df20779fd",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "39b76ecf6ec4bde94338227292323964a87271a7e3251a4e92e0f90eabaa8c75",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "ea788cf5ff69489326e928d7ad623b618d43545f0340c88d719ae017f93f39fc",
-    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "0aa7585f35ed410a90302b87c95e78654984f3d7bd91577b14ecdf4287ab0fc4",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "097f5a021ec924fd9d86e3fe12f71d4fbb2f7d4fc6157ec4b440de87a5668775",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "3274d6cc5a2e40320534179f584f97cc6ffdfdc994a216b1d5d7a04633be1465",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "a5597b1c04040b23aff421ae8de4a3e43f9e8a3ca3b64bc4de8b72fba744c9aa",
-    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "8802f952e1796576db2dc24a1a9300a32d2e521076c32be59e62fd3d2a897220",
-    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "240b79085988073e93459824778ec7706e79d2601032ae5ffea330c70762e39e",
-    "uutiset/korean-niemimaan-sedimentti-erottuu-nasan-kuvassa-b25d7a241a77/index.html": "bc4f32c8d0c9347cebe2b3ab73d6e1c1e8a89da8a49a112c0dcd89f86bdc6ce1",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "2fdf5adf12fc1be7b1e2969e7ac9ed270afc56ac68b012d34cf9a56ce9777db5",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "974d11208f4bb03073d5b0012027ea70c44f2e61fc351c619804fb89f70df1d3",
-    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "b28567524f9669a34961171f5d2a13837ad9008aacd1855856cbef8bf014d086",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "cd3a693eb7faa5ca821ff9cf7e431ded5b0522a743143a6a9769ea8b44c9455f",
-    "uutiset/kuluttajahintojen-vuosinousu-syyskuussa-ennakolta-2-6-2e846b3cf176/index.html": "2848ee14a4a3c6bb4b8f875ae9936788ba88f736a5ad7dac43083057a5b24319",
-    "uutiset/kuntaliitto-ehdottaa-valitusoikeuden-maaraaikaista-rajausta-fe92f910b26a/index.html": "92be045847868d6c1f8d7367e98bed93aa2b63155efc7c8ba0f1def98f5fdda7",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "35f8be923dacd61a8778f60787d670d262964215c3d002cb42df27f002add447",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "dff2bb85966b7a2d766cf15295f2fb5b3d068d3c833ec578985a8addee51d7d6",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "91d7f8038b42612fadc6c411817b9e4b7cfd7444bddf29e3e75ad8f00115858d",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "5659caae2f27ad4d62e94f55683c95552e99e107b574fb7d230174f455d8050d",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "1beaaafbbe87e3eb6e1421ca02d0c5a163bb44ee9efc0c461275400d4365384d",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "04078d848782b9510cc2fe0c979a797468330aafe93a682591dfc52b2abb79d5",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "5adc67bf2c924c2fa85aa44f0fed6a99c8841bbaa83e04ee727b69fbcfc4c5a0",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "926c6b98d5ce3f43651970f35a122d31cf09c7ea5cd5e2c459f392f5ede48cb8",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "9b004e3fa17a612914cb06f858fa5986aa6b26a1f421d6207d4b5f9e63fd9a6d",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "48a6d75bf2fda4970ac24c159fea361fe4afb3be0572e312c16ea8c03e856512",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "3c7e31c7d456a5d65bc0db623a86fcd164a6a799390f30804ae1f0a5ddf0e07d",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "e659a6bd62cda70d2c0b1edefa2186611202c0f1f10b8b1ca3b0f20034b4717f",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "76980df4e186b8c1c7d68e529c3b48ce699f76ab7215bc2be397c26a90e5f3f5",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "2d1028403d9a753a51c4575fb023bf750238622ef287723629eda47f7db373d0",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "a09ab55c9966c87988a4f031b82e388f39db2e92eb8ec76488cba63b6f7e6d9a",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "14337f341a0c3ef7e8ac21493e54399a785cfde7e2296fe0b857dfb30a00dd0c",
-    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "3d4d72926169488ede91251edc86deaee002ab786c95c57d6af7bf58eb8772fb",
-    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html": "141de6f0a641a436fe19ebc507fe0d2fa2f7bf48193059c7b2d4d406753da101",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "b1204acaba9ac2d060b8a780b102903efecb7293e76922ec5914e66e943961e1",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "3de73d04d2703781d7ffdd829262b9a8ddf0ed526268841e3a81b4b1c50a19c0",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "babc8adae2a493a84369a771007ba3166e02daf3fc9bc743e3f9b520eb804db7",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "840b9c604005139049d32518ee18408f6c37ef3b33a84b2ad6f6f78f76ad5496",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "a1d702af66c55de10f2d139059e08998bee8ae4fcc98ffb393e7d10e5a890ccd",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "9c497b20dea8c4dec48d664ff8ef51f112e786e47d77aa280cb566260a49af61",
-    "uutiset/kuusijarven-wc-tilat-kayttoon-12-lokakuuta-c2bc4a29129d/index.html": "289f49e982b04b0c84d0a4b34abf76edf29687a7417c672238cd46418844d399",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "58a5a1044d980125cd5f52ef9133d38a0ebd9e8a582692e081642cbfdf0b02d1",
-    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "76983b8d9e74e237f9a73fd7ac6d291015a51abee064df255beb053922225a21",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "65a4805b4d2e80572fcd109be76cc204c4c45713846ed6b145ec859176d81705",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "954b25bbe779d5a95d407422fa01b49a4f712dad1d4cf1be178105789b4dd297",
-    "uutiset/lemmenkujan-kiertoreitti-kaytossa-viela-viikon-41-9379acd25d35/index.html": "4f0e427b4c711833d1dae9f2d90b19882b459d65c3053119a49886cbce6aeecf",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "ed02f92fd1de07c3d8616bc62f644fd2ded1aa7e426b12b95b3393479ab61e0f",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "31b822a5d0bcc6150f361b965eaa62e198bdf432fa399eb8936f7e1d7916450a",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "fab033bb52e2385353a96b204cdd42e32b4f4206bce29724f225a2db911fabdf",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "42fdbf9e82717ca3811fcd18762c3effb5886297555cb633354a1ba1f9c9358e",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "69dac432fc187b96eda2661be5adbd35eac0f0a2d3ca531587805abec16f4840",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "2eb36aec00cc0b26cf546a8aa1caa341529d3e68764ddf682db0a6852a20882d",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "a78998b937987c57705739b7e05b4e118f296cc019524f561fa47184a7639d7e",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "7c984f124e2134242c1204f0771a31968045d290ffae3bc42de0554c91e2e41f",
-    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "d56f2fddb577074be8db2b9a1699f9cc3c6f6e0deb696ee95b1d6343417ab335",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "6d86663819ec7f72ca0eb0502a4cef1b695d224fb22604266dacb7c658c26408",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "10aad5e22680fad9faea2c7c03c03011436281de8d74cda26e181870c9d47ffc",
-    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "9e353a3004788cd0b84e70248ea68a7c900df00f372cb7fdd74f0e4845530c4f",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "fd81b4d65b0c55d0512b169acf6c2b901e13c434d6d89a387a93aadd11c2c486",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "e2d12f2fe6a90515b172065904da94c4520a9a2187fb9f228122a14dda58a12a",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "c68c1747fb0a06b1a1ca1d9e3c81c04610c9acd3044829f54e24442fe0929c7e",
-    "uutiset/multala-hakee-saksasta-yhteistyota-vetytalouteen-dacb24d664ef/index.html": "5096f37b364523db4acddc08aaf23b3a599e819f1b0ed2500a960630e8c3182f",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "7c473a36138df24676bb9c31f8debcdad79f13d1b3b196834dc96ce18e5f2d33",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "49a3078caa53f883a427a9925d30e8732b73ef8a9e4dd85648c28cbea8902abe",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "f6223647240263e4d325477a43cedd75294ef6d49f2c50d7c4b79591061f8834",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "a96f773be1831791b71bbc71eb07842dd0eb39bc7b2f0d0f5e31ae77d17e9dc3",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "0498dc9b89e6d4f69fd4234464b77c9a1768fa5df03cffc7fc6170e21139ecc1",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "e1408decc273dd55c2254acad8bee428f498ac097a7621692349908c83b6260a",
-    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "4b01d0acaaef56daf05cff5af1e64feb3b711b2f2f7793153ce65beb7cd2886e",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "c81e582661b59bbc2a7a58e61c9ca2220d5278583f944ed7171eb16c62b6abb6",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "093aa4aa992eef4247bc971c4768cfc09f89594c9b5f38d20d9d68a59f38044c",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "1fc6dcfa42719ba153c59c57c5e0b06bdc9d3149eaccf40f4c3fffedd397d8dd",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "1bdbb34f1bfe1a15986feef6451283617095376009c7ea2861e1dbb251530b04",
-    "uutiset/orpo-sai-katsauksen-kansanedustajien-turvallisuudesta-41eea6aee980/index.html": "1576067c2f67637f7dc939a759ee0c51a6c1f6d7f7b24e1db1e4a5c920ca8c5b",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "a63b70c9319511c8ac87e9a688055d2c03fd62b810c969512b440883fdff96f3",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "fd4b97efeb795632d9c190936d24da5593b41fed6233e73fb50b66aba7d5fd7a",
-    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "f019c693da0043ab5089506b864ee80a71e5261b3a80b68c376d52ef8539e65d",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "e2e3513a254dfe1a0422883f181cf114cc7155d6111603302ea4445fda313b30",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "c11056f81547f98d7cd6b337686aacf90b59519d7f6e91395cc65da3b0db4fee",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "615f909bf6799e733b8a64c6980c89c80333c16e0f67905776ad9eca13047cf5",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "39f5b38b3554de7d1fd617a92f8c142db15b567ac65b85cc7f1a56738aa33507",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "87ee021399ec5529519d5e6fc1667154cc6166422d88a72c54571fb41ca658f7",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "ac45133639d83e276d8c14462a9f17ef7498246d730627cfabd393efc6fbd188",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "ca66267668452e213c48193faf71625d7afb8f3d5735623aa1f9ff33c06b340b",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "b99a9a4b0a2ded46d961d881be90da208443d6b49d3150774402c60f5fd0155e",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "77d9c4da8435a69614405e893d541b31845ad955d354cc1ce4b725434beed74f",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "3ba82648397207285396d42444c65e07d52a79aeed8d97a2fb2b91eab8ec433b",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "7f1a1f88510b749414871435b74c2659c1f2323f31391065134aebff5201d85f",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "e53a420fcd1a87db0a8158010affb8b45cf632167c8646480aa97030cd8c1c28",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "8232c0ac3cbe89890e267f57a6aba6a85b04fc38797ffd6228180d99c0786f85",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "b26c7ac59d0ccb852cec0ad408be16e272ebfaabbd052f2080942dabf49d5393",
-    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "13620ce749541eb4d5c66a2bfacda3722c4e40282aea418f084f2f52551cef79",
-    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "4f3c123511ddb3f7ca0d2e514791911a73dde4c9afb63a0f13a7ff41d18a5d7a",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "3e1dc294c101791eceec29ad95d424d57bf2c08b1c52929b82f0d1c064f9e8aa",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "7baade1e32f61079463f432b89849bed7ee77009662a3433ff31d680e1df623c",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "83dfb0f8db8cd3c5c43589947ee6b89f24e9a5d11d5b6bf0fa8d208defeb7d4b",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "2f89084150d2c15ece4b30d1037db1023ec831a3af271b6f84e101a83b372149",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "f04c3f96105eec1d6fe0e7954d73d5b5fe7a9c9373c4b6685ae359a4903f0449",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "293cf5101abece24777fb989cf09fee39637bb4396adc117b3e6338c22a1a6e9",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "82ac1a6412ff9231f277111327e78e42c7ea97f98048671a892c085a132d37f9",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "46b6e7fda4ffd130349e656ff5fcaabd81647e47170054abe39f83de0230665e",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "cdf59b548e3037cedc263100b5e5fbe5f5312f2272eba57f85fd3f690a3737dc",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "f9ea734214058524d3f0e0af78a98e51cc2d014a29ad200a0ca7d3c909f233cf",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "eec6b81c026b27b13d1aa999e21a098f4ed0848cc1df3166787448d717666064",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "46e4f3fd8c142f685290a8e8e80ca3c27186af9efe4bad21237493a9372af69f",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "8d5e255da5e5608bd27a3097069505c663efa13f64366153d20ea34d6df664d0",
-    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "8acea2f02d55bb4e2b7fee91eba3adb6cf71b83cacf1368d93ba614d10ff4e80",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "502c0742efe167ac80fd22dceb387d35efd6bc1182d4215bf0d5bd247b12b572",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "b9a1986c2b637b39a09979ec9af418edb0a69c8b3aff156f9e2a4b63b7443294",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "d7cc5a645a3b530e268b276fb5ca0f4f8b609afffe7fd938186d9a7dd196da98",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "6ad9c6b7bc242e113fe54c4fb9d3fa04faf1ee071ddb0911fcc567d098aca9ed",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "2d952bc9f62ecb0e989833c3a06b7c49cb356d374a972c623947dc35385c2383",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "07f8dd42ea7439dc4ed7365a743ece9d129093c2e70fba9cca96258872654a03",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "0c97d56b552811f8b946774420cd61638db0a4b77aa4d01aeab112f3eda5c523",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "9b939bd47d95c93d483d8bfea6be2e4422c03baf0a53214085c26c0e893f3285",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "a87258a71a28fe835361d4d25a8e7fb836fabb511d167eba3d928b07c9cc3e9f",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "878910f18d3644111c1f6cff0a0357aa84dd5cf74cd6cf4b5896f3b6e50a96e5",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "a0303feb786b98f441d49ab954843a5e5e91d0f68394f0b8ab0e7ec65bdfe45a",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "9ca1a7a1b437e595ab28a4ef7438c621cfe80cc6c06c9047f3b755666efed9ea",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "33a20a8a39bf5e7023ea750123316ae70d89acd7c29cf2061221163ae107bfe0",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "d8bafaaa0324d45e93281e3d7bf1a75535eb18c293b5293d38125bac80550c66",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "db2dbdd09ca79197f674bbe9e8d9ecc80906c85f039a73f78008fe1a0e6b4aa4",
-    "uutiset/suomi-mukana-maatalouden-eurooppalaisessa-digikonsortiossa-6b30890419a1/index.html": "9d9f69e4ef5731c4e0c13f5af89abf9527d45fd171734c8de49f3ccbff13a4ec",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "df7f15d6060a3e19e5854a53efe77cc5eef3241b7a4c64939bdde0aeb73d2669",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "a3aa5843f27887c8f66d2da055e50ce191a5ef05df84d5e582901a35712eaef4",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "da0c7156c11625fd1572a290ba54f4873da2a327e477db30a873f892cc4b1d0b",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "a66fda89815027aeb85af5f4f619b0301ac3593095bae8cf548fc2e066e94767",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "e1aa066f1663890adb57299cc88937ad0c05488258cc3b84f072fdbd74741756",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "56fe916f03096d9e530a405871a82e91a8adb59b9ed492d6c6c31301ce5a7c07",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "398001b721a69c44b357f506ba11e04caac9dc6f6e532982fc473b9f20411987",
-    "uutiset/tiibetin-ylangolle-satoi-runsaasti-lunta-nasan-06fea975771b/index.html": "e4dfe82b7ef7b26293b31f4ce0cb165509ee36c60f712e6c3a4759ae73491054",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "f98cdc2502447005b1cdb665048847b3ba1a308b9747465a60bb6443637ea009",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "22b57c513434c1cce2fede7c23ca142e10b3823e4aaf82937595294e6ecd8509",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "431d32491effc0cd4ad053b88f271937858be3651592747757f0694513ea03fa",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "9efde23f48182e0e9ba26e30d044c0b7690d9e9dfde07d4c499528d6826e2d5c",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "0887e2719c57e5de510007a5ea7b5bdb55650bb6a889e0dbe261a9c6f1a2d904",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "30c31be623d482a895f523ccbe53e25d39056df936c0be7af73f7c52be4a3f4a",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "4c7d233aa8c1d9f7f6b7e64d1f15b9e7608a0381599df2d408a4128fd09033b5",
-    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "d1659a09fb9ef89f9f4e7be68245d7d5a09456cd6a57fcc1623f79574d559f5e",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "5f561980ba491677c797e06f171390605e89fb316270935e45d64787d03fe38c",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "b48d107c022289eb0186186720bd4820f63b066b231dc51a98d27c98b1b017d1",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "98fb97f05d97f2e6806bc7010d70bc206f8a0667b50b981677c22585fa2d4631",
-    "uutiset/toolonlahden-tulvasuojelutyomaa-palkittiin-helsingissa-c8d9df28ef8c/index.html": "18060c467a8008b8e838b3fd5708bdd6f9d3e573ee9f0989bd2be7d0f7b2354b",
-    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "fdc90bfaf0ec6c788bf0a4c799ddcb4e97ae38cc9c6bd8e4f9fe345b9221d20d",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukea-kiina-suhdetta-aac41588a8b4/index.html": "3e9ec6d302cfdf599e3c0129de0221843fcc672e6fd8ebfcf100d5364f7865d1",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "ae60751ce1372c4936432203341ad867c8b0bea776e9b11e70015ecb94a976f8",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "2f97d1900acccc5106dd20c177c24a8e00251246912867fa8520d0f2edba4b37",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "61e069ce35b84683f14403e96fc2c5cdb7ed257a27702ccd30fb3cf97955037a",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "c387e58ddb5974aa3698b898d6094edfb4111ea64830d21a9c801f40b6c25454",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "456abbceabd3f840f87397b9027098374898ec839d5f4bc9f2fd3d63f649cec4",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "e8439e31b4ab5357f00b4eaf2bd70a221e563241d2bc5fbcb70d163cb3d0fafa",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "4235c7fae45fba22db540605c0174dc882f9ddd0ad0b0152b47e598af7e6ee7a",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "ba34c203c99b71c44c1342a30521122e5db0e4aa7d483648c42b9e173aaa087f",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "5f2db41e38722e2fb306c731235bba94859819e9e2ef12f6d1f742a1bcf89b9d",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "40986ac2bcae7a78fb605c2a1e5306d6bd2a32b6e6724a61a4f3da1a52570589",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "fb7f6117b702f42c1b52f537789ad0baef7ed881d3c6c734d41654245b166735",
-    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "a283378a300247f4948585e543fb76bd0f8b62fb49163adba1e44781954ce556",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "3cecb8c8ab24d8a11b8c58ec5d890c467390016fe7153e4991ec5d0bcba1cc61",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "faf473a6e7878f59b0d1287e0324dca64d6090771fc34f1acb5feeafb7532581",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "1fe4e415d1af5eae96c67f3e7bdd707840c58cbb4e8a87b159d50e70d64c20f4",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "562dd11827dddb4e2c93fb759ee4b38c98fd7229e9044323f0e173ac7d431b21",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "fa3095e211d5fbd4409435a7a980599c1bfd7bb95776ac1313e3bc8559dc8f94",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "95dbfb15f55a402878cd87e75b3d09376fbf5e9aba04d1fb7f1e35dd9ca90e1f",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "31d7c78dcef966e359990fc038f038f6bbf135757955a627943e9acda113101f",
-    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "2c0a5924813a3b0b59bcf220f4f1ff3b3480fe47849f56592e0e25cd8121e5a0",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "d64e41b9730031236b0687e16a00cd340ff2364c8f42f1a5727803691772e440",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "880ecdb2dbe3c130191cb2bb1e8b92489a3ce1082d8e88052cc96226dcda5fe9",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "5d7ee54dec8be931ebeaca4a6db9b258fd73e719cb60e2a1fb9cbc99fabdfa44",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "54251231a3d5c0c372922529981207d731a17c05b5da2738db9d891c9b736524",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "198563f15d138cbec20d4d1907c0fe598b853ff9233c63d67727faa072e3c4af",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "e696c42ec54a37741e6ed8a53328518a855f36f426191d19088f56e1f6d332c0",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "d81097604853845ea52982201383716e20aed3f5c34a8d892da80420ccf1094a",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "3a5d7d6a3eb67a6566f626c0ebb7c3330bcfc2dee4df324ba1076963baab99bd",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "ee2b9564d15f69d07193e78a34b2a680636e16cc3a8fe93116f2c22f286fef95",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "3ab5a984751121c142a446df25293fdfd7845f99714f928b9feb2f1d70f2fb0e",
-    "uutiset/vantaan-historian-museo-hakee-avajaisiin-vapaaehtoisia-d96705192438/index.html": "f182c1aedc62233749f8538e9cdd660d2449130e5e8f3231cbd8ab487cd57c2a",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "fefa56f9c6d73f345cd7c3aa81ddc9c4f88a372be975f71ab8e26e1f17925736",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "a98e312cbda61c9896a0a31c18d446098f6c6712ccee8778919fee0c3409a566",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "dcb59d777ec7c4ad73e018fff7e46eb4df2ddc44215d36b788c491292f4ac943",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "7f1a8935c9dd6f6d3d4a3bbef2af0a625d2fe3718764806f1ebec673fdf143ef",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "859f9fd35c4614adeb9d3b6c03fd7c0a403428bdc903ea6d2951e257bda1243b",
-    "uutiset/vantaan-yty-akatemian-ideat-etenevat-tyoryhmaan-ba96b94ee71f/index.html": "a2952f33783dd3228e580be5d038c342ca7c544bdaa8cbacafb264aa228a6743",
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "906c56c200e3149f7f5fff88806f0bf130382a332530f7b18e19d415d7444afd",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "1ebcedb28dac0d0bf276b55c0032af41e2ce812bed3c6647837ac7bbdef431c0",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "33a921a6bb382624d2ddea9e89939a468f56fc96d7b6117fc41ebae397da2ab4",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "901ee8955c24dc6da0b4d642fc42d83a875081cdc7a0703491de48cb6b3e74e1",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "9be2250b9a5fa6b9b000a6ea0d5483afa89070932b58e181caa3f53f79b72044",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "8efd2b38feec63b26f2e2995571421a7c26d802fc340264fa8442df9ce1cfe8b"
+    "uutiset/fredrikintorin-remontti-viivastyy-arviolta-vuoden-loppuun-2a57e16b0903/index.html": "0adb3f98c1d155309e63e54762819405610fb11d00b6a1600cad29ee65701fd3",
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "d3c49d7d9b8527e3dcef28db2903bad9b1c9f41919110a43cdecc30718be8cf6",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "10aaff1743563bc08d4608071dbf747534c1ff5afcc6cf3eef99541cf006c342",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "898825e929aa967e3d88917105bd3aa3af045751be3a928d11aafb1a7f833436",
+    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "bdac5c4e62760a5964a25eba1f5a060202b140f108c8c159576110256540fc7c",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "c63c2b2652766528534b7e794faba4fdc1aee5b8066cc8ccb962f0cafb74f279",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "c6ed9887ccfc5e736cacf84aed8926013572b75ce7ba26b1d672fb6efc5a8049",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "a05d211f36e456fff01c50970bf77ce6e48a6d0bca97ba85585d71f53552fb7b",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "5c3c2bbcb9836357040302dd50ae42bdd3c5fe32b2ccde04b613455affad5523",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "cab4d430d2534f1efbee76e34764822299dee95c83f1ed9f7dde33ba742e4592",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "aedc2425fd2e5e8f6bcd67397cc2370ee7f0bc7065f77d1f0c301c1c3d24e34f",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "13577f5bdf52e3fc25e5bf5a5338d9a423b07d80f928a88820a59bf12a4a2da1",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "4d47229850f6a43d102380d734926c6f4a0b4333618796612d0c87a4ca69ecf5",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "e7f3d3b70fcf9c7e3db31ab5ee991c9367c77224e43732d1fa6e88a6c72248d8",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "55fb22190f8524a81531a36dbf3c038afe1bb119821e28b8b61626c2ef4bdaec",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "21a80c722009b3b7e1b6683a5ff7e17cbf8800e53daa255a6b39c4f0964252fd",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "dd8e2237522ea536d7fdb14f24dfca542cedf17b6977f5dc9e52febe17108223",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "1d2b7a9926cfafab521eb65de3185ab39c314ba45be8f3973fe5fb3d5c1b625a",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "7cd82f02fcbd31ed63a763546d9ff400232a608544aee487c828c55e513c1f7d",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "872ee8ec23eef72c3af29fc8a14cac94a12b700985fefc69e29aa130d826ceba",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "b19dab15e744499613e9a214d19eecd15e490cfe382be6f0a807d9cd6dc9af65",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "97bffb18e96ad98f4faf736ff267a0d836d48cfa2ec384e45c8fe18b4df20bb9",
+    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "bb37f0401385e6f6302591331e11640e500b6ff975d3f2993b5f38ec377b3e5d",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "8f3264888c77e03ffc67d96538a706fd4f23daf857a17889cf206ea845ee210a",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "8541c9118a33a76d0be1d59bc929aec8d56169bb5b2911c168d4e0bd4c5e4afc",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "df5f193487c17d722ecac75ab14511aa4e8a17aa2a92e7ed5b81c36a7d4ee289",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "1230521ca5877d33c30482546f99df33c131c289819774d7ce2e2e669abe1b25",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "07f926d506d123ae782fcad131b1fe266b8e4d81204b22d75cc3f102cb53b947",
+    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "4623b678d4c20b562d2bdef7cc4ef98cefbe8407e47d96300f32950b420fa692",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "264ffd64ec447b6045c16894979b2349aa06cd25b3b8d1b41504416b3e8e37cb",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "7d5edc7e505ec2c350601fc4f5dfd27be0e085cdb59762f410a73c382a1ad502",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "0a3620d3be41b40f364cfdcd9eb8ff9dface745d764ad19801af9019c46e4ee8",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "e1b25d624ac43092ea6b0fc60a65bf4b9ea43df39ff725117171dc8cf930d54e",
+    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "e83a271e1fb63c1d4b10229664bd05a38ca9a68c335c5a0e107bd867f19983cc",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "7f6bc57a55a2b0971d918daa6f49f57481efd96d562b8ac4b272179a89ed3cd2",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "8b8bb0868a332656d930fdca678691e0f24b49092663075f42c5424e3ce2a0bf",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "87f163c2281624499f2a129ba71436941c2be76204807c2b6aed485dde6ec348",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "86bcc46b02d6462118aed00ca3468208d36013e53514d41314eba0cf59a12f23",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "2620a0232d7a1c71202f1857cacb3bde335d2e98616638cba7d8b5212ab79db8",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "74ccdbe73695d23bb46e8183a27e48c86f40a2c893573bfeee8e6ff5b1eb8d7d",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "58303efb9d4ebe16248e22108a7f81c18efd7c7b25a47c8f5f9340824c6b189f",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "6dcebf1a48de7b1d78df8d7e9873bf08d1445176150ea33ca82407e5bf16d7c3",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "88618d695415293f09c77404a8df02f747dbd850b532e0e08ac82ee54405678a",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "92e9c52a355e3707917b83ed565602f181130a7fec5095016eebfd64c4d9ff79",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "019d8b6ca938ecc8eceae076a968891021532db306826dfffbd3a0037091ce38",
+    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "b2c91fbdc29fdfda8a4432a123db467943b3be78df5763ff64978bccab849cdc",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "c46f678ad2cc064d83d7d24a64232d8dae126ba65a31bdc1ad34dc5a0b49aa88",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "598a24b855591c7676a37736379c8df13bab553b46ab7d736b5320a80acda23a",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "422489113663a0b50c1c1007855732660918edece9940b61622a759d1a025fe0",
+    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "7e02aaee564e693287529cbb2997a3053403ecb4ed25650428d9e84679222b79",
+    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "ff22985ac6bbd39a24c430961bf2d24036b80a0be9072839f5cd07f9bd74eefc",
+    "uutiset/korean-niemimaan-sedimentti-erottuu-nasan-kuvassa-b25d7a241a77/index.html": "f5ca3b5e591e598d19e55c1c9e21aeea900944a6072647cd5fc63af03d084a48",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "703dd51692f3a77728b397a05b5b9130ed0662c86e3e26724310977b0d073eba",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "092be63cedaf607cd18aee3210382d3c1ea8a0da4b5fd392148c57c566f4fd0c",
+    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "59186028a0a6aac69cc69f5cc4ba79f691be0b990dff64dbf028c4a894101e11",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "e3fbe7c57facfc5e96dabc4b937c8f3638c9a4fe6e2b48574f22a8136c0443d5",
+    "uutiset/kuluttajahintojen-vuosinousu-syyskuussa-ennakolta-2-6-2e846b3cf176/index.html": "6ece14b7d46f87f53ea64b1bb0f66d8f04af0ae15521523d036df2bbe53d7cdc",
+    "uutiset/kuntaliitto-ehdottaa-valitusoikeuden-maaraaikaista-rajausta-fe92f910b26a/index.html": "23ae0be580aba237424d3e965994dcdff4277e640087973824a95bd879f9c600",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "d091200c0938c726551a8e8febdf475d75a2b5e54ccf71db54c5c1d1b9c79ec7",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "d0792b23a2ed60aed55255bf5ee9a0da9fb02d433f35a5bf97c93a18a10b9e74",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "c1cffc1a652cbd24afb88406326e661493cb921bbe6a35deb407024cbf5d0a0c",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "24319e3abae0cb8418891e94f61c8aad6d124cd114c80c592af72f19b14de838",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "f417078262ef05732f2c496c8e13f907841469f3d0d7551612e44fccf10cd6ad",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "540d1cda6cb3fe7fcafec203b11ce4020d99cee1dc8b3dccdffa7fd6e4415c1f",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "feb837a2d4d73e1b49d421310e833638cecb32972e045969bb0c331bafb48c30",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "43de962ea7a19fc8944c8af2821a3176910ec48922051cf6c81a064910ff845b",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "fb82cc6ff65b6456d7bbaf8b1e5cb6d64e13ce4c8e25439d132e815ed8968b54",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "8db7d7370ae0e89dd026c6e0ca9fca316687d7231788098e6cc01f110d68171d",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "228df9321947f49d1191d56fb60aa2fb53f0a2744d7958d2666c3c414f9de714",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "3836780417a5dafb171ecaa87f3eb0f9863456de9273b4fce630f33f719ff2b1",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "23bdc661080080627d534ce741896aa2a40249a89472ceebc54d81c65025b41c",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "e30e72502de59c3f2590590e5d2bca8827c6f75e5ff32f33c12363922f6e3cc4",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "6bd6ee46ad77ef21bd1360f35713466348d84e4f1d8127a9f9bc445a320dd10d",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "b66048460ebcdd0866b1673b7bfc4d83c8684e9950172084f85623827f9e482c",
+    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "4ece822318bf55f33458faab2d2ef2bf64065ebd41feda696da02ae556edebf5",
+    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html": "db444717e2fbcd2673dad0b2ada7849ca7717c1e4c251a47770546200c18ba96",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "bb4cb06e259efedea5c9b351bc59f210d5112bd8848aaf2af768738bf0d21b16",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "812dd28fc5b088e7f2c92fd2ba83571939b01ce7be6934e481a38764bb63c758",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "028c27ca8e737143306151e57e6e5c8ed429b6089cb647c1d9fd0617a16d032c",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "e16bca0e5a57a379638a804c40fa875d60ffe027ec7b9954a97f7c4580ac745b",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "3d187c3df52f9f5c93408b66857085906760240ee39c44fc928bfd7eadb28139",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "95c53a7c437a36b58240b601c142ce0da099529dbcb4f85c38b8f0dd30067064",
+    "uutiset/kuusijarven-wc-tilat-kayttoon-12-lokakuuta-c2bc4a29129d/index.html": "37bdef61c0ada4bdecab0cbdade84e0898edf83db936da4dd4a4744f7d61e2da",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "52c59c7c6c51c43b5374c6b9a1f9836d26c8c90f1b08a029aa7408ecebc1e70c",
+    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "909c84a0e777753f8b3e199246f239c2606c21d135decfa52824df2c998c3a79",
+    "uutiset/lansisataman-pikaraitiotien-hankesuunnitelma-hyvaksyttiin-743604e52b6d/index.html": "657b842f23cd04cd10aa5d01109942670da99f08b1531bc6f417553229ffb37c",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "ebebef52613d96521b41e56620f783ca6257d80277ac9a7f949d2ea17d239e87",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "52b9de178cce4ce42731c141ee79bfd175cc1dca34ed91ad6ef9079221d6864c",
+    "uutiset/lemmenkujan-kiertoreitti-kaytossa-viela-viikon-41-9379acd25d35/index.html": "15d05127da8679d7e6aa8c8c851c1c68be364ce6fab74e947cc2e3755b358ab0",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "39ca4b551ed7e94366f8f208b17b4712bf73e2620ac3f4071ccc04777928ebed",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "3ad32987830355b6ed25baa2c7aaece503af7434f601456643ceb155212f621b",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "e58b7c42bc5234be20254d2325aa300595d9d768251d675177005779ac067b35",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "399e0b23f1c5124abfe9f034538c0d7e1c60cc4494ddec081135c331511724aa",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "c45137caef0253c2af0d86015ace379d8f313de47dae10e9774c3bf91f82cc46",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "93937ba6a04939ee083db2eab4dbe56b2827ebd3409e10d9fa6dbdbd29af84da",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "4edb6346015ac75a0580c26f0749a100cc33942b6308caa7d0bd19ea32d8c338",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "d67a29f59e8be1716af3931d3e95418eca03941f8453b9f99501db7b50a2bba7",
+    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "e3c2213cd71919e019a8c4812c38ed9ab0f889b76f5b49434135ab279188a2e3",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "a15a5b1804d2ef9fce0b2de97cbc3c8fc8f020b7ddd76df77f779e073605bf42",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "d82cd942e843fcf560067a3c620b44a5aa79b3f920dca0dafdf7f736fe02a8a6",
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "11759904c152df3e02a6af8b6d70abcab364722889594c9c661755311fd03f5c",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "9553227e8802a7959cd57e932459e47a1e30405f0c0edb785ce8c27154dfa6a8",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "ded66ef9b2c96e5b9550c925adaf1ed73c0067c2ff114ecdcf47fd5db45a9106",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "9d2d58fd730cd93b268eca02ec4c5f7a5dbc6a54221225bdbbe1850401eb1cac",
+    "uutiset/multala-hakee-saksasta-yhteistyota-vetytalouteen-dacb24d664ef/index.html": "1064132a96adbd35ce807fec909f72e9ea352ea62d7e8ad3635226d201c6eec2",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "6e498528734f958304fafa15c51ff5537f648a79263f29dc4628287e6dbec18c",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "6788377b51b4334965f223242799464388213389bc16fc0bfee3f04542ee689f",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "10615062db424b22844ccb936f3f10f99e24403c435e3815807231f8be842a38",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "e99390a16cd18a104d0ba385c0913208ab2de61dfef35aa827f820ebebb49bd8",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "f9c0fd867be617e2bec194c81f12bd299542e87ce53c3bae82c850baa95e4f04",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "6a536178ccaca597d4aa1a48b4caa7247fa9946f6f768d0f2a23f3435baf9e90",
+    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "2c6680b79f84cdf0fa8e1bd547694ff150ca5433bbb027a98f33407dcc5fe666",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "de06092877ff0317b69b86df08706db927f6150bb9979134b3bf0459a0b5e50c",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "b9102283a0e243166c11837a72f19d629d75bc96bf749e1c3b394a1481dc8624",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "505a1a597fc5585853dbc45202daf1db247063c2ad60df29372c6a0b05962dc1",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "65663328627d5033d65208d34d4441b3a5dc3f551d296a94e43671c261b0df67",
+    "uutiset/orpo-sai-katsauksen-kansanedustajien-turvallisuudesta-41eea6aee980/index.html": "8c5a64507b0a8cef3a7200e14d40809b6ae731c831555f9f7d4fcfe84b5fcc52",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "028dae7e9b510f6217d76a504823094b809975515bd9e423e413d7e51346c573",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "9ed19340ba4b321e8268fb784f5d9553276d495ae864f5da7322d73b522da153",
+    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "e2e0707e8c6e2bd87681ba525e971d4896662abb4084fb8316c85e299c41e822",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "82912b6af4cd2528d7792d589af46e7113454bebf6158e8899095d8f1244687a",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "4e6ed3aa418598d9b0ddaaed97cdb05d0ceafc2c383dd5292e1067c26ca5f254",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "c0ee2230539fca71bd77ff69014ab337cd682b334ff49d4add8001aaf5a52dda",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "ef11e1029a9dc31d365b6e9e2529bbec6e82e90865ea7b7f8ea1ccc054b8ece5",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "8cf8dba758e5608858c742f1ffd96cfc9def72781281e541a234dfd4be176d27",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "ca10a3b426e6174b68aa7c440dd3217aaadbf2f30d9ea88b1c7038b439c600f5",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "eb1c9f963c1dddb5ac37224fd2f8ab13d3d61ffda855a10bcad8759f3218d38e",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "a4daa20145c6a4ef9dec7e34a944100cf328f79e16008c55fae69032d14ec2b3",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "9706d681a929313423931de864356b8be30e66f1118eeffcbf1d99b45adc6d94",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "e9e6070a9713e64e728a4d62b329189ea8fa272a3d571fd35a128c65e0a9eab1",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "b74bd38628380cbe8cb7cfdf534f2a4afccabd3339b51a1d2b23cc12740a44cb",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "ce8ed2e37f678078e95d59f7de0cfb808011b49ea1fb30db8a3fc3a0f2d868ae",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "1030f8e3eb937afafa63258183b132b5ea12d9b8c519bd11ef867a40c58a9fed",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "a7d26b8ad12de3bf88a7bbe223e08436c744d2af48b821a1fcf17c76bbeb74af",
+    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "d9ca193a95bafadab8bf7a3b0a803cc94b32031c2ba9239ec43717f43603a52e",
+    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "c26e77591c2303935177fc7193b579b2629be0b3d58d0a6ed58916503d1c8c20",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "53e8833694b0cc2910a1db5565b529356b5465c7106c3dbe248677d430dd8f97",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "15ffaa472854e06f58ffaf0675ed118760e3305d31265cc61cd5160414bff30a",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "c5481cceaa268abaac96f72dd8fc22dd1cce747f35074c371cfc578a76d5a755",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "dea10dfe39e66dde0b5122b698cbe71a50cbfe10b0fc11670fc5041d49fa27fa",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "19321279509a5b6e4eb2e1fe58cae756d4074e4dc5e0ffeb468abb56352b4420",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "3700065caeb9ae63266936254fbdb72d0f330dcff9cb4188105d23f5d7696218",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "0d4f02c10552a722e7d753469c158fa0324bd79a35b358b38efdc343d618c8b0",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "0fbcf2a87ac65cc1dc823174f96ec9dac2e7164314fead62cae465db35ecec3f",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "762eb4d4ff1d26a599c5bac82702ee293ca4c73b99c623efef881836f758e83e",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "e8ccf8ca78f648c0553078320395314ee3511288d274312c8748e5f3843efcad",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "06da27da62874ab0403cb850e84cb51bca0de962aa5545f2193d84386924766b",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "c32865e9b3848abef43faa3208d6c7a0e8b968d587e8434984ce609fdcd96ef3",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "9106fc03a232339b35c2d8ad4732eba57085b1c0421f82707cd2f631cf3e3390",
+    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "49abf79a2363ac3cff063d84e02b57622842a5e962695bf0e97badb2aa0832d6",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "de50cf56f4ee864363bfff732f2ced31a4d024d4b0191a460011982fb913f770",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "396eaff2a8a13b2a5447f22ef2fcf2ddd61886180e00cc67194386cfee28aef4",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "948b5a0b449e971e59eedf1e8aa4ce069cae202dfe0e433be16bcfa524d6cb95",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "1569d226c6fbd113207f3d7753b9dd2b6f8a28262938fede30eadbe57bef05d5",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "954c8cb193876ac35a8641961397ef9e7044e73c7af6c6abdcf8c84ed30ef622",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "da74168655fd2452c6ebd8f9be498403a44f557123eeac3bcb05387efc218737",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "36df02adf549daade7bd50a385bad321cbffd23535b17a30a3fcf96dca940ada",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "be07504907695451f06a66ab1cfc8279c3ec90989452300737d73a07362def76",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "42b7d8be27c2f72af2709610b94a3e13a092870c362ae06567db0d7c954155dd",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "2ec95bf80556e9a79e033af435cb61e94045bc7cb09675755a13e29a8b7a85f3",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "ff387b0c0775a5d5ad25723260bc84f972f23edb4b2e04b902ec81c6e9dd8a6f",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "fe26ba0c0ad23d8dd630318fe829c3a780a5f97f62f7f630c16283eba35a06db",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "e31bb03941d8e8c88d55141d723783ad5b92739a611fbe718f71ba05423910df",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "c498a0795db0432ffb0d0abf8877ad0535e05567f10ae7c061b37e091a4f80ce",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "bc4c290a95e4117d538400233fb7920bdd6856861018169c42408044efceac5f",
+    "uutiset/suomi-mukana-maatalouden-eurooppalaisessa-digikonsortiossa-6b30890419a1/index.html": "425b8113028b210d26aee382364af85f791662a45472d76dad4f338888fe91d2",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "1bbe1880a066752d9089f6f5946f60a8d56bc0c6d97b2b7e97bef8d83e25b827",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "f292f93ef9958f507cecad8d9859b07fc4e81815aaaf3b78257d71974dfab2bb",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "b4b90b17943ec10affa7e34bc3ad666fff0b3dd73bbcc7c82c9ae42ebfc99f94",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "3f0192da32cd5eaa7fe90d3d15c121ffda1c4854f72a947cb65af94679d12cea",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "1c4a46294d2c9fdeba804ae9e6c7b52866294b39b134a722a8b43a8f1c0e6b50",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "0975cdad1f94b09dbb5117882b8dd1bbd326c801403842457ff02c323b498fab",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "ec8ec10e20d1c5074c64bc70d7c04315770d41799c6f8556736c0eeda2dbf61c",
+    "uutiset/tiibetin-ylangolle-satoi-runsaasti-lunta-nasan-06fea975771b/index.html": "34f700426b0418abab1fe333485b4efdc73ca73357e9fae5f155f43b5c461602",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "cd7e6a4d69b2e5690fb9b70643118ef4516d19d827b0f00dbdde2604cc505fc1",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "a7498b33dfe76c60e8fcea4c121686cb1ab3f4768e83d09018c0fdcf8658b75e",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "3a0ffe218cdbadce65ff11b00ed5d6b48a8ca4472e75d8a4463f7e3627f6fb5f",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "9bba3e81e5e0cb18373c7d75acc925e60cdd912876c0552d520c9411829f3471",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "f890b0b2257e4d4a587d054f7e9e760e67a5a1c37c14c860fe5eac1e98da348b",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "c38a87d28db5388cb71d4c6a2e29954204ecdaac540aac797f75639232dd5011",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "eaa718e9c9930be29c7f267f86c4877a7c8cb14d9cd03539360a17a420f9c8b0",
+    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "34e100a34e9b2ecdf25074aed2545bec262eeea4902b70e2dfd3ac1337d4ca51",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "bde1d4bc044d13b1ffec6146e1d5088a49c2acb8fdd6ab37ebeeeb1ce4827b42",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "4604b018e97587bc17c3a6ee00961a2a3360fb0c510fcab153f642b46361562d",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "b57c59d4efa64baccb7a85dfc485099d2fdf5b7f0a2e5bfacf8b2de1efb64716",
+    "uutiset/toolonlahden-tulvasuojelutyomaa-palkittiin-helsingissa-c8d9df28ef8c/index.html": "8c39aeba621308165a8a03f35c0a57b10e4c72bf90c398b259e1af22782932ff",
+    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "a5d877c43296a3315553d56abcad33285a0351be5b2385caeab41035ed2e3bd0",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukea-kiina-suhdetta-aac41588a8b4/index.html": "98afcb134145f871a9293e5f41714d98542baaa34c530e421e0ddcf305f62aff",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "99da25de9f1329310cc49effe0e982a53bc17ba747ac731e73034436f1193c5f",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "2df4e6351dfff7da7a211bfa64cf5d6c6ed8996658e968f1dfe4e08baa790ac7",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "54d8e8bbf4d4c49ab2e52068c38c11307e0e9b39b504a0a6373287f9a5c67e38",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "3bf73d82c6dbeca661246c149a1de73304c60d581c863fb290dd82697dd963e8",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "e0f3b3de3c06bc4cb48e720da4a410cdf4208c0148528306f447aef4147bc307",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "e9209f9ee8b39f6044fa0addbd31d4b3eeca763398222010a6671cf0e8aeb13d",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "ba33c5ac1364115fcd97f9503cccdaa5edff0cba81932aae16b8ca2fc9a3af81",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "7f99775d9ef22dc8e39068579a728789e3279c35fbabcf000db22a6b43546340",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "a97c5097d69577381f1dabc3ab45f8e4d6107a4aa1c2af43f68d66fdbae5b660",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "058bf8f53d289175a21749d7dc98d4d61fb98782b095858e6d3f3fe090bda631",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "da2ecadbd1a395c08aac9231b922a894954ae7d19a375054b9ea57251a656a4a",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "d6001914ca498ca46c03754cd6320e3c391f3cdde137ba329c052726039b4ed0",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "ff4b5ef28bfaaa7ee08139095d2d0b2b7a44e6d64ef7f81d362e5addf9322cf4",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "40bd3d7ae46b629733a37445c1a0613cc8d0df9539b641a2f1a57668bdde3859",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "0d6a7c97edccc73036044d17ce4c9cac933f9b583804e902f9950ff700b6b3c3",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "65320d7c9c24fd9615d000013d43544af5a3d7c6b6424ddfd14c3e61eb989556",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "b4e4dfd8753848480d02b71fa801406aeee6b7eafaebfb58e96855266867884d",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "bfd0b07975efa61c767a45e9de283e2aeebc9e68e80bf5bd1ec35ce307aad4c4",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "192029c041735ac487e870f5b74548cc98156c577b6e677ffd84080a17b609b2",
+    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "c8786d7d96002daefdc2d61f5d558baad85846205e413d923851735980baa039",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "1957553d0f4cb0f232a353c49c2b37e503eeada379ce9dda37723f1c01bfa62d",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "bdaf4342f3f07a9e7e411ee5ce36f2d9137c0f1684f718f1db25bbb87f887dcd",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "bf3124f8dfc9d9bd7963049cf3d743f1a899a6762e910a28a73dd124290c990d",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "b39f7703d0ca39e64b1036f4ff638bebd54330ca3cbabd8fa23a41abba9bb76e",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "ec63709416fcd212dfd4c77f35ec063dbb1eab7a44f7353273748bc8cdad4ce2",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "c7d5fd504c71c345f0e804d9c4ba3006dbe45d701fcc917d4c4be4885686ef4e",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "4786ff614ed9545f934325a8fe184b83d013ea1dda04ad3f48931d7127084aa6",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "80919ce85ba7da286d49f6835117497ee0ebb03a3723fbf66d84c9ad61219dcc",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "962cceef73a512a6652ce7a631d4b6f6e0cfca809af10e406a9e8e605fe7e284",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "32d46ad5b7df8c8be4acdb9f93ae92a36fcd4571fd0db2ff227ae9b87893bf5e",
+    "uutiset/vantaan-historian-museo-hakee-avajaisiin-vapaaehtoisia-d96705192438/index.html": "48dc89e20a83c2812d21c90bd85c5f9010b946987d0790b76437c804581ea7fc",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "37c3e28213fab038f770916a9a757eb5e2a19d70c440c528eff45661c5a2efc5",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "446f28e16b866c14686203508b9a17da0b7e5aa53b136c96ab3e8b7bc9f6277f",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "60b49aa1af9bec74ae1f73e6ff4525a928828153ff5a64d75e117eb1d94190eb",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "eabbfa4ec7d069f62854b8f7ad07ab82e384d9d5eccf61526b93137a2a1c606c",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "f2817f811d7c9a0f34aef6ada18f76e6ddd0402bb6dc7f3c481ca84fc3341f7b",
+    "uutiset/vantaan-yty-akatemian-ideat-etenevat-tyoryhmaan-ba96b94ee71f/index.html": "c010643c5d650bc2b594a6e2e5931eafbe06d2e90df8f10a66e636a17f41437f",
+    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "3cc43198902c3a4f6831e9d38d888d47ce87855d4ed1f6327a84d657acf2e76f",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "a2a0ab9eda21af7f41063a7e34850b98bc0abb9dddd0b6fdea73a4e0943e55f4",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "4e51a9132b8027fb0a356aacb1bbd728c684597c1804f4a59b3f04d015ab4383",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "be778249c0829f9264307d4abc6327186bb79d4ec1ffd0e4fd11470d7c945bf3",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "bc20fc268d45415cbbc145d1e25d0dd873187e5351859ffcee6232e7f9940e32",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "78372159026b3e5e585d101512de34be2a097dbcb538a56d1a0175e79a21a29c"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Suuren kivirakennuksen julkisivu, jossa on useita korkeita pylväitä ja ikkunoita, sekä leveät kiviset portaat.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "AI-generoitu kuva: Moderni raitiovaunupysäkki, jossa on pitkä korotettu laituri, katos, penkki ja roska-astia upotettujen kiskojen vieressä.",
+      "attempts": 1,
+      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
       "classifier_output": {
         "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva Petteri Orposta eduskunnassa puhumassa toimittajien mikrofoneihin. Ensisijaisesti haetaan artikkelissa mainitun 2. lokakuuta annetun haastattelun kuvaa, vaihtoehtoisesti muuta todellista haastattelukuvaa ilman väitettä samasta tilanteesta.",
+            "depictable_scene": "Todellinen valokuva Jätkäsaaren nykyisestä raitiotieradasta: katuun upotetut kiskot jatkuvat kaupunkiympäristössä kohti Länsiterminaalia.",
             "must_avoid": [
-              "Fabricated likeness or reconstructed meeting",
-              "Presenting an unrelated photograph as the October 2 interview"
+              "Unbuilt future infrastructure presented as completed",
+              "Unrelated railway or metro tracks"
             ],
             "must_show": [
-              "Petteri Orpo",
-              "Press microphones"
+              "Existing street tram tracks",
+              "Surrounding urban streetscape"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "Petteri Orpo eduskunta haastattelu",
-              "Petteri Orpo microphones",
-              "Petteri Orpo 2.10.2026 Yle"
+              "Jätkäsaari raitiotie",
+              "Länsiterminaali raitiotierata",
+              "Jätkäsaari tram tracks",
+              "Helsinki West Terminal tram tracks"
             ],
-            "subject": "Pääministeri Petteri Orpo kommentoimassa kansanedustajien turvallisuutta"
+            "subject": "Hakaniemen ja Jätkäsaaren rataa"
           },
           {
-            "depictable_scene": "Todellinen ulkokuva Eduskuntatalon pääsisäänkäynnistä Helsingissä: näkyvissä rakennuksen pylväät ja sisäänkäynnille johtavat portaat.",
-            "must_avoid": [
-              "Invented architecture",
-              "Police cordons or an ongoing security incident"
-            ],
-            "must_show": [
-              "Actual Finnish Parliament House",
-              "Entrance and steps"
-            ],
-            "rank": 2,
-            "safe_to_generate": false,
-            "search_queries": [
-              "Eduskuntatalo pääsisäänkäynti",
-              "Eduskuntatalo Helsinki portaat",
-              "Finnish Parliament House entrance"
-            ],
-            "subject": "eduskunta ja kansanedustajien turvallisuus"
-          },
-          {
-            "depictable_scene": "Lähikuva tavallisen, yksilöimättömän asunnon hieman raollaan olevasta ulko-ovesta sisäpuolelta. Oven kahva ja ehjä lukko näkyvät, eikä kuvassa ole ihmisiä tai tunnistettavaa osoitetta.",
+            "depictable_scene": "Nimeämätön tyhjä kaupunkiraitiotien pysäkki, jonka pitkä korotettu laituri kulkee katuun upotettujen kiskojen vieressä. Laiturin reunassa näkyy tuntoon perustuva opasteraita ja päässä loiva kulkuluiska.",
             "must_avoid": [
               "People or body parts",
-              "Forced-entry damage or burglary tools",
-              "Identifiable home, address or readable text"
+              "Recognizable real locations",
+              "Readable text or logos",
+              "Claimed depiction of the approved project's final design"
             ],
             "must_show": [
-              "Slightly ajar apartment entrance door",
-              "Intact door lock"
+              "Long tram stop platform beside embedded rails",
+              "Tactile paving and access ramp"
             ],
-            "rank": 3,
+            "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "asunnon ovi raollaan",
-              "apartment door ajar",
-              "intact apartment door lock"
+              "raitiotiepysäkki laituri",
+              "tram platform tactile paving",
+              "esteetön raitiotiepysäkki",
+              "street tram tracks platform"
             ],
-            "subject": "Asunnon ovi ja tunkeutumisepäilyjen taustalla olevat havainnot"
+            "subject": "Rata ja pysäkit: pysäkkejä pidennetään"
+          },
+          {
+            "depictable_scene": "Todellinen valokuva Kampin nykyisestä raitiovaunupysäkistä, jossa laiturin reuna ja sen vieressä kulkevat kiskot näkyvät katutilassa.",
+            "must_avoid": [
+              "Metro station substituted for a tram stop",
+              "Future platform alterations presented as already built"
+            ],
+            "must_show": [
+              "Existing Kamppi tram stop platform",
+              "Tram rails beside the platform"
+            ],
+            "rank": 3,
+            "safe_to_generate": false,
+            "search_queries": [
+              "Kamppi raitiovaunupysäkki",
+              "Kampin ratikkapysäkki",
+              "Kamppi tram stop",
+              "Kamppi tram platform"
+            ],
+            "subject": "Kampin pysäkkejä parannetaan"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Paul G on Pexels",
-      "depicted": "The image shows a large, classical-style building with a facade dominated by numerous tall, light-colored columns. Between the columns, there are multiple rows of windows with dark frames and reflective glass. The building has a stone-like texture. Below the building, a wide set of stone steps descends towards the foreground. A group of approximately ten people is walking in a line across the lower part of the steps, from left to right. One person, wearing a bright yellow or green high-visibilit",
-      "generated": false,
-      "hotlink": false,
-      "license": "Pexels License",
-      "license_evidence": {
-        "image_path": "/photos/13787785/pexels-photo-13787785.jpeg",
-        "license": "Pexels License",
-        "license_code": "Pexels",
-        "license_url": "https://www.pexels.com/license/",
-        "photo_id": "13787785",
-        "photo_url": "https://www.pexels.com/photo/facade-of-the-parliament-house-helsinki-finland-13787785/",
-        "photographer": "Paul G",
-        "photographer_url": "https://www.pexels.com/@polodo",
-        "response_sha256": "57fb006e26e0cc89efbc5944aba88837e046b419a98d10269ae814901db3d2d9",
-        "retrieved_at": "2026-10-03T17:25:13.479368+00:00",
-        "transport": "jina_reader",
-        "version": 1
-      },
-      "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d.jpg",
+      "credit": "AI-kuvitus",
+      "depicted": "A modern tram stop platform with a shelter, bench, and waste bin, next to embedded tram tracks. The platform features tactile paving and a gentle access ramp with a handrail. Buildings and trees line the street in the background.",
+      "generated": true,
+      "license": "AI-generated image",
+      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "local_path": "media/eb447af356216b92ecdd16567f459dcb24771b41f4409f6ba1b2ce8317e6f5de.jpg",
+      "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Suuren kivirakennuksen julkisivu, jossa on useita korkeita pylväitä ja ikkunoita, sekä leveät kiviset portaat.",
+        "alt_fi": "Moderni raitiovaunupysäkki, jossa on pitkä korotettu laituri, katos, penkki ja roska-astia upotettujen kiskojen vieressä.",
         "approved": true,
-        "article_text_sha256": "1643d45f3a0fd80e97b334598e2c44e0a029ecb256319350bc80ab140227b157",
-        "concept_sha256": "f287b97fa21f2b3b232dc6e458d771faa703fe391639e339d5cc81bb000ee3c2",
-        "description": "The image shows the front facade of a large stone building with numerous tall columns and windows. A wide set of stone steps leads up to the entrance. Several people are walking on the steps, and one person in a high-visibility vest is seated on the steps.",
-        "fit_score": 10,
-        "image_sha256": "266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d",
+        "article_text_sha256": "90db2db6847e77f047a6f8e55e26e28fac607a96d6c3e3b2dbd8251140d81bda",
+        "concept_sha256": "8a4c70e9698c2b09c0326fd2f52cc1cd298b06885dafac8309c9909db7815e89",
+        "description": "A modern tram stop platform with a shelter, bench, and waste bin, next to embedded tram tracks. The platform features tactile paving and a gentle access ramp with a handrail. Buildings and trees line the street in the background.",
+        "fit_score": 9,
+        "image_sha256": "eb447af356216b92ecdd16567f459dcb24771b41f4409f6ba1b2ce8317e6f5de",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
-        "no_people": false,
-        "reason": "The image clearly depicts the Finnish Parliament House, including its main entrance and the steps leading up to it, which directly matches the selected concept. The article discusses the security of members of parliament, making the Parliament House a highly relevant subject.",
-        "reviewed_at": "2026-10-03T17:25:15.311834+00:00"
+        "no_people": true,
+        "reason": "The image clearly depicts a long tram stop platform beside embedded rails, with tactile paving and an access ramp, matching the selected concept. The article discusses improvements to tram tracks and stops, including lengthening platforms and improving accessibility, which this image illustrates well.",
+        "reviewed_at": "2026-10-03T18:28:38.753122+00:00",
+        "text_audit": {
+          "examples": [],
+          "readable_text_present": false
+        }
       },
       "pixels": {
-        "height": 616,
+        "height": 1024,
         "mode": "RGB",
-        "variance": 5155.8,
-        "width": 940
+        "variance": 5944.2,
+        "width": 1536
       },
+      "prompt_sha256": "c365d871173ddb19294ed14b189e7768cecedf1da897b954bb06a75ebda2eef5",
+      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "The image shows the front facade of a large stone building with numerous tall columns and windows. A wide set of stone steps leads up to the entrance. Several people are walking on the steps, and one person in a high-visibility vest is seated on the steps.",
+        "evidence": "Nimeämätön tyhjä kaupunkiraitiotien pysäkki, jonka pitkä korotettu laituri kulkee katuun upotettujen kiskojen vieressä. Laiturin reunassa näkyy tuntoon perustuva opasteraita ja päässä loiva kulkuluiska.",
         "matched": [
-          "entrance",
-          "steps"
+          "Long tram stop platform beside embedded rails",
+          "Tactile paving and access ramp"
         ],
-        "method": "vision",
-        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+        "method": "generation",
+        "reason": "generated from the accepted scene"
       },
+      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "1643d45f3a0fd80e97b334598e2c44e0a029ecb256319350bc80ab140227b157",
-        "decision_sha256": "f09861aa16e3751ed54079f47497ca54c84754ad614646ac3759ec763e6762fb",
+        "article_text_sha256": "90db2db6847e77f047a6f8e55e26e28fac607a96d6c3e3b2dbd8251140d81bda",
+        "decision_sha256": "38e1175907ca0d587ea320366714bbd45ce43fd2fc8d366faff547e316876712",
         "minimum_real_fit": 8,
         "searches": [
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 0,
-                "image_sha256": "34d80ba04ab73717f6ce6498ce2ad8ccc5ad9793f5886050cd36d7110b22480f",
-                "license": "Pexels License",
-                "reason": "The article discusses Prime Minister Petteri Orpo's comments on the security of Members of Parliament, specifically mentioning an interview given to Yle. The selected concept requires a photograph of Petteri Orpo speaking into press microphones. While the image shows microphones, it does not show Petteri Orpo, making it irrelevant to the specific s",
-                "source_url": "https://www.pexels.com/photo/low-angle-shot-of-condenser-microphones-7450049/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "1fc9636cacaa589d2f81800b6e3dd13a4a68e727b5a1199de134ad20a5da574a",
-                "license": "Pexels License",
-                "reason": "The image shows press microphones, which is one of the 'must_show' elements. However, the other 'must_show' element, 'Petteri Orpo', is entirely absent from the image. The article discusses Petteri Orpo's comments on security, and the concept specifically requests a photo of him speaking to microphones. Since Petteri Orpo is not visible, the image ",
-                "source_url": "https://www.pexels.com/photo/podcast-studio-setup-with-microphones-32007691/"
+                "fit_score": 3,
+                "image_sha256": "54112295301fafdf4781c614e79e5bfc78a6febbd2db1605cfa45efbc1a13a09",
+                "license": "Helsingin kaupungin uutiskuvan käyttöoikeus",
+                "reason": "The article discusses improvements to an existing tram line and a new tram line. The selected concept specifically requests a real photograph of existing tram tracks in an urban streetscape. The provided image is a map of a proposed route, not a photograph of existing tracks or a streetscape. It depicts future infrastructure as a plan, which is exp",
+                "source_url": "https://www.hel.fi/fi/uutiset/pikaraitiotie-lansisatamaan-parantaa-raitioliikenteen-sujuvuutta-ja-kapasiteettia"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
+            "provider": "source-news",
             "queries": [
-              "Petteri Orpo eduskunta haastattelu",
-              "Petteri Orpo microphones",
-              "Petteri Orpo 2.10.2026 Yle"
+              "cited source image"
             ]
           },
           {
             "candidates": [],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
+            "provider": "wikimedia",
             "queries": [
-              "Petteri Orpo eduskunta haastattelu",
-              "Petteri Orpo microphones",
-              "Petteri Orpo 2.10.2026 Yle"
+              "Jätkäsaari raitiotie",
+              "Länsiterminaali raitiotierata",
+              "Jätkäsaari tram tracks"
             ]
           },
           {
             "candidates": [
               {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "f5ffcead332b2184c6f704aa038a25c8c625d6b40f6087b40d6defa81362afc3",
-                "license": "CC BY 2.0",
-                "reason": "The image clearly shows Petteri Orpo speaking at a press conference with multiple microphones, which directly matches the selected concept of 'Petteri Orpo eduskunnassa puhumassa toimittajien mikrofoneihin' and the 'must_show' elements. While the exact date of the interview (October 2) cannot be verified from the pixels, it is a credible concrete i",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Hallitusneuvottelut%202023%202023-05-02%2001.jpg"
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "a9dfc130545ced9fa1ff30ccceebadd9fd563ca6615f6bfac49aef8188b07c3f",
+                "license": "Pexels License",
+                "reason": "The article discusses improvements to the tram network in Helsinki, specifically in the Hakaniemi and Jätkäsaari areas, to accommodate longer trams and improve service to the West Terminal. The selected concept specifies a real photo of existing tram tracks in Jätkäsaari within an urban streetscape. The image provided shows a street scene with a bu",
+                "source_url": "https://www.pexels.com/photo/historic-wooden-architecture-in-tallinn-s-kassisaba-district-37998769/"
               }
             ],
             "concept_rank": 1,
-            "outcome": "accepted",
-            "provider": "wikimedia",
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
             "queries": [
-              "Petteri Orpo eduskunta haastattelu",
-              "Petteri Orpo microphones",
-              "Petteri Orpo 2.10.2026 Yle"
+              "Jätkäsaari raitiotie",
+              "Länsiterminaali raitiotierata",
+              "Jätkäsaari tram tracks"
             ]
           },
           {
             "candidates": [
               {
-                "approved": true,
-                "fit_score": 10,
-                "image_sha256": "266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d",
-                "license": "Pexels License",
-                "reason": "The image clearly depicts the Finnish Parliament House, including its main entrance and the steps leading up to it, which directly matches the selected concept. The article discusses the security of members of parliament, making the Parliament House a highly relevant subject.",
-                "source_url": "https://www.pexels.com/photo/facade-of-the-parliament-house-helsinki-finland-13787785/"
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "515e8fb2dbcb8ccb58ab95549ce6de0064af25792f44cfb3d9adfe8f8b268f49",
+                "license": "Unsplash License",
+                "reason": "The article discusses tram track improvements in Helsinki, specifically in Jätkäsaari and towards Länsiterminaali. The selected concept requires an image of existing street tram tracks in an urban setting. This image shows a cobblestone street with buildings and bicycles, but no tram tracks are visible. Therefore, it does not depict the concrete su",
+                "source_url": "https://unsplash.com/photos/pink-sign-on-city-cobblestone-street-NaeJ4C61rkQ?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Jätkäsaari raitiotie",
+              "Länsiterminaali raitiotierata",
+              "Jätkäsaari tram tracks"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Jätkäsaari raitiotie",
+              "Länsiterminaali raitiotierata",
+              "Jätkäsaari tram tracks"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "54112295301fafdf4781c614e79e5bfc78a6febbd2db1605cfa45efbc1a13a09",
+                "license": "Helsingin kaupungin uutiskuvan käyttöoikeus",
+                "reason": "The image is a map of a tram route, not a physical tram stop platform with embedded rails, tactile paving, or an access ramp. It does not visually depict any of the 'must_show' elements. One or more required concept elements are not visible.",
+                "source_url": "https://www.hel.fi/fi/uutiset/pikaraitiotie-lansisatamaan-parantaa-raitioliikenteen-sujuvuutta-ja-kapasiteettia"
               }
             ],
             "concept_rank": 2,
-            "outcome": "accepted",
-            "provider": "pexels",
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
             "queries": [
-              "Eduskuntatalo pääsisäänkäynti",
-              "Eduskuntatalo Helsinki portaat",
-              "Finnish Parliament House entrance"
+              "cited source image"
             ]
           },
           {
@@ -1334,321 +1088,404 @@
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "64e492cd39924d1f2d4767ee6f14f3f3271cb98aa44879e5a9232e6e334e4642",
+                "image_sha256": "99bc5a51c7f033cbaf50640727d7003da3b7d2df1d2c01455ba30e21ebed1e43",
+                "license": "CC BY-SA 3.0",
+                "reason": "The image shows a railway track and a temporary platform, which is not a tram stop platform beside embedded rails. The article discusses tram stop improvements and light rail, not heavy rail. The visible platform is temporary and does not appear to be a permanent, long, elevated tram stop platform as described in the concept. While there is tactile",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Platform%20repairs%20at%20Washington%20Square%20station,%20May%202017.jpg"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "raitiotiepysäkki laituri",
+              "tram platform tactile paving",
+              "esteetön raitiotiepysäkki"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "raitiotiepysäkki laituri",
+              "tram platform tactile paving",
+              "esteetön raitiotiepysäkki"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "raitiotiepysäkki laituri",
+              "tram platform tactile paving",
+              "esteetön raitiotiepysäkki"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "raitiotiepysäkki laituri",
+              "tram platform tactile paving",
+              "esteetön raitiotiepysäkki"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
+            "queries": [
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Kamppi raitiovaunupysäkki",
+              "Kampin ratikkapysäkki",
+              "Kamppi tram stop"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "30029852258f75562b50c208b7f28369bd127fcaa9b259d59e82a28b8bef9bd3",
                 "license": "Pexels License",
-                "reason": "The article discusses suspicions of unauthorized entry into MPs' homes, with observations like an open door or lights left on. The selected concept specifically requests a slightly ajar apartment entrance door with an intact lock. The provided image shows a closed, modern door with decorative elements, not an ajar door, and therefore does not match",
-                "source_url": "https://www.pexels.com/photo/door-with-decorative-green-plants-7227640/"
+                "reason": "The image shows a shop window and refuse bags on a pavement, which is unrelated to the article's subject of tram stop improvements and tram rails. The selected concept specifically requires an existing Kamppi tram stop platform and tram rails beside it, neither of which are visible in the image. One or more required concept elements are not visible",
+                "source_url": "https://www.pexels.com/photo/trash-and-window-display-24860433/"
               },
               {
                 "approved": false,
-                "fit_score": 7,
-                "image_sha256": "1867db97c11a299abb0af86a2a15ce52d2b3a860d8f7b7621441ffea30a98463",
+                "fit_score": 3,
+                "image_sha256": "5bf277fb683c3eabd76da153a341ab1b569d68b8f0a4ad73b6964c746b22875f",
                 "license": "Pexels License",
-                "reason": "The image directly depicts a slightly ajar door and an intact lock, which aligns with the article's theme of suspected unauthorized entries into homes where no forced entry or theft occurred, but observations like an open door raised suspicions. The image avoids showing people, identifiable addresses, or damage, fitting the 'must_avoid' criteria. R",
-                "source_url": "https://www.pexels.com/photo/a-room-with-white-wooden-door-5743149/"
+                "reason": "The image does not show a tram stop platform or tram rails, which are essential elements of the selected concept. The visible scene is a generic street view and does not specifically depict the Kamppi tram stop or any tram infrastructure mentioned in the article. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/man-standing-on-bus-stop-15678567/"
               },
               {
-                "approved": true,
-                "fit_score": 10,
-                "image_sha256": "f3872973fb0d2ce01fc4674c7df94bfac81ba441781ea239088b4c21b5968289",
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "cc2deb634d3b9637c8cf6ad0c8e00d196f99ec1157920b8804a7e98cc5e41e3a",
                 "license": "Pexels License",
-                "reason": "The image directly depicts a slightly ajar door with an intact lock, which aligns perfectly with the article's mention of 'avoimeksi jäänyt ovi' (an open door) and the concept's requirement for a 'slightly ajar apartment entrance door' and 'intact door lock'. There are no people, identifiable addresses, or signs of forced entry, adhering to the 'mu",
-                "source_url": "https://www.pexels.com/photo/close-up-of-rustic-wooden-door-handle-36163644/"
+                "reason": "The image depicts a bicycle and a person in a natural setting at sunset, which is entirely unrelated to the article about tram line improvements in Helsinki or the selected concept of the Kamppi tram stop. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/it-s-late-16705521/"
               }
             ],
             "concept_rank": 3,
-            "outcome": "accepted",
+            "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "asunnon ovi raollaan",
-              "apartment door ajar",
-              "intact apartment door lock"
+              "Kamppi raitiovaunupysäkki",
+              "Kampin ratikkapysäkki",
+              "Kamppi tram stop"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Kamppi raitiovaunupysäkki",
+              "Kampin ratikkapysäkki",
+              "Kamppi tram stop"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Kamppi raitiovaunupysäkki",
+              "Kampin ratikkapysäkki",
+              "Kamppi tram stop"
             ]
           }
         ],
         "selected": {
           "concept_rank": 2,
-          "fit_score": 10,
-          "image_sha256": "266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d",
-          "kind": "real"
+          "fit_score": 9,
+          "image_sha256": "eb447af356216b92ecdd16567f459dcb24771b41f4409f6ba1b2ce8317e6f5de",
+          "kind": "generated"
         },
         "version": "article-first-v1"
       },
-      "sha256": "266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d",
-      "source_url": "https://www.pexels.com/photo/facade-of-the-parliament-house-helsinki-finland-13787785/",
-      "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/13787785/pexels-photo-13787785.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "13787785",
-        "photo_url": "https://www.pexels.com/photo/facade-of-the-parliament-house-helsinki-finland-13787785/",
-        "photographer": "Paul G",
-        "photographer_url": "https://www.pexels.com/@polodo",
-        "provider": "pexels",
-        "query": "Eduskuntatalo pääsisäänkäynti",
-        "retrieved_at": "2026-10-03T17:25:13Z"
-      },
-      "stock_provenance_sha256": "2d22db399b8abebe9a46c3bbb9f50946d132f255776021f957a7c9fa779929df",
-      "url": "https://uutistenlukija.fi/media/266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d.jpg"
+      "sha256": "eb447af356216b92ecdd16567f459dcb24771b41f4409f6ba1b2ce8317e6f5de",
+      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "subject": "Rata ja pysäkit: pysäkkejä pidennetään",
+      "url": "https://uutistenlukija.fi/media/eb447af356216b92ecdd16567f459dcb24771b41f4409f6ba1b2ce8317e6f5de.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "valtioneuvosto",
-      "related_sources": 2,
-      "source_fields_sha256": "9148b343f4351203543f4aa524ab49d577e836cbb732dc2b2ee364dfda6cc9b7",
-      "source_sha256": "709c395663e3bf461b53299bb8d548cebab70761d72ef48fcc758766e81b6e79"
+      "provider": "helsinki",
+      "related_sources": 0,
+      "source_fields_sha256": "b056757ce9e5d7f9ec7ac89e8f1d0c84eb9d0fc3ac05b10f19e1a81907ef088f",
+      "source_sha256": "9545def9cb6941e8165e787ed381d59921e9ea7416cbe80e8ee1bdab609de4e0"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-10-02T09:32+0300",
-        "publisher": "Valtioneuvoston kanslia",
+        "published_at": "2026-10-02T15:09:35+0300",
+        "publisher": "Helsingin kaupunki",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Valtioneuvoston sivuston käyttöehdot: tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan; aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen",
-          "license_url": "https://valtioneuvosto.fi/tietoa-sivustosta",
-          "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
-          "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
+          "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "url": "https://hri.fi/data/fi/dataset/helsingin-hel-fi-sivuston-avoin-rajapinta-uutisille"
         },
-        "text": "Pääministeri Orpo tapasi turvallisuusviranomaisia eduskunnan tapahtumiin liittyen\nvaltioneuvoston kanslia\nJulkaisuajankohta 2.10.2026 9.32\nTyyppi:Tiedote\nPääministeri Petteri Orpo sai aamulla vastuuviranomaisilta katsauksen kansanedustajien turvallisuuteen liittyvistä havainnoista.\n”Sain eduskunnan tapahtumista laajan katsauksen. Suhtaudumme asiaan vakavasti, etenkin, koska se kohdistuu kansanedustuslaitokseen ja sitä kautta suoraan demokratiamme ytimeen. Samalla luotamme siihen, että viranomaiset selvittävät tapahtumat tässäkin tapauksessa perinpohjaisesti”.\nKuten eduskunta tiedotteessaan totesi, esitutkinnasta tiedottaa poliisi.\nLisätietoja: valtioneuvoston viestintäjohtaja Päivi Anttikoski, p. 040 5364821\neduskunta kansanedustuslaitokset katsaukset pääministerit turvallisuus valtioneuvoston kanslia viranomaiset",
-        "title": "Pääministeri Orpo tapasi turvallisuusviranomaisia eduskunnan tapahtumiin liittyen",
-        "url": "https://valtioneuvosto.fi/-/paaministeri-orpo-tapasi-turvallisuusviranomaisia-eduskunnan-tapahtumiin-liittyen"
-      },
-      {
-        "id": "B",
-        "published_at": "2026-10-02T09:40:00+03:00",
-        "publisher": "is.fi",
-        "related": true,
-        "text": "Juuri nyt: Saksan presidentti rinnasti maan tilanteen Hitlerin nousua edeltäneeseen aikaan IS ExtraPienet vihjeet paljastivat pettäjänaisen katalat touhut – merkit ”kuin oppikirjasta” Wide ContentPlaceholder Main ContentPlaceholder Politiikka Orpo tapasi turvallisuusviranomaisia Pääministeri Petteri Orpo on tavannut turvallisuusviranomaisia eduskunnan tapahtumiin liittyen. JaaFacebook X Sähköposti Kopioi linkki Tallenna Pääministeri Petteri Orpo sai katsauksen kansanedustajien turvallisuuteen liittyen. Kuva: Lassi Rinne Suvi Hautanen 2.10. 9:40 Pääministeri Petteri Orpo (kok) sai perjantaiaamuna vastuuviranomaisilta katsauksen kansanedustajien turvallisuuteen liittyvistä havainnoista. – Sain eduskunnan tapahtumista laajan katsauksen. Suhtaudumme asiaan vakavasti, etenkin koska se kohdistuu kansanedustuslaitokseen ja sitä kautta suoraan demokratiamme ytimeen, Orpo sanoo tiedotteessa. Orpo luottaa siihen, että viranomaiset selvittävät tapahtumat perinpohjaisesti. Esitutkinnasta tiedottaa poliisi. Myös tasavallan presidentti ja hallituksen ulko- ja turvallisuuspoliittinen ministerivaliokunta TP-utva keskustelivat kansanedustajien turvallisuuteen liittyvistä havainnoista perjantaiaamuna. Eduskunnan puhemies Jussi Halla-aho (ps) ja varapuhemies Paula Risikko (kok) tiedottivat torstaina, että ”huomattavaan määrään” kansanedustajien kodeista epäillään tunkeudutun. Tiedotustilaisuus järjestettiin sen jälkeen, kun IS oli omien tietojensa perusteella uutisoinut asiasta. IS:n tietojen mukaan epäiltyjä tapauksia on nyt noin 20. Halla-ahon mukaan asunnoissa ei ole ollut murtojälkiä eikä mitään ole varastettu tai rikottu. Sen sijaan asuntoihin on jätetty merkkejä, joihin edustajat eivät välttämättä ole heti osanneet kiinnittää huomiota. – On mahdollista, että merkit on jätetty tarkoituksella asunnon haltijan havaittavaksi, Halla-aho sanoi. Lue lisää kirjoittajalta Suvi Hautanen Aiheeseen liittyvää Kansanedustaja kertoo: Vessanpönttö herätti epäilykset Politiikka1.10. 13:19 Halla-aho: Epäiltyjä tunkeutumisia kansanedustajien koteihin huomattava määrä Politiikka1.10. 18:55 Zyskowicz: ”Neuvostoliiton tiedustelupalvelun tapa toimia” – näin kommentoi Petteri Orpo Politiikka1.10. 15:10 IS:n tiedot: Tapauksia nyt noin 20 – joidenkin kansanedustajien koteihin on epäillysti tunkeuduttu Politiikka1.10. 18:20 Ryhmäjohtajia varoitettiin salaisessa kokouksessa mahdollisesta kansanedustajien koteihin tunkeutumisesta Politiikka29.9. 16:05 Seuraa ja lue artikkeliin liittyviä aiheita Petteri OrpoEduskuntaKokoomusPolitiikkaPuolueetTurvallisuus JaaFacebook X Sähköposti Kopioi linkki Tallenna Osion tuoreimmat Luitko jo nämä? Luetuimmat Osion tuoreimmat",
-        "title": "Orpo tapasi turvallisuusviranomaisia - Ilta-Sanomat",
-        "url": "https://www.is.fi/politiikka/art-2000012315267.html"
-      },
-      {
-        "id": "C",
-        "published_at": "2026-10-02T09:33:54+03:00",
-        "publisher": "yle.fi",
-        "related": true,
-        "text": "Turvallisuus Orpo tapasi turvallisuusviranomaisia: Suhtaudumme asiaan vakavasti, kansanedustajien turvallisuutta vahvistetaan Orpo sai viranomaisilta laajan katsauksen kansanedustajien turvallisuuteen liittyvistä havainnoista. Pääministeri Petteri Orpon mukaan viranomaiset tekevät kaikkensa selvittääkseen epäillyt tunkeutumiset kansanedustajien koteihin ja suojatakseen edustajia. Ville Lappalainen, Jyrki Hara 2.10. 09:33•Päivitetty 2.10. 14:00 Kuuntele juttu 3:13 Pääministeri Petteri Orpo (kok.) tapasi perjantaina aamulla turvallisuusviranomaisia, valtioneuvoston kanslia tiedottaa. Orpo sai vastuuviranomaisilta laajan katsauksen kansanedustajien turvallisuuteen liittyvistä havainnoista. – Suhtaudumme asiaan vakavasti, etenkin, koska se kohdistuu kansanedustuslaitokseen ja sitä kautta suoraan demokratiamme ytimeen. Samalla luotamme siihen, että viranomaiset selvittävät tapahtumat tässäkin tapauksessa perinpohjaisesti, Orpo sanoo tiedotteessa. Orpo: Kansanedustajista huolehditaan Orpo kommentoi aamun tapaamista Ylelle vielä eduskunnassa. – Näen sen, että meidän viranomaisemme toimivat erittäin tehokkaasti. Samalla huolehditaan myös ennaltaehkäisystä, että tällaista ei pääsisi tapahtumaan enempää ja huolehditaan myös kansanedustajista ja heidän perheistään. Siitä, että he pystyvät käsittelemään tämän asian ja voivat jatkaa sekä työssään, että perheet kotona, Orpo sanoi. Yle kysyi Orpolta, suojataanko kansaedustajia jollakin erityisellä, uudella tavalla tässä tilanteessa. – Meillä on kyllä hyvin vakiintuneita tapoja turvata meidän meidän valtionjohtoa ja ministereitä. Kansanedustajien osalta on selvästi tämän ajan vaade, että heidän turvallisuuttaan vahvistetaan. Pääministeri ei halunnut arvioida epäiltyjen koteihin tunkeutumisten tekijää, vaan sanoi, että on parempi antaa viranomaisten selvittää asia ennen johtopäätöksiä. Poliisi selvittää epäilyjä luvattomista vierailuista Eduskunta tiedotti torstaina, että eduskuntaryhmistä on tullut havaintoja siitä, että joidenkin kansanedustajien asunnoissa on käyty luvatta. Eduskunta ryhtyi toimenpiteisiin ilmiön laajuuden kartoittamiseksi. Eduskunta tekee yhteistyötä tapausta selvittävän Helsingin poliisilaitoksen ja keskusrikospoliisin kanssa. Tapauksista on tehty rikosilmoituksia. Poliisi on käynnistänyt asiassa esiselvityksen. Tästä on kyse Useat kansanedustajat epäilevät, että heidän asunnoissaan on käyty luvatta. Asunnoissa ei ole havaittu murtojälkiä, eikä mitään ole varastettu. Asuntoihin on kuitenkin jätetty merkkejä käynnistä. Ylen tietojen mukaan kansanedustaja on esimerkiksi huomannut kotonaan avoimen oven, jota ei ole itse jättänyt auki, tai päällä olevat valot, joita ei muista itse laittaneensa päälle. Epäiltyjen tunkeutumisten kohteita ei yhdistä esimerkiksi puoluetausta eikä sukupuoli. Poliisi on käynnistänyt esiselvityksen tapauksista. Varsinaista rikostutkintaa ei ole aloitettu. Suojelupoliisi tuntee tapaukset, mutta ei arvioi niiden taustoja. Tietoa motiivista tai taustalla olevasta tahosta ei tällä hetkellä ole. Avaa Lisäys: Klo 14.00 lisätty Petteri Orpon haastattelukommentit. Aiheesta enemmän: Paketissa 3 linkkiä Aiheesta enemmän Tiedusteluasiantuntija epäillyistä koteihin tunkeutumisista: Ylireagointi pelaa Venäjän pussiin Turvallisuus Julkaistu 2.10.2026 2.10. Asiantuntija: Kansanedustajien koteihin tunkeutuminen sopisi ”venäläiseen pelikirjaan” Turvallisuus Julkaistu 1.10.2026 1.10. Kansanedustaja kuvailee Ylelle epäiltyä tunkeutumista kotiinsa: ”Tosi pelottavaa” Turvallisuus Julkaistu 1.10.2026 1.10. TurvallisuusPetteri OrpoKansanedustajat",
-        "title": "Orpo tapasi turvallisuusviranomaisia: Suhtaudumme asiaan ...",
-        "url": "https://yle.fi/a/74-20249474"
+        "text": "Olemassa olevaa rataa Hakaniemestä Jätkäsaareen parannetaan niin, että pikaraitiotieliikenne maksimissaan 45 metriä pitkillä vaunuilla onnistuu 2030-luvulla.\nHelsingin kaupunginvaltuusto hyväksyi Länsisataman pikaraitiotien hankesuunnitelman kokouksessaan 23.9.2026. Olemassa olevaa rataa Hakaniemestä Jätkäsaareen parannetaan vaiheittain 2027–2029 sekä 2030-luvun alkupuolella.\n2030-luvulla Laajasalosta lähtevä linja 12 jatkaa Hakaniemen kautta Länsiterminaalille asti. Tämä lisää kapasiteettiä Länsisataman ja keskustan väliselle yhteydelle sekä parantaa yhteyden luotettavuutta.\nPidempiä pysäkkejä ja sujuvampaa liikennettä\nHakaniemen ja Jätkäsaaren välisiä ratikkapysäkkejä parannetaan pidentämällä ja paikoin myös leventämällä. Samalla ratikkaradan geometriaa parannetaan. Muutokset parantavat pysäkkien laatutasoa ja esteettömyyttä sekä mahdollistavat pidempien, matkustajakapasiteetiltaan korkeampien pikaraitiovaunujen kulun.\nRaitioliikennettä nopeuttaa reitin suoruus, pysäkkien määrän vähentyminen ja liikennöintiolosuhteiden parantuminen.\nKampissa pysäkkeihin tulee muutoksia, kun Simonkadun pysäkki poistuu käytöstä liikenteen nopeuttamiseksi ja Kampin pysäkkien palvelutasoa parannetaan.\nMuutoksilla mahdollistetaan, että jatkossa Hakaniemestä Jätkäsaareen voidaan liikennöidä korkeintaan 45 metriä pitkillä pikaraitiovaunuilla. Tavoitteena radalla on viiden minuutin vuoroväli.\nPikaraitiotien toteutuksesta vastaa Infraohjelma Helsinki -allianssi, jonka tilaajina ovat Helsingin kaupunki, Kaupunkiliikenne Oy ja HSY Helsingin seudun ympäristöpalvelut ja palveluntuottajina kuusi infra-alan yritystä. Allianssihankkeina on rakennettu aikaisemmin muun muassa Raide-Jokeri, Kalasatamasta Pasilaan -raitiotie ja Kruunusillat.\nLänsisataman pikaraitiotie on osa hankekokonaisuutta, johon kuuluvat myös Kaivokadun peruskorjaus ja Rautatientorin metroaseman perusparannus.",
+        "title": "Pikaraitiotie Länsisatamaan parantaa raitioliikenteen sujuvuutta ja kapasiteettia",
+        "url": "https://www.hel.fi/fi/uutiset/pikaraitiotie-lansisatamaan-parantaa-raitioliikenteen-sujuvuutta-ja-kapasiteettia"
       }
     ],
-    "story_key": "url:https://valtioneuvosto.fi/-/paaministeri-orpo-tapasi-turvallisuusviranomaisia-eduskunnan-tapahtumiin-liittyen",
+    "story_key": "url:https://www.hel.fi/fi/uutiset/pikaraitiotie-lansisatamaan-parantaa-raitioliikenteen-sujuvuutta-ja-kapasiteettia",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-10-03T17:23:21.487987+00:00",
-        "sha256": "ff97b6a9e35b41b3e8194c881df398e9456ff455a7f8daa95f4223df01e30546",
-        "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
-        "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
+        "retrieved_at": "2026-10-03T18:02:21.790313+00:00",
+        "sha256": "2581c24fe340207985b349b668dd0af33da8867f3cbfe7fb474a8fbb784eef21",
+        "text": "Helsingin kaupungin hel.fi-sivuston kaikki uutiset ovat saatavissa avoimena datana RSS-syötteenä. Sivuston sisällöstä vastaa Helsingin kaupunginkanslian viestintä.\nSyötteen sisältöä voi muokata uutissivulla olevilla suodattimilla. Räätälöity RSS-syöte muodostetaan automaattisesti valittujen suodattimien pohjalta ja sen voi tilata uutissivulta.\nHuomioitavaa: Helsingin kaupungilla on uutisissa käytettyihin kuviin kaikki oikeudet. Kuvaa / kuvia saa käyttää ainoastaan siihen liittyvän uutisen yhteydessä. Kuvien käyttäminen tähän tarkoitukseen on käyttäjälle ilmaista. Kuvan käyttö tai siirto muihin tarkoituksiin on kielletty. Kuvia käytettäessä on ehdottomasti mainittava kuvien lähde ja kuvaaja.\nhttps://creativecommons.org/licenses/by/4.0/",
+        "url": "https://hri.fi/data/fi/dataset/helsingin-hel-fi-sivuston-avoin-rajapinta-uutisille"
       }
     ]
   },
   "draft": {
     "category": "Kotimaa",
     "image": {
-      "alt": "Arkistokuva: Suuren kivirakennuksen julkisivu, jossa on useita korkeita pylväitä ja ikkunoita, sekä leveät kiviset portaat.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "AI-generoitu kuva: Moderni raitiovaunupysäkki, jossa on pitkä korotettu laituri, katos, penkki ja roska-astia upotettujen kiskojen vieressä.",
+      "attempts": 1,
+      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
       "classifier_output": {
         "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva Petteri Orposta eduskunnassa puhumassa toimittajien mikrofoneihin. Ensisijaisesti haetaan artikkelissa mainitun 2. lokakuuta annetun haastattelun kuvaa, vaihtoehtoisesti muuta todellista haastattelukuvaa ilman väitettä samasta tilanteesta.",
+            "depictable_scene": "Todellinen valokuva Jätkäsaaren nykyisestä raitiotieradasta: katuun upotetut kiskot jatkuvat kaupunkiympäristössä kohti Länsiterminaalia.",
             "must_avoid": [
-              "Fabricated likeness or reconstructed meeting",
-              "Presenting an unrelated photograph as the October 2 interview"
+              "Unbuilt future infrastructure presented as completed",
+              "Unrelated railway or metro tracks"
             ],
             "must_show": [
-              "Petteri Orpo",
-              "Press microphones"
+              "Existing street tram tracks",
+              "Surrounding urban streetscape"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "Petteri Orpo eduskunta haastattelu",
-              "Petteri Orpo microphones",
-              "Petteri Orpo 2.10.2026 Yle"
+              "Jätkäsaari raitiotie",
+              "Länsiterminaali raitiotierata",
+              "Jätkäsaari tram tracks",
+              "Helsinki West Terminal tram tracks"
             ],
-            "subject": "Pääministeri Petteri Orpo kommentoimassa kansanedustajien turvallisuutta"
+            "subject": "Hakaniemen ja Jätkäsaaren rataa"
           },
           {
-            "depictable_scene": "Todellinen ulkokuva Eduskuntatalon pääsisäänkäynnistä Helsingissä: näkyvissä rakennuksen pylväät ja sisäänkäynnille johtavat portaat.",
-            "must_avoid": [
-              "Invented architecture",
-              "Police cordons or an ongoing security incident"
-            ],
-            "must_show": [
-              "Actual Finnish Parliament House",
-              "Entrance and steps"
-            ],
-            "rank": 2,
-            "safe_to_generate": false,
-            "search_queries": [
-              "Eduskuntatalo pääsisäänkäynti",
-              "Eduskuntatalo Helsinki portaat",
-              "Finnish Parliament House entrance"
-            ],
-            "subject": "eduskunta ja kansanedustajien turvallisuus"
-          },
-          {
-            "depictable_scene": "Lähikuva tavallisen, yksilöimättömän asunnon hieman raollaan olevasta ulko-ovesta sisäpuolelta. Oven kahva ja ehjä lukko näkyvät, eikä kuvassa ole ihmisiä tai tunnistettavaa osoitetta.",
+            "depictable_scene": "Nimeämätön tyhjä kaupunkiraitiotien pysäkki, jonka pitkä korotettu laituri kulkee katuun upotettujen kiskojen vieressä. Laiturin reunassa näkyy tuntoon perustuva opasteraita ja päässä loiva kulkuluiska.",
             "must_avoid": [
               "People or body parts",
-              "Forced-entry damage or burglary tools",
-              "Identifiable home, address or readable text"
+              "Recognizable real locations",
+              "Readable text or logos",
+              "Claimed depiction of the approved project's final design"
             ],
             "must_show": [
-              "Slightly ajar apartment entrance door",
-              "Intact door lock"
+              "Long tram stop platform beside embedded rails",
+              "Tactile paving and access ramp"
             ],
-            "rank": 3,
+            "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "asunnon ovi raollaan",
-              "apartment door ajar",
-              "intact apartment door lock"
+              "raitiotiepysäkki laituri",
+              "tram platform tactile paving",
+              "esteetön raitiotiepysäkki",
+              "street tram tracks platform"
             ],
-            "subject": "Asunnon ovi ja tunkeutumisepäilyjen taustalla olevat havainnot"
+            "subject": "Rata ja pysäkit: pysäkkejä pidennetään"
+          },
+          {
+            "depictable_scene": "Todellinen valokuva Kampin nykyisestä raitiovaunupysäkistä, jossa laiturin reuna ja sen vieressä kulkevat kiskot näkyvät katutilassa.",
+            "must_avoid": [
+              "Metro station substituted for a tram stop",
+              "Future platform alterations presented as already built"
+            ],
+            "must_show": [
+              "Existing Kamppi tram stop platform",
+              "Tram rails beside the platform"
+            ],
+            "rank": 3,
+            "safe_to_generate": false,
+            "search_queries": [
+              "Kamppi raitiovaunupysäkki",
+              "Kampin ratikkapysäkki",
+              "Kamppi tram stop",
+              "Kamppi tram platform"
+            ],
+            "subject": "Kampin pysäkkejä parannetaan"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Paul G on Pexels",
-      "depicted": "The image shows a large, classical-style building with a facade dominated by numerous tall, light-colored columns. Between the columns, there are multiple rows of windows with dark frames and reflective glass. The building has a stone-like texture. Below the building, a wide set of stone steps descends towards the foreground. A group of approximately ten people is walking in a line across the lower part of the steps, from left to right. One person, wearing a bright yellow or green high-visibilit",
-      "generated": false,
-      "hotlink": false,
-      "license": "Pexels License",
-      "license_evidence": {
-        "image_path": "/photos/13787785/pexels-photo-13787785.jpeg",
-        "license": "Pexels License",
-        "license_code": "Pexels",
-        "license_url": "https://www.pexels.com/license/",
-        "photo_id": "13787785",
-        "photo_url": "https://www.pexels.com/photo/facade-of-the-parliament-house-helsinki-finland-13787785/",
-        "photographer": "Paul G",
-        "photographer_url": "https://www.pexels.com/@polodo",
-        "response_sha256": "57fb006e26e0cc89efbc5944aba88837e046b419a98d10269ae814901db3d2d9",
-        "retrieved_at": "2026-10-03T17:25:13.479368+00:00",
-        "transport": "jina_reader",
-        "version": 1
-      },
-      "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d.jpg",
+      "credit": "AI-kuvitus",
+      "depicted": "A modern tram stop platform with a shelter, bench, and waste bin, next to embedded tram tracks. The platform features tactile paving and a gentle access ramp with a handrail. Buildings and trees line the street in the background.",
+      "generated": true,
+      "license": "AI-generated image",
+      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "local_path": "media/eb447af356216b92ecdd16567f459dcb24771b41f4409f6ba1b2ce8317e6f5de.jpg",
+      "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Suuren kivirakennuksen julkisivu, jossa on useita korkeita pylväitä ja ikkunoita, sekä leveät kiviset portaat.",
+        "alt_fi": "Moderni raitiovaunupysäkki, jossa on pitkä korotettu laituri, katos, penkki ja roska-astia upotettujen kiskojen vieressä.",
         "approved": true,
-        "article_text_sha256": "1643d45f3a0fd80e97b334598e2c44e0a029ecb256319350bc80ab140227b157",
-        "concept_sha256": "f287b97fa21f2b3b232dc6e458d771faa703fe391639e339d5cc81bb000ee3c2",
-        "description": "The image shows the front facade of a large stone building with numerous tall columns and windows. A wide set of stone steps leads up to the entrance. Several people are walking on the steps, and one person in a high-visibility vest is seated on the steps.",
-        "fit_score": 10,
-        "image_sha256": "266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d",
+        "article_text_sha256": "90db2db6847e77f047a6f8e55e26e28fac607a96d6c3e3b2dbd8251140d81bda",
+        "concept_sha256": "8a4c70e9698c2b09c0326fd2f52cc1cd298b06885dafac8309c9909db7815e89",
+        "description": "A modern tram stop platform with a shelter, bench, and waste bin, next to embedded tram tracks. The platform features tactile paving and a gentle access ramp with a handrail. Buildings and trees line the street in the background.",
+        "fit_score": 9,
+        "image_sha256": "eb447af356216b92ecdd16567f459dcb24771b41f4409f6ba1b2ce8317e6f5de",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
-        "no_people": false,
-        "reason": "The image clearly depicts the Finnish Parliament House, including its main entrance and the steps leading up to it, which directly matches the selected concept. The article discusses the security of members of parliament, making the Parliament House a highly relevant subject.",
-        "reviewed_at": "2026-10-03T17:25:15.311834+00:00"
+        "no_people": true,
+        "reason": "The image clearly depicts a long tram stop platform beside embedded rails, with tactile paving and an access ramp, matching the selected concept. The article discusses improvements to tram tracks and stops, including lengthening platforms and improving accessibility, which this image illustrates well.",
+        "reviewed_at": "2026-10-03T18:28:38.753122+00:00",
+        "text_audit": {
+          "examples": [],
+          "readable_text_present": false
+        }
       },
       "pixels": {
-        "height": 616,
+        "height": 1024,
         "mode": "RGB",
-        "variance": 5155.8,
-        "width": 940
+        "variance": 5944.2,
+        "width": 1536
       },
+      "prompt_sha256": "c365d871173ddb19294ed14b189e7768cecedf1da897b954bb06a75ebda2eef5",
+      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "The image shows the front facade of a large stone building with numerous tall columns and windows. A wide set of stone steps leads up to the entrance. Several people are walking on the steps, and one person in a high-visibility vest is seated on the steps.",
+        "evidence": "Nimeämätön tyhjä kaupunkiraitiotien pysäkki, jonka pitkä korotettu laituri kulkee katuun upotettujen kiskojen vieressä. Laiturin reunassa näkyy tuntoon perustuva opasteraita ja päässä loiva kulkuluiska.",
         "matched": [
-          "entrance",
-          "steps"
+          "Long tram stop platform beside embedded rails",
+          "Tactile paving and access ramp"
         ],
-        "method": "vision",
-        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+        "method": "generation",
+        "reason": "generated from the accepted scene"
       },
+      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "1643d45f3a0fd80e97b334598e2c44e0a029ecb256319350bc80ab140227b157",
-        "decision_sha256": "f09861aa16e3751ed54079f47497ca54c84754ad614646ac3759ec763e6762fb",
+        "article_text_sha256": "90db2db6847e77f047a6f8e55e26e28fac607a96d6c3e3b2dbd8251140d81bda",
+        "decision_sha256": "38e1175907ca0d587ea320366714bbd45ce43fd2fc8d366faff547e316876712",
         "minimum_real_fit": 8,
         "searches": [
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 0,
-                "image_sha256": "34d80ba04ab73717f6ce6498ce2ad8ccc5ad9793f5886050cd36d7110b22480f",
-                "license": "Pexels License",
-                "reason": "The article discusses Prime Minister Petteri Orpo's comments on the security of Members of Parliament, specifically mentioning an interview given to Yle. The selected concept requires a photograph of Petteri Orpo speaking into press microphones. While the image shows microphones, it does not show Petteri Orpo, making it irrelevant to the specific s",
-                "source_url": "https://www.pexels.com/photo/low-angle-shot-of-condenser-microphones-7450049/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "1fc9636cacaa589d2f81800b6e3dd13a4a68e727b5a1199de134ad20a5da574a",
-                "license": "Pexels License",
-                "reason": "The image shows press microphones, which is one of the 'must_show' elements. However, the other 'must_show' element, 'Petteri Orpo', is entirely absent from the image. The article discusses Petteri Orpo's comments on security, and the concept specifically requests a photo of him speaking to microphones. Since Petteri Orpo is not visible, the image ",
-                "source_url": "https://www.pexels.com/photo/podcast-studio-setup-with-microphones-32007691/"
+                "fit_score": 3,
+                "image_sha256": "54112295301fafdf4781c614e79e5bfc78a6febbd2db1605cfa45efbc1a13a09",
+                "license": "Helsingin kaupungin uutiskuvan käyttöoikeus",
+                "reason": "The article discusses improvements to an existing tram line and a new tram line. The selected concept specifically requests a real photograph of existing tram tracks in an urban streetscape. The provided image is a map of a proposed route, not a photograph of existing tracks or a streetscape. It depicts future infrastructure as a plan, which is exp",
+                "source_url": "https://www.hel.fi/fi/uutiset/pikaraitiotie-lansisatamaan-parantaa-raitioliikenteen-sujuvuutta-ja-kapasiteettia"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
+            "provider": "source-news",
             "queries": [
-              "Petteri Orpo eduskunta haastattelu",
-              "Petteri Orpo microphones",
-              "Petteri Orpo 2.10.2026 Yle"
+              "cited source image"
             ]
           },
           {
             "candidates": [],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
+            "provider": "wikimedia",
             "queries": [
-              "Petteri Orpo eduskunta haastattelu",
-              "Petteri Orpo microphones",
-              "Petteri Orpo 2.10.2026 Yle"
+              "Jätkäsaari raitiotie",
+              "Länsiterminaali raitiotierata",
+              "Jätkäsaari tram tracks"
             ]
           },
           {
             "candidates": [
               {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "f5ffcead332b2184c6f704aa038a25c8c625d6b40f6087b40d6defa81362afc3",
-                "license": "CC BY 2.0",
-                "reason": "The image clearly shows Petteri Orpo speaking at a press conference with multiple microphones, which directly matches the selected concept of 'Petteri Orpo eduskunnassa puhumassa toimittajien mikrofoneihin' and the 'must_show' elements. While the exact date of the interview (October 2) cannot be verified from the pixels, it is a credible concrete i",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Hallitusneuvottelut%202023%202023-05-02%2001.jpg"
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "a9dfc130545ced9fa1ff30ccceebadd9fd563ca6615f6bfac49aef8188b07c3f",
+                "license": "Pexels License",
+                "reason": "The article discusses improvements to the tram network in Helsinki, specifically in the Hakaniemi and Jätkäsaari areas, to accommodate longer trams and improve service to the West Terminal. The selected concept specifies a real photo of existing tram tracks in Jätkäsaari within an urban streetscape. The image provided shows a street scene with a bu",
+                "source_url": "https://www.pexels.com/photo/historic-wooden-architecture-in-tallinn-s-kassisaba-district-37998769/"
               }
             ],
             "concept_rank": 1,
-            "outcome": "accepted",
-            "provider": "wikimedia",
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
             "queries": [
-              "Petteri Orpo eduskunta haastattelu",
-              "Petteri Orpo microphones",
-              "Petteri Orpo 2.10.2026 Yle"
+              "Jätkäsaari raitiotie",
+              "Länsiterminaali raitiotierata",
+              "Jätkäsaari tram tracks"
             ]
           },
           {
             "candidates": [
               {
-                "approved": true,
-                "fit_score": 10,
-                "image_sha256": "266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d",
-                "license": "Pexels License",
-                "reason": "The image clearly depicts the Finnish Parliament House, including its main entrance and the steps leading up to it, which directly matches the selected concept. The article discusses the security of members of parliament, making the Parliament House a highly relevant subject.",
-                "source_url": "https://www.pexels.com/photo/facade-of-the-parliament-house-helsinki-finland-13787785/"
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "515e8fb2dbcb8ccb58ab95549ce6de0064af25792f44cfb3d9adfe8f8b268f49",
+                "license": "Unsplash License",
+                "reason": "The article discusses tram track improvements in Helsinki, specifically in Jätkäsaari and towards Länsiterminaali. The selected concept requires an image of existing street tram tracks in an urban setting. This image shows a cobblestone street with buildings and bicycles, but no tram tracks are visible. Therefore, it does not depict the concrete su",
+                "source_url": "https://unsplash.com/photos/pink-sign-on-city-cobblestone-street-NaeJ4C61rkQ?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Jätkäsaari raitiotie",
+              "Länsiterminaali raitiotierata",
+              "Jätkäsaari tram tracks"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Jätkäsaari raitiotie",
+              "Länsiterminaali raitiotierata",
+              "Jätkäsaari tram tracks"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "54112295301fafdf4781c614e79e5bfc78a6febbd2db1605cfa45efbc1a13a09",
+                "license": "Helsingin kaupungin uutiskuvan käyttöoikeus",
+                "reason": "The image is a map of a tram route, not a physical tram stop platform with embedded rails, tactile paving, or an access ramp. It does not visually depict any of the 'must_show' elements. One or more required concept elements are not visible.",
+                "source_url": "https://www.hel.fi/fi/uutiset/pikaraitiotie-lansisatamaan-parantaa-raitioliikenteen-sujuvuutta-ja-kapasiteettia"
               }
             ],
             "concept_rank": 2,
-            "outcome": "accepted",
-            "provider": "pexels",
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
             "queries": [
-              "Eduskuntatalo pääsisäänkäynti",
-              "Eduskuntatalo Helsinki portaat",
-              "Finnish Parliament House entrance"
+              "cited source image"
             ]
           },
           {
@@ -1656,110 +1493,185 @@
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "64e492cd39924d1f2d4767ee6f14f3f3271cb98aa44879e5a9232e6e334e4642",
+                "image_sha256": "99bc5a51c7f033cbaf50640727d7003da3b7d2df1d2c01455ba30e21ebed1e43",
+                "license": "CC BY-SA 3.0",
+                "reason": "The image shows a railway track and a temporary platform, which is not a tram stop platform beside embedded rails. The article discusses tram stop improvements and light rail, not heavy rail. The visible platform is temporary and does not appear to be a permanent, long, elevated tram stop platform as described in the concept. While there is tactile",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Platform%20repairs%20at%20Washington%20Square%20station,%20May%202017.jpg"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "raitiotiepysäkki laituri",
+              "tram platform tactile paving",
+              "esteetön raitiotiepysäkki"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "raitiotiepysäkki laituri",
+              "tram platform tactile paving",
+              "esteetön raitiotiepysäkki"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "raitiotiepysäkki laituri",
+              "tram platform tactile paving",
+              "esteetön raitiotiepysäkki"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "raitiotiepysäkki laituri",
+              "tram platform tactile paving",
+              "esteetön raitiotiepysäkki"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
+            "queries": [
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Kamppi raitiovaunupysäkki",
+              "Kampin ratikkapysäkki",
+              "Kamppi tram stop"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "30029852258f75562b50c208b7f28369bd127fcaa9b259d59e82a28b8bef9bd3",
                 "license": "Pexels License",
-                "reason": "The article discusses suspicions of unauthorized entry into MPs' homes, with observations like an open door or lights left on. The selected concept specifically requests a slightly ajar apartment entrance door with an intact lock. The provided image shows a closed, modern door with decorative elements, not an ajar door, and therefore does not match",
-                "source_url": "https://www.pexels.com/photo/door-with-decorative-green-plants-7227640/"
+                "reason": "The image shows a shop window and refuse bags on a pavement, which is unrelated to the article's subject of tram stop improvements and tram rails. The selected concept specifically requires an existing Kamppi tram stop platform and tram rails beside it, neither of which are visible in the image. One or more required concept elements are not visible",
+                "source_url": "https://www.pexels.com/photo/trash-and-window-display-24860433/"
               },
               {
                 "approved": false,
-                "fit_score": 7,
-                "image_sha256": "1867db97c11a299abb0af86a2a15ce52d2b3a860d8f7b7621441ffea30a98463",
+                "fit_score": 3,
+                "image_sha256": "5bf277fb683c3eabd76da153a341ab1b569d68b8f0a4ad73b6964c746b22875f",
                 "license": "Pexels License",
-                "reason": "The image directly depicts a slightly ajar door and an intact lock, which aligns with the article's theme of suspected unauthorized entries into homes where no forced entry or theft occurred, but observations like an open door raised suspicions. The image avoids showing people, identifiable addresses, or damage, fitting the 'must_avoid' criteria. R",
-                "source_url": "https://www.pexels.com/photo/a-room-with-white-wooden-door-5743149/"
+                "reason": "The image does not show a tram stop platform or tram rails, which are essential elements of the selected concept. The visible scene is a generic street view and does not specifically depict the Kamppi tram stop or any tram infrastructure mentioned in the article. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/man-standing-on-bus-stop-15678567/"
               },
               {
-                "approved": true,
-                "fit_score": 10,
-                "image_sha256": "f3872973fb0d2ce01fc4674c7df94bfac81ba441781ea239088b4c21b5968289",
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "cc2deb634d3b9637c8cf6ad0c8e00d196f99ec1157920b8804a7e98cc5e41e3a",
                 "license": "Pexels License",
-                "reason": "The image directly depicts a slightly ajar door with an intact lock, which aligns perfectly with the article's mention of 'avoimeksi jäänyt ovi' (an open door) and the concept's requirement for a 'slightly ajar apartment entrance door' and 'intact door lock'. There are no people, identifiable addresses, or signs of forced entry, adhering to the 'mu",
-                "source_url": "https://www.pexels.com/photo/close-up-of-rustic-wooden-door-handle-36163644/"
+                "reason": "The image depicts a bicycle and a person in a natural setting at sunset, which is entirely unrelated to the article about tram line improvements in Helsinki or the selected concept of the Kamppi tram stop. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/it-s-late-16705521/"
               }
             ],
             "concept_rank": 3,
-            "outcome": "accepted",
+            "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "asunnon ovi raollaan",
-              "apartment door ajar",
-              "intact apartment door lock"
+              "Kamppi raitiovaunupysäkki",
+              "Kampin ratikkapysäkki",
+              "Kamppi tram stop"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Kamppi raitiovaunupysäkki",
+              "Kampin ratikkapysäkki",
+              "Kamppi tram stop"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Kamppi raitiovaunupysäkki",
+              "Kampin ratikkapysäkki",
+              "Kamppi tram stop"
             ]
           }
         ],
         "selected": {
           "concept_rank": 2,
-          "fit_score": 10,
-          "image_sha256": "266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d",
-          "kind": "real"
+          "fit_score": 9,
+          "image_sha256": "eb447af356216b92ecdd16567f459dcb24771b41f4409f6ba1b2ce8317e6f5de",
+          "kind": "generated"
         },
         "version": "article-first-v1"
       },
-      "sha256": "266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d",
-      "source_url": "https://www.pexels.com/photo/facade-of-the-parliament-house-helsinki-finland-13787785/",
-      "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/13787785/pexels-photo-13787785.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "13787785",
-        "photo_url": "https://www.pexels.com/photo/facade-of-the-parliament-house-helsinki-finland-13787785/",
-        "photographer": "Paul G",
-        "photographer_url": "https://www.pexels.com/@polodo",
-        "provider": "pexels",
-        "query": "Eduskuntatalo pääsisäänkäynti",
-        "retrieved_at": "2026-10-03T17:25:13Z"
-      },
-      "stock_provenance_sha256": "2d22db399b8abebe9a46c3bbb9f50946d132f255776021f957a7c9fa779929df",
-      "url": "https://uutistenlukija.fi/media/266ce6388e9007d5cc554d8745d8b7207361edd7228a345b5e1e81db92f7655d.jpg"
+      "sha256": "eb447af356216b92ecdd16567f459dcb24771b41f4409f6ba1b2ce8317e6f5de",
+      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "subject": "Rata ja pysäkit: pysäkkejä pidennetään",
+      "url": "https://uutistenlukija.fi/media/eb447af356216b92ecdd16567f459dcb24771b41f4409f6ba1b2ce8317e6f5de.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
-          "C"
+          "A"
         ],
-        "text": "Orpo sanoi tapaamisen jälkeen Ylelle, että kansanedustajien turvallisuutta on vahvistettava. Hänen mukaansa viranomaiset pyrkivät ehkäisemään uusia tapauksia ja huolehtimaan edustajista sekä heidän perheistään. Hän ei halunnut arvioida epäiltyjen tunkeutumisten tekijää ennen viranomaisten selvityksiä."
+        "text": "Helsingin kaupunginvaltuusto hyväksyi hankesuunnitelman 23. syyskuuta 2026, kaupunki kertoo. Nykyisen raitiotieradan parannustöitä on tarkoitus tehdä vuosina 2027–2029 sekä 2030-luvun alkupuolella."
       },
       {
         "source_ids": [
-          "A",
-          "B",
-          "C"
+          "A"
         ],
-        "text": "Valtioneuvoston kanslian mukaan Orpo sai 2. lokakuuta aamulla vastuuviranomaisilta katsauksen kansanedustajien turvallisuuteen liittyvistä havainnoista. Orpo piti asiaa vakavana, koska se koskee kansanedustuslaitosta."
+        "text": "Suunnitelman mukaan Laajasalosta lähtevä linja 12 kulkee tulevaisuudessa Hakaniemen kautta Länsiterminaalille. Rata muutetaan soveltuvaksi enintään 45 metrin pituisille pikaraitiovaunuille, ja tavoitteena on viiden minuutin vuoroväli. Kaupunki arvioi muutosten lisäävän matkustajakapasiteettia ja parantavan yhteyden luotettavuutta."
       },
       {
         "source_ids": [
-          "B",
-          "C"
+          "A"
         ],
-        "text": "Ilta-Sanomien ja Ylen mukaan eduskunta kertoi 1. lokakuuta epäilyistä, että kansanedustajien kodeissa olisi käyty luvatta. Ilta-Sanomien omien tietojen mukaan epäiltyjä tapauksia oli noin 20. Lehti kertoi puhemies Jussi Halla-ahon sanoneen, ettei asunnoissa ollut murtojälkiä eikä mitään ollut varastettu tai rikottu."
+        "text": "Pysäkkejä pidennetään ja osin levennetään, ja radan geometriaa muutetaan. Kampissa Simonkadun pysäkki poistuu käytöstä ja Kampin pysäkkejä parannetaan. Kaupungin mukaan pysäkkien vähentäminen ja radan muutokset nopeuttavat liikennettä, ja pysäkkityöt parantavat esteettömyyttä."
       },
       {
         "source_ids": [
-          "C"
+          "A"
         ],
-        "text": "Ylen omien tietojen mukaan epäilyjä ovat herättäneet esimerkiksi avoimeksi jäänyt ovi tai päällä olleet valot, joita asukas ei muista itse sytyttäneensä. Havaintojen perusteella ei ole varmistettu, että asunnoissa olisi käynyt ulkopuolisia. Ylen mukaan mahdollista tekijää tai motiivia ei ollut tiedossa."
-      },
-      {
-        "source_ids": [
-          "A",
-          "B",
-          "C"
-        ],
-        "text": "Tutkinnan vaihetta kuvataan lähteissä eri tavoin. Valtioneuvoston kanslia ja Ilta-Sanomat toteavat, että esitutkinnasta tiedottaa poliisi. Yle puolestaan kertoo poliisin käynnistäneen vasta esiselvityksen ja täsmentää, ettei varsinaista rikostutkintaa ole aloitettu. Ylen mukaan tapauksista on tehty rikosilmoituksia, ja eduskunta tekee yhteistyötä Helsingin poliisilaitoksen sekä keskusrikospoliisin kanssa."
+        "text": "Toteutuksesta vastaa Infraohjelma Helsinki -allianssi. Pikaraitiotie kuuluu samaan hankekokonaisuuteen Kaivokadun peruskorjauksen ja Rautatientorin metroaseman perusparannuksen kanssa."
       }
     ],
-    "summary": "Pääministeri Petteri Orpo tapasi turvallisuusviranomaisia 2. lokakuuta kansanedustajien koteihin kohdistuvien tunkeutumisepäilyjen vuoksi. Poliisi selvittää havaintoja, mutta Ylen mukaan varsinaista rikostutkintaa ei ole aloitettu.",
-    "title": "Orpo sai katsauksen kansanedustajien turvallisuudesta"
+    "summary": "Helsingin kaupungin mukaan Hakaniemen ja Jätkäsaaren rataa parannetaan vaiheittain vuodesta 2027 alkaen, jotta Laajasalon pikaraitiolinja voi jatkaa Länsiterminaalille 2030-luvulla.",
+    "title": "Länsisataman pikaraitiotien hankesuunnitelma hyväksyttiin"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "bc10ed3110f8fd7e4b8b546edf3fa45a9e93be06289811f7c67b8252f2591e55",
+    "draft_sha256": "41cac7bdb8fe823630b16c4fde73c43b7e3579b1096d01b4bad1bfc2aca137c7",
     "reasons": [
-      "Otsikko on 53 merkkiä eli alle 60 merkin tavoitteen. Orpon saama turvallisuuskatsaus on lähteen A keskeinen tieto, ja otsikko nostaa sen alkuun. Ingressin tapaaminen 2. lokakuuta ja yhteys kansanedustajien kotien tunkeutumisepäilyihin saavat tukea lähteistä A–C; rikostutkinnan puuttuminen on asianmukaisesti rajattu Ylen tietoon.",
-      "Kappaleiden source_ids-merkinnät vastaavat sisältöä: C tukee Orpon haastattelulausuntoja turvallisuuden vahvistamisesta, ennaltaehkäisystä, perheistä ja johtopäätösten lykkäämisestä; A, B ja C tukevat aamun katsausta ja asian vakavuutta. B ja C tukevat eduskunnan 1. lokakuuta ilmoittamia epäilyjä. Noin 20 tapausta sekä Jussi Halla-ahon lausunto murtojälkien, varkauksien ja rikkomisen puuttumisesta on nimenomaisesti osoitettu lähteelle B.",
-      "Lähde C tukee ovi- ja valohavaintoja, esiselvitystä, rikosilmoituksia, poliisiyhteistyötä sekä tekijää ja motiivia koskevan tiedon puuttumista. Luonnos ei esitä epäiltyjä käyntejä todistettuina tunkeutumisina. Viimeinen kappale tuo näkyviin A:n ja B:n esitutkintaa koskevan tiedotusmuotoilun sekä C:n täsmennyksen, ettei varsinaista rikostutkintaa ole aloitettu.",
-      "Lähteet käsittelevät samaa tapahtumaa ja on julkaistu 2.10.2026; C sisältää myös kello 14 lisätyn haastattelun. Ne ovat ajankohtaisia 3.10.2026 tehtävään arvioon. B ja C toistavat katsauksen osalta A:n tiedotetta, eikä luonnos väitä tätä riippumattomaksi vahvistukseksi. B:n omat tapausmäärätiedot ja C:n haastattelu sekä omat havaintotiedot erotetaan lähteittäin. Teksti on itsenäisesti muotoiltua, neutraalia ja ymmärrettävää suomea; Kotimaa-luokitus ja valtakunnallista instituutiota koskeva rajaus ovat perusteltuja.",
-      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Kolme järjestettyä kuvakonseptia ja haut jokaiselle on dokumentoitu. Valittu todellinen Eduskuntatalon kuva liittyy jutun konkreettiseen instituutioon ja C:ssä mainittuun eduskunnassa annettuun haastatteluun, ei vain yleiseen Kotimaa-kategoriaan. Kuvakohtainen Pexels-tunniste 13787785, Paul G:n tekijätieto ja lisenssin alkuperätiedot tukevat ilmoitettua käyttöoikeutta. Toimitettu täsmällisiin kuvapikseleihin sidottu koko artikkelin arvio on 10/10, ja kuvan SHA-256 on yhtenäinen tietueessa. Arkistokuvamerkintä ei väitä kuvaa 2. lokakuuta otetuksi eikä kuva esitä tunkeutumista tai käynnissä olevaa turvallisuustilannetta."
+      "Otsikko on 57 merkkiä eli alle 60 merkin tavoitteen, ja uutisen aihe on alussa. Lähde A tukee hankesuunnitelman hyväksymistä kaupunginvaltuustossa 23.9.2026. Lähde on julkaistu 2.10.2026, joten uutinen on arviointihetkellä ajankohtainen.",
+      "Ingressi ja ensimmäinen kappale vastaavat lähdettä A: Hakaniemen ja Jätkäsaaren olemassa olevaa rataa parannetaan vuosina 2027–2029 ja 2030-luvun alkupuolella, jotta Laajasalon linja voi jatkaa Länsiterminaalille 2030-luvulla. Aikataulu esitetään suunnitelmana eikä toteutuneena rakentamisena.",
+      "Toisen kappaleen linjanumero 12, reitti Laajasalosta Hakaniemen kautta Länsiterminaalille, enintään 45 metrin vaunut ja viiden minuutin tavoitevuoroväli ovat lähteessä A. Kapasiteetin ja luotettavuuden paraneminen esitetään asianmukaisesti kaupungin arviona, ei riippumattomasti todennettuna vaikutuksena.",
+      "Kolmannen ja neljännen kappaleen tiedot pysäkkien pidentämisestä ja osittaisesta leventämisestä, ratageometrian muuttamisesta, Simonkadun pysäkin poistumisesta, Kampin pysäkkien parantamisesta, esteettömyydestä, Infraohjelma Helsinki -allianssista sekä Kaivokadun ja Rautatientorin hankeyhteydestä löytyvät lähteestä A. Kaikkien kappaleiden source_ids-merkinnät ovat oikeat. Yksi kaupungin oma lähde riittää tämän rajatun suunnitelma- ja päätösuutisen pohjaksi; luonnos ei väitä riippumatonta vahvistusta.",
+      "Teksti on neutraalia, ymmärrettävää ja itsenäisesti tiivistettyä suomea. Kotimaa-luokka sopii Helsingin paikalliseen liikenneuutiseen, eikä luonnos tee valtakunnallisia yleistyksiä. RIGHTS-aineisto tukee tekstin uudelleenkäyttöä, mutta sitä ei käytetä uutisväitteiden tai kuvan oikeuksien todisteena.",
+      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Paketissa on kolme järjestettyä kuvakonseptia ja hakuja jokaiselle. Valittu generoitu kuva vastaa korkeimmalle sijoitettua turvallisesti generoitavaa konseptia eli pitkää raitiotiepysäkin laituria, upotettuja kiskoja, opasteraitaa ja kulkuluiskaa. Nämä liittyvät artikkelin konkreettisiin pysäkki- ja esteettömyysmuutoksiin. Paketissa on erillisen mallin tarkistus juuri valitulle kuvan SHA256-tunnisteelle, sopivuusarvio 9/10 sekä tiedot ihmisten ja luettavan tekstin puuttumisesta. Kuvateksti on täsmälleen 'AI-generoitu kuva. Ei valokuva tapahtumasta.', eikä kuvaa väitetä todellisen paikan tai hyväksytyn lopullisen suunnitelman kuvaksi. Arvio perustuu toimitettuun kuvatietueeseen ja tarkistusraporttiin, ei tässä tehtyyn pikselien katseluun."
     ]
   }
 }
