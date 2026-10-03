@@ -4,38 +4,355 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "d3fd223a418fe7698da53c7774dff65a4f293486",
-  "job_id": "fe92f910b26aac13d8b676d93310d1f190e2382d7084b1dd2f7afeaa6e319148",
-  "packet_sha256": "6750b3efbba0e2fb2b33cb0ccbaabe87eef1f260b7521a550847abfbc27dc494",
-  "draft_sha256": "1c38823d71a47b93383739aabdd0f6e2f47c12016dd1e0e13260377593ea0730",
-  "image_sha256": "59c5f56ab14172c8e4704158745a48b7f48a64de1d44cc5de282a33ca7e35b29",
+  "job_id": "d96705192438623ee88f2a9ca429a16c4ce99ec4d2a1ac3141e35102b79e7e9e",
+  "packet_sha256": "1a4b917b415d485a1ebcdc32555d5e4fd5ba84469d3e0793fe4f1c88676b2eca",
+  "draft_sha256": "317fe2bdcfdffec9ab81d8ff57008ea8c885dee19bd64b8f31eaefd4f9f17b1d",
+  "image_sha256": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "a46c82207fe841946e81699ba3e77bef3635a2b94792a03cbac6a8cdcebbde2c"
+    "provenance_sha256": "bd3066ee9374079855b9e0949d177f52d05dee1086b3a29c6c32fc204d4ae2e3"
+  },
+  "stock_image": {
+    "alt": "Arkistokuva: Ilmakuva kaupungista, jossa on rautatie, suuri valkoinen rakennus, pienempi tiilirakennus, asuintaloja, viheralueita ja joki sillalla.",
+    "caption": "Arkistokuva artikkelin aiheesta.",
+    "classifier_output": {
+      "category": "Kulttuuri",
+      "concepts": [
+        {
+          "depictable_scene": "Todellinen valokuva Tikkurilan vanhan aseman museorakennuksesta ulkoa niin, että julkisivu ja sisäänkäynti näkyvät. Kuva esittää avajaisten ja draamakurssin tapahtumapaikkaa, ei väitä näyttävänsä tulevaa avajaistilaisuutta.",
+          "must_avoid": [
+            "Väärä asemarakennus",
+            "Keksitty avajaistilaisuus"
+          ],
+          "must_show": [
+            "Actual old Tikkurila railway station building",
+            "Museum entrance or facade"
+          ],
+          "rank": 1,
+          "safe_to_generate": false,
+          "search_queries": [
+            "Tikkurilan vanha asema",
+            "Vantaan historian museo",
+            "Tikkurila old railway station exterior",
+            "Vantaan kaupunginmuseo julkisivu"
+          ],
+          "subject": "Vantaan historian museo Tikkurilan vanhalla asemalla"
+        },
+        {
+          "depictable_scene": "Lähikuva kahdesta pienestä, palavasta kannettavasta LED-valaisimesta tummalla pöydällä hämärässä, neutraalissa sisätilassa. Kuvassa ei ole ihmisiä. Valaisimet ovat yleistä kuvitusta valojen kanssa esiintymisestä, eivät jäljitelmä Valopajan tulevasta teoksesta tai sen todellisista välineistä.",
+          "must_avoid": [
+            "Ihmiset, kasvot, kädet ja muut ruumiinosat",
+            "Nimetyn valoteoksen tai museotilan keksitty toisinto",
+            "Keksitty luettava teksti ja logot"
+          ],
+          "must_show": [
+            "Portable illuminated LED lights",
+            "Soft light on a dark tabletop"
+          ],
+          "rank": 2,
+          "safe_to_generate": true,
+          "search_queries": [
+            "portable LED lights",
+            "kannettavat LED-valaisimet",
+            "LED lights dark tabletop",
+            "small battery powered lights"
+          ],
+          "subject": "Kannettavat valot valoteoksen osallistumisen kuvituksena"
+        }
+      ],
+      "version": "article-first-v1"
+    },
+    "credit": "Photo by Seppo Kaksonen, Scan-Foto Oy on Wikimedia Commons",
+    "depicted": "An aerial view shows a sprawling urban and suburban landscape under an overcast sky. A long stretch of multiple railway tracks runs through the center of the image, bordered by green spaces and roads. To the left of the tracks, there's a large parking lot with numerous cars, and further left, several multi-story buildings, some with white facades and others with darker roofs. To the right of the tracks, a river or canal with brown water flows, crossed by a white suspension bridge. Beyond the riv",
+    "generated": false,
+    "hotlink": false,
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "local_path": "media/8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0.jpg",
+    "pixel_review": {
+      "alt_fi": "Ilmakuva kaupungista, jossa on rautatie, suuri valkoinen rakennus, pienempi tiilirakennus, asuintaloja, viheralueita ja joki sillalla.",
+      "approved": true,
+      "article_text_sha256": "3b453cc14c765bc11491786dbceff841d1fdb003bd7386023b558b7ac61f0b2d",
+      "concept_sha256": "ed439a35d227083a234f2ea274fa28bf717e07631901abdc4bc7f9a4dc687caf",
+      "description": "An aerial view shows a city with a railway line running through it. On the right, a large white building with a complex shape stands next to a road with buses and cars. To its left, across the railway tracks, is a smaller, older brick building with a brown roof. Further in the background are residential buildings, green areas, and a river with a pedestrian bridge.",
+      "fit_score": 9,
+      "image_sha256": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
+      "model": "google:gemini-2.5-flash",
+      "must_show_visible": [
+        true,
+        true
+      ],
+      "no_people": false,
+      "reason": "The image clearly shows the old Tikkurila railway station building, which is the location of the Vantaa History Museum and the subject of the article. The image provides an exterior view of the building, fulfilling the concept's requirements.",
+      "reviewed_at": "2026-10-03T11:02:41.965687+00:00",
+      "source_context": {
+        "image_sha256": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "photo_id": "wikimedia-135269349",
+        "photo_url": "https://commons.wikimedia.org/wiki/File:Helsinki%E2%80%93Riihim%C3%A4ki%20railway%20at%20Tikkurila%20railway%20station%20Vantaa,%20Finland,%202004.jpg",
+        "photographer": "Seppo Kaksonen, Scan-Foto Oy",
+        "provider": "wikimedia",
+        "title": "Helsinki–Riihimäki railway at Tikkurila railway station Vantaa, Finland, 2004.jpg"
+      },
+      "source_context_sha256": "7cccf53315d80321cbec9bffc209d03490ed12a151bec717e1852801e19c056b"
+    },
+    "pixels": {
+      "height": 3000,
+      "mode": "RGB",
+      "variance": 4865.9,
+      "width": 4500
+    },
+    "relevance_check": {
+      "accepted": true,
+      "evidence": "An aerial view shows a city with a railway line running through it. On the right, a large white building with a complex shape stands next to a road with buses and cars. To its left, across the railway tracks, is a smaller, older brick building with a brown roof. Further in the background are residential buildings, green areas, and a river with a pedestrian bridge.",
+      "matched": [
+        "building",
+        "railway"
+      ],
+      "method": "vision",
+      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+    },
+    "selection_evidence": {
+      "article_text_sha256": "3b453cc14c765bc11491786dbceff841d1fdb003bd7386023b558b7ac61f0b2d",
+      "decision_sha256": "6303d8787e26462976ab007140279cf0cb4384e09d5ef9cb1c0f925ff6fa547d",
+      "minimum_real_fit": 8,
+      "searches": [
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "source-news",
+          "queries": [
+            "cited source image"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": true,
+              "fit_score": 9,
+              "image_sha256": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
+              "license": "CC BY 4.0",
+              "reason": "The image clearly shows the old Tikkurila railway station building, which is the location of the Vantaa History Museum and the subject of the article. The image provides an exterior view of the building, fulfilling the concept's requirements.",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Helsinki%E2%80%93Riihim%C3%A4ki%20railway%20at%20Tikkurila%20railway%20station%20Vantaa,%20Finland,%202004.jpg"
+            }
+          ],
+          "concept_rank": 1,
+          "outcome": "accepted",
+          "provider": "wikimedia",
+          "queries": [
+            "Tikkurilan vanha asema",
+            "Vantaan historian museo",
+            "Tikkurila old railway station exterior"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "source-news",
+          "queries": [
+            "cited source image"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "8de8b9df5752d753413cab49ca9fe10531773a68c891df5cef61ee66062e2346",
+              "license": "Public domain",
+              "reason": "The image does not show portable illuminated LED lights or soft light on a dark tabletop. Instead, it depicts two men in an indoor setting, one of whom is handling a yellow object that is not clearly an illuminated LED light. The lighting is not soft, and the overall scene does not match the selected concept. One or more required concept elements a",
+              "source_url": "https://commons.wikimedia.org/wiki/File:160616-N-MY174-036%20160616-N-MY174-036.jpg"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "30f5d8113faace9230f25f46b3cf8f7bb166bc117038cc5adeeaab0b0d6793c7",
+              "license": "CC BY-SA 4.0",
+              "reason": "The image shows a baby in a crib under blue light, which is unrelated to the article about a museum opening, a light art performance, or drama courses. The selected concept describes portable LED lights on a dark tabletop, which is not present in the image. The image also contains a person (baby), which the concept explicitly avoids. One or more re",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Baby%20in%20Crib%20A%27Glow.jpg"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "8352888415e9cd34d2b91c6e3ba820adbd286c26098959edb7100145ac0bb82f",
+              "license": "CC BY 2.0",
+              "reason": "The article discusses a light artwork and a drama course for a museum opening, requiring an image of portable illuminated LED lights. The visible subject is a portable radio, which is not a light source and does not fit the concept of 'portable illuminated LED lights'. One or more required concept elements are not visible.",
+              "source_url": "https://commons.wikimedia.org/wiki/File:QFX%20R-14%20(10102373086).jpg"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "dcde7adac4f432fc4fdb3807003cfe612ad24615a09c8e51275323d3bbc59b38",
+              "license": "CC BY 2.0",
+              "reason": "The article discusses a light artwork and portable LED lights. The image shows a portable radio with a solar panel, which is not a light source and does not fit the concept of 'portable illuminated LED lights'. The radio is not emitting light, and the setting is not a dark tabletop. One or more required concept elements are not visible.",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Kaito%20SB1059%20(9344447746).jpg"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "unavailable",
+          "provider": "wikimedia",
+          "queries": [
+            "portable LED lights",
+            "kannettavat LED-valaisimet",
+            "LED lights dark tabletop"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 3,
+              "image_sha256": "93ee473d4db76baa107f49408ca737017c3ed65ce80681873da4668e897e01cd",
+              "license": "Pexels License",
+              "reason": "The article discusses a light art piece and a drama course, both seeking volunteers. The selected concept specifically requests an image of 'portable illuminated LED lights' on a dark tabletop, without people. The actual pixels show people's hands on computer keyboards, which are illuminated, but these are not portable LED lights as described in th",
+              "source_url": "https://www.pexels.com/photo/fingers-on-black-computer-keyboard-7848988/"
+            },
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "a3dd6c43c26c55c210bcc311056f7fb30df7ae7a5e88e93d79b59378760ded20",
+              "license": "Pexels License",
+              "reason": "The image shows a portable LED light panel, which aligns with the 'Portable illuminated LED lights' must_show element. However, the light is not illuminated, failing the 'illuminated' aspect of the must_show. The concept also specifies 'palavasta' (burning/lit) in Finnish, which is not met. The 'Soft light on a dark tabletop' must_show is also not ",
+              "source_url": "https://www.pexels.com/photo/black-godax-cordless-device-2263821/"
+            },
+            {
+              "approved": false,
+              "fit_score": 3,
+              "image_sha256": "44bed225cb018f2a24ca2696f37f1eca11688aaeb814845262172148c98856e6",
+              "license": "Pexels License",
+              "reason": "The article discusses a light art piece and portable LED lights. The image shows a backlit laptop keyboard, which is not a portable LED light in the context of a light art performance. It does not depict the selected concept of small, portable LED lights on a dark tabletop. One or more required concept elements are not visible.",
+              "source_url": "https://www.pexels.com/photo/illuminated-laptop-keyboard-13522335/"
+            },
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "a4c10c3dafa4765ff67f8d377cee7bb4e5124431de342f771a387f51026bd404",
+              "license": "Pexels License",
+              "reason": "The image shows a single flashlight, not two small, burning portable LED lights as specified in the concept. While it depicts a portable illuminated light and soft light on a tabletop, it fails to meet the 'two small, burning portable LED lights' requirement, making it a partial fit at best.",
+              "source_url": "https://www.pexels.com/photo/black-flashlight-turned-on-985117/"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "portable LED lights",
+            "kannettavat LED-valaisimet",
+            "LED lights dark tabletop"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 5,
+              "image_sha256": "2e6fb97ee2ddeed0e28e857f1184477437bd2b0bcca5aded603f43cdf1b376cd",
+              "license": "Unsplash License",
+              "reason": "The image contains a person, which the concept explicitly states to avoid. While it shows a portable LED light, it does not depict two small, burning portable LED lights on a dark tabletop in a dim, neutral indoor space without people, as specified in the concept. The presence of a person and the different setup make it unsuitable. One or more requ",
+              "source_url": "https://unsplash.com/photos/a-woman-holding-a-cell-phone-in-front-of-a-light-VIQKDL6-TpU?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 7,
+              "image_sha256": "9aebc55bb05edc8461433f3d65f8bcb530d202650780e94b5c38317dde09b248",
+              "license": "Unsplash License",
+              "reason": "The image shows only one portable illuminated LED light, not two as specified in the concept. The concept also specifies 'palavasta' (burning/lit) for two lights, but only one is lit here. The fit score is reduced because a key element of the concept (two lights) is missing.",
+              "source_url": "https://unsplash.com/photos/white-and-blue-light-bulb-y4HelY0jx7c?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "4a47029e1acb803844cd3c937ae58390060f2968f2d6e74ce9289497210cd589",
+              "license": "Unsplash License",
+              "reason": "The image shows various outdoor lights, but none of them are small, portable LED lights on a dark tabletop as specified in the concept. The lights are fixed outdoor installations, not portable devices for a light performance. One or more required concept elements are not visible.",
+              "source_url": "https://unsplash.com/photos/red-garden-shed-with-night-lighting-ssJA_fkVf50?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 3,
+              "image_sha256": "1e0fc505a5d003d453cde41828e94b171a54963c4c85b0f256376acae44217ab",
+              "license": "Unsplash License",
+              "reason": "The article discusses a light art piece involving volunteers moving with lights. The selected concept specifies 'portable illuminated LED lights' and 'soft light on a dark tabletop'. The image shows a single, unlit, non-portable LED light bulb on a bright white surface, which does not match the concept's requirements for illumination, portability, ",
+              "source_url": "https://unsplash.com/photos/a-white-light-bulb-sitting-on-top-of-a-white-table-iEDKPLfJrEo?utm_source=uutistenlukija&utm_medium=referral"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "unsplash",
+          "queries": [
+            "portable LED lights",
+            "kannettavat LED-valaisimet",
+            "LED lights dark tabletop"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "google",
+          "queries": [
+            "portable LED lights",
+            "kannettavat LED-valaisimet",
+            "LED lights dark tabletop"
+          ]
+        }
+      ],
+      "selected": {
+        "concept_rank": 1,
+        "fit_score": 9,
+        "image_sha256": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
+        "kind": "real"
+      },
+      "version": "article-first-v1"
+    },
+    "sha256": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Helsinki%E2%80%93Riihim%C3%A4ki%20railway%20at%20Tikkurila%20railway%20station%20Vantaa,%20Finland,%202004.jpg",
+    "stock_provenance": {
+      "attribution": {
+        "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
+        "title": "Helsinki–Riihimäki railway at Tikkurila railway station Vantaa, Finland, 2004.jpg"
+      },
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Helsinki%E2%80%93Riihim%C3%A4ki_railway_at_Tikkurila_railway_station_Vantaa%2C_Finland%2C_2004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "photo_id": "wikimedia-135269349",
+      "photo_url": "https://commons.wikimedia.org/wiki/File:Helsinki%E2%80%93Riihim%C3%A4ki%20railway%20at%20Tikkurila%20railway%20station%20Vantaa,%20Finland,%202004.jpg",
+      "photographer": "Seppo Kaksonen, Scan-Foto Oy",
+      "photographer_url": "https://commons.wikimedia.org/wiki/File:Helsinki%E2%80%93Riihim%C3%A4ki%20railway%20at%20Tikkurila%20railway%20station%20Vantaa,%20Finland,%202004.jpg",
+      "provider": "wikimedia",
+      "query": "Tikkurilan vanha asema",
+      "retrieved_at": "2026-10-03T11:02:38Z"
+    },
+    "stock_provenance_sha256": "8b5c0dbf88e6c299e709bfb1863ecf986ac089cb51ba569e81a83cbd5c2d9c45",
+    "url": "https://uutistenlukija.fi/media/8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0.jpg"
   },
   "new_article_files": [
-    "uutiset/kuntaliitto-ehdottaa-valitusoikeuden-maaraaikaista-rajausta-fe92f910b26a/index.html"
+    "uutiset/vantaan-historian-museo-hakee-avajaisiin-vapaaehtoisia-d96705192438/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "3db210d1c35f4915b524621eea1a3ac49474fe34c4ef4cfb3f26a123ea847721",
-    "_redirects": "c351f7217890b83f2823a8414043af642b98d040e2b2193f33c1e60df610effc",
-    "ai-kuvat/index.html": "e3e06fdeed6212c4b8a15855cfed89654113c4cc82dc892175e8775302c07f54",
-    "categories/kotimaa/index.html": "91cc99f3ee3ad5e6b7eeb6a5d0547ed81ef217fd9f24e3e6aae6f3b314c7d3a5",
-    "categories/kotimaa/sivu/2/index.html": "63be987fb37e435f1bd2a83bf4e7d2044cece49dfa08ce134af24455e1a9d756",
-    "categories/kotimaa/sivu/3/index.html": "e3d93847467b49a1eb6099bcde3b1c43177b597afcc3b02df796eab1eacc1758",
-    "categories/kotimaa/sivu/4/index.html": "96e73d5c240de3421eb820b282befac5cbc9c74879dc1721e7dd84aa0490fd50",
-    "categories/kotimaa/sivu/5/index.html": "f987b20bef5bb767b30cc7544aee7bf926142eb80fb3a12865e468c53b0a80be",
-    "categories/kotimaa/sivu/6/index.html": "124b8977db8e7a66f5a12bfd944206b45b44ea5baa339564d76642878a9b5a40",
-    "categories/kulttuuri/index.html": "8572b21f1eff887e23c156c09facda9f708b1a66c0c9b63c29fcba93984478f3",
-    "categories/talous/index.html": "195b985c5dd57e9a4eefef85cae7a8172ae5528c810e7b94255526ffa31a8849",
-    "categories/talous/sivu/2/index.html": "dae863085d818b6d3f014d6836190088a1ebb3429083daf16a72afe95540e2f7",
-    "categories/teknologia/index.html": "b9b228af9da7cf17c9a05c4d1de6ceb5ad6acb905ed25b229ad1b2dfc7c5d6b6",
-    "categories/tiede/index.html": "65f5ab91b7ae932d264569b6ad586769ec8e1e24ff1864646b2626a53f54793c",
-    "categories/ulkomaat/index.html": "7b2e370beccea1d64315018ec86d8c92929f57b0cf6040f4c844dbf4fdf8f3a0",
-    "categories/urheilu/index.html": "7054687d1b61e4345b96ce56c81bcf0a35aa75b75836999a961fdbe6208013bd",
-    "index.html": "fa5bc73a42323fc1ab7feb6873c828e0f8552ad45dc8cf0a2dbc33b9b2747d9e",
-    "lahteet/index.html": "767e25b803e3018af60e53b58e4adf215a490fbdc1de1ca18a2f1f8ab8e64e81",
+    "_redirects": "edbf43aa8ee150c3c366fc7d1293a6713f6716ee4beb9db3ae5395ce1b919446",
+    "ai-kuvat/index.html": "7e095a4e4c05b2eeceec12a344bf35b216df5d72612e89ab2166a3c589cc622a",
+    "categories/kotimaa/index.html": "ae0cd4c973b52e0f724e050cb14d44e4b3db802db3bfb896368d7422bc07eb40",
+    "categories/kotimaa/sivu/2/index.html": "e7af2cc88915ba66b2e7f956aebdb5949fa368df16f1f34796be07a5cf8b9b81",
+    "categories/kotimaa/sivu/3/index.html": "d459c3a08f815c3852a670fb917632172ea905a0f456bdf03230beb9f0bcbbf5",
+    "categories/kotimaa/sivu/4/index.html": "2534937227b6e7365c82142f61e9bec2a4935efa27863c4646ee2679876b5b81",
+    "categories/kotimaa/sivu/5/index.html": "f5d14769991c952fbafcae87d020db1d0bc964392461b671c385826c887db3fe",
+    "categories/kotimaa/sivu/6/index.html": "4e31879407ab2344b7a56501abc3d36a67a76eef2053a2deba99dffe68d0e10a",
+    "categories/kulttuuri/index.html": "4107606453a5f63bc1f0b57801addc1a607eb74a20cea268f8eb9ceeaaf3b6ad",
+    "categories/talous/index.html": "de836510472779223a7237d07b5e2440c9570dd52c79d4ccd5469a141f183ebc",
+    "categories/talous/sivu/2/index.html": "7a939a7193648341f012f44673fa8fa42bb6cb1881c894c15d36fb3fa7f587d9",
+    "categories/teknologia/index.html": "fce9cbf69a078bd8971588e6cbd0ac3c58eddc1fe5c3304b1037072ead61c41d",
+    "categories/tiede/index.html": "4d12ba1adee02938a55932c4b82836d0def1fe284a68cf0637822f992114e711",
+    "categories/ulkomaat/index.html": "2725b8a547ae6b701c9fd54a0a40e8e524aba2ffc8c7fdc019f9c16a84027111",
+    "categories/urheilu/index.html": "4dec9d65f7be5c49f87fd978812d885e1a7f9bcb822806439f4ba4aced95ddf7",
+    "index.html": "609f6f6104ff2ac8349afead32405c1e381e59c00aa2d3865ee7c154c212dd7a",
+    "lahteet/index.html": "339dae73073be5da66f2f7839c25ac6556778492ebf01c5ab84953a126661763",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -298,6 +615,7 @@
     "mvp-assets/8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360.jpg": "8ab04ff998ba58a984470649ac424b529790078df8b271a44c1b5c67e0719360",
     "mvp-assets/8b0319ba000b5cbc98e8619138b7ff3ce0cef2476b4706070e10f107dce58057.jpg": "8b0319ba000b5cbc98e8619138b7ff3ce0cef2476b4706070e10f107dce58057",
     "mvp-assets/8bd6b7f29b2647f833705aa831f2a7c5eb0f1a94d8d3ceec79f8b993246eff09.jpg": "8bd6b7f29b2647f833705aa831f2a7c5eb0f1a94d8d3ceec79f8b993246eff09",
+    "mvp-assets/8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0.jpg": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
     "mvp-assets/8ca528ce87ca8865d3da05a6a3bd756b4d8c2639991618dbfd4bf905e20762b2.jpg": "8ca528ce87ca8865d3da05a6a3bd756b4d8c2639991618dbfd4bf905e20762b2",
     "mvp-assets/8d501db972848e135cb8d81c6858cae9ae0e184fd3b8e1f92fd95bad1d9f6b4d.jpg": "8d501db972848e135cb8d81c6858cae9ae0e184fd3b8e1f92fd95bad1d9f6b4d",
     "mvp-assets/8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0.jpg": "8d9c3ccf4fb8b73a442decbf6ce9f1beec8d119f34e854b2a78628389846c9a0",
@@ -544,29 +862,29 @@
     "mvp-assets/portal.js": "ae7a9eee9306242d93362e5d9b19506af0cc9aed46e19b75c1b475bc3727c92a",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "637eaf4fbed4956e14a5ff0c21a902876ebc471c444ecfe0579be588b8e5e25d",
-    "oppaat/index.html": "26c31a37bd95ae6917634c2780bcccf6217ce9be938ba07eb59067158d511495",
+    "oppaat/index.html": "873bb214338d6eaed47192d8e0bbb89bf9c8fbc00af00180aae0799b1f1b53a7",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "07d80e3d99cf1d33ca7a1b9951d85a2d07d8a4c0b08e6df7c628b9a8c30e31db",
-    "sitemap.xml": "e0c9df6c0f71d881d1c07c2f9bc30f25e29d2b34053f0a0c9874b87867a54d1b",
-    "sivu/2/index.html": "ce35fb1f47b06b9d4b671b62161388f7baea718e834ddd7c26b7ef2b2e7c3ebe",
-    "sivu/3/index.html": "eede99de6f4d6f2166e6a9cd8c197902ed9f20ff59f60be11adcaae5389312f4",
-    "sivu/4/index.html": "ab615faaa514c899e6467c2d91abef2e5667addc516d78e03a7625ae96569afb",
-    "sivu/5/index.html": "1ce4c2d6ef8e78af06900eddeaf382eb0348a921fa6cc62ba27f1e7ecbe46464",
-    "sivu/6/index.html": "784c50652558a31683da67380916c3a47318e8f7dd82372a38d5de0bd651acae",
-    "sivu/7/index.html": "a019dacceb17e5c36ceab1a7922dca8363aa80d94dd44bae2eec8749e9c6f335",
-    "sivu/8/index.html": "e9ce6a01e220e408ff33181a80d6ece13ac2be6d60e8904e53abeff60ca92c7d",
-    "sivu/9/index.html": "084e5284335b622ebbb660903f9dc12b1ee5df842f2b9121a248f1c5d4c8578c",
-    "tietoja/index.html": "c2625aa4be59746c36065ca0078a622982faf95c4932c58067fa9837c974dc7c",
-    "tietosuoja/index.html": "4838b4a677a25e48511400bdf955b7f80bef617b07b372c6c3871f67ef38d9f0",
-    "tuoreimmat/index.html": "fd1172135927dbbf4a56eccd3a883636be99885ff4c8684cacf47504775e4089",
-    "tuoreimmat/sivu/2/index.html": "286c028158c97db2296acf595ce72a0910cbaa33c259ff6eed97d430c312fd49",
-    "tuoreimmat/sivu/3/index.html": "0033cab3c9eac0d26749144f85603df938552dbce15d4fe4f40996e73872a832",
-    "tuoreimmat/sivu/4/index.html": "19578941592dd2d034cdf46bcc290ac49cc457bab83f49efb4f21a97bf0166ea",
-    "tuoreimmat/sivu/5/index.html": "6e21b737def299b4ac26058705ca1127ac0d7f02769a9d123992221a3f1e69c4",
-    "tuoreimmat/sivu/6/index.html": "89e9b4049172595e3e2e3cc08519d13fa1699f2239a1323a51bd5ac0c7fe9729",
-    "tuoreimmat/sivu/7/index.html": "9f053087b280b6f2b7bc9dc9cb117607cb426dd1bcc9fc888f5f3d7addadf5d5",
-    "tuoreimmat/sivu/8/index.html": "93244b371f4a1c258008bedd059f0f757fcc39d8d4183902100f14d4f401968e",
-    "tuoreimmat/sivu/9/index.html": "a48e0e4949c8326c1c46cc89379c0efc4dc3974a2956e587617daa088aa4384a",
+    "rss.xml": "7da878a94d45830444d9fd9a1070407d3bb49f028c2c95972b7f8d01a703e032",
+    "sitemap.xml": "d2133103ea74de13f413729295268b16c26c5c4c780c69d98c837bd394a632f2",
+    "sivu/2/index.html": "db95fbfecef4de5fc6bd3b83124d4a859b75595dc41a4980097c543ca3f4b2e8",
+    "sivu/3/index.html": "dcee45c55cdd2742bee7a3575f14a32a4ca497095b61c06ef194a2578b176b13",
+    "sivu/4/index.html": "a2c5a207134c2125ef5c9bbdcabdae48e825fd240e189e3ac341a428961f46a8",
+    "sivu/5/index.html": "cc97a7f8df3d87fe19e9a481e5ff0239d46b9ad66423b4a8141dba43385e9459",
+    "sivu/6/index.html": "32292f9b0c17d055a307dd53b5f06f46e28c430de8e1df1d5a32bdbe11df32a6",
+    "sivu/7/index.html": "4658c45e0444b338c2574e53973e4a6621c6f3b77151f1a043e023f757092647",
+    "sivu/8/index.html": "996ceb741c6f639581714d078f1848ba704a08ec0a260b9107351451630f8e9c",
+    "sivu/9/index.html": "adf7d3aa80a30203926c16db5660a091e6d153fceff71014615b1e28b587f760",
+    "tietoja/index.html": "4c6b3e36f5fd4024c8efa00833054550a3def490a1e44045ccf6df243d59edf2",
+    "tietosuoja/index.html": "cc7275758810cd09a9bd6190645350ac0b0d6753e826a4d49157bdc2b77b6e0f",
+    "tuoreimmat/index.html": "feebb536e7b9f80fa9596f249ccb7899bc4957f4c846318dc391a8b47cac6248",
+    "tuoreimmat/sivu/2/index.html": "579ec2a75129d84396af2fcb14f6a1afc63dd2080a16114f8c38ca8294263e20",
+    "tuoreimmat/sivu/3/index.html": "e72209064aac6980a1e80c8bff067a2e136d35ee67c9cf8555aa43995e6a3959",
+    "tuoreimmat/sivu/4/index.html": "9d0c2b95042f3cd7a0a00b85b81688de18714d8280887773915e05c3956f73b9",
+    "tuoreimmat/sivu/5/index.html": "5d13a807e4f1f3aacc77a355239facb629e5a00e07a65aaa3aedb02191f70f2d",
+    "tuoreimmat/sivu/6/index.html": "f0fa2291385c1ef403b0e89e4c6c0976957fd3a9910fae96f258a34808ca5cc7",
+    "tuoreimmat/sivu/7/index.html": "1a2e106f43c021febe5d6377545758353e07bbc36acc4bbdad72431ef0877beb",
+    "tuoreimmat/sivu/8/index.html": "3a35235b004652309dd2306054d0a3b25fa67cd2fd066309d6cd6ba2da0c07f0",
+    "tuoreimmat/sivu/9/index.html": "8b58bc879cc633f24cc455b601f55c0d473570c994eff63867486968c87dce84",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -580,413 +898,456 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "51842f69950d7ac6a0d924db9d2acb77ea50a2b3ed7085243e1f05bfa31091a2",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "d451563f580b1708ea6423944e03e5ce24108b9304e5342fd2dd540bfaa97860",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "22b75f483558036921246b0b94840c7c0eaa50e2a7f821ff8ad68bfa7cb953ee",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "410801a9d37f18d6211c40562e46775de3055c0aac9354700822d3f3227f8359",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "4b6fde441f321f2d6c407c68b9dd66221d3b2da956765f151ecaa08c625eb5f3",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "1af90b483db6a1e71b9e35df38a51eb208c5817636170ee7ab926c8c7d10e0f4",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "d2537533ebcbdfd441b2a9c40698823e184ad9f98baeb19f03046b3055b2772d",
-    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "d153429cea272cff4615b94744a7a09039fee1fa98cec0efeaa48c2b27c6e8d2",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "e402c05960405a90946456b2b1cc5079f99c9580b2812c2730bd830e828c00ff",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "dbb6c2642cc55bf21f544302741c6f795d979f40025c3962573a357e98425b97",
+    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "1c2acadaa130e19faecc3c76c4558938631a580f9392a16be48d971ce37e47de",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "53e28a66e3fb45f91d48332df0e31d08aa03ec93e92bdcbab4cdb2b87b4909f8",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "9b181c6735635e09c61a3c1b56852733c46a599c08d6d12f411c3bc431c70b6b",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "bf8008cbaeb1a798280df76869e9ed1977f8f081bcb764114611fefa51b24285",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "2d59ee59337f04e74a85333b6fb091994b34165a5cdb6b3377ba370ab967f887",
+    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "d8cb8225356278e3848d7a3165d28e1a81ba95bcb5805b526e2e04128d681fac",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "6bc021fbfbc9cfa5aa7e9f827acf575ffc6465a1c100897716925b5c254db3d6",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "3fdbd4c7670b9630473c5e444df6be479bddf72785ab527b793e968cd8892b24",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "14cad35601847152870eedcd08d7aa453bf2a51644e104d3b8828ab1d8474127",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "437f6d013d410e30a9a83fb32015238270686071bdd4e55556f0563e25b9900f",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "d79e1dadc9ec6a2cf011e3102716a2c15c2ec58492587a81752c9c512cf63abe",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "8588adfee73a157a4100e1b8c6403e11754ac8abd674fbdd98f79b8d24681b16",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "a09663ebdf8c41803add60ca8ea0152e4934b0b734a2fff3c887e67151f0b900",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "aafe3734a9a0fbd393cffbed0556c5a5da90024f4562a0aa2059b76347eed0b2",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "6f51481b0979c9f907f496757a38eacb2db77b1a5e65cc5c181ac89cfc1ddfc6",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "e2a609a5f4c7f8d7563f1034400ca80a46a4e3e0c3cd8220582129b850153e28",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "3cdc858b18e5a00feec069c0d8e341c6e027bea8f65161657057107fd03230f6",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "c94cfcaf5db571954e43c17e3f5d9898d91f3b874cc21071fdaa2188c44e388a",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "fead51034ae1b55f150e6aba132149c8ef7893a2dbfb2aff7e45d6813cc0b7c0",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "252812268f4421205adb96d7106c3d981f7de78249d5493aa037b3677a7b11ba",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "555aaeca376866de4daa1544e233e618e6247323f206ea892757e45e51bdf815",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "62c35ad86e805ed9f5a5ffb5f3acbcc5863adcdf8cf2ce3244c43d05883361ff",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "c6196db70764aacd6ff9e355e5d1dcd27df8c0fa06e330f60c743aa552aa31e7",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "9806915184a0bf59ffc9a3bb6acd5e00870ffc7bd68157c7212834748438f9cc",
-    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "86dd43a544544258c215b85751a6643a7855b0614d897e4ab6f65651af3199c5",
-    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "f9bc471e12873bcf030375d1d545f5db3a05ad7f2422ac71112e733d6534f409",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "96030d8506fb62deeaf0f9538f0c013ab6bf8cd9451f96d47c1e8caf5d927d3a",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "8ef5e5c0f6834ca8b6386cdafc52f4830399360832e8a314265f9fd9c125e9e6",
-    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "31968e6d8556110b02f17669ed7ccd73308df10b8d9f43fa318ff83217e9da02",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "768fda1b4066ab60801982373e5043713922bc6eaa508eddc51892576de660c8",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "4ce9faef288155a31212e33cecaa9f2ee53ec944ce11f8ca501e7c17e9068250",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "b0d278b816bf19f266f29b645a74fdef1e83b9636f2b10387aebe20d43472726",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "43db50412d3df288248c8d8371ee66b58baba19003b9a26e4568e1eac24b5c5f",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "2913501200d3b345cfd361c62bd0a971ef9f462ffda1ebbe51d28372d8b71298",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "b9370c5ea309481e9f672a7c547d3865dd4917b2eae6919d4d605bc4ff26164b",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "3374038075e0db8bb97cd77a4737bc8939b1995cd09884951eb4ca74bcbb141e",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "7e3965908434e594ff983e3c9771f3a52f6eda7445ea4b4736813aa6bdb55f28",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "363aba3f8891d759da463a272cb24d5e262467a07ade9b19e62b5f852b72809a",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "17419354b330a210f2728bde25cfb534f6e1ebf569b9c9030a44b4c3cac64326",
+    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "ea09fd92c494a821c711c826009a162a80041bc4b00727b3e152ba7772f0ac31",
+    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "80877f10ce301b6005db6ec74302017ef292a0653d224fc5756b8894701ff5c2",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "49facba85f66cb20d850b2f1ca0b03210cb10c7ed81c5a5fdbf37d0b53f1489a",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "b11a70a27afaf7b3e230c9543fa91a0e68b8b1e549e63868764525f3bcbc335b",
+    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "b5e7c7bed627d14a3a78120ad81c2b500d5c3e3079bd5577bb4fca42322c4199",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "e6bdbeef0c52ece55738a5727bb0a39aca9cdc83b35caac979f9649fb630eaec",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "b891e7d959151fc96ffa48321f1f11f77abe14b89dc03074222889d837a59405",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "c2f09e77ddaed1969310b998318e4ddb328e2efd2e2c566c50d1f4a70a807baa",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "f3d97129173972a4c8193c79761dced4e8a597da5dcbae68e28977ccefa65fb4",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "766f6f340257dc0159aea3682c3b670dc896b104302be1ab177dd70c01f3e874",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "709da24667e3caf17ea017614d21fd808eb3960309868e83011fefadd35eb7d7",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "a7971602c3a3ca25fbb4644a928d7c1b582af7b4d55216cfc083cd6381f4f586",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "05daf935921cf8907ccc4d7f3c3e16c3c124648a5dde7ebd7759996dfdc86f02",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "8168d3fc9cf17c3c697ac5af1d7f0d004a99927c20f87f571ef5302fb9f1e587",
-    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "a2f5be3910e8e09025ba3c7fd92b18d2ee4c14082a5d764b63a7ce01fc920983",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "bdc57f03944a333f62a5a048ea28fec79fd0ce250f3ed32e335ce1e917871962",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "59815c68572fa363ff43f11cff4da74d0dd2d82b0ca145469c68d44744f62059",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "a41afc28c1e42d72e4429aa59035adfb82120810948bde49f484940be8ea8467",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "ddcc693a2168b0bb193a958a58147e4ec5e1cc834f76c1a893dfc51dc2243d35",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "2821b807fc0240a779069d47115e71823971afa504d1d9b5525c6dcfe0c6dbbd",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "cc53b849e8f70cc8d7c9695557c5f8b6436ba8837f7d999e14729f76cf2130a1",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "e4e8a90a8ff3b8b7c0d40980366aa9e7d1b03b76e5a2b84455289bfb62477829",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "a44a054027c7c29b6210441bbf361388e7a4c92948be80af3cc015f5ff25b704",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "07cd692ff31a0e878ec65f6bb276a574a19bdda1011de8e75eb2b5d8aee28e64",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "9d230de42e0b9433c492e98e33834682ea42f836565b30615838bdeab9f1f6a1",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "acc00ee4c4ead1657f2d4a2a0d6a1c677a78f8d6bce4e4eea0748c9b63b63f4f",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "07350d8e3d717a5965f93c8cf2d7c6132dcc997c0a15354c07aa181c3d13353d",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "818a0e6d1b330e43706d169700336c16ce56a129fad79c6eb7f3b398bc15c6dc",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "6c8a7a34376444007a5bd501cb9a89434839a668922f25ade1a7c3043e290c79",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "c55f68e7324c992ee42c0b604c26c66e891f5a7a11b880d2deb6e443c8cc2c4e",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "cfa813c7fbef3c02080eb82c10a9454af0355a7914688f9a42b53380093e4a5e",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "97a36215e9ad3435b819d8e8bfb837ae6abec80e59a9e83c6aa75dfd9c0c9f00",
-    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "425c843f8decd4341aa87d7d73520e97fb7a0e9841b5e214f06a96b13140e151",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "8d1a7ca00f6e3184eb310f1a4ca75d3d5dde74e7b000266586c717ddc6f70e32",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "4e0ef4c860437e2e64cadac1f9fec6a0518339fd9f42beec386f93edf3bd3ca3",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "c41c543f4aeec8270fcef818e344b0e56a321a283a3bfb7859cf1adda8a71864",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "a81f4e3d6c0350e3fc4d64a6e9dbb3c5f5702b0f9125292b381a6eec350cc77a",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "aa8b3bd50accbed38abff785b7364a1ee4a7f45cfaffd61807feaca7d1e6e449",
-    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "e1649f7547619e147c52500bc589f34c6bbdf936675560a931cb43257648b52a",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "90484504217a0460debfc58521143e93227f4cf5c8014ceb313979924d586e46",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "dd68a31122d4b69843deaf0fc324504f99dca03930cf32a0ab1cf48266d825b3",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "3cbe82d76859fa7de36b8f206c7cbf78671fe0cf7d456c4d8e25f2b367a90388",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "1b33e2d244ec071f4825f3a7eede2fe4a77fd2f1a0d8132b97d9ef6803b79368",
-    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "6bd9d8bb3b741fc9d25a21bf0ee13fe8da2b296cbe970a9d907b65f93ee49bc5",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "1adc496b3b11b2af19ea46f164b621d994f1004a8c49589a570f50aa15dd2d20",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "978a51b17971adc23e0bc5e288293b1f06d8e244eae367b646dcba4693de7837",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "a6a3d6427db1406546c6b9718a251218ffe8e9423a14f33da9cb247df481c473",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "79860d685d242a712602b41fe775e682a6d68ab75abae4a0a7b044a3076befdb",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "cf1dbedea2394464d077444c7940158cc03de8b0e65559468ce3d874be24464b",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "32a05bf895cddb20a4a94be6ff80d26e6e04a94c7bf569004245a16e5bffbb18",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "c766369b2177663e8987740569b61c04d07ab0188f680143dae52f2b38aa49fb",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "1352817bd7b0a0c691973811bddab3a2450a77597dfd45472d3160288a37e991",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "6bb12b1fa6929ee98e95086a1dea10f4eba588015d8752bda4c55f2a3f847d4b",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "53b333440656ae209af979858d774d42e43f4aa544099331585dfe368471872b",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "90e58e022851aafaa6277d8eed3fe374b7988662b91da47924b2d1c5b441667c",
-    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "dc65b02c2bf8912a9f2a76898e463b0c85bd4a157d93a85819c24740d857a9ef",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "add43cacbc673afc0af474905631877f4dc08db4e131661ca4aaad93f5bbc35c",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "b56b4ae4e9a8eaa3922224df4e1d8048840fb9d071b32432ddabbaace79d550f",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "99b39dbbaa76c35fe82560e2c5da1c2e91b875ea21c2d9b20b72209a643767ea",
-    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "9710b278370aac3cd8842f06c63791f4a0716408150b3d0b59578c05cd124478",
-    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "e805179c84e88c263b641d26144a73a74d4a46164f70451fbfd2e507a67721f1",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "35ba0a1923e99b3249a7768877a4726a2894045a8bd02cff1a0d3595e375c428",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "0b8701712644506a704e63b1022794c3b8962964d7168cd461eea8427cd05ce8",
-    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "1a46df40f63b8c2cb32f9544fd8f1d02450e8ec40de6925e76ed39cff35367b7",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "84a3bf76cec5fe2d7c8799993ef3badb97f4311a2d45d2ffc0b444850975cb90",
-    "uutiset/kuluttajahintojen-vuosinousu-syyskuussa-ennakolta-2-6-2e846b3cf176/index.html": "04c8d85e3afbc828646dce77dc11a750ec5601a88472f3b588be4e98c28090de",
-    "uutiset/kuntaliitto-ehdottaa-valitusoikeuden-maaraaikaista-rajausta-fe92f910b26a/index.html": "b8a0b156ce2b695a17b9bccda5ad093fbff6b6b4f6f8324d99e417db0de54028",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "260eaf4308e978d6810aae5e9861056b4c045e9c891a178b0ba11f4f47c246a5",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "7dca1610c0d340bbf5b973525bcbf73fdf8eae965ca9ab54b765d03bc006a121",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "50970b61237aae67ba03445da159d613ae377f9675fa63901b6911fe600bb00b",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "78cfd2d1cfa6ab82b991e805d5eb425aa66a66da26f9943751b567314bd3a2c3",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "a3d03fe9a5a6d718cc1b5c77c69d7af04de608389628aa37e623f15ea4d5a6d2",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "4cc5959fcbef5135ba418f5fa6ead41a59042375c9e70a6af45a7ce0dc668233",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "d20610427e33fecc58a05901242416f8613d4051fede2886479a86d2d05c8d72",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "2e7c7e48ed8583d6cffc3d406a200ef6c0e2dbacbaae1bdd7cbc8c36542b6336",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "82d1c408a45e8ca0ca9c2ff88851988416314c853eae1022faeca1075a3753db",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "2ac66bf1374f174107807c688eff30d7fa487033dbf10d24f2cf54b78812b04b",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "1aa94ea0950e11a8e1b70c703467185f06b5735d346f5322f9082f514d9ec1eb",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "aa58451328afb0e1848ecc7ac863bda274de7f24c1b1f6b88be089e57eeb9c2a",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "454a79ca96ffd5121292563e7834e40f8ef895b29486e1c007c67a239fbe7ee6",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "b9adcf0902b4e5e763fea64c641ace2bcafd9d42dca3c968b3ea12052f9ed0ab",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "47e8e6306aec0e88af223b34b7b3cfab1915124f7357e8c8310cb88b8ef4f93a",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "aa5f2cf4556b6feba06f96db741c8465a5f8b4e170e5c6e6d8901d0c8a4c953e",
-    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "0eeef747d103abc99a797d53b6781fc5b9256f27d9e276e8bb2fd68b57799339",
-    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html": "0aa84dbcf057f0e4d2194943ce0bada3c599fa83cab1166a47951a0ac529e68a",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "391ff8c9b98dc6e3033016b518ae8112da1ad3ebdcbba55285ef68be22fe6e1e",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "99c587094dd734a8758af8aaddc69d0e165e525c8735279cef59be4cf7da2742",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "07c432952e9235e2f2542d757cabbfd053bf8aca3aee26c50fc3824b8600b662",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "75a7fd5f2342e266775655fc1a871bb7026b9c983580dbda786f3983b536f9d4",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "6b7c561a23b4525311fe1b502acd0aed28cc91767b03cec01d29eaeff7c9cd18",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "7a63706d22d505a41e570b8c53de45a112112c95b1c28f8dd5d570dc19ba56ec",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "a4ab47daf3ba14d9549a3bab2f6328eb7fe4da30e1fccc78615f5d5cef7f8875",
-    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "7b7183869e3a5851b5817f6607a94825d496c6dac07dfda300c61595b380605c",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "eb895bd9e04628bb76f7bcca1ab25d79f1d7a496075c95ee33d376ec4b949aec",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "6de451656d425c2afe199b6eee48033735644830107e6c56a8d02d8ce735f350",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "180f1b7cb8190224d0f09e01dd25af83ba556fac91b3b4419b8535257b38d75e",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "05ed1f9524064315a872875910b31b94e3bc7812462968fa57556572db7042f8",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "9461904da8cf0316e36d12ed8fb0ad637d4a3372a413e4e793a0d4393addaef6",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "3283da9623d26e711cef14087e1c85f2ba426ccf39519f95b2b8854ad19b67e7",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "24686a2fd4c5abda2cd8fe6daba6319f01fe030606f0771d39eb2572b7f3b607",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "8eb71ba0ce7cc59d4ad7f265a8a5aa36abcf183e9fa596db5e477354410ddeac",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "e104da1cccc3ee4e6f8e8f8aabdc43f6557d9de302a3e1b445c41f840125ab40",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "9b11551cc1800dfbb70129adf1befb189198567d39103566c596a44515d02e09",
-    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "d44dfcfbd3efc1a66af957b614f0b3fd2ae7095574c21b43d7a0b9d8b13ed3ae",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "78fd2b45d39dafa2840202ab9dafced5775f4041e382dfaed8812c441de9fb1f",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "fa96e58d10beec7e406ad3a38c9d105b12affeeeb8b2afe7103cae3b0dbdc527",
-    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "5b6f34d2637acd6b53d594461704a267a2b7c8844e46892f6e0c89af902aa6bb",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "5394e7015d569cf42c9d6fdd60617f405d2c14d1287ece98dfb93c8a512bd6dd",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "9da45fd669a56b6a33bbfc6beaae7970971a2a5e39d342aa0e407216262b47e8",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "486dffea08eba1635a885e34b95ef0e77ff34e558a003cd15ec071f7cc947413",
-    "uutiset/multala-hakee-saksasta-yhteistyota-vetytalouteen-dacb24d664ef/index.html": "3a779acc62bc50b386aef7e4402e73807a778de347b4c0164e8591e3c8c66ac0",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "d6c606728cebf25e896f65fd5ee32de4fdc7c2a090fa0bc7ea1e4aea5ef2295b",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "2ca09eb9798c10821b110b1f73c125ff1bc5ea9cbb110cc3efe9ccc37b492367",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "13259d405a871f13aae6cf5b0d73ae815dab8eb9162ffe3005d59735de2837eb",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "9fc3079e43290e52310b91ae25f38b1533d788090f6028ba084e2ac099799277",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "ca4c87f7406a666a3eab98f52a347153cc3de1f03be17dc9228c6af8a9c3518e",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "b273b42fe4c2f4caa815b0f0884afa6f863e7c1bf6a95d1e79d2859a8bff1dd5",
-    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "858269fb0a36e8f443d0b5cd79dcc4ef1109fc07ddad97fe5321d3eec8791a77",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "0e7476bfcac23cc989d129996b3f9c659ac1c5544b6ab7377b90b57d93802480",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "23affa6d2a8de33817a4e6fabc93658e281356b725be8f5752b70f2ce93b485d",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "fbdb5d0e9bb4a4c50792a4b0d1ab46f3773e3ae5c69601d88da1b3e7d30c6769",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "e66050bfc083353651c691c29c7c148b777d0836e60dcee9537f00960f8cb028",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "4032473314d1eedf2afc7c6a30405e8cf6c02d2eb174c32baa66a7400e6582ab",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "a1536b094f6b04ebe22c31f305fb28e4269efacb37f78fbe97dbd6326ea5594b",
-    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "59317af93fbfe340918b0002f3d875dbf79149f2318b0ba652514f8bc0612f7e",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "a08d8988fea416a2a7b9bf05875cb2d8e7706cbe98f709dc080dfc826d8876fe",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "47f42e4ce17739280f1ca76b2c5c23d16eeed71b2c292795832b876228cbb842",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "7fb27679ca56d4dc6affe50d40056b413a2e9821100383d8da62f289b0e17e29",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "4b738cad016d28f8eb57d2284b74bb99091ca09828a1c7597418dbf71f6a6a63",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "729f1f5df63a835ef09ba55855b35ad2a507a57a2ce4fd58503aedfda04ab4dd",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "dee3a66b420343136f10605863c0b893454a4275f6e056c94ca7a40d021eb101",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "bf45671430f6f6b0e917274e6a6eebe6a89597c533ea637123de13718118321f",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "59f6b119c9d7a3b8c6f631f2c1c674cff1f53ae024b992954cd1931eea200a38",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "70cc5276c1ea188f79772e18954513f73623cd9a013480e44602c65ca046638c",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "890aac00763c31818075cac336d50fce2f50ad71f33e3cd7e068d7346592e532",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "05865b899ec053b8255010677ceddc22b7048815d40e3601bd573c1d1ad32b14",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "3b255e21fe094d657b278330e69101f228309d7f1953eb7c65404c13cb20a2fc",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "e1feb3fba2ecdddce547129722363ede5b236176b5627dac3ae99697c62f4c10",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "440281b18b98c8fe43aca8423e13f085da535bfc50e621b15f5d16909246a864",
-    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "340cb109573f8e0871528f3ab73c27d6604b40625c2a6aa1eafa902c98062348",
-    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "47d15435127e849bb2e82f54c6273364e73b90bef66f9ebac667a5857e1ccdc5",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "438021799760957619939adaa8e56750a1dbd117a156c79dce0da09c7bcc4bb3",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "e82b046f322c011a78fdc592890fbca6c7187d929e19d145ee54d04a8370ccab",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "87ac47d7336ab5a81677eb827f90c08607f2e723dfb60209fc5e406ea8682776",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "5dd44255d48ef79726264522f564792a76e4fbed4aadb92069fd161748d79fee",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "cddf6d5c5138aeeb5a604fa26bbc29bfb375605f3246ddfa0746c09ab6443bec",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "35f82fbab289cfb861f33acdf3919b97c46244a31689f36039d8403afa38de96",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "22c03276e46834443ecb1c06b0bc8fec1b7db64cc7d0bfdb56b8c99e738ba853",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "8ec8735c5cb65f2dcaa53166bf5928751b29fe7e3201adc8bb6012eabfb81ec9",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "d46521ff5eead4a76a63d327951298a286e2509ee838d3c17221d084be033188",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "22105597abb4d189ff55acacda2ecf68ed57d6b161cd9c4e9233e55e6b399a4d",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "d25119e51c7ee587489e80b34ca6753e39bd4b161861ddea29f5205231b82ea4",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "703edd170e12e800f3b3de1521a9dc4917a4ee2a4c44160e2ee9731cee7cb8fd",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "c0a2ca7d6025fd074f1c50f2970159cbbbcdf11d8b7e4fd31538ec518bb18db2",
-    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "261d6b2450b33028429bc613bd0caf6d7850804e9118a18495eebc1437cef3fb",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "17072f4581253460cd80bc2415661a87a7b66a67a9b7f49fea97169578816cb2",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "985fc7857e72bfc200b35381de8efe32cdb7ea4040792857f9c16ef164bf4ecc",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "f551e54453bbfbe3d84833ef3e6898d494970fa4e126fb706499a85740b0c73e",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "d4fd5318858bfde0aa06f750681a1c3a1ccddd764b9688c4783768b70d782369",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "ff4f61976d5961f61c2f69c79151fe799da1b3dd227c6e93de9f1868015199c9",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "44d2041a72eb41c2e0dc2227d863997298bee3265ae7ce34989184148083c218",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "70822b254793650ba41a8baf64b38e1029cbff19202a66836e784055f21330d0",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "2e289060629da85d05072aaa4aa237c5902d4a92d866807ad3b84dd8407262bf",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "f480ee1e5b9979941b854285b84b0caa4f9afd7e5d802b85b63691435bef8840",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "e892744c988f6df0bbd933ed1d3632f7f60184cac609b9825157771a81d30b70",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "a86d6ca32e2076e5f64907f08b951bd343edaa950501bfd29c3568a8fe70d9e1",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "4e9b1d25c6aac30c665c416189dea7f2e4c2dd0f134750f46bf14a6a6d561a88",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "60dfda2211118a765b5b18fc0de2f81d6e344303934af98f08b12ae64900fc08",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "a179f24448c18f3033b7c61c7b4130da92d9641e7790ece3752b469ae11a45e1",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "f599257d60c4c883da87c559b617ee21859d63c8a85c732dc6077fafb856dba8",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "44dbcbf9f9e9c4dc1d0bc2f9d110cde25d2c98f18fe303dd52cc8eeae08829fd",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "6a564dc924f882ca974773e3f586388909b6321791c9b1ef96b57ee1846121f6",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "883b989fef4e345a5cbd701fdeab5c3ad4a28fe3ec1a4a2ac6032dc8ce10b59e",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "f54e28318503a2d94cd2f7bd4bdbe2e98b1c503e952931f7309d2e20762cdd68",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "bfef1be3a26f67e4d35559db7ee7b3adfa26bf338f8794fc08cf5c93c3cde5ec",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "59409fa63e78a6fa6123db0a99697034414f9f7aed7e1ec632de5b96b819caa5",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "647407b79c401af6c5f01f8bbf8189cfa7caf3125e07749efbd4ed71cb31f64b",
-    "uutiset/tiibetin-ylangolle-satoi-runsaasti-lunta-nasan-06fea975771b/index.html": "7a2dcf62b60ac74fdc16b64f2c14e7b04002a686dfeb33829d1daff0868ac281",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "b8c9654725ce6e032d2fdd35651969e5e3acf074ce06ce8ea58e707622c0c2b2",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "d65ddb1f1f40851e9dd624df5895c328bef5a28cbd0175b14a446b5f07b72254",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "5f64f3931289c2c8431fa0fe8da17322b7eb7a5f560c56c7a64e9a5e1967a6b3",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "4b889531e539032de4638a6d4ba4fa954c0a4be6b6e416fcee4325aa573ef542",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "0378df7a1c600a72c3a55f657dca375428aa845c40f796bf1a7159c60637290b",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "90661bfb72bc55200deaa0b843ce5e9f98a28400c29e433bd05399cf29e65994",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "fae7c890d20f203c5f944db2a66685fd46bee49a4eec72306b9f1ea1292e8885",
-    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "26715f663a57dcfd0fe3b0423ef135b00e7a9db11b4f50c386c10381a60f7072",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "3869e117568c6de7a26441dd498bdb0dbd79d27e0a01a2887bd8425579607722",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "10d0d14b433b2c55fb19324da72daec0fb6225a605b2ed2ab2dc9dee3f37ecff",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "d9f5ab32ee6528d9efa911a539541d4500274c6cd8dea9b67f7fbbb882ee6275",
-    "uutiset/toolonlahden-tulvasuojelutyomaa-palkittiin-helsingissa-c8d9df28ef8c/index.html": "d63334c7f79c4e2db78894a12d638298992a82380777cd177f011ab827537d4c",
-    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "0475344399509ac335cb05f77b84c79126b7978571d97eae2dc9c1f00d170866",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "561f2956505aca22820bc0443d01bdc18dd796f76cabb5159876409a3ccbf391",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "9149d230a93ed2b09a4f1bdafb46aeff474605cc5d80a5f5649125d71cec7187",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "78dd16235ca1287cff54c42a8186116c6ca215d1a631d5b3faaf420e519b6999",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "30b0c7a6642e31bda08d9400a54a01dde6201b13ecb4f683e8d7d89ee7cb0ed2",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "22cb825a1606598bb341342af0c3c3dcc9834363e180e9f6c258a246ea9c7cee",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "cf9f67420e0d10a51b0572c2b3bb99118125166c43593b68968d23fa52b09e78",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "bf1a6263f9f37db50fe5c5fc851643a3df8091984bedc760b7b7e74006e2eb49",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "9ce39d774c044e62560b380661e71436fa4cee3d7882c1c916d35af1047e293c",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "cd46b3744f40879c791ab2ee6eec2c02989c5573a5bc0515dc8bb78a5efdbb29",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "fe44f6b2728f991baac8b870b1b10ecd4f5bce88d0f1ae7cf5454b3c40addca4",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "71777092b1726b4038786dc45bcff71d8fc0c84579bd976e546a8560ba755d8b",
-    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "149bc81e8be24001dc0e432037eb047f5b7ffaace32500fcde8570542e0cc175",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "d67e4b01c93375b73d9be0c20223d0eaaf7515a49da64b2440d566424d83376e",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "7a12e461c30b7b5d7bb6752be1b7fc751722efbd1b58b0485e594c2658b47072",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "11b25c8743a621233f9bf0264ed52b579427067cbdc68c29e1abfeb84f15aa5a",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "2859dfe08d773e8de3a9222cb6cfea6de8553911000ad9401faa63372fc9528d",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "fe636b6752a5783dde11df1a97c69d1c6d9aa50f2a66fd2582ec0406e6b4f3a4",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "323654488a6f46ae9619365dcedcdab9f8cf1d88a9b2188883f87b4299577390",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "ecf34af9a0066fd6c5d108df52e371e34a5e92e6128781fad7e269a9f743002f",
-    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "09392f2940de37cf65a8cd99994efe4450e12ed7e7921f5f128ae9bae0100543",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "71fd9ccb6ed7e44bf83aa6e6452cdfd87a1ba0040567925e86dfbb23da0dcf04",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "e981d25ab0d50560f2c4c3a7eac5351ee814cf34aa5256f4c2e26cc218c32284",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "8e396d4fd8e3606d15202efcf297b71ae4612eea16b164102b3882037837ff46",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "9ec0ea3eccb3be83ada08edc89b78c4ebcdc687d1f8f6cb0a6eca7c2f1d1f7ea",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "eeb77bc6b792b1725db0a4b154bd814a753adcacf2fb91a059892183a500e404",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "777943fbac0f1d424f71f481c974c5b3c98fe260931af3b36963fd1f333958c0",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "810fb76d141f4dfe2f2bdad282f1c4d0e1586f8a938b77e064b91100f6132791",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "0583cf86fe4668ffb55ef0ca8f06314a431137c267bceef7223a3b3194dbc6fa",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "48a0eca6df50e3bfb8fd2f9d1319e086fea24a81420e91e359e5f1f64f6afff7",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "2619d9af5938b181518cc8cd1801f608a633a0aafd89b114fb10794679b9ecaf",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "2d93b597785a2e84ce2d58b6833cbaac6c5f9a3919b8a4ea47620ada0bc5562d",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "24fe27510099cb51ba440d8beed0d372ae304dc0e13e90af23db4a723e315ad4",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "1a097bf0aadfdb7fd5dfa69616d43db1842f1c9ea0d889f9008106c89310e113",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "bc2790f750ba669222e2d00496d8e78e3295c50e387f4b10008c098e33043ea4",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "5355a41f9edc7a74d4fc343a1c1802cb4a6ef7bb86522ad30a3894a3a84a20f4",
-    "uutiset/vantaan-yty-akatemian-ideat-etenevat-tyoryhmaan-ba96b94ee71f/index.html": "b697c6a9be7a9956d4423895343de8ef7aeabc584e7717d186caa5c9c6657c17",
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "3441d254420afc5a3903d4abd1fc76cbfeee269b8a020950e558a0d281df1e87",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "095dff41e816c241954b3de581944283358d245c4f6ee602c8a5207dcf2f0c4e",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "4eece7823e7cb85c6941bcdd67a376d2a5d46576c1fb97f89c81d05789cec03f",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "dcbc6c27a8f1f43ee8f4506aa00c4a020ba4dc64d68b6a445c8f0f09a50083d7",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "792da30abb35b0a6a7ca2d2b82eafc5d214d4a2c8972cd19fb37d31bb2b7ccf0",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "f2fd1f0bf0010b5f7a68b0a0db5d1781732b259f26c7871ac386dacaa5c70418"
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "def84afa19dc1a37cf23895559900654eabdfc6297a3a83365fb851882a6bba3",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "b882791a39e0e2865a33978620ee177d649f28557251affb9dd6582efdb9cf40",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "61b11e788224ba35db835a0688876e4b95d6c387558484e9f36ba40f13db8193",
+    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "7e87ad95d054989c63d2d204e99881d1b24ed8127d260211e1f9c6e4a9383f34",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "60d3689f4bc43cff48338eaa534c48bcee401623b64296dd186310843566fa34",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "be52efb8f10d254cc3f20f0168d3a1d41f63d72c94b98518dc9d03638aa1809e",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "ed600206d7867a5d5ce97980859c79764505382f89885c795607ad58f74c0fe0",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "f0dd15cdee4b040db3a30652e8a71afc847b64ed3e89d0ee113948194418ac8c",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "8acb847a7fc568b13b3df81be2d43437e070a8415a6b3b013f85a52772073ad6",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "bd6ebe2251f79b0493b504e4ff5c2929ef333f7e3760a6fe01ec151b456bee94",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "df3d4052e7c4a3d53c95b5454bbfc2e5c93d5949ddd9a25305cd208231e47716",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "4f5eed3c3fc9ff09424e196d205e5d68e97b9df569831a06fb6a40ed5fb16999",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "05902d1e7f9c1e92c952e144f458b878183baf7ce12f9964d5c4ef31e914184e",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "361a2f83db71f0945ca4d532b2a2d0cdf37dded4210f301f6a7252b99eb9be77",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "ad949b471e552bec0ee07b8af29e48c860002722f6a8e8983173b6b9c8d880f5",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "439006e05a392a6bbb86aa93ed21e23200507af670f44941faa787148b15fd93",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "118a17091fb95aadc2bdee6e63422401cfcca0341b98556a05fd28bfb3eede85",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "00975dd0c05d1cc901ded686bd3e7e37027c0e20caadd3612a09373d079a1b79",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "c7d3ffeb5807e749f5da98077ef1f6338dea57104ae6c70bbbd02b09913a9c5e",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "f1b3113931f2e585a3131b468ae4546b76d35939be35c2a29ca7d12d9f079f5e",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "eb41751d091b1733db05c0b8b9ac6de0c959e272de3388689d29cb5ae2318c69",
+    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "2f0acc6303f9fe1c390442ad223a1b29b0712cabfa238b107bd87aa85431aa23",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "071f2e476c7b7dd470bb5a7aebc6c9f20f0d726c28fb8d02469c8729a9ecc9c9",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "86d561d96d0082d117b09ad4a91238a2a0c58b1715dd341f0b16061028653556",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "4cf00d6d3e626aafb28acd7953a3895ebfe51946e52a6394e441b2f87a8344fd",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "2587fd6dd0359007c2970640cf13594dd42e93cf1194155e240b8c2a9a2d0d4d",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "f77c5d1838e039480ebe9d2d006856486489230aef66875c43fe3688450b03a8",
+    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "53c6b81f8494d8203ef4f3790398c49281649f113981d0d9c4012f00d08f08bd",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "1fe5322923cdf8544e8dee501b11aec238374681f948a11260e73c42d390fecb",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "358eaf19a707d5151ea21d9d83a61ea119c5a9a60598c9f2e8439644f70e43a0",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "ec8b9d7c1081f0654dc67ceba92e92658574b3dcb4118d07b716a9b0a55e2f03",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "96e41b953e7bcbd3dd32967df062f7810cd1dae2ab03dbbd542e883ed505557b",
+    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "ded905e328b4d976be6d5e9e7c8eea374c1157a29d38fd5d97dd5e87d0af4d66",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "aebd28fa0e3d49dc161fbb6db1cb55ffbbe752b5a1b3ce784c2320ca51d8aeed",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "b890663591146035e9e91b9e42a935b0c3f77b285a62911b8ee2736e6cb1e0a6",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "d51973ecc77032061f313e7dab8ec98c00ab175d8b606a1895da7f0aa31ee304",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "34c8e6ceb34d901f3d50db2e9ad6daf752dd79da3099d46a1f55a3e22c4028ab",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "cf53dee6d73853f19cfc0bbcf37dee5215190b10054afa7be30b5945ad3f77d5",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "c5a54946951969e8ba3a81993f0aeb0da0c74aad3d1385164a93d29dd69f15e9",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "5e2e769e19df2ed6af8d3e2ae58ec8ce3bccbd33f7324555060f71b0de934a9c",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "4eb75631fcc54476e0780ce4dd1ac6b67ffc93e7e47c9d605a1a37a664779c85",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "26f2f3049aa302e18aaf9e0a7cb39ba8dca529391f1baadcfeaa930f593c873d",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "9e5e68b57f7f44edf81be9b354e4e789f270fe97300a0df54dedc9e977bfbe6e",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "362b25f561f26c3f91e9fbd8fc0bee3a37679259f686d8fee05b0223c54610a5",
+    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "2f94ad146f5f2070dac67b16302985db447ac26f4105b2562aa2aa2338a3cb81",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "154b1aa3fbecc9e0b1a5e1ad7bdf91acf9d7b20b5ee714ca34ea02978c1cc15f",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "9bec4ee159886bf01a340371b5b9695dd4f2d7fa7d2aed25fcee4b12cd9a0440",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "96bfd95349d6ecccc4cf45d25a88b6dfad00f85df477acac16b0b182ee7b202a",
+    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "fcec9b923292afb5508d9339756eca432388df9c3f1ab6280ba4793030263955",
+    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "bc0353987971a6678efe02a1b0cb0975475eb8bb7e874e8fcee52ea3c13179bf",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "1b10749f63f0084e330e26d7544b82d945979c6e092fc4f07e11dd086fc4a9b3",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "c06ab6b0b04980f555e10fc57f0c276c8f52cb8a0376ba01bd430b386243773f",
+    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "d43ba2d9d2f2d3fc45fa5b399f15fcf1d46c1a229848cdf77f40cb2770649c22",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "ad8bea0b4a8d3f0abaf46c3a29469cb9d5503c19ba0eebb572981b1dd4c773e3",
+    "uutiset/kuluttajahintojen-vuosinousu-syyskuussa-ennakolta-2-6-2e846b3cf176/index.html": "8861ddd19dad79c714ef72174d1872033e15f3477b5065f2eb0badd8db9b0fe5",
+    "uutiset/kuntaliitto-ehdottaa-valitusoikeuden-maaraaikaista-rajausta-fe92f910b26a/index.html": "794c27ddccca22ade4ace6a4d24f9a9d4d1bd43c298ed314969174299557e0db",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "eb50c6751c7ca9ff478a8afe4caaf22b2355953941293504680199084aef92a2",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "b4fa03fa7314242a4725e943cc5134d2b8c1160ebf05d905c00b39291e7f70dd",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "1fade6cf5f05c829f84f1e674f3eb684a6e1feb0d927695d13fc2875d615f7ae",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "24a26043c07676d3cd2b70accaece8f1252fc024ee9e0bf5916c021f7604fe33",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "aecebc5315ae9757666bd9c3e2b4f2d0de12aad9d7714c0c8b1f323d132f0954",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "1a87248b3134752024e4d7ceeb2d43b18ab78fc177f9cd2623a856f5ec5a99d5",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "28ce63eb2520732ed4027b63104bcfef42d3f35bf61b51cb1817cc8fc6187508",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "331a4e0913b8d5f1a4c5f65d79cf2df02bf4c3a67622c98ca8ad4f773a389160",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "b9a58478579c3f2a55ada040ae388bc56cbc4713471f1e24e8951838f4818f5f",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "226db4238603a0c1a893f1146fcbde5a1e58a34d9f4ac7ff632b38274f1f9d02",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "eb48ed51a256fdaad113461093b013c047bb34538eccc588add9bd1025852694",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "2d0e5842a52a6e95e173cdaccd8e3019a057395d83617e193bf8cac7b99bf2b6",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "e8a2d515af34361b15f16a74046c9255b7c968777f06057700257731d9ff0842",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "bee1a9cfbed791eb6c1fa3b985a181ebbaef1cf60aaa34dff903fb0db0642cec",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "919b4c9fece6105934428b5971ca300bf0d724ead8a01e998eff38649709e7e1",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "a0be33781616b2d3193bb7a7cf493b6f127ce3587f32ed538889dd269ffd4600",
+    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "739ce316b981c794e1fb7a24c63b2d0730b27913e41b839b532d09da67f9871e",
+    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html": "5f90b61fe95d85b24b707abda04888e3006f7715d33899f6f729955016ae62e1",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "ad759e324189e878cd35bc22fa82d88e70b797a5007441528158f704243564b0",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "5e4fe46468b68374e95a916f4e4db03427c523c6e25b80199271f461877f22b1",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "d678421977cf6b3a872834b2bee1eda4d812a039099ad71d37378484ef0d4d95",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "d9620edd7b771dea398c2a8001fd9c44ee47779f28746e1d99dcea3125238dc2",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "75ba58ea08506641b8ae7c6b6eb7324a53177cf7e0175bbd68b15607f01da876",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "387bc7cdcbaf82f5aa0bc2fd52a799090fc302e3c5b468269cf352aa374238ed",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "9366ff216d297459bda0494364ee57d334d5fe13a099716bcd99001646a1f4f8",
+    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "69e00adb1d0b0f09db8feccd6d02572c8951f10ba254bc22d8547f5e2d8ff3ea",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "ddbc9ec48f48a626dfb14f3024b4093d683f3531bdede6ce1811308adcbb16fb",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "7f3dd20d54545a7cf31b94b6e7550be63575e0da3457ac3be63138ce0ecd0e5b",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "ff0e954cf280885487a885f4050d48fe4065211be2233920119a5253dc5b355f",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "84d47138c3e0de41c6857feef242d0172eaff5bb719e00498f19639191be5819",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "29a93cb75a44507de8ba93cd21af3c912952f688bb750aab72c43d41deecfcd7",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "91db90b531e466f71ebcb78a1de0be5fce0ee76a9d3d0a69b20e865fa85ac1ef",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "a23bb527695c61be0a5f2d2eea7704bea99ee57722f56b6127f411d358120d3f",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "f03a9e39d55170ca733c3022d8b3b568f0b918add114341ae7e2df228480a692",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "fa75595a1ab003895d241489b28392e6e03ee82bfc340825c3777c02aaa70a51",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "de3911cc2c40bf5bcb5653d4e3757304cc2b8b2f374027b19ed828d4b72e71e7",
+    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "bb9b60f2bd1d966677d2bec66dfcd45046a96d7dfd9df861c1ff6f82dc38fb08",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "72ea4fcb7836cd7b63b6a7011542ec1e7916e981513d8bab0d1573539049f9d1",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "fb986472fb194b91976b86ed94246dff95daf0fe37dff1806c6a3f68ebe9d000",
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "4419540a610bfe3cda064ce7a32592b2cf5f6dc7bdc1fc9b3d60284d7ec6cf66",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "7346814501bfcbb33a74add446153260df5a4e69956960500fb32c3c20edba56",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "342ce078dc5c9b82ad0dbffd8d55227045617a1b33b288c9a77522e6f60b86d2",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "cd9fa9e3411c445c1bf05e5f6dbae633b8f4319853e020560b2b85247b385da3",
+    "uutiset/multala-hakee-saksasta-yhteistyota-vetytalouteen-dacb24d664ef/index.html": "518352325c534f0cea1ab483e73fdf4a922d1fcbb491f68e5af82832785b4466",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "c709b039d115a18b9f07bf24df9e11ac9a8e1fc84ca6b2b83d9011792c5801b1",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "fe22ad669449d535d1c928245c23729c7c77414ca7d4710a5548cdda81df164f",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "6ed816a40a647cace844d3a17cbbd964650bd31968e7a8d9c75140092f4784e5",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "c9a801ff9e5cd4aedfa5b8e009cf1f26892d676395449c7955b850f85f405616",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "c11f3508a98e9dc1721777e32eb5af81310c47e4a08ebb2725229ce44425a033",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "8ba80c41d00b7d3bb4ad0fd19d9af4b08a9c0ea9a1fd09e6163f4da6ac43ab53",
+    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "81e83d348ce21eec66d35b3733d3215ea356066dc22df5d88621a51312ba4802",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "364df17cdb0ab8d6939d2eace11c441272f84f9ac878e884199b48932f285192",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "27b1c505557d39ce9409ab6758b32a5e33e93af868db962f6fdf21b267060c92",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "0a85b8e9b246f58614591e8952c2a53538a6a266d022ac853de5942554daf71a",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "4df720335002dd6c00f614e044f1faf561c149c5dd000ebe203d441a4f2563b0",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "8b2447180b2e09bc05d10b07102f41d3f138e16ba49a642da522917c9ddbcced",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "1155239b9462e4903b164410c9e5d14d1edbac7f2ffa342bac742233426af81c",
+    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "c0674ff69c1a97ee7bf5db4f9f73c3da6b3c3027529d617fee79312cc91e1fc7",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "55167eeefc72a98da842b5863f161e76a721c73cc15ac675c1cd987bb2e371c0",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "a249d9934e66cf3946170a6cfac48a4c0fef8cd98a513b0551aa106938489ab1",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "ce97b3eafc84ed42bc027b1f82dfc27c76f1d946f424ed4e09bd80ed9b99f041",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "2caae5a8ddd7d1922d9dab768fc250e4fc27954dd726548438b61929b41990f9",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "0b2db54ea2299a61d4abe3aa97f16c9e2a01ec28dc722e7dae4d9d9c81c7abc4",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "033803fd31a8e2593f14a414eeb739d05ef87fe82034509a18789905d714ed53",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "fd8cc56cd9040f7cafc20efb33c96680dcca0264fd0e679cca8399697d69a629",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "cff8959105751216f3904d15fc0b96da4497af0ee4c41f4f2f5d2c9f838c1399",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "4b9ffe6b5c239c99b7238d6dc86104d05c05644a66536b98de9f09bc9bda6834",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "3abd5cb825fdfafee5283714d94b40ed0296d7314c0e34e6eb2f475b15ca10e7",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "f48b64a2b0c6a3ca771bdb1fee7785f2828446cf51a0f63080cbdfbdf4432c15",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "2232733b8019c261cc7251f15d3bb902b921fed7f0c6ba7e6e92871aec19f652",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "f0120b91267e2b086e4cb1a5af5b34b0e88f5e18d068d3d450355732e858bbf2",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "95068f35876f7e174a058d26dbaf4f8e857608df6d31ad9e3cec69c10f724cd7",
+    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "ae5bf26d06b868c8a29d4d2ea70b0dee85a33a949ab3dd31f9415c982606c25b",
+    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "a9eadb8879afa8509c36095ee96b70c4505b9cfaf7ee1032bca488eb56812b25",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "573cd93392963ee83512672247c7ea70ef4fe88b53e8d99c9f464d23f2386871",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "d3d8a592d2d844f24195aa5bf26c87ba0e6f61cc509ee2a7bb80badd5ac7d161",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "2e16ebd360aa4e7186ef4af80be6c2ee8f667f07d2988e094103ae603dd9a94e",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "75e1edbe20bca91f75898c693a0b8c777d4425c3157b9c0c7a0a9332dc3432e9",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "39f23f19a24598bd0114a9aff3bce090a0ce2c7150a09dfce8a9d5844bc217ae",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "5563a3acdfd5bf55e0aa3fa3ccd9d4e862c37971ffdfc8d13672031720ec09eb",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "57732047522697bd50db264f907519626bc3c8598b222a37693d375d0de1cfe6",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "5d2496e23952d2701dd2c4e57ed529bf60a383a31c9faf97fd72bb2429b3afc6",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "b10cabb18687a3cb4433ed772c95b8bf9a3497c00f6ce3bf5562e636c44e45dc",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "db2e819755ace75ff3f1aaeef4233b76ea6508ed81dd55e3d2189ad159087904",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "9b54aa8cc52db424b61a4961801902c4b9d5cdb26f090824cc584c0917260489",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "ce8cdcd8663a261ab977f2384ade7594fb3155ca204ba15313b01a7a2b858f10",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "7da64e86e5e80b460fbab4e92c1b5c7c6e70deded89e076f8c498e4babf8cf83",
+    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "13a0f03947bdf8b7cbe2814bc0aa93c06ee73ed9765387bc7b5aad42ea191180",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "edfedaa6904e1053505cb3128423729db70a11e0b83eddea86abbbf4ca3f3383",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "a647f973f88ca50bafd1b812dfc6013b5fc9445701d90d5ed0d8f6407be191fa",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "0a0e9ba70b65c33a2e8585079e964e63b3886d5a3c0bfe5ead4903539c9a7042",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "e6db0234ccb18a4eed95bf3ac267f0a9048271caed068ad96e34ef7667f8e8a0",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "2692d031f814ac258bdb303b68632b52ec8c915a1a62d18e49e5555cdc599812",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "f6ac97cdbf29f6c04829713112f27289360487fa84c2e89108ae1af304f7602a",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "e5748200254687c301acd9eed0f3543580b96c4921accb0e986faeddf79e1daa",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "841487ea6467b7f82b58d823650dea63e6b43f7a01aff8680d58de429e0acfcf",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "4bec7f69a98e7bdfc0a2067c688b83458feae1bce300f18b762e7d4881b22ca5",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "7d5e4d912781812778fa2e602f365ac578b376cc9f808ec94382a8521ac6fc18",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "0c02d448b9131ee5b9f3663663614a8ab9bdb19936157949aba98ca95f5281c0",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "bc581d169595fe120bc551cd80805f8e42809fe11a07aef279d64851baebcacc",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "9e4e10d7868dcbeb0a2b3a28c010a77b585183a4e3cda1265a6fc8cf562d06bd",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "19089db8099a681ef902d8e8bca07a0edf9d91a11ce488eb5852282d8f1d1450",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "a8c1df922987c3922c33e19e0e53ce240f9ab5dc247292789364913390822c84",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "a0cbd51476dae991cb7a1269e71c75b04d42e0c1c8123ac44e821f0f7166f500",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "9d01444fbc21e56788f2f3ec62c92d0215bef2bfb3d09c14f11f946ed89ce558",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "c7384e5083b5f4547a0433312f0210935c99e4d568a072b6edc1feee1f588ce5",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "e6d54c99b29aa607b6520c8dd468e85b650dd7ef177c8851c2d6c99f48fcd7fe",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "9e800684db2de0872f269951f6df68f9f7209d08f3c59f3ee5d2039fe932775b",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "a337bfb4aaa2f0654afc9f0394be6de31baebbc73a2015363b78da8bd1b78f24",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "840484cfbb94e3d2d3628bedca7f3c48ffc2109c5f248c4409139ef31c812b16",
+    "uutiset/tiibetin-ylangolle-satoi-runsaasti-lunta-nasan-06fea975771b/index.html": "cb9da03eb9804c95b1a431f17f2bd0af45445daa0a6336a1cd09e26f2bdd354a",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "ce97a93e82de187902742187a03048f4f26145d8a976330f461c2f66cc0188b1",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "7ed885947362b6e4f358aa98d366ac16edb2be8422482f8544b6b18cbbb28d97",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "9e285b040b846c163e08be4c310e1fdca7b775194db72c813b083412a3b512b7",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "1e6311aed46ac05f2df1c329e3315a69824185fdf29ecab90b5c4536ea0ab84f",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "459a370ec05ade98c8218c1e5172b4d5da248b7f673c8f97d0c413366a3954a0",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "85218ff2ff6555abbfc96694dc9eb23395f40882ed79ea0ea2bd079613418994",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "2adde87958aa346109d416c5501d6a249c1228465764b623e7c2f78ac787ccf1",
+    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "1436dd8771373f614b9deb6b28460091cb4f32ed7e46fe751d15172a797dd09a",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "7b9e989c7d1235dbce41f6eef916f4fa8d84e84b5268e42f731b1f5ca3d8249e",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "893ebebd6628b86f48cfe82898b44eff65ced67998cb64cb002ec5d0b8be3aa8",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "c971993129c293e2bca48997469971493c52216ce4df753f056fbb6c3b08daaf",
+    "uutiset/toolonlahden-tulvasuojelutyomaa-palkittiin-helsingissa-c8d9df28ef8c/index.html": "f062c21d3988a89031cb5a04107b48f661a6b584dd2e25e74cef6a9e47cf50ca",
+    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "1928722d7275c09dd7f68d6b378e42e9713efbc35249b784a70ec4fb01a16d1c",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "afc7fec27eb810f7a3faf6082c8dbe191771d4d0deb377fb2bb37b3bbfb329f6",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "d048fc430b7a6a32790440153cc6f5adfadff20227eea986ee3ead46b33b5192",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "cccb691badfa701e4a010b7d339625669ef083321fd5a21d7ceb56609a24c750",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "db1971c4b814a2274f5d22b3c495ceb2c139be83718eff919cf1bfd1fac07b2d",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "2e9e2b65b2b9c0656123f9351fb57add96f1730457ee7a62a68f47eb554b2357",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "27873738ee9c2cd8ba6dce05fb38c6f3e1ffe7aa96fd50866b7c58165120e441",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "b98bbddb23b8624006316ce650380ff4fac5e30f4525992ac8dc275ce3ef1d71",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "7a12091851e1e0c846d04c06af48303689752080506db5e5e9ebf57acb2d1566",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "803d0096d36f7a3f5a6188047d921267bccaf76b76a3faf7694b49322fd26081",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "8d3fc75022245e48b83212c034c90356801d5ad59890386488296953c0790387",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "9d33032da3c9b6b35cd405a20e3fb31dd7d1e8369b16728522374f13e18463a7",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "98fa70e7dd6ae21ea973f69efcba127e9fe3e0349e141dd8bd885c5d98095654",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "7c538584c00896698fcf63329a3c5fff223f3729859f00d31d1410dd373a2761",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "80537ff88bd8fe9a7c77ae9a94cff90624b77e2a3bde1f3ab6d6a4e24f062202",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "950e47f6b9931d5d8bcc5532f0e332a2cbef76b85b03668ca2ec8c7965f0dfd1",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "1eff91132869cc3b3e6e44d2f5e8d020e3f11ad73a258516aac2cf531b0c729a",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "33505c63d320bc241c5b46c393d29d330faf65f284d813cc534d66a3cc4db3d6",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "57d3c9000d298da1690f04d47e6e79150a968c8d57c763bd6b569fad2b05721d",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "f752550211584adf7bcb15edaafb362f7f51bcc38f4e5d59935adcd6cfb4eb58",
+    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "bcf15f9122750b33f2f2d8898614896526e488e145e04bdac086130313c55c3a",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "a47c31be7ca11b4b7eedde85e38a4b7675819cdce5b97c0744dc0831bac3ec49",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "14fd9aea30bbbc1ac2bec9db6b9aaed60bb20ab029662a1730ea02c2171acf07",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "ee57ac7abf14e340bc00c510537d518085c76a928e2d62b7e2e444a6d8388773",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "628ef45d8895a203e32dd325fecc5458ebe834ab4727d8684d079c1a4041830e",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "6a2771d6b1df17a603e08aa7c54e6c34663bad3a9772cf4167b3d027b95bbfcc",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "646094df88a13d3eef735533a0cbdb78c66e4884ed5c97ae00b9a558dd853366",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "7d963c6992013f4b3de953cec49b311bd2db8cc92c66a8903762417edb188323",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "82e6e8d86b0affab6c2b4a3732aa34941e575a0e51a209980dfd4df8383a9781",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "0d83c06584d1b5d4461bcc6e7fda0667c8fc10dfc2a045d98012c2f3c586d461",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "851dfa294051c208c7c4c98f76392ff3856937bb4041fa4e7b66535b1eb5b25e",
+    "uutiset/vantaan-historian-museo-hakee-avajaisiin-vapaaehtoisia-d96705192438/index.html": "a26b840a630150ae19fa75bee034db18f8b7ec34bbb5b48efab95039d5a00afb",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "ab3d3edec15ff90a7a2e8cb0403f3ccf9eae4f1eb1d4cbc8a234179560d745d7",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "b63ba72eb7b8bb722741786511a5f0c7219d683080aa32fdd074e34b3100ff4e",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "283dd8971fe040e6214d780a6b7af1b1c634bda286cead99a274e4271003477d",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "f97f13675f0925b21faa356d500caa5dd141f96e6c8b35888e9a3697136e67db",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "cce1dbcd1e4fb5ad6f863394fecd5effa532872b78c7134226f69417c00010dc",
+    "uutiset/vantaan-yty-akatemian-ideat-etenevat-tyoryhmaan-ba96b94ee71f/index.html": "de0208b3246d9fbd50746aedb4c794306577aa66cb8b3fceb39c52429021e5bb",
+    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "2b688caf0724e7f1b348062639c2a9174b20d144a94c7e6fb04e57834fc760e0",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "035bef57f42f39f9ffb7c0969fde05cd049c5e958c6dd8aa13787c49f612d90b",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "a33284fc0004075df0b0feb456107dff60befcf5057cb55db16c5f4a9fcc695b",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "556d36dbc1125e5a2d33ca23ed2af14d6945ce0daa60ee117dab3e9957e55fd7",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "1b1f5f00ffecc9240681f27efa7a7755e8d67ca9982806321f455b21a08afe63",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "23366ab842aa85c3468b4c646f605341ef8a45d90814833319536113ce14d7a7"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "AI-generoitu kuva: Tyhjä moderni oikeussali, jossa on vaaleat puupaneelit ja kalusteet, tuomarinpenkki ja pöytä asianosaisille.",
-      "attempts": 1,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Ilmakuva kaupungista, jossa on rautatie, suuri valkoinen rakennus, pienempi tiilirakennus, asuintaloja, viheralueita ja joki sillalla.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Kotimaa",
+        "category": "Kulttuuri",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva Helsingin Kuntatalon julkisivusta ja pääsisäänkäynnistä, jossa rakennus näkyy ympäristöineen.",
+            "depictable_scene": "Todellinen valokuva Tikkurilan vanhan aseman museorakennuksesta ulkoa niin, että julkisivu ja sisäänkäynti näkyvät. Kuva esittää avajaisten ja draamakurssin tapahtumapaikkaa, ei väitä näyttävänsä tulevaa avajaistilaisuutta.",
             "must_avoid": [
-              "unrelated municipal building presented as Kuntaliitto headquarters"
+              "Väärä asemarakennus",
+              "Keksitty avajaistilaisuus"
             ],
             "must_show": [
-              "Kuntatalo exterior",
-              "main entrance"
+              "Actual old Tikkurila railway station building",
+              "Museum entrance or facade"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "Kuntaliitto Kuntatalo julkisivu",
-              "Kuntatalo Helsinki sisäänkäynti",
-              "Kuntatalo Helsinki building exterior"
+              "Tikkurilan vanha asema",
+              "Vantaan historian museo",
+              "Tikkurila old railway station exterior",
+              "Vantaan kaupunginmuseo julkisivu"
             ],
-            "subject": "Kuntaliitto ja sen toimitilat"
+            "subject": "Vantaan historian museo Tikkurilan vanhalla asemalla"
           },
           {
-            "depictable_scene": "Nimeämätön, tyhjä suomalaisen hallintotuomioistuimen istuntosalia muistuttava huone: tuomareiden pöytä ja sen edessä asianosaisten pöytä tyhjine tuoleineen. Hillitty puusisustus, ei tunnistettavan oikean salin jäljitelmää.",
+            "depictable_scene": "Lähikuva kahdesta pienestä, palavasta kannettavasta LED-valaisimesta tummalla pöydällä hämärässä, neutraalissa sisätilassa. Kuvassa ei ole ihmisiä. Valaisimet ovat yleistä kuvitusta valojen kanssa esiintymisestä, eivät jäljitelmä Valopajan tulevasta teoksesta tai sen todellisista välineistä.",
             "must_avoid": [
-              "people or body parts",
-              "readable text or logos",
-              "gavels, prison bars or criminal-trial imagery",
-              "replica of a named real courtroom"
+              "Ihmiset, kasvot, kädet ja muut ruumiinosat",
+              "Nimetyn valoteoksen tai museotilan keksitty toisinto",
+              "Keksitty luettava teksti ja logot"
             ],
             "must_show": [
-              "judges' bench",
-              "empty seating for parties"
+              "Portable illuminated LED lights",
+              "Soft light on a dark tabletop"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "hallintotuomioistuin tyhjä istuntosali",
-              "hallinto oikeus istuntosali",
-              "empty administrative courtroom",
-              "courtroom wooden bench"
+              "portable LED lights",
+              "kannettavat LED-valaisimet",
+              "LED lights dark tabletop",
+              "small battery powered lights"
             ],
-            "subject": "tuomioistuin kunnallisvalitusoikeuden rajoittamisesta päättävänä tahona"
+            "subject": "Kannettavat valot valoteoksen osallistumisen kuvituksena"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "An empty, modern courtroom with light wooden paneling and furniture. A long judges' bench with three dark chairs and microphones is at the back. In front of it, a large table with several dark chairs and microphones is arranged for parties. A large window on the left shows trees outside.",
-      "generated": true,
-      "license": "AI-generated image",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/59c5f56ab14172c8e4704158745a48b7f48a64de1d44cc5de282a33ca7e35b29.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by Seppo Kaksonen, Scan-Foto Oy on Wikimedia Commons",
+      "depicted": "An aerial view shows a sprawling urban and suburban landscape under an overcast sky. A long stretch of multiple railway tracks runs through the center of the image, bordered by green spaces and roads. To the left of the tracks, there's a large parking lot with numerous cars, and further left, several multi-story buildings, some with white facades and others with darker roofs. To the right of the tracks, a river or canal with brown water flows, crossed by a white suspension bridge. Beyond the riv",
+      "generated": false,
+      "hotlink": false,
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "local_path": "media/8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0.jpg",
       "pixel_review": {
-        "alt_fi": "Tyhjä moderni oikeussali, jossa on vaaleat puupaneelit ja kalusteet, tuomarinpenkki ja pöytä asianosaisille.",
+        "alt_fi": "Ilmakuva kaupungista, jossa on rautatie, suuri valkoinen rakennus, pienempi tiilirakennus, asuintaloja, viheralueita ja joki sillalla.",
         "approved": true,
-        "article_text_sha256": "ed2a2bee364e47df0a3e8f8c651386fc90569c4a1b99748f9c45e58819a52ab0",
-        "concept_sha256": "614b334766149ec1a1278838b5665e3cac8f7ffbc4bce939621c3fac50c7dfd0",
-        "description": "An empty, modern courtroom with light wooden paneling and furniture. A long judges' bench with three dark chairs and microphones is at the back. In front of it, a large table with several dark chairs and microphones is arranged for parties. A large window on the left shows trees outside.",
-        "fit_score": 10,
-        "image_sha256": "59c5f56ab14172c8e4704158745a48b7f48a64de1d44cc5de282a33ca7e35b29",
+        "article_text_sha256": "3b453cc14c765bc11491786dbceff841d1fdb003bd7386023b558b7ac61f0b2d",
+        "concept_sha256": "ed439a35d227083a234f2ea274fa28bf717e07631901abdc4bc7f9a4dc687caf",
+        "description": "An aerial view shows a city with a railway line running through it. On the right, a large white building with a complex shape stands next to a road with buses and cars. To its left, across the railway tracks, is a smaller, older brick building with a brown roof. Further in the background are residential buildings, green areas, and a river with a pedestrian bridge.",
+        "fit_score": 9,
+        "image_sha256": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
-        "no_people": true,
-        "reason": "The image perfectly matches the selected concept of an empty administrative courtroom, depicting both the judges' bench and empty seating for parties. The article discusses the restriction of appeal rights, which would be decided by a court, making the courtroom a highly relevant subject.",
-        "reviewed_at": "2026-10-03T10:25:52.188121+00:00",
-        "text_audit": {
-          "examples": [],
-          "readable_text_present": false
-        }
+        "no_people": false,
+        "reason": "The image clearly shows the old Tikkurila railway station building, which is the location of the Vantaa History Museum and the subject of the article. The image provides an exterior view of the building, fulfilling the concept's requirements.",
+        "reviewed_at": "2026-10-03T11:02:41.965687+00:00",
+        "source_context": {
+          "image_sha256": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0",
+          "photo_id": "wikimedia-135269349",
+          "photo_url": "https://commons.wikimedia.org/wiki/File:Helsinki%E2%80%93Riihim%C3%A4ki%20railway%20at%20Tikkurila%20railway%20station%20Vantaa,%20Finland,%202004.jpg",
+          "photographer": "Seppo Kaksonen, Scan-Foto Oy",
+          "provider": "wikimedia",
+          "title": "Helsinki–Riihimäki railway at Tikkurila railway station Vantaa, Finland, 2004.jpg"
+        },
+        "source_context_sha256": "7cccf53315d80321cbec9bffc209d03490ed12a151bec717e1852801e19c056b"
       },
       "pixels": {
-        "height": 1024,
+        "height": 3000,
         "mode": "RGB",
-        "variance": 6251.3,
-        "width": 1536
+        "variance": 4865.9,
+        "width": 4500
       },
-      "prompt_sha256": "6dd60fd921c8fbced8d6f7545ddea3a68396fd8319da620c105b199640aeff2f",
-      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Nimeämätön, tyhjä suomalaisen hallintotuomioistuimen istuntosalia muistuttava huone: tuomareiden pöytä ja sen edessä asianosaisten pöytä tyhjine tuoleineen. Hillitty puusisustus, ei tunnistettavan oikean salin jäljitelmää.",
+        "evidence": "An aerial view shows a city with a railway line running through it. On the right, a large white building with a complex shape stands next to a road with buses and cars. To its left, across the railway tracks, is a smaller, older brick building with a brown roof. Further in the background are residential buildings, green areas, and a river with a pedestrian bridge.",
         "matched": [
-          "judges' bench",
-          "empty seating for parties"
+          "building",
+          "railway"
         ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "method": "vision",
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "ed2a2bee364e47df0a3e8f8c651386fc90569c4a1b99748f9c45e58819a52ab0",
-        "decision_sha256": "d3a5ab5a4c752a8408590734ece70c056ef686f3c30b92308e802814ae70b5f8",
+        "article_text_sha256": "3b453cc14c765bc11491786dbceff841d1fdb003bd7386023b558b7ac61f0b2d",
+        "decision_sha256": "6303d8787e26462976ab007140279cf0cb4384e09d5ef9cb1c0f925ff6fa547d",
         "minimum_real_fit": 8,
         "searches": [
           {
             "candidates": [],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
+            "provider": "source-news",
             "queries": [
-              "Kuntaliitto Kuntatalo julkisivu",
-              "Kuntatalo Helsinki sisäänkäynti",
-              "Kuntatalo Helsinki building exterior"
+              "cited source image"
             ]
           },
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
+                "license": "CC BY 4.0",
+                "reason": "The image clearly shows the old Tikkurila railway station building, which is the location of the Vantaa History Museum and the subject of the article. The image provides an exterior view of the building, fulfilling the concept's requirements.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Helsinki%E2%80%93Riihim%C3%A4ki%20railway%20at%20Tikkurila%20railway%20station%20Vantaa,%20Finland,%202004.jpg"
+              }
+            ],
             "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Kuntaliitto Kuntatalo julkisivu",
-              "Kuntatalo Helsinki sisäänkäynti",
-              "Kuntatalo Helsinki building exterior"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "accepted",
             "provider": "wikimedia",
             "queries": [
-              "Kuntaliitto Kuntatalo julkisivu",
-              "Kuntatalo Helsinki sisäänkäynti",
-              "Kuntatalo Helsinki building exterior"
+              "Tikkurilan vanha asema",
+              "Vantaan historian museo",
+              "Tikkurila old railway station exterior"
             ]
           },
           {
             "candidates": [],
-            "concept_rank": 1,
+            "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
-            "provider": "google",
+            "provider": "source-news",
             "queries": [
-              "Kuntaliitto Kuntatalo julkisivu",
-              "Kuntatalo Helsinki sisäänkäynti",
-              "Kuntatalo Helsinki building exterior"
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "8de8b9df5752d753413cab49ca9fe10531773a68c891df5cef61ee66062e2346",
+                "license": "Public domain",
+                "reason": "The image does not show portable illuminated LED lights or soft light on a dark tabletop. Instead, it depicts two men in an indoor setting, one of whom is handling a yellow object that is not clearly an illuminated LED light. The lighting is not soft, and the overall scene does not match the selected concept. One or more required concept elements a",
+                "source_url": "https://commons.wikimedia.org/wiki/File:160616-N-MY174-036%20160616-N-MY174-036.jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "30f5d8113faace9230f25f46b3cf8f7bb166bc117038cc5adeeaab0b0d6793c7",
+                "license": "CC BY-SA 4.0",
+                "reason": "The image shows a baby in a crib under blue light, which is unrelated to the article about a museum opening, a light art performance, or drama courses. The selected concept describes portable LED lights on a dark tabletop, which is not present in the image. The image also contains a person (baby), which the concept explicitly avoids. One or more re",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Baby%20in%20Crib%20A%27Glow.jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "8352888415e9cd34d2b91c6e3ba820adbd286c26098959edb7100145ac0bb82f",
+                "license": "CC BY 2.0",
+                "reason": "The article discusses a light artwork and a drama course for a museum opening, requiring an image of portable illuminated LED lights. The visible subject is a portable radio, which is not a light source and does not fit the concept of 'portable illuminated LED lights'. One or more required concept elements are not visible.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:QFX%20R-14%20(10102373086).jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "dcde7adac4f432fc4fdb3807003cfe612ad24615a09c8e51275323d3bbc59b38",
+                "license": "CC BY 2.0",
+                "reason": "The article discusses a light artwork and portable LED lights. The image shows a portable radio with a solar panel, which is not a light source and does not fit the concept of 'portable illuminated LED lights'. The radio is not emitting light, and the setting is not a dark tabletop. One or more required concept elements are not visible.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Kaito%20SB1059%20(9344447746).jpg"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "unavailable",
+            "provider": "wikimedia",
+            "queries": [
+              "portable LED lights",
+              "kannettavat LED-valaisimet",
+              "LED lights dark tabletop"
             ]
           },
           {
@@ -994,82 +1355,87 @@
               {
                 "approved": false,
                 "fit_score": 3,
-                "image_sha256": "24daa95cffbee78a721b602cc61d3beadc985ed834b4b0da64561b757a0e8a5a",
+                "image_sha256": "93ee473d4db76baa107f49408ca737017c3ed65ce80681873da4668e897e01cd",
                 "license": "Pexels License",
-                "reason": "Kuva esittää auditoriota tai elokuvateatterisalia, ei hallintotuomioistuimen istuntosalia. Konseptin mukaisia tuomareiden pöytää tai asianosaisten pöytää ei ole kuvassa. Vaikka kuvassa on tyhjiä istuimia, ne eivät ole konseptin mukaisia asianosaisten istuimia tuomioistuimen kontekstissa. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/cozy-and-empty-theater-interior-rows-of-seats-33451514/"
+                "reason": "The article discusses a light art piece and a drama course, both seeking volunteers. The selected concept specifically requests an image of 'portable illuminated LED lights' on a dark tabletop, without people. The actual pixels show people's hands on computer keyboards, which are illuminated, but these are not portable LED lights as described in th",
+                "source_url": "https://www.pexels.com/photo/fingers-on-black-computer-keyboard-7848988/"
               },
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "8a227296c9ec29e3242ebf6bf7a7927c1d7d46078a04611fc9f2c10be42e8ce0",
+                "image_sha256": "a3dd6c43c26c55c210bcc311056f7fb30df7ae7a5e88e93d79b59378760ded20",
                 "license": "Pexels License",
-                "reason": "The image shows an empty room with rows of desks and chairs, which could be a meeting room or assembly hall, but it does not clearly depict a judges' bench or a specific setup for parties in a courtroom, as required by the concept. The layout is more akin to a legislative chamber or a large conference room rather than a typical administrative court",
-                "source_url": "https://www.pexels.com/photo/elegant-empty-parliament-hall-in-oslo-norway-32991337/"
+                "reason": "The image shows a portable LED light panel, which aligns with the 'Portable illuminated LED lights' must_show element. However, the light is not illuminated, failing the 'illuminated' aspect of the must_show. The concept also specifies 'palavasta' (burning/lit) in Finnish, which is not met. The 'Soft light on a dark tabletop' must_show is also not ",
+                "source_url": "https://www.pexels.com/photo/black-godax-cordless-device-2263821/"
               },
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "d10e18482661189adab1444b6202d788cfae8740970bb9dde1f6cc1003aead0f",
+                "fit_score": 3,
+                "image_sha256": "44bed225cb018f2a24ca2696f37f1eca11688aaeb814845262172148c98856e6",
                 "license": "Pexels License",
-                "reason": "The image depicts a large auditorium or lecture hall, not a courtroom or administrative tribunal. While it has a stage with a table and chairs, it does not resemble the specific setup of a judges' bench and seating for parties in a courtroom as described in the concept. The scale and design are more suited to presentations or conferences rather tha",
-                "source_url": "https://www.pexels.com/photo/spacious-modern-auditorium-in-milan-conference-center-36900080/"
+                "reason": "The article discusses a light art piece and portable LED lights. The image shows a backlit laptop keyboard, which is not a portable LED light in the context of a light art performance. It does not depict the selected concept of small, portable LED lights on a dark tabletop. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/illuminated-laptop-keyboard-13522335/"
               },
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "8a227296c9ec29e3242ebf6bf7a7927c1d7d46078a04611fc9f2c10be42e8ce0",
+                "image_sha256": "a4c10c3dafa4765ff67f8d377cee7bb4e5124431de342f771a387f51026bd404",
                 "license": "Pexels License",
-                "reason": "The image shows an empty room with rows of desks and chairs, which could be a meeting room or assembly hall, but it does not clearly depict a judges' bench or a specific setup for parties in a courtroom, as required by the concept. The layout is more akin to a legislative chamber or a large conference room rather than a typical administrative court",
-                "source_url": "https://www.pexels.com/photo/elegant-empty-parliament-hall-in-oslo-norway-32991337/"
+                "reason": "The image shows a single flashlight, not two small, burning portable LED lights as specified in the concept. While it depicts a portable illuminated light and soft light on a tabletop, it fails to meet the 'two small, burning portable LED lights' requirement, making it a partial fit at best.",
+                "source_url": "https://www.pexels.com/photo/black-flashlight-turned-on-985117/"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "hallintotuomioistuin tyhjä istuntosali",
-              "hallinto oikeus istuntosali",
-              "empty administrative courtroom"
+              "portable LED lights",
+              "kannettavat LED-valaisimet",
+              "LED lights dark tabletop"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 0,
-                "image_sha256": "4ed21dc633f61dda499a8c44919c1d9318fd09cf0ee9da7127877a4deb8b852a",
+                "fit_score": 5,
+                "image_sha256": "2e6fb97ee2ddeed0e28e857f1184477437bd2b0bcca5aded603f43cdf1b376cd",
                 "license": "Unsplash License",
-                "reason": "The image depicts a red wooden building with a flag and a person on a bench, which does not visually represent an empty administrative courtroom with a judges' bench and seating for parties. The visible content does not match the selected concept. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/woman-in-white-shirt-sitting-on-gray-concrete-bench-near-brown-concrete-building-during-daytime-nu96-SLn4Mk?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The image contains a person, which the concept explicitly states to avoid. While it shows a portable LED light, it does not depict two small, burning portable LED lights on a dark tabletop in a dim, neutral indoor space without people, as specified in the concept. The presence of a person and the different setup make it unsuitable. One or more requ",
+                "source_url": "https://unsplash.com/photos/a-woman-holding-a-cell-phone-in-front-of-a-light-VIQKDL6-TpU?utm_source=uutistenlukija&utm_medium=referral"
               },
               {
                 "approved": false,
-                "fit_score": 0,
-                "image_sha256": "982ec2042187844868ce2d758ebd7ab1ca4be2e3da1531a8b2646601e1b264f2",
+                "fit_score": 7,
+                "image_sha256": "9aebc55bb05edc8461433f3d65f8bcb530d202650780e94b5c38317dde09b248",
                 "license": "Unsplash License",
-                "reason": "The image depicts a residential street with houses and autumn trees, which is unrelated to the concept of an empty administrative courtroom or the article's subject of restricting municipal appeal rights. It does not show any elements of a courtroom. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/an-empty-street-with-houses-and-trees-in-the-background-rIAZICGWhdY?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The image shows only one portable illuminated LED light, not two as specified in the concept. The concept also specifies 'palavasta' (burning/lit) for two lights, but only one is lit here. The fit score is reduced because a key element of the concept (two lights) is missing.",
+                "source_url": "https://unsplash.com/photos/white-and-blue-light-bulb-y4HelY0jx7c?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "4a47029e1acb803844cd3c937ae58390060f2968f2d6e74ce9289497210cd589",
+                "license": "Unsplash License",
+                "reason": "The image shows various outdoor lights, but none of them are small, portable LED lights on a dark tabletop as specified in the concept. The lights are fixed outdoor installations, not portable devices for a light performance. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/red-garden-shed-with-night-lighting-ssJA_fkVf50?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "1e0fc505a5d003d453cde41828e94b171a54963c4c85b0f256376acae44217ab",
+                "license": "Unsplash License",
+                "reason": "The article discusses a light art piece involving volunteers moving with lights. The selected concept specifies 'portable illuminated LED lights' and 'soft light on a dark tabletop'. The image shows a single, unlit, non-portable LED light bulb on a bright white surface, which does not match the concept's requirements for illumination, portability, ",
+                "source_url": "https://unsplash.com/photos/a-white-light-bulb-sitting-on-top-of-a-white-table-iEDKPLfJrEo?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "hallintotuomioistuin tyhjä istuntosali",
-              "hallinto oikeus istuntosali",
-              "empty administrative courtroom"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "hallintotuomioistuin tyhjä istuntosali",
-              "hallinto oikeus istuntosali",
-              "empty administrative courtroom"
+              "portable LED lights",
+              "kannettavat LED-valaisimet",
+              "LED lights dark tabletop"
             ]
           },
           {
@@ -1078,207 +1444,265 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "hallintotuomioistuin tyhjä istuntosali",
-              "hallinto oikeus istuntosali",
-              "empty administrative courtroom"
+              "portable LED lights",
+              "kannettavat LED-valaisimet",
+              "LED lights dark tabletop"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 2,
-          "fit_score": 10,
-          "image_sha256": "59c5f56ab14172c8e4704158745a48b7f48a64de1d44cc5de282a33ca7e35b29",
-          "kind": "generated"
+          "concept_rank": 1,
+          "fit_score": 9,
+          "image_sha256": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
+          "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "59c5f56ab14172c8e4704158745a48b7f48a64de1d44cc5de282a33ca7e35b29",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "tuomioistuin kunnallisvalitusoikeuden rajoittamisesta päättävänä tahona",
-      "url": "https://uutistenlukija.fi/media/59c5f56ab14172c8e4704158745a48b7f48a64de1d44cc5de282a33ca7e35b29.jpg"
+      "sha256": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Helsinki%E2%80%93Riihim%C3%A4ki%20railway%20at%20Tikkurila%20railway%20station%20Vantaa,%20Finland,%202004.jpg",
+      "stock_provenance": {
+        "attribution": {
+          "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
+          "title": "Helsinki–Riihimäki railway at Tikkurila railway station Vantaa, Finland, 2004.jpg"
+        },
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Helsinki%E2%80%93Riihim%C3%A4ki_railway_at_Tikkurila_railway_station_Vantaa%2C_Finland%2C_2004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "photo_id": "wikimedia-135269349",
+        "photo_url": "https://commons.wikimedia.org/wiki/File:Helsinki%E2%80%93Riihim%C3%A4ki%20railway%20at%20Tikkurila%20railway%20station%20Vantaa,%20Finland,%202004.jpg",
+        "photographer": "Seppo Kaksonen, Scan-Foto Oy",
+        "photographer_url": "https://commons.wikimedia.org/wiki/File:Helsinki%E2%80%93Riihim%C3%A4ki%20railway%20at%20Tikkurila%20railway%20station%20Vantaa,%20Finland,%202004.jpg",
+        "provider": "wikimedia",
+        "query": "Tikkurilan vanha asema",
+        "retrieved_at": "2026-10-03T11:02:38Z"
+      },
+      "stock_provenance_sha256": "8b5c0dbf88e6c299e709bfb1863ecf986ac089cb51ba569e81a83cbd5c2d9c45",
+      "url": "https://uutistenlukija.fi/media/8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "kuntaliitto",
+      "provider": "vantaa",
       "related_sources": 0,
-      "source_fields_sha256": "bb8040fec42cdfb0777ddf52a787f8baf955d1c660f49c259614c92ade4e36e0",
-      "source_sha256": "01f1c73a6f030c8fb1e94663e41d1e28a257c4ec2c0532660524bb0c46f1b23e"
+      "source_fields_sha256": "6d6018d5fc7767146e919e06b3554219651e88436822ff26f43033993c58fd29",
+      "source_sha256": "98599a499be8d17f43ee3e966a79293d6e2e2ec1fb2c7d491d8f5cbeccad91b8"
     },
     "sources": [
       {
         "id": "A",
         "published_at": "2026-10-02T00:00:00+03:00",
-        "publisher": "Suomen Kuntaliitto",
+        "publisher": "Vantaan kaupunki",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "CC BY 4.0",
+          "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
           "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://www.kuntaliitto.fi/kuntaliitto/kayttoehdot"
+          "url": "https://hri.fi/fi/kayttoehdot/"
         },
-        "text": "Valtiovarainministeriö on antanut lausunnoille luonnoksen hallituksen esitykseksi eduskunnalle laiksi kuntalain 137 §:n muuttamisesta.\nPääministeri Orpon hallituksen budjettiriihen 1.9.2026 pöytäkirjamerkinnän mukaan valtiovarainministeriössä valmistellaan hallituksen esitys kuntalakiin tehtäväksi muutokseksi, jolla oikeus kunnallisvalituksen tekoon yksityishenkilön ja kunnan välisestä asuinkiinteistön kaupasta rajataan asianosaisille. Esitys annetaan eduskunnalle syksyn 2026 aikana.\nLausunnoilla olevassa esityksessä ehdotetaan muutettavaksi kuntalakia. Lakiin lisättäisiin säännös, jonka mukaan oikaisuvaatimuksen ja kunnallisvalituksen päätöksestä, joka koskee kunnan omistaman kiinteistön myymistä tai vuokraamista tarjouskilpailun tai muun avoimen menettelyn perusteella luonnolliselle henkilölle tämän asuntona käytettäväksi saa tehdä vain asianosainen. Esityksessä tarkoitetuista päätöksistä ei saisi jatkossa tehdä kunnallisvalitusta pelkästään kunnan jäsenyyteen perustuen.\nEsityksen tavoitteena on parantaa kunnan päätösten täytäntöönpanon edellytyksiä.\nKuntaliiton lausuntoluonnos: Lakiehdotuksen tavoite on kannatettava, mutta ehdotetut keinot eivät riittäviä\nKuntaliitto katsoo, että lausunnoilla olevan hallituksen esityksen tavoite on kannatettava, mutta ehdotetut keinot eivät ole riittäviä eivätkä kohdistu täsmällisesti ongelman aiheuttajaan. Lisäksi lausunnoilla oleva esitys rajautuu asiakohtaisesti rajattuun asiakokonaisuuteen, mikä yksinään ei ratkaise ongelmaa.\nKuntaliitto pitää esityksen tavoitetta kannatettavana, mutta katsoo, ettei asiatyyppikohtainen rajaus ole tavoitteeseen nähden riittävä eikä kohdistu ongelman aiheuttajaan.\nEsitämme, että jatkovalmistelussa esitykseen sisällytetään sääntelymalli, jossa tuomioistuin voisi kunnan hakemuksesta rajoittaa määräajaksi yksittäisen henkilön tai yhteisön kunnallisvalitusoikeutta.\nTutustu Kuntaliiton lausuntoluonnokseen, jota kunnat voivat hyödyntää omassa kannanmuodostuksessaan. Lausuntoaika Lausuntopalvelussa päättyy 23.10.2026.\nYhteydenotot ja palauteet lausuntoluonnoksesta:\nJuristi Kirsi Lamberg, +358 9 771 2250, [email protected]",
-        "title": "Kunnallisvalitusoikeuden määräaikainen rajoittaminen lausunnoilla - Kuntaliitolta sääntelyvaihtoehto",
-        "url": "https://www.kuntaliitto.fi/ajankohtaista/2026/kunnallisvalitusoikeuden-maaraaikainen-rajoittaminen-lausunnoilla-kuntaliitolta"
+        "text": "Vantaan historian museon avajaisia vietetään 27.–29. marraskuuta. Vapaaehtoisia haetaan erityisesti avajaishetkeen perjantaina 27. marraskuuta, jolloin toteutetaan yhteisöllinen esitys yhteistyössä valo- ja teatteritaiteen ammattilaisten kanssa.\nTapahtumassa avataan Vantaan historian museo (entinen Vantaan kaupunginmuseo) Tikkurilan vanhalla asemalla sekä sen pysyvä Vantaan muuttajat -näyttely, joka kertoo alueen historiasta 10 000 vuoden ajalta. Avajaishetken tarkempi sisältö ja avajaisviikonlopun ohjelmisto paljastetaan marraskuun alussa.\nTule mukaan tekemään valoteosta\nAvajaishetken valoteoksessa vapaaehtoiset liikkuvat valojen kanssa ohjaajien opastuksella. Osallistuminen ei edellytä aiempaa kokemusta esiintymisestä tai taiteen tekemisestä, mukaan voi tulla uteliaalla ja avoimella mielellä. Myös perheenä voi osallistua, kunhan valonkantaja on aikuinen. Valoteoksen suunnittelusta ja toteutuksesta vastaa Valopaja-kollektiivi valotaitelija Jukka Laineen johdolla.\nValoteokseen osallistuvien vapaaehtoisten aikataulu:\nti 24.11. klo 17–19 Kenraaliharjoitukset\npe 27.11. klo 15.30–17.30 Avajaishetki. Esityksen kesto on noin 15–20 minuuttia, sitä ennen vapaaehtoisille on yhteinen infotilaisuus esityksen kulusta.\nMukaan mahtuu 20 vapaaehtoista, paikat täytetään ilmoittautumisjärjestyksessä. Ilmoittautuminen valoteoksen vapaaehtoiseksi: janita.jamsen@vantaa.fi.\nTule mukaan maksuttomalle draamakurssille ja herätä historia eloon\nVantaan kaupunginmuseo järjestää maksuttoman draamakurssin historiasta, improvisaatiosta ja esiintymisestä kiinnostuneille. Kurssilla tutustutaan draamatyöskentelyyn ja kehitetään oma, Vantaan historiaan perustuva hahmo. Ohjaajina toimivat teatteritaiteen ammattilaiset Maria Myllykangas ja Birgitta Taussi.\nKurssi sopii sekä uusille osallistujille että keväällä museon draamakurssin käyneille. Kurssin suorittaneet voivat osallistua historian elävöittämiseen museon tapahtumissa draamahahmojen avulla myös jatkossa.\nDraamakurssi järjestetään Vantaan historian museon tiloissa, Hertaksentie 1, 01300 Vantaa.\nAikataulu:\nti 10.11. klo 17–19\npe 13.11. klo 17–19\nti 17.11. klo 17–19\nti 24.11. klo 17–19, kenraaliharjoitus\npe 27.11. klo 15.30–19, avajaiset\nla 28.11. ja su 29.11. klo 11–16 mahdollisuus draamahahmoissa esiintymiseen\npe 4.12. klo 17–19\nIlmoittautuminen draamakurssille 31.10. mennessä osoitteeseen: maiju.hautamaki@vantaa.fi. Paikkoja on rajoitetusti ja ne täytetään ilmoittautumisjärjestyksessä.\nLisätietoa\nVantaan tapahtumakalenteri / Vantaan muuttajat -näyttely\nSuosittelemme sinulle myös\nVantaan kaupunginmuseo Tikkurilassa on nyt Vantaan historian museo\nSyyslomalla Håkansböleen? Valoja, hämärää, seikkailuja ja kekrin mystiikkaa museon pihapiirissä\nHåkansbölen kartanomuseon suosio yllätti – uusi konserttisarja aloittaa vilkkaan tapahtumasyksyn\nAvainsanat\nMuseot\nVapaaehtoisuus\n…\nShow all keywords",
+        "title": "Tule osaksi museon historiallista avajaishetkeä",
+        "url": "https://www.vantaa.fi/fi/ajankohtaista/uutinen/tule-osaksi-museon-historiallista-avajaishetkea"
       }
     ],
-    "story_key": "url:https://www.kuntaliitto.fi/ajankohtaista/2026/kunnallisvalitusoikeuden-maaraaikainen-rajoittaminen-lausunnoilla-kuntaliitolta",
+    "story_key": "url:https://www.vantaa.fi/fi/ajankohtaista/uutinen/tule-osaksi-museon-historiallista-avajaishetkea",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-10-03T10:05:24.974266+00:00",
-        "sha256": "34f2b0e7d5a7570c35ab55a9ce77049a2762353d436db88b4138e8aa7c92deb9",
-        "text": "Kuntaliitolla on tekijänoikeudet verkkopalveluidemme sisältöihin ja aineistoihin, ellei muuta mainita. Verkkosivujemme sisältöjen ja aineistojemme hyötykäyttö on kuitenkin mahdollista seuraavin edellytyksin, rajauksin ja tarkennuksin.\nKuntaliitto.fi –sivuston julkinen sisältö ja tietoaineistot on lisensoitu Creative Commons Nimeä 4.0 Kansainvälinen –lisenssillä, (myös: CC-BY 4.0) ellei jäljempänä, palvelun tai aineiston yhteydessä tai sivulla toisin mainita.\nCC-BY 4.0 –lisenssi oikeuttaa sinut jakamaan ja muokkaamaan tietoa. Kuntaliiton hallinnassa olevaa aineistoa hyödyntäessäsi sinun tulee kuitenkin mainita lähde asianmukaisesti, tarjota linkki po. lisenssiin sekä merkittävä toteuttamasi muutokset. Voit tehdä tämän millä tahansa kohtuullisella tavalla, mutta et voi antaa ymmärtää lisenssinantajan suosittelevan sinua tai tuotostasi.\nKuntaliitolla voi olla käytössä samanaikaisesti tai rinnakkain myös muita CC-lisenssejä, kuten CC-BY-ND 4.0 –lisenssi, joka ei salli aineiston tai sen osan muokkaamista ja edelleen jakelua. Lisäksi on syytä huomioida, että kuntaliitto.fi –sivustoilla on hyödynnetty muiden tiedon tuottajien aineistoja, joiden oikeuksien haltija on voinut määritellä alkuperäisaineistolleen käyttöehtoja.\nTässä määritellyt käyttöoikeudet eivät koske\nkonsernin muita verkkopalveluita kuin Kuntaliitto.fi:tä, Kommunforbundet.fi:tä sekä Localfinland.fi:tä, mikäli niiden yhteydessä ei erikseen muuta mainita\nkuvituskuviamme\nkolmansien osapuolten tuottamia aineistoja\nAvoimeen lähdekoodiin perustuvia ratkaisuja jaamme kuntakentän käyttöön Kuntaliiton GitHubissa, ko. palvelulle määritellyin käyttöehdoin.\nPainokelpoiset kuvat asiantuntijoistamme löytyvät kuvapankistamme Flickristä.",
-        "url": "https://www.kuntaliitto.fi/kuntaliitto/kayttoehdot"
+        "retrieved_at": "2026-10-03T11:01:24.066390+00:00",
+        "sha256": "8df85768de39bbba7c98134825c55ad7ca2912b4a846009d0da28e19e5c44c8a",
+        "text": "Käyttöoikeus määritellyin ehdoin hyödynnettävissä. Datan käytön lisäksi Palvelussa on mahdollisuus keskusteluun.\nKäyttöoikeus\nPalvelu sisältää dataa useasta eri lähteestä: julkisyhteisöjen tuottamia datoja ja niiden metatietoja, Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja ja Palvelun ylläpitäjien tuottamia artikkeleja ja muita kirjoituksia. Pääsääntöisesti näihin kaikkiin on laaja käyttöoikeus Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Poikkeukset on kerrottu erikseen kunkin aineiston kohdalla.\nAvoin data\nPalvelussa olevien datojen (tietoaineistojen) omistus- ja immateriaalioikeudet kuuluvat kunkin datan tekijälle.\nPääsääntöisesti Palvelun käyttäjillä on laaja käyttöoikeus datoihin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Datoja saa vapaasti kopioida, levittää, näyttää ja esittää sekä käyttää datoja osana muuta teosta. Datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin.\nEhtona käytölle on, että datan tekijä (ylläpitäjä) on ilmoitettava. Datan tekijän pyynnöstä tämä viittaus on poistettava. Datan tekijä on kerrottu kunkin datan metadatassa.\nDatan tekijää ei saa ilmoittaa siten, että ilmoitus viittaisi datan tekijän tai Palvelun tukevan datan käyttäjää tai datan käyttötapaa.\nDatojen metatietojen yhteydessä on mainittu kyseisen datan käyttöoikeusehdot. Joissakin tapauksissa käyttöoikeusehdot voivat poiketa yllä mainitusta.\nKeskustelu\nPalvelun käyttäjät voivat keskusteluosiossa lisätä sivuille kirjoituksia ja kommentoida toisten käyttäjien kirjoituksia. Palvelun käyttäjä antaa kirjoituksiinsa ja kommentteihinsa vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nMikäli käyttäjä liittää kirjoitukseensa tai kommenttiinsa kuvia, tulee hänellä olla tekijänoikeudet kuvaan. Lisäksi hänellä tulee olla kuvassa esiintyvien henkilöiden lupa kuvan julkaisemiseen internetissä. Palvelun käyttäjä antaa kuviin vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nKeskustelun tulee olla hyvän tavan ja Suomen lainsäädännön mukaista. Käyttäjät ovat vastuussa lisäämistään kirjoituksista ja kommenteista.\nKaikenlainen mainonta keskustelussa on kielletty.\nPalvelun tarjoajat voivat tarvittaessa muokata kirjoituksia ja kommentteja sekä poistaa hyvän tavan tai lainsäädännön vastaisia tai muutoin sopimattomia kirjoituksia.\nMikäli käyttäjä havaitsee käyttöehtojen vastaisia kirjoituksia, pyydetään tästä ilmoittamaan ylläpidolle.\nToistuva käyttöehtojen rikkominen tai niiden vakava rikkominen voi johtaa väliaikaiseen tai pysyvään Palvelun käyttöoikeuden peruuttamiseen.\nSovellusgalleria\nSovellusgalleriassa esitellyt sovellukset eivät ole HRI:n tekemiä ja niiden tekijänoikeudet kuuluvat sovellusten tekijöille. Creative Commons 4.0 -lisenssi ei koske sovelluksia, eikä niitä ole lupa vapaasti kopioida, levittää, muokata tai yhdistellä, ellei erikseen sovelluksen kohdalla ole toisin mainittu tai sovelluksen tekijä muutoin ole tähän antanut lupaa.\nMuut palvelussa olevat kirjoitukset\nPalvelun tuottajien Palvelussa julkaisemien kirjoitusten, kuten artikkelien ja blogikirjoitusten omistus- ja tekijänoikeudet kuuluvat niiden kirjoittajille. Palvelun käyttäjillä on laaja käyttöoikeus näihin kirjoituksiin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nPalvelun ulkoasu, tekninen toteutus, tavaramerkit ja logot\nPalvelun teknisen toteutuksen lähdekoodit on saatavilla avoimesti GitHubista. Palvelun kopiointi sellaisenaan on kielletty. Palvelussa esiintyvien tavaramerkkien ja logojen tavaramerkkioikeudet kuuluvat niiden oikeudenhaltijoille. Mikäli tavaramerkkien ja logojen muu käyttö on sallittu, on tästä ja käytön ehdoista ilmoitettu ko. tavaramerkkien ja logojen kohdalla.\nTietosuoja\nhri.fi-palvelua ylläpitää Helsingin kaupunki. Kaupunki on sitoutunut suojaamaan verkkopalveluidensa käyttäjien yksityisyyttä Tietosuojalain (2018), EU:n tietosuoja-asetuksen (2016/679) sekä muun soveltuvan lainsäädännön mukaisesti.\nHelsingin kaupungin tietosuojasivut\nVastuuvapaus\nPalvelu sisältää sekä julkisyhteisöjen tuottamaa avointa dataa ja metadataa että Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja. Palvelun tarjoajat eivät vastaa Palvelussa olevien tietojen oikeellisuudesta. Palvelun käyttäjä käyttää Palvelussa olevaa avointa dataa omalla vastuullaan. Palvelun tarjoajat eivät vastaa mistään välittömistä tai välillisistä vahingoista, jotka aiheutuvat datan käytöstä. ",
+        "url": "https://hri.fi/fi/kayttoehdot/"
       }
     ]
   },
   "draft": {
-    "category": "Kotimaa",
+    "category": "Kulttuuri",
     "image": {
-      "alt": "AI-generoitu kuva: Tyhjä moderni oikeussali, jossa on vaaleat puupaneelit ja kalusteet, tuomarinpenkki ja pöytä asianosaisille.",
-      "attempts": 1,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Ilmakuva kaupungista, jossa on rautatie, suuri valkoinen rakennus, pienempi tiilirakennus, asuintaloja, viheralueita ja joki sillalla.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Kotimaa",
+        "category": "Kulttuuri",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva Helsingin Kuntatalon julkisivusta ja pääsisäänkäynnistä, jossa rakennus näkyy ympäristöineen.",
+            "depictable_scene": "Todellinen valokuva Tikkurilan vanhan aseman museorakennuksesta ulkoa niin, että julkisivu ja sisäänkäynti näkyvät. Kuva esittää avajaisten ja draamakurssin tapahtumapaikkaa, ei väitä näyttävänsä tulevaa avajaistilaisuutta.",
             "must_avoid": [
-              "unrelated municipal building presented as Kuntaliitto headquarters"
+              "Väärä asemarakennus",
+              "Keksitty avajaistilaisuus"
             ],
             "must_show": [
-              "Kuntatalo exterior",
-              "main entrance"
+              "Actual old Tikkurila railway station building",
+              "Museum entrance or facade"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "Kuntaliitto Kuntatalo julkisivu",
-              "Kuntatalo Helsinki sisäänkäynti",
-              "Kuntatalo Helsinki building exterior"
+              "Tikkurilan vanha asema",
+              "Vantaan historian museo",
+              "Tikkurila old railway station exterior",
+              "Vantaan kaupunginmuseo julkisivu"
             ],
-            "subject": "Kuntaliitto ja sen toimitilat"
+            "subject": "Vantaan historian museo Tikkurilan vanhalla asemalla"
           },
           {
-            "depictable_scene": "Nimeämätön, tyhjä suomalaisen hallintotuomioistuimen istuntosalia muistuttava huone: tuomareiden pöytä ja sen edessä asianosaisten pöytä tyhjine tuoleineen. Hillitty puusisustus, ei tunnistettavan oikean salin jäljitelmää.",
+            "depictable_scene": "Lähikuva kahdesta pienestä, palavasta kannettavasta LED-valaisimesta tummalla pöydällä hämärässä, neutraalissa sisätilassa. Kuvassa ei ole ihmisiä. Valaisimet ovat yleistä kuvitusta valojen kanssa esiintymisestä, eivät jäljitelmä Valopajan tulevasta teoksesta tai sen todellisista välineistä.",
             "must_avoid": [
-              "people or body parts",
-              "readable text or logos",
-              "gavels, prison bars or criminal-trial imagery",
-              "replica of a named real courtroom"
+              "Ihmiset, kasvot, kädet ja muut ruumiinosat",
+              "Nimetyn valoteoksen tai museotilan keksitty toisinto",
+              "Keksitty luettava teksti ja logot"
             ],
             "must_show": [
-              "judges' bench",
-              "empty seating for parties"
+              "Portable illuminated LED lights",
+              "Soft light on a dark tabletop"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "hallintotuomioistuin tyhjä istuntosali",
-              "hallinto oikeus istuntosali",
-              "empty administrative courtroom",
-              "courtroom wooden bench"
+              "portable LED lights",
+              "kannettavat LED-valaisimet",
+              "LED lights dark tabletop",
+              "small battery powered lights"
             ],
-            "subject": "tuomioistuin kunnallisvalitusoikeuden rajoittamisesta päättävänä tahona"
+            "subject": "Kannettavat valot valoteoksen osallistumisen kuvituksena"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "An empty, modern courtroom with light wooden paneling and furniture. A long judges' bench with three dark chairs and microphones is at the back. In front of it, a large table with several dark chairs and microphones is arranged for parties. A large window on the left shows trees outside.",
-      "generated": true,
-      "license": "AI-generated image",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/59c5f56ab14172c8e4704158745a48b7f48a64de1d44cc5de282a33ca7e35b29.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by Seppo Kaksonen, Scan-Foto Oy on Wikimedia Commons",
+      "depicted": "An aerial view shows a sprawling urban and suburban landscape under an overcast sky. A long stretch of multiple railway tracks runs through the center of the image, bordered by green spaces and roads. To the left of the tracks, there's a large parking lot with numerous cars, and further left, several multi-story buildings, some with white facades and others with darker roofs. To the right of the tracks, a river or canal with brown water flows, crossed by a white suspension bridge. Beyond the riv",
+      "generated": false,
+      "hotlink": false,
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "local_path": "media/8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0.jpg",
       "pixel_review": {
-        "alt_fi": "Tyhjä moderni oikeussali, jossa on vaaleat puupaneelit ja kalusteet, tuomarinpenkki ja pöytä asianosaisille.",
+        "alt_fi": "Ilmakuva kaupungista, jossa on rautatie, suuri valkoinen rakennus, pienempi tiilirakennus, asuintaloja, viheralueita ja joki sillalla.",
         "approved": true,
-        "article_text_sha256": "ed2a2bee364e47df0a3e8f8c651386fc90569c4a1b99748f9c45e58819a52ab0",
-        "concept_sha256": "614b334766149ec1a1278838b5665e3cac8f7ffbc4bce939621c3fac50c7dfd0",
-        "description": "An empty, modern courtroom with light wooden paneling and furniture. A long judges' bench with three dark chairs and microphones is at the back. In front of it, a large table with several dark chairs and microphones is arranged for parties. A large window on the left shows trees outside.",
-        "fit_score": 10,
-        "image_sha256": "59c5f56ab14172c8e4704158745a48b7f48a64de1d44cc5de282a33ca7e35b29",
+        "article_text_sha256": "3b453cc14c765bc11491786dbceff841d1fdb003bd7386023b558b7ac61f0b2d",
+        "concept_sha256": "ed439a35d227083a234f2ea274fa28bf717e07631901abdc4bc7f9a4dc687caf",
+        "description": "An aerial view shows a city with a railway line running through it. On the right, a large white building with a complex shape stands next to a road with buses and cars. To its left, across the railway tracks, is a smaller, older brick building with a brown roof. Further in the background are residential buildings, green areas, and a river with a pedestrian bridge.",
+        "fit_score": 9,
+        "image_sha256": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
-        "no_people": true,
-        "reason": "The image perfectly matches the selected concept of an empty administrative courtroom, depicting both the judges' bench and empty seating for parties. The article discusses the restriction of appeal rights, which would be decided by a court, making the courtroom a highly relevant subject.",
-        "reviewed_at": "2026-10-03T10:25:52.188121+00:00",
-        "text_audit": {
-          "examples": [],
-          "readable_text_present": false
-        }
+        "no_people": false,
+        "reason": "The image clearly shows the old Tikkurila railway station building, which is the location of the Vantaa History Museum and the subject of the article. The image provides an exterior view of the building, fulfilling the concept's requirements.",
+        "reviewed_at": "2026-10-03T11:02:41.965687+00:00",
+        "source_context": {
+          "image_sha256": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0",
+          "photo_id": "wikimedia-135269349",
+          "photo_url": "https://commons.wikimedia.org/wiki/File:Helsinki%E2%80%93Riihim%C3%A4ki%20railway%20at%20Tikkurila%20railway%20station%20Vantaa,%20Finland,%202004.jpg",
+          "photographer": "Seppo Kaksonen, Scan-Foto Oy",
+          "provider": "wikimedia",
+          "title": "Helsinki–Riihimäki railway at Tikkurila railway station Vantaa, Finland, 2004.jpg"
+        },
+        "source_context_sha256": "7cccf53315d80321cbec9bffc209d03490ed12a151bec717e1852801e19c056b"
       },
       "pixels": {
-        "height": 1024,
+        "height": 3000,
         "mode": "RGB",
-        "variance": 6251.3,
-        "width": 1536
+        "variance": 4865.9,
+        "width": 4500
       },
-      "prompt_sha256": "6dd60fd921c8fbced8d6f7545ddea3a68396fd8319da620c105b199640aeff2f",
-      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Nimeämätön, tyhjä suomalaisen hallintotuomioistuimen istuntosalia muistuttava huone: tuomareiden pöytä ja sen edessä asianosaisten pöytä tyhjine tuoleineen. Hillitty puusisustus, ei tunnistettavan oikean salin jäljitelmää.",
+        "evidence": "An aerial view shows a city with a railway line running through it. On the right, a large white building with a complex shape stands next to a road with buses and cars. To its left, across the railway tracks, is a smaller, older brick building with a brown roof. Further in the background are residential buildings, green areas, and a river with a pedestrian bridge.",
         "matched": [
-          "judges' bench",
-          "empty seating for parties"
+          "building",
+          "railway"
         ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "method": "vision",
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "ed2a2bee364e47df0a3e8f8c651386fc90569c4a1b99748f9c45e58819a52ab0",
-        "decision_sha256": "d3a5ab5a4c752a8408590734ece70c056ef686f3c30b92308e802814ae70b5f8",
+        "article_text_sha256": "3b453cc14c765bc11491786dbceff841d1fdb003bd7386023b558b7ac61f0b2d",
+        "decision_sha256": "6303d8787e26462976ab007140279cf0cb4384e09d5ef9cb1c0f925ff6fa547d",
         "minimum_real_fit": 8,
         "searches": [
           {
             "candidates": [],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
+            "provider": "source-news",
             "queries": [
-              "Kuntaliitto Kuntatalo julkisivu",
-              "Kuntatalo Helsinki sisäänkäynti",
-              "Kuntatalo Helsinki building exterior"
+              "cited source image"
             ]
           },
           {
-            "candidates": [],
+            "candidates": [
+              {
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
+                "license": "CC BY 4.0",
+                "reason": "The image clearly shows the old Tikkurila railway station building, which is the location of the Vantaa History Museum and the subject of the article. The image provides an exterior view of the building, fulfilling the concept's requirements.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Helsinki%E2%80%93Riihim%C3%A4ki%20railway%20at%20Tikkurila%20railway%20station%20Vantaa,%20Finland,%202004.jpg"
+              }
+            ],
             "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "unsplash",
-            "queries": [
-              "Kuntaliitto Kuntatalo julkisivu",
-              "Kuntatalo Helsinki sisäänkäynti",
-              "Kuntatalo Helsinki building exterior"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "accepted",
             "provider": "wikimedia",
             "queries": [
-              "Kuntaliitto Kuntatalo julkisivu",
-              "Kuntatalo Helsinki sisäänkäynti",
-              "Kuntatalo Helsinki building exterior"
+              "Tikkurilan vanha asema",
+              "Vantaan historian museo",
+              "Tikkurila old railway station exterior"
             ]
           },
           {
             "candidates": [],
-            "concept_rank": 1,
+            "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
-            "provider": "google",
+            "provider": "source-news",
             "queries": [
-              "Kuntaliitto Kuntatalo julkisivu",
-              "Kuntatalo Helsinki sisäänkäynti",
-              "Kuntatalo Helsinki building exterior"
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "8de8b9df5752d753413cab49ca9fe10531773a68c891df5cef61ee66062e2346",
+                "license": "Public domain",
+                "reason": "The image does not show portable illuminated LED lights or soft light on a dark tabletop. Instead, it depicts two men in an indoor setting, one of whom is handling a yellow object that is not clearly an illuminated LED light. The lighting is not soft, and the overall scene does not match the selected concept. One or more required concept elements a",
+                "source_url": "https://commons.wikimedia.org/wiki/File:160616-N-MY174-036%20160616-N-MY174-036.jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "30f5d8113faace9230f25f46b3cf8f7bb166bc117038cc5adeeaab0b0d6793c7",
+                "license": "CC BY-SA 4.0",
+                "reason": "The image shows a baby in a crib under blue light, which is unrelated to the article about a museum opening, a light art performance, or drama courses. The selected concept describes portable LED lights on a dark tabletop, which is not present in the image. The image also contains a person (baby), which the concept explicitly avoids. One or more re",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Baby%20in%20Crib%20A%27Glow.jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "8352888415e9cd34d2b91c6e3ba820adbd286c26098959edb7100145ac0bb82f",
+                "license": "CC BY 2.0",
+                "reason": "The article discusses a light artwork and a drama course for a museum opening, requiring an image of portable illuminated LED lights. The visible subject is a portable radio, which is not a light source and does not fit the concept of 'portable illuminated LED lights'. One or more required concept elements are not visible.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:QFX%20R-14%20(10102373086).jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "dcde7adac4f432fc4fdb3807003cfe612ad24615a09c8e51275323d3bbc59b38",
+                "license": "CC BY 2.0",
+                "reason": "The article discusses a light artwork and portable LED lights. The image shows a portable radio with a solar panel, which is not a light source and does not fit the concept of 'portable illuminated LED lights'. The radio is not emitting light, and the setting is not a dark tabletop. One or more required concept elements are not visible.",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Kaito%20SB1059%20(9344447746).jpg"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "unavailable",
+            "provider": "wikimedia",
+            "queries": [
+              "portable LED lights",
+              "kannettavat LED-valaisimet",
+              "LED lights dark tabletop"
             ]
           },
           {
@@ -1286,82 +1710,87 @@
               {
                 "approved": false,
                 "fit_score": 3,
-                "image_sha256": "24daa95cffbee78a721b602cc61d3beadc985ed834b4b0da64561b757a0e8a5a",
+                "image_sha256": "93ee473d4db76baa107f49408ca737017c3ed65ce80681873da4668e897e01cd",
                 "license": "Pexels License",
-                "reason": "Kuva esittää auditoriota tai elokuvateatterisalia, ei hallintotuomioistuimen istuntosalia. Konseptin mukaisia tuomareiden pöytää tai asianosaisten pöytää ei ole kuvassa. Vaikka kuvassa on tyhjiä istuimia, ne eivät ole konseptin mukaisia asianosaisten istuimia tuomioistuimen kontekstissa. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/cozy-and-empty-theater-interior-rows-of-seats-33451514/"
+                "reason": "The article discusses a light art piece and a drama course, both seeking volunteers. The selected concept specifically requests an image of 'portable illuminated LED lights' on a dark tabletop, without people. The actual pixels show people's hands on computer keyboards, which are illuminated, but these are not portable LED lights as described in th",
+                "source_url": "https://www.pexels.com/photo/fingers-on-black-computer-keyboard-7848988/"
               },
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "8a227296c9ec29e3242ebf6bf7a7927c1d7d46078a04611fc9f2c10be42e8ce0",
+                "image_sha256": "a3dd6c43c26c55c210bcc311056f7fb30df7ae7a5e88e93d79b59378760ded20",
                 "license": "Pexels License",
-                "reason": "The image shows an empty room with rows of desks and chairs, which could be a meeting room or assembly hall, but it does not clearly depict a judges' bench or a specific setup for parties in a courtroom, as required by the concept. The layout is more akin to a legislative chamber or a large conference room rather than a typical administrative court",
-                "source_url": "https://www.pexels.com/photo/elegant-empty-parliament-hall-in-oslo-norway-32991337/"
+                "reason": "The image shows a portable LED light panel, which aligns with the 'Portable illuminated LED lights' must_show element. However, the light is not illuminated, failing the 'illuminated' aspect of the must_show. The concept also specifies 'palavasta' (burning/lit) in Finnish, which is not met. The 'Soft light on a dark tabletop' must_show is also not ",
+                "source_url": "https://www.pexels.com/photo/black-godax-cordless-device-2263821/"
               },
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "d10e18482661189adab1444b6202d788cfae8740970bb9dde1f6cc1003aead0f",
+                "fit_score": 3,
+                "image_sha256": "44bed225cb018f2a24ca2696f37f1eca11688aaeb814845262172148c98856e6",
                 "license": "Pexels License",
-                "reason": "The image depicts a large auditorium or lecture hall, not a courtroom or administrative tribunal. While it has a stage with a table and chairs, it does not resemble the specific setup of a judges' bench and seating for parties in a courtroom as described in the concept. The scale and design are more suited to presentations or conferences rather tha",
-                "source_url": "https://www.pexels.com/photo/spacious-modern-auditorium-in-milan-conference-center-36900080/"
+                "reason": "The article discusses a light art piece and portable LED lights. The image shows a backlit laptop keyboard, which is not a portable LED light in the context of a light art performance. It does not depict the selected concept of small, portable LED lights on a dark tabletop. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/illuminated-laptop-keyboard-13522335/"
               },
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "8a227296c9ec29e3242ebf6bf7a7927c1d7d46078a04611fc9f2c10be42e8ce0",
+                "image_sha256": "a4c10c3dafa4765ff67f8d377cee7bb4e5124431de342f771a387f51026bd404",
                 "license": "Pexels License",
-                "reason": "The image shows an empty room with rows of desks and chairs, which could be a meeting room or assembly hall, but it does not clearly depict a judges' bench or a specific setup for parties in a courtroom, as required by the concept. The layout is more akin to a legislative chamber or a large conference room rather than a typical administrative court",
-                "source_url": "https://www.pexels.com/photo/elegant-empty-parliament-hall-in-oslo-norway-32991337/"
+                "reason": "The image shows a single flashlight, not two small, burning portable LED lights as specified in the concept. While it depicts a portable illuminated light and soft light on a tabletop, it fails to meet the 'two small, burning portable LED lights' requirement, making it a partial fit at best.",
+                "source_url": "https://www.pexels.com/photo/black-flashlight-turned-on-985117/"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "hallintotuomioistuin tyhjä istuntosali",
-              "hallinto oikeus istuntosali",
-              "empty administrative courtroom"
+              "portable LED lights",
+              "kannettavat LED-valaisimet",
+              "LED lights dark tabletop"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 0,
-                "image_sha256": "4ed21dc633f61dda499a8c44919c1d9318fd09cf0ee9da7127877a4deb8b852a",
+                "fit_score": 5,
+                "image_sha256": "2e6fb97ee2ddeed0e28e857f1184477437bd2b0bcca5aded603f43cdf1b376cd",
                 "license": "Unsplash License",
-                "reason": "The image depicts a red wooden building with a flag and a person on a bench, which does not visually represent an empty administrative courtroom with a judges' bench and seating for parties. The visible content does not match the selected concept. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/woman-in-white-shirt-sitting-on-gray-concrete-bench-near-brown-concrete-building-during-daytime-nu96-SLn4Mk?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The image contains a person, which the concept explicitly states to avoid. While it shows a portable LED light, it does not depict two small, burning portable LED lights on a dark tabletop in a dim, neutral indoor space without people, as specified in the concept. The presence of a person and the different setup make it unsuitable. One or more requ",
+                "source_url": "https://unsplash.com/photos/a-woman-holding-a-cell-phone-in-front-of-a-light-VIQKDL6-TpU?utm_source=uutistenlukija&utm_medium=referral"
               },
               {
                 "approved": false,
-                "fit_score": 0,
-                "image_sha256": "982ec2042187844868ce2d758ebd7ab1ca4be2e3da1531a8b2646601e1b264f2",
+                "fit_score": 7,
+                "image_sha256": "9aebc55bb05edc8461433f3d65f8bcb530d202650780e94b5c38317dde09b248",
                 "license": "Unsplash License",
-                "reason": "The image depicts a residential street with houses and autumn trees, which is unrelated to the concept of an empty administrative courtroom or the article's subject of restricting municipal appeal rights. It does not show any elements of a courtroom. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/an-empty-street-with-houses-and-trees-in-the-background-rIAZICGWhdY?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The image shows only one portable illuminated LED light, not two as specified in the concept. The concept also specifies 'palavasta' (burning/lit) for two lights, but only one is lit here. The fit score is reduced because a key element of the concept (two lights) is missing.",
+                "source_url": "https://unsplash.com/photos/white-and-blue-light-bulb-y4HelY0jx7c?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "4a47029e1acb803844cd3c937ae58390060f2968f2d6e74ce9289497210cd589",
+                "license": "Unsplash License",
+                "reason": "The image shows various outdoor lights, but none of them are small, portable LED lights on a dark tabletop as specified in the concept. The lights are fixed outdoor installations, not portable devices for a light performance. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/red-garden-shed-with-night-lighting-ssJA_fkVf50?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "1e0fc505a5d003d453cde41828e94b171a54963c4c85b0f256376acae44217ab",
+                "license": "Unsplash License",
+                "reason": "The article discusses a light art piece involving volunteers moving with lights. The selected concept specifies 'portable illuminated LED lights' and 'soft light on a dark tabletop'. The image shows a single, unlit, non-portable LED light bulb on a bright white surface, which does not match the concept's requirements for illumination, portability, ",
+                "source_url": "https://unsplash.com/photos/a-white-light-bulb-sitting-on-top-of-a-white-table-iEDKPLfJrEo?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "hallintotuomioistuin tyhjä istuntosali",
-              "hallinto oikeus istuntosali",
-              "empty administrative courtroom"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "hallintotuomioistuin tyhjä istuntosali",
-              "hallinto oikeus istuntosali",
-              "empty administrative courtroom"
+              "portable LED lights",
+              "kannettavat LED-valaisimet",
+              "LED lights dark tabletop"
             ]
           },
           {
@@ -1370,63 +1799,91 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "hallintotuomioistuin tyhjä istuntosali",
-              "hallinto oikeus istuntosali",
-              "empty administrative courtroom"
+              "portable LED lights",
+              "kannettavat LED-valaisimet",
+              "LED lights dark tabletop"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 2,
-          "fit_score": 10,
-          "image_sha256": "59c5f56ab14172c8e4704158745a48b7f48a64de1d44cc5de282a33ca7e35b29",
-          "kind": "generated"
+          "concept_rank": 1,
+          "fit_score": 9,
+          "image_sha256": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
+          "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "59c5f56ab14172c8e4704158745a48b7f48a64de1d44cc5de282a33ca7e35b29",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "tuomioistuin kunnallisvalitusoikeuden rajoittamisesta päättävänä tahona",
-      "url": "https://uutistenlukija.fi/media/59c5f56ab14172c8e4704158745a48b7f48a64de1d44cc5de282a33ca7e35b29.jpg"
+      "sha256": "8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Helsinki%E2%80%93Riihim%C3%A4ki%20railway%20at%20Tikkurila%20railway%20station%20Vantaa,%20Finland,%202004.jpg",
+      "stock_provenance": {
+        "attribution": {
+          "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
+          "title": "Helsinki–Riihimäki railway at Tikkurila railway station Vantaa, Finland, 2004.jpg"
+        },
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Helsinki%E2%80%93Riihim%C3%A4ki_railway_at_Tikkurila_railway_station_Vantaa%2C_Finland%2C_2004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "photo_id": "wikimedia-135269349",
+        "photo_url": "https://commons.wikimedia.org/wiki/File:Helsinki%E2%80%93Riihim%C3%A4ki%20railway%20at%20Tikkurila%20railway%20station%20Vantaa,%20Finland,%202004.jpg",
+        "photographer": "Seppo Kaksonen, Scan-Foto Oy",
+        "photographer_url": "https://commons.wikimedia.org/wiki/File:Helsinki%E2%80%93Riihim%C3%A4ki%20railway%20at%20Tikkurila%20railway%20station%20Vantaa,%20Finland,%202004.jpg",
+        "provider": "wikimedia",
+        "query": "Tikkurilan vanha asema",
+        "retrieved_at": "2026-10-03T11:02:38Z"
+      },
+      "stock_provenance_sha256": "8b5c0dbf88e6c299e709bfb1863ecf986ac089cb51ba569e81a83cbd5c2d9c45",
+      "url": "https://uutistenlukija.fi/media/8c01a195629ef5b21a4affae5ee37be937fe66355337bb672174900bc9580cc0.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kuntaliiton lausuntoluonnoksessa esitetään, että valmisteilla olevaan kuntalain muutokseen lisättäisiin mahdollisuus henkilö- tai yhteisökohtaiseen valitusoikeuden rajoittamiseen. Rajoituksesta päättäisi tuomioistuin kunnan hakemuksesta, ja se olisi määräaikainen."
+        "text": "Vantaan kaupungin mukaan historian museon avajaisia vietetään Tikkurilan vanhalla asemalla 27.–29. marraskuuta. Samalla avataan pysyvä Vantaan muuttajat -näyttely, joka käsittelee alueen historiaa 10 000 vuoden ajalta. Museo tunnettiin aiemmin Vantaan kaupunginmuseona."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kuntaliiton mukaan valtiovarainministeriön lausunnoille antama lakiluonnos koskee kunnan omistaman kiinteistön myyntiä tai vuokrausta yksityishenkilölle tämän asunnoksi. Rajaus edellyttäisi, että kauppa tai vuokraus tehdään tarjouskilpailun tai muun avoimen menettelyn perusteella. Tällaisesta päätöksestä vain asianosainen voisi tehdä oikaisuvaatimuksen tai kunnallisvalituksen; pelkkä kunnan jäsenyys ei enää riittäisi."
+        "text": "Perjantain 27. marraskuuta avajaishetkeen suunnitellussa valoteoksessa vapaaehtoiset liikkuvat valojen kanssa ohjaajien opastuksella. Kaupungin tiedotteen mukaan aiempaa esiintymiskokemusta ei tarvita. Perheetkin voivat osallistua, mutta valoa kantavan osallistujan on oltava aikuinen. Teoksesta vastaa Valopaja-kollektiivi valotaiteilija Jukka Laineen johdolla."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Esityksen tavoitteena on Kuntaliiton mukaan helpottaa kunnan päätösten täytäntöönpanoa. Liitto kannattaa tavoitetta mutta katsoo, ettei vain tiettyjä kiinteistöpäätöksiä koskeva rajaus ratkaise ongelmaa eikä kohdistu riittävän täsmällisesti sen aiheuttajaan."
+        "text": "Valoteoksen harjoitus on 24. marraskuuta kello 17–19. Avajaispäivänä vapaaehtoisten on varattava aikaa kello 15.30–17.30: noin 15–20 minuutin esitystä edeltää yhteinen infotilaisuus. Mukaan otetaan ilmoittautumisjärjestyksessä 20 vapaaehtoista, ja ilmoittautumiset lähetetään osoitteeseen janita.jamsen@vantaa.fi."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kuntaliiton tiedotteen mukaan lausuntoaika päättyy 23. lokakuuta 2026, ja hallituksen esitys on tarkoitus antaa eduskunnalle syksyn aikana. Kyse on vielä lakiluonnoksesta, ei voimassa olevasta valitusoikeuden muutoksesta."
+        "text": "Museo järjestää myös maksuttoman draamakurssin, jolla osallistujat kehittävät Vantaan historiaan perustuvan hahmon. Kaupungin mukaan kurssi sopii sekä uusille osallistujille että kevään draamakurssin käyneille. Ohjaajina ovat teatteritaiteen ammattilaiset Maria Myllykangas ja Birgitta Taussi, ja kurssin suorittaneet voivat esiintyä hahmoissaan museon tapahtumissa myös myöhemmin."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Draamakurssi alkaa 10. marraskuuta museon tiloissa osoitteessa Hertaksentie 1. Ohjelmaan kuuluu marraskuun harjoituksia ja avajaisiin osallistuminen 27. marraskuuta sekä mahdollisuus esiintyä avajaisviikonlopun muina päivinä. Viimeinen kurssikerta on 4. joulukuuta. Ilmoittautuminen päättyy 31. lokakuuta osoitteessa maiju.hautamaki@vantaa.fi, ja rajalliset paikat täytetään ilmoittautumisjärjestyksessä."
+      },
+      {
+        "source_ids": [
+          "A"
+        ],
+        "text": "Kaupunki kertoo julkaisevansa avajaishetken tarkemman sisällön ja viikonlopun ohjelman marraskuun alussa."
       }
     ],
-    "summary": "Kuntaliitto ehdottaa, että tuomioistuin voisi kunnan hakemuksesta rajoittaa yksittäisen henkilön tai yhteisön kunnallisvalitusoikeutta määräajaksi. Liitto pitää lausunnoilla olevan lakiluonnoksen kiinteistökauppoihin ja -vuokrauksiin rajattua muutosta riittämättömänä.",
-    "title": "Kuntaliitto ehdottaa valitusoikeuden määräaikaista rajausta"
+    "summary": "Vantaan kaupungin mukaan marraskuun avajaisiin voi osallistua valoteoksen esiintyjänä tai draamakurssilla luodulla hahmolla. Valoteokseen otetaan 20 vapaaehtoista, ja draamakurssille on ilmoittauduttava lokakuun loppuun mennessä.",
+    "title": "Vantaan historian museo hakee avajaisiin vapaaehtoisia"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "1c38823d71a47b93383739aabdd0f6e2f47c12016dd1e0e13260377593ea0730",
+    "draft_sha256": "317fe2bdcfdffec9ab81d8ff57008ea8c885dee19bd64b8f31eaefd4f9f17b1d",
     "reasons": [
-      "Otsikko on 58 merkkiä eli tavoiterajan sisällä, ja tärkein asia, Kuntaliiton ehdotus, on alussa. Lähde A tukee otsikon, ingressin ja ensimmäisen kappaleen väitteitä: tuomioistuin voisi kunnan hakemuksesta rajoittaa henkilön tai yhteisön kunnallisvalitusoikeutta määräajaksi.",
-      "Toisen kappaleen source_ids-merkintä A on oikea: lähde kuvaa kunnan omistaman kiinteistön myynnin tai vuokrauksen luonnolliselle henkilölle tämän asunnoksi, avoimen menettelyn edellytyksen sekä oikaisuvaatimus- ja kunnallisvalitusoikeuden rajaamisen asianosaisiin. Luonnos ei laajenna rajausta muihin kiinteistöpäätöksiin.",
-      "Kolmannen ja neljännen kappaleen väitteet perustuvat lähteeseen A. Täytäntöönpanon helpottaminen esitetään tavoitteena ja keinojen riittämättömyys Kuntaliiton kantana, ei osoitettuna vaikutuksena. Lausuntoajan päättymispäivä 23.10.2026 ja hallituksen esityksen suunniteltu antaminen syksyllä 2026 vastaavat lähdettä. Ehdotus erotetaan voimassa olevasta laista.",
-      "Lähde A on julkaistu 2.10.2026 ja on arviointipäivään nähden ajankohtainen. Kuntaliiton oma tiedote riittää sen lausuntoluonnoksen uutisointiin; ministeriön esityksen sisältö kerrotaan nimenomaisesti Kuntaliiton mukaan eikä riippumattomasti varmennettuna. Kaikki kappaleet on merkitty lähteeseen A. Kotimaa-luokitus, valtakunnallista kuntalakia koskeva rajaus sekä neutraali, omin sanoin tiivistetty suomi ovat asianmukaiset.",
-      "Koko kuvatietue vastaa lähdepaketin tietuetta. Molemmista järjestetyistä konsepteista on kirjattu haut, ja valittu generoitu oikeussali on korkeimmalle sijoitettu turvallisesti generoitava konsepti. Eri mallin tekemä täsmälliseen kuvatunnisteeseen sidottu pikseliarvio kuvaa tyhjän tuomarinpenkin ja asianosaisten pöydän, antaa sopivuudeksi 10/10 eikä ilmoita ihmisiä tai luettavaa tekstiä. Konkreettinen tuomioistuinaihe liittyy artikkelin keskeiseen ehdotukseen. Kuvateksti on täsmälleen 'AI-generoitu kuva. Ei valokuva tapahtumasta.', eikä kuvaa esitetä todellisena tapahtumakuvana. RIGHTS-asiakirjan tekstin käyttöoikeutta ei käytetä kuvaoikeuksien tai uutisväitteiden todisteena."
+      "Otsikko on 54 merkkiä eli alle 60 merkin tavoitteen. Museon vapaaehtoishaku on heti otsikon pääasia, ja lähde A tukee sekä otsikkoa että ingressin kahta osallistumistapaa, 20 vapaaehtoisen määrää ja draamakurssin ilmoittautumisajan päättymistä 31.10.",
+      "Kaikkien kuuden kappaleen source_ids-merkintä A on asianmukainen. A tukee avajaisia 27.–29.11., Tikkurilan vanhaa asemaa, museon aiempaa nimeä sekä pysyvän Vantaan muuttajat -näyttelyn 10 000 vuoden aikajännettä. Valopaja-kollektiivin, Jukka Laineen, Maria Myllykankaan ja Birgitta Taussin nimet ja tehtävät vastaavat lähdettä.",
+      "Lähde A tukee valoteoksen harjoitusta 24.11. klo 17–19, avajaispäivän varausta 27.11. klo 15.30–17.30, noin 15–20 minuutin esitystä, aikuisen valonkantajan vaatimusta ja ilmoittautumisjärjestystä. Myös draamakurssin maksuttomuus, aloitus 10.11., osoite Hertaksentie 1, viimeinen kurssikerta 4.12., molemmat ilmoittautumissähköpostit ja ohjelman julkaiseminen marraskuun alussa vastaavat lähdettä.",
+      "Vantaan kaupungin 2.10.2026 julkaistu lähde A on ajankohtainen 3.10.2026 arvioitavalle paikalliselle tapahtuma- ja osallistumisuutiselle. Järjestäjän ilmoitus riittää näihin tietoihin; teksti ei väitä riippumatonta vahvistusta. Muotoilu on omaa, neutraalia ja ymmärrettävää, aihe kuuluu kulttuuriin eikä paikallista ilmoitusta yleistetä valtakunnalliseksi. RIGHTS-asiakirjaa ei käytetä uutisväitteiden tai kuvaoikeuksien todisteena.",
+      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Molemmille järjestetyille kuvakonsepteille on kirjattu haut. Valitun todellisen kuvan täsmälliseen kuvatunnisteeseen sidottu koko artikkelin arvio on 9/10, ja arvio tunnistaa kuvassa Tikkurilan vanhan asemarakennuksen: yhteys on uutisen tapahtumapaikkaan, ei vain yleisesti kaupunkiin tai rautatiehen. Vuoden 2004 kuva on merkitty arkistokuvaksi eikä sitä esitetä tulevien avajaisten kuvana. Kuvakohtainen Wikimedia-alkuperätietue yksilöi tiedoston, kuvaajan Seppo Kaksonen / Scan-Foto Oy, CC BY 4.0 -lisenssin ja muutosmerkinnän; kyse ei ole pelkästä yleisestä lisenssitekstistä. Kuvateksti ja vaihtoehtoinen teksti eivät lisää perusteettomia tapahtumaväitteitä."
     ]
   }
 }
