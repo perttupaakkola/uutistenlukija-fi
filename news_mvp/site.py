@@ -134,6 +134,8 @@ def duplicate_story_ids(articles):
 _RELATED_GENERIC_WORDS = frozenset({
     "alue", "alueellinen", "alkaa", "aloittaa", "avaa", "avataan", "ennen", "ensi",
     "esillä", "että", "hanke", "jatkaa", "jatkuu", "joka", "jälkeen", "kaupunki",
+    "kasvaa", "kasvoi", "kasvanut", "kasvavat", "kasvua", "kasvu",
+    "laskee", "laski", "laskenut", "laskivat", "pienenee", "pieneni",
     "kertoo", "koskeva", "kunta", "kunnallinen", "kanssa", "liittyvä", "mukaan",
     "muuttuu", "myös", "ovat", "palvelu", "päättyy", "päätös", "saa", "saavat",
     "sanoo", "sekä", "suunnitelma", "sulkee", "suljetaan", "suomen", "suomessa",
@@ -173,7 +175,9 @@ def _topic_words(packet, draft):
     """Substantive title terms; generic framing, places and publisher identity do not qualify."""
     publisher_words = _publisher_words(packet)
     words = re.findall(r"[0-9a-zåäö]+", str((draft or {}).get("title") or "").casefold())
-    stems = {_topic_stem(word) for word in words if len(word) >= 4}
+    # Years and amounts are context, never standalone evidence of a shared topic.
+    # Preserve named alphanumeric topics; exclude only wholly numeric tokens.
+    stems = {_topic_stem(word) for word in words if len(word) >= 4 and not word.isdecimal()}
     return stems - _RELATED_GENERIC_STEMS - _RELATED_LOCALITY_STEMS - publisher_words
 
 
