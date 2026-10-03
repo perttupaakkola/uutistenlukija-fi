@@ -4,123 +4,133 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "b4d34c14a2682db7c09ec16c137090d902003849",
-  "job_id": "f6aeaa0e7a769ceb9b904f89da65e5ab6b10403effb496ee820073ffb4b4da60",
-  "packet_sha256": "3f4797e237db0e1b5a865c2e3132074f1fd8b1cf3b7d2f70cc75155a20020f25",
-  "draft_sha256": "126e7266472104a598048172cb9c4ac8921eeec3156a61ec69f72a193eb15c08",
-  "image_sha256": "d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8",
+  "job_id": "ba96b94ee71fbd12e4d3c4feabdf7de90db01d7306283a96108c150ab2dd3070",
+  "packet_sha256": "4934d07d08936af7dfb9591a92d7c1825a016bed2df00e11b1fb738ae57fa3a8",
+  "draft_sha256": "cc2747eb3b9d2b662188515080f3ec4033b4c2895e626a4dc4bc820d53d01889",
+  "image_sha256": "f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "a2bc371538673e695fef40e99cc14d9ce636221cd71e8cf10004a8370b6b6a51"
+    "provenance_sha256": "0ff2e72efddd64d438f97df9d040752c52d555f6c9fb11da2c5dae263958e54f"
   },
   "stock_image": {
-    "alt": "Arkistokuva: Useita oransseja verhoiltuja tuoleja on aseteltu vaalean puisen pöydän ympärille tyhjässä kokoushuoneessa.",
+    "alt": "Arkistokuva: Tyhjä kokoushuone, jossa on pöytä ja sen ympärillä tuoleja. Pöydällä on avoimia muistivihkoja ja ryhmiteltyjä muistilappuja.",
     "caption": "Arkistokuva artikkelin aiheesta.",
     "classifier_output": {
       "category": "Kotimaa",
       "concepts": [
         {
-          "depictable_scene": "Todellinen valokuva TyöNavigaattorin sisäänkäynnistä ja sitä ympäröivästä julkisivusta osoitteessa Asemakatu 7, Kuopio.",
+          "depictable_scene": "Todellinen valokuva Vantaalla 2. lokakuuta 2026 järjestetystä YTY-akatemiasta: aikuiset osallistujat työskentelevät pienryhmänä pöydän ääressä ja tarkastelevat työpajamateriaaleja.",
           "must_avoid": [
-            "Väärä rakennus tai toinen toimipiste",
-            "Kuvan esittäminen 28. lokakuuta järjestettävän tapahtuman dokumentaationa"
+            "Unrelated event presented as the YTY academy",
+            "Children presented as academy participants"
           ],
           "must_show": [
-            "Actual venue entrance",
-            "Surrounding building facade"
+            "Adults working together at a workshop table",
+            "Workshop materials"
           ],
           "rank": 1,
           "safe_to_generate": false,
           "search_queries": [
-            "TyöNavigaattori Kuopio sisäänkäynti",
-            "Asemakatu 7 Kuopio",
-            "TyöNavigaattori Kuopio entrance"
+            "Vantaa YTY-akatemia 2026",
+            "YTY-akatemia 2.10.2026 työpaja",
+            "Vantaa adult workshop table",
+            "YTY-akatemia osallistujat työpajatyöskentely"
           ],
-          "subject": "TyöNavigaattorissa järjestettävän työelämäillan tapahtumapaikka"
+          "subject": "Vantaan YTY-akatemian työpajatyöskentely"
         },
         {
-          "depictable_scene": "Nimetön, tyhjä kokoustila, jossa tuolit on asetettu yhden pienen pöydän ympärille keskustelua varten. Kuva rajautuu pöytään, tuoleihin ja niiden välittömään ympäristöön eikä jäljittele TyöNavigaattorin todellisia tiloja.",
+          "depictable_scene": "Nimeämättömän kokoushuoneen tyhjä pöytä, jonka ympärillä on tuoleja. Pöydällä on muutama avoin muistivihko ja ryhmiteltyjä värillisiä muistilappuja ilman luettavaa tekstiä. Kuva rajautuu yhteiseen työskentelytilaan, eikä esitä todellista YTY-akatemian tapahtumapaikkaa.",
           "must_avoid": [
-            "Ihmiset, kasvot, kädet tai muut ruumiinosat",
-            "TyöNavigaattorin tilojen keksitty toisinto",
-            "Luettava teksti ja logot"
+            "People or body parts",
+            "Invented readable text or logos",
+            "Reconstruction of a named venue"
           ],
           "must_show": [
-            "Chairs around a small meeting table",
-            "Empty meeting space"
+            "Meeting table with empty chairs",
+            "Grouped sticky notes and open notebooks"
           ],
           "rank": 2,
           "safe_to_generate": true,
           "search_queries": [
-            "tyhjä pienryhmätila tuolit",
-            "kokoustila pöytä tuolit",
-            "empty meeting room",
-            "small discussion table chairs"
+            "tyhjä kokouspöytä muistilaput",
+            "empty workshop table",
+            "grouped sticky notes notebooks",
+            "kokoushuone pöytä muistivihkot"
           ],
-          "subject": "Esityksen jälkeen pienryhmissä käytävän keskustelun tilajärjestely"
+          "subject": "työryhmän ehdotusten käsittelyä kuvaava kokouspöytä"
         }
       ],
       "version": "article-first-v1"
     },
-    "credit": "Photo by Jakub Zerdzicki on Pexels",
-    "depicted": "The image shows a close-up, eye-level view of a conference room with a light-colored wooden table and several orange chairs. The chairs are upholstered and have a modern design with curved backs. Three chairs are visible in the foreground, with two more blurred in the background. The chair in the immediate foreground on the left is partially visible, showing its back and side. The chair in the center foreground is more fully visible, showing its back and the curve of its armrest. The chair on th",
+    "credit": "Photo by Mike van Schoonderwalt on Pexels",
+    "depicted": "The image shows an indoor room with a light-colored floor and a white grid ceiling with several square light panels. One ceiling panel is missing, revealing a dark opening. The walls are mostly painted a light color, but a section of exposed brick wall is visible on the left and a larger section on the right. A dark-framed doorway is visible on the left side of the room. In the center, there is a rectangular table with a light-colored top and dark legs, surrounded by six dark-colored chairs with",
     "generated": false,
     "hotlink": false,
     "license": "Pexels License",
     "license_evidence": {
-      "image_path": "/photos/36149083/pexels-photo-36149083.jpeg",
+      "image_path": "/photos/5505925/pexels-photo-5505925.jpeg",
       "license": "Pexels License",
       "license_code": "Pexels",
       "license_url": "https://www.pexels.com/license/",
-      "photo_id": "36149083",
-      "photo_url": "https://www.pexels.com/photo/modern-conference-room-with-orange-chairs-36149083/",
-      "photographer": "Jakub Zerdzicki",
-      "photographer_url": "https://www.pexels.com/@jakubzerdzicki",
-      "response_sha256": "e1bab841b14ff9af3df8f38f1131f9c4e471bd03974de773786f5348baa0afe3",
-      "retrieved_at": "2026-10-02T23:54:14.007125+00:00",
+      "photo_id": "5505925",
+      "photo_url": "https://www.pexels.com/photo/chairs-and-table-in-room-5505925/",
+      "photographer": "Mike van Schoonderwalt",
+      "photographer_url": "https://www.pexels.com/@mike-van-schoonderwalt-1884800",
+      "response_sha256": "fa677b94fb9e6e13d2ea57c54776b40822264a40a38f2916efd668b1e49507c5",
+      "retrieved_at": "2026-10-03T00:31:17.895356+00:00",
       "transport": "jina_reader",
       "version": 1
     },
     "license_url": "https://www.pexels.com/license/",
-    "local_path": "media/d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8.jpg",
+    "local_path": "media/f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42.jpg",
     "pixel_review": {
-      "alt_fi": "Useita oransseja verhoiltuja tuoleja on aseteltu vaalean puisen pöydän ympärille tyhjässä kokoushuoneessa.",
+      "alt_fi": "Tyhjä kokoushuone, jossa on pöytä ja sen ympärillä tuoleja. Pöydällä on avoimia muistivihkoja ja ryhmiteltyjä muistilappuja.",
       "approved": true,
-      "article_text_sha256": "f0b6bba916d6cc701b58871f69114a79c08e96e9e2f4e57c187bc03624210be8",
-      "concept_sha256": "2e6f276c583150df4cd680a0cc1e06d055962e237ac8c8d77b72911c836fd6eb",
-      "description": "A close-up, slightly blurred view of several orange upholstered chairs around a light wooden table in an empty room.",
+      "article_text_sha256": "cc83a2d5c29f728ace73a97d954404e515829ba135a4ad30f2d161cff7408155",
+      "concept_sha256": "a86783e462ee49c9eae8bcbcd0bb66eca2fb54e7146e72e9f103dd93f10a7b7a",
+      "description": "An empty meeting room with a table surrounded by chairs. On the table are some open notebooks and grouped sticky notes. A grey hoodie is draped over one of the chairs. The room has exposed brickwork on one wall and a window looking out onto a grassy area.",
       "fit_score": 9,
-      "image_sha256": "d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8",
+      "image_sha256": "f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42",
       "model": "google:gemini-2.5-flash",
       "must_show_visible": [
         true,
         true
       ],
       "no_people": true,
-      "reason": "The image clearly depicts an empty meeting space with chairs around a table, which directly illustrates the concept of a small group discussion setup mentioned in the article.",
-      "reviewed_at": "2026-10-02T23:54:15.954469+00:00"
+      "reason": "The image directly depicts the selected concept of an empty meeting table with chairs, grouped sticky notes, and open notebooks, which is highly relevant to the article's theme of a working group processing proposals and ideas from an academy.",
+      "reviewed_at": "2026-10-03T00:31:20.343318+00:00",
+      "text_audit": {
+        "examples": [],
+        "readable_text_present": false
+      }
     },
     "pixels": {
-      "height": 627,
+      "height": 650,
       "mode": "RGB",
-      "variance": 16204.4,
-      "width": 940
+      "variance": 3708.1,
+      "width": 710
     },
     "relevance_check": {
       "accepted": true,
-      "evidence": "A close-up, slightly blurred view of several orange upholstered chairs around a light wooden table in an empty room.",
+      "evidence": "An empty meeting room with a table surrounded by chairs. On the table are some open notebooks and grouped sticky notes. A grey hoodie is draped over one of the chairs. The room has exposed brickwork on one wall and a window looking out onto a grassy area.",
       "matched": [
-        "around",
         "chairs",
         "empty",
+        "grouped",
+        "meeting",
+        "notebooks",
+        "notes",
+        "open",
+        "sticky",
         "table"
       ],
       "method": "vision",
       "reason": "Exact-pixel full-article score meets the 8/10 threshold"
     },
     "selection_evidence": {
-      "article_text_sha256": "f0b6bba916d6cc701b58871f69114a79c08e96e9e2f4e57c187bc03624210be8",
-      "decision_sha256": "d58a1242687ffa297892bb544368e2626092a4d13a5f906e69f1940b1693434b",
+      "article_text_sha256": "cc83a2d5c29f728ace73a97d954404e515829ba135a4ad30f2d161cff7408155",
+      "decision_sha256": "280408f392538e9fd9b1fd6304db0a0dde0758ec67652855b0474575156dd934",
       "minimum_real_fit": 8,
       "searches": [
         {
@@ -138,9 +148,53 @@
           "outcome": "no_qualifying_candidate",
           "provider": "wikimedia",
           "queries": [
-            "TyöNavigaattori Kuopio sisäänkäynti",
-            "Asemakatu 7 Kuopio",
-            "TyöNavigaattori Kuopio entrance"
+            "Vantaa YTY-akatemia 2026",
+            "YTY-akatemia 2.10.2026 työpaja",
+            "Vantaa adult workshop table"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "b9d217c8eb3196e7f4793fa6adeb42aa245d6ec1e361189c7a2d6740d6b6026b",
+              "license": "Pexels License",
+              "reason": "The image shows adults in an office setting, which broadly aligns with the article's theme of an academy for adults. However, it does not depict a group working together at a workshop table or clearly show workshop materials in the context of a workshop. The scene appears to be a typical office interaction rather than a specific workshop or academy",
+              "source_url": "https://www.pexels.com/photo/man-and-woman-working-together-at-the-office-5918190/"
+            },
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "3dc1e42d293955cd4a72f2db18526947e341d59d14b30326502f1aa3cab4fc42",
+              "license": "Pexels License",
+              "reason": "The image shows adults working at a table with workshop materials, which aligns with the 'must_show' elements. However, there is no visible evidence that this specific scene is the YTY-akatemia in Vantaa on October 2, 2026. The screen displays a generic website, and the setting is a typical office, not specifically identifiable as the event describ",
+              "source_url": "https://www.pexels.com/photo/women-sitting-in-a-boardroom-and-talking-during-a-business-meeting-15543044/"
+            },
+            {
+              "approved": false,
+              "fit_score": 4,
+              "image_sha256": "433e4f7d8163e06bcd50492f7157339964f5682ef3947248b6ec49faa30ca847",
+              "license": "Pexels License",
+              "reason": "The image shows adults working together at a table, which aligns with the 'Adults working together at a workshop table' must_show element. However, the 'Workshop materials' element is not clearly present; the women are playing cards, which are not typically considered workshop materials in the context of developing entrepreneurship and working life",
+              "source_url": "https://www.pexels.com/photo/women-plying-uno-cards-in-office-15543213/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "bbbc19d8e72815d041fb01a5042e84df0c16de6a305390a25587441a7346204f",
+              "license": "Pexels License",
+              "reason": "The image shows a man in an industrial setting, which is unrelated to the article about the Vantaa YTY Academy, which focuses on workshops for developing entrepreneurship and working life skills for children and young people. The selected concept specifically requires adults working together at a workshop table with workshop materials, none of whic",
+              "source_url": "https://www.pexels.com/photo/industrial-engineer-operating-cnc-machine-in-factory-32845661/"
+            }
+          ],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "Vantaa YTY-akatemia 2026",
+            "YTY-akatemia 2.10.2026 työpaja",
+            "Vantaa adult workshop table"
           ]
         },
         {
@@ -148,54 +202,19 @@
             {
               "approved": false,
               "fit_score": 0,
-              "image_sha256": "6a6ae571cd046322d88e21a097c424f13375719063173cf1bd2d8c52688ce3ce",
-              "license": "Pexels License",
-              "reason": "The article specifies the venue as 'TyöNavigaattori, osoitteessa Asemakatu 7, Kuopio'. The visible signage in the image clearly shows 'YODMA'S' and 'Hauptbahnhof Berlin', indicating this is Berlin Central Station, not the specified venue in Kuopio. Therefore, it does not depict the actual venue entrance or surrounding facade mentioned in the articl",
-              "source_url": "https://www.pexels.com/photo/low-light-photographed-of-building-facade-958860/"
-            },
-            {
-              "approved": false,
-              "fit_score": 7,
-              "image_sha256": "45a3cf2767fa662a4bba86d975ff282d763031f96667327b03921ea144cfd2af",
-              "license": "Pexels License",
-              "reason": "The image clearly shows the entrance and surrounding facade of a building identified as 'TyöNavigaattori' (visible on the awning), which is the specified venue for the event in the article. This directly matches the selected concept of depicting the actual venue entrance and surrounding building facade. Exact numbered building identity is absent fr",
-              "source_url": "https://www.pexels.com/photo/woman-walking-outside-modern-building-37053853/"
-            },
-            {
-              "approved": false,
-              "fit_score": 7,
-              "image_sha256": "6807dfd78684de45b76c2737dac85c37a89e785d5660c16f49fd8b947c52ebf9",
-              "license": "Pexels License",
-              "reason": "The image clearly shows the entrance and surrounding facade of a building complex, which matches the concept of depicting the actual venue entrance and surrounding building facade for TyöNavigaattori at Asemakatu 7, Kuopio. The visible sign on the entrance confirms it is 'TyöNavigaattori'. Exact numbered building identity is absent from file-level ",
-              "source_url": "https://www.pexels.com/photo/street-light-near-building-987596/"
-            },
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "a9a396eee2b3e3ad24eebde768aa3c0fc471d6d961338178f53a7f8d19ee4dd6",
-              "license": "Pexels License",
-              "reason": "The article specifies the venue as 'TyöNavigaattori, osoitteessa Asemakatu 7, Kuopio'. The visible building in the image is clearly labeled 'VÕRU SPORDIKESKUS', which is a sports center in Võru, Estonia, not TyöNavigaattori in Kuopio, Finland. Therefore, it does not depict the actual venue entrance or the surrounding building facade mentioned in th",
-              "source_url": "https://www.pexels.com/photo/modern-sports-center-exterior-in-summer-light-38723409/"
+              "image_sha256": "d86d1759cc7846eda47f3e0c905dbe651ab0d5461d873e6920410ac97c25217c",
+              "license": "Unsplash License",
+              "reason": "The image depicts an industrial logging scene by a river, which is completely unrelated to the article about the Vantaa YTY-academy, its workshops, and participants. The selected concept specifically requires adults working at a workshop table with materials, none of which are present in the image. One or more required concept elements are not visi",
+              "source_url": "https://unsplash.com/photos/a-crane-is-working-on-a-pile-of-logs-awhucBNmAAE?utm_source=uutistenlukija&utm_medium=referral"
             }
           ],
           "concept_rank": 1,
           "outcome": "no_qualifying_candidate",
-          "provider": "pexels",
-          "queries": [
-            "TyöNavigaattori Kuopio sisäänkäynti",
-            "Asemakatu 7 Kuopio",
-            "TyöNavigaattori Kuopio entrance"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
           "provider": "unsplash",
           "queries": [
-            "TyöNavigaattori Kuopio sisäänkäynti",
-            "Asemakatu 7 Kuopio",
-            "TyöNavigaattori Kuopio entrance"
+            "Vantaa YTY-akatemia 2026",
+            "YTY-akatemia 2.10.2026 työpaja",
+            "Vantaa adult workshop table"
           ]
         },
         {
@@ -204,9 +223,9 @@
           "outcome": "no_qualifying_candidate",
           "provider": "google",
           "queries": [
-            "TyöNavigaattori Kuopio sisäänkäynti",
-            "Asemakatu 7 Kuopio",
-            "TyöNavigaattori Kuopio entrance"
+            "Vantaa YTY-akatemia 2026",
+            "YTY-akatemia 2.10.2026 työpaja",
+            "Vantaa adult workshop table"
           ]
         },
         {
@@ -223,35 +242,19 @@
             {
               "approved": false,
               "fit_score": 0,
-              "image_sha256": "641073fcf9ef10288c2fd7556daf086dff716f23be8cf92e87833e3b1eb092dc",
-              "license": "Public domain",
-              "reason": "The article describes an English-language event about Finnish working life rules, including small group discussions. The selected concept is an empty meeting space with chairs around a small table for discussion. The image shows a large conference table with many people, microphones, and a formal setup, which contradicts the 'empty meeting space' a",
-              "source_url": "https://commons.wikimedia.org/wiki/File:Asif%20Mahmud%20Sajib%20Bhuiyan%20Speech%20Dhaka%20Nagar%20Bhaban%20Eid%20Ul%20Fitr%20Preparatory%20Meeting%202025-03-23%20(PID-0002822).jpg"
-            },
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "4317a835707c8e08e86ddde1e412c54025e210be377bb0218fc8acb7d6b8318f",
-              "license": "CC BY-SA 2.0",
-              "reason": "The article discusses a small group discussion in a meeting room, while the image shows a large conference hall set up for a presentation or lecture, not a small group discussion. The visible setup does not match the 'chairs around a small meeting table' or 'empty meeting space' for small group discussion as required by the concept. One or more req",
-              "source_url": "https://commons.wikimedia.org/wiki/File:Empty%20meeting%20room%20COP22%20(30980793081).jpg"
-            },
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "8cc2d162251bc315efcb0cb0d89d75b65e9b8363536201ffc9537311d2fa6be0",
-              "license": "CC BY 2.0",
-              "reason": "The article describes a meeting with small group discussions, and the concept specifies an empty meeting space with chairs around a small table. The image shows two armchairs and side tables, which do not form a small meeting table arrangement suitable for group discussion. The chairs are also very ornate and do not resemble typical meeting room ch",
-              "source_url": "https://commons.wikimedia.org/wiki/File:Meeting%20with%20Shinzo%20Abe%20(01814381)%20(49582194333).jpg"
+              "image_sha256": "0f2d9c8cb5aed55fd40f6f127a064224b1dc6f9a08384b551eb45a17fae0f399",
+              "license": "CC BY 4.0",
+              "reason": "The image displays a scientific chart with data points and a legend, which is entirely unrelated to the article's subject of a Vantaa city working group, entrepreneurship, and youth employment skills. The selected concept describes a meeting table with notebooks and sticky notes, which is not present in the image. One or more required concept eleme",
+              "source_url": "https://commons.wikimedia.org/wiki/File:Technosignatures%20chart.png"
             }
           ],
           "concept_rank": 2,
           "outcome": "no_qualifying_candidate",
           "provider": "wikimedia",
           "queries": [
-            "tyhjä pienryhmätila tuolit",
-            "kokoustila pöytä tuolit",
-            "empty meeting room"
+            "tyhjä kokouspöytä muistilaput",
+            "empty workshop table",
+            "grouped sticky notes notebooks"
           ]
         },
         {
@@ -259,68 +262,68 @@
             {
               "approved": true,
               "fit_score": 9,
-              "image_sha256": "d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8",
+              "image_sha256": "f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42",
               "license": "Pexels License",
-              "reason": "The image clearly depicts an empty meeting space with chairs around a table, which directly illustrates the concept of a small group discussion setup mentioned in the article.",
-              "source_url": "https://www.pexels.com/photo/modern-conference-room-with-orange-chairs-36149083/"
+              "reason": "The image directly depicts the selected concept of an empty meeting table with chairs, grouped sticky notes, and open notebooks, which is highly relevant to the article's theme of a working group processing proposals and ideas from an academy.",
+              "source_url": "https://www.pexels.com/photo/chairs-and-table-in-room-5505925/"
             }
           ],
           "concept_rank": 2,
           "outcome": "accepted",
           "provider": "pexels",
           "queries": [
-            "tyhjä pienryhmätila tuolit",
-            "kokoustila pöytä tuolit",
-            "empty meeting room"
+            "tyhjä kokouspöytä muistilaput",
+            "empty workshop table",
+            "grouped sticky notes notebooks"
           ]
         }
       ],
       "selected": {
         "concept_rank": 2,
         "fit_score": 9,
-        "image_sha256": "d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8",
+        "image_sha256": "f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42",
         "kind": "real"
       },
       "version": "article-first-v1"
     },
-    "sha256": "d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8",
-    "source_url": "https://www.pexels.com/photo/modern-conference-room-with-orange-chairs-36149083/",
+    "sha256": "f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42",
+    "source_url": "https://www.pexels.com/photo/chairs-and-table-in-room-5505925/",
     "stock_provenance": {
-      "image_url": "https://images.pexels.com/photos/36149083/pexels-photo-36149083.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "photo_id": "36149083",
-      "photo_url": "https://www.pexels.com/photo/modern-conference-room-with-orange-chairs-36149083/",
-      "photographer": "Jakub Zerdzicki",
-      "photographer_url": "https://www.pexels.com/@jakubzerdzicki",
+      "image_url": "https://images.pexels.com/photos/5505925/pexels-photo-5505925.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "photo_id": "5505925",
+      "photo_url": "https://www.pexels.com/photo/chairs-and-table-in-room-5505925/",
+      "photographer": "Mike van Schoonderwalt",
+      "photographer_url": "https://www.pexels.com/@mike-van-schoonderwalt-1884800",
       "provider": "pexels",
-      "query": "tyhjä pienryhmätila tuolit",
-      "retrieved_at": "2026-10-02T23:54:14Z"
+      "query": "empty workshop table",
+      "retrieved_at": "2026-10-03T00:31:17Z"
     },
-    "stock_provenance_sha256": "13d49dacda5a48f323209e09c48723c0ef0d0a5d060f628e9f8f302b2f63aed4",
-    "url": "https://uutistenlukija.fi/media/d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8.jpg"
+    "stock_provenance_sha256": "36d8528852e2916832f5290b13772389e4225b304af3a1d3f937614056e78bca",
+    "url": "https://uutistenlukija.fi/media/f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42.jpg"
   },
   "new_article_files": [
-    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html"
+    "uutiset/vantaan-yty-akatemian-ideat-etenevat-tyoryhmaan-ba96b94ee71f/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "3db210d1c35f4915b524621eea1a3ac49474fe34c4ef4cfb3f26a123ea847721",
-    "_redirects": "4ad06c79fb3a21a9afac456e46d9531b97cf395c484594343bd6af01ea3536c8",
-    "ai-kuvat/index.html": "c5fb2110e3200a275e43c73c085d43f8ee0b54f898dc96ea9ec2e3bf2b830d1c",
-    "categories/kotimaa/index.html": "84f1fd6b3586cb320341650efd44537a557ad989048d65ced769a5d3536107e7",
-    "categories/kotimaa/sivu/2/index.html": "897df5cbe41e97e1f866ee7abac82abf6534e65db073650a338d400c2db7632f",
-    "categories/kotimaa/sivu/3/index.html": "3a3b04cf31e2c7cb42f1ba4846700a6be633df92dbf7d5f94eb15a782feb3cad",
-    "categories/kotimaa/sivu/4/index.html": "da485637536c72b1c0678b38d5d49179daef98dfe05a62c219bca9b7a25988f0",
-    "categories/kotimaa/sivu/5/index.html": "e56c55a455c66247fef3c6fb5908b5f4fae2fa0ea7b8321405fc0cceda5e08bc",
-    "categories/kotimaa/sivu/6/index.html": "e85d0466cf25f88511488ff92bd862d01dafd6a5bffd7fd8dd2a87f102dcc531",
-    "categories/kulttuuri/index.html": "283d01cac55ed3eba84b5e42d0aa4911790ea5eb39a7e5c585c54f38083e6375",
-    "categories/talous/index.html": "cd593ad39d5af01a75317f8eaba1d225f5f7872f82cd360e0864580b00dfa9f4",
-    "categories/talous/sivu/2/index.html": "9987d8c6bd7f4a6b887dbc14e990970301bb5590f0405b4bc6c536e1f567d830",
-    "categories/teknologia/index.html": "0ce68b8e2c028f8c6be120960d1bef83360eff7d12d343d4f3e02c936e1518eb",
-    "categories/tiede/index.html": "8fd1eb5e24d55a71385a067d906bf3c9fe1d916b5dd1d2ebd07b6bfc6d79df7b",
-    "categories/ulkomaat/index.html": "034ca7e2fb757941c79f617febd2bebc0fe37aaffdc3d74c2475aaf04c09ac53",
-    "categories/urheilu/index.html": "50a7961855761d0cbec1615ffa94ed9b24e9f7d055358bbf197aee698bca8db2",
-    "index.html": "d5cf69a5aad4017d444a03c135f0c6f8df0148474c1674e307a2fc151b0bc618",
-    "lahteet/index.html": "8c0e5fdf371d915260a9ca1b5655969d5c2e8db01ea42b38f88a6bd085df1981",
+    "_redirects": "ed0f1b78f48c41be134d24cb424e0e28ec7e303fc78b0867b122d3cdfb1c31d3",
+    "ai-kuvat/index.html": "376a5d564e44039f3e2047b2234fab899c0146084ea7498b7ba2e7f045f87af5",
+    "categories/kotimaa/index.html": "4e476304a97c82c637d2679b66af9083ea7eb1312e7240662490f1318f06e2f1",
+    "categories/kotimaa/sivu/2/index.html": "5453842164314e909a95159abd4505b000c68aec90d75be4df84e41f4488b9b8",
+    "categories/kotimaa/sivu/3/index.html": "3e446bda1548a45f68bc565046950e2fb551461aaaa013e5ac497c27f1bfb7b3",
+    "categories/kotimaa/sivu/4/index.html": "b7f4c49b2b11a090ab71a82412ace9438c8d2fa06e320e132d0004978df27815",
+    "categories/kotimaa/sivu/5/index.html": "34f786478cbe28ddfe499241d29d9d9e47444bc331a89ba3eb5fabd0e9680cc5",
+    "categories/kotimaa/sivu/6/index.html": "0286a0c5f983c87c6c9f746cb9433f175bd0b461e044d01e693f34151a51b6fb",
+    "categories/kulttuuri/index.html": "ffc3f5437eca54de424af48d781e8a83b5e7dcce2d245362748e1474c5518f28",
+    "categories/talous/index.html": "2c6819431ef3f08aed67442d8e5899e329dbb1bc92a19fd9c82a74ef3df154c3",
+    "categories/talous/sivu/2/index.html": "c57b8387ba6bbc225a28b7daa9dbf8869d859fe78aa9a48787520b45d2c9436f",
+    "categories/teknologia/index.html": "973bfb840ec5d925c86740f7933ed16bba3df93dd652bcc5691dcd0d13777cc8",
+    "categories/tiede/index.html": "5426a08bb016738c6321e99ae8695bd7944143ed27f4e4d39326e036c3de6455",
+    "categories/ulkomaat/index.html": "a47c08c4fe0a2f1b7ea7a4580e7a5d6d62c421b5e4a02d266f352ac15baf6ba7",
+    "categories/urheilu/index.html": "cf7d3d0e21381b4a13b8858efcec9c13f812d0366d9a3bec885ceb8ec8e6a778",
+    "index.html": "2ee1608d3dffb238ecd9754bbf4b4b0b9ee97d07cf0043b957e63557658eb841",
+    "lahteet/index.html": "6c88343abcbd6d2612f0acc37545fcd8a8a9086c8279ff451d517519929c683f",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -774,6 +777,7 @@
     "mvp-assets/f205b5da5a78e7f14d1e26388e807f8389df7dd08a251e2dc717e038af2875e1.jpg": "f205b5da5a78e7f14d1e26388e807f8389df7dd08a251e2dc717e038af2875e1",
     "mvp-assets/f2d0d54b625f8b019b6279df58d89e6769c9a8b44bfe2489187bc2d9a6041630.jpg": "f2d0d54b625f8b019b6279df58d89e6769c9a8b44bfe2489187bc2d9a6041630",
     "mvp-assets/f35d41131f02c98a482bcec99d21593c7a3d47cf722612ffb255d336324b476a.jpg": "f35d41131f02c98a482bcec99d21593c7a3d47cf722612ffb255d336324b476a",
+    "mvp-assets/f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42.jpg": "f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42",
     "mvp-assets/f3b4de1cc53bed3840d32bf0b67ad9410e6e169e3412877d745d3cb925614359.jpg": "f3b4de1cc53bed3840d32bf0b67ad9410e6e169e3412877d745d3cb925614359",
     "mvp-assets/f41810828fd41b4377a0e1b592c8f32e3abc6f9151c726766d9d43ff2828eb40.jpg": "f41810828fd41b4377a0e1b592c8f32e3abc6f9151c726766d9d43ff2828eb40",
     "mvp-assets/f5bc504ee52b30fad795c3ac968f6d33f2002d13b389a8917e47801d5e9bba5a.jpg": "f5bc504ee52b30fad795c3ac968f6d33f2002d13b389a8917e47801d5e9bba5a",
@@ -823,29 +827,29 @@
     "mvp-assets/portal.js": "ae7a9eee9306242d93362e5d9b19506af0cc9aed46e19b75c1b475bc3727c92a",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "637eaf4fbed4956e14a5ff0c21a902876ebc471c444ecfe0579be588b8e5e25d",
-    "oppaat/index.html": "69fd32c5e36a1965781034b736f2a90ba0c73265550f02a27ef3399aa5cbc97c",
+    "oppaat/index.html": "0dedc90a2a669aa03b08e7fde220b1aad96246cba4318523f92a0da88d00149f",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "96cdbe7e11c9ac071fec6cbd19bf7ae929719f3c45ca02120ec12292d937dd96",
-    "sitemap.xml": "2216ee8dec968afd517d6839510a2db7f65f5a02f307bd21ad83f1597abca3e7",
-    "sivu/2/index.html": "7ed33d91e92508a5eca5f1a5a242eb594e91899053f854bf7100c58200696bbd",
-    "sivu/3/index.html": "2eb7376a9746a114a34e75afb26464a9afca42f23ad47273b9004adf03b65c19",
-    "sivu/4/index.html": "7568bc7052df251dd264bcf6ba5b34f3e0195b05dfd265efdf67f526213d3a9c",
-    "sivu/5/index.html": "1a2fdc9e04a33d2b88406877f943b8bbc09864eb05769e58801efc582bad8e65",
-    "sivu/6/index.html": "eaa3eff26593feca921d2c28a30510fb9e98cfe5201f03bbaf4b0f7da9d7eaef",
-    "sivu/7/index.html": "ce8dd204a5b9a2a7e1820dfb057afc31c9969c95ffd31f8352a83fc797bd0f53",
-    "sivu/8/index.html": "7f1c74d60ffe201160b4bf99d0f0ac49c1e8cdd546011b30182c899874a5b48b",
-    "sivu/9/index.html": "81c2d3fa1b9133536bd5f4f20afb5f5f25dd3e0090a5843c07ec965c33eb2056",
-    "tietoja/index.html": "aac028bcedfbb19beb8220f33483980b8681ea739e36491cca3c0e2284b76cc9",
-    "tietosuoja/index.html": "85b98e960b7f3ac8fa26271df91caaec345397c24f43c7acaee505c3f3ec5831",
-    "tuoreimmat/index.html": "07bbd51a4a1bd6397d3d29850e6184fc0c3059cc1c37dab11772faefb19f9ece",
-    "tuoreimmat/sivu/2/index.html": "5740893849ca72e10ed46010c61ea51e8aafb38390bf59b9fdf455a66787bb3e",
-    "tuoreimmat/sivu/3/index.html": "55704f5ae31e69cb4671c89ebad2aa090a8ed4271c9fd8d2c693997ce4cae702",
-    "tuoreimmat/sivu/4/index.html": "4f7380e33aa217b1a3f5f84f2111ebcc9fecbcbf05c134a9c722e99d955484c1",
-    "tuoreimmat/sivu/5/index.html": "b1d24bd7aeb76ced8cb8f834e0ce84fb5a293b7cdcdb1e192e7f99611cca93ff",
-    "tuoreimmat/sivu/6/index.html": "7e4d10127795567245383ea0065c8d77a7904c2cadab4462dad09c5383115da4",
-    "tuoreimmat/sivu/7/index.html": "a48b77cca0b6aecdf8761b55303bd5f5eb73148b282b76e9071e61a9fa24f227",
-    "tuoreimmat/sivu/8/index.html": "5c995bf153dcbafbc3a21c2b4c02537b4c5d4e5abd7128e086a6935b3a679c1d",
-    "tuoreimmat/sivu/9/index.html": "af75292b4b310006c0d95f85bd06468744edbcfb7ba70f856c3ef6844e8706a6",
+    "rss.xml": "c2b86fe37cc05cc24192364d591b574a23779381443c8ef73c02a9f67f19969b",
+    "sitemap.xml": "f7e5f1e446ca9ce4aff1e1b05a0b2a508cfd777a23ba5a2e0816797a3a94cf0d",
+    "sivu/2/index.html": "5794144492d39b9e01cc8dd6750160f792153d5dde0f4167f862b833c17c2714",
+    "sivu/3/index.html": "d03d7bffc693c1d371c8aa5b88c03a748596e6d04fd713f60442c0b4bf556310",
+    "sivu/4/index.html": "3ea4c63cf7e0a7199e48d3531462e9b886679ded15b3f813919db928b6b0822a",
+    "sivu/5/index.html": "93932069c555e16d1c1fd0778aba59885554ed6435a4aee805725ea33df9ba2f",
+    "sivu/6/index.html": "92d928f3367deae463175cc5c0bf23d1a6aab87737ee057f8e8bc389fb491629",
+    "sivu/7/index.html": "c2492b79de4084090bf6d42eab44d9167508b589ded7c0ed3a8fda2870e1e492",
+    "sivu/8/index.html": "4a1be024cdaa60928fd9ba905599f79e70f64930e53b2a0d342ec02dc825fac1",
+    "sivu/9/index.html": "b5929c00049011738f1e984f1b5c0ab2ca374f5b92db584db64c25265c396703",
+    "tietoja/index.html": "d77faa1634a3523a8a22a7d9f4aea06b31843d9e1565627d8bfc10f9e5516c68",
+    "tietosuoja/index.html": "05929fc1a4377e126959dc310865e4f9c39b5727c4e7747a594bb2d31a86e3f9",
+    "tuoreimmat/index.html": "42448a79a9087edefd098f9af8dbb06416e03682cef877c578de908e35fc89f4",
+    "tuoreimmat/sivu/2/index.html": "15d3a81a0ce53b63e170a036d90216ff11fa0265a4aa5bedf6e80930d6835c79",
+    "tuoreimmat/sivu/3/index.html": "144119402947b5a81356a655ddedf17de0ba5c99dffa46779e0fc47997a26193",
+    "tuoreimmat/sivu/4/index.html": "9cb20887eea24fd349a8ef158fb57398034ec96ea6055de7a591986828ea4bfc",
+    "tuoreimmat/sivu/5/index.html": "c20953b073a14340fa537e888b705c6e4ab9d5aaa7519dc5127d70936305f270",
+    "tuoreimmat/sivu/6/index.html": "e99b9f704a9ba836e82c707e022ab2937bc5808da41308cad26b4753388f43e9",
+    "tuoreimmat/sivu/7/index.html": "58326ad191c25b6799ed9c9ea867b8e8641dbec5ffa86adbacbbfe8bce3222f2",
+    "tuoreimmat/sivu/8/index.html": "63d43222a0e37bf4671c1f3beffa57afbbdc19ea69c93255287cc4f1570d5412",
+    "tuoreimmat/sivu/9/index.html": "e9bcaccb258d32ed84eb1884afbb08f25608b6e875fb6161ef48947e66497086",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -859,371 +863,382 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "fcaf67f8cb451804dbea762ffbaf3e3d14969711f515b12d7b158ef000dabeaf",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "1df0dbbaada9925e1332c723b4eb85dfa83f967106a6928c44d4c45cc68d5016",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "2a2cd73143d38ee63655b5a92e7e1cf86551423ec5fd32780f0271d533f08c59",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "7469852b258d1bf54c61bf0546c410dc5fd181365ef1c3f598034e52106eb3ec",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "d365b420e7b1a174f0b0a9d23b539d32269fe0bddc95f1196321d230e7327da4",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "f4d74ca4b88fc31e019b7efd6a65ff9db0ad1ceb6ff6cef84e348ef3a698c161",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "ed843cebed435b37bc2d9334eeea288d23cd22759bd6fac0591162d8d598ccd9",
-    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "7393b5ba397bdfa76d4b1a9d4cd528b3b0d7408149d348bd9c2b3cbb6c5a3ab7",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "d12470cccca7c16c1d46aee9fd91900e54b63c898dd38f7bbd60681b9242eccb",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "353b242d207a2ae075314c6d58de89571d45da3a5c0a234d1ce2a35b4041f14d",
+    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "0b4678dead4dc79c3171da907a3a6dc55b1d04f6363e8557d93020fc716096e1",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "5764d244dee88726e2902d22da6ca77764754abf9f60512ac7d59eb7b57c98bc",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "30eb0c9cb2c4d4f7fcb59261db1951815be648bc75cfa210c2a41104d461cdbb",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "52dfd110f1ec9d0c7420e857302fa47299702353d7ab4765bb06cd5f89ce3745",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "aa3fa700db4c74d2d7685b446633f077dab60466c3ba8e42e499590648f26679",
+    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "e7acb5a930cf18a9db12b88a49d9b6263b58cfe98700c228d8e8802db5643d87",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "e5fd156e24f4163ffddad220c2cfad96e265888a63109ee2478490a586905a09",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "f4191d588505d3356cc3f9034516ea68e0f823ac61d694f62a5e122eab7a3604",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "1cd95991dfa37c71717f0c2c8d2f7534e39b6e2380596a9ab0fd0ab558582e02",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "82c71bdb49e1df934abb8df2b86d9d4c978478fd64185df58b047138d1ad47b6",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "66aad1d24fa5f774cc3d86763a7e0a909fc8d5a8da99506e476e20202e96d909",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "5d325542360aa863b06acf9ef6161faed241c42da839687c465702994f55026c",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "8907a8299ce45a26a6f705efeee22b65a676fb0c03cddb8522bcd274ce5fbf43",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "620579cfa09ac6002cf301e88a657a1ede7c7fd62b9c1808340065ab8738a27d",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "71bc6d91a6ecd79ab4483eb755936c53f7a183fdb9fd28d353ad242ca3e600a3",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "e82ff44c835ba883024ee0bc133709bf84958b1d5e4ec0362fdcc75cfd444484",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "a413c11fa9c76b37252b10a8e54b73dac960c1d0533e7f4fdfcc64aa29526a36",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "c6350fa659da6cb7ce1d5b55ee940fbfb15632b728c61ca3d95db109a9fea57c",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "581579ddde3aa5d8e7dc4cbd02c9f14d6de5e19ef0ee3d5ff40ad382262c6c9b",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "ac6040bf79775a46c0d5d5632d08da697c0ecc138fd3ae29fbd65f05b5ac35d0",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "a2fe1e06fd0276415044a1ab78b5bdeed8db4b1d205e0d93c8ef8e80ef98d919",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "f6ca278a227d4801719cf0a2bcb1175bb89a06dddd05d36ac494bd1954d9f7c9",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "ff6a082afe601433d1c5efc08c4d317146b539701eed9b587e977e1c6cba0171",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "d3f7bb40bdb04b03461915e1f5c9914c5d92f76750a8ebf7075a9cfc6fb6a543",
-    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "7edeb6113b8e8a960723f9e10f6826d13646f851e4d7eb4dcb19ed42aae1e232",
-    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "b0a9bdd9674ed4ffca63e4539a1d04cbeba3a8c06f5bb2ad9dfbb65d0663f172",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "dd90439cd0e310d3e116783f6e7e03a65f3680753f3dbcdad2e56ee8d15f00d9",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "dfd247bfebd1f5dc5f3e24daef7b8387ee3b9fa7f6edf751b41431b2207437c8",
-    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "213107f9b2cd55290b3597025c545b0b264aaf7a0e607e71105f4815b6cf6e3e",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "3640d5ebe94acc3adc7a544418582533d09ed8786a8d3eff08487372a8699b84",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "103dd50c9290ff99f258c5d608bb49914ce7219dfd147ca61e8d1911bf94ad8e",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "1185c07d3f867c300479566edbd019fc141ca2ef622f886c4e4de991f57e8b61",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "fa2e9a3d7e5f09f1614d4ac9d5a3d729cb54adbf1b3f1dcb13e988745b80daa6",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "5589de150af07f4e3b379e10e8578d215996490da641910ad82cfc906d9e07f5",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "1efef19e0eaf9144103ab93e355f3e5adfa13f3700a799da71ae97dcd7bb9f32",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "3d3edbbac075420baae14adff295dfdb65c2ab8b02ccd1b119252af6b6635c28",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "e7abf4cc446b980c979cb86b64e4daa1592c91aa0d9ed86e483b405d2be59b30",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "43ab443a537f725f3fe80c5307c7f66cc7bb781c8fa7759e2835bbacaffd605c",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "2a337d58b8188298b6f38c346eb5e16d608d87f65a6d8ff83f1a063651d5af6e",
+    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "36435d261852eaa8a7cf3ed48c303fe9345f0779c2b6a51bb34e7f8ad52a3748",
+    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "bd76e9c8211a41a9edaf9b79f9912668e34548202576cd83d0005c2807a0eb01",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "982773e89493ac02fc9359e4a087b70984de373b712dfe87a4e8cbab187a7a65",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "2042735653cca4824ec3f5114928f15f103740fc468de664317a778094dcd5d1",
+    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "6a903a5b9e3c3f79613f4db9748d897bfad20e38b18e8e7d3b7b6eb3c79ab905",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "e0596e79119c60880be64482762bdacc44a4e3819e933a595f7008ea1d52308c",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "20c25406a8c95b4545d36667d3f74293f967a7949368ba684b279a61de7ba38f",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "9843f304511dc29474e06a16316a4e47ecd9a6c64fb2c84fba52ded706346a4f",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "8e641a45adb070c0f58d6581fabf6491f91c6f3ed18689b9b69ac62dc9439c75",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "e027c248c30f1b8a6a2273596ac701c7608d5715235ed62d451be305f27fd896",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "4f3436c4a823f7a41bd21f6b46b1221c6342e9570e6f855349435af8905a6b1c",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "ca9108aea6014946e4a473f749a2f15c1de8f551b60cbaec47c7d24977939e5b",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "8cff4014057e46fd4e2e88f8d5d0c844656d32e50512d5626d586b9e1923d034",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "5c58750c6e1f8a561c8d4639319a5f5c1172f7691167be3b33cab01b63528e9b",
-    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "a3fa4d7fa8f7048f18eab53bab9bde33ae4befb47f54cad2adef732955b95e5c",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "0ec3bf1098b2ff4acbb0cf50f358660aa78940cdf931a74285f0e8b0392fb155",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "eb66a8df6569d3ad7fc974bcfd0bcedda4e162c25fbe4b8469b81871df4e62b1",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "8729c3f27966a20ac3d414e3480223f8690c86c18711dd9e1cbad4c6b4d0ac83",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "078ac63fac3201384c04bbb627cee8e9cae18c3ff8f7f148ab412359b0011446",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "6f3e5d704272fbfebd3ba1be08d759fea3f0cfe6d4f022ecd3ff096d7b121e39",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "443701e20e20b6fd81c97b0d14a208400f0882bcff75c45bb61f8f8f0462dc5f",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "52c7eb0d87e5e832808ff8a65d3cc930357389bb5f40e940ff1b13e3f830e5a4",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "10221eabbc254f838d98f7fee4a6fb1d6df98a6c4a00a1c20ba4fdd13702de8f",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "335c0a85a44483aa7fb151d74f7a51eeddedd7374deee6c40a06404035a3ce65",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "fa19ea13c062d33160b1ef4070cc6e057ebed5197d4346d058c94baec60b144b",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "bbf74bfad3cbe70568123b9ad04178aa4e260cd52f6c637fb80a15bcb03a2c73",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "33ad4fd484c0e247a9ddc3f8e50826aa97f1529ada4e00f7e5618a5948983066",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "01c345eb9c92e9d668a83d6e8c305ab0360bc746500af30d4ac63e6088b43ca5",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "78c562dee3ec1009d0bdd392daab417834922984528749eeb9e4e66d5959f483",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "33cc0c6fce82c73b7b89f7fc9862eb383c7963a2ccc0a8676f83d59cb6f765a7",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "df0666979202ca60018dc7b70a64b35741939f887d442119235df76cb21dc498",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "fca220f4cb7d8da3c16282bdd9d2c45d079c92b54c8a4c67e76680e633948aea",
-    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "ca1f04c4878f0bf26126cf780a9c4f00ba245bc29082157e0eb7dcfef11e3a41",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "b856acbf4bebe6e2d96044385d9ec8d027e0cdb2b389e62af251c3d8f8be0704",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "2361b7640f94a2ce3113317fc9f80cc87c718f78f1cd2940e6b8dcd70f59c05f",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "130531369331a0ee3a2383ab249545541ea6ddc9a7221539d7e6b9bcc2a4a150",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "65647248d578ef1646bf16d355ad7c7d28ddec86849c6db500a898ec289557f4",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "43a5c004fd0f11716250d2f69f27790c208d42210b9e727e862fd20903a04511",
-    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "54f067f23069a398335b1f301fc0501638fca67e23c94761cf560a4fd73e9937",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "0db1ee4b6513115ad6ac45a548e9e1816e8958284813488ae4122c884ee201dc",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "8ba5a53e992076febc17f33d9ca46a0629c7edea4d6cfa287ba9ead65023b7d9",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "6dbf94dc7ac21055f3a16fa88c5f50cb7bfe0821f15d447a8f207a85e048bc10",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "9411283c6f2ad8d6bf85e6f09be0cc0b701e8684118bbe560b3569d3976d9737",
-    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "973f48d77f110e7532c64c48b5c44edef3a629dba876e50326fdca2ece85a103",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "39c475ff3722e47cdd7033ad601b1ba1be3eda9dbd0324d1aa216f93ad3f874c",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "665cc9461c36c2969cf79af60a82bf4735f9e73e9d53adf979c67e59c67f9854",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "76d2db7f711e73b0a59212c444945f0ec1519f90bbc15146922b402992d23969",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "bc9b501e31edb415129d6332494e7560029aec72b96632c09b561ed5ad9e6cf6",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "5f847eb7363dcfda6580bc746a3e76b9904f5dbc8f3cd1aa51c6250f2030ac1f",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "143249edb655e4d75e52b506759d1c27426fa77366bae659907342b6204fab6b",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "19c3576afa57b531fdb3125000be39897136cb48606ac5b865f4ad49a41b8368",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "059d68cfc3748edd7387e51cd53eaae9e12d819eafdb22fa1c372eaafab4e784",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "556449de5c51ebd5b56d2b73676cefe40d8e455f8e7e25d9fdb5506dfabca777",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "7f5394537d5da92e705f6e58705067392d4ffce7b001836cb4afcea86fe11331",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "8d0c2d139c8d428fe00ad677dc27be87b31bf5e3d9c0961045865fb5a5bb4e2a",
-    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "7668ccc8678121636284aec47303e81c95496f20d4810a05afdb5b362c250846",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "08e1a38b848a840600dcadc3231a0ebe1c8c8803c3919bcf979dd82411ba70a6",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "123399a45a95cf78878a07e9bf259e89c84d655f32feddc5e11e854aab4751ce",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "c5d4523c2fb310ac4d1f2d735dfeaf8f0f0edf72435d8822e821bbcb7f3fde53",
-    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "c492164474da93467c035dcd95cdb745aa909052d7ac41d7d10c7023d8a0f676",
-    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "0ec07e8bbcc09c7fb52f9a14cfbd726e8fffeba1795a5ee9a79c499cba49c3ca",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "d825b1525604e5729ef42769a2134f85c015676494487cffe6445767d0f79d71",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "c0e9f5d5e277fbd2827dcf117dd61f09fc1b7e4d3eb0a0197e56978d51af9338",
-    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "3d722a90ed30b39cbf4103a4873e1a7d2d334fbf9faa63fa3fd198ffdcc3993a",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "634242a81be5a4bc114077502e5504b7fa7e226cb21f10a666d6462eff8fbdfa",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "1c4ad24c59dfd52d16d5be7c6965167caf7842f79c51292da83c558dae1a2627",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "27dc4cab0b10a6619b5eca3b13f459fce82b7d1a504c6e88f033c898d6913a16",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "12d1f569fa025a26a7bc3071b1a1025fc8a3715a8433d2407e505f7eea74c86e",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "af4d011f92f0110e7cbe4a81e1b3740ecfb815fc89d3a2fbca10d1982128daab",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "07d4c07915cfa659e9f0dd6a4bd2d1567b4f3e10f96ad93e19b38a9fb482db96",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "76acee6b0ec21e94bcc81ad942658882a9a882a606b7d9f95d9cdaa82f778a0c",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "1ddac7a27a5876080d7fa389a66d100f4462c91f30024f4782887c524b4e1d1c",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "1d5c92f7b506d4e7c7d0fa3962edfba25ee0a9927b5b6fe706ea6cf5ee6bf473",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "c1bcdc3466291f140354aeb0a03e6ff4e4ff722b695ff7ca798a02757bd9b22a",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "753b1008538393949e48b17d57db22e7dd46928222eba7169a66427494c024bc",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "4af22f2d35f417ba9ff4547e614a9f0047686f3adc1027b5eb0f1dad3d2e7993",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "9d680cbf0c0c4389efdf11de6768f5daabf2b26df5edae980d11e2787e23ada0",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "8be0a129718487c70f1f9569e6c8df9905e3763d1e961310e98a5e4d2fd98794",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "5d6ecdbd7027ef3e67bc77fd006147fe7457cfe71beec426b881756939566a5c",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "3d30a58729296f64fe9904214ec00ade2b219b45edcadba662b696485f8d4ee0",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "ebbf3a30937dec65ed6168485283f3c3e4c5c4a0ed2e76f79701eb9a0932c674",
-    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "203fed169167883acb248ce1660e4bfa21f2f05a95da4ebffb487a8879ec1fad",
-    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html": "2d0481f8d94a9c3e17a6d8bb60278047c51d8ea8fc6b8f72fbebcc66d6cdf4f5",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "f7e5e5388fbd58ef5706317ce14e009fad65554dbfef05ba7d3876ea828d2296",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "e52f3da6757d7908cd5cfb209e5f181006bfa59cc56ccf15dc863e712ac35c06",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "f671cfcbe1eb18f616d846f3fa4a90592e436d40ea2a06d1e2c259b3c0711984",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "7293952c4a35b11a4cdeb971561ee3b273fd5e2b2565b7441cd62834821dab95",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "8edb0d8fff5c1d6525583ee03be9a27c9ca07728f26bb7a626559fa78ddee6b6",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "1224a139ffc9240695cba5b2a1dd626bce969b55653fe01caf98db7e48c8665b",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "d98b97729a3e3c9d625574cc2582c2ada709f18ea483ea5ec959e522e00f727b",
-    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "f6c8d8dc600631fdcba0b0db43fb6b2b4205596cc416effcccbfb93188a88805",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "a7cfc40a9c5ac140d1c6e6cc20dad36249e089f1ff9a020067208b7d22014945",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "f49e51d018b6c9e16d40c547127e8a2c376e922b9817f56f1c00af476977554a",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "18507681b7493b99191674b5e962f0612723aff161e9bb215f39104ebd2c5271",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "f6e26f01daf02e9dd145a5803dce318bb42d5ad30a1e6af8837055867015e5a3",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "717f154fe3b6649396b6103e8da6973c12a96cdc2aef8956fa8624f09e443fef",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "3240e12c94e946f9c2f9a6fe94611a2ed387db8de5e57d2aeec8ab927745c688",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "10ff291e17cad68f5ecdd4378440e5c9e3ca5d38836f831dfae2a17abed3e61d",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "94884b2d0268b0531c129d7d9da0623348375f0dee8b7d83d73cd2cef0afc27c",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "76b9380c693045cab7d0a9fdd99a4fdb16b7496e36ab82e92035d878f56d4972",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "4ad409890e03787cae49e02edf3e5f4c37767291cbf4ed25748218343e3c86d2",
-    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "aa06ff99b77661a2ca4d468504d9b9cb105d5f9ad0b3679613f873f55561fb8b",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "77ff0abfe44fa51369a7561a5c1d909b7afe38f0595e6775034f785f294a0dbc",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "ec1e51511cada66b153451b036855b69616c9dfdf758f2d094615915e5230ff4",
-    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "8118b99cad5c903c2622decfefe6c0dd90bcea658102f9fd81719f59793c0bc6",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "121b5e6478d78d99cdfc4b617c77ac8815224d4bc5a11de0825ecbd0d2bff7ae",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "3b51d5e4a5d695e6f22395f622870af1813802a3a704f0b20394f8b205f80d64",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "d6b866e883f0104a7b3631dd7df7b9ce22839e887a7cb4c3d2f6f09a7d8b809b",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "6d57dc879cee7a20700d1c899207934123734fb3c0ec93ffdfd0da908d3a7829",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "cd01439d1ed95a80ed35e2d9dc9ba037265560ed151547eb3debe286d867f4f7",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "8d98e85a4bba92196ed53f8d0637710bca7f16b51964ad5bc3bbfa25d0aa13b8",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "32eea9cb81e16552af25f3fb208d8573bf407a02bd12a3f3d6f44c6527f485f8",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "d88242275573700b1a72bff033abaa3ca0b6f9d44e46f8b88618affea6e42bcd",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "cd55c9e80b815a4901c6326533477fe88da1c6c32374f233819fa13164510803",
-    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "4acce173b3c8c4b0160cc1dfc652318d3b13d75529edce7a8ea2611bda210fe4",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "acbb9c564970f5304bd952d01a601beeafd7833c9cd53fc56656e2a748e1737a",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "d7d946f690878fa0d7a6ca3915f506e0f52a9565ef0f66c1011b37dc107be115",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "01e173cc9a43c1e3129e23c158f65375efc7f48545cdb41c66721a18a5fad8e2",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "7ba994569e6249e4ec7310146a1a2dd9f5fb9340e673f343819a2447e9a1b9d8",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "b40de264e216b35534cdde78f679125d063fe92c865efe7a5f9ee27c62c00fb9",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "3fd9ff7e4aba56a6c605ae5b087a4492d7073b65a3309401e0be69280cf0bb29",
-    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "58b3ef3b2e3cb42a1f01365fc5f759ea36144b95c692916d98bca2b2c5c0e22a",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "6cf2cacfa4352ee0b7e675351266b674c82791f74fda4f721af50eff10241b66",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "b5cd3b402df497e7448183c562ce6e4eab655d12d55fb7bba5eaed974a4ddf77",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "66e16d48f6349ed8d2aff1f6dd5ff5f97ff4cb4a679c7b13b346bcde92709cde",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "cd59f75c2fcc67bb77a03b91a1a7f6594da51089ccd2b4dbb3298e4c82daa29b",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "dc23969a5245f48829d9355ea592483d793743f164657db3e098b0eb6f163e09",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "235458f55f3033f80c1c058522dfd4306e19bcc044858af65aa1e6b2e606094b",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "8b15bc7f3a5e74961a06099c7f23ed7f7d64de375613611c6e695f5598ebfd71",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "8b7ab88b15af267c6a43f6f102cfcb1803619bff90fe13a2f376d18a4a781f49",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "9c990b390251c949260adb5056682998cac4817bde0cc39bf90c0ce232b9597a",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "3f6cd0e74047a9c3e035dfcba630d64f6c0450b45e9a44075e9c1989e9446611",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "cd94b0f438fce1e76dbcab0520a2871b392aff3c1c901c45036f1e04e1c78dc9",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "41e08c53eb5b8411df28d7ae3bffcecb5bfbd89fe3a6019ff50fd97b609aa228",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "e971c6de0c7ed7816311250e7b0acf5b942c41e10b745f21be56f24b288dd6ca",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "33f52276697701dc32475a17dbd9c48ed21f72c04d2745bde0436ab92684665d",
-    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "0012823df4d1fdb0dfd97feb8b5b6264d81061f6cbca2ffe69ece4607384a0d2",
-    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "d505a77c5716beb91205e1ce33fe19f9eb0b48be3e8f76e1c3871e5d619a0dee",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "560f2c74c009d42634b4e8d1e1615a65aeca0ce37626a0c6d2658c3fa9f03c43",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "eb72fe46ea8a27a1d025fa2df6e64fd78348833f8f1115f9cc27bc444992165e",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "6f2cfef5b1139a99b85b5c7320aa0acc55455fd292c1350b437bd3190b3bb2aa",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "523f51b04072abcaff6509108dd96649d09d8619673169f9d5ee200b1e9621dc",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "2aed344f98903ae229fd123b1da3bfe21240f0dac27e60caca2e0af54d88ea91",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "b234f280dbd38bcf0ce26e0a74f2c2ed7dcd3599bfb87a29cb75515d2c7100a9",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "d00327de1dda4afb9528508931904df6d4c6a6d4903b0388b88da17f635c22e6",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "eeba7c9617be64edf58336073b88f40b9a3632208a530bcccbcdff40f41b5246",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "c525fb9379cc2345cf5801ed13fa21d39205354287ab82551c9eb4e0b4e30345",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "565c8ddca54522e47dd81632f59c95bdbd7ce10a50d3421d017d65b3705beae6",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "d89fa190680cbed47c5c197e474b7dd65bb5278f8f348f6ff2519ae371c2f224",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "4097a5c394bfd4222bda4eb14bb9c2eb36a48f8604597bdad4b58b22edbe02e5",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "0c2b6ce0f9a148f19625da5c65002520afe7d41819914afbf95c94be73d45d74",
-    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "029228dfaa06c814fb2e90a42f2b2f96f6501af235c45a009b682c450fe2fbab",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "2dc986d8a81157abb2607d7d9ef8d9085b21b4e435f30ee846c7e63bd35298f0",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "4f81b0aca70c4cd336dbd83a29a7485221afdf8ff4f160666aa1c2123cb5ecbb",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "a2e49e2e32fe903ee348b75de8c0fd955519a6ea6d4ae8c82045471b5a784686",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "275caa99bc8387a76cdcfe52b5f2180c6e53f3f4010e2a72e49b25b497d9b66e",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "251e553e6a6baa564f0d915a4ffa0249952f02463d9809472ca511bc056ecc61",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "6568b0e9707e73c2cfd4b834febdd12e558fdba5f4c3d4477d77980fbfe7b3e9",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "832c3206d1a05e321d7b296c6cd24a6d7656414677eebf2ec335073aadb66baa",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "f9da3d03b8f9231855b6582e9d35ef0585f626ff65d4215b0354c2433f89a2b1",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "5df1cea1dcb58c3d750d20f41513cf62008b44e780d9676627d02fde26ea0966",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "3660a2a71d8968db1599867d1c840a76c0819d8c0751e63e3e76832018cfc1d8",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "9d95f8c76ae4e3ebc121303d7f8fe06a0b18589d91c85477483621b2dd9ca4e6",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "5add35d68f4d127da83f9c3e5e4b2347e4b9e8e9a0330acf15bfcfa7c643b969",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "b9c5d1684064a21a87cd9e050d48d74e06a58164761d7d409465c53115df7631",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "3d6f2afd9e560f25ea08f33f074cb156125204cbe6993e1a84df6a0df05f63b9",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "a9dcd61b221b8b820673d6addb74326952e5c501b369df800a239a930bbb84db",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "8ff84c654f648afea4dfe9cb495f492ab98a5ba911fb5a6edf7a367568a609b6",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "5e0bec09d1e02bc65c933ea935c6640717f3ae832b62e54cbd05939e27d09f94",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "1e81cbbb16b10a029a68d18f64f92142eb493ea2892040ddd27c196dd1c9ced3",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "84ed52c90d7a5458d0bacfe27cd6b69691eb377def7b0f13694e4dacaccaeb08",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "89b5b9c7f4825cb7a9d099548977baf86eab61071a92277efe3fb7a4287a20fb",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "a3758d543b077f7cf74f842d2d7c693aa3f24c6b2bc82ced067c9840069db6fa",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "4b93aa56a8376859e3fa44ca0c85f5b0f58939f44f88726e8b76e11c037973a7",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "660b67746d69087c9a363729bf21c806ed6cf2856d525a08215d05e1541120b9",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "671b4c2781fa0a16c5b56850d97b8f67231a1b9299431322c5ea05cd1e4fcabd",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "f9f076c3cabaf255022ca7f099151d79f2fba231a238a5cb69e698c831a389e8",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "58a9790d03d84e48796e195dd9de69bda51f377b3a8b25c4872f159d40a474d6",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "4c6936198a35ef25fac34be6de90b71bc1dc62c90b70dfdf0f2bff1687b6103e",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "6f40589d31eff64d04548797b40101818a9ac83f366dbc0edfe4cd5853675988",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "1051a6c2d5fad7a187d18bae854ac79c994d70cace394790e4bf1fd4abd4681a",
-    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "7ce4455dc94d6fd6c691a15e852d73bbd9033c2229e40685b5b3267e930a0a0f",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "e75b49e7e0e9d65ed832a7c517d2ccea646444aee0695260b57806ec71685d3c",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "fe29affe6bb4d4a5c99639bc27ce4b928c2b604bfdc999832dfcce10742d9348",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "226b2b078c2af8d5642be019214d56202b38d9353a24c49a81b6fa6f7a1d0901",
-    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "f9ad5343bd3b3131cbadeb9d2f95466b01ad2db2b035d8006855c3a1b5f8498e",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "a35767c682b243f16a19f3fb99cbeca007fc5c7db45018ab0e52893e3de6bd74",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "28e9a06b2cd1ace930539020f76dbe24660063a42e711cbc3d6199415842c22e",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "cc871d01891eb2b0a10389bff9fa06cb5e820dfa5c76fefa3819e355d2717d6b",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "57cfe786d50fc9532ee4d417a60d03b12ae629d7072ffa2a00e70ff6584e1cf1",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "d9ea73d0627895535c495153ab40c349e322ef59211638bda8e905c8aef7ba4d",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "2f465f31e8ee8c9b8c01b7a29b140f2157e0f6ec4f73219b118f3e9c1d81bfa6",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "bdbdcb97685f37e612c01823be3e4efb44909f3dae5469b3dc313e539d6397c2",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "c8f2fa6fcaf941fa586573f99698bb19a8e42799bc8a09517fcc2975b6897a09",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "5a65ab875c8548a5bdf706df76a395e8b328993aa4f289ea07645144a31c9a79",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "c0a05042a93e13766f8d6f7f2ba20f7641e8882f7d0b80591909ee8dfd5e25d4",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "3fde7896aa04542f54ccc51fde28d4d2471de11e1c6e66dcc3a5250f56f4b76c",
-    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "ff47a4b7772025c9a3d1255c4ed83d5198d6b1208f66ec061f3295d82237a801",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "e230ebec46a62c68587a4cacf791ec77bc6e8ab3b74f42248bc817d2bd7b0662",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "08d8225d21f0d97a47037d861a485420eb2eee53737718714e8dfb674b26aa05",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "f9dd617656f26f9cddd5489d3838fb2233d511e663b39d793550dd9606cbb671",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "a83dfac4eea1a35a02a9a71506e6021a60fdd6f6ae8809474d1a7f23fd4bc57b",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "c9a6031e2f2754f34733467c9cf33d5819dc3491cbade488d6723939a1a41d93",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "a38083258edf738336cc2cadad6ad46346f08cffcc7410b8481edf057645c201",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "4df778ea086a53d98b4576144a2dfa654b9302972325a1b467e906c648c4acf2",
-    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "39531a43b9b23073c86d3601f1e4379759790ec4e5355449bace3bf326084936",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "96a8c18f6e0b47d17b3a351e0f635510d2ccb04f570dba596e031a377e583e9c",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "c905a80ba3d3bc385b2e1b10ee969c1b076bd7f82de3937b72514cede2278c2f",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "800fc867f0101f419580ef10789c8f32ea9ba1c2ec9667a747037e58717970ff",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "11ff64566affe684a7b9d89027c0c6bb2bcb7401c7a6d01bf138746512c9880e",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "35eb56196651b540164c5096c1378fbd960a8664de099aaafe9f3e51c5fff2ee",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "f4e485bd9ca7deee9867b423536e9bb8a4b51f0fea7d24a7a514af48f4620f5d",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "2e76af451197249d32964aa6ac0229278f1a8e01a2b337a8e3e8f2d8d009e6d3",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "0d24d77775fbe6b61117c81c4329de017d82ecfb7861ef991f845d8e30fe242f",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "cb29a1639232d8b7aa84181adfa632dd813d0e2c1d12d242570e7721f2f2fdf1",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "c26d2f6d1375f082010ca9b09d82307ce6ef1743222b919acf8b37ccab50f264",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "0ef944f60d5cc18e7373db20a639ee0b6cce1717107748418cf0aa44acf9d65c",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "aff987cc961e409764996fea1a1c8094720452247280590453b8ad1c8d3a85db",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "20b9cd88f4dd165685a08b8c04636faf418038871ce321ce9aab3c268070739f",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "72596d76b81dcb1d6ca53646c3de167a98ac042cea742a4fd914859bb01c0876",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "93bc7fb84548e06b8665d5214e482b50ca8cf2bcb283bba7fabd8ee58a56fd1a",
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "a0f1c769819f85d1c7e00ff6095d3c227c85432570fe125751a62d1e63ecc59d",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "0c7636c42bb40d233fe8c136d6449a6e42e024017a11ab7f1f2848c47caa9b98",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "64f2a91d39babb131723a53af7e42aa8341b8f9aca02c360507923fc5df86546",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "7b70dd9f719174428f32d1508126ee1c1b047a99a27be386aace485b9bb7f76f",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "c5d2587e512d200511d685a05c4333eedce44542451110512ad9fefa0fe864d3",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "d54f04edd5e057e2e3169bd1bf9078c38b443daf2d0175f683755d1fae1a86f7"
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "18037066d0c2f4c34afb4646bd656ed538c9aa9955082a88ff45c47a2da4d318",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "25c09388fb821095f9be42b6e031fc82942091185f18b8094ecef145e61fb2ea",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "a59d9eea26da6cfe2f809ff7ceb72c68a7a2afa2087fa0e60a0f41bfe7afe216",
+    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "1331ebb4ff1aec00864ce6c00db9e223df783d5f2e62607558e60a0bf6b147c0",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "cc5cb3a45ce649a539411fbb8238b0f0411139a861b6e2f73182f6e34c865b2f",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "1d72d6c3408db3e4dcf035ffd6ea5ba40427cb881208954dbabf794137aa6890",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "8fb31342ace9e3fbf833d1d55d3967ce5206fa03695768edf0e904fbbe0c22b1",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "215471ca55ff18aab8ae580bd5cfb6fe89595c6e8ecde0202de88991ca5e7860",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "8b3cfd38fbe4f05240c9ab713342e9455fa2c7aee4bc27c5d3d9c8aa16fd22bf",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "0edc8bdafe2e8d2d9ac5bec6877f7967546575f7fd79855335f84584ec8e451e",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "5fe60946021cf61db5eb7154a1fe21a6d6d6d8239dd885b73071a677d9185a6a",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "68efecdf8147d154e37adee69aa1be6f082e63e40c97b4792e85fa42862eb972",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "154f3eb3720ead5fcb4d5aceb83233533ede4885cec7ab9e4ac5e2018950dff8",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "267ab8dc4677dd0037acde353b495f91d5d90719ff71f96312beb86f45cac492",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "6722c008533e99c50b6cd330ac2730c8601ce74916a91a95fdc7effbd19d1252",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "b5c00bbd20c66c827241ccc10e2fa124a9d0313cd91b4f9291d7bddb25d3b55d",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "e2cbff188bfc0b87b146dfbf747bcce2714ed60fa9169dcff918dd6a021af46c",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "0393cd371f473397656564350cb2bd85a03a7d83305acdd638be5a2aa1b37ec7",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "627f0e11803a1fa8a207b8abeab5efc28e8bc549714ac9b5d61a2524d4e29582",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "3c394a471ee98358c2da2bc82cbc80e97440ae366636d11a7e0b9ab5e4a94629",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "80edd599c2cea1269f9f0864b72a222cd94fcb54e3b8fd81009e480ea58b4678",
+    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "baddf4d48f1c4e435a772c5046025d506e91d0410b650fc51b7299790a2e9431",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "be408fb02ebfef6db5a230cb560bf685c21c28e4055a77cd2604e90255b5cb29",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "4a63742b80723daeb438461f444b5d46a02bae5983a02408c27f5f2c94456874",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "7b24a860e87d9a7231d9d9fa63043602a181383dfe7f41e3e886e5c3702411ef",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "63e63039910bcd964f2ee782f4fa20b8bb96ebc5c2bc1c2b01959b7f01ce7dea",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "01be65ee42965e7d609a809d3a614245e39f74c6d10824fc021be920cb76f203",
+    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "83fd8829233cdc4f1027387fffa122f792e931d52da7b5b0545d1f0d8a2386cc",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "baab7a651b59b9f87eccb8968642fdb49db61e799420644bf63e02a3a86fccc7",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "fa8b436865d0cc18d28f120931812ccb76eaaa72f01c2ddc9a950987ba6bf532",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "bead466f13106c1f53d13d2434c91f1be822effdc8f41d5cfc42c0cd2200041e",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "0dc232287b257c0ba216480090dcc6b1dab6e1988318dd9c26e52409adb432fe",
+    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "3207e2e72e80aab0a6b6e295d826765a974a8547c37f6e5a815d6d5494a48d83",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "7f50a619b7c14c313a924638ebe14d3920fea7255445d197893058307ea8d8c5",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "3afdcfa30490425a0db356fadfe6ae6b9d45be5209deb9d1e84d42a9fa36178a",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "eded81551b2160e5c68ca0bcb7d3c55ef3fe40150e49f45e4223ec26fcfd5479",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "b5b78e40176c4c0ae8b9689f78ecc41c9668a85c8799abde7093a583edfd4fbe",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "7fe9dfe7e0b62b2e2f23961137bfe114a89cf3b3f1cc4616810e27e8ab68cadf",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "3cd1568652361a944ab430d0d47d7ff666094eeb1404c3d0d8f44d2b6ae6a4db",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "79e92df2659a2a8c02c28534e02289774b4eb4df7ee06b0d007eb87ad74380f2",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "db75bd37c571519127c0255f78825918bce65194a97d07a08e1b0dbdcc5b4811",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "49670b383daea69a590ed6103433e7a5d6cfc5b80ea933eac4a07a55760a26e7",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "3af659688621584aba9d0c11346d0a02ac1f1ac8fabd96ad8a765fb7e0c41d49",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "865e53701365258ea189a89cd46bf034211c3f32d8061270893508e16cd21425",
+    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "0ccf98e4f997030dd7ede152b652d9d20781b73e6e5f9611588358690fbe30e3",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "f1ad55ce5b02e3f7c3e94091e5e3c929932c2d7d573ad1ca3fd75f54430fbb93",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "5ff2df54d10a237c32802046e243d3107d48fcb035d9b4ea42b57f3b2d138412",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "ca0634ac06cdcac43739ace509ecf0b9632eb4593c4f54d6c8c659cb696bd623",
+    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "7381b45a9527537e094d964a948181af77826120ac4d468ea675d35e359d4690",
+    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "9cbfe578bf20a54c28774f5b942b620bc917585982328d3d824245911f591e22",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "84cda7119ab0e0152777670b4935206af4e42fe8ccfae05c306114d1cde39f75",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "300e29cb3e90d0754e0153a8d4bb0473e95a992a6e19682f8517961bade6d953",
+    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "966c95e92218296632a1bdb0e274268302edd4f2d19761bc5860d733d74d0736",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "637a5c1d0dcc4c5700ca5ad3ad25dc676f34c061cb281eb4c4945cc7c408e767",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "26ff2ddb11cf6d7d591d377a9af8f42c464e6de5f4be40f2f07de08ed5e55ede",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "7735c6fae2526321e19bd03fb2158bd023a1bf42a4267812e4fb5235fc282c02",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "76e33f66967d3dae89a32982008abcf60d18748b46c5a08752d11164a0923d75",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "26d945bbc7b4ffab3db9c299eb7c3b441ce663901e16d763940603389d125cec",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "61547b337d083b258b467d356acd6368b20fa2011556c1933d74843975010708",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "ee5784dd69c8d542d7e67f77c69ac0f703fb82f70cfa4bea17ee06d1adcc18a4",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "01b2e51db61e44e2b6e990761308685144c476f1792c7ef0524765820b594700",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "27dd78b05ed8eab2954ca91ed6f2ad0a4c5430f6f2b149fa45061a2638f4c8d2",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "52f2e51071c878f654c668303d833a7743c0768cea96e16843e0c5d765708837",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "07aa43f3cdfd88c6f7c135e640ee7f339cc6200e0a1ddd8ed7f30d648244f2d5",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "a0e0a7d903a0b7d62c4bc5e4bb13b198efb68099664e8c349e15c6e95c020c1c",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "1e4b51340e12fd6026f57920f465758fe00f529c3ca5d2728b16fb153e5b0299",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "d3298a80fa76dce0566cdbc877ae690dc478b15758f3c0c977829111e0cfd26e",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "cedc32867f28500fa14cfaf8971da0489c01f0cb07c0ef7476c490441e41b369",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "920716e051befb090b92ee6ad9623cb6b7576879d687982e09d271448cc8178a",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "d195e1adb4886b039cc5e16d0d60d07ad8adcdfa56711c2a5df5cb7838988523",
+    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "86632c30be499df4f48428806e7dacca0e7f5ab9f9b125938432878ffc51a900",
+    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html": "7fe96a97eeb073bcfc6cf0582b0b214bb0b7c64c1646217044db9e1cd751c62b",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "d2b24e6da18a30b1b63509826abdf9f0417c1030010aa003e00209585a5d051b",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "0d3862f97766a3ee99d9722ce439404200fa5a26fb0d6bc86bc7b99eaef20687",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "b0bbefe24b586c2d7cc8198cf3417f5f32808ac524e3a907cc0ec79e070ecdde",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "5d5a89bdc3d7e30bdad7a757f228c9fb3bfa0cfa373dcb15bd2a7da1571411f4",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "6e1cd84bc81b945b3c0f65b9a2dce0e01d7f17fe079d87a116833b82c28c580f",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "1369c43b0c41dbf2aeb784dc70357e6b72826c044b0f0ff8c7650dace6d24699",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "49380de0f3011d0ca339a31b8966c7c5ff12cddce016e79b6e8a8c9140dad3e1",
+    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "2b5a932d1e848cc2eeaad87e374986e208e14f15c56796e2daaeafc3f3d10c87",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "4262d05c7fc22cdc705d4d32e971bbf720363d887cc4a2bb3ac00137c795adf6",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "c50bb32b3aeb88ec0f2778f2938735301643a900c9c6a6fe1f76eb92008a3c39",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "eecbe6da41d82d9701eab097fd58e22b7d1d35d64673601721e71e6c420f538e",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "3d9d0ad95aae217f62a6a5ed8b86c05a32996a0b6b7ed80be9e2c4b94ab1d530",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "794c2854b7383ad34d9ae9be6e2fe77a586cd1373baab8801e4e75e756afe6f7",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "1b6a02f67ad8e7d28be3e80b978736f52fe19b4a7814bcd8936d1649729d0709",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "5388cc3b1d03cabca914b119fc92d9014bb7d177729c6048f1a0edae824363b2",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "1ecd71cd5a09efa28f18c4004221a07c22fc418e42ad74ab94159b4d8a27de67",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "509f88d7b5f0f13b13e6526b02d810d40303f560087b15c280c760c16c9de637",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "1e0efff9f5a38a7e8195984491b94daccaf28938ff18590de0287900a100e8ff",
+    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "f9e2998fde78b9b76197a1b86a5c98ab0a4e15570429abcaccddf6d9f1f35095",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "1b59056a485e2dc70d978c3c7d9c752fa1312e176127e7ffc5a123386d29e2ea",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "55843b97ab57411d55bf3bbc21a7e7948935b41f5d4514454a0cd895dc794f2a",
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "9dbc34918e9b9858788a90df8b40f28920ce42f2befbec0e1c9a1310b757355d",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "054470f063a83ac491ff6eebdf74bbe53c5e732a6fc81c9fe3e9b10cc2453613",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "c580df467e3d51f3e74b19b0110f96a308a86557511ca7754960c38dcd1fa337",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "3631a31a6779a1e44999974c234161a0b2d5c5874bf28cdacaf85e4cd8f32700",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "16ac91ca9506446321796a4aeac3eb545bdd82090ef23186f572554d77aa6331",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "49277cd57bb4e0a349fe5befc53e424299c57db501cb910cccb6e147038e6344",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "c4ebc63d3dd165c0822a50db012a7f7ca50cfc0d21bc0b5cdf74982cf78c5775",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "34fc9cb7e2bef6ed997885b53b4e5b2e16bedc5a1992ca74d32f5ff6e088ba8b",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "dbd232679dbd4acc49d7a395440ad0af5a3cfa1316a7d96eda5829946418476c",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "7391342c67dd4facc28f624223db74e2808a32196902305e7e314fef41d4085e",
+    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "4a5c14c29dca6efa3e35d72d6ec2267c7ae5aced90948770d464145ba58c9a84",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "2541f37f09c712a1485e75d307643e4f356f2030c9e21d3c8075444eda4d3213",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "7bffbfd8bbf6b0e389421f73109281eb144666a60aa440535efbe38029f6e8c2",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "f56684b4e1ba5d441981436a51d45b8f955cdc422077e3b33a0ffc670868e6ce",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "65cf966972ad11c2fbc87f8f132ead083679e864824f16b2ee4682c7d7607f0c",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "22103c692cd758bc32cf14f007a3c92bc7b428b2fe64b9a40e60f28deb9677c1",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "0196e972ebfabe8c7f9d4e10cb7c8296944e30d11d94913e4cf3c89bf7f037d3",
+    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "e871e0cfc8c7dad63a343707d754d936989284ca2161820e7d5f00b7e5c532b2",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "a6150cf54389e40d0fafd906cf3db3046938cdf0e699fcebd5856224024757ea",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "ede807800d842f294bf5b2a535512797af6683fa27bbb27871df73d2e1aa7fd0",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "93ea3a8766144507f10a485726c1531033b6ffe47ebd9ada042edf1b1ee346d8",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "94d43c3f436dc12f043e899ecc3285a35842e12f78cf718f09092cc43269a8f4",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "a17e819c6ad38d0d91ea076bce85e20adbabb37bf25b1aa16e93fe324162e2e8",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "b97774ebe0a7f432e800866a0ad58f9b16d0dddd386dea76caab8e181b418d88",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "7437df9d346f3c1ffd7d19d1f4e1a832835c4d772303b0960d75870ddee2fc75",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "5aa4c1a97f33769551517e20c949f7b33e42f029f51cb2fe546ba5177b7ef31c",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "bbc8b175424a6b616f9db8a00d661d896ca02fab42769610202106512159d5bc",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "c778d47856f04bac92cd901cd6018a1d3c4a7699d6d2acfc6e524ffc5d75b87c",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "965669f43e7bf859fb11f7babc66e51630ea8fe812ec23237e3f46cbb321be14",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "22a7f047b4d9f5a77188a7c28abe7d7477a93e7fb81a5573b24c45daf41f756f",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "05e394e0f9a068d4a843372c297b747dc8635b708667607f72c96964b5dc6e94",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "2ae0c0cea90b11f19fbf4d52a6a36aea5774d500ce0e34690480d0ade0720eb5",
+    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "8730ee5f8da0d938fa8ecc999edbe7f3bcc4dbb9eb8acc310c6a95c290b05c3b",
+    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "b1bc97ec282d223fd1cdf386a29c6611f64259438f0c9d2fb7d87bec74cedee0",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "1e953cde3954f417d11ee12cf6fece1258c8b763e45ab5306c5d979ee474f400",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "5df4693e4a73496f3c75320ba4c803174a1860e07c8c2cb349ad0c34c0bc134a",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "db4115b1bd3b32d1e19c42f9ec8c68628e25875f5b8d3a8c18c40f5deeca3656",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "8c16eb19c34aceb3fa371d6f4a94a4505d2dfae1c9f6bc6ea6c4369130a35f31",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "e15a9818e984d2ea67893c9b6603590dea63f6760b59a2216d32fd2bbb954129",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "c9cbdd2d9f0ee3142e481c639703a04f140706d7146385c311a07e4f23c94ed8",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "1aa17a54066d622977e5d490976656fd8b06a0b5db2977d4e2cd3b64b2833210",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "531b4c0295afb662e1fa6db3de3747471fb412b051a161d580bffde02411d543",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "17bb6a610afbfbbdbf60013c84659a47ebd0f5a1917d6d2aa9e7a4ac27c02344",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "78b31e58ff57f8c9aaaf566caa4733ad0beeee8c68db71eb350c54549dc73e56",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "f75c8a1e9c4485f13434e99f47cdfab6fc44805c4828970385d377ff8693c2a6",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "d9f17c189bc0d7dd83950bfd21fe948ce20836c9e4024f764801d9fce5bc5803",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "7fd769146e7270cb29e70f0b8b4e93b89e01dde80ccf56158d670f098929e6fc",
+    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "299595d48ffbc51140e91431e2dde3ee64bfa6929382e6ea39fb0b8b926afba0",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "f27c7051f46dde9fc8027b8dd7bc6712de02daaa85bf7cc90f57cc4ff4994c39",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "7dbb5c92d0a59de8f356b34a33c43dac3dfc80dcd5b3f7b41327cde4c0a35ff3",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "8fd09fe3cd7f3400a359b3122a1660f821376e258651f2e5a33d077c35e7bcd2",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "e9b57ee3415613e7e61a613cbfb2be470f7e3aca597176d1e8bbcef0576324d8",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "7c1a27fe338b6575c089e677ca6d85c85799e4d17f1bc850eda3133aa127bfaa",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "4a77ebe207298c888e76d126d6428a3d6ea74220d4926d2323cefa195dcb70c2",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "7fe3a1c68b7e95131bbfb18ab19b6685c255b55e722864285ae224719fe22328",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "365f80188454221952d649cc7c65c1de9b8f256093c6c2ffb030f62f7c8860e1",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "7feb3201aefdfeb6ad4e6f4bbcc3a6ab41301f3442e1213ba3ca24fe481f758d",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "d306570ab15146353a74b2452aa5adbcc7a2a6da3db1b317ad65be828a87e4b1",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "78a6b17f14038d3dceb0b9b16867d175015d084040effdd71936a931363aa0ef",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "bababba3d0b1e78534fcd4c4a420d70aa4420a4019f0a14388bf469ee08a1259",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "f85a8988f19f497cee0f0065a4e5e0d156315c7ac59c153f100ba91439d7452c",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "eed63e7ae534b8843b47b3e568e6d9f31c5e4479a699e495303128b75045e6cf",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "244dfe5f4ec9ae01e4bd98509632499367ccd193b549d5422af2939364cf44b0",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "b360ff3d7b3b9aececfea2bc9d1d0c11e5f6eefce5efb73d82b69ac47521a2ec",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "d314ef1d9768da2857778b23ab7ed05dd6f589e94f38e2beda54c3b74610cfcf",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "22df2f4cdc6e1f0c4e278d994b141b9dfb6314841f19fb2a925605ca84a52c40",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "4181f81a6e8cef7bf413b7a520634f5eb4cd1a38454709e82435e89e5cb5cd88",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "9ffc0d89ca99fcba4eefe73be6c4c68fe0f00e2f04235a61d447d811e061ba3f",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "b405834f57dddcca578c517a7ba1610facfcbe970e061b5426f68f55eae7deca",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "9bb32cf6b3390ab0ae1fd50233af0bb8a46572d5b23c867900793cdeb3f5e2c9",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "7ec17bed6f06b103d376f290777c1dd3a6f18237b4e6c89e563ab71a0377c978",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "56b9139462e28e7dcfec4558c6578dd987438d7b356664ac0f544bacdc48e34c",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "03f14800c88f7fd1d59e44caf90d31b6691c8216e7ee8b2db5448508fb700ce6",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "61dc57f0827f2ac667f73b29acec25ef4c8a9f0115d83f35c55337884965a4f1",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "958b44cfc152427145e8aa571997b3b88038daa2570219c1595ae7fc65f1105f",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "bd942c718e2252331e66626d0df43f1d5791f73ab9650297a97ff40c6513759e",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "d1459bd6223949b02e84bd959d141b587419773671b10dd323e1bb442b2aa2b3",
+    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "efec8e49ff9d70b310e0169496bf2316b18fc4e51ccc63e352a1d9ffe72c0263",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "b06ee87582ee06293a43b834d526ae5e74582b27a57bbcaad84d8c1f9a7a5bf6",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "83cfefa1439d8833c2a5e967b002be38461f160579cd6643dda6072f42832414",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "94582252344c06e17571709125894e5494af4f90a1b6a3e2ba4e861f967811c2",
+    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "5df7639278c819c9380fcfa6f39258bdd672e859aa17f9bd9a518665091f3076",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "093fbc6c4cdb59fe1737b85162c1e693b826ebafb3f9d9441b5a4af2374cb7c5",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "68e53e6d93414c9000ed631779aa3e696de77fc76422d80cb73ebca887d33ffd",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "ece61790147e9297d34c87b69cc5ccb4e6c7d2d9d01a0f03a8cfe3741b108016",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "ddc5121eb312577e3ab39e8a6a0d3f2c3a7ef643dbd2d35cc9b98b504b078977",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "f580d6a5fbff208edd323542faaf3ea10bbcceeb3b72aff70ee5e171ecad6c3d",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "3280d36210941a8c547ccffe50c621a95449c283a0beec76f9814dfa5d7035d7",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "37680e3b6165f4a742693190554b976328d29d845d811c5ecef68515d4821ee3",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "41705fab75b58efc15e8a7b0d741a16d4e7f757dbcd32d2e41d33831879a73f3",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "9e5c5df323a420922499f5eb70ceae61d5320f9e5e1b5e9d81c599ea74e65217",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "fe35a132a52a7564327bf3a674b3f8bdf3a57040fb99ddaf274094a3f4fc5185",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "fcb883b35ad37427663f1892890ad0b68db7cbd1242e51da694e66bbb0977158",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "bc52a1a542003de21df589f8b87fdd5a41c7c591f52e0d68f73d83dda59a0fa4",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "d2e818f04bb937de8b87401d89d0d56ccd519a872b37a07afd63d8f0eb27d453",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "f11cb01555821d14cb22aae4b43ef354959c0ac03371ccd07151529dcd513db5",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "5f516994ceeb7fe6be52b3bde8d4bc285606a987ab2b9a62b2d1af44b326ebad",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "b12a23d5a485c2fe57ecee6d250ae486935b3e76d4aeac54d4d98e529ee13736",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "540b7378a7bffae34ed30bc3c36b330424bbcdeaae3fb5e8281f57a24b2f644d",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "3cb925365b000e9a5bf80f5f6739f4ae1d900abc32976c979fbad41fae3306ed",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "a36dd949512232298479714546e62bc326dacb8d20919fc6de6082c2db4116b2",
+    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "6beb80f4ce2d4e05304006b8dd51fc1fe6364f29e3e40d06aad8a8e918ebe020",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "4093fd0f419480177d73ef71ee24c45395ac7a3cf9d97ce3edf14801dcf0a66f",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "5f69abdff2ff0724945aa929f43f97ff067bbc8d817be05a72b61a312b71a61f",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "4465e99250e3f6794f18f84bc9c2dc9f63788215c5155f65eda96b2dba32eb96",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "752294a0a463735fc9185c583f3b3844d54eff3bf2bcce77379b7378400ce06e",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "7fc85cc0371272ca6ad0ca110107ec21d4807f9dbe46960a7dc62f2490fc0b24",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "f66261614c11cd58a85a322e08992f37fa6648fe772878e8c887a73f10e15b47",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "153cf3c81c254dde42e611340b78bd106f1a6488aadc2bf81b0dd98d88d6cbc5",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "4750bff82ec78dc2abbd394f718daf70987cfc343cb2288a2956850d07c8344d",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "780ffa1a35e2c6043ae30e4c2a05626789aec5ad427810e17440885da1c3fab4",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "a00f1cf6d6615ba09be987ad702fabd346749425bf476ed56368f606ef14fe94",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "0234f3eb00cdb40fb492edc147b24d258c55bfae4090bd9fd8f39c72e95a3e44",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "59a24b97538b15c189f325a69468a1a72f71da8df25c6ba96dcddcbb24b82188",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "ccf3dbd0cec907f293452d26ada498bafebdbb6dc0fc21ed7639601ba64b60f3",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "82caaaead1378448511e17d3c3fa3595d1428de88f1bf7ca681368bca26dcea7",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "d9d79f955c5ee5faf34d30792ccf899d6d49d7e0585d744c1b632a70806b2980",
+    "uutiset/vantaan-yty-akatemian-ideat-etenevat-tyoryhmaan-ba96b94ee71f/index.html": "75132af7f545c214e7e91a76c268568b2d7b6285cb50d5afd680e27221f8998f",
+    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "ec77ebb5022428abd07b263bd87352de80fc506ff3aaf2ed6c73fc5e30d69e07",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "951dc016316e507000e5b3cbe7bdcf30936e02b0962cb50cb49a39cfec8b1590",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "330dfb9f0d4ef37ee1e153fbe723c55ec3cc75c9ab4b688dcae3f386a173ab54",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "d2fa9fd1ab16c0e17b353d94f655c4860688f29bbf6880c889977031a6690eb4",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "16039d8d7453c75e860e9d1b1ea656cbf1d7a6fe6ac2136f492ce93e7ead9bfb",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "6d8455e8c4eadc1a6909a07cca808572e2e6f3a23fe08aae9b523e2265ace2f4"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Useita oransseja verhoiltuja tuoleja on aseteltu vaalean puisen pöydän ympärille tyhjässä kokoushuoneessa.",
+      "alt": "Arkistokuva: Tyhjä kokoushuone, jossa on pöytä ja sen ympärillä tuoleja. Pöydällä on avoimia muistivihkoja ja ryhmiteltyjä muistilappuja.",
       "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
         "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva TyöNavigaattorin sisäänkäynnistä ja sitä ympäröivästä julkisivusta osoitteessa Asemakatu 7, Kuopio.",
+            "depictable_scene": "Todellinen valokuva Vantaalla 2. lokakuuta 2026 järjestetystä YTY-akatemiasta: aikuiset osallistujat työskentelevät pienryhmänä pöydän ääressä ja tarkastelevat työpajamateriaaleja.",
             "must_avoid": [
-              "Väärä rakennus tai toinen toimipiste",
-              "Kuvan esittäminen 28. lokakuuta järjestettävän tapahtuman dokumentaationa"
+              "Unrelated event presented as the YTY academy",
+              "Children presented as academy participants"
             ],
             "must_show": [
-              "Actual venue entrance",
-              "Surrounding building facade"
+              "Adults working together at a workshop table",
+              "Workshop materials"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "TyöNavigaattori Kuopio sisäänkäynti",
-              "Asemakatu 7 Kuopio",
-              "TyöNavigaattori Kuopio entrance"
+              "Vantaa YTY-akatemia 2026",
+              "YTY-akatemia 2.10.2026 työpaja",
+              "Vantaa adult workshop table",
+              "YTY-akatemia osallistujat työpajatyöskentely"
             ],
-            "subject": "TyöNavigaattorissa järjestettävän työelämäillan tapahtumapaikka"
+            "subject": "Vantaan YTY-akatemian työpajatyöskentely"
           },
           {
-            "depictable_scene": "Nimetön, tyhjä kokoustila, jossa tuolit on asetettu yhden pienen pöydän ympärille keskustelua varten. Kuva rajautuu pöytään, tuoleihin ja niiden välittömään ympäristöön eikä jäljittele TyöNavigaattorin todellisia tiloja.",
+            "depictable_scene": "Nimeämättömän kokoushuoneen tyhjä pöytä, jonka ympärillä on tuoleja. Pöydällä on muutama avoin muistivihko ja ryhmiteltyjä värillisiä muistilappuja ilman luettavaa tekstiä. Kuva rajautuu yhteiseen työskentelytilaan, eikä esitä todellista YTY-akatemian tapahtumapaikkaa.",
             "must_avoid": [
-              "Ihmiset, kasvot, kädet tai muut ruumiinosat",
-              "TyöNavigaattorin tilojen keksitty toisinto",
-              "Luettava teksti ja logot"
+              "People or body parts",
+              "Invented readable text or logos",
+              "Reconstruction of a named venue"
             ],
             "must_show": [
-              "Chairs around a small meeting table",
-              "Empty meeting space"
+              "Meeting table with empty chairs",
+              "Grouped sticky notes and open notebooks"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "tyhjä pienryhmätila tuolit",
-              "kokoustila pöytä tuolit",
-              "empty meeting room",
-              "small discussion table chairs"
+              "tyhjä kokouspöytä muistilaput",
+              "empty workshop table",
+              "grouped sticky notes notebooks",
+              "kokoushuone pöytä muistivihkot"
             ],
-            "subject": "Esityksen jälkeen pienryhmissä käytävän keskustelun tilajärjestely"
+            "subject": "työryhmän ehdotusten käsittelyä kuvaava kokouspöytä"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Jakub Zerdzicki on Pexels",
-      "depicted": "The image shows a close-up, eye-level view of a conference room with a light-colored wooden table and several orange chairs. The chairs are upholstered and have a modern design with curved backs. Three chairs are visible in the foreground, with two more blurred in the background. The chair in the immediate foreground on the left is partially visible, showing its back and side. The chair in the center foreground is more fully visible, showing its back and the curve of its armrest. The chair on th",
+      "credit": "Photo by Mike van Schoonderwalt on Pexels",
+      "depicted": "The image shows an indoor room with a light-colored floor and a white grid ceiling with several square light panels. One ceiling panel is missing, revealing a dark opening. The walls are mostly painted a light color, but a section of exposed brick wall is visible on the left and a larger section on the right. A dark-framed doorway is visible on the left side of the room. In the center, there is a rectangular table with a light-colored top and dark legs, surrounded by six dark-colored chairs with",
       "generated": false,
       "hotlink": false,
       "license": "Pexels License",
       "license_evidence": {
-        "image_path": "/photos/36149083/pexels-photo-36149083.jpeg",
+        "image_path": "/photos/5505925/pexels-photo-5505925.jpeg",
         "license": "Pexels License",
         "license_code": "Pexels",
         "license_url": "https://www.pexels.com/license/",
-        "photo_id": "36149083",
-        "photo_url": "https://www.pexels.com/photo/modern-conference-room-with-orange-chairs-36149083/",
-        "photographer": "Jakub Zerdzicki",
-        "photographer_url": "https://www.pexels.com/@jakubzerdzicki",
-        "response_sha256": "e1bab841b14ff9af3df8f38f1131f9c4e471bd03974de773786f5348baa0afe3",
-        "retrieved_at": "2026-10-02T23:54:14.007125+00:00",
+        "photo_id": "5505925",
+        "photo_url": "https://www.pexels.com/photo/chairs-and-table-in-room-5505925/",
+        "photographer": "Mike van Schoonderwalt",
+        "photographer_url": "https://www.pexels.com/@mike-van-schoonderwalt-1884800",
+        "response_sha256": "fa677b94fb9e6e13d2ea57c54776b40822264a40a38f2916efd668b1e49507c5",
+        "retrieved_at": "2026-10-03T00:31:17.895356+00:00",
         "transport": "jina_reader",
         "version": 1
       },
       "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8.jpg",
+      "local_path": "media/f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42.jpg",
       "pixel_review": {
-        "alt_fi": "Useita oransseja verhoiltuja tuoleja on aseteltu vaalean puisen pöydän ympärille tyhjässä kokoushuoneessa.",
+        "alt_fi": "Tyhjä kokoushuone, jossa on pöytä ja sen ympärillä tuoleja. Pöydällä on avoimia muistivihkoja ja ryhmiteltyjä muistilappuja.",
         "approved": true,
-        "article_text_sha256": "f0b6bba916d6cc701b58871f69114a79c08e96e9e2f4e57c187bc03624210be8",
-        "concept_sha256": "2e6f276c583150df4cd680a0cc1e06d055962e237ac8c8d77b72911c836fd6eb",
-        "description": "A close-up, slightly blurred view of several orange upholstered chairs around a light wooden table in an empty room.",
+        "article_text_sha256": "cc83a2d5c29f728ace73a97d954404e515829ba135a4ad30f2d161cff7408155",
+        "concept_sha256": "a86783e462ee49c9eae8bcbcd0bb66eca2fb54e7146e72e9f103dd93f10a7b7a",
+        "description": "An empty meeting room with a table surrounded by chairs. On the table are some open notebooks and grouped sticky notes. A grey hoodie is draped over one of the chairs. The room has exposed brickwork on one wall and a window looking out onto a grassy area.",
         "fit_score": 9,
-        "image_sha256": "d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8",
+        "image_sha256": "f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts an empty meeting space with chairs around a table, which directly illustrates the concept of a small group discussion setup mentioned in the article.",
-        "reviewed_at": "2026-10-02T23:54:15.954469+00:00"
+        "reason": "The image directly depicts the selected concept of an empty meeting table with chairs, grouped sticky notes, and open notebooks, which is highly relevant to the article's theme of a working group processing proposals and ideas from an academy.",
+        "reviewed_at": "2026-10-03T00:31:20.343318+00:00",
+        "text_audit": {
+          "examples": [],
+          "readable_text_present": false
+        }
       },
       "pixels": {
-        "height": 627,
+        "height": 650,
         "mode": "RGB",
-        "variance": 16204.4,
-        "width": 940
+        "variance": 3708.1,
+        "width": 710
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "A close-up, slightly blurred view of several orange upholstered chairs around a light wooden table in an empty room.",
+        "evidence": "An empty meeting room with a table surrounded by chairs. On the table are some open notebooks and grouped sticky notes. A grey hoodie is draped over one of the chairs. The room has exposed brickwork on one wall and a window looking out onto a grassy area.",
         "matched": [
-          "around",
           "chairs",
           "empty",
+          "grouped",
+          "meeting",
+          "notebooks",
+          "notes",
+          "open",
+          "sticky",
           "table"
         ],
         "method": "vision",
         "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
       "selection_evidence": {
-        "article_text_sha256": "f0b6bba916d6cc701b58871f69114a79c08e96e9e2f4e57c187bc03624210be8",
-        "decision_sha256": "d58a1242687ffa297892bb544368e2626092a4d13a5f906e69f1940b1693434b",
+        "article_text_sha256": "cc83a2d5c29f728ace73a97d954404e515829ba135a4ad30f2d161cff7408155",
+        "decision_sha256": "280408f392538e9fd9b1fd6304db0a0dde0758ec67652855b0474575156dd934",
         "minimum_real_fit": 8,
         "searches": [
           {
@@ -1241,9 +1256,53 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "TyöNavigaattori Kuopio sisäänkäynti",
-              "Asemakatu 7 Kuopio",
-              "TyöNavigaattori Kuopio entrance"
+              "Vantaa YTY-akatemia 2026",
+              "YTY-akatemia 2.10.2026 työpaja",
+              "Vantaa adult workshop table"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "b9d217c8eb3196e7f4793fa6adeb42aa245d6ec1e361189c7a2d6740d6b6026b",
+                "license": "Pexels License",
+                "reason": "The image shows adults in an office setting, which broadly aligns with the article's theme of an academy for adults. However, it does not depict a group working together at a workshop table or clearly show workshop materials in the context of a workshop. The scene appears to be a typical office interaction rather than a specific workshop or academy",
+                "source_url": "https://www.pexels.com/photo/man-and-woman-working-together-at-the-office-5918190/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "3dc1e42d293955cd4a72f2db18526947e341d59d14b30326502f1aa3cab4fc42",
+                "license": "Pexels License",
+                "reason": "The image shows adults working at a table with workshop materials, which aligns with the 'must_show' elements. However, there is no visible evidence that this specific scene is the YTY-akatemia in Vantaa on October 2, 2026. The screen displays a generic website, and the setting is a typical office, not specifically identifiable as the event describ",
+                "source_url": "https://www.pexels.com/photo/women-sitting-in-a-boardroom-and-talking-during-a-business-meeting-15543044/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "433e4f7d8163e06bcd50492f7157339964f5682ef3947248b6ec49faa30ca847",
+                "license": "Pexels License",
+                "reason": "The image shows adults working together at a table, which aligns with the 'Adults working together at a workshop table' must_show element. However, the 'Workshop materials' element is not clearly present; the women are playing cards, which are not typically considered workshop materials in the context of developing entrepreneurship and working life",
+                "source_url": "https://www.pexels.com/photo/women-plying-uno-cards-in-office-15543213/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "bbbc19d8e72815d041fb01a5042e84df0c16de6a305390a25587441a7346204f",
+                "license": "Pexels License",
+                "reason": "The image shows a man in an industrial setting, which is unrelated to the article about the Vantaa YTY Academy, which focuses on workshops for developing entrepreneurship and working life skills for children and young people. The selected concept specifically requires adults working together at a workshop table with workshop materials, none of whic",
+                "source_url": "https://www.pexels.com/photo/industrial-engineer-operating-cnc-machine-in-factory-32845661/"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "Vantaa YTY-akatemia 2026",
+              "YTY-akatemia 2.10.2026 työpaja",
+              "Vantaa adult workshop table"
             ]
           },
           {
@@ -1251,54 +1310,19 @@
               {
                 "approved": false,
                 "fit_score": 0,
-                "image_sha256": "6a6ae571cd046322d88e21a097c424f13375719063173cf1bd2d8c52688ce3ce",
-                "license": "Pexels License",
-                "reason": "The article specifies the venue as 'TyöNavigaattori, osoitteessa Asemakatu 7, Kuopio'. The visible signage in the image clearly shows 'YODMA'S' and 'Hauptbahnhof Berlin', indicating this is Berlin Central Station, not the specified venue in Kuopio. Therefore, it does not depict the actual venue entrance or surrounding facade mentioned in the articl",
-                "source_url": "https://www.pexels.com/photo/low-light-photographed-of-building-facade-958860/"
-              },
-              {
-                "approved": false,
-                "fit_score": 7,
-                "image_sha256": "45a3cf2767fa662a4bba86d975ff282d763031f96667327b03921ea144cfd2af",
-                "license": "Pexels License",
-                "reason": "The image clearly shows the entrance and surrounding facade of a building identified as 'TyöNavigaattori' (visible on the awning), which is the specified venue for the event in the article. This directly matches the selected concept of depicting the actual venue entrance and surrounding building facade. Exact numbered building identity is absent fr",
-                "source_url": "https://www.pexels.com/photo/woman-walking-outside-modern-building-37053853/"
-              },
-              {
-                "approved": false,
-                "fit_score": 7,
-                "image_sha256": "6807dfd78684de45b76c2737dac85c37a89e785d5660c16f49fd8b947c52ebf9",
-                "license": "Pexels License",
-                "reason": "The image clearly shows the entrance and surrounding facade of a building complex, which matches the concept of depicting the actual venue entrance and surrounding building facade for TyöNavigaattori at Asemakatu 7, Kuopio. The visible sign on the entrance confirms it is 'TyöNavigaattori'. Exact numbered building identity is absent from file-level ",
-                "source_url": "https://www.pexels.com/photo/street-light-near-building-987596/"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "a9a396eee2b3e3ad24eebde768aa3c0fc471d6d961338178f53a7f8d19ee4dd6",
-                "license": "Pexels License",
-                "reason": "The article specifies the venue as 'TyöNavigaattori, osoitteessa Asemakatu 7, Kuopio'. The visible building in the image is clearly labeled 'VÕRU SPORDIKESKUS', which is a sports center in Võru, Estonia, not TyöNavigaattori in Kuopio, Finland. Therefore, it does not depict the actual venue entrance or the surrounding building facade mentioned in th",
-                "source_url": "https://www.pexels.com/photo/modern-sports-center-exterior-in-summer-light-38723409/"
+                "image_sha256": "d86d1759cc7846eda47f3e0c905dbe651ab0d5461d873e6920410ac97c25217c",
+                "license": "Unsplash License",
+                "reason": "The image depicts an industrial logging scene by a river, which is completely unrelated to the article about the Vantaa YTY-academy, its workshops, and participants. The selected concept specifically requires adults working at a workshop table with materials, none of which are present in the image. One or more required concept elements are not visi",
+                "source_url": "https://unsplash.com/photos/a-crane-is-working-on-a-pile-of-logs-awhucBNmAAE?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "TyöNavigaattori Kuopio sisäänkäynti",
-              "Asemakatu 7 Kuopio",
-              "TyöNavigaattori Kuopio entrance"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "TyöNavigaattori Kuopio sisäänkäynti",
-              "Asemakatu 7 Kuopio",
-              "TyöNavigaattori Kuopio entrance"
+              "Vantaa YTY-akatemia 2026",
+              "YTY-akatemia 2.10.2026 työpaja",
+              "Vantaa adult workshop table"
             ]
           },
           {
@@ -1307,9 +1331,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "TyöNavigaattori Kuopio sisäänkäynti",
-              "Asemakatu 7 Kuopio",
-              "TyöNavigaattori Kuopio entrance"
+              "Vantaa YTY-akatemia 2026",
+              "YTY-akatemia 2.10.2026 työpaja",
+              "Vantaa adult workshop table"
             ]
           },
           {
@@ -1326,35 +1350,19 @@
               {
                 "approved": false,
                 "fit_score": 0,
-                "image_sha256": "641073fcf9ef10288c2fd7556daf086dff716f23be8cf92e87833e3b1eb092dc",
-                "license": "Public domain",
-                "reason": "The article describes an English-language event about Finnish working life rules, including small group discussions. The selected concept is an empty meeting space with chairs around a small table for discussion. The image shows a large conference table with many people, microphones, and a formal setup, which contradicts the 'empty meeting space' a",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Asif%20Mahmud%20Sajib%20Bhuiyan%20Speech%20Dhaka%20Nagar%20Bhaban%20Eid%20Ul%20Fitr%20Preparatory%20Meeting%202025-03-23%20(PID-0002822).jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "4317a835707c8e08e86ddde1e412c54025e210be377bb0218fc8acb7d6b8318f",
-                "license": "CC BY-SA 2.0",
-                "reason": "The article discusses a small group discussion in a meeting room, while the image shows a large conference hall set up for a presentation or lecture, not a small group discussion. The visible setup does not match the 'chairs around a small meeting table' or 'empty meeting space' for small group discussion as required by the concept. One or more req",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Empty%20meeting%20room%20COP22%20(30980793081).jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "8cc2d162251bc315efcb0cb0d89d75b65e9b8363536201ffc9537311d2fa6be0",
-                "license": "CC BY 2.0",
-                "reason": "The article describes a meeting with small group discussions, and the concept specifies an empty meeting space with chairs around a small table. The image shows two armchairs and side tables, which do not form a small meeting table arrangement suitable for group discussion. The chairs are also very ornate and do not resemble typical meeting room ch",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Meeting%20with%20Shinzo%20Abe%20(01814381)%20(49582194333).jpg"
+                "image_sha256": "0f2d9c8cb5aed55fd40f6f127a064224b1dc6f9a08384b551eb45a17fae0f399",
+                "license": "CC BY 4.0",
+                "reason": "The image displays a scientific chart with data points and a legend, which is entirely unrelated to the article's subject of a Vantaa city working group, entrepreneurship, and youth employment skills. The selected concept describes a meeting table with notebooks and sticky notes, which is not present in the image. One or more required concept eleme",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Technosignatures%20chart.png"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "tyhjä pienryhmätila tuolit",
-              "kokoustila pöytä tuolit",
-              "empty meeting room"
+              "tyhjä kokouspöytä muistilaput",
+              "empty workshop table",
+              "grouped sticky notes notebooks"
             ]
           },
           {
@@ -1362,191 +1370,201 @@
               {
                 "approved": true,
                 "fit_score": 9,
-                "image_sha256": "d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8",
+                "image_sha256": "f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42",
                 "license": "Pexels License",
-                "reason": "The image clearly depicts an empty meeting space with chairs around a table, which directly illustrates the concept of a small group discussion setup mentioned in the article.",
-                "source_url": "https://www.pexels.com/photo/modern-conference-room-with-orange-chairs-36149083/"
+                "reason": "The image directly depicts the selected concept of an empty meeting table with chairs, grouped sticky notes, and open notebooks, which is highly relevant to the article's theme of a working group processing proposals and ideas from an academy.",
+                "source_url": "https://www.pexels.com/photo/chairs-and-table-in-room-5505925/"
               }
             ],
             "concept_rank": 2,
             "outcome": "accepted",
             "provider": "pexels",
             "queries": [
-              "tyhjä pienryhmätila tuolit",
-              "kokoustila pöytä tuolit",
-              "empty meeting room"
+              "tyhjä kokouspöytä muistilaput",
+              "empty workshop table",
+              "grouped sticky notes notebooks"
             ]
           }
         ],
         "selected": {
           "concept_rank": 2,
           "fit_score": 9,
-          "image_sha256": "d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8",
+          "image_sha256": "f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42",
           "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8",
-      "source_url": "https://www.pexels.com/photo/modern-conference-room-with-orange-chairs-36149083/",
+      "sha256": "f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42",
+      "source_url": "https://www.pexels.com/photo/chairs-and-table-in-room-5505925/",
       "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/36149083/pexels-photo-36149083.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "36149083",
-        "photo_url": "https://www.pexels.com/photo/modern-conference-room-with-orange-chairs-36149083/",
-        "photographer": "Jakub Zerdzicki",
-        "photographer_url": "https://www.pexels.com/@jakubzerdzicki",
+        "image_url": "https://images.pexels.com/photos/5505925/pexels-photo-5505925.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "5505925",
+        "photo_url": "https://www.pexels.com/photo/chairs-and-table-in-room-5505925/",
+        "photographer": "Mike van Schoonderwalt",
+        "photographer_url": "https://www.pexels.com/@mike-van-schoonderwalt-1884800",
         "provider": "pexels",
-        "query": "tyhjä pienryhmätila tuolit",
-        "retrieved_at": "2026-10-02T23:54:14Z"
+        "query": "empty workshop table",
+        "retrieved_at": "2026-10-03T00:31:17Z"
       },
-      "stock_provenance_sha256": "13d49dacda5a48f323209e09c48723c0ef0d0a5d060f628e9f8f302b2f63aed4",
-      "url": "https://uutistenlukija.fi/media/d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8.jpg"
+      "stock_provenance_sha256": "36d8528852e2916832f5290b13772389e4225b304af3a1d3f937614056e78bca",
+      "url": "https://uutistenlukija.fi/media/f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "kuopio",
+      "provider": "vantaa",
       "related_sources": 0,
-      "source_fields_sha256": "f268850fa48cb9bcf0f6187d3a974d2c1ba80326578056712192fad05b2ba8b1",
-      "source_sha256": "771bba13762449822f9266858001cfbe7587673e6774aa7ae0ad5d5f9f2bc22a"
+      "source_fields_sha256": "9bbc73786797874c2f8214b3876151f2d8ceb1b9bfabf2c7744bf8528e7a9b2f",
+      "source_sha256": "20ab735ca88171a0d5eaa80745f61ffac4c363b056aac33700cd8523e868e4ed"
     },
     "sources": [
       {
         "id": "A",
         "published_at": "2026-10-02T00:00:00+03:00",
-        "publisher": "Kuopion kaupunki",
+        "publisher": "Vantaan kaupunki",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Kuopion kaupungin avoimen datan käyttöehdot: maailmanlaajuinen, maksuton, peruuttamaton käyttöoikeus kopioida, levittää, muokata ja hyödyntää kaupallisesti ja ei-kaupallisesti; koskee myös tekstejä",
+          "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
           "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://www.kuopio.fi/app/uploads/2023/04/avoin-data-kayttoehdot-kuopion-kaupunki.pdf"
+          "url": "https://hri.fi/fi/kayttoehdot/"
         },
-        "text": "Monthly Sessions 28.10.2026\n02.10.2026\nTyöllisyys ja yrittäminen\nKuopion kaupungin kuvapankki\nInternational House Kuopio järjestää seuraavan Monthly Sessions -tapahtuman keskiviikkona 28.10.2026 klo 17.30–19.00.\nTule mukaan oppimaan Suomen työelämän perussäännöistä, kuten työntekijän oikeuksista, velvollisuuksista ja käytännön työelämään liittyvistä asioista.\nEsityksen jälkeen jakaudumme pienryhmiin keskustelemaan aiheesta yhdessä. Tämä on erinomainen tilaisuus esittää kysymyksiä ja jakaa kokemuksia rennossa ja kannustavassa ilmapiirissä.\nTapahtuma on maksuton ja avoin kaikille.\nVieraat:\nPAM Palvelualojen ammattiliitto, liikealan Kuopion seudun osasto ry. johtokunnan jäseniä\nPaikka:\nTyöNavigaattori, Asemakatu 7, Kuopio\nAika:\n28.10.2026 klo 17.30–19.00\nKieli:\nenglanti\nMuistathan ilmoittautua tapahtumaan: https://link.webropolsurveys.com/S/9B5A549B944D3899\nTervetuloa mukaan!",
-        "title": "Monthly Sessions 28.10.2026",
-        "url": "https://www.kuopio.fi/2026/10/02/monthly-sessions-28-10-2026/"
+        "text": "YTY-akatemia järjestettiin Vantaalla toista kertaa 2. lokakuuta. Kyseessä on osallistava ja toiminnallinen päivä, jossa yrittäjyys- ja työelämätaitoja tarkastellaan yhdessä eri näkökulmista.\nAkatemiassa osallistujat työskentelivät päivän aikana tiimeissä eri ympäristöissä Vantaalla. Ohjelmaan kuului toiminnallinen rastirata, yhteistä keskustelua ja työpajatyöskentelyä.\nTavoitteena oli paitsi jakaa tietoa ja kokemuksia myös vahvistaa yhteistyötä niiden toimijoiden välillä, jotka voivat omassa työssään vaikuttaa lasten ja nuorten yrittäjyys- ja työelämätaitoihin.\nEnsimmäisen YTY-akatemian ideat ovat edenneet työryhmän pöydälle\nYTY-akatemioissa käynnistetty kehittämistyö jatkuu myös tapahtumapäivien jälkeen.\nYTY-työryhmä vie eteenpäin ensimmäisessä akatemiassa syntyneitä ehdotuksia ja ottaa käsittelyyn myös toisen akatemian ideat. Samalla työryhmän toimintatapoja on selkeytetty ja kaupungin eri toimialojen edustusta vahvistettu.\nTavoitteena on, että yrittäjyys- ja työelämätaitojen kehittämistä tehdään Vantaalla entistä tiiviimmässä yhteistyössä yli toimialarajojen. Kun eri ikäisten lasten ja nuorten kanssa työskentelevät tahot tuntevat paremmin toistensa työn, olemassa olevia toimintamalleja voidaan hyödyntää tehokkaammin ja kehittämistä tehdä yhteiseen suuntaan.\n\"YTY-akatemiassa ei vain suunnitella – me tehdään ja hyödynnetään systeemisesti yhdessä sitä osaamista, jota meillä jo on,\" sanoo elinvoima- ja työllisyysohjelman ohjelmajohtaja Ulla Boer.\nTyöelämätaidot ja yrittäjyys ovat osa tulevaisuuteen valmistautumista\nYrittäjyys- ja työelämätaidot eivät tarkoita ainoastaan yrityksen perustamiseen liittyvää osaamista.\nEsimerkiksi perusopetuksessa työelämätaidot ja yrittäjyys kuuluvat opetussuunnitelman laaja-alaiseen osaamiseen. Niihin liittyvät muun muassa työelämään, yrittäjyyteen ja tulevaisuuden osaamistarpeisiin tutustuminen.\nYTY-akatemia on osa Vantaalla alkuvuodesta 2026 käynnistynyttä yrittäjyys- ja työelämätaitojen kehittämistyötä. Työtä koordinoi YTY-työryhmä yhdessä kaupungin eri toimialojen ja Nuorten yrittäjyys ja talous NYTin kanssa.\nTyö kytkeytyy myös Vantaan laajempiin tavoitteisiin. Kaupungin vuosien 2026–2029 elinvoima- ja työllisyysohjelmassa yhtenä painotuksena on nuorten koulutus- ja työelämäpolkujen vahvistaminen.\nOhjelman onnistumisen lähtökohtana on yhteistyö kaupungin toimialojen, konserniyhtiöiden ja kumppaneiden välillä.\nYTY-akatemian ajatuksena on tuoda tätä yhteistyötä käytäntöön: koota eri näkökulmat saman pöydän ääreen ja rakentaa yhdessä toimintatapoja, joilla Vantaan lapset ja nuoret saavat valmiuksia muuttuvaan työelämään.\n\"Meillä on Vantaalla yhteinen tavoite, ja oli hieno huomata, että työtä tehdään yhdessä,\" kommentoi yhteistä tekemistä Ojapuiston koulun rehtori Essi Mellin.\nAvainsanat\nTyöllisyys\nTyöllistäminen\nYrittäminen\n…\nShow all keywords",
+        "title": "YTY-akatemia kokoaa Vantaan toimijat yhteen vahvistamaan nuorten yrittäjyys- ja työelämätaitoja",
+        "url": "https://www.vantaa.fi/fi/ajankohtaista/uutinen/yty-akatemia-kokoaa-vantaan-toimijat-yhteen-vahvistamaan-nuorten-yrittajyys-ja-tyoelamataitoja"
       }
     ],
-    "story_key": "url:https://www.kuopio.fi/2026/10/02/monthly-sessions-28-10-2026/",
+    "story_key": "url:https://www.vantaa.fi/fi/ajankohtaista/uutinen/yty-akatemia-kokoaa-vantaan-toimijat-yhteen-vahvistamaan-nuorten-yrittajyys-ja-tyoelamataitoja",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-10-02T23:52:20.774527+00:00",
-        "sha256": "aa2474253e1b74dd3fc1a6342553e332e7bd9fe6ab36c901fcf449c09a6cbf98",
-        "text": "Kuopion kaupunki Konsernipalvelu Tietohallinto Käyttöehdot 4.12.2016 Kuopion kaupungin avoimen datan käyttöehdot 1. Yleistä Nämä käyttöehdot koskevat Kuopion kaupungin www-sivustoilla ja niihin liitettyjen palvelujen avoimesti jaettuja aineistojen (avoimen datan) käyttöä. Käyttäjällä tarkoitetaan henkilöä tai organisaatiota, joka ottaa tämän lisenssin (lisenssi jäljempänä myös \"käyttöoikeus\") alaisen aineiston käyttöönsä. Aineistojen tuottaja ja tekijänoikeuden tai tietokantasuojan haltija on Kuopion kaupunki, ellei aineiston, tiedon tai palvelun yhteydessä erikseen toisin ilmoiteta. Käyttöehdot koskevat palveluissa olevia paikkatietoaineistoja, taulukoita, tilastokuvioita, tekstejä sekä muuta tietoaineistoa. Kuopion kaupunki ei peri käyttöehtojen mukaisen aineiston käytöstä maksua. 2. Käyttöoikeuden ehdot Vastaanottamalla aineistoa käyttäjä hyväksyy olla olevat ehdot. Aineistoa käytettäessä on aineiston tai sitä sisältävän tai hyödyntävän palvelun yhteyteen liitettävä maininta alkuperäislähteestä ja aineistoversion ajankohta, esimerkiksi: [aineisto] © Kuopion kaupunki, [vuosiluku, päiväys] tai o o sisältää Kuopion kaupungin [aineiston nimi] aineistoa, [vuosiluku] 2.1 Käyttöoikeudet Tämä on Kuopion kaupungin myöntämä maailmanlaajuisen, maksuttoman, peruuttamattoman rinnakkaisen käyttöoikeuden myöntävä lisenssi, jolla edellä mainittua aineistoa voi vapaasti: · kopioida ja levittää · muokata ja hyödyntää kaupallisesti ja ei-kaupallisesti jatkolisensoimalla · yhdistellä muihin tuotteisiin ja · käyttää osana sovellusta tai palvelua. 2.2 Aineiston tuottajan velvollisuudet ja vastuut Aineisto on lisensoitu sellaisenaan eikä Kuopion kaupunki vastaa aineistossa mahdollisesti esiintyvistä virheistä eikä aineiston käytöstä aiheutuvista välittömistä tai välillisistä vahingoista. Kuopion kaupunki ei myönnä aineistolle tai siinä olevien tietojen oikeellisuudelle tai ajantasaisuudelle takuuta. Kuopion kaupunki ei takaa, että aineisto olisi jatkuvasti saatavilla ja Kuopion kaupunki voi lopettaa aineiston jakelun ennalta ilmoittamatta. 2.3 Käyttäjän velvollisuudet ja vastuut Käyttäjän on aineistoa tai siitä tehtyjä tuotteita käyttäessään ja edelleen luovuttaessaan · mainittava Kuopion kaupungin tekijän- tai muu oikeus ko. aineistoon · vaadittava nimeämiskäytännön noudattamista myöntäessään lisenssejä tuotteeseen tai · palveluun, jossa käytetään näiden ehtojen alaista aineistoa tai sen osaa Ilmoitettava onko aineisto esitetty/käytetty muuttamattomana/ kokonaisuudessaan/ käsiteltynä · poistettava maininta alkuperäislähteestä, mikäli Kuopion kaupunki sitä erikseen vaatii Käyttäjän ja Kuopion kaupungin välillä ei tämän lisenssin myötä synny yhteistyö- tai liikesuhdetta. Käyttäjä ei saa aineiston käytön yhteydessä ilmaista, että Kuopion kaupunki tukisi tai suosittelisi kyseistä aineiston käyttötapaa. 3. Sovellettava laki Tähän lisenssiin/käyttöoikeuteen sovelletaan Suomen lakia. 4. Muutokset tähän lisenssiin Kuopion kaupunki voi milloin tahansa muuttaa lisenssin ehtoja tai soveltaa aineistoon eri lisenssiä. Tämän lisenssin ehtoja sovelletaan kuitenkin edelleen niihin aineistoihin, jotka on otettu käyttöön tämän lisenssin voimassa ollessa. Lisätietoja: Jari Torvinen, tietohallintopäällikkö jari.torvinen(at)kuopio.fi",
-        "url": "https://www.kuopio.fi/app/uploads/2023/04/avoin-data-kayttoehdot-kuopion-kaupunki.pdf"
+        "retrieved_at": "2026-10-03T00:29:20.379044+00:00",
+        "sha256": "6ca602cdcd0a165546fbd852386d052ffd725dccd1416787d67215f918af35e5",
+        "text": "Käyttöoikeus määritellyin ehdoin hyödynnettävissä. Datan käytön lisäksi Palvelussa on mahdollisuus keskusteluun.\nKäyttöoikeus\nPalvelu sisältää dataa useasta eri lähteestä: julkisyhteisöjen tuottamia datoja ja niiden metatietoja, Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja ja Palvelun ylläpitäjien tuottamia artikkeleja ja muita kirjoituksia. Pääsääntöisesti näihin kaikkiin on laaja käyttöoikeus Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Poikkeukset on kerrottu erikseen kunkin aineiston kohdalla.\nAvoin data\nPalvelussa olevien datojen (tietoaineistojen) omistus- ja immateriaalioikeudet kuuluvat kunkin datan tekijälle.\nPääsääntöisesti Palvelun käyttäjillä on laaja käyttöoikeus datoihin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Datoja saa vapaasti kopioida, levittää, näyttää ja esittää sekä käyttää datoja osana muuta teosta. Datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin.\nEhtona käytölle on, että datan tekijä (ylläpitäjä) on ilmoitettava. Datan tekijän pyynnöstä tämä viittaus on poistettava. Datan tekijä on kerrottu kunkin datan metadatassa.\nDatan tekijää ei saa ilmoittaa siten, että ilmoitus viittaisi datan tekijän tai Palvelun tukevan datan käyttäjää tai datan käyttötapaa.\nDatojen metatietojen yhteydessä on mainittu kyseisen datan käyttöoikeusehdot. Joissakin tapauksissa käyttöoikeusehdot voivat poiketa yllä mainitusta.\nKeskustelu\nPalvelun käyttäjät voivat keskusteluosiossa lisätä sivuille kirjoituksia ja kommentoida toisten käyttäjien kirjoituksia. Palvelun käyttäjä antaa kirjoituksiinsa ja kommentteihinsa vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nMikäli käyttäjä liittää kirjoitukseensa tai kommenttiinsa kuvia, tulee hänellä olla tekijänoikeudet kuvaan. Lisäksi hänellä tulee olla kuvassa esiintyvien henkilöiden lupa kuvan julkaisemiseen internetissä. Palvelun käyttäjä antaa kuviin vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nKeskustelun tulee olla hyvän tavan ja Suomen lainsäädännön mukaista. Käyttäjät ovat vastuussa lisäämistään kirjoituksista ja kommenteista.\nKaikenlainen mainonta keskustelussa on kielletty.\nPalvelun tarjoajat voivat tarvittaessa muokata kirjoituksia ja kommentteja sekä poistaa hyvän tavan tai lainsäädännön vastaisia tai muutoin sopimattomia kirjoituksia.\nMikäli käyttäjä havaitsee käyttöehtojen vastaisia kirjoituksia, pyydetään tästä ilmoittamaan ylläpidolle.\nToistuva käyttöehtojen rikkominen tai niiden vakava rikkominen voi johtaa väliaikaiseen tai pysyvään Palvelun käyttöoikeuden peruuttamiseen.\nSovellusgalleria\nSovellusgalleriassa esitellyt sovellukset eivät ole HRI:n tekemiä ja niiden tekijänoikeudet kuuluvat sovellusten tekijöille. Creative Commons 4.0 -lisenssi ei koske sovelluksia, eikä niitä ole lupa vapaasti kopioida, levittää, muokata tai yhdistellä, ellei erikseen sovelluksen kohdalla ole toisin mainittu tai sovelluksen tekijä muutoin ole tähän antanut lupaa.\nMuut palvelussa olevat kirjoitukset\nPalvelun tuottajien Palvelussa julkaisemien kirjoitusten, kuten artikkelien ja blogikirjoitusten omistus- ja tekijänoikeudet kuuluvat niiden kirjoittajille. Palvelun käyttäjillä on laaja käyttöoikeus näihin kirjoituksiin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nPalvelun ulkoasu, tekninen toteutus, tavaramerkit ja logot\nPalvelun teknisen toteutuksen lähdekoodit on saatavilla avoimesti GitHubista. Palvelun kopiointi sellaisenaan on kielletty. Palvelussa esiintyvien tavaramerkkien ja logojen tavaramerkkioikeudet kuuluvat niiden oikeudenhaltijoille. Mikäli tavaramerkkien ja logojen muu käyttö on sallittu, on tästä ja käytön ehdoista ilmoitettu ko. tavaramerkkien ja logojen kohdalla.\nTietosuoja\nhri.fi-palvelua ylläpitää Helsingin kaupunki. Kaupunki on sitoutunut suojaamaan verkkopalveluidensa käyttäjien yksityisyyttä Tietosuojalain (2018), EU:n tietosuoja-asetuksen (2016/679) sekä muun soveltuvan lainsäädännön mukaisesti.\nHelsingin kaupungin tietosuojasivut\nVastuuvapaus\nPalvelu sisältää sekä julkisyhteisöjen tuottamaa avointa dataa ja metadataa että Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja. Palvelun tarjoajat eivät vastaa Palvelussa olevien tietojen oikeellisuudesta. Palvelun käyttäjä käyttää Palvelussa olevaa avointa dataa omalla vastuullaan. Palvelun tarjoajat eivät vastaa mistään välittömistä tai välillisistä vahingoista, jotka aiheutuvat datan käytöstä. ",
+        "url": "https://hri.fi/fi/kayttoehdot/"
       }
     ]
   },
   "draft": {
     "category": "Kotimaa",
     "image": {
-      "alt": "Arkistokuva: Useita oransseja verhoiltuja tuoleja on aseteltu vaalean puisen pöydän ympärille tyhjässä kokoushuoneessa.",
+      "alt": "Arkistokuva: Tyhjä kokoushuone, jossa on pöytä ja sen ympärillä tuoleja. Pöydällä on avoimia muistivihkoja ja ryhmiteltyjä muistilappuja.",
       "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
         "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva TyöNavigaattorin sisäänkäynnistä ja sitä ympäröivästä julkisivusta osoitteessa Asemakatu 7, Kuopio.",
+            "depictable_scene": "Todellinen valokuva Vantaalla 2. lokakuuta 2026 järjestetystä YTY-akatemiasta: aikuiset osallistujat työskentelevät pienryhmänä pöydän ääressä ja tarkastelevat työpajamateriaaleja.",
             "must_avoid": [
-              "Väärä rakennus tai toinen toimipiste",
-              "Kuvan esittäminen 28. lokakuuta järjestettävän tapahtuman dokumentaationa"
+              "Unrelated event presented as the YTY academy",
+              "Children presented as academy participants"
             ],
             "must_show": [
-              "Actual venue entrance",
-              "Surrounding building facade"
+              "Adults working together at a workshop table",
+              "Workshop materials"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "TyöNavigaattori Kuopio sisäänkäynti",
-              "Asemakatu 7 Kuopio",
-              "TyöNavigaattori Kuopio entrance"
+              "Vantaa YTY-akatemia 2026",
+              "YTY-akatemia 2.10.2026 työpaja",
+              "Vantaa adult workshop table",
+              "YTY-akatemia osallistujat työpajatyöskentely"
             ],
-            "subject": "TyöNavigaattorissa järjestettävän työelämäillan tapahtumapaikka"
+            "subject": "Vantaan YTY-akatemian työpajatyöskentely"
           },
           {
-            "depictable_scene": "Nimetön, tyhjä kokoustila, jossa tuolit on asetettu yhden pienen pöydän ympärille keskustelua varten. Kuva rajautuu pöytään, tuoleihin ja niiden välittömään ympäristöön eikä jäljittele TyöNavigaattorin todellisia tiloja.",
+            "depictable_scene": "Nimeämättömän kokoushuoneen tyhjä pöytä, jonka ympärillä on tuoleja. Pöydällä on muutama avoin muistivihko ja ryhmiteltyjä värillisiä muistilappuja ilman luettavaa tekstiä. Kuva rajautuu yhteiseen työskentelytilaan, eikä esitä todellista YTY-akatemian tapahtumapaikkaa.",
             "must_avoid": [
-              "Ihmiset, kasvot, kädet tai muut ruumiinosat",
-              "TyöNavigaattorin tilojen keksitty toisinto",
-              "Luettava teksti ja logot"
+              "People or body parts",
+              "Invented readable text or logos",
+              "Reconstruction of a named venue"
             ],
             "must_show": [
-              "Chairs around a small meeting table",
-              "Empty meeting space"
+              "Meeting table with empty chairs",
+              "Grouped sticky notes and open notebooks"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "tyhjä pienryhmätila tuolit",
-              "kokoustila pöytä tuolit",
-              "empty meeting room",
-              "small discussion table chairs"
+              "tyhjä kokouspöytä muistilaput",
+              "empty workshop table",
+              "grouped sticky notes notebooks",
+              "kokoushuone pöytä muistivihkot"
             ],
-            "subject": "Esityksen jälkeen pienryhmissä käytävän keskustelun tilajärjestely"
+            "subject": "työryhmän ehdotusten käsittelyä kuvaava kokouspöytä"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Jakub Zerdzicki on Pexels",
-      "depicted": "The image shows a close-up, eye-level view of a conference room with a light-colored wooden table and several orange chairs. The chairs are upholstered and have a modern design with curved backs. Three chairs are visible in the foreground, with two more blurred in the background. The chair in the immediate foreground on the left is partially visible, showing its back and side. The chair in the center foreground is more fully visible, showing its back and the curve of its armrest. The chair on th",
+      "credit": "Photo by Mike van Schoonderwalt on Pexels",
+      "depicted": "The image shows an indoor room with a light-colored floor and a white grid ceiling with several square light panels. One ceiling panel is missing, revealing a dark opening. The walls are mostly painted a light color, but a section of exposed brick wall is visible on the left and a larger section on the right. A dark-framed doorway is visible on the left side of the room. In the center, there is a rectangular table with a light-colored top and dark legs, surrounded by six dark-colored chairs with",
       "generated": false,
       "hotlink": false,
       "license": "Pexels License",
       "license_evidence": {
-        "image_path": "/photos/36149083/pexels-photo-36149083.jpeg",
+        "image_path": "/photos/5505925/pexels-photo-5505925.jpeg",
         "license": "Pexels License",
         "license_code": "Pexels",
         "license_url": "https://www.pexels.com/license/",
-        "photo_id": "36149083",
-        "photo_url": "https://www.pexels.com/photo/modern-conference-room-with-orange-chairs-36149083/",
-        "photographer": "Jakub Zerdzicki",
-        "photographer_url": "https://www.pexels.com/@jakubzerdzicki",
-        "response_sha256": "e1bab841b14ff9af3df8f38f1131f9c4e471bd03974de773786f5348baa0afe3",
-        "retrieved_at": "2026-10-02T23:54:14.007125+00:00",
+        "photo_id": "5505925",
+        "photo_url": "https://www.pexels.com/photo/chairs-and-table-in-room-5505925/",
+        "photographer": "Mike van Schoonderwalt",
+        "photographer_url": "https://www.pexels.com/@mike-van-schoonderwalt-1884800",
+        "response_sha256": "fa677b94fb9e6e13d2ea57c54776b40822264a40a38f2916efd668b1e49507c5",
+        "retrieved_at": "2026-10-03T00:31:17.895356+00:00",
         "transport": "jina_reader",
         "version": 1
       },
       "license_url": "https://www.pexels.com/license/",
-      "local_path": "media/d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8.jpg",
+      "local_path": "media/f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42.jpg",
       "pixel_review": {
-        "alt_fi": "Useita oransseja verhoiltuja tuoleja on aseteltu vaalean puisen pöydän ympärille tyhjässä kokoushuoneessa.",
+        "alt_fi": "Tyhjä kokoushuone, jossa on pöytä ja sen ympärillä tuoleja. Pöydällä on avoimia muistivihkoja ja ryhmiteltyjä muistilappuja.",
         "approved": true,
-        "article_text_sha256": "f0b6bba916d6cc701b58871f69114a79c08e96e9e2f4e57c187bc03624210be8",
-        "concept_sha256": "2e6f276c583150df4cd680a0cc1e06d055962e237ac8c8d77b72911c836fd6eb",
-        "description": "A close-up, slightly blurred view of several orange upholstered chairs around a light wooden table in an empty room.",
+        "article_text_sha256": "cc83a2d5c29f728ace73a97d954404e515829ba135a4ad30f2d161cff7408155",
+        "concept_sha256": "a86783e462ee49c9eae8bcbcd0bb66eca2fb54e7146e72e9f103dd93f10a7b7a",
+        "description": "An empty meeting room with a table surrounded by chairs. On the table are some open notebooks and grouped sticky notes. A grey hoodie is draped over one of the chairs. The room has exposed brickwork on one wall and a window looking out onto a grassy area.",
         "fit_score": 9,
-        "image_sha256": "d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8",
+        "image_sha256": "f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts an empty meeting space with chairs around a table, which directly illustrates the concept of a small group discussion setup mentioned in the article.",
-        "reviewed_at": "2026-10-02T23:54:15.954469+00:00"
+        "reason": "The image directly depicts the selected concept of an empty meeting table with chairs, grouped sticky notes, and open notebooks, which is highly relevant to the article's theme of a working group processing proposals and ideas from an academy.",
+        "reviewed_at": "2026-10-03T00:31:20.343318+00:00",
+        "text_audit": {
+          "examples": [],
+          "readable_text_present": false
+        }
       },
       "pixels": {
-        "height": 627,
+        "height": 650,
         "mode": "RGB",
-        "variance": 16204.4,
-        "width": 940
+        "variance": 3708.1,
+        "width": 710
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "A close-up, slightly blurred view of several orange upholstered chairs around a light wooden table in an empty room.",
+        "evidence": "An empty meeting room with a table surrounded by chairs. On the table are some open notebooks and grouped sticky notes. A grey hoodie is draped over one of the chairs. The room has exposed brickwork on one wall and a window looking out onto a grassy area.",
         "matched": [
-          "around",
           "chairs",
           "empty",
+          "grouped",
+          "meeting",
+          "notebooks",
+          "notes",
+          "open",
+          "sticky",
           "table"
         ],
         "method": "vision",
         "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
       "selection_evidence": {
-        "article_text_sha256": "f0b6bba916d6cc701b58871f69114a79c08e96e9e2f4e57c187bc03624210be8",
-        "decision_sha256": "d58a1242687ffa297892bb544368e2626092a4d13a5f906e69f1940b1693434b",
+        "article_text_sha256": "cc83a2d5c29f728ace73a97d954404e515829ba135a4ad30f2d161cff7408155",
+        "decision_sha256": "280408f392538e9fd9b1fd6304db0a0dde0758ec67652855b0474575156dd934",
         "minimum_real_fit": 8,
         "searches": [
           {
@@ -1564,9 +1582,53 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "TyöNavigaattori Kuopio sisäänkäynti",
-              "Asemakatu 7 Kuopio",
-              "TyöNavigaattori Kuopio entrance"
+              "Vantaa YTY-akatemia 2026",
+              "YTY-akatemia 2.10.2026 työpaja",
+              "Vantaa adult workshop table"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "b9d217c8eb3196e7f4793fa6adeb42aa245d6ec1e361189c7a2d6740d6b6026b",
+                "license": "Pexels License",
+                "reason": "The image shows adults in an office setting, which broadly aligns with the article's theme of an academy for adults. However, it does not depict a group working together at a workshop table or clearly show workshop materials in the context of a workshop. The scene appears to be a typical office interaction rather than a specific workshop or academy",
+                "source_url": "https://www.pexels.com/photo/man-and-woman-working-together-at-the-office-5918190/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "3dc1e42d293955cd4a72f2db18526947e341d59d14b30326502f1aa3cab4fc42",
+                "license": "Pexels License",
+                "reason": "The image shows adults working at a table with workshop materials, which aligns with the 'must_show' elements. However, there is no visible evidence that this specific scene is the YTY-akatemia in Vantaa on October 2, 2026. The screen displays a generic website, and the setting is a typical office, not specifically identifiable as the event describ",
+                "source_url": "https://www.pexels.com/photo/women-sitting-in-a-boardroom-and-talking-during-a-business-meeting-15543044/"
+              },
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "433e4f7d8163e06bcd50492f7157339964f5682ef3947248b6ec49faa30ca847",
+                "license": "Pexels License",
+                "reason": "The image shows adults working together at a table, which aligns with the 'Adults working together at a workshop table' must_show element. However, the 'Workshop materials' element is not clearly present; the women are playing cards, which are not typically considered workshop materials in the context of developing entrepreneurship and working life",
+                "source_url": "https://www.pexels.com/photo/women-plying-uno-cards-in-office-15543213/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "bbbc19d8e72815d041fb01a5042e84df0c16de6a305390a25587441a7346204f",
+                "license": "Pexels License",
+                "reason": "The image shows a man in an industrial setting, which is unrelated to the article about the Vantaa YTY Academy, which focuses on workshops for developing entrepreneurship and working life skills for children and young people. The selected concept specifically requires adults working together at a workshop table with workshop materials, none of whic",
+                "source_url": "https://www.pexels.com/photo/industrial-engineer-operating-cnc-machine-in-factory-32845661/"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "Vantaa YTY-akatemia 2026",
+              "YTY-akatemia 2.10.2026 työpaja",
+              "Vantaa adult workshop table"
             ]
           },
           {
@@ -1574,54 +1636,19 @@
               {
                 "approved": false,
                 "fit_score": 0,
-                "image_sha256": "6a6ae571cd046322d88e21a097c424f13375719063173cf1bd2d8c52688ce3ce",
-                "license": "Pexels License",
-                "reason": "The article specifies the venue as 'TyöNavigaattori, osoitteessa Asemakatu 7, Kuopio'. The visible signage in the image clearly shows 'YODMA'S' and 'Hauptbahnhof Berlin', indicating this is Berlin Central Station, not the specified venue in Kuopio. Therefore, it does not depict the actual venue entrance or surrounding facade mentioned in the articl",
-                "source_url": "https://www.pexels.com/photo/low-light-photographed-of-building-facade-958860/"
-              },
-              {
-                "approved": false,
-                "fit_score": 7,
-                "image_sha256": "45a3cf2767fa662a4bba86d975ff282d763031f96667327b03921ea144cfd2af",
-                "license": "Pexels License",
-                "reason": "The image clearly shows the entrance and surrounding facade of a building identified as 'TyöNavigaattori' (visible on the awning), which is the specified venue for the event in the article. This directly matches the selected concept of depicting the actual venue entrance and surrounding building facade. Exact numbered building identity is absent fr",
-                "source_url": "https://www.pexels.com/photo/woman-walking-outside-modern-building-37053853/"
-              },
-              {
-                "approved": false,
-                "fit_score": 7,
-                "image_sha256": "6807dfd78684de45b76c2737dac85c37a89e785d5660c16f49fd8b947c52ebf9",
-                "license": "Pexels License",
-                "reason": "The image clearly shows the entrance and surrounding facade of a building complex, which matches the concept of depicting the actual venue entrance and surrounding building facade for TyöNavigaattori at Asemakatu 7, Kuopio. The visible sign on the entrance confirms it is 'TyöNavigaattori'. Exact numbered building identity is absent from file-level ",
-                "source_url": "https://www.pexels.com/photo/street-light-near-building-987596/"
-              },
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "a9a396eee2b3e3ad24eebde768aa3c0fc471d6d961338178f53a7f8d19ee4dd6",
-                "license": "Pexels License",
-                "reason": "The article specifies the venue as 'TyöNavigaattori, osoitteessa Asemakatu 7, Kuopio'. The visible building in the image is clearly labeled 'VÕRU SPORDIKESKUS', which is a sports center in Võru, Estonia, not TyöNavigaattori in Kuopio, Finland. Therefore, it does not depict the actual venue entrance or the surrounding building facade mentioned in th",
-                "source_url": "https://www.pexels.com/photo/modern-sports-center-exterior-in-summer-light-38723409/"
+                "image_sha256": "d86d1759cc7846eda47f3e0c905dbe651ab0d5461d873e6920410ac97c25217c",
+                "license": "Unsplash License",
+                "reason": "The image depicts an industrial logging scene by a river, which is completely unrelated to the article about the Vantaa YTY-academy, its workshops, and participants. The selected concept specifically requires adults working at a workshop table with materials, none of which are present in the image. One or more required concept elements are not visi",
+                "source_url": "https://unsplash.com/photos/a-crane-is-working-on-a-pile-of-logs-awhucBNmAAE?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
-            "provider": "pexels",
-            "queries": [
-              "TyöNavigaattori Kuopio sisäänkäynti",
-              "Asemakatu 7 Kuopio",
-              "TyöNavigaattori Kuopio entrance"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "TyöNavigaattori Kuopio sisäänkäynti",
-              "Asemakatu 7 Kuopio",
-              "TyöNavigaattori Kuopio entrance"
+              "Vantaa YTY-akatemia 2026",
+              "YTY-akatemia 2.10.2026 työpaja",
+              "Vantaa adult workshop table"
             ]
           },
           {
@@ -1630,9 +1657,9 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "TyöNavigaattori Kuopio sisäänkäynti",
-              "Asemakatu 7 Kuopio",
-              "TyöNavigaattori Kuopio entrance"
+              "Vantaa YTY-akatemia 2026",
+              "YTY-akatemia 2.10.2026 työpaja",
+              "Vantaa adult workshop table"
             ]
           },
           {
@@ -1649,35 +1676,19 @@
               {
                 "approved": false,
                 "fit_score": 0,
-                "image_sha256": "641073fcf9ef10288c2fd7556daf086dff716f23be8cf92e87833e3b1eb092dc",
-                "license": "Public domain",
-                "reason": "The article describes an English-language event about Finnish working life rules, including small group discussions. The selected concept is an empty meeting space with chairs around a small table for discussion. The image shows a large conference table with many people, microphones, and a formal setup, which contradicts the 'empty meeting space' a",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Asif%20Mahmud%20Sajib%20Bhuiyan%20Speech%20Dhaka%20Nagar%20Bhaban%20Eid%20Ul%20Fitr%20Preparatory%20Meeting%202025-03-23%20(PID-0002822).jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "4317a835707c8e08e86ddde1e412c54025e210be377bb0218fc8acb7d6b8318f",
-                "license": "CC BY-SA 2.0",
-                "reason": "The article discusses a small group discussion in a meeting room, while the image shows a large conference hall set up for a presentation or lecture, not a small group discussion. The visible setup does not match the 'chairs around a small meeting table' or 'empty meeting space' for small group discussion as required by the concept. One or more req",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Empty%20meeting%20room%20COP22%20(30980793081).jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "8cc2d162251bc315efcb0cb0d89d75b65e9b8363536201ffc9537311d2fa6be0",
-                "license": "CC BY 2.0",
-                "reason": "The article describes a meeting with small group discussions, and the concept specifies an empty meeting space with chairs around a small table. The image shows two armchairs and side tables, which do not form a small meeting table arrangement suitable for group discussion. The chairs are also very ornate and do not resemble typical meeting room ch",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Meeting%20with%20Shinzo%20Abe%20(01814381)%20(49582194333).jpg"
+                "image_sha256": "0f2d9c8cb5aed55fd40f6f127a064224b1dc6f9a08384b551eb45a17fae0f399",
+                "license": "CC BY 4.0",
+                "reason": "The image displays a scientific chart with data points and a legend, which is entirely unrelated to the article's subject of a Vantaa city working group, entrepreneurship, and youth employment skills. The selected concept describes a meeting table with notebooks and sticky notes, which is not present in the image. One or more required concept eleme",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Technosignatures%20chart.png"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "tyhjä pienryhmätila tuolit",
-              "kokoustila pöytä tuolit",
-              "empty meeting room"
+              "tyhjä kokouspöytä muistilaput",
+              "empty workshop table",
+              "grouped sticky notes notebooks"
             ]
           },
           {
@@ -1685,78 +1696,78 @@
               {
                 "approved": true,
                 "fit_score": 9,
-                "image_sha256": "d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8",
+                "image_sha256": "f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42",
                 "license": "Pexels License",
-                "reason": "The image clearly depicts an empty meeting space with chairs around a table, which directly illustrates the concept of a small group discussion setup mentioned in the article.",
-                "source_url": "https://www.pexels.com/photo/modern-conference-room-with-orange-chairs-36149083/"
+                "reason": "The image directly depicts the selected concept of an empty meeting table with chairs, grouped sticky notes, and open notebooks, which is highly relevant to the article's theme of a working group processing proposals and ideas from an academy.",
+                "source_url": "https://www.pexels.com/photo/chairs-and-table-in-room-5505925/"
               }
             ],
             "concept_rank": 2,
             "outcome": "accepted",
             "provider": "pexels",
             "queries": [
-              "tyhjä pienryhmätila tuolit",
-              "kokoustila pöytä tuolit",
-              "empty meeting room"
+              "tyhjä kokouspöytä muistilaput",
+              "empty workshop table",
+              "grouped sticky notes notebooks"
             ]
           }
         ],
         "selected": {
           "concept_rank": 2,
           "fit_score": 9,
-          "image_sha256": "d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8",
+          "image_sha256": "f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42",
           "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8",
-      "source_url": "https://www.pexels.com/photo/modern-conference-room-with-orange-chairs-36149083/",
+      "sha256": "f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42",
+      "source_url": "https://www.pexels.com/photo/chairs-and-table-in-room-5505925/",
       "stock_provenance": {
-        "image_url": "https://images.pexels.com/photos/36149083/pexels-photo-36149083.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        "photo_id": "36149083",
-        "photo_url": "https://www.pexels.com/photo/modern-conference-room-with-orange-chairs-36149083/",
-        "photographer": "Jakub Zerdzicki",
-        "photographer_url": "https://www.pexels.com/@jakubzerdzicki",
+        "image_url": "https://images.pexels.com/photos/5505925/pexels-photo-5505925.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "photo_id": "5505925",
+        "photo_url": "https://www.pexels.com/photo/chairs-and-table-in-room-5505925/",
+        "photographer": "Mike van Schoonderwalt",
+        "photographer_url": "https://www.pexels.com/@mike-van-schoonderwalt-1884800",
         "provider": "pexels",
-        "query": "tyhjä pienryhmätila tuolit",
-        "retrieved_at": "2026-10-02T23:54:14Z"
+        "query": "empty workshop table",
+        "retrieved_at": "2026-10-03T00:31:17Z"
       },
-      "stock_provenance_sha256": "13d49dacda5a48f323209e09c48723c0ef0d0a5d060f628e9f8f302b2f63aed4",
-      "url": "https://uutistenlukija.fi/media/d33b9b106114b04916ae719983a3356469dc0b62c3cac6f5276583bc891bdef8.jpg"
+      "stock_provenance_sha256": "36d8528852e2916832f5290b13772389e4225b304af3a1d3f937614056e78bca",
+      "url": "https://uutistenlukija.fi/media/f3b03c147ef56b1188ec20bff1ca37716220d7590cdc214a03391585b4c03d42.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kuopion kaupungin tiedotteen mukaan Monthly Sessions -tilaisuus järjestetään keskiviikkona 28. lokakuuta 2026 kello 17.30–19.00 TyöNavigaattorissa, osoitteessa Asemakatu 7. Järjestäjänä toimii International House Kuopio."
+        "text": "YTY-työryhmä edistää ensimmäisessä akatemiassa syntyneitä ehdotuksia ja ottaa käsiteltäväkseen myös toisen tapahtuman ideat. Vantaan kaupungin mukaan työryhmän toimintatapoja on selkeytetty ja eri toimialojen edustusta vahvistettu."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Ohjelmassa käsitellään työntekijän oikeuksia, velvollisuuksia ja työelämän käytäntöjä Suomessa. Kaupungin mukaan vieraina on PAMin liikealan Kuopion seudun osaston johtokunnan jäseniä. Esityksen jälkeen aiheesta keskustellaan pienryhmissä."
+        "text": "Kaupungin mukaan 2. lokakuuta järjestetyn tapahtuman osallistujat työskentelivät tiimeissä eri puolilla Vantaata. Päivään sisältyi rastirata, keskusteluja ja työpajoja. Tarkoituksena oli yhdistää niiden toimijoiden osaamista, jotka työskentelevät lasten ja nuorten yrittäjyys- ja työelämätaitojen parissa."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Tilaisuuden kieli on englanti. Kaupunki pyytää osallistujia ilmoittautumaan ennakkoon Webropol-lomakkeella: https://link.webropolsurveys.com/S/9B5A549B944D3899."
+        "text": "Akatemia kuuluu alkuvuonna 2026 käynnistyneeseen kehittämistyöhön, jota YTY-työryhmä koordinoi kaupungin toimialojen ja Nuorten yrittäjyys ja talous NYTin kanssa. Kaupunki liittää työn vuosien 2026–2029 elinvoima- ja työllisyysohjelmaan, jonka yhtenä painotuksena on nuorten koulutus- ja työelämäpolkujen vahvistaminen."
       }
     ],
-    "summary": "International House Kuopion englanninkielisessä tilaisuudessa 28. lokakuuta perehdytään Suomen työelämän sääntöihin. Kaupungin mukaan tapahtuma on maksuton ja avoin kaikille.",
-    "title": "Kuopion työelämäilta käsittelee työntekijän oikeuksia"
+    "summary": "Vantaan kaupungin mukaan toinen YTY-akatemia kokosi 2. lokakuuta toimijoita kehittämään lasten ja nuorten yrittäjyys- ja työelämätaitoja. Päivän ehdotukset otetaan työryhmän käsittelyyn, ja tavoitteena on tiivistää kaupungin toimialojen yhteistyötä.",
+    "title": "Vantaan YTY-akatemian ideat etenevät työryhmään"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "126e7266472104a598048172cb9c4ac8921eeec3156a61ec69f72a193eb15c08",
+    "draft_sha256": "cc2747eb3b9d2b662188515080f3ec4033b4c2895e626a4dc4bc820d53d01889",
     "reasons": [
-      "Otsikko on 53 merkkiä eli alle 60 merkin tavoitteen. Paikallinen työelämäilta ja sen keskeinen aihe ovat alussa; työntekijän oikeuksien käsittely saa tuen lähteestä A.",
-      "Lähde A tukee ingressin ja ensimmäisen kappaleen tietoja: järjestäjä on International House Kuopio, tapahtuma pidetään keskiviikkona 28.10.2026 kello 17.30–19.00 TyöNavigaattorissa osoitteessa Asemakatu 7, Kuopio. Myös maksuttomuus ja avoimuus kaikille mainitaan lähteessä. Viikonpäivä vastaa päivämäärää.",
-      "Toisen ja kolmannen kappaleen source_ids-merkinnät ovat asianmukaiset: A kertoo työntekijän oikeuksista, velvollisuuksista ja työelämän käytännöistä, PAMin liikealan Kuopion seudun osaston johtokunnan jäsenistä, esityksen jälkeisistä pienryhmäkeskusteluista, englannin kielestä ja ilmoittautumisesta. Luonnoksen Webropol-osoite vastaa lähdettä.",
-      "A on 2.10.2026 julkaistu kaupungin tiedote tulevasta paikallisesta tapahtumasta ja riittää tämän rajatun tapahtumauutisen lähteeksi. Teksti ilmaisee tiedot kaupungin ilmoituksina eikä väitä riippumatonta vahvistusta. Kotimaa-luokitus sopii aiheeseen, eikä paikallisesta tiedotteesta tehdä valtakunnallisia päätelmiä. Suomenkielinen teksti on neutraali ja itsenäisesti tiivistetty; lähteen mainoslauseet on jätetty pois.",
-      "Kuvasta on kaksi järjestettyä konseptia ja dokumentoidut haut kummallekin. Valitun valokuvan konkreettiset kohteet, pöytä ja sen ympärillä olevat tuolit tyhjässä kokoustilassa, liittyvät A:n ja lopullisen tekstin kuvaamaan pienryhmäkeskusteluun, eivät vain yleiseen aiheluokkaan. Toimitetun täsmälliseen kuvatiedostoon sidotun arvion sopivuuspiste on 9/10, eikä siinä kuvata ihmisiä tai väitetä tilaa TyöNavigaattoriksi. Arkistokuvamerkintä ei esitä kuvaa tulevan tapahtuman dokumentaationa.",
-      "Kuvan käyttöoikeusnäyttö yhdistää Pexels License -lisenssin yksilöityyn valokuvaan 36149083 ja kuvaajaan Jakub Zerdzicki; krediitti vastaa näitä tietoja. Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta, mukaan lukien tiedostotunniste, alkuperä, oikeustiedot ja arviointitiedot. RIGHTS-asiakirjaa käytetään vain tekstin käyttöoikeusnäyttönä, ei uutisväitteiden tai valokuvan oikeuksien todisteena."
+      "Otsikko on 47 merkkiä, joten se alittaa 60 merkin tavoitteen. Vantaan YTY-akatemia ja ideoiden eteneminen ovat otsikon alussa. Lähde A tukee työryhmän jatkokäsittelyä: ensimmäisen akatemian ehdotuksia edistetään ja toisen akatemian ideat otetaan käsittelyyn.",
+      "Ingressi ja kaikki kolme kappaletta perustuvat lähteeseen A, ja jokaisen kappaleen source_ids-merkintä on oikein. A tukee toista järjestämiskertaa 2.10.2026, tiimityöskentelyä Vantaalla, rastirataa, keskusteluja, työpajoja sekä toimialojen yhteistyön vahvistamisen tavoitetta. Tavoitteita ei esitetä jo saavutettuina vaikutuksina.",
+      "Lähde A tukee myös työryhmän toimintatapojen selkeyttämistä, toimialojen edustuksen vahvistamista, kehittämistyön alkamista alkuvuonna 2026, yhteistyötä Nuorten yrittäjyys ja talous NYTin kanssa sekä yhteyttä vuosien 2026–2029 elinvoima- ja työllisyysohjelmaan. Nimissä, vuosissa tai tapahtumien järjestyksessä ei ole havaittavaa ristiriitaa.",
+      "Vantaan kaupungin 2.10.2026 julkaisema lähde on ajankohtainen 3.10.2026 tehtävään arvioon ja riittävä tämän rajatun kaupungin toimintaa koskevan uutisen pohjaksi. Kaupungin kertoma erotetaan riippumattomasta vahvistuksesta lähdeattribuutioilla. Teksti pysyy Vantaassa, sopii Kotimaa-luokkaan ja on neutraalisti tiivistetty ilman valtakunnallisia yleistyksiä tai perusteettomia syy-seurausväitteitä.",
+      "Kuvatietue on luonnoksessa ja lähdepaketissa saman sisältöinen. Molemmille järjestetyille kuvakonsepteille on kirjattu haut. Valitun todellisen kuvan pikseliarvio on sidottu kuvan SHA256-tunnisteeseen ja antaa koko artikkelin sopivuudeksi 9/10. Kirjattu pöytä, tuolit, avoimet muistivihkot ja ryhmitellyt muistilaput liittyvät jutun konkreettiseen työpaja- ja ehdotusten käsittelyprosessiin, eivät vain Kotimaa-kategoriaan tai Vantaan sijaintiin. Kuvateksti ei esitä kuvaa varsinaisena YTY-akatemian tapahtumakuvana.",
+      "Käyttöoikeusnäyttö yksilöi Pexels-kuvan 5505925, valokuvaajan Mike van Schoonderwaltin, kuvasivun ja Pexels-lisenssin; kuvaajan nimi vastaa krediittiä. Oikeusnäyttö ei perustu pelkkään lähdemainintaan tai tekstin uudelleenkäyttöehtoihin. RIGHTS-asiakirjaa ei ole käytetty uutisväitteiden tai valokuvan oikeuksien todisteena."
     ]
   }
 }
