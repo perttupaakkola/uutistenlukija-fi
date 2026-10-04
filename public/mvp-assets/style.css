@@ -188,7 +188,7 @@ dialog button{font:inherit;min-height:44px;margin:0;padding:.7rem 1rem;border:1p
 
 /* Consolidated footer: approved brand asset plus two useful link groups. */
 .site-footer-grid{grid-template-columns:minmax(220px,1.2fr) minmax(150px,.8fr) minmax(190px,1fr)}
-.site-footer-brand__image{display:block;width:min(220px,100%);height:auto;filter:brightness(0) invert(1);opacity:.94}
+.site-footer-brand__image{display:block;width:min(220px,100%);height:auto;filter:none;opacity:.94}
 .site-footer-brand-col{min-width:0}
 
 /* Category/latest archives are a finite reading column, not a full-width card wall. */
@@ -262,6 +262,7 @@ dialog button{font:inherit;min-height:44px;margin:0;padding:.7rem 1rem;border:1p
 }
 
 @media(max-width:600px){
+  .portal-lead .portal-lead__body{inline-size:100%!important;max-inline-size:100%!important;width:100%!important;max-width:100%!important}
   .portal-list-page{max-width:100%}
   .portal-feed-item,.portal-feed-item.portal-feed-item--no-image{grid-template-columns:minmax(0,1fr) 78px;column-gap:10px;row-gap:4px}
   .portal-feed-item__body,.portal-feed-item--no-image .portal-feed-item__body{grid-column:1;grid-row:1}
@@ -274,7 +275,7 @@ dialog button{font:inherit;min-height:44px;margin:0;padding:.7rem 1rem;border:1p
   .single-article{padding:1.25rem .75rem}
   .single-article h1{font-size:clamp(1.82rem,9vw,2.35rem);line-height:1.16}
   .single-article .content{font-size:1.0625rem;line-height:1.7}
-  .single-article .article-hero{margin-inline:-.75rem}
+  .single-article .article-hero{width:calc(100% + 1.5rem);margin-inline:-.75rem}
   .single-article .article-hero img{border-radius:0}
   .single-article .article-hero-caption{padding-inline:.75rem}
   .article-actions{align-items:flex-start;flex-direction:column}
