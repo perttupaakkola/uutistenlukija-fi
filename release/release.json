@@ -4,300 +4,38 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "17283be05ec5578f69bfc626ec61979d0231fb00",
-  "job_id": "84215ac70cf4344778caf334835d56e7d2fb572f6a68c42c8d003cbc9a21c814",
-  "packet_sha256": "b7c7eddd18bbaa04600a1317e9c7c4ad9e96dc19b53985ef6417095292ac357f",
-  "draft_sha256": "cdfc76730adccf2feae89e3ec28edcbc1f09c175b74644cc1d3b59d1bca6a74b",
-  "image_sha256": "78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12",
+  "job_id": "da961501d33fc8bbf874484d2f5c0f2de7c4b36788a6d892e8b654239cc56b6f",
+  "packet_sha256": "09907069f7bd96188335de85e0b2c233558c80374c4c60c4d33a47ccb6d581cf",
+  "draft_sha256": "c07472831d4ea16e37952970e5eabf1992caef4a8ff925e72d62c4937c1b1162",
+  "image_sha256": "963303af15e20d7d78a0d0ac1118dd99ef6451afbb6b3e7ad92500955f8d51e3",
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "9568cbf6d11abc746c3603cd00eb30446af8376d3d2ab692624a0f0951b87ae3"
-  },
-  "stock_image": {
-    "alt": "Arkistokuva: Ulkoliikuntapaikalla on useita kiinteitä kuntoilulaitteita, jotka ovat kevyen lumipeitteen alla asuinrakennusten edustalla.",
-    "caption": "Arkistokuva artikkelin aiheesta.",
-    "classifier_output": {
-      "category": "Kotimaa",
-      "concepts": [
-        {
-          "depictable_scene": "Todellinen valokuva Oulussa sijaitsevasta kaupungin ulkoliikuntapaikasta, jossa näkyvät kiinteät kuntoilulaitteet ja niitä ympäröivä liikunta-alue.",
-          "must_avoid": [
-            "Competitive sporting events",
-            "Implied visual proof of the comparison ranking"
-          ],
-          "must_show": [
-            "Fixed outdoor exercise equipment",
-            "Public recreation setting"
-          ],
-          "rank": 1,
-          "safe_to_generate": false,
-          "search_queries": [
-            "Oulu ulkokuntosali",
-            "Oulu ulkoliikuntapaikka",
-            "Oulu outdoor gym equipment",
-            "Oulun kaupungin kuntoilupuisto"
-          ],
-          "subject": "Oulu ja kaupungin ulkoliikuntapaikka"
-        },
-        {
-          "depictable_scene": "Nimeämättömän liikuntasalin sisänäkymä: tyhjä puulattiainen kenttä peliviivoineen ja seinään kiinnitetyt puolapuut. Kuvassa ei ole ihmisiä eikä tunnistettavan oikean rakennuksen yksityiskohtia.",
-          "must_avoid": [
-            "People or body parts",
-            "Invented identifiable Oulu facility",
-            "Readable text or logos",
-            "Competition trophies or ranking graphics"
-          ],
-          "must_show": [
-            "Indoor sports floor with court markings",
-            "Wall-mounted wooden stall bars"
-          ],
-          "rank": 2,
-          "safe_to_generate": true,
-          "search_queries": [
-            "tyhjä liikuntasali",
-            "liikuntasali puolapuut",
-            "empty municipal sports hall",
-            "wooden gym stall bars"
-          ],
-          "subject": "Kuntien liikunnan edistäminen: tyhjä liikuntasali"
-        }
-      ],
-      "version": "article-first-v1"
-    },
-    "credit": "Photo by Estormiz on Wikimedia Commons",
-    "depicted": "The image shows an outdoor scene with a light dusting of snow on the ground and bare trees, suggesting winter. In the foreground, there is a snow-covered path and patches of grass. To the left, there is a dark-colored outdoor calisthenics or playground structure with various bars and ladders. To the right, there are several pieces of outdoor exercise equipment, primarily in gray and orange colors, also on snow-covered ground. A body of water, possibly a canal or pond, runs across the middle grou",
-    "generated": false,
-    "hotlink": false,
-    "license": "CC0",
-    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "local_path": "media/78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12.jpg",
-    "pixel_review": {
-      "alt_fi": "Ulkoliikuntapaikalla on useita kiinteitä kuntoilulaitteita, jotka ovat kevyen lumipeitteen alla asuinrakennusten edustalla.",
-      "approved": true,
-      "article_text_sha256": "f7381ab848994460240d470430e073d0393816556758479100ce2ed1d2965c1c",
-      "concept_sha256": "a0a10699f36a03d8886c016b9b6c4f2429a67359ec84789d3330560e7cd55b79",
-      "description": "An outdoor gym with various exercise equipment is visible in the foreground, covered in a light dusting of snow. In the background, there are apartment buildings and bare trees, with a body of water separating the gym area from the buildings. The sky is clear blue.",
-      "fit_score": 9,
-      "image_sha256": "78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12",
-      "model": "google:gemini-2.5-flash",
-      "must_show_visible": [
-        true,
-        true
-      ],
-      "no_people": true,
-      "reason": "The image clearly depicts fixed outdoor exercise equipment in a public recreation setting, which directly matches the selected concept. The filename also indicates the location as Oulu, aligning with the article's focus on Oulu's performance in a municipal sports comparison.",
-      "reviewed_at": "2026-10-05T12:08:19.645065+00:00",
-      "source_context": {
-        "image_sha256": "78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12",
-        "license": "CC0",
-        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "photo_id": "wikimedia-112652850",
-        "photo_url": "https://commons.wikimedia.org/wiki/File:Outdoor%20gym%20Kuusisaari%20Oulu%2020211114.jpg",
-        "photographer": "Estormiz",
-        "provider": "wikimedia",
-        "title": "Outdoor gym Kuusisaari Oulu 20211114.jpg"
-      },
-      "source_context_sha256": "e252d073355dc888f4a383c86a03deb87c3c4408fcc46020e0387629fcd937f0"
-    },
-    "pixels": {
-      "height": 3230,
-      "mode": "RGB",
-      "variance": 7577.6,
-      "width": 4300
-    },
-    "relevance_check": {
-      "accepted": true,
-      "evidence": "An outdoor gym with various exercise equipment is visible in the foreground, covered in a light dusting of snow. In the background, there are apartment buildings and bare trees, with a body of water separating the gym area from the buildings. The sky is clear blue.",
-      "matched": [
-        "equipment",
-        "exercise",
-        "outdoor"
-      ],
-      "method": "vision",
-      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
-    },
-    "selection_evidence": {
-      "article_text_sha256": "f7381ab848994460240d470430e073d0393816556758479100ce2ed1d2965c1c",
-      "decision_sha256": "5dcd566e6d756371575dcf89a81a89d589f2f6eb997c986f8fb0863c98f91af9",
-      "minimum_real_fit": 8,
-      "searches": [
-        {
-          "candidates": [],
-          "concept_rank": 1,
-          "outcome": "no_qualifying_candidate",
-          "provider": "source-news",
-          "queries": [
-            "cited source image"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": true,
-              "fit_score": 9,
-              "image_sha256": "78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12",
-              "license": "CC0",
-              "reason": "The image clearly depicts fixed outdoor exercise equipment in a public recreation setting, which directly matches the selected concept. The filename also indicates the location as Oulu, aligning with the article's focus on Oulu's performance in a municipal sports comparison.",
-              "source_url": "https://commons.wikimedia.org/wiki/File:Outdoor%20gym%20Kuusisaari%20Oulu%2020211114.jpg"
-            }
-          ],
-          "concept_rank": 1,
-          "outcome": "accepted",
-          "provider": "wikimedia",
-          "queries": [
-            "Oulu ulkokuntosali",
-            "Oulu ulkoliikuntapaikka",
-            "Oulu outdoor gym equipment"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "source-news",
-          "queries": [
-            "cited source image"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "wikimedia",
-          "queries": [
-            "tyhjä liikuntasali",
-            "liikuntasali puolapuut",
-            "empty municipal sports hall"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 6,
-              "image_sha256": "cbe8dcc7f7c32a5bc4c612f683cde7a29e7b5481876b2a88b9990efeb3db892c",
-              "license": "Pexels License",
-              "reason": "The image contains people, which is explicitly listed in 'must_avoid'. While it shows an indoor sports floor with court markings and wall-mounted wooden stall bars, the presence of people makes it unsuitable for the selected concept.",
-              "source_url": "https://www.pexels.com/photo/people-inside-a-gym-7156048/"
-            },
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "2a6fafedc166139de6b0f0b55ce7610649a39010ffb103e638bf90b0e14fad65",
-              "license": "Pexels License",
-              "reason": "The article discusses municipal efforts to promote physical activity and compares cities based on their performance in this area. The selected concept describes an empty indoor sports hall with a wooden floor and stall bars. The actual pixels show an indoor bouldering gym with people, which does not match the concept's requirements for an empty spo",
-              "source_url": "https://www.pexels.com/photo/a-woman-doing-rock-wall-climbing-7590967/"
-            },
-            {
-              "approved": false,
-              "fit_score": 3,
-              "image_sha256": "df9493c13becae0590407857f06ac4a5c30fe68cda55afe9b4ad490ebabe50de",
-              "license": "Pexels License",
-              "reason": "The image shows a child on a small, domestic-looking climbing frame and slide, which does not represent an 'Indoor sports floor with court markings' or 'Wall-mounted wooden stall bars' as required by the concept. The visible structures are not typical for a municipal sports hall. One or more required concept elements are not visible.",
-              "source_url": "https://www.pexels.com/photo/girl-on-a-wooden-home-playground-slide-8430056/"
-            },
-            {
-              "approved": false,
-              "fit_score": 3,
-              "image_sha256": "961da6969ce0b990c180f0b03b39206fdc27db47c1a0d303fb0a31fff1b7d7d2",
-              "license": "Pexels License",
-              "reason": "The article discusses municipal efforts to promote physical activity and compares cities based on their performance in this area. The selected concept describes an empty indoor sports hall with court markings and wall-mounted stall bars. The image shows a person climbing a small, portable wooden play structure, which is not an indoor sports floor w",
-              "source_url": "https://www.pexels.com/photo/girl-climbing-a-wooden-climber-8430368/"
-            }
-          ],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "pexels",
-          "queries": [
-            "tyhjä liikuntasali",
-            "liikuntasali puolapuut",
-            "empty municipal sports hall"
-          ]
-        },
-        {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "d84ff4eecd94b4dcf63a41b0d525db54a66d43fc9c7b143a8de5e54b6a8cc6e3",
-              "license": "Unsplash License",
-              "reason": "The article discusses a comparison of municipalities' efforts to promote physical activity, specifically mentioning Oulu's high score in a TEAviisari assessment. The selected concept describes an indoor sports hall with court markings and stall bars. The provided image shows an outdoor street scene with a bus stop, houses, and trees, which is compl",
-              "source_url": "https://unsplash.com/photos/a-small-wooden-building-sitting-on-the-side-of-a-road-ZqqgJ_7WjQ4?utm_source=uutistenlukija&utm_medium=referral"
-            }
-          ],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "unsplash",
-          "queries": [
-            "tyhjä liikuntasali",
-            "liikuntasali puolapuut",
-            "empty municipal sports hall"
-          ]
-        },
-        {
-          "candidates": [],
-          "concept_rank": 2,
-          "outcome": "no_qualifying_candidate",
-          "provider": "google",
-          "queries": [
-            "tyhjä liikuntasali",
-            "liikuntasali puolapuut",
-            "empty municipal sports hall"
-          ]
-        }
-      ],
-      "selected": {
-        "concept_rank": 1,
-        "fit_score": 9,
-        "image_sha256": "78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12",
-        "kind": "real"
-      },
-      "version": "article-first-v1"
-    },
-    "sha256": "78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Outdoor%20gym%20Kuusisaari%20Oulu%2020211114.jpg",
-    "stock_provenance": {
-      "attribution": {
-        "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
-        "title": "Outdoor gym Kuusisaari Oulu 20211114.jpg"
-      },
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Outdoor_gym_Kuusisaari_Oulu_20211114.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "license": "CC0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-      "photo_id": "wikimedia-112652850",
-      "photo_url": "https://commons.wikimedia.org/wiki/File:Outdoor%20gym%20Kuusisaari%20Oulu%2020211114.jpg",
-      "photographer": "Estormiz",
-      "photographer_url": "https://commons.wikimedia.org/wiki/File:Outdoor%20gym%20Kuusisaari%20Oulu%2020211114.jpg",
-      "provider": "wikimedia",
-      "query": "Oulu ulkokuntosali",
-      "retrieved_at": "2026-10-05T12:08:17Z"
-    },
-    "stock_provenance_sha256": "85ef5cc5738a8a8320f7efb413032beed02088bd708ef60c4c7bf4507ef948bd",
-    "url": "https://uutistenlukija.fi/media/78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12.jpg"
+    "provenance_sha256": "0a31d865c0e4fff49d61644e1bfdfc7f2dedb2ee0162ccba9ab46af3988d96a9"
   },
   "new_article_files": [
-    "uutiset/oulu-kertoo-johtavansa-suurten-kaupunkien-liikuntavertailua-84215ac70cf4/index.html"
+    "uutiset/energiansaastoviikko-kaynnistyi-30-kerran-da961501d33f/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "3ef41e1305790155be46be908dc06918bf950b3bb9e26ec7c76c0fcff9331269",
-    "_redirects": "c6621012faa2e890c0ebfa427b2c1b5595b98dbba9c801648cc99bd7a58f28df",
-    "ai-kuvat/index.html": "ec4ec57a6b0f1b0f542c760308a4169e11729056d4827d0b9a8cf0f7c1bda9c7",
-    "categories/kotimaa/index.html": "f02e9fade3b1932ddb445f3abda3a6af1aafd70ae02ade86654f1561e0403adf",
-    "categories/kotimaa/sivu/2/index.html": "4d0b0ccb61da77962e38d537040d7d634d5df519f51ce1000966acab05e09097",
-    "categories/kotimaa/sivu/3/index.html": "eee6a6d50521424d0ff49390356d50c67b35b5c7292f93edca642e7b015dfb89",
-    "categories/kotimaa/sivu/4/index.html": "2be668eea73404f3ff88b567975b19187f58e22fb45a57abc05309c60a86e3b9",
-    "categories/kotimaa/sivu/5/index.html": "f09ccfb148e31aad1c53d0569a3f977cea9b83995b712f8b51c938e5122c5af0",
-    "categories/kotimaa/sivu/6/index.html": "df702d12e3845eb11a3ba7190ae15b55aca5c7d0b7e1ae4df5c03a0624af0c84",
-    "categories/kulttuuri/index.html": "8fed3f4c1f539c5168b8e3217c1a1e6a43aff089ea8ff576138a5e1fe2322deb",
-    "categories/talous/index.html": "ee4f5b913470f8e4b2fcb7e6a00569dc2eb9d97551e29e6fc3f508b7d3e76eb6",
-    "categories/talous/sivu/2/index.html": "f13f120d569111d5400d2cf34736827f9286bc4c3f036e4921b09d576f3de78e",
-    "categories/teknologia/index.html": "a84f702cb22b414b6a6293462d6b61be93bcb70824302d5dff76157971a7613b",
-    "categories/tiede/index.html": "5a7d37a5e7e07f3ba42ce5f8c97fd5ad50adae97d953361c79dfd6bb87176f93",
-    "categories/ulkomaat/index.html": "5ebe13c8f02626852ad31519dcaa6c5a4ea978b5e4b91316d704e253faa7838f",
-    "categories/urheilu/index.html": "e49f9c00177924a55b3fd3c722332a405ef737c941007edfc20dd403a57d92eb",
-    "index.html": "798a7ef968ce98c419fe2c5010ade544b3086efb12b2cca66e3aaf29f9e2a220",
-    "lahteet/index.html": "af8911e2f7f82d56add77d3a5977ff69c49f5f9e8387cc4adbb49b286c8a994a",
+    "_redirects": "49f60ecce228d78bde07a929bff02276ee034ad71709ed8bb746651a110f0b02",
+    "ai-kuvat/index.html": "b80e68f910ec945bee498f8c0430c2ea882949e0ba715321a96d842831470aef",
+    "categories/kotimaa/index.html": "368a8838dabe5f880f3a89e2df7c415c1dfb1379f6a763b92fbde8352b649ab6",
+    "categories/kotimaa/sivu/2/index.html": "981feb2be30e911326bdf335994916caf7780eaa6b1e91bb897385b2559220c4",
+    "categories/kotimaa/sivu/3/index.html": "07421fd7414052879bca0da881cb88e9627aa4840c626ed92c7ed9170b21fcdd",
+    "categories/kotimaa/sivu/4/index.html": "0213b9adcc18b4914e2e4a2763b18d40b9fea973275d6384f7fe09e3a00c43d8",
+    "categories/kotimaa/sivu/5/index.html": "6274e5c78ec47c114ed27ed01e660f435352855f579165280cf4fc5963ee9f0b",
+    "categories/kotimaa/sivu/6/index.html": "640aaccfcc623c090f1a46a38758601c12a34eff52bcb815bc8f0cdc85e9b948",
+    "categories/kulttuuri/index.html": "197ee2948629f6fed1d651742eaaa125bae1f09d7640b5418bcabadaae7f4a99",
+    "categories/talous/index.html": "f632b9f5db433dd81bb0c49b7b8e2c32b9ed10c292843092df084e6816fa9788",
+    "categories/talous/sivu/2/index.html": "50f73218237421714c0c85867454feefdc7c5c6543f6f25cbaed232e69305981",
+    "categories/teknologia/index.html": "6cf850f56efb1ada1bd669253ca7e53113f6abaa2d22c5b45720d7e9d9d0dc94",
+    "categories/tiede/index.html": "6f7b75cee6c6425c386db0f9b8e8bd6c65367cd38f815b6fb963da1f93432217",
+    "categories/ulkomaat/index.html": "b3f7a9668611ec362ddb537f908e887c589397ea9e0a10fd4d6758f9e9ae1aa9",
+    "categories/urheilu/index.html": "fe879cffca2599e2883f4902edfe655732947d942715d7707b72a7aa2f224fd2",
+    "index.html": "1d3805f9870339b56ad0d68df4ba52c0784933f30cbe0f337dd710af91c5dd66",
+    "lahteet/index.html": "42f858a751b9e63f58fc96c6e8c0792ba18f5995f94e746b98bc50ea41a5a66d",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -593,6 +331,7 @@
     "mvp-assets/953ce2bad70bc6f52ff5517ce2c61f2a91c102696774308e59d6d12feb23cea4.jpg": "953ce2bad70bc6f52ff5517ce2c61f2a91c102696774308e59d6d12feb23cea4",
     "mvp-assets/9556c8778da9fa3238c5ce8faf9653f587ec5ed1234a77c4ce40abe5ba03e6a5.jpg": "9556c8778da9fa3238c5ce8faf9653f587ec5ed1234a77c4ce40abe5ba03e6a5",
     "mvp-assets/9615bb126e804dd3fa0b7f427c5ee0da46756a6c266df427bc02f82d60af1af2.jpg": "9615bb126e804dd3fa0b7f427c5ee0da46756a6c266df427bc02f82d60af1af2",
+    "mvp-assets/963303af15e20d7d78a0d0ac1118dd99ef6451afbb6b3e7ad92500955f8d51e3.jpg": "963303af15e20d7d78a0d0ac1118dd99ef6451afbb6b3e7ad92500955f8d51e3",
     "mvp-assets/96927b051202b60f51e23972d83e790d2428dba5e8d051da47ff7e53000aac77.jpg": "96927b051202b60f51e23972d83e790d2428dba5e8d051da47ff7e53000aac77",
     "mvp-assets/969851d82e582066a7d2a65b4502a223e3611b5dd2c8f89ec299b6e7a9150501.jpg": "969851d82e582066a7d2a65b4502a223e3611b5dd2c8f89ec299b6e7a9150501",
     "mvp-assets/969ef9d13e3b361821a7c0b7f1660a78884f2d1b6996df83eba9f700fbd75b5d.jpg": "969ef9d13e3b361821a7c0b7f1660a78884f2d1b6996df83eba9f700fbd75b5d",
@@ -825,31 +564,31 @@
     "mvp-assets/portal.js": "ae7a9eee9306242d93362e5d9b19506af0cc9aed46e19b75c1b475bc3727c92a",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "c38c69b89c21567c06f0b8695347f82b02ce529911525ce6448c3722b9f6a605",
-    "oppaat/index.html": "91d2055270b7f2280f6cfa852e7a850389b570f62b67056159974a3a51cd09cd",
+    "oppaat/index.html": "1eb482327194e38377821465e9520089d9d033f464b42c8f62208be73097f4ab",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "0cdb9225fb7583cee2b109c425cf95c9487e9601f8789dc28eab4b932f0964c2",
-    "sitemap.xml": "5aa8e93fcc4f3352d9d2de53fe1922c977e133b30be05e70e6ba7e96f5410c18",
-    "sivu/10/index.html": "ba51b126ec0921dba829bb57ccf1d44f3933b0a3a6f4a9e96bd78a3f3ddf32d6",
-    "sivu/2/index.html": "a15ca3eab9a3eaed434d076ba0ae608862660fce62cadeaecd1a930ef9f8c4e3",
-    "sivu/3/index.html": "595380aeba7a1f1a68482e6a9ab54c7bcf19cd6b6af80e86c6bd9a14d260c212",
-    "sivu/4/index.html": "569198b1a3c69c887a90ec45254e58cb9a86c909261294ae34a44b2672d15aa7",
-    "sivu/5/index.html": "6a433e84dedfac3d4aa3036db59fc780ac052f7e96451eba628b661895b83f06",
-    "sivu/6/index.html": "616b14f3fb3a762e5b8dd4ac8afc2a70c1f237e3e47b13426987396e5f9dbbfa",
-    "sivu/7/index.html": "e8f93417c5365f01e53fe20fd4609ce3f4553be8da082d07ce46e0ce88d84978",
-    "sivu/8/index.html": "e3805ebee4581684ec419bda1f8d22f5c8e6a2692681f631392554d3ce7cee0f",
-    "sivu/9/index.html": "8211a7e59d0c2b6a0a23f2964846fa703983fec8b68c820829134355b986db58",
-    "tietoja/index.html": "9b3f676b516fa028ae9d7cde09237c3ab89880dd22512155610e953ec2a657fb",
-    "tietosuoja/index.html": "afa15bb11ec0aafc3c01cb9c2d229a8361f0d31e6be754c0fe5772f6f6285570",
-    "tuoreimmat/index.html": "d007124e0f08c0d6dd37dc6756833fbd1edc2ee1a53ecd17c5cb288666db2684",
-    "tuoreimmat/sivu/10/index.html": "780959faf831c5b940aad4ed5fe02c0f6b3b7c91bd7676cc00df8d3a7fe18395",
-    "tuoreimmat/sivu/2/index.html": "fe80cd60b6bd3e92ddf7790534ca874a7435c75bbc13e1142ad8edb8e3c2127a",
-    "tuoreimmat/sivu/3/index.html": "c94d5211e007a43cbaa21dc2bf4de468699a24632e67ccab430ebc4947726971",
-    "tuoreimmat/sivu/4/index.html": "53d98901f32cdec8c9a12b2a4cc29584bf4c3be2c9da61eb58b08bc4aa9dd277",
-    "tuoreimmat/sivu/5/index.html": "508de3705a30ee92152ca4976aa8145e6be40a16212bdc7aba5e3950603efac4",
-    "tuoreimmat/sivu/6/index.html": "51b3a7e0a994d4614658330922e0f0fdf04f3019adfddafdf8452c90a7ccc8d5",
-    "tuoreimmat/sivu/7/index.html": "b6306fe0064e281a0fba95ce2b799f03abcc2552830dc805ed0a2c6c529016a1",
-    "tuoreimmat/sivu/8/index.html": "6d32744502617d5929c5fe1cebc4d794dd1995cae71bb8a66710063b4b5bb0af",
-    "tuoreimmat/sivu/9/index.html": "98415f3764388dc48773f974a8e0c6b45aad704b01461b63f9812049fb434679",
+    "rss.xml": "8c0b79b8178321af1def46771443f837d2c1d5c52faad2717814c625e986c8ae",
+    "sitemap.xml": "017ef4d0035df9dbda6b5f914e8c18baafb166a7922d60cfad754cbf38ed5e96",
+    "sivu/10/index.html": "45137d60f7453d2b84c41d1bf25fc217c6cedb79fe43eeb847dd3e816b0fe3b5",
+    "sivu/2/index.html": "2d6b2266911e0879903113b2a268ebb1b8850f723a5a60e282b4df7495d9bd4e",
+    "sivu/3/index.html": "fa40f03cecdf5232aa271d0cef6e84d690a7b30b3fd439814fd092cb5407d25b",
+    "sivu/4/index.html": "1729d693ee8148f978879074cfbeb401e7a3df971545637922796b8987334401",
+    "sivu/5/index.html": "6c9292edc74cf90b1c69730fe1d61b26b487b57f15450ac80adffdc2d8448a2a",
+    "sivu/6/index.html": "398269ed1c66c48feff67427dbe1ef15f558321c2314144f0cc5d28d52edc4b5",
+    "sivu/7/index.html": "1d3434aedc0e5d738535860eb8f90258121ff84236a459ab7643a8cb8d5ce6e2",
+    "sivu/8/index.html": "8af2e63b8d05b2761e78f16cc720cb3d1419bd453fdf5d9d55d1de3eec137793",
+    "sivu/9/index.html": "356d505e979dd96b5e9f0eb7727f22757c0cb2654a190114fb6ff1b4ab409b0d",
+    "tietoja/index.html": "f635a1cd9249bf57951076152ad88e054a7c000c96ca8ec882874a14f07a3f10",
+    "tietosuoja/index.html": "ff5f171153849f0ddf3a67d9a576de45c1c357b13acafdfc7d9795a651e4e822",
+    "tuoreimmat/index.html": "8cff1a4055b39d132b3c29b0a9d6168c2fa935b4415b260cca226f05193262b7",
+    "tuoreimmat/sivu/10/index.html": "09b82a01dbca4cf9a14b5873be55f003eed6ead854cc7e6848f11a0eaf79d55b",
+    "tuoreimmat/sivu/2/index.html": "501f31a09391c45b06385ec8c97d40443ff48ef961d4802c47eab94295c0ebed",
+    "tuoreimmat/sivu/3/index.html": "ac5ab0b161b22c0cf5bb6ad3dabe6301951ebd148797237150c0be8edb4d4f76",
+    "tuoreimmat/sivu/4/index.html": "55bda936662eadf779af611be13524f639754d25e423aeedbd6f0db8f66494d9",
+    "tuoreimmat/sivu/5/index.html": "2d5b90514b7f81d3dc2151895cbf3b38805f11e6944579dc30113aee0caf805a",
+    "tuoreimmat/sivu/6/index.html": "17e49adb9f78bd36f94b34a9ca063384219b473af5e19f478529d23e50253f12",
+    "tuoreimmat/sivu/7/index.html": "e311da06750b18e9d8408a84834c6e2727f222991d3036caff0b0f4d2184b2ed",
+    "tuoreimmat/sivu/8/index.html": "a1bd14b8aa4561830f164a073bb9ca84394f5a368793d835f2150676eb28a51d",
+    "tuoreimmat/sivu/9/index.html": "2b2f02357b820f5a9088974409fc71a537ddaa216ec2defde7952bc8b8382190",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -863,400 +602,395 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "f440d3997aca07f9ba6e2875aa3c5c0823d6bd339436e52cf7601ee4a0f7bdf7",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "ea0c4edb09617093bcd4b868b4c6b3e17dbcb154a9e274fcafe8ba0a8ef2cbd1",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "3eb9be9fb23eb6627058a196ba35a72dccf6fbb92303831137deddd5c26388b7",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "9036412ee417a7e91b73c7b8f2ba753bc8655e890937439618d20ebcd79983ac",
-    "uutiset/arctic-open-alkaa-vantaalla-6-lokakuuta-07b41b9ba608/index.html": "12e84f5d25d677a29c5b204ddc97d964cde9119e3d9a8f50723a31fdee86edd3",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "e1548cf7748dd6b8c8e609c3cda5a72125c67dc75e9aef3b6cbe3c10535815ab",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "3b3e19b57fd44d5501505eb17011c3dbc6ab5180557763fba83fac4c60c6bc0f",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "0867229f231e34244ab160e9834385ae34c926306b1b87d7c9a77d6834eb5416",
-    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "98b2b74e776adc2ce5a1a8d542f18e51c909af7db96f1f1fa2b56c03492bfba4",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "c0b7848bef69c89b46f12bb1f52448d6f6d4e947e0b6222af8cdc56285a225fb",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "189c9fa378332a8583fb825aa4be3778a8eec10627bd6e7135dd1bef3f903d86",
+    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "07f2412459ecb1826d82a70a6c4f5d829ab9b1d04cd45dc2a0a77ca7d64246bf",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "dd52521713e5c72be74deda1219110a7ccfba6a83e96c3bda73c12a93c3508e8",
+    "uutiset/arctic-open-alkaa-vantaalla-6-lokakuuta-07b41b9ba608/index.html": "285a44a5bb8a61b1be1fa86acf622b7203a1e5d831fad10debd3dd363b81c32d",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "e5f51913393b95cf0b0bab2b3ae7d7492bef1916550699eb2a5c7d105f9a24e1",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "8930c78dd8c55dc90a38aacd80bb43cc946358b243a5a86e1c0cf50c550767e9",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "1b28f046cf8b5ae2ecbfcc11d74f12e862e989e706aa30d9cd3e98718af8df59",
+    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "d7ed9f82f6053949ccd2c5f8a26970230fbc0437f2a430d92c42c67567e9305e",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "4f6f2269568bd83ac745b05888fa48a766debf816cb6b643871d5607adcfc4e1",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "4e2905db399185074569a704d47ddb2bc39d69d36a9b4aa2c975c16c26236c90",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "3b42fa593c63c4e2add882f191625dc24953ff0f2300699dee056168f287457c",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "c296d93624e8e235de19eb6cc500145d8423aecc31bf280f4c5d610bc03957dc",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "712128e44e1c9b59a7a1c3ad575c2c8cbc0bdd60d9b9b96460c7fba618cc2450",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "320c0a4ac022d081879b4a40b0b5e8601fee4fec8a98b05c3a8ad457e0399ebd",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "81583762357fdfcd485fe86c45c78b2b2fff989c7b1fd002393f4f5d2c63fe70",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "3e1e4ccaaeacb9c4cb2b7d6cc5dafa56745502cbbd77ecc8ed3c9b97a38c8cf3",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "ed67d8e0eb5e254d990f15e872faedfa7d7ee63b579688cf42fd59d2c9c0ae7c",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "aa34fae055abaff667e283ea9da15fc96901c8e3eb12db58993c2b27696bb379",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "608e580322166543de389570caeeba8a2a73e67d29b813191679d9b457c5c644",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "5cc6c33ba7ede48e55f4f9c6385cfe50a6f51923638cff4f6fee15c06a60fcbd",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "475d7fcc717b6c1a7dae6b0689699c6f8ee97b9e4b229891615ddc1a186af5c9",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "caf3a19bbdbad4ebaa3119a2a20a5d2aa6e1b4108b920b339660371bc6fbc44d",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "69e8dfd117667e8df4af6d15205bf8ce27b9eb260b31477592d3a37808a75b61",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "fa71b25597ef6adf12f8f71a86f8e02197941f54149165ae326b6bfb6d19bc20",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "8ce9388875dab861d1242f6de70c04663aba6aaebcf9b7adf2403c057c0f6386",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "751248eba5b7c6491f4fc4b6f6156dfaa4908ba63551e0ed559a5b7911f9126c",
-    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "c48729d1af35a52d5ee40c531829d2cccef6275d56f9e5246f20098199c47c29",
-    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "2066b69fda675eda3f717a8d65df214379b9d7d2644892b9bc9375f3c265723b",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "a349b1a0f70453a2158d14e311cdda086d30e7df17f189c1da0da00f1a798dac",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "a5e40ea308f70543f5325ee10b2941d3d5a94112c156f806e19b4e0ecb34c3c8",
-    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "fdbbc72a9fa3ce024afdbd72e8bbbf93a4f8ce54ff9a2d92d0ad157a99a1bf2a",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "e154bfd5c7fc033a350c14c479c55e6d0e5a28ecdf6291efbd43f94cbb2184de",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "4d93dd9fc7c54d5087623adddc87f9dee9f6e75f15f065f3f3a21b0b1dc2b32b",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "09579b7f47ee98872f65a4ae6c3f768da4f6b1fb1afc3bd94db0642ba20904bb",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "0b8f64fa609921d6a2e011131d8b7d336935e2f4ee3b58756dc2f9d629fe6df9",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "a3ff38202f7602432cadaf48fae6c05019237aac546f9f09ed20eba60dbf8737",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "b98bd3e577b9510eaa5faa5aa26dd5877e54401223f8f2cb9607c80db829ad69",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "96dfc3a555f46c3c89cac2e6297b9adb76eed318a4da99624f6d9d3762cb308b",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "d459d12ca5cf908e2f9e5b02356529b6315065401882973bb6085e7e4c128c52",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "cc1fafd70181356ed1fcdc452049e3270126712250f36f4240ab600ae15b3d55",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "d4b2b0023f61718b32c119d67e3b0f50b37467736eb91bf38e46bccb914d9013",
+    "uutiset/energiansaastoviikko-kaynnistyi-30-kerran-da961501d33f/index.html": "3a9c9bca1b44fd1bce10e834cedb3c55433620bbad5aec2ca2e040aaddf94fd9",
+    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "dcf782938e0d4072d0782d5c6cbf42d8c82be94f7b6f56d2b32844feba0ac761",
+    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "9d5388425ebd0835e646833f8653918e335cda30330cf2daf323f4f5077fd504",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "0aa30932d648338d66fc1f93e953675ee8663497cd3a5e0a0f03d60442863c79",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "94a1edda99fcd6c085ad78f4aa5d8d10d94ec9c2b17c1abae881f5719d4150fe",
+    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "213638286e4e3afb01ebd37ab72d9c822dfea683a76a0aac999e03e89ce425d8",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "c69dfe4550b377f33b0c073162c432c93c24501182a80af10a31b59f969faf5d",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "f39039bb5e45bffa11982dd7d745d841190ca2ce8c3fc17e886cd189b4c4eadb",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "5097c0c70ddb5233377da056b908863b8267440de6457866f266f576cdb9ce60",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "5a7f3db4ce94f0bb959e199f744012fd401decfbee47704c779a47d41a7ff104",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "b1aa9c32d0c2639219a3debb0de53a9d41b0325e519810d5943d7292765b7a3f",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "af82300366f14d01664a56a0376e6237277770f801a3e9bf595ef143bce87cbd",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/fortumin-yritysasiakkaalle-suositettu-hyvitysta-45c3d38688f1/index.html": "95319fe5ee7759e11bc86f839299af3debaad72bff047a81a055a6e230990e2a",
-    "uutiset/fredrikintorin-remontti-viivastyy-arviolta-vuoden-loppuun-2a57e16b0903/index.html": "36bec42cc25568f92e4cee71d4d5cb36531ba74b4b550b9c01ae9d8b5621c7db",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "db7dca5baae040ada9ffb873f9e82f787b3561c0b17a785672798462fe97e308",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "b6c3fcd462cf196fd0755d861b3f8ffb76931d88a51a463554b9335bbddda7fe",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "f356638f24c70ef283efa44c5408a43a20bce59e998ed27f19a982702b488772",
-    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "3c3b987f3ec6d8d74799f2e813309a42d8abf8d726afd1525a463271e16f8ef9",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "e8ec287ef4cf7e670f80351272b8a4ca81f2e63013df1202f530f3a2e7855aa1",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "66e2d3a1c16b0d2606199bf97a57820687fe1eb7a715997abb4e8bb718ff9f63",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "d6e3d7750aeef5aa7cb2209113db58dc2f5a83c1a64860c49bb144d95912e90f",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "fab9ab4cf590c6c16a56c56ffda16c3243218fe87f1e8bf68cf50d8dcf8934d6",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "12db660c32643e0014e964cc730c25455959ec8669e6d6f304fe354457e81fb9",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "4ea92e9048cc0c48a9e015c29f24656053088682eb18afdf6a34631bb7397239",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "8086a8411760fd09dc51177574648fc7ef950847218f7d646f73e03ed066a6d3",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "7a34718e5fdf359fb5e105af0287a24e68e2b2f1fcf3daba05471295cf10fd5a",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "d7046f98fc7ed31ac89d605f9fa5799cbbb994e8e94c94f99b3c6f95778999c6",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "aaf3c3041a6641e70d84d9abacd0a18cf292f6b596f1b957cf84f719ed237873",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "93088f5298e09e3e58bef2f75fe75497117899d6fe3afde65e913a4519adc1ae",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "76d4d0b9df0b1bbbce2cfb03537d87d5d6440fb1888a9518b4115dd1913fb209",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "cadc82b003b026fb9eb04fb9db16f0bd0e6e144f272fdedd1d7d60b71ffa6dda",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "4b60b479381c6bdedbabd4e3400c6c596f007a65aa7e569ad20a7a9f3fb0649b",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "8c87db50689c7bdfa49a4f16321695111b5e9a482f2824038c649441e1158a32",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "5f05c9fd43722df676a571701c6ccff1b7798caef5e3ea00abc870bc74610e08",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "e02df3f86aed7634908229e568b4abf5235f75123eace3e71b0d463f4c1483a7",
-    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "dc74f06a22fdc735b77cf079cf4f6a78f7867dc21605f76fbe522edf05007914",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "b2a16e64dcf41fef692fd06f13ba4d89ea2970554bbb1c99df221b5b780bcd49",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "600e2c4af772b62c86da5fc8b0eaa474eeabf446ad2cba3268021e5cec6aea49",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "77baacf1f4107ed138a8c699b34b5bab7ee2a5280390c6f2f57b64b3b9092707",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "7dbe71b0906e2206db0076d104686d172e748ceb45864f7195dc11a133031b2e",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "7bd9908da3834e9b56e8419a392d95dacb84704ff37f5819f2624a6fa77824a1",
-    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "e3a11ff4427c8c26aa92d08bb0f46c4d8e96d8626df21b0918befc03162b59f8",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "8b39f46c8cfda6af17bece9b0fd0d92adf50b24d1dd8347c9269737707c54040",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "5a79ea5d58d9688f749577c9d4a8bdce369ce6226447f3e0a5ebc4cbede0c175",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "a7b4441c194ebc85b1539420e9edc220a89257ee37d7694df4d798e1f070839d",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "710a8b4ab9ff81a11631d0b8297797bbd66300cb9d65b3df5824b0c6ae857962",
-    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "54ed309112e64c43eabb5e1d48d2dc2325f8579db888ac6098136fcafd6a5844",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "b0584da879a2208330a6cdb202804d0ecf423a48bf1910fae7eebfdee6ace376",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "74c36d2f0c770ca37ec1b39703a64d022fb79b83a5dc60b4658866a498898e38",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "c2cdd14740851bb774e3512b61aa49183c2593c8cee3f9e464d622652d04e63c",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "091b2b5fbf8845b64808ae4fb116412b2cfa352a8bf43a8da40679465fd0cc4b",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "fc58c65d4d68b595c25fee76274ae1a4a548a469292a5674378035845fb120e8",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "fa05820f4b94231be1418202c9c04e0f75a8c74fbe8ca71b8ebfae0e815e48f1",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "b41291984c842773ddfa603d343ec15988c047b6b42a1003211cdb86d95831a2",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "dacdeb903868bfd224c63c5f7536b47b490d56e54ce0d915be23d7aeea342ab0",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "46d8c7c452bc7ee9330008414ee9aa3e0f9609a7cddbbb578d9776459b373ebb",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "981ff65b3d855910505c198937c10e566dc962e73290593c35aaf41861571195",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "0c6b508d3c6655cf4e2686593df1ef4b0b955dce57227ecdfdf9f16fe0ea4319",
-    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "8a422bfb593b3f3e79611c3b5fbbd719023a24b240a5e3d7ab27d54ba7d2191f",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "b62138ae387887819fba973e3aa6fb60543449b450d3078c89f8880800ed9f38",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "863f149e43391597c8d8b8dfade132ecea7ec2a6162db5a74d781ac6d3de5d4f",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "abcaa1500d09f5ff8d389b4397a94d54e9e9ee4addfdca326b4fcc2ddf5f07e6",
-    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "2ad8d32fdf2a076d70005ac5fc3ad921e1a3e7afcb9c202f8519903f6391e31a",
-    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "d94592ebd7e5d7e3bc44f5e84a0a98ba4828e4a477b08ea11f0cd957b277c55c",
-    "uutiset/korean-niemimaan-sedimentti-erottuu-nasan-kuvassa-b25d7a241a77/index.html": "e10be504b99a4c7e1f48e7165ee95447a33c6ec8032cdeb94dd1c3c0addd6fd9",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "811e353bfe0826c0410ebf4db0846cea8f49836e5447654c3b105072989e8e8e",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "0e4b51ff29a7144626cbd0d336b5d0da7372097ccb3c2edc9e93bf482aa3bfee",
-    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "b5f0e7bae6ad2c296343363577b37d7c7945f82ff1aad266c687a512c5c32ea9",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "568e87f7070c991bb9c8c2a0ddb40b50689fab1487ba5f29675f9e95a656b9e1",
-    "uutiset/kuluttajahintojen-vuosinousu-syyskuussa-ennakolta-2-6-2e846b3cf176/index.html": "53b4fe52ff735618ecf07fd33a6f1b9f290744e9943ce45ed514fda49e9e8a4f",
-    "uutiset/kuntaliitto-ehdottaa-valitusoikeuden-maaraaikaista-rajausta-fe92f910b26a/index.html": "95e5f3f099d8ac8155aa208ef7f28c5922588d5f89b2fbb76e097787c78380b9",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "07e0c7544ade4a6966dd4176fa3f0317c88171068d4401d3a24ef039561ab0f9",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "1fdd2e7885b954aec12056e3773397fd9b12c72d1fd8a46464893d71a7fce79e",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "8f3ab6be91248027a5557ddb361f6ece4539834c02770451d30e53b91365196c",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "d0501aa93bb59e1df3ad971b0dfd433ef6e4b4b2c56e51be8bfdcfa378f1fe4f",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "c52b6e36bbb01697bc603400b978b02c806811e4c6112e06f014b524c3ab7b70",
-    "uutiset/kuopio-eurooppalaiseen-johtamiskoulutukseen-aa9ec5a14b3a/index.html": "42d961a500ddd9577b2061317c7f191d0a72e97f7964b3a4b4d280f93f222766",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "1489a3a573ad0a7934817df1ef312bdb81e3f2ea1dd91eac4c0d2aadeceda34d",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "f4f8d71aad10cb0649c52a6fa3b9efeb82fb463321e96972e72b42af61d2546f",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "85fb931085d790082ade192416499d33187af8098e9dc67dda3ae50bb109ba4c",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "48153062815f6976987358d3851798700780c47f58fdeb22bae8a7404d5dd1a1",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "5687d603666ab5095dae5baaa2b31cdc905474ae50801f05f6fc6b353dfe9a9d",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "7eb799d1312e044b5b26177e493db9b70225ff801906b9157b8f981854347f2d",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "99985e56f4e1f439a779ed54f45ee8bd7d214875b0867cd1b49aed14d5d522c6",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "82532219ca5d7828e3f1fbac620503735ac48387d7c603fb63c0cb113450d568",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "317dcb068508a7feae69bf467db8244b8172eda1c5a73f046a317d0d3f7a0716",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "43b89d30ca78c755ca59508c6bc955893478ce0ec01b705f9bf6abfda4e6de60",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "8c8ca84d98fdcb03ee04a4112cc4a1e4ec87e196c4f0aae480526bf60b9c7a6f",
-    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "1fe1f7bed1141c6abeab2b02fd6e942f924e3aa23355a0a2516522a367f7f233",
-    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html": "3d761316c0c441badbf175f884f2be1f97cdba324bc684ddcdf80676582c4a85",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "86577a0ab64fbb9b909e2d228e2d6cc7477c6b35fcba1445ec77af6cb561af0b",
-    "uutiset/kuopion-vanhustenviikko-tuo-kulttuuria-kohtaamisia-5cd5fcd61b42/index.html": "173277144b904debb8441497e6ed19ef7634bf237c002c82ce01dd6343babc60",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "f4b4656e40b81d5b588a9a1a3ac103f0d81b88761b0563e004d10fe16e1e9df2",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "073eee6d46e6bcb95e400e74097d4f689a3418fb8695104244a8e4744eed9205",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "f3e2628961d709ed24f05338dbe03659634985f09512749b38cd319f72167841",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "369e773c4dfcef18e9322f9f3b6a323857283cc5afb4fce74741948bece9b047",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "8a0c1b47154bdd688d7685bfc7e82d229c7b9cdf65406d6d091b705af85b8f80",
-    "uutiset/kuusijarven-wc-tilat-kayttoon-12-lokakuuta-c2bc4a29129d/index.html": "fc75c7258ad4f8cfd4cbd758073bfd49fd9f8336217931b3ed11100dc747d6e2",
-    "uutiset/laajasalon-palvelukeskus-vie-kohtaamiskahvilan-saareen-c12a889800ff/index.html": "40584b25e1795ed2db84a69ebbb82b243861e3d2ca582fa6d8698f666fbed655",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "5c50261b844bc8da08cb9b890eaad038ef6323073306932e6704a0d3fa9568b2",
-    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "8f91626d501dc13a1295e0c4adced26fb20f2a28f4f2b6e102701f18993f13b5",
-    "uutiset/lansisataman-pikaraitiotien-hankesuunnitelma-hyvaksyttiin-743604e52b6d/index.html": "8f51b659c386e498b37d328b25e3ae1b13cab1a3f6900a670e4113a21f9178c2",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "a0fe05a8b18677caecfe6dd684c98be6f4c2602255e88e7dde0628cefd884571",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "0c0ac69ba90d2f069307daeeeb8559584ea7e6c5dad91e83fdac6dfac3a2844b",
-    "uutiset/lemmenkujan-kiertoreitti-kaytossa-viela-viikon-41-9379acd25d35/index.html": "be6a938b54e1d60fbb0117b6b9c898392a4882a692b51c8f1c6493b47e20f02f",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "dbaf734142a928b71c45ffad2a44daeae5e56ac7197add1ca6d1e6638c5a7e89",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "33810ca74daf94d94b1b5fb003cd939fbb6a6c0adbefdd7567dee27f3ba821ea",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "a7bea7a83ff95e50979cc563933be5d7f598e827849e32a59f61c5bed1a837e6",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "575b08f179cd090fb1deb9e2b391447698feb70d1acde095b37ef09e0ec2aae6",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "3815b3d16f37f9c23de06b14a13c395c39cc8bfcb7b8c61f335a96060dd2614e",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "d607b2dec459531344ad4ffec7ed804fe10eeeff485b419f30661bc23187bfd3",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "4a6e28b69b7efe6155fede091e56f1a39f5c4bc8378a364c4c2d671ef57d59cf",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "d114b2fee5462150293ab32286edaf20e0bea9607d316c93f6630a4956b2fe6c",
-    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "62667380084cceec6bb2998e76467411bfc02891e419321f69ada97b7aac37fd",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "6deb21a802f944c4b450fe6743e64447bfb4fb44dea8a9b65380a2851b9a7a17",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "7c6d36fe2bcf01afb1610bbc5bf483d1c68e47efcbb0abdb51cb135c0d416998",
-    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "34964f49ad48ee82a917e5523f92d2bf4b06d271f6f79a5e415035eb374d9f47",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "39ef75a49b5806f81988452172b575880bf434065da76841a0b1cab2ffaf8eae",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "e64e49ba2b7c0705913eec791aceab47414b0955be463e21de55f797933b8398",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "f4b6e5d765887c56b32bea737df36003c5dd8e1333e5f0bfc6653fbce6a9c6bd",
-    "uutiset/multala-hakee-saksasta-yhteistyota-vetytalouteen-dacb24d664ef/index.html": "be6652a6633ee849148de399a9894cc461a73ffbffcd72b6dd5ce193c40586ab",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "397165eb6261b8735cb6338fece76a402f33484bb4548ef8700ebe441616b51f",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "b57bcc7365b6d45d3c07d2dc40888178c7ca37c861d696d721b294b9eec0dc8a",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "23d964976a5fb9ff63bac388cc1b5f4ec9703128d5f003794f78e4953ff82f43",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "438979897a04b434132ea280b0cec93daa46042ee36bda823736c00b73e11213",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "5dfe288b88f6955167c5045c410be3aa0bad2f492f2cd736f1e67c0ffbb512d0",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "0f4f25fdbedbfc28df400715cba55e03a1b1c87ccd0c4441c8bab2c794a29742",
-    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "5919722410cba1375ec433a19e80e172d2b661b19fb8f247f6e156b801ba6b72",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "b2584bfbac3cf1536e206d8d77ef8e6d1bda010f139c61c5ce10c6c727c056d6",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "744dd5191e18029f7a29219bb5e863b4491790fdb7ae577c5f55f246ebcccdab",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "66fb21477b30c4412c6f5b6f02a61bd469257a6f9a956e66d6d4ac1e80e23f92",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "39e41952c9ef57770f1ae72dfc75cd40bd60553e3c56d5e449e9f485197190e7",
-    "uutiset/oregonin-maastopalot-jatkuivat-syyskuun-lopulla-c79a7f054313/index.html": "15a7d2412a6bce810d0aa63e4387744d3d1c8eca4adcfc046b46cdd5343bcee0",
-    "uutiset/orpo-sai-katsauksen-kansanedustajien-turvallisuudesta-41eea6aee980/index.html": "df895cf256b344dcfc8fdb36738ae92152e9518615b7ffb8bf05883b76713f89",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "62c12aa209c36fc4dba93795b248d9290cce65ccce75d461195bb3d8430914fb",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "71e8fbf23caf971491181d9ab712c41f638da79962f6d1a2e858724d13b25b6e",
-    "uutiset/oulu-kertoo-johtavansa-suurten-kaupunkien-liikuntavertailua-84215ac70cf4/index.html": "c86932bfb416c75b26d46288677d090ddf1d4a8669b790cd63381db2fb038942",
-    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "1ea8bd216644925760b4fa9b5b3fe90bb59d829c63604ff922d85cfa38b0ad41",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "56c0f8cef52415cd9993029bd391ded9cd53698c379951e2bd9e80c7f51c33d0",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "2ce3c9ff9b6bee3ea8bd7d0cb10684b450d844c4a2610aab8c1c99839402a1c2",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "8c1916be957430b575377750252f725ced4d7e6769cce6aac9c89127078f6dcd",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "7e082b44e5e2f9b443498019e654cce297f48813e851eb1898ab3dd487aba1e9",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "51d593cf75dabb8e75b0e2586214cc5fbf5b9f5b932179303b9ecaf3ffcdb801",
-    "uutiset/oulun-kaupungin-vaihteen-numero-poistuu-kaytosta-8-10-c5e10b449ff6/index.html": "a88f83a633ae7695d003e22da6a292503d265ea84c02684a838f313f7a389345",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "7411128ff6436b5b86bc4f6357c26e51cf3213b0ece1c658d30bc82289dfcc67",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "feb1e85d7d472ad1f14d4181109681470268b40a3d41df451bb6718902d729ce",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "e76cbdbd817d5c820749e96642c2a40f5480790c320c85d55762e4d6fd4bc6ef",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "16bd743269597c7a8eb0f8e0bfcb2d2eccd0b2388b52b5a3bf375ec51c0bb4f1",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "4bc8091e62d9f3172ca87396862c39ce3ba4cc9c1d906110bce98709f10f2373",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "e55bed32859f8434a811b96683c73e4bc3bdd3001f8225f271d74dada91d76e9",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "b0ed0f963f1e2e7b5cc966f1bbb5b6ef89a2991960009c76448489698b12776a",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "8c0ad8fde5724d1bdfbf1038ac4e7b4dab0b0358b20a912ab7a5758d4c13381c",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "f0b8ec16d56f55b76854b985fb38acdc43ce3597703e7df681206fd2785eec41",
-    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "98e482995d22734f011e67663346a89757b273c6c8191243813727eee51d0b6a",
-    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "bb5a5f46e2ca2c83ebf13a80a2ef5d4b040853ba831632be7c261c87a020cafe",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "de5061811b65fbe266e725d3e8acfd87030ed549c39442bfc6996c4e74f79101",
-    "uutiset/palkkasumma-kasvoi-elokuussa-3-4-prosenttia-vuodessa-8c742b4b56b8/index.html": "e77b476096f6587398257cfbc68883c68cac912999d63a20c88f24df9030b2cf",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "43d5ee68bf9329c518ba995ef25c0e8ad43092b035236acab36c62a2ba390b6d",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "47b7f969bb54c6371620b2bfe260fb9a2e6985d20820bbd9aa583ae612762e6c",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "b7da3ebbdcd8994ca3738cd8911550119f140b09c891a9653d8f44edaca1b05e",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "73c047122e4f9046cccf9df0444b611a7f0ea2eee41155b411c208c0881e1339",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "9ab5cc0a3a1221dd278cc3908bc03aef396dace043b9ad9a0eaf362e575180d3",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "96f33ec87279981541f704830acf942fd013b1bc49e9e963224f3873a44ba25f",
-    "uutiset/rachel-hurrikaani-kulki-baja-californian-etelapuolella-59edc2fdcd34/index.html": "30742e47abe7cc93cd662e532ee441d0dd5d516c155e028aba4d380798c028b6",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "c6f4c1e8abcce4a8fb1ba04b567a2e7d3013eabdfeec8d45bb30243f739e21bc",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "18362ff3d71fa31421ca29b36e22ed051510454c83c5b389aa19ce9d1a099e4b",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "c11f3bcaeaf23efc3a23e38e9ae21782150cbb15bd1b535cfbe10f2105416271",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "8028485b28f38132b8e6511cf915ad2c8df7fd9182675faa2405affe4bfef1e8",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "17ab1635392fbed6111db2268a8eb6c614f76b069387d84d3499428b4b2a69a4",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "868c9bfc65435da403bcb52aa7919850ce6ace130782e12d939a978b196e9fd6",
-    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "2528e18cc1fe03522d9e68a15b6db715dadfcb18242a6484071c138f9bafb5cb",
-    "uutiset/sahkopotkulautojen-kaytto-vaheni-helsingissa-81f29c83f795/index.html": "74abeb547c601ac842ba2b48fc48fa7c9fba38543d01d2e1990ebe8950c851a9",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "87b40b8fc5ff0ee68624c5a5016703eea1c23265448d62254c285e9be080affe",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "33435263b88822c505c244a6fde3e14c706082129ec7f50aa2a654f04f481a83",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "2e16fb2df016947692fcad732eb9ceadb2ad7134726926543ed39d5832c2f78f",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "e9501048d565c7fbbec5f19d99980cf91e022c3a140def561f4629e59f8f6b60",
-    "uutiset/sijaishuollosta-poissa-olevien-lasten-etsintaohje-uudistui-ccde11681bc6/index.html": "6abcb99c3152924cd3b2ccef284939938e85080408f254c02451d29c5320a584",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "c7a07e6b2d63897c9284b3df599454d5f36dca3cb0cb264a04e080cc29d6a608",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "247a07756ced566a519884c73472bb76694a8b1577c7bfcdeb757765c3212187",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "dc2765612faa78ddea81d95219797c38dff236470934046a4f20d021f0d61855",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "3ef2acc6134e60b47b02738ea20797772885ab116e043213052837830efcfd81",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "e8b4807e5730d8b8d3d182abaa1f6e6a575f8acdda47a314112c796b99da24b8",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "f9e6319e13c496c04d8227ffd13bbebbadf3e2484e886f8a29bd7a5a6190f765",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "c7fe477e4177231848f6989dbfa492d0ba19b4dc37cb5bed3ca30490b4b29917",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "83c0e950fd9f0a5bf8f8a17a404e96429c514f181afb8565825278d8fb4da3c6",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "545da17c88fdbd1aaf8dfd649b87add63bb76fe1b99092dec8096ccf4b32d9d3",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "0d3e8e2fbaad605b63c348da9aaf70fcca037ffb10cb48b938d550481b3cdb35",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "14447260efa321233d372108787864c4d74e33f822f840536b311e126bcc87b6",
-    "uutiset/suomi-mukana-maatalouden-eurooppalaisessa-digikonsortiossa-6b30890419a1/index.html": "b6cf477d6948ee18dc4d21117000194e64d758b5a09851f58c667c19f69099d1",
-    "uutiset/suomi-tukee-eu-n-pankkisaantelyn-yksinkertaistamista-c0ed3784ff13/index.html": "51acfc6e629bc7b108ebbab34c3c822f3b4f59b2a70da593456b482afa9a58f4",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "4edb5eda4d27a45268644b8edb568145a99e1469aee14a08beeb75becc0370f7",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "2edd2d0ef3919efa406b2d425a3310bc9c4b8bb00732b530714afc6e5e298332",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "f0eb5cbfd5b767050dafe0a1d94f3c45e8f1d447703cf1833027afd0b9e770dd",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "ee480ba522e63f8c72fb97d51ebb1fd4cb1081fb3f831e584190bfdee4765eeb",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "85e51803c0a6e62af505d24ced1a113631107e44ad0eb2be87540e35283ab216",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "50e9ec9976dad375b9e15550115dc5b82171a4f3c5e9032f4192cb5eafce7744",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "15e3658865aebd6caac63f15749b5a63a57c162197a118aed6eb5a3fd301ebe4",
-    "uutiset/tiibetin-ylangolle-satoi-runsaasti-lunta-nasan-06fea975771b/index.html": "3ee13706fe93a7dec74d96535654b533f8735b00852a288d4253a41247c34fcd",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "04289cd756bb8b4f6963044bdf70bd12519f8f52f1b4c29bc7085a282fa5db19",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "92eb9fbf6a2c681c7c06125e0fbe8fceb2965152cabab45987084797f6c3243e",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "5259014503672738ddc64be68e4e4f05316e617d74dea0dc00cc767a4bcf2ac9",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "ee17dba1b64ef904fb0f74e8ef6685427886204b175f51722ce4a416e913d621",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "72feac0b92470ba01897a9f97c2846c32a04480d95fe60721f0fd3242a1ed1e6",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "ada8a61ff59be95c17e252c2b2aa57838bd6315c78d798163be39e2fbe3b1dbb",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "4be257e1e6ddec3bc46b2fdf78b2fbbc66efe5ca882704649dc525d017734ff4",
-    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "a35b52bc5aceb80a99ac2a68908193c6d80e368880868e00785108720ed810e0",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "4a55c823e50efac0e43b41911a9ba299ec0c3197f8550525ce5408c9ee5c8f48",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "10d4e0bd6a952a2a77983d3f91e857e5991647dd2aa569fcad4b15a02f83e286",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "fee5d13d7088cf910feec84e6994328af307a861332c05c69d591a372ed23e41",
-    "uutiset/toolonlahden-tulvasuojelutyomaa-palkittiin-helsingissa-c8d9df28ef8c/index.html": "1214981e0e2cfec44987d37b8d47319d40e87f4e56927508779e19e85060cf83",
-    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "b0ecc6ae6f2e334a772706b37dcc9d51e64aff4b5590091972164996ef5acc10",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukea-kiina-suhdetta-aac41588a8b4/index.html": "fd630ccb684a580c5bfa993f26efd0d82c4b550afda4436c9d7682145fa19c24",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "fcd7e186579b125505dc7faaf99be1633ee0641290a57fd34c193c26961315a4",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "0ddb8942df306ff983432cfcb4b3d121103948e601a86018ca82266c8557c861",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "d669e5b6e367f320262a8fb50a7bcacdd01592dbd4cc64a91815537997354d74",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "4483814174e08153d2aecf3bf115482c682afeb812898d16929c76d864e65c96",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "0b47c9f3860632f2b1c46e5908e6c4da29eac85e5cbd78e0dc31bade13e23cc4",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "8ecf953e74e85793de7ad26236f4be5b07269a0b2348168d8cceb0d9ee31637c",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "165fa36ddda5099515d34120f3048f579f29ec1a1d86f738bc69e048c06233ab",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "a6710c760c846607ff7477dd7fe24faa752dde25324525061002fbb7d2358618",
-    "uutiset/vaaralan-bussipysakit-siirtyvat-6-lokakuuta-5fca6d55d831/index.html": "814e0e253af2fc037791e890a81a629e0ce344ec3dab6e8b91256f7dc816f84f",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "635915381496d8cca0f7e45aabd984472785ab1b1e2fa3e6bbb402d53286ec88",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "4d57be34f9eddd43e94689feb16b0942b2788741ffae0d7426c1ac70a25ccedf",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "d510312e0a9c37327afbbe2044bc9cf2d0fa7a7903956a456b60945d03611ccf",
-    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "c59049159f216823a0b9a44c47f777d52dc47794192410874cf9ba929ea8c168",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "2aaac082b61a307238fbb647f81f7bf40bec9ed2e20da9f00558a8b7acbb5a7f",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "0e2b898151901787a8af0974ee5461a8e56dc2476c4be81837ec0b9a95c21958",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "a43bd80b113825cf3ec6769c9410ececea24b0f210c30cb89a01079afdc2312e",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "9454ee9cff7a6ba454afaf3f304071b14fb7b54abf3905ba1bd60978495fc438",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "6613968ef4b955a6b5e73092d7eba614cd6bf002de8382d9e0e3fbec8decbb42",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "5e1138c45aa0b491315bcf646cc8516c881a86d9a42c033f811db0eac6d7b6db",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "28831bded9031000a46834723955fe2446cd51431b5e277ecd53aaa829f16883",
-    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "1f3d1a489c48a673c4135909c734a61c0c8078dc48eb6e753f85db2e4a47c20b",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "d3ff55aaff1994e392c57385eba76372dbeda450846373ef7b7f2ea2db7a6c55",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "2a0e8e7d39e4a227e334ba8a9b99d44c85940eccc9d69c865b5e9a79cc8c36f0",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "45d23f95272035e8025d9e1ac1eea7fb008c4f80f0c0701e651e8f2891dda603",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "d64eb8fa1ebe0a0c3922792e2eda28cd5e774e32059b649d77d6267c04f3c22e",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "1310bc5ae74eda3712c430f9a8cbd44511c218ebf0f2a77327ad75891e82b527",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "b552191bc042523924eb6a432c65df65511a0851cb1549bb88d3221428fae89d",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "3393cf506a98a970f445e9991f517722f7386514a086c0d723ade3eaf5a661cc",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "b7606b72e204ce86f71ea6379de696bd2fa0c2dc06d2ffe7a130b6f05638b43d",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "420c94490b30a582016d5eb7d3d0baab6c1dc05e4ccbaf4375481d0a1eeba1da",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "f2c617dd362c986e30109f4b2a3fcd030ceb29e78e4e4c37d750a166a4c63b86",
-    "uutiset/vantaan-historian-museo-hakee-avajaisiin-vapaaehtoisia-d96705192438/index.html": "767958e3da947e0dddc058642983e473f850a980552223df218f07fd2757e753",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "64aef9410e26a2a3b44990875000a0ffe1fcf1549c37e338cb91296007ded0cc",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "2e588ff8e54cee42c3591e7e5eb78c253ea4139da119a0ddebaa52440b06e573",
-    "uutiset/vantaan-monikielinen-neuvonta-auttaa-myos-pitkaan-asuneita-8244199fd98e/index.html": "8be91f11af46c5800248256911b580f120bcdbbcfe88bf69beb8e5c7f67642aa",
-    "uutiset/vantaan-musiikkiopiston-isanpaivakonserttiin-vapaa-paasy-004a6e9a6859/index.html": "7a523351b3c0c3117bbe7e231733c77441fa3deaef153945db7781b2744c3658",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "681bb865a7987a33b99712725361947ea16d6820eabb8e87eda272ca1b3c9955",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "c2355fbbad4afd9e1838515bfb70ada369b31f39c533fb69189db95de42b52ca",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "272ef1e630f141aa1fc935a89caa4c3340f2fe448803116c732f2f757ffdf38a",
-    "uutiset/vantaan-yty-akatemian-ideat-etenevat-tyoryhmaan-ba96b94ee71f/index.html": "d0829276e9338159294b4e24daf118b037df5f46e3f7e9fa15d78492466405e7",
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "089523e9b634f6784586d159da104407fb00192a744662a0d15ef1467c996376",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "b0e68d83c942f12f33f9a6f062719a73e7b47d10a0edf4fef14d02abb024a1d2",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "8af5ec290295ea0f7b99da51683e59708ceec474d7a10cb3536e1fe72e1de3c6",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "e2a50a11479e81d66d7043565614ec2f49efe699cc922e72d6e9bdd20fe679bf",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "355d1aaf92d4871f0471d874bc1680d0f7bf03059aa2481c97a4688cfda0e80e",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "947638bf554054b23d903120e2169492c4984e919b6bf4cd71bc60278a0e4097"
+    "uutiset/fortumin-yritysasiakkaalle-suositettu-hyvitysta-45c3d38688f1/index.html": "fa2d2983bb64da856637272896f9d49935624ec80bea8d411b254d4ad29a8999",
+    "uutiset/fredrikintorin-remontti-viivastyy-arviolta-vuoden-loppuun-2a57e16b0903/index.html": "3f1075816e16246d5c5762aafeec0ebdac72bcb5d6e7a6f7320a5c7bbba8680e",
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "44191cc0c37dc0a5d7a2099ce21b828e53cd6233642f6d17197c8cdf949e966c",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "24fc765a6ae9f833626d680b575ad126efe1d8fdf11a4eeb285005feab5a0b58",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "faa1618e0989245d3c4a4cf142545ace5553860b800a41d8cf903e645de5447a",
+    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "53849b8296d0387dbae11106387c66bfc7f0b1324db811fd64bdad0158cf6b49",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "7e8ec4025ed97e8a82ad9d7648f546d34e183385ce2c06a8b0592d792fe265ef",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "2bd20b31e73a8381ab3bea48ad91a488e35bceca4d562850dd1c49c8a204b01e",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "0db0d358ea36f72d3ae363cc33a3416544fdece510a8f270dd3d28dc0a4a77cb",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "b6489daed0e2d2e665fd107294bffa09a50f0c8b86add1c87c1271fb1f2acfdc",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "37dceb3e3aff8fb68640ef7ccaa10ebd3ff1b3446ae70f4c96263dd93e239c04",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "da81bcaf750f79cc814b4e4022d68a29fda6d9b7f79c457ccf7fa48599b59118",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "f8c0211a84bdc6c1be7df046a8669e56a595d3212ee6011a798c8941fa1dfabb",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "5bec471d252e8b972b91efbfe104e256faadcc0d2a509f45e1431a90af2d7565",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "08faf41d45ca11a54d2819f7bd24927a73badc261d8a4949aed1bd169eae7ff1",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "fbdd1623a0fd13df34868bfb2614005decfed108bca2d194f2f19a8f9ab91a7d",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "642421786f7f0532b9dd3c8d906f519fa2ac80560469054c761e1c7d40f94440",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "52c54b9fc23bd7bcb9b67babaf80b3a952155f0c31ca030505f2c9413638dcab",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "3042bbb58304246383a3d501261f560a2a6ac2eefd6d62757f351a18af941e5e",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "36b823c11b592aa8d9619e7fef3b973ee9c69dbccd5341a86cfd607d637f2896",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "46f21ae0c8c0792b5e451b558632bae9228bf68ee3aa0b008b6255dc95011f85",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "589034a44327cad2b68ffe598909b49b892e150e520f0575f46adcc7ea3808c0",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "d33c1cd4e5c6cb462e7cd2e3f1356c6e321c23d95f67ea83b1b1742ee911a4f8",
+    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "4e22d02fc2ad0c59ddf9599c81f2483477cf76bd72164539740b3696b9f3b5c1",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "a38c4ae2a7801883aae32d7c822769263cafedbb6e67ace0de8eb0543313a591",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "8a3ba7e222a6f6a0dfdce23b43c6cc310a739da6fe40c9777759023b69206fae",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "43d4bb1dd008baaf9bd01d382c5955894ecab2b7f6ae2213d8023a037fc508fa",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "acbc4e629324b9aeb3e0eed0e3e3800815bb1439bfd85250587379b764a4e8fa",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "bb5a87078dd9320a57546db7358684ae02486060881fbe1c9d7d002c5572af2c",
+    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "198777a9005cd8ff7aae9c5dfda844259deeb3eb689d1f858672e51d733da17e",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "cc14ea65dd2010c884a4367aa0da6aaf37683021e125d4921722a4d4ac868a5d",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "4e6aa4d72646a135c67322364811418499e39d04a83cd4aa25c1d6c2974b9b77",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "c16656fbba8a6d3bb4c460c65541c752e9c9a72bba89baacb84cc1454f5b65f6",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "022a89811d0bcb4d0742b73373932c85bd1a21dea69b4a1d40f63823298d1779",
+    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "9c2223813f9c820284bf3dbdd732217ec610f5b4323515283c0fe7925b452909",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "6cb98a8605f469fd0909e0f01283e378d1d9c5ee87fe859f4943e151522b5372",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "b875cae2cefeead5041514f2bf086135213f108bcc35a993ef9e2d3a486db585",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "4248e699584d369a148a2b88967cf58e82442299c71af39b46ad1eaf9fe28b82",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "45a61a20c0a311f5f57c7e3a58bb521653c6f095455cb2b3b708f0f87d7e5bd4",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "d6b8c3edfff5d95843e43afc42574c949c7f50efb73f28febbd9f6d77321fead",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "d7c732791439c164250f6a85056c91b02131e48c8861ac341d145cea06ca4392",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "a59ce1f5d92a2b09532fcae9c35d53a043b8d3ac1908db6ee2cf21ec5c405540",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "0bb7f0c683d2a14a2a6ef02927ded6511e6ddc82420887b11c6b67bff6352e6c",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "f1254cb66d392c0a18c65a34ecd61de87e04d249d15bc8d04c95c90700d9ae55",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "86eced3b7f8648be8f81c38f9f477930500fecc3027da69e5e729e3be700f350",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "ee55094830f45b39c579f74f74c09f651d51dab38fae2f06d7c76076bab013a0",
+    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "df7c7c7d1cec72a89300543ecedb4e96aa1cd4b0ee91ef3e736b445c95d57806",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "ea92cc32eb9af46a59a6842572bdbe0da37c047459623f5ce0eb0eb1b2dc5e8f",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "4fe2150d495320dd993ede0c888f0ee5fe1a3b8ff604fbb8428a8ed30e529c4e",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "53a5b208d97e3300e0e0d9aae963101ae79c1513d27a943325daef6ee988b7bf",
+    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "dceac930ce9952ebe46f8b8368f49010207e199885d5c75c55abf34082b638bf",
+    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "a45acf58185867389492ec1986d0cecc9cefc5e00cd43a19a2ac401bd4d3321b",
+    "uutiset/korean-niemimaan-sedimentti-erottuu-nasan-kuvassa-b25d7a241a77/index.html": "8a659eb478c806c93a8aae3b32d482bcccf9fda6bc28281bb69e5baeee5a6b10",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "a65dca81d4f6ccdd0f9aed81e67062c28e9e65687a0cb6d8043fc4167bd4649c",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "1fc7f59edd3d8006babe549617d3f8e14a900323ecc435a2edbba6fb1001a289",
+    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "e8f4d765274334ec076b3c409038bbab7e893abe8e139788e2aef04d1b73ec3d",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "c426468b0a325abe169fe5e9fd124472362b507013eaa585f8552c44ba780943",
+    "uutiset/kuluttajahintojen-vuosinousu-syyskuussa-ennakolta-2-6-2e846b3cf176/index.html": "a93dea14f0ccfe135c348fff06b1cd267b44cbc74f302e5b65c6dfe266fc9d9e",
+    "uutiset/kuntaliitto-ehdottaa-valitusoikeuden-maaraaikaista-rajausta-fe92f910b26a/index.html": "9d38171fbf415d50f54e85d41aa68d70d945d660bb7d57d4a366e0a9dffb98f3",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "c5f0a66f57918a3d79b5815b52d92bfac013ba773c2ef8361699c5652f79b417",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "58e8ac6ad3c99eeb1b12d45f5a43034deb7450c0ef4402d11f4cb53bc91275c7",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "5e3fd0365e5f7126e88044b0ae0b8c8df6ebe22e44e083e19475328943ff29a8",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "987ebe1a9d54f6e9005ccc7ca356e9b58c35c607c9ebb8c33d0359d24e9be430",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "12d1d7564ab804b739ae7973569f7304a30e59c59106d53693ba627394109bdb",
+    "uutiset/kuopio-eurooppalaiseen-johtamiskoulutukseen-aa9ec5a14b3a/index.html": "6b116c24bb4783b69479e2f2326148d1d3ef97b91b3c60775ea41798af95a8cb",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "a1382045bf2315296aaab30050a63625e622aec00e837c0dd0c9ac43db46a330",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "2ce1b00934a6b067ba557306a4d411731b3e841d0e4a6d459441ca0ed7190085",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "31abc48aa4beb9b43be7ba2c970553e765c907393249f807a0ebfbe3966cbdf8",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "4c9dc166199667fed6aef9d6e69e3b840f7489bf8c35f319b9e879a4d6da333b",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "75e78811cd80bf2d582c9581e5a82484899751c7b5d16540cdcf57659e7cdc64",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "9e87eaffd2d02a5608949950917c01fbe8427ca8f6d61d5daa198d0b246efb47",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "61092bc402928696e9cad07c7ea800f88a0387d0ce3fb432df846f64d79842e0",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "36a095d161295a5057ea7756f48981584ae1b9ab65b18c4d32b19392583e8c70",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "02629ce25a5a47019a6ab10620caf24c83e8ba1d7c7ea040db7ce2d601cfaa27",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "de278d6e58fd0d00b7c784dd014e2a5abbf82bc08ea2e9aab8414295999d37eb",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "5ea34da81a3d91028034a97c506aef40052dba1bd64c6e98be5459d2e5789be8",
+    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "97b5dbbbbf6457db8ec7263638dd78d2977000f701ad0cdaa529dc3dde573242",
+    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html": "22483f8c76c6f605403c99423e30792c8ec315e1766d53efa57a27c233564e44",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "4e76186eae9865fd0669091014fcf3dd14110249d276405206f028b52ebf8523",
+    "uutiset/kuopion-vanhustenviikko-tuo-kulttuuria-kohtaamisia-5cd5fcd61b42/index.html": "834403f8eb7d6806221fa2e4acc77c2b55ba07b48b35352db242be8368de2274",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "377ccfe06d3fc7ec88e339f768869474b12615a63a02f3c7c639c8cf012b377e",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "2f79db91661330aeda04d5bb6d65644d2d9dc77ee0c218790b797cb1f9ecd498",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "0aec36a0d89b2d83ee70c9c709cd47d351f3395386facd2bc99682d3839ccfe0",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "2205951e6e7d0765b0b57e92311366436d7b3566a42a0219655d6b268b6c7ecb",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "ddf93f01ca2afd35ba31d58d99f042015bc815c646ba00a07a2f55833c080a04",
+    "uutiset/kuusijarven-wc-tilat-kayttoon-12-lokakuuta-c2bc4a29129d/index.html": "3cfc395d66397a82a0408c9c6d8ed33d36b403fa8753d96238032d933bc7cecb",
+    "uutiset/laajasalon-palvelukeskus-vie-kohtaamiskahvilan-saareen-c12a889800ff/index.html": "693a88becaccc055726d027bb59304ea3838c217f2e8319e4e7bcf3d6b279a8f",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "095133d0acdfc124ae1bd10b85bda718540c5dd549a2c7f238a74b9f6b2e43b5",
+    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "f92a17004e106f20ce75a44d5c75af9d3bda3e5b6443d5b88bceeeb5f15a7c91",
+    "uutiset/lansisataman-pikaraitiotien-hankesuunnitelma-hyvaksyttiin-743604e52b6d/index.html": "aa118d8a25c07db68b485d3e4daed619231777e062874e91de58fa97bd3786cc",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "f299d61f1cfd6bcd28d41b0f2d2faaac5744e8ffca5689c825a61b7df3c521b0",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "5a4d29c424aaf8455a48ec8892cf421f4bece31b1b12288686478894b4d8312b",
+    "uutiset/lemmenkujan-kiertoreitti-kaytossa-viela-viikon-41-9379acd25d35/index.html": "6370428c4961d8401eb086be6a94e7100e3050a741227447bfa627b02b356b7a",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "ace901503de94a72e48aa07b7999551353f6234bf13a8a537d46bd3fadc0b4b5",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "f16d4db1e7b094ee48bd256bc16a3c9a4f2dd10306e367c4103c5e01aae1529a",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "375c0310bf828dd62b3035ffb7683e50ab2f6c8bc288611659d6875c9b6ddba7",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "792a4050058fbffb6a0208c0e4097acd9a1e6e844696cd68d9316c65153eeacf",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "713c00e8224b845060200afa68efe67d169d3ee08af12c9608ac0163c62459dd",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "9e559be080629613b8856b373c656d1ce4fc6ef9adcc7a0b2229cfab1e99c978",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "c0e20a5f60422d679ef0f5dcda4775b55d630e1388ff3a9fc91dc51bbaa63996",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "b29dae1b0da819766be9be4757f726ecee1b4d44a241cb0bc187f7508bc8ecdf",
+    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "2fddcd77b971cfebb14412bf40b7b33756d679fdd87c88e69a6ddbed55b7c086",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "492146d899012d34b03a16af21d086b1702990f9452ea26fbca6864498b35297",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "3c7f911e5f84e4c9f2a7d4dc52858c3d0addda91f14e0715bbe5ad4428212902",
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "df973afe627bf61743263a0e66326e7a431385f48cb5b210655739c8a0457c14",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "153a0a61de8a692d28649698ec2b5cf127356bcb45ee25c74f3ca3c362421b3d",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "57c0cfa95201a40eaa7783c42bb3f247b98a79e00129f645431cc82e7382a75e",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "16b1a55e064007278d5764708055ae2731de5a25e9605d5957881bef5ad0a7c2",
+    "uutiset/multala-hakee-saksasta-yhteistyota-vetytalouteen-dacb24d664ef/index.html": "fb058563ad1d7a468ae0eda8a7eb858431eb537adbdffef5f5ad687448bc3c4d",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "1ed6d87dc6e52812845a6c6d082544511a56c4306ccf439bac0ed00f6778292a",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "087184cb62bfd95de60b8b310b5c20bead1a39522189f444fbe7e506eb2499b8",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "80fd9d7f37a3d58f54fcd4a07ca08444beeaa869d4c0e3fd9c9bc2b0dfd8c11f",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "c522dd895a46b78d2e499deffe84a0bbb72071c7158f5c2010617ff71ebccea5",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "e8031aad87a5db1ec9d321a90b5a1134efd5656acc3dea354d147b1cf5e5f434",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "a6be0f3e568f2ab6248b97e71b0f1fd60e2b6ee192351c7ab1f678f16fbaa1a9",
+    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "adc80d4766d690e5718f5ab1401f6a9c97d41cb8f56ff9fc0edd4484fb1ad18f",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "0f3dc1a3eb3384d2eab301586344870b9b4165f7a74603b2c59364dab6f5ba93",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "7646e4e0080b1758e464cd2c0821ead92a9a3f7f99d92518b6abd649fa4447dd",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "beadbc1abe5abc1f50899d01ff3eef2e587d9e8ffb870b3d1e64ebb69078a94a",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "7618862e35ec26149a096b4ae348d126a0e772892a94cdde1c8d3010e69df1d5",
+    "uutiset/oregonin-maastopalot-jatkuivat-syyskuun-lopulla-c79a7f054313/index.html": "ba8ec64c5bcdb49a3fa28bb782c6b9006123c682c1d965ba31f4a10b431eb674",
+    "uutiset/orpo-sai-katsauksen-kansanedustajien-turvallisuudesta-41eea6aee980/index.html": "bbe8f03161da9da0bee75855aff78bbb4df07baab96624773fa34cc39d1c600d",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "5da87c4851ae57656a65241cf5057c208157462f9a685c3dc649031729e452c2",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "ddc8d100d069b0b794357e4acfc60197b232153e646e425d539cdad2b2a235b0",
+    "uutiset/oulu-kertoo-johtavansa-suurten-kaupunkien-liikuntavertailua-84215ac70cf4/index.html": "e16996db48a13ba7a4d6a61b28b6c63b8a263515e8f20bdab3967425bebaccbb",
+    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "bb8fea2b9e215fe4672bbfa449f528e7c96c54415ba20d9363b338b5a4cc3dd0",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "74545b190f299195f184fd4bebb95ca599bd09ec3cb0e2fa5969eb22034f5779",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "7f188a38ec39cec89e907c4e39f5342f89a2ec31726c548b140f82be3670cdfd",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "fa5ccd1e83685073932b1029dab5a91c4f531555c0b89178032821f6e7742b08",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "0dacef06412bb632af9d6ebabfde5dc65552272538583bcf97ecb014a87dacb7",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "a3c852fece7272cbb5729b0934b433a6944b4cc537883060fabfd85ef09e0a16",
+    "uutiset/oulun-kaupungin-vaihteen-numero-poistuu-kaytosta-8-10-c5e10b449ff6/index.html": "301432a35209f0d582e19828a3449a57f6f55c99fd1889a44ced2124315797ab",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "881edca57d052946b17cabcba83ba72ed41b2d131ad75170cd1c502cb283986e",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "619c94e2dd87e4849e03361f3120e49c0f878b182f8cf0daf9f5478674b1a21f",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "d0a3019d3b561947fdbf474bab5d3a15897507a93ffcd0eb8023089fc9177ce9",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "5e4f0698c3c3f504fde9420877dd847bac26ba5725664074f6f7c48954bd2adc",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "8f6959ea9ae50636515eced0da230ebbf7ccbeb3b7089d56b15edbe1b7825c8e",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "ad1eacc80afd1529aafff8705a289441bb3148f80efcb0e36ee5f0110b084fee",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "556efdc0527e3bcfe7b5f0e4f7285ccf8be0cbfc8667434b44bdcfe4c0914538",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "e508677960d927d8d11d52b29c9168b8d00ff23ff2a099e60bac6bebe8b702dc",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "1fb2cb7fec225692e77ef172ce70faa293c3c85fcdeb2795a98f3a13df5b18e2",
+    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "192009f133e11dd85b3211fec5cb3df100f2dc227007118b2f4824c2564c9b46",
+    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "b8b458a076fc8364e88603071e9dc0f38bafbd8c9d039ee3d77ea8467a94382b",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "1079a5c589bff38b940476e4a553aa0c00e09370774a52029350a9fb1a3ef6ac",
+    "uutiset/palkkasumma-kasvoi-elokuussa-3-4-prosenttia-vuodessa-8c742b4b56b8/index.html": "c548db4e654a1dd965d31252f97a24490f4148cb61f50a0d7a828eea2c6e6668",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "808df63f4faf46b0af523163a4ad89492de82ba1586265bd579fdad809c30b1b",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "38e9cb27a3f420072e18af13198922f95b203984b1b528e6e2649cd0227ab9aa",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "fb2ff97c943bd5032a46d1a8207c25096db0b273b43f48b312db30da323ae0c1",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "70fa03b99d17899f5f000618747f597e6f9ef35ec1915ccf3dd1cabcf16f3dd8",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "86e7bd6bfb99515707aa67ef3e0cb278363a5c9f8c06ce0ba1541e43a5e11a34",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "4efe0703bf52e3d61a0d9fd0bbf601f901721fb7280d79d5af0b50404572e703",
+    "uutiset/rachel-hurrikaani-kulki-baja-californian-etelapuolella-59edc2fdcd34/index.html": "b22efd835a12f375eef8842ec4d56a56e8e13a4c32ae1da7e0a41713666b6167",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "f7b4a612e7bb565469d99d8a80107afd2920bce64778e291872a187c52e341cd",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "d20cfd1aa7ec7c829925a433577a5fb20931680164ae07ccd573c7125015106b",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "6b09c581d7631d53149df111706a6700e054d0655e852ac5004efa58dbf066a3",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "10172b115d3be4ccf32cc7e309fc283d179b6dbad0d93c5d90f261b95e5db0b3",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "abba3d666a833007e7f615a3e8fc02932e384fdf4a5137357aa4cc3a59f4085d",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "61f8d72b281356a7f4ca735d5570d72ba0187774b2bcbb54fda7e58e75e47397",
+    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "f0ed24d218659c294fd325faead3674c497f594ae4598619d0f4c5820d6259a4",
+    "uutiset/sahkopotkulautojen-kaytto-vaheni-helsingissa-81f29c83f795/index.html": "8ce7412bcdd638de84ce7188b3d24f8d2f99dd6336192f32954420dba9240d5c",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "2aad204428a1ddb53af9606d40b78f932ec95cd7185e55c06eff87590c27dfb5",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "6cb982381771fabd10964974db21c6f8026a20dfccb1e7f891d979b1b92f2683",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "61db714943472cedce4ba7293830a5b85d2e588feee11f1cacaff34a2680e823",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "2c7c7c654545e2db6d45cfa5d52a0301f8cd42fe5aa0fe9effde5f7a9a0ccff0",
+    "uutiset/sijaishuollosta-poissa-olevien-lasten-etsintaohje-uudistui-ccde11681bc6/index.html": "a2e51ac8622b900ec2d8a3848986e6a718bf7946781b6aa8a6ce4d911b8a767a",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "7c4e9662ac87f2b46994c70f38bd5a6c0d1c052d030502dad4201591538cb8fe",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "cdd6bf2235fe4b7cff7ef354a9789e137aa3e6e422319d6ee64d7273de16e3b5",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "ad37a662095781008d1887089b123dc30054f1ab124c520ec70759941830d30f",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "04ee1272ce7f6ed046600fa9e00753e6018b2f80eddc8d09943f9c44f77bc629",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "d2fc5b9b655d39145b0ae48464522936bcbf1cffff1c9d8edd2f26bf0938f4ba",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "363d7db354f888c0b789f99269b9f0a38e63514a6a996e7c6b50a83578f4b840",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "6bb0013ef372a8a3a6fe8ae11a67db2e4f1a54004b0d4c6094b4303c2dfdd521",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "46eda334980fa38307f35e84cf39bc4860c4a32be20bdf15ffc0d432a15ec1d7",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "3b10cc91aa6d3c0573318ae4f942ed5ecc36565e5b7745053580bdc37327b715",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "5c7b5e52854c11392109598932dc6ba7459d019b8aeac346cffae69c7f5e7042",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "39be3743db93995f5887d7649ab542a1c699f522dd1da731739a084377528bb8",
+    "uutiset/suomi-mukana-maatalouden-eurooppalaisessa-digikonsortiossa-6b30890419a1/index.html": "5e9652342972a93c92f557deefb44bc4e275c38205c3b3aecc838697cf4a6990",
+    "uutiset/suomi-tukee-eu-n-pankkisaantelyn-yksinkertaistamista-c0ed3784ff13/index.html": "a41bf01a5f2086903a7e1f368f30a8f7bb96b8cbd45b25a151f56dfde858c76f",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "36f81fd915122fb1668fe9927fc524dd202c3666cca046a038c31a347340bcc3",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "c628996af3fcf1d05815bcbbde557a7033df21c2c391a512032079fb4f4b5937",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "c68241f9b856de14695c44e45cd41df414eda9a5c15a66f70582634d81c7c60d",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "1e2140ad4200d27d62143fdeeabfd84ff1e9e10e2dd690830be277afa9afd62f",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "5bc795dcd591ea738325c6e841a14993197afedb285c21de49ea88e21c06d051",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "5de2168793872ac94fa4fbed0f3c4909eef7ed62fe5629597e1439d3ebaec7dc",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "25efed7000f982d6b92d383c78b93b11308bbb3478f99cb637cf5d6f91a8118f",
+    "uutiset/tiibetin-ylangolle-satoi-runsaasti-lunta-nasan-06fea975771b/index.html": "f933c562f287e3f5e8bf050e3fbd4c67ab3953af976e9eda756fc1914ef9ea9a",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "844e23e1614c9cce63fee761a5b801c01200ffcaab8667c1c803efd6b5b31910",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "b3425e8ff833f15e576b403afd5dd8e91ad43e850eff1a56c339c32d0e85c9ce",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "5220106c80313064af83b0fedfcefb4b645a54948b0d283e49c24b83c80bfd64",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "90ae3ff511a53943969dd0ed5ac15cb9bcd07a3836209689068c05865e77e06f",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "420503b9e3b7e1d2b77beda7a5c52de2d513e33baf2367ce29066bd3cc4c0ed1",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "bfc93e144d32eda102cf9ad3d3849ec09b53d1219419711a08158cb32f4840f5",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "acc049b699b3260766f87ffceb4129b699f17d9a952ec3b8970b606dbfab7ef3",
+    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "f2d13391d3a5437cf204ca629592d8f547ed414ac22f628bd89367c4281c8003",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "a4362b15aec590c75c008da16436fa5aec6988964536f7d89c0fe3f9c9fd5f2b",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "dbae41db46e606cdd39e06dc77198c4927083f3289a15c6b466fbb470f647967",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "1d63ed73bebcc15fb5bd247f637de34f1e269343482247619479684c1b4427b0",
+    "uutiset/toolonlahden-tulvasuojelutyomaa-palkittiin-helsingissa-c8d9df28ef8c/index.html": "32e06ef153dcc72edebc6a06e0c76e296542e2e6bab2919c0345632a15c10367",
+    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "6965457212e4450d56dc7342fde22dd8de99213ec00b09e28821cb246ea0b096",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukea-kiina-suhdetta-aac41588a8b4/index.html": "b92a6f0c3938180d3b7a7ea8de4a17f99ba9e669773fde7b5acbade933c51392",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "48cdee5b86d4cc35f0cca261f0ba15a7cc8eb87f2b1b3dc08f67091960ddbf49",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "d694f9188514b5218f393bd1a95690e158c74264e2879f2c94583874a4c4cce9",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "104ff37df7f0291e5f578ce07f4cab6fb4f6cd0ad7c550f3f4e3c966c171c6f7",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "084253bc2711a7f25034e10641ac97dcf06a5be1e83b369175a2d2cd38da024a",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "28a040e7e378fd12ec84ceacd135e35b5f0061c38ed9a19d3810318256e0748d",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "c22a6079a05b401e4858a86d67d0a1e2cff0aeb08dd2fb1eaf593251c393b907",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "bf512955b6950dde270ec63f3f67f52789d78ede1f9495524d064303c1d889c7",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "a39e782f0dfe6df4d6fac2340eee77074bc26bac981f3ed9bb77f970d3e77067",
+    "uutiset/vaaralan-bussipysakit-siirtyvat-6-lokakuuta-5fca6d55d831/index.html": "5944926525c37fa311011ae13f58fed46d77da7bd86d8578365e10c4f01e6241",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "300b5185d617eeefcccd212c5402578df6cb65c065e363e20b441c62f4259542",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "c338658b417058a9e187612f65b2bac3be81c9621bae3071e4585565edc8dd22",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "9af53f9c0def69a6ed4e8feba2eb942a2c05e48558ba1b40a4cae672c0375995",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "5676f76242485660ea9d3a2c5396cfcfb43064ed757f7bc13f12de2f56862be5",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "89bd7106a671f719b1a4749910610ef16204cf1c3c1f46e10fad750e61a1dcc4",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "042883761e9fb3d38526420325be718fa012260d961ebd5ece2e396382f1a6cf",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "0011a7df896d9149082bd5728574e2dfbf429dab7abc044b970b5389a4a0c404",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "5c4130d4283d4182b3e86dc2d631ad2f9ca8fc2517bec425feb267f50e03f19a",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "626bee6d73182335504f796e6b9f1952dd7e28810f703285b3deb3e9c505370b",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "057ed141b274944f680b60ced7bc1328d2097f6b70ff1c1dfbab51fbda3c6ad7",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "a30a65db868993be0149d37ecc3f6259ff6c7fa50c72a5aa96781465f4f6625d",
+    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "54ba12cd6f805d7a55e4c23ca6dbf6db34502fee8c144e47fb3b40bba3aaee7c",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "e709e05ee2ffc22a49ff3c4f3ca4855258e05106423e7c68e15e420c784630e9",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "6f48da921db2627c9247800e95f790a59c35459dd56de3e2845df88bb8fd1855",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "c982c56b284b0c36800aa0d007d64c279fac5bb9b6dbe182605c1429066bb0d3",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "fa7b8912d590fbaff3c5b75fffe1edbcddda96beff5b7a290d460070ede50473",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "b1fd19cedd625cddfc7d87377fb216006c6042aadbc1a42ea57ef659f0f20304",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "de982e7f6936898320956f48e1154c62fda7e40073d3a98edad0a16e06be786b",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "1ee014b5cb5544adfcdae7d3b7cb31a6945ad17b61dc6714fbf7112deb1d00d8",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "de26f16c766ad839be1e99085ba3b644023332d190a9744baf6a038e6fa54135",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "669c0cd4b18ded1d5f86b8ee2eda8067741def0ab938371eb36fc4ac6ef1a453",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "28242bda9e9902a520a906a361871d83d284b9c89f4c70996af4c06e428eb238",
+    "uutiset/vantaan-historian-museo-hakee-avajaisiin-vapaaehtoisia-d96705192438/index.html": "6ae723434094be36a5b3481598a1e18014a55e3dfbb48ffe7192092509382eb9",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "0775c14315fa953c7c3f62116572a687f1d51bf6694d221b66ea67940742a0d1",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "37bdc51051c6abc3c13cc45b9a1d06c7b131747f7f935fb1632994b48bde6876",
+    "uutiset/vantaan-monikielinen-neuvonta-auttaa-myos-pitkaan-asuneita-8244199fd98e/index.html": "7368ea5b1fd9835c4bbed5a039b2aa685c5bd2702ffa1a6b34effc8024796164",
+    "uutiset/vantaan-musiikkiopiston-isanpaivakonserttiin-vapaa-paasy-004a6e9a6859/index.html": "b716345956dbe63e8459be28771e9841bc86f1534307427d48ecd2febf327021",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "ee8d78f22f5cbe5a971f29dc04ec074097df2e0cb70f124a154af493151d5970",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "cbce2cf1f7cf6e35eb248c78a7bfa9ae4f43e443ae809c526af092555d886dcc",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "f038ad08c19fe9e3edef29770b570342f1b8573c303cbe9c542e490b30baa664",
+    "uutiset/vantaan-yty-akatemian-ideat-etenevat-tyoryhmaan-ba96b94ee71f/index.html": "a1eeee30276a5ffc0526aa54c5802cc92b40f320e7d9eebde0300b6fae5e197b",
+    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "4104707d6a2f393a12863386ffc67a8a4e5063337ad3bdb674e128ca2b549797",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "118e61af270ef4b0578457a90a33c6e66c725ee32137ac1660c52df8c06d811a",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "3ff35aa0821e6d2a36a0e8ea015b2571a701dc0dc77e3dfd0bb8212e7efe390a",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "2294965e5277f0173f0203f69088380fd4c0fd9d7d8e947503889e768f369a7b",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "1652779c8e579a03426b3142e67f7b23eba126bafe5f7e70aa35ccb1f2b3e049",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "479557e9032e7868957d0e87056098f9abded3313992816a1a8f6ff0a9249bd8"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Ulkoliikuntapaikalla on useita kiinteitä kuntoilulaitteita, jotka ovat kevyen lumipeitteen alla asuinrakennusten edustalla.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "AI-generoitu kuva: Valkoinen pyykinpesukone on kodinhoitohuoneessa, sen ohjauspaneelissa on valitsin, näyttö ja ajastuspainike.",
+      "attempts": 1,
+      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
       "classifier_output": {
         "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva Oulussa sijaitsevasta kaupungin ulkoliikuntapaikasta, jossa näkyvät kiinteät kuntoilulaitteet ja niitä ympäröivä liikunta-alue.",
-            "must_avoid": [
-              "Competitive sporting events",
-              "Implied visual proof of the comparison ranking"
-            ],
-            "must_show": [
-              "Fixed outdoor exercise equipment",
-              "Public recreation setting"
-            ],
-            "rank": 1,
-            "safe_to_generate": false,
-            "search_queries": [
-              "Oulu ulkokuntosali",
-              "Oulu ulkoliikuntapaikka",
-              "Oulu outdoor gym equipment",
-              "Oulun kaupungin kuntoilupuisto"
-            ],
-            "subject": "Oulu ja kaupungin ulkoliikuntapaikka"
-          },
-          {
-            "depictable_scene": "Nimeämättömän liikuntasalin sisänäkymä: tyhjä puulattiainen kenttä peliviivoineen ja seinään kiinnitetyt puolapuut. Kuvassa ei ole ihmisiä eikä tunnistettavan oikean rakennuksen yksityiskohtia.",
+            "depictable_scene": "Tavallisen kodin kodinhoitotilassa oleva suljettu pyykinpesukone, jonka ohjauspaneeli ja ajastuksen valintapainike näkyvät. Kuvassa ei ole ihmisiä eikä luettavia näyttötekstejä, eikä tila esitä mitään nimettyä kotia.",
             "must_avoid": [
               "People or body parts",
-              "Invented identifiable Oulu facility",
-              "Readable text or logos",
-              "Competition trophies or ranking graphics"
+              "Invented readable text, logos or electricity prices"
             ],
             "must_show": [
-              "Indoor sports floor with court markings",
-              "Wall-mounted wooden stall bars"
+              "Domestic washing machine",
+              "Timer control on the appliance"
             ],
-            "rank": 2,
+            "rank": 1,
             "safe_to_generate": true,
             "search_queries": [
-              "tyhjä liikuntasali",
-              "liikuntasali puolapuut",
-              "empty municipal sports hall",
-              "wooden gym stall bars"
+              "pesukone ajastustoiminto",
+              "pyykinpesukone kodinhoitohuone",
+              "washing machine timer",
+              "washing machine control panel"
             ],
-            "subject": "Kuntien liikunnan edistäminen: tyhjä liikuntasali"
+            "subject": "Kotitalouksien sähkönkäytön ajoittaminen pesukoneella"
+          },
+          {
+            "depictable_scene": "Todellinen valokuva Ahmon koulukeskuksen aurinkopaneeliasennuksesta Siilinjärvellä. Paneelit ovat kuvan pääkohde, ja niiden sijoittuminen koulurakennuksen yhteyteen näkyy.",
+            "must_avoid": [
+              "Substituting another school or solar installation",
+              "Presenting an unverified installation as the one described"
+            ],
+            "must_show": [
+              "Installed solar panels",
+              "Actual school building"
+            ],
+            "rank": 2,
+            "safe_to_generate": false,
+            "search_queries": [
+              "Ahmon koulukeskus aurinkopaneelit",
+              "Siilinjärvi Ahmo aurinkopaneelit",
+              "Ahmon school solar panels",
+              "Ahmon koulukeskus aurinkopaneelit 2026"
+            ],
+            "subject": "Ahmon koulukeskuksissa käyttöön otetut aurinkopaneelit"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Estormiz on Wikimedia Commons",
-      "depicted": "The image shows an outdoor scene with a light dusting of snow on the ground and bare trees, suggesting winter. In the foreground, there is a snow-covered path and patches of grass. To the left, there is a dark-colored outdoor calisthenics or playground structure with various bars and ladders. To the right, there are several pieces of outdoor exercise equipment, primarily in gray and orange colors, also on snow-covered ground. A body of water, possibly a canal or pond, runs across the middle grou",
-      "generated": false,
-      "hotlink": false,
-      "license": "CC0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-      "local_path": "media/78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12.jpg",
+      "credit": "AI-kuvitus",
+      "depicted": "A white front-loading washing machine is shown in a domestic laundry room or utility space. The machine has a control panel with a rotary dial, a digital display, and several buttons, including one with a clock icon, indicating a timer function. To the left, a window and a wicker laundry basket are visible. To the right, a countertop with a sink and a grey towel hanging from a cabinet are present. A potted plant sits on the counter.",
+      "generated": true,
+      "license": "AI-generated image",
+      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "local_path": "media/963303af15e20d7d78a0d0ac1118dd99ef6451afbb6b3e7ad92500955f8d51e3.jpg",
+      "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Ulkoliikuntapaikalla on useita kiinteitä kuntoilulaitteita, jotka ovat kevyen lumipeitteen alla asuinrakennusten edustalla.",
+        "alt_fi": "Valkoinen pyykinpesukone on kodinhoitohuoneessa, sen ohjauspaneelissa on valitsin, näyttö ja ajastuspainike.",
         "approved": true,
-        "article_text_sha256": "f7381ab848994460240d470430e073d0393816556758479100ce2ed1d2965c1c",
-        "concept_sha256": "a0a10699f36a03d8886c016b9b6c4f2429a67359ec84789d3330560e7cd55b79",
-        "description": "An outdoor gym with various exercise equipment is visible in the foreground, covered in a light dusting of snow. In the background, there are apartment buildings and bare trees, with a body of water separating the gym area from the buildings. The sky is clear blue.",
-        "fit_score": 9,
-        "image_sha256": "78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12",
+        "article_text_sha256": "1ab5ce01a58dde57853b7518699d0c7bc0a6226c29890b745530bf1ea5789871",
+        "concept_sha256": "a8f7e45c90d9d22bbb31be6fd0ffcd3a949abb1797bdf61139beb605ab78f536",
+        "description": "A white front-loading washing machine is shown in a domestic laundry room or utility space. The machine has a control panel with a rotary dial, a digital display, and several buttons, including one with a clock icon, indicating a timer function. To the left, a window and a wicker laundry basket are visible. To the right, a countertop with a sink and a grey towel hanging from a cabinet are present. A potted plant sits on the counter.",
+        "fit_score": 10,
+        "image_sha256": "963303af15e20d7d78a0d0ac1118dd99ef6451afbb6b3e7ad92500955f8d51e3",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts fixed outdoor exercise equipment in a public recreation setting, which directly matches the selected concept. The filename also indicates the location as Oulu, aligning with the article's focus on Oulu's performance in a municipal sports comparison.",
-        "reviewed_at": "2026-10-05T12:08:19.645065+00:00",
-        "source_context": {
-          "image_sha256": "78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12",
-          "license": "CC0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-          "photo_id": "wikimedia-112652850",
-          "photo_url": "https://commons.wikimedia.org/wiki/File:Outdoor%20gym%20Kuusisaari%20Oulu%2020211114.jpg",
-          "photographer": "Estormiz",
-          "provider": "wikimedia",
-          "title": "Outdoor gym Kuusisaari Oulu 20211114.jpg"
-        },
-        "source_context_sha256": "e252d073355dc888f4a383c86a03deb87c3c4408fcc46020e0387629fcd937f0"
+        "reason": "The image directly depicts a domestic washing machine with a visible timer control, which aligns perfectly with the selected concept of timing household electricity usage with a washing machine. The article discusses the importance of timing electricity consumption to reduce bills and support the grid, making this image highly relevant to the article's theme of energy saving.",
+        "reviewed_at": "2026-10-05T12:49:26.006192+00:00",
+        "text_audit": {
+          "examples": [],
+          "readable_text_present": false
+        }
       },
       "pixels": {
-        "height": 3230,
+        "height": 1024,
         "mode": "RGB",
-        "variance": 7577.6,
-        "width": 4300
+        "variance": 7124.1,
+        "width": 1536
       },
+      "prompt_sha256": "7f07086384da5b9415311bc02734b4cd306fcdae0dbddaeb239b36fe42308607",
+      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "An outdoor gym with various exercise equipment is visible in the foreground, covered in a light dusting of snow. In the background, there are apartment buildings and bare trees, with a body of water separating the gym area from the buildings. The sky is clear blue.",
+        "evidence": "Tavallisen kodin kodinhoitotilassa oleva suljettu pyykinpesukone, jonka ohjauspaneeli ja ajastuksen valintapainike näkyvät. Kuvassa ei ole ihmisiä eikä luettavia näyttötekstejä, eikä tila esitä mitään nimettyä kotia.",
         "matched": [
-          "equipment",
-          "exercise",
-          "outdoor"
+          "Domestic washing machine",
+          "Timer control on the appliance"
         ],
-        "method": "vision",
-        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+        "method": "generation",
+        "reason": "generated from the accepted scene"
       },
+      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "f7381ab848994460240d470430e073d0393816556758479100ce2ed1d2965c1c",
-        "decision_sha256": "5dcd566e6d756371575dcf89a81a89d589f2f6eb997c986f8fb0863c98f91af9",
+        "article_text_sha256": "1ab5ce01a58dde57853b7518699d0c7bc0a6226c29890b745530bf1ea5789871",
+        "decision_sha256": "57aa0b2d41fd07a5e7c60904f1c5fafce82565ed9ebd0d44b70fa766eed906f0",
         "minimum_real_fit": 8,
         "searches": [
           {
@@ -1271,21 +1005,104 @@
           {
             "candidates": [
               {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12",
-                "license": "CC0",
-                "reason": "The image clearly depicts fixed outdoor exercise equipment in a public recreation setting, which directly matches the selected concept. The filename also indicates the location as Oulu, aligning with the article's focus on Oulu's performance in a municipal sports comparison.",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Outdoor%20gym%20Kuusisaari%20Oulu%2020211114.jpg"
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "1870031d5dd25e5c5a6d21aa6db66f5ca067ff43de9004a6a6b48781729dfdfc",
+                "license": "Public domain",
+                "reason": "The image shows various electronic devices and a person in military attire, which is completely unrelated to the concept of a domestic washing machine with a timer control or the article's theme of household energy saving. The visible content does not match any aspect of the selected concept or the article's subject matter. One or more required con",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Stryker%20Brigade%20Soldiers%20train%20ICDC%20soldiers%20DVIDS11998.jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "4faa19de71bbea5c61e15ed41dbd8e37fc0c3f3e733852bd5f4d9da87c208158",
+                "license": "CC BY-SA 3.0",
+                "reason": "The image shows a timer control, which is relevant to the concept. However, it does not show a 'Domestic washing machine' as a whole, but rather an internal component, and it is not in a 'Tavallisen kodin kodinhoitotilassa' (typical home utility room). The article discusses energy saving in households and timing electricity use, which this internal",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Machine%20laver%20programmateur.jpg"
               }
             ],
             "concept_rank": 1,
-            "outcome": "accepted",
+            "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Oulu ulkokuntosali",
-              "Oulu ulkoliikuntapaikka",
-              "Oulu outdoor gym equipment"
+              "pesukone ajastustoiminto",
+              "pyykinpesukone kodinhoitohuone",
+              "washing machine timer"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "8c2ca9567a5e3b0df825218144c252061459c030c6f6714c844f7ad4086ebf09",
+                "license": "Pexels License",
+                "reason": "The image contains people, which the concept explicitly forbids. The washing machine door is open, not closed as required by the concept. The timer control is not clearly visible or selectable due to the angle and the child in the drum. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/mother-and-child-near-the-front-load-washing-machine-7414396/"
+              },
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "1095776548fb0bebeb456284a805b196a477624337c999ae33206e9d533f6396",
+                "license": "Pexels License",
+                "reason": "The image shows a domestic washing machine, which aligns with the 'Domestic washing machine' must_show element. However, the 'Timer control on the appliance' must_show element is not clearly visible. While there is a control panel, no specific timer button or display is discernible to confirm the presence of a timer control. Therefore, the image do",
+                "source_url": "https://www.pexels.com/photo/view-of-a-sink-mirror-and-washing-machine-in-a-modern-bathroom-19846348/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "a8efffd9532d469243c62b9e103136bb8f271b1904ce6f190ce5ca87526a134b",
+                "license": "Pexels License",
+                "reason": "The image shows a domestic washing machine, which aligns with the article's theme of household energy saving. However, the specific 'timer control on the appliance' element, crucial for the selected concept, is not clearly visible or identifiable on the washing machine's control panel. The article discusses timing electricity use, and the concept s",
+                "source_url": "https://www.pexels.com/photo/modern-design-of-bathroom-19916731/"
+              },
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "984d57cb142be9a5353071e2636a04c48ca6dfa367843f36466f04b2c677cb76",
+                "license": "Pexels License",
+                "reason": "The image clearly shows a domestic washing machine with a visible control panel and a digital display that could indicate a timer function, directly illustrating the concept of timing household electricity use with a washing machine. The setting is a typical utility room, fitting the 'Tavallisen kodin kodinhoitotilassa' aspect of the concept. No pe",
+                "source_url": "https://www.pexels.com/photo/laundry-area-with-white-tiled-walls-7195881/"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "pesukone ajastustoiminto",
+              "pyykinpesukone kodinhoitohuone",
+              "washing machine timer"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "c6c203f10c1a332e934f13c746814c39a2f1f52f2cad84af0ce7c8731a3da120",
+                "license": "Unsplash License",
+                "reason": "The image clearly depicts a domestic washing machine with a visible 'Delay' button on its control panel, which directly illustrates the concept of timing electricity usage for household appliances as discussed in the article's emphasis on scheduling electricity consumption to reduce bills. Readable text is visible in the pixels.",
+                "source_url": "https://unsplash.com/photos/a-close-up-of-a-washing-machine-with-buttons-oIF2P4VcBBY?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "pesukone ajastustoiminto",
+              "pyykinpesukone kodinhoitohuone",
+              "washing machine timer"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "pesukone ajastustoiminto",
+              "pyykinpesukone kodinhoitohuone",
+              "washing machine timer"
             ]
           },
           {
@@ -1303,73 +1120,31 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "tyhjä liikuntasali",
-              "liikuntasali puolapuut",
-              "empty municipal sports hall"
+              "Ahmon koulukeskus aurinkopaneelit",
+              "Siilinjärvi Ahmo aurinkopaneelit",
+              "Ahmon school solar panels"
             ]
           },
           {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "cbe8dcc7f7c32a5bc4c612f683cde7a29e7b5481876b2a88b9990efeb3db892c",
-                "license": "Pexels License",
-                "reason": "The image contains people, which is explicitly listed in 'must_avoid'. While it shows an indoor sports floor with court markings and wall-mounted wooden stall bars, the presence of people makes it unsuitable for the selected concept.",
-                "source_url": "https://www.pexels.com/photo/people-inside-a-gym-7156048/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "2a6fafedc166139de6b0f0b55ce7610649a39010ffb103e638bf90b0e14fad65",
-                "license": "Pexels License",
-                "reason": "The article discusses municipal efforts to promote physical activity and compares cities based on their performance in this area. The selected concept describes an empty indoor sports hall with a wooden floor and stall bars. The actual pixels show an indoor bouldering gym with people, which does not match the concept's requirements for an empty spo",
-                "source_url": "https://www.pexels.com/photo/a-woman-doing-rock-wall-climbing-7590967/"
-              },
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "df9493c13becae0590407857f06ac4a5c30fe68cda55afe9b4ad490ebabe50de",
-                "license": "Pexels License",
-                "reason": "The image shows a child on a small, domestic-looking climbing frame and slide, which does not represent an 'Indoor sports floor with court markings' or 'Wall-mounted wooden stall bars' as required by the concept. The visible structures are not typical for a municipal sports hall. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/girl-on-a-wooden-home-playground-slide-8430056/"
-              },
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "961da6969ce0b990c180f0b03b39206fdc27db47c1a0d303fb0a31fff1b7d7d2",
-                "license": "Pexels License",
-                "reason": "The article discusses municipal efforts to promote physical activity and compares cities based on their performance in this area. The selected concept describes an empty indoor sports hall with court markings and wall-mounted stall bars. The image shows a person climbing a small, portable wooden play structure, which is not an indoor sports floor w",
-                "source_url": "https://www.pexels.com/photo/girl-climbing-a-wooden-climber-8430368/"
-              }
-            ],
+            "candidates": [],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "tyhjä liikuntasali",
-              "liikuntasali puolapuut",
-              "empty municipal sports hall"
+              "Ahmon koulukeskus aurinkopaneelit",
+              "Siilinjärvi Ahmo aurinkopaneelit",
+              "Ahmon school solar panels"
             ]
           },
           {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "d84ff4eecd94b4dcf63a41b0d525db54a66d43fc9c7b143a8de5e54b6a8cc6e3",
-                "license": "Unsplash License",
-                "reason": "The article discusses a comparison of municipalities' efforts to promote physical activity, specifically mentioning Oulu's high score in a TEAviisari assessment. The selected concept describes an indoor sports hall with court markings and stall bars. The provided image shows an outdoor street scene with a bus stop, houses, and trees, which is compl",
-                "source_url": "https://unsplash.com/photos/a-small-wooden-building-sitting-on-the-side-of-a-road-ZqqgJ_7WjQ4?utm_source=uutistenlukija&utm_medium=referral"
-              }
-            ],
+            "candidates": [],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "tyhjä liikuntasali",
-              "liikuntasali puolapuut",
-              "empty municipal sports hall"
+              "Ahmon koulukeskus aurinkopaneelit",
+              "Siilinjärvi Ahmo aurinkopaneelit",
+              "Ahmon school solar panels"
             ]
           },
           {
@@ -1378,185 +1153,190 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "tyhjä liikuntasali",
-              "liikuntasali puolapuut",
-              "empty municipal sports hall"
+              "Ahmon koulukeskus aurinkopaneelit",
+              "Siilinjärvi Ahmo aurinkopaneelit",
+              "Ahmon school solar panels"
             ]
           }
         ],
         "selected": {
           "concept_rank": 1,
-          "fit_score": 9,
-          "image_sha256": "78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12",
-          "kind": "real"
+          "fit_score": 10,
+          "image_sha256": "963303af15e20d7d78a0d0ac1118dd99ef6451afbb6b3e7ad92500955f8d51e3",
+          "kind": "generated"
         },
         "version": "article-first-v1"
       },
-      "sha256": "78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Outdoor%20gym%20Kuusisaari%20Oulu%2020211114.jpg",
-      "stock_provenance": {
-        "attribution": {
-          "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
-          "title": "Outdoor gym Kuusisaari Oulu 20211114.jpg"
-        },
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Outdoor_gym_Kuusisaari_Oulu_20211114.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "license": "CC0",
-        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "photo_id": "wikimedia-112652850",
-        "photo_url": "https://commons.wikimedia.org/wiki/File:Outdoor%20gym%20Kuusisaari%20Oulu%2020211114.jpg",
-        "photographer": "Estormiz",
-        "photographer_url": "https://commons.wikimedia.org/wiki/File:Outdoor%20gym%20Kuusisaari%20Oulu%2020211114.jpg",
-        "provider": "wikimedia",
-        "query": "Oulu ulkokuntosali",
-        "retrieved_at": "2026-10-05T12:08:17Z"
-      },
-      "stock_provenance_sha256": "85ef5cc5738a8a8320f7efb413032beed02088bd708ef60c4c7bf4507ef948bd",
-      "url": "https://uutistenlukija.fi/media/78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12.jpg"
+      "sha256": "963303af15e20d7d78a0d0ac1118dd99ef6451afbb6b3e7ad92500955f8d51e3",
+      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "subject": "Kotitalouksien sähkönkäytön ajoittaminen pesukoneella",
+      "url": "https://uutistenlukija.fi/media/963303af15e20d7d78a0d0ac1118dd99ef6451afbb6b3e7ad92500955f8d51e3.jpg"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "oulu",
-      "related_sources": 0,
-      "source_fields_sha256": "290547d4b8d17a8728bbf261cdd7ac854f9538a30f90902d077c50d414644b5c",
-      "source_sha256": "bbb1738709366221706027c8e537eeaf33346d8c3ec1f7b5304efe6b8fdac472"
+      "provider": "kuopio",
+      "related_sources": 3,
+      "source_fields_sha256": "51a3725ce33691a6b08ff46e02ce0c8d2e06284e04b526e4a3b3574f0b68fa28",
+      "source_sha256": "e73cbaf88cc10bcc5c37f78827d48caa712beea67437088a89b1fe139cf82054"
     },
     "sources": [
       {
         "id": "A",
         "published_at": "2026-10-05T00:00:00+03:00",
-        "publisher": "Oulun kaupunki",
+        "publisher": "Kuopion kaupunki",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Oulun kaupungin käyttöehdot (avoin data): Nimeä-lisenssi (CC BY 4.0) — kopiointi, levittäminen, esittäminen ja muokkaaminen sallittu, myös kaupallisesti, kun lähde mainitaan.",
+          "license": "Kuopion kaupungin avoimen datan käyttöehdot: maailmanlaajuinen, maksuton, peruuttamaton käyttöoikeus kopioida, levittää, muokata ja hyödyntää kaupallisesti ja ei-kaupallisesti; koskee myös tekstejä",
           "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://www.ouka.fi/avoin-data/kayttoehdot"
+          "url": "https://www.kuopio.fi/app/uploads/2023/04/avoin-data-kayttoehdot-kuopion-kaupunki.pdf"
         },
-        "text": "05.10.2026\nOulun kaupunki hoitaa terveyttä edistävää liikuntaa valtakunnallisen vertailun mukaan erinomaisesti. Tieto ilmenee Terveyden ja hyvinvoinnin laitoksen (THL) tiedoista vertailutietokanta TEAviisarista, minkä kuntakohtaiset tulokset julkaistiin perjantaina 2.10.2026.\nLiikunnan terveydenedistämisaktiivisuudessa Oulu on isojen kaupunkien kärkipaikalla pistemäärällä 87. Koko maan kuntien keskiarvo on 71. Muiden isojen kaupunkien pisteet ovat Tampere 78, Vantaa 77, Helsinki 75, Turku 70 ja Espoo 70. Myös aiempina vuosina Oulu on pitänyt kuuden suurimman kaupungin kärkipaikkaa hallussaan.\nLiikunnan edistäminen kuuluu olennaisena osana kunnan terveyden edistämistoimintaan. Tietoja kerätään vertailutietokantaan kuntien oman toiminnan ja ostopalvelujen osalta terveyttä edistävän liikunnan kehittämiseksi ja edellytysten luomiseksi liikuntalain mukaisesti. Tiedon keruussa arvioidaan myös kuntien toimenpiteitä ja resursseja kuntalaisten liikunnan edistämiseksi. Lisäksi tarkastellaan myös kuntalaisten ja yhdistysten osallistumismahdollisuuksia.\n”Oulussa on tehty pitkäjänteisesti ja määrätietoisesti liikunnan sektorilla toimenpiteitä, joilla edistetään kuntalaisten terveyttä ja hyvinvointia. Vaikka kuntatalous on tällä hetkellä erittäin haastavassa tilanteessa, teemme nykyisillä resursseilla oikeita asioita oikealla tavalla siten, että tehtyjen toimenpiteiden vaikuttavuus on terveyden edistämisen näkökulmasta mahdollisimman hyvä”, toteaa liikuntajohtaja Niina Epäilys.\nKuntakohtaisiin tietoihin voi tutustua osoitteessa TEAviisarin verkkosivuilla (ohjautuu ulkopuoliselle sivustolle). Tiedot toimitti tänä vuonna 290 kuntaa eli 99,3 prosenttia Manner-Suomen kunnista. Terveydenedistämisaktiivisuutta seurataan liikunnan lisäksi kuntajohdon, kulttuurin, perusopetuksen, lukioiden ja ammatillisten oppilaitosten sekä hyvinvointialueiden osalta. Tietoja on kerätty vuodesta 2010 lähtien parillisina vuosina.\nliikunta",
-        "title": "Oulu edelleen suurten kaupunkien ykkönen terveyttä edistävässä liikunnassa",
-        "url": "https://www.ouka.fi/uutiset/oulu-edelleen-suurten-kaupunkien-ykkonen-terveytta-edistavassa-liikunnassa"
+        "text": "Energiansäästöviikkoa vietetään jo 30. kerran\n05.10.2026\nUutiset\nViksu Kuopio\nYmpäristönsuojelu\nEnergiasäästöviikon 5.–11.10.2026 juhlavuoden teemana on se, että Kaiken takana on energia. Teeman tarkoituksena on korostaa energian merkitystä arjessa, yhteiskunnassa ja tulevaisuuden ratkaisuissa. Energiansäästöviikon tavoitteena on kiinnittää huomiota energiankäyttöön ja energiankulutukseen sekä energiatehokkaisiin ratkaisuihin.\nUseat Pohjois-Savon kunnat panostavat myös energiansäästöön monipuolisilla ratkaisuilla, kuten liittymällä Julkisen alan energiatehokkuussopimukseen (JETS) kaudelle 2026–2035. Esimerkiksi Kuopion energiatehokkuussopimuksen toimintasuunnitelmassa on asetettu tavoitteeksi saavuttaa vuoteen 2035 mennessä 11 128 MWh:n vuotuinen energiansäästö, mikä vastaa 10 prosenttia sopimuksen liittymisvaiheen energiankäytöstä. Esimerkiksi Iisalmessa on uusittu tänä vuonna Edvin Laineen puukoululla ilmanvaihtokoneet ja rakennusautomaatio entistä energiatehokkaammiksi. Energiansäästötoimenpiteinä on uusittu myös katuvaloja LED-valaisimiksi ja valaistuksia on muutettu toimimaan liiketunnistimilla. Lisäksi Siilinjärvellä on lisätty uusiutuvan energian käyttöä kunnan kiinteistöissä ottamalla käyttöön noin 390 aurinkopaneelia Siilinlahden ja Ahmon koulukeskuksissa tänä vuonna. Ennen kaikkea energiatehokkuuteen panostaminen tukee kuntien ilmasto- ja resurssiviisausohjelmien toteutumista, auttaa hillitsemään kustannuksia ja vähentää kunnan toiminnasta aiheutuvia kasvihuonekaasupäästöjä.\nEnergiansäästöviikkoa on vietetty vuodesta 1996 ja se kokoaa vuosittain satoja osallistujia. Viikko haastaa yritykset, yhteisöt, kunnat, järjestöt, taloyhtiöt ja oppilaitokset parantamaan energiatehokkuutta omassa toiminnassaan sekä viemään viestiä eteenpäin. Energiansäästöviikkoa koordinoi valtion kestävän kehityksen yhtiö Motiva, ja viikon mahdollistaa Energiavirasto.\nLokakuun lopussa järjestettävä Pientalon energiansäästöilta -webinaari 27.10.2026 kertoo energiansäästövinkkejä, mihin kodissa kuluu energiaa ja mistä energiansäästämisessä kannattaa aloittaa? Webinaarin järjestävät Motivan energianeuvonta ja SavoGrown GreenSavo-hanke.\nSISUKAS-hankkeessa toteutetaan ilmastotyötä yhteistyössä Kuopion seudun eli Kuopion ja Siilinjärven sekä kolmen Ylä-Savon kunnan eli Iisalmen, Kiuruveden ja Sonkajärven kanssa. Kunnat toimivat esimerkkeinä muille kunnille ja yhteistyössä rakennetaan ilmastokestävämpää, elinvoimaisempaa ja turvallisempaa tulevaisuutta kunnille, asukkaille ja yrityksille.",
+        "title": "Energiansäästöviikkoa vietetään jo 30. kerran",
+        "url": "https://www.kuopio.fi/2026/10/05/energiansaastoviikkoa-vietetaan-jo-30-kerran/"
+      },
+      {
+        "id": "B",
+        "published_at": "2026-10-05T07:55:00+03:00",
+        "publisher": "siilinjarvi.fi",
+        "related": true,
+        "text": "EtusivuUutisetEnergiansäästöviikkoa vietetään jo 30. kerran Energiansäästöviikkoa vietetään jo 30. kerran 05.10.2026 Energiasäästöviikon 5.–11.10.2026 juhlavuoden teemana on Kaiken takana on energia. Teema korostaa energian merkitystä arjessa, yhteiskunnassa ja tulevaisuuden ratkaisuissa. Energiansäästöviikon tavoitteena on kiinnittää huomiota energiankäyttöön, energiankulutukseen ja energiatehokkaisiin ratkaisuihin. Millaisia energiatekoja Siilinjärvellä tehdään? Siilinjärven kunta on sitoutunut vähentämään energiankulutustaan 10 prosenttia vuoteen 2035 mennessä osana julkisten alojen energiatehokkuussopimusta. Tavoitteena on saavuttaa noin 845 MWh:n energiansäästö vuoteen 2030 mennessä ja noin 1 400 MWh:n säästö vuoden 2035 loppuun mennessä. Tavoitteisiin pyritään parantamalla kunnan kiinteistöjen, katuvalaistuksen ja ajoneuvokaluston energiatehokkuutta. Katuvalaistusta uudistetaan vaiheittain energiatehokkaaseen LED-tekniikkaan, ja myös kunnan rakennuksissa valaistusta uusitaan. Kesällä 2026 esimerkiksi Hamulan koulun käytävien, aulatilojen ja wc-tilojen valaistus vaihdettiin energiatehokkaisiin LED-valaisimiin. Uusiutuvaa energiaa lisätään kunnan kiinteistöissä. Tänä vuonna käyttöön otettiin noin 390 aurinkopaneelia Siilinlahden ja Ahmon koulukeskuksissa. Paneelien arvioitu vuosituotto on noin 160 000 kWh. Myös lämmitysratkaisuja kehitetään energiatehokkaammiksi. Kesällä 2026 Toivalan ja Suininlahden kouluissa siirryttiin kaukolämmön käyttöön, mikä korvasi aiemmin pääosin pellettiin ja osittain öljyyn perustuneen lämmityksen. Kunnan ajoneuvokalustossa energiatehokkuus näkyy siirtymisenä vähäpäästöisiin käyttövoimiin. Kunnan henkilöautot ovat nykyisin kokonaan sähköautoja, ja käytössä on myös sähkökäyttöisiä pakettiautoja. Energiansäästöviikkoa on vietetty vuodesta 1996 ja se kokoaa vuosittain satoja osallistujia. Viikko haastaa yritykset, yhteisöt, kunnat, järjestöt, taloyhtiöt ja oppilaitokset parantamaan energiatehokkuutta omassa toiminnassaan sekä viemään viestiä eteenpäin. Energiansäästöviikkoa koordinoi valtion kestävän kehityksen yhtiö Motiva, ja viikon mahdollistaa Energiavirasto. Kiinnostaako sinua energian säästäminen? Voit osallistua kaikille avoimeen Pientalon energiansäästöilta -webinaariin lokakuun lopussa 27.10.2026 ja hankkia lisätietoa, mihin kodissa kuluu energiaa ja mistä energiansäästämisessä kannattaa aloittaa? Webinaarin järjestävät Motivan energianeuvonta ja SavoGrown GreenSavo-hanke. Ilmoittaudu webinaariin tästä linkistä. Muita ajankohtaisia Heijastinaita ja ekaluokkalaisille lahjoitettavat heijastinvaljaat kannustavat näkymään pimeällä Kunnanhallituksen kokouksen 28.9.2026 päätöstiedote Siilinjärven kunnanhallitus käsittelee yhteistoimintaneuvottelujen käynnistämistä Valtatie 9 suljetaan Kuopion lentokentän kohdalla, näin haet kulkulupaa Hävikkiviikko kannustaa arvostamaan ruokaa",
+        "title": "Energiansäästöviikkoa vietetään jo 30. kerran - Siilinjärven ...",
+        "url": "https://siilinjarvi.fi/ajankohtaista/energiansaastoviikko/"
+      },
+      {
+        "id": "C",
+        "published_at": "2026-10-05T04:00:00+00:00",
+        "publisher": "kemionsaari.fi",
+        "related": true,
+        "text": "5.10.2026 Uutiset Energiansäästöviikko 30 vuotta: sähkönkäytön ajoittaminen noussut energiansäästön rinnalle Energiansäästöviikkoa vietetään tänä vuonna jo 30. kerran. Energiatehokkuus on edelleen tärkein keino vähentää energiankulutusta ja kustannuksia, mutta sen rinnalle on noussut sähkönkäytön ajoittaminen. Sähkömarkkinat ovat muuttuneet merkittävästi uusiutuvan energian lisääntyessä ja sähkön hinnan vaihdellessa aiempaa enemmän. Siksi yhä useampi kotitalous seuraa sähkön hintaa ja siirtää kulutusta edullisemmille ajankohdille. Motivan asiantuntijan mukaan energiatehokkuus suojaa edelleen energian hinnan nousulta, mutta myös kulutusjousto eli sähkönkäytön ajoittaminen auttaa pienentämään sähkölaskua. Samalla se tukee sähköverkon toimintaa ja vähentää fossiilisen energian tarvetta. Vuoden 2026 Energiansäästöviikon teema on“Kaiken takana on energia”, ja sen tavoitteena on kannustaa kotitalouksia, yrityksiä ja yhteisöjä käyttämään energiaa viisaasti, tehokkaasti ja oikeaan aikaan. Energiasäästöviikko vietetään 5.-11. lokakuuta. Lue lisää kampanjasta osoitteessa energiansaastoviikko.fi.(siirryt toiseen palveluun)",
+        "title": "Energiansäästöviikko 30 vuotta: sähkönkäytön ajoittaminen ...",
+        "url": "https://www.kemionsaari.fi/2026/10/05/energiansaastoviikko-30-vuotta-sahkonkayton-ajoittaminen-noussut-energiansaaston-rinnalle/"
+      },
+      {
+        "id": "D",
+        "published_at": "2026-10-05T07:27:04+00:00",
+        "publisher": "energia.fi",
+        "related": true,
+        "text": "Jo 30. Energiansäästöviikko käynnistyi Uutiset Julkaistu: 5.10.2026 Energiansäästöviikkoa vietetään jälleen 5.-11. lokakuuta. Energiansäästöviikon 30-vuotisen taipaleen aikana energiajärjestelmä ja sähkönkäyttö ovat muuttuneet merkittävästi. Energiatehokkuuden edistämisen ohella on yhä tärkeämpää ajoittaa sähkönkäyttöä oikein. Energiansäästöviikon teemana on tänä vuonna Kaiken takana on energia. Teeman kautta on tarkoitus nostaa esiin energian keskeinen rooli kaikkialla yhteiskunnassa, kuten arjessa, asumisessa, liikkumisessa, töissä ja palveluissa. Viikon tavoitteena on saada kaikenlaiset organisaatiot tekemään energiatekoja ja jakamaan viestiä energiansäästöstä omille sidosryhmilleen. – Energiansäästöviikko on 30 vuoden aikana elänyt monenlaisissa yhteiskunnallisissa tilanteissa ja teknologian kehitysharppauksissa. Silti perusajatus säilyy samana, sillä energiaa kannattaa aina käyttää vain tarpeeseen, mahdollisimman tehokkaasti ja nykyään myös oikeaan aikaan, sanoo Motivan asiantuntija Veli-Matti Virtanen Motivan tiedotteessa. Energiansäästöviikon sivuille on koottu energiaa säästäviä vinkkejä taloyhtiöille, pk-yrityksille ja kunnille sekä yhteiset vinkit meille kaikille. Energiansäästöviikon juhlavuoden vinkit taloyhtiöön Energiansäästöviikon juhlavuoden vinkit pk-yritykseen Energiansäästöviikon juhlavuoden vinkit kunnalle Energiansäästöviikon juhlavuoden vinkit meille kaikille Lue lisää ja osallistu Energiansäästöviikkoon Ajankohtaista ja puheenaiheita Kaikki ajankohtaiset Uutiset 5.10.2026 Jo 30. Energiansäästöviikko käynnistyi Lausunnot 2.10.2026 Energiateollisuus ry:n lausunto luonnoksesta hallituksen esitykseksi eduskunnalle laiksi datakeskusrekisteristä Tiedotteet 1.10.2026 Energiateollisuus esittää toimia sähköverkkojen riittävyyden turvaamiseksi Uutiset 30.9.2026 Ukrainaan tarvitaan kipeästi hajautettua energiantuotantoa",
+        "title": "Jo 30. Energiansäästöviikko käynnistyi - Energiateollisuus",
+        "url": "https://energia.fi/uutiset/jo-30-energiansaastoviikko-kaynnistyi/"
       }
     ],
-    "story_key": "url:https://www.ouka.fi/uutiset/oulu-edelleen-suurten-kaupunkien-ykkonen-terveytta-edistavassa-liikunnassa",
+    "story_key": "url:https://www.kuopio.fi/2026/10/05/energiansaastoviikkoa-vietetaan-jo-30-kerran/",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-10-05T12:07:21.347498+00:00",
-        "sha256": "cdf036d8eee00a87ef051349bf85ed8aee5d30a0ebb07d1c6d480c78b9a6896c",
-        "text": "Oulun kaupungin julkaiseman avoimen datan käyttö edellyttää Nimeä-lisenssin noudattamista. Lisenssi on tyyliltään salliva, ja sillä halutaan edistää tiedon hyödyntämistä, läpinäkyvyyttä ja innovaatioita.\nLisenssi mahdollistaa avoimen datan kopioimisen, levittämisen, näyttämisen ja esittämisen julkisesti. Aineistosta saa luoda johdannaisteoksia, kunhan aineiston tuottajan tai oikeuden omistajan nimi mainitaan asianmukaisesti. Alkuperäisen aineiston omistusoikeus säilyy aineiston tuottajalla. Lisenssi perustuu Creative Commons-lisenssiin (CC 4.0 BY, ByAttribution).\nLisenssi sallii\njakaa, kopioida ja levittää aineistoa edelleen missä tahansa välineessä ja muodossa.\nmuunnella, yhdistellä ja muokata aineistoa sekä luoda sen pohjalta uusia aineistoja.\nkäyttää aineistoa missä tahansa tarkoituksessa, myös kaupallisesti.\nLisenssinantaja ei voi peruuttaa näitä oikeuksia niin kauan kuin noudatat lisenssin ehtoja.\nLisenssin ehdot\nNimeä. Sinun on mainittava lähde asianmukaisesti, tarjottava linkki lisenssiin sekä merkittävä, mikäli olet tehnyt muutoksia. Voit tehdä yllä olevan millä tahansa kohtuullisella tavalla, mutta et siten, että annat ymmärtää lisenssinantajan suosittelevan sinua tai teoksen käyttöäsi. Lisenssin myöntäjällä on oikeus pyytää aineiston julkaisijaa poistamaan maininnan aineiston tuottajasta.\nEi muita rajoituksia. Et voi asettaa sellaisia oikeudellisia ehtoja tai teknisiä estoja, jotka estävät oikeudellisesti muita tekemästä mitään sellaista, minkä lisenssi sallii.\n",
-        "url": "https://www.ouka.fi/avoin-data/kayttoehdot"
+        "retrieved_at": "2026-10-05T12:45:33.714744+00:00",
+        "sha256": "aa2474253e1b74dd3fc1a6342553e332e7bd9fe6ab36c901fcf449c09a6cbf98",
+        "text": "Kuopion kaupunki Konsernipalvelu Tietohallinto Käyttöehdot 4.12.2016 Kuopion kaupungin avoimen datan käyttöehdot 1. Yleistä Nämä käyttöehdot koskevat Kuopion kaupungin www-sivustoilla ja niihin liitettyjen palvelujen avoimesti jaettuja aineistojen (avoimen datan) käyttöä. Käyttäjällä tarkoitetaan henkilöä tai organisaatiota, joka ottaa tämän lisenssin (lisenssi jäljempänä myös \"käyttöoikeus\") alaisen aineiston käyttöönsä. Aineistojen tuottaja ja tekijänoikeuden tai tietokantasuojan haltija on Kuopion kaupunki, ellei aineiston, tiedon tai palvelun yhteydessä erikseen toisin ilmoiteta. Käyttöehdot koskevat palveluissa olevia paikkatietoaineistoja, taulukoita, tilastokuvioita, tekstejä sekä muuta tietoaineistoa. Kuopion kaupunki ei peri käyttöehtojen mukaisen aineiston käytöstä maksua. 2. Käyttöoikeuden ehdot Vastaanottamalla aineistoa käyttäjä hyväksyy olla olevat ehdot. Aineistoa käytettäessä on aineiston tai sitä sisältävän tai hyödyntävän palvelun yhteyteen liitettävä maininta alkuperäislähteestä ja aineistoversion ajankohta, esimerkiksi: [aineisto] © Kuopion kaupunki, [vuosiluku, päiväys] tai o o sisältää Kuopion kaupungin [aineiston nimi] aineistoa, [vuosiluku] 2.1 Käyttöoikeudet Tämä on Kuopion kaupungin myöntämä maailmanlaajuisen, maksuttoman, peruuttamattoman rinnakkaisen käyttöoikeuden myöntävä lisenssi, jolla edellä mainittua aineistoa voi vapaasti: · kopioida ja levittää · muokata ja hyödyntää kaupallisesti ja ei-kaupallisesti jatkolisensoimalla · yhdistellä muihin tuotteisiin ja · käyttää osana sovellusta tai palvelua. 2.2 Aineiston tuottajan velvollisuudet ja vastuut Aineisto on lisensoitu sellaisenaan eikä Kuopion kaupunki vastaa aineistossa mahdollisesti esiintyvistä virheistä eikä aineiston käytöstä aiheutuvista välittömistä tai välillisistä vahingoista. Kuopion kaupunki ei myönnä aineistolle tai siinä olevien tietojen oikeellisuudelle tai ajantasaisuudelle takuuta. Kuopion kaupunki ei takaa, että aineisto olisi jatkuvasti saatavilla ja Kuopion kaupunki voi lopettaa aineiston jakelun ennalta ilmoittamatta. 2.3 Käyttäjän velvollisuudet ja vastuut Käyttäjän on aineistoa tai siitä tehtyjä tuotteita käyttäessään ja edelleen luovuttaessaan · mainittava Kuopion kaupungin tekijän- tai muu oikeus ko. aineistoon · vaadittava nimeämiskäytännön noudattamista myöntäessään lisenssejä tuotteeseen tai · palveluun, jossa käytetään näiden ehtojen alaista aineistoa tai sen osaa Ilmoitettava onko aineisto esitetty/käytetty muuttamattomana/ kokonaisuudessaan/ käsiteltynä · poistettava maininta alkuperäislähteestä, mikäli Kuopion kaupunki sitä erikseen vaatii Käyttäjän ja Kuopion kaupungin välillä ei tämän lisenssin myötä synny yhteistyö- tai liikesuhdetta. Käyttäjä ei saa aineiston käytön yhteydessä ilmaista, että Kuopion kaupunki tukisi tai suosittelisi kyseistä aineiston käyttötapaa. 3. Sovellettava laki Tähän lisenssiin/käyttöoikeuteen sovelletaan Suomen lakia. 4. Muutokset tähän lisenssiin Kuopion kaupunki voi milloin tahansa muuttaa lisenssin ehtoja tai soveltaa aineistoon eri lisenssiä. Tämän lisenssin ehtoja sovelletaan kuitenkin edelleen niihin aineistoihin, jotka on otettu käyttöön tämän lisenssin voimassa ollessa. Lisätietoja: Jari Torvinen, tietohallintopäällikkö jari.torvinen(at)kuopio.fi",
+        "url": "https://www.kuopio.fi/app/uploads/2023/04/avoin-data-kayttoehdot-kuopion-kaupunki.pdf"
       }
     ]
   },
   "draft": {
     "category": "Kotimaa",
     "image": {
-      "alt": "Arkistokuva: Ulkoliikuntapaikalla on useita kiinteitä kuntoilulaitteita, jotka ovat kevyen lumipeitteen alla asuinrakennusten edustalla.",
-      "caption": "Arkistokuva artikkelin aiheesta.",
+      "alt": "AI-generoitu kuva: Valkoinen pyykinpesukone on kodinhoitohuoneessa, sen ohjauspaneelissa on valitsin, näyttö ja ajastuspainike.",
+      "attempts": 1,
+      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
       "classifier_output": {
         "category": "Kotimaa",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva Oulussa sijaitsevasta kaupungin ulkoliikuntapaikasta, jossa näkyvät kiinteät kuntoilulaitteet ja niitä ympäröivä liikunta-alue.",
-            "must_avoid": [
-              "Competitive sporting events",
-              "Implied visual proof of the comparison ranking"
-            ],
-            "must_show": [
-              "Fixed outdoor exercise equipment",
-              "Public recreation setting"
-            ],
-            "rank": 1,
-            "safe_to_generate": false,
-            "search_queries": [
-              "Oulu ulkokuntosali",
-              "Oulu ulkoliikuntapaikka",
-              "Oulu outdoor gym equipment",
-              "Oulun kaupungin kuntoilupuisto"
-            ],
-            "subject": "Oulu ja kaupungin ulkoliikuntapaikka"
-          },
-          {
-            "depictable_scene": "Nimeämättömän liikuntasalin sisänäkymä: tyhjä puulattiainen kenttä peliviivoineen ja seinään kiinnitetyt puolapuut. Kuvassa ei ole ihmisiä eikä tunnistettavan oikean rakennuksen yksityiskohtia.",
+            "depictable_scene": "Tavallisen kodin kodinhoitotilassa oleva suljettu pyykinpesukone, jonka ohjauspaneeli ja ajastuksen valintapainike näkyvät. Kuvassa ei ole ihmisiä eikä luettavia näyttötekstejä, eikä tila esitä mitään nimettyä kotia.",
             "must_avoid": [
               "People or body parts",
-              "Invented identifiable Oulu facility",
-              "Readable text or logos",
-              "Competition trophies or ranking graphics"
+              "Invented readable text, logos or electricity prices"
             ],
             "must_show": [
-              "Indoor sports floor with court markings",
-              "Wall-mounted wooden stall bars"
+              "Domestic washing machine",
+              "Timer control on the appliance"
             ],
-            "rank": 2,
+            "rank": 1,
             "safe_to_generate": true,
             "search_queries": [
-              "tyhjä liikuntasali",
-              "liikuntasali puolapuut",
-              "empty municipal sports hall",
-              "wooden gym stall bars"
+              "pesukone ajastustoiminto",
+              "pyykinpesukone kodinhoitohuone",
+              "washing machine timer",
+              "washing machine control panel"
             ],
-            "subject": "Kuntien liikunnan edistäminen: tyhjä liikuntasali"
+            "subject": "Kotitalouksien sähkönkäytön ajoittaminen pesukoneella"
+          },
+          {
+            "depictable_scene": "Todellinen valokuva Ahmon koulukeskuksen aurinkopaneeliasennuksesta Siilinjärvellä. Paneelit ovat kuvan pääkohde, ja niiden sijoittuminen koulurakennuksen yhteyteen näkyy.",
+            "must_avoid": [
+              "Substituting another school or solar installation",
+              "Presenting an unverified installation as the one described"
+            ],
+            "must_show": [
+              "Installed solar panels",
+              "Actual school building"
+            ],
+            "rank": 2,
+            "safe_to_generate": false,
+            "search_queries": [
+              "Ahmon koulukeskus aurinkopaneelit",
+              "Siilinjärvi Ahmo aurinkopaneelit",
+              "Ahmon school solar panels",
+              "Ahmon koulukeskus aurinkopaneelit 2026"
+            ],
+            "subject": "Ahmon koulukeskuksissa käyttöön otetut aurinkopaneelit"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Estormiz on Wikimedia Commons",
-      "depicted": "The image shows an outdoor scene with a light dusting of snow on the ground and bare trees, suggesting winter. In the foreground, there is a snow-covered path and patches of grass. To the left, there is a dark-colored outdoor calisthenics or playground structure with various bars and ladders. To the right, there are several pieces of outdoor exercise equipment, primarily in gray and orange colors, also on snow-covered ground. A body of water, possibly a canal or pond, runs across the middle grou",
-      "generated": false,
-      "hotlink": false,
-      "license": "CC0",
-      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-      "local_path": "media/78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12.jpg",
+      "credit": "AI-kuvitus",
+      "depicted": "A white front-loading washing machine is shown in a domestic laundry room or utility space. The machine has a control panel with a rotary dial, a digital display, and several buttons, including one with a clock icon, indicating a timer function. To the left, a window and a wicker laundry basket are visible. To the right, a countertop with a sink and a grey towel hanging from a cabinet are present. A potted plant sits on the counter.",
+      "generated": true,
+      "license": "AI-generated image",
+      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "local_path": "media/963303af15e20d7d78a0d0ac1118dd99ef6451afbb6b3e7ad92500955f8d51e3.jpg",
+      "model": "codex-oauth:gpt-image-2",
       "pixel_review": {
-        "alt_fi": "Ulkoliikuntapaikalla on useita kiinteitä kuntoilulaitteita, jotka ovat kevyen lumipeitteen alla asuinrakennusten edustalla.",
+        "alt_fi": "Valkoinen pyykinpesukone on kodinhoitohuoneessa, sen ohjauspaneelissa on valitsin, näyttö ja ajastuspainike.",
         "approved": true,
-        "article_text_sha256": "f7381ab848994460240d470430e073d0393816556758479100ce2ed1d2965c1c",
-        "concept_sha256": "a0a10699f36a03d8886c016b9b6c4f2429a67359ec84789d3330560e7cd55b79",
-        "description": "An outdoor gym with various exercise equipment is visible in the foreground, covered in a light dusting of snow. In the background, there are apartment buildings and bare trees, with a body of water separating the gym area from the buildings. The sky is clear blue.",
-        "fit_score": 9,
-        "image_sha256": "78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12",
+        "article_text_sha256": "1ab5ce01a58dde57853b7518699d0c7bc0a6226c29890b745530bf1ea5789871",
+        "concept_sha256": "a8f7e45c90d9d22bbb31be6fd0ffcd3a949abb1797bdf61139beb605ab78f536",
+        "description": "A white front-loading washing machine is shown in a domestic laundry room or utility space. The machine has a control panel with a rotary dial, a digital display, and several buttons, including one with a clock icon, indicating a timer function. To the left, a window and a wicker laundry basket are visible. To the right, a countertop with a sink and a grey towel hanging from a cabinet are present. A potted plant sits on the counter.",
+        "fit_score": 10,
+        "image_sha256": "963303af15e20d7d78a0d0ac1118dd99ef6451afbb6b3e7ad92500955f8d51e3",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image clearly depicts fixed outdoor exercise equipment in a public recreation setting, which directly matches the selected concept. The filename also indicates the location as Oulu, aligning with the article's focus on Oulu's performance in a municipal sports comparison.",
-        "reviewed_at": "2026-10-05T12:08:19.645065+00:00",
-        "source_context": {
-          "image_sha256": "78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12",
-          "license": "CC0",
-          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-          "photo_id": "wikimedia-112652850",
-          "photo_url": "https://commons.wikimedia.org/wiki/File:Outdoor%20gym%20Kuusisaari%20Oulu%2020211114.jpg",
-          "photographer": "Estormiz",
-          "provider": "wikimedia",
-          "title": "Outdoor gym Kuusisaari Oulu 20211114.jpg"
-        },
-        "source_context_sha256": "e252d073355dc888f4a383c86a03deb87c3c4408fcc46020e0387629fcd937f0"
+        "reason": "The image directly depicts a domestic washing machine with a visible timer control, which aligns perfectly with the selected concept of timing household electricity usage with a washing machine. The article discusses the importance of timing electricity consumption to reduce bills and support the grid, making this image highly relevant to the article's theme of energy saving.",
+        "reviewed_at": "2026-10-05T12:49:26.006192+00:00",
+        "text_audit": {
+          "examples": [],
+          "readable_text_present": false
+        }
       },
       "pixels": {
-        "height": 3230,
+        "height": 1024,
         "mode": "RGB",
-        "variance": 7577.6,
-        "width": 4300
+        "variance": 7124.1,
+        "width": 1536
       },
+      "prompt_sha256": "7f07086384da5b9415311bc02734b4cd306fcdae0dbddaeb239b36fe42308607",
+      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "An outdoor gym with various exercise equipment is visible in the foreground, covered in a light dusting of snow. In the background, there are apartment buildings and bare trees, with a body of water separating the gym area from the buildings. The sky is clear blue.",
+        "evidence": "Tavallisen kodin kodinhoitotilassa oleva suljettu pyykinpesukone, jonka ohjauspaneeli ja ajastuksen valintapainike näkyvät. Kuvassa ei ole ihmisiä eikä luettavia näyttötekstejä, eikä tila esitä mitään nimettyä kotia.",
         "matched": [
-          "equipment",
-          "exercise",
-          "outdoor"
+          "Domestic washing machine",
+          "Timer control on the appliance"
         ],
-        "method": "vision",
-        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+        "method": "generation",
+        "reason": "generated from the accepted scene"
       },
+      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "f7381ab848994460240d470430e073d0393816556758479100ce2ed1d2965c1c",
-        "decision_sha256": "5dcd566e6d756371575dcf89a81a89d589f2f6eb997c986f8fb0863c98f91af9",
+        "article_text_sha256": "1ab5ce01a58dde57853b7518699d0c7bc0a6226c29890b745530bf1ea5789871",
+        "decision_sha256": "57aa0b2d41fd07a5e7c60904f1c5fafce82565ed9ebd0d44b70fa766eed906f0",
         "minimum_real_fit": 8,
         "searches": [
           {
@@ -1571,21 +1351,104 @@
           {
             "candidates": [
               {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12",
-                "license": "CC0",
-                "reason": "The image clearly depicts fixed outdoor exercise equipment in a public recreation setting, which directly matches the selected concept. The filename also indicates the location as Oulu, aligning with the article's focus on Oulu's performance in a municipal sports comparison.",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Outdoor%20gym%20Kuusisaari%20Oulu%2020211114.jpg"
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "1870031d5dd25e5c5a6d21aa6db66f5ca067ff43de9004a6a6b48781729dfdfc",
+                "license": "Public domain",
+                "reason": "The image shows various electronic devices and a person in military attire, which is completely unrelated to the concept of a domestic washing machine with a timer control or the article's theme of household energy saving. The visible content does not match any aspect of the selected concept or the article's subject matter. One or more required con",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Stryker%20Brigade%20Soldiers%20train%20ICDC%20soldiers%20DVIDS11998.jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "4faa19de71bbea5c61e15ed41dbd8e37fc0c3f3e733852bd5f4d9da87c208158",
+                "license": "CC BY-SA 3.0",
+                "reason": "The image shows a timer control, which is relevant to the concept. However, it does not show a 'Domestic washing machine' as a whole, but rather an internal component, and it is not in a 'Tavallisen kodin kodinhoitotilassa' (typical home utility room). The article discusses energy saving in households and timing electricity use, which this internal",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Machine%20laver%20programmateur.jpg"
               }
             ],
             "concept_rank": 1,
-            "outcome": "accepted",
+            "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Oulu ulkokuntosali",
-              "Oulu ulkoliikuntapaikka",
-              "Oulu outdoor gym equipment"
+              "pesukone ajastustoiminto",
+              "pyykinpesukone kodinhoitohuone",
+              "washing machine timer"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 4,
+                "image_sha256": "8c2ca9567a5e3b0df825218144c252061459c030c6f6714c844f7ad4086ebf09",
+                "license": "Pexels License",
+                "reason": "The image contains people, which the concept explicitly forbids. The washing machine door is open, not closed as required by the concept. The timer control is not clearly visible or selectable due to the angle and the child in the drum. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/mother-and-child-near-the-front-load-washing-machine-7414396/"
+              },
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "1095776548fb0bebeb456284a805b196a477624337c999ae33206e9d533f6396",
+                "license": "Pexels License",
+                "reason": "The image shows a domestic washing machine, which aligns with the 'Domestic washing machine' must_show element. However, the 'Timer control on the appliance' must_show element is not clearly visible. While there is a control panel, no specific timer button or display is discernible to confirm the presence of a timer control. Therefore, the image do",
+                "source_url": "https://www.pexels.com/photo/view-of-a-sink-mirror-and-washing-machine-in-a-modern-bathroom-19846348/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "a8efffd9532d469243c62b9e103136bb8f271b1904ce6f190ce5ca87526a134b",
+                "license": "Pexels License",
+                "reason": "The image shows a domestic washing machine, which aligns with the article's theme of household energy saving. However, the specific 'timer control on the appliance' element, crucial for the selected concept, is not clearly visible or identifiable on the washing machine's control panel. The article discusses timing electricity use, and the concept s",
+                "source_url": "https://www.pexels.com/photo/modern-design-of-bathroom-19916731/"
+              },
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "984d57cb142be9a5353071e2636a04c48ca6dfa367843f36466f04b2c677cb76",
+                "license": "Pexels License",
+                "reason": "The image clearly shows a domestic washing machine with a visible control panel and a digital display that could indicate a timer function, directly illustrating the concept of timing household electricity use with a washing machine. The setting is a typical utility room, fitting the 'Tavallisen kodin kodinhoitotilassa' aspect of the concept. No pe",
+                "source_url": "https://www.pexels.com/photo/laundry-area-with-white-tiled-walls-7195881/"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "pesukone ajastustoiminto",
+              "pyykinpesukone kodinhoitohuone",
+              "washing machine timer"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 7,
+                "image_sha256": "c6c203f10c1a332e934f13c746814c39a2f1f52f2cad84af0ce7c8731a3da120",
+                "license": "Unsplash License",
+                "reason": "The image clearly depicts a domestic washing machine with a visible 'Delay' button on its control panel, which directly illustrates the concept of timing electricity usage for household appliances as discussed in the article's emphasis on scheduling electricity consumption to reduce bills. Readable text is visible in the pixels.",
+                "source_url": "https://unsplash.com/photos/a-close-up-of-a-washing-machine-with-buttons-oIF2P4VcBBY?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "pesukone ajastustoiminto",
+              "pyykinpesukone kodinhoitohuone",
+              "washing machine timer"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "pesukone ajastustoiminto",
+              "pyykinpesukone kodinhoitohuone",
+              "washing machine timer"
             ]
           },
           {
@@ -1603,73 +1466,31 @@
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "tyhjä liikuntasali",
-              "liikuntasali puolapuut",
-              "empty municipal sports hall"
+              "Ahmon koulukeskus aurinkopaneelit",
+              "Siilinjärvi Ahmo aurinkopaneelit",
+              "Ahmon school solar panels"
             ]
           },
           {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "cbe8dcc7f7c32a5bc4c612f683cde7a29e7b5481876b2a88b9990efeb3db892c",
-                "license": "Pexels License",
-                "reason": "The image contains people, which is explicitly listed in 'must_avoid'. While it shows an indoor sports floor with court markings and wall-mounted wooden stall bars, the presence of people makes it unsuitable for the selected concept.",
-                "source_url": "https://www.pexels.com/photo/people-inside-a-gym-7156048/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "2a6fafedc166139de6b0f0b55ce7610649a39010ffb103e638bf90b0e14fad65",
-                "license": "Pexels License",
-                "reason": "The article discusses municipal efforts to promote physical activity and compares cities based on their performance in this area. The selected concept describes an empty indoor sports hall with a wooden floor and stall bars. The actual pixels show an indoor bouldering gym with people, which does not match the concept's requirements for an empty spo",
-                "source_url": "https://www.pexels.com/photo/a-woman-doing-rock-wall-climbing-7590967/"
-              },
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "df9493c13becae0590407857f06ac4a5c30fe68cda55afe9b4ad490ebabe50de",
-                "license": "Pexels License",
-                "reason": "The image shows a child on a small, domestic-looking climbing frame and slide, which does not represent an 'Indoor sports floor with court markings' or 'Wall-mounted wooden stall bars' as required by the concept. The visible structures are not typical for a municipal sports hall. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/girl-on-a-wooden-home-playground-slide-8430056/"
-              },
-              {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "961da6969ce0b990c180f0b03b39206fdc27db47c1a0d303fb0a31fff1b7d7d2",
-                "license": "Pexels License",
-                "reason": "The article discusses municipal efforts to promote physical activity and compares cities based on their performance in this area. The selected concept describes an empty indoor sports hall with court markings and wall-mounted stall bars. The image shows a person climbing a small, portable wooden play structure, which is not an indoor sports floor w",
-                "source_url": "https://www.pexels.com/photo/girl-climbing-a-wooden-climber-8430368/"
-              }
-            ],
+            "candidates": [],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "tyhjä liikuntasali",
-              "liikuntasali puolapuut",
-              "empty municipal sports hall"
+              "Ahmon koulukeskus aurinkopaneelit",
+              "Siilinjärvi Ahmo aurinkopaneelit",
+              "Ahmon school solar panels"
             ]
           },
           {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "d84ff4eecd94b4dcf63a41b0d525db54a66d43fc9c7b143a8de5e54b6a8cc6e3",
-                "license": "Unsplash License",
-                "reason": "The article discusses a comparison of municipalities' efforts to promote physical activity, specifically mentioning Oulu's high score in a TEAviisari assessment. The selected concept describes an indoor sports hall with court markings and stall bars. The provided image shows an outdoor street scene with a bus stop, houses, and trees, which is compl",
-                "source_url": "https://unsplash.com/photos/a-small-wooden-building-sitting-on-the-side-of-a-road-ZqqgJ_7WjQ4?utm_source=uutistenlukija&utm_medium=referral"
-              }
-            ],
+            "candidates": [],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "tyhjä liikuntasali",
-              "liikuntasali puolapuut",
-              "empty municipal sports hall"
+              "Ahmon koulukeskus aurinkopaneelit",
+              "Siilinjärvi Ahmo aurinkopaneelit",
+              "Ahmon school solar panels"
             ]
           },
           {
@@ -1678,73 +1499,77 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "tyhjä liikuntasali",
-              "liikuntasali puolapuut",
-              "empty municipal sports hall"
+              "Ahmon koulukeskus aurinkopaneelit",
+              "Siilinjärvi Ahmo aurinkopaneelit",
+              "Ahmon school solar panels"
             ]
           }
         ],
         "selected": {
           "concept_rank": 1,
-          "fit_score": 9,
-          "image_sha256": "78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12",
-          "kind": "real"
+          "fit_score": 10,
+          "image_sha256": "963303af15e20d7d78a0d0ac1118dd99ef6451afbb6b3e7ad92500955f8d51e3",
+          "kind": "generated"
         },
         "version": "article-first-v1"
       },
-      "sha256": "78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Outdoor%20gym%20Kuusisaari%20Oulu%2020211114.jpg",
-      "stock_provenance": {
-        "attribution": {
-          "changes": "Tallennettu JPEG-muodossa; kuvan sisältöä ei muokattu.",
-          "title": "Outdoor gym Kuusisaari Oulu 20211114.jpg"
-        },
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Outdoor_gym_Kuusisaari_Oulu_20211114.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "license": "CC0",
-        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "photo_id": "wikimedia-112652850",
-        "photo_url": "https://commons.wikimedia.org/wiki/File:Outdoor%20gym%20Kuusisaari%20Oulu%2020211114.jpg",
-        "photographer": "Estormiz",
-        "photographer_url": "https://commons.wikimedia.org/wiki/File:Outdoor%20gym%20Kuusisaari%20Oulu%2020211114.jpg",
-        "provider": "wikimedia",
-        "query": "Oulu ulkokuntosali",
-        "retrieved_at": "2026-10-05T12:08:17Z"
-      },
-      "stock_provenance_sha256": "85ef5cc5738a8a8320f7efb413032beed02088bd708ef60c4c7bf4507ef948bd",
-      "url": "https://uutistenlukija.fi/media/78d7f2e30b75a69c1e247304ac3b55ad735c38cb0484d4a5c9319f90ad1aef12.jpg"
+      "sha256": "963303af15e20d7d78a0d0ac1118dd99ef6451afbb6b3e7ad92500955f8d51e3",
+      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
+      "subject": "Kotitalouksien sähkönkäytön ajoittaminen pesukoneella",
+      "url": "https://uutistenlukija.fi/media/963303af15e20d7d78a0d0ac1118dd99ef6451afbb6b3e7ad92500955f8d51e3.jpg"
     },
     "paragraphs": [
       {
         "source_ids": [
-          "A"
+          "A",
+          "B",
+          "C",
+          "D"
         ],
-        "text": "Oulun kaupungin tiedotteen mukaan sen pistemäärä oli korkein kuuden suurimman kaupungin joukossa. Tampere sai 78 pistettä, Vantaa 77, Helsinki 75 sekä Turku ja Espoo kumpikin 70. Kuntakohtaiset tulokset julkaistiin 2. lokakuuta 2026."
+        "text": "Energiansäästöviikko järjestetään 5.–11. lokakuuta 2026. Tämän vuoden kampanja nostaa esiin energian merkitystä arjessa ja yhteiskunnassa sekä kannustaa kotitalouksia ja organisaatioita tehostamaan energiankäyttöään."
+      },
+      {
+        "source_ids": [
+          "C",
+          "D"
+        ],
+        "text": "Kemiönsaaren ja Energiateollisuuden julkaisemissa teksteissä korostetaan sähkönkäytön ajoittamista. Kemiönsaaren uutisessa Motivan asiantuntija arvioi, että kulutuksen siirtäminen edullisempiin ajankohtiin voi pienentää sähkölaskua ja tukea sähköverkon toimintaa. Energiatehokkuus säilyy silti keskeisenä keinona vähentää kulutusta."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kaupungin mukaan TEAviisarin liikuntaosiossa tarkastellaan kuntien toimia ja resursseja asukkaiden liikunnan edistämiseksi sekä asukkaiden ja yhdistysten osallistumismahdollisuuksia. Tietoja kerätään sekä kuntien omasta toiminnasta että ostopalveluista."
+        "text": "Kuopion kaupungin mukaan sen energiatehokkuussopimuksen toimintasuunnitelmassa tavoitellaan 11 128 megawattitunnin vuotuista energiansäästöä vuoteen 2035 mennessä. Tavoite vastaa kymmentä prosenttia sopimukseen liittymisvaiheen energiankäytöstä, eikä kyse ole jo saavutetusta säästöstä."
       },
       {
         "source_ids": [
-          "A"
+          "A",
+          "B"
         ],
-        "text": "Tiedotteen mukaan tämän vuoden tiedonkeruuseen vastasi 290 kuntaa eli 99,3 prosenttia Manner-Suomen kunnista. Liikunnan terveydenedistämisaktiivisuutta koskevia tietoja on kerätty parillisina vuosina vuodesta 2010 lähtien."
+        "text": "Siilinjärven kunta kertoo tavoittelevansa noin 845 megawattitunnin energiansäästöä vuoteen 2030 mennessä ja noin 1 400 megawattitunnin säästöä vuoden 2035 loppuun mennessä. Kuopion ja Siilinjärven tiedotteiden mukaan Siilinlahden ja Ahmon koulukeskuksissa on tänä vuonna otettu käyttöön noin 390 aurinkopaneelia. Siilinjärvi arvioi niiden vuosituotoksi noin 160 000 kilowattituntia."
+      },
+      {
+        "source_ids": [
+          "A",
+          "B"
+        ],
+        "text": "Kotitalouksille on tarjolla energiansäästöneuvontaa 27. lokakuuta järjestettävässä Pientalon energiansäästöilta -webinaarissa. Kuopion ja Siilinjärven tiedotteiden mukaan Motivan energianeuvonnan ja SavoGrown GreenSavo-hankkeen tilaisuus käsittelee kodin energiankulutusta ja sitä, mistä säästötoimet kannattaa aloittaa."
       }
     ],
-    "summary": "Kaupungin mukaan Oulu sai THL:n TEAviisarissa 87 pistettä, kun kuntien keskiarvo oli 71. Vertailu arvioi kuntien työtä terveyttä edistävän liikunnan hyväksi.",
-    "title": "Oulu kertoo johtavansa suurten kaupunkien liikuntavertailua"
+    "summary": "Kampanja kannustaa vähentämään energiankulutusta ja kiinnittämään huomiota myös sähkönkäytön ajankohtaan. Motivan mukaan kulutuksen ajoittaminen voi auttaa pienentämään sähkölaskua energiatehokkuuden rinnalla.",
+    "title": "Energiansäästöviikko käynnistyi 30. kerran"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "cdfc76730adccf2feae89e3ec28edcbc1f09c175b74644cc1d3b59d1bca6a74b",
+    "draft_sha256": "c07472831d4ea16e37952970e5eabf1992caef4a8ff925e72d62c4937c1b1162",
     "reasons": [
-      "Otsikko on 58 merkkiä eli alle 60 merkin tavoitteen, ja Oulun ilmoittama kärkisija on sen alussa. Lähde A tukee kärkisijaa kuuden suurimman kaupungin joukossa. Otsikon ”kertoo” ja ingressin ”kaupungin mukaan” erottavat kaupungin väitteen riippumattomasta vahvistuksesta.",
-      "Lähde A tukee ingressin pisteitä Oulu 87 ja kuntien keskiarvo 71 sekä ensimmäisen kappaleen lukuja Tampere 78, Vantaa 77, Helsinki 75, Turku 70 ja Espoo 70. Tulosten julkaisupäivä 2.10.2026 vastaa lähdettä; kaupungin tiedote on päivätty 5.10.2026 ja on arviointihetkellä ajankohtainen.",
-      "Kaikkien kolmen kappaleen source_ids-merkintä A on asianmukainen. Lähde A tukee arvioinnin kohteita, kuntien omaa toimintaa ja ostopalveluja, osallistumismahdollisuuksia sekä tiedonkeruun lukuja 290 kuntaa ja 99,3 prosenttia Manner-Suomen kunnista. Myös tiedonkeruu parillisina vuosina vuodesta 2010 lähtien sisältyy lähteeseen.",
-      "Yksi kaupungin tiedote riittää tähän rajattuun, selvästi lähteeseen sidottuun uutiseen. Teksti ei väitä riippumatonta vahvistusta, asukkaiden liikuntamäärien kasvua tai toimien todistettuja terveysvaikutuksia. Kotimaa-luokitus sopii aiheeseen, maantieteellistä soveltamisalaa ei laajenneta perusteettomasti, ja teksti on neutraalia, ymmärrettävää ja itsenäisesti tiivistettyä suomea.",
-      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Kuvakohtainen Wikimedia-provenienssi yksilöi Estormizin Kuusisaaren ulkokuntosalikuvan, CC0-oikeudet ja lähdeosoitteen; käyttöoikeutta ei johdeta kaupungin tekstilisenssistä. Tiedostonimen vuoden 2021 kuva on asianmukaisesti merkitty arkistokuvaksi. Näkyviksi kuvatut kiinteät kuntoilulaitteet Oulussa liittyvät konkreettisesti jutun käsittelemään kunnan liikunnan edistämiseen, eivätkä esitä näyttöä vertailusijoituksesta. Paketissa on kaksi järjestettyä kuvakonseptia, haut kummallekin ja valitun kuvan täsmälliseen kuvatunnisteeseen sidottu koko artikkelin soveltuvuusarvio 9/10. Kuvateksti ja vaihtoehtoinen teksti ovat tämän aineiston kanssa yhdenmukaisia."
+      "Otsikko on 42 merkkiä pitkä, joten se alittaa 60 merkin tavoitteen ja alkaa uutisen pääaiheella. Kampanjan järjestäminen 30. kerran saa tukea lähteistä A–D; käynnistyminen 5.10.2026 on arviointipäivään nähden ajankohtainen ja mainitaan suoraan lähteessä D.",
+      "Ensimmäisen kappaleen ajankohta 5.–11.10.2026 ja kampanjan tavoitteet ovat lähteiden A–D tukemia. Kotitalouksien kannustaminen ilmenee erityisesti lähteestä C ja organisaatioiden osallistuminen lähteistä A, B ja D. Kotimaa-luokitus sopii valtakunnalliseen kampanjaan, eikä kuntien toimista tehdä perusteettomia valtakunnallisia yleistyksiä.",
+      "Ingressin ja toisen kappaleen sähkönkäytön ajoittamista koskevat väitteet vastaavat lähdettä C: sähkölaskun pienentyminen ja sähköverkon tukeminen esitetään Motivan asiantuntijan arviona, ei riippumattomasti todennettuna vaikutuksena. Lähde D tukee ajoittamisen merkitystä energiatehokkuuden rinnalla. Luonnos ei väitä näitä riippumattomiksi vahvistuksiksi; D kertoo käyttävänsä Motivan tiedotetta.",
+      "Kolmannen kappaleen 11 128 MWh:n vuotuinen säästötavoite vuoteen 2035 mennessä ja 10 prosentin vertailuosuus vastaavat lähdettä A. Teksti erottaa oikein tavoitteen jo saavutetusta säästöstä.",
+      "Neljännen kappaleen Siilinjärven noin 845 MWh:n tavoite vuodelle 2030 ja noin 1 400 MWh:n tavoite vuoden 2035 loppuun ovat lähteestä B. Noin 390 aurinkopaneelia Siilinlahden ja Ahmon koulukeskuksissa vuonna 2026 mainitaan sekä A:ssa että B:ssä; noin 160 000 kWh:n vuosituotto esitetään B:n mukaisesti arviona. Viidennen kappaleen webinaarin nimi, 27.10.2026, järjestäjät ja sisältö vastaavat A:ta ja B:tä. Kappaleiden lähdemerkinnät ovat asianmukaiset, eikä katkelmissa ole häivytettyjä ristiriitoja.",
+      "Teksti on neutraalia, ymmärrettävää suomea ja lähdetietojen itsenäinen tiivistelmä. Kaikki neljä uutislähdettä käsittelevät samaa kampanjaa ja on päivätty 5.10.2026. RIGHTS-asiakirjaa käytetään vain tekstin käyttöoikeuden taustana, ei uutisväitteiden tai kuvan oikeuksien todisteena.",
+      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Kaksi järjestettyä kuvakonseptia ja kummankin haut on dokumentoitu. Valittu generoitu pesukonekuva vastaa ensimmäistä turvallista konseptia ja liittyy artikkelin kotitalouksien kulutuksen ajoittamista koskevaan sisältöön. Paketissa on erillisen mallin tarkalle kuvatunnisteelle tekemä pikseliarvio, jonka sopivuusarvosana on 10/10 ja joka kirjaa ajastuksen näkyväksi sekä ihmiset ja luettavat tekstit puuttuviksi. Kuvateksti sisältää täsmällisen ilmoituksen ”AI-generoitu kuva. Ei valokuva tapahtumasta.” Kuvaa ei esitetä todellisen tapahtuman tai nimetyn kohteen valokuvana, eikä sen käyttöä perustella tekstin uudelleenkäyttöluvalla."
     ]
   }
 }
