@@ -4,129 +4,131 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "440b65ae5ddfd4ddc73b19781cd40bb9dfda7fb2",
-  "job_id": "5cd5fcd61b42b6fadb0631d1de7662633b42576e25f9a61fc5c7f2dad208e6a6",
-  "packet_sha256": "fb1861965da5370773646cad2e85953d33b896c206faae0a502e661205faa179",
-  "draft_sha256": "a20839676280fe0932c43cb94ee5c8ebc99bae0a785c186a5ddb9a5d3c268e54",
+  "job_id": "07b41b9ba608e5f428d244a45b2f2b3c680373d082ecb29fb291a81cab186c03",
+  "packet_sha256": "8f403f018e104e41f62a702888edf0dc93f5f75804b357ec770dbd7659eeb43f",
+  "draft_sha256": "f1df9efe396dd9cb35c2f9a676252fec3535069cbae9445dc7c57b47083536a0",
   "image_sha256": null,
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "cd3a92dc490d874c7b5b4d7252460dd86be860cb301db9da297d972977e1f3ef"
+    "provenance_sha256": "d5ca12acc519d72c48482786b59f3935933e12651b0ab0638547546df210237d"
   },
   "stock_image": {
-    "alt": "Arkistokuva: Suuri yleisö, mukaan lukien monia ikääntyneitä aikuisia, istuu riveissä hämärässä kulttuuritilassa katsellen eteenpäin.",
+    "alt": "Arkistokuva: Tyhjä sisäsulkapallokenttä, jossa on sininen lattia, valkoiset rajaviivat ja kaksi verkkoa. Seinät ovat vaaleansiniset ja ylhäällä on ikkunoita.",
     "caption": "Arkistokuva artikkelin aiheesta.",
     "classifier_output": {
-      "category": "Kulttuuri",
+      "category": "Urheilu",
       "concepts": [
         {
-          "depictable_scene": "Todellinen valokuva ikääntyneistä osallistujista istumassa kulttuuritilaisuuden yleisössä ja keskustelemassa keskenään ennen esitystä. Kuopiossa otettu kuva on ensisijainen; muun tilaisuuden kuvaa ei esitetä tämän Vanhustenviikon tapahtumakuvana.",
+          "depictable_scene": "Todellinen valokuva Arctic Openin ottelusta Vantaan Energia Areenalla: pelaajat ovat sulkapallokentällä verkon molemmin puolin, ja kentän rajat näkyvät. Aiemman turnauksen kuva käy arkistokuvana, ei vuoden 2026 ottelun dokumenttina.",
           "must_avoid": [
-            "Presenting another event as Kuopio Vanhustenviikko 2026",
-            "Care-home or medical-treatment framing"
+            "Unrelated tournament presented as Arctic Open",
+            "Earlier tournament presented as the 2026 event"
           ],
           "must_show": [
-            "Older adults in a cultural venue",
-            "Audience seating"
+            "Badminton players on court",
+            "Badminton net and court markings"
           ],
           "rank": 1,
           "safe_to_generate": false,
           "search_queries": [
-            "Kuopio seniorit kulttuuritapahtuma",
-            "seniorit teatterin yleisössä",
-            "older adults theatre audience",
-            "senior audience cultural event"
+            "Arctic Open Vantaa",
+            "Arctic Open sulkapallo",
+            "Arctic Open badminton match",
+            "Arctic Open Energia Areena ottelu"
           ],
-          "subject": "Kulttuuritapahtuma senioreille ja heidän läheisilleen"
+          "subject": "Arctic Open -turnauksen sulkapallo-ottelu"
         },
         {
-          "depictable_scene": "Todellinen ulkokuva Kuopion kaupunginteatterin rakennuksesta, jossa näkyvät julkisivu ja yleisön sisäänkäynti.",
-          "must_avoid": [
-            "Substituting another theatre for Kuopio City Theatre",
-            "Invented event banners"
-          ],
-          "must_show": [
-            "Actual Kuopio City Theatre facade",
-            "Theatre entrance"
-          ],
-          "rank": 2,
-          "safe_to_generate": false,
-          "search_queries": [
-            "Kuopion kaupunginteatteri julkisivu",
-            "Kuopion kaupunginteatteri sisäänkäynti",
-            "Kuopio City Theatre exterior"
-          ],
-          "subject": "Kuopion kaupunginteatterin rakennus"
-        },
-        {
-          "depictable_scene": "Nimeämättömän pienen esityssalin tyhjät tuolirivit suuntautuvat kohti pelkistettyä, valaistua näyttämöä. Kuvassa ei ole ihmisiä eikä tiettyyn esitykseen kuuluvaa lavastusta.",
+          "depictable_scene": "Tyhjä sulkapallokenttä nimeämättömässä sisäliikuntahallissa. Näkymä kentän päädystä näyttää verkon ja kaksin- sekä nelinpelin valkoiset rajaviivat ilman ihmisiä tai tapahtumatunnuksia.",
           "must_avoid": [
             "People or body parts",
-            "Imitating a named venue or production",
-            "Invented readable text or logos"
+            "Invented Arctic Open branding or readable text",
+            "Reconstruction of Vantaan Energia Areena"
           ],
           "must_show": [
-            "Empty audience chairs",
-            "Simply lit stage"
+            "Badminton net",
+            "Singles and doubles court markings"
           ],
-          "rank": 3,
+          "rank": 2,
           "safe_to_generate": true,
           "search_queries": [
-            "tyhjä katsomo näyttämö",
-            "pieni esityssali tuolirivit",
-            "empty theatre seating",
-            "empty chairs stage"
+            "tyhjä sulkapallokenttä",
+            "indoor badminton court",
+            "badminton net court markings",
+            "sulkapallokenttä verkko sisähalli"
           ],
-          "subject": "Viikon kulttuuriohjelma: esitystä odottava tyhjä katsomo"
+          "subject": "sulkapalloturnaukseen sopiva tyhjä sisäkenttä"
+        },
+        {
+          "depictable_scene": "Todellinen ulkokuva Vantaan Energia Areenasta, jossa näkyvät rakennuksen julkisivu ja sisäänkäynti.",
+          "must_avoid": [
+            "Another arena presented as the venue",
+            "Invented alterations to the building"
+          ],
+          "must_show": [
+            "Actual Vantaan Energia Areena facade",
+            "Arena entrance"
+          ],
+          "rank": 3,
+          "safe_to_generate": false,
+          "search_queries": [
+            "Vantaan Energia Areena",
+            "Vantaan Energia Areena julkisivu",
+            "Vantaan Energia Areena exterior",
+            "Vantaan Energia Areena sisäänkäynti"
+          ],
+          "subject": "Vantaan Energia Areenalla järjestettävän turnauksen tapahtumapaikka"
         }
       ],
       "version": "article-first-v1"
     },
-    "credit": "Photo by Olek Buzunov on Unsplash",
-    "depicted": "A large group of people are seated in what appears to be an auditorium or hall, looking towards the front where a bright light is visible. The audience consists of identifiable people of various ages, both men and women. Many individuals are visible from the chest up, with some seen from the side or back. There is no readable text visible. The principal objects are the people themselves, all of whom are seated and appear to be attentive. No books are visible.",
+    "credit": "Photo by Palak Pitroda on Unsplash",
+    "depicted": "The image shows an indoor badminton court with blue walls and a blue floor marked with white lines. There are two badminton nets set up across the court. The walls have structural beams and columns, also painted blue. Along the bottom of the walls, there are recessed shelves or cubbies. On the right wall, a circular clock with a white face and black numbers is visible. Several rectangular light fixtures are mounted high on the left wall, emitting bright light. No readable text or identifiable pe",
     "generated": false,
     "hotlink": true,
     "license": "Unsplash License",
     "license_url": "https://unsplash.com/license",
     "pixel_review": {
-      "alt_fi": "Suuri yleisö, mukaan lukien monia ikääntyneitä aikuisia, istuu riveissä hämärässä kulttuuritilassa katsellen eteenpäin.",
+      "alt_fi": "Tyhjä sisäsulkapallokenttä, jossa on sininen lattia, valkoiset rajaviivat ja kaksi verkkoa. Seinät ovat vaaleansiniset ja ylhäällä on ikkunoita.",
       "approved": true,
-      "article_text_sha256": "c51dda1e18176f86a7dff005231ddabc7151a25eb0a0b1aa8b2d08333d2539ec",
-      "concept_sha256": "7b5e1bfddace2736265e959e5ef859b2481ccc3bfe7388bed5a1c52e60028b92",
-      "description": "A large audience of people, including many older adults, are seated in rows in a dimly lit cultural venue, looking towards a stage or screen that is not visible. A bright light source is visible in the upper background.",
+      "article_text_sha256": "22bd0f350c25a343ef406eec177115285baaaa6c8e9196f2c8c5612927018a7a",
+      "concept_sha256": "94e96f964be5b453dffbb57e4a7fd0196a2a4972fbc306143f64c84b2494d066",
+      "description": "An empty indoor badminton court with blue flooring and white lines, featuring two nets. The walls are light blue, and there are windows at the top and a clock on the far wall.",
       "fit_score": 9,
-      "image_sha256": "6bd150e115f8eddaf93558e5542ca9a797fff05fdae01a3204010dab04d4fa45",
+      "image_sha256": "c71ce02d740299dba286d8242f4b74c62d2f26cebc5b7c181826b1e6c5484ce5",
       "model": "google:gemini-2.5-flash",
       "must_show_visible": [
         true,
         true
       ],
-      "no_people": false,
-      "reason": "The image clearly depicts older adults in a cultural venue, seated as an audience, which directly matches the selected concept and the article's theme of cultural events for seniors. The visible subjects are genuinely illustrating the concrete article subject.",
-      "reviewed_at": "2026-10-05T07:42:49.303103+00:00"
+      "no_people": true,
+      "reason": "The image clearly depicts an empty indoor badminton court with nets and court markings, which directly matches the selected concept for an article about a badminton tournament. There are no people or branding visible, aligning with the 'must_avoid' criteria.",
+      "reviewed_at": "2026-10-05T08:22:44.802477+00:00",
+      "text_audit": {
+        "examples": [],
+        "readable_text_present": false
+      }
     },
     "pixels": {
-      "height": 1152,
+      "height": 1016,
       "mode": "RGB",
-      "variance": 8282.2,
+      "variance": 8756.7,
       "width": 1536
     },
     "relevance_check": {
       "accepted": true,
-      "evidence": "A large audience of people, including many older adults, are seated in rows in a dimly lit cultural venue, looking towards a stage or screen that is not visible. A bright light source is visible in the upper background.",
+      "evidence": "An empty indoor badminton court with blue flooring and white lines, featuring two nets. The walls are light blue, and there are windows at the top and a clock on the far wall.",
       "matched": [
-        "adults",
-        "audience",
-        "cultural",
-        "older",
-        "venue"
+        "badminton",
+        "court"
       ],
       "method": "vision",
       "reason": "Exact-pixel full-article score meets the 8/10 threshold"
     },
     "selection_evidence": {
-      "article_text_sha256": "c51dda1e18176f86a7dff005231ddabc7151a25eb0a0b1aa8b2d08333d2539ec",
-      "decision_sha256": "a80231b14450d6319e239c92f8bbed8d9f4f958e7d35f3f9d4456faacad80c8d",
+      "article_text_sha256": "22bd0f350c25a343ef406eec177115285baaaa6c8e9196f2c8c5612927018a7a",
+      "decision_sha256": "5336d552916aa50ef146bf6d5b12bfa99e460b6bd64e32cb0f2cc11d24895a7a",
       "minimum_real_fit": 8,
       "searches": [
         {
@@ -139,91 +141,161 @@
           ]
         },
         {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "0e2a7fb352af6ac12f17de369878d143ea0209e33a96591df9022b8027b06563",
-              "license": "CC BY-SA 2.0",
-              "reason": "The article discusses cultural events for seniors in Kuopio, including theatre, concerts, and lectures. The selected concept specifically requests a photograph of older adults in a cultural venue, sitting in an audience and conversing. This image depicts a theatrical performance with a large puppet and performers on stage, not an audience of older ",
-              "source_url": "https://commons.wikimedia.org/wiki/File:War%20Horse%20(8570062967).jpg"
-            },
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "590eb0dc59a7fe3f6050ba770b8364a7bcda525508d8c496e73081edbaca0825",
-              "license": "CC BY-SA 2.0",
-              "reason": "The article discusses cultural events for seniors in Kuopio, including concerts, monologues, and lectures. The selected concept specifically requests a photograph of older adults in a cultural venue, sitting in an audience and conversing. This image depicts a theatrical performance with a large puppet and performers, which is a cultural event, but ",
-              "source_url": "https://commons.wikimedia.org/wiki/File:War%20Horse%20(8570063005).jpg"
-            },
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "55bb9371c0e24a11e2a1676879e62e0ff0d396e273427684fc63f66c5eb4e14e",
-              "license": "CC BY-SA 2.0",
-              "reason": "The article discusses cultural events for seniors in Kuopio, including theatre and concerts. The selected concept specifically requests a photograph of older adults in a cultural venue, sitting in audience seating and conversing. This image depicts a theatrical performance with actors and a puppet, which is a cultural event, but it does not show an",
-              "source_url": "https://commons.wikimedia.org/wiki/File:War%20Horse%20(8570054457).jpg"
-            },
-            {
-              "approved": false,
-              "fit_score": 4,
-              "image_sha256": "c0f162709aa05c30d10bb83eeba13a319e1979820f4e5b695fa189ea76667872",
-              "license": "CC BY-SA 2.0",
-              "reason": "The article discusses a week of cultural events for seniors in Kuopio, including theatre, concerts, and lectures. The selected concept specifies a photograph of older adults in a cultural venue, sitting in an audience and conversing. The provided image depicts a stage performance with a horse puppet and performers, which is a cultural event but doe",
-              "source_url": "https://commons.wikimedia.org/wiki/File:War%20Horse%20(8570054413).jpg"
-            }
-          ],
+          "candidates": [],
           "concept_rank": 1,
-          "outcome": "unavailable",
+          "outcome": "no_qualifying_candidate",
           "provider": "wikimedia",
           "queries": [
-            "Kuopio seniorit kulttuuritapahtuma",
-            "seniorit teatterin yleisössä",
-            "older adults theatre audience"
+            "Arctic Open Vantaa",
+            "Arctic Open sulkapallo",
+            "Arctic Open badminton match"
           ]
         },
         {
           "candidates": [
             {
               "approved": false,
-              "fit_score": 4,
-              "image_sha256": "16830b09e5ff1eab593e09857bfc677cd793ef57a825e618bee15bd7d277fe2c",
+              "fit_score": 0,
+              "image_sha256": "679ae94150cac2e78cdbfe1fa774f44190fe3a147639e0aeee29ab37e9ac4c2a",
               "license": "Pexels License",
-              "reason": "The article discusses cultural events for seniors in Kuopio, including events at the Kuopio Music Centre and Kuopio Museum. The selected concept specifically requests a photograph of older adults in a cultural venue, sitting in an audience and conversing. The provided image shows an exterior view of a modern building and a bridge, which does not de",
-              "source_url": "https://www.pexels.com/photo/modern-architecture-at-jonkoping-s-spira-cultural-center-38366347/"
+              "reason": "The article is about a badminton tournament (Arctic Open), but the image clearly depicts an ice hockey game. The visible subject does not match the selected concept of badminton players on a court with a net and court markings. Therefore, it is not relevant to the article's subject. One or more required concept elements are not visible.",
+              "source_url": "https://www.pexels.com/photo/exciting-indoor-ice-hockey-action-in-buenos-aires-38553823/"
             },
             {
               "approved": false,
               "fit_score": 0,
-              "image_sha256": "f48a49b157cdef358f7f99a471c2aab40017bc2f334bdb133420b69ac4bc70e4",
+              "image_sha256": "e41a96e1347703232c0d2c5d6c32f54ca76755f9f3b5ecaa673bda5291ebf95d",
               "license": "Pexels License",
-              "reason": "The article discusses various cultural events for seniors in Kuopio, including events at the Kuopio City Theatre, Kuopio Music Centre, and Kuopio Museum. The selected concept specifically requests a photograph of older adults in a cultural venue, sitting in an audience and conversing. The provided image shows an exterior view of a building identifi",
-              "source_url": "https://www.pexels.com/photo/loksa-cultural-center-in-evening-light-37431361/"
+              "reason": "The article is about a badminton tournament (Arctic Open), but the image clearly depicts an ice hockey game. The visible sport, equipment, and playing surface (ice rink) do not match the subject of the article or the selected concept, which requires badminton players on a court with a net and court markings. One or more required concept elements ar",
+              "source_url": "https://www.pexels.com/photo/ice-hockey-game-in-buenos-aires-rink-38553688/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "c3a0938071fd1991518022046eca0142153b6d1456db6203795168d415814265",
+              "license": "Pexels License",
+              "reason": "The article is about a badminton tournament (Arctic Open), but the image clearly depicts an ice hockey game. The visible subject matter (ice hockey) does not match the selected concept (badminton players on court with net and court markings) or the article's subject. One or more required concept elements are not visible.",
+              "source_url": "https://www.pexels.com/photo/action-packed-ice-hockey-game-in-buenos-aires-arena-38554080/"
             },
             {
               "approved": false,
               "fit_score": 6,
-              "image_sha256": "d21864d1853a62ebf87218f089c750542b1f7f1853dc7128afd13a1806dd0b45",
+              "image_sha256": "27c635d51b9a98114c962297b8632575455cc2ba38fd0f6379968788eee1ee9e",
               "license": "Pexels License",
-              "reason": "The image shows older adults in a social setting, which broadly aligns with the article's theme of events for seniors. However, it does not clearly depict a cultural venue or audience seating in a way that suggests a performance or lecture, as specified in the concept. The setting appears more like a dinner or reception. The 'must_show' element 'Au",
-              "source_url": "https://www.pexels.com/photo/people-formally-dressed-sitting-at-a-table-14203525/"
-            },
-            {
-              "approved": false,
-              "fit_score": 5,
-              "image_sha256": "a28f6396bd53626b6733cab805c3c80eb749a247b611b80d008e8fc06cbe0230",
-              "license": "Pexels License",
-              "reason": "The image shows older adults in a social setting, which broadly aligns with the article's theme of events for seniors. However, the selected concept specifically requires 'older adults in a cultural venue' and 'audience seating' for a cultural event. The visible setting is a cafe or restaurant, not clearly a cultural venue, and the seating is for d",
-              "source_url": "https://www.pexels.com/photo/elderly-women-dancing-together-8153955/"
+              "reason": "The image shows badminton players and equipment on a court, which broadly relates to the article's subject of a badminton tournament. However, the selected concept specifically requires a visible badminton net, which is absent in the image. The image also does not depict an 'ottelu' (match) as implied by the concept, but rather a static scene of pl",
+              "source_url": "https://www.pexels.com/photo/shuttlecocks-on-the-badminton-court-floor-8007173/"
             }
           ],
           "concept_rank": 1,
           "outcome": "no_qualifying_candidate",
           "provider": "pexels",
           "queries": [
-            "Kuopio seniorit kulttuuritapahtuma",
-            "seniorit teatterin yleisössä",
-            "older adults theatre audience"
+            "Arctic Open Vantaa",
+            "Arctic Open sulkapallo",
+            "Arctic Open badminton match"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "unsplash",
+          "queries": [
+            "Arctic Open Vantaa",
+            "Arctic Open sulkapallo",
+            "Arctic Open badminton match"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "google",
+          "queries": [
+            "Arctic Open Vantaa",
+            "Arctic Open sulkapallo",
+            "Arctic Open badminton match"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "source-news",
+          "queries": [
+            "cited source image"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "da6cc9810d776831ba3fb49a967649c1da68467b0d507db971dcd77a7cbf62b6",
+              "license": "CC BY 4.0",
+              "reason": "The article is about a badminton tournament and the selected concept is an empty badminton court. The image shows a group of men and a banner, with what appears to be an outdoor court or field in the background, but no clear badminton net or court markings are visible. The image does not depict the concrete subject of the article or the selected co",
+              "source_url": "https://commons.wikimedia.org/wiki/File:2025-08-20%20AA.%20Thoddoo%20indoor%20badminton%20court%20construction%20commencement%20ceremony%20(3).jpg"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "b70230cc73cd9d1f8ed821394a995cfb354a26f7ddd8d2dd49fcc6ef47572112",
+              "license": "CC BY 4.0",
+              "reason": "The article is about a badminton tournament and the selected concept is an empty badminton court. The image shows a group of men standing outdoors at what appears to be a construction site, with a sports court visible in the background. There is no visible badminton net or court markings, and the court is not empty as it appears to be under constru",
+              "source_url": "https://commons.wikimedia.org/wiki/File:2025-08-20%20AA.%20Thoddoo%20indoor%20badminton%20court%20construction%20commencement%20ceremony%20(5).jpg"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "wikimedia",
+          "queries": [
+            "tyhjä sulkapallokenttä",
+            "indoor badminton court",
+            "badminton net court markings"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "82e393c4c806f4aa2eb2864ddccb63ccc7036b56ed876f4b40a2cf0c178e4829",
+              "license": "Pexels License",
+              "reason": "The article is about a badminton tournament. The image shows a badminton shuttlecock and a net, which are related to the sport. However, the concept requires an empty badminton court with visible court markings, which are not present in this image. The image only shows a close-up of a shuttlecock and net, not a full court. One or more required conc",
+              "source_url": "https://www.pexels.com/photo/badminton-shuttlecock-stuck-in-net-on-court-35647228/"
+            },
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "f3e32c0ca664498afea8fb8075030a7599e3e9cb4139807c8684d7708d0ca2d0",
+              "license": "Pexels License",
+              "reason": "The image shows a badminton court and rackets, which relates to the article's subject of a badminton tournament. However, the concept explicitly requires a badminton net to be visible, which is absent in the actual pixels. The image also includes rackets, which are not part of the 'empty court' concept. One or more required concept elements are not",
+              "source_url": "https://www.pexels.com/photo/badminton-racquets-on-court-8007493/"
+            },
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "f89a3977f6928f23490b36629efb928b16053609702fc95a1ac93bea20c1dcba",
+              "license": "Pexels License",
+              "reason": "The image shows a shuttlecock and a court line, which are related to badminton. However, the concept requires a full badminton court with a net and both singles and doubles court markings, none of which are visible. The image only shows a single line and a shuttlecock, failing to meet the 'must_show' criteria for a badminton net and full court mark",
+              "source_url": "https://www.pexels.com/photo/a-close-up-shot-of-a-shuttlecock-on-a-badminton-court-floor-7438732/"
+            },
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "82e393c4c806f4aa2eb2864ddccb63ccc7036b56ed876f4b40a2cf0c178e4829",
+              "license": "Pexels License",
+              "reason": "The article is about a badminton tournament. The image shows a badminton shuttlecock and a net, which are related to the sport. However, the concept requires an empty badminton court with visible court markings, which are not present in this image. The image only shows a close-up of a shuttlecock and net, not a full court. One or more required conc",
+              "source_url": "https://www.pexels.com/photo/badminton-shuttlecock-stuck-in-net-on-court-35647228/"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "tyhjä sulkapallokenttä",
+            "indoor badminton court",
+            "badminton net court markings"
           ]
         },
         {
@@ -231,24 +303,24 @@
             {
               "approved": true,
               "fit_score": 9,
-              "image_sha256": "6bd150e115f8eddaf93558e5542ca9a797fff05fdae01a3204010dab04d4fa45",
+              "image_sha256": "c71ce02d740299dba286d8242f4b74c62d2f26cebc5b7c181826b1e6c5484ce5",
               "license": "Unsplash License",
-              "reason": "The image clearly depicts older adults in a cultural venue, seated as an audience, which directly matches the selected concept and the article's theme of cultural events for seniors. The visible subjects are genuinely illustrating the concrete article subject.",
-              "source_url": "https://unsplash.com/photos/audience-sitting-in-dimly-lit-hall-Xt_nnw7j6IA?utm_source=uutistenlukija&utm_medium=referral"
+              "reason": "The image clearly depicts an empty indoor badminton court with nets and court markings, which directly matches the selected concept for an article about a badminton tournament. There are no people or branding visible, aligning with the 'must_avoid' criteria.",
+              "source_url": "https://unsplash.com/photos/indoor-badminton-court-with-blue-walls-and-floor-R3S6YdeHA6A?utm_source=uutistenlukija&utm_medium=referral"
             }
           ],
-          "concept_rank": 1,
+          "concept_rank": 2,
           "outcome": "accepted",
           "provider": "unsplash",
           "queries": [
-            "Kuopio seniorit kulttuuritapahtuma",
-            "seniorit teatterin yleisössä",
-            "older adults theatre audience"
+            "tyhjä sulkapallokenttä",
+            "indoor badminton court",
+            "badminton net court markings"
           ]
         },
         {
           "candidates": [],
-          "concept_rank": 2,
+          "concept_rank": 3,
           "outcome": "no_qualifying_candidate",
           "provider": "source-news",
           "queries": [
@@ -257,13 +329,13 @@
         },
         {
           "candidates": [],
-          "concept_rank": 2,
+          "concept_rank": 3,
           "outcome": "no_qualifying_candidate",
           "provider": "wikimedia",
           "queries": [
-            "Kuopion kaupunginteatteri julkisivu",
-            "Kuopion kaupunginteatteri sisäänkäynti",
-            "Kuopio City Theatre exterior"
+            "Vantaan Energia Areena",
+            "Vantaan Energia Areena julkisivu",
+            "Vantaan Energia Areena exterior"
           ]
         },
         {
@@ -271,100 +343,77 @@
             {
               "approved": false,
               "fit_score": 0,
-              "image_sha256": "5a8dce5d4329b1f5d52d46eacc9e25d53ac8207ee3f0de3a5d795b1d255f8410",
+              "image_sha256": "7c6cb0e944c205e762a447d970c847f829db792da01e5d61e7ee744fe539e79d",
               "license": "Pexels License",
-              "reason": "The article mentions 'Kuopion kaupunginteatteri' (Kuopio City Theatre) and the selected concept specifically requests an actual exterior view of 'Kuopion kaupunginteatteri'. The visible text on the building in the image clearly says 'Stora Teatern', which is Swedish for 'Grand Theatre' and not 'Kuopion kaupunginteatteri'. Therefore, the image does ",
-              "source_url": "https://www.pexels.com/photo/facade-of-stora-teatern-at-night-in-gothenburg-sweden-19577952/"
-            },
-            {
-              "approved": true,
-              "fit_score": 9,
-              "image_sha256": "399069eb18fa4269993cb9aa1286b5c97be205354f400e5e10219ea8a74147b2",
-              "license": "Pexels License",
-              "reason": "The image clearly depicts the facade and entrance of the Kuopio City Theatre, which is explicitly mentioned in the article as a venue for a Senioripäivä event. The visible architecture matches known images of the Kuopio City Theatre.",
-              "source_url": "https://www.pexels.com/photo/arched-modern-facade-against-clear-blue-sky-33390737/"
+              "reason": "The article discusses a badminton tournament at Vantaan Energia Areena. The image shows an indoor ice hockey arena, which is a different sport and there is no visual evidence that this is the specified venue. The concept requires an exterior view of the Vantaan Energia Areena facade and entrance, neither of which are present. One or more required c",
+              "source_url": "https://www.pexels.com/photo/ice-hockey-celebration-in-buenos-aires-arena-38557329/"
             }
           ],
-          "concept_rank": 2,
-          "outcome": "accepted",
+          "concept_rank": 3,
+          "outcome": "no_qualifying_candidate",
           "provider": "pexels",
           "queries": [
-            "Kuopion kaupunginteatteri julkisivu",
-            "Kuopion kaupunginteatteri sisäänkäynti",
-            "Kuopio City Theatre exterior"
+            "Vantaan Energia Areena",
+            "Vantaan Energia Areena julkisivu",
+            "Vantaan Energia Areena exterior"
           ]
         },
         {
           "candidates": [],
           "concept_rank": 3,
           "outcome": "no_qualifying_candidate",
-          "provider": "source-news",
+          "provider": "unsplash",
           "queries": [
-            "cited source image"
+            "Vantaan Energia Areena",
+            "Vantaan Energia Areena julkisivu",
+            "Vantaan Energia Areena exterior"
           ]
         },
         {
-          "candidates": [
-            {
-              "approved": false,
-              "fit_score": 0,
-              "image_sha256": "634b1651d5dff010d82601630c00b66a0f47876e549d2d054245e232361caad3",
-              "license": "Public domain",
-              "reason": "The article discusses cultural events for seniors, including performances and lectures. The selected concept describes an empty auditorium with a simple stage, awaiting a performance. The actual pixels show a performance in progress with both performers and an audience present, which directly contradicts the 'empty audience chairs' and 'no people' ",
-              "source_url": "https://commons.wikimedia.org/wiki/File:Royal%20Air%20Force-%202nd%20Tactical%20Air%20Force,%201943-1945.%20CL589.jpg"
-            },
-            {
-              "approved": true,
-              "fit_score": 9,
-              "image_sha256": "06aa58e238123764f6780a0fee5f29187c7860994433eaa58b7edb77c51bbe71",
-              "license": "CC0",
-              "reason": "The image clearly depicts an empty auditorium with audience chairs and a stage area, which directly matches the selected concept of 'Viikon kulttuuriohjelma: esitystä odottava tyhjä katsomo'. The article discusses various cultural events, including performances, making an empty performance venue a relevant illustration.",
-              "source_url": "https://commons.wikimedia.org/wiki/File:Paramount%20Theatre%20Seating%20View%20(empty).jpg"
-            }
-          ],
+          "candidates": [],
           "concept_rank": 3,
-          "outcome": "accepted",
-          "provider": "wikimedia",
+          "outcome": "no_qualifying_candidate",
+          "provider": "google",
           "queries": [
-            "tyhjä katsomo näyttämö",
-            "pieni esityssali tuolirivit",
-            "empty theatre seating"
+            "Vantaan Energia Areena",
+            "Vantaan Energia Areena julkisivu",
+            "Vantaan Energia Areena exterior"
           ]
         }
       ],
       "selected": {
-        "concept_rank": 1,
+        "concept_rank": 2,
         "fit_score": 9,
-        "image_sha256": "6bd150e115f8eddaf93558e5542ca9a797fff05fdae01a3204010dab04d4fa45",
+        "image_sha256": "c71ce02d740299dba286d8242f4b74c62d2f26cebc5b7c181826b1e6c5484ce5",
         "kind": "real"
       },
       "version": "article-first-v1"
     },
-    "source_url": "https://unsplash.com/photos/audience-sitting-in-dimly-lit-hall-Xt_nnw7j6IA?utm_source=uutistenlukija&utm_medium=referral",
+    "source_url": "https://unsplash.com/photos/indoor-badminton-court-with-blue-walls-and-floor-R3S6YdeHA6A?utm_source=uutistenlukija&utm_medium=referral",
     "stock_provenance": {
       "download_tracking": {
         "successful": true,
-        "url": "https://api.unsplash.com/photos/Xt_nnw7j6IA/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw5fHxvbGRlciUyMGFkdWx0cyUyMHRoZWF0cmUlMjBhdWRpZW5jZXxlbnwwfDB8fHwxNzkxMTg2MTY0fDA"
+        "url": "https://api.unsplash.com/photos/R3S6YdeHA6A/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxpbmRvb3IlMjBiYWRtaW50b24lMjBjb3VydHxlbnwwfDB8fHwxNzkxMTg4NTU5fDA"
       },
-      "image_url": "https://images.unsplash.com/photo-1790348614782-8c89c5d881c6?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw5fHxvbGRlciUyMGFkdWx0cyUyMHRoZWF0cmUlMjBhdWRpZW5jZXxlbnwwfDB8fHwxNzkxMTg2MTY0fDA&w=1536&q=80&fm=jpg&fit=crop",
-      "photo_id": "Xt_nnw7j6IA",
-      "photo_url": "https://unsplash.com/photos/audience-sitting-in-dimly-lit-hall-Xt_nnw7j6IA?utm_source=uutistenlukija&utm_medium=referral",
-      "photographer": "Olek Buzunov",
-      "photographer_url": "https://unsplash.com/@olek_bznv_photo?utm_source=uutistenlukija&utm_medium=referral",
+      "image_url": "https://images.unsplash.com/photo-1775993167284-8e6a6e56ab69?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxpbmRvb3IlMjBiYWRtaW50b24lMjBjb3VydHxlbnwwfDB8fHwxNzkxMTg4NTU5fDA&w=1536&q=80&fm=jpg&fit=crop",
+      "photo_id": "R3S6YdeHA6A",
+      "photo_url": "https://unsplash.com/photos/indoor-badminton-court-with-blue-walls-and-floor-R3S6YdeHA6A?utm_source=uutistenlukija&utm_medium=referral",
+      "photographer": "Palak Pitroda",
+      "photographer_url": "https://unsplash.com/@palak_pitroda?utm_source=uutistenlukija&utm_medium=referral",
       "provider": "unsplash",
-      "query": "older adults theatre audience",
-      "retrieved_at": "2026-10-05T07:42:46Z"
+      "query": "indoor badminton court",
+      "retrieved_at": "2026-10-05T08:22:41Z"
     },
-    "stock_provenance_sha256": "5a6b6432ea742a017f9bee67b3f63f9e832740600c1afe85ce78a31d41d7a182",
-    "url": "https://images.unsplash.com/photo-1790348614782-8c89c5d881c6?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw5fHxvbGRlciUyMGFkdWx0cyUyMHRoZWF0cmUlMjBhdWRpZW5jZXxlbnwwfDB8fHwxNzkxMTg2MTY0fDA&w=1536&q=80&fm=jpg&fit=crop"
+    "stock_provenance_sha256": "fab3296273a9bd8d8c47636a64d95097fa2b018383ae66b8ff481984be7a8f29",
+    "url": "https://images.unsplash.com/photo-1775993167284-8e6a6e56ab69?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxpbmRvb3IlMjBiYWRtaW50b24lMjBjb3VydHxlbnwwfDB8fHwxNzkxMTg4NTU5fDA&w=1536&q=80&fm=jpg&fit=crop"
   },
   "new_article_files": [
-    "uutiset/kuopion-vanhustenviikko-tuo-kulttuuria-kohtaamisia-5cd5fcd61b42/index.html"
+    "uutiset/arctic-open-alkaa-vantaalla-6-lokakuuta-07b41b9ba608/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "3ef41e1305790155be46be908dc06918bf950b3bb9e26ec7c76c0fcff9331269",
-    "_redirects": "275ed4faacbae4e1332da5c016ddc59195bf7836cf7457f63c41fbe41bb112d0",
+    "_redirects": "99247c05b4ad9690560ddeb01061a1fe5b19f8250a9f8a5ea00d8443a7abae15",
     "ai-kuvat/index.html": "b6f77cbce7b0cba1b52b5f3f070729522ef5ba2ebb51be7fe2dae00a7073dac9",
     "categories/kotimaa/index.html": "c94669e770504acd51fb7b50638407f81ffc82212e0ccaf3ff51f35b09a49290",
     "categories/kotimaa/sivu/2/index.html": "52ecac32b00bc3cb2d34d9834142a8d962feb73c6ac82ed87e9b56ca77d8b4e0",
@@ -378,8 +427,8 @@
     "categories/teknologia/index.html": "24f9865b76f5c1e076fcc1ec8d756d11c8437f7c21d7828037aa7a51b63b7ee8",
     "categories/tiede/index.html": "b36714d84c85fcb9dbb35a2ba28d14f89a42f2a25c6512126e31c056e1c5fb5e",
     "categories/ulkomaat/index.html": "96b6e16dc3e4a61cc8be8c7f0472ee656192b27db939c5eb3c620f0e00a39a1a",
-    "categories/urheilu/index.html": "d5df72cd28dcea993072b10ccaa43c46470742440f014d7f1af82e27841d7a7d",
-    "index.html": "7e646635766cd1684e421f5131d5e4346ac2502cec34e0713a50aabc3e0273bf",
+    "categories/urheilu/index.html": "ee18048c86f74062dd0faed71b2a0459dd66ab9fdd57b8c99a34897f362384de",
+    "index.html": "54a4cf0821a565330dc4181518e79d1c03fe4fd35ea992e20787bbeda6220ccc",
     "lahteet/index.html": "767f7a0a4f3cab097a324ddd0a59718b8ad69f078428d268de286820292df61f",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
@@ -906,27 +955,29 @@
     "mvp-assets/style.css": "c38c69b89c21567c06f0b8695347f82b02ce529911525ce6448c3722b9f6a605",
     "oppaat/index.html": "6610af7282d1c89202da53b2a0541879135173c2a4cc832ae2f88a537cba5530",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "db78d0520a9c89fcd34e9a63296c6d53328c05d2a5899675c46e942dd9b0c988",
-    "sitemap.xml": "b20038982bfda9ed2db8883a47a214a4d42250a7dfbe63c4d97e3815d9867fb8",
-    "sivu/2/index.html": "9ba9af33f43538dc9aaf11a9448a058ad008fc085b5ad69947e3b68af8978ded",
-    "sivu/3/index.html": "702a1a54923e9f0932ae73cd307b35228128fa5e05b10833d17582e7b82f5ebe",
-    "sivu/4/index.html": "5352a1f362dc2bc5dbc3b68581db5acad460729c8234a67a0f45782b1cc0a8d3",
-    "sivu/5/index.html": "c6d3244a6af0142526fa444feb1a4e49a91aa7f2ea6ded8aab0517b2bde3adcb",
-    "sivu/6/index.html": "411856dc81c8d0907c260f38136d56167bdc369b829b63320a841091dd3322d9",
-    "sivu/7/index.html": "07074784828f1a969416dfa3cec146abc2a862c1a4032071a4986cec12befb3c",
-    "sivu/8/index.html": "49b89e148c99ca0c20fdcf8b01f47fe36b799263aeea0c863b4b4676ae7454c3",
-    "sivu/9/index.html": "e4c6c044bfb42aa66ab71e8b9f8654f27dff3f57da6be77fe2875bc7b87fa441",
+    "rss.xml": "d70c9ee350dd7fb470f97ff049d28794b061ef0d8f4e08b79347b149d8e00cde",
+    "sitemap.xml": "a3c32919b2b5d91632b26b98c9302391e482e517875ad993cc64be3b7a72a199",
+    "sivu/10/index.html": "62ed087ea307c693ff86212bf86343ddf676bc48f46f963619dfe26f59d8e6ac",
+    "sivu/2/index.html": "eb7f536af5eedc3132af0a67988ed490a642ef56a749012805f1cfb4fa76d75c",
+    "sivu/3/index.html": "52d4919831104c91afd8ab0b0a2f477a7fe6ce645446f45b633bf3e3297fc8a0",
+    "sivu/4/index.html": "a75fa75751bc3ffd6520c04b2704cbb8ff8bb6ec0b7ece1bab80192ffd4afa22",
+    "sivu/5/index.html": "7ec5ea28dd763d0754ba36e838a17b1407855b3368512931f7aba53491d82c93",
+    "sivu/6/index.html": "8c5161f273a79d2ebed1abdcf582fc80f721b2cadb1cb5a07e5db9bb5868628c",
+    "sivu/7/index.html": "1498ccf2418ddb834f40b0059b7c59e7f660bac1c9749a7d92388d52e0e39305",
+    "sivu/8/index.html": "2065c35f1092dee085c3dd8c7edf62e2b827a864d5f6b138d55af8c3516be90c",
+    "sivu/9/index.html": "a14bce19d205e1b6e47e15a3423e87e2983729638c27b2c2eb2f450829422e8f",
     "tietoja/index.html": "4bfafc03cbc277eb57049e8d15c96b1f8381d900199aab219bbfba5cfc54cd6c",
     "tietosuoja/index.html": "e666e308368e51a4c22d2567689e9ba6a240b059e767c936977aba025487dfc4",
-    "tuoreimmat/index.html": "00761d33f4663b62037751b7d4c7e4460582f3c9b44e777e7a0bcec174b24007",
-    "tuoreimmat/sivu/2/index.html": "d84acc6800514628fcba09cf1e0cf9719b6b8419f0c0f1624f90b3e2bf223506",
-    "tuoreimmat/sivu/3/index.html": "391fc420239de543d06ba5663369f6e68d64485e8bbf17dd635a56ab01435aae",
-    "tuoreimmat/sivu/4/index.html": "0e497c3c19895caa82ad4b5f64564931481383a830c8e1a1318a34f4719f1cdd",
-    "tuoreimmat/sivu/5/index.html": "aa870faaf047f0d4b544f5b6da98579f74b413f920f0c3aa39e41f491bb23a87",
-    "tuoreimmat/sivu/6/index.html": "3f8d9b552041d4bbdb752f0a091068e08041793da28e941b42f4ce72ab6f6fb4",
-    "tuoreimmat/sivu/7/index.html": "e98757d23fd3278a5b88057801633e71abbf17ac9a3f33c19102fdbcf4c2ba42",
-    "tuoreimmat/sivu/8/index.html": "7f359d21295bca7e30930b20c080dcbc24fcd4326b02269647944d9d46467b9d",
-    "tuoreimmat/sivu/9/index.html": "f5aaa5af3d86cbd2b951a85fd974e2ade29c82f467454b1cc0b465ea383da7a1",
+    "tuoreimmat/index.html": "d4af584b83135699ca0370ff9626ca980059a271979720a190cb2deed8c7d201",
+    "tuoreimmat/sivu/10/index.html": "1985fa9b087d57d46e542d7a5ce4d57d0ea8304409a1eeb400e7ceb19472bea4",
+    "tuoreimmat/sivu/2/index.html": "7c576029a9a9c27f5502fd536056aaba82980b875735c1a9836aa160a2827568",
+    "tuoreimmat/sivu/3/index.html": "1b53f5e850fddf8758a0ecdd7d935c1ae8d932c4fa68e664240f27a2764982fa",
+    "tuoreimmat/sivu/4/index.html": "cf3a0eef807a709d1b746193775ff1c329eadb984ae16257395e378db1bb6f03",
+    "tuoreimmat/sivu/5/index.html": "5ab05bcfeb321f473e38189f154ac520a12b4c0b27ced4497f470bedccc5694d",
+    "tuoreimmat/sivu/6/index.html": "5d687f51e9ec1139bea1afd530f332c2f3ffcb72b48362fbd4397b4dfe9db975",
+    "tuoreimmat/sivu/7/index.html": "c55ab78390924c2465790a0a8e2e2013e15c8497b87d4f6ff4c44b65147c8200",
+    "tuoreimmat/sivu/8/index.html": "5ee70b5ff9c132edf57114d6670d0502cd9bb7c93e9b8e35b237aafe638c2c15",
+    "tuoreimmat/sivu/9/index.html": "da397318b673d68bde5491211bf419cc6ab725372923d11d182214e513fa01b0",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -944,6 +995,7 @@
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
     "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "74fe9615d0a3579a3ea5697e164c4db67bd64df6029630a33b68e099e6c7ac5d",
     "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "856a071af3039e884ca53589c1f998b268a5af4c533393dd3e59c8e87ce0f194",
+    "uutiset/arctic-open-alkaa-vantaalla-6-lokakuuta-07b41b9ba608/index.html": "ea8ac0a2bc17b62662dea6930915721c0be1c6591ecd006032a8633a5fb16c40",
     "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "8d098231134ad7916be9304a20bebac40813f9264a13c34215551dbef69e3ee9",
     "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "202f5822cec4c6b5bc1e98ef75207c42636fb4500aac3a3723aed7471bc67b9f",
     "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "07120e7f01fe0fe1cd9f6dc4c1fb2997d453597d7448516c6534e297d237fa70",
@@ -968,7 +1020,7 @@
     "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "f2b2f4bf073ad4005166988d58543732afd36095ff6dfb9c0deef34861829fbc",
     "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "2774c2774b4aa224f635d946217c355bca2eb81b5f27f1a8149e4a3a774bde14",
     "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "b5b192ce4ec00d4ce0d4d4fda9783f3742b1b7a1e226fe307e287e1e4217053f",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "22dc046f7d127acd45cbf7733c76f37dc77d0060f38fa5b7914084fd4399741d",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "756dbf5a61ccbe4940d817f6a31947f5485518d1df22be4185e5d91f25ec3d39",
     "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "9e35178b8aef271f45b036a769197aebfb8d02cfd26596fb5ebc4b3c8e2aad25",
     "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "4d0d997f0eb96fa3b398a62d97137b43a2c2eb9685935727625f97bfe27425df",
     "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "cc75162fff0c17976eb66da924f3b4b5b9ab8b4844655ab39588d5340f9928e2",
@@ -1196,8 +1248,8 @@
     "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "06ce71aee9dd5fb633635b21b55bb10d9c1563f8c30efa3abb073586e9999db8",
     "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "67e1901260158fdccb34cf30cbd197de15fe6e8c833fb59f8f46cf3cbc685022",
     "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "cd99100167d66909ae937058d91edf8d50085107a8f10082cc0362ba8ead5fe4",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "00f00a45786da05004556fdb322cf698744fcea253bf844516b0d49c9ca1d231",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "342598e41e0a93508afc81c98c69c1a423b7a1f788de081c0719c3e16805c6cf",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "1b6e2174b86fd56ab98d78e6df52fb5cde79d3d31fbb055b83e03b93db407f6c",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "aacfce9ccea13f756f2c8ad99d9b6fabe1ddacb8022664a3186f834441d373f6",
     "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "d3dc24fafa75dcaa7b53ac6c81ddcd1fa94f247958bb61796f3bac7bba83df83",
     "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "77c296f0981eeca2941f5ee44fe543eaa210534fedc36afa88fb97135895e786",
     "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "b835af690a5b718316cf5a858fbd2d4d1c50be80f1c87ab08e02f573cbff9334",
@@ -1223,119 +1275,121 @@
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Suuri yleisö, mukaan lukien monia ikääntyneitä aikuisia, istuu riveissä hämärässä kulttuuritilassa katsellen eteenpäin.",
+      "alt": "Arkistokuva: Tyhjä sisäsulkapallokenttä, jossa on sininen lattia, valkoiset rajaviivat ja kaksi verkkoa. Seinät ovat vaaleansiniset ja ylhäällä on ikkunoita.",
       "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Kulttuuri",
+        "category": "Urheilu",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva ikääntyneistä osallistujista istumassa kulttuuritilaisuuden yleisössä ja keskustelemassa keskenään ennen esitystä. Kuopiossa otettu kuva on ensisijainen; muun tilaisuuden kuvaa ei esitetä tämän Vanhustenviikon tapahtumakuvana.",
+            "depictable_scene": "Todellinen valokuva Arctic Openin ottelusta Vantaan Energia Areenalla: pelaajat ovat sulkapallokentällä verkon molemmin puolin, ja kentän rajat näkyvät. Aiemman turnauksen kuva käy arkistokuvana, ei vuoden 2026 ottelun dokumenttina.",
             "must_avoid": [
-              "Presenting another event as Kuopio Vanhustenviikko 2026",
-              "Care-home or medical-treatment framing"
+              "Unrelated tournament presented as Arctic Open",
+              "Earlier tournament presented as the 2026 event"
             ],
             "must_show": [
-              "Older adults in a cultural venue",
-              "Audience seating"
+              "Badminton players on court",
+              "Badminton net and court markings"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "Kuopio seniorit kulttuuritapahtuma",
-              "seniorit teatterin yleisössä",
-              "older adults theatre audience",
-              "senior audience cultural event"
+              "Arctic Open Vantaa",
+              "Arctic Open sulkapallo",
+              "Arctic Open badminton match",
+              "Arctic Open Energia Areena ottelu"
             ],
-            "subject": "Kulttuuritapahtuma senioreille ja heidän läheisilleen"
+            "subject": "Arctic Open -turnauksen sulkapallo-ottelu"
           },
           {
-            "depictable_scene": "Todellinen ulkokuva Kuopion kaupunginteatterin rakennuksesta, jossa näkyvät julkisivu ja yleisön sisäänkäynti.",
-            "must_avoid": [
-              "Substituting another theatre for Kuopio City Theatre",
-              "Invented event banners"
-            ],
-            "must_show": [
-              "Actual Kuopio City Theatre facade",
-              "Theatre entrance"
-            ],
-            "rank": 2,
-            "safe_to_generate": false,
-            "search_queries": [
-              "Kuopion kaupunginteatteri julkisivu",
-              "Kuopion kaupunginteatteri sisäänkäynti",
-              "Kuopio City Theatre exterior"
-            ],
-            "subject": "Kuopion kaupunginteatterin rakennus"
-          },
-          {
-            "depictable_scene": "Nimeämättömän pienen esityssalin tyhjät tuolirivit suuntautuvat kohti pelkistettyä, valaistua näyttämöä. Kuvassa ei ole ihmisiä eikä tiettyyn esitykseen kuuluvaa lavastusta.",
+            "depictable_scene": "Tyhjä sulkapallokenttä nimeämättömässä sisäliikuntahallissa. Näkymä kentän päädystä näyttää verkon ja kaksin- sekä nelinpelin valkoiset rajaviivat ilman ihmisiä tai tapahtumatunnuksia.",
             "must_avoid": [
               "People or body parts",
-              "Imitating a named venue or production",
-              "Invented readable text or logos"
+              "Invented Arctic Open branding or readable text",
+              "Reconstruction of Vantaan Energia Areena"
             ],
             "must_show": [
-              "Empty audience chairs",
-              "Simply lit stage"
+              "Badminton net",
+              "Singles and doubles court markings"
             ],
-            "rank": 3,
+            "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "tyhjä katsomo näyttämö",
-              "pieni esityssali tuolirivit",
-              "empty theatre seating",
-              "empty chairs stage"
+              "tyhjä sulkapallokenttä",
+              "indoor badminton court",
+              "badminton net court markings",
+              "sulkapallokenttä verkko sisähalli"
             ],
-            "subject": "Viikon kulttuuriohjelma: esitystä odottava tyhjä katsomo"
+            "subject": "sulkapalloturnaukseen sopiva tyhjä sisäkenttä"
+          },
+          {
+            "depictable_scene": "Todellinen ulkokuva Vantaan Energia Areenasta, jossa näkyvät rakennuksen julkisivu ja sisäänkäynti.",
+            "must_avoid": [
+              "Another arena presented as the venue",
+              "Invented alterations to the building"
+            ],
+            "must_show": [
+              "Actual Vantaan Energia Areena facade",
+              "Arena entrance"
+            ],
+            "rank": 3,
+            "safe_to_generate": false,
+            "search_queries": [
+              "Vantaan Energia Areena",
+              "Vantaan Energia Areena julkisivu",
+              "Vantaan Energia Areena exterior",
+              "Vantaan Energia Areena sisäänkäynti"
+            ],
+            "subject": "Vantaan Energia Areenalla järjestettävän turnauksen tapahtumapaikka"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Olek Buzunov on Unsplash",
-      "depicted": "A large group of people are seated in what appears to be an auditorium or hall, looking towards the front where a bright light is visible. The audience consists of identifiable people of various ages, both men and women. Many individuals are visible from the chest up, with some seen from the side or back. There is no readable text visible. The principal objects are the people themselves, all of whom are seated and appear to be attentive. No books are visible.",
+      "credit": "Photo by Palak Pitroda on Unsplash",
+      "depicted": "The image shows an indoor badminton court with blue walls and a blue floor marked with white lines. There are two badminton nets set up across the court. The walls have structural beams and columns, also painted blue. Along the bottom of the walls, there are recessed shelves or cubbies. On the right wall, a circular clock with a white face and black numbers is visible. Several rectangular light fixtures are mounted high on the left wall, emitting bright light. No readable text or identifiable pe",
       "generated": false,
       "hotlink": true,
       "license": "Unsplash License",
       "license_url": "https://unsplash.com/license",
       "pixel_review": {
-        "alt_fi": "Suuri yleisö, mukaan lukien monia ikääntyneitä aikuisia, istuu riveissä hämärässä kulttuuritilassa katsellen eteenpäin.",
+        "alt_fi": "Tyhjä sisäsulkapallokenttä, jossa on sininen lattia, valkoiset rajaviivat ja kaksi verkkoa. Seinät ovat vaaleansiniset ja ylhäällä on ikkunoita.",
         "approved": true,
-        "article_text_sha256": "c51dda1e18176f86a7dff005231ddabc7151a25eb0a0b1aa8b2d08333d2539ec",
-        "concept_sha256": "7b5e1bfddace2736265e959e5ef859b2481ccc3bfe7388bed5a1c52e60028b92",
-        "description": "A large audience of people, including many older adults, are seated in rows in a dimly lit cultural venue, looking towards a stage or screen that is not visible. A bright light source is visible in the upper background.",
+        "article_text_sha256": "22bd0f350c25a343ef406eec177115285baaaa6c8e9196f2c8c5612927018a7a",
+        "concept_sha256": "94e96f964be5b453dffbb57e4a7fd0196a2a4972fbc306143f64c84b2494d066",
+        "description": "An empty indoor badminton court with blue flooring and white lines, featuring two nets. The walls are light blue, and there are windows at the top and a clock on the far wall.",
         "fit_score": 9,
-        "image_sha256": "6bd150e115f8eddaf93558e5542ca9a797fff05fdae01a3204010dab04d4fa45",
+        "image_sha256": "c71ce02d740299dba286d8242f4b74c62d2f26cebc5b7c181826b1e6c5484ce5",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
-        "no_people": false,
-        "reason": "The image clearly depicts older adults in a cultural venue, seated as an audience, which directly matches the selected concept and the article's theme of cultural events for seniors. The visible subjects are genuinely illustrating the concrete article subject.",
-        "reviewed_at": "2026-10-05T07:42:49.303103+00:00"
+        "no_people": true,
+        "reason": "The image clearly depicts an empty indoor badminton court with nets and court markings, which directly matches the selected concept for an article about a badminton tournament. There are no people or branding visible, aligning with the 'must_avoid' criteria.",
+        "reviewed_at": "2026-10-05T08:22:44.802477+00:00",
+        "text_audit": {
+          "examples": [],
+          "readable_text_present": false
+        }
       },
       "pixels": {
-        "height": 1152,
+        "height": 1016,
         "mode": "RGB",
-        "variance": 8282.2,
+        "variance": 8756.7,
         "width": 1536
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "A large audience of people, including many older adults, are seated in rows in a dimly lit cultural venue, looking towards a stage or screen that is not visible. A bright light source is visible in the upper background.",
+        "evidence": "An empty indoor badminton court with blue flooring and white lines, featuring two nets. The walls are light blue, and there are windows at the top and a clock on the far wall.",
         "matched": [
-          "adults",
-          "audience",
-          "cultural",
-          "older",
-          "venue"
+          "badminton",
+          "court"
         ],
         "method": "vision",
         "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
       "selection_evidence": {
-        "article_text_sha256": "c51dda1e18176f86a7dff005231ddabc7151a25eb0a0b1aa8b2d08333d2539ec",
-        "decision_sha256": "a80231b14450d6319e239c92f8bbed8d9f4f958e7d35f3f9d4456faacad80c8d",
+        "article_text_sha256": "22bd0f350c25a343ef406eec177115285baaaa6c8e9196f2c8c5612927018a7a",
+        "decision_sha256": "5336d552916aa50ef146bf6d5b12bfa99e460b6bd64e32cb0f2cc11d24895a7a",
         "minimum_real_fit": 8,
         "searches": [
           {
@@ -1348,91 +1402,161 @@
             ]
           },
           {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "0e2a7fb352af6ac12f17de369878d143ea0209e33a96591df9022b8027b06563",
-                "license": "CC BY-SA 2.0",
-                "reason": "The article discusses cultural events for seniors in Kuopio, including theatre, concerts, and lectures. The selected concept specifically requests a photograph of older adults in a cultural venue, sitting in an audience and conversing. This image depicts a theatrical performance with a large puppet and performers on stage, not an audience of older ",
-                "source_url": "https://commons.wikimedia.org/wiki/File:War%20Horse%20(8570062967).jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "590eb0dc59a7fe3f6050ba770b8364a7bcda525508d8c496e73081edbaca0825",
-                "license": "CC BY-SA 2.0",
-                "reason": "The article discusses cultural events for seniors in Kuopio, including concerts, monologues, and lectures. The selected concept specifically requests a photograph of older adults in a cultural venue, sitting in an audience and conversing. This image depicts a theatrical performance with a large puppet and performers, which is a cultural event, but ",
-                "source_url": "https://commons.wikimedia.org/wiki/File:War%20Horse%20(8570063005).jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "55bb9371c0e24a11e2a1676879e62e0ff0d396e273427684fc63f66c5eb4e14e",
-                "license": "CC BY-SA 2.0",
-                "reason": "The article discusses cultural events for seniors in Kuopio, including theatre and concerts. The selected concept specifically requests a photograph of older adults in a cultural venue, sitting in audience seating and conversing. This image depicts a theatrical performance with actors and a puppet, which is a cultural event, but it does not show an",
-                "source_url": "https://commons.wikimedia.org/wiki/File:War%20Horse%20(8570054457).jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "c0f162709aa05c30d10bb83eeba13a319e1979820f4e5b695fa189ea76667872",
-                "license": "CC BY-SA 2.0",
-                "reason": "The article discusses a week of cultural events for seniors in Kuopio, including theatre, concerts, and lectures. The selected concept specifies a photograph of older adults in a cultural venue, sitting in an audience and conversing. The provided image depicts a stage performance with a horse puppet and performers, which is a cultural event but doe",
-                "source_url": "https://commons.wikimedia.org/wiki/File:War%20Horse%20(8570054413).jpg"
-              }
-            ],
+            "candidates": [],
             "concept_rank": 1,
-            "outcome": "unavailable",
+            "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Kuopio seniorit kulttuuritapahtuma",
-              "seniorit teatterin yleisössä",
-              "older adults theatre audience"
+              "Arctic Open Vantaa",
+              "Arctic Open sulkapallo",
+              "Arctic Open badminton match"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "16830b09e5ff1eab593e09857bfc677cd793ef57a825e618bee15bd7d277fe2c",
+                "fit_score": 0,
+                "image_sha256": "679ae94150cac2e78cdbfe1fa774f44190fe3a147639e0aeee29ab37e9ac4c2a",
                 "license": "Pexels License",
-                "reason": "The article discusses cultural events for seniors in Kuopio, including events at the Kuopio Music Centre and Kuopio Museum. The selected concept specifically requests a photograph of older adults in a cultural venue, sitting in an audience and conversing. The provided image shows an exterior view of a modern building and a bridge, which does not de",
-                "source_url": "https://www.pexels.com/photo/modern-architecture-at-jonkoping-s-spira-cultural-center-38366347/"
+                "reason": "The article is about a badminton tournament (Arctic Open), but the image clearly depicts an ice hockey game. The visible subject does not match the selected concept of badminton players on a court with a net and court markings. Therefore, it is not relevant to the article's subject. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/exciting-indoor-ice-hockey-action-in-buenos-aires-38553823/"
               },
               {
                 "approved": false,
                 "fit_score": 0,
-                "image_sha256": "f48a49b157cdef358f7f99a471c2aab40017bc2f334bdb133420b69ac4bc70e4",
+                "image_sha256": "e41a96e1347703232c0d2c5d6c32f54ca76755f9f3b5ecaa673bda5291ebf95d",
                 "license": "Pexels License",
-                "reason": "The article discusses various cultural events for seniors in Kuopio, including events at the Kuopio City Theatre, Kuopio Music Centre, and Kuopio Museum. The selected concept specifically requests a photograph of older adults in a cultural venue, sitting in an audience and conversing. The provided image shows an exterior view of a building identifi",
-                "source_url": "https://www.pexels.com/photo/loksa-cultural-center-in-evening-light-37431361/"
+                "reason": "The article is about a badminton tournament (Arctic Open), but the image clearly depicts an ice hockey game. The visible sport, equipment, and playing surface (ice rink) do not match the subject of the article or the selected concept, which requires badminton players on a court with a net and court markings. One or more required concept elements ar",
+                "source_url": "https://www.pexels.com/photo/ice-hockey-game-in-buenos-aires-rink-38553688/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "c3a0938071fd1991518022046eca0142153b6d1456db6203795168d415814265",
+                "license": "Pexels License",
+                "reason": "The article is about a badminton tournament (Arctic Open), but the image clearly depicts an ice hockey game. The visible subject matter (ice hockey) does not match the selected concept (badminton players on court with net and court markings) or the article's subject. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/action-packed-ice-hockey-game-in-buenos-aires-arena-38554080/"
               },
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "d21864d1853a62ebf87218f089c750542b1f7f1853dc7128afd13a1806dd0b45",
+                "image_sha256": "27c635d51b9a98114c962297b8632575455cc2ba38fd0f6379968788eee1ee9e",
                 "license": "Pexels License",
-                "reason": "The image shows older adults in a social setting, which broadly aligns with the article's theme of events for seniors. However, it does not clearly depict a cultural venue or audience seating in a way that suggests a performance or lecture, as specified in the concept. The setting appears more like a dinner or reception. The 'must_show' element 'Au",
-                "source_url": "https://www.pexels.com/photo/people-formally-dressed-sitting-at-a-table-14203525/"
-              },
-              {
-                "approved": false,
-                "fit_score": 5,
-                "image_sha256": "a28f6396bd53626b6733cab805c3c80eb749a247b611b80d008e8fc06cbe0230",
-                "license": "Pexels License",
-                "reason": "The image shows older adults in a social setting, which broadly aligns with the article's theme of events for seniors. However, the selected concept specifically requires 'older adults in a cultural venue' and 'audience seating' for a cultural event. The visible setting is a cafe or restaurant, not clearly a cultural venue, and the seating is for d",
-                "source_url": "https://www.pexels.com/photo/elderly-women-dancing-together-8153955/"
+                "reason": "The image shows badminton players and equipment on a court, which broadly relates to the article's subject of a badminton tournament. However, the selected concept specifically requires a visible badminton net, which is absent in the image. The image also does not depict an 'ottelu' (match) as implied by the concept, but rather a static scene of pl",
+                "source_url": "https://www.pexels.com/photo/shuttlecocks-on-the-badminton-court-floor-8007173/"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Kuopio seniorit kulttuuritapahtuma",
-              "seniorit teatterin yleisössä",
-              "older adults theatre audience"
+              "Arctic Open Vantaa",
+              "Arctic Open sulkapallo",
+              "Arctic Open badminton match"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Arctic Open Vantaa",
+              "Arctic Open sulkapallo",
+              "Arctic Open badminton match"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Arctic Open Vantaa",
+              "Arctic Open sulkapallo",
+              "Arctic Open badminton match"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
+            "queries": [
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "da6cc9810d776831ba3fb49a967649c1da68467b0d507db971dcd77a7cbf62b6",
+                "license": "CC BY 4.0",
+                "reason": "The article is about a badminton tournament and the selected concept is an empty badminton court. The image shows a group of men and a banner, with what appears to be an outdoor court or field in the background, but no clear badminton net or court markings are visible. The image does not depict the concrete subject of the article or the selected co",
+                "source_url": "https://commons.wikimedia.org/wiki/File:2025-08-20%20AA.%20Thoddoo%20indoor%20badminton%20court%20construction%20commencement%20ceremony%20(3).jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "b70230cc73cd9d1f8ed821394a995cfb354a26f7ddd8d2dd49fcc6ef47572112",
+                "license": "CC BY 4.0",
+                "reason": "The article is about a badminton tournament and the selected concept is an empty badminton court. The image shows a group of men standing outdoors at what appears to be a construction site, with a sports court visible in the background. There is no visible badminton net or court markings, and the court is not empty as it appears to be under constru",
+                "source_url": "https://commons.wikimedia.org/wiki/File:2025-08-20%20AA.%20Thoddoo%20indoor%20badminton%20court%20construction%20commencement%20ceremony%20(5).jpg"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "tyhjä sulkapallokenttä",
+              "indoor badminton court",
+              "badminton net court markings"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "82e393c4c806f4aa2eb2864ddccb63ccc7036b56ed876f4b40a2cf0c178e4829",
+                "license": "Pexels License",
+                "reason": "The article is about a badminton tournament. The image shows a badminton shuttlecock and a net, which are related to the sport. However, the concept requires an empty badminton court with visible court markings, which are not present in this image. The image only shows a close-up of a shuttlecock and net, not a full court. One or more required conc",
+                "source_url": "https://www.pexels.com/photo/badminton-shuttlecock-stuck-in-net-on-court-35647228/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "f3e32c0ca664498afea8fb8075030a7599e3e9cb4139807c8684d7708d0ca2d0",
+                "license": "Pexels License",
+                "reason": "The image shows a badminton court and rackets, which relates to the article's subject of a badminton tournament. However, the concept explicitly requires a badminton net to be visible, which is absent in the actual pixels. The image also includes rackets, which are not part of the 'empty court' concept. One or more required concept elements are not",
+                "source_url": "https://www.pexels.com/photo/badminton-racquets-on-court-8007493/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "f89a3977f6928f23490b36629efb928b16053609702fc95a1ac93bea20c1dcba",
+                "license": "Pexels License",
+                "reason": "The image shows a shuttlecock and a court line, which are related to badminton. However, the concept requires a full badminton court with a net and both singles and doubles court markings, none of which are visible. The image only shows a single line and a shuttlecock, failing to meet the 'must_show' criteria for a badminton net and full court mark",
+                "source_url": "https://www.pexels.com/photo/a-close-up-shot-of-a-shuttlecock-on-a-badminton-court-floor-7438732/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "82e393c4c806f4aa2eb2864ddccb63ccc7036b56ed876f4b40a2cf0c178e4829",
+                "license": "Pexels License",
+                "reason": "The article is about a badminton tournament. The image shows a badminton shuttlecock and a net, which are related to the sport. However, the concept requires an empty badminton court with visible court markings, which are not present in this image. The image only shows a close-up of a shuttlecock and net, not a full court. One or more required conc",
+                "source_url": "https://www.pexels.com/photo/badminton-shuttlecock-stuck-in-net-on-court-35647228/"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "tyhjä sulkapallokenttä",
+              "indoor badminton court",
+              "badminton net court markings"
             ]
           },
           {
@@ -1440,24 +1564,24 @@
               {
                 "approved": true,
                 "fit_score": 9,
-                "image_sha256": "6bd150e115f8eddaf93558e5542ca9a797fff05fdae01a3204010dab04d4fa45",
+                "image_sha256": "c71ce02d740299dba286d8242f4b74c62d2f26cebc5b7c181826b1e6c5484ce5",
                 "license": "Unsplash License",
-                "reason": "The image clearly depicts older adults in a cultural venue, seated as an audience, which directly matches the selected concept and the article's theme of cultural events for seniors. The visible subjects are genuinely illustrating the concrete article subject.",
-                "source_url": "https://unsplash.com/photos/audience-sitting-in-dimly-lit-hall-Xt_nnw7j6IA?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The image clearly depicts an empty indoor badminton court with nets and court markings, which directly matches the selected concept for an article about a badminton tournament. There are no people or branding visible, aligning with the 'must_avoid' criteria.",
+                "source_url": "https://unsplash.com/photos/indoor-badminton-court-with-blue-walls-and-floor-R3S6YdeHA6A?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
-            "concept_rank": 1,
+            "concept_rank": 2,
             "outcome": "accepted",
             "provider": "unsplash",
             "queries": [
-              "Kuopio seniorit kulttuuritapahtuma",
-              "seniorit teatterin yleisössä",
-              "older adults theatre audience"
+              "tyhjä sulkapallokenttä",
+              "indoor badminton court",
+              "badminton net court markings"
             ]
           },
           {
             "candidates": [],
-            "concept_rank": 2,
+            "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
             "provider": "source-news",
             "queries": [
@@ -1466,13 +1590,13 @@
           },
           {
             "candidates": [],
-            "concept_rank": 2,
+            "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Kuopion kaupunginteatteri julkisivu",
-              "Kuopion kaupunginteatteri sisäänkäynti",
-              "Kuopio City Theatre exterior"
+              "Vantaan Energia Areena",
+              "Vantaan Energia Areena julkisivu",
+              "Vantaan Energia Areena exterior"
             ]
           },
           {
@@ -1480,245 +1604,224 @@
               {
                 "approved": false,
                 "fit_score": 0,
-                "image_sha256": "5a8dce5d4329b1f5d52d46eacc9e25d53ac8207ee3f0de3a5d795b1d255f8410",
+                "image_sha256": "7c6cb0e944c205e762a447d970c847f829db792da01e5d61e7ee744fe539e79d",
                 "license": "Pexels License",
-                "reason": "The article mentions 'Kuopion kaupunginteatteri' (Kuopio City Theatre) and the selected concept specifically requests an actual exterior view of 'Kuopion kaupunginteatteri'. The visible text on the building in the image clearly says 'Stora Teatern', which is Swedish for 'Grand Theatre' and not 'Kuopion kaupunginteatteri'. Therefore, the image does ",
-                "source_url": "https://www.pexels.com/photo/facade-of-stora-teatern-at-night-in-gothenburg-sweden-19577952/"
-              },
-              {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "399069eb18fa4269993cb9aa1286b5c97be205354f400e5e10219ea8a74147b2",
-                "license": "Pexels License",
-                "reason": "The image clearly depicts the facade and entrance of the Kuopio City Theatre, which is explicitly mentioned in the article as a venue for a Senioripäivä event. The visible architecture matches known images of the Kuopio City Theatre.",
-                "source_url": "https://www.pexels.com/photo/arched-modern-facade-against-clear-blue-sky-33390737/"
+                "reason": "The article discusses a badminton tournament at Vantaan Energia Areena. The image shows an indoor ice hockey arena, which is a different sport and there is no visual evidence that this is the specified venue. The concept requires an exterior view of the Vantaan Energia Areena facade and entrance, neither of which are present. One or more required c",
+                "source_url": "https://www.pexels.com/photo/ice-hockey-celebration-in-buenos-aires-arena-38557329/"
               }
             ],
-            "concept_rank": 2,
-            "outcome": "accepted",
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Kuopion kaupunginteatteri julkisivu",
-              "Kuopion kaupunginteatteri sisäänkäynti",
-              "Kuopio City Theatre exterior"
+              "Vantaan Energia Areena",
+              "Vantaan Energia Areena julkisivu",
+              "Vantaan Energia Areena exterior"
             ]
           },
           {
             "candidates": [],
             "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
+            "provider": "unsplash",
             "queries": [
-              "cited source image"
+              "Vantaan Energia Areena",
+              "Vantaan Energia Areena julkisivu",
+              "Vantaan Energia Areena exterior"
             ]
           },
           {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "634b1651d5dff010d82601630c00b66a0f47876e549d2d054245e232361caad3",
-                "license": "Public domain",
-                "reason": "The article discusses cultural events for seniors, including performances and lectures. The selected concept describes an empty auditorium with a simple stage, awaiting a performance. The actual pixels show a performance in progress with both performers and an audience present, which directly contradicts the 'empty audience chairs' and 'no people' ",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Royal%20Air%20Force-%202nd%20Tactical%20Air%20Force,%201943-1945.%20CL589.jpg"
-              },
-              {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "06aa58e238123764f6780a0fee5f29187c7860994433eaa58b7edb77c51bbe71",
-                "license": "CC0",
-                "reason": "The image clearly depicts an empty auditorium with audience chairs and a stage area, which directly matches the selected concept of 'Viikon kulttuuriohjelma: esitystä odottava tyhjä katsomo'. The article discusses various cultural events, including performances, making an empty performance venue a relevant illustration.",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Paramount%20Theatre%20Seating%20View%20(empty).jpg"
-              }
-            ],
+            "candidates": [],
             "concept_rank": 3,
-            "outcome": "accepted",
-            "provider": "wikimedia",
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
             "queries": [
-              "tyhjä katsomo näyttämö",
-              "pieni esityssali tuolirivit",
-              "empty theatre seating"
+              "Vantaan Energia Areena",
+              "Vantaan Energia Areena julkisivu",
+              "Vantaan Energia Areena exterior"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 1,
+          "concept_rank": 2,
           "fit_score": 9,
-          "image_sha256": "6bd150e115f8eddaf93558e5542ca9a797fff05fdae01a3204010dab04d4fa45",
+          "image_sha256": "c71ce02d740299dba286d8242f4b74c62d2f26cebc5b7c181826b1e6c5484ce5",
           "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "source_url": "https://unsplash.com/photos/audience-sitting-in-dimly-lit-hall-Xt_nnw7j6IA?utm_source=uutistenlukija&utm_medium=referral",
+      "source_url": "https://unsplash.com/photos/indoor-badminton-court-with-blue-walls-and-floor-R3S6YdeHA6A?utm_source=uutistenlukija&utm_medium=referral",
       "stock_provenance": {
         "download_tracking": {
           "successful": true,
-          "url": "https://api.unsplash.com/photos/Xt_nnw7j6IA/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw5fHxvbGRlciUyMGFkdWx0cyUyMHRoZWF0cmUlMjBhdWRpZW5jZXxlbnwwfDB8fHwxNzkxMTg2MTY0fDA"
+          "url": "https://api.unsplash.com/photos/R3S6YdeHA6A/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxpbmRvb3IlMjBiYWRtaW50b24lMjBjb3VydHxlbnwwfDB8fHwxNzkxMTg4NTU5fDA"
         },
-        "image_url": "https://images.unsplash.com/photo-1790348614782-8c89c5d881c6?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw5fHxvbGRlciUyMGFkdWx0cyUyMHRoZWF0cmUlMjBhdWRpZW5jZXxlbnwwfDB8fHwxNzkxMTg2MTY0fDA&w=1536&q=80&fm=jpg&fit=crop",
-        "photo_id": "Xt_nnw7j6IA",
-        "photo_url": "https://unsplash.com/photos/audience-sitting-in-dimly-lit-hall-Xt_nnw7j6IA?utm_source=uutistenlukija&utm_medium=referral",
-        "photographer": "Olek Buzunov",
-        "photographer_url": "https://unsplash.com/@olek_bznv_photo?utm_source=uutistenlukija&utm_medium=referral",
+        "image_url": "https://images.unsplash.com/photo-1775993167284-8e6a6e56ab69?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxpbmRvb3IlMjBiYWRtaW50b24lMjBjb3VydHxlbnwwfDB8fHwxNzkxMTg4NTU5fDA&w=1536&q=80&fm=jpg&fit=crop",
+        "photo_id": "R3S6YdeHA6A",
+        "photo_url": "https://unsplash.com/photos/indoor-badminton-court-with-blue-walls-and-floor-R3S6YdeHA6A?utm_source=uutistenlukija&utm_medium=referral",
+        "photographer": "Palak Pitroda",
+        "photographer_url": "https://unsplash.com/@palak_pitroda?utm_source=uutistenlukija&utm_medium=referral",
         "provider": "unsplash",
-        "query": "older adults theatre audience",
-        "retrieved_at": "2026-10-05T07:42:46Z"
+        "query": "indoor badminton court",
+        "retrieved_at": "2026-10-05T08:22:41Z"
       },
-      "stock_provenance_sha256": "5a6b6432ea742a017f9bee67b3f63f9e832740600c1afe85ce78a31d41d7a182",
-      "url": "https://images.unsplash.com/photo-1790348614782-8c89c5d881c6?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw5fHxvbGRlciUyMGFkdWx0cyUyMHRoZWF0cmUlMjBhdWRpZW5jZXxlbnwwfDB8fHwxNzkxMTg2MTY0fDA&w=1536&q=80&fm=jpg&fit=crop"
+      "stock_provenance_sha256": "fab3296273a9bd8d8c47636a64d95097fa2b018383ae66b8ff481984be7a8f29",
+      "url": "https://images.unsplash.com/photo-1775993167284-8e6a6e56ab69?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxpbmRvb3IlMjBiYWRtaW50b24lMjBjb3VydHxlbnwwfDB8fHwxNzkxMTg4NTU5fDA&w=1536&q=80&fm=jpg&fit=crop"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "kuopio",
+      "provider": "vantaa",
       "related_sources": 0,
-      "source_fields_sha256": "ab7719374cada4001e36e1d2fb5a13e69dc3bf68c7dd7e07ce69a54727587298",
-      "source_sha256": "56f93d1cc07bb3e5d5ccb5ea6a8d3193d6f5c8138a57f7b9d1bf5bd246ae1e90"
+      "source_fields_sha256": "693b1eedd1b1b9e47c3878c94cbbe8a968f376643f186df051f58ba5f50db00b",
+      "source_sha256": "62576902777ef159ee77da353a68755e3f50b1c86ff418be4118de5aebaa0f81"
     },
     "sources": [
       {
         "id": "A",
         "published_at": "2026-10-05T00:00:00+03:00",
-        "publisher": "Kuopion kaupunki",
+        "publisher": "Vantaan kaupunki",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Kuopion kaupungin avoimen datan käyttöehdot: maailmanlaajuinen, maksuton, peruuttamaton käyttöoikeus kopioida, levittää, muokata ja hyödyntää kaupallisesti ja ei-kaupallisesti; koskee myös tekstejä",
+          "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
           "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://www.kuopio.fi/app/uploads/2023/04/avoin-data-kayttoehdot-kuopion-kaupunki.pdf"
+          "url": "https://hri.fi/fi/kayttoehdot/"
         },
-        "text": "Kuopion Vanhustenviikolla kohtaamisia, kulttuuria, ja yhteisiä elämyksiä\n05.10.2026\nTapahtumat\nUutiset\nVapaa-aika ja hyvinvointi\nValtakunnallista Vanhustenviikkoa 5.–11.10.2026 teemalla Arjen kohtaamiset. Teema nostaa esiin pienet mutta merkitykselliset hetket, jotka vahvistavat yhteisöllisyyttä ja hyvinvointia arjessa.\nVanhustenviikko käynnistyy sunnuntaina 4.10.2026 valtakunnallisella vanhustenpäivän juhlalla, jota vietetään tänä vuonna Joensuussa.\nKuopiossa Vanhustenviikon aikana järjestettävät tapahtumat tarjoavat monenlaisia mahdollisuuksia yhdessäoloon ja uusiin kohtaamisiin. Kaikille avoimia tapahtumia ovat muun muassa Senioripäivä kaupunginteatterilla tiistaina 6.10. klo 10-13, Senioreiden iltatilaisuus Kuopion kaupungintalolla keskiviikkona 7.10. klo 17-18.30, Puijonlaakson ostoskeskuksen Arjen kohtaamisia-tapahtuma perjantaina 9.10. klo 13-15 ja Tarjoomon seniorimessut Kuopion musiikkikeskuksella samana päivänä klo 9-14.\nKuopion kaupungin tarjoama maksuton vanhustenviikon kulttuuriohjelma on myös runsas. Ohjelma alkaa jo perjantaina 2.10.2026, kun tanssiteatteri Minimin kaiken ikäisille suunnattu Orange nähdään Kuopion museon monitoimitilassa klo 13 alkaen. Laulaja Sirpa Taivaisen ja haitaristi Petri Makkosen Fado-Tango -konsertti vierailee puolestaan Maaningalla ja Vehmersalmella. Näyttelijä Kati Ahmaharju esittää kolmiosaisen monologisarjan Emännän tarina Kuopion museon monitoimitilassa kolmena eri päivänä. Emännän tarinaa voi myös seurata etänä Kuopion museon YouTube-kanavalta.\nMusiikin hyvinvointivaikutuksiin pääsee syventymään keskiviikkona 7.10.2026 klo 16 Kino Kuvakukossa Duo Riitta ja Petran Soivalla luennolla, jossa yleisö pääsee myös nauttimaan musiikista ja yhteislaulusta.\nVanhustyön keskusliitto järjestää verkossa avoimia asiantuntijaluentoja. Kuopiossa luentoja pääsee myös seuraamaan etäkatsomoista käsin ja samalla osallistumaan kevyeen tuolijumppaan. Etäkatsomot järjestetään Nilsiässä maanantaina, Juankoskella keskiviikkona ja Maaningalla perjantaina.\nVanhustenviikko muistuttaa, että hyvä vanhuus rakentuu palvelujen ja rakenteiden lisäksi ihmisten välisestä yhteydestä: katseesta, keskustelusta, kuulluksi tulemisesta ja hetkeksi toisen luo pysähtymisestä. Kuopion tapahtumissa teema näkyy mahdollisuuksina kohdata muita, osallistua ja löytää mielekästä tekemistä arkeen. Vanhustenviikon ohjelman toteuttavat Kuopion kaupungin yksiköt, seniorityöryhmä ja useat muut paikalliset toimijat.\nVanhustenviikon tapahtumat ovat pääosin maksuttomia ja avoimia kaikille ikääntyneille sekä heidän läheisilleen. Koko viikon ohjelma löytyy Kuopion kaupungin verkkosivuilta www.kuopio.fi/vanhustenviikko2026.\nTerhi\nRissanen\nKulttuurisuunnittelija\nYh­tei­sö­pal­ve­lut\n+358447182129\nterhi.rissanen@kuopio.fi",
-        "title": "Kuopion Vanhustenviikolla kohtaamisia, kulttuuria, ja yhteisiä elämyksiä",
-        "url": "https://www.kuopio.fi/2026/10/05/kuopion-vanhustenviikolla-kohtaamisia-kulttuuria-ja-yhteisia-elamyksia/"
+        "text": "Arctic Open kuuluu kansainvälisen sulkapalloliiton kilpailukalenteriin, ja turnauksessa kilpaillaan kaikissa viidessä pelimuodossa: miesten ja naisten kaksinpeleissä, miesten ja naisten nelinpeleissä sekä sekanelinpelissä. Turnaukseen osallistuu noin 300 pelaajaa eri puolilta maailmaa.\nKilpailuviikko alkaa tiistaina karsinnoilla, joihin yleisöllä on maksuton pääsy. Keskiviikkona ja torstaina pelataan pääsarjan otteluita, perjantaina vuorossa ovat puolivälierät ja lauantaina välierät. Turnaus huipentuu sunnuntaina 11. lokakuuta pelattaviin finaaleihin.\nVantaa on ollut Arctic Openin kotikaupunki sen perustamisesta lähtien. Turnaus tuo kaupunkiin kansainvälisiä urheilijoita, valmentajia, toimitsijoita ja katsojia sekä nostaa Vantaan näkyvästi esille maailmanlaajuisessa urheiluyhteisössä. Kilpailun televisiolähetykset tavoittavat yleisöjä ympäri maailmaa.\nArctic Open tarjoaa elämyksiä niin aktiivisille sulkapallon seuraajille kuin ensikertalaisillekin. Tapahtumassa pääsee kokemaan vauhdikkaan lajin huippuosaamisen ja kansainvälisen urheilutunnelman keskellä Vantaata.\nArctic Open 2026\nAika: 6.-11.10.2026\nPaikka: Vantaan Energia Areena\nFinaalit: sunnuntaina 11.10.2026\nLisätiedot ja liput: arcticopen.fi\nSuosittelemme sinulle myös\nVantaalaiset saavat uuden kulttuuritilan - Jumbon kirjaston avajaisia vietetään 15.-18.10.\nSyyslomalla Vantaalla taiteillaan, temppuillaan ja nautitaan kulttuurista\nSyyslomalla Håkansböleen? Valoja, hämärää, seikkailuja ja kekrin mystiikkaa museon pihapiirissä\nAvainsanat\nTapahtuma\nMyyrmäki\n…\nShow all keywords",
+        "title": "Maailman sulkapallohuiput saapuvat Vantaalle Arctic Openiin",
+        "url": "https://www.vantaa.fi/fi/ajankohtaista/uutinen/maailman-sulkapallohuiput-saapuvat-vantaalle-arctic-openiin"
       }
     ],
-    "story_key": "url:https://www.kuopio.fi/2026/10/05/kuopion-vanhustenviikolla-kohtaamisia-kulttuuria-ja-yhteisia-elamyksia/",
+    "story_key": "url:https://www.vantaa.fi/fi/ajankohtaista/uutinen/maailman-sulkapallohuiput-saapuvat-vantaalle-arctic-openiin",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-10-05T07:40:07.472128+00:00",
-        "sha256": "aa2474253e1b74dd3fc1a6342553e332e7bd9fe6ab36c901fcf449c09a6cbf98",
-        "text": "Kuopion kaupunki Konsernipalvelu Tietohallinto Käyttöehdot 4.12.2016 Kuopion kaupungin avoimen datan käyttöehdot 1. Yleistä Nämä käyttöehdot koskevat Kuopion kaupungin www-sivustoilla ja niihin liitettyjen palvelujen avoimesti jaettuja aineistojen (avoimen datan) käyttöä. Käyttäjällä tarkoitetaan henkilöä tai organisaatiota, joka ottaa tämän lisenssin (lisenssi jäljempänä myös \"käyttöoikeus\") alaisen aineiston käyttöönsä. Aineistojen tuottaja ja tekijänoikeuden tai tietokantasuojan haltija on Kuopion kaupunki, ellei aineiston, tiedon tai palvelun yhteydessä erikseen toisin ilmoiteta. Käyttöehdot koskevat palveluissa olevia paikkatietoaineistoja, taulukoita, tilastokuvioita, tekstejä sekä muuta tietoaineistoa. Kuopion kaupunki ei peri käyttöehtojen mukaisen aineiston käytöstä maksua. 2. Käyttöoikeuden ehdot Vastaanottamalla aineistoa käyttäjä hyväksyy olla olevat ehdot. Aineistoa käytettäessä on aineiston tai sitä sisältävän tai hyödyntävän palvelun yhteyteen liitettävä maininta alkuperäislähteestä ja aineistoversion ajankohta, esimerkiksi: [aineisto] © Kuopion kaupunki, [vuosiluku, päiväys] tai o o sisältää Kuopion kaupungin [aineiston nimi] aineistoa, [vuosiluku] 2.1 Käyttöoikeudet Tämä on Kuopion kaupungin myöntämä maailmanlaajuisen, maksuttoman, peruuttamattoman rinnakkaisen käyttöoikeuden myöntävä lisenssi, jolla edellä mainittua aineistoa voi vapaasti: · kopioida ja levittää · muokata ja hyödyntää kaupallisesti ja ei-kaupallisesti jatkolisensoimalla · yhdistellä muihin tuotteisiin ja · käyttää osana sovellusta tai palvelua. 2.2 Aineiston tuottajan velvollisuudet ja vastuut Aineisto on lisensoitu sellaisenaan eikä Kuopion kaupunki vastaa aineistossa mahdollisesti esiintyvistä virheistä eikä aineiston käytöstä aiheutuvista välittömistä tai välillisistä vahingoista. Kuopion kaupunki ei myönnä aineistolle tai siinä olevien tietojen oikeellisuudelle tai ajantasaisuudelle takuuta. Kuopion kaupunki ei takaa, että aineisto olisi jatkuvasti saatavilla ja Kuopion kaupunki voi lopettaa aineiston jakelun ennalta ilmoittamatta. 2.3 Käyttäjän velvollisuudet ja vastuut Käyttäjän on aineistoa tai siitä tehtyjä tuotteita käyttäessään ja edelleen luovuttaessaan · mainittava Kuopion kaupungin tekijän- tai muu oikeus ko. aineistoon · vaadittava nimeämiskäytännön noudattamista myöntäessään lisenssejä tuotteeseen tai · palveluun, jossa käytetään näiden ehtojen alaista aineistoa tai sen osaa Ilmoitettava onko aineisto esitetty/käytetty muuttamattomana/ kokonaisuudessaan/ käsiteltynä · poistettava maininta alkuperäislähteestä, mikäli Kuopion kaupunki sitä erikseen vaatii Käyttäjän ja Kuopion kaupungin välillä ei tämän lisenssin myötä synny yhteistyö- tai liikesuhdetta. Käyttäjä ei saa aineiston käytön yhteydessä ilmaista, että Kuopion kaupunki tukisi tai suosittelisi kyseistä aineiston käyttötapaa. 3. Sovellettava laki Tähän lisenssiin/käyttöoikeuteen sovelletaan Suomen lakia. 4. Muutokset tähän lisenssiin Kuopion kaupunki voi milloin tahansa muuttaa lisenssin ehtoja tai soveltaa aineistoon eri lisenssiä. Tämän lisenssin ehtoja sovelletaan kuitenkin edelleen niihin aineistoihin, jotka on otettu käyttöön tämän lisenssin voimassa ollessa. Lisätietoja: Jari Torvinen, tietohallintopäällikkö jari.torvinen(at)kuopio.fi",
-        "url": "https://www.kuopio.fi/app/uploads/2023/04/avoin-data-kayttoehdot-kuopion-kaupunki.pdf"
+        "retrieved_at": "2026-10-05T08:19:30.983617+00:00",
+        "sha256": "6929c44a191f69d8156425dd3910edb60f13d9ab8cf55a0df381c113fcf5102c",
+        "text": "Käyttöoikeus määritellyin ehdoin hyödynnettävissä. Datan käytön lisäksi Palvelussa on mahdollisuus keskusteluun.\nKäyttöoikeus\nPalvelu sisältää dataa useasta eri lähteestä: julkisyhteisöjen tuottamia datoja ja niiden metatietoja, Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja ja Palvelun ylläpitäjien tuottamia artikkeleja ja muita kirjoituksia. Pääsääntöisesti näihin kaikkiin on laaja käyttöoikeus Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Poikkeukset on kerrottu erikseen kunkin aineiston kohdalla.\nAvoin data\nPalvelussa olevien datojen (tietoaineistojen) omistus- ja immateriaalioikeudet kuuluvat kunkin datan tekijälle.\nPääsääntöisesti Palvelun käyttäjillä on laaja käyttöoikeus datoihin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Datoja saa vapaasti kopioida, levittää, näyttää ja esittää sekä käyttää datoja osana muuta teosta. Datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin.\nEhtona käytölle on, että datan tekijä (ylläpitäjä) on ilmoitettava. Datan tekijän pyynnöstä tämä viittaus on poistettava. Datan tekijä on kerrottu kunkin datan metadatassa.\nDatan tekijää ei saa ilmoittaa siten, että ilmoitus viittaisi datan tekijän tai Palvelun tukevan datan käyttäjää tai datan käyttötapaa.\nDatojen metatietojen yhteydessä on mainittu kyseisen datan käyttöoikeusehdot. Joissakin tapauksissa käyttöoikeusehdot voivat poiketa yllä mainitusta.\nKeskustelu\nPalvelun käyttäjät voivat keskusteluosiossa lisätä sivuille kirjoituksia ja kommentoida toisten käyttäjien kirjoituksia. Palvelun käyttäjä antaa kirjoituksiinsa ja kommentteihinsa vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nMikäli käyttäjä liittää kirjoitukseensa tai kommenttiinsa kuvia, tulee hänellä olla tekijänoikeudet kuvaan. Lisäksi hänellä tulee olla kuvassa esiintyvien henkilöiden lupa kuvan julkaisemiseen internetissä. Palvelun käyttäjä antaa kuviin vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nKeskustelun tulee olla hyvän tavan ja Suomen lainsäädännön mukaista. Käyttäjät ovat vastuussa lisäämistään kirjoituksista ja kommenteista.\nKaikenlainen mainonta keskustelussa on kielletty.\nPalvelun tarjoajat voivat tarvittaessa muokata kirjoituksia ja kommentteja sekä poistaa hyvän tavan tai lainsäädännön vastaisia tai muutoin sopimattomia kirjoituksia.\nMikäli käyttäjä havaitsee käyttöehtojen vastaisia kirjoituksia, pyydetään tästä ilmoittamaan ylläpidolle.\nToistuva käyttöehtojen rikkominen tai niiden vakava rikkominen voi johtaa väliaikaiseen tai pysyvään Palvelun käyttöoikeuden peruuttamiseen.\nSovellusgalleria\nSovellusgalleriassa esitellyt sovellukset eivät ole HRI:n tekemiä ja niiden tekijänoikeudet kuuluvat sovellusten tekijöille. Creative Commons 4.0 -lisenssi ei koske sovelluksia, eikä niitä ole lupa vapaasti kopioida, levittää, muokata tai yhdistellä, ellei erikseen sovelluksen kohdalla ole toisin mainittu tai sovelluksen tekijä muutoin ole tähän antanut lupaa.\nMuut palvelussa olevat kirjoitukset\nPalvelun tuottajien Palvelussa julkaisemien kirjoitusten, kuten artikkelien ja blogikirjoitusten omistus- ja tekijänoikeudet kuuluvat niiden kirjoittajille. Palvelun käyttäjillä on laaja käyttöoikeus näihin kirjoituksiin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nPalvelun ulkoasu, tekninen toteutus, tavaramerkit ja logot\nPalvelun teknisen toteutuksen lähdekoodit on saatavilla avoimesti GitHubista. Palvelun kopiointi sellaisenaan on kielletty. Palvelussa esiintyvien tavaramerkkien ja logojen tavaramerkkioikeudet kuuluvat niiden oikeudenhaltijoille. Mikäli tavaramerkkien ja logojen muu käyttö on sallittu, on tästä ja käytön ehdoista ilmoitettu ko. tavaramerkkien ja logojen kohdalla.\nTietosuoja\nhri.fi-palvelua ylläpitää Helsingin kaupunki. Kaupunki on sitoutunut suojaamaan verkkopalveluidensa käyttäjien yksityisyyttä Tietosuojalain (2018), EU:n tietosuoja-asetuksen (2016/679) sekä muun soveltuvan lainsäädännön mukaisesti.\nHelsingin kaupungin tietosuojasivut\nVastuuvapaus\nPalvelu sisältää sekä julkisyhteisöjen tuottamaa avointa dataa ja metadataa että Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja. Palvelun tarjoajat eivät vastaa Palvelussa olevien tietojen oikeellisuudesta. Palvelun käyttäjä käyttää Palvelussa olevaa avointa dataa omalla vastuullaan. Palvelun tarjoajat eivät vastaa mistään välittömistä tai välillisistä vahingoista, jotka aiheutuvat datan käytöstä. ",
+        "url": "https://hri.fi/fi/kayttoehdot/"
       }
     ]
   },
   "draft": {
-    "category": "Kulttuuri",
+    "category": "Urheilu",
     "image": {
-      "alt": "Arkistokuva: Suuri yleisö, mukaan lukien monia ikääntyneitä aikuisia, istuu riveissä hämärässä kulttuuritilassa katsellen eteenpäin.",
+      "alt": "Arkistokuva: Tyhjä sisäsulkapallokenttä, jossa on sininen lattia, valkoiset rajaviivat ja kaksi verkkoa. Seinät ovat vaaleansiniset ja ylhäällä on ikkunoita.",
       "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Kulttuuri",
+        "category": "Urheilu",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva ikääntyneistä osallistujista istumassa kulttuuritilaisuuden yleisössä ja keskustelemassa keskenään ennen esitystä. Kuopiossa otettu kuva on ensisijainen; muun tilaisuuden kuvaa ei esitetä tämän Vanhustenviikon tapahtumakuvana.",
+            "depictable_scene": "Todellinen valokuva Arctic Openin ottelusta Vantaan Energia Areenalla: pelaajat ovat sulkapallokentällä verkon molemmin puolin, ja kentän rajat näkyvät. Aiemman turnauksen kuva käy arkistokuvana, ei vuoden 2026 ottelun dokumenttina.",
             "must_avoid": [
-              "Presenting another event as Kuopio Vanhustenviikko 2026",
-              "Care-home or medical-treatment framing"
+              "Unrelated tournament presented as Arctic Open",
+              "Earlier tournament presented as the 2026 event"
             ],
             "must_show": [
-              "Older adults in a cultural venue",
-              "Audience seating"
+              "Badminton players on court",
+              "Badminton net and court markings"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "Kuopio seniorit kulttuuritapahtuma",
-              "seniorit teatterin yleisössä",
-              "older adults theatre audience",
-              "senior audience cultural event"
+              "Arctic Open Vantaa",
+              "Arctic Open sulkapallo",
+              "Arctic Open badminton match",
+              "Arctic Open Energia Areena ottelu"
             ],
-            "subject": "Kulttuuritapahtuma senioreille ja heidän läheisilleen"
+            "subject": "Arctic Open -turnauksen sulkapallo-ottelu"
           },
           {
-            "depictable_scene": "Todellinen ulkokuva Kuopion kaupunginteatterin rakennuksesta, jossa näkyvät julkisivu ja yleisön sisäänkäynti.",
-            "must_avoid": [
-              "Substituting another theatre for Kuopio City Theatre",
-              "Invented event banners"
-            ],
-            "must_show": [
-              "Actual Kuopio City Theatre facade",
-              "Theatre entrance"
-            ],
-            "rank": 2,
-            "safe_to_generate": false,
-            "search_queries": [
-              "Kuopion kaupunginteatteri julkisivu",
-              "Kuopion kaupunginteatteri sisäänkäynti",
-              "Kuopio City Theatre exterior"
-            ],
-            "subject": "Kuopion kaupunginteatterin rakennus"
-          },
-          {
-            "depictable_scene": "Nimeämättömän pienen esityssalin tyhjät tuolirivit suuntautuvat kohti pelkistettyä, valaistua näyttämöä. Kuvassa ei ole ihmisiä eikä tiettyyn esitykseen kuuluvaa lavastusta.",
+            "depictable_scene": "Tyhjä sulkapallokenttä nimeämättömässä sisäliikuntahallissa. Näkymä kentän päädystä näyttää verkon ja kaksin- sekä nelinpelin valkoiset rajaviivat ilman ihmisiä tai tapahtumatunnuksia.",
             "must_avoid": [
               "People or body parts",
-              "Imitating a named venue or production",
-              "Invented readable text or logos"
+              "Invented Arctic Open branding or readable text",
+              "Reconstruction of Vantaan Energia Areena"
             ],
             "must_show": [
-              "Empty audience chairs",
-              "Simply lit stage"
+              "Badminton net",
+              "Singles and doubles court markings"
             ],
-            "rank": 3,
+            "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "tyhjä katsomo näyttämö",
-              "pieni esityssali tuolirivit",
-              "empty theatre seating",
-              "empty chairs stage"
+              "tyhjä sulkapallokenttä",
+              "indoor badminton court",
+              "badminton net court markings",
+              "sulkapallokenttä verkko sisähalli"
             ],
-            "subject": "Viikon kulttuuriohjelma: esitystä odottava tyhjä katsomo"
+            "subject": "sulkapalloturnaukseen sopiva tyhjä sisäkenttä"
+          },
+          {
+            "depictable_scene": "Todellinen ulkokuva Vantaan Energia Areenasta, jossa näkyvät rakennuksen julkisivu ja sisäänkäynti.",
+            "must_avoid": [
+              "Another arena presented as the venue",
+              "Invented alterations to the building"
+            ],
+            "must_show": [
+              "Actual Vantaan Energia Areena facade",
+              "Arena entrance"
+            ],
+            "rank": 3,
+            "safe_to_generate": false,
+            "search_queries": [
+              "Vantaan Energia Areena",
+              "Vantaan Energia Areena julkisivu",
+              "Vantaan Energia Areena exterior",
+              "Vantaan Energia Areena sisäänkäynti"
+            ],
+            "subject": "Vantaan Energia Areenalla järjestettävän turnauksen tapahtumapaikka"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "Photo by Olek Buzunov on Unsplash",
-      "depicted": "A large group of people are seated in what appears to be an auditorium or hall, looking towards the front where a bright light is visible. The audience consists of identifiable people of various ages, both men and women. Many individuals are visible from the chest up, with some seen from the side or back. There is no readable text visible. The principal objects are the people themselves, all of whom are seated and appear to be attentive. No books are visible.",
+      "credit": "Photo by Palak Pitroda on Unsplash",
+      "depicted": "The image shows an indoor badminton court with blue walls and a blue floor marked with white lines. There are two badminton nets set up across the court. The walls have structural beams and columns, also painted blue. Along the bottom of the walls, there are recessed shelves or cubbies. On the right wall, a circular clock with a white face and black numbers is visible. Several rectangular light fixtures are mounted high on the left wall, emitting bright light. No readable text or identifiable pe",
       "generated": false,
       "hotlink": true,
       "license": "Unsplash License",
       "license_url": "https://unsplash.com/license",
       "pixel_review": {
-        "alt_fi": "Suuri yleisö, mukaan lukien monia ikääntyneitä aikuisia, istuu riveissä hämärässä kulttuuritilassa katsellen eteenpäin.",
+        "alt_fi": "Tyhjä sisäsulkapallokenttä, jossa on sininen lattia, valkoiset rajaviivat ja kaksi verkkoa. Seinät ovat vaaleansiniset ja ylhäällä on ikkunoita.",
         "approved": true,
-        "article_text_sha256": "c51dda1e18176f86a7dff005231ddabc7151a25eb0a0b1aa8b2d08333d2539ec",
-        "concept_sha256": "7b5e1bfddace2736265e959e5ef859b2481ccc3bfe7388bed5a1c52e60028b92",
-        "description": "A large audience of people, including many older adults, are seated in rows in a dimly lit cultural venue, looking towards a stage or screen that is not visible. A bright light source is visible in the upper background.",
+        "article_text_sha256": "22bd0f350c25a343ef406eec177115285baaaa6c8e9196f2c8c5612927018a7a",
+        "concept_sha256": "94e96f964be5b453dffbb57e4a7fd0196a2a4972fbc306143f64c84b2494d066",
+        "description": "An empty indoor badminton court with blue flooring and white lines, featuring two nets. The walls are light blue, and there are windows at the top and a clock on the far wall.",
         "fit_score": 9,
-        "image_sha256": "6bd150e115f8eddaf93558e5542ca9a797fff05fdae01a3204010dab04d4fa45",
+        "image_sha256": "c71ce02d740299dba286d8242f4b74c62d2f26cebc5b7c181826b1e6c5484ce5",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
-        "no_people": false,
-        "reason": "The image clearly depicts older adults in a cultural venue, seated as an audience, which directly matches the selected concept and the article's theme of cultural events for seniors. The visible subjects are genuinely illustrating the concrete article subject.",
-        "reviewed_at": "2026-10-05T07:42:49.303103+00:00"
+        "no_people": true,
+        "reason": "The image clearly depicts an empty indoor badminton court with nets and court markings, which directly matches the selected concept for an article about a badminton tournament. There are no people or branding visible, aligning with the 'must_avoid' criteria.",
+        "reviewed_at": "2026-10-05T08:22:44.802477+00:00",
+        "text_audit": {
+          "examples": [],
+          "readable_text_present": false
+        }
       },
       "pixels": {
-        "height": 1152,
+        "height": 1016,
         "mode": "RGB",
-        "variance": 8282.2,
+        "variance": 8756.7,
         "width": 1536
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "A large audience of people, including many older adults, are seated in rows in a dimly lit cultural venue, looking towards a stage or screen that is not visible. A bright light source is visible in the upper background.",
+        "evidence": "An empty indoor badminton court with blue flooring and white lines, featuring two nets. The walls are light blue, and there are windows at the top and a clock on the far wall.",
         "matched": [
-          "adults",
-          "audience",
-          "cultural",
-          "older",
-          "venue"
+          "badminton",
+          "court"
         ],
         "method": "vision",
         "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
       "selection_evidence": {
-        "article_text_sha256": "c51dda1e18176f86a7dff005231ddabc7151a25eb0a0b1aa8b2d08333d2539ec",
-        "decision_sha256": "a80231b14450d6319e239c92f8bbed8d9f4f958e7d35f3f9d4456faacad80c8d",
+        "article_text_sha256": "22bd0f350c25a343ef406eec177115285baaaa6c8e9196f2c8c5612927018a7a",
+        "decision_sha256": "5336d552916aa50ef146bf6d5b12bfa99e460b6bd64e32cb0f2cc11d24895a7a",
         "minimum_real_fit": 8,
         "searches": [
           {
@@ -1731,91 +1834,161 @@
             ]
           },
           {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "0e2a7fb352af6ac12f17de369878d143ea0209e33a96591df9022b8027b06563",
-                "license": "CC BY-SA 2.0",
-                "reason": "The article discusses cultural events for seniors in Kuopio, including theatre, concerts, and lectures. The selected concept specifically requests a photograph of older adults in a cultural venue, sitting in an audience and conversing. This image depicts a theatrical performance with a large puppet and performers on stage, not an audience of older ",
-                "source_url": "https://commons.wikimedia.org/wiki/File:War%20Horse%20(8570062967).jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "590eb0dc59a7fe3f6050ba770b8364a7bcda525508d8c496e73081edbaca0825",
-                "license": "CC BY-SA 2.0",
-                "reason": "The article discusses cultural events for seniors in Kuopio, including concerts, monologues, and lectures. The selected concept specifically requests a photograph of older adults in a cultural venue, sitting in an audience and conversing. This image depicts a theatrical performance with a large puppet and performers, which is a cultural event, but ",
-                "source_url": "https://commons.wikimedia.org/wiki/File:War%20Horse%20(8570063005).jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "55bb9371c0e24a11e2a1676879e62e0ff0d396e273427684fc63f66c5eb4e14e",
-                "license": "CC BY-SA 2.0",
-                "reason": "The article discusses cultural events for seniors in Kuopio, including theatre and concerts. The selected concept specifically requests a photograph of older adults in a cultural venue, sitting in audience seating and conversing. This image depicts a theatrical performance with actors and a puppet, which is a cultural event, but it does not show an",
-                "source_url": "https://commons.wikimedia.org/wiki/File:War%20Horse%20(8570054457).jpg"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "c0f162709aa05c30d10bb83eeba13a319e1979820f4e5b695fa189ea76667872",
-                "license": "CC BY-SA 2.0",
-                "reason": "The article discusses a week of cultural events for seniors in Kuopio, including theatre, concerts, and lectures. The selected concept specifies a photograph of older adults in a cultural venue, sitting in an audience and conversing. The provided image depicts a stage performance with a horse puppet and performers, which is a cultural event but doe",
-                "source_url": "https://commons.wikimedia.org/wiki/File:War%20Horse%20(8570054413).jpg"
-              }
-            ],
+            "candidates": [],
             "concept_rank": 1,
-            "outcome": "unavailable",
+            "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Kuopio seniorit kulttuuritapahtuma",
-              "seniorit teatterin yleisössä",
-              "older adults theatre audience"
+              "Arctic Open Vantaa",
+              "Arctic Open sulkapallo",
+              "Arctic Open badminton match"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "16830b09e5ff1eab593e09857bfc677cd793ef57a825e618bee15bd7d277fe2c",
+                "fit_score": 0,
+                "image_sha256": "679ae94150cac2e78cdbfe1fa774f44190fe3a147639e0aeee29ab37e9ac4c2a",
                 "license": "Pexels License",
-                "reason": "The article discusses cultural events for seniors in Kuopio, including events at the Kuopio Music Centre and Kuopio Museum. The selected concept specifically requests a photograph of older adults in a cultural venue, sitting in an audience and conversing. The provided image shows an exterior view of a modern building and a bridge, which does not de",
-                "source_url": "https://www.pexels.com/photo/modern-architecture-at-jonkoping-s-spira-cultural-center-38366347/"
+                "reason": "The article is about a badminton tournament (Arctic Open), but the image clearly depicts an ice hockey game. The visible subject does not match the selected concept of badminton players on a court with a net and court markings. Therefore, it is not relevant to the article's subject. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/exciting-indoor-ice-hockey-action-in-buenos-aires-38553823/"
               },
               {
                 "approved": false,
                 "fit_score": 0,
-                "image_sha256": "f48a49b157cdef358f7f99a471c2aab40017bc2f334bdb133420b69ac4bc70e4",
+                "image_sha256": "e41a96e1347703232c0d2c5d6c32f54ca76755f9f3b5ecaa673bda5291ebf95d",
                 "license": "Pexels License",
-                "reason": "The article discusses various cultural events for seniors in Kuopio, including events at the Kuopio City Theatre, Kuopio Music Centre, and Kuopio Museum. The selected concept specifically requests a photograph of older adults in a cultural venue, sitting in an audience and conversing. The provided image shows an exterior view of a building identifi",
-                "source_url": "https://www.pexels.com/photo/loksa-cultural-center-in-evening-light-37431361/"
+                "reason": "The article is about a badminton tournament (Arctic Open), but the image clearly depicts an ice hockey game. The visible sport, equipment, and playing surface (ice rink) do not match the subject of the article or the selected concept, which requires badminton players on a court with a net and court markings. One or more required concept elements ar",
+                "source_url": "https://www.pexels.com/photo/ice-hockey-game-in-buenos-aires-rink-38553688/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "c3a0938071fd1991518022046eca0142153b6d1456db6203795168d415814265",
+                "license": "Pexels License",
+                "reason": "The article is about a badminton tournament (Arctic Open), but the image clearly depicts an ice hockey game. The visible subject matter (ice hockey) does not match the selected concept (badminton players on court with net and court markings) or the article's subject. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/action-packed-ice-hockey-game-in-buenos-aires-arena-38554080/"
               },
               {
                 "approved": false,
                 "fit_score": 6,
-                "image_sha256": "d21864d1853a62ebf87218f089c750542b1f7f1853dc7128afd13a1806dd0b45",
+                "image_sha256": "27c635d51b9a98114c962297b8632575455cc2ba38fd0f6379968788eee1ee9e",
                 "license": "Pexels License",
-                "reason": "The image shows older adults in a social setting, which broadly aligns with the article's theme of events for seniors. However, it does not clearly depict a cultural venue or audience seating in a way that suggests a performance or lecture, as specified in the concept. The setting appears more like a dinner or reception. The 'must_show' element 'Au",
-                "source_url": "https://www.pexels.com/photo/people-formally-dressed-sitting-at-a-table-14203525/"
-              },
-              {
-                "approved": false,
-                "fit_score": 5,
-                "image_sha256": "a28f6396bd53626b6733cab805c3c80eb749a247b611b80d008e8fc06cbe0230",
-                "license": "Pexels License",
-                "reason": "The image shows older adults in a social setting, which broadly aligns with the article's theme of events for seniors. However, the selected concept specifically requires 'older adults in a cultural venue' and 'audience seating' for a cultural event. The visible setting is a cafe or restaurant, not clearly a cultural venue, and the seating is for d",
-                "source_url": "https://www.pexels.com/photo/elderly-women-dancing-together-8153955/"
+                "reason": "The image shows badminton players and equipment on a court, which broadly relates to the article's subject of a badminton tournament. However, the selected concept specifically requires a visible badminton net, which is absent in the image. The image also does not depict an 'ottelu' (match) as implied by the concept, but rather a static scene of pl",
+                "source_url": "https://www.pexels.com/photo/shuttlecocks-on-the-badminton-court-floor-8007173/"
               }
             ],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Kuopio seniorit kulttuuritapahtuma",
-              "seniorit teatterin yleisössä",
-              "older adults theatre audience"
+              "Arctic Open Vantaa",
+              "Arctic Open sulkapallo",
+              "Arctic Open badminton match"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Arctic Open Vantaa",
+              "Arctic Open sulkapallo",
+              "Arctic Open badminton match"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Arctic Open Vantaa",
+              "Arctic Open sulkapallo",
+              "Arctic Open badminton match"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "source-news",
+            "queries": [
+              "cited source image"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "da6cc9810d776831ba3fb49a967649c1da68467b0d507db971dcd77a7cbf62b6",
+                "license": "CC BY 4.0",
+                "reason": "The article is about a badminton tournament and the selected concept is an empty badminton court. The image shows a group of men and a banner, with what appears to be an outdoor court or field in the background, but no clear badminton net or court markings are visible. The image does not depict the concrete subject of the article or the selected co",
+                "source_url": "https://commons.wikimedia.org/wiki/File:2025-08-20%20AA.%20Thoddoo%20indoor%20badminton%20court%20construction%20commencement%20ceremony%20(3).jpg"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "b70230cc73cd9d1f8ed821394a995cfb354a26f7ddd8d2dd49fcc6ef47572112",
+                "license": "CC BY 4.0",
+                "reason": "The article is about a badminton tournament and the selected concept is an empty badminton court. The image shows a group of men standing outdoors at what appears to be a construction site, with a sports court visible in the background. There is no visible badminton net or court markings, and the court is not empty as it appears to be under constru",
+                "source_url": "https://commons.wikimedia.org/wiki/File:2025-08-20%20AA.%20Thoddoo%20indoor%20badminton%20court%20construction%20commencement%20ceremony%20(5).jpg"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "tyhjä sulkapallokenttä",
+              "indoor badminton court",
+              "badminton net court markings"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "82e393c4c806f4aa2eb2864ddccb63ccc7036b56ed876f4b40a2cf0c178e4829",
+                "license": "Pexels License",
+                "reason": "The article is about a badminton tournament. The image shows a badminton shuttlecock and a net, which are related to the sport. However, the concept requires an empty badminton court with visible court markings, which are not present in this image. The image only shows a close-up of a shuttlecock and net, not a full court. One or more required conc",
+                "source_url": "https://www.pexels.com/photo/badminton-shuttlecock-stuck-in-net-on-court-35647228/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "f3e32c0ca664498afea8fb8075030a7599e3e9cb4139807c8684d7708d0ca2d0",
+                "license": "Pexels License",
+                "reason": "The image shows a badminton court and rackets, which relates to the article's subject of a badminton tournament. However, the concept explicitly requires a badminton net to be visible, which is absent in the actual pixels. The image also includes rackets, which are not part of the 'empty court' concept. One or more required concept elements are not",
+                "source_url": "https://www.pexels.com/photo/badminton-racquets-on-court-8007493/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "f89a3977f6928f23490b36629efb928b16053609702fc95a1ac93bea20c1dcba",
+                "license": "Pexels License",
+                "reason": "The image shows a shuttlecock and a court line, which are related to badminton. However, the concept requires a full badminton court with a net and both singles and doubles court markings, none of which are visible. The image only shows a single line and a shuttlecock, failing to meet the 'must_show' criteria for a badminton net and full court mark",
+                "source_url": "https://www.pexels.com/photo/a-close-up-shot-of-a-shuttlecock-on-a-badminton-court-floor-7438732/"
+              },
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "82e393c4c806f4aa2eb2864ddccb63ccc7036b56ed876f4b40a2cf0c178e4829",
+                "license": "Pexels License",
+                "reason": "The article is about a badminton tournament. The image shows a badminton shuttlecock and a net, which are related to the sport. However, the concept requires an empty badminton court with visible court markings, which are not present in this image. The image only shows a close-up of a shuttlecock and net, not a full court. One or more required conc",
+                "source_url": "https://www.pexels.com/photo/badminton-shuttlecock-stuck-in-net-on-court-35647228/"
+              }
+            ],
+            "concept_rank": 2,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "tyhjä sulkapallokenttä",
+              "indoor badminton court",
+              "badminton net court markings"
             ]
           },
           {
@@ -1823,24 +1996,24 @@
               {
                 "approved": true,
                 "fit_score": 9,
-                "image_sha256": "6bd150e115f8eddaf93558e5542ca9a797fff05fdae01a3204010dab04d4fa45",
+                "image_sha256": "c71ce02d740299dba286d8242f4b74c62d2f26cebc5b7c181826b1e6c5484ce5",
                 "license": "Unsplash License",
-                "reason": "The image clearly depicts older adults in a cultural venue, seated as an audience, which directly matches the selected concept and the article's theme of cultural events for seniors. The visible subjects are genuinely illustrating the concrete article subject.",
-                "source_url": "https://unsplash.com/photos/audience-sitting-in-dimly-lit-hall-Xt_nnw7j6IA?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The image clearly depicts an empty indoor badminton court with nets and court markings, which directly matches the selected concept for an article about a badminton tournament. There are no people or branding visible, aligning with the 'must_avoid' criteria.",
+                "source_url": "https://unsplash.com/photos/indoor-badminton-court-with-blue-walls-and-floor-R3S6YdeHA6A?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
-            "concept_rank": 1,
+            "concept_rank": 2,
             "outcome": "accepted",
             "provider": "unsplash",
             "queries": [
-              "Kuopio seniorit kulttuuritapahtuma",
-              "seniorit teatterin yleisössä",
-              "older adults theatre audience"
+              "tyhjä sulkapallokenttä",
+              "indoor badminton court",
+              "badminton net court markings"
             ]
           },
           {
             "candidates": [],
-            "concept_rank": 2,
+            "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
             "provider": "source-news",
             "queries": [
@@ -1849,13 +2022,13 @@
           },
           {
             "candidates": [],
-            "concept_rank": 2,
+            "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
             "provider": "wikimedia",
             "queries": [
-              "Kuopion kaupunginteatteri julkisivu",
-              "Kuopion kaupunginteatteri sisäänkäynti",
-              "Kuopio City Theatre exterior"
+              "Vantaan Energia Areena",
+              "Vantaan Energia Areena julkisivu",
+              "Vantaan Energia Areena exterior"
             ]
           },
           {
@@ -1863,138 +2036,102 @@
               {
                 "approved": false,
                 "fit_score": 0,
-                "image_sha256": "5a8dce5d4329b1f5d52d46eacc9e25d53ac8207ee3f0de3a5d795b1d255f8410",
+                "image_sha256": "7c6cb0e944c205e762a447d970c847f829db792da01e5d61e7ee744fe539e79d",
                 "license": "Pexels License",
-                "reason": "The article mentions 'Kuopion kaupunginteatteri' (Kuopio City Theatre) and the selected concept specifically requests an actual exterior view of 'Kuopion kaupunginteatteri'. The visible text on the building in the image clearly says 'Stora Teatern', which is Swedish for 'Grand Theatre' and not 'Kuopion kaupunginteatteri'. Therefore, the image does ",
-                "source_url": "https://www.pexels.com/photo/facade-of-stora-teatern-at-night-in-gothenburg-sweden-19577952/"
-              },
-              {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "399069eb18fa4269993cb9aa1286b5c97be205354f400e5e10219ea8a74147b2",
-                "license": "Pexels License",
-                "reason": "The image clearly depicts the facade and entrance of the Kuopio City Theatre, which is explicitly mentioned in the article as a venue for a Senioripäivä event. The visible architecture matches known images of the Kuopio City Theatre.",
-                "source_url": "https://www.pexels.com/photo/arched-modern-facade-against-clear-blue-sky-33390737/"
+                "reason": "The article discusses a badminton tournament at Vantaan Energia Areena. The image shows an indoor ice hockey arena, which is a different sport and there is no visual evidence that this is the specified venue. The concept requires an exterior view of the Vantaan Energia Areena facade and entrance, neither of which are present. One or more required c",
+                "source_url": "https://www.pexels.com/photo/ice-hockey-celebration-in-buenos-aires-arena-38557329/"
               }
             ],
-            "concept_rank": 2,
-            "outcome": "accepted",
+            "concept_rank": 3,
+            "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Kuopion kaupunginteatteri julkisivu",
-              "Kuopion kaupunginteatteri sisäänkäynti",
-              "Kuopio City Theatre exterior"
+              "Vantaan Energia Areena",
+              "Vantaan Energia Areena julkisivu",
+              "Vantaan Energia Areena exterior"
             ]
           },
           {
             "candidates": [],
             "concept_rank": 3,
             "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
+            "provider": "unsplash",
             "queries": [
-              "cited source image"
+              "Vantaan Energia Areena",
+              "Vantaan Energia Areena julkisivu",
+              "Vantaan Energia Areena exterior"
             ]
           },
           {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "634b1651d5dff010d82601630c00b66a0f47876e549d2d054245e232361caad3",
-                "license": "Public domain",
-                "reason": "The article discusses cultural events for seniors, including performances and lectures. The selected concept describes an empty auditorium with a simple stage, awaiting a performance. The actual pixels show a performance in progress with both performers and an audience present, which directly contradicts the 'empty audience chairs' and 'no people' ",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Royal%20Air%20Force-%202nd%20Tactical%20Air%20Force,%201943-1945.%20CL589.jpg"
-              },
-              {
-                "approved": true,
-                "fit_score": 9,
-                "image_sha256": "06aa58e238123764f6780a0fee5f29187c7860994433eaa58b7edb77c51bbe71",
-                "license": "CC0",
-                "reason": "The image clearly depicts an empty auditorium with audience chairs and a stage area, which directly matches the selected concept of 'Viikon kulttuuriohjelma: esitystä odottava tyhjä katsomo'. The article discusses various cultural events, including performances, making an empty performance venue a relevant illustration.",
-                "source_url": "https://commons.wikimedia.org/wiki/File:Paramount%20Theatre%20Seating%20View%20(empty).jpg"
-              }
-            ],
+            "candidates": [],
             "concept_rank": 3,
-            "outcome": "accepted",
-            "provider": "wikimedia",
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
             "queries": [
-              "tyhjä katsomo näyttämö",
-              "pieni esityssali tuolirivit",
-              "empty theatre seating"
+              "Vantaan Energia Areena",
+              "Vantaan Energia Areena julkisivu",
+              "Vantaan Energia Areena exterior"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 1,
+          "concept_rank": 2,
           "fit_score": 9,
-          "image_sha256": "6bd150e115f8eddaf93558e5542ca9a797fff05fdae01a3204010dab04d4fa45",
+          "image_sha256": "c71ce02d740299dba286d8242f4b74c62d2f26cebc5b7c181826b1e6c5484ce5",
           "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "source_url": "https://unsplash.com/photos/audience-sitting-in-dimly-lit-hall-Xt_nnw7j6IA?utm_source=uutistenlukija&utm_medium=referral",
+      "source_url": "https://unsplash.com/photos/indoor-badminton-court-with-blue-walls-and-floor-R3S6YdeHA6A?utm_source=uutistenlukija&utm_medium=referral",
       "stock_provenance": {
         "download_tracking": {
           "successful": true,
-          "url": "https://api.unsplash.com/photos/Xt_nnw7j6IA/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw5fHxvbGRlciUyMGFkdWx0cyUyMHRoZWF0cmUlMjBhdWRpZW5jZXxlbnwwfDB8fHwxNzkxMTg2MTY0fDA"
+          "url": "https://api.unsplash.com/photos/R3S6YdeHA6A/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxpbmRvb3IlMjBiYWRtaW50b24lMjBjb3VydHxlbnwwfDB8fHwxNzkxMTg4NTU5fDA"
         },
-        "image_url": "https://images.unsplash.com/photo-1790348614782-8c89c5d881c6?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw5fHxvbGRlciUyMGFkdWx0cyUyMHRoZWF0cmUlMjBhdWRpZW5jZXxlbnwwfDB8fHwxNzkxMTg2MTY0fDA&w=1536&q=80&fm=jpg&fit=crop",
-        "photo_id": "Xt_nnw7j6IA",
-        "photo_url": "https://unsplash.com/photos/audience-sitting-in-dimly-lit-hall-Xt_nnw7j6IA?utm_source=uutistenlukija&utm_medium=referral",
-        "photographer": "Olek Buzunov",
-        "photographer_url": "https://unsplash.com/@olek_bznv_photo?utm_source=uutistenlukija&utm_medium=referral",
+        "image_url": "https://images.unsplash.com/photo-1775993167284-8e6a6e56ab69?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxpbmRvb3IlMjBiYWRtaW50b24lMjBjb3VydHxlbnwwfDB8fHwxNzkxMTg4NTU5fDA&w=1536&q=80&fm=jpg&fit=crop",
+        "photo_id": "R3S6YdeHA6A",
+        "photo_url": "https://unsplash.com/photos/indoor-badminton-court-with-blue-walls-and-floor-R3S6YdeHA6A?utm_source=uutistenlukija&utm_medium=referral",
+        "photographer": "Palak Pitroda",
+        "photographer_url": "https://unsplash.com/@palak_pitroda?utm_source=uutistenlukija&utm_medium=referral",
         "provider": "unsplash",
-        "query": "older adults theatre audience",
-        "retrieved_at": "2026-10-05T07:42:46Z"
+        "query": "indoor badminton court",
+        "retrieved_at": "2026-10-05T08:22:41Z"
       },
-      "stock_provenance_sha256": "5a6b6432ea742a017f9bee67b3f63f9e832740600c1afe85ce78a31d41d7a182",
-      "url": "https://images.unsplash.com/photo-1790348614782-8c89c5d881c6?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw5fHxvbGRlciUyMGFkdWx0cyUyMHRoZWF0cmUlMjBhdWRpZW5jZXxlbnwwfDB8fHwxNzkxMTg2MTY0fDA&w=1536&q=80&fm=jpg&fit=crop"
+      "stock_provenance_sha256": "fab3296273a9bd8d8c47636a64d95097fa2b018383ae66b8ff481984be7a8f29",
+      "url": "https://images.unsplash.com/photo-1775993167284-8e6a6e56ab69?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHwyfHxpbmRvb3IlMjBiYWRtaW50b24lMjBjb3VydHxlbnwwfDB8fHwxNzkxMTg4NTU5fDA&w=1536&q=80&fm=jpg&fit=crop"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kuopion kaupungin julkaiseman ohjelman mukaan kaupunginteatterin Senioripäivä järjestetään tiistaina 6. lokakuuta kello 10–13. Keskiviikkona 7. lokakuuta kaupungintalolla pidetään senioreiden iltatilaisuus kello 17–18.30. Molemmat tapahtumat ovat kaikille avoimia."
+        "text": "Arctic Open pelataan Vantaan Energia Areenalla 6.–11. lokakuuta 2026. Kaupungin ilmoittaman ohjelman mukaan tiistain karsintojen jälkeen pääsarjan ottelut alkavat keskiviikkona."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Perjantaina 9. lokakuuta ohjelmassa ovat Tarjoomon seniorimessut Kuopion musiikkikeskuksella kello 9–14 sekä Arjen kohtaamisia -tapahtuma Puijonlaakson ostoskeskuksessa kello 13–15. Vanhustenviikon tämänvuotinen teema on arjen kohtaamiset."
+        "text": "Vantaan kaupungin mukaan turnaus kuuluu kansainvälisen sulkapalloliiton kilpailukalenteriin. Ohjelmassa ovat miesten ja naisten kaksin- ja nelinpelit sekä sekanelinpeli."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kaupungin mukaan sen tarjoama viikon kulttuuriohjelma on maksutonta. Siihen kuuluvat Sirpa Taivaisen ja Petri Makkosen Fado-Tango-konsertin vierailut Maaningalla ja Vehmersalmella sekä Kati Ahmaharjun kolmiosainen Emännän tarina -monologisarja Kuopion museossa. Monologisarjaa voi seurata myös museon YouTube-kanavalla."
-      },
-      {
-        "source_ids": [
-          "A"
-        ],
-        "text": "Keskiviikkona 7. lokakuuta kello 16 Kino Kuvakukossa järjestetään Duo Riitta ja Petran musiikin hyvinvointivaikutuksia käsittelevä Soiva luento. Kaupungin tiedotteen mukaan tilaisuuteen sisältyy musiikkia ja yhteislaulua."
-      },
-      {
-        "source_ids": [
-          "A"
-        ],
-        "text": "Vanhustyön keskusliiton avoimia verkkoluentoja voi kaupungin mukaan seurata myös yhteisissä etäkatsomoissa: maanantaina Nilsiässä, keskiviikkona Juankoskella ja perjantaina Maaningalla. Katsomoissa on lisäksi kevyttä tuolijumppaa. Koko tapahtumaohjelma on osoitteessa www.kuopio.fi/vanhustenviikko2026."
+        "text": "Kaupungin julkaisemassa aikataulussa pääsarjan otteluita pelataan keskiviikkona ja torstaina, puolivälierät perjantaina ja välierät lauantaina. Finaalit ovat sunnuntaina 11. lokakuuta. Lisätietoja ja lippuja on saatavilla arcticopen.fi-sivustolta."
       }
     ],
-    "summary": "Kuopiossa järjestetään 5.–11. lokakuuta senioreille ja heidän läheisilleen tapahtumia, joista valtaosa on kaupungin mukaan maksuttomia. Ohjelmaan kuuluu myös verkossa seurattavia esityksiä ja luentoja.",
-    "title": "Kuopion Vanhustenviikko tuo kulttuuria ja kohtaamisia"
+    "summary": "Vantaan kaupungin mukaan sulkapalloturnaukseen osallistuu noin 300 pelaajaa eri puolilta maailmaa. Kuusipäiväisen kilpailun avauspäivän karsintoja voi seurata maksutta.",
+    "title": "Arctic Open alkaa Vantaalla 6. lokakuuta"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "a20839676280fe0932c43cb94ee5c8ebc99bae0a785c186a5ddb9a5d3c268e54",
+    "draft_sha256": "f1df9efe396dd9cb35c2f9a676252fec3535069cbae9445dc7c57b47083536a0",
     "reasons": [
-      "Otsikko on 53 merkkiä eli alle 60 merkin tavoitteen. Kuopio ja Vanhustenviikko ovat alussa, ja kulttuuri sekä kohtaamiset vastaavat lähteen A tapahtumaohjelmaa. Kulttuuri-kategoria ja Kuopioon rajattu näkökulma ovat perusteltuja.",
-      "Kuopion kaupungin 5.10.2026 julkaisema lähde A tukee ingressin ajankohtaa 5.–11.10.2026, kohderyhmää, tapahtumien pääosin maksutonta luonnetta sekä verkossa seurattavaa ohjelmaa. Kaupungin oma tiedote riittää tämän paikallisen ohjelmauutisen lähteeksi; luonnos ei esitä sitä riippumattomasti vahvistettuna tietona.",
-      "Kaikkien viiden kappaleen source_ids-merkintä A on asianmukainen. Ensimmäisen kappaleen Senioripäivän 6.10. klo 10–13 ja iltatilaisuuden 7.10. klo 17–18.30 ajat sekä avoimuus vastaavat A:ta. Toisen kappaleen seniorimessujen 9.10. klo 9–14, Arjen kohtaamisia -tapahtuman klo 13–15, tapahtumapaikat ja viikon teema vastaavat samaa lähdettä.",
-      "Lähde A tukee kolmannen kappaleen maksutonta kaupungin kulttuuriohjelmaa, Sirpa Taivaisen ja Petri Makkosen Fado-Tango-vierailuja Maaningalla ja Vehmersalmella sekä Kati Ahmaharjun kolmiosaista Emännän tarina -monologisarjaa ja YouTube-seurantaa. A tukee myös neljännen kappaleen Duo Riitta ja Petran Soivaa luentoa Kino Kuvakukossa 7.10. klo 16, musiikkia ja yhteislaulua sekä viidennen kappaleen verkkoluentoja, etäkatsomoiden paikkoja ja viikonpäiviä, tuolijumppaa ja ohjelmaosoitetta. Luonnos ei väitä musiikin hyvinvointivaikutuksia todistetuiksi.",
-      "Teksti on ymmärrettävää, neutraalia ja itsenäisesti tiivistettyä suomea. Se ei siirrä tiedotteen myönteisiä hyvinvointi- tai yhteisöllisyystulkintoja omiksi tosiasiaväitteikseen eikä yleistä paikallista ohjelmaa valtakunnalliseksi. RIGHTS-asiakirja tukee tekstin uudelleenkäyttöä, ei uutisväitteitä tai valokuvan oikeuksia.",
-      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Kolme järjestettyä kuvakonseptia ja haut jokaiselle on dokumentoitu. Valitun Unsplash-kuvan yksilöity kuva- ja kuvaajatunnistus, palvelusta haun alkuperätiedot ja Unsplash License muodostavat käyttöoikeusnäytön yhdessä, eivät pelkkänä lähdemainintana. Täsmälliseen kuvaan ja koko artikkeliin sidotun kuvantarkistuksen sopivuusarvio on 9/10. Kuvattu ikääntyneitä sisältävä yleisö kulttuuritilan katsomossa havainnollistaa artikkelin konkreettista aihetta, senioreille tarjottavia esityksiä ja luentoja. Arkistokuvamerkintä ei väitä kuvaa Kuopion vuoden 2026 tapahtumakuvaksi tai anna sille todentamatonta kuvauspäivää; keskustelun puuttuminen kuvasta ei ole hylkäysperuste. Kuvan turvarajoja ei rikota."
+      "Otsikko on 40 merkkiä pitkä, joten se alittaa 60 merkin tavoitteen. Tärkein asia eli Arctic Openin alkaminen Vantaalla on alussa. Lähde A tukee alkamispäivää 6. lokakuuta 2026.",
+      "Lähde A tukee ingressin noin 300 pelaajan osallistujamäärää, kansainvälistä osallistujajoukkoa ja avauspäivän karsintojen maksutonta yleisöpääsyä. Ajanjakso 6.–11.10.2026 kestää kuusi päivää. Osallistujamäärä on asianmukaisesti esitetty kaupungin ilmoittamana arviona.",
+      "Kaikkien kolmen kappaleen source_ids-merkintä A vastaa niiden sisältöä: lähde vahvistaa Vantaan Energia Areenan, turnauksen päivämäärät, kansainvälisen sulkapalloliiton kilpailukalenterin, kaikki viisi pelimuotoa, tiistain karsinnat, keskiviikon ja torstain pääsarjaottelut, perjantain puolivälierät, lauantain välierät, sunnuntain 11. lokakuuta finaalit sekä arcticopen.fi-osoitteen lisätietoja ja lippuja varten.",
+      "Lähde A on päivätty 5.10.2026 ja koskee seuraavana päivänä alkavaa tapahtumaa. Yksi ajankohtainen kaupungin tapahtumatiedote riittää näihin rajattuihin ohjelmatietoihin; luonnos ei väitä riippumatonta vahvistusta. Teksti on itsenäisesti tiivistettyä, neutraalia ja ymmärrettävää suomea, pysyy Vantaan tapahtumassa ja sopii Urheilu-luokkaan. Lähteen mainosluonteisia johtopäätöksiä tai perusteettomia syy-seurausväitteitä ei ole siirretty luonnokseen. RIGHTS-asiakirjaa ei ole käytetty uutisväitteiden näyttönä.",
+      "Luonnoksen täydellinen kuvatietue vastaa lähdepaketin kuvatietuetta. Kuvakohtainen Unsplash-provenienssi yksilöi valokuvan R3S6YdeHA6A, kuvaajan Palak Pitrodan, kuvan osoitteen ja latausseurannan; käyttöoikeus on ilmoitettu Unsplash License -lisenssillä. Kolme kuvakonseptia on järjestetty ja jokaiselle on dokumentoitu hakuja. Valitun todellisen kuvan täsmäpikseliarvion pisteet ovat 9/10. Kuvauksessa näkyvät nimenomaan sulkapalloverkot ja kentän rajaviivat, joten yhteys otteluohjelmaa käsittelevään artikkeliin on konkreettisempi kuin yleinen urheilukategoria. Arkistokuvamerkintä ei esitä nimeämätöntä hallia Energia Areenana eikä kuvaa vuoden 2026 turnauksen dokumenttina. Alt-teksti vastaa toimitettua pikselikuvausta, eikä kuvatietueessa ilmene turvarajojen vastaista sisältöä."
     ]
   }
 }
