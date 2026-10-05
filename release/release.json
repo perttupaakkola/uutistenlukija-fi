@@ -3,35 +3,309 @@
   "hermes_step": 5,
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
-  "source_commit": "1f75e03ff145d29658f1ff0b6a625789875de724",
-  "job_id": "59edc2fdcd3445f3dcf0b2b6e0cdfa9227de2a42f196bf005a6c0c5b17f22630",
-  "packet_sha256": "90cb79953275f25e7eb25feb01bcdeef53fc8e4650e1c808a83c6bff1d795949",
-  "draft_sha256": "23d6f6799338e5b5b87d7987cf3def6f67ccfdac165f8f31900784b6092b0a7b",
-  "image_sha256": "a99fee9583835ba7a76d13582f64bfd19c533b987bc1765c6ff8d69269b76211",
+  "source_commit": "440b65ae5ddfd4ddc73b19781cd40bb9dfda7fb2",
+  "job_id": "c79a7f0543135408e3ae3acefe5573650e0a6dd2797683f8c07de9aadc90e8a7",
+  "packet_sha256": "f7b8937b07a56d33c2d0dfd82c97d82aa00a45b78f83c07997c83cc12dd824dd",
+  "draft_sha256": "322086d046bd8b7956cd282886c057ade6df008b867de1acc79dec01ee3cebcd",
+  "image_sha256": null,
   "text_provenance": "not-applicable",
+  "stock_image": {
+    "alt": "Arkistokuva: Ilmakuva näyttää kuivaa maastoa, josta nousee useita harmaanruskeita savupilviä, jotka leviävät taivaalle. Monikaistainen valtatie kulkee maiseman poikki, ja sen varrella on puita ja pensaikkoa.",
+    "caption": "Arkistokuva artikkelin aiheesta.",
+    "classifier_output": {
+      "category": "Maailma",
+      "concepts": [
+        {
+          "depictable_scene": "Todellinen Aqua-satelliitin MODIS-kuva Oregonista 30. syyskuuta 2026: Cascadevuoriston itäpuolisessa maastossa näkyy paloalueita ja niistä pääosin itään ulottuvia harmaita savuvanoja.",
+          "must_avoid": [
+            "Images from a different wildfire season",
+            "Fabricated satellite observations"
+          ],
+          "must_show": [
+            "Satellite view of Oregon wildfire areas",
+            "Gray smoke plumes extending eastward"
+          ],
+          "rank": 1,
+          "safe_to_generate": false,
+          "search_queries": [
+            "Oregon MODIS September 2026",
+            "Oregon wildfire satellite smoke",
+            "NASA Aqua Oregon 30 September 2026",
+            "MODIS Fires in Oregon October 5 2026"
+          ],
+          "subject": "Oregonin maastopalot Aqua-satelliitin kuvassa"
+        },
+        {
+          "depictable_scene": "Viisto ilmakuva nimeämättömästä kuivasta mäkisestä maastosta, jossa harva puusto ja pensaikko ympäröivät tummentunutta paloaluetta. Paloalueelta nouseva harmaa savu levittäytyy pitkänä vanana kuvan sivulle. Näkymä ei jäljittele Oregonin tiettyä paikkaa tai yksittäistä vuoden 2026 paloa.",
+          "must_avoid": [
+            "People or body parts",
+            "Recognizable named landscapes or reconstruction of a specific fire",
+            "Invented text, logos or satellite data overlays"
+          ],
+          "must_show": [
+            "Dry terrain with a dark burn area",
+            "Gray wildfire smoke plume drifting sideways"
+          ],
+          "rank": 2,
+          "safe_to_generate": true,
+          "search_queries": [
+            "Wildfire smoke aerial view",
+            "Dry scrubland wildfire smoke",
+            "Maastopalon savu ilmakuva",
+            "Burn scar smoke plume"
+          ],
+          "subject": "Savu kuivassa maastossa jatkuvista maastopaloista"
+        }
+      ],
+      "version": "article-first-v1"
+    },
+    "credit": "Photo by Brian Sumner on Unsplash",
+    "depicted": "An aerial view shows a wide expanse of land under a clear blue sky, with a significant amount of smoke rising from multiple points on the ground. The smoke is light brown and white, forming large plumes that extend upwards and drift across the landscape. In the foreground and midground, a multi-lane highway stretches diagonally from the bottom center towards the upper right, with several vehicles, including cars and trucks, visible on it. To the left of the highway, there is a large area of dist",
+    "generated": false,
+    "hotlink": true,
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "pixel_review": {
+      "alt_fi": "Ilmakuva näyttää kuivaa maastoa, josta nousee useita harmaanruskeita savupilviä, jotka leviävät taivaalle. Monikaistainen valtatie kulkee maiseman poikki, ja sen varrella on puita ja pensaikkoa.",
+      "approved": true,
+      "article_text_sha256": "8184d787f90aaec1419b2b5e4d591eba89d58c4c94e1ec9b65cc0a83fb6fa373",
+      "concept_sha256": "936d2005a462e94628ab0b6d32d300b552cdc44d3dc4d38c8de1e33461a5ec64",
+      "description": "An aerial view shows a wide, multi-lane highway stretching into the distance, with vehicles visible on it. To the left of the highway, a large area of dry, cleared land is visible, with several plumes of gray-brown smoke rising from it and drifting across the sky. Patches of green trees and scrubland are scattered across the landscape, particularly on the left side and bordering the highway. The sky above is clear blue with some hazy clouds.",
+      "fit_score": 9,
+      "image_sha256": "afabe6c73d9e57ae511aef0fb94bc828d5e5f75f4b69bbb832b8a85b2d7a1cf5",
+      "model": "google:gemini-2.5-flash",
+      "must_show_visible": [
+        true,
+        true
+      ],
+      "no_people": false,
+      "reason": "The image clearly depicts dry terrain with smoke plumes, which directly illustrates the article's subject of wildfires and the selected concept of smoke from ongoing wildfires in dry terrain. The smoke is gray and drifts sideways, matching the 'must_show' elements. The terrain is dry and appears to have burn areas or cleared land that could be associated with fire activity.",
+      "reviewed_at": "2026-10-05T04:26:47.810256+00:00"
+    },
+    "pixels": {
+      "height": 1117,
+      "mode": "RGB",
+      "variance": 11373.1,
+      "width": 1536
+    },
+    "relevance_check": {
+      "accepted": true,
+      "evidence": "An aerial view shows a wide, multi-lane highway stretching into the distance, with vehicles visible on it. To the left of the highway, a large area of dry, cleared land is visible, with several plumes of gray-brown smoke rising from it and drifting across the sky. Patches of green trees and scrubland are scattered across the landscape, particularly on the left side and bordering the highway. The sky above is clear blue with some hazy clouds.",
+      "matched": [
+        "area",
+        "drifting",
+        "dry",
+        "gray",
+        "smoke"
+      ],
+      "method": "vision",
+      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+    },
+    "selection_evidence": {
+      "article_text_sha256": "8184d787f90aaec1419b2b5e4d591eba89d58c4c94e1ec9b65cc0a83fb6fa373",
+      "decision_sha256": "9632e22a9f51a1e5d3a5578102d7cdd711c66542173db272d0c09916fab254ad",
+      "minimum_real_fit": 8,
+      "searches": [
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "5a3efe0b182fd22d5e18b5c6a9dcab9c769b9dddab132545f8cdc0dff335ecab",
+              "license": "Pexels License",
+              "reason": "The article discusses satellite images of wildfires and smoke plumes in Oregon. The image provided shows an aerial view of ocean waves breaking on a beach, which is completely unrelated to wildfires, satellite imagery of land, or smoke. Neither of the 'must_show' elements (Satellite view of Oregon wildfire areas, Gray smoke plumes extending eastwar",
+              "source_url": "https://www.pexels.com/photo/an-aerial-photography-of-ocean-waves-rushing-on-shore-9181889/"
+            },
+            {
+              "approved": false,
+              "fit_score": 3,
+              "image_sha256": "12d203eef6de61d8084dee27ac7d63022c2b2b9974263b6a53e01d9bfddefb27",
+              "license": "Pexels License",
+              "reason": "The article discusses satellite images of wildfires and smoke plumes in Oregon. The image shows a landscape with a lake and hills, but there are no visible signs of wildfires, smoke, or a satellite perspective. It does not depict the specific concept of a satellite view of Oregon wildfire areas with smoke plumes. One or more required concept elemen",
+              "source_url": "https://www.pexels.com/photo/aerial-shot-of-a-river-mountain-10154131/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "78ccbe660c720fcfb82ca5c06c1621f51e30afaf0177c4c70b0c97dd447697e1",
+              "license": "Pexels License",
+              "reason": "The article discusses satellite images of wildfires and smoke plumes in Oregon. The image shows an aerial view of a dry, cracked landscape next to a body of water, which does not depict wildfires, smoke, or a satellite perspective of Oregon. It is completely unrelated to the article's subject. One or more required concept elements are not visible.",
+              "source_url": "https://www.pexels.com/photo/birds-eye-view-of-a-water-reservoir-10154271/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "54249932b377f7a299f41c5b6d50480cd5730b83cea38568544c2264e0fb8d5d",
+              "license": "Pexels License",
+              "reason": "The article discusses satellite images of wildfires in Oregon. The image shows a bridge and a city skyline, which is unrelated to the article's subject of wildfires and satellite imagery. One or more required concept elements are not visible.",
+              "source_url": "https://www.pexels.com/photo/iconic-burnside-bridge-in-portland-oregon-32173030/"
+            }
+          ],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "Oregon MODIS September 2026",
+            "Oregon wildfire satellite smoke",
+            "NASA Aqua Oregon 30 September 2026"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "4805a67cf61c12a916cd611a33a7e358a1e25a7677292648a7f72db836f2649e",
+              "license": "Unsplash License",
+              "reason": "The article discusses a recent satellite image of wildfires in Oregon from 2026. The image provided is an old historical map of Oregon, not a satellite image, and does not show any wildfires or smoke plumes. It is completely unrelated to the specific subject and time frame of the article. One or more required concept elements are not visible.",
+              "source_url": "https://unsplash.com/photos/map-of-oregon-showing-topography-and-rivers-IXdPXX9h6GI?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "23186b46bae7b0910ca80fb2c1e0d0099c7a0458effae02631b37b7cd2df4fb2",
+              "license": "Unsplash License",
+              "reason": "The article discusses wildfires in Oregon as observed by a NASA satellite. The image shows a person celebrating in front of a university sign. There is no visible connection between the image content and the article's subject of wildfires or satellite imagery. The 'Oregon' in the sign is a geographical match but not a thematic one, and the image do",
+              "source_url": "https://unsplash.com/photos/graduate-sprays-champagne-in-front-of-oregon-state-university-sign-rcKkIGBLoOA?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 3,
+              "image_sha256": "697c6923bad33b3d11eb50bddc3036b9d54ace09ccf3a6b72468eaf8179df3fa",
+              "license": "Unsplash License",
+              "reason": "The article and concept describe a satellite image showing wildfire areas and smoke plumes in Oregon. The provided image is an aerial view of a healthy, unburnt forest with no visible smoke or fire, and it is not a satellite image. Therefore, it does not depict the specific concept or the core subject of the article. One or more required concept el",
+              "source_url": "https://unsplash.com/photos/an-aerial-view-of-a-forest-with-mountains-in-the-background-UOkzI1elW9w?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": false,
+              "fit_score": 3,
+              "image_sha256": "a25bb45f1379a28f36862e9a3ab553bb3f37998f0c56310a7f7718110133c981",
+              "license": "Unsplash License",
+              "reason": "The article discusses satellite images of wildfires in Oregon, specifically a MODIS image from September 30, 2026, showing fire areas and smoke plumes extending eastward. The selected concept explicitly requires a 'Satellite view of Oregon wildfire areas' and 'Gray smoke plumes extending eastward'. The provided image is a ground-level photograph of",
+              "source_url": "https://unsplash.com/photos/large-wildfire-burning-trees-and-brush-at-night-Xfhf4Eviza4?utm_source=uutistenlukija&utm_medium=referral"
+            }
+          ],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "unsplash",
+          "queries": [
+            "Oregon MODIS September 2026",
+            "Oregon wildfire satellite smoke",
+            "NASA Aqua Oregon 30 September 2026"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "wikimedia",
+          "queries": [
+            "Oregon MODIS September 2026",
+            "Oregon wildfire satellite smoke",
+            "NASA Aqua Oregon 30 September 2026"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "google",
+          "queries": [
+            "Oregon MODIS September 2026",
+            "Oregon wildfire satellite smoke",
+            "NASA Aqua Oregon 30 September 2026"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 6,
+              "image_sha256": "fe6feb81d2cb798e6121c1ae993f03bfc8f0d4fadecf17c2741879f726311fc9",
+              "license": "Pexels License",
+              "reason": "The article discusses wildfires in dry, hilly terrain, specifically mentioning burn areas and smoke plumes. The selected concept describes a similar scene with dry terrain, a dark burn area, and a smoke plume. However, the actual pixels show smoke rising from a residential area, not a dry, hilly terrain with a dark burn area as specified in the con",
+              "source_url": "https://www.pexels.com/photo/aerial-view-of-houses-in-a-rural-area-5872151/"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "Wildfire smoke aerial view",
+            "Dry scrubland wildfire smoke",
+            "Maastopalon savu ilmakuva"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": true,
+              "fit_score": 9,
+              "image_sha256": "afabe6c73d9e57ae511aef0fb94bc828d5e5f75f4b69bbb832b8a85b2d7a1cf5",
+              "license": "Unsplash License",
+              "reason": "The image clearly depicts dry terrain with smoke plumes, which directly illustrates the article's subject of wildfires and the selected concept of smoke from ongoing wildfires in dry terrain. The smoke is gray and drifts sideways, matching the 'must_show' elements. The terrain is dry and appears to have burn areas or cleared land that could be asso",
+              "source_url": "https://unsplash.com/photos/aerial-photography-of-smoke-near-road-ewt4P8Y57_0?utm_source=uutistenlukija&utm_medium=referral"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "accepted",
+          "provider": "unsplash",
+          "queries": [
+            "Wildfire smoke aerial view",
+            "Dry scrubland wildfire smoke",
+            "Maastopalon savu ilmakuva"
+          ]
+        }
+      ],
+      "selected": {
+        "concept_rank": 2,
+        "fit_score": 9,
+        "image_sha256": "afabe6c73d9e57ae511aef0fb94bc828d5e5f75f4b69bbb832b8a85b2d7a1cf5",
+        "kind": "real"
+      },
+      "version": "article-first-v1"
+    },
+    "source_url": "https://unsplash.com/photos/aerial-photography-of-smoke-near-road-ewt4P8Y57_0?utm_source=uutistenlukija&utm_medium=referral",
+    "stock_provenance": {
+      "download_tracking": {
+        "successful": true,
+        "url": "https://api.unsplash.com/photos/ewt4P8Y57_0/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw1fHxXaWxkZmlyZSUyMHNtb2tlJTIwYWVyaWFsJTIwdmlld3xlbnwwfDB8fHwxNzkxMTc0Mzk3fDA"
+      },
+      "image_url": "https://images.unsplash.com/photo-1550171342-0c2f06a89abc?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw1fHxXaWxkZmlyZSUyMHNtb2tlJTIwYWVyaWFsJTIwdmlld3xlbnwwfDB8fHwxNzkxMTc0Mzk3fDA&w=1536&q=80&fm=jpg&fit=crop",
+      "photo_id": "ewt4P8Y57_0",
+      "photo_url": "https://unsplash.com/photos/aerial-photography-of-smoke-near-road-ewt4P8Y57_0?utm_source=uutistenlukija&utm_medium=referral",
+      "photographer": "Brian Sumner",
+      "photographer_url": "https://unsplash.com/@bmsumner?utm_source=uutistenlukija&utm_medium=referral",
+      "provider": "unsplash",
+      "query": "Wildfire smoke aerial view",
+      "retrieved_at": "2026-10-05T04:26:45Z"
+    },
+    "stock_provenance_sha256": "a66f1ebdb8c357546c5c8ce28f11b0f5b0d7bb155dc47e5e787f0c645a4749ef",
+    "url": "https://images.unsplash.com/photo-1550171342-0c2f06a89abc?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw1fHxXaWxkZmlyZSUyMHNtb2tlJTIwYWVyaWFsJTIwdmlld3xlbnwwfDB8fHwxNzkxMTc0Mzk3fDA&w=1536&q=80&fm=jpg&fit=crop"
+  },
   "new_article_files": [
-    "uutiset/rachel-hurrikaani-kulki-baja-californian-etelapuolella-59edc2fdcd34/index.html"
+    "uutiset/oregonin-maastopalot-jatkuivat-syyskuun-lopulla-c79a7f054313/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "3ef41e1305790155be46be908dc06918bf950b3bb9e26ec7c76c0fcff9331269",
-    "_redirects": "9d65a887fe5f78bf4f079705ae19b605557125151f7a04acfc0b73bac6890327",
-    "ai-kuvat/index.html": "6fe1182c66273b6dd751952930a41ca3f02b7daa31b04e4ab3937736f7b59a22",
-    "categories/kotimaa/index.html": "069bcfa83f029cc7bd985c71a0dcf6b863ccf05026c667a988f0009cfbf57c19",
-    "categories/kotimaa/sivu/2/index.html": "19fc31a1c99234ed5ceb4af44d2243dc563e32a224704dacf39387504a32c76c",
-    "categories/kotimaa/sivu/3/index.html": "c7e3995967f7a9b3ea0419ce4975cf0b6208f19088a3d213428afd7e1ee93904",
-    "categories/kotimaa/sivu/4/index.html": "2ed0d45e37c8e6a37fd24d2e6d5b20941b77fb812f30fbef9adf287968b7e756",
-    "categories/kotimaa/sivu/5/index.html": "6816948f4b78ba957fd23af2065682097ae7b9b3671117d6e0c802303d8ca39f",
-    "categories/kotimaa/sivu/6/index.html": "7c4c16e764b49c1b97b2efb862fcfd2b1b3f23a0833d8da4d85d7a2e18869771",
-    "categories/kulttuuri/index.html": "743a7e5e1628e89387e82462edd764ad54e150e0639dcf6dab3d0d00264bc9a2",
-    "categories/talous/index.html": "6a93e1bf2782dcaf72f691a076d8bb879418334a5a45dba850e7f5239359324a",
-    "categories/talous/sivu/2/index.html": "5b3d4538ae135f640090a24ea44ff15ec0b1b7fa076520498e1611abb304e63d",
-    "categories/teknologia/index.html": "1c824e31f26bb8b430dc3ee489bae329c550d36204f61498d83cad3b48ba4e25",
-    "categories/tiede/index.html": "155b82284f5cc3e42776898b68e3e96738defbf7e4eaf458690765f5d1bfe101",
-    "categories/ulkomaat/index.html": "0dc219f048f5b3596a28924aa25579a8e42acb7be291f3284d52a9aa4a999c3e",
-    "categories/urheilu/index.html": "11817769472b0c14cfc3a52ed0413f54037658c11bdb5bf46bab178d56b5a9dc",
-    "index.html": "9e9f5f415f1383c03e165111d1d3a5066149c6d159d6b5ecace2ed96c68c3ae7",
-    "lahteet/index.html": "c165ea2dbd1ff34f394439d422476452281716aea201b27922144507b26506a6",
+    "_redirects": "260f67b4cdaf85777d7582351857a861ca63722ba158b7e0745fce80742da301",
+    "ai-kuvat/index.html": "6b6df53d2f9a08c4e95fb751975d96459bb2057150ecd0f5bdb16254719ba57d",
+    "categories/kotimaa/index.html": "28cfda2fdc56c0b0c6f4ebfbe4bac865ff1182ac3c42a877c78f2a7444b17d17",
+    "categories/kotimaa/sivu/2/index.html": "5ce811c2fa3695b269fcd60acb00498b41e78d1dfe9d6d9469d0f961317cc6c1",
+    "categories/kotimaa/sivu/3/index.html": "95477fc5e05bf25070fe374b26f07fa32e2d3edfb9b11b80c6db93b998cf1818",
+    "categories/kotimaa/sivu/4/index.html": "5ce31c8f068d9aa15e2a8a4d01916ed547d4396983a04d9e2f988e89bf1c6572",
+    "categories/kotimaa/sivu/5/index.html": "9f1a2218aa6d3c962aa6481ee654026bfb181aa13cdc12373f31175004b1286f",
+    "categories/kotimaa/sivu/6/index.html": "a4f1a9e59413c82d3eaac192ceb84f698186ad1b058eca3db60b3048463e3464",
+    "categories/kulttuuri/index.html": "85043c7d1d7d8b4d34b16512b041313fcd5890cfa7af06a9dec493eca763cb17",
+    "categories/talous/index.html": "e55de102989e9b5916dc95445cc4dc7b7f9c7d5e9eb37a778b3781ad1c9d0c19",
+    "categories/talous/sivu/2/index.html": "100300e3f8ad8da48e80af94717796c6aab6cd228e8ccc51d8d07f6dea4b4372",
+    "categories/teknologia/index.html": "f270e774811b0d711644b7555a5cf846760d3aa0e5ba3d00005568f52ad32ca5",
+    "categories/tiede/index.html": "2e05c4ba7a8939de5fcdbda4e62032522cd15795f9d1fe910a520c978a5c9dd2",
+    "categories/ulkomaat/index.html": "65cb0ba8a2635a6f754ec953833e6c5643193394b3e7b7fe547f0f01564cc38e",
+    "categories/urheilu/index.html": "7c046ac575e0e54a6d64c05639ac2a03f519d806131fff3f02750783963744de",
+    "index.html": "c4b173696e2f02978a2a87df7af7af8561a08f71d0200d503268fca2875ff58f",
+    "lahteet/index.html": "3f13c7897bd83a9033cb8eafa025c72bd8c904c9300446dd4c706b497867f3be",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -553,29 +827,29 @@
     "mvp-assets/portal.js": "ae7a9eee9306242d93362e5d9b19506af0cc9aed46e19b75c1b475bc3727c92a",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "c38c69b89c21567c06f0b8695347f82b02ce529911525ce6448c3722b9f6a605",
-    "oppaat/index.html": "b0989dfc8f7277da4fcbfea95c67b112b9adbdfecac1b7855d52e2305c7e1655",
+    "oppaat/index.html": "baed0a647fa1699e9154ca6afc10587da5e2aec913188e01d30155a09778453c",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "c29bcd160866899ffbe6c2d9d9c7f7a53bd1ba2ba9f891e8ab6d688a0f976cc3",
-    "sitemap.xml": "616f79626af3d54e9aa5bfbae5fea616331d8891872313c379a00ce2bdfe178a",
-    "sivu/2/index.html": "3df50f0676e1b8311e46bb500340c854f9306e16b8526e3b72f6ea022d9aee16",
-    "sivu/3/index.html": "e1c4716167a960b23cc3b871e0e649c976db9567b11c749d89b22383910c4340",
-    "sivu/4/index.html": "55899c1babacde49d091e37afa1dca68dbf2322d48bb6009fdc58b6f66d70d19",
-    "sivu/5/index.html": "250c9edb7fdff14759f2d761cc490f5932b73fce9c679b8f057e9e5ae3054ea2",
-    "sivu/6/index.html": "ad4007f28d06eaebf9c29ba70597517979fb3bb77baf02c81e25ff9c2d8806eb",
-    "sivu/7/index.html": "ed061d698e753d9ed6a91ffecb11e109f5ccde9fc8bda159f5c254c850baa1ee",
-    "sivu/8/index.html": "644ec6d2cb89651bf1b3d0286e43bb5efdf0421daec20e330d3885d3feb0aac6",
-    "sivu/9/index.html": "51d783506d4b8ada14f886b56872d075371d8629d43fb8711631de73c12f33cf",
-    "tietoja/index.html": "338e2cd6b3c989a900915655fb5b412b3dafc6db38b7a8c97261bc818b3ff756",
-    "tietosuoja/index.html": "e5ae112af9dc694376fe43726b1678cf71914efd1cc93805ef2a274b50e6239e",
-    "tuoreimmat/index.html": "47b9945abdd52243f7879fbfe1732d679aa61981d1323442b925f8a7d021e051",
-    "tuoreimmat/sivu/2/index.html": "0ce70eee7dbe5573dcb516a5f4883e020364533677e2a18752e65a73c7afb390",
-    "tuoreimmat/sivu/3/index.html": "0d98a9f49fd05e0689044d2d206e53cba06f4052e42e61824765af75df265b82",
-    "tuoreimmat/sivu/4/index.html": "e3758068d5bd3ec48cf8eb2054fee0c7cb4edd6cd457ed38a0e4d67fa375e0c7",
-    "tuoreimmat/sivu/5/index.html": "145bf86cb27acb934bb8b311d64009d68f6db76266ae914cabde7686718288db",
-    "tuoreimmat/sivu/6/index.html": "c6ac5881b8ce191e2ea4444bb8a3bbde5f5c7aa5d8af579f4a38e70d9cb4d58b",
-    "tuoreimmat/sivu/7/index.html": "3a36e866c2d336bbb87b4f114f3571d8f1ba15f074fc57831b11e3f7fca58e31",
-    "tuoreimmat/sivu/8/index.html": "37263ce1e7f0e2901340a410ed7a32df015818ff47a70352bcc35b86ed1c4586",
-    "tuoreimmat/sivu/9/index.html": "8716f5dc9faffac645b87a1d7cabda1401d3f36f46bd73472dce95a2c41da282",
+    "rss.xml": "0edc4c9af20193b626f95385bdafadbf1c2cc683fd666f0ccb58d5712b9354ae",
+    "sitemap.xml": "c377de5929ab6a70dbc4e070ea390a6b18b9abe6d8f1689b2f06a3afc5abc721",
+    "sivu/2/index.html": "424c51a4b606876c6e2123d1446c20d6c029dd6f4292ac34f8d1b1739469a8c7",
+    "sivu/3/index.html": "29877cab01d416f2629c9d4d9b5e34cc1242cc959d95ecf2ff9be38e405776f5",
+    "sivu/4/index.html": "70f64848bf2c6e52c6c0fda8ddb9393e5d72b688e6a7bb872a4f6f9c813e516d",
+    "sivu/5/index.html": "46ce07e856b9178c6a93cc54cbe39ad491f29d6944edf3dabcf56da7893a0735",
+    "sivu/6/index.html": "cc947c98f71620f0e80ad45b413420789b6870ad3e9dc13bcb78baa10e23fad1",
+    "sivu/7/index.html": "5a5221be57d2a7bee73f928fcacb8af1c9c19b9e6aa705e35b72a413fc44fdf9",
+    "sivu/8/index.html": "995798c66c1557f694067b451c1a3965e6a9795d10dfba227f1b0b6134760592",
+    "sivu/9/index.html": "6d120d5b40eb6d0dc1a0948a947e518a08f3e0499a2f23b6fc68707e3aa5b7ef",
+    "tietoja/index.html": "dbe6fe0dbb9916bf543669d21a3014c1522ba01018f6b1866c57fa5f59d11b1a",
+    "tietosuoja/index.html": "d60984945bc3e2eb01c3b8bad12c0f7fe53dcf46b0e232fd35e9b6ad3f850cf5",
+    "tuoreimmat/index.html": "809ed29b3cda58fabb06a9d17d58e3355537fa3e06d499172ab86600d8895d31",
+    "tuoreimmat/sivu/2/index.html": "06037111a5cb5dcc4b6816f2b456e5a03c62287a14644e65cebd0860da657cd6",
+    "tuoreimmat/sivu/3/index.html": "932ef272e990f92f88b44922abafa27ed2070bc042aed645e045fa32e63cbe1c",
+    "tuoreimmat/sivu/4/index.html": "6d4258b957745c6f4fe5e89bc2338460aa873770c9b85520d3641f60bc12f210",
+    "tuoreimmat/sivu/5/index.html": "3c4f58a61b3505a67cf4ed3c7234eb454a6153aa851c54753c05935d91a3bcc8",
+    "tuoreimmat/sivu/6/index.html": "c54341d8c563972c5828e7a2a47ef6dbbb984399477e919ac3db7f5a5d035b87",
+    "tuoreimmat/sivu/7/index.html": "cd80d685e6f4270e103fc6cec30d8a6beb45055f3e10dd23699096fd2f616351",
+    "tuoreimmat/sivu/8/index.html": "aabeb77934553f59c6be0eac4a81e5dddb553bd815e1c5f1232190b7ca2ec892",
+    "tuoreimmat/sivu/9/index.html": "62ec76da281f1fbce58cd64633e75fccdcbe2674f3150bda71998939e2561e7b",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -589,447 +863,509 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "382b241d5e0ada7b060420ae42cb8b9ce03b824a6ebc1b089c3bd96b6bebce7a",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "0b7ec4b4f5c3081797cb706f913ad7e509ba61610c2d011b5d0ae394cdb813d4",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "4ed7c9af828e21e273f3a1a80403318c8d448b77354ac16018d0e02097504eac",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "b08435ade69d8f7cb40073e4e07488586fa4aa59b34622bf84a51b0b02b58042",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "15ecaf6b85846f2f5d270c6fb2e03420d52a9ee3a5b220b784f015d1770f6180",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "9ae07734bf6bc26f786165c715c997d45f09a3e587639007ee224333cdfa2efd",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "640f6eb65183d793e8d8da37baa5421d46b90891637d2819af4c77ac4fe61bd1",
-    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "ec3f3f4c9bf2a897fb7171bff3379d29b51267a18954c327a167fd14d3d3eb56",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "d0b47ed08a2f6590c85d7f87dd4016dbbe78fd207f5d228791d1464c127ea768",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "aa7c37d46e8746c106ec38fdfe19b1d48ccfd575a03eb0d07e3db46bffbcaa45",
+    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "68feeacbb54f80ca244bbd1d9726771214434105ac918a5c082c5d9c544c241d",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "78e86a59d49d0add042f49603d37521ca3719250e865da1280ae629e2e9c6eef",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "690054ab65ac13a12f3ebc7be6b6d642eab0ae72a1c254f98b2f670194883ca9",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "d72101cb6e4929aaa3cbdeb7b5d0cf362fa7ca107c59add85f3c5e87630de04c",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "da112932691d7ffccd2990fffce55954927a2e8ef9691239eeda987ed73477e5",
+    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "c7dfec0d0e3c7b3931a9133645bd7ee4f0c45255c86deb92d6214343227918dd",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "984d84e4eee9a2f0656f25a39e5c613ef9252b05803baeab412b9ffe87dbd0c3",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "6d3eb8cb1fbca74f1a360b879717b10c385df6568702cb670b828cf9c3d44cdf",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "5fd5545af492fa26efc1d6a275e1fb80c794728cd7b98016bcb3cc391bf00728",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "f8139c33a3ccba25383964e21ea4a2bad9184b816b829e3c74a1cce0e1a5b388",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "6318747dbb4a766acd8633f957ae41962ac1af79ff4808325eb238ff439e8768",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "a23c331b3e107eb613a38a2eb298d6e03c4a60a307059e0d1bdf7f6effda93c2",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "4bfb105cf34427c9d54f55499b0afea4391e8fa3926687d0d41af6053c67fbf3",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "82749554fc87848880f3cbc5fbc314b9743c5cb357a8bd4f5b7f59811ff969a3",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "b64d8d61737e971270def020546ffad5ec80d75aa95b6124605946388194665c",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "f70909f0096fdf1df2e2c8a1687a617f8af5e3ebbbef72876dc822987fe88304",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "15d49f6be23eaccfd56675fb2e58288b01f2c05aca87a731281bdc032d4337a7",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "6895f335705c279ed1905b5ef575e2a4a85a32f0a418b072cc776602a4897658",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "4d0254b70eb1588d42f2b1fb208abe8bef972b64c0b04a7094b2d840ab094ce8",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "7d87f6a0511f47de5f37a1d1ecf77524e3230ebcb79422c42cb241c8a1c26552",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "dab696db4828050b812af37cfc32abdf1390a7b3b525ba30fcf21005e8056d65",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "b63fee9f98f933ab66292c24c65033e8d815b38e1f7a00b9618ef96f6b3c124e",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "ef5f01cbafee8f097d17c16e7fdd84635112f651efe0dd1b2e8e60d0ac1d11ea",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "9b41895414a6beb3dee584ba0cb9f75d52853dba45b0064e7314d7adf2dbefbe",
-    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "8093cce16d297a485883bf4a38fa3e920ed543a4f6ed102d0a19dd650a4c3384",
-    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "bde38fc0083c9d5cecc43518fa383997ba2d60b6cd72ab450141225eeaa24bb8",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "4ebcfcec30b5d886ca56ebdd137b77a09b392c5a0171bd7b547d195314e2e569",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "fe66ad8ce6eec7a4617f344e0a5cc68515b5f124c9a20de13bdc0626475a4e26",
-    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "ea7743caf7bb06113718cb519a7f491cff6a47e90b7d3358654831a05ad1eaeb",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "8796302d36be5349f2d2c14437e1f1cccfce2e0d1d6ca1ba64887b4007418b51",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "3ee241adc0a367488570550b06499016f94493622102d1b6925b3a1cac07f48f",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "72aa9d44758b861269775d69c77cca5fa812f8741c1de25c20ff297a9e91510f",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "2a0415c8ca70e3edd2c4ede9a6f3beb21ea88c3e5d0873f1f11758ebb4b190a1",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "733597de49f367519a93240f2df24df5052722c9981e65f893c4347d6287b22c",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "691fe597395a3b456c1bc86e255738c904f96314ce893a453825df8c1f921f62",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "ea935d7b772e98040cdb8e6aa6550d304a1a45043482c532af9fff6c2eacfee8",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "8f0b053af7a4817bb9131e9b2b3edc3443e68629b090c147997b35546f0d0823",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "14fae8021f2039b09098aa8b01c7d6f7002db182b59c340489f9295d626bb2e4",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "c13acdc3bc3a8b8e5e39b4a2baed0b9b8c322708509057f57ac154d9f59dd853",
+    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "f9c3e0237007d0c94d0bfc25c0dd21dce196d0212d16a6ca534ec90ee2ea40bd",
+    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "8faa62ff2c51558e47647558617642372a0c690c160ad42aeacb75c000065943",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "c28daf4239d62063d8d09520ef071b446c541d6c218d6afd06b8ba36ad00bbd5",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "4955be0e71e42fb083778148db699ce7f82e4d62b20b6a56e4a66d8612604d04",
+    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "1634e64ace33dcf0b23ff773d3f112e52ac9325b37d2852b24de55c62035959a",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "2e877fbbc51ea750fadf503c855594d4db82db5d8790b0b5f7717df7c4b6f6c4",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "a3d01bdedb5a4fca86341174073c5b9ff218384e7a73d6cce8773d2e548dd1ca",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "a2d4ab42101a0059976905b613e42badb4e14245941c0c2b57482f74ca765655",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "4efb250babde227543d49f0b5be123d93eb0a4f2c7a90ab2a3a09e2e7dee55cb",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "8466049b645b0bb00fbaec77742d9c9c2cab7fbe3c4e809231423acd0fe7c1dc",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "8fa86b5010e4ebf1f0c28d68b8c15c823fa4c34af89fea8f7d50549fa603c1aa",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/fredrikintorin-remontti-viivastyy-arviolta-vuoden-loppuun-2a57e16b0903/index.html": "f9bf20058f12f2442dc013e21925810adffd4d9571f5899cc57870459c0946af",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "dfdca344204c855800fe6db7c96c21f612271a41ace1635d70fab4c6926ce657",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "7b32a3d66eaa037720272a6449917973bb0d6920b5f60e449818ac0d9d554973",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "bf0dd2acfec31093f436c296fc2b203f7f8d9fca7faaedbc8771ae5536604995",
-    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "b8836334be3cd58deeddba6c42dfbb1a0b66b52a7d17773a66d2b7c24d003b18",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "1db27cfd79852740fa9436b0889b40fdaed3e8ebd65af522a9cb4382eb3c0bab",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "9ed52f5a0a6af08bb93aaff455c240ec822c85b6a3ec8b4b31627a4f12cce98e",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "54b36beee3b3401dc7cd47bb83bc7f97bc94fa0f073a5a18d4a3652fb0dfc286",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "955d1be9c0a1ebbc26cc85839df814d8859b3c5ded0004b9c726e9270d4371a7",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "11dfec987caa0726cd15dd9406e31b65c1eafe8b50755fbd587d7085d34bf255",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "3ab6fd402e0d98a14489588d9e8ef43f0b49e436f71f2eabbd87497541aa830a",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "a4794b510952ba5a321c156786de6ba2e04cb57fa752987f8583abc1f096cd2e",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "cc5f8265f181e268ee82e3724c628ea15eb887834ea92b55efe02a2806272f34",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "e9997c8fa5ff0794e195695fd18d91abfa21688cdeb042c94d00b492d85b8b9d",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "b06cc5778cba7f5d76def1d8b4d649292a5e457336ac389bca04634043fff3c8",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "cb4bcfc2b2b7082436d8e2427c2d8b2f9bf2fd1700d7358ce6abf6f3e4b18e4d",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "f0aa93036fa161c7a4a421b14d25c1083cb6e94dd84da6430a77823afdb4a98a",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "99b0728d3b42b625ac6dd306776347719a5787a9e122d124a0596dd2934779cd",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "ea828e4feac437f20b5dfdd7c49890a47ac8c9721de568ecdb110285ea1d9a04",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "49f4fe862d2276f812c0db4682841731fb7ba5809ddef10b342907a2f7b7d61e",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "8f9ef76f1754d3c82310bf69c2be7b48713d369655e96916961d020380f93004",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "7c5d394b8cabdc9137d8b7d02c6564f2bc455daaa0e2935264adc18a54a48075",
-    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "ae1ebae408698f8562bfcfa49b0cde31d1c3d6a62c11e879aeae4877c39b8180",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "94cc03be58865a05aa8fd959fb6dfd5d445d24a521c4915c005b11ebe60035f6",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "3078996392774edbd06d34bb16902279902ebf8bd61009280018cdd4d0b4fd15",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "5bf90b9c9c08893f298f8f1a189ba38a506e93a468a62e057138e8b9809b335d",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "2a2df2137bf7cce702dca92bcd9969448a81ae537acf013c9766ee9fa3cc8499",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "418148e05bf5f085113255171ed17aea1e520406626cc05fc7553b8e63025758",
-    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "4572eae23b4afb23b68cdb58241cdbb1df532d1748ed851d6e67ba5cf452c4c1",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "8aab2414279ada25cb70a4a59c9c42095c54a914bf72f768d77b2ea3e2013130",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "759c9d77d65151d89716fc9b19486cb0226e5470d47669e8f27ed1c31afc97cd",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "48fdaf2d6c6923106957ff8227c021321f4ab55bed11370ecc04cc66c95518f4",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "7234f9bc0178a59b8bc1fd6455468a875953f5d72e4a3003e6521e4639072c29",
-    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "92a83a2ddc4499a206bc5d109102e7b75ab34b7f4b4bad817e7b38feef872554",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "7d8e73648df2210cc5b5d01661745ae1baf1eaeb35657934fc954c74cc911da7",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "798e1588444dcb3278ddbcb0dd4b446fc7720e75a98ac48bc9d88564c7102e19",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "34f2573a24c2e8f0c8de8247fda352ec0c9790874fd76a6fdcec867fe32a07de",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "3fe7e42e3f1e5d408a60ceeeb9b35b4e328f5d7be4f356d39bce0b018a40356b",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "cc26bbd2ecf0dee30ce376f38b2e410f896826e7f62dfe85fc92b023fc8ba487",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "666a230e8771277e50e048eb6c3035f741974796ab86e5bb53c94f3b98cdfbce",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "258346abacf9f83e8d88490d9dbb165f64494b54bd42c71eabf5d7d090bae2a8",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "9832420d4a9a4e99e218cd22741c430d1e34e4b3be2757a98168e811f7160176",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "895a8fd4e172c070bea16d6e76f397d884afa4c63d8f4682b38fb6950a945fd9",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "3cf2d656ab36833e95d6407848402780a76de1be5133a492d83b8ecae462ba87",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "5871eb154ae21f6463e8b0d2b81c95b095f1b62508dc6cedd05d39208d9f9b74",
-    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "afc11ad3dc303c33069fe20f8868fbf0994857f85fc55295036f9a953c2b3ad9",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "c6ad91cf57e9ed609e880d9eb8229e0e98ae7ec4f29575731cf627663c99bc63",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "e99a4424930b885014894cec301c7ff6226c7f21c4ae92b1f8a7a50cc01b343a",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "6647eb486509d11eb8b0089caf5dd288d2fe816b6ca584e6021687aa970a9d56",
-    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "fc9282426e9f5e139177ecfdfd9265b6f08b706cd8663669b0a06ffd6af4c3c9",
-    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "2c330f9e9cef965482aeb1475177ee50967e96e03d6a0a119c3d72424614f161",
-    "uutiset/korean-niemimaan-sedimentti-erottuu-nasan-kuvassa-b25d7a241a77/index.html": "8a5bf29c40e47769a3da7e85a3f0469f728ae9795b44ff8806f81a5e25835cf0",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "7a2acb06e7c97d812141bc67e6e560ac575f2696fcc6edbf93fd85baa78f4b9a",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "935723a42322a68958c5c2d7de955740a106048612b0dc0bff98ba26a11689f2",
-    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "9e5ae98876441e464b5bd985d62872d587856852f9f02519df3ee4d5bd5bef61",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "7547e556c3bba09f62ac50b6a1353f3797038d0a18f75e570bb67948003a3c4e",
-    "uutiset/kuluttajahintojen-vuosinousu-syyskuussa-ennakolta-2-6-2e846b3cf176/index.html": "8f9d74824b5c6db8e8c19cc87b807c06986d07f5eca33dc3449b19e1eb9f884b",
-    "uutiset/kuntaliitto-ehdottaa-valitusoikeuden-maaraaikaista-rajausta-fe92f910b26a/index.html": "ad8f10e5eaf2f77f6d800a0af9d65db82bfcb929fdbfaecaa92d921908ddf6e1",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "aaa1e8377b0e5ed0cc01a553543938e5ec083973b68009e71b3564f8e6235b07",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "b95a428b1a553737dddbdf43716c50c26ca129b635252e8a7989c53f17a8b79c",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "8283b4a70e42b2aaac463891be10abe8667ff9302957c39745b8a9c3fc447e64",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "687bc83da5a4a68d6ab88798cb848008970af353978522a55745a98be8ac5a91",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "400a862163e138e347fd33f35133c99561490d195f5fa451966b0d548949bac7",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "fbf050e452602aacbc88133babe5b46d563ec338195da438e44b93f040e793f6",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "854e5c14ce23bc2aac2ea31db769e111009ef43a1ae8efe3d5e89d5394058609",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "3af000f50f45dd2514395769bd7e34851ed11dba4ebe82af1104ac3f7aeddef0",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "9b88919f179361bc42e75056673fec9bcdb8d54f5edce4a4cac6f7f29b48e3e1",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "d276b47bce5b2db1faf808a8039159b524a6469f57b8d71781c5455280f3bb92",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "24b36a219818cc64c0ed6745a140657ed0cde76fc7d75ec5940fe3039dfcb226",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "3bc0647463c53183e5f947b583b282c49458cf9a5d1ec664c483e40c0766a2a9",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "5d695761b63226812d1f09d5505eef0957ef64e65e23ec04a22b5a28eaae8a1c",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "6d98ff0137bcc33a86275d774daa19c75ec01683bd3519415955fcc73f154eff",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "2e05cf0d53bfb655eb78bdee6d6f711be82eebb7e9ac1246f0a90e629f374a0d",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "ea4395768f86e1e5885e15338331393dd980c0b94ded843856af19d807fbb371",
-    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "51d143dabc47f3b30e3037f9352a0aa93c32d264971c939709ba3fed3aee447c",
-    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html": "d43e1d36609271a54b9b3e92c7fa88a1c0aa322ea65b1db7660dfb7a4605a6b6",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "a072fbc4c3c608720362e57e4df05a923364faa1d71fc1ef5bb12fcad2355bdd",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "bb5796f44287a55efb69033a6f7a5faea1ceac670358d4049fc3940aa908a69c",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "5626b18a16c86c1fe6a6185edeef7b695b5fe47b44663be7f81b3b5031970ce0",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "648eb57b7019d8a7863846039049d388c3e975783b760e47172802218780d635",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "54c868090a080fd01f4e8013e588fd4a60610938022971d7b44b8c9af4a31d8a",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "c302666615339d162238cfba65d6a669726fc6aba0af3d43fc2dfd311c1530aa",
-    "uutiset/kuusijarven-wc-tilat-kayttoon-12-lokakuuta-c2bc4a29129d/index.html": "844317a6c575ea893487c3297a2e55c05140b01659329e3bd5eb870ce2e72ec2",
-    "uutiset/laajasalon-palvelukeskus-vie-kohtaamiskahvilan-saareen-c12a889800ff/index.html": "7104eba2e8b0dc819ecf670eaf0a5332c9e2cb3cc7b70bd03127c75fb6a98285",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "b2aaa6e774f86f003994248131c4d9a28d002d74d9c04e0b32db142444054a8b",
-    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "37fff461679fe747d7232adb1323b9c2a4ec26d6f4cdf09349e24b02a7fbad66",
-    "uutiset/lansisataman-pikaraitiotien-hankesuunnitelma-hyvaksyttiin-743604e52b6d/index.html": "13faf2b084c74a30224938ce467203db64d7b76918877c4f59281b3a372842ff",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "d6657676dae24b1a028ee84fcc756b2781ff19cd6ff17a8d14c706e312299216",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "793587aebccbaa8f3d353d665ac265ac5e3dcda05243fc66b8533849126dbbca",
-    "uutiset/lemmenkujan-kiertoreitti-kaytossa-viela-viikon-41-9379acd25d35/index.html": "bd1dc9336fd113d209ad67f77980796269be047c6bd6bd77ecb8502f8179121b",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "7edc158f79a7e19023fc533e859fb33420640e112eb35f1f5adeeb9c32c551d5",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "04cd1e0c073eecbd5bbe09caef500c2266d550f41ce5fb8c54d79cf820754110",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "767a328fd79885200432f7b007e64c67ac8532bc9bccf0f4b913e574e0d0a049",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "61cf2e3a9a7ce55f13e64927e74eb4fab70ad6825eab6ebbd5654f57b9c6b169",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "843fdd4704843198afa835324a87d6ae69e34b009a898b4c39c9fa73d015d2d4",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "478509a7ec261db3e6b016111fd6a097402ad2ed409067b258f473a5476f249c",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "5af3279e8256df67dcde9f53b1f9e90fdb7fe37a8caf025ea53d38ff5322dc68",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "495e63407c6d2520dac562481d23b3be5a34710f59a979dc108f79d0da60c4cb",
-    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "e1ef37e1b0f1a6c4ae601f71cc8343b305abd36409cead3cd0ecf30109ae7a8b",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "71eba84acd13e95190f0b06c71dfc2d6c1e43720574dbe4788e05ed3a47f2b2f",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "3954c0e5bd028a9480bc707b3b67363f5de3946e8a4306e96373cad22f2572d8",
-    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "ae0dfc0942e41b6b146e255886cec1f65394a9df3e779c49189e2cd7810f79d0",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "ac1ecbf51ebfd084edb9cb565089b0217a83494b7dd03de4ffa957fb6eeb00b2",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "3d81823e3bea1a52a27b30c3d1e9db150f30e4aaf504384aa4d25f5830d2403a",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "385f93722bb66f4a9ab9962eec4e00acd7d865f5d92ae3d6151dd957e975d0af",
-    "uutiset/multala-hakee-saksasta-yhteistyota-vetytalouteen-dacb24d664ef/index.html": "ca914e06d19dc11cf37f08c8b310a91e42b3e00c6a022839843afd87e43d96a9",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "a68f4c077c948929da4e63bb39e86781ae66724c525ab6fd11976e3a56360be8",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "251b372fce6b4eb7a5d37ee34129dacec1462d80c4091b438898a1dbfa8be890",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "bb47fd1e3d2aa686bc15c9dba25c924191915292975bb806a52fa6ac9d682ada",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "b4d399c1304c0e5d720c00dc7c7adeb0e0a147bf1a9fcc938d990b2fc6a47e9c",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "665650ef902e81d044c1fcd7b44218bbe3f50e2841f5ea33922e5a875b257429",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "17daed41c67b0d781ad492430e22e45dddc050d3088e8b7868484e799a7ec423",
-    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "260a6f0e008a47892a28b7d7b496c2324d60ccd8face464fc36851f8387cafe0",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "a534c17b25f8ca9f06411e5f9aee13609eb735bcc2dc6447cd4745daae75ac06",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "c7cd66312c364186f79d511015e250c255ebb3fa30f9f0fbaf80c37d685c8f7b",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "d2f9ff02e83661f2690c815393bb5e60afbdd1ed3fdd1bf6a9304e98f8391945",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "bdd6cc882aa1857fedeee5b3467ec3dd475313498985632f98f758e35f1d01d2",
-    "uutiset/orpo-sai-katsauksen-kansanedustajien-turvallisuudesta-41eea6aee980/index.html": "0bd493f78c40a81e369d28046764ac4f78b1feece448f200f331b00d6735dd9c",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "d34af7fe9486be7af668c4126c28db4c08bd10b7686bea7af2587322035fac9c",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "358521a675ea08ae0c9bcdd8c0a0ddc671da9e2d737ef26b00ffa0c4b263786e",
-    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "6626cfc4df96cf37e1fbbc7d4699f7686baedc78ab437bd0ea0e8a4f47e81691",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "41cb6ba709535676b638fa70d29a04e63dca3ea9f8be0fe29a6f8439f9226d29",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "cb386168e5cca97135c80b876dad1df085ec2c53d472bc9dbdfbf4b76abe56af",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "b3b0463b47c0031654bd45c93141d53be1930953be1a076e55cb2a075dbc1a7d",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "8dbd49c5fa788fcfb5559705855b4b62ea9dbac7cc4739eb6f4820f1051341ce",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "6e318132d0a76f0dc871d8960838f631c08bed83163b383b2b41abd5ddb551d0",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "b9df96d7738246d9a5d76bccf9041de1ed250cc711132fbe1f2c6edf1ba3ac9c",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "13ad2d2fe2f91d60fbbe419b65cab299987dbdb2592d4478d63490a49d00dd2c",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "7ac4a8d44ac6d1389714b3fd5996c6784a22e4308a89fd4b487f0fdcfffccc3d",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "4a9f1708dcb3ed8ea2b06aab24b59c2da4d008e79914829784f3b7da73ac070b",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "96890047e8a6cbb71850fe8b993e064ff59195efe15f99cbc833112f5713eb3e",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "64f2ee649df283d92fd0d077787f47d7e57f3cbaaeed294a1e2827bc52fa80c4",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "25ab031c1d56b9f499b663cdadc9d2fb42aecaabc8c88d7206e8703ac00645fb",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "d665510c0f29cc7ca74b3b4efddc70a745def9ece006f6165d7d69a638cccf03",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "3b65ed0857254e573c3c2ec1c3e1b5e883caa53a69668862bc685f6795e4f405",
-    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "7d4cb83cf95f317d89dd79d56d1cb0696139944171a3d130ba00631effb0da29",
-    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "9029ff5a2e288168133bb0f5d2fc77ef453f31040c54a98d056caab177abc107",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "c969df6f20885b8cb32efebf66c737defc79f2afb05a71921c0c47e92584e4ff",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "f6e293e68cc5018e3d89e8a7ecad1065d8aa91c4242f2325ba6d9935e3350d6e",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "85c693e7fb6b7ca1e5c678781431ccbc117f578b774f99f80182445c0998ef09",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "4177fc9df775c9f24dac4c47a8ca56da02ff1ce744b98352981b3cd0724fc96f",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "75316bc96f750d158d097d25ffff9d3eede8c6076dd0d64c4a8847b5488a3981",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "1ffe6050e07ad76621b4c84d1442c62826ede4818ec425c1d3851c9a24426df7",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "bdf1d2369c202da4986093541a4d6ab37b1402b5b499db04d45f5e221a754dd0",
-    "uutiset/rachel-hurrikaani-kulki-baja-californian-etelapuolella-59edc2fdcd34/index.html": "75dc16223959bc21e39db236854d74ece0c8c1b50cd7dc0c8dec2fe44659f6f8",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "b29b261dbb932cb587c9f52d63c5b2cda8fad6b5748de0f27ae7c42ba0a957aa",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "649fcd6cfab1dce59a3c1ccc50a87b3119170f1e28059f81af16926573ac1d8b",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "24bed784d552d690b6b8c89910aa98ab3029dd02c836a828b8262ee7d6c69972",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "c8c83ac99fc43cb95151a8252615a4e6509fe215f5983f4394258a70f058cb31",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "5946a64c8af4ca20e069a73c0427b2101639b76a5654b6bab73942003aa8c8f9",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "309c484a40c87650ace3be02a61d2ca01e8be7b6e4237248cc5ac5903509096b",
-    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "288bdc65bbde458166f184cddb820dd12f00894016bd795539c9629d95fd4121",
-    "uutiset/sahkopotkulautojen-kaytto-vaheni-helsingissa-81f29c83f795/index.html": "d2d646d20bc21fd83935090654968378b470dd89834f66a40bef1e1ec2d27ac8",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "c742833f2fde80f7addccf384d28d739787d3341390c50ba4dcb04bf0dea491d",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "e6096e3186b133f5b00074fadd6235b0322fdbe87273ea324af636fb3fc96278",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "abef57684be1033115545a433d66e3a4fa4bc2420df8fc6d9f856cb16cbd3b01",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "1cac0528a591f2546f3b8c07801549c829cab731d531296767f400f6e291f151",
-    "uutiset/sijaishuollosta-poissa-olevien-lasten-etsintaohje-uudistui-ccde11681bc6/index.html": "2a684e55cda52ba935d2b03c3b58ffeb60a9c9c86abdc703af80096ae5317d4f",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "72c89d7e94498ba83ee3d5d9ff9fb9fc9d13ac303a1ffd84ca1ab0b7dd42078a",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "189c41cfee67d853093f0a32589b4bc4038f3b5d70cc57672554a584b5f71e66",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "fbb509a4a670035b58ab4f985a47adb24d2102fd15f090c5d41178706be702f9",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "3cdc530dc55f086599d76a3e7a69aa12793b7711a41700ce310c9e9f918faf35",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "a9ab54563e259f560cf9c617a62f9de514f1bab5e273fa9a85c5314868b094cf",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "7aa94442347e7a0d1320c6dcbdf6ca5eff410496bcac61cbc5dc4d54b9c1afab",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "4bf07fdf4a4f99ec1456d422971127716e4ab75b4ba651bca6ea10c237347726",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "02360f37358d08c6801827a438d7163ebf897108928fb88f6a91409c25985a54",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "dd3cc9a858ed8e23d9aac64168387ea0dd87ad2413cef211d2f3caf623a69309",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "8e60f25e0d32cb5fd238f26a2644a2730db79e12a24e6d66e5192e7ff3edfa0c",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "672b24b88dccea60d2b1e41444bb138f7b85949c48d7adab5d0640deb691400d",
-    "uutiset/suomi-mukana-maatalouden-eurooppalaisessa-digikonsortiossa-6b30890419a1/index.html": "2c75717adfd7a4c36d0f12059b1194941287b11342f2e61bdcf7cd1a2688066f",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "03bacc35d5e6ebe595c37b3cdd402b491882c36c61d5db00a3c691eef5232231",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "f8d561ca5784ed5a21cb862b97227fb6702e9a0148fdc6ae32ac75fccfb168a2",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "2a53b9bf17370843ac0c790c1c6205fbceeba3606513f12ab7f9c8399e0b70a9",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "9ddca829042e9bd0a62bd6a26fa8a24998635c601aed96b179debf12303f7e9e",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "1e875938fa98050cb95419041faad366895f6d2050e58297f27812cca0b63ecf",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "d15009b8f8789eb5397f2286cad3a6fc4dbfa12a4c0e716475537ad07181a55c",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "71ad251f9efb4a25d658309d0e8a3c05555c6c8d66eb04383071d3ef819e2551",
-    "uutiset/tiibetin-ylangolle-satoi-runsaasti-lunta-nasan-06fea975771b/index.html": "04690b961e86061ea8986c398f342f1d44a49c94a6b3f48bde5f33d05a53c7a9",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "d4e842c442fb387f8455b0a72cc083f10f0585746d55da4ba51c5c1963fca330",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "a2f1f68b53d47964883b4976e4f61cfc22033873978428fe104cf83a74841565",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "78fa12ddfaa356d37131618dce18dfb4f13b355560a29c48b22a380966f7545d",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "6fee6e33286b2192e39568ea432697bd65bdebd6b3749a3cf7615d7326dc2dee",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "f92b92bf146347b350d235fb3ea1144f601b464b77e2541795ab068f2a4ad70f",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "a8a256426d532a32771260e9f0bc680a29ac93b225248fd436b4ce9196a4b543",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "2a580d6436165b1fa0856f9a539c75097624cb49636d167074b91dcb9932f8c1",
-    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "f46d744922d7c899159f9cb17658841f0a1635b33d48a7c82c846ff9c3035d49",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "67b4bda863912720d78bca5686970ab7fb103e2b8956dffd5edeb8f42556dd2c",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "f4e6504f61d58de6b30b50da5e057678b6d5363f9ecf2e14e29b75d8344a2777",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "6db4fea2d6d28cc17f4c8ef2f86c2e584f7cdf5d4fbabdb3e7a840b1dc8624a5",
-    "uutiset/toolonlahden-tulvasuojelutyomaa-palkittiin-helsingissa-c8d9df28ef8c/index.html": "25e1b7cf8d91dd90c1aee92ca1f660bfbe76537083e9b2aa2c1fe03bd319935e",
-    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "4c3a0f86a0c180b2a7b7aa4aef5602e72ab056de8778451f083c2d27ec87df92",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukea-kiina-suhdetta-aac41588a8b4/index.html": "aebea3e4edec0241d7623111063473369877b9d0fb43711a271eafcc5d807067",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "ee39844efe6d89a76f69c68c93a2ee2e44e5dfbd6ea1e0e373f5531d92ba9856",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "4226d9e4c86e0d942844805d34bb58bc137c6f176787d56db62ff350b8a32499",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "2d5a2e28e707f0bbb33a4f164d877e761dee12c726a5d17c3fcfe69bbfd41015",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "9a7a2669bc562aaa95510ece5dd7ee538d678cdf99efb57496f3043acdd64ab9",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "e7578b1ca24286dc65d0894b606c89984ee7fba33022f7b723ff86b2bafa4f03",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "122d03e3b2af9e7aa3b56e498f6b3ae49df2dfd2962025223f431c149a1c9c63",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "54e36640793aa4f7440dc0ff40ebb5aef3a4b82900ca8db93047b341af046838",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "b069447699c0ab2fe5f1a2f3cb5b85de7b321fe21b7832c0827074df77224359",
-    "uutiset/vaaralan-bussipysakit-siirtyvat-6-lokakuuta-5fca6d55d831/index.html": "72b4ba228c74a1f9c8e4bbb271d15b15a2ae4c33cd81c791b73f45461d23d176",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "f227e08738ce11639e19d01a8eacd1b90c4d32639b0911783f929435bd7f6100",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "3d8046fe7e1a267021cd85bdf663c9506c630a8b82ce4ba8113760ca8ac57794",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "8896fd3d59c0ee669920fa79680b6b54d1814a76278fb9e81ad92ed03c5d41c0",
-    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "acbd6422040d65bccb2d0d84aecf218b5bc227670ff5013cefc3a64c76ea91ad",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "f827a9bab9bd8fcedf27383b4897603fa695bc902acd05afd074885aa497e107",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "0901507fbb8b1b2ccc6638e63857dc3e9ae56078068595b54fdb569475b5a807",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "d92966faa6b7ff655b4f44b7e018614030876adf86c3fe076c94b85447e841ce",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "b13cdcb1f989b9f3efc86e19fd4eadc9ade60b6c68119acd928dcae5e4bc8ff2",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "d8ed2eef725a394a6717b6454a079338cd29bf906b53e3ca10fe61ccb0dfbf4c",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "4d8b2b4f9b1d57e1e379b73278f4008a6aee6d27af0d9fe7d661e206624a805b",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "02afc8fbd108b6c7526db320129dfdd28707a1fc606308b88bb7395fde6222bb",
-    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "e5ddfa284fd5ee4c701f010dd824e9bef0661c17d01cb8086271b379cfad8779",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "eb526f7cb986ca01e8df4270a02dee946dedfd3a14e167325219f1aef2d5b5d3",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "17f728b8a5c0428a95be7c1f7253d123bec1b630a9ccdca84b4f6aa0e1016a9b",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "640efe208e2fa3b12cd9879ea8d49913a285d067c3ccd160b605f7b1380a1f84",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "b30ffa9d1bf6ef3ec2dedd313a7d502ec7c2a84706db4176138b985fa31105f2",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "e0f033b4de0e8306dd721941831fb9c00889466b33d1c5bba9aadc135f0008bb",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "11ffe44c7e35bcd0c2e0eb8f78d532fec0edbdbfa3c27f447637ced9dd8fa5be",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "53a76e8e53fc30a11a71eaeabd58e1aba163adfd4de635d1982561a7376c1407",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "66eb7efa0fb60541f57d0dcf32a372255ef937c5a60b90017fdb25292deb2a5a",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "32e8026c7197cd86811909f2433b91a95c4f7fba4fc62302f940d2d4cec0194b",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "0d0f0de3eb42d2395045ddc173da6028f9ac2e441b9776fb23b358629777f5d9",
-    "uutiset/vantaan-historian-museo-hakee-avajaisiin-vapaaehtoisia-d96705192438/index.html": "67bece245a5e74b9c18e16102e4543a2a90bc3ad5bde4c3c4dd42bdd04642812",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "e361065f65e5192a7352e0d67f949257c82e93da8ab3ac37bcb3b4f6c5a1e16b",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "f47fccd0990f334037088e42f4eccd21cac3be448e1d9d56047526a0a419fb8c",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "890e68dbf549c8e5766953919e7711f76fbeba68d3afff74ad8c97ae38e755f6",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "69e48e5f49be6584d190f1f066dee8cf9f8aa37fa2fe998368e31b0c4e0fe2dd",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "58a1fe56e37e0675ff6a381b46a3df55e903ec44670208c9437df94dc3efcbb2",
-    "uutiset/vantaan-yty-akatemian-ideat-etenevat-tyoryhmaan-ba96b94ee71f/index.html": "c7d54dbe23a04d477226963b9f38be69992f8f3e3ab55e0f28e27fd046ca0cdf",
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "ec09d38e7a1e4f7b6fd8db53301b072b911cf10c4d50a83844660ec59215736a",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "bf71bfe146718f0f1623070761ee792a0e1570a5fd2c48f3f4d755d223a2807f",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "54cea54a4e20fc4fabd66d12a412553dded1d32a2b66b2aca9e25c45a5be14ea",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "8ad320b5906ac48c3800a4edb630de7682d68ead3596d6d32a6f128281ffc816",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "6779cb12e52cdd68b8091f5546684afd19fb0d3438eff65475e4cf7ef28f627e",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "04fea2503cb9c97bb39d435d3b244171fab99fafe3efe999c041e230359f1021"
+    "uutiset/fredrikintorin-remontti-viivastyy-arviolta-vuoden-loppuun-2a57e16b0903/index.html": "c89596b8cdb3d560d15a075c71ba637587aa40fedf9fd908819024fb6ff596f2",
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "f34a650ace9c562a509b4179bd55ae23f022120b8f71101c5128861898117630",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "0e48245fcb2646efe08427edb815203306a8f82e5c98436f8814d2f42d057cc7",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "e42efeb43f3d9cc3b259a3b549ed05427df7fece57a25a36f625fec6b79d84e5",
+    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "3ae1c8dbd8543e8cc39376160cd0469e62c9c3a73ddba6faf077dd3af601fede",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "c86bfaded9f5de90922228b110def04b79e4a8bc4a932156fd3c0917d0ca3b0a",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "c4156bcec28c9381a15c6aaa957c3b2fbbd4b40dc4fadb0ac432d94d8f54faf7",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "e5b87aa7d4a0204d3aa9e8986b0f4dfa7a0a9eb10b1241433642895be005c5fa",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "8ddd240bbd0ca53f6ccd38f096626322a62b95b6472c2b6af4105fc954be07cc",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "374061c627e19227ef74bbc34d6f8e945f6ac295c7e51404664759bd06ba2930",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "aa614af783f3b58c6e2823cc7243d4c865f7fcf53585533962aab802a2f06cb0",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "7571a59d56f9a1fb65b25c81e5d3cf251d6ea114dc8416e527bf9d01a53a5206",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "b2e16e5a56b871c15d017a7ef20621015fb21da582ded3d95299bac86e36ee60",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "c859952825f61e0ca6df0016beaecc63c461f6984a568c902ce581b8b539fcf3",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "9c24e42c7880991fbad244125233b127347269197bdf77b2bf346af884afff3a",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "56aae7cfd7e5e1215acfacf569c8eda6ecc43d381805f63ce5ebd4fa32921e45",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "9ea29dbce9e9c20aad4597b74eba26260d4ccd7eb2dd2cda2463e6d74fe7490c",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "e33707f88fd5d41824e68d545c193f30d8a9bf3e7fcf976c23f83fd26aa01082",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "39783f8a6fbd1072ab55dacca8f795b400f6d5f1679c1029d32462325af8e01f",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "b894f16bc37302ca9cb6a455316752e46192e8fe1f5c6a7105d9551717fa0482",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "d0bf32934cbce0d13510df44bb6551e8bd8c97cbf514db2a29c69d129afe9ebf",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "069e6ebb7def02bcbb3d2c56a9cea2195bf0d04d38fd0936abdf2c512310bca5",
+    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "dd759b3593b7358c0821493bc540e3933a4a6a0a6094942536620fd9f872d715",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "fbb42fe2f2774ad39e108a68c70de655585635dacf6280276c667edaca03a9e0",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "50ebe3cdc530756c5f3d24fdc09cde7b1569baaca144f88d36f5ab224014d55a",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "7ff9c34d58d5c7536d9b7fea42e09719f20e77274c24d33086b518578ea71c8b",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "5cfce4d4bf92008db40b677c4c66088a33cc96b9baae8895a855564d01cd9fec",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "5abfdbe63fb3018eb53f511a708b2ba6306b3c1f9fd08c8e4937ffb5ca1f865b",
+    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "e19cc2f003e2619add80fbe2f264920fafcd751a6fc08f801215b6be90f4da08",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "3fa2fadaea889d50f5f0f445af37fb021b041d623912cd3b26ab38ad1b9801ed",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "35ff0bf4847a7be6ad7794788e8deef9f128ccd22a66b20d1f60e79653241c85",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "4459f4f51d713d217f110166e7de1fc904417f8fbce8acfa4ec1abd466e7f5ae",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "6db4f27c995976c857bbaf348a26a29bdf22676108dea3af76c6f3cd67919eb3",
+    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "8b88915b40c0976cc5a6f55a6fc002dbaf101ce922658880541cd0036e718640",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "2f9f5b2cbe5dc9f072ef9dd896a2ffe51b340ce8e26a02298131ea82bc691958",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "a86e9a23096924878a283512590d729bb58f34e587fa1b320c64d51b55456ab8",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "92776574d6a8790b4a2026be6c215f1ef7d696e3a38b07438fac2cd5b807f69d",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "a6109b84d55479ad3a968b4a27baf54d69d70b59a0d724fe1f8ad706046faf86",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "ba2976320fa9f42938e130b0a6d90026554b6457799e93f75b3ae001ac8d65bf",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "b343d90ba924bc5d7643a422d26c5f262f224cc0bc02e46f3db9edcc76d7f4d7",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "2eb160a9ac33f933222146c40a527e19bf1da459b152927bffbad58c52e1a598",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "2a629abc01159a0531ddab4c63e81a0008df7f4c30f800308cf9bf7b3553da51",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "728ab8b36cacaede998d0a8228242120df361b1611843a39664be7abda407bc3",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "a73cf3c1d88415585d36b5a08f05780072389baa44e7d92ac2bc17fae37af96e",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "9ff5c586e39b7edeb56bc8838337135db4675dd16ddc3ff04751c8d3d8e0a2fa",
+    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "cfcea1526bccfe1d81cfb774ffcff80e051e3be5c0cebad3e1ee8017d5d7cfa9",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "0c401f710a5e6cabe10e4d09422374435b79060bf784fe195d3587f4cf297086",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "26175c5ac7b51dbaeedc989e944daf1488f13705b0d98a4a7aff0fe0121152b9",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "ac2523483d5a58b1befc7130c24e70c4d90142ebbb7f68a26d2e77bd821591ef",
+    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "6ac3f489fd586affaecb38afafed9c11eb0434786af63f079e9f85cac049dedf",
+    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "d971b11555847f6d7615dbe47d57cee2fe0aeeec7ff4d8c8884a41e1bc0cee82",
+    "uutiset/korean-niemimaan-sedimentti-erottuu-nasan-kuvassa-b25d7a241a77/index.html": "cafb4ef04cdc5a4dbf1a82ee42ad440c6645a329b61f1baa5b474a844cab7ebd",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "e1f9b8246674be0de96865bbdb5a19b7db4e8fcca1e40140ec4202855ad1d6a6",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "bb79c4a51ab6485bd364952adc5d63128f26cd7694b696b84875473af272a649",
+    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "5ba90f22d2471dd870ab3090d7a956bfa4d6978de92b794388d49531eb22edba",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "8178f807969e3bb38c0154d03236051e6b37f67f3e94d113e08b4d4a0b2d01a9",
+    "uutiset/kuluttajahintojen-vuosinousu-syyskuussa-ennakolta-2-6-2e846b3cf176/index.html": "c2dfb0bd9b1e5db4e368af518216016000747a1b0bd5e501caef87004af6119b",
+    "uutiset/kuntaliitto-ehdottaa-valitusoikeuden-maaraaikaista-rajausta-fe92f910b26a/index.html": "c7a4c1016d7e3e0c90fb4998787a9f8e2da2f08e7d766fb3a374acb3f34e792a",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "3b308eb995d64c1ced3fdd5560ef11c8c28f8a18aefc0c0f507b72479380d9de",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "b0c8f04b278322052c96ead17ddd539cc8ee488bac8686ae17a93630894ed939",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "12e98a1704db55ac642b7f96755a0b66a2edd12f0dbe6e52431629fb336b5e19",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "8e1ed60d76348e0f05f7ece07cc664c43f739350bd7978ee6e59392f3e3a2263",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "57a65e63d3ee37540c0bf4397526626eabbfe5435701d39449211c5c944e0225",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "7145b7679688e00df6d1ff56bfcbc3ec3aca95da41397ab45e1fe86da664f890",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "5b1cc1a92fe9942a4a1742ecd9622a47fcce942a160a820313bfd5a92e76e9af",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "25f165af137fe60137ea13f84e24b11d6370035240d245b3c97065bdf913e848",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "48ac140c6be673a59ca223282e363b95e4229f3ffb4daab4ccbbe44b3f486641",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "a79ddbde29b56d6f4cc31c49d03ba7a38ef7c8ebbc6d1bfaf8a7e794ad8641d4",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "94325454a7ec1c7050026296d7097dc0c91c364940b6cec39ba66dbe05c03450",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "1948c9dd4582c69a73226eddde19566010bd91991f6153e2517fb94f95c5296e",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "88e59bbc5bd1a758b7a3a29dd1fe736a19fb659c2ed90f4aa454cbe70332e958",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "5e28bebb087e87b889c12b445d27fcac1e9665a6b649c6f1f3c30b8b16771632",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "ad052184a2f0a308056ed8200c56e6cfe8959bb9d7d9b8656fe8327d2efffb31",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "983e54dff6e3c781e8b6aa5f559041768de10dd4f46d389e597fe4fa4ba8a798",
+    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "2f662e2a7c9fcc1259f7548e68bdacf9357a4362504c7990f3cf20eb748e3d6c",
+    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html": "5d23f23d0294bbb53677758e2131c5058d2b4e1ef03bf2c54cdee8f017f2d83a",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "e5a81e7d55012e7c33d038abfa11cfad1b0fdbd37c3a68c13a2953af128f5e9a",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "77d1a2a7adaf1a279acbbdc88232cb6559fe8f2312d2af53455ce6457109b999",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "b9344ebb68a31f612804c9ed9cd5805e2eeca4d024183834c7c6ab02b406b240",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "c8a081770da8eef94f532e88a0db4aa1c2db7c8b4ddb5d083af9660e932a6c51",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "2ab9196f1f112cf86a4c9bf1796cd1edadc912f9c8c801c9e8515f04a4ab0ce0",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "0a268b7d95a25e25adaf6fb895b2f35da5b8084caa19803c10291564d2f3483f",
+    "uutiset/kuusijarven-wc-tilat-kayttoon-12-lokakuuta-c2bc4a29129d/index.html": "c046407808131a90a940bfa02337bc268a57855a12b9e638d8b9c9be49d3ebea",
+    "uutiset/laajasalon-palvelukeskus-vie-kohtaamiskahvilan-saareen-c12a889800ff/index.html": "be90a740a0d71cc1082071c425823f8bbbffead4fca0c4100f59639accaeaa23",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "a25acf8df5bcd9fed1a209dad5a406078233b734628756dee9c369fae5a77e24",
+    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "3250b0bc27657025d72f2633e61aafa1883f8f6b4cb66b6442c1ad6a97544a4b",
+    "uutiset/lansisataman-pikaraitiotien-hankesuunnitelma-hyvaksyttiin-743604e52b6d/index.html": "27dc100c79266ffdd906458abc4ff23ec1dd7a5167d843d5e3cd34e164b3cf7b",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "269c83e81524c5cae3629bcd1d80647909d07a08fbd0dcd77e190dcd54197911",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "43e96b07ed1d3648bde05df7a666252f579c0d33572eec5f57e831c2169bb529",
+    "uutiset/lemmenkujan-kiertoreitti-kaytossa-viela-viikon-41-9379acd25d35/index.html": "4c93c0798784f1d539354662c55f8798ff298dfd6ab45dac20695ac135915489",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "e6f659b5a1ded8cc3d14c09743cde802bb8e262ed0b45bc46da1bd00147d67e2",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "caae7d4e67fd695646099ba36af957aea17f3dc1f6f02fd170dc6fe82dce28af",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "86d37495ca9f30a5752fc441dbd6684cca40bc1adc9019d22ea0a2b1f4d76c2d",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "98a55998c11e4a26dc67d4548bbda35f4937a4034ef86476c774359d2e3962bf",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "1b25a6bd0d26214e0b10e80ffaf6670d8658536c8c9dd099e50e3e2829f7de21",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "37c15bd4ecdc40a8d4c9f78bec39879224888e602e5a0405202ef0b9f378b284",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "da5ebf0a96f1d23d759266bb88683d80924b9b59bc03fa3e7d0470fff21bdd25",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "5ad3bafbc8568b57ed506c21d6a02f56673e6509239ee0df07f28921727effe8",
+    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "d2ed3f49965ae441e7343feb7ee55aba0c730e2188532a2652bb9a5f12c4c188",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "0244cfcab673d7f0dd90e5f16130ac0b65b174ef7e54a349a2cbbf1e36984ed3",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "8075e68660c26fab2c010a2cf6002bb4692e8ee686d9c0b7c4e7e11671afd3cb",
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "78612a309606251a81748521e1210243eb1e0d28c0220c17b53d754498544740",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "bc65695fd5afbba2c87113d6ce6ab03da88f44299c638c2d3ce17d7ec65d266a",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "c724037111e65b71cff445e52d35b6eb41ac5bf07e0610faf3e780e03d2d2820",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "60cc08c4cd11d5da11de6c82626c36cc21f5354184950824d4af6981afe4ddc5",
+    "uutiset/multala-hakee-saksasta-yhteistyota-vetytalouteen-dacb24d664ef/index.html": "375452d5c552de4c7be760baeba7bcf9a128f694c40045fa2d826b0b1850be28",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "dd87cbf7c87440db70c4eb5a1919d993faf0dc25199bc46d1f904880e21a8774",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "41983c3d77613099cc0f39344f9995b010b9ad609e3b7f8df8b615d609400741",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "966564f119a47ee7342c4c609e224ebe01f0df8af9ab7d09619a3327e7b2b63c",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "47245e9adb45dc147527475367179b99571c4106f59e3bd22f9ddc1df79a87d4",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "ef1d66e2acc1a55f114298579e72f4e9b764ceda225d498d8af91ec1c4a001b0",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "3a261a4104225825ef5ede985a4998dcc0bc4944ea267e1c48bfe52b9a4a9793",
+    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "d01ca812c4560b8d44a71b1c18ba084b0bf8a1cd2326d878ab3fe75e58a141d1",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "c17e8b5d3f22364463664899ec4ccf9aca036a4196e46384cc09b751d17417ea",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "f7f9e8f8cc4d1a2d8a56cbf9e82376793f54b0de52145f4903a555e9b66abc79",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "8b12ecebdc7d03c6ded4bc070d802fc6aed994c290076a0c3e65ac9955b9aa9f",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "3195d8f3fb7f261035da08a12842c6e961d3f09a6e5d5ad446db543bbd1636ff",
+    "uutiset/oregonin-maastopalot-jatkuivat-syyskuun-lopulla-c79a7f054313/index.html": "e3240abf3cb60c273b6744a1f05242c56ca9cc875b01ccc00cd11345ae5890bc",
+    "uutiset/orpo-sai-katsauksen-kansanedustajien-turvallisuudesta-41eea6aee980/index.html": "f99b95a8ce4367f740b5b2f1b273d8631041ab933d629c0bf3ece08a2770adda",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "8e95bebe1c0809cc6b021e9db8800b6275a8be92ee66904c3c3b687475b50908",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "000b2fbaf49129c7080402f59bf1cad0193b1f4592864046bbc1c06d43cb0820",
+    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "cd171adb78332ba1927c16c20ceb7364f04344f4c9abf0d266c6f620d5b26b1f",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "3711054a3e25f8e4afe20e6efc8af55d55810c233214746db9dfd79d92be0d3b",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "612bd4b932684e9cbc6525a6a535cfb99d0c59fb096f3d260a60bc9912dd2157",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "d6e975e8ca4a67897cc25953e151189c71177fbdc144ecc430aa47d461a620d1",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "d6569ac90c0d4b7c34c6f20b9024c18c66f1c8a5e1472d794dbc3bde4ee83652",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "026ce916ca82edb6c99c3ac97e43c3e2d4c8dcbcf607d51cfb737edab4d0ee72",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "be94b269bb02cda797ddfe48935669bc73403154104bb0173ddbb5dcbcbf86e7",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "363eaec3356a6d959f315207781c5439d551c27c9e536481f948c3e83e86429f",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "346d894acc29f1ae6f844d0e11e0e3c024a6ff96f1d3d887f48fee9d3f21d41d",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "e55a6a8db2d486ef5b6d1794be6cdc38f4df4810893b97326ea84a6e44187a2a",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "bdfc8ee43f3cf02061edcb86582ba6fdf7949fc8255ac34f7f640717437b5605",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "7e447f710abe2b5c6ef50c307e3cb70d5b9a3a7f28e673be5f105aecd1cc82ce",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "d009076d30ae99875c87aa1916b35a06d356aa5435137baaa5c33eb011b31d8a",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "5d0a6bb8d6836bd96c5dec983ed8492e34421248007b7818a7bbe7aa1893ec21",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "2aa33c2c3bd35a8f5a5ef480bf52d120ff1cd86ba29a13bb390a85213e11fff6",
+    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "166de1c3345e940caf1c63b7c4734081473b8286d319d47acdfc84cb17070bd8",
+    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "7f3862dd94c4ca8802cc9d4f4897232db15b187868af125dd80a31a4275cd4f2",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "fab1560869370f726f9144f81ac3804bdf531278f5b3028ea54950caa6488ed9",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "dd76249815bf2cb0c7e459ce6cfb728b7387d097185b7ba974ee4c2ab91e37d6",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "208b75731b17fccd1defff6faccfbbe2d2082bc19f284c552f3c013329c869ab",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "be194a9cc504f9f4626090f1912d4c3c62fbb65dac5aaa990405bbe9dbd320a9",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "0af01d494413e76b052765eb62d44da6aac6481faed2fb2f784fcd9063d644d6",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "b431846e457a394723fc3f2c252134f3bad94c12b351377d16b524f5663d73d8",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "a3e0c89884fd7a57dfe9a90b5a01349bff8cc15c95001da53ad66e9a5646e6da",
+    "uutiset/rachel-hurrikaani-kulki-baja-californian-etelapuolella-59edc2fdcd34/index.html": "4ab00d9da285d515d2c091bffd698cd85f7f7ca6bdd6515710395e1eb60c044f",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "4043ce3f49b557ec3ecb7cee21fdb5ee5df6923363b14429d12a93bf94d8f0ff",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "064f893bc70e60aee94058e71fd2c24bf7ca5c80dcfff7e89472b2cdaa7e41b6",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "0c6d1fe1f4b7a0e8322f7901b8960c32ed9d763d6274eb065ec7b9ed4fc695b8",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "f778e09a941d67e6ace8b7be7b4abe2dafbf9a7ab57653a27474870749803984",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "43c2e051c8efdab4696b7f9f65c10de930f5ac69448f13f5b13cbc20db071bf4",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "8f97053199fa5d156b466cafabe1d8636a955c74dc5d671fb4d2e2dd711d7994",
+    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "d2f43d96c6f1714dd3177fc4a05d3dec2d3a82c5e218dba64040ad0013386888",
+    "uutiset/sahkopotkulautojen-kaytto-vaheni-helsingissa-81f29c83f795/index.html": "df8066af6ba5a6bad492efa5758fc2fb51a140e52f5b36dd804325598b6fcf22",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "0648b0369d6476be97893489515de3c0ade3460747b1e0574b2f9eb59809a750",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "69e5c64497546c89d06d20bf6b1c411e4ef0732a3cf1c4ca1fff12c58ceee18b",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "4b7a5b0e82666e3e553d1e4d23962fd6bf596003737fda110d19e0c0431cd610",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "09cbefed27178f75cb3b35fda19e69bb49420935ed687cea46ec1f5650eebeef",
+    "uutiset/sijaishuollosta-poissa-olevien-lasten-etsintaohje-uudistui-ccde11681bc6/index.html": "40d563e74b8e30fb1fd482ec011696555a7b5dde7d30dbed44f8c81852988acb",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "b22f8064963524887cda229a53b26f95633c873eb0059b489ed9aef4eaf8eb24",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "98ae12cb813d83621ee6e83aeb9894458967f249218c53ed7019de40ff5ecae6",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "7bf497c83a71af47ec71c3f00c698ff5dae38e8bf24fda28e3758645a90eccbf",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "5bb78aa08f16b2b3ecf04c2716defeea5943330bd9ec7f9f45523e3f66de2848",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "2fb06fe002e2cf11e37603c93867fa72c284ef660a92f864d90d91d53afb8af2",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "72ccc211a110a24d300e2bca157d38fc97de52cf5f20b08d3c462722dcfd5d1a",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "a1a91634e3ed7c5cedc7d6e3a1a4643e85b9868072ac9d5635d4043a089f678a",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "635c03adebf18da90fd3542182245ffdc176279952b299a911c680dce812c724",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "791ea19c9677371a02c3ca00c4ecf27a07564a8d47eb5b4154493327c9e8f238",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "8b2957494b0da4d5c5169b2de70807aedba95a041d96c3119b051ad4d21412f5",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "69844af31113e91b12fb09fa410947c3d548f26ba09e86ec0c10460ccc422ac1",
+    "uutiset/suomi-mukana-maatalouden-eurooppalaisessa-digikonsortiossa-6b30890419a1/index.html": "47a42c293f254c18554998cba9e24338cf4f0e5c7ad41375a945d1f3f086dd9d",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "12f74df139e044f5bb29eab130a83884eff02b8ae7ca96862667af4215ef33e9",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "f0f27119dee828a625c67f4b2895fe65bfa5845d4720b3333767b4e52061e005",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "d538c90ff0a66d2ca2514fab24aef8f0c45fe7d2ae622fd896eaa1a8628829fd",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "d3eb9dce3bbd781e5e6c787fedcfae25be27ede900dd22f6fc5286ee3a798c6c",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "5c27a83bfbd17449b81aa1e8c5f5b952cbca8086976c611925411a9e34d4ca22",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "6288698b6b1574418d8665c6ca729fdb15a3499fd8e4adab01c1c16acdece0ad",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "344b4a69213e11aa71cb5cf48c790bb65c35a05e6c1bc311aafdce73a3a5fe13",
+    "uutiset/tiibetin-ylangolle-satoi-runsaasti-lunta-nasan-06fea975771b/index.html": "f61f5618feb999d1286071fdf2cc36be2c36a25435ca8498d1b1cd35e1e37f55",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "f663fdcd963991f0d292532ae9c8fe3654ccbeb6227557328c015060900af9b7",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "b336554cb535ece3e89852332554d5af84db1569b7109e8e7565c6d30cf6afbf",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "45a5dd50c247a17655925465464feb914f49af896460dcbc6cbac2bca9d7284a",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "5b4afc34f712bee4e6d634832e8afbe7329d45ade91cca549980ddb51f8ec3f6",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "28be4954b9ad1576ffd3a78711da624388b282e2b435b20e42000edc80dcbae6",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "c600c377e135ed54c4c6b73d8e128cbd88cf01a5eeb66117799832e36bc334df",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "c0733cd3343f4894c47087a4f41f027e9f71ae1a607d5e46d04a5481413eefb9",
+    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "37a9145423bb7b381dd2c5b689dc4ee8b83c6c3dfe3346f253e1f58781d48245",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "888bc49e56d7ba7ff64d7e231ceff4b47c6beb9c607cd3b6887df0209f01bd5f",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "425ce2cfa834a6c76c2f31e0333b6c6d5aa792762ee90143f700c040f5388208",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "5ce03c1386fd98734b0fe978d9d382ec23eb41be29f83483cd75ace682225095",
+    "uutiset/toolonlahden-tulvasuojelutyomaa-palkittiin-helsingissa-c8d9df28ef8c/index.html": "c00ed5cb87d899f20139e43911b6c33987f34f83e3fe966f6b4feade57407154",
+    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "e9668e0fd1c620e9c833fac3c2b0841754bd82d7c004aacb5708ef2751444795",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukea-kiina-suhdetta-aac41588a8b4/index.html": "73daf21f85cf7e0c88d5e84e2cfaaf426dc8e592713b34eb25f2c44ba9ac3aee",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "33f9c83afdc3d30298345f33fcf95ded9d0020a3dddfc8440dda5cc7c00edde8",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "5f6e3e7c318668a5eae3a14eda253383d968ae5c116426c7316e4d5c0cc664f2",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "dfb9e1781abd2b21bec55818b2b2635a3ef1eaab49b5b641718cf3d99cac0175",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "96939224bb4c5f30e08d8634bf39ab72e66a1775bbb2204576fa035f6e55253a",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "b781dc6b21667fab6e9ff91dee6d83f84cdd2e29a781f0f877c018b63d237432",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "695d0f1c130e9da3d46fdd08ccc5d7b29055efba37b3d3ee9ad09ce79c0d2a99",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "d2a7e90688aef84376743b975c35271646954c692962563e755fe4a1a4d22b61",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "9f8fb6ea670c6f2d2d06f631f2b298d1e0cee2b054566650d591d5fb762c4ab6",
+    "uutiset/vaaralan-bussipysakit-siirtyvat-6-lokakuuta-5fca6d55d831/index.html": "cabd4c7dbff9cb06b07c463d6c638b4c9c5e9bf608b8108619722ce934665a81",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "1008a11f2b94bc00726eadbe6fca396d12a6f3b4e7068210da6014a6880a9c24",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "34c62774d35d8c4bbf4f24f4826f0e45a088b2e6d37f7e6f7f9f6333be7409f3",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "e3c17b0192447c05f92d721657b660a171b3910d2ff4fa7d9d424f5d527809ff",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "d07163ea0780f2c0c6ee946b317cb3a807c2270f7574f19610a473f1c640417d",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "e65fbc5692bb07c79e0cf4f9a52efb59a765e5d5d5f78bd9e6bf17a8b712af65",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "d1286a6adff9f1574fc08c34f56dd904cf51b3160323cfb5c11bdac27fbf7553",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "0c01f9df8b40fd8d9f5af789eb5d90891261cb1718c04fcefadb1330ea19af00",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "3125778d8f4247c44fdd138fb073b1a78e5e1d852f541c7d54540c6b986ae762",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "b162b7adc73cb168c35b74196994bc13d2888c9c1c975b76b3a9ac9aea010f84",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "6e10707ce489166e29f13b06380d2d6b3f6c3575e03ed97749a9d91419db20c7",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "c4876898b1b67bcf53878b89196b877029b1faa779a0155fb2f11036cf52c386",
+    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "e66be869785a7a2eb3049b9cdc271bdf48115d880f521dfd4ef69f477de2ebb4",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "865e4ede52e1ffb9818f5817474beeb4a2aa454b9c43e0755c15f47d05d8f5d3",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "a8d7b685927cd20d80ca52d6953803b92577ca0006c29efe10471129f7fa902f",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "ab0ff1be6dd185c702b0e7253d8a8d5ab64bcd0b09825c79a664b530268b62b6",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "e1381883f4976d912f2c3bae046aa3d55231c1767cbb69487927fcdc0249fedb",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "6d75cf9aeb3f5f7cb4a4b15676d29fc7b5410c5b36455d485bde39fbbe96ef50",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "d8a65eb321cb1d563970061aae04525a8ec3bb62a6b0de4216b84ba0e190ed16",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "b56395255969b1f68c8428d510054cef4abfec315cb09a850f9a5b6fb3ce9775",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "b9c45298c0094ea754f3292ef2f44c958929770eda9f8252d415e838b1224d36",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "fb893be7d411831214a8319f1f201f3228b118824cfa3fb52c5fefe1e0e45184",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "02437f11bd852e2698f734f90c3bf49b82fbc164b5657b97d7a81217366873e9",
+    "uutiset/vantaan-historian-museo-hakee-avajaisiin-vapaaehtoisia-d96705192438/index.html": "08974a78f1b61c9aae816e9accd0a0d934ec964396f8ca1997826de4c9f8aaac",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "1c38d5ee086628f698c4bac3b613ea58455f6715560e31618663ec4ec8ebf38e",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "92cd32dc307adf0b8126ae70043d066b20fd4ea3b8602aa1d3f554ee4a878a5c",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "5b7de283ee13e07fdbfceffd59a0098baf81a409f2886db968fbeb541d7469ca",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "3d2a041fcbd96c359626f5265f645f0e032a8314e1fe3588e64e4ce8af396061",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "2aa811d8aab073c3da48a0e45d2afc470e9adea5f92bef396cb8523e3d789d36",
+    "uutiset/vantaan-yty-akatemian-ideat-etenevat-tyoryhmaan-ba96b94ee71f/index.html": "19753f3902bed653721cad8a9457c1ac9cbd0a650c7d23c0753ab132723bee75",
+    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "2b08f69da425ff4d2183b5932ee0b2f8b558ceb9b8d1fb2c2667694bbe835a02",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "ad19538d495dcf4bad653d37dd2d8d3184ea68fd09729a8716e04d86ebf74123",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "ac70f446e4b3a2735a03b82ff220d776f0a97d6ba067fe428f2682bdb36e00d3",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "7f7f08ec7056755cca5b746d5712abe67dbe1a64d9e75b50f45757f2ae47ca20",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "1f859eb268cf12fab8361fda3012ff5c4722bd98bd4fe10da0351a09e01bf4a5",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "5b4060cc4913fba4a4e8c8ce92e505303acb2b3b76192668d25be7cf0fc3d41b"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "Arkistokuva: Satelliittikuva näyttää suuren pyörteisen pilvimuodostelman tummansinisen meren yllä, ja vasemmalla näkyy osittain niemimaa.",
-      "caption": "NASA MODIS: Hurricane Rachel. Kuva otettu 2026-10-01; NASA julkaisi kuvaesittelyn 2026-10-04.",
+      "alt": "Arkistokuva: Ilmakuva näyttää kuivaa maastoa, josta nousee useita harmaanruskeita savupilviä, jotka leviävät taivaalle. Monikaistainen valtatie kulkee maiseman poikki, ja sen varrella on puita ja pensaikkoa.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
         "category": "Maailma",
         "concepts": [
           {
-            "depictable_scene": "Todellinen 1. lokakuuta 2026 otettu MODIS-satelliittikuva, jossa Rachelin kiertyvä pilvimuodostelma näkyy merellä Baja Californian niemimaan eteläpuolella.",
+            "depictable_scene": "Todellinen Aqua-satelliitin MODIS-kuva Oregonista 30. syyskuuta 2026: Cascadevuoriston itäpuolisessa maastossa näkyy paloalueita ja niistä pääosin itään ulottuvia harmaita savuvanoja.",
             "must_avoid": [
-              "Eri myrskyn tai eri kuvauspäivän esittäminen Rachelina",
-              "Maalle osuvan hurrikaanin esittäminen"
+              "Images from a different wildfire season",
+              "Fabricated satellite observations"
             ],
             "must_show": [
-              "Hurricane cloud spiral over ocean"
+              "Satellite view of Oregon wildfire areas",
+              "Gray smoke plumes extending eastward"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "Rachel MODIS 2026",
-              "Hurricane Rachel satellite clouds",
-              "Rachel Baja California MODIS October 1 2026"
+              "Oregon MODIS September 2026",
+              "Oregon wildfire satellite smoke",
+              "NASA Aqua Oregon 30 September 2026",
+              "MODIS Fires in Oregon October 5 2026"
             ],
-            "subject": "Rachel-hurrikaani Terra-satelliitin kuvassa"
+            "subject": "Oregonin maastopalot Aqua-satelliitin kuvassa"
           },
           {
-            "depictable_scene": "Laajat, korkeat mainingit ja vaahtoavat aallonharjat avoimella merellä tumman pilvitaivaan alla; kuvassa ei näy rantaa tai tunnistettavaa paikkaa.",
+            "depictable_scene": "Viisto ilmakuva nimeämättömästä kuivasta mäkisestä maastosta, jossa harva puusto ja pensaikko ympäröivät tummentunutta paloaluetta. Paloalueelta nouseva harmaa savu levittäytyy pitkänä vanana kuvan sivulle. Näkymä ei jäljittele Oregonin tiettyä paikkaa tai yksittäistä vuoden 2026 paloa.",
             "must_avoid": [
-              "Ihmiset tai ruumiinosat",
-              "Tunnistettavan paikan tai Rachelin todellisen tilanteen keksitty toisinto",
-              "Maalle iskevä myrsky, tuhot tai pelastustilanne",
-              "Luettava teksti ja logot"
+              "People or body parts",
+              "Recognizable named landscapes or reconstruction of a specific fire",
+              "Invented text, logos or satellite data overlays"
             ],
             "must_show": [
-              "Large ocean swells",
-              "Foaming wave crests"
+              "Dry terrain with a dark burn area",
+              "Gray wildfire smoke plume drifting sideways"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "voimakas aallokko avomerellä",
-              "large ocean swells",
-              "rough sea storm clouds"
+              "Wildfire smoke aerial view",
+              "Dry scrubland wildfire smoke",
+              "Maastopalon savu ilmakuva",
+              "Burn scar smoke plume"
             ],
-            "subject": "Voimakasta aallokkoa merellä"
+            "subject": "Savu kuivassa maastossa jatkuvista maastopaloista"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "MODIS Land Rapid Response Team, NASA GSFC",
-      "license": "NASA media guidelines: informational/editorial use with NASA credit; no endorsement",
-      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
-      "local_path": "media/a99fee9583835ba7a76d13582f64bfd19c533b987bc1765c6ff8d69269b76211.jpg",
-      "photo_date": "2026-10-01",
+      "credit": "Photo by Brian Sumner on Unsplash",
+      "depicted": "An aerial view shows a wide expanse of land under a clear blue sky, with a significant amount of smoke rising from multiple points on the ground. The smoke is light brown and white, forming large plumes that extend upwards and drift across the landscape. In the foreground and midground, a multi-lane highway stretches diagonally from the bottom center towards the upper right, with several vehicles, including cars and trucks, visible on it. To the left of the highway, there is a large area of dist",
+      "generated": false,
+      "hotlink": true,
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
       "pixel_review": {
-        "alt_fi": "Satelliittikuva näyttää suuren pyörteisen pilvimuodostelman tummansinisen meren yllä, ja vasemmalla näkyy osittain niemimaa.",
+        "alt_fi": "Ilmakuva näyttää kuivaa maastoa, josta nousee useita harmaanruskeita savupilviä, jotka leviävät taivaalle. Monikaistainen valtatie kulkee maiseman poikki, ja sen varrella on puita ja pensaikkoa.",
         "approved": true,
-        "article_text_sha256": "f6fe553f99ca2263c0c413bca0d3ed69cbabb3f73f9659d0e0009fb495e48297",
-        "concept_sha256": "8b9255fb6fec39ae267cadf6cd0d7d4afdbb3ac0091c93c185ccecb78e0ad89c",
-        "description": "A satellite image shows a large, swirling white cloud formation, characteristic of a hurricane, over a dark blue ocean. To the left, a landmass with green and brown tones, representing the Baja California peninsula, is partially visible. Other scattered clouds are present over the landmass and further out to sea.",
-        "fit_score": 10,
-        "image_sha256": "a99fee9583835ba7a76d13582f64bfd19c533b987bc1765c6ff8d69269b76211",
+        "article_text_sha256": "8184d787f90aaec1419b2b5e4d591eba89d58c4c94e1ec9b65cc0a83fb6fa373",
+        "concept_sha256": "936d2005a462e94628ab0b6d32d300b552cdc44d3dc4d38c8de1e33461a5ec64",
+        "description": "An aerial view shows a wide, multi-lane highway stretching into the distance, with vehicles visible on it. To the left of the highway, a large area of dry, cleared land is visible, with several plumes of gray-brown smoke rising from it and drifting across the sky. Patches of green trees and scrubland are scattered across the landscape, particularly on the left side and bordering the highway. The sky above is clear blue with some hazy clouds.",
+        "fit_score": 9,
+        "image_sha256": "afabe6c73d9e57ae511aef0fb94bc828d5e5f75f4b69bbb832b8a85b2d7a1cf5",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
+          true,
           true
         ],
-        "no_people": true,
-        "reason": "The image clearly depicts a hurricane cloud spiral over the ocean, with the Baja California peninsula visible, which directly matches the article's description of Hurricane Rachel's location and the selected concept's requirement for a satellite image of Rachel's cloud formation near Baja California.",
-        "reviewed_at": "2026-10-04T04:50:45.481201+00:00"
+        "no_people": false,
+        "reason": "The image clearly depicts dry terrain with smoke plumes, which directly illustrates the article's subject of wildfires and the selected concept of smoke from ongoing wildfires in dry terrain. The smoke is gray and drifts sideways, matching the 'must_show' elements. The terrain is dry and appears to have burn areas or cleared land that could be associated with fire activity.",
+        "reviewed_at": "2026-10-05T04:26:47.810256+00:00"
+      },
+      "pixels": {
+        "height": 1117,
+        "mode": "RGB",
+        "variance": 11373.1,
+        "width": 1536
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "A satellite image shows a large, swirling white cloud formation, characteristic of a hurricane, over a dark blue ocean. To the left, a landmass with green and brown tones, representing the Baja California peninsula, is partially visible. Other scattered clouds are present over the landmass and further out to sea.",
+        "evidence": "An aerial view shows a wide, multi-lane highway stretching into the distance, with vehicles visible on it. To the left of the highway, a large area of dry, cleared land is visible, with several plumes of gray-brown smoke rising from it and drifting across the sky. Patches of green trees and scrubland are scattered across the landscape, particularly on the left side and bordering the highway. The sky above is clear blue with some hazy clouds.",
         "matched": [
-          "baja",
-          "cloud",
-          "hurricane",
-          "ocean"
+          "area",
+          "drifting",
+          "dry",
+          "gray",
+          "smoke"
         ],
         "method": "vision",
         "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
       "selection_evidence": {
-        "article_text_sha256": "f6fe553f99ca2263c0c413bca0d3ed69cbabb3f73f9659d0e0009fb495e48297",
-        "decision_sha256": "7d1f65d3c0b770afeb14aca290ba38e777911a0fc3dd9f5bc400c0d8847d4782",
+        "article_text_sha256": "8184d787f90aaec1419b2b5e4d591eba89d58c4c94e1ec9b65cc0a83fb6fa373",
+        "decision_sha256": "9632e22a9f51a1e5d3a5578102d7cdd711c66542173db272d0c09916fab254ad",
         "minimum_real_fit": 8,
         "searches": [
           {
             "candidates": [
               {
-                "approved": true,
-                "fit_score": 10,
-                "image_sha256": "a99fee9583835ba7a76d13582f64bfd19c533b987bc1765c6ff8d69269b76211",
-                "license": "NASA media guidelines: informational/editorial use with NASA credit; no endorsement",
-                "reason": "The image clearly depicts a hurricane cloud spiral over the ocean, with the Baja California peninsula visible, which directly matches the article's description of Hurricane Rachel's location and the selected concept's requirement for a satellite image of Rachel's cloud formation near Baja California.",
-                "source_url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2026-10-04"
-              }
-            ],
-            "concept_rank": 1,
-            "outcome": "accepted",
-            "provider": "archive-image",
-            "queries": [
-              "already deployed rights-pinned image"
-            ]
-          },
-          {
-            "candidates": [
-              {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "a99fee9583835ba7a76d13582f64bfd19c533b987bc1765c6ff8d69269b76211",
-                "license": "NASA media guidelines: informational/editorial use with NASA credit; no endorsement",
-                "reason": "The article discusses Hurricane Rachel and mentions it caused strong waves and heavy rains. The selected concept describes 'Large ocean swells' and 'Foaming wave crests' on the open sea under a dark cloudy sky, explicitly stating 'no beach or identifiable place visible'. The provided image is a satellite view of a hurricane, which is relevant to th",
-                "source_url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2026-10-04"
-              }
-            ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "archive-image",
-            "queries": [
-              "already deployed rights-pinned image"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "c15084bc33d65f5a97af9553f9eb13f472cb49676dd68073a470edbc0c400ec2",
-                "license": "CC0 1.0",
-                "reason": "The article describes a hurricane with strong waves and heavy rainfall. The selected concept specifies 'large ocean swells' and 'foaming wave crests'. The image shows calm water with no visible swells or foaming wave crests, and the sky is only partly cloudy, not indicative of a storm. Therefore, it does not depict the concrete scene described in t",
-                "source_url": "https://www.pexels.com/photo/photo-of-cargo-ship-on-body-of-water-221322/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "5910bfd18f797b98bda3f437cc46164778187e39b63b353a8c597939df38bba3",
+                "fit_score": 0,
+                "image_sha256": "5a3efe0b182fd22d5e18b5c6a9dcab9c769b9dddab132545f8cdc0dff335ecab",
                 "license": "Pexels License",
-                "reason": "The article describes a hurricane causing strong waves and heavy rainfall in the southern parts of the Baja California peninsula, while the selected concept focuses on large ocean swells and foaming wave crests on the open sea under a dark, cloudy sky, without a visible shore. The image shows a boat on a choppy sea with breaking waves and a cloudy ",
-                "source_url": "https://www.pexels.com/photo/black-ship-on-sea-under-white-clouds-13019394/"
+                "reason": "The article discusses satellite images of wildfires and smoke plumes in Oregon. The image provided shows an aerial view of ocean waves breaking on a beach, which is completely unrelated to wildfires, satellite imagery of land, or smoke. Neither of the 'must_show' elements (Satellite view of Oregon wildfire areas, Gray smoke plumes extending eastwar",
+                "source_url": "https://www.pexels.com/photo/an-aerial-photography-of-ocean-waves-rushing-on-shore-9181889/"
               },
               {
                 "approved": false,
                 "fit_score": 3,
-                "image_sha256": "bab076c134bdc2d49c06310cfcc359b1fc94ecafd80a10713deb34df8442d51a",
+                "image_sha256": "12d203eef6de61d8084dee27ac7d63022c2b2b9974263b6a53e01d9bfddefb27",
                 "license": "Pexels License",
-                "reason": "The article discusses a hurricane and its effects on the ocean, specifically 'large ocean swells' and 'foaming wave crests'. The image shows a ship's deck with people and a helicopter, and while there is water, it does not depict the 'large ocean swells' or 'foaming wave crests' that are central to the selected concept. The water visible is choppy ",
-                "source_url": "https://www.pexels.com/photo/men-on-helipad-on-sea-shore-18959219/"
+                "reason": "The article discusses satellite images of wildfires and smoke plumes in Oregon. The image shows a landscape with a lake and hills, but there are no visible signs of wildfires, smoke, or a satellite perspective. It does not depict the specific concept of a satellite view of Oregon wildfire areas with smoke plumes. One or more required concept elemen",
+                "source_url": "https://www.pexels.com/photo/aerial-shot-of-a-river-mountain-10154131/"
               },
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "0ce17818e818de742530ac2bff67ce86767bfd9e0a2d00033c0755ceddc76645",
+                "fit_score": 0,
+                "image_sha256": "78ccbe660c720fcfb82ca5c06c1621f51e30afaf0177c4c70b0c97dd447697e1",
                 "license": "Pexels License",
-                "reason": "The article describes a hurricane causing strong waves and heavy rainfall at sea. The selected concept specifies 'Large ocean swells' and 'Foaming wave crests' under a 'dark cloudy sky', without a boat. While the image shows choppy water and some white caps, the waves are not 'large ocean swells' as described for a hurricane, and the presence of a ",
-                "source_url": "https://www.pexels.com/photo/a-fishing-boat-on-the-ship-8103089/"
+                "reason": "The article discusses satellite images of wildfires and smoke plumes in Oregon. The image shows an aerial view of a dry, cracked landscape next to a body of water, which does not depict wildfires, smoke, or a satellite perspective of Oregon. It is completely unrelated to the article's subject. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/birds-eye-view-of-a-water-reservoir-10154271/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "54249932b377f7a299f41c5b6d50480cd5730b83cea38568544c2264e0fb8d5d",
+                "license": "Pexels License",
+                "reason": "The article discusses satellite images of wildfires in Oregon. The image shows a bridge and a city skyline, which is unrelated to the article's subject of wildfires and satellite imagery. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/iconic-burnside-bridge-in-portland-oregon-32173030/"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "Oregon MODIS September 2026",
+              "Oregon wildfire satellite smoke",
+              "NASA Aqua Oregon 30 September 2026"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "4805a67cf61c12a916cd611a33a7e358a1e25a7677292648a7f72db836f2649e",
+                "license": "Unsplash License",
+                "reason": "The article discusses a recent satellite image of wildfires in Oregon from 2026. The image provided is an old historical map of Oregon, not a satellite image, and does not show any wildfires or smoke plumes. It is completely unrelated to the specific subject and time frame of the article. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/map-of-oregon-showing-topography-and-rivers-IXdPXX9h6GI?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "23186b46bae7b0910ca80fb2c1e0d0099c7a0458effae02631b37b7cd2df4fb2",
+                "license": "Unsplash License",
+                "reason": "The article discusses wildfires in Oregon as observed by a NASA satellite. The image shows a person celebrating in front of a university sign. There is no visible connection between the image content and the article's subject of wildfires or satellite imagery. The 'Oregon' in the sign is a geographical match but not a thematic one, and the image do",
+                "source_url": "https://unsplash.com/photos/graduate-sprays-champagne-in-front-of-oregon-state-university-sign-rcKkIGBLoOA?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "697c6923bad33b3d11eb50bddc3036b9d54ace09ccf3a6b72468eaf8179df3fa",
+                "license": "Unsplash License",
+                "reason": "The article and concept describe a satellite image showing wildfire areas and smoke plumes in Oregon. The provided image is an aerial view of a healthy, unburnt forest with no visible smoke or fire, and it is not a satellite image. Therefore, it does not depict the specific concept or the core subject of the article. One or more required concept el",
+                "source_url": "https://unsplash.com/photos/an-aerial-view-of-a-forest-with-mountains-in-the-background-UOkzI1elW9w?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "a25bb45f1379a28f36862e9a3ab553bb3f37998f0c56310a7f7718110133c981",
+                "license": "Unsplash License",
+                "reason": "The article discusses satellite images of wildfires in Oregon, specifically a MODIS image from September 30, 2026, showing fire areas and smoke plumes extending eastward. The selected concept explicitly requires a 'Satellite view of Oregon wildfire areas' and 'Gray smoke plumes extending eastward'. The provided image is a ground-level photograph of",
+                "source_url": "https://unsplash.com/photos/large-wildfire-burning-trees-and-brush-at-night-Xfhf4Eviza4?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Oregon MODIS September 2026",
+              "Oregon wildfire satellite smoke",
+              "NASA Aqua Oregon 30 September 2026"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Oregon MODIS September 2026",
+              "Oregon wildfire satellite smoke",
+              "NASA Aqua Oregon 30 September 2026"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Oregon MODIS September 2026",
+              "Oregon wildfire satellite smoke",
+              "NASA Aqua Oregon 30 September 2026"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "fe6feb81d2cb798e6121c1ae993f03bfc8f0d4fadecf17c2741879f726311fc9",
+                "license": "Pexels License",
+                "reason": "The article discusses wildfires in dry, hilly terrain, specifically mentioning burn areas and smoke plumes. The selected concept describes a similar scene with dry terrain, a dark burn area, and a smoke plume. However, the actual pixels show smoke rising from a residential area, not a dry, hilly terrain with a dark burn area as specified in the con",
+                "source_url": "https://www.pexels.com/photo/aerial-view-of-houses-in-a-rural-area-5872151/"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "voimakas aallokko avomerellä",
-              "large ocean swells",
-              "rough sea storm clouds"
+              "Wildfire smoke aerial view",
+              "Dry scrubland wildfire smoke",
+              "Maastopalon savu ilmakuva"
             ]
           },
           {
@@ -1037,52 +1373,65 @@
               {
                 "approved": true,
                 "fit_score": 9,
-                "image_sha256": "e136d9121a32a27249c4a493de93ee273ee4f5bccc92ebcd3f0eed7bf2d0e33c",
+                "image_sha256": "afabe6c73d9e57ae511aef0fb94bc828d5e5f75f4b69bbb832b8a85b2d7a1cf5",
                 "license": "Unsplash License",
-                "reason": "The image directly depicts large ocean swells and foaming wave crests, which are explicitly mentioned in the article as a consequence of Hurricane Rachel. The scene matches the selected concept of 'Voimakasta aallokkoa merellä' (Strong swells at sea) and avoids all 'must_avoid' elements.",
-                "source_url": "https://unsplash.com/photos/ocean-wave-during-daytime-OCzvgBqCJKY?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The image clearly depicts dry terrain with smoke plumes, which directly illustrates the article's subject of wildfires and the selected concept of smoke from ongoing wildfires in dry terrain. The smoke is gray and drifts sideways, matching the 'must_show' elements. The terrain is dry and appears to have burn areas or cleared land that could be asso",
+                "source_url": "https://unsplash.com/photos/aerial-photography-of-smoke-near-road-ewt4P8Y57_0?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
             "concept_rank": 2,
             "outcome": "accepted",
             "provider": "unsplash",
             "queries": [
-              "voimakas aallokko avomerellä",
-              "large ocean swells",
-              "rough sea storm clouds"
+              "Wildfire smoke aerial view",
+              "Dry scrubland wildfire smoke",
+              "Maastopalon savu ilmakuva"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 1,
-          "fit_score": 10,
-          "image_sha256": "a99fee9583835ba7a76d13582f64bfd19c533b987bc1765c6ff8d69269b76211",
+          "concept_rank": 2,
+          "fit_score": 9,
+          "image_sha256": "afabe6c73d9e57ae511aef0fb94bc828d5e5f75f4b69bbb832b8a85b2d7a1cf5",
           "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "a99fee9583835ba7a76d13582f64bfd19c533b987bc1765c6ff8d69269b76211",
-      "source_caption": "Hurricane Rachel",
-      "source_url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2026-10-04",
-      "url": "https://modis.gsfc.nasa.gov/gallery/images/image10042026_main.jpg"
+      "source_url": "https://unsplash.com/photos/aerial-photography-of-smoke-near-road-ewt4P8Y57_0?utm_source=uutistenlukija&utm_medium=referral",
+      "stock_provenance": {
+        "download_tracking": {
+          "successful": true,
+          "url": "https://api.unsplash.com/photos/ewt4P8Y57_0/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw1fHxXaWxkZmlyZSUyMHNtb2tlJTIwYWVyaWFsJTIwdmlld3xlbnwwfDB8fHwxNzkxMTc0Mzk3fDA"
+        },
+        "image_url": "https://images.unsplash.com/photo-1550171342-0c2f06a89abc?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw1fHxXaWxkZmlyZSUyMHNtb2tlJTIwYWVyaWFsJTIwdmlld3xlbnwwfDB8fHwxNzkxMTc0Mzk3fDA&w=1536&q=80&fm=jpg&fit=crop",
+        "photo_id": "ewt4P8Y57_0",
+        "photo_url": "https://unsplash.com/photos/aerial-photography-of-smoke-near-road-ewt4P8Y57_0?utm_source=uutistenlukija&utm_medium=referral",
+        "photographer": "Brian Sumner",
+        "photographer_url": "https://unsplash.com/@bmsumner?utm_source=uutistenlukija&utm_medium=referral",
+        "provider": "unsplash",
+        "query": "Wildfire smoke aerial view",
+        "retrieved_at": "2026-10-05T04:26:45Z"
+      },
+      "stock_provenance_sha256": "a66f1ebdb8c357546c5c8ce28f11b0f5b0d7bb155dc47e5e787f0c645a4749ef",
+      "url": "https://images.unsplash.com/photo-1550171342-0c2f06a89abc?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw1fHxXaWxkZmlyZSUyMHNtb2tlJTIwYWVyaWFsJTIwdmlld3xlbnwwfDB8fHwxNzkxMTc0Mzk3fDA&w=1536&q=80&fm=jpg&fit=crop"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-10-04T00:00:00+00:00",
+        "published_at": "2026-10-05T00:00:00+00:00",
         "publisher": "NASA GSFC / MODIS",
-        "text": "October 4, 2026 - Hurricane Rachel\nSource article image alternative text: Hurricane Rachel\nTweet\nShare\nHurricane Rachel was a major Category 3 hurricane spinning south of Baja California on October 1, 2026, when the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Terra satellite acquired this true-color image.\nNear the same time that this image was captured, the National Hurricane Center (NHC) advised that Rachel’s maximum sustained winds were 120 miles per hour (195 km/h). The center of the strong hurricane was located about 245 miles (390 km) south of the southern tip of Baja California. With a minimum central pressure of 950 mb, Rachel was crawling westward at 3 miles per hour (6 km/h)—a course that carried it away from land. While landfall did not occur, Rachel kicked up strong swells and brought heavy rain to southern Baja California.\nHurricane Rachel is the 18th named storm of the 2026 East Pacific Hurricane Season, with the first named storm arriving in early Jun. It is also ninth hurricane in the East Pacific and the seventh major hurricane in that region this year.\nImage Facts\nSatellite:\nTerra\nDate Acquired: 10/1/2026\nResolutions:\n1km (2 MB), 500m (5.6 MB), 250m (3.9 MB)\nBands Used: 1,4,3\nImage Credit:\nMODIS Land Rapid Response Team, NASA GSFC\nPublication day from source heading; timestamp uses conservative UTC start of that day.",
-        "title": "Hurricane Rachel",
-        "url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2026-10-04"
+        "text": "October 5, 2026 - Fires in Oregon\nSource article image alternative text: Fires in Oregon\nTweet\nShare\nOregon’s 2026 wildfire season has been a record one, with more than 2.1 million acres burned as of late September 2026. Idaho’s Business Review reports that suppression costs had hit 1.4 billion dollars. Most fires were east of the Cascades and fire crews worked diligently to prevent or minimize destruction from the fires.\nSome of the largest wildfires included the Rowe Creek Complex, a blend of seven fires that coalesced into one north of Prineville. At 373,927 acres, it was the fifth largest blaze since 1992. The Coleman Creek Fire burned east of Burns and consumed 308,863. The Big Grass Fire was the largest fire that touched Oregon, scorching 578,637 acres. Most of that fire was located in Idaho, with only 186,809 acres in Oregon affected.\nFires were still burning in Oregon east of the Cascades on September 30, 2026, when the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Aqua satellite acquired this true-color image. Each red “hot spot” marks an actively burning fire. Gray plumes of smoke blow generally towards the east from most of the hot spots, evidence of the strong, gusting wind that causes fire to spread.\nImage Facts\nSatellite:\nAqua\nDate Acquired: 9/30/2026\nResolutions:\n1km (170.9 KB), 500m (421.3 KB), 250m (269.1 KB)\nBands Used: 1,4,3\nImage Credit:\nMODIS Land Rapid Response Team, NASA GSFC\nPublication day from source heading; timestamp uses conservative UTC start of that day.",
+        "title": "Fires in Oregon",
+        "url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2026-10-05"
       }
     ],
-    "story_key": "url:https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2026-10-04",
+    "story_key": "url:https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2026-10-05",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "image permission, not a news event",
-        "retrieved_at": "2026-10-04T04:02:21.690421+00:00",
-        "sha256": "5bd043aed7adfecfd04a975019234962cd25b39b10c26522a581aafe057f0a2f",
+        "retrieved_at": "2026-10-05T04:06:10.953800+00:00",
+        "sha256": "562cbf3a2fe9045cffb6527a2eda29b5e903e11ad4a7d42da3f34f9f4cee259f",
         "text": "NASA Brand and CollaborationsHome\nNASA Brand Center\nImages and Media\nBrand CenterBrand Center Hub\nBrand Guidelines\nNASA-Themed Merchandise\nUse of NASA Images and Media\nAdvertising Guidelines\nLinking to NASA Websites\nCollaborating with NASACollaboration Hub\nArtifact Loans and Transfers\nStrategic Partnerships\nExhibit Loans and Collaborations\nFilm and Documentary\nNASA Art Program\nImages and Media\nSource article image alternative text: carina nebula\nThe NASA Insignia, Logotype, identifiers, and imagery are not in the public domain. The use of the Insignia, Logotype and NASA identifiers is protected by law, and imagery is made available for use consistent with Media Usage Guidelines.\nNASA Images and Media Usage Guidelines\nNASA content – images, audio, video, and media files used in the rendition of 3-dimensional models, such as texture maps and polygon data in any format – generally are not subject to copyright in the United States. You may use this material for educational or informational purposes, including photo collections, textbooks, public exhibits, computer graphical simulations and Internet Web pages. This general permission extends to personal Web pages.\nNews outlets, schools, and text-book authors may use NASA content without needing explicit permission, subject to compliance with these guidelines. NASA content used in a factual manner that does not imply endorsement may be used without needing explicit permission. NASA should be acknowledged as the source of the material. NASA occasionally uses copyright-protected material of third parties with permission on its website. Those images will be marked identified as copyright protected with the name of the copyright holder. NASA’s use does not convey any rights to others to use the same material. Those wishing to use copyright protected material of third parties must contact the copyright holder directly.\nNON-COMMERCIAL USE\nFor educational or informational purposes\nNASA content – images, audio, video, related media and files used in the rendition of 3-dimensional models, such as texture maps and polygon data in any format – generally are not subject to copyright in the United States. You may use this material for educational or informational purposes, including photo collections, textbooks, public exhibits, computer graphical simulations and Internet Web pages. This general permission extends to personal Web pages.\nNews outlets, schools, and text-book authors\nNews outlets, schools, and text-book authors may use NASA content without needing explicit permission, subject to compliance with these guidelines. NASA content used in a factual manner that does not imply endorsement may be used without needing explicit permission. NASA should be acknowledged as the source of the material. NASA occasionally uses copyright-protected material of third parties with permission on its website. Those images will be marked identified as copyright protected with the name of the copyright holder. NASA’s use does not convey any rights to others to use the same material. Those wishing to use copyright protected material of third parties must contact the copyright holder directly.\nSource article image alternative text: Panorama of lunar surface with instruments in foreground and astronaut in spacesuit in far right\nThis mini-panorama combines two photographs taken by Apollo 15 lunar module pilot Jim Irwin, from the Apollo Lunar Surface Experiments Package (ALSEP) site, at the end of the second Apollo 15 moonwalk on August 1, 1971. Mission commander David R. Scott is leaning to his right and is putting down the Apollo Lunar Surface drill.\nCOMMERCIAL USE\nFor use of NASA images clearances may be necessary for images that include any NASA logos or NASA employees to be used as cover art or in promotional content. Otherwise, NASA imagery can be generally used editorially within published works that are not promotional in nature.\nIf the NASA material is to be used for commercial purposes, including advertisements, it must not explicitly or implicitly convey NASA’s endorsement of commercial goods or services.\nCommercials and promotional content cannot be filmed on NASA property.\nFor commercial use of NASA’s images, intellectual property, emblems, or logos on merchandise or products refer to the Merchandise Guidelines and Approvals page.\nMedia including Identifiable Persons\nIf a NASA image, audio, video or media includes an identifiable person, using the media for commercial purposes may infringe that person’s right of privacy or publicity, and permission should be obtained from the person.\nAstronauts or employees who are currently employed by NASA cannot have their names, likenesses or other personality traits displayed or position title used on any commercial products, advertisements, promotional material or commercial product packaging.\nFor guidance on commercial use on merchandise please refer to NASA’s Merchandise Guidelines.\nFor more information on using NASA content for commercial purposes, please read NASA Advertising Guidelines and Merchandise Guidelines. Any questions regarding use of NASA content, or any NASA emblems, should be directed to nasa-merchandise-&-brand-team@mail.nasa.gov in NASA’s Office of Communications at NASA Headquarters in Washington.\nAstronauts or NASA employees who are retired from the agency can grant permission for the use of their names, likenesses or other personality traits in their discretion, but their former affiliation with NASA may not be used to promote any product, service or activity. For deceased astronauts or employees, their estates may retain rights in the deceased person’s name, likeness or other personality traits, so permission may still be needed.\nThere are many images (moving and still) which have been made publicly available by NASA featuring astronauts in space suits where the astronauts face may be shielded or not easily recognizable, but where some other aspect of the photo may indicate the astronaut’s identity – like a name tag or simply the historical context of the photo. In such a case, the restrictions set forth above may still be applicable, so permission may still be necessary.\nSource article image alternative text: Note - not yet cleared for publication.\nSpread from The WormCourtesy of Standards Manual\nNon-Fungible Tokens (NFTs) and Cryptocurrency\nAs a U.S. government agency, NASA makes its imagery and video publicly available for educational and information purposes, however, since NFTs are, in essence, digital tokens owned by someone as a “one of a kind” digital asset, NASA doesn’t wish for its materials to be used for these purposes. The agency also doesn’t approve any merchandising applications involving NFTs, and it’s unlawful to falsely claim copyright or other rights in NASA materials.\nNASA will not promote or endorse or appear to promote or endorse a commercial product, service or activity. This includes cryptocurrency.\nFurther, astronauts or employees who are currently employed by NASA cannot have their names, likenesses or other personality traits displayed or position title used on any commercial products, advertisements, promotional material or commercial product packaging.\nArtificial Intelligence (AI) Applications\nArtificial Intelligence (AI) Applications\nNASA is committed to transparency, open science, and making data available to everyone. While a wealth of public information is available for use in artificial intelligence (AI) applications, it’s important to understand the following when using our data for AI development:\nAttribution: NASA cannot verify the accuracy of information once it’s incorporated into a large language model. Therefore, attribution of the information directly to NASA is not permitted. Similarly, NASA does not permit our Insignia (i.e., NASA Meatball, Worm logotype, or Seal) to appear with AI generated imagery or in the training of AI tools. To promote transparency, NASA strongly encourages AI-generated products maintain a marking indicating the product is AI generated.\nSource Disclosure (No Permission Implied): As a statement of fact, you can acknowledge your AI tool includes NASA source material, but do not imply any review or permission was granted by NASA for its specific use.\nAccuracy Disclaimer: It’s important to clarify that NASA is not responsible for the accuracy of the information generated by your AI model.\nAI Model Attribution: All outputs from the AI model should be attributed to the AI product itself, not NASA. References like “according to NASA” or similar are prohibited in AI products.\nEndorsement: Use of NASA content to train AI models does not constitute endorsement by NASA.\nBy following these guidelines, you can ensure transparency and responsible use of our public information in your AI applications.\nIMAGE ACCESS\nNASA has extensive image and video galleries online, including historic images, current missions, astronomy pictures, Earth images and ways to search for NASA images. Generally, each mission and program has a video and image collection on the topic page. For example, Space Station videos can be found at https://www.nasa.gov/mission_pages/station/videos/index.html. Content can also be found on our extensive social media channels.\nEngineers within the Launch Control Center’s Firing Room 1 monitor on overall test of the Apollo 11 space vehicle. JoAnn Morgan can be found near the center of the third row.NASA\nContact\nFor questions about specific images, please call 202-358-1900.\nFor questions about specific video, please call 202-358-0309.\nImage and Media Resources\nNASA’s multimedia resources can be found online here. Below are a condensed list of image, video, audio, data and 3d asset resources.\nNASA Image Libraries:\nNASA Image and Video Library\nNASA Image of the Day\nCatalog of Earth Imagery\nNASA Earth Observatory\nScientific Visualization Studio\nGateway to Astronaut Photography of Earth\nNASA GIPHY\nJPL Photojournal\nJames Webb Space Telescope Imagery\nNASA VR and 360 Multimedia\nHigh Energy Astrophysics Picture of the Week\nSolar Dynamics Observatory\nMODIS Image of the Day\nMars Perseverance Gallery\nLandsat Image Gallery\nHubble Imagery\nHiRISE Imagery\nTrek Galleries\nFaces of NASA\nLROC Lunar Imagery\nNASA Flickr Accounts\nNASA HQ Photo\nGlenn Research Center\nGoddard Space Flight Center\nJet Propulsion Laboratory\nJohnson Space Center\nKennedy Space Center\nLangley Research Center\nMarshall Space Flight Center\nNASA APPEL Knowledge Services\nRobotic Refueling Mission\nNASA on The Commons\nNASA Space Flight Awareness\nChandra X-ray Observatory\nNASA_SDO\nHubble Space Telescope\nJames Webb Space Telescope\nProject Morpheus\nNASA Streaming video:\nNASA+\nNASA YouTube Channel\nNASA Twitch\nNASA DailyMotion\nAudio\nAudio and Ringtones\nNASA Soundcloud\nNASA Podcasts\nNASA Spotify\nData\ndata.nasa.gov\nPlanetary Data System\nNASA’s Physical Oceanography Distributed Active Archive Center\n3D/Tactile\nNASA 3D Resources\n3D Printed Universe\nBlind/Low-Vision Accessible Materials – Chanda X-ray\nTactile Solar System Images\nSocial\nOfficial NASA Social Media Accounts\nAdditional Guidance\nGuidelines for logo usage, merchandising requests, media usage, and advertising requests\nFilm & Documentary\nFrom providing footage to on-site filming learn more about working with NASA on documentary and film projects.\nFilm & DocumentaryMerchandise\nGuidance for companies seeking approval for producing NASA-related merchandise\nMerchandise Approvals\nSource article image alternative text: The Astronaut Snoopy balloon is seen floating along in the Macy's Thanksgiving Day Parade on, Thursday, Nov. 24, 2022, in New York City.\nStrategic Partnerships\nLearn more about how NASA collaborates with brands on engagement opportunities and products.\nStrategic Partnerships\nSource article image alternative text: NASA Meatball\nBrand Guidelines\nGuidance for use of NASA's Insignia (the \"Meatball\"), Logotype (the \"Worm\") and other supporting graphics.\nBrand Guidelines",
         "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
       }
@@ -1091,169 +1440,230 @@
   "draft": {
     "category": "Maailma",
     "image": {
-      "alt": "Arkistokuva: Satelliittikuva näyttää suuren pyörteisen pilvimuodostelman tummansinisen meren yllä, ja vasemmalla näkyy osittain niemimaa.",
-      "caption": "NASA MODIS: Hurricane Rachel. Kuva otettu 2026-10-01; NASA julkaisi kuvaesittelyn 2026-10-04.",
+      "alt": "Arkistokuva: Ilmakuva näyttää kuivaa maastoa, josta nousee useita harmaanruskeita savupilviä, jotka leviävät taivaalle. Monikaistainen valtatie kulkee maiseman poikki, ja sen varrella on puita ja pensaikkoa.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
         "category": "Maailma",
         "concepts": [
           {
-            "depictable_scene": "Todellinen 1. lokakuuta 2026 otettu MODIS-satelliittikuva, jossa Rachelin kiertyvä pilvimuodostelma näkyy merellä Baja Californian niemimaan eteläpuolella.",
+            "depictable_scene": "Todellinen Aqua-satelliitin MODIS-kuva Oregonista 30. syyskuuta 2026: Cascadevuoriston itäpuolisessa maastossa näkyy paloalueita ja niistä pääosin itään ulottuvia harmaita savuvanoja.",
             "must_avoid": [
-              "Eri myrskyn tai eri kuvauspäivän esittäminen Rachelina",
-              "Maalle osuvan hurrikaanin esittäminen"
+              "Images from a different wildfire season",
+              "Fabricated satellite observations"
             ],
             "must_show": [
-              "Hurricane cloud spiral over ocean"
+              "Satellite view of Oregon wildfire areas",
+              "Gray smoke plumes extending eastward"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "Rachel MODIS 2026",
-              "Hurricane Rachel satellite clouds",
-              "Rachel Baja California MODIS October 1 2026"
+              "Oregon MODIS September 2026",
+              "Oregon wildfire satellite smoke",
+              "NASA Aqua Oregon 30 September 2026",
+              "MODIS Fires in Oregon October 5 2026"
             ],
-            "subject": "Rachel-hurrikaani Terra-satelliitin kuvassa"
+            "subject": "Oregonin maastopalot Aqua-satelliitin kuvassa"
           },
           {
-            "depictable_scene": "Laajat, korkeat mainingit ja vaahtoavat aallonharjat avoimella merellä tumman pilvitaivaan alla; kuvassa ei näy rantaa tai tunnistettavaa paikkaa.",
+            "depictable_scene": "Viisto ilmakuva nimeämättömästä kuivasta mäkisestä maastosta, jossa harva puusto ja pensaikko ympäröivät tummentunutta paloaluetta. Paloalueelta nouseva harmaa savu levittäytyy pitkänä vanana kuvan sivulle. Näkymä ei jäljittele Oregonin tiettyä paikkaa tai yksittäistä vuoden 2026 paloa.",
             "must_avoid": [
-              "Ihmiset tai ruumiinosat",
-              "Tunnistettavan paikan tai Rachelin todellisen tilanteen keksitty toisinto",
-              "Maalle iskevä myrsky, tuhot tai pelastustilanne",
-              "Luettava teksti ja logot"
+              "People or body parts",
+              "Recognizable named landscapes or reconstruction of a specific fire",
+              "Invented text, logos or satellite data overlays"
             ],
             "must_show": [
-              "Large ocean swells",
-              "Foaming wave crests"
+              "Dry terrain with a dark burn area",
+              "Gray wildfire smoke plume drifting sideways"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "voimakas aallokko avomerellä",
-              "large ocean swells",
-              "rough sea storm clouds"
+              "Wildfire smoke aerial view",
+              "Dry scrubland wildfire smoke",
+              "Maastopalon savu ilmakuva",
+              "Burn scar smoke plume"
             ],
-            "subject": "Voimakasta aallokkoa merellä"
+            "subject": "Savu kuivassa maastossa jatkuvista maastopaloista"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "MODIS Land Rapid Response Team, NASA GSFC",
-      "license": "NASA media guidelines: informational/editorial use with NASA credit; no endorsement",
-      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
-      "local_path": "media/a99fee9583835ba7a76d13582f64bfd19c533b987bc1765c6ff8d69269b76211.jpg",
-      "photo_date": "2026-10-01",
+      "credit": "Photo by Brian Sumner on Unsplash",
+      "depicted": "An aerial view shows a wide expanse of land under a clear blue sky, with a significant amount of smoke rising from multiple points on the ground. The smoke is light brown and white, forming large plumes that extend upwards and drift across the landscape. In the foreground and midground, a multi-lane highway stretches diagonally from the bottom center towards the upper right, with several vehicles, including cars and trucks, visible on it. To the left of the highway, there is a large area of dist",
+      "generated": false,
+      "hotlink": true,
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
       "pixel_review": {
-        "alt_fi": "Satelliittikuva näyttää suuren pyörteisen pilvimuodostelman tummansinisen meren yllä, ja vasemmalla näkyy osittain niemimaa.",
+        "alt_fi": "Ilmakuva näyttää kuivaa maastoa, josta nousee useita harmaanruskeita savupilviä, jotka leviävät taivaalle. Monikaistainen valtatie kulkee maiseman poikki, ja sen varrella on puita ja pensaikkoa.",
         "approved": true,
-        "article_text_sha256": "f6fe553f99ca2263c0c413bca0d3ed69cbabb3f73f9659d0e0009fb495e48297",
-        "concept_sha256": "8b9255fb6fec39ae267cadf6cd0d7d4afdbb3ac0091c93c185ccecb78e0ad89c",
-        "description": "A satellite image shows a large, swirling white cloud formation, characteristic of a hurricane, over a dark blue ocean. To the left, a landmass with green and brown tones, representing the Baja California peninsula, is partially visible. Other scattered clouds are present over the landmass and further out to sea.",
-        "fit_score": 10,
-        "image_sha256": "a99fee9583835ba7a76d13582f64bfd19c533b987bc1765c6ff8d69269b76211",
+        "article_text_sha256": "8184d787f90aaec1419b2b5e4d591eba89d58c4c94e1ec9b65cc0a83fb6fa373",
+        "concept_sha256": "936d2005a462e94628ab0b6d32d300b552cdc44d3dc4d38c8de1e33461a5ec64",
+        "description": "An aerial view shows a wide, multi-lane highway stretching into the distance, with vehicles visible on it. To the left of the highway, a large area of dry, cleared land is visible, with several plumes of gray-brown smoke rising from it and drifting across the sky. Patches of green trees and scrubland are scattered across the landscape, particularly on the left side and bordering the highway. The sky above is clear blue with some hazy clouds.",
+        "fit_score": 9,
+        "image_sha256": "afabe6c73d9e57ae511aef0fb94bc828d5e5f75f4b69bbb832b8a85b2d7a1cf5",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
+          true,
           true
         ],
-        "no_people": true,
-        "reason": "The image clearly depicts a hurricane cloud spiral over the ocean, with the Baja California peninsula visible, which directly matches the article's description of Hurricane Rachel's location and the selected concept's requirement for a satellite image of Rachel's cloud formation near Baja California.",
-        "reviewed_at": "2026-10-04T04:50:45.481201+00:00"
+        "no_people": false,
+        "reason": "The image clearly depicts dry terrain with smoke plumes, which directly illustrates the article's subject of wildfires and the selected concept of smoke from ongoing wildfires in dry terrain. The smoke is gray and drifts sideways, matching the 'must_show' elements. The terrain is dry and appears to have burn areas or cleared land that could be associated with fire activity.",
+        "reviewed_at": "2026-10-05T04:26:47.810256+00:00"
+      },
+      "pixels": {
+        "height": 1117,
+        "mode": "RGB",
+        "variance": 11373.1,
+        "width": 1536
       },
       "relevance_check": {
         "accepted": true,
-        "evidence": "A satellite image shows a large, swirling white cloud formation, characteristic of a hurricane, over a dark blue ocean. To the left, a landmass with green and brown tones, representing the Baja California peninsula, is partially visible. Other scattered clouds are present over the landmass and further out to sea.",
+        "evidence": "An aerial view shows a wide, multi-lane highway stretching into the distance, with vehicles visible on it. To the left of the highway, a large area of dry, cleared land is visible, with several plumes of gray-brown smoke rising from it and drifting across the sky. Patches of green trees and scrubland are scattered across the landscape, particularly on the left side and bordering the highway. The sky above is clear blue with some hazy clouds.",
         "matched": [
-          "baja",
-          "cloud",
-          "hurricane",
-          "ocean"
+          "area",
+          "drifting",
+          "dry",
+          "gray",
+          "smoke"
         ],
         "method": "vision",
         "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
       "selection_evidence": {
-        "article_text_sha256": "f6fe553f99ca2263c0c413bca0d3ed69cbabb3f73f9659d0e0009fb495e48297",
-        "decision_sha256": "7d1f65d3c0b770afeb14aca290ba38e777911a0fc3dd9f5bc400c0d8847d4782",
+        "article_text_sha256": "8184d787f90aaec1419b2b5e4d591eba89d58c4c94e1ec9b65cc0a83fb6fa373",
+        "decision_sha256": "9632e22a9f51a1e5d3a5578102d7cdd711c66542173db272d0c09916fab254ad",
         "minimum_real_fit": 8,
         "searches": [
           {
             "candidates": [
               {
-                "approved": true,
-                "fit_score": 10,
-                "image_sha256": "a99fee9583835ba7a76d13582f64bfd19c533b987bc1765c6ff8d69269b76211",
-                "license": "NASA media guidelines: informational/editorial use with NASA credit; no endorsement",
-                "reason": "The image clearly depicts a hurricane cloud spiral over the ocean, with the Baja California peninsula visible, which directly matches the article's description of Hurricane Rachel's location and the selected concept's requirement for a satellite image of Rachel's cloud formation near Baja California.",
-                "source_url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2026-10-04"
-              }
-            ],
-            "concept_rank": 1,
-            "outcome": "accepted",
-            "provider": "archive-image",
-            "queries": [
-              "already deployed rights-pinned image"
-            ]
-          },
-          {
-            "candidates": [
-              {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "a99fee9583835ba7a76d13582f64bfd19c533b987bc1765c6ff8d69269b76211",
-                "license": "NASA media guidelines: informational/editorial use with NASA credit; no endorsement",
-                "reason": "The article discusses Hurricane Rachel and mentions it caused strong waves and heavy rains. The selected concept describes 'Large ocean swells' and 'Foaming wave crests' on the open sea under a dark cloudy sky, explicitly stating 'no beach or identifiable place visible'. The provided image is a satellite view of a hurricane, which is relevant to th",
-                "source_url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2026-10-04"
-              }
-            ],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "archive-image",
-            "queries": [
-              "already deployed rights-pinned image"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "c15084bc33d65f5a97af9553f9eb13f472cb49676dd68073a470edbc0c400ec2",
-                "license": "CC0 1.0",
-                "reason": "The article describes a hurricane with strong waves and heavy rainfall. The selected concept specifies 'large ocean swells' and 'foaming wave crests'. The image shows calm water with no visible swells or foaming wave crests, and the sky is only partly cloudy, not indicative of a storm. Therefore, it does not depict the concrete scene described in t",
-                "source_url": "https://www.pexels.com/photo/photo-of-cargo-ship-on-body-of-water-221322/"
-              },
-              {
-                "approved": false,
-                "fit_score": 6,
-                "image_sha256": "5910bfd18f797b98bda3f437cc46164778187e39b63b353a8c597939df38bba3",
+                "fit_score": 0,
+                "image_sha256": "5a3efe0b182fd22d5e18b5c6a9dcab9c769b9dddab132545f8cdc0dff335ecab",
                 "license": "Pexels License",
-                "reason": "The article describes a hurricane causing strong waves and heavy rainfall in the southern parts of the Baja California peninsula, while the selected concept focuses on large ocean swells and foaming wave crests on the open sea under a dark, cloudy sky, without a visible shore. The image shows a boat on a choppy sea with breaking waves and a cloudy ",
-                "source_url": "https://www.pexels.com/photo/black-ship-on-sea-under-white-clouds-13019394/"
+                "reason": "The article discusses satellite images of wildfires and smoke plumes in Oregon. The image provided shows an aerial view of ocean waves breaking on a beach, which is completely unrelated to wildfires, satellite imagery of land, or smoke. Neither of the 'must_show' elements (Satellite view of Oregon wildfire areas, Gray smoke plumes extending eastwar",
+                "source_url": "https://www.pexels.com/photo/an-aerial-photography-of-ocean-waves-rushing-on-shore-9181889/"
               },
               {
                 "approved": false,
                 "fit_score": 3,
-                "image_sha256": "bab076c134bdc2d49c06310cfcc359b1fc94ecafd80a10713deb34df8442d51a",
+                "image_sha256": "12d203eef6de61d8084dee27ac7d63022c2b2b9974263b6a53e01d9bfddefb27",
                 "license": "Pexels License",
-                "reason": "The article discusses a hurricane and its effects on the ocean, specifically 'large ocean swells' and 'foaming wave crests'. The image shows a ship's deck with people and a helicopter, and while there is water, it does not depict the 'large ocean swells' or 'foaming wave crests' that are central to the selected concept. The water visible is choppy ",
-                "source_url": "https://www.pexels.com/photo/men-on-helipad-on-sea-shore-18959219/"
+                "reason": "The article discusses satellite images of wildfires and smoke plumes in Oregon. The image shows a landscape with a lake and hills, but there are no visible signs of wildfires, smoke, or a satellite perspective. It does not depict the specific concept of a satellite view of Oregon wildfire areas with smoke plumes. One or more required concept elemen",
+                "source_url": "https://www.pexels.com/photo/aerial-shot-of-a-river-mountain-10154131/"
               },
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "0ce17818e818de742530ac2bff67ce86767bfd9e0a2d00033c0755ceddc76645",
+                "fit_score": 0,
+                "image_sha256": "78ccbe660c720fcfb82ca5c06c1621f51e30afaf0177c4c70b0c97dd447697e1",
                 "license": "Pexels License",
-                "reason": "The article describes a hurricane causing strong waves and heavy rainfall at sea. The selected concept specifies 'Large ocean swells' and 'Foaming wave crests' under a 'dark cloudy sky', without a boat. While the image shows choppy water and some white caps, the waves are not 'large ocean swells' as described for a hurricane, and the presence of a ",
-                "source_url": "https://www.pexels.com/photo/a-fishing-boat-on-the-ship-8103089/"
+                "reason": "The article discusses satellite images of wildfires and smoke plumes in Oregon. The image shows an aerial view of a dry, cracked landscape next to a body of water, which does not depict wildfires, smoke, or a satellite perspective of Oregon. It is completely unrelated to the article's subject. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/birds-eye-view-of-a-water-reservoir-10154271/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "54249932b377f7a299f41c5b6d50480cd5730b83cea38568544c2264e0fb8d5d",
+                "license": "Pexels License",
+                "reason": "The article discusses satellite images of wildfires in Oregon. The image shows a bridge and a city skyline, which is unrelated to the article's subject of wildfires and satellite imagery. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/iconic-burnside-bridge-in-portland-oregon-32173030/"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "pexels",
+            "queries": [
+              "Oregon MODIS September 2026",
+              "Oregon wildfire satellite smoke",
+              "NASA Aqua Oregon 30 September 2026"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "4805a67cf61c12a916cd611a33a7e358a1e25a7677292648a7f72db836f2649e",
+                "license": "Unsplash License",
+                "reason": "The article discusses a recent satellite image of wildfires in Oregon from 2026. The image provided is an old historical map of Oregon, not a satellite image, and does not show any wildfires or smoke plumes. It is completely unrelated to the specific subject and time frame of the article. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/map-of-oregon-showing-topography-and-rivers-IXdPXX9h6GI?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "23186b46bae7b0910ca80fb2c1e0d0099c7a0458effae02631b37b7cd2df4fb2",
+                "license": "Unsplash License",
+                "reason": "The article discusses wildfires in Oregon as observed by a NASA satellite. The image shows a person celebrating in front of a university sign. There is no visible connection between the image content and the article's subject of wildfires or satellite imagery. The 'Oregon' in the sign is a geographical match but not a thematic one, and the image do",
+                "source_url": "https://unsplash.com/photos/graduate-sprays-champagne-in-front-of-oregon-state-university-sign-rcKkIGBLoOA?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "697c6923bad33b3d11eb50bddc3036b9d54ace09ccf3a6b72468eaf8179df3fa",
+                "license": "Unsplash License",
+                "reason": "The article and concept describe a satellite image showing wildfire areas and smoke plumes in Oregon. The provided image is an aerial view of a healthy, unburnt forest with no visible smoke or fire, and it is not a satellite image. Therefore, it does not depict the specific concept or the core subject of the article. One or more required concept el",
+                "source_url": "https://unsplash.com/photos/an-aerial-view-of-a-forest-with-mountains-in-the-background-UOkzI1elW9w?utm_source=uutistenlukija&utm_medium=referral"
+              },
+              {
+                "approved": false,
+                "fit_score": 3,
+                "image_sha256": "a25bb45f1379a28f36862e9a3ab553bb3f37998f0c56310a7f7718110133c981",
+                "license": "Unsplash License",
+                "reason": "The article discusses satellite images of wildfires in Oregon, specifically a MODIS image from September 30, 2026, showing fire areas and smoke plumes extending eastward. The selected concept explicitly requires a 'Satellite view of Oregon wildfire areas' and 'Gray smoke plumes extending eastward'. The provided image is a ground-level photograph of",
+                "source_url": "https://unsplash.com/photos/large-wildfire-burning-trees-and-brush-at-night-Xfhf4Eviza4?utm_source=uutistenlukija&utm_medium=referral"
+              }
+            ],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "unsplash",
+            "queries": [
+              "Oregon MODIS September 2026",
+              "Oregon wildfire satellite smoke",
+              "NASA Aqua Oregon 30 September 2026"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Oregon MODIS September 2026",
+              "Oregon wildfire satellite smoke",
+              "NASA Aqua Oregon 30 September 2026"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "google",
+            "queries": [
+              "Oregon MODIS September 2026",
+              "Oregon wildfire satellite smoke",
+              "NASA Aqua Oregon 30 September 2026"
+            ]
+          },
+          {
+            "candidates": [
+              {
+                "approved": false,
+                "fit_score": 6,
+                "image_sha256": "fe6feb81d2cb798e6121c1ae993f03bfc8f0d4fadecf17c2741879f726311fc9",
+                "license": "Pexels License",
+                "reason": "The article discusses wildfires in dry, hilly terrain, specifically mentioning burn areas and smoke plumes. The selected concept describes a similar scene with dry terrain, a dark burn area, and a smoke plume. However, the actual pixels show smoke rising from a residential area, not a dry, hilly terrain with a dark burn area as specified in the con",
+                "source_url": "https://www.pexels.com/photo/aerial-view-of-houses-in-a-rural-area-5872151/"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "voimakas aallokko avomerellä",
-              "large ocean swells",
-              "rough sea storm clouds"
+              "Wildfire smoke aerial view",
+              "Dry scrubland wildfire smoke",
+              "Maastopalon savu ilmakuva"
             ]
           },
           {
@@ -1261,67 +1671,80 @@
               {
                 "approved": true,
                 "fit_score": 9,
-                "image_sha256": "e136d9121a32a27249c4a493de93ee273ee4f5bccc92ebcd3f0eed7bf2d0e33c",
+                "image_sha256": "afabe6c73d9e57ae511aef0fb94bc828d5e5f75f4b69bbb832b8a85b2d7a1cf5",
                 "license": "Unsplash License",
-                "reason": "The image directly depicts large ocean swells and foaming wave crests, which are explicitly mentioned in the article as a consequence of Hurricane Rachel. The scene matches the selected concept of 'Voimakasta aallokkoa merellä' (Strong swells at sea) and avoids all 'must_avoid' elements.",
-                "source_url": "https://unsplash.com/photos/ocean-wave-during-daytime-OCzvgBqCJKY?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The image clearly depicts dry terrain with smoke plumes, which directly illustrates the article's subject of wildfires and the selected concept of smoke from ongoing wildfires in dry terrain. The smoke is gray and drifts sideways, matching the 'must_show' elements. The terrain is dry and appears to have burn areas or cleared land that could be asso",
+                "source_url": "https://unsplash.com/photos/aerial-photography-of-smoke-near-road-ewt4P8Y57_0?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
             "concept_rank": 2,
             "outcome": "accepted",
             "provider": "unsplash",
             "queries": [
-              "voimakas aallokko avomerellä",
-              "large ocean swells",
-              "rough sea storm clouds"
+              "Wildfire smoke aerial view",
+              "Dry scrubland wildfire smoke",
+              "Maastopalon savu ilmakuva"
             ]
           }
         ],
         "selected": {
-          "concept_rank": 1,
-          "fit_score": 10,
-          "image_sha256": "a99fee9583835ba7a76d13582f64bfd19c533b987bc1765c6ff8d69269b76211",
+          "concept_rank": 2,
+          "fit_score": 9,
+          "image_sha256": "afabe6c73d9e57ae511aef0fb94bc828d5e5f75f4b69bbb832b8a85b2d7a1cf5",
           "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "a99fee9583835ba7a76d13582f64bfd19c533b987bc1765c6ff8d69269b76211",
-      "source_caption": "Hurricane Rachel",
-      "source_url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2026-10-04",
-      "url": "https://modis.gsfc.nasa.gov/gallery/images/image10042026_main.jpg"
+      "source_url": "https://unsplash.com/photos/aerial-photography-of-smoke-near-road-ewt4P8Y57_0?utm_source=uutistenlukija&utm_medium=referral",
+      "stock_provenance": {
+        "download_tracking": {
+          "successful": true,
+          "url": "https://api.unsplash.com/photos/ewt4P8Y57_0/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw1fHxXaWxkZmlyZSUyMHNtb2tlJTIwYWVyaWFsJTIwdmlld3xlbnwwfDB8fHwxNzkxMTc0Mzk3fDA"
+        },
+        "image_url": "https://images.unsplash.com/photo-1550171342-0c2f06a89abc?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw1fHxXaWxkZmlyZSUyMHNtb2tlJTIwYWVyaWFsJTIwdmlld3xlbnwwfDB8fHwxNzkxMTc0Mzk3fDA&w=1536&q=80&fm=jpg&fit=crop",
+        "photo_id": "ewt4P8Y57_0",
+        "photo_url": "https://unsplash.com/photos/aerial-photography-of-smoke-near-road-ewt4P8Y57_0?utm_source=uutistenlukija&utm_medium=referral",
+        "photographer": "Brian Sumner",
+        "photographer_url": "https://unsplash.com/@bmsumner?utm_source=uutistenlukija&utm_medium=referral",
+        "provider": "unsplash",
+        "query": "Wildfire smoke aerial view",
+        "retrieved_at": "2026-10-05T04:26:45Z"
+      },
+      "stock_provenance_sha256": "a66f1ebdb8c357546c5c8ce28f11b0f5b0d7bb155dc47e5e787f0c645a4749ef",
+      "url": "https://images.unsplash.com/photo-1550171342-0c2f06a89abc?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw1fHxXaWxkZmlyZSUyMHNtb2tlJTIwYWVyaWFsJTIwdmlld3xlbnwwfDB8fHwxNzkxMTc0Mzk3fDA&w=1536&q=80&fm=jpg&fit=crop"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Rachel oli 1. lokakuuta kolmannen luokan hurrikaani noin 390 kilometriä Baja Californian niemimaan eteläkärjestä etelään. NASA:n kuvaesittelyssä referoidun Yhdysvaltain kansallisen hurrikaanikeskuksen NHC:n arvion mukaan suurin jatkuva tuulennopeus oli tuolloin 195 kilometriä tunnissa."
+        "text": "NASA julkaisi 5. lokakuuta Aqua-satelliitin MODIS-mittalaitteen kuvan, joka oli otettu Oregonista 30. syyskuuta 2026. Kuvaesittelyn mukaan Cascadevuoriston itäpuolella oli tuolloin yhä aktiivisia maastopaloja. Savu kulkeutui useimmilta paloalueilta pääosin itään."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "NASA:n mukaan hurrikaani eteni länteen noin kuuden kilometrin tuntinopeudella eikä noussut maihin. Merellä pysynyt myrsky aiheutti silti voimakasta aallokkoa ja toi rankkasateita niemimaan eteläosiin."
+        "text": "NASA kuvaa Oregonin palokautta ennätykselliseksi ja kertoo palaneen alueen ylittäneen 2,1 miljoonaa eekkeriä syyskuun loppuun mennessä. Sen mukaan suurin osa paloista oli Cascadevuoriston itäpuolella."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "NASA:n Terra-satelliitin MODIS-mittalaite tallensi hurrikaanin 1. lokakuuta. NASA julkaisi kuvan ja sitä koskevan esittelyn 4. lokakuuta, joten kuva näyttää myrskyn tilanteen kolme päivää ennen julkaisua."
+        "text": "NASA nimeää suurimmaksi Oregoniin ulottuneeksi paloksi Big Grass -palon, jonka kokonaisala oli 578 637 eekkeriä. Valtaosa paloalueesta sijaitsi kuitenkin Idahossa: Oregonin puolella paloi lähteen mukaan 186 809 eekkeriä."
       }
     ],
-    "summary": "NASA:n mukaan Rachel toi voimakasta aallokkoa ja rankkasateita Baja Californian eteläosiin, vaikka hurrikaani ei noussut maihin. Lokakuun 1. päivänä myrsky liikkui länteen, poispäin maasta.",
-    "title": "Rachel-hurrikaani kulki Baja Californian eteläpuolella"
+    "summary": "NASA kertoo Oregonin vuoden 2026 maastopalokauden olleen ennätyksellinen: syyskuun loppuun mennessä oli palanut yli 2,1 miljoonaa eekkeriä. Satelliittikuva osoittaa palojen jatkuneen vielä 30. syyskuuta.",
+    "title": "Oregonin maastopalot jatkuivat syyskuun lopulla"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "23d6f6799338e5b5b87d7987cf3def6f67ccfdac165f8f31900784b6092b0a7b",
+    "draft_sha256": "322086d046bd8b7956cd282886c057ade6df008b867de1acc79dec01ee3cebcd",
     "reasons": [
-      "Otsikko on 54 merkkiä eli alle 60 merkin tavoitteen. Rachel-hurrikaani on alussa, ja sijainti Baja Californian eteläpuolella vastaa lähdettä A.",
-      "Lähde A tukee ensimmäisen kappaleen tietoja: Rachel oli 1.10.2026 kolmannen luokan hurrikaani noin 390 kilometriä niemimaan eteläkärjestä etelään, ja suurin jatkuva tuulennopeus oli 195 km/h. NHC:n arvio esitetään asianmukaisesti NASA:n referoimana, ei erikseen tarkistettuna tietona.",
-      "Ingressin ja toisen kappaleen länsisuuntainen liike, noin 6 km/h:n etenemisnopeus, liikkuminen poispäin maasta, maihinnousun puuttuminen sekä voimakas aallokko ja rankkasateet niemimaan eteläosissa löytyvät lähteestä A. Maantieteellistä vaikutusaluetta ei laajenneta perusteettomasti.",
-      "Lähde A vahvistaa Terra-satelliitin MODIS-kuvan kuvauspäiväksi 1.10.2026 ja kuvaesittelyn julkaisupäiväksi 4.10.2026. Kolmen päivän ero on oikein, eikä luonnos esitä kuvaa julkaisupäivän myrskytilanteena. Kaikkien kappaleiden source_ids-merkintä A on perusteltu. Yksi aiheen kannalta suora lähde riittää tähän rajattuun, neutraalisti ja omin sanoin muotoiltuun kuvaesittelyuutiseen; riippumatonta vahvistusta ei väitetä.",
-      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Lähde A yhdistää valitun kuvan nimenomaan Racheliin, oikeaan kuvauspäivään ja MODIS Land Rapid Response Team, NASA GSFC -tekijätietoon. Kirjattu pikseliarvio kuvaa uutiseen konkreettisesti liittyvää hurrikaanin pilvipyörrettä ja niemimaata sekä antaa koko artikkelin sopivuudelle 10/10. Paketissa on kaksi järjestettyä kuvakonseptia ja hakumerkinnät kummallekin. RIGHTS-asiakirja antaa NASA-aineistolle toimituksellisen käyttöluvan lähdemaininnalla, eikä aineistossa ole tämän kuvan kolmannen osapuolen oikeusrajoitusta. Kuvatekstin päivämäärät vastaavat lähdettä A; RIGHTS-asiakirjaa ei käytetä uutisväitteiden todisteena."
+      "Otsikko on 47 merkkiä eli alle 60 merkin tavoitteen, ja Oregonin maastopalot ovat sen alussa. Lähde A tukee otsikon ja ingressin tietoa palojen jatkumisesta 30.9.2026.",
+      "Lähde A tukee ensimmäisen kappaleen kaikkia keskeisiä tietoja: julkaisu on päivätty 5.10.2026, Aqua-satelliitin MODIS-kuva on otettu 30.9.2026, aktiivisia paloja oli Cascadevuoriston itäpuolella ja savu kulkeutui useimmista palokohdista pääosin itään. Julkaisupäivä ja havaintopäivä on erotettu oikein.",
+      "Ingressin ja toisen kappaleen ennätyksellinen palokausi sekä yli 2,1 miljoonan eekkerin palanut alue perustuvat lähteeseen A ja esitetään NASA:n kertomina, eivät riippumattomasti vahvistettuina tietoina. Kolmannen kappaleen Big Grass -palon kokonaisala 578 637 eekkeriä ja Oregonin osuus 186 809 eekkeriä vastaavat lähdettä A; pääosan sijainti Idahossa ja palon ulottuminen Oregoniin on ilmaistu oikein.",
+      "Kaikkien kappaleiden source_ids-merkintä A on asianmukainen. Yksi aiheeseen suoraan liittyvä, 5.10.2026 päivätty lähde riittää tähän rajattuun kuvaesittelyuutiseen. Teksti on omin sanoin kirjoitettua, neutraalia ja ymmärrettävää suomea, Maailma-luokitus sopii aiheeseen eikä luonnos lisää lähteettömiä syy-seurausselityksiä tai laajenna maantieteellistä rajaus­ta.",
+      "Luonnoksen koko kuvatietue vastaa lähdepaketin tietuetta. Kahdesta järjestetystä kuvakonseptista molemmille on dokumentoitu hakuja. Valitun todellisen kuvan pikseliarvion pistemäärä on 9/10, ja kuvauksissa näkyvät savuvanat kuivassa, harvan kasvillisuuden maastossa liittyvät konkreettisesti jutun palo- ja savuaiheeseen; yhteys ei perustu vain paikkaan tai uutisluokkaan. Kuva on merkitty arkistokuvaksi eikä sitä väitetä Oregonin vuoden 2026 satelliittihavainnoksi. Kuvaajakohtainen Unsplash-alkuperätietue, yksilöity kuvatunniste, latausseuranta ja Unsplash License tukevat käyttöoikeutta yhdessä, eivät pelkkänä lisenssimainintana. NASA:n RIGHTS-asiakirjaa ei käytetä tämän valokuvan käyttöluvan perusteena."
     ]
   }
 }

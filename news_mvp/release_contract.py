@@ -1,4 +1,5 @@
 """Explicit official-text provenance; legacy imaged releases keep their original meaning."""
+from .primary_data import reconstruct_primary, validate_binding
 import hashlib
 import json
 import math
@@ -540,6 +541,9 @@ def media(packet, draft, policy_gate=True):
     # (real HTTPS URL, publisher, title, substantive text, freshness) by validate_packet, and
     # they can never be the basis of the release on their own.
     source = sources[0]
+    if 'primary_data' in basis:
+        if basis['provider'] != 'stat': raise ValueError('Wrong primary-data provider')
+        validate_binding(basis['primary_data'])
     if (not re.fullmatch(provider['article_pattern'], source['url']) or
         packet['story_key'] != 'url:'+source['url'] or source['publisher'] != provider['publisher']):
         raise ValueError('Source/reuse policy mismatch')
@@ -650,6 +654,7 @@ def verify_intake(packet, state, *, archive_image_only=False):
     if rights_text(rights,provider) != packet['supporting_documents'][0]['text']:
         raise ValueError('Captured rights text changed')
     parsed = source_fields(raw,provider,packet['sources'][0]['url'])
+    parsed = reconstruct_primary(packet, directory, parsed, raw, rights)
     if any(packet['sources'][0].get(k) != v for k,v in parsed.items()):
         if not (archive_image_only and _archived_source_matches(raw, provider, packet['sources'][0], parsed)):
             raise ValueError('Captured source differs from reviewed packet')

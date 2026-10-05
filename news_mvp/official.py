@@ -1,4 +1,6 @@
 """Two pinned Finnish public sources, private preparation only; no media inference."""
+from .primary_data import binding_and_text, FILES, capture_primary, Links, TABLE
+_AUTO_PRIMARY = object()
 import hashlib
 import json
 import re
@@ -238,7 +240,7 @@ def source_fields(raw, provider, url=None):
     return {'id': 'A', 'title': title, 'published_at': published, 'text': page.text()}
 
 
-def collect(recipe, state_dir, now=None, search=None):
+def collect(recipe, state_dir, now=None, search=None, *, primary_data=_AUTO_PRIMARY):
     """Collect one source into a packet.
 
     `search` is an optional callable (query, limit) -> [{'url','title'}] used to find related
@@ -262,6 +264,16 @@ def collect(recipe, state_dir, now=None, search=None):
     raw = response(url, spec['hosts'])
     source = {**source_fields(raw, provider, url), 'url': url, 'publisher': spec['publisher'],
               'reuse': reuse(spec)}
+    primary_binding = None
+    if primary_data is _AUTO_PRIMARY:
+        links = Links(); links.feed(raw.decode('utf-8'))
+        primary_data = capture_primary(source, raw, rights, now) if provider == 'stat' and TABLE in links.links else None
+        if primary_data is not None:
+            captured_at = datetime.fromisoformat(primary_data['receipt']['retrieved_at'].replace('Z', '+00:00'))
+            now = max(now, captured_at)
+    if primary_data is not None:
+        if provider != 'stat': raise ValueError('Wrong primary-data provider')
+        primary_binding, source['text'] = binding_and_text(primary_data, source, raw, rights, now)
     sources = [source]
     # Corroboration. The originating official release is source A; independent coverage of the
     # same story becomes B, C... so the writer can synthesise instead of restating one
@@ -296,6 +308,8 @@ def collect(recipe, state_dir, now=None, search=None):
               'supporting_documents': [{'id': 'RIGHTS', 'purpose': 'text reuse permission; not news or image evidence',
                   'url': spec['rights_url'], 'retrieved_at': now.isoformat(), 'text': permission,
                   'sha256': hashlib.sha256(rights).hexdigest()}]}
+    if primary_binding is not None:
+        packet['publication_basis']['primary_data'] = primary_binding
     validate_packet(packet, now, 48)
     directory = Path(state_dir)/'intake'/digest(packet)
     directory.mkdir(parents=True, exist_ok=True)
@@ -306,6 +320,10 @@ def collect(recipe, state_dir, now=None, search=None):
                'image_status': 'explicit-text-only', 'publication_basis': packet['publication_basis']}
     for name, value in [('source.html', raw), ('rights.html', rights), ('packet.json', json.dumps(packet, ensure_ascii=False, indent=2).encode()), ('receipt.json', json.dumps(receipt, indent=2).encode())]:
         (directory/name).write_bytes(value)
+    if primary_data is not None:
+        for key, name in FILES.items():
+            value = primary_data[key]
+            (directory/name).write_bytes(value if key != 'receipt' else json.dumps(value, ensure_ascii=False).encode())
     return packet, receipt
 
 
