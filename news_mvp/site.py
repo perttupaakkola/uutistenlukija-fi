@@ -666,7 +666,8 @@ def article_actions_html(link, category, public):
     return ('<nav class="article-actions" aria-label="Jutun toiminnot">'
             f'<a class="article-section-return" href="{esc(category_route(category))}">'
             f'Lisää aiheesta {esc(category_display(category))}</a>'
-            f'<a href="{ABOUT_PATH}#korjaukset">Korjauskäytäntö</a>{share}</nav>')
+            + (f'<a class="article-latest-return" href="{LATEST_PATH}">Lue seuraavaksi tuoreimmat uutiset</a>' if public else '')
+            + f'<a href="{ABOUT_PATH}#korjaukset">Korjauskäytäntö</a>{share}</nav>')
 
 
 def listing_feed_html(items, empty_text, recovery_html=""):
