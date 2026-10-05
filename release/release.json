@@ -4,38 +4,277 @@
   "origin": "https://uutistenlukija.fi",
   "ga4_id": "G-35XERS8V6J",
   "source_commit": "17283be05ec5578f69bfc626ec61979d0231fb00",
-  "job_id": "8244199fd98e6cd50207316bdf0aad7d056a8e08ae7a74f249ed3ce8880f32a9",
-  "packet_sha256": "058bb58e01498e7ceeaa5cb595b861b4c6bd9b3f3fef2d87c41a4d085fa45b0e",
-  "draft_sha256": "4ae2d7c6e0db82c78e2db5d3f24104233be816097b79cad2ce491048676f290e",
-  "image_sha256": "bff4a6c093a0cb1dd597a8bfb5c04e019f52c56378a2a345204b1c18e62ca5cb",
+  "job_id": "45c3d38688f191591d841359de7ff4030f75fa5603f8991f7bb7d7f5684470ae",
+  "packet_sha256": "554fb3b61366bdbca0a348699565958de2b92ac801a9c4b6de60aaa0283516a6",
+  "draft_sha256": "e49de9a33cbec22b6828613a80dbe14b4a5f4311f23fb979fab646b29de53638",
+  "image_sha256": null,
   "text_only": {
     "policy": "official-text-v1",
     "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-    "provenance_sha256": "c2bb2edee207e0c6fad3c65a8b4233d03a5cb90ab02f49ae4eb3bcbc79536f7e"
+    "provenance_sha256": "8ea5180780880272e6540826174a5f59df146100391b110cbadb9bc8f0ad0454"
+  },
+  "stock_image": {
+    "alt": "Arkistokuva: Valkoisella työpöydällä on pino papereita, yksittäinen tyhjä arkki, paperiliittimiä, musta kynä, pieni viherkasvi ja laskin.",
+    "caption": "Arkistokuva artikkelin aiheesta.",
+    "classifier_output": {
+      "category": "Talous",
+      "concepts": [
+        {
+          "depictable_scene": "Todellinen valokuva Fortumin toimitilarakennuksen julkisivusta, jossa näkyy yhtiön tunnus. Rakennus kuvataan ulkopuolelta ilman oletusta siitä, että riitaa olisi käsitelty juuri siellä.",
+          "must_avoid": [
+            "Invented Fortum building or logo",
+            "Implying the building is the disputed customer's premises"
+          ],
+          "must_show": [
+            "Actual Fortum office building",
+            "Company identification on facade"
+          ],
+          "rank": 1,
+          "safe_to_generate": false,
+          "search_queries": [
+            "Fortum toimitilarakennus",
+            "Fortum pääkonttori julkisivu",
+            "Fortum office building exterior"
+          ],
+          "subject": "Fortumin toimitilarakennus"
+        },
+        {
+          "depictable_scene": "Tyhjän toimistopöydän lähikuva: paperinen asiakirjanippu ja sen vieressä laskin. Paperit on kuvattu niin, ettei niissä ole luettavaa tekstiä, allekirjoituksia tai yritystunnuksia; laskimen näyttö on tyhjä.",
+          "must_avoid": [
+            "People or body parts",
+            "Readable contract terms, monetary amounts or signatures",
+            "Company logos",
+            "Courtroom props suggesting a binding judgment"
+          ],
+          "must_show": [
+            "Paper documents on an office desk",
+            "Calculator beside the documents"
+          ],
+          "rank": 2,
+          "safe_to_generate": true,
+          "search_queries": [
+            "sopimuspaperit laskin",
+            "yrityssopimus asiakirjat pöydällä",
+            "contract documents calculator",
+            "business paperwork desk"
+          ],
+          "subject": "Yritysasiakkaan sopimukset ja korvauslaskenta"
+        }
+      ],
+      "version": "article-first-v1"
+    },
+    "credit": "Photo by Mediamodifier on Unsplash",
+    "depicted": "An overhead shot shows a white desk with various office supplies. In the top left, a stack of white papers is visible. To the right of the papers, five silver paper clips are scattered. A single sheet of white paper lies in the center of the desk. A black pen with a gold tip is positioned diagonally, pointing towards the top right. In the top right corner, a small white pot contains a green artificial succulent plant with brown gravel. In the bottom right, a black calculator with a gray screen a",
+    "generated": false,
+    "hotlink": true,
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "pixel_review": {
+      "alt_fi": "Valkoisella työpöydällä on pino papereita, yksittäinen tyhjä arkki, paperiliittimiä, musta kynä, pieni viherkasvi ja laskin.",
+      "approved": true,
+      "article_text_sha256": "b1c4d134df4b0068ab7c98e9fc6ebca3db9fd349b40e6861c9add9ff808c037b",
+      "concept_sha256": "853fc903ca541679171b9e6ddbf211d9768a36aec032075c2d1b7415d3da746d",
+      "description": "A top-down view of a white desk with several office items. On the left, a stack of white papers and scattered paper clips. In the center, a single blank white sheet of paper. To the right of the paper, a black pen and a small potted succulent plant. In the bottom right corner, a black calculator.",
+      "fit_score": 9,
+      "image_sha256": "c3867d1d65d342ec4843e280c9d05b39bc22a752f69728e218170807a4c02bbb",
+      "model": "google:gemini-2.5-flash",
+      "must_show_visible": [
+        true,
+        true
+      ],
+      "no_people": true,
+      "reason": "The image clearly shows paper documents on an office desk and a calculator, which directly matches the 'must_show' elements of the selected concept. The blank papers and calculator with a blank screen avoid any 'must_avoid' elements like readable text or monetary amounts. The overall scene of office items relates well to the article's theme of business contracts and compensation calculation.",
+      "reviewed_at": "2026-10-05T11:30:54.335244+00:00"
+    },
+    "pixels": {
+      "height": 1024,
+      "mode": "RGB",
+      "variance": 5368.7,
+      "width": 1536
+    },
+    "relevance_check": {
+      "accepted": true,
+      "evidence": "A top-down view of a white desk with several office items. On the left, a stack of white papers and scattered paper clips. In the center, a single blank white sheet of paper. To the right of the paper, a black pen and a small potted succulent plant. In the bottom right corner, a black calculator.",
+      "matched": [
+        "calculator",
+        "desk",
+        "office",
+        "paper"
+      ],
+      "method": "vision",
+      "reason": "Exact-pixel full-article score meets the 8/10 threshold"
+    },
+    "selection_evidence": {
+      "article_text_sha256": "b1c4d134df4b0068ab7c98e9fc6ebca3db9fd349b40e6861c9add9ff808c037b",
+      "decision_sha256": "fe9808b89315703b736689436fb479b868a80688eb2464df5516b133ae4c9c14",
+      "minimum_real_fit": 8,
+      "searches": [
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "Fortum toimitilarakennus",
+            "Fortum pääkonttori julkisivu",
+            "Fortum office building exterior"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "unsplash",
+          "queries": [
+            "Fortum toimitilarakennus",
+            "Fortum pääkonttori julkisivu",
+            "Fortum office building exterior"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "wikimedia",
+          "queries": [
+            "Fortum toimitilarakennus",
+            "Fortum pääkonttori julkisivu",
+            "Fortum office building exterior"
+          ]
+        },
+        {
+          "candidates": [],
+          "concept_rank": 1,
+          "outcome": "no_qualifying_candidate",
+          "provider": "google",
+          "queries": [
+            "Fortum toimitilarakennus",
+            "Fortum pääkonttori julkisivu",
+            "Fortum office building exterior"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 3,
+              "image_sha256": "a2ede16fd0dbfc7c9708871a33c3aa3e55970216b5f58617d7d86e416a420fa3",
+              "license": "Pexels License",
+              "reason": "The image shows a roll of paper, which does not match the 'Paper documents on an office desk' or 'Calculator beside the documents' elements required by the concept. The paper is rolled, not a stack of documents, and there is no calculator visible. Therefore, it fails to meet the 'must_show' criteria. One or more required concept elements are not vi",
+              "source_url": "https://www.pexels.com/photo/close-up-of-a-roll-of-paper-6939784/"
+            },
+            {
+              "approved": false,
+              "fit_score": 3,
+              "image_sha256": "96b4a9ec6089a8b0ad978db8739b886043fb0b1a4348f2d59b54fafab70fdcc8",
+              "license": "Pexels License",
+              "reason": "The image shows crumpled brown paper, which does not depict 'Paper documents on an office desk' or a 'Calculator beside the documents' as required by the must_show elements. The image is too abstract and does not concretely illustrate the article's subject of business contracts and compensation calculation. One or more required concept elements are",
+              "source_url": "https://www.pexels.com/photo/close-up-shot-of-crumpled-brown-paper-13005148/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "4830c263c662b3098e996829d31f04ca6f766a2b78ad917c43d038b865e3f8b1",
+              "license": "Pexels License",
+              "reason": "The image shows a person's hands wrapping an object, with a payment terminal and other office supplies visible. This does not match the concept of 'Paper documents on an office desk' and 'Calculator beside the documents'. There are no visible paper documents or a calculator. One or more required concept elements are not visible.",
+              "source_url": "https://www.pexels.com/photo/a-person-wrapping-a-gift-6023606/"
+            },
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "8204d287bb42e55404d3d952cc2837cc1d49b26be4e22207183364f6dee3c7db",
+              "license": "Pexels License",
+              "reason": "The image depicts wrapped gifts and envelopes, which are unrelated to the article's subject of business contracts and compensation calculation. The selected concept requires paper documents and a calculator on an office desk, neither of which are present. One or more required concept elements are not visible.",
+              "source_url": "https://www.pexels.com/photo/beautifully-wrapped-christmas-gifts-with-musical-theme-35055027/"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "no_qualifying_candidate",
+          "provider": "pexels",
+          "queries": [
+            "sopimuspaperit laskin",
+            "yrityssopimus asiakirjat pöydällä",
+            "contract documents calculator"
+          ]
+        },
+        {
+          "candidates": [
+            {
+              "approved": false,
+              "fit_score": 0,
+              "image_sha256": "6197f552fdf8988293afd3435c77131aca553d3945a2e7c198cb85c83d5f5eeb",
+              "license": "Unsplash License",
+              "reason": "The image does not show paper documents on an office desk or a calculator, which are both required elements for the selected concept. The visible card has a company logo and text, which are explicitly to be avoided. One or more required concept elements are not visible.",
+              "source_url": "https://unsplash.com/photos/white-printer-paper-JbF2xrThIT0?utm_source=uutistenlukija&utm_medium=referral"
+            },
+            {
+              "approved": true,
+              "fit_score": 9,
+              "image_sha256": "c3867d1d65d342ec4843e280c9d05b39bc22a752f69728e218170807a4c02bbb",
+              "license": "Unsplash License",
+              "reason": "The image clearly shows paper documents on an office desk and a calculator, which directly matches the 'must_show' elements of the selected concept. The blank papers and calculator with a blank screen avoid any 'must_avoid' elements like readable text or monetary amounts. The overall scene of office items relates well to the article's theme of busi",
+              "source_url": "https://unsplash.com/photos/black-calculator-beside-black-pen-on-white-printer-paper-I3HPUolh5hA?utm_source=uutistenlukija&utm_medium=referral"
+            }
+          ],
+          "concept_rank": 2,
+          "outcome": "accepted",
+          "provider": "unsplash",
+          "queries": [
+            "sopimuspaperit laskin",
+            "yrityssopimus asiakirjat pöydällä",
+            "contract documents calculator"
+          ]
+        }
+      ],
+      "selected": {
+        "concept_rank": 2,
+        "fit_score": 9,
+        "image_sha256": "c3867d1d65d342ec4843e280c9d05b39bc22a752f69728e218170807a4c02bbb",
+        "kind": "real"
+      },
+      "version": "article-first-v1"
+    },
+    "source_url": "https://unsplash.com/photos/black-calculator-beside-black-pen-on-white-printer-paper-I3HPUolh5hA?utm_source=uutistenlukija&utm_medium=referral",
+    "stock_provenance": {
+      "download_tracking": {
+        "successful": true,
+        "url": "https://api.unsplash.com/photos/I3HPUolh5hA/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw3fHxjb250cmFjdCUyMGRvY3VtZW50cyUyMGNhbGN1bGF0b3J8ZW58MHwwfHx8MTc5MTE5OTg0OXww"
+      },
+      "image_url": "https://images.unsplash.com/photo-1625225233840-695456021cde?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw3fHxjb250cmFjdCUyMGRvY3VtZW50cyUyMGNhbGN1bGF0b3J8ZW58MHwwfHx8MTc5MTE5OTg0OXww&w=1536&q=80&fm=jpg&fit=crop",
+      "photo_id": "I3HPUolh5hA",
+      "photo_url": "https://unsplash.com/photos/black-calculator-beside-black-pen-on-white-printer-paper-I3HPUolh5hA?utm_source=uutistenlukija&utm_medium=referral",
+      "photographer": "Mediamodifier",
+      "photographer_url": "https://unsplash.com/@mediamodifier?utm_source=uutistenlukija&utm_medium=referral",
+      "provider": "unsplash",
+      "query": "contract documents calculator",
+      "retrieved_at": "2026-10-05T11:30:52Z"
+    },
+    "stock_provenance_sha256": "dfde27e6af01bde1d7eb7286ae57c386b35853666ca0e81ba38ac9db607c3384",
+    "url": "https://images.unsplash.com/photo-1625225233840-695456021cde?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw3fHxjb250cmFjdCUyMGRvY3VtZW50cyUyMGNhbGN1bGF0b3J8ZW58MHwwfHx8MTc5MTE5OTg0OXww&w=1536&q=80&fm=jpg&fit=crop"
   },
   "new_article_files": [
-    "uutiset/vantaan-monikielinen-neuvonta-auttaa-myos-pitkaan-asuneita-8244199fd98e/index.html"
+    "uutiset/fortumin-yritysasiakkaalle-suositettu-hyvitysta-45c3d38688f1/index.html"
   ],
   "files": {
     "0bce47347326f83e8507a46c6b0c3bdb.txt": "f1a2b584ad8690f8447736e1c18c93360e63182fd2e6fe49ec7359a97c9b40c5",
     "404.html": "3ef41e1305790155be46be908dc06918bf950b3bb9e26ec7c76c0fcff9331269",
-    "_redirects": "5e8c6d8342a45851c1a146bdc523d6b6d039209a547b3c13c86f7bea1da6b023",
-    "ai-kuvat/index.html": "572c4fd13ef44c7f90c2476adc524a147c9b3c41bd29d276799b3641150fc802",
-    "categories/kotimaa/index.html": "70e0310a5eb4109baee8a63002f9baf072379304a2719fabfb0d635d1d8c6d40",
-    "categories/kotimaa/sivu/2/index.html": "cc94434bcef7d9de87a374b9b017aa2f2f2bfe701d28432483bfab98c62a1fda",
-    "categories/kotimaa/sivu/3/index.html": "9d1c126dbe20ec2ce81569a5959f8b1eddbe10f2d07c59456a9446cfbab16bd6",
-    "categories/kotimaa/sivu/4/index.html": "8036863beef33953fa3bfec3a79963dbf58cc8cd0e07483d86ece2b0b44d0170",
-    "categories/kotimaa/sivu/5/index.html": "e85b567cbed66e11d0b3df65808cf73dd5ac74270b91c85a3ac02b66f4507710",
-    "categories/kotimaa/sivu/6/index.html": "b776e09c8577691b38189415af29de60244cb9d0aa0e75a1991cf34d67b2fb56",
-    "categories/kulttuuri/index.html": "4cb9dfe4476229682d31967ef3676fe76a072cd9c21de9a4b7353cb65dc5ce00",
-    "categories/talous/index.html": "a3bf16798ae92bb36961a8bf00c5d042883cfd5e7e5e63e808cbdb8debce074b",
-    "categories/talous/sivu/2/index.html": "884a96ec7e553a52a896bf2f76e6aa097a753078fa2897f98d9e330f8450724c",
-    "categories/teknologia/index.html": "cbe3e54ca3b1d26ff7a07de44f2e3498e449b765d2b5625420c1d4b811853780",
-    "categories/tiede/index.html": "cfb89286c24d44dda4d417dbf39b5ce5ab2a3bbe4dba3d28fe8c29fe17647de6",
-    "categories/ulkomaat/index.html": "3a71d68b97fc3abb2eb49f5cbc692260acda890cc50e5683b5325d751324d354",
-    "categories/urheilu/index.html": "c457c9cba9b25b008f126082990da238786134e84f57e81407c05f928d14fe06",
-    "index.html": "55bc3ac5de5094fa4f661cb2cdf1fa191f4b6d4fa3e28798c77036391397fc95",
-    "lahteet/index.html": "4776d7e71358ca8ad775dfce4c09da10c7d6cfac049ff3726c2e6c2742db3c51",
+    "_redirects": "0dc908e1422eb1abacc693f80c07f3093c794d8ce9e90d8fd01f4a138c5da3d8",
+    "ai-kuvat/index.html": "46c05766219d2640ba1973ff48a6e97e62bb9995013aa96b5d0a3b621508621e",
+    "categories/kotimaa/index.html": "88ea973be50b32f86172f187dbddd6529b5b5ddcce521edb98f132b87866e190",
+    "categories/kotimaa/sivu/2/index.html": "57daf8b54d8b6c25658c908d745cb76d5c7b87d3a38ffdbdc6b076f9d4dea0f9",
+    "categories/kotimaa/sivu/3/index.html": "8ed5b83dc62933339d8c3af66d378cc895b4fe0f4a8b678b5028d17ec1651c13",
+    "categories/kotimaa/sivu/4/index.html": "5b9a3977c7ccdcb593f34a2cab2428a641815719a95f05580f07bc60f10e73ea",
+    "categories/kotimaa/sivu/5/index.html": "5cae8dcf113f06ecb20cadecf8ef50ffdd3ac7229d47b4914d34fda65183e697",
+    "categories/kotimaa/sivu/6/index.html": "585e6fdafb18bd3c32475725687ed56f415abd7f092d54d8180bacaa140231bc",
+    "categories/kulttuuri/index.html": "f1f842c0541e67209c66b27d888eba1fb2256f4be57f69610a3ed335dd3e44a1",
+    "categories/talous/index.html": "db0a3c2c873847a4d3be1c7376f0f2aa2318dd4bfbf17c87b52089cf69255846",
+    "categories/talous/sivu/2/index.html": "0f69143fcf01de67cfaadba5484f3b87e4fdd0e6992c4bb79b8c2ee03993a483",
+    "categories/teknologia/index.html": "32e00f211322e67ab74a5605d8f017d936baa147a80b6953378317706f00ccf2",
+    "categories/tiede/index.html": "5b11c37ed4923b48db0966d72e7b6bd8138382f9e4e0fab2a8c60c747675b53c",
+    "categories/ulkomaat/index.html": "8214be6b2755c2a5a449fad751bf3ba0c2003867f48c9e1512f998a08abbd8a2",
+    "categories/urheilu/index.html": "aededcba985d667f64980c9a57d6238431260df95ae9de00dd98f7e89b17f4bf",
+    "index.html": "8f39a422aadb57d1a929847ccfb4ba3108eb26bc538fee3ff59f082c43625724",
+    "lahteet/index.html": "a9dd3bf8c08fc94d281e107fac50611bc7eba698c09f4e07af19f804254518ac",
     "mvp-assets/01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5.jpg": "01867736718078bcdabb739dcb8fd7b1e6d2aade84bf3e81f0cf68b8004971a5",
     "mvp-assets/01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d.jpg": "01b79a7a532c0a287fefc6792135f4f5a246ba352d5efc6131385157b1a9316d",
     "mvp-assets/020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d.jpg": "020c65efe1489020fdc17475da30723728933f3ce06ce05a837fd1c442cc6a5d",
@@ -562,31 +801,31 @@
     "mvp-assets/portal.js": "ae7a9eee9306242d93362e5d9b19506af0cc9aed46e19b75c1b475bc3727c92a",
     "mvp-assets/style-readability.css": "5698b48fa0cfab909525ebff2e9dc579e8e3ca3c332c6bae114bc8aa27536f85",
     "mvp-assets/style.css": "c38c69b89c21567c06f0b8695347f82b02ce529911525ce6448c3722b9f6a605",
-    "oppaat/index.html": "a1840b38cf81cfe4deb1d27f3dd0bef0073a9c92504af5b9c1850f3f3f02e1da",
+    "oppaat/index.html": "054273ad38c4e875d8c6d93e4d5e6adf076cbddd2a5947fa37f303fc089e23c4",
     "robots.txt": "6dc23d5568c5bc8604aa1f40cc531e4ba269d6434cad28e660c4d327f2527a13",
-    "rss.xml": "79f5e81a86af9b2b370fafeba8016b46e255e3b1a28594c5e95064401d0c1d06",
-    "sitemap.xml": "15c91663194de79fd640f31f6b0cf52a532dbd405f32f35aeac23e6db6db6112",
-    "sivu/10/index.html": "6224637c9dde90edf574d2690fc9531c45adf3ae770b63f4fb2281c9f757e01f",
-    "sivu/2/index.html": "8c2097d5ded05b819dfab408448c379c68dd0c6bd89acf2039bebaceb56a5975",
-    "sivu/3/index.html": "00b61e6a7c0359a56937252168fea953639bd21da2ffc3f88da108adbeb5f3de",
-    "sivu/4/index.html": "1c75fb456500445b2f5ca4dc8978f09ac59acd2085d7866c0a4c52e8fbf20956",
-    "sivu/5/index.html": "1741ca59be0c2296430b0fd41b1c8ba7fa0885f4aec65e93643e554b53f30c4f",
-    "sivu/6/index.html": "396161c755ad9f15143724dea9fe7dc5d2dfcd27f2e79d2ce4eed7b9c7558f59",
-    "sivu/7/index.html": "59cac77e5a3fd4bef4b7471f4f8997f128fbd596ba60fd1875d994420560aa6f",
-    "sivu/8/index.html": "353f38ab4083b3b910a8ec0f47c6693745bb6d6de53213db700410a164d57a49",
-    "sivu/9/index.html": "11a7254e7f708182fa720ec7712eba9224260e782e4cfa009b08d408056b42bc",
-    "tietoja/index.html": "e44b7c9c687847ec96adec5dfc739fb07b489d9e7c42d8d7654283be79f2dd0b",
-    "tietosuoja/index.html": "a110e63da74c266869c5ab8a28d86f5cd7c467f3678c617945bcfeee6591003b",
-    "tuoreimmat/index.html": "fbee92f8821c3445638f207f51d7910c0612c2aca16c922ff2639c0f159c9310",
-    "tuoreimmat/sivu/10/index.html": "b2c0e778db5968af4703a8dd12f06db153846a390b114ba2b850dd76658e9c76",
-    "tuoreimmat/sivu/2/index.html": "65eaa6b56bb437ff5fdd15ebeb238687ddb7b23b0ea48ed11ff0b51b016f81c9",
-    "tuoreimmat/sivu/3/index.html": "ff259dcd6169bf55fa621797080990cc9644123999ed5e0565756e44ec64f7f7",
-    "tuoreimmat/sivu/4/index.html": "6ffd336b40de1946277e1f0ff3f2ae8de09d3226a9b8c6140eda090a5df11abb",
-    "tuoreimmat/sivu/5/index.html": "964f053c4ee1c99f3da4ed60b8fa406e4ce5b01fa76eb8742a91547d60483954",
-    "tuoreimmat/sivu/6/index.html": "989e90f648767cdf15bf35794f658ebcaf47a9150bb05fcc5fda456db781fbd4",
-    "tuoreimmat/sivu/7/index.html": "53466f75fddaf501a73d3229653ed03ace5a46aab075558f1e6df72e37362b10",
-    "tuoreimmat/sivu/8/index.html": "8f7dfe1795c6dead0780626c1ba77cacde47a30763a41c96d0130d3b72c0c634",
-    "tuoreimmat/sivu/9/index.html": "a3b7c20fbd35ddef5085c4d63004b56dfd3eec52a970e105772925bbae614ad0",
+    "rss.xml": "4c63679ec367ea587c481d5f38438a9488846f4d9038877b9956a3c684c863e1",
+    "sitemap.xml": "55404e4be78e1a4508c8cd87ea3f48aa8fe7ae587415b78a5bcc4ce82415ff9d",
+    "sivu/10/index.html": "92a5a7ab7fedd5fc9614fbb83faec5c9cdfd291be9ff5e7dafb987585abc53a1",
+    "sivu/2/index.html": "8545ae74e95a517d326d037046250ff2d6ca5a335f15dd1c8c6fbcc18d4f4d05",
+    "sivu/3/index.html": "407fa3db2ff745064ee3d9d65839431634794819ad94693f9078cf0338b7a57c",
+    "sivu/4/index.html": "466b0d51012d39820e7338a53f8739bc26c825a40aeffad173630b509df15ece",
+    "sivu/5/index.html": "f603d0e0444082e870b91089814f6d734df138b80d5fd3d437c1bcfcf2dd5b89",
+    "sivu/6/index.html": "2715aead77f431b8e39a6e9e614a72f6c9ae26cef63a3781bd8d871a5a57e7ff",
+    "sivu/7/index.html": "8f526049b30be7051ae80e870c90b2a9732986fc121cec4369b9289f50e4a7d0",
+    "sivu/8/index.html": "a142d7cd1efa1db23ecf4c6716a061decb45dcbc0c5916da0c50de4ddcbeaabd",
+    "sivu/9/index.html": "16bef2b8c400e41c5d588f957683076fa634681721494aa40b582f3e0fa8cdc8",
+    "tietoja/index.html": "ab6c3ec025c5f8dd924898514f1f66331cc20d047d880beeca5e62ed15faf543",
+    "tietosuoja/index.html": "8e34bb47d85297096dbb68d0737683c447e9a3adad92ca9a75946215f236991d",
+    "tuoreimmat/index.html": "581d2b772f155a2e70d2432141dd11727884e2029b136a3a8ab3d73ed8b67384",
+    "tuoreimmat/sivu/10/index.html": "51d6d44bdf4dd0d34de5a2179bd8d2f22318a3005912f56670c4d424b8ba2e95",
+    "tuoreimmat/sivu/2/index.html": "4e39f81ef15cd2c7540c83ecb353e0494c60bd9167f1e91a5dae2358463c95ca",
+    "tuoreimmat/sivu/3/index.html": "2f6d0610bac79ed33bbf0650b58a3ff96817754d34b62267391f6bb90773e131",
+    "tuoreimmat/sivu/4/index.html": "a6e14f8cb99e5c4a33d507a47b6ebe83198bba653b1ca1e593bb0523d3219093",
+    "tuoreimmat/sivu/5/index.html": "c837509bdb4832d57080a8480adb8efeb744fca42082d5ecdcc4fbc3ef30d28b",
+    "tuoreimmat/sivu/6/index.html": "5dbe80f7f3f930381eee4f35af628b3a1510c1e3237e9272fb8a440cd0cfeb50",
+    "tuoreimmat/sivu/7/index.html": "98b251f4ead117f677dd47eb8cf728094ac783df4fca1b8ecd3bb311126f6d3c",
+    "tuoreimmat/sivu/8/index.html": "4ca3e713c8c7a4e37af139f93c2b07ac74cbd31211ba5d481749ee3a6f75ecec",
+    "tuoreimmat/sivu/9/index.html": "8b374b5c59f8955aed51d5574cc07ed68ac5d59e5a9981e6d9d9bcdc46ebf422",
     "uutiset/17f3a9e55a5d4d88935f20a8572a23b2522e0894cb422211d2e7f4022b290d36/index.html": "f8bba59d140818710fd0b40e5ea2acd3f6d2506cbd877d3547afff9fc7ca7049",
     "uutiset/23759dbb8476ae59710577bdfd0d4cba3960e107147aed62bf13cbb38659c5c1/index.html": "4e8b636f577e02f15669e12445b1ab4b6ea95f13bc60ac86179b39f96ce0dc64",
     "uutiset/38c33234e1a7981b6f66bfd1545876e5e55061ef2fe11e6664dfa123c3800986/index.html": "1b3db1560585175d085bebc71afb133498c294c57a408510c54ed527f8695b68",
@@ -600,432 +839,398 @@
     "uutiset/8d2082f784a9a0de37af7b186eadc015dba2533fe40674e1a1611cf1043b8ce5/index.html": "1cb85356dcd175739ce8c9bf44cb8cb8a79adee3c6a7dc127047e9862dc736f2",
     "uutiset/a421e685a2cb7e31e84256cb4a854b3444d0da5b5b6a72f6237d68e661b7bc3c/index.html": "684ff134eb4e9a603fecc0d74812e11b8165fa360bc080912793e1fc4da12765",
     "uutiset/a4a923e9509dfb822f648accd35235cd5aad2c5bf178814c20d4d03815c24edf/index.html": "8ae96cfe2f8047c21368e608be8e758e8596c1451d4eaacb30e6790c339b6b01",
-    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "e641b2f4719eaa3fc80625b081d772797e370b9f6a9f3d3b216fd7de6b68ada2",
+    "uutiset/aanekosken-paijat-hameen-irtisanotuille-haetaan-eu-tukea-df471ee2bb29/index.html": "0fdefc9642239300279a37c3ed3f10117b789346907afdb80547a554bbcbe6bd",
     "uutiset/aca81b732a644936757bd14b1304352fed52be190ee17d8c8156524918f1666c/index.html": "efe169f0142a65166fc1bdab4505a05ace7fec8db6961d9a32f9fa52ff9c231d",
-    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "2e540037c8fd4a4fa48945ec74473bc02d0bdc9b68e52ef8e9d9beb71e11a3ee",
-    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "3a6d40c803fc92c516ab635e77890da81089dac70ba307ebd1558d55cfe6b8e3",
-    "uutiset/arctic-open-alkaa-vantaalla-6-lokakuuta-07b41b9ba608/index.html": "494ceebe919a074144298b1d75b30a6aac8900ed96bec2cfa622ef582fdb55f8",
-    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "9ca35c4bc84c6953b2547faa750f1e9e8f836bcbad3da354f0f895b2b532de16",
-    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "eed10b0e9c3917b2daf6dd51bc2789dcf5d2ae3a993047461b641225f6bbf7dc",
-    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "ee1cf9bffc7702a0329d2f9901fc6090bdb5fabbf427fee63c77829d7f3e34e5",
-    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "7cc2b0ed21a3a22d7ccf39a7de2ac54539500ca41f85a64b8290570601ce0801",
-    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "9d31941ecfca116cdc2d7c2e60b7c9fa7c02ccfbc84b6c64d9c84963c1e07e82",
-    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "2d4cba0cb030841cae05728e36f43b2b48ed033b2fa09aa3a873a60f0e23d9f1",
+    "uutiset/alueellisen-tieverkon-korjausvelka-kasvaa-selvityksen-b7a9132e4a52/index.html": "175b4368e33ede5b566ad0790a75ab845101c3729b9abdec051626794584bc86",
+    "uutiset/annefredin-siltatyomaa-kaventaa-tuusulanvaylaa-9d1e28e3e034/index.html": "4a55d800623f96d7fd250e80135c2b91d23d5254246f3ef4dfbed7752a9f4731",
+    "uutiset/arctic-open-alkaa-vantaalla-6-lokakuuta-07b41b9ba608/index.html": "e301c0343ce95337a1cc464ef79974ab3335b114ecf9bcf4d9bb738d0e1e33bd",
+    "uutiset/arkadiankadun-uusi-silta-valmis-katutyot-jatkuvat-5bc3d1cb671d/index.html": "fc337a10885952890864e0cf7eaa24ebbe922664e51c1b7fbb396d73689cb086",
+    "uutiset/arviointineuvosto-suosittelee-tarkennuksia-paasykiellosta-fe62074fc0be/index.html": "5a959da1ad0418e15fbbffc65e247822325999dd441fbcc22e0a314cf266c573",
+    "uutiset/arviointineuvosto-vakivaltalakiehdotusta-tarkennettava-fb1552eb887b/index.html": "03d6e9d97b4386314222e6a3bfc206960442b7791637eeac8856a0d67de58bbe",
+    "uutiset/asunto-osakeyhtiolaki-uudistuu-lokakuun-alussa-d62554b951bb/index.html": "0569d2b402b1f469d4ce5e8b8b729166b6391a53baf10f32f8d21f5768a0471c",
+    "uutiset/aurinkorinteen-koulun-yrittajyysopintoihin-tulee-oman-d40abfad061f/index.html": "028028461737951c49b241c53dfb6f76c3182987e7a3bd22b290608ec2ccdb7d",
+    "uutiset/avaruusasemalta-otettu-kuva-nayttaa-monterreyn-vuorten-8d2082f784a9/index.html": "c880754d4791eb2de568f06214416e1eb779495be4ec7b2370f8e6a96c8b0e4b",
     "uutiset/ba164fa2011db8e10425ba41ff1894f9a21b08a25cc3ca021990d84f2ff72682/index.html": "1b44aa7f1b9ad73f8a73ce558f8a1b3fd90017fcb316ccb8210fe379bd099733",
     "uutiset/bd71b526d449ca4df522726b9a909fdca71f16d10555ba06d9338bb03b18652f/index.html": "edb6fbb6d9c6b15e875208ddd92315feb06a96f111f73fcb0924d20882419cdf",
-    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "cae3fbf56076ced5e0bcda146bd5d6fe16f1956abcb65ae552eba633a9a1b22c",
-    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "f8e833e2c107d614739acc76f543d62539789a91a14b08875aa1578f1ef3c49f",
-    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "428c799e0c17a00f5e469278f7f48338d51e83e64630a7e99f1a4596489a580a",
-    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "dcfa56e907d44348c271d4a741fe94254d0fbaa72e61fec5dcdde4d094d4e970",
+    "uutiset/bolivian-suola-aavikot-satelliitin-vaaravarikuvassa-0924ef34c6ba/index.html": "7735a71936f5459dec5955da0da02706fae2c57dcb49d14d0b2930d19a848af4",
+    "uutiset/bristol-bayn-syysmaisema-nakyy-satelliittikuvassa-350921f18f95/index.html": "7cb9a5a833503f4c026c8f1328d2e2af6a77b077af75449a59365a3a940a45d6",
+    "uutiset/businessoulu-aloittaa-tyonhakusarjan-nuorille-210c711e2099/index.html": "8f115df47751ddb554e200e6be92b8cf46e9d250d2b9d4972c5910bccf168c47",
+    "uutiset/cygnaeus-palkinto-tulevaisuususkoa-vahvistavalle-mallille-37cc7ff33cb5/index.html": "9411539900b207ca9757e03e7be96c207512e33bb24be02b55426660df55fa65",
     "uutiset/d6f4493ba6e8fe544637229380dbba892bb87f002f66bba68c536b146eca957c/index.html": "2042bfcf42321a5ac1a22be704d48ccb31c389e62869b3d0449179e93e8d05f0",
-    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "af3801a203c4b83a1b73c22320e6d0c993d19dc5f5ea2fddb15002acca36195a",
+    "uutiset/dixin-kuormaa-siirretaan-ratikkatunnelin-tielta-4989a6476536/index.html": "7013cd90398e7c42e402cfa3837fd6e205682418c984c8f907c41da4c9395600",
     "uutiset/ea2b1f992164639a89e76eafa9b96141479b9461b17aee281ace2296550b41cf/index.html": "9c8e902884769e236d62b984ad6fd52f72a52e44804195e0e09dc6c5f3902512",
-    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "d44b346a12d874904d7b2d95fe21ebbb6a0461884d57949e9d8b50aa304ada72",
-    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "7eafe88afbb422d25dda8043e4f189b64400f2742940fbfaaa82a236e3df6689",
-    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "2950f4c074c43d22745a41ba1ae5aa10802a85ba1ec65e39fc55ffc0e5768281",
-    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "3913fc2443ffe6bc66649dec479270930bfa944a744a124e0182e51591413ca6",
-    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "4732deab9b498bf3bea21daf113ec2dad10c94c03a9474b148fc329202e9bf6d",
-    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "01371e53361755fe5bdc91d5835e1de1c1662c5b7ecf73798634a0079a745e8a",
-    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "20106c613fec44923a10e7914ef253ea6cab4c1d5144916bc3262b1e632b2d67",
-    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "021f640a2f2ec73689afbe70c9682d562489928f683176ef4cec1f7e7c8061be",
-    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "47941da283cbfbeaaa4361923de8e94f4a0420aae2cee7ba882272e16d2519be",
-    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "99448fc8d38655bd80f81c752b5a83eb670ee2ea396596e08257ef3d2b10c941",
-    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "52fe735559263f1a908f208e468dd4b7b5368e0433d4c468ae4f5f7b5ad16c07",
-    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "f05122b2bb8998d98534bbab6e16b35aa6c3e0bd3377f74e20535f5d8b07465a",
-    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "6364668e1f079128ea78ca518717bf2637ed006944f1a500e5bde28712f743c0",
-    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "6a4f9ee9eea8596bb6db81fdd03f008c4e2fa1ed1b6019137657363d1f9dc757",
-    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "f8f76a1e38fc0f3e875ed1672c1e9ce9d5b9a2cbec817506298df29baf836a94",
+    "uutiset/eevil-stoo-avaa-lumoklubin-korsossa-kaupunki-kertoo-37f8679698b3/index.html": "eda1482f2487997e01f9782291b5b2d692dbd18c12486c4cc8a59a2e0565f01a",
+    "uutiset/ehkaisyneuvonta-muuttaa-kruununhakaan-24-syyskuuta-7e5c6325a332/index.html": "e32db836a844eb0835845f25eb1d69a915643924c262c3124dcbae7e9909a11f",
+    "uutiset/ekp-n-palkkaseuranta-viittaa-2-7-prosentin-sopimuspalkkojen-8552d795654a/index.html": "5533f82c307ec0667c419011e11d75adc701b3b68e3c9355917641e4c957ebe3",
+    "uutiset/ekp-uudistaa-eurojarjestelman-vakuussaantoja-de3982a6e85c/index.html": "85ffda33a3f558306f4bdaab838a394c5c1650293fdff5c59bdf5235ec817a82",
+    "uutiset/ekp-uusista-euroseteleista-lahes-10-miljoonaa-vastausta-b4a58ddabbcb/index.html": "f222b04851d54db92c0aca854f43a9853233472795948f525b492fa3db4d2903",
+    "uutiset/energian-kulutus-kasvoi-6-tammi-kesakuussa-8d4dcbd44943/index.html": "6f327fe69504fb5f1d7324fef57b9f2b2ae9c858f0f1a7390583dc7c7229a17d",
+    "uutiset/energiatuonnin-arvo-kasvoi-ennakkotietojen-50-59c33e8be2a0/index.html": "a09d00178a693eb63a20eab7c07cf696473bc44808dd14b2b03d1692b1c7b069",
+    "uutiset/esa-kohtamaelle-sivistyksen-suunta-palkinto-131bf1f10bae/index.html": "b7d59f91d6839726bb8360fc51b2de2fc49497b601264eab62590749169a7665",
+    "uutiset/esplanadien-kaavaehdotus-suojelisi-puiston-arvot-c35acc4fb9b9/index.html": "f0bc2aaa0242647778bdb5a7a9d39a8e6038acc4e644862494f8a253cad00dc8",
+    "uutiset/etela-koivurinteeseen-suunnitellaan-noin-135-uutta-1f3d2b8cfef3/index.html": "085a01194e6af4bb09bee4ba4a1a1afb23d006281a4d8279e70719239e1293e3",
+    "uutiset/etelaesplanadin-pyoratietyomaalla-tehdaan-yotoita-a659c4d75a68/index.html": "144544cd2a3922e1446832f237d20d27773ecb518b2618657febb536f268ae15",
+    "uutiset/eu-ministerivaliokunta-linjasi-kantoja-eu-uudistuksiin-b69ef715fc50/index.html": "5bcc0b3e70f1bdbf61d2fce20c8640bb1ba8f8bbbcf6880b09e617d1800258a9",
+    "uutiset/eu-n-laajentumiskomissaari-kos-vierailee-helsingissa-61f60677da98/index.html": "528d8d66e3a99e37c19343070f521665c679a2234e294ca1557c4668b6a9c2d6",
+    "uutiset/eu-n-puolustusministerit-koolla-brysselissa-1fca2d498635/index.html": "4eeda4e33623cfac54ec6205a3a9282990f86a324ac92e9ebf5724504c57c3eb",
+    "uutiset/eu-rahoituskehys-suomi-pitaa-komission-tasoa-liian-korkeana-518eb0208bf9/index.html": "a4ec9821b2ecc1e0e8fe60180be3cdbbe40d2931b8e82caad93601bf268fdb15",
     "uutiset/f2a3b9da839589d46ac72b039229620a9aa0e0d265327182362d25f7859b7803/index.html": "326338149b0d119ba4ec4744333a40cdd6448d7d0cafe8ee46624fa06b92a9e6",
-    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "837f153225b18b0d7131da82c5c039c913fd41ce62d380a5833268b27c4ffd0b",
+    "uutiset/fay-palasi-trooppiseksi-myrskyksi-modis-julkaisun-0a4d65b77061/index.html": "b916d20d3aa0ce782bf43cff95b180cc30b2700db38ad462e847e9bc11deddf2",
     "uutiset/ff4aa5e086dcd4a698701c61ddaf9f81c2e7746fccda531c05e280c20527d5c7/index.html": "9c890be988d60f74aa1937309960317346d13acfa84124e5a90dd18b196ae17c",
-    "uutiset/fredrikintorin-remontti-viivastyy-arviolta-vuoden-loppuun-2a57e16b0903/index.html": "64ecac11284f48e602673b84e0c00c025eca4213a4db9fe3eb05d210698f9e4d",
-    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "7119d1506f91507c0bee1908bc8634fef85083a2cfd6549beb1fd0201814ef42",
-    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "c0d788a16fd69d9be8c6d493166b817e83c8d7e0c976ba8692b5a5d6ac95dc97",
-    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "f28ab002d619ef0566cc19fdbf15b090801d5bc7ba49e4b5961f46ea45d529eb",
-    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "851802f294a1c7c207fc1d76e04b3687105e9fe3b971dda8f6cb9b4a48e6a588",
-    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "6d7e20939d57f5eac48e130b0a81f763e19d5192cc591d3fc063822b5f2f8e26",
-    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "485edf7cb75139834cd57079db6c0f6ca13a79e1d2fcb8b0948f41225a2514c7",
-    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "3624a5fd91db418bb446344bac08119a99e285c7456fcd418f83ae3ec4e74ff4",
-    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "2c02b4bb5bd5b4ddbff45e454e0398fdfe42fd821faee90e96072ec1363c9da1",
-    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "f903f5f06704eef382007863c410737d096d79f6819a393a31d5ae4138295c2a",
-    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "0b98e9e006e38605087dac729dc7605e21815d79a67ad10f5d42861c4655e6fa",
-    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "969121ec32bc55b44231f8e5d75d7dda766e5756ed2077debb2649df48df46fb",
-    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "52f41f78ea0689500f7705880324f5ce4367d856891b3321ed58aff532b27340",
-    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "e87fd1861cf65fd8cc24108f1e6a8f922db0c79546d327e930d54d0a6b0307ec",
-    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "169685d541bbea24735604edc5d26658a8fbb453a901db6894468bcdda5035c1",
-    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "74d641f9690743cca47772b17c4a17a10dc9e0ab100688247321c8a4b11f1315",
-    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "d31814b3fdf9ded8128bc69dbf5f1a89aca3bb046274de06a7763ef3612cdd42",
-    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "d930f2c984de731fdef116d36b2c838c8877294f7c9bcfea3eeaea0afc7a7496",
-    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "191d7cd096d4db045ba4b2d26d6da5d49b167dd22df1ebb434298d85c6041b3c",
-    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "4e3446fdfd23f3a990e2d70e32cbf511b42c4726c7fbb3d75809adf38e0a15b2",
-    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "e6c0a2d5c433c6d54101224f17dd658a9f93da12b7a33a80a8e30ff86f489662",
-    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "1e4f9d39e274a3262e2a2f2c8cd16ae5ab821e8905b78b32c91b6acacb44adb7",
-    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "33e7af0a75c3f5f7e7fdbb08b53c8e3f8a0c6e6dd1a15bbad04033670d0ef206",
-    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "2a1b0b4be0b927e697c89ded0768de45001ab04258c842d793081ef1c09da668",
-    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "a19ce54bbe48a91ae84635b3297ce2bdc0378a94fb33b5090c8c67b5d74c1b85",
-    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "d4bbb60452579a940e7af20171221890aeccd648d654527ca52ba51ba83396f6",
-    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "d5d24b3af2a0e1fc56d3f6d2fe588a8d7cee5e158d68aa2eb492fa482ba4507d",
-    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "1260c9a0c613951358e2cb68567967bec9740ed6c01056e2aa3900773bc0d033",
-    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "daadbf04b3c7eb6f95b00235817f2043087b96f57120b77f22f8045c410fd4fc",
-    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "9393267a94b7c25aa455984e21c514dfb3c3dc6a4e68a5cec7d3cd840c9c1f2e",
-    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "361b905cc980764f29e51a14c7e72687164bb06cdc58b6d6a604adb2aaa8c794",
-    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "0202a4611d403387f4f4cb2e444a2057042ab05246b982adda99bb52a5ae5a6b",
-    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "ba654a2aef90ebb6ef3b04999c8bf0a484ae372f31ec5c36eb50c9b8ac3b6e04",
-    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "481271e3c94a38c0c5043643f1293f0ba5ee518b3d2257e7963eba89dd1aaf71",
-    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "ae4b62712dc3485adb007014964af554b1923955a1b22ab8597600bbaa758d11",
-    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "fc239c269de21e03eac484cc0c5cf8211bf52c5cac9374afab227dcee3ae9f7b",
-    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "15874c9cccc7c1bef875476e61212c3111fc43cfc6a005038cb619ca0b5a990f",
-    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "309c2d44cbf365cf5307616b2ca2d2a016338705f84b39e1622edd325f656601",
-    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "f63401f1858c1d7b57e3b21e9d8a5de401c55348b8cda4372d76ac97af9cd216",
-    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "8c41c28ba64420053078ec9ed4403c1ad9e7771a08d5bd51eb42f78dfef011d5",
-    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "a07112bd3429816362dbfed1789862a94ee33a676681654abba825161f0510da",
-    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "c907dce0a3ce93847f30b71c848c1a4beff170b52ec807bc1f3962d4f71534f9",
-    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "f0c0bb86b7cf4d66d84b7b1b2e8a7258fe87581a86f4d949574b9d3a9e0df01c",
-    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "9d5b604f0df970d87da96f463f4aa644f5244e6844ae4213cbbb938ce69e82d3",
-    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "cce7546ef89be9be62ec582bd2c11cabef8beb48cd0f441e825ab34a26bfd42c",
-    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "8c07a63c0be3dd981dddab56052c948b5569c240f81331ce58815d1e7f1dd700",
-    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "8a9023bee4f03b3d320202acade1106504f0e61f8a7c43bef4b7b3193d0890b7",
-    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "4465fc6bd198df8338cff07f87fccd987dd99e4fb07c7cdb9d47c3989945ce1b",
-    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "723bfc847dd3a405f873a8bc6792c7f26e1943243f5b43b2ac279338662f942f",
-    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "40cb4b1d85dfecabfc7ed58ad336357b961be6bbb7441f33698dfb5033599017",
-    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "df33d9b233719ff1318c9ed21b6ba5f8a10c9e6af994eb8f834da96ef65d6559",
-    "uutiset/korean-niemimaan-sedimentti-erottuu-nasan-kuvassa-b25d7a241a77/index.html": "2f78deb348ba06b63798465964147a4579740fb567caf9a795175dacc0ee0e2e",
-    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "661fed699e8b880d840c963b53c53a06ae1e71097b96e0b224ba6ef4f81b27c1",
-    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "50699b902b7648bdcfb09548a02d7033000f132622e301fd3fac5982dcb29cad",
-    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "faae8fdb3fdc6e988f93b21a7972e23ce8f094c3717d7c0c07c6e70d16b0ae65",
-    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "f53b9b8f74a0a5193bff26e829c0fc4c4af2980c351e7f84d4bdde4deb3f35c0",
-    "uutiset/kuluttajahintojen-vuosinousu-syyskuussa-ennakolta-2-6-2e846b3cf176/index.html": "40277ca3f23e930df1aea4e4dceba764590fbe9b08120799136e096b8de5d3b2",
-    "uutiset/kuntaliitto-ehdottaa-valitusoikeuden-maaraaikaista-rajausta-fe92f910b26a/index.html": "00d0905549cd9136e8cf2d64fef169c1ecbbe5e41ea81acb4cfb6e6848e4033d",
-    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "abb5dd6a636c06abce5db5c9557207768e55350182bba48adc16889352856f54",
-    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "f89e90a418f0298da7c755339b4f42403d981b059e4e9fa97884f40158c8e869",
-    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "73de5b8203d0ec1458b32288e6b34eba8f826d8dd0d2d3ca95b12a134e922b57",
-    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "d05196759b854eddd8823c0580a3a71244172d7685033e415bd2f40d1bbf6593",
-    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "db8eac65ac8772ffb5ed20d50ca5910cc89515fb89ddcf343870f885e300ac20",
-    "uutiset/kuopio-eurooppalaiseen-johtamiskoulutukseen-aa9ec5a14b3a/index.html": "f93a463d76fd08a81272c826f2f3266d890c3e16d0e393f36e057c402674e80b",
-    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "b2d5017580a0c4ee308cc8265e9aeac0ff524750953d7b7e2fbc02bc735bf6b7",
-    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "95b1f7511f7517582c38655b6aa9346cea9a5a12fd96096b803d7a121e298a34",
-    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "a3b5e3d910d90e7cf881b65efd4c4896719c02dad53d862c632c29e310f0f6f7",
-    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "097de2ae33fd6067021140980afd6d8bb4a5f7ddea1bfe035e526873147c32d4",
-    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "bc130a46a22fb5656aa30edf6d64731210172be25fdc3c067b03e88054e67f61",
-    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "f35787076a77981d863159d71bcf0c1679aa9edacc5a583eb4d9a7f1815d5e45",
-    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "2a5bbd31823ba17a7f0899932d55af79feb521ff6dca6b69175ab203e5325a2f",
-    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "d20e1338cb7a8ca0111317c716685cd14f2ac59d54e651c71b657adaed127905",
-    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "5d1e1a4ac93e888822fb06ce80a69d741eb692db9fb11214e15fee5b8e358ee5",
-    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "e2b99c13df533fec42030e9763899cdf013cdb02291befe110b23a0f1f78b455",
-    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "c5f6887b260b49384bec79ef436136f81dfa0811ca6dca8f84c8426a9d2da3b2",
-    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "d90a3ea5fbe722825afd3786c5802da9dbfcc6565e9e13dc483495a7f32922e2",
-    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html": "3201933f0a5619ec86170442ed21698c76e76182c06fd39b732394e8930ab71c",
-    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "cf20d7f03a931bea33af70d77ac51e712a39ff4c4fb6b123db328d2006cfe635",
-    "uutiset/kuopion-vanhustenviikko-tuo-kulttuuria-kohtaamisia-5cd5fcd61b42/index.html": "7a9ef08b4d9ee1fcc658c7f2231f3dd50dcb4d3fe7da72688998fe1226a262e8",
-    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "2b790fa952a771d3570f165c198b0bd686ca6d4807648d4b1d1ddd3a52c8f504",
-    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "2996f7ff76d53509497b6df1fe1b552ed7bbc4fc972a2a10cf6dafe3323bc360",
-    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "692da2a3d189d5832a894f88f57087c6f9ca8f2a05e9654488f3223dc1902b82",
-    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "53aebae3159f995bc6df0be900899cc677faf4e089098bb478dc060bfe71b989",
-    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "f3ba89d662346199d868f9d3bf07512a72d3edfceff6e5fe69e47b31bf8f9220",
-    "uutiset/kuusijarven-wc-tilat-kayttoon-12-lokakuuta-c2bc4a29129d/index.html": "b5d0ccc4ed2f25a356ca3bbf9a63236e1467109a27b0e370f13cc9857f6517e1",
-    "uutiset/laajasalon-palvelukeskus-vie-kohtaamiskahvilan-saareen-c12a889800ff/index.html": "a200e020824ed0eb6c58181378f5720f6265c2e79281e6b400663f0d3c2bad3f",
-    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "d79f952271cf6243831cae74d9fa0c0f781ea0294ca7704f6a810b5ef9086c26",
-    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "3d3558f5e0a7cf5d3334d745c79b781baefd5ff93d4b124aa9811998c27780bd",
-    "uutiset/lansisataman-pikaraitiotien-hankesuunnitelma-hyvaksyttiin-743604e52b6d/index.html": "f7d58fa941b13beed5c6f2a89722cdf7217d6426964f1fbd3791a43bab932357",
-    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "c342701430305fe9d2903e71ed5d90e2df9e70c989d406861ba7f7da5c43ba57",
-    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "f75bfae6badb4caf98861fc270b81d82beeef41d7e6f2f1b995f7289eee09fae",
-    "uutiset/lemmenkujan-kiertoreitti-kaytossa-viela-viikon-41-9379acd25d35/index.html": "e525c2c744207a6ab84006a7c96b85de28a0a0f348143be868466459c838e450",
-    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "0d7e78576b0a5dd6e66b18d06e10ba6ee8e44abc6df1e17dcb8144fb47920303",
-    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "1a28e19e567e31a8bf9c7065a36385818b2d6c937697510b4a8f1758c448e2fa",
-    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "7f64280df124dc68b7251ab5e43788856dc297070fcf40c5684fadda8f859e25",
-    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "c4e94a793ef77bb4a1e42452c99c0b884b14b2e82c928a8da5bebb3eafd616f7",
-    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "680884adfec1f0351b580833a3d92d1b29ce2643af3384b62654e5e12aadac9e",
-    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "206d4dd14ac1523b768de3b64ac8332552ce48c76f49f0baf182c3b95335c30d",
-    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "db451edd8490ebbebf5239d58785410070c43c23de0526076722a2c7934c2bca",
-    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "70cbce9fb12a53772be1899cce08ca7f93850f0708644cde0098e6535629b52b",
-    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "2e27217243c4cf5cacfc6985cbb7eb0d6133e9a40ae188abd6df2227216ca989",
-    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "3bfe1267639dbe5f7dddb10a4c01a37f1459a4eebdbb57f8c9bb201a7a29dd27",
-    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "0f4ebdcdd1fed55fea8af7efeb58136f122e8fc57e589c2e5b55e9de57f05837",
-    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "98a23366fa2d3ef04866ba9250883549a5eca3806bff9e9b391249e15c5ba227",
-    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "e5eb789f714ba9821f31970190ee187370e4435e83eeb731efc32892951387b0",
-    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "c728b9f5cda1e69461585e83ac38f034e97b62f6832f964306d7d91d58cecc55",
-    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "2e8c3cbce429f72bc704855cd44c781d79c2536d3a680691d951ca4a3f0ef629",
-    "uutiset/multala-hakee-saksasta-yhteistyota-vetytalouteen-dacb24d664ef/index.html": "8b881f1eb18ed09dbf859366741e3ef1d74b464624ecb8a61f2276e892f1dbd3",
-    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "d7f64fb3e38c2090350cb0f1918cc196145a9b0614b6468d99751b7228418b53",
-    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "8c2d50a4c9215795dec1e2e4d8d97c6f588c843fe2d3c2c6981998997d56ca7d",
-    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "650c7157b854087320bca106aba823218ecd209737b62076e6cba4c37451ebb7",
-    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "68a707e1ff8754d61c12e3495030da13913a80602461f76e64f163d72cddf72f",
-    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "928447dd5a5caae27ed7805f9f0bff40177c28010c384773945208f83be0e0d1",
-    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "b45753addca3d66051de69fa2188c31870e91d0b049f73bdf19c8ffd27e805a5",
-    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "159cb6067682869cc5e90b74ae4a6a779539abc9b78be8904f6d87bd6f26773f",
-    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "874fd1caed9b21081ef6c211760e491c76f462b82d341e79ac93397d42d1f5c6",
-    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "6d648a4fa0fd4dffb612c95cc2e45536cd5d3246c1a3ddc1b0f5c102c7498805",
-    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "888b11019c93e243da055befbc541176bd250c8c6e2d39f3310be424bb6cffb6",
-    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "30470e46ef51a30887c196252712227fa88fab2ee1f50a75b55889a999b6bc4a",
-    "uutiset/oregonin-maastopalot-jatkuivat-syyskuun-lopulla-c79a7f054313/index.html": "7bb915a24bfdf6a218f7dc56ff9cb12f55a68d6b6751f09aecc38fdb7f30b3c7",
-    "uutiset/orpo-sai-katsauksen-kansanedustajien-turvallisuudesta-41eea6aee980/index.html": "152ea834755ef305e3ce4456f92f85b60e8f6311893a769e99a2651927cba5af",
-    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "1f1ec0d22bd185f19af06af232e8d2616f0d5df48a04774e087d390f3b69f3e6",
-    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "fb5deeab1a6291ade5c40fba7910d9b856cccee52eb42742ecb2ccb87edbeb2a",
-    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "9a0403ce6a6fae74c82011bf5068436b1b6f325a4c6fabd191e12a3c59efd019",
-    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "86b3ff2c0746994aed8828fb4e26388eee09d14c6ec93237d052fd2e470aaa14",
-    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "219c7d5e1ba4892b1f9711371f9ac8f379a4cc03397c5b0458234f16663bf8bb",
-    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "e7b9688ccd6c105b83833e641c2435989e8a01bdd50beaa37222c240c8dfbdfe",
-    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "119bd62266486202652f353bdde71e239d0e4803d4f383fe67413232d3cbef31",
-    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "b59f3f88bd0bf5deadc330a117db71cad794a63797527140c338f2adfdd51ecb",
-    "uutiset/oulun-kaupungin-vaihteen-numero-poistuu-kaytosta-8-10-c5e10b449ff6/index.html": "a6f30615212158ed74218e39d2dc9280fce2eb08a4bbc8a1d75a901fbb8c4f76",
-    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "49a0024ce1d603501e171fb67f3bd7219ee76f476c02d26c5833b856828b8244",
-    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "8d7232e72dda746dc88bdfbe42ed08d2bab7b4f05a2f3f4b48dd454620bc78d2",
-    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "16670b5741a4d1fdda128253e7f30fe63215e1b90dbd1fb23c8bf4ff6baf83c3",
-    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "996675afe83cdb891f5f96a0c00315639fab0511abf3d563156b6def186fbac3",
-    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "100e15e31cd107119ca1ce38b319fab6e83713f41f4883c01f4db19efd600d6f",
-    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "02fac81c72b4048d32f39b51cb29e18335fea23edbf5cd5f44e752bd17df6f78",
-    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "5193cbbccccc7e5817b309dece1007925117cad1361ef119595f1ecc66028db8",
-    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "cb3bcdab8e9a146dd9fa211f21971a4a6c4945ef06965930504c1495accf36a8",
-    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "be908a9906c01497b6eae182373e4e487d55a28b16333e4b370c2cf02c604a4d",
-    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "56983f432fe4af01f7a65971adaa9910c94c3f59535e09eac7660e397a5a2c38",
-    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "747630714e7c07709146c451f0f797ce9a7d99f457df81c842108705e999a0d1",
-    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "c9f5825b0dff79e334101f7711c27d929b3a1a2212daf85e7bfc35c90deca2e3",
-    "uutiset/palkkasumma-kasvoi-elokuussa-3-4-prosenttia-vuodessa-8c742b4b56b8/index.html": "5abb6ef171ddb716c91f3675daa008be5f3d822497f97ef2681a67169ea76e75",
-    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "10039c08bfd714fd4a378840905f999371138dec4d954e3b9b489247c64c1658",
-    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "ca2f1d7e947c1edca7c57cdb9d76a0c2211d1f27eade2129004e4675c3cbffef",
-    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "55f3167e0f08ef8a5385c49bb3889c567b2bee05ca5919ead4065f7555f4e955",
-    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "bd2fea18216a2b7ead4b8d82014ba11cf7e90363e34f8f0b9552ddca8f7aa77e",
-    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "749cae386af14d7559b54340055e61eac9778990fc67c6b7608d245dd0cc7db2",
-    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "750f3e2a3bc657dd49819c03cb612d69b9eb7f7ad9ec8581eeb81e206192baa8",
-    "uutiset/rachel-hurrikaani-kulki-baja-californian-etelapuolella-59edc2fdcd34/index.html": "a0a3ac98034ffc36c64db656bb0ca8d6668546538e248f49a70ed72178348628",
-    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "610b89fa1c7294c01471d4a9c515b4f04d79f90c870307210931e9cf9540fb60",
-    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "a76d0c621a1a2dab8f2c03b312484459b7e6bea6e7c0216f64a0721d1c6d7ac9",
-    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "aebfe196aca50c3f30ff34d37b36621063afd80c8dfbe49ec41522683e66cd31",
-    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "d1e2eb74724cdb201aa14f8810fcf8769ba5caf584329813fe2fc4e2d997e636",
-    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "114cbc63b3961e363607759e75701540eef2fa6a8a2ea7b4b24ae449f245186c",
-    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "7bae55ed8689fc441751cc0e3271ddffb49367c737fa3cb1e82213798ffa971b",
-    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "3637cf2ff06bab5a598570d238a1ddadfe08f76118aaa351f2020e97b675a78f",
-    "uutiset/sahkopotkulautojen-kaytto-vaheni-helsingissa-81f29c83f795/index.html": "1bf5071633f1ce6fac53a6faf8d6481af930b49d5ad1996fdf85c9904fc291c1",
-    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "df32906b8148c2c314815b86cf1482ffbabb2c0a47b25cf4376f1cd54c88c989",
-    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "42cc69f1905df76c849e9515508f87cc3033b1ed72cf13551b84f0653370904e",
-    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "2abbda0451ed5794256417e5b30f9d62a8a24a3981c62918d7e8e302d66b78be",
-    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "a5ffe9e3790fe65662058dc839f6ca2a6c48073809c89acd9739191b44f5e753",
-    "uutiset/sijaishuollosta-poissa-olevien-lasten-etsintaohje-uudistui-ccde11681bc6/index.html": "3a18b721d4227564f596da4d5d9d6352afff5411b22256b9b324483d9130c7a6",
-    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "01fe79017e029e9ee64594f5b55f8c45652f266a76b5f4df341354ed62c37ec9",
-    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "1e95f9e0ba2315ce7b07a5ddeaa1e7ea4ba07dbae2eeb954cdb313c828159d91",
-    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "17443f45a4a419a506b66caec05ec4e1f15eadcf85141d4a807d20f02966c188",
-    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "f5251050fdc1b2744579b6aeeec09a34c8e1c4245be9bf9f79760c34b9e15aae",
-    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "a86df254eae1ec42375f31a63cdea607818b8f3a109550d9169fbc0bae7e605e",
-    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "96a0e44a422bf9073042c343e6bf41726de510da2b954aa2f70ccd83f656f021",
-    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "145d97b9e577703c3d0f151b5f6e43308d0e963248e2f3872d0bd5907f4fcab0",
-    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "d9dd74bc97cbfc11a663dccf1d9fdc97d3d48788bb55014eb550727c573ba368",
-    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "d8ca3f44a464a2f10015bf39d1c53a4653570f2691a9f7c8a62857ea2b18a0d5",
-    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "1c1f650af170538a96dc6aeeb5ef664820dd437d721f0a479dbdef3f524e8c9a",
-    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "11b9d9a2fd5c79895e9101742148ab7da8f4cf8a5c08e1337eb02ac4af051738",
-    "uutiset/suomi-mukana-maatalouden-eurooppalaisessa-digikonsortiossa-6b30890419a1/index.html": "5a0c12d205b1cf3b856717095d483caee596ff8cca02d30d804060ef8545e72b",
-    "uutiset/suomi-tukee-eu-n-pankkisaantelyn-yksinkertaistamista-c0ed3784ff13/index.html": "3604e861587ad448de5375331a3386213f2212e455111aba7ad7b7548b51aacd",
-    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "4be9ef4a984fa5d5f18621af58aca886297aef68803a50937853141f803d869d",
-    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "980eccf966f81f91b6c83365bfeb7562470b038375c66a5f6255ea5ff3a29cf8",
-    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "cfe8a275d5580b57e52fc9694b9cb56c9db63e9bb4495bfa7996518de785086c",
-    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "20241fc62aa685951510976eca9871799fe014d3d0c2c973f218cf5d7b7c0f5f",
-    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "34b73431a9d0db63d12ad9000f5b47d359e51f203069c7f7d8182a335cfbbf6e",
-    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "80ece2aa67bd40e807c46d8a8f471832fee93c6e8d32806c51dfe88247ed1098",
-    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "404731b742d16af272079ff8ea002bdeb60cdee0925eb54ac0e44ccb08fc2044",
-    "uutiset/tiibetin-ylangolle-satoi-runsaasti-lunta-nasan-06fea975771b/index.html": "4ec87baeb31bb88ca395f8b7afe416417eca16c48d287ab4cf7a0c800c835200",
-    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "db1e1462c7830e3d89dc4ca067cc972f27188411952dbc2ffb0096841d974620",
-    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "1a5982cb8ec4e8e2c95bd1b760e17f9df9c07548acd4f5016bb1288c948c4960",
-    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "7b1ddf2486c0a2b2087526ef7a147fcfd144baf44abc0b96b22758d542f617cf",
-    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "c8e5668343b92d4bb65ac986622e948ac5b0c8ed8550e28e4911905805b8987b",
-    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "24e04f92075ce2721e6454205f76bfa07165ca08a8ac1c1a9493eaee33455f87",
-    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "7fb80eb511a470b5fb2d902e7115352f9d0a9b812d14fe6712d93dfa93e9b525",
-    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "fcd8f0e57f37a4bd612374d04b6ec3f610d2968743b0bcae01886efd0d0d281f",
-    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "0cf921ffb5d9ee8b8e179a2c3675a54d75a7a6db7e4905b9ed3ec101e918c48c",
-    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "6ac9050528df5ba035b5510dba0810d04680cb4ee2e0b8062461d5b3d0cda85d",
-    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "8aecdf12ed6b410f68227f63c73ccd9a20adf7b5979f6957967adebfe6e8b580",
-    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "62bf06ee9e6a6bb049acbf4124514587db754ac537d711f57be8c57e768dd001",
-    "uutiset/toolonlahden-tulvasuojelutyomaa-palkittiin-helsingissa-c8d9df28ef8c/index.html": "3fd92d3e3e8e00db1412cb20b2995ba65d273afc954d37d06588de8bbbffca73",
-    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "cb8be52568cdaa7412315c0240e8efb76f4c1a3966c76392c3b4dd8074279d3e",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukea-kiina-suhdetta-aac41588a8b4/index.html": "d2125f6cc71cfc4c36e5dc0ad76fdf8d8d3878ea7695d0393254899036291d0c",
-    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "1ec02a7985aa38dc3dd9c7d2ca067409857d19e473312870a46d94d469c3a7e4",
-    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "b9b6575ab9385e9cd7b8a23e2bee49a4b89f7788c7a9d5e9ed0530795e5fbc7e",
-    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "427cc1dc77be050c4597b3a1c917c320e24644c7afca64fef361610e4487025e",
-    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "48f7de9e1d20fbc0d1dd1b74e9f9685e8bd37115765527a2a5d3f820b8de898e",
-    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "3964157108c6d2126097f9bda7b1e9fd5ed35dd3b028e1de2fd9dce98f6b0cbe",
-    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "6960ac86beb6b737c0591796845732797137b493294c7f9b149994b8a4b67ad8",
-    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "73012206ece791691805f3d42caf1f1ac98913cf78e13f1bfc58b883b33f9fd0",
-    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "ae65adf408e9cbb1a2aa24a3b4c993d31a6632a09e18b2f826c788f361929b37",
-    "uutiset/vaaralan-bussipysakit-siirtyvat-6-lokakuuta-5fca6d55d831/index.html": "602f79ee9528c96314c1f6775c9fd736d01168e9bd07e30018dbb9378643c9ab",
-    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "495e2cd7acc0955087c849c9f001b2c74fcc3742e1154a4830ed0e0f56384d43",
-    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "15145e463364db5270257ac7c8683e89dcd4b0e5b839771a419eb71d40010717",
-    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "814860a26af8023b9c5cc8f8995b2407879033cf85a86b0266fc69d1551e5097",
-    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "0a360b73712335b9f851afb7696a4bcf4e8fd4fce9667538973bd0de4a3ed262",
-    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "634aa16437adab12d804d1c9091c1181980b72c46571aaed76bad238bed21a1a",
-    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "58b8958b467389ee470b01fdc3716e696d0f9f4a72edf00f0dac411d0b8de21a",
-    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "a26e6a420bcca7592484935bc2749f1ad0fc0b5a3fe569003d4ee7d1ff7488ef",
-    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "788c3062fda42ee469e07e5ae5b84e6d60e6b1b709dc67f703b023351933ecfd",
-    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "9ff002ebf4a738b7c5d49edb953593a064f50275b914bbbad450ba14f9dd0dc2",
-    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "01458e394eb50fcca02106c8de98f824ce0328f183ce79c5e021e120730beea2",
-    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "e8f850727e8ce5a0795615023df5a3da625fe61741cbff712a4b4d82757a8d12",
-    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "69385097a9b67d023eab98f9ace7c58ad8112c8b3808c950f488ce7a40f238fe",
-    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "3a53c68436396cf8e9110ec077c1f716830351f5d02b29597e7441b835a2e077",
-    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "e9b6cd11d803826edf0048bf9fbd176d4b435bdc0b957bd184d55f32511c3ff0",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "3237073d167037bd32aa709d4ab65488b986e56a4874a65e58f82a02e9f40535",
-    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "e87aa2e996d5ea642eb414c47413464ba7b2f995ef09cdfcaaab9ed2f17f881f",
-    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "3f9f21d240ea89b643a2c24a1e6042c12ef20dba0b8941010667cc595ae851fa",
-    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "d0f259e072fa5e9730007a45e5e2a9c5a1b0f0dcf87c4440aff16e1917ca74f5",
-    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "2cf01cb266200600a86d76076ab604c890920c7a5b7ff61300c27a20cda3aba3",
-    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "4e86372ee05b68f9f514a4d33902d89e300eba64905a3997944c3306a9408511",
-    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "1a690ab68d63fda9e6c7238c6c6c7e21b19b1f598a5340646035f8130efcb49b",
-    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "16a7174804cad21b4f9690b3304bbade32672546d68c9862f09c4e9e9f2a58cd",
-    "uutiset/vantaan-historian-museo-hakee-avajaisiin-vapaaehtoisia-d96705192438/index.html": "61a79438bff15227c5b1380e197d9db427fa4cf2dec2fce3412fb55a268f3cac",
-    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "cf45190f66c7f402e7026504c3020fd9e1c67eb7b45b9d3ddf69eda6102e6a86",
-    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "d66a6a6d59367afda7fdc2872ff3e9dacb7734261bce8efd3ab7fbf840f44fba",
-    "uutiset/vantaan-monikielinen-neuvonta-auttaa-myos-pitkaan-asuneita-8244199fd98e/index.html": "e47e0d6c593a64588f55190052a60620c70390c05d6f0f20d3b0ee7e9bc603d0",
-    "uutiset/vantaan-musiikkiopiston-isanpaivakonserttiin-vapaa-paasy-004a6e9a6859/index.html": "b3aa3652337da395236ea76602a8216b914bd90f25a3d742d61f58c7a731df05",
-    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "275425c443da77575fbb87c6d5b9d08d0e850ddb86ca50bba96f05e6eab94014",
-    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "0ac76bea979e5f716ce5ddcbc878025143c6af266c0f82ab0cec38379a064ece",
-    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "7270acabf27d430238f14c82730fff00776f405fa731a93ff7a1db6c9064632a",
-    "uutiset/vantaan-yty-akatemian-ideat-etenevat-tyoryhmaan-ba96b94ee71f/index.html": "ed4fe193087b2493929b0d3380b32e28ca8f856acb696f459b121ed98405be7f",
-    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "9d4b9b96df399bd6586b9fb1ec979c650e6c8d2a83510bd2e6855f6959cf5fea",
-    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "8f26c680d89774eece147e07ba735a9dbba255cea0c498cda08e1cfdcf29d3c5",
-    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "b782d34e56324757470e8eff7627c9115068d205f822a71dda1db35a41170437",
-    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "25a929a04953538e914103041e5f4c1cb3eefd350e1af9b8e37a4da788970fba",
-    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "c6015c111e6de21fed85e2479b36adad3eb744a3df90b7df0cd76e31786a5ec3",
-    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "eb23a854032f1c0719d775510473b2a193676aba6ade72dc7d0caf9bf06d355e"
+    "uutiset/fortumin-yritysasiakkaalle-suositettu-hyvitysta-45c3d38688f1/index.html": "20c653e323de9c635cc4ee5aa1ce46f302a49bc41a2bed2aaed80efce524d7c7",
+    "uutiset/fredrikintorin-remontti-viivastyy-arviolta-vuoden-loppuun-2a57e16b0903/index.html": "a07efb769841546283b010d98dac38786983880d5177724400a7c8d922809f57",
+    "uutiset/hakansbolen-kartanomuseo-kutsuu-syysloman-tapahtumiin-2684ca78ebd5/index.html": "ce429042262818534972e4338e824ca955e0d27225bacba0b0ce684a36fa7dec",
+    "uutiset/hakkanen-vieraili-libanonissa-israelissa-265e1c050023/index.html": "7ffa912514a0b8b68a9fa44ba80618e44305fdd8f2ddef8f8f72e5db4cf2e92b",
+    "uutiset/hallitus-ehdottaa-saaristolain-uudistamista-kausiasukkaat-2a902aa7df9e/index.html": "251b12f2315c373c102055243115f7d78f1ca876779a5533d442de07ff6a060d",
+    "uutiset/hallitus-esittaa-koulutukseen-joustoja-hairiotilanteissa-dbd531c56a76/index.html": "bdd03bb27e5b8b7dbc975e0738264bf21c2126c7d3ce15697880dbb9b59cb792",
+    "uutiset/hallitus-esittaa-lvm-n-budjetiksi-3-73-miljardia-b7dcd94bbbf9/index.html": "b5a19dd70cedf5aa323588a9c0e41393fd805fec073f7990f81ae1ce4a7357e8",
+    "uutiset/hallitus-esittaa-mahdollisuutta-jattaa-kelan-f3971ff28482/index.html": "ed86a3239d93db28fbf7978680a72dcd81e636fdaf932a4579c0043c97e0664d",
+    "uutiset/hallitus-esittaa-muutoksia-sote-lakien-palveluhankintaan-8e7e3e585fec/index.html": "683a4c0696ef0da65b7a505c47a2948b1ecd526bfef9677ccb9c0edc4d7aba6b",
+    "uutiset/hallitus-esittaa-poliisille-laajempia-valtuuksia-puuttua-90375dd8de77/index.html": "8a9496df9df267b758b550c42432ae5343bdc77400af68ab6e141c3d30b16680",
+    "uutiset/hallitus-esittaa-tyottomyysvakuutusmaksujen-laskua-2027-f97bcef965b5/index.html": "d5ef45a38ce393896a8d1bd2620acc15a5fc10f831cd0bd80058ee9ecc375573",
+    "uutiset/hallitus-esittaa-uusia-maksuja-erikoissairaanhoitoon-1009344e322c/index.html": "93c63a2d1717180308a3cd55d7d7b89a0c21270494bc637dae681d75e2796aec",
+    "uutiset/haruspuistossa-kaadetaan-noin-100-puuta-lokakuussa-c3e242101b0c/index.html": "da097b5de3f4035bf7aaf858ee2dd1fbf7e1db9dd33736988d01b6b0e501d155",
+    "uutiset/havikkiviikko-kannustaa-kouluja-vahentamaan-ruokahavikkia-61b3c101e925/index.html": "b5d42614fda75f8483bdba3d1febf161a479e3649e000d537d95af4a73236eea",
+    "uutiset/helsingin-elinkeinojaosto-kuuli-tonttitarjonnan-katsauksen-8f7bf8135bb7/index.html": "7924a420e696596f9a01ca542486a3d2cbc0316d6548e23a43a888b33ab68dfd",
+    "uutiset/helsingin-konsernijaosto-puoltaa-raitiovaunuhankintojen-38c33234e1a7/index.html": "ca0e0a26faa1ec8c1160838ae0ba0e03e2da0143b8be316f9a9dd6de8c1284f1",
+    "uutiset/helsingin-kyselyssa-myonteisia-arvioita-etahoidosta-ff4aa5e086dc/index.html": "0fc225086f45a1efe8596cc62f3b2257d6551170427d47f8c9646f5bd69214f5",
+    "uutiset/helsingin-liikunnan-avustukset-uudistuvat-vuonna-2027-728af67d1511/index.html": "a3dd13dad442c3fcd83132092e9395861656b0f30978a42e6b5b8121de48b965",
+    "uutiset/helsingin-pienituloisuus-yleistyi-vuonna-2024-333a8e11bac1/index.html": "44353f075f17a79779f6b4b174aceeaea90cf549bb9e20e3f1a82cbb0b3201e1",
+    "uutiset/helsingin-silakkamarkkinoille-uusi-ravintola-alue-lokakuussa-8919f3311ee7/index.html": "06ab8d25d46738ad9033adbfe1717da571166257c28d8798a16e9572ff1b73f6",
+    "uutiset/helsinki-itiksen-symppis-siirtyy-turunlinnantielle-2f05494ef557/index.html": "825753a6f56681d88015a52f222e9d04508886c31a8e224580cf7d6ac4773dd5",
+    "uutiset/helsinki-jarjestaa-vauvan-unta-kasittelevan-verkkoinfon-24-23759dbb8476/index.html": "a7a4ffdbb0d139297d57e3f7155c7ddcbf97ff223e3364b3a203557b95bd315f",
+    "uutiset/helsinki-kertoo-paivittaneensa-ymparistotavoitteensa-e15ca37246a1/index.html": "9749ebd30a69dac852c90072e9ec7f7c2d806265eacdd8db92bebd3e58d9080e",
+    "uutiset/helsinki-kertoo-sinisen-talouden-yritysohjelmasta-2a8b2adee4b6/index.html": "640144b68e30592d94c0c99540089a211353b2cbe8e72a5bdfa99d261cc4ee1d",
+    "uutiset/helsinki-kiristaa-ajoneuvohankintojensa-ymparistokriteerit-52aae0fe9233/index.html": "a035271616f3a71e6b36fd427f99db16ebd007a2d3ccf3da25c8961cef55b921",
+    "uutiset/helsinki-kytkee-yk-n-kestavan-kehityksen-tavoitteet-tyohonsa-66ca79131373/index.html": "41a0e1ab2d384892107f1d30f94b4b4044d22291c6208c219d0df42316822aa6",
+    "uutiset/helsinki-otti-kayttoon-turvallisemman-tilan-periaatteet-ea2b1f992164/index.html": "ed69078ac52e9ab893268d48105b4caf966673f357b871a5b6a043fff85065ac",
+    "uutiset/helsinki-poistaa-syksylla-kaytosta-noin-35-pysakoinnin-d6f4493ba6e8/index.html": "2f29670ae5f5b9a24d9253b3feb61c35601e459714cf54110b46da74910c312d",
+    "uutiset/helsinki-pyytaa-kommentteja-suunnitellun-kansallisen-bd71b526d449/index.html": "c0612ff33ab4ab26204b3032f3ed526c1def98f993eef3e6d1b44f0e953dbd63",
+    "uutiset/helsinki-tallinna-tunneli-esilla-ministeritapaamisessa-78287132895f/index.html": "c8fce49994b4e8748a9ee434545554788271c2bb8bf29a1269d5be9f0db0b6e5",
+    "uutiset/helsinki-tavoittelee-pyorailyverkkoa-valmiiksi-vuoteen-2029-56c04677f3b3/index.html": "087155115177e74c1dec74aafae19f5ef8235445606b55dce6e9ab50cb60c3d6",
+    "uutiset/helsinki-ykkoseksi-kolmannen-kerran-gds-kestavyysvertailussa-2c5050d14dd8/index.html": "a829364b838231d36141ccf048cdd92a032353b65fe5f6e3f40e233d0cbc5b55",
+    "uutiset/helsinki-yrjonkatu-avautuu-liikenteelle-28-syyskuuta-e7bd28796feb/index.html": "88c2649a91719ef3c823635641a0e83b29d4cb97d3183f563953c111bb42ae95",
+    "uutiset/heteniitynkentan-peruskorjaus-valmistuu-syksylla-2027-893508c01462/index.html": "28e477c1ceaee2618e8990c6514360b1763a2d20b371568f4f338b9987abe28f",
+    "uutiset/hoas-rakentaa-174-opiskelija-asuntoa-itakeskukseen-04f5e7c23aea/index.html": "9f08a0cd6590b9926f50edc1c052e1e0ef5b9a918bebd6258714ff31843da4cb",
+    "uutiset/huippukokkien-club-des-chefs-des-chefs-vieraili-suomessa-f9ea85f1e6d7/index.html": "bb807bf679bcbf7bb1a60c23b51da6b9b66052751403e349ffe320706ad3da64",
+    "uutiset/hurrikaani-polo-toiseksi-voimakkain-tyynenmeren-itaosassa-df134e357787/index.html": "3268e05baa95bd991e4437a3e3850a8e5877b200f9fe4f47200457fe1b0a63b5",
+    "uutiset/hyvinvointialueiden-rahoitus-27-5-miljardia-euroa-2027-57e39fbd0a4b/index.html": "0e67e19045869e3a34abe88355a0c4e0f4a5e5646f396a8a36cbb1f0a7226faf",
+    "uutiset/ikonen-kuntien-ohjaus-esilla-pohjoismaisessa-kokouksessa-6be99b8cbd81/index.html": "ba54a722771cdeb88bf4e313ccc089f81090f0cc069f6c5e5743b462dda8bc07",
+    "uutiset/indonesian-palojen-savu-nakyy-satelliittikuvassa-kuivuus-5e19146e4f51/index.html": "107e1ef3895baf475cb7d711310dedf321950ce17e21dcd70d783fe63253a1bc",
+    "uutiset/inflaatio-nousi-elokuussa-2-2-prosenttiin-hinnat-laskivat-ba164fa2011d/index.html": "b5fc250612a1a613fc26fb56a914e27e6e59178c9d7b1e7897138faf5af87c75",
+    "uutiset/isabel-schnabel-jattaa-ekp-n-siirtyy-imf-aan-86fcec1077e9/index.html": "121e4e5b1ea65bf0159b40234a642554380c6ee69619e955c19aafe9d00a65ad",
+    "uutiset/itakeskuksen-terminaalista-arkkitehtuurikilpailu-bc32d0e7e97e/index.html": "f4af72242b08ac3e2fb2546d024243d59e0e690f13f4e69430e5a6248cc5f05f",
+    "uutiset/jakomaen-vaaralan-lampialue-kunnostetaan-lammet-koira-17f3a9e55a5d/index.html": "19ef28a4faace7986185d76c223e5457ce3fdd5d2f2a0400510cc285229b58cc",
+    "uutiset/julkishallinto-vauhdittaa-tekoalyn-kayttoonottoa-231d1af5e7f4/index.html": "557437a31b7dd0c57c9e35bc79c49b3553f564b2c4eb86246ca77fe38a90a113",
+    "uutiset/julkisyhteisojen-alijaama-0-5-miljardia-huhti-kesakuussa-4065dbc091a8/index.html": "033e4865c2be807402e41a0940ca16bd8841935a117632bb09e0da7d32d684f1",
+    "uutiset/julkisyhteisojen-velka-nousi-259-6-miljardiin-euroon-a24ef4286ebe/index.html": "057d809b00285bc760c7d7bf454e31c49202b878eb2d3fb41fdfa0e1ae6d4b55",
+    "uutiset/jynkanvuoren-kavely-pyoravaylaa-kunnostetaan-kuopiossa-1b809e5df98a/index.html": "1240a36f26f6adf43cb45bff24713dba77ca8fb0cbed880bc4a73893f389db18",
+    "uutiset/kampin-terveys-hyvinvointikeskuksen-rakennus-valmistui-b6bddd1a6fb9/index.html": "071fcd33c757ee4e337c252198d308ba22ba5c69205344c4049a2d12622efd30",
+    "uutiset/karamzininrannan-uudistus-toolonlahdella-etenee-kivityot-55e6e217d134/index.html": "9d9ea87004c3ee2af268e56d1e14e873f718426acf170b51b28cc5eb3320fb22",
+    "uutiset/karjalan-lennoston-harjoitus-voi-sulkea-teita-lokakuussa-9f5082949d65/index.html": "defc0d09c60dfb6dd2f09ca6387894c9d34f523d04e707a49b96b30eb5e795c8",
+    "uutiset/kaupan-liikevaihto-kasvoi-elokuussa-7-9-prosenttia-0172ab418392/index.html": "68ec786ace89044815d03aaec4c3bcb5f7752080a7f4b2e6fde374918ac08689",
+    "uutiset/korean-niemimaan-sedimentti-erottuu-nasan-kuvassa-b25d7a241a77/index.html": "8cb75ef33de41498fd0f47f3c6d00bb00847fb3231b1ea741e8ea085f62e5555",
+    "uutiset/korkeakoulut-solmivat-yhteistyosopimuksia-kiinassa-e9296ac693e9/index.html": "b5a5c023e3bd3d5a58b34961e58e12970a4b4cf64bcbf4a63fbecab341f160dc",
+    "uutiset/korson-uimahalli-sulkeutuu-2027-hakunilassa-remontti-402abbd6fcc3/index.html": "238469473ce78381db311b783d3983f2333a47f6003c35900540b2e1ad545ea1",
+    "uutiset/kotilon-lastenkulttuurinayttelyyn-voi-tutustua-verkossa-ed01e64009e6/index.html": "9aaf6ba1d1f17cd9b630c151d6213ec5b3a566d3052c214e9387b7db972c6de2",
+    "uutiset/kulttuuripankki-kokoaa-14-maakunnan-taidepalvelut-9f85a9249ff4/index.html": "219eb48a39bc077313c7eb56bde39bab24a6d7de70e457e40528efcfc9709dfa",
+    "uutiset/kuluttajahintojen-vuosinousu-syyskuussa-ennakolta-2-6-2e846b3cf176/index.html": "a6f59138ae6d848b0719c00ebed0998995557e93b0d237da8e8fa700f2d7c7e8",
+    "uutiset/kuntaliitto-ehdottaa-valitusoikeuden-maaraaikaista-rajausta-fe92f910b26a/index.html": "a22331e02c68fc624839f1e2e8024f75946aadfb490075b6f70cb5670dec5006",
+    "uutiset/kuntaliitto-tyollisyyspalvelujen-asiakasmaara-kasvoi-10e9a01ad0d6/index.html": "02a954ea83781eddc07d59a2cb6c75bf3cd0c34de1b7a8aa5836e05f14d05cb2",
+    "uutiset/kuntapaattajakysely-tavoittaa-valtuutetut-viranhaltijat-0dadd1c7a542/index.html": "14fe2d28ccd78eb116efc6d48230529d7686cbb9699c08f330d98e443f340555",
+    "uutiset/kuntatalous-heikkenee-vuonna-2027-valtionosuudet-pienenevat-4c28a63affcd/index.html": "76cef19ef6fcc0cc3d2b82458e06ca35c8df1d4bf821fbd5e0d796223928bc26",
+    "uutiset/kuopio-ennustaa-8-5-miljoonan-euron-ylijaamaa-414e3cacf805/index.html": "5ffcf3e5b18911424ad3614f4b057f267801685d8b25ea63434913b89388fc38",
+    "uutiset/kuopio-etsii-kuntalaisilta-ideoita-896aafea7d4a/index.html": "b086a27e4e47a05b0b013ec5d61692f3928e1aa855eaaf2cd23012f23616f4af",
+    "uutiset/kuopio-eurooppalaiseen-johtamiskoulutukseen-aa9ec5a14b3a/index.html": "c7bfaa929370b7fc08a8d226ce05d5b156d837218e577b3250374a298d0fdde0",
+    "uutiset/kuopio-julkisti-vanhustenviikon-ohjelman-lokakuulle-1b86dc585a62/index.html": "0afde7f7de171e2744148ad38867846c7c8c91d017023b82bc62b2bd02ad0550",
+    "uutiset/kuopio-kertoo-osallistuvansa-lvv26-harjoitukseen-7026a3950494/index.html": "9735179efa2e4e19c8bd174d425c0fe43b1b42ca9acbd847c8afc399d8f38c4a",
+    "uutiset/kuopio-palkkaa-syksylla-viisi-tyotonta-nuorta-ensi-vuoden-9daf662c054b/index.html": "ff0bd63fd510954d02708294b30689d44396429fc2672424f8ab92c43843c64c",
+    "uutiset/kuopio-tarkentaisi-esiopetuksen-oppilaaksiottoa-b883b041affa/index.html": "c48254d3007005fd4016935ba89da42c5e02808411610a08d50dc7e4dec9a8d1",
+    "uutiset/kuopio-valmistelee-sarkiniemen-paivakodin-tilaratkaisuja-a5bce1875201/index.html": "aea92b3a2e1f141f11eeea6e8fd4c5292d935301b0a3bfc2507b4a7b67a80c60",
+    "uutiset/kuopion-blogi-ajan-puute-yleisin-este-liikkumiselle-9497221470f7/index.html": "6ce6a8cbed951f8f635b68cd76a1dee1dad57d9f1dee7ddc71db8656fea05535",
+    "uutiset/kuopion-johtamismalli-nojaa-kolmeen-arvopariin-6caece9cc4b0/index.html": "ed2a1097c944558153556ff43277410e35df7a25fcc5e8ebc61811b0178c383c",
+    "uutiset/kuopion-kaupunginorkesteri-svang-yhteiskonserttiin-abb6da8fa71d/index.html": "615abc65a801c309acf65c8acb38f000ac8bc8af2d55326773179350d3440e09",
+    "uutiset/kuopion-kaupunki-taideviikot-jatkuvat-lokakuulle-8a665fa35d3d/index.html": "6afdabb882b57ed60ec1cfb05c430e3a96ac3509db9d4584f513a861f7555514",
+    "uutiset/kuopion-keskustan-liikkumiskysely-avoinna-31-10-saakka-b8d212c57650/index.html": "8af290de526ff3d76c41223c289b7fc1a91b6721c6b0d688694a0ec26bdb6d2b",
+    "uutiset/kuopion-museo-saa-samurai-nayttelyn-toukokuussa-2027-f6062bf646e6/index.html": "3c56bd19964e9e4c6d78da99dccca6a41f77ba51eed60415f3bdd632603f83b8",
+    "uutiset/kuopion-taidelukio-lumit-saa-eu-n-opetuspalkinnon-5302e5201e17/index.html": "8ce664fe4d4074e804be3d8c09458da3973a752b4140cb8f5c8b2480ab5f131d",
+    "uutiset/kuopion-tyoelamailta-kasittelee-tyontekijan-oikeuksia-f6aeaa0e7a76/index.html": "8bd9f41c9c1738b0854fc4e30d06ee30fd0c26743ab077fbc7e2006aed3f5bfc",
+    "uutiset/kuopion-vakiluku-kasvoi-396-hengella-alkuvuonna-2cd7ce2136f0/index.html": "35dfaa39d1eac272f2b2aa5b95879e2a1ed95e79633d586fa9428e956c70d6b1",
+    "uutiset/kuopion-vanhustenviikko-tuo-kulttuuria-kohtaamisia-5cd5fcd61b42/index.html": "d42a397ebd9b7e3fc9028ae724b1bef512131de4aaeec99bed2da6ce919da5b7",
+    "uutiset/kuopion-welcome-to-kuopio-tapahtuma-20-lokakuuta-a050cd8361c0/index.html": "fb7a6c175aec59e8a904c71ef6e420f6a961441fe6093c12b54f30ca92346776",
+    "uutiset/kuopion-ymparistopaallikko-lahiluonto-kaupungin-kasvun-3728f0b0d62c/index.html": "184ddfc7331460be8d2176cfcf8d5f93559323dbbcca5be286a4d2a4e3e967f5",
+    "uutiset/kuopiossa-asfaltoidaan-pyoronkaarta-jynkanvuoren-vaylaa-8cacb894e21b/index.html": "c733bbf93cac4ce712dfa7ef50263b3a059eb3ac2fc005a0b0fc9c6d1ca5c0f4",
+    "uutiset/kuopiossa-kokeiltiin-koulunkayntia-vaestonsuojassa-bfb80bbc6d7e/index.html": "d4da36af40f1a2eeca55a94097a93277ebb4f5da3edb7f1aee36b3e588f72947",
+    "uutiset/kuusijarven-saunakapasiteetti-pienenee-valiaikaisesti-ac11a9d263e5/index.html": "f6c46d3797e3abed2edd4ab526af41d7dcd402e035912d82d27d1c7092173f20",
+    "uutiset/kuusijarven-wc-tilat-kayttoon-12-lokakuuta-c2bc4a29129d/index.html": "d5ad8f98aa7d144be1463df7aafaa36ed9a3e8c4483d8a3a6acd1e7f3212f1d6",
+    "uutiset/laajasalon-palvelukeskus-vie-kohtaamiskahvilan-saareen-c12a889800ff/index.html": "a223e30a09f828c6d8ceda7612c1a44cf8877769de06d2d0c2de2ce35eb07b0a",
+    "uutiset/lammitysenergia-kallistui-kesakuussa-vuodentakaisesta-849661688f3c/index.html": "e62213a410e849ab983d61237f3c5ad0c4d56c1b36485680bb16fb21656b6a85",
+    "uutiset/lansimaen-koirapuistoon-tulossa-kayttokatko-torstaiaamuna-133493c7588f/index.html": "30b8a589c3fdea88d44d9ba0da68b6c062c5e5aef1e09f4ef2ff0acae3c11b82",
+    "uutiset/lansisataman-pikaraitiotien-hankesuunnitelma-hyvaksyttiin-743604e52b6d/index.html": "70a4cadc6fea589be8636cc1565504c193be313c6ac3c889173655bacbd9152d",
+    "uutiset/lapinlahden-peruskorjauksen-valmistelu-jatkuu-esitys-86f1d633295b/index.html": "7de9f651a4cd5f601fbdb99ee43fa166293bd08f28a3b76c849659457bedbdcc",
+    "uutiset/lemmenkujan-jalankulku-pyoraily-yhteys-kiertoreitille-b72bfc87ea57/index.html": "6178551b76aaa5776334a26b2afbb89b0d3fd0e5d8857fa9a3970c9a0642e464",
+    "uutiset/lemmenkujan-kiertoreitti-kaytossa-viela-viikon-41-9379acd25d35/index.html": "dd096d4da763fe96da76d402b8d9ccb215eed6c0e17b021e151bfb7ee4b3e93e",
+    "uutiset/lentokenttien-matkustajamaara-kasvoi-2-elokuussa-e4e3315600c7/index.html": "6e22df3873dacfaa231be8327253be6b615580f90ed6843ead85fb2f2d441660",
+    "uutiset/lintulahdenkadun-rakennustyot-alkavat-lehtoniemessa-b2fc857c6685/index.html": "e3883b02853e4536492bd5119a1b7fff89a4c5c8d66e57d19e7efb854ad775f4",
+    "uutiset/luottolaitosten-rahoituskate-pieneni-7-1-prosenttia-81e510f0302f/index.html": "65455cd10edcab400f5c689dc61d4b8d35df92d93bea53dcf0e38f928c746941",
+    "uutiset/maa-metsatalousministerion-budjetti-2027-2-6-miljardia-f4660882883d/index.html": "eca03abeb4bd8ec52fb253051b7392596954ba78f009faf4e6f2cd788a5b63e9",
+    "uutiset/maarakennusalan-kustannukset-nousivat-6-4-elokuussa-7a59abbcb656/index.html": "2daa7daded2a11264ca384cbc8d722ca91fd0cbe37701676fc48bd479416a97b",
+    "uutiset/maarit-raja-aho-tutustui-myyrmaen-kunnossapitoon-379dbddb774b/index.html": "e9add58c3225f5c0a28849ab9baa29598b770951673422b99049c3bb4eeb6379",
+    "uutiset/maatalouden-tuotantovalineet-kallistuivat-heinakuussa-5-8-aca81b732a64/index.html": "35a9900f8259914f7d290cc76e6bf8ad389abec2ee3e4b26dd2cc9772f17bb46",
+    "uutiset/maatalouden-tuottajahinnat-heinakuussa-vuoden-takaista-43d7e9f8a735/index.html": "b7554fbc6cfff41ec90354fb31abbe41dd3aca1c378b88f299fdf2d53837f7a8",
+    "uutiset/maavoimille-hankitaan-trackx-tela-ajoneuvojen-esisarja-4e34402bf900/index.html": "c0d91e7a48c3b15a4f49830e31d3264e85bc406ea2ed78a0077c5d962eb8bcbc",
+    "uutiset/maksullisten-tutkintojen-vaikutuksia-tarkennettava-530d03529b18/index.html": "f9f56d77ab1787c079b6926ae21cdb457c31e6a1e354aada2df2be13cb8e7c51",
+    "uutiset/malmin-novaan-suunnitellaan-laajennusta-asukkaiden-6643e2b67fc8/index.html": "78864ca3e508ab10e54c7dc4cd5c6c2de96f8af1382f4aa4c68a319bb37ccc40",
+    "uutiset/matkaviestinverkkojen-uusia-toimilupia-valmistellaan-1fc73b45c172/index.html": "37564e93fd5c04f3e53db7d201d68916da3eeea1065f7619ad1f6479c81c85f8",
+    "uutiset/meriteollisuusstrategia-tahtaa-viennin-kasvuun-d6f58ecba065/index.html": "b931de611f96615576975e343a68434791a55aec681b8347e6637a66fc18d80b",
+    "uutiset/ministerio-valmistelee-karhun-kiintiometsastyksen-804377534929/index.html": "3ea6c4f5b5038e950493c1b191c557747eac8cd18d990f3058cb00c32b2b4642",
+    "uutiset/minna-canth-palkinnon-ehdotusaika-paattyy-29-9-2742b84a5738/index.html": "c9bddaef64cea13bc5c0c869b4d94ff207b73776350d5515c33adaeabf166d13",
+    "uutiset/multala-hakee-saksasta-yhteistyota-vetytalouteen-dacb24d664ef/index.html": "72b6325e5463ced66da40d2f33364ca4a831221910cee8a81f5a95f476d638aa",
+    "uutiset/nasa-aqua-satelliitti-kuvasi-doverinsalmen-76d26ccc835a/index.html": "7573e2932498893234f86320863280a3d3ea8afb9ffb7d51c4af3ee06e654580",
+    "uutiset/nasa-julkaisi-satelliittikuvan-australian-spencerinlahdesta-69f08f8012cf/index.html": "e0b8ab9cb831514f9a9904691c82e7a85d281e4a0c3cf25494e7e690319253f0",
+    "uutiset/nasa-julkaisi-terra-satelliitin-adirondack-kuvan-893d279b6ca6/index.html": "a70c7d8ad9c17fa493693fc1fa65500bd08dda3d158054a0f01be88ae0eb74ad",
+    "uutiset/nasa-satelliitti-maastopalot-levisivat-etoshan-suolapannun-3e3118902b27/index.html": "aa0ece21c87af5128f6f0700e8d506ca7ed5f6138268ff529f686a3997c48775",
+    "uutiset/neulamaessa-vedenlaatuhairiot-mahdollisia-keskiviikkona-cadc5e300307/index.html": "b57f9595b9c60fd2cd20d11d3bbb3c944ea829c4872cbe7d6240d56de9757c5a",
+    "uutiset/neulamaessa-voi-esiintya-vesihairioita-28-syyskuuta-6f6c31f5cf96/index.html": "f0609fb141425be79c6ab85f88e946d25501835183c154c95e35fd7478e2880e",
+    "uutiset/nolo-toi-rankkasateita-havaijille-nasan-58795708c3dd/index.html": "26346ed6e79a8bd32ad329dc4e3ac4944f7518c2e700b4c595c3c0a607122f73",
+    "uutiset/nuorten-nurkka-avautuu-pekurissa-12-lokakuuta-75f6dca5be2e/index.html": "dbb90d8bd6234074f7192e8dccb63d46bf5545f1bd85c356a7feb1aa24f3dd96",
+    "uutiset/oikeusministerio-julkaisi-oppaan-lasten-nuorten-f9615094ff17/index.html": "8612631e3cfef86a613cf5fd9ce13e6e2ac8549d2938051fe6267188f4c9f10e",
+    "uutiset/oikeusministerio-pyytaa-lausuntoja-lapsirauharikoksesta-7d6a15176a04/index.html": "6d6c47202c028383e177de14cf44e8c6d1477b38f1583c42e0df87fb3cbf711d",
+    "uutiset/oikeuspalveluviraston-toimipaikat-vahenevat-158-sta-38-aan-c3565ca130d6/index.html": "2766cb450bff75d70227eae378494a0193a612157f56c3391f11982082b56d56",
+    "uutiset/oregonin-maastopalot-jatkuivat-syyskuun-lopulla-c79a7f054313/index.html": "984ed6e5d5e3497a40479998c46b1f4ff651be6d0337839c787a32845cac7133",
+    "uutiset/orpo-sai-katsauksen-kansanedustajien-turvallisuudesta-41eea6aee980/index.html": "8ba12690de3201c23bf144941c388455dcd1f57f3cb65c845b251e10f23c2b5b",
+    "uutiset/osaamistilin-kokeilussa-harkitaan-tekoalykoulutuksen-96de6f5ec840/index.html": "0e7f6a1a1a1eab943d4415d16b5ebd12d3e1356b2d7828b4f274ba393f0374e9",
+    "uutiset/oulu-keraa-asukkailta-nakemyksia-sivistysohjelmaan-c8956407ecbb/index.html": "e8b40b0569383d4502a2207e9ec5b9612ce89ebc078b19cce22bbf7344bcd5fc",
+    "uutiset/oulu-kertoo-osallistuvansa-valmiusharjoitukseen-97ffa58ef1b1/index.html": "64f8a2238485f29a0fd44c0038b7bd80c21e7231e06142560bffbca67b0b83a0",
+    "uutiset/oulu-kysyy-asukkailta-sivistysohjelmasta-lokakuussa-a16a2aa7f71d/index.html": "815ed5b7951ca35e03a807419d066194ab126dd06a1f9ee073d4895f4500a40b",
+    "uutiset/oulu-sai-hyvat-arviot-katuvalaistuksesta-talvihoidosta-fc37e26d3a19/index.html": "22663e4cc5c510156c450bc168c581063e40c8c33dfbe1f970f7c9e5e0040bff",
+    "uutiset/oulu-uudistaa-kainuuntien-katuvalaistuksen-fc12a9cde34d/index.html": "b11967fdda99241f59752af36423836606d530c57dbab94036dc5def50c844f2",
+    "uutiset/oulu-valmistelee-ravander-korttelin-kaavamuutosta-f9a3d7c0d980/index.html": "cfb6c3b6ef8e795c103f3043e7a34b65dad12263ad08cef34a11f73a6f9f3fc8",
+    "uutiset/oulun-greco-n-ryhma-arvioi-kaupungin-hallintoa-0dec2b39d891/index.html": "43256249017b14052c77615fb8aabe2a31f0f66152529af69342ad4b39c04848",
+    "uutiset/oulun-kaupungin-vaihteen-numero-poistuu-kaytosta-8-10-c5e10b449ff6/index.html": "17b997fbad2ff9d2fc183219341718211d9f3ea914f1d8ab319f056f6d33643b",
+    "uutiset/oulun-kaupunginhallitus-hylkasi-oikaisuvaatimuksen-6425b16e5671/index.html": "4f87b4412d2013cf38edf4f2c1425b8303b12be1570869decca5645aee10cf43",
+    "uutiset/oulun-kaupunki-jaalinmajan-uimaranta-vaihtaa-yllapitajaa-e5a0f5bea8dc/index.html": "8b18faa37957136cd504f6976e338ff84cb12609bc9adf30a5e8d115ce177c9a",
+    "uutiset/oulun-kaupunki-kertoo-ymparistoterveyden-valvonnasta-c05f7df9e539/index.html": "4cb3f83e04d26c7bbf85e89eeab9c4077ad3fcca18bfb9142f35c38727b39f24",
+    "uutiset/oulun-kaupunki-lastenkulttuurifoorumi-kasittelee-mediaa-bc357262eb3f/index.html": "3d7d9c90aea8ae2615eb46faf55abf5fa6f500a12715717b05023ed058f422d6",
+    "uutiset/oulun-kaupunki-russt-teos-asennettiin-oulu10b-hen-7320b219279d/index.html": "bb32b77310878323f33efc83de20e8895f35f635e809b9d575f645fac505fc75",
+    "uutiset/oulun-kulttuuripaakaupunkivuosi-esilla-eu-vierailulla-288034a2f477/index.html": "9555cfe3cbc43099b183a7907d834007144991e27d353a051baa5b2bbdb2a6c0",
+    "uutiset/oulun-osallistuvan-budjetoinnin-aanestys-paattyy-sunnuntaina-b46385fe582c/index.html": "51a623b55494a386db7fbd7342f11fc04fded509d8870665036f7da39a50de42",
+    "uutiset/oulun-seudun-tyollistamisseteli-noin-kaksi-miljoonaa-euroa-ffb5e853ea4b/index.html": "e88a681e44dbce569c302f0a298b4db724dd6f108f3546700e16a01fb3a816d6",
+    "uutiset/oulun-talousarvioesitys-2027-ssa-23-miljoonan-alijaama-5fef23277802/index.html": "c9cbb52a3c42bc71e997c4914961812ff077c3eb62181a1b6012e44782ea6469",
+    "uutiset/oulussa-jarjestetaan-kaatumisten-ehkaisyn-tapahtumia-ab7243f61af1/index.html": "7c25034d9631bcf9a5e75080db6e364ba9d125022d90da90e01f6c1db759880a",
+    "uutiset/packalen-rantala-kilpinen-esiintyvat-yhdessa-kuopiossa-482c01da18bf/index.html": "79f7086179bc4314842730cd55ac7e58861306728158c576d2a24fb43ec738f2",
+    "uutiset/pakistanin-ylla-nakyi-harmaa-hiukkasusva-f6d6d00e00a6/index.html": "2cada588be0389ed884975813e6d22ff958acb82b094d564218074481913c9e7",
+    "uutiset/palkkasumma-kasvoi-elokuussa-3-4-prosenttia-vuodessa-8c742b4b56b8/index.html": "dd7bd6da30034e71452b6a77e8416a560a14fbfc19ea0b9b771f298dd97e7660",
+    "uutiset/paloristi-kahdeksalle-pelastustoimen-ansioituneelle-cd562eb1e32c/index.html": "e0973eaa34ee672633a9afd58f92140b98250706afc636fbd777bdfee4567c18",
+    "uutiset/pihlajasaaren-kehittaminen-kaynnistyy-vuonna-2027-64aa1785598d/index.html": "5ce94b76524246b38ac6957085f7aa27d61384f90d5783636fe2299f3b40de35",
+    "uutiset/pk-yritysbarometri-odotukset-kohenevat-investointi-7bc4c26f61fa/index.html": "2aa716d724c866dfa0f3127b198ab3d01115eeca3dd6bbc2cca3d96d55f713a2",
+    "uutiset/poikien-elinajanodote-nousi-ensimmaista-kertaa-80-vuoteen-54a3a84f0d82/index.html": "17ba0ee9bf1c5bd5502569ff6bb4b40ba83a6167165e2387f05cb65445481071",
+    "uutiset/puolustusministerio-jussi-toivanen-kenraalin-virkaan-sauli-2912317fbc92/index.html": "9e3204142f40bd8eabfb5e02375152bb520526ccd27b7f33faebb697dda0b29e",
+    "uutiset/puolustusvoimien-kansainvalinen-yhteistoiminta-lausunnolle-2e5b6f771351/index.html": "bf358b94383426aa51e0dc613e1124d2577c2a42980fb7e5e16c232b66c8bf15",
+    "uutiset/rachel-hurrikaani-kulki-baja-californian-etelapuolella-59edc2fdcd34/index.html": "44640c408c97afaf197e44ef0aa6c9c1d00d1dae0c9f096e888301c00027aafb",
+    "uutiset/rahastojen-verotukseen-ehdotetaan-lapivirtausmallia-822144960788/index.html": "eb151f78665d56e6892934e80c6b68eda98ed09958106f6376a24ae8b99ccb8c",
+    "uutiset/rakentamisluvat-kasvoivat-16-heinakuussa-2026-3f76041fe5ad/index.html": "b66970b18541ad5250c87eb94fdeba0768048537a275ad70954d9deb8956a8cc",
+    "uutiset/rautatientorin-metroaseman-perusparannus-valtuustoon-8dd79400fd98/index.html": "f9f37eac345d38f3958044b6da4e99dd2ff01cd3ebf35a6d0adba2ca5e8472c4",
+    "uutiset/rautatientorin-metroaseman-remontti-etenee-valtuustoon-58b84ada8648/index.html": "24eb36e05a8a5dd3c9b60cb2d0dff79df27f87b4c42ad198fe218c9c791e1d2c",
+    "uutiset/reservilaispalkkojen-korotus-alkaa-lokakuussa-fb7f0f0b3e59/index.html": "166cf604b47ba5cf9b8f3466b8d582cad6b1689c437e3a4f7c6ff77a260f8710",
+    "uutiset/rivieranraitin-louhinta-valmistuu-vantaan-763dffd702f2/index.html": "9f163c439e1661419cf403685ece04f664297ed042e29c1365192846a1a8b75f",
+    "uutiset/sahkon-hintasaantelyyn-kaivataan-tarkempaa-vaikutusarviota-3201487f4521/index.html": "182cb9bdf12ca68e82679c74b1c9e9882c74876dfcdbbfaa2e113f6259330666",
+    "uutiset/sahkopotkulautojen-kaytto-vaheni-helsingissa-81f29c83f795/index.html": "8ec3f9aced950bdcd694ff414ba54d166827ef587d48ed38e1e935a5786fb8ff",
+    "uutiset/sahkoverkkoon-liittamiselle-esitetaan-etusijamenettelya-b88d52aa579e/index.html": "4e09391e7ee8d01898032440a0253165abe3ff9aa44de2c62811e16c59550b1c",
+    "uutiset/savilahden-tutkimuksesta-halutaan-lisaa-liiketoimintaa-4410ea6cee46/index.html": "551b480cf62eb53511b446d23641ab0a6bdccf8362e8c98f50353124914f3774",
+    "uutiset/sdg-liputuspaiva-muistuttaa-yk-n-tavoitteista-ed4545bb087d/index.html": "83853825356654cbd5d6e65c4bfbed2307634c216c3af336f0087a3806d92237",
+    "uutiset/seure-omistus-etenee-helsingin-paatoksentekoon-0eef129b805c/index.html": "df93c9a6a9a2747aba346053b49b305ef6c390b9141a27ad8cd5f91e42a524ae",
+    "uutiset/sijaishuollosta-poissa-olevien-lasten-etsintaohje-uudistui-ccde11681bc6/index.html": "6070a09caf3191bf2f0e21379db4adb350a2e6c401420990bfeaa87412b9be1b",
+    "uutiset/sisaministerio-lahetti-ulkomaalaislain-muutokset-4c675026386a/index.html": "a79ddc6291d0eb6ddb8b9ce3464e0250a5400d7314e789a65b28bb55d52eb31a",
+    "uutiset/sisaministerio-pelastustoimen-palvelutarpeiden-arviointiin-2c46131fe163/index.html": "6897bdcfe9b03e0a288ccd1818fd7316d993dbd44e08fe95b46a06be79f44cc5",
+    "uutiset/sisaministerio-suomi-lahettaa-asiantuntijan-gronlantiin-c5e976469083/index.html": "9f4ea87922a8a1f4b8d63c07fb84aa2a2f1dde3c12ec9ecba4bf6f44619ce778",
+    "uutiset/siviili-ilmailun-onnettomuussuunnitelma-lausunnoille-009bd8338513/index.html": "1f319e74829c7f0ef0b2f7067c3aa9c30317c84b787e4a199e33f33706af7034",
+    "uutiset/siviilipalvelus-kytkettaisiin-kokonaisturvallisuuteen-60ae5103baea/index.html": "b482fee8905100ed95b295489583af0e6809fa36587c6fdf3b3cbe3dfb6a915c",
+    "uutiset/sprinkleritestit-voivat-heikentaa-veden-laatua-kuopiossa-602baae68d92/index.html": "4a7729fcfcd371bb440ac8e2813d044fcd626e48de25444b0f6ec4abd30c2666",
+    "uutiset/stm-avasi-huoltajille-kyselyn-lasten-somekaytosta-da0191af3831/index.html": "f3ffd2e1eb53a9ca2b6f43bfb14963786346825396cbcc949cf5170472fead57",
+    "uutiset/stm-laakehoidon-kustannusvastuun-selvittely-jatkuu-2218f9c8bbde/index.html": "466c690522bc43797239319a511b69fd24c0478ca372486abea8895470ff1bf1",
+    "uutiset/strand-kos-keskustelivat-eu-n-laajentumisesta-edc2082a22d2/index.html": "fe00e6c609e2dde5776353bc79059f73e2ead4bf4fa19d938ef2da50db60566b",
+    "uutiset/stubb-st-re-tekoaly-pidettava-ihmisten-hallinnassa-f912fe343766/index.html": "0273d5a05fa3c0e8386b41c0ba2d64d09c8b467c2d232efacafddfb7c0ec037a",
+    "uutiset/suomi-kalifornia-allekirjoittivat-yhteistyopoytakirjan-f3d38d6cc848/index.html": "ef818076ea31380bdd4f1556dbe851af21ae21719059a9b21a0068bd3ec74226",
+    "uutiset/suomi-mukana-maatalouden-eurooppalaisessa-digikonsortiossa-6b30890419a1/index.html": "45b87b0ef947bf332ce88e7ce92a3635f0f5aa524c6e7654613b8b03f0135a07",
+    "uutiset/suomi-tukee-eu-n-pankkisaantelyn-yksinkertaistamista-c0ed3784ff13/index.html": "dafe619d493fe892b32c986313cb98775f9d842717f3d372dcd3da951ec634e7",
+    "uutiset/suomi-ukraina-allekirjoittivat-droonidiilin-404c67dcc0c9/index.html": "cfb2952a520e249b7a4d7435633eaf4c48281edd6942ccef9c711a2bfb23d5c7",
+    "uutiset/suorat-sijoitukset-suomeen-kasvoivat-9-8-mrd-euroa-d3a1b3daea40/index.html": "50a2bffa33fc6142f27de6a2a14c3e9b472586e297a240bbb157b1f692b249dc",
+    "uutiset/suuntimopuistoon-suunnitellaan-nuorisotaloa-asukkaiden-a421e685a2cb/index.html": "107066a1779054bbcaa5f92dfd69827021f2d2b6fe63a9e09d0f354fe4aaa9e8",
+    "uutiset/suvilahti-diy-skeittiparkin-purkua-lykataan-uuden-puiston-f2a3b9da8395/index.html": "32f70ad78e636dc49b606ca5f1bbbd7b82cfedcbe30b6dbfa8b231c14fb07c3b",
+    "uutiset/syopastrategialle-tiekartta-vuosille-2026-2031-2f0dda6d3c53/index.html": "e92df2ceae48402a29b411775f03ca82317649e36e0715553606f96b6e047a4d",
+    "uutiset/taifuuni-dujuan-kaantyy-koilliseen-kohti-japania-12ba6b5b591e/index.html": "db6868b5bda16137f620c3136e988220bd393fce7fedc82fdc653a1c3805ea37",
+    "uutiset/tem-pyytaa-lausuntoja-yritystukien-kriteerien-muuttamisesta-df3aa3cca842/index.html": "a81b6c1462f961fc83ddb93c421ef4c454d296a770c4c11d0c96b9182bc1135a",
+    "uutiset/tiibetin-ylangolle-satoi-runsaasti-lunta-nasan-06fea975771b/index.html": "a0f450dc9056bbede46af51936438a8913e67fcd99d217f139293eb6b3f7370a",
+    "uutiset/tikkuraitin-kavelyreitit-siirtyvat-etelareunaan-21-9-83ff62c717c4/index.html": "b042864da4834342bd000e458f7d3c1618ef2e503f4cf9308c0e80453441ae15",
+    "uutiset/tilastokeskus-kotimaan-vapaa-ajanmatkat-kasvoivat-bc811a1e0b85/index.html": "ea47fe9dc00401045ad203845034911188bbfcef9175a1c16c3ea80ee90710aa",
+    "uutiset/tilastokeskus-kuluttajaluottamus-heikkeni-syyskuussa-0b8385ef2ec4/index.html": "abd5735b0c9d73a5204455b2d978e1a43335779199990d1d5a477eeec08f8ab0",
+    "uutiset/tilastokeskus-kuorma-autojen-tavaramaara-kasvoi-15-54f3c629fbec/index.html": "bdf43b154b93eaa7b0d1bbea90be2bd842b85bca74efbd9e0a7d23cf855f08fd",
+    "uutiset/tilastokeskus-rautateiden-rahtimaara-vaheni-6-prosenttia-5c7038698aab/index.html": "2c17a43e22aa3d226a69c70fc805953dd8c2c92401aed7a74af9398cb9b0a83c",
+    "uutiset/tilastokeskus-saastamisaste-4-bkt-kasvoi-0-3-62a3efa8b32a/index.html": "5e5ab92b6251dc0dc7df34257d7ab7f128a634c14ea221f9e60bfdd377471c98",
+    "uutiset/tilastokeskus-suomalaisten-paastot-laskivat-4-655a35755963/index.html": "9c1d69edc87e811db6186104f4caa21974494311b50676b2deb3bcdcfe743cb0",
+    "uutiset/tilastokeskus-tuotanto-kasvoi-elokuussa-2-3-prosenttia-9b023452fb72/index.html": "0f24138d92497f35262d2e645dcd44cbd46ff70619aa408ad7f65ad6b70c6ba8",
+    "uutiset/tilastokeskus-tuottajahinnat-nousivat-7-3-prosenttia-0d04d24d7fe2/index.html": "213e59f1f4e5c924b14a7309cbcbd3cb1455561c36317e73e4d85a7c7e5a3283",
+    "uutiset/tilastokeskus-tyollisia-34-000-enemman-kuin-vuosi-sitten-c9ed2d317f03/index.html": "87de252514d8b1e6adf06c362ea803dd37af70cf398620cf3354894c7b171413",
+    "uutiset/tilastokeskus-tyotunti-maksoi-tyonantajalle-38-7-euroa-f733c3e47c8c/index.html": "855b571e1c4bc5f940b45e2ad5353da591d212fa92f716c2fe24375fed98308b",
+    "uutiset/toolonlahden-tulvasuojelutyomaa-palkittiin-helsingissa-c8d9df28ef8c/index.html": "540ad1c1451022d3a2cf793941fd81b5073a308730715856fab7f00945066595",
+    "uutiset/toolonlahdenpuistoon-suunnitellaan-aalto-skeittipoolia-d0725b324ab4/index.html": "0aa41e856498593f6fbe1dde6cddb825c4839134330ef2b22953752022432d88",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukea-kiina-suhdetta-aac41588a8b4/index.html": "45638213f95f91b1989586bf8fc4d96a472643f445a79998a7ea6120280e02dc",
+    "uutiset/tp-utva-kasitteli-ukrainan-tukemista-persianlahden-abd979348665/index.html": "fea13ced4eba6746f1055fb3496f4df2ec66360e7a555e07d1569062177e84dc",
+    "uutiset/tsahkna-vierailee-helsingissa-kertoo-ulkoministerio-c1124443e572/index.html": "98eaf2ac5cdf2da2ee949da0cbd1b6db983a60193e4f1bc0448f7c970c66b4fb",
+    "uutiset/tukkutorin-suunnitteluperiaatteet-areenasta-luovutaan-66b21dd4363f/index.html": "b782344e2c780b0d50c7d191e8750911afa47d6c663f38a45dfa4e2b07417386",
+    "uutiset/tyoryhma-ehdottaa-vapaan-sivistystyon-rahoituksen-b2545a689479/index.html": "5cb00bb2f6c9fa9df908b0953e004d9e758e425e53871510c25f0d13170da46f",
+    "uutiset/ulkoministerio-roy-eriksson-muncheniin-perustettavan-20e36c0252e9/index.html": "da6ad92b6fd8c291595e0a39f3ea2189232c4c0935af990b33e5189a67634247",
+    "uutiset/ulkoministerio-tavio-vierailee-tallinnassa-kauppayhteistyon-94c6d93ffe07/index.html": "0f7adf6efe0d412739f6d0c74dda50989b7113bdf152d67a270fe9ce676d73e6",
+    "uutiset/um-lehtinen-yk-n-hataapurahaston-ryhmaan-fbe5ec9a52b1/index.html": "18b6aa6d8c6c00f78b23b3ef64638b85e5932d981195a4ec7ebfa9eede3d9f81",
+    "uutiset/uudenmaan-vieraskielisten-maara-voi-tuplaantua-2045-mennessa-260f179f793f/index.html": "610739f434cfe8037b833773657c7eeadc37d95a971785dea021feeb72c8197d",
+    "uutiset/vaaralan-bussipysakit-siirtyvat-6-lokakuuta-5fca6d55d831/index.html": "14288ff9b2252fa0be103bb637896b68ddb1e99ed0947210a0ac6ba8f99ec442",
+    "uutiset/vaaralan-varikon-louhinnat-valmistuvat-murskaus-jatkuu-9b9c4b59f7f1/index.html": "59c28230fb03390fb39fdf5f1a3f6483f736ee4859aa462939b563b016b0d08e",
+    "uutiset/vaihtotase-1-3-miljardia-euroa-ylijaamainen-f047738905a4/index.html": "5dae78450c72599c2cb547c4c0bbe144b2a47c4d0032d37586b38240ab523b87",
+    "uutiset/valinnanvapauskokeiluun-fysioterapia-kuusi-laakarikayntia-7f1c353a070a/index.html": "8f4b4497a1407f755dfcd07c1531c41b37409b0524e60bb4e47fcc3a90295b38",
+    "uutiset/valtioneuvosto-eu-neuvosto-linjasi-kalatalousrahoitusta-092c43fb123e/index.html": "c751a2553925c9fe0491cdfcd54b187bb7a2ff1020905ffd282ca8d36bdc3196",
+    "uutiset/valtionhallinnolle-uusi-luontotyon-johtamisen-malli-802f22d74986/index.html": "e5590786c8248925dad1f1ea16378936d5dac96197ca00163a1e055b185b6d11",
+    "uutiset/valtionosuusprosentti-laskee-25-05-prosenttiin-vuonna-2027-37ed852a27c6/index.html": "e1a0f57e1f06c197e4c6cb2b8a5341c21ee5017a4a42100b74a5cdf1c11c0575",
+    "uutiset/valtiovarainministerio-kasvu-nopeutuu-alijaama-syvenee-34fd8ffc3b62/index.html": "edc9e3ac115c01393a01a13f55ef5a4bd505c5f1274e48caef10b10b4f9ed264",
+    "uutiset/valtonen-arktinen-yhteistyo-vahvistaa-turvallisuutta-95ad2d8ee611/index.html": "1cd8fcc20bcf9d3df8717e4f4c30250569e1d0fe8afa5cd44671e2291a1fe0c0",
+    "uutiset/valvesalille-vaistotiloja-oulun-vanhasta-vankilasta-55b598f4b18d/index.html": "d081332ebef532a810f41d80b59cdf64d69e5831402aacb096dd97315c94ccb7",
+    "uutiset/vantaa-haastaa-kunnat-luontoterveysvuoteen-2027-31c76d776a4f/index.html": "240658a2c8eac6732b07a18111bfdfcaedde7df74305326917a5b8508d2c6048",
+    "uutiset/vantaa-jarjestaa-vaikuttamistapahtuman-30-syyskuuta-e524270d4616/index.html": "283ba243bb8d8ffde8b719ba9cbd957b1933ba4b4221329e0b393488ae77a127",
+    "uutiset/vantaa-keraa-tyonhakijoilta-palautetta-palveluista-5a635efaca1d/index.html": "af2efbdcc7c77942f5c916be7ea62a70ce0db2b2f0042dfae7c7d3b53e0010fd",
+    "uutiset/vantaa-kertoi-liputtaneensa-kestavan-kehityksen-puolesta-c190474290f6/index.html": "16c80be7e60f19bb148209d0eb2c05a243065aeb227e957d4a8cfeab5d9c1c30",
+    "uutiset/vantaa-kertoo-aamu-iltapaivatoiminnan-kilpailutuksesta-32dddf9b3ee9/index.html": "e7c6c80ea6c5179763d8d6817bf0876c4b91b1b03c683e4b694f8f5be49a1032",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-c88460bedac1/index.html": "1931662ba4197ea8e43fd92f9410205bb0637eb9c15e9b740e555e8f9ff81f06",
+    "uutiset/vantaa-kyytitien-pontitustyo-alkaa-1-lokakuuta-ef9f7920c011/index.html": "37069d778aa9d1063328b50df4bee08dec4736b7c6f488f78a278566953a7b59",
+    "uutiset/vantaa-lahettaa-kiinteistonomistajille-tiedotteet-uudesta-ed3b01a4297a/index.html": "2398ea928195a31fd54b58afdd585ecd87f756382e411c75f7ce46b03c016762",
+    "uutiset/vantaa-mittaa-toimitilojensa-radonia-talvella-2026-2027-e34055926556/index.html": "c12f3316259d3b43f2e33f0303a0d7d14d673e09c8292a89aef2189b250c596e",
+    "uutiset/vantaa-osuustien-ratikkatyomaa-laajenee-28b2b9770662/index.html": "13713f989daf40a21add662e19ec7a1e11420b788dad1bbd4365575ae8533221",
+    "uutiset/vantaa-porvoonvaylan-kaistoja-levennetaan-d838076e2c08/index.html": "001ad0aa13b8ce27d696f964b02eff131da0ce03d80be3d8ad9bc2336de42bf4",
+    "uutiset/vantaa-valmistelee-yhteista-suunnitelmaa-palveluille-6851893ce6d2/index.html": "c810781391d6f9b7a4dd22756c4bb034437366ed90fb5621c65ee260a7e8b9f5",
+    "uutiset/vantaan-hiekkaharjun-golfliput-maksavat-viisi-euroa-8d0312b9b940/index.html": "868767159fa2957e50cf6423d67e4765ade2710eac19c5891ca611470ac7e643",
+    "uutiset/vantaan-historian-museo-hakee-avajaisiin-vapaaehtoisia-d96705192438/index.html": "233b24a52c03d937090f838ab76ce61eb6f1f0e6cd3b63ebde13ed201a1ad953",
+    "uutiset/vantaan-keihastien-jarjestelyt-muuttuvat-28cb5bdd8d54/index.html": "4433d992c8bb49e9a54619a7725607b265b9285cfe66d6e0edb5675640f77405",
+    "uutiset/vantaan-leppakorven-liikuntahalli-valmistuu-alkuvuonna-2027-b1ea3401e43a/index.html": "4d2e60f3b4a8a994b62d85e5dd972b2235d15a99d7b5a55adc7abfcf122b614f",
+    "uutiset/vantaan-monikielinen-neuvonta-auttaa-myos-pitkaan-asuneita-8244199fd98e/index.html": "d3ae8db21b90d4d8fcc71404139128ec7cf632aa56c085c9339a0f1ce2ebab37",
+    "uutiset/vantaan-musiikkiopiston-isanpaivakonserttiin-vapaa-paasy-004a6e9a6859/index.html": "f1a92c10df042aca9fac3a888b9e4eccfedf9b0a58fde6bb77f3f40b329b3974",
+    "uutiset/vantaan-osa-kaappisangyista-poistetaan-kaytosta-17fb53caf5e1/index.html": "eff7e873d4b98a9cd69129b7e0ae9e4e0a490209e404e523e12b6ef678c1070f",
+    "uutiset/vantaan-ratikan-tunneli-etenee-tikkurilan-aseman-alle-1ca8188892bb/index.html": "8641e5903e477db91f9603b79601b4513196b43aed271723014e9d3cefdb635b",
+    "uutiset/vantaan-valtuusto-hyvaksyi-ratikan-vaunuhankinnan-takauksen-f3cdd3704bdf/index.html": "130851775e9034bddd24267a62f70c080e1763e8e453a4c069d7e96702dc2f42",
+    "uutiset/vantaan-yty-akatemian-ideat-etenevat-tyoryhmaan-ba96b94ee71f/index.html": "3899815ab5fd148b415f5f74e4b4bd126ca07a3085d1d7d171ef4a3fb4c3cce6",
+    "uutiset/viikatepuiston-suunnitteluun-haetaan-asukkaiden-nakemyksia-d8d916de41e0/index.html": "68bcad71eb26cb957e56e13101da59743dfc0d5f5f9715fda819f6b20ddb4c85",
+    "uutiset/vireille-pantujen-konkurssien-maara-kasvoi-elokuussa-7b0f24284b3c/index.html": "fcb79ed9e50fb55cd66fec655e5f6f7e509cf652a20e83a2758edad140f88ec8",
+    "uutiset/yksityistielossien-avustusosuus-olisi-80-prosenttia-6bfa940e77d2/index.html": "0994771e039da496edbe0b195d63ff47e5d1ab11551bed59b215d9b270b8c9a4",
+    "uutiset/ymparistoministerio-esittaa-157666854560/index.html": "8bbf9026c0ccf2921ef6d3715a8a3d92eb7bcdb9af2d84d6cae83b32684ffcb1",
+    "uutiset/yosemiten-dome-fire-kasvanut-1-177-eekkeriin-pysaytysaste-2f32562eed60/index.html": "e6e8153a9fa29ed406c743e9ded4ac16c8c46710df3070d2373db34bbd69209b",
+    "uutiset/yrityksia-lopetti-enemman-kuin-aloitti-huhti-kesakuussa-2026-a4a923e9509d/index.html": "e7907a98d3de5afab8aece3e303845e3abbe5f7800cd43d01aefabf31607d3c9"
   },
   "schema_version": 2,
   "packet": {
     "fixture": false,
     "image": {
-      "alt": "AI-generoitu kuva: Vaalea puinen pöytä, jonka vastakkaisilla puolilla on kaksi tummanharmaata tuolia ja pöydällä musta lankapuhelin.",
-      "attempts": 1,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Valkoisella työpöydällä on pino papereita, yksittäinen tyhjä arkki, paperiliittimiä, musta kynä, pieni viherkasvi ja laskin.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Kotimaa",
+        "category": "Talous",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva Myyrmäkitalon sisäänkäynnistä osoitteessa Paalutori 3 Vantaalla. Sisäänkäynti ja sitä ympäröivä julkisivu näkyvät samassa kuvassa.",
+            "depictable_scene": "Todellinen valokuva Fortumin toimitilarakennuksen julkisivusta, jossa näkyy yhtiön tunnus. Rakennus kuvataan ulkopuolelta ilman oletusta siitä, että riitaa olisi käsitelty juuri siellä.",
             "must_avoid": [
-              "Wrong building or address",
-              "Fabricated service signage"
+              "Invented Fortum building or logo",
+              "Implying the building is the disputed customer's premises"
             ],
             "must_show": [
-              "Actual Myyrmäkitalo entrance",
-              "Surrounding building facade"
+              "Actual Fortum office building",
+              "Company identification on facade"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "Myyrmäkitalo Paalutori 3",
-              "Myyrmäkitalo sisäänkäynti",
-              "Myyrmäkitalo building entrance"
+              "Fortum toimitilarakennus",
+              "Fortum pääkonttori julkisivu",
+              "Fortum office building exterior"
             ],
-            "subject": "Monikielisen neuvonnan asiointipaikka Myyrmäkitalossa"
+            "subject": "Fortumin toimitilarakennus"
           },
           {
-            "depictable_scene": "Nimeämättömän neuvontatilan pöytä, jonka vastakkaisilla puolilla on työntekijän ja asiakkaan tyhjät tuolit. Pöydällä on toimistopuhelin. Rajauksessa ei näy ihmisiä eikä tunnistettavan palvelupisteen opasteita.",
+            "depictable_scene": "Tyhjän toimistopöydän lähikuva: paperinen asiakirjanippu ja sen vieressä laskin. Paperit on kuvattu niin, ettei niissä ole luettavaa tekstiä, allekirjoituksia tai yritystunnuksia; laskimen näyttö on tyhjä.",
             "must_avoid": [
               "People or body parts",
-              "Invented appearance of Vantaa service premises",
-              "Readable text or logos"
+              "Readable contract terms, monetary amounts or signatures",
+              "Company logos",
+              "Courtroom props suggesting a binding judgment"
             ],
             "must_show": [
-              "Desk with two facing chairs",
-              "Office telephone on desk"
+              "Paper documents on an office desk",
+              "Calculator beside the documents"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "tyhjä neuvontapiste pöytä",
-              "asiointipiste tuolit puhelin",
-              "empty consultation desk",
-              "office telephone consultation desk"
+              "sopimuspaperit laskin",
+              "yrityssopimus asiakirjat pöydällä",
+              "contract documents calculator",
+              "business paperwork desk"
             ],
-            "subject": "Maksutonta neuvontaa havainnollistava tyhjä asiointipiste"
+            "subject": "Yritysasiakkaan sopimukset ja korvauslaskenta"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "A light wooden desk with grey metal legs is positioned in the center of a room. On one side of the desk is a dark grey office chair with wheels, and on the opposite side is a dark grey chair with four legs. A black office telephone with a coiled cord rests on the desk. In the background, a window with white frames shows green foliage outside. A white curtain hangs next to the window. On the windowsill, a green potted plant sits in a white pot. On the wall, a grey rectangular sound-absorbing panel is visible. To the right, a light wooden cabinet is partially visible, with another green potted plant on top.",
-      "generated": true,
-      "license": "AI-generated image",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/bff4a6c093a0cb1dd597a8bfb5c04e019f52c56378a2a345204b1c18e62ca5cb.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by Mediamodifier on Unsplash",
+      "depicted": "An overhead shot shows a white desk with various office supplies. In the top left, a stack of white papers is visible. To the right of the papers, five silver paper clips are scattered. A single sheet of white paper lies in the center of the desk. A black pen with a gold tip is positioned diagonally, pointing towards the top right. In the top right corner, a small white pot contains a green artificial succulent plant with brown gravel. In the bottom right, a black calculator with a gray screen a",
+      "generated": false,
+      "hotlink": true,
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
       "pixel_review": {
-        "alt_fi": "Vaalea puinen pöytä, jonka vastakkaisilla puolilla on kaksi tummanharmaata tuolia ja pöydällä musta lankapuhelin.",
+        "alt_fi": "Valkoisella työpöydällä on pino papereita, yksittäinen tyhjä arkki, paperiliittimiä, musta kynä, pieni viherkasvi ja laskin.",
         "approved": true,
-        "article_text_sha256": "cfb1311bfd0d03acd843c8d456fcdbd212210a38296adfcc033fbd3f44633a22",
-        "concept_sha256": "c5916c3cf10029e9d9540b878ad37be2830759a72bd6fafe81a4ba8e201c7687",
-        "description": "A light wooden desk with grey metal legs is positioned in the center of a room. On one side of the desk is a dark grey office chair with wheels, and on the opposite side is a dark grey chair with four legs. A black office telephone with a coiled cord rests on the desk. In the background, a window with white frames shows green foliage outside. A white curtain hangs next to the window. On the windowsill, a green potted plant sits in a white pot. On the wall, a grey rectangular sound-absorbing panel is visible. To the right, a light wooden cabinet is partially visible, with another green potted plant on top.",
+        "article_text_sha256": "b1c4d134df4b0068ab7c98e9fc6ebca3db9fd349b40e6861c9add9ff808c037b",
+        "concept_sha256": "853fc903ca541679171b9e6ddbf211d9768a36aec032075c2d1b7415d3da746d",
+        "description": "A top-down view of a white desk with several office items. On the left, a stack of white papers and scattered paper clips. In the center, a single blank white sheet of paper. To the right of the paper, a black pen and a small potted succulent plant. In the bottom right corner, a black calculator.",
         "fit_score": 9,
-        "image_sha256": "bff4a6c093a0cb1dd597a8bfb5c04e019f52c56378a2a345204b1c18e62ca5cb",
+        "image_sha256": "c3867d1d65d342ec4843e280c9d05b39bc22a752f69728e218170807a4c02bbb",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image accurately depicts a desk with two facing chairs and an office telephone on the desk, matching all 'must_show' elements of the selected concept. It avoids people, invented text/logos, and specific Vantaa service premises, aligning with 'must_avoid'. The scene effectively illustrates a generic consultation point, which is highly relevant to the article about Vantaa's multilingual advisory services.",
-        "reviewed_at": "2026-10-05T10:50:33.203956+00:00",
-        "text_audit": {
-          "examples": [],
-          "readable_text_present": false
-        }
+        "reason": "The image clearly shows paper documents on an office desk and a calculator, which directly matches the 'must_show' elements of the selected concept. The blank papers and calculator with a blank screen avoid any 'must_avoid' elements like readable text or monetary amounts. The overall scene of office items relates well to the article's theme of business contracts and compensation calculation.",
+        "reviewed_at": "2026-10-05T11:30:54.335244+00:00"
       },
       "pixels": {
         "height": 1024,
         "mode": "RGB",
-        "variance": 8409.9,
+        "variance": 5368.7,
         "width": 1536
       },
-      "prompt_sha256": "b70798300aef023b8b2a5757ae77320b7bdd3e024c3cc7ff30a6dd3b8a0b3d7e",
-      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Nimeämättömän neuvontatilan pöytä, jonka vastakkaisilla puolilla on työntekijän ja asiakkaan tyhjät tuolit. Pöydällä on toimistopuhelin. Rajauksessa ei näy ihmisiä eikä tunnistettavan palvelupisteen opasteita.",
+        "evidence": "A top-down view of a white desk with several office items. On the left, a stack of white papers and scattered paper clips. In the center, a single blank white sheet of paper. To the right of the paper, a black pen and a small potted succulent plant. In the bottom right corner, a black calculator.",
         "matched": [
-          "Desk with two facing chairs",
-          "Office telephone on desk"
+          "calculator",
+          "desk",
+          "office",
+          "paper"
         ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "method": "vision",
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "cfb1311bfd0d03acd843c8d456fcdbd212210a38296adfcc033fbd3f44633a22",
-        "decision_sha256": "4aff6fc274fc4ca3bf2c3cdda08137d4dce4aa55adef9689ee5d25a75b5e027e",
+        "article_text_sha256": "b1c4d134df4b0068ab7c98e9fc6ebca3db9fd349b40e6861c9add9ff808c037b",
+        "decision_sha256": "fe9808b89315703b736689436fb479b868a80688eb2464df5516b133ae4c9c14",
         "minimum_real_fit": 8,
         "searches": [
           {
             "candidates": [],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Myyrmäkitalo Paalutori 3",
-              "Myyrmäkitalo sisäänkäynti",
-              "Myyrmäkitalo building entrance"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "50dcae58a3a6a2107db10bb3e7b24bdb40d2a11f239ce668554410821762e944",
-                "license": "Pexels License",
-                "reason": "The article discusses the multilingual advisory services provided by the city of Vantaa, specifically mentioning Myyrmäkitalo at Paalutori 3 as a service location. The selected concept explicitly requires an actual photograph of the Myyrmäkitalo entrance and its surrounding facade. The provided image does not depict Myyrmäkitalo; it shows a small, ",
-                "source_url": "https://www.pexels.com/photo/scenic-wooden-building-surrounded-by-lush-greenery-38143127/"
-              }
-            ],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Myyrmäkitalo Paalutori 3",
-              "Myyrmäkitalo sisäänkäynti",
-              "Myyrmäkitalo building entrance"
+              "Fortum toimitilarakennus",
+              "Fortum pääkonttori julkisivu",
+              "Fortum office building exterior"
             ]
           },
           {
@@ -1034,9 +1239,20 @@
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "Myyrmäkitalo Paalutori 3",
-              "Myyrmäkitalo sisäänkäynti",
-              "Myyrmäkitalo building entrance"
+              "Fortum toimitilarakennus",
+              "Fortum pääkonttori julkisivu",
+              "Fortum office building exterior"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Fortum toimitilarakennus",
+              "Fortum pääkonttori julkisivu",
+              "Fortum office building exterior"
             ]
           },
           {
@@ -1045,322 +1261,254 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "Myyrmäkitalo Paalutori 3",
-              "Myyrmäkitalo sisäänkäynti",
-              "Myyrmäkitalo building entrance"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "tyhjä neuvontapiste pöytä",
-              "asiointipiste tuolit puhelin",
-              "empty consultation desk"
+              "Fortum toimitilarakennus",
+              "Fortum pääkonttori julkisivu",
+              "Fortum office building exterior"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "8948507175516998d1e7747e32aa2209b89119ad1af9cad048750cc9ef8a8da5",
+                "fit_score": 3,
+                "image_sha256": "a2ede16fd0dbfc7c9708871a33c3aa3e55970216b5f58617d7d86e416a420fa3",
                 "license": "Pexels License",
-                "reason": "The image shows a meeting room or a waiting area with multiple tables and chairs, but it does not specifically depict a consultation desk with two facing chairs and an office telephone, which are explicit requirements of the concept. The visible scene is too general and does not match the specific setup described in the concept. One or more require",
-                "source_url": "https://www.pexels.com/photo/an-interior-of-an-office-5511092/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "a6731465c503071afe9d5c69aefb35e407f99ffda5d3645281af6edca30c93d2",
-                "license": "Pexels License",
-                "reason": "The image shows a long table with multiple chairs, not a desk with two facing chairs as specified in the concept. There is no office telephone visible on the table. The overall scene appears to be a breakroom or open office area rather than a dedicated consultation point. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/office-canteen-arranged-in-open-space-5511084/"
+                "reason": "The image shows a roll of paper, which does not match the 'Paper documents on an office desk' or 'Calculator beside the documents' elements required by the concept. The paper is rolled, not a stack of documents, and there is no calculator visible. Therefore, it fails to meet the 'must_show' criteria. One or more required concept elements are not vi",
+                "source_url": "https://www.pexels.com/photo/close-up-of-a-roll-of-paper-6939784/"
               },
               {
                 "approved": false,
                 "fit_score": 3,
-                "image_sha256": "0d74b421fcd4fe5e4b7edfcef44a2f96a36251211d7bf06b0fca03035bc084dd",
+                "image_sha256": "96b4a9ec6089a8b0ad978db8739b886043fb0b1a4348f2d59b54fafab70fdcc8",
                 "license": "Pexels License",
-                "reason": "The article discusses multilingual advice services in Vantaa, and the concept describes an empty consultation desk with two chairs and an office telephone. The image shows many chairs in an auditorium setting, which does not match the specific concept of a consultation desk or the general theme of a one-on-one advice service. One or more required c",
-                "source_url": "https://www.pexels.com/photo/seats-in-auditorium-14640769/"
+                "reason": "The image shows crumpled brown paper, which does not depict 'Paper documents on an office desk' or a 'Calculator beside the documents' as required by the must_show elements. The image is too abstract and does not concretely illustrate the article's subject of business contracts and compensation calculation. One or more required concept elements are",
+                "source_url": "https://www.pexels.com/photo/close-up-shot-of-crumpled-brown-paper-13005148/"
               },
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "7213125db34b0bfdb40ce115c443f1ed6290684d25a383417b89be19f8909db8",
+                "fit_score": 0,
+                "image_sha256": "4830c263c662b3098e996829d31f04ca6f766a2b78ad917c43d038b865e3f8b1",
                 "license": "Pexels License",
-                "reason": "The image shows rows of chairs, not a desk with two facing chairs, and there is no office telephone visible. Therefore, it does not depict the selected concept. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/a-group-of-wooden-chairs-in-a-couple-of-rows-9956582/"
+                "reason": "The image shows a person's hands wrapping an object, with a payment terminal and other office supplies visible. This does not match the concept of 'Paper documents on an office desk' and 'Calculator beside the documents'. There are no visible paper documents or a calculator. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/a-person-wrapping-a-gift-6023606/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "8204d287bb42e55404d3d952cc2837cc1d49b26be4e22207183364f6dee3c7db",
+                "license": "Pexels License",
+                "reason": "The image depicts wrapped gifts and envelopes, which are unrelated to the article's subject of business contracts and compensation calculation. The selected concept requires paper documents and a calculator on an office desk, neither of which are present. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/beautifully-wrapped-christmas-gifts-with-musical-theme-35055027/"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "tyhjä neuvontapiste pöytä",
-              "asiointipiste tuolit puhelin",
-              "empty consultation desk"
+              "sopimuspaperit laskin",
+              "yrityssopimus asiakirjat pöydällä",
+              "contract documents calculator"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 3,
-                "image_sha256": "8b138d990d1edb887dce37a593b0082d4d196bd03748c98136008858202f0ec1",
-                "license": "Unsplash License",
-                "reason": "The image depicts a domestic kitchen or dining area, not an office or consultation space. It contains a table and chairs, but they are not arranged as a consultation desk with two facing chairs for an employee and a client. There is no office telephone visible on the table. The overall setting does not match the concept of an empty consultation poi",
-                "source_url": "https://unsplash.com/photos/a-kitchen-with-a-table-and-chairs-and-a-window-v4PlAT0NsyM?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "aa3aa3ef2ff2b674865c6050978fe2cdc16297b9cbdee54a57c41057427f2a90",
-                "license": "Unsplash License",
-                "reason": "The image shows a table with two chairs, but it is clearly a dining or living room setting, not an office or consultation desk. There is no office telephone visible, which is a 'must_show' element. The overall scene does not fit the concept of an empty consultation point. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/a-kitchen-and-dining-room-with-a-table-and-chairs-x0AYn1qrY2E?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
                 "fit_score": 0,
-                "image_sha256": "4ee5448b8595bd6d22d36f699765f2b9a60815bf8010e97b6f4058db44560de0",
+                "image_sha256": "6197f552fdf8988293afd3435c77131aca553d3945a2e7c198cb85c83d5f5eeb",
                 "license": "Unsplash License",
-                "reason": "The image shows a kitchen or dining area, not an unnamed consultation room. It lacks an office telephone on the desk, which is a must-show element. The overall setting does not match the concept of a consultation point. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/a-kitchen-with-a-table-chairs-and-a-refrigerator-iFhRYZ4P-KU?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The image does not show paper documents on an office desk or a calculator, which are both required elements for the selected concept. The visible card has a company logo and text, which are explicitly to be avoided. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/white-printer-paper-JbF2xrThIT0?utm_source=uutistenlukija&utm_medium=referral"
               },
               {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "d05934b1f77a72a348acfa2f274982e25ed37676c829eac8d6629e3d5531c0fa",
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "c3867d1d65d342ec4843e280c9d05b39bc22a752f69728e218170807a4c02bbb",
                 "license": "Unsplash License",
-                "reason": "The image shows a table and two chairs, but they are clearly outdoor patio furniture, not an office consultation desk. There is no office telephone visible. The setting does not resemble a consultation space. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/a-table-with-chairs-around-it-C2YgiLOaqMA?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The image clearly shows paper documents on an office desk and a calculator, which directly matches the 'must_show' elements of the selected concept. The blank papers and calculator with a blank screen avoid any 'must_avoid' elements like readable text or monetary amounts. The overall scene of office items relates well to the article's theme of busi",
+                "source_url": "https://unsplash.com/photos/black-calculator-beside-black-pen-on-white-printer-paper-I3HPUolh5hA?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
             "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "accepted",
             "provider": "unsplash",
             "queries": [
-              "tyhjä neuvontapiste pöytä",
-              "asiointipiste tuolit puhelin",
-              "empty consultation desk"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "tyhjä neuvontapiste pöytä",
-              "asiointipiste tuolit puhelin",
-              "empty consultation desk"
+              "sopimuspaperit laskin",
+              "yrityssopimus asiakirjat pöydällä",
+              "contract documents calculator"
             ]
           }
         ],
         "selected": {
           "concept_rank": 2,
           "fit_score": 9,
-          "image_sha256": "bff4a6c093a0cb1dd597a8bfb5c04e019f52c56378a2a345204b1c18e62ca5cb",
-          "kind": "generated"
+          "image_sha256": "c3867d1d65d342ec4843e280c9d05b39bc22a752f69728e218170807a4c02bbb",
+          "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "bff4a6c093a0cb1dd597a8bfb5c04e019f52c56378a2a345204b1c18e62ca5cb",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "Maksutonta neuvontaa havainnollistava tyhjä asiointipiste",
-      "url": "https://uutistenlukija.fi/media/bff4a6c093a0cb1dd597a8bfb5c04e019f52c56378a2a345204b1c18e62ca5cb.jpg"
+      "source_url": "https://unsplash.com/photos/black-calculator-beside-black-pen-on-white-printer-paper-I3HPUolh5hA?utm_source=uutistenlukija&utm_medium=referral",
+      "stock_provenance": {
+        "download_tracking": {
+          "successful": true,
+          "url": "https://api.unsplash.com/photos/I3HPUolh5hA/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw3fHxjb250cmFjdCUyMGRvY3VtZW50cyUyMGNhbGN1bGF0b3J8ZW58MHwwfHx8MTc5MTE5OTg0OXww"
+        },
+        "image_url": "https://images.unsplash.com/photo-1625225233840-695456021cde?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw3fHxjb250cmFjdCUyMGRvY3VtZW50cyUyMGNhbGN1bGF0b3J8ZW58MHwwfHx8MTc5MTE5OTg0OXww&w=1536&q=80&fm=jpg&fit=crop",
+        "photo_id": "I3HPUolh5hA",
+        "photo_url": "https://unsplash.com/photos/black-calculator-beside-black-pen-on-white-printer-paper-I3HPUolh5hA?utm_source=uutistenlukija&utm_medium=referral",
+        "photographer": "Mediamodifier",
+        "photographer_url": "https://unsplash.com/@mediamodifier?utm_source=uutistenlukija&utm_medium=referral",
+        "provider": "unsplash",
+        "query": "contract documents calculator",
+        "retrieved_at": "2026-10-05T11:30:52Z"
+      },
+      "stock_provenance_sha256": "dfde27e6af01bde1d7eb7286ae57c386b35853666ca0e81ba38ac9db607c3384",
+      "url": "https://images.unsplash.com/photo-1625225233840-695456021cde?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw3fHxjb250cmFjdCUyMGRvY3VtZW50cyUyMGNhbGN1bGF0b3J8ZW58MHwwfHx8MTc5MTE5OTg0OXww&w=1536&q=80&fm=jpg&fit=crop"
     },
     "publication_basis": {
       "policy": "official-text-v1",
       "policy_sha256": "901a881c0ed60542e137b124a671a87d2fb07b251a12312d96053f5d4a134e1e",
-      "provider": "vantaa",
+      "provider": "valtioneuvosto",
       "related_sources": 0,
-      "source_fields_sha256": "28bee39ef956cc9df5d1cb7bdcddf255e34d44bcec77e934a2b33bf446929c33",
-      "source_sha256": "56b40853b7eeb6e8f2c538a8244e37cc55cc6b157c7ca0d342ed22c176d3cded"
+      "source_fields_sha256": "0b0f571d1b9b95e388f97cc46575de86c5c3cc2834b9097d2c3f8c9a996f8f71",
+      "source_sha256": "76dbee5bebc06e2c4eafaff5ed57d4fefa3ed75e3f5c135e54ae6641177aafad"
     },
     "sources": [
       {
         "id": "A",
-        "published_at": "2026-10-05T00:00:00+03:00",
-        "publisher": "Vantaan kaupunki",
+        "published_at": "2026-10-05T10:01+0300",
+        "publisher": "Valtioneuvoston kanslia",
         "reuse": {
           "changes": "Itsenäinen suomenkielinen uutisteksti; lähteen tietoja on tiivistetty.",
-          "license": "Helsinki Region Infoshare -käyttöehdot (Espoo, Helsinki, Vantaa, Kauniainen): laaja käyttöoikeus Creative Commons Nimeä 4.0 mukaisesti; datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin",
-          "license_url": "https://creativecommons.org/licenses/by/4.0/",
-          "url": "https://hri.fi/fi/kayttoehdot/"
+          "license": "Valtioneuvoston sivuston käyttöehdot: tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan; aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen",
+          "license_url": "https://valtioneuvosto.fi/tietoa-sivustosta",
+          "notice": "Lähde: Valtioneuvosto. Tekstin uudelleenkäyttö sallittu lähde mainiten; kaupallinen käyttö vaatii erillisen sopimuksen.",
+          "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
         },
-        "text": "Monikielinen neuvonta tukee vieraskielisten vantaalaisten sujuvaa arkea ja kotoutumista. Vaikka palvelu on monelle tärkeä tuki maahanmuuton alkuvaiheessa, monikielinen neuvonta palvelee myös pidempään Suomessa asuneita vantaalaisia.\nVantaan monikielinen neuvonta on lakisääteinen palvelu. Kotoutumislaki velvoittaa kuntia tarjoamaan maahanmuuttajille ohjausta ja neuvontaa sekä auttamaan heitä löytämään tarvitsemansa palvelut\nOmalla kielellä annettu neuvonta helpottaa asiointia ja madaltaa avun hakemisen kynnystä. Tavoitteena on varmistaa, että jokainen saa tarvitsemansa tiedon, tuen ja palvelut yhdenvertaisesti.\nMonikielinen neuvonta lyhyesti\nKenelle? Neuvontaan ovat tervetulleita kaikki monikieliset vantaalaiset omasta taustasta, muuton syystä tai siitä, kuinka kauan on asunut Suomessa.\nHinta? Monikielinen neuvonta ei maksa mitään.\nMissä ja miten? Palvelua saa paikan päällä Tikkurilassa ja Myyrmäessä. Lisäksi palvelemme puhelimitse ja sähköpostitse.\nPalvelukielet? Palvelemme ilman ajanvarausta suomeksi, ruotsiksi ja englanniksi. Muita kieliä on saatavilla vaihtelevasti ja lisäksi ajanvarauksella. Käytössä on aina myös puhelintulkkaus.\nMihin kaikkeen saan apua? Monikielisestä saa apua maahanmuuton alkuvaiheessa ja myös silloin, kun on asunut Suomessa jo pidempään. Neuvomme ja autamme eteenpäin esimerkiksi seuraavissa kysymyksissä:\nasiointi viranomaisten kanssa\ntyönhaku ja opiskelu\nasuminen ja asunnon etsintä\ntalousasiat\nmaahanmuutto\nvapaa-aika ja harrastusmahdollisuudet\nNeuvonnan työntekijöiden mukaan yleisimmin kysyttyjä asioita ovat kielikoulutukset, erilaisten etuuksien hakeminen, asumisen kysymykset, työllistyminen ja opiskelu, päiväkotipaikan hakeminen sekä oleskelulupiin liittyvät käytännöt.\nOta yhteyttä monikieliseen neuvontaan – palveluajat 7.1.2026 alkaen\nPuhelin: 09 839 50930 (ma-ke 9–15.30, to 12–15.30, pe 10–15.30)\nSähköposti: monikielinen.neuvonta@vantaa.fi\nAsiointi paikan päällä: Maanantaisin, keskiviikkoisin ja perjantaisin monikielinen neuvonta palvelee ilman ajanvarausta Myyrmäessä (osoite: Myyrmäkitalo, Paalutori 3) ja Tikkurilassa (osoite: Vernissakatu 1).\nPalvelu on avoinna molemmissa pisteissä maanantaina ja keskiviikkona klo 9.00–15.00 sekä perjantaina 10.00–15.00.\nTiistaisin ja torstaisin neuvonta on saatavilla vain ajanvarauksella.\nTarkista palveluajat ja mahdolliset poikkeukset monikielisen neuvonnan verkkosivuilta.\nSivuilta voit ladata myös monikielisen neuvonnan esitteet yli kymmenellä eri kielellä.\nAsiantuntijat kertovat: ”Vastauksia etsitään yhdessä asiakkaiden kanssa”\nMonikielisen neuvonnan asiantuntijat ovat päässeet auttamaan vantaalaisia asiakkaita laajasti erilaisissa kysymyksissä. Neuvonnassa työskentelevä kotoutumisen asiantuntija Ulla Kärki kertoo neuvonnan olevan erityisen mukavaa, kun pystyy auttamaan asiakasta edistämään omia asioitaan.\n”Autamme todella monenlaisissa asioissa, alkaen vauvan nimen ilmoittamisesta aina eläkkeen hakemisessa ohjaamiseen. Silloin jos meillä ei ole heti vastauksia moninaisiin kysymyksiin, niitä etsitään yhdessä asiakkaan kanssa esimerkiksi soittamalla viranomaisille”, Kärki sanoo.\nHän jatkaa, ”Usein ihmiset ovat iloisen yllättyneitä, kun pystyvätkin hoitamaan jonkin asian suomeksi – meillä siis puhutaan ja ymmärretään helppoa suomea. Toki tarvittaessa otamme tulkin.”\nAsiantuntijoiden mukaan monikieliseen neuvontaan kannattaa tulla matalalla kynnyksellä, vaikka oma kysymys tuntuisi pieneltä.\nTietoa omalla kielellä ja tukea itsenäiseen asiointiin\nAutamme asiakkaita löytämään oikeat palvelut ja ymmärtämään suomalaisen yhteiskunnan toimintaa omalla kielellään tai selkeällä suomen kielellä.\nTavoitteena on varmistaa, että asiakas saa luotettavaa tietoa ja osaa edetä asiassaan itsenäisesti.\n\"Kun ihminen saa tietoa kielellä, jota hän ymmärtää, hänen on paljon helpompi tehdä päätöksiä ja hoitaa omia asioitaan”, kotoutumisen asiantuntija Ziaulhag Momeni sanoo.\nNeuvonnan työntekijöiden mukaan yleisimmin kysyttyjä asioita ovat kielikoulutukset, erilaisten etuuksien hakeminen, asumisen kysymykset, työllistyminen ja opiskelu, päiväkotipaikan hakeminen sekä oleskelulupiin liittyvät käytännöt.\n\"Moni lähtee tapaamisesta selkeän suunnitelman kanssa\"\n”Yllättävää on se, kuinka paljon jo pieni määrä oikeaa tietoa voi helpottaa asiakkaan tilannetta. Moni tulee infoon epävarmana tai huolestuneena, mutta lähtee tapaamisesta selkeän suunnitelman kanssa”, Momeni kertoo hymyillen.\nMikä on jäänyt erityisesti Momenin mieleen asiakaskohtaamisista?\n”Erityisesti mieleen jäävät tilanteet, joissa asiakas palaa myöhemmin kertomaan, että on löytänyt työ- tai opiskelupaikan saamansa neuvonnan avulla. Silloin näkee konkreettisesti neuvonnan vaikutuksen”, hän kertoo.\nAsiantuntijoiden mukaan monikieliseen neuvontaan kannattaa tulla matalalla kynnyksellä, vaikka oma kysymys tuntuisi pieneltä. Tarkoituksena on auttaa löytämään oikea tieto ja oikeat palvelut mahdollisimman aikaisessa vaiheessa. Millaisin terveisin Kärki ja Momeni tahtovat kannustaa ihmisiä saapumaan infoon?\n\"Sinun ei tarvitse tietää valmiiksi mistä aloittaa. Tule kysymään meiltä, niin etsitään ratkaisut yhdessä”, he toteavat nyökäten.\nKun elämässä on kysymyksiä, niistä ei tarvitse selvitä yksin.\nTervetuloa monikieliseen neuvontaan!\nSuosittelemme sinulle myös\nVantaan monikielinen neuvonta\nTietoa maahan muuttamisesta ja kotoutumisesta Vantaalle\nAvainsanat\nKotoutuminen\nMonikielisyys\nKansainvälisyys\n…\nShow all keywords",
-        "title": "Muutitko Vantaalle? Monikielinen neuvonta auttaa alkuun ja eteenpäin",
-        "url": "https://www.vantaa.fi/fi/ajankohtaista/uutinen/muutitko-vantaalle-monikielinen-neuvonta-auttaa-alkuun-ja-eteenpain"
+        "text": "Energiamarkkinariitalautakunnan ratkaisusuositus elinkeinonharjoittajan sähkönmyyntisopimuksen ennenaikaista päättämistä koskevassa riita-asiassa\ntyö- ja elinkeinoministeriö\nJulkaisuajankohta 5.10.2026 10.01\nTyyppi:Tiedote\nEnergiamarkkinariitalautakunta on antanut 23.9.2026 ratkaisusuosituksen sähkön ostajana olevan elinkeinonharjoittajan ja sähkön vähittäismyyjän välisessä, sähkönmyyntisopimuksen ennenaikaista päättämistä koskevassa riita-asiassa.\nRatkaisusuositus on koskenut Fortum Markets Oy:n Fortum Yritys Aktiivi -sähkönmyyntisopimuksen ennenaikaisesta päättämisestä johtuvaa vahingonkorvausta. Lautakunta on päätynyt ratkaisusuositukseen, jonka mukaan lautakunta ei suosita sähkön ostajalle hyvitystä asiassa. Sähkön ostajan katsottiin päättäneen sähkönmyyntisopimuksensa kahdessa eri sähkönkäyttöpaikassa kesken sopimuskauden sopimusehtojen vastaisesti.\nTapauksessa sähkön ostajan sähkönmyyntisopimukset ovat päättyneet kesken irtisanomisajan. Sopimukset päättyivät sähkön vähittäismyyjän vastaanotettua \"ulos muutto\" -sanoman Datahub-tiedonvaihtojärjestelmästä. Uusi sähkönmyyntisopimus on tullut tuolloin loppukäyttäjän sähkönkäyttöpaikkoihin ja vastaavasti vähittäismyyjän sähköntoimitus on tosiasiallisesti päättynyt niihin. Lautakunta katsoi, että Fortum Markets Oy:llä on ollut sopimusehtojen mukaan tapauksessa oikeus saada vahingoistaan korvaus, kun sähkön ostaja on päättänyt sopimuksensa ennenaikaisesti.\nSähkön vähittäismyyjälle aiheutuneen vahingon osalta lautakunta totesi, että vahingon määräksi katsotaan vähittäismyyjän ennakkoon hankkiman sähkön hinnan ja tuon hankitun sähkön toteutuneen myyntihinnan erotus, kun sähkön ostaja ei sopimuksesta irtauduttuaan enää tule käyttämään hankittua sähköä. Edelleen lautakunta on katsonut, että sähkön vähittäismyyjän on tullut laskea korvausvaatimuksensa määrä irtisanomisajan loppuosalle sopimusrikkomuksen ajankohtana aiheutuneen vahingon perusteella.\nSopimusrikkomuksen ajankohdaksi lautakunta on katsonut ajankohdan, jolloin sähkönkäyttöpaikkaan on tehty uusi sähkösopimus.\nEnergiamarkkinariitalautakunta antaa ratkaisusuosituksia sähkömarkkina-asioiden riitakysymyksiin\nSyyskuussa 2023 toimintansa aloittanut Energiamarkkinariitalautakunta on riippumaton ja puolueeton muiden loppuasiakkaiden kuin kuluttajien vireille saattamia sähkömarkkinariita-asioita käsittelevä oikeussuojaelin. Lautakunta antaa ratkaisusuosituksia yksittäisiin riitakysymyksiin, joita muut loppuasiakkaat kuin kuluttajat saattavat lautakunnan käsittelyyn. Käsiteltävät asiat voivat koskea sähköalan yritysten ja loppuasiakkaiden välisiä oikeuksia ja velvollisuuksia tai sähkösopimuksia.\nLautakunnan ratkaisusuositukset eivät ole täytäntöönpanokelpoisia, eikä niillä ole hallintopäätöksen tai tuomion oikeusvaikutuksia. Ratkaisusuositukseen ei saa hakea muutosta valittamalla. Lautakuntakäsittely ei estä asian saattamista toimivaltaisen viranomaisen tai tuomioistuimen käsiteltäväksi.\nLisätiedot:\nEnergiamarkkinariitalautakunnan varapuheenjohtaja Arto Rajala, p. 050 444 9659\nEnergiamarkkinariitalautakunnan verkkosivut\nEnergiamarkkinariitalautakunnan ratkaisusuositukset (EMLA 1/2024)\nLaki energiamarkkinariitalautakunnasta (502/2023)\nenergia energiamarkkinat energiamarkkinat energiapolitiikka lautakunnat ratkaisut riita-asiat sopimukset sähkö sähkömarkkinat toimielimet yritykset",
+        "title": "Energiamarkkinariitalautakunnan ratkaisusuositus elinkeinonharjoittajan sähkönmyyntisopimuksen ennenaikaista päättämistä koskevassa riita-asiassa",
+        "url": "https://valtioneuvosto.fi/-/1410877/energiamarkkinariitalautakunnan-ratkaisusuositus-elinkeinonharjoittajan-sahkonmyyntisopimuksen-ennenaikaista-paattamista-koskevassa-riita-asiassa"
       }
     ],
-    "story_key": "url:https://www.vantaa.fi/fi/ajankohtaista/uutinen/muutitko-vantaalle-monikielinen-neuvonta-auttaa-alkuun-ja-eteenpain",
+    "story_key": "url:https://valtioneuvosto.fi/-/1410877/energiamarkkinariitalautakunnan-ratkaisusuositus-elinkeinonharjoittajan-sahkonmyyntisopimuksen-ennenaikaista-paattamista-koskevassa-riita-asiassa",
     "supporting_documents": [
       {
         "id": "RIGHTS",
         "purpose": "text reuse permission; not news or image evidence",
-        "retrieved_at": "2026-10-05T10:46:21.832589+00:00",
-        "sha256": "b6b27f5f448331491611f730c8e246da97e42029d9a59df177d9c61ee3d4fcfe",
-        "text": "Käyttöoikeus määritellyin ehdoin hyödynnettävissä. Datan käytön lisäksi Palvelussa on mahdollisuus keskusteluun.\nKäyttöoikeus\nPalvelu sisältää dataa useasta eri lähteestä: julkisyhteisöjen tuottamia datoja ja niiden metatietoja, Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja ja Palvelun ylläpitäjien tuottamia artikkeleja ja muita kirjoituksia. Pääsääntöisesti näihin kaikkiin on laaja käyttöoikeus Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Poikkeukset on kerrottu erikseen kunkin aineiston kohdalla.\nAvoin data\nPalvelussa olevien datojen (tietoaineistojen) omistus- ja immateriaalioikeudet kuuluvat kunkin datan tekijälle.\nPääsääntöisesti Palvelun käyttäjillä on laaja käyttöoikeus datoihin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti. Datoja saa vapaasti kopioida, levittää, näyttää ja esittää sekä käyttää datoja osana muuta teosta. Datoja voi käyttää sekä ei-kaupallisiin että kaupallisiin tarkoituksiin.\nEhtona käytölle on, että datan tekijä (ylläpitäjä) on ilmoitettava. Datan tekijän pyynnöstä tämä viittaus on poistettava. Datan tekijä on kerrottu kunkin datan metadatassa.\nDatan tekijää ei saa ilmoittaa siten, että ilmoitus viittaisi datan tekijän tai Palvelun tukevan datan käyttäjää tai datan käyttötapaa.\nDatojen metatietojen yhteydessä on mainittu kyseisen datan käyttöoikeusehdot. Joissakin tapauksissa käyttöoikeusehdot voivat poiketa yllä mainitusta.\nKeskustelu\nPalvelun käyttäjät voivat keskusteluosiossa lisätä sivuille kirjoituksia ja kommentoida toisten käyttäjien kirjoituksia. Palvelun käyttäjä antaa kirjoituksiinsa ja kommentteihinsa vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nMikäli käyttäjä liittää kirjoitukseensa tai kommenttiinsa kuvia, tulee hänellä olla tekijänoikeudet kuvaan. Lisäksi hänellä tulee olla kuvassa esiintyvien henkilöiden lupa kuvan julkaisemiseen internetissä. Palvelun käyttäjä antaa kuviin vapaan käyttöoikeuden Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nKeskustelun tulee olla hyvän tavan ja Suomen lainsäädännön mukaista. Käyttäjät ovat vastuussa lisäämistään kirjoituksista ja kommenteista.\nKaikenlainen mainonta keskustelussa on kielletty.\nPalvelun tarjoajat voivat tarvittaessa muokata kirjoituksia ja kommentteja sekä poistaa hyvän tavan tai lainsäädännön vastaisia tai muutoin sopimattomia kirjoituksia.\nMikäli käyttäjä havaitsee käyttöehtojen vastaisia kirjoituksia, pyydetään tästä ilmoittamaan ylläpidolle.\nToistuva käyttöehtojen rikkominen tai niiden vakava rikkominen voi johtaa väliaikaiseen tai pysyvään Palvelun käyttöoikeuden peruuttamiseen.\nSovellusgalleria\nSovellusgalleriassa esitellyt sovellukset eivät ole HRI:n tekemiä ja niiden tekijänoikeudet kuuluvat sovellusten tekijöille. Creative Commons 4.0 -lisenssi ei koske sovelluksia, eikä niitä ole lupa vapaasti kopioida, levittää, muokata tai yhdistellä, ellei erikseen sovelluksen kohdalla ole toisin mainittu tai sovelluksen tekijä muutoin ole tähän antanut lupaa.\nMuut palvelussa olevat kirjoitukset\nPalvelun tuottajien Palvelussa julkaisemien kirjoitusten, kuten artikkelien ja blogikirjoitusten omistus- ja tekijänoikeudet kuuluvat niiden kirjoittajille. Palvelun käyttäjillä on laaja käyttöoikeus näihin kirjoituksiin Creative Commons Nimeä 4.0 Kansainvälinen -lisenssin ehtojen mukaisesti.\nPalvelun ulkoasu, tekninen toteutus, tavaramerkit ja logot\nPalvelun teknisen toteutuksen lähdekoodit on saatavilla avoimesti GitHubista. Palvelun kopiointi sellaisenaan on kielletty. Palvelussa esiintyvien tavaramerkkien ja logojen tavaramerkkioikeudet kuuluvat niiden oikeudenhaltijoille. Mikäli tavaramerkkien ja logojen muu käyttö on sallittu, on tästä ja käytön ehdoista ilmoitettu ko. tavaramerkkien ja logojen kohdalla.\nTietosuoja\nhri.fi-palvelua ylläpitää Helsingin kaupunki. Kaupunki on sitoutunut suojaamaan verkkopalveluidensa käyttäjien yksityisyyttä Tietosuojalain (2018), EU:n tietosuoja-asetuksen (2016/679) sekä muun soveltuvan lainsäädännön mukaisesti.\nHelsingin kaupungin tietosuojasivut\nVastuuvapaus\nPalvelu sisältää sekä julkisyhteisöjen tuottamaa avointa dataa ja metadataa että Palvelun käyttäjien tuottamia kirjoituksia ja kommentteja. Palvelun tarjoajat eivät vastaa Palvelussa olevien tietojen oikeellisuudesta. Palvelun käyttäjä käyttää Palvelussa olevaa avointa dataa omalla vastuullaan. Palvelun tarjoajat eivät vastaa mistään välittömistä tai välillisistä vahingoista, jotka aiheutuvat datan käytöstä. ",
-        "url": "https://hri.fi/fi/kayttoehdot/"
+        "retrieved_at": "2026-10-05T11:26:21.583574+00:00",
+        "sha256": "585431d1be3baaeb8e69bf4376febd4b5563b99803e84bbb3f632ab473c8dda0",
+        "text": "Tekijänoikeudet\nValtioneuvoston kanslialla tai muulla aineiston yhteydessä ilmoitetulla tiedontuottajalla on oikeudet sivustossa julkaistavaan teksti- ja kuva-aineistoon. Tekstiaineiston käyttö ja siihen linkitys on sallittu hyvän tavan mukaisissa asiayhteyksissä, kun lähde mainitaan. Aineiston käytöstä kaupalliseen tarkoitukseen on sovittava erikseen.\nValtioneuvoston kuvia välitetään Creative Commons -lisensseillä valtioneuvoston aineistopankissa ja Flickr-kuvapalvelussa. Niissä tarjottavat kuvat on tarkoitettu vapaaseen viestinnälliseen käyttöön. Kuvien tarkat käyttöehdot on ilmoitettu kunkin kuvan kohdalla.\n",
+        "url": "https://valtioneuvosto.fi/tietoa-sivustosta"
       }
     ]
   },
   "draft": {
-    "category": "Kotimaa",
+    "category": "Talous",
     "image": {
-      "alt": "AI-generoitu kuva: Vaalea puinen pöytä, jonka vastakkaisilla puolilla on kaksi tummanharmaata tuolia ja pöydällä musta lankapuhelin.",
-      "attempts": 1,
-      "caption": "AI-generoitu kuva. Ei valokuva tapahtumasta.",
+      "alt": "Arkistokuva: Valkoisella työpöydällä on pino papereita, yksittäinen tyhjä arkki, paperiliittimiä, musta kynä, pieni viherkasvi ja laskin.",
+      "caption": "Arkistokuva artikkelin aiheesta.",
       "classifier_output": {
-        "category": "Kotimaa",
+        "category": "Talous",
         "concepts": [
           {
-            "depictable_scene": "Todellinen valokuva Myyrmäkitalon sisäänkäynnistä osoitteessa Paalutori 3 Vantaalla. Sisäänkäynti ja sitä ympäröivä julkisivu näkyvät samassa kuvassa.",
+            "depictable_scene": "Todellinen valokuva Fortumin toimitilarakennuksen julkisivusta, jossa näkyy yhtiön tunnus. Rakennus kuvataan ulkopuolelta ilman oletusta siitä, että riitaa olisi käsitelty juuri siellä.",
             "must_avoid": [
-              "Wrong building or address",
-              "Fabricated service signage"
+              "Invented Fortum building or logo",
+              "Implying the building is the disputed customer's premises"
             ],
             "must_show": [
-              "Actual Myyrmäkitalo entrance",
-              "Surrounding building facade"
+              "Actual Fortum office building",
+              "Company identification on facade"
             ],
             "rank": 1,
             "safe_to_generate": false,
             "search_queries": [
-              "Myyrmäkitalo Paalutori 3",
-              "Myyrmäkitalo sisäänkäynti",
-              "Myyrmäkitalo building entrance"
+              "Fortum toimitilarakennus",
+              "Fortum pääkonttori julkisivu",
+              "Fortum office building exterior"
             ],
-            "subject": "Monikielisen neuvonnan asiointipaikka Myyrmäkitalossa"
+            "subject": "Fortumin toimitilarakennus"
           },
           {
-            "depictable_scene": "Nimeämättömän neuvontatilan pöytä, jonka vastakkaisilla puolilla on työntekijän ja asiakkaan tyhjät tuolit. Pöydällä on toimistopuhelin. Rajauksessa ei näy ihmisiä eikä tunnistettavan palvelupisteen opasteita.",
+            "depictable_scene": "Tyhjän toimistopöydän lähikuva: paperinen asiakirjanippu ja sen vieressä laskin. Paperit on kuvattu niin, ettei niissä ole luettavaa tekstiä, allekirjoituksia tai yritystunnuksia; laskimen näyttö on tyhjä.",
             "must_avoid": [
               "People or body parts",
-              "Invented appearance of Vantaa service premises",
-              "Readable text or logos"
+              "Readable contract terms, monetary amounts or signatures",
+              "Company logos",
+              "Courtroom props suggesting a binding judgment"
             ],
             "must_show": [
-              "Desk with two facing chairs",
-              "Office telephone on desk"
+              "Paper documents on an office desk",
+              "Calculator beside the documents"
             ],
             "rank": 2,
             "safe_to_generate": true,
             "search_queries": [
-              "tyhjä neuvontapiste pöytä",
-              "asiointipiste tuolit puhelin",
-              "empty consultation desk",
-              "office telephone consultation desk"
+              "sopimuspaperit laskin",
+              "yrityssopimus asiakirjat pöydällä",
+              "contract documents calculator",
+              "business paperwork desk"
             ],
-            "subject": "Maksutonta neuvontaa havainnollistava tyhjä asiointipiste"
+            "subject": "Yritysasiakkaan sopimukset ja korvauslaskenta"
           }
         ],
         "version": "article-first-v1"
       },
-      "credit": "AI-kuvitus",
-      "depicted": "A light wooden desk with grey metal legs is positioned in the center of a room. On one side of the desk is a dark grey office chair with wheels, and on the opposite side is a dark grey chair with four legs. A black office telephone with a coiled cord rests on the desk. In the background, a window with white frames shows green foliage outside. A white curtain hangs next to the window. On the windowsill, a green potted plant sits in a white pot. On the wall, a grey rectangular sound-absorbing panel is visible. To the right, a light wooden cabinet is partially visible, with another green potted plant on top.",
-      "generated": true,
-      "license": "AI-generated image",
-      "license_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "local_path": "media/bff4a6c093a0cb1dd597a8bfb5c04e019f52c56378a2a345204b1c18e62ca5cb.jpg",
-      "model": "codex-oauth:gpt-image-2",
+      "credit": "Photo by Mediamodifier on Unsplash",
+      "depicted": "An overhead shot shows a white desk with various office supplies. In the top left, a stack of white papers is visible. To the right of the papers, five silver paper clips are scattered. A single sheet of white paper lies in the center of the desk. A black pen with a gold tip is positioned diagonally, pointing towards the top right. In the top right corner, a small white pot contains a green artificial succulent plant with brown gravel. In the bottom right, a black calculator with a gray screen a",
+      "generated": false,
+      "hotlink": true,
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
       "pixel_review": {
-        "alt_fi": "Vaalea puinen pöytä, jonka vastakkaisilla puolilla on kaksi tummanharmaata tuolia ja pöydällä musta lankapuhelin.",
+        "alt_fi": "Valkoisella työpöydällä on pino papereita, yksittäinen tyhjä arkki, paperiliittimiä, musta kynä, pieni viherkasvi ja laskin.",
         "approved": true,
-        "article_text_sha256": "cfb1311bfd0d03acd843c8d456fcdbd212210a38296adfcc033fbd3f44633a22",
-        "concept_sha256": "c5916c3cf10029e9d9540b878ad37be2830759a72bd6fafe81a4ba8e201c7687",
-        "description": "A light wooden desk with grey metal legs is positioned in the center of a room. On one side of the desk is a dark grey office chair with wheels, and on the opposite side is a dark grey chair with four legs. A black office telephone with a coiled cord rests on the desk. In the background, a window with white frames shows green foliage outside. A white curtain hangs next to the window. On the windowsill, a green potted plant sits in a white pot. On the wall, a grey rectangular sound-absorbing panel is visible. To the right, a light wooden cabinet is partially visible, with another green potted plant on top.",
+        "article_text_sha256": "b1c4d134df4b0068ab7c98e9fc6ebca3db9fd349b40e6861c9add9ff808c037b",
+        "concept_sha256": "853fc903ca541679171b9e6ddbf211d9768a36aec032075c2d1b7415d3da746d",
+        "description": "A top-down view of a white desk with several office items. On the left, a stack of white papers and scattered paper clips. In the center, a single blank white sheet of paper. To the right of the paper, a black pen and a small potted succulent plant. In the bottom right corner, a black calculator.",
         "fit_score": 9,
-        "image_sha256": "bff4a6c093a0cb1dd597a8bfb5c04e019f52c56378a2a345204b1c18e62ca5cb",
+        "image_sha256": "c3867d1d65d342ec4843e280c9d05b39bc22a752f69728e218170807a4c02bbb",
         "model": "google:gemini-2.5-flash",
         "must_show_visible": [
           true,
           true
         ],
         "no_people": true,
-        "reason": "The image accurately depicts a desk with two facing chairs and an office telephone on the desk, matching all 'must_show' elements of the selected concept. It avoids people, invented text/logos, and specific Vantaa service premises, aligning with 'must_avoid'. The scene effectively illustrates a generic consultation point, which is highly relevant to the article about Vantaa's multilingual advisory services.",
-        "reviewed_at": "2026-10-05T10:50:33.203956+00:00",
-        "text_audit": {
-          "examples": [],
-          "readable_text_present": false
-        }
+        "reason": "The image clearly shows paper documents on an office desk and a calculator, which directly matches the 'must_show' elements of the selected concept. The blank papers and calculator with a blank screen avoid any 'must_avoid' elements like readable text or monetary amounts. The overall scene of office items relates well to the article's theme of business contracts and compensation calculation.",
+        "reviewed_at": "2026-10-05T11:30:54.335244+00:00"
       },
       "pixels": {
         "height": 1024,
         "mode": "RGB",
-        "variance": 8409.9,
+        "variance": 5368.7,
         "width": 1536
       },
-      "prompt_sha256": "b70798300aef023b8b2a5757ae77320b7bdd3e024c3cc7ff30a6dd3b8a0b3d7e",
-      "prompt_version": "imagery-v4-article-first-exact-concept",
       "relevance_check": {
         "accepted": true,
-        "evidence": "Nimeämättömän neuvontatilan pöytä, jonka vastakkaisilla puolilla on työntekijän ja asiakkaan tyhjät tuolit. Pöydällä on toimistopuhelin. Rajauksessa ei näy ihmisiä eikä tunnistettavan palvelupisteen opasteita.",
+        "evidence": "A top-down view of a white desk with several office items. On the left, a stack of white papers and scattered paper clips. In the center, a single blank white sheet of paper. To the right of the paper, a black pen and a small potted succulent plant. In the bottom right corner, a black calculator.",
         "matched": [
-          "Desk with two facing chairs",
-          "Office telephone on desk"
+          "calculator",
+          "desk",
+          "office",
+          "paper"
         ],
-        "method": "generation",
-        "reason": "generated from the accepted scene"
+        "method": "vision",
+        "reason": "Exact-pixel full-article score meets the 8/10 threshold"
       },
-      "review_note": "Tekoälyn tuottama kuva vastaa valittua konkreettista aihetta. Artikkeli kertoo selvästi, ettei kuva ole valokuva tapahtumasta. Kuva ei esitä tunnistettavaa todellista henkilöä.",
       "selection_evidence": {
-        "article_text_sha256": "cfb1311bfd0d03acd843c8d456fcdbd212210a38296adfcc033fbd3f44633a22",
-        "decision_sha256": "4aff6fc274fc4ca3bf2c3cdda08137d4dce4aa55adef9689ee5d25a75b5e027e",
+        "article_text_sha256": "b1c4d134df4b0068ab7c98e9fc6ebca3db9fd349b40e6861c9add9ff808c037b",
+        "decision_sha256": "fe9808b89315703b736689436fb479b868a80688eb2464df5516b133ae4c9c14",
         "minimum_real_fit": 8,
         "searches": [
           {
             "candidates": [],
             "concept_rank": 1,
             "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "Myyrmäkitalo Paalutori 3",
-              "Myyrmäkitalo sisäänkäynti",
-              "Myyrmäkitalo building entrance"
-            ]
-          },
-          {
-            "candidates": [
-              {
-                "approved": false,
-                "fit_score": 0,
-                "image_sha256": "50dcae58a3a6a2107db10bb3e7b24bdb40d2a11f239ce668554410821762e944",
-                "license": "Pexels License",
-                "reason": "The article discusses the multilingual advisory services provided by the city of Vantaa, specifically mentioning Myyrmäkitalo at Paalutori 3 as a service location. The selected concept explicitly requires an actual photograph of the Myyrmäkitalo entrance and its surrounding facade. The provided image does not depict Myyrmäkitalo; it shows a small, ",
-                "source_url": "https://www.pexels.com/photo/scenic-wooden-building-surrounded-by-lush-greenery-38143127/"
-              }
-            ],
-            "concept_rank": 1,
-            "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "Myyrmäkitalo Paalutori 3",
-              "Myyrmäkitalo sisäänkäynti",
-              "Myyrmäkitalo building entrance"
+              "Fortum toimitilarakennus",
+              "Fortum pääkonttori julkisivu",
+              "Fortum office building exterior"
             ]
           },
           {
@@ -1369,9 +1517,20 @@
             "outcome": "no_qualifying_candidate",
             "provider": "unsplash",
             "queries": [
-              "Myyrmäkitalo Paalutori 3",
-              "Myyrmäkitalo sisäänkäynti",
-              "Myyrmäkitalo building entrance"
+              "Fortum toimitilarakennus",
+              "Fortum pääkonttori julkisivu",
+              "Fortum office building exterior"
+            ]
+          },
+          {
+            "candidates": [],
+            "concept_rank": 1,
+            "outcome": "no_qualifying_candidate",
+            "provider": "wikimedia",
+            "queries": [
+              "Fortum toimitilarakennus",
+              "Fortum pääkonttori julkisivu",
+              "Fortum office building exterior"
             ]
           },
           {
@@ -1380,182 +1539,148 @@
             "outcome": "no_qualifying_candidate",
             "provider": "google",
             "queries": [
-              "Myyrmäkitalo Paalutori 3",
-              "Myyrmäkitalo sisäänkäynti",
-              "Myyrmäkitalo building entrance"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "source-news",
-            "queries": [
-              "cited source image"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "wikimedia",
-            "queries": [
-              "tyhjä neuvontapiste pöytä",
-              "asiointipiste tuolit puhelin",
-              "empty consultation desk"
+              "Fortum toimitilarakennus",
+              "Fortum pääkonttori julkisivu",
+              "Fortum office building exterior"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 6,
-                "image_sha256": "8948507175516998d1e7747e32aa2209b89119ad1af9cad048750cc9ef8a8da5",
+                "fit_score": 3,
+                "image_sha256": "a2ede16fd0dbfc7c9708871a33c3aa3e55970216b5f58617d7d86e416a420fa3",
                 "license": "Pexels License",
-                "reason": "The image shows a meeting room or a waiting area with multiple tables and chairs, but it does not specifically depict a consultation desk with two facing chairs and an office telephone, which are explicit requirements of the concept. The visible scene is too general and does not match the specific setup described in the concept. One or more require",
-                "source_url": "https://www.pexels.com/photo/an-interior-of-an-office-5511092/"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "a6731465c503071afe9d5c69aefb35e407f99ffda5d3645281af6edca30c93d2",
-                "license": "Pexels License",
-                "reason": "The image shows a long table with multiple chairs, not a desk with two facing chairs as specified in the concept. There is no office telephone visible on the table. The overall scene appears to be a breakroom or open office area rather than a dedicated consultation point. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/office-canteen-arranged-in-open-space-5511084/"
+                "reason": "The image shows a roll of paper, which does not match the 'Paper documents on an office desk' or 'Calculator beside the documents' elements required by the concept. The paper is rolled, not a stack of documents, and there is no calculator visible. Therefore, it fails to meet the 'must_show' criteria. One or more required concept elements are not vi",
+                "source_url": "https://www.pexels.com/photo/close-up-of-a-roll-of-paper-6939784/"
               },
               {
                 "approved": false,
                 "fit_score": 3,
-                "image_sha256": "0d74b421fcd4fe5e4b7edfcef44a2f96a36251211d7bf06b0fca03035bc084dd",
+                "image_sha256": "96b4a9ec6089a8b0ad978db8739b886043fb0b1a4348f2d59b54fafab70fdcc8",
                 "license": "Pexels License",
-                "reason": "The article discusses multilingual advice services in Vantaa, and the concept describes an empty consultation desk with two chairs and an office telephone. The image shows many chairs in an auditorium setting, which does not match the specific concept of a consultation desk or the general theme of a one-on-one advice service. One or more required c",
-                "source_url": "https://www.pexels.com/photo/seats-in-auditorium-14640769/"
+                "reason": "The image shows crumpled brown paper, which does not depict 'Paper documents on an office desk' or a 'Calculator beside the documents' as required by the must_show elements. The image is too abstract and does not concretely illustrate the article's subject of business contracts and compensation calculation. One or more required concept elements are",
+                "source_url": "https://www.pexels.com/photo/close-up-shot-of-crumpled-brown-paper-13005148/"
               },
               {
                 "approved": false,
-                "fit_score": 4,
-                "image_sha256": "7213125db34b0bfdb40ce115c443f1ed6290684d25a383417b89be19f8909db8",
+                "fit_score": 0,
+                "image_sha256": "4830c263c662b3098e996829d31f04ca6f766a2b78ad917c43d038b865e3f8b1",
                 "license": "Pexels License",
-                "reason": "The image shows rows of chairs, not a desk with two facing chairs, and there is no office telephone visible. Therefore, it does not depict the selected concept. One or more required concept elements are not visible.",
-                "source_url": "https://www.pexels.com/photo/a-group-of-wooden-chairs-in-a-couple-of-rows-9956582/"
+                "reason": "The image shows a person's hands wrapping an object, with a payment terminal and other office supplies visible. This does not match the concept of 'Paper documents on an office desk' and 'Calculator beside the documents'. There are no visible paper documents or a calculator. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/a-person-wrapping-a-gift-6023606/"
+              },
+              {
+                "approved": false,
+                "fit_score": 0,
+                "image_sha256": "8204d287bb42e55404d3d952cc2837cc1d49b26be4e22207183364f6dee3c7db",
+                "license": "Pexels License",
+                "reason": "The image depicts wrapped gifts and envelopes, which are unrelated to the article's subject of business contracts and compensation calculation. The selected concept requires paper documents and a calculator on an office desk, neither of which are present. One or more required concept elements are not visible.",
+                "source_url": "https://www.pexels.com/photo/beautifully-wrapped-christmas-gifts-with-musical-theme-35055027/"
               }
             ],
             "concept_rank": 2,
             "outcome": "no_qualifying_candidate",
             "provider": "pexels",
             "queries": [
-              "tyhjä neuvontapiste pöytä",
-              "asiointipiste tuolit puhelin",
-              "empty consultation desk"
+              "sopimuspaperit laskin",
+              "yrityssopimus asiakirjat pöydällä",
+              "contract documents calculator"
             ]
           },
           {
             "candidates": [
               {
                 "approved": false,
-                "fit_score": 3,
-                "image_sha256": "8b138d990d1edb887dce37a593b0082d4d196bd03748c98136008858202f0ec1",
-                "license": "Unsplash License",
-                "reason": "The image depicts a domestic kitchen or dining area, not an office or consultation space. It contains a table and chairs, but they are not arranged as a consultation desk with two facing chairs for an employee and a client. There is no office telephone visible on the table. The overall setting does not match the concept of an empty consultation poi",
-                "source_url": "https://unsplash.com/photos/a-kitchen-with-a-table-and-chairs-and-a-window-v4PlAT0NsyM?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
-                "fit_score": 4,
-                "image_sha256": "aa3aa3ef2ff2b674865c6050978fe2cdc16297b9cbdee54a57c41057427f2a90",
-                "license": "Unsplash License",
-                "reason": "The image shows a table with two chairs, but it is clearly a dining or living room setting, not an office or consultation desk. There is no office telephone visible, which is a 'must_show' element. The overall scene does not fit the concept of an empty consultation point. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/a-kitchen-and-dining-room-with-a-table-and-chairs-x0AYn1qrY2E?utm_source=uutistenlukija&utm_medium=referral"
-              },
-              {
-                "approved": false,
                 "fit_score": 0,
-                "image_sha256": "4ee5448b8595bd6d22d36f699765f2b9a60815bf8010e97b6f4058db44560de0",
+                "image_sha256": "6197f552fdf8988293afd3435c77131aca553d3945a2e7c198cb85c83d5f5eeb",
                 "license": "Unsplash License",
-                "reason": "The image shows a kitchen or dining area, not an unnamed consultation room. It lacks an office telephone on the desk, which is a must-show element. The overall setting does not match the concept of a consultation point. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/a-kitchen-with-a-table-chairs-and-a-refrigerator-iFhRYZ4P-KU?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The image does not show paper documents on an office desk or a calculator, which are both required elements for the selected concept. The visible card has a company logo and text, which are explicitly to be avoided. One or more required concept elements are not visible.",
+                "source_url": "https://unsplash.com/photos/white-printer-paper-JbF2xrThIT0?utm_source=uutistenlukija&utm_medium=referral"
               },
               {
-                "approved": false,
-                "fit_score": 3,
-                "image_sha256": "d05934b1f77a72a348acfa2f274982e25ed37676c829eac8d6629e3d5531c0fa",
+                "approved": true,
+                "fit_score": 9,
+                "image_sha256": "c3867d1d65d342ec4843e280c9d05b39bc22a752f69728e218170807a4c02bbb",
                 "license": "Unsplash License",
-                "reason": "The image shows a table and two chairs, but they are clearly outdoor patio furniture, not an office consultation desk. There is no office telephone visible. The setting does not resemble a consultation space. One or more required concept elements are not visible.",
-                "source_url": "https://unsplash.com/photos/a-table-with-chairs-around-it-C2YgiLOaqMA?utm_source=uutistenlukija&utm_medium=referral"
+                "reason": "The image clearly shows paper documents on an office desk and a calculator, which directly matches the 'must_show' elements of the selected concept. The blank papers and calculator with a blank screen avoid any 'must_avoid' elements like readable text or monetary amounts. The overall scene of office items relates well to the article's theme of busi",
+                "source_url": "https://unsplash.com/photos/black-calculator-beside-black-pen-on-white-printer-paper-I3HPUolh5hA?utm_source=uutistenlukija&utm_medium=referral"
               }
             ],
             "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
+            "outcome": "accepted",
             "provider": "unsplash",
             "queries": [
-              "tyhjä neuvontapiste pöytä",
-              "asiointipiste tuolit puhelin",
-              "empty consultation desk"
-            ]
-          },
-          {
-            "candidates": [],
-            "concept_rank": 2,
-            "outcome": "no_qualifying_candidate",
-            "provider": "google",
-            "queries": [
-              "tyhjä neuvontapiste pöytä",
-              "asiointipiste tuolit puhelin",
-              "empty consultation desk"
+              "sopimuspaperit laskin",
+              "yrityssopimus asiakirjat pöydällä",
+              "contract documents calculator"
             ]
           }
         ],
         "selected": {
           "concept_rank": 2,
           "fit_score": 9,
-          "image_sha256": "bff4a6c093a0cb1dd597a8bfb5c04e019f52c56378a2a345204b1c18e62ca5cb",
-          "kind": "generated"
+          "image_sha256": "c3867d1d65d342ec4843e280c9d05b39bc22a752f69728e218170807a4c02bbb",
+          "kind": "real"
         },
         "version": "article-first-v1"
       },
-      "sha256": "bff4a6c093a0cb1dd597a8bfb5c04e019f52c56378a2a345204b1c18e62ca5cb",
-      "source_url": "https://uutistenlukija.fi/ai-kuvat/",
-      "subject": "Maksutonta neuvontaa havainnollistava tyhjä asiointipiste",
-      "url": "https://uutistenlukija.fi/media/bff4a6c093a0cb1dd597a8bfb5c04e019f52c56378a2a345204b1c18e62ca5cb.jpg"
+      "source_url": "https://unsplash.com/photos/black-calculator-beside-black-pen-on-white-printer-paper-I3HPUolh5hA?utm_source=uutistenlukija&utm_medium=referral",
+      "stock_provenance": {
+        "download_tracking": {
+          "successful": true,
+          "url": "https://api.unsplash.com/photos/I3HPUolh5hA/download?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw3fHxjb250cmFjdCUyMGRvY3VtZW50cyUyMGNhbGN1bGF0b3J8ZW58MHwwfHx8MTc5MTE5OTg0OXww"
+        },
+        "image_url": "https://images.unsplash.com/photo-1625225233840-695456021cde?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw3fHxjb250cmFjdCUyMGRvY3VtZW50cyUyMGNhbGN1bGF0b3J8ZW58MHwwfHx8MTc5MTE5OTg0OXww&w=1536&q=80&fm=jpg&fit=crop",
+        "photo_id": "I3HPUolh5hA",
+        "photo_url": "https://unsplash.com/photos/black-calculator-beside-black-pen-on-white-printer-paper-I3HPUolh5hA?utm_source=uutistenlukija&utm_medium=referral",
+        "photographer": "Mediamodifier",
+        "photographer_url": "https://unsplash.com/@mediamodifier?utm_source=uutistenlukija&utm_medium=referral",
+        "provider": "unsplash",
+        "query": "contract documents calculator",
+        "retrieved_at": "2026-10-05T11:30:52Z"
+      },
+      "stock_provenance_sha256": "dfde27e6af01bde1d7eb7286ae57c386b35853666ca0e81ba38ac9db607c3384",
+      "url": "https://images.unsplash.com/photo-1625225233840-695456021cde?ixid=M3w5MDAzMjV8MHwxfHNlYXJjaHw3fHxjb250cmFjdCUyMGRvY3VtZW50cyUyMGNhbGN1bGF0b3J8ZW58MHwwfHx8MTc5MTE5OTg0OXww&w=1536&q=80&fm=jpg&fit=crop"
     },
     "paragraphs": [
       {
         "source_ids": [
           "A"
         ],
-        "text": "Neuvonnan työntekijöiden mukaan asiakkaat kysyvät usein kielikoulutuksista, työllistymisestä, päiväkotipaikan hakemisesta ja oleskelupien käytännöistä. Kaupungin mukaan palveluun pääsy ei riipu Suomeen muuton syystä tai maassa asumisen kestosta."
+        "text": "Työ- ja elinkeinoministeriön 5. lokakuuta julkaiseman tiedotteen mukaan riita koski Fortum Yritys Aktiivi -sopimuksia kahdessa sähkönkäyttöpaikassa. Energiamarkkinariitalautakunta katsoi 23. syyskuuta antamassaan ratkaisusuosituksessa, että yritysasiakas oli päättänyt sopimukset ennenaikaisesti vastoin niiden ehtoja, eikä suosittanut asiakkaalle hyvitystä."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kaupunki kertoo tarjoavansa neuvontaa ilman ajanvarausta suomeksi, ruotsiksi ja englanniksi. Muiden kielten saatavuus vaihtelee, ja niillä voi saada palvelua myös ajanvarauksella. Tarvittaessa käytetään puhelintulkkausta."
+        "text": "Tiedotteen mukaan sopimukset päättyivät, kun Fortum sai Datahub-tiedonvaihtojärjestelmästä ulosmuuttoa koskevan ilmoituksen. Käyttöpaikkoihin tuli tuolloin uusi sähkönmyyntisopimus, ja Fortumin toimitukset päättyivät ennen irtisanomisajan loppua. Lautakunta piti uuden sopimuksen tekemisen ajankohtaa sopimusrikkomuksen ajankohtana."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Kaupungin ilmoittamien, 7. tammikuuta 2026 alkaen voimassa olleiden palveluaikojen mukaan Myyrmäkitalossa osoitteessa Paalutori 3 ja Tikkurilassa osoitteessa Vernissakatu 1 voi asioida ilman ajanvarausta maanantaisin ja keskiviikkoisin kello 9–15 sekä perjantaisin kello 10–15. Tiistaisin ja torstaisin asiointi edellyttää ajanvarausta. Mahdolliset poikkeukset on tarkistettava palvelun verkkosivuilta."
+        "text": "Ministeriön mukaan lautakunta katsoi, että Fortumilla oli sopimusehtojen perusteella oikeus vahingonkorvaukseen. Vahingon laskennassa lähtökohtana oli asiakkaalle ennakkoon hankitun sähkön hinnan ja sen toteutuneen myyntihinnan erotus. Korvausvaatimus tuli laskea jäljellä olevalle irtisanomisajalle sopimusrikkomuksen hetkellä aiheutuneen vahingon perusteella."
       },
       {
         "source_ids": [
           "A"
         ],
-        "text": "Neuvontaan voi kaupungin mukaan ottaa yhteyttä myös sähköpostitse osoitteeseen monikielinen.neuvonta@vantaa.fi tai puhelimitse numeroon 09 839 50930. Puhelinpalvelu on avoinna maanantaista keskiviikkoon kello 9–15.30, torstaisin kello 12–15.30 ja perjantaisin kello 10–15.30."
+        "text": "Tiedotteen mukaan energiamarkkinariitalautakunta käsittelee muiden sähkön loppuasiakkaiden kuin kuluttajien vireille saattamia riitoja. Sen suosituksilla ei ole tuomion tai hallintopäätöksen oikeusvaikutuksia, eikä niistä voi valittaa. Lautakuntakäsittely ei kuitenkaan estä viemästä riitaa toimivaltaisen viranomaisen tai tuomioistuimen ratkaistavaksi."
       }
     ],
-    "summary": "Vantaan kaupunki muistuttaa, että maksutonta neuvontaa voivat käyttää myös pitkään Suomessa asuneet monikieliset vantaalaiset. Apua saa esimerkiksi etuuksien hakemiseen, asumiseen ja opiskeluun.",
-    "title": "Vantaan monikielinen neuvonta auttaa myös pitkään asuneita"
+    "summary": "Työ- ja elinkeinoministeriön mukaan lautakunta katsoi Fortumin olevan oikeutettu korvaukseen, kun yritysasiakkaan sähkösopimukset päättyivät kesken irtisanomisajan. Ratkaisusuositus koskee yksittäistä riitaa eikä ole täytäntöönpanokelpoinen.",
+    "title": "Fortumin yritysasiakkaalle ei suositettu hyvitystä"
   },
   "review": {
     "approved": true,
-    "draft_sha256": "4ae2d7c6e0db82c78e2db5d3f24104233be816097b79cad2ce491048676f290e",
+    "draft_sha256": "e49de9a33cbec22b6828613a80dbe14b4a5f4311f23fb979fab646b29de53638",
     "reasons": [
-      "Otsikko on 58 merkkiä ja nimeää Vantaan monikielisen neuvonnan heti alussa. Lähde A tukee otsikon ja ingressin pääasiaa: maksuton palvelu on tarkoitettu myös pitkään Suomessa asuneille monikielisille vantaalaisille. Etuuksiin, asumiseen ja opiskeluun saatava apu mainitaan lähteessä.",
-      "Kaikkien neljän kappaleen source_ids-merkintä A on asianmukainen. A tukee työntekijöiden kuvaamia tavallisia kysymyksiä, muuton syystä ja asumisen kestosta riippumatonta palveluun pääsyä, kielivalikoimaa, ajanvarausta ja puhelintulkkausta. Luonnos erottaa kaupungin ja työntekijöiden kertomat tiedot riippumattomasti todennetuista havainnoista eikä lisää perusteettomia vaikutus- tai syy-seurausväitteitä.",
-      "Lähteen A ilmoittama julkaisupäivä on 5.10.2026. Luonnoksen päivämäärä 7.1.2026, Myyrmäkitalo ja Paalutori 3, Tikkurilan Vernissakatu 1, asiointi- ja puhelinpalveluajat, sähköpostiosoite sekä puhelinnumero vastaavat lähdettä. Palveluaikojen mahdollisten poikkeusten tarkistaminen on säilytetty. Kotimaa-luokitus sopii aiheeseen, ja teksti rajaa tiedot Vantaalle ilman valtakunnallisia yleistyksiä.",
-      "Teksti on itsenäisesti tiivistettyä, neutraalia ja ymmärrettävää suomea. Ensimmäisen kappaleen kirjoitusvirhe ”oleskelupien” ei muuta asiayhteydestä ymmärrettävää väitettä. RIGHTS-asiakirja koskee HRI-palvelun aineistoja eikä yksin todista Vantaan verkkouutisen CC BY 4.0 -lisenssiä; hyväksyntä ei perustu tähän lisenssiväitteeseen vaan lähdetietojen omaan uutismuotoiluun.",
-      "Luonnoksen koko kuvatietue vastaa lähdepaketin kuvatietuetta. Paketissa on kaksi järjestettyä kuvakonseptia ja haut kummallekin. Valittu generoitu kuva vastaa korkeimmalle sijoitettua turvallisesti generoitavaa konseptia: tyhjä neuvontapöytä, kaksi vastakkaista tuolia ja puhelin havainnollistavat jutun asiointi- ja puhelinneuvontaa esittämättä Vantaan todellisia toimitiloja. Erillisen mallin pikseliarvio on sidottu samaan kuvatunnisteeseen ja artikkelitekstin tunnisteeseen, ja sen sopivuusarvio on 9/10. Tietueen mukaan kuvassa ei ole ihmisiä, luettavia tekstejä tai logoja. Kuvateksti on täsmälleen ”AI-generoitu kuva. Ei valokuva tapahtumasta.”, ja tekijätieto ilmoittaa AI-kuvituksen; kuvaa ei esitetä lisensoituna tapahtumavalokuvana."
+      "Otsikko on 50 merkkiä pitkä eli alle 60 merkin tavoiterajan. Fortumin yritysasiakkaan hyvitystä koskeva ratkaisu on otsikon pääasia, ja lähde A tukee sitä: lautakunta ei suosittanut sähkön ostajalle hyvitystä.",
+      "Lähde A tukee ingressiä ja ensimmäistä kappaletta: tiedote julkaistiin 5.10.2026, ratkaisusuositus annettiin 23.9.2026 ja Fortum Yritys Aktiivi -sopimuksia koskeva riita käsitti kaksi sähkönkäyttöpaikkaa. Korvausoikeus esitetään ministeriön välittämänä lautakunnan kantana, ei riippumattomasti vahvistettuna tai sitovana tuomiona.",
+      "Toisen ja kolmannen kappaleen source_ids-merkinnät ovat oikein. Lähde A kertoo Datahubin ulosmuuttoilmoituksesta, uusista sähkösopimuksista ja toimitusten päättymisestä kesken irtisanomisajan. Se tukee myös sopimusrikkomuksen ajankohtaa sekä vahingon laskemista ennakkoon hankitun sähkön hinnan ja toteutuneen myyntihinnan erotuksesta jäljellä olevalle irtisanomisajalle. Luonnos ei lisää korvaussummaa eikä lähteestä puuttuvaa syy-seurausselitystä.",
+      "Lähde A tukee neljännen kappaleen kuvausta lautakunnan toimivallasta sekä suositusten oikeusvaikutuksista, valituskiellosta ja mahdollisuudesta viedä asia viranomaiselle tai tuomioistuimeen. Samana päivänä julkaistu viranomaistiedote riittää tähän rajattuun uutiseen. Teksti on itsenäisesti muotoiltua, neutraalia suomea, Talous-luokitus sopii aiheeseen eikä yksittäistä riitaa yleistetä kaikkien yritysasiakkaiden tilanteeksi.",
+      "Kuvan koko tietue on sama luonnoksessa ja lähdepaketissa. Kaksi järjestettyä kuvakonseptia ja kummankin haut on dokumentoitu. Valitun kuvan yksilöity Unsplash-kuvasivu, kuvaajan tiedot, latausprovenienssi ja Unsplash License muodostavat käyttöoikeusnäytön erillään viranomaistekstin käyttöehdoista. Pikseliarvion kirjattu sopivuuspiste on 9/10. Paketin konkreettisessa kuvauksessa paperinippu ja laskin liittyvät artikkelin sopimusasiakirjoihin ja vahingonkorvauksen laskentaan, eivät vain yleiseen talouskategoriaan. Kuvassa ei kuvauksen mukaan ole henkilöitä, luettavia sopimusehtoja, summia tai yritystunnuksia. Alt-teksti vastaa kuvausta, ja arkistokuvamerkintä erottaa kuvan varsinaisen riidan dokumentoinnista."
     ]
   }
 }
