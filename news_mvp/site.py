@@ -181,6 +181,26 @@ def _topic_words(packet, draft):
     return stems - _RELATED_GENERIC_STEMS - _RELATED_LOCALITY_STEMS - publisher_words
 
 
+"""Individually reviewed directed-edge removals; no ranking changes or refill."""
+# Review of complete articles: scooter use does not continue in floodworks or
+# diplomacy. Municipal appeal rights do not continue in education/archipelago law.
+# Apply AFTER the ordinary top-three selection. Never refill removed slots.
+_REVIEWED_RELATED_EXCLUSIONS = frozenset({
+    ('81f29c83f79538d5fd9b01f974a798f551b47e58a0dff7cbce29db5efbb8bc7c', 'c8d9df28ef8ce7fe87450dd4498c914257cb037e3bc627f0e9cbad83925278bd'),
+    ('81f29c83f79538d5fd9b01f974a798f551b47e58a0dff7cbce29db5efbb8bc7c', '61f60677da98a8254ef83ba6702da6b22a68af50845c8a32a1d95fce0e852a30'),
+    ('81f29c83f79538d5fd9b01f974a798f551b47e58a0dff7cbce29db5efbb8bc7c', 'c1124443e5729a96eed55f2422fec75a1aeaf45a6040452b8a2103551b937c30'),
+    ('fe92f910b26aac13d8b676d93310d1f190e2382d7084b1dd2f7afeaa6e319148', 'b2545a6894798b253700c72456987a124b4060a0820afeda4eec13e48028fd9d'),
+    ('fe92f910b26aac13d8b676d93310d1f190e2382d7084b1dd2f7afeaa6e319148', '2a902aa7df9e34ae63e77bb635eadbc1dd101069705453301a65c5650c023598'),
+})
+
+
+def reviewed_related_picks(job, picks):
+    """Remove only reviewed directed edges, retaining order and never refilling."""
+    return [(candidate_job, candidate_draft)
+            for candidate_job, candidate_draft in picks
+            if (job['id'], candidate_job['id']) not in _REVIEWED_RELATED_EXCLUSIONS]
+
+
 def related_story_score(packet, draft, candidate_packet, candidate_draft):
     """Small evidence-based relevance score; zero means the candidate is filler."""
     if story_title_key(draft) == story_title_key(candidate_draft):
@@ -1235,7 +1255,7 @@ def render_site(store, output_dir, state_dir=None, public=False, include_ids=Non
         figure = article_hero_figure(image, image_url) if image else ""
         image_note = "" if image else '<p class="image-note">Ei kuvaa: tekstiversion yksityinen esikatselu.</p>'
         image_rights = image_rights_html(image)
-        picks = related_for[job["id"]]
+        picks = reviewed_related_picks(job, related_for[job["id"]])
         related_html = ""
         if picks:
             related_items = "".join(related_story_html(j, d, state_dir, output_dir, assets) for j, d in picks)
