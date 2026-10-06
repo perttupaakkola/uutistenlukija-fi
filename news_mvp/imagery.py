@@ -76,17 +76,31 @@ def _depicts_people(scene):
         r'\b(?:ilman|without|no)\s+(?:ihmi\w*|henkil\w*|people|persons?|'
         r'kasvo\w*|faces?|laps\w*|last\w*|children|hands?|k(?:ä|a)si\w*)\b',
         '', scene, flags=re.I)
-    # `nuori` can be a person, but in these bounded forestry noun phrases it is an
-    # adjective. Keep every other use visible to the conservative person matcher.
-    without_exclusion = re.sub(
-        r'\b(?:nuori|nuoren)\s+(?:havumetsikkö|havumetsikön|taimikko|taimikon)\b',
-        '', without_exclusion, flags=re.I)
+    # A bounded singular adjective/noun agreement contract, not a nuor* whitelist.
+    # Full tokens preserve human compounds and unmatched/ambiguous uses fail closed.
+    forest_cases = (
+        ('nuori', ('metsä', 'havumetsikkö', 'taimikko', 'havupuutaimikko')),
+        ('nuoren', ('metsän', 'havumetsikön', 'taimikon', 'havupuutaimikon')),
+        ('nuorta', ('metsää', 'havumetsikköä', 'taimikkoa', 'havupuutaimikkoa')),
+        ('nuoressa', ('metsässä', 'havumetsikössä', 'taimikossa', 'havupuutaimikossa')),
+        ('nuoresta', ('metsästä', 'havumetsiköstä', 'taimikosta', 'havupuutaimikosta')),
+        ('nuoreen', ('metsään', 'havumetsikköön', 'taimikkoon', 'havupuutaimikkoon')),
+        ('nuorella', ('metsällä', 'havumetsiköllä', 'taimikolla', 'havupuutaimikolla')),
+        ('nuorelta', ('metsältä', 'havumetsiköltä', 'taimikolta', 'havupuutaimikolta')),
+        ('nuorelle', ('metsälle', 'havumetsikölle', 'taimikolle', 'havupuutaimikolle')),
+        ('nuorena', ('metsänä', 'havumetsikkönä', 'taimikkona', 'havupuutaimikkona')),
+        ('nuoreksi', ('metsäksi', 'havumetsiköksi', 'taimikoksi', 'havupuutaimikoksi')),
+    )
+    for adjective, nouns in forest_cases:
+        without_exclusion = re.sub(
+            r'\b' + adjective + r'\s+(?:' + '|'.join(nouns) + r')\b',
+            '', without_exclusion, flags=re.I)
     # Recognise only explicit negative existence clauses, not arbitrary negation.
     # 'lastausvarret' (cargo loading arms) is not 'lasten' (children's).
     # Remove a bounded comma-list only when each later noun ends the list or is
     # followed by another list separator; a positive `, käsi näkyy` stays visible.
     without_exclusion = re.sub(
-        r'\b(?:ei|eik(?:ä|a))(?:\s+(?:kuvassa|n(?:ä|a)kym(?:ä|a)ss(?:ä|a)))?\s+'
+        r'\b(?:ei|eik(?:ä|a))(?:\s+(?:kuvassa|paikalla|n(?:ä|a)kym(?:ä|a)ss(?:ä|a)))?\s+'
         r'(?:ole|n(?:ä|a)y)\s+(?:ihmi\w*|henkil\w*|kasvo\w*|laps\w*|'
         r'last(?:a(?:ni|si|mme|nne|an|nsa)?|en\w*)|k(?:ä|a)si\w*)\b'
         r'(?:\s*,\s*(?:ihmi\w*|henkil\w*|kasvo\w*|laps\w*|'

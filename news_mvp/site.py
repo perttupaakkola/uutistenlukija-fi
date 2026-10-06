@@ -80,21 +80,31 @@ def esc(value):
 
 
 def _paragraph_text_html(article_route, paragraph, sources):
-    """Escape prose, adding only the one explicitly reviewed programme link."""
+    """Escape prose, adding only explicitly reviewed, article-bound programme links."""
     text = paragraph["text"]
     plain = esc(text)
-    if article_route != _PROGRAMME_LINK_ARTICLE or text != _PROGRAMME_LINK_PARAGRAPH:
-        return plain
-    cited_ids = paragraph["source_ids"]
-    if not any(source["id"] in cited_ids and source["url"] == _PROGRAMME_LINK_SOURCE
-               for source in sources):
-        return plain
-    if text.count(_PROGRAMME_LINK_LABEL) != 1:
-        return plain
-    before, after = text.split(_PROGRAMME_LINK_LABEL)
-    return (esc(before)
-            + f'<a href="{esc(_PROGRAMME_LINK_DESTINATION)}">{esc(_PROGRAMME_LINK_LABEL)}</a>'
-            + esc(after))
+    reviewed_links = (
+        (_PROGRAMME_LINK_ARTICLE, _PROGRAMME_LINK_PARAGRAPH,
+         _PROGRAMME_LINK_SOURCE, _PROGRAMME_LINK_LABEL, _PROGRAMME_LINK_DESTINATION),
+        ('/uutiset/vantaan-syyslomassa-taidepajoja-kartanon-kekri-f1f023667c0f/',
+         'Kaupunki ohjaa tarkistamaan syysloman koko ohjelman ja tapahtumien yksityiskohdat osoitteesta tapahtumat.vantaa.fi/syysloma. Kirjastojen tapahtumien tarkemmat tiedot löytyvät niiden omilta Helmet-sivuilta.',
+         'https://www.vantaa.fi/fi/ajankohtaista/uutinen/syyslomalla-vantaalla-taiteillaan-temppuillaan-ja-nautitaan-kulttuurista',
+         'tapahtumat.vantaa.fi/syysloma', 'https://tapahtumat.vantaa.fi/syysloma'),
+        ('/uutiset/helsingin-rokotukset-alkoivat-75-vuotta-tayttaneille-a733ecffde70/', 'Alle 65-vuotiaiden ajanvaraus avautuu 7. lokakuuta, ja heidän rokotuksensa alkavat terveysasemilla 19. lokakuuta. Kaupunki ohjeistaa tarkistamaan ennen ajan varaamista, kuuluuko rokotusten kohderyhmään. Kohderyhmät ja ajanvarausohjeet löytyvät osoitteesta hel.fi/rokotukset.', 'https://www.hel.fi/fi/uutiset/75-vuotta-tayttaneiden-influenssa-ja-koronarokotukset-alkavat', 'hel.fi/rokotukset', 'https://www.hel.fi/fi/sosiaali-ja-terveyspalvelut/terveydenhoito/terveysasemat/rokotukset'),
+    )
+    for route, reviewed_text, source_url, label, destination in reviewed_links:
+        if article_route != route or text != reviewed_text:
+            continue
+        if not any(source["id"] in paragraph["source_ids"] and source["url"] == source_url
+                   for source in sources):
+            continue
+        if text.count(label) != 1:
+            continue
+        before, after = text.split(label)
+        return (esc(before)
+                + f'<a href="{esc(destination)}">{esc(label)}</a>'
+                + esc(after))
+    return plain
 
 
 def semantic_datetime(value):
